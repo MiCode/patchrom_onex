@@ -1930,7 +1930,7 @@
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 604
-    const v5, 0x7f070118
+    const v5, 0x7f070119
 
     invoke-virtual {p0, v5}, Lcom/htc/music/carmode/CarPlaylistBrowseActivity;->getString(I)Ljava/lang/String;
 

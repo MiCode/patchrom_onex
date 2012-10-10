@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3430
+    .line 3431
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$19;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     iput-object p2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$19;->val$resultIntent:Landroid/content/Intent;
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 3432
+    .line 3433
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$19;->val$resultIntent:Landroid/content/Intent;
 
     const-string v2, "SELECTED_ID"
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    .line 3433
+    .line 3434
     .local v0, contactList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$19;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -66,7 +66,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3434
+    .line 3435
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$19;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mRingToneHelper:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackBrowserRingtoneHelper;
@@ -78,13 +78,13 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackBrowserRingtoneHelper;->hadnleContactRingtoneResult(Ljava/util/ArrayList;Z)V
 
-    .line 3436
+    .line 3437
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$19;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->showSetContactRingtoneToast()V
     invoke-static {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$3300(Lcom/htc/music/browserlayer/TrackBrowserActivity;)V
 
-    .line 3437
+    .line 3438
     return-void
 .end method

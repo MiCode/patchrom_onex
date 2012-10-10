@@ -30,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 32
     new-instance v0, Lcom/google/android/net/ParentalControlState$1;
 
     invoke-direct {v0}, Lcom/google/android/net/ParentalControlState$1;-><init>()V
@@ -56,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 48
     const/4 v0, 0x0
 
     return v0
@@ -66,7 +66,7 @@
     .locals 2
 
     .prologue
-    .line 54
+    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +102,7 @@
     .parameter "flags"
 
     .prologue
-    .line 48
+    .line 53
     iget-boolean v0, p0, Lcom/google/android/net/ParentalControlState;->isEnabled:Z
 
     if-eqz v0, :cond_0
@@ -112,15 +112,15 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 49
+    .line 54
     iget-object v0, p0, Lcom/google/android/net/ParentalControlState;->redirectUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 50
+    .line 55
     return-void
 
-    .line 48
+    .line 53
     :cond_0
     const/4 v0, 0x0
 

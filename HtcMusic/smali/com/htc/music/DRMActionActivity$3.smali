@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 563
+    .line 564
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$3;->this$0:Lcom/htc/music/DRMActionActivity;
 
     iput-object p2, p0, Lcom/htc/music/DRMActionActivity$3;->val$uri:Landroid/net/Uri;
@@ -46,13 +46,13 @@
     .locals 2
 
     .prologue
-    .line 565
+    .line 566
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$3;->this$0:Lcom/htc/music/DRMActionActivity;
 
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$3;->val$uri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Lcom/htc/music/DRMActionActivity;->deleteDownload(Landroid/net/Uri;)V
 
-    .line 566
+    .line 567
     return-void
 .end method

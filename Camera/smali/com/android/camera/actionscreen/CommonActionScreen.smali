@@ -651,7 +651,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0a005b
+    const v8, 0x7f0a0062
 
     invoke-virtual {v7, v8, v6}, Lcom/android/camera/rotate/RotateDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/android/camera/rotate/RotateDialog$Builder;
 
@@ -732,7 +732,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0a0191
+    const v8, 0x7f0a019a
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1197,7 +1197,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0b003a
+    const v9, 0x7f0b003b
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1510,7 +1510,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0b003f
+    const v9, 0x7f0b0040
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

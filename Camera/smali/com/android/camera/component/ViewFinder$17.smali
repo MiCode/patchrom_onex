@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1142
+    .line 1141
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -70,7 +70,7 @@
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     const/4 v2, 0x0
 
-    .line 1145
+    .line 1144
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Boolean;
@@ -81,7 +81,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1148
+    .line 1147
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
     const/16 v1, 0x2714
@@ -89,7 +89,7 @@
     #calls: Lcom/android/camera/component/ViewFinder;->sendPreviewThreadMessage(I)V
     invoke-static {v0, v1}, Lcom/android/camera/component/ViewFinder;->access$1200(Lcom/android/camera/component/ViewFinder;I)V
 
-    .line 1159
+    .line 1158
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #getter for: Lcom/android/camera/component/ViewFinder;->m_StateSyncRoot:Ljava/lang/Object;
@@ -99,7 +99,7 @@
 
     monitor-enter v1
 
-    .line 1161
+    .line 1160
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
@@ -108,14 +108,14 @@
     #setter for: Lcom/android/camera/component/ViewFinder;->m_State:I
     invoke-static {v0, v2}, Lcom/android/camera/component/ViewFinder;->access$1602(Lcom/android/camera/component/ViewFinder;I)I
 
-    .line 1162
+    .line 1161
     monitor-exit v1
 
-    .line 1176
+    .line 1175
     :goto_0
     return-void
 
-    .line 1162
+    .line 1161
     :catchall_0
     move-exception v0
 
@@ -125,7 +125,7 @@
 
     throw v0
 
-    .line 1167
+    .line 1166
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
@@ -138,7 +138,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1168
+    .line 1167
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #getter for: Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
@@ -148,7 +148,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/SurfaceView;->setVisibility(I)V
 
-    .line 1171
+    .line 1170
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
     const/16 v1, 0x2719
@@ -156,7 +156,7 @@
     #calls: Lcom/android/camera/component/ViewFinder;->sendPreviewThreadMessage(I)V
     invoke-static {v0, v1}, Lcom/android/camera/component/ViewFinder;->access$1200(Lcom/android/camera/component/ViewFinder;I)V
 
-    .line 1174
+    .line 1173
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$17;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #setter for: Lcom/android/camera/component/ViewFinder;->m_IsReviewImageShown:Z

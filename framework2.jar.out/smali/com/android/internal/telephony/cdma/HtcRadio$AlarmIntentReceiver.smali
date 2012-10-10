@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 133
+    .line 174
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/HtcRadio$AlarmIntentReceiver;->this$0:Lcom/android/internal/telephony/cdma/HtcRadio;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 133
+    .line 174
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/HtcRadio$AlarmIntentReceiver;-><init>(Lcom/android/internal/telephony/cdma/HtcRadio;)V
 
     return-void
@@ -47,12 +47,14 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+    .locals 4
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 135
+    const/4 v3, 0x0
+
+    .line 180
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -63,16 +65,16 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 136
+    .line 181
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcRadio$AlarmIntentReceiver;->this$0:Lcom/android/internal/telephony/cdma/HtcRadio;
 
     const-string v1, "timerId"
 
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcRadio$AlarmIntentReceiver;->this$0:Lcom/android/internal/telephony/cdma/HtcRadio;
 
-    #getter for: Lcom/android/internal/telephony/cdma/HtcRadio;->mWaitingTimerId:I
+    #getter for: Lcom/android/internal/telephony/cdma/HtcRadio;->mFlightModeTimerId:I
     invoke-static {v2}, Lcom/android/internal/telephony/cdma/HtcRadio;->access$100(Lcom/android/internal/telephony/cdma/HtcRadio;)I
 
     move-result v2
@@ -83,12 +85,48 @@
 
     move-result v1
 
-    const/4 v2, 0x0
+    #calls: Lcom/android/internal/telephony/cdma/HtcRadio;->timeoutFlightModePerioid(IZ)V
+    invoke-static {v0, v1, v3}, Lcom/android/internal/telephony/cdma/HtcRadio;->access$200(Lcom/android/internal/telephony/cdma/HtcRadio;IZ)V
 
-    #calls: Lcom/android/internal/telephony/cdma/HtcRadio;->timeoutWaitingPerioid(IZ)V
-    invoke-static {v0, v1, v2}, Lcom/android/internal/telephony/cdma/HtcRadio;->access$200(Lcom/android/internal/telephony/cdma/HtcRadio;IZ)V
-
-    .line 138
+    .line 186
     :cond_0
+    :goto_0
     return-void
+
+    .line 183
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "com.android.internal.telephony.cdma-flight.workaround"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 184
+    iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcRadio$AlarmIntentReceiver;->this$0:Lcom/android/internal/telephony/cdma/HtcRadio;
+
+    const-string v1, "timerId"
+
+    iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcRadio$AlarmIntentReceiver;->this$0:Lcom/android/internal/telephony/cdma/HtcRadio;
+
+    #getter for: Lcom/android/internal/telephony/cdma/HtcRadio;->mWorkaroundTimerId:I
+    invoke-static {v2}, Lcom/android/internal/telephony/cdma/HtcRadio;->access$300(Lcom/android/internal/telephony/cdma/HtcRadio;)I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v1
+
+    #calls: Lcom/android/internal/telephony/cdma/HtcRadio;->timeoutWorkaroundPerioid(IZ)V
+    invoke-static {v0, v1, v3}, Lcom/android/internal/telephony/cdma/HtcRadio;->access$400(Lcom/android/internal/telephony/cdma/HtcRadio;IZ)V
+
+    goto :goto_0
 .end method

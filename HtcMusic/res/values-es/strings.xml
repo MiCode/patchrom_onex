@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Añadir una lista de reproducción</string>
     <string name="htc_delete_playlists">Borrar listas de reproducción</string>
     <string name="htc_delete_playlist">Borrar lista de reproducción</string>
+    <string name="htc_delete_all_playlists">Borrar todas las listas de reproducción</string>
     <string name="htc_playlist_add_songs">Añadir canciones</string>
     <string name="htc_playlist_del_songs">Borrar canciones</string>
     <string name="htc_playlist_remove_songs">Borrar canciones</string>
@@ -405,7 +406,7 @@
     <string name="menu_album_detail">Detalles del álbum</string>
     <string name="car_mode">Modo coche</string>
     <string name="get_more_app">Android Market</string>
-    <string name="add_app_shortcut">Añadir acceso directo de aplicación</string>
+    <string name="add_app_shortcut">Añadir aplicación</string>
     <string name="remove_app">Administrar aplicaciones</string>
     <string name="MENU_soundhound">Informac.</string>
     <string name="dlna_notify_title">Controlador de música</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Almacenando en búfer...</string>
     <string name="title_send_content">Enviando contenido...</string>
     <string name="no_downloaded_apps_found">No se encontraron aplicaciones descargadas</string>
+    <string name="music_folder_picker_dialog_msg">¿Añadir canciones a listas de reproducción seleccionando la carpeta? No para añadir canciones de la otra forma</string>
 </resources>

@@ -164,12 +164,12 @@
 
     const/4 v3, 0x0
 
-    .line 1523
+    .line 1530
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 1524
+    .line 1531
     .local v0, calendar:Ljava/util/Calendar;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -177,32 +177,32 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1525
+    .line 1532
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 1526
+    .line 1533
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 1527
+    .line 1534
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 1528
+    .line 1535
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 1529
+    .line 1536
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1, v5}, Ljava/util/Calendar;->add(II)V
 
-    .line 1531
+    .line 1538
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$ClockReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
@@ -218,7 +218,7 @@
 
     invoke-virtual {v1, v5, v2, v3, v4}, Lcom/android/server/AlarmManagerService;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 1532
+    .line 1539
     return-void
 .end method
 
@@ -228,7 +228,7 @@
     .prologue
     const/4 v11, 0x1
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     .line 1497
     const-string v7, "UTC"
@@ -265,24 +265,28 @@
     .line 1506
     const/16 v7, 0xd
 
-    invoke-virtual {v0, v7, v9}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v0, v7, v8}, Ljava/util/Calendar;->set(II)V
 
     .line 1507
     const/16 v7, 0xe
 
-    invoke-virtual {v0, v7, v9}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v0, v7, v8}, Ljava/util/Calendar;->set(II)V
 
     .line 1508
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v5
 
-    .line 1511
+    .line 1514
     .local v5, targetTime:J
     iget-boolean v7, p0, Lcom/android/server/AlarmManagerService$ClockReceiver;->bFirstAlarm:Z
 
     if-eqz v7, :cond_0
 
+    .line 1515
+    iput-boolean v8, p0, Lcom/android/server/AlarmManagerService$ClockReceiver;->bFirstAlarm:Z
+
+    .line 1517
     const-wide/16 v7, 0x2710
 
     add-long/2addr v7, v3
@@ -291,15 +295,12 @@
 
     if-gez v7, :cond_0
 
-    .line 1512
-    iput-boolean v9, p0, Lcom/android/server/AlarmManagerService$ClockReceiver;->bFirstAlarm:Z
-
-    .line 1513
+    .line 1518
     const-wide/32 v7, 0xea60
 
     add-long v5, v3, v7
 
-    .line 1514
+    .line 1519
     const-string v7, "AlarmManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -336,7 +337,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1519
+    .line 1526
     :cond_0
     iget-object v7, p0, Lcom/android/server/AlarmManagerService$ClockReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -349,6 +350,6 @@
 
     invoke-virtual {v7, v11, v5, v6, v8}, Lcom/android/server/AlarmManagerService;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 1520
+    .line 1527
     return-void
 .end method

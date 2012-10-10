@@ -121,10 +121,10 @@
     .parameter "Listener"
 
     .prologue
-    .line 270
+    .line 282
     invoke-static {p0}, Landroid/webkit/WebView;->SetWebViewTabEffectListener(Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;)V
 
-    .line 271
+    .line 283
     return-void
 .end method
 
@@ -133,10 +133,10 @@
     .parameter "bHostFullScreenMode"
 
     .prologue
-    .line 267
+    .line 279
     invoke-static {p0}, Landroid/webkit/WebView;->setHostFullScreenMode(Z)V
 
-    .line 268
+    .line 280
     return-void
 .end method
 
@@ -201,10 +201,10 @@
     .locals 0
 
     .prologue
-    .line 239
+    .line 251
     invoke-super {p0}, Landroid/webkit/WebView;->EndAnimationZoomOut()V
 
-    .line 240
+    .line 252
     return-void
 .end method
 
@@ -226,10 +226,10 @@
     .parameter "fOriginalScale"
 
     .prologue
-    .line 236
+    .line 248
     invoke-super {p0, p1, p2}, Landroid/webkit/WebView;->StartAnimationZoomOut(ZF)V
 
-    .line 237
+    .line 249
     return-void
 .end method
 
@@ -237,10 +237,10 @@
     .locals 0
 
     .prologue
-    .line 263
+    .line 275
     invoke-super {p0}, Landroid/webkit/WebView;->clearWebCoreMemoryCache()V
 
-    .line 264
+    .line 276
     return-void
 .end method
 
@@ -317,10 +317,10 @@
     .locals 0
 
     .prologue
-    .line 242
+    .line 254
     invoke-super {p0}, Landroid/webkit/WebView;->fnPausePlayGifAnimation()V
 
-    .line 243
+    .line 255
     return-void
 .end method
 
@@ -328,10 +328,10 @@
     .locals 0
 
     .prologue
-    .line 245
+    .line 257
     invoke-super {p0}, Landroid/webkit/WebView;->fnResumePlayGifAnimation()V
 
-    .line 246
+    .line 258
     return-void
 .end method
 
@@ -351,7 +351,7 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 269
     invoke-super {p0}, Landroid/webkit/WebView;->getCacheDrawBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -363,7 +363,7 @@
     .locals 1
 
     .prologue
-    .line 214
+    .line 226
     invoke-super {p0}, Landroid/webkit/WebView;->getContentWidth()I
 
     move-result v0
@@ -375,7 +375,7 @@
     .locals 1
 
     .prologue
-    .line 254
+    .line 266
     invoke-super {p0}, Landroid/webkit/WebView;->getIsCacheDrawBitmap()Z
 
     move-result v0
@@ -388,10 +388,10 @@
     .parameter "callback"
 
     .prologue
-    .line 217
+    .line 229
     invoke-super {p0, p1}, Landroid/webkit/WebView;->getPureReaderContents(Landroid/os/Message;)V
 
-    .line 218
+    .line 230
     return-void
 .end method
 
@@ -409,7 +409,7 @@
     .locals 1
 
     .prologue
-    .line 260
+    .line 272
     invoke-super {p0}, Landroid/webkit/WebView;->htcComputeMaxScrollY()I
 
     move-result v0
@@ -422,10 +422,10 @@
     .parameter "html"
 
     .prologue
-    .line 220
+    .line 232
     invoke-super {p0, p1}, Landroid/webkit/WebView;->insertHtmlToTheEnd(Ljava/lang/String;)V
 
-    .line 221
+    .line 233
     return-void
 .end method
 
@@ -433,7 +433,7 @@
     .locals 1
 
     .prologue
-    .line 230
+    .line 242
     invoke-super {p0}, Landroid/webkit/WebView;->isSelectingText()Z
 
     move-result v0
@@ -502,7 +502,7 @@
     .locals 0
 
     .prologue
-    .line 233
+    .line 245
     return-void
 .end method
 
@@ -510,7 +510,7 @@
     .locals 0
 
     .prologue
-    .line 232
+    .line 244
     return-void
 .end method
 
@@ -518,10 +518,21 @@
     .locals 0
 
     .prologue
-    .line 248
+    .line 260
     invoke-super {p0}, Landroid/webkit/WebView;->pauseFPDoPlay()V
 
-    .line 249
+    .line 261
+    return-void
+.end method
+
+.method public removeMessagePowerSavePolicy()V
+    .locals 0
+
+    .prologue
+    .line 215
+    invoke-super {p0}, Landroid/webkit/WebView;->removeMessagePowerSavePolicy()V
+
+    .line 216
     return-void
 .end method
 
@@ -540,10 +551,22 @@
     .locals 0
 
     .prologue
-    .line 251
+    .line 263
     invoke-super {p0}, Landroid/webkit/WebView;->resumeFPDoPlay()V
 
-    .line 252
+    .line 264
+    return-void
+.end method
+
+.method public sendMessagePowerSavePolicy(Z)V
+    .locals 0
+    .parameter "bImmediate"
+
+    .prologue
+    .line 211
+    invoke-super {p0, p1}, Landroid/webkit/WebView;->sendMessagePowerSavePolicy(Z)V
+
+    .line 212
     return-void
 .end method
 
@@ -564,10 +587,10 @@
     .parameter "v"
 
     .prologue
-    .line 226
+    .line 238
     invoke-super {p0, p1}, Landroid/webkit/WebView;->setEmbeddedTitleBar(Landroid/view/View;)V
 
-    .line 227
+    .line 239
     return-void
 .end method
 
@@ -579,12 +602,24 @@
     .parameter "bottom"
 
     .prologue
-    .line 211
+    .line 223
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->setFrame(IIII)Z
 
     move-result v0
 
     return v0
+.end method
+
+.method public setInPerf(Z)V
+    .locals 0
+    .parameter "bInPerf"
+
+    .prologue
+    .line 219
+    invoke-super {p0, p1}, Landroid/webkit/WebView;->setInPerf(Z)V
+
+    .line 220
+    return-void
 .end method
 
 .method public setIsCacheDrawBitmap(Z)V
@@ -616,10 +651,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 223
+    .line 235
     invoke-super {p0, p1}, Landroid/webkit/WebView;->setPureZoomMode(Z)V
 
-    .line 224
+    .line 236
     return-void
 .end method
 
@@ -677,6 +712,6 @@
     .parameter "y"
 
     .prologue
-    .line 274
+    .line 286
     return-void
 .end method

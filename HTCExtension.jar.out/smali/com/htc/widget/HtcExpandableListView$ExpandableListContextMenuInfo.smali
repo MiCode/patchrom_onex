@@ -33,18 +33,18 @@
     .parameter "id"
 
     .prologue
-    .line 1318
+    .line 1326
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1319
+    .line 1327
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandableListContextMenuInfo;->targetView:Landroid/view/View;
 
-    .line 1320
+    .line 1328
     iput-wide p2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandableListContextMenuInfo;->packedPosition:J
 
-    .line 1321
+    .line 1329
     iput-wide p4, p0, Lcom/htc/widget/HtcExpandableListView$ExpandableListContextMenuInfo;->id:J
 
-    .line 1322
+    .line 1330
     return-void
 .end method

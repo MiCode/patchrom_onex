@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2421
+    .line 2453
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2424
+    .line 2456
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -55,7 +55,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 2425
+    .line 2457
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-virtual {v2}, Lcom/htc/music/NowPlayingViewHelper;->getListView()Lcom/htc/widget/HtcListView;
@@ -64,7 +64,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 2426
+    .line 2458
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-virtual {v2}, Lcom/htc/music/NowPlayingViewHelper;->getListView()Lcom/htc/widget/HtcListView;
@@ -73,12 +73,12 @@
 
     invoke-virtual {v2}, Lcom/htc/widget/HtcListView;->invalidateViews()V
 
-    .line 2456
+    .line 2488
     :cond_0
     :goto_0
     return-void
 
-    .line 2428
+    .line 2460
     :cond_1
     const-string v2, "[NowPlayingViewHelper]"
 
@@ -88,7 +88,7 @@
 
     goto :goto_0
 
-    .line 2429
+    .line 2461
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -102,7 +102,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 2430
+    .line 2462
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mDeletedOneRow:Z
@@ -112,7 +112,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 2434
+    .line 2466
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #setter for: Lcom/htc/music/NowPlayingViewHelper;->mDeletedOneRow:Z
@@ -120,7 +120,7 @@
 
     goto :goto_0
 
-    .line 2438
+    .line 2470
     :cond_3
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -128,7 +128,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 2440
+    .line 2472
     new-instance v0, Lcom/htc/music/NowPlayingViewHelper$NowPlayingCursor;
 
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
@@ -144,7 +144,7 @@
 
     invoke-direct {v0, v2, v3, v4}, Lcom/htc/music/NowPlayingViewHelper$NowPlayingCursor;-><init>(Lcom/htc/music/NowPlayingViewHelper;Lcom/htc/music/IMediaPlaybackService;[Ljava/lang/String;)V
 
-    .line 2441
+    .line 2473
     .local v0, c:Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
@@ -152,21 +152,21 @@
 
     if-nez v2, :cond_4
 
-    .line 2443
+    .line 2475
     const-string v2, "[NowPlayingViewHelper]"
 
     const-string v3, "can\'t find any row in now playing list!!"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2449
+    .line 2481
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     const v3, 0x7f070037
 
     invoke-virtual {v2, v3}, Lcom/htc/music/NowPlayingViewHelper;->showEmptyView(I)V
 
-    .line 2451
+    .line 2483
     :cond_4
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -177,14 +177,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 2452
+    .line 2484
     const-string v2, "NOT_NOTIFY"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 2453
+    .line 2485
     .local v1, notNotify:Z
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$16;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 

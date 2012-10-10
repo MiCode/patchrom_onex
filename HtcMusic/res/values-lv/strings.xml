@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Pievienot atskaņošanas sarakstu</string>
     <string name="htc_delete_playlists">Dzēst atskaņošanas sarakstus</string>
     <string name="htc_delete_playlist">Dzēst atskaņošanas sarakstu</string>
+    <string name="htc_delete_all_playlists">Dzēst visus atskaņošanas sarakstus</string>
     <string name="htc_playlist_add_songs">Pievienot dziesmas</string>
     <string name="htc_playlist_del_songs">Dzēst dziesmas</string>
     <string name="htc_playlist_remove_songs">Noņemt dziesmas</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Buferizācija...</string>
     <string name="title_send_content">Sūta saturu...</string>
     <string name="no_downloaded_apps_found">Nav atrastas lejupielādētas lietojumprogrammas</string>
+    <string name="music_folder_picker_dialog_msg">Vai pievienot dziesmas atskaņošanas sarakstam, atlasot mapi? Nē, lai pievienotu dziesmas citā veidā</string>
 </resources>

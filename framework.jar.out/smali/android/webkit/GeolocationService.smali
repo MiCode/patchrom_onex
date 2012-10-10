@@ -38,7 +38,7 @@
     iput-wide p2, p0, Landroid/webkit/GeolocationService;->mNativeObject:J
 
     .line 55
-    const-string/jumbo v0, "location"
+    const-string v0, "location"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

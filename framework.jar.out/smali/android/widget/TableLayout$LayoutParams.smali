@@ -120,7 +120,7 @@
     if-eqz v0, :cond_0
 
     .line 728
-    const-string/jumbo v0, "layout_height"
+    const-string v0, "layout_height"
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
 

@@ -373,10 +373,10 @@
 
     iput-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mService:Lcom/htc/painting/engine/eraser/EraserService;
 
-    .line 2714
+    .line 2713
     iput-boolean v4, p0, Lcom/htc/painting/engine/HtcPaintingView;->mEnableEditMode:Z
 
-    .line 2766
+    .line 2765
     iput-object v1, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     .line 164
@@ -573,10 +573,10 @@
 
     iput-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mService:Lcom/htc/painting/engine/eraser/EraserService;
 
-    .line 2714
+    .line 2713
     iput-boolean v4, p0, Lcom/htc/painting/engine/HtcPaintingView;->mEnableEditMode:Z
 
-    .line 2766
+    .line 2765
     iput-object v1, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     .line 176
@@ -774,10 +774,10 @@
 
     iput-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mService:Lcom/htc/painting/engine/eraser/EraserService;
 
-    .line 2714
+    .line 2713
     iput-boolean v4, p0, Lcom/htc/painting/engine/HtcPaintingView;->mEnableEditMode:Z
 
-    .line 2766
+    .line 2765
     iput-object v1, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     .line 188
@@ -2515,7 +2515,7 @@
     .locals 1
 
     .prologue
-    .line 2729
+    .line 2728
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mBackgroundCacheData:Lcom/htc/painting/engine/cachebitmap/CacheBitmapData;
 
     if-eqz v0, :cond_0
@@ -5319,32 +5319,32 @@
     .parameter "highlightPaint"
 
     .prologue
-    .line 2817
+    .line 2816
     iget-object v2, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     if-nez v2, :cond_0
 
-    .line 2818
+    .line 2817
     new-instance v2, Ljava/util/Vector;
 
     invoke-direct {v2}, Ljava/util/Vector;-><init>()V
 
     iput-object v2, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
-    .line 2821
+    .line 2820
     :cond_0
     if-nez p3, :cond_1
 
-    .line 2822
+    .line 2821
     iget-object p3, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightPaint:Landroid/graphics/Paint;
 
-    .line 2824
+    .line 2823
     :cond_1
     invoke-virtual {p0, p1}, Lcom/htc/painting/engine/HtcPaintingView;->getViewPort(I)Lcom/htc/painting/engine/ViewPort;
 
     move-result-object v1
 
-    .line 2825
+    .line 2824
     .local v1, vp:Lcom/htc/painting/engine/ViewPort;
     new-instance v0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;
 
@@ -5354,16 +5354,16 @@
 
     invoke-direct {v0, p0, v2, v1, p3}, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;-><init>(Lcom/htc/painting/engine/HtcPaintingView;Landroid/graphics/RectF;Lcom/htc/painting/engine/ViewPort;Landroid/graphics/Paint;)V
 
-    .line 2826
+    .line 2825
     .local v0, data:Lcom/htc/painting/engine/HtcPaintingView$HighlightData;
     iget-object v2, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2827
+    .line 2826
     invoke-virtual {p0}, Lcom/htc/painting/engine/HtcPaintingView;->postInvalidate()V
 
-    .line 2828
+    .line 2827
     return-void
 .end method
 
@@ -5374,14 +5374,14 @@
     .parameter "highlightPaint"
 
     .prologue
-    .line 2775
+    .line 2774
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     if-nez v13, :cond_0
 
-    .line 2776
+    .line 2775
     new-instance v13, Ljava/util/Vector;
 
     invoke-direct {v13}, Ljava/util/Vector;-><init>()V
@@ -5390,18 +5390,18 @@
 
     iput-object v13, v0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
-    .line 2779
+    .line 2778
     :cond_0
     if-nez p3, :cond_1
 
-    .line 2780
+    .line 2779
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightPaint:Landroid/graphics/Paint;
 
     move-object/from16 p3, v0
 
-    .line 2782
+    .line 2781
     :cond_1
     const-string v13, "-"
 
@@ -5411,11 +5411,11 @@
 
     move-result-object v9
 
-    .line 2783
+    .line 2782
     .local v9, ranges:[Ljava/lang/String;
     array-length v8, v9
 
-    .line 2784
+    .line 2783
     .local v8, rangeLength:I
     sget-boolean v13, Lcom/htc/painting/engine/HtcPaintingView;->$assertionsDisabled:Z
 
@@ -5431,15 +5431,15 @@
 
     throw v13
 
-    .line 2786
+    .line 2785
     :cond_2
     const/4 v2, -0x1
 
-    .line 2787
+    .line 2786
     .local v2, beginStrokeIndex:I
     const/4 v4, -0x1
 
-    .line 2789
+    .line 2788
     .local v4, endStrokeIndex:I
     const/4 v5, 0x0
 
@@ -5447,7 +5447,7 @@
     :goto_0
     if-ge v5, v8, :cond_6
 
-    .line 2790
+    .line 2789
     aget-object v13, v9, v5
 
     const-string v14, ":"
@@ -5456,7 +5456,7 @@
 
     move-result-object v10
 
-    .line 2791
+    .line 2790
     .local v10, strokeInfo:[Ljava/lang/String;
     sget-boolean v13, Lcom/htc/painting/engine/HtcPaintingView;->$assertionsDisabled:Z
 
@@ -5474,11 +5474,11 @@
 
     throw v13
 
-    .line 2792
+    .line 2791
     :cond_3
     if-nez v5, :cond_4
 
-    .line 2793
+    .line 2792
     const/4 v13, 0x1
 
     aget-object v13, v10, v13
@@ -5487,13 +5487,13 @@
 
     move-result v2
 
-    .line 2795
+    .line 2794
     :cond_4
     const/4 v13, 0x1
 
     if-ne v5, v13, :cond_5
 
-    .line 2796
+    .line 2795
     const/4 v13, 0x1
 
     aget-object v13, v10, v13
@@ -5502,26 +5502,26 @@
 
     move-result v4
 
-    .line 2789
+    .line 2788
     :cond_5
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 2800
+    .line 2799
     .end local v10           #strokeInfo:[Ljava/lang/String;
     :cond_6
     invoke-virtual/range {p0 .. p1}, Lcom/htc/painting/engine/HtcPaintingView;->getStrokesFromReqGroup(I)Ljava/util/List;
 
     move-result-object v11
 
-    .line 2801
+    .line 2800
     .local v11, strokes:Ljava/util/List;,"Ljava/util/List<Lcom/htc/painting/engine/stroke/Stroke;>;"
     invoke-virtual/range {p0 .. p1}, Lcom/htc/painting/engine/HtcPaintingView;->getViewPort(I)Lcom/htc/painting/engine/ViewPort;
 
     move-result-object v12
 
-    .line 2802
+    .line 2801
     .local v12, vp:Lcom/htc/painting/engine/ViewPort;
     new-instance v7, Landroid/graphics/RectF;
 
@@ -5537,7 +5537,7 @@
 
     invoke-direct {v7, v13, v14, v15, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 2804
+    .line 2803
     .local v7, r:Landroid/graphics/RectF;
     move v6, v2
 
@@ -5545,7 +5545,7 @@
     :goto_1
     if-gt v6, v4, :cond_7
 
-    .line 2805
+    .line 2804
     invoke-interface {v11, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -5558,12 +5558,12 @@
 
     invoke-virtual {v7, v13}, Landroid/graphics/RectF;->union(Landroid/graphics/RectF;)V
 
-    .line 2804
+    .line 2803
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 2807
+    .line 2806
     :cond_7
     new-instance v3, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;
 
@@ -5573,7 +5573,7 @@
 
     invoke-direct {v3, v0, v7, v12, v1}, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;-><init>(Lcom/htc/painting/engine/HtcPaintingView;Landroid/graphics/RectF;Lcom/htc/painting/engine/ViewPort;Landroid/graphics/Paint;)V
 
-    .line 2808
+    .line 2807
     .local v3, data:Lcom/htc/painting/engine/HtcPaintingView$HighlightData;
     move-object/from16 v0, p0
 
@@ -5581,10 +5581,10 @@
 
     invoke-interface {v13, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2809
+    .line 2808
     invoke-virtual/range {p0 .. p0}, Lcom/htc/painting/engine/HtcPaintingView;->postInvalidate()V
 
-    .line 2810
+    .line 2809
     return-void
 .end method
 
@@ -5729,17 +5729,17 @@
     .locals 1
 
     .prologue
-    .line 2837
+    .line 2836
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 2838
+    .line 2837
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHighlightDatas:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 2840
+    .line 2839
     :cond_0
     return-void
 .end method
@@ -6435,23 +6435,23 @@
     .parameter "value"
 
     .prologue
-    .line 2721
+    .line 2720
     iget-boolean v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mEnableEditMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 2722
+    .line 2721
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mSelectionView:Lcom/htc/painting/engine/edit/StrokeEditView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/painting/engine/edit/StrokeEditView;->setVisibility(I)V
 
-    .line 2726
+    .line 2725
     :goto_0
     return-void
 
-    .line 2724
+    .line 2723
     :cond_0
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mSelectionView:Lcom/htc/painting/engine/edit/StrokeEditView;
 
@@ -6608,22 +6608,22 @@
     .locals 1
 
     .prologue
-    .line 2739
+    .line 2738
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheWorker:Lcom/htc/painting/engine/CacheBitmapWorker;
 
     if-eqz v0, :cond_0
 
-    .line 2740
+    .line 2739
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheWorker:Lcom/htc/painting/engine/CacheBitmapWorker;
 
     invoke-virtual {v0}, Lcom/htc/painting/engine/CacheBitmapWorker;->freeze()V
 
-    .line 2741
+    .line 2740
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheWorker:Lcom/htc/painting/engine/CacheBitmapWorker;
 
     invoke-virtual {v0}, Lcom/htc/painting/engine/CacheBitmapWorker;->interrupt()Z
 
-    .line 2743
+    .line 2742
     :cond_0
     return-void
 .end method
@@ -6668,7 +6668,7 @@
     .locals 1
 
     .prologue
-    .line 2763
+    .line 2762
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheBmpData:Lcom/htc/painting/engine/cachebitmap/CacheBitmapData;
 
     if-nez v0, :cond_0
@@ -8339,12 +8339,12 @@
     .parameter "docViewport"
 
     .prologue
-    .line 2692
+    .line 2691
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mDrawingInfo:Lcom/htc/painting/engine/DrawingInfo;
 
     invoke-virtual {v0, p1}, Lcom/htc/painting/engine/DrawingInfo;->setDocViewPort(Lcom/htc/painting/engine/ViewPort;)V
 
-    .line 2693
+    .line 2692
     return-void
 .end method
 
@@ -8367,22 +8367,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2706
+    .line 2705
     invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->setEnabled(Z)V
 
-    .line 2707
+    .line 2706
     invoke-virtual {p0}, Lcom/htc/painting/engine/HtcPaintingView;->isPainting()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2708
+    .line 2707
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mHtcPainting:Lcom/htc/painting/engine/HtcPainting;
 
     invoke-virtual {v0}, Lcom/htc/painting/engine/HtcPainting;->endRecordUndo()V
 
-    .line 2709
+    .line 2708
     iget-object v2, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheBmpData:Lcom/htc/painting/engine/cachebitmap/CacheBitmapData;
 
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheBmpData:Lcom/htc/painting/engine/cachebitmap/CacheBitmapData;
@@ -8396,14 +8396,14 @@
 
     invoke-direct {p0, v2, v0, v3}, Lcom/htc/painting/engine/HtcPaintingView;->triggerPaintingEnd(Lcom/htc/painting/engine/cachebitmap/CacheBitmapData;Landroid/graphics/Canvas;Lcom/htc/painting/engine/StrokeEventArg$StrokeEndingState;)V
 
-    .line 2710
+    .line 2709
     iput-object v1, p0, Lcom/htc/painting/engine/HtcPaintingView;->mPaintingGroup:Lcom/htc/painting/engine/StrokeGroup;
 
-    .line 2712
+    .line 2711
     :cond_0
     return-void
 
-    .line 2709
+    .line 2708
     :cond_1
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheBmpData:Lcom/htc/painting/engine/cachebitmap/CacheBitmapData;
 
@@ -8637,10 +8637,10 @@
     .parameter "dist"
 
     .prologue
-    .line 2701
+    .line 2700
     iput p1, p0, Lcom/htc/painting/engine/HtcPaintingView;->mSeparatorDist:I
 
-    .line 2702
+    .line 2701
     return-void
 .end method
 
@@ -8821,21 +8821,21 @@
     .locals 1
 
     .prologue
-    .line 2751
+    .line 2750
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheWorker:Lcom/htc/painting/engine/CacheBitmapWorker;
 
     if-eqz v0, :cond_0
 
-    .line 2752
+    .line 2751
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView;->mCacheWorker:Lcom/htc/painting/engine/CacheBitmapWorker;
 
     invoke-virtual {v0}, Lcom/htc/painting/engine/CacheBitmapWorker;->unFreeze()V
 
-    .line 2754
+    .line 2753
     :cond_0
     invoke-direct {p0}, Lcom/htc/painting/engine/HtcPaintingView;->prepareCache()V
 
-    .line 2755
+    .line 2754
     return-void
 .end method
 

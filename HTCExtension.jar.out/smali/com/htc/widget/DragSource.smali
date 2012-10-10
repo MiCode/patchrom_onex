@@ -1,4 +1,4 @@
-.class interface abstract Lcom/htc/widget/DragSource;
+.class public interface abstract Lcom/htc/widget/DragSource;
 .super Ljava/lang/Object;
 .source "DragSource.java"
 

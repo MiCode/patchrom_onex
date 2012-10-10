@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1242
+    .line 1241
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1244
+    .line 1243
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mSearchResultList:Ljava/util/List;
@@ -51,11 +51,11 @@
 
     move-result-object v3
 
-    .line 1245
+    .line 1244
     .local v3, searchResultList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     if-eqz v3, :cond_1
 
-    .line 1246
+    .line 1245
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->isGroupByPath:Z
@@ -65,7 +65,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1247
+    .line 1246
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #calls: Lcom/htc/app/FilePickerListAdapter;->removeRedundantPath(Ljava/util/List;)Ljava/util/List;
@@ -73,7 +73,7 @@
 
     move-result-object v3
 
-    .line 1249
+    .line 1248
     :cond_0
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
@@ -88,7 +88,7 @@
     #setter for: Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
     invoke-static {v5, v4}, Lcom/htc/app/FilePickerListAdapter;->access$502(Lcom/htc/app/FilePickerListAdapter;[Lcom/htc/app/ItemInfo;)[Lcom/htc/app/ItemInfo;
 
-    .line 1250
+    .line 1249
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
@@ -98,7 +98,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 1251
+    .line 1250
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
@@ -110,12 +110,12 @@
 
     if-lez v4, :cond_3
 
-    .line 1252
+    .line 1251
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
-    .line 1258
+    .line 1257
     :cond_1
     :goto_0
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
@@ -127,7 +127,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 1259
+    .line 1258
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
@@ -139,7 +139,7 @@
 
     move-result v2
 
-    .line 1260
+    .line 1259
     .local v2, isStop:Z
     if-eqz v2, :cond_2
 
@@ -152,24 +152,24 @@
 
     if-eqz v4, :cond_2
 
-    .line 1261
+    .line 1260
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isInternalStorageAvailable()Z
 
     move-result v1
 
-    .line 1263
+    .line 1262
     .local v1, bInternalStorageAvailable:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageAvailable()Z
 
     move-result v0
 
-    .line 1265
+    .line 1264
     .local v0, bExternalStorageAvailable:Z
     if-nez v1, :cond_4
 
     if-nez v0, :cond_4
 
-    .line 1266
+    .line 1265
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;
@@ -179,7 +179,7 @@
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerCore;->setNoFileFoundTextOfTypeView()V
 
-    .line 1275
+    .line 1274
     :goto_1
     const-string v4, "Tab_Type"
 
@@ -196,7 +196,7 @@
 
     if-eqz v4, :cond_6
 
-    .line 1276
+    .line 1275
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;
@@ -208,7 +208,7 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/htc/app/FilePickerCore;->setListViewHeaderAnimationEnabled(IZ)V
 
-    .line 1287
+    .line 1286
     .end local v0           #bExternalStorageAvailable:Z
     .end local v1           #bInternalStorageAvailable:Z
     .end local v2           #isStop:Z
@@ -216,7 +216,7 @@
     :goto_2
     return-void
 
-    .line 1254
+    .line 1253
     :cond_3
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
@@ -224,7 +224,7 @@
 
     goto :goto_0
 
-    .line 1268
+    .line 1267
     .restart local v0       #bExternalStorageAvailable:Z
     .restart local v1       #bInternalStorageAvailable:Z
     .restart local v2       #isStop:Z
@@ -240,7 +240,7 @@
 
     if-lez v4, :cond_5
 
-    .line 1269
+    .line 1268
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;
@@ -252,7 +252,7 @@
 
     goto :goto_1
 
-    .line 1271
+    .line 1270
     :cond_5
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
@@ -265,7 +265,7 @@
 
     goto :goto_1
 
-    .line 1278
+    .line 1277
     :cond_6
     const-string v4, "Tab_Recent"
 
@@ -282,7 +282,7 @@
 
     if-eqz v4, :cond_7
 
-    .line 1279
+    .line 1278
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;
@@ -296,7 +296,7 @@
 
     goto :goto_2
 
-    .line 1281
+    .line 1280
     :cond_7
     const-string v4, "Tab_Favorites"
 
@@ -313,7 +313,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 1282
+    .line 1281
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter$6;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;

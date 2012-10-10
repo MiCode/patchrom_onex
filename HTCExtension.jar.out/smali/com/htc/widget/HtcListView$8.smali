@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 5213
+    .line 5226
     iput-object p1, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,31 +41,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5216
+    .line 5229
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     iput-boolean v1, v0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 5217
+    .line 5230
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     iput-boolean v1, v0, Lcom/htc/widget/HtcListView;->mInDeleteAnimation:Z
 
-    .line 5219
+    .line 5232
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDeleteMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 5220
+    .line 5233
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDeleteMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 5222
+    .line 5235
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5223
+    .line 5236
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -86,7 +86,7 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5224
+    .line 5237
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
@@ -96,7 +96,7 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5225
+    .line 5238
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
@@ -106,21 +106,21 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5227
+    .line 5240
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     if-eqz v0, :cond_1
 
-    .line 5228
+    .line 5241
     iget-object v0, p0, Lcom/htc/widget/HtcListView$8;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     invoke-interface {v0}, Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;->onAnimationEnd()V
 
-    .line 5230
+    .line 5243
     :cond_1
     return-void
 .end method

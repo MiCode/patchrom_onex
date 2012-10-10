@@ -44,7 +44,7 @@
 
     .prologue
     .line 1553
-    const-string/jumbo v0, "internal"
+    const-string v0, "internal"
 
     invoke-static {v0}, Landroid/provider/MediaStore$Audio$Playlists;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 

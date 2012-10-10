@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2740
+    .line 2772
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$20;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 2742
+    .line 2774
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$20;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mPluginAdapter:Lcom/htc/music/NowPlayingViewHelper$NowPlayingListAdapter;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2743
+    .line 2775
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$20;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mPluginAdapter:Lcom/htc/music/NowPlayingViewHelper$NowPlayingListAdapter;
@@ -61,11 +61,11 @@
 
     invoke-virtual {v0}, Lcom/htc/music/NowPlayingViewHelper$NowPlayingListAdapter;->notifyDataSetChanged()V
 
-    .line 2746
+    .line 2778
     :goto_0
     return-void
 
-    .line 2745
+    .line 2777
     :cond_0
     const-string v0, "[NowPlayingViewHelper]"
 

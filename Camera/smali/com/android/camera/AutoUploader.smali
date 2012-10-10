@@ -1763,13 +1763,13 @@
 
     invoke-direct {v4, v5}, Lcom/android/camera/rotate/RotateDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v5, 0x7f0a00a8
+    const v5, 0x7f0a00af
 
     invoke-virtual {v4, v5}, Lcom/android/camera/rotate/RotateDialog$Builder;->setTitle(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
     move-result-object v4
 
-    const v5, 0x7f0a0053
+    const v5, 0x7f0a0054
 
     invoke-virtual {v4, v5}, Lcom/android/camera/rotate/RotateDialog$Builder;->setMessage(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
@@ -1831,13 +1831,13 @@
 
     invoke-direct {v2, v3}, Lcom/android/camera/rotate/RotateDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0a00a8
+    const v3, 0x7f0a00af
 
     invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateDialog$Builder;->setTitle(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
     move-result-object v2
 
-    const v3, 0x7f0a0054
+    const v3, 0x7f0a0055
 
     invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateDialog$Builder;->setMessage(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 

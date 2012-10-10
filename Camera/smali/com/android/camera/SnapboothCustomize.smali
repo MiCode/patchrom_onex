@@ -380,20 +380,6 @@
     .line 156
     :array_1
     .array-data 0x4
-        0x1ft 0x1t 0x8t 0x7ft
-        0x22t 0x1t 0x8t 0x7ft
-        0x25t 0x1t 0x8t 0x7ft
-        0x28t 0x1t 0x8t 0x7ft
-        0x2bt 0x1t 0x8t 0x7ft
-        0x2et 0x1t 0x8t 0x7ft
-        0x31t 0x1t 0x8t 0x7ft
-        0x34t 0x1t 0x8t 0x7ft
-        0x37t 0x1t 0x8t 0x7ft
-    .end array-data
-
-    .line 169
-    :array_2
-    .array-data 0x4
         0x21t 0x1t 0x8t 0x7ft
         0x24t 0x1t 0x8t 0x7ft
         0x27t 0x1t 0x8t 0x7ft
@@ -405,10 +391,9 @@
         0x39t 0x1t 0x8t 0x7ft
     .end array-data
 
-    .line 182
-    :array_3
+    .line 169
+    :array_2
     .array-data 0x4
-        0x20t 0x1t 0x8t 0x7ft
         0x23t 0x1t 0x8t 0x7ft
         0x26t 0x1t 0x8t 0x7ft
         0x29t 0x1t 0x8t 0x7ft
@@ -417,6 +402,21 @@
         0x32t 0x1t 0x8t 0x7ft
         0x35t 0x1t 0x8t 0x7ft
         0x38t 0x1t 0x8t 0x7ft
+        0x3bt 0x1t 0x8t 0x7ft
+    .end array-data
+
+    .line 182
+    :array_3
+    .array-data 0x4
+        0x22t 0x1t 0x8t 0x7ft
+        0x25t 0x1t 0x8t 0x7ft
+        0x28t 0x1t 0x8t 0x7ft
+        0x2bt 0x1t 0x8t 0x7ft
+        0x2et 0x1t 0x8t 0x7ft
+        0x31t 0x1t 0x8t 0x7ft
+        0x34t 0x1t 0x8t 0x7ft
+        0x37t 0x1t 0x8t 0x7ft
+        0x3at 0x1t 0x8t 0x7ft
     .end array-data
 
     .line 195
@@ -599,7 +599,7 @@
 
     .line 239
     .local v0, res:Landroid/content/res/Resources;
-    const v1, 0x7f0b0196
+    const v1, 0x7f0b0199
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -608,7 +608,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->CAPTURE_IMG_WIDTH:I
 
     .line 240
-    const v1, 0x7f0b0197
+    const v1, 0x7f0b019a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -617,7 +617,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->CAPTURE_IMG_HEIGHT:I
 
     .line 241
-    const v1, 0x7f0b0198
+    const v1, 0x7f0b019b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -626,7 +626,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->PREVIEW_WIDTH:I
 
     .line 242
-    const v1, 0x7f0b0199
+    const v1, 0x7f0b019c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -635,7 +635,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->PREVIEW_HEIGHT:I
 
     .line 243
-    const v1, 0x7f0b019c
+    const v1, 0x7f0b019f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -644,7 +644,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->PREVIEW_PORTRAIT_LEFT:I
 
     .line 244
-    const v1, 0x7f0b019d
+    const v1, 0x7f0b01a0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -653,7 +653,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->PREVIEW_PORTRAIT_TOP:I
 
     .line 245
-    const v1, 0x7f0b019e
+    const v1, 0x7f0b01a1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -662,7 +662,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->PREVIEW_LANDSCAPE_LEFT:I
 
     .line 246
-    const v1, 0x7f0b019f
+    const v1, 0x7f0b01a2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -671,7 +671,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->PREVIEW_LANDSCAPE_TOP:I
 
     .line 248
-    const v1, 0x7f0b01a8
+    const v1, 0x7f0b01ab
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -680,7 +680,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_WIDTH:I
 
     .line 249
-    const v1, 0x7f0b01a9
+    const v1, 0x7f0b01ac
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -689,7 +689,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_HEIGHT:I
 
     .line 250
-    const v1, 0x7f0b01aa
+    const v1, 0x7f0b01ad
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -698,7 +698,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_LEFT_PORT:I
 
     .line 251
-    const v1, 0x7f0b01ab
+    const v1, 0x7f0b01ae
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -707,7 +707,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_TOP_PORT:I
 
     .line 252
-    const v1, 0x7f0b01ac
+    const v1, 0x7f0b01af
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -716,7 +716,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_LEFT_LAND:I
 
     .line 253
-    const v1, 0x7f0b01ad
+    const v1, 0x7f0b01b0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -725,7 +725,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_TOP_LAND:I
 
     .line 255
-    const v1, 0x7f0b01ae
+    const v1, 0x7f0b01b1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -734,7 +734,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_LEFT_LAND:I
 
     .line 256
-    const v1, 0x7f0b01af
+    const v1, 0x7f0b01b2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -743,7 +743,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_TOP_LAND:I
 
     .line 257
-    const v1, 0x7f0b01b0
+    const v1, 0x7f0b01b3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -752,7 +752,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_RIGHT_LAND:I
 
     .line 258
-    const v1, 0x7f0b01b1
+    const v1, 0x7f0b01b4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -761,7 +761,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_BOTTOM_LAND:I
 
     .line 259
-    const v1, 0x7f0b01b2
+    const v1, 0x7f0b01b5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -770,7 +770,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_LEFT_PORT:I
 
     .line 260
-    const v1, 0x7f0b01b3
+    const v1, 0x7f0b01b6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -779,7 +779,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_TOP_PORT:I
 
     .line 261
-    const v1, 0x7f0b01b4
+    const v1, 0x7f0b01b7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -788,7 +788,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_RIGHT_PORT:I
 
     .line 262
-    const v1, 0x7f0b01b5
+    const v1, 0x7f0b01b8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -797,7 +797,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SHADOW_BOTTOM_PORT:I
 
     .line 264
-    const v1, 0x7f0b01b6
+    const v1, 0x7f0b01b9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -806,7 +806,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SQUARE_SIZE:I
 
     .line 265
-    const v1, 0x7f0b01b9
+    const v1, 0x7f0b01bc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -815,7 +815,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SQUARE_LEFT_LAND:I
 
     .line 266
-    const v1, 0x7f0b01ba
+    const v1, 0x7f0b01bd
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -824,7 +824,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SQUARE_TOP_LAND:I
 
     .line 267
-    const v1, 0x7f0b01b7
+    const v1, 0x7f0b01ba
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -833,7 +833,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SQUARE_LEFT_PORT:I
 
     .line 268
-    const v1, 0x7f0b01b8
+    const v1, 0x7f0b01bb
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -842,7 +842,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_SQUARE_TOP_PORT:I
 
     .line 270
-    const v1, 0x7f0b01bb
+    const v1, 0x7f0b01be
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -851,7 +851,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTON_WIDTH:I
 
     .line 271
-    const v1, 0x7f0b01bc
+    const v1, 0x7f0b01bf
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -860,7 +860,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTON_HEIGHT:I
 
     .line 272
-    const v1, 0x7f0b01be
+    const v1, 0x7f0b01c1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -869,7 +869,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTONS_WIDTH_PORT:I
 
     .line 273
-    const v1, 0x7f0b01bf
+    const v1, 0x7f0b01c2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -878,7 +878,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTONS_WIDTH_LAND:I
 
     .line 274
-    const v1, 0x7f0b01c0
+    const v1, 0x7f0b01c3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -887,7 +887,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTONS_LEFT_PORT:I
 
     .line 275
-    const v1, 0x7f0b01c1
+    const v1, 0x7f0b01c4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -896,7 +896,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTONS_BOTTOM_PORT:I
 
     .line 276
-    const v1, 0x7f0b01c2
+    const v1, 0x7f0b01c5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -905,7 +905,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTONS_LEFT_LAND:I
 
     .line 277
-    const v1, 0x7f0b01c3
+    const v1, 0x7f0b01c6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -914,7 +914,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_SCREEN_BUTTONS_BOTTOM_LAND:I
 
     .line 279
-    const v1, 0x7f0b01a6
+    const v1, 0x7f0b01a9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -923,7 +923,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->VIEWFINDER_COVER_LEFT_LAND:I
 
     .line 280
-    const v1, 0x7f0b01a7
+    const v1, 0x7f0b01aa
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -932,7 +932,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->VIEWFINDER_COVER_TOP_LAND:I
 
     .line 281
-    const v1, 0x7f0b01a4
+    const v1, 0x7f0b01a7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -941,7 +941,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->VIEWFINDER_COVER_LEFT_PORT:I
 
     .line 282
-    const v1, 0x7f0b01a5
+    const v1, 0x7f0b01a8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -950,7 +950,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->VIEWFINDER_COVER_TOP_PORT:I
 
     .line 284
-    const v1, 0x7f0b01c4
+    const v1, 0x7f0b01c7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -959,7 +959,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_ANIMATION_DX_LAND:I
 
     .line 285
-    const v1, 0x7f0b01c5
+    const v1, 0x7f0b01c8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -968,7 +968,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_ANIMATION_DY_LAND:I
 
     .line 286
-    const v1, 0x7f0b01c6
+    const v1, 0x7f0b01c9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -977,7 +977,7 @@
     sput v1, Lcom/android/camera/SnapboothCustomize;->REVIEW_IMAGE_ANIMATION_DX_PORT:I
 
     .line 287
-    const v1, 0x7f0b01c7
+    const v1, 0x7f0b01ca
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1171,7 +1171,7 @@
 
     .prologue
     .line 1217
-    const v0, 0x7f0800fa
+    const v0, 0x7f0800fc
 
     return v0
 .end method
@@ -1181,7 +1181,7 @@
 
     .prologue
     .line 1222
-    const v0, 0x7f080100
+    const v0, 0x7f080102
 
     return v0
 .end method
@@ -1191,7 +1191,7 @@
 
     .prologue
     .line 1232
-    const v0, 0x7f080102
+    const v0, 0x7f080104
 
     return v0
 .end method
@@ -1201,7 +1201,7 @@
 
     .prologue
     .line 1227
-    const v0, 0x7f080104
+    const v0, 0x7f080106
 
     return v0
 .end method
@@ -1734,7 +1734,7 @@
     .line 439
     iget-object v0, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f080107
+    const v1, 0x7f080109
 
     invoke-virtual {v0, v1}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 
@@ -1752,7 +1752,7 @@
     .line 447
     iget-object v0, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f080109
+    const v1, 0x7f08010b
 
     invoke-virtual {v0, v1}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 
@@ -1818,10 +1818,10 @@
     .parameter "parent"
 
     .prologue
-    const v6, 0x7f080111
+    const v6, 0x7f080113
 
     .line 908
-    const v3, 0x7f080149
+    const v3, 0x7f08014b
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1842,7 +1842,7 @@
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 912
-    const v3, 0x7f08010f
+    const v3, 0x7f080111
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1863,7 +1863,7 @@
     aput-object v3, v4, v5
 
     .line 915
-    const v3, 0x7f080112
+    const v3, 0x7f080114
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1883,7 +1883,7 @@
     aput-object v3, v4, v5
 
     .line 918
-    const v3, 0x7f080113
+    const v3, 0x7f080115
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1903,7 +1903,7 @@
     aput-object v3, v4, v5
 
     .line 921
-    const v3, 0x7f080114
+    const v3, 0x7f080116
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1931,10 +1931,10 @@
     .parameter "parent"
 
     .prologue
-    const v6, 0x7f080118
+    const v6, 0x7f08011a
 
     .line 814
-    const v3, 0x7f080145
+    const v3, 0x7f080147
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1950,7 +1950,7 @@
 
     .line 817
     .local v1, landscapeLayer:Landroid/view/View;
-    const v3, 0x7f080116
+    const v3, 0x7f080118
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1971,7 +1971,7 @@
     aput-object v3, v4, v5
 
     .line 821
-    const v3, 0x7f080119
+    const v3, 0x7f08011b
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1991,7 +1991,7 @@
     aput-object v3, v4, v5
 
     .line 825
-    const v3, 0x7f08011a
+    const v3, 0x7f08011c
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2029,7 +2029,7 @@
     const/4 v10, 0x0
 
     .line 618
-    const v6, 0x7f080158
+    const v6, 0x7f08015a
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2045,7 +2045,7 @@
 
     .line 621
     .local v3, landscapePanel:Landroid/view/View;
-    const v6, 0x7f08011b
+    const v6, 0x7f08011d
 
     invoke-virtual {v3, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2053,7 +2053,7 @@
 
     .line 622
     .local v0, bar:Landroid/view/View;
-    const v6, 0x7f08011c
+    const v6, 0x7f08011e
 
     invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2061,7 +2061,7 @@
 
     .line 624
     .local v4, layout:Landroid/view/View;
-    const v6, 0x7f08011d
+    const v6, 0x7f08011f
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2072,7 +2072,7 @@
     iput-object v6, p0, Lcom/android/camera/SnapboothCustomize;->mLandSwitchButton:Landroid/widget/ImageButton;
 
     .line 625
-    const v6, 0x7f08011e
+    const v6, 0x7f080120
 
     invoke-virtual {v4, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2085,7 +2085,7 @@
     .line 626
     iget-object v6, p0, Lcom/android/camera/SnapboothCustomize;->mLandSwitchButtonText:Landroid/widget/TextView;
 
-    const v7, 0x7f0a01ae
+    const v7, 0x7f0a01b7
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(I)V
 
@@ -2291,7 +2291,7 @@
     const/4 v6, 0x0
 
     .line 491
-    const v3, 0x7f080141
+    const v3, 0x7f080143
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2307,7 +2307,7 @@
 
     .line 494
     .local v1, landGalleryLayout:Landroid/view/View;
-    const v3, 0x7f08013b
+    const v3, 0x7f08013d
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2315,7 +2315,7 @@
 
     .line 496
     .local v0, gallery:Landroid/view/View;
-    const v3, 0x7f08013d
+    const v3, 0x7f08013f
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2326,7 +2326,7 @@
     iput-object v3, p0, Lcom/android/camera/SnapboothCustomize;->mLandthumbnail:Landroid/widget/ImageView;
 
     .line 497
-    const v3, 0x7f08013e
+    const v3, 0x7f080140
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2337,7 +2337,7 @@
     iput-object v3, p0, Lcom/android/camera/SnapboothCustomize;->mLandAnimationThumbnail:Landroid/widget/ImageView;
 
     .line 499
-    const v3, 0x7f08013f
+    const v3, 0x7f080141
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2385,7 +2385,7 @@
 
     .prologue
     .line 562
-    const v3, 0x7f08015a
+    const v3, 0x7f08015c
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2401,7 +2401,7 @@
 
     .line 564
     .local v0, landShutterLayout:Landroid/view/View;
-    const v3, 0x7f08010b
+    const v3, 0x7f08010d
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2409,7 +2409,7 @@
 
     .line 569
     .local v1, layout:Landroid/view/View;
-    const v3, 0x7f08010d
+    const v3, 0x7f08010f
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2437,10 +2437,10 @@
     .parameter "parent"
 
     .prologue
-    const v6, 0x7f080111
+    const v6, 0x7f080113
 
     .line 929
-    const v3, 0x7f08014b
+    const v3, 0x7f08014d
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2461,7 +2461,7 @@
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 933
-    const v3, 0x7f08010f
+    const v3, 0x7f080111
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2491,7 +2491,7 @@
     aput-object v3, v4, v5
 
     .line 937
-    const v3, 0x7f080112
+    const v3, 0x7f080114
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2520,7 +2520,7 @@
     aput-object v3, v4, v5
 
     .line 941
-    const v3, 0x7f080113
+    const v3, 0x7f080115
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2549,7 +2549,7 @@
     aput-object v3, v4, v5
 
     .line 945
-    const v3, 0x7f080114
+    const v3, 0x7f080116
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2586,10 +2586,10 @@
     .parameter "parent"
 
     .prologue
-    const v6, 0x7f080118
+    const v6, 0x7f08011a
 
     .line 836
-    const v3, 0x7f080147
+    const v3, 0x7f080149
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2605,7 +2605,7 @@
 
     .line 839
     .local v1, portraitLayer:Landroid/view/View;
-    const v3, 0x7f080116
+    const v3, 0x7f080118
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2633,7 +2633,7 @@
     aput-object v3, v4, v5
 
     .line 843
-    const v3, 0x7f080119
+    const v3, 0x7f08011b
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2662,7 +2662,7 @@
     aput-object v3, v4, v5
 
     .line 847
-    const v3, 0x7f08011a
+    const v3, 0x7f08011c
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2709,7 +2709,7 @@
     const/4 v9, 0x0
 
     .line 686
-    const v5, 0x7f08015c
+    const v5, 0x7f08015e
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2725,7 +2725,7 @@
 
     .line 689
     .local v3, portraitPanel:Landroid/view/View;
-    const v5, 0x7f08011c
+    const v5, 0x7f08011e
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2742,7 +2742,7 @@
     invoke-virtual {v5, v6}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
     .line 692
-    const v5, 0x7f08011d
+    const v5, 0x7f08011f
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2753,7 +2753,7 @@
     iput-object v5, p0, Lcom/android/camera/SnapboothCustomize;->mPortSwitchButton:Landroid/widget/ImageButton;
 
     .line 693
-    const v5, 0x7f08011e
+    const v5, 0x7f080120
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2766,7 +2766,7 @@
     .line 694
     iget-object v5, p0, Lcom/android/camera/SnapboothCustomize;->mPortSwitchButtonText:Landroid/widget/TextView;
 
-    const v6, 0x7f0a01ae
+    const v6, 0x7f0a01b7
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -2987,7 +2987,7 @@
     const/4 v6, 0x0
 
     .line 525
-    const v3, 0x7f080143
+    const v3, 0x7f080145
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3003,7 +3003,7 @@
 
     .line 528
     .local v1, portGalleryLayout:Landroid/view/View;
-    const v3, 0x7f08013b
+    const v3, 0x7f08013d
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3020,7 +3020,7 @@
     invoke-virtual {v3, v4}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
     .line 531
-    const v3, 0x7f08013d
+    const v3, 0x7f08013f
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3031,7 +3031,7 @@
     iput-object v3, p0, Lcom/android/camera/SnapboothCustomize;->mPortthumbnail:Landroid/widget/ImageView;
 
     .line 532
-    const v3, 0x7f08013e
+    const v3, 0x7f080140
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3042,7 +3042,7 @@
     iput-object v3, p0, Lcom/android/camera/SnapboothCustomize;->mPortAnimationThumbnail:Landroid/widget/ImageView;
 
     .line 534
-    const v3, 0x7f08013f
+    const v3, 0x7f080141
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3095,7 +3095,7 @@
 
     .prologue
     .line 582
-    const v2, 0x7f08015e
+    const v2, 0x7f080160
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3111,7 +3111,7 @@
 
     .line 585
     .local v0, portShutterLayout:Landroid/view/View;
-    const v2, 0x7f08010d
+    const v2, 0x7f08010f
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3151,7 +3151,7 @@
     .line 364
     iget-object v0, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f0800fb
+    const v1, 0x7f0800fd
 
     invoke-virtual {v0, v1}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 
@@ -3164,7 +3164,7 @@
     .line 365
     iget-object v0, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f0800fc
+    const v1, 0x7f0800fe
 
     invoke-virtual {v0, v1}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 
@@ -3186,7 +3186,7 @@
 
     .prologue
     .line 981
-    const v4, 0x7f080154
+    const v4, 0x7f080156
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3197,7 +3197,7 @@
     iput-object v4, p0, Lcom/android/camera/SnapboothCustomize;->mViewfinderCover:Landroid/widget/ImageView;
 
     .line 983
-    const v4, 0x7f080155
+    const v4, 0x7f080157
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3210,7 +3210,7 @@
     .line 984
     iget-object v4, p0, Lcom/android/camera/SnapboothCustomize;->mReviewImgContainer:Landroid/view/View;
 
-    const v5, 0x7f080156
+    const v5, 0x7f080158
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3221,7 +3221,7 @@
     iput-object v4, p0, Lcom/android/camera/SnapboothCustomize;->mReviewImg:Landroid/widget/ImageView;
 
     .line 987
-    const v4, 0x7f080157
+    const v4, 0x7f080159
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3235,7 +3235,7 @@
     if-eqz p2, :cond_0
 
     .line 990
-    const v4, 0x7f08014e
+    const v4, 0x7f080150
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3253,7 +3253,7 @@
 
     iget-object v6, p0, Lcom/android/camera/SnapboothCustomize;->mReviewScreenButtonsPanel:Landroid/view/View;
 
-    const v7, 0x7f080150
+    const v7, 0x7f080152
 
     invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3265,7 +3265,7 @@
 
     iget-object v6, p0, Lcom/android/camera/SnapboothCustomize;->mReviewScreenButtonsPanel:Landroid/view/View;
 
-    const v7, 0x7f080152
+    const v7, 0x7f080154
 
     invoke-virtual {v6, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3320,7 +3320,7 @@
     .end local v2           #i$:I
     .end local v3           #len$:I
     :cond_0
-    const v4, 0x7f080153
+    const v4, 0x7f080155
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3469,7 +3469,7 @@
     .line 343
     iget-object v0, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f0800fd
+    const v1, 0x7f0800ff
 
     invoke-virtual {v0, v1}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 
@@ -3496,7 +3496,7 @@
     .line 348
     iget-object v0, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f080106
+    const v1, 0x7f080108
 
     invoke-virtual {v0, v1}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 
@@ -3992,7 +3992,7 @@
     .line 1259
     iget-object v0, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f08010a
+    const v1, 0x7f08010c
 
     invoke-virtual {v0, v1}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 
@@ -4202,9 +4202,9 @@
     .locals 6
 
     .prologue
-    const v5, 0x7f0a01af
+    const v5, 0x7f0a01b8
 
-    const v4, 0x7f0a01ae
+    const v4, 0x7f0a01b7
 
     const v3, 0x7f0200cb
 
@@ -4416,7 +4416,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0b019b
+    const v4, 0x7f0b019e
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4440,7 +4440,7 @@
     .line 383
     iget-object v3, p0, Lcom/android/camera/SnapboothCustomize;->mSnapboothActivity:Lcom/android/camera/HTCSnapbooth;
 
-    const v4, 0x7f0800fe
+    const v4, 0x7f080100
 
     invoke-virtual {v3, v4}, Lcom/android/camera/HTCSnapbooth;->findViewById(I)Landroid/view/View;
 

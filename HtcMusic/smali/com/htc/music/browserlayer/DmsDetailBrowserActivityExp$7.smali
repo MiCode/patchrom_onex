@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 399
+    .line 401
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$7;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,36 +43,36 @@
     .parameter "whichButton"
 
     .prologue
-    .line 401
+    .line 403
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.settings.WIRELESS_SETTINGS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 402
+    .line 404
     .local v0, intent_tmp:Landroid/content/Intent;
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 403
+    .line 405
     const/high16 v1, 0x4000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 404
+    .line 406
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$7;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-virtual {v1, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivity(Landroid/content/Intent;)V
 
-    .line 406
+    .line 408
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$7;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setResult(I)V
 
-    .line 409
+    .line 411
     return-void
 .end method

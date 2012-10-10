@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 60
     new-instance v0, Lcom/android/internal/telephony/ADNErrorType$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/ADNErrorType$1;-><init>()V
@@ -58,20 +58,20 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 100
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
+    .line 101
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/ADNErrorType;->success:Z
 
-    .line 90
+    .line 102
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/ADNErrorType;->mError:I
 
-    .line 91
+    .line 103
     return-void
 .end method
 
@@ -81,16 +81,16 @@
     .parameter "error"
 
     .prologue
-    .line 82
+    .line 94
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
+    .line 95
     iput-boolean p1, p0, Lcom/android/internal/telephony/ADNErrorType;->success:Z
 
-    .line 84
+    .line 96
     iput p2, p0, Lcom/android/internal/telephony/ADNErrorType;->mError:I
 
-    .line 85
+    .line 97
     return-void
 .end method
 
@@ -100,7 +100,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 84
     const/4 v0, 0x0
 
     return v0
@@ -111,22 +111,22 @@
     .parameter "error"
 
     .prologue
-    .line 95
+    .line 108
     iput p1, p0, Lcom/android/internal/telephony/ADNErrorType;->mError:I
 
-    .line 97
+    .line 110
     if-nez p1, :cond_0
 
-    .line 99
+    .line 112
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/ADNErrorType;->success:Z
 
-    .line 105
+    .line 118
     :goto_0
     return-void
 
-    .line 103
+    .line 116
     :cond_0
     const/4 v0, 0x0
 
@@ -141,7 +141,7 @@
     .parameter "flags"
 
     .prologue
-    .line 78
+    .line 90
     iget-boolean v0, p0, Lcom/android/internal/telephony/ADNErrorType;->success:Z
 
     if-eqz v0, :cond_0
@@ -151,15 +151,15 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 79
+    .line 91
     iget v0, p0, Lcom/android/internal/telephony/ADNErrorType;->mError:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 80
+    .line 92
     return-void
 
-    .line 78
+    .line 90
     :cond_0
     const/4 v0, 0x0
 

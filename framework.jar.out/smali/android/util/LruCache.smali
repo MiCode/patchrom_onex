@@ -424,7 +424,7 @@
     .line 92
     new-instance v2, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v3, "key == null"
+    const-string v3, "key == null"
 
     invoke-direct {v2, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -682,7 +682,7 @@
     :cond_0
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "key == null || value == null"
+    const-string v2, "key == null || value == null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -812,7 +812,7 @@
     .line 208
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "key == null"
+    const-string v2, "key == null"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 

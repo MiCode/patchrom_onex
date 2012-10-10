@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 4657
+    .line 4874
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$23;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$23;->val$screenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
@@ -47,10 +47,10 @@
     .parameter "windowToken"
 
     .prologue
-    .line 4659
+    .line 4876
     if-eqz p1, :cond_0
 
-    .line 4661
+    .line 4878
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$23;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -64,11 +64,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4680
+    .line 4897
     :goto_0
     return-void
 
-    .line 4674
+    .line 4891
     :cond_0
     const-string v0, "WindowManager"
 
@@ -76,19 +76,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4675
+    .line 4892
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$23;->val$screenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
 
     invoke-interface {v0}, Landroid/view/WindowManagerPolicy$ScreenOnListener;->onScreenOn()V
 
-    .line 4676
+    .line 4893
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$23;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 4677
+    .line 4894
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$23;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -96,7 +96,7 @@
 
     iput-boolean v2, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenOnFully:Z
 
-    .line 4678
+    .line 4895
     monitor-exit v1
 
     goto :goto_0
@@ -110,7 +110,7 @@
 
     throw v0
 
-    .line 4671
+    .line 4888
     :catch_0
     move-exception v0
 

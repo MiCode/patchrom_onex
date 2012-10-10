@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 670
+    .line 684
     iput-object p1, p0, Lcom/android/camera/component/SmartShotController$5;->this$0:Lcom/android/camera/component/SmartShotController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,6 @@
     .parameter "camera"
 
     .prologue
-    .line 674
+    .line 688
     return-void
 .end method

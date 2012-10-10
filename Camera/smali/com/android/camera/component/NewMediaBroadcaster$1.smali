@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 47
+    .line 37
     iput-object p1, p0, Lcom/android/camera/component/NewMediaBroadcaster$1;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 49
+    .line 39
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/MediaEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$1;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
@@ -84,7 +84,7 @@
 
     if-nez v0, :cond_0
 
-    .line 65
+    .line 55
     iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$1;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -120,7 +120,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 67
+    .line 57
     :cond_0
     return-void
 .end method
@@ -132,7 +132,7 @@
     .parameter "x2"
 
     .prologue
-    .line 47
+    .line 37
     check-cast p3, Lcom/android/camera/MediaEventArgs;
 
     .end local p3

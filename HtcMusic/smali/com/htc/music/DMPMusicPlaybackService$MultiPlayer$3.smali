@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2124
+    .line 2143
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$3;->this$1:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "percent"
 
     .prologue
-    .line 2127
+    .line 2146
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$3;->this$1:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
 
     int-to-float v1, p2
@@ -55,6 +55,6 @@
     #setter for: Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mCurPercentage:F
     invoke-static {v0, v1}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->access$4602(Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;F)F
 
-    .line 2128
+    .line 2147
     return-void
 .end method

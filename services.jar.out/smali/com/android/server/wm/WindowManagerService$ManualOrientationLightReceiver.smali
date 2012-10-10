@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 11238
+    .line 11394
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$ManualOrientationLightReceiver;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 11238
+    .line 11394
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowManagerService$ManualOrientationLightReceiver;-><init>(Lcom/android/server/wm/WindowManagerService;)V
 
     return-void
@@ -49,24 +49,24 @@
     .parameter "nOrientation"
 
     .prologue
-    .line 11268
+    .line 11424
     const/4 v0, 0x0
 
-    .line 11269
+    .line 11425
     .local v0, bRet:Z
     packed-switch p1, :pswitch_data_0
 
-    .line 11276
+    .line 11432
     :goto_0
     return v0
 
-    .line 11274
+    .line 11430
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 11269
+    .line 11425
     nop
 
     :pswitch_data_0
@@ -88,14 +88,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 11241
+    .line 11397
     const-string v5, "package_name"
 
     invoke-virtual {p2, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 11242
+    .line 11398
     .local v3, strPackage:Ljava/lang/String;
     const-string v5, "orientation"
 
@@ -103,7 +103,7 @@
 
     move-result v2
 
-    .line 11243
+    .line 11399
     .local v2, nOrientation:I
     const-string v5, "manual"
 
@@ -111,7 +111,7 @@
 
     move-result v0
 
-    .line 11246
+    .line 11402
     .local v0, bManual:Z
     if-eqz v3, :cond_0
 
@@ -125,12 +125,12 @@
 
     if-nez v5, :cond_1
 
-    .line 11265
+    .line 11421
     :cond_0
     :goto_0
     return-void
 
-    .line 11251
+    .line 11407
     :cond_1
     const-string v5, "WindowManager"
 
@@ -180,22 +180,22 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11252
+    .line 11408
     new-instance v4, Lcom/android/server/wm/InputManager$VirtualKeyPolicy;
 
     invoke-direct {v4}, Lcom/android/server/wm/InputManager$VirtualKeyPolicy;-><init>()V
 
-    .line 11253
+    .line 11409
     .local v4, vkPolicy:Lcom/android/server/wm/InputManager$VirtualKeyPolicy;
     if-eqz v4, :cond_0
 
-    .line 11254
+    .line 11410
     iput-boolean v0, v4, Lcom/android/server/wm/InputManager$VirtualKeyPolicy;->mManual:Z
 
-    .line 11255
+    .line 11411
     iput v2, v4, Lcom/android/server/wm/InputManager$VirtualKeyPolicy;->mOrientation:I
 
-    .line 11257
+    .line 11413
     iget-object v5, p0, Lcom/android/server/wm/WindowManagerService$ManualOrientationLightReceiver;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v5, v5, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
@@ -206,14 +206,14 @@
 
     move-result-object v1
 
-    .line 11258
+    .line 11414
     .local v1, msg:Landroid/os/Message;
     if-eqz v1, :cond_0
 
-    .line 11259
+    .line 11415
     iput-object v4, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 11262
+    .line 11418
     iget-object v5, p0, Lcom/android/server/wm/WindowManagerService$ManualOrientationLightReceiver;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v5, v5, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;

@@ -37,30 +37,30 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 3168
+    .line 3188
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
-    .line 3169
+    .line 3189
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3162
+    .line 3182
     iput v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nConcateRef:I
 
-    .line 3163
+    .line 3183
     iput v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nConcateCount:I
 
-    .line 3164
+    .line 3184
     iput v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nSequence:I
 
-    .line 3165
+    .line 3185
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nConcatDestAddr:Ljava/lang/String;
 
-    .line 3166
+    .line 3186
     iput v1, p0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nDate:I
 
-    .line 3170
+    .line 3190
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .parameter "msg"
 
     .prologue
-    .line 3174
+    .line 3194
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -80,7 +80,7 @@
 
     check-cast v22, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;
 
-    .line 3175
+    .line 3195
     .local v22, obj:Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;
     move-object/from16 v0, v22
 
@@ -92,7 +92,7 @@
 
     iput v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nConcateRef:I
 
-    .line 3176
+    .line 3196
     move-object/from16 v0, v22
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;->tTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -103,7 +103,7 @@
 
     iput v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nConcateCount:I
 
-    .line 3177
+    .line 3197
     move-object/from16 v0, v22
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;->tTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -114,7 +114,7 @@
 
     iput v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nSequence:I
 
-    .line 3178
+    .line 3198
     move-object/from16 v0, v22
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;->tTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -125,7 +125,7 @@
 
     iput-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nConcatDestAddr:Ljava/lang/String;
 
-    .line 3179
+    .line 3199
     move-object/from16 v0, v22
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;->tTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -136,16 +136,16 @@
 
     iput v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->nDate:I
 
-    .line 3180
+    .line 3200
     new-instance v16, Landroid/content/Intent;
 
     invoke-direct/range {v16 .. v16}, Landroid/content/Intent;-><init>()V
 
-    .line 3181
+    .line 3201
     .local v16, informationIntent:Landroid/content/Intent;
     const/16 v19, 0x0
 
-    .line 3183
+    .line 3203
     .local v19, notifyAp:Z
     move-object/from16 v0, p1
 
@@ -153,12 +153,12 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 3288
+    .line 3308
     :cond_0
     :goto_0
     return-void
 
-    .line 3186
+    .line 3206
     :pswitch_0
     const-string v1, "Concate"
 
@@ -166,7 +166,7 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3187
+    .line 3207
     sget-object v1, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
     move-object/from16 v0, p0
@@ -193,7 +193,7 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/internal/telephony/ConcatedUtil;->updateRawTable(ILjava/lang/String;IIII)I
 
-    .line 3188
+    .line 3208
     sget-object v1, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
     move-object/from16 v0, p0
@@ -224,7 +224,7 @@
 
     move-result v21
 
-    .line 3189
+    .line 3209
     .local v21, nsentcount:I
     const-string v1, "Concate"
 
@@ -250,10 +250,10 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3191
+    .line 3211
     const/16 v23, 0x0
 
-    .line 3192
+    .line 3212
     .local v23, sendNext:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -265,14 +265,14 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 3193
+    .line 3213
     const-string v1, "Concate"
 
     const-string v5, "sent+fail complete del entry"
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3194
+    .line 3214
     sget-object v1, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
     move-object/from16 v0, p0
@@ -299,7 +299,7 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/internal/telephony/ConcatedUtil;->deleteentry(ILjava/lang/String;IIII)Z
 
-    .line 3198
+    .line 3218
     move-object/from16 v0, v22
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;->tTracker:Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
@@ -308,7 +308,7 @@
 
     move-object/from16 v17, v0
 
-    .line 3199
+    .line 3219
     .local v17, map:Ljava/util/HashMap;
     const-string v1, "destaddr"
 
@@ -320,13 +320,13 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 3200
+    .line 3220
     .local v2, str:Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 3201
+    .line 3221
     .local v3, time:J
     move-object/from16 v0, p0
 
@@ -339,7 +339,7 @@
     #calls: Lcom/android/internal/telephony/SMSDispatcher;->sendDatamanageIntent(Ljava/lang/String;JJ)V
     invoke-static/range {v1 .. v6}, Lcom/android/internal/telephony/SMSDispatcher;->access$400(Lcom/android/internal/telephony/SMSDispatcher;Ljava/lang/String;JJ)V
 
-    .line 3209
+    .line 3229
     .end local v2           #str:Ljava/lang/String;
     .end local v3           #time:J
     .end local v17           #map:Ljava/util/HashMap;
@@ -354,7 +354,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 3210
+    .line 3230
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
@@ -364,10 +364,10 @@
 
     move-result v19
 
-    .line 3211
+    .line 3231
     if-eqz v19, :cond_2
 
-    .line 3212
+    .line 3232
     if-nez v23, :cond_1
 
     new-instance v23, Landroid/content/Intent;
@@ -375,7 +375,7 @@
     .end local v23           #sendNext:Landroid/content/Intent;
     invoke-direct/range {v23 .. v23}, Landroid/content/Intent;-><init>()V
 
-    .line 3213
+    .line 3233
     .restart local v23       #sendNext:Landroid/content/Intent;
     :cond_1
     const-string v1, "SendNextMsg"
@@ -386,7 +386,7 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3217
+    .line 3237
     :cond_2
     :try_start_0
     move-object/from16 v0, v22
@@ -395,10 +395,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 3218
+    .line 3238
     if-nez v23, :cond_4
 
-    .line 3219
+    .line 3239
     move-object/from16 v0, v22
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;->tSentIntent:Landroid/app/PendingIntent;
@@ -411,11 +411,11 @@
 
     goto/16 :goto_0
 
-    .line 3225
+    .line 3245
     :catch_0
     move-exception v13
 
-    .line 3226
+    .line 3246
     .local v13, e:Landroid/app/PendingIntent$CanceledException;
     const-string v1, "SMS"
 
@@ -425,7 +425,7 @@
 
     goto/16 :goto_0
 
-    .line 3204
+    .line 3224
     .end local v13           #e:Landroid/app/PendingIntent$CanceledException;
     :cond_3
     new-instance v23, Landroid/content/Intent;
@@ -433,7 +433,7 @@
     .end local v23           #sendNext:Landroid/content/Intent;
     invoke-direct/range {v23 .. v23}, Landroid/content/Intent;-><init>()V
 
-    .line 3205
+    .line 3225
     .restart local v23       #sendNext:Landroid/content/Intent;
     const-string v1, "middle_success"
 
@@ -445,7 +445,7 @@
 
     goto :goto_1
 
-    .line 3221
+    .line 3241
     :cond_4
     :try_start_1
     move-object/from16 v0, v22
@@ -466,7 +466,7 @@
 
     goto/16 :goto_0
 
-    .line 3232
+    .line 3252
     .end local v21           #nsentcount:I
     .end local v23           #sendNext:Landroid/content/Intent;
     :pswitch_1
@@ -476,7 +476,7 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3234
+    .line 3254
     sget-object v5, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
     move-object/from16 v0, p0
@@ -503,7 +503,7 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/android/internal/telephony/ConcatedUtil;->updateRawTable(ILjava/lang/String;IIII)I
 
-    .line 3235
+    .line 3255
     sget-object v5, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
     move-object/from16 v0, p0
@@ -532,7 +532,7 @@
 
     move-result v20
 
-    .line 3236
+    .line 3256
     .local v20, nretrycount:I
     const-string v1, "Concate"
 
@@ -574,14 +574,14 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3238
+    .line 3258
     const/4 v1, 0x1
 
     move/from16 v0, v20
 
     if-ne v0, v1, :cond_5
 
-    .line 3239
+    .line 3259
     const-string v1, "retry_count"
 
     const/4 v5, 0x7
@@ -590,7 +590,7 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 3244
+    .line 3264
     :goto_2
     const-string v1, "under_retry"
 
@@ -600,7 +600,7 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3246
+    .line 3266
     :try_start_2
     move-object/from16 v0, v22
 
@@ -608,7 +608,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3247
+    .line 3267
     move-object/from16 v0, v22
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;->tSentIntent:Landroid/app/PendingIntent;
@@ -630,11 +630,11 @@
 
     goto/16 :goto_0
 
-    .line 3248
+    .line 3268
     :catch_1
     move-exception v14
 
-    .line 3249
+    .line 3269
     .local v14, ex:Landroid/app/PendingIntent$CanceledException;
     const-string v1, "SMS"
 
@@ -644,7 +644,7 @@
 
     goto/16 :goto_0
 
-    .line 3241
+    .line 3261
     .end local v14           #ex:Landroid/app/PendingIntent$CanceledException;
     :cond_5
     const-string v1, "retry_count"
@@ -661,17 +661,17 @@
 
     goto :goto_2
 
-    .line 3250
+    .line 3270
     :catch_2
     move-exception v13
 
-    .line 3251
+    .line 3271
     .local v13, e:Ljava/lang/Exception;
     invoke-virtual {v13}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 3256
+    .line 3276
     .end local v13           #e:Ljava/lang/Exception;
     .end local v20           #nretrycount:I
     :pswitch_2
@@ -684,7 +684,7 @@
     .end local v22           #obj:Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;
     check-cast v22, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;
 
-    .line 3258
+    .line 3278
     .restart local v22       #obj:Lcom/android/internal/telephony/SMSDispatcher$ConcateHandlerMessageObject;
     sget-object v5, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
@@ -712,7 +712,7 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/android/internal/telephony/ConcatedUtil;->updateRawTable(ILjava/lang/String;IIII)I
 
-    .line 3259
+    .line 3279
     sget-object v5, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
     move-object/from16 v0, p0
@@ -743,7 +743,7 @@
 
     move-result v18
 
-    .line 3260
+    .line 3280
     .local v18, nfailcount:I
     const-string v1, "Concate"
 
@@ -769,12 +769,12 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3262
+    .line 3282
     new-instance v15, Landroid/content/Intent;
 
     invoke-direct {v15}, Landroid/content/Intent;-><init>()V
 
-    .line 3263
+    .line 3283
     .local v15, fillIn:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -786,7 +786,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 3264
+    .line 3284
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/telephony/SMSDispatcher$ConcateHandler;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
@@ -796,17 +796,17 @@
 
     move-result v19
 
-    .line 3265
+    .line 3285
     if-eqz v19, :cond_6
 
-    .line 3266
+    .line 3286
     const-string v1, "SendNextMsg"
 
     const/4 v5, 0x1
 
     invoke-virtual {v15, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3270
+    .line 3290
     :cond_6
     move-object/from16 v0, p0
 
@@ -818,14 +818,14 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 3271
+    .line 3291
     const-string v1, "Concate"
 
     const-string v5, "fail+sent count reached, delete entry and send intent"
 
     invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3272
+    .line 3292
     sget-object v5, Lcom/android/internal/telephony/SMSDispatcher;->mConcatedutil:Lcom/android/internal/telephony/ConcatedUtil;
 
     move-object/from16 v0, p0
@@ -852,14 +852,14 @@
 
     invoke-virtual/range {v5 .. v11}, Lcom/android/internal/telephony/ConcatedUtil;->deleteentry(ILjava/lang/String;IIII)Z
 
-    .line 3274
+    .line 3294
     const-string v1, "retry_count"
 
     const/16 v5, 0x8
 
     invoke-virtual {v15, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 3279
+    .line 3299
     :goto_3
     const-string v1, "under_retry"
 
@@ -867,7 +867,7 @@
 
     invoke-virtual {v15, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3281
+    .line 3301
     :try_start_3
     move-object/from16 v0, v22
 
@@ -887,11 +887,11 @@
 
     goto/16 :goto_0
 
-    .line 3282
+    .line 3302
     :catch_3
     move-exception v14
 
-    .line 3283
+    .line 3303
     .restart local v14       #ex:Landroid/app/PendingIntent$CanceledException;
     const-string v1, "SMS"
 
@@ -901,7 +901,7 @@
 
     goto/16 :goto_0
 
-    .line 3276
+    .line 3296
     .end local v14           #ex:Landroid/app/PendingIntent$CanceledException;
     :cond_7
     const-string v1, "retry_count"
@@ -912,7 +912,7 @@
 
     goto :goto_3
 
-    .line 3183
+    .line 3203
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

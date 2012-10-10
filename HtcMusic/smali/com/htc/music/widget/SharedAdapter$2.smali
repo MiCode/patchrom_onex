@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 380
+    .line 383
     iput-object p1, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$adapter:Lcom/htc/music/widget/SharedAdapter;
 
     iput-object p2, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerAudioPath:Ljava/lang/String;
@@ -62,23 +62,23 @@
 
     const/4 v6, -0x1
 
-    .line 382
+    .line 385
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$adapter:Lcom/htc/music/widget/SharedAdapter;
 
     invoke-virtual {v4, p2}, Lcom/htc/music/widget/SharedAdapter;->updateRecord(I)V
 
-    .line 383
+    .line 386
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$adapter:Lcom/htc/music/widget/SharedAdapter;
 
     invoke-virtual {v4, p2}, Lcom/htc/music/widget/SharedAdapter;->intentForPosition(I)Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 385
+    .line 388
     .local v2, intent:Landroid/content/Intent;
     if-eqz v2, :cond_1
 
-    .line 388
+    .line 391
     invoke-virtual {v2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -91,12 +91,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 389
+    .line 392
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerAudioPath:Ljava/lang/String;
 
     if-eqz v4, :cond_5
 
-    .line 390
+    .line 393
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerAudioPath:Ljava/lang/String;
 
     const-string v5, "//"
@@ -107,7 +107,7 @@
 
     if-le v4, v6, :cond_3
 
-    .line 391
+    .line 394
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerAudioPath:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -118,7 +118,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 427
+    .line 430
     :goto_0
     invoke-virtual {v2}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
@@ -126,31 +126,31 @@
 
     if-nez v4, :cond_0
 
-    .line 428
+    .line 431
     const-string v4, "[ShareAdapter]"
 
     const-string v5, "choose_listener..onClick()..Package is null... "
 
     invoke-static {v4, v5}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
+    .line 435
     :cond_0
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerActivity:Landroid/app/Activity;
 
     invoke-virtual {v4, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 435
+    .line 438
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 436
+    .line 439
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 438
+    .line 441
     :cond_2
     return-void
 
-    .line 393
+    .line 396
     :cond_3
     const-string v4, "AddFile"
 
@@ -158,11 +158,11 @@
 
     move-result v0
 
-    .line 394
+    .line 397
     .local v0, addFile:Z
     if-eqz v0, :cond_4
 
-    .line 396
+    .line 399
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,13 +183,13 @@
 
     move-result-object v1
 
-    .line 397
+    .line 400
     .local v1, audioPath:Ljava/lang/String;
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 398
+    .line 401
     .local v3, uri:Landroid/net/Uri;
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerMimeType:Ljava/lang/String;
 
@@ -197,7 +197,7 @@
 
     goto :goto_0
 
-    .line 400
+    .line 403
     .end local v1           #audioPath:Ljava/lang/String;
     .end local v3           #uri:Landroid/net/Uri;
     :cond_4
@@ -213,7 +213,7 @@
 
     goto :goto_0
 
-    .line 404
+    .line 407
     .end local v0           #addFile:Z
     :cond_5
     const-string v4, "[ShareAdapter]"
@@ -224,18 +224,18 @@
 
     goto :goto_0
 
-    .line 407
+    .line 410
     :cond_6
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerMimeType:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 408
+    .line 411
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerAudioPath:Ljava/lang/String;
 
     if-eqz v4, :cond_9
 
-    .line 409
+    .line 412
     iget-object v4, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerAudioPath:Ljava/lang/String;
 
     const-string v5, "//"
@@ -246,7 +246,7 @@
 
     if-le v4, v6, :cond_7
 
-    .line 410
+    .line 413
     const-string v4, "android.intent.extra.STREAM"
 
     iget-object v5, p0, Lcom/htc/music/widget/SharedAdapter$2;->val$innerAudioPath:Ljava/lang/String;
@@ -259,7 +259,7 @@
 
     goto :goto_0
 
-    .line 412
+    .line 415
     :cond_7
     const-string v4, "AddFile"
 
@@ -267,11 +267,11 @@
 
     move-result v0
 
-    .line 413
+    .line 416
     .restart local v0       #addFile:Z
     if-eqz v0, :cond_8
 
-    .line 414
+    .line 417
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,13 +292,13 @@
 
     move-result-object v1
 
-    .line 415
+    .line 418
     .restart local v1       #audioPath:Ljava/lang/String;
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 416
+    .line 419
     .restart local v3       #uri:Landroid/net/Uri;
     const-string v4, "android.intent.extra.STREAM"
 
@@ -306,7 +306,7 @@
 
     goto/16 :goto_0
 
-    .line 418
+    .line 421
     .end local v1           #audioPath:Ljava/lang/String;
     .end local v3           #uri:Landroid/net/Uri;
     :cond_8
@@ -322,7 +322,7 @@
 
     goto/16 :goto_0
 
-    .line 422
+    .line 425
     .end local v0           #addFile:Z
     :cond_9
     const-string v4, "[ShareAdapter]"

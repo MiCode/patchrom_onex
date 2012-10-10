@@ -85,12 +85,12 @@
     .locals 2
 
     .prologue
-    .line 339
+    .line 340
     sget-object v0, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 344
+    .line 345
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "contacts/simple/list"
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->SIMPLE_CONTENT_URI:Landroid/net/Uri;
 
-    .line 353
+    .line 354
     sget-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "favorite"
@@ -112,12 +112,12 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->CONTENT_FAVORITE_URI:Landroid/net/Uri;
 
-    .line 358
+    .line 359
     sget-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->CONTENT_FAVORITE_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->UPDATE_FAVORITE_URI:Landroid/net/Uri;
 
-    .line 363
+    .line 364
     sget-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "order_group_favorite_contact"
@@ -128,7 +128,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->ORDERED_GROUP_CONTACT_URI:Landroid/net/Uri;
 
-    .line 372
+    .line 373
     sget-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "group_with_favorite"
@@ -139,7 +139,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->GRUOP_FAVORITE_URI:Landroid/net/Uri;
 
-    .line 373
+    .line 374
     sget-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "group_with_favorite"
@@ -150,7 +150,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->GROUP_CONTACT_URI:Landroid/net/Uri;
 
-    .line 446
+    .line 447
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,7 +183,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->EXCLUDE_MY_CONTACT_CARD:Ljava/lang/String;
 
-    .line 452
+    .line 453
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +216,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Contacts;->EXCLUDE_FLICKR_CONTACT:Ljava/lang/String;
 
-    .line 462
+    .line 463
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -256,7 +256,7 @@
     .locals 0
 
     .prologue
-    .line 334
+    .line 335
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -267,10 +267,10 @@
     .parameter "whereClause"
 
     .prologue
-    .line 588
+    .line 589
     const-string v0, ""
 
-    .line 589
+    .line 590
     .local v0, newClause:Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -278,14 +278,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 590
+    .line 591
     const-string v0, "has_phone_number=1"
 
-    .line 595
+    .line 596
     :goto_0
     return-object v0
 
-    .line 593
+    .line 594
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -325,10 +325,10 @@
     .parameter "whereClause"
 
     .prologue
-    .line 567
+    .line 568
     const-string v0, ""
 
-    .line 568
+    .line 569
     .local v0, newClause:Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -336,14 +336,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 569
+    .line 570
     const-string v0, "in_visible_group=1"
 
-    .line 574
+    .line 575
     :goto_0
     return-object v0
 
-    .line 572
+    .line 573
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -385,15 +385,15 @@
     .parameter "resolver"
 
     .prologue
-    .line 532
+    .line 533
     if-eqz p2, :cond_0
 
-    .line 533
+    .line 534
     invoke-static {p0, p1, p3}, Lcom/htc/provider/IccContract;->getDeleteIccPhonebookUri(JLandroid/content/ContentResolver;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 535
+    .line 536
     :goto_0
     return-object v0
 
@@ -414,14 +414,14 @@
     .parameter "accountType"
 
     .prologue
-    .line 618
+    .line 619
     const-wide/16 v2, 0x0
 
     cmp-long v2, v2, p1
 
     if-gez v2, :cond_1
 
-    .line 619
+    .line 620
     sget-object v2, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v2, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
@@ -432,26 +432,26 @@
 
     move-result-object v1
 
-    .line 624
+    .line 625
     .local v1, uriLookup:Landroid/net/Uri;
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 625
+    .line 626
     .local v0, intent:Landroid/content/Intent;
     const-string v2, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 628
+    .line 629
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 629
+    .line 630
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -490,11 +490,11 @@
 
     move-result-object v1
 
-    .line 633
+    .line 634
     :cond_0
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 636
+    .line 637
     .end local v0           #intent:Landroid/content/Intent;
     .end local v1           #uriLookup:Landroid/net/Uri;
     :goto_0
@@ -513,17 +513,17 @@
     .parameter "isSIMKind"
 
     .prologue
-    .line 641
+    .line 642
     const/4 v0, 0x0
 
-    .line 642
+    .line 643
     .local v0, accountType:Ljava/lang/String;
     if-eqz p3, :cond_0
 
-    .line 643
+    .line 644
     const-string v0, "com.anddroid.contacts.sim"
 
-    .line 646
+    .line 647
     :cond_0
     invoke-static {p0, p1, p2, v0}, Lcom/htc/provider/HtcContactsContract$Contacts;->getViewContactCardIntent(Landroid/content/ContentResolver;JLjava/lang/String;)Landroid/content/Intent;
 
@@ -537,10 +537,10 @@
     .parameter "whereClause"
 
     .prologue
-    .line 547
+    .line 548
     const-string v1, ""
 
-    .line 548
+    .line 549
     .local v1, newClause:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -572,7 +572,7 @@
 
     move-result-object v0
 
-    .line 551
+    .line 552
     .local v0, CLAUSE_INCLUDE:Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -580,14 +580,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 552
+    .line 553
     move-object v1, v0
 
-    .line 557
+    .line 558
     :goto_0
     return-object v1
 
-    .line 555
+    .line 556
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -631,12 +631,12 @@
 
     const/4 v4, 0x1
 
-    .line 603
+    .line 604
     invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v0
 
-    .line 604
+    .line 605
     .local v0, id:J
     sget-object v5, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
@@ -644,19 +644,19 @@
 
     move-result-object v2
 
-    .line 605
+    .line 606
     .local v2, uri:Landroid/net/Uri;
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 606
+    .line 607
     .local v3, value:Landroid/content/ContentValues;
     const-string v5, "custom_ringtone"
 
     invoke-virtual {v3, v5, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 607
+    .line 608
     invoke-virtual {p0, v2, v3, v6, v6}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v5

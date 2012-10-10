@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 511
+    .line 521
     iput-object p1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 511
+    .line 521
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$BatteryReceiver;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -52,7 +52,7 @@
     .parameter "intent"
 
     .prologue
-    .line 514
+    .line 524
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -62,7 +62,7 @@
 
     monitor-enter v2
 
-    .line 515
+    .line 525
     :try_start_0
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -71,7 +71,7 @@
 
     move-result v0
 
-    .line 516
+    .line 526
     .local v0, wasPowered:Z
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -89,7 +89,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mIsPowered:Z
     invoke-static {v1, v3}, Lcom/android/server/PowerManagerService;->access$902(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 518
+    .line 528
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mIsPowered:Z
@@ -99,13 +99,13 @@
 
     if-eq v1, v0, :cond_2
 
-    .line 520
+    .line 530
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->updateWakeLockLocked()V
     invoke-static {v1}, Lcom/android/server/PowerManagerService;->access$1100(Lcom/android/server/PowerManagerService;)V
 
-    .line 532
+    .line 542
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -117,7 +117,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 533
+    .line 543
     if-eqz v0, :cond_0
 
     :try_start_1
@@ -138,7 +138,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 537
+    .line 547
     :cond_0
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -150,13 +150,13 @@
 
     invoke-virtual {v1, v4, v5, v6}, Lcom/android/server/PowerManagerService;->userActivity(JZ)V
 
-    .line 540
+    .line 550
     :cond_1
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 543
+    .line 553
     :try_start_2
     invoke-static {}, Lcom/android/server/PowerManagerService;->access$1300()Z
 
@@ -173,13 +173,13 @@
 
     if-eqz v1, :cond_2
 
-    .line 546
+    .line 556
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
     invoke-static {v1}, Lcom/android/server/PowerManagerService;->access$1500(Lcom/android/server/PowerManagerService;)V
 
-    .line 547
+    .line 557
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -190,13 +190,13 @@
 
     invoke-virtual {v1, v3, v4, v5}, Lcom/android/server/PowerManagerService;->userActivity(JZ)V
 
-    .line 551
+    .line 561
     :cond_2
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 553
+    .line 563
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHtcPowerSaver:Lcom/android/server/HtcPowerSaver;
@@ -206,7 +206,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 555
+    .line 564
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHtcPowerSaver:Lcom/android/server/HtcPowerSaver;
@@ -216,7 +216,7 @@
 
     invoke-virtual {v1, p2}, Lcom/android/server/HtcPowerSaver;->updateBatteryInfo(Landroid/content/Intent;)V
 
-    .line 556
+    .line 565
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mPowerSaverHandler:Landroid/os/Handler;
@@ -233,7 +233,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 557
+    .line 566
     iget-object v1, p0, Lcom/android/server/PowerManagerService$BatteryReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mPowerSaverHandler:Landroid/os/Handler;
@@ -250,11 +250,11 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 560
+    .line 569
     :cond_3
     return-void
 
-    .line 540
+    .line 550
     :catchall_0
     move-exception v1
 
@@ -266,7 +266,7 @@
     :try_start_4
     throw v1
 
-    .line 551
+    .line 561
     .end local v0           #wasPowered:Z
     :catchall_1
     move-exception v1

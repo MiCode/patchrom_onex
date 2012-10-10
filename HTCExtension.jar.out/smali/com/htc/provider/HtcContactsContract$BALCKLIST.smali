@@ -31,7 +31,7 @@
     .locals 2
 
     .prologue
-    .line 3710
+    .line 3714
     sget-object v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
 
     const-string v1, "1.6"
@@ -97,7 +97,7 @@
     :goto_0
     sput-boolean v0, Lcom/htc/provider/HtcContactsContract$BALCKLIST;->enableBlacklist:Z
 
-    .line 3723
+    .line 3727
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "blacklist"
@@ -108,7 +108,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$BALCKLIST;->BLACKLIST_CONTENT_URI:Landroid/net/Uri;
 
-    .line 3728
+    .line 3732
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "blacklist_candidate"
@@ -119,7 +119,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$BALCKLIST;->BLACKLIST_CANDIDATE_CONTENT_URI:Landroid/net/Uri;
 
-    .line 3733
+    .line 3737
     const-string v0, "content://call_log/calls_photo/blacklist"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -130,7 +130,7 @@
 
     return-void
 
-    .line 3710
+    .line 3714
     :cond_2
     const/4 v0, 0x0
 
@@ -141,7 +141,7 @@
     .locals 0
 
     .prologue
-    .line 3706
+    .line 3710
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 738
+    .line 772
     iput-object p1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,169 +35,201 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 6
+    .locals 8
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
-    const/4 v4, 0x2
+    const/4 v6, 0x0
 
-    .line 741
-    const-string v1, "WifiService"
+    const/4 v5, 0x2
 
-    const-string v2, "Quickboot - Intent received: ACTION_QUICKBOOT_POWEROFF"
+    .line 775
+    const-string v2, "WifiService"
 
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "Quickboot - Intent received: ACTION_QUICKBOOT_POWEROFF"
 
-    .line 742
-    iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v2, 0x0
+    .line 776
+    iget-object v2, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mEnablingWifiInterrupted:Z
-    invoke-static {v1, v2}, Lcom/android/server/WifiService;->access$2502(Lcom/android/server/WifiService;Z)Z
+    invoke-static {v2, v6}, Lcom/android/server/WifiService;->access$2702(Lcom/android/server/WifiService;Z)Z
 
-    .line 743
-    iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
+    .line 777
+    iget-object v2, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
-    invoke-static {v1}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
+    invoke-static {v2}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Landroid/net/wifi/WifiStateMachine;->syncGetWifiState()I
+    invoke-virtual {v2}, Landroid/net/wifi/WifiStateMachine;->syncGetWifiState()I
 
-    move-result v1
+    move-result v2
 
-    if-ne v1, v4, :cond_1
+    if-ne v2, v5, :cond_1
 
-    .line 744
-    const-string v1, "WifiService"
+    .line 778
+    const-string v2, "WifiService"
 
-    const-string v2, "Quickboot - Wifi is still starting up"
+    const-string v3, "Quickboot - Wifi is still starting up"
 
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 745
-    const/16 v0, 0xf
+    .line 779
+    const/16 v1, 0xf
 
-    .line 746
-    .local v0, waitSecond:I
+    .line 780
+    .local v1, waitSecond:I
     :goto_0
-    iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
+    iget-object v2, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
-    invoke-static {v1}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/net/wifi/WifiStateMachine;->syncGetWifiState()I
-
-    move-result v1
-
-    if-ne v1, v4, :cond_0
-
-    if-lez v0, :cond_0
-
-    .line 747
-    const-string v1, "WifiService"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Quickboot - Wait for the end of wifi starting up: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Landroid/net/wifi/WifiStateMachine;->syncGetWifiState()I
 
-    move-result-object v2
+    move-result v2
 
-    const-string v3, " sec"
+    if-ne v2, v5, :cond_0
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-lez v1, :cond_0
 
-    move-result-object v2
+    .line 781
+    const-string v2, "WifiService"
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v4, "Quickboot - Wait for the end of wifi starting up: "
 
-    .line 749
-    const-wide/16 v1, 0x3e8
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " sec"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 783
+    const-wide/16 v2, 0x3e8
 
     :try_start_0
-    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 752
+    .line 786
     :goto_1
-    add-int/lit8 v0, v0, -0x1
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 755
+    .line 789
     :cond_0
-    iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
+    iget-object v2, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
-    invoke-static {v1}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
+    invoke-static {v2}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Landroid/net/wifi/WifiStateMachine;->syncGetWifiState()I
+    invoke-virtual {v2}, Landroid/net/wifi/WifiStateMachine;->syncGetWifiState()I
 
-    move-result v1
+    move-result v2
 
-    if-ne v1, v4, :cond_2
+    if-ne v2, v5, :cond_3
 
-    .line 756
-    iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
+    .line 790
+    iget-object v2, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mEnablingWifiInterrupted:Z
-    invoke-static {v1, v5}, Lcom/android/server/WifiService;->access$2502(Lcom/android/server/WifiService;Z)Z
+    invoke-static {v2, v7}, Lcom/android/server/WifiService;->access$2702(Lcom/android/server/WifiService;Z)Z
 
-    .line 757
-    const-string v1, "WifiService"
+    .line 791
+    const-string v2, "WifiService"
 
-    const-string v2, "Quickboot - Power-off interrupt wifi starting up"
+    const-string v3, "Quickboot - Power-off interrupt wifi starting up"
 
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 764
-    .end local v0           #waitSecond:I
+    .line 798
+    .end local v1           #waitSecond:I
     :cond_1
     :goto_2
-    iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
+    iget-object v2, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mQuickBootPowerOffIntentReceived:Z
-    invoke-static {v1, v5}, Lcom/android/server/WifiService;->access$2602(Lcom/android/server/WifiService;Z)Z
+    invoke-static {v2, v7}, Lcom/android/server/WifiService;->access$2802(Lcom/android/server/WifiService;Z)Z
 
-    .line 765
+    .line 803
+    iget-object v2, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
+
+    #getter for: Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/server/WifiService;->access$200(Lcom/android/server/WifiService;)Landroid/content/Context;
+
+    move-result-object v2
+
+    const-string v3, "wireless_display"
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/htc/service/WirelessDisplayManager;
+
+    .line 804
+    .local v0, mWDManager:Lcom/htc/service/WirelessDisplayManager;
+    if-eqz v0, :cond_2
+
+    .line 805
+    const-string v2, "WifiService"
+
+    const-string v3, "setFingerGestureEnable to false"
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 806
+    invoke-virtual {v0, v6}, Lcom/htc/service/WirelessDisplayManager;->setFingerGestureEnable(Z)V
+
+    .line 809
+    :cond_2
     return-void
 
-    .line 760
-    .restart local v0       #waitSecond:I
-    :cond_2
-    const-string v1, "WifiService"
+    .line 794
+    .end local v0           #mWDManager:Lcom/htc/service/WirelessDisplayManager;
+    .restart local v1       #waitSecond:I
+    :cond_3
+    const-string v2, "WifiService"
 
-    const-string v2, "Quickboot - Wifi started"
+    const-string v3, "Quickboot - Wifi started"
 
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 750
+    .line 784
     :catch_0
-    move-exception v1
+    move-exception v2
 
     goto :goto_1
 .end method

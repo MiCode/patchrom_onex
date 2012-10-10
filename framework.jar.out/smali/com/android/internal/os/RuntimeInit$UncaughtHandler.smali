@@ -185,7 +185,7 @@
     .local v0, crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
     iget-object v2, v0, Landroid/app/ApplicationErrorReport$CrashInfo;->exceptionClassName:Ljava/lang/String;
 
-    const-string/jumbo v3, "java.lang.OutOfMemoryError"
+    const-string v3, "java.lang.OutOfMemoryError"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

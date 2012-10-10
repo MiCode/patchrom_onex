@@ -2308,7 +2308,7 @@
     .end local v3           #cols:[Ljava/lang/String;
     .end local v11           #cursor:Landroid/database/Cursor;
     :cond_12
-    const v2, 0x7f070118
+    const v2, 0x7f070119
 
     move-object/from16 v0, p0
 
@@ -4103,7 +4103,7 @@
     if-ne v12, v0, :cond_10
 
     .line 524
-    const v0, 0x7f0700ac
+    const v0, 0x7f0700ad
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment;->setSearchHint(I)V
 
@@ -4217,7 +4217,7 @@
     .line 528
     .restart local v9       #f:Landroid/content/IntentFilter;
     :cond_10
-    const v0, 0x7f0700ab
+    const v0, 0x7f0700ac
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment;->setSearchHint(I)V
 
@@ -6615,7 +6615,7 @@
     const/4 v5, 0x1
 
     .line 1267
-    const v3, 0x7f0800a1
+    const v3, 0x7f0800a2
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment;->findViewById(I)Landroid/view/View;
 
@@ -6626,7 +6626,7 @@
     iput-object v3, p0, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment;->mQueueTitle:Lcom/htc/widget/HeaderBarText;
 
     .line 1268
-    const v3, 0x7f0800a2
+    const v3, 0x7f0800a3
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment;->findViewById(I)Landroid/view/View;
 
@@ -6636,7 +6636,7 @@
 
     .line 1269
     .local v1, playerButton:Lcom/htc/widget/HeaderBarImage;
-    const v3, 0x7f0800a0
+    const v3, 0x7f0800a1
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment;->findViewById(I)Landroid/view/View;
 
@@ -6646,7 +6646,7 @@
 
     .line 1270
     .local v0, libraryButton:Lcom/htc/widget/HeaderBarImage;
-    const v3, 0x7f0800a4
+    const v3, 0x7f0800a5
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment;->findViewById(I)Landroid/view/View;
 
@@ -6685,7 +6685,7 @@
     invoke-virtual {v1, v5}, Lcom/htc/widget/HeaderBarImage;->setImageMode(I)V
 
     .line 1281
-    const v3, 0x7f07011b
+    const v3, 0x7f07011c
 
     invoke-virtual {v1, v3}, Lcom/htc/widget/HeaderBarImage;->setLabelText(I)V
 
@@ -11486,7 +11486,7 @@
     .line 2057
     const/16 v0, 0x29
 
-    const v1, 0x7f07009f
+    const v1, 0x7f0700a0
 
     invoke-interface {p1, v5, v0, v4, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 

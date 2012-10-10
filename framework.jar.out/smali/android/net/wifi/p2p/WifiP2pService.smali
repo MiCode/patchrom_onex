@@ -364,7 +364,7 @@
     return p1
 .end method
 
-.method static synthetic access$2700(Landroid/net/wifi/p2p/WifiP2pService;)Ljava/lang/String;
+.method static synthetic access$2900(Landroid/net/wifi/p2p/WifiP2pService;)Ljava/lang/String;
     .locals 1
     .parameter "x0"
 
@@ -386,7 +386,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3600(Landroid/net/wifi/p2p/WifiP2pService;)I
+.method static synthetic access$3800(Landroid/net/wifi/p2p/WifiP2pService;)I
     .locals 1
     .parameter "x0"
 
@@ -397,7 +397,7 @@
     return v0
 .end method
 
-.method static synthetic access$3602(Landroid/net/wifi/p2p/WifiP2pService;I)I
+.method static synthetic access$3802(Landroid/net/wifi/p2p/WifiP2pService;I)I
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -409,7 +409,7 @@
     return p1
 .end method
 
-.method static synthetic access$3604(Landroid/net/wifi/p2p/WifiP2pService;)I
+.method static synthetic access$3804(Landroid/net/wifi/p2p/WifiP2pService;)I
     .locals 1
     .parameter "x0"
 
@@ -424,7 +424,7 @@
     return v0
 .end method
 
-.method static synthetic access$3900(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/net/NetworkInfo;
+.method static synthetic access$4100(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/net/NetworkInfo;
     .locals 1
     .parameter "x0"
 
@@ -435,7 +435,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4300(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/net/wifi/p2p/WifiP2pDevice;
+.method static synthetic access$4500(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/net/wifi/p2p/WifiP2pDevice;
     .locals 1
     .parameter "x0"
 
@@ -446,7 +446,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4700(Landroid/net/wifi/p2p/WifiP2pService;)Z
+.method static synthetic access$4900(Landroid/net/wifi/p2p/WifiP2pService;)Z
     .locals 1
     .parameter "x0"
 
@@ -457,7 +457,7 @@
     return v0
 .end method
 
-.method static synthetic access$4702(Landroid/net/wifi/p2p/WifiP2pService;Z)Z
+.method static synthetic access$4902(Landroid/net/wifi/p2p/WifiP2pService;Z)Z
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -492,7 +492,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$5600(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/net/DhcpStateMachine;
+.method static synthetic access$5800(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/net/DhcpStateMachine;
     .locals 1
     .parameter "x0"
 
@@ -503,7 +503,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$5602(Landroid/net/wifi/p2p/WifiP2pService;Landroid/net/DhcpStateMachine;)Landroid/net/DhcpStateMachine;
+.method static synthetic access$5802(Landroid/net/wifi/p2p/WifiP2pService;Landroid/net/DhcpStateMachine;)Landroid/net/DhcpStateMachine;
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -515,7 +515,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$6100(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/os/PowerManager$WakeLock;
+.method static synthetic access$6300(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/os/PowerManager$WakeLock;
     .locals 1
     .parameter "x0"
 
@@ -537,7 +537,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$7200()I
+.method static synthetic access$7400()I
     .locals 1
 
     .prologue
@@ -547,7 +547,7 @@
     return v0
 .end method
 
-.method static synthetic access$7204()I
+.method static synthetic access$7404()I
     .locals 1
 
     .prologue
@@ -561,7 +561,7 @@
     return v0
 .end method
 
-.method static synthetic access$8500()[Ljava/lang/String;
+.method static synthetic access$8800()[Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -571,7 +571,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$8600(Landroid/net/wifi/p2p/WifiP2pService;)Lcom/android/internal/util/AsyncChannel;
+.method static synthetic access$8900(Landroid/net/wifi/p2p/WifiP2pService;)Lcom/android/internal/util/AsyncChannel;
     .locals 1
     .parameter "x0"
 
@@ -582,7 +582,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$8700(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/app/Notification;
+.method static synthetic access$9000(Landroid/net/wifi/p2p/WifiP2pService;)Landroid/app/Notification;
     .locals 1
     .parameter "x0"
 
@@ -593,7 +593,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$8702(Landroid/net/wifi/p2p/WifiP2pService;Landroid/app/Notification;)Landroid/app/Notification;
+.method static synthetic access$9002(Landroid/net/wifi/p2p/WifiP2pService;Landroid/app/Notification;)Landroid/app/Notification;
     .locals 0
     .parameter "x0"
     .parameter "x1"

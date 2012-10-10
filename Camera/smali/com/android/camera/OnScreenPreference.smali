@@ -706,7 +706,7 @@
     .local v4, entryValues:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     iget-object v11, p0, Lcom/android/camera/OnScreenPreference;->mHTCCamera:Lcom/android/camera/HTCCamera;
 
-    const v12, 0x7f0a00ff
+    const v12, 0x7f0a0106
 
     invoke-virtual {v11, v12}, Lcom/android/camera/HTCCamera;->getString(I)Ljava/lang/String;
 
@@ -867,7 +867,7 @@
     .local v3, entryValues:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     iget-object v9, p0, Lcom/android/camera/OnScreenPreference;->mHTCCamera:Lcom/android/camera/HTCCamera;
 
-    const v10, 0x7f0a0102
+    const v10, 0x7f0a0109
 
     invoke-virtual {v9, v10}, Lcom/android/camera/HTCCamera;->getString(I)Ljava/lang/String;
 
@@ -1748,7 +1748,7 @@
 
     iget-object v5, p0, Lcom/android/camera/OnScreenPreference;->mHTCCamera:Lcom/android/camera/HTCCamera;
 
-    const v6, 0x7f0a018f
+    const v6, 0x7f0a0198
 
     invoke-virtual {v5, v6}, Lcom/android/camera/HTCCamera;->getString(I)Ljava/lang/String;
 
@@ -2375,7 +2375,7 @@
     .locals 3
 
     .prologue
-    const v2, 0x7f0a008f
+    const v2, 0x7f0a0096
 
     .line 1885
     iget-object v0, p0, Lcom/android/camera/OnScreenPreference;->mImageRatioPref:Landroid/preference/CheckBoxPreference;
@@ -2403,7 +2403,7 @@
     :goto_1
     iget-object v0, p0, Lcom/android/camera/OnScreenPreference;->mImageRatioPref:Landroid/preference/CheckBoxPreference;
 
-    const v1, 0x7f0a0092
+    const v1, 0x7f0a0099
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setSummaryOff(I)V
 
@@ -2438,7 +2438,7 @@
     .line 1893
     iget-object v0, p0, Lcom/android/camera/OnScreenPreference;->mImageRatioPref:Landroid/preference/CheckBoxPreference;
 
-    const v1, 0x7f0a0090
+    const v1, 0x7f0a0097
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setSummaryOn(I)V
 
@@ -2455,7 +2455,7 @@
     .line 1895
     iget-object v0, p0, Lcom/android/camera/OnScreenPreference;->mImageRatioPref:Landroid/preference/CheckBoxPreference;
 
-    const v1, 0x7f0a008e
+    const v1, 0x7f0a0095
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setSummaryOn(I)V
 
@@ -2465,7 +2465,7 @@
     :cond_4
     iget-object v0, p0, Lcom/android/camera/OnScreenPreference;->mImageRatioPref:Landroid/preference/CheckBoxPreference;
 
-    const v1, 0x7f0a0091
+    const v1, 0x7f0a0098
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setSummaryOn(I)V
 
@@ -6120,7 +6120,7 @@
     if-ne v0, v1, :cond_c
 
     .line 952
-    const v16, 0x7f0a0065
+    const v16, 0x7f0a006c
 
     .line 982
     .local v16, titleId:I
@@ -6143,7 +6143,7 @@
     if-eqz v17, :cond_d
 
     .line 954
-    const v16, 0x7f0a0065
+    const v16, 0x7f0a006c
 
     .restart local v16       #titleId:I
     goto :goto_6
@@ -6194,7 +6194,7 @@
     invoke-static/range {v17 .. v18}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 961
-    const v16, 0x7f0a0072
+    const v16, 0x7f0a0079
 
     .restart local v16       #titleId:I
     goto :goto_6
@@ -6222,7 +6222,7 @@
     if-ne v0, v1, :cond_10
 
     .line 966
-    const v16, 0x7f0a0074
+    const v16, 0x7f0a007b
 
     .restart local v16       #titleId:I
     goto :goto_6
@@ -6241,7 +6241,7 @@
     if-ne v0, v1, :cond_11
 
     .line 968
-    const v16, 0x7f0a0075
+    const v16, 0x7f0a007c
 
     .restart local v16       #titleId:I
     goto :goto_6
@@ -6260,7 +6260,7 @@
     if-ne v0, v1, :cond_12
 
     .line 970
-    const v16, 0x7f0a0076
+    const v16, 0x7f0a007d
 
     .restart local v16       #titleId:I
     goto :goto_6
@@ -6279,7 +6279,7 @@
     if-ne v0, v1, :cond_13
 
     .line 972
-    const v16, 0x7f0a0073
+    const v16, 0x7f0a007a
 
     .restart local v16       #titleId:I
     goto :goto_6
@@ -6287,7 +6287,7 @@
     .line 975
     .end local v16           #titleId:I
     :cond_13
-    const v16, 0x7f0a0077
+    const v16, 0x7f0a007e
 
     .restart local v16       #titleId:I
     goto/16 :goto_6
@@ -6295,7 +6295,7 @@
     .line 977
     .end local v16           #titleId:I
     :cond_14
-    const v16, 0x7f0a0078
+    const v16, 0x7f0a007f
 
     .restart local v16       #titleId:I
     goto/16 :goto_6
@@ -6566,13 +6566,13 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a019d
+    const v5, 0x7f0a01a6
 
     invoke-virtual {v4, v5}, Lcom/android/camera/rotate/RotateDialog$Builder;->setTitle(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
     move-result-object v4
 
-    const v5, 0x7f0a019e
+    const v5, 0x7f0a01a7
 
     invoke-virtual {v4, v5}, Lcom/android/camera/rotate/RotateDialog$Builder;->setMessage(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
@@ -6671,13 +6671,13 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a00aa
+    const v5, 0x7f0a00b1
 
     invoke-virtual {v4, v5}, Lcom/android/camera/rotate/RotateDialog$Builder;->setTitle(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
     move-result-object v4
 
-    const v5, 0x7f0a011b
+    const v5, 0x7f0a0122
 
     invoke-virtual {v4, v5}, Lcom/android/camera/rotate/RotateDialog$Builder;->setMessage(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
@@ -6795,7 +6795,7 @@
 
     const/16 v1, 0x25
 
-    const v2, 0x7f0a011a
+    const v2, 0x7f0a0121
 
     const/4 v3, 0x0
 
@@ -6926,7 +6926,7 @@
     .line 1847
     iget-object v0, p0, Lcom/android/camera/OnScreenPreference;->mImageRatioPref:Landroid/preference/CheckBoxPreference;
 
-    const v1, 0x7f0a0092
+    const v1, 0x7f0a0099
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setSummaryOff(I)V
 
@@ -7246,7 +7246,7 @@
     :cond_4
     iget-object v2, p0, Lcom/android/camera/OnScreenPreference;->mAutoUploadPref:Landroid/preference/Preference;
 
-    const v3, 0x7f0a00a9
+    const v3, 0x7f0a00b0
 
     invoke-virtual {v2, v3}, Landroid/preference/Preference;->setSummary(I)V
 
@@ -8839,7 +8839,7 @@
     .line 1624
     iget-object v5, p0, Lcom/android/camera/OnScreenPreference;->mUIHandler:Landroid/os/Handler;
 
-    const v6, 0x7f0a0199
+    const v6, 0x7f0a01a2
 
     const/4 v7, 0x0
 
@@ -8888,7 +8888,7 @@
     .line 1638
     if-ne p2, v6, :cond_8
 
-    const v4, 0x7f0a019a
+    const v4, 0x7f0a01a3
 
     .line 1640
     .local v4, str:I
@@ -8920,7 +8920,7 @@
 
     .line 1638
     :cond_8
-    const v4, 0x7f0a019c
+    const v4, 0x7f0a01a5
 
     goto :goto_1
 

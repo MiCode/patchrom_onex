@@ -83,16 +83,16 @@
 
     sput-object v1, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_LF:Ljava/lang/String;
 
-    .line 72
+    .line 73
     sput-boolean v3, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
-    .line 75
+    .line 76
     sput-boolean v3, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
-    .line 83
+    .line 86
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
-    .line 84
+    .line 87
     .local v0, type:Ljava/lang/String;
     const-string v1, "user"
 
@@ -102,13 +102,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 85
+    .line 88
     sput-boolean v2, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
-    .line 86
+    .line 89
     sput-boolean v2, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
-    .line 88
+    .line 91
     :cond_0
     return-void
 .end method
@@ -117,10 +117,10 @@
     .locals 0
 
     .prologue
-    .line 93
+    .line 96
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
+    .line 97
     return-void
 .end method
 
@@ -131,23 +131,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 700
+    .line 706
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 722
+    .line 728
     :cond_0
     :goto_0
     return v1
 
-    .line 702
+    .line 708
     :cond_1
     const/4 v2, 0x0
 
-    .line 704
+    .line 710
     .local v2, sjisMsg:Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/String;
@@ -165,11 +165,11 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 712
+    .line 718
     .restart local v2       #sjisMsg:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 714
+    .line 720
     .local v1, msgLength:I
     :try_start_1
     const-string v3, "kddi-emoji"
@@ -180,12 +180,12 @@
 
     array-length v1, v3
 
-    .line 715
+    .line 721
     sget-boolean v3, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v3, :cond_0
 
-    .line 716
+    .line 722
     const-string v3, "PacketSmsDataConvertor"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -212,15 +212,15 @@
 
     goto :goto_0
 
-    .line 718
+    .line 724
     :catch_0
     move-exception v0
 
-    .line 719
+    .line 725
     .local v0, e1:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 720
+    .line 726
     const-string v3, "PacketSmsDataConvertor"
 
     const-string v4, "error: sjisMsg is not SJIS"
@@ -229,18 +229,18 @@
 
     goto :goto_0
 
-    .line 705
+    .line 711
     .end local v0           #e1:Ljava/io/UnsupportedEncodingException;
     .end local v1           #msgLength:I
     .end local v2           #sjisMsg:Ljava/lang/String;
     :catch_1
     move-exception v0
 
-    .line 706
+    .line 712
     .restart local v0       #e1:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 707
+    .line 713
     const-string v3, "PacketSmsDataConvertor"
 
     const-string v4, "error: msg is not SJIS"
@@ -256,7 +256,7 @@
     .parameter "changeMode"
 
     .prologue
-    .line 522
+    .line 528
     const/4 v13, 0x4
 
     new-array v3, v13, [[B
@@ -301,7 +301,7 @@
 
     aput-object v14, v3, v13
 
-    .line 524
+    .line 530
     .local v3, PictChar:[[B
     const/4 v13, 0x4
 
@@ -347,7 +347,7 @@
 
     aput-object v14, v2, v13
 
-    .line 526
+    .line 532
     .local v2, MailChar:[[B
     const/4 v13, 0x4
 
@@ -365,7 +365,7 @@
 
     check-cast v4, [[B
 
-    .line 527
+    .line 533
     .local v4, SrcCode:[[B
     const/4 v13, 0x4
 
@@ -383,21 +383,21 @@
 
     check-cast v1, [[B
 
-    .line 529
+    .line 535
     .local v1, DstCode:[[B
     const/4 v6, 0x0
 
-    .line 530
+    .line 536
     .local v6, c:I
     const/4 v9, 0x0
 
-    .line 532
+    .line 538
     .local v9, i:I
     sget-boolean v13, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v13, :cond_0
 
-    .line 533
+    .line 539
     const-string v13, "PacketSmsDataConvertor"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -428,54 +428,54 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
+    .line 543
     :cond_0
     if-nez p0, :cond_3
 
-    .line 538
+    .line 544
     sget-boolean v13, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v13, :cond_1
 
-    .line 539
+    .line 545
     const-string v13, "PacketSmsDataConvertor"
 
     const-string v14, "illegal param [message is null]"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 541
+    .line 547
     :cond_1
     const/4 v7, 0x0
 
-    .line 671
+    .line 677
     :cond_2
     :goto_0
     return-object v7
 
-    .line 545
+    .line 551
     :cond_3
     packed-switch p1, :pswitch_data_0
 
-    .line 565
+    .line 571
     sget-boolean v13, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v13, :cond_4
 
-    .line 566
+    .line 572
     const-string v13, "PacketSmsDataConvertor"
 
     const-string v14, "illegal param [changeMode is illegal]"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 568
+    .line 574
     :cond_4
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 548
+    .line 554
     :pswitch_0
     const/4 v9, 0x0
 
@@ -484,7 +484,7 @@
 
     if-ge v9, v13, :cond_7
 
-    .line 549
+    .line 555
     const/4 v6, 0x0
 
     :goto_2
@@ -492,7 +492,7 @@
 
     if-ge v6, v13, :cond_5
 
-    .line 550
+    .line 556
     aget-object v13, v4, v9
 
     aget-object v14, v3, v9
@@ -501,7 +501,7 @@
 
     aput-byte v14, v13, v6
 
-    .line 551
+    .line 557
     aget-object v13, v1, v9
 
     aget-object v14, v2, v9
@@ -510,18 +510,18 @@
 
     aput-byte v14, v13, v6
 
-    .line 549
+    .line 555
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 548
+    .line 554
     :cond_5
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 557
+    .line 563
     :pswitch_1
     const/4 v9, 0x0
 
@@ -530,7 +530,7 @@
 
     if-ge v9, v13, :cond_7
 
-    .line 558
+    .line 564
     const/4 v6, 0x0
 
     :goto_4
@@ -538,7 +538,7 @@
 
     if-ge v6, v13, :cond_6
 
-    .line 559
+    .line 565
     aget-object v13, v4, v9
 
     aget-object v14, v2, v9
@@ -547,7 +547,7 @@
 
     aput-byte v14, v13, v6
 
-    .line 560
+    .line 566
     aget-object v13, v1, v9
 
     aget-object v14, v3, v9
@@ -556,18 +556,18 @@
 
     aput-byte v14, v13, v6
 
-    .line 558
+    .line 564
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_4
 
-    .line 557
+    .line 563
     :cond_6
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 572
+    .line 578
     :cond_7
     const-string v13, "SMS"
 
@@ -595,7 +595,7 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 574
+    .line 580
     const/4 v13, 0x1
 
     new-array v12, v13, [[B
@@ -610,11 +610,11 @@
 
     aput-object v14, v12, v13
 
-    .line 576
+    .line 582
     .local v12, pictCodes:[[B
     const/4 v8, 0x0
 
-    .line 577
+    .line 583
     .local v8, count:I
     const/4 v13, 0x1
 
@@ -622,14 +622,14 @@
 
     if-ne v13, v0, :cond_8
 
-    .line 578
+    .line 584
     move-object/from16 v0, p0
 
     invoke-static {v0, v12}, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->kddiGetCmailPictCharCount([B[[B)I
 
     move-result v8
 
-    .line 581
+    .line 587
     :cond_8
     move-object/from16 v0, p0
 
@@ -639,11 +639,11 @@
 
     new-array v7, v13, [B
 
-    .line 584
+    .line 590
     .local v7, changedCode:[B
     const/4 v11, 0x0
 
-    .line 585
+    .line 591
     .local v11, offset:I
     const/4 v9, 0x0
 
@@ -654,14 +654,14 @@
 
     if-ge v9, v13, :cond_14
 
-    .line 587
+    .line 593
     const/4 v10, 0x0
 
-    .line 588
+    .line 594
     .local v10, nChkFlg:Z
     if-nez p1, :cond_b
 
-    .line 590
+    .line 596
     const/16 v13, -0x9
 
     aget-byte v14, p0, v9
@@ -684,18 +684,18 @@
 
     if-lt v13, v14, :cond_a
 
-    .line 592
+    .line 598
     :cond_9
     const/4 v10, 0x1
 
-    .line 605
+    .line 611
     :cond_a
     :goto_6
     const/4 v13, 0x1
 
     if-ne v13, v10, :cond_11
 
-    .line 607
+    .line 613
     aget-byte v13, p0, v9
 
     const/4 v14, 0x0
@@ -722,7 +722,7 @@
 
     if-ne v13, v14, :cond_d
 
-    .line 608
+    .line 614
     const/4 v13, 0x0
 
     aget-object v13, v1, v13
@@ -733,7 +733,7 @@
 
     aput-byte v13, v7, v11
 
-    .line 609
+    .line 615
     add-int/lit8 v11, v11, 0x1
 
     const/4 v13, 0x0
@@ -746,19 +746,19 @@
 
     aput-byte v13, v7, v11
 
-    .line 610
+    .line 616
     add-int/lit8 v11, v11, 0x1
 
-    .line 611
+    .line 617
     add-int/lit8 v9, v9, 0x1
 
-    .line 585
+    .line 591
     :goto_7
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_5
 
-    .line 597
+    .line 603
     :cond_b
     const/16 v13, -0x7a
 
@@ -782,13 +782,13 @@
 
     if-lt v13, v14, :cond_a
 
-    .line 598
+    .line 604
     :cond_c
     const/4 v10, 0x1
 
     goto :goto_6
 
-    .line 616
+    .line 622
     :cond_d
     aget-byte v13, p0, v9
 
@@ -816,7 +816,7 @@
 
     if-ne v13, v14, :cond_e
 
-    .line 617
+    .line 623
     const/4 v13, 0x1
 
     aget-object v13, v1, v13
@@ -827,7 +827,7 @@
 
     aput-byte v13, v7, v11
 
-    .line 618
+    .line 624
     add-int/lit8 v11, v11, 0x1
 
     const/4 v13, 0x1
@@ -840,16 +840,16 @@
 
     aput-byte v13, v7, v11
 
-    .line 619
+    .line 625
     add-int/lit8 v11, v11, 0x1
 
-    .line 620
+    .line 626
     add-int/lit8 v9, v9, 0x1
 
-    .line 621
+    .line 627
     goto :goto_7
 
-    .line 625
+    .line 631
     :cond_e
     aget-byte v13, p0, v9
 
@@ -877,10 +877,10 @@
 
     if-ne v13, v14, :cond_10
 
-    .line 626
+    .line 632
     if-nez p1, :cond_f
 
-    .line 627
+    .line 633
     const/4 v13, 0x2
 
     aget-object v13, v1, v13
@@ -891,7 +891,7 @@
 
     aput-byte v13, v7, v11
 
-    .line 628
+    .line 634
     add-int/lit8 v11, v11, 0x1
 
     const/4 v13, 0x2
@@ -904,30 +904,30 @@
 
     aput-byte v13, v7, v11
 
-    .line 636
+    .line 642
     :goto_8
     add-int/lit8 v11, v11, 0x1
 
-    .line 637
+    .line 643
     add-int/lit8 v9, v9, 0x1
 
-    .line 638
+    .line 644
     goto :goto_7
 
-    .line 631
+    .line 637
     :cond_f
     const/16 v13, 0x28
 
     aput-byte v13, v7, v11
 
-    .line 632
+    .line 638
     add-int/lit8 v11, v11, 0x1
 
     const/16 v13, 0x74
 
     aput-byte v13, v7, v11
 
-    .line 633
+    .line 639
     add-int/lit8 v11, v11, 0x1
 
     const/16 v13, 0x29
@@ -936,7 +936,7 @@
 
     goto :goto_8
 
-    .line 642
+    .line 648
     :cond_10
     aget-byte v13, p0, v9
 
@@ -964,7 +964,7 @@
 
     if-ne v13, v14, :cond_11
 
-    .line 643
+    .line 649
     const/4 v13, 0x3
 
     aget-object v13, v1, v13
@@ -975,7 +975,7 @@
 
     aput-byte v13, v7, v11
 
-    .line 644
+    .line 650
     add-int/lit8 v11, v11, 0x1
 
     const/4 v13, 0x3
@@ -988,45 +988,45 @@
 
     aput-byte v13, v7, v11
 
-    .line 645
+    .line 651
     add-int/lit8 v11, v11, 0x1
 
-    .line 646
+    .line 652
     add-int/lit8 v9, v9, 0x1
 
-    .line 647
+    .line 653
     goto/16 :goto_7
 
-    .line 652
+    .line 658
     :cond_11
     aget-byte v13, p0, v9
 
     aput-byte v13, v7, v11
 
-    .line 655
+    .line 661
     move-object/from16 v0, p0
 
     invoke-static {v0, v9}, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->kddiIsSJIS([BI)Z
 
     move-result v5
 
-    .line 656
+    .line 662
     .local v5, bResult:Z
     const/4 v13, 0x1
 
     if-ne v13, v5, :cond_12
 
-    .line 657
+    .line 663
     add-int/lit8 v9, v9, 0x1
 
-    .line 659
+    .line 665
     add-int/lit8 v11, v11, 0x1
 
     aget-byte v13, p0, v9
 
     aput-byte v13, v7, v11
 
-    .line 661
+    .line 667
     :cond_12
     add-int/lit8 v13, v9, 0x1
 
@@ -1038,23 +1038,23 @@
 
     if-ne v13, v14, :cond_13
 
-    .line 662
+    .line 668
     add-int/lit8 v9, v9, 0x1
 
-    .line 663
+    .line 669
     add-int/lit8 v11, v11, 0x1
 
     aget-byte v13, p0, v9
 
     aput-byte v13, v7, v11
 
-    .line 665
+    .line 671
     :cond_13
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_7
 
-    .line 668
+    .line 674
     .end local v5           #bResult:Z
     .end local v10           #nChkFlg:Z
     :cond_14
@@ -1062,7 +1062,7 @@
 
     if-eqz v13, :cond_2
 
-    .line 669
+    .line 675
     const-string v13, "PacketSmsDataConvertor"
 
     const-string v14, "changePictCharCode end"
@@ -1071,7 +1071,7 @@
 
     goto/16 :goto_0
 
-    .line 522
+    .line 528
     :array_0
     .array-data 0x1
         0xf7t
@@ -1102,7 +1102,7 @@
         0xb1t
     .end array-data
 
-    .line 524
+    .line 530
     nop
 
     :array_4
@@ -1135,7 +1135,7 @@
         0xb5t
     .end array-data
 
-    .line 545
+    .line 551
     nop
 
     :pswitch_data_0
@@ -1144,7 +1144,7 @@
         :pswitch_1
     .end packed-switch
 
-    .line 574
+    .line 580
     :array_8
     .array-data 0x1
         0x86t
@@ -1159,38 +1159,38 @@
     .parameter "sendMode"
 
     .prologue
-    .line 105
+    .line 109
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_3
 
-    .line 106
+    .line 110
     :cond_0
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_1
 
-    .line 107
+    .line 111
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "error: destAddr or msg is null"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
+    .line 113
     :cond_1
     const/4 v10, 0x0
 
-    .line 236
+    .line 240
     :cond_2
     :goto_0
     return-object v10
 
-    .line 113
+    .line 117
     :cond_3
     const/4 v2, 0x0
 
-    .line 115
+    .line 119
     .local v2, destAddr:Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/String;
@@ -1208,11 +1208,11 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 124
+    .line 128
     .restart local v2       #destAddr:Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 126
+    .line 130
     .local v3, digitOfDest:I
     :try_start_1
     const-string v12, "kddi-emoji"
@@ -1225,7 +1225,7 @@
     :try_end_1
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 134
+    .line 138
     const/4 v12, 0x1
 
     if-lt v3, v12, :cond_4
@@ -1234,13 +1234,13 @@
 
     if-le v3, v12, :cond_8
 
-    .line 135
+    .line 139
     :cond_4
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_5
 
-    .line 136
+    .line 140
     const-string v12, "PacketSmsDataConvertor"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -1263,70 +1263,70 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
+    .line 142
     :cond_5
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 116
+    .line 120
     .end local v2           #destAddr:Ljava/lang/String;
     .end local v3           #digitOfDest:I
     :catch_0
     move-exception v6
 
-    .line 117
+    .line 121
     .local v6, e2:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v6}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 118
+    .line 122
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_6
 
-    .line 119
+    .line 123
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "error: dest is not SJIS"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
+    .line 125
     :cond_6
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 127
+    .line 131
     .end local v6           #e2:Ljava/io/UnsupportedEncodingException;
     .restart local v2       #destAddr:Ljava/lang/String;
     .restart local v3       #digitOfDest:I
     :catch_1
     move-exception v6
 
-    .line 128
+    .line 132
     .restart local v6       #e2:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v6}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 129
+    .line 133
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_7
 
-    .line 130
+    .line 134
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "error: digitOfDest is not SJIS"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
+    .line 136
     :cond_7
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 141
+    .line 145
     .end local v6           #e2:Ljava/io/UnsupportedEncodingException;
     :cond_8
     const/4 v7, 0x0
@@ -1335,7 +1335,7 @@
     :goto_1
     if-ge v7, v3, :cond_c
 
-    .line 142
+    .line 146
     invoke-virtual {v2, v7}, Ljava/lang/String;->charAt(I)C
 
     move-result v12
@@ -1352,13 +1352,13 @@
 
     if-le v12, v13, :cond_b
 
-    .line 143
+    .line 147
     :cond_9
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_a
 
-    .line 144
+    .line 148
     const-string v12, "PacketSmsDataConvertor"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -1395,23 +1395,23 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
+    .line 150
     :cond_a
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 141
+    .line 145
     :cond_b
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 150
+    .line 154
     :cond_c
     const/4 v11, 0x0
 
-    .line 152
+    .line 156
     .local v11, sjisMsg:Ljava/lang/String;
     :try_start_2
     new-instance v11, Ljava/lang/String;
@@ -1431,7 +1431,7 @@
     :try_end_2
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 164
+    .line 168
     .restart local v11       #sjisMsg:Ljava/lang/String;
     :try_start_3
     const-string v12, "kddi-emoji"
@@ -1442,13 +1442,13 @@
 
     array-length v8, v12
 
-    .line 165
+    .line 169
     .local v8, msgLength:I
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v12, :cond_d
 
-    .line 166
+    .line 170
     const-string v12, "PacketSmsDataConvertor"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -1471,7 +1471,7 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
+    .line 172
     :cond_d
     const/4 v12, 0x1
 
@@ -1481,13 +1481,13 @@
 
     if-le v8, v12, :cond_12
 
-    .line 169
+    .line 173
     :cond_e
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_f
 
-    .line 170
+    .line 174
     const-string v12, "PacketSmsDataConvertor"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -1512,69 +1512,69 @@
     :try_end_3
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 172
+    .line 176
     :cond_f
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 153
+    .line 157
     .end local v8           #msgLength:I
     .end local v11           #sjisMsg:Ljava/lang/String;
     :catch_2
     move-exception v5
 
-    .line 154
+    .line 158
     .local v5, e1:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v5}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 155
+    .line 159
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_10
 
-    .line 156
+    .line 160
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "error: msg is not SJIS"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
+    .line 162
     :cond_10
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 174
+    .line 178
     .end local v5           #e1:Ljava/io/UnsupportedEncodingException;
     .restart local v11       #sjisMsg:Ljava/lang/String;
     :catch_3
     move-exception v5
 
-    .line 175
+    .line 179
     .restart local v5       #e1:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v5}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 176
+    .line 180
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_11
 
-    .line 177
+    .line 181
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "error: sjisMsg is not SJIS"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
+    .line 183
     :cond_11
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 183
+    .line 187
     .end local v5           #e1:Ljava/io/UnsupportedEncodingException;
     .restart local v8       #msgLength:I
     :cond_12
@@ -1586,7 +1586,7 @@
 
     move-result-object v11
 
-    .line 184
+    .line 188
     sget-object v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_CR:Ljava/lang/String;
 
     const-string v13, " "
@@ -1595,7 +1595,7 @@
 
     move-result-object v11
 
-    .line 185
+    .line 189
     sget-object v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_LF:Ljava/lang/String;
 
     const-string v13, " "
@@ -1604,7 +1604,7 @@
 
     move-result-object v11
 
-    .line 188
+    .line 192
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v12
@@ -1613,35 +1613,35 @@
 
     move-result-object v9
 
-    .line 189
+    .line 193
     .local v9, originAddr:Ljava/lang/String;
     if-nez v9, :cond_14
 
-    .line 190
+    .line 194
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_13
 
-    .line 191
+    .line 195
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "error: cannot get originAddr"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
+    .line 197
     :cond_13
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 197
+    .line 201
     :cond_14
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 198
+    .line 202
     .local v1, builder:Ljava/lang/StringBuilder;
     const/4 v12, 0x1
 
@@ -1649,12 +1649,12 @@
 
     if-ne v12, v0, :cond_16
 
-    .line 199
+    .line 203
     const-string v12, "smtran "
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 200
+    .line 204
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1675,7 +1675,7 @@
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 201
+    .line 205
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1696,7 +1696,7 @@
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 202
+    .line 206
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1723,24 +1723,24 @@
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 203
+    .line 207
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v12, :cond_15
 
-    .line 204
+    .line 208
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "send message type is TRANSACTION_MODE"
 
     invoke-static {v12, v13}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 227
     :cond_15
     :goto_2
     const/4 v10, 0x0
 
-    .line 225
+    .line 229
     .local v10, sjisIrcFormat:Ljava/lang/String;
     :try_start_4
     new-instance v10, Ljava/lang/String;
@@ -1762,13 +1762,13 @@
     :try_end_4
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 233
+    .line 237
     .restart local v10       #sjisIrcFormat:Ljava/lang/String;
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v12, :cond_2
 
-    .line 234
+    .line 238
     const-string v12, "PacketSmsDataConvertor"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -1793,7 +1793,7 @@
 
     goto/16 :goto_0
 
-    .line 206
+    .line 210
     .end local v10           #sjisIrcFormat:Ljava/lang/String;
     :cond_16
     const/4 v12, 0x2
@@ -1802,12 +1802,12 @@
 
     if-ne v12, v0, :cond_17
 
-    .line 207
+    .line 211
     const-string v12, "smstore3 "
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 208
+    .line 212
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1828,7 +1828,7 @@
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 209
+    .line 213
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1849,7 +1849,7 @@
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 210
+    .line 214
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1876,12 +1876,12 @@
 
     invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 211
+    .line 215
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v12, :cond_15
 
-    .line 212
+    .line 216
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "send message type is STORED_MODE"
@@ -1890,46 +1890,46 @@
 
     goto/16 :goto_2
 
-    .line 216
+    .line 220
     :cond_17
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_18
 
-    .line 217
+    .line 221
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "error: unknown sendMode"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
+    .line 223
     :cond_18
     const/4 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 226
+    .line 230
     :catch_4
     move-exception v4
 
-    .line 227
+    .line 231
     .local v4, e:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v4}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 228
+    .line 232
     sget-boolean v12, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v12, :cond_19
 
-    .line 229
+    .line 233
     const-string v12, "PacketSmsDataConvertor"
 
     const-string v13, "sjisIrcFormat is not sjis"
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
+    .line 235
     :cond_19
     const/4 v10, 0x0
 
@@ -1944,12 +1944,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 353
+    .line 358
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 354
+    .line 359
     :cond_0
     const-string v5, "SMS"
 
@@ -1975,11 +1975,11 @@
 
     move v0, v4
 
-    .line 384
+    .line 389
     :goto_0
     return v0
 
-    .line 357
+    .line 362
     :cond_1
     array-length v5, p0
 
@@ -1991,11 +1991,11 @@
 
     goto :goto_0
 
-    .line 358
+    .line 363
     :cond_2
     const/4 v0, 0x0
 
-    .line 359
+    .line 364
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -2005,10 +2005,10 @@
 
     if-ge v1, v5, :cond_8
 
-    .line 360
+    .line 365
     const/4 v3, 0x0
 
-    .line 361
+    .line 366
     .local v3, match:Z
     const/4 v2, 0x0
 
@@ -2018,7 +2018,7 @@
 
     if-ge v2, v5, :cond_3
 
-    .line 362
+    .line 367
     aget-byte v5, p0, v1
 
     aget-object v6, p1, v2
@@ -2039,7 +2039,7 @@
 
     if-ne v5, v6, :cond_5
 
-    .line 363
+    .line 368
     const-string v5, "SMS"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2080,32 +2080,32 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
+    .line 371
     add-int/lit8 v0, v0, 0x1
 
-    .line 367
+    .line 372
     add-int/lit8 v1, v1, 0x1
 
-    .line 368
+    .line 373
     const/4 v3, 0x1
 
-    .line 372
+    .line 377
     :cond_3
     if-eqz v3, :cond_6
 
-    .line 359
+    .line 364
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 361
+    .line 366
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 376
+    .line 381
     :cond_6
     invoke-static {p0, v1}, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->kddiIsSJIS([BI)Z
 
@@ -2115,7 +2115,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 378
+    .line 383
     :cond_7
     add-int/lit8 v5, v1, 0x1
 
@@ -2125,7 +2125,7 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 383
+    .line 388
     .end local v2           #j:I
     .end local v3           #match:Z
     :cond_8
@@ -2162,10 +2162,10 @@
     .prologue
     const/4 v3, -0x4
 
-    .line 683
+    .line 689
     const/4 v0, 0x0
 
-    .line 685
+    .line 691
     .local v0, bResult:Z
     const/16 v1, -0x7f
 
@@ -2190,7 +2190,7 @@
 
     if-lt v3, v1, :cond_4
 
-    .line 686
+    .line 692
     :cond_1
     const/16 v1, 0x40
 
@@ -2223,11 +2223,11 @@
 
     if-lt v3, v1, :cond_4
 
-    .line 687
+    .line 693
     :cond_3
     const/4 v0, 0x1
 
-    .line 690
+    .line 696
     :cond_4
     return v0
 .end method
@@ -2237,10 +2237,10 @@
     .parameter "result"
 
     .prologue
-    .line 247
+    .line 252
     const/4 v4, 0x0
 
-    .line 249
+    .line 254
     .local v4, response:Ljava/lang/String;
     :try_start_0
     new-instance v5, Ljava/lang/String;
@@ -2252,7 +2252,7 @@
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 264
+    .line 269
     .end local v4           #response:Ljava/lang/String;
     .local v5, response:Ljava/lang/String;
     const/4 v11, 0x0
@@ -2273,19 +2273,19 @@
 
     if-eqz v11, :cond_6
 
-    .line 265
+    .line 270
     sget-boolean v11, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v11, :cond_0
 
-    .line 266
+    .line 271
     const-string v11, "PacketSmsDataConvertor"
 
     const-string v12, "[parseRetcode] TransactionMode"
 
     invoke-static {v11, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
+    .line 274
     :cond_0
     const/16 v11, 0xe
 
@@ -2375,7 +2375,7 @@
 
     aput-object v12, v10, v11
 
-    .line 276
+    .line 281
     .local v10, tranRetcodeTable:[Ljava/lang/String;
     const/16 v11, 0xe
 
@@ -2383,7 +2383,7 @@
 
     fill-array-data v9, :array_0
 
-    .line 291
+    .line 296
     .local v9, tranResultcodeTable:[I
     const/4 v2, 0x0
 
@@ -2393,7 +2393,7 @@
 
     if-ge v2, v11, :cond_5
 
-    .line 292
+    .line 297
     const-string v11, "tresp "
 
     invoke-virtual {v11}, Ljava/lang/String;->length()I
@@ -2416,12 +2416,12 @@
 
     if-eqz v11, :cond_4
 
-    .line 293
+    .line 298
     sget-boolean v11, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v11, :cond_1
 
-    .line 294
+    .line 299
     const-string v11, "PacketSmsDataConvertor"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2452,13 +2452,13 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
+    .line 301
     :cond_1
     aget v11, v9, v2
 
     move-object v4, v5
 
-    .line 347
+    .line 352
     .end local v2           #i:I
     .end local v5           #response:Ljava/lang/String;
     .end local v9           #tranResultcodeTable:[I
@@ -2467,60 +2467,60 @@
     :goto_1
     return v11
 
-    .line 250
+    .line 255
     :catch_0
     move-exception v0
 
-    .line 251
+    .line 256
     .local v0, e1:Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 252
+    .line 257
     sget-boolean v11, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v11, :cond_2
 
-    .line 253
+    .line 258
     const-string v11, "PacketSmsDataConvertor"
 
     const-string v12, "[parseRetcode] encode is not supported"
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
+    .line 260
     :cond_2
     const/4 v11, 0x1
 
     goto :goto_1
 
-    .line 256
+    .line 261
     .end local v0           #e1:Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v1
 
-    .line 257
+    .line 262
     .local v1, e2:Ljava/lang/NullPointerException;
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    .line 258
+    .line 263
     sget-boolean v11, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_DEBUG_LOG:Z
 
     if-eqz v11, :cond_3
 
-    .line 259
+    .line 264
     const-string v11, "PacketSmsDataConvertor"
 
     const-string v12, "[parseRetcode] result is null"
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
+    .line 266
     :cond_3
     const/4 v11, 0x1
 
     goto :goto_1
 
-    .line 291
+    .line 296
     .end local v1           #e2:Ljava/lang/NullPointerException;
     .end local v4           #response:Ljava/lang/String;
     .restart local v2       #i:I
@@ -2532,7 +2532,7 @@
 
     goto :goto_0
 
-    .line 299
+    .line 304
     :cond_5
     const/16 v11, 0x17
 
@@ -2542,7 +2542,7 @@
     .restart local v4       #response:Ljava/lang/String;
     goto :goto_1
 
-    .line 300
+    .line 305
     .end local v2           #i:I
     .end local v4           #response:Ljava/lang/String;
     .end local v9           #tranResultcodeTable:[I
@@ -2567,19 +2567,19 @@
 
     if-eqz v11, :cond_c
 
-    .line 301
+    .line 306
     sget-boolean v11, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v11, :cond_7
 
-    .line 302
+    .line 307
     const-string v11, "PacketSmsDataConvertor"
 
     const-string v12, "getResultcode StoreMode"
 
     invoke-static {v11, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
+    .line 310
     :cond_7
     const/16 v11, 0xc
 
@@ -2657,7 +2657,7 @@
 
     aput-object v12, v8, v11
 
-    .line 311
+    .line 316
     .local v8, storeRetcodeTable:[Ljava/lang/String;
     const/16 v11, 0xc
 
@@ -2665,7 +2665,7 @@
 
     fill-array-data v7, :array_1
 
-    .line 325
+    .line 330
     .local v7, storeResultcodeTable:[I
     const/16 v11, 0x3d
 
@@ -2673,22 +2673,22 @@
 
     move-result v3
 
-    .line 326
+    .line 331
     .local v3, position:I
     const/4 v6, 0x0
 
-    .line 328
+    .line 333
     .local v6, retcode:Ljava/lang/String;
     const/4 v11, -0x1
 
     if-eq v3, v11, :cond_9
 
-    .line 329
+    .line 334
     invoke-virtual {v5, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 334
+    .line 339
     :goto_2
     const/4 v2, 0x0
 
@@ -2698,7 +2698,7 @@
 
     if-ge v2, v11, :cond_b
 
-    .line 335
+    .line 340
     const/4 v11, 0x0
 
     aget-object v12, v8, v2
@@ -2717,12 +2717,12 @@
 
     if-eqz v11, :cond_a
 
-    .line 336
+    .line 341
     sget-boolean v11, Lcom/kddi/android/internal/telephony/cdma/sms/KddiPacketSmsDataConvertor;->KDDI_OUTPUT_LOG:Z
 
     if-eqz v11, :cond_8
 
-    .line 337
+    .line 342
     const-string v11, "PacketSmsDataConvertor"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2753,7 +2753,7 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
+    .line 344
     :cond_8
     aget v11, v7, v2
 
@@ -2763,7 +2763,7 @@
     .restart local v4       #response:Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 331
+    .line 336
     .end local v2           #i:I
     .end local v4           #response:Ljava/lang/String;
     .restart local v5       #response:Ljava/lang/String;
@@ -2780,14 +2780,14 @@
 
     goto :goto_2
 
-    .line 334
+    .line 339
     .restart local v2       #i:I
     :cond_a
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 342
+    .line 347
     :cond_b
     const/16 v11, 0x2b
 
@@ -2797,7 +2797,7 @@
     .restart local v4       #response:Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 344
+    .line 349
     .end local v2           #i:I
     .end local v3           #position:I
     .end local v4           #response:Ljava/lang/String;
@@ -2810,14 +2810,14 @@
 
     if-eqz v11, :cond_d
 
-    .line 345
+    .line 350
     const-string v11, "PacketSmsDataConvertor"
 
     const-string v12, "[parseRetcode] no match code"
 
     invoke-static {v11, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
+    .line 352
     :cond_d
     const/4 v11, 0x1
 
@@ -2827,7 +2827,7 @@
     .restart local v4       #response:Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 276
+    .line 281
     nop
 
     :array_0
@@ -2848,7 +2848,7 @@
         0x15t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 311
+    .line 316
     :array_1
     .array-data 0x4
         0x1et 0x0t 0x0t 0x0t

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 149
+    .line 150
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$1;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +39,17 @@
     .parameter "msg"
 
     .prologue
-    .line 151
+    .line 152
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 173
+    .line 174
     :cond_0
     :goto_0
     return-void
 
-    .line 153
+    .line 154
     :pswitch_0
     iget-object v2, p0, Lcom/htc/music/DRMActionActivity$1;->this$0:Lcom/htc/music/DRMActionActivity;
 
@@ -58,7 +58,7 @@
     #setter for: Lcom/htc/music/DRMActionActivity;->mShowToast:Z
     invoke-static {v2, v3}, Lcom/htc/music/DRMActionActivity;->access$202(Lcom/htc/music/DRMActionActivity;Z)Z
 
-    .line 154
+    .line 155
     new-instance v0, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;
 
     iget-object v2, p0, Lcom/htc/music/DRMActionActivity$1;->this$0:Lcom/htc/music/DRMActionActivity;
@@ -67,13 +67,13 @@
 
     invoke-direct {v0, v2, v3}, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;-><init>(Lcom/htc/music/DRMActionActivity;Lcom/htc/music/DRMActionActivity$1;)V
 
-    .line 155
+    .line 156
     .local v0, UpdateDRM:Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;
     new-instance v1, Ljava/lang/Thread;
 
     invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 156
+    .line 157
     .local v1, updatedthread:Ljava/lang/Thread;
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -83,12 +83,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
+    .line 158
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
-    .line 160
+    .line 161
     .end local v0           #UpdateDRM:Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;
     .end local v1           #updatedthread:Ljava/lang/Thread;
     :pswitch_1
@@ -100,7 +100,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
+    .line 162
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     const/4 v3, -0x1
@@ -116,7 +116,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 162
+    .line 163
     iget-object v2, p0, Lcom/htc/music/DRMActionActivity$1;->this$0:Lcom/htc/music/DRMActionActivity;
 
     iget v3, p1, Landroid/os/Message;->arg1:I
@@ -125,7 +125,7 @@
 
     goto :goto_0
 
-    .line 166
+    .line 167
     :pswitch_2
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -135,11 +135,11 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 167
+    .line 168
     iget-object v2, p0, Lcom/htc/music/DRMActionActivity$1;->this$0:Lcom/htc/music/DRMActionActivity;
 
-    #getter for: Lcom/htc/music/DRMActionActivity;->mProgressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v2}, Lcom/htc/music/DRMActionActivity;->access$500(Lcom/htc/music/DRMActionActivity;)Landroid/app/ProgressDialog;
+    #getter for: Lcom/htc/music/DRMActionActivity;->mProgressDialog:Lcom/htc/app/HtcProgressDialog;
+    invoke-static {v2}, Lcom/htc/music/DRMActionActivity;->access$500(Lcom/htc/music/DRMActionActivity;)Lcom/htc/app/HtcProgressDialog;
 
     move-result-object v2
 
@@ -147,30 +147,30 @@
 
     iget-object v2, p0, Lcom/htc/music/DRMActionActivity$1;->this$0:Lcom/htc/music/DRMActionActivity;
 
-    #getter for: Lcom/htc/music/DRMActionActivity;->mProgressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v2}, Lcom/htc/music/DRMActionActivity;->access$500(Lcom/htc/music/DRMActionActivity;)Landroid/app/ProgressDialog;
+    #getter for: Lcom/htc/music/DRMActionActivity;->mProgressDialog:Lcom/htc/app/HtcProgressDialog;
+    invoke-static {v2}, Lcom/htc/music/DRMActionActivity;->access$500(Lcom/htc/music/DRMActionActivity;)Lcom/htc/app/HtcProgressDialog;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/ProgressDialog;->isShowing()Z
+    invoke-virtual {v2}, Lcom/htc/app/HtcProgressDialog;->isShowing()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 168
+    .line 169
     iget-object v2, p0, Lcom/htc/music/DRMActionActivity$1;->this$0:Lcom/htc/music/DRMActionActivity;
 
-    #getter for: Lcom/htc/music/DRMActionActivity;->mProgressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v2}, Lcom/htc/music/DRMActionActivity;->access$500(Lcom/htc/music/DRMActionActivity;)Landroid/app/ProgressDialog;
+    #getter for: Lcom/htc/music/DRMActionActivity;->mProgressDialog:Lcom/htc/app/HtcProgressDialog;
+    invoke-static {v2}, Lcom/htc/music/DRMActionActivity;->access$500(Lcom/htc/music/DRMActionActivity;)Lcom/htc/app/HtcProgressDialog;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {v2}, Lcom/htc/app/HtcProgressDialog;->dismiss()V
 
     goto :goto_0
 
-    .line 151
+    .line 152
     nop
 
     :pswitch_data_0

@@ -71,7 +71,7 @@
 
     iput-object v0, p0, Lcom/android/server/location/CarGpsProvider;->mClientUids:Landroid/util/SparseIntArray;
 
-    .line 149
+    .line 159
     new-instance v0, Lcom/android/server/location/CarGpsProvider$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/CarGpsProvider$1;-><init>(Lcom/android/server/location/CarGpsProvider;)V
@@ -301,17 +301,17 @@
     .locals 1
 
     .prologue
-    .line 265
+    .line 275
     iget-object v0, p0, Lcom/android/server/location/CarGpsProvider;->mClientUids:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->clear()V
 
-    .line 266
+    .line 276
     iget-object v0, p0, Lcom/android/server/location/CarGpsProvider;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 267
+    .line 277
     return-void
 .end method
 
@@ -382,7 +382,7 @@
     .parameter "enable"
 
     .prologue
-    .line 278
+    .line 288
     invoke-virtual {p0}, Lcom/android/server/location/CarGpsProvider;->isHtcMode()Z
 
     move-result v0
@@ -395,21 +395,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 279
+    .line 289
     invoke-direct {p0, p1}, Lcom/android/server/location/CarGpsProvider;->reportStatus(Z)V
 
-    .line 280
+    .line 290
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 281
+    .line 291
     invoke-virtual {p0}, Lcom/android/server/location/CarGpsProvider;->enable()V
 
-    .line 285
+    .line 295
     :goto_0
     return-void
 
-    .line 283
+    .line 293
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/location/CarGpsProvider;->disable()V
 
@@ -420,10 +420,36 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 156
     iget-object v0, p0, Lcom/android/server/location/CarGpsProvider;->mGpsStatusProvider:Landroid/location/IGpsStatusProvider;
 
     return-object v0
+.end method
+
+.method public getListenerCount()I
+    .locals 1
+
+    .prologue
+    .line 147
+    iget-object v0, p0, Lcom/android/server/location/CarGpsProvider;->mListeners:Ljava/util/ArrayList;
+
+    if-nez v0, :cond_0
+
+    .line 148
+    const/4 v0, 0x0
+
+    .line 150
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/location/CarGpsProvider;->mListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    goto :goto_0
 .end method
 
 .method public isHtcMode()Z
@@ -568,31 +594,31 @@
     .parameter "timestamp"
 
     .prologue
-    .line 232
+    .line 242
     invoke-virtual {p0}, Lcom/android/server/location/CarGpsProvider;->isEnabled()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 233
+    .line 243
     const-string v4, "CarGpsProvider"
 
     const-string v5, "reportNmea is not enable due to isEnabled() == false"
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
+    .line 271
     :goto_0
     return-void
 
-    .line 236
+    .line 246
     :cond_0
     iget-object v5, p0, Lcom/android/server/location/CarGpsProvider;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v5
 
-    .line 238
+    .line 248
     :try_start_0
     const-string v4, "CarGpsProvider"
 
@@ -600,25 +626,25 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
+    .line 249
     iget-object v4, p0, Lcom/android/server/location/CarGpsProvider;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    .line 242
+    .line 252
     .local v3, size:I
     if-lez v3, :cond_1
 
-    .line 244
+    .line 254
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_1
     if-ge v1, v3, :cond_1
 
-    .line 246
+    .line 256
     iget-object v4, p0, Lcom/android/server/location/CarGpsProvider;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -629,7 +655,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 249
+    .line 259
     .local v2, listener:Lcom/android/server/location/CarGpsProvider$Listener;
     :try_start_1
     iget-object v4, v2, Lcom/android/server/location/CarGpsProvider$Listener;->mListener:Landroid/location/IGpsStatusListener;
@@ -639,17 +665,17 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 244
+    .line 254
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 251
+    .line 261
     :catch_0
     move-exception v0
 
-    .line 253
+    .line 263
     .local v0, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "CarGpsProvider"
@@ -658,17 +684,17 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
+    .line 264
     iget-object v4, p0, Lcom/android/server/location/CarGpsProvider;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 256
+    .line 266
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_2
 
-    .line 260
+    .line 270
     .end local v0           #e:Landroid/os/RemoteException;
     .end local v1           #i:I
     .end local v2           #listener:Lcom/android/server/location/CarGpsProvider$Listener;
@@ -693,21 +719,21 @@
     .parameter "l"
 
     .prologue
-    .line 271
+    .line 281
     invoke-virtual {p0}, Lcom/android/server/location/CarGpsProvider;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 272
+    .line 282
     invoke-super {p0, p1}, Lcom/android/server/location/MockProvider;->setLocation(Landroid/location/Location;)V
 
-    .line 275
+    .line 285
     :goto_0
     return-void
 
-    .line 274
+    .line 284
     :cond_0
     const-string v0, "CarGpsProvider"
 

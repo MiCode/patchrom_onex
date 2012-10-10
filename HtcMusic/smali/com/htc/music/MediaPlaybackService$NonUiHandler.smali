@@ -25,24 +25,24 @@
     .parameter "looper"
 
     .prologue
-    .line 510
+    .line 528
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
 
-    .line 511
+    .line 529
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 512
+    .line 530
     return-void
 .end method
 
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 30
+    .locals 31
     .parameter "msg"
 
     .prologue
-    .line 515
+    .line 533
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -54,12 +54,12 @@
 
     if-nez v2, :cond_1
 
-    .line 765
+    .line 810
     :cond_0
     :goto_0
     return-void
 
-    .line 518
+    .line 536
     :cond_1
     move-object/from16 v0, p1
 
@@ -67,7 +67,7 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 763
+    .line 808
     :pswitch_0
     const-string v2, "[MediaPlaybackService]"
 
@@ -77,7 +77,7 @@
 
     goto :goto_0
 
-    .line 520
+    .line 538
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 524
+    .line 542
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -123,7 +123,7 @@
 
     goto :goto_1
 
-    .line 528
+    .line 546
     :pswitch_3
     move-object/from16 v0, p0
 
@@ -138,7 +138,7 @@
 
     goto :goto_0
 
-    .line 532
+    .line 550
     :pswitch_4
     move-object/from16 v0, p0
 
@@ -153,20 +153,20 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/MusicPluginManager;->stop(Z)V
 
-    .line 534
+    .line 552
     const/16 v25, 0x0
 
-    .line 535
+    .line 553
     .local v25, playAnim:Z
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v19
 
-    .line 536
+    .line 554
     .local v19, data:Landroid/os/Bundle;
     if-eqz v19, :cond_3
 
-    .line 537
+    .line 555
     const-string v2, "playAnim"
 
     move-object/from16 v0, v19
@@ -175,7 +175,7 @@
 
     move-result v25
 
-    .line 540
+    .line 558
     :cond_3
     move-object/from16 v0, p0
 
@@ -190,7 +190,7 @@
 
     if-eqz v25, :cond_4
 
-    .line 541
+    .line 559
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -204,7 +204,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/MusicPluginManager;->prev(Z)V
 
-    .line 542
+    .line 560
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -213,17 +213,7 @@
 
     iput-boolean v3, v2, Lcom/htc/music/MediaPlaybackService;->mTest:Z
 
-    .line 543
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
-
-    const-string v3, "com.htc.music.rotateleft"
-
-    #calls: Lcom/htc/music/MediaPlaybackService;->notifyChange(Ljava/lang/String;)V
-    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$400(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
-
-    .line 544
+    .line 561
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -231,11 +221,21 @@
     const/4 v3, 0x1
 
     #setter for: Lcom/htc/music/MediaPlaybackService;->mIsWaitAnimation:Z
-    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$502(Lcom/htc/music/MediaPlaybackService;Z)Z
+    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$402(Lcom/htc/music/MediaPlaybackService;Z)Z
+
+    .line 562
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
+
+    const-string v3, "com.htc.music.rotateleft"
+
+    #calls: Lcom/htc/music/MediaPlaybackService;->notifyChange(Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$500(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 546
+    .line 564
     :cond_4
     move-object/from16 v0, p0
 
@@ -252,7 +252,7 @@
 
     goto/16 :goto_0
 
-    .line 552
+    .line 570
     .end local v19           #data:Landroid/os/Bundle;
     .end local v25           #playAnim:Z
     :pswitch_5
@@ -269,20 +269,20 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/MusicPluginManager;->stop(Z)V
 
-    .line 554
+    .line 572
     const/16 v25, 0x0
 
-    .line 555
+    .line 573
     .restart local v25       #playAnim:Z
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v19
 
-    .line 556
+    .line 574
     .restart local v19       #data:Landroid/os/Bundle;
     if-eqz v19, :cond_5
 
-    .line 557
+    .line 575
     const-string v2, "playAnim"
 
     move-object/from16 v0, v19
@@ -291,7 +291,7 @@
 
     move-result v25
 
-    .line 560
+    .line 578
     :cond_5
     move-object/from16 v0, p0
 
@@ -306,7 +306,7 @@
 
     if-eqz v25, :cond_6
 
-    .line 561
+    .line 579
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -320,7 +320,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/MusicPluginManager;->next(Z)V
 
-    .line 562
+    .line 580
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -329,17 +329,7 @@
 
     iput-boolean v3, v2, Lcom/htc/music/MediaPlaybackService;->mTest:Z
 
-    .line 563
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
-
-    const-string v3, "com.htc.music.rotateright"
-
-    #calls: Lcom/htc/music/MediaPlaybackService;->notifyChange(Ljava/lang/String;)V
-    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$400(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
-
-    .line 564
+    .line 581
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -347,11 +337,21 @@
     const/4 v3, 0x1
 
     #setter for: Lcom/htc/music/MediaPlaybackService;->mIsWaitAnimation:Z
-    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$502(Lcom/htc/music/MediaPlaybackService;Z)Z
+    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$402(Lcom/htc/music/MediaPlaybackService;Z)Z
+
+    .line 582
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
+
+    const-string v3, "com.htc.music.rotateright"
+
+    #calls: Lcom/htc/music/MediaPlaybackService;->notifyChange(Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$500(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 566
+    .line 584
     :cond_6
     move-object/from16 v0, p0
 
@@ -368,7 +368,7 @@
 
     goto/16 :goto_0
 
-    .line 572
+    .line 590
     .end local v19           #data:Landroid/os/Bundle;
     .end local v25           #playAnim:Z
     :pswitch_6
@@ -386,7 +386,7 @@
 
     if-nez v2, :cond_7
 
-    .line 573
+    .line 591
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -405,7 +405,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/SoundEffectHelper;->enableCurrentSoundEffect(Landroid/content/Context;I)V
 
-    .line 575
+    .line 593
     :cond_7
     move-object/from16 v0, p0
 
@@ -430,7 +430,7 @@
 
     invoke-virtual {v2, v3, v5}, Lcom/htc/music/util/HeadSetHelper;->startMonitor(Landroid/content/Context;Lcom/htc/music/util/IMonitorHeadSetStatus;)V
 
-    .line 576
+    .line 594
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -456,7 +456,7 @@
 
     goto/16 :goto_0
 
-    .line 580
+    .line 598
     :pswitch_7
     move-object/from16 v0, p0
 
@@ -464,7 +464,7 @@
 
     invoke-static {v2}, Lcom/htc/music/util/SoundEffectHelper;->disableSoundEffect(Landroid/content/Context;)V
 
-    .line 581
+    .line 599
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -484,7 +484,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/util/HeadSetHelper;->stopMonitor(Landroid/content/Context;)V
 
-    .line 582
+    .line 600
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -498,7 +498,7 @@
 
     goto/16 :goto_0
 
-    .line 586
+    .line 604
     :pswitch_8
     move-object/from16 v0, p0
 
@@ -508,7 +508,7 @@
 
     goto/16 :goto_0
 
-    .line 590
+    .line 608
     :pswitch_9
     move-object/from16 v0, p0
 
@@ -518,7 +518,7 @@
 
     goto/16 :goto_0
 
-    .line 594
+    .line 612
     :pswitch_a
     move-object/from16 v0, p0
 
@@ -527,9 +527,9 @@
     const-string v3, "com.htc.music.queuechanged"
 
     #calls: Lcom/htc/music/MediaPlaybackService;->notifyChange(Ljava/lang/String;)V
-    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$400(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$500(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
 
-    .line 595
+    .line 613
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -537,25 +537,25 @@
     const-string v3, "com.htc.music.metachanged"
 
     #calls: Lcom/htc/music/MediaPlaybackService;->notifyChange(Ljava/lang/String;)V
-    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$400(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$500(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 599
+    .line 617
     :pswitch_b
-    const/16 v26, 0x0
+    const/16 v28, 0x0
 
-    .line 600
-    .local v26, salbumartpath:Ljava/lang/String;
+    .line 618
+    .local v28, salbumartpath:Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v2}, Lcom/htc/music/MediaPlaybackService;->getAlbumArtPath()Ljava/lang/String;
 
-    move-result-object v26
+    move-result-object v28
 
-    .line 601
+    .line 619
     const-string v2, "[MediaPlaybackService]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -568,7 +568,7 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v28
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -580,10 +580,10 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 603
-    if-nez v26, :cond_8
+    .line 621
+    if-nez v28, :cond_8
 
-    .line 604
+    .line 622
     const-string v2, "[MediaPlaybackService]"
 
     const-string v3, "NonUiHandler salbumartpath == null"
@@ -592,7 +592,7 @@
 
     goto/16 :goto_0
 
-    .line 608
+    .line 626
     :cond_8
     const-string v2, "[MediaPlaybackService]"
 
@@ -600,7 +600,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
+    .line 627
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -612,7 +612,7 @@
     #setter for: Lcom/htc/music/MediaPlaybackService;->mOpts:Landroid/graphics/BitmapFactory$Options;
     invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$802(Lcom/htc/music/MediaPlaybackService;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/BitmapFactory$Options;
 
-    .line 610
+    .line 628
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -622,13 +622,13 @@
 
     move-result-object v2
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v28
 
     invoke-static {v0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v16
 
-    .line 611
+    .line 629
     .local v16, bitmap:Landroid/graphics/Bitmap;
     move-object/from16 v0, p0
 
@@ -643,7 +643,7 @@
     #calls: Lcom/htc/music/MediaPlaybackService;->showNotificationAlbumArtInUiThread(Landroid/graphics/Bitmap;I)V
     invoke-static {v2, v0, v3}, Lcom/htc/music/MediaPlaybackService;->access$900(Lcom/htc/music/MediaPlaybackService;Landroid/graphics/Bitmap;I)V
 
-    .line 612
+    .line 630
     const-string v2, "[MediaPlaybackService]"
 
     const-string v3, "case CMD_DECODE_NOTIFICATION_ALBUMART: ---"
@@ -652,25 +652,10 @@
 
     goto/16 :goto_0
 
-    .line 616
+    .line 635
     .end local v16           #bitmap:Landroid/graphics/Bitmap;
-    .end local v26           #salbumartpath:Ljava/lang/String;
+    .end local v28           #salbumartpath:Ljava/lang/String;
     :pswitch_c
-    move-object/from16 v0, p1
-
-    iget v0, v0, Landroid/os/Message;->arg1:I
-
-    move/from16 v29, v0
-
-    .line 617
-    .local v29, uLogType:I
-    const/4 v2, 0x1
-
-    move/from16 v0, v29
-
-    if-ne v0, v2, :cond_0
-
-    .line 618
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -680,30 +665,30 @@
 
     move-result-object v18
 
-    .line 619
+    .line 636
     .local v18, cursor:Landroid/database/Cursor;
     if-eqz v18, :cond_b
 
-    .line 620
+    .line 637
     invoke-interface/range {v18 .. v18}, Landroid/database/Cursor;->getCount()I
 
     move-result v17
 
-    .line 621
+    .line 638
     .local v17, currentMusicCount:I
     const/16 v24, -0x1
 
-    .line 624
+    .line 641
     .local v24, lastMusicCount:I
     :try_start_0
     invoke-interface/range {v18 .. v18}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 625
+    .line 642
     const/16 v18, 0x0
 
-    .line 631
+    .line 648
     :goto_2
     move-object/from16 v0, p0
 
@@ -722,7 +707,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 632
+    .line 649
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -740,7 +725,7 @@
 
     move-result v24
 
-    .line 635
+    .line 652
     :cond_9
     move-object/from16 v0, p0
 
@@ -761,14 +746,14 @@
     #setter for: Lcom/htc/music/MediaPlaybackService;->mPreferences:Landroid/content/SharedPreferences;
     invoke-static {v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$1102(Lcom/htc/music/MediaPlaybackService;Landroid/content/SharedPreferences;)Landroid/content/SharedPreferences;
 
-    .line 637
+    .line 654
     move/from16 v0, v17
 
     move/from16 v1, v24
 
     if-eq v0, v1, :cond_a
 
-    .line 638
+    .line 655
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -782,7 +767,7 @@
 
     move-result-object v21
 
-    .line 639
+    .line 656
     .local v21, ed:Landroid/content/SharedPreferences$Editor;
     const-string v2, "musiccount"
 
@@ -792,23 +777,23 @@
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 641
+    .line 658
     :try_start_1
     invoke-interface/range {v21 .. v21}, Landroid/content/SharedPreferences$Editor;->apply()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 647
+    .line 664
     :goto_3
     invoke-static {}, Lcom/htc/utils/ulog/ReusableULogData;->obtain()Lcom/htc/utils/ulog/ReusableULogData;
 
-    move-result-object v28
+    move-result-object v30
 
-    .line 650
-    .local v28, uLogData:Lcom/htc/utils/ulog/ReusableULogData;
+    .line 667
+    .local v30, uLogData:Lcom/htc/utils/ulog/ReusableULogData;
     const-string v2, "com.htc.music"
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v30
 
     invoke-virtual {v0, v2}, Lcom/htc/utils/ulog/ReusableULogData;->setAppId(Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
 
@@ -828,21 +813,21 @@
 
     invoke-interface {v2, v3, v5}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
 
-    .line 655
-    invoke-static/range {v28 .. v28}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogData;)V
+    .line 672
+    invoke-static/range {v30 .. v30}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogData;)V
 
-    .line 658
-    invoke-virtual/range {v28 .. v28}, Lcom/htc/utils/ulog/ReusableULogData;->recycle()V
+    .line 675
+    invoke-virtual/range {v30 .. v30}, Lcom/htc/utils/ulog/ReusableULogData;->recycle()V
 
     goto/16 :goto_0
 
-    .line 627
+    .line 644
     .end local v21           #ed:Landroid/content/SharedPreferences$Editor;
-    .end local v28           #uLogData:Lcom/htc/utils/ulog/ReusableULogData;
+    .end local v30           #uLogData:Lcom/htc/utils/ulog/ReusableULogData;
     :catch_0
     move-exception v22
 
-    .line 628
+    .line 645
     .local v22, ex:Ljava/lang/Exception;
     const-string v2, "[MediaPlaybackService]"
 
@@ -850,7 +835,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "case CMD_USER_PROFILING_LOG: cursor close fail, ex: "
+    const-string v5, "case CMD_ULOG_MUSIC_COUNT: cursor close fail, ex: "
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -872,17 +857,17 @@
 
     goto/16 :goto_2
 
-    .line 642
+    .line 659
     .end local v22           #ex:Ljava/lang/Exception;
     .restart local v21       #ed:Landroid/content/SharedPreferences$Editor;
     :catch_1
     move-exception v20
 
-    .line 643
+    .line 660
     .local v20, e:Ljava/lang/Exception;
     const-string v2, "[MediaPlaybackService]"
 
-    const-string v3, "CMD_USER_PROFILING_LOG, Exception in ed.commit: "
+    const-string v3, "CMD_ULOG_MUSIC_COUNT, Exception in ed.commit: "
 
     move-object/from16 v0, v20
 
@@ -890,41 +875,110 @@
 
     goto :goto_3
 
-    .line 661
+    .line 678
     .end local v20           #e:Ljava/lang/Exception;
     .end local v21           #ed:Landroid/content/SharedPreferences$Editor;
     :cond_a
     const-string v2, "[MediaPlaybackService]"
 
-    const-string v3, "CMD_USER_PROFILING_LOG, The music count is the same. Do nothing."
+    const-string v3, "CMD_ULOG_MUSIC_COUNT, The music count is the same. Do nothing."
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 665
+    .line 682
     .end local v17           #currentMusicCount:I
     .end local v24           #lastMusicCount:I
     :cond_b
     const-string v2, "[MediaPlaybackService]"
 
-    const-string v3, "CMD_USER_PROFILING_LOG, cursor is null."
+    const-string v3, "CMD_ULOG_MUSIC_COUNT, cursor is null."
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 671
+    .line 689
     .end local v18           #cursor:Landroid/database/Cursor;
-    .end local v29           #uLogType:I
     :pswitch_d
+    invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    move-result-object v19
+
+    .line 691
+    .restart local v19       #data:Landroid/os/Bundle;
+    if-eqz v19, :cond_c
+
+    .line 692
+    const-string v2, "duration"
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v26
+
+    .line 695
+    .local v26, playbackTime:J
+    invoke-static {}, Lcom/htc/utils/ulog/ReusableULogData;->obtain()Lcom/htc/utils/ulog/ReusableULogData;
+
+    move-result-object v30
+
+    .line 698
+    .restart local v30       #uLogData:Lcom/htc/utils/ulog/ReusableULogData;
+    const-string v2, "com.htc.music"
+
+    move-object/from16 v0, v30
+
+    invoke-virtual {v0, v2}, Lcom/htc/utils/ulog/ReusableULogData;->setAppId(Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+
+    move-result-object v2
+
+    const-string v3, "playback_time"
+
+    invoke-interface {v2, v3}, Lcom/htc/utils/ulog/ULogDataWritable;->setCategory(Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+
+    move-result-object v2
+
+    const-string v3, "duration"
+
+    invoke-static/range {v26 .. v27}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-interface {v2, v3, v5}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+
+    .line 703
+    invoke-static/range {v30 .. v30}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogData;)V
+
+    .line 706
+    invoke-virtual/range {v30 .. v30}, Lcom/htc/utils/ulog/ReusableULogData;->recycle()V
+
+    goto/16 :goto_0
+
+    .line 709
+    .end local v26           #playbackTime:J
+    .end local v30           #uLogData:Lcom/htc/utils/ulog/ReusableULogData;
+    :cond_c
+    const-string v2, "[MediaPlaybackService]"
+
+    const-string v3, "CMD_ULOG_PLAYBACK_TIME, data is null!"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 716
+    .end local v19           #data:Landroid/os/Bundle;
+    :pswitch_e
     const-string v2, "[MediaPlaybackService]"
 
     const-string v3, "CMD_REFRESH_PLAYLIST"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 672
+    .line 717
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -934,29 +988,29 @@
 
     goto/16 :goto_0
 
-    .line 700
-    :pswitch_e
+    .line 745
+    :pswitch_f
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 701
+    .line 746
     .local v4, bundle:Landroid/os/Bundle;
     const-string v2, "command"
 
     invoke-virtual {v4, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v27
+    move-result-object v29
 
-    .line 702
-    .local v27, szCommand:Ljava/lang/String;
+    .line 747
+    .local v29, szCommand:Ljava/lang/String;
     const-string v2, "id"
 
     invoke-virtual {v4, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v23
 
-    .line 703
+    .line 748
     .local v23, iID:I
     const-string v2, "[MediaPlaybackService]"
 
@@ -970,7 +1024,7 @@
 
     move-result-object v3
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v29
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -994,18 +1048,18 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 705
+    .line 750
     const-string v2, "play_artist"
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_d
 
-    .line 706
+    .line 751
     const/4 v2, 0x2
 
     new-array v6, v2, [Ljava/lang/String;
@@ -1022,7 +1076,7 @@
 
     aput-object v3, v6, v2
 
-    .line 709
+    .line 754
     .local v6, ccols:[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1056,7 +1110,7 @@
 
     move-result-object v7
 
-    .line 712
+    .line 757
     .local v7, where:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1066,7 +1120,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 713
+    .line 758
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -1085,21 +1139,21 @@
 
     goto/16 :goto_0
 
-    .line 719
+    .line 764
     .end local v6           #ccols:[Ljava/lang/String;
     .end local v7           #where:Ljava/lang/String;
-    :cond_c
+    :cond_d
     const-string v2, "play_album"
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_e
 
-    .line 720
+    .line 765
     const/4 v2, 0x2
 
     new-array v6, v2, [Ljava/lang/String;
@@ -1116,7 +1170,7 @@
 
     aput-object v3, v6, v2
 
-    .line 723
+    .line 768
     .restart local v6       #ccols:[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1150,7 +1204,7 @@
 
     move-result-object v7
 
-    .line 726
+    .line 771
     .restart local v7       #where:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1160,7 +1214,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 727
+    .line 772
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -1179,21 +1233,21 @@
 
     goto/16 :goto_0
 
-    .line 733
+    .line 778
     .end local v6           #ccols:[Ljava/lang/String;
     .end local v7           #where:Ljava/lang/String;
-    :cond_d
+    :cond_e
     const-string v2, "play_playlist"
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
 
-    .line 734
+    .line 779
     const/4 v2, 0x2
 
     new-array v6, v2, [Ljava/lang/String;
@@ -1210,7 +1264,7 @@
 
     aput-object v3, v6, v2
 
-    .line 738
+    .line 783
     .restart local v6       #ccols:[Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1220,7 +1274,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 739
+    .line 784
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -1253,12 +1307,12 @@
 
     goto/16 :goto_0
 
-    .line 745
+    .line 790
     .end local v6           #ccols:[Ljava/lang/String;
-    :cond_e
+    :cond_f
     const-string v2, "play_track"
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v29
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1266,7 +1320,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 746
+    .line 791
     const/4 v2, 0x2
 
     new-array v6, v2, [Ljava/lang/String;
@@ -1283,7 +1337,7 @@
 
     aput-object v3, v6, v2
 
-    .line 749
+    .line 794
     .restart local v6       #ccols:[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1317,7 +1371,7 @@
 
     move-result-object v7
 
-    .line 752
+    .line 797
     .restart local v7       #where:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1327,7 +1381,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 753
+    .line 798
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MediaPlaybackService$NonUiHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -1346,7 +1400,9 @@
 
     goto/16 :goto_0
 
-    .line 518
+    .line 536
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1366,9 +1422,11 @@
         :pswitch_9
         :pswitch_a
         :pswitch_b
-        :pswitch_c
-        :pswitch_d
         :pswitch_0
         :pswitch_e
+        :pswitch_0
+        :pswitch_f
+        :pswitch_c
+        :pswitch_d
     .end packed-switch
 .end method

@@ -3,8 +3,14 @@
 .source "NfcManager.java"
 
 
+# static fields
+.field static final TAG:Ljava/lang/String; = "NfcManager"
+
+
 # instance fields
-.field private final mAdapter:Landroid/nfc/NfcAdapter;
+.field private mAdapter:Landroid/nfc/NfcAdapter;
+
+.field private final mContext:Landroid/content/Context;
 
 
 # direct methods
@@ -13,51 +19,96 @@
     .parameter "context"
 
     .prologue
-    .line 40
+    .line 49
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 50
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    .line 44
-    :try_start_0
-    invoke-static {p1}, Landroid/nfc/NfcAdapter;->getNfcAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
-    :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 48
-    .local v0, adapter:Landroid/nfc/NfcAdapter;
-    :goto_0
-    iput-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v0, p0, Landroid/nfc/NfcManager;->mContext:Landroid/content/Context;
 
-    .line 49
+    .line 51
+    const-string v0, "NfcManager"
+
+    const-string v1, "constructor"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 52
     return-void
-
-    .line 45
-    .end local v0           #adapter:Landroid/nfc/NfcAdapter;
-    :catch_0
-    move-exception v1
-
-    .line 46
-    .local v1, e:Ljava/lang/UnsupportedOperationException;
-    const/4 v0, 0x0
-
-    .restart local v0       #adapter:Landroid/nfc/NfcAdapter;
-    goto :goto_0
 .end method
 
 
 # virtual methods
 .method public getDefaultAdapter()Landroid/nfc/NfcAdapter;
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 57
-    iget-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
+    .line 60
+    iget-object v2, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
 
-    return-object v0
+    if-nez v2, :cond_0
+
+    .line 63
+    :try_start_0
+    iget-object v2, p0, Landroid/nfc/NfcManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v2}, Landroid/nfc/NfcAdapter;->getNfcAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
+
+    move-result-object v0
+
+    .line 64
+    .local v0, adapter:Landroid/nfc/NfcAdapter;
+    const-string v2, "NfcManager"
+
+    const-string v3, "got mAdapter"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 68
+    :goto_0
+    monitor-enter p0
+
+    .line 69
+    :try_start_1
+    iput-object v0, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
+
+    .line 70
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 72
+    .end local v0           #adapter:Landroid/nfc/NfcAdapter;
+    :cond_0
+    iget-object v2, p0, Landroid/nfc/NfcManager;->mAdapter:Landroid/nfc/NfcAdapter;
+
+    return-object v2
+
+    .line 65
+    :catch_0
+    move-exception v1
+
+    .line 66
+    .local v1, e:Ljava/lang/UnsupportedOperationException;
+    const/4 v0, 0x0
+
+    .restart local v0       #adapter:Landroid/nfc/NfcAdapter;
+    goto :goto_0
+
+    .line 70
+    .end local v1           #e:Ljava/lang/UnsupportedOperationException;
+    :catchall_0
+    move-exception v2
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v2
 .end method

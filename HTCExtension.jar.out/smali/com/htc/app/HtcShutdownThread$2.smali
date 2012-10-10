@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 184
+    .line 189
     iput-object p1, p0, Lcom/htc/app/HtcShutdownThread$2;->val$context:Landroid/content/Context;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +43,12 @@
     .parameter "which"
 
     .prologue
-    .line 188
+    .line 193
     sget-boolean v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->HtcCIQFlag:Z
 
     if-eqz v1, :cond_0
 
-    .line 190
+    .line 195
     :try_start_0
     new-instance v0, Landroid/content/Intent;
 
@@ -56,7 +56,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 191
+    .line 196
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/htc/app/HtcShutdownThread$2;->val$context:Landroid/content/Context;
 
@@ -64,7 +64,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 197
+    .line 202
     .end local v0           #intent:Landroid/content/Intent;
     :cond_0
     :goto_0
@@ -73,10 +73,10 @@
     #calls: Lcom/htc/app/HtcShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
     invoke-static {v1}, Lcom/htc/app/HtcShutdownThread;->access$100(Landroid/content/Context;)V
 
-    .line 198
+    .line 203
     return-void
 
-    .line 192
+    .line 197
     :catch_0
     move-exception v1
 

@@ -201,6 +201,14 @@
     .end annotation
 .end method
 
+.method public abstract mountISO(Ljava/lang/String;)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract mountObb(Ljava/lang/String;Ljava/lang/String;Landroid/os/storage/IObbActionListener;I)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -274,6 +282,14 @@
 .end method
 
 .method public abstract shutdown(Landroid/os/storage/IMountShutdownObserver;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract unmountISO()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -137,7 +137,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "language"
+    const-string v5, "language"
 
     invoke-virtual {v4, v5, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 

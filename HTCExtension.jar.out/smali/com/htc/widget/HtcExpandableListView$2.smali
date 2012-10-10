@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1925
+    .line 1933
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$2;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,21 +39,21 @@
     .parameter "animation"
 
     .prologue
-    .line 1928
+    .line 1936
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$2;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcExpandableListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 1929
+    .line 1937
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$2;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcExpandableListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 1930
+    .line 1938
     :cond_0
     return-void
 .end method

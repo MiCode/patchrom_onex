@@ -21,10 +21,10 @@
     .parameter "authority"
 
     .prologue
-    .line 243
+    .line 250
     invoke-direct {p0, p1, p2}, Lcom/htc/util/contacts/SyncControl$SyncUnit;-><init>(Landroid/accounts/Account;Ljava/lang/String;)V
 
-    .line 244
+    .line 251
     return-void
 .end method
 
@@ -34,7 +34,7 @@
     .locals 2
 
     .prologue
-    .line 250
+    .line 257
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

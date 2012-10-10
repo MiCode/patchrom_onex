@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3978
+    .line 4339
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$34;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .prologue
     const/16 v1, 0x9
 
-    .line 3980
+    .line 4341
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$34;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3981
+    .line 4342
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$34;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerUtil;->cancelDownloadDialog()V
 
-    .line 3983
+    .line 4344
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$34;->this$0:Lcom/htc/app/FilePickerCore;
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->removeDialog(I)V
 
-    .line 3984
+    .line 4345
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$34;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -82,6 +82,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->showDialog(I)V
 
-    .line 3985
+    .line 4346
     return-void
 .end method

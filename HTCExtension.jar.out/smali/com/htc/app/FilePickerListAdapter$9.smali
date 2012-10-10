@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1391
+    .line 1390
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter$9;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 1393
+    .line 1392
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$9;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1394
+    .line 1393
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$9;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
@@ -61,7 +61,7 @@
 
     invoke-interface {v0}, Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;->onFileScanEnd()V
 
-    .line 1396
+    .line 1395
     :cond_0
     const-string v0, "Tab_Type"
 
@@ -78,12 +78,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1397
+    .line 1396
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$9;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
-    .line 1398
+    .line 1397
     :cond_1
     return-void
 .end method

@@ -49,15 +49,15 @@
     .parameter "cursor"
 
     .prologue
-    .line 714
+    .line 725
     iput-object p1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 715
+    .line 726
     invoke-virtual {p0, p2}, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->updateMediaList(Landroid/database/Cursor;)V
 
-    .line 716
+    .line 727
     return-void
 .end method
 
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 759
+    .line 770
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->mArrayList:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
@@ -92,7 +92,7 @@
     .parameter "itemIndex"
 
     .prologue
-    .line 764
+    .line 775
     invoke-virtual {p0}, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->getCount()I
 
     move-result v0
@@ -101,7 +101,7 @@
 
     const/4 v0, 0x0
 
-    .line 765
+    .line 776
     :goto_0
     return-object v0
 
@@ -122,7 +122,7 @@
     .parameter "x0"
 
     .prologue
-    .line 711
+    .line 722
     invoke-virtual {p0, p1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->getItem(I)Lcom/htc/music/widget/gridview/MusicGridViewMediaData;
 
     move-result-object v0
@@ -135,25 +135,25 @@
     .parameter "cursor"
 
     .prologue
-    .line 719
+    .line 730
     if-nez p1, :cond_1
 
-    .line 720
+    .line 731
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->mArrayList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 721
+    .line 732
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->mArrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 727
+    .line 738
     :cond_0
     :goto_0
     return-void
 
-    .line 725
+    .line 736
     :cond_1
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -167,7 +167,7 @@
     #calls: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->initChildFieldId(Landroid/database/Cursor;Lcom/htc/music/widget/gridview/MusicGridViewUtil$MediaType;)V
     invoke-static {v0, p1, v1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->access$500(Lcom/htc/music/widget/gridview/MusicGridViewUtil;Landroid/database/Cursor;Lcom/htc/music/widget/gridview/MusicGridViewUtil$MediaType;)V
 
-    .line 726
+    .line 737
     invoke-virtual {p0, p1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->updateMediaListData(Landroid/database/Cursor;)V
 
     goto :goto_0
@@ -178,19 +178,19 @@
     .parameter "cursor"
 
     .prologue
-    .line 730
+    .line 741
     if-eqz p1, :cond_2
 
-    .line 732
+    .line 743
     const/4 v2, 0x0
 
-    .line 734
+    .line 745
     .local v2, newList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaData;>;"
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
-    .line 735
+    .line 746
     .local v0, count:I
     const-string v4, "[MusicGridViewUtil]"
 
@@ -214,27 +214,27 @@
 
     invoke-static {v4, v5}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 736
+    .line 747
     if-lez v0, :cond_0
 
-    .line 737
+    .line 748
     new-instance v2, Ljava/util/ArrayList;
 
     .end local v2           #newList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaData;>;"
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 738
+    .line 749
     .restart local v2       #newList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaData;>;"
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 739
+    .line 750
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 740
+    .line 751
     new-instance v4, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaData;
 
     iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -243,34 +243,34 @@
 
     invoke-virtual {v2, v1, v4}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 741
+    .line 752
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 739
+    .line 750
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 748
+    .line 759
     .end local v1           #i:I
     :cond_0
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->mArrayList:Ljava/util/ArrayList;
 
-    .line 749
+    .line 760
     .local v3, oldList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaData;>;"
     iput-object v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaList;->mArrayList:Ljava/util/ArrayList;
 
-    .line 750
+    .line 761
     if-eqz v3, :cond_1
 
-    .line 751
+    .line 762
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 753
+    .line 764
     :cond_1
     const/4 v2, 0x0
 
-    .line 755
+    .line 766
     .end local v0           #count:I
     .end local v2           #newList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaData;>;"
     .end local v3           #oldList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/widget/gridview/MusicGridViewUtil$ChildMediaData;>;"

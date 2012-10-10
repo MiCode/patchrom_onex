@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 218
+    .line 325
     iput-object p1, p0, Lcom/android/server/HtcAutoBrightnessCtrl$2;->this$0:Lcom/android/server/HtcAutoBrightnessCtrl;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 225
+    .line 332
     iget-object v0, p0, Lcom/android/server/HtcAutoBrightnessCtrl$2;->this$0:Lcom/android/server/HtcAutoBrightnessCtrl;
 
     const/16 v1, 0x28
 
     #calls: Lcom/android/server/HtcAutoBrightnessCtrl;->reset(I)V
-    invoke-static {v0, v1}, Lcom/android/server/HtcAutoBrightnessCtrl;->access$1100(Lcom/android/server/HtcAutoBrightnessCtrl;I)V
+    invoke-static {v0, v1}, Lcom/android/server/HtcAutoBrightnessCtrl;->access$1000(Lcom/android/server/HtcAutoBrightnessCtrl;I)V
 
-    .line 226
+    .line 333
     return-void
 .end method

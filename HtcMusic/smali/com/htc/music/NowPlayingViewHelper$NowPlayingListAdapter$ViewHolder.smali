@@ -32,7 +32,7 @@
     .parameter
 
     .prologue
-    .line 3408
+    .line 3440
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$NowPlayingListAdapter$ViewHolder;->this$1:Lcom/htc/music/NowPlayingViewHelper$NowPlayingListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

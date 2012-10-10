@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:versionCode="400371040" android:versionName="4.0.2215172826.371040.350914" package="com.android.camera"
+<manifest android:versionCode="400416767" android:versionName="4.0.2218183110.416767.416687" package="com.android.camera"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pluto="http://www.w3.org/2001/pluto.html">
     <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -42,7 +42,7 @@
                 <action android:name="android.intent.action.camera.ulog.MEDIACOUNT" />
             </intent-filter>
         </receiver>
-        <activity android:theme="@style/Camera_window" android:label="@string/htc_private_app" android:icon="@com.htc:drawable/icon_launcher_camera" android:name="CameraEntry" android:taskAffinity="android.task.camera" android:clearTaskOnLaunch="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+        <activity android:theme="@style/Camera_window" android:label="@string/htc_private_app" android:icon="@com.htc:drawable/icon_launcher_camera" android:name="CameraEntry" android:taskAffinity="android.task.camera" android:clearTaskOnLaunch="true" android:launchMode="singleTask" android:screenOrientation="sensorPortait" android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data android:name="android.app.default_searchable" android:value="*" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,19 +59,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:theme="@style/mirror_window" android:label="@string/mirror_name" android:icon="@drawable/icon_launcher_mirror" android:name="MirrorEntry" android:taskAffinity="android.task.mirror" android:clearTaskOnLaunch="true" android:launchMode="singleTask" android:screenOrientation="sensorPortait" android:configChanges="keyboardHidden|orientation|screenSize">
+            <meta-data android:name="android.app.default_searchable" android:value="*" />
             <intent-filter>
-                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:theme="@style/_window" android:label="@string/htc_private_app" android:icon="@com.htc:drawable/icon_launcher_camera" android:name="CameraServiceEntry" android:taskAffinity="android.task.Service" android:clearTaskOnLaunch="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+        <activity android:theme="@style/_window" android:label="@string/htc_private_app" android:icon="@com.htc:drawable/icon_launcher_camera" android:name="CameraServiceEntry" android:taskAffinity="android.task.Service" android:clearTaskOnLaunch="true" android:screenOrientation="sensorPortait" android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data android:name="android.app.default_searchable" android:value="*" />
             <intent-filter>
                 <action android:name="android.media.action.IMAGE_CAPTURE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
-        <activity android:theme="@style/_window" android:label="@string/camcorder_name" android:icon="@com.htc:drawable/icon_launcher_camcorder" android:name="VideoServiceEntry" android:taskAffinity="android.task.Service" android:clearTaskOnLaunch="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+        <activity android:theme="@style/_window" android:label="@string/camcorder_name" android:icon="@com.htc:drawable/icon_launcher_camcorder" android:name="VideoServiceEntry" android:taskAffinity="android.task.Service" android:clearTaskOnLaunch="true" android:screenOrientation="sensorPortait" android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data android:name="android.app.default_searchable" android:value="*" />
             <intent-filter>
                 <action android:name="android.media.action.VIDEO_CAPTURE" />
@@ -83,5 +91,5 @@
             </intent-filter>
         </activity>
     </application>
-    <HTC-SDK version="4.10" />
+    <HTC-SDK version="4.11" />
 </manifest>

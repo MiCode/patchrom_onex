@@ -316,13 +316,13 @@
 
     .prologue
     .line 479
-    const v0, 0x7f060018
+    const v0, 0x7f060016
 
     .line 482
     .local v0, resId:I
     iget-object v1, p0, Lcom/android/providers/settings/util/HtcDefaultValuesLoader;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f060018
+    const v2, 0x7f060016
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -392,13 +392,13 @@
 
     .prologue
     .line 515
-    const v0, 0x7f06001a
+    const v0, 0x7f060018
 
     .line 516
     .local v0, resId:I
     iget-object v1, p0, Lcom/android/providers/settings/util/HtcDefaultValuesLoader;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f06001a
+    const v2, 0x7f060018
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -542,10 +542,10 @@
     .locals 2
 
     .prologue
-    const v0, 0x7f040028
+    const v0, 0x7f040029
 
     .local v0, resId:I
-    const v1, 0x7f040028
+    const v1, 0x7f040029
 
     invoke-direct {p0, v1}, Lcom/android/providers/settings/util/HtcDefaultValuesLoader;->getBooleanString(I)Ljava/lang/String;
 
@@ -820,13 +820,13 @@
 
     .prologue
     .line 532
-    const v0, 0x7f06001b
+    const v0, 0x7f060019
 
     .line 533
     .local v0, resId:I
     iget-object v1, p0, Lcom/android/providers/settings/util/HtcDefaultValuesLoader;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f06001b
+    const v2, 0x7f060019
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -840,11 +840,11 @@
 
     .prologue
     .line 454
-    const v0, 0x7f060016
+    const v0, 0x7f060014
 
     .line 455
     .local v0, resId:I
-    const v1, 0x7f060017
+    const v1, 0x7f060015
 
     .line 459
     .local v1, resId_sp:I
@@ -855,7 +855,7 @@
     .line 460
     iget-object v2, p0, Lcom/android/providers/settings/util/HtcDefaultValuesLoader;->mResources:Landroid/content/res/Resources;
 
-    const v3, 0x7f060017
+    const v3, 0x7f060015
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -868,7 +868,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/providers/settings/util/HtcDefaultValuesLoader;->mResources:Landroid/content/res/Resources;
 
-    const v3, 0x7f060016
+    const v3, 0x7f060014
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -882,13 +882,13 @@
 
     .prologue
     .line 498
-    const v0, 0x7f060019
+    const v0, 0x7f060017
 
     .line 499
     .local v0, resId:I
     iget-object v1, p0, Lcom/android/providers/settings/util/HtcDefaultValuesLoader;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x7f060019
+    const v2, 0x7f060017
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

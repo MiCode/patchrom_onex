@@ -32,7 +32,7 @@
 
     .prologue
     .line 36
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
     const/4 v0, 0x0
@@ -62,18 +62,18 @@
     .parameter "height"
 
     .prologue
-    .line 101
+    .line 103
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
 
-    .line 102
+    .line 104
     .local v0, bgConfig:Landroid/graphics/Bitmap$Config;
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
 
-    .line 103
+    .line 105
     .local v1, fgConfig:Landroid/graphics/Bitmap$Config;
     const-string v2, "GIFParser API"
 
@@ -107,17 +107,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
+    .line 106
     if-eq v0, v1, :cond_0
 
-    .line 108
+    .line 110
     invoke-virtual/range {p0 .. p7}, Landroid/webkit/GIFImageParser;->ComposeBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;[IILandroid/graphics/Rect;II)V
 
-    .line 116
+    .line 118
     :goto_0
     return-void
 
-    .line 112
+    .line 114
     :cond_0
     invoke-virtual/range {p0 .. p7}, Landroid/webkit/GIFImageParser;->ComposeBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;[IILandroid/graphics/Rect;II)V
 
@@ -143,18 +143,18 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 123
+    .line 126
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
 
-    .line 124
+    .line 127
     .local v0, bgConfig:Landroid/graphics/Bitmap$Config;
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
 
-    .line 126
+    .line 129
     .local v1, fgConfig:Landroid/graphics/Bitmap$Config;
     const-string v2, "GIFParser API"
 
@@ -188,24 +188,24 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
+    .line 130
     if-eq v0, v1, :cond_0
 
-    .line 141
+    .line 144
     :goto_0
     return-void
 
-    .line 133
+    .line 136
     :cond_0
     if-nez p5, :cond_1
 
-    .line 134
+    .line 137
     new-instance p5, Landroid/graphics/Rect;
 
     .end local p5
     invoke-direct {p5, v5, v5, p6, p7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 136
+    .line 139
     .restart local p5
     :cond_1
     const-string v2, "GIFParser API"
@@ -214,7 +214,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
+    .line 140
     invoke-virtual/range {p0 .. p7}, Landroid/webkit/GIFImageParser;->ComposeSingleLayerBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;[IILandroid/graphics/Rect;II)V
 
     goto :goto_0
@@ -244,10 +244,10 @@
     .locals 0
 
     .prologue
-    .line 55
+    .line 56
     invoke-virtual {p0}, Landroid/webkit/GIFImageParser;->nativeRelease()V
 
-    .line 56
+    .line 57
     return-void
 .end method
 

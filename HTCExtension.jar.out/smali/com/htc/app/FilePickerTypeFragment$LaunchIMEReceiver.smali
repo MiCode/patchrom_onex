@@ -26,22 +26,22 @@
     .parameter
 
     .prologue
-    .line 254
+    .line 260
     iput-object p1, p0, Lcom/htc/app/FilePickerTypeFragment$LaunchIMEReceiver;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
-    .line 255
+    .line 261
     invoke-virtual {p1}, Lcom/htc/app/FilePickerTypeFragment;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    .line 256
+    .line 262
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/app/FilePickerTypeFragment$LaunchIMEReceiver;->mRetryCount:I
 
-    .line 257
+    .line 263
     return-void
 .end method
 
@@ -50,7 +50,7 @@
     .parameter "x0"
 
     .prologue
-    .line 251
+    .line 257
     iget v0, p0, Lcom/htc/app/FilePickerTypeFragment$LaunchIMEReceiver;->mRetryCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -64,7 +64,7 @@
     .locals 4
 
     .prologue
-    .line 260
+    .line 266
     iget-object v0, p0, Lcom/htc/app/FilePickerTypeFragment$LaunchIMEReceiver;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerTypeFragment;->getHandler()Landroid/os/Handler;
@@ -79,7 +79,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 274
+    .line 283
     return-void
 .end method
 
@@ -91,14 +91,14 @@
     .parameter "resultData"
 
     .prologue
-    .line 277
+    .line 286
     packed-switch p1, :pswitch_data_0
 
-    .line 291
+    .line 300
     :goto_0
     return-void
 
-    .line 280
+    .line 289
     :pswitch_0
     iget v0, p0, Lcom/htc/app/FilePickerTypeFragment$LaunchIMEReceiver;->mRetryCount:I
 
@@ -106,12 +106,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 281
+    .line 290
     invoke-direct {p0}, Lcom/htc/app/FilePickerTypeFragment$LaunchIMEReceiver;->reLaunchIME()V
 
     goto :goto_0
 
-    .line 283
+    .line 292
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerTypeFragment$LaunchIMEReceiver;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
@@ -126,7 +126,7 @@
 
     goto :goto_0
 
-    .line 288
+    .line 297
     :pswitch_1
     const/4 v0, 0x0
 
@@ -134,7 +134,7 @@
 
     goto :goto_0
 
-    .line 277
+    .line 286
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

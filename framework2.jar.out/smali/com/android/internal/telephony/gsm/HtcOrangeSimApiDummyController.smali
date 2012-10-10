@@ -25,6 +25,6 @@
     .parameter "ci"
 
     .prologue
-    .line 11
+    .line 12
     return-void
 .end method

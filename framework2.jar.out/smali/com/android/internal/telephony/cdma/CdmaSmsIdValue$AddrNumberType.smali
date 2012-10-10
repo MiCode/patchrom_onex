@@ -62,7 +62,7 @@
 
     const/4 v3, 0x0
 
-    .line 124
+    .line 193
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_UNKNOWN"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_UNKNOWN:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 125
+    .line 194
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_INTERNATIONAL"
@@ -80,7 +80,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_INTERNATIONAL:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 126
+    .line 195
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_NATIONAL"
@@ -89,7 +89,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_NATIONAL:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 127
+    .line 196
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_NETWORK_SPECIFIC"
@@ -98,7 +98,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_NETWORK_SPECIFIC:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 128
+    .line 197
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_SUBSCRIBER"
@@ -107,7 +107,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_SUBSCRIBER:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 129
+    .line 198
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_ABBREVIATED"
@@ -118,7 +118,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_ABBREVIATED:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 130
+    .line 199
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_UNKNOWN_DATA_NETWORK"
@@ -129,7 +129,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_UNKNOWN_DATA_NETWORK:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 131
+    .line 200
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_INTERNET_PROTOCOL"
@@ -140,7 +140,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_INTERNET_PROTOCOL:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 132
+    .line 201
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_INTERNET_EMAIL_ADDRESS"
@@ -151,7 +151,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_INTERNET_EMAIL_ADDRESS:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 133
+    .line 202
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     const-string v1, "TYPE_RESERVED"
@@ -162,7 +162,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->TYPE_RESERVED:Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
-    .line 124
+    .line 193
     const/16 v0, 0xa
 
     new-array v0, v0, [Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
@@ -233,7 +233,7 @@
     .end annotation
 
     .prologue
-    .line 124
+    .line 193
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -244,7 +244,7 @@
     .parameter "name"
 
     .prologue
-    .line 124
+    .line 193
     const-class v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -260,7 +260,7 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 193
     sget-object v0, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->$VALUES:[Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->clone()Ljava/lang/Object;

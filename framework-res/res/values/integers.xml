@@ -31,9 +31,9 @@
     <integer name="config_notificationsBatteryLedOff">2875</integer>
     <integer name="config_longPressOnHomeBehavior">2</integer>
     <integer name="config_screenBrightnessDim">20</integer>
-    <integer name="config_useAutoBrightnessAlgorithm">0</integer>
+    <integer name="config_useAutoBrightnessAlgorithm">2</integer>
     <integer name="config_lightSensorWarmupTime">0</integer>
-    <integer name="config_virtualKeyQuietTimeMillis">0</integer>
+    <integer name="config_virtualKeyQuietTimeMillis">250</integer>
     <integer name="config_datause_polling_period_sec">600</integer>
     <integer name="config_datause_threshold_bytes">0</integer>
     <integer name="config_datause_throttle_kbitsps">300</integer>

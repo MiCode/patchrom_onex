@@ -30,6 +30,10 @@
 
 .field public static final KEY_VALUE_BLINK:Ljava/lang/String; = "103"
 
+.field public static final KEY_VALUE_FOCUS_DEFAULT:Ljava/lang/String; = "default"
+
+.field public static final KEY_VALUE_FOCUS_TOUCH:Ljava/lang/String; = "touch"
+
 .field public static final KEY_VALUE_NONE:Ljava/lang/String; = "100"
 
 .field public static final KEY_VALUE_SMILE:Ljava/lang/String; = "120"
@@ -46,9 +50,9 @@
     .locals 0
 
     .prologue
-    .line 624
+    .line 652
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 721
+    .line 755
     return-void
 .end method

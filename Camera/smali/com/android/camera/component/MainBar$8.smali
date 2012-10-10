@@ -3,7 +3,7 @@
 .source "MainBar.java"
 
 # interfaces
-.implements Lcom/android/camera/property/PropertyChangedCallback;
+.implements Lcom/android/camera/event/EventHandler;
 
 
 # annotations
@@ -14,6 +14,16 @@
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/android/camera/event/EventHandler",
+        "<",
+        "Lcom/android/camera/event/EventArgs;",
+        ">;"
+    }
 .end annotation
 
 
@@ -27,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 262
+    .line 286
     iput-object p1, p0, Lcom/android/camera/component/MainBar$8;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,18 +47,32 @@
 
 
 # virtual methods
-.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
+.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
     .locals 1
-    .parameter "property"
+    .parameter
+    .parameter "sender"
     .parameter "e"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/camera/event/Event",
+            "<",
+            "Lcom/android/camera/event/EventArgs;",
+            ">;",
+            "Ljava/lang/Object;",
+            "Lcom/android/camera/event/EventArgs;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 266
+    .line 290
+    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/MainBar$8;->this$0:Lcom/android/camera/component/MainBar;
 
-    #calls: Lcom/android/camera/component/MainBar;->updateFlashIcon()V
+    #calls: Lcom/android/camera/component/MainBar;->closePopup()V
     invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1100(Lcom/android/camera/component/MainBar;)V
 
-    .line 267
+    .line 291
     return-void
 .end method

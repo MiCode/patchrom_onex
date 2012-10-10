@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5980
+    .line 6013
     iput-object p1, p0, Lcom/htc/music/HtcMusic$NonUiHandler$2;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,28 +43,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5982
+    .line 6015
     iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$2;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->startBrowserTabActivity()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2400(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2500(Lcom/htc/music/HtcMusic;)V
 
-    .line 5983
+    .line 6016
     iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$2;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0, v1, v1}, Lcom/htc/music/HtcMusic;->overridePendingTransition(II)V
 
-    .line 5984
+    .line 6017
     iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$2;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0}, Lcom/htc/music/HtcMusic;->finish()V
 
-    .line 5985
+    .line 6018
     return-void
 .end method

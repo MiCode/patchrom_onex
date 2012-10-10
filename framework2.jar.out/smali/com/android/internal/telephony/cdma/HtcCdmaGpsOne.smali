@@ -54,7 +54,7 @@
     .parameter "mCM"
 
     .prologue
-    .line 80
+    .line 81
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     .line 53
@@ -62,41 +62,41 @@
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->DBG:Z
 
-    .line 94
+    .line 95
     new-instance v1, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne$1;-><init>(Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;)V
 
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mGpsOneMonitorReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 81
+    .line 82
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mContext:Landroid/content/Context;
 
-    .line 82
+    .line 83
     iput-object p2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 84
+    .line 85
     const/4 v1, 0x2
 
     const/4 v2, 0x0
 
     invoke-interface {p2, p0, v1, v2}, Lcom/android/internal/telephony/CommandsInterface;->registerForOn(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 86
+    .line 87
     const-string v1, "HtcCdmaGpsOne"
 
     const-string v2, "OoO HtcCdmaGpsOne: Constructor"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
+    .line 88
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.htc.intent.action.PPST_COMPLETED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 88
+    .line 89
     .local v0, filter:Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mContext:Landroid/content/Context;
 
@@ -104,7 +104,7 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 90
+    .line 91
     return-void
 .end method
 
@@ -114,24 +114,24 @@
     .locals 2
 
     .prologue
-    .line 113
+    .line 116
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForOn(Landroid/os/Handler;)V
 
-    .line 114
+    .line 117
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 115
+    .line 118
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mGpsOneMonitorReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 117
+    .line 120
     :cond_0
     return-void
 .end method
@@ -140,7 +140,7 @@
     .locals 0
 
     .prologue
-    .line 109
+    .line 111
     return-void
 .end method
 
@@ -151,7 +151,7 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 123
+    .line 127
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->GENERIC_WPHONE_CONFIG()Z
 
     move-result v7
@@ -162,7 +162,7 @@
 
     if-eqz v7, :cond_0
 
-    .line 124
+    .line 128
     const-string v7, "HtcCdmaGpsOne"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -187,17 +187,17 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
+    .line 195
     :goto_0
     return-void
 
-    .line 129
+    .line 133
     :cond_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 131
+    .line 135
     .local v0, ar:Landroid/os/AsyncResult;
     iget v7, p1, Landroid/os/Message;->what:I
 
@@ -205,13 +205,13 @@
 
     goto :goto_0
 
-    .line 133
+    .line 137
     :pswitch_0
     iget-object v7, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v7, :cond_1
 
-    .line 134
+    .line 138
     const-string v7, "HtcCdmaGpsOne"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -238,7 +238,7 @@
 
     goto :goto_0
 
-    .line 138
+    .line 142
     :cond_1
     iget-object v7, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -248,7 +248,7 @@
 
     check-cast v4, [I
 
-    .line 139
+    .line 143
     .local v4, pdss_info:[I
     const-string v7, "HtcCdmaGpsOne"
 
@@ -276,7 +276,7 @@
 
     goto :goto_0
 
-    .line 144
+    .line 148
     .end local v4           #pdss_info:[I
     :pswitch_1
     const-string v7, "HtcCdmaGpsOne"
@@ -287,7 +287,7 @@
 
     goto :goto_0
 
-    .line 148
+    .line 152
     :pswitch_2
     const-string v7, "HtcCdmaGpsOne"
 
@@ -295,7 +295,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
+    .line 153
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v8, 0x4
@@ -308,13 +308,13 @@
 
     goto :goto_0
 
-    .line 152
+    .line 156
     :pswitch_3
     iget-object v7, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v7, :cond_2
 
-    .line 153
+    .line 157
     const-string v7, "HtcCdmaGpsOne"
 
     const-string v8, "Exception GPSOne query:"
@@ -325,7 +325,7 @@
 
     goto :goto_0
 
-    .line 157
+    .line 161
     :cond_2
     iget-object v7, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -335,7 +335,7 @@
 
     check-cast v2, [I
 
-    .line 158
+    .line 162
     .local v2, gpsone_info:[I
     const-string v7, "HtcCdmaGpsOne"
 
@@ -361,14 +361,14 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
+    .line 164
     new-instance v3, Landroid/content/Intent;
 
     const-string v7, "android.intent.action.GPSONE_MODE_CHANGED"
 
     invoke-direct {v3, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 161
+    .line 165
     .local v3, intent:Landroid/content/Intent;
     const-string v7, "MtGpsSetting"
 
@@ -376,26 +376,26 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 166
+    .line 170
     const/4 v1, 0x0
 
-    .line 167
+    .line 171
     .local v1, enableGPSONE:Z
     const/4 v6, 0x0
 
-    .line 168
+    .line 172
     .local v6, valueOfSetting:I
     aget v7, v2, v10
 
     if-nez v7, :cond_4
 
-    .line 169
+    .line 173
     const/4 v6, 0x1
 
-    .line 170
+    .line 174
     const/4 v1, 0x1
 
-    .line 176
+    .line 180
     :goto_1
     const-string v7, "HtcCdmaGpsOne"
 
@@ -419,7 +419,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
+    .line 181
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -430,12 +430,12 @@
 
     invoke-static {v7, v8, v6}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 179
+    .line 183
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v5
 
-    .line 180
+    .line 184
     .local v5, telephonyManager:Landroid/telephony/TelephonyManager;
     invoke-virtual {v5}, Landroid/telephony/TelephonyManager;->getCurrentPhoneType()I
 
@@ -445,7 +445,7 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 181
+    .line 185
     const-string v7, "HtcCdmaGpsOne"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -468,7 +468,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
+    .line 186
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -479,7 +479,7 @@
 
     invoke-static {v7, v8, v1}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 186
+    .line 190
     :cond_3
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/HtcCdmaGpsOne;->mContext:Landroid/content/Context;
 
@@ -487,17 +487,17 @@
 
     goto/16 :goto_0
 
-    .line 172
+    .line 176
     .end local v5           #telephonyManager:Landroid/telephony/TelephonyManager;
     :cond_4
     const/4 v6, 0x0
 
-    .line 173
+    .line 177
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 131
+    .line 135
     nop
 
     :pswitch_data_0

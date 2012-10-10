@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera/property/PropertyChangedCallback",
         "<",
-        "Lcom/android/camera/UIState;",
+        "Lcom/android/camera/TakingPictureState;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 353
+    .line 378
     iput-object p1, p0, Lcom/android/camera/component/MainBar$16;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
 # virtual methods
 .method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
-    .locals 4
+    .locals 1
     .parameter
     .parameter
     .annotation system Ldalvik/annotation/Signature;
@@ -56,79 +56,24 @@
             "(",
             "Lcom/android/camera/property/Property",
             "<",
-            "Lcom/android/camera/UIState;",
+            "Lcom/android/camera/TakingPictureState;",
             ">;",
             "Lcom/android/camera/property/PropertyChangedEventArgs",
             "<",
-            "Lcom/android/camera/UIState;",
+            "Lcom/android/camera/TakingPictureState;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/UIState;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/UIState;>;"
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 357
-    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
-
-    sget-object v1, Lcom/android/camera/UIState;->Closed:Lcom/android/camera/UIState;
-
-    if-ne v0, v1, :cond_1
-
-    .line 359
+    .line 382
+    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/TakingPictureState;>;"
+    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/TakingPictureState;>;"
     iget-object v0, p0, Lcom/android/camera/component/MainBar$16;->this$0:Lcom/android/camera/component/MainBar;
 
-    invoke-virtual {v0}, Lcom/android/camera/component/MainBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
+    #calls: Lcom/android/camera/component/MainBar;->updateButtonStates()V
+    invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1400(Lcom/android/camera/component/MainBar;)V
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/android/camera/HTCCamera;->isCaptureUIOpen:Lcom/android/camera/property/Property;
-
-    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 360
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$16;->this$0:Lcom/android/camera/component/MainBar;
-
-    iget-object v1, p0, Lcom/android/camera/component/MainBar$16;->this$0:Lcom/android/camera/component/MainBar;
-
-    #getter for: Lcom/android/camera/component/MainBar;->m_FunctionBar:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/camera/component/MainBar;->access$700(Lcom/android/camera/component/MainBar;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, v3, v3}, Lcom/android/camera/component/MainBar;->showUI(Landroid/view/View;ZZ)V
-
-    .line 366
-    :cond_0
-    :goto_0
+    .line 383
     return-void
-
-    .line 364
-    :cond_1
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$16;->this$0:Lcom/android/camera/component/MainBar;
-
-    iget-object v1, p0, Lcom/android/camera/component/MainBar$16;->this$0:Lcom/android/camera/component/MainBar;
-
-    #getter for: Lcom/android/camera/component/MainBar;->m_FunctionBar:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/camera/component/MainBar;->access$700(Lcom/android/camera/component/MainBar;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, v2, v2}, Lcom/android/camera/component/MainBar;->showUI(Landroid/view/View;ZZ)V
-
-    goto :goto_0
 .end method

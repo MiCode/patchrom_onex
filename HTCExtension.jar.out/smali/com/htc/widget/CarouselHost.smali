@@ -529,7 +529,7 @@
     .line 613
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string v4, "you must specify a way to create the tab indicator."
+    const-string/jumbo v4, "you must specify a way to create the tab indicator."
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -547,7 +547,7 @@
     .line 617
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string v4, "you must specify a way to create the tab content"
+    const-string/jumbo v4, "you must specify a way to create the tab content"
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

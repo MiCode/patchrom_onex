@@ -324,7 +324,7 @@
 
     sput-object v0, Lcom/htc/widget/HtcExpandableListView;->CHILD_LAST_STATE_SET:[I
 
-    .line 2397
+    .line 2410
     new-array v0, v5, [I
 
     fill-array-data v0, :array_1
@@ -342,7 +342,7 @@
         0xa9t 0x0t 0x1t 0x1t
     .end array-data
 
-    .line 2397
+    .line 2410
     :array_1
     .array-data 0x4
         0xc8t 0x0t 0x0t 0x0t
@@ -407,31 +407,31 @@
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorRect:Landroid/graphics/Rect;
 
-    .line 1523
+    .line 1531
     iput-boolean v4, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldDrawArrowDown:Z
 
-    .line 1545
+    .line 1553
     iput-boolean v4, p0, Lcom/htc/widget/HtcExpandableListView;->mDarkModeEnabled:Z
 
-    .line 1546
+    .line 1554
     iput-boolean v5, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandableAnimationEnabled:Z
 
-    .line 1596
+    .line 1604
     iput-boolean v5, p0, Lcom/htc/widget/HtcExpandableListView;->mGroupPressAnimationEnabled:Z
 
-    .line 1597
+    .line 1605
     iput-boolean v4, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldDrawFakeDivider:Z
 
-    .line 1598
+    .line 1606
     iput-boolean v4, p0, Lcom/htc/widget/HtcExpandableListView;->mIsFirstTimeDraw:Z
 
-    .line 1602
+    .line 1610
     iput-boolean v4, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandGroupCompleted:Z
 
-    .line 1607
+    .line 1615
     iput-boolean v4, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldSkipAnimation:Z
 
-    .line 1612
+    .line 1620
     const/4 v2, 0x2
 
     new-array v2, v2, [I
@@ -440,77 +440,77 @@
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mTargetTopPosition:[I
 
-    .line 1623
+    .line 1631
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mAnimatedViewList:Ljava/util/ArrayList;
 
-    .line 1624
+    .line 1632
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mAnimatedViewHeightList:Ljava/util/ArrayList;
 
-    .line 1625
+    .line 1633
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewList:Ljava/util/ArrayList;
 
-    .line 1626
+    .line 1634
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewHeightList:Ljava/util/ArrayList;
 
-    .line 1630
+    .line 1638
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseReduceViewList:Ljava/util/ArrayList;
 
-    .line 1634
+    .line 1642
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseReduceViewHeightList:Ljava/util/ArrayList;
 
-    .line 1638
+    .line 1646
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupViews:Ljava/util/ArrayList;
 
-    .line 1643
+    .line 1651
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupAnimators:Ljava/util/Map;
 
-    .line 1645
+    .line 1653
     new-instance v2, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v2, v3}, Landroid/view/animation/AccelerateInterpolator;-><init>(F)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandAndMoveInterpolator:Landroid/view/animation/AccelerateInterpolator;
 
-    .line 1646
+    .line 1654
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v2, v3}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mMoveInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 1650
+    .line 1658
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
 
     const/high16 v3, 0x40a0
@@ -519,52 +519,52 @@
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 1651
+    .line 1659
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$MoveToTopRunnable;
 
     invoke-direct {v2, p0, v6}, Lcom/htc/widget/HtcExpandableListView$MoveToTopRunnable;-><init>(Lcom/htc/widget/HtcExpandableListView;Lcom/htc/widget/HtcExpandableListView$1;)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mMoveToTopRunnable:Lcom/htc/widget/HtcExpandableListView$MoveToTopRunnable;
 
-    .line 1652
+    .line 1660
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$WaitExpandViewRunnable;
 
     invoke-direct {v2, p0, v6}, Lcom/htc/widget/HtcExpandableListView$WaitExpandViewRunnable;-><init>(Lcom/htc/widget/HtcExpandableListView;Lcom/htc/widget/HtcExpandableListView$1;)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mWaitExpandViewRunnable:Lcom/htc/widget/HtcExpandableListView$WaitExpandViewRunnable;
 
-    .line 1653
+    .line 1661
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$ExpandIncreaseRunnable;
 
     invoke-direct {v2, p0, v6}, Lcom/htc/widget/HtcExpandableListView$ExpandIncreaseRunnable;-><init>(Lcom/htc/widget/HtcExpandableListView;Lcom/htc/widget/HtcExpandableListView$1;)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandIncreaseRunnable:Lcom/htc/widget/HtcExpandableListView$ExpandIncreaseRunnable;
 
-    .line 1654
+    .line 1662
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;
 
     invoke-direct {v2, p0, v6}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;-><init>(Lcom/htc/widget/HtcExpandableListView;Lcom/htc/widget/HtcExpandableListView$1;)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandReduceRunnable:Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;
 
-    .line 1655
+    .line 1663
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$CollapseReduceRunnable;
 
     invoke-direct {v2, p0, v6}, Lcom/htc/widget/HtcExpandableListView$CollapseReduceRunnable;-><init>(Lcom/htc/widget/HtcExpandableListView;Lcom/htc/widget/HtcExpandableListView$1;)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseReduceRunnable:Lcom/htc/widget/HtcExpandableListView$CollapseReduceRunnable;
 
-    .line 1777
+    .line 1785
     iput-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mUserOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
-    .line 1789
+    .line 1797
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$1;
 
     invoke-direct {v2, p0}, Lcom/htc/widget/HtcExpandableListView$1;-><init>(Lcom/htc/widget/HtcExpandableListView;)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
-    .line 2398
+    .line 2411
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;
 
     const v3, 0x3f666666
@@ -573,14 +573,14 @@
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mTangentInterpolater:Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;
 
-    .line 2661
+    .line 2674
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$4;
 
     invoke-direct {v2, p0}, Lcom/htc/widget/HtcExpandableListView$4;-><init>(Lcom/htc/widget/HtcExpandableListView;)V
 
     iput-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mResetFooterHeight:Ljava/lang/Runnable;
 
-    .line 2970
+    .line 2988
     iput-boolean v5, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorEnabled:Z
 
     .line 256
@@ -771,7 +771,7 @@
     .line 299
     return-void
 
-    .line 1612
+    .line 1620
     nop
 
     :array_0
@@ -1211,28 +1211,28 @@
 
     const/4 v9, 0x1
 
-    .line 1728
+    .line 1736
     iget-boolean v6, p0, Lcom/htc/widget/HtcExpandableListView;->mDarkModeEnabled:Z
 
     if-eqz v6, :cond_1
 
-    .line 1762
+    .line 1770
     :cond_0
     :goto_0
     return-void
 
-    .line 1729
+    .line 1737
     :cond_1
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mAdapter:Landroid/widget/ExpandableListAdapter;
 
     if-eqz v6, :cond_0
 
-    .line 1733
+    .line 1741
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFooterViewsCount()I
 
     move-result v0
 
-    .line 1734
+    .line 1742
     .local v0, exactFooterViewsCount:I
     iget-boolean v6, p0, Lcom/htc/widget/HtcExpandableListView;->mDarkModeEnabled:Z
 
@@ -1240,14 +1240,14 @@
 
     if-lt v0, v9, :cond_2
 
-    .line 1735
+    .line 1743
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFooterViewsCount()I
 
     move-result v6
 
     add-int/lit8 v0, v6, -0x1
 
-    .line 1737
+    .line 1745
     :cond_2
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getHeaderViewsCount()I
 
@@ -1265,29 +1265,29 @@
 
     add-int v1, v6, v0
 
-    .line 1738
+    .line 1746
     .local v1, lastPosition:I
     if-gez v1, :cond_3
 
-    .line 1741
+    .line 1749
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
 
-    .line 1742
+    .line 1750
     .local v5, lp:Landroid/view/ViewGroup$LayoutParams;
     iput v8, v5, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1743
+    .line 1751
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {v6, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
-    .line 1746
+    .line 1754
     .end local v5           #lp:Landroid/view/ViewGroup$LayoutParams;
     :cond_3
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
@@ -1296,7 +1296,7 @@
 
     move-result-object v5
 
-    .line 1747
+    .line 1755
     .restart local v5       #lp:Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFirstVisiblePosition()I
 
@@ -1308,14 +1308,14 @@
 
     move-result-object v2
 
-    .line 1748
+    .line 1756
     .local v2, lastView:Landroid/view/View;
     if-nez v2, :cond_4
 
-    .line 1749
+    .line 1757
     iput v8, v5, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1759
+    .line 1767
     :goto_1
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
@@ -1323,26 +1323,26 @@
 
     goto :goto_0
 
-    .line 1751
+    .line 1759
     :cond_4
     new-array v3, v10, [I
 
     fill-array-data v3, :array_0
 
-    .line 1752
+    .line 1760
     .local v3, listlocation:[I
     new-array v4, v10, [I
 
     fill-array-data v4, :array_1
 
-    .line 1753
+    .line 1761
     .local v4, location:[I
     invoke-virtual {p0, v3}, Lcom/htc/widget/HtcExpandableListView;->getLocationOnScreen([I)V
 
-    .line 1754
+    .line 1762
     invoke-virtual {v2, v4}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 1756
+    .line 1764
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getHeight()I
 
     move-result v6
@@ -1365,7 +1365,7 @@
 
     goto :goto_1
 
-    .line 1751
+    .line 1759
     nop
 
     :array_0
@@ -1374,7 +1374,7 @@
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 1752
+    .line 1760
     :array_1
     .array-data 0x4
         0x0t 0x0t 0x0t 0x0t
@@ -1387,7 +1387,7 @@
     .parameter "position"
 
     .prologue
-    .line 2940
+    .line 2958
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFirstVisiblePosition()I
 
     move-result v2
@@ -1398,27 +1398,27 @@
 
     move-result-object v1
 
-    .line 2941
+    .line 2959
     .local v1, view:Landroid/view/View;
     if-eqz v1, :cond_0
 
-    .line 2942
+    .line 2960
     const/4 v2, 0x2
 
     new-array v0, v2, [I
 
     fill-array-data v0, :array_0
 
-    .line 2943
+    .line 2961
     .local v0, location:[I
     invoke-virtual {v1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 2944
+    .line 2962
     const/4 v2, 0x1
 
     aget v2, v0, v2
 
-    .line 2946
+    .line 2964
     .end local v0           #location:[I
     :goto_0
     return v2
@@ -1428,7 +1428,7 @@
 
     goto :goto_0
 
-    .line 2942
+    .line 2960
     nop
 
     :array_0
@@ -1444,18 +1444,18 @@
     .parameter "item"
 
     .prologue
-    .line 1532
+    .line 1540
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
 
     move-result v1
 
-    .line 1533
+    .line 1541
     .local v1, t:I
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1534
+    .line 1542
     .local v0, arrowDownRect:Landroid/graphics/Rect;
     invoke-virtual {p2}, Landroid/view/View;->getRight()I
 
@@ -1477,7 +1477,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->left:I
 
-    .line 1535
+    .line 1543
     invoke-virtual {p2}, Landroid/view/View;->getRight()I
 
     move-result v2
@@ -1498,7 +1498,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->right:I
 
-    .line 1536
+    .line 1544
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getDividerHeight()I
 
     move-result v2
@@ -1509,7 +1509,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->top:I
 
-    .line 1537
+    .line 1545
     iget v2, v0, Landroid/graphics/Rect;->top:I
 
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mArrowDown:Landroid/graphics/drawable/Drawable;
@@ -1522,17 +1522,17 @@
 
     iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 1538
+    .line 1546
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mArrowDown:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1539
+    .line 1547
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mArrowDown:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1540
+    .line 1548
     return-void
 .end method
 
@@ -1545,7 +1545,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1494
+    .line 1502
     invoke-virtual {p2}, Landroid/view/View;->getTranslationY()F
 
     move-result v3
@@ -1556,24 +1556,24 @@
 
     if-eqz v3, :cond_1
 
-    .line 1521
+    .line 1529
     :cond_0
     :goto_0
     return-void
 
-    .line 1496
+    .line 1504
     :cond_1
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    .line 1497
+    .line 1505
     .local v2, t:I
     invoke-virtual {p2}, Landroid/view/View;->getBottom()I
 
     move-result v0
 
-    .line 1498
+    .line 1506
     .local v0, b:I
     iget-object v3, p3, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
@@ -1581,7 +1581,7 @@
 
     if-ne v3, v1, :cond_0
 
-    .line 1499
+    .line 1507
     iget-object v3, p3, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->groupMetadata:Lcom/htc/widget/HtcExpandableListConnector$GroupMetadata;
 
     iget v3, v3, Lcom/htc/widget/HtcExpandableListConnector$GroupMetadata;->lastChildFlPos:I
@@ -1592,19 +1592,19 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 1500
+    .line 1508
     .local v1, isLastChild:Z
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 1501
+    .line 1509
     iget-object v3, p3, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
     iget v3, v3, Lcom/htc/widget/HtcExpandableListPosition;->childPos:I
 
     if-nez v3, :cond_3
 
-    .line 1502
+    .line 1510
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowTop:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
@@ -1617,7 +1617,7 @@
 
     invoke-virtual {v3, v4, v2, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1503
+    .line 1511
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowBottom:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
@@ -1630,26 +1630,26 @@
 
     invoke-virtual {v3, v4, v2, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1506
+    .line 1514
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowTop:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1507
+    .line 1515
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowBottom:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 1499
+    .line 1507
     .end local v1           #isLastChild:Z
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 1510
+    .line 1518
     .restart local v1       #isLastChild:Z
     :cond_3
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowBottom:Landroid/graphics/drawable/Drawable;
@@ -1664,14 +1664,14 @@
 
     invoke-virtual {v3, v4, v2, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1513
+    .line 1521
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowBottom:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 1515
+    .line 1523
     :cond_4
     iget-object v3, p3, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
@@ -1679,7 +1679,7 @@
 
     if-nez v3, :cond_0
 
-    .line 1516
+    .line 1524
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowTop:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
@@ -1692,7 +1692,7 @@
 
     invoke-virtual {v3, v4, v2, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1517
+    .line 1525
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mShadowTop:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -1705,12 +1705,12 @@
     .parameter "canvas"
 
     .prologue
-    .line 1444
+    .line 1452
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getHeaderViewsCount()I
 
     move-result v3
 
-    .line 1445
+    .line 1453
     .local v3, headerViewsCount:I
     iget v12, p0, Lcom/htc/widget/HtcAdapterView;->mItemCount:I
 
@@ -1724,17 +1724,17 @@
 
     add-int/lit8 v8, v12, -0x1
 
-    .line 1446
+    .line 1454
     .local v8, lastChildFlPos:I
     iget v9, p0, Lcom/htc/widget/HtcAdapterView;->mBottom:I
 
-    .line 1447
+    .line 1455
     .local v9, myB:I
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getChildCount()I
 
     move-result v1
 
-    .line 1451
+    .line 1459
     .local v1, childCount:I
     const/4 v4, 0x0
 
@@ -1747,10 +1747,10 @@
     :goto_0
     if-ge v4, v1, :cond_2
 
-    .line 1453
+    .line 1461
     if-gez v2, :cond_1
 
-    .line 1452
+    .line 1460
     :cond_0
     :goto_1
     add-int/lit8 v4, v4, 0x1
@@ -1759,50 +1759,50 @@
 
     goto :goto_0
 
-    .line 1456
+    .line 1464
     :cond_1
     if-le v2, v8, :cond_3
 
-    .line 1486
+    .line 1494
     :cond_2
     return-void
 
-    .line 1460
+    .line 1468
     :cond_3
     invoke-virtual {p0, v4}, Lcom/htc/widget/HtcExpandableListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 1461
+    .line 1469
     .local v7, item:Landroid/view/View;
     invoke-virtual {v7}, Landroid/view/View;->getTop()I
 
     move-result v11
 
-    .line 1462
+    .line 1470
     .local v11, t:I
     invoke-virtual {v7}, Landroid/view/View;->getBottom()I
 
     move-result v0
 
-    .line 1464
+    .line 1472
     .local v0, b:I
     if-ltz v0, :cond_0
 
     if-gt v11, v9, :cond_0
 
-    .line 1467
+    .line 1475
     iget-object v12, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v12, v2}, Lcom/htc/widget/HtcExpandableListConnector;->getUnflattenedPos(I)Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
 
     move-result-object v10
 
-    .line 1468
+    .line 1476
     .local v10, pos:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     const/4 v5, 0x0
 
-    .line 1469
+    .line 1477
     .local v5, indicatorButton:Lcom/htc/widget/HtcIndicatorButton;
     invoke-virtual {v10}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->isExpanded()Z
 
@@ -1822,7 +1822,7 @@
 
     if-eqz v12, :cond_5
 
-    .line 1470
+    .line 1478
     check-cast v7, Landroid/view/ViewGroup;
 
     .end local v7           #item:Landroid/view/View;
@@ -1832,7 +1832,7 @@
 
     move-result-object v6
 
-    .line 1471
+    .line 1479
     .local v6, indicatorView:Landroid/view/View;
     if-eqz v6, :cond_4
 
@@ -1842,15 +1842,15 @@
 
     move-object v5, v6
 
-    .line 1472
+    .line 1480
     check-cast v5, Lcom/htc/widget/HtcIndicatorButton;
 
-    .line 1473
+    .line 1481
     const/4 v12, 0x1
 
     invoke-virtual {v5, v12}, Lcom/htc/widget/HtcIndicatorButton;->setExpanded(Z)V
 
-    .line 1484
+    .line 1492
     .end local v6           #indicatorView:Landroid/view/View;
     :cond_4
     :goto_2
@@ -1858,7 +1858,7 @@
 
     goto :goto_1
 
-    .line 1476
+    .line 1484
     .restart local v7       #item:Landroid/view/View;
     :cond_5
     invoke-virtual {v10}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->isExpanded()Z
@@ -1879,7 +1879,7 @@
 
     if-eqz v12, :cond_4
 
-    .line 1477
+    .line 1485
     check-cast v7, Landroid/view/ViewGroup;
 
     .end local v7           #item:Landroid/view/View;
@@ -1889,7 +1889,7 @@
 
     move-result-object v6
 
-    .line 1478
+    .line 1486
     .restart local v6       #indicatorView:Landroid/view/View;
     if-eqz v6, :cond_4
 
@@ -1899,10 +1899,10 @@
 
     move-object v5, v6
 
-    .line 1479
+    .line 1487
     check-cast v5, Lcom/htc/widget/HtcIndicatorButton;
 
-    .line 1480
+    .line 1488
     const/4 v12, 0x0
 
     invoke-virtual {v5, v12}, Lcom/htc/widget/HtcIndicatorButton;->setExpanded(Z)V
@@ -1914,16 +1914,16 @@
     .locals 2
 
     .prologue
-    .line 1721
+    .line 1729
     iget-boolean v1, p0, Lcom/htc/widget/HtcExpandableListView;->mDarkModeEnabled:Z
 
     if-eqz v1, :cond_0
 
-    .line 1725
+    .line 1733
     :goto_0
     return-void
 
-    .line 1722
+    .line 1730
     :cond_0
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
@@ -1931,7 +1931,7 @@
 
     move-result-object v0
 
-    .line 1723
+    .line 1731
     .local v0, lp:Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getHeight()I
 
@@ -1939,7 +1939,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1724
+    .line 1732
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -1960,7 +1960,7 @@
 
     const/4 v6, 0x0
 
-    .line 1946
+    .line 1954
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v3
@@ -1969,7 +1969,7 @@
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setPivotY(F)V
 
-    .line 1947
+    .line 1955
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
@@ -1980,7 +1980,7 @@
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setPivotX(F)V
 
-    .line 1948
+    .line 1956
     const-string v3, "scaleX"
 
     new-array v4, v8, [F
@@ -1995,7 +1995,7 @@
 
     move-result-object v1
 
-    .line 1949
+    .line 1957
     .local v1, pvhScaleX:Landroid/animation/PropertyValuesHolder;
     const-string v3, "scaleY"
 
@@ -2011,7 +2011,7 @@
 
     move-result-object v2
 
-    .line 1950
+    .line 1958
     .local v2, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     new-array v3, v8, [Landroid/animation/PropertyValuesHolder;
 
@@ -2023,20 +2023,20 @@
 
     move-result-object v0
 
-    .line 1951
+    .line 1959
     .local v0, pressAnim:Landroid/animation/ObjectAnimator;
     const-wide/16 v3, 0x64
 
     invoke-virtual {v0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 1952
+    .line 1960
     new-instance v3, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v3}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     invoke-virtual {v0, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1953
+    .line 1961
     return-object v0
 .end method
 
@@ -2054,12 +2054,12 @@
 
     const/4 v6, 0x0
 
-    .line 1962
+    .line 1970
     int-to-float v3, p2
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setPivotY(F)V
 
-    .line 1963
+    .line 1971
     const-string v3, "scaleX"
 
     new-array v4, v8, [F
@@ -2074,7 +2074,7 @@
 
     move-result-object v0
 
-    .line 1964
+    .line 1972
     .local v0, pvhScaleX:Landroid/animation/PropertyValuesHolder;
     const-string v3, "scaleY"
 
@@ -2090,7 +2090,7 @@
 
     move-result-object v1
 
-    .line 1965
+    .line 1973
     .local v1, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     new-array v3, v8, [Landroid/animation/PropertyValuesHolder;
 
@@ -2102,27 +2102,27 @@
 
     move-result-object v2
 
-    .line 1966
+    .line 1974
     .local v2, releaseAnimation:Landroid/animation/ObjectAnimator;
     const-wide/16 v3, 0x64
 
     invoke-virtual {v2, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 1967
+    .line 1975
     new-instance v3, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v3}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1968
+    .line 1976
     new-instance v3, Lcom/htc/widget/HtcExpandableListView$3;
 
     invoke-direct {v3, p0}, Lcom/htc/widget/HtcExpandableListView$3;-><init>(Lcom/htc/widget/HtcExpandableListView;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1974
+    .line 1982
     return-object v2
 .end method
 
@@ -2146,14 +2146,14 @@
     .parameter "position"
 
     .prologue
-    .line 1233
+    .line 1241
     iget v0, p1, Lcom/htc/widget/HtcExpandableListPosition;->type:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1234
+    .line 1242
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mAdapter:Landroid/widget/ExpandableListAdapter;
 
     iget v1, p1, Lcom/htc/widget/HtcExpandableListPosition;->groupPos:I
@@ -2164,7 +2164,7 @@
 
     move-result-wide v0
 
-    .line 1236
+    .line 1244
     :goto_0
     return-wide v0
 
@@ -2193,12 +2193,12 @@
     .end annotation
 
     .prologue
-    .line 2813
+    .line 2831
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2816
+    .line 2834
     .local v0, collapseReduceViewList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -2212,15 +2212,15 @@
 
     add-int v1, v6, v7
 
-    .line 2818
+    .line 2836
     .local v1, expandedPosition:I
     if-gez v1, :cond_1
 
-    .line 2836
+    .line 2854
     :cond_0
     return-object v0
 
-    .line 2822
+    .line 2840
     :cond_1
     const/4 v2, 0x0
 
@@ -2232,7 +2232,7 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 2824
+    .line 2842
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFirstVisiblePosition()I
 
     move-result v6
@@ -2245,7 +2245,7 @@
 
     sub-int v3, v6, v7
 
-    .line 2826
+    .line 2844
     .local v3, pos:I
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -2253,7 +2253,7 @@
 
     move-result-object v4
 
-    .line 2827
+    .line 2845
     .local v4, posMetadata:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     iget-object v6, v4, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
@@ -2263,7 +2263,7 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 2829
+    .line 2847
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFirstVisiblePosition()I
 
     move-result v6
@@ -2280,11 +2280,11 @@
 
     move-result-object v5
 
-    .line 2830
+    .line 2848
     .local v5, view:Landroid/view/View;
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2822
+    .line 2840
     .end local v5           #view:Landroid/view/View;
     :cond_2
     add-int/lit8 v2, v2, 0x1
@@ -2297,7 +2297,7 @@
     .parameter "count"
 
     .prologue
-    .line 2435
+    .line 2448
     const/16 v0, 0x50
 
     return v0
@@ -2316,12 +2316,12 @@
     .end annotation
 
     .prologue
-    .line 2468
+    .line 2481
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2470
+    .line 2483
     .local v0, expandReduceViewList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -2335,15 +2335,15 @@
 
     add-int v1, v6, v7
 
-    .line 2473
+    .line 2486
     .local v1, expandedPosition:I
     if-gez v1, :cond_1
 
-    .line 2490
+    .line 2503
     :cond_0
     return-object v0
 
-    .line 2477
+    .line 2490
     :cond_1
     const/4 v2, 0x0
 
@@ -2355,7 +2355,7 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 2479
+    .line 2492
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFirstVisiblePosition()I
 
     move-result v6
@@ -2368,7 +2368,7 @@
 
     sub-int v3, v6, v7
 
-    .line 2480
+    .line 2493
     .local v3, pos:I
     iget-object v6, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -2376,7 +2376,7 @@
 
     move-result-object v4
 
-    .line 2481
+    .line 2494
     .local v4, posMetadata:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     iget-object v6, v4, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
@@ -2386,7 +2386,7 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 2483
+    .line 2496
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getFirstVisiblePosition()I
 
     move-result v6
@@ -2403,11 +2403,11 @@
 
     move-result-object v5
 
-    .line 2484
+    .line 2497
     .local v5, view:Landroid/view/View;
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2477
+    .line 2490
     .end local v5           #view:Landroid/view/View;
     :cond_2
     add-int/lit8 v2, v2, 0x1
@@ -2573,7 +2573,7 @@
     .parameter "count"
 
     .prologue
-    .line 2446
+    .line 2459
     const/16 v0, 0x12c
 
     return v0
@@ -2590,17 +2590,17 @@
 
     const/4 v0, -0x1
 
-    .line 1153
+    .line 1161
     cmp-long v1, p0, v5
 
     if-nez v1, :cond_1
 
-    .line 1158
+    .line 1166
     :cond_0
     :goto_0
     return v0
 
-    .line 1156
+    .line 1164
     :cond_1
     and-long v1, p0, v3
 
@@ -2608,7 +2608,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1158
+    .line 1166
     and-long v0, p0, v5
 
     long-to-int v0, v0
@@ -2622,7 +2622,7 @@
     .parameter "childPosition"
 
     .prologue
-    .line 1182
+    .line 1190
     const-wide/high16 v0, -0x8000
 
     int-to-long v2, p0
@@ -2653,7 +2653,7 @@
     .parameter "groupPosition"
 
     .prologue
-    .line 1201
+    .line 1209
     int-to-long v0, p0
 
     const-wide/32 v2, 0x7fffffff
@@ -2672,7 +2672,7 @@
     .parameter "packedPosition"
 
     .prologue
-    .line 1134
+    .line 1142
     const-wide v0, 0xffffffffL
 
     cmp-long v0, p0, v0
@@ -2681,7 +2681,7 @@
 
     const/4 v0, -0x1
 
-    .line 1136
+    .line 1144
     :goto_0
     return v0
 
@@ -2706,17 +2706,17 @@
     .prologue
     const-wide/high16 v2, -0x8000
 
-    .line 1114
+    .line 1122
     const-wide v0, 0xffffffffL
 
     cmp-long v0, p0, v0
 
     if-nez v0, :cond_0
 
-    .line 1115
+    .line 1123
     const/4 v0, 0x2
 
-    .line 1118
+    .line 1126
     :goto_0
     return v0
 
@@ -2742,7 +2742,7 @@
     .parameter "count"
 
     .prologue
-    .line 2951
+    .line 2969
     const/16 v0, 0x64
 
     return v0
@@ -2754,14 +2754,14 @@
     .parameter "step"
 
     .prologue
-    .line 2043
+    .line 2051
     instance-of v1, p1, Lcom/htc/widget/HtcListItem;
 
     if-eqz v1, :cond_0
 
     move-object v1, p1
 
-    .line 2044
+    .line 2052
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     const/4 v2, 0x1
@@ -2770,14 +2770,14 @@
 
     move-object v1, p1
 
-    .line 2046
+    .line 2054
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcListItem;->getCustomLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 2047
+    .line 2055
     .local v0, lp:Landroid/view/ViewGroup$LayoutParams;
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
@@ -2785,17 +2785,17 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2048
+    .line 2056
     check-cast p1, Lcom/htc/widget/HtcListItem;
 
     .end local p1
     invoke-virtual {p1, v0}, Lcom/htc/widget/HtcListItem;->setCustomLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2055
+    .line 2063
     :goto_0
     return-void
 
-    .line 2051
+    .line 2059
     .end local v0           #lp:Landroid/view/ViewGroup$LayoutParams;
     .restart local p1
     :cond_0
@@ -2803,7 +2803,7 @@
 
     move-result-object v0
 
-    .line 2052
+    .line 2060
     .restart local v0       #lp:Landroid/view/ViewGroup$LayoutParams;
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
@@ -2811,7 +2811,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2053
+    .line 2061
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
@@ -2823,10 +2823,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1766
+    .line 1774
     invoke-virtual {p0, v3}, Lcom/htc/widget/HtcExpandableListView;->ignoreFooterViewInBouncing(Z)V
 
-    .line 1767
+    .line 1775
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mContext:Landroid/content/Context;
 
     const-string v2, "layout_inflater"
@@ -2837,7 +2837,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 1768
+    .line 1776
     .local v0, inflater:Landroid/view/LayoutInflater;
     const v1, 0x2090061
 
@@ -2849,25 +2849,25 @@
 
     iput-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
-    .line 1769
+    .line 1777
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setClickable(Z)V
 
-    .line 1770
+    .line 1778
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcExpandableListView;->addFooterView(Landroid/view/View;)V
 
-    .line 1771
+    .line 1779
     invoke-direct {p0}, Lcom/htc/widget/HtcExpandableListView;->fillFooterHeight()V
 
-    .line 1773
+    .line 1781
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
     invoke-super {p0, v1}, Lcom/htc/widget/HtcListView;->setOnScrollListener(Lcom/htc/widget/HtcAbsListView$OnScrollListener;)V
 
-    .line 1774
+    .line 1782
     return-void
 .end method
 
@@ -2913,10 +2913,10 @@
     .parameter "top"
 
     .prologue
-    .line 2352
+    .line 2365
     invoke-virtual {p0, p1, p2}, Lcom/htc/widget/HtcExpandableListView;->setSelectionFromTop(II)V
 
-    .line 2353
+    .line 2366
     return-void
 .end method
 
@@ -2924,12 +2924,12 @@
     .locals 2
 
     .prologue
-    .line 1850
+    .line 1858
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcExpandableListConnector;->recoverChildren()V
 
-    .line 1851
+    .line 1859
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcExpandableListConnector;->getCount()I
@@ -2950,7 +2950,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcAdapterView;->mItemCount:I
 
-    .line 1852
+    .line 1860
     return-void
 .end method
 
@@ -2958,10 +2958,10 @@
     .locals 5
 
     .prologue
-    .line 2840
+    .line 2858
     const/4 v2, 0x0
 
-    .line 2841
+    .line 2859
     .local v2, view:Landroid/view/View;
     const/4 v0, 0x0
 
@@ -2975,7 +2975,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 2842
+    .line 2860
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseReduceViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2985,7 +2985,7 @@
     .end local v2           #view:Landroid/view/View;
     check-cast v2, Landroid/view/View;
 
-    .line 2843
+    .line 2861
     .restart local v2       #view:Landroid/view/View;
     instance-of v3, v2, Lcom/htc/widget/HtcListItem;
 
@@ -2993,7 +2993,7 @@
 
     move-object v3, v2
 
-    .line 2844
+    .line 2862
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     const/4 v4, 0x1
@@ -3002,14 +3002,14 @@
 
     move-object v3, v2
 
-    .line 2846
+    .line 2864
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcListItem;->getCustomLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 2847
+    .line 2865
     .local v1, lp:Landroid/view/ViewGroup$LayoutParams;
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseReduceViewHeightList:Ljava/util/ArrayList;
 
@@ -3027,25 +3027,25 @@
 
     move-object v3, v2
 
-    .line 2848
+    .line 2866
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v3, v1}, Lcom/htc/widget/HtcListItem;->setCustomLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2841
+    .line 2859
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2851
+    .line 2869
     .end local v1           #lp:Landroid/view/ViewGroup$LayoutParams;
     :cond_0
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 2852
+    .line 2870
     .restart local v1       #lp:Landroid/view/ViewGroup$LayoutParams;
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseReduceViewHeightList:Ljava/util/ArrayList;
 
@@ -3061,12 +3061,12 @@
 
     iput v3, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2853
+    .line 2871
     invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_1
 
-    .line 2856
+    .line 2874
     .end local v1           #lp:Landroid/view/ViewGroup$LayoutParams;
     :cond_1
     return-void
@@ -3076,10 +3076,10 @@
     .locals 5
 
     .prologue
-    .line 2859
+    .line 2877
     const/4 v2, 0x0
 
-    .line 2860
+    .line 2878
     .local v2, view:Landroid/view/View;
     const/4 v0, 0x0
 
@@ -3093,7 +3093,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 2861
+    .line 2879
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3103,7 +3103,7 @@
     .end local v2           #view:Landroid/view/View;
     check-cast v2, Landroid/view/View;
 
-    .line 2862
+    .line 2880
     .restart local v2       #view:Landroid/view/View;
     instance-of v3, v2, Lcom/htc/widget/HtcListItem;
 
@@ -3111,7 +3111,7 @@
 
     move-object v3, v2
 
-    .line 2863
+    .line 2881
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     const/4 v4, 0x1
@@ -3120,14 +3120,14 @@
 
     move-object v3, v2
 
-    .line 2865
+    .line 2883
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcListItem;->getCustomLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 2866
+    .line 2884
     .local v1, lp:Landroid/view/ViewGroup$LayoutParams;
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewHeightList:Ljava/util/ArrayList;
 
@@ -3145,25 +3145,25 @@
 
     move-object v3, v2
 
-    .line 2867
+    .line 2885
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v3, v1}, Lcom/htc/widget/HtcListItem;->setCustomLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2860
+    .line 2878
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2870
+    .line 2888
     .end local v1           #lp:Landroid/view/ViewGroup$LayoutParams;
     :cond_0
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 2871
+    .line 2889
     .restart local v1       #lp:Landroid/view/ViewGroup$LayoutParams;
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewHeightList:Ljava/util/ArrayList;
 
@@ -3179,12 +3179,12 @@
 
     iput v3, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2872
+    .line 2890
     invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_1
 
-    .line 2875
+    .line 2893
     .end local v1           #lp:Landroid/view/ViewGroup$LayoutParams;
     :cond_1
     return-void
@@ -3195,12 +3195,12 @@
     .parameter "newChildrenSize"
 
     .prologue
-    .line 1845
+    .line 1853
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcExpandableListConnector;->reduceChildren(I)V
 
-    .line 1846
+    .line 1854
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcExpandableListConnector;->getCount()I
@@ -3221,7 +3221,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcAdapterView;->mItemCount:I
 
-    .line 1847
+    .line 1855
     return-void
 .end method
 
@@ -3231,14 +3231,14 @@
     .parameter "step"
 
     .prologue
-    .line 2877
+    .line 2895
     instance-of v1, p1, Lcom/htc/widget/HtcListItem;
 
     if-eqz v1, :cond_0
 
     move-object v1, p1
 
-    .line 2878
+    .line 2896
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     const/4 v2, 0x1
@@ -3247,14 +3247,14 @@
 
     move-object v1, p1
 
-    .line 2880
+    .line 2898
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcListItem;->getCustomLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 2881
+    .line 2899
     .local v0, lp:Landroid/view/ViewGroup$LayoutParams;
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
@@ -3262,17 +3262,17 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2882
+    .line 2900
     check-cast p1, Lcom/htc/widget/HtcListItem;
 
     .end local p1
     invoke-virtual {p1, v0}, Lcom/htc/widget/HtcListItem;->setCustomLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2889
+    .line 2907
     :goto_0
     return-void
 
-    .line 2885
+    .line 2903
     .end local v0           #lp:Landroid/view/ViewGroup$LayoutParams;
     .restart local p1
     :cond_0
@@ -3280,7 +3280,7 @@
 
     move-result-object v0
 
-    .line 2886
+    .line 2904
     .restart local v0       #lp:Landroid/view/ViewGroup$LayoutParams;
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
@@ -3288,7 +3288,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2887
+    .line 2905
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
@@ -3309,7 +3309,7 @@
     .end annotation
 
     .prologue
-    .line 1830
+    .line 1838
     .local p1, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
     return-void
 .end method
@@ -3331,46 +3331,46 @@
     .end annotation
 
     .prologue
-    .line 2358
+    .line 2371
     .local p2, duration:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     int-to-float v0, p1
 
-    .line 2359
+    .line 2372
     .local v0, count:F
     const/4 v7, 0x0
 
-    .line 2360
+    .line 2373
     .local v7, percent:F
     const/4 v8, 0x0
 
-    .line 2361
+    .line 2374
     .local v8, prePercent:F
     const/4 v1, 0x0
 
-    .line 2362
+    .line 2375
     .local v1, eachDuration:I
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2363
+    .line 2376
     .local v4, now:J
     sub-long v9, v4, p3
 
     long-to-int v6, v9
 
-    .line 2366
+    .line 2379
     .local v6, passTime:I
     if-eqz p5, :cond_0
 
-    .line 2367
+    .line 2380
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcExpandableListView;->getExpandDuration(I)I
 
     move-result v9
 
     sub-int v3, v9, v6
 
-    .line 2371
+    .line 2384
     .local v3, moveDuration:I
     :goto_0
     const/4 v2, 0x0
@@ -3379,7 +3379,7 @@
     :goto_1
     if-ge v2, p1, :cond_4
 
-    .line 2373
+    .line 2386
     iget-object v9, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandAndMoveInterpolator:Landroid/view/animation/AccelerateInterpolator;
 
     add-int/lit8 v10, v2, 0x1
@@ -3392,37 +3392,37 @@
 
     move-result v7
 
-    .line 2375
+    .line 2388
     if-nez v2, :cond_2
 
-    .line 2376
+    .line 2389
     int-to-float v9, v3
 
     mul-float/2addr v9, v7
 
     float-to-int v1, v9
 
-    .line 2377
+    .line 2390
     if-lez v1, :cond_1
 
-    .line 2378
+    .line 2391
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
 
     invoke-virtual {p2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2382
+    .line 2395
     :goto_2
     move v8, v7
 
-    .line 2371
+    .line 2384
     :goto_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 2369
+    .line 2382
     .end local v2           #i:I
     .end local v3           #moveDuration:I
     :cond_0
@@ -3435,7 +3435,7 @@
     .restart local v3       #moveDuration:I
     goto :goto_0
 
-    .line 2380
+    .line 2393
     .restart local v2       #i:I
     :cond_1
     const/4 v9, 0x1
@@ -3448,7 +3448,7 @@
 
     goto :goto_2
 
-    .line 2384
+    .line 2397
     :cond_2
     int-to-float v9, v3
 
@@ -3458,23 +3458,23 @@
 
     float-to-int v1, v9
 
-    .line 2385
+    .line 2398
     if-lez v1, :cond_3
 
-    .line 2386
+    .line 2399
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
 
     invoke-virtual {p2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2391
+    .line 2404
     :goto_4
     move v8, v7
 
     goto :goto_3
 
-    .line 2388
+    .line 2401
     :cond_3
     const/4 v9, 0x1
 
@@ -3486,7 +3486,7 @@
 
     goto :goto_4
 
-    .line 2394
+    .line 2407
     :cond_4
     return v3
 .end method
@@ -3497,14 +3497,14 @@
     .parameter "height"
 
     .prologue
-    .line 2058
+    .line 2066
     instance-of v1, p1, Lcom/htc/widget/HtcListItem;
 
     if-eqz v1, :cond_0
 
     move-object v1, p1
 
-    .line 2059
+    .line 2067
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     const/4 v2, 0x1
@@ -3513,28 +3513,28 @@
 
     move-object v1, p1
 
-    .line 2061
+    .line 2069
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcListItem;->getCustomLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 2062
+    .line 2070
     .local v0, lp:Landroid/view/ViewGroup$LayoutParams;
     iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2063
+    .line 2071
     check-cast p1, Lcom/htc/widget/HtcListItem;
 
     .end local p1
     invoke-virtual {p1, v0}, Lcom/htc/widget/HtcListItem;->setCustomLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2070
+    .line 2078
     :goto_0
     return-void
 
-    .line 2066
+    .line 2074
     .end local v0           #lp:Landroid/view/ViewGroup$LayoutParams;
     .restart local p1
     :cond_0
@@ -3542,11 +3542,11 @@
 
     move-result-object v0
 
-    .line 2067
+    .line 2075
     .restart local v0       #lp:Landroid/view/ViewGroup$LayoutParams;
     iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2068
+    .line 2076
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
@@ -3568,35 +3568,35 @@
     .end annotation
 
     .prologue
-    .line 2892
+    .line 2910
     .local p2, duration:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     int-to-float v0, p1
 
-    .line 2893
+    .line 2911
     .local v0, count:F
     const/4 v7, 0x0
 
-    .line 2894
+    .line 2912
     .local v7, percent:F
     const/4 v8, 0x0
 
-    .line 2895
+    .line 2913
     .local v8, prePercent:F
     const/4 v1, 0x0
 
-    .line 2896
+    .line 2914
     .local v1, eachDuration:I
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 2897
+    .line 2915
     .local v4, now:J
     sub-long v9, v4, p3
 
     long-to-int v6, v9
 
-    .line 2899
+    .line 2917
     .local v6, passTime:I
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcExpandableListView;->getReduceMoveDuration(I)I
 
@@ -3604,7 +3604,7 @@
 
     sub-int v3, v9, v6
 
-    .line 2901
+    .line 2919
     .local v3, moveDuration:I
     const/4 v2, 0x0
 
@@ -3612,7 +3612,7 @@
     :goto_0
     if-ge v2, p1, :cond_3
 
-    .line 2902
+    .line 2920
     iget-object v9, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     add-int/lit8 v10, v2, 0x1
@@ -3625,37 +3625,37 @@
 
     move-result v7
 
-    .line 2903
+    .line 2921
     if-nez v2, :cond_1
 
-    .line 2904
+    .line 2922
     int-to-float v9, v3
 
     mul-float/2addr v9, v7
 
     float-to-int v1, v9
 
-    .line 2905
+    .line 2923
     if-lez v1, :cond_0
 
-    .line 2906
+    .line 2924
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
 
     invoke-virtual {p2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2910
+    .line 2928
     :goto_1
     move v8, v7
 
-    .line 2901
+    .line 2919
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2908
+    .line 2926
     :cond_0
     const/4 v9, 0x1
 
@@ -3667,7 +3667,7 @@
 
     goto :goto_1
 
-    .line 2912
+    .line 2930
     :cond_1
     int-to-float v9, v3
 
@@ -3677,23 +3677,23 @@
 
     float-to-int v1, v9
 
-    .line 2913
+    .line 2931
     if-lez v1, :cond_2
 
-    .line 2914
+    .line 2932
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
 
     invoke-virtual {p2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2918
+    .line 2936
     :goto_3
     move v8, v7
 
     goto :goto_2
 
-    .line 2916
+    .line 2934
     :cond_2
     const/4 v9, 0x1
 
@@ -3705,7 +3705,7 @@
 
     goto :goto_3
 
-    .line 2921
+    .line 2939
     :cond_3
     return v3
 .end method
@@ -3717,42 +3717,42 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2925
+    .line 2943
     instance-of v1, p1, Lcom/htc/widget/HtcListItem;
 
     if-eqz v1, :cond_0
 
     move-object v1, p1
 
-    .line 2926
+    .line 2944
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem;->setUseCustomHeight(Z)V
 
     move-object v1, p1
 
-    .line 2928
+    .line 2946
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcListItem;->getCustomLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 2929
+    .line 2947
     .local v0, lp:Landroid/view/ViewGroup$LayoutParams;
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2930
+    .line 2948
     check-cast p1, Lcom/htc/widget/HtcListItem;
 
     .end local p1
     invoke-virtual {p1, v0}, Lcom/htc/widget/HtcListItem;->setCustomLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2937
+    .line 2955
     :goto_0
     return-void
 
-    .line 2933
+    .line 2951
     .end local v0           #lp:Landroid/view/ViewGroup$LayoutParams;
     .restart local p1
     :cond_0
@@ -3760,11 +3760,11 @@
 
     move-result-object v0
 
-    .line 2934
+    .line 2952
     .restart local v0       #lp:Landroid/view/ViewGroup$LayoutParams;
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2935
+    .line 2953
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
@@ -3774,12 +3774,12 @@
     .locals 5
 
     .prologue
-    .line 2348
+    .line 2361
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mTargetTopPosition:[I
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->getLocationOnScreen([I)V
 
-    .line 2349
+    .line 2362
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mTargetTopPosition:[I
 
     const/4 v1, 0x1
@@ -3800,7 +3800,7 @@
 
     aput v2, v0, v1
 
-    .line 2350
+    .line 2363
     return-void
 .end method
 
@@ -3809,12 +3809,12 @@
     .parameter "position"
 
     .prologue
-    .line 2355
+    .line 2368
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/widget/HtcExpandableListView;->setSelectionFromTop(II)V
 
-    .line 2356
+    .line 2369
     return-void
 .end method
 
@@ -3827,7 +3827,7 @@
     .parameter "isSelectable"
 
     .prologue
-    .line 1581
+    .line 1589
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     if-eq p1, v0, :cond_0
@@ -3836,16 +3836,16 @@
 
     if-nez v0, :cond_0
 
-    .line 1582
+    .line 1590
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->removeFooterView(Landroid/view/View;)Z
 
-    .line 1584
+    .line 1592
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/htc/widget/HtcListView;->addFooterView(Landroid/view/View;Ljava/lang/Object;Z)V
 
-    .line 1585
+    .line 1593
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     if-eq p1, v0, :cond_1
@@ -3854,12 +3854,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1586
+    .line 1594
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->addFooterView(Landroid/view/View;)V
 
-    .line 1588
+    .line 1596
     :cond_1
     return-void
 .end method
@@ -3869,7 +3869,7 @@
     .parameter "groupPos"
 
     .prologue
-    .line 839
+    .line 847
     iget-boolean v1, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
     if-eqz v1, :cond_0
@@ -3882,18 +3882,18 @@
 
     throw v1
 
-    .line 840
+    .line 848
     :cond_0
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupClickListener:Lcom/htc/widget/HtcExpandableListView$OnGroupClickListener;
 
     if-eqz v1, :cond_1
 
-    .line 841
+    .line 849
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldSkipAnimation:Z
 
-    .line 844
+    .line 852
     :cond_1
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -3901,7 +3901,7 @@
 
     move-result v0
 
-    .line 847
+    .line 855
     .local v0, retValue:Z
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -3917,18 +3917,18 @@
 
     iput-boolean v1, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldDrawArrowDown:Z
 
-    .line 850
+    .line 858
     :cond_2
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
 
     if-eqz v1, :cond_3
 
-    .line 851
+    .line 859
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
 
     invoke-interface {v1, p1}, Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;->onGroupCollapse(I)V
 
-    .line 854
+    .line 862
     :cond_3
     return v0
 .end method
@@ -3940,29 +3940,29 @@
     .parameter "id"
 
     .prologue
-    .line 1207
+    .line 1215
     invoke-direct {p0, p2}, Lcom/htc/widget/HtcExpandableListView;->isHeaderOrFooterPosition(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1209
+    .line 1217
     new-instance v0, Lcom/htc/widget/HtcAdapterView$AdapterContextMenuInfo;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/htc/widget/HtcAdapterView$AdapterContextMenuInfo;-><init>(Landroid/view/View;IJ)V
 
-    .line 1221
+    .line 1229
     :goto_0
     return-object v0
 
-    .line 1212
+    .line 1220
     :cond_0
     invoke-direct {p0, p2}, Lcom/htc/widget/HtcExpandableListView;->getFlatPositionForConnector(I)I
 
     move-result v6
 
-    .line 1213
+    .line 1221
     .local v6, adjustedPosition:I
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -3970,29 +3970,29 @@
 
     move-result-object v7
 
-    .line 1214
+    .line 1222
     .local v7, pm:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     iget-object v8, v7, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
-    .line 1215
+    .line 1223
     .local v8, pos:Lcom/htc/widget/HtcExpandableListPosition;
     invoke-virtual {v7}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->recycle()V
 
-    .line 1217
+    .line 1225
     invoke-direct {p0, v8}, Lcom/htc/widget/HtcExpandableListView;->getChildOrGroupId(Lcom/htc/widget/HtcExpandableListPosition;)J
 
     move-result-wide p3
 
-    .line 1218
+    .line 1226
     invoke-virtual {v8}, Lcom/htc/widget/HtcExpandableListPosition;->getPackedPosition()J
 
     move-result-wide v2
 
-    .line 1219
+    .line 1227
     .local v2, packedPosition:J
     invoke-virtual {v8}, Lcom/htc/widget/HtcExpandableListPosition;->recycle()V
 
-    .line 1221
+    .line 1229
     new-instance v0, Lcom/htc/widget/HtcExpandableListView$ExpandableListContextMenuInfo;
 
     move-object v1, p1
@@ -4353,7 +4353,7 @@
     .parameter "ev"
 
     .prologue
-    .line 1982
+    .line 1990
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
@@ -4372,7 +4372,7 @@
 
     if-nez v2, :cond_0
 
-    .line 1983
+    .line 1991
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
@@ -4387,17 +4387,17 @@
 
     sub-int v1, v2, v3
 
-    .line 1984
+    .line 1992
     .local v1, pressedPos:I
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcExpandableListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1985
+    .line 1993
     .local v0, animatedChild:Landroid/view/View;
     invoke-super {p0, v0}, Lcom/htc/widget/HtcListView;->releaseItem(Landroid/view/View;)V
 
-    .line 1987
+    .line 1995
     .end local v0           #animatedChild:Landroid/view/View;
     .end local v1           #pressedPos:I
     :cond_0
@@ -4514,7 +4514,7 @@
     .parameter "groupPos"
 
     .prologue
-    .line 784
+    .line 792
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/widget/HtcExpandableListView;->expandGroup(IZ)Z
@@ -4534,7 +4534,7 @@
 
     const/4 v6, -0x1
 
-    .line 801
+    .line 809
     iget-boolean v4, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
     if-eqz v4, :cond_0
@@ -4547,16 +4547,16 @@
 
     throw v4
 
-    .line 802
+    .line 810
     :cond_0
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupClickListener:Lcom/htc/widget/HtcExpandableListView$OnGroupClickListener;
 
     if-eqz v4, :cond_1
 
-    .line 803
+    .line 811
     iput-boolean v7, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldSkipAnimation:Z
 
-    .line 806
+    .line 814
     :cond_1
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -4570,7 +4570,7 @@
 
     move-result-object v1
 
-    .line 808
+    .line 816
     .local v1, pm:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -4578,7 +4578,7 @@
 
     move-result v2
 
-    .line 811
+    .line 819
     .local v2, retValue:Z
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -4590,27 +4590,27 @@
 
     iput-boolean v7, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldDrawArrowDown:Z
 
-    .line 814
+    .line 822
     :cond_2
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
 
     if-eqz v4, :cond_3
 
-    .line 815
+    .line 823
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
 
     invoke-interface {v4, p1}, Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;->onGroupExpand(I)V
 
-    .line 818
+    .line 826
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 819
+    .line 827
     iget-object v4, v1, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
     iget v0, v4, Lcom/htc/widget/HtcExpandableListPosition;->flatListPos:I
 
-    .line 821
+    .line 829
     .local v0, groupFlatPos:I
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getHeaderViewsCount()I
 
@@ -4618,7 +4618,7 @@
 
     add-int v3, v0, v4
 
-    .line 822
+    .line 830
     .local v3, shiftedGroupPosition:I
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mAdapter:Landroid/widget/ExpandableListAdapter;
 
@@ -4630,13 +4630,13 @@
 
     invoke-virtual {p0, v4, v3}, Lcom/htc/widget/HtcExpandableListView;->smoothScrollToPosition(II)V
 
-    .line 825
+    .line 833
     .end local v0           #groupFlatPos:I
     .end local v3           #shiftedGroupPosition:I
     :cond_4
     invoke-virtual {v1}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->recycle()V
 
-    .line 827
+    .line 835
     return v2
 .end method
 
@@ -4646,23 +4646,23 @@
     .parameter "exandedFlatPos"
 
     .prologue
-    .line 2460
+    .line 2473
     iput p2, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    .line 2461
+    .line 2474
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcAdapterView;->mDataChanged:Z
 
-    .line 2462
+    .line 2475
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcExpandableListConnector;->findReducedChildrenCount(I)V
 
-    .line 2464
+    .line 2477
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->layoutChildren()V
 
-    .line 2465
+    .line 2478
     return-void
 .end method
 
@@ -4694,7 +4694,7 @@
     .locals 1
 
     .prologue
-    .line 2964
+    .line 2982
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcExpandableListConnector;->getCurrentExpandedGroup()I
@@ -4719,27 +4719,27 @@
     .parameter "flatListPosition"
 
     .prologue
-    .line 964
+    .line 972
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcExpandableListView;->isHeaderOrFooterPosition(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 965
+    .line 973
     const-wide v1, 0xffffffffL
 
-    .line 972
+    .line 980
     :goto_0
     return-wide v1
 
-    .line 968
+    .line 976
     :cond_0
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcExpandableListView;->getFlatPositionForConnector(I)I
 
     move-result v0
 
-    .line 969
+    .line 977
     .local v0, adjustedPosition:I
     iget-object v4, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -4747,7 +4747,7 @@
 
     move-result-object v3
 
-    .line 970
+    .line 978
     .local v3, pm:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     iget-object v4, v3, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
@@ -4755,7 +4755,7 @@
 
     move-result-wide v1
 
-    .line 971
+    .line 979
     .local v1, packedPos:J
     invoke-virtual {v3}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->recycle()V
 
@@ -4767,7 +4767,7 @@
     .parameter "packedPosition"
 
     .prologue
-    .line 991
+    .line 999
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-static {p1, p2}, Lcom/htc/widget/HtcExpandableListPosition;->obtainPosition(J)Lcom/htc/widget/HtcExpandableListPosition;
@@ -4778,17 +4778,17 @@
 
     move-result-object v1
 
-    .line 993
+    .line 1001
     .local v1, pm:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     iget-object v2, v1, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
     iget v0, v2, Lcom/htc/widget/HtcExpandableListPosition;->flatListPos:I
 
-    .line 994
+    .line 1002
     .local v0, flatListPosition:I
     invoke-virtual {v1}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->recycle()V
 
-    .line 995
+    .line 1003
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->getAbsoluteFlatPosition(I)I
 
     move-result v2
@@ -4800,12 +4800,12 @@
     .locals 5
 
     .prologue
-    .line 1021
+    .line 1029
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getSelectedPosition()J
 
     move-result-wide v1
 
-    .line 1022
+    .line 1030
     .local v1, packedPos:J
     const-wide v3, 0xffffffffL
 
@@ -4815,17 +4815,17 @@
 
     const-wide/16 v3, -0x1
 
-    .line 1031
+    .line 1039
     :goto_0
     return-wide v3
 
-    .line 1024
+    .line 1032
     :cond_0
     invoke-static {v1, v2}, Lcom/htc/widget/HtcExpandableListView;->getPackedPositionGroup(J)I
 
     move-result v0
 
-    .line 1026
+    .line 1034
     .local v0, groupPos:I
     invoke-static {v1, v2}, Lcom/htc/widget/HtcExpandableListView;->getPackedPositionType(J)I
 
@@ -4833,7 +4833,7 @@
 
     if-nez v3, :cond_1
 
-    .line 1028
+    .line 1036
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mAdapter:Landroid/widget/ExpandableListAdapter;
 
     invoke-interface {v3, v0}, Landroid/widget/ExpandableListAdapter;->getGroupId(I)J
@@ -4842,7 +4842,7 @@
 
     goto :goto_0
 
-    .line 1031
+    .line 1039
     :cond_1
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mAdapter:Landroid/widget/ExpandableListAdapter;
 
@@ -4861,12 +4861,12 @@
     .locals 3
 
     .prologue
-    .line 1007
+    .line 1015
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getSelectedItemPosition()I
 
     move-result v0
 
-    .line 1010
+    .line 1018
     .local v0, selectedPos:I
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->getExpandableListPosition(I)J
 
@@ -4882,16 +4882,16 @@
     .parameter "id"
 
     .prologue
-    const/4 v6, 0x0
-
     const/4 v8, 0x1
+
+    const/4 v6, 0x0
 
     .line 662
     iget-boolean v0, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
     if-eqz v0, :cond_1
 
-    .line 773
+    .line 781
     :cond_0
     :goto_0
     return v8
@@ -5041,8 +5041,11 @@
 
     invoke-interface {v0}, Lcom/htc/widget/HtcExpandableListView$AnimationListener;->onAnimationStart()V
 
-    .line 714
+    .line 717
     :cond_8
+    invoke-virtual {p0, v6}, Lcom/htc/widget/HtcExpandableListView;->setFastScrollEnabled(Z)V
+
+    .line 718
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mCollapseReduceRunnable:Lcom/htc/widget/HtcExpandableListView$CollapseReduceRunnable;
 
     iget-object v1, v7, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
@@ -5051,30 +5054,30 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/htc/widget/HtcExpandableListView$CollapseReduceRunnable;->start(II)V
 
-    .line 724
+    .line 728
     :cond_9
     :goto_1
     invoke-virtual {p0, v6}, Lcom/htc/widget/HtcExpandableListView;->playSoundEffect(I)V
 
-    .line 759
+    .line 767
     :goto_2
     const/4 v8, 0x1
 
-    .line 771
+    .line 779
     .local v8, returnValue:Z
     :goto_3
     invoke-virtual {v7}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->recycle()V
 
     goto/16 :goto_0
 
-    .line 716
+    .line 720
     .end local v8           #returnValue:Z
     :cond_a
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, v7}, Lcom/htc/widget/HtcExpandableListConnector;->collapseGroup(Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;)Z
 
-    .line 717
+    .line 721
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcExpandableListConnector;->getCurrentExpandedGroupChildCount()I
@@ -5087,13 +5090,13 @@
 
     iput-boolean v6, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldDrawArrowDown:Z
 
-    .line 718
+    .line 722
     :cond_b
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
 
     if-eqz v0, :cond_9
 
-    .line 719
+    .line 723
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
 
     iget-object v1, v7, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
@@ -5104,27 +5107,30 @@
 
     goto :goto_1
 
-    .line 729
+    .line 733
     :cond_c
     iget-boolean v0, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandableAnimationEnabled:Z
 
     if-eqz v0, :cond_f
 
-    .line 730
+    .line 734
     iput-boolean v8, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 734
+    .line 738
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mAnimationListener:Lcom/htc/widget/HtcExpandableListView$AnimationListener;
 
     if-eqz v0, :cond_d
 
-    .line 735
+    .line 739
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mAnimationListener:Lcom/htc/widget/HtcExpandableListView$AnimationListener;
 
     invoke-interface {v0}, Lcom/htc/widget/HtcExpandableListView$AnimationListener;->onAnimationStart()V
 
-    .line 737
+    .line 744
     :cond_d
+    invoke-virtual {p0, v6}, Lcom/htc/widget/HtcExpandableListView;->setFastScrollEnabled(Z)V
+
+    .line 745
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandReduceRunnable:Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;
 
     iget-object v1, v7, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
@@ -5133,20 +5139,20 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->start(II)V
 
-    .line 747
+    .line 755
     :cond_e
     :goto_4
     invoke-virtual {p0, v6}, Lcom/htc/widget/HtcExpandableListView;->playSoundEffect(I)V
 
     goto :goto_2
 
-    .line 739
+    .line 747
     :cond_f
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, v7}, Lcom/htc/widget/HtcExpandableListConnector;->expandGroup(Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;)Z
 
-    .line 740
+    .line 748
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcExpandableListConnector;->getCurrentExpandedGroupChildCount()I
@@ -5157,13 +5163,13 @@
 
     iput-boolean v8, p0, Lcom/htc/widget/HtcExpandableListView;->mShouldDrawArrowDown:Z
 
-    .line 741
+    .line 749
     :cond_10
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
 
     if-eqz v0, :cond_e
 
-    .line 742
+    .line 750
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
 
     iget-object v1, v7, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
@@ -5174,16 +5180,16 @@
 
     goto :goto_4
 
-    .line 762
+    .line 770
     :cond_11
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mOnChildClickListener:Lcom/htc/widget/HtcExpandableListView$OnChildClickListener;
 
     if-eqz v0, :cond_12
 
-    .line 763
+    .line 771
     invoke-virtual {p0, v6}, Lcom/htc/widget/HtcExpandableListView;->playSoundEffect(I)V
 
-    .line 764
+    .line 772
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mOnChildClickListener:Lcom/htc/widget/HtcExpandableListView$OnChildClickListener;
 
     iget-object v1, v7, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
@@ -5206,7 +5212,7 @@
 
     goto/16 :goto_0
 
-    .line 768
+    .line 776
     :cond_12
     const/4 v8, 0x0
 
@@ -5219,7 +5225,7 @@
     .parameter "groupPosition"
 
     .prologue
-    .line 1097
+    .line 1105
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcExpandableListConnector;->isGroupExpanded(I)Z
@@ -5233,42 +5239,42 @@
     .locals 1
 
     .prologue
-    .line 1897
+    .line 1905
     invoke-super {p0}, Lcom/htc/widget/HtcListView;->onDetachedFromWindow()V
 
-    .line 1899
+    .line 1907
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mCheckForGroupItemReleased:Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;
 
     if-eqz v0, :cond_0
 
-    .line 1900
+    .line 1908
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mCheckForGroupItemReleased:Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1902
+    .line 1910
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupViews:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 1903
+    .line 1911
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1905
+    .line 1913
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupAnimators:Ljava/util/Map;
 
     if-eqz v0, :cond_2
 
-    .line 1906
+    .line 1914
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupAnimators:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1908
+    .line 1916
     :cond_2
     return-void
 .end method
@@ -5284,10 +5290,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2214
+    .line 2227
     invoke-super/range {p0 .. p5}, Lcom/htc/widget/HtcListView;->onLayout(ZIIII)V
 
-    .line 2215
+    .line 2228
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     if-eqz v3, :cond_2
@@ -5300,7 +5306,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 2217
+    .line 2230
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -5313,7 +5319,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 2218
+    .line 2231
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mAnimatedViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5322,7 +5328,7 @@
 
     check-cast v2, Landroid/view/View;
 
-    .line 2220
+    .line 2233
     .local v2, view:Landroid/view/View;
     instance-of v3, v2, Lcom/htc/widget/HtcListItem;
 
@@ -5330,37 +5336,37 @@
 
     move-object v3, v2
 
-    .line 2221
+    .line 2234
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v3, v4}, Lcom/htc/widget/HtcListItem;->setUseCustomHeight(Z)V
 
     move-object v3, v2
 
-    .line 2222
+    .line 2235
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcListItem;->getCustomLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 2223
+    .line 2236
     .local v1, lp:Landroid/view/ViewGroup$LayoutParams;
     iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2224
+    .line 2237
     check-cast v2, Lcom/htc/widget/HtcListItem;
 
     .end local v2           #view:Landroid/view/View;
     invoke-virtual {v2, v1}, Lcom/htc/widget/HtcListItem;->setCustomLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2217
+    .line 2230
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2226
+    .line 2239
     .end local v1           #lp:Landroid/view/ViewGroup$LayoutParams;
     .restart local v2       #view:Landroid/view/View;
     :cond_0
@@ -5368,16 +5374,16 @@
 
     move-result-object v1
 
-    .line 2227
+    .line 2240
     .restart local v1       #lp:Landroid/view/ViewGroup$LayoutParams;
     iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2228
+    .line 2241
     invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_1
 
-    .line 2231
+    .line 2244
     .end local v1           #lp:Landroid/view/ViewGroup$LayoutParams;
     .end local v2           #view:Landroid/view/View;
     :cond_1
@@ -5389,18 +5395,18 @@
 
     invoke-direct {p0, v3}, Lcom/htc/widget/HtcExpandableListView;->reduceChildren(I)V
 
-    .line 2232
+    .line 2245
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcExpandableListConnector;->unSetHideViewFlag()V
 
-    .line 2233
+    .line 2246
     invoke-super/range {p0 .. p5}, Lcom/htc/widget/HtcListView;->onLayout(ZIIII)V
 
-    .line 2237
+    .line 2250
     iput-boolean v4, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandGroupCompleted:Z
 
-    .line 2239
+    .line 2252
     .end local v0           #i:I
     :cond_2
     return-void
@@ -5411,15 +5417,15 @@
     .parameter "state"
 
     .prologue
-    .line 1411
+    .line 1419
     instance-of v1, p1, Lcom/htc/widget/HtcExpandableListView$SavedState;
 
     if-nez v1, :cond_1
 
-    .line 1412
+    .line 1420
     invoke-super {p0, p1}, Lcom/htc/widget/HtcListView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 1422
+    .line 1430
     :cond_0
     :goto_0
     return-void
@@ -5427,10 +5433,10 @@
     :cond_1
     move-object v0, p1
 
-    .line 1416
+    .line 1424
     check-cast v0, Lcom/htc/widget/HtcExpandableListView$SavedState;
 
-    .line 1417
+    .line 1425
     .local v0, ss:Lcom/htc/widget/HtcExpandableListView$SavedState;
     invoke-virtual {v0}, Lcom/htc/widget/HtcExpandableListView$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -5438,7 +5444,7 @@
 
     invoke-super {p0, v1}, Lcom/htc/widget/HtcListView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 1419
+    .line 1427
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     if-eqz v1, :cond_0
@@ -5447,7 +5453,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1420
+    .line 1428
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     iget-object v2, v0, Lcom/htc/widget/HtcExpandableListView$SavedState;->expandedGroupMetadataList:Ljava/util/ArrayList;
@@ -5461,12 +5467,12 @@
     .locals 3
 
     .prologue
-    .line 1400
+    .line 1408
     invoke-super {p0}, Lcom/htc/widget/HtcListView;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 1401
+    .line 1409
     .local v0, superState:Landroid/os/Parcelable;
     new-instance v2, Lcom/htc/widget/HtcExpandableListView$SavedState;
 
@@ -5499,15 +5505,15 @@
     .parameter "distanceY"
 
     .prologue
-    .line 2013
+    .line 2021
     invoke-super {p0, p1, p2, p3, p4}, Lcom/htc/widget/HtcListView;->onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
 
-    .line 2014
+    .line 2022
     iget-boolean v0, p0, Lcom/htc/widget/HtcExpandableListView;->mGroupPressAnimationEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 2017
+    .line 2025
     :cond_0
     const/4 v0, 0x0
 
@@ -5522,13 +5528,13 @@
     .parameter "oldh"
 
     .prologue
-    .line 1716
+    .line 1724
     invoke-super {p0, p1, p2, p3, p4}, Lcom/htc/widget/HtcListView;->onSizeChanged(IIII)V
 
-    .line 1717
+    .line 1725
     invoke-direct {p0}, Lcom/htc/widget/HtcExpandableListView;->adjustFooterHeight()V
 
-    .line 1718
+    .line 1726
     return-void
 .end method
 
@@ -5537,25 +5543,25 @@
     .parameter "ev"
 
     .prologue
-    .line 1996
+    .line 2004
     iget-boolean v1, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
     if-eqz v1, :cond_0
 
-    .line 1997
+    .line 2005
     const/4 v0, 0x1
 
-    .line 2002
+    .line 2010
     :goto_0
     return v0
 
-    .line 2000
+    .line 2008
     :cond_0
     invoke-super {p0, p1}, Lcom/htc/widget/HtcListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 2002
+    .line 2010
     .local v0, handled:Z
     goto :goto_0
 .end method
@@ -5565,23 +5571,23 @@
     .parameter "hasWindowFocus"
 
     .prologue
-    .line 2025
+    .line 2033
     invoke-super {p0, p1}, Lcom/htc/widget/HtcListView;->onWindowFocusChanged(Z)V
 
-    .line 2026
+    .line 2034
     if-nez p1, :cond_0
 
-    .line 2027
+    .line 2035
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mCheckForGroupItemReleased:Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;
 
     if-eqz v0, :cond_0
 
-    .line 2028
+    .line 2036
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mCheckForGroupItemReleased:Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2035
+    .line 2043
     :cond_0
     return-void
 .end method
@@ -5640,7 +5646,7 @@
     .locals 5
 
     .prologue
-    .line 1921
+    .line 1929
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -5653,7 +5659,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 1922
+    .line 1930
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5662,7 +5668,7 @@
 
     check-cast v2, Landroid/view/View;
 
-    .line 1923
+    .line 1931
     .local v2, v:Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -5672,39 +5678,39 @@
 
     move-result-object v1
 
-    .line 1924
+    .line 1932
     .local v1, releaseAnim:Landroid/animation/ObjectAnimator;
     const-wide/16 v3, 0x32
 
     invoke-virtual {v1, v3, v4}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 1925
+    .line 1933
     new-instance v3, Lcom/htc/widget/HtcExpandableListView$2;
 
     invoke-direct {v3, p0}, Lcom/htc/widget/HtcExpandableListView$2;-><init>(Lcom/htc/widget/HtcExpandableListView;)V
 
     invoke-virtual {v1, v3}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1932
+    .line 1940
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v3, :cond_0
 
-    .line 1933
+    .line 1941
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v3}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 1934
+    .line 1942
     :cond_0
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 1921
+    .line 1929
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1936
+    .line 1944
     .end local v1           #releaseAnim:Landroid/animation/ObjectAnimator;
     .end local v2           #v:Landroid/view/View;
     :cond_1
@@ -5712,12 +5718,12 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 1937
+    .line 1945
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mPressedGroupAnimators:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->clear()V
 
-    .line 1938
+    .line 1946
     return-void
 .end method
 
@@ -5811,10 +5817,10 @@
     .parameter "listener"
 
     .prologue
-    .line 1841
+    .line 1849
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mAnimationListener:Lcom/htc/widget/HtcExpandableListView$AnimationListener;
 
-    .line 1842
+    .line 1850
     return-void
 .end method
 
@@ -5835,10 +5841,10 @@
     .parameter "childIndicator"
 
     .prologue
-    .line 1252
+    .line 1260
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mChildIndicator:Landroid/graphics/drawable/Drawable;
 
-    .line 1253
+    .line 1261
     return-void
 .end method
 
@@ -5848,13 +5854,13 @@
     .parameter "right"
 
     .prologue
-    .line 1271
+    .line 1279
     iput p1, p0, Lcom/htc/widget/HtcExpandableListView;->mChildIndicatorLeft:I
 
-    .line 1272
+    .line 1280
     iput p2, p0, Lcom/htc/widget/HtcExpandableListView;->mChildIndicatorRight:I
 
-    .line 1273
+    .line 1281
     return-void
 .end method
 
@@ -5867,23 +5873,23 @@
 
     const/4 v2, 0x0
 
-    .line 1554
+    .line 1562
     iget-boolean v0, p0, Lcom/htc/widget/HtcExpandableListView;->mDarkModeEnabled:Z
 
     if-ne p1, v0, :cond_0
 
-    .line 1571
+    .line 1579
     :goto_0
     return-void
 
-    .line 1555
+    .line 1563
     :cond_0
     invoke-super {p0, p1}, Lcom/htc/widget/HtcListView;->setDarkModeEnabled(Z)V
 
-    .line 1556
+    .line 1564
     iput-boolean p1, p0, Lcom/htc/widget/HtcExpandableListView;->mDarkModeEnabled:Z
 
-    .line 1560
+    .line 1568
     if-nez p1, :cond_1
 
     move v0, v1
@@ -5891,18 +5897,18 @@
     :goto_1
     iput-boolean v0, p0, Lcom/htc/widget/HtcExpandableListView;->mExpandableAnimationEnabled:Z
 
-    .line 1561
+    .line 1569
     if-eqz p1, :cond_2
 
-    .line 1562
+    .line 1570
     invoke-virtual {p0, v1, v2}, Lcom/htc/widget/HtcExpandableListView;->enableAnimation(IZ)V
 
-    .line 1563
+    .line 1571
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->removeFooterView(Landroid/view/View;)Z
 
-    .line 1564
+    .line 1572
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5915,7 +5921,7 @@
 
     iput-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mArrowDown:Landroid/graphics/drawable/Drawable;
 
-    .line 1565
+    .line 1573
     invoke-virtual {p0, v2}, Lcom/htc/widget/HtcExpandableListView;->ignoreFooterViewInBouncing(Z)V
 
     goto :goto_0
@@ -5923,16 +5929,16 @@
     :cond_1
     move v0, v2
 
-    .line 1560
+    .line 1568
     goto :goto_1
 
-    .line 1567
+    .line 1575
     :cond_2
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mFooterView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcExpandableListView;->addFooterView(Landroid/view/View;)V
 
-    .line 1568
+    .line 1576
     invoke-virtual {p0}, Lcom/htc/widget/HtcExpandableListView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5945,7 +5951,7 @@
 
     iput-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mArrowDown:Landroid/graphics/drawable/Drawable;
 
-    .line 1569
+    .line 1577
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcExpandableListView;->ignoreFooterViewInBouncing(Z)V
 
     goto :goto_0
@@ -5956,10 +5962,10 @@
     .parameter "groupIndicator"
 
     .prologue
-    .line 1284
+    .line 1292
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mGroupIndicator:Landroid/graphics/drawable/Drawable;
 
-    .line 1285
+    .line 1293
     iget v0, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorRight:I
 
     if-nez v0, :cond_0
@@ -5968,7 +5974,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1286
+    .line 1294
     iget v0, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorLeft:I
 
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView;->mGroupIndicator:Landroid/graphics/drawable/Drawable;
@@ -5981,7 +5987,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorRight:I
 
-    .line 1288
+    .line 1296
     :cond_0
     return-void
 .end method
@@ -5991,17 +5997,17 @@
     .parameter "b"
 
     .prologue
-    .line 1433
+    .line 1441
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     if-eqz v0, :cond_0
 
-    .line 1434
+    .line 1442
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcExpandableListConnector;->setHandleChildBackground(Z)V
 
-    .line 1435
+    .line 1443
     :cond_0
     return-void
 .end method
@@ -6012,13 +6018,13 @@
     .parameter "right"
 
     .prologue
-    .line 1302
+    .line 1310
     iput p1, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorLeft:I
 
-    .line 1303
+    .line 1311
     iput p2, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorRight:I
 
-    .line 1304
+    .line 1312
     return-void
 .end method
 
@@ -6027,10 +6033,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2972
+    .line 2990
     iput-boolean p1, p0, Lcom/htc/widget/HtcExpandableListView;->mIndicatorEnabled:Z
 
-    .line 2973
+    .line 2991
     return-void
 .end method
 
@@ -6039,10 +6045,10 @@
     .parameter "onChildClickListener"
 
     .prologue
-    .line 942
+    .line 950
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnChildClickListener:Lcom/htc/widget/HtcExpandableListView$OnChildClickListener;
 
-    .line 943
+    .line 951
     return-void
 .end method
 
@@ -6051,10 +6057,10 @@
     .parameter "onGroupClickListener"
 
     .prologue
-    .line 915
+    .line 923
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupClickListener:Lcom/htc/widget/HtcExpandableListView$OnGroupClickListener;
 
-    .line 916
+    .line 924
     return-void
 .end method
 
@@ -6063,10 +6069,10 @@
     .parameter "onGroupCollapseListener"
 
     .prologue
-    .line 872
+    .line 880
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
 
-    .line 873
+    .line 881
     return-void
 .end method
 
@@ -6075,10 +6081,10 @@
     .parameter "onGroupExpandListener"
 
     .prologue
-    .line 890
+    .line 898
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
 
-    .line 891
+    .line 899
     return-void
 .end method
 
@@ -6099,15 +6105,15 @@
     .parameter "onScrollListener"
 
     .prologue
-    .line 1785
+    .line 1793
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView;->mUserOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
-    .line 1786
+    .line 1794
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
     invoke-super {p0, v0}, Lcom/htc/widget/HtcListView;->setOnScrollListener(Lcom/htc/widget/HtcAbsListView$OnScrollListener;)V
 
-    .line 1787
+    .line 1795
     return-void
 .end method
 
@@ -6116,12 +6122,12 @@
     .parameter "p"
 
     .prologue
-    .line 1429
+    .line 1437
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcExpandableListConnector;->setPositionMap(Lcom/htc/widget/PositionMap;)V
 
-    .line 1430
+    .line 1438
     return-void
 .end method
 
@@ -6130,12 +6136,12 @@
     .parameter "o"
 
     .prologue
-    .line 1425
+    .line 1433
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcExpandableListConnector;->setSections([Ljava/lang/Object;)V
 
-    .line 1426
+    .line 1434
     return-void
 .end method
 
@@ -6146,12 +6152,12 @@
     .parameter "shouldExpandGroup"
 
     .prologue
-    .line 1061
+    .line 1069
     invoke-static {p1, p2}, Lcom/htc/widget/HtcExpandableListPosition;->obtainChildPosition(II)Lcom/htc/widget/HtcExpandableListPosition;
 
     move-result-object v1
 
-    .line 1063
+    .line 1071
     .local v1, elChildPos:Lcom/htc/widget/HtcExpandableListPosition;
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -6159,34 +6165,34 @@
 
     move-result-object v2
 
-    .line 1065
+    .line 1073
     .local v2, flatChildPos:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     if-nez v2, :cond_1
 
-    .line 1069
+    .line 1077
     if-nez p3, :cond_0
 
     const/4 v3, 0x0
 
-    .line 1087
+    .line 1095
     :goto_0
     return v3
 
-    .line 1071
+    .line 1079
     :cond_0
     invoke-virtual {p0, p1}, Lcom/htc/widget/HtcExpandableListView;->expandGroup(I)Z
 
-    .line 1073
+    .line 1081
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
     invoke-virtual {v3, v1}, Lcom/htc/widget/HtcExpandableListConnector;->getFlattenedPos(Lcom/htc/widget/HtcExpandableListPosition;)Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
 
     move-result-object v2
 
-    .line 1076
+    .line 1084
     if-nez v2, :cond_1
 
-    .line 1077
+    .line 1085
     new-instance v3, Ljava/lang/IllegalStateException;
 
     const-string v4, "Could not find child"
@@ -6195,7 +6201,7 @@
 
     throw v3
 
-    .line 1081
+    .line 1089
     :cond_1
     iget-object v3, v2, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
@@ -6205,17 +6211,17 @@
 
     move-result v0
 
-    .line 1082
+    .line 1090
     .local v0, absoluteFlatPosition:I
     invoke-super {p0, v0}, Lcom/htc/widget/HtcListView;->setSelection(I)V
 
-    .line 1084
+    .line 1092
     invoke-virtual {v1}, Lcom/htc/widget/HtcExpandableListPosition;->recycle()V
 
-    .line 1085
+    .line 1093
     invoke-virtual {v2}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->recycle()V
 
-    .line 1087
+    .line 1095
     const/4 v3, 0x1
 
     goto :goto_0
@@ -6226,12 +6232,12 @@
     .parameter "groupPosition"
 
     .prologue
-    .line 1040
+    .line 1048
     invoke-static {p1}, Lcom/htc/widget/HtcExpandableListPosition;->obtainGroupPosition(I)Lcom/htc/widget/HtcExpandableListPosition;
 
     move-result-object v1
 
-    .line 1042
+    .line 1050
     .local v1, elGroupPos:Lcom/htc/widget/HtcExpandableListPosition;
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
 
@@ -6239,11 +6245,11 @@
 
     move-result-object v2
 
-    .line 1043
+    .line 1051
     .local v2, pm:Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;
     invoke-virtual {v1}, Lcom/htc/widget/HtcExpandableListPosition;->recycle()V
 
-    .line 1044
+    .line 1052
     iget-object v3, v2, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->position:Lcom/htc/widget/HtcExpandableListPosition;
 
     iget v3, v3, Lcom/htc/widget/HtcExpandableListPosition;->flatListPos:I
@@ -6252,13 +6258,13 @@
 
     move-result v0
 
-    .line 1045
+    .line 1053
     .local v0, absoluteFlatPosition:I
     invoke-super {p0, v0}, Lcom/htc/widget/HtcListView;->setSelection(I)V
 
-    .line 1046
+    .line 1054
     invoke-virtual {v2}, Lcom/htc/widget/HtcExpandableListConnector$PositionMetadata;->recycle()V
 
-    .line 1047
+    .line 1055
     return-void
 .end method

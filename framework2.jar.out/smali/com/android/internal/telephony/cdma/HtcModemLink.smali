@@ -59,26 +59,26 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 39
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mCdmaPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForModemLinkStatus(Landroid/os/Handler;)V
 
-    .line 36
+    .line 40
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mCdmaPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterFor3GIndicator(Landroid/os/Handler;)V
 
-    .line 37
+    .line 41
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mModemLinkOn:Z
 
-    .line 38
+    .line 42
     return-void
 .end method
 
@@ -86,14 +86,14 @@
     .locals 2
 
     .prologue
-    .line 41
+    .line 49
     const-string v0, "CDMA"
 
     const-string v1, "HtcModemLink finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
+    .line 50
     return-void
 .end method
 
@@ -101,7 +101,7 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 113
     iget v0, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mDataActivityState:I
 
     return v0
@@ -116,7 +116,7 @@
 
     const/4 v6, 0x0
 
-    .line 46
+    .line 58
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->GENERIC_WPHONE_CONFIG()Z
 
     move-result v5
@@ -127,7 +127,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 47
+    .line 59
     const-string v5, "CDMA"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -152,18 +152,18 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 92
     :cond_0
     :goto_0
     return-void
 
-    .line 51
+    .line 63
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 52
+    .line 64
     .local v0, ar:Landroid/os/AsyncResult;
     iget v5, p1, Landroid/os/Message;->what:I
 
@@ -171,7 +171,7 @@
 
     goto :goto_0
 
-    .line 54
+    .line 66
     :pswitch_0
     iget-object v5, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -181,23 +181,23 @@
 
     check-cast v4, [I
 
-    .line 55
+    .line 67
     .local v4, status:[I
     aget v5, v4, v6
 
     if-ne v5, v2, :cond_2
 
-    .line 59
+    .line 71
     .local v2, modemLinkState:Z
     :goto_1
     iget-boolean v5, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mModemLinkOn:Z
 
     if-eq v5, v2, :cond_0
 
-    .line 60
+    .line 72
     iput-boolean v2, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mModemLinkOn:Z
 
-    .line 61
+    .line 73
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mCdmaPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     invoke-virtual {v5}, Lcom/android/internal/telephony/cdma/CDMAPhone;->notifyDataActivity()V
@@ -208,10 +208,10 @@
     :cond_2
     move v2, v6
 
-    .line 55
+    .line 67
     goto :goto_1
 
-    .line 65
+    .line 77
     .end local v4           #status:[I
     :pswitch_1
     iget-object v5, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -222,7 +222,7 @@
 
     check-cast v1, [I
 
-    .line 66
+    .line 78
     .local v1, inds:[I
     if-eqz v1, :cond_0
 
@@ -230,31 +230,31 @@
 
     if-lez v5, :cond_0
 
-    .line 67
+    .line 79
     aget v3, v1, v6
 
-    .line 71
+    .line 83
     .local v3, state:I
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mDataActivityState:I
 
     if-eq v3, v5, :cond_0
 
-    .line 72
+    .line 84
     iput v3, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mDataActivityState:I
 
-    .line 73
+    .line 85
     iget-boolean v5, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mModemLinkOn:Z
 
     if-eqz v5, :cond_0
 
-    .line 74
+    .line 86
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mCdmaPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     invoke-virtual {v5}, Lcom/android/internal/telephony/cdma/CDMAPhone;->notifyDataActivity()V
 
     goto :goto_0
 
-    .line 52
+    .line 64
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -266,7 +266,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 102
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcModemLink;->mModemLinkOn:Z
 
     return v0

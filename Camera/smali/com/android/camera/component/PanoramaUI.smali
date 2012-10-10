@@ -861,10 +861,10 @@
     .locals 3
 
     .prologue
-    .line 450
+    .line 454
     const/4 v0, -0x1
 
-    .line 451
+    .line 455
     .local v0, orientation:I
     const-class v2, Lcom/android/camera/IUIRotationManager;
 
@@ -874,16 +874,16 @@
 
     check-cast v1, Lcom/android/camera/IUIRotationManager;
 
-    .line 452
+    .line 456
     .local v1, rotationManager:Lcom/android/camera/IUIRotationManager;
     if-eqz v1, :cond_0
 
-    .line 453
+    .line 457
     invoke-interface {v1}, Lcom/android/camera/IUIRotationManager;->getAvailableDeviceOrientation()I
 
     move-result v0
 
-    .line 456
+    .line 460
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/camera/component/PanoramaUI;->getVirtualDeviceOrientation(I)I
 
@@ -891,7 +891,7 @@
 
     return v2
 
-    .line 455
+    .line 459
     :cond_0
     const/4 v0, 0x0
 
@@ -903,7 +903,7 @@
     .parameter "deviceOrientation"
 
     .prologue
-    .line 460
+    .line 464
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v1
@@ -920,14 +920,14 @@
 
     add-int v0, p1, v1
 
-    .line 461
+    .line 465
     .local v0, virtualOrientation:I
     if-gez v0, :cond_0
 
-    .line 462
+    .line 466
     add-int/lit16 v0, v0, 0x168
 
-    .line 463
+    .line 467
     :cond_0
     return v0
 .end method
@@ -938,17 +938,17 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 540
+    .line 544
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 542
+    .line 546
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 543
+    .line 547
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -959,18 +959,18 @@
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
-    .line 545
+    .line 549
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
 
-    .line 547
+    .line 551
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 548
+    .line 552
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -981,7 +981,7 @@
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
-    .line 550
+    .line 554
     :cond_1
     return-void
 .end method
@@ -990,17 +990,17 @@
     .locals 3
 
     .prologue
-    .line 558
+    .line 562
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
     if-nez v1, :cond_1
 
-    .line 568
+    .line 572
     :cond_0
     :goto_0
     return-void
 
-    .line 562
+    .line 566
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
@@ -1008,7 +1008,7 @@
 
     move-result-object v0
 
-    .line 563
+    .line 567
     .local v0, currentIndicator:Landroid/graphics/drawable/Drawable;
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
@@ -1016,12 +1016,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 566
+    .line 570
     instance-of v1, v0, Landroid/graphics/drawable/AnimationDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 567
+    .line 571
     check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
 
     .end local v0           #currentIndicator:Landroid/graphics/drawable/Drawable;
@@ -1034,12 +1034,12 @@
     .locals 4
 
     .prologue
-    .line 575
+    .line 579
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     if-eqz v0, :cond_0
 
-    .line 577
+    .line 581
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {v0}, Lcom/android/camera/rotate/RotateRelativeLayout;->getVisibility()I
@@ -1048,7 +1048,7 @@
 
     if-nez v0, :cond_1
 
-    .line 579
+    .line 583
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const/4 v1, 0x0
@@ -1061,12 +1061,12 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZLjava/lang/Runnable;)V
 
-    .line 596
+    .line 600
     :cond_0
     :goto_0
     return-void
 
-    .line 591
+    .line 595
     :cond_1
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
 
@@ -1076,14 +1076,14 @@
 
     invoke-static {v0}, Lcom/android/camera/imaging/ImageUtility;->recycleDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 592
+    .line 596
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 593
+    .line 597
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
@@ -1101,37 +1101,37 @@
 
     const/4 v2, 0x0
 
-    .line 604
+    .line 608
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 613
+    .line 617
     :goto_0
     return-void
 
-    .line 608
+    .line 612
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->deactivateSpinner()V
 
-    .line 609
+    .line 613
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 610
+    .line 614
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-virtual {v0, v3}, Lcom/android/camera/widget/PanoramaIndicatorView;->setFrameIndicatorActivity(Z)V
 
-    .line 611
+    .line 615
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-virtual {v0, v2, v2}, Lcom/android/camera/widget/PanoramaIndicatorView;->setFrameOffset(FF)V
 
-    .line 612
+    .line 616
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-virtual {v0, v3}, Lcom/android/camera/widget/PanoramaIndicatorView;->setPanoramaDirection(I)V
@@ -1145,25 +1145,25 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 621
+    .line 625
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbBar:Landroid/view/View;
 
     if-eqz v3, :cond_0
 
-    .line 622
+    .line 626
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbBar:Landroid/view/View;
 
     const/4 v4, 0x4
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 625
+    .line 629
     :cond_0
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumbs:[Landroid/widget/ImageView;
 
     if-eqz v3, :cond_1
 
-    .line 627
+    .line 631
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumbs:[Landroid/widget/ImageView;
 
     array-length v3, v3
@@ -1174,35 +1174,35 @@
     :goto_0
     if-ltz v1, :cond_2
 
-    .line 629
+    .line 633
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumbs:[Landroid/widget/ImageView;
 
     aget-object v2, v3, v1
 
-    .line 630
+    .line 634
     .local v2, imageView:Landroid/widget/ImageView;
     invoke-virtual {v2}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 631
+    .line 635
     .local v0, drawable:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 632
+    .line 636
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 633
+    .line 637
     invoke-static {v0}, Lcom/android/camera/imaging/ImageUtility;->recycleDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 627
+    .line 631
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 636
+    .line 640
     .end local v0           #drawable:Landroid/graphics/drawable/Drawable;
     .end local v1           #i:I
     .end local v2           #imageView:Landroid/widget/ImageView;
@@ -1211,12 +1211,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 637
+    .line 641
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumb:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 638
+    .line 642
     :cond_2
     return-void
 .end method
@@ -1225,39 +1225,39 @@
     .locals 10
 
     .prologue
-    const v9, 0x7f0800b8
+    const v9, 0x7f0800ba
 
-    const v8, 0x7f0800b7
+    const v8, 0x7f0800b9
 
-    const v7, 0x7f0800b6
+    const v7, 0x7f0800b8
 
     const/4 v6, 0x0
 
     const/4 v5, 0x1
 
-    .line 680
+    .line 684
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->prepareContentLayout()Landroid/view/View;
 
     move-result-object v0
 
-    .line 683
+    .line 687
     .local v0, baseLayout:Landroid/view/View;
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsUIInitialized:Z
 
     if-eqz v1, :cond_0
 
-    .line 795
+    .line 799
     :goto_0
     return-void
 
-    .line 687
+    .line 691
     :cond_0
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
     if-eqz v1, :cond_1
 
-    .line 690
-    const v1, 0x7f0800be
+    .line 694
+    const v1, 0x7f0800c0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1265,10 +1265,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
-    .line 691
+    .line 695
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
-    const v2, 0x7f0800bf
+    const v2, 0x7f0800c1
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1278,15 +1278,15 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToastContent:Landroid/widget/TextView;
 
-    .line 692
+    .line 696
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v1
 
     invoke-direct {p0, v1}, Lcom/android/camera/component/PanoramaUI;->updateToastRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 693
-    const v1, 0x7f0800c6
+    .line 697
+    const v1, 0x7f0800c8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1294,10 +1294,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitDirectionToast:Landroid/view/View;
 
-    .line 694
+    .line 698
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitDirectionToast:Landroid/view/View;
 
-    const v2, 0x7f0800c7
+    const v2, 0x7f0800c9
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1307,8 +1307,8 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitDirectionToastTextView:Landroid/widget/TextView;
 
-    .line 697
-    const v1, 0x7f0800c2
+    .line 701
+    const v1, 0x7f0800c4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1316,10 +1316,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorContainer:Landroid/view/View;
 
-    .line 698
+    .line 702
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorContainer:Landroid/view/View;
 
-    const v2, 0x7f0800c3
+    const v2, 0x7f0800c5
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1327,10 +1327,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorTopPaddingView:Landroid/view/View;
 
-    .line 699
+    .line 703
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorContainer:Landroid/view/View;
 
-    const v2, 0x7f0800c4
+    const v2, 0x7f0800c6
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1340,13 +1340,13 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_Indicator:Lcom/android/camera/rotate/RotateImageView;
 
-    .line 700
+    .line 704
     sget-object v1, Lcom/android/camera/rotate/UIRotation;->Landscape:Lcom/android/camera/rotate/UIRotation;
 
     invoke-direct {p0, v1}, Lcom/android/camera/component/PanoramaUI;->updateIndicatorOrientation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 703
-    const v1, 0x7f0800b9
+    .line 707
+    const v1, 0x7f0800bb
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1354,10 +1354,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
-    .line 704
+    .line 708
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
-    const v2, 0x7f0800bb
+    const v2, 0x7f0800bd
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1367,12 +1367,12 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
-    .line 705
+    .line 709
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-virtual {v1, v5}, Lcom/android/camera/widget/PanoramaIndicatorView;->setFrameIndicatorVisibility(Z)V
 
-    .line 707
+    .line 711
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     check-cast v1, Lcom/android/camera/rotate/RotateRelativeLayout;
@@ -1381,7 +1381,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 710
+    .line 714
     invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -1390,7 +1390,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
-    .line 711
+    .line 715
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
     invoke-virtual {v1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1401,10 +1401,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
 
-    .line 712
+    .line 716
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
-    const v2, 0x7f0800c5
+    const v2, 0x7f0800c7
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1414,7 +1414,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
-    .line 713
+    .line 717
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
     invoke-virtual {v1, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1425,7 +1425,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
 
-    .line 714
+    .line 718
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
     check-cast v1, Lcom/android/camera/rotate/RotateRelativeLayout;
@@ -1434,8 +1434,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 717
-    const v1, 0x7f0800c0
+    .line 721
+    const v1, 0x7f0800c2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1445,8 +1445,8 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    .line 718
-    const v1, 0x7f0800c1
+    .line 722
+    const v1, 0x7f0800c3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1456,9 +1456,9 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
 
-    .line 758
+    .line 762
     :goto_1
-    const v1, 0x7f0800bc
+    const v1, 0x7f0800be
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1466,10 +1466,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ShutterBar:Landroid/view/View;
 
-    .line 759
+    .line 763
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ShutterBar:Landroid/view/View;
 
-    const v2, 0x7f0800bd
+    const v2, 0x7f0800bf
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1479,7 +1479,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CancelButton:Landroid/widget/ImageView;
 
-    .line 760
+    .line 764
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ShutterBar:Landroid/view/View;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$2;
@@ -1488,17 +1488,17 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 791
+    .line 795
     invoke-direct {p0, v6}, Lcom/android/camera/component/PanoramaUI;->updateCancelButtonImage(Z)V
 
-    .line 794
+    .line 798
     iput-boolean v5, p0, Lcom/android/camera/component/PanoramaUI;->m_IsUIInitialized:Z
 
     goto/16 :goto_0
 
-    .line 723
+    .line 727
     :cond_1
-    const v1, 0x7f0800af
+    const v1, 0x7f0800b1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1508,8 +1508,8 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
-    .line 726
-    const v1, 0x7f0800be
+    .line 730
+    const v1, 0x7f0800c0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1517,10 +1517,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
-    .line 727
+    .line 731
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
-    const v2, 0x7f0800bf
+    const v2, 0x7f0800c1
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1530,15 +1530,15 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToastContent:Landroid/widget/TextView;
 
-    .line 728
+    .line 732
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v1
 
     invoke-direct {p0, v1}, Lcom/android/camera/component/PanoramaUI;->updateToastRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 731
-    const v1, 0x7f0800b0
+    .line 735
+    const v1, 0x7f0800b2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1546,7 +1546,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
-    .line 732
+    .line 736
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -1559,14 +1559,14 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 733
+    .line 737
     const/4 v1, 0x5
 
     new-array v2, v1, [Lcom/android/camera/widget/ColorMultiplyImageView;
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
-    const v3, 0x7f0800b1
+    const v3, 0x7f0800b3
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1578,7 +1578,7 @@
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
-    const v3, 0x7f0800b2
+    const v3, 0x7f0800b4
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1592,7 +1592,7 @@
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
-    const v4, 0x7f0800b3
+    const v4, 0x7f0800b5
 
     invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1606,7 +1606,7 @@
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
-    const v4, 0x7f0800b4
+    const v4, 0x7f0800b6
 
     invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1620,7 +1620,7 @@
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
-    const v4, 0x7f0800b5
+    const v4, 0x7f0800b7
 
     invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1632,14 +1632,14 @@
 
     iput-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
-    .line 742
+    .line 746
     invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
-    .line 743
+    .line 747
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -1652,7 +1652,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 744
+    .line 748
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
     invoke-virtual {v1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1663,7 +1663,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
 
-    .line 745
+    .line 749
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ArrowsContainer:Landroid/view/View;
 
     invoke-virtual {v1, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1674,8 +1674,8 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
 
-    .line 748
-    const v1, 0x7f0800c0
+    .line 752
+    const v1, 0x7f0800c2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1685,8 +1685,8 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    .line 749
-    const v1, 0x7f0800c1
+    .line 753
+    const v1, 0x7f0800c3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1696,8 +1696,8 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
 
-    .line 752
-    const v1, 0x7f0800b9
+    .line 756
+    const v1, 0x7f0800bb
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1705,10 +1705,10 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
-    .line 753
+    .line 757
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
-    const v2, 0x7f0800bb
+    const v2, 0x7f0800bd
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1718,7 +1718,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
-    .line 754
+    .line 758
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     check-cast v1, Lcom/android/camera/rotate/RotateRelativeLayout;
@@ -1736,18 +1736,18 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 810
+    .line 814
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
     if-eqz v0, :cond_0
 
     move v0, v1
 
-    .line 818
+    .line 822
     :goto_0
     return v0
 
-    .line 812
+    .line 816
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraThread()Lcom/android/camera/CameraThread;
 
@@ -1763,22 +1763,22 @@
 
     iput-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
-    .line 813
+    .line 817
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
     if-eqz v0, :cond_1
 
-    .line 815
+    .line 819
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
     invoke-virtual {v0, p0}, Lcom/android/camera/component/PanoramaController;->link(Lcom/android/camera/component/PanoramaUI;)V
 
     move v0, v1
 
-    .line 816
+    .line 820
     goto :goto_0
 
-    .line 818
+    .line 822
     :cond_1
     const/4 v0, 0x0
 
@@ -1791,34 +1791,34 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 827
+    .line 831
     invoke-direct {p0, v1}, Lcom/android/camera/component/PanoramaUI;->showCancelButton(Z)V
 
-    .line 830
+    .line 834
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     if-eqz v0, :cond_0
 
-    .line 831
+    .line 835
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     invoke-virtual {v0, v1}, Lcom/android/camera/widget/PanoramaTrackingView;->setPanoramaDirection(I)V
 
-    .line 834
+    .line 838
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideThumbnailBar()V
 
-    .line 837
+    .line 841
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideCenterIndicator()V
 
-    .line 843
+    .line 847
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->completeTakingPicture()V
 
-    .line 845
+    .line 849
     return-void
 .end method
 
@@ -1831,70 +1831,70 @@
 
     const/4 v3, 0x1
 
-    .line 853
+    .line 857
     iput p1, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
 
-    .line 856
+    .line 860
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isDoubleShot()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 858
+    .line 862
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->updatePreviewThumbnailDirection()V
 
-    .line 895
+    .line 899
     :goto_0
     return-void
 
-    .line 863
+    .line 867
     :cond_0
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
     if-eqz v1, :cond_2
 
-    .line 866
+    .line 870
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-virtual {v1, p1}, Lcom/android/camera/widget/PanoramaIndicatorView;->setPanoramaDirection(I)V
 
-    .line 869
+    .line 873
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideArrows()V
 
-    .line 872
+    .line 876
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitDirectionToast:Landroid/view/View;
 
     if-eqz v1, :cond_1
 
-    .line 873
+    .line 877
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitDirectionToast:Landroid/view/View;
 
     invoke-virtual {p0, v1, v0, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 876
+    .line 880
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->showDirectionIndicator()V
 
     goto :goto_0
 
-    .line 881
+    .line 885
     :cond_2
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     invoke-virtual {v1, p1}, Lcom/android/camera/widget/PanoramaTrackingView;->setPanoramaDirection(I)V
 
-    .line 884
+    .line 888
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
     if-eqz v1, :cond_3
 
-    .line 886
+    .line 890
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_4
 
-    .line 887
+    .line 891
     .local v0, indicatorIndex:I
     :goto_1
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
@@ -1905,26 +1905,26 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/widget/ColorMultiplyImageView;->setImageResource(I)V
 
-    .line 888
+    .line 892
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, v3}, Lcom/android/camera/widget/ColorMultiplyImageView;->applyColorMultiplication(Z)V
 
-    .line 889
+    .line 893
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v1, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 893
+    .line 897
     .end local v0           #indicatorIndex:I
     :cond_3
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideArrows()V
 
     goto :goto_0
 
-    .line 886
+    .line 890
     :cond_4
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
@@ -1946,21 +1946,21 @@
 
     const/4 v1, 0x1
 
-    .line 903
+    .line 907
     if-nez p1, :cond_0
 
-    .line 906
+    .line 910
     iput-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCapturing:Z
 
-    .line 907
+    .line 911
     iput v4, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
 
-    .line 910
+    .line 914
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
     if-eqz v2, :cond_0
 
-    .line 912
+    .line 916
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
     array-length v2, v2
@@ -1971,7 +1971,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 914
+    .line 918
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
     aget-object v2, v2, v0
@@ -1980,46 +1980,46 @@
 
     invoke-virtual {v2, v3}, Lcom/android/camera/widget/ColorMultiplyImageView;->setImageResource(I)V
 
-    .line 915
+    .line 919
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
     aget-object v2, v2, v0
 
     invoke-virtual {v2, v4}, Lcom/android/camera/widget/ColorMultiplyImageView;->applyColorMultiplication(Z)V
 
-    .line 912
+    .line 916
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 919
+    .line 923
     .end local v0           #i:I
     :cond_0
     iput-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCapturingFrame:Z
 
-    .line 920
+    .line 924
     iput p1, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentCaptureIndex:I
 
-    .line 921
+    .line 925
     iput v5, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentDeltaX:F
 
-    .line 922
+    .line 926
     iput v5, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentDeltaY:F
 
-    .line 925
+    .line 929
     if-lez p1, :cond_3
 
-    .line 926
+    .line 930
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->activateSpinner()V
 
-    .line 934
+    .line 938
     :cond_1
     :goto_1
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     if-eqz v2, :cond_2
 
-    .line 936
+    .line 940
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     iget v3, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
@@ -2033,7 +2033,7 @@
 
     invoke-virtual {v2, v1, v5}, Lcom/android/camera/widget/PanoramaTrackingView;->setDeltaXY(FF)V
 
-    .line 940
+    .line 944
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -2041,10 +2041,10 @@
 
     invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->resetScreenSaveTimer()V
 
-    .line 941
+    .line 945
     return-void
 
-    .line 929
+    .line 933
     :cond_3
     iget-boolean v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
@@ -2054,14 +2054,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 930
+    .line 934
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/widget/PanoramaIndicatorView;->setFrameIndicatorActivity(Z)V
 
     goto :goto_1
 
-    .line 936
+    .line 940
     :cond_4
     const/4 v1, -0x1
 
@@ -2073,17 +2073,17 @@
     .parameter "captureIndex"
 
     .prologue
-    .line 949
+    .line 953
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     if-eqz v0, :cond_0
 
-    .line 950
+    .line 954
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     invoke-virtual {v0}, Lcom/android/camera/widget/PanoramaTrackingView;->deactivateTrackingBox()V
 
-    .line 951
+    .line 955
     :cond_0
     return-void
 .end method
@@ -2093,44 +2093,44 @@
     .parameter "captureIndex"
 
     .prologue
-    .line 959
+    .line 963
     if-lez p1, :cond_0
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_0
 
-    .line 962
+    .line 966
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 963
+    .line 967
     .local v0, currentIndicator:Landroid/graphics/drawable/Drawable;
     instance-of v1, v0, Landroid/graphics/drawable/AnimationDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 964
+    .line 968
     check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
 
     .end local v0           #currentIndicator:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
-    .line 971
+    .line 975
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     if-eqz v1, :cond_1
 
-    .line 972
+    .line 976
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     invoke-virtual {v1}, Lcom/android/camera/widget/PanoramaTrackingView;->activateTrackingBox()V
 
-    .line 973
+    .line 977
     :cond_1
     return-void
 .end method
@@ -2141,7 +2141,7 @@
     .parameter "image"
 
     .prologue
-    const/4 v3, -0x1
+    const/4 v4, -0x1
 
     const/4 v5, 0x0
 
@@ -2149,12 +2149,12 @@
 
     const/4 v7, 0x1
 
-    .line 981
-    iget v4, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentCaptureIndex:I
+    .line 985
+    iget v3, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentCaptureIndex:I
 
-    if-eq v4, p1, :cond_1
+    if-eq v3, p1, :cond_1
 
-    .line 983
+    .line 987
     iget-object v3, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2195,142 +2195,142 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1138
+    .line 1142
     :cond_0
     :goto_0
     return-void
 
-    .line 988
+    .line 992
     :cond_1
     iput-boolean v8, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCapturingFrame:Z
 
-    .line 991
+    .line 995
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Lcom/android/camera/HTCCamera;->resetScreenSaveTimer()V
+    invoke-virtual {v3}, Lcom/android/camera/HTCCamera;->resetScreenSaveTimer()V
 
-    .line 994
-    iget-boolean v4, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
+    .line 998
+    iget-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
-    if-eqz v4, :cond_6
+    if-eqz v3, :cond_6
 
-    .line 997
+    .line 1001
     if-nez p1, :cond_5
 
-    .line 1000
+    .line 1004
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Lcom/android/camera/HTCCamera;->isIdleOrPaused()Z
+    invoke-virtual {v3}, Lcom/android/camera/HTCCamera;->isIdleOrPaused()Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_2
+    if-eqz v3, :cond_2
 
-    .line 1002
+    .line 1006
     iget-object v3, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v4, "Camera is paused or idle, stop capturing panorama picture"
 
     invoke-static {v3, v4}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1003
+    .line 1007
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->stopCapture()V
 
     goto :goto_0
 
-    .line 1008
+    .line 1012
     :cond_2
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isDoubleShot()Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_4
+    if-eqz v3, :cond_4
 
-    .line 1011
+    .line 1015
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-direct {v2, v3, v8}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v2, v4, v8}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 1012
+    .line 1016
     .local v2, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v3, 0xd
 
     invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1013
+    .line 1017
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumb:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1014
+    .line 1018
     invoke-direct {p0, v8, v5}, Lcom/android/camera/component/PanoramaUI;->updatePreviewThumbnailSize(IF)V
 
-    .line 1017
-    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
-
-    invoke-virtual {v3, v8}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1018
-    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
-
-    invoke-virtual {v3, v8}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1019
-    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
-
-    invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/drawable/AnimationDrawable;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/AnimationDrawable;->start()V
-
-    .line 1020
-    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
-
-    invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/drawable/AnimationDrawable;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/AnimationDrawable;->start()V
-
     .line 1021
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
+
+    invoke-virtual {v3, v8}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 1022
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
+
+    invoke-virtual {v3, v8}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 1023
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
+
+    invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/graphics/drawable/AnimationDrawable;
+
+    invoke-virtual {v3}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+
+    .line 1024
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
+
+    invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/graphics/drawable/AnimationDrawable;
+
+    invoke-virtual {v3}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+
+    .line 1025
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isDoubleShot()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 1022
+    .line 1026
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbBar:Landroid/view/View;
 
     invoke-virtual {p0, v3, v7, v7}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1023
+    .line 1027
     :cond_3
     invoke-direct {p0, p2}, Lcom/android/camera/component/PanoramaUI;->onPreviewCreated(Landroid/graphics/Bitmap;)V
 
-    .line 1029
+    .line 1033
     .end local v2           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     :goto_1
     invoke-direct {p0, v7}, Lcom/android/camera/component/PanoramaUI;->showCancelButton(Z)V
 
     goto :goto_0
 
-    .line 1026
+    .line 1030
     :cond_4
     invoke-direct {p0, v7}, Lcom/android/camera/component/PanoramaUI;->deactivateSpinner(Z)V
 
     goto :goto_1
 
-    .line 1031
+    .line 1035
     :cond_5
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isDoubleShot()Z
 
@@ -2338,136 +2338,156 @@
 
     if-eqz v3, :cond_0
 
-    .line 1032
+    .line 1036
     invoke-direct {p0, p1, v5}, Lcom/android/camera/component/PanoramaUI;->updatePreviewThumbnailSize(IF)V
 
     goto :goto_0
 
-    .line 1037
+    .line 1041
     :cond_6
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
-    if-eqz v4, :cond_7
+    if-eqz v3, :cond_7
 
-    .line 1039
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
+    .line 1043
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
-    invoke-virtual {v4}, Lcom/android/camera/widget/PanoramaTrackingView;->resetDeltaXY()V
+    invoke-virtual {v3}, Lcom/android/camera/widget/PanoramaTrackingView;->resetDeltaXY()V
 
-    .line 1040
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
+    .line 1044
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     iget v5, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentDeltaX:F
 
     iget v6, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentDeltaY:F
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/camera/widget/PanoramaTrackingView;->setDeltaXY(FF)V
+    invoke-virtual {v3, v5, v6}, Lcom/android/camera/widget/PanoramaTrackingView;->setDeltaXY(FF)V
 
-    .line 1041
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
+    .line 1045
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
-    invoke-virtual {v4}, Lcom/android/camera/widget/PanoramaTrackingView;->deactivateTrackingBox()V
+    invoke-virtual {v3}, Lcom/android/camera/widget/PanoramaTrackingView;->deactivateTrackingBox()V
 
-    .line 1042
-    const/4 v4, 0x4
+    .line 1046
+    const/4 v3, 0x4
 
-    if-ne p1, v4, :cond_7
-
-    .line 1043
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
-
-    invoke-virtual {v4, v8}, Lcom/android/camera/widget/PanoramaTrackingView;->setPanoramaDirection(I)V
+    if-ne p1, v3, :cond_7
 
     .line 1047
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
+
+    invoke-virtual {v3, v8}, Lcom/android/camera/widget/PanoramaTrackingView;->setPanoramaDirection(I)V
+
+    .line 1051
     :cond_7
     if-lez p1, :cond_8
 
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
-    if-eqz v4, :cond_8
+    if-eqz v3, :cond_8
 
-    .line 1049
-    iget v4, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
+    .line 1053
+    iget v3, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
 
     const/4 v5, 0x2
 
-    if-ne v4, v5, :cond_a
+    if-ne v3, v5, :cond_a
 
     move v0, p1
 
-    .line 1050
+    .line 1054
     .local v0, indicatorIndex:I
     :goto_2
     if-ltz v0, :cond_8
 
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
-    array-length v4, v4
+    array-length v3, v3
 
-    if-ge v0, v4, :cond_8
+    if-ge v0, v3, :cond_8
 
-    .line 1052
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
+    .line 1056
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
-    aget-object v4, v4, v0
+    aget-object v3, v3, v0
 
     const v5, 0x7f020058
 
-    invoke-virtual {v4, v5}, Lcom/android/camera/widget/ColorMultiplyImageView;->setImageResource(I)V
+    invoke-virtual {v3, v5}, Lcom/android/camera/widget/ColorMultiplyImageView;->setImageResource(I)V
 
-    .line 1053
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
+    .line 1057
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
-    aget-object v4, v4, v0
+    aget-object v3, v3, v0
 
-    invoke-virtual {v4, v7}, Lcom/android/camera/widget/ColorMultiplyImageView;->applyColorMultiplication(Z)V
+    invoke-virtual {v3, v7}, Lcom/android/camera/widget/ColorMultiplyImageView;->applyColorMultiplication(Z)V
 
-    .line 1058
+    .line 1062
     .end local v0           #indicatorIndex:I
     :cond_8
     if-nez p1, :cond_0
 
-    .line 1061
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
-
-    if-eqz v4, :cond_9
-
-    .line 1063
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    move-result-object v4
+    move-result-object v3
+
+    iget-object v3, v3, Lcom/android/camera/HTCCamera;->isActivityPaused:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v3}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Boolean;
+
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 1065
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
+
+    if-eqz v3, :cond_9
+
+    .line 1067
+    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v3
 
     const-string v5, "pref_camera_image_ratio"
 
-    invoke-static {v4, v5, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceBoolean(Landroid/content/Context;Ljava/lang/String;Z)Ljava/lang/Boolean;
+    invoke-static {v3, v5, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceBoolean(Landroid/content/Context;Ljava/lang/String;Z)Ljava/lang/Boolean;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
-    .line 1064
+    .line 1068
     .local v1, isWideScreen:Z
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
-    invoke-virtual {v4}, Lcom/android/camera/widget/PanoramaTrackingView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v3}, Lcom/android/camera/widget/PanoramaTrackingView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
-    .line 1065
+    .line 1069
     .local v2, layoutParams:Landroid/view/ViewGroup$LayoutParams;
     if-eqz v1, :cond_b
+
+    move v3, v4
 
     :goto_3
     iput v3, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1066
+    .line 1070
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     invoke-virtual {v3}, Lcom/android/camera/widget/PanoramaTrackingView;->requestLayout()V
 
-    .line 1070
+    .line 1074
     .end local v1           #isWideScreen:Z
     .end local v2           #layoutParams:Landroid/view/ViewGroup$LayoutParams;
     :cond_9
@@ -2475,12 +2495,12 @@
 
     invoke-virtual {p0, v3, v7, v7}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1071
+    .line 1075
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v3, v7, v7}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1072
+    .line 1076
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_LeftArrow:Landroid/widget/ImageView;
 
     invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -2491,7 +2511,7 @@
 
     invoke-virtual {v3}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 1073
+    .line 1077
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_RightArrow:Landroid/widget/ImageView;
 
     invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -2502,29 +2522,29 @@
 
     invoke-virtual {v3}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 1076
+    .line 1080
     invoke-direct {p0, v7}, Lcom/android/camera/component/PanoramaUI;->showCancelButton(Z)V
 
-    .line 1079
+    .line 1083
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v3, v8, v8}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
     goto/16 :goto_0
 
-    .line 1049
+    .line 1053
     :cond_a
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
+    iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicators:[Lcom/android/camera/widget/ColorMultiplyImageView;
 
-    array-length v4, v4
+    array-length v3, v3
 
-    sub-int/2addr v4, p1
+    sub-int/2addr v3, p1
 
-    add-int/lit8 v0, v4, -0x1
+    add-int/lit8 v0, v3, -0x1
 
     goto :goto_2
 
-    .line 1065
+    .line 1069
     .restart local v1       #isWideScreen:Z
     .restart local v2       #layoutParams:Landroid/view/ViewGroup$LayoutParams;
     :cond_b
@@ -2542,7 +2562,7 @@
     .parameter "captureIndex"
 
     .prologue
-    .line 1144
+    .line 1148
     return-void
 .end method
 
@@ -2551,19 +2571,19 @@
     .parameter "previewThumb"
 
     .prologue
-    .line 1152
+    .line 1156
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumb:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1155
+    .line 1159
     iget v0, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentCaptureIndex:I
 
     iget v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentDeltaX:F
 
     invoke-direct {p0, v0, v1}, Lcom/android/camera/component/PanoramaUI;->updatePreviewThumbnailSize(IF)V
 
-    .line 1156
+    .line 1160
     return-void
 .end method
 
@@ -2572,7 +2592,7 @@
     .parameter "bitmap"
 
     .prologue
-    .line 1164
+    .line 1168
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
@@ -2591,19 +2611,19 @@
 
     if-nez v0, :cond_2
 
-    .line 1166
+    .line 1170
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1167
+    .line 1171
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1173
+    .line 1177
     :cond_1
     :goto_0
     return-void
 
-    .line 1172
+    .line 1176
     :cond_2
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
 
@@ -2616,19 +2636,19 @@
     .locals 1
 
     .prologue
-    .line 1181
+    .line 1185
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/PanoramaUI;->showProcessingDialog(Z)V
 
-    .line 1184
+    .line 1188
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->completeTakingPicture()V
 
-    .line 1185
+    .line 1189
     return-void
 .end method
 
@@ -2641,7 +2661,7 @@
 
     const/4 v3, 0x0
 
-    .line 1193
+    .line 1197
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
@@ -2650,45 +2670,45 @@
 
     move-result v0
 
-    .line 1196
+    .line 1200
     .local v0, isIdleOrPaused:Z
     iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCapturing:Z
 
-    .line 1197
+    .line 1201
     iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSlowArrowShown:Z
 
-    .line 1200
+    .line 1204
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideThumbnailBar()V
 
-    .line 1203
+    .line 1207
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    .line 1204
+    .line 1208
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_FrameIndexIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v1, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1207
+    .line 1211
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideArrows()V
 
-    .line 1210
+    .line 1214
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitDirectionToast:Landroid/view/View;
 
     if-eqz v1, :cond_1
 
-    .line 1211
+    .line 1215
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitDirectionToast:Landroid/view/View;
 
     invoke-virtual {p0, v1, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1214
+    .line 1218
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideCenterIndicator()V
 
-    .line 1217
+    .line 1221
     if-nez v0, :cond_3
 
     move v1, v2
@@ -2696,24 +2716,24 @@
     :goto_0
     invoke-direct {p0, v3, v1}, Lcom/android/camera/component/PanoramaUI;->showIndicator(ZZ)V
 
-    .line 1220
+    .line 1224
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     if-eqz v1, :cond_2
 
-    .line 1221
+    .line 1225
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     invoke-virtual {v1, v3}, Lcom/android/camera/widget/PanoramaTrackingView;->setPanoramaDirection(I)V
 
-    .line 1224
+    .line 1228
     :cond_2
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideSweepIndicator()V
 
-    .line 1227
+    .line 1231
     if-nez v0, :cond_5
 
-    .line 1228
+    .line 1232
     if-nez p1, :cond_4
 
     const v1, 0x7f0a004b
@@ -2721,33 +2741,33 @@
     :goto_1
     invoke-virtual {p0, v2, v1}, Lcom/android/camera/component/PanoramaUI;->showProcessingDialog(ZI)V
 
-    .line 1233
+    .line 1237
     :goto_2
     invoke-direct {p0, v3}, Lcom/android/camera/component/PanoramaUI;->showCancelButton(Z)V
 
-    .line 1236
+    .line 1240
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->notifyProcessingTakenPictures()V
 
-    .line 1237
+    .line 1241
     return-void
 
     :cond_3
     move v1, v3
 
-    .line 1217
+    .line 1221
     goto :goto_0
 
-    .line 1228
+    .line 1232
     :cond_4
     const v1, 0x7f0a004c
 
     goto :goto_1
 
-    .line 1230
+    .line 1234
     :cond_5
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -2764,7 +2784,7 @@
     .parameter "dy"
 
     .prologue
-    .line 1245
+    .line 1249
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
@@ -2775,12 +2795,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1276
+    .line 1280
     :cond_0
     :goto_0
     return-void
 
-    .line 1249
+    .line 1253
     :cond_1
     iget v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentCaptureIndex:I
 
@@ -2788,12 +2808,12 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1253
+    .line 1257
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
     if-eqz v1, :cond_4
 
-    .line 1255
+    .line 1259
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     if-eqz v1, :cond_2
@@ -2802,7 +2822,7 @@
 
     if-nez v1, :cond_2
 
-    .line 1256
+    .line 1260
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     const/high16 v2, -0x4080
@@ -2819,7 +2839,7 @@
 
     invoke-virtual {v1, v2, p2}, Lcom/android/camera/widget/PanoramaIndicatorView;->setFrameOffset(FF)V
 
-    .line 1265
+    .line 1269
     :cond_2
     :goto_1
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSlowArrowShown:Z
@@ -2848,7 +2868,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 1267
+    .line 1271
     iget v1, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
 
     const/4 v2, 0x2
@@ -2857,14 +2877,14 @@
 
     const v0, 0x7f02009b
 
-    .line 1268
+    .line 1272
     .local v0, resId:I
     :goto_2
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1269
+    .line 1273
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -2875,35 +2895,35 @@
 
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 1270
+    .line 1274
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSlowArrowShown:Z
 
-    .line 1274
+    .line 1278
     .end local v0           #resId:I
     :cond_3
     iput p1, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentDeltaX:F
 
-    .line 1275
+    .line 1279
     iput p2, p0, Lcom/android/camera/component/PanoramaUI;->m_CurrentDeltaY:F
 
     goto :goto_0
 
-    .line 1260
+    .line 1264
     :cond_4
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCapturingFrame:Z
 
     if-nez v1, :cond_2
 
-    .line 1261
+    .line 1265
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_TrackingBox:Lcom/android/camera/widget/PanoramaTrackingView;
 
     invoke-virtual {v1, p1, p2}, Lcom/android/camera/widget/PanoramaTrackingView;->setDeltaXY(FF)V
 
     goto :goto_1
 
-    .line 1267
+    .line 1271
     :cond_5
     const v0, 0x7f020099
 
@@ -2918,28 +2938,28 @@
 
     const/4 v3, 0x1
 
-    .line 1284
+    .line 1288
     iget-boolean v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
     if-nez v2, :cond_1
 
-    .line 1321
+    .line 1325
     :cond_0
     :goto_0
     return-void
 
-    .line 1286
+    .line 1290
     :cond_1
     iget-boolean v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCaptureUIOpen:Z
 
     if-nez v2, :cond_0
 
-    .line 1290
+    .line 1294
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 1291
+    .line 1295
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v2, v0, Lcom/android/camera/HTCCamera;->isPreviewStarted:Lcom/android/camera/property/Property;
 
@@ -2955,7 +2975,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1295
+    .line 1299
     iget-object v2, v0, Lcom/android/camera/HTCCamera;->hasPopupBubble:Lcom/android/camera/property/Property;
 
     invoke-virtual {v2}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -2972,7 +2992,7 @@
 
     move v1, v3
 
-    .line 1296
+    .line 1300
     .local v1, isMenuClosed:Z
     :goto_1
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
@@ -2991,7 +3011,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 1298
+    .line 1302
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
     check-cast v2, Lcom/android/camera/rotate/RotateRelativeLayout;
@@ -3002,12 +3022,12 @@
 
     invoke-virtual {v2, v4}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1299
+    .line 1303
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
     invoke-virtual {p0, v2, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1303
+    .line 1307
     :cond_2
     iget-object v2, v0, Lcom/android/camera/HTCCamera;->effectPanelState:Lcom/android/camera/property/Property;
 
@@ -3019,10 +3039,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 1304
+    .line 1308
     invoke-direct {p0, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showIndicator(ZZ)V
 
-    .line 1307
+    .line 1311
     :cond_3
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbBar:Landroid/view/View;
 
@@ -3036,26 +3056,26 @@
 
     if-eqz v1, :cond_4
 
-    .line 1308
+    .line 1312
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbBar:Landroid/view/View;
 
     invoke-virtual {p0, v2, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1311
+    .line 1315
     :cond_4
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     if-eqz v2, :cond_5
 
-    .line 1313
+    .line 1317
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideSweepIndicator()V
 
-    .line 1314
+    .line 1318
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-virtual {v2, v5, v5}, Lcom/android/camera/widget/PanoramaIndicatorView;->setFrameOffset(FF)V
 
-    .line 1315
+    .line 1319
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicator:Lcom/android/camera/widget/PanoramaIndicatorView;
 
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->getVirtualDeviceOrientation()I
@@ -3064,18 +3084,18 @@
 
     invoke-virtual {v2, v4}, Lcom/android/camera/widget/PanoramaIndicatorView;->setDeviceOrientation(I)V
 
-    .line 1316
+    .line 1320
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v2, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1320
+    .line 1324
     :cond_5
     iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCaptureUIOpen:Z
 
     goto :goto_0
 
-    .line 1295
+    .line 1299
     .end local v1           #isMenuClosed:Z
     :cond_6
     const/4 v1, 0x0
@@ -3087,12 +3107,12 @@
     .locals 3
 
     .prologue
-    .line 1375
+    .line 1380
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 1378
+    .line 1383
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->deactivatedEvent:Lcom/android/camera/event/Event;
 
@@ -3102,7 +3122,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1388
+    .line 1393
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->keyDownEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$4;
@@ -3111,7 +3131,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1411
+    .line 1416
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->resolutionSelectedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$5;
@@ -3120,7 +3140,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1427
+    .line 1432
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->thumbnailButtonClickedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$6;
@@ -3129,7 +3149,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1440
+    .line 1445
     return-void
 .end method
 
@@ -3137,12 +3157,12 @@
     .locals 5
 
     .prologue
-    .line 1448
+    .line 1453
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 1451
+    .line 1456
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->actionScreenState:Lcom/android/camera/property/Property;
 
@@ -3152,7 +3172,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1470
+    .line 1475
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->deviceOrientation:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$8;
@@ -3161,7 +3181,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1488
+    .line 1493
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->effectPanelState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$9;
@@ -3170,7 +3190,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1522
+    .line 1527
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->hasPopupBubble:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$10;
@@ -3179,7 +3199,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1534
+    .line 1539
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$11;
@@ -3196,7 +3216,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1578
+    .line 1583
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isCaptureUIOpen:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$12;
@@ -3205,7 +3225,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1590
+    .line 1595
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isPreviewStarted:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$13;
@@ -3214,7 +3234,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1603
+    .line 1608
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->selfTimerValue:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$14;
@@ -3223,14 +3243,14 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1613
+    .line 1618
     invoke-static {}, Lcom/android/camera/component/PanoramaController;->isNonLandscapeSupported()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1615
+    .line 1620
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->rotation:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/PanoramaUI$15;
@@ -3239,7 +3259,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1660
+    .line 1665
     :cond_0
     return-void
 .end method
@@ -3253,10 +3273,10 @@
 
     const/4 v3, 0x0
 
-    .line 1667
+    .line 1672
     if-eqz p1, :cond_1
 
-    .line 1670
+    .line 1675
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CancelButton:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
@@ -3265,13 +3285,13 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1671
+    .line 1676
     .local v0, container:Landroid/view/View;
     instance-of v1, v0, Lcom/android/camera/rotate/RotateRelativeLayout;
 
     if-eqz v1, :cond_0
 
-    .line 1672
+    .line 1677
     check-cast v0, Lcom/android/camera/rotate/RotateRelativeLayout;
 
     .end local v0           #container:Landroid/view/View;
@@ -3281,7 +3301,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1675
+    .line 1680
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ShutterBar:Landroid/view/View;
 
@@ -3291,11 +3311,11 @@
 
     invoke-virtual {p0, v1, v4, v4, v2}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZLjava/lang/Runnable;)V
 
-    .line 1690
+    .line 1695
     :goto_0
     return-void
 
-    .line 1686
+    .line 1691
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_CancelButton:Landroid/widget/ImageView;
 
@@ -3305,10 +3325,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 1687
+    .line 1692
     invoke-direct {p0, v3}, Lcom/android/camera/component/PanoramaUI;->updateCancelButtonImage(Z)V
 
-    .line 1688
+    .line 1693
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ShutterBar:Landroid/view/View;
 
     invoke-virtual {p0, v1, v3, v4}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
@@ -3320,7 +3340,7 @@
     .locals 2
 
     .prologue
-    .line 1698
+    .line 1703
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
@@ -3329,12 +3349,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1714
+    .line 1719
     :cond_0
     :goto_0
     return-void
 
-    .line 1702
+    .line 1707
     :cond_1
     iget v0, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
 
@@ -3342,7 +3362,7 @@
 
     goto :goto_0
 
-    .line 1708
+    .line 1713
     :pswitch_0
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
@@ -3350,7 +3370,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1713
+    .line 1718
     :goto_1
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
@@ -3364,7 +3384,7 @@
 
     goto :goto_0
 
-    .line 1705
+    .line 1710
     :pswitch_1
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_CenterIndicatorView:Landroid/widget/ImageView;
 
@@ -3374,7 +3394,7 @@
 
     goto :goto_1
 
-    .line 1702
+    .line 1707
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3388,72 +3408,15 @@
     .parameter "animation"
 
     .prologue
-    .line 1723
+    .line 1728
     return-void
 .end method
 
 .method private syncResolutionBack()V
-    .locals 6
+    .locals 0
 
     .prologue
-    .line 1754
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v0
-
-    .line 1755
-    .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
-    invoke-static {}, Lcom/android/camera/PhotoModeHandler;->getPhotoModeHandler()Lcom/android/camera/PhotoModeHandler;
-
-    move-result-object v1
-
-    .line 1756
-    .local v1, modeHandler:Lcom/android/camera/PhotoModeHandler;
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lcom/android/camera/PhotoModeHandler;->setResolutionHandler(Lcom/android/camera/IResolutionHandler;)V
-
-    .line 1759
-    iget-boolean v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IsResolutionSyncBackNeeded:Z
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_ResolutionHandler:Lcom/android/camera/component/PanoramaResolutionHandler;
-
-    if-eqz v2, :cond_0
-
-    .line 1761
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getSettings()Lcom/android/camera/CameraSettings;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/android/camera/CameraType;->Main:Lcom/android/camera/CameraType;
-
-    invoke-virtual {v1, v0, v3}, Lcom/android/camera/PhotoModeHandler;->getResolutionPreferenceKey(Lcom/android/camera/HTCCamera;Lcom/android/camera/CameraType;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/android/camera/component/PanoramaUI;->m_ResolutionHandler:Lcom/android/camera/component/PanoramaResolutionHandler;
-
-    sget-object v5, Lcom/android/camera/CameraType;->Main:Lcom/android/camera/CameraType;
-
-    invoke-virtual {v4, v0, v5}, Lcom/android/camera/component/PanoramaResolutionHandler;->getResolution(Lcom/android/camera/HTCCamera;Lcom/android/camera/CameraType;)Lcom/android/camera/Resolution;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/android/camera/Resolution;->getKeyName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v3, v4}, Lcom/android/camera/CameraSettings;->set(Ljava/lang/String;Ljava/lang/Object;)Z
-
-    .line 1764
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IsResolutionSyncBackNeeded:Z
-
-    .line 1766
-    :cond_0
+    .line 1773
     return-void
 .end method
 
@@ -3462,21 +3425,21 @@
     .parameter "pressed"
 
     .prologue
-    .line 1773
+    .line 1780
     if-nez p1, :cond_0
 
-    .line 1774
+    .line 1781
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_CancelButton:Landroid/widget/ImageView;
 
     const v1, 0x7f020079
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1777
+    .line 1784
     :goto_0
     return-void
 
-    .line 1776
+    .line 1783
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_CancelButton:Landroid/widget/ImageView;
 
@@ -3498,28 +3461,28 @@
     .parameter "isSelfTimerOn"
 
     .prologue
-    .line 1785
+    .line 1792
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_Indicator:Lcom/android/camera/rotate/RotateImageView;
 
     if-nez v2, :cond_1
 
-    .line 1799
+    .line 1806
     :cond_0
     :goto_0
     return-void
 
-    .line 1789
+    .line 1796
     :cond_1
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorTopPaddingView:Landroid/view/View;
 
     if-eqz v2, :cond_0
 
-    .line 1791
+    .line 1798
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v1
 
-    .line 1792
+    .line 1799
     .local v1, rotation:Lcom/android/camera/rotate/UIRotation;
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -3529,7 +3492,7 @@
 
     move-result-object v0
 
-    .line 1793
+    .line 1800
     .local v0, res:Landroid/content/res/Resources;
     invoke-virtual {v1}, Lcom/android/camera/rotate/UIRotation;->isLandscape()Z
 
@@ -3537,10 +3500,10 @@
 
     if-nez v2, :cond_2
 
-    .line 1794
+    .line 1801
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorTopPaddingView:Landroid/view/View;
 
-    const v3, 0x7f0b008b
+    const v3, 0x7f0b008c
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3548,7 +3511,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/ViewUtil;->setHeight(Landroid/view/View;I)V
 
-    .line 1797
+    .line 1804
     :goto_1
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorTopPaddingView:Landroid/view/View;
 
@@ -3561,11 +3524,11 @@
 
     goto :goto_0
 
-    .line 1796
+    .line 1803
     :cond_2
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorTopPaddingView:Landroid/view/View;
 
-    const v3, 0x7f0b008a
+    const v3, 0x7f0b008b
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3575,7 +3538,7 @@
 
     goto :goto_1
 
-    .line 1797
+    .line 1804
     :cond_3
     const/16 v2, 0x8
 
@@ -3587,16 +3550,16 @@
     .parameter "rotation"
 
     .prologue
-    .line 1807
+    .line 1814
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_Indicator:Lcom/android/camera/rotate/RotateImageView;
 
     if-nez v2, :cond_0
 
-    .line 1830
+    .line 1837
     :goto_0
     return-void
 
-    .line 1811
+    .line 1818
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -3606,7 +3569,7 @@
 
     move-result-object v1
 
-    .line 1812
+    .line 1819
     .local v1, res:Landroid/content/res/Resources;
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorContainer:Landroid/view/View;
 
@@ -3616,7 +3579,7 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 1813
+    .line 1820
     .local v0, layoutParams:Landroid/view/ViewGroup$MarginLayoutParams;
     invoke-virtual {p1}, Lcom/android/camera/rotate/UIRotation;->isLandscape()Z
 
@@ -3624,8 +3587,8 @@
 
     if-nez v2, :cond_1
 
-    .line 1815
-    const v2, 0x7f0b0086
+    .line 1822
+    const v2, 0x7f0b0087
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3633,8 +3596,8 @@
 
     iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 1816
-    const v2, 0x7f0b0087
+    .line 1823
+    const v2, 0x7f0b0088
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3642,13 +3605,13 @@
 
     iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 1823
+    .line 1830
     :goto_1
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IndicatorContainer:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
 
-    .line 1826
+    .line 1833
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v2
@@ -3667,16 +3630,16 @@
 
     invoke-direct {p0, v2}, Lcom/android/camera/component/PanoramaUI;->updateIndicatorLocation(Z)V
 
-    .line 1829
+    .line 1836
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_Indicator:Lcom/android/camera/rotate/RotateImageView;
 
     invoke-virtual {v2, p1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
     goto :goto_0
 
-    .line 1820
+    .line 1827
     :cond_1
-    const v2, 0x7f0b0089
+    const v2, 0x7f0b008a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3684,8 +3647,8 @@
 
     iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 1821
-    const v2, 0x7f0b0088
+    .line 1828
+    const v2, 0x7f0b0089
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3702,46 +3665,46 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1838
+    .line 1845
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 1839
+    .line 1846
     .local v0, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     iget v1, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1848
+    .line 1855
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1851
+    .line 1858
     :goto_0
     const/4 v1, -0x1
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 1852
+    .line 1859
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumb:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1855
+    .line 1862
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
     if-eqz v1, :cond_0
 
-    .line 1856
+    .line 1863
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideArrows()V
 
-    .line 1857
+    .line 1864
     :cond_0
     return-void
 
-    .line 1842
+    .line 1849
     :pswitch_0
     const/16 v1, 0xa
 
@@ -3749,7 +3712,7 @@
 
     goto :goto_0
 
-    .line 1845
+    .line 1852
     :pswitch_1
     const/16 v1, 0xc
 
@@ -3757,7 +3720,7 @@
 
     goto :goto_0
 
-    .line 1839
+    .line 1846
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -3771,12 +3734,12 @@
     .parameter "delta"
 
     .prologue
-    .line 1865
+    .line 1872
     iget v1, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaDirection:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1872
+    .line 1879
     :goto_0
     :pswitch_0
     const/4 v1, 0x0
@@ -3791,7 +3754,7 @@
 
     move-result p2
 
-    .line 1873
+    .line 1880
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getThumbnailWidth()I
 
     move-result v1
@@ -3808,23 +3771,23 @@
 
     float-to-int v0, v1
 
-    .line 1876
+    .line 1883
     .local v0, height:I
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_Thumb:Landroid/widget/ImageView;
 
     invoke-static {v1, v0}, Lcom/android/camera/ViewUtil;->setHeight(Landroid/view/View;I)V
 
-    .line 1877
+    .line 1884
     return-void
 
-    .line 1869
+    .line 1876
     .end local v0           #height:I
     :pswitch_1
     neg-float p2, p2
 
     goto :goto_0
 
-    .line 1865
+    .line 1872
     nop
 
     :pswitch_data_0
@@ -3841,9 +3804,9 @@
     .parameter "rotation"
 
     .prologue
-    const v6, 0x7f0b005e
+    const v6, 0x7f0b005f
 
-    const v5, 0x7f0b005c
+    const v5, 0x7f0b005d
 
     const/16 v4, 0xc
 
@@ -3851,7 +3814,7 @@
 
     const/4 v2, -0x2
 
-    .line 1885
+    .line 1892
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
     if-eqz v1, :cond_0
@@ -3860,12 +3823,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1914
+    .line 1921
     :cond_0
     :goto_0
     return-void
 
-    .line 1889
+    .line 1896
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
 
@@ -3873,12 +3836,12 @@
 
     invoke-virtual {v1, p1}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1892
+    .line 1899
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v2, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 1893
+    .line 1900
     .local v0, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     sget-object v1, Lcom/android/camera/component/PanoramaUI$17;->$SwitchMap$com$android$camera$rotate$UIRotation:[I
 
@@ -3890,20 +3853,20 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1912
+    .line 1919
     :goto_1
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1913
+    .line 1920
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToastContent:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
-    .line 1896
+    .line 1903
     :pswitch_0
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToastContent:Landroid/widget/TextView;
 
@@ -3913,12 +3876,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 1897
+    .line 1904
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     goto :goto_1
 
-    .line 1900
+    .line 1907
     :pswitch_1
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToastContent:Landroid/widget/TextView;
 
@@ -3928,12 +3891,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 1901
+    .line 1908
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     goto :goto_1
 
-    .line 1904
+    .line 1911
     :pswitch_2
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToastContent:Landroid/widget/TextView;
 
@@ -3943,12 +3906,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 1905
+    .line 1912
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     goto :goto_1
 
-    .line 1908
+    .line 1915
     :pswitch_3
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_InitToastContent:Landroid/widget/TextView;
 
@@ -3958,12 +3921,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 1909
+    .line 1916
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     goto :goto_1
 
-    .line 1893
+    .line 1900
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4004,11 +3967,9 @@
 .end method
 
 .method public enterPanoramaMode()V
-    .locals 5
+    .locals 4
 
     .prologue
-    const/4 v4, 0x0
-
     const/4 v3, 0x1
 
     .line 290
@@ -4041,52 +4002,56 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     .line 299
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
     invoke-virtual {p0, v1, v3}, Lcom/android/camera/component/PanoramaUI;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 304
+    .line 317
     :goto_0
-    iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsRestartingPreviewNeeded:Z
-
-    if-eqz v1, :cond_2
-
-    .line 306
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1, v4}, Lcom/android/camera/HTCCamera;->restartPreview(I)Z
+    .line 318
+    .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
+    invoke-static {}, Lcom/android/camera/component/PanoramaController;->isZoomingSupported()Z
 
-    .line 307
-    iput-boolean v4, p0, Lcom/android/camera/component/PanoramaUI;->m_IsRestartingPreviewNeeded:Z
+    move-result v1
 
-    .line 308
-    iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    const-string v2, "Waiting for re-starting preview"
+    .line 319
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->lockZoom()V
 
-    invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+    .line 322
+    :cond_1
+    invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->initializeUI()V
 
-    .line 309
+    .line 325
+    invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->openCaptureUI()V
+
+    .line 328
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->disableFlash()V
+
+    .line 331
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->disableSelfTimer()V
+
+    .line 333
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "enterPanoramaMode() - end"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 310
-    iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsInternalExit:Z
-
-    .line 332
-    :goto_1
+    .line 334
     return-void
 
     .line 301
-    :cond_1
+    .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
+    :cond_2
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Cannot link to panorama controller"
@@ -4094,45 +4059,6 @@
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
-
-    .line 315
-    :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v0
-
-    .line 316
-    .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
-    invoke-static {}, Lcom/android/camera/component/PanoramaController;->isZoomingSupported()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    .line 317
-    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->lockZoom()V
-
-    .line 320
-    :cond_3
-    invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->initializeUI()V
-
-    .line 323
-    invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->openCaptureUI()V
-
-    .line 326
-    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->disableFlash()V
-
-    .line 329
-    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->disableSelfTimer()V
-
-    .line 331
-    iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
-
-    const-string v2, "enterPanoramaMode() - end"
-
-    invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
 .end method
 
 .method public exitPanoramaMode()V
@@ -4141,142 +4067,126 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 339
+    .line 341
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "exitPanoramaMode() - start"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
+    .line 344
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
     if-nez v1, :cond_0
 
-    .line 344
+    .line 346
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Re-exit panorama mode"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 403
+    .line 407
     :goto_0
     return-void
 
-    .line 349
+    .line 360
     :cond_0
-    iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsRestartingPreviewNeeded:Z
+    iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     if-eqz v1, :cond_1
 
-    .line 351
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Lcom/android/camera/HTCCamera;->restartPreview(I)Z
-
-    .line 352
-    iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsRestartingPreviewNeeded:Z
-
-    .line 356
-    :cond_1
-    iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
-
-    if-eqz v1, :cond_2
-
-    .line 358
+    .line 362
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_SweepIndicatorContainer:Landroid/view/View;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 359
+    .line 363
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->deactivateSpinner()V
 
-    .line 360
+    .line 364
     const/16 v1, 0x64
 
     invoke-virtual {p0, v1}, Lcom/android/camera/component/PanoramaUI;->removeMessages(I)V
 
-    .line 364
-    :cond_2
+    .line 368
+    :cond_1
     iget-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsInternalExit:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    .line 366
+    .line 370
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Panorama InternalExit, return directly"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 367
+    .line 371
     iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsInternalExit:Z
 
-    .line 368
+    .line 372
     iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
     goto :goto_0
 
-    .line 373
-    :cond_3
+    .line 377
+    :cond_2
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->closeCaptureUI()V
 
-    .line 376
+    .line 380
     const/4 v1, 0x1
 
     invoke-direct {p0, v3, v1}, Lcom/android/camera/component/PanoramaUI;->showIndicator(ZZ)V
 
-    .line 379
+    .line 383
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideThumbnailBar()V
 
-    .line 382
+    .line 386
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 383
+    .line 387
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->enableFlash()V
 
-    .line 386
+    .line 390
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->enableSelfTimer()V
 
-    .line 389
+    .line 393
     iput-boolean v3, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
-    .line 390
+    .line 394
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
-    .line 391
+    .line 395
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
     const/4 v2, 0x2
 
     invoke-virtual {p0, v1, v2}, Lcom/android/camera/component/PanoramaUI;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 396
+    .line 400
     :goto_1
     invoke-static {}, Lcom/android/camera/component/PanoramaController;->isZoomingSupported()Z
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_3
 
-    .line 397
+    .line 401
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->unlockZoom()V
 
-    .line 400
-    :cond_4
+    .line 404
+    :cond_3
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->collapseContentLayout()V
 
-    .line 402
+    .line 406
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "exitPanoramaMode() - end"
@@ -4285,8 +4195,8 @@
 
     goto :goto_0
 
-    .line 393
-    :cond_5
+    .line 397
+    :cond_4
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Cannot exit panorama mode because there is no panorama controller"
@@ -4300,15 +4210,15 @@
     .locals 1
 
     .prologue
-    .line 413
+    .line 417
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
     if-nez v0, :cond_0
 
-    .line 414
+    .line 418
     const v0, 0x7f030020
 
-    .line 415
+    .line 419
     :goto_0
     return v0
 
@@ -4322,7 +4232,7 @@
     .locals 1
 
     .prologue
-    .line 425
+    .line 429
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ResolutionHandler:Lcom/android/camera/component/PanoramaResolutionHandler;
 
     return-object v0
@@ -4332,7 +4242,7 @@
     .locals 1
 
     .prologue
-    .line 433
+    .line 437
     iget v0, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbnailHeight:I
 
     return v0
@@ -4342,7 +4252,7 @@
     .locals 3
 
     .prologue
-    .line 441
+    .line 445
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
@@ -4357,7 +4267,7 @@
 
     move-result v0
 
-    .line 442
+    .line 446
     .local v0, isWideScreenPhoto:Z
     if-eqz v0, :cond_0
 
@@ -4377,31 +4287,31 @@
     .parameter "msg"
 
     .prologue
-    .line 472
+    .line 476
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 530
+    .line 534
     invoke-super {p0, p1}, Lcom/android/camera/component/UIComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 533
+    .line 537
     :goto_0
     return-void
 
-    .line 475
+    .line 479
     :sswitch_0
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->onAborted()V
 
     goto :goto_0
 
-    .line 479
+    .line 483
     :sswitch_1
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->deactivateSpinner()V
 
     goto :goto_0
 
-    .line 483
+    .line 487
     :sswitch_2
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -4409,7 +4319,7 @@
 
     goto :goto_0
 
-    .line 487
+    .line 491
     :sswitch_3
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -4417,7 +4327,7 @@
 
     goto :goto_0
 
-    .line 491
+    .line 495
     :sswitch_4
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -4425,7 +4335,7 @@
 
     goto :goto_0
 
-    .line 495
+    .line 499
     :sswitch_5
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -4433,7 +4343,7 @@
 
     goto :goto_0
 
-    .line 499
+    .line 503
     :sswitch_6
     iget v2, p1, Landroid/os/Message;->arg1:I
 
@@ -4445,7 +4355,7 @@
 
     goto :goto_0
 
-    .line 503
+    .line 507
     :sswitch_7
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -4453,7 +4363,7 @@
 
     goto :goto_0
 
-    .line 507
+    .line 511
     :sswitch_8
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -4463,7 +4373,7 @@
 
     goto :goto_0
 
-    .line 511
+    .line 515
     :sswitch_9
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -4473,13 +4383,13 @@
 
     goto :goto_0
 
-    .line 515
+    .line 519
     :sswitch_a
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->onStitchCompleted()V
 
     goto :goto_0
 
-    .line 519
+    .line 523
     :sswitch_b
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -4493,7 +4403,7 @@
 
     goto :goto_0
 
-    .line 524
+    .line 528
     :sswitch_c
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -4503,7 +4413,7 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 525
+    .line 529
     .local v0, array:[Ljava/lang/Object;
     const/4 v1, 0x0
 
@@ -4529,7 +4439,7 @@
 
     goto :goto_0
 
-    .line 472
+    .line 476
     :sswitch_data_0
     .sparse-switch
         0x2 -> :sswitch_5
@@ -4554,10 +4464,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 647
+    .line 651
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->initializeOverride()V
 
-    .line 650
+    .line 654
     invoke-static {}, Lcom/android/camera/component/PanoramaController;->getPanoramaType()I
 
     move-result v2
@@ -4567,7 +4477,7 @@
     :goto_0
     iput-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsSweepPanorama:Z
 
-    .line 653
+    .line 657
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
@@ -4576,7 +4486,7 @@
 
     move-result-object v0
 
-    .line 654
+    .line 658
     .local v0, res:Landroid/content/res/Resources;
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isDoubleShot()Z
 
@@ -4584,8 +4494,8 @@
 
     if-nez v1, :cond_1
 
-    .line 656
-    const v1, 0x7f0b008c
+    .line 660
+    const v1, 0x7f0b008d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4593,8 +4503,8 @@
 
     iput v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbnailWidth:I
 
-    .line 657
-    const v1, 0x7f0b008d
+    .line 661
+    const v1, 0x7f0b008e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4602,8 +4512,8 @@
 
     iput v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbnailWidthWide:I
 
-    .line 658
-    const v1, 0x7f0b008e
+    .line 662
+    const v1, 0x7f0b008f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4611,27 +4521,27 @@
 
     iput v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbnailHeight:I
 
-    .line 668
+    .line 672
     :goto_1
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->registerEventListeners()V
 
-    .line 671
+    .line 675
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->setupPropertyChangedCallbacks()V
 
-    .line 672
+    .line 676
     return-void
 
-    .line 650
+    .line 654
     .end local v0           #res:Landroid/content/res/Resources;
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 662
+    .line 666
     .restart local v0       #res:Landroid/content/res/Resources;
     :cond_1
-    const v1, 0x7f0b008f
+    const v1, 0x7f0b0090
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4639,13 +4549,13 @@
 
     iput v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbnailWidth:I
 
-    .line 663
+    .line 667
     iget v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbnailWidth:I
 
     iput v1, p0, Lcom/android/camera/component/PanoramaUI;->m_ThumbnailWidthWide:I
 
-    .line 664
-    const v1, 0x7f0b0090
+    .line 668
+    const v1, 0x7f0b0091
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4660,117 +4570,54 @@
     .locals 1
 
     .prologue
-    .line 802
+    .line 806
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
     return v0
 .end method
 
 .method public final prepareEnteringPanoramaMode(Z)V
-    .locals 5
+    .locals 3
     .parameter "restartPreview"
 
     .prologue
-    .line 1328
-    iget-object v2, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+    .line 1332
+    iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "prepareEnteringPanoramaMode("
+    const-string v2, "prepareEnteringPanoramaMode("
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ")"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1331
-    iget-boolean v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
-
-    if-eqz v2, :cond_0
-
-    .line 1346
-    :goto_0
-    return-void
-
-    .line 1335
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v0
-
-    .line 1336
-    .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
-    invoke-static {}, Lcom/android/camera/PhotoModeHandler;->getPhotoModeHandler()Lcom/android/camera/PhotoModeHandler;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 1337
-    .local v1, modeHandler:Lcom/android/camera/PhotoModeHandler;
-    iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_ResolutionHandler:Lcom/android/camera/component/PanoramaResolutionHandler;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_1
+    move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraMode()Lcom/android/camera/CameraMode;
+    const-string v2, ")"
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v3, Lcom/android/camera/CameraMode;->Photo:Lcom/android/camera/CameraMode;
+    move-result-object v1
 
-    if-ne v2, v3, :cond_1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraType()Lcom/android/camera/CameraType;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v3, Lcom/android/camera/CameraType;->Main:Lcom/android/camera/CameraType;
+    .line 1335
+    iget-boolean v0, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
-    if-ne v2, v3, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 1338
-    iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_ResolutionHandler:Lcom/android/camera/component/PanoramaResolutionHandler;
-
-    invoke-virtual {p0}, Lcom/android/camera/component/PanoramaUI;->getCameraType()Lcom/android/camera/CameraType;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v0, v3}, Lcom/android/camera/PhotoModeHandler;->getResolution(Lcom/android/camera/HTCCamera;Lcom/android/camera/CameraType;)Lcom/android/camera/Resolution;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v0, v3}, Lcom/android/camera/component/PanoramaResolutionHandler;->syncFromCurrentResolution(Lcom/android/camera/HTCCamera;Lcom/android/camera/Resolution;)V
-
-    .line 1339
-    :cond_1
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lcom/android/camera/component/PanoramaUI;->m_IsResolutionSyncBackNeeded:Z
-
-    .line 1342
-    iget-object v2, p0, Lcom/android/camera/component/PanoramaUI;->m_ResolutionHandler:Lcom/android/camera/component/PanoramaResolutionHandler;
-
-    invoke-virtual {v1, v2}, Lcom/android/camera/PhotoModeHandler;->setResolutionHandler(Lcom/android/camera/IResolutionHandler;)V
-
-    .line 1345
-    iput-boolean p1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsRestartingPreviewNeeded:Z
-
-    goto :goto_0
+    .line 1351
+    :cond_0
+    return-void
 .end method
 
 .method public final prepareExitingPanoramaMode(Z)V
@@ -4778,7 +4625,7 @@
     .parameter "restartPreview"
 
     .prologue
-    .line 1353
+    .line 1358
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4807,24 +4654,21 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1356
+    .line 1361
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
     if-nez v0, :cond_0
 
-    .line 1367
+    .line 1372
     :goto_0
     return-void
 
-    .line 1360
+    .line 1365
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->syncResolutionBack()V
 
-    .line 1363
+    .line 1368
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->closeCaptureUI()V
-
-    .line 1366
-    iput-boolean p1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsRestartingPreviewNeeded:Z
 
     goto :goto_0
 .end method
@@ -4835,31 +4679,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1731
+    .line 1736
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
 
     if-nez v0, :cond_0
 
-    .line 1746
+    .line 1751
     :goto_0
     return-void
 
-    .line 1735
+    .line 1740
     :cond_0
     invoke-direct {p0, v1}, Lcom/android/camera/component/PanoramaUI;->showCancelButton(Z)V
 
-    .line 1738
+    .line 1743
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaUI;->hideSweepIndicator()V
 
-    .line 1741
+    .line 1746
     iput-boolean v1, p0, Lcom/android/camera/component/PanoramaUI;->m_IsCapturing:Z
 
-    .line 1742
+    .line 1747
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
     if-eqz v0, :cond_1
 
-    .line 1743
+    .line 1748
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI;->m_PanoramaController:Lcom/android/camera/component/PanoramaController;
 
     const/4 v1, 0x3
@@ -4868,7 +4712,7 @@
 
     goto :goto_0
 
-    .line 1745
+    .line 1750
     :cond_1
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 

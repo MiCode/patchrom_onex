@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 50
+    .line 40
     iput-object p1, p0, Lcom/android/camera/component/NewMediaBroadcaster$1$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$1;
 
     iput-object p2, p0, Lcom/android/camera/component/NewMediaBroadcaster$1$1;->val$e:Lcom/android/camera/MediaEventArgs;
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 53
+    .line 43
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$1$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$1;
 
     iget-object v1, v1, Lcom/android/camera/component/NewMediaBroadcaster$1;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
@@ -56,7 +56,7 @@
     #calls: Lcom/android/camera/component/NewMediaBroadcaster;->saveEventArgsinBuffer(Lcom/android/camera/MediaEventArgs;)V
     invoke-static {v1, v2}, Lcom/android/camera/component/NewMediaBroadcaster;->access$000(Lcom/android/camera/component/NewMediaBroadcaster;Lcom/android/camera/MediaEventArgs;)V
 
-    .line 54
+    .line 44
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$1$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$1;
 
     iget-object v1, v1, Lcom/android/camera/component/NewMediaBroadcaster$1;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
@@ -77,7 +77,7 @@
 
     instance-of v0, v1, Lcom/android/camera/effect/ContinuousBurstScene;
 
-    .line 55
+    .line 45
     .local v0, isContinuousBurst:Z
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$1$1;->val$e:Lcom/android/camera/MediaEventArgs;
 
@@ -87,7 +87,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 57
+    .line 47
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$1$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$1;
 
@@ -125,7 +125,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 59
+    .line 49
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$1$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$1;
 
@@ -134,7 +134,7 @@
     #calls: Lcom/android/camera/component/NewMediaBroadcaster;->checkAndBroadcastIntent()V
     invoke-static {v1}, Lcom/android/camera/component/NewMediaBroadcaster;->access$100(Lcom/android/camera/component/NewMediaBroadcaster;)V
 
-    .line 62
+    .line 52
     :cond_2
     return-void
 .end method

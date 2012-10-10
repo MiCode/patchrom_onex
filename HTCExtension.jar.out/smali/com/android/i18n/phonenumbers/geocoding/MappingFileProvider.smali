@@ -51,23 +51,23 @@
 
     .line 50
     .local v0, normalizationMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    const-string v1, "zh_TW"
+    const-string/jumbo v1, "zh_TW"
 
-    const-string v2, "zh_Hant"
+    const-string/jumbo v2, "zh_Hant"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 51
-    const-string v1, "zh_HK"
+    const-string/jumbo v1, "zh_HK"
 
-    const-string v2, "zh_Hant"
+    const-string/jumbo v2, "zh_Hant"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 52
-    const-string v1, "zh_MO"
+    const-string/jumbo v1, "zh_MO"
 
-    const-string v2, "zh_Hant"
+    const-string/jumbo v2, "zh_Hant"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

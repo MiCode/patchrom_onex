@@ -133,7 +133,7 @@
 
     .line 176
     .local v6, c:Landroid/database/Cursor;
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_0
 
     .line 178
     :try_start_0
@@ -141,7 +141,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 179
     const/4 v0, 0x0
@@ -153,14 +153,19 @@
     move-result-object v5
 
     .line 181
-    :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     .line 184
-    :cond_1
+    :cond_0
+    :goto_0
     return-object v5
 
     .line 181
+    :cond_1
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
     :catchall_0
     move-exception v0
 
@@ -428,19 +433,20 @@
     .line 229
     .restart local v3       #sql:Ljava/lang/String;
     .restart local v6       #c:Landroid/database/Cursor;
+    .restart local v7       #com:Lcom/htc/opensense/plugin/PluginRegistryHelper$ServiceComponent;
     .restart local v8       #dataMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    :cond_2
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    goto :goto_1
+
+    .end local v7           #com:Lcom/htc/opensense/plugin/PluginRegistryHelper$ServiceComponent;
     :catchall_0
     move-exception v0
 
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     throw v0
-
-    .restart local v7       #com:Lcom/htc/opensense/plugin/PluginRegistryHelper$ServiceComponent;
-    :cond_2
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    goto :goto_1
 .end method
 
 .method public static getOpenSenseServices(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
@@ -751,7 +757,7 @@
 
     .line 63
     .local v6, c:Landroid/database/Cursor;
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_2
 
     .line 65
     :try_start_0
@@ -776,7 +782,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     .line 68
     add-int/lit8 v8, v9, 0x1
@@ -822,6 +828,18 @@
     .line 74
     .restart local v3       #sql:Ljava/lang/String;
     .restart local v6       #c:Landroid/database/Cursor;
+    .restart local v7       #components:[Landroid/content/ComponentName;
+    .restart local v9       #i:I
+    :cond_1
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 77
+    .end local v7           #components:[Landroid/content/ComponentName;
+    .end local v9           #i:I
+    :goto_2
+    return-object v7
+
+    .line 74
     :catchall_0
     move-exception v0
 
@@ -830,17 +848,8 @@
     throw v0
 
     .line 77
-    :cond_1
-    new-array v7, v11, [Landroid/content/ComponentName;
-
-    :goto_2
-    return-object v7
-
-    .line 74
-    .restart local v7       #components:[Landroid/content/ComponentName;
-    .restart local v9       #i:I
     :cond_2
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    new-array v7, v11, [Landroid/content/ComponentName;
 
     goto :goto_2
 .end method
@@ -1009,7 +1018,7 @@
 
     .line 125
     .local v12, c:Landroid/database/Cursor;
-    if-eqz v12, :cond_2
+    if-eqz v12, :cond_3
 
     .line 127
     :try_start_0
@@ -1111,7 +1120,7 @@
 
     .local v18, i:I
     :goto_1
-    if-ltz v18, :cond_3
+    if-ltz v18, :cond_2
 
     .line 139
     move/from16 v0, v18
@@ -1228,21 +1237,6 @@
     .line 159
     .restart local v4       #sql:Ljava/lang/String;
     .restart local v12       #c:Landroid/database/Cursor;
-    :catchall_0
-    move-exception v1
-
-    invoke-interface {v12}, Landroid/database/Cursor;->close()V
-
-    throw v1
-
-    .line 162
-    :cond_2
-    const/16 v24, 0x0
-
-    :goto_2
-    return-object v24
-
-    .line 159
     .restart local v13       #description:I
     .restart local v14       #feature_id:I
     .restart local v15       #feature_name:I
@@ -1255,8 +1249,36 @@
     .restart local v22       #plugin_meta:I
     .restart local v23       #plugin_version:I
     .restart local v24       #plugins:[Lcom/htc/opensense/plugin/Plugin;
-    :cond_3
+    :cond_2
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
+
+    .line 162
+    .end local v13           #description:I
+    .end local v14           #feature_id:I
+    .end local v15           #feature_name:I
+    .end local v16           #feature_type:I
+    .end local v17           #feature_version:I
+    .end local v18           #i:I
+    .end local v19           #package_name:I
+    .end local v20           #plugin_class:I
+    .end local v21           #plugin_id:I
+    .end local v22           #plugin_meta:I
+    .end local v23           #plugin_version:I
+    .end local v24           #plugins:[Lcom/htc/opensense/plugin/Plugin;
+    :goto_2
+    return-object v24
+
+    .line 159
+    :catchall_0
+    move-exception v1
+
+    invoke-interface {v12}, Landroid/database/Cursor;->close()V
+
+    throw v1
+
+    .line 162
+    :cond_3
+    const/16 v24, 0x0
 
     goto :goto_2
 .end method

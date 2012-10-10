@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 998
+    .line 1093
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$20;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1002
+    .line 1097
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$20;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -85,20 +85,20 @@
 
     if-nez v0, :cond_0
 
-    .line 1004
+    .line 1099
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$20;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$20;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->isSlowMotionMode()Z
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2100(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2300(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v1
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSlowMotionIndicator(Z)V
-    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$2400(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 1006
+    .line 1101
     :cond_0
     return-void
 .end method

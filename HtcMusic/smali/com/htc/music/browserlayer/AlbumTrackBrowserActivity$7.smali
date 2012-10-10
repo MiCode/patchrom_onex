@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1578
+    .line 1607
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$7;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +43,17 @@
     .parameter "which"
 
     .prologue
-    .line 1580
+    .line 1609
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1582
+    .line 1611
     packed-switch p2, :pswitch_data_0
 
-    .line 1590
+    .line 1619
     :goto_0
     return-void
 
-    .line 1584
+    .line 1613
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$7;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
@@ -79,20 +79,20 @@
     move-result-object v3
 
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->shareMusicText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    invoke-static {v0, v1, v2, v3}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2500(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1587
+    .line 1616
     :pswitch_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$7;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->shareMusicFile()V
-    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2500(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;)V
+    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2600(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;)V
 
     goto :goto_0
 
-    .line 1582
+    .line 1611
     nop
 
     :pswitch_data_0

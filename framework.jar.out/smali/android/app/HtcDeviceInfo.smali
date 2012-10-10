@@ -72,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 224
+    .line 230
     new-instance v0, Landroid/app/HtcDeviceInfo$1;
 
     invoke-direct {v0}, Landroid/app/HtcDeviceInfo$1;-><init>()V
@@ -91,7 +91,7 @@
     const-wide/16 v1, -0x1
 
     .line 20
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 23
     const-string v0, ""
@@ -127,7 +127,7 @@
     .line 32
     iput-wide v1, p0, Landroid/app/HtcDeviceInfo;->lastDeviceUseUpdateTime:J
 
-    .line 56
+    .line 58
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -142,10 +142,10 @@
     .parameter "path"
 
     .prologue
-    .line 273
+    .line 280
     const/4 v1, 0x0
 
-    .line 275
+    .line 282
     .local v1, input:Ljava/io/ObjectInputStream;
     :try_start_0
     new-instance v2, Ljava/io/ObjectInputStream;
@@ -159,7 +159,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 276
+    .line 283
     .end local v1           #input:Ljava/io/ObjectInputStream;
     .local v2, input:Ljava/io/ObjectInputStream;
     :try_start_1
@@ -172,10 +172,10 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 280
+    .line 287
     if-eqz v2, :cond_0
 
-    .line 282
+    .line 289
     :try_start_2
     invoke-virtual {v2}, Ljava/io/ObjectInputStream;->close()V
     :try_end_2
@@ -185,17 +185,17 @@
     :goto_0
     move-object v1, v2
 
-    .line 287
+    .line 294
     .end local v2           #input:Ljava/io/ObjectInputStream;
     .restart local v1       #input:Ljava/io/ObjectInputStream;
     :goto_1
     return-object v3
 
-    .line 277
+    .line 284
     :catch_0
     move-exception v0
 
-    .line 278
+    .line 285
     .local v0, e:Ljava/lang/Exception;
     :goto_2
     :try_start_3
@@ -227,23 +227,23 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 280
+    .line 287
     if-eqz v1, :cond_1
 
-    .line 282
+    .line 289
     :try_start_4
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 287
+    .line 294
     :cond_1
     :goto_3
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 280
+    .line 287
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -251,18 +251,18 @@
     :goto_4
     if-eqz v1, :cond_2
 
-    .line 282
+    .line 289
     :try_start_5
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 280
+    .line 287
     :cond_2
     :goto_5
     throw v3
 
-    .line 283
+    .line 290
     :catch_1
     move-exception v4
 
@@ -282,7 +282,7 @@
 
     goto :goto_0
 
-    .line 280
+    .line 287
     :catchall_1
     move-exception v3
 
@@ -292,7 +292,7 @@
     .restart local v1       #input:Ljava/io/ObjectInputStream;
     goto :goto_4
 
-    .line 277
+    .line 284
     .end local v1           #input:Ljava/io/ObjectInputStream;
     .restart local v2       #input:Ljava/io/ObjectInputStream;
     :catch_4
@@ -312,7 +312,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 178
+    .line 183
     iget v0, p1, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
 
     if-eq v0, v4, :cond_0
@@ -323,7 +323,7 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 179
+    .line 184
     :cond_0
     sget-object v0, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_APP_ACTIVE_TIME:Lcom/htc/utils/ulog/ULogTags;
 
@@ -337,7 +337,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
+    .line 189
     :cond_1
     :goto_0
     iget v0, p1, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
@@ -348,7 +348,7 @@
 
     if-lez v0, :cond_2
 
-    .line 185
+    .line 190
     sget-object v0, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_CRASH_NUM:Lcom/htc/utils/ulog/ULogTags;
 
     iget-object v1, p1, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
@@ -361,7 +361,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
+    .line 194
     :cond_2
     iget v0, p1, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
 
@@ -371,7 +371,7 @@
 
     if-lez v0, :cond_3
 
-    .line 190
+    .line 195
     sget-object v0, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_ANR_NUM:Lcom/htc/utils/ulog/ULogTags;
 
     iget-object v1, p1, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
@@ -384,17 +384,17 @@
 
     invoke-static {v0, v1, v2}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 194
+    .line 199
     :cond_3
     return-void
 
-    .line 180
+    .line 185
     :cond_4
     iget v0, p1, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
 
     if-nez v0, :cond_1
 
-    .line 181
+    .line 186
     sget-object v0, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_MARKETAPP_ACTIVE_TIME:Lcom/htc/utils/ulog/ULogTags;
 
     iget-object v1, p1, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
@@ -416,12 +416,12 @@
     .parameter "out"
 
     .prologue
-    .line 221
+    .line 227
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/app/HtcDeviceInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 222
+    .line 228
     return-void
 .end method
 
@@ -432,14 +432,14 @@
     .parameter "diffInfo"
 
     .prologue
-    .line 120
+    .line 124
     if-nez p1, :cond_1
 
-    .line 139
+    .line 144
     :cond_0
     return-void
 
-    .line 123
+    .line 127
     :cond_1
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
@@ -449,7 +449,7 @@
 
     iput-wide v4, p0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
-    .line 124
+    .line 128
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
     iget-wide v6, p1, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
@@ -458,7 +458,7 @@
 
     iput-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
-    .line 125
+    .line 129
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
     iget-wide v6, p1, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
@@ -467,7 +467,7 @@
 
     iput-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
-    .line 126
+    .line 130
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
     iget-wide v6, p1, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
@@ -476,14 +476,14 @@
 
     iput-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
-    .line 128
+    .line 132
     iget-object v4, p1, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v3
 
-    .line 129
+    .line 133
     .local v3, infos:Ljava/util/Collection;,"Ljava/util/Collection<Landroid/app/HtcDeviceInfo$ProcessInfo;>;"
     invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -503,7 +503,7 @@
 
     check-cast v2, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
-    .line 130
+    .line 134
     .local v2, info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     iget-object v4, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
@@ -515,11 +515,11 @@
 
     check-cast v0, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
-    .line 131
+    .line 135
     .local v0, currentProcressInfo:Landroid/app/HtcDeviceInfo$ProcessInfo;
     if-nez v0, :cond_2
 
-    .line 132
+    .line 136
     iget-object v4, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     iget-object v5, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
@@ -532,7 +532,7 @@
 
     goto :goto_0
 
-    .line 134
+    .line 138
     :cond_2
     iget-wide v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
@@ -542,7 +542,7 @@
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
-    .line 135
+    .line 139
     iget v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
     iget v5, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
@@ -551,7 +551,7 @@
 
     iput v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
-    .line 136
+    .line 140
     iget v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
     iget v5, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
@@ -560,6 +560,15 @@
 
     iput v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
+    .line 141
+    iget v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    iget v5, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    add-int/2addr v4, v5
+
+    iput v4, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
     goto :goto_0
 .end method
 
@@ -567,50 +576,50 @@
     .locals 7
 
     .prologue
-    .line 59
+    .line 61
     new-instance v0, Landroid/app/HtcDeviceInfo;
 
     invoke-direct {v0}, Landroid/app/HtcDeviceInfo;-><init>()V
 
-    .line 60
+    .line 62
     .local v0, deviceInfo:Landroid/app/HtcDeviceInfo;
     iget-object v4, p0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
     iput-object v4, v0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
-    .line 61
+    .line 63
     iget v4, p0, Landroid/app/HtcDeviceInfo;->simState:I
 
     iput v4, v0, Landroid/app/HtcDeviceInfo;->simState:I
 
-    .line 62
+    .line 64
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
-    .line 63
+    .line 65
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
-    .line 64
+    .line 66
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
-    .line 65
+    .line 67
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
-    .line 66
+    .line 68
     iget-object v4, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v3
 
-    .line 67
+    .line 69
     .local v3, infos:Ljava/util/Collection;,"Ljava/util/Collection<Landroid/app/HtcDeviceInfo$ProcessInfo;>;"
     invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -630,7 +639,7 @@
 
     check-cast v2, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
-    .line 68
+    .line 70
     .local v2, info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     iget-object v4, v0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
@@ -644,7 +653,7 @@
 
     goto :goto_0
 
-    .line 70
+    .line 72
     .end local v2           #info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     :cond_0
     return-object v0
@@ -671,7 +680,7 @@
     .locals 1
 
     .prologue
-    .line 197
+    .line 202
     const/4 v0, 0x0
 
     return v0
@@ -682,36 +691,36 @@
     .parameter "oldInfo"
 
     .prologue
-    .line 84
+    .line 86
     if-nez p1, :cond_1
 
-    .line 85
+    .line 87
     invoke-virtual {p0}, Landroid/app/HtcDeviceInfo;->clone()Landroid/app/HtcDeviceInfo;
 
     move-result-object v0
 
-    .line 116
+    .line 120
     :cond_0
     return-object v0
 
-    .line 87
+    .line 89
     :cond_1
     new-instance v0, Landroid/app/HtcDeviceInfo;
 
     invoke-direct {v0}, Landroid/app/HtcDeviceInfo;-><init>()V
 
-    .line 88
+    .line 90
     .local v0, diffInfo:Landroid/app/HtcDeviceInfo;
     iget-object v6, p0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
     iput-object v6, v0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
-    .line 89
+    .line 91
     iget v6, p0, Landroid/app/HtcDeviceInfo;->simState:I
 
     iput v6, v0, Landroid/app/HtcDeviceInfo;->simState:I
 
-    .line 90
+    .line 92
     iget-wide v6, p0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
     iget-wide v8, p1, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
@@ -720,7 +729,7 @@
 
     iput-wide v6, v0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
-    .line 91
+    .line 93
     iget-wide v6, p0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
     iget-wide v8, p1, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
@@ -729,7 +738,7 @@
 
     iput-wide v6, v0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
-    .line 92
+    .line 94
     iget-wide v6, p0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
     iget-wide v8, p1, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
@@ -738,7 +747,7 @@
 
     iput-wide v6, v0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
-    .line 93
+    .line 95
     iget-wide v6, p0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
     iget-wide v8, p1, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
@@ -747,14 +756,14 @@
 
     iput-wide v6, v0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
-    .line 95
+    .line 97
     iget-object v6, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v3
 
-    .line 96
+    .line 98
     .local v3, infos:Ljava/util/Collection;,"Ljava/util/Collection<Landroid/app/HtcDeviceInfo$ProcessInfo;>;"
     invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -775,7 +784,7 @@
 
     check-cast v2, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
-    .line 97
+    .line 99
     .local v2, info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     iget-object v6, p1, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
@@ -787,20 +796,20 @@
 
     check-cast v5, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
-    .line 98
+    .line 100
     .local v5, oldProcressInfo:Landroid/app/HtcDeviceInfo$ProcessInfo;
     const/4 v4, 0x0
 
-    .line 99
+    .line 101
     .local v4, newInfo:Landroid/app/HtcDeviceInfo$ProcessInfo;
     if-nez v5, :cond_3
 
-    .line 100
+    .line 102
     invoke-virtual {v2}, Landroid/app/HtcDeviceInfo$ProcessInfo;->clone()Landroid/app/HtcDeviceInfo$ProcessInfo;
 
     move-result-object v4
 
-    .line 114
+    .line 118
     :goto_1
     iget-object v6, v0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
@@ -810,7 +819,7 @@
 
     goto :goto_0
 
-    .line 102
+    .line 104
     :cond_3
     iget-wide v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
@@ -838,22 +847,30 @@
 
     sub-int/2addr v6, v7
 
+    if-nez v6, :cond_4
+
+    iget v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    iget v7, v5, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    sub-int/2addr v6, v7
+
     if-eqz v6, :cond_2
 
-    .line 105
+    .line 108
     :cond_4
     new-instance v4, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
     .end local v4           #newInfo:Landroid/app/HtcDeviceInfo$ProcessInfo;
     invoke-direct {v4}, Landroid/app/HtcDeviceInfo$ProcessInfo;-><init>()V
 
-    .line 106
+    .line 109
     .restart local v4       #newInfo:Landroid/app/HtcDeviceInfo$ProcessInfo;
     iget-object v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
 
     iput-object v6, v4, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
 
-    .line 107
+    .line 110
     iget-wide v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
     iget-wide v8, v5, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
@@ -862,7 +879,7 @@
 
     iput-wide v6, v4, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
-    .line 108
+    .line 111
     iget v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
     iget v7, v5, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
@@ -871,7 +888,7 @@
 
     iput v6, v4, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
-    .line 109
+    .line 112
     iget v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
     iget v7, v5, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
@@ -880,10 +897,19 @@
 
     iput v6, v4, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
-    .line 110
+    .line 113
     iget v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
 
     iput v6, v4, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
+
+    .line 114
+    iget v6, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    iget v7, v5, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    sub-int/2addr v6, v7
+
+    iput v6, v4, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
 
     goto :goto_1
 .end method
@@ -893,14 +919,14 @@
     .parameter "screenOffTimeOut"
 
     .prologue
-    .line 143
+    .line 148
     sget-object v3, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_CHANGE_LIST:Lcom/htc/utils/ulog/ULogTags;
 
     iget-object v4, p0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
     invoke-static {v3, v4}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;)V
 
-    .line 146
+    .line 151
     sget-object v3, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_SIM_STATE:Lcom/htc/utils/ulog/ULogTags;
 
     iget v4, p0, Landroid/app/HtcDeviceInfo;->simState:I
@@ -911,7 +937,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;)V
 
-    .line 149
+    .line 154
     sget-object v3, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_PROJECT_BRANCH:Lcom/htc/utils/ulog/ULogTags;
 
     const-string/jumbo v4, "ro.build.project"
@@ -924,7 +950,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;)V
 
-    .line 150
+    .line 155
     sget-object v3, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_DEVICE_ACTIVE_TIME:Lcom/htc/utils/ulog/ULogTags;
 
     const-string/jumbo v4, "ro.serialno"
@@ -943,7 +969,7 @@
 
     invoke-static {v3, v4, v5}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
+    .line 167
     sget-object v3, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_SCREEN_ON_TIME:Lcom/htc/utils/ulog/ULogTags;
 
     iget-wide v4, p0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
@@ -954,7 +980,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;)V
 
-    .line 164
+    .line 169
     const-string v3, "HtcDeviceInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -983,7 +1009,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
+    .line 171
     sget-object v3, Lcom/htc/utils/ulog/ULogTags;->FRAMEWORK_SCREENOFF_TIMEOUT:Lcom/htc/utils/ulog/ULogTags;
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -992,14 +1018,14 @@
 
     invoke-static {v3, v4}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogTags;Ljava/lang/String;)V
 
-    .line 170
+    .line 175
     iget-object v3, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v2
 
-    .line 171
+    .line 176
     .local v2, infos:Ljava/util/Collection;,"Ljava/util/Collection<Landroid/app/HtcDeviceInfo$ProcessInfo;>;"
     invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1019,13 +1045,13 @@
 
     check-cast v1, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
-    .line 172
+    .line 177
     .local v1, info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     invoke-direct {p0, v1}, Landroid/app/HtcDeviceInfo;->dumpToULog(Landroid/app/HtcDeviceInfo$ProcessInfo;)V
 
     goto :goto_0
 
-    .line 174
+    .line 179
     .end local v1           #info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     :cond_0
     const/4 v3, 0x1
@@ -1039,7 +1065,7 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 74
+    .line 76
     const-string/jumbo v0, "ro.build.changelist"
 
     const-string/jumbo v1, "unknown"
@@ -1050,29 +1076,29 @@
 
     iput-object v0, p0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
-    .line 75
+    .line 77
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/HtcDeviceInfo;->simState:I
 
-    .line 76
+    .line 78
     iput-wide v2, p0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
-    .line 77
+    .line 79
     iput-wide v2, p0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
-    .line 78
+    .line 80
     iput-wide v2, p0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
-    .line 79
+    .line 81
     iput-wide v2, p0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
-    .line 80
+    .line 82
     iget-object v0, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 81
+    .line 83
     return-void
 .end method
 
@@ -1081,10 +1107,10 @@
     .parameter "path"
 
     .prologue
-    .line 256
+    .line 263
     const/4 v1, 0x0
 
-    .line 258
+    .line 265
     .local v1, output:Ljava/io/ObjectOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/ObjectOutputStream;
@@ -1098,7 +1124,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 259
+    .line 266
     .end local v1           #output:Ljava/io/ObjectOutputStream;
     .local v2, output:Ljava/io/ObjectOutputStream;
     :try_start_1
@@ -1107,10 +1133,10 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 263
+    .line 270
     if-eqz v2, :cond_0
 
-    .line 265
+    .line 272
     :try_start_2
     invoke-virtual {v2}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_2
@@ -1120,18 +1146,18 @@
     :goto_0
     move-object v1, v2
 
-    .line 270
+    .line 277
     .end local v2           #output:Ljava/io/ObjectOutputStream;
     .restart local v1       #output:Ljava/io/ObjectOutputStream;
     :cond_1
     :goto_1
     return-void
 
-    .line 260
+    .line 267
     :catch_0
     move-exception v0
 
-    .line 261
+    .line 268
     .local v0, e:Ljava/lang/Exception;
     :goto_2
     :try_start_3
@@ -1163,10 +1189,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 263
+    .line 270
     if-eqz v1, :cond_1
 
-    .line 265
+    .line 272
     :try_start_4
     invoke-virtual {v1}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_4
@@ -1174,13 +1200,13 @@
 
     goto :goto_1
 
-    .line 266
+    .line 273
     :catch_1
     move-exception v3
 
     goto :goto_1
 
-    .line 263
+    .line 270
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -1188,18 +1214,18 @@
     :goto_3
     if-eqz v1, :cond_2
 
-    .line 265
+    .line 272
     :try_start_5
     invoke-virtual {v1}, Ljava/io/ObjectOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 263
+    .line 270
     :cond_2
     :goto_4
     throw v3
 
-    .line 266
+    .line 273
     :catch_2
     move-exception v4
 
@@ -1212,7 +1238,7 @@
 
     goto :goto_0
 
-    .line 263
+    .line 270
     :catchall_1
     move-exception v3
 
@@ -1222,7 +1248,7 @@
     .restart local v1       #output:Ljava/io/ObjectOutputStream;
     goto :goto_3
 
-    .line 260
+    .line 267
     .end local v1           #output:Ljava/io/ObjectOutputStream;
     .restart local v2       #output:Ljava/io/ObjectOutputStream;
     :catch_4
@@ -1241,37 +1267,37 @@
     .parameter "flags"
 
     .prologue
-    .line 201
+    .line 206
     iget-object v3, p0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 202
+    .line 207
     iget v3, p0, Landroid/app/HtcDeviceInfo;->simState:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 203
+    .line 208
     iget-wide v3, p0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 204
+    .line 209
     iget-wide v3, p0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 205
+    .line 210
     iget-wide v3, p0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 206
+    .line 211
     iget-wide v3, p0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 207
+    .line 212
     iget-object v3, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
@@ -1280,14 +1306,14 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 208
+    .line 213
     iget-object v3, p0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v2
 
-    .line 209
+    .line 214
     .local v2, infos:Ljava/util/Collection;,"Ljava/util/Collection<Landroid/app/HtcDeviceInfo$ProcessInfo;>;"
     invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1307,45 +1333,50 @@
 
     check-cast v1, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
-    .line 210
+    .line 215
     .local v1, info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     iget-object v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 211
+    .line 216
     iget-wide v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 212
+    .line 217
     iget-wide v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->lastCPUUpdateTime:J
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 213
+    .line 218
     iget v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 214
+    .line 219
     iget v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 215
+    .line 220
     iget v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->pid:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 216
+    .line 221
     iget v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
+
+    invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 222
+    iget v3, v1, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 218
+    .line 224
     .end local v1           #info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     :cond_0
     return-void

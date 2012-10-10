@@ -3,12 +3,12 @@
 .source "HTCCamera.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/android/camera/event/EventHandler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/HTCCamera;->onCameraThreadRunning()V
+    value = Lcom/android/camera/HTCCamera;->linkToCameraThread()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,15 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/HTCCamera;
 
+.field final synthetic val$uiHandler:Landroid/os/Handler;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/HTCCamera;)V
+.method constructor <init>(Lcom/android/camera/HTCCamera;Landroid/os/Handler;)V
     .locals 0
+    .parameter
     .parameter
 
     .prologue
-    .line 5931
+    .line 6112
     iput-object p1, p0, Lcom/android/camera/HTCCamera$19;->this$0:Lcom/android/camera/HTCCamera;
+
+    iput-object p2, p0, Lcom/android/camera/HTCCamera$19;->val$uiHandler:Landroid/os/Handler;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,16 +42,22 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+    .locals 2
+    .parameter "event"
+    .parameter "sender"
+    .parameter "e"
 
     .prologue
-    .line 5935
-    iget-object v0, p0, Lcom/android/camera/HTCCamera$19;->this$0:Lcom/android/camera/HTCCamera;
+    .line 6115
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$19;->val$uiHandler:Landroid/os/Handler;
 
-    #calls: Lcom/android/camera/HTCCamera;->linkToCameraThread()V
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$4000(Lcom/android/camera/HTCCamera;)V
+    new-instance v1, Lcom/android/camera/HTCCamera$19$1;
 
-    .line 5936
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/android/camera/HTCCamera$19$1;-><init>(Lcom/android/camera/HTCCamera$19;Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 6122
     return-void
 .end method

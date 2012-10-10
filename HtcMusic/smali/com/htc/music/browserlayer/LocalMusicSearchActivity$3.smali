@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 347
+    .line 360
     iput-object p1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$3;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 350
+    .line 363
     iget-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$3;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->getApplicationContext()Landroid/content/Context;
@@ -49,6 +49,6 @@
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
 
-    .line 351
+    .line 364
     return-void
 .end method

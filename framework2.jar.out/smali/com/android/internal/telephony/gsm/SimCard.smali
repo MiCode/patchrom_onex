@@ -15,10 +15,10 @@
 
     const/4 v3, 0x0
 
-    .line 69
+    .line 68
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/IccCard;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 70
+    .line 69
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -27,7 +27,7 @@
 
     invoke-interface {v0, v1, v4, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForSIMLockedOrAbsent(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 71
+    .line 70
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -38,14 +38,14 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForOffOrNotAvailable(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 74
+    .line 73
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->QMI_CONFIG()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 75
+    .line 74
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -54,11 +54,11 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForOn(Landroid/os/Handler;)V
 
-    .line 81
+    .line 80
     :goto_0
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SimCard;->updateStateProperty()V
 
-    .line 83
+    .line 82
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->getLteOnCdmaMode()I
@@ -67,7 +67,7 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 84
+    .line 83
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -76,15 +76,8 @@
 
     invoke-interface {v0, v1, v4, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForIccStatusChanged(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 88
+    .line 87
     :cond_0
-    invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->supportSimHotSwapFeature()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 89
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -95,12 +88,22 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForSIMHotSwap(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 93
-    :cond_1
+    .line 88
+    iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    iget-object v1, p0, Lcom/android/internal/telephony/IccCard;->mIccHotSwapHandler:Landroid/os/Handler;
+
+    const/16 v2, 0x3fa
+
+    invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForMdmRstSIMHotSwap(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    .line 91
     return-void
 
-    .line 77
-    :cond_2
+    .line 76
+    :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -166,7 +169,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 46
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -181,13 +184,6 @@
 
     .line 53
     :goto_0
-    invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->supportSimHotSwapFeature()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -198,18 +194,28 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForSIMHotSwap(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 58
-    :cond_0
+    .line 54
+    iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    iget-object v1, p0, Lcom/android/internal/telephony/IccCard;->mIccHotSwapHandler:Landroid/os/Handler;
+
+    const/16 v2, 0x3fa
+
+    invoke-interface {v0, v1, v2, v3}, Lcom/android/internal/telephony/CommandsInterface;->registerForMdmRstSIMHotSwap(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    .line 57
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SimCard;->updateStateProperty()V
 
-    .line 61
+    .line 60
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SimCard;->resetIccDetailStatus()V
 
-    .line 63
+    .line 62
     return-void
 
     .line 48
-    :cond_1
+    :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -227,10 +233,10 @@
     .locals 2
 
     .prologue
-    .line 97
+    .line 95
     invoke-super {p0}, Lcom/android/internal/telephony/IccCard;->dispose()V
 
-    .line 99
+    .line 97
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -239,7 +245,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForSIMLockedOrAbsent(Landroid/os/Handler;)V
 
-    .line 100
+    .line 98
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -248,7 +254,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForOffOrNotAvailable(Landroid/os/Handler;)V
 
-    .line 101
+    .line 99
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -257,7 +263,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForSIMReady(Landroid/os/Handler;)V
 
-    .line 103
+    .line 101
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->getLteOnCdmaMode()I
@@ -268,7 +274,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 104
+    .line 102
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -277,15 +283,8 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForIccStatusChanged(Landroid/os/Handler;)V
 
-    .line 108
+    .line 106
     :cond_0
-    invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->supportSimHotSwapFeature()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 109
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -294,8 +293,16 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForSIMHotSwap(Landroid/os/Handler;)V
 
-    .line 112
-    :cond_1
+    .line 107
+    iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+
+    iget-object v1, p0, Lcom/android/internal/telephony/IccCard;->mIccHotSwapHandler:Landroid/os/Handler;
+
+    invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForMdmRstSIMHotSwap(Landroid/os/Handler;)V
+
+    .line 109
     return-void
 .end method
 
@@ -303,7 +310,7 @@
     .locals 1
 
     .prologue
-    .line 121
+    .line 118
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mIccStatusInfo:[I
 
     return-object v0
@@ -313,7 +320,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 113
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mIccRecords:Lcom/android/internal/telephony/IccRecords;
@@ -329,12 +336,12 @@
     .locals 3
 
     .prologue
-    .line 147
+    .line 144
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     check-cast v0, Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    .line 148
+    .line 145
     .local v0, gsmPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SimCard;->getIccCardState()Lcom/android/internal/telephony/IccCard$State;
 
@@ -348,20 +355,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 149
+    .line 146
     iget-object v1, v0, Lcom/android/internal/telephony/gsm/GSMPhone;->mHtcIsimRecords:Lcom/android/internal/telephony/ims/HtcIsimRecords;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/ims/HtcIsimRecords;->clearISimRecords()V
 
-    .line 150
+    .line 147
     iget-object v1, v0, Lcom/android/internal/telephony/gsm/GSMPhone;->mHtcIsimRecords:Lcom/android/internal/telephony/ims/HtcIsimRecords;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/ims/HtcIsimRecords;->fetchISimRecords()V
 
-    .line 151
+    .line 148
     const/4 v1, 0x1
 
-    .line 153
+    .line 150
     :goto_0
     return v1
 
@@ -375,16 +382,16 @@
     .locals 3
 
     .prologue
-    .line 128
+    .line 125
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     check-cast v0, Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    .line 129
+    .line 126
     .local v0, gsmPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
     invoke-super {p0}, Lcom/android/internal/telephony/IccCard;->updateStateProperty()V
 
-    .line 131
+    .line 128
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SimCard;->getIccCardState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v1
@@ -397,31 +404,31 @@
 
     if-eqz v1, :cond_0
 
-    .line 132
+    .line 129
     iget-object v1, v0, Lcom/android/internal/telephony/gsm/GSMPhone;->mHtcIsimRecords:Lcom/android/internal/telephony/ims/HtcIsimRecords;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/ims/HtcIsimRecords;->fetchISimRecords()V
 
-    .line 134
+    .line 131
     :cond_0
     return-void
 .end method
 
-.method protected updateStateProperty(Lcom/android/internal/telephony/IccCard$State;)V
+.method public updateStateProperty(Lcom/android/internal/telephony/IccCard$State;)V
     .locals 3
     .parameter "iccState"
 
     .prologue
-    .line 137
+    .line 134
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     check-cast v0, Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    .line 138
+    .line 135
     .local v0, gsmPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
     invoke-super {p0, p1}, Lcom/android/internal/telephony/IccCard;->updateStateProperty(Lcom/android/internal/telephony/IccCard$State;)V
 
-    .line 141
+    .line 138
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/SimCard;->getIccCardState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v1
@@ -434,12 +441,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 142
+    .line 139
     iget-object v1, v0, Lcom/android/internal/telephony/gsm/GSMPhone;->mHtcIsimRecords:Lcom/android/internal/telephony/ims/HtcIsimRecords;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/ims/HtcIsimRecords;->fetchISimRecords()V
 
-    .line 144
+    .line 141
     :cond_0
     return-void
 .end method

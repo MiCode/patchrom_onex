@@ -81,7 +81,7 @@
 
     const/4 v3, 0x0
 
-    .line 456
+    .line 512
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
@@ -138,7 +138,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$AllContacts;->PROJECTION:[Ljava/lang/String;
 
-    .line 480
+    .line 547
     const/16 v0, 0xb
 
     new-array v0, v0, [Ljava/lang/String;
@@ -195,7 +195,7 @@
 
     const/16 v1, 0xa
 
-    const-string/jumbo v2, "kind"
+    const-string v2, "kind"
 
     aput-object v2, v0, v1
 
@@ -208,7 +208,7 @@
     .locals 0
 
     .prologue
-    .line 442
+    .line 486
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

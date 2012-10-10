@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 283
+    .line 285
     iput-object p1, p0, Lcom/android/camera/component/HdrController$5;->this$0:Lcom/android/camera/component/HdrController;
 
     iput-object p2, p0, Lcom/android/camera/component/HdrController$5;->val$cameraThread:Lcom/android/camera/CameraThread;
@@ -50,7 +50,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 287
+    .line 289
     iget-object v0, p0, Lcom/android/camera/component/HdrController$5;->this$0:Lcom/android/camera/component/HdrController;
 
     #getter for: Lcom/android/camera/component/HdrController;->m_HdrUI:Lcom/android/camera/component/HdrUI;
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 288
+    .line 290
     iget-object v0, p0, Lcom/android/camera/component/HdrController$5;->this$0:Lcom/android/camera/component/HdrController;
 
     iget-object v1, p0, Lcom/android/camera/component/HdrController$5;->this$0:Lcom/android/camera/component/HdrController;
@@ -78,30 +78,30 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/component/HdrController;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;)Z
 
-    .line 293
+    .line 295
     :goto_0
     sget-object v0, Lcom/android/camera/TIME;->JpegCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v0}, Lcom/android/camera/TIME$Value;->End()V
 
-    .line 294
+    .line 296
     sget-object v0, Lcom/android/camera/TIME;->StoreJpegImage:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v0}, Lcom/android/camera/TIME$Value;->Start()V
 
-    .line 297
+    .line 299
     iget-object v0, p0, Lcom/android/camera/component/HdrController$5;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->endTakePicture()V
 
-    .line 300
+    .line 302
     new-instance v6, Lcom/android/camera/imaging/SaveImageTask;
 
     iget-object v0, p0, Lcom/android/camera/component/HdrController$5;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-direct {v6, v0, p1}, Lcom/android/camera/imaging/SaveImageTask;-><init>(Lcom/android/camera/CameraThread;[B)V
 
-    .line 301
+    .line 303
     .local v6, task:Lcom/android/camera/imaging/SaveImageTask;
     iget-object v0, p0, Lcom/android/camera/component/HdrController$5;->val$cameraThread:Lcom/android/camera/CameraThread;
 
@@ -111,15 +111,15 @@
 
     iput-wide v0, v6, Lcom/android/camera/imaging/SaveImageTask;->captureID:J
 
-    .line 302
+    .line 304
     iget-object v0, p0, Lcom/android/camera/component/HdrController$5;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0, v6}, Lcom/android/camera/CameraThread;->saveImage(Lcom/android/camera/imaging/SaveImageTask;)V
 
-    .line 303
+    .line 305
     return-void
 
-    .line 290
+    .line 292
     .end local v6           #task:Lcom/android/camera/imaging/SaveImageTask;
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/HdrController$5;->this$0:Lcom/android/camera/component/HdrController;

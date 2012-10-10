@@ -22,8 +22,8 @@
     .locals 2
 
     .prologue
-    .line 417
-    const-string v0, "attachment;\\s*filename\\s*=\\s*(\"?)([^\"\\s;]*)\\1\\s*;*"
+    .line 421
+    const-string v0, "attachment;\\s*filename\\s*=\\s*(\"?)([^\";]*)\\1\\s*;*"
 
     const/4 v1, 0x2
 
@@ -663,7 +663,7 @@
     if-nez v3, :cond_0
 
     .line 59
-    const-string/jumbo v3, "javascript:"
+    const-string v3, "javascript:"
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -975,7 +975,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "http://"
+    const-string v2, "http://"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1013,7 +1013,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "https://"
+    const-string v2, "https://"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1035,7 +1035,7 @@
     .line 221
     if-eqz p0, :cond_0
 
-    const-string/jumbo v0, "javascript:"
+    const-string v0, "javascript:"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1202,7 +1202,7 @@
     .parameter "contentDisposition"
 
     .prologue
-    .line 433
+    .line 438
     :try_start_0
     sget-object v1, Landroid/webkit/URLUtil;->CONTENT_DISPOSITION_PATTERN:Ljava/util/regex/Pattern;
 
@@ -1210,7 +1210,7 @@
 
     move-result-object v0
 
-    .line 434
+    .line 439
     .local v0, m:Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1218,7 +1218,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 435
+    .line 440
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -1227,16 +1227,16 @@
 
     move-result-object v1
 
-    .line 440
+    .line 445
     .end local v0           #m:Ljava/util/regex/Matcher;
     :goto_0
     return-object v1
 
-    .line 437
+    .line 442
     :catch_0
     move-exception v1
 
-    .line 440
+    .line 445
     :cond_0
     const/4 v1, 0x0
 

@@ -23,7 +23,7 @@
     .locals 1
 
     .prologue
-    .line 3004
+    .line 3007
     const-string v0, "content://gsmapn/carriers"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -39,7 +39,7 @@
     .locals 0
 
     .prologue
-    .line 3000
+    .line 3003
     invoke-direct {p0}, Landroid/provider/Telephony$Carriers;-><init>()V
 
     return-void

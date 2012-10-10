@@ -59,16 +59,16 @@
     .prologue
     const-wide/16 v0, -0x1
 
-    .line 187
+    .line 188
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 197
+    .line 198
     iput-wide v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
-    .line 198
+    .line 199
     iput-wide v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mTotal:J
 
-    .line 204
+    .line 205
     const/4 v0, 0x7
 
     iput v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPlayState:I

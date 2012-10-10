@@ -2633,7 +2633,7 @@
 
     .line 326
     :cond_1
-    const-string v6, "zh"
+    const-string/jumbo v6, "zh"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

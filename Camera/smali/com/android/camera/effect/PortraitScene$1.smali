@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 21
+    .line 19
     iput-object p1, p0, Lcom/android/camera/effect/PortraitScene$1;->this$0:Lcom/android/camera/effect/PortraitScene;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 25
+    .line 23
     iget-object v1, p0, Lcom/android/camera/effect/PortraitScene$1;->this$0:Lcom/android/camera/effect/PortraitScene;
 
     invoke-virtual {v1}, Lcom/android/camera/effect/PortraitScene;->getCameraThread()Lcom/android/camera/CameraThread;
@@ -52,21 +52,21 @@
 
     move-result-object v0
 
-    .line 26
+    .line 24
     .local v0, controller:Lcom/android/camera/CameraController;
     if-eqz v0, :cond_0
 
-    .line 27
+    .line 25
     const-string v1, "ola-bs-options"
 
     const-string v2, "134"
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/CameraController;->setCameraParameter(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
+    .line 26
     invoke-virtual {v0}, Lcom/android/camera/CameraController;->doSetCameraParameters()V
 
-    .line 30
+    .line 28
     :cond_0
     return-void
 .end method

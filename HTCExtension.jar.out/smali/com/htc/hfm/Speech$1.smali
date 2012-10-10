@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 88
+    .line 77
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +45,18 @@
     .parameter "source"
 
     .prologue
-    .line 91
+    .line 80
     new-instance v0, Lcom/htc/hfm/Speech;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/htc/hfm/Speech;-><init>(Lcom/htc/hfm/Speech$1;)V
 
-    .line 92
+    .line 81
     .local v0, s:Lcom/htc/hfm/Speech;
     invoke-virtual {v0, p1}, Lcom/htc/hfm/Speech;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 93
+    .line 82
     return-object v0
 .end method
 
@@ -65,7 +65,7 @@
     .parameter "x0"
 
     .prologue
-    .line 88
+    .line 77
     invoke-virtual {p0, p1}, Lcom/htc/hfm/Speech$1;->createFromParcel(Landroid/os/Parcel;)Lcom/htc/hfm/Speech;
 
     move-result-object v0
@@ -78,7 +78,7 @@
     .parameter "size"
 
     .prologue
-    .line 98
+    .line 87
     new-array v0, p1, [Lcom/htc/hfm/Speech;
 
     return-object v0
@@ -89,7 +89,7 @@
     .parameter "x0"
 
     .prologue
-    .line 88
+    .line 77
     invoke-virtual {p0, p1}, Lcom/htc/hfm/Speech$1;->newArray(I)[Lcom/htc/hfm/Speech;
 
     move-result-object v0

@@ -33,21 +33,21 @@
     .parameter "p"
 
     .prologue
-    .line 2847
+    .line 2846
     iput-object p1, p0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;->this$0:Lcom/htc/painting/engine/HtcPaintingView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2848
+    .line 2847
     iput-object p3, p0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;->mViewPort:Lcom/htc/painting/engine/ViewPort;
 
-    .line 2849
+    .line 2848
     iput-object p2, p0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;->mRegion:Landroid/graphics/RectF;
 
-    .line 2850
+    .line 2849
     iput-object p4, p0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;->mPaint:Landroid/graphics/Paint;
 
-    .line 2851
+    .line 2850
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .locals 1
 
     .prologue
-    .line 2858
+    .line 2857
     iget-object v0, p0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;->mPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -67,14 +67,14 @@
     .locals 2
 
     .prologue
-    .line 2853
+    .line 2852
     new-instance v0, Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;->mRegion:Landroid/graphics/RectF;
 
     invoke-direct {v0, v1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
 
-    .line 2854
+    .line 2853
     .local v0, result:Landroid/graphics/RectF;
     iget-object v1, p0, Lcom/htc/painting/engine/HtcPaintingView$HighlightData;->mViewPort:Lcom/htc/painting/engine/ViewPort;
 
@@ -84,6 +84,6 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 2855
+    .line 2854
     return-object v0
 .end method

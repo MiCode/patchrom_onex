@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3095
+    .line 3191
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$2;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/PhoneWindow$2;->val$needsMenuKey:Z
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 3098
+    .line 3194
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$2;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
@@ -56,26 +56,26 @@
 
     if-nez v1, :cond_1
 
-    .line 3099
+    .line 3195
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$2;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$2;->val$needsMenuKey:Z
 
     #calls: Lcom/android/internal/policy/impl/PhoneWindow;->showNavigationBarTips(Z)V
-    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/PhoneWindow;->access$1600(Lcom/android/internal/policy/impl/PhoneWindow;Z)V
+    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/PhoneWindow;->access$1800(Lcom/android/internal/policy/impl/PhoneWindow;Z)V
 
-    .line 3106
+    .line 3202
     :cond_0
     :goto_0
     return-void
 
-    .line 3100
+    .line 3196
     :cond_1
     sget-boolean v1, Lcom/android/internal/policy/impl/PhoneWindow;->DEBUG_NAV_BAR:Z
 
     if-eqz v1, :cond_0
 
-    .line 3101
+    .line 3197
     const-string v1, "PhoneWindow"
 
     const-string v2, "showNavigationBarTips, ignore since window is destroyed"
@@ -86,11 +86,11 @@
 
     goto :goto_0
 
-    .line 3103
+    .line 3199
     :catch_0
     move-exception v0
 
-    .line 3104
+    .line 3200
     .local v0, ex:Ljava/lang/Exception;
     sget-boolean v1, Lcom/android/internal/policy/impl/PhoneWindow;->DEBUG_NAV_BAR:Z
 

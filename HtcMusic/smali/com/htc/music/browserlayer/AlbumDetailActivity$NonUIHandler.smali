@@ -47,13 +47,13 @@
     .parameter "looper"
 
     .prologue
-    .line 1320
+    .line 1367
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    .line 1321
+    .line 1368
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1323
+    .line 1370
     const-string v0, "[AlbumDetailActivity]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +76,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1324
+    .line 1371
     return-void
 .end method
 
@@ -90,14 +90,14 @@
 
     const/4 v11, 0x1
 
-    .line 1550
+    .line 1625
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     invoke-virtual {v9}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    .line 1552
+    .line 1627
     .local v6, resolver:Landroid/content/ContentResolver;
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
@@ -105,39 +105,39 @@
 
     move-result v7
 
-    .line 1553
+    .line 1628
     .local v7, status:I
     const/4 v9, -0x1
 
     if-ne v7, v9, :cond_0
 
-    .line 1554
+    .line 1629
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     invoke-virtual {v9, v11}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->showDialog(I)V
 
-    .line 1588
+    .line 1663
     :goto_0
     return-void
 
-    .line 1555
+    .line 1630
     :cond_0
     if-nez v7, :cond_3
 
-    .line 1556
+    .line 1631
     const/4 v4, 0x0
 
-    .line 1557
+    .line 1632
     .local v4, msg:Ljava/lang/String;
     invoke-static {v6, p1, v11}, Landroid/provider/DrmStore;->getDrmConstraint(Landroid/content/ContentResolver;Landroid/net/Uri;I)Landroid/provider/DrmStore$DrmConstraint;
 
     move-result-object v0
 
-    .line 1559
+    .line 1634
     .local v0, drmConstraint:Landroid/provider/DrmStore$DrmConstraint;
     if-nez v0, :cond_1
 
-    .line 1560
+    .line 1635
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     iget-object v10, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
@@ -160,7 +160,7 @@
 
     goto :goto_0
 
-    .line 1562
+    .line 1637
     :cond_1
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
@@ -171,22 +171,22 @@
     move-result-object v10
 
     #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mMsg:Ljava/lang/CharSequence;
-    invoke-static {v9, v10}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2902(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v9, v10}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3202(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 1563
+    .line 1638
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mMsg:Ljava/lang/CharSequence;
-    invoke-static {v9}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2900(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/CharSequence;
+    invoke-static {v9}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/CharSequence;
 
     move-result-object v9
 
     if-eqz v9, :cond_2
 
-    .line 1564
+    .line 1639
     move v5, p2
 
-    .line 1565
+    .line 1640
     .local v5, pos:I
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
@@ -196,7 +196,7 @@
 
     goto :goto_0
 
-    .line 1567
+    .line 1642
     .end local v5           #pos:I
     :cond_2
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
@@ -221,7 +221,7 @@
 
     goto :goto_0
 
-    .line 1574
+    .line 1649
     .end local v0           #drmConstraint:Landroid/provider/DrmStore$DrmConstraint;
     .end local v4           #msg:Ljava/lang/String;
     :cond_3
@@ -229,7 +229,7 @@
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1575
+    .line 1650
     .local v3, intent:Landroid/content/Intent;
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
@@ -237,12 +237,12 @@
 
     invoke-virtual {v3, v9, v10}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 1576
+    .line 1651
     const-string v9, "drmtargettomain"
 
     invoke-virtual {v3, v9, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1578
+    .line 1653
     :try_start_0
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
@@ -257,7 +257,7 @@
 
     move-result v2
 
-    .line 1580
+    .line 1655
     .local v2, id_idx:I
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
@@ -270,7 +270,7 @@
 
     move-result-object v8
 
-    .line 1581
+    .line 1656
     .local v8, trackId:Ljava/lang/String;
     const-string v9, "track"
 
@@ -278,7 +278,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1586
+    .line 1661
     .end local v2           #id_idx:I
     :goto_1
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
@@ -289,12 +289,12 @@
 
     goto :goto_0
 
-    .line 1582
+    .line 1657
     .end local v8           #trackId:Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 1583
+    .line 1658
     .local v1, e:Ljava/lang/Exception;
     iget-object v9, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
@@ -320,7 +320,7 @@
 
     move-result-object v8
 
-    .line 1584
+    .line 1659
     .restart local v8       #trackId:Ljava/lang/String;
     const-string v9, "track"
 
@@ -329,156 +329,205 @@
     goto :goto_1
 .end method
 
-.method private decodeHeaderArtCover(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 7
+.method private decodeHeaderArtCover(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 8
     .parameter "albumArtPath"
     .parameter "albumName"
+    .parameter "albumId"
     .parameter "coverResID"
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    .line 1530
-    iget-object v4, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    .line 1600
+    iget-object v5, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    invoke-virtual {v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v5}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 1532
-    .local v1, resources:Landroid/content/res/Resources;
-    const/4 v2, 0x0
+    .line 1602
+    .local v2, resources:Landroid/content/res/Resources;
+    const/4 v3, 0x0
 
-    .line 1534
-    .local v2, tempAlbumArt:Landroid/graphics/Bitmap;
+    .line 1603
+    .local v3, tempAlbumArt:Landroid/graphics/Bitmap;
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_0
+    if-eqz v5, :cond_0
 
-    if-eqz p2, :cond_0
+    iget-object v5, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
+    #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->isUnknownAlbum(Ljava/lang/String;)Z
+    invoke-static {v5, p2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2800(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Z
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_0
+    if-nez v5, :cond_0
 
-    const-string v4, "<unknown>"
+    .line 1605
+    const-string v5, "[AlbumDetailActivity]"
 
-    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-result v4
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez v4, :cond_0
+    const-string v7, "Decode file: "
 
-    .line 1536
-    const-string v4, "[AlbumDetailActivity]"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "Decode file: "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1537
-    new-instance v0, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    .line 1538
-    .local v0, option:Landroid/graphics/BitmapFactory$Options;
-    iput v3, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    .line 1539
-    iput-boolean v3, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    .line 1540
-    const v4, 0x7f02003e
-
-    invoke-static {v1, v4, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    .line 1541
-    iget v4, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    iget v5, v0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    invoke-static {p1, v4, v5}, Lcom/htc/music/util/MusicUtils;->getAlbumArtBitmap(Ljava/lang/String;II)Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    .line 1544
-    .end local v0           #option:Landroid/graphics/BitmapFactory$Options;
-    :cond_0
-    const-string v4, "[AlbumDetailActivity]"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "Going to notify UI: mAlbumArt="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArt:Landroid/graphics/Bitmap;
-    invoke-static {v6}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1700(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/graphics/Bitmap;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    if-nez v6, :cond_1
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1606
+    new-instance v1, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    .line 1607
+    .local v1, option:Landroid/graphics/BitmapFactory$Options;
+    iput v4, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    .line 1608
+    iput-boolean v4, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    .line 1609
+    const v5, 0x7f02003e
+
+    invoke-static {v2, v5, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    .line 1610
+    iget v5, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v6, v1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    invoke-static {p1, v5, v6}, Lcom/htc/music/util/MusicUtils;->getAlbumArtBitmap(Ljava/lang/String;II)Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    .line 1611
+    if-nez v3, :cond_0
+
+    if-eqz p3, :cond_0
+
+    .line 1612
+    const-string v5, "[AlbumDetailActivity]"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Decode file fail, decode by albumId : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1613
+    invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 1614
+    .local v0, id:I
+    const/4 v5, -0x1
+
+    if-le v0, v5, :cond_0
+
+    .line 1615
+    iget-object v5, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    invoke-virtual {v5}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    iget v6, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v7, v1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    invoke-static {v5, v0, v6, v7}, Lcom/htc/music/util/MusicUtils;->getArtworkQuick(Landroid/content/Context;III)Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    .line 1619
+    .end local v0           #id:I
+    .end local v1           #option:Landroid/graphics/BitmapFactory$Options;
+    :cond_0
+    const-string v5, "[AlbumDetailActivity]"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Going to notify UI: mAlbumArt="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArt:Landroid/graphics/Bitmap;
+    invoke-static {v7}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1700(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/graphics/Bitmap;
+
+    move-result-object v7
+
+    if-nez v7, :cond_1
 
     :goto_0
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v4, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1546
-    iget-object v3, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    .line 1621
+    iget-object v4, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+    invoke-static {v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->updateAlbumArt(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v4, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->updateAlbumArt(Landroid/graphics/Bitmap;)V
 
-    .line 1547
+    .line 1622
     return-void
 
-    .line 1544
+    .line 1619
     :cond_1
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     goto :goto_0
 .end method
@@ -491,28 +540,28 @@
     .parameter "playlistId"
 
     .prologue
-    .line 1361
+    .line 1408
     const/4 v1, 0x7
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1362
+    .line 1409
     .local v0, msg:Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1363
+    .line 1410
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1364
+    .line 1411
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1365
+    .line 1412
     return-void
 .end method
 
@@ -522,32 +571,32 @@
     .parameter "albumName"
 
     .prologue
-    .line 1335
+    .line 1382
     const/4 v2, 0x2
 
     invoke-virtual {p0, v2, p1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1336
+    .line 1383
     .local v1, msg:Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1337
+    .line 1384
     .local v0, data:Landroid/os/Bundle;
     const-string v2, "ALBUM_NAME"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1338
+    .line 1385
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 1339
+    .line 1386
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1340
+    .line 1387
     return-void
 .end method
 
@@ -565,7 +614,7 @@
     .end annotation
 
     .prologue
-    .line 1357
+    .line 1404
     .local p1, contactList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v0, 0x6
 
@@ -575,349 +624,352 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1358
+    .line 1405
     return-void
 .end method
 
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 22
+    .locals 25
     .parameter "msg"
 
     .prologue
-    .line 1373
-    const-string v1, "[AlbumDetailActivity]"
+    .line 1420
+    const-string v2, "[AlbumDetailActivity]"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "<<< NonUIHandler >>>>> + msg.what = "
+    const-string v4, "<<< NonUIHandler >>>>> + msg.what = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
     move-object/from16 v0, p1
 
-    iget v3, v0, Landroid/os/Message;->what:I
+    iget v4, v0, Landroid/os/Message;->what:I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1375
+    .line 1422
     move-object/from16 v0, p1
 
-    iget v1, v0, Landroid/os/Message;->what:I
+    iget v2, v0, Landroid/os/Message;->what:I
 
-    packed-switch v1, :pswitch_data_0
+    packed-switch v2, :pswitch_data_0
 
-    .line 1527
+    .line 1597
     :cond_0
     :goto_0
     return-void
 
-    .line 1377
+    .line 1424
     :pswitch_0
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->increaseQueryingCount()V
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1900(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1900(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
 
-    .line 1378
-    const-string v1, "[AlbumDetailActivity]"
+    .line 1425
+    const-string v2, "[AlbumDetailActivity]"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "[NonUIHandler.handleMessage][QUERY_ALBUM_INFO] msg.obj="
+    const-string v4, "[NonUIHandler.handleMessage][QUERY_ALBUM_INFO] msg.obj="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p1
+
+    iget-object v4, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1426
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mDbTable:I
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2000(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_1
+
+    .line 1427
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAsyncQueryHandler:Landroid/content/AsyncQueryHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/content/AsyncQueryHandler;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    sget-object v5, Lcom/htc/music/util/MusicUtils$Albums2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-static {}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2100()[Ljava/lang/String;
+
+    move-result-object v6
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "_id="
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    move-object/from16 v0, p1
+
+    iget-object v8, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-virtual/range {v2 .. v9}, Landroid/content/AsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 1430
+    :cond_1
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAsyncQueryHandler:Landroid/content/AsyncQueryHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/content/AsyncQueryHandler;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    sget-object v5, Landroid/provider/MediaStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-static {}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2100()[Ljava/lang/String;
+
+    move-result-object v6
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "_id="
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    move-object/from16 v0, p1
+
+    iget-object v8, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-virtual/range {v2 .. v9}, Landroid/content/AsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 1435
+    :pswitch_1
+    new-instance v24, Ljava/lang/StringBuilder;
+
+    const-string v2, "title"
+
+    move-object/from16 v0, v24
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1436
+    .local v24, where:Ljava/lang/StringBuilder;
+    const-string v2, " != \'\'"
+
+    move-object/from16 v0, v24
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " AND "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    move-object/from16 v0, p1
+    const-string v3, "album_id"
 
-    iget-object v3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v3, "=\'"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1379
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAsyncQueryHandler:Landroid/content/AsyncQueryHandler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2100(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/content/AsyncQueryHandler;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    sget-object v4, Landroid/provider/MediaStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
-
-    invoke-static {}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2000()[Ljava/lang/String;
-
-    move-result-object v5
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "_id="
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    move-object/from16 v0, p1
-
-    iget-object v7, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v1 .. v8}, Landroid/content/AsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 1383
-    :pswitch_1
-    new-instance v21, Ljava/lang/StringBuilder;
-
-    const-string v1, "title"
-
-    move-object/from16 v0, v21
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 1384
-    .local v21, where:Ljava/lang/StringBuilder;
-    const-string v1, " != \'\'"
-
-    move-object/from16 v0, v21
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " AND "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "album_id"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "=\'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumId:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "\'"
 
-    move-result-object v1
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "\'"
+    move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, " AND is_music>=1"
 
-    move-result-object v1
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, " AND is_music>=1"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1387
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistId:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 1388
-    const-string v1, " AND "
-
-    move-object/from16 v0, v21
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "artist_id"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
+    .line 1439
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistId:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_2
 
-    .line 1391
-    :cond_1
-    sget-object v4, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    .line 1440
+    const-string v2, " AND "
 
-    .line 1392
-    .local v4, uri:Landroid/net/Uri;
+    move-object/from16 v0, v24
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "artist_id"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mGenre:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistId:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    if-eqz v1, :cond_4
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1393
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mGenre:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    int-to-long v13, v1
-
-    .line 1394
-    .local v13, genreId:J
-    const-wide/16 v1, -0x1
-
-    cmp-long v1, v13, v1
-
-    if-nez v1, :cond_3
-
-    .line 1395
-    const-string v1, " AND _id NOT IN (SELECT audio_id FROM audio_genres_map)"
-
-    move-object/from16 v0, v21
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1412
-    .end local v13           #genreId:J
+    .line 1443
     :cond_2
+    const/4 v5, 0x0
+
+    .line 1444
+    .local v5, uri:Landroid/net/Uri;
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mDbTable:I
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2000(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_4
+
+    .line 1445
+    sget-object v5, Lcom/htc/music/util/MusicUtils$Media2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    .line 1449
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->increaseQueryingCount()V
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1900(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mGenre:Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
-    .line 1413
-    move-object/from16 v0, p0
+    move-result-object v2
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    if-eqz v2, :cond_6
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAsyncQueryHandler:Landroid/content/AsyncQueryHandler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2100(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/content/AsyncQueryHandler;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-static {}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2600()[Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual/range {v21 .. v21}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    const-string v8, "track"
-
-    invoke-virtual/range {v1 .. v8}, Landroid/content/AsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 1397
-    .restart local v13       #genreId:J
-    :cond_3
-    const-string v1, "external"
-
+    .line 1450
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mGenre:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -929,905 +981,1064 @@
 
     move-result v2
 
-    int-to-long v2, v2
+    int-to-long v0, v2
 
-    invoke-static {v1, v2, v3}, Landroid/provider/MediaStore$Audio$Genres$Members;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
+    move-wide/from16 v16, v0
 
-    move-result-object v4
+    .line 1451
+    .local v16, genreId:J
+    const-wide/16 v2, -0x1
 
-    goto :goto_1
+    cmp-long v2, v16, v2
 
-    .line 1399
-    .end local v13           #genreId:J
-    :cond_4
+    if-nez v2, :cond_5
+
+    .line 1452
+    const-string v2, " AND _id NOT IN (SELECT audio_id FROM audio_genres_map)"
+
+    move-object/from16 v0, v24
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1469
+    .end local v16           #genreId:J
+    :cond_3
+    :goto_2
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mComposer:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->increaseQueryingCount()V
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1900(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
 
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    .line 1400
+    .line 1470
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mComposer:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAsyncQueryHandler:Landroid/content/AsyncQueryHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/content/AsyncQueryHandler;
 
-    move-result-object v10
+    move-result-object v2
 
-    .line 1401
-    .local v10, composer:Ljava/lang/String;
-    invoke-static {v10}, Lcom/htc/music/util/MusicUtils;->isUnknownComposer(Ljava/lang/String;)Z
+    const/4 v3, 0x1
 
-    move-result v20
+    const/4 v4, 0x0
 
-    .line 1402
-    .local v20, unknown:Z
-    if-eqz v20, :cond_5
+    invoke-static {}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2700()[Ljava/lang/String;
 
-    .line 1403
-    const-string v1, " AND "
+    move-result-object v6
 
-    move-object/from16 v0, v21
+    invoke-virtual/range {v24 .. v24}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    .line 1404
-    invoke-static/range {v21 .. v21}, Lcom/htc/music/util/MusicUtils;->appendUnknownComposerFilter(Ljava/lang/StringBuilder;)V
+    const/4 v8, 0x0
 
-    goto :goto_1
+    const-string v9, "track"
 
-    .line 1406
-    :cond_5
-    const-string v1, "\'"
-
-    const-string v2, "\'\'"
-
-    invoke-virtual {v10, v1, v2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v10
-
-    .line 1407
-    const-string v1, " AND "
-
-    move-object/from16 v0, v21
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "composer"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "\'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "\'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_1
-
-    .line 1417
-    .end local v4           #uri:Landroid/net/Uri;
-    .end local v10           #composer:Ljava/lang/String;
-    .end local v20           #unknown:Z
-    .end local v21           #where:Ljava/lang/StringBuilder;
-    :pswitch_2
-    const/4 v9, 0x0
-
-    .line 1418
-    .local v9, albumName:Ljava/lang/String;
-    invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object v12
-
-    .line 1419
-    .local v12, data:Landroid/os/Bundle;
-    if-eqz v12, :cond_6
-
-    .line 1420
-    const-string v1, "ALBUM_NAME"
-
-    invoke-virtual {v12, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 1423
-    :cond_6
-    move-object/from16 v0, p1
-
-    iget-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/String;
-
-    const v2, 0x7f020041
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0, v1, v9, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->decodeHeaderArtCover(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-virtual/range {v2 .. v9}, Landroid/content/AsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1426
-    .end local v9           #albumName:Ljava/lang/String;
-    .end local v12           #data:Landroid/os/Bundle;
-    :pswitch_3
-    move-object/from16 v0, p0
+    .line 1447
+    :cond_4
+    sget-object v5, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    goto :goto_1
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
+    .line 1454
+    .restart local v16       #genreId:J
+    :cond_5
+    const-string v2, "external"
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mGenre:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
-    move-result v1
+    move-result-object v3
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    .line 1430
-    move-object/from16 v0, p1
+    move-result v3
 
-    iget v15, v0, Landroid/os/Message;->arg1:I
+    int-to-long v3, v3
 
-    .line 1431
-    .local v15, index:I
-    const-string v1, "[AlbumDetailActivity]"
+    invoke-static {v2, v3, v4}, Landroid/provider/MediaStore$Audio$Genres$Members;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    move-result-object v5
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_2
 
-    const-string v3, "Play album from index="
+    .line 1456
+    .end local v16           #genreId:J
+    :cond_6
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mComposer:Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    .line 1457
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mComposer:Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v13
+
+    .line 1458
+    .local v13, composer:Ljava/lang/String;
+    invoke-static {v13}, Lcom/htc/music/util/MusicUtils;->isUnknownComposer(Ljava/lang/String;)Z
+
+    move-result v23
+
+    .line 1459
+    .local v23, unknown:Z
+    if-eqz v23, :cond_7
+
+    .line 1460
+    const-string v2, " AND "
+
+    move-object/from16 v0, v24
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1461
+    invoke-static/range {v24 .. v24}, Lcom/htc/music/util/MusicUtils;->appendUnknownComposerFilter(Ljava/lang/StringBuilder;)V
+
+    goto :goto_2
+
+    .line 1463
+    :cond_7
+    const-string v2, "\'"
+
+    const-string v3, "\'\'"
+
+    invoke-virtual {v13, v2, v3}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v13
+
+    .line 1464
+    const-string v2, " AND "
+
+    move-object/from16 v0, v24
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "composer"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, " = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v3, "\'"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1433
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    invoke-interface {v1, v15}, Landroid/database/Cursor;->moveToPosition(I)Z
-
-    .line 1434
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    const-string v3, "_data"
-
-    invoke-interface {v2, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-interface {v1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v16
-
-    .line 1436
-    .local v16, path:Ljava/lang/String;
-    if-eqz v16, :cond_7
-
-    const-string v1, "content://drm/"
-
-    move-object/from16 v0, v16
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    .line 1437
-    invoke-static/range {v16 .. v16}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0, v1, v15}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->checkDrmFile(Landroid/net/Uri;I)V
-
-    goto/16 :goto_0
-
-    .line 1439
-    :cond_7
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mCategory:Lcom/htc/music/NpCategory;
-    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/NpCategory;
-
-    move-result-object v3
-
-    const/4 v5, 0x0
-
-    new-array v5, v5, [I
-
-    invoke-static {v1, v2, v15, v3, v5}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;Landroid/database/Cursor;ILcom/htc/music/NpCategory;[I)V
-
-    goto/16 :goto_0
-
-    .line 1455
-    .end local v15           #index:I
-    .end local v16           #path:Ljava/lang/String;
-    :pswitch_4
-    const/16 v17, 0x0
-
-    .line 1456
-    .local v17, playlist:[I
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    monitor-enter v2
-
-    .line 1457
-    :try_start_0
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_8
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    .line 1458
-    :cond_8
-    const-string v1, "[AlbumDetailActivity]"
-
-    const-string v3, "menu play_all with empty mTrackCursor!!"
-
-    invoke-static {v1, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1459
-    monitor-exit v2
-
-    goto/16 :goto_0
-
-    .line 1463
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-
-    .line 1461
-    :cond_9
-    :try_start_1
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/htc/music/util/MusicUtils;->getSongListForCursor(Landroid/database/Cursor;)[I
-
-    move-result-object v17
-
-    .line 1462
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/htc/music/util/MusicUtils;->prepareAlbumList(Landroid/database/Cursor;)Z
-
-    .line 1463
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 1464
-    if-eqz v17, :cond_a
-
-    move-object/from16 v0, v17
-
-    array-length v1, v0
-
-    if-gtz v1, :cond_b
-
-    .line 1465
-    :cond_a
-    const-string v1, "[AlbumDetailActivity]"
-
-    const-string v2, "menu play_all with empty list!!"
-
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 1470
-    :cond_b
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    const/4 v2, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mCategory:Lcom/htc/music/NpCategory;
-    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/NpCategory;
-
-    move-result-object v3
-
-    move-object/from16 v0, v17
-
-    invoke-static {v1, v0, v2, v3}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
-
-    goto/16 :goto_0
+    const-string v3, "\'"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_2
+
+    .line 1474
+    .end local v5           #uri:Landroid/net/Uri;
+    .end local v13           #composer:Ljava/lang/String;
+    .end local v23           #unknown:Z
+    .end local v24           #where:Ljava/lang/StringBuilder;
+    :pswitch_2
+    const/4 v12, 0x0
 
     .line 1475
-    .end local v17           #playlist:[I
-    :pswitch_5
-    const/16 v19, 0x0
+    .local v12, albumName:Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+
+    move-result-object v15
 
     .line 1476
-    .local v19, shufflelist:[I
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    monitor-enter v2
+    .local v15, data:Landroid/os/Bundle;
+    if-eqz v15, :cond_8
 
     .line 1477
-    :try_start_2
-    move-object/from16 v0, p0
+    const-string v2, "ALBUM_NAME"
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    invoke-virtual {v15, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+    move-result-object v12
 
-    move-result-object v1
-
-    if-eqz v1, :cond_c
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v1
-
-    if-nez v1, :cond_d
-
-    .line 1478
-    :cond_c
-    const-string v1, "[AlbumDetailActivity]"
-
-    const-string v3, "menu SHUFFLE_ALL with empty mTrackCursor!!"
-
-    invoke-static {v1, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1479
-    monitor-exit v2
-
-    goto/16 :goto_0
-
-    .line 1483
-    :catchall_1
-    move-exception v1
-
-    monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw v1
-
-    .line 1481
-    :cond_d
-    :try_start_3
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/htc/music/util/MusicUtils;->getSongListForCursor(Landroid/database/Cursor;)[I
-
-    move-result-object v19
-
-    .line 1482
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/htc/music/util/MusicUtils;->prepareAlbumList(Landroid/database/Cursor;)Z
-
-    .line 1483
-    monitor-exit v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 1484
-    if-eqz v19, :cond_e
-
-    move-object/from16 v0, v19
-
-    array-length v1, v0
-
-    if-gtz v1, :cond_f
-
-    .line 1485
-    :cond_e
-    const-string v1, "[AlbumDetailActivity]"
-
-    const-string v2, "menu shuffle_all with empty list!!"
-
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 1489
-    :cond_f
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    const/4 v2, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mCategory:Lcom/htc/music/NpCategory;
-    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/NpCategory;
-
-    move-result-object v3
-
-    move-object/from16 v0, v19
-
-    invoke-static {v1, v0, v2, v3}, Lcom/htc/music/util/MusicUtils;->shuffleAll(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
-
-    goto/16 :goto_0
-
-    .line 1494
-    .end local v19           #shufflelist:[I
-    :pswitch_6
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mRingToneHelper:Lcom/htc/music/util/RingtoneHelper;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/util/RingtoneHelper;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_10
-
-    .line 1495
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mRingToneHelper:Lcom/htc/music/util/RingtoneHelper;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/util/RingtoneHelper;
-
-    move-result-object v2
-
+    .line 1480
+    :cond_8
     move-object/from16 v0, p1
 
-    iget-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+    iget-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v1, Ljava/util/ArrayList;
+    check-cast v2, Ljava/lang/String;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v1, v3}, Lcom/htc/music/util/RingtoneHelper;->hadnleContactRingtoneResult(Ljava/util/ArrayList;Z)V
+    const v4, 0x7f020041
 
-    .line 1497
-    :cond_10
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->showContactRingtoneToast()V
+    invoke-direct {v0, v2, v12, v3, v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->decodeHeaderArtCover(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     goto/16 :goto_0
 
-    .line 1501
-    :pswitch_7
+    .line 1483
+    .end local v12           #albumName:Ljava/lang/String;
+    .end local v15           #data:Landroid/os/Bundle;
+    :pswitch_3
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    const/4 v1, 0x1
-
-    new-array v3, v1, [I
-
-    const/4 v1, 0x0
-
-    move-object/from16 v0, p1
-
-    iget v5, v0, Landroid/os/Message;->arg1:I
-
-    aput v5, v3, v1
-
-    move-object/from16 v0, p1
-
-    iget-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Long;
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    invoke-static {v2, v3, v5, v6}, Lcom/htc/music/util/MusicUtils;->addToPlaylist(Landroid/content/Context;[IJ)V
-
-    goto/16 :goto_0
-
-    .line 1505
-    :pswitch_8
-    move-object/from16 v0, p1
-
-    iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    move-object/from16 v18, v0
-
-    check-cast v18, Landroid/database/Cursor;
-
-    .line 1506
-    .local v18, realCursor:Landroid/database/Cursor;
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    move-object/from16 v0, v18
-
-    invoke-static {v1, v0}, Lcom/htc/music/util/MusicUtils;->mergeDlAlbumArt(Landroid/content/Context;Landroid/database/Cursor;)Landroid/database/Cursor;
-
-    move-result-object v11
-
-    .line 1507
-    .local v11, cursor:Landroid/database/Cursor;
-    invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 1508
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    const-string v2, "album"
-
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
-    invoke-static {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$502(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 1510
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_11
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_11
-
-    const-string v1, "<unknown>"
+    if-eqz v2, :cond_0
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_11
-
-    .line 1511
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    const-string v2, "artist"
-
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
 
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    if-eqz v2, :cond_0
+
+    .line 1487
+    move-object/from16 v0, p1
+
+    iget v0, v0, Landroid/os/Message;->arg1:I
+
+    move/from16 v18, v0
+
+    .line 1488
+    .local v18, index:I
+    const-string v2, "[AlbumDetailActivity]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Play album from index="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, v18
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1490
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
-    invoke-static {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$602(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
+    move/from16 v0, v18
+
+    invoke-interface {v2, v0}, Landroid/database/Cursor;->moveToPosition(I)Z
+
+    .line 1491
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v3
+
+    const-string v4, "_data"
+
+    invoke-interface {v3, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v2, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    .line 1493
+    .local v19, path:Ljava/lang/String;
+    if-eqz v19, :cond_9
+
+    const-string v2, "content://drm/"
+
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    .line 1494
+    invoke-static/range {v19 .. v19}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v18
+
+    invoke-direct {v0, v2, v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->checkDrmFile(Landroid/net/Uri;I)V
+
+    goto/16 :goto_0
+
+    .line 1496
+    :cond_9
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mCategory:Lcom/htc/music/NpCategory;
+    invoke-static {v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/NpCategory;
+
+    move-result-object v4
+
+    const/4 v6, 0x0
+
+    new-array v6, v6, [I
+
+    move/from16 v0, v18
+
+    invoke-static {v2, v3, v0, v4, v6}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;Landroid/database/Cursor;ILcom/htc/music/NpCategory;[I)V
+
+    goto/16 :goto_0
+
+    .line 1512
+    .end local v18           #index:I
+    .end local v19           #path:Ljava/lang/String;
+    :pswitch_4
+    const/16 v20, 0x0
 
     .line 1513
-    :cond_11
+    .local v20, playlist:[I
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    const-string v2, "album_art"
+    monitor-enter v3
 
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    .line 1514
+    :try_start_0
+    move-object/from16 v0, p0
 
-    move-result v2
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArtPath:Ljava/lang/String;
-    invoke-static {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2702(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 1515
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    const-string v2, "minyear"
-
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-interface {v11, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mReleaseYear:Ljava/lang/String;
-    invoke-static {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2802(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 1516
-    invoke-interface {v11}, Landroid/database/Cursor;->close()V
-
-    .line 1518
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-
-    move-result-object v1
+    if-eqz v2, :cond_a
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->setMainTitle(Ljava/lang/String;)V
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+
+    move-result v2
+
+    if-nez v2, :cond_b
+
+    .line 1515
+    :cond_a
+    const-string v2, "[AlbumDetailActivity]"
+
+    const-string v4, "menu play_all with empty mTrackCursor!!"
+
+    invoke-static {v2, v4}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1516
+    monitor-exit v3
+
+    goto/16 :goto_0
+
+    .line 1520
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v2
+
+    .line 1518
+    :cond_b
+    :try_start_1
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->getSongListForCursor(Landroid/database/Cursor;)[I
+
+    move-result-object v20
 
     .line 1519
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
     iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->setSecondaryTitle(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->prepareAlbumList(Landroid/database/Cursor;)Z
+
+    .line 1520
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 1521
-    move-object/from16 v0, p0
+    if-eqz v20, :cond_c
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+    move-object/from16 v0, v20
 
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+    array-length v2, v0
 
-    move-result-object v1
+    if-gtz v2, :cond_d
 
-    invoke-virtual {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->hideEmptyErrorViewUI()V
+    .line 1522
+    :cond_c
+    const-string v2, "[AlbumDetailActivity]"
 
-    .line 1523
-    move-object/from16 v0, p0
+    const-string v3, "menu play_all with empty list!!"
 
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->notifyDataSetChanged()V
-
-    .line 1524
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArtPath:Ljava/lang/String;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2700(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const v3, 0x7f020041
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->decodeHeaderArtCover(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1375
+    .line 1527
+    :cond_d
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mCategory:Lcom/htc/music/NpCategory;
+    invoke-static {v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/NpCategory;
+
+    move-result-object v4
+
+    move-object/from16 v0, v20
+
+    invoke-static {v2, v0, v3, v4}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
+
+    goto/16 :goto_0
+
+    .line 1532
+    .end local v20           #playlist:[I
+    :pswitch_5
+    const/16 v22, 0x0
+
+    .line 1533
+    .local v22, shufflelist:[I
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    monitor-enter v3
+
+    .line 1534
+    :try_start_2
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_e
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+
+    move-result v2
+
+    if-nez v2, :cond_f
+
+    .line 1535
+    :cond_e
+    const-string v2, "[AlbumDetailActivity]"
+
+    const-string v4, "menu SHUFFLE_ALL with empty mTrackCursor!!"
+
+    invoke-static {v2, v4}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1536
+    monitor-exit v3
+
+    goto/16 :goto_0
+
+    .line 1540
+    :catchall_1
+    move-exception v2
+
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v2
+
+    .line 1538
+    :cond_f
+    :try_start_3
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->getSongListForCursor(Landroid/database/Cursor;)[I
+
+    move-result-object v22
+
+    .line 1539
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->prepareAlbumList(Landroid/database/Cursor;)Z
+
+    .line 1540
+    monitor-exit v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 1541
+    if-eqz v22, :cond_10
+
+    move-object/from16 v0, v22
+
+    array-length v2, v0
+
+    if-gtz v2, :cond_11
+
+    .line 1542
+    :cond_10
+    const-string v2, "[AlbumDetailActivity]"
+
+    const-string v3, "menu shuffle_all with empty list!!"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 1546
+    :cond_11
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mCategory:Lcom/htc/music/NpCategory;
+    invoke-static {v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/NpCategory;
+
+    move-result-object v4
+
+    move-object/from16 v0, v22
+
+    invoke-static {v2, v0, v3, v4}, Lcom/htc/music/util/MusicUtils;->shuffleAll(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
+
+    goto/16 :goto_0
+
+    .line 1551
+    .end local v22           #shufflelist:[I
+    :pswitch_6
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mRingToneHelper:Lcom/htc/music/util/RingtoneHelper;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/util/RingtoneHelper;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_12
+
+    .line 1552
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mRingToneHelper:Lcom/htc/music/util/RingtoneHelper;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/util/RingtoneHelper;
+
+    move-result-object v3
+
+    move-object/from16 v0, p1
+
+    iget-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/ArrayList;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v2, v4}, Lcom/htc/music/util/RingtoneHelper;->hadnleContactRingtoneResult(Ljava/util/ArrayList;Z)V
+
+    .line 1554
+    :cond_12
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->showContactRingtoneToast()V
+
+    goto/16 :goto_0
+
+    .line 1558
+    :pswitch_7
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const/4 v2, 0x1
+
+    new-array v4, v2, [I
+
+    const/4 v2, 0x0
+
+    move-object/from16 v0, p1
+
+    iget v6, v0, Landroid/os/Message;->arg1:I
+
+    aput v6, v4, v2
+
+    move-object/from16 v0, p1
+
+    iget-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Long;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    invoke-static {v3, v4, v6, v7}, Lcom/htc/music/util/MusicUtils;->addToPlaylist(Landroid/content/Context;[IJ)V
+
+    goto/16 :goto_0
+
+    .line 1562
+    :pswitch_8
+    const/4 v10, 0x0
+
+    .line 1564
+    .local v10, albumId:Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    move-object/from16 v21, v0
+
+    check-cast v21, Landroid/database/Cursor;
+
+    .line 1565
+    .local v21, realCursor:Landroid/database/Cursor;
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    move-object/from16 v0, v21
+
+    invoke-static {v2, v0}, Lcom/htc/music/util/MusicUtils;->mergeDlAlbumArt(Landroid/content/Context;Landroid/database/Cursor;)Landroid/database/Cursor;
+
+    move-result-object v14
+
+    .line 1566
+    .local v14, cursor:Landroid/database/Cursor;
+    invoke-interface {v14}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 1567
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const-string v3, "album"
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$502(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 1569
+    const-string v2, "_id"
+
+    invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v11
+
+    .line 1570
+    .local v11, albumIndex:I
+    if-ltz v11, :cond_13
+
+    .line 1571
+    invoke-interface {v14, v11}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 1574
+    :cond_13
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->isUnknownAlbum(Ljava/lang/String;)Z
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2800(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_15
+
+    .line 1575
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const v4, 0x7f07004e
+
+    invoke-virtual {v3, v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$502(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 1583
+    :cond_14
+    :goto_3
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const-string v3, "album_art"
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArtPath:Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3002(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 1585
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const-string v3, "minyear"
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mReleaseYear:Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3102(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 1586
+    invoke-interface {v14}, Landroid/database/Cursor;->close()V
+
+    .line 1588
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->setMainTitle(Ljava/lang/String;)V
+
+    .line 1589
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->setSecondaryTitle(Ljava/lang/String;)V
+
+    .line 1591
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->hideEmptyErrorViewUI()V
+
+    .line 1593
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mUIHandler:Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity$UIHandler;->notifyDataSetChanged()V
+
+    .line 1594
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArtPath:Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3000(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumTitle:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const v4, 0x7f020041
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v2, v3, v10, v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->decodeHeaderArtCover(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+
+    goto/16 :goto_0
+
+    .line 1578
+    :cond_15
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const-string v3, "artist"
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v14, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$602(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 1579
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->isUnknownArtist(Ljava/lang/String;)Z
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2900(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_14
+
+    .line 1580
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    const v4, 0x7f07004d
+
+    invoke-virtual {v3, v4}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$602(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Ljava/lang/String;
+
+    goto/16 :goto_3
+
+    .line 1422
     nop
 
     :pswitch_data_0
@@ -1849,7 +2060,7 @@
     .parameter "cursor"
 
     .prologue
-    .line 1368
+    .line 1415
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0, p1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -1858,7 +2069,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1369
+    .line 1416
     return-void
 .end method
 
@@ -1866,12 +2077,12 @@
     .locals 1
 
     .prologue
-    .line 1349
+    .line 1396
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendEmptyMessage(I)Z
 
-    .line 1350
+    .line 1397
     return-void
 .end method
 
@@ -1880,21 +2091,21 @@
     .parameter "index"
 
     .prologue
-    .line 1343
+    .line 1390
     const/4 v1, 0x3
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1344
+    .line 1391
     .local v0, msg:Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1345
+    .line 1392
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1346
+    .line 1393
     return-void
 .end method
 
@@ -1903,7 +2114,7 @@
     .parameter "albumId"
 
     .prologue
-    .line 1327
+    .line 1374
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -1912,7 +2123,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1328
+    .line 1375
     return-void
 .end method
 
@@ -1920,12 +2131,12 @@
     .locals 1
 
     .prologue
-    .line 1331
+    .line 1378
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendEmptyMessage(I)Z
 
-    .line 1332
+    .line 1379
     return-void
 .end method
 
@@ -1933,11 +2144,11 @@
     .locals 1
 
     .prologue
-    .line 1353
+    .line 1400
     const/4 v0, 0x5
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$NonUIHandler;->sendEmptyMessage(I)Z
 
-    .line 1354
+    .line 1401
     return-void
 .end method

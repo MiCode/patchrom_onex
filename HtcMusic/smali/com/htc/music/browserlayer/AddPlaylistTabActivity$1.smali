@@ -1,14 +1,11 @@
 .class Lcom/htc/music/browserlayer/AddPlaylistTabActivity$1;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "AddPlaylistTabActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->initTitle()V
+    value = Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,35 +24,31 @@
     .parameter
 
     .prologue
-    .line 139
+    .line 97
     iput-object p1, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$1;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter "view"
+    .parameter "context"
+    .parameter "intent"
 
     .prologue
-    .line 142
-    if-eqz p1, :cond_0
+    .line 100
+    iget-object v0, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$1;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
-    instance-of v0, p1, Lcom/htc/widget/ActionBarDropDown;
+    invoke-virtual {v0}, Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->getApplicationContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 143
-    check-cast p1, Lcom/htc/widget/ActionBarDropDown;
+    invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
 
-    .end local p1
-    invoke-virtual {p1}, Lcom/htc/widget/ActionBarDropDown;->show()V
-
-    .line 145
-    :cond_0
+    .line 101
     return-void
 .end method

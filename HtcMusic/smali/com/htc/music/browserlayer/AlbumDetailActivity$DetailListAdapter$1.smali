@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 1751
+    .line 1826
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$1;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;
 
     iput-object p2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$1;->val$tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
@@ -47,17 +47,17 @@
     .parameter "arg0"
 
     .prologue
-    .line 1754
+    .line 1829
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$1;->val$tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 1755
+    .line 1830
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$1;->val$tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->showAlbumOptions()V
-    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3000(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
+    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
 
-    .line 1756
+    .line 1831
     return-void
 .end method

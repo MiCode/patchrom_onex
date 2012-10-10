@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 204
+    .line 243
     iput-object p1, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-direct {p0}, Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 204
+    .line 243
     invoke-direct {p0, p1}, Landroid/media/MediaPluginDLNA$RendererListener;-><init>(Landroid/media/MediaPluginDLNA;)V
 
     return-void
@@ -52,7 +52,7 @@
     .parameter "rendererName"
 
     .prologue
-    .line 207
+    .line 246
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -75,7 +75,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
+    .line 247
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -98,46 +98,46 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
+    .line 248
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mWaitMirrorConnected:Z
-    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$500(Landroid/media/MediaPluginDLNA;)Z
+    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$700(Landroid/media/MediaPluginDLNA;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 210
+    .line 249
     const-string v0, "[MediaPluginDLNA]"
 
-    const-string/jumbo v1, "ignore onMirrorRendererConnected callback"
+    const-string v1, "ignore onMirrorRendererConnected callback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
+    .line 255
     :goto_0
     return-void
 
-    .line 213
+    .line 252
     :cond_0
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mDmrID:Ljava/lang/String;
-    invoke-static {v0, p1}, Landroid/media/MediaPluginDLNA;->access$1002(Landroid/media/MediaPluginDLNA;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Landroid/media/MediaPluginDLNA;->access$1602(Landroid/media/MediaPluginDLNA;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 214
+    .line 253
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->eventHandler:Landroid/media/MediaPluginDLNA$EventHandler;
-    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$600(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
+    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$800(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
 
     move-result-object v0
 
     iget-object v1, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->eventHandler:Landroid/media/MediaPluginDLNA$EventHandler;
-    invoke-static {v1}, Landroid/media/MediaPluginDLNA;->access$600(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
+    invoke-static {v1}, Landroid/media/MediaPluginDLNA;->access$800(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
 
     move-result-object v1
 
@@ -151,13 +151,13 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/MediaPluginDLNA$EventHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 215
+    .line 254
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     const/4 v1, 0x0
 
     #setter for: Landroid/media/MediaPluginDLNA;->mWaitMirrorConnected:Z
-    invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$502(Landroid/media/MediaPluginDLNA;Z)Z
+    invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;Z)Z
 
     goto :goto_0
 .end method
@@ -169,7 +169,7 @@
     .parameter "errorReason"
 
     .prologue
-    .line 235
+    .line 274
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -192,7 +192,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
+    .line 275
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -215,7 +215,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
+    .line 276
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -238,7 +238,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 277
     return-void
 .end method
 
@@ -248,7 +248,7 @@
     .parameter "rendererName"
 
     .prologue
-    .line 222
+    .line 261
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -271,7 +271,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 262
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -294,46 +294,46 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
+    .line 263
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mWaitMirrorConnected:Z
-    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$500(Landroid/media/MediaPluginDLNA;)Z
+    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$700(Landroid/media/MediaPluginDLNA;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 225
+    .line 264
     const-string v0, "[MediaPluginDLNA]"
 
-    const-string/jumbo v1, "ignore onMirrorRendererConnected callback"
+    const-string v1, "ignore onMirrorRendererConnected callback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
+    .line 270
     :goto_0
     return-void
 
-    .line 228
+    .line 267
     :cond_0
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mDmrID:Ljava/lang/String;
-    invoke-static {v0, p1}, Landroid/media/MediaPluginDLNA;->access$1002(Landroid/media/MediaPluginDLNA;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Landroid/media/MediaPluginDLNA;->access$1602(Landroid/media/MediaPluginDLNA;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 229
+    .line 268
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->eventHandler:Landroid/media/MediaPluginDLNA$EventHandler;
-    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$600(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
+    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$800(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
 
     move-result-object v0
 
     iget-object v1, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->eventHandler:Landroid/media/MediaPluginDLNA$EventHandler;
-    invoke-static {v1}, Landroid/media/MediaPluginDLNA;->access$600(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
+    invoke-static {v1}, Landroid/media/MediaPluginDLNA;->access$800(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
 
     move-result-object v1
 
@@ -347,13 +347,13 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/MediaPluginDLNA$EventHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 230
+    .line 269
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$RendererListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     const/4 v1, 0x0
 
     #setter for: Landroid/media/MediaPluginDLNA;->mWaitMirrorConnected:Z
-    invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$502(Landroid/media/MediaPluginDLNA;Z)Z
+    invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;Z)Z
 
     goto :goto_0
 .end method

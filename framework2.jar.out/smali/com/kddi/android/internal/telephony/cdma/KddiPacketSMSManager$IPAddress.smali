@@ -27,15 +27,15 @@
     .parameter "mask"
 
     .prologue
-    .line 2755
+    .line 2799
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2756
+    .line 2800
     iput-object p1, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$IPAddress;->mIp:Ljava/lang/String;
 
-    .line 2757
+    .line 2801
     iput-object p2, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$IPAddress;->mMask:Ljava/lang/String;
 
-    .line 2758
+    .line 2802
     return-void
 .end method

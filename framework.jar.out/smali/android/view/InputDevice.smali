@@ -723,7 +723,7 @@
     .line 599
     const/16 v4, 0x101
 
-    const-string/jumbo v5, "keyboard"
+    const-string v5, "keyboard"
 
     invoke-direct {p0, v0, v4, v5}, Landroid/view/InputDevice;->appendSourceDescriptionIfApplicable(Ljava/lang/StringBuilder;ILjava/lang/String;)V
 
@@ -772,7 +772,7 @@
     .line 606
     const v4, 0x1000010
 
-    const-string/jumbo v5, "joystick"
+    const-string v5, "joystick"
 
     invoke-direct {p0, v0, v4, v5}, Landroid/view/InputDevice;->appendSourceDescriptionIfApplicable(Ljava/lang/StringBuilder;ILjava/lang/String;)V
 

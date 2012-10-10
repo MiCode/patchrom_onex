@@ -3,7 +3,7 @@
 .source "EditableWebView.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnKeyListener;
 
 
 # annotations
@@ -27,136 +27,67 @@
     .parameter
 
     .prologue
-    .line 2144
+    .line 2414
     iput-object p1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
+    .locals 3
     .parameter "dialog"
-    .parameter "which"
+    .parameter "keyCode"
+    .parameter "event"
 
     .prologue
-    .line 2147
+    const/4 v2, 0x1
+
+    .line 2420
+    const/4 v0, 0x4
+
+    if-ne p2, v0, :cond_0
+
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_0
+
+    .line 2421
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 2422
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style:Lcom/htc/dialog/HtcAlertDialog;
+    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->dismiss()V
+    iput-boolean v2, v0, Landroid/webkit/EditableWebView;->m_bRemoveSelectRangeDuringUpdateContent:Z
 
-    .line 2149
-    packed-switch p2, :pswitch_data_0
-
-    .line 2169
-    :goto_0
-    return-void
-
-    .line 2151
-    :pswitch_0
+    .line 2423
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$3500(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/webkit/EditableWebView;->getSelectionMethod()Landroid/webkit/WebViewSelectionMethod;
 
-    move-result-object v1
+    move-result-object v0
 
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontsize(Landroid/content/Context;)V
-    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$3700(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
+    sget-object v1, Landroid/webkit/WebViewSelectionMethod$SelectionMode;->EXTENDABLE:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
 
-    .line 2152
+    invoke-virtual {v0, v1}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
+
+    .line 2424
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style_fontsize:Lcom/htc/dialog/HtcAlertDialog;
+    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->show()V
+    invoke-virtual {v0, v2}, Landroid/webkit/EditableWebView;->onEndSelect(Z)V
 
-    goto :goto_0
-
-    .line 2155
-    :pswitch_1
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$3500(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
-
-    move-result-object v1
-
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontcolor(Landroid/content/Context;)V
-    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$3800(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
-
-    .line 2156
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style_fontcolor:Lcom/htc/dialog/HtcAlertDialog;
-
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->show()V
-
-    goto :goto_0
-
-    .line 2159
-    :pswitch_2
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$3500(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
-
-    move-result-object v1
-
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogSettings(Landroid/content/Context;)V
-    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$3900(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
-
-    .line 2160
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style_settings:Lcom/htc/dialog/HtcAlertDialog;
-
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->show()V
-
-    goto :goto_0
-
-    .line 2163
-    :pswitch_3
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$3500(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
-
-    move-result-object v1
-
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogAlignment(Landroid/content/Context;)V
-    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4000(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
-
-    .line 2164
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$4;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style_alignment:Lcom/htc/dialog/HtcAlertDialog;
-
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->show()V
-
-    goto :goto_0
-
-    .line 2149
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
+    .line 2426
+    :cond_0
+    return v2
 .end method

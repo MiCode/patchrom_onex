@@ -1,14 +1,11 @@
 .class Lcom/htc/music/browserlayer/AlbumDetailActivity$1;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "AlbumDetailActivity.java"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/browserlayer/AlbumDetailActivity;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/htc/music/browserlayer/AlbumDetailActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,22 +24,31 @@
     .parameter
 
     .prologue
-    .line 631
+    .line 275
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
-    .parameter "dialog"
-    .parameter "which"
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
+    .parameter "context"
+    .parameter "intent"
 
     .prologue
-    .line 634
+    .line 278
+    iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
+
+    invoke-virtual {v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
+
+    .line 279
     return-void
 .end method

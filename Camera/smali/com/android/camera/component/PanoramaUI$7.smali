@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1452
+    .line 1457
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$7;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -70,14 +70,14 @@
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/UIState;>;"
     const/4 v3, 0x1
 
-    .line 1455
+    .line 1460
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
     sget-object v1, Lcom/android/camera/UIState;->Opening:Lcom/android/camera/UIState;
 
     if-ne v0, v1, :cond_0
 
-    .line 1458
+    .line 1463
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$7;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_IsModeEntered:Z
@@ -96,7 +96,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1461
+    .line 1466
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$7;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_ReviewImageContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1462
+    .line 1467
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$7;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$7;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -126,7 +126,7 @@
 
     invoke-virtual {v0, v1, v3, v2}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1463
+    .line 1468
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$7;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$7;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -138,7 +138,7 @@
 
     invoke-virtual {v0, v1, v3, v3}, Lcom/android/camera/component/PanoramaUI;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1466
+    .line 1471
     :cond_0
     return-void
 .end method

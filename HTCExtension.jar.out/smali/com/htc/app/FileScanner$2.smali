@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 989
+    .line 977
     iput-object p1, p0, Lcom/htc/app/FileScanner$2;->this$0:Lcom/htc/app/FileScanner;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,14 +39,14 @@
     .parameter "msg"
 
     .prologue
-    .line 991
+    .line 979
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0xa5
 
     if-ne v0, v1, :cond_0
 
-    .line 994
+    .line 982
     iget-object v0, p0, Lcom/htc/app/FileScanner$2;->this$0:Lcom/htc/app/FileScanner;
 
     #getter for: Lcom/htc/app/FileScanner;->isScanStop:Z
@@ -56,7 +56,7 @@
 
     if-nez v0, :cond_0
 
-    .line 997
+    .line 985
     iget-object v0, p0, Lcom/htc/app/FileScanner$2;->this$0:Lcom/htc/app/FileScanner;
 
     #getter for: Lcom/htc/app/FileScanner;->mAdapter:Lcom/htc/app/FilePickerListAdapter;
@@ -66,7 +66,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 998
+    .line 986
     iget-object v0, p0, Lcom/htc/app/FileScanner$2;->this$0:Lcom/htc/app/FileScanner;
 
     #getter for: Lcom/htc/app/FileScanner;->mAdapter:Lcom/htc/app/FilePickerListAdapter;
@@ -78,7 +78,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
-    .line 1001
+    .line 989
     :cond_0
     return-void
 .end method

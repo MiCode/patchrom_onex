@@ -161,7 +161,7 @@
     iput-object v0, p0, Lcom/htc/music/browserlayer/AlbumBrowserActivity$AlbumListAdapter;->mUnknownArtist:Ljava/lang/String;
 
     .line 1135
-    const v0, 0x7f07023c
+    const v0, 0x7f0701dc
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -185,7 +185,7 @@
     iput-object v0, p0, Lcom/htc/music/browserlayer/AlbumBrowserActivity$AlbumListAdapter;->mNowPlayingOverlay:Landroid/graphics/drawable/Drawable;
 
     .line 1140
-    const v0, 0x7f020050
+    const v0, 0x7f020052
 
     invoke-virtual {v7, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

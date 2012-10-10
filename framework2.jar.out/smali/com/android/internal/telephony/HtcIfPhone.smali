@@ -14,6 +14,8 @@
 
 .field public static final APN_TYPE_ALL:Ljava/lang/String; = "*"
 
+.field public static final APN_TYPE_BIP:Ljava/lang/String; = "bip"
+
 .field public static final APN_TYPE_CMAIL:Ljava/lang/String; = "cmail"
 
 .field public static final APN_TYPE_CMMail:Ljava/lang/String; = "cmmail"
@@ -49,6 +51,8 @@
 .field public static final APN_TYPE_OTHER:Ljava/lang/String; = "OTHER"
 
 .field public static final APN_TYPE_STREAM:Ljava/lang/String; = "stream"
+
+.field public static final APN_TYPE_VZW800:Ljava/lang/String; = "verizon800"
 
 .field public static final APN_TYPE_VZWAPP:Ljava/lang/String; = "verizon"
 
@@ -119,6 +123,8 @@
 .field public static final DATA_REQUEST_APN_TYPE:Ljava/lang/String; = "ifaceReqApn"
 
 .field public static final FEATURE_ENABLE_ADMIN:Ljava/lang/String; = "enableADMIN"
+
+.field public static final FEATURE_ENABLE_BIP:Ljava/lang/String; = "enableBIP"
 
 .field public static final FEATURE_ENABLE_CBS:Ljava/lang/String; = "enableCBS"
 
@@ -417,6 +423,9 @@
 .method public abstract getCellBroadcastSmsConfigExt(Landroid/os/Message;I)V
 .end method
 
+.method public abstract getCellLocationExt(I)Landroid/telephony/CellLocation;
+.end method
+
 .method public abstract getDataActivityStateExt(I)Lcom/android/internal/telephony/Phone$DataActivityState;
 .end method
 
@@ -466,6 +475,9 @@
 .end method
 
 .method public abstract getGprsState()I
+.end method
+
+.method public abstract getGprsStateExt(I)I
 .end method
 
 .method public abstract getHtcSimTypes(Landroid/os/Message;)V
@@ -686,6 +698,9 @@
 .method public abstract queryAvailableBandModeExt(Landroid/os/Message;I)V
 .end method
 
+.method public abstract queryAvoidNetwork(Landroid/os/Message;)V
+.end method
+
 .method public abstract queryCAVE(Landroid/os/Message;)V
 .end method
 
@@ -735,6 +750,9 @@
 .end method
 
 .method public abstract registerForFailEntitlementCheck(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
+.method public abstract registerForHTCECCStatus(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
 .method public abstract registerForInCallVoicePrivacyOffExt(Landroid/os/Handler;ILjava/lang/Object;I)V
@@ -862,6 +880,9 @@
 .method public abstract requestCW_UW_REG(Landroid/os/Message;)V
 .end method
 
+.method public abstract requestClearAvoidNetwork(Landroid/os/Message;)V
+.end method
+
 .method public abstract requestEhrpdDomainNameChangeState(Landroid/os/Message;)V
 .end method
 
@@ -917,6 +938,9 @@
 .end method
 
 .method public abstract requestSSDUpdateConfirm(Ljava/lang/String;Landroid/os/Message;)V
+.end method
+
+.method public abstract requestSelectNextNetwork(Landroid/os/Message;)V
 .end method
 
 .method public abstract requestSetEhrpdDisableCapability(ILandroid/os/Message;)V
@@ -1137,6 +1161,9 @@
 .method public abstract unregisterForFailEntitlementCheck(Landroid/os/Handler;)V
 .end method
 
+.method public abstract unregisterForHTCECCStatus(Landroid/os/Handler;)V
+.end method
+
 .method public abstract unregisterForInCallVoicePrivacyOffExt(Landroid/os/Handler;I)V
 .end method
 
@@ -1246,4 +1273,7 @@
 .end method
 
 .method public abstract wifi2GRetry()V
+.end method
+
+.method public abstract wifi2GRetryExt(I)V
 .end method

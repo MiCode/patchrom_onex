@@ -385,7 +385,7 @@
     if-eqz p3, :cond_2
 
     .line 608
-    const-string/jumbo v1, "intent_extra_data_key"
+    const-string v1, "intent_extra_data_key"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -620,7 +620,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "launching "
+    const-string v3, "launching "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1349,7 +1349,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "input_method"
+    const-string v2, "input_method"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1454,7 +1454,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "input_method"
+    const-string v2, "input_method"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

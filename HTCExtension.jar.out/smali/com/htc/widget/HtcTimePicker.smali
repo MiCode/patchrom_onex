@@ -43,6 +43,8 @@
 
 .field private mCurrentSecond:I
 
+.field private mCustomWidth:I
+
 .field private mEndHour:I
 
 .field private mEndMinute:I
@@ -88,6 +90,8 @@
 .field private final mSecondCoat:Landroid/view/View;
 
 .field private final mSecondPicker:Lcom/htc/widget/HtcNumberPicker;
+
+.field private mSetCustomWidth:Z
 
 .field private mStartHour:I
 
@@ -189,6 +193,14 @@
     new-array v5, v5, [Landroid/view/ViewGroup$LayoutParams;
 
     iput-object v5, p0, Lcom/htc/widget/HtcTimePicker;->mLparams:[Landroid/view/ViewGroup$LayoutParams;
+
+    .line 590
+    const/high16 v5, -0x8000
+
+    iput v5, p0, Lcom/htc/widget/HtcTimePicker;->mCustomWidth:I
+
+    .line 591
+    iput-boolean v7, p0, Lcom/htc/widget/HtcTimePicker;->mSetCustomWidth:Z
 
     .line 99
     iput-object p1, p0, Lcom/htc/widget/HtcTimePicker;->mContext:Landroid/content/Context;
@@ -507,21 +519,21 @@
     .parameter "target"
 
     .prologue
-    .line 625
+    .line 660
     const/4 v0, 0x0
 
-    .line 627
+    .line 662
     .local v0, tmp:Lcom/htc/widget/HtcNumberPicker;
     if-nez p1, :cond_1
 
     iget-object v0, p0, Lcom/htc/widget/HtcTimePicker;->mHourPicker:Lcom/htc/widget/HtcNumberPicker;
 
-    .line 632
+    .line 667
     :cond_0
     :goto_0
     return-object v0
 
-    .line 628
+    .line 663
     :cond_1
     const/4 v1, 0x1
 
@@ -531,7 +543,7 @@
 
     goto :goto_0
 
-    .line 629
+    .line 664
     :cond_2
     const/4 v1, 0x2
 
@@ -541,7 +553,7 @@
 
     goto :goto_0
 
-    .line 630
+    .line 665
     :cond_3
     const/4 v1, 0x3
 
@@ -550,6 +562,23 @@
     iget-object v0, p0, Lcom/htc/widget/HtcTimePicker;->mAmPmPicker:Lcom/htc/widget/HtcNumberPicker;
 
     goto :goto_0
+.end method
+
+.method private setAllPickerWidth(I)V
+    .locals 1
+    .parameter "width"
+
+    .prologue
+    .line 629
+    iput p1, p0, Lcom/htc/widget/HtcTimePicker;->mCustomWidth:I
+
+    .line 630
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/htc/widget/HtcTimePicker;->mSetCustomWidth:Z
+
+    .line 631
+    return-void
 .end method
 
 .method private updateTables()V
@@ -826,10 +855,10 @@
     .locals 2
 
     .prologue
-    .line 637
+    .line 672
     const/4 v0, 0x0
 
-    .line 639
+    .line 674
     .local v0, tmp:Lcom/htc/widget/HtcNumberPicker;
     iget-object v1, p0, Lcom/htc/widget/HtcTimePicker;->mHourPicker:Lcom/htc/widget/HtcNumberPicker;
 
@@ -837,7 +866,7 @@
 
     iget-object v0, p0, Lcom/htc/widget/HtcTimePicker;->mHourPicker:Lcom/htc/widget/HtcNumberPicker;
 
-    .line 643
+    .line 678
     :cond_0
     :goto_0
     if-nez v0, :cond_3
@@ -847,7 +876,7 @@
     :goto_1
     return v1
 
-    .line 640
+    .line 675
     :cond_1
     iget-object v1, p0, Lcom/htc/widget/HtcTimePicker;->mMinutePicker:Lcom/htc/widget/HtcNumberPicker;
 
@@ -857,7 +886,7 @@
 
     goto :goto_0
 
-    .line 641
+    .line 676
     :cond_2
     iget-object v1, p0, Lcom/htc/widget/HtcTimePicker;->mSecondPicker:Lcom/htc/widget/HtcNumberPicker;
 
@@ -867,7 +896,7 @@
 
     goto :goto_0
 
-    .line 643
+    .line 678
     :cond_3
     invoke-virtual {v0}, Lcom/htc/widget/HtcNumberPicker;->getTableViewSlideOffset()I
 
@@ -1423,6 +1452,83 @@
     goto :goto_0
 .end method
 
+.method protected onMeasure(II)V
+    .locals 4
+    .parameter "widthMeasureSpec"
+    .parameter "heightMeasureSpec"
+
+    .prologue
+    .line 596
+    invoke-super {p0, p1, p2}, Landroid/widget/RelativeLayout;->onMeasure(II)V
+
+    .line 598
+    iget-boolean v3, p0, Lcom/htc/widget/HtcTimePicker;->mSetCustomWidth:Z
+
+    if-eqz v3, :cond_2
+
+    .line 599
+    const/4 v1, 0x0
+
+    .local v1, i:I
+    :goto_0
+    invoke-virtual {p0}, Lcom/htc/widget/HtcTimePicker;->getChildCount()I
+
+    move-result v3
+
+    if-ge v1, v3, :cond_1
+
+    .line 600
+    invoke-virtual {p0, v1}, Lcom/htc/widget/HtcTimePicker;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 601
+    .local v0, child:Landroid/view/View;
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 602
+    .local v2, params:Landroid/widget/RelativeLayout$LayoutParams;
+    iget v3, p0, Lcom/htc/widget/HtcTimePicker;->mCustomWidth:I
+
+    if-lez v3, :cond_0
+
+    iget v3, p0, Lcom/htc/widget/HtcTimePicker;->mCustomWidth:I
+
+    :goto_1
+    iput v3, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 603
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 599
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 602
+    :cond_0
+    iget v3, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    goto :goto_1
+
+    .line 605
+    .end local v0           #child:Landroid/view/View;
+    .end local v2           #params:Landroid/widget/RelativeLayout$LayoutParams;
+    :cond_1
+    const/4 v3, 0x0
+
+    iput-boolean v3, p0, Lcom/htc/widget/HtcTimePicker;->mSetCustomWidth:Z
+
+    .line 607
+    .end local v1           #i:I
+    :cond_2
+    return-void
+.end method
+
 .method public releaseResource()V
     .locals 1
 
@@ -1677,14 +1783,14 @@
     .parameter "color"
 
     .prologue
-    .line 611
+    .line 646
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lcom/htc/widget/HtcTimePicker;->giveMeThePickerInstance(I)Lcom/htc/widget/HtcNumberPicker;
 
     move-result-object v0
 
-    .line 612
+    .line 647
     .local v0, tmpPicker:Lcom/htc/widget/HtcNumberPicker;
     if-eqz v0, :cond_0
 
@@ -1700,7 +1806,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcNumberPicker;->setCustomShadow(IFFFI)V
 
-    .line 614
+    .line 649
     :cond_0
     const/4 v1, 0x1
 
@@ -1708,7 +1814,7 @@
 
     move-result-object v0
 
-    .line 615
+    .line 650
     if-eqz v0, :cond_1
 
     move v1, p1
@@ -1723,7 +1829,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcNumberPicker;->setCustomShadow(IFFFI)V
 
-    .line 617
+    .line 652
     :cond_1
     const/4 v1, 0x2
 
@@ -1731,7 +1837,7 @@
 
     move-result-object v0
 
-    .line 618
+    .line 653
     if-eqz v0, :cond_2
 
     move v1, p1
@@ -1746,7 +1852,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcNumberPicker;->setCustomShadow(IFFFI)V
 
-    .line 620
+    .line 655
     :cond_2
     const/4 v1, 0x3
 
@@ -1754,7 +1860,7 @@
 
     move-result-object v0
 
-    .line 621
+    .line 656
     if-eqz v0, :cond_3
 
     move v1, p1
@@ -1769,7 +1875,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcNumberPicker;->setCustomShadow(IFFFI)V
 
-    .line 622
+    .line 657
     :cond_3
     return-void
 .end method
@@ -1945,21 +2051,52 @@
     .parameter "shadowId"
 
     .prologue
-    .line 591
+    .line 611
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcTimePicker;->giveMeThePickerInstance(I)Lcom/htc/widget/HtcNumberPicker;
 
     move-result-object v0
 
-    .line 593
+    .line 613
     .local v0, tmpPicker:Lcom/htc/widget/HtcNumberPicker;
     if-nez v0, :cond_0
 
-    .line 596
+    .line 616
     :goto_0
     return-void
 
-    .line 595
+    .line 615
     :cond_0
+    invoke-virtual {v0, p2, p3}, Lcom/htc/widget/HtcNumberPicker;->setBackground(II)V
+
+    goto :goto_0
+.end method
+
+.method public setPickerBackground(IIII)V
+    .locals 1
+    .parameter "target"
+    .parameter "tumblerId"
+    .parameter "shadowId"
+    .parameter "width"
+
+    .prologue
+    .line 620
+    invoke-direct {p0, p1}, Lcom/htc/widget/HtcTimePicker;->giveMeThePickerInstance(I)Lcom/htc/widget/HtcNumberPicker;
+
+    move-result-object v0
+
+    .line 622
+    .local v0, tmpPicker:Lcom/htc/widget/HtcNumberPicker;
+    if-nez v0, :cond_0
+
+    .line 625
+    :goto_0
+    return-void
+
+    .line 623
+    :cond_0
+    invoke-direct {p0, p4}, Lcom/htc/widget/HtcTimePicker;->setAllPickerWidth(I)V
+
+    .line 624
     invoke-virtual {v0, p2, p3}, Lcom/htc/widget/HtcNumberPicker;->setBackground(II)V
 
     goto :goto_0
@@ -1971,20 +2108,20 @@
     .parameter "textColor"
 
     .prologue
-    .line 600
+    .line 635
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcTimePicker;->giveMeThePickerInstance(I)Lcom/htc/widget/HtcNumberPicker;
 
     move-result-object v0
 
-    .line 602
+    .line 637
     .local v0, tmpPicker:Lcom/htc/widget/HtcNumberPicker;
     if-nez v0, :cond_0
 
-    .line 605
+    .line 640
     :goto_0
     return-void
 
-    .line 604
+    .line 639
     :cond_0
     invoke-virtual {v0, p2}, Lcom/htc/widget/HtcNumberPicker;->setTextColor(I)V
 

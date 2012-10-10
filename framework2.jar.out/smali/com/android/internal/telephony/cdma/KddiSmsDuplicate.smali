@@ -39,34 +39,79 @@
     .end annotation
 .end field
 
+.field private mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
 .field private mUseFile:Z
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;Landroid/content/Context;IZ)V
-    .locals 0
+    .locals 1
     .parameter "dispatcher"
     .parameter "context"
     .parameter "checkedNum"
     .parameter "useFile"
 
     .prologue
-    .line 46
+    const/4 v0, 0x0
+
+    .line 52
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
+    .line 35
+    iput-object v0, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCdmaSmsDispatcher:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
+
+    .line 44
+    iput-object v0, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
+    .line 53
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCdmaSmsDispatcher:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
 
-    .line 48
+    .line 54
     iput-object p2, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mContext:Landroid/content/Context;
 
-    .line 49
+    .line 55
     iput p3, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCheckedNum:I
 
-    .line 50
+    .line 56
     iput-boolean p4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mUseFile:Z
 
-    .line 51
+    .line 57
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;Landroid/content/Context;IZ)V
+    .locals 1
+    .parameter "dispatcher"
+    .parameter "context"
+    .parameter "checkedNum"
+    .parameter "useFile"
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 61
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+
+    .line 35
+    iput-object v0, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCdmaSmsDispatcher:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
+
+    .line 44
+    iput-object v0, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
+    .line 62
+    iput-object p1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
+    .line 63
+    iput-object p2, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mContext:Landroid/content/Context;
+
+    .line 64
+    iput p3, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCheckedNum:I
+
+    .line 65
+    iput-boolean p4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mUseFile:Z
+
+    .line 66
     return-void
 .end method
 
@@ -74,10 +119,10 @@
     .locals 11
 
     .prologue
-    .line 119
+    .line 144
     const/4 v9, 0x0
 
-    .line 121
+    .line 146
     .local v9, result:Z
     new-instance v1, Ljava/util/LinkedList;
 
@@ -85,7 +130,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
-    .line 124
+    .line 149
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mContext:Landroid/content/Context;
 
@@ -95,7 +140,7 @@
 
     move-result-object v8
 
-    .line 125
+    .line 150
     .local v8, fileInput:Ljava/io/FileInputStream;
     new-instance v6, Ljava/io/DataInputStream;
 
@@ -103,7 +148,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 129
+    .line 154
     .local v6, din:Ljava/io/DataInputStream;
     :goto_0
     :try_start_1
@@ -111,45 +156,45 @@
 
     move-result v2
 
-    .line 130
+    .line 155
     .local v2, messageId:I
     invoke-virtual {v6}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 131
+    .line 156
     .local v3, sendAck:I
     invoke-virtual {v6}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v4
 
-    .line 132
+    .line 157
     .local v4, length:I
     const/16 v1, 0xc8
 
     if-le v4, v1, :cond_0
 
-    .line 133
+    .line 158
     const/16 v4, 0xc8
 
-    .line 135
+    .line 160
     :cond_0
     new-array v5, v4, [B
 
-    .line 136
+    .line 161
     .local v5, data:[B
     const/4 v1, 0x0
 
     invoke-virtual {v6, v5, v1, v4}, Ljava/io/DataInputStream;->read([BII)I
 
-    .line 139
+    .line 164
     new-instance v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
 
     move-object v1, p0
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;-><init>(Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;III[B)V
 
-    .line 140
+    .line 165
     .local v0, info:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
@@ -160,7 +205,7 @@
 
     goto :goto_0
 
-    .line 142
+    .line 167
     .end local v0           #info:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
     .end local v2           #messageId:I
     .end local v3           #sendAck:I
@@ -169,7 +214,7 @@
     :catch_0
     move-exception v7
 
-    .line 143
+    .line 168
     .local v7, e:Ljava/io/EOFException;
     :try_start_2
     const-string v1, "KDDI_SMS"
@@ -180,21 +225,21 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 145
+    .line 170
     :try_start_3
     invoke-virtual {v6}, Ljava/io/DataInputStream;->close()V
 
-    .line 146
+    .line 171
     const/4 v9, 0x1
 
-    .line 153
+    .line 178
     .end local v6           #din:Ljava/io/DataInputStream;
     .end local v7           #e:Ljava/io/EOFException;
     .end local v8           #fileInput:Ljava/io/FileInputStream;
     :goto_1
     return v9
 
-    .line 145
+    .line 170
     .restart local v6       #din:Ljava/io/DataInputStream;
     .restart local v8       #fileInput:Ljava/io/FileInputStream;
     :catchall_0
@@ -202,21 +247,21 @@
 
     invoke-virtual {v6}, Ljava/io/DataInputStream;->close()V
 
-    .line 146
+    .line 171
     const/4 v9, 0x1
 
-    .line 145
+    .line 170
     throw v1
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 149
+    .line 174
     .end local v6           #din:Ljava/io/DataInputStream;
     .end local v8           #fileInput:Ljava/io/FileInputStream;
     :catch_1
     move-exception v7
 
-    .line 150
+    .line 175
     .local v7, e:Ljava/io/IOException;
     const-string v1, "KDDI_SMS"
 
@@ -224,7 +269,7 @@
 
     invoke-static {v1, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
+    .line 176
     invoke-virtual {v7}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
@@ -233,27 +278,23 @@
 
 # virtual methods
 .method public kddiCheckSmsDuplicate(I[B)Z
-    .locals 12
+    .locals 11
     .parameter "messageId"
     .parameter "userdata"
 
     .prologue
-    const/4 v11, 0x0
-
-    const/4 v10, 0x1
-
-    .line 62
+    .line 79
     const/4 v4, 0x0
 
-    .line 64
+    .line 81
     .local v4, result:Z
     const/4 v6, 0x0
 
-    .line 65
+    .line 82
     .local v6, sameData:Z
     const/4 v2, 0x0
 
-    .line 68
+    .line 85
     .local v2, listNum:I
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
@@ -261,16 +302,18 @@
 
     iget-boolean v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mUseFile:Z
 
-    if-ne v7, v10, :cond_0
+    const/4 v8, 0x1
 
-    .line 69
+    if-ne v7, v8, :cond_0
+
+    .line 86
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->readDuplicateFile()Z
 
     move-result v7
 
     if-nez v7, :cond_0
 
-    .line 70
+    .line 87
     const-string v7, "SMS"
 
     const-string v8, "failed to read duplicate_file "
@@ -279,13 +322,13 @@
 
     move v5, v4
 
-    .line 109
+    .line 134
     .end local v4           #result:Z
     .local v5, result:I
     :goto_0
     return v5
 
-    .line 77
+    .line 94
     .end local v5           #result:I
     .restart local v4       #result:Z
     :cond_0
@@ -293,7 +336,7 @@
 
     if-eqz v7, :cond_5
 
-    .line 78
+    .line 95
     :goto_1
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
@@ -303,7 +346,7 @@
 
     if-ge v2, v7, :cond_3
 
-    .line 79
+    .line 96
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v7, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -312,16 +355,16 @@
 
     check-cast v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
 
-    .line 80
+    .line 97
     .local v0, duplicateInfo:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
     iget v7, v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mMessageID:I
 
     if-ne v7, p1, :cond_2
 
-    .line 81
+    .line 98
     iget-object v3, v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mMessageBody:[B
 
-    .line 83
+    .line 100
     .local v3, message:[B
     iget v7, v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mMessageBodyLength:I
 
@@ -329,7 +372,7 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 84
+    .line 101
     const/4 v1, 0x0
 
     .local v1, index:I
@@ -338,32 +381,34 @@
 
     if-ge v1, v7, :cond_2
 
-    .line 85
+    .line 102
     aget-byte v7, v3, v1
 
     aget-byte v8, p2, v1
 
     if-ne v7, v8, :cond_1
 
-    .line 86
+    .line 103
     const/4 v6, 0x1
 
-    .line 84
+    .line 101
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 88
+    .line 105
     :cond_1
     const/4 v6, 0x0
 
-    .line 94
+    .line 111
     .end local v1           #index:I
     .end local v3           #message:[B
     :cond_2
-    if-ne v6, v10, :cond_6
+    const/4 v7, 0x1
 
-    .line 98
+    if-ne v6, v7, :cond_6
+
+    .line 115
     .end local v0           #duplicateInfo:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
     :cond_3
     const-string v7, "SMS"
@@ -388,10 +433,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
+    .line 117
     if-eqz v6, :cond_5
 
-    .line 101
+    .line 118
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v7, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -402,16 +447,25 @@
 
     iget v7, v7, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mSendAck:I
 
-    if-nez v7, :cond_7
+    if-nez v7, :cond_8
 
-    .line 102
+    .line 119
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCdmaSmsDispatcher:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
 
-    const/4 v8, -0x1
+    if-eqz v7, :cond_7
 
-    invoke-virtual {v7, v10, v8, v11}, Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
+    .line 120
+    iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCdmaSmsDispatcher:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
 
-    .line 106
+    const/4 v8, 0x1
+
+    const/4 v9, -0x1
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v7, v8, v9, v10}, Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
+
+    .line 131
     :cond_4
     :goto_3
     const/4 v4, 0x1
@@ -419,11 +473,11 @@
     :cond_5
     move v5, v4
 
-    .line 109
+    .line 134
     .restart local v5       #result:I
     goto :goto_0
 
-    .line 78
+    .line 95
     .end local v5           #result:I
     .restart local v0       #duplicateInfo:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
     :cond_6
@@ -431,9 +485,28 @@
 
     goto :goto_1
 
-    .line 103
+    .line 121
     .end local v0           #duplicateInfo:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
     :cond_7
+    iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
+    if-eqz v7, :cond_4
+
+    .line 122
+    iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
+    const/4 v8, 0x1
+
+    const/4 v9, -0x1
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v7, v8, v9, v10}, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
+
+    goto :goto_3
+
+    .line 124
+    :cond_8
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v7, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -444,16 +517,44 @@
 
     iget v7, v7, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mSendAck:I
 
-    if-ne v7, v10, :cond_4
+    const/4 v8, 0x1
 
-    .line 104
+    if-ne v7, v8, :cond_4
+
+    .line 125
+    iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCdmaSmsDispatcher:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
+
+    if-eqz v7, :cond_9
+
+    .line 126
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mCdmaSmsDispatcher:Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;
 
     const/4 v8, 0x0
 
     const/4 v9, 0x3
 
-    invoke-virtual {v7, v8, v9, v11}, Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
+    const/4 v10, 0x0
+
+    invoke-virtual {v7, v8, v9, v10}, Lcom/android/internal/telephony/cdma/CdmaSMSDispatcher;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
+
+    goto :goto_3
+
+    .line 127
+    :cond_9
+    iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
+    if-eqz v7, :cond_4
+
+    .line 128
+    iget-object v7, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mGsmSmsDispatcher:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x3
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v7, v8, v9, v10}, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
 
     goto :goto_3
 .end method
@@ -465,19 +566,19 @@
     .parameter "accessory"
 
     .prologue
-    .line 165
+    .line 191
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     if-nez v1, :cond_0
 
-    .line 166
+    .line 192
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
-    .line 168
+    .line 194
     :cond_0
     new-instance v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
 
@@ -495,7 +596,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;-><init>(Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;III[B)V
 
-    .line 170
+    .line 196
     .local v0, mSmsDuplicateInfo:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
@@ -507,7 +608,7 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 171
+    .line 197
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
@@ -520,7 +621,7 @@
 
     add-int/lit8 v6, v1, 0x1
 
-    .line 172
+    .line 198
     .local v6, exceedsNum:I
     const/4 v7, 0x0
 
@@ -528,17 +629,17 @@
     :goto_0
     if-ge v7, v6, :cond_1
 
-    .line 173
+    .line 199
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-    .line 172
+    .line 198
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 177
+    .line 203
     .end local v6           #exceedsNum:I
     .end local v7           #i:I
     :cond_1
@@ -546,21 +647,21 @@
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
 
-    .line 180
+    .line 206
     iget v1, v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mSendAck:I
 
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_2
 
-    .line 181
+    .line 207
     iget v1, v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mSendAck:I
 
     iget v2, v0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mMessageID:I
 
     invoke-virtual {p0, v1, v2}, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->kddiUpdateSmsDuplicateFile(II)V
 
-    .line 183
+    .line 209
     :cond_2
     return-void
 .end method
@@ -571,7 +672,7 @@
     .parameter "messageId"
 
     .prologue
-    .line 192
+    .line 219
     const-string v4, "SMS"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -604,7 +705,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
+    .line 221
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
@@ -618,7 +719,7 @@
 
     if-ne v4, p2, :cond_2
 
-    .line 196
+    .line 223
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v4}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
@@ -633,7 +734,7 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 197
+    .line 224
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v4}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
@@ -644,7 +745,7 @@
 
     iput p1, v4, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mSendAck:I
 
-    .line 200
+    .line 227
     :cond_0
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mContext:Landroid/content/Context;
 
@@ -656,13 +757,13 @@
 
     move-result-object v2
 
-    .line 202
+    .line 229
     .local v2, fileOutput:Ljava/io/FileOutputStream;
     new-instance v0, Ljava/io/DataOutputStream;
 
     invoke-direct {v0, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 204
+    .line 231
     .local v0, dout:Ljava/io/DataOutputStream;
     const/4 v3, 0x0
 
@@ -676,7 +777,7 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 205
+    .line 232
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v4, v3}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -689,7 +790,7 @@
 
     invoke-virtual {v0, v4}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 206
+    .line 233
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v4, v3}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -702,7 +803,7 @@
 
     invoke-virtual {v0, v4}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 207
+    .line 234
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v4, v3}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -715,7 +816,7 @@
 
     invoke-virtual {v0, v4}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 208
+    .line 235
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;->mDuplicateList:Ljava/util/LinkedList;
 
     invoke-virtual {v4, v3}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
@@ -728,26 +829,26 @@
 
     invoke-virtual {v0, v4}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 204
+    .line 231
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 211
+    .line 238
     :cond_1
     invoke-virtual {v0}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 212
+    .line 239
     invoke-virtual {v0}, Ljava/io/DataOutputStream;->close()V
 
-    .line 225
+    .line 252
     .end local v0           #dout:Ljava/io/DataOutputStream;
     .end local v2           #fileOutput:Ljava/io/FileOutputStream;
     .end local v3           #i:I
     :goto_1
     return-void
 
-    .line 214
+    .line 241
     :cond_2
     const-string v4, "KDDI_SMS"
 
@@ -755,7 +856,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
+    .line 242
     const-string v4, "SMS"
 
     const-string v5, "KDDIupdateSmsDuplicateFile() MessageID is different "
@@ -767,11 +868,11 @@
 
     goto :goto_1
 
-    .line 217
+    .line 244
     :catch_0
     move-exception v1
 
-    .line 218
+    .line 245
     .local v1, ex:Ljava/io/IOException;
     const-string v4, "KDDI_SMS"
 
@@ -779,24 +880,24 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
+    .line 246
     const-string v4, "SMS"
 
     const-string v5, "KDDIupdateSmsDuplicateFile() failed to update duplicate_file "
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
+    .line 247
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 221
+    .line 248
     .end local v1           #ex:Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 222
+    .line 249
     .local v1, ex:Ljava/lang/NullPointerException;
     const-string v4, "KDDI_SMS"
 
@@ -804,7 +905,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 250
     const-string v4, "SMS"
 
     const-string v5, "KDDIupdateSmsDuplicateFile() failed to update duplicate_file "

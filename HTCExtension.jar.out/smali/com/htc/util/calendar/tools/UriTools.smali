@@ -1977,6 +1977,34 @@
 
     .line 545
     .local v10, title:Ljava/lang/String;
+    const/16 v2, 0x2f
+
+    const/16 v3, 0x5f
+
+    invoke-virtual {v10, v2, v3}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 546
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ".vcs"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 547
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1997,7 +2025,7 @@
 
     invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 546
+    .line 548
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -2006,7 +2034,7 @@
 
     move-result-object v7
 
-    .line 547
+    .line 549
     invoke-virtual {v7}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v2
@@ -2018,88 +2046,88 @@
 
     move-result-object v7
 
-    .line 555
+    .line 557
     .end local v10           #title:Ljava/lang/String;
     :goto_0
     if-eqz v6, :cond_0
 
-    .line 556
+    .line 558
     invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 557
+    .line 559
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 558
+    .line 560
     const/4 v6, 0x0
 
-    .line 562
+    .line 564
     .end local v0           #cr:Landroid/content/ContentResolver;
     :cond_0
     :goto_1
     return-object v7
 
-    .line 549
+    .line 551
     .restart local v0       #cr:Landroid/content/ContentResolver;
     :cond_1
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 551
+    .line 553
     .end local v0           #cr:Landroid/content/ContentResolver;
     :catch_0
     move-exception v8
 
-    .line 552
+    .line 554
     .local v8, e:Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 553
+    .line 555
     const/4 v7, 0x0
 
-    .line 555
+    .line 557
     if-eqz v6, :cond_0
 
-    .line 556
+    .line 558
     invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 557
+    .line 559
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 558
+    .line 560
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 555
+    .line 557
     .end local v8           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
     if-eqz v6, :cond_2
 
-    .line 556
+    .line 558
     invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 557
+    .line 559
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 558
+    .line 560
     const/4 v6, 0x0
 
     :cond_2
@@ -2114,12 +2142,12 @@
     .parameter "endTime"
 
     .prologue
-    .line 572
+    .line 574
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 573
+    .line 575
     .local v15, sb:Ljava/lang/StringBuilder;
     const-string v4, "content://"
 
@@ -2149,21 +2177,21 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 579
+    .line 581
     const/4 v10, 0x0
 
-    .line 581
+    .line 583
     .local v10, desUri:Landroid/net/Uri;
     const/4 v9, 0x0
 
-    .line 583
+    .line 585
     .local v9, c:Landroid/database/Cursor;
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 584
+    .line 586
     .local v2, cr:Landroid/content/ContentResolver;
     sget-object v4, Landroid/provider/CalendarContract;->CONTENT_URI:Landroid/net/Uri;
 
@@ -2191,7 +2219,7 @@
 
     move-result-object v3
 
-    .line 585
+    .line 587
     .local v3, uri:Landroid/net/Uri;
     const/4 v4, 0x5
 
@@ -2237,14 +2265,14 @@
 
     move-result-object v9
 
-    .line 592
+    .line 594
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_5
 
-    .line 593
+    .line 595
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2269,7 +2297,7 @@
 
     invoke-static {v4}, Lcom/htc/util/calendar/tools/UriTools;->Debug(Ljava/lang/String;)V
 
-    .line 595
+    .line 597
     const-string v4, "account_type"
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -2280,7 +2308,7 @@
 
     move-result-object v8
 
-    .line 596
+    .line 598
     .local v8, accountType:Ljava/lang/String;
     const-string v4, "_sync_id"
 
@@ -2292,7 +2320,7 @@
 
     move-result-object v16
 
-    .line 597
+    .line 599
     .local v16, syncId:Ljava/lang/String;
     const-string v4, "iCalGUID"
 
@@ -2304,7 +2332,7 @@
 
     move-result-object v13
 
-    .line 598
+    .line 600
     .local v13, iUid:Ljava/lang/String;
     const-string v4, "facebook_source_id"
 
@@ -2316,7 +2344,7 @@
 
     move-result-object v12
 
-    .line 599
+    .line 601
     .local v12, facebookId:Ljava/lang/String;
     const-string v4, "allDay"
 
@@ -2328,13 +2356,13 @@
 
     move-result v14
 
-    .line 601
+    .line 603
     .local v14, isAllDay:I
     const/4 v4, 0x1
 
     if-ne v14, v4, :cond_1
 
-    .line 602
+    .line 604
     invoke-static/range {p3 .. p4}, Lcom/htc/util/calendar/tools/UriTools;->offsetToUTCDay(J)J
 
     move-result-wide v4
@@ -2355,7 +2383,7 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 611
+    .line 613
     :goto_0
     invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2365,14 +2393,14 @@
 
     move-result-object v10
 
-    .line 613
+    .line 615
     invoke-static {v8}, Lcom/htc/util/calendar/tools/UriTools;->isHTCExchangeEvent(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 614
+    .line 616
     invoke-virtual {v10}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v4
@@ -2396,7 +2424,7 @@
 
     move-result-object v10
 
-    .line 634
+    .line 636
     .end local v8           #accountType:Ljava/lang/String;
     .end local v12           #facebookId:Ljava/lang/String;
     .end local v13           #iUid:Ljava/lang/String;
@@ -2405,27 +2433,27 @@
     :goto_1
     if-eqz v9, :cond_0
 
-    .line 635
+    .line 637
     invoke-interface {v9}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 636
+    .line 638
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 637
+    .line 639
     const/4 v9, 0x0
 
-    .line 641
+    .line 643
     .end local v2           #cr:Landroid/content/ContentResolver;
     .end local v3           #uri:Landroid/net/Uri;
     :cond_0
     :goto_2
     return-object v10
 
-    .line 606
+    .line 608
     .restart local v2       #cr:Landroid/content/ContentResolver;
     .restart local v3       #uri:Landroid/net/Uri;
     .restart local v8       #accountType:Ljava/lang/String;
@@ -2456,7 +2484,7 @@
 
     goto :goto_0
 
-    .line 630
+    .line 632
     .end local v2           #cr:Landroid/content/ContentResolver;
     .end local v3           #uri:Landroid/net/Uri;
     .end local v8           #accountType:Ljava/lang/String;
@@ -2467,35 +2495,35 @@
     :catch_0
     move-exception v11
 
-    .line 631
+    .line 633
     .local v11, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 632
+    .line 634
     const/4 v10, 0x0
 
-    .line 634
+    .line 636
     if-eqz v9, :cond_0
 
-    .line 635
+    .line 637
     invoke-interface {v9}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 636
+    .line 638
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 637
+    .line 639
     const/4 v9, 0x0
 
     goto :goto_2
 
-    .line 616
+    .line 618
     .end local v11           #e:Ljava/lang/Exception;
     .restart local v2       #cr:Landroid/content/ContentResolver;
     .restart local v3       #uri:Landroid/net/Uri;
@@ -2512,7 +2540,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 617
+    .line 619
     invoke-virtual {v10}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v4
@@ -2537,7 +2565,7 @@
 
     goto :goto_1
 
-    .line 619
+    .line 621
     :cond_3
     move-object/from16 v0, p0
 
@@ -2547,7 +2575,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 620
+    .line 622
     invoke-virtual {v10}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v4
@@ -2570,7 +2598,7 @@
 
     goto :goto_1
 
-    .line 623
+    .line 625
     :cond_4
     invoke-virtual {v10}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
@@ -2597,7 +2625,7 @@
 
     goto :goto_1
 
-    .line 628
+    .line 630
     .end local v8           #accountType:Ljava/lang/String;
     .end local v12           #facebookId:Ljava/lang/String;
     .end local v13           #iUid:Ljava/lang/String;
@@ -2608,7 +2636,7 @@
 
     goto/16 :goto_1
 
-    .line 634
+    .line 636
     .end local v2           #cr:Landroid/content/ContentResolver;
     .end local v3           #uri:Landroid/net/Uri;
     :catchall_0
@@ -2616,17 +2644,17 @@
 
     if-eqz v9, :cond_6
 
-    .line 635
+    .line 637
     invoke-interface {v9}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v5
 
     if-nez v5, :cond_6
 
-    .line 636
+    .line 638
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 637
+    .line 639
     const/4 v9, 0x0
 
     :cond_6
@@ -3273,21 +3301,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 649
+    .line 651
     if-nez p1, :cond_1
 
-    .line 671
+    .line 673
     :cond_0
     :goto_0
     return-object v0
 
-    .line 651
+    .line 653
     :cond_1
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v9
 
-    .line 652
+    .line 654
     .local v9, uriValue:Landroid/net/Uri;
     sget-object v10, Lcom/htc/util/calendar/tools/UriTools;->sUriMatcher:Landroid/content/UriMatcher;
 
@@ -3295,11 +3323,11 @@
 
     move-result v7
 
-    .line 653
+    .line 655
     .local v7, match:I
     packed-switch v7, :pswitch_data_0
 
-    .line 669
+    .line 671
     :pswitch_0
     const-string v10, "UriTools"
 
@@ -3325,17 +3353,17 @@
 
     goto :goto_0
 
-    .line 656
+    .line 658
     :pswitch_1
     invoke-static {p0, v9}, Lcom/htc/util/calendar/tools/UriTools;->uniEventToEventUri(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v8
 
-    .line 657
+    .line 659
     .local v8, uriCheck:Landroid/net/Uri;
     if-eqz v8, :cond_0
 
-    .line 659
+    .line 661
     invoke-virtual {v8}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
@@ -3356,7 +3384,7 @@
 
     move-result-wide v1
 
-    .line 660
+    .line 662
     .local v1, eventId:J
     invoke-virtual {v8}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -3378,7 +3406,7 @@
 
     move-result-wide v3
 
-    .line 661
+    .line 663
     .local v3, startTime:J
     invoke-virtual {v8}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -3400,7 +3428,7 @@
 
     move-result-wide v5
 
-    .line 663
+    .line 665
     .local v5, endTime:J
     new-instance v0, Lcom/htc/util/calendar/EventInstance;
 
@@ -3408,7 +3436,7 @@
 
     goto :goto_0
 
-    .line 666
+    .line 668
     .end local v1           #eventId:J
     .end local v3           #startTime:J
     .end local v5           #endTime:J
@@ -3420,7 +3448,7 @@
 
     goto :goto_0
 
-    .line 653
+    .line 655
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

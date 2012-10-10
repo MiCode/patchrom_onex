@@ -43,4 +43,36 @@
         <item>Lainnya</item>
         <item>Ubahsuaian</item>
     </string-array>
+    <array name="carrier_properties" />
+    <array name="select_text_editing_items">
+        <item>@string/font_size</item>
+        <item>@string/font_color</item>
+        <item>@string/font_settings</item>
+        <item>@string/font_alignment</item>
+    </array>
+    <string-array name="select_font_size_items">
+        <item>Terbesar</item>
+        <item>Besar</item>
+        <item>Sedang</item>
+        <item>Kecil</item>
+    </string-array>
+    <string-array name="select_font_color_items">
+        <item>Putih</item>
+        <item>Hitam</item>
+        <item>Abu-abu</item>
+        <item>Merah</item>
+        <item>Hijau</item>
+        <item>Kuning</item>
+        <item>Biru</item>
+    </string-array>
+    <string-array name="select_font_settings_items">
+        <item>Garis bawah</item>
+        <item>Cetak tabal</item>
+        <item>Italik</item>
+    </string-array>
+    <string-array name="select_font_alignment_items">
+        <item>Kiri</item>
+        <item>Rata kanan kiri</item>
+        <item>Kanan</item>
+    </string-array>
 </resources>

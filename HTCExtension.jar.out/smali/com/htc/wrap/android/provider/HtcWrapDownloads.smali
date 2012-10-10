@@ -53,7 +53,7 @@
     .parameter "status"
 
     .prologue
-    .line 88
+    .line 84
     invoke-static {p0}, Landroid/provider/Downloads;->isStatusSuspended(I)Z
 
     move-result v0

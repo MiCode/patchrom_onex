@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1630
+    .line 1635
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$15$1;->this$1:Lcom/android/camera/component/PanoramaUI$15;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "rotation"
 
     .prologue
-    .line 1633
+    .line 1638
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$15$1;->this$1:Lcom/android/camera/component/PanoramaUI$15;
 
     iget-object v0, v0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -51,6 +51,6 @@
     #calls: Lcom/android/camera/component/PanoramaUI;->updateToastRotation(Lcom/android/camera/rotate/UIRotation;)V
     invoke-static {v0, p2}, Lcom/android/camera/component/PanoramaUI;->access$2400(Lcom/android/camera/component/PanoramaUI;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1634
+    .line 1639
     return-void
 .end method

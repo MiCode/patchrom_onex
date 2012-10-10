@@ -39,17 +39,17 @@
 
     const/4 v2, 0x0
 
-    .line 1532
+    .line 1502
     const/4 v0, 0x0
 
     const v1, 0x201007d
 
     invoke-direct {p0, p1, v0, v1}, Lcom/htc/widget/HtcExpandableListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 1533
+    .line 1503
     iput-boolean p2, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mHijackFocus:Z
 
-    .line 1534
+    .line 1504
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -60,7 +60,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1535
+    .line 1505
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -71,16 +71,16 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setChildDivider(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1536
+    .line 1506
     invoke-virtual {p0, v3}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setDarkModeEnabled(Z)V
 
-    .line 1537
+    .line 1507
     invoke-virtual {p0, v3, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->enableAnimation(IZ)V
 
-    .line 1539
+    .line 1509
     invoke-virtual {p0, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setCacheColorHint(I)V
 
-    .line 1540
+    .line 1510
     return-void
 .end method
 
@@ -90,7 +90,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1482
+    .line 1452
     iput-boolean p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mListSelectionHidden:Z
 
     return p1
@@ -105,18 +105,18 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1683
+    .line 1653
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
     check-cast v6, Lcom/htc/widget/HtcAbsListView$LayoutParams;
 
-    .line 1684
+    .line 1654
     .local v6, p:Lcom/htc/widget/HtcAbsListView$LayoutParams;
     if-nez v6, :cond_0
 
-    .line 1685
+    .line 1655
     new-instance v6, Lcom/htc/widget/HtcAbsListView$LayoutParams;
 
     .end local v6           #p:Lcom/htc/widget/HtcAbsListView$LayoutParams;
@@ -126,29 +126,29 @@
 
     invoke-direct {v6, v7, v8, v9}, Lcom/htc/widget/HtcAbsListView$LayoutParams;-><init>(III)V
 
-    .line 1687
+    .line 1657
     .restart local v6       #p:Lcom/htc/widget/HtcAbsListView$LayoutParams;
     invoke-virtual {p1, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1689
+    .line 1659
     :cond_0
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
-    .line 1693
+    .line 1663
     .local v0, adapter:Landroid/widget/ListAdapter;
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getListPaddingLeft()I
 
     move-result v3
 
-    .line 1694
+    .line 1664
     .local v3, listPaddingLeft:I
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getListPaddingRight()I
 
     move-result v4
 
-    .line 1697
+    .line 1667
     .local v4, listPaddingRight:I
     add-int v7, v3, v4
 
@@ -158,30 +158,30 @@
 
     move-result v2
 
-    .line 1699
+    .line 1669
     .local v2, childWidthSpec:I
     iget v5, v6, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1701
+    .line 1671
     .local v5, lpHeight:I
     if-lez v5, :cond_1
 
-    .line 1702
+    .line 1672
     const/high16 v7, 0x4000
 
     invoke-static {v5, v7}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v1
 
-    .line 1706
+    .line 1676
     .local v1, childHeightSpec:I
     :goto_0
     invoke-virtual {p1, v2, v1}, Landroid/view/View;->measure(II)V
 
-    .line 1707
+    .line 1677
     return-void
 
-    .line 1704
+    .line 1674
     .end local v1           #childHeightSpec:I
     :cond_1
     invoke-static {v9, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -198,7 +198,7 @@
     .locals 1
 
     .prologue
-    .line 1609
+    .line 1579
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mHijackFocus:Z
 
     if-nez v0, :cond_0
@@ -225,7 +225,7 @@
     .locals 1
 
     .prologue
-    .line 1581
+    .line 1551
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mHijackFocus:Z
 
     if-nez v0, :cond_0
@@ -252,7 +252,7 @@
     .locals 1
 
     .prologue
-    .line 1595
+    .line 1565
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mHijackFocus:Z
 
     if-nez v0, :cond_0
@@ -279,7 +279,7 @@
     .locals 1
 
     .prologue
-    .line 1567
+    .line 1537
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mHijackFocus:Z
 
     if-eqz v0, :cond_0
@@ -315,12 +315,12 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 1710
+    .line 1680
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
-    .line 1711
+    .line 1681
     .local v0, adapter:Landroid/widget/ListAdapter;
     if-eqz v0, :cond_0
 
@@ -330,18 +330,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 1737
+    .line 1707
     :cond_0
     :goto_0
     return v2
 
-    .line 1715
+    .line 1685
     :cond_1
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
 
     move-result v1
 
-    .line 1716
+    .line 1686
     .local v1, count:I
     invoke-interface {v0}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
 
@@ -349,17 +349,17 @@
 
     if-nez v3, :cond_4
 
-    .line 1717
+    .line 1687
     if-eqz p2, :cond_2
 
-    .line 1718
+    .line 1688
     const/4 v3, 0x0
 
     invoke-static {v3, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    .line 1719
+    .line 1689
     :goto_1
     if-ge p1, v1, :cond_3
 
@@ -369,12 +369,12 @@
 
     if-nez v3, :cond_3
 
-    .line 1720
+    .line 1690
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_1
 
-    .line 1723
+    .line 1693
     :cond_2
     add-int/lit8 v3, v1, -0x1
 
@@ -382,7 +382,7 @@
 
     move-result p1
 
-    .line 1724
+    .line 1694
     :goto_2
     if-ltz p1, :cond_3
 
@@ -392,12 +392,12 @@
 
     if-nez v3, :cond_3
 
-    .line 1725
+    .line 1695
     add-int/lit8 p1, p1, -0x1
 
     goto :goto_2
 
-    .line 1729
+    .line 1699
     :cond_3
     if-ltz p1, :cond_0
 
@@ -405,10 +405,10 @@
 
     move v2, p1
 
-    .line 1732
+    .line 1702
     goto :goto_0
 
-    .line 1734
+    .line 1704
     :cond_4
     if-ltz p1, :cond_0
 
@@ -416,7 +416,7 @@
 
     move v2, p1
 
-    .line 1737
+    .line 1707
     goto :goto_0
 .end method
 
@@ -429,52 +429,52 @@
     .parameter "disallowPartialChildPosition"
 
     .prologue
-    .line 1616
+    .line 1586
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v1
 
-    .line 1617
+    .line 1587
     .local v1, adapter:Landroid/widget/ListAdapter;
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getListPaddingTop()I
 
     move-result v7
 
-    .line 1618
+    .line 1588
     .local v7, listPaddingTop:I
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getListPaddingBottom()I
 
     move-result v6
 
-    .line 1620
+    .line 1590
     .local v6, listPaddingBottom:I
     if-nez v1, :cond_1
 
-    .line 1621
+    .line 1591
     add-int v8, v7, v6
 
-    .line 1679
+    .line 1649
     :cond_0
     :goto_0
     return v8
 
-    .line 1625
+    .line 1595
     :cond_1
     add-int v11, v7, v6
 
-    .line 1626
+    .line 1596
     .local v11, returnedHeight:I
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    .line 1627
+    .line 1597
     .local v3, divider:Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getDividerHeight()I
 
     move-result v9
 
-    .line 1628
+    .line 1598
     .local v9, realDividerHeight:I
     if-lez v9, :cond_5
 
@@ -482,12 +482,12 @@
 
     move v4, v9
 
-    .line 1631
+    .line 1601
     .local v4, dividerHeight:I
     :goto_1
     const/4 v8, 0x0
 
-    .line 1637
+    .line 1607
     .local v8, prevHeightWithoutPartialChild:I
     const/4 v12, -0x1
 
@@ -501,13 +501,13 @@
 
     add-int/lit8 p3, v12, -0x1
 
-    .line 1638
+    .line 1608
     :cond_2
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->recycleOnMeasure()Z
 
     move-result v10
 
-    .line 1640
+    .line 1610
     .local v10, recyle:Z
     move/from16 v5, p2
 
@@ -517,24 +517,24 @@
 
     if-gt v5, v0, :cond_8
 
-    .line 1642
+    .line 1612
     const/4 v12, 0x0
 
     invoke-interface {v1, v5, v12, p0}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1645
+    .line 1615
     .local v2, child:Landroid/view/View;
     invoke-direct {p0, v2, v5, p1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mockMeasureScrapChild(Landroid/view/View;II)V
 
-    .line 1647
+    .line 1617
     if-lez v5, :cond_3
 
-    .line 1649
+    .line 1619
     add-int/2addr v11, v4
 
-    .line 1658
+    .line 1628
     :cond_3
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -542,12 +542,12 @@
 
     add-int/2addr v11, v12
 
-    .line 1660
+    .line 1630
     move/from16 v0, p4
 
     if-lt v11, v0, :cond_6
 
-    .line 1663
+    .line 1633
     if-ltz p5, :cond_4
 
     move/from16 v0, p5
@@ -581,7 +581,7 @@
 
     goto :goto_0
 
-    .line 1628
+    .line 1598
     .end local v2           #child:Landroid/view/View;
     .end local v4           #dividerHeight:I
     .end local v5           #i:I
@@ -592,7 +592,7 @@
 
     goto :goto_1
 
-    .line 1672
+    .line 1642
     .restart local v2       #child:Landroid/view/View;
     .restart local v4       #dividerHeight:I
     .restart local v5       #i:I
@@ -605,10 +605,10 @@
 
     if-lt v5, v0, :cond_7
 
-    .line 1673
+    .line 1643
     move v8, v11
 
-    .line 1640
+    .line 1610
     :cond_7
     add-int/lit8 v5, v5, 0x1
 
@@ -618,6 +618,6 @@
     :cond_8
     move v8, v11
 
-    .line 1679
+    .line 1649
     goto :goto_0
 .end method

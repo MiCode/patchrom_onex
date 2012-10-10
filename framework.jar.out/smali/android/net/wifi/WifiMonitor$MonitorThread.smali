@@ -721,7 +721,7 @@
 
     aget-object v14, v7, v14
 
-    const-string/jumbo v15, "id"
+    const-string v15, "id"
 
     invoke-virtual {v14, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

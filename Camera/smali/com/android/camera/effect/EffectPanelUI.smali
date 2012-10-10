@@ -601,7 +601,7 @@
     .line 403
     iget-object v1, p0, Lcom/android/camera/effect/EffectPanelUI;->m_EffectPopup:Lcom/android/camera/widget/PopupBubble;
 
-    const v2, 0x7f0b0135
+    const v2, 0x7f0b0136
 
     invoke-virtual {p0, v2}, Lcom/android/camera/effect/EffectPanelUI;->getDimension(I)I
 

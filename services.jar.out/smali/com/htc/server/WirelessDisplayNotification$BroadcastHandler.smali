@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 385
+    .line 393
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 385
+    .line 393
     invoke-direct {p0, p1}, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;-><init>(Lcom/htc/server/WirelessDisplayNotification;)V
 
     return-void
@@ -47,30 +47,32 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 8
+    .locals 10
     .parameter "context"
     .parameter "intent"
 
     .prologue
+    const-wide/16 v8, 0x0
+
     const v7, 0x10805e5
 
     const/4 v6, 0x0
 
-    .line 388
+    .line 396
     if-nez p2, :cond_1
 
-    .line 428
+    .line 438
     :cond_0
     :goto_0
     return-void
 
-    .line 389
+    .line 397
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 392
+    .line 400
     .local v0, action:Ljava/lang/String;
     const-string v4, "android.intent.action.BOOT_COMPLETED"
 
@@ -80,7 +82,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 393
+    .line 401
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
@@ -93,7 +95,7 @@
     #setter for: Lcom/htc/server/WirelessDisplayNotification;->mNotificationPreference:Z
     invoke-static {v4, v5}, Lcom/htc/server/WirelessDisplayNotification;->access$102(Lcom/htc/server/WirelessDisplayNotification;Z)Z
 
-    .line 396
+    .line 404
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #getter for: Lcom/htc/server/WirelessDisplayNotification;->mNotificationPreference:Z
@@ -103,7 +105,7 @@
 
     if-nez v4, :cond_0
 
-    .line 397
+    .line 405
     const-string v4, "notification"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -112,19 +114,25 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
-    .line 399
+    .line 407
     .local v2, nm:Landroid/app/NotificationManager;
     invoke-virtual {v2, v7}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 400
+    .line 408
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #setter for: Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
     invoke-static {v4, v6}, Lcom/htc/server/WirelessDisplayNotification;->access$302(Lcom/htc/server/WirelessDisplayNotification;I)I
 
+    .line 409
+    iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
+
+    #setter for: Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+    invoke-static {v4, v8, v9}, Lcom/htc/server/WirelessDisplayNotification;->access$402(Lcom/htc/server/WirelessDisplayNotification;J)J
+
     goto :goto_0
 
-    .line 405
+    .line 414
     .end local v2           #nm:Landroid/app/NotificationManager;
     :cond_2
     const-string v4, "com.htc.wifidisplay.NOTIFICATION_STATUS_UPDATE"
@@ -135,7 +143,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 406
+    .line 415
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
@@ -148,7 +156,7 @@
     #setter for: Lcom/htc/server/WirelessDisplayNotification;->mNotificationPreference:Z
     invoke-static {v4, v5}, Lcom/htc/server/WirelessDisplayNotification;->access$102(Lcom/htc/server/WirelessDisplayNotification;Z)Z
 
-    .line 409
+    .line 418
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #getter for: Lcom/htc/server/WirelessDisplayNotification;->mNotificationPreference:Z
@@ -158,7 +166,7 @@
 
     if-nez v4, :cond_0
 
-    .line 410
+    .line 419
     const-string v4, "notification"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -167,19 +175,25 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
-    .line 412
+    .line 421
     .restart local v2       #nm:Landroid/app/NotificationManager;
     invoke-virtual {v2, v7}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 413
+    .line 422
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #setter for: Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
     invoke-static {v4, v6}, Lcom/htc/server/WirelessDisplayNotification;->access$302(Lcom/htc/server/WirelessDisplayNotification;I)I
 
+    .line 423
+    iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
+
+    #setter for: Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+    invoke-static {v4, v8, v9}, Lcom/htc/server/WirelessDisplayNotification;->access$402(Lcom/htc/server/WirelessDisplayNotification;J)J
+
     goto :goto_0
 
-    .line 418
+    .line 428
     .end local v2           #nm:Landroid/app/NotificationManager;
     :cond_3
     const-string v4, "com.htc.wifidisplay.NOTIFICATION_BTN_CLICK"
@@ -190,7 +204,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 419
+    .line 429
     const-string v4, "statusbar"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -199,19 +213,19 @@
 
     check-cast v3, Landroid/app/StatusBarManager;
 
-    .line 420
+    .line 430
     .local v3, statusbar:Landroid/app/StatusBarManager;
     if-eqz v3, :cond_4
 
-    .line 421
+    .line 431
     invoke-virtual {v3}, Landroid/app/StatusBarManager;->collapse()V
 
-    .line 424
+    .line 434
     :cond_4
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #getter for: Lcom/htc/server/WirelessDisplayNotification;->mHandler:Lcom/htc/server/WirelessDisplayNotification$H;
-    invoke-static {v4}, Lcom/htc/server/WirelessDisplayNotification;->access$400(Lcom/htc/server/WirelessDisplayNotification;)Lcom/htc/server/WirelessDisplayNotification$H;
+    invoke-static {v4}, Lcom/htc/server/WirelessDisplayNotification;->access$500(Lcom/htc/server/WirelessDisplayNotification;)Lcom/htc/server/WirelessDisplayNotification$H;
 
     move-result-object v4
 
@@ -221,12 +235,12 @@
 
     move-result-object v1
 
-    .line 425
+    .line 435
     .local v1, msg:Landroid/os/Message;
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #getter for: Lcom/htc/server/WirelessDisplayNotification;->mHandler:Lcom/htc/server/WirelessDisplayNotification$H;
-    invoke-static {v4}, Lcom/htc/server/WirelessDisplayNotification;->access$400(Lcom/htc/server/WirelessDisplayNotification;)Lcom/htc/server/WirelessDisplayNotification$H;
+    invoke-static {v4}, Lcom/htc/server/WirelessDisplayNotification;->access$500(Lcom/htc/server/WirelessDisplayNotification;)Lcom/htc/server/WirelessDisplayNotification$H;
 
     move-result-object v4
 

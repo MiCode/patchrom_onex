@@ -4,8 +4,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/htc/music/browserlayer/EditPlaylistActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/htc/music/browserlayer/EditPlaylistActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 417
+    .line 165
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,78 +35,20 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+    .locals 1
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 420
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    .line 168
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
+
+    invoke-virtual {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 421
-    .local v0, action:Ljava/lang/String;
-    const-string v1, "android.intent.action.MEDIA_SCANNER_STARTED"
+    invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 422
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->showSpinner(Z)V
-
-    .line 429
-    :cond_0
-    :goto_0
+    .line 169
     return-void
-
-    .line 423
-    :cond_1
-    const-string v1, "android.intent.action.MEDIA_SCANNER_FINISHED"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 424
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-
-    iget-boolean v1, v1, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAsyncQuerying:Z
-
-    if-nez v1, :cond_0
-
-    .line 425
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->showSpinner(Z)V
-
-    goto :goto_0
-
-    .line 426
-    :cond_2
-    const-string v1, "android.intent.action.MEDIA_UNMOUNTED"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 427
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-
-    invoke-virtual {v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->finish()V
-
-    goto :goto_0
 .end method

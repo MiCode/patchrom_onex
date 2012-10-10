@@ -25,10 +25,10 @@
     .locals 1
 
     .prologue
-    .line 836
+    .line 831
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 838
+    .line 833
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wm/InputManager$VirtualKeyPolicy;->mOrientation:I

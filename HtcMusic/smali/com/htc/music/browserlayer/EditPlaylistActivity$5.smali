@@ -3,12 +3,12 @@
 .source "EditPlaylistActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/htc/music/browserlayer/EditPlaylistActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/htc/music/browserlayer/EditPlaylistActivity;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1415
+    .line 602
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$5;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,17 +37,29 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
     .parameter "arg0"
+    .parameter "arg1"
 
     .prologue
-    .line 1417
-    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$5;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
+    .line 604
+    new-instance v0, Landroid/content/Intent;
 
-    #calls: Lcom/htc/music/browserlayer/EditPlaylistActivity;->goToPicker()V
-    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$1100(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    invoke-static {}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$200()Ljava/lang/String;
 
-    .line 1418
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 605
+    .local v0, intent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$5;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
+
+    const/16 v2, 0x29
+
+    invoke-virtual {v1, v0, v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 606
     return-void
 .end method

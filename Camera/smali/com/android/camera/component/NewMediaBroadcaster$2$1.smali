@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 77
+    .line 65
     iput-object p1, p0, Lcom/android/camera/component/NewMediaBroadcaster$2$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$2;
 
     iput-object p2, p0, Lcom/android/camera/component/NewMediaBroadcaster$2$1;->val$e:Lcom/android/camera/MediaEventArgs;
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 80
+    .line 68
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$2$1;->val$e:Lcom/android/camera/MediaEventArgs;
 
     invoke-virtual {v1}, Lcom/android/camera/MediaEventArgs;->isSuccessful()Z
@@ -55,7 +55,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 82
+    .line 70
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -64,7 +64,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 83
+    .line 71
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$2$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$2;
 
     iget-object v1, v1, Lcom/android/camera/component/NewMediaBroadcaster$2;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
@@ -95,7 +95,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 85
+    .line 73
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$2$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$2;
 
     iget-object v1, v1, Lcom/android/camera/component/NewMediaBroadcaster$2;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
@@ -106,7 +106,7 @@
 
     aput-object v2, v1, v0
 
-    .line 92
+    .line 80
     .end local v0           #i:I
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$2$1;->val$e:Lcom/android/camera/MediaEventArgs;
@@ -115,7 +115,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 94
+    .line 82
     iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$2$1;->this$1:Lcom/android/camera/component/NewMediaBroadcaster$2;
 
     iget-object v1, v1, Lcom/android/camera/component/NewMediaBroadcaster$2;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
@@ -123,11 +123,11 @@
     #calls: Lcom/android/camera/component/NewMediaBroadcaster;->checkAndBroadcastIntent()V
     invoke-static {v1}, Lcom/android/camera/component/NewMediaBroadcaster;->access$100(Lcom/android/camera/component/NewMediaBroadcaster;)V
 
-    .line 96
+    .line 84
     :cond_1
     return-void
 
-    .line 82
+    .line 70
     .restart local v0       #i:I
     :cond_2
     add-int/lit8 v0, v0, 0x1

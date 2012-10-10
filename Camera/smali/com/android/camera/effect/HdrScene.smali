@@ -31,16 +31,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 69
+    .line 73
     iget-object v0, p0, Lcom/android/camera/effect/HdrScene;->m_HdrUI:Lcom/android/camera/component/HdrUI;
 
     if-eqz v0, :cond_0
 
-    .line 72
+    .line 76
     :goto_0
     return v1
 
-    .line 71
+    .line 75
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/effect/HdrScene;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -60,7 +60,7 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/HdrScene;->m_HdrUI:Lcom/android/camera/component/HdrUI;
 
-    .line 72
+    .line 76
     iget-object v0, p0, Lcom/android/camera/effect/HdrScene;->m_HdrUI:Lcom/android/camera/component/HdrUI;
 
     if-eqz v0, :cond_1
@@ -81,74 +81,110 @@
 
 # virtual methods
 .method protected applyEffect(Lcom/android/camera/effect/EffectBase;)V
-    .locals 2
+    .locals 3
     .parameter "prevEffect"
 
     .prologue
     .line 28
-    invoke-direct {p0}, Lcom/android/camera/effect/HdrScene;->linkToComponents()Z
+    if-ne p0, p1, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
+    const/4 v0, 0x1
 
     .line 29
-    iget-object v0, p0, Lcom/android/camera/effect/HdrScene;->m_HdrUI:Lcom/android/camera/component/HdrUI;
-
-    invoke-virtual {v0}, Lcom/android/camera/component/HdrUI;->enterHdrMode()V
-
-    .line 32
+    .local v0, bIsSameScene:Z
     :goto_0
-    return-void
+    const/4 v0, 0x0
+
+    .line 30
+    invoke-direct {p0}, Lcom/android/camera/effect/HdrScene;->linkToComponents()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     .line 31
+    iget-object v1, p0, Lcom/android/camera/effect/HdrScene;->m_HdrUI:Lcom/android/camera/component/HdrUI;
+
+    invoke-virtual {v1, v0}, Lcom/android/camera/component/HdrUI;->enterHdrMode(Z)V
+
+    .line 34
+    :goto_1
+    return-void
+
+    .line 28
+    .end local v0           #bIsSameScene:Z
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
-
-    const-string v1, "Cannot link to HDR UI"
-
-    invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     goto :goto_0
+
+    .line 33
+    .restart local v0       #bIsSameScene:Z
+    :cond_1
+    iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+
+    const-string v2, "Cannot link to HDR UI"
+
+    invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
 .end method
 
 .method protected cancelEffect(Lcom/android/camera/effect/EffectBase;)V
-    .locals 2
+    .locals 3
     .parameter "nextEffect"
 
     .prologue
-    .line 40
-    invoke-direct {p0}, Lcom/android/camera/effect/HdrScene;->linkToComponents()Z
+    .line 42
+    if-ne p0, p1, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 41
-    iget-object v0, p0, Lcom/android/camera/effect/HdrScene;->m_HdrUI:Lcom/android/camera/component/HdrUI;
-
-    invoke-virtual {v0}, Lcom/android/camera/component/HdrUI;->exitHdrMode()V
-
-    .line 44
-    :goto_0
-    return-void
+    const/4 v0, 0x1
 
     .line 43
+    .local v0, bIsSameScene:Z
+    :goto_0
+    const/4 v0, 0x0
+
+    .line 44
+    invoke-direct {p0}, Lcom/android/camera/effect/HdrScene;->linkToComponents()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 45
+    iget-object v1, p0, Lcom/android/camera/effect/HdrScene;->m_HdrUI:Lcom/android/camera/component/HdrUI;
+
+    invoke-virtual {v1, v0}, Lcom/android/camera/component/HdrUI;->exitHdrMode(Z)V
+
+    .line 48
+    :goto_1
+    return-void
+
+    .line 42
+    .end local v0           #bIsSameScene:Z
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
-
-    const-string v1, "Cannot link to HDR UI"
-
-    invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     goto :goto_0
+
+    .line 47
+    .restart local v0       #bIsSameScene:Z
+    :cond_1
+    iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+
+    const-string v2, "Cannot link to HDR UI"
+
+    invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
 .end method
 
 .method public getCapabilities()I
     .locals 1
 
     .prologue
-    .line 52
+    .line 56
     const/16 v0, 0x51
 
     return v0
@@ -158,7 +194,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 65
     const/4 v0, 0x1
 
     return v0

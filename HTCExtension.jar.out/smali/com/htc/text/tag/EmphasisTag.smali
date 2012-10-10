@@ -75,111 +75,87 @@
 
 # virtual methods
 .method public toEncodedString()Ljava/lang/String;
-    .locals 6
+    .locals 3
 
     .prologue
     .line 23
-    iget-object v3, p0, Lcom/htc/text/tag/EmphasisTag;->text:Ljava/lang/String;
+    iget-object v1, p0, Lcom/htc/text/tag/EmphasisTag;->text:Ljava/lang/String;
 
-    const-string v4, "&"
-
-    const-string v5, "&amp;"
-
-    invoke-static {v3, v4, v5}, Lcom/htc/text/tag/EmphasisTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/htc/text/tag/EmphasisTag;->escapeXML(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 24
-    .local v0, escapedAmpersandText:Ljava/lang/String;
-    const-string v3, "<"
+    .local v0, escapedText:Ljava/lang/String;
+    iget v1, p0, Lcom/htc/text/tag/EmphasisTag;->argb:I
 
-    const-string v4, "&lt;"
-
-    invoke-static {v0, v3, v4}, Lcom/htc/text/tag/EmphasisTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
+    if-nez v1, :cond_0
 
     .line 25
-    .local v2, escapedLessThanText:Ljava/lang/String;
-    const-string v3, ">"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v4, "&gt;"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v2, v3, v4}, Lcom/htc/text/tag/EmphasisTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v2, "<emp value=\""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 26
-    .local v1, escapedGreaterThanText:Ljava/lang/String;
-    iget v3, p0, Lcom/htc/text/tag/EmphasisTag;->argb:I
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v3, :cond_0
+    move-result-object v1
+
+    const-string v2, "\" />"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     .line 27
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "<emp value=\""
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "\" />"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 29
     :goto_0
-    return-object v3
+    return-object v1
 
     :cond_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "<emp argb=\""
+    const-string v2, "<emp argb=\""
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    iget v4, p0, Lcom/htc/text/tag/EmphasisTag;->argb:I
+    iget v2, p0, Lcom/htc/text/tag/EmphasisTag;->argb:I
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, "\" value=\""
+    const-string v2, "\" value=\""
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, "\" />"
+    const-string v2, "\" />"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
     goto :goto_0
 .end method
@@ -188,7 +164,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 40
     iget-object v0, p0, Lcom/htc/text/tag/EmphasisTag;->text:Ljava/lang/String;
 
     return-object v0

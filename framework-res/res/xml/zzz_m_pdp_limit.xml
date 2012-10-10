@@ -29,7 +29,7 @@
     <MPDP opname="Vodafone GR" mccmnc="20205" pdps2g="1" pdps3g="1" />
     <MPDP opname="Vodafone IND" mccmnc="40401" pdps2g="2" pdps3g="1" />
     <MPDP opname="Vodafone ITA" mccmnc="22210" pdps2g="3" pdps3g="3" />
-    <MPDP opname="Vodafone NL" mccmnc="20404" pdps2g="3" pdps3g="2" />
+    <MPDP opname="Vodafone NL" mccmnc="20404" pdps2g="3" pdps3g="3" />
     <MPDP opname="Vodafone PT" mccmnc="26801" pdps2g="2" pdps3g="1" />
     <MPDP opname="Vodafone TUR" mccmnc="28602" pdps2g="1" pdps3g="1" />
     <MPDP opname="Vodafone UK" mccmnc="23415" pdps2g="2" pdps3g="2" />
@@ -61,7 +61,9 @@
     <MPDP opname="T-Mobile US" mccmnc="310330" pdps2g="3" pdps3g="3" />
     <MPDP opname="T-Mobile US" mccmnc="310660" pdps2g="3" pdps3g="3" />
     <MPDP opname="T-Mobile US" mccmnc="310800" pdps2g="3" pdps3g="3" />
-    <MPDP opname="Dave Wireless" mccmnc="302320" pdps2g="2" pdps3g="2" />
+    <MPDP opname="Dave Wireless" mccmnc="302320" pdps2g="3" pdps3g="3" />
+    <MPDP opname="Dave Wireless" mccmnc="302490" pdps2g="3" pdps3g="3" />
+    <MPDP opname="Dave Wireless" mccmnc="302500" pdps2g="3" pdps3g="3" />
     <MPDP opname="Rogers (Canada)" mccmnc="302720" pdps2g="3" pdps3g="3" />
     <MPDP opname="Fido (Canada)" mccmnc="302370" pdps2g="3" pdps3g="3" />
     <MPDP opname="TELUS SP" mccmnc="302220" pdps2g="3" pdps3g="3" />
@@ -123,6 +125,8 @@
     <MPDP opname="TDC" mccmnc="23801" pdps2g="3" pdps3g="3" />
     <MPDP opname="Sonofon" mccmnc="23802" pdps2g="2" pdps3g="2" />
     <MPDP opname="3" mccmnc="23806" pdps2g="1" pdps3g="1" />
+    <MPDP opname="3 Production Network" mccmnc="23420" pdps2g="1" pdps3g="2" />
+    <MPDP opname="Test Network (Genesis)" mccmnc="23594" pdps2g="1" pdps3g="2" />
     <MPDP opname="AIS" mccmnc="52001" pdps2g="1" pdps3g="1" />
     <MPDP opname="DTAC" mccmnc="52018" pdps2g="1" pdps3g="1" />
     <MPDP opname="TurkCell" mccmnc="28601" pdps2g="3" pdps3g="1" />
@@ -132,7 +136,7 @@
     <MPDP opname="Bouygyes" mccmnc="20820" pdps2g="1" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45400" pdps2g="2" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45402" pdps2g="2" pdps3g="2" />
-    <MPDP opname="CSL (HK)" mccmnc="45403" pdps2g="2" pdps3g="2" />
+    <MPDP opname="3(HK)" mccmnc="45403" pdps2g="2" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45410" pdps2g="2" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45418" pdps2g="2" pdps3g="2" />
     <MPDP opname="DNA" mccmnc="24403" pdps2g="1" pdps3g="1" />
@@ -149,7 +153,8 @@
     <MPDP opname="Optimus" mccmnc="26803" pdps2g="2" pdps3g="2" />
     <MPDP opname="TMN" mccmnc="26806" pdps2g="3" pdps3g="3" />
     <MPDP opname="Telenor-SE" mccmnc="24008" pdps2g="2" pdps3g="2" />
-    <MPDP opname="TIM" mccmnc="22201" pdps2g="2" pdps3g="3" />
+    <MPDP opname="TIM" mccmnc="22201" pdps2g="3" pdps3g="3" />
+    <MPDP opname="TIM" mccmnc="22288" pdps2g="3" pdps3g="3" />
     <MPDP opname="Telus" mccmnc="27404" pdps2g="1" pdps3g="2" />
     <MPDP opname="Mobily" mccmnc="42003" pdps2g="3" pdps3g="3" />
     <MPDP opname="STC" mccmnc="42001" pdps2g="3" pdps3g="3" />
@@ -216,4 +221,5 @@
     <MPDP opname="Mobilkom" mccmnc="23201" pdps2g="2" pdps3g="2" />
     <MPDP opname="Iusacell" mccmnc="334050" pdps2g="2" pdps3g="3" />
     <MPDP opname="Maxis" mccmnc="50212" pdps2g="2" pdps3g="2" />
+    <MPDP opname="GR COSMOTE" mccmnc="20201" pdps2g="2" pdps3g="2" />
 </MPDPS>

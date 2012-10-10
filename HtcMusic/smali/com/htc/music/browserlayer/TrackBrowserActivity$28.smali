@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5332
+    .line 5341
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$28;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 5334
+    .line 5343
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$28;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mPluginAdapter:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 5335
+    .line 5344
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$28;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mPluginAdapter:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;
@@ -61,11 +61,11 @@
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->notifyDataSetChanged()V
 
-    .line 5338
+    .line 5347
     :goto_0
     return-void
 
-    .line 5337
+    .line 5346
     :cond_0
     const-string v0, "[PluginNowPlayingListActivity]"
 

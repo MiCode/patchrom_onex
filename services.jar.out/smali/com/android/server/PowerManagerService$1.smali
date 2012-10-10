@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 444
+    .line 455
     iput-object p1, p0, Lcom/android/server/PowerManagerService$1;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,17 +41,17 @@
     .locals 2
 
     .prologue
-    .line 446
+    .line 457
     const-string v0, "PowerManagerService"
 
     const-string v1, "runHtcPowerSaverCheck ======================================"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 447
+    .line 458
     monitor-enter p0
 
-    .line 448
+    .line 459
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$1;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -62,13 +62,13 @@
 
     invoke-virtual {v0}, Lcom/android/server/HtcPowerSaver;->check()V
 
-    .line 449
+    .line 460
     monitor-exit p0
 
-    .line 450
+    .line 461
     return-void
 
-    .line 449
+    .line 460
     :catchall_0
     move-exception v0
 

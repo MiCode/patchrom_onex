@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 99
+    .line 118
     iput-object p1, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 
 # virtual methods
 .method public onServiceConnected()V
-    .locals 4
+    .locals 6
 
     .prologue
     const/4 v3, 0x0
 
-    .line 102
+    .line 121
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -53,18 +53,18 @@
 
     if-nez v0, :cond_0
 
-    .line 103
+    .line 122
     const-string v0, "[MediaPluginDLNA]"
 
     const-string v1, "DLNAServiceStatusListener::onServiceConnected => mDLNAManager is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
+    .line 142
     :goto_0
     return-void
 
-    .line 106
+    .line 125
     :cond_0
     const-string v0, "[MediaPluginDLNA]"
 
@@ -72,7 +72,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
+    .line 126
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     new-instance v1, Landroid/media/MediaPluginDLNA$ControllerListener;
@@ -84,7 +84,7 @@
     #setter for: Landroid/media/MediaPluginDLNA;->mControllerListener:Landroid/media/MediaPluginDLNA$ControllerListener;
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$102(Landroid/media/MediaPluginDLNA;Landroid/media/MediaPluginDLNA$ControllerListener;)Landroid/media/MediaPluginDLNA$ControllerListener;
 
-    .line 108
+    .line 127
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v1}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setControllerStatusListener(Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;)V
 
-    .line 109
+    .line 128
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     new-instance v1, Landroid/media/MediaPluginDLNA$RendererListener;
@@ -113,7 +113,7 @@
     #setter for: Landroid/media/MediaPluginDLNA;->mRendererListener:Landroid/media/MediaPluginDLNA$RendererListener;
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$302(Landroid/media/MediaPluginDLNA;Landroid/media/MediaPluginDLNA$RendererListener;)Landroid/media/MediaPluginDLNA$RendererListener;
 
-    .line 110
+    .line 129
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -130,7 +130,48 @@
 
     invoke-virtual {v0, v1}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setRendererStatusListener(Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;)V
 
-    .line 111
+    .line 130
+    iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
+
+    #getter for: Landroid/media/MediaPluginDLNA;->mDimModeTimer:Ljava/util/Timer;
+    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$500(Landroid/media/MediaPluginDLNA;)Ljava/util/Timer;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    .line 131
+    iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
+
+    new-instance v1, Ljava/util/Timer;
+
+    invoke-direct {v1}, Ljava/util/Timer;-><init>()V
+
+    #setter for: Landroid/media/MediaPluginDLNA;->mDimModeTimer:Ljava/util/Timer;
+    invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$502(Landroid/media/MediaPluginDLNA;Ljava/util/Timer;)Ljava/util/Timer;
+
+    .line 132
+    iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
+
+    #getter for: Landroid/media/MediaPluginDLNA;->mDimModeTimer:Ljava/util/Timer;
+    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$500(Landroid/media/MediaPluginDLNA;)Ljava/util/Timer;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/media/MediaPluginDLNA$switchDimModeTimerTask;
+
+    iget-object v2, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
+
+    invoke-direct {v1, v2, v3}, Landroid/media/MediaPluginDLNA$switchDimModeTimerTask;-><init>(Landroid/media/MediaPluginDLNA;Landroid/media/MediaPluginDLNA$1;)V
+
+    const-wide/16 v2, 0x2710
+
+    const-wide/32 v4, 0xc350
+
+    invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
+
+    .line 134
+    :cond_1
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -142,35 +183,35 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 112
+    .line 135
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onServiceConnected=> getMirrorRenderer() return valid object"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
+    .line 136
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     const/4 v1, 0x0
 
     #setter for: Landroid/media/MediaPluginDLNA;->mWaitMirrorConnected:Z
-    invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$502(Landroid/media/MediaPluginDLNA;Z)Z
+    invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;Z)Z
 
-    .line 114
+    .line 137
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->eventHandler:Landroid/media/MediaPluginDLNA$EventHandler;
-    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$600(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
+    invoke-static {v0}, Landroid/media/MediaPluginDLNA;->access$800(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
 
     move-result-object v0
 
     iget-object v1, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->eventHandler:Landroid/media/MediaPluginDLNA$EventHandler;
-    invoke-static {v1}, Landroid/media/MediaPluginDLNA;->access$600(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
+    invoke-static {v1}, Landroid/media/MediaPluginDLNA;->access$800(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPluginDLNA$EventHandler;
 
     move-result-object v1
 
@@ -184,17 +225,17 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/MediaPluginDLNA$EventHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 116
-    :cond_1
+    .line 139
+    :cond_2
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onServiceConnected=> getMirrorRenderer() return null..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
+    .line 140
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$1;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -211,14 +252,14 @@
     .locals 2
 
     .prologue
-    .line 123
+    .line 146
     const-string v0, "[MediaPluginDLNA]"
 
     const-string v1, "DLNAServiceStatusListener::onServiceDisconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
+    .line 147
     return-void
 .end method
 
@@ -226,13 +267,13 @@
     .locals 2
 
     .prologue
-    .line 128
+    .line 151
     const-string v0, "[MediaPluginDLNA]"
 
     const-string v1, "DLNAServiceStatusListener::onServiceError"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
+    .line 152
     return-void
 .end method

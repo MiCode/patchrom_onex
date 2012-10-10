@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1379
+    .line 1384
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$3;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1382
+    .line 1387
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$3;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -95,12 +95,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1383
+    .line 1388
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$3;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-virtual {v0}, Lcom/android/camera/component/PanoramaUI;->stopCapture()V
 
-    .line 1384
+    .line 1389
     :cond_0
     return-void
 .end method

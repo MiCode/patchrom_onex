@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 1900
+    .line 1975
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$2;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;
 
     iput-object p2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$2;->val$tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
@@ -47,7 +47,7 @@
     .parameter "clickedView"
 
     .prologue
-    .line 1903
+    .line 1978
     iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$2;->val$tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -59,17 +59,17 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mSelectedData:Landroid/os/Bundle;
     invoke-static {v1, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$102(Lcom/htc/music/browserlayer/AlbumDetailActivity;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 1904
+    .line 1979
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$2;->val$tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 1905
+    .line 1980
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$2;->val$tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->showTrackOptions()V
-    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3200(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
+    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3500(Lcom/htc/music/browserlayer/AlbumDetailActivity;)V
 
-    .line 1906
+    .line 1981
     return-void
 .end method

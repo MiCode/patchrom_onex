@@ -73,7 +73,7 @@
     if-eqz p0, :cond_0
 
     .line 934
-    const-string/jumbo v0, "http://"
+    const-string v0, "http://"
 
     .line 937
     :cond_0
@@ -170,7 +170,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://youtube.com/watch?v="
+    const-string v1, "http://youtube.com/watch?v="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -221,7 +221,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://youtube.com/watch?"
+    const-string v1, "http://youtube.com/watch?"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -25,7 +25,7 @@
     .locals 2
 
     .prologue
-    .line 2637
+    .line 2640
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "rate"
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 2636
+    .line 2639
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

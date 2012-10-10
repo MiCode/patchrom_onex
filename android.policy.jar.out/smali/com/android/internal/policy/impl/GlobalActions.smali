@@ -725,9 +725,9 @@
     .line 231
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$1;
 
-    const v2, 0x1080738
+    const v2, 0x4020008
 
-    const v3, 0x1080738
+    const v3, 0x4020008
 
     const v4, 0x1040146
 
@@ -746,9 +746,9 @@
     .line 285
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$2;
 
-    const v2, 0x108074d
+    const v2, 0x402000c
 
-    const v3, 0x108074d
+    const v3, 0x402000c
 
     const v4, 0x104059e
 
@@ -767,9 +767,9 @@
     .line 316
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$3;
 
-    const v2, 0x1080739
+    const v2, 0x402000a
 
-    const v3, 0x1080739
+    const v3, 0x402000a
 
     const v4, 0x1040596
 
@@ -858,7 +858,7 @@
 
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$4;
 
-    const v2, 0x108073a
+    const v2, 0x402000b
 
     const v3, 0x1040142
 
@@ -878,7 +878,7 @@
 
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$5;
 
-    const v2, 0x108073b
+    const v2, 0x402000d
 
     invoke-direct {v1, p0, v2, v13, v12}, Lcom/android/internal/policy/impl/GlobalActions$5;-><init>(Lcom/android/internal/policy/impl/GlobalActions;III)V
 
@@ -995,7 +995,7 @@
 
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$6;
 
-    const v2, 0x1080739
+    const v2, 0x402000a
 
     const v3, 0x1040142
 
@@ -1032,7 +1032,7 @@
 
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$7;
 
-    const v2, 0x1080739
+    const v2, 0x402000a
 
     const v3, 0x1040142
 

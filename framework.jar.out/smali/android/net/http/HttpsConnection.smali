@@ -298,7 +298,7 @@
 
     .prologue
     .line 419
-    const-string/jumbo v0, "https"
+    const-string v0, "https"
 
     return-object v0
 .end method
@@ -500,7 +500,7 @@
 
     if-nez v26, :cond_0
 
-    const-string/jumbo v26, "keep-alive"
+    const-string v26, "keep-alive"
 
     move-object/from16 v0, v26
 
@@ -1240,7 +1240,7 @@
 
     .line 365
     .local v16, params:Lorg/apache/http/params/BasicHttpParams;
-    const-string/jumbo v26, "http.socket.buffer-size"
+    const-string v26, "http.socket.buffer-size"
 
     const/16 v27, 0x2000
 

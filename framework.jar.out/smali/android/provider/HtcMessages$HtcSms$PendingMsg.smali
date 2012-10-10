@@ -26,7 +26,7 @@
     .locals 2
 
     .prologue
-    .line 51
+    .line 59
     sget-object v0, Landroid/provider/HtcMessages$HtcSms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "pending-list"
@@ -44,7 +44,7 @@
     .locals 0
 
     .prologue
-    .line 50
+    .line 57
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

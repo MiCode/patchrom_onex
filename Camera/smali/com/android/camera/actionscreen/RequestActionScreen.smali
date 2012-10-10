@@ -166,26 +166,43 @@
 
     if-nez v0, :cond_0
 
-    .line 132
+    .line 139
     :goto_0
     return-void
 
     .line 126
     :cond_0
+    invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->isMediaSaved()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 128
+    iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+
+    const-string v1, "Media is not saved yet, close later"
+
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 133
+    :cond_1
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->deleteLatestMedia()V
 
-    .line 129
+    .line 136
     sget-object v0, Lcom/android/camera/actionscreen/ActionScreenCloseReason;->DeleteMedia:Lcom/android/camera/actionscreen/ActionScreenCloseReason;
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/actionscreen/RequestActionScreen;->close(Lcom/android/camera/actionscreen/ActionScreenCloseReason;Z)V
 
-    .line 131
+    .line 138
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "onReCaptureClicked() - end"
@@ -201,16 +218,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 150
+    .line 157
     iget-boolean v0, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_IsRequestLayoutOpen:Z
 
     if-eqz v0, :cond_0
 
-    .line 160
+    .line 167
     :goto_0
     return-void
 
-    .line 154
+    .line 161
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->getLayout()Landroid/view/View;
 
@@ -218,15 +235,15 @@
 
     invoke-virtual {p0, v0, v1, v1}, Lcom/android/camera/actionscreen/RequestActionScreen;->showUI(Landroid/view/View;ZZ)V
 
-    .line 155
+    .line 162
     iput-boolean v1, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_IsRequestLayoutOpen:Z
 
-    .line 158
+    .line 165
     iget-object v0, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    .line 159
+    .line 166
     iget-object v0, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestFocusFromTouch()Z
@@ -359,17 +376,17 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 147
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->isMediaSaved()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 141
+    .line 148
     invoke-direct {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->openRequestLayout()V
 
-    .line 142
+    .line 149
     :cond_0
     return-void
 .end method
@@ -380,40 +397,40 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 169
+    .line 176
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->getLayout()Landroid/view/View;
 
     move-result-object v0
 
-    .line 170
+    .line 177
     .local v0, baseLayout:Landroid/view/View;
-    const v2, 0x7f0800d4
+    const v2, 0x7f0800d6
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 171
+    .line 178
     .local v1, footer:Landroid/view/View;
     iget-boolean v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_IsLayoutLoaded:Z
 
     if-nez v2, :cond_1
 
-    .line 174
+    .line 181
     instance-of v2, v1, Lcom/htc/widget/HtcFooter;
 
     if-eqz v2, :cond_0
 
     move-object v2, v1
 
-    .line 175
+    .line 182
     check-cast v2, Lcom/htc/widget/HtcFooter;
 
     invoke-virtual {v2, v4}, Lcom/htc/widget/HtcFooter;->setTranparentBckground(Z)V
 
-    .line 176
+    .line 183
     :cond_0
-    const v2, 0x7f0800d6
+    const v2, 0x7f0800d8
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -421,8 +438,8 @@
 
     iput-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
-    .line 177
-    const v2, 0x7f0800d5
+    .line 184
+    const v2, 0x7f0800d7
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -430,14 +447,14 @@
 
     iput-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
 
-    .line 180
+    .line 187
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
     instance-of v2, v2, Landroid/widget/ImageView;
 
     if-eqz v2, :cond_6
 
-    .line 182
+    .line 189
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
     new-instance v3, Lcom/android/camera/actionscreen/RequestActionScreen$1;
@@ -446,7 +463,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 242
+    .line 249
     :goto_0
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
 
@@ -454,7 +471,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 244
+    .line 251
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
 
     new-instance v3, Lcom/android/camera/actionscreen/RequestActionScreen$4;
@@ -463,17 +480,17 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 282
+    .line 289
     :goto_1
     iput-boolean v4, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_IsLayoutLoaded:Z
 
-    .line 286
+    .line 293
     :cond_1
     instance-of v2, v1, Lcom/htc/widget/HtcFooter;
 
     if-nez v2, :cond_2
 
-    .line 296
+    .line 303
     :cond_2
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
@@ -481,7 +498,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 298
+    .line 305
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
     check-cast v2, Landroid/widget/ImageView;
@@ -490,40 +507,8 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 299
+    .line 306
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/camera/rotate/RotateRelativeLayout;
-
-    invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->getRotation()Lcom/android/camera/rotate/UIRotation;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
-
-    .line 301
-    :cond_3
-    iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
-
-    instance-of v2, v2, Landroid/widget/ImageView;
-
-    if-eqz v2, :cond_4
-
-    .line 303
-    iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
-
-    check-cast v2, Landroid/widget/ImageView;
-
-    const v3, 0x7f02002e
-
-    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 304
-    iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -538,14 +523,29 @@
     invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
     .line 308
-    :cond_4
-    instance-of v2, v0, Lcom/android/camera/rotate/RotateRelativeLayout;
+    :cond_3
+    iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
 
-    if-eqz v2, :cond_5
+    instance-of v2, v2, Landroid/widget/ImageView;
 
-    move-object v2, v0
+    if-eqz v2, :cond_4
 
-    .line 309
+    .line 310
+    iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
+
+    check-cast v2, Landroid/widget/ImageView;
+
+    const v3, 0x7f02002e
+
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 311
+    iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v2
+
     check-cast v2, Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->getRotation()Lcom/android/camera/rotate/UIRotation;
@@ -554,16 +554,33 @@
 
     invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 310
+    .line 315
+    :cond_4
+    instance-of v2, v0, Lcom/android/camera/rotate/RotateRelativeLayout;
+
+    if-eqz v2, :cond_5
+
+    move-object v2, v0
+
+    .line 316
+    check-cast v2, Lcom/android/camera/rotate/RotateRelativeLayout;
+
+    invoke-virtual {p0}, Lcom/android/camera/actionscreen/RequestActionScreen;->getRotation()Lcom/android/camera/rotate/UIRotation;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
+
+    .line 317
     :cond_5
     const/4 v2, -0x1
 
     invoke-static {v0, v2}, Lcom/android/camera/ViewUtil;->setWidth(Landroid/view/View;I)V
 
-    .line 311
+    .line 318
     return-void
 
-    .line 210
+    .line 217
     :cond_6
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
@@ -573,7 +590,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 217
+    .line 224
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_DoneButton:Landroid/view/View;
 
     new-instance v3, Lcom/android/camera/actionscreen/RequestActionScreen$3;
@@ -584,7 +601,7 @@
 
     goto :goto_0
 
-    .line 272
+    .line 279
     :cond_7
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen;->m_ReCaptureButton:Landroid/view/View;
 

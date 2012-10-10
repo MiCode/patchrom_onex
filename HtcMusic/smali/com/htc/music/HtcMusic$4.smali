@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 504
+    .line 506
     iput-object p1, p0, Lcom/htc/music/HtcMusic$4;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +42,15 @@
     .parameter "isVisible"
 
     .prologue
-    .line 507
+    .line 509
     if-eqz p1, :cond_0
 
-    .line 508
+    .line 510
     iget-object v0, p0, Lcom/htc/music/HtcMusic$4;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 510
+    .line 512
     :cond_0
     return-void
 .end method

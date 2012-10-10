@@ -35,7 +35,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 71
+    .line 68
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 19
@@ -44,10 +44,10 @@
     .line 21
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isRemovable:Z
 
-    .line 72
+    .line 69
     invoke-direct/range {p0 .. p5}, Lcom/htc/fragment/widget/CarouselTabSpec;->fillFeilds(Ljava/lang/String;IIII)V
 
-    .line 73
+    .line 70
     new-instance v0, Landroid/content/Intent;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -80,7 +80,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->intent:Landroid/content/Intent;
 
-    .line 74
+    .line 71
     return-void
 .end method
 
@@ -96,7 +96,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 35
+    .line 34
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 19
@@ -105,17 +105,17 @@
     .line 21
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isRemovable:Z
 
-    .line 36
+    .line 35
     invoke-direct/range {p0 .. p5}, Lcom/htc/fragment/widget/CarouselTabSpec;->fillFeilds(Ljava/lang/String;IIII)V
 
-    .line 37
+    .line 36
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->intent:Landroid/content/Intent;
 
-    .line 38
+    .line 37
     return-void
 .end method
 
@@ -132,7 +132,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 53
+    .line 51
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 19
@@ -141,10 +141,10 @@
     .line 21
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isRemovable:Z
 
-    .line 54
+    .line 52
     invoke-direct/range {p0 .. p5}, Lcom/htc/fragment/widget/CarouselTabSpec;->fillFeilds(Ljava/lang/String;IIII)V
 
-    .line 55
+    .line 53
     new-instance v0, Landroid/content/Intent;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -173,7 +173,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->intent:Landroid/content/Intent;
 
-    .line 56
+    .line 54
     return-void
 .end method
 
@@ -186,22 +186,22 @@
     .parameter "overlay"
 
     .prologue
-    .line 77
+    .line 74
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->tag:Ljava/lang/String;
 
-    .line 78
+    .line 75
     iput p2, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->str_title_id:I
 
-    .line 79
+    .line 76
     iput p3, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->ic_rest_id:I
 
-    .line 80
+    .line 77
     iput p4, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->ic_on_id:I
 
-    .line 81
+    .line 78
     iput p5, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->ic_overlay_id:I
 
-    .line 82
+    .line 79
     return-void
 .end method
 
@@ -212,10 +212,10 @@
     .parameter "args"
 
     .prologue
-    .line 90
+    .line 87
     if-eqz p1, :cond_3
 
-    .line 91
+    .line 88
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -239,22 +239,22 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 92
+    .line 89
     .local v1, key:Ljava/lang/String;
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 93
+    .line 90
     .local v2, value:Ljava/lang/Object;
     if-eqz v2, :cond_0
 
-    .line 95
+    .line 92
     instance-of v3, v2, Landroid/net/Uri;
 
     if-eqz v3, :cond_1
 
-    .line 96
+    .line 93
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,7 +284,7 @@
 
     goto :goto_0
 
-    .line 97
+    .line 94
     .restart local v2       #value:Ljava/lang/Object;
     :cond_1
     instance-of v3, v2, Ljava/lang/Boolean;
@@ -323,7 +323,7 @@
 
     if-nez v3, :cond_0
 
-    .line 106
+    .line 103
     new-instance v3, Ljava/lang/RuntimeException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -362,7 +362,7 @@
 
     throw v3
 
-    .line 109
+    .line 106
     .end local v1           #key:Ljava/lang/String;
     .end local v2           #value:Ljava/lang/Object;
     :cond_2
@@ -370,7 +370,7 @@
 
     invoke-virtual {v3, p1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 111
+    .line 108
     .end local v0           #i$:Ljava/util/Iterator;
     :cond_3
     return-object p0
@@ -385,47 +385,47 @@
 
     const/4 v0, 0x1
 
-    .line 121
+    .line 118
     packed-switch p1, :pswitch_data_0
 
-    .line 135
+    .line 132
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isInCarouselWidget:Z
 
-    .line 136
+    .line 133
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isRemovable:Z
 
-    .line 138
+    .line 135
     :goto_0
     return-object p0
 
-    .line 123
+    .line 120
     :pswitch_0
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isInCarouselWidget:Z
 
-    .line 124
+    .line 121
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isRemovable:Z
 
     goto :goto_0
 
-    .line 127
+    .line 124
     :pswitch_1
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isInCarouselWidget:Z
 
-    .line 128
+    .line 125
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isRemovable:Z
 
     goto :goto_0
 
-    .line 131
+    .line 128
     :pswitch_2
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isInCarouselWidget:Z
 
-    .line 132
+    .line 129
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselTabSpec;->isRemovable:Z
 
     goto :goto_0
 
-    .line 121
+    .line 118
     nop
 
     :pswitch_data_0

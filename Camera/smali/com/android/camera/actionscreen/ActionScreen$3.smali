@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 187
+    .line 179
     iput-object p1, p0, Lcom/android/camera/actionscreen/ActionScreen$3;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 191
+    .line 183
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isNvidiaPlatform()Z
 
@@ -74,12 +74,12 @@
 
     if-nez v0, :cond_1
 
-    .line 209
+    .line 201
     :cond_0
     :goto_0
     return-void
 
-    .line 193
+    .line 185
     :cond_1
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$3;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
 
@@ -97,7 +97,7 @@
 
     if-nez v0, :cond_0
 
-    .line 207
+    .line 199
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$3;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;

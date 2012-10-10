@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2568
+    .line 2574
     iput-object p1, p0, Lcom/htc/music/DMCMusicPlaybackService$RendererStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcDLNARendererStatusListener;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2568
+    .line 2574
     invoke-direct {p0, p1}, Lcom/htc/music/DMCMusicPlaybackService$RendererStatusListener;-><init>(Lcom/htc/music/DMCMusicPlaybackService;)V
 
     return-void
@@ -52,14 +52,14 @@
     .parameter "rendererName"
 
     .prologue
-    .line 2572
+    .line 2578
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "RendererStatusListener onConnected"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2573
+    .line 2579
     return-void
 .end method
 
@@ -70,7 +70,7 @@
     .parameter "errorReason"
 
     .prologue
-    .line 2583
+    .line 2589
     const-string v0, "[DMCMusicPlaybackService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -103,7 +103,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2585
+    .line 2591
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$RendererStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     const/16 v1, -0x2715
@@ -111,7 +111,7 @@
     #calls: Lcom/htc/music/DMCMusicPlaybackService;->pluginNotifyError(I)V
     invoke-static {v0, v1}, Lcom/htc/music/DMCMusicPlaybackService;->access$3000(Lcom/htc/music/DMCMusicPlaybackService;I)V
 
-    .line 2587
+    .line 2593
     return-void
 .end method
 
@@ -121,13 +121,13 @@
     .parameter "rendererName"
 
     .prologue
-    .line 2577
+    .line 2583
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "RendererStatusListener onMirrorRendererConnected"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2578
+    .line 2584
     return-void
 .end method

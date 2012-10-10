@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 699
+    .line 705
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +29,7 @@
     .locals 2
 
     .prologue
-    .line 706
+    .line 712
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v1, 0x9b
@@ -42,10 +42,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 708
+    .line 714
     const/4 v0, 0x1
 
-    .line 710
+    .line 716
     :goto_0
     return v0
 
@@ -63,7 +63,7 @@
 
     const/4 v0, 0x1
 
-    .line 730
+    .line 736
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     if-ne v1, v3, :cond_1
@@ -74,12 +74,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 738
+    .line 744
     :cond_0
     :goto_0
     return v0
 
-    .line 734
+    .line 740
     :cond_1
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -91,7 +91,7 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 738
+    .line 744
     :cond_2
     const/4 v0, 0x0
 
@@ -102,7 +102,7 @@
     .locals 2
 
     .prologue
-    .line 718
+    .line 724
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v1, 0x9b
@@ -115,10 +115,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 720
+    .line 726
     const/4 v0, 0x1
 
-    .line 722
+    .line 728
     :goto_0
     return v0
 

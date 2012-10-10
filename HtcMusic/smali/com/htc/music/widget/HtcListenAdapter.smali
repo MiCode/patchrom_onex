@@ -116,7 +116,7 @@
 
     .line 70
     .local v0, albumChartSource:Lcom/htc/music/util/SourceItem;
-    const v6, 0x7f070105
+    const v6, 0x7f070106
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -157,7 +157,7 @@
 
     .line 77
     .local v5, singleChartSource:Lcom/htc/music/util/SourceItem;
-    const v6, 0x7f070106
+    const v6, 0x7f070107
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -198,7 +198,7 @@
 
     .line 84
     .local v3, newReleaseAlbumSource:Lcom/htc/music/util/SourceItem;
-    const v6, 0x7f070107
+    const v6, 0x7f070108
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -239,7 +239,7 @@
 
     .line 91
     .local v4, newReleaseSingleSource:Lcom/htc/music/util/SourceItem;
-    const v6, 0x7f070108
+    const v6, 0x7f070109
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -280,7 +280,7 @@
 
     .line 105
     .local v1, genreSingleSource:Lcom/htc/music/util/SourceItem;
-    const v6, 0x7f07010a
+    const v6, 0x7f07010b
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -432,7 +432,7 @@
 
     .line 160
     .local v0, holder:Lcom/htc/music/widget/HtcListenAdapter$ViewHolder;
-    const v2, 0x7f08008c
+    const v2, 0x7f08008d
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

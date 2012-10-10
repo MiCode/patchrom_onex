@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontcolor(Landroid/content/Context;)V
+    value = Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontsize(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 2253
+    .line 2455
     iput-object p1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -38,162 +38,127 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 3
     .parameter "dialog"
     .parameter "which"
 
     .prologue
-    .line 2256
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    const/4 v2, 0x1
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style_fontcolor:Lcom/htc/dialog/HtcAlertDialog;
+    .line 2458
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->dismiss()V
-
-    .line 2257
+    .line 2459
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    const/4 v1, 0x1
+    iput-boolean v2, v0, Landroid/webkit/EditableWebView;->m_bRemoveSelectRangeDuringUpdateContent:Z
 
-    iput-boolean v1, v0, Landroid/webkit/EditableWebView;->m_bRemoveSelectRangeDuringUpdateContent:Z
+    .line 2461
+    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    .line 2259
-    packed-switch p2, :pswitch_data_0
+    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    .line 2285
+    iget-object v1, v1, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+
+    invoke-virtual {v1}, Landroid/webkit/EditableWebView;->getFontSize()I
+
+    move-result v1
+
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getFontSizeIdx(I)I
+    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$5000(Landroid/webkit/EditableWebView$EditableQuickActions;I)I
+
+    move-result v0
+
+    if-ne p2, v0, :cond_0
+
+    .line 2462
+    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+
+    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+
+    invoke-virtual {v0}, Landroid/webkit/EditableWebView;->getSelectionMethod()Landroid/webkit/WebViewSelectionMethod;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/webkit/WebViewSelectionMethod$SelectionMode;->EXTENDABLE:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
+
+    .line 2463
+    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+
+    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+
+    invoke-virtual {v0, v2}, Landroid/webkit/EditableWebView;->onEndSelect(Z)V
+
+    .line 2487
     :goto_0
     return-void
 
-    .line 2261
+    .line 2466
+    :cond_0
+    packed-switch p2, :pswitch_data_0
+
+    goto :goto_0
+
+    .line 2468
     :pswitch_0
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    const/4 v1, 0x6
 
-    #getter for: Landroid/webkit/EditableWebView$EditableQuickActions;->m_nWhiteColor_select:I
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4200(Landroid/webkit/EditableWebView$EditableQuickActions;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetForeColor(I)V
+    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
 
     goto :goto_0
 
-    .line 2264
+    .line 2471
     :pswitch_1
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    const/4 v1, 0x5
 
-    #getter for: Landroid/webkit/EditableWebView$EditableQuickActions;->m_nBlackColor_select:I
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4300(Landroid/webkit/EditableWebView$EditableQuickActions;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetForeColor(I)V
+    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
 
     goto :goto_0
 
-    .line 2267
+    .line 2474
     :pswitch_2
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    const/4 v1, 0x4
 
-    #getter for: Landroid/webkit/EditableWebView$EditableQuickActions;->m_nGrayColor_select:I
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4400(Landroid/webkit/EditableWebView$EditableQuickActions;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetForeColor(I)V
+    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
 
     goto :goto_0
 
-    .line 2270
+    .line 2477
     :pswitch_3
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    const/4 v1, 0x3
 
-    #getter for: Landroid/webkit/EditableWebView$EditableQuickActions;->m_nRedColor_select:I
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4500(Landroid/webkit/EditableWebView$EditableQuickActions;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetForeColor(I)V
+    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
 
     goto :goto_0
 
-    .line 2273
-    :pswitch_4
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    .line 2466
+    nop
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
-
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    #getter for: Landroid/webkit/EditableWebView$EditableQuickActions;->m_nGreenColor_select:I
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4600(Landroid/webkit/EditableWebView$EditableQuickActions;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetForeColor(I)V
-
-    goto :goto_0
-
-    .line 2276
-    :pswitch_5
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
-
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    #getter for: Landroid/webkit/EditableWebView$EditableQuickActions;->m_nYellowColor_select:I
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4700(Landroid/webkit/EditableWebView$EditableQuickActions;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetForeColor(I)V
-
-    goto :goto_0
-
-    .line 2279
-    :pswitch_6
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
-
-    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$8;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    #getter for: Landroid/webkit/EditableWebView$EditableQuickActions;->m_nBlueColor_select:I
-    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4800(Landroid/webkit/EditableWebView$EditableQuickActions;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetForeColor(I)V
-
-    goto :goto_0
-
-    .line 2259
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
         :pswitch_1
         :pswitch_2
         :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
     .end packed-switch
 .end method

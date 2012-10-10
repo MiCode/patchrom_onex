@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 908
+    .line 909
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
     .parameter "intent"
 
     .prologue
-    .line 911
+    .line 912
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -46,22 +46,22 @@
 
     if-nez v0, :cond_1
 
-    .line 978
+    .line 979
     :cond_0
     :goto_0
     return-void
 
-    .line 915
+    .line 916
     :cond_1
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 916
+    .line 917
     .local v1, result:Landroid/net/Uri;
     if-eqz v1, :cond_8
 
-    .line 917
+    .line 918
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -98,18 +98,18 @@
 
     move-result-object v7
 
-    .line 918
+    .line 919
     .local v7, c:Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
-    .line 919
+    .line 920
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 921
+    .line 922
     :try_start_0
     const-string v0, "status"
 
@@ -121,7 +121,7 @@
 
     move-result v12
 
-    .line 922
+    .line 923
     .local v12, status:I
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -147,7 +147,7 @@
 
     invoke-static {v0, v2}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 923
+    .line 924
     const-string v0, "mimetype"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -158,7 +158,7 @@
 
     move-result-object v9
 
-    .line 924
+    .line 925
     .local v9, mimetype:Ljava/lang/String;
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -184,7 +184,7 @@
 
     invoke-static {v0, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 925
+    .line 926
     const-string v0, "entity"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -195,7 +195,7 @@
 
     move-result-object v13
 
-    .line 926
+    .line 927
     .local v13, url:Ljava/lang/String;
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -221,19 +221,19 @@
 
     invoke-static {v0, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 927
+    .line 928
     invoke-static {v12}, Lcom/htc/wrap/android/provider/HtcWrapDownloads$Impl;->isStatusSuccess(I)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 928
+    .line 929
     const/16 v0, 0x191
 
     if-ne v12, v0, :cond_3
 
-    .line 929
+    .line 930
     sget-object v0, Lcom/htc/music/DRMActionActivity;->handler:Landroid/os/Handler;
 
     sget-object v2, Lcom/htc/music/DRMActionActivity;->handler:Landroid/os/Handler;
@@ -246,29 +246,29 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 930
+    .line 931
     new-instance v6, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.VIEW"
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 931
+    .line 932
     .local v6, acquire:Landroid/content/Intent;
     invoke-static {v13}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v11
 
-    .line 932
+    .line 933
     .local v11, righturi:Landroid/net/Uri;
     invoke-virtual {v6, v11}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 933
+    .line 934
     const/high16 v0, 0x1000
 
     invoke-virtual {v6, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 935
+    .line 936
     const-string v0, "com.android.browser.application_id"
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -277,12 +277,12 @@
 
     invoke-virtual {v6, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 936
+    .line 937
     invoke-virtual {p1, v6}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 964
+    .line 965
     .end local v6           #acquire:Landroid/content/Intent;
     .end local v9           #mimetype:Ljava/lang/String;
     .end local v11           #righturi:Landroid/net/Uri;
@@ -294,7 +294,7 @@
 
     goto/16 :goto_0
 
-    .line 938
+    .line 939
     .restart local v9       #mimetype:Ljava/lang/String;
     .restart local v12       #status:I
     .restart local v13       #url:Ljava/lang/String;
@@ -312,7 +312,7 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 939
+    .line 940
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -323,7 +323,7 @@
 
     move-result-object v10
 
-    .line 941
+    .line 942
     .local v10, rc:Landroid/content/res/Resources;
     const v0, 0x2040177
 
@@ -343,7 +343,7 @@
 
     goto :goto_1
 
-    .line 958
+    .line 959
     .end local v9           #mimetype:Ljava/lang/String;
     .end local v10           #rc:Landroid/content/res/Resources;
     .end local v12           #status:I
@@ -351,7 +351,7 @@
     :catch_0
     move-exception v8
 
-    .line 959
+    .line 960
     .local v8, e:Ljava/lang/Exception;
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -383,7 +383,7 @@
 
     goto :goto_1
 
-    .line 945
+    .line 946
     .end local v8           #e:Ljava/lang/Exception;
     .restart local v9       #mimetype:Ljava/lang/String;
     .restart local v12       #status:I
@@ -394,7 +394,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 946
+    .line 947
     sget-object v0, Lcom/htc/music/DRMActionActivity;->handler:Landroid/os/Handler;
 
     sget-object v2, Lcom/htc/music/DRMActionActivity;->handler:Landroid/os/Handler;
@@ -407,7 +407,7 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 948
+    .line 949
     :cond_5
     const-string v0, "text/html"
 
@@ -433,7 +433,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 949
+    .line 950
     :cond_6
     new-instance v6, Landroid/content/Intent;
 
@@ -441,22 +441,22 @@
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 950
+    .line 951
     .restart local v6       #acquire:Landroid/content/Intent;
     invoke-static {v13}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v11
 
-    .line 951
+    .line 952
     .restart local v11       #righturi:Landroid/net/Uri;
     invoke-virtual {v6, v11}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 952
+    .line 953
     const/high16 v0, 0x1000
 
     invoke-virtual {v6, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 954
+    .line 955
     const-string v0, "com.android.browser.application_id"
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -465,14 +465,14 @@
 
     invoke-virtual {v6, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 955
+    .line 956
     invoke-virtual {p1, v6}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto/16 :goto_1
 
-    .line 962
+    .line 963
     .end local v6           #acquire:Landroid/content/Intent;
     .end local v9           #mimetype:Ljava/lang/String;
     .end local v11           #righturi:Landroid/net/Uri;
@@ -489,7 +489,7 @@
 
     goto/16 :goto_1
 
-    .line 968
+    .line 969
     .end local v7           #c:Landroid/database/Cursor;
     :cond_8
     :try_start_3
@@ -505,7 +505,7 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 969
+    .line 970
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -516,7 +516,7 @@
 
     move-result-object v10
 
-    .line 971
+    .line 972
     .restart local v10       #rc:Landroid/content/res/Resources;
     const v0, 0x2040177
 
@@ -536,12 +536,12 @@
 
     goto/16 :goto_0
 
-    .line 973
+    .line 974
     .end local v10           #rc:Landroid/content/res/Resources;
     :catch_1
     move-exception v8
 
-    .line 974
+    .line 975
     .restart local v8       #e:Ljava/lang/Exception;
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 

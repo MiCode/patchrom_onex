@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 837
+    .line 878
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,28 +41,28 @@
     .locals 9
 
     .prologue
-    .line 839
+    .line 880
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-boolean v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootCompleted:Z
 
     if-eqz v0, :cond_0
 
-    .line 840
+    .line 881
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerKeyHandled:Z
 
-    .line 841
+    .line 882
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mShouldTurnOffOnKeyUp:Z
 
-    .line 843
+    .line 884
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     new-instance v1, Landroid/app/ProgressDialog;
@@ -77,7 +77,7 @@
 
     iput-object v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHWResetIndicator:Landroid/app/ProgressDialog;
 
-    .line 844
+    .line 885
     invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$000()I
 
     move-result v0
@@ -90,7 +90,7 @@
 
     add-int/lit16 v8, v0, 0x3e8
 
-    .line 845
+    .line 886
     .local v8, countDownStart:I
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -110,7 +110,7 @@
 
     move-result v7
 
-    .line 846
+    .line 887
     .local v7, hwResetText:I
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -130,7 +130,7 @@
 
     move-result v6
 
-    .line 849
+    .line 890
     .local v6, hwResetText_singular:I
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$3$1;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager$3$1;->start()Landroid/os/CountDownTimer;
 
-    .line 867
+    .line 908
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHWResetIndicator:Landroid/app/ProgressDialog;
@@ -157,14 +157,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
-    .line 869
+    .line 910
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHWResetIndicator:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
-    .line 871
+    .line 912
     .end local v6           #hwResetText_singular:I
     .end local v7           #hwResetText:I
     .end local v8           #countDownStart:I

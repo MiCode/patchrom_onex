@@ -31,7 +31,7 @@
     .locals 2
 
     .prologue
-    .line 256
+    .line 236
     invoke-static {}, Lcom/htc/opensense/provider/SocialContract;->access$000()Landroid/net/Uri;
 
     move-result-object v0
@@ -59,7 +59,7 @@
     .locals 0
 
     .prologue
-    .line 250
+    .line 234
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,25 +72,25 @@
     .parameter "time"
 
     .prologue
-    .line 275
+    .line 247
     sget-object v1, Lcom/htc/opensense/provider/SocialContract$UserGroup;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 276
+    .line 248
     .local v0, builder:Landroid/net/Uri$Builder;
     const-string v1, "usergroup_account_name"
 
     invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 277
+    .line 249
     const-string v1, "usergroup_account_type"
 
     invoke-virtual {v0, v1, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 278
+    .line 250
     const-string v1, "timestamp"
 
     invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -99,7 +99,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 280
+    .line 252
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1

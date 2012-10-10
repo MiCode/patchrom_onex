@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1487
+    .line 1496
     iput-object p1, p0, Lcom/htc/music/HtcMusic$19;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,18 +42,18 @@
     .parameter "arg0"
 
     .prologue
-    .line 1491
+    .line 1500
     iget-object v0, p0, Lcom/htc/music/HtcMusic$19;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 1492
+    .line 1501
     iget-object v0, p0, Lcom/htc/music/HtcMusic$19;->this$0:Lcom/htc/music/HtcMusic;
 
     const/16 v1, 0x12
 
     invoke-virtual {v0, v1}, Lcom/htc/music/HtcMusic;->showDialog(I)V
 
-    .line 1493
+    .line 1502
     return-void
 .end method

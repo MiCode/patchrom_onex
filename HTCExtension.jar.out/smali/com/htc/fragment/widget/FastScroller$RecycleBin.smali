@@ -35,12 +35,12 @@
     .parameter
 
     .prologue
-    .line 2578
+    .line 2597
     iput-object p1, p0, Lcom/htc/fragment/widget/FastScroller$RecycleBin;->this$0:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2579
+    .line 2598
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -56,14 +56,14 @@
     .locals 1
 
     .prologue
-    .line 2604
+    .line 2623
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$RecycleBin;->mScrapHeap:Landroid/util/SparseArray;
 
-    .line 2605
+    .line 2624
     .local v0, scrapHeap:Landroid/util/SparseArray;,"Landroid/util/SparseArray<Landroid/view/View;>;"
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 2606
+    .line 2625
     return-void
 .end method
 
@@ -72,7 +72,7 @@
     .parameter "position"
 
     .prologue
-    .line 2592
+    .line 2611
     iget-object v1, p0, Lcom/htc/fragment/widget/FastScroller$RecycleBin;->mScrapHeap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -81,11 +81,11 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 2593
+    .line 2612
     .local v0, result:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 2600
+    .line 2619
     :cond_0
     return-object v0
 .end method
@@ -96,11 +96,11 @@
     .parameter "v"
 
     .prologue
-    .line 2586
+    .line 2605
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$RecycleBin;->mScrapHeap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2587
+    .line 2606
     return-void
 .end method

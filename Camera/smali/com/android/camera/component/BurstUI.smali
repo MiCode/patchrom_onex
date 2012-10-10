@@ -2189,9 +2189,9 @@
     .locals 4
 
     .prologue
-    const v3, 0x7f0b0179
+    const v3, 0x7f0b017c
 
-    const v2, 0x7f0b0177
+    const v2, 0x7f0b017a
 
     .line 387
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->initializeOverride()V
@@ -2228,7 +2228,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_ThumbnailHeight:I
 
     .line 398
-    const v1, 0x7f0b0178
+    const v1, 0x7f0b017b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2258,7 +2258,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_ThumbnailWidthWide:I
 
     .line 405
-    const v1, 0x7f0b016f
+    const v1, 0x7f0b0172
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2267,7 +2267,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstReviewScreenHeightWide_p:I
 
     .line 406
-    const v1, 0x7f0b0170
+    const v1, 0x7f0b0173
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2276,7 +2276,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstReviewScreenHeight_p:I
 
     .line 407
-    const v1, 0x7f0b016e
+    const v1, 0x7f0b0171
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2285,7 +2285,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstReviewScreenWidth_p:I
 
     .line 408
-    const v1, 0x7f0b016d
+    const v1, 0x7f0b0170
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2294,7 +2294,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstReviewScreenWidthWide_p:I
 
     .line 410
-    const v1, 0x7f0b017c
+    const v1, 0x7f0b017f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2303,7 +2303,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstReviewScreenHeight_l:I
 
     .line 411
-    const v1, 0x7f0b017b
+    const v1, 0x7f0b017e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2312,7 +2312,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstReviewScreenHeightWide_l:I
 
     .line 412
-    const v1, 0x7f0b017a
+    const v1, 0x7f0b017d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2321,7 +2321,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstReviewScreenWidth_l:I
 
     .line 413
-    const v1, 0x7f0b0180
+    const v1, 0x7f0b0183
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2330,7 +2330,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstThumbBarHeight_l:I
 
     .line 414
-    const v1, 0x7f0b017f
+    const v1, 0x7f0b0182
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2339,7 +2339,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstThumbBarWidth_l:I
 
     .line 415
-    const v1, 0x7f0b0174
+    const v1, 0x7f0b0177
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2348,7 +2348,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstThumbBarHeight_p:I
 
     .line 416
-    const v1, 0x7f0b0173
+    const v1, 0x7f0b0176
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2357,7 +2357,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstThumbBarWidth_p:I
 
     .line 419
-    const v1, 0x7f0b0175
+    const v1, 0x7f0b0178
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2366,7 +2366,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstThumbBarPadding_p:I
 
     .line 420
-    const v1, 0x7f0b0176
+    const v1, 0x7f0b0179
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2375,7 +2375,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstThumbItemMargin_p:I
 
     .line 421
-    const v1, 0x7f0b0181
+    const v1, 0x7f0b0184
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2384,7 +2384,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_burstThumbBarPadding_l:I
 
     .line 422
-    const v1, 0x7f0b0182
+    const v1, 0x7f0b0185
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2404,7 +2404,7 @@
 
     .line 427
     :cond_0
-    const v1, 0x7f0b00b3
+    const v1, 0x7f0b00b4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2413,7 +2413,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_ThumbnailHeight:I
 
     .line 428
-    const v1, 0x7f0b00b2
+    const v1, 0x7f0b00b3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2422,7 +2422,7 @@
     iput v1, p0, Lcom/android/camera/component/BurstUI;->m_ThumbnailWidth:I
 
     .line 429
-    const v1, 0x7f0b00b1
+    const v1, 0x7f0b00b2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

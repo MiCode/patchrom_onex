@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 657
+    .line 669
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$4;->this$0:Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,6 @@
     .parameter "which"
 
     .prologue
-    .line 660
+    .line 672
     return-void
 .end method

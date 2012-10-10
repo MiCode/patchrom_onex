@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1877
+    .line 1878
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1880
+    .line 1881
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -53,7 +53,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1881
+    .line 1882
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->getListView()Lcom/htc/widget/HtcListView;
@@ -62,24 +62,24 @@
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcListView;->invalidateViews()V
 
-    .line 1882
+    .line 1883
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->setPauseButtonImage()V
     invoke-static {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$1300(Lcom/htc/music/browserlayer/TrackBrowserActivity;)V
 
-    .line 1883
+    .line 1884
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->updateQueueTitle()V
     invoke-static {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$2000(Lcom/htc/music/browserlayer/TrackBrowserActivity;)V
 
-    .line 1901
+    .line 1902
     :cond_0
     :goto_0
     return-void
 
-    .line 1884
+    .line 1885
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -93,7 +93,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1885
+    .line 1886
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mDeletedOneRow:Z
@@ -103,7 +103,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1889
+    .line 1890
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     const/4 v2, 0x0
@@ -113,7 +113,7 @@
 
     goto :goto_0
 
-    .line 1892
+    .line 1893
     :cond_2
     new-instance v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;
 
@@ -130,7 +130,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;-><init>(Lcom/htc/music/browserlayer/TrackBrowserActivity;Lcom/htc/music/IMediaPlaybackService;[Ljava/lang/String;)V
 
-    .line 1893
+    .line 1894
     .local v0, c:Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
@@ -138,14 +138,14 @@
 
     if-nez v1, :cond_3
 
-    .line 1894
+    .line 1895
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->finish()V
 
     goto :goto_0
 
-    .line 1897
+    .line 1898
     :cond_3
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -156,7 +156,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1898
+    .line 1899
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$11;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAdapter:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;

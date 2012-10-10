@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 248
+    .line 250
     iput-object p1, p0, Lcom/android/camera/component/HdrController$2;->this$0:Lcom/android/camera/component/HdrController;
 
     iput-object p2, p0, Lcom/android/camera/component/HdrController$2;->val$cameraThread:Lcom/android/camera/CameraThread;
@@ -53,7 +53,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 252
+    .line 254
     iget-object v0, p0, Lcom/android/camera/component/HdrController$2;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->isShutterSoundNeeded()Z
@@ -75,7 +75,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
+    .line 255
     iget-object v0, p0, Lcom/android/camera/component/HdrController$2;->val$audioManager:Lcom/android/camera/IAudioManager;
 
     iget-object v1, p0, Lcom/android/camera/component/HdrController$2;->this$0:Lcom/android/camera/component/HdrController;
@@ -89,18 +89,18 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/android/camera/IAudioManager;->playInMemorySound(Lcom/android/camera/Handle;IZ)Lcom/android/camera/Handle;
 
-    .line 256
+    .line 258
     :cond_0
     sget-object v0, Lcom/android/camera/TIME;->ShutterCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v0}, Lcom/android/camera/TIME$Value;->End()V
 
-    .line 257
+    .line 259
     sget-object v0, Lcom/android/camera/TIME;->RawCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v0}, Lcom/android/camera/TIME$Value;->Start()V
 
-    .line 260
+    .line 262
     iget-object v0, p0, Lcom/android/camera/component/HdrController$2;->this$0:Lcom/android/camera/component/HdrController;
 
     #getter for: Lcom/android/camera/component/HdrController;->m_HdrUI:Lcom/android/camera/component/HdrUI;
@@ -110,7 +110,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 261
+    .line 263
     iget-object v0, p0, Lcom/android/camera/component/HdrController$2;->this$0:Lcom/android/camera/component/HdrController;
 
     iget-object v1, p0, Lcom/android/camera/component/HdrController$2;->this$0:Lcom/android/camera/component/HdrController;
@@ -122,11 +122,11 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/android/camera/component/HdrController;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 264
+    .line 266
     :goto_0
     return-void
 
-    .line 263
+    .line 265
     :cond_1
     iget-object v0, p0, Lcom/android/camera/component/HdrController$2;->this$0:Lcom/android/camera/component/HdrController;
 

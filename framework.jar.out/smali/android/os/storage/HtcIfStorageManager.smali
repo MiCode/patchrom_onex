@@ -20,6 +20,9 @@
     .end annotation
 .end method
 
+.method public abstract getVolumeStateWithWrapper(Ljava/lang/String;)Ljava/lang/String;
+.end method
+
 .method public abstract setMountISOEnabled(Z)I
     .annotation system Ldalvik/annotation/Throws;
         value = {

@@ -141,14 +141,14 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->isFirstTime:Ljava/lang/Boolean;
 
-    .line 198
+    .line 196
     new-instance v0, Lcom/htc/app/FilePickerRecentFragment$2;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerRecentFragment$2;-><init>(Lcom/htc/app/FilePickerRecentFragment;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->mListViewOfRecentOnItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 230
+    .line 228
     return-void
 .end method
 
@@ -282,16 +282,16 @@
     .parameter "count"
 
     .prologue
-    .line 175
+    .line 173
     const/4 v0, 0x0
 
-    .line 176
+    .line 174
     .local v0, text:Ljava/lang/String;
     const/4 v1, 0x1
 
     if-le p1, v1, :cond_0
 
-    .line 177
+    .line 175
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,11 +316,11 @@
 
     move-result-object v0
 
-    .line 181
+    .line 179
     :goto_0
     return-object v0
 
-    .line 179
+    .line 177
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -440,7 +440,7 @@
 
     move-result-object v1
 
-    const v2, 0x20403d9
+    const v2, 0x20403da
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -453,7 +453,7 @@
 
     move-result-object v1
 
-    const v2, 0x20403da
+    const v2, 0x20403db
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -466,7 +466,7 @@
 
     move-result-object v1
 
-    const v2, 0x20403de
+    const v2, 0x20403df
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -508,12 +508,12 @@
     .parameter "emptyView"
 
     .prologue
-    .line 210
+    .line 208
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->recentViewLayout:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 211
+    .line 209
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->recentViewLayout:Landroid/view/View;
 
     const v1, 0x20200aa
@@ -525,35 +525,35 @@
     .end local p1
     check-cast p1, Landroid/widget/TextView;
 
-    .line 212
+    .line 210
     .restart local p1
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->mRecentListView:Lcom/htc/app/FilePickerListView;
 
     if-eqz v0, :cond_2
 
-    .line 213
+    .line 211
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->mRecentListView:Lcom/htc/app/FilePickerListView;
 
     invoke-virtual {v0, p1}, Lcom/htc/app/FilePickerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 214
+    .line 212
     invoke-direct {p0}, Lcom/htc/app/FilePickerRecentFragment;->updateCountOfRecentListViewHeader()V
 
-    .line 219
+    .line 217
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 220
+    .line 218
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->htc_filepicker_no_recent_files:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 221
+    .line 219
     :cond_1
     return-void
 
-    .line 216
+    .line 214
     :cond_2
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->TAG:Ljava/lang/String;
 
@@ -569,12 +569,12 @@
     .parameter "emptyView"
 
     .prologue
-    .line 224
+    .line 222
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->recentViewLayout:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 225
+    .line 223
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->recentViewLayout:Landroid/view/View;
 
     const v1, 0x20200aa
@@ -586,17 +586,17 @@
     .end local p1
     check-cast p1, Landroid/widget/TextView;
 
-    .line 226
+    .line 224
     .restart local p1
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 227
+    .line 225
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 228
+    .line 226
     :cond_1
     return-void
 .end method
@@ -609,7 +609,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 252
+    .line 250
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mRocketAnimationRunning:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -618,55 +618,55 @@
 
     if-eq v1, p1, :cond_1
 
-    .line 253
+    .line 251
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mRocketAnimationRunning:Ljava/lang/Boolean;
 
-    .line 255
+    .line 253
     if-eqz p1, :cond_2
 
-    .line 256
+    .line 254
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     if-eqz v1, :cond_0
 
-    .line 257
+    .line 255
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->common_string_loading:Ljava/lang/String;
 
     invoke-virtual {v1, v4, v2}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 259
+    .line 257
     :cond_0
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mRocketAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     if-eqz v1, :cond_1
 
-    .line 260
+    .line 258
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mRocketAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 272
+    .line 270
     :cond_1
     :goto_0
     return-void
 
-    .line 262
+    .line 260
     :cond_2
     const-string v0, ""
 
-    .line 263
+    .line 261
     .local v0, refreshTime:Ljava/lang/String;
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     if-eqz v1, :cond_3
 
-    .line 264
+    .line 262
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -677,24 +677,24 @@
 
     move-result-object v0
 
-    .line 265
+    .line 263
     :cond_3
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     if-eqz v1, :cond_4
 
-    .line 266
+    .line 264
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     invoke-virtual {v1, v4, v0}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 268
+    .line 266
     :cond_4
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mRocketAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     if-eqz v1, :cond_1
 
-    .line 269
+    .line 267
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->mRocketAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
@@ -707,12 +707,12 @@
     .parameter "visabled"
 
     .prologue
-    .line 248
+    .line 246
     const v0, 0x20200ca
 
     invoke-direct {p0, p1, v0}, Lcom/htc/app/FilePickerRecentFragment;->showRefreshAnimationOnListViewHeader(ZI)V
 
-    .line 249
+    .line 247
     return-void
 .end method
 
@@ -720,21 +720,21 @@
     .locals 4
 
     .prologue
-    .line 185
+    .line 183
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     if-eqz v2, :cond_2
 
-    .line 186
+    .line 184
     const/4 v0, 0x0
 
-    .line 187
+    .line 185
     .local v0, fileCount:I
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mFilePickerCore:Lcom/htc/app/FilePickerCore;
 
     if-eqz v2, :cond_0
 
-    .line 188
+    .line 186
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mFilePickerCore:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerCore;->getRecentAdapter()Lcom/htc/app/FilePickerListAdapter;
@@ -743,39 +743,39 @@
 
     iput-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->recentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 189
+    .line 187
     :cond_0
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->recentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v2, :cond_1
 
-    .line 190
+    .line 188
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->recentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerListAdapter;->getCurrentFileCount()I
 
     move-result v0
 
-    .line 192
+    .line 190
     :cond_1
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerRecentFragment;->getFileCountString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 193
+    .line 191
     .local v1, text:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     if-eqz v2, :cond_2
 
-    .line 194
+    .line 192
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     const/4 v3, 0x2
 
     invoke-virtual {v2, v3, v1}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 196
+    .line 194
     .end local v0           #fileCount:I
     .end local v1           #text:Ljava/lang/String;
     :cond_2
@@ -830,10 +830,10 @@
     .parameter "savedInstanceState"
 
     .prologue
-    .line 171
+    .line 169
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 172
+    .line 170
     return-void
 .end method
 
@@ -941,7 +941,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 138
+    .line 137
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->recentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerListAdapter;->getFileCount()I
@@ -966,20 +966,20 @@
 
     if-eqz v2, :cond_1
 
-    .line 140
+    .line 139
     :cond_0
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->emptyView:Landroid/widget/TextView;
 
     invoke-direct {p0, v2}, Lcom/htc/app/FilePickerRecentFragment;->setNoFileFoundText(Landroid/widget/TextView;)V
 
-    .line 141
+    .line 140
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItemSeparator;->setVisibility(I)V
 
-    .line 146
+    .line 144
     :cond_1
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mRecentListView:Lcom/htc/app/FilePickerListView;
 
@@ -991,28 +991,28 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/htc/app/FilePickerListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
-    .line 147
+    .line 145
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mRecentListView:Lcom/htc/app/FilePickerListView;
 
     iget-object v3, p0, Lcom/htc/app/FilePickerRecentFragment;->recentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v2, v3}, Lcom/htc/app/FilePickerListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 148
+    .line 146
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mRecentListView:Lcom/htc/app/FilePickerListView;
 
     iget-object v3, p0, Lcom/htc/app/FilePickerRecentFragment;->mListViewOfRecentOnItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
     invoke-virtual {v2, v3}, Lcom/htc/app/FilePickerListView;->setOnItemClickListener(Lcom/htc/widget/HtcAdapterView$OnItemClickListener;)V
 
-    .line 149
+    .line 147
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mRecentListView:Lcom/htc/app/FilePickerListView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Lcom/htc/app/FilePickerListView;->setVisibility(I)V
 
-    .line 150
+    .line 148
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mRecentListView:Lcom/htc/app/FilePickerListView;
 
     new-instance v3, Lcom/htc/app/FilePickerRecentFragment$1;
@@ -1023,18 +1023,18 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 161
+    .line 159
     .end local v1           #rocketImage:Landroid/widget/ImageView;
     :goto_0
     iget-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->recentViewLayout:Landroid/view/View;
 
     return-object v2
 
-    .line 155
+    .line 153
     :catch_0
     move-exception v0
 
-    .line 158
+    .line 156
     .local v0, e:Ljava/lang/NullPointerException;
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
@@ -1047,49 +1047,49 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 276
+    .line 274
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->mHandler:Lcom/htc/app/FilePickerRecentFragment$H;
 
     if-eqz v0, :cond_0
 
-    .line 277
+    .line 275
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->mHandler:Lcom/htc/app/FilePickerRecentFragment$H;
 
     const/16 v1, 0x3ea
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerRecentFragment$H;->removeMessages(I)V
 
-    .line 278
+    .line 276
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->mHandler:Lcom/htc/app/FilePickerRecentFragment$H;
 
     const/16 v1, 0x3eb
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerRecentFragment$H;->removeMessages(I)V
 
-    .line 279
+    .line 277
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment;->mHandler:Lcom/htc/app/FilePickerRecentFragment$H;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment;->updateUiRunnable:Lcom/htc/app/FilePickerRecentFragment$UpdateUiRunnable;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerRecentFragment$H;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 281
+    .line 279
     :cond_0
     iput-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 282
+    .line 280
     iput-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mFilePickerCore:Lcom/htc/app/FilePickerCore;
 
-    .line 283
+    .line 281
     iput-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
-    .line 284
+    .line 282
     iput-object v2, p0, Lcom/htc/app/FilePickerRecentFragment;->updateUiRunnable:Lcom/htc/app/FilePickerRecentFragment$UpdateUiRunnable;
 
-    .line 285
+    .line 283
     invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
 
-    .line 286
+    .line 284
     return-void
 .end method
 
@@ -1097,9 +1097,9 @@
     .locals 0
 
     .prologue
-    .line 166
+    .line 164
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
-    .line 167
+    .line 165
     return-void
 .end method

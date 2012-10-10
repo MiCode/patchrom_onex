@@ -30,17 +30,17 @@
     .parameter "autn"
 
     .prologue
-    .line 1307
+    .line 1355
     iput-object p1, p0, Lcom/android/internal/telephony/HtcTelephony$AuthRequest;->this$0:Lcom/android/internal/telephony/HtcTelephony;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1308
+    .line 1356
     iput-object p2, p0, Lcom/android/internal/telephony/HtcTelephony$AuthRequest;->rand:[B
 
-    .line 1309
+    .line 1357
     iput-object p3, p0, Lcom/android/internal/telephony/HtcTelephony$AuthRequest;->autn:[B
 
-    .line 1310
+    .line 1358
     return-void
 .end method

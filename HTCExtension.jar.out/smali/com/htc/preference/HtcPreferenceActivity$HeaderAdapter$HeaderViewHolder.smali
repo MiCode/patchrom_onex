@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 270
+    .line 272
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
     .parameter "x0"
 
     .prologue
-    .line 270
+    .line 272
     invoke-direct {p0}, Lcom/htc/preference/HtcPreferenceActivity$HeaderAdapter$HeaderViewHolder;-><init>()V
 
     return-void

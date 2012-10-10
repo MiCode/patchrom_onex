@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 85
     new-instance v0, Lcom/android/internal/telephony/PhoneBookEntry$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/PhoneBookEntry$1;-><init>()V
@@ -70,30 +70,30 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 114
+    .line 132
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
-
-    .line 33
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
     .line 35
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
     .line 39
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
+
+    .line 46
     new-array v0, v1, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
-    .line 47
+    .line 60
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->indexAnr:[I
 
-    .line 115
+    .line 133
     return-void
 .end method
 
@@ -105,36 +105,36 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 109
+    .line 127
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
-
-    .line 33
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
     .line 35
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
     .line 39
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
+
+    .line 46
     new-array v0, v1, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
-    .line 47
+    .line 60
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->indexAnr:[I
 
-    .line 110
+    .line 128
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
 
-    .line 111
+    .line 129
     iput-object p2, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
-    .line 112
+    .line 130
     return-void
 .end method
 
@@ -152,62 +152,62 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 118
+    .line 136
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
-
-    .line 33
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
     .line 35
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
     .line 39
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
+
+    .line 46
     new-array v0, v1, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
-    .line 47
+    .line 60
     new-array v0, v1, [I
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->indexAnr:[I
 
-    .line 119
+    .line 137
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
 
-    .line 120
+    .line 138
     iput-object p2, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
-    .line 121
+    .line 139
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
     const/4 v1, 0x0
 
     aput-object p3, v0, v1
 
-    .line 122
+    .line 140
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
     const/4 v1, 0x1
 
     aput-object p4, v0, v1
 
-    .line 123
+    .line 141
     iput-object p5, p0, Lcom/android/internal/telephony/PhoneBookEntry;->email:Ljava/lang/String;
 
-    .line 124
+    .line 142
     iput p6, p0, Lcom/android/internal/telephony/PhoneBookEntry;->type:I
 
-    .line 125
+    .line 143
     iput p7, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adtype:I
 
-    .line 126
+    .line 144
     iput p8, p0, Lcom/android/internal/telephony/PhoneBookEntry;->hidden:I
 
-    .line 127
+    .line 145
     return-void
 .end method
 
@@ -221,26 +221,26 @@
 
     const/4 v2, 0x0
 
-    .line 139
+    .line 159
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
-    .line 140
+    .line 160
     iput v3, p0, Lcom/android/internal/telephony/PhoneBookEntry;->type:I
 
-    .line 141
+    .line 161
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
 
-    .line 142
+    .line 162
     iput v3, p0, Lcom/android/internal/telephony/PhoneBookEntry;->hidden:I
 
-    .line 143
+    .line 163
     iput-object v2, p0, Lcom/android/internal/telephony/PhoneBookEntry;->group:Ljava/lang/String;
 
-    .line 144
+    .line 164
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -251,33 +251,33 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 145
+    .line 165
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
     aput-object v2, v1, v0
 
-    .line 144
+    .line 164
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 147
+    .line 167
     :cond_0
     iput v3, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adtype:I
 
-    .line 148
+    .line 168
     iput-object v2, p0, Lcom/android/internal/telephony/PhoneBookEntry;->secondtext:Ljava/lang/String;
 
-    .line 149
+    .line 169
     iput-object v2, p0, Lcom/android/internal/telephony/PhoneBookEntry;->email:Ljava/lang/String;
 
-    .line 150
+    .line 170
     iput-object v2, p0, Lcom/android/internal/telephony/PhoneBookEntry;->sip_uri:Ljava/lang/String;
 
-    .line 151
+    .line 171
     iput-object v2, p0, Lcom/android/internal/telephony/PhoneBookEntry;->tel_uri:Ljava/lang/String;
 
-    .line 152
+    .line 172
     return-void
 .end method
 
@@ -285,7 +285,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 111
     const/4 v0, 0x0
 
     return v0
@@ -295,7 +295,7 @@
     .locals 1
 
     .prologue
-    .line 132
+    .line 151
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -327,7 +327,7 @@
     .locals 3
 
     .prologue
-    .line 51
+    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -515,17 +515,17 @@
     .parameter "flags"
 
     .prologue
-    .line 99
+    .line 117
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->text:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 100
+    .line 118
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->number:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 101
+    .line 119
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -534,7 +534,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 102
+    .line 120
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adnumber:[Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -543,26 +543,26 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 103
+    .line 121
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->email:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 104
+    .line 122
     iget v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->type:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
+    .line 123
     iget v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->adtype:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
+    .line 124
     iget v0, p0, Lcom/android/internal/telephony/PhoneBookEntry;->hidden:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 107
+    .line 125
     return-void
 .end method

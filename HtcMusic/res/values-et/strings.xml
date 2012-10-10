@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Lisa esitusloend</string>
     <string name="htc_delete_playlists">Kustuta esitusloendeid</string>
     <string name="htc_delete_playlist">Kustuta esitusloend</string>
+    <string name="htc_delete_all_playlists">Kustuta kõik esitusloendid</string>
     <string name="htc_playlist_add_songs">Lisa laule</string>
     <string name="htc_playlist_del_songs">Kustuta laule</string>
     <string name="htc_playlist_remove_songs">Eemalda laule</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Puhverdamine...</string>
     <string name="title_send_content">Sisu saatmine...</string>
     <string name="no_downloaded_apps_found">Allalaaditud rakendusi ei leitud</string>
+    <string name="music_folder_picker_dialog_msg">Kas lisada laule esitusloendisse kasuta valimisega? Valige „Ei”, kui soovite laule muul viisil lisada</string>
 </resources>

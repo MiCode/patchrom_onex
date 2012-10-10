@@ -49,10 +49,10 @@
     .locals 0
 
     .prologue
-    .line 42
+    .line 43
     invoke-super {p0}, Lcom/android/internal/telephony/IccFileHandler;->dispose()V
 
-    .line 43
+    .line 44
     return-void
 .end method
 
@@ -60,14 +60,14 @@
     .locals 2
 
     .prologue
-    .line 46
+    .line 48
     const-string v0, "GSM"
 
     const-string v1, "UsimFileHandler finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
+    .line 49
     return-void
 .end method
 
@@ -76,28 +76,28 @@
     .parameter "efid"
 
     .prologue
-    .line 52
+    .line 55
     sparse-switch p1, :sswitch_data_0
 
-    .line 97
+    .line 100
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/UsimFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 98
+    .line 101
     .local v0, path:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 102
+    .line 105
     sget-object v0, Lcom/android/internal/telephony/gsm/UsimFileHandler;->DFPhonebookPath:Ljava/lang/String;
 
-    .line 104
+    .line 107
     .end local v0           #path:Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 54
+    .line 57
     :sswitch_0
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isIccCardProxyEnabled()Z
 
@@ -107,36 +107,36 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 55
+    .line 58
     const-string v0, "3F007FFF"
 
     goto :goto_0
 
-    .line 57
+    .line 60
     :cond_1
     const-string v0, "3F007F10"
 
     goto :goto_0
 
-    .line 88
+    .line 91
     :sswitch_1
     const-string v0, "3F007FFF"
 
     goto :goto_0
 
-    .line 91
+    .line 94
     :sswitch_2
     const-string v0, "3F00"
 
     goto :goto_0
 
-    .line 95
+    .line 98
     :sswitch_3
     sget-object v0, Lcom/android/internal/telephony/gsm/UsimFileHandler;->DFPhonebookPath:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 52
+    .line 55
     :sswitch_data_0
     .sparse-switch
         0x2f00 -> :sswitch_2
@@ -175,7 +175,7 @@
     .parameter "msg"
 
     .prologue
-    .line 111
+    .line 115
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -198,7 +198,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
+    .line 116
     return-void
 .end method
 
@@ -207,7 +207,7 @@
     .parameter "msg"
 
     .prologue
-    .line 115
+    .line 120
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -230,6 +230,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
+    .line 121
     return-void
 .end method

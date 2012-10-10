@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4034
+    .line 4395
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$36;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 4
 
     .prologue
-    .line 4036
+    .line 4397
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$36;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerCore;->getFilePickerUtil()Lcom/htc/app/FilePickerUtil;
@@ -52,15 +52,15 @@
 
     move-result v0
 
-    .line 4037
+    .line 4398
     .local v0, cloudExceptionType:I
-    const v1, 0x20403e7
+    const v1, 0x20403e8
 
-    .line 4039
+    .line 4400
     .local v1, strId:I
     packed-switch v0, :pswitch_data_0
 
-    .line 4064
+    .line 4425
     :goto_0
     :pswitch_0
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$36;->this$0:Lcom/htc/app/FilePickerCore;
@@ -77,58 +77,58 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 4065
+    .line 4426
     return-void
 
-    .line 4042
+    .line 4403
     :pswitch_1
-    const v1, 0x20403e6
-
-    .line 4043
-    goto :goto_0
-
-    .line 4045
-    :pswitch_2
     const v1, 0x20403e7
 
-    .line 4046
+    .line 4404
     goto :goto_0
 
-    .line 4048
-    :pswitch_3
+    .line 4406
+    :pswitch_2
     const v1, 0x20403e8
 
-    .line 4049
+    .line 4407
     goto :goto_0
 
-    .line 4051
-    :pswitch_4
+    .line 4409
+    :pswitch_3
     const v1, 0x20403e9
 
-    .line 4052
+    .line 4410
     goto :goto_0
 
-    .line 4054
-    :pswitch_5
+    .line 4412
+    :pswitch_4
     const v1, 0x20403ea
 
-    .line 4055
+    .line 4413
     goto :goto_0
 
-    .line 4057
-    :pswitch_6
+    .line 4415
+    :pswitch_5
     const v1, 0x20403eb
 
-    .line 4058
+    .line 4416
     goto :goto_0
 
-    .line 4060
-    :pswitch_7
+    .line 4418
+    :pswitch_6
     const v1, 0x20403ec
 
+    .line 4419
     goto :goto_0
 
-    .line 4039
+    .line 4421
+    :pswitch_7
+    const v1, 0x20403ed
+
+    goto :goto_0
+
+    .line 4400
     nop
 
     :pswitch_data_0

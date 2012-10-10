@@ -56,7 +56,7 @@
 
     iput v0, p0, Landroid/text/method/StringPickerDialog;->mKeyboardHidden:I
 
-    .line 162
+    .line 172
     new-instance v0, Landroid/text/method/StringPickerDialog$1;
 
     invoke-direct {v0, p0}, Landroid/text/method/StringPickerDialog$1;-><init>(Landroid/text/method/StringPickerDialog;)V
@@ -116,14 +116,14 @@
     .parameter "replace"
 
     .prologue
-    .line 86
+    .line 88
     iget-object v1, p0, Landroid/text/method/StringPickerDialog;->mText:Landroid/text/Editable;
 
     invoke-static {v1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
 
     move-result v0
 
-    .line 87
+    .line 89
     .local v0, selEnd:I
     iget-boolean v1, p0, Landroid/text/method/StringPickerDialog;->mInsert:Z
 
@@ -131,20 +131,20 @@
 
     if-nez v0, :cond_1
 
-    .line 88
+    .line 90
     :cond_0
     iget-object v1, p0, Landroid/text/method/StringPickerDialog;->mText:Landroid/text/Editable;
 
     invoke-interface {v1, v0, p1}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
 
-    .line 93
+    .line 95
     :goto_0
     invoke-virtual {p0}, Landroid/text/method/StringPickerDialog;->dismiss()V
 
-    .line 94
+    .line 96
     return-void
 
-    .line 90
+    .line 92
     :cond_1
     iget-object v1, p0, Landroid/text/method/StringPickerDialog;->mText:Landroid/text/Editable;
 
@@ -162,28 +162,28 @@
     .parameter "v"
 
     .prologue
-    .line 100
+    .line 103
     iget-object v1, p0, Landroid/text/method/StringPickerDialog;->mCancelButton:Landroid/widget/Button;
 
     if-ne p1, v1, :cond_1
 
-    .line 101
+    .line 104
     invoke-virtual {p0}, Landroid/text/method/StringPickerDialog;->dismiss()V
 
-    .line 106
+    .line 109
     .end local p1
     :cond_0
     :goto_0
     return-void
 
-    .line 102
+    .line 105
     .restart local p1
     :cond_1
     instance-of v1, p1, Landroid/widget/Button;
 
     if-eqz v1, :cond_0
 
-    .line 103
+    .line 106
     check-cast p1, Landroid/widget/Button;
 
     .end local p1
@@ -191,7 +191,7 @@
 
     move-result-object v0
 
-    .line 104
+    .line 107
     .local v0, result:Ljava/lang/CharSequence;
     invoke-direct {p0, v0}, Landroid/text/method/StringPickerDialog;->replaceCharacterAndClose(Ljava/lang/CharSequence;)V
 
@@ -202,10 +202,10 @@
     .locals 2
 
     .prologue
-    .line 175
+    .line 185
     const/4 v0, 0x0
 
-    .line 177
+    .line 187
     .local v0, newHadrKeyboardHidden:I
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -220,20 +220,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 180
+    .line 190
     :goto_0
     iget v1, p0, Landroid/text/method/StringPickerDialog;->mKeyboardHidden:I
 
     if-eq v0, v1, :cond_0
 
-    .line 181
+    .line 191
     invoke-virtual {p0}, Landroid/text/method/StringPickerDialog;->dismiss()V
 
-    .line 182
+    .line 192
     :cond_0
     return-void
 
-    .line 178
+    .line 188
     :catch_0
     move-exception v1
 
@@ -245,10 +245,10 @@
     .parameter "savedInstanceState"
 
     .prologue
-    .line 60
+    .line 61
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 62
+    .line 63
     invoke-virtual {p0}, Landroid/text/method/StringPickerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
@@ -257,7 +257,7 @@
 
     move-result-object v1
 
-    .line 63
+    .line 64
     .local v1, params:Landroid/view/WindowManager$LayoutParams;
     iget-object v2, p0, Landroid/text/method/StringPickerDialog;->mView:Landroid/view/View;
 
@@ -267,24 +267,24 @@
 
     iput-object v2, v1, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 64
+    .line 65
     const/16 v2, 0x3eb
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 65
+    .line 66
     iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit8 v2, v2, 0x1
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 67
+    .line 68
     const v2, 0x10900e3
 
     invoke-virtual {p0, v2}, Landroid/text/method/StringPickerDialog;->setContentView(I)V
 
-    .line 69
+    .line 70
     const v2, 0x1020366
 
     invoke-virtual {p0, v2}, Landroid/text/method/StringPickerDialog;->findViewById(I)Landroid/view/View;
@@ -293,7 +293,7 @@
 
     check-cast v0, Landroid/widget/GridView;
 
-    .line 70
+    .line 71
     .local v0, grid:Landroid/widget/GridView;
     new-instance v2, Landroid/text/method/StringPickerDialog$OptionsAdapter;
 
@@ -305,22 +305,22 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 71
+    .line 72
     invoke-virtual {v0, p0}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 73
+    .line 74
     iget-char v2, p0, Landroid/text/method/StringPickerDialog;->mCharMap:C
 
     const v3, 0xef05
 
     if-ne v2, v3, :cond_0
 
-    .line 74
+    .line 75
     const/16 v2, 0xa
 
     invoke-virtual {v0, v2}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 76
+    .line 77
     :cond_0
     const v2, 0x1020256
 
@@ -332,12 +332,12 @@
 
     iput-object v2, p0, Landroid/text/method/StringPickerDialog;->mCancelButton:Landroid/widget/Button;
 
-    .line 77
+    .line 78
     iget-object v2, p0, Landroid/text/method/StringPickerDialog;->mCancelButton:Landroid/widget/Button;
 
     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 78
+    .line 79
     return-void
 .end method
 
@@ -358,7 +358,7 @@
     .end annotation
 
     .prologue
-    .line 81
+    .line 83
     .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     iget-object v1, p0, Landroid/text/method/StringPickerDialog;->mOption:[Ljava/lang/String;
 
@@ -368,11 +368,11 @@
 
     move-result-object v0
 
-    .line 82
+    .line 84
     .local v0, result:Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/text/method/StringPickerDialog;->replaceCharacterAndClose(Ljava/lang/CharSequence;)V
 
-    .line 84
+    .line 86
     return-void
 .end method
 
@@ -380,10 +380,10 @@
     .locals 3
 
     .prologue
-    .line 137
+    .line 146
     invoke-super {p0}, Landroid/app/Dialog;->onStart()V
 
-    .line 140
+    .line 149
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -399,19 +399,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 144
+    .line 153
     :goto_0
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 145
+    .line 154
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 146
+    .line 155
     invoke-virtual {p0}, Landroid/text/method/StringPickerDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -420,10 +420,10 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 147
+    .line 156
     return-void
 
-    .line 141
+    .line 150
     .end local v0           #filter:Landroid/content/IntentFilter;
     :catch_0
     move-exception v1
@@ -435,10 +435,10 @@
     .locals 2
 
     .prologue
-    .line 157
+    .line 167
     invoke-super {p0}, Landroid/app/Dialog;->onStop()V
 
-    .line 159
+    .line 169
     invoke-virtual {p0}, Landroid/text/method/StringPickerDialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -447,6 +447,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 160
+    .line 170
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1351
+    .line 1344
     iput-object p1, p0, Landroid/widget/ActivityChooserModel$HistoryLoader$2;->this$1:Landroid/widget/ActivityChooserModel$HistoryLoader;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 1353
+    .line 1346
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$HistoryLoader$2;->this$1:Landroid/widget/ActivityChooserModel$HistoryLoader;
 
     iget-object v0, v0, Landroid/widget/ActivityChooserModel$HistoryLoader;->this$0:Landroid/widget/ActivityChooserModel;
@@ -49,7 +49,7 @@
     #calls: Landroid/widget/ActivityChooserModel;->pruneExcessiveHistoricalRecordsLocked()V
     invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1400(Landroid/widget/ActivityChooserModel;)V
 
-    .line 1354
+    .line 1347
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$HistoryLoader$2;->this$1:Landroid/widget/ActivityChooserModel$HistoryLoader;
 
     iget-object v0, v0, Landroid/widget/ActivityChooserModel$HistoryLoader;->this$0:Landroid/widget/ActivityChooserModel;
@@ -57,6 +57,6 @@
     #calls: Landroid/widget/ActivityChooserModel;->sortActivities()V
     invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$900(Landroid/widget/ActivityChooserModel;)V
 
-    .line 1355
+    .line 1348
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2392
+    .line 2741
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -57,14 +57,14 @@
     .local p1, parent:Lcom/htc/widget/HtcAdapterView;,"Lcom/htc/widget/HtcAdapterView<*>;"
     const/4 v4, 0x0
 
-    .line 2394
+    .line 2743
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     iget-object v3, v3, Lcom/htc/app/FilePickerCore;->onlineTabStringArray:[Ljava/lang/String;
 
     aget-object v2, v3, p3
 
-    .line 2395
+    .line 2744
     .local v2, tab_string:Ljava/lang/String;
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
@@ -72,27 +72,27 @@
 
     aget-object v0, v3, p3
 
-    .line 2397
+    .line 2746
     .local v0, chosen_string:Ljava/lang/String;
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->loadLocalDataSourceTypePreferences()I
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$2800(Lcom/htc/app/FilePickerCore;)I
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$4600(Lcom/htc/app/FilePickerCore;)I
 
     move-result v1
 
-    .line 2398
+    .line 2747
     .local v1, dataSourceType:I
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #setter for: Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
-    invoke-static {v3, v2}, Lcom/htc/app/FilePickerCore;->access$2902(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2}, Lcom/htc/app/FilePickerCore;->access$4702(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2399
+    .line 2748
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mDropboxText:Ljava/lang/String;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$3200(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$5000(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -102,16 +102,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 2400
+    .line 2749
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #setter for: Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
-    invoke-static {v3, v4}, Lcom/htc/app/FilePickerCore;->access$3002(Lcom/htc/app/FilePickerCore;Z)Z
+    invoke-static {v3, v4}, Lcom/htc/app/FilePickerCore;->access$4802(Lcom/htc/app/FilePickerCore;Z)Z
 
-    .line 2401
+    .line 2750
     const/4 v1, 0x0
 
-    .line 2405
+    .line 2754
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -121,23 +121,23 @@
 
     invoke-virtual {v3, v1}, Lcom/htc/app/FilePickerUtil;->setDataSourceType(I)V
 
-    .line 2406
+    .line 2755
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->launchCloudFilePicker()V
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$3300(Lcom/htc/app/FilePickerCore;)V
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$5100(Lcom/htc/app/FilePickerCore;)V
 
-    .line 2419
+    .line 2768
     :cond_0
     :goto_0
     return-void
 
-    .line 2408
+    .line 2757
     :cond_1
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mSkyDriveText:Ljava/lang/String;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$3400(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$5200(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -147,16 +147,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 2409
+    .line 2758
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #setter for: Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
-    invoke-static {v3, v4}, Lcom/htc/app/FilePickerCore;->access$3002(Lcom/htc/app/FilePickerCore;Z)Z
+    invoke-static {v3, v4}, Lcom/htc/app/FilePickerCore;->access$4802(Lcom/htc/app/FilePickerCore;Z)Z
 
-    .line 2411
+    .line 2760
     const/4 v1, 0x1
 
-    .line 2415
+    .line 2764
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -166,11 +166,11 @@
 
     invoke-virtual {v3, v1}, Lcom/htc/app/FilePickerUtil;->setDataSourceType(I)V
 
-    .line 2416
+    .line 2765
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->launchCloudFilePicker()V
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$3300(Lcom/htc/app/FilePickerCore;)V
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$5100(Lcom/htc/app/FilePickerCore;)V
 
     goto :goto_0
 .end method

@@ -34,12 +34,12 @@
     .line 17
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
+    .line 24
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
-    .line 25
+    .line 26
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -53,42 +53,42 @@
     .locals 2
 
     .prologue
-    .line 28
+    .line 30
     sget-object v0, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     if-nez v0, :cond_1
 
-    .line 29
+    .line 31
     const-class v1, Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 30
+    .line 32
     :try_start_0
     sget-object v0, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     if-nez v0, :cond_0
 
-    .line 31
+    .line 33
     new-instance v0, Lcom/android/internal/telephony/SmsSegmentsController;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/SmsSegmentsController;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
-    .line 33
+    .line 35
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 35
+    .line 37
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     return-object v0
 
-    .line 33
+    .line 35
     :catchall_0
     move-exception v0
 
@@ -105,7 +105,7 @@
     .parameter "msg"
 
     .prologue
-    .line 126
+    .line 141
     const-string v0, "SMS"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -128,7 +128,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
+    .line 142
     return-void
 .end method
 
@@ -148,13 +148,13 @@
     .end annotation
 
     .prologue
-    .line 81
+    .line 91
     .local p1, collection:Ljava/util/Collection;,"Ljava/util/Collection<+Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;>;"
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 82
+    .line 92
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
@@ -166,7 +166,7 @@
 
     return v0
 
-    .line 83
+    .line 93
     :catchall_0
     move-exception v0
 
@@ -182,24 +182,24 @@
     .parameter "tracker"
 
     .prologue
-    .line 75
+    .line 84
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 76
+    .line 85
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 77
+    .line 86
     monitor-exit v1
 
-    .line 78
+    .line 87
     return-void
 
-    .line 77
+    .line 86
     :catchall_0
     move-exception v0
 
@@ -214,12 +214,12 @@
     .locals 3
 
     .prologue
-    .line 93
+    .line 105
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 98
+    .line 110
     :try_start_0
     iget v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
@@ -227,7 +227,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
-    .line 99
+    .line 111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,14 +250,14 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/SmsSegmentsController;->logd(Ljava/lang/String;)V
 
-    .line 100
+    .line 112
     const/4 v0, 0x1
 
     monitor-exit v1
 
     return v0
 
-    .line 101
+    .line 113
     :catchall_0
     move-exception v0
 
@@ -272,12 +272,12 @@
     .locals 3
 
     .prologue
-    .line 105
+    .line 118
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 106
+    .line 119
     :try_start_0
     iget v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
@@ -285,7 +285,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
-    .line 107
+    .line 120
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,24 +308,24 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/SmsSegmentsController;->logd(Ljava/lang/String;)V
 
-    .line 109
+    .line 122
     iget v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
     if-gez v0, :cond_0
 
-    .line 110
+    .line 123
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
-    .line 112
+    .line 125
     :cond_0
     monitor-exit v1
 
-    .line 113
+    .line 126
     return-void
 
-    .line 112
+    .line 125
     :catchall_0
     move-exception v0
 
@@ -340,24 +340,24 @@
     .locals 2
 
     .prologue
-    .line 69
+    .line 77
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 70
+    .line 78
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 71
+    .line 79
     monitor-exit v1
 
-    .line 72
+    .line 80
     return-void
 
-    .line 71
+    .line 79
     :catchall_0
     move-exception v0
 
@@ -372,12 +372,12 @@
     .locals 2
 
     .prologue
-    .line 39
+    .line 42
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 40
+    .line 43
     :try_start_0
     iget v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
@@ -387,7 +387,7 @@
 
     return v0
 
-    .line 41
+    .line 44
     :catchall_0
     move-exception v0
 
@@ -402,12 +402,12 @@
     .locals 2
 
     .prologue
-    .line 45
+    .line 49
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 46
+    .line 50
     :try_start_0
     iget v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mRemainingMessages:I
 
@@ -415,7 +415,7 @@
 
     return v0
 
-    .line 47
+    .line 51
     :catchall_0
     move-exception v0
 
@@ -431,12 +431,12 @@
     .parameter "index"
 
     .prologue
-    .line 57
+    .line 63
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 58
+    .line 64
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
@@ -450,7 +450,7 @@
 
     return-object v0
 
-    .line 59
+    .line 65
     :catchall_0
     move-exception v0
 
@@ -465,12 +465,12 @@
     .locals 2
 
     .prologue
-    .line 51
+    .line 56
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 52
+    .line 57
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
@@ -482,7 +482,7 @@
 
     return v0
 
-    .line 53
+    .line 58
     :catchall_0
     move-exception v0
 
@@ -497,12 +497,12 @@
     .locals 2
 
     .prologue
-    .line 87
+    .line 98
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 88
+    .line 99
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
@@ -528,7 +528,7 @@
 
     goto :goto_0
 
-    .line 89
+    .line 100
     :catchall_0
     move-exception v0
 
@@ -543,12 +543,12 @@
     .locals 2
 
     .prologue
-    .line 120
+    .line 135
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 121
+    .line 136
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
@@ -570,7 +570,7 @@
 
     goto :goto_0
 
-    .line 122
+    .line 137
     :catchall_0
     move-exception v0
 
@@ -585,7 +585,7 @@
     .locals 0
 
     .prologue
-    .line 117
+    .line 131
     return-void
 .end method
 
@@ -594,12 +594,12 @@
     .parameter "index"
 
     .prologue
-    .line 63
+    .line 70
     sget-object v1, Lcom/android/internal/telephony/SmsSegmentsController;->sInstance:Lcom/android/internal/telephony/SmsSegmentsController;
 
     monitor-enter v1
 
-    .line 64
+    .line 71
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/telephony/SmsSegmentsController;->mReqeustQueue:Ljava/util/ArrayList;
 
@@ -613,7 +613,7 @@
 
     return-object v0
 
-    .line 65
+    .line 72
     :catchall_0
     move-exception v0
 

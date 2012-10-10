@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1189
+    .line 1185
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$18$1;->this$1:Lcom/android/camera/component/ViewFinder$18;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 1192
+    .line 1189
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$18$1;->this$1:Lcom/android/camera/component/ViewFinder$18;
 
     iget-object v0, v0, Lcom/android/camera/component/ViewFinder$18;->this$0:Lcom/android/camera/component/ViewFinder;
@@ -49,6 +49,6 @@
     #calls: Lcom/android/camera/component/ViewFinder;->setupCameraThreadEventHandlers()V
     invoke-static {v0}, Lcom/android/camera/component/ViewFinder;->access$1900(Lcom/android/camera/component/ViewFinder;)V
 
-    .line 1193
+    .line 1190
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 269
+    .line 289
     iput-object p1, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 269
+    .line 289
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$MyIdleHandler;-><init>(Lcom/htc/music/browserlayer/AddPlaylistTabActivity;)V
 
     return-void
@@ -53,7 +53,7 @@
     .locals 2
 
     .prologue
-    .line 273
+    .line 293
     iget-object v1, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->mUIHandler:Landroid/os/Handler;
@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    .line 274
+    .line 294
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
@@ -75,12 +75,12 @@
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 275
+    .line 295
     const v1, 0xc351
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 276
+    .line 296
     iget-object v1, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->mUIHandler:Landroid/os/Handler;
@@ -90,7 +90,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 278
+    .line 298
     const/4 v1, 0x0
 
     return v1

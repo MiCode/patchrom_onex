@@ -176,7 +176,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "limit-password"
+    const-string v5, "limit-password"
 
     const v6, 0x104028d
 
@@ -295,7 +295,7 @@
 
     const/16 v4, 0x15
 
-    const-string/jumbo v5, "limit-device-function"
+    const-string v5, "limit-device-function"
 
     const v6, 0x20400a9
 
@@ -414,7 +414,7 @@
 
     const/16 v4, 0x1c
 
-    const-string/jumbo v5, "inst-cert"
+    const-string v5, "inst-cert"
 
     const v6, 0x10405b4
 

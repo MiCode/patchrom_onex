@@ -18,14 +18,14 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 33
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 34
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cdma/CdmaRoamingInfoHelper;->mCdmaRoaming:Z
 
-    .line 31
+    .line 35
     return-void
 .end method

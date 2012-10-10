@@ -1903,12 +1903,12 @@
     .parameter "pi"
 
     .prologue
-    .line 1657
+    .line 1664
     invoke-virtual {p1}, Landroid/app/PendingIntent;->getTargetPackage()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1658
+    .line 1665
     .local v1, pkg:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/AlarmManagerService;->mBroadcastStats:Ljava/util/HashMap;
 
@@ -1918,11 +1918,11 @@
 
     check-cast v0, Lcom/android/server/AlarmManagerService$BroadcastStats;
 
-    .line 1659
+    .line 1666
     .local v0, bs:Lcom/android/server/AlarmManagerService$BroadcastStats;
     if-nez v0, :cond_0
 
-    .line 1660
+    .line 1667
     new-instance v0, Lcom/android/server/AlarmManagerService$BroadcastStats;
 
     .end local v0           #bs:Lcom/android/server/AlarmManagerService$BroadcastStats;
@@ -1930,13 +1930,13 @@
 
     invoke-direct {v0, v2}, Lcom/android/server/AlarmManagerService$BroadcastStats;-><init>(Lcom/android/server/AlarmManagerService$1;)V
 
-    .line 1661
+    .line 1668
     .restart local v0       #bs:Lcom/android/server/AlarmManagerService$BroadcastStats;
     iget-object v2, p0, Lcom/android/server/AlarmManagerService;->mBroadcastStats:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1663
+    .line 1670
     :cond_0
     return-object v0
 .end method

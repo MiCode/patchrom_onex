@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 666
+    .line 667
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-direct {p0}, Lcom/htc/music/IPluginIPCNotify$Stub;-><init>()V
@@ -46,12 +46,12 @@
     .end annotation
 
     .prologue
-    .line 684
+    .line 685
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/music/MusicPluginManager;->onAlbumArtPathByShuffleUpdated(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 685
+    .line 686
     return-void
 .end method
 
@@ -67,12 +67,12 @@
     .end annotation
 
     .prologue
-    .line 688
+    .line 689
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/music/MusicPluginManager;->onAlbumArtPathUpdated(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 689
+    .line 690
     return-void
 .end method
 
@@ -87,12 +87,12 @@
     .end annotation
 
     .prologue
-    .line 692
+    .line 693
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/music/MusicPluginManager;->onError(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 693
+    .line 694
     return-void
 .end method
 
@@ -107,12 +107,12 @@
     .end annotation
 
     .prologue
-    .line 700
+    .line 701
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/music/MusicPluginManager;->onErrorId(ILjava/lang/String;)V
 
-    .line 701
+    .line 702
     return-void
 .end method
 
@@ -129,12 +129,12 @@
     .end annotation
 
     .prologue
-    .line 674
+    .line 675
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/htc/music/MusicPluginManager;->onNowplayingQueueUpdated([Landroid/content/ContentValues;IILjava/lang/String;)V
 
-    .line 675
+    .line 676
     return-void
 .end method
 
@@ -149,12 +149,12 @@
     .end annotation
 
     .prologue
-    .line 696
+    .line 697
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/music/MusicPluginManager;->onToastWarning(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 697
+    .line 698
     return-void
 .end method
 
@@ -170,12 +170,12 @@
     .end annotation
 
     .prologue
-    .line 679
+    .line 680
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/music/MusicPluginManager;->onTrackDetailsUpdated(ILandroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 680
+    .line 681
     return-void
 .end method
 
@@ -190,11 +190,11 @@
     .end annotation
 
     .prologue
-    .line 669
+    .line 670
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$1;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/music/MusicPluginManager;->pluginNotifyChange(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 670
+    .line 671
     return-void
 .end method

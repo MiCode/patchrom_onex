@@ -27,10 +27,10 @@
     .locals 1
 
     .prologue
-    .line 738
+    .line 740
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 753
+    .line 755
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager$Info;->id:Ljava/lang/String;

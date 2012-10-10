@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">เพิ่มรายการ</string>
     <string name="htc_delete_playlists">ลบรายการเพลง</string>
     <string name="htc_delete_playlist">ลบรายการเพลง</string>
+    <string name="htc_delete_all_playlists">ลบรายการเล่นทั้งหมด</string>
     <string name="htc_playlist_add_songs">เพิ่มเพลง</string>
     <string name="htc_playlist_del_songs">ลบเพลง</string>
     <string name="htc_playlist_remove_songs">เอาเพลงออก</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">กำลังพักข้อมูล...</string>
     <string name="title_send_content">กำลังส่งเนื้อหา...</string>
     <string name="no_downloaded_apps_found">ไม่พบแอพพลิเคชั่นที่ดาวน์โหลดมา</string>
+    <string name="music_folder_picker_dialog_msg">เพิ่มเพลงไปยังรายการเล่นด้วยการเลือกโฟลเดอร์? ตอบ ไม่ เพื่อเพิ่มเพลงด้วยวิธีการอื่น</string>
 </resources>

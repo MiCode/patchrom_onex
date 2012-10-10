@@ -35,7 +35,7 @@
     .locals 1
 
     .prologue
-    .line 159
+    .line 168
     const-class v0, Landroid/os/memory/HtcMemoryMeasurer;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -52,27 +52,27 @@
     .parameter "context"
 
     .prologue
-    .line 183
+    .line 192
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 169
+    .line 178
     new-instance v0, Landroid/os/memory/HtcMemoryMeasurer$1;
 
     invoke-direct {v0, p0}, Landroid/os/memory/HtcMemoryMeasurer$1;-><init>(Landroid/os/memory/HtcMemoryMeasurer;)V
 
     iput-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mInternalListener:Landroid/os/memory/RunningState$OnRefreshUiListener;
 
-    .line 184
+    .line 193
     iput-object p1, p0, Landroid/os/memory/HtcMemoryMeasurer;->mContext:Landroid/content/Context;
 
-    .line 185
+    .line 194
     invoke-static {p1}, Landroid/os/memory/RunningState;->getInstance(Landroid/content/Context;)Landroid/os/memory/RunningState;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mState:Landroid/os/memory/RunningState;
 
-    .line 188
+    .line 197
     iget-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
@@ -85,7 +85,7 @@
 
     iput-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mAm:Landroid/app/ActivityManager;
 
-    .line 190
+    .line 199
     return-void
 .end method
 
@@ -94,12 +94,12 @@
     .parameter "message"
 
     .prologue
-    .line 311
+    .line 322
     sget-object v0, Landroid/os/memory/HtcMemoryMeasurer;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
+    .line 323
     return-void
 .end method
 
@@ -132,52 +132,52 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 206
+    .line 216
     iget-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mContext:Landroid/content/Context;
 
-    .line 207
+    .line 217
     .local v0, context:Landroid/content/Context;
     new-instance v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;
 
     invoke-direct {v2}, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;-><init>()V
 
-    .line 210
+    .line 220
     .local v2, memInfo:Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;
     iget-object v4, p0, Landroid/os/memory/HtcMemoryMeasurer;->mAm:Landroid/app/ActivityManager;
 
     invoke-virtual {v4, v2}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 214
+    .line 224
     new-instance v1, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v1}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
-    .line 215
+    .line 225
     .local v1, mMemInfoReader:Lcom/android/internal/util/MemInfoReader;
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 216
+    .line 226
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getTotalSize()J
 
     move-result-wide v4
 
     iput-wide v4, v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->totalMem:J
 
-    .line 217
+    .line 227
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getFreeSize()J
 
     move-result-wide v4
 
     iput-wide v4, v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->freeMem:J
 
-    .line 218
+    .line 228
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getCachedSize()J
 
     move-result-wide v4
 
     iput-wide v4, v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->cacheMem:J
 
-    .line 219
+    .line 229
     invoke-virtual {v1}, Lcom/android/internal/util/MemInfoReader;->getFreeSize()J
 
     move-result-wide v4
@@ -190,7 +190,7 @@
 
     iput-wide v4, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
-    .line 221
+    .line 231
     iget-wide v4, v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->totalMem:J
 
     iget-wide v6, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
@@ -199,17 +199,17 @@
 
     iput-wide v4, v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->usedMem:J
 
-    .line 223
+    .line 233
     iget-object v4, p0, Landroid/os/memory/HtcMemoryMeasurer;->mMeasurementListener:Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;
 
     if-eqz v4, :cond_0
 
-    .line 224
+    .line 234
     iget-object v4, p0, Landroid/os/memory/HtcMemoryMeasurer;->mMeasurementListener:Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;
 
     invoke-interface {v4, v2}, Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;->onApproximatelyMeasured(Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;)V
 
-    .line 225
+    .line 235
     new-instance v3, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;
 
     invoke-direct {v3, v2}, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;-><init>(Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;)V
@@ -218,7 +218,7 @@
     .local v3, memInfo:Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;
     move-object v2, v3
 
-    .line 235
+    .line 245
     .end local v3           #memInfo:Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;
     .restart local v2       #memInfo:Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;
     :cond_0
@@ -228,7 +228,7 @@
 
     monitor-enter v5
 
-    .line 239
+    .line 249
     :try_start_0
     iget-wide v6, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
@@ -238,19 +238,19 @@
 
     iput-wide v6, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
-    .line 241
+    .line 251
     iget-wide v6, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
     cmp-long v4, v6, v10
 
     if-gez v4, :cond_1
 
-    .line 242
+    .line 252
     const-wide/16 v6, 0x0
 
     iput-wide v6, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
-    .line 244
+    .line 254
     :cond_1
     iget-wide v6, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
@@ -262,7 +262,7 @@
 
     iput-wide v6, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
-    .line 245
+    .line 255
     iget-wide v6, v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->totalMem:J
 
     iget-wide v8, v2, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
@@ -271,26 +271,26 @@
 
     iput-wide v6, v2, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->usedMem:J
 
-    .line 259
+    .line 269
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 267
+    .line 277
     iget-object v4, p0, Landroid/os/memory/HtcMemoryMeasurer;->mMeasurementListener:Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;
 
     if-eqz v4, :cond_2
 
-    .line 268
+    .line 278
     iget-object v4, p0, Landroid/os/memory/HtcMemoryMeasurer;->mMeasurementListener:Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;
 
     invoke-interface {v4, v2}, Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;->onExactlyMeasured(Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;)V
 
-    .line 270
+    .line 280
     :cond_2
     return-void
 
-    .line 259
+    .line 269
     :catchall_0
     move-exception v4
 
@@ -307,27 +307,27 @@
     .parameter "what"
 
     .prologue
-    .line 298
+    .line 309
     packed-switch p1, :pswitch_data_0
 
-    .line 308
+    .line 319
     :goto_0
     :pswitch_0
     return-void
 
-    .line 302
+    .line 313
     :pswitch_1
     invoke-virtual {p0}, Landroid/os/memory/HtcMemoryMeasurer;->measure()V
 
     goto :goto_0
 
-    .line 305
+    .line 316
     :pswitch_2
     invoke-virtual {p0}, Landroid/os/memory/HtcMemoryMeasurer;->measure()V
 
     goto :goto_0
 
-    .line 298
+    .line 309
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -342,17 +342,17 @@
     .locals 1
 
     .prologue
-    .line 288
+    .line 298
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mMeasurementListener:Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;
 
-    .line 289
+    .line 299
     iget-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mState:Landroid/os/memory/RunningState;
 
     invoke-virtual {v0}, Landroid/os/memory/RunningState;->pause()V
 
-    .line 291
+    .line 301
     return-void
 .end method
 
@@ -361,17 +361,17 @@
     .parameter "listener"
 
     .prologue
-    .line 279
+    .line 289
     iput-object p1, p0, Landroid/os/memory/HtcMemoryMeasurer;->mMeasurementListener:Landroid/os/memory/HtcMemoryMeasurer$MeasurementListener;
 
-    .line 280
+    .line 290
     iget-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer;->mState:Landroid/os/memory/RunningState;
 
     iget-object v1, p0, Landroid/os/memory/HtcMemoryMeasurer;->mInternalListener:Landroid/os/memory/RunningState$OnRefreshUiListener;
 
     invoke-virtual {v0, v1}, Landroid/os/memory/RunningState;->resume(Landroid/os/memory/RunningState$OnRefreshUiListener;)V
 
-    .line 281
+    .line 291
     return-void
 .end method
 
@@ -379,7 +379,7 @@
     .locals 2
 
     .prologue
-    .line 196
+    .line 206
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Landroid/os/memory/HtcMemoryMeasurer$2;
@@ -390,6 +390,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 203
+    .line 213
     return-void
 .end method

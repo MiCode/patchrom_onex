@@ -79,6 +79,14 @@
     .end annotation
 .end method
 
+.method public abstract setCameraMode(I)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setCapsLedState(Z)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -136,6 +144,14 @@
 .end method
 
 .method public abstract setJogBallMode(I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setNaviMode(I)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

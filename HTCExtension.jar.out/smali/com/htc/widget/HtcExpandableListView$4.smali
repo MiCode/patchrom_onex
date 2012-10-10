@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2661
+    .line 2674
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$4;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 2663
+    .line 2676
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$4;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #calls: Lcom/htc/widget/HtcExpandableListView;->adjustFooterHeight()V
     invoke-static {v0}, Lcom/htc/widget/HtcExpandableListView;->access$800(Lcom/htc/widget/HtcExpandableListView;)V
 
-    .line 2664
+    .line 2677
     return-void
 .end method

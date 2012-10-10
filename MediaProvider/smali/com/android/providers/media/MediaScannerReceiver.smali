@@ -26,18 +26,18 @@
     .parameter "volume"
 
     .prologue
-    .line 205
+    .line 209
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 206
+    .line 210
     .local v0, args:Landroid/os/Bundle;
     const-string v1, "volume"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
+    .line 212
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/android/providers/media/MediaScannerService;
@@ -50,7 +50,7 @@
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 209
+    .line 214
     return-void
 .end method
 
@@ -73,42 +73,61 @@
     .line 180
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->stopScan()V
 
-    .line 184
+    .line 181
+    sget-boolean v4, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
+
+    if-eqz v4, :cond_0
+
+    .line 182
+    new-instance v4, Landroid/content/Intent;
+
+    const-class v5, Lcom/android/providers/media/MediaScannerService;
+
+    invoke-direct {v4, p1, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p1, v4}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
+
+    .line 183
+    const/4 v4, 0x0
+
+    sput-boolean v4, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
+
+    .line 188
     :cond_0
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->getVirtualRemovableStorageDirectory()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 186
+    .line 190
     .local v2, virtual:Ljava/lang/String;
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->getRemovableStorageDirectory()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 188
+    .line 192
     .local v1, path:Ljava/lang/String;
     invoke-static {v1}, Landroid/os/FileUtils;->getFatVolumeId(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 195
+    .line 199
     .local v3, volumeID:I
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 196
+    .line 200
     .local v0, args:Landroid/os/Bundle;
     const-string v4, "volume"
 
     invoke-virtual {v0, v4, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 197
+    .line 201
     const-string v4, "action"
 
     invoke-virtual {v0, v4, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 199
+    .line 203
     new-instance v4, Landroid/content/Intent;
 
     const-class v5, Lcom/android/providers/media/MediaScannerService;
@@ -121,7 +140,7 @@
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 201
+    .line 205
     return-void
 .end method
 
@@ -131,18 +150,18 @@
     .parameter "path"
 
     .prologue
-    .line 212
+    .line 217
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 213
+    .line 218
     .local v0, args:Landroid/os/Bundle;
     const-string v1, "filepath"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
+    .line 220
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/android/providers/media/MediaScannerService;
@@ -155,7 +174,7 @@
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 216
+    .line 222
     return-void
 .end method
 

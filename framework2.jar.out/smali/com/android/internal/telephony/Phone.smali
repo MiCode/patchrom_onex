@@ -264,6 +264,8 @@
 
 .field public static final REASON_PS_RESTRICT_ENABLED:Ljava/lang/String; = "psRestrictEnabled"
 
+.field public static final REASON_RADIOTECH_CHANGE:Ljava/lang/String; = "RadioTechChange"
+
 .field public static final REASON_RADIO_TURNED_OFF:Ljava/lang/String; = "radioTurnedOff"
 
 .field public static final REASON_RESTORE_DEFAULT_APN:Ljava/lang/String; = "restoreDefaultApn"
@@ -668,6 +670,9 @@
 .method public abstract getGprsState()I
 .end method
 
+.method public abstract getGprsStateExt(I)I
+.end method
+
 .method public abstract getHtcSimTypes(Landroid/os/Message;)V
 .end method
 
@@ -945,6 +950,9 @@
 .end method
 
 .method public abstract getVoiceMessageCountExt(I)I
+.end method
+
+.method public abstract getVoiceServiceState()Landroid/telephony/ServiceState;
 .end method
 
 .method public abstract handleInCallMmiCommands(Ljava/lang/String;)Z
@@ -1917,4 +1925,7 @@
 .end method
 
 .method public abstract wifi2GRetry()V
+.end method
+
+.method public abstract wifi2GRetryExt(I)V
 .end method

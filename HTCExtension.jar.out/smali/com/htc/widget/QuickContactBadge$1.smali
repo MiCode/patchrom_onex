@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 327
+    .line 326
     iput-object p1, p0, Lcom/htc/widget/QuickContactBadge$1;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "animation"
 
     .prologue
-    .line 340
+    .line 339
     iget-object v0, p0, Lcom/htc/widget/QuickContactBadge$1;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     invoke-virtual {v0}, Lcom/htc/widget/QuickContactBadge;->onDownAnimationCancel()V
 
-    .line 341
+    .line 340
     return-void
 .end method
 
@@ -56,12 +56,12 @@
     .parameter "animation"
 
     .prologue
-    .line 336
+    .line 335
     iget-object v0, p0, Lcom/htc/widget/QuickContactBadge$1;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     invoke-virtual {v0}, Lcom/htc/widget/QuickContactBadge;->onDownAnimationEnd()V
 
-    .line 337
+    .line 336
     return-void
 .end method
 
@@ -70,7 +70,7 @@
     .parameter "animation"
 
     .prologue
-    .line 333
+    .line 332
     return-void
 .end method
 
@@ -79,11 +79,11 @@
     .parameter "animation"
 
     .prologue
-    .line 329
+    .line 328
     iget-object v0, p0, Lcom/htc/widget/QuickContactBadge$1;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     invoke-virtual {v0}, Lcom/htc/widget/QuickContactBadge;->onDownAnimationStart()V
 
-    .line 330
+    .line 329
     return-void
 .end method

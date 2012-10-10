@@ -129,7 +129,7 @@
     if-eqz v3, :cond_0
 
     .line 1876
-    const-string/jumbo v3, "limit"
+    const-string v3, "limit"
 
     iget v4, p0, Landroid/provider/ContactsContract$Contacts$AggregationSuggestions$Builder;->mLimit:I
 

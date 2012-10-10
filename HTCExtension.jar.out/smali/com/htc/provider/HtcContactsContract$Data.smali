@@ -23,7 +23,7 @@
     .locals 2
 
     .prologue
-    .line 940
+    .line 941
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "data_only"
@@ -41,7 +41,7 @@
     .locals 0
 
     .prologue
-    .line 935
+    .line 936
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

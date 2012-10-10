@@ -144,7 +144,7 @@
 
     invoke-static/range {v28 .. v29}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
+    .line 301
     :cond_1
     return-object v19
 
@@ -296,7 +296,7 @@
 
     goto :goto_2
 
-    .line 275
+    .line 283
     .end local v3           #arr$:[Lcom/android/providers/media/MediaProvider$STORAGE;
     .end local v4           #databaseFileName:Ljava/lang/String;
     .end local v5           #databaseFilePath:Ljava/lang/String;
@@ -309,7 +309,7 @@
     :catch_0
     move-exception v8
 
-    .line 276
+    .line 284
     .local v8, e:Ljava/lang/Exception;
     :try_start_1
     const-string v28, "MediaIntentService"
@@ -324,7 +324,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 278
+    .line 286
     invoke-interface {v7}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v28
@@ -348,11 +348,11 @@
 
     check-cast v6, Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 279
+    .line 287
     .local v6, db:Landroid/database/sqlite/SQLiteDatabase;
     if-eqz v6, :cond_5
 
-    .line 280
+    .line 288
     invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     goto :goto_3
@@ -497,7 +497,7 @@
 
     goto :goto_5
 
-    .line 278
+    .line 286
     .end local v3           #arr$:[Lcom/android/providers/media/MediaProvider$STORAGE;
     .end local v11           #i$:I
     .end local v15           #len$:I
@@ -522,7 +522,7 @@
 
     move-result v29
 
-    if-eqz v29, :cond_12
+    if-eqz v29, :cond_13
 
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -530,11 +530,11 @@
 
     check-cast v6, Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 279
+    .line 287
     .restart local v6       #db:Landroid/database/sqlite/SQLiteDatabase;
     if-eqz v6, :cond_8
 
-    .line 280
+    .line 288
     invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     goto :goto_6
@@ -640,7 +640,7 @@
     .end local v11           #i$:I
     .local v12, i$:I
     :goto_7
-    if-ge v12, v15, :cond_10
+    if-ge v12, v15, :cond_11
 
     aget-object v23, v3, v12
 
@@ -784,14 +784,18 @@
 
     goto :goto_8
 
-    .line 256
+    .line 258
     :cond_e
+    if-eqz v24, :cond_f
+
+    .line 259
     invoke-virtual/range {v24 .. v24}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v22
 
-    .line 257
+    .line 265
     .local v22, stringForUriTemplate:Ljava/lang/String;
+    :goto_9
     const/16 v28, 0x0
 
     const/16 v29, 0x2f
@@ -818,7 +822,7 @@
 
     move-result-object v26
 
-    .line 260
+    .line 268
     .local v26, uriTemplate:Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -830,16 +834,16 @@
 
     move-result-object v17
 
-    .line 262
+    .line 270
     .local v17, newIds:[I
     invoke-interface/range {v25 .. v25}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v14
 
-    .line 263
+    .line 271
     const/16 v24, 0x0
 
-    .line 264
+    .line 272
     const/4 v10, 0x0
 
     invoke-interface/range {v25 .. v25}, Ljava/util/Set;->size()I
@@ -847,7 +851,7 @@
     move-result v16
 
     .end local v12           #i$:I
-    :goto_9
+    :goto_a
     move/from16 v0, v16
 
     if-ge v10, v0, :cond_c
@@ -858,7 +862,7 @@
 
     if-eqz v28, :cond_c
 
-    .line 265
+    .line 273
     invoke-interface {v14}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v24
@@ -866,13 +870,13 @@
     .end local v24           #uri:Landroid/net/Uri;
     check-cast v24, Landroid/net/Uri;
 
-    .line 266
+    .line 274
     .restart local v24       #uri:Landroid/net/Uri;
     aget v28, v17, v10
 
-    if-eqz v28, :cond_f
+    if-eqz v28, :cond_10
 
-    .line 267
+    .line 275
     move-object/from16 v0, v27
 
     move-object/from16 v1, v24
@@ -888,12 +892,12 @@
     move-result-object v11
 
     .local v11, i$:Ljava/util/Iterator;
-    :goto_a
+    :goto_b
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v28
 
-    if-eqz v28, :cond_f
+    if-eqz v28, :cond_10
 
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -901,7 +905,7 @@
 
     check-cast v13, Ljava/lang/Integer;
 
-    .line 268
+    .line 276
     .local v13, index:Ljava/lang/Integer;
     invoke-virtual {v13}, Ljava/lang/Integer;->intValue()I
 
@@ -930,21 +934,42 @@
     move-object/from16 v2, v29
 
     invoke-virtual {v0, v1, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_b
+
+    .line 261
+    .end local v11           #i$:Ljava/util/Iterator;
+    .end local v13           #index:Ljava/lang/Integer;
+    .end local v17           #newIds:[I
+    .end local v22           #stringForUriTemplate:Ljava/lang/String;
+    .end local v26           #uriTemplate:Landroid/net/Uri;
+    .restart local v12       #i$:I
+    :cond_f
+    const-string v28, "MediaIntentService"
+
+    const-string v29, "uri == null in dispatchStorageQuery()"
+
+    invoke-static/range {v28 .. v29}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 262
+    const-string v22, ""
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    goto :goto_a
+    .restart local v22       #stringForUriTemplate:Ljava/lang/String;
+    goto/16 :goto_9
 
-    .line 264
-    .end local v11           #i$:Ljava/util/Iterator;
-    .end local v13           #index:Ljava/lang/Integer;
-    :cond_f
+    .line 272
+    .end local v12           #i$:I
+    .restart local v17       #newIds:[I
+    .restart local v26       #uriTemplate:Landroid/net/Uri;
+    :cond_10
     add-int/lit8 v10, v10, 0x1
 
-    goto :goto_9
+    goto :goto_a
 
-    .line 278
+    .line 286
     .end local v6           #db:Landroid/database/sqlite/SQLiteDatabase;
     .end local v14           #iterator:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/net/Uri;>;"
     .end local v17           #newIds:[I
@@ -955,7 +980,7 @@
     .end local v25           #uriList:Ljava/util/Set;,"Ljava/util/Set<Landroid/net/Uri;>;"
     .end local v26           #uriTemplate:Landroid/net/Uri;
     .restart local v12       #i$:I
-    :cond_10
+    :cond_11
     invoke-interface {v7}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v28
@@ -966,8 +991,8 @@
 
     .end local v12           #i$:I
     .restart local v11       #i$:Ljava/util/Iterator;
-    :cond_11
-    :goto_b
+    :cond_12
+    :goto_c
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v28
@@ -980,14 +1005,14 @@
 
     check-cast v6, Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 279
+    .line 287
     .restart local v6       #db:Landroid/database/sqlite/SQLiteDatabase;
-    if-eqz v6, :cond_11
+    if-eqz v6, :cond_12
 
-    .line 280
+    .line 288
     invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    goto :goto_b
+    goto :goto_c
 
     .end local v3           #arr$:[Lcom/android/providers/media/MediaProvider$STORAGE;
     .end local v6           #db:Landroid/database/sqlite/SQLiteDatabase;
@@ -995,12 +1020,10 @@
     .end local v20           #storageDispatchMap:Ljava/util/List;,"Ljava/util/List<Ljava/util/Set<Landroid/net/Uri;>;>;"
     .end local v21           #storageType:Lcom/android/providers/media/MediaProvider$STORAGE;
     .end local v27           #uriToIndexList:Ljava/util/Map;,"Ljava/util/Map<Landroid/net/Uri;Ljava/util/List<Ljava/lang/Integer;>;>;"
-    :cond_12
+    :cond_13
     throw v28
 
     .line 171
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1016,14 +1039,14 @@
     .parameter "mediaType"
 
     .prologue
-    .line 300
+    .line 308
     move-object/from16 v0, p2
 
     array-length v1, v0
 
     new-array v15, v1, [I
 
-    .line 301
+    .line 309
     .local v15, result:[I
     invoke-static {}, Lcom/android/providers/media/MediaDBMigrationService;->access$000()[Ljava/lang/String;
 
@@ -1031,15 +1054,15 @@
 
     aget-object v17, v1, p3
 
-    .line 302
+    .line 310
     .local v17, table:Ljava/lang/String;
     if-nez v17, :cond_0
 
-    .line 351
+    .line 359
     :goto_0
     return-object v15
 
-    .line 306
+    .line 314
     :cond_0
     const/4 v1, 0x2
 
@@ -1057,7 +1080,7 @@
 
     aput-object v2, v3, v1
 
-    .line 312
+    .line 320
     .local v3, columns:[Ljava/lang/String;
     new-instance v11, Ljava/util/HashMap;
 
@@ -1067,7 +1090,7 @@
 
     invoke-direct {v11, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 316
+    .line 324
     .local v11, idToIndexMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -1077,7 +1100,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 317
+    .line 325
     .local v16, strBuilder:Ljava/lang/StringBuilder;
     const/4 v10, 0x0
 
@@ -1090,21 +1113,21 @@
     :goto_1
     if-ge v10, v12, :cond_1
 
-    .line 318
+    .line 326
     aget v1, p2, v10
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 319
+    .line 327
     const/16 v1, 0x2c
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 321
+    .line 329
     aget v1, p2, v10
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1117,12 +1140,12 @@
 
     invoke-interface {v11, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 317
+    .line 325
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 323
+    .line 331
     :cond_1
     const-string v1, ","
 
@@ -1138,7 +1161,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 325
+    .line 333
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1195,15 +1218,15 @@
 
     move-result-object v9
 
-    .line 332
+    .line 340
     .local v9, cursor:Landroid/database/Cursor;
     const/4 v14, 0x0
 
-    .line 333
+    .line 341
     .local v14, oldId:I
     const/4 v13, 0x0
 
-    .line 334
+    .line 342
     .local v13, newId:I
     :cond_2
     :goto_2
@@ -1213,17 +1236,17 @@
 
     if-eqz v1, :cond_3
 
-    .line 335
+    .line 343
     const/4 v1, 0x0
 
     invoke-interface {v9, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v14
 
-    .line 337
+    .line 345
     const/4 v13, 0x0
 
-    .line 339
+    .line 347
     const/4 v1, 0x1
 
     invoke-interface {v9, v1}, Landroid/database/Cursor;->isNull(I)Z
@@ -1232,14 +1255,14 @@
 
     if-nez v1, :cond_2
 
-    .line 342
+    .line 350
     const/4 v1, 0x1
 
     invoke-interface {v9, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v13
 
-    .line 344
+    .line 352
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1258,7 +1281,7 @@
 
     goto :goto_2
 
-    .line 347
+    .line 355
     :cond_3
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 

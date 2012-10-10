@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 267
+    .line 269
     iput-object p1, p0, Lcom/android/camera/component/HdrController$3;->this$0:Lcom/android/camera/component/HdrController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,16 +43,16 @@
     .parameter "camera"
 
     .prologue
-    .line 270
+    .line 272
     sget-object v0, Lcom/android/camera/TIME;->RawCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v0}, Lcom/android/camera/TIME$Value;->End()V
 
-    .line 271
+    .line 273
     sget-object v0, Lcom/android/camera/TIME;->JpegCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v0}, Lcom/android/camera/TIME$Value;->Start()V
 
-    .line 272
+    .line 274
     return-void
 .end method

@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 1668
+    .line 1677
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .parameter "in"
 
     .prologue
-    .line 1670
+    .line 1679
     new-instance v0, Lcom/htc/widget/HtcAbsListView$SavedState;
 
     const/4 v1, 0x0
@@ -60,7 +60,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1668
+    .line 1677
     invoke-virtual {p0, p1}, Lcom/htc/widget/HtcAbsListView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/htc/widget/HtcAbsListView$SavedState;
 
     move-result-object v0
@@ -73,7 +73,7 @@
     .parameter "size"
 
     .prologue
-    .line 1674
+    .line 1683
     new-array v0, p1, [Lcom/htc/widget/HtcAbsListView$SavedState;
 
     return-object v0
@@ -84,7 +84,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1668
+    .line 1677
     invoke-virtual {p0, p1}, Lcom/htc/widget/HtcAbsListView$SavedState$1;->newArray(I)[Lcom/htc/widget/HtcAbsListView$SavedState;
 
     move-result-object v0

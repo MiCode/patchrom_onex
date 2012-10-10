@@ -159,7 +159,7 @@
     .local v0, scheme:Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    const-string/jumbo v1, "http"
+    const-string v1, "http"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -167,7 +167,7 @@
 
     if-nez v1, :cond_2
 
-    const-string/jumbo v1, "https"
+    const-string v1, "https"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -327,7 +327,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "http_header_"
+    const-string v5, "http_header_"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -782,7 +782,7 @@
     invoke-virtual {v0, v1, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 670
-    const-string/jumbo v1, "is_public_api"
+    const-string v1, "is_public_api"
 
     const/4 v3, 0x1
 
@@ -909,7 +909,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 697
-    const-string/jumbo v1, "is_visible_in_downloads_ui"
+    const-string v1, "is_visible_in_downloads_ui"
 
     iget-boolean v2, p0, Landroid/app/DownloadManager$Request;->mIsVisibleInDownloadsUi:Z
 

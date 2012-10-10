@@ -18,16 +18,16 @@
     .parameter "rawData"
 
     .prologue
-    .line 130
+    .line 78
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 131
+    .line 79
     iput p1, p0, Lcom/android/internal/telephony/cat/RilMessage;->mId:I
 
-    .line 132
+    .line 80
     iput-object p2, p0, Lcom/android/internal/telephony/cat/RilMessage;->mData:Ljava/lang/Object;
 
-    .line 133
+    .line 81
     return-void
 .end method
 
@@ -36,24 +36,24 @@
     .parameter "other"
 
     .prologue
-    .line 135
+    .line 83
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
+    .line 84
     iget v0, p1, Lcom/android/internal/telephony/cat/RilMessage;->mId:I
 
     iput v0, p0, Lcom/android/internal/telephony/cat/RilMessage;->mId:I
 
-    .line 137
+    .line 85
     iget-object v0, p1, Lcom/android/internal/telephony/cat/RilMessage;->mData:Ljava/lang/Object;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/RilMessage;->mData:Ljava/lang/Object;
 
-    .line 138
+    .line 86
     iget-object v0, p1, Lcom/android/internal/telephony/cat/RilMessage;->mResCode:Lcom/android/internal/telephony/cat/ResultCode;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/RilMessage;->mResCode:Lcom/android/internal/telephony/cat/ResultCode;
 
-    .line 139
+    .line 87
     return-void
 .end method

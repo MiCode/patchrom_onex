@@ -171,7 +171,7 @@
     .parameter "msg"
 
     .prologue
-    .line 255
+    .line 259
     :try_start_0
     move-object/from16 v0, p1
 
@@ -181,7 +181,7 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 377
+    .line 381
     :cond_0
     :goto_0
     move-object/from16 v0, p0
@@ -190,7 +190,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 378
+    .line 382
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->userResponse:Landroid/os/Message;
@@ -205,26 +205,26 @@
 
     iput-object v3, v2, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
-    .line 380
+    .line 384
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->userResponse:Landroid/os/Message;
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 381
+    .line 385
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->userResponse:Landroid/os/Message;
 
-    .line 383
+    .line 387
     :cond_1
     :goto_1
     return-void
 
-    .line 260
+    .line 264
     :pswitch_0
     :try_start_1
     move-object/from16 v0, p1
@@ -239,7 +239,7 @@
 
     move-object v9, v0
 
-    .line 261
+    .line 265
     .local v9, ar:Landroid/os/AsyncResult;
     iget-object v2, v9, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -251,13 +251,13 @@
 
     move-object v8, v0
 
-    .line 263
+    .line 267
     .local v8, anrRecord:Lcom/android/internal/telephony/AnrRecord;
     iget-object v2, v9, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_2
 
-    .line 264
+    .line 268
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "get EF record size failed"
@@ -270,13 +270,13 @@
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 365
+    .line 369
     .end local v8           #anrRecord:Lcom/android/internal/telephony/AnrRecord;
     .end local v9           #ar:Landroid/os/AsyncResult;
     :catch_0
     move-exception v11
 
-    .line 366
+    .line 370
     .local v11, exc:Ljava/lang/RuntimeException;
     move-object/from16 v0, p0
 
@@ -284,7 +284,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 367
+    .line 371
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->userResponse:Landroid/os/Message;
@@ -295,14 +295,14 @@
 
     iput-object v11, v2, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    .line 369
+    .line 373
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->userResponse:Landroid/os/Message;
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 372
+    .line 376
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -311,7 +311,7 @@
 
     goto :goto_1
 
-    .line 268
+    .line 272
     .end local v11           #exc:Ljava/lang/RuntimeException;
     .restart local v8       #anrRecord:Lcom/android/internal/telephony/AnrRecord;
     .restart local v9       #ar:Landroid/os/AsyncResult;
@@ -327,7 +327,7 @@
 
     move-object v15, v0
 
-    .line 274
+    .line 278
     .local v15, recordSize:[I
     array-length v2, v15
 
@@ -345,7 +345,7 @@
 
     if-le v2, v3, :cond_4
 
-    .line 275
+    .line 279
     :cond_3
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -357,7 +357,7 @@
 
     throw v2
 
-    .line 279
+    .line 283
     :cond_4
     move-object/from16 v0, p0
 
@@ -375,11 +375,11 @@
 
     move-result-object v4
 
-    .line 281
+    .line 285
     .local v4, data:[B
     if-nez v4, :cond_5
 
-    .line 282
+    .line 286
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "worong ANR format"
@@ -390,7 +390,7 @@
 
     throw v2
 
-    .line 286
+    .line 290
     :cond_5
     move-object/from16 v0, p0
 
@@ -398,16 +398,16 @@
 
     if-eqz v2, :cond_7
 
-    .line 292
+    .line 296
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/telephony/AnrRecordLoader;->getIccFileHandler()Lcom/android/internal/telephony/IccFileHandler;
 
     move-result-object v1
 
-    .line 293
+    .line 297
     .local v1, iccFileHander:Lcom/android/internal/telephony/IccFileHandler;
     if-eqz v1, :cond_6
 
-    .line 294
+    .line 298
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->ef:I
@@ -430,7 +430,7 @@
 
     goto/16 :goto_0
 
-    .line 298
+    .line 302
     :cond_6
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -442,7 +442,7 @@
 
     throw v2
 
-    .line 302
+    .line 306
     .end local v1           #iccFileHander:Lcom/android/internal/telephony/IccFileHandler;
     :cond_7
     new-instance v2, Ljava/lang/RuntimeException;
@@ -455,7 +455,7 @@
 
     throw v2
 
-    .line 308
+    .line 312
     .end local v4           #data:[B
     .end local v8           #anrRecord:Lcom/android/internal/telephony/AnrRecord;
     .end local v9           #ar:Landroid/os/AsyncResult;
@@ -473,13 +473,13 @@
 
     move-object v9, v0
 
-    .line 311
+    .line 315
     .restart local v9       #ar:Landroid/os/AsyncResult;
     iget-object v2, v9, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_8
 
-    .line 312
+    .line 316
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "update EF email record failed"
@@ -490,7 +490,7 @@
 
     throw v2
 
-    .line 316
+    .line 320
     :cond_8
     const/4 v2, 0x0
 
@@ -500,7 +500,7 @@
 
     goto/16 :goto_0
 
-    .line 323
+    .line 327
     .end local v9           #ar:Landroid/os/AsyncResult;
     :pswitch_2
     move-object/from16 v0, p1
@@ -515,7 +515,7 @@
 
     move-object v9, v0
 
-    .line 324
+    .line 328
     .restart local v9       #ar:Landroid/os/AsyncResult;
     iget-object v2, v9, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -527,13 +527,13 @@
 
     move-object v4, v0
 
-    .line 326
+    .line 330
     .restart local v4       #data:[B
     iget-object v2, v9, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_9
 
-    .line 327
+    .line 331
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "load failed"
@@ -544,7 +544,7 @@
 
     throw v2
 
-    .line 330
+    .line 334
     :cond_9
     new-instance v8, Lcom/android/internal/telephony/AnrRecord;
 
@@ -554,7 +554,7 @@
 
     invoke-direct {v8, v2, v4}, Lcom/android/internal/telephony/AnrRecord;-><init>(I[B)V
 
-    .line 331
+    .line 335
     .restart local v8       #anrRecord:Lcom/android/internal/telephony/AnrRecord;
     move-object/from16 v0, p0
 
@@ -562,7 +562,7 @@
 
     goto/16 :goto_0
 
-    .line 336
+    .line 340
     .end local v4           #data:[B
     .end local v8           #anrRecord:Lcom/android/internal/telephony/AnrRecord;
     .end local v9           #ar:Landroid/os/AsyncResult;
@@ -579,7 +579,7 @@
 
     move-object v9, v0
 
-    .line 337
+    .line 341
     .restart local v9       #ar:Landroid/os/AsyncResult;
     iget-object v2, v9, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -591,13 +591,13 @@
 
     move-object v10, v0
 
-    .line 339
+    .line 343
     .local v10, datas:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     iget-object v2, v9, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_a
 
-    .line 340
+    .line 344
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "load failed"
@@ -608,7 +608,7 @@
 
     throw v2
 
-    .line 343
+    .line 347
     :cond_a
     new-instance v7, Ljava/util/ArrayList;
 
@@ -618,13 +618,13 @@
 
     invoke-direct {v7, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 344
+    .line 348
     .local v7, anrList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/telephony/AnrRecord;>;"
     move-object/from16 v0, p0
 
     iput-object v7, v0, Lcom/android/internal/telephony/AnrRecordLoader;->result:Ljava/lang/Object;
 
-    .line 346
+    .line 350
     const/4 v14, 0x0
 
     .local v14, i:I
@@ -638,7 +638,7 @@
 
     if-ge v14, v0, :cond_0
 
-    .line 347
+    .line 351
     new-instance v8, Lcom/android/internal/telephony/AnrRecord;
 
     add-int/lit8 v3, v14, 0x1
@@ -655,28 +655,28 @@
 
     invoke-direct {v8, v3, v2, v5}, Lcom/android/internal/telephony/AnrRecord;-><init>(I[BZ)V
 
-    .line 348
+    .line 352
     .restart local v8       #anrRecord:Lcom/android/internal/telephony/AnrRecord;
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 350
+    .line 354
     invoke-virtual {v8}, Lcom/android/internal/telephony/AnrRecord;->hasExtendedRecord()Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    .line 351
+    .line 355
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->mExt1List:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_c
 
-    .line 352
+    .line 356
     iget v13, v8, Lcom/android/internal/telephony/AnrRecord;->mExtRecord:I
 
-    .line 353
+    .line 357
     .local v13, extindex:I
     if-lez v13, :cond_b
 
@@ -690,7 +690,7 @@
 
     if-gt v13, v2, :cond_b
 
-    .line 354
+    .line 358
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/AnrRecordLoader;->mExt1List:Ljava/util/ArrayList;
@@ -703,7 +703,7 @@
 
     check-cast v12, Lcom/android/internal/telephony/HtcExt1Record;
 
-    .line 355
+    .line 359
     .local v12, ext1Record:Lcom/android/internal/telephony/HtcExt1Record;
     invoke-virtual {v12}, Lcom/android/internal/telephony/HtcExt1Record;->getBytes()[B
 
@@ -711,7 +711,7 @@
 
     invoke-virtual {v8, v2}, Lcom/android/internal/telephony/AnrRecord;->appendExtRecord([B)V
 
-    .line 346
+    .line 350
     .end local v12           #ext1Record:Lcom/android/internal/telephony/HtcExt1Record;
     .end local v13           #extindex:I
     :cond_b
@@ -720,7 +720,7 @@
 
     goto :goto_2
 
-    .line 358
+    .line 362
     :cond_c
     const-string v2, "AnrRecord"
 
@@ -732,7 +732,7 @@
 
     goto :goto_3
 
-    .line 255
+    .line 259
     nop
 
     :pswitch_data_0

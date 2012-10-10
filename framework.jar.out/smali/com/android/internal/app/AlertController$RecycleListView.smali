@@ -129,7 +129,7 @@
     if-ne v1, v2, :cond_2
 
     .line 778
-    const-string/jumbo v2, "list_selector_background"
+    const-string v2, "list_selector_background"
 
     invoke-static {p1, v2, v3}, Landroid/widget/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 
@@ -159,7 +159,7 @@
     .restart local v0       #a:Landroid/content/res/TypedArray;
     .restart local v1       #selectorId:I
     :cond_2
-    const-string/jumbo v2, "list_selector_holo_dark"
+    const-string v2, "list_selector_holo_dark"
 
     invoke-static {p1, v2, v3}, Landroid/widget/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

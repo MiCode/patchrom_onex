@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1789
+    .line 1797
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1794
+    .line 1802
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #getter for: Lcom/htc/widget/HtcExpandableListView;->mIsFirstTimeDraw:Z
@@ -57,19 +57,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 1795
+    .line 1803
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #setter for: Lcom/htc/widget/HtcExpandableListView;->mIsFirstTimeDraw:Z
     invoke-static {v2, v3}, Lcom/htc/widget/HtcExpandableListView;->access$702(Lcom/htc/widget/HtcExpandableListView;Z)Z
 
-    .line 1796
+    .line 1804
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #calls: Lcom/htc/widget/HtcExpandableListView;->adjustFooterHeight()V
     invoke-static {v2}, Lcom/htc/widget/HtcExpandableListView;->access$800(Lcom/htc/widget/HtcExpandableListView;)V
 
-    .line 1800
+    .line 1808
     :cond_0
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
@@ -81,13 +81,13 @@
 
     if-ge v2, p4, :cond_3
 
-    .line 1801
+    .line 1809
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #calls: Lcom/htc/widget/HtcExpandableListView;->adjustFooterHeight()V
     invoke-static {v2}, Lcom/htc/widget/HtcExpandableListView;->access$800(Lcom/htc/widget/HtcExpandableListView;)V
 
-    .line 1810
+    .line 1818
     :cond_1
     :goto_0
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
@@ -96,18 +96,18 @@
 
     if-eqz v2, :cond_2
 
-    .line 1811
+    .line 1819
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v2, v2, Lcom/htc/widget/HtcExpandableListView;->mUserOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
     invoke-interface {v2, p1, p2, p3, p4}, Lcom/htc/widget/HtcAbsListView$OnScrollListener;->onScroll(Lcom/htc/widget/HtcAbsListView;III)V
 
-    .line 1812
+    .line 1820
     :cond_2
     return-void
 
-    .line 1802
+    .line 1810
     :cond_3
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
@@ -119,14 +119,14 @@
 
     if-ne v2, p4, :cond_1
 
-    .line 1803
+    .line 1811
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcExpandableListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1804
+    .line 1812
     .local v0, firstView:Landroid/view/View;
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
@@ -142,7 +142,7 @@
 
     move-result-object v1
 
-    .line 1805
+    .line 1813
     .local v1, lastView:Landroid/view/View;
     if-eqz v0, :cond_1
 
@@ -164,7 +164,7 @@
 
     if-lez v2, :cond_1
 
-    .line 1806
+    .line 1814
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #calls: Lcom/htc/widget/HtcExpandableListView;->adjustFooterHeight()V
@@ -179,21 +179,21 @@
     .parameter "scrollState"
 
     .prologue
-    .line 1816
+    .line 1824
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcExpandableListView;->mUserOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
     if-eqz v0, :cond_0
 
-    .line 1817
+    .line 1825
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$1;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcExpandableListView;->mUserOnScrollListener:Lcom/htc/widget/HtcAbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2}, Lcom/htc/widget/HtcAbsListView$OnScrollListener;->onScrollStateChanged(Lcom/htc/widget/HtcAbsListView;I)V
 
-    .line 1818
+    .line 1826
     :cond_0
     return-void
 .end method

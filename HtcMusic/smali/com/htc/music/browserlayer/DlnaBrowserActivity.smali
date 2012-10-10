@@ -441,7 +441,7 @@
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DlnaBrowserActivity;->showLoading()V
 
     .line 129
-    const v0, 0x7f0700c8
+    const v0, 0x7f0700c9
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/DlnaBrowserActivity;->showEmptyView(I)V
 
@@ -530,7 +530,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700d0
+    const v2, 0x7f0700d1
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -1118,7 +1118,7 @@
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DlnaBrowserActivity;->clearData()V
 
     .line 342
-    const v0, 0x7f0700c8
+    const v0, 0x7f0700c9
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/DlnaBrowserActivity;->showEmptyView(I)V
 

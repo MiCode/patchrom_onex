@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1389
+    .line 1394
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$4;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .parameter "x2"
 
     .prologue
-    .line 1389
+    .line 1394
     check-cast p3, Lcom/android/camera/input/KeyEventArgs;
 
     .end local p3
@@ -82,7 +82,7 @@
     .end annotation
 
     .prologue
-    .line 1392
+    .line 1397
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/input/KeyEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$4;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -106,33 +106,33 @@
 
     if-nez v0, :cond_0
 
-    .line 1394
+    .line 1399
     iget v0, p3, Lcom/android/camera/input/KeyEventArgs;->keyCode:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 1407
+    .line 1412
     :cond_0
     :goto_0
     return-void
 
-    .line 1399
+    .line 1404
     :sswitch_0
     iget v0, p3, Lcom/android/camera/input/KeyEventArgs;->repeatCount:I
 
     if-nez v0, :cond_0
 
-    .line 1401
+    .line 1406
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$4;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-virtual {v0}, Lcom/android/camera/component/PanoramaUI;->stopCapture()V
 
-    .line 1402
+    .line 1407
     invoke-virtual {p3}, Lcom/android/camera/input/KeyEventArgs;->setHandled()V
 
     goto :goto_0
 
-    .line 1394
+    .line 1399
     nop
 
     :sswitch_data_0

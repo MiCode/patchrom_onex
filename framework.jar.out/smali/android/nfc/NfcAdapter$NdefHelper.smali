@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 1054
+    .line 1064
     new-instance v0, Landroid/nfc/NfcAdapter$NdefHelper;
 
     const-string v1, "ENABLE"
@@ -101,7 +101,7 @@
     .end annotation
 
     .prologue
-    .line 1054
+    .line 1064
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -112,7 +112,7 @@
     .parameter "name"
 
     .prologue
-    .line 1054
+    .line 1064
     const-class v0, Landroid/nfc/NfcAdapter$NdefHelper;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -128,7 +128,7 @@
     .locals 1
 
     .prologue
-    .line 1054
+    .line 1064
     sget-object v0, Landroid/nfc/NfcAdapter$NdefHelper;->$VALUES:[Landroid/nfc/NfcAdapter$NdefHelper;
 
     invoke-virtual {v0}, [Landroid/nfc/NfcAdapter$NdefHelper;->clone()Ljava/lang/Object;

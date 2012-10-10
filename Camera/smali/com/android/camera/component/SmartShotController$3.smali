@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 656
+    .line 670
     iput-object p1, p0, Lcom/android/camera/component/SmartShotController$3;->this$0:Lcom/android/camera/component/SmartShotController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,11 +43,11 @@
     .parameter "camera"
 
     .prologue
-    .line 659
+    .line 673
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$3;->this$0:Lcom/android/camera/component/SmartShotController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/component/SmartShotController;->handleCommonJpegCallback([BLandroid/hardware/Camera;)V
 
-    .line 660
+    .line 674
     return-void
 .end method

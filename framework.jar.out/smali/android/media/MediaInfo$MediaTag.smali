@@ -62,24 +62,24 @@
     .parameter "filename"
 
     .prologue
-    .line 295
+    .line 317
     iput-object p1, p0, Landroid/media/MediaInfo$MediaTag;->this$0:Landroid/media/MediaInfo;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 296
+    .line 318
     iput-object p2, p0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
-    .line 297
+    .line 319
     iput-object p3, p0, Landroid/media/MediaInfo$MediaTag;->mAlbum:Ljava/lang/String;
 
-    .line 298
+    .line 320
     iput-object p4, p0, Landroid/media/MediaInfo$MediaTag;->mArtist:Ljava/lang/String;
 
-    .line 299
+    .line 321
     iput-object p5, p0, Landroid/media/MediaInfo$MediaTag;->mFilename:Ljava/lang/String;
 
-    .line 300
+    .line 322
     return-void
 .end method
 
@@ -94,29 +94,29 @@
     .parameter "fileSize"
 
     .prologue
-    .line 302
+    .line 325
     iput-object p1, p0, Landroid/media/MediaInfo$MediaTag;->this$0:Landroid/media/MediaInfo;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 303
+    .line 326
     iput-object p2, p0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
-    .line 304
+    .line 327
     iput-object p3, p0, Landroid/media/MediaInfo$MediaTag;->mAlbum:Ljava/lang/String;
 
-    .line 305
+    .line 328
     iput-object p4, p0, Landroid/media/MediaInfo$MediaTag;->mArtist:Ljava/lang/String;
 
-    .line 306
+    .line 329
     iput-object p5, p0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
-    .line 307
+    .line 330
     iput-wide p6, p0, Landroid/media/MediaInfo$MediaTag;->mLastModified:J
 
-    .line 308
+    .line 331
     iput-wide p8, p0, Landroid/media/MediaInfo$MediaTag;->mFileSize:J
 
-    .line 309
+    .line 332
     return-void
 .end method

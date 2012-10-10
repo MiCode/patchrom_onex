@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 520
+    .line 528
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "s"
 
     .prologue
-    .line 541
+    .line 549
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .parameter "after"
 
     .prologue
-    .line 524
+    .line 532
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .prologue
     const-wide/16 v3, 0x12c
 
-    .line 528
+    .line 536
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    .line 530
+    .line 538
     .local v0, text:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -89,7 +89,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 531
+    .line 539
     :cond_0
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
@@ -98,7 +98,7 @@
     #calls: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->doLocalSearch(Ljava/lang/String;J)V
     invoke-static {v1, v2, v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$3500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;Ljava/lang/String;J)V
 
-    .line 532
+    .line 540
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     iget-object v1, v1, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;
@@ -107,18 +107,18 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ActionBarSearch;->setClearIconVisibility(I)V
 
-    .line 537
+    .line 545
     :goto_0
     return-void
 
-    .line 534
+    .line 542
     :cond_1
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #calls: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->doLocalSearch(Ljava/lang/String;J)V
     invoke-static {v1, v0, v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$3500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;Ljava/lang/String;J)V
 
-    .line 535
+    .line 543
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     iget-object v1, v1, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;

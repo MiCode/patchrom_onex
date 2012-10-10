@@ -403,11 +403,11 @@
 
     .prologue
     .line 121
-    iget v0, p0, Landroid/content/pm/PackageItemInfo;->icon:I
+    iget v0, p0, Landroid/content/pm/ComponentInfo;->icon:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Landroid/content/pm/PackageItemInfo;->icon:I
+    iget v0, p0, Landroid/content/pm/ComponentInfo;->icon:I
 
     :goto_0
     return v0
@@ -415,7 +415,7 @@
     :cond_0
     iget-object v0, p0, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget v0, v0, Landroid/content/pm/PackageItemInfo;->icon:I
+    iget v0, v0, Landroid/content/pm/ApplicationInfo;->icon:I
 
     goto :goto_0
 .end method
@@ -490,12 +490,12 @@
 
     .prologue
     .line 83
-    iget-object v2, p0, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
+    iget-object v2, p0, Landroid/content/pm/ComponentInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_1
 
     .line 84
-    iget-object v1, p0, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
+    iget-object v1, p0, Landroid/content/pm/ComponentInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
     .line 103
     :cond_0
@@ -508,14 +508,14 @@
 
     .line 88
     .local v0, ai:Landroid/content/pm/ApplicationInfo;
-    iget v2, p0, Landroid/content/pm/PackageItemInfo;->labelRes:I
+    iget v2, p0, Landroid/content/pm/ComponentInfo;->labelRes:I
 
     if-eqz v2, :cond_2
 
     .line 89
-    iget-object v2, p0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
+    iget-object v2, p0, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    iget v3, p0, Landroid/content/pm/PackageItemInfo;->labelRes:I
+    iget v3, p0, Landroid/content/pm/ComponentInfo;->labelRes:I
 
     invoke-virtual {p1, v2, v3, v0}, Landroid/content/pm/PackageManager;->getText(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
@@ -528,25 +528,25 @@
     .line 94
     .end local v1           #label:Ljava/lang/CharSequence;
     :cond_2
-    iget-object v2, v0, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
+    iget-object v2, v0, Landroid/content/pm/ApplicationInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_3
 
     .line 95
-    iget-object v1, v0, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
+    iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
     goto :goto_0
 
     .line 97
     :cond_3
-    iget v2, v0, Landroid/content/pm/PackageItemInfo;->labelRes:I
+    iget v2, v0, Landroid/content/pm/ApplicationInfo;->labelRes:I
 
     if-eqz v2, :cond_4
 
     .line 98
-    iget-object v2, p0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
+    iget-object v2, p0, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    iget v3, v0, Landroid/content/pm/PackageItemInfo;->labelRes:I
+    iget v3, v0, Landroid/content/pm/ApplicationInfo;->labelRes:I
 
     invoke-virtual {p1, v2, v3, v0}, Landroid/content/pm/PackageManager;->getText(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
@@ -559,7 +559,7 @@
     .line 103
     .end local v1           #label:Ljava/lang/CharSequence;
     :cond_4
-    iget-object v1, p0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
+    iget-object v1, p0, Landroid/content/pm/ComponentInfo;->name:Ljava/lang/String;
 
     goto :goto_0
 .end method

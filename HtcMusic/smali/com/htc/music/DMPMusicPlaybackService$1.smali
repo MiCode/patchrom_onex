@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 183
+    .line 184
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -46,10 +46,10 @@
 
     const/4 v3, 0x0
 
-    .line 186
+    .line 187
     packed-switch p1, :pswitch_data_0
 
-    .line 233
+    .line 234
     :pswitch_0
     const-string v2, "[DMPMusicPlaybackService]"
 
@@ -57,12 +57,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
+    .line 236
     :cond_0
     :goto_0
     return-void
 
-    .line 188
+    .line 189
     :pswitch_1
     const-string v2, "[DMPMusicPlaybackService]"
 
@@ -70,7 +70,7 @@
 
     invoke-static {v2, v4}, Lcom/htc/music/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
+    .line 190
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-virtual {v2}, Lcom/htc/music/DMPMusicPlaybackService;->isPlaying()Z
@@ -79,26 +79,26 @@
 
     if-eqz v2, :cond_0
 
-    .line 190
+    .line 191
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mMuteByTransientLossOfFocusCanDuck:Z
     invoke-static {v2, v3}, Lcom/htc/music/DMPMusicPlaybackService;->access$002(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 191
+    .line 192
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mPausedByTransientLossOfFocus:Z
     invoke-static {v2, v3}, Lcom/htc/music/DMPMusicPlaybackService;->access$102(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 192
+    .line 193
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-virtual {v2}, Lcom/htc/music/DMPMusicPlaybackService;->pause()V
 
     goto :goto_0
 
-    .line 196
+    .line 197
     :pswitch_2
     const-string v4, "[DMPMusicPlaybackService]"
 
@@ -106,7 +106,7 @@
 
     invoke-static {v4, v5}, Lcom/htc/music/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 197
+    .line 198
     iget-object v4, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-virtual {v4}, Lcom/htc/music/DMPMusicPlaybackService;->isPlaying()Z
@@ -115,26 +115,26 @@
 
     if-eqz v4, :cond_0
 
-    .line 198
+    .line 199
     iget-object v4, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mMuteByTransientLossOfFocusCanDuck:Z
     invoke-static {v4, v3}, Lcom/htc/music/DMPMusicPlaybackService;->access$002(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 199
+    .line 200
     iget-object v3, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mPausedByTransientLossOfFocus:Z
     invoke-static {v3, v2}, Lcom/htc/music/DMPMusicPlaybackService;->access$102(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 200
+    .line 201
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-virtual {v2}, Lcom/htc/music/DMPMusicPlaybackService;->pause()V
 
     goto :goto_0
 
-    .line 204
+    .line 205
     :pswitch_3
     const-string v4, "[DMPMusicPlaybackService]"
 
@@ -142,7 +142,7 @@
 
     invoke-static {v4, v5}, Lcom/htc/music/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 205
+    .line 206
     iget-object v4, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-virtual {v4}, Lcom/htc/music/DMPMusicPlaybackService;->isPlaying()Z
@@ -151,19 +151,19 @@
 
     if-eqz v4, :cond_0
 
-    .line 206
+    .line 207
     iget-object v4, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mMuteByTransientLossOfFocusCanDuck:Z
     invoke-static {v4, v2}, Lcom/htc/music/DMPMusicPlaybackService;->access$002(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 207
+    .line 208
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mPausedByTransientLossOfFocus:Z
     invoke-static {v2, v3}, Lcom/htc/music/DMPMusicPlaybackService;->access$102(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 208
+    .line 209
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMPMusicPlaybackService;->mPlayer:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
@@ -175,7 +175,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->setVolume(F)V
 
-    .line 209
+    .line 210
     const-string v2, "[DMPMusicPlaybackService]"
 
     const-string v3, "Mute since received AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK"
@@ -184,7 +184,7 @@
 
     goto :goto_0
 
-    .line 213
+    .line 214
     :pswitch_4
     const-string v4, "[DMPMusicPlaybackService]"
 
@@ -192,7 +192,7 @@
 
     invoke-static {v4, v5}, Lcom/htc/music/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
+    .line 215
     iget-object v4, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     const-string v5, "phone"
@@ -203,15 +203,15 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    .line 215
+    .line 216
     .local v1, tm:Landroid/telephony/TelephonyManager;
     const/4 v0, 0x0
 
-    .line 216
+    .line 217
     .local v0, isPhoneHook:Z
     if-eqz v1, :cond_1
 
-    .line 217
+    .line 218
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getCallState()I
 
     move-result v4
@@ -222,7 +222,7 @@
 
     move v0, v2
 
-    .line 219
+    .line 220
     :cond_1
     :goto_1
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -242,16 +242,16 @@
 
     if-eqz v2, :cond_3
 
-    .line 220
+    .line 221
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mPausedByTransientLossOfFocus:Z
     invoke-static {v2, v3}, Lcom/htc/music/DMPMusicPlaybackService;->access$102(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 221
+    .line 222
     if-nez v0, :cond_0
 
-    .line 222
+    .line 223
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-virtual {v2}, Lcom/htc/music/DMPMusicPlaybackService;->play()V
@@ -261,10 +261,10 @@
     :cond_2
     move v0, v3
 
-    .line 217
+    .line 218
     goto :goto_1
 
-    .line 224
+    .line 225
     :cond_3
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
@@ -275,16 +275,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 225
+    .line 226
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mMuteByTransientLossOfFocusCanDuck:Z
     invoke-static {v2, v3}, Lcom/htc/music/DMPMusicPlaybackService;->access$002(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 226
+    .line 227
     if-nez v0, :cond_4
 
-    .line 227
+    .line 228
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$1;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMPMusicPlaybackService;->mPlayer:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
@@ -296,7 +296,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->setVolume(F)V
 
-    .line 229
+    .line 230
     :cond_4
     const-string v2, "[DMPMusicPlaybackService]"
 
@@ -306,7 +306,7 @@
 
     goto/16 :goto_0
 
-    .line 186
+    .line 187
     nop
 
     :pswitch_data_0

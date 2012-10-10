@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 453
+    .line 489
     iput p1, p0, Lcom/android/camera/io/DCFUtility$3;->val$dirNameLength:I
 
     iput p2, p0, Lcom/android/camera/io/DCFUtility$3;->val$dirNameSuffixLength:I
@@ -59,7 +59,7 @@
 
     const/4 v4, 0x1
 
-    .line 457
+    .line 493
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -70,12 +70,12 @@
 
     move v3, v4
 
-    .line 490
+    .line 526
     .end local p2
     :goto_0
     return v3
 
-    .line 459
+    .line 495
     .restart local p2
     :cond_0
     iget v3, p0, Lcom/android/camera/io/DCFUtility$3;->val$dirNameLength:I
@@ -100,10 +100,10 @@
 
     move v3, v4
 
-    .line 460
+    .line 496
     goto :goto_0
 
-    .line 464
+    .line 500
     :cond_1
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
@@ -111,16 +111,16 @@
 
     add-int/lit8 v0, v3, -0x30
 
-    .line 465
+    .line 501
     .local v0, n:I
     if-ltz v0, :cond_2
 
     if-gt v0, v7, :cond_2
 
-    .line 466
+    .line 502
     mul-int/lit8 v1, v0, 0x64
 
-    .line 469
+    .line 505
     .local v1, num:I
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
@@ -128,17 +128,17 @@
 
     add-int/lit8 v0, v3, -0x30
 
-    .line 470
+    .line 506
     if-ltz v0, :cond_3
 
     if-gt v0, v7, :cond_3
 
-    .line 471
+    .line 507
     mul-int/lit8 v3, v0, 0xa
 
     add-int/2addr v1, v3
 
-    .line 474
+    .line 510
     const/4 v3, 0x2
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
@@ -147,15 +147,15 @@
 
     add-int/lit8 v0, v3, -0x30
 
-    .line 475
+    .line 511
     if-ltz v0, :cond_4
 
     if-gt v0, v7, :cond_4
 
-    .line 476
+    .line 512
     add-int/2addr v1, v0
 
-    .line 481
+    .line 517
     check-cast p2, [Ljava/lang/Object;
 
     .end local p2
@@ -163,7 +163,7 @@
 
     check-cast v2, [Ljava/lang/Object;
 
-    .line 482
+    .line 518
     .local v2, params:[Ljava/lang/Object;
     aget-object v3, v2, v5
 
@@ -175,21 +175,21 @@
 
     if-le v1, v3, :cond_5
 
-    .line 484
+    .line 520
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 485
+    .line 521
     const/16 v3, 0x3e7
 
     if-ne v1, v3, :cond_5
 
     move v3, v5
 
-    .line 486
+    .line 522
     goto :goto_0
 
     .end local v1           #num:I
@@ -198,20 +198,20 @@
     :cond_2
     move v3, v4
 
-    .line 468
+    .line 504
     goto :goto_0
 
     .restart local v1       #num:I
     :cond_3
     move v3, v4
 
-    .line 473
+    .line 509
     goto :goto_0
 
     :cond_4
     move v3, v4
 
-    .line 478
+    .line 514
     goto :goto_0
 
     .end local p2
@@ -219,6 +219,6 @@
     :cond_5
     move v3, v4
 
-    .line 490
+    .line 526
     goto :goto_0
 .end method

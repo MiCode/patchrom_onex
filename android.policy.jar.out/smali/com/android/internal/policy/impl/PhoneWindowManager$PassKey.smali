@@ -30,15 +30,15 @@
     .parameter "keyCode"
 
     .prologue
-    .line 4301
+    .line 4516
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassKey;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4302
+    .line 4517
     iput p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassKey;->mKeyCode:I
 
-    .line 4303
+    .line 4518
     return-void
 .end method
 
@@ -48,21 +48,21 @@
     .locals 3
 
     .prologue
-    .line 4306
+    .line 4521
     invoke-static {}, Landroid/app/ActivityManagerNative;->isSystemReady()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 4308
+    .line 4523
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassKey;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    .line 4309
+    .line 4524
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassKey;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -75,16 +75,16 @@
 
     check-cast v0, Lcom/htc/service/HtcTelephonyManager;
 
-    .line 4310
+    .line 4525
     .local v0, phoneServ:Lcom/htc/service/HtcTelephonyManager;
     if-eqz v0, :cond_0
 
-    .line 4311
+    .line 4526
     iget v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassKey;->mKeyCode:I
 
     invoke-virtual {v0, v1}, Lcom/htc/service/HtcTelephonyManager;->notifyKeyEvent(I)V
 
-    .line 4315
+    .line 4530
     .end local v0           #phoneServ:Lcom/htc/service/HtcTelephonyManager;
     :cond_0
     return-void

@@ -37,7 +37,7 @@
     .locals 2
 
     .prologue
-    .line 1104
+    .line 1189
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "sim"
@@ -48,10 +48,10 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$SIMContacts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1124
+    .line 1212
     sget-object v0, Landroid/provider/HtcContactsContract$SIMContacts;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "import_all"
+    const-string v1, "import_all"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -66,9 +66,9 @@
     .locals 0
 
     .prologue
-    .line 1093
+    .line 1177
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1094
+    .line 1178
     return-void
 .end method

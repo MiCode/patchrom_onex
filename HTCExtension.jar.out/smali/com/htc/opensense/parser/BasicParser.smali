@@ -104,7 +104,7 @@
 
     .line 20
     .local v1, parser:Lcom/htc/gson/JsonParser;
-    const-string v2, "{"
+    const-string/jumbo v2, "{"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -112,7 +112,7 @@
 
     if-eqz v2, :cond_0
 
-    const-string v2, "}"
+    const-string/jumbo v2, "}"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -373,7 +373,7 @@
 
     .line 39
     .local v0, parser:Lcom/htc/opensense/parser/BasicParser;
-    const-string v2, "{}"
+    const-string/jumbo v2, "{}"
 
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

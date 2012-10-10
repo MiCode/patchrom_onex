@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1914
+    .line 1933
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$5;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,7 +41,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1917
+    .line 1936
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$5;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMPMusicPlaybackService;->mPlayer:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
@@ -51,19 +51,19 @@
 
     if-nez v0, :cond_1
 
-    .line 1918
+    .line 1937
     const-string v0, "[DMPMusicPlaybackService]"
 
     const-string v1, "handleMessage: mPlayer==null"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1931
+    .line 1950
     :cond_0
     :goto_0
     return-void
 
-    .line 1922
+    .line 1941
     :cond_1
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$5;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
@@ -95,18 +95,18 @@
 
     if-nez v0, :cond_0
 
-    .line 1928
+    .line 1947
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$5;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #calls: Lcom/htc/music/DMPMusicPlaybackService;->saveQueue(Z)V
     invoke-static {v0, v1}, Lcom/htc/music/DMPMusicPlaybackService;->access$4200(Lcom/htc/music/DMPMusicPlaybackService;Z)V
 
-    .line 1929
+    .line 1948
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$5;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-virtual {v0, v1}, Lcom/htc/music/DMPMusicPlaybackService;->stopForeground(Z)V
 
-    .line 1930
+    .line 1949
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$5;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$5;->this$0:Lcom/htc/music/DMPMusicPlaybackService;

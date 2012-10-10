@@ -7,6 +7,8 @@
 
 
 # static fields
+.field public static final HTC_TRIM_MEMORY_MODERATE:I = 0x55
+
 .field public static final TRIM_MEMORY_BACKGROUND:I = 0x28
 
 .field public static final TRIM_MEMORY_COMPLETE:I = 0x50

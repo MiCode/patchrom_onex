@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5216
+    .line 5248
     iput-object p1, p0, Lcom/htc/music/HtcMusic$36;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,16 +43,16 @@
     .parameter "which"
 
     .prologue
-    .line 5218
+    .line 5250
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 5219
+    .line 5251
     iget-object v0, p0, Lcom/htc/music/HtcMusic$36;->this$0:Lcom/htc/music/HtcMusic;
 
     const/16 v1, 0x15
 
     invoke-virtual {v0, v1}, Lcom/htc/music/HtcMusic;->removeDialog(I)V
 
-    .line 5220
+    .line 5252
     return-void
 .end method

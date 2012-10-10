@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 145
+    .line 151
     iput-object p1, p0, Lcom/android/server/DevicePolicyManagerService$1;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 148
+    .line 154
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 149
+    .line 155
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -63,7 +63,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 151
+    .line 157
     :cond_0
     const-string v1, "DevicePolicyManagerService"
 
@@ -87,7 +87,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
+    .line 158
     iget-object v1, p0, Lcom/android/server/DevicePolicyManagerService$1;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/DevicePolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -98,7 +98,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 158
+    .line 164
     :cond_1
     return-void
 .end method

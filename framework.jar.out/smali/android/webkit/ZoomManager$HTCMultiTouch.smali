@@ -91,118 +91,118 @@
 
     const/4 v1, 0x0
 
-    .line 2319
+    .line 2489
     iput-object p1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2294
+    .line 2464
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
-    .line 2295
+    .line 2465
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
 
-    .line 2296
+    .line 2466
     iput v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mScalePivotX:F
 
-    .line 2297
+    .line 2467
     iput v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mScalePivotY:F
 
-    .line 2298
+    .line 2468
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_useMultiTouchDraw:Z
 
-    .line 2299
+    .line 2469
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_inMultiTouchMode:Z
 
-    .line 2300
+    .line 2470
     iput v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_nSmartZoomHitNode:I
 
-    .line 2301
+    .line 2471
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mDrawInSchedule:Z
 
-    .line 2302
+    .line 2472
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0, v2, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptLastFinger1:Landroid/graphics/PointF;
 
-    .line 2303
+    .line 2473
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0, v2, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptLastFinger2:Landroid/graphics/PointF;
 
-    .line 2304
+    .line 2474
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, v3, v3}, Landroid/graphics/Point;-><init>(II)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptInitFingerCenter:Landroid/graphics/Point;
 
-    .line 2305
+    .line 2475
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, v3, v3}, Landroid/graphics/Point;-><init>(II)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptInitFingerContentCenter:Landroid/graphics/Point;
 
-    .line 2306
+    .line 2476
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bIsHitImageNode:Z
 
-    .line 2307
+    .line 2477
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, v3, v3}, Landroid/graphics/Point;-><init>(II)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptHitPointRatio:Landroid/graphics/Point;
 
-    .line 2308
+    .line 2478
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bDisableURLLink:Z
 
-    .line 2309
+    .line 2479
     iput-object v4, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_SmartZoomHitNodeInfo:Landroid/webkit/SelectionUnitInfo;
 
-    .line 2310
+    .line 2480
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bNotifyHostMultiTouchBouncingMinScale:Z
 
-    .line 2311
+    .line 2481
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bMTEnding:Z
 
-    .line 2312
+    .line 2482
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mfLastZoomRatio:F
 
-    .line 2313
+    .line 2483
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fCurrentMTScale:F
 
-    .line 2314
+    .line 2484
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bEnableShowMTCenterPtInScreen:Z
 
-    .line 2315
+    .line 2485
     const v0, -0x777778
 
     iput v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mBouncingBackgroundColor:I
 
-    .line 2316
+    .line 2486
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bUpdateSizeFinish:Z
 
-    .line 2317
+    .line 2487
     iput-object v4, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
-    .line 2498
+    .line 2668
     new-instance v0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;
 
     invoke-direct {v0, p0}, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;-><init>(Landroid/webkit/ZoomManager$HTCMultiTouch;)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->getNode:Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;
 
-    .line 2320
+    .line 2490
     iput-object p2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
-    .line 2321
+    .line 2491
     new-instance v0, Landroid/webkit/SelectionUnitInfo;
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -211,7 +211,7 @@
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_SmartZoomHitNodeInfo:Landroid/webkit/SelectionUnitInfo;
 
-    .line 2322
+    .line 2492
     return-void
 .end method
 
@@ -220,10 +220,10 @@
     .parameter "fZoomRatio"
 
     .prologue
-    .line 2469
+    .line 2639
     iput p1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
-    .line 2471
+    .line 2641
     iget v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
@@ -239,7 +239,7 @@
 
     iput v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
-    .line 2472
+    .line 2642
     iget v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
     iget v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
@@ -250,7 +250,7 @@
 
     iput v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
-    .line 2475
+    .line 2645
     iget v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
     const/4 v1, 0x0
@@ -280,7 +280,7 @@
 
     if-nez v0, :cond_1
 
-    .line 2476
+    .line 2646
     :cond_0
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
@@ -293,12 +293,12 @@
     #calls: Landroid/webkit/ZoomManager;->setZoomScale(FZZ)V
     invoke-static {v0, v1, v2, v3}, Landroid/webkit/ZoomManager;->access$1900(Landroid/webkit/ZoomManager;FZZ)V
 
-    .line 2477
+    .line 2647
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2479
+    .line 2649
     :cond_1
     return-void
 .end method
@@ -310,12 +310,12 @@
     .prologue
     const/high16 v3, 0x3f80
 
-    .line 2681
+    .line 2851
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 2682
+    .line 2852
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     const-wide/16 v1, 0x0
@@ -323,7 +323,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomStart:J
     invoke-static {v0, v1, v2}, Landroid/webkit/ZoomManager;->access$3102(Landroid/webkit/ZoomManager;J)J
 
-    .line 2683
+    .line 2853
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
@@ -338,7 +338,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mInvInitialZoomScale:F
     invoke-static {v0, v1}, Landroid/webkit/ZoomManager;->access$3202(Landroid/webkit/ZoomManager;F)F
 
-    .line 2684
+    .line 2854
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     div-float v1, v3, p1
@@ -346,18 +346,18 @@
     #setter for: Landroid/webkit/ZoomManager;->mInvFinalZoomScale:F
     invoke-static {v0, v1}, Landroid/webkit/ZoomManager;->access$3302(Landroid/webkit/ZoomManager;F)F
 
-    .line 2685
+    .line 2855
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mZoomScale:F
     invoke-static {v0, p1}, Landroid/webkit/ZoomManager;->access$2602(Landroid/webkit/ZoomManager;F)F
 
-    .line 2686
+    .line 2856
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2687
+    .line 2857
     return-void
 .end method
 
@@ -368,7 +368,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2691
+    .line 2861
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     const/4 v1, 0x0
@@ -376,13 +376,13 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomScale:F
     invoke-static {v0, v1}, Landroid/webkit/ZoomManager;->access$2602(Landroid/webkit/ZoomManager;F)F
 
-    .line 2692
+    .line 2862
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     #calls: Landroid/webkit/ZoomManager;->setZoomScale(FZZ)V
     invoke-static {v0, p1, v2, v2}, Landroid/webkit/ZoomManager;->access$1900(Landroid/webkit/ZoomManager;FZZ)V
 
-    .line 2693
+    .line 2863
     return-void
 .end method
 
@@ -394,16 +394,16 @@
     .parameter "dl"
 
     .prologue
-    .line 2834
+    .line 3004
     long-to-float v5, p1
 
-    .line 2835
+    .line 3005
     .local v5, t:F
     move-wide/from16 v0, p5
 
     long-to-float v2, v0
 
-    .line 2837
+    .line 3007
     .local v2, d:F
     div-float/2addr v5, v2
 
@@ -415,7 +415,7 @@
 
     if-gez v6, :cond_0
 
-    .line 2838
+    .line 3008
     move/from16 v0, p4
 
     float-to-double v6, v0
@@ -438,14 +438,14 @@
 
     add-double v3, v6, v8
 
-    .line 2857
+    .line 3027
     .local v3, ret:D
     :goto_0
     double-to-float v6, v3
 
     return v6
 
-    .line 2839
+    .line 3009
     .end local v3           #ret:D
     :cond_0
     float-to-double v6, v5
@@ -456,7 +456,7 @@
 
     if-gez v6, :cond_1
 
-    .line 2840
+    .line 3010
     move/from16 v0, p4
 
     float-to-double v6, v0
@@ -494,7 +494,7 @@
     .restart local v3       #ret:D
     goto :goto_0
 
-    .line 2841
+    .line 3011
     .end local v3           #ret:D
     :cond_1
     float-to-double v6, v5
@@ -505,7 +505,7 @@
 
     if-gez v6, :cond_2
 
-    .line 2842
+    .line 3012
     move/from16 v0, p4
 
     float-to-double v6, v0
@@ -543,7 +543,7 @@
     .restart local v3       #ret:D
     goto :goto_0
 
-    .line 2844
+    .line 3014
     .end local v3           #ret:D
     :cond_2
     move/from16 v0, p4
@@ -593,22 +593,22 @@
     .parameter "rcLocalDraw"
 
     .prologue
-    .line 2501
+    .line 2671
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mDrawInSchedule:Z
 
-    .line 2502
+    .line 2672
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bIsHitImageNode:Z
 
-    .line 2503
+    .line 2673
     const/4 v6, 0x0
 
     iput v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_nSmartZoomHitNode:I
 
-    .line 2504
+    .line 2674
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptHitPointRatio:Landroid/graphics/Point;
 
     const/4 v7, -0x1
@@ -617,12 +617,12 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/graphics/Point;->set(II)V
 
-    .line 2505
+    .line 2675
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_SmartZoomHitNodeInfo:Landroid/webkit/SelectionUnitInfo;
 
     invoke-virtual {v6}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 2507
+    .line 2677
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v6}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -645,14 +645,14 @@
 
     if-nez v6, :cond_2
 
-    .line 2508
+    .line 2678
     const/4 v1, 0x0
 
-    .line 2509
+    .line 2679
     .local v1, contentX:I
     const/4 v2, 0x0
 
-    .line 2511
+    .line 2681
     .local v2, contentY:I
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -662,7 +662,7 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 2512
+    .line 2682
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     add-float v7, p1, p3
@@ -681,7 +681,7 @@
 
     move-result v1
 
-    .line 2513
+    .line 2683
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     add-float v7, p2, p4
@@ -700,7 +700,7 @@
 
     move-result v2
 
-    .line 2519
+    .line 2689
     :goto_0
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -710,7 +710,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 2520
+    .line 2690
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v6, v1, v2}, Landroid/webkit/WebView;->nativeGetHitTestNodeSafely(II)I
@@ -719,16 +719,16 @@
 
     iput v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_nSmartZoomHitNode:I
 
-    .line 2522
+    .line 2692
     const/4 v0, 0x0
 
-    .line 2523
+    .line 2693
     .local v0, bImageNode:Z
     iget v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_nSmartZoomHitNode:I
 
     if-eqz v6, :cond_0
 
-    .line 2524
+    .line 2694
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v6}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -741,10 +741,10 @@
 
     move-result v0
 
-    .line 2525
+    .line 2695
     if-nez v0, :cond_0
 
-    .line 2526
+    .line 2696
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget-object v6, v6, Landroid/webkit/WebView;->mViewManager:Landroid/webkit/ViewManager;
@@ -753,43 +753,43 @@
 
     move-result-object v5
 
-    .line 2527
+    .line 2697
     .local v5, plugin:Landroid/webkit/ViewManager$ChildView;
     if-eqz v5, :cond_0
 
-    .line 2528
+    .line 2698
     const/4 v0, 0x1
 
-    .line 2532
+    .line 2702
     .end local v5           #plugin:Landroid/webkit/ViewManager$ChildView;
     :cond_0
     if-nez v0, :cond_1
 
-    .line 2533
+    .line 2703
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->getNode:Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;
 
     iput v1, v6, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->contentX:I
 
-    .line 2534
+    .line 2704
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->getNode:Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;
 
     iput v2, v6, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->contentY:I
 
-    .line 2538
+    .line 2708
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->getNode:Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;
 
     invoke-virtual {v6}, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->run()V
 
-    .line 2547
+    .line 2717
     :cond_1
     iget v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_nSmartZoomHitNode:I
 
     if-eqz v6, :cond_2
 
-    .line 2548
+    .line 2718
     const/4 v4, 0x0
 
-    .line 2549
+    .line 2719
     .local v4, nodeRect:Landroid/graphics/Rect;
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_SmartZoomHitNodeInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -797,7 +797,7 @@
 
     if-eqz v6, :cond_4
 
-    .line 2550
+    .line 2720
     new-instance v4, Landroid/graphics/Rect;
 
     .end local v4           #nodeRect:Landroid/graphics/Rect;
@@ -807,12 +807,12 @@
 
     invoke-direct {v4, v6}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 2555
+    .line 2725
     .restart local v4       #nodeRect:Landroid/graphics/Rect;
     :goto_1
     if-nez v4, :cond_5
 
-    .line 2592
+    .line 2762
     .end local v0           #bImageNode:Z
     .end local v1           #contentX:I
     .end local v2           #contentY:I
@@ -821,7 +821,7 @@
     :goto_2
     return-void
 
-    .line 2515
+    .line 2685
     .restart local v1       #contentX:I
     .restart local v2       #contentY:I
     :cond_3
@@ -847,7 +847,7 @@
 
     move-result v1
 
-    .line 2516
+    .line 2686
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     add-float v7, p2, p4
@@ -872,7 +872,7 @@
 
     goto :goto_0
 
-    .line 2552
+    .line 2722
     .restart local v0       #bImageNode:Z
     .restart local v4       #nodeRect:Landroid/graphics/Rect;
     :cond_4
@@ -894,26 +894,26 @@
 
     goto :goto_1
 
-    .line 2558
+    .line 2728
     :cond_5
     iget v6, v4, Landroid/graphics/Rect;->bottom:I
 
     if-le v2, v6, :cond_8
 
-    .line 2559
+    .line 2729
     iget v2, v4, Landroid/graphics/Rect;->bottom:I
 
-    .line 2564
+    .line 2734
     :cond_6
     :goto_3
     iget v6, v4, Landroid/graphics/Rect;->right:I
 
     if-le v1, v6, :cond_9
 
-    .line 2565
+    .line 2735
     iget v1, v4, Landroid/graphics/Rect;->right:I
 
-    .line 2570
+    .line 2740
     :cond_7
     :goto_4
     invoke-virtual {v4, v1, v2}, Landroid/graphics/Rect;->contains(II)Z
@@ -924,7 +924,7 @@
 
     if-ne v6, v7, :cond_a
 
-    .line 2571
+    .line 2741
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptHitPointRatio:Landroid/graphics/Point;
 
     iget v7, v4, Landroid/graphics/Rect;->top:I
@@ -945,13 +945,13 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/graphics/Point;->set(II)V
 
-    .line 2583
+    .line 2753
     :goto_5
     const/4 v6, 0x1
 
     if-ne v0, v6, :cond_2
 
-    .line 2584
+    .line 2754
     invoke-virtual {v4, v1, v2}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v6
@@ -960,7 +960,7 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 2585
+    .line 2755
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptInitFingerContentCenter:Landroid/graphics/Point;
 
     iget v7, v4, Landroid/graphics/Rect;->left:I
@@ -981,51 +981,51 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/graphics/Point;->set(II)V
 
-    .line 2586
+    .line 2756
     const/4 v6, 0x1
 
     iput-boolean v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bIsHitImageNode:Z
 
     goto/16 :goto_2
 
-    .line 2560
+    .line 2730
     :cond_8
     iget v6, v4, Landroid/graphics/Rect;->top:I
 
     if-ge v2, v6, :cond_6
 
-    .line 2561
+    .line 2731
     iget v2, v4, Landroid/graphics/Rect;->top:I
 
     goto :goto_3
 
-    .line 2566
+    .line 2736
     :cond_9
     iget v6, v4, Landroid/graphics/Rect;->left:I
 
     if-ge v1, v6, :cond_7
 
-    .line 2567
+    .line 2737
     iget v1, v4, Landroid/graphics/Rect;->left:I
 
     goto :goto_4
 
-    .line 2573
+    .line 2743
     :cond_a
     const/4 v3, 0x0
 
-    .line 2574
+    .line 2744
     .local v3, contentY_temp:I
     iget v6, v4, Landroid/graphics/Rect;->bottom:I
 
     if-lt v2, v6, :cond_b
 
-    .line 2575
+    .line 2745
     iget v6, v4, Landroid/graphics/Rect;->bottom:I
 
     add-int/lit8 v3, v6, -0x1
 
-    .line 2580
+    .line 2750
     :goto_6
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptHitPointRatio:Landroid/graphics/Point;
 
@@ -1049,20 +1049,20 @@
 
     goto :goto_5
 
-    .line 2576
+    .line 2746
     :cond_b
     iget v6, v4, Landroid/graphics/Rect;->top:I
 
     if-gt v2, v6, :cond_c
 
-    .line 2577
+    .line 2747
     iget v6, v4, Landroid/graphics/Rect;->top:I
 
     add-int/lit8 v3, v6, 0x1
 
     goto :goto_6
 
-    .line 2579
+    .line 2749
     :cond_c
     move v3, v2
 
@@ -1079,7 +1079,7 @@
 
     const/4 v1, 0x0
 
-    .line 2335
+    .line 2505
     cmpg-float v0, v1, p1
 
     if-gtz v0, :cond_0
@@ -1088,10 +1088,10 @@
 
     if-gtz v0, :cond_0
 
-    .line 2336
+    .line 2506
     iput p1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mScalePivotX:F
 
-    .line 2337
+    .line 2507
     :cond_0
     cmpg-float v0, v1, p2
 
@@ -1101,10 +1101,10 @@
 
     if-gtz v0, :cond_1
 
-    .line 2338
+    .line 2508
     iput p2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mScalePivotY:F
 
-    .line 2339
+    .line 2509
     :cond_1
     return-void
 .end method
@@ -1119,7 +1119,7 @@
 
     const/4 v3, 0x0
 
-    .line 2861
+    .line 3031
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -1140,7 +1140,7 @@
 
     move v0, v2
 
-    .line 2862
+    .line 3032
     .local v0, bcanZoomIn:Z
     :goto_0
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
@@ -1172,14 +1172,14 @@
 
     move v1, v2
 
-    .line 2864
+    .line 3034
     .local v1, bcanZoomOut:Z
     :goto_1
     if-nez v0, :cond_2
 
     if-nez v1, :cond_2
 
-    .line 2867
+    .line 3037
     :goto_2
     return v3
 
@@ -1188,21 +1188,21 @@
     :cond_0
     move v0, v3
 
-    .line 2861
+    .line 3031
     goto :goto_0
 
     .restart local v0       #bcanZoomIn:Z
     :cond_1
     move v1, v3
 
-    .line 2862
+    .line 3032
     goto :goto_1
 
     .restart local v1       #bcanZoomOut:Z
     :cond_2
     move v3, v2
 
-    .line 2867
+    .line 3037
     goto :goto_2
 .end method
 
@@ -1211,10 +1211,10 @@
     .parameter "enable"
 
     .prologue
-    .line 2326
+    .line 2496
     iput-boolean p1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bEnableShowMTCenterPtInScreen:Z
 
-    .line 2327
+    .line 2497
     return-void
 .end method
 
@@ -1223,7 +1223,7 @@
     .parameter "nTimer"
 
     .prologue
-    .line 2745
+    .line 2915
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget-object v0, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -1242,7 +1242,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 2746
+    .line 2916
     return-void
 .end method
 
@@ -1250,7 +1250,7 @@
     .locals 1
 
     .prologue
-    .line 2330
+    .line 2500
     iget-boolean v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_useMultiTouchDraw:Z
 
     return v0
@@ -1270,39 +1270,39 @@
 
     const/high16 v4, -0x4080
 
-    .line 2611
+    .line 2781
     iget-boolean v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_inMultiTouchMode:Z
 
     if-nez v0, :cond_0
 
-    .line 2677
+    .line 2847
     :goto_0
     return-void
 
-    .line 2614
+    .line 2784
     :cond_0
     iput-boolean v3, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_useMultiTouchDraw:Z
 
-    .line 2615
+    .line 2785
     iput-boolean v3, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_inMultiTouchMode:Z
 
-    .line 2616
+    .line 2786
     iput v4, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fCurrentMTScale:F
 
-    .line 2618
+    .line 2788
     invoke-virtual {p0}, Landroid/webkit/ZoomManager$HTCMultiTouch;->canZoomWebView()Z
 
     move-result v0
 
     if-ne v0, v2, :cond_1
 
-    .line 2619
+    .line 2789
     iput-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bDisableURLLink:Z
 
-    .line 2620
+    .line 2790
     iput-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bMTEnding:Z
 
-    .line 2624
+    .line 2794
     :cond_1
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -1314,10 +1314,10 @@
 
     iput v1, v0, Landroid/webkit/WebView;->mfTabRatio:F
 
-    .line 2626
+    .line 2796
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 2627
+    .line 2797
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -1326,7 +1326,7 @@
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 2630
+    .line 2800
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -1341,10 +1341,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 2631
+    .line 2801
     iput-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mDrawInSchedule:Z
 
-    .line 2636
+    .line 2806
     :cond_2
     iget v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
@@ -1362,13 +1362,13 @@
 
     if-gez v0, :cond_8
 
-    .line 2637
+    .line 2807
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v0, v2}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 2643
+    .line 2813
     :goto_1
     iget v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
@@ -1376,7 +1376,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 2644
+    .line 2814
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -1397,7 +1397,7 @@
 
     if-nez v0, :cond_3
 
-    .line 2645
+    .line 2815
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -1406,13 +1406,13 @@
 
     iput-boolean v2, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 2646
+    .line 2816
     :cond_3
     iget v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
     invoke-direct {p0, v0}, Landroid/webkit/ZoomManager$HTCMultiTouch;->PreviewZoomComplete(F)V
 
-    .line 2649
+    .line 2819
     :cond_4
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
@@ -1439,7 +1439,7 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 2650
+    .line 2820
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -1448,7 +1448,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 2652
+    .line 2822
     :cond_5
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
@@ -1465,7 +1465,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomCenterX:F
     invoke-static {v0, v1}, Landroid/webkit/ZoomManager;->access$1502(Landroid/webkit/ZoomManager;F)F
 
-    .line 2653
+    .line 2823
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -1481,7 +1481,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomCenterY:F
     invoke-static {v0, v1}, Landroid/webkit/ZoomManager;->access$1702(Landroid/webkit/ZoomManager;F)F
 
-    .line 2655
+    .line 2825
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mZoomCenterX:F
@@ -1504,7 +1504,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 2656
+    .line 2826
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -1533,7 +1533,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mAnchorX:I
     invoke-static {v0, v1}, Landroid/webkit/ZoomManager;->access$1402(Landroid/webkit/ZoomManager;I)I
 
-    .line 2657
+    .line 2827
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -1562,7 +1562,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mAnchorY:I
     invoke-static {v0, v1}, Landroid/webkit/ZoomManager;->access$1602(Landroid/webkit/ZoomManager;I)I
 
-    .line 2664
+    .line 2834
     :cond_6
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -1570,45 +1570,45 @@
 
     if-eqz v0, :cond_7
 
-    .line 2665
+    .line 2835
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget-object v0, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 2666
+    .line 2836
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 2671
+    .line 2841
     :cond_7
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2673
+    .line 2843
     iput v4, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscale:F
 
-    .line 2674
+    .line 2844
     iput v4, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
 
-    .line 2675
+    .line 2845
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptLastFinger1:Landroid/graphics/PointF;
 
     invoke-virtual {v0, v4, v4}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 2676
+    .line 2846
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptLastFinger2:Landroid/graphics/PointF;
 
     invoke-virtual {v0, v4, v4}, Landroid/graphics/PointF;->set(FF)V
 
     goto/16 :goto_0
 
-    .line 2639
+    .line 2809
     :cond_8
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
@@ -1627,21 +1627,21 @@
     .parameter "fZoomRatio"
 
     .prologue
-    .line 2343
+    .line 2513
     invoke-virtual {p0}, Landroid/webkit/ZoomManager$HTCMultiTouch;->canZoomWebView()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 2344
+    .line 2514
     const/4 v2, 0x0
 
-    .line 2465
+    .line 2635
     :goto_0
     return v2
 
-    .line 2346
+    .line 2516
     :cond_0
     iget-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bNotifyHostMultiTouchBouncingMinScale:Z
 
@@ -1649,12 +1649,12 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 2347
+    .line 2517
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2349
+    .line 2519
     :cond_1
     iget-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bMTEnding:Z
 
@@ -1670,12 +1670,12 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 2350
+    .line 2520
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2352
+    .line 2522
     :cond_2
     iget-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bUpdateSizeFinish:Z
 
@@ -1692,18 +1692,18 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 2353
+    .line 2523
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2356
+    .line 2526
     :cond_3
     iget-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_inMultiTouchMode:Z
 
     if-nez v2, :cond_7
 
-    .line 2359
+    .line 2529
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -1712,7 +1712,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 2360
+    .line 2530
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -1723,13 +1723,13 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/webkit/HTCWebCore;->nativeSetSkiaFontCacheSize(J)V
 
-    .line 2362
+    .line 2532
     :cond_4
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_inMultiTouchMode:Z
 
-    .line 2365
+    .line 2535
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptInitFingerCenter:Landroid/graphics/Point;
 
     add-float v3, p1, p3
@@ -1750,15 +1750,15 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Point;->set(II)V
 
-    .line 2367
+    .line 2537
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 2369
+    .line 2539
     invoke-static {}, Landroid/webkit/WebViewCore;->reducePriority()V
 
-    .line 2370
+    .line 2540
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -1767,18 +1767,18 @@
 
     invoke-static {v2}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 2374
+    .line 2544
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
-    .line 2375
+    .line 2545
     .local v7, rcLocalDraw:Landroid/graphics/Rect;
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2, v7}, Landroid/webkit/WebView;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 2377
+    .line 2547
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget-boolean v2, v2, Landroid/webkit/WebView;->m_bMailClientUsed:Z
@@ -1787,7 +1787,7 @@
 
     if-ne v2, v3, :cond_8
 
-    .line 2378
+    .line 2548
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     add-float v3, p1, p3
@@ -1805,7 +1805,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomCenterX:F
     invoke-static {v2, v3}, Landroid/webkit/ZoomManager;->access$1502(Landroid/webkit/ZoomManager;F)F
 
-    .line 2379
+    .line 2549
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     add-float v3, p2, p4
@@ -1823,7 +1823,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomCenterY:F
     invoke-static {v2, v3}, Landroid/webkit/ZoomManager;->access$1702(Landroid/webkit/ZoomManager;F)F
 
-    .line 2385
+    .line 2555
     :goto_1
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -1833,7 +1833,7 @@
 
     if-ne v2, v3, :cond_9
 
-    .line 2386
+    .line 2556
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mMinZoomScale:F
@@ -1843,15 +1843,15 @@
 
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
 
-    .line 2406
+    .line 2576
     :goto_2
     const/4 v12, 0x0
 
-    .line 2407
+    .line 2577
     .local v12, sx:F
     const/4 v13, 0x0
 
-    .line 2408
+    .line 2578
     .local v13, sy:F
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -1863,7 +1863,7 @@
 
     iput v3, v2, Landroid/webkit/WebView;->mfTabRatio:F
 
-    .line 2409
+    .line 2579
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
@@ -1882,7 +1882,7 @@
 
     move-result-object v9
 
-    .line 2410
+    .line 2580
     .local v9, display:Landroid/view/Display;
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -1904,7 +1904,7 @@
 
     if-ne v2, v3, :cond_d
 
-    .line 2411
+    .line 2581
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget v2, v2, Landroid/webkit/WebView;->mfTabRatio:F
@@ -1925,7 +1925,7 @@
 
     mul-float v12, v2, v3
 
-    .line 2412
+    .line 2582
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget v2, v2, Landroid/webkit/WebView;->mfTabRatio:F
@@ -1946,7 +1946,7 @@
 
     mul-float v13, v2, v3
 
-    .line 2418
+    .line 2588
     :goto_3
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -1958,7 +1958,7 @@
 
     iput v3, v2, Landroid/webkit/WebView;->m_nCurrentTabMinLeft:I
 
-    .line 2419
+    .line 2589
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-static {v13}, Ljava/lang/Math;->round(F)I
@@ -1969,7 +1969,7 @@
 
     iput v3, v2, Landroid/webkit/WebView;->m_nCurrentTabMinTop:I
 
-    .line 2421
+    .line 2591
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     sget-boolean v2, Landroid/webkit/WebView;->m_bHostFullScreenMode:Z
@@ -1980,7 +1980,7 @@
 
     const/4 v10, 0x0
 
-    .line 2422
+    .line 2592
     .local v10, nHostStatusbarHeight:I
     :goto_4
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -2005,7 +2005,7 @@
 
     move-result v11
 
-    .line 2424
+    .line 2594
     .local v11, nVisibleTitleHeight:I
     if-lez v11, :cond_5
 
@@ -2017,7 +2017,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 2425
+    .line 2595
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -2056,7 +2056,7 @@
 
     iput v3, v2, Landroid/webkit/WebView;->mfTabRatio:F
 
-    .line 2427
+    .line 2597
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
@@ -2077,7 +2077,7 @@
 
     if-ne v2, v3, :cond_f
 
-    .line 2428
+    .line 2598
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget v2, v2, Landroid/webkit/WebView;->mfTabRatio:F
@@ -2098,7 +2098,7 @@
 
     mul-float v12, v2, v3
 
-    .line 2429
+    .line 2599
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget v2, v2, Landroid/webkit/WebView;->mfTabRatio:F
@@ -2119,7 +2119,7 @@
 
     mul-float v13, v2, v3
 
-    .line 2435
+    .line 2605
     :goto_5
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -2131,7 +2131,7 @@
 
     iput v3, v2, Landroid/webkit/WebView;->m_nCurrentTabMinLeft_modify:I
 
-    .line 2436
+    .line 2606
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-static {v13}, Ljava/lang/Math;->round(F)I
@@ -2142,7 +2142,7 @@
 
     iput v3, v2, Landroid/webkit/WebView;->m_nCurrentTabMinTop_modify:I
 
-    .line 2439
+    .line 2609
     :cond_5
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
@@ -2151,7 +2151,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v2, v3}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 2441
+    .line 2611
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     const/4 v3, 0x1
@@ -2159,14 +2159,14 @@
     #setter for: Landroid/webkit/ZoomManager;->mPinchToZoomAnimating:Z
     invoke-static {v2, v3}, Landroid/webkit/ZoomManager;->access$1202(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 2443
+    .line 2613
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget-boolean v2, v2, Landroid/webkit/WebView;->m_bsetScaleWithoutCheck:Z
 
     if-nez v2, :cond_10
 
-    .line 2444
+    .line 2614
     add-float v2, p1, p3
 
     const/high16 v3, 0x4000
@@ -2208,10 +2208,10 @@
 
     move/from16 v6, p4
 
-    .line 2450
+    .line 2620
     invoke-direct/range {v2 .. v7}, Landroid/webkit/ZoomManager$HTCMultiTouch;->getHitNode(FFFFLandroid/graphics/Rect;)V
 
-    .line 2452
+    .line 2622
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -2232,7 +2232,7 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 2453
+    .line 2623
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -2243,7 +2243,7 @@
 
     iput-boolean v3, v2, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 2454
+    .line 2624
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -2254,7 +2254,7 @@
 
     iput v3, v2, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPictureCount:I
 
-    .line 2457
+    .line 2627
     :cond_6
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
@@ -2262,7 +2262,7 @@
 
     iput-boolean v3, v2, Landroid/webkit/ZoomManager;->isMTing:Z
 
-    .line 2460
+    .line 2630
     .end local v7           #rcLocalDraw:Landroid/graphics/Rect;
     .end local v9           #display:Landroid/view/Display;
     .end local v10           #nHostStatusbarHeight:I
@@ -2276,7 +2276,7 @@
 
     invoke-virtual {v2, p1, v0}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 2461
+    .line 2631
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_ptLastFinger2:Landroid/graphics/PointF;
 
     move/from16 v0, p3
@@ -2285,17 +2285,17 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 2463
+    .line 2633
     move/from16 v0, p5
 
     invoke-direct {p0, v0}, Landroid/webkit/ZoomManager$HTCMultiTouch;->AssignRatio(F)V
 
-    .line 2465
+    .line 2635
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 2381
+    .line 2551
     .restart local v7       #rcLocalDraw:Landroid/graphics/Rect;
     :cond_8
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
@@ -2309,7 +2309,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomCenterX:F
     invoke-static {v2, v3}, Landroid/webkit/ZoomManager;->access$1502(Landroid/webkit/ZoomManager;F)F
 
-    .line 2382
+    .line 2552
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     add-float v3, p2, p4
@@ -2323,11 +2323,11 @@
 
     goto/16 :goto_1
 
-    .line 2388
+    .line 2558
     :cond_9
     const/4 v8, 0x0
 
-    .line 2389
+    .line 2559
     .local v8, bMobileSite:Z
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -2337,7 +2337,7 @@
 
     if-eqz v2, :cond_a
 
-    .line 2390
+    .line 2560
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -2352,12 +2352,12 @@
 
     const/4 v8, 0x1
 
-    .line 2391
+    .line 2561
     :cond_a
     :goto_7
     if-nez v8, :cond_c
 
-    .line 2393
+    .line 2563
     invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -2376,7 +2376,7 @@
 
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
 
-    .line 2394
+    .line 2564
     const/high16 v2, 0x3f80
 
     iget v3, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
@@ -2387,7 +2387,7 @@
 
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
 
-    .line 2395
+    .line 2565
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mMinZoomScale:F
@@ -2403,7 +2403,7 @@
 
     iput v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
 
-    .line 2396
+    .line 2566
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     iget v3, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_fscaleOverview:F
@@ -2413,13 +2413,13 @@
 
     goto/16 :goto_2
 
-    .line 2390
+    .line 2560
     :cond_b
     const/4 v8, 0x0
 
     goto :goto_7
 
-    .line 2398
+    .line 2568
     :cond_c
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
@@ -2432,7 +2432,7 @@
 
     goto/16 :goto_2
 
-    .line 2414
+    .line 2584
     .end local v8           #bMobileSite:Z
     .restart local v9       #display:Landroid/view/Display;
     .restart local v12       #sx:F
@@ -2458,7 +2458,7 @@
 
     mul-float v12, v2, v3
 
-    .line 2415
+    .line 2585
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget v2, v2, Landroid/webkit/WebView;->mfTabRatio:F
@@ -2481,7 +2481,7 @@
 
     goto/16 :goto_3
 
-    .line 2421
+    .line 2591
     :cond_e
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -2501,7 +2501,7 @@
 
     goto/16 :goto_4
 
-    .line 2431
+    .line 2601
     .restart local v10       #nHostStatusbarHeight:I
     .restart local v11       #nVisibleTitleHeight:I
     :cond_f
@@ -2525,7 +2525,7 @@
 
     mul-float v12, v2, v3
 
-    .line 2432
+    .line 2602
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     iget v2, v2, Landroid/webkit/WebView;->mfTabRatio:F
@@ -2548,7 +2548,7 @@
 
     goto/16 :goto_5
 
-    .line 2446
+    .line 2616
     :cond_10
     add-float v2, p1, p3
 
@@ -2591,15 +2591,15 @@
 
     const/4 v0, 0x1
 
-    .line 2596
+    .line 2766
     iget-boolean v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_inMultiTouchMode:Z
 
     if-ne v2, v0, :cond_2
 
-    .line 2597
+    .line 2767
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_bUpdateSizeFinish:Z
 
-    .line 2598
+    .line 2768
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -2614,10 +2614,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2599
+    .line 2769
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mDrawInSchedule:Z
 
-    .line 2601
+    .line 2771
     :cond_0
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
@@ -2650,16 +2650,16 @@
 
     if-lez v1, :cond_1
 
-    .line 2602
+    .line 2772
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
 
     iput-boolean v0, v1, Landroid/webkit/ZoomManager;->isMTing:Z
 
-    .line 2604
+    .line 2774
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/ZoomManager$HTCMultiTouch;->mtEnd()V
 
-    .line 2607
+    .line 2777
     :goto_0
     return v0
 
@@ -2674,7 +2674,7 @@
     .parameter "canvas"
 
     .prologue
-    .line 2696
+    .line 2866
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->this$0:Landroid/webkit/ZoomManager;
@@ -2699,15 +2699,15 @@
 
     mul-float v12, v18, v19
 
-    .line 2700
+    .line 2870
     .local v12, ratio:F
     const/4 v9, 0x0
 
-    .line 2701
+    .line 2871
     .local v9, oldX:I
     const/4 v10, 0x0
 
-    .line 2704
+    .line 2874
     .local v10, oldY:I
     move-object/from16 v0, p0
 
@@ -2731,19 +2731,19 @@
 
     move-result-object v5
 
-    .line 2705
+    .line 2875
     .local v5, display:Landroid/view/Display;
     const/4 v15, 0x0
 
-    .line 2706
+    .line 2876
     .local v15, sx:F
     const/16 v16, 0x0
 
-    .line 2707
+    .line 2877
     .local v16, sy:F
     const/4 v7, 0x0
 
-    .line 2708
+    .line 2878
     .local v7, nHostStatusbarHeight:I
     move-object/from16 v0, p0
 
@@ -2755,7 +2755,7 @@
 
     move-result v8
 
-    .line 2710
+    .line 2880
     .local v8, nVisibleTitleHeight:I
     int-to-float v0, v9
 
@@ -2789,7 +2789,7 @@
 
     add-float v15, v18, v19
 
-    .line 2711
+    .line 2881
     int-to-float v0, v10
 
     move/from16 v18, v0
@@ -2822,7 +2822,7 @@
 
     add-float v16, v18, v19
 
-    .line 2718
+    .line 2888
     invoke-static {v15}, Ljava/lang/Math;->round(F)I
 
     move-result v18
@@ -2831,7 +2831,7 @@
 
     neg-int v6, v0
 
-    .line 2719
+    .line 2889
     .local v6, left:I
     invoke-virtual {v5}, Landroid/view/Display;->getWidth()I
 
@@ -2851,7 +2851,7 @@
 
     add-int v13, v6, v18
 
-    .line 2720
+    .line 2890
     .local v13, right:I
     invoke-static/range {v16 .. v16}, Ljava/lang/Math;->round(F)I
 
@@ -2863,7 +2863,7 @@
 
     move/from16 v17, v0
 
-    .line 2721
+    .line 2891
     .local v17, top:I
     invoke-virtual {v5}, Landroid/view/Display;->getHeight()I
 
@@ -2883,7 +2883,7 @@
 
     add-int v4, v17, v18
 
-    .line 2723
+    .line 2893
     .local v4, bottom:I
     sub-int v18, v13, v6
 
@@ -2893,12 +2893,12 @@
 
     if-gtz v18, :cond_1
 
-    .line 2742
+    .line 2912
     :cond_0
     :goto_0
     return-void
 
-    .line 2732
+    .line 2902
     :cond_1
     move-object/from16 v0, p0
 
@@ -2914,12 +2914,12 @@
 
     if-eqz v18, :cond_2
 
-    .line 2733
+    .line 2903
     new-instance v11, Landroid/graphics/Rect;
 
     invoke-direct {v11}, Landroid/graphics/Rect;-><init>()V
 
-    .line 2734
+    .line 2904
     .local v11, r:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -2931,7 +2931,7 @@
 
     invoke-virtual {v0, v11}, Landroid/webkit/WebView;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 2735
+    .line 2905
     iget v0, v11, Landroid/graphics/Rect;->left:I
 
     move/from16 v18, v0
@@ -2960,14 +2960,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2739
+    .line 2909
     .end local v11           #r:Landroid/graphics/Rect;
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v14
 
-    .line 2740
+    .line 2910
     .local v14, sc:I
     move-object/from16 v0, p0
 
@@ -3005,7 +3005,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/webkit/WebView;->drawCoreAndCursorRing(Landroid/graphics/Canvas;IZ)V
 
-    .line 2741
+    .line 2911
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14}, Landroid/graphics/Canvas;->restoreToCount(I)V
@@ -3019,14 +3019,14 @@
     .parameter "nodeinfo"
 
     .prologue
-    .line 2750
+    .line 2920
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v11}, Landroid/webkit/WebView;->AbortScrollerAnimation()V
 
-    .line 2751
+    .line 2921
     if-nez p1, :cond_0
 
     move-object/from16 v0, p2
@@ -3035,11 +3035,11 @@
 
     if-eqz v11, :cond_b
 
-    .line 2752
+    .line 2922
     :cond_0
     const/4 v7, 0x0
 
-    .line 2753
+    .line 2923
     .local v7, nodeRect:Landroid/graphics/Rect;
     move-object/from16 v0, p2
 
@@ -3047,10 +3047,10 @@
 
     if-eqz v11, :cond_7
 
-    .line 2754
+    .line 2924
     invoke-virtual/range {p2 .. p2}, Landroid/webkit/SelectionUnitInfo;->update()V
 
-    .line 2755
+    .line 2925
     new-instance v7, Landroid/graphics/Rect;
 
     .end local v7           #nodeRect:Landroid/graphics/Rect;
@@ -3060,7 +3060,7 @@
 
     invoke-direct {v7, v11}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 2760
+    .line 2930
     .restart local v7       #nodeRect:Landroid/graphics/Rect;
     :goto_0
     if-eqz v7, :cond_6
@@ -3071,13 +3071,13 @@
 
     if-nez v11, :cond_6
 
-    .line 2761
+    .line 2931
     const/4 v3, 0x0
 
     .local v3, nScrollX:I
     const/4 v4, 0x0
 
-    .line 2762
+    .line 2932
     .local v4, nScrollY:I
     move-object/from16 v0, p0
 
@@ -3095,7 +3095,7 @@
 
     move-result v10
 
-    .line 2763
+    .line 2933
     .local v10, textWrapWidth:I
     invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
@@ -3105,19 +3105,19 @@
 
     const/4 v1, 0x1
 
-    .line 2765
+    .line 2935
     .local v1, adjustWidth:Z
     :goto_1
     if-eqz v1, :cond_1
 
-    .line 2766
+    .line 2936
     iget v11, v7, Landroid/graphics/Rect;->left:I
 
     add-int/2addr v11, v10
 
     iput v11, v7, Landroid/graphics/Rect;->right:I
 
-    .line 2767
+    .line 2937
     :cond_1
     move-object/from16 v0, p0
 
@@ -3143,10 +3143,10 @@
 
     sub-int v3, v11, v12
 
-    .line 2769
+    .line 2939
     const/4 v2, 0x0
 
-    .line 2770
+    .line 2940
     .local v2, charRect:Landroid/graphics/Rect;
     move-object/from16 v0, p2
 
@@ -3154,7 +3154,7 @@
 
     if-eqz v11, :cond_2
 
-    .line 2771
+    .line 2941
     new-instance v2, Landroid/graphics/Rect;
 
     .end local v2           #charRect:Landroid/graphics/Rect;
@@ -3164,7 +3164,7 @@
 
     invoke-direct {v2, v11}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 2773
+    .line 2943
     .restart local v2       #charRect:Landroid/graphics/Rect;
     :cond_2
     if-eqz v2, :cond_9
@@ -3175,7 +3175,7 @@
 
     if-nez v11, :cond_9
 
-    .line 2774
+    .line 2944
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3210,7 +3210,7 @@
 
     sub-int v4, v11, v12
 
-    .line 2783
+    .line 2953
     :goto_2
     move-object/from16 v0, p0
 
@@ -3232,7 +3232,7 @@
 
     if-ne v11, v12, :cond_3
 
-    .line 2784
+    .line 2954
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3267,7 +3267,7 @@
 
     sub-int v3, v11, v12
 
-    .line 2785
+    .line 2955
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3302,7 +3302,7 @@
 
     sub-int v4, v11, v12
 
-    .line 2788
+    .line 2958
     :cond_3
     move-object/from16 v0, p0
 
@@ -3312,7 +3312,7 @@
 
     move-result v5
 
-    .line 2789
+    .line 2959
     .local v5, nX:I
     move-object/from16 v0, p0
 
@@ -3332,13 +3332,13 @@
 
     move-result v6
 
-    .line 2790
+    .line 2960
     .local v6, nY:I
     if-gez v5, :cond_4
 
     const/4 v5, 0x0
 
-    .line 2792
+    .line 2962
     :cond_4
     move-object/from16 v0, p0
 
@@ -3346,14 +3346,14 @@
 
     invoke-virtual {v11, v5}, Landroid/webkit/WebView;->setMyScrollX(I)V
 
-    .line 2793
+    .line 2963
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v11, v6}, Landroid/webkit/WebView;->setMyScrollY(I)V
 
-    .line 2796
+    .line 2966
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3364,7 +3364,7 @@
 
     if-eqz v11, :cond_5
 
-    .line 2797
+    .line 2967
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3377,7 +3377,7 @@
 
     iput-boolean v12, v11, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 2798
+    .line 2968
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3390,7 +3390,7 @@
 
     iput v12, v11, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPictureCount:I
 
-    .line 2801
+    .line 2971
     :cond_5
     move-object/from16 v0, p0
 
@@ -3398,14 +3398,14 @@
 
     invoke-virtual {v11}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
-    .line 2802
+    .line 2972
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v11}, Landroid/webkit/WebView;->fnScrollingEnd()V
 
-    .line 2824
+    .line 2994
     .end local v1           #adjustWidth:Z
     .end local v2           #charRect:Landroid/graphics/Rect;
     .end local v3           #nScrollX:I
@@ -3422,10 +3422,10 @@
 
     invoke-virtual {v11}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2825
+    .line 2995
     return-void
 
-    .line 2757
+    .line 2927
     .restart local v7       #nodeRect:Landroid/graphics/Rect;
     :cond_7
     move-object/from16 v0, p0
@@ -3448,7 +3448,7 @@
 
     goto/16 :goto_0
 
-    .line 2763
+    .line 2933
     .restart local v3       #nScrollX:I
     .restart local v4       #nScrollY:I
     .restart local v10       #textWrapWidth:I
@@ -3457,7 +3457,7 @@
 
     goto/16 :goto_1
 
-    .line 2776
+    .line 2946
     .restart local v1       #adjustWidth:Z
     .restart local v2       #charRect:Landroid/graphics/Rect;
     :cond_9
@@ -3493,7 +3493,7 @@
 
     if-eqz v11, :cond_a
 
-    .line 2777
+    .line 2947
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3560,7 +3560,7 @@
 
     goto/16 :goto_2
 
-    .line 2779
+    .line 2949
     :cond_a
     move-object/from16 v0, p0
 
@@ -3588,7 +3588,7 @@
 
     goto/16 :goto_2
 
-    .line 2805
+    .line 2975
     .end local v1           #adjustWidth:Z
     .end local v2           #charRect:Landroid/graphics/Rect;
     .end local v3           #nScrollX:I
@@ -3604,7 +3604,7 @@
 
     move-result v8
 
-    .line 2806
+    .line 2976
     .local v8, oldScrollX:I
     move-object/from16 v0, p0
 
@@ -3614,7 +3614,7 @@
 
     move-result v9
 
-    .line 2807
+    .line 2977
     .local v9, oldScrollY:I
     move-object/from16 v0, p0
 
@@ -3638,7 +3638,7 @@
 
     invoke-virtual {v11, v12}, Landroid/webkit/WebView;->setMyScrollX(I)V
 
-    .line 2808
+    .line 2978
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3661,7 +3661,7 @@
 
     invoke-virtual {v11, v12}, Landroid/webkit/WebView;->setMyScrollY(I)V
 
-    .line 2809
+    .line 2979
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3682,7 +3682,7 @@
 
     if-eq v9, v11, :cond_d
 
-    .line 2810
+    .line 2980
     :cond_c
     move-object/from16 v0, p0
 
@@ -3692,7 +3692,7 @@
 
     invoke-virtual {v11, v12}, Landroid/webkit/WebView;->setIsUserScroll(Z)V
 
-    .line 2815
+    .line 2985
     :cond_d
     move-object/from16 v0, p0
 
@@ -3704,7 +3704,7 @@
 
     if-eqz v11, :cond_e
 
-    .line 2816
+    .line 2986
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3717,7 +3717,7 @@
 
     iput-boolean v12, v11, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 2817
+    .line 2987
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -3730,7 +3730,7 @@
 
     iput v12, v11, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPictureCount:I
 
-    .line 2820
+    .line 2990
     :cond_e
     move-object/from16 v0, p0
 
@@ -3738,7 +3738,7 @@
 
     invoke-virtual {v11}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
-    .line 2821
+    .line 2991
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;

@@ -124,132 +124,132 @@
 
     const/4 v1, 0x0
 
-    .line 65
+    .line 66
     invoke-direct {p0}, Landroid/app/ActivityGroup;-><init>()V
 
-    .line 82
+    .line 83
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
-    .line 83
+    .line 84
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
-    .line 85
+    .line 86
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
-    .line 86
+    .line 87
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 88
+    .line 89
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
-    .line 89
+    .line 90
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategoryItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 94
+    .line 95
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
-    .line 106
+    .line 107
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
-    .line 108
+    .line 109
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
 
-    .line 110
+    .line 111
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
-    .line 114
+    .line 115
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
 
-    .line 116
+    .line 117
     iput v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOrientation:I
 
-    .line 118
+    .line 119
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mPlaylistUri:Ljava/lang/String;
 
-    .line 119
+    .line 120
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mGenreId:Ljava/lang/String;
 
-    .line 120
+    .line 121
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mComposer:Ljava/lang/String;
 
-    .line 121
+    .line 122
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mArtistId:Ljava/lang/String;
 
-    .line 122
+    .line 123
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
 
-    .line 124
+    .line 125
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActivityResumed:Z
 
-    .line 334
+    .line 345
     new-instance v0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$1;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$1;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
 
-    .line 533
+    .line 550
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mErrorView:Landroid/view/View;
 
-    .line 566
+    .line 583
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
-    .line 568
+    .line 585
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingCreateOptionsMenu:Z
 
-    .line 631
+    .line 648
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingPrepareOptionsMenu:Z
 
-    .line 674
+    .line 691
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
 
-    .line 966
+    .line 986
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mDestroyed:Z
 
-    .line 1180
+    .line 1200
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mForResultCaller:Lcom/htc/music/widget/MusicMaActivity;
 
-    .line 1705
+    .line 1725
     new-instance v0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$3;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$3;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHeaderBarBackClickListener:Landroid/view/View$OnClickListener;
 
-    .line 1714
+    .line 1734
     new-instance v0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$4;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$4;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarPopupBubbleClickListener:Landroid/view/View$OnClickListener;
 
-    .line 1746
+    .line 1768
     new-instance v0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$CategoryRightOnClickListener;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$CategoryRightOnClickListener;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategoryRightClickAction:Lcom/htc/music/browserlayer/MusicBrowserTabActivity$CategoryRightOnClickListener;
 
-    .line 1781
+    .line 1803
     new-instance v0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$5;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$5;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSearchAction:Landroid/view/View$OnClickListener;
 
-    .line 1787
+    .line 1809
     new-instance v0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$6;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$6;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOnlineSearchAction:Landroid/view/View$OnClickListener;
 
-    .line 1850
+    .line 1881
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1852
+    .line 1883
     return-void
 .end method
 
@@ -258,7 +258,7 @@
     .parameter "x0"
 
     .prologue
-    .line 65
+    .line 66
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mDestroyed:Z
 
     return v0
@@ -269,7 +269,7 @@
     .parameter "x0"
 
     .prologue
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
 
     return-object v0
@@ -280,7 +280,7 @@
     .parameter "x0"
 
     .prologue
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
     return-object v0
@@ -291,7 +291,7 @@
     .parameter "x0"
 
     .prologue
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
     return-object v0
@@ -304,7 +304,7 @@
     .parameter "x2"
 
     .prologue
-    .line 65
+    .line 66
     invoke-direct {p0, p1, p2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startIndicateActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
     return-void
@@ -315,7 +315,7 @@
     .parameter "x0"
 
     .prologue
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
 
     return-object v0
@@ -326,7 +326,7 @@
     .parameter "x0"
 
     .prologue
-    .line 65
+    .line 66
     invoke-direct {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startOnlineSearchPage()V
 
     return-void
@@ -336,16 +336,16 @@
     .locals 6
 
     .prologue
-    .line 397
+    .line 414
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
     if-eqz v1, :cond_0
 
-    .line 436
+    .line 453
     :goto_0
     return-void
 
-    .line 399
+    .line 416
     :cond_0
     new-instance v1, Lcom/htc/widget/ActionBarExt;
 
@@ -357,7 +357,7 @@
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
-    .line 400
+    .line 417
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
@@ -368,25 +368,25 @@
 
     invoke-virtual {v1, v2}, Landroid/app/ActionBar;->addOnMenuVisibilityListener(Landroid/app/ActionBar$OnMenuVisibilityListener;)V
 
-    .line 413
+    .line 430
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isLandingPageEnable()Z
 
     move-result v0
 
-    .line 419
+    .line 436
     .local v0, enableHtcListen:Z
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v1, v0}, Lcom/htc/music/util/HistoryManager;->enableHtcListen(Z)V
 
-    .line 421
+    .line 438
     new-instance v1, Lcom/htc/music/widget/CategorySwitcherAdapter;
 
     invoke-direct {v1, p0}, Lcom/htc/music/widget/CategorySwitcherAdapter;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
-    .line 422
+    .line 439
     new-instance v1, Lcom/htc/music/widget/DismissBubbleItemClickListener;
 
     new-instance v2, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;
@@ -401,14 +401,14 @@
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategoryItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 429
+    .line 446
     new-instance v1, Lcom/htc/music/widget/SourceSwitcherAdapter;
 
     invoke-direct {v1, p0, v0}, Lcom/htc/music/widget/SourceSwitcherAdapter;-><init>(Landroid/content/Context;Z)V
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
-    .line 430
+    .line 447
     new-instance v1, Lcom/htc/music/widget/DismissBubbleItemClickListener;
 
     new-instance v2, Lcom/htc/music/widget/SourceSwitcherAdapter$OnSourceSwitcherItemClickListener;
@@ -429,17 +429,17 @@
 .end method
 
 .method private launchGlancePage()V
-    .locals 3
+    .locals 5
 
     .prologue
-    .line 1740
+    .line 1760
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.PLAYBACK_VIEWER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1741
+    .line 1761
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "showEmptyQueue"
 
@@ -447,10 +447,27 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1742
+    .line 1762
+    const-string v1, "from-lockscreen"
+
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v2
+
+    const-string v3, "from-lockscreen"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 1764
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1743
+    .line 1765
     return-void
 .end method
 
@@ -461,22 +478,22 @@
     .prologue
     const v2, 0x7f080019
 
-    .line 483
+    .line 500
     if-eqz p1, :cond_2
 
-    .line 484
+    .line 501
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     if-eqz v1, :cond_1
 
-    .line 485
+    .line 502
     invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 487
+    .line 504
     .local v0, container:Landroid/widget/LinearLayout;
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
@@ -486,82 +503,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 518
+    .line 535
     .end local v0           #container:Landroid/widget/LinearLayout;
     :cond_0
     :goto_0
     return-void
 
-    .line 495
+    .line 512
     :cond_1
     invoke-static {p0}, Lcom/htc/music/MiniPlayer$MiniPlayerCreator;->createMiniPlayer(Landroid/app/Activity;)Lcom/htc/music/MiniPlayer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    .line 496
-    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->isActivityResumed()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 497
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    invoke-virtual {v1, p0}, Lcom/htc/music/MiniPlayer;->addLoadSuccessListener(Lcom/htc/music/MiniPlayer$ILoadSuccessListener;)V
-
-    .line 498
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->startMonitor()V
-
-    goto :goto_0
-
-    .line 502
-    :cond_2
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    if-nez v1, :cond_3
-
-    .line 503
-    invoke-static {p0}, Lcom/htc/music/MiniPlayer$MiniPlayerCreator;->createMiniPlayer(Landroid/app/Activity;)Lcom/htc/music/MiniPlayer;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    .line 505
-    :cond_3
-    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    .line 506
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->inflateView()V
-
-    .line 509
-    :cond_4
-    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    .line 511
-    .restart local v0       #container:Landroid/widget/LinearLayout;
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 513
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->isActivityResumed()Z
@@ -581,6 +535,69 @@
     invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->startMonitor()V
 
     goto :goto_0
+
+    .line 519
+    :cond_2
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    if-nez v1, :cond_3
+
+    .line 520
+    invoke-static {p0}, Lcom/htc/music/MiniPlayer$MiniPlayerCreator;->createMiniPlayer(Landroid/app/Activity;)Lcom/htc/music/MiniPlayer;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    .line 522
+    :cond_3
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    .line 523
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->inflateView()V
+
+    .line 526
+    :cond_4
+    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    .line 528
+    .restart local v0       #container:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 530
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->isActivityResumed()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 531
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    invoke-virtual {v1, p0}, Lcom/htc/music/MiniPlayer;->addLoadSuccessListener(Lcom/htc/music/MiniPlayer$ILoadSuccessListener;)V
+
+    .line 532
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->startMonitor()V
+
+    goto :goto_0
 .end method
 
 .method private setDropDownEnable(Z)V
@@ -592,38 +609,38 @@
 
     const/4 v1, 0x0
 
-    .line 740
+    .line 760
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-nez v0, :cond_0
 
-    .line 751
+    .line 771
     :goto_0
     return-void
 
-    .line 744
+    .line 764
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 745
+    .line 765
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/ActionBarDropDown;->setClickable(Z)V
 
-    .line 746
+    .line 766
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/ActionBarDropDown;->setArrowEnabled(Z)V
 
     goto :goto_0
 
-    .line 748
+    .line 768
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setClickable(Z)V
 
-    .line 749
+    .line 769
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setArrowEnabled(Z)V
@@ -638,10 +655,10 @@
     .parameter "forceDisableDropDown"
 
     .prologue
-    .line 761
+    .line 781
     and-int/lit16 v0, p1, 0xfe
 
-    .line 762
+    .line 782
     .local v0, iType:I
     and-int/lit8 v2, p1, 0x1
 
@@ -649,55 +666,55 @@
 
     const/4 v1, 0x1
 
-    .line 763
+    .line 783
     .local v1, manualMainTitle:Z
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 790
+    .line 810
     :goto_1
     :pswitch_0
     return-void
 
-    .line 762
+    .line 782
     .end local v1           #manualMainTitle:Z
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 766
+    .line 786
     .restart local v1       #manualMainTitle:Z
     :pswitch_1
     invoke-virtual {p0, v1, p2, p3}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setCategorySwitcherStyleTitle(ZLjava/lang/String;Z)V
 
     goto :goto_1
 
-    .line 770
+    .line 790
     :pswitch_2
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setSourceSwitcherStyleTitle(Z)V
 
     goto :goto_1
 
-    .line 774
+    .line 794
     :pswitch_3
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDLNASourceSwitcherStyleTitle(Z)V
 
     goto :goto_1
 
-    .line 778
+    .line 798
     :pswitch_4
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDLNASwitchStyleTitle(Z)V
 
     goto :goto_1
 
-    .line 782
+    .line 802
     :pswitch_5
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setStoreSwitchStyleTitle(Z)V
 
     goto :goto_1
 
-    .line 763
+    .line 783
     nop
 
     :pswitch_data_0
@@ -720,17 +737,17 @@
     .locals 4
 
     .prologue
-    .line 536
+    .line 553
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mErrorView:Landroid/view/View;
 
     if-nez v2, :cond_0
 
-    .line 537
+    .line 554
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 538
+    .line 555
     .local v1, inflator:Landroid/view/LayoutInflater;
     const v2, 0x7f030051
 
@@ -742,10 +759,10 @@
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mErrorView:Landroid/view/View;
 
-    .line 545
+    .line 562
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mErrorView:Landroid/view/View;
 
-    const v3, 0x7f080091
+    const v3, 0x7f080092
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -753,16 +770,16 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 546
+    .line 563
     .local v0, errorMessage:Landroid/widget/TextView;
     if-eqz v0, :cond_0
 
-    .line 547
+    .line 564
     const v2, 0x7f07004a
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 551
+    .line 568
     .end local v0           #errorMessage:Landroid/widget/TextView;
     .end local v1           #inflator:Landroid/view/LayoutInflater;
     :cond_0
@@ -770,73 +787,89 @@
 
     invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->changeContentView(Landroid/view/View;)V
 
-    .line 552
+    .line 569
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mErrorView:Landroid/view/View;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 554
+    .line 571
     return-void
 .end method
 
 .method private startIndicateActivity(Ljava/lang/String;Landroid/content/Intent;)V
-    .locals 4
+    .locals 7
     .parameter "mimeType"
     .parameter "intent"
 
     .prologue
-    .line 1511
+    .line 1531
     if-nez p1, :cond_1
 
-    .line 1542
+    .line 1562
     :cond_0
     :goto_0
     return-void
 
-    .line 1512
+    .line 1532
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     if-eqz v1, :cond_0
 
-    .line 1514
-    const-string v1, "com.htc.media/dlna"
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 1534
+    invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isLandingPageEnable()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 1515
+    .line 1535
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+
+    invoke-virtual {v1}, Lcom/htc/music/util/HistoryManager;->getHistorySize()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 1536
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
-    const-string v2, "DlnaBrowserTabPlugin"
+    const-string v2, "ListenBrowseTabPlugin"
 
     invoke-virtual {v1, v2}, Lcom/htc/music/widget/SourceSwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
 
-    move-result-object v0
+    move-result-object v6
 
-    .line 1516
-    .local v0, item:Lcom/htc/music/util/SourceItem;
-    iget-object v1, v0, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
+    .line 1537
+    .local v6, item:Lcom/htc/music/util/SourceItem;
+    new-instance v0, Lcom/htc/music/util/HistoryManager$ActivityHistory;
 
-    iget-object v2, v0, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+    iget-object v1, v6, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
+    iget-object v2, v6, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
-    goto :goto_0
+    const-string v3, ""
 
-    .line 1528
-    .end local v0           #item:Lcom/htc/music/util/SourceItem;
+    const/4 v4, 0x0
+
+    const/4 v5, 0x2
+
+    invoke-direct/range {v0 .. v5}, Lcom/htc/music/util/HistoryManager$ActivityHistory;-><init>(Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/Intent;I)V
+
+    .line 1540
+    .local v0, history:Lcom/htc/music/util/HistoryManager$ActivityHistory;
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+
+    invoke-virtual {v1, v0}, Lcom/htc/music/util/HistoryManager;->addHistory(Lcom/htc/music/util/HistoryManager$ActivityHistory;)V
+
+    .line 1544
+    .end local v0           #history:Lcom/htc/music/util/HistoryManager$ActivityHistory;
+    .end local v6           #item:Lcom/htc/music/util/SourceItem;
     :cond_2
-    const/4 v0, 0x0
-
-    .line 1529
-    .restart local v0       #item:Lcom/htc/music/util/SourceItem;
-    const-string v1, "com.htc.media/album"
+    const-string v1, "com.htc.media/dlna"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -844,37 +877,33 @@
 
     if-eqz v1, :cond_3
 
-    .line 1530
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
+    .line 1545
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
-    const-string v2, "AlbumBrowserTabPlugin"
+    const-string v2, "DlnaBrowserTabPlugin"
 
-    invoke-virtual {v1, v2}, Lcom/htc/music/widget/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+    invoke-virtual {v1, v2}, Lcom/htc/music/widget/SourceSwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
 
-    move-result-object v0
+    move-result-object v6
 
-    .line 1537
-    :goto_1
-    iget-object v1, v0, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+    .line 1546
+    .restart local v6       #item:Lcom/htc/music/util/SourceItem;
+    iget-object v1, v6, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
 
-    const-string v2, "LaunchFromSwitcher"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 1538
-    iget-object v1, v0, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
-
-    iget-object v2, v0, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+    iget-object v2, v6, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
     invoke-virtual {p0, v1, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 1531
+    .line 1548
+    .end local v6           #item:Lcom/htc/music/util/SourceItem;
     :cond_3
-    const-string v1, "com.htc.media/track"
+    const/4 v6, 0x0
+
+    .line 1549
+    .restart local v6       #item:Lcom/htc/music/util/SourceItem;
+    const-string v1, "com.htc.media/album"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -882,26 +911,64 @@
 
     if-eqz v1, :cond_4
 
-    .line 1532
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
-
-    const-string v2, "TrackBrowserTabPlugin"
-
-    invoke-virtual {v1, v2}, Lcom/htc/music/widget/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    .line 1534
-    :cond_4
+    .line 1550
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
     const-string v2, "AlbumBrowserTabPlugin"
 
     invoke-virtual {v1, v2}, Lcom/htc/music/widget/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
 
-    move-result-object v0
+    move-result-object v6
+
+    .line 1557
+    :goto_1
+    iget-object v1, v6, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+
+    const-string v2, "LaunchFromSwitcher"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 1558
+    iget-object v1, v6, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
+
+    iget-object v2, v6, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+
+    invoke-virtual {p0, v1, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 1551
+    :cond_4
+    const-string v1, "com.htc.media/track"
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    .line 1552
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
+
+    const-string v2, "TrackBrowserTabPlugin"
+
+    invoke-virtual {v1, v2}, Lcom/htc/music/widget/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+
+    move-result-object v6
+
+    goto :goto_1
+
+    .line 1554
+    :cond_5
+    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
+
+    const-string v2, "AlbumBrowserTabPlugin"
+
+    invoke-virtual {v1, v2}, Lcom/htc/music/widget/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+
+    move-result-object v6
 
     goto :goto_1
 .end method
@@ -910,14 +977,14 @@
     .locals 4
 
     .prologue
-    .line 1693
+    .line 1713
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.htc.music.online.strorefont"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1694
+    .line 1714
     .local v1, intent:Landroid/content/Intent;
     const-string v2, "InnerActivityType"
 
@@ -925,21 +992,21 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1697
+    .line 1717
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1702
+    .line 1722
     :goto_0
     return-void
 
-    .line 1698
+    .line 1718
     :catch_0
     move-exception v0
 
-    .line 1699
+    .line 1719
     .local v0, ex:Ljava/lang/Exception;
     const-string v2, "[MusicBrowserTabActivity]"
 
@@ -947,7 +1014,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1700
+    .line 1720
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -957,23 +1024,23 @@
     .locals 2
 
     .prologue
-    .line 1794
+    .line 1816
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.intent.action.ONLINESEARCH"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1795
+    .line 1817
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1796
+    .line 1818
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1797
+    .line 1819
     return-void
 .end method
 
@@ -990,12 +1057,12 @@
 
     const/4 v4, -0x1
 
-    .line 1454
+    .line 1474
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
 
     if-eqz v1, :cond_0
 
-    .line 1456
+    .line 1476
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mErrorView:Landroid/view/View;
 
     if-ne v1, p1, :cond_2
@@ -1008,7 +1075,7 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 1457
+    .line 1477
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getChildCount()I
@@ -1017,18 +1084,18 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1485
+    .line 1505
     :cond_0
     :goto_0
     return-void
 
-    .line 1458
+    .line 1478
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->removeAllViews()V
 
-    .line 1459
+    .line 1479
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
@@ -1039,7 +1106,7 @@
 
     goto :goto_0
 
-    .line 1465
+    .line 1485
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -1047,14 +1114,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 1466
+    .line 1486
     const-string v1, "[MusicBrowserTabActivity]"
 
     const-string v3, "changeContentView with view parent is not null!!"
 
     invoke-static {v1, v3}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1467
+    .line 1487
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -1063,7 +1130,7 @@
 
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 1470
+    .line 1490
     :cond_3
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
 
@@ -1073,7 +1140,7 @@
 
     if-lez v1, :cond_4
 
-    .line 1471
+    .line 1491
     .local v0, removeFirst:Z
     :goto_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
@@ -1084,18 +1151,18 @@
 
     invoke-virtual {v1, p1, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1475
+    .line 1495
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    .line 1477
+    .line 1497
     if-eqz v0, :cond_0
 
-    .line 1478
+    .line 1498
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_5
 
-    .line 1479
+    .line 1499
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
 
     const/16 v2, 0x2ee2
@@ -1108,10 +1175,10 @@
     :cond_4
     move v0, v2
 
-    .line 1470
+    .line 1490
     goto :goto_1
 
-    .line 1481
+    .line 1501
     .restart local v0       #removeFirst:Z
     :cond_5
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
@@ -1125,17 +1192,17 @@
     .locals 1
 
     .prologue
-    .line 1245
+    .line 1265
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 1248
+    .line 1268
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
-    .line 1250
+    .line 1270
     :cond_0
     return-void
 .end method
@@ -1144,17 +1211,17 @@
     .locals 1
 
     .prologue
-    .line 1657
+    .line 1677
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 1658
+    .line 1678
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0}, Lcom/htc/widget/ActionBarDropDown;->dismiss()V
 
-    .line 1661
+    .line 1681
     :cond_0
     return-void
 .end method
@@ -1164,47 +1231,47 @@
     .parameter "event"
 
     .prologue
-    .line 1818
+    .line 1840
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     if-eqz v2, :cond_0
 
-    .line 1819
+    .line 1841
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v2, p1}, Lcom/htc/music/MiniPlayer;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v1
 
-    .line 1820
+    .line 1842
     .local v1, result:Z
     if-eqz v1, :cond_0
 
     const/4 v2, 0x1
 
-    .line 1827
+    .line 1849
     .end local v1           #result:Z
     :goto_0
     return v2
 
-    .line 1823
+    .line 1845
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 1824
+    .line 1846
     .local v0, activity:Landroid/app/Activity;
     if-eqz v0, :cond_1
 
-    .line 1825
+    .line 1847
     invoke-virtual {v0, p1}, Landroid/app/Activity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v2
 
     goto :goto_0
 
-    .line 1827
+    .line 1849
     :cond_1
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
@@ -1219,21 +1286,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1440
+    .line 1460
     invoke-super {p0}, Landroid/app/ActivityGroup;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    .line 1441
+    .line 1461
     .local v2, currentActivity:Landroid/app/Activity;
     if-eqz v2, :cond_0
 
-    .line 1450
+    .line 1470
     .end local v2           #currentActivity:Landroid/app/Activity;
     :goto_0
     return-object v2
 
-    .line 1443
+    .line 1463
     .restart local v2       #currentActivity:Landroid/app/Activity;
     :cond_0
     iget-object v4, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
@@ -1244,7 +1311,7 @@
 
     if-lez v4, :cond_4
 
-    .line 1444
+    .line 1464
     iget-object v4, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
 
     iget-object v5, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
@@ -1259,7 +1326,7 @@
 
     move-result-object v1
 
-    .line 1445
+    .line 1465
     .local v1, childView:Landroid/view/View;
     if-nez v1, :cond_1
 
@@ -1267,13 +1334,13 @@
 
     goto :goto_0
 
-    .line 1446
+    .line 1466
     :cond_1
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 1447
+    .line 1467
     .local v0, childContext:Landroid/content/Context;
     if-eqz v0, :cond_2
 
@@ -1284,7 +1351,7 @@
 
     goto :goto_0
 
-    .line 1448
+    .line 1468
     :cond_3
     check-cast v0, Landroid/app/Activity;
 
@@ -1297,7 +1364,7 @@
     :cond_4
     move-object v2, v3
 
-    .line 1450
+    .line 1470
     goto :goto_0
 .end method
 
@@ -1305,7 +1372,7 @@
     .locals 3
 
     .prologue
-    .line 1841
+    .line 1863
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     if-eqz v1, :cond_0
@@ -1314,7 +1381,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1842
+    .line 1864
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
@@ -1323,16 +1390,16 @@
 
     move-result-object v0
 
-    .line 1843
+    .line 1865
     .local v0, selectedCategoryItem:Lcom/htc/music/util/SourceItem;
     iget-object v1, v0, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
-    .line 1847
+    .line 1869
     .end local v0           #selectedCategoryItem:Lcom/htc/music/util/SourceItem;
     :goto_0
     return-object v1
 
-    .line 1846
+    .line 1868
     :cond_0
     const-string v1, "[MusicBrowserTabActivity]"
 
@@ -1340,7 +1407,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1847
+    .line 1869
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -1352,25 +1419,25 @@
     .locals 4
 
     .prologue
-    .line 439
+    .line 456
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-nez v2, :cond_0
 
-    .line 440
+    .line 457
     new-instance v2, Lcom/htc/widget/ActionBarDropDown;
 
     invoke-direct {v2, p0}, Lcom/htc/widget/ActionBarDropDown;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
-    .line 442
+    .line 459
     :cond_0
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-nez v2, :cond_1
 
-    .line 443
+    .line 460
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
     invoke-virtual {v2}, Lcom/htc/widget/ActionBarExt;->getCustomContainer()Lcom/htc/widget/ActionBarContainer;
@@ -1379,7 +1446,7 @@
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
-    .line 446
+    .line 463
     :cond_1
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
@@ -1387,11 +1454,11 @@
 
     move-result-object v1
 
-    .line 447
+    .line 464
     .local v1, parent:Landroid/view/ViewParent;
     if-nez v1, :cond_3
 
-    .line 449
+    .line 466
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
@@ -1401,38 +1468,38 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 462
+    .line 479
     .end local v1           #parent:Landroid/view/ViewParent;
     :cond_2
     :goto_0
     return-void
 
-    .line 450
+    .line 467
     .restart local v1       #parent:Landroid/view/ViewParent;
     :catch_0
     move-exception v0
 
-    .line 451
+    .line 468
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 453
+    .line 470
     .end local v0           #ex:Ljava/lang/Exception;
     :cond_3
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eq v2, v1, :cond_2
 
-    .line 454
+    .line 471
     const-string v2, "[MusicBrowserTabActivity]"
 
     const-string v3, "mActionBarCustomContainer already has a parent and its not actionBar!!"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 455
+    .line 472
     check-cast v1, Landroid/view/ViewGroup;
 
     .end local v1           #parent:Landroid/view/ViewParent;
@@ -1440,7 +1507,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 457
+    .line 474
     :try_start_1
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
@@ -1452,11 +1519,11 @@
 
     goto :goto_0
 
-    .line 458
+    .line 475
     :catch_1
     move-exception v0
 
-    .line 459
+    .line 476
     .restart local v0       #ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1467,7 +1534,7 @@
     .locals 2
 
     .prologue
-    .line 466
+    .line 483
     const/4 v0, 0x2
 
     iget v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOrientation:I
@@ -1479,10 +1546,10 @@
     :goto_0
     invoke-direct {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->resetMiniPlayer(Z)V
 
-    .line 467
+    .line 484
     return-void
 
-    .line 466
+    .line 483
     :cond_0
     const/4 v0, 0x0
 
@@ -1493,7 +1560,7 @@
     .locals 1
 
     .prologue
-    .line 1832
+    .line 1854
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActivityResumed:Z
 
     return v0
@@ -1504,12 +1571,12 @@
     .parameter "state"
 
     .prologue
-    .line 472
+    .line 489
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     if-eqz v1, :cond_0
 
-    .line 473
+    .line 490
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     const/16 v2, 0x2711
@@ -1518,20 +1585,20 @@
 
     move-result-object v0
 
-    .line 474
+    .line 491
     .local v0, player:Landroid/view/MenuItem;
     if-eqz v0, :cond_1
 
-    .line 475
+    .line 492
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 480
+    .line 497
     .end local v0           #player:Landroid/view/MenuItem;
     :cond_0
     :goto_0
     return-void
 
-    .line 477
+    .line 494
     .restart local v0       #player:Landroid/view/MenuItem;
     :cond_1
     const-string v1, "[MusicBrowserTabActivity]"
@@ -1550,30 +1617,30 @@
     .parameter "data"
 
     .prologue
-    .line 1192
+    .line 1212
     const v0, 0xc351
 
     if-ne p1, v0, :cond_0
 
-    .line 1193
+    .line 1213
     invoke-direct {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startListenStore()V
 
-    .line 1201
+    .line 1221
     :goto_0
     return-void
 
-    .line 1197
+    .line 1217
     :cond_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mForResultCaller:Lcom/htc/music/widget/MusicMaActivity;
 
     if-eqz v0, :cond_1
 
-    .line 1198
+    .line 1218
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mForResultCaller:Lcom/htc/music/widget/MusicMaActivity;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/music/widget/MusicMaActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 1200
+    .line 1220
     :cond_1
     const/4 v0, 0x0
 
@@ -1586,16 +1653,16 @@
     .locals 6
 
     .prologue
-    .line 1207
+    .line 1227
     const/4 v1, 0x0
 
-    .line 1208
+    .line 1228
     .local v1, childhandled:Z
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 1209
+    .line 1229
     .local v0, child:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1603,7 +1670,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 1210
+    .line 1230
     check-cast v0, Landroid/app/ActivityGroup;
 
     .end local v0           #child:Landroid/app/Activity;
@@ -1611,7 +1678,7 @@
 
     move-result-object v0
 
-    .line 1213
+    .line 1233
     .restart local v0       #child:Landroid/app/Activity;
     :cond_0
     if-eqz v0, :cond_1
@@ -1620,7 +1687,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 1214
+    .line 1234
     check-cast v0, Lcom/htc/music/widget/MusicMaActivity;
 
     .end local v0           #child:Landroid/app/Activity;
@@ -1628,15 +1695,15 @@
 
     move-result v1
 
-    .line 1217
+    .line 1237
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 1235
+    .line 1255
     :goto_0
     return-void
 
-    .line 1219
+    .line 1239
     :cond_2
     iget-object v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
@@ -1648,14 +1715,14 @@
 
     if-le v3, v4, :cond_4
 
-    .line 1220
+    .line 1240
     iget-object v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v3}, Lcom/htc/music/util/HistoryManager;->getLastHistory()Lcom/htc/music/util/HistoryManager$ActivityHistory;
 
     move-result-object v2
 
-    .line 1226
+    .line 1246
     .local v2, lastActivityHisory:Lcom/htc/music/util/HistoryManager$ActivityHistory;
     if-eqz v2, :cond_3
 
@@ -1663,7 +1730,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 1227
+    .line 1247
     iget-object v3, v2, Lcom/htc/music/util/HistoryManager$ActivityHistory;->previousTag:Ljava/lang/String;
 
     iget-object v4, v2, Lcom/htc/music/util/HistoryManager$ActivityHistory;->previousIntent:Landroid/content/Intent;
@@ -1674,7 +1741,7 @@
 
     goto :goto_0
 
-    .line 1229
+    .line 1249
     :cond_3
     const-string v3, "[MusicBrowserTabActivity]"
 
@@ -1684,7 +1751,7 @@
 
     goto :goto_0
 
-    .line 1233
+    .line 1253
     .end local v2           #lastActivityHisory:Lcom/htc/music/util/HistoryManager$ActivityHistory;
     :cond_4
     invoke-super {p0}, Landroid/app/ActivityGroup;->onBackPressed()V
@@ -1697,41 +1764,41 @@
     .parameter "newConfig"
 
     .prologue
-    .line 1033
+    .line 1053
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 1034
+    .line 1054
     iget v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOrientation:I
 
     iget v2, p1, Landroid/content/res/Configuration;->orientation:I
 
     if-ne v1, v2, :cond_1
 
-    .line 1051
+    .line 1071
     :cond_0
     :goto_0
     return-void
 
-    .line 1035
+    .line 1055
     :cond_1
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
     iput v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOrientation:I
 
-    .line 1038
+    .line 1058
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->inflateTitle()V
 
-    .line 1040
+    .line 1060
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     if-eqz v1, :cond_2
 
-    .line 1041
+    .line 1061
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 1044
+    .line 1064
     :cond_2
     const/4 v1, 0x2
 
@@ -1744,21 +1811,21 @@
     :goto_1
     invoke-direct {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->resetMiniPlayer(Z)V
 
-    .line 1047
+    .line 1067
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 1048
+    .line 1068
     .local v0, activity:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
-    .line 1049
+    .line 1069
     invoke-virtual {v0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     goto :goto_0
 
-    .line 1044
+    .line 1064
     .end local v0           #activity:Landroid/app/Activity;
     :cond_3
     const/4 v1, 0x0
@@ -1767,312 +1834,304 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 12
+    .locals 11
     .parameter "savedInstanceState"
 
     .prologue
-    const/4 v11, 0x0
+    const/4 v10, 0x0
 
-    .line 225
-    const-string v8, "[MusicBrowserTabActivity]"
+    .line 230
+    const-string v7, "[MusicBrowserTabActivity]"
 
-    const-string v9, "tab oncreate"
+    const-string v8, "tab oncreate"
 
-    invoke-static {v8, v9}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 226
+    .line 231
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onCreate(Landroid/os/Bundle;)V
 
-    .line 229
+    .line 232
+    const/4 v7, 0x3
+
+    invoke-virtual {p0, v7}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setVolumeControlStream(I)V
+
+    .line 233
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 232
+    .line 236
     .local v2, intent:Landroid/content/Intent;
     invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
 
-    move-result v8
+    move-result v7
 
-    if-eqz v8, :cond_2
+    if-eqz v7, :cond_1
 
-    .line 233
-    iget-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+    .line 237
+    iget-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
 
-    if-nez v8, :cond_0
+    if-nez v7, :cond_0
 
-    .line 234
-    new-instance v8, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;
+    .line 238
+    new-instance v7, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
-    invoke-direct {v8, p0, v9}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;Lcom/htc/music/browserlayer/MusicBrowserTabActivity$1;)V
+    invoke-direct {v7, p0, v8}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;Lcom/htc/music/browserlayer/MusicBrowserTabActivity$1;)V
 
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
-
-    .line 235
-    new-instance v1, Landroid/content/IntentFilter;
-
-    const-string v8, "com.htc.music.lockscreen_start"
-
-    invoke-direct {v1, v8}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    .line 236
-    .local v1, filter:Landroid/content/IntentFilter;
-    iget-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {p0, v8, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
 
     .line 239
+    new-instance v1, Landroid/content/IntentFilter;
+
+    const-string v7, "com.htc.music.lockscreen_start"
+
+    invoke-direct {v1, v7}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    .line 240
+    .local v1, filter:Landroid/content/IntentFilter;
+    iget-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v7, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 243
     .end local v1           #filter:Landroid/content/IntentFilter;
     :cond_0
-    const-string v8, "from-lockscreen"
+    const-string v7, "from-lockscreen"
 
-    invoke-virtual {v2, v8, v11}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v2, v7, v10}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 240
+    .line 245
     .local v3, isFromLockscreen:Z
-    const-string v8, "inner-transition"
+    const-string v7, "[MusicBrowserTabActivity]"
 
-    invoke-virtual {v2, v8, v11}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    move-result v4
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 241
-    .local v4, isInnerTransition:Z
-    const-string v8, "[MusicBrowserTabActivity]"
+    const-string v9, "[onCreate] bp. value="
 
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, "[onCreate] from-lockscreen="
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v8, v9}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 242
-    if-nez v4, :cond_1
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/htc/music/util/MusicUtils;->isBypassPincodeSettingsEnabled(Landroid/content/Context;)Z
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result v8
+    move-result-object v8
 
-    if-eqz v8, :cond_4
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 243
-    :cond_1
-    invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->disableKeyguard(Landroid/app/Activity;)V
+    move-result-object v8
 
-    .line 249
-    .end local v3           #isFromLockscreen:Z
-    .end local v4           #isInnerTransition:Z
-    :cond_2
-    :goto_0
-    const/16 v8, 0x8
+    invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v8}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->requestWindowFeature(I)Z
+    .line 246
+    if-eqz v3, :cond_1
 
-    .line 258
-    const-string v8, "SaveRender"
-
-    invoke-virtual {v2, v8, v11}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v5
-
-    .line 259
-    .local v5, nSaveDMR:I
-    const-string v8, "Render"
-
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 260
-    .local v6, szDMR:Ljava/lang/String;
-    const-string v8, "Server"
-
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    .line 247
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v7
 
-    .line 261
-    .local v7, szDMS:Ljava/lang/String;
-    if-eqz v5, :cond_3
+    invoke-static {v7}, Lcom/htc/music/util/MusicUtils;->isBypassPincodeSettingsEnabled(Landroid/content/Context;)Z
 
-    .line 264
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    .line 248
+    invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->disableKeyguard(Landroid/app/Activity;)V
+
+    .line 262
+    .end local v3           #isFromLockscreen:Z
+    :cond_1
+    :goto_0
+    const/16 v7, 0x8
+
+    invoke-virtual {p0, v7}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->requestWindowFeature(I)Z
+
+    .line 269
+    const-string v7, "SaveRender"
+
+    invoke-virtual {v2, v7, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v4
+
+    .line 270
+    .local v4, nSaveDMR:I
+    const-string v7, "Render"
+
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 271
+    .local v5, szDMR:Ljava/lang/String;
+    const-string v7, "Server"
+
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 272
+    .local v6, szDMS:Ljava/lang/String;
+    if-eqz v4, :cond_2
+
+    .line 275
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v7
 
-    const-string v9, "DLNA"
+    const-string v8, "DLNA"
 
-    const/4 v10, 0x7
+    const/4 v9, 0x7
 
-    invoke-virtual {v8, v9, v10}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v7, v8, v9}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 266
+    .line 277
     .local v0, Preferences:Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v8
+    move-result-object v7
 
-    const-string v9, "Render"
+    const-string v8, "Render"
 
-    invoke-interface {v8, v9, v6}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v7, v8, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v8
+    move-result-object v7
 
-    const-string v9, "server"
+    const-string v8, "server"
 
-    invoke-interface {v8, v9, v7}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v7, v8, v6}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-interface {v8}, Landroid/content/SharedPreferences$Editor;->apply()V
+    invoke-interface {v7}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 271
+    .line 282
     .end local v0           #Preferences:Landroid/content/SharedPreferences;
-    :cond_3
-    if-eqz p1, :cond_5
-
-    .line 281
-    :goto_1
-    const v8, 0x7f030003
-
-    invoke-virtual {p0, v8}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setContentView(I)V
-
-    .line 286
-    const v8, 0x7f08001a
-
-    invoke-virtual {p0, v8}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    check-cast v8, Landroid/widget/FrameLayout;
-
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
-
-    .line 288
-    new-instance v8, Lcom/htc/music/util/HistoryManager;
-
-    invoke-direct {v8, p0}, Lcom/htc/music/util/HistoryManager;-><init>(Landroid/app/ActivityGroup;)V
-
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
-
-    .line 290
-    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/content/res/Configuration;->orientation:I
-
-    iput v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOrientation:I
+    :cond_2
+    if-eqz p1, :cond_4
 
     .line 292
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->initTitle()V
+    :goto_1
+    const v7, 0x7f030003
 
-    .line 293
-    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->initMiniPlayer()V
+    invoke-virtual {p0, v7}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setContentView(I)V
 
     .line 297
+    const v7, 0x7f08001a
+
+    invoke-virtual {p0, v7}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/widget/FrameLayout;
+
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mContentView:Landroid/widget/FrameLayout;
+
+    .line 299
+    new-instance v7, Lcom/htc/music/util/HistoryManager;
+
+    invoke-direct {v7, p0}, Lcom/htc/music/util/HistoryManager;-><init>(Landroid/app/ActivityGroup;)V
+
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+
+    .line 301
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/content/res/Configuration;->orientation:I
+
+    iput v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOrientation:I
+
+    .line 303
+    invoke-direct {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->initTitle()V
+
+    .line 304
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->initMiniPlayer()V
+
+    .line 308
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->isInternalStorageEnough(Landroid/content/Context;)Z
 
-    move-result v8
+    move-result v7
 
-    iput-boolean v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
+    iput-boolean v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
 
-    .line 320
+    .line 331
     return-void
 
-    .line 245
-    .end local v5           #nSaveDMR:I
-    .end local v6           #szDMR:Ljava/lang/String;
-    .end local v7           #szDMS:Ljava/lang/String;
+    .line 250
+    .end local v4           #nSaveDMR:I
+    .end local v5           #szDMR:Ljava/lang/String;
+    .end local v6           #szDMS:Ljava/lang/String;
     .restart local v3       #isFromLockscreen:Z
-    .restart local v4       #isInnerTransition:Z
-    :cond_4
+    :cond_3
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-static {v8}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
+    invoke-static {v7}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 274
+    .line 285
     .end local v3           #isFromLockscreen:Z
-    .end local v4           #isInnerTransition:Z
-    .restart local v5       #nSaveDMR:I
-    .restart local v6       #szDMR:Ljava/lang/String;
-    .restart local v7       #szDMS:Ljava/lang/String;
-    :cond_5
-    const-string v8, "playlisturi"
+    .restart local v4       #nSaveDMR:I
+    .restart local v5       #szDMR:Ljava/lang/String;
+    .restart local v6       #szDMS:Ljava/lang/String;
+    :cond_4
+    const-string v7, "playlisturi"
 
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mPlaylistUri:Ljava/lang/String;
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mPlaylistUri:Ljava/lang/String;
 
-    .line 275
-    const-string v8, "genreid"
+    .line 286
+    const-string v7, "genreid"
 
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mGenreId:Ljava/lang/String;
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mGenreId:Ljava/lang/String;
 
-    .line 276
-    const-string v8, "composer"
+    .line 287
+    const-string v7, "composer"
 
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mComposer:Ljava/lang/String;
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mComposer:Ljava/lang/String;
 
-    .line 277
-    const-string v8, "artistid"
+    .line 288
+    const-string v7, "artistid"
 
-    invoke-virtual {v2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mArtistId:Ljava/lang/String;
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mArtistId:Ljava/lang/String;
 
-    .line 278
+    .line 289
     invoke-virtual {v2, p0}, Landroid/content/Intent;->resolveType(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    iput-object v8, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
+    iput-object v7, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
 
     goto :goto_1
 .end method
@@ -2083,10 +2142,10 @@
     .parameter "params"
 
     .prologue
-    .line 727
+    .line 747
     packed-switch p1, :pswitch_data_0
 
-    .line 732
+    .line 752
     invoke-super {p0, p1, p2}, Landroid/app/ActivityGroup;->onCreateDialog(ILandroid/os/Bundle;)Landroid/app/Dialog;
 
     move-result-object v0
@@ -2094,7 +2153,7 @@
     :goto_0
     return-object v0
 
-    .line 729
+    .line 749
     :pswitch_0
     invoke-static {p0}, Lcom/htc/music/util/OnlineMusicUtils;->createNoNetworkDialog(Landroid/app/Activity;)Landroid/app/Dialog;
 
@@ -2102,7 +2161,7 @@
 
     goto :goto_0
 
-    .line 727
+    .line 747
     nop
 
     :pswitch_data_0
@@ -2124,20 +2183,20 @@
 
     const/4 v2, 0x1
 
-    .line 571
+    .line 588
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingCreateOptionsMenu:Z
 
     if-eqz v0, :cond_0
 
-    .line 611
+    .line 628
     :goto_0
     return v2
 
-    .line 572
+    .line 589
     :cond_0
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingCreateOptionsMenu:Z
 
-    .line 575
+    .line 592
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     if-eqz v0, :cond_1
@@ -2146,7 +2205,7 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 576
+    .line 593
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "not same menu panel!! return directly"
@@ -2155,14 +2214,14 @@
 
     goto :goto_0
 
-    .line 581
+    .line 598
     :cond_1
     invoke-interface {p1}, Landroid/view/Menu;->clear()V
 
-    .line 582
+    .line 599
     iput-object p1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
-    .line 587
+    .line 604
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     const/16 v1, 0x2710
@@ -2183,147 +2242,127 @@
 
     invoke-interface {v0, v4}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 593
+    .line 610
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     const v1, 0xc350
 
     invoke-interface {v0, v2, v1, v3, v5}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 609
+    .line 626
     invoke-virtual {p0, p1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->onPrepareInnerOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 610
+    .line 627
     iput-boolean v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingCreateOptionsMenu:Z
 
     goto :goto_0
 .end method
 
 .method protected onDestroy()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 970
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mDestroyed:Z
-
-    .line 971
-    invoke-super {p0}, Landroid/app/ActivityGroup;->onDestroy()V
-
-    .line 973
-    const v1, 0x7f080006
-
-    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/sunny2/view/SSurfaceView;
-
-    .line 974
-    .local v0, view:Lcom/htc/sunny2/view/SSurfaceView;
-    if-eqz v0, :cond_0
-
-    .line 975
-    invoke-virtual {v0}, Lcom/htc/sunny2/view/SSurfaceView;->destroy()V
-
-    .line 976
-    const/4 v0, 0x0
-
-    .line 979
-    :cond_0
-    iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mForResultCaller:Lcom/htc/music/widget/MusicMaActivity;
-
-    .line 980
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
-
-    invoke-virtual {v1, p0}, Lcom/htc/music/util/HistoryManager;->saveHistoryInstanceState(Landroid/content/Context;)V
-
-    .line 981
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
-
-    invoke-virtual {v1}, Lcom/htc/music/util/HistoryManager;->clearHistory()V
-
-    .line 983
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    if-eqz v1, :cond_1
-
-    .line 984
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->release()V
-
-    .line 985
-    iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    .line 988
-    :cond_1
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
-
-    if-eqz v1, :cond_2
-
-    .line 989
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
-
-    invoke-virtual {v1}, Lcom/htc/music/widget/SourceSwitcherAdapter;->releaseAdapter()V
+    const/4 v1, 0x0
 
     .line 990
-    iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
+    const/4 v0, 0x1
 
-    .line 993
-    :cond_2
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
+    iput-boolean v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mDestroyed:Z
 
-    if-eqz v1, :cond_3
-
-    .line 994
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
-
-    invoke-virtual {v1}, Lcom/htc/music/widget/CategorySwitcherAdapter;->releaseAdapter()V
-
-    .line 995
-    iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
-
-    .line 998
-    :cond_3
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
-
-    if-eqz v1, :cond_4
+    .line 991
+    invoke-super {p0}, Landroid/app/ActivityGroup;->onDestroy()V
 
     .line 999
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mForResultCaller:Lcom/htc/music/widget/MusicMaActivity;
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    .line 1000
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+
+    invoke-virtual {v0, p0}, Lcom/htc/music/util/HistoryManager;->saveHistoryInstanceState(Landroid/content/Context;)V
+
+    .line 1001
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+
+    invoke-virtual {v0}, Lcom/htc/music/util/HistoryManager;->clearHistory()V
 
     .line 1003
-    :cond_4
-    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
-    move-result v1
-
-    if-eqz v1, :cond_5
+    if-eqz v0, :cond_0
 
     .line 1004
-    invoke-static {p0}, Lcom/htc/music/util/ScreenStatus;->unRegisterReceiver(Landroid/app/Activity;)V
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    invoke-virtual {v0}, Lcom/htc/music/MiniPlayer;->release()V
 
     .line 1005
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
-    if-eqz v1, :cond_5
+    .line 1008
+    :cond_0
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
-    .line 1006
-    iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    .line 1009
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
-    .line 1007
-    iput-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+    invoke-virtual {v0}, Lcom/htc/music/widget/SourceSwitcherAdapter;->releaseAdapter()V
 
     .line 1010
-    :cond_5
+    iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
+
+    .line 1013
+    :cond_1
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
+
+    if-eqz v0, :cond_2
+
+    .line 1014
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
+
+    invoke-virtual {v0}, Lcom/htc/music/widget/CategorySwitcherAdapter;->releaseAdapter()V
+
+    .line 1015
+    iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
+
+    .line 1018
+    :cond_2
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
+
+    if-eqz v0, :cond_3
+
+    .line 1019
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    .line 1023
+    :cond_3
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 1024
+    invoke-static {p0}, Lcom/htc/music/util/ScreenStatus;->unRegisterReceiver(Landroid/app/Activity;)V
+
+    .line 1025
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+
+    if-eqz v0, :cond_4
+
+    .line 1026
+    iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    .line 1027
+    iput-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mEventReceiver:Landroid/content/BroadcastReceiver;
+
+    .line 1030
+    :cond_4
     return-void
 .end method
 
@@ -2332,478 +2371,475 @@
     .parameter "intent"
 
     .prologue
-    .line 128
-    const-string v11, "[MusicBrowserTabActivity]"
-
-    const-string v12, "tab receive new intent"
-
-    invoke-static {v11, v12}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 129
-    invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onNewIntent(Landroid/content/Intent;)V
+    const/4 v13, 0x0
 
     .line 131
-    const-string v11, "from-lockscreen"
+    const-string v10, "[MusicBrowserTabActivity]"
 
-    const/4 v12, 0x0
+    const-string v11, "tab receive new intent"
 
-    invoke-virtual {p1, v11, v12}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-static {v10, v11}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 132
+    invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onNewIntent(Landroid/content/Intent;)V
+
+    .line 135
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_0
+
+    .line 136
+    const-string v10, "from-lockscreen"
+
+    invoke-virtual {p1, v10, v13}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 132
+    .line 138
     .local v3, isFromLockscreen:Z
-    const-string v11, "inner-transition"
+    const-string v10, "[MusicBrowserTabActivity]"
 
-    const/4 v12, 0x0
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v11, v12}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v4
+    const-string v12, "[onNewIntent] bp. value="
 
-    .line 133
-    .local v4, isInnerTransition:Z
-    const-string v11, "[MusicBrowserTabActivity]"
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v12, Ljava/lang/StringBuilder;
+    move-result-object v11
 
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v13, "[onNewIntent] from-lockscreen="
+    move-result-object v11
 
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v11
 
-    invoke-virtual {v12, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v10, v11}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v12
+    .line 140
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-static {v11, v12}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 136
-    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_1
-
-    .line 137
+    .line 141
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 138
+    .line 142
     .local v1, current:Landroid/app/Activity;
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_6
 
-    instance-of v11, v1, Lcom/htc/music/widget/MusicMaActivity;
+    instance-of v10, v1, Lcom/htc/music/widget/MusicMaActivity;
 
-    if-eqz v11, :cond_7
+    if-eqz v10, :cond_6
 
-    move-object v6, v1
+    move-object v5, v1
 
-    .line 139
-    check-cast v6, Lcom/htc/music/widget/MusicMaActivity;
+    .line 143
+    check-cast v5, Lcom/htc/music/widget/MusicMaActivity;
 
-    .line 140
-    .local v6, maActivity:Lcom/htc/music/widget/MusicMaActivity;
-    invoke-virtual {v6}, Lcom/htc/music/widget/MusicMaActivity;->isByPass()Z
+    .line 144
+    .local v5, maActivity:Lcom/htc/music/widget/MusicMaActivity;
+    invoke-virtual {v5}, Lcom/htc/music/widget/MusicMaActivity;->isByPass()Z
 
-    move-result v11
+    move-result v10
 
-    if-eqz v11, :cond_6
-
-    if-nez v4, :cond_0
-
-    if-eqz v3, :cond_6
+    if-eqz v10, :cond_5
 
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v11
-
-    invoke-static {v11}, Lcom/htc/music/util/MusicUtils;->isBypassPincodeSettingsEnabled(Landroid/content/Context;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_6
-
-    .line 142
-    :cond_0
-    invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->disableKeyguard(Landroid/app/Activity;)V
-
-    .line 152
-    .end local v1           #current:Landroid/app/Activity;
-    .end local v6           #maActivity:Lcom/htc/music/widget/MusicMaActivity;
-    :cond_1
-    :goto_0
-    const-string v11, "SaveRender"
-
-    const/4 v12, 0x0
-
-    invoke-virtual {p1, v11, v12}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v7
-
-    .line 153
-    .local v7, nSaveDMR:I
-    const-string v11, "Render"
-
-    invoke-virtual {p1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 154
-    .local v9, szDMR:Ljava/lang/String;
-    const-string v11, "Server"
-
-    invoke-virtual {p1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 155
-    .local v10, szDMS:Ljava/lang/String;
-    if-eqz v7, :cond_2
+    invoke-static {v10}, Lcom/htc/music/util/MusicUtils;->isBypassPincodeSettingsEnabled(Landroid/content/Context;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_5
+
+    .line 146
+    invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->disableKeyguard(Landroid/app/Activity;)V
+
+    .line 157
+    .end local v1           #current:Landroid/app/Activity;
+    .end local v3           #isFromLockscreen:Z
+    .end local v5           #maActivity:Lcom/htc/music/widget/MusicMaActivity;
+    :cond_0
+    :goto_0
+    const-string v10, "SaveRender"
+
+    invoke-virtual {p1, v10, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v6
 
     .line 158
+    .local v6, nSaveDMR:I
+    const-string v10, "Render"
+
+    invoke-virtual {p1, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 159
+    .local v8, szDMR:Ljava/lang/String;
+    const-string v10, "Server"
+
+    invoke-virtual {p1, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 160
+    .local v9, szDMS:Ljava/lang/String;
+    if-eqz v6, :cond_1
+
+    .line 163
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v11
+    move-result-object v10
 
-    const-string v12, "DLNA"
+    const-string v11, "DLNA"
 
-    const/4 v13, 0x7
+    const/4 v12, 0x7
 
-    invoke-virtual {v11, v12, v13}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v10, v11, v12}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 161
+    .line 166
     .local v0, Preferences:Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v11
+    move-result-object v10
 
-    const-string v12, "Render"
+    const-string v11, "Render"
 
-    invoke-interface {v11, v12, v9}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v10, v11, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v11
+    move-result-object v10
 
-    const-string v12, "server"
+    const-string v11, "server"
 
-    invoke-interface {v11, v12, v10}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v10, v11, v9}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-interface {v11}, Landroid/content/SharedPreferences$Editor;->apply()V
+    invoke-interface {v10}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 167
+    .line 172
     .end local v0           #Preferences:Landroid/content/SharedPreferences;
-    :cond_2
-    const-string v11, "playlisturi"
+    :cond_1
+    const-string v10, "playlisturi"
 
-    invoke-virtual {p1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v10
 
-    iput-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mPlaylistUri:Ljava/lang/String;
-
-    .line 168
-    const-string v11, "genreid"
-
-    invoke-virtual {p1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v11
-
-    iput-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mGenreId:Ljava/lang/String;
-
-    .line 169
-    const-string v11, "composer"
-
-    invoke-virtual {p1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v11
-
-    iput-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mComposer:Ljava/lang/String;
-
-    .line 170
-    const-string v11, "artistid"
-
-    invoke-virtual {p1, v11}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v11
-
-    iput-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mArtistId:Ljava/lang/String;
-
-    .line 171
-    invoke-virtual {p1, p0}, Landroid/content/Intent;->resolveType(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v11
-
-    iput-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
+    iput-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mPlaylistUri:Ljava/lang/String;
 
     .line 173
+    const-string v10, "genreid"
+
+    invoke-virtual {p1, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v10
+
+    iput-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mGenreId:Ljava/lang/String;
+
+    .line 174
+    const-string v10, "composer"
+
+    invoke-virtual {p1, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v10
+
+    iput-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mComposer:Ljava/lang/String;
+
+    .line 175
+    const-string v10, "artistid"
+
+    invoke-virtual {p1, v10}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v10
+
+    iput-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mArtistId:Ljava/lang/String;
+
+    .line 176
+    invoke-virtual {p1, p0}, Landroid/content/Intent;->resolveType(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v10
+
+    iput-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
+
+    .line 178
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->isInternalStorageEnough(Landroid/content/Context;)Z
 
-    move-result v11
+    move-result v10
 
-    iput-boolean v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
-
-    .line 179
-    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->inflateTitle()V
-
-    .line 180
-    iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    if-eqz v11, :cond_3
-
-    .line 181
-    iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
-
-    invoke-virtual {v11}, Lcom/htc/music/MiniPlayer;->inflateView()V
+    iput-boolean v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
 
     .line 184
-    :cond_3
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->inflateTitle()V
+
+    .line 185
+    iget-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    if-eqz v10, :cond_2
+
+    .line 186
+    iget-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
+
+    invoke-virtual {v10}, Lcom/htc/music/MiniPlayer;->inflateView()V
+
+    .line 189
+    :cond_2
+    iget-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
+
+    if-eqz v10, :cond_3
+
+    const-string v10, ""
+
     iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
 
-    if-eqz v11, :cond_4
+    invoke-virtual {v11}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    const-string v11, ""
+    move-result-object v11
 
-    iget-object v12, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
+    invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v12}, Ljava/lang/String;->trim()Ljava/lang/String;
+    move-result v10
 
-    move-result-object v12
+    if-eqz v10, :cond_9
 
-    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_a
-
-    .line 190
-    :cond_4
+    .line 195
+    :cond_3
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    .line 191
+    .line 196
     .local v2, currentActivity:Landroid/app/Activity;
-    if-nez v2, :cond_9
+    if-nez v2, :cond_8
 
-    .line 192
-    iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+    .line 197
+    iget-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
-    invoke-virtual {v11}, Lcom/htc/music/util/HistoryManager;->getLastHistory()Lcom/htc/music/util/HistoryManager$ActivityHistory;
+    invoke-virtual {v10}, Lcom/htc/music/util/HistoryManager;->getLastHistory()Lcom/htc/music/util/HistoryManager$ActivityHistory;
 
-    move-result-object v5
+    move-result-object v4
 
-    .line 193
-    .local v5, item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
-    if-eqz v5, :cond_8
+    .line 198
+    .local v4, item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
+    if-eqz v4, :cond_7
 
-    .line 194
-    iget-object v11, v5, Lcom/htc/music/util/HistoryManager$ActivityHistory;->currentTag:Ljava/lang/String;
+    .line 199
+    iget-object v10, v4, Lcom/htc/music/util/HistoryManager$ActivityHistory;->currentTag:Ljava/lang/String;
 
-    iget-object v12, v5, Lcom/htc/music/util/HistoryManager$ActivityHistory;->currentIntent:Landroid/content/Intent;
+    iget-object v11, v4, Lcom/htc/music/util/HistoryManager$ActivityHistory;->currentIntent:Landroid/content/Intent;
 
-    const/4 v13, 0x3
+    const/4 v12, 0x3
 
-    invoke-virtual {p0, v11, v12, v13}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-virtual {p0, v10, v11, v12}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;I)V
 
-    .line 221
+    .line 226
     .end local v2           #currentActivity:Landroid/app/Activity;
-    .end local v5           #item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
-    :cond_5
+    .end local v4           #item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
+    :cond_4
     :goto_1
     return-void
 
-    .line 144
-    .end local v7           #nSaveDMR:I
-    .end local v9           #szDMR:Ljava/lang/String;
-    .end local v10           #szDMS:Ljava/lang/String;
+    .line 148
+    .end local v6           #nSaveDMR:I
+    .end local v8           #szDMR:Ljava/lang/String;
+    .end local v9           #szDMS:Ljava/lang/String;
     .restart local v1       #current:Landroid/app/Activity;
-    .restart local v6       #maActivity:Lcom/htc/music/widget/MusicMaActivity;
+    .restart local v3       #isFromLockscreen:Z
+    .restart local v5       #maActivity:Lcom/htc/music/widget/MusicMaActivity;
+    :cond_5
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v10
+
+    invoke-static {v10}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
+
+    goto/16 :goto_0
+
+    .line 151
+    .end local v5           #maActivity:Lcom/htc/music/widget/MusicMaActivity;
     :cond_6
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v11
+    move-result-object v10
 
-    invoke-static {v11}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
-
-    goto/16 :goto_0
-
-    .line 147
-    .end local v6           #maActivity:Lcom/htc/music/widget/MusicMaActivity;
-    :cond_7
-    invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v11
-
-    invoke-static {v11}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
+    invoke-static {v10}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
 
     goto/16 :goto_0
 
-    .line 196
+    .line 201
     .end local v1           #current:Landroid/app/Activity;
+    .end local v3           #isFromLockscreen:Z
     .restart local v2       #currentActivity:Landroid/app/Activity;
-    .restart local v5       #item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
-    .restart local v7       #nSaveDMR:I
-    .restart local v9       #szDMR:Ljava/lang/String;
-    .restart local v10       #szDMS:Ljava/lang/String;
-    :cond_8
-    iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+    .restart local v4       #item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
+    .restart local v6       #nSaveDMR:I
+    .restart local v8       #szDMR:Ljava/lang/String;
+    .restart local v9       #szDMS:Ljava/lang/String;
+    :cond_7
+    iget-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
-    iget-object v12, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
+    iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mSourceSwitcherAdapter:Lcom/htc/music/widget/SourceSwitcherAdapter;
 
-    invoke-virtual {v11, p0, v12}, Lcom/htc/music/util/HistoryManager;->getLastSourceItem(Landroid/content/Context;Lcom/htc/music/widget/SourceSwitcherAdapter;)Lcom/htc/music/util/SourceItem;
+    invoke-virtual {v10, p0, v11}, Lcom/htc/music/util/HistoryManager;->getLastSourceItem(Landroid/content/Context;Lcom/htc/music/widget/SourceSwitcherAdapter;)Lcom/htc/music/util/SourceItem;
 
-    move-result-object v8
+    move-result-object v7
 
-    .line 197
-    .local v8, selectedSourceItem:Lcom/htc/music/util/SourceItem;
-    iget-object v11, v8, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
+    .line 202
+    .local v7, selectedSourceItem:Lcom/htc/music/util/SourceItem;
+    iget-object v10, v7, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
 
-    iget-object v12, v8, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+    iget-object v11, v7, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
-    invoke-virtual {p0, v11, v12}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-virtual {p0, v10, v11}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_1
 
-    .line 203
-    .end local v5           #item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
-    .end local v8           #selectedSourceItem:Lcom/htc/music/util/SourceItem;
-    :cond_9
-    iget-boolean v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
+    .line 208
+    .end local v4           #item:Lcom/htc/music/util/HistoryManager$ActivityHistory;
+    .end local v7           #selectedSourceItem:Lcom/htc/music/util/SourceItem;
+    :cond_8
+    iget-boolean v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
 
-    if-nez v11, :cond_5
+    if-nez v10, :cond_4
 
-    .line 204
+    .line 209
     invoke-direct {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->showInternalStorageErrorMode()V
 
     goto :goto_1
 
-    .line 217
+    .line 222
     .end local v2           #currentActivity:Landroid/app/Activity;
-    :cond_a
-    iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
+    :cond_9
+    iget-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
-    invoke-virtual {v11}, Lcom/htc/music/util/HistoryManager;->clearHistory()V
+    invoke-virtual {v10}, Lcom/htc/music/util/HistoryManager;->clearHistory()V
 
-    .line 219
-    iget-object v11, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
+    .line 224
+    iget-object v10, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMimeType:Ljava/lang/String;
 
-    invoke-direct {p0, v11, p1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startIndicateActivity(Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-direct {p0, v10, p1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startIndicateActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_1
 .end method
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
-    .locals 6
+    .locals 7
     .parameter "item"
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    .line 677
+    .line 694
     if-nez p1, :cond_0
 
-    move v2, v3
+    move v3, v4
 
-    .line 719
+    .line 739
     :goto_0
-    return v2
+    return v3
 
-    .line 678
+    .line 695
     :cond_0
-    iget-boolean v4, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
+    iget-boolean v5, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
 
-    if-ne v2, v4, :cond_1
+    if-ne v3, v5, :cond_1
 
-    move v2, v3
+    move v3, v4
 
     goto :goto_0
 
-    .line 680
+    .line 697
     :cond_1
-    iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
+    iput-boolean v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
 
-    .line 681
-    invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
-
-    .line 682
+    .line 698
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    move-result v4
+    move-result v2
 
-    packed-switch v4, :pswitch_data_0
+    .line 699
+    .local v2, itemId:I
+    const/16 v5, 0x2711
 
-    .line 713
+    if-eq v2, v5, :cond_2
+
+    .line 700
+    invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
+
+    .line 702
+    :cond_2
+    packed-switch v2, :pswitch_data_0
+
+    .line 733
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 714
+    .line 734
     .local v1, currentActivity:Landroid/app/Activity;
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    .line 715
-    .local v2, result:Z
-    if-eqz v1, :cond_2
+    .line 735
+    .local v3, result:Z
+    if-eqz v1, :cond_3
 
-    .line 716
+    .line 736
     invoke-virtual {v1, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
-    .line 718
-    :cond_2
-    iput-boolean v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
+    .line 738
+    :cond_3
+    iput-boolean v4, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
 
     goto :goto_0
 
-    .line 684
+    .line 704
     .end local v1           #currentActivity:Landroid/app/Activity;
-    .end local v2           #result:Z
+    .end local v3           #result:Z
     :pswitch_0
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 685
+    .line 705
     .local v0, currectActivity:Landroid/app/Activity;
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    .line 686
-    const-string v4, ""
+    .line 706
+    const-string v5, ""
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    invoke-virtual {v0, v4, v3, v5, v3}, Landroid/app/Activity;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
+    invoke-virtual {v0, v5, v4, v6, v4}, Landroid/app/Activity;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
 
-    .line 688
-    :cond_3
-    iput-boolean v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
+    .line 708
+    :cond_4
+    iput-boolean v4, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
 
     goto :goto_0
 
-    .line 692
+    .line 712
     .end local v0           #currectActivity:Landroid/app/Activity;
     :pswitch_1
     invoke-direct {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->launchGlancePage()V
 
-    .line 693
-    iput-boolean v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
+    .line 713
+    iput-boolean v4, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingOptionsItemSelected:Z
 
     goto :goto_0
 
-    .line 682
+    .line 702
     :pswitch_data_0
     .packed-switch 0x2710
         :pswitch_0
@@ -2815,26 +2851,26 @@
     .locals 5
 
     .prologue
-    .line 1620
+    .line 1640
     invoke-super {p0}, Landroid/app/ActivityGroup;->onPause()V
 
-    .line 1621
+    .line 1641
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActivityResumed:Z
 
-    .line 1623
+    .line 1643
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    .line 1624
+    .line 1644
     .local v0, win:Landroid/view/Window;
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
-    .line 1625
+    .line 1645
     .local v1, winParams:Landroid/view/WindowManager$LayoutParams;
     iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -2844,7 +2880,7 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 1626
+    .line 1646
     const-string v2, "[MusicBrowserTabActivity]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2873,10 +2909,10 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1627
+    .line 1647
     invoke-virtual {v0, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 1628
+    .line 1648
     return-void
 .end method
 
@@ -2887,41 +2923,41 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 616
+    .line 633
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingCreateOptionsMenu:Z
 
-    .line 617
+    .line 634
     const/4 v1, 0x2
 
     invoke-interface {p1, v1}, Landroid/view/Menu;->removeGroup(I)V
 
-    .line 619
+    .line 636
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 620
+    .line 637
     .local v0, currentActivity:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
-    .line 621
+    .line 638
     const v1, 0xc350
 
     invoke-interface {p1, v1}, Landroid/view/Menu;->removeItem(I)V
 
-    .line 623
+    .line 640
     invoke-virtual {v0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 624
+    .line 641
     invoke-virtual {v0, p1}, Landroid/app/Activity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 626
+    .line 643
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingCreateOptionsMenu:Z
 
-    .line 628
+    .line 645
     return v2
 .end method
 
@@ -2936,35 +2972,35 @@
 
     const/4 v4, 0x1
 
-    .line 634
+    .line 651
     iget-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingPrepareOptionsMenu:Z
 
     if-ne v4, v2, :cond_1
 
-    .line 671
+    .line 688
     :cond_0
     :goto_0
     return v4
 
-    .line 635
+    .line 652
     :cond_1
     iget-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingCreateOptionsMenu:Z
 
     if-eq v4, v2, :cond_0
 
-    .line 637
+    .line 654
     iput-boolean v4, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHandlingPrepareOptionsMenu:Z
 
-    .line 641
+    .line 658
     iget v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mOrientation:I
 
     if-ne v5, v2, :cond_4
 
-    .line 642
+    .line 659
     invoke-interface {p1, v3}, Landroid/view/Menu;->removeItem(I)V
 
-    .line 644
-    const v2, 0x7f07011b
+    .line 661
+    const v2, 0x7f07011c
 
     invoke-interface {p1, v4, v3, v4, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -2980,13 +3016,13 @@
 
     move-result-object v1
 
-    .line 646
+    .line 663
     .local v1, player:Landroid/view/MenuItem;
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     if-eqz v2, :cond_3
 
-    .line 647
+    .line 664
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v2}, Lcom/htc/music/MiniPlayer;->isLoadTrackSuccess()Z
@@ -2995,21 +3031,21 @@
 
     invoke-interface {v1, v2}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 665
+    .line 682
     .end local v1           #player:Landroid/view/MenuItem;
     :goto_1
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 666
+    .line 683
     .local v0, currentActivity:Landroid/app/Activity;
     if-eqz v0, :cond_2
 
-    .line 668
+    .line 685
     invoke-virtual {v0, p1}, Landroid/app/Activity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 670
+    .line 687
     :cond_2
     const/4 v2, 0x0
 
@@ -3017,7 +3053,7 @@
 
     goto :goto_0
 
-    .line 649
+    .line 666
     .end local v0           #currentActivity:Landroid/app/Activity;
     .restart local v1       #player:Landroid/view/MenuItem;
     :cond_3
@@ -3029,7 +3065,7 @@
 
     goto :goto_1
 
-    .line 653
+    .line 670
     .end local v1           #player:Landroid/view/MenuItem;
     :cond_4
     invoke-interface {p1, v3}, Landroid/view/Menu;->removeItem(I)V
@@ -3042,17 +3078,17 @@
     .parameter "state"
 
     .prologue
-    .line 1810
+    .line 1832
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "tab onRestoreInstanceState"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1811
+    .line 1833
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 1812
+    .line 1834
     return-void
 .end method
 
@@ -3060,41 +3096,41 @@
     .locals 3
 
     .prologue
-    .line 1548
+    .line 1568
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActivityResumed:Z
 
-    .line 1551
+    .line 1571
     invoke-super {p0}, Landroid/app/ActivityGroup;->onResume()V
 
-    .line 1553
+    .line 1573
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     if-eqz v0, :cond_0
 
-    .line 1554
+    .line 1574
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 1557
+    .line 1577
     :cond_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     if-eqz v0, :cond_1
 
-    .line 1558
+    .line 1578
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v0, p0}, Lcom/htc/music/MiniPlayer;->addLoadSuccessListener(Lcom/htc/music/MiniPlayer$ILoadSuccessListener;)V
 
-    .line 1559
+    .line 1579
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v0}, Lcom/htc/music/MiniPlayer;->startMonitor()V
 
-    .line 1563
+    .line 1583
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
@@ -3102,7 +3138,7 @@
 
     if-nez v0, :cond_2
 
-    .line 1564
+    .line 1584
     invoke-static {}, Landroid/os/Looper;->myQueue()Landroid/os/MessageQueue;
 
     move-result-object v0
@@ -3115,7 +3151,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/MessageQueue;->addIdleHandler(Landroid/os/MessageQueue$IdleHandler;)V
 
-    .line 1567
+    .line 1587
     :cond_2
     return-void
 .end method
@@ -3125,22 +3161,22 @@
     .parameter "outState"
 
     .prologue
-    .line 1803
+    .line 1825
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "tab onSaveInstanceState"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1804
+    .line 1826
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 1805
+    .line 1827
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v0, p0}, Lcom/htc/music/util/HistoryManager;->saveHistoryInstanceState(Landroid/content/Context;)V
 
-    .line 1806
+    .line 1828
     return-void
 .end method
 
@@ -3148,20 +3184,20 @@
     .locals 1
 
     .prologue
-    .line 324
+    .line 335
     invoke-super {p0}, Landroid/app/ActivityGroup;->onStart()V
 
-    .line 326
+    .line 337
     invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 327
+    .line 338
     invoke-static {p0}, Lcom/htc/music/util/ScreenStatus;->registerReceiver(Landroid/app/Activity;)V
 
-    .line 329
+    .line 340
     :cond_0
     return-void
 .end method
@@ -3170,37 +3206,37 @@
     .locals 2
 
     .prologue
-    .line 1633
+    .line 1653
     :try_start_0
     invoke-super {p0}, Landroid/app/ActivityGroup;->onStop()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1640
+    .line 1660
     :goto_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     if-eqz v1, :cond_0
 
-    .line 1641
+    .line 1661
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->removeLoadSuccessListener()V
 
-    .line 1642
+    .line 1662
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMiniPlayer:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v1}, Lcom/htc/music/MiniPlayer;->stopMonitor()V
 
-    .line 1647
+    .line 1667
     :cond_0
     return-void
 
-    .line 1634
+    .line 1654
     :catch_0
     move-exception v0
 
-    .line 1635
+    .line 1655
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3212,17 +3248,17 @@
     .parameter "enabled"
 
     .prologue
-    .line 1318
+    .line 1338
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_0
 
-    .line 1319
+    .line 1339
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/ActionBarContainer;->setBackUpEnabled(Z)V
 
-    .line 1321
+    .line 1341
     :cond_0
     return-void
 .end method
@@ -3233,7 +3269,7 @@
     .parameter "labelResId"
 
     .prologue
-    .line 1338
+    .line 1358
     return-void
 .end method
 
@@ -3243,7 +3279,7 @@
     .parameter "label"
 
     .prologue
-    .line 1345
+    .line 1365
     return-void
 .end method
 
@@ -3252,7 +3288,7 @@
     .parameter "clickListener"
 
     .prologue
-    .line 1351
+    .line 1371
     return-void
 .end method
 
@@ -3261,25 +3297,25 @@
     .parameter "setVisibile"
 
     .prologue
-    .line 1324
+    .line 1344
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_0
 
-    .line 1325
+    .line 1345
     if-eqz p1, :cond_1
 
-    .line 1326
+    .line 1346
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/ActionBarContainer;->setBackUpEnabled(Z)V
 
-    .line 1331
+    .line 1351
     :cond_0
     :goto_0
     return-void
 
-    .line 1328
+    .line 1348
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
@@ -3293,27 +3329,27 @@
     .parameter "setVisible"
 
     .prologue
-    .line 1306
+    .line 1326
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_0
 
-    .line 1307
+    .line 1327
     if-eqz p1, :cond_1
 
-    .line 1308
+    .line 1328
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setProgressVisibility(I)V
 
-    .line 1313
+    .line 1333
     :cond_0
     :goto_0
     return-void
 
-    .line 1310
+    .line 1330
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
@@ -3329,7 +3365,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 1404
+    .line 1424
     return-void
 .end method
 
@@ -3339,7 +3375,7 @@
     .parameter "labelResId"
 
     .prologue
-    .line 1421
+    .line 1441
     return-void
 .end method
 
@@ -3349,7 +3385,7 @@
     .parameter "label"
 
     .prologue
-    .line 1428
+    .line 1448
     return-void
 .end method
 
@@ -3358,7 +3394,7 @@
     .parameter "clickListener"
 
     .prologue
-    .line 1434
+    .line 1454
     return-void
 .end method
 
@@ -3367,7 +3403,7 @@
     .parameter "setVisibile"
 
     .prologue
-    .line 1414
+    .line 1434
     return-void
 .end method
 
@@ -3376,7 +3412,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 1372
+    .line 1392
     return-void
 .end method
 
@@ -3386,7 +3422,7 @@
     .parameter "labelResId"
 
     .prologue
-    .line 1383
+    .line 1403
     return-void
 .end method
 
@@ -3396,7 +3432,7 @@
     .parameter "label"
 
     .prologue
-    .line 1390
+    .line 1410
     return-void
 .end method
 
@@ -3405,7 +3441,7 @@
     .parameter "clickListener"
 
     .prologue
-    .line 1396
+    .line 1416
     return-void
 .end method
 
@@ -3414,7 +3450,7 @@
     .parameter "setVisibile"
 
     .prologue
-    .line 1376
+    .line 1396
     return-void
 .end method
 
@@ -3429,26 +3465,26 @@
 
     const/4 v2, 0x0
 
-    .line 852
+    .line 872
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "setCategorySwitcherStyleTitle"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 857
+    .line 877
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 862
+    .line 882
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isLandingPageEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 863
+    .line 883
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v0}, Lcom/htc/music/util/HistoryManager;->getHistorySize()I
@@ -3459,17 +3495,17 @@
 
     if-le v0, v1, :cond_2
 
-    .line 864
+    .line 884
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
-    .line 904
+    .line 924
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_1
 
-    .line 905
+    .line 925
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v0}, Lcom/htc/music/util/HistoryManager;->getHistorySize()I
@@ -3478,24 +3514,24 @@
 
     if-le v0, v3, :cond_7
 
-    .line 907
+    .line 927
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     invoke-virtual {v0, v3}, Lcom/htc/widget/ActionBarContainer;->setBackUpEnabled(Z)V
 
-    .line 908
+    .line 928
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHeaderBarBackClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setBackUpOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 914
+    .line 934
     :cond_1
     :goto_1
     return-void
 
-    .line 866
+    .line 886
     :cond_2
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
@@ -3503,35 +3539,35 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 867
+    .line 887
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategoryItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnItemClickListener(Lcom/htc/widget/HtcAdapterView$OnItemClickListener;)V
 
-    .line 868
+    .line 888
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarPopupBubbleClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 869
+    .line 889
     if-eqz p3, :cond_3
 
-    .line 870
+    .line 890
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
     goto :goto_0
 
-    .line 872
+    .line 892
     :cond_3
     invoke-direct {p0, v3}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
     goto :goto_0
 
-    .line 876
+    .line 896
     :cond_4
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
@@ -3541,12 +3577,12 @@
 
     if-le v0, v3, :cond_5
 
-    .line 877
+    .line 897
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
     goto :goto_0
 
-    .line 879
+    .line 899
     :cond_5
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
@@ -3554,35 +3590,35 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 880
+    .line 900
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategoryItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnItemClickListener(Lcom/htc/widget/HtcAdapterView$OnItemClickListener;)V
 
-    .line 881
+    .line 901
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarPopupBubbleClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 882
+    .line 902
     if-eqz p3, :cond_6
 
-    .line 883
+    .line 903
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
     goto :goto_0
 
-    .line 885
+    .line 905
     :cond_6
     invoke-direct {p0, v3}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
     goto :goto_0
 
-    .line 910
+    .line 930
     :cond_7
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
@@ -3596,45 +3632,45 @@
     .parameter "manualMainTitle"
 
     .prologue
-    .line 795
+    .line 815
     invoke-virtual {p0, p1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setSourceSwitcherStyleTitle(Z)V
 
-    .line 797
+    .line 817
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 798
+    .line 818
     if-nez p1, :cond_0
 
-    .line 799
+    .line 819
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     const v1, 0x7f070034
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setPrimaryText(I)V
 
-    .line 803
+    .line 823
     :cond_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_1
 
-    .line 804
+    .line 824
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setBackUpEnabled(Z)V
 
-    .line 805
+    .line 825
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHeaderBarBackClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setBackUpOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 808
+    .line 828
     :cond_1
     return-void
 .end method
@@ -3644,55 +3680,55 @@
     .parameter "manualMainTitle"
 
     .prologue
-    .line 941
+    .line 961
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "setDLNASwitchStyleTitle"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 948
+    .line 968
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_1
 
-    .line 949
+    .line 969
     if-nez p1, :cond_0
 
-    .line 950
+    .line 970
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     const v1, 0x7f070034
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setPrimaryText(I)V
 
-    .line 952
+    .line 972
     :cond_0
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
-    .line 956
+    .line 976
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_2
 
-    .line 957
+    .line 977
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setBackUpEnabled(Z)V
 
-    .line 958
+    .line 978
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHeaderBarBackClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setBackUpOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 961
+    .line 981
     :cond_2
     return-void
 .end method
@@ -3702,17 +3738,17 @@
     .parameter "mainTitleRes"
 
     .prologue
-    .line 1255
+    .line 1275
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 1256
+    .line 1276
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/ActionBarDropDown;->setPrimaryText(I)V
 
-    .line 1258
+    .line 1278
     :cond_0
     return-void
 .end method
@@ -3722,12 +3758,12 @@
     .parameter "mainTitle"
 
     .prologue
-    .line 1261
+    .line 1281
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_1
 
-    .line 1262
+    .line 1282
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -3740,7 +3776,7 @@
 
     if-nez v0, :cond_2
 
-    .line 1263
+    .line 1283
     :cond_0
     const-string v0, "[MusicBrowserTabActivity]"
 
@@ -3764,12 +3800,12 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1269
+    .line 1289
     :cond_1
     :goto_0
     return-void
 
-    .line 1266
+    .line 1286
     :cond_2
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
@@ -3782,7 +3818,7 @@
     .locals 0
 
     .prologue
-    .line 1361
+    .line 1381
     return-void
 .end method
 
@@ -3790,7 +3826,7 @@
     .locals 0
 
     .prologue
-    .line 1357
+    .line 1377
     return-void
 .end method
 
@@ -3799,32 +3835,32 @@
     .parameter "secondaryTitleRes"
 
     .prologue
-    .line 1272
+    .line 1292
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 1273
+    .line 1293
     if-lez p1, :cond_1
 
-    .line 1274
+    .line 1294
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/ActionBarDropDown;->setSecondaryText(I)V
 
-    .line 1275
+    .line 1295
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setSecondaryVisibility(I)V
 
-    .line 1280
+    .line 1300
     :cond_0
     :goto_0
     return-void
 
-    .line 1277
+    .line 1297
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
@@ -3840,12 +3876,12 @@
     .parameter "secondaryTitle"
 
     .prologue
-    .line 1283
+    .line 1303
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 1284
+    .line 1304
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -3854,24 +3890,24 @@
 
     if-lez v0, :cond_1
 
-    .line 1285
+    .line 1305
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/ActionBarDropDown;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 1286
+    .line 1306
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setSecondaryVisibility(I)V
 
-    .line 1291
+    .line 1311
     :cond_0
     :goto_0
     return-void
 
-    .line 1288
+    .line 1308
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
@@ -3887,27 +3923,27 @@
     .parameter "setVisible"
 
     .prologue
-    .line 1294
+    .line 1314
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 1295
+    .line 1315
     if-eqz p1, :cond_1
 
-    .line 1296
+    .line 1316
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setSecondaryVisibility(I)V
 
-    .line 1301
+    .line 1321
     :cond_0
     :goto_0
     return-void
 
-    .line 1298
+    .line 1318
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
@@ -3925,121 +3961,121 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 813
+    .line 833
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "setSourceSwitcherStyleTitle"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 815
+    .line 835
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isLandingPageEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 816
+    .line 836
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_1
 
-    .line 817
+    .line 837
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 818
+    .line 838
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategoryItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnItemClickListener(Lcom/htc/widget/HtcAdapterView$OnItemClickListener;)V
 
-    .line 819
+    .line 839
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarPopupBubbleClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 820
+    .line 840
     if-nez p1, :cond_0
 
-    .line 821
+    .line 841
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     const v1, 0x7f070066
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setPrimaryText(I)V
 
-    .line 822
+    .line 842
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setSecondaryVisibility(I)V
 
-    .line 824
+    .line 844
     :cond_0
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
-    .line 844
+    .line 864
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_2
 
-    .line 846
+    .line 866
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/ActionBarContainer;->setBackUpEnabled(Z)V
 
-    .line 849
+    .line 869
     :cond_2
     return-void
 
-    .line 827
+    .line 847
     :cond_3
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_1
 
-    .line 828
+    .line 848
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 829
+    .line 849
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mCategoryItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnItemClickListener(Lcom/htc/widget/HtcAdapterView$OnItemClickListener;)V
 
-    .line 830
+    .line 850
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarPopupBubbleClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 831
+    .line 851
     if-nez p1, :cond_4
 
-    .line 832
+    .line 852
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
-    const v1, 0x7f070103
+    const v1, 0x7f070104
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setPrimaryText(I)V
 
-    .line 834
+    .line 854
     :cond_4
     const/4 v0, 0x1
 
@@ -4052,7 +4088,7 @@
     .locals 0
 
     .prologue
-    .line 1365
+    .line 1385
     return-void
 .end method
 
@@ -4061,55 +4097,55 @@
     .parameter "manualMainTitle"
 
     .prologue
-    .line 917
+    .line 937
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "setStoreSwitchStyleTitle"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 925
+    .line 945
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_1
 
-    .line 926
+    .line 946
     if-nez p1, :cond_0
 
-    .line 927
+    .line 947
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
-    const v1, 0x7f0700fe
+    const v1, 0x7f0700ff
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setPrimaryText(I)V
 
-    .line 931
+    .line 951
     :cond_0
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setDropDownEnable(Z)V
 
-    .line 934
+    .line 954
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_2
 
-    .line 935
+    .line 955
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setBackUpEnabled(Z)V
 
-    .line 936
+    .line 956
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mActionBarCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHeaderBarBackClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->setBackUpOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 938
+    .line 958
     :cond_2
     return-void
 .end method
@@ -4120,12 +4156,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1067
+    .line 1087
     const/4 v0, 0x2
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;I)V
 
-    .line 1068
+    .line 1088
     return-void
 .end method
 
@@ -4136,12 +4172,12 @@
     .parameter "saveHistory"
 
     .prologue
-    .line 1072
+    .line 1092
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;IZ)V
 
-    .line 1073
+    .line 1093
     return-void
 .end method
 
@@ -4153,31 +4189,31 @@
     .parameter "clearPreviousHistory"
 
     .prologue
-    .line 1076
+    .line 1096
     if-nez p2, :cond_1
 
-    .line 1077
+    .line 1097
     const-string v2, "[MusicBrowserTabActivity]"
 
     const-string v14, "shouldn\'t call startActivity without intent!!"
 
     invoke-static {v2, v14}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1177
+    .line 1197
     :cond_0
     :goto_0
     return-void
 
-    .line 1081
+    .line 1101
     :cond_1
     if-eqz p4, :cond_2
 
-    .line 1083
+    .line 1103
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v2}, Lcom/htc/music/util/HistoryManager;->clearHistory()V
 
-    .line 1086
+    .line 1106
     :cond_2
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->clone()Ljava/lang/Object;
 
@@ -4185,7 +4221,7 @@
 
     check-cast v3, Landroid/content/Intent;
 
-    .line 1090
+    .line 1110
     .local v3, intent:Landroid/content/Intent;
     invoke-virtual {v3}, Landroid/content/Intent;->getFlags()I
 
@@ -4199,22 +4235,22 @@
 
     const/4 v7, 0x1
 
-    .line 1091
+    .line 1111
     .local v7, clearTop:Z
     :goto_1
     if-eqz v7, :cond_3
 
-    .line 1092
+    .line 1112
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v2, v0}, Lcom/htc/music/util/HistoryManager;->clearTop(Ljava/lang/String;)Lcom/htc/music/util/HistoryManager$ActivityHistory;
 
-    .line 1093
+    .line 1113
     const/16 p3, 0x3
 
-    .line 1096
+    .line 1116
     :cond_3
     const-string v2, "LaunchFromSwitcher"
 
@@ -4224,7 +4260,7 @@
 
     move-result v10
 
-    .line 1097
+    .line 1117
     .local v10, launchFromSwitcher:Z
     const-string v2, "InnerActivityType"
 
@@ -4234,21 +4270,21 @@
 
     move-result v6
 
-    .line 1098
+    .line 1118
     .local v6, innerType:I
     const/4 v2, 0x6
 
     if-ne v2, v6, :cond_4
 
-    .line 1100
+    .line 1120
     if-eqz v10, :cond_4
 
-    .line 1101
+    .line 1121
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v2}, Lcom/htc/music/util/HistoryManager;->clearCategoryHistory()V
 
-    .line 1106
+    .line 1126
     :cond_4
     invoke-virtual {v3}, Landroid/content/Intent;->getFlags()I
 
@@ -4260,12 +4296,12 @@
 
     invoke-virtual {v3, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1110
+    .line 1130
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setCategoryProgressVisible(Z)V
 
-    .line 1111
+    .line 1131
     iget-boolean v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mInternalEnough:Z
 
     if-nez v2, :cond_9
@@ -4278,10 +4314,10 @@
 
     if-eq v2, v6, :cond_9
 
-    .line 1115
+    .line 1135
     invoke-direct {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->showInternalStorageErrorMode()V
 
-    .line 1129
+    .line 1149
     :goto_2
     const-string v2, "LaunchFromSwitcher"
 
@@ -4289,14 +4325,14 @@
 
     invoke-virtual {v3, v2, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1131
+    .line 1151
     const/4 v4, 0x0
 
-    .line 1132
+    .line 1152
     .local v4, lastActivityTag:Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 1133
+    .line 1153
     .local v5, lastActivityIntent:Landroid/content/Intent;
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
@@ -4304,25 +4340,25 @@
 
     move-result-object v9
 
-    .line 1134
+    .line 1154
     .local v9, lastHistory:Lcom/htc/music/util/HistoryManager$ActivityHistory;
     if-eqz v9, :cond_5
 
-    .line 1135
+    .line 1155
     iget-object v4, v9, Lcom/htc/music/util/HistoryManager$ActivityHistory;->currentTag:Ljava/lang/String;
 
-    .line 1136
+    .line 1156
     iget-object v5, v9, Lcom/htc/music/util/HistoryManager$ActivityHistory;->currentIntent:Landroid/content/Intent;
 
-    .line 1139
+    .line 1159
     :cond_5
     const/4 v11, 0x0
 
-    .line 1140
+    .line 1160
     .local v11, onlyDestroyLastActivity:Z
     const/4 v12, 0x0
 
-    .line 1141
+    .line 1161
     .local v12, removeFromHistory:Z
     const/4 v2, 0x2
 
@@ -4330,20 +4366,20 @@
 
     if-ne v2, v0, :cond_a
 
-    .line 1147
+    .line 1167
     new-instance v1, Lcom/htc/music/util/HistoryManager$ActivityHistory;
 
     move-object/from16 v2, p1
 
     invoke-direct/range {v1 .. v6}, Lcom/htc/music/util/HistoryManager$ActivityHistory;-><init>(Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/Intent;I)V
 
-    .line 1149
+    .line 1169
     .local v1, previousActivity:Lcom/htc/music/util/HistoryManager$ActivityHistory;
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v2, v1}, Lcom/htc/music/util/HistoryManager;->addHistory(Lcom/htc/music/util/HistoryManager$ActivityHistory;)V
 
-    .line 1164
+    .line 1184
     .end local v1           #previousActivity:Lcom/htc/music/util/HistoryManager$ActivityHistory;
     :cond_6
     :goto_3
@@ -4351,7 +4387,7 @@
 
     if-eqz v4, :cond_c
 
-    .line 1165
+    .line 1185
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getLocalActivityManager()Landroid/app/LocalActivityManager;
 
     move-result-object v2
@@ -4360,7 +4396,7 @@
 
     invoke-virtual {v2, v4, v14}, Landroid/app/LocalActivityManager;->destroyActivity(Ljava/lang/String;Z)Landroid/view/Window;
 
-    .line 1170
+    .line 1190
     :cond_7
     :goto_4
     const-string v2, "ForceDisableDropDown"
@@ -4371,25 +4407,25 @@
 
     move-result v8
 
-    .line 1171
+    .line 1191
     .local v8, forceDisableDropDown:Z
     move-object/from16 v0, p1
 
     invoke-direct {p0, v6, v0, v8}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setTitleStyle(ILjava/lang/String;Z)V
 
-    .line 1174
+    .line 1194
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     if-eqz v2, :cond_0
 
-    .line 1175
+    .line 1195
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mMenu:Landroid/view/Menu;
 
     invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->onPrepareInnerOptionsMenu(Landroid/view/Menu;)Z
 
     goto/16 :goto_0
 
-    .line 1090
+    .line 1110
     .end local v4           #lastActivityTag:Ljava/lang/String;
     .end local v5           #lastActivityIntent:Landroid/content/Intent;
     .end local v6           #innerType:I
@@ -4404,14 +4440,14 @@
 
     goto/16 :goto_1
 
-    .line 1117
+    .line 1137
     .restart local v6       #innerType:I
     .restart local v7       #clearTop:Z
     .restart local v10       #launchFromSwitcher:Z
     :cond_9
     const/4 v13, 0x0
 
-    .line 1119
+    .line 1139
     .local v13, window:Landroid/view/Window;
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getLocalActivityManager()Landroid/app/LocalActivityManager;
 
@@ -4423,7 +4459,7 @@
 
     move-result-object v13
 
-    .line 1126
+    .line 1146
     invoke-virtual {v13}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v2
@@ -4432,7 +4468,7 @@
 
     goto :goto_2
 
-    .line 1150
+    .line 1170
     .end local v13           #window:Landroid/view/Window;
     .restart local v4       #lastActivityTag:Ljava/lang/String;
     .restart local v5       #lastActivityIntent:Landroid/content/Intent;
@@ -4442,12 +4478,12 @@
     :cond_a
     if-nez p3, :cond_b
 
-    .line 1152
+    .line 1172
     const/4 v12, 0x1
 
     goto :goto_3
 
-    .line 1155
+    .line 1175
     :cond_b
     const/4 v2, 0x3
 
@@ -4455,39 +4491,39 @@
 
     if-eq v2, v0, :cond_6
 
-    .line 1157
+    .line 1177
     const/4 v2, 0x1
 
     move/from16 v0, p3
 
     if-ne v2, v0, :cond_6
 
-    .line 1158
+    .line 1178
     new-instance v1, Lcom/htc/music/util/HistoryManager$ActivityHistory;
 
     move-object/from16 v2, p1
 
     invoke-direct/range {v1 .. v6}, Lcom/htc/music/util/HistoryManager$ActivityHistory;-><init>(Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/content/Intent;I)V
 
-    .line 1160
+    .line 1180
     .restart local v1       #previousActivity:Lcom/htc/music/util/HistoryManager$ActivityHistory;
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v2, v1}, Lcom/htc/music/util/HistoryManager;->addHistory(Lcom/htc/music/util/HistoryManager$ActivityHistory;)V
 
-    .line 1161
+    .line 1181
     const/4 v11, 0x1
 
     goto :goto_3
 
-    .line 1166
+    .line 1186
     .end local v1           #previousActivity:Lcom/htc/music/util/HistoryManager$ActivityHistory;
     :cond_c
     if-eqz v12, :cond_7
 
     if-eqz v4, :cond_7
 
-    .line 1167
+    .line 1187
     iget-object v2, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     invoke-virtual {v2, v4}, Lcom/htc/music/util/HistoryManager;->removeHistory(Ljava/lang/String;)V
@@ -4502,26 +4538,26 @@
     .parameter "caller"
 
     .prologue
-    .line 1182
+    .line 1202
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mForResultCaller:Lcom/htc/music/widget/MusicMaActivity;
 
     if-eqz v0, :cond_0
 
-    .line 1183
+    .line 1203
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "startMaActivityForResult called but mForResultCaller is not null!!"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1186
+    .line 1206
     :cond_0
     iput-object p3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mForResultCaller:Lcom/htc/music/widget/MusicMaActivity;
 
-    .line 1187
+    .line 1207
     invoke-virtual {p0, p1, p2}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 1188
+    .line 1208
     return-void
 .end method
 
@@ -4533,16 +4569,16 @@
     .parameter "globalSearch"
 
     .prologue
-    .line 1492
+    .line 1512
     const-string v0, "[MusicBrowserTabActivity]"
 
     const-string v1, "tab startSearch...."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1504
+    .line 1524
     invoke-super {p0, p1, p2, p3, p4}, Landroid/app/ActivityGroup;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
 
-    .line 1506
+    .line 1526
     return-void
 .end method

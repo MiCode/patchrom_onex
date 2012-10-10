@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 411
+    .line 414
     iput-object p1, p0, Lcom/android/camera/component/UIComponent$3;->this$0:Lcom/android/camera/component/UIComponent;
 
     iput-object p2, p0, Lcom/android/camera/component/UIComponent$3;->val$completionCallback:Ljava/lang/Runnable;
@@ -47,12 +47,12 @@
     .parameter "arg0"
 
     .prologue
-    .line 420
+    .line 423
     iget-object v0, p0, Lcom/android/camera/component/UIComponent$3;->val$completionCallback:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 421
+    .line 424
     return-void
 .end method
 
@@ -61,7 +61,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 416
+    .line 419
     return-void
 .end method
 
@@ -70,6 +70,6 @@
     .parameter "arg0"
 
     .prologue
-    .line 413
+    .line 416
     return-void
 .end method

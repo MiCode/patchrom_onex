@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 104
+    .line 107
     iput-object p1, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 104
+    .line 107
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;-><init>(Lcom/android/internal/telephony/cat/RilMessageDecoder;)V
 
     return-void
@@ -51,60 +51,75 @@
     .parameter "msg"
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    .line 107
+    .line 110
     iget v0, p1, Landroid/os/Message;->what:I
 
-    if-ne v0, v2, :cond_1
+    if-ne v0, v1, :cond_1
 
-    .line 108
-    iget-object v1, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
+    .line 111
+    iget-object v2, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/cat/RilMessage;
 
     #calls: Lcom/android/internal/telephony/cat/RilMessageDecoder;->decodeMessageParams(Lcom/android/internal/telephony/cat/RilMessage;)Z
-    invoke-static {v1, v0}, Lcom/android/internal/telephony/cat/RilMessageDecoder;->access$200(Lcom/android/internal/telephony/cat/RilMessageDecoder;Lcom/android/internal/telephony/cat/RilMessage;)Z
+    invoke-static {v2, v0}, Lcom/android/internal/telephony/cat/RilMessageDecoder;->access$200(Lcom/android/internal/telephony/cat/RilMessageDecoder;Lcom/android/internal/telephony/cat/RilMessage;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 109
+    .line 112
     iget-object v0, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
-    iget-object v1, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
+    iget-object v2, p0, Lcom/android/internal/telephony/cat/RilMessageDecoder$StateStart;->this$0:Lcom/android/internal/telephony/cat/RilMessageDecoder;
 
     #getter for: Lcom/android/internal/telephony/cat/RilMessageDecoder;->mStateCmdParamsReady:Lcom/android/internal/telephony/cat/RilMessageDecoder$StateCmdParamsReady;
-    invoke-static {v1}, Lcom/android/internal/telephony/cat/RilMessageDecoder;->access$300(Lcom/android/internal/telephony/cat/RilMessageDecoder;)Lcom/android/internal/telephony/cat/RilMessageDecoder$StateCmdParamsReady;
+    invoke-static {v2}, Lcom/android/internal/telephony/cat/RilMessageDecoder;->access$300(Lcom/android/internal/telephony/cat/RilMessageDecoder;)Lcom/android/internal/telephony/cat/RilMessageDecoder$StateCmdParamsReady;
 
-    move-result-object v1
+    move-result-object v2
 
     #calls: Lcom/android/internal/telephony/cat/RilMessageDecoder;->transitionTo(Lcom/android/internal/util/IState;)V
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/cat/RilMessageDecoder;->access$400(Lcom/android/internal/telephony/cat/RilMessageDecoder;Lcom/android/internal/util/IState;)V
+    invoke-static {v0, v2}, Lcom/android/internal/telephony/cat/RilMessageDecoder;->access$400(Lcom/android/internal/telephony/cat/RilMessageDecoder;Lcom/android/internal/util/IState;)V
 
-    .line 115
     :cond_0
     :goto_0
-    return v2
+    move v0, v1
 
-    .line 112
+    .line 119
+    :goto_1
+    return v0
+
+    .line 115
     :cond_1
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    const/4 v2, -0x1
+
+    if-ne v0, v2, :cond_2
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    .line 116
+    :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "StateStart unexpected expecting START=1 got "
+    const-string v2, "StateStart unexpected expecting START=1 got "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v1, p1, Landroid/os/Message;->what:I
+    iget v2, p1, Landroid/os/Message;->what:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

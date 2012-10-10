@@ -30,15 +30,19 @@
 
 .field static final TRANSACTION_activityWakeup:I = 0x29
 
-.field static final TRANSACTION_addToQueue:I = 0x59
+.field static final TRANSACTION_addToQueue:I = 0x5a
 
-.field static final TRANSACTION_addToQueueForMultiConditions:I = 0x5a
+.field static final TRANSACTION_addToQueueByDbTable:I = 0x64
 
-.field static final TRANSACTION_bindPluginService:I = 0x53
+.field static final TRANSACTION_addToQueueForMultiConditions:I = 0x5b
 
-.field static final TRANSACTION_clearAlbumArtRequests:I = 0x4f
+.field static final TRANSACTION_addToQueueForMultiConditionsByDbTable:I = 0x65
 
-.field static final TRANSACTION_clearNowplayingQueueRequests:I = 0x51
+.field static final TRANSACTION_bindPluginService:I = 0x54
+
+.field static final TRANSACTION_clearAlbumArtRequests:I = 0x50
+
+.field static final TRANSACTION_clearNowplayingQueueRequests:I = 0x52
 
 .field static final TRANSACTION_duration:I = 0xd
 
@@ -48,9 +52,9 @@
 
 .field static final TRANSACTION_getAlbumArtPath:I = 0x32
 
-.field static final TRANSACTION_getAlbumArtPathByPosition:I = 0x4d
+.field static final TRANSACTION_getAlbumArtPathByPosition:I = 0x4e
 
-.field static final TRANSACTION_getAlbumArtPathByShufflePosition:I = 0x4e
+.field static final TRANSACTION_getAlbumArtPathByShufflePosition:I = 0x4f
 
 .field static final TRANSACTION_getAlbumId:I = 0x12
 
@@ -68,35 +72,35 @@
 
 .field static final TRANSACTION_getArtistName:I = 0x13
 
-.field static final TRANSACTION_getAudioEffect:I = 0x5c
+.field static final TRANSACTION_getAudioEffect:I = 0x5d
 
 .field static final TRANSACTION_getAudioId:I = 0x1a
 
-.field static final TRANSACTION_getAudioSessionId:I = 0x56
+.field static final TRANSACTION_getAudioSessionId:I = 0x57
 
-.field static final TRANSACTION_getBufferingPercent:I = 0x4a
+.field static final TRANSACTION_getBufferingPercent:I = 0x4b
 
-.field static final TRANSACTION_getComposer:I = 0x48
+.field static final TRANSACTION_getComposer:I = 0x49
 
 .field static final TRANSACTION_getExternalPluginCount:I = 0x38
 
-.field static final TRANSACTION_getFileName:I = 0x46
+.field static final TRANSACTION_getFileName:I = 0x47
 
-.field static final TRANSACTION_getGenre:I = 0x47
+.field static final TRANSACTION_getGenre:I = 0x48
 
-.field static final TRANSACTION_getLastAudioEffect:I = 0x5e
+.field static final TRANSACTION_getLastAudioEffect:I = 0x5f
 
-.field static final TRANSACTION_getLocation:I = 0x49
+.field static final TRANSACTION_getLocation:I = 0x4a
 
 .field static final TRANSACTION_getMediaMountedCount:I = 0x21
 
-.field static final TRANSACTION_getNowplaying:I = 0x55
+.field static final TRANSACTION_getNowplaying:I = 0x56
 
-.field static final TRANSACTION_getNowplayingQueue:I = 0x50
+.field static final TRANSACTION_getNowplayingQueue:I = 0x51
 
 .field static final TRANSACTION_getPath:I = 0x19
 
-.field static final TRANSACTION_getPlayerName:I = 0x61
+.field static final TRANSACTION_getPlayerName:I = 0x62
 
 .field static final TRANSACTION_getPluginClass:I = 0x3c
 
@@ -110,7 +114,7 @@
 
 .field static final TRANSACTION_getPluginNotReadyMsg:I = 0x40
 
-.field static final TRANSACTION_getPositionByShufflePosition:I = 0x4b
+.field static final TRANSACTION_getPositionByShufflePosition:I = 0x4c
 
 .field static final TRANSACTION_getQueue:I = 0x16
 
@@ -122,21 +126,23 @@
 
 .field static final TRANSACTION_getRecentAlbumartPath:I = 0x42
 
-.field static final TRANSACTION_getRecentPlayedPlaylist:I = 0x57
+.field static final TRANSACTION_getRecentPlayedPlaylist:I = 0x58
 
 .field static final TRANSACTION_getRepeatMode:I = 0x20
 
+.field static final TRANSACTION_getShortcutInfoList:I = 0x43
+
 .field static final TRANSACTION_getShuffleMode:I = 0x1c
 
-.field static final TRANSACTION_getShufflePositionByPosition:I = 0x4c
+.field static final TRANSACTION_getShufflePositionByPosition:I = 0x4d
 
 .field static final TRANSACTION_getSongInfo:I = 0x1
 
-.field static final TRANSACTION_getTrackDetails:I = 0x52
+.field static final TRANSACTION_getTrackDetails:I = 0x53
 
 .field static final TRANSACTION_getTrackName:I = 0x10
 
-.field static final TRANSACTION_getVolume:I = 0x5f
+.field static final TRANSACTION_getVolume:I = 0x60
 
 .field static final TRANSACTION_isDmcOrPushMode:I = 0x3e
 
@@ -160,7 +166,7 @@
 
 .field static final TRANSACTION_open:I = 0x5
 
-.field static final TRANSACTION_openWithCategory:I = 0x54
+.field static final TRANSACTION_openWithCategory:I = 0x55
 
 .field static final TRANSACTION_openfile:I = 0x3
 
@@ -182,29 +188,29 @@
 
 .field static final TRANSACTION_reloadQueue:I = 0x2f
 
-.field static final TRANSACTION_removeQueueTracks:I = 0x58
+.field static final TRANSACTION_removeQueueTracks:I = 0x59
 
 .field static final TRANSACTION_removeTrack:I = 0x1e
 
 .field static final TRANSACTION_removeTracks:I = 0x1d
 
-.field static final TRANSACTION_removeTracksReduceBroadcast:I = 0x62
+.field static final TRANSACTION_removeTracksReduceBroadcast:I = 0x63
 
 .field static final TRANSACTION_seek:I = 0xf
 
 .field static final TRANSACTION_setAlbumQueue:I = 0x25
 
-.field static final TRANSACTION_setAudioEffect:I = 0x5b
+.field static final TRANSACTION_setAudioEffect:I = 0x5c
 
-.field static final TRANSACTION_setLastAudioEffect:I = 0x5d
+.field static final TRANSACTION_setLastAudioEffect:I = 0x5e
 
 .field static final TRANSACTION_setMediaMode:I = 0x30
 
-.field static final TRANSACTION_setNpCategory:I = 0x44
+.field static final TRANSACTION_setNpCategory:I = 0x45
 
-.field static final TRANSACTION_setOrientation:I = 0x43
+.field static final TRANSACTION_setOrientation:I = 0x44
 
-.field static final TRANSACTION_setPlaylist:I = 0x45
+.field static final TRANSACTION_setPlaylist:I = 0x46
 
 .field static final TRANSACTION_setQueuePosition:I = 0x18
 
@@ -212,7 +218,7 @@
 
 .field static final TRANSACTION_setShuffleMode:I = 0x1b
 
-.field static final TRANSACTION_setVolume:I = 0x60
+.field static final TRANSACTION_setVolume:I = 0x61
 
 .field static final TRANSACTION_startAnimation:I = 0x22
 
@@ -297,7 +303,7 @@
 .end method
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 9
+    .locals 10
     .parameter "code"
     .parameter "data"
     .parameter "reply"
@@ -309,34 +315,34 @@
     .end annotation
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
     .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 906
+    .line 942
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result v7
+    move-result v8
 
     :goto_0
-    return v7
+    return v8
 
     .line 42
     :sswitch_0
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 47
     :sswitch_1
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 49
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -347,24 +353,24 @@
     .local v0, _arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getSongInfo(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 51
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 52
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 57
     .end local v0           #_arg0:I
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_2
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 59
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -375,24 +381,24 @@
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->playAlbum(I)I
 
-    move-result v4
+    move-result v5
 
     .line 61
-    .local v4, _result:I
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 62
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
     .line 67
     .end local v0           #_arg0:I
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_3
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 69
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -411,9 +417,9 @@
     .line 76
     .end local v0           #_arg0:Ljava/lang/String;
     :sswitch_4
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 78
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -432,9 +438,9 @@
     .line 85
     .end local v0           #_arg0:Ljava/lang/String;
     :sswitch_5
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 87
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
@@ -460,56 +466,56 @@
     .end local v0           #_arg0:[I
     .end local v2           #_arg1:I
     :sswitch_6
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 97
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getQueuePosition()I
 
-    move-result v4
+    move-result v5
 
     .line 98
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 99
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
     .line 104
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_7
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 105
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->isPlaying()Z
 
-    move-result v4
+    move-result v5
 
     .line 106
-    .local v4, _result:Z
+    .local v5, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 107
-    if-eqz v4, :cond_0
+    if-eqz v5, :cond_0
 
-    move v6, v7
+    move v7, v8
 
     :cond_0
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 112
-    .end local v4           #_result:Z
+    .end local v5           #_result:Z
     :sswitch_8
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 113
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->stop()V
@@ -521,9 +527,9 @@
 
     .line 119
     :sswitch_9
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 120
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->pause()V
@@ -535,9 +541,9 @@
 
     .line 126
     :sswitch_a
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 127
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->play()V
@@ -549,9 +555,9 @@
 
     .line 133
     :sswitch_b
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 134
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->prev()V
@@ -563,9 +569,9 @@
 
     .line 140
     :sswitch_c
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 141
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->next()V
@@ -577,51 +583,51 @@
 
     .line 147
     :sswitch_d
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 148
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->duration()J
 
-    move-result-wide v4
+    move-result-wide v5
 
     .line 149
-    .local v4, _result:J
+    .local v5, _result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 150
-    invoke-virtual {p3, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-virtual {p3, v5, v6}, Landroid/os/Parcel;->writeLong(J)V
 
     goto/16 :goto_0
 
     .line 155
-    .end local v4           #_result:J
+    .end local v5           #_result:J
     :sswitch_e
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 156
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->position()J
 
-    move-result-wide v4
+    move-result-wide v5
 
     .line 157
-    .restart local v4       #_result:J
+    .restart local v5       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 158
-    invoke-virtual {p3, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-virtual {p3, v5, v6}, Landroid/os/Parcel;->writeLong(J)V
 
     goto/16 :goto_0
 
     .line 163
-    .end local v4           #_result:J
+    .end local v5           #_result:J
     :sswitch_f
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 165
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
@@ -632,129 +638,129 @@
     .local v0, _arg0:J
     invoke-virtual {p0, v0, v1}, Lcom/htc/music/IMediaPlaybackService$Stub;->seek(J)J
 
-    move-result-wide v4
+    move-result-wide v5
 
     .line 167
-    .restart local v4       #_result:J
+    .restart local v5       #_result:J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 168
-    invoke-virtual {p3, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
+    invoke-virtual {p3, v5, v6}, Landroid/os/Parcel;->writeLong(J)V
 
     goto/16 :goto_0
 
     .line 173
     .end local v0           #_arg0:J
-    .end local v4           #_result:J
+    .end local v5           #_result:J
     :sswitch_10
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 174
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getTrackName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 175
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 176
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 181
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_11
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 182
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 183
-    .restart local v4       #_result:Ljava/lang/String;
+    .restart local v5       #_result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 184
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 189
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_12
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 190
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumId()I
 
-    move-result v4
+    move-result v5
 
     .line 191
-    .local v4, _result:I
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 192
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 197
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_13
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 198
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getArtistName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 199
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 200
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 205
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_14
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 206
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getArtistId()I
 
-    move-result v4
+    move-result v5
 
     .line 207
-    .local v4, _result:I
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 208
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 213
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_15
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 215
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
@@ -780,30 +786,30 @@
     .end local v0           #_arg0:[I
     .end local v2           #_arg1:I
     :sswitch_16
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 225
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getQueue()[I
 
-    move-result-object v4
+    move-result-object v5
 
     .line 226
-    .local v4, _result:[I
+    .local v5, _result:[I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 227
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeIntArray([I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeIntArray([I)V
 
     goto/16 :goto_0
 
     .line 232
-    .end local v4           #_result:[I
+    .end local v5           #_result:[I
     :sswitch_17
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 234
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -829,9 +835,9 @@
     .end local v0           #_arg0:I
     .end local v2           #_arg1:I
     :sswitch_18
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 245
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -850,51 +856,51 @@
     .line 252
     .end local v0           #_arg0:I
     :sswitch_19
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 253
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPath()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 254
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 255
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 260
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_1a
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 261
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAudioId()I
 
-    move-result v4
+    move-result v5
 
     .line 262
-    .local v4, _result:I
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 263
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 268
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_1b
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 270
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -913,30 +919,30 @@
     .line 277
     .end local v0           #_arg0:I
     :sswitch_1c
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 278
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getShuffleMode()I
 
-    move-result v4
+    move-result v5
 
     .line 279
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 280
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 285
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_1d
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 287
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -953,25 +959,25 @@
     .restart local v2       #_arg1:I
     invoke-virtual {p0, v0, v2}, Lcom/htc/music/IMediaPlaybackService$Stub;->removeTracks(II)I
 
-    move-result v4
+    move-result v5
 
     .line 291
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 292
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 297
     .end local v0           #_arg0:I
     .end local v2           #_arg1:I
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_1e
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 299
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -982,24 +988,24 @@
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->removeTrack(I)I
 
-    move-result v4
+    move-result v5
 
     .line 301
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 302
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 307
     .end local v0           #_arg0:I
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_1f
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 309
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1018,51 +1024,51 @@
     .line 316
     .end local v0           #_arg0:I
     :sswitch_20
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 317
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getRepeatMode()I
 
-    move-result v4
+    move-result v5
 
     .line 318
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 319
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 324
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_21
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 325
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getMediaMountedCount()I
 
-    move-result v4
+    move-result v5
 
     .line 326
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 327
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 332
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_22
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 333
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->startAnimation()V
@@ -1074,9 +1080,9 @@
 
     .line 339
     :sswitch_23
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 340
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->endAnimation()V
@@ -1088,35 +1094,35 @@
 
     .line 346
     :sswitch_24
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 347
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAnimationStatus()Z
 
-    move-result v4
+    move-result v5
 
     .line 348
-    .local v4, _result:Z
+    .local v5, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 349
-    if-eqz v4, :cond_1
+    if-eqz v5, :cond_1
 
-    move v6, v7
+    move v7, v8
 
     :cond_1
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 354
-    .end local v4           #_result:Z
+    .end local v5           #_result:Z
     :sswitch_25
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 356
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
@@ -1135,51 +1141,51 @@
     .line 363
     .end local v0           #_arg0:[I
     :sswitch_26
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 364
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumQueue()[I
 
-    move-result-object v4
+    move-result-object v5
 
     .line 365
-    .local v4, _result:[I
+    .local v5, _result:[I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 366
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeIntArray([I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeIntArray([I)V
 
     goto/16 :goto_0
 
     .line 371
-    .end local v4           #_result:[I
+    .end local v5           #_result:[I
     :sswitch_27
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 372
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumQueuePosition()I
 
-    move-result v4
+    move-result v5
 
     .line 373
-    .local v4, _result:I
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 374
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 379
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_28
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 380
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->activityGoSleep()V
@@ -1191,9 +1197,9 @@
 
     .line 386
     :sswitch_29
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 387
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->activityWakeup()V
@@ -1205,51 +1211,51 @@
 
     .line 393
     :sswitch_2a
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 394
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getQueueSize()I
 
-    move-result v4
+    move-result v5
 
     .line 395
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 396
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 401
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_2b
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 402
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumQueueSize()I
 
-    move-result v4
+    move-result v5
 
     .line 403
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 404
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 409
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_2c
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 410
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->prevAlbum()V
@@ -1261,9 +1267,9 @@
 
     .line 416
     :sswitch_2d
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 417
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->nextAlbum()V
@@ -1275,35 +1281,35 @@
 
     .line 423
     :sswitch_2e
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 424
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->isSystemReady()Z
 
-    move-result v4
+    move-result v5
 
     .line 425
-    .local v4, _result:Z
+    .local v5, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 426
-    if-eqz v4, :cond_2
+    if-eqz v5, :cond_2
 
-    move v6, v7
+    move v7, v8
 
     :cond_2
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 431
-    .end local v4           #_result:Z
+    .end local v5           #_result:Z
     :sswitch_2f
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 432
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->reloadQueue()V
@@ -1315,18 +1321,18 @@
 
     .line 438
     :sswitch_30
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 440
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v8
+    move-result v9
 
-    if-eqz v8, :cond_3
+    if-eqz v9, :cond_3
 
-    move v0, v7
+    move v0, v8
 
     .line 441
     .local v0, _arg0:Z
@@ -1340,16 +1346,16 @@
 
     .end local v0           #_arg0:Z
     :cond_3
-    move v0, v6
+    move v0, v7
 
     .line 440
     goto :goto_1
 
     .line 447
     :sswitch_31
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 449
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
@@ -1368,56 +1374,56 @@
     .line 456
     .end local v0           #_arg0:[I
     :sswitch_32
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 457
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumArtPath()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 458
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 459
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 464
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_33
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 465
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->isPluginMode()Z
 
-    move-result v4
+    move-result v5
 
     .line 466
-    .local v4, _result:Z
+    .local v5, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 467
-    if-eqz v4, :cond_4
+    if-eqz v5, :cond_4
 
-    move v6, v7
+    move v7, v8
 
     :cond_4
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 472
-    .end local v4           #_result:Z
+    .end local v5           #_result:Z
     :sswitch_34
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 473
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->refreshPlugin()V
@@ -1429,9 +1435,9 @@
 
     .line 479
     :sswitch_35
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 481
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1450,9 +1456,9 @@
     .line 488
     .end local v0           #_arg0:I
     :sswitch_36
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 489
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->stopActivePlugin()V
@@ -1464,51 +1470,51 @@
 
     .line 495
     :sswitch_37
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 496
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPluginCount()I
 
-    move-result v4
+    move-result v5
 
     .line 497
-    .local v4, _result:I
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 498
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 503
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_38
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 504
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getExternalPluginCount()I
 
-    move-result v4
+    move-result v5
 
     .line 505
-    .restart local v4       #_result:I
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 506
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 511
-    .end local v4           #_result:I
+    .end local v5           #_result:I
     :sswitch_39
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 513
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1519,57 +1525,57 @@
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPluginName(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 515
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 516
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 521
     .end local v0           #_arg0:I
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_3a
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 522
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPluginIcon()Landroid/graphics/Bitmap;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 523
-    .local v4, _result:Landroid/graphics/Bitmap;
+    .local v5, _result:Landroid/graphics/Bitmap;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 524
-    if-eqz v4, :cond_5
+    if-eqz v5, :cond_5
 
     .line 525
-    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 526
-    invoke-virtual {v4, p3, v7}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v5, p3, v8}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
     .line 529
     :cond_5
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 535
-    .end local v4           #_result:Landroid/graphics/Bitmap;
+    .end local v5           #_result:Landroid/graphics/Bitmap;
     :sswitch_3b
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 537
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1580,24 +1586,24 @@
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPluginDescription(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 539
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 540
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 545
     .end local v0           #_arg0:I
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_3c
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 547
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1608,144 +1614,144 @@
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPluginClass(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 549
-    .restart local v4       #_result:Ljava/lang/String;
+    .restart local v5       #_result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 550
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 555
     .end local v0           #_arg0:I
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_3d
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 556
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->isServiceConnected()Z
 
-    move-result v4
+    move-result v5
 
     .line 557
-    .local v4, _result:Z
+    .local v5, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 558
-    if-eqz v4, :cond_6
+    if-eqz v5, :cond_6
 
-    move v6, v7
+    move v7, v8
 
     :cond_6
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 563
-    .end local v4           #_result:Z
+    .end local v5           #_result:Z
     :sswitch_3e
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 564
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->isDmcOrPushMode()Z
 
-    move-result v4
+    move-result v5
 
     .line 565
-    .restart local v4       #_result:Z
+    .restart local v5       #_result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 566
-    if-eqz v4, :cond_7
+    if-eqz v5, :cond_7
 
-    move v6, v7
+    move v7, v8
 
     :cond_7
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 571
-    .end local v4           #_result:Z
+    .end local v5           #_result:Z
     :sswitch_3f
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 572
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->isPluginReady()Z
 
-    move-result v4
+    move-result v5
 
     .line 573
-    .restart local v4       #_result:Z
+    .restart local v5       #_result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 574
-    if-eqz v4, :cond_8
+    if-eqz v5, :cond_8
 
-    move v6, v7
+    move v7, v8
 
     :cond_8
-    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 579
-    .end local v4           #_result:Z
+    .end local v5           #_result:Z
     :sswitch_40
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 580
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPluginNotReadyMsg()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 581
-    .local v4, _result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 582
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 587
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_41
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 588
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getRecentAlbumId()[I
 
-    move-result-object v4
+    move-result-object v5
 
     .line 589
-    .local v4, _result:[I
+    .local v5, _result:[I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 590
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeIntArray([I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeIntArray([I)V
 
     goto/16 :goto_0
 
     .line 595
-    .end local v4           #_result:[I
+    .end local v5           #_result:[I
     :sswitch_42
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 597
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
@@ -1756,73 +1762,94 @@
     .local v0, _arg0:[I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getRecentAlbumartPath([I)[Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 599
-    .local v4, _result:[Ljava/lang/String;
+    .local v5, _result:[Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 600
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 605
     .end local v0           #_arg0:[I
-    .end local v4           #_result:[Ljava/lang/String;
+    .end local v5           #_result:[Ljava/lang/String;
     :sswitch_43
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 606
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getShortcutInfoList()[Landroid/content/ContentValues;
+
+    move-result-object v5
 
     .line 607
+    .local v5, _result:[Landroid/content/ContentValues;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 608
+    invoke-virtual {p3, v5, v8}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
+
+    goto/16 :goto_0
+
+    .line 613
+    .end local v5           #_result:[Landroid/content/ContentValues;
+    :sswitch_44
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 615
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 608
+    .line 616
     .local v0, _arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->setOrientation(I)V
 
-    .line 609
+    .line 617
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 614
+    .line 622
     .end local v0           #_arg0:I
-    :sswitch_44
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    :sswitch_45
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 616
+    .line 624
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_9
+    if-eqz v7, :cond_9
 
-    .line 617
-    sget-object v6, Lcom/htc/music/NpCategory;->CREATOR:Landroid/os/Parcelable$Creator;
+    .line 625
+    sget-object v7, Lcom/htc/music/NpCategory;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-interface {v6, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/htc/music/NpCategory;
 
-    .line 622
+    .line 630
     .local v0, _arg0:Lcom/htc/music/NpCategory;
     :goto_2
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->setNpCategory(Lcom/htc/music/NpCategory;)V
 
-    .line 623
+    .line 631
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 620
+    .line 628
     .end local v0           #_arg0:Lcom/htc/music/NpCategory;
     :cond_9
     const/4 v0, 0x0
@@ -1830,381 +1857,381 @@
     .restart local v0       #_arg0:Lcom/htc/music/NpCategory;
     goto :goto_2
 
-    .line 628
+    .line 636
     .end local v0           #_arg0:Lcom/htc/music/NpCategory;
-    :sswitch_45
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    :sswitch_46
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 630
+    .line 638
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
-    .line 631
+    .line 639
     .local v0, _arg0:[I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->setPlaylist([I)V
 
-    .line 632
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_0
-
-    .line 637
-    .end local v0           #_arg0:[I
-    :sswitch_46
-    const-string v6, "com.htc.music.IMediaPlaybackService"
-
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 638
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getFileName()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 639
-    .local v4, _result:Ljava/lang/String;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
     .line 640
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
     .line 645
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v0           #_arg0:[I
     :sswitch_47
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 646
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getGenre()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getFileName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 647
-    .restart local v4       #_result:Ljava/lang/String;
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 648
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 653
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_48
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 654
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getComposer()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getGenre()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 655
-    .restart local v4       #_result:Ljava/lang/String;
+    .restart local v5       #_result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 656
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 661
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_49
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 662
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getLocation()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getComposer()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     .line 663
-    .restart local v4       #_result:Ljava/lang/String;
+    .restart local v5       #_result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 664
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 669
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_4a
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 670
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getBufferingPercent()I
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getLocation()Ljava/lang/String;
 
-    move-result v4
+    move-result-object v5
 
     .line 671
-    .local v4, _result:I
+    .restart local v5       #_result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 672
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 677
-    .end local v4           #_result:I
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_4b
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 678
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getBufferingPercent()I
+
+    move-result v5
 
     .line 679
+    .local v5, _result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 680
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 685
+    .end local v5           #_result:I
+    :sswitch_4c
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 687
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 680
+    .line 688
     .local v0, _arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPositionByShufflePosition(I)I
 
-    move-result v4
+    move-result v5
 
-    .line 681
-    .restart local v4       #_result:I
+    .line 689
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 682
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    .line 690
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 687
+    .line 695
     .end local v0           #_arg0:I
-    .end local v4           #_result:I
-    :sswitch_4c
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    .end local v5           #_result:I
+    :sswitch_4d
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 689
+    .line 697
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 690
+    .line 698
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getShufflePositionByPosition(I)I
 
-    move-result v4
+    move-result v5
 
-    .line 691
-    .restart local v4       #_result:I
+    .line 699
+    .restart local v5       #_result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 692
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    .line 700
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 697
+    .line 705
     .end local v0           #_arg0:I
-    .end local v4           #_result:I
-    :sswitch_4d
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    .end local v5           #_result:I
+    :sswitch_4e
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 699
+    .line 707
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 700
+    .line 708
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumArtPathByPosition(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    .line 701
-    .local v4, _result:Ljava/lang/String;
+    .line 709
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 702
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    .line 710
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 707
+    .line 715
     .end local v0           #_arg0:I
-    .end local v4           #_result:Ljava/lang/String;
-    :sswitch_4e
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    .end local v5           #_result:Ljava/lang/String;
+    :sswitch_4f
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 709
+    .line 717
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 710
+    .line 718
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAlbumArtPathByShufflePosition(I)Ljava/lang/String;
 
-    move-result-object v4
-
-    .line 711
-    .restart local v4       #_result:Ljava/lang/String;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 712
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 717
-    .end local v0           #_arg0:I
-    .end local v4           #_result:Ljava/lang/String;
-    :sswitch_4f
-    const-string v6, "com.htc.music.IMediaPlaybackService"
-
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 718
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->clearAlbumArtRequests()V
+    move-result-object v5
 
     .line 719
+    .restart local v5       #_result:Ljava/lang/String;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 720
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 725
+    .end local v0           #_arg0:I
+    .end local v5           #_result:Ljava/lang/String;
+    :sswitch_50
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 726
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->clearAlbumArtRequests()V
+
+    .line 727
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 724
-    :sswitch_50
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    .line 732
+    :sswitch_51
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 726
+    .line 734
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 727
+    .line 735
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getNowplayingQueue(I)V
 
-    .line 728
+    .line 736
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 733
+    .line 741
     .end local v0           #_arg0:I
-    :sswitch_51
-    const-string v6, "com.htc.music.IMediaPlaybackService"
-
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 734
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->clearNowplayingQueueRequests()V
-
-    .line 735
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_0
-
-    .line 740
     :sswitch_52
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 742
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->clearNowplayingQueueRequests()V
+
+    .line 743
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 748
+    :sswitch_53
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 750
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 743
+    .line 751
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getTrackDetails(I)V
 
-    .line 744
+    .line 752
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 749
+    .line 757
     .end local v0           #_arg0:I
-    :sswitch_53
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    :sswitch_54
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 751
+    .line 759
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 752
+    .line 760
     .local v0, _arg0:Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->bindPluginService(Ljava/lang/String;)V
 
-    .line 753
+    .line 761
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 758
+    .line 766
     .end local v0           #_arg0:Ljava/lang/String;
-    :sswitch_54
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    :sswitch_55
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 760
+    .line 768
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
-    .line 762
+    .line 770
     .local v0, _arg0:[I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 764
+    .line 772
     .restart local v2       #_arg1:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_a
+    if-eqz v7, :cond_a
 
-    .line 765
-    sget-object v6, Lcom/htc/music/NpCategory;->CREATOR:Landroid/os/Parcelable$Creator;
+    .line 773
+    sget-object v7, Lcom/htc/music/NpCategory;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-interface {v6, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/htc/music/NpCategory;
 
-    .line 770
+    .line 778
     .local v3, _arg2:Lcom/htc/music/NpCategory;
     :goto_3
     invoke-virtual {p0, v0, v2, v3}, Lcom/htc/music/IMediaPlaybackService$Stub;->openWithCategory([IILcom/htc/music/NpCategory;)V
 
-    .line 771
+    .line 779
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 768
+    .line 776
     .end local v3           #_arg2:Lcom/htc/music/NpCategory;
     :cond_a
     const/4 v3, 0x0
@@ -2212,196 +2239,196 @@
     .restart local v3       #_arg2:Lcom/htc/music/NpCategory;
     goto :goto_3
 
-    .line 776
+    .line 784
     .end local v0           #_arg0:[I
     .end local v2           #_arg1:I
     .end local v3           #_arg2:Lcom/htc/music/NpCategory;
-    :sswitch_55
-    const-string v6, "com.htc.music.IMediaPlaybackService"
-
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 777
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getNowplaying()[I
-
-    move-result-object v4
-
-    .line 778
-    .local v4, _result:[I
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 779
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeIntArray([I)V
-
-    goto/16 :goto_0
-
-    .line 784
-    .end local v4           #_result:[I
     :sswitch_56
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 785
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAudioSessionId()I
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getNowplaying()[I
 
-    move-result v4
+    move-result-object v5
 
     .line 786
-    .local v4, _result:I
+    .local v5, _result:[I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 787
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeIntArray([I)V
 
     goto/16 :goto_0
 
     .line 792
-    .end local v4           #_result:I
+    .end local v5           #_result:[I
     :sswitch_57
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 793
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getRecentPlayedPlaylist()[I
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAudioSessionId()I
 
-    move-result-object v4
+    move-result v5
 
     .line 794
-    .local v4, _result:[I
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 795
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeIntArray([I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 800
-    .end local v4           #_result:[I
+    .end local v5           #_result:I
     :sswitch_58
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 801
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getRecentPlayedPlaylist()[I
+
+    move-result-object v5
 
     .line 802
+    .local v5, _result:[I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 803
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    goto/16 :goto_0
+
+    .line 808
+    .end local v5           #_result:[I
+    :sswitch_59
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 810
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
-    .line 803
+    .line 811
     .restart local v0       #_arg0:[I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->removeQueueTracks([I)I
 
-    move-result v4
+    move-result v5
 
-    .line 804
-    .local v4, _result:I
+    .line 812
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 805
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    .line 813
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 810
+    .line 818
     .end local v0           #_arg0:[I
-    .end local v4           #_result:I
-    :sswitch_59
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    .end local v5           #_result:I
+    :sswitch_5a
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 812
+    .line 820
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 814
+    .line 822
     .local v0, _arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 815
+    .line 823
     .restart local v2       #_arg1:I
     invoke-virtual {p0, v0, v2}, Lcom/htc/music/IMediaPlaybackService$Stub;->addToQueue(II)V
 
-    .line 816
+    .line 824
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 821
+    .line 829
     .end local v0           #_arg0:I
     .end local v2           #_arg1:I
-    :sswitch_5a
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    :sswitch_5b
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 823
+    .line 831
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 825
+    .line 833
     .restart local v0       #_arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 827
+    .line 835
     .restart local v2       #_arg1:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 828
+    .line 836
     .local v3, _arg2:I
     invoke-virtual {p0, v0, v2, v3}, Lcom/htc/music/IMediaPlaybackService$Stub;->addToQueueForMultiConditions(III)V
 
-    .line 829
+    .line 837
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 834
+    .line 842
     .end local v0           #_arg0:I
     .end local v2           #_arg1:I
     .end local v3           #_arg2:I
-    :sswitch_5b
-    const-string v8, "com.htc.music.IMediaPlaybackService"
+    :sswitch_5c
+    const-string v9, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 836
+    .line 844
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 838
+    .line 846
     .local v0, _arg0:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v8
+    move-result v9
 
-    if-eqz v8, :cond_b
+    if-eqz v9, :cond_b
 
-    move v2, v7
+    move v2, v8
 
-    .line 840
+    .line 848
     .local v2, _arg1:Z
     :goto_4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 841
+    .line 849
     .restart local v3       #_arg2:I
     invoke-virtual {p0, v0, v2, v3}, Lcom/htc/music/IMediaPlaybackService$Stub;->setAudioEffect(Ljava/lang/String;ZI)V
 
-    .line 842
+    .line 850
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -2409,167 +2436,240 @@
     .end local v2           #_arg1:Z
     .end local v3           #_arg2:I
     :cond_b
-    move v2, v6
+    move v2, v7
 
-    .line 838
+    .line 846
     goto :goto_4
 
-    .line 847
+    .line 855
     .end local v0           #_arg0:Ljava/lang/String;
-    :sswitch_5c
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    :sswitch_5d
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 848
+    .line 856
     invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getAudioEffect()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    .line 849
-    .local v4, _result:Ljava/lang/String;
+    .line 857
+    .local v5, _result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 850
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    .line 858
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 855
-    .end local v4           #_result:Ljava/lang/String;
-    :sswitch_5d
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    .line 863
+    .end local v5           #_result:Ljava/lang/String;
+    :sswitch_5e
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 857
+    .line 865
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 858
+    .line 866
     .restart local v0       #_arg0:Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->setLastAudioEffect(Ljava/lang/String;)V
 
-    .line 859
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_0
-
-    .line 864
-    .end local v0           #_arg0:Ljava/lang/String;
-    :sswitch_5e
-    const-string v6, "com.htc.music.IMediaPlaybackService"
-
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 865
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getLastAudioEffect()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 866
-    .restart local v4       #_result:Ljava/lang/String;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
     .line 867
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
     .line 872
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v0           #_arg0:Ljava/lang/String;
     :sswitch_5f
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 873
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getVolume()I
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getLastAudioEffect()Ljava/lang/String;
 
-    move-result v4
+    move-result-object v5
 
     .line 874
-    .local v4, _result:I
+    .restart local v5       #_result:Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 875
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 880
-    .end local v4           #_result:I
+    .end local v5           #_result:Ljava/lang/String;
     :sswitch_60
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 881
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getVolume()I
+
+    move-result v5
 
     .line 882
+    .local v5, _result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 883
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 888
+    .end local v5           #_result:I
+    :sswitch_61
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 890
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 883
+    .line 891
     .local v0, _arg0:I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->setVolume(I)V
 
-    .line 884
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_0
-
-    .line 889
-    .end local v0           #_arg0:I
-    :sswitch_61
-    const-string v6, "com.htc.music.IMediaPlaybackService"
-
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 890
-    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPlayerName()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 891
-    .local v4, _result:Ljava/lang/String;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
     .line 892
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
     .line 897
-    .end local v4           #_result:Ljava/lang/String;
+    .end local v0           #_arg0:I
     :sswitch_62
-    const-string v6, "com.htc.music.IMediaPlaybackService"
+    const-string v7, "com.htc.music.IMediaPlaybackService"
 
-    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 898
+    invoke-virtual {p0}, Lcom/htc/music/IMediaPlaybackService$Stub;->getPlayerName()Ljava/lang/String;
+
+    move-result-object v5
 
     .line 899
+    .local v5, _result:Ljava/lang/String;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 900
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 905
+    .end local v5           #_result:Ljava/lang/String;
+    :sswitch_63
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 907
     invoke-virtual {p2}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
-    .line 900
+    .line 908
     .local v0, _arg0:[I
     invoke-virtual {p0, v0}, Lcom/htc/music/IMediaPlaybackService$Stub;->removeTracksReduceBroadcast([I)I
 
-    move-result v4
+    move-result v5
 
-    .line 901
-    .local v4, _result:I
+    .line 909
+    .local v5, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 902
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    .line 910
+    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 915
+    .end local v0           #_arg0:[I
+    .end local v5           #_result:I
+    :sswitch_64
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 917
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 919
+    .local v0, _arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    .line 921
+    .local v2, _arg1:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    .line 922
+    .restart local v3       #_arg2:I
+    invoke-virtual {p0, v0, v2, v3}, Lcom/htc/music/IMediaPlaybackService$Stub;->addToQueueByDbTable(III)V
+
+    .line 923
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .line 928
+    .end local v0           #_arg0:I
+    .end local v2           #_arg1:I
+    .end local v3           #_arg2:I
+    :sswitch_65
+    const-string v7, "com.htc.music.IMediaPlaybackService"
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 930
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 932
+    .restart local v0       #_arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    .line 934
+    .restart local v2       #_arg1:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    .line 936
+    .restart local v3       #_arg2:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    .line 937
+    .local v4, _arg3:I
+    invoke-virtual {p0, v0, v2, v3, v4}, Lcom/htc/music/IMediaPlaybackService$Stub;->addToQueueForMultiConditionsByDbTable(IIII)V
+
+    .line 938
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
     .line 38
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -2670,6 +2770,9 @@
         0x60 -> :sswitch_60
         0x61 -> :sswitch_61
         0x62 -> :sswitch_62
+        0x63 -> :sswitch_63
+        0x64 -> :sswitch_64
+        0x65 -> :sswitch_65
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

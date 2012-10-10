@@ -33,10 +33,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 976
+    .line 972
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$Bluetooth;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 977
+    .line 973
     const-string v2, "Bluetooth"
 
     const-string v3, "powersaver_bluetooth"
@@ -51,10 +51,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 978
+    .line 974
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$Bluetooth;->mContext:Landroid/content/Context;
 
-    .line 979
+    .line 975
     return-void
 .end method
 
@@ -62,26 +62,26 @@
     .locals 3
 
     .prologue
-    .line 1004
+    .line 1000
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 1005
+    .line 1001
     .local v0, btAdapter:Landroid/bluetooth/BluetoothAdapter;
     if-nez v0, :cond_0
 
-    .line 1006
+    .line 1002
     const-string v1, "HtcPowerSaver"
 
     const-string v2, "getSysSettings: Bluetooth is not supported on this hardware platform."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1007
+    .line 1003
     const/4 v1, 0x0
 
-    .line 1009
+    .line 1005
     :goto_0
     return v1
 
@@ -98,38 +98,38 @@
     .parameter "enable"
 
     .prologue
-    .line 982
+    .line 978
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 983
+    .line 979
     .local v0, btAdapter:Landroid/bluetooth/BluetoothAdapter;
     if-nez v0, :cond_0
 
-    .line 984
+    .line 980
     const-string v1, "HtcPowerSaver"
 
     const-string v2, "setSysSettings: Bluetooth is not supported on this hardware platform."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1001
+    .line 997
     :goto_0
     return-void
 
-    .line 988
+    .line 984
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 989
+    .line 985
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->enable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 990
+    .line 986
     const-string v1, "HtcPowerSaver"
 
     const-string v2, "setSysSettings: Bluetooth is enabled."
@@ -138,7 +138,7 @@
 
     goto :goto_0
 
-    .line 992
+    .line 988
     :cond_1
     const-string v1, "HtcPowerSaver"
 
@@ -148,7 +148,7 @@
 
     goto :goto_0
 
-    .line 995
+    .line 991
     :cond_2
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->disableFromPowerSaver()Z
 
@@ -156,7 +156,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 996
+    .line 992
     const-string v1, "HtcPowerSaver"
 
     const-string v2, "setSysSettings: Bluetooth is disabled."
@@ -165,7 +165,7 @@
 
     goto :goto_0
 
-    .line 998
+    .line 994
     :cond_3
     const-string v1, "HtcPowerSaver"
 
@@ -184,17 +184,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1027
+    .line 1023
     invoke-direct {p0, v2}, Lcom/android/server/HtcPowerSaver$Bluetooth;->setSysSettings(Z)V
 
-    .line 1028
+    .line 1024
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "applyPowerSaverSettings."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1029
+    .line 1025
     return v2
 .end method
 
@@ -204,25 +204,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1034
+    .line 1030
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Bluetooth;->getSysSettings()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1035
+    .line 1031
     const-string v2, "HtcPowerSaver"
 
     const-string v3, "restoreSystemSettings: Bluetooth is enabled, skip restoring."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1045
+    .line 1041
     :goto_0
     return v4
 
-    .line 1037
+    .line 1033
     :cond_0
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$Bluetooth;->this$0:Lcom/android/server/HtcPowerSaver;
 
@@ -233,11 +233,11 @@
 
     move-result-object v1
 
-    .line 1038
+    .line 1034
     .local v1, sp:Landroid/content/SharedPreferences;
     if-nez v1, :cond_1
 
-    .line 1039
+    .line 1035
     const-string v2, "HtcPowerSaver"
 
     const-string v3, "restoreSystemSettings: Get SharedPreferences fail."
@@ -246,7 +246,7 @@
 
     goto :goto_0
 
-    .line 1042
+    .line 1038
     :cond_1
     const-string v2, "psaver_normal_bluetooth"
 
@@ -254,7 +254,7 @@
 
     move-result v0
 
-    .line 1043
+    .line 1039
     .local v0, normalValue:Z
     invoke-direct {p0, v0}, Lcom/android/server/HtcPowerSaver$Bluetooth;->setSysSettings(Z)V
 
@@ -267,7 +267,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1014
+    .line 1010
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$Bluetooth;->this$0:Lcom/android/server/HtcPowerSaver;
 
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$Bluetooth;->mContext:Landroid/content/Context;
@@ -277,28 +277,28 @@
 
     move-result-object v0
 
-    .line 1015
+    .line 1011
     .local v0, sp:Landroid/content/SharedPreferences;
     if-nez v0, :cond_0
 
-    .line 1016
+    .line 1012
     const-string v2, "HtcPowerSaver"
 
     const-string v3, "saveSystemSettings: Get SharedPreferences fail."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1022
+    .line 1018
     :goto_0
     return v5
 
-    .line 1019
+    .line 1015
     :cond_0
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Bluetooth;->getSysSettings()Z
 
     move-result v1
 
-    .line 1020
+    .line 1016
     .local v1, sysValue:Z
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -312,7 +312,7 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1021
+    .line 1017
     const-string v2, "HtcPowerSaver"
 
     new-instance v3, Ljava/lang/StringBuilder;

@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera/property/PropertyChangedCallback",
         "<",
-        "Lcom/android/camera/RecordingState;",
+        "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 305
+    .line 328
     iput-object p1, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -56,100 +56,67 @@
             "(",
             "Lcom/android/camera/property/Property",
             "<",
-            "Lcom/android/camera/RecordingState;",
+            "Ljava/lang/Boolean;",
             ">;",
             "Lcom/android/camera/property/PropertyChangedEventArgs",
             "<",
-            "Lcom/android/camera/RecordingState;",
+            "Ljava/lang/Boolean;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/RecordingState;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/RecordingState;>;"
-    const/4 v3, 0x0
+    .line 332
+    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
+    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
+    iget-object v0, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
 
-    .line 309
-    sget-object v1, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$RecordingState:[I
+    invoke-virtual {v0}, Lcom/android/camera/component/MainBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lcom/android/camera/RecordingState;
+    iget-object v0, v0, Lcom/android/camera/HTCCamera;->recordingState:Lcom/android/camera/property/Property;
 
-    invoke-virtual {v0}, Lcom/android/camera/RecordingState;->ordinal()I
+    sget-object v1, Lcom/android/camera/RecordingState;->Starting:Lcom/android/camera/RecordingState;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->isValueEquals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    aget v0, v1, v0
+    if-eqz v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    .line 324
+    .line 335
     :goto_0
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
-
-    #calls: Lcom/android/camera/component/MainBar;->updateButtonStates()V
-    invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1400(Lcom/android/camera/component/MainBar;)V
-
-    .line 325
     return-void
 
-    .line 312
-    :pswitch_0
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
-
-    #calls: Lcom/android/camera/component/MainBar;->updateFlashIcon()V
-    invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1100(Lcom/android/camera/component/MainBar;)V
-
-    .line 315
-    :pswitch_1
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
-
+    .line 334
+    :cond_0
     iget-object v1, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
 
-    #getter for: Lcom/android/camera/component/MainBar;->m_FunctionBar:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/camera/component/MainBar;->access$700(Lcom/android/camera/component/MainBar;)Landroid/view/View;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/component/MainBar;->showUI(Landroid/view/View;ZZ)V
-
-    goto :goto_0
-
-    .line 318
-    :pswitch_2
     iget-object v0, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
 
-    iget-object v1, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
-
     #getter for: Lcom/android/camera/component/MainBar;->m_FunctionBar:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/camera/component/MainBar;->access$700(Lcom/android/camera/component/MainBar;)Landroid/view/View;
+    invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$700(Lcom/android/camera/component/MainBar;)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v3, v3}, Lcom/android/camera/component/MainBar;->showUI(Landroid/view/View;ZZ)V
+    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v3
+
+    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v1, v2, v3, v0}, Lcom/android/camera/component/MainBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
-
-    .line 321
-    :pswitch_3
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$12;->this$0:Lcom/android/camera/component/MainBar;
-
-    #calls: Lcom/android/camera/component/MainBar;->updateFlashIcon()V
-    invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1100(Lcom/android/camera/component/MainBar;)V
-
-    goto :goto_0
-
-    .line 309
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
 .end method

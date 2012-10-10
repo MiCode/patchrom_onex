@@ -2525,6 +2525,10 @@
 
     if-eqz v12, :cond_0
 
+    instance-of v12, v7, Landroid/view/ViewGroup;
+
+    if-eqz v12, :cond_0
+
     .line 2872
     invoke-virtual {v8}, Lcom/htc/widget/MoreExpandableItemInfo;->isGroupExpanded()Z
 

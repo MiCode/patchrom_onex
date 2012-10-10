@@ -25,7 +25,9 @@
 
 .field private static final CREATE_MEDIA_CONTROLLER_NEW:I = 0x1
 
-.field public static final DISCOVER_TIMEOUT:I = 0x2710
+.field public static final DISCOVER_TIMEOUT:I = 0x1388
+
+.field public static final DISCOVER_TIMEOUT_LONG:I = 0x2710
 
 .field public static final ERROR_COMMAND_PAUSE:I = -0x40c7
 
@@ -206,38 +208,38 @@
 
     const/4 v3, 0x0
 
-    .line 276
+    .line 277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
+    .line 146
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
-    .line 146
+    .line 147
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
 
-    .line 147
+    .line 148
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
-    .line 148
+    .line 149
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mServerID:Ljava/lang/String;
 
-    .line 149
+    .line 150
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererCreated:Z
 
-    .line 150
+    .line 151
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
-    .line 151
+    .line 152
     iput v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mFilter:I
 
-    .line 153
+    .line 154
     const-wide/16 v1, -0x1
 
     iput-wide v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
-    .line 154
+    .line 155
     new-instance v1, Ljava/lang/Integer;
 
     const/4 v2, 0x7
@@ -246,59 +248,59 @@
 
     iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
-    .line 155
+    .line 156
     const-wide/16 v1, 0x0
 
     iput-wide v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCurrentPos:J
 
-    .line 156
+    .line 157
     const/4 v1, 0x5
 
     iput v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->SEEK_THREADHOLD:I
 
-    .line 157
+    .line 158
     const/16 v1, 0x1388
 
     iput v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->SEEK_STATE_CHANGE_TIMEOUT:I
 
-    .line 158
+    .line 159
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 160
+    .line 161
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mUriRendererSaver:Landroid/net/Uri;
 
-    .line 161
+    .line 162
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mUriRendererGetter:Landroid/net/Uri;
 
-    .line 162
+    .line 163
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mUriDefRendererSaver:Landroid/net/Uri;
 
-    .line 163
+    .line 164
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mUriDefRendererGetter:Landroid/net/Uri;
 
-    .line 165
+    .line 166
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 166
+    .line 167
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 167
+    .line 168
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
-    .line 169
+    .line 170
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
-    .line 171
+    .line 172
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
 
-    .line 173
+    .line 174
     new-instance v1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadLock:Ljava/util/concurrent/locks/Lock;
 
-    .line 174
+    .line 175
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->newCondition()Ljava/util/concurrent/locks/Condition;
@@ -307,44 +309,30 @@
 
     iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadCondition:Ljava/util/concurrent/locks/Condition;
 
-    .line 185
+    .line 186
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
-    .line 240
+    .line 241
     new-instance v1, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$1;
 
     invoke-direct {v1, p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$1;-><init>(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;)V
 
     iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
-    .line 277
+    .line 278
     iput-object p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
-    .line 278
+    .line 279
     iput p2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
 
-    .line 279
+    .line 280
     new-instance v1, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     invoke-direct {v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;-><init>()V
 
     iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
-    .line 280
-    new-instance v1, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
-
-    invoke-direct {v1, p0}, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;-><init>(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;)V
-
-    iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
-
     .line 281
-    new-instance v1, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
-
-    invoke-direct {v1, p0}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;-><init>(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;)V
-
-    iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
-
-    .line 282
     const/4 v1, 0x2
 
     if-ne p3, v1, :cond_0
@@ -354,10 +342,10 @@
     :cond_0
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
-    .line 283
+    .line 282
     iput p3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mFilter:I
 
-    .line 285
+    .line 284
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -388,7 +376,7 @@
 
     iput-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mUriRendererGetter:Landroid/net/Uri;
 
-    .line 286
+    .line 285
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -419,7 +407,7 @@
 
     iput-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mUriDefRendererGetter:Landroid/net/Uri;
 
-    .line 287
+    .line 286
     return-void
 .end method
 
@@ -430,14 +418,14 @@
     .parameter "filter"
 
     .prologue
-    .line 272
+    .line 273
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     invoke-direct {p0, p1, v0, p3}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;-><init>(Landroid/content/Context;II)V
 
-    .line 273
+    .line 274
     return-void
 .end method
 
@@ -505,24 +493,45 @@
     return v0
 .end method
 
+.method private initMiddleLayerListener()V
+    .locals 1
+
+    .prologue
+    .line 312
+    iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    if-nez v0, :cond_0
+
+    .line 314
+    new-instance v0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    invoke-direct {v0, p0}, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;-><init>(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;)V
+
+    iput-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    .line 316
+    :cond_0
+    return-void
+.end method
+
 .method private lockCommand(I)V
     .locals 5
     .parameter "timeout"
 
     .prologue
-    .line 1872
+    .line 1931
     const-string v1, "HtcDLNAServiceManager"
 
     const-string v2, "[lockCommand]"
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1873
+    .line 1932
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 1875
+    .line 1934
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadCondition:Ljava/util/concurrent/locks/Condition;
 
@@ -535,12 +544,12 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1879
+    .line 1938
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 1881
+    .line 1940
     :goto_0
     const-string v1, "HtcDLNAServiceManager"
 
@@ -548,14 +557,14 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1882
+    .line 1941
     return-void
 
-    .line 1876
+    .line 1935
     :catch_0
     move-exception v0
 
-    .line 1877
+    .line 1936
     .local v0, ex:Ljava/lang/InterruptedException;
     :try_start_1
     const-string v1, "HtcDLNAServiceManager"
@@ -566,7 +575,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1879
+    .line 1938
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -592,27 +601,27 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1834
+    .line 1893
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     if-nez v1, :cond_1
 
-    .line 1842
+    .line 1901
     :cond_0
     :goto_0
     return v4
 
-    .line 1836
+    .line 1895
     :cond_1
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     iget-object v0, v1, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 1837
+    .line 1896
     .local v0, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_0
 
-    .line 1838
+    .line 1897
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -651,7 +660,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1839
+    .line 1898
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onError(Ljava/lang/String;ILjava/lang/String;)V
@@ -668,27 +677,27 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1846
+    .line 1905
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     if-nez v1, :cond_1
 
-    .line 1854
+    .line 1913
     :cond_0
     :goto_0
     return v4
 
-    .line 1848
+    .line 1907
     :cond_1
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     iget-object v0, v1, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 1849
+    .line 1908
     .local v0, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_0
 
-    .line 1850
+    .line 1909
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -727,7 +736,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1851
+    .line 1910
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onResponse(Ljava/lang/String;ILjava/lang/String;)V
 
     goto :goto_0
@@ -737,19 +746,19 @@
     .locals 2
 
     .prologue
-    .line 1885
+    .line 1944
     const-string v0, "HtcDLNAServiceManager"
 
     const-string v1, "[unlockCommand]"
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1886
+    .line 1945
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 1888
+    .line 1947
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadCondition:Ljava/util/concurrent/locks/Condition;
 
@@ -757,22 +766,22 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1890
+    .line 1949
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mPlayerThreadLock:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 1892
+    .line 1951
     const-string v0, "HtcDLNAServiceManager"
 
     const-string v1, "[unlockCommand][OUT]"
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1893
+    .line 1952
     return-void
 
-    .line 1890
+    .line 1949
     :catchall_0
     move-exception v0
 
@@ -792,14 +801,14 @@
     .parameter "contentID"
 
     .prologue
-    .line 1734
+    .line 1793
     const-string v0, "HtcDLNAServiceManager"
 
     const-string v1, "[albumArtDownload]"
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1736
+    .line 1795
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -808,12 +817,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1747
+    .line 1806
     :cond_0
     :goto_0
     return-void
 
-    .line 1741
+    .line 1800
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -824,9 +833,79 @@
 
     goto :goto_0
 
-    .line 1743
+    .line 1802
     :catch_0
     move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public callbackStatePAUSED()V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x2
+
+    .line 1060
+    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
+
+    monitor-enter v2
+
+    .line 1062
+    const/4 v1, 0x2
+
+    :try_start_0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
+
+    .line 1063
+    iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
+
+    const/4 v3, 0x2
+
+    iput v3, v1, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPlayState:I
+
+    .line 1064
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 1066
+    iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    if-nez v1, :cond_1
+
+    .line 1071
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 1064
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+
+    .line 1068
+    :cond_1
+    iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    iget-object v0, v1, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
+
+    .line 1069
+    .local v0, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
+    if-eqz v0, :cond_0
+
+    .line 1070
+    invoke-virtual {v0, v4}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onPlayStateChanged(I)V
 
     goto :goto_0
 .end method
@@ -838,33 +917,36 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 310
+    .line 320
     iput-object p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
 
-    .line 312
+    .line 322
+    invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->initMiddleLayerListener()V
+
+    .line 324
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_1
 
-    .line 314
+    .line 326
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
 
     if-eqz v0, :cond_0
 
-    .line 315
+    .line 327
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
 
     invoke-interface {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceConnected()V
 
-    .line 316
+    .line 328
     :cond_0
     const/4 v0, 0x1
 
-    .line 372
+    .line 384
     :goto_0
     return v0
 
-    .line 319
+    .line 331
     :cond_1
     const-string v1, "HtcDLNAServiceManager"
 
@@ -872,7 +954,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 321
+    .line 333
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/content/Intent;
@@ -883,14 +965,14 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 322
+    .line 334
     new-instance v1, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;
 
     invoke-direct {v1, p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;-><init>(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;)V
 
     iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 369
+    .line 381
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -911,39 +993,40 @@
 .end method
 
 .method public disconnect()V
-    .locals 5
+    .locals 6
 
     .prologue
-    .line 377
+    const/4 v5, 0x0
+
+    .line 389
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
 
-    .line 378
+    .line 390
     .local v0, clientListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     if-eqz v0, :cond_0
 
-    .line 379
+    .line 391
     invoke-interface {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceDisconnected()V
 
-    .line 381
+    .line 396
     :cond_0
-    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
-
-    if-nez v2, :cond_1
-
-    .line 398
-    :goto_0
-    return-void
-
-    .line 384
-    :cond_1
     const-string v2, "HtcDLNAServiceManager"
 
     const-string v3, "[disconnect] Request disconnect service"
 
     invoke-static {v2, v3}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
+    .line 400
     :try_start_0
+    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    if-eqz v2, :cond_1
+
+    .line 401
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -952,7 +1035,17 @@
 
     invoke-interface {v2, v3, v4}, Lcom/htc/dlnainterface/IDLNAPluginService;->unregisterCallback(ILcom/htc/dlnainterface/IDLNAPluginNotify;)V
 
-    .line 389
+    .line 402
+    :cond_1
+    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mServiceConnection:Landroid/content/ServiceConnection;
+
+    if-eqz v2, :cond_2
+
+    .line 403
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -963,25 +1056,63 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
     :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 397
-    :goto_1
-    const/4 v2, 0x0
+    .line 412
+    :cond_2
+    iput-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    iput-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
+    .line 415
+    :goto_0
+    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
-    goto :goto_0
+    if-eqz v2, :cond_3
 
-    .line 391
+    .line 417
+    iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    invoke-virtual {v2}, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->disconnect()V
+
+    .line 420
+    :cond_3
+    iput-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    .line 421
+    iput-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mServiceConnection:Landroid/content/ServiceConnection;
+
+    .line 422
+    iput-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
+
+    .line 423
+    iput-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
+
+    .line 424
+    return-void
+
+    .line 405
     :catch_0
     move-exception v1
 
-    .line 394
+    .line 408
     .local v1, ex:Ljava/lang/Exception;
+    :try_start_1
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_1
+    .line 412
+    iput-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
+
+    goto :goto_0
+
+    .end local v1           #ex:Ljava/lang/Exception;
+    :catchall_0
+    move-exception v2
+
+    iput-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
+
+    throw v2
 .end method
 
 .method public findUsableRenderer(Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
@@ -991,25 +1122,25 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 451
+    .line 477
     invoke-virtual {p0, p1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setRendererAsReadyDongle(Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 452
+    .line 478
     const-string v1, "HtcDLNAServiceManager"
 
     const-string v2, "[findUsableRenderer][setRendererAsReadyDongle]"
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 460
+    .line 486
     :goto_0
     return v0
 
-    .line 455
+    .line 481
     :cond_0
     invoke-virtual {p0, p1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setRendererAsDefaultRenderer(Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
 
@@ -1017,7 +1148,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 456
+    .line 482
     const-string v1, "HtcDLNAServiceManager"
 
     const-string v2, "[findUsableRenderer][setRendererAsDefaultRenderer]"
@@ -1026,7 +1157,7 @@
 
     goto :goto_0
 
-    .line 460
+    .line 486
     :cond_1
     const/4 v0, 0x0
 
@@ -1039,7 +1170,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1772
+    .line 1831
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -1048,12 +1179,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1784
+    .line 1843
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1777
+    .line 1836
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1070,7 +1201,7 @@
 
     goto :goto_0
 
-    .line 1779
+    .line 1838
     :catch_0
     move-exception v1
 
@@ -1083,7 +1214,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1751
+    .line 1810
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -1092,12 +1223,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1763
+    .line 1822
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1756
+    .line 1815
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1114,7 +1245,7 @@
 
     goto :goto_0
 
-    .line 1758
+    .line 1817
     :catch_0
     move-exception v1
 
@@ -1125,7 +1256,7 @@
     .locals 1
 
     .prologue
-    .line 808
+    .line 837
     iget v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
 
     return v0
@@ -1135,7 +1266,7 @@
     .locals 2
 
     .prologue
-    .line 803
+    .line 832
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1155,7 +1286,7 @@
     .locals 1
 
     .prologue
-    .line 1868
+    .line 1927
     iget v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mFilter:I
 
     return v0
@@ -1167,32 +1298,36 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1793
+    .line 1852
     const-string v3, "HtcDLNAServiceManager"
 
     const-string v4, "[getItemDetails]"
 
     invoke-static {v3, v4}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1795
+    .line 1854
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v3, :cond_0
 
     iget-boolean v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererCreated:Z
 
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
     if-nez v3, :cond_1
 
-    .line 1813
+    .line 1872
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1798
+    .line 1857
     :cond_1
     const/4 v0, 0x0
 
-    .line 1801
+    .line 1860
     .local v0, details:Lcom/htc/dlnainterface/DLNAContentItemDetails;
     :try_start_0
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1209,16 +1344,16 @@
 
     move-result-object v0
 
-    .line 1802
+    .line 1861
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     iget-object v2, v3, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 1803
+    .line 1862
     .local v2, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v2, :cond_0
 
-    .line 1805
+    .line 1864
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getPlayingIndex()J
 
     move-result-wide v3
@@ -1229,12 +1364,12 @@
 
     goto :goto_0
 
-    .line 1808
+    .line 1867
     .end local v2           #listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
     :catch_0
     move-exception v1
 
-    .line 1810
+    .line 1869
     .local v1, e:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1245,10 +1380,10 @@
     .locals 4
 
     .prologue
-    .line 819
+    .line 848
     const/4 v0, 0x0
 
-    .line 823
+    .line 852
     .local v0, rendererData:Lcom/htc/dlnainterface/DLNARendererData;
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1261,7 +1396,7 @@
 
     move-result-object v0
 
-    .line 830
+    .line 859
     :goto_0
     const-string v1, "HtcDLNAServiceManager"
 
@@ -1285,10 +1420,10 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 832
+    .line 861
     return-object v0
 
-    .line 825
+    .line 854
     :catch_0
     move-exception v1
 
@@ -1299,10 +1434,10 @@
     .locals 8
 
     .prologue
-    .line 1637
+    .line 1696
     const-wide/16 v1, -0x1
 
-    .line 1638
+    .line 1697
     .local v1, index:J
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -1315,13 +1450,13 @@
     :cond_0
     move-wide v3, v1
 
-    .line 1650
+    .line 1709
     .end local v1           #index:J
     .local v3, index:J
     :goto_0
     return-wide v3
 
-    .line 1642
+    .line 1701
     .end local v3           #index:J
     .restart local v1       #index:J
     :cond_1
@@ -1338,7 +1473,7 @@
 
     move-result-wide v1
 
-    .line 1648
+    .line 1707
     :goto_1
     const-string v5, "HtcDLNAServiceManager"
 
@@ -1364,18 +1499,18 @@
 
     move-wide v3, v1
 
-    .line 1650
+    .line 1709
     .end local v1           #index:J
     .restart local v3       #index:J
     goto :goto_0
 
-    .line 1643
+    .line 1702
     .end local v3           #index:J
     .restart local v1       #index:J
     :catch_0
     move-exception v0
 
-    .line 1645
+    .line 1704
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1388,7 +1523,7 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 1673
+    .line 1732
     iget-object v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v6, :cond_0
@@ -1397,20 +1532,20 @@
 
     if-nez v6, :cond_1
 
-    .line 1718
+    .line 1777
     :cond_0
     :goto_0
     return-wide v4
 
-    .line 1682
+    .line 1741
     :cond_1
     const-wide/16 v1, 0x0
 
-    .line 1684
+    .line 1743
     .local v1, position:J
     const/4 v3, 0x0
 
-    .line 1688
+    .line 1747
     .local v3, positionNegative:Z
     :try_start_0
     iget-object v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1423,7 +1558,7 @@
 
     move-result-wide v1
 
-    .line 1689
+    .line 1748
     const-string v6, "HtcDLNAServiceManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1448,19 +1583,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1697
+    .line 1756
     :goto_1
     cmp-long v6, v1, v4
 
     if-gez v6, :cond_2
 
-    .line 1698
+    .line 1757
     const-wide/16 v1, 0x0
 
-    .line 1700
+    .line 1759
     const/4 v3, 0x1
 
-    .line 1705
+    .line 1764
     :cond_2
     iget-wide v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
@@ -1484,16 +1619,16 @@
 
     if-gtz v6, :cond_3
 
-    .line 1706
+    .line 1765
     iget-wide v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
     goto :goto_0
 
-    .line 1693
+    .line 1752
     :catch_0
     move-exception v0
 
-    .line 1695
+    .line 1754
     .local v0, ex:Ljava/lang/Exception;
     const-string v6, "HtcDLNAServiceManager"
 
@@ -1519,7 +1654,7 @@
 
     goto :goto_1
 
-    .line 1708
+    .line 1767
     .end local v0           #ex:Ljava/lang/Exception;
     :cond_3
     iget-object v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
@@ -1536,27 +1671,27 @@
 
     if-ltz v4, :cond_4
 
-    .line 1710
+    .line 1769
     iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const/16 v5, 0x2711
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1712
+    .line 1771
     :cond_4
     const-wide/16 v4, -0x1
 
     iput-wide v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
-    .line 1716
+    .line 1775
     if-nez v3, :cond_5
 
     .end local v1           #position:J
     :goto_2
     iput-wide v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCurrentPos:J
 
-    .line 1717
+    .line 1776
     const-string v4, "HtcDLNAServiceManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1581,12 +1716,12 @@
 
     invoke-static {v4, v5}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1718
+    .line 1777
     iget-wide v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCurrentPos:J
 
     goto/16 :goto_0
 
-    .line 1716
+    .line 1775
     .restart local v1       #position:J
     :cond_5
     iget-wide v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCurrentPos:J
@@ -1598,10 +1733,10 @@
     .locals 8
 
     .prologue
-    .line 1619
+    .line 1678
     const-wide/16 v1, -0x1
 
-    .line 1620
+    .line 1679
     .local v1, total:J
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -1614,13 +1749,13 @@
     :cond_0
     move-wide v3, v1
 
-    .line 1632
+    .line 1691
     .end local v1           #total:J
     .local v3, total:J
     :goto_0
     return-wide v3
 
-    .line 1624
+    .line 1683
     .end local v3           #total:J
     .restart local v1       #total:J
     :cond_1
@@ -1637,7 +1772,7 @@
 
     move-result-wide v1
 
-    .line 1630
+    .line 1689
     :goto_1
     const-string v5, "HtcDLNAServiceManager"
 
@@ -1663,18 +1798,18 @@
 
     move-wide v3, v1
 
-    .line 1632
+    .line 1691
     .end local v1           #total:J
     .restart local v3       #total:J
     goto :goto_0
 
-    .line 1625
+    .line 1684
     .end local v3           #total:J
     .restart local v1       #total:J
     :catch_0
     move-exception v0
 
-    .line 1627
+    .line 1686
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1685,15 +1820,15 @@
     .locals 2
 
     .prologue
-    .line 785
+    .line 814
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 786
+    .line 815
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
-    .line 788
+    .line 817
     :goto_0
     return-object v0
 
@@ -1718,10 +1853,10 @@
     .parameter "rendererID"
 
     .prologue
-    .line 841
+    .line 870
     const/4 v0, 0x0
 
-    .line 845
+    .line 874
     .local v0, rendererData:Lcom/htc/dlnainterface/DLNARendererData;
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1732,7 +1867,7 @@
 
     move-result-object v0
 
-    .line 852
+    .line 881
     :goto_0
     const-string v1, "HtcDLNAServiceManager"
 
@@ -1756,10 +1891,10 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 854
+    .line 883
     return-object v0
 
-    .line 847
+    .line 876
     :catch_0
     move-exception v1
 
@@ -1770,7 +1905,7 @@
     .locals 1
 
     .prologue
-    .line 1190
+    .line 1245
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget v0, v0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRepeat:I
@@ -1782,10 +1917,10 @@
     .locals 5
 
     .prologue
-    .line 859
+    .line 888
     const/4 v1, 0x0
 
-    .line 863
+    .line 892
     .local v1, status:Lcom/htc/dlnainterface/DLNAControllerStatus;
     :try_start_0
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1800,15 +1935,15 @@
 
     move-result-object v1
 
-    .line 870
+    .line 899
     :goto_0
     return-object v1
 
-    .line 865
+    .line 894
     :catch_0
     move-exception v0
 
-    .line 867
+    .line 896
     .local v0, ex:Ljava/lang/Exception;
     const-string v2, "HtcDLNAServiceManager"
 
@@ -1839,10 +1974,10 @@
     .locals 5
 
     .prologue
-    .line 1655
+    .line 1714
     const/4 v0, 0x1
 
-    .line 1656
+    .line 1715
     .local v0, nRet:I
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -1855,13 +1990,13 @@
     :cond_0
     move v1, v0
 
-    .line 1668
+    .line 1727
     .end local v0           #nRet:I
     .local v1, nRet:I
     :goto_0
     return v1
 
-    .line 1661
+    .line 1720
     .end local v1           #nRet:I
     .restart local v0       #nRet:I
     :cond_1
@@ -1881,12 +2016,12 @@
     :goto_1
     move v1, v0
 
-    .line 1668
+    .line 1727
     .end local v0           #nRet:I
     .restart local v1       #nRet:I
     goto :goto_0
 
-    .line 1663
+    .line 1722
     .end local v1           #nRet:I
     .restart local v0       #nRet:I
     :catch_0
@@ -1899,12 +2034,12 @@
     .locals 4
 
     .prologue
-    .line 1610
+    .line 1669
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
     monitor-enter v1
 
-    .line 1612
+    .line 1671
     :try_start_0
     const-string v0, "HtcDLNAServiceManager"
 
@@ -1930,7 +2065,7 @@
 
     invoke-static {v0, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1613
+    .line 1672
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -1941,7 +2076,7 @@
 
     return v0
 
-    .line 1614
+    .line 1673
     :catchall_0
     move-exception v0
 
@@ -1956,7 +2091,7 @@
     .locals 1
 
     .prologue
-    .line 1213
+    .line 1268
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget v0, v0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mVolume:I
@@ -1972,35 +2107,35 @@
 
     const/4 v2, 0x0
 
-    .line 1723
+    .line 1782
     iget-boolean v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
     if-eqz v3, :cond_1
 
-    .line 1724
+    .line 1783
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getSlideShowSatatus()I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 1727
+    .line 1786
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 1724
+    .line 1783
     goto :goto_0
 
-    .line 1726
+    .line 1785
     :cond_1
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getState()I
 
     move-result v0
 
-    .line 1727
+    .line 1786
     .local v0, state:I
     if-eqz v0, :cond_2
 
@@ -2025,7 +2160,7 @@
     .locals 1
 
     .prologue
-    .line 1235
+    .line 1290
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget-boolean v0, v0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mShuffle:Z
@@ -2039,7 +2174,7 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 1066
+    .line 1118
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -2048,12 +2183,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1102
+    .line 1157
     :cond_0
     :goto_0
     return-void
 
-    .line 1069
+    .line 1121
     :cond_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -2121,7 +2256,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1076
+    .line 1128
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2146,7 +2281,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1077
+    .line 1129
     const/16 v0, -0x40c5
 
     const-string v1, "Command playNext in wrong status"
@@ -2155,7 +2290,7 @@
 
     goto :goto_0
 
-    .line 1081
+    .line 1133
     :cond_2
     const-string v0, "HtcDLNAServiceManager"
 
@@ -2163,7 +2298,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1085
+    .line 1137
     :try_start_0
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getPlaylistSize()J
 
@@ -2181,20 +2316,20 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 1087
+    .line 1139
     const-wide/16 v0, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->seekTo(J)V
 
     goto :goto_0
 
-    .line 1098
+    .line 1153
     :catch_0
     move-exception v0
 
     goto/16 :goto_0
 
-    .line 1091
+    .line 1143
     :cond_3
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -2204,14 +2339,14 @@
 
     if-eq v0, v4, :cond_4
 
-    .line 1092
+    .line 1144
     const/16 v0, 0x66
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 1095
+    .line 1150
     :goto_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -2223,13 +2358,9 @@
 
     goto/16 :goto_0
 
-    .line 1094
+    .line 1147
     :cond_4
-    const/16 v0, 0x67
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
+    invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->callbackStatePAUSED()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2242,7 +2373,7 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 1026
+    .line 1076
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -2251,12 +2382,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1062
+    .line 1114
     :cond_0
     :goto_0
     return-void
 
-    .line 1029
+    .line 1079
     :cond_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -2324,7 +2455,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1036
+    .line 1086
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2349,7 +2480,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1037
+    .line 1087
     const/16 v0, -0x40c6
 
     const-string v1, "Command playPrevious in wrong status"
@@ -2358,7 +2489,7 @@
 
     goto :goto_0
 
-    .line 1041
+    .line 1091
     :cond_2
     const-string v0, "HtcDLNAServiceManager"
 
@@ -2366,7 +2497,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1045
+    .line 1095
     :try_start_0
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getPlaylistSize()J
 
@@ -2384,20 +2515,20 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 1047
+    .line 1097
     const-wide/16 v0, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->seekTo(J)V
 
     goto :goto_0
 
-    .line 1058
+    .line 1110
     :catch_0
     move-exception v0
 
     goto/16 :goto_0
 
-    .line 1051
+    .line 1101
     :cond_3
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -2407,14 +2538,14 @@
 
     if-eq v0, v4, :cond_4
 
-    .line 1052
+    .line 1102
     const/16 v0, 0x66
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 1055
+    .line 1107
     :goto_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -2426,13 +2557,9 @@
 
     goto/16 :goto_0
 
-    .line 1054
+    .line 1105
     :cond_4
-    const/16 v0, 0x67
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
+    invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->callbackStatePAUSED()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2443,7 +2570,7 @@
     .locals 3
 
     .prologue
-    .line 1106
+    .line 1161
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -2452,12 +2579,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1128
+    .line 1183
     :cond_0
     :goto_0
     return-void
 
-    .line 1109
+    .line 1164
     :cond_1
     const-string v0, "HtcDLNAServiceManager"
 
@@ -2465,7 +2592,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1113
+    .line 1168
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -2473,14 +2600,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1114
+    .line 1169
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x2712
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1115
+    .line 1170
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -2489,24 +2616,24 @@
 
     invoke-interface {v0, v1, v2}, Lcom/htc/dlnainterface/IDLNAPluginService;->stop(ILjava/lang/String;)V
 
-    .line 1116
+    .line 1171
     const/16 v0, 0x3e8
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 1117
+    .line 1172
     iget-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
     if-eqz v0, :cond_2
 
-    .line 1118
+    .line 1173
     const/16 v0, 0xbb8
 
     invoke-direct {p0, v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->lockCommand(I)V
 
-    .line 1119
+    .line 1174
     :cond_2
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -2516,17 +2643,17 @@
 
     invoke-interface {v0, v1, v2}, Lcom/htc/dlnainterface/IDLNAPluginService;->destroyMediaController(ILjava/lang/String;)V
 
-    .line 1120
+    .line 1175
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/htc/dlnasharedmodule/WirelessDisplayHelper;->resumeMirror(Landroid/content/Context;)V
 
-    .line 1121
+    .line 1176
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCurrentPos:J
 
-    .line 1122
+    .line 1177
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
@@ -2535,7 +2662,7 @@
 
     goto :goto_0
 
-    .line 1124
+    .line 1179
     :catch_0
     move-exception v0
 
@@ -2546,16 +2673,16 @@
     .locals 3
 
     .prologue
-    .line 1818
+    .line 1877
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v1, :cond_0
 
-    .line 1831
+    .line 1890
     :goto_0
     return-void
 
-    .line 1823
+    .line 1882
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -2564,7 +2691,7 @@
 
     invoke-interface {v1, v2}, Lcom/htc/dlnainterface/IDLNAPluginService;->reSearchDevices(I)V
 
-    .line 1824
+    .line 1883
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -2575,11 +2702,11 @@
 
     goto :goto_0
 
-    .line 1826
+    .line 1885
     :catch_0
     move-exception v0
 
-    .line 1829
+    .line 1888
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -2590,7 +2717,7 @@
     .locals 4
 
     .prologue
-    .line 963
+    .line 992
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -2599,12 +2726,12 @@
 
     if-nez v0, :cond_1
 
-    .line 988
+    .line 1019
     :cond_0
     :goto_0
     return-void
 
-    .line 967
+    .line 996
     :cond_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -2614,7 +2741,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 968
+    .line 997
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2639,7 +2766,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 969
+    .line 998
     const/16 v0, -0x40c7
 
     const-string v1, "Command requestPause in wrong status"
@@ -2648,7 +2775,7 @@
 
     goto :goto_0
 
-    .line 973
+    .line 1002
     :cond_2
     const-string v0, "HtcDLNAServiceManager"
 
@@ -2656,13 +2783,20 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 977
+    .line 1006
+    const/16 v0, 0x67
+
+    const/4 v1, 0x0
+
     :try_start_0
+    invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
+
+    .line 1008
     iget-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
     if-eqz v0, :cond_3
 
-    .line 978
+    .line 1009
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -2673,23 +2807,15 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/htc/dlnainterface/IDLNAPluginService;->setDMCPhotoSlideshowState(ILjava/lang/String;I)Z
 
-    .line 982
-    :goto_1
-    const/16 v0, 0x67
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
-
     goto :goto_0
 
-    .line 984
+    .line 1015
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 980
+    .line 1011
     :cond_3
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -2701,14 +2827,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method public requestStop()V
     .locals 4
 
     .prologue
-    .line 996
+    .line 1027
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -2717,12 +2843,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1022
+    .line 1053
     :cond_0
     :goto_0
     return-void
 
-    .line 999
+    .line 1030
     :cond_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -2742,14 +2868,14 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1000
+    .line 1031
     const-string v0, "HtcDLNAServiceManager"
 
     const-string v1, "[stop] error status for requestStop()"
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1001
+    .line 1032
     const/16 v0, -0x40c8
 
     const-string v1, "Command requestStop in wrong status"
@@ -2758,7 +2884,7 @@
 
     goto :goto_0
 
-    .line 1005
+    .line 1036
     :cond_2
     const-string v0, "HtcDLNAServiceManager"
 
@@ -2766,13 +2892,13 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1009
+    .line 1040
     :try_start_0
     iget-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
     if-eqz v0, :cond_3
 
-    .line 1010
+    .line 1041
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -2783,7 +2909,7 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/htc/dlnainterface/IDLNAPluginService;->setDMCPhotoSlideshowState(ILjava/lang/String;I)Z
 
-    .line 1015
+    .line 1046
     :goto_1
     const/16 v0, 0x3e8
 
@@ -2791,20 +2917,20 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 1016
+    .line 1047
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCurrentPos:J
 
     goto :goto_0
 
-    .line 1018
+    .line 1049
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 1012
+    .line 1043
     :cond_3
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -2825,7 +2951,7 @@
     .end annotation
 
     .prologue
-    .line 815
+    .line 844
     return-void
 .end method
 
@@ -2834,7 +2960,7 @@
     .parameter "rendererId"
 
     .prologue
-    .line 797
+    .line 826
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2879,7 +3005,7 @@
 
     move-result-object v0
 
-    .line 798
+    .line 827
     .local v0, result:Ljava/lang/String;
     const-string v1, "true"
 
@@ -2894,7 +3020,7 @@
     .locals 1
 
     .prologue
-    .line 771
+    .line 800
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->saveRenderer(Ljava/lang/String;)Z
@@ -2909,7 +3035,7 @@
     .parameter "renderer"
 
     .prologue
-    .line 776
+    .line 805
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -2918,15 +3044,15 @@
 
     if-gtz v1, :cond_1
 
-    .line 777
+    .line 806
     :cond_0
     const/4 v1, 0x0
 
-    .line 780
+    .line 809
     :goto_0
     return v1
 
-    .line 779
+    .line 808
     :cond_1
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
@@ -2972,7 +3098,7 @@
 
     move-result-object v0
 
-    .line 780
+    .line 809
     .local v0, result:Ljava/lang/String;
     const-string v1, "true"
 
@@ -2988,7 +3114,7 @@
     .parameter "timeSecs"
 
     .prologue
-    .line 1132
+    .line 1187
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -2997,12 +3123,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1169
+    .line 1224
     :cond_0
     :goto_0
     return-void
 
-    .line 1135
+    .line 1190
     :cond_1
     const-wide/16 v0, 0x0
 
@@ -3010,10 +3136,10 @@
 
     if-gez v0, :cond_2
 
-    .line 1136
+    .line 1191
     const-wide/16 p1, 0x0
 
-    .line 1138
+    .line 1193
     :cond_2
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -3063,7 +3189,7 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 1143
+    .line 1198
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3088,7 +3214,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1144
+    .line 1199
     const/16 v0, -0x40c9
 
     const-string v1, "Command seekTo in wrong status"
@@ -3097,7 +3223,7 @@
 
     goto :goto_0
 
-    .line 1148
+    .line 1203
     :cond_3
     const-string v0, "HtcDLNAServiceManager"
 
@@ -3121,11 +3247,11 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1152
+    .line 1207
     :try_start_0
     iput-wide p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
-    .line 1154
+    .line 1209
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -3138,7 +3264,7 @@
 
     goto :goto_0
 
-    .line 1165
+    .line 1220
     :catch_0
     move-exception v0
 
@@ -3150,12 +3276,15 @@
     .parameter "controllerListener"
 
     .prologue
-    .line 305
+    .line 306
+    invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->initMiddleLayerListener()V
+
+    .line 307
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     iput-object p1, v0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 306
+    .line 308
     return-void
 .end method
 
@@ -3164,7 +3293,7 @@
     .parameter "data"
 
     .prologue
-    .line 656
+    .line 685
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -3175,12 +3304,12 @@
 
     if-nez p1, :cond_1
 
-    .line 671
+    .line 700
     :cond_0
     :goto_0
     return-void
 
-    .line 659
+    .line 688
     :cond_1
     const-string v1, "HtcDLNAServiceManager"
 
@@ -3204,12 +3333,12 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 661
+    .line 690
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 664
+    .line 693
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -3223,11 +3352,11 @@
 
     goto :goto_0
 
-    .line 666
+    .line 695
     :catch_0
     move-exception v0
 
-    .line 669
+    .line 698
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3239,7 +3368,7 @@
     .parameter "data"
 
     .prologue
-    .line 705
+    .line 734
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -3250,12 +3379,12 @@
 
     if-nez p1, :cond_1
 
-    .line 720
+    .line 749
     :cond_0
     :goto_0
     return-void
 
-    .line 708
+    .line 737
     :cond_1
     const-string v1, "HtcDLNAServiceManager"
 
@@ -3279,12 +3408,12 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 710
+    .line 739
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 713
+    .line 742
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -3298,11 +3427,11 @@
 
     goto :goto_0
 
-    .line 715
+    .line 744
     :catch_0
     move-exception v0
 
-    .line 718
+    .line 747
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3314,7 +3443,7 @@
     .parameter "data"
 
     .prologue
-    .line 584
+    .line 613
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -3325,12 +3454,12 @@
 
     if-nez p1, :cond_1
 
-    .line 600
+    .line 629
     :cond_0
     :goto_0
     return-void
 
-    .line 587
+    .line 616
     :cond_1
     const-string v1, "HtcDLNAServiceManager"
 
@@ -3354,18 +3483,18 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 589
+    .line 618
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 592
+    .line 621
     :try_start_0
     iget-object v1, p1, Lcom/htc/dlnainterface/DLNARemotePlaylistInfo;->serverID:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mServerID:Ljava/lang/String;
 
-    .line 593
+    .line 622
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -3378,11 +3507,11 @@
 
     goto :goto_0
 
-    .line 595
+    .line 624
     :catch_0
     move-exception v0
 
-    .line 598
+    .line 627
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3394,7 +3523,7 @@
     .parameter "filePath"
 
     .prologue
-    .line 679
+    .line 708
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -3405,26 +3534,26 @@
 
     if-nez p1, :cond_4
 
-    .line 680
+    .line 709
     :cond_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v1, :cond_1
 
-    .line 681
+    .line 710
     const-string v1, "HtcDLNAServiceManager"
 
     const-string v2, "[setDataSource] Error: mService is null"
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 682
+    .line 711
     :cond_1
     iget-boolean v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererCreated:Z
 
     if-nez v1, :cond_2
 
-    .line 683
+    .line 712
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3449,23 +3578,23 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 684
+    .line 713
     :cond_2
     if-nez p1, :cond_3
 
-    .line 685
+    .line 714
     const-string v1, "HtcDLNAServiceManager"
 
     const-string v2, "[setDataSource] Error: filePath is null"
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 701
+    .line 730
     :cond_3
     :goto_0
     return-void
 
-    .line 689
+    .line 718
     :cond_4
     const-string v1, "HtcDLNAServiceManager"
 
@@ -3489,12 +3618,12 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 691
+    .line 720
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 694
+    .line 723
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -3508,11 +3637,11 @@
 
     goto :goto_0
 
-    .line 696
+    .line 725
     :catch_0
     move-exception v0
 
-    .line 699
+    .line 728
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3526,7 +3655,7 @@
     .parameter "containerID"
 
     .prologue
-    .line 559
+    .line 588
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -3541,22 +3670,22 @@
 
     if-nez p3, :cond_1
 
-    .line 576
+    .line 605
     :cond_0
     :goto_0
     return-void
 
-    .line 565
+    .line 594
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 568
+    .line 597
     :try_start_0
     iput-object p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mServerID:Ljava/lang/String;
 
-    .line 569
+    .line 598
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -3575,11 +3704,11 @@
 
     goto :goto_0
 
-    .line 571
+    .line 600
     :catch_0
     move-exception v6
 
-    .line 574
+    .line 603
     .local v6, ex:Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3592,7 +3721,7 @@
     .parameter "startIndex"
 
     .prologue
-    .line 729
+    .line 758
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -3603,12 +3732,12 @@
 
     if-nez p1, :cond_1
 
-    .line 744
+    .line 773
     :cond_0
     :goto_0
     return-void
 
-    .line 732
+    .line 761
     :cond_1
     const-string v0, "HtcDLNAServiceManager"
 
@@ -3642,12 +3771,12 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 734
+    .line 763
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 737
+    .line 766
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -3674,17 +3803,17 @@
 
     goto :goto_0
 
-    .line 739
+    .line 768
     :catch_0
     move-exception v8
 
-    .line 742
+    .line 771
     .local v8, ex:Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 737
+    .line 766
     .end local v8           #ex:Ljava/lang/Exception;
     :cond_2
     const-wide/16 v6, 0x0
@@ -3697,7 +3826,7 @@
     .parameter "data"
 
     .prologue
-    .line 633
+    .line 662
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -3708,12 +3837,12 @@
 
     if-nez p1, :cond_1
 
-    .line 648
+    .line 677
     :cond_0
     :goto_0
     return-void
 
-    .line 636
+    .line 665
     :cond_1
     const-string v1, "HtcDLNAServiceManager"
 
@@ -3737,12 +3866,12 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 638
+    .line 667
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 641
+    .line 670
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -3756,11 +3885,11 @@
 
     goto :goto_0
 
-    .line 643
+    .line 672
     :catch_0
     move-exception v0
 
-    .line 646
+    .line 675
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3772,7 +3901,7 @@
     .parameter "data"
 
     .prologue
-    .line 609
+    .line 638
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
@@ -3783,12 +3912,12 @@
 
     if-nez p1, :cond_1
 
-    .line 624
+    .line 653
     :cond_0
     :goto_0
     return-void
 
-    .line 612
+    .line 641
     :cond_1
     const-string v1, "HtcDLNAServiceManager"
 
@@ -3812,12 +3941,12 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 614
+    .line 643
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 617
+    .line 646
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -3831,11 +3960,11 @@
 
     goto :goto_0
 
-    .line 619
+    .line 648
     :catch_0
     move-exception v0
 
-    .line 622
+    .line 651
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3848,29 +3977,29 @@
     .parameter "path"
 
     .prologue
-    .line 1860
+    .line 1919
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
 
-    .line 1861
+    .line 1920
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     invoke-interface {v1, p1, p2}, Lcom/htc/dlnainterface/IDLNAPluginService;->setOutputPath(ILjava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1866
+    .line 1925
     :cond_0
     :goto_0
     return-void
 
-    .line 1862
+    .line 1921
     :catch_0
     move-exception v0
 
-    .line 1864
+    .line 1923
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3887,10 +4016,10 @@
 
     const/4 v4, 0x0
 
-    .line 402
+    .line 428
     const/4 v1, 0x0
 
-    .line 404
+    .line 430
     .local v1, result:I
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -3898,17 +4027,17 @@
 
     if-nez p1, :cond_1
 
-    .line 405
+    .line 431
     :cond_0
     iput-boolean v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererCreated:Z
 
     move v3, v4
 
-    .line 443
+    .line 469
     :goto_0
     return v3
 
-    .line 407
+    .line 433
     :cond_1
     const-string v5, "HtcDLNAServiceManager"
 
@@ -3942,11 +4071,11 @@
 
     invoke-static {v5, v6}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
+    .line 437
     :try_start_0
     iput-object p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
-    .line 412
+    .line 438
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -3957,7 +4086,7 @@
 
     move-result v1
 
-    .line 413
+    .line 439
     const-string v5, "HtcDLNAServiceManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -3980,7 +4109,7 @@
 
     invoke-static {v5, v6}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 414
+    .line 440
     if-eqz v1, :cond_3
 
     move v5, v3
@@ -3988,49 +4117,49 @@
     :goto_1
     iput-boolean v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererCreated:Z
 
-    .line 416
+    .line 442
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getServiceControlStatus()Lcom/htc/dlnainterface/DLNAControllerStatus;
 
     move-result-object v2
 
-    .line 417
+    .line 443
     .local v2, status:Lcom/htc/dlnainterface/DLNAControllerStatus;
     if-eqz v2, :cond_2
 
-    .line 418
+    .line 444
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget v6, v2, Lcom/htc/dlnainterface/DLNAControllerStatus;->repeatState:I
 
     iput v6, v5, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRepeat:I
 
-    .line 419
+    .line 445
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget-boolean v6, v2, Lcom/htc/dlnainterface/DLNAControllerStatus;->bShuffle:Z
 
     iput-boolean v6, v5, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mShuffle:Z
 
-    .line 420
+    .line 446
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget v6, v2, Lcom/htc/dlnainterface/DLNAControllerStatus;->volumeValue:I
 
     iput v6, v5, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mVolume:I
 
-    .line 421
+    .line 447
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget-object v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
     iput-object v6, v5, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererID:Ljava/lang/String;
 
-    .line 423
+    .line 449
     const/4 v5, 0x2
 
     if-ne v1, v5, :cond_2
 
-    .line 425
+    .line 451
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -4039,21 +4168,21 @@
 
     invoke-interface {v5, v6, v7}, Lcom/htc/dlnainterface/IDLNAPluginService;->getDMCControlItemInfo(ILjava/lang/String;)V
 
-    .line 426
+    .line 452
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget-wide v6, v2, Lcom/htc/dlnainterface/DLNAControllerStatus;->currentIndex:J
 
     iput-wide v6, v5, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
-    .line 427
+    .line 453
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iget-wide v6, v2, Lcom/htc/dlnainterface/DLNAControllerStatus;->totalCount:J
 
     iput-wide v6, v5, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mTotal:J
 
-    .line 431
+    .line 457
     :cond_2
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
@@ -4063,24 +4192,24 @@
 
     iput-wide v6, v5, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPosition:J
 
-    .line 432
+    .line 458
     iget v5, v2, Lcom/htc/dlnainterface/DLNAControllerStatus;->curDMRPlayState:I
 
     const/4 v6, 0x0
 
     invoke-virtual {p0, v5, v6}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 433
+    .line 459
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->saveRenderer()Z
 
-    .line 434
+    .line 460
     iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v6, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
 
     invoke-interface {v5, v6}, Lcom/htc/dlnainterface/IDLNAPluginService;->getRendererList(I)V
 
-    .line 435
+    .line 461
     const-string v5, "HtcDLNAServiceManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -4117,11 +4246,11 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcom/htc/dlnasharedmodule/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 443
+    .line 469
     .end local v2           #status:Lcom/htc/dlnainterface/DLNAControllerStatus;
     :goto_2
     if-eqz v1, :cond_4
@@ -4134,14 +4263,14 @@
     :cond_3
     move v5, v4
 
-    .line 414
+    .line 440
     goto :goto_1
 
-    .line 437
+    .line 463
     :catch_0
     move-exception v0
 
-    .line 440
+    .line 466
     .local v0, e:Ljava/lang/Exception;
     const-string v5, "HtcDLNAServiceManager"
 
@@ -4171,7 +4300,7 @@
     :cond_4
     move v3, v4
 
-    .line 443
+    .line 469
     goto :goto_3
 .end method
 
@@ -4182,22 +4311,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 518
+    .line 546
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v2, :cond_0
 
-    .line 554
+    .line 583
     :goto_0
     return v1
 
-    .line 521
+    .line 549
     :cond_0
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getDefaultRenderer()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 522
+    .line 550
     .local v0, renderID:Ljava/lang/String;
     const-string v2, "HtcDLNAServiceManager"
 
@@ -4225,14 +4354,14 @@
 
     invoke-static {v2, v3}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
+    .line 551
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-gtz v2, :cond_1
 
-    .line 524
+    .line 552
     const-string v2, "HtcDLNAServiceManager"
 
     const-string v3, "[setRendererAsDefaultRenderer] no default renderer available"
@@ -4241,7 +4370,7 @@
 
     goto :goto_0
 
-    .line 528
+    .line 556
     :cond_1
     const-string v1, "HtcDLNAServiceManager"
 
@@ -4265,24 +4394,31 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 530
+    .line 558
+    new-instance v1, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
+
+    invoke-direct {v1, p0}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;-><init>(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;)V
+
+    iput-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
+
+    .line 559
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     invoke-virtual {v1, v0}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->setRendererID(Ljava/lang/String;)V
 
-    .line 531
+    .line 560
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     iput-object p1, v1, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->mStatusBarData:Lcom/htc/dlnainterface/DLNAStatusBarData;
 
-    .line 532
+    .line 561
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     const-wide/16 v2, 0x2710
 
     invoke-virtual {v1, v2, v3}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->setTimeout(J)V
 
-    .line 533
+    .line 562
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     new-instance v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$4;
@@ -4291,7 +4427,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->startDiscover(Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverListener;)V
 
-    .line 554
+    .line 583
     const/4 v1, 0x1
 
     goto :goto_0
@@ -4304,24 +4440,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 465
+    .line 491
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v2, :cond_1
 
-    .line 466
+    .line 492
     const-string v2, "HtcDLNAServiceManager"
 
     const-string v3, "[setRendererAsReadyDongle] error: mService is null!!"
 
     invoke-static {v2, v3}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
+    .line 541
     :cond_0
     :goto_0
     return v1
 
-    .line 470
+    .line 496
     :cond_1
     const-string v2, "HtcDLNAServiceManager"
 
@@ -4345,18 +4481,25 @@
 
     invoke-static {v2, v3}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 472
+    .line 498
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/htc/dlnasharedmodule/WirelessDisplayHelper;->getReadyDongle(Landroid/content/Context;)Lcom/htc/service/DongleInfo;
 
     move-result-object v0
 
-    .line 473
+    .line 499
     .local v0, info:Lcom/htc/service/DongleInfo;
     if-eqz v0, :cond_0
 
-    .line 476
+    .line 502
+    new-instance v2, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
+
+    invoke-direct {v2, p0}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;-><init>(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;)V
+
+    iput-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
+
+    .line 504
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/htc/dlnasharedmodule/WirelessDisplayHelper;->getReadyDongleIP(Landroid/content/Context;)Ljava/lang/String;
@@ -4377,7 +4520,7 @@
 
     if-lez v2, :cond_2
 
-    .line 477
+    .line 505
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mContext:Landroid/content/Context;
@@ -4388,7 +4531,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->setRendererIP(Ljava/lang/String;)V
 
-    .line 478
+    .line 506
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4417,20 +4560,20 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 489
+    .line 517
     :goto_1
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     iput-object p1, v1, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->mStatusBarData:Lcom/htc/dlnainterface/DLNAStatusBarData;
 
-    .line 490
+    .line 518
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     const-wide/16 v2, 0x2710
 
     invoke-virtual {v1, v2, v3}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->setTimeout(J)V
 
-    .line 491
+    .line 519
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     new-instance v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$3;
@@ -4439,12 +4582,12 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->startDiscover(Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverListener;)V
 
-    .line 513
+    .line 541
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 480
+    .line 508
     :cond_2
     invoke-virtual {v0}, Lcom/htc/service/DongleInfo;->getInetAddress()Ljava/lang/String;
 
@@ -4462,7 +4605,7 @@
 
     if-lez v2, :cond_3
 
-    .line 481
+    .line 509
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;
 
     invoke-virtual {v0}, Lcom/htc/service/DongleInfo;->getInetAddress()Ljava/lang/String;
@@ -4471,7 +4614,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverer;->setRendererIP(Ljava/lang/String;)V
 
-    .line 482
+    .line 510
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4498,7 +4641,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 483
+    .line 511
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4531,7 +4674,7 @@
 
     goto :goto_1
 
-    .line 485
+    .line 513
     :cond_3
     const-string v2, "HtcDLNAServiceManager"
 
@@ -4547,6 +4690,9 @@
     .parameter "rendererListener"
 
     .prologue
+    .line 290
+    invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->initMiddleLayerListener()V
+
     .line 291
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
@@ -4561,7 +4707,7 @@
     .parameter "nRepeatState"
 
     .prologue
-    .line 1173
+    .line 1228
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -4570,12 +4716,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1186
+    .line 1241
     :cond_0
     :goto_0
     return-void
 
-    .line 1176
+    .line 1231
     :cond_1
     const-string v0, "HtcDLNAServiceManager"
 
@@ -4599,7 +4745,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1180
+    .line 1235
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -4613,7 +4759,7 @@
 
     goto :goto_0
 
-    .line 1182
+    .line 1237
     :catch_0
     move-exception v0
 
@@ -4626,11 +4772,14 @@
 
     .prologue
     .line 300
+    invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->initMiddleLayerListener()V
+
+    .line 301
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     iput-object p1, v0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mServerListener:Lcom/htc/dlnasharedmodule/HtcDLNAServerStatusListener;
 
-    .line 301
+    .line 302
     return-void
 .end method
 
@@ -4638,7 +4787,7 @@
     .locals 4
 
     .prologue
-    .line 1218
+    .line 1273
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -4647,12 +4796,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1231
+    .line 1286
     :cond_0
     :goto_0
     return-void
 
-    .line 1221
+    .line 1276
     :cond_1
     const-string v0, "HtcDLNAServiceManager"
 
@@ -4660,7 +4809,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1225
+    .line 1280
     :try_start_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -4683,13 +4832,13 @@
 
     goto :goto_0
 
-    .line 1227
+    .line 1282
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 1225
+    .line 1280
     :cond_2
     const/4 v0, 0x0
 
@@ -4704,7 +4853,7 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1240
+    .line 1295
     monitor-enter p0
 
     :try_start_0
@@ -4712,7 +4861,7 @@
 
     move-result v2
 
-    .line 1241
+    .line 1296
     .local v2, statePrev:I
     const-string v3, "HtcDLNAServiceManager"
 
@@ -4756,19 +4905,19 @@
 
     invoke-static {v3, v4}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1243
+    .line 1298
     if-eqz p2, :cond_0
 
     if-ne p1, v6, :cond_0
 
-    .line 1244
+    .line 1299
     invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->unlockCommand()V
 
-    .line 1246
+    .line 1301
     :cond_0
     sparse-switch v2, :sswitch_data_0
 
-    .line 1572
+    .line 1627
     :goto_0
     :sswitch_0
     const-string v3, "HtcDLNAServiceManager"
@@ -4813,14 +4962,14 @@
 
     invoke-static {v3, v4}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1574
+    .line 1629
     iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
     monitor-enter v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1576
+    .line 1631
     :try_start_1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4828,12 +4977,12 @@
 
     iput-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
-    .line 1577
+    .line 1632
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iput p1, v3, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPlayState:I
 
-    .line 1578
+    .line 1633
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -4852,49 +5001,41 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 1579
+    .line 1634
     :cond_1
     const-wide/16 v5, 0x0
 
     iput-wide v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCurrentPos:J
 
-    .line 1580
+    .line 1635
     :cond_2
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1582
+    .line 1637
     if-eq v2, p1, :cond_3
 
-    .line 1584
+    .line 1639
     :try_start_2
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
-
-    iget-object v0, v3, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
-
-    .line 1585
-    .local v0, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
-    if-eqz v0, :cond_3
-
-    .line 1586
-    invoke-virtual {v0, p1}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onPlayStateChanged(I)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1596
-    .end local v0           #listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
+    if-nez v3, :cond_c
+
+    .line 1653
     :cond_3
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 1250
+    .line 1305
     :sswitch_1
     sparse-switch p1, :sswitch_data_1
 
-    .line 1283
+    .line 1338
     :try_start_3
     const-string v3, "HtcDLNAServiceManager"
 
@@ -4928,7 +5069,7 @@
 
     goto :goto_1
 
-    .line 1240
+    .line 1295
     .end local v2           #statePrev:I
     :catchall_0
     move-exception v3
@@ -4937,12 +5078,12 @@
 
     throw v3
 
-    .line 1254
+    .line 1309
     .restart local v2       #statePrev:I
     :sswitch_2
     if-eqz p2, :cond_4
 
-    .line 1255
+    .line 1310
     :try_start_4
     const-string v3, "HtcDLNAServiceManager"
 
@@ -4974,7 +5115,7 @@
 
     goto :goto_1
 
-    .line 1258
+    .line 1313
     :cond_4
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -4982,26 +5123,26 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1259
+    .line 1314
     const/16 p1, 0x64
 
-    .line 1260
+    .line 1315
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1261
+    .line 1316
     .local v1, msg:Landroid/os/Message;
     const/16 v3, 0x2711
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 1262
+    .line 1317
     const/4 v3, 0x5
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 1263
+    .line 1318
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0xfa0
@@ -5010,26 +5151,26 @@
 
     goto/16 :goto_0
 
-    .line 1273
+    .line 1328
     .end local v1           #msg:Landroid/os/Message;
     :sswitch_3
     const/16 p1, 0x64
 
-    .line 1274
+    .line 1329
     goto/16 :goto_0
 
-    .line 1278
+    .line 1333
     :sswitch_4
     const/16 p1, 0x3e8
 
-    .line 1279
+    .line 1334
     goto/16 :goto_0
 
-    .line 1293
+    .line 1348
     :sswitch_5
     sparse-switch p1, :sswitch_data_2
 
-    .line 1359
+    .line 1414
     const-string v3, "HtcDLNAServiceManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5060,32 +5201,32 @@
 
     goto/16 :goto_1
 
-    .line 1297
+    .line 1352
     :sswitch_6
     iget-boolean v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
     if-eqz v3, :cond_5
 
-    .line 1299
+    .line 1354
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const/16 v4, 0x2711
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1300
+    .line 1355
     const/4 p1, 0x2
 
     goto/16 :goto_0
 
-    .line 1304
+    .line 1359
     :cond_5
     const/16 p1, 0x69
 
-    .line 1306
+    .line 1361
     goto/16 :goto_0
 
-    .line 1310
+    .line 1365
     :sswitch_7
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5093,7 +5234,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1311
+    .line 1366
     iget-boolean v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
     if-eqz v3, :cond_6
@@ -5104,20 +5245,20 @@
 
     if-ne v3, v6, :cond_6
 
-    .line 1313
+    .line 1368
     const/4 p1, 0x2
 
-    .line 1314
+    .line 1369
     goto/16 :goto_0
 
-    .line 1316
+    .line 1371
     :cond_6
     const/4 p1, 0x0
 
-    .line 1317
+    .line 1372
     goto/16 :goto_0
 
-    .line 1321
+    .line 1376
     :sswitch_8
     iget-boolean v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
@@ -5129,13 +5270,13 @@
 
     if-ne v3, v6, :cond_7
 
-    .line 1323
+    .line 1378
     const/4 p1, 0x2
 
-    .line 1324
+    .line 1379
     goto/16 :goto_0
 
-    .line 1326
+    .line 1381
     :cond_7
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5143,26 +5284,26 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1327
+    .line 1382
     const/16 p1, 0x64
 
-    .line 1328
+    .line 1383
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1329
+    .line 1384
     .restart local v1       #msg:Landroid/os/Message;
     const/16 v3, 0x2711
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 1330
+    .line 1385
     const/16 v3, 0x6a
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 1331
+    .line 1386
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0xfa0
@@ -5171,7 +5312,7 @@
 
     goto/16 :goto_0
 
-    .line 1336
+    .line 1391
     .end local v1           #msg:Landroid/os/Message;
     :sswitch_9
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
@@ -5180,30 +5321,30 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1337
+    .line 1392
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1338
+    .line 1393
     .restart local v1       #msg:Landroid/os/Message;
     const/16 v3, 0x2711
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 1339
+    .line 1394
     const/16 v3, 0x68
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 1341
+    .line 1396
     sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v4, 0x94
 
     if-ne v3, v4, :cond_8
 
-    .line 1342
+    .line 1397
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const-wide/32 v4, 0x2bf20
@@ -5212,7 +5353,7 @@
 
     goto/16 :goto_0
 
-    .line 1344
+    .line 1399
     :cond_8
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5222,7 +5363,7 @@
 
     goto/16 :goto_0
 
-    .line 1349
+    .line 1404
     .end local v1           #msg:Landroid/os/Message;
     :sswitch_a
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
@@ -5233,18 +5374,18 @@
 
     goto/16 :goto_0
 
-    .line 1354
+    .line 1409
     :sswitch_b
     const/16 p1, 0x3e8
 
-    .line 1355
+    .line 1410
     goto/16 :goto_0
 
-    .line 1367
+    .line 1422
     :sswitch_c
     sparse-switch p1, :sswitch_data_3
 
-    .line 1391
+    .line 1446
     const-string v3, "HtcDLNAServiceManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5275,14 +5416,14 @@
 
     goto/16 :goto_1
 
-    .line 1371
+    .line 1426
     :sswitch_d
     const/4 p1, 0x2
 
-    .line 1372
+    .line 1427
     goto/16 :goto_0
 
-    .line 1376
+    .line 1431
     :sswitch_e
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5290,31 +5431,31 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1377
+    .line 1432
     const/4 p1, 0x2
 
-    .line 1378
+    .line 1433
     goto/16 :goto_0
 
-    .line 1381
+    .line 1436
     :sswitch_f
     const/4 p1, 0x1
 
-    .line 1382
+    .line 1437
     goto/16 :goto_0
 
-    .line 1386
+    .line 1441
     :sswitch_10
     const/16 p1, 0x3e8
 
-    .line 1387
+    .line 1442
     goto/16 :goto_0
 
-    .line 1399
+    .line 1454
     :sswitch_11
     sparse-switch p1, :sswitch_data_4
 
-    .line 1439
+    .line 1494
     const-string v3, "HtcDLNAServiceManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5345,24 +5486,24 @@
 
     goto/16 :goto_1
 
-    .line 1403
+    .line 1458
     :sswitch_12
     if-eqz p2, :cond_9
 
-    .line 1405
+    .line 1460
     const-string v3, "HtcDLNAServiceManager"
 
     const-string v4, "[setState][STATE_PAUSED] deny play from middler layer and keep pause state"
 
     invoke-static {v3, v4}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1406
+    .line 1461
     const/4 p1, 0x2
 
-    .line 1407
+    .line 1462
     goto/16 :goto_0
 
-    .line 1409
+    .line 1464
     :cond_9
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5370,26 +5511,26 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1410
+    .line 1465
     const/16 p1, 0x64
 
-    .line 1411
+    .line 1466
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1412
+    .line 1467
     .restart local v1       #msg:Landroid/os/Message;
     const/16 v3, 0x2711
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 1413
+    .line 1468
     const/4 v3, 0x5
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 1414
+    .line 1469
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0xfa0
@@ -5398,40 +5539,40 @@
 
     goto/16 :goto_0
 
-    .line 1419
+    .line 1474
     .end local v1           #msg:Landroid/os/Message;
     :sswitch_13
     const/4 p1, 0x0
 
-    .line 1420
+    .line 1475
     goto/16 :goto_0
 
-    .line 1424
+    .line 1479
     :sswitch_14
     const/16 p1, 0x69
 
-    .line 1425
+    .line 1480
     goto/16 :goto_0
 
-    .line 1429
+    .line 1484
     :sswitch_15
     const/16 p1, 0x64
 
-    .line 1430
+    .line 1485
     goto/16 :goto_0
 
-    .line 1434
+    .line 1489
     :sswitch_16
     const/16 p1, 0x3e8
 
-    .line 1435
+    .line 1490
     goto/16 :goto_0
 
-    .line 1447
+    .line 1502
     :sswitch_17
     sparse-switch p1, :sswitch_data_5
 
-    .line 1497
+    .line 1552
     const-string v3, "HtcDLNAServiceManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5462,7 +5603,7 @@
 
     goto/16 :goto_1
 
-    .line 1451
+    .line 1506
     :sswitch_18
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5470,26 +5611,26 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1452
+    .line 1507
     const/16 p1, 0x64
 
-    .line 1453
+    .line 1508
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1454
+    .line 1509
     .restart local v1       #msg:Landroid/os/Message;
     const/16 v3, 0x2711
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 1455
+    .line 1510
     const/4 v3, 0x5
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 1456
+    .line 1511
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0xfa0
@@ -5498,68 +5639,68 @@
 
     goto/16 :goto_0
 
-    .line 1461
+    .line 1516
     .end local v1           #msg:Landroid/os/Message;
     :sswitch_19
     iget-boolean v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
     if-eqz v3, :cond_a
 
-    .line 1463
+    .line 1518
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const/16 v4, 0x2711
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1464
+    .line 1519
     const/4 p1, 0x2
 
     goto/16 :goto_0
 
-    .line 1468
+    .line 1523
     :cond_a
     const/16 p1, 0x69
 
-    .line 1470
+    .line 1525
     goto/16 :goto_0
 
-    .line 1474
+    .line 1529
     :sswitch_1a
     if-eqz p2, :cond_3
 
-    .line 1475
+    .line 1530
     const/16 p1, 0x64
 
-    .line 1476
+    .line 1531
     goto/16 :goto_0
 
-    .line 1482
+    .line 1537
     :sswitch_1b
     const/4 p1, 0x2
 
-    .line 1483
+    .line 1538
     goto/16 :goto_0
 
-    .line 1487
+    .line 1542
     :sswitch_1c
     const/4 p1, 0x1
 
-    .line 1488
+    .line 1543
     goto/16 :goto_0
 
-    .line 1492
+    .line 1547
     :sswitch_1d
     const/16 p1, 0x3e8
 
-    .line 1493
+    .line 1548
     goto/16 :goto_0
 
-    .line 1505
+    .line 1560
     :sswitch_1e
     sparse-switch p1, :sswitch_data_6
 
-    .line 1536
+    .line 1591
     const-string v3, "HtcDLNAServiceManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5590,11 +5731,11 @@
 
     goto/16 :goto_1
 
-    .line 1509
+    .line 1564
     :sswitch_1f
     if-eqz p2, :cond_b
 
-    .line 1510
+    .line 1565
     const-string v3, "HtcDLNAServiceManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5625,7 +5766,7 @@
 
     goto/16 :goto_1
 
-    .line 1513
+    .line 1568
     :cond_b
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5633,26 +5774,26 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1514
+    .line 1569
     const/16 p1, 0x64
 
-    .line 1515
+    .line 1570
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1516
+    .line 1571
     .restart local v1       #msg:Landroid/os/Message;
     const/16 v3, 0x2711
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 1517
+    .line 1572
     const/4 v3, 0x5
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 1518
+    .line 1573
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0xfa0
@@ -5661,29 +5802,29 @@
 
     goto/16 :goto_0
 
-    .line 1523
+    .line 1578
     .end local v1           #msg:Landroid/os/Message;
     :sswitch_20
     const/16 p1, 0x3e8
 
-    .line 1524
+    .line 1579
     goto/16 :goto_0
 
-    .line 1528
+    .line 1583
     :sswitch_21
     if-eqz p2, :cond_3
 
-    .line 1529
+    .line 1584
     const/16 p1, 0x64
 
-    .line 1530
+    .line 1585
     goto/16 :goto_0
 
-    .line 1544
+    .line 1599
     :sswitch_22
     sparse-switch p1, :sswitch_data_7
 
-    .line 1564
+    .line 1619
     const-string v3, "HtcDLNAServiceManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5714,7 +5855,7 @@
 
     goto/16 :goto_1
 
-    .line 1547
+    .line 1602
     :sswitch_23
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
@@ -5722,26 +5863,26 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1548
+    .line 1603
     const/16 p1, 0x64
 
-    .line 1549
+    .line 1604
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 1550
+    .line 1605
     .restart local v1       #msg:Landroid/os/Message;
     const/16 v3, 0x2711
 
     iput v3, v1, Landroid/os/Message;->what:I
 
-    .line 1551
+    .line 1606
     const/4 v3, 0x5
 
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 1552
+    .line 1607
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0xfa0
@@ -5752,18 +5893,18 @@
 
     goto/16 :goto_0
 
-    .line 1556
+    .line 1611
     .end local v1           #msg:Landroid/os/Message;
     :sswitch_24
     if-eqz p2, :cond_3
 
-    .line 1557
+    .line 1612
     const/16 p1, 0x64
 
-    .line 1558
+    .line 1613
     goto/16 :goto_0
 
-    .line 1580
+    .line 1635
     :catchall_1
     move-exception v3
 
@@ -5774,10 +5915,25 @@
 
     :try_start_6
     throw v3
+
+    .line 1641
+    :cond_c
+    iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    iget-object v0, v3, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
+
+    .line 1642
+    .local v0, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
+    if-eqz v0, :cond_3
+
+    .line 1643
+    invoke-virtual {v0, p1}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onPlayStateChanged(I)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 1246
+    goto/16 :goto_1
+
+    .line 1301
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_17
@@ -5790,7 +5946,7 @@
         0x3e8 -> :sswitch_22
     .end sparse-switch
 
-    .line 1250
+    .line 1305
     :sswitch_data_1
     .sparse-switch
         0x0 -> :sswitch_0
@@ -5800,7 +5956,7 @@
         0x3e8 -> :sswitch_4
     .end sparse-switch
 
-    .line 1293
+    .line 1348
     :sswitch_data_2
     .sparse-switch
         0x0 -> :sswitch_7
@@ -5811,7 +5967,7 @@
         0x3e8 -> :sswitch_b
     .end sparse-switch
 
-    .line 1367
+    .line 1422
     :sswitch_data_3
     .sparse-switch
         0x1 -> :sswitch_f
@@ -5820,7 +5976,7 @@
         0x3e8 -> :sswitch_10
     .end sparse-switch
 
-    .line 1399
+    .line 1454
     :sswitch_data_4
     .sparse-switch
         0x0 -> :sswitch_13
@@ -5830,7 +5986,7 @@
         0x3e8 -> :sswitch_16
     .end sparse-switch
 
-    .line 1447
+    .line 1502
     :sswitch_data_5
     .sparse-switch
         0x1 -> :sswitch_1c
@@ -5841,7 +5997,7 @@
         0x3e8 -> :sswitch_1d
     .end sparse-switch
 
-    .line 1505
+    .line 1560
     :sswitch_data_6
     .sparse-switch
         0x5 -> :sswitch_21
@@ -5849,7 +6005,7 @@
         0x3e8 -> :sswitch_20
     .end sparse-switch
 
-    .line 1544
+    .line 1599
     :sswitch_data_7
     .sparse-switch
         0x5 -> :sswitch_24
@@ -5864,7 +6020,7 @@
     .parameter "thumbnail"
 
     .prologue
-    .line 748
+    .line 777
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -5873,12 +6029,12 @@
 
     if-nez v0, :cond_1
 
-    .line 763
+    .line 792
     :cond_0
     :goto_0
     return-void
 
-    .line 751
+    .line 780
     :cond_1
     const-string v0, "HtcDLNAServiceManager"
 
@@ -5886,12 +6042,12 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 753
+    .line 782
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->isDTCPIPContent:Z
 
-    .line 756
+    .line 785
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -5911,11 +6067,11 @@
 
     goto :goto_0
 
-    .line 758
+    .line 787
     :catch_0
     move-exception v6
 
-    .line 761
+    .line 790
     .local v6, ex:Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -5927,7 +6083,7 @@
     .parameter "volume"
 
     .prologue
-    .line 1195
+    .line 1250
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -5936,12 +6092,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1209
+    .line 1264
     :cond_0
     :goto_0
     return-void
 
-    .line 1198
+    .line 1253
     :cond_1
     const-string v0, "HtcDLNAServiceManager"
 
@@ -5965,13 +6121,13 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1202
+    .line 1257
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iput p1, v0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mVolume:I
 
-    .line 1203
+    .line 1258
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -5984,7 +6140,7 @@
 
     goto :goto_0
 
-    .line 1205
+    .line 1260
     :catch_0
     move-exception v0
 
@@ -5995,7 +6151,7 @@
     .locals 4
 
     .prologue
-    .line 875
+    .line 904
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -6004,12 +6160,12 @@
 
     if-nez v0, :cond_1
 
-    .line 907
+    .line 936
     :cond_0
     :goto_0
     return-void
 
-    .line 878
+    .line 907
     :cond_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -6079,7 +6235,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 885
+    .line 914
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6104,7 +6260,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 886
+    .line 915
     const/16 v0, -0x40c4
 
     const-string v1, "Command startPlay in wrong status"
@@ -6113,7 +6269,7 @@
 
     goto :goto_0
 
-    .line 890
+    .line 919
     :cond_2
     const-string v0, "HtcDLNAServiceManager"
 
@@ -6121,13 +6277,13 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 894
+    .line 923
     :try_start_0
     iget-boolean v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRunAsSlideShow:Z
 
     if-eqz v0, :cond_3
 
-    .line 895
+    .line 924
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     iget v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mCookie:I
@@ -6138,7 +6294,7 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/htc/dlnainterface/IDLNAPluginService;->setDMCPhotoSlideshowState(ILjava/lang/String;I)Z
 
-    .line 900
+    .line 929
     :goto_1
     const/16 v0, 0x66
 
@@ -6146,20 +6302,20 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 901
+    .line 930
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
     goto/16 :goto_0
 
-    .line 903
+    .line 932
     :catch_0
     move-exception v0
 
     goto/16 :goto_0
 
-    .line 897
+    .line 926
     :cond_3
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -6181,7 +6337,7 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 910
+    .line 939
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -6190,12 +6346,12 @@
 
     if-nez v0, :cond_1
 
-    .line 933
+    .line 962
     :cond_0
     :goto_0
     return-void
 
-    .line 913
+    .line 942
     :cond_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -6263,7 +6419,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 920
+    .line 949
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6288,7 +6444,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 921
+    .line 950
     const/16 v0, -0x40ca
 
     const-string v1, "Command startPlay(long) in wrong status"
@@ -6297,7 +6453,7 @@
 
     goto :goto_0
 
-    .line 925
+    .line 954
     :cond_2
     const-string v0, "HtcDLNAServiceManager"
 
@@ -6321,7 +6477,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 928
+    .line 957
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -6331,7 +6487,7 @@
 
     invoke-interface {v0, v1, v2, p1, p2}, Lcom/htc/dlnainterface/IDLNAPluginService;->changePushPlaylistItem(ILjava/lang/String;J)V
 
-    .line 929
+    .line 958
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -6340,7 +6496,7 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 930
+    .line 959
     const/16 v0, 0x66
 
     const/4 v1, 0x0
@@ -6351,7 +6507,7 @@
 
     goto/16 :goto_0
 
-    .line 931
+    .line 960
     :catch_0
     move-exception v0
 
@@ -6365,7 +6521,7 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 936
+    .line 965
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v0, :cond_0
@@ -6374,12 +6530,12 @@
 
     if-nez v0, :cond_1
 
-    .line 959
+    .line 988
     :cond_0
     :goto_0
     return-void
 
-    .line 939
+    .line 968
     :cond_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
@@ -6447,7 +6603,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 946
+    .line 975
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6472,7 +6628,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 947
+    .line 976
     const/16 v0, -0x40cb
 
     const-string v1, "Command startPlay(String) in wrong status"
@@ -6481,7 +6637,7 @@
 
     goto :goto_0
 
-    .line 951
+    .line 980
     :cond_2
     const-string v0, "HtcDLNAServiceManager"
 
@@ -6505,7 +6661,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 954
+    .line 983
     :try_start_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -6515,7 +6671,7 @@
 
     invoke-interface {v0, v1, v2, p1}, Lcom/htc/dlnainterface/IDLNAPluginService;->changeRemotePlaylistItem(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 955
+    .line 984
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mState:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -6524,7 +6680,7 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 956
+    .line 985
     const/16 v0, 0x66
 
     const/4 v1, 0x0
@@ -6535,7 +6691,7 @@
 
     goto/16 :goto_0
 
-    .line 957
+    .line 986
     :catch_0
     move-exception v0
 
@@ -6546,30 +6702,39 @@
     .locals 4
 
     .prologue
-    .line 1600
+    .line 1657
+    iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
+
+    if-nez v3, :cond_1
+
+    .line 1665
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 1659
+    :cond_1
     invoke-virtual {p0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getPlayingPosition()J
 
     move-result-wide v1
 
-    .line 1601
+    .line 1660
     .local v1, position:J
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iput-wide v1, v3, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPosition:J
 
-    .line 1603
+    .line 1662
     iget-object v3, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mMiddleLayerListener:Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;
 
     iget-object v0, v3, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 1604
+    .line 1663
     .local v0, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_0
 
-    .line 1605
+    .line 1664
     invoke-virtual {v0, v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onUpdatePosition(J)V
 
-    .line 1606
-    :cond_0
-    return-void
+    goto :goto_0
 .end method

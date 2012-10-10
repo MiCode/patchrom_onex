@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 126
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mFile:Ljava/io/File;
@@ -72,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 173
+    .line 176
     invoke-static {}, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->isAccessible()Z
 
     move-result v0
@@ -88,16 +88,16 @@
 
     const/4 v10, 0x0
 
-    .line 127
+    .line 130
     const/4 v5, 0x0
 
-    .line 128
+    .line 131
     .local v5, mAccessible:Z
     sget-object v6, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mFile:Ljava/io/File;
 
     if-nez v6, :cond_0
 
-    .line 129
+    .line 132
     new-instance v6, Ljava/io/File;
 
     const-string v7, "/sys/class/htc_accessory/tty/flag"
@@ -106,13 +106,13 @@
 
     sput-object v6, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mFile:Ljava/io/File;
 
-    .line 131
+    .line 134
     :cond_0
     sget-object v6, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mFile:Ljava/io/File;
 
     if-nez v6, :cond_2
 
-    .line 132
+    .line 135
     const-string v6, "HtcCdmaTty"
 
     const-string v7, "isAccessble() { %s file not opened.}"
@@ -129,12 +129,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
+    .line 171
     :cond_1
     :goto_0
     return v5
 
-    .line 135
+    .line 138
     :cond_2
     sget-object v6, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mFile:Ljava/io/File;
 
@@ -144,7 +144,7 @@
 
     if-nez v6, :cond_3
 
-    .line 137
+    .line 140
     const-string v6, "HtcCdmaTty"
 
     const-string v7, "isAccessble() { %s file not exist.}"
@@ -167,15 +167,15 @@
 
     goto :goto_0
 
-    .line 141
+    .line 144
     :cond_3
     const/4 v1, 0x0
 
-    .line 142
+    .line 145
     .local v1, fileReader:Ljava/io/FileReader;
     const/4 v3, 0x0
 
-    .line 145
+    .line 148
     .local v3, fileWriter:Ljava/io/FileWriter;
     :try_start_0
     new-instance v2, Ljava/io/FileReader;
@@ -188,7 +188,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 146
+    .line 149
     .end local v1           #fileReader:Ljava/io/FileReader;
     .local v2, fileReader:Ljava/io/FileReader;
     :try_start_1
@@ -202,23 +202,23 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_7
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
 
-    .line 147
+    .line 150
     .end local v3           #fileWriter:Ljava/io/FileWriter;
     .local v4, fileWriter:Ljava/io/FileWriter;
     const/4 v5, 0x1
 
-    .line 158
+    .line 161
     if-eqz v2, :cond_4
 
-    .line 159
+    .line 162
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileReader;->close()V
 
-    .line 161
+    .line 164
     :cond_4
     if-eqz v4, :cond_5
 
-    .line 162
+    .line 165
     invoke-virtual {v4}, Ljava/io/FileWriter;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
@@ -231,16 +231,16 @@
     .restart local v3       #fileWriter:Ljava/io/FileWriter;
     move-object v1, v2
 
-    .line 167
+    .line 170
     .end local v2           #fileReader:Ljava/io/FileReader;
     .restart local v1       #fileReader:Ljava/io/FileReader;
     goto :goto_0
 
-    .line 149
+    .line 152
     :catch_0
     move-exception v0
 
-    .line 151
+    .line 154
     .local v0, e:Ljava/io/FileNotFoundException;
     :goto_2
     :try_start_3
@@ -270,29 +270,29 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 158
+    .line 161
     if-eqz v1, :cond_6
 
-    .line 159
+    .line 162
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
-    .line 161
+    .line 164
     :cond_6
     if-eqz v3, :cond_1
 
-    .line 162
+    .line 165
     throw v3
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
     goto :goto_0
 
-    .line 164
+    .line 167
     :catch_1
     move-exception v0
 
-    .line 165
+    .line 168
     .local v0, e:Ljava/io/IOException;
     const-string v6, "HtcCdmaTty"
 
@@ -303,12 +303,12 @@
 
     goto :goto_0
 
-    .line 153
+    .line 156
     .end local v0           #e:Ljava/io/IOException;
     :catch_2
     move-exception v0
 
-    .line 155
+    .line 158
     .restart local v0       #e:Ljava/io/IOException;
     :goto_4
     :try_start_5
@@ -338,67 +338,67 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 158
+    .line 161
     if-eqz v1, :cond_7
 
-    .line 159
+    .line 162
     :try_start_6
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
-    .line 161
+    .line 164
     :cond_7
     if-eqz v3, :cond_1
 
-    .line 162
+    .line 165
     throw v3
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
     goto/16 :goto_0
 
-    .line 164
+    .line 167
     :catch_3
     move-exception v0
 
-    .line 165
+    .line 168
     const-string v6, "HtcCdmaTty"
 
     const-string v7, " excpetion when close "
 
     goto :goto_3
 
-    .line 157
+    .line 160
     .end local v0           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v6
 
-    .line 158
+    .line 161
     :goto_5
     if-eqz v1, :cond_8
 
-    .line 159
+    .line 162
     :try_start_7
     invoke-virtual {v1}, Ljava/io/FileReader;->close()V
 
-    .line 161
+    .line 164
     :cond_8
     if-eqz v3, :cond_9
 
-    .line 162
+    .line 165
     throw v3
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 157
+    .line 160
     :cond_9
     :goto_6
     throw v6
 
-    .line 164
+    .line 167
     :catch_4
     move-exception v0
 
-    .line 165
+    .line 168
     .restart local v0       #e:Ljava/io/IOException;
     const-string v7, "HtcCdmaTty"
 
@@ -408,7 +408,7 @@
 
     goto :goto_6
 
-    .line 164
+    .line 167
     .end local v0           #e:Ljava/io/IOException;
     .end local v1           #fileReader:Ljava/io/FileReader;
     .end local v3           #fileWriter:Ljava/io/FileWriter;
@@ -417,7 +417,7 @@
     :catch_5
     move-exception v0
 
-    .line 165
+    .line 168
     .restart local v0       #e:Ljava/io/IOException;
     const-string v6, "HtcCdmaTty"
 
@@ -427,7 +427,7 @@
 
     goto :goto_1
 
-    .line 157
+    .line 160
     .end local v0           #e:Ljava/io/IOException;
     .end local v4           #fileWriter:Ljava/io/FileWriter;
     .restart local v3       #fileWriter:Ljava/io/FileWriter;
@@ -440,7 +440,7 @@
     .restart local v1       #fileReader:Ljava/io/FileReader;
     goto :goto_5
 
-    .line 153
+    .line 156
     .end local v1           #fileReader:Ljava/io/FileReader;
     .restart local v2       #fileReader:Ljava/io/FileReader;
     :catch_6
@@ -452,7 +452,7 @@
     .restart local v1       #fileReader:Ljava/io/FileReader;
     goto :goto_4
 
-    .line 149
+    .line 152
     .end local v1           #fileReader:Ljava/io/FileReader;
     .restart local v2       #fileReader:Ljava/io/FileReader;
     :catch_7
@@ -470,7 +470,7 @@
     .parameter "TTY_Mode"
 
     .prologue
-    .line 222
+    .line 225
     return-void
 .end method
 
@@ -480,14 +480,14 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForOn(Landroid/os/Handler;)V
 
-    .line 63
+    .line 64
     return-void
 .end method
 
@@ -495,14 +495,14 @@
     .locals 2
 
     .prologue
-    .line 66
+    .line 68
     const-string v0, "CDMA"
 
     const-string v1, "HtcCdmaTty finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
+    .line 69
     return-void
 .end method
 
@@ -511,7 +511,7 @@
     .parameter "msg"
 
     .prologue
-    .line 73
+    .line 76
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->GENERIC_WPHONE_CONFIG()Z
 
     move-result v2
@@ -522,7 +522,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 74
+    .line 77
     const-string v2, "HtcCdmaTty"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -547,17 +547,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
+    .line 115
     :goto_0
     return-void
 
-    .line 79
+    .line 82
     :cond_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 81
+    .line 84
     .local v0, ar:Landroid/os/AsyncResult;
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -565,7 +565,7 @@
 
     goto :goto_0
 
-    .line 83
+    .line 86
     :pswitch_0
     const/4 v2, 0x2
 
@@ -575,7 +575,7 @@
 
     goto :goto_0
 
-    .line 86
+    .line 89
     :pswitch_1
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -591,13 +591,13 @@
 
     goto :goto_0
 
-    .line 89
+    .line 92
     :pswitch_2
     iget-object v2, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_1
 
-    .line 90
+    .line 93
     const-string v2, "HtcCdmaTty"
 
     const-string v3, "Exception TTY query:"
@@ -608,7 +608,7 @@
 
     goto :goto_0
 
-    .line 94
+    .line 97
     :cond_1
     iget-object v2, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -620,7 +620,7 @@
 
     aget v1, v2, v3
 
-    .line 95
+    .line 98
     .local v1, ttymode:I
     const-string v2, "HtcCdmaTty"
 
@@ -644,7 +644,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
+    .line 100
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/cdma/CDMAPhone;->getContext()Landroid/content/Context;
@@ -659,12 +659,12 @@
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 99
+    .line 102
     invoke-static {v1}, Lcom/android/internal/telephony/cdma/HtcCdmaTty;->toggle(I)V
 
     goto :goto_0
 
-    .line 81
+    .line 84
     nop
 
     :pswitch_data_0

@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 230
+    .line 237
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 231
+    .line 238
     return-void
 .end method
 
@@ -35,23 +35,23 @@
     .parameter "settings"
 
     .prologue
-    .line 238
+    .line 245
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 239
+    .line 246
     new-instance v2, Ljava/util/StringTokenizer;
 
     const-string v4, "=;"
 
     invoke-direct {v2, p1, v4}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
+    .line 247
     .local v2, st:Ljava/util/StringTokenizer;
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v3
 
-    .line 241
+    .line 248
     .local v3, tokens:I
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->countTokens()I
 
@@ -61,7 +61,7 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 242
+    .line 249
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -86,13 +86,13 @@
 
     throw v4
 
-    .line 244
+    .line 251
     :cond_0
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 245
+    .line 252
     .local v0, key:Ljava/lang/String;
     const-string v4, "BassEnhance"
 
@@ -102,14 +102,14 @@
 
     if-nez v4, :cond_1
 
-    .line 246
+    .line 253
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "invalid settings for BassEnhance: "
+    const-string v6, "invalid settings for BassEnhance: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -127,14 +127,14 @@
 
     throw v4
 
-    .line 250
+    .line 257
     :cond_1
     :try_start_0
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 251
+    .line 258
     const-string/jumbo v4, "strength"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -143,14 +143,14 @@
 
     if-nez v4, :cond_2
 
-    .line 252
+    .line 259
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "invalid key name: "
+    const-string v6, "invalid key name: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -170,11 +170,11 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 255
+    .line 262
     :catch_0
     move-exception v1
 
-    .line 256
+    .line 263
     .local v1, nfe:Ljava/lang/NumberFormatException;
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -182,7 +182,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "invalid value for key: "
+    const-string v6, "invalid value for key: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,7 +200,7 @@
 
     throw v4
 
-    .line 254
+    .line 261
     .end local v1           #nfe:Ljava/lang/NumberFormatException;
     :cond_2
     :try_start_1
@@ -216,7 +216,7 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 258
+    .line 265
     return-void
 .end method
 
@@ -226,7 +226,7 @@
     .locals 3
 
     .prologue
-    .line 262
+    .line 270
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -255,7 +255,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    .line 266
+    .line 274
     .local v0, str:Ljava/lang/String;
     return-object v0
 .end method

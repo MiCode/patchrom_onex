@@ -27,12 +27,12 @@
     .parameter
 
     .prologue
-    .line 7268
+    .line 7301
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;-><init>(Lcom/htc/music/HtcMusic;I)V
 
-    .line 7269
+    .line 7302
     return-void
 .end method
 
@@ -42,12 +42,12 @@
     .parameter "selectedIndex"
 
     .prologue
-    .line 7263
+    .line 7296
     iput-object p1, p0, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7265
+    .line 7298
     return-void
 .end method
 
@@ -58,36 +58,36 @@
     .parameter "arg0"
 
     .prologue
-    .line 7280
+    .line 7313
     iget-object v0, p0, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mTempShowingEQIndex:I
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8800(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8900(Lcom/htc/music/HtcMusic;)I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;->setSelectedIndex(I)V
 
-    .line 7281
+    .line 7314
     iget-object v0, p0, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v1, p0, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mTempShowingEQIndex:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$8800(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$8900(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
     iput v1, v0, Lcom/htc/music/HtcMusic;->mTempSelectedEQIndex:I
 
-    .line 7282
+    .line 7315
     iget-object v0, p0, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Lcom/htc/music/HtcMusic;->showDialog(I)V
 
-    .line 7283
+    .line 7316
     return-void
 .end method
 
@@ -96,11 +96,11 @@
     .parameter "index"
 
     .prologue
-    .line 7274
+    .line 7307
     iget-object v0, p0, Lcom/htc/music/HtcMusic$EqualizerStyleClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0, p1}, Lcom/htc/music/HtcMusic;->setEQSelectedIndex(I)V
 
-    .line 7275
+    .line 7308
     return-void
 .end method

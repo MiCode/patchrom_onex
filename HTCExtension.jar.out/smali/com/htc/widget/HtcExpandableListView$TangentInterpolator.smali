@@ -35,17 +35,17 @@
     .parameter
 
     .prologue
-    .line 2410
+    .line 2423
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2411
+    .line 2424
     const v0, 0x3f666666
 
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->init(F)V
 
-    .line 2412
+    .line 2425
     return-void
 .end method
 
@@ -55,15 +55,15 @@
     .parameter "factor"
 
     .prologue
-    .line 2414
+    .line 2427
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2415
+    .line 2428
     invoke-direct {p0, p2}, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->init(F)V
 
-    .line 2416
+    .line 2429
     return-void
 .end method
 
@@ -72,12 +72,12 @@
     .parameter "factor"
 
     .prologue
-    .line 2419
+    .line 2432
     float-to-double v0, p1
 
     iput-wide v0, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->mFactor:D
 
-    .line 2420
+    .line 2433
     float-to-double v0, p1
 
     const-wide/high16 v2, 0x3fe0
@@ -86,7 +86,7 @@
 
     iput-wide v0, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->mFactorHalf:D
 
-    .line 2421
+    .line 2434
     const-wide v0, 0x400921fb54442d18L
 
     iget-wide v2, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->mFactorHalf:D
@@ -99,7 +99,7 @@
 
     iput-wide v0, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->mShift:D
 
-    .line 2422
+    .line 2435
     const-wide/high16 v0, 0x4000
 
     iget-wide v2, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->mShift:D
@@ -108,7 +108,7 @@
 
     iput-wide v0, p0, Lcom/htc/widget/HtcExpandableListView$TangentInterpolator;->mShift2:D
 
-    .line 2423
+    .line 2436
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .parameter "input"
 
     .prologue
-    .line 2430
+    .line 2443
     const-wide v1, 0x400921fb54442d18L
 
     float-to-double v3, p1
@@ -148,7 +148,7 @@
 
     double-to-float v0, v1
 
-    .line 2431
+    .line 2444
     .local v0, result:F
     return v0
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1228
+    .line 1230
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$6;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 1230
+    .line 1232
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$6;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v0, v0, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
@@ -70,6 +70,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;Landroid/database/Cursor;ILcom/htc/music/NpCategory;[I)V
 
-    .line 1232
+    .line 1234
     return-void
 .end method

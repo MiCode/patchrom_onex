@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/camera/component/ObjectTrackingUI$9;
+        Lcom/android/camera/component/ObjectTrackingUI$11;
     }
 .end annotation
 
@@ -36,16 +36,20 @@
 
 .field private m_IsStarted:Z
 
+.field m_LastfocusFaceRect:Landroid/graphics/RectF;
+
 .field private m_OTEnabled:Z
 
 
 # direct methods
 .method constructor <init>(Lcom/android/camera/HTCCamera;)V
-    .locals 3
+    .locals 4
     .parameter "cameraActivity"
 
     .prologue
-    .line 69
+    const/4 v3, 0x0
+
+    .line 71
     const-string v0, "Object Tracking UI"
 
     const/4 v1, 0x1
@@ -54,10 +58,17 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/android/camera/component/UIComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/HTCCamera;I)V
 
-    .line 70
-    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->disableMessageLogs()V
+    .line 63
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0, v3, v3, v3, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iput-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_LastfocusFaceRect:Landroid/graphics/RectF;
 
     .line 72
+    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->disableMessageLogs()V
+
+    .line 74
     return-void
 .end method
 
@@ -66,7 +77,7 @@
     .parameter "x0"
 
     .prologue
-    .line 40
+    .line 41
     iget-boolean v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_IsStarted:Z
 
     return v0
@@ -77,7 +88,7 @@
     .parameter "x0"
 
     .prologue
-    .line 40
+    .line 41
     iget-boolean v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_OTEnabled:Z
 
     return v0
@@ -88,7 +99,7 @@
     .parameter "x0"
 
     .prologue
-    .line 40
+    .line 41
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -99,7 +110,7 @@
     .parameter "x0"
 
     .prologue
-    .line 40
+    .line 41
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->stopFaceDetection()V
 
     return-void
@@ -110,7 +121,7 @@
     .parameter "x0"
 
     .prologue
-    .line 40
+    .line 41
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->checkFaceDetection()V
 
     return-void
@@ -121,21 +132,21 @@
     .parameter "x0"
 
     .prologue
-    .line 40
+    .line 41
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->disableOT()V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/camera/component/ObjectTrackingUI;)V
-    .locals 0
+.method static synthetic access$600(Lcom/android/camera/component/ObjectTrackingUI;)Ljava/lang/String;
+    .locals 1
     .parameter "x0"
 
     .prologue
-    .line 40
-    invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->enableOT()V
+    .line 41
+    iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$700(Lcom/android/camera/component/ObjectTrackingUI;)V
@@ -143,8 +154,31 @@
     .parameter "x0"
 
     .prologue
-    .line 40
+    .line 41
+    invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->enableOT()V
+
+    return-void
+.end method
+
+.method static synthetic access$800(Lcom/android/camera/component/ObjectTrackingUI;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 41
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->updateOtViewLayout()V
+
+    return-void
+.end method
+
+.method static synthetic access$900(Lcom/android/camera/component/ObjectTrackingUI;[Lcom/android/camera/ObjectTrackingInfo;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 41
+    invoke-direct {p0, p1}, Lcom/android/camera/component/ObjectTrackingUI;->onFaceUpdated([Lcom/android/camera/ObjectTrackingInfo;)V
 
     return-void
 .end method
@@ -155,22 +189,22 @@
     .parameter "num"
 
     .prologue
-    .line 416
+    .line 474
     const/4 v8, 0x0
 
-    .line 417
+    .line 475
     .local v8, weight:F
     const/4 v9, 0x0
 
-    .line 418
+    .line 476
     .local v9, weight_sum:F
     const/4 v10, 0x0
 
-    .line 419
+    .line 477
     .local v10, weight_x:F
     const/4 v11, 0x0
 
-    .line 421
+    .line 479
     .local v11, weight_y:F
     const/4 v6, 0x0
 
@@ -180,12 +214,12 @@
 
     if-ge v6, v0, :cond_0
 
-    .line 422
+    .line 480
     aget-object v12, p1, v6
 
     iget-object v7, v12, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
-    .line 423
+    .line 481
     .local v7, range:Landroid/graphics/RectF;
     invoke-virtual {v7}, Landroid/graphics/RectF;->width()F
 
@@ -197,10 +231,10 @@
 
     mul-float v8, v12, v13
 
-    .line 424
+    .line 482
     add-float/2addr v9, v8
 
-    .line 425
+    .line 483
     invoke-virtual {v7}, Landroid/graphics/RectF;->centerX()F
 
     move-result v12
@@ -209,7 +243,7 @@
 
     add-float/2addr v10, v12
 
-    .line 426
+    .line 484
     invoke-virtual {v7}, Landroid/graphics/RectF;->centerY()F
 
     move-result v12
@@ -218,33 +252,33 @@
 
     add-float/2addr v11, v12
 
-    .line 421
+    .line 479
     add-int/lit8 v12, v6, 0x1
 
     int-to-short v6, v12
 
     goto :goto_0
 
-    .line 429
+    .line 487
     .end local v7           #range:Landroid/graphics/RectF;
     :cond_0
     div-float/2addr v10, v9
 
-    .line 430
+    .line 488
     div-float/2addr v11, v9
 
-    .line 432
+    .line 490
     const/4 v5, 0x0
 
-    .line 433
+    .line 491
     .local v5, focus:I
     const-wide/16 v1, 0x0
 
-    .line 434
+    .line 492
     .local v1, dist:D
     const-wide/16 v3, 0x0
 
-    .line 435
+    .line 493
     .local v3, dist_min:D
     const/4 v6, 0x0
 
@@ -253,12 +287,12 @@
 
     if-ge v6, v0, :cond_3
 
-    .line 436
+    .line 494
     aget-object v12, p1, v6
 
     iget-object v7, v12, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
-    .line 437
+    .line 495
     .restart local v7       #range:Landroid/graphics/RectF;
     invoke-virtual {v7}, Landroid/graphics/RectF;->centerX()F
 
@@ -290,21 +324,21 @@
 
     add-double v1, v12, v14
 
-    .line 440
+    .line 498
     if-eqz v6, :cond_1
 
     cmpg-double v12, v1, v3
 
     if-gez v12, :cond_2
 
-    .line 441
+    .line 499
     :cond_1
     move v5, v6
 
-    .line 442
+    .line 500
     move-wide v3, v1
 
-    .line 435
+    .line 493
     :cond_2
     add-int/lit8 v12, v6, 0x1
 
@@ -312,7 +346,7 @@
 
     goto :goto_1
 
-    .line 446
+    .line 504
     .end local v7           #range:Landroid/graphics/RectF;
     :cond_3
     return v5
@@ -326,12 +360,12 @@
 
     const/4 v4, 0x1
 
-    .line 456
+    .line 514
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v3
 
-    .line 466
+    .line 524
     .local v3, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-static {}, Lcom/android/camera/DisplayDevice;->supportSensorFocus()Z
 
@@ -345,12 +379,12 @@
 
     if-nez v6, :cond_1
 
-    .line 499
+    .line 557
     :cond_0
     :goto_0
     return-void
 
-    .line 469
+    .line 527
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraMode()Lcom/android/camera/CameraMode;
 
@@ -362,7 +396,7 @@
 
     move v1, v4
 
-    .line 471
+    .line 529
     .local v1, bCamera:Z
     :goto_1
     sget-object v6, Lcom/android/camera/DisplayDevice;->CAPTURE_BUTTON:Lcom/android/camera/DisplayDevice$CaptureButton;
@@ -386,7 +420,7 @@
     :cond_2
     move v0, v4
 
-    .line 474
+    .line 532
     .local v0, bAuto:Z
     :goto_2
     const-string v5, "pref_face_detection"
@@ -399,7 +433,7 @@
 
     move-result v2
 
-    .line 477
+    .line 535
     .local v2, bDetect:Z
     if-ne v1, v4, :cond_5
 
@@ -427,7 +461,7 @@
 
     if-eqz v4, :cond_5
 
-    .line 484
+    .line 542
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->startFaceDetection()V
 
     goto :goto_0
@@ -438,24 +472,149 @@
     :cond_3
     move v1, v5
 
-    .line 469
+    .line 527
     goto :goto_1
 
     .restart local v1       #bCamera:Z
     :cond_4
     move v0, v5
 
-    .line 471
+    .line 529
     goto :goto_2
 
-    .line 494
+    .line 552
     .restart local v0       #bAuto:Z
     .restart local v2       #bDetect:Z
     :cond_5
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->stopFaceDetection()V
 
-    .line 495
+    .line 553
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->disableOT()V
+
+    goto :goto_0
+.end method
+
+.method private checkFaceMoving(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+    .locals 10
+    .parameter "rectLast"
+    .parameter "rectNow"
+
+    .prologue
+    const/4 v6, 0x0
+
+    const/high16 v9, 0x4080
+
+    .line 446
+    if-eqz p1, :cond_0
+
+    if-nez p2, :cond_1
+
+    .line 463
+    :cond_0
+    :goto_0
+    return v6
+
+    .line 449
+    :cond_1
+    invoke-virtual {p1}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v7
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v8
+
+    sub-float/2addr v7, v8
+
+    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    .line 450
+    .local v2, fxOff:F
+    invoke-virtual {p1}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v7
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v8
+
+    sub-float/2addr v7, v8
+
+    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
+
+    move-result v3
+
+    .line 451
+    .local v3, fyOff:F
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
+
+    move-result v7
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
+
+    move-result v8
+
+    sub-float/2addr v7, v8
+
+    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    .line 452
+    .local v1, fwOff:F
+    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
+
+    move-result v7
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
+
+    move-result v8
+
+    sub-float/2addr v7, v8
+
+    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    .line 454
+    .local v0, fhOff:F
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
+
+    move-result v7
+
+    div-float v5, v7, v9
+
+    .line 455
+    .local v5, widthThreadhold:F
+    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
+
+    move-result v7
+
+    div-float v4, v7, v9
+
+    .line 457
+    .local v4, heightThreshold:F
+    cmpl-float v7, v2, v5
+
+    if-gtz v7, :cond_2
+
+    cmpl-float v7, v3, v4
+
+    if-gtz v7, :cond_2
+
+    cmpl-float v7, v1, v5
+
+    if-gtz v7, :cond_2
+
+    cmpl-float v7, v0, v4
+
+    if-lez v7, :cond_0
+
+    .line 461
+    :cond_2
+    const/4 v6, 0x1
 
     goto :goto_0
 .end method
@@ -466,17 +625,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 510
+    .line 568
     iput-boolean v3, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_OTEnabled:Z
 
-    .line 511
+    .line 569
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->linkToController()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 512
+    .line 570
     iget-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
     const/16 v2, 0x2715
@@ -493,11 +652,11 @@
 
     invoke-virtual/range {v0 .. v8}, Lcom/android/camera/component/ObjectTrackingUI;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;JZ)Z
 
-    .line 517
+    .line 575
     :goto_0
     return-void
 
-    .line 515
+    .line 573
     :cond_0
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -512,12 +671,12 @@
     .locals 1
 
     .prologue
-    .line 506
+    .line 564
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_OTEnabled:Z
 
-    .line 507
+    .line 565
     return-void
 .end method
 
@@ -531,15 +690,15 @@
 
     const/high16 v11, 0x4000
 
-    .line 391
+    .line 428
     if-nez p1, :cond_1
 
-    .line 405
+    .line 442
     :cond_0
     :goto_0
     return v8
 
-    .line 394
+    .line 431
     :cond_1
     iget-object v9, p2, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
@@ -561,7 +720,7 @@
 
     float-to-double v0, v9
 
-    .line 395
+    .line 432
     .local v0, dx:D
     iget-object v9, p2, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
@@ -583,7 +742,7 @@
 
     float-to-double v2, v9
 
-    .line 397
+    .line 434
     .local v2, dy:D
     iget-object v9, p1, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
@@ -595,7 +754,7 @@
 
     float-to-double v6, v9
 
-    .line 398
+    .line 435
     .local v6, widthThreshold:D
     iget-object v9, p1, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
@@ -607,7 +766,7 @@
 
     float-to-double v4, v9
 
-    .line 400
+    .line 437
     .local v4, heightThreshold:D
     const-string v9, "Object Tracking UI"
 
@@ -661,7 +820,7 @@
 
     invoke-static {v9, v10}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 402
+    .line 439
     cmpl-double v9, v0, v6
 
     if-gtz v9, :cond_0
@@ -670,7 +829,7 @@
 
     if-gtz v9, :cond_0
 
-    .line 405
+    .line 442
     const/4 v8, 0x0
 
     goto :goto_0
@@ -684,19 +843,19 @@
 
     const/4 v3, 0x0
 
-    .line 292
+    .line 319
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
     if-eqz v0, :cond_1
 
     move v3, v6
 
-    .line 300
+    .line 327
     :cond_0
     :goto_0
     return v3
 
-    .line 294
+    .line 321
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraThread()Lcom/android/camera/CameraThread;
 
@@ -716,12 +875,12 @@
 
     iput-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
-    .line 295
+    .line 322
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
     if-eqz v0, :cond_0
 
-    .line 297
+    .line 324
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
     iget-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
@@ -736,7 +895,7 @@
 
     move v3, v6
 
-    .line 298
+    .line 325
     goto :goto_0
 .end method
 
@@ -745,395 +904,409 @@
     .parameter "faces"
 
     .prologue
-    const/4 v12, 0x0
+    const/high16 v12, 0x3f80
 
-    const/high16 v11, 0x3f80
+    const/4 v7, 0x0
 
-    const/4 v8, 0x0
+    const/4 v11, 0x0
 
     const/4 v10, 0x1
 
     const/4 v9, 0x0
 
-    .line 309
-    iget-boolean v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_IsStarted:Z
+    .line 336
+    iget-boolean v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_IsStarted:Z
 
-    if-nez v6, :cond_1
+    if-nez v5, :cond_1
 
-    .line 384
+    .line 421
     :cond_0
     :goto_0
     return-void
 
-    .line 312
+    .line 339
     :cond_1
     if-nez p1, :cond_3
 
-    .line 315
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
-
-    if-eqz v6, :cond_2
-
-    .line 316
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
-
-    invoke-virtual {v6, v12}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
-
-    .line 318
-    :cond_2
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
-
-    invoke-virtual {v6}, Lcom/android/camera/component/ObjectTrackingController;->getObjectTrackingMode()Lcom/android/camera/ObjectTrackingMode;
-
-    move-result-object v6
-
-    sget-object v7, Lcom/android/camera/ObjectTrackingMode;->Object:Lcom/android/camera/ObjectTrackingMode;
-
-    if-eq v6, v7, :cond_0
-
-    .line 321
-    iget-boolean v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
-
-    if-eqz v6, :cond_0
-
-    .line 325
-    const-string v6, "Object Tracking UI"
-
-    const-string v7, "No callbackTargets"
-
-    invoke-static {v6, v7}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 326
-    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v10}, Lcom/android/camera/HTCCamera;->handleSensorFocus(Z)Z
-
-    .line 327
-    iput-boolean v9, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
-
-    .line 328
-    iput-object v12, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusObject:Lcom/android/camera/ObjectTrackingInfo;
-
-    goto :goto_0
-
-    .line 334
-    :cond_3
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
-
-    invoke-virtual {v6}, Lcom/android/camera/component/ObjectTrackingController;->getObjectTrackingMode()Lcom/android/camera/ObjectTrackingMode;
-
-    move-result-object v6
-
-    sget-object v7, Lcom/android/camera/ObjectTrackingMode;->Face:Lcom/android/camera/ObjectTrackingMode;
-
-    if-ne v6, v7, :cond_5
-
-    .line 335
-    array-length v6, p1
-
-    invoke-direct {p0, p1, v6}, Lcom/android/camera/component/ObjectTrackingUI;->calculateFocusFace([Lcom/android/camera/ObjectTrackingInfo;I)I
-
-    move-result v6
-
-    iput v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
-
-    .line 336
-    iput-boolean v10, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
-
     .line 342
-    :goto_1
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
-    iget-boolean v7, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
+    if-eqz v5, :cond_2
 
-    invoke-virtual {v6, v7}, Lcom/android/camera/widget/ObjectTrackingView;->setFaceOTMode(Z)V
+    .line 343
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
-    .line 344
-    iget v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
+    invoke-virtual {v5, v11}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
 
-    aget-object v6, p1, v6
+    .line 345
+    :cond_2
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
-    iget-object v1, v6, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+    invoke-virtual {v5}, Lcom/android/camera/component/ObjectTrackingController;->getObjectTrackingMode()Lcom/android/camera/ObjectTrackingMode;
 
-    .line 347
-    .local v1, focusFaceRect:Landroid/graphics/RectF;
-    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
+    move-result-object v5
 
-    move-result-object v6
+    sget-object v6, Lcom/android/camera/ObjectTrackingMode;->Object:Lcom/android/camera/ObjectTrackingMode;
 
-    iget-object v6, v6, Lcom/android/camera/HTCCamera;->isAutoFocusing:Lcom/android/camera/property/Property;
+    if-eq v5, v6, :cond_0
 
-    invoke-virtual {v6}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+    .line 348
+    iget-boolean v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
 
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Boolean;
-
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    if-nez v6, :cond_4
-
-    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lcom/android/camera/HTCCamera;->canFaceFocus()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    iget v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
-
-    aget-object v6, p1, v6
-
-    iget-object v6, v6, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
-
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
-
-    move-result v6
-
-    cmpl-float v6, v8, v6
-
-    if-eqz v6, :cond_4
-
-    iget v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
-
-    aget-object v6, p1, v6
-
-    iget-object v6, v6, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
-
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
-
-    move-result v6
-
-    cmpl-float v6, v8, v6
-
-    if-eqz v6, :cond_4
+    if-eqz v5, :cond_0
 
     .line 352
-    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
+    const-string v5, "Object Tracking UI"
 
-    move-result-object v6
+    const-string v6, "No callbackTargets"
 
-    iget-object v6, v6, Lcom/android/camera/HTCCamera;->currentScene:Lcom/android/camera/property/Property;
-
-    invoke-virtual {v6}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    instance-of v6, v6, Lcom/android/camera/effect/HdrScene;
-
-    if-eqz v6, :cond_6
+    invoke-static {v5, v6}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 353
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    move-result-object v6
+    move-result-object v5
 
-    sget-object v7, Lcom/android/camera/AutoFocusMode;->Face:Lcom/android/camera/AutoFocusMode;
+    invoke-virtual {v5, v10}, Lcom/android/camera/HTCCamera;->handleSensorFocus(Z)Z
 
-    new-array v8, v10, [Landroid/graphics/RectF;
+    .line 354
+    iput-boolean v9, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
 
-    aput-object v1, v8, v9
+    .line 355
+    iput-object v11, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusObject:Lcom/android/camera/ObjectTrackingInfo;
 
-    invoke-virtual {v6, v7, v8}, Lcom/android/camera/HTCCamera;->autoFocus(Lcom/android/camera/AutoFocusMode;[Landroid/graphics/RectF;)Z
+    goto :goto_0
 
     .line 361
+    :cond_3
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
+
+    invoke-virtual {v5}, Lcom/android/camera/component/ObjectTrackingController;->getObjectTrackingMode()Lcom/android/camera/ObjectTrackingMode;
+
+    move-result-object v5
+
+    sget-object v6, Lcom/android/camera/ObjectTrackingMode;->Face:Lcom/android/camera/ObjectTrackingMode;
+
+    if-ne v5, v6, :cond_5
+
+    .line 362
+    array-length v5, p1
+
+    invoke-direct {p0, p1, v5}, Lcom/android/camera/component/ObjectTrackingUI;->calculateFocusFace([Lcom/android/camera/ObjectTrackingInfo;I)I
+
+    move-result v5
+
+    iput v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
+
+    .line 363
+    iput-boolean v10, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
+
+    .line 369
+    :goto_1
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
+
+    iget-boolean v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
+
+    invoke-virtual {v5, v6}, Lcom/android/camera/widget/ObjectTrackingView;->setFaceOTMode(Z)V
+
+    .line 371
+    iget v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
+
+    aget-object v5, p1, v5
+
+    iget-object v0, v5, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+
+    .line 374
+    .local v0, focusFaceRect:Landroid/graphics/RectF;
+    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v5
+
+    iget-object v5, v5, Lcom/android/camera/HTCCamera;->isAutoFocusing:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v5}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Boolean;
+
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/android/camera/HTCCamera;->canFaceFocus()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    iget v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
+
+    aget-object v5, p1, v5
+
+    iget-object v5, v5, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+
+    invoke-virtual {v5}, Landroid/graphics/RectF;->width()F
+
+    move-result v5
+
+    cmpl-float v5, v7, v5
+
+    if-eqz v5, :cond_4
+
+    iget v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
+
+    aget-object v5, p1, v5
+
+    iget-object v5, v5, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+
+    invoke-virtual {v5}, Landroid/graphics/RectF;->height()F
+
+    move-result v5
+
+    cmpl-float v5, v7, v5
+
+    if-eqz v5, :cond_4
+
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_LastfocusFaceRect:Landroid/graphics/RectF;
+
+    invoke-direct {p0, v5, v0}, Lcom/android/camera/component/ObjectTrackingUI;->checkFaceMoving(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    .line 381
+    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v5
+
+    sget-object v6, Lcom/android/camera/AutoFocusMode;->Face:Lcom/android/camera/AutoFocusMode;
+
+    new-array v7, v10, [Landroid/graphics/RectF;
+
+    new-instance v8, Landroid/graphics/RectF;
+
+    invoke-direct {v8, v0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
+
+    aput-object v8, v7, v9
+
+    invoke-virtual {v5, v6, v7}, Lcom/android/camera/HTCCamera;->autoFocus(Lcom/android/camera/AutoFocusMode;[Landroid/graphics/RectF;)Z
+
+    .line 387
+    iput-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_LastfocusFaceRect:Landroid/graphics/RectF;
+
+    .line 390
     :cond_4
-    :goto_2
-    iget v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
+    iget v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
 
-    aget-object v6, p1, v6
+    aget-object v5, p1, v5
 
-    iput-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusObject:Lcom/android/camera/ObjectTrackingInfo;
+    iput-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusObject:Lcom/android/camera/ObjectTrackingInfo;
 
-    .line 364
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
+    .line 393
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
-    invoke-virtual {v6}, Lcom/android/camera/widget/ObjectTrackingView;->getWidth()I
-
-    move-result v4
-
-    .line 365
-    .local v4, previewDisplayWidth:I
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
-
-    invoke-virtual {v6}, Lcom/android/camera/widget/ObjectTrackingView;->getHeight()I
+    invoke-virtual {v5}, Lcom/android/camera/widget/ObjectTrackingView;->getWidth()I
 
     move-result v3
 
-    .line 368
-    .local v3, previewDisplayHeight:I
-    array-length v6, p1
+    .line 394
+    .local v3, previewDisplayWidth:I
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
-    new-array v5, v6, [Landroid/graphics/Rect;
+    invoke-virtual {v5}, Lcom/android/camera/widget/ObjectTrackingView;->getHeight()I
 
-    .line 369
-    .local v5, regions:[Landroid/graphics/Rect;
-    const/4 v2, 0x0
+    move-result v2
 
-    .local v2, i:I
-    :goto_3
-    array-length v6, p1
+    .line 397
+    .local v2, previewDisplayHeight:I
+    array-length v5, p1
 
-    if-ge v2, v6, :cond_7
+    new-array v4, v5, [Landroid/graphics/Rect;
 
-    .line 370
-    new-instance v6, Landroid/graphics/Rect;
+    .line 398
+    .local v4, regions:[Landroid/graphics/Rect;
+    const/4 v1, 0x0
 
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+    .local v1, i:I
+    :goto_2
+    array-length v5, p1
 
-    aput-object v6, v5, v2
+    if-ge v1, v5, :cond_6
 
-    .line 371
-    aget-object v6, v5, v2
+    .line 399
+    new-instance v5, Landroid/graphics/Rect;
 
-    aget-object v7, p1, v2
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    iget-object v7, v7, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+    aput-object v5, v4, v1
 
-    iget v7, v7, Landroid/graphics/RectF;->bottom:F
+    .line 400
+    aget-object v5, v4, v1
 
-    sub-float v7, v11, v7
+    aget-object v6, p1, v1
 
-    int-to-float v8, v4
+    iget-object v6, v6, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
-    mul-float/2addr v7, v8
+    iget v6, v6, Landroid/graphics/RectF;->bottom:F
 
-    float-to-int v7, v7
+    sub-float v6, v12, v6
 
-    iput v7, v6, Landroid/graphics/Rect;->left:I
+    int-to-float v7, v3
 
-    .line 372
-    aget-object v6, v5, v2
+    mul-float/2addr v6, v7
 
-    aget-object v7, p1, v2
+    float-to-int v6, v6
 
-    iget-object v7, v7, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+    iput v6, v5, Landroid/graphics/Rect;->left:I
 
-    iget v7, v7, Landroid/graphics/RectF;->top:F
+    .line 401
+    aget-object v5, v4, v1
 
-    sub-float v7, v11, v7
+    aget-object v6, p1, v1
 
-    int-to-float v8, v4
+    iget-object v6, v6, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
-    mul-float/2addr v7, v8
+    iget v6, v6, Landroid/graphics/RectF;->top:F
 
-    float-to-int v7, v7
+    sub-float v6, v12, v6
 
-    iput v7, v6, Landroid/graphics/Rect;->right:I
+    int-to-float v7, v3
 
-    .line 373
-    aget-object v6, v5, v2
+    mul-float/2addr v6, v7
 
-    aget-object v7, p1, v2
+    float-to-int v6, v6
 
-    iget-object v7, v7, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+    iput v6, v5, Landroid/graphics/Rect;->right:I
 
-    iget v7, v7, Landroid/graphics/RectF;->left:F
+    .line 402
+    aget-object v5, v4, v1
 
-    int-to-float v8, v3
+    aget-object v6, p1, v1
 
-    mul-float/2addr v7, v8
+    iget-object v6, v6, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
-    float-to-int v7, v7
+    iget v6, v6, Landroid/graphics/RectF;->left:F
 
-    iput v7, v6, Landroid/graphics/Rect;->top:I
+    int-to-float v7, v2
 
-    .line 374
-    aget-object v6, v5, v2
+    mul-float/2addr v6, v7
 
-    aget-object v7, p1, v2
+    float-to-int v6, v6
 
-    iget-object v7, v7, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
+    iput v6, v5, Landroid/graphics/Rect;->top:I
 
-    iget v7, v7, Landroid/graphics/RectF;->right:F
+    .line 403
+    aget-object v5, v4, v1
 
-    int-to-float v8, v3
+    aget-object v6, p1, v1
 
-    mul-float/2addr v7, v8
+    iget-object v6, v6, Lcom/android/camera/ObjectTrackingInfo;->bounds:Landroid/graphics/RectF;
 
-    float-to-int v7, v7
+    iget v6, v6, Landroid/graphics/RectF;->right:F
 
-    iput v7, v6, Landroid/graphics/Rect;->bottom:I
+    int-to-float v7, v2
 
-    .line 369
-    add-int/lit8 v2, v2, 0x1
+    mul-float/2addr v6, v7
 
-    goto :goto_3
+    float-to-int v6, v6
 
-    .line 339
-    .end local v1           #focusFaceRect:Landroid/graphics/RectF;
-    .end local v2           #i:I
-    .end local v3           #previewDisplayHeight:I
-    .end local v4           #previewDisplayWidth:I
-    .end local v5           #regions:[Landroid/graphics/Rect;
+    iput v6, v5, Landroid/graphics/Rect;->bottom:I
+
+    .line 398
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    .line 366
+    .end local v0           #focusFaceRect:Landroid/graphics/RectF;
+    .end local v1           #i:I
+    .end local v2           #previewDisplayHeight:I
+    .end local v3           #previewDisplayWidth:I
+    .end local v4           #regions:[Landroid/graphics/Rect;
     :cond_5
     iput v9, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
 
-    .line 340
+    .line 367
     iput-boolean v9, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
 
     goto/16 :goto_1
 
-    .line 356
-    .restart local v1       #focusFaceRect:Landroid/graphics/RectF;
+    .line 409
+    .restart local v0       #focusFaceRect:Landroid/graphics/RectF;
+    .restart local v1       #i:I
+    .restart local v2       #previewDisplayHeight:I
+    .restart local v3       #previewDisplayWidth:I
+    .restart local v4       #regions:[Landroid/graphics/Rect;
     :cond_6
-    new-instance v0, Landroid/graphics/PointF;
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerX()F
+    if-eqz v5, :cond_0
 
-    move-result v6
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v7
-
-    invoke-direct {v0, v6, v7}, Landroid/graphics/PointF;-><init>(FF)V
-
-    .line 357
-    .local v0, focusFacePoint:Landroid/graphics/PointF;
+    .line 410
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    move-result-object v6
+    move-result-object v5
 
-    sget-object v7, Lcom/android/camera/AutoFocusMode;->Face:Lcom/android/camera/AutoFocusMode;
+    iget-object v5, v5, Lcom/android/camera/HTCCamera;->isFocusUIShowing:Lcom/android/camera/property/Property;
 
-    new-array v8, v10, [Landroid/graphics/PointF;
+    invoke-virtual {v5}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
 
-    aput-object v0, v8, v9
+    move-result-object v5
 
-    invoke-virtual {v6, v7, v8}, Lcom/android/camera/HTCCamera;->autoFocus(Lcom/android/camera/AutoFocusMode;[Landroid/graphics/PointF;)Z
+    check-cast v5, Ljava/lang/Boolean;
 
-    goto :goto_2
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 380
-    .end local v0           #focusFacePoint:Landroid/graphics/PointF;
-    .restart local v2       #i:I
-    .restart local v3       #previewDisplayHeight:I
-    .restart local v4       #previewDisplayWidth:I
-    .restart local v5       #regions:[Landroid/graphics/Rect;
+    move-result v5
+
+    if-nez v5, :cond_7
+
+    .line 412
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
+
+    invoke-virtual {v5, v4}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
+
+    .line 414
+    invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v5
+
+    iget-object v5, v5, Lcom/android/camera/HTCCamera;->isAutoFocusing:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v5}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Boolean;
+
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    .line 415
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
+
+    iget v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
+
+    invoke-virtual {v5, v6, v10}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectFocusState(IZ)V
+
+    goto/16 :goto_0
+
+    .line 418
     :cond_7
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
+    iget-object v5, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
-    if-eqz v6, :cond_0
-
-    .line 381
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
-
-    invoke-virtual {v6, v5}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
-
-    .line 382
-    iget-object v6, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
-
-    iget v7, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusedObjIndex:I
-
-    invoke-virtual {v6, v7, v10}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectFocusState(IZ)V
+    invoke-virtual {v5, v11}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
 
     goto/16 :goto_0
 .end method
@@ -1142,23 +1315,23 @@
     .locals 2
 
     .prologue
-    .line 280
+    .line 307
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
     if-eqz v0, :cond_0
 
-    .line 281
+    .line 308
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
 
-    .line 284
+    .line 311
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->setSensorFocus()V
 
-    .line 285
+    .line 312
     return-void
 .end method
 
@@ -1166,7 +1339,7 @@
     .locals 0
 
     .prologue
-    .line 272
+    .line 299
     return-void
 .end method
 
@@ -1174,16 +1347,16 @@
     .locals 2
 
     .prologue
-    .line 525
+    .line 583
     iget-boolean v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_IsStarted:Z
 
     if-eqz v0, :cond_0
 
-    .line 542
+    .line 600
     :goto_0
     return-void
 
-    .line 529
+    .line 587
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->linkToController()Z
 
@@ -1191,7 +1364,7 @@
 
     if-nez v0, :cond_1
 
-    .line 531
+    .line 589
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "startFaceDetection() - Cannot link with controller"
@@ -1200,7 +1373,7 @@
 
     goto :goto_0
 
-    .line 534
+    .line 592
     :cond_1
     const-string v0, "Object Tracking UI"
 
@@ -1208,14 +1381,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 535
+    .line 593
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
     const/16 v1, 0x2712
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/component/ObjectTrackingUI;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 541
+    .line 599
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_IsStarted:Z
@@ -1227,16 +1400,16 @@
     .locals 2
 
     .prologue
-    .line 550
+    .line 608
     iget-boolean v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_IsStarted:Z
 
     if-nez v0, :cond_0
 
-    .line 567
+    .line 625
     :goto_0
     return-void
 
-    .line 554
+    .line 612
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->linkToController()Z
 
@@ -1244,7 +1417,7 @@
 
     if-nez v0, :cond_1
 
-    .line 556
+    .line 614
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "stopFaceDetection() - Cannot link with controller"
@@ -1253,7 +1426,7 @@
 
     goto :goto_0
 
-    .line 559
+    .line 617
     :cond_1
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_Controller:Lcom/android/camera/component/ObjectTrackingController;
 
@@ -1261,19 +1434,19 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/component/ObjectTrackingUI;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 562
+    .line 620
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
     if-eqz v0, :cond_2
 
-    .line 563
+    .line 621
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
 
-    .line 566
+    .line 624
     :cond_2
     const/4 v0, 0x0
 
@@ -1286,7 +1459,7 @@
     .locals 3
 
     .prologue
-    .line 251
+    .line 278
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getSettings()Lcom/android/camera/CameraSettings;
 
     move-result-object v1
@@ -1307,7 +1480,7 @@
 
     const/4 v0, -0x1
 
-    .line 252
+    .line 279
     .local v0, width:I
     :goto_0
     sget-object v1, Lcom/android/camera/rotate/UIRotation;->SCREEN_ROTATION:Lcom/android/camera/rotate/UIRotation;
@@ -1318,12 +1491,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 253
+    .line 280
     iget-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
     invoke-static {v1, v0}, Lcom/android/camera/ViewUtil;->setHeight(Landroid/view/View;I)V
 
-    .line 256
+    .line 283
     :goto_1
     iget-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
@@ -1331,10 +1504,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/widget/ObjectTrackingView;->setObjectRegions([Landroid/graphics/Rect;)V
 
-    .line 257
+    .line 284
     return-void
 
-    .line 251
+    .line 278
     .end local v0           #width:I
     :cond_0
     sget v1, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
@@ -1345,7 +1518,7 @@
 
     goto :goto_0
 
-    .line 255
+    .line 282
     .restart local v0       #width:I
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
@@ -1362,19 +1535,19 @@
     .parameter "msg"
 
     .prologue
-    .line 80
+    .line 82
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 92
+    .line 94
     invoke-super {p0, p1}, Lcom/android/camera/component/UIComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 95
+    .line 97
     :goto_0
     return-void
 
-    .line 83
+    .line 85
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1386,19 +1559,19 @@
 
     goto :goto_0
 
-    .line 86
+    .line 88
     :pswitch_1
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->onOTModeExited()V
 
     goto :goto_0
 
-    .line 89
+    .line 91
     :pswitch_2
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->setSensorFocus()V
 
     goto :goto_0
 
-    .line 80
+    .line 82
     nop
 
     :pswitch_data_0
@@ -1413,20 +1586,20 @@
     .locals 3
 
     .prologue
-    .line 104
+    .line 106
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->initializeOverride()V
 
-    .line 106
+    .line 108
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_HasFaces:Z
 
-    .line 107
+    .line 109
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_FocusObject:Lcom/android/camera/ObjectTrackingInfo;
 
-    .line 109
+    .line 111
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getBaseLayout()Landroid/view/View;
 
     move-result-object v1
@@ -1435,7 +1608,7 @@
 
     iput-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
-    .line 111
+    .line 113
     iget-object v1, p0, Lcom/android/camera/component/ObjectTrackingUI;->m_BaseLayout:Lcom/android/camera/widget/ObjectTrackingView;
 
     new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$1;
@@ -1444,15 +1617,15 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/widget/ObjectTrackingView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 147
+    .line 149
     invoke-direct {p0}, Lcom/android/camera/component/ObjectTrackingUI;->updateOtViewLayout()V
 
-    .line 149
+    .line 151
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 154
+    .line 156
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isPreviewStarted:Lcom/android/camera/property/Property;
 
@@ -1462,7 +1635,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 164
+    .line 166
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getSettings()Lcom/android/camera/CameraSettings;
 
     move-result-object v1
@@ -1475,7 +1648,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 171
+    .line 173
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->recordingState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$4;
@@ -1484,8 +1657,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 181
-    iget-object v1, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
+    .line 183
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->focusMode:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$5;
 
@@ -1493,8 +1666,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 195
-    iget-object v1, v0, Lcom/android/camera/HTCCamera;->effectPanelState:Lcom/android/camera/property/Property;
+    .line 196
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$6;
 
@@ -1502,25 +1675,43 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 223
-    iget-object v1, v0, Lcom/android/camera/HTCCamera;->effectAppliedEvent:Lcom/android/camera/event/Event;
+    .line 210
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->effectPanelState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$7;
 
     invoke-direct {v2, p0}, Lcom/android/camera/component/ObjectTrackingUI$7;-><init>(Lcom/android/camera/component/ObjectTrackingUI;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
+    invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 236
-    iget-object v1, v0, Lcom/android/camera/HTCCamera;->previewSize:Lcom/android/camera/property/Property;
+    .line 238
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->effectAppliedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$8;
 
     invoke-direct {v2, p0}, Lcom/android/camera/component/ObjectTrackingUI$8;-><init>(Lcom/android/camera/component/ObjectTrackingUI;)V
 
+    invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
+
+    .line 251
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->previewSize:Lcom/android/camera/property/Property;
+
+    new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$9;
+
+    invoke-direct {v2, p0}, Lcom/android/camera/component/ObjectTrackingUI$9;-><init>(Lcom/android/camera/component/ObjectTrackingUI;)V
+
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 244
+    .line 259
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->showFocusingEvent:Lcom/android/camera/event/Event;
+
+    new-instance v2, Lcom/android/camera/component/ObjectTrackingUI$10;
+
+    invoke-direct {v2, p0}, Lcom/android/camera/component/ObjectTrackingUI$10;-><init>(Lcom/android/camera/component/ObjectTrackingUI;)V
+
+    invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
+
+    .line 271
     return-void
 .end method
 
@@ -1531,12 +1722,12 @@
     .parameter "bringToBounds"
 
     .prologue
-    .line 574
+    .line 632
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 575
+    .line 633
     .local v0, result:Landroid/graphics/Point;
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/camera/component/ObjectTrackingUI;->screenPointToLandscapePoint(IIZLandroid/graphics/Point;)Z
 
@@ -1544,7 +1735,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 577
+    .line 635
     .end local v0           #result:Landroid/graphics/Point;
     :goto_0
     return-object v0
@@ -1566,15 +1757,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 582
+    .line 640
     if-nez p4, :cond_1
 
-    .line 610
+    .line 668
     :cond_0
     :goto_0
     return v1
 
-    .line 586
+    .line 644
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/ObjectTrackingUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -1584,7 +1775,7 @@
 
     move-result-object v0
 
-    .line 587
+    .line 645
     .local v0, previewBounds:Landroid/graphics/Rect;
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
 
@@ -1592,40 +1783,40 @@
 
     if-nez v2, :cond_3
 
-    .line 589
+    .line 647
     if-eqz p3, :cond_0
 
-    .line 591
+    .line 649
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     if-ge p1, v1, :cond_4
 
-    .line 592
+    .line 650
     iget p1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 595
+    .line 653
     :cond_2
     :goto_1
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     if-ge p2, v1, :cond_5
 
-    .line 596
+    .line 654
     iget p2, v0, Landroid/graphics/Rect;->top:I
 
-    .line 602
+    .line 660
     :cond_3
     :goto_2
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr p1, v1
 
-    .line 603
+    .line 661
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     sub-int/2addr p2, v1
 
-    .line 606
+    .line 664
     sget-object v1, Lcom/android/camera/rotate/UIRotation;->SCREEN_ROTATION:Lcom/android/camera/rotate/UIRotation;
 
     invoke-virtual {v1}, Lcom/android/camera/rotate/UIRotation;->isPortrait()Z
@@ -1634,7 +1825,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 607
+    .line 665
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -1643,35 +1834,35 @@
 
     invoke-virtual {p4, p2, v1}, Landroid/graphics/Point;->set(II)V
 
-    .line 610
+    .line 668
     :goto_3
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 593
+    .line 651
     :cond_4
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     if-le p1, v1, :cond_2
 
-    .line 594
+    .line 652
     iget p1, v0, Landroid/graphics/Rect;->right:I
 
     goto :goto_1
 
-    .line 597
+    .line 655
     :cond_5
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
     if-le p2, v1, :cond_3
 
-    .line 598
+    .line 656
     iget p2, v0, Landroid/graphics/Rect;->bottom:I
 
     goto :goto_2
 
-    .line 609
+    .line 667
     :cond_6
     invoke-virtual {p4, p1, p2}, Landroid/graphics/Point;->set(II)V
 

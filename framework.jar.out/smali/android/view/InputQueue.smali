@@ -138,7 +138,7 @@
     .line 78
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "inputChannel must not be null"
+    const-string v1, "inputChannel must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -151,7 +151,7 @@
     .line 81
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "inputHandler must not be null"
+    const-string v1, "inputHandler must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -208,7 +208,7 @@
     .line 104
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "inputChannel must not be null"
+    const-string v1, "inputChannel must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

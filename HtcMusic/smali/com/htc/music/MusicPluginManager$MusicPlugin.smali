@@ -68,12 +68,12 @@
     .parameter
 
     .prologue
-    .line 1538
+    .line 1610
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1535
+    .line 1607
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -84,7 +84,7 @@
 
     iput-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mArtMap:Ljava/util/Map;
 
-    .line 1536
+    .line 1608
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -95,17 +95,17 @@
 
     iput-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mArtMapShuffle:Ljava/util/Map;
 
-    .line 1539
+    .line 1611
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mStartActivity:Z
 
-    .line 1540
+    .line 1612
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPlayAtBeginning:Z
 
-    .line 1541
+    .line 1613
     return-void
 .end method
 
@@ -114,7 +114,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginClass:Ljava/lang/String;
 
     return-object v0
@@ -125,7 +125,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginName:Ljava/lang/String;
 
     return-object v0
@@ -136,7 +136,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mService:Lcom/htc/music/IMusicPluginService;
 
     return-object v0
@@ -148,7 +148,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1524
+    .line 1596
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mService:Lcom/htc/music/IMusicPluginService;
 
     return-object p1
@@ -159,7 +159,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginDescription:Ljava/lang/String;
 
     return-object v0
@@ -170,7 +170,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -181,7 +181,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mArtMap:Ljava/util/Map;
 
     return-object v0
@@ -192,7 +192,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mArtMapShuffle:Ljava/util/Map;
 
     return-object v0
@@ -203,7 +203,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1524
+    .line 1596
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mConnection:Landroid/content/ServiceConnection;
 
     return-object v0
@@ -215,7 +215,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1524
+    .line 1596
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mConnection:Landroid/content/ServiceConnection;
 
     return-object p1
@@ -227,7 +227,7 @@
     .locals 1
 
     .prologue
-    .line 1600
+    .line 1672
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mConnection:Landroid/content/ServiceConnection;
 
     return-object v0
@@ -237,7 +237,7 @@
     .locals 1
 
     .prologue
-    .line 1584
+    .line 1656
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -247,7 +247,7 @@
     .locals 1
 
     .prologue
-    .line 1624
+    .line 1696
     iget-boolean v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPlayAtBeginning:Z
 
     return v0
@@ -257,7 +257,7 @@
     .locals 1
 
     .prologue
-    .line 1552
+    .line 1624
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginClass:Ljava/lang/String;
 
     return-object v0
@@ -267,7 +267,7 @@
     .locals 1
 
     .prologue
-    .line 1560
+    .line 1632
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginDescription:Ljava/lang/String;
 
     return-object v0
@@ -277,7 +277,7 @@
     .locals 1
 
     .prologue
-    .line 1572
+    .line 1644
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -287,7 +287,7 @@
     .locals 1
 
     .prologue
-    .line 1544
+    .line 1616
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginName:Ljava/lang/String;
 
     return-object v0
@@ -297,7 +297,7 @@
     .locals 1
 
     .prologue
-    .line 1564
+    .line 1636
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginPackage:Ljava/lang/String;
 
     return-object v0
@@ -307,7 +307,7 @@
     .locals 1
 
     .prologue
-    .line 1568
+    .line 1640
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mService:Lcom/htc/music/IMusicPluginService;
 
     return-object v0
@@ -317,7 +317,7 @@
     .locals 1
 
     .prologue
-    .line 1616
+    .line 1688
     iget-boolean v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mStartActivity:Z
 
     return v0
@@ -329,21 +329,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1632
+    .line 1704
     iput-object v1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginName:Ljava/lang/String;
 
-    .line 1633
+    .line 1705
     iput-object v1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mService:Lcom/htc/music/IMusicPluginService;
 
-    .line 1634
+    .line 1706
     iput-object v1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 1635
+    .line 1707
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 1636
+    .line 1708
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -352,22 +352,22 @@
 
     if-nez v0, :cond_0
 
-    .line 1637
+    .line 1709
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1639
+    .line 1711
     :cond_0
     iput-object v1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
-    .line 1641
+    .line 1713
     :cond_1
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_3
 
-    .line 1642
+    .line 1714
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -376,40 +376,40 @@
 
     if-nez v0, :cond_2
 
-    .line 1643
+    .line 1715
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1645
+    .line 1717
     :cond_2
     iput-object v1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
-    .line 1647
+    .line 1719
     :cond_3
     iput-object v1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginDescription:Ljava/lang/String;
 
-    .line 1648
+    .line 1720
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mArtMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1649
+    .line 1721
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mArtMapShuffle:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 1650
+    .line 1722
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mStartActivity:Z
 
-    .line 1651
+    .line 1723
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPlayAtBeginning:Z
 
-    .line 1652
+    .line 1724
     return-void
 .end method
 
@@ -418,10 +418,10 @@
     .parameter "mConnection"
 
     .prologue
-    .line 1604
+    .line 1676
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 1605
+    .line 1677
     return-void
 .end method
 
@@ -430,7 +430,7 @@
     .parameter "notifyIcon"
 
     .prologue
-    .line 1588
+    .line 1660
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -443,21 +443,21 @@
 
     if-nez v0, :cond_0
 
-    .line 1589
+    .line 1661
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1590
+    .line 1662
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
-    .line 1592
+    .line 1664
     :cond_0
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mNotifyIcon:Landroid/graphics/Bitmap;
 
-    .line 1593
+    .line 1665
     return-void
 .end method
 
@@ -466,10 +466,10 @@
     .parameter "playAtBeginning"
 
     .prologue
-    .line 1628
+    .line 1700
     iput-boolean p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPlayAtBeginning:Z
 
-    .line 1629
+    .line 1701
     return-void
 .end method
 
@@ -478,10 +478,10 @@
     .parameter "pluginClasse"
 
     .prologue
-    .line 1556
+    .line 1628
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginClass:Ljava/lang/String;
 
-    .line 1557
+    .line 1629
     return-void
 .end method
 
@@ -490,10 +490,10 @@
     .parameter "description"
 
     .prologue
-    .line 1608
+    .line 1680
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginDescription:Ljava/lang/String;
 
-    .line 1609
+    .line 1681
     return-void
 .end method
 
@@ -502,7 +502,7 @@
     .parameter "pluginIcon"
 
     .prologue
-    .line 1576
+    .line 1648
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -515,21 +515,21 @@
 
     if-nez v0, :cond_0
 
-    .line 1577
+    .line 1649
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1578
+    .line 1650
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
-    .line 1580
+    .line 1652
     :cond_0
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginIcon:Landroid/graphics/Bitmap;
 
-    .line 1581
+    .line 1653
     return-void
 .end method
 
@@ -538,10 +538,10 @@
     .parameter "pluginName"
 
     .prologue
-    .line 1548
+    .line 1620
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginName:Ljava/lang/String;
 
-    .line 1549
+    .line 1621
     return-void
 .end method
 
@@ -550,10 +550,10 @@
     .parameter "pluginPackage"
 
     .prologue
-    .line 1612
+    .line 1684
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mPluginPackage:Ljava/lang/String;
 
-    .line 1613
+    .line 1685
     return-void
 .end method
 
@@ -562,10 +562,10 @@
     .parameter "mediaPluginService"
 
     .prologue
-    .line 1596
+    .line 1668
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mService:Lcom/htc/music/IMusicPluginService;
 
-    .line 1597
+    .line 1669
     return-void
 .end method
 
@@ -574,9 +574,9 @@
     .parameter "startActivity"
 
     .prologue
-    .line 1620
+    .line 1692
     iput-boolean p1, p0, Lcom/htc/music/MusicPluginManager$MusicPlugin;->mStartActivity:Z
 
-    .line 1621
+    .line 1693
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 378
+    .line 380
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$4;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +43,13 @@
     .parameter "whichButton"
 
     .prologue
-    .line 381
+    .line 383
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$4;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setResult(I)V
 
-    .line 385
+    .line 387
     return-void
 .end method

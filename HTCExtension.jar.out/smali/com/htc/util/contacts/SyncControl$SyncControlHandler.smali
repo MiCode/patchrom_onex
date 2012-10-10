@@ -25,18 +25,18 @@
     .parameter "looper"
 
     .prologue
-    .line 113
+    .line 120
     iput-object p1, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
-    .line 114
+    .line 121
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 115
+    .line 122
     const/16 v0, 0x3e8
 
     invoke-virtual {p0, v0}, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->sendEmptyMessage(I)Z
 
-    .line 116
+    .line 123
     return-void
 .end method
 
@@ -47,13 +47,13 @@
     .parameter "authority"
 
     .prologue
-    .line 129
+    .line 136
     :try_start_0
     invoke-static {}, Landroid/content/ContentResolver;->getCurrentSyncs()Ljava/util/List;
 
     move-result-object v0
 
-    .line 130
+    .line 137
     .local v0, activeSyncValues:Ljava/util/List;,"Ljava/util/List<Landroid/content/SyncInfo;>;"
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -61,13 +61,13 @@
 
     if-eqz v6, :cond_1
 
-    .line 169
+    .line 176
     .end local v0           #activeSyncValues:Ljava/util/List;,"Ljava/util/List<Landroid/content/SyncInfo;>;"
     :cond_0
     :goto_0
     return-void
 
-    .line 133
+    .line 140
     .restart local v0       #activeSyncValues:Ljava/util/List;,"Ljava/util/List<Landroid/content/SyncInfo;>;"
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -76,7 +76,7 @@
 
     if-lez v6, :cond_0
 
-    .line 136
+    .line 143
     iget-object v6, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
     #calls: Lcom/htc/util/contacts/SyncControl;->locateActiveList(Ljava/lang/String;Ljava/util/List;)I
@@ -84,16 +84,16 @@
 
     move-result v5
 
-    .line 138
+    .line 145
     .local v5, idx:I
     const/4 v6, -0x1
 
     if-eq v5, v6, :cond_0
 
-    .line 139
+    .line 146
     const/4 v1, 0x1
 
-    .line 140
+    .line 147
     .local v1, continueCancel:Z
     iget-object v6, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
@@ -120,7 +120,7 @@
 
     check-cast v3, Lcom/htc/util/contacts/SyncControl$ExceptionSync;
 
-    .line 141
+    .line 148
     .local v3, exception:Lcom/htc/util/contacts/SyncControl$ExceptionSync;
     invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -152,22 +152,22 @@
 
     if-eqz v6, :cond_2
 
-    .line 144
+    .line 151
     :cond_3
     const/4 v1, 0x0
 
-    .line 148
+    .line 155
     .end local v3           #exception:Lcom/htc/util/contacts/SyncControl$ExceptionSync;
     :cond_4
     if-eqz v1, :cond_0
 
-    .line 152
+    .line 159
     const/4 v6, 0x0
 
     :try_start_1
     invoke-static {v6, p1}, Landroid/content/ContentResolver;->cancelSync(Landroid/accounts/Account;Ljava/lang/String;)V
 
-    .line 154
+    .line 161
     iget-object v6, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
     #getter for: Lcom/htc/util/contacts/SyncControl;->mPendingSyncs:Ljava/util/HashSet;
@@ -179,7 +179,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 155
+    .line 162
     :try_start_2
     iget-object v6, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
@@ -210,7 +210,7 @@
 
     invoke-virtual {v8, v9}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 157
+    .line 164
     monitor-exit v7
 
     goto :goto_0
@@ -227,11 +227,11 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 159
+    .line 166
     :catch_0
     move-exception v2
 
-    .line 160
+    .line 167
     .local v2, e:Ljava/lang/Exception;
     :try_start_4
     iget-object v6, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
@@ -285,7 +285,7 @@
 
     goto/16 :goto_0
 
-    .line 165
+    .line 172
     .end local v0           #activeSyncValues:Ljava/util/List;,"Ljava/util/List<Landroid/content/SyncInfo;>;"
     .end local v1           #continueCancel:Z
     .end local v2           #e:Ljava/lang/Exception;
@@ -294,7 +294,7 @@
     :catch_1
     move-exception v2
 
-    .line 167
+    .line 174
     .restart local v2       #e:Ljava/lang/Exception;
     iget-object v6, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
@@ -317,22 +317,22 @@
     .parameter "msg"
 
     .prologue
-    .line 190
+    .line 197
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 201
+    .line 208
     :goto_0
     return-void
 
-    .line 192
+    .line 199
     :pswitch_0
     invoke-virtual {p0}, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->init()V
 
     goto :goto_0
 
-    .line 195
+    .line 202
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -342,13 +342,13 @@
 
     goto :goto_0
 
-    .line 198
+    .line 205
     :pswitch_2
     invoke-virtual {p0}, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->startPendingSync()V
 
     goto :goto_0
 
-    .line 190
+    .line 197
     :pswitch_data_0
     .packed-switch 0x3e8
         :pswitch_0
@@ -361,7 +361,7 @@
     .locals 2
 
     .prologue
-    .line 119
+    .line 126
     const/4 v0, 0x4
 
     iget-object v1, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
@@ -372,7 +372,7 @@
 
     invoke-static {v0, v1}, Landroid/content/ContentResolver;->addStatusChangeListener(ILandroid/content/SyncStatusObserver;)Ljava/lang/Object;
 
-    .line 122
+    .line 129
     return-void
 .end method
 
@@ -382,18 +382,18 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 173
+    .line 180
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 174
+    .line 181
     .local v0, b:Landroid/os/Bundle;
     const-string v3, "force"
 
     invoke-virtual {v0, v3, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 175
+    .line 182
     iget-object v3, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
     #getter for: Lcom/htc/util/contacts/SyncControl;->mPendingSyncs:Ljava/util/HashSet;
@@ -403,7 +403,7 @@
 
     monitor-enter v4
 
-    .line 176
+    .line 183
     :try_start_0
     iget-object v3, p0, Lcom/htc/util/contacts/SyncControl$SyncControlHandler;->this$0:Lcom/htc/util/contacts/SyncControl;
 
@@ -431,7 +431,7 @@
 
     check-cast v2, Lcom/htc/util/contacts/SyncControl$PendingSync;
 
-    .line 179
+    .line 186
     .local v2, sync:Lcom/htc/util/contacts/SyncControl$PendingSync;
     iget-object v3, v2, Lcom/htc/util/contacts/SyncControl$SyncUnit;->account:Landroid/accounts/Account;
 
@@ -453,7 +453,7 @@
 
     if-ne v6, v3, :cond_0
 
-    .line 181
+    .line 188
     iget-object v3, v2, Lcom/htc/util/contacts/SyncControl$SyncUnit;->account:Landroid/accounts/Account;
 
     iget-object v5, v2, Lcom/htc/util/contacts/SyncControl$SyncUnit;->authority:Ljava/lang/String;
@@ -462,7 +462,7 @@
 
     goto :goto_0
 
-    .line 185
+    .line 192
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #sync:Lcom/htc/util/contacts/SyncControl$PendingSync;
     :catchall_0
@@ -474,7 +474,7 @@
 
     throw v3
 
-    .line 184
+    .line 191
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_1
     :try_start_1
@@ -487,11 +487,11 @@
 
     invoke-virtual {v3}, Ljava/util/HashSet;->clear()V
 
-    .line 185
+    .line 192
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 186
+    .line 193
     return-void
 .end method

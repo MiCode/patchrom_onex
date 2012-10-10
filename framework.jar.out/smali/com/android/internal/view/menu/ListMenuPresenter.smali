@@ -122,7 +122,7 @@
     .line 298
     iget-object v0, p0, Lcom/android/internal/view/menu/ListMenuPresenter;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "item_background_holo_dark"
+    const-string v1, "item_background_holo_dark"
 
     const/4 v2, 0x0
 

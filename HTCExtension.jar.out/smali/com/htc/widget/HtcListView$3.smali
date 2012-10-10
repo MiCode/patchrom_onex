@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4526
+    .line 4535
     iput-object p1, p0, Lcom/htc/widget/HtcListView$3;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 4528
+    .line 4537
     iget-object v0, p0, Lcom/htc/widget/HtcListView$3;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mIntroAnimationType:I
@@ -51,11 +51,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 4546
+    .line 4555
     :goto_0
     return-void
 
-    .line 4530
+    .line 4539
     :pswitch_0
     iget-object v0, p0, Lcom/htc/widget/HtcListView$3;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -64,7 +64,7 @@
 
     goto :goto_0
 
-    .line 4533
+    .line 4542
     :pswitch_1
     iget-object v0, p0, Lcom/htc/widget/HtcListView$3;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -73,7 +73,7 @@
 
     goto :goto_0
 
-    .line 4536
+    .line 4545
     :pswitch_2
     iget-object v0, p0, Lcom/htc/widget/HtcListView$3;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -82,7 +82,7 @@
 
     goto :goto_0
 
-    .line 4539
+    .line 4548
     :pswitch_3
     iget-object v0, p0, Lcom/htc/widget/HtcListView$3;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -91,7 +91,7 @@
 
     goto :goto_0
 
-    .line 4542
+    .line 4551
     :pswitch_4
     iget-object v0, p0, Lcom/htc/widget/HtcListView$3;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -100,7 +100,7 @@
 
     goto :goto_0
 
-    .line 4528
+    .line 4537
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

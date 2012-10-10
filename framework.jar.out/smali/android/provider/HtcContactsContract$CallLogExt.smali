@@ -29,7 +29,7 @@
     .locals 2
 
     .prologue
-    .line 1020
+    .line 1097
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "calls_ext"
@@ -47,7 +47,7 @@
     .locals 0
 
     .prologue
-    .line 1010
+    .line 1086
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

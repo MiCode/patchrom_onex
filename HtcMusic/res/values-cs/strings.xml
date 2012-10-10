@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Přidat seznam stop</string>
     <string name="htc_delete_playlists">Odstranit seznamy stop</string>
     <string name="htc_delete_playlist">Odstranit seznam stop</string>
+    <string name="htc_delete_all_playlists">Odstranit všechny seznamy stop</string>
     <string name="htc_playlist_add_songs">Přidat skladby</string>
     <string name="htc_playlist_del_songs">Odstranit skladby</string>
     <string name="htc_playlist_remove_songs">Odstranit písně</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Ukládání do vyrovnávací paměti...</string>
     <string name="title_send_content">Odesílá se obsah...</string>
     <string name="no_downloaded_apps_found">Nebyly nalezeny žádné stažené aplikace</string>
+    <string name="music_folder_picker_dialog_msg">Přidat skladby do seznamů stop výběrem složky? „Ne“, pokud chcete přidat skladby jinak</string>
 </resources>

@@ -691,7 +691,7 @@
     .locals 1
 
     .prologue
-    .line 666
+    .line 671
     iget v0, p0, Lcom/android/internal/telephony/SmsMessageBase;->smsphonetype:I
 
     return v0
@@ -876,14 +876,26 @@
     return-void
 .end method
 
+.method public setMessageBody(Ljava/lang/String;)V
+    .locals 0
+    .parameter "body"
+
+    .prologue
+    .line 665
+    iput-object p1, p0, Lcom/android/internal/telephony/SmsMessageBase;->messageBody:Ljava/lang/String;
+
+    .line 666
+    return-void
+.end method
+
 .method public setsinglesmsPhoneType(I)V
     .locals 0
     .parameter "phonetype"
 
     .prologue
-    .line 669
+    .line 674
     iput p1, p0, Lcom/android/internal/telephony/SmsMessageBase;->smsphonetype:I
 
-    .line 670
+    .line 675
     return-void
 .end method

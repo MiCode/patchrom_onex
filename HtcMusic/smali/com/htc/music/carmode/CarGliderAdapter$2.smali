@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 779
+    .line 781
     iput-object p1, p0, Lcom/htc/music/carmode/CarGliderAdapter$2;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 788
+    .line 790
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter$2;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     #getter for: Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
@@ -53,12 +53,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 789
+    .line 791
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter$2;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarGliderAdapter;->changeLayout(Z)V
 
-    .line 791
+    .line 793
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter$2;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     #getter for: Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/presentation/SPresentation;->enableScroll(Z)V
 
-    .line 793
+    .line 795
     :cond_0
     return-void
 .end method
@@ -77,7 +77,7 @@
     .locals 2
 
     .prologue
-    .line 782
+    .line 784
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter$2;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     #getter for: Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
@@ -87,7 +87,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 783
+    .line 785
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter$2;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     #getter for: Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
@@ -99,7 +99,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/presentation/SPresentation;->enableScroll(Z)V
 
-    .line 785
+    .line 787
     :cond_0
     return-void
 .end method

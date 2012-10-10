@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5110
+    .line 5242
     iput-object p1, p0, Lcom/android/camera/HTCCamera$17;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +38,67 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+    .locals 2
     .parameter "dialog"
     .parameter "which"
 
     .prologue
-    .line 5113
+    .line 5244
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$17;->this$0:Lcom/android/camera/HTCCamera;
+
+    #getter for: Lcom/android/camera/HTCCamera;->mSettings:Lcom/android/camera/CameraSettings;
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$3900(Lcom/android/camera/HTCCamera;)Lcom/android/camera/CameraSettings;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/camera/CameraSettings;->storageSlot:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/io/StorageSlot;
+
+    invoke-virtual {v0}, Lcom/android/camera/io/StorageSlot;->isInternalMemory()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 5245
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$17;->this$0:Lcom/android/camera/HTCCamera;
+
+    #getter for: Lcom/android/camera/HTCCamera;->mSettings:Lcom/android/camera/CameraSettings;
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$3900(Lcom/android/camera/HTCCamera;)Lcom/android/camera/CameraSettings;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/camera/CameraSettings;->storageSlot:Lcom/android/camera/property/Property;
+
+    sget-object v1, Lcom/android/camera/io/StorageSlot;->STORAGE_CARD:Lcom/android/camera/io/StorageSlot;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
+
+    .line 5248
+    :goto_0
     return-void
+
+    .line 5247
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$17;->this$0:Lcom/android/camera/HTCCamera;
+
+    #getter for: Lcom/android/camera/HTCCamera;->mSettings:Lcom/android/camera/CameraSettings;
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$3900(Lcom/android/camera/HTCCamera;)Lcom/android/camera/CameraSettings;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/camera/CameraSettings;->storageSlot:Lcom/android/camera/property/Property;
+
+    invoke-static {}, Lcom/android/camera/io/StorageSlot;->getFirstInternalMemorySlot()Lcom/android/camera/io/StorageSlot;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
+
+    goto :goto_0
 .end method

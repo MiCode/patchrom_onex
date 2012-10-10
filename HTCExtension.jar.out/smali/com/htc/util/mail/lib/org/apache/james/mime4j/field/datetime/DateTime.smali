@@ -122,14 +122,14 @@
 
     move v6, p5
 
-    invoke-virtual/range {v0 .. v6}, Ljava/util/Calendar;->set(IIIIII)V
+    invoke-virtual/range {v0 .. v6}, Ljava/util/GregorianCalendar;->set(IIIIII)V
 
     .line 72
     const/16 v1, 0xe
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/GregorianCalendar;->set(II)V
 
     .line 74
     const/high16 v1, -0x8000
@@ -151,12 +151,12 @@
 
     mul-int/lit8 v2, v7, -0x1
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->add(II)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/GregorianCalendar;->add(II)V
 
     .line 79
     .end local v7           #minutes:I
     :cond_0
-    invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+    invoke-virtual {v0}, Ljava/util/GregorianCalendar;->getTime()Ljava/util/Date;
 
     move-result-object v1
 

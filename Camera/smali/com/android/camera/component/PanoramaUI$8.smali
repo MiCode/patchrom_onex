@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1471
+    .line 1476
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$8;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1475
+    .line 1480
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Integer;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Integer;>;"
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$8;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -112,7 +112,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1481
+    .line 1486
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI$8;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     iget-object v1, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -128,7 +128,7 @@
 
     move-result v0
 
-    .line 1482
+    .line 1487
     .local v0, orientation:I
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$8;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -139,7 +139,7 @@
 
     invoke-virtual {v1, v0}, Lcom/android/camera/widget/PanoramaIndicatorView;->setDeviceOrientation(I)V
 
-    .line 1484
+    .line 1489
     .end local v0           #orientation:I
     :cond_0
     return-void

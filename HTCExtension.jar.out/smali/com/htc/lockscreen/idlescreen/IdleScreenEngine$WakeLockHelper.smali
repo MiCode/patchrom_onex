@@ -28,17 +28,17 @@
     .parameter
 
     .prologue
-    .line 890
+    .line 896
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 884
+    .line 890
     const-string v0, "idlescreen"
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mTag:Ljava/lang/String;
 
-    .line 891
+    .line 897
     return-void
 .end method
 
@@ -50,28 +50,28 @@
     .parameter "ms"
 
     .prologue
-    .line 906
+    .line 912
     monitor-enter p0
 
-    .line 907
+    .line 913
     const/4 v0, 0x0
 
-    .line 908
+    .line 914
     .local v0, old:Landroid/os/PowerManager$WakeLock;
     :try_start_0
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mUIWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v2, :cond_0
 
-    .line 909
+    .line 915
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mUIWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 910
+    .line 916
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mUIWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 912
+    .line 918
     :cond_0
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mUIWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -79,7 +79,7 @@
 
     if-lez p2, :cond_1
 
-    .line 913
+    .line 919
     const-string v2, "power"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -88,7 +88,7 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 914
+    .line 920
     .local v1, pm:Landroid/os/PowerManager;
     const/16 v2, 0x1a
 
@@ -100,36 +100,36 @@
 
     iput-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mUIWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 916
+    .line 922
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mUIWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 917
+    .line 923
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mUIWakeLock:Landroid/os/PowerManager$WakeLock;
 
     int-to-long v3, p2
 
     invoke-virtual {v2, v3, v4}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 919
+    .line 925
     .end local v1           #pm:Landroid/os/PowerManager;
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 920
+    .line 926
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 923
+    .line 929
     :cond_2
     monitor-exit p0
 
-    .line 924
+    .line 930
     return-void
 
-    .line 923
+    .line 929
     :catchall_0
     move-exception v2
 
@@ -145,9 +145,9 @@
     .parameter "tag"
 
     .prologue
-    .line 898
+    .line 904
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->mTag:Ljava/lang/String;
 
-    .line 899
+    .line 905
     return-void
 .end method

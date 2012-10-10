@@ -27,7 +27,7 @@
     .locals 3
 
     .prologue
-    .line 1259
+    .line 1253
     invoke-static {}, Lcom/android/camera/RecordingState;->values()[Lcom/android/camera/RecordingState;
 
     move-result-object v0
@@ -69,7 +69,7 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_5
 
-    .line 1250
+    .line 1244
     :goto_1
     invoke-static {}, Lcom/android/camera/TakingPictureState;->values()[Lcom/android/camera/TakingPictureState;
 
@@ -128,7 +128,7 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 470
+    .line 469
     :goto_4
     invoke-static {}, Lcom/android/camera/CameraStartMode;->values()[Lcom/android/camera/CameraStartMode;
 
@@ -184,7 +184,7 @@
 
     goto :goto_5
 
-    .line 1250
+    .line 1244
     :catch_2
     move-exception v0
 
@@ -200,7 +200,7 @@
 
     goto :goto_2
 
-    .line 1259
+    .line 1253
     :catch_5
     move-exception v0
 

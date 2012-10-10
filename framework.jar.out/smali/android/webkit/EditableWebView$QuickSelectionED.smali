@@ -36,17 +36,17 @@
     .parameter
 
     .prologue
-    .line 911
+    .line 949
     iput-object p1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
     invoke-direct {p0, p1}, Landroid/webkit/WebView$QuickSelectAbs;-><init>(Landroid/webkit/WebView;)V
 
-    .line 913
+    .line 951
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->enableQuickAction:Z
 
-    .line 973
+    .line 1018
     new-instance v0, Landroid/webkit/EditableWebView$QuickSelectionED$ShowQuickActionDelay;
 
     const/4 v1, 0x0
@@ -64,7 +64,7 @@
     .parameter "x1"
 
     .prologue
-    .line 911
+    .line 949
     invoke-direct {p0, p1}, Landroid/webkit/EditableWebView$QuickSelectionED;-><init>(Landroid/webkit/EditableWebView;)V
 
     return-void
@@ -76,7 +76,7 @@
     .parameter "x1"
 
     .prologue
-    .line 911
+    .line 949
     invoke-direct {p0, p1}, Landroid/webkit/EditableWebView$QuickSelectionED;->getRegionForQuickAction(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v0
@@ -89,7 +89,7 @@
     .parameter "x0"
 
     .prologue
-    .line 911
+    .line 949
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     return-object v0
@@ -100,7 +100,7 @@
     .parameter "selectionRegion"
 
     .prologue
-    .line 1003
+    .line 1050
     iget-object v2, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
     #calls: Landroid/webkit/EditableWebView;->contentToViewRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
@@ -108,7 +108,7 @@
 
     move-result-object v1
 
-    .line 1004
+    .line 1051
     .local v1, selectionRect:Landroid/graphics/Rect;
     sget v2, Lcom/htc/textselection/SelectionAnchor;->ANCHOR_HEIGHT:I
 
@@ -116,13 +116,13 @@
 
     sub-int/2addr v2, v3
 
-    iget v3, p0, Landroid/webkit/WebView$QuickSelectAbs;->ANCHOR_DRAWABLE_HEIGHT:I
+    iget v3, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->ANCHOR_DRAWABLE_HEIGHT:I
 
     add-int/2addr v2, v3
 
     shr-int/lit8 v0, v2, 0x1
 
-    .line 1005
+    .line 1052
     .local v0, offset:I
     const/4 v2, 0x0
 
@@ -130,19 +130,19 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 1007
+    .line 1054
     return-object v1
 .end method
 
 
 # virtual methods
-.method protected doWordSelection(II)V
+.method protected doTextSelection(II)V
     .locals 0
     .parameter "contentX"
     .parameter "contentY"
 
     .prologue
-    .line 951
+    .line 993
     return-void
 .end method
 
@@ -151,7 +151,7 @@
     .parameter "isFastHide"
 
     .prologue
-    .line 997
+    .line 1044
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     invoke-virtual {v0}, Landroid/webkit/QuickActionsHelper;->isShowing()Z
@@ -160,12 +160,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 998
+    .line 1045
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     invoke-virtual {v0, p1}, Landroid/webkit/QuickActionsHelper;->hideQuickAction(Z)V
 
-    .line 1000
+    .line 1047
     :cond_0
     return-void
 .end method
@@ -174,7 +174,7 @@
     .locals 2
 
     .prologue
-    .line 938
+    .line 979
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
     invoke-virtual {v0}, Landroid/webkit/EditableWebView;->getSettings()Landroid/webkit/WebSettings;
@@ -194,8 +194,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->enableQuickAction:Z
 
-    .line 941
-    iget-object v0, p0, Landroid/webkit/WebView$QuickSelectAbs;->mPostAnchor:Lcom/htc/textselection/SelectionAnchor;
+    .line 982
+    iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mPostAnchor:Lcom/htc/textselection/SelectionAnchor;
 
     iget-object v1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
@@ -203,8 +203,8 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/textselection/SelectionAnchor;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
 
-    .line 942
-    iget-object v0, p0, Landroid/webkit/WebView$QuickSelectAbs;->mPriorAnchor:Lcom/htc/textselection/SelectionAnchor;
+    .line 983
+    iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mPriorAnchor:Lcom/htc/textselection/SelectionAnchor;
 
     iget-object v1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
@@ -212,17 +212,17 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/textselection/SelectionAnchor;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
 
-    .line 943
+    .line 984
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     if-nez v0, :cond_0
 
-    .line 944
+    .line 985
     new-instance v0, Landroid/webkit/QuickActionsHelper;
 
     iget-object v1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
-    #getter for: Landroid/view/View;->mContext:Landroid/content/Context;
+    #getter for: Landroid/webkit/EditableWebView;->mContext:Landroid/content/Context;
     invoke-static {v1}, Landroid/webkit/EditableWebView;->access$500(Landroid/webkit/EditableWebView;)Landroid/content/Context;
 
     move-result-object v1
@@ -231,11 +231,11 @@
 
     iput-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
-    .line 945
+    .line 986
     :cond_0
     return-void
 
-    .line 938
+    .line 979
     :cond_1
     const/4 v0, 0x0
 
@@ -249,7 +249,7 @@
     .parameter "ev"
 
     .prologue
-    .line 956
+    .line 999
     const/4 v0, 0x0
 
     return v0
@@ -261,33 +261,33 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 924
-    iput-boolean v1, p0, Landroid/webkit/WebView$QuickSelectAbs;->showAnchor:Z
+    .line 964
+    iput-boolean v1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->showAnchor:Z
 
-    .line 925
-    iget-object v0, p0, Landroid/webkit/WebView$QuickSelectAbs;->mPriorAnchor:Lcom/htc/textselection/SelectionAnchor;
-
-    invoke-virtual {v0}, Lcom/htc/textselection/SelectionAnchor;->dismiss()V
-
-    .line 926
-    iget-object v0, p0, Landroid/webkit/WebView$QuickSelectAbs;->mPostAnchor:Lcom/htc/textselection/SelectionAnchor;
+    .line 965
+    iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mPriorAnchor:Lcom/htc/textselection/SelectionAnchor;
 
     invoke-virtual {v0}, Lcom/htc/textselection/SelectionAnchor;->dismiss()V
 
-    .line 929
-    iput-boolean v1, p0, Landroid/webkit/WebView$QuickSelectAbs;->showMagnifier:Z
+    .line 966
+    iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mPostAnchor:Lcom/htc/textselection/SelectionAnchor;
 
-    .line 930
-    iget-object v0, p0, Landroid/webkit/WebView$QuickSelectAbs;->magnifier:Landroid/webkit/MagnifyView;
+    invoke-virtual {v0}, Lcom/htc/textselection/SelectionAnchor;->dismiss()V
+
+    .line 969
+    iput-boolean v1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->showMagnifier:Z
+
+    .line 970
+    iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->magnifier:Landroid/webkit/MagnifyView;
 
     invoke-virtual {v0}, Landroid/webkit/MagnifyView;->dismiss()V
 
-    .line 933
+    .line 973
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     invoke-virtual {v0, v1}, Landroid/webkit/QuickActionsHelper;->hideQuickAction(Z)V
 
-    .line 934
+    .line 974
     return-void
 .end method
 
@@ -296,7 +296,7 @@
     .parameter "flag"
 
     .prologue
-    .line 962
+    .line 1006
     return-void
 .end method
 
@@ -304,7 +304,7 @@
     .locals 0
 
     .prologue
-    .line 919
+    .line 958
     return-void
 .end method
 
@@ -314,26 +314,26 @@
     .parameter "delay"
 
     .prologue
-    .line 977
+    .line 1023
     if-nez p1, :cond_0
 
-    .line 978
-    iget-object p1, p0, Landroid/webkit/WebView$QuickSelectAbs;->mSelectRect:Landroid/graphics/Rect;
+    .line 1024
+    iget-object p1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mSelectRect:Landroid/graphics/Rect;
 
-    .line 980
+    .line 1026
     :cond_0
     iget-boolean v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->enableQuickAction:Z
 
     if-eqz v0, :cond_1
 
-    .line 981
+    .line 1027
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     iget-boolean v1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->enableQuickAction:Z
 
     invoke-virtual {v0, v1}, Landroid/webkit/QuickActionsHelper;->setEnableQuickAction(Z)V
 
-    .line 982
+    .line 1028
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     iget-object v1, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
@@ -345,11 +345,11 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/QuickActionsHelper;->setQuickActions(Lcom/htc/textselection/QuickActions;)V
 
-    .line 985
+    .line 1031
     :cond_1
     if-gtz p2, :cond_2
 
-    .line 986
+    .line 1032
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->mQuickActionsHelper:Landroid/webkit/QuickActionsHelper;
 
     invoke-direct {p0, p1}, Landroid/webkit/EditableWebView$QuickSelectionED;->getRegionForQuickAction(Landroid/graphics/Rect;)Landroid/graphics/Rect;
@@ -360,11 +360,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/QuickActionsHelper;->showQuickAction(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    .line 993
+    .line 1039
     :goto_0
     return-void
 
-    .line 989
+    .line 1035
     :cond_2
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
@@ -376,14 +376,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 990
+    .line 1036
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->showQuickActionDelay:Landroid/webkit/EditableWebView$QuickSelectionED$ShowQuickActionDelay;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$QuickSelectionED$ShowQuickActionDelay;->selectionRegion:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 991
+    .line 1037
     iget-object v0, p0, Landroid/webkit/EditableWebView$QuickSelectionED;->this$0:Landroid/webkit/EditableWebView;
 
     invoke-virtual {v0}, Landroid/webkit/EditableWebView;->getHandler()Landroid/os/Handler;

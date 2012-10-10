@@ -49,7 +49,7 @@
     .locals 2
 
     .prologue
-    .line 2291
+    .line 2294
     const-string v0, "content://mms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -58,7 +58,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2293
+    .line 2296
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "report-request"
@@ -69,7 +69,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_REQUEST_URI:Landroid/net/Uri;
 
-    .line 2296
+    .line 2299
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "report-status"
@@ -80,7 +80,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_STATUS_URI:Landroid/net/Uri;
 
-    .line 2309
+    .line 2312
     const-string v0, "\\s*(\"[^\"]*\"|[^<>\"]+)\\s*<([^<>]+)>\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -89,7 +89,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->NAME_ADDR_EMAIL_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 2317
+    .line 2320
     const-string v0, "\\s*\"([^\"]*)\"\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -115,14 +115,14 @@
     .parameter "address"
 
     .prologue
-    .line 2350
+    .line 2353
     sget-object v1, Landroid/provider/Telephony$Mms;->NAME_ADDR_EMAIL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 2352
+    .line 2355
     .local v0, match:Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -130,14 +130,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 2353
+    .line 2356
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2355
+    .line 2358
     .end local p0
     :cond_0
     return-object p0
@@ -336,6 +336,6 @@
     :cond_0
     move-object v5, p3
 
-    .line 2448
+    .line 2451
     goto :goto_0
 .end method

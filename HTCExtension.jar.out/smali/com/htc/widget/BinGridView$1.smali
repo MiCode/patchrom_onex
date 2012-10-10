@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 336
+    .line 337
     iput-object p1, p0, Lcom/htc/widget/BinGridView$1;->this$0:Lcom/htc/widget/BinGridView;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
@@ -38,7 +38,7 @@
     .locals 1
 
     .prologue
-    .line 338
+    .line 339
     const/4 v0, 0x1
 
     return v0
@@ -49,7 +49,7 @@
     .parameter "index"
 
     .prologue
-    .line 341
+    .line 342
     const/4 v0, 0x0
 
     return-object v0
@@ -60,7 +60,7 @@
     .parameter "index"
 
     .prologue
-    .line 344
+    .line 345
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -75,21 +75,21 @@
     .prologue
     const/4 v2, -0x2
 
-    .line 349
+    .line 350
     if-nez p3, :cond_0
 
-    .line 350
+    .line 351
     const/4 v0, 0x0
 
-    .line 363
+    .line 364
     :goto_0
     return-object v0
 
-    .line 353
+    .line 354
     :cond_0
     if-nez p2, :cond_1
 
-    .line 355
+    .line 356
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-virtual {p3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -98,13 +98,13 @@
 
     invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 358
+    .line 359
     .local v0, imageView:Landroid/widget/ImageView;
     const v1, 0x208019e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 359
+    .line 360
     new-instance v1, Landroid/widget/AbsListView$LayoutParams;
 
     invoke-direct {v1, v2, v2}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
@@ -117,6 +117,6 @@
     :cond_1
     move-object v0, p2
 
-    .line 363
+    .line 364
     goto :goto_0
 .end method

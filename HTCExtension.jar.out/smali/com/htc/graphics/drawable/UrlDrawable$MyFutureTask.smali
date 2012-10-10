@@ -43,14 +43,14 @@
     .end annotation
 
     .prologue
-    .line 595
+    .line 593
     .local p2, callable:Ljava/util/concurrent/Callable;,"Ljava/util/concurrent/Callable<Landroid/graphics/Bitmap;>;"
     iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$MyFutureTask;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
-    .line 596
+    .line 594
     invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 597
+    .line 595
     return-void
 .end method
 
@@ -60,10 +60,10 @@
     .locals 9
 
     .prologue
-    .line 605
+    .line 603
     const/4 v1, 0x0
 
-    .line 607
+    .line 605
     .local v1, bitmap:Landroid/graphics/Bitmap;
     :try_start_0
     invoke-virtual {p0}, Lcom/htc/graphics/drawable/UrlDrawable$MyFutureTask;->get()Ljava/lang/Object;
@@ -76,15 +76,15 @@
 
     move-object v1, v0
 
-    .line 608
+    .line 606
     if-nez v1, :cond_1
 
-    .line 609
+    .line 607
     sget-boolean v4, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
     if-eqz v4, :cond_0
 
-    .line 610
+    .line 608
     const-string v4, "UrlDrawable"
 
     const-string v5, "[%s][%s][%d] FutureTask completed without a bitmap return"
@@ -131,12 +131,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 666
+    .line 664
     :cond_0
     :goto_0
     return-void
 
-    .line 616
+    .line 614
     :cond_1
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -144,12 +144,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 617
+    .line 615
     sget-boolean v4, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
     if-eqz v4, :cond_0
 
-    .line 618
+    .line 616
     const-string v4, "UrlDrawable"
 
     const-string v5, "[%s][%s][%d] FutureTask completed with a recycled bitmap return"
@@ -204,18 +204,18 @@
 
     goto :goto_0
 
-    .line 635
+    .line 633
     :catch_0
     move-exception v2
 
-    .line 636
+    .line 634
     .local v2, e:Ljava/lang/InterruptedException;
     :try_start_1
     sget-boolean v4, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
     if-eqz v4, :cond_0
 
-    .line 637
+    .line 635
     const-string v4, "UrlDrawable"
 
     const-string v5, "[%s][%s][%d] FutureTask interrupted"
@@ -266,21 +266,21 @@
 
     goto :goto_0
 
-    .line 664
+    .line 662
     .end local v2           #e:Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v4
 
     throw v4
 
-    .line 625
+    .line 623
     :cond_2
     :try_start_2
     sget-boolean v4, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
     if-eqz v4, :cond_3
 
-    .line 626
+    .line 624
     const-string v4, "UrlDrawable"
 
     const-string v5, "[%s][%s][%d] FutureTask completed successfully"
@@ -327,7 +327,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 632
+    .line 630
     :cond_3
     iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable$MyFutureTask;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
@@ -364,18 +364,18 @@
 
     goto/16 :goto_0
 
-    .line 642
+    .line 640
     :catch_1
     move-exception v2
 
-    .line 643
+    .line 641
     .local v2, e:Ljava/util/concurrent/CancellationException;
     :try_start_3
     sget-boolean v4, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
     if-eqz v4, :cond_0
 
-    .line 644
+    .line 642
     const-string v4, "UrlDrawable"
 
     const-string v5, "[%s][%s][%d] FutureTask cancelled"
@@ -424,18 +424,18 @@
 
     goto/16 :goto_0
 
-    .line 649
+    .line 647
     .end local v2           #e:Ljava/util/concurrent/CancellationException;
     :catch_2
     move-exception v2
 
-    .line 650
+    .line 648
     .local v2, e:Ljava/util/concurrent/ExecutionException;
     sget-boolean v4, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
     if-eqz v4, :cond_0
 
-    .line 651
+    .line 649
     const-string v4, "UrlDrawable"
 
     const-string v5, "[%s][%s][%d] FutureTask had ExecutionException"
@@ -484,18 +484,18 @@
 
     goto/16 :goto_0
 
-    .line 657
+    .line 655
     .end local v2           #e:Ljava/util/concurrent/ExecutionException;
     :catch_3
     move-exception v3
 
-    .line 658
+    .line 656
     .local v3, t:Ljava/lang/Throwable;
     sget-boolean v4, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
     if-eqz v4, :cond_0
 
-    .line 659
+    .line 657
     const-string v4, "UrlDrawable"
 
     const-string v5, "[%s][%s][%d] FutureTask had Throwable"

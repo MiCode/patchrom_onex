@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 194
+    .line 186
     iput-object p1, p0, Lcom/android/camera/actionscreen/ActionScreen$3$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$3;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 198
+    .line 190
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$3$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$3;
 
     iget-object v0, v0, Lcom/android/camera/actionscreen/ActionScreen$3;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
@@ -53,12 +53,12 @@
 
     if-nez v0, :cond_1
 
-    .line 204
+    .line 196
     :cond_0
     :goto_0
     return-void
 
-    .line 202
+    .line 194
     :cond_1
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$3$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$3;
 
@@ -74,7 +74,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 203
+    .line 195
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$3$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$3;
 
     iget-object v0, v0, Lcom/android/camera/actionscreen/ActionScreen$3;->this$0:Lcom/android/camera/actionscreen/ActionScreen;

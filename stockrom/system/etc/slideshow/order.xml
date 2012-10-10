@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<file xmlns="http://schemas.android.com/apk/res/android">
+    <order path="/system/etc/slideshow/slideshow_01.jpg"></order>
+    <order path="/system/etc/slideshow/slideshow_02.jpg"></order>
+    <order path="/system/etc/slideshow/slideshow_03.jpg"></order>
+    <order path="/system/etc/slideshow/slideshow_04.jpg"></order>
+    <order path="/system/etc/slideshow/slideshow_05.jpg"></order>
+    <order path="/system/etc/slideshow/slideshow_06.jpg"></order>
+    <order path="/system/etc/slideshow/slideshow_07.jpg"></order>
+    <order path="/system/etc/slideshow/slideshow_08.jpg"></order>
+</file>

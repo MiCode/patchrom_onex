@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 41
     const/4 v0, 0x2
 
     new-array v0, v0, [B
@@ -71,35 +71,35 @@
     .parameter "resourceId"
 
     .prologue
-    .line 40
+    .line 43
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
+    .line 30
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mResourceId:I
 
-    .line 41
+    .line 44
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mContext:Landroid/content/Context;
 
-    .line 42
+    .line 45
     iput p2, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mResourceId:I
 
-    .line 44
+    .line 47
     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->kddiReadSmsTypeTable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 45
+    .line 48
     const-string v0, "KDDI_SMS"
 
     const-string v1, "KDDIreadSmsTypeTable() failed to read target resource"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
+    .line 50
     :cond_0
     return-void
 .end method
@@ -112,7 +112,7 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 373
+    .line 385
     const/4 v2, 0x0
 
     invoke-virtual {p1, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -127,16 +127,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 374
+    .line 386
     invoke-virtual {p1, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 378
+    .line 390
     :cond_0
     new-array v0, p2, [B
 
-    .line 381
+    .line 393
     .local v0, bytes:[B
     const/4 v1, 0x0
 
@@ -144,7 +144,7 @@
     :goto_0
     if-ge v1, p2, :cond_1
 
-    .line 383
+    .line 395
     mul-int/lit8 v2, v1, 0x2
 
     add-int/lit8 v3, v1, 0x1
@@ -165,12 +165,12 @@
 
     aput-byte v2, v0, v1
 
-    .line 381
+    .line 393
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 390
+    .line 402
     :cond_1
     return-object v0
 .end method
@@ -180,17 +180,17 @@
     .parameter "word"
 
     .prologue
-    .line 358
+    .line 370
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 359
+    .line 371
     const/4 p1, 0x0
 
-    .line 361
+    .line 373
     :cond_0
     return-object p1
 .end method
@@ -200,38 +200,38 @@
     .parameter "splitList"
 
     .prologue
-    .line 272
+    .line 284
     const-string v4, ""
 
-    .line 273
+    .line 285
     .local v4, sendAction:Ljava/lang/String;
     const-string v5, ""
 
-    .line 274
+    .line 286
     .local v5, sendPermission:Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 275
+    .line 287
     .local v6, responseType:I
     const/4 v7, 0x0
 
-    .line 276
+    .line 288
     .local v7, smsType:[B
     const/4 v8, 0x0
 
-    .line 277
+    .line 289
     .local v8, addCondition:B
     const/4 v11, 0x0
 
-    .line 278
+    .line 290
     .local v11, conditionOffset:I
     const/4 v10, 0x0
 
-    .line 279
+    .line 291
     .local v10, conditionLen:I
     const/4 v9, 0x0
 
-    .line 282
+    .line 294
     .local v9, conditionFree:[B
     const/4 v12, 0x0
 
@@ -241,16 +241,16 @@
 
     if-ge v12, v3, :cond_1
 
-    .line 283
+    .line 295
     packed-switch v12, :pswitch_data_0
 
-    .line 282
+    .line 294
     :goto_1
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 285
+    .line 297
     :pswitch_0
     aget-object v3, p1, v12
 
@@ -260,10 +260,10 @@
 
     move-result-object v4
 
-    .line 286
+    .line 298
     goto :goto_1
 
-    .line 288
+    .line 300
     :pswitch_1
     aget-object v3, p1, v12
 
@@ -273,10 +273,10 @@
 
     move-result-object v5
 
-    .line 289
+    .line 301
     goto :goto_1
 
-    .line 291
+    .line 303
     :pswitch_2
     aget-object v3, p1, v12
 
@@ -284,10 +284,10 @@
 
     move-result v6
 
-    .line 292
+    .line 304
     goto :goto_1
 
-    .line 294
+    .line 306
     :pswitch_3
     aget-object v3, p1, v12
 
@@ -301,18 +301,18 @@
 
     move-result-object v7
 
-    .line 295
+    .line 307
     goto :goto_1
 
-    .line 298
+    .line 310
     :pswitch_4
     const-string v16, ""
 
-    .line 299
+    .line 311
     .local v16, str:Ljava/lang/String;
     aget-object v16, p1, v12
 
-    .line 300
+    .line 312
     const/4 v3, 0x0
 
     const/16 v17, 0x2
@@ -335,7 +335,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 301
+    .line 313
     const/4 v3, 0x2
 
     move-object/from16 v0, v16
@@ -344,7 +344,7 @@
 
     move-result-object v16
 
-    .line 303
+    .line 315
     :cond_0
     const/16 v3, 0x10
 
@@ -356,10 +356,10 @@
 
     int-to-byte v8, v3
 
-    .line 304
+    .line 316
     goto :goto_1
 
-    .line 311
+    .line 323
     .end local v16           #str:Ljava/lang/String;
     :cond_1
     new-instance v2, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
@@ -368,7 +368,7 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;-><init>(Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;Ljava/lang/String;Ljava/lang/String;I[BB)V
 
-    .line 313
+    .line 325
     .local v2, smsTypeRecord:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
     new-instance v3, Ljava/util/ArrayList;
 
@@ -376,50 +376,50 @@
 
     iput-object v3, v2, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mAddConditionList:Ljava/util/ArrayList;
 
-    .line 316
+    .line 328
     if-eqz v8, :cond_3
 
-    .line 319
+    .line 331
     const/4 v3, -0x1
 
     if-ne v8, v3, :cond_2
 
-    .line 320
+    .line 332
     const/4 v14, 0x2
 
-    .line 327
+    .line 339
     .local v14, loopCnt:I
     :goto_2
     const/4 v12, 0x5
 
-    .line 328
+    .line 340
     const/4 v13, 0x0
 
     .local v13, j:I
     :goto_3
     if-ge v13, v14, :cond_3
 
-    .line 330
+    .line 342
     aget-object v3, p1, v12
 
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v11
 
-    .line 331
+    .line 343
     add-int/lit8 v12, v12, 0x1
 
-    .line 334
+    .line 346
     aget-object v3, p1, v12
 
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 335
+    .line 347
     add-int/lit8 v12, v12, 0x1
 
-    .line 338
+    .line 350
     aget-object v3, p1, v12
 
     move-object/from16 v0, p0
@@ -428,28 +428,28 @@
 
     move-result-object v9
 
-    .line 339
+    .line 351
     add-int/lit8 v12, v12, 0x1
 
-    .line 342
+    .line 354
     new-instance v15, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
 
     move-object/from16 v0, p0
 
     invoke-direct {v15, v0, v11, v10, v9}, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;-><init>(Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;II[B)V
 
-    .line 344
+    .line 356
     .local v15, smsTypeAddCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     iget-object v3, v2, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mAddConditionList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 328
+    .line 340
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_3
 
-    .line 323
+    .line 335
     .end local v13           #j:I
     .end local v14           #loopCnt:I
     .end local v15           #smsTypeAddCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
@@ -459,12 +459,12 @@
     .restart local v14       #loopCnt:I
     goto :goto_2
 
-    .line 348
+    .line 360
     .end local v14           #loopCnt:I
     :cond_3
     return-object v2
 
-    .line 283
+    .line 295
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -478,31 +478,47 @@
 
 # virtual methods
 .method public kddiJudgeType([B)Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
+    .locals 1
+    .parameter "userdata"
+
+    .prologue
+    .line 60
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->kddiJudgeType([BZ)Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public kddiJudgeType([BZ)Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
     .locals 7
     .parameter "userdata"
+    .parameter "skipEsnCheck"
 
     .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 57
+    .line 67
     const/4 v2, 0x0
 
-    .line 60
+    .line 70
     .local v2, offset:I
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mSmsTypeRecordList:Ljava/util/ArrayList;
 
     if-nez v3, :cond_0
 
-    .line 61
+    .line 71
     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->kddiReadSmsTypeTable()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 63
+    .line 73
     new-instance v0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
 
     const-string v3, "android.provider.Telephony.SMS_RECEIVED"
@@ -514,22 +530,24 @@
     .local v0, accessory:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
     move-object v1, v0
 
-    .line 77
+    .line 87
     .end local v0           #accessory:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
     .local v1, accessory:Ljava/lang/Object;
     :goto_0
     return-object v1
 
-    .line 69
+    .line 79
     .end local v1           #accessory:Ljava/lang/Object;
     :cond_0
+    if-nez p2, :cond_1
+
     array-length v3, p1
 
     const/4 v4, 0x2
 
     if-lt v3, v4, :cond_1
 
-    .line 70
+    .line 80
     sget-object v3, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->KDDI_NEW_SMS_TYPE:[B
 
     aget-byte v3, v3, v5
@@ -546,10 +564,10 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 72
+    .line 82
     const/4 v2, 0x2
 
-    .line 76
+    .line 86
     :cond_1
     invoke-virtual {p0, p1, v2}, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->kddiUserdataJudgment([BI)Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
 
@@ -558,7 +576,7 @@
     .restart local v0       #accessory:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
     move-object v1, v0
 
-    .line 77
+    .line 87
     .restart local v1       #accessory:Ljava/lang/Object;
     goto :goto_0
 .end method
@@ -567,28 +585,28 @@
     .locals 14
 
     .prologue
-    .line 196
+    .line 208
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 199
+    .line 211
     .local v4, filelist:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
-    .line 201
+    .line 213
     .local v6, in:Ljava/io/InputStream;
     const/4 v0, 0x0
 
-    .line 203
+    .line 215
     .local v0, br:Ljava/io/BufferedReader;
     const/4 v8, 0x0
 
-    .line 207
+    .line 219
     .local v8, result:Z
     const/4 v3, 0x0
 
-    .line 209
+    .line 221
     .local v3, fileline:I
     :try_start_0
     iget-object v11, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mContext:Landroid/content/Context;
@@ -603,7 +621,7 @@
 
     move-result-object v6
 
-    .line 210
+    .line 222
     new-instance v1, Ljava/io/BufferedReader;
 
     new-instance v11, Ljava/io/InputStreamReader;
@@ -617,7 +635,7 @@
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 212
+    .line 224
     .end local v0           #br:Ljava/io/BufferedReader;
     .local v1, br:Ljava/io/BufferedReader;
     :cond_0
@@ -629,12 +647,12 @@
 
     if-eqz v11, :cond_1
 
-    .line 214
+    .line 226
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 216
+    .line 228
     .local v7, lineStr:Ljava/lang/String;
     const-string v11, "#"
 
@@ -650,13 +668,13 @@
 
     if-lez v11, :cond_0
 
-    .line 217
+    .line 229
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 218
+    .line 230
     add-int/lit8 v3, v3, 0x1
 
-    .line 219
+    .line 231
     const-string v11, "SMS"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -686,47 +704,47 @@
 
     goto :goto_0
 
-    .line 243
+    .line 255
     .end local v7           #lineStr:Ljava/lang/String;
     :catch_0
     move-exception v2
 
     move-object v0, v1
 
-    .line 244
+    .line 256
     .end local v1           #br:Ljava/io/BufferedReader;
     .restart local v0       #br:Ljava/io/BufferedReader;
     .local v2, e:Ljava/lang/NumberFormatException;
     :goto_1
     invoke-virtual {v2}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
-    .line 257
+    .line 269
     .end local v2           #e:Ljava/lang/NumberFormatException;
     :goto_2
     return v8
 
-    .line 225
+    .line 237
     .end local v0           #br:Ljava/io/BufferedReader;
     .restart local v1       #br:Ljava/io/BufferedReader;
     :cond_1
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 227
+    .line 239
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v11, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mSmsTypeRecordList:Ljava/util/ArrayList;
 
-    .line 230
+    .line 242
     const/4 v5, 0x0
 
     .local v5, i:I
     :goto_3
     if-ge v5, v3, :cond_2
 
-    .line 232
+    .line 244
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -739,13 +757,13 @@
 
     move-result-object v10
 
-    .line 235
+    .line 247
     .local v10, splitStr:[Ljava/lang/String;
     invoke-direct {p0, v10}, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->kddiSetRecord([Ljava/lang/String;)Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
 
     move-result-object v9
 
-    .line 238
+    .line 250
     .local v9, smsTypeRecord:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
     iget-object v11, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mSmsTypeRecordList:Ljava/util/ArrayList;
 
@@ -756,12 +774,12 @@
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_5
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
 
-    .line 230
+    .line 242
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 241
+    .line 253
     .end local v9           #smsTypeRecord:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
     .end local v10           #splitStr:[Ljava/lang/String;
     :cond_2
@@ -769,17 +787,17 @@
 
     move-object v0, v1
 
-    .line 255
+    .line 267
     .end local v1           #br:Ljava/io/BufferedReader;
     .restart local v0       #br:Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 245
+    .line 257
     .end local v5           #i:I
     :catch_1
     move-exception v2
 
-    .line 246
+    .line 258
     .local v2, e:Landroid/content/res/Resources$NotFoundException;
     :goto_4
     const-string v11, "KDDI_SMS"
@@ -788,24 +806,24 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
+    .line 259
     const-string v11, "SMS"
 
     const-string v12, "readSmsTypeTable() Target resource is not found"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
+    .line 260
     invoke-virtual {v2}, Landroid/content/res/Resources$NotFoundException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 249
+    .line 261
     .end local v2           #e:Landroid/content/res/Resources$NotFoundException;
     :catch_2
     move-exception v2
 
-    .line 250
+    .line 262
     .local v2, e:Ljava/lang/IndexOutOfBoundsException;
     :goto_5
     const-string v11, "KDDI_SMS"
@@ -814,31 +832,31 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
+    .line 263
     const-string v11, "SMS"
 
     const-string v12, "readSmsTypeTable() Reading failure of target resource"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
+    .line 264
     invoke-virtual {v2}, Ljava/lang/IndexOutOfBoundsException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 253
+    .line 265
     .end local v2           #e:Ljava/lang/IndexOutOfBoundsException;
     :catch_3
     move-exception v2
 
-    .line 254
+    .line 266
     .local v2, e:Ljava/io/IOException;
     :goto_6
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 253
+    .line 265
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v2           #e:Ljava/io/IOException;
     .restart local v1       #br:Ljava/io/BufferedReader;
@@ -851,7 +869,7 @@
     .restart local v0       #br:Ljava/io/BufferedReader;
     goto :goto_6
 
-    .line 249
+    .line 261
     .end local v0           #br:Ljava/io/BufferedReader;
     .restart local v1       #br:Ljava/io/BufferedReader;
     :catch_5
@@ -863,7 +881,7 @@
     .restart local v0       #br:Ljava/io/BufferedReader;
     goto :goto_5
 
-    .line 245
+    .line 257
     .end local v0           #br:Ljava/io/BufferedReader;
     .restart local v1       #br:Ljava/io/BufferedReader;
     :catch_6
@@ -875,7 +893,7 @@
     .restart local v0       #br:Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 243
+    .line 255
     :catch_7
     move-exception v2
 
@@ -888,18 +906,18 @@
     .parameter "offset"
 
     .prologue
-    .line 83
+    .line 94
     const/4 v6, 0x0
 
-    .line 84
+    .line 95
     .local v6, listNum:I
     const/4 v5, 0x0
 
-    .line 89
+    .line 100
     .local v5, judgeSms:Z
     array-length v10, p1
 
-    .line 92
+    .line 103
     .local v10, userdataLen:I
     :goto_0
     iget-object v11, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mSmsTypeRecordList:Ljava/util/ArrayList;
@@ -910,10 +928,10 @@
 
     if-ge v6, v11, :cond_7
 
-    .line 94
+    .line 105
     move/from16 v8, p2
 
-    .line 96
+    .line 107
     .local v8, pos:I
     iget-object v11, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mSmsTypeRecordList:Ljava/util/ArrayList;
 
@@ -923,7 +941,7 @@
 
     check-cast v9, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
 
-    .line 100
+    .line 111
     .local v9, smsTypeRecord:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
     iget-object v11, v9, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mSmsType:[B
 
@@ -945,7 +963,7 @@
 
     if-eq v11, v12, :cond_3
 
-    .line 102
+    .line 113
     :cond_0
     sub-int v11, v10, v8
 
@@ -953,7 +971,7 @@
 
     if-lt v11, v12, :cond_1
 
-    .line 103
+    .line 114
     aget-byte v11, p1, v8
 
     iget-object v12, v9, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mSmsType:[B
@@ -976,17 +994,17 @@
 
     if-eq v11, v12, :cond_2
 
-    .line 92
+    .line 103
     :cond_1
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 108
+    .line 119
     :cond_2
     const/4 v5, 0x1
 
-    .line 117
+    .line 128
     :cond_3
     iget-byte v11, v9, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mAddCondition:B
 
@@ -994,21 +1012,21 @@
 
     if-eq v11, v12, :cond_9
 
-    .line 119
+    .line 130
     iget-byte v2, v9, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mAddCondition:B
 
-    .line 121
+    .line 132
     .local v2, conditionNum:I
     if-lez v2, :cond_6
 
-    .line 122
+    .line 133
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_1
     if-ge v3, v2, :cond_6
 
-    .line 124
+    .line 135
     iget-object v11, v9, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mAddConditionList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1017,20 +1035,20 @@
 
     check-cast v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
 
-    .line 126
+    .line 137
     .local v1, addCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     iget v11, v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;->mConditionOffset:I
 
     add-int/2addr v8, v11
 
-    .line 128
+    .line 139
     sub-int v11, v10, v8
 
     iget v12, v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;->mConditionLen:I
 
     if-lt v11, v12, :cond_5
 
-    .line 129
+    .line 140
     const/4 v4, 0x0
 
     .local v4, j:I
@@ -1039,7 +1057,7 @@
 
     if-ge v4, v11, :cond_5
 
-    .line 130
+    .line 141
     aget-byte v11, p1, v8
 
     iget-object v12, v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;->mCondition:[B
@@ -1048,29 +1066,29 @@
 
     if-ne v11, v12, :cond_4
 
-    .line 131
+    .line 142
     const/4 v5, 0x1
 
-    .line 132
+    .line 143
     add-int/lit8 v8, v8, 0x1
 
-    .line 129
+    .line 140
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 134
+    .line 145
     :cond_4
     const/4 v5, 0x0
 
-    .line 139
+    .line 150
     .end local v4           #j:I
     :cond_5
     const/4 v11, 0x1
 
     if-eq v5, v11, :cond_8
 
-    .line 171
+    .line 182
     .end local v1           #addCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     .end local v2           #conditionNum:I
     .end local v3           #i:I
@@ -1080,7 +1098,7 @@
 
     if-ne v5, v11, :cond_1
 
-    .line 176
+    .line 187
     .end local v8           #pos:I
     .end local v9           #smsTypeRecord:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;
     :cond_7
@@ -1106,12 +1124,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
+    .line 188
     const/4 v11, 0x1
 
     if-ne v5, v11, :cond_b
 
-    .line 178
+    .line 189
     iget-object v11, p0, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType;->mSmsTypeRecordList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1122,12 +1140,12 @@
 
     iget-object v0, v11, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mKddiSmsAccessory:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
 
-    .line 184
+    .line 195
     .local v0, accessory:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
     :goto_4
     return-object v0
 
-    .line 122
+    .line 133
     .end local v0           #accessory:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsAccessory;
     .restart local v1       #addCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     .restart local v2       #conditionNum:I
@@ -1139,7 +1157,7 @@
 
     goto :goto_1
 
-    .line 148
+    .line 159
     .end local v1           #addCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     .end local v2           #conditionNum:I
     .end local v3           #i:I
@@ -1154,7 +1172,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
 
-    .line 150
+    .line 161
     .restart local v1       #addCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     iget-object v11, v9, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeRecord;->mAddConditionList:Ljava/util/ArrayList;
 
@@ -1166,20 +1184,20 @@
 
     check-cast v7, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
 
-    .line 152
+    .line 163
     .local v7, nextRecord:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     iget v11, v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;->mConditionOffset:I
 
     add-int/2addr v8, v11
 
-    .line 155
+    .line 166
     sub-int v11, v10, v8
 
     iget v12, v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;->mConditionLen:I
 
     if-lt v11, v12, :cond_6
 
-    .line 156
+    .line 167
     const/4 v3, 0x0
 
     .restart local v3       #i:I
@@ -1188,7 +1206,7 @@
 
     if-ge v3, v11, :cond_6
 
-    .line 157
+    .line 168
     aget-byte v11, p1, v8
 
     and-int/lit16 v11, v11, 0xff
@@ -1213,7 +1231,7 @@
 
     if-gt v11, v12, :cond_6
 
-    .line 159
+    .line 170
     iget-object v11, v1, Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;->mCondition:[B
 
     aget-byte v11, v11, v3
@@ -1224,22 +1242,22 @@
 
     if-eq v11, v12, :cond_a
 
-    .line 160
+    .line 171
     const/4 v5, 0x1
 
-    .line 161
+    .line 172
     goto :goto_3
 
-    .line 163
+    .line 174
     :cond_a
     add-int/lit8 v8, v8, 0x1
 
-    .line 156
+    .line 167
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_5
 
-    .line 182
+    .line 193
     .end local v1           #addCondition:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;
     .end local v3           #i:I
     .end local v7           #nextRecord:Lcom/android/internal/telephony/cdma/KddiJudgeSmsType$KddiSmsTypeAddCondition;

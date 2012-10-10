@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 2554
+    .line 2577
     iput-object p1, p0, Lcom/htc/music/HtcMusic$21;->this$0:Lcom/htc/music/HtcMusic;
 
     iput-object p2, p0, Lcom/htc/music/HtcMusic$21;->val$resultIntent:Landroid/content/Intent;
@@ -46,7 +46,7 @@
     .locals 5
 
     .prologue
-    .line 2556
+    .line 2579
     iget-object v1, p0, Lcom/htc/music/HtcMusic$21;->val$resultIntent:Landroid/content/Intent;
 
     const-string v2, "SELECTED_ID"
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    .line 2558
+    .line 2581
     .local v0, contactList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v1, p0, Lcom/htc/music/HtcMusic$21;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -63,7 +63,7 @@
 
     if-nez v1, :cond_0
 
-    .line 2559
+    .line 2582
     iget-object v1, p0, Lcom/htc/music/HtcMusic$21;->this$0:Lcom/htc/music/HtcMusic;
 
     new-instance v2, Lcom/htc/music/HtcMusic$HtcMusicRingtoneHelper;
@@ -76,14 +76,14 @@
 
     iput-object v2, v1, Lcom/htc/music/HtcMusic;->mRingtoneHelper:Lcom/htc/music/HtcMusic$HtcMusicRingtoneHelper;
 
-    .line 2561
+    .line 2584
     const-string v1, "[HtcMusic]"
 
     const-string v2, "Ringtonehelper is null!! this should never happen!!"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2565
+    .line 2588
     :cond_0
     iget-object v1, p0, Lcom/htc/music/HtcMusic$21;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -91,7 +91,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 2566
+    .line 2589
     iget-object v1, p0, Lcom/htc/music/HtcMusic$21;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v1, v1, Lcom/htc/music/HtcMusic;->mRingtoneHelper:Lcom/htc/music/HtcMusic$HtcMusicRingtoneHelper;
@@ -100,13 +100,13 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/htc/music/HtcMusic$HtcMusicRingtoneHelper;->hadnleContactRingtoneResult(Ljava/util/ArrayList;Z)V
 
-    .line 2570
+    .line 2593
     :cond_1
     iget-object v1, p0, Lcom/htc/music/HtcMusic$21;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->showSetContactRingtoneToast()V
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$2800(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$2900(Lcom/htc/music/HtcMusic;)V
 
-    .line 2571
+    .line 2594
     return-void
 .end method

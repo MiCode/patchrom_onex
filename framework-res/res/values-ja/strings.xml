@@ -361,7 +361,7 @@
     <string name="permdesc_shutdown">アクティビティマネージャをシャットダウン状態にします。完全なシャットダウンは実行しません。</string>
     <string name="permlab_stopAppSwitches">アプリケーションの切り替えを禁止する</string>
     <string name="permdesc_stopAppSwitches">ユーザーが別のアプリケーションに切り替えられないようにします。</string>
-    <string name="permlab_runSetActivityWatcher">起動中の全てのアプリケーションの監視と制御</string>
+    <string name="permlab_runSetActivityWatcher">起動中の全てのアプリの監視と制御</string>
     <string name="permdesc_runSetActivityWatcher">システムアクティビティの監視と制御をアプリケーションに許可します。この許可を悪意のあるアプリケーションに利用されると、システム全体のセキュリティが侵害される恐れがあります。この許可は開発時にのみ必要で、通常の使用では必要ありません。</string>
     <string name="permlab_broadcastPackageRemoved">パッケージ削除ブロードキャストの送信</string>
     <string name="permdesc_broadcastPackageRemoved">アプリケーションパッケージの削除の通知を配信することをアプリケーションに許可します。悪意のあるアプリケーションが他の実行中のアプリケーションを強制終了する恐れがあります。</string>
@@ -1299,9 +1299,9 @@
     <string name="lockscreen_uimsim_unlock_progress_dialog_message">UIM/SIM カードをロック解除しています…</string>
     <string name="lockscreen_uim_unlock_progress_dialog_message">UIM カードをロック解除しています…</string>
     <string name="lockscreen_uim_puk_locked_message">UIM カードは PUK ロックされています。</string>
-    <string name="lockscreen_uimsim_puk_locked_message">UIM/SIM カードは PUK ロックされています。</string>
+    <string name="lockscreen_uimsim_puk_locked_message">UIM/SIM ｶｰﾄﾞは PUK ﾛｯｸされています。</string>
     <string name="lockscreen_uim_locked_message">UIM カードはロックされています</string>
-    <string name="lockscreen_uimsim_locked_message">UIM/SIM カードはロックされています</string>
+    <string name="lockscreen_uimsim_locked_message">UIM/SIM ｶｰﾄﾞはﾛｯｸされています</string>
     <string name="lockscreen_missing_uim_message_short">UIM カードなし。</string>
     <string name="lockscreen_missing_uimsim_message_short">UIM/SIM カードなし。</string>
     <string name="lockscreen_uim_fail_message">UIM カードが無効です</string>

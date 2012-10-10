@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 131
     const-string v0, "content://android.server.htcCheckin/stats"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

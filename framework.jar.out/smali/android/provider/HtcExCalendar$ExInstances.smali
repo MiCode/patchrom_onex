@@ -23,7 +23,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 354
     const-string v0, "content://com.android.calendar/instances/julianday"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -39,7 +39,7 @@
     .locals 0
 
     .prologue
-    .line 323
+    .line 349
     invoke-direct {p0}, Landroid/provider/HtcCalendarContract$Instances;-><init>()V
 
     return-void

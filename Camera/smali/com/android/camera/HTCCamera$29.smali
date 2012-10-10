@@ -3,12 +3,12 @@
 .source "HTCCamera.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/camera/HTCCamera;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/camera/HTCCamera;->showDialog(Landroid/app/Dialog;Landroid/content/DialogInterface$OnDismissListener;Z)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,15 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/HTCCamera;
 
+.field final synthetic val$dismissListener:Landroid/content/DialogInterface$OnDismissListener;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/HTCCamera;)V
+.method constructor <init>(Lcom/android/camera/HTCCamera;Landroid/content/DialogInterface$OnDismissListener;)V
     .locals 0
+    .parameter
     .parameter
 
     .prologue
-    .line 7475
+    .line 7705
     iput-object p1, p0, Lcom/android/camera/HTCCamera$29;->this$0:Lcom/android/camera/HTCCamera;
+
+    iput-object p2, p0, Lcom/android/camera/HTCCamera$29;->val$dismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,42 +42,61 @@
 
 
 # virtual methods
-.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 1
+.method public onDismiss(Landroid/content/DialogInterface;)V
+    .locals 3
     .parameter "dialog"
-    .parameter "keyCode"
-    .parameter "event"
 
     .prologue
-    .line 7478
-    sparse-switch p2, :sswitch_data_0
+    .line 7709
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$29;->this$0:Lcom/android/camera/HTCCamera;
 
-    .line 7487
-    const/4 v0, 0x0
+    #getter for: Lcom/android/camera/HTCCamera;->mDialog:Landroid/app/Dialog;
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$5000(Lcom/android/camera/HTCCamera;)Landroid/app/Dialog;
 
-    :goto_0
-    return v0
+    move-result-object v0
 
-    .line 7482
-    :sswitch_0
-    const/4 v0, 0x1
+    if-ne v0, p1, :cond_0
 
-    goto :goto_0
+    .line 7711
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$29;->this$0:Lcom/android/camera/HTCCamera;
 
-    .line 7485
-    :sswitch_1
-    invoke-static {}, Lcom/android/camera/FeatureConfig;->canChangeZoomByVolumeKeys()Z
+    const/4 v1, 0x0
 
-    move-result v0
+    #setter for: Lcom/android/camera/HTCCamera;->mDialog:Landroid/app/Dialog;
+    invoke-static {v0, v1}, Lcom/android/camera/HTCCamera;->access$5002(Lcom/android/camera/HTCCamera;Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    goto :goto_0
+    .line 7712
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$29;->this$0:Lcom/android/camera/HTCCamera;
 
-    .line 7478
-    :sswitch_data_0
-    .sparse-switch
-        0x18 -> :sswitch_1
-        0x19 -> :sswitch_1
-        0x52 -> :sswitch_0
-        0x54 -> :sswitch_0
-    .end sparse-switch
+    iget-object v0, v0, Lcom/android/camera/HTCCamera;->hasDialog:Lcom/android/camera/property/Property;
+
+    iget-object v1, p0, Lcom/android/camera/HTCCamera$29;->this$0:Lcom/android/camera/HTCCamera;
+
+    #getter for: Lcom/android/camera/HTCCamera;->mPropertyOwnerKey:Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/camera/HTCCamera;->access$100(Lcom/android/camera/HTCCamera;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 7714
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$29;->val$dismissListener:Landroid/content/DialogInterface$OnDismissListener;
+
+    if-eqz v0, :cond_1
+
+    .line 7715
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$29;->val$dismissListener:Landroid/content/DialogInterface$OnDismissListener;
+
+    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
+
+    .line 7716
+    :cond_1
+    return-void
 .end method

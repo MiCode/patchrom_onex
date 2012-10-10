@@ -46,5 +46,8 @@
 .method public abstract notifyServiceState(Lcom/android/internal/telephony/Phone;)V
 .end method
 
+.method public abstract notifyServiceStateAndSeparate(Lcom/android/internal/telephony/Phone;)V
+.end method
+
 .method public abstract notifySignalStrength(Lcom/android/internal/telephony/Phone;)V
 .end method

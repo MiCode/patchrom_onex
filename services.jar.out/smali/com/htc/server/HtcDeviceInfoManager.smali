@@ -38,12 +38,12 @@
     .locals 2
 
     .prologue
-    .line 986
+    .line 1023
     const/4 v0, 0x0
 
     sput-object v0, Lcom/htc/server/HtcDeviceInfoManager;->sInstance:Lcom/htc/server/HtcDeviceInfoManager;
 
-    .line 991
+    .line 1028
     const-wide/high16 v0, 0x400c
 
     sput-wide v0, Lcom/htc/server/HtcDeviceInfoManager;->sSense:D
@@ -57,7 +57,7 @@
     .parameter "context"
 
     .prologue
-    .line 994
+    .line 1031
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/deviceinfo"
@@ -66,7 +66,7 @@
 
     invoke-direct {p0, v0, p1, p2}, Lcom/htc/server/HtcDeviceInfoManager;-><init>(Ljava/io/File;Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
 
-    .line 995
+    .line 1032
     return-void
 .end method
 
@@ -77,29 +77,29 @@
     .parameter "context"
 
     .prologue
-    .line 997
+    .line 1034
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 987
+    .line 1024
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
-    .line 999
+    .line 1036
     iput-object p2, p0, Lcom/htc/server/HtcDeviceInfoManager;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 1000
+    .line 1037
     iput-object p3, p0, Lcom/htc/server/HtcDeviceInfoManager;->mContext:Landroid/content/Context;
 
-    .line 1002
+    .line 1039
     sget-object v1, Lcom/htc/server/HtcDeviceInfoManager;->sInstance:Lcom/htc/server/HtcDeviceInfoManager;
 
     if-nez v1, :cond_0
 
-    .line 1003
+    .line 1040
     sput-object p0, Lcom/htc/server/HtcDeviceInfoManager;->sInstance:Lcom/htc/server/HtcDeviceInfoManager;
 
-    .line 1006
+    .line 1043
     :cond_0
     :try_start_0
     sget-object v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
@@ -112,18 +112,18 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1012
+    .line 1049
     :goto_0
     invoke-direct {p0, p3}, Lcom/htc/server/HtcDeviceInfoManager;->createScheduler(Landroid/content/Context;)V
 
-    .line 1013
+    .line 1050
     return-void
 
-    .line 1009
+    .line 1046
     :catch_0
     move-exception v0
 
-    .line 1010
+    .line 1047
     .local v0, e:Ljava/lang/NumberFormatException;
     const-string v1, "HtcDeviceInfoManager"
 
@@ -149,12 +149,12 @@
     .parameter "context"
 
     .prologue
-    .line 970
+    .line 1007
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-nez v0, :cond_0
 
-    .line 972
+    .line 1009
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v1, "userdebug"
@@ -165,26 +165,26 @@
 
     if-eqz v0, :cond_1
 
-    .line 973
+    .line 1010
     new-instance v0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler;
 
     invoke-direct {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
-    .line 974
+    .line 1011
     const-string v0, "HtcDeviceInfoManager"
 
     const-string v1, "Factory create HtcAdditionalInfoScheduler"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 984
+    .line 1021
     :cond_0
     :goto_0
     return-void
 
-    .line 979
+    .line 1016
     :cond_1
     sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager;->sSense:D
 
@@ -194,14 +194,14 @@
 
     if-ltz v0, :cond_0
 
-    .line 980
+    .line 1017
     new-instance v0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;
 
     invoke-direct {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
-    .line 981
+    .line 1018
     const-string v0, "HtcDeviceInfoManager"
 
     const-string v1, "Factory create HtcCommonInfoScheduler"
@@ -215,7 +215,7 @@
     .locals 1
 
     .prologue
-    .line 1016
+    .line 1053
     sget-object v0, Lcom/htc/server/HtcDeviceInfoManager;->sInstance:Lcom/htc/server/HtcDeviceInfoManager;
 
     return-object v0
@@ -228,17 +228,17 @@
     .parameter "processName"
 
     .prologue
-    .line 1117
+    .line 1154
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1118
+    .line 1155
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->addANR(Ljava/lang/String;)V
 
-    .line 1119
+    .line 1156
     :cond_0
     return-void
 .end method
@@ -248,17 +248,17 @@
     .parameter "processName"
 
     .prologue
-    .line 1112
+    .line 1149
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1113
+    .line 1150
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->addCrash(Ljava/lang/String;)V
 
-    .line 1114
+    .line 1151
     :cond_0
     return-void
 .end method
@@ -267,17 +267,17 @@
     .locals 1
 
     .prologue
-    .line 1122
+    .line 1159
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1123
+    .line 1160
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->addSysCrash()V
 
-    .line 1124
+    .line 1161
     :cond_0
     return-void
 .end method
@@ -287,17 +287,17 @@
     .parameter "pid"
 
     .prologue
-    .line 1059
+    .line 1096
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1060
+    .line 1097
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->appDied(I)V
 
-    .line 1061
+    .line 1098
     :cond_0
     return-void
 .end method
@@ -306,17 +306,17 @@
     .locals 1
 
     .prologue
-    .line 1087
+    .line 1124
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1088
+    .line 1125
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->flush()V
 
-    .line 1089
+    .line 1126
     :cond_0
     return-void
 .end method
@@ -326,7 +326,7 @@
     .parameter "processName"
 
     .prologue
-    .line 1046
+    .line 1083
     const-wide/16 v0, -0x1
 
     return-wide v0
@@ -336,7 +336,7 @@
     .locals 2
 
     .prologue
-    .line 1037
+    .line 1074
     const-wide/16 v0, -0x1
 
     return-wide v0
@@ -346,7 +346,7 @@
     .locals 1
 
     .prologue
-    .line 1029
+    .line 1066
     const/4 v0, 0x0
 
     return-object v0
@@ -356,17 +356,17 @@
     .locals 1
 
     .prologue
-    .line 1107
+    .line 1144
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1108
+    .line 1145
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->killAllProcess()V
 
-    .line 1109
+    .line 1146
     :cond_0
     return-void
 .end method
@@ -376,17 +376,17 @@
     .parameter "processName"
 
     .prologue
-    .line 1102
+    .line 1139
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1103
+    .line 1140
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->killProcess(Ljava/lang/String;)V
 
-    .line 1104
+    .line 1141
     :cond_0
     return-void
 .end method
@@ -395,17 +395,17 @@
     .locals 1
 
     .prologue
-    .line 1077
+    .line 1114
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1078
+    .line 1115
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->reset()V
 
-    .line 1079
+    .line 1116
     :cond_0
     return-void
 .end method
@@ -415,17 +415,17 @@
     .parameter "topProcessName"
 
     .prologue
-    .line 1092
+    .line 1129
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1093
+    .line 1130
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->setNewTopApp(Ljava/lang/String;)V
 
-    .line 1094
+    .line 1131
     :cond_0
     return-void
 .end method
@@ -435,17 +435,17 @@
     .parameter "context"
 
     .prologue
-    .line 1020
+    .line 1057
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1021
+    .line 1058
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->setup(Landroid/content/Context;)V
 
-    .line 1022
+    .line 1059
     :cond_0
     return-void
 .end method
@@ -457,17 +457,17 @@
     .parameter "group"
 
     .prologue
-    .line 1097
+    .line 1134
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1098
+    .line 1135
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->startProcess(Ljava/lang/String;II)V
 
-    .line 1099
+    .line 1136
     :cond_0
     return-void
 .end method
@@ -476,17 +476,17 @@
     .locals 1
 
     .prologue
-    .line 1072
+    .line 1109
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1073
+    .line 1110
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->stop()V
 
-    .line 1074
+    .line 1111
     :cond_0
     return-void
 .end method
@@ -495,17 +495,17 @@
     .locals 1
 
     .prologue
-    .line 1067
+    .line 1104
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1068
+    .line 1105
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->synchronizedFlush()V
 
-    .line 1069
+    .line 1106
     :cond_0
     return-void
 .end method
@@ -515,17 +515,17 @@
     .parameter "processName"
 
     .prologue
-    .line 1082
+    .line 1119
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1083
+    .line 1120
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->update(Ljava/lang/String;)V
 
-    .line 1084
+    .line 1121
     :cond_0
     return-void
 .end method
@@ -535,17 +535,17 @@
     .parameter "time"
 
     .prologue
-    .line 1054
+    .line 1091
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     if-eqz v0, :cond_0
 
-    .line 1055
+    .line 1092
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager;->mInfoScheduler:Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;
 
     invoke-interface {v0, p1, p2}, Lcom/htc/server/HtcDeviceInfoManager$IHtcInfoScheduler;->userActivity(J)V
 
-    .line 1056
+    .line 1093
     :cond_0
     return-void
 .end method

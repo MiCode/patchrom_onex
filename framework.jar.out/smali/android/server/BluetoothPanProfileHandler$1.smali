@@ -55,13 +55,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 111
-    iget-object v0, p0, Landroid/server/BluetoothPanProfileHandler$1;->this$0:Landroid/server/BluetoothPanProfileHandler;
-
-    #setter for: Landroid/server/BluetoothPanProfileHandler;->mTetheringOn:Z
-    invoke-static {v0, v3}, Landroid/server/BluetoothPanProfileHandler;->access$002(Landroid/server/BluetoothPanProfileHandler;Z)Z
-
-    .line 113
+    .line 112
     iget-object v0, p0, Landroid/server/BluetoothPanProfileHandler$1;->this$0:Landroid/server/BluetoothPanProfileHandler;
 
     #getter for: Landroid/server/BluetoothPanProfileHandler;->mTetheringOn:Z
@@ -71,14 +65,14 @@
 
     if-nez v0, :cond_0
 
-    .line 114
+    .line 113
     const-string v0, "BluetoothPanProfileHandler"
 
     const-string/jumbo v1, "setBluetoothTethering() receiver, call to setBluetoothTetheringNative() = true"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
+    .line 114
     iget-object v0, p0, Landroid/server/BluetoothPanProfileHandler$1;->this$0:Landroid/server/BluetoothPanProfileHandler;
 
     #getter for: Landroid/server/BluetoothPanProfileHandler;->mBluetoothService:Landroid/server/BluetoothService;
@@ -92,8 +86,14 @@
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/server/BluetoothService;->setBluetoothTetheringNative(ZLjava/lang/String;Ljava/lang/String;)Z
 
-    .line 118
+    .line 117
     :cond_0
+    iget-object v0, p0, Landroid/server/BluetoothPanProfileHandler$1;->this$0:Landroid/server/BluetoothPanProfileHandler;
+
+    #setter for: Landroid/server/BluetoothPanProfileHandler;->mTetheringOn:Z
+    invoke-static {v0, v3}, Landroid/server/BluetoothPanProfileHandler;->access$002(Landroid/server/BluetoothPanProfileHandler;Z)Z
+
+    .line 118
     iget-object v0, p0, Landroid/server/BluetoothPanProfileHandler$1;->this$0:Landroid/server/BluetoothPanProfileHandler;
 
     #getter for: Landroid/server/BluetoothPanProfileHandler;->mContext:Landroid/content/Context;

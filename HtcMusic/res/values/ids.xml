@@ -133,12 +133,13 @@
     <item type="id" name="landing_page_shortcut_4">false</item>
     <item type="id" name="shortcut_icon_4">false</item>
     <item type="id" name="shortcut_name_4">false</item>
+    <item type="id" name="landing_page_average_view">false</item>
     <item type="id" name="landing_page_shortcut_5">false</item>
     <item type="id" name="shortcut_icon_5">false</item>
     <item type="id" name="shortcut_name_5">false</item>
     <item type="id" name="listen_description">false</item>
-    <item type="id" name="mini_player_launcher_btn">false</item>
     <item type="id" name="mini_player_thumb">false</item>
+    <item type="id" name="mini_player_launcher_btn">false</item>
     <item type="id" name="mini_player_description">false</item>
     <item type="id" name="mini_player_play_btn">false</item>
     <item type="id" name="sd_message">false</item>

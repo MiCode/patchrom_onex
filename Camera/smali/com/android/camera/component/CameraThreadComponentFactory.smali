@@ -21,7 +21,7 @@
 
     .prologue
     .line 14
-    const/16 v0, 0x11
+    const/16 v0, 0x12
 
     new-array v0, v0, [Lcom/android/camera/component/IComponentBuilder;
 
@@ -35,13 +35,21 @@
 
     const/4 v1, 0x1
 
+    new-instance v2, Lcom/android/camera/component/SharedBackgroundWorkerBuilder;
+
+    invoke-direct {v2}, Lcom/android/camera/component/SharedBackgroundWorkerBuilder;-><init>()V
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
     new-instance v2, Lcom/android/camera/component/AudioManagerBuilder;
 
     invoke-direct {v2}, Lcom/android/camera/component/AudioManagerBuilder;-><init>()V
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x2
+    const/4 v1, 0x3
 
     new-instance v2, Lcom/android/camera/component/AutoFocusControllerBuilder;
 
@@ -49,7 +57,7 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     new-instance v2, Lcom/android/camera/component/FaceDetectionControllerBuilder;
 
@@ -57,7 +65,7 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x4
+    const/4 v1, 0x5
 
     new-instance v2, Lcom/android/camera/component/ThumbnailControllerBuilder;
 
@@ -65,7 +73,7 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
     new-instance v2, Lcom/android/camera/component/PanoramaControllerBuilder;
 
@@ -73,7 +81,7 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x6
+    const/4 v1, 0x7
 
     new-instance v2, Lcom/android/camera/component/HdrControllerBuilder;
 
@@ -81,7 +89,7 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x7
+    const/16 v1, 0x8
 
     new-instance v2, Lcom/android/camera/component/SmartShotControllerBuilder;
 
@@ -89,7 +97,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x8
+    const/16 v1, 0x9
 
     new-instance v2, Lcom/android/camera/component/BurstControllerBuilder;
 
@@ -97,7 +105,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x9
+    const/16 v1, 0xa
 
     new-instance v2, Lcom/android/camera/component/ContinuousBurstControllerBuilder;
 
@@ -105,7 +113,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xa
+    const/16 v1, 0xb
 
     new-instance v2, Lcom/android/camera/component/PowerWarningControllerBuilder;
 
@@ -113,7 +121,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xb
+    const/16 v1, 0xc
 
     new-instance v2, Lcom/android/camera/effect/ColorEffectControllerBuilder;
 
@@ -121,7 +129,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xc
+    const/16 v1, 0xd
 
     new-instance v2, Lcom/android/camera/effect/GpuEffectControllerBuilder;
 
@@ -129,7 +137,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xd
+    const/16 v1, 0xe
 
     new-instance v2, Lcom/android/camera/effect/SceneControllerBuilder;
 
@@ -137,7 +145,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xe
+    const/16 v1, 0xf
 
     new-instance v2, Lcom/android/camera/component/HtcCallbackControllerBuilder;
 
@@ -145,7 +153,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0xf
+    const/16 v1, 0x10
 
     new-instance v2, Lcom/android/camera/component/ObjectTrackingControllerBuilder;
 
@@ -153,7 +161,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x10
+    const/16 v1, 0x11
 
     new-instance v2, Lcom/android/camera/component/SmileCaptureControllerBuilder;
 
@@ -171,10 +179,10 @@
     .parameter "cameraThread"
 
     .prologue
-    .line 39
+    .line 40
     invoke-direct {p0, p1}, Lcom/android/camera/component/ComponentFactory;-><init>(Lcom/android/camera/component/IComponentOwner;)V
 
-    .line 40
+    .line 41
     return-void
 .end method
 
@@ -189,38 +197,38 @@
 
     const/4 v4, 0x0
 
-    .line 47
+    .line 48
     iget-object v1, p0, Lcom/android/camera/component/ComponentFactory;->componentOwner:Lcom/android/camera/component/IComponentOwner;
 
     check-cast v1, Lcom/android/camera/CameraThread;
 
-    .line 48
+    .line 49
     .local v1, cameraThread:Lcom/android/camera/CameraThread;
     invoke-virtual {v1}, Lcom/android/camera/CameraThread;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 49
+    .line 50
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     if-nez v0, :cond_0
 
-    .line 53
+    .line 54
     :goto_0
     return v4
 
-    .line 51
+    .line 52
     :cond_0
     new-array v2, v5, [Ljava/lang/Object;
 
     aput-object v0, v2, v4
 
-    .line 52
+    .line 53
     .local v2, checkArgs:[Ljava/lang/Object;
     new-array v3, v5, [Ljava/lang/Object;
 
     aput-object v1, v3, v4
 
-    .line 53
+    .line 54
     .local v3, createArgs:[Ljava/lang/Object;
     invoke-virtual {p0, p1, v2, v3}, Lcom/android/camera/component/CameraThreadComponentFactory;->createComponents(Lcom/android/camera/component/ComponentCategory;[Ljava/lang/Object;[Ljava/lang/Object;)I
 
@@ -240,7 +248,7 @@
     .end annotation
 
     .prologue
-    .line 62
+    .line 63
     sget-object v0, Lcom/android/camera/component/CameraThreadComponentFactory;->m_Builders:[Lcom/android/camera/component/IComponentBuilder;
 
     return-object v0

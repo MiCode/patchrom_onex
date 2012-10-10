@@ -31,13 +31,13 @@
     .parameter "looper"
 
     .prologue
-    .line 1668
+    .line 1740
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$NonUiHandler;->this$0:Lcom/htc/music/MusicPluginManager;
 
-    .line 1669
+    .line 1741
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1670
+    .line 1742
     return-void
 .end method
 
@@ -46,20 +46,20 @@
     .parameter "directory"
 
     .prologue
-    .line 1673
+    .line 1745
     if-nez p1, :cond_1
 
-    .line 1722
+    .line 1794
     :cond_0
     return-void
 
-    .line 1674
+    .line 1746
     :cond_1
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1675
+    .line 1747
     .local v3, fileDir:Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -73,32 +73,32 @@
 
     if-eqz v8, :cond_0
 
-    .line 1677
+    .line 1749
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v6
 
-    .line 1678
+    .line 1750
     .local v6, files:[Ljava/io/File;
     if-eqz v6, :cond_0
 
-    .line 1680
+    .line 1752
     array-length v2, v6
 
-    .line 1681
+    .line 1753
     .local v2, fileCount:I
     const/16 v8, 0x64
 
     if-le v2, v8, :cond_0
 
-    .line 1683
+    .line 1755
     add-int/lit8 v0, v2, -0x64
 
-    .line 1684
+    .line 1756
     .local v0, deleteCount:I
     if-lez v0, :cond_0
 
-    .line 1686
+    .line 1758
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -107,7 +107,7 @@
 
     invoke-direct {v4, v8}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1687
+    .line 1759
     .local v4, fileList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/io/File;>;"
     new-instance v8, Lcom/htc/music/MusicPluginManager$NonUiHandler$1;
 
@@ -115,10 +115,10 @@
 
     invoke-static {v4, v8}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1709
+    .line 1781
     const/4 v5, 0x0
 
-    .line 1710
+    .line 1782
     .local v5, fileToDelete:Ljava/io/File;
     const/4 v7, 0x0
 
@@ -126,7 +126,7 @@
     :goto_0
     if-ge v7, v0, :cond_0
 
-    .line 1711
+    .line 1783
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -134,7 +134,7 @@
     .end local v5           #fileToDelete:Ljava/io/File;
     check-cast v5, Ljava/io/File;
 
-    .line 1712
+    .line 1784
     .restart local v5       #fileToDelete:Ljava/io/File;
     if-eqz v5, :cond_2
 
@@ -150,11 +150,11 @@
 
     if-eqz v8, :cond_2
 
-    .line 1714
+    .line 1786
     :try_start_0
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 1715
+    .line 1787
     const-string v8, "[MusicPluginManager]"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -183,21 +183,21 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1720
+    .line 1792
     :cond_2
     :goto_1
     const/4 v5, 0x0
 
-    .line 1710
+    .line 1782
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 1716
+    .line 1788
     :catch_0
     move-exception v1
 
-    .line 1717
+    .line 1789
     .local v1, e:Ljava/lang/SecurityException;
     const-string v8, "[MusicPluginManager]"
 
@@ -217,41 +217,41 @@
     .parameter "msg"
 
     .prologue
-    .line 1726
+    .line 1798
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1744
+    .line 1816
     const-string v2, "[MusicPluginManager]"
 
     const-string v3, "Something wrong in NonUiHandler.handleMessage()."
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1746
+    .line 1818
     :cond_0
     :goto_0
     return-void
 
-    .line 1728
+    .line 1800
     :pswitch_0
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2}, Lcom/htc/music/MusicPluginManager$NonUiHandler;->removeMessages(I)V
 
-    .line 1729
+    .line 1801
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1730
+    .line 1802
     .local v1, directory:Ljava/lang/String;
     invoke-direct {p0, v1}, Lcom/htc/music/MusicPluginManager$NonUiHandler;->deleteOldestFiles(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1735
+    .line 1807
     .end local v1           #directory:Ljava/lang/String;
     :pswitch_1
     const-string v2, "[MusicPluginManager]"
@@ -260,12 +260,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1736
+    .line 1808
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$NonUiHandler;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-virtual {v2}, Lcom/htc/music/MusicPluginManager;->refreshPlugins()V
 
-    .line 1737
+    .line 1809
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v2, :cond_0
@@ -276,12 +276,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 1738
+    .line 1810
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 1739
+    .line 1811
     .local v0, bundle:Landroid/os/Bundle;
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$NonUiHandler;->this$0:Lcom/htc/music/MusicPluginManager;
 
@@ -302,7 +302,7 @@
 
     goto :goto_0
 
-    .line 1726
+    .line 1798
     nop
 
     :pswitch_data_0

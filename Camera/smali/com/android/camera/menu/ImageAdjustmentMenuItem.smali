@@ -175,7 +175,7 @@
     .line 127
     .end local v0           #i:I
     :cond_1
-    const v1, 0x7f0a006b
+    const v1, 0x7f0a0072
 
     .line 128
     .local v1, summary:I
@@ -201,7 +201,7 @@
     if-nez v2, :cond_3
 
     .line 132
-    const v1, 0x7f0a006a
+    const v1, 0x7f0a0071
 
     .line 136
     :cond_2

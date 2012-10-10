@@ -58,7 +58,7 @@
 
     const/4 v3, 0x0
 
-    .line 53
+    .line 70
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "Idle"
@@ -67,7 +67,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->Idle:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 54
+    .line 71
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "Connecting"
@@ -76,7 +76,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->Connecting:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 55
+    .line 72
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "PendingDisconnecting"
@@ -85,7 +85,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->PendingDisconnecting:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 56
+    .line 73
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "Connected"
@@ -94,7 +94,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->Connected:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 57
+    .line 74
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "Disconnecting"
@@ -103,7 +103,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->Disconnecting:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 58
+    .line 75
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "Disconnected"
@@ -114,7 +114,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->Disconnected:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 59
+    .line 77
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "ResourceReleaseWaiting"
@@ -125,7 +125,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->ResourceReleaseWaiting:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 60
+    .line 79
     new-instance v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     const-string v1, "Unknown"
@@ -136,7 +136,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->Unknown:Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
-    .line 52
+    .line 69
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
@@ -195,7 +195,7 @@
     .end annotation
 
     .prologue
-    .line 52
+    .line 69
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -206,7 +206,7 @@
     .parameter "name"
 
     .prologue
-    .line 52
+    .line 69
     const-class v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -222,7 +222,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 69
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->$VALUES:[Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/cdma/HtcRadio$DataConnectionState;->clone()Ljava/lang/Object;

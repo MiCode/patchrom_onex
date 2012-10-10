@@ -47,18 +47,18 @@
     .locals 1
 
     .prologue
-    .line 384
+    .line 383
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     invoke-direct {p0}, Lcom/htc/protobuf/GeneratedMessage;-><init>()V
 
-    .line 385
+    .line 384
     invoke-static {}, Lcom/htc/protobuf/FieldSet;->newFieldSet()Lcom/htc/protobuf/FieldSet;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
-    .line 384
+    .line 383
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .parameter "x1"
 
     .prologue
-    .line 377
+    .line 376
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyContainingType(Lcom/htc/protobuf/Descriptors$FieldDescriptor;)V
 
     return-void
@@ -79,7 +79,7 @@
     .parameter "x0"
 
     .prologue
-    .line 377
+    .line 376
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
     return-object v0
@@ -91,7 +91,7 @@
     .parameter "x1"
 
     .prologue
-    .line 377
+    .line 376
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyExtensionContainingType(Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;)V
 
     return-void
@@ -102,7 +102,7 @@
     .parameter "field"
 
     .prologue
-    .line 640
+    .line 639
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getContainingType()Lcom/htc/protobuf/Descriptors$Descriptor;
 
@@ -114,7 +114,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 641
+    .line 640
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "FieldDescriptor does not match message type."
@@ -123,7 +123,7 @@
 
     throw v0
 
-    .line 644
+    .line 643
     :cond_0
     return-void
 .end method
@@ -140,7 +140,7 @@
     .end annotation
 
     .prologue
-    .line 389
+    .line 388
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     .local p1, extension:Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;,"Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension<TMessageType;*>;"
     invoke-virtual {p1}, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->getDescriptor()Lcom/htc/protobuf/Descriptors$FieldDescriptor;
@@ -157,7 +157,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 392
+    .line 391
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -218,7 +218,7 @@
 
     throw v0
 
-    .line 398
+    .line 397
     :cond_0
     return-void
 .end method
@@ -229,7 +229,7 @@
     .locals 1
 
     .prologue
-    .line 467
+    .line 466
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
@@ -244,7 +244,7 @@
     .locals 1
 
     .prologue
-    .line 547
+    .line 546
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
@@ -259,7 +259,7 @@
     .locals 1
 
     .prologue
-    .line 554
+    .line 553
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
@@ -284,14 +284,14 @@
     .end annotation
 
     .prologue
-    .line 566
+    .line 565
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     #calls: Lcom/htc/protobuf/GeneratedMessage;->getAllFieldsMutable()Ljava/util/Map;
     invoke-static {p0}, Lcom/htc/protobuf/GeneratedMessage;->access$700(Lcom/htc/protobuf/GeneratedMessage;)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 567
+    .line 566
     .local v0, result:Ljava/util/Map;,"Ljava/util/Map<Lcom/htc/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;>;"
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
@@ -301,7 +301,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 568
+    .line 567
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v1
@@ -323,17 +323,17 @@
     .end annotation
 
     .prologue
-    .line 431
+    .line 430
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     .local p1, extension:Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;,"Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension<TMessageType;TType;>;"
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyExtensionContainingType(Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 432
+    .line 431
     invoke-virtual {p1}, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->getDescriptor()Lcom/htc/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object v0
 
-    .line 433
+    .line 432
     .local v0, descriptor:Lcom/htc/protobuf/Descriptors$FieldDescriptor;
     iget-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
@@ -341,11 +341,11 @@
 
     move-result-object v1
 
-    .line 434
+    .line 433
     .local v1, value:Ljava/lang/Object;
     if-nez v1, :cond_1
 
-    .line 435
+    .line 434
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     move-result-object v2
@@ -354,16 +354,16 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 436
+    .line 435
     invoke-virtual {p1}, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->getMessageDefaultInstance()Lcom/htc/protobuf/Message;
 
     move-result-object v2
 
-    .line 442
+    .line 441
     :goto_0
     return-object v2
 
-    .line 438
+    .line 437
     :cond_0
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getDefaultValue()Ljava/lang/Object;
 
@@ -376,7 +376,7 @@
 
     goto :goto_0
 
-    .line 442
+    .line 441
     :cond_1
     #calls: Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->fromReflectionType(Ljava/lang/Object;)Ljava/lang/Object;
     invoke-static {p1, v1}, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->access$300(Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;Ljava/lang/Object;)Ljava/lang/Object;
@@ -403,17 +403,17 @@
     .end annotation
 
     .prologue
-    .line 455
+    .line 454
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     .local p1, extension:Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;,"Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension<TMessageType;Ljava/util/List<TType;>;>;"
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyExtensionContainingType(Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 456
+    .line 455
     invoke-virtual {p1}, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->getDescriptor()Lcom/htc/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object v0
 
-    .line 457
+    .line 456
     .local v0, descriptor:Lcom/htc/protobuf/Descriptors$FieldDescriptor;
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
@@ -445,17 +445,17 @@
     .end annotation
 
     .prologue
-    .line 418
+    .line 417
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     .local p1, extension:Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;,"Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension<TMessageType;Ljava/util/List<TType;>;>;"
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyExtensionContainingType(Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 419
+    .line 418
     invoke-virtual {p1}, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->getDescriptor()Lcom/htc/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object v0
 
-    .line 420
+    .line 419
     .local v0, descriptor:Lcom/htc/protobuf/Descriptors$FieldDescriptor;
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
@@ -471,7 +471,7 @@
     .parameter "field"
 
     .prologue
-    .line 591
+    .line 590
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
@@ -479,21 +479,21 @@
 
     if-eqz v1, :cond_2
 
-    .line 592
+    .line 591
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyContainingType(Lcom/htc/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 593
+    .line 592
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
     invoke-virtual {v1, p1}, Lcom/htc/protobuf/FieldSet;->getField(Lcom/htc/protobuf/FieldSet$FieldDescriptorLite;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 594
+    .line 593
     .local v0, value:Ljava/lang/Object;
     if-nez v0, :cond_0
 
-    .line 595
+    .line 594
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     move-result-object v1
@@ -502,7 +502,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 598
+    .line 597
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getMessageType()Lcom/htc/protobuf/Descriptors$Descriptor;
 
     move-result-object v1
@@ -511,13 +511,13 @@
 
     move-result-object v0
 
-    .line 606
+    .line 605
     .end local v0           #value:Ljava/lang/Object;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 600
+    .line 599
     .restart local v0       #value:Ljava/lang/Object;
     :cond_1
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getDefaultValue()Ljava/lang/Object;
@@ -526,7 +526,7 @@
 
     goto :goto_0
 
-    .line 606
+    .line 605
     .end local v0           #value:Ljava/lang/Object;
     :cond_2
     invoke-super {p0, p1}, Lcom/htc/protobuf/GeneratedMessage;->getField(Lcom/htc/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
@@ -542,7 +542,7 @@
     .parameter "index"
 
     .prologue
-    .line 631
+    .line 630
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
@@ -550,17 +550,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 632
+    .line 631
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyContainingType(Lcom/htc/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 633
+    .line 632
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/protobuf/FieldSet;->getRepeatedField(Lcom/htc/protobuf/FieldSet$FieldDescriptorLite;I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 635
+    .line 634
     :goto_0
     return-object v0
 
@@ -577,7 +577,7 @@
     .parameter "field"
 
     .prologue
-    .line 616
+    .line 615
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
@@ -585,17 +585,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 617
+    .line 616
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyContainingType(Lcom/htc/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 618
+    .line 617
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
     invoke-virtual {v0, p1}, Lcom/htc/protobuf/FieldSet;->getRepeatedFieldCount(Lcom/htc/protobuf/FieldSet$FieldDescriptorLite;)I
 
     move-result v0
 
-    .line 620
+    .line 619
     :goto_0
     return v0
 
@@ -619,12 +619,12 @@
     .end annotation
 
     .prologue
-    .line 407
+    .line 406
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     .local p1, extension:Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;,"Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension<TMessageType;*>;"
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyExtensionContainingType(Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 408
+    .line 407
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
     invoke-virtual {p1}, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;->getDescriptor()Lcom/htc/protobuf/Descriptors$FieldDescriptor;
@@ -643,7 +643,7 @@
     .parameter "field"
 
     .prologue
-    .line 577
+    .line 576
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
@@ -651,17 +651,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 578
+    .line 577
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->verifyContainingType(Lcom/htc/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 579
+    .line 578
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
 
     invoke-virtual {v0, p1}, Lcom/htc/protobuf/FieldSet;->hasField(Lcom/htc/protobuf/FieldSet$FieldDescriptorLite;)Z
 
     move-result v0
 
-    .line 581
+    .line 580
     :goto_0
     return v0
 
@@ -677,7 +677,7 @@
     .locals 1
 
     .prologue
-    .line 476
+    .line 475
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     invoke-super {p0}, Lcom/htc/protobuf/GeneratedMessage;->isInitialized()Z
 
@@ -713,7 +713,7 @@
     .end annotation
 
     .prologue
-    .line 531
+    .line 530
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     new-instance v0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;
 
@@ -737,7 +737,7 @@
     .end annotation
 
     .prologue
-    .line 538
+    .line 537
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>;"
     new-instance v0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;
 

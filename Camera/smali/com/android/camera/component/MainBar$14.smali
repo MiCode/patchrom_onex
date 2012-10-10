@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera/property/PropertyChangedCallback",
         "<",
-        "Lcom/android/camera/UIState;",
+        "Lcom/android/camera/rotate/UIRotation;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 336
+    .line 362
     iput-object p1, p0, Lcom/android/camera/component/MainBar$14;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
 # virtual methods
 .method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
-    .locals 2
+    .locals 3
     .parameter
     .parameter
     .annotation system Ldalvik/annotation/Signature;
@@ -56,28 +56,32 @@
             "(",
             "Lcom/android/camera/property/Property",
             "<",
-            "Lcom/android/camera/UIState;",
+            "Lcom/android/camera/rotate/UIRotation;",
             ">;",
             "Lcom/android/camera/property/PropertyChangedEventArgs",
             "<",
-            "Lcom/android/camera/UIState;",
+            "Lcom/android/camera/rotate/UIRotation;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 340
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/UIState;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/UIState;>;"
-    iget-object v1, p0, Lcom/android/camera/component/MainBar$14;->this$0:Lcom/android/camera/component/MainBar;
+    .line 366
+    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/rotate/UIRotation;>;"
+    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/rotate/UIRotation;>;"
+    iget-object v2, p0, Lcom/android/camera/component/MainBar$14;->this$0:Lcom/android/camera/component/MainBar;
 
-    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
+    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->oldValue:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/camera/UIState;
+    check-cast v0, Lcom/android/camera/rotate/UIRotation;
 
-    #calls: Lcom/android/camera/component/MainBar;->onSettingsPanelStateChanged(Lcom/android/camera/UIState;)V
-    invoke-static {v1, v0}, Lcom/android/camera/component/MainBar;->access$1600(Lcom/android/camera/component/MainBar;Lcom/android/camera/UIState;)V
+    iget-object v1, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
-    .line 341
+    check-cast v1, Lcom/android/camera/rotate/UIRotation;
+
+    #calls: Lcom/android/camera/component/MainBar;->onRotationChanged(Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
+    invoke-static {v2, v0, v1}, Lcom/android/camera/component/MainBar;->access$1500(Lcom/android/camera/component/MainBar;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
+
+    .line 367
     return-void
 .end method

@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 319
+    .line 345
     invoke-direct {p0}, Landroid/provider/HtcCalendarContract$Reminders;-><init>()V
 
     return-void

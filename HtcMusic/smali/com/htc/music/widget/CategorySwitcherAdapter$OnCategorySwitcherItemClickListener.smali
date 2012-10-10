@@ -32,12 +32,12 @@
     .parameter "categorySwitcherAdapter"
 
     .prologue
-    .line 260
+    .line 265
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;-><init>(Landroid/content/Context;Lcom/htc/music/widget/CategorySwitcherAdapter;Lcom/htc/music/util/HistoryManager;)V
 
-    .line 261
+    .line 266
     return-void
 .end method
 
@@ -50,24 +50,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 265
+    .line 270
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 254
+    .line 259
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
 
-    .line 255
+    .line 260
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
-    .line 256
+    .line 261
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
-    .line 266
+    .line 271
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 267
+    .line 272
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -77,17 +77,17 @@
 
     throw v0
 
-    .line 270
+    .line 275
     :cond_1
     iput-object p1, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
 
-    .line 271
+    .line 276
     iput-object p2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
-    .line 272
+    .line 277
     iput-object p3, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
-    .line 273
+    .line 278
     return-void
 .end method
 
@@ -110,24 +110,24 @@
     .end annotation
 
     .prologue
-    .line 278
+    .line 283
     .local p1, parent:Lcom/htc/widget/HtcAdapterView;,"Lcom/htc/widget/HtcAdapterView<*>;"
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
 
     if-nez v2, :cond_1
 
-    .line 314
+    .line 319
     :cond_0
     :goto_0
     return-void
 
-    .line 281
+    .line 286
     :cond_1
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
     if-eqz v2, :cond_0
 
-    .line 286
+    .line 291
     if-ltz p3, :cond_2
 
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
@@ -138,7 +138,7 @@
 
     if-gt v2, p3, :cond_3
 
-    .line 287
+    .line 292
     :cond_2
     const-string v2, "[CategorySwitcherAdapter]"
 
@@ -148,7 +148,7 @@
 
     goto :goto_0
 
-    .line 291
+    .line 296
     :cond_3
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
@@ -156,7 +156,7 @@
 
     aget-object v1, v2, p3
 
-    .line 293
+    .line 298
     .local v1, source:Lcom/htc/music/util/SourceItem;
     iget-object v2, v1, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
@@ -168,11 +168,11 @@
 
     move-result v0
 
-    .line 294
+    .line 299
     .local v0, forceStartNewActivity:Z
     if-eqz v0, :cond_4
 
-    .line 295
+    .line 300
     iget-object v2, v1, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
     const-string v3, "ShowActivityTitle"
@@ -181,7 +181,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 296
+    .line 301
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
 
     iget-object v3, v1, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
@@ -190,7 +190,7 @@
 
     goto :goto_0
 
-    .line 300
+    .line 305
     :cond_4
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
 
@@ -198,7 +198,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 301
+    .line 306
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
 
     check-cast v2, Lcom/htc/music/widget/IMusicTabActivityInterface;
@@ -209,12 +209,12 @@
 
     invoke-interface {v2, v3, v4}, Lcom/htc/music/widget/IMusicTabActivityInterface;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 305
+    .line 310
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     if-eqz v2, :cond_0
 
-    .line 306
+    .line 311
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mHistoryManager:Lcom/htc/music/util/HistoryManager;
 
     iget-object v3, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
@@ -225,7 +225,7 @@
 
     goto :goto_0
 
-    .line 310
+    .line 315
     :cond_5
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$OnCategorySwitcherItemClickListener;->mContext:Landroid/content/Context;
 

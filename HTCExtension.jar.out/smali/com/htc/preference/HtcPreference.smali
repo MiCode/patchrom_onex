@@ -624,12 +624,12 @@
     .locals 3
 
     .prologue
-    .line 1795
+    .line 1799
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v0
 
-    .line 1796
+    .line 1800
     .local v0, shouldPersist:Z
     if-eqz v0, :cond_0
 
@@ -645,25 +645,25 @@
 
     if-nez v1, :cond_2
 
-    .line 1797
+    .line 1801
     :cond_0
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mDefaultValue:Ljava/lang/Object;
 
     if-eqz v1, :cond_1
 
-    .line 1798
+    .line 1802
     const/4 v1, 0x0
 
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mDefaultValue:Ljava/lang/Object;
 
     invoke-virtual {p0, v1, v2}, Lcom/htc/preference/HtcPreference;->onSetInitialValue(ZLjava/lang/Object;)V
 
-    .line 1803
+    .line 1807
     :cond_1
     :goto_0
     return-void
 
-    .line 1801
+    .line 1805
     :cond_2
     const/4 v1, 0x1
 
@@ -678,7 +678,7 @@
     .locals 4
 
     .prologue
-    .line 1626
+    .line 1630
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mDependencyKey:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -687,11 +687,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1635
+    .line 1639
     :goto_0
     return-void
 
-    .line 1628
+    .line 1632
     :cond_0
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mDependencyKey:Ljava/lang/String;
 
@@ -699,16 +699,16 @@
 
     move-result-object v0
 
-    .line 1629
+    .line 1633
     .local v0, preference:Lcom/htc/preference/HtcPreference;
     if-eqz v0, :cond_1
 
-    .line 1630
+    .line 1634
     invoke-direct {v0, p0}, Lcom/htc/preference/HtcPreference;->registerDependent(Lcom/htc/preference/HtcPreference;)V
 
     goto :goto_0
 
-    .line 1632
+    .line 1636
     :cond_1
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -772,32 +772,32 @@
     .parameter "dependent"
 
     .prologue
-    .line 1674
+    .line 1678
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mDependents:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 1675
+    .line 1679
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/preference/HtcPreference;->mDependents:Ljava/util/List;
 
-    .line 1678
+    .line 1682
     :cond_0
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mDependents:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1680
+    .line 1684
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldDisableDependents()Z
 
     move-result v0
 
     invoke-virtual {p1, p0, v0}, Lcom/htc/preference/HtcPreference;->onDependencyChanged(Lcom/htc/preference/HtcPreference;Z)V
 
-    .line 1681
+    .line 1685
     return-void
 .end method
 
@@ -807,20 +807,20 @@
     .parameter "enabled"
 
     .prologue
-    .line 968
+    .line 972
     invoke-virtual {p1, p2}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 970
+    .line 974
     instance-of v2, p1, Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_0
 
     move-object v1, p1
 
-    .line 971
+    .line 975
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 972
+    .line 976
     .local v1, vg:Landroid/view/ViewGroup;
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -832,19 +832,19 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 973
+    .line 977
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-direct {p0, v2, p2}, Lcom/htc/preference/HtcPreference;->setEnabledStateOnViews(Landroid/view/View;Z)V
 
-    .line 972
+    .line 976
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 976
+    .line 980
     .end local v0           #i:I
     .end local v1           #vg:Landroid/view/ViewGroup;
     :cond_0
@@ -855,19 +855,19 @@
     .locals 2
 
     .prologue
-    .line 891
+    .line 895
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 892
+    .line 896
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 894
+    .line 898
     :cond_0
     const/4 v0, 0x0
 
@@ -880,30 +880,30 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 908
+    .line 912
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_0
 
-    .line 909
+    .line 913
     iget-boolean v1, p0, Lcom/htc/preference/HtcPreference;->mIconVisibility:Z
 
     if-eqz v1, :cond_1
 
-    .line 910
+    .line 914
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 914
+    .line 918
     :goto_0
     const/4 v0, 0x1
 
-    .line 916
+    .line 920
     :cond_0
     return v0
 
-    .line 912
+    .line 916
     :cond_1
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
@@ -919,7 +919,7 @@
     .parameter "editor"
 
     .prologue
-    .line 1826
+    .line 1830
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
     invoke-virtual {v1}, Lcom/htc/preference/HtcPreferenceManager;->shouldCommit()Z
@@ -928,22 +928,22 @@
 
     if-eqz v1, :cond_0
 
-    .line 1828
+    .line 1832
     :try_start_0
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
     :try_end_0
     .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1836
+    .line 1840
     :cond_0
     :goto_0
     return-void
 
-    .line 1829
+    .line 1833
     :catch_0
     move-exception v0
 
-    .line 1833
+    .line 1837
     .local v0, unused:Ljava/lang/AbstractMethodError;
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -954,26 +954,26 @@
     .locals 2
 
     .prologue
-    .line 1638
+    .line 1642
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mDependencyKey:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 1639
+    .line 1643
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mDependencyKey:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Lcom/htc/preference/HtcPreference;->findPreferenceInHierarchy(Ljava/lang/String;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v0
 
-    .line 1640
+    .line 1644
     .local v0, oldDependency:Lcom/htc/preference/HtcPreference;
     if-eqz v0, :cond_0
 
-    .line 1641
+    .line 1645
     invoke-direct {v0, p0}, Lcom/htc/preference/HtcPreference;->unregisterDependent(Lcom/htc/preference/HtcPreference;)V
 
-    .line 1644
+    .line 1648
     .end local v0           #oldDependency:Lcom/htc/preference/HtcPreference;
     :cond_0
     return-void
@@ -984,17 +984,17 @@
     .parameter "dependent"
 
     .prologue
-    .line 1692
+    .line 1696
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mDependents:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 1693
+    .line 1697
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mDependents:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 1695
+    .line 1699
     :cond_0
     return-void
 .end method
@@ -1006,7 +1006,7 @@
     .parameter "newValue"
 
     .prologue
-    .line 1327
+    .line 1331
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mOnChangeListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeListener;
 
     if-nez v0, :cond_0
@@ -1033,7 +1033,7 @@
     .prologue
     const v1, 0x7fffffff
 
-    .line 1545
+    .line 1549
     iget v0, p0, Lcom/htc/preference/HtcPreference;->mOrder:I
 
     if-ne v0, v1, :cond_0
@@ -1046,7 +1046,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 1548
+    .line 1552
     :cond_0
     iget v0, p0, Lcom/htc/preference/HtcPreference;->mOrder:I
 
@@ -1054,33 +1054,33 @@
 
     sub-int/2addr v0, v1
 
-    .line 1555
+    .line 1559
     :goto_0
     return v0
 
-    .line 1549
+    .line 1553
     :cond_1
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mTitle:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_2
 
-    .line 1550
+    .line 1554
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1551
+    .line 1555
     :cond_2
     iget-object v0, p1, Lcom/htc/preference/HtcPreference;->mTitle:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_3
 
-    .line 1552
+    .line 1556
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 1555
+    .line 1559
     :cond_3
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mTitle:Ljava/lang/CharSequence;
 
@@ -1114,38 +1114,38 @@
     .parameter "container"
 
     .prologue
-    .line 2268
+    .line 2266
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->hasKey()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2269
+    .line 2267
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 2270
+    .line 2268
     .local v0, state:Landroid/os/Parcelable;
     if-eqz v0, :cond_0
 
-    .line 2271
+    .line 2269
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/preference/HtcPreference;->mBaseMethodCalled:Z
 
-    .line 2272
+    .line 2270
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 2273
+    .line 2271
     iget-boolean v1, p0, Lcom/htc/preference/HtcPreference;->mBaseMethodCalled:Z
 
     if-nez v1, :cond_0
 
-    .line 2274
+    .line 2272
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Derived class did not call super.onRestoreInstanceState()"
@@ -1154,7 +1154,7 @@
 
     throw v1
 
-    .line 2279
+    .line 2277
     .end local v0           #state:Landroid/os/Parcelable;
     :cond_0
     return-void
@@ -1165,30 +1165,30 @@
     .parameter "container"
 
     .prologue
-    .line 2207
+    .line 2205
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->hasKey()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2208
+    .line 2206
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/preference/HtcPreference;->mBaseMethodCalled:Z
 
-    .line 2209
+    .line 2207
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 2210
+    .line 2208
     .local v0, state:Landroid/os/Parcelable;
     iget-boolean v1, p0, Lcom/htc/preference/HtcPreference;->mBaseMethodCalled:Z
 
     if-nez v1, :cond_0
 
-    .line 2211
+    .line 2209
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Derived class did not call super.onSaveInstanceState()"
@@ -1197,16 +1197,16 @@
 
     throw v1
 
-    .line 2214
+    .line 2212
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 2215
+    .line 2213
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 2218
+    .line 2216
     .end local v0           #state:Landroid/os/Parcelable;
     :cond_1
     return-void
@@ -1217,7 +1217,7 @@
     .parameter "key"
 
     .prologue
-    .line 1657
+    .line 1661
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1228,11 +1228,11 @@
 
     if-nez v0, :cond_1
 
-    .line 1658
+    .line 1662
     :cond_0
     const/4 v0, 0x0
 
-    .line 1661
+    .line 1665
     :goto_0
     return-object v0
 
@@ -1250,15 +1250,15 @@
     .locals 1
 
     .prologue
-    .line 826
+    .line 830
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIntent:Landroid/content/Intent;
 
     if-nez v0, :cond_0
 
-    .line 827
+    .line 831
     const/4 v0, 0x0
 
-    .line 829
+    .line 833
     :goto_0
     return-object v0
 
@@ -1276,7 +1276,7 @@
     .locals 1
 
     .prologue
-    .line 1458
+    .line 1462
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -1286,7 +1286,7 @@
     .locals 1
 
     .prologue
-    .line 1770
+    .line 1774
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mDependencyKey:Ljava/lang/String;
 
     return-object v0
@@ -1296,15 +1296,15 @@
     .locals 1
 
     .prologue
-    .line 1510
+    .line 1514
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
     if-nez v0, :cond_0
 
-    .line 1511
+    .line 1515
     const/4 v0, 0x0
 
-    .line 1514
+    .line 1518
     :goto_0
     return-object v0
 
@@ -1347,18 +1347,18 @@
     .prologue
     const/16 v4, 0x20
 
-    .line 2164
+    .line 2162
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2165
+    .line 2163
     .local v0, sb:Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    .line 2166
+    .line 2164
     .local v2, title:Ljava/lang/CharSequence;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1366,20 +1366,20 @@
 
     if-nez v3, :cond_0
 
-    .line 2167
+    .line 2165
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2169
+    .line 2167
     :cond_0
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 2170
+    .line 2168
     .local v1, summary:Ljava/lang/CharSequence;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1387,14 +1387,14 @@
 
     if-nez v3, :cond_1
 
-    .line 2171
+    .line 2169
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2173
+    .line 2171
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -1402,7 +1402,7 @@
 
     if-lez v3, :cond_2
 
-    .line 2175
+    .line 2173
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
@@ -1411,7 +1411,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 2177
+    .line 2175
     :cond_2
     return-object v0
 .end method
@@ -1430,7 +1430,7 @@
     .locals 1
 
     .prologue
-    .line 1094
+    .line 1098
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1440,7 +1440,7 @@
     .locals 1
 
     .prologue
-    .line 935
+    .line 939
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     return-object v0
@@ -1450,7 +1450,7 @@
     .locals 1
 
     .prologue
-    .line 861
+    .line 865
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mIconVisibility:Z
 
     return v0
@@ -1460,7 +1460,7 @@
     .locals 2
 
     .prologue
-    .line 1216
+    .line 1220
     iget-wide v0, p0, Lcom/htc/preference/HtcPreference;->mId:J
 
     return-wide v0
@@ -1480,7 +1480,7 @@
     .locals 1
 
     .prologue
-    .line 1249
+    .line 1253
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -1500,7 +1500,7 @@
     .locals 1
 
     .prologue
-    .line 1378
+    .line 1382
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mOnChangeListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeListener;
 
     return-object v0
@@ -1510,7 +1510,7 @@
     .locals 1
 
     .prologue
-    .line 1400
+    .line 1404
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mOnClickListener:Lcom/htc/preference/HtcPreference$OnPreferenceClickListener;
 
     return-object v0
@@ -1520,7 +1520,7 @@
     .locals 1
 
     .prologue
-    .line 1354
+    .line 1358
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mOnFirstBindViewListener:Lcom/htc/preference/HtcPreference$OnPreferenceFirstBindViewListener;
 
     return-object v0
@@ -1530,7 +1530,7 @@
     .locals 1
 
     .prologue
-    .line 1008
+    .line 1012
     iget v0, p0, Lcom/htc/preference/HtcPreference;->mOrder:I
 
     return v0
@@ -1541,14 +1541,14 @@
     .parameter "defaultReturnValue"
 
     .prologue
-    .line 2136
+    .line 2134
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2140
+    .line 2138
     .end local p1
     :goto_0
     return p1
@@ -1575,14 +1575,14 @@
     .parameter "defaultReturnValue"
 
     .prologue
-    .line 2040
+    .line 2038
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2044
+    .line 2042
     .end local p1
     :goto_0
     return p1
@@ -1609,14 +1609,14 @@
     .parameter "defaultReturnValue"
 
     .prologue
-    .line 1988
+    .line 1986
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1992
+    .line 1990
     .end local p1
     :goto_0
     return p1
@@ -1643,14 +1643,14 @@
     .parameter "defaultReturnValue"
 
     .prologue
-    .line 2092
+    .line 2090
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2096
+    .line 2094
     .end local p1
     :goto_0
     return-wide p1
@@ -1677,14 +1677,14 @@
     .parameter "defaultReturnValue"
 
     .prologue
-    .line 1881
+    .line 1885
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1885
+    .line 1889
     .end local p1
     :goto_0
     return-object p1
@@ -1724,7 +1724,7 @@
     .end annotation
 
     .prologue
-    .line 1936
+    .line 1940
     .local p1, defaultReturnValue:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
@@ -1732,7 +1732,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1940
+    .line 1944
     .end local p1           #defaultReturnValue:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     :goto_0
     return-object p1
@@ -1758,7 +1758,7 @@
     .locals 1
 
     .prologue
-    .line 1595
+    .line 1599
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
     return-object v0
@@ -1768,15 +1768,15 @@
     .locals 1
 
     .prologue
-    .line 1479
+    .line 1483
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
     if-nez v0, :cond_0
 
-    .line 1480
+    .line 1484
     const/4 v0, 0x0
 
-    .line 1483
+    .line 1487
     :goto_0
     return-object v0
 
@@ -1794,7 +1794,7 @@
     .locals 1
 
     .prologue
-    .line 1206
+    .line 1210
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mShouldDisableView:Z
 
     return v0
@@ -1804,7 +1804,7 @@
     .locals 1
 
     .prologue
-    .line 1104
+    .line 1108
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mSummary:Ljava/lang/CharSequence;
 
     return-object v0
@@ -1814,7 +1814,7 @@
     .locals 1
 
     .prologue
-    .line 961
+    .line 965
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mSummaryView:Landroid/widget/TextView;
 
     return-object v0
@@ -1824,7 +1824,7 @@
     .locals 1
 
     .prologue
-    .line 1056
+    .line 1060
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mTitle:Ljava/lang/CharSequence;
 
     return-object v0
@@ -1834,7 +1834,7 @@
     .locals 1
 
     .prologue
-    .line 1046
+    .line 1050
     iget v0, p0, Lcom/htc/preference/HtcPreference;->mTitleRes:I
 
     return v0
@@ -1844,7 +1844,7 @@
     .locals 1
 
     .prologue
-    .line 948
+    .line 952
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mTitleView:Landroid/widget/TextView;
 
     return-object v0
@@ -1886,7 +1886,7 @@
     .locals 1
 
     .prologue
-    .line 1277
+    .line 1281
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1910,7 +1910,7 @@
     .locals 1
 
     .prologue
-    .line 2144
+    .line 2142
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mHasSpecifiedLayout:Z
 
     return v0
@@ -1920,7 +1920,7 @@
     .locals 1
 
     .prologue
-    .line 1152
+    .line 1156
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mEnabled:Z
 
     if-eqz v0, :cond_0
@@ -1944,7 +1944,7 @@
     .locals 1
 
     .prologue
-    .line 1287
+    .line 1291
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mPersistent:Z
 
     return v0
@@ -1954,7 +1954,7 @@
     .locals 1
 
     .prologue
-    .line 1177
+    .line 1181
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mSelectable:Z
 
     return v0
@@ -1964,17 +1964,17 @@
     .locals 1
 
     .prologue
-    .line 1573
+    .line 1577
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeInternalListener;
 
     if-eqz v0, :cond_0
 
-    .line 1574
+    .line 1578
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeInternalListener;
 
     invoke-interface {v0, p0}, Lcom/htc/preference/HtcPreference$OnPreferenceChangeInternalListener;->onPreferenceChange(Lcom/htc/preference/HtcPreference;)V
 
-    .line 1576
+    .line 1580
     :cond_0
     return-void
 .end method
@@ -1984,24 +1984,24 @@
     .parameter "disableDependents"
 
     .prologue
-    .line 1705
+    .line 1709
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mDependents:Ljava/util/List;
 
-    .line 1707
+    .line 1711
     .local v0, dependents:Ljava/util/List;,"Ljava/util/List<Lcom/htc/preference/HtcPreference;>;"
     if-nez v0, :cond_1
 
-    .line 1715
+    .line 1719
     :cond_0
     return-void
 
-    .line 1711
+    .line 1715
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 1712
+    .line 1716
     .local v1, dependentsCount:I
     const/4 v2, 0x0
 
@@ -2009,7 +2009,7 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 1713
+    .line 1717
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -2018,7 +2018,7 @@
 
     invoke-virtual {v3, p0, p1}, Lcom/htc/preference/HtcPreference;->onDependencyChanged(Lcom/htc/preference/HtcPreference;Z)V
 
-    .line 1712
+    .line 1716
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -2028,17 +2028,17 @@
     .locals 1
 
     .prologue
-    .line 1584
+    .line 1588
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeInternalListener;
 
     if-eqz v0, :cond_0
 
-    .line 1585
+    .line 1589
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeInternalListener;
 
     invoke-interface {v0, p0}, Lcom/htc/preference/HtcPreference$OnPreferenceChangeInternalListener;->onPreferenceHierarchyChange(Lcom/htc/preference/HtcPreference;)V
 
-    .line 1587
+    .line 1591
     :cond_0
     return-void
 .end method
@@ -2047,10 +2047,10 @@
     .locals 0
 
     .prologue
-    .line 1621
+    .line 1625
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->registerDependency()V
 
-    .line 1622
+    .line 1626
     return-void
 .end method
 
@@ -2059,20 +2059,20 @@
     .parameter "preferenceManager"
 
     .prologue
-    .line 1605
+    .line 1609
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
-    .line 1607
+    .line 1611
     invoke-virtual {p1}, Lcom/htc/preference/HtcPreferenceManager;->getNextId()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/preference/HtcPreference;->mId:J
 
-    .line 1609
+    .line 1613
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->dispatchSetInitialValue()V
 
-    .line 1610
+    .line 1614
     return-void
 .end method
 
@@ -2087,7 +2087,7 @@
 
     const/4 v6, 0x0
 
-    .line 742
+    .line 746
     const v7, 0x1020016
 
     invoke-virtual {p1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2096,21 +2096,21 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 743
+    .line 747
     .local v4, textView:Landroid/widget/TextView;
     iput-object v4, p0, Lcom/htc/preference/HtcPreference;->mTitleView:Landroid/widget/TextView;
 
-    .line 744
+    .line 748
     if-eqz v4, :cond_0
 
-    .line 745
+    .line 749
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v7
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 748
+    .line 752
     :cond_0
     const v7, 0x1020010
 
@@ -2121,19 +2121,19 @@
     .end local v4           #textView:Landroid/widget/TextView;
     check-cast v4, Landroid/widget/TextView;
 
-    .line 749
+    .line 753
     .restart local v4       #textView:Landroid/widget/TextView;
     iput-object v4, p0, Lcom/htc/preference/HtcPreference;->mSummaryView:Landroid/widget/TextView;
 
-    .line 750
+    .line 754
     if-eqz v4, :cond_2
 
-    .line 751
+    .line 755
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 752
+    .line 756
     .local v3, summary:Ljava/lang/CharSequence;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2141,17 +2141,17 @@
 
     if-nez v7, :cond_b
 
-    .line 753
+    .line 757
     invoke-virtual {v4}, Landroid/widget/TextView;->getVisibility()I
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 754
+    .line 758
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 757
+    .line 761
     :cond_1
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getSummary()Ljava/lang/CharSequence;
 
@@ -2159,7 +2159,7 @@
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 765
+    .line 769
     .end local v3           #summary:Ljava/lang/CharSequence;
     :cond_2
     :goto_0
@@ -2169,11 +2169,11 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 766
+    .line 770
     .local v1, imageView:Landroid/widget/ImageView;
     if-eqz v1, :cond_6
 
-    .line 767
+    .line 771
     iget v7, p0, Lcom/htc/preference/HtcPreference;->mIconResId:I
 
     if-nez v7, :cond_3
@@ -2182,13 +2182,13 @@
 
     if-eqz v7, :cond_4
 
-    .line 768
+    .line 772
     :cond_3
     iget-object v7, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-nez v7, :cond_4
 
-    .line 769
+    .line 773
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -2205,7 +2205,7 @@
 
     iput-object v7, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 775
+    .line 779
     :cond_4
     iget-object v7, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
@@ -2216,7 +2216,7 @@
     :cond_5
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 779
+    .line 783
     :cond_6
     invoke-virtual {p1, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2226,12 +2226,12 @@
 
     iput-object v5, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
-    .line 781
+    .line 785
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v5, :cond_8
 
-    .line 783
+    .line 787
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v5}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -2240,7 +2240,7 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 785
+    .line 789
     .local v2, param:Landroid/view/ViewGroup$MarginLayoutParams;
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
@@ -2256,13 +2256,13 @@
 
     move-result v0
 
-    .line 786
+    .line 790
     .local v0, iconSize:I
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v5, :cond_7
 
-    .line 787
+    .line 791
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -2271,77 +2271,77 @@
 
     if-le v5, v0, :cond_7
 
-    .line 788
+    .line 792
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 789
+    .line 793
     iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 792
+    .line 796
     :cond_7
     iget v5, p0, Lcom/htc/preference/HtcPreference;->margin_m:I
 
     invoke-virtual {v2, v6, v6, v5, v6}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    .line 793
+    .line 797
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {v5, v2}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 794
+    .line 798
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mIconView:Landroid/widget/ImageView;
 
     sget-object v6, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 797
+    .line 801
     .end local v0           #iconSize:I
     .end local v2           #param:Landroid/view/ViewGroup$MarginLayoutParams;
     :cond_8
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->syncIconVisibility()Z
 
-    .line 798
+    .line 802
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->syncIconDrawable()Z
 
-    .line 800
+    .line 804
     iget-boolean v5, p0, Lcom/htc/preference/HtcPreference;->mShouldDisableView:Z
 
     if-eqz v5, :cond_9
 
-    .line 801
+    .line 805
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->isEnabled()Z
 
     move-result v5
 
     invoke-direct {p0, p1, v5}, Lcom/htc/preference/HtcPreference;->setEnabledStateOnViews(Landroid/view/View;Z)V
 
-    .line 805
+    .line 809
     :cond_9
     iget-boolean v5, p0, Lcom/htc/preference/HtcPreference;->mHasBoundView:Z
 
     if-nez v5, :cond_a
 
-    .line 806
+    .line 810
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lcom/htc/preference/HtcPreference;->mHasBoundView:Z
 
-    .line 807
+    .line 811
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mOnFirstBindViewListener:Lcom/htc/preference/HtcPreference$OnPreferenceFirstBindViewListener;
 
     if-eqz v5, :cond_a
 
-    .line 808
+    .line 812
     iget-object v5, p0, Lcom/htc/preference/HtcPreference;->mOnFirstBindViewListener:Lcom/htc/preference/HtcPreference$OnPreferenceFirstBindViewListener;
 
     invoke-interface {v5, p0}, Lcom/htc/preference/HtcPreference$OnPreferenceFirstBindViewListener;->onPreferenceFirstBindView(Lcom/htc/preference/HtcPreference;)V
 
-    .line 811
+    .line 815
     :cond_a
     return-void
 
-    .line 759
+    .line 763
     .end local v1           #imageView:Landroid/widget/ImageView;
     .restart local v3       #summary:Ljava/lang/CharSequence;
     :cond_b
@@ -2351,7 +2351,7 @@
 
     if-eq v7, v5, :cond_2
 
-    .line 760
+    .line 764
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_0
@@ -2361,7 +2361,7 @@
     .locals 0
 
     .prologue
-    .line 1226
+    .line 1230
     return-void
 .end method
 
@@ -2490,7 +2490,11 @@
 
     const/16 v22, 0x0
 
-    const/16 v23, 0x0
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/preference/HtcPreference;->margin_m:I
+
+    move/from16 v23, v0
 
     const/16 v24, 0x0
 
@@ -2549,9 +2553,21 @@
     .line 638
     check-cast v21, Landroid/widget/TextView;
 
-    const/16 v22, -0x2
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
-    invoke-virtual/range {v21 .. v22}, Landroid/widget/TextView;->setHeight(I)V
+    move-result-object v22
+
+    invoke-virtual/range {v22 .. v22}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v22
+
+    const v23, 0x2050107
+
+    invoke-virtual/range {v22 .. v23}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v22
+
+    invoke-virtual/range {v21 .. v22}, Landroid/widget/TextView;->setMinHeight(I)V
 
     .line 641
     :cond_0
@@ -2620,11 +2636,18 @@
 
     .line 646
     .local v13, summary:Landroid/widget/TextView;
+    sget-object v21, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v13, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    .line 647
     if-eqz v16, :cond_1
 
     if-eqz v13, :cond_1
 
-    .line 647
+    .line 648
     invoke-virtual/range {p0 .. p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v21
@@ -2639,7 +2662,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 648
+    .line 649
     invoke-virtual/range {p0 .. p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v21
@@ -2652,7 +2675,7 @@
 
     invoke-virtual {v13, v0, v1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 651
+    .line 652
     .end local v13           #summary:Landroid/widget/TextView;
     .end local v16           #title:Landroid/widget/TextView;
     :cond_1
@@ -2670,14 +2693,14 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 653
+    .line 654
     const v21, 0x208003b
 
     move/from16 v0, v21
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 654
+    .line 655
     const v21, 0x10202d9
 
     move/from16 v0, v21
@@ -2688,7 +2711,7 @@
 
     check-cast v10, Landroid/widget/SeekBar;
 
-    .line 656
+    .line 657
     .local v10, seekBar:Landroid/widget/SeekBar;
     invoke-virtual {v10}, Landroid/widget/SeekBar;->getParent()Landroid/view/ViewParent;
 
@@ -2696,11 +2719,11 @@
 
     check-cast v11, Landroid/widget/RelativeLayout;
 
-    .line 657
+    .line 658
     .local v11, seekBarParent:Landroid/widget/RelativeLayout;
     if-eqz v11, :cond_2
 
-    .line 659
+    .line 660
     const v21, 0x1020016
 
     move/from16 v0, v21
@@ -2711,7 +2734,7 @@
 
     check-cast v16, Landroid/widget/TextView;
 
-    .line 660
+    .line 661
     .restart local v16       #title:Landroid/widget/TextView;
     invoke-virtual/range {p0 .. p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
@@ -2727,7 +2750,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 661
+    .line 662
     const/16 v21, 0x8
 
     move-object/from16 v0, v16
@@ -2736,7 +2759,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 662
+    .line 663
     const v21, 0x1020010
 
     move/from16 v0, v21
@@ -2747,7 +2770,7 @@
 
     check-cast v13, Landroid/widget/TextView;
 
-    .line 663
+    .line 664
     .restart local v13       #summary:Landroid/widget/TextView;
     invoke-virtual/range {p0 .. p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
@@ -2761,7 +2784,7 @@
 
     invoke-virtual {v13, v0, v1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 665
+    .line 666
     .end local v13           #summary:Landroid/widget/TextView;
     .end local v16           #title:Landroid/widget/TextView;
     :cond_2
@@ -2775,18 +2798,18 @@
 
     check-cast v19, Landroid/widget/LinearLayout;
 
-    .line 666
+    .line 667
     .local v19, widget_frame:Landroid/widget/LinearLayout;
     if-eqz v19, :cond_3
 
-    .line 668
+    .line 669
     invoke-virtual/range {v19 .. v19}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v9
 
     check-cast v9, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 669
+    .line 670
     .local v9, param:Landroid/view/ViewGroup$MarginLayoutParams;
     move-object/from16 v0, p0
 
@@ -2814,12 +2837,12 @@
 
     invoke-virtual {v9, v0, v1, v2, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    .line 670
+    .line 671
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v9}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 675
+    .line 676
     .end local v9           #param:Landroid/view/ViewGroup$MarginLayoutParams;
     .end local v10           #seekBar:Landroid/widget/SeekBar;
     .end local v11           #seekBarParent:Landroid/widget/RelativeLayout;
@@ -2833,7 +2856,7 @@
 
     if-eqz v21, :cond_4
 
-    .line 676
+    .line 677
     const v21, 0x1020018
 
     move/from16 v0, v21
@@ -2844,7 +2867,7 @@
 
     check-cast v18, Landroid/view/ViewGroup;
 
-    .line 677
+    .line 678
     .local v18, widgetFrame:Landroid/view/ViewGroup;
     move-object/from16 v0, p0
 
@@ -2858,7 +2881,7 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 679
+    .line 680
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/preference/HtcPreference;->mNeedModifyLayout:Z
@@ -2873,7 +2896,7 @@
 
     if-eqz v21, :cond_4
 
-    .line 680
+    .line 681
     const v21, 0x1020001
 
     move-object/from16 v0, v18
@@ -2886,7 +2909,7 @@
 
     if-eqz v21, :cond_6
 
-    .line 681
+    .line 682
     const v21, 0x1020001
 
     move-object/from16 v0, v18
@@ -2897,7 +2920,7 @@
 
     move-result-object v4
 
-    .line 682
+    .line 683
     .local v4, checkboxView:Landroid/view/View;
     move-object/from16 v0, v18
 
@@ -2905,7 +2928,7 @@
 
     move-result v20
 
-    .line 684
+    .line 685
     .local v20, x:I
     new-instance v8, Lcom/htc/widget/HtcCheckBox;
 
@@ -2917,7 +2940,7 @@
 
     invoke-direct {v8, v0}, Lcom/htc/widget/HtcCheckBox;-><init>(Landroid/content/Context;)V
 
-    .line 685
+    .line 686
     .local v8, newCheckbox:Lcom/htc/widget/HtcCheckBox;
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -2927,7 +2950,7 @@
 
     invoke-virtual {v8, v0}, Lcom/htc/widget/HtcCheckBox;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 686
+    .line 687
     invoke-virtual {v4}, Landroid/view/View;->getId()I
 
     move-result v21
@@ -2936,19 +2959,19 @@
 
     invoke-virtual {v8, v0}, Lcom/htc/widget/HtcCheckBox;->setId(I)V
 
-    .line 688
+    .line 689
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 689
+    .line 690
     move-object/from16 v0, v18
 
     move/from16 v1, v20
 
     invoke-virtual {v0, v8, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    .line 690
+    .line 691
     new-instance v21, Landroid/widget/LinearLayout$LayoutParams;
 
     const/16 v22, -0x2
@@ -2962,23 +2985,6 @@
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 691
-    const v21, 0x1020001
-
-    move-object/from16 v0, v18
-
-    move/from16 v1, v21
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v21
-
-    check-cast v21, Lcom/htc/widget/HtcCheckBox;
-
-    const/16 v22, 0x0
-
-    invoke-virtual/range {v21 .. v22}, Lcom/htc/widget/HtcCheckBox;->setClickable(Z)V
 
     .line 692
     const v21, 0x1020001
@@ -2995,121 +3001,34 @@
 
     const/16 v22, 0x0
 
-    invoke-virtual/range {v21 .. v22}, Lcom/htc/widget/HtcCheckBox;->setFocusable(Z)V
+    invoke-virtual/range {v21 .. v22}, Lcom/htc/widget/HtcCheckBox;->setClickable(Z)V
 
-    .line 701
-    .end local v4           #checkboxView:Landroid/view/View;
-    .end local v8           #newCheckbox:Lcom/htc/widget/HtcCheckBox;
-    .end local v18           #widgetFrame:Landroid/view/ViewGroup;
-    .end local v20           #x:I
-    :cond_4
-    :goto_0
-    const v21, 0x10202da
+    .line 693
+    const v21, 0x1020001
 
-    move/from16 v0, v21
-
-    invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v15
-
-    check-cast v15, Landroid/widget/Switch;
-
-    .line 702
-    .local v15, switchwidget:Landroid/widget/Switch;
-    if-eqz v15, :cond_5
-
-    .line 704
-    const-string v21, "HTCPreference"
-
-    const-string v22, "switchwidget!=null"
-
-    invoke-static/range {v21 .. v22}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 705
-    new-instance v17, Lcom/htc/widget/HtcToggleButton;
-
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/preference/HtcPreference;->mContext:Landroid/content/Context;
-
-    move-object/from16 v21, v0
-
-    move-object/from16 v0, v17
-
-    move-object/from16 v1, v21
-
-    invoke-direct {v0, v1}, Lcom/htc/widget/HtcToggleButton;-><init>(Landroid/content/Context;)V
-
-    .line 706
-    .local v17, toggleButton:Lcom/htc/widget/HtcToggleButton;
-    const/16 v21, 0x0
-
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     move/from16 v1, v21
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButton;->setClickable(Z)V
-
-    .line 707
-    const/16 v21, 0x0
-
-    move-object/from16 v0, v17
-
-    move/from16 v1, v21
-
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButton;->setFocusable(Z)V
-
-    .line 708
-    const v21, 0x10202da
-
-    move-object/from16 v0, v17
-
-    move/from16 v1, v21
-
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButton;->setId(I)V
-
-    .line 716
-    const/16 v21, 0x8
-
-    move/from16 v0, v21
-
-    invoke-virtual {v15, v0}, Landroid/widget/Switch;->setVisibility(I)V
-
-    .line 717
-    invoke-virtual {v15}, Landroid/widget/Switch;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v21
 
-    check-cast v21, Landroid/view/ViewGroup;
+    check-cast v21, Lcom/htc/widget/HtcCheckBox;
 
-    move-object/from16 v0, v21
+    const/16 v22, 0x0
 
-    invoke-virtual {v0, v15}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+    invoke-virtual/range {v21 .. v22}, Lcom/htc/widget/HtcCheckBox;->setFocusable(Z)V
 
-    move-result v20
+    .line 694
+    invoke-virtual/range {v18 .. v18}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 718
-    .restart local v20       #x:I
-    invoke-virtual {v15}, Landroid/widget/Switch;->getParent()Landroid/view/ViewParent;
+    move-result-object v9
 
-    move-result-object v14
+    check-cast v9, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    check-cast v14, Landroid/view/ViewGroup;
-
-    .line 720
-    .local v14, switchParent:Landroid/view/ViewGroup;
-    move/from16 v0, v20
-
-    invoke-virtual {v14, v0}, Landroid/view/ViewGroup;->removeViewAt(I)V
-
-    .line 721
-    move-object/from16 v0, v17
-
-    move/from16 v1, v20
-
-    invoke-virtual {v14, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    .line 724
+    .line 695
+    .restart local v9       #param:Landroid/view/ViewGroup$MarginLayoutParams;
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/preference/HtcPreference;->margin_m:I
@@ -3130,16 +3049,149 @@
 
     move/from16 v3, v24
 
-    invoke-virtual {v5, v0, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {v9, v0, v1, v2, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    .line 727
+    .line 696
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v9}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 705
+    .end local v4           #checkboxView:Landroid/view/View;
+    .end local v8           #newCheckbox:Lcom/htc/widget/HtcCheckBox;
+    .end local v9           #param:Landroid/view/ViewGroup$MarginLayoutParams;
+    .end local v18           #widgetFrame:Landroid/view/ViewGroup;
+    .end local v20           #x:I
+    :cond_4
+    :goto_0
+    const v21, 0x10202da
+
+    move/from16 v0, v21
+
+    invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v15
+
+    check-cast v15, Landroid/widget/Switch;
+
+    .line 706
+    .local v15, switchwidget:Landroid/widget/Switch;
+    if-eqz v15, :cond_5
+
+    .line 708
+    const-string v21, "HTCPreference"
+
+    const-string v22, "switchwidget!=null"
+
+    invoke-static/range {v21 .. v22}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 709
+    new-instance v17, Lcom/htc/widget/HtcToggleButton;
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/preference/HtcPreference;->mContext:Landroid/content/Context;
+
+    move-object/from16 v21, v0
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v21
+
+    invoke-direct {v0, v1}, Lcom/htc/widget/HtcToggleButton;-><init>(Landroid/content/Context;)V
+
+    .line 710
+    .local v17, toggleButton:Lcom/htc/widget/HtcToggleButton;
+    const/16 v21, 0x0
+
+    move-object/from16 v0, v17
+
+    move/from16 v1, v21
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButton;->setClickable(Z)V
+
+    .line 711
+    const/16 v21, 0x0
+
+    move-object/from16 v0, v17
+
+    move/from16 v1, v21
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButton;->setFocusable(Z)V
+
+    .line 712
+    const v21, 0x10202da
+
+    move-object/from16 v0, v17
+
+    move/from16 v1, v21
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButton;->setId(I)V
+
+    .line 720
+    const/16 v21, 0x8
+
+    move/from16 v0, v21
+
+    invoke-virtual {v15, v0}, Landroid/widget/Switch;->setVisibility(I)V
+
+    .line 721
+    invoke-virtual {v15}, Landroid/widget/Switch;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v21
+
+    check-cast v21, Landroid/view/ViewGroup;
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v0, v15}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+
+    move-result v20
+
+    .line 722
+    .restart local v20       #x:I
+    invoke-virtual {v15}, Landroid/widget/Switch;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v14
+
+    check-cast v14, Landroid/view/ViewGroup;
+
+    .line 724
+    .local v14, switchParent:Landroid/view/ViewGroup;
+    move/from16 v0, v20
+
+    invoke-virtual {v14, v0}, Landroid/view/ViewGroup;->removeViewAt(I)V
+
+    .line 725
+    move-object/from16 v0, v17
+
+    move/from16 v1, v20
+
+    invoke-virtual {v14, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+
+    .line 728
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/preference/HtcPreference;->margin_m:I
+
+    move/from16 v21, v0
+
+    const/16 v22, 0x0
+
+    move/from16 v0, v21
+
+    move/from16 v1, v22
+
+    invoke-virtual {v5, v0, v12, v1, v7}, Landroid/view/View;->setPadding(IIII)V
+
+    .line 731
     .end local v14           #switchParent:Landroid/view/ViewGroup;
     .end local v17           #toggleButton:Lcom/htc/widget/HtcToggleButton;
     .end local v20           #x:I
     :cond_5
     return-object v5
 
-    .line 694
+    .line 698
     .end local v15           #switchwidget:Landroid/widget/Switch;
     .restart local v18       #widgetFrame:Landroid/view/ViewGroup;
     :cond_6
@@ -3151,7 +3203,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
 .method public onDependencyChanged(Lcom/htc/preference/HtcPreference;Z)V
@@ -3160,12 +3212,12 @@
     .parameter "disableDependent"
 
     .prologue
-    .line 1728
+    .line 1732
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mDependencyMet:Z
 
     if-ne v0, p2, :cond_0
 
-    .line 1729
+    .line 1733
     if-nez p2, :cond_1
 
     const/4 v0, 0x1
@@ -3173,21 +3225,21 @@
     :goto_0
     iput-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mDependencyMet:Z
 
-    .line 1732
+    .line 1736
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldDisableDependents()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreference;->notifyDependencyChange(Z)V
 
-    .line 1734
+    .line 1738
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 1736
+    .line 1740
     :cond_0
     return-void
 
-    .line 1729
+    .line 1733
     :cond_1
     const/4 v0, 0x0
 
@@ -3213,7 +3265,7 @@
     .parameter "event"
 
     .prologue
-    .line 1446
+    .line 1450
     const/4 v0, 0x0
 
     return v0
@@ -3223,10 +3275,10 @@
     .locals 0
 
     .prologue
-    .line 1779
+    .line 1783
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->unregisterDependency()V
 
-    .line 1780
+    .line 1784
     return-void
 .end method
 
@@ -3235,19 +3287,19 @@
     .parameter "state"
 
     .prologue
-    .line 2296
+    .line 2294
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mBaseMethodCalled:Z
 
-    .line 2297
+    .line 2295
     sget-object v0, Lcom/htc/preference/HtcPreference$BaseSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
     if-eq p1, v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 2298
+    .line 2296
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Wrong state class -- expecting Preference State"
@@ -3256,7 +3308,7 @@
 
     throw v0
 
-    .line 2300
+    .line 2298
     :cond_0
     return-void
 .end method
@@ -3265,12 +3317,12 @@
     .locals 1
 
     .prologue
-    .line 2237
+    .line 2235
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mBaseMethodCalled:Z
 
-    .line 2238
+    .line 2236
     sget-object v0, Lcom/htc/preference/HtcPreference$BaseSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
     return-object v0
@@ -3282,7 +3334,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 1823
+    .line 1827
     return-void
 .end method
 
@@ -3301,23 +3353,23 @@
     .parameter "preferenceScreen"
 
     .prologue
-    .line 1412
+    .line 1416
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->isEnabled()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 1436
+    .line 1440
     :cond_0
     :goto_0
     return-void
 
-    .line 1416
+    .line 1420
     :cond_1
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->onClick()V
 
-    .line 1418
+    .line 1422
     iget-object v3, p0, Lcom/htc/preference/HtcPreference;->mOnClickListener:Lcom/htc/preference/HtcPreference$OnPreferenceClickListener;
 
     if-eqz v3, :cond_2
@@ -3330,22 +3382,22 @@
 
     if-nez v3, :cond_0
 
-    .line 1422
+    .line 1426
     :cond_2
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
 
     move-result-object v2
 
-    .line 1423
+    .line 1427
     .local v2, preferenceManager:Lcom/htc/preference/HtcPreferenceManager;
     if-eqz v2, :cond_3
 
-    .line 1424
+    .line 1428
     invoke-virtual {v2}, Lcom/htc/preference/HtcPreferenceManager;->getOnPreferenceTreeClickListener()Lcom/htc/preference/HtcPreferenceManager$OnPreferenceTreeClickListener;
 
     move-result-object v1
 
-    .line 1426
+    .line 1430
     .local v1, listener:Lcom/htc/preference/HtcPreferenceManager$OnPreferenceTreeClickListener;
     if-eqz p1, :cond_3
 
@@ -3357,19 +3409,19 @@
 
     if-nez v3, :cond_0
 
-    .line 1432
+    .line 1436
     .end local v1           #listener:Lcom/htc/preference/HtcPreferenceManager$OnPreferenceTreeClickListener;
     :cond_3
     iget-object v3, p0, Lcom/htc/preference/HtcPreference;->mIntent:Landroid/content/Intent;
 
     if-eqz v3, :cond_0
 
-    .line 1433
+    .line 1437
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 1434
+    .line 1438
     .local v0, context:Landroid/content/Context;
     iget-object v3, p0, Lcom/htc/preference/HtcPreference;->mIntent:Landroid/content/Intent;
 
@@ -3387,14 +3439,14 @@
 
     const/4 v2, 0x1
 
-    .line 2110
+    .line 2108
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 2111
+    .line 2109
     if-nez p1, :cond_0
 
     move v1, v2
@@ -3406,11 +3458,11 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 2121
+    .line 2119
     :goto_0
     return v2
 
-    .line 2116
+    .line 2114
     :cond_1
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
@@ -3418,13 +3470,13 @@
 
     move-result-object v0
 
-    .line 2117
+    .line 2115
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     iget-object v1, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 2118
+    .line 2116
     invoke-direct {p0, v0}, Lcom/htc/preference/HtcPreference;->tryCommit(Landroid/content/SharedPreferences$Editor;)V
 
     goto :goto_0
@@ -3433,7 +3485,7 @@
     :cond_2
     move v2, v1
 
-    .line 2121
+    .line 2119
     goto :goto_0
 .end method
 
@@ -3444,14 +3496,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2010
+    .line 2008
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 2011
+    .line 2009
     const/high16 v2, 0x7fc0
 
     invoke-virtual {p0, v2}, Lcom/htc/preference/HtcPreference;->getPersistedFloat(F)F
@@ -3462,11 +3514,11 @@
 
     if-nez v2, :cond_0
 
-    .line 2021
+    .line 2019
     :goto_0
     return v1
 
-    .line 2016
+    .line 2014
     :cond_0
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
@@ -3474,18 +3526,18 @@
 
     move-result-object v0
 
-    .line 2017
+    .line 2015
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 2018
+    .line 2016
     invoke-direct {p0, v0}, Lcom/htc/preference/HtcPreference;->tryCommit(Landroid/content/SharedPreferences$Editor;)V
 
     goto :goto_0
 
-    .line 2021
+    .line 2019
     .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
     :cond_1
     const/4 v1, 0x0
@@ -3500,14 +3552,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1958
+    .line 1959
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1959
+    .line 1960
     xor-int/lit8 v2, p1, -0x1
 
     invoke-virtual {p0, v2}, Lcom/htc/preference/HtcPreference;->getPersistedInt(I)I
@@ -3516,11 +3568,11 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 1969
+    .line 1970
     :goto_0
     return v1
 
-    .line 1964
+    .line 1965
     :cond_0
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
@@ -3528,18 +3580,18 @@
 
     move-result-object v0
 
-    .line 1965
+    .line 1966
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1966
+    .line 1967
     invoke-direct {p0, v0}, Lcom/htc/preference/HtcPreference;->tryCommit(Landroid/content/SharedPreferences$Editor;)V
 
     goto :goto_0
 
-    .line 1969
+    .line 1970
     .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
     :cond_1
     const/4 v1, 0x0
@@ -3554,14 +3606,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2062
+    .line 2060
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 2063
+    .line 2061
     const-wide/16 v2, -0x1
 
     xor-long/2addr v2, p1
@@ -3574,11 +3626,11 @@
 
     if-nez v2, :cond_0
 
-    .line 2073
+    .line 2071
     :goto_0
     return v1
 
-    .line 2068
+    .line 2066
     :cond_0
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
@@ -3586,18 +3638,18 @@
 
     move-result-object v0
 
-    .line 2069
+    .line 2067
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-interface {v0, v2, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    .line 2070
+    .line 2068
     invoke-direct {p0, v0}, Lcom/htc/preference/HtcPreference;->tryCommit(Landroid/content/SharedPreferences$Editor;)V
 
     goto :goto_0
 
-    .line 2073
+    .line 2071
     .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
     :cond_1
     const/4 v1, 0x0
@@ -3612,14 +3664,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1852
+    .line 1856
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1854
+    .line 1858
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Lcom/htc/preference/HtcPreference;->getPersistedString(Ljava/lang/String;)Ljava/lang/String;
@@ -3628,11 +3680,11 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 1864
+    .line 1868
     :goto_0
     return v1
 
-    .line 1859
+    .line 1863
     :cond_0
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
@@ -3640,18 +3692,18 @@
 
     move-result-object v0
 
-    .line 1860
+    .line 1864
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 1861
+    .line 1865
     invoke-direct {p0, v0}, Lcom/htc/preference/HtcPreference;->tryCommit(Landroid/content/SharedPreferences$Editor;)V
 
     goto :goto_0
 
-    .line 1864
+    .line 1868
     .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
     :cond_1
     const/4 v1, 0x0
@@ -3676,14 +3728,14 @@
     .local p1, values:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v1, 0x1
 
-    .line 1904
+    .line 1908
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldPersist()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1906
+    .line 1910
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Lcom/htc/preference/HtcPreference;->getPersistedStringSet(Ljava/util/Set;)Ljava/util/Set;
@@ -3696,11 +3748,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 1916
+    .line 1920
     :goto_0
     return v1
 
-    .line 1911
+    .line 1915
     :cond_0
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
@@ -3708,18 +3760,18 @@
 
     move-result-object v0
 
-    .line 1912
+    .line 1916
     .local v0, editor:Landroid/content/SharedPreferences$Editor;
     iget-object v2, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
 
-    .line 1913
+    .line 1917
     invoke-direct {p0, v0}, Lcom/htc/preference/HtcPreference;->tryCommit(Landroid/content/SharedPreferences$Editor;)V
 
     goto :goto_0
 
-    .line 1916
+    .line 1920
     .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
     :cond_1
     const/4 v1, 0x0
@@ -3731,12 +3783,12 @@
     .locals 2
 
     .prologue
-    .line 1260
+    .line 1264
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 1261
+    .line 1265
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Preference does not have a key assigned."
@@ -3745,13 +3797,13 @@
 
     throw v0
 
-    .line 1264
+    .line 1268
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mRequiresKey:Z
 
-    .line 1265
+    .line 1269
     return-void
 .end method
 
@@ -3760,10 +3812,10 @@
     .parameter "container"
 
     .prologue
-    .line 2254
+    .line 2252
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcPreference;->dispatchRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 2255
+    .line 2253
     return-void
 .end method
 
@@ -3772,10 +3824,10 @@
     .parameter "container"
 
     .prologue
-    .line 2193
+    .line 2191
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcPreference;->dispatchSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 2194
+    .line 2192
     return-void
 .end method
 
@@ -3784,23 +3836,23 @@
     .parameter "action"
 
     .prologue
-    .line 841
+    .line 845
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIntent:Landroid/content/Intent;
 
     if-nez v0, :cond_0
 
-    .line 842
+    .line 846
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/htc/preference/HtcPreference;->mIntent:Landroid/content/Intent;
 
-    .line 846
+    .line 850
     :goto_0
     return-void
 
-    .line 844
+    .line 848
     :cond_0
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIntent:Landroid/content/Intent;
 
@@ -3814,10 +3866,10 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 1790
+    .line 1794
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mDefaultValue:Ljava/lang/Object;
 
-    .line 1791
+    .line 1795
     return-void
 .end method
 
@@ -3826,16 +3878,16 @@
     .parameter "dependencyKey"
 
     .prologue
-    .line 1756
+    .line 1760
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->unregisterDependency()V
 
-    .line 1759
+    .line 1763
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mDependencyKey:Ljava/lang/String;
 
-    .line 1760
+    .line 1764
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->registerDependency()V
 
-    .line 1761
+    .line 1765
     return-void
 .end method
 
@@ -3844,25 +3896,25 @@
     .parameter "enabled"
 
     .prologue
-    .line 1136
+    .line 1140
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mEnabled:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 1137
+    .line 1141
     iput-boolean p1, p0, Lcom/htc/preference/HtcPreference;->mEnabled:Z
 
-    .line 1140
+    .line 1144
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->shouldDisableDependents()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreference;->notifyDependencyChange(Z)V
 
-    .line 1142
+    .line 1146
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 1144
+    .line 1148
     :cond_0
     return-void
 .end method
@@ -3884,10 +3936,10 @@
     .parameter "iconResId"
 
     .prologue
-    .line 1083
+    .line 1087
     iput p1, p0, Lcom/htc/preference/HtcPreference;->mIconResId:I
 
-    .line 1084
+    .line 1088
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -3900,7 +3952,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1085
+    .line 1089
     return-void
 .end method
 
@@ -3909,7 +3961,7 @@
     .parameter "icon"
 
     .prologue
-    .line 1068
+    .line 1072
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
@@ -3923,22 +3975,22 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 1069
+    .line 1073
     :cond_1
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 1070
+    .line 1074
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mIconVisibility:Z
 
-    .line 1071
+    .line 1075
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->syncIconDrawable()Z
 
-    .line 1072
+    .line 1076
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 1074
+    .line 1078
     :cond_2
     return-void
 .end method
@@ -3948,21 +4000,21 @@
     .parameter "show"
 
     .prologue
-    .line 873
+    .line 877
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mIconVisibility:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 874
+    .line 878
     iput-boolean p1, p0, Lcom/htc/preference/HtcPreference;->mIconVisibility:Z
 
-    .line 875
+    .line 879
     invoke-direct {p0}, Lcom/htc/preference/HtcPreference;->syncIconVisibility()Z
 
-    .line 876
+    .line 880
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 878
+    .line 882
     :cond_0
     return-void
 .end method
@@ -3984,10 +4036,10 @@
     .parameter "key"
 
     .prologue
-    .line 1235
+    .line 1239
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mKey:Ljava/lang/String;
 
-    .line 1237
+    .line 1241
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mRequiresKey:Z
 
     if-eqz v0, :cond_0
@@ -3998,10 +4050,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1238
+    .line 1242
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->requireKey()V
 
-    .line 1240
+    .line 1244
     :cond_0
     return-void
 .end method
@@ -4034,10 +4086,10 @@
     .parameter "listener"
 
     .prologue
-    .line 1566
+    .line 1570
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeInternalListener;
 
-    .line 1567
+    .line 1571
     return-void
 .end method
 
@@ -4046,10 +4098,10 @@
     .parameter "onPreferenceChangeListener"
 
     .prologue
-    .line 1364
+    .line 1368
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mOnChangeListener:Lcom/htc/preference/HtcPreference$OnPreferenceChangeListener;
 
-    .line 1365
+    .line 1369
     return-void
 .end method
 
@@ -4058,10 +4110,10 @@
     .parameter "onPreferenceClickListener"
 
     .prologue
-    .line 1387
+    .line 1391
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mOnClickListener:Lcom/htc/preference/HtcPreference$OnPreferenceClickListener;
 
-    .line 1388
+    .line 1392
     return-void
 .end method
 
@@ -4070,10 +4122,10 @@
     .parameter "listener"
 
     .prologue
-    .line 1339
+    .line 1343
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mOnFirstBindViewListener:Lcom/htc/preference/HtcPreference$OnPreferenceFirstBindViewListener;
 
-    .line 1340
+    .line 1344
     return-void
 .end method
 
@@ -4082,18 +4134,18 @@
     .parameter "order"
 
     .prologue
-    .line 992
+    .line 996
     iget v0, p0, Lcom/htc/preference/HtcPreference;->mOrder:I
 
     if-eq p1, v0, :cond_0
 
-    .line 993
+    .line 997
     iput p1, p0, Lcom/htc/preference/HtcPreference;->mOrder:I
 
-    .line 996
+    .line 1000
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyHierarchyChanged()V
 
-    .line 998
+    .line 1002
     :cond_0
     return-void
 .end method
@@ -4103,10 +4155,10 @@
     .parameter "persistent"
 
     .prologue
-    .line 1315
+    .line 1319
     iput-boolean p1, p0, Lcom/htc/preference/HtcPreference;->mPersistent:Z
 
-    .line 1316
+    .line 1320
     return-void
 .end method
 
@@ -4115,18 +4167,18 @@
     .parameter "selectable"
 
     .prologue
-    .line 1161
+    .line 1165
     iget-boolean v0, p0, Lcom/htc/preference/HtcPreference;->mSelectable:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 1162
+    .line 1166
     iput-boolean p1, p0, Lcom/htc/preference/HtcPreference;->mSelectable:Z
 
-    .line 1163
+    .line 1167
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 1165
+    .line 1169
     :cond_0
     return-void
 .end method
@@ -4136,13 +4188,13 @@
     .parameter "shouldDisableView"
 
     .prologue
-    .line 1192
+    .line 1196
     iput-boolean p1, p0, Lcom/htc/preference/HtcPreference;->mShouldDisableView:Z
 
-    .line 1193
+    .line 1197
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 1194
+    .line 1198
     return-void
 .end method
 
@@ -4151,7 +4203,7 @@
     .parameter "summaryResId"
 
     .prologue
-    .line 1126
+    .line 1130
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -4160,7 +4212,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 1127
+    .line 1131
     return-void
 .end method
 
@@ -4169,7 +4221,7 @@
     .parameter "summary"
 
     .prologue
-    .line 1113
+    .line 1117
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mSummary:Ljava/lang/CharSequence;
@@ -4187,14 +4239,14 @@
 
     if-nez v0, :cond_2
 
-    .line 1114
+    .line 1118
     :cond_1
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mSummary:Ljava/lang/CharSequence;
 
-    .line 1115
+    .line 1119
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 1117
+    .line 1121
     :cond_2
     return-void
 .end method
@@ -4204,7 +4256,7 @@
     .parameter "titleResId"
 
     .prologue
-    .line 1034
+    .line 1038
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -4213,10 +4265,10 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 1035
+    .line 1039
     iput p1, p0, Lcom/htc/preference/HtcPreference;->mTitleRes:I
 
-    .line 1036
+    .line 1040
     return-void
 .end method
 
@@ -4225,7 +4277,7 @@
     .parameter "title"
 
     .prologue
-    .line 1020
+    .line 1024
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mTitle:Ljava/lang/CharSequence;
@@ -4243,19 +4295,19 @@
 
     if-nez v0, :cond_2
 
-    .line 1021
+    .line 1025
     :cond_1
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/preference/HtcPreference;->mTitleRes:I
 
-    .line 1022
+    .line 1026
     iput-object p1, p0, Lcom/htc/preference/HtcPreference;->mTitle:Ljava/lang/CharSequence;
 
-    .line 1023
+    .line 1027
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->notifyChanged()V
 
-    .line 1025
+    .line 1029
     :cond_2
     return-void
 .end method
@@ -4287,15 +4339,15 @@
     .locals 1
 
     .prologue
-    .line 1530
+    .line 1534
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
     if-nez v0, :cond_0
 
-    .line 1531
+    .line 1535
     const/4 v0, 0x0
 
-    .line 1534
+    .line 1538
     :goto_0
     return v0
 
@@ -4313,7 +4365,7 @@
     .locals 1
 
     .prologue
-    .line 1745
+    .line 1749
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->isEnabled()Z
 
     move-result v0
@@ -4335,7 +4387,7 @@
     .locals 1
 
     .prologue
-    .line 1304
+    .line 1308
     iget-object v0, p0, Lcom/htc/preference/HtcPreference;->mPreferenceManager:Lcom/htc/preference/HtcPreferenceManager;
 
     if-eqz v0, :cond_0
@@ -4367,7 +4419,7 @@
     .locals 1
 
     .prologue
-    .line 2149
+    .line 2147
     invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getFilterableStringBuilder()Ljava/lang/StringBuilder;
 
     move-result-object v0

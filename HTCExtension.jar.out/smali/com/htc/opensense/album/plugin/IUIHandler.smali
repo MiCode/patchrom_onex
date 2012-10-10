@@ -10,6 +10,8 @@
 
 .field public static final UICMD_DELETE_PARAM_END:I = 0x1
 
+.field public static final UICMD_DELETE_PARAM_LAUNCH:I = -0x1
+
 .field public static final UICMD_ENTER_DELETEPICKER_MODE:I = 0x10200007
 
 .field public static final UICMD_ENTER_MULTIPICKER_MODE:I = 0x10200006
@@ -22,6 +24,8 @@
 
 .field public static final UICMD_PICKER_PARAM_END:I = 0x1
 
+.field public static final UICMD_PICKER_PARAM_LAUNCH:I = -0x1
+
 .field public static final UICMD_PICKER_RESULT:I = 0x10300001
 
 .field public static final UICMD_REFRESH:I = 0x10200001
@@ -32,6 +36,8 @@
 
 .field public static final UICMD_REFRESH_PARAM_ONLY_INVALIDATE:I = 0x2
 
+.field public static final UICMD_REFRESH_PARAM_UPDATE:I = -0x1
+
 .field public static final UICMD_SHOW_HIDE_DESCRIPTION:I = 0x10200003
 
 .field public static final UICMD_SHOW_HIDE_TAG:I = 0x10200004
@@ -41,6 +47,8 @@
 .field public static final UICMD_UPLOAD_PARAM_BEGIN:I = 0x0
 
 .field public static final UICMD_UPLOAD_PARAM_END:I = 0x1
+
+.field public static final UICMD_UPLOAD_PARAM_LAUNCH:I = -0x1
 
 .field public static final UICMD_UPLOAD_REQ:I = 0x10300003
 

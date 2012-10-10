@@ -70,7 +70,7 @@
 
     .line 63
     .local v0, res:Landroid/content/res/Resources;
-    const v1, 0x7f0b0039
+    const v1, 0x7f0b003a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

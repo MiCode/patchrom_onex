@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 479
+    .line 482
     iput-object p1, p0, Lcom/htc/music/widget/SharedAdapter$3;->val$choose_listener:Landroid/content/DialogInterface$OnClickListener;
 
     iput-object p2, p0, Lcom/htc/music/widget/SharedAdapter$3;->val$dialog:Landroid/app/Dialog;
@@ -50,13 +50,13 @@
     .parameter "id"
 
     .prologue
-    .line 481
+    .line 484
     iget-object v0, p0, Lcom/htc/music/widget/SharedAdapter$3;->val$choose_listener:Landroid/content/DialogInterface$OnClickListener;
 
     iget-object v1, p0, Lcom/htc/music/widget/SharedAdapter$3;->val$dialog:Landroid/app/Dialog;
 
     invoke-interface {v0, v1, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 483
+    .line 486
     return-void
 .end method

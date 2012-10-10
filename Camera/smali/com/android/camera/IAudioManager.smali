@@ -14,6 +14,8 @@
 
 .field public static final STREAM_RING:I = 0x2
 
+.field public static final STREAM_SYSTEM_ENFORCED:I = 0x7
+
 
 # virtual methods
 .method public abstract abandonAudioFocus()V

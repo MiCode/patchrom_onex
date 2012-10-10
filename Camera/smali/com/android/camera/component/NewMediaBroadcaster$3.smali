@@ -1,6 +1,9 @@
 .class Lcom/android/camera/component/NewMediaBroadcaster$3;
-.super Lcom/android/camera/trigger/Trigger;
+.super Ljava/lang/Object;
 .source "NewMediaBroadcaster.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -17,53 +20,60 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
+.field final synthetic val$cameraThread:Lcom/android/camera/CameraThread;
+
+.field final synthetic val$m_DeletedFinishedEventHandler:Lcom/android/camera/event/EventHandler;
+
+.field final synthetic val$m_MediaSavedFinishedEventHandler:Lcom/android/camera/event/EventHandler;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/component/NewMediaBroadcaster;Lcom/android/camera/property/Property;Ljava/lang/Object;)V
+.method constructor <init>(Lcom/android/camera/component/NewMediaBroadcaster;Lcom/android/camera/CameraThread;Lcom/android/camera/event/EventHandler;Lcom/android/camera/event/EventHandler;)V
     .locals 0
     .parameter
-    .parameter "x0"
-    .parameter "x1"
+    .parameter
+    .parameter
+    .parameter
 
     .prologue
-    .line 109
+    .line 94
     iput-object p1, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
-    invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
+    iput-object p2, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->val$cameraThread:Lcom/android/camera/CameraThread;
+
+    iput-object p3, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->val$m_MediaSavedFinishedEventHandler:Lcom/android/camera/event/EventHandler;
+
+    iput-object p4, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->val$m_DeletedFinishedEventHandler:Lcom/android/camera/event/EventHandler;
+
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected onEnter()V
+.method public run()V
     .locals 2
 
     .prologue
-    .line 113
-    iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
+    .line 98
+    iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->val$cameraThread:Lcom/android/camera/CameraThread;
 
-    invoke-virtual {v0}, Lcom/android/camera/component/NewMediaBroadcaster;->getCameraActivity()Lcom/android/camera/HTCCamera;
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->mediaSavedEvent:Lcom/android/camera/event/Event;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->val$m_MediaSavedFinishedEventHandler:Lcom/android/camera/event/EventHandler;
 
-    iget-object v0, v0, Lcom/android/camera/HTCCamera;->actionScreenCloseReason:Lcom/android/camera/property/Property;
+    invoke-virtual {v0, v1}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+    .line 99
+    iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->val$cameraThread:Lcom/android/camera/CameraThread;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->mediaDeletedEvent:Lcom/android/camera/event/Event;
 
-    sget-object v1, Lcom/android/camera/actionscreen/ActionScreenCloseReason;->DeleteMedia:Lcom/android/camera/actionscreen/ActionScreenCloseReason;
+    iget-object v1, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->val$m_DeletedFinishedEventHandler:Lcom/android/camera/event/EventHandler;
 
-    if-eq v0, v1, :cond_0
+    invoke-virtual {v0, v1}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 115
-    iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$3;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
-
-    #calls: Lcom/android/camera/component/NewMediaBroadcaster;->checkAndBroadcastIntent()V
-    invoke-static {v0}, Lcom/android/camera/component/NewMediaBroadcaster;->access$100(Lcom/android/camera/component/NewMediaBroadcaster;)V
-
-    .line 117
-    :cond_0
+    .line 100
     return-void
 .end method

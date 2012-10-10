@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1749
+    .line 1788
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1749
+    .line 1788
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;-><init>(Lcom/android/internal/policy/impl/PhoneWindow;)V
 
     return-void
@@ -57,18 +57,18 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1752
+    .line 1791
     invoke-virtual {p1}, Lcom/android/internal/view/menu/MenuBuilder;->getRootMenu()Lcom/android/internal/view/menu/MenuBuilder;
 
     move-result-object v2
 
-    .line 1753
+    .line 1792
     .local v2, parentMenu:Landroid/view/Menu;
     if-eq v2, p1, :cond_2
 
     move v0, v3
 
-    .line 1754
+    .line 1793
     .local v0, isSubMenu:Z
     :goto_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
@@ -83,14 +83,14 @@
 
     move-result-object v1
 
-    .line 1755
+    .line 1794
     .local v1, panel:Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
     if-eqz v1, :cond_1
 
-    .line 1756
+    .line 1795
     if-eqz v0, :cond_3
 
-    .line 1757
+    .line 1796
     iget-object v4, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     iget v5, v1, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->featureId:I
@@ -98,17 +98,17 @@
     #calls: Lcom/android/internal/policy/impl/PhoneWindow;->callOnPanelClosed(ILcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;Landroid/view/Menu;)V
     invoke-static {v4, v5, v1, v2}, Lcom/android/internal/policy/impl/PhoneWindow;->access$300(Lcom/android/internal/policy/impl/PhoneWindow;ILcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;Landroid/view/Menu;)V
 
-    .line 1758
+    .line 1797
     iget-object v4, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-virtual {v4, v1, v3}, Lcom/android/internal/policy/impl/PhoneWindow;->closePanel(Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;Z)V
 
-    .line 1765
+    .line 1804
     :cond_1
     :goto_1
     return-void
 
-    .line 1753
+    .line 1792
     .end local v0           #isSubMenu:Z
     .end local v1           #panel:Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
     .restart local p1
@@ -117,7 +117,7 @@
 
     goto :goto_0
 
-    .line 1762
+    .line 1801
     .end local p1
     .restart local v0       #isSubMenu:Z
     .restart local v1       #panel:Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;
@@ -136,7 +136,7 @@
     .prologue
     const/16 v2, 0x8
 
-    .line 1769
+    .line 1808
     if-nez p1, :cond_0
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
@@ -147,14 +147,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 1770
+    .line 1809
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelMenuPresenterCallback;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/PhoneWindow;->getCallback()Landroid/view/Window$Callback;
 
     move-result-object v0
 
-    .line 1771
+    .line 1810
     .local v0, cb:Landroid/view/Window$Callback;
     if-eqz v0, :cond_0
 
@@ -166,10 +166,10 @@
 
     if-nez v1, :cond_0
 
-    .line 1772
+    .line 1811
     invoke-interface {v0, v2, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
 
-    .line 1776
+    .line 1815
     .end local v0           #cb:Landroid/view/Window$Callback;
     :cond_0
     const/4 v1, 0x1

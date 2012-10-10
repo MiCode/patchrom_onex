@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">הוסף רשימת השמעה</string>
     <string name="htc_delete_playlists">מחק רשימות השמעה</string>
     <string name="htc_delete_playlist">מחק רשימות השמעה</string>
+    <string name="htc_delete_all_playlists">מחק את כל רשימות ההשמעה</string>
     <string name="htc_playlist_add_songs">הוסף שירים</string>
     <string name="htc_playlist_del_songs">מחק שירים</string>
     <string name="htc_playlist_remove_songs">הסר שירים</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">אוגר…</string>
     <string name="title_send_content">שולח תוכן...</string>
     <string name="no_downloaded_apps_found">לא נמצאו יישומים שהורדו</string>
+    <string name="music_folder_picker_dialog_msg">Add songs to playlists by selecting the folder? “No” to add songs the other way</string>
 </resources>

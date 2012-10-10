@@ -30,15 +30,15 @@
     .parameter "context"
 
     .prologue
-    .line 743
+    .line 780
     invoke-direct {p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;-><init>(Landroid/content/Context;)V
 
-    .line 744
+    .line 781
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mInfoOperators:[Lcom/htc/server/HtcInfoOperator;
 
     if-eqz v0, :cond_0
 
-    .line 745
+    .line 782
     new-instance v0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;
 
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mInfoOperators:[Lcom/htc/server/HtcInfoOperator;
@@ -47,11 +47,11 @@
 
     iput-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler;->mLocationLogger:Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;
 
-    .line 748
+    .line 785
     :goto_0
     return-void
 
-    .line 747
+    .line 784
     :cond_0
     const-string v0, "HtcDeviceInfoManager"
 
@@ -73,7 +73,7 @@
 
     const/4 v4, 0x0
 
-    .line 751
+    .line 788
     invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager;->access$500()D
 
     move-result-wide v0
@@ -84,7 +84,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 753
+    .line 790
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/htc/server/HtcInfoOperator;
@@ -103,7 +103,7 @@
 
     aput-object v1, v0, v5
 
-    .line 756
+    .line 793
     :goto_0
     return-object v0
 
@@ -126,28 +126,28 @@
     .parameter "msg"
 
     .prologue
-    .line 761
+    .line 798
     iget v4, p1, Landroid/os/Message;->what:I
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 800
+    .line 837
     invoke-super {p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->onHandleMessage(Landroid/os/Message;)V
 
-    .line 804
+    .line 841
     :cond_0
     :goto_0
     return-void
 
-    .line 765
+    .line 802
     :sswitch_0
     monitor-enter p0
 
-    .line 766
+    .line 803
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
-    .line 767
+    .line 804
     monitor-exit p0
 
     goto :goto_0
@@ -161,7 +161,7 @@
 
     throw v4
 
-    .line 773
+    .line 810
     :sswitch_1
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mInfoOperators:[Lcom/htc/server/HtcInfoOperator;
 
@@ -177,16 +177,16 @@
 
     aget-object v3, v0, v1
 
-    .line 774
+    .line 811
     .local v3, op:Lcom/htc/server/HtcInfoOperator;
     invoke-virtual {v3}, Lcom/htc/server/HtcInfoOperator;->logInstalledApp()V
 
-    .line 773
+    .line 810
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 780
+    .line 817
     .end local v0           #arr$:[Lcom/htc/server/HtcInfoOperator;
     .end local v1           #i$:I
     .end local v2           #len$:I
@@ -206,16 +206,16 @@
 
     aget-object v3, v0, v1
 
-    .line 781
+    .line 818
     .restart local v3       #op:Lcom/htc/server/HtcInfoOperator;
     invoke-virtual {v3}, Lcom/htc/server/HtcInfoOperator;->logSWInfoTime()V
 
-    .line 780
+    .line 817
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 787
+    .line 824
     .end local v0           #arr$:[Lcom/htc/server/HtcInfoOperator;
     .end local v1           #i$:I
     .end local v2           #len$:I
@@ -235,16 +235,16 @@
 
     aget-object v3, v0, v1
 
-    .line 788
+    .line 825
     .restart local v3       #op:Lcom/htc/server/HtcInfoOperator;
     invoke-virtual {v3}, Lcom/htc/server/HtcInfoOperator;->logHWInfoTime()V
 
-    .line 787
+    .line 824
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
-    .line 794
+    .line 831
     .end local v0           #arr$:[Lcom/htc/server/HtcInfoOperator;
     .end local v1           #i$:I
     .end local v2           #len$:I
@@ -254,14 +254,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 795
+    .line 832
     iget-object v4, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler;->mLocationLogger:Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;
 
     invoke-virtual {v4}, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;->log()V
 
     goto :goto_0
 
-    .line 761
+    .line 798
     :sswitch_data_0
     .sparse-switch
         0xc -> :sswitch_0
@@ -277,20 +277,20 @@
     .parameter "context"
 
     .prologue
-    .line 807
+    .line 844
     invoke-super {p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->setup(Landroid/content/Context;)V
 
-    .line 808
+    .line 845
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-static {p1, v0}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->registerDebugInfoReceiver(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 809
+    .line 846
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-static {p1, v0}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->registerExtraUsageReceiver(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 810
+    .line 847
     return-void
 .end method
 
@@ -300,14 +300,14 @@
     .prologue
     const/16 v3, 0xc
 
-    .line 813
+    .line 850
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 814
+    .line 851
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->hasMessages(I)Z
@@ -316,21 +316,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 815
+    .line 852
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 816
+    .line 853
     :cond_0
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 818
+    .line 855
     monitor-enter p0
 
-    .line 820
+    .line 857
     const-wide/16 v1, 0x2710
 
     :try_start_0
@@ -339,19 +339,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 824
+    .line 861
     :goto_0
     :try_start_1
     monitor-exit p0
 
-    .line 825
+    .line 862
     return-void
 
-    .line 821
+    .line 858
     :catch_0
     move-exception v0
 
-    .line 822
+    .line 859
     .local v0, e:Ljava/lang/InterruptedException;
     const-string v1, "HtcDeviceInfoManager"
 
@@ -381,7 +381,7 @@
 
     goto :goto_0
 
-    .line 824
+    .line 861
     .end local v0           #e:Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v1

@@ -29,12 +29,12 @@
     .parameter
 
     .prologue
-    .line 3168
+    .line 3524
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3170
+    .line 3526
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/app/FilePickerCore$14;->isScanning:Z
@@ -47,10 +47,10 @@
     .parameter "result"
 
     .prologue
-    .line 3173
+    .line 3529
     iput-boolean p1, p0, Lcom/htc/app/FilePickerCore$14;->isScanning:Z
 
-    .line 3174
+    .line 3530
     return-void
 .end method
 
@@ -60,7 +60,7 @@
     .locals 0
 
     .prologue
-    .line 3182
+    .line 3538
     return-void
 .end method
 
@@ -69,115 +69,116 @@
     .parameter "currentSearchedFileCount"
 
     .prologue
-    .line 3190
+    .line 3546
     return-void
 .end method
 
 .method public onFileScanEnd()V
-    .locals 6
+    .locals 5
 
     .prologue
-    const v5, 0x20200cc
+    const v4, 0x20200cc
 
-    .line 3193
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+    .line 3549
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
     #setter for: Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
-    invoke-static {v3, v4}, Lcom/htc/app/FilePickerCore;->access$4802(Lcom/htc/app/FilePickerCore;Z)Z
+    invoke-static {v2, v3}, Lcom/htc/app/FilePickerCore;->access$6502(Lcom/htc/app/FilePickerCore;Z)Z
 
-    .line 3194
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$4100(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/htc/app/FilePickerListAdapter;->getCount()I
-
-    move-result v1
-
-    .line 3196
-    .local v1, fileCount:I
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+    .line 3550
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$4100(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/htc/app/FilePickerListAdapter;->getFileCount()I
-
-    move-result v0
-
-    .line 3197
-    .local v0, count:I
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #calls: Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
-    invoke-static {v3, v0}, Lcom/htc/app/FilePickerCore;->access$4400(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5800(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
 
     move-result-object v2
 
-    .line 3198
-    .local v2, text:Ljava/lang/String;
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+    if-nez v2, :cond_0
 
-    #calls: Lcom/htc/app/FilePickerCore;->setListViewHeaderText(ILjava/lang/String;)V
-    invoke-static {v3, v5, v2}, Lcom/htc/app/FilePickerCore;->access$4500(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
+    .line 3562
+    :goto_0
+    return-void
 
-    .line 3199
-    const-string v3, "Tab_Type"
-
-    iget-object v4, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
-    invoke-static {v4}, Lcom/htc/app/FilePickerCore;->access$2900(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 3200
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
-
-    invoke-virtual {v3}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/app/Activity;->invalidateOptionsMenu()V
-
-    .line 3202
+    .line 3553
     :cond_0
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$4100(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5800(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/htc/app/FilePickerListAdapter;->getFileCount()I
+
+    move-result v0
+
+    .line 3554
+    .local v0, count:I
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #calls: Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
+    invoke-static {v2, v0}, Lcom/htc/app/FilePickerCore;->access$6100(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 3555
+    .local v1, text:Ljava/lang/String;
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #calls: Lcom/htc/app/FilePickerCore;->setListViewHeaderText(ILjava/lang/String;)V
+    invoke-static {v2, v4, v1}, Lcom/htc/app/FilePickerCore;->access$6200(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
+
+    .line 3556
+    const-string v2, "Tab_Type"
+
+    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #getter for: Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$4700(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
 
     move-result-object v3
 
-    const/4 v4, 0x3
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v4}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
+    move-result v2
 
-    .line 3203
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+    if-eqz v2, :cond_1
 
-    const/4 v4, 0x0
+    .line 3557
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
 
-    invoke-virtual {v3, v5, v4}, Lcom/htc/app/FilePickerCore;->setListViewHeaderAnimationEnabled(IZ)V
+    invoke-virtual {v2}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
-    .line 3204
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+    move-result-object v2
 
-    invoke-virtual {v3}, Lcom/htc/app/FilePickerCore;->setNoFileFoundTextOfTypeView()V
+    invoke-virtual {v2}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    .line 3205
-    return-void
+    .line 3559
+    :cond_1
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #getter for: Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5800(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+
+    move-result-object v2
+
+    const/4 v3, 0x3
+
+    invoke-virtual {v2, v3}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
+
+    .line 3560
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v4, v3}, Lcom/htc/app/FilePickerCore;->setListViewHeaderAnimationEnabled(IZ)V
+
+    .line 3561
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$14;->this$0:Lcom/htc/app/FilePickerCore;
+
+    invoke-virtual {v2}, Lcom/htc/app/FilePickerCore;->setNoFileFoundTextOfTypeView()V
+
+    goto :goto_0
 .end method

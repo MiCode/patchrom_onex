@@ -1564,7 +1564,21 @@
 
     .line 1673
     .local v1, displayFrame:Landroid/graphics/Rect;
-    invoke-virtual {p1, v1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+    iget-object v7, p0, Lcom/htc/widget/PopupBubbleWindow;->mContext:Landroid/content/Context;
+
+    const-string v8, "window"
+
+    invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/view/WindowManager;
+
+    invoke-interface {v7}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v1}, Landroid/view/Display;->getRectSize(Landroid/graphics/Rect;)V
 
     .line 1675
     invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
@@ -2336,9 +2350,21 @@
 
     .line 1530
     .local v2, displayFrame:Landroid/graphics/Rect;
-    move-object/from16 v0, p1
+    iget-object v11, p0, Lcom/htc/widget/PopupBubbleWindow;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+    const-string v12, "window"
+
+    invoke-virtual {v11, v12}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Landroid/view/WindowManager;
+
+    invoke-interface {v11}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v2}, Landroid/view/Display;->getRectSize(Landroid/graphics/Rect;)V
 
     .line 1532
     iget v11, p0, Lcom/htc/widget/PopupBubbleWindow;->mExpandDirection:I
@@ -3969,29 +3995,15 @@
     .line 1890
     iget v4, p1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    iget v5, v2, Landroid/view/WindowManager$LayoutParams;->width:I
-
-    iget v6, p1, Landroid/view/WindowManager$LayoutParams;->width:I
-
-    sub-int/2addr v5, v6
-
-    sub-int/2addr v4, v5
-
-    iget v5, p0, Lcom/htc/widget/PopupBubbleWindow;->mBubbleImageOffset:I
-
-    mul-int/lit8 v5, v5, 0x2
-
-    add-int/2addr v4, v5
-
-    iget v5, p0, Lcom/htc/widget/PopupBubbleWindow;->mTriangledOffset:I
-
-    sub-int/2addr v4, v5
+    sub-int/2addr v4, v0
 
     iput v4, v2, Landroid/view/WindowManager$LayoutParams;->x:I
 
     goto/16 :goto_0
 
     .line 1860
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

@@ -27,13 +27,13 @@
     .parameter "cr"
 
     .prologue
-    .line 653
+    .line 658
     iput-object p1, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
-    .line 654
+    .line 659
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 657
+    .line 662
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->mTrackColumn:[Ljava/lang/String;
 
-    .line 655
+    .line 660
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 660
+    .line 665
     const/4 v1, 0x0
 
     sget-object v3, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
@@ -75,7 +75,7 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 662
+    .line 667
     return-void
 .end method
 
@@ -88,17 +88,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 666
+    .line 671
     const-string v1, "[MiniPlayer]"
 
     const-string v2, "[onQueryComplete]"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 668
+    .line 673
     if-eqz p3, :cond_2
 
-    .line 669
+    .line 674
     iget-object v1, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-interface {p3}, Landroid/database/Cursor;->getCount()I
@@ -112,7 +112,7 @@
     :cond_0
     iput-boolean v0, v1, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 670
+    .line 675
     const-string v0, "[MiniPlayer]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -139,10 +139,10 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 671
+    .line 676
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 676
+    .line 681
     :goto_0
     const-string v0, "[MiniPlayer]"
 
@@ -170,14 +170,14 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 677
+    .line 682
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
     iget-boolean v0, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
     if-eqz v0, :cond_1
 
-    .line 678
+    .line 683
     iget-object v1, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
@@ -190,7 +190,7 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0701ca
+    const v0, 0x7f0701cb
 
     :goto_1
     invoke-virtual {v2, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -199,27 +199,27 @@
 
     invoke-virtual {v1, v0}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 680
+    .line 685
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
-    iget-object v0, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v0, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v0, :cond_1
 
-    .line 681
+    .line 686
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
-    iget-object v0, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v0, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 684
+    .line 689
     :cond_1
     return-void
 
-    .line 673
+    .line 678
     :cond_2
     iget-object v1, p0, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
@@ -227,7 +227,7 @@
 
     goto :goto_0
 
-    .line 678
+    .line 683
     :cond_3
     const v0, 0x7f070001
 

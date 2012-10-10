@@ -379,7 +379,7 @@
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1274
-    const-string/jumbo v1, "lastDate"
+    const-string v1, "lastDate"
 
     move-object/from16 v0, p1
 
@@ -435,7 +435,7 @@
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
     .line 1283
-    const-string/jumbo v1, "lastSynced"
+    const-string v1, "lastSynced"
 
     move-object/from16 v0, p1
 

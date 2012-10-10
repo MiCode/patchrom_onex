@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 237
+    .line 251
     iput-object p1, p0, Landroid/os/Looper$3;->val$windowManager:Landroid/view/IWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,27 +41,27 @@
     .locals 2
 
     .prologue
-    .line 239
+    .line 253
     iget-object v0, p0, Landroid/os/Looper$3;->val$windowManager:Landroid/view/IWindowManager;
 
     if-eqz v0, :cond_0
 
-    .line 241
+    .line 255
     :try_start_0
     iget-object v0, p0, Landroid/os/Looper$3;->val$windowManager:Landroid/view/IWindowManager;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Landroid/view/IWindowManager;->showMessageHandleViolation(Z)V
+    invoke-interface {v0, v1}, Landroid/view/IWindowManager;->showStrictModeViolation(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 245
+    .line 259
     :cond_0
     :goto_0
     return-void
 
-    .line 242
+    .line 256
     :catch_0
     move-exception v0
 

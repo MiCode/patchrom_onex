@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2045
+    .line 2052
     iput-object p1, p0, Lcom/htc/music/HtcMusic$InitialUIIdlehandler;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,21 +41,21 @@
     .locals 2
 
     .prologue
-    .line 2049
+    .line 2056
     iget-object v0, p0, Lcom/htc/music/HtcMusic$InitialUIIdlehandler;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$900(Lcom/htc/music/HtcMusic;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$1000(Lcom/htc/music/HtcMusic;)Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2050
+    .line 2057
     iget-object v0, p0, Lcom/htc/music/HtcMusic$InitialUIIdlehandler;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$900(Lcom/htc/music/HtcMusic;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$1000(Lcom/htc/music/HtcMusic;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2052
+    .line 2059
     :cond_0
     const/4 v0, 0x0
 

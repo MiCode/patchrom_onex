@@ -34,35 +34,35 @@
     .parameter "messageId"
 
     .prologue
-    .line 878
+    .line 889
     iput-object p1, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->this$0:Lcom/htc/util/mail/Folder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 874
+    .line 885
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->mMessageId:J
 
-    .line 875
+    .line 886
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->mWhereString:Ljava/lang/String;
 
-    .line 876
+    .line 887
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->isUsing:I
 
-    .line 879
+    .line 890
     iput-wide p2, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->mMessageId:J
 
-    .line 880
+    .line 891
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->isUsing:I
 
-    .line 881
+    .line 892
     return-void
 .end method
 
@@ -72,35 +72,35 @@
     .parameter "whereString"
 
     .prologue
-    .line 882
+    .line 893
     iput-object p1, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->this$0:Lcom/htc/util/mail/Folder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 874
+    .line 885
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->mMessageId:J
 
-    .line 875
+    .line 886
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->mWhereString:Ljava/lang/String;
 
-    .line 876
+    .line 887
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->isUsing:I
 
-    .line 883
+    .line 894
     iput-object p2, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->mWhereString:Ljava/lang/String;
 
-    .line 884
+    .line 895
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->isUsing:I
 
-    .line 885
+    .line 896
     return-void
 .end method
 
@@ -110,14 +110,14 @@
     .locals 3
 
     .prologue
-    .line 893
+    .line 904
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->isUsing:I
 
     if-ne v0, v1, :cond_1
 
-    .line 894
+    .line 905
     new-instance v0, Lcom/htc/util/mail/AsyncQueryMessageHandler;
 
     iget-object v1, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->this$0:Lcom/htc/util/mail/Folder;
@@ -137,12 +137,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/util/mail/AsyncQueryMessageHandler;->startQuery(J)V
 
-    .line 897
+    .line 908
     :cond_0
     :goto_0
     return-void
 
-    .line 895
+    .line 906
     :cond_1
     const/4 v0, 0x2
 
@@ -150,7 +150,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 896
+    .line 907
     new-instance v0, Lcom/htc/util/mail/AsyncQueryMessageHandler;
 
     iget-object v1, p0, Lcom/htc/util/mail/Folder$AsyncQueryRunnable;->this$0:Lcom/htc/util/mail/Folder;

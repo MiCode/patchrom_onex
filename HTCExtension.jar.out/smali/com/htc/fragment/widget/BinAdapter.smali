@@ -24,6 +24,8 @@
 
 
 # instance fields
+.field private alwaysSingleLine:Z
+
 .field eresources:Landroid/content/res/Resources;
 
 .field mAlternativeNameIndex:I
@@ -96,7 +98,7 @@
     .parameter "queryHandler"
 
     .prologue
-    .line 101
+    .line 111
     move-object v0, p0
 
     move-object v1, p1
@@ -111,36 +113,41 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/widget/SimpleCursorAdapter;-><init>(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V
 
-    .line 46
+    .line 49
     const/16 v0, 0x3e9
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mState:I
 
-    .line 51
+    .line 54
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mOwner:I
 
-    .line 53
+    .line 56
     new-instance v0, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
 
     invoke-direct {v0, p0}, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;-><init>(Lcom/htc/fragment/widget/BinAdapter;)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mRecycler:Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
 
-    .line 85
+    .line 87
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->eresources:Landroid/content/res/Resources;
 
-    .line 102
+    .line 90
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/htc/fragment/widget/BinAdapter;->alwaysSingleLine:Z
+
+    .line 112
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 103
+    .line 113
     const/4 v8, 0x0
 
     const/4 v9, 0x2
@@ -163,7 +170,7 @@
 
     invoke-virtual/range {v0 .. v9}, Lcom/htc/fragment/widget/BinAdapter;->inital(Landroid/content/Context;ILandroid/net/Uri;Landroid/database/Cursor;[Ljava/lang/String;[ILcom/htc/fragment/content/NotifyingAsyncQueryHandler;Lcom/htc/fragment/widget/CarouselModel;I)V
 
-    .line 104
+    .line 114
     return-void
 .end method
 
@@ -180,7 +187,7 @@
     .parameter "owner"
 
     .prologue
-    .line 108
+    .line 118
     move-object v0, p0
 
     move-object v1, p1
@@ -195,39 +202,44 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/widget/SimpleCursorAdapter;-><init>(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V
 
-    .line 46
+    .line 49
     const/16 v0, 0x3e9
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mState:I
 
-    .line 51
+    .line 54
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mOwner:I
 
-    .line 53
+    .line 56
     new-instance v0, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
 
     invoke-direct {v0, p0}, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;-><init>(Lcom/htc/fragment/widget/BinAdapter;)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mRecycler:Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
 
-    .line 85
+    .line 87
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->eresources:Landroid/content/res/Resources;
 
-    .line 109
+    .line 90
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/htc/fragment/widget/BinAdapter;->alwaysSingleLine:Z
+
+    .line 119
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 110
+    .line 120
     invoke-virtual/range {p0 .. p9}, Lcom/htc/fragment/widget/BinAdapter;->inital(Landroid/content/Context;ILandroid/net/Uri;Landroid/database/Cursor;[Ljava/lang/String;[ILcom/htc/fragment/content/NotifyingAsyncQueryHandler;Lcom/htc/fragment/widget/CarouselModel;I)V
 
-    .line 111
+    .line 121
     return-void
 .end method
 
@@ -236,10 +248,10 @@
     .parameter "cursor"
 
     .prologue
-    .line 138
+    .line 148
     if-eqz p1, :cond_0
 
-    .line 139
+    .line 149
     const-string v0, "_id"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -248,7 +260,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mIdIndex:I
 
-    .line 140
+    .line 150
     const-string v0, "task_tag"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -257,7 +269,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mTaskTagIndex:I
 
-    .line 141
+    .line 151
     const-string v0, "task_name"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -266,7 +278,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mTaskNameIndex:I
 
-    .line 142
+    .line 152
     const-string v0, "intent"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -275,7 +287,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mIntentIndex:I
 
-    .line 143
+    .line 153
     const-string v0, "res_package"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -284,7 +296,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mPackageIndex:I
 
-    .line 144
+    .line 154
     const-string v0, "icon_resource"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -293,7 +305,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mIconIndex:I
 
-    .line 145
+    .line 155
     const-string v0, "selected_icon_resource"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -302,7 +314,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mSelectedIconIndex:I
 
-    .line 146
+    .line 156
     const-string v0, "overlay_resource"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -311,7 +323,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mOverlayIndex:I
 
-    .line 147
+    .line 157
     const-string v0, "task_order"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -320,7 +332,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mTaskOrderIndex:I
 
-    .line 148
+    .line 158
     const-string v0, "is_host"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -329,7 +341,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mIsHostIndex:I
 
-    .line 149
+    .line 159
     const-string v0, "is_removable"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -338,7 +350,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mIsRemovableIndex:I
 
-    .line 150
+    .line 160
     const-string v0, "count_text"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -347,7 +359,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mCountTextIndex:I
 
-    .line 151
+    .line 161
     const-string v0, "count_text_visible"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -356,7 +368,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mCountTextVisibleIndex:I
 
-    .line 152
+    .line 162
     const-string v0, "alternative_name"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -365,7 +377,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mAlternativeNameIndex:I
 
-    .line 154
+    .line 164
     :cond_0
     return-void
 .end method
@@ -378,7 +390,7 @@
     .parameter "convertView"
 
     .prologue
-    .line 316
+    .line 324
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/fragment/widget/BinAdapter;->mDataValid:Z
@@ -387,7 +399,7 @@
 
     if-nez v20, :cond_0
 
-    .line 317
+    .line 325
     new-instance v20, Ljava/lang/IllegalStateException;
 
     const-string v21, "this should only be called when the cursor is valid"
@@ -396,11 +408,11 @@
 
     throw v20
 
-    .line 320
+    .line 328
     :cond_0
     if-nez p2, :cond_1
 
-    .line 321
+    .line 329
     new-instance v20, Ljava/lang/IllegalStateException;
 
     const-string v21, "convertView couldn\'t be null "
@@ -409,7 +421,7 @@
 
     throw v20
 
-    .line 323
+    .line 331
     :cond_1
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -417,15 +429,15 @@
 
     check-cast v6, Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;
 
-    .line 324
+    .line 332
     .local v6, cvh:Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;
     iget-object v8, v6, Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;->infoImage:Landroid/widget/ImageView;
 
-    .line 325
+    .line 333
     .local v8, infoImage:Landroid/widget/ImageView;
     iget-object v9, v6, Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;->infoText:Landroid/widget/TextView;
 
-    .line 326
+    .line 334
     .local v9, infoText:Landroid/widget/TextView;
     move-object/from16 v0, p0
 
@@ -441,7 +453,7 @@
 
     move-result-object v7
 
-    .line 327
+    .line 335
     .local v7, img:Landroid/graphics/drawable/Drawable;
     move-object/from16 v0, p0
 
@@ -457,23 +469,23 @@
 
     move-result-object v12
 
-    .line 328
+    .line 336
     .local v12, name:Ljava/lang/String;
     if-eqz v7, :cond_2
 
     if-eqz v12, :cond_2
 
-    .line 329
+    .line 337
     invoke-virtual {v8, v7}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 330
+    .line 338
     invoke-virtual {v9, v12}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 378
+    .line 384
     :goto_0
     return-void
 
-    .line 333
+    .line 341
     :cond_2
     move-object/from16 v0, p0
 
@@ -491,7 +503,7 @@
 
     if-nez v20, :cond_3
 
-    .line 334
+    .line 342
     new-instance v20, Ljava/lang/IllegalStateException;
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -520,13 +532,13 @@
 
     throw v20
 
-    .line 337
+    .line 345
     :cond_3
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/htc/fragment/widget/BinAdapter;->mCursor:Landroid/database/Cursor;
 
-    .line 338
+    .line 346
     .local v5, c:Landroid/database/Cursor;
     move-object/from16 v0, p0
 
@@ -540,7 +552,7 @@
 
     move-result-object v3
 
-    .line 339
+    .line 347
     .local v3, alternativeName:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -554,7 +566,7 @@
 
     move-result-object v13
 
-    .line 340
+    .line 348
     .local v13, overlay:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -568,7 +580,7 @@
 
     move-result-object v19
 
-    .line 341
+    .line 349
     .local v19, taskName:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -582,19 +594,19 @@
 
     move-result-object v16
 
-    .line 343
+    .line 351
     .local v16, packageName:Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 344
+    .line 352
     .local v10, iresources:Landroid/content/res/Resources;
     const/16 v17, 0x0
 
-    .line 345
+    .line 353
     .local v17, tabNmae:Ljava/lang/String;
     const/4 v15, 0x0
 
-    .line 347
+    .line 355
     .local v15, overlayImg:Landroid/graphics/drawable/Drawable;
     :try_start_0
     move-object/from16 v0, p0
@@ -621,11 +633,11 @@
 
     move-result-object v10
 
-    .line 352
+    .line 360
     :goto_1
     if-eqz v10, :cond_5
 
-    .line 353
+    .line 361
     const/16 v20, 0x0
 
     const/16 v21, 0x0
@@ -638,13 +650,13 @@
 
     move-result v14
 
-    .line 354
+    .line 362
     .local v14, overlayIconId:I
     invoke-virtual {v10, v14}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object v11
 
-    .line 355
+    .line 363
     .local v11, is:Ljava/io/InputStream;
     const/16 v20, 0x0
 
@@ -658,25 +670,25 @@
 
     move-result-object v4
 
-    .line 357
+    .line 365
     .local v4, bm:Landroid/graphics/Bitmap;
     :try_start_1
     invoke-virtual {v11}, Ljava/io/InputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 360
+    .line 368
     :goto_2
     if-eqz v4, :cond_4
 
-    .line 361
+    .line 369
     sget v20, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     move/from16 v0, v20
 
     invoke-virtual {v4, v0}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    .line 362
+    .line 370
     new-instance v15, Lcom/htc/fragment/widget/BinAdapter$FastBitmapDrawable;
 
     .end local v15           #overlayImg:Landroid/graphics/drawable/Drawable;
@@ -686,15 +698,15 @@
 
     invoke-direct {v15, v4, v0}, Lcom/htc/fragment/widget/BinAdapter$FastBitmapDrawable;-><init>(Landroid/graphics/Bitmap;Lcom/htc/fragment/widget/BinAdapter$1;)V
 
-    .line 365
+    .line 373
     .restart local v15       #overlayImg:Landroid/graphics/drawable/Drawable;
     :cond_4
     move-object/from16 v17, v3
 
-    .line 366
+    .line 374
     if-nez v3, :cond_5
 
-    .line 367
+    .line 375
     const/16 v20, 0x0
 
     const/16 v21, 0x0
@@ -709,7 +721,7 @@
 
     move-result v18
 
-    .line 368
+    .line 376
     .local v18, tadNameId:I
     move/from16 v0, v18
 
@@ -717,7 +729,7 @@
 
     move-result-object v17
 
-    .line 372
+    .line 379
     .end local v4           #bm:Landroid/graphics/Bitmap;
     .end local v11           #is:Ljava/io/InputStream;
     .end local v14           #overlayIconId:I
@@ -735,7 +747,7 @@
 
     invoke-virtual {v0, v1, v15}, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;->put(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 373
+    .line 380
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/fragment/widget/BinAdapter;->mRecycler:Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
@@ -750,17 +762,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;->put(ILjava/lang/String;)V
 
-    .line 374
+    .line 381
     invoke-virtual {v8, v15}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 375
+    .line 382
     move-object/from16 v0, v17
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_0
 
-    .line 347
+    .line 355
     :cond_6
     :try_start_2
     move-object/from16 v0, p0
@@ -771,7 +783,7 @@
 
     goto :goto_1
 
-    .line 358
+    .line 366
     .restart local v4       #bm:Landroid/graphics/Bitmap;
     .restart local v11       #is:Ljava/io/InputStream;
     .restart local v14       #overlayIconId:I
@@ -780,7 +792,7 @@
 
     goto :goto_2
 
-    .line 349
+    .line 357
     .end local v4           #bm:Landroid/graphics/Bitmap;
     .end local v11           #is:Ljava/io/InputStream;
     .end local v14           #overlayIconId:I
@@ -797,12 +809,12 @@
     .parameter "cursor"
 
     .prologue
-    .line 411
+    .line 416
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/htc/fragment/widget/BinAdapter;->bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;Z)V
 
-    .line 412
+    .line 417
     return-void
 .end method
 
@@ -813,12 +825,12 @@
     .parameter "cursor"
 
     .prologue
-    .line 134
+    .line 144
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/htc/fragment/widget/BinAdapter;->bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;Z)V
 
-    .line 135
+    .line 145
     return-void
 .end method
 
@@ -830,7 +842,7 @@
     .parameter "selected"
 
     .prologue
-    .line 157
+    .line 167
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/htc/fragment/widget/BinAdapter;->mIdIndex:I
@@ -841,7 +853,7 @@
 
     move-result-wide v15
 
-    .line 158
+    .line 168
     .local v15, id:J
     move-object/from16 v0, p0
 
@@ -853,7 +865,7 @@
 
     move-result-object v31
 
-    .line 159
+    .line 169
     .local v31, taskTag:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -867,7 +879,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 160
+    .line 170
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/fragment/widget/BinAdapter;->mTabPrefix:Ljava/lang/String;
@@ -882,7 +894,7 @@
 
     move-result-object v31
 
-    .line 162
+    .line 172
     :cond_0
     move-object/from16 v0, p0
 
@@ -894,7 +906,7 @@
 
     move-result-object v29
 
-    .line 163
+    .line 173
     .local v29, taskName:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -906,7 +918,7 @@
 
     move-result-object v18
 
-    .line 164
+    .line 174
     .local v18, intentDescription:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -918,7 +930,7 @@
 
     move-result-object v26
 
-    .line 165
+    .line 175
     .local v26, packageName:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -930,7 +942,7 @@
 
     move-result-object v14
 
-    .line 166
+    .line 176
     .local v14, icon:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -942,7 +954,7 @@
 
     move-result-object v28
 
-    .line 167
+    .line 177
     .local v28, selectedIcon:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -954,7 +966,7 @@
 
     move-result-object v24
 
-    .line 168
+    .line 178
     .local v24, overlay:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -966,7 +978,7 @@
 
     move-result v30
 
-    .line 169
+    .line 179
     .local v30, taskOrder:I
     move-object/from16 v0, p0
 
@@ -978,7 +990,7 @@
 
     move-result v21
 
-    .line 170
+    .line 180
     .local v21, isHost:I
     move-object/from16 v0, p0
 
@@ -990,7 +1002,7 @@
 
     move-result v22
 
-    .line 171
+    .line 181
     .local v22, isRemovable:I
     move-object/from16 v0, p0
 
@@ -1002,7 +1014,7 @@
 
     move-result-object v11
 
-    .line 172
+    .line 182
     .local v11, countText:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1014,7 +1026,7 @@
 
     move-result v20
 
-    .line 174
+    .line 184
     .local v20, isCountTextVisible:I
     move-object/from16 v0, p0
 
@@ -1026,19 +1038,19 @@
 
     move-result-object v8
 
-    .line 176
+    .line 186
     .local v8, alternativeName:Ljava/lang/String;
     new-instance v17, Lcom/htc/fragment/widget/TaskInfo;
 
     invoke-direct/range {v17 .. v17}, Lcom/htc/fragment/widget/TaskInfo;-><init>()V
 
-    .line 177
+    .line 187
     .local v17, info:Lcom/htc/fragment/widget/TaskInfo;
     move-object/from16 v0, v17
 
     iput-wide v15, v0, Lcom/htc/fragment/widget/TaskInfo;->_id:J
 
-    .line 178
+    .line 188
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/fragment/widget/BinAdapter;->mTabID:Ljava/lang/String;
@@ -1047,92 +1059,92 @@
 
     iput-object v3, v0, Lcom/htc/fragment/widget/TaskInfo;->gId:Ljava/lang/String;
 
-    .line 179
+    .line 189
     move-object/from16 v0, v31
 
     move-object/from16 v1, v17
 
     iput-object v0, v1, Lcom/htc/fragment/widget/TaskInfo;->taskTag:Ljava/lang/String;
 
-    .line 180
+    .line 190
     move-object/from16 v0, v29
 
     move-object/from16 v1, v17
 
     iput-object v0, v1, Lcom/htc/fragment/widget/TaskInfo;->taskName:Ljava/lang/String;
 
-    .line 181
+    .line 191
     move-object/from16 v0, v18
 
     move-object/from16 v1, v17
 
     iput-object v0, v1, Lcom/htc/fragment/widget/TaskInfo;->intentUri:Ljava/lang/String;
 
-    .line 182
+    .line 192
     move-object/from16 v0, v26
 
     move-object/from16 v1, v17
 
     iput-object v0, v1, Lcom/htc/fragment/widget/TaskInfo;->resPackage:Ljava/lang/String;
 
-    .line 183
+    .line 193
     move-object/from16 v0, v17
 
     iput-object v14, v0, Lcom/htc/fragment/widget/TaskInfo;->icon:Ljava/lang/String;
 
-    .line 184
+    .line 194
     move-object/from16 v0, v28
 
     move-object/from16 v1, v17
 
     iput-object v0, v1, Lcom/htc/fragment/widget/TaskInfo;->selectedIcon:Ljava/lang/String;
 
-    .line 185
+    .line 195
     move-object/from16 v0, v24
 
     move-object/from16 v1, v17
 
     iput-object v0, v1, Lcom/htc/fragment/widget/TaskInfo;->overlay:Ljava/lang/String;
 
-    .line 186
+    .line 196
     move/from16 v0, v30
 
     move-object/from16 v1, v17
 
     iput v0, v1, Lcom/htc/fragment/widget/TaskInfo;->taskOrder:I
 
-    .line 187
+    .line 197
     move/from16 v0, v21
 
     move-object/from16 v1, v17
 
     iput v0, v1, Lcom/htc/fragment/widget/TaskInfo;->isHost:I
 
-    .line 188
+    .line 198
     move/from16 v0, v22
 
     move-object/from16 v1, v17
 
     iput v0, v1, Lcom/htc/fragment/widget/TaskInfo;->isRemovable:I
 
-    .line 189
+    .line 199
     move-object/from16 v0, v17
 
     iput-object v11, v0, Lcom/htc/fragment/widget/TaskInfo;->countText:Ljava/lang/String;
 
-    .line 190
+    .line 200
     move/from16 v0, v20
 
     move-object/from16 v1, v17
 
     iput v0, v1, Lcom/htc/fragment/widget/TaskInfo;->isCountTextVisible:I
 
-    .line 192
+    .line 202
     move-object/from16 v0, v17
 
     iput-object v8, v0, Lcom/htc/fragment/widget/TaskInfo;->alternativeName:Ljava/lang/String;
 
-    .line 194
+    .line 204
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/fragment/widget/BinAdapter;->mContext:Landroid/content/Context;
@@ -1141,11 +1153,11 @@
 
     move-result-object v25
 
-    .line 195
+    .line 205
     .local v25, packageManager:Landroid/content/pm/PackageManager;
     const/16 v19, 0x0
 
-    .line 198
+    .line 208
     .local v19, iresources:Landroid/content/res/Resources;
     :try_start_0
     move-object/from16 v0, p0
@@ -1169,10 +1181,10 @@
     :goto_0
     move-object/from16 v13, p1
 
-    .line 209
+    .line 218
     check-cast v13, Landroid/widget/FrameLayout;
 
-    .line 214
+    .line 223
     .local v13, frame:Landroid/widget/FrameLayout;
     move-object/from16 v0, p0
 
@@ -1182,7 +1194,7 @@
 
     if-eq v3, v4, :cond_9
 
-    .line 216
+    .line 225
     const v3, 0x2020061
 
     invoke-virtual {v13, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1191,7 +1203,7 @@
 
     check-cast v32, Lcom/htc/fragment/widget/CarouselTextView;
 
-    .line 218
+    .line 227
     .local v32, textView:Lcom/htc/fragment/widget/CarouselTextView;
     move-object/from16 v0, v17
 
@@ -1209,7 +1221,7 @@
 
     if-eqz p4, :cond_5
 
-    .line 219
+    .line 228
     :cond_1
     const/4 v3, 0x0
 
@@ -1223,16 +1235,18 @@
 
     move-result v27
 
-    .line 224
+    .line 233
     .local v27, resourceID:I
     :goto_1
-    const/4 v3, 0x0
+    move-object/from16 v0, p0
+
+    iget-boolean v3, v0, Lcom/htc/fragment/widget/BinAdapter;->alwaysSingleLine:Z
 
     move-object/from16 v0, v32
 
     invoke-virtual {v0, v3}, Lcom/htc/fragment/widget/CarouselTextView;->enableForceSingleLine(Z)V
 
-    .line 225
+    .line 234
     const v3, 0x203005c
 
     move-object/from16 v0, v32
@@ -1241,7 +1255,7 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/htc/fragment/widget/CarouselTextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 227
+    .line 236
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/fragment/widget/BinAdapter;->mContext:Landroid/content/Context;
@@ -1260,7 +1274,7 @@
 
     invoke-virtual {v0, v3}, Lcom/htc/fragment/widget/CarouselTextView;->setTextColor(I)V
 
-    .line 230
+    .line 239
     const/4 v3, 0x0
 
     move-object/from16 v0, v19
@@ -1279,7 +1293,7 @@
 
     invoke-virtual {v0, v3, v4, v5, v6}, Lcom/htc/fragment/widget/CarouselTextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 234
+    .line 243
     if-nez v8, :cond_2
 
     const/4 v3, 0x0
@@ -1306,19 +1320,19 @@
 
     invoke-virtual {v0, v8}, Lcom/htc/fragment/widget/CarouselTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 235
+    .line 244
     move-object/from16 v0, v17
 
     invoke-virtual {v13, v0}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 237
+    .line 246
     move-object/from16 v0, v17
 
     iget v3, v0, Lcom/htc/fragment/widget/TaskInfo;->isHost:I
 
     if-nez v3, :cond_6
 
-    .line 238
+    .line 247
     const v3, 0x2020062
 
     invoke-virtual {v13, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1329,21 +1343,21 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 285
+    .line 294
     :cond_3
     :goto_2
     const/4 v3, 0x0
 
     invoke-virtual {v13, v3}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 287
+    .line 296
     .end local v13           #frame:Landroid/widget/FrameLayout;
     .end local v27           #resourceID:I
     .end local v32           #textView:Lcom/htc/fragment/widget/CarouselTextView;
     :goto_3
     return-void
 
-    .line 198
+    .line 208
     .restart local v8       #alternativeName:Ljava/lang/String;
     :cond_4
     :try_start_1
@@ -1357,17 +1371,17 @@
 
     goto/16 :goto_0
 
-    .line 200
+    .line 209
     :catch_0
     move-exception v12
 
-    .line 202
+    .line 211
     .local v12, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/BinAdapter;->getHandler()Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;
 
     move-result-object v2
 
-    .line 203
+    .line 212
     .local v2, handle:Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;
     const/4 v3, 0x1
 
@@ -1411,7 +1425,7 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;->startDelete(ILjava/lang/Object;Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 204
+    .line 213
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1438,7 +1452,7 @@
 
     goto :goto_3
 
-    .line 221
+    .line 230
     .end local v2           #handle:Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;
     .end local v12           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v13       #frame:Landroid/widget/FrameLayout;
@@ -1457,7 +1471,7 @@
     .restart local v27       #resourceID:I
     goto/16 :goto_1
 
-    .line 242
+    .line 251
     .end local v8           #alternativeName:Ljava/lang/String;
     :cond_6
     const v3, 0x2020062
@@ -1468,11 +1482,11 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    .line 244
+    .line 253
     .local v10, count:Landroid/widget/TextView;
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 245
+    .line 254
     if-eqz v20, :cond_7
 
     if-eqz v11, :cond_7
@@ -1491,7 +1505,7 @@
     :goto_4
     invoke-virtual {v10, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 247
+    .line 256
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/htc/fragment/widget/BinAdapter;->mState:I
@@ -1500,7 +1514,7 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 248
+    .line 257
     const v3, 0x2020062
 
     invoke-virtual {v13, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1513,13 +1527,13 @@
 
     goto/16 :goto_2
 
-    .line 245
+    .line 254
     :cond_8
     const/4 v3, 0x0
 
     goto :goto_4
 
-    .line 253
+    .line 262
     .end local v10           #count:Landroid/widget/TextView;
     .end local v27           #resourceID:I
     .end local v32           #textView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -1529,7 +1543,7 @@
 
     invoke-virtual {v13, v0}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 254
+    .line 263
     const v3, 0x2020062
 
     invoke-virtual {v13, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1540,7 +1554,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 256
+    .line 265
     const v3, 0x2020061
 
     invoke-virtual {v13, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1549,7 +1563,7 @@
 
     check-cast v32, Lcom/htc/fragment/widget/CarouselTextView;
 
-    .line 258
+    .line 267
     .restart local v32       #textView:Lcom/htc/fragment/widget/CarouselTextView;
     const/4 v3, 0x0
 
@@ -1563,7 +1577,7 @@
 
     move-result v27
 
-    .line 261
+    .line 270
     .restart local v27       #resourceID:I
     const/4 v3, 0x1
 
@@ -1571,7 +1585,7 @@
 
     invoke-virtual {v0, v3}, Lcom/htc/fragment/widget/CarouselTextView;->enableForceSingleLine(Z)V
 
-    .line 262
+    .line 271
     const v3, 0x203005c
 
     move-object/from16 v0, v32
@@ -1580,7 +1594,7 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/htc/fragment/widget/CarouselTextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 263
+    .line 272
     invoke-static/range {p2 .. p2}, Lcom/htc/fragment/widget/CarouselSkinUtil;->getDarkSecondaryFontColor(Landroid/content/Context;)Landroid/content/res/ColorStateList;
 
     move-result-object v3
@@ -1589,7 +1603,7 @@
 
     invoke-virtual {v0, v3}, Lcom/htc/fragment/widget/CarouselTextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 265
+    .line 274
     if-nez v8, :cond_a
 
     const/4 v3, 0x0
@@ -1616,7 +1630,7 @@
 
     invoke-virtual {v0, v8}, Lcom/htc/fragment/widget/CarouselTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 266
+    .line 275
     const/4 v3, 0x0
 
     move-object/from16 v0, v19
@@ -1635,12 +1649,12 @@
 
     invoke-virtual {v0, v3, v4, v5, v6}, Lcom/htc/fragment/widget/CarouselTextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 268
+    .line 277
     invoke-virtual {v13}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v23
 
-    .line 271
+    .line 280
     .local v23, lparams:Landroid/view/ViewGroup$LayoutParams;
     move-object/from16 v0, p0
 
@@ -1650,17 +1664,27 @@
 
     move-result-object v3
 
-    const v4, 0x208019e
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/fragment/widget/BinAdapter;->mContext:Landroid/content/Context;
+
+    const-string v5, "common_subnav_tab_rearrange_tile"
+
+    const v6, 0x208019e
+
+    invoke-static {v4, v5, v6}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
+
+    move-result v4
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v9
 
-    .line 274
+    .line 283
     .local v9, backgroundDrawable:Landroid/graphics/drawable/Drawable;
     if-eqz v23, :cond_b
 
-    .line 276
+    .line 285
     invoke-virtual {v9}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
@@ -1669,7 +1693,7 @@
 
     iput v3, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 277
+    .line 286
     invoke-virtual {v9}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v3
@@ -1678,16 +1702,16 @@
 
     iput v3, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 278
+    .line 287
     move-object/from16 v0, v23
 
     invoke-virtual {v13, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 281
+    .line 290
     :cond_b
     invoke-virtual {v13, v9}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 282
+    .line 291
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -1706,18 +1730,18 @@
     .parameter "cursor"
 
     .prologue
-    .line 457
+    .line 462
     invoke-super {p0, p1}, Landroid/widget/SimpleCursorAdapter;->changeCursor(Landroid/database/Cursor;)V
 
-    .line 458
+    .line 463
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/BinAdapter;->getColumnIndices(Landroid/database/Cursor;)V
 
-    .line 459
+    .line 464
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mRecycler:Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;->clear()V
 
-    .line 461
+    .line 466
     if-eqz p1, :cond_0
 
     iget v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mOwner:I
@@ -1726,12 +1750,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 462
+    .line 467
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mModel:Lcom/htc/fragment/widget/CarouselModel;
 
     invoke-virtual {v0, p1}, Lcom/htc/fragment/widget/CarouselModel;->changeCursor(Landroid/database/Cursor;)V
 
-    .line 464
+    .line 469
     :cond_0
     return-void
 .end method
@@ -1740,7 +1764,7 @@
     .locals 1
 
     .prologue
-    .line 419
+    .line 424
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mQueryHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1759,12 +1783,12 @@
     .parameter "parent"
 
     .prologue
-    .line 295
+    .line 303
     iget-boolean v1, p0, Lcom/htc/fragment/widget/BinAdapter;->mDataValid:Z
 
     if-nez v1, :cond_0
 
-    .line 296
+    .line 304
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "this should only be called when the cursor is valid"
@@ -1773,7 +1797,7 @@
 
     throw v1
 
-    .line 298
+    .line 306
     :cond_0
     iget-object v1, p0, Lcom/htc/fragment/widget/BinAdapter;->mCursor:Landroid/database/Cursor;
 
@@ -1783,7 +1807,7 @@
 
     if-nez v1, :cond_1
 
-    .line 299
+    .line 307
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1808,11 +1832,11 @@
 
     throw v1
 
-    .line 302
+    .line 310
     :cond_1
     if-nez p2, :cond_2
 
-    .line 303
+    .line 311
     iget-object v1, p0, Lcom/htc/fragment/widget/BinAdapter;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/htc/fragment/widget/BinAdapter;->mCursor:Landroid/database/Cursor;
@@ -1821,7 +1845,7 @@
 
     move-result-object v0
 
-    .line 307
+    .line 315
     .local v0, v:Landroid/view/View;
     :goto_0
     iget-object v1, p0, Lcom/htc/fragment/widget/BinAdapter;->mContext:Landroid/content/Context;
@@ -1830,10 +1854,10 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/htc/fragment/widget/BinAdapter;->bindSelectedView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V
 
-    .line 308
+    .line 316
     return-object v0
 
-    .line 305
+    .line 313
     .end local v0           #v:Landroid/view/View;
     :cond_2
     move-object v0, p2
@@ -1847,12 +1871,12 @@
     .parameter "position"
 
     .prologue
-    .line 385
+    .line 391
     iget-boolean v2, p0, Lcom/htc/fragment/widget/BinAdapter;->mDataValid:Z
 
     if-nez v2, :cond_0
 
-    .line 386
+    .line 392
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "this should only be called when the cursor is valid"
@@ -1861,7 +1885,7 @@
 
     throw v2
 
-    .line 388
+    .line 394
     :cond_0
     iget-object v2, p0, Lcom/htc/fragment/widget/BinAdapter;->mCursor:Landroid/database/Cursor;
 
@@ -1871,7 +1895,7 @@
 
     if-nez v2, :cond_1
 
-    .line 389
+    .line 395
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1896,11 +1920,11 @@
 
     throw v2
 
-    .line 391
+    .line 397
     :cond_1
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mCursor:Landroid/database/Cursor;
 
-    .line 393
+    .line 399
     .local v0, c:Landroid/database/Cursor;
     iget v2, p0, Lcom/htc/fragment/widget/BinAdapter;->mTaskTagIndex:I
 
@@ -1908,7 +1932,7 @@
 
     move-result-object v1
 
-    .line 394
+    .line 400
     .local v1, taskTag:Ljava/lang/String;
     return-object v1
 .end method
@@ -1917,7 +1941,7 @@
     .locals 1
 
     .prologue
-    .line 427
+    .line 432
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mUri:Landroid/net/Uri;
 
     return-object v0
@@ -1936,10 +1960,10 @@
     .parameter "owner"
 
     .prologue
-    .line 89
+    .line 94
     iput-object p3, p0, Lcom/htc/fragment/widget/BinAdapter;->mUri:Landroid/net/Uri;
 
-    .line 90
+    .line 95
     const-string v0, "gId"
 
     invoke-virtual {p3, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
@@ -1948,7 +1972,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mTabID:Ljava/lang/String;
 
-    .line 91
+    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1971,25 +1995,25 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mTabPrefix:Ljava/lang/String;
 
-    .line 92
+    .line 97
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p7}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mQueryHandler:Ljava/lang/ref/WeakReference;
 
-    .line 93
+    .line 98
     const/16 v0, 0x3e9
 
     iput v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mState:I
 
-    .line 94
+    .line 99
     iput-object p8, p0, Lcom/htc/fragment/widget/BinAdapter;->mModel:Lcom/htc/fragment/widget/CarouselModel;
 
-    .line 95
+    .line 100
     iput p9, p0, Lcom/htc/fragment/widget/BinAdapter;->mOwner:I
 
-    .line 96
+    .line 101
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2000,7 +2024,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 97
+    .line 107
     return-void
 .end method
 
@@ -2008,7 +2032,7 @@
     .locals 1
 
     .prologue
-    .line 403
+    .line 408
     iget-boolean v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mDataValid:Z
 
     return v0
@@ -2021,7 +2045,7 @@
     .parameter "parent"
 
     .prologue
-    .line 120
+    .line 130
     iget-object v2, p0, Lcom/htc/fragment/widget/BinAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const/4 v3, 0x0
@@ -2030,13 +2054,13 @@
 
     move-result-object v1
 
-    .line 121
+    .line 131
     .local v1, v:Landroid/view/View;
     new-instance v0, Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;
 
     invoke-direct {v0}, Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;-><init>()V
 
-    .line 122
+    .line 132
     .local v0, cvh:Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;
     const v2, 0x202006c
 
@@ -2048,7 +2072,7 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;->infoImage:Landroid/widget/ImageView;
 
-    .line 123
+    .line 133
     const v2, 0x202006d
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2059,10 +2083,10 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/BinAdapter$CoverViewHolder;->infoText:Landroid/widget/TextView;
 
-    .line 124
+    .line 134
     invoke-virtual {v1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 125
+    .line 135
     return-object v1
 .end method
 
@@ -2070,12 +2094,12 @@
     .locals 2
 
     .prologue
-    .line 435
+    .line 440
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mRecycler:Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;->clear()V
 
-    .line 436
+    .line 441
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_0
@@ -2086,18 +2110,18 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 437
+    .line 442
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mModel:Lcom/htc/fragment/widget/CarouselModel;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/BinAdapter;->mCursor:Landroid/database/Cursor;
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/CarouselModel;->notifyDataSetChanged(Landroid/database/Cursor;)V
 
-    .line 440
+    .line 445
     :cond_0
     invoke-super {p0}, Landroid/widget/SimpleCursorAdapter;->notifyDataSetChanged()V
 
-    .line 441
+    .line 446
     return-void
 .end method
 
@@ -2105,15 +2129,15 @@
     .locals 1
 
     .prologue
-    .line 448
+    .line 453
     invoke-super {p0}, Landroid/widget/SimpleCursorAdapter;->notifyDataSetInvalidated()V
 
-    .line 449
+    .line 454
     iget-object v0, p0, Lcom/htc/fragment/widget/BinAdapter;->mRecycler:Lcom/htc/fragment/widget/BinAdapter$RecycleBin;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/BinAdapter$RecycleBin;->clear()V
 
-    .line 450
+    .line 455
     return-void
 .end method
 
@@ -2122,12 +2146,12 @@
     .parameter "state"
 
     .prologue
-    .line 115
+    .line 125
     iput p1, p0, Lcom/htc/fragment/widget/BinAdapter;->mState:I
 
-    .line 116
+    .line 126
     invoke-virtual {p0}, Lcom/htc/fragment/widget/BinAdapter;->notifyDataSetChanged()V
 
-    .line 117
+    .line 127
     return-void
 .end method

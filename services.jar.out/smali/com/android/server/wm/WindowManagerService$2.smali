@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 327
+    .line 335
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 330
+    .line 338
     iget-object v10, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v10, v10, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -49,14 +49,14 @@
 
     invoke-interface {v10, v11}, Landroid/view/WindowManagerPolicy;->enableKeyguard(Z)V
 
-    .line 331
+    .line 339
     iget-object v10, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v11, v10, Lcom/android/server/wm/WindowManagerService;->mKeyguardTokenWatcher:Landroid/os/TokenWatcher;
 
     monitor-enter v11
 
-    .line 333
+    .line 341
     :try_start_0
     iget-object v10, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -65,7 +65,7 @@
     #setter for: Lcom/android/server/wm/WindowManagerService;->mAllowDisableKeyguard:I
     invoke-static {v10, v12}, Lcom/android/server/wm/WindowManagerService;->access$202(Lcom/android/server/wm/WindowManagerService;I)I
 
-    .line 334
+    .line 342
     iget-object v10, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     const/4 v12, 0x0
@@ -73,17 +73,17 @@
     #setter for: Lcom/android/server/wm/WindowManagerService;->mKeyguardDisabled:Z
     invoke-static {v10, v12}, Lcom/android/server/wm/WindowManagerService;->access$102(Lcom/android/server/wm/WindowManagerService;Z)Z
 
-    .line 335
+    .line 343
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 338
+    .line 346
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 339
+    .line 347
     .local v0, action:Ljava/lang/String;
     const-string v10, "com.htc.intent.action.SET_ANIM_PROPERTIES"
 
@@ -93,7 +93,7 @@
 
     if-eqz v10, :cond_0
 
-    .line 343
+    .line 351
     const-string v10, "AnimationDuration"
 
     const/4 v11, 0x0
@@ -102,7 +102,7 @@
 
     move-result v1
 
-    .line 344
+    .line 352
     .local v1, animationDuration:I
     const-string v10, "AnimationRate"
 
@@ -112,7 +112,7 @@
 
     move-result v2
 
-    .line 345
+    .line 353
     .local v2, animationRate:I
     const-string v10, "RotateAngle"
 
@@ -122,7 +122,7 @@
 
     move-result v6
 
-    .line 346
+    .line 354
     .local v6, rotateAngle:I
     const-string v10, "ShadowColor"
 
@@ -132,7 +132,7 @@
 
     move-result v7
 
-    .line 347
+    .line 355
     .local v7, shadowColor:I
     const-string v10, "ShadowTransparency"
 
@@ -142,7 +142,7 @@
 
     move-result v9
 
-    .line 348
+    .line 356
     .local v9, shadowTransparency:I
     const-string v10, "PositionX"
 
@@ -152,7 +152,7 @@
 
     move-result v3
 
-    .line 349
+    .line 357
     .local v3, positionX:F
     const-string v10, "PositionY"
 
@@ -162,7 +162,7 @@
 
     move-result v4
 
-    .line 350
+    .line 358
     .local v4, positionY:F
     const-string v10, "PositionZ"
 
@@ -172,7 +172,7 @@
 
     move-result v5
 
-    .line 351
+    .line 359
     .local v5, positionZ:F
     const-string v10, "ShadowEnable"
 
@@ -182,7 +182,7 @@
 
     move-result v8
 
-    .line 363
+    .line 371
     .local v8, shadowEnable:Z
     const-string v10, "sys.anim.duration"
 
@@ -194,7 +194,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 364
+    .line 372
     const-string v10, "sys.anim.rate"
 
     int-to-long v11, v2
@@ -205,7 +205,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 365
+    .line 373
     const-string v10, "sys.anim.rotate.angle"
 
     int-to-long v11, v6
@@ -216,7 +216,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
+    .line 374
     const-string v10, "sys.anim.shadow.color"
 
     int-to-long v11, v7
@@ -227,7 +227,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 367
+    .line 375
     const-string v10, "sys.anim.shadow.transparency"
 
     int-to-long v11, v9
@@ -238,7 +238,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 368
+    .line 376
     const-string v10, "sys.anim.shadow.position_x"
 
     invoke-static {v3}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
@@ -247,7 +247,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 369
+    .line 377
     const-string v10, "sys.anim.shadow.position_y"
 
     invoke-static {v4}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
@@ -256,7 +256,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 370
+    .line 378
     const-string v10, "sys.anim.shadow.position_z"
 
     invoke-static {v5}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
@@ -265,7 +265,7 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 371
+    .line 379
     const-string v10, "sys.anim.shadow.enable"
 
     invoke-static {v8}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
@@ -274,21 +274,21 @@
 
     invoke-static {v10, v11}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 372
+    .line 380
     iget-object v10, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v10, v10, Lcom/android/server/wm/WindowManagerService;->mHtcGlAnimMgr:Lcom/android/server/wm/HtcGlAnimManager;
 
     invoke-virtual {v10, v1}, Lcom/android/server/wm/HtcGlAnimManager;->setAnimationDuration(I)V
 
-    .line 373
+    .line 381
     iget-object v10, p0, Lcom/android/server/wm/WindowManagerService$2;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v10, v10, Lcom/android/server/wm/WindowManagerService;->mHtcGlAnimMgr:Lcom/android/server/wm/HtcGlAnimManager;
 
     invoke-virtual {v10, v2}, Lcom/android/server/wm/HtcGlAnimManager;->setAnimationRate(I)V
 
-    .line 377
+    .line 385
     .end local v1           #animationDuration:I
     .end local v2           #animationRate:I
     .end local v3           #positionX:F
@@ -301,7 +301,7 @@
     :cond_0
     return-void
 
-    .line 335
+    .line 343
     .end local v0           #action:Ljava/lang/String;
     :catchall_0
     move-exception v10

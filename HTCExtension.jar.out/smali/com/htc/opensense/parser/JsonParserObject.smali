@@ -43,12 +43,12 @@
     .end annotation
 
     .prologue
-    .line 225
+    .line 153
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 227
+    .line 155
     .local v4, result:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/htc/opensense/parser/BasicParser;>;"
     iget-object v5, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
@@ -56,13 +56,13 @@
 
     move-result-object v2
 
-    .line 228
+    .line 156
     .local v2, entrySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/htc/gson/JsonElement;>;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 229
+    .line 157
     .local v3, itr:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/htc/gson/JsonElement;>;>;"
     :cond_0
     :goto_0
@@ -72,14 +72,14 @@
 
     if-eqz v5, :cond_5
 
-    .line 230
+    .line 158
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 231
+    .line 159
     .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/htc/gson/JsonElement;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -87,7 +87,7 @@
 
     check-cast v0, Lcom/htc/gson/JsonElement;
 
-    .line 232
+    .line 160
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_1
 
@@ -97,7 +97,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 233
+    .line 161
     :cond_1
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -109,7 +109,7 @@
 
     goto :goto_0
 
-    .line 234
+    .line 162
     :cond_2
     invoke-virtual {v0}, Lcom/htc/gson/JsonElement;->isJsonObject()Z
 
@@ -117,7 +117,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 235
+    .line 163
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
@@ -134,7 +134,7 @@
 
     goto :goto_0
 
-    .line 236
+    .line 164
     :cond_3
     invoke-virtual {v0}, Lcom/htc/gson/JsonElement;->isJsonArray()Z
 
@@ -142,7 +142,7 @@
 
     if-eqz v5, :cond_4
 
-    .line 237
+    .line 165
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
@@ -159,7 +159,7 @@
 
     goto :goto_0
 
-    .line 238
+    .line 166
     :cond_4
     invoke-virtual {v0}, Lcom/htc/gson/JsonElement;->isJsonPrimitive()Z
 
@@ -167,7 +167,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 239
+    .line 167
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
@@ -184,7 +184,7 @@
 
     goto :goto_0
 
-    .line 243
+    .line 171
     .end local v0           #element:Lcom/htc/gson/JsonElement;
     .end local v1           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/htc/gson/JsonElement;>;"
     :cond_5
@@ -196,7 +196,7 @@
     .parameter "key"
 
     .prologue
-    .line 39
+    .line 31
     iget-object v0, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v0, p1}, Lcom/htc/gson/JsonObject;->has(Ljava/lang/String;)Z
@@ -210,7 +210,7 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 26
     iget-object v0, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     if-eqz v0, :cond_0
@@ -231,14 +231,14 @@
     .parameter "key"
 
     .prologue
-    .line 65
+    .line 49
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 66
+    .line 50
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -246,15 +246,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 67
+    .line 51
     :cond_0
     const/4 v1, 0x0
 
-    .line 72
+    .line 56
     :goto_0
     return-object v1
 
-    .line 69
+    .line 53
     :cond_1
     invoke-virtual {v0}, Lcom/htc/gson/JsonElement;->isJsonPrimitive()Z
 
@@ -262,12 +262,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 70
+    .line 54
     invoke-virtual {p0, v0}, Lcom/htc/opensense/parser/JsonParserObject;->parseFromStr(Lcom/htc/gson/JsonElement;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 72
+    .line 56
     :cond_2
     new-instance v1, Lcom/htc/opensense/parser/JsonParserArray;
 
@@ -285,7 +285,7 @@
     .parameter "key"
 
     .prologue
-    .line 125
+    .line 89
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/opensense/parser/JsonParserObject;->parseBoolean(Ljava/lang/String;Z)Z
@@ -301,14 +301,14 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 134
+    .line 94
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 135
+    .line 95
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -316,7 +316,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 138
+    .line 98
     .end local p2
     :cond_0
     :goto_0
@@ -336,7 +336,7 @@
     .parameter "key"
 
     .prologue
-    .line 203
+    .line 139
     const-wide/high16 v0, -0x4010
 
     invoke-virtual {p0, p1, v0, v1}, Lcom/htc/opensense/parser/JsonParserObject;->parseDouble(Ljava/lang/String;D)D
@@ -352,14 +352,14 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 212
+    .line 144
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 213
+    .line 145
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -367,7 +367,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 216
+    .line 148
     .end local p2
     :cond_0
     :goto_0
@@ -387,7 +387,7 @@
     .parameter "key"
 
     .prologue
-    .line 181
+    .line 125
     const/high16 v0, -0x4080
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/opensense/parser/JsonParserObject;->parseFloat(Ljava/lang/String;F)F
@@ -403,14 +403,14 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 190
+    .line 130
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 191
+    .line 131
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -418,7 +418,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 194
+    .line 134
     .end local p2
     :cond_0
     :goto_0
@@ -438,12 +438,12 @@
     .parameter "element"
 
     .prologue
-    .line 251
+    .line 175
     new-instance v0, Lcom/htc/gson/JsonParser;
 
     invoke-direct {v0}, Lcom/htc/gson/JsonParser;-><init>()V
 
-    .line 252
+    .line 176
     .local v0, parser:Lcom/htc/gson/JsonParser;
     invoke-virtual {p1}, Lcom/htc/gson/JsonElement;->getAsString()Ljava/lang/String;
 
@@ -453,7 +453,7 @@
 
     move-result-object p1
 
-    .line 253
+    .line 177
     return-object p1
 .end method
 
@@ -462,7 +462,7 @@
     .parameter "key"
 
     .prologue
-    .line 103
+    .line 75
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/opensense/parser/JsonParserObject;->parseInt(Ljava/lang/String;I)I
@@ -478,14 +478,14 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 112
+    .line 80
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 113
+    .line 81
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -493,7 +493,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 116
+    .line 84
     .end local p2
     :cond_0
     :goto_0
@@ -513,7 +513,7 @@
     .parameter "key"
 
     .prologue
-    .line 159
+    .line 111
     const-wide/16 v0, -0x1
 
     invoke-virtual {p0, p1, v0, v1}, Lcom/htc/opensense/parser/JsonParserObject;->parseLong(Ljava/lang/String;J)J
@@ -529,14 +529,14 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 168
+    .line 116
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 169
+    .line 117
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -544,7 +544,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 172
+    .line 120
     .end local p2
     :cond_0
     :goto_0
@@ -564,14 +564,14 @@
     .parameter "key"
 
     .prologue
-    .line 48
+    .line 36
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 49
+    .line 37
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -579,15 +579,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 50
+    .line 38
     :cond_0
     const/4 v1, 0x0
 
-    .line 56
+    .line 44
     :goto_0
     return-object v1
 
-    .line 52
+    .line 40
     :cond_1
     invoke-virtual {v0}, Lcom/htc/gson/JsonElement;->isJsonPrimitive()Z
 
@@ -595,19 +595,19 @@
 
     if-eqz v1, :cond_2
 
-    .line 53
+    .line 41
     const-string v1, "JsonParserObject"
 
     const-string v2, "Facebook is primitive"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
+    .line 42
     invoke-virtual {p0, v0}, Lcom/htc/opensense/parser/JsonParserObject;->parseFromStr(Lcom/htc/gson/JsonElement;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 56
+    .line 44
     :cond_2
     new-instance v1, Lcom/htc/opensense/parser/JsonParserObject;
 
@@ -625,7 +625,7 @@
     .parameter "key"
 
     .prologue
-    .line 81
+    .line 61
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/opensense/parser/JsonParserObject;->parseString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -641,14 +641,14 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 90
+    .line 66
     iget-object v1, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v1, p1}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
     move-result-object v0
 
-    .line 91
+    .line 67
     .local v0, element:Lcom/htc/gson/JsonElement;
     if-eqz v0, :cond_0
 
@@ -656,7 +656,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 94
+    .line 70
     .end local p2
     :cond_0
     :goto_0
@@ -675,19 +675,19 @@
     .locals 1
 
     .prologue
-    .line 147
+    .line 103
     iget-object v0, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     if-eqz v0, :cond_0
 
-    .line 148
+    .line 104
     iget-object v0, p0, Lcom/htc/opensense/parser/JsonParserObject;->mJsonObj:Lcom/htc/gson/JsonObject;
 
     invoke-virtual {v0}, Lcom/htc/gson/JsonObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 150
+    .line 106
     :goto_0
     return-object v0
 

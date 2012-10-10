@@ -644,7 +644,7 @@
     iput-object v2, v1, Lcom/htc/music/MusicPicker$TrackListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     .line 253
-    const v2, 0x7f080093
+    const v2, 0x7f080094
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

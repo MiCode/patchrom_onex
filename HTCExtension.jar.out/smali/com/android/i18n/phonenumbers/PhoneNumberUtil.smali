@@ -1223,7 +1223,7 @@
     sput-object v8, Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->VALID_PHONE_NUMBER:Ljava/lang/String;
 
     .line 265
-    const-string v6, "x\uff58#\uff03~\uff5e"
+    const-string/jumbo v6, "x\uff58#\uff03~\uff5e"
 
     .line 269
     .local v6, singleExtnSymbolsForMatching:Ljava/lang/String;
@@ -1738,7 +1738,7 @@
 
     move-result-object v0
 
-    const-string v1, "{1,5})#"
+    const-string/jumbo v1, "{1,5})#"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6028,7 +6028,7 @@
     if-eqz p2, :cond_0
 
     .line 1835
-    const-string v2, "~"
+    const-string/jumbo v2, "~"
 
     const-string v3, ""
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1051
+    .line 1049
     iput-object p1, p0, Lcom/htc/music/DMCMusicPlaybackService$2;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,7 +41,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1055
+    .line 1053
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$2;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-virtual {v0}, Lcom/htc/music/DMCMusicPlaybackService;->isPlaying()Z
@@ -72,18 +72,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 1064
+    .line 1062
     :cond_0
     :goto_0
     return-void
 
-    .line 1062
+    .line 1060
     :cond_1
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$2;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-virtual {v0, v1}, Lcom/htc/music/DMCMusicPlaybackService;->stopForeground(Z)V
 
-    .line 1063
+    .line 1061
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$2;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     iget-object v1, p0, Lcom/htc/music/DMCMusicPlaybackService$2;->this$0:Lcom/htc/music/DMCMusicPlaybackService;

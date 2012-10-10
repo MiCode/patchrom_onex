@@ -42,14 +42,14 @@
 
     const/4 v7, 0x1
 
-    .line 36
+    .line 37
     const/4 v4, 0x0
 
-    .line 37
+    .line 38
     .local v4, sProxyPhone:Lcom/android/internal/telephony/Phone;
     const/4 v1, 0x0
 
-    .line 39
+    .line 40
     .local v1, className:Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/PhoneController;->isTmoWifiIms()Z
@@ -60,23 +60,23 @@
 
     if-ne p0, v7, :cond_0
 
-    .line 40
+    .line 41
     sget-object v6, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
     const-string v7, "Creating IPPhone"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
+    .line 42
     new-instance v3, Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-direct {v3, p1, p2, p3}, Lcom/android/internal/telephony/gsm/GSMPhone;-><init>(Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;Lcom/android/internal/telephony/PhoneNotifier;)V
 
-    .line 42
+    .line 43
     .local v3, phone:Lcom/android/internal/telephony/Phone;
     const-string v1, "com.movial.ipphone.IPPhoneProxy"
 
-    .line 43
+    .line 44
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v6
@@ -143,23 +143,23 @@
 
     move-object v4, v0
 
-    .line 73
+    .line 74
     .end local v3           #phone:Lcom/android/internal/telephony/Phone;
     :goto_0
     return-object v4
 
-    .line 47
+    .line 48
     :cond_0
     if-ne p0, v7, :cond_1
 
-    .line 48
+    .line 49
     sget-object v6, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
     const-string v7, "Creating GSMPhone"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
+    .line 50
     new-instance v5, Lcom/android/internal/telephony/PhoneProxy;
 
     new-instance v6, Lcom/android/internal/telephony/gsm/GSMPhone;
@@ -176,25 +176,25 @@
     .restart local v4       #sProxyPhone:Lcom/android/internal/telephony/Phone;
     goto :goto_0
 
-    .line 51
+    .line 52
     :cond_1
     if-ne p0, v8, :cond_2
 
-    .line 52
+    .line 53
     invoke-static {}, Lcom/android/internal/telephony/BaseCommands;->getLteOnCdmaModeStatic()I
 
     move-result v6
 
     packed-switch v6, :pswitch_data_0
 
-    .line 60
+    .line 61
     sget-object v6, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
     const-string v7, "Creating CDMAPhone"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
+    .line 62
     new-instance v5, Lcom/android/internal/telephony/PhoneProxy;
 
     new-instance v6, Lcom/android/internal/telephony/cdma/CDMAPhone;
@@ -207,12 +207,12 @@
     .restart local v5       #sProxyPhone:Lcom/android/internal/telephony/Phone;
     move-object v4, v5
 
-    .line 63
+    .line 64
     .end local v5           #sProxyPhone:Lcom/android/internal/telephony/Phone;
     .restart local v4       #sProxyPhone:Lcom/android/internal/telephony/Phone;
     goto :goto_0
 
-    .line 54
+    .line 55
     :pswitch_0
     sget-object v6, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
@@ -220,7 +220,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
+    .line 56
     new-instance v5, Lcom/android/internal/telephony/PhoneProxy;
 
     new-instance v6, Lcom/android/internal/telephony/cdma/CDMALTEPhone;
@@ -233,12 +233,12 @@
     .restart local v5       #sProxyPhone:Lcom/android/internal/telephony/Phone;
     move-object v4, v5
 
-    .line 57
+    .line 58
     .end local v5           #sProxyPhone:Lcom/android/internal/telephony/Phone;
     .restart local v4       #sProxyPhone:Lcom/android/internal/telephony/Phone;
     goto :goto_0
 
-    .line 67
+    .line 68
     :cond_2
     sget-object v6, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
@@ -266,11 +266,11 @@
 
     goto :goto_0
 
-    .line 69
+    .line 70
     :catch_0
     move-exception v2
 
-    .line 70
+    .line 71
     .local v2, e:Ljava/lang/Exception;
     sget-object v6, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
@@ -298,12 +298,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
+    .line 72
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 52
+    .line 53
     nop
 
     :pswitch_data_0
@@ -317,7 +317,7 @@
     .parameter "basePhone"
 
     .prologue
-    .line 93
+    .line 96
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -335,7 +335,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 94
+    .line 97
     invoke-interface {p0}, Lcom/android/internal/telephony/Phone;->getForegroundCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v1
@@ -346,18 +346,18 @@
 
     move-result-object p0
 
-    .line 99
+    .line 102
     .local v0, e:Ljava/lang/Exception;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 96
+    .line 99
     .end local v0           #e:Ljava/lang/Exception;
     :catch_0
     move-exception v0
 
-    .line 97
+    .line 100
     .restart local v0       #e:Ljava/lang/Exception;
     sget-object v1, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
@@ -374,7 +374,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 106
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->enableTmoWifiIms()Z
 
     move-result v0
@@ -408,7 +408,7 @@
     .end annotation
 
     .prologue
-    .line 78
+    .line 80
     .local p1, mRingingCalls:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/telephony/Call;>;"
     .local p2, mBackgroundCalls:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/telephony/Call;>;"
     .local p3, mForegroundCalls:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/telephony/Call;>;"
@@ -429,14 +429,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 79
+    .line 81
     sget-object v1, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
     const-string v2, "registerImsCall"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 82
     const-string v1, "com.movial.ipphone.IPPhoneProxy"
 
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -461,7 +461,7 @@
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 81
+    .line 83
     const-string v1, "com.movial.ipphone.IPPhoneProxy"
 
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -486,7 +486,7 @@
 
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 82
+    .line 84
     const-string v1, "com.movial.ipphone.IPPhoneProxy"
 
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -511,11 +511,11 @@
 
     invoke-virtual {p3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 89
+    .line 91
     :goto_0
     return-void
 
-    .line 85
+    .line 87
     :cond_0
     sget-object v1, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 
@@ -547,11 +547,11 @@
 
     goto :goto_0
 
-    .line 86
+    .line 88
     :catch_0
     move-exception v0
 
-    .line 87
+    .line 89
     .local v0, e:Ljava/lang/Exception;
     sget-object v1, Lcom/android/internal/telephony/PhoneController;->TAG:Ljava/lang/String;
 

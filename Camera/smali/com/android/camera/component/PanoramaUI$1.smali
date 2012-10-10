@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 580
+    .line 584
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$1;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 583
+    .line 587
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$1;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
@@ -55,7 +55,7 @@
 
     invoke-static {v0}, Lcom/android/camera/imaging/ImageUtility;->recycleDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 584
+    .line 588
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$1;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
@@ -67,7 +67,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 585
+    .line 589
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$1;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_ReviewImageView:Landroid/widget/ImageView;
@@ -79,6 +79,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 586
+    .line 590
     return-void
 .end method

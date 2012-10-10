@@ -50,51 +50,51 @@
 
     const/4 v1, 0x0
 
-    .line 53
+    .line 57
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mIMPI:Ljava/lang/String;
 
-    .line 58
+    .line 63
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mDOMAIN:Ljava/lang/String;
 
-    .line 63
+    .line 69
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mIMPUList:[Ljava/lang/String;
 
-    .line 68
+    .line 75
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mPCSCFList:Landroid/os/Bundle;
 
-    .line 74
+    .line 82
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mGSM_IMSI:Ljava/lang/String;
 
-    .line 79
+    .line 88
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mCDMA_IMSI:Ljava/lang/String;
 
-    .line 85
+    .line 95
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mGSM_MSISDN:Ljava/lang/String;
 
-    .line 90
+    .line 101
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mCDMA_MDN:Ljava/lang/String;
 
-    .line 92
+    .line 103
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mAid:Ljava/lang/String;
 
-    .line 94
+    .line 105
     const/4 v0, -0x1
 
     sput v0, Lcom/android/internal/telephony/HtcIsimData;->mSessionId:I
 
-    .line 95
+    .line 106
     sput-boolean v2, Lcom/android/internal/telephony/HtcIsimData;->mHasISIM:Z
 
-    .line 96
+    .line 107
     sput-boolean v2, Lcom/android/internal/telephony/HtcIsimData;->mIsGBASupported:Z
 
-    .line 97
+    .line 108
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mRand:[B
 
-    .line 98
+    .line 109
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mBtid:Ljava/lang/String;
 
-    .line 99
+    .line 110
     sput-object v1, Lcom/android/internal/telephony/HtcIsimData;->mKeyLifetime:Ljava/lang/String;
 
     return-void
@@ -114,7 +114,7 @@
     .locals 1
 
     .prologue
-    .line 147
+    .line 158
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mBtid:Ljava/lang/String;
 
     return-object v0
@@ -124,7 +124,7 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 118
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mDOMAIN:Ljava/lang/String;
 
     return-object v0
@@ -134,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 114
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mIMPI:Ljava/lang/String;
 
     return-object v0
@@ -144,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 111
+    .line 122
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mIMPUList:[Ljava/lang/String;
 
     return-object v0
@@ -155,14 +155,14 @@
     .parameter "phonetype"
 
     .prologue
-    .line 168
+    .line 179
     const-string v1, "gsm"
 
-    .line 169
+    .line 180
     .local v1, gsm_type:Ljava/lang/String;
     const-string v0, "cdma"
 
-    .line 170
+    .line 181
     .local v0, cdma_type:Ljava/lang/String;
     invoke-virtual {v1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -170,14 +170,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 171
+    .line 182
     sget-object v2, Lcom/android/internal/telephony/HtcIsimData;->mGSM_IMSI:Ljava/lang/String;
 
-    .line 175
+    .line 186
     :goto_0
     return-object v2
 
-    .line 172
+    .line 183
     :cond_0
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -185,12 +185,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 173
+    .line 184
     sget-object v2, Lcom/android/internal/telephony/HtcIsimData;->mCDMA_IMSI:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 175
+    .line 186
     :cond_1
     const/4 v2, 0x0
 
@@ -201,7 +201,7 @@
     .locals 1
 
     .prologue
-    .line 155
+    .line 166
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mKeyLifetime:Ljava/lang/String;
 
     return-object v0
@@ -212,14 +212,14 @@
     .parameter "phonetype"
 
     .prologue
-    .line 181
+    .line 192
     const-string v1, "gsm"
 
-    .line 182
+    .line 193
     .local v1, gsm_type:Ljava/lang/String;
     const-string v0, "cdma"
 
-    .line 183
+    .line 194
     .local v0, cdma_type:Ljava/lang/String;
     invoke-virtual {v1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -227,14 +227,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 184
+    .line 195
     sget-object v2, Lcom/android/internal/telephony/HtcIsimData;->mGSM_MSISDN:Ljava/lang/String;
 
-    .line 188
+    .line 199
     :goto_0
     return-object v2
 
-    .line 185
+    .line 196
     :cond_0
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -242,12 +242,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 186
+    .line 197
     sget-object v2, Lcom/android/internal/telephony/HtcIsimData;->mCDMA_MDN:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 188
+    .line 199
     :cond_1
     const/4 v2, 0x0
 
@@ -258,7 +258,7 @@
     .locals 1
 
     .prologue
-    .line 115
+    .line 126
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mPCSCFList:Landroid/os/Bundle;
 
     return-object v0
@@ -268,7 +268,7 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 150
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mRand:[B
 
     return-object v0
@@ -278,7 +278,7 @@
     .locals 1
 
     .prologue
-    .line 163
+    .line 174
     sget v0, Lcom/android/internal/telephony/HtcIsimData;->mSessionId:I
 
     return v0
@@ -289,10 +289,10 @@
     .parameter "btid"
 
     .prologue
-    .line 285
+    .line 306
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mBtid:Ljava/lang/String;
 
-    .line 286
+    .line 307
     return-void
 .end method
 
@@ -301,10 +301,10 @@
     .parameter "imsi"
 
     .prologue
-    .line 237
+    .line 254
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mCDMA_IMSI:Ljava/lang/String;
 
-    .line 238
+    .line 255
     return-void
 .end method
 
@@ -313,10 +313,10 @@
     .parameter "mdn"
 
     .prologue
-    .line 253
+    .line 272
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mCDMA_MDN:Ljava/lang/String;
 
-    .line 254
+    .line 273
     return-void
 .end method
 
@@ -325,10 +325,10 @@
     .parameter "domain"
 
     .prologue
-    .line 205
+    .line 218
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mDOMAIN:Ljava/lang/String;
 
-    .line 206
+    .line 219
     return-void
 .end method
 
@@ -337,10 +337,10 @@
     .parameter "imsi"
 
     .prologue
-    .line 229
+    .line 245
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mGSM_IMSI:Ljava/lang/String;
 
-    .line 230
+    .line 246
     return-void
 .end method
 
@@ -349,10 +349,10 @@
     .parameter "msisdn"
 
     .prologue
-    .line 245
+    .line 263
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mGSM_MSISDN:Ljava/lang/String;
 
-    .line 246
+    .line 264
     return-void
 .end method
 
@@ -361,10 +361,10 @@
     .parameter "hasISIM"
 
     .prologue
-    .line 261
+    .line 281
     sput-boolean p0, Lcom/android/internal/telephony/HtcIsimData;->mHasISIM:Z
 
-    .line 262
+    .line 282
     return-void
 .end method
 
@@ -373,10 +373,10 @@
     .parameter "impi"
 
     .prologue
-    .line 197
+    .line 209
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mIMPI:Ljava/lang/String;
 
-    .line 198
+    .line 210
     return-void
 .end method
 
@@ -385,10 +385,10 @@
     .parameter "impu"
 
     .prologue
-    .line 213
+    .line 227
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mIMPUList:[Ljava/lang/String;
 
-    .line 214
+    .line 228
     return-void
 .end method
 
@@ -397,10 +397,10 @@
     .parameter "gbaSupported"
 
     .prologue
-    .line 269
+    .line 290
     sput-boolean p0, Lcom/android/internal/telephony/HtcIsimData;->mIsGBASupported:Z
 
-    .line 270
+    .line 291
     return-void
 .end method
 
@@ -409,10 +409,10 @@
     .parameter "keyLifetime"
 
     .prologue
-    .line 293
+    .line 314
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mKeyLifetime:Ljava/lang/String;
 
-    .line 294
+    .line 315
     return-void
 .end method
 
@@ -421,10 +421,10 @@
     .parameter "pcscf"
 
     .prologue
-    .line 221
+    .line 236
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mPCSCFList:Landroid/os/Bundle;
 
-    .line 222
+    .line 237
     return-void
 .end method
 
@@ -433,10 +433,10 @@
     .parameter "rand"
 
     .prologue
-    .line 277
+    .line 298
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mRand:[B
 
-    .line 278
+    .line 299
     return-void
 .end method
 
@@ -445,10 +445,10 @@
     .parameter "sessionId"
 
     .prologue
-    .line 301
+    .line 323
     sput p0, Lcom/android/internal/telephony/HtcIsimData;->mSessionId:I
 
-    .line 302
+    .line 324
     return-void
 .end method
 
@@ -456,7 +456,7 @@
     .locals 1
 
     .prologue
-    .line 305
+    .line 328
     sget-object v0, Lcom/android/internal/telephony/HtcIsimData;->mAid:Ljava/lang/String;
 
     return-object v0
@@ -466,7 +466,7 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 134
     sget-boolean v0, Lcom/android/internal/telephony/HtcIsimData;->mHasISIM:Z
 
     return v0
@@ -476,7 +476,7 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 142
     sget-boolean v0, Lcom/android/internal/telephony/HtcIsimData;->mIsGBASupported:Z
 
     return v0
@@ -487,9 +487,9 @@
     .parameter "aid"
 
     .prologue
-    .line 309
+    .line 333
     sput-object p0, Lcom/android/internal/telephony/HtcIsimData;->mAid:Ljava/lang/String;
 
-    .line 310
+    .line 334
     return-void
 .end method

@@ -228,7 +228,7 @@
     .line 175
     new-instance v3, Ljava/lang/Object;
 
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {v3 .. v3}, Ljava/lang/Object;-><init>()V
 
     sput-object v3, Landroid/content/SyncManager;->postOnAccountObjectLock:Ljava/lang/Object;
 
@@ -270,7 +270,7 @@
     const/4 v5, 0x0
 
     .line 340
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 141
     sget-object v2, Landroid/content/SyncManager;->INITIAL_ACCOUNTS_ARRAY:[Landroid/accounts/Account;
@@ -3094,11 +3094,13 @@
 
     .line 1255
     :pswitch_7
-    const-string/jumbo v0, "internal error"
+    const-string v0, "internal error"
 
     goto :goto_0
 
     .line 1232
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3380,7 +3382,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "initializeSyncAdapter: "
+    const-string v5, "initializeSyncAdapter: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3518,7 +3520,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "initializeSyncAdapter: failed to bind to "
+    const-string v5, "initializeSyncAdapter: failed to bind to "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3542,7 +3544,7 @@
     .parameter "activeSyncContext"
 
     .prologue
-    .line 2571
+    .line 2574
     iget-object v2, p0, Landroid/content/SyncManager;->mActiveSyncContexts:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -3563,14 +3565,14 @@
 
     check-cast v1, Landroid/content/SyncManager$ActiveSyncContext;
 
-    .line 2572
+    .line 2575
     .local v1, sync:Landroid/content/SyncManager$ActiveSyncContext;
     if-ne v1, p1, :cond_0
 
-    .line 2573
+    .line 2576
     const/4 v2, 0x1
 
-    .line 2576
+    .line 2579
     .end local v1           #sync:Landroid/content/SyncManager$ActiveSyncContext;
     :goto_0
     return v2
@@ -4463,7 +4465,7 @@
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 1121
-    const-string/jumbo v25, "in progress"
+    const-string v25, "in progress"
 
     move-object/from16 v0, p1
 
@@ -6021,7 +6023,7 @@
     .local v14, operation:Landroid/content/SyncOperation;
     iget-object v1, v14, Landroid/content/SyncOperation;->extras:Landroid/os/Bundle;
 
-    const-string/jumbo v2, "ignore_backoff"
+    const-string v2, "ignore_backoff"
 
     const/4 v3, 0x0
 
@@ -6034,7 +6036,7 @@
     .line 904
     iget-object v1, v14, Landroid/content/SyncOperation;->extras:Landroid/os/Bundle;
 
-    const-string/jumbo v2, "ignore_backoff"
+    const-string v2, "ignore_backoff"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
@@ -6602,7 +6604,7 @@
     if-eqz v39, :cond_4
 
     .line 593
-    const-string/jumbo v2, "ignore_backoff"
+    const-string v2, "ignore_backoff"
 
     const/4 v7, 0x1
 
@@ -6611,7 +6613,7 @@
     invoke-virtual {v0, v2, v7}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 594
-    const-string/jumbo v2, "ignore_settings"
+    const-string v2, "ignore_settings"
 
     const/4 v7, 0x1
 
@@ -6621,7 +6623,7 @@
 
     .line 596
     :cond_4
-    const-string/jumbo v2, "ignore_settings"
+    const-string v2, "ignore_settings"
 
     const/4 v7, 0x0
 
@@ -7089,7 +7091,7 @@
 
     .line 679
     .local v6, newExtras:Landroid/os/Bundle;
-    const-string/jumbo v2, "initialize"
+    const-string v2, "initialize"
 
     const/4 v7, 0x1
 

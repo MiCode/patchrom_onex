@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 196
+    .line 206
     iput-object p1, p0, Landroid/os/memory/HtcMemoryMeasurer$2;->this$0:Landroid/os/memory/HtcMemoryMeasurer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 200
+    .line 210
     iget-object v0, p0, Landroid/os/memory/HtcMemoryMeasurer$2;->this$0:Landroid/os/memory/HtcMemoryMeasurer;
 
     #calls: Landroid/os/memory/HtcMemoryMeasurer;->measureInBackground()V
     invoke-static {v0}, Landroid/os/memory/HtcMemoryMeasurer;->access$100(Landroid/os/memory/HtcMemoryMeasurer;)V
 
-    .line 201
+    .line 211
     return-void
 .end method

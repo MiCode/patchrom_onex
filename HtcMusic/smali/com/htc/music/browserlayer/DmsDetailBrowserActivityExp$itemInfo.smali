@@ -30,18 +30,18 @@
     .parameter "ID"
 
     .prologue
-    .line 2323
+    .line 2106
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$itemInfo;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2324
+    .line 2107
     iput p2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$itemInfo;->mPos:I
 
-    .line 2325
+    .line 2108
     iput-object p3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$itemInfo;->mID:Ljava/lang/String;
 
-    .line 2326
+    .line 2109
     return-void
 .end method
 
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 2341
+    .line 2124
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$itemInfo;->mID:Ljava/lang/String;
 
     return-object v0
@@ -61,7 +61,7 @@
     .locals 1
 
     .prologue
-    .line 2333
+    .line 2116
     iget v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$itemInfo;->mPos:I
 
     return v0
@@ -72,10 +72,10 @@
     .parameter "ID"
 
     .prologue
-    .line 2337
+    .line 2120
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$itemInfo;->mID:Ljava/lang/String;
 
-    .line 2338
+    .line 2121
     return-void
 .end method
 
@@ -84,9 +84,9 @@
     .parameter "pos"
 
     .prologue
-    .line 2329
+    .line 2112
     iput p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$itemInfo;->mPos:I
 
-    .line 2330
+    .line 2113
     return-void
 .end method

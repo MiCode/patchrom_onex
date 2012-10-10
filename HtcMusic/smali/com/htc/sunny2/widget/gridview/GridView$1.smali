@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 498
+    .line 501
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$1;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 4
 
     .prologue
-    .line 500
+    .line 503
     const-string v0, "GridView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,7 +83,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/sunny2/frameworks/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 501
+    .line 504
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$1;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -109,7 +109,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 502
+    .line 505
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$1;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/sunny2/widget/gridview/GridViewPreparator;->freeOutOfRange(III)V
 
-    .line 504
+    .line 507
     :cond_0
     return-void
 .end method

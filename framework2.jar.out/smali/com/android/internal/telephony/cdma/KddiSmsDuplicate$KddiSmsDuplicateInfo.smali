@@ -36,23 +36,23 @@
     .parameter "messageBody"
 
     .prologue
-    .line 239
+    .line 266
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->this$0:Lcom/android/internal/telephony/cdma/KddiSmsDuplicate;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 240
+    .line 267
     iput p2, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mMessageID:I
 
-    .line 241
+    .line 268
     iput p3, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mSendAck:I
 
-    .line 242
+    .line 269
     iput p4, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mMessageBodyLength:I
 
-    .line 243
+    .line 270
     iput-object p5, p0, Lcom/android/internal/telephony/cdma/KddiSmsDuplicate$KddiSmsDuplicateInfo;->mMessageBody:[B
 
-    .line 244
+    .line 271
     return-void
 .end method

@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setCategoryRightBtn(Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 918
+    .line 917
     iput-object p1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$10;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "arg0"
 
     .prologue
-    .line 920
+    .line 919
     iget-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$10;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
     #calls: Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->createNewPlaylist()V
     invoke-static {v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$1600(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
-    .line 921
+    .line 920
     return-void
 .end method

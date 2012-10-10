@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1172
+    .line 1173
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$4;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1175
+    .line 1176
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1176
+    .line 1177
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.htc.music.playstatechanged"
 
@@ -55,25 +55,25 @@
 
     if-eqz v1, :cond_1
 
-    .line 1177
+    .line 1178
     const-string v1, "[TrackBrowser]"
 
     const-string v2, "set play/pause Buttun because change."
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1178
+    .line 1179
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$4;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->setPauseButtonImage()V
     invoke-static {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$1300(Lcom/htc/music/browserlayer/TrackBrowserActivity;)V
 
-    .line 1187
+    .line 1188
     :cond_0
     :goto_0
     return-void
 
-    .line 1179
+    .line 1180
     :cond_1
     const-string v1, "com.htc.music.playbackcomplete"
 
@@ -83,14 +83,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 1180
+    .line 1181
     const-string v1, "[TrackBrowser]"
 
     const-string v2, "set play/pause Buttun because playback complete."
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1181
+    .line 1182
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$4;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->setPauseButtonImage()V
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 1183
+    .line 1184
     :cond_2
     const-string v1, "com.htc.music.onerror"
 
@@ -108,7 +108,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1185
+    .line 1186
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$4;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->finish()V

@@ -28,7 +28,7 @@
 
 
 # static fields
-.field private static final ALLOW_LOWER_CASE:Z = false
+.field private static final ALLOW_LOWER_CASE:Z = true
 
 .field public static final DAILY:I = 0x4
 
@@ -561,7 +561,7 @@
     .line 30
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 886
+    .line 894
     return-void
 .end method
 
@@ -575,7 +575,17 @@
     return-object v0
 .end method
 
-.method static synthetic access$1500()Ljava/util/HashMap;
+.method static synthetic access$1500()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 30
+    sget-object v0, Lcom/android/calendarcommon/EventRecurrence;->TAG:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1600()Ljava/util/HashMap;
     .locals 1
 
     .prologue
@@ -1488,11 +1498,15 @@
     .line 594
     const/4 v6, 0x0
 
-    .line 599
+    .line 597
     .local v6, parseFlags:I
-    const-string v11, ";"
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    invoke-virtual {p1, v11}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    move-result-object v11
+
+    const-string v12, ";"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v9
 

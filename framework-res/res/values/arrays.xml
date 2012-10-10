@@ -536,11 +536,11 @@
         <item>wimax</item>
         <item>cwwifi</item>
         <item>cdma_eri</item>
-        <item>data_connection</item>
-        <item>data_connection_2</item>
         <item>data_cdma_connection</item>
         <item>phone_evdo_signal</item>
+        <item>data_connection</item>
         <item>phone_signal</item>
+        <item>data_connection_2</item>
         <item>phone_signal_2</item>
         <item>battery</item>
         <item>alarm_clock</item>
@@ -592,6 +592,7 @@
         <item>1</item>
         <item>5</item>
     </integer-array>
+    <array name="config_cdma_dun_supported_types" />
     <array name="config_usbHostBlacklist" />
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
@@ -640,19 +641,41 @@
         <item>2601</item>
     </integer-array>
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>1</item>
-        <item>11</item>
-        <item>23</item>
-        <item>35</item>
-        <item>48</item>
-        <item>55</item>
-        <item>80</item>
-        <item>150</item>
-        <item>200</item>
+        <item>63</item>
+        <item>63</item>
+        <item>63</item>
+        <item>96</item>
+        <item>130</item>
+        <item>143</item>
+        <item>171</item>
+        <item>199</item>
+        <item>227</item>
         <item>255</item>
     </integer-array>
-    <array name="config_autoBrightnessLcdBacklightValuesUp" />
-    <array name="config_autoBrightnessLcdBacklightValuesDown" />
+    <integer-array name="config_autoBrightnessLcdBacklightValuesUp">
+        <item>63</item>
+        <item>63</item>
+        <item>63</item>
+        <item>96</item>
+        <item>130</item>
+        <item>143</item>
+        <item>171</item>
+        <item>199</item>
+        <item>227</item>
+        <item>255</item>
+    </integer-array>
+    <integer-array name="config_autoBrightnessLcdBacklightValuesDown">
+        <item>63</item>
+        <item>63</item>
+        <item>63</item>
+        <item>96</item>
+        <item>130</item>
+        <item>143</item>
+        <item>171</item>
+        <item>199</item>
+        <item>227</item>
+        <item>255</item>
+    </integer-array>
     <integer-array name="config_autoBrightnessButtonBacklightValues">
         <item>60</item>
         <item>60</item>
@@ -680,6 +703,7 @@
     <array name="config_twoDigitNumberPattern" />
     <array name="config_sms_enabled_single_shift_tables" />
     <array name="config_sms_enabled_locking_shift_tables" />
+    <array name="config_oemUsbModeOverride" />
     <array name="common_nicknames" />
     <string-array name="imAddressTypes">
         <item>Home</item>
@@ -736,6 +760,8 @@
         <item>mobile_vapp,22,0,6,-1,true,apn</item>
         <item>mobile_cmail,23,0,7,600000,true,apn</item>
         <item>mobile_entitle,24,0,6,60000,true,apn</item>
+        <item>mobile_v800,32,0,6,60000,true,apn</item>
+        <item>mobile_bip,33,0,6,60000,true,apn</item>
     </string-array>
     <integer-array name="htc_config_protectedNetworks">
         <item>11</item>

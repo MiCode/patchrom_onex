@@ -191,7 +191,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020050
+    const v2, 0x7f020052
 
     invoke-static {v1, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -267,7 +267,7 @@
     iput-object v1, p0, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     .line 3463
-    const v1, 0x7f020053
+    const v1, 0x7f020055
 
     iput v1, p0, Lcom/htc/music/browserlayer/fragment/TrackBrowserFragment$TrackListAdapter;->mDrmLockIconResId:I
 

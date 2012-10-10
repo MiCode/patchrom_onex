@@ -26,13 +26,13 @@
     .parameter "name"
 
     .prologue
-    .line 2451
+    .line 2453
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEHighlightStateChange;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
-    .line 2452
+    .line 2454
     invoke-direct {p0, p2, p3}, Lcom/htc/sunny2/RenderThreadEvent;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2453
+    .line 2455
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .parameter "cancelReason"
 
     .prologue
-    .line 2475
+    .line 2477
     return-void
 .end method
 
@@ -51,7 +51,7 @@
     .locals 5
 
     .prologue
-    .line 2457
+    .line 2459
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEHighlightStateChange;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mLock:Ljava/lang/Object;
@@ -61,7 +61,7 @@
 
     monitor-enter v2
 
-    .line 2459
+    .line 2461
     :try_start_0
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEHighlightStateChange;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -70,7 +70,7 @@
     #calls: Lcom/htc/sunny2/widget/gridview/GridView;->dispatchUnpress(Z)V
     invoke-static {v1, v3}, Lcom/htc/sunny2/widget/gridview/GridView;->access$900(Lcom/htc/sunny2/widget/gridview/GridView;Z)V
 
-    .line 2460
+    .line 2462
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEHighlightStateChange;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mSelectedHighlightEnabled:Z
@@ -80,7 +80,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 2462
+    .line 2464
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEHighlightStateChange;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v1, v1, Lcom/htc/sunny2/widget/gridview/GridView;->mOnScreenItems:Landroid/util/SparseArray;
@@ -98,27 +98,27 @@
 
     check-cast v0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;
 
-    .line 2463
+    .line 2465
     .local v0, cell:Lcom/htc/sunny2/widget/gridview/GridView$Cell;
     if-eqz v0, :cond_1
 
-    .line 2465
+    .line 2467
     iget-object v1, v0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->setPressed(Z)V
 
-    .line 2472
+    .line 2474
     .end local v0           #cell:Lcom/htc/sunny2/widget/gridview/GridView$Cell;
     :cond_0
     :goto_0
     monitor-exit v2
 
-    .line 2473
+    .line 2475
     return-void
 
-    .line 2469
+    .line 2471
     .restart local v0       #cell:Lcom/htc/sunny2/widget/gridview/GridView$Cell;
     :cond_1
     const-string v1, "GridView"
@@ -175,7 +175,7 @@
 
     goto :goto_0
 
-    .line 2472
+    .line 2474
     .end local v0           #cell:Lcom/htc/sunny2/widget/gridview/GridView$Cell;
     :catchall_0
     move-exception v1

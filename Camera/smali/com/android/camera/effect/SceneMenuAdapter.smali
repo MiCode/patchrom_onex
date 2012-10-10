@@ -83,7 +83,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d2
+    const v2, 0x7f0a01db
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -120,7 +120,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d3
+    const v2, 0x7f0a01dc
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -151,7 +151,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d4
+    const v2, 0x7f0a01dd
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -182,7 +182,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d5
+    const v2, 0x7f0a01de
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -211,7 +211,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01db
+    const v2, 0x7f0a01e4
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -240,7 +240,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d6
+    const v2, 0x7f0a01df
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -265,7 +265,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d7
+    const v2, 0x7f0a01e0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -296,7 +296,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d8
+    const v2, 0x7f0a01e1
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -327,7 +327,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01d9
+    const v2, 0x7f0a01e2
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -358,7 +358,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01da
+    const v2, 0x7f0a01e3
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -389,7 +389,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01dc
+    const v2, 0x7f0a01e5
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -420,7 +420,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01dd
+    const v2, 0x7f0a01e6
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -451,7 +451,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a01e2
+    const v2, 0x7f0a01eb
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -662,7 +662,7 @@
     iput-object v3, v2, Lcom/android/camera/effect/SceneMenuAdapter$ItemViewInfo;->textView:Landroid/widget/TextView;
 
     .line 121
-    const v3, 0x7f0800a8
+    const v3, 0x7f0800aa
 
     invoke-virtual {p2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

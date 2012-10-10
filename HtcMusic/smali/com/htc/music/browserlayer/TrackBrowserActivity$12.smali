@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2349
+    .line 2350
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$12;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +42,6 @@
     .parameter "arg0"
 
     .prologue
-    .line 2355
+    .line 2356
     return-void
 .end method

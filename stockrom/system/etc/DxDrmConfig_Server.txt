@@ -1,0 +1,13 @@
+#Filter the log output from irrelevant modules
+DisabledModules = 10
+#DebugLevel = 40
+
+#Every client will create log files on device with this prefix. /data/DxDrm/Logs folder should be pre-created in the device
+#ServerLogFile=/data/tmp/DxServerLogs/srv
+#LogFile=/data/DxDrm/DxServerLogs/srv
+#Merge the client logs into logcat
+#LogcatLogs=True
+
+#log the HTTP communication
+#JavaHTTPLog=true
+

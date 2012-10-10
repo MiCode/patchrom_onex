@@ -54,7 +54,7 @@
 
     const/4 v3, 0x0
 
-    .line 102
+    .line 112
     new-instance v0, Landroid/provider/htcCheckin$Events$Tag;
 
     const-string v1, "FOTA_FAILURE"
@@ -63,7 +63,7 @@
 
     sput-object v0, Landroid/provider/htcCheckin$Events$Tag;->FOTA_FAILURE:Landroid/provider/htcCheckin$Events$Tag;
 
-    .line 103
+    .line 113
     new-instance v0, Landroid/provider/htcCheckin$Events$Tag;
 
     const-string v1, "HTCSERVICES_ERROR"
@@ -72,7 +72,7 @@
 
     sput-object v0, Landroid/provider/htcCheckin$Events$Tag;->HTCSERVICES_ERROR:Landroid/provider/htcCheckin$Events$Tag;
 
-    .line 104
+    .line 114
     new-instance v0, Landroid/provider/htcCheckin$Events$Tag;
 
     const-string v1, "HTCSERVICES_UPDATE"
@@ -81,7 +81,7 @@
 
     sput-object v0, Landroid/provider/htcCheckin$Events$Tag;->HTCSERVICES_UPDATE:Landroid/provider/htcCheckin$Events$Tag;
 
-    .line 105
+    .line 115
     new-instance v0, Landroid/provider/htcCheckin$Events$Tag;
 
     const-string v1, "HTC_CHECKIN_FAILURE"
@@ -90,7 +90,7 @@
 
     sput-object v0, Landroid/provider/htcCheckin$Events$Tag;->HTC_CHECKIN_FAILURE:Landroid/provider/htcCheckin$Events$Tag;
 
-    .line 106
+    .line 116
     new-instance v0, Landroid/provider/htcCheckin$Events$Tag;
 
     const-string v1, "HTC_CHECKIN_SUCCESS"
@@ -99,7 +99,7 @@
 
     sput-object v0, Landroid/provider/htcCheckin$Events$Tag;->HTC_CHECKIN_SUCCESS:Landroid/provider/htcCheckin$Events$Tag;
 
-    .line 107
+    .line 117
     new-instance v0, Landroid/provider/htcCheckin$Events$Tag;
 
     const-string v1, "TEST"
@@ -110,7 +110,7 @@
 
     sput-object v0, Landroid/provider/htcCheckin$Events$Tag;->TEST:Landroid/provider/htcCheckin$Events$Tag;
 
-    .line 101
+    .line 111
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/provider/htcCheckin$Events$Tag;
@@ -157,7 +157,7 @@
     .end annotation
 
     .prologue
-    .line 101
+    .line 111
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -168,7 +168,7 @@
     .parameter "name"
 
     .prologue
-    .line 101
+    .line 111
     const-class v0, Landroid/provider/htcCheckin$Events$Tag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -184,7 +184,7 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 111
     sget-object v0, Landroid/provider/htcCheckin$Events$Tag;->$VALUES:[Landroid/provider/htcCheckin$Events$Tag;
 
     invoke-virtual {v0}, [Landroid/provider/htcCheckin$Events$Tag;->clone()Ljava/lang/Object;

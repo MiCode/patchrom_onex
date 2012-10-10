@@ -16,7 +16,7 @@
     .locals 0
 
     .prologue
-    .line 6
+    .line 7
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
     return-void
@@ -29,10 +29,10 @@
     .parameter "incomingNumber"
 
     .prologue
-    .line 50
+    .line 55
     invoke-super {p0, p1}, Landroid/telephony/PhoneStateListener;->onCallDisconnected(Ljava/lang/String;)V
 
-    .line 51
+    .line 56
     return-void
 .end method
 
@@ -42,10 +42,10 @@
     .parameter "phoneType"
 
     .prologue
-    .line 43
+    .line 44
     invoke-super {p0, p1, p2}, Landroid/telephony/PhoneStateListener;->onCallForwardingIndicatorChangedExt(ZI)V
 
-    .line 44
+    .line 45
     return-void
 .end method
 
@@ -54,10 +54,10 @@
     .parameter "count"
 
     .prologue
-    .line 19
+    .line 20
     invoke-super {p0, p1}, Landroid/telephony/PhoneStateListener;->onMessageWaitingIndicatorChangedEnhanced(I)V
 
-    .line 20
+    .line 21
     return-void
 .end method
 
@@ -66,10 +66,10 @@
     .parameter "state"
 
     .prologue
-    .line 54
+    .line 59
     invoke-super {p0, p1}, Landroid/telephony/PhoneStateListener;->onPreciseCallStateChanged(I)V
 
-    .line 55
+    .line 60
     return-void
 .end method
 
@@ -79,10 +79,10 @@
     .parameter "dataServiceState"
 
     .prologue
-    .line 34
+    .line 35
     invoke-super {p0, p1, p2}, Landroid/telephony/PhoneStateListener;->onSeparateServiceStateChanged([Landroid/telephony/ServiceState;[Landroid/telephony/ServiceState;)V
 
-    .line 35
+    .line 36
     return-void
 .end method
 
@@ -92,9 +92,22 @@
     .parameter "phoneType"
 
     .prologue
-    .line 39
+    .line 40
     invoke-super {p0, p1, p2}, Landroid/telephony/PhoneStateListener;->onServiceStateChangedExt(Landroid/telephony/ServiceState;I)V
 
-    .line 40
+    .line 41
+    return-void
+.end method
+
+.method public onSignalStrengthsChangedExt(Landroid/telephony/SignalStrength;I)V
+    .locals 0
+    .parameter "signalStrength"
+    .parameter "phoneType"
+
+    .prologue
+    .line 48
+    invoke-super {p0, p1, p2}, Landroid/telephony/PhoneStateListener;->onSignalStrengthsChangedExt(Landroid/telephony/SignalStrength;I)V
+
+    .line 49
     return-void
 .end method

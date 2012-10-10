@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 230
+    .line 234
     iput-object p1, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$1;->val$telephony:Landroid/telephony/TelephonyManager;
 
     iput-object p2, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$1;->val$handler:Landroid/os/Handler;
@@ -43,10 +43,10 @@
     .locals 3
 
     .prologue
-    .line 232
+    .line 236
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 233
+    .line 237
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$1;->val$telephony:Landroid/telephony/TelephonyManager;
 
     new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$DevicePhoneStateListener;
@@ -59,9 +59,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 234
+    .line 238
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 235
+    .line 239
     return-void
 .end method

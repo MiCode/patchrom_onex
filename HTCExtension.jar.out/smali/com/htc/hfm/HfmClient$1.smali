@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 387
+    .line 362
     iput-object p1, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "binder"
 
     .prologue
-    .line 399
+    .line 374
     invoke-static {}, Lcom/htc/hfm/HfmClient;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -68,7 +68,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
+    .line 375
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     invoke-static {p2}, Lcom/htc/hfm/IHfmService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/hfm/IHfmService;
@@ -78,7 +78,7 @@
     #setter for: Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
     invoke-static {v0, v1}, Lcom/htc/hfm/HfmClient;->access$402(Lcom/htc/hfm/HfmClient;Lcom/htc/hfm/IHfmService;)Lcom/htc/hfm/IHfmService;
 
-    .line 401
+    .line 376
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     const/4 v1, 0x1
@@ -86,13 +86,13 @@
     #setter for: Lcom/htc/hfm/HfmClient;->mIsBound:Z
     invoke-static {v0, v1}, Lcom/htc/hfm/HfmClient;->access$302(Lcom/htc/hfm/HfmClient;Z)Z
 
-    .line 402
+    .line 377
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     #calls: Lcom/htc/hfm/HfmClient;->next()V
     invoke-static {v0}, Lcom/htc/hfm/HfmClient;->access$500(Lcom/htc/hfm/HfmClient;)V
 
-    .line 403
+    .line 378
     return-void
 .end method
 
@@ -103,7 +103,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 390
+    .line 365
     invoke-static {}, Lcom/htc/hfm/HfmClient;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -128,19 +128,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
+    .line 366
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     #setter for: Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
     invoke-static {v0, v3}, Lcom/htc/hfm/HfmClient;->access$102(Lcom/htc/hfm/HfmClient;Lcom/htc/hfm/HfmClient$Action;)Lcom/htc/hfm/HfmClient$Action;
 
-    .line 392
+    .line 367
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     #setter for: Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
     invoke-static {v0, v3}, Lcom/htc/hfm/HfmClient;->access$202(Lcom/htc/hfm/HfmClient;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 393
+    .line 368
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     const/4 v1, 0x0
@@ -148,12 +148,12 @@
     #setter for: Lcom/htc/hfm/HfmClient;->mIsBound:Z
     invoke-static {v0, v1}, Lcom/htc/hfm/HfmClient;->access$302(Lcom/htc/hfm/HfmClient;Z)Z
 
-    .line 394
+    .line 369
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$1;->this$0:Lcom/htc/hfm/HfmClient;
 
     #setter for: Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
     invoke-static {v0, v3}, Lcom/htc/hfm/HfmClient;->access$402(Lcom/htc/hfm/HfmClient;Lcom/htc/hfm/IHfmService;)Lcom/htc/hfm/IHfmService;
 
-    .line 395
+    .line 370
     return-void
 .end method

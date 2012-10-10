@@ -640,7 +640,7 @@
 
     .prologue
     .line 406
-    const-string/jumbo v0, "long_press_timeout"
+    const-string v0, "long_press_timeout"
 
     const/16 v1, 0x1f4
 

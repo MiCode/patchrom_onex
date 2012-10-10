@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1201
+    .line 1204
     iput-object p1, p0, Lcom/android/providers/media/MediaScannerService$2;->this$0:Lcom/android/providers/media/MediaScannerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "data"
 
     .prologue
-    .line 1203
+    .line 1206
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1204
+    .line 1207
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.htc.content.Intent.ACTION_BACKGROUND_OP_STOP"
 
@@ -55,16 +55,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 1205
+    .line 1208
     iget-object v1, p0, Lcom/android/providers/media/MediaScannerService$2;->this$0:Lcom/android/providers/media/MediaScannerService;
 
     invoke-virtual {v1}, Lcom/android/providers/media/MediaScannerService;->pauseScan()V
 
-    .line 1213
+    .line 1216
     :goto_0
     return-void
 
-    .line 1207
+    .line 1210
     :cond_0
     const-string v1, "com.htc.content.Intent.ACTION_BACKGROUND_OP_GO"
 
@@ -74,14 +74,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 1208
+    .line 1211
     iget-object v1, p0, Lcom/android/providers/media/MediaScannerService$2;->this$0:Lcom/android/providers/media/MediaScannerService;
 
     invoke-virtual {v1}, Lcom/android/providers/media/MediaScannerService;->resumeScan()V
 
     goto :goto_0
 
-    .line 1211
+    .line 1214
     :cond_1
     const-string v1, "MediaScannerService"
 

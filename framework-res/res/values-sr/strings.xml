@@ -339,7 +339,7 @@
     <string name="permlab_reorderTasks">promena redosleda aktivnih aplikacija</string>
     <string name="permdesc_reorderTasks">Dozvoljava aplikaciji da premešta aplikacije u prvi plan i pozadinu. Zlonamerne aplikacije se mogu nametnutni u prvi plan bez vaše kontrole.</string>
     <string name="permlab_removeTasks">zaustavljanje aktivnih aplikacija</string>
-    <string name="permdesc_removeTasks">Dozvoljava aplikaciji da uklanja zadatke i da suzbija njihove aplikacije. Zlonamerne aplikacije mogu da poremete ponašanje drugih aplikacija.</string>
+    <string name="permdesc_removeTasks">Omogućava aplikaciji da uklanja zadatke i uništava njihove aplikacije. Zlonamerne aplikacije mogu da poremete ponašanje drugih aplikacija.</string>
     <string name="permlab_setDebugApp">omogućavanje debugging režima za aplikaciju</string>
     <string name="permdesc_setDebugApp">Dozvoljava aplikaciji da uključi debugging mod za drugu aplikaciju. Zlonamerne aplikacije mogu ovo koristiti da unište druge aplikacije.</string>
     <string name="permlab_changeConfiguration">izmena podešavanja korisničkog interfejsa</string>
@@ -433,7 +433,7 @@
     <string name="permlab_diagnostic">čitanje/pisanje u izvore u vlasništvu grupe za dijagnostiku</string>
     <string name="permdesc_diagnostic">Dozvoljava aplikaciji da čita i piše u bilo koji izvor u vlasništvu grupe za dijagnostiku; a primer, datoteke u /dev. Ovo može potencijalno uticati na stabilnost i bezbednost sistema. Ovo treba koristiti SAMO za dijagnostiku specifičnu za hardver od strane proizvođača ili operatera.</string>
     <string name="permlab_changeComponentState">omogućavanje ili onemogućavanje komponenti aplikacije</string>
-    <string name="permdesc_changeComponentState">Dozvoljava aplikaciji da promeni da li je komponenta druge aplikacije omogućena ili ne. Zlonamerne aplikacije mogu ovo da koriste da onemoguće važne kapacitete telefona. Mora se oprezno postupati sa dozvolama jer postoji mogućnost da se komponente dovedu u neupotrebljivo, nestalno ili nestabilno stanje.</string>
+    <string name="permdesc_changeComponentState">Omogućava aplikaciji da omogući ili onemogući komponentu druge aplikacije. Zlonamerne aplikacije to mogu da zloupotrebe i onemoguće važne funkcije telefona. Treba biti pažljiv pri dodeli ove dozvole jer postoji mogućnost da će komponente aplikacije postati neupotrebljive, neusaglašene ili nepostojane.</string>
     <string name="permlab_setPreferredApplications">postavljanje prioritetnih aplikacija</string>
     <string name="permdesc_setPreferredApplications">Dozvoljava aplikaciji da izmeni vaše prioritetne aplikacije. Ovo može omogućiti zlonamernim aplikacijama da neprimetno izmene aktivne aplikacije, lažirajući vaše postojeće aplikacije radi prikupljanja vaših privatnih podataka.</string>
     <string name="permlab_writeSettings">izmena opštih podešavanja sistema</string>
@@ -556,8 +556,8 @@
     <string name="permdesc_accessNetworkState">Dozvoljava aplikaciji da prikaže statuse svih mreža.</string>
     <string name="permlab_createNetworkSockets">pun pristup Internetu</string>
     <string name="permdesc_createNetworkSockets">Dozvoljava aplikaciji da kreira mrežne priključke.</string>
-    <string name="permlab_writeApnSettings">menjanje/presretanje mrežnih podešavanja i saobraćaja</string>
-    <string name="permdesc_writeApnSettings">Dozvoljava aplikacij ida promeni mrežna podešavanja i da presretne i ispita sav mrežni saobraćaj, na primer da promeni proksi i port bilo kog APN-a. Zlonamerne aplikacije mogu da nadziru, preusmeravaju ili menjaju mrežne pakete bez vašeg znanja.</string>
+    <string name="permlab_writeApnSettings">promena/presretanje mrežnih podešavanja i saobraćaja</string>
+    <string name="permdesc_writeApnSettings">Dozvoljava aplikaciji da menja mrežna podešavanja kao i da presreće i pregleda sav mrežni saobraćaj, na primer, radi izmene proksija i porta bilo kog naziva pristupne tačke. Zlonamerne aplikacije mogu da prate, preusmeravaju ili menjaju mrežne pakete bez vašeg znanja.</string>
     <string name="permlab_changeNetworkState">promena veze sa mrežom</string>
     <string name="permdesc_changeNetworkState">Dozvoljava aplikaciji da promeni status veze sa mrežom.</string>
     <string name="permlab_changeTetherState">Promeni deljenje internet konekcije</string>
@@ -717,7 +717,7 @@
     <string name="lockscreen_return_to_call">Vrati se na poziv</string>
     <string name="lockscreen_pattern_correct">Tačno!</string>
     <string name="lockscreen_pattern_wrong">Žao nam je, pokušajte ponovo</string>
-    <string name="lockscreen_password_wrong">Žao nam je, pokušajte ponovo</string>
+    <string name="lockscreen_password_wrong">Pokušajte ponovo</string>
     <string name="lockscreen_plugged_in">Puni se, %d%%</string>
     <string name="lockscreen_charged">Napunjeno.</string>
     <string name="lockscreen_battery_short">%d%%</string>
@@ -725,7 +725,7 @@
     <string name="lockscreen_missing_sim_message_short">Nema SIM kartice.</string>
     <string name="lockscreen_missing_sim_message">Nema SIM kartice u telefonu.</string>
     <string name="lockscreen_missing_sim_instructions">Ubacite SIM karticu.</string>
-    <string name="lockscreen_missing_sim_instructions_long">SIM kartica nedostaje ili se ne može čitati. Ubacite SIM karticu.</string>
+    <string name="lockscreen_missing_sim_instructions_long">Nedostaje SIM kartica ili ne može da se pročita. Umetnite SIM karticu.</string>
     <string name="lockscreen_permanent_disabled_sim_instructions">"Vaša SIM kartica je trajno onemogućena.
  Kontaktirajte svog provajdera servisa bežičnog prenosa da biste dobili drugu SIM karticu."</string>
     <string name="lockscreen_transport_prev_description">Taster za prethodnu numeru</string>
@@ -742,10 +742,10 @@
     <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Netačno ste iscrtali šemu za otključavanje %d puta. 
 
 Pokušajte ponovo za %d sekundi."</string>
-    <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Svoju lozinku ste pogrešno uneli %d puta. 
+    <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Uneli ste netačnu lozinku %d puta. 
 
 Pokušajte ponovo za %d sekundi."</string>
-    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"Svoj PIN ste pogrešno uneli %d puta. 
+    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message" formatted="false">"Uneli ste netačni PIN %d puta. 
 
 Pokušajte ponovo za %d sekundi."</string>
     <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Netačno ste iscrtali šemu za otključavanje %d puta. Posle %d neuspelih pokušaja, od vas će se zatražiti da otključate svoj telefon korišćenjem prijavljivanja na Google.
@@ -790,8 +790,8 @@ Posetite "<b>google.com/accounts/recovery</b></string>
 Izaberite U redu za nastavak ili Otkaži da ostanete na trenutnoj stranici."</string>
     <string name="save_password_label">Potvrdi</string>
     <string name="double_tap_toast">Savet: dvaput dodirnite istoriju i omiljene lokacije.</string>
-    <string name="autofill_this_form">Automatsko popunjavanje</string>
-    <string name="setup_autofill">Podešavanje automatskog popunjavanja</string>
+    <string name="autofill_this_form">Automatski popuni</string>
+    <string name="setup_autofill">Podesi aut. pop.</string>
     <string name="autofill_address_name_separator">" "</string>
     <string name="autofill_address_summary_name_format">$1$2$3</string>
     <string name="autofill_address_summary_separator">", "</string>
@@ -927,7 +927,7 @@ Da li želite da je zatvorite?"</string>
     <string name="launch_warning_original">%1$s je pokrenuta prva.</string>
     <string name="screen_compat_mode_scale">Skala</string>
     <string name="screen_compat_mode_show">Uvek prikaži</string>
-    <string name="screen_compat_mode_hint">Ponovo omogući ovo u meniju Podešavanja > Aplikacije > Upravljanje aplikacijama.</string>
+    <string name="screen_compat_mode_hint">Ponovo ovo omogućite u okviru Podešavanja > Aplikacije > Upravljanje aplikacijama.</string>
     <string name="smv_application">Aplikacija %1$s (proces %2$s) je prekršila svoju samonametnutu StrictMode politiku.</string>
     <string name="smv_process">Proces %1$s je prekršio svoju samonametnutu StrictMode politiku.</string>
     <string name="android_upgrading_title">Android se nadograđuje...</string>
@@ -981,10 +981,10 @@ Da li želite da je zatvorite?"</string>
     <string name="sms_control_yes">U redu</string>
     <string name="sms_control_no">Otkaži</string>
     <string name="sim_removed_title">SIM kartica je uklonjena</string>
-    <string name="sim_removed_message">Mobilna mreža će biti nedostupna dok ponovo ne pokrenete uređaj sa ubačenom važećom SIM karticom.</string>
+    <string name="sim_removed_message">Mobilna mreža neće biti dostupna dok ne pokrenete sistem ponovo uz umetanje važeće SIM kartice.</string>
     <string name="sim_done_button">Gotovo</string>
     <string name="sim_added_title">SIM kartica je dodata</string>
-    <string name="sim_added_message">Morate ponovo da pokrenete svoj uređaj da biste pristupili mobilnoj mreži.</string>
+    <string name="sim_added_message">Morate ponovo da pokrenete uređaj da biste mogli da pristupite mobilnoj mreži.</string>
     <string name="sim_restart_button">Restartuj</string>
     <string name="time_picker_dialog_title">Podešavanje vremena</string>
     <string name="date_picker_dialog_title">Podešavanje datuma</string>
@@ -1111,7 +1111,7 @@ za nalog %s"</string>
     <string name="sync_too_many_deletes">Ograničenje za brisanje je prekoračeno</string>
     <string name="sync_too_many_deletes_desc">Ima %1$d izbrisanih stavki za %2$s, nalog %3$s. Šta biste želeli da uradite?</string>
     <string name="sync_really_delete">Izbrišite stavke.</string>
-    <string name="sync_undo_deletes">Ponišiti brisanja.</string>
+    <string name="sync_undo_deletes">Opozovi brisanja.</string>
     <string name="sync_do_nothing">Ne radite ništa zasada.</string>
     <string name="choose_account_label">Izaberi nalog</string>
     <string name="add_account_label">Dodavanje naloga</string>
@@ -1163,7 +1163,7 @@ za nalog %s"</string>
     <string name="description_target_unlock_tablet">Za otključavanje pomerite prst.</string>
     <string name="keyboard_headset_required_to_hear_password">Priključite slušalice da biste čuli izgovaranje tastera lozinke.</string>
     <string name="keyboard_password_character_no_headset">Tačka.</string>
-    <string name="action_bar_home_description">Idi na početnu stranu</string>
+    <string name="action_bar_home_description">Pređi na Početnu</string>
     <string name="action_bar_up_description">Idi nagore</string>
     <string name="action_menu_overflow_description">Više opcija</string>
     <string name="storage_internal">Ugrađena memorija</string>

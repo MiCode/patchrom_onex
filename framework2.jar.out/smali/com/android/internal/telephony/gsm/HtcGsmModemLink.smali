@@ -57,26 +57,26 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 38
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mGsmPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForModemLinkStatus(Landroid/os/Handler;)V
 
-    .line 35
+    .line 39
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mGsmPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterFor3GIndicator(Landroid/os/Handler;)V
 
-    .line 36
+    .line 40
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mModemLinkOn:Z
 
-    .line 37
+    .line 41
     return-void
 .end method
 
@@ -84,14 +84,14 @@
     .locals 2
 
     .prologue
-    .line 40
+    .line 48
     const-string v0, "GSM"
 
     const-string v1, "HtcGsmModemLink finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
+    .line 49
     return-void
 .end method
 
@@ -99,7 +99,7 @@
     .locals 1
 
     .prologue
-    .line 89
+    .line 109
     iget v0, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mDataActivityState:I
 
     return v0
@@ -114,7 +114,7 @@
 
     const/4 v6, 0x0
 
-    .line 46
+    .line 58
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->GENERIC_WPHONE_CONFIG()Z
 
     move-result v5
@@ -125,7 +125,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 47
+    .line 59
     const-string v5, "GSM"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -150,18 +150,18 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
+    .line 88
     :cond_0
     :goto_0
     return-void
 
-    .line 52
+    .line 64
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 54
+    .line 66
     .local v0, ar:Landroid/os/AsyncResult;
     iget v5, p1, Landroid/os/Message;->what:I
 
@@ -169,7 +169,7 @@
 
     goto :goto_0
 
-    .line 56
+    .line 68
     :pswitch_0
     iget-object v5, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -179,23 +179,23 @@
 
     check-cast v4, [I
 
-    .line 57
+    .line 69
     .local v4, status:[I
     aget v5, v4, v6
 
     if-ne v5, v2, :cond_2
 
-    .line 58
+    .line 70
     .local v2, modemLinkState:Z
     :goto_1
     iget-boolean v5, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mModemLinkOn:Z
 
     if-eq v5, v2, :cond_0
 
-    .line 59
+    .line 71
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mModemLinkOn:Z
 
-    .line 60
+    .line 72
     iget-object v5, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mGsmPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v5}, Lcom/android/internal/telephony/gsm/GSMPhone;->notifyDataActivity()V
@@ -206,10 +206,10 @@
     :cond_2
     move v2, v6
 
-    .line 57
+    .line 69
     goto :goto_1
 
-    .line 64
+    .line 76
     .end local v4           #status:[I
     :pswitch_1
     iget-object v5, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -220,7 +220,7 @@
 
     check-cast v1, [I
 
-    .line 65
+    .line 77
     .local v1, inds:[I
     if-eqz v1, :cond_0
 
@@ -228,31 +228,31 @@
 
     if-lez v5, :cond_0
 
-    .line 66
+    .line 78
     aget v3, v1, v6
 
-    .line 67
+    .line 79
     .local v3, state:I
     iget v5, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mDataActivityState:I
 
     if-eq v3, v5, :cond_0
 
-    .line 68
+    .line 80
     iput v3, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mDataActivityState:I
 
-    .line 69
+    .line 81
     iget-boolean v5, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mModemLinkOn:Z
 
     if-eqz v5, :cond_0
 
-    .line 70
+    .line 82
     iget-object v5, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mGsmPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v5}, Lcom/android/internal/telephony/gsm/GSMPhone;->notifyDataActivity()V
 
     goto :goto_0
 
-    .line 54
+    .line 66
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -264,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 98
     iget-boolean v0, p0, Lcom/android/internal/telephony/gsm/HtcGsmModemLink;->mModemLinkOn:Z
 
     return v0

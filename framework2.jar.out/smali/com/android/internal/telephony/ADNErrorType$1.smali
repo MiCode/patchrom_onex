@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 62
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .parameter "source"
 
     .prologue
-    .line 58
+    .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -54,14 +54,14 @@
 
     const/4 v1, 0x1
 
-    .line 59
+    .line 69
     .local v1, success:Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 61
+    .line 71
     .local v0, error:I
     new-instance v2, Lcom/android/internal/telephony/ADNErrorType;
 
@@ -69,7 +69,7 @@
 
     return-object v2
 
-    .line 58
+    .line 68
     .end local v0           #error:I
     .end local v1           #success:Z
     :cond_0
@@ -83,7 +83,7 @@
     .parameter "x0"
 
     .prologue
-    .line 52
+    .line 62
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/ADNErrorType$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/ADNErrorType;
 
     move-result-object v0
@@ -96,7 +96,7 @@
     .parameter "size"
 
     .prologue
-    .line 66
+    .line 76
     new-array v0, p1, [Lcom/android/internal/telephony/ADNErrorType;
 
     return-object v0
@@ -107,7 +107,7 @@
     .parameter "x0"
 
     .prologue
-    .line 52
+    .line 62
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/ADNErrorType$1;->newArray(I)[Lcom/android/internal/telephony/ADNErrorType;
 
     move-result-object v0

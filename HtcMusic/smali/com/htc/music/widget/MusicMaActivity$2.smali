@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 597
+    .line 595
     iput-object p1, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,16 +41,16 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 599
+    .line 597
     iget v3, p1, Landroid/os/Message;->what:I
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 633
+    .line 631
     :goto_0
     return-void
 
-    .line 602
+    .line 600
     :sswitch_0
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -61,7 +61,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 603
+    .line 601
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->mbufferdialog:Landroid/app/ProgressDialog;
@@ -71,7 +71,7 @@
 
     invoke-virtual {v3}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 604
+    .line 602
     :cond_0
     const-string v3, "[MusicMaActivity]"
 
@@ -79,17 +79,17 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 605
+    .line 603
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v3, :cond_1
 
-    .line 606
+    .line 604
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 607
+    .line 605
     .local v1, message:Ljava/lang/String;
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 610
+    .line 608
     .end local v1           #message:Ljava/lang/String;
     :cond_1
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
@@ -114,7 +114,7 @@
 
     goto :goto_0
 
-    .line 613
+    .line 611
     :sswitch_1
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -129,7 +129,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 614
+    .line 612
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
@@ -143,11 +143,11 @@
 
     invoke-virtual {v4, v3}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->saveRenderer(Ljava/lang/String;)Z
 
-    .line 617
+    .line 615
     :cond_2
     const/4 v0, 0x0
 
-    .line 619
+    .line 617
     .local v0, dms:Ljava/lang/String;
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -159,7 +159,7 @@
 
     move-result-object v2
 
-    .line 621
+    .line 619
     .local v2, pref:Landroid/content/SharedPreferences;
     const-string v3, "server"
 
@@ -169,14 +169,14 @@
 
     move-result-object v0
 
-    .line 623
+    .line 621
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 624
+    .line 622
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     invoke-virtual {v3}, Lcom/htc/music/widget/MusicMaActivity;->getApplicationContext()Landroid/content/Context;
@@ -185,7 +185,7 @@
 
     invoke-static {v3, v6}, Lcom/htc/music/util/MusicUtils;->switchToPUSH(Landroid/content/Context;Z)Z
 
-    .line 629
+    .line 627
     :goto_1
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -194,7 +194,7 @@
 
     goto :goto_0
 
-    .line 626
+    .line 624
     :cond_3
     iget-object v3, p0, Lcom/htc/music/widget/MusicMaActivity$2;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -206,7 +206,7 @@
 
     goto :goto_1
 
-    .line 599
+    .line 597
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0

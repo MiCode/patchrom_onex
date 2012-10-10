@@ -80,200 +80,128 @@
 
 # virtual methods
 .method public toEncodedString()Ljava/lang/String;
-    .locals 12
+    .locals 5
 
     .prologue
     .line 29
-    iget-object v9, p0, Lcom/htc/text/tag/ProfileTag;->uri:Ljava/lang/String;
+    iget-object v3, p0, Lcom/htc/text/tag/ProfileTag;->uri:Ljava/lang/String;
 
-    const-string v10, "&"
-
-    const-string v11, "&amp;"
-
-    invoke-static {v9, v10, v11}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 30
-    .local v2, escapedAmpersandUri:Ljava/lang/String;
-    iget-object v9, p0, Lcom/htc/text/tag/ProfileTag;->name:Ljava/lang/String;
+    .local v2, escapedUri:Ljava/lang/String;
+    iget-object v3, p0, Lcom/htc/text/tag/ProfileTag;->name:Ljava/lang/String;
 
-    const-string v10, "&"
-
-    const-string v11, "&amp;"
-
-    invoke-static {v9, v10, v11}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 31
-    .local v0, escapedAmpersandName:Ljava/lang/String;
-    const-string v9, "<"
+    .local v0, escapedName:Ljava/lang/String;
+    const-string v3, ""
 
-    const-string v10, "&lt;"
+    iget-object v4, p0, Lcom/htc/text/tag/ProfileTag;->nameAlt:Ljava/lang/String;
 
-    invoke-static {v2, v9, v10}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v8
+    move-result v3
+
+    if-eqz v3, :cond_0
 
     .line 32
-    .local v8, escapedLessThanUri:Ljava/lang/String;
-    const-string v9, "<"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v10, "&lt;"
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v9, v10}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v4, "<pf uri=\""
 
-    move-result-object v6
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 33
-    .local v6, escapedLessThanName:Ljava/lang/String;
-    const-string v9, ">"
+    move-result-object v3
 
-    const-string v10, "&gt;"
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v8, v9, v10}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v5
+    const-string v4, "\" name=\""
 
-    .line 34
-    .local v5, escapedGreaterThanUri:Ljava/lang/String;
-    const-string v9, ">"
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v10, "&gt;"
+    move-result-object v3
 
-    invoke-static {v6, v9, v10}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "\" />"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     .line 35
-    .local v3, escapedGreaterThanName:Ljava/lang/String;
-    const-string v9, ""
-
-    iget-object v10, p0, Lcom/htc/text/tag/ProfileTag;->nameAlt:Ljava/lang/String;
-
-    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_0
-
-    .line 36
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, "<pf uri=\""
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    const-string v10, "\" name=\""
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    const-string v10, "\" />"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 41
     :goto_0
-    return-object v9
+    return-object v3
 
-    .line 38
+    .line 34
     :cond_0
-    iget-object v9, p0, Lcom/htc/text/tag/ProfileTag;->nameAlt:Ljava/lang/String;
+    iget-object v3, p0, Lcom/htc/text/tag/ProfileTag;->nameAlt:Ljava/lang/String;
 
-    const-string v10, "&"
-
-    const-string v11, "&amp;"
-
-    invoke-static {v9, v10, v11}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 39
-    .local v1, escapedAmpersandNameAlt:Ljava/lang/String;
-    const-string v9, "<"
+    .line 35
+    .local v1, escapedNameAlt:Ljava/lang/String;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v10, "&lt;"
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v1, v9, v10}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v4, "<pf uri=\""
 
-    move-result-object v7
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 40
-    .local v7, escapedLessThanNameAlt:Ljava/lang/String;
-    const-string v9, ">"
+    move-result-object v3
 
-    const-string v10, "&gt;"
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v7, v9, v10}, Lcom/htc/text/tag/ProfileTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v4
+    const-string v4, "\" name=\""
 
-    .line 41
-    .local v4, escapedGreaterThanNameAlt:Ljava/lang/String;
-    new-instance v9, Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v3
 
-    const-string v10, "<pf uri=\""
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    move-result-object v9
+    const-string v4, "\" name_alt=\""
 
-    invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    move-result-object v3
 
-    const-string v10, "\" name=\""
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    move-result-object v9
+    const-string v4, "\" />"
 
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    move-result-object v3
 
-    const-string v10, "\" name_alt=\""
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    const-string v10, "\" />"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
+    move-result-object v3
 
     goto :goto_0
 .end method
@@ -282,7 +210,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 49
     iget-object v0, p0, Lcom/htc/text/tag/ProfileTag;->name:Ljava/lang/String;
 
     return-object v0

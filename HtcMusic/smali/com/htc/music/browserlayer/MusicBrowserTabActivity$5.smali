@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1781
+    .line 1803
     iput-object p1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$5;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +42,11 @@
     .parameter "arg0"
 
     .prologue
-    .line 1783
+    .line 1805
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$5;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->onSearchRequested()Z
 
-    .line 1784
+    .line 1806
     return-void
 .end method

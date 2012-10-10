@@ -29,22 +29,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 286
+    .line 293
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 283
+    .line 290
     iput-object v0, p0, Lcom/htc/music/util/MusicUtils$ServiceOwner;->mId:Ljava/lang/String;
 
-    .line 284
+    .line 291
     iput-object v0, p0, Lcom/htc/music/util/MusicUtils$ServiceOwner;->mContext:Landroid/content/Context;
 
-    .line 287
+    .line 294
     iput-object p1, p0, Lcom/htc/music/util/MusicUtils$ServiceOwner;->mId:Ljava/lang/String;
 
-    .line 288
+    .line 295
     iput-object p2, p0, Lcom/htc/music/util/MusicUtils$ServiceOwner;->mContext:Landroid/content/Context;
 
-    .line 289
+    .line 296
     return-void
 .end method
 
@@ -55,12 +55,12 @@
     .parameter "obj"
 
     .prologue
-    .line 293
+    .line 300
     instance-of v0, p1, Lcom/htc/music/util/MusicUtils$ServiceOwner;
 
     if-eqz v0, :cond_0
 
-    .line 294
+    .line 301
     iget-object v0, p0, Lcom/htc/music/util/MusicUtils$ServiceOwner;->mId:Ljava/lang/String;
 
     check-cast p1, Lcom/htc/music/util/MusicUtils$ServiceOwner;
@@ -74,10 +74,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 295
+    .line 302
     const/4 v0, 0x1
 
-    .line 299
+    .line 306
     :goto_0
     return v0
 
@@ -91,7 +91,7 @@
     .locals 1
 
     .prologue
-    .line 304
+    .line 311
     iget-object v0, p0, Lcom/htc/music/util/MusicUtils$ServiceOwner;->mId:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I

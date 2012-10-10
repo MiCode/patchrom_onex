@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Dodaj seznam predvajanja</string>
     <string name="htc_delete_playlists">Izbriši sezname predvajanja</string>
     <string name="htc_delete_playlist">Izbriši seznam predvajanja</string>
+    <string name="htc_delete_all_playlists">Izbriši vse sezname predvajanja</string>
     <string name="htc_playlist_add_songs">Dodaj skladbe</string>
     <string name="htc_playlist_del_songs">Izbriši skladbe</string>
     <string name="htc_playlist_remove_songs">Odstrani skladbe</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Medpomnjenje...</string>
     <string name="title_send_content">Pošiljam vsebino...</string>
     <string name="no_downloaded_apps_found">Ni najdenih prenesenih aplikacij</string>
+    <string name="music_folder_picker_dialog_msg">Ali želite dodati skladbe na seznam predvajanja, tako da izberete mapo? »Ne«, če želite skladbe dodati drugače</string>
 </resources>

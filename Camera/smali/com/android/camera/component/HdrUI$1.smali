@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 229
+    .line 239
     iput-object p1, p0, Lcom/android/camera/component/HdrUI$1;->this$0:Lcom/android/camera/component/HdrUI;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 233
+    .line 243
     iget-object v0, p0, Lcom/android/camera/component/HdrUI$1;->this$0:Lcom/android/camera/component/HdrUI;
 
     #getter for: Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
@@ -50,13 +50,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 234
+    .line 244
     iget-object v0, p0, Lcom/android/camera/component/HdrUI$1;->this$0:Lcom/android/camera/component/HdrUI;
 
     #calls: Lcom/android/camera/component/HdrUI;->openCaptureUI()V
     invoke-static {v0}, Lcom/android/camera/component/HdrUI;->access$100(Lcom/android/camera/component/HdrUI;)V
 
-    .line 235
+    .line 245
     :cond_0
     return-void
 .end method

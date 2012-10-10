@@ -35,7 +35,7 @@
     .parameter "x0"
 
     .prologue
-    .line 2290
+    .line 2322
     iput-object p1, p0, Landroid/database/sqlite/SQLiteDatabase$1;->this$0:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -53,7 +53,7 @@
     .parameter "x3"
 
     .prologue
-    .line 2290
+    .line 2322
     check-cast p2, Ljava/lang/String;
 
     .end local p2
@@ -76,14 +76,14 @@
     .parameter "newValue"
 
     .prologue
-    .line 2294
+    .line 2326
     iget-object v0, p0, Landroid/database/sqlite/SQLiteDatabase$1;->this$0:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->verifyLockOwner()V
 
-    .line 2295
+    .line 2327
     invoke-virtual {p3}, Landroid/database/sqlite/SQLiteCompiledSql;->releaseIfNotInUse()V
 
-    .line 2296
+    .line 2328
     return-void
 .end method

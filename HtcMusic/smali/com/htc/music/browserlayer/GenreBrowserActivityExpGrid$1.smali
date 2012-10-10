@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 363
+    .line 374
     iput-object p1, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$1;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -50,17 +50,17 @@
 
     const/4 v6, 0x0
 
-    .line 370
+    .line 381
     if-nez p3, :cond_1
 
-    .line 371
+    .line 382
     iget-object v4, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$1;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     invoke-virtual {v4}, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
-    .line 372
+    .line 383
     .local v2, inflator:Landroid/view/LayoutInflater;
     const v4, 0x7f030029
 
@@ -70,36 +70,36 @@
 
     move-result-object p3
 
-    .line 373
+    .line 384
     invoke-virtual {p3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 374
+    .line 385
     .local v1, folderNameTextView:Landroid/widget/TextView;
     invoke-virtual {p3, v7, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 375
+    .line 386
     invoke-virtual {p3, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 376
+    .line 387
     .local v3, itemNumberTextView:Landroid/widget/TextView;
     invoke-virtual {p3, v8, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 382
+    .line 393
     .end local v2           #inflator:Landroid/view/LayoutInflater;
     :goto_0
     instance-of v4, p2, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;
 
     if-eqz v4, :cond_3
 
-    .line 384
+    .line 395
     iget-object v4, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$1;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -123,10 +123,10 @@
     .local v0, count:I
     if-lez v0, :cond_2
 
-    .line 386
+    .line 397
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 387
+    .line 398
     iget-object v4, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$1;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #calls: Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;->setTitleWithCount(II)Ljava/lang/String;
@@ -136,7 +136,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 398
+    .line 409
     .end local v0           #count:I
     :goto_1
     iget-object v4, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$1;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
@@ -148,7 +148,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 399
+    .line 410
     iget-object v4, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$1;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -162,11 +162,11 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 401
+    .line 412
     :cond_0
     return-object p3
 
-    .line 378
+    .line 389
     .end local v1           #folderNameTextView:Landroid/widget/TextView;
     .end local v3           #itemNumberTextView:Landroid/widget/TextView;
     :cond_1
@@ -176,7 +176,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 379
+    .line 390
     .restart local v1       #folderNameTextView:Landroid/widget/TextView;
     invoke-virtual {p3, v8}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -187,7 +187,7 @@
     .restart local v3       #itemNumberTextView:Landroid/widget/TextView;
     goto :goto_0
 
-    .line 389
+    .line 400
     :cond_2
     const/4 v4, 0x4
 
@@ -195,21 +195,21 @@
 
     goto :goto_1
 
-    .line 392
+    .line 403
     :cond_3
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 393
+    .line 404
     const/4 v4, 0x2
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 394
+    .line 405
     const/4 v4, 0x1
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 395
+    .line 406
     const/16 v4, 0x8
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V

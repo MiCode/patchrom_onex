@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4630
+    .line 4715
     iput-object p1, p0, Lcom/android/camera/CameraThread$11;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,21 +43,21 @@
     .parameter "camera"
 
     .prologue
-    .line 4633
+    .line 4718
     if-nez p1, :cond_0
 
-    .line 4637
+    .line 4722
     :goto_0
     return-void
 
-    .line 4635
+    .line 4720
     :cond_0
     iget-object v0, p0, Lcom/android/camera/CameraThread$11;->this$0:Lcom/android/camera/CameraThread;
 
     #calls: Lcom/android/camera/CameraThread;->onPreviewFrameRetrieved([B)V
-    invoke-static {v0, p1}, Lcom/android/camera/CameraThread;->access$4000(Lcom/android/camera/CameraThread;[B)V
+    invoke-static {v0, p1}, Lcom/android/camera/CameraThread;->access$4100(Lcom/android/camera/CameraThread;[B)V
 
-    .line 4636
+    .line 4721
     invoke-virtual {p2, p1}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
 
     goto :goto_0

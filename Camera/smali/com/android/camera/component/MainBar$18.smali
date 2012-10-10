@@ -3,7 +3,7 @@
 .source "MainBar.java"
 
 # interfaces
-.implements Lcom/android/camera/menu/MenuListView$OnMenuItemContentClickedListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 410
+    .line 423
     iput-object p1, p0, Lcom/android/camera/component/MainBar$18;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,19 +37,20 @@
 
 
 # virtual methods
-.method public onItemContentClicked(Lcom/android/camera/menu/MenuListView;Lcom/android/camera/menu/MenuItem;I)V
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "menu"
-    .parameter "item"
-    .parameter "id"
+    .parameter "view"
+    .parameter "mv"
 
     .prologue
-    .line 414
+    .line 427
     iget-object v0, p0, Lcom/android/camera/component/MainBar$18;->this$0:Lcom/android/camera/component/MainBar;
 
     #calls: Lcom/android/camera/component/MainBar;->resetCloseMenuTimer()V
     invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1700(Lcom/android/camera/component/MainBar;)V
 
-    .line 415
-    return-void
+    .line 428
+    const/4 v0, 0x0
+
+    return v0
 .end method

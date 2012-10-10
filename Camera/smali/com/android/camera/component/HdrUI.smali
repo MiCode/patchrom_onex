@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/camera/component/HdrUI$4;
+        Lcom/android/camera/component/HdrUI$6;
     }
 .end annotation
 
@@ -28,6 +28,8 @@
 
 .field private m_IsModeEntered:Z
 
+.field private m_NeedToApplyEffectAgain:Z
+
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/HTCCamera;)V
@@ -35,7 +37,7 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 44
+    .line 48
     const-string v0, "HDR UI"
 
     const/4 v1, 0x1
@@ -44,7 +46,7 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/android/camera/component/UIComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/HTCCamera;I)V
 
-    .line 45
+    .line 49
     return-void
 .end method
 
@@ -53,7 +55,7 @@
     .parameter "x0"
 
     .prologue
-    .line 14
+    .line 17
     iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
 
     return v0
@@ -64,41 +66,53 @@
     .parameter "x0"
 
     .prologue
-    .line 14
+    .line 17
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->openCaptureUI()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/camera/component/HdrUI;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 14
-    invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->closeCaptureUI()V
-
-    return-void
-.end method
-
-.method static synthetic access$300(Lcom/android/camera/component/HdrUI;)Z
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 14
-    iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsEnteredFromAutoScene:Z
-
-    return v0
-.end method
-
-.method static synthetic access$302(Lcom/android/camera/component/HdrUI;Z)Z
+.method static synthetic access$202(Lcom/android/camera/component/HdrUI;Z)Z
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 14
+    .line 17
+    iput-boolean p1, p0, Lcom/android/camera/component/HdrUI;->m_NeedToApplyEffectAgain:Z
+
+    return p1
+.end method
+
+.method static synthetic access$300(Lcom/android/camera/component/HdrUI;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 17
+    invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->closeCaptureUI()V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/android/camera/component/HdrUI;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 17
+    iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsEnteredFromAutoScene:Z
+
+    return v0
+.end method
+
+.method static synthetic access$402(Lcom/android/camera/component/HdrUI;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 17
     iput-boolean p1, p0, Lcom/android/camera/component/HdrUI;->m_IsEnteredFromAutoScene:Z
 
     return p1
@@ -108,16 +122,16 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 57
     iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
 
     if-nez v0, :cond_0
 
-    .line 58
+    .line 62
     :goto_0
     return-void
 
-    .line 57
+    .line 61
     :cond_0
     const/4 v0, 0x0
 
@@ -134,19 +148,19 @@
 
     const/4 v3, 0x0
 
-    .line 293
+    .line 319
     iget-object v0, p0, Lcom/android/camera/component/HdrUI;->m_HdrController:Lcom/android/camera/component/HdrController;
 
     if-eqz v0, :cond_1
 
     move v3, v6
 
-    .line 301
+    .line 327
     :cond_0
     :goto_0
     return v3
 
-    .line 295
+    .line 321
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/HdrUI;->getCameraThread()Lcom/android/camera/CameraThread;
 
@@ -166,12 +180,12 @@
 
     iput-object v0, p0, Lcom/android/camera/component/HdrUI;->m_HdrController:Lcom/android/camera/component/HdrController;
 
-    .line 296
+    .line 322
     iget-object v0, p0, Lcom/android/camera/component/HdrUI;->m_HdrController:Lcom/android/camera/component/HdrController;
 
     if-eqz v0, :cond_0
 
-    .line 298
+    .line 324
     iget-object v1, p0, Lcom/android/camera/component/HdrUI;->m_HdrController:Lcom/android/camera/component/HdrController;
 
     const/16 v2, 0x2710
@@ -186,7 +200,7 @@
 
     move v3, v6
 
-    .line 299
+    .line 325
     goto :goto_0
 .end method
 
@@ -195,19 +209,19 @@
     .parameter "previewImage"
 
     .prologue
-    .line 187
+    .line 197
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/HdrUI;->showProcessingDialog(Z)V
 
-    .line 190
+    .line 200
     invoke-virtual {p0}, Lcom/android/camera/component/HdrUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->completeTakingPicture()V
 
-    .line 191
+    .line 201
     return-void
 .end method
 
@@ -215,12 +229,12 @@
     .locals 1
 
     .prologue
-    .line 198
+    .line 208
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/HdrUI;->showProcessingDialog(Z)V
 
-    .line 199
+    .line 209
     return-void
 .end method
 
@@ -228,28 +242,28 @@
     .locals 2
 
     .prologue
-    .line 207
+    .line 217
     iget-boolean v1, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
 
     if-nez v1, :cond_1
 
-    .line 219
+    .line 229
     :cond_0
     :goto_0
     return-void
 
-    .line 209
+    .line 219
     :cond_1
     iget-boolean v1, p0, Lcom/android/camera/component/HdrUI;->m_IsCaptureUIOpen:Z
 
     if-nez v1, :cond_0
 
-    .line 213
+    .line 223
     invoke-virtual {p0}, Lcom/android/camera/component/HdrUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 214
+    .line 224
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isPreviewStarted:Lcom/android/camera/property/Property;
 
@@ -265,7 +279,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 218
+    .line 228
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/camera/component/HdrUI;->m_IsCaptureUIOpen:Z
@@ -274,15 +288,17 @@
 .end method
 
 .method private registerListeners()V
-    .locals 5
+    .locals 6
 
     .prologue
-    .line 227
+    const/4 v5, 0x1
+
+    .line 237
     invoke-virtual {p0}, Lcom/android/camera/component/HdrUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 228
+    .line 238
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
@@ -290,9 +306,7 @@
 
     iget-object v3, v0, Lcom/android/camera/HTCCamera;->isPreviewStarted:Lcom/android/camera/property/Property;
 
-    const/4 v4, 0x1
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
@@ -300,7 +314,22 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 237
+    .line 247
+    iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
+
+    new-instance v2, Lcom/android/camera/component/HdrUI$2;
+
+    iget-object v3, v0, Lcom/android/camera/HTCCamera;->isActivityPaused:Lcom/android/camera/property/Property;
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    invoke-direct {v2, p0, v3, v4}, Lcom/android/camera/component/HdrUI$2;-><init>(Lcom/android/camera/component/HdrUI;Lcom/android/camera/property/Property;Ljava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 255
     return-void
 .end method
 
@@ -308,23 +337,14 @@
     .locals 3
 
     .prologue
-    .line 245
+    .line 263
     invoke-virtual {p0}, Lcom/android/camera/component/HdrUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 246
+    .line 264
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isCaptureUIOpen:Lcom/android/camera/property/Property;
-
-    new-instance v2, Lcom/android/camera/component/HdrUI$2;
-
-    invoke-direct {v2, p0}, Lcom/android/camera/component/HdrUI$2;-><init>(Lcom/android/camera/component/HdrUI;)V
-
-    invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
-
-    .line 258
-    iget-object v1, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/HdrUI$3;
 
@@ -332,36 +352,67 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 286
+    .line 276
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
+
+    new-instance v2, Lcom/android/camera/component/HdrUI$4;
+
+    invoke-direct {v2, p0}, Lcom/android/camera/component/HdrUI$4;-><init>(Lcom/android/camera/component/HdrUI;)V
+
+    invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
+
+    .line 304
+    iget-object v1, v0, Lcom/android/camera/HTCCamera;->deactivatedEvent:Lcom/android/camera/event/Event;
+
+    new-instance v2, Lcom/android/camera/component/HdrUI$5;
+
+    invoke-direct {v2, p0}, Lcom/android/camera/component/HdrUI$5;-><init>(Lcom/android/camera/component/HdrUI;)V
+
+    invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
+
+    .line 312
     return-void
 .end method
 
 
 # virtual methods
-.method public enterHdrMode()V
+.method public enterHdrMode(Z)V
     .locals 2
+    .parameter "bIsSameScene"
 
     .prologue
-    .line 65
+    .line 69
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "enterHdrMode()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
+    .line 71
+    if-eqz p1, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_NeedToApplyEffectAgain:Z
+
+    if-nez v0, :cond_0
+
+    .line 94
+    :goto_0
+    return-void
+
+    .line 75
+    :cond_0
     iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 70
+    .line 77
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "Re-enter HDR mode"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 71
+    .line 78
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Re-enter HDR mode"
@@ -370,88 +421,103 @@
 
     throw v0
 
-    .line 75
-    :cond_0
+    .line 83
+    :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
 
-    .line 76
+    .line 84
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->linkToController()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 77
+    .line 85
     iget-object v0, p0, Lcom/android/camera/component/HdrUI;->m_HdrController:Lcom/android/camera/component/HdrController;
 
     const/16 v1, 0x2711
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/component/HdrUI;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 82
-    :goto_0
+    .line 90
+    :goto_1
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->openCaptureUI()V
 
-    .line 86
-    return-void
+    .line 91
+    const/4 v0, 0x0
 
-    .line 79
-    :cond_1
+    iput-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_NeedToApplyEffectAgain:Z
+
+    goto :goto_0
+
+    .line 87
+    :cond_2
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "enterHdrMode() - No controller"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
-.method public exitHdrMode()V
+.method public exitHdrMode(Z)V
     .locals 2
+    .parameter "bIsSameScene"
 
     .prologue
-    .line 93
+    .line 101
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "exitHdrMode()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 96
-    iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
+    .line 103
+    if-eqz p1, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_NeedToApplyEffectAgain:Z
 
     if-nez v0, :cond_0
 
-    .line 98
+    .line 124
+    :goto_0
+    return-void
+
+    .line 107
+    :cond_0
+    iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
+
+    if-nez v0, :cond_1
+
+    .line 109
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "Re-exit HDR mode"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 114
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 103
-    :cond_0
+    .line 114
+    :cond_1
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->closeCaptureUI()V
 
-    .line 109
+    .line 119
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
 
-    .line 110
+    .line 120
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->linkToController()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 111
+    .line 121
     iget-object v0, p0, Lcom/android/camera/component/HdrUI;->m_HdrController:Lcom/android/camera/component/HdrController;
 
     const/16 v1, 0x2712
@@ -460,8 +526,8 @@
 
     goto :goto_0
 
-    .line 113
-    :cond_1
+    .line 123
+    :cond_2
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "exitHdrMode() - No controller"
@@ -476,27 +542,27 @@
     .parameter "msg"
 
     .prologue
-    .line 122
+    .line 132
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->linkToController()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 134
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 135
+    .line 145
     invoke-super {p0, p1}, Lcom/android/camera/component/UIComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 139
+    .line 149
     :cond_0
     :goto_0
     return-void
 
-    .line 127
+    .line 137
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -506,13 +572,13 @@
 
     goto :goto_0
 
-    .line 131
+    .line 141
     :pswitch_1
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->onPhotoProcessing()V
 
     goto :goto_0
 
-    .line 124
+    .line 134
     nop
 
     :pswitch_data_0
@@ -526,16 +592,16 @@
     .locals 0
 
     .prologue
-    .line 148
+    .line 158
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->initializeOverride()V
 
-    .line 167
+    .line 177
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->registerListeners()V
 
-    .line 170
+    .line 180
     invoke-direct {p0}, Lcom/android/camera/component/HdrUI;->setupPropertyChangedCallbacks()V
 
-    .line 171
+    .line 181
     return-void
 .end method
 
@@ -543,7 +609,7 @@
     .locals 1
 
     .prologue
-    .line 178
+    .line 188
     iget-boolean v0, p0, Lcom/android/camera/component/HdrUI;->m_IsModeEntered:Z
 
     return v0

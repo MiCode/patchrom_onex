@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 5193
+    .line 5202
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,7 +41,7 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 5196
+    .line 5205
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
@@ -61,7 +61,7 @@
 
     if-lez v6, :cond_0
 
-    .line 5197
+    .line 5206
     iget-object v8, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -78,7 +78,7 @@
     :goto_0
     iput-object v6, v8, Lcom/htc/music/browserlayer/TrackBrowserActivity;->mLowerSearchFilter:Ljava/lang/String;
 
-    .line 5199
+    .line 5208
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mIsPluginModeNowPlaying:Z
@@ -88,7 +88,7 @@
 
     if-nez v6, :cond_3
 
-    .line 5200
+    .line 5209
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     iget-object v8, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -103,24 +103,24 @@
 
     move-result-object v2
 
-    .line 5201
+    .line 5210
     .local v2, cursor:Landroid/database/Cursor;
     instance-of v6, v2, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;
 
     if-eqz v6, :cond_2
 
-    .line 5202
+    .line 5211
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-virtual {v6, v2}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->init(Landroid/database/Cursor;)V
 
-    .line 5242
+    .line 5251
     .end local v2           #cursor:Landroid/database/Cursor;
     :cond_0
     :goto_1
     return-void
 
-    .line 5197
+    .line 5206
     :cond_1
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -135,7 +135,7 @@
 
     goto :goto_0
 
-    .line 5204
+    .line 5213
     .restart local v2       #cursor:Landroid/database/Cursor;
     :cond_2
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -145,7 +145,7 @@
 
     move-result-object v0
 
-    .line 5205
+    .line 5214
     .local v0, c:Landroid/database/Cursor;
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -153,7 +153,7 @@
 
     goto :goto_1
 
-    .line 5210
+    .line 5219
     .end local v0           #c:Landroid/database/Cursor;
     .end local v2           #cursor:Landroid/database/Cursor;
     :cond_3
@@ -164,7 +164,7 @@
     #setter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mIsScrolling:Z
     invoke-static {v6, v7}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$5002(Lcom/htc/music/browserlayer/TrackBrowserActivity;Z)Z
 
-    .line 5211
+    .line 5220
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mFilterPosToOldPosTable:Ljava/util/Hashtable;
@@ -174,25 +174,25 @@
 
     invoke-virtual {v6}, Ljava/util/Hashtable;->clear()V
 
-    .line 5213
+    .line 5222
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     iget-object v6, v6, Lcom/htc/music/browserlayer/TrackBrowserActivity;->mLowerSearchFilter:Ljava/lang/String;
 
     if-eqz v6, :cond_7
 
-    .line 5215
+    .line 5224
     const/4 v4, 0x0
 
-    .line 5216
+    .line 5225
     .local v4, listItem:Landroid/content/ContentValues;
     const/4 v5, 0x0
 
-    .line 5217
+    .line 5226
     .local v5, title:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 5219
+    .line 5228
     .local v1, count:I
     const/4 v3, 0x0
 
@@ -211,7 +211,7 @@
 
     if-ge v3, v6, :cond_6
 
-    .line 5221
+    .line 5230
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mNowPlayingItemsArrayList:Ljava/util/ArrayList;
@@ -226,18 +226,18 @@
     .end local v4           #listItem:Landroid/content/ContentValues;
     check-cast v4, Landroid/content/ContentValues;
 
-    .line 5223
+    .line 5232
     .restart local v4       #listItem:Landroid/content/ContentValues;
     if-eqz v4, :cond_5
 
-    .line 5224
+    .line 5233
     const-string v6, "title"
 
     invoke-virtual {v4, v6}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 5225
+    .line 5234
     invoke-virtual {v5}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v6
@@ -252,7 +252,7 @@
 
     if-eqz v6, :cond_4
 
-    .line 5226
+    .line 5235
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$27;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mFilterPosToOldPosTable:Ljava/util/Hashtable;
@@ -270,17 +270,17 @@
 
     invoke-virtual {v6, v7, v8}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5227
+    .line 5236
     add-int/lit8 v1, v1, 0x1
 
-    .line 5219
+    .line 5228
     :cond_4
     :goto_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 5231
+    .line 5240
     :cond_5
     const-string v6, "[PluginNowPlayingListActivity]"
 
@@ -290,7 +290,7 @@
 
     goto :goto_3
 
-    .line 5235
+    .line 5244
     :cond_6
     const-string v6, "[PluginNowPlayingListActivity]"
 
@@ -335,7 +335,7 @@
 
     invoke-static {v6, v7}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5238
+    .line 5247
     .end local v1           #count:I
     .end local v3           #i:I
     .end local v4           #listItem:Landroid/content/ContentValues;

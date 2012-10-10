@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3859
+    .line 3924
     iput-object p1, p0, Lcom/android/camera/CameraThread$8;->this$0:Lcom/android/camera/CameraThread;
 
     iput-boolean p2, p0, Lcom/android/camera/CameraThread$8;->val$checkSize:Z
@@ -46,7 +46,7 @@
     .locals 5
 
     .prologue
-    .line 3862
+    .line 3927
     iget-object v0, p0, Lcom/android/camera/CameraThread$8;->this$0:Lcom/android/camera/CameraThread;
 
     const/4 v1, 0x0
@@ -62,6 +62,6 @@
     #calls: Lcom/android/camera/CameraThread;->checkStorageStateInternal(Lcom/android/camera/io/StorageState;ZJ)V
     invoke-static {v0, v1, v2, v3, v4}, Lcom/android/camera/CameraThread;->access$000(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageState;ZJ)V
 
-    .line 3863
+    .line 3928
     return-void
 .end method

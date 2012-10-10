@@ -175,7 +175,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "kk:mm"
+    const-string v0, "kk:mm"
 
     :goto_0
     iput-object v0, p0, Lcom/android/internal/widget/DigitalClock;->mFormat:Ljava/lang/String;

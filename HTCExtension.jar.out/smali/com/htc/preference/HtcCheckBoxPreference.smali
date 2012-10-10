@@ -109,7 +109,7 @@
     .locals 1
 
     .prologue
-    .line 236
+    .line 238
     iget-boolean v0, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mDisableDependentsState:Z
 
     return v0
@@ -119,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 221
+    .line 223
     iget-object v0, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mSummaryOff:Ljava/lang/CharSequence;
 
     return-object v0
@@ -129,7 +129,7 @@
     .locals 1
 
     .prologue
-    .line 189
+    .line 191
     iget-object v0, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mSummaryOn:Ljava/lang/CharSequence;
 
     return-object v0
@@ -139,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 147
+    .line 149
     iget-boolean v0, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mChecked:Z
 
     return v0
@@ -336,7 +336,7 @@
     .parameter "index"
 
     .prologue
-    .line 259
+    .line 261
     const/4 v0, 0x0
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -355,7 +355,7 @@
     .parameter "state"
 
     .prologue
-    .line 283
+    .line 285
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -370,21 +370,21 @@
 
     if-nez v1, :cond_1
 
-    .line 285
+    .line 287
     :cond_0
     invoke-super {p0, p1}, Lcom/htc/preference/HtcPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 292
+    .line 294
     :goto_0
     return-void
 
     :cond_1
     move-object v0, p1
 
-    .line 289
+    .line 291
     check-cast v0, Lcom/htc/preference/HtcCheckBoxPreference$SavedState;
 
-    .line 290
+    .line 292
     .local v0, myState:Lcom/htc/preference/HtcCheckBoxPreference$SavedState;
     invoke-virtual {v0}, Lcom/htc/preference/HtcCheckBoxPreference$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -392,7 +392,7 @@
 
     invoke-super {p0, v1}, Lcom/htc/preference/HtcPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 291
+    .line 293
     iget-boolean v1, v0, Lcom/htc/preference/HtcCheckBoxPreference$SavedState;->checked:Z
 
     invoke-virtual {p0, v1}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
@@ -404,12 +404,12 @@
     .locals 3
 
     .prologue
-    .line 270
+    .line 272
     invoke-super {p0}, Lcom/htc/preference/HtcPreference;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 271
+    .line 273
     .local v1, superState:Landroid/os/Parcelable;
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isPersistent()Z
 
@@ -417,19 +417,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 278
+    .line 280
     .end local v1           #superState:Landroid/os/Parcelable;
     :goto_0
     return-object v1
 
-    .line 276
+    .line 278
     .restart local v1       #superState:Landroid/os/Parcelable;
     :cond_0
     new-instance v0, Lcom/htc/preference/HtcCheckBoxPreference$SavedState;
 
     invoke-direct {v0, v1}, Lcom/htc/preference/HtcCheckBoxPreference$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 277
+    .line 279
     .local v0, myState:Lcom/htc/preference/HtcCheckBoxPreference$SavedState;
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
@@ -439,7 +439,7 @@
 
     move-object v1, v0
 
-    .line 278
+    .line 280
     goto :goto_0
 .end method
 
@@ -449,7 +449,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 264
+    .line 266
     if-eqz p1, :cond_0
 
     iget-boolean v0, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mChecked:Z
@@ -462,10 +462,10 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
-    .line 266
+    .line 268
     return-void
 
-    .line 264
+    .line 266
     .restart local p2
     :cond_0
     check-cast p2, Ljava/lang/Boolean;
@@ -484,22 +484,28 @@
 
     .prologue
     .line 132
+    iget-boolean v0, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mChecked:Z
+
+    if-eq v0, p1, :cond_0
+
+    .line 133
     iput-boolean p1, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mChecked:Z
 
-    .line 134
+    .line 135
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcCheckBoxPreference;->persistBoolean(Z)Z
 
-    .line 136
+    .line 137
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->shouldDisableDependents()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcCheckBoxPreference;->notifyDependencyChange(Z)V
 
-    .line 138
+    .line 139
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->notifyChanged()V
 
-    .line 139
+    .line 141
+    :cond_0
     return-void
 .end method
 
@@ -508,10 +514,10 @@
     .parameter "disableDependentsState"
 
     .prologue
-    .line 250
+    .line 252
     iput-boolean p1, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mDisableDependentsState:Z
 
-    .line 251
+    .line 253
     return-void
 .end method
 
@@ -520,7 +526,7 @@
     .parameter "summaryResId"
 
     .prologue
-    .line 209
+    .line 211
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -531,7 +537,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcCheckBoxPreference;->setSummaryOff(Ljava/lang/CharSequence;)V
 
-    .line 210
+    .line 212
     return-void
 .end method
 
@@ -540,20 +546,20 @@
     .parameter "summary"
 
     .prologue
-    .line 198
+    .line 200
     iput-object p1, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mSummaryOff:Ljava/lang/CharSequence;
 
-    .line 199
+    .line 201
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 200
+    .line 202
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->notifyChanged()V
 
-    .line 202
+    .line 204
     :cond_0
     return-void
 .end method
@@ -563,7 +569,7 @@
     .parameter "summaryResId"
 
     .prologue
-    .line 177
+    .line 179
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -574,7 +580,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/preference/HtcCheckBoxPreference;->setSummaryOn(Ljava/lang/CharSequence;)V
 
-    .line 178
+    .line 180
     return-void
 .end method
 
@@ -583,20 +589,20 @@
     .parameter "summary"
 
     .prologue
-    .line 166
+    .line 168
     iput-object p1, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mSummaryOn:Ljava/lang/CharSequence;
 
-    .line 167
+    .line 169
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 168
+    .line 170
     invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->notifyChanged()V
 
-    .line 170
+    .line 172
     :cond_0
     return-void
 .end method
@@ -609,14 +615,14 @@
 
     const/4 v1, 0x0
 
-    .line 156
+    .line 158
     iget-boolean v3, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mDisableDependentsState:Z
 
     if-eqz v3, :cond_2
 
     iget-boolean v0, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mChecked:Z
 
-    .line 157
+    .line 159
     .local v0, shouldDisable:Z
     :goto_0
     if-nez v0, :cond_0
@@ -633,7 +639,7 @@
     :cond_1
     return v1
 
-    .line 156
+    .line 158
     .end local v0           #shouldDisable:Z
     :cond_2
     iget-boolean v3, p0, Lcom/htc/preference/HtcCheckBoxPreference;->mChecked:Z

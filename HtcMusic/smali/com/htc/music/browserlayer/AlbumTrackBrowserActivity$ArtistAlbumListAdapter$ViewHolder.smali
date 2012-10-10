@@ -38,7 +38,7 @@
     .parameter
 
     .prologue
-    .line 810
+    .line 821
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

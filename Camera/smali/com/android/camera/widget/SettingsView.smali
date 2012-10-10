@@ -130,7 +130,7 @@
     iput-object v0, p0, Lcom/android/camera/widget/SettingsView;->mMainMenu:Landroid/widget/LinearLayout;
 
     .line 107
-    const v0, 0x7f0800e7
+    const v0, 0x7f0800e9
 
     invoke-virtual {p0, v0}, Lcom/android/camera/widget/SettingsView;->findViewById(I)Landroid/view/View;
 
@@ -157,7 +157,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0128
+    const v1, 0x7f0b0129
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

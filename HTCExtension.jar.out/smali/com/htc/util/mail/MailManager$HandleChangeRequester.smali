@@ -36,15 +36,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 753
+    .line 775
     iput-object p1, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->this$0:Lcom/htc/util/mail/MailManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 755
+    .line 777
     iput-boolean v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleMessageChangeInProcessing:Z
 
-    .line 756
+    .line 778
     iput-boolean v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleFoldersChangeInProcessing:Z
 
     return-void
@@ -56,7 +56,7 @@
     .parameter "x1"
 
     .prologue
-    .line 753
+    .line 775
     invoke-direct {p0, p1}, Lcom/htc/util/mail/MailManager$HandleChangeRequester;-><init>(Lcom/htc/util/mail/MailManager;)V
 
     return-void
@@ -68,7 +68,7 @@
     .parameter "x1"
 
     .prologue
-    .line 753
+    .line 775
     iput-boolean p1, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleMessageChangeInProcessing:Z
 
     return p1
@@ -80,7 +80,7 @@
     .parameter "x1"
 
     .prologue
-    .line 753
+    .line 775
     iput-boolean p1, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleFoldersChangeInProcessing:Z
 
     return p1
@@ -93,14 +93,14 @@
     .parameter "msg"
 
     .prologue
-    .line 792
+    .line 814
     const/16 v0, 0x3e8
 
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v1, :cond_0
 
-    .line 793
+    .line 815
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/htc/util/mail/MailManager$HandleChangeRequester$1;
@@ -111,11 +111,11 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 816
+    .line 840
     :goto_0
     return-void
 
-    .line 803
+    .line 826
     :cond_0
     const/16 v0, 0x3e9
 
@@ -123,7 +123,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 804
+    .line 827
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/htc/util/mail/MailManager$HandleChangeRequester$2;
@@ -136,7 +136,7 @@
 
     goto :goto_0
 
-    .line 815
+    .line 839
     :cond_1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
@@ -147,29 +147,29 @@
     .locals 2
 
     .prologue
-    .line 778
+    .line 800
     iget-boolean v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleFoldersChangeInProcessing:Z
 
     if-eqz v0, :cond_0
 
-    .line 779
+    .line 801
     const-string v0, "MailManager"
 
     const-string v1, "HandleFoldersChange() already in process, go home!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 784
+    .line 806
     :goto_0
     return-void
 
-    .line 782
+    .line 804
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleFoldersChangeInProcessing:Z
 
-    .line 783
+    .line 805
     const/16 v0, 0x3e9
 
     invoke-virtual {p0, v0}, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->sendEmptyMessage(I)Z
@@ -181,29 +181,29 @@
     .locals 2
 
     .prologue
-    .line 765
+    .line 787
     iget-boolean v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleMessageChangeInProcessing:Z
 
     if-eqz v0, :cond_0
 
-    .line 766
+    .line 788
     const-string v0, "MailManager"
 
     const-string v1, "HandleMessageChange() already in process, go home!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 771
+    .line 793
     :goto_0
     return-void
 
-    .line 769
+    .line 791
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleMessageChangeInProcessing:Z
 
-    .line 770
+    .line 792
     const/16 v0, 0x3e8
 
     invoke-virtual {p0, v0}, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->sendEmptyMessage(I)Z

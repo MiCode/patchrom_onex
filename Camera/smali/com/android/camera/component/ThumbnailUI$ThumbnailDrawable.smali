@@ -55,7 +55,7 @@
     .line 90
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailUI$ThumbnailDrawable;->m_ThumbnailBounds:Landroid/graphics/Rect;
 
-    const v1, 0x7f0b00cb
+    const v1, 0x7f0b00cc
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -66,7 +66,7 @@
     .line 91
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailUI$ThumbnailDrawable;->m_ThumbnailBounds:Landroid/graphics/Rect;
 
-    const v1, 0x7f0b00cc
+    const v1, 0x7f0b00cd
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -81,7 +81,7 @@
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
-    const v2, 0x7f0b00cd
+    const v2, 0x7f0b00ce
 
     invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -98,7 +98,7 @@
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
-    const v2, 0x7f0b00ce
+    const v2, 0x7f0b00cf
 
     invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

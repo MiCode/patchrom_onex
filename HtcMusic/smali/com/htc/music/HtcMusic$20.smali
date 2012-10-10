@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1963
+    .line 1970
     iput-object p1, p0, Lcom/htc/music/HtcMusic$20;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 1965
+    .line 1972
     iget-object v0, p0, Lcom/htc/music/HtcMusic$20;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0}, Lcom/htc/music/HtcMusic;->getContentResolver()Landroid/content/ContentResolver;
@@ -54,6 +54,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1967
+    .line 1974
     return-void
 .end method

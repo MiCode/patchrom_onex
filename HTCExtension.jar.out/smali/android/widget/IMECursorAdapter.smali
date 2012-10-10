@@ -34,7 +34,7 @@
     .locals 3
 
     .prologue
-    .line 102
+    .line 99
     const-string v0, "content://htc_ime_latin"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -43,7 +43,7 @@
 
     sput-object v0, Landroid/widget/IMECursorAdapter;->HTCIMEProviderLatin_CONTENT_URI:Landroid/net/Uri;
 
-    .line 103
+    .line 100
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -73,21 +73,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 44
+    .line 41
     invoke-direct {p0, p1, p2}, Landroid/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;)V
 
-    .line 33
+    .line 30
     iput v0, p0, Landroid/widget/IMECursorAdapter;->mInputType:I
 
-    .line 34
+    .line 31
     iput-boolean v0, p0, Landroid/widget/IMECursorAdapter;->mSuperFilter:Z
 
-    .line 109
+    .line 106
     const/4 v0, 0x5
 
     iput v0, p0, Landroid/widget/IMECursorAdapter;->MAX_STRING_COLLECT:I
 
-    .line 45
+    .line 42
     return-void
 .end method
 
@@ -100,21 +100,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 56
+    .line 53
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
 
-    .line 33
+    .line 30
     iput v0, p0, Landroid/widget/IMECursorAdapter;->mInputType:I
 
-    .line 34
+    .line 31
     iput-boolean v0, p0, Landroid/widget/IMECursorAdapter;->mSuperFilter:Z
 
-    .line 109
+    .line 106
     const/4 v0, 0x5
 
     iput v0, p0, Landroid/widget/IMECursorAdapter;->MAX_STRING_COLLECT:I
 
-    .line 57
+    .line 54
     return-void
 .end method
 
@@ -125,7 +125,7 @@
     .parameter "s"
 
     .prologue
-    .line 125
+    .line 114
     return-object p1
 .end method
 
@@ -133,34 +133,34 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 62
     iget-boolean v0, p0, Landroid/widget/IMECursorAdapter;->mSuperFilter:Z
 
     if-eqz v0, :cond_0
 
-    .line 66
+    .line 63
     invoke-super {p0}, Landroid/widget/CursorAdapter;->getFilter()Landroid/widget/Filter;
 
     move-result-object v0
 
-    .line 97
+    .line 94
     :goto_0
     return-object v0
 
-    .line 68
+    .line 65
     :cond_0
     iget-object v0, p0, Landroid/widget/IMECursorAdapter;->mCursorFilter:Landroid/widget/CursorFilter;
 
     if-nez v0, :cond_1
 
-    .line 69
+    .line 66
     new-instance v0, Landroid/widget/IMECursorAdapter$1;
 
     invoke-direct {v0, p0, p0}, Landroid/widget/IMECursorAdapter$1;-><init>(Landroid/widget/IMECursorAdapter;Landroid/widget/CursorFilter$CursorFilterClient;)V
 
     iput-object v0, p0, Landroid/widget/IMECursorAdapter;->mCursorFilter:Landroid/widget/CursorFilter;
 
-    .line 97
+    .line 94
     :cond_1
     iget-object v0, p0, Landroid/widget/IMECursorAdapter;->mCursorFilter:Landroid/widget/CursorFilter;
 
@@ -171,7 +171,7 @@
     .locals 1
 
     .prologue
-    .line 201
+    .line 186
     iget v0, p0, Landroid/widget/IMECursorAdapter;->mInputType:I
 
     return v0
@@ -192,7 +192,7 @@
     .end annotation
 
     .prologue
-    .line 181
+    .line 170
     .local p1, s:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
@@ -204,7 +204,7 @@
     .parameter "type"
 
     .prologue
-    .line 192
+    .line 177
     const/4 v0, 0x2
 
     if-ge p1, v0, :cond_0
@@ -213,7 +213,7 @@
 
     iput p1, p0, Landroid/widget/IMECursorAdapter;->mInputType:I
 
-    .line 193
+    .line 178
     :cond_0
     return-void
 .end method
@@ -223,12 +223,12 @@
     .parameter "m"
 
     .prologue
-    .line 117
+    .line 110
     if-lez p1, :cond_0
 
     iput p1, p0, Landroid/widget/IMECursorAdapter;->MAX_STRING_COLLECT:I
 
-    .line 118
+    .line 111
     :cond_0
     return-void
 .end method
@@ -238,10 +238,10 @@
     .parameter "isSuper"
 
     .prologue
-    .line 205
+    .line 190
     iput-boolean p1, p0, Landroid/widget/IMECursorAdapter;->mSuperFilter:Z
 
-    .line 206
+    .line 191
     return-void
 .end method
 
@@ -265,23 +265,23 @@
 
     const/4 v8, 0x0
 
-    .line 132
+    .line 121
     invoke-virtual {p0, p1}, Landroid/widget/IMECursorAdapter;->BeforeStringCorrection(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 134
+    .line 123
     if-nez p1, :cond_0
 
-    .line 171
+    .line 160
     :goto_0
     return-object v8
 
-    .line 136
+    .line 125
     :cond_0
     const/4 v8, 0x0
 
-    .line 137
+    .line 126
     .local v8, ret:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     sget-object v0, Landroid/widget/IMECursorAdapter;->HTCIMEProviderLatin_CONTENT_URI:Landroid/net/Uri;
 
@@ -295,7 +295,7 @@
 
     move-result-object v1
 
-    .line 138
+    .line 127
     .local v1, htcime_rc:Landroid/net/Uri;
     const/4 v0, 0x1
 
@@ -303,15 +303,15 @@
 
     aput-object p1, v4, v10
 
-    .line 139
+    .line 128
     .local v4, args:[Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 140
+    .line 129
     .local v9, string_count:I
     const/4 v6, 0x0
 
-    .line 142
+    .line 131
     .local v6, csr:Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Landroid/widget/IMECursorAdapter;->mContext:Landroid/content/Context;
@@ -332,24 +332,24 @@
 
     move-result-object v6
 
-    .line 149
+    .line 138
     :goto_1
     if-nez v6, :cond_2
 
-    .line 151
+    .line 140
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 143
+    .line 132
     :catch_0
     move-exception v7
 
-    .line 144
+    .line 133
     .local v7, e:Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 145
+    .line 134
     if-eqz v6, :cond_1
 
     invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
@@ -360,13 +360,13 @@
 
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 146
+    .line 135
     :cond_1
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 153
+    .line 142
     .end local v7           #e:Ljava/lang/Exception;
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -375,13 +375,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 154
+    .line 143
     new-instance v8, Ljava/util/ArrayList;
 
     .end local v8           #ret:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 155
+    .line 144
     .restart local v8       #ret:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :goto_2
     invoke-interface {v6}, Landroid/database/Cursor;->isAfterLast()Z
@@ -394,22 +394,22 @@
 
     if-ge v9, v0, :cond_3
 
-    .line 156
+    .line 145
     invoke-interface {v6, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 157
+    .line 146
     add-int/lit8 v9, v9, 0x1
 
-    .line 158
+    .line 147
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_2
 
-    .line 161
+    .line 150
     :cond_3
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 

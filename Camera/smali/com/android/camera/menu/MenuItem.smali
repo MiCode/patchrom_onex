@@ -655,7 +655,7 @@
     iput-object v2, v0, Lcom/android/camera/menu/MenuItem$ItemViewInfo;->titleTextView:Landroid/widget/TextView;
 
     .line 116
-    const v2, 0x7f0800a7
+    const v2, 0x7f0800a9
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -666,7 +666,7 @@
     iput-object v2, v0, Lcom/android/camera/menu/MenuItem$ItemViewInfo;->summaryTextView:Landroid/widget/TextView;
 
     .line 117
-    const v2, 0x7f0800a8
+    const v2, 0x7f0800aa
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

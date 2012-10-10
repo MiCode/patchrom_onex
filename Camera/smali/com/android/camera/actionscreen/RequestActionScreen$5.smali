@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 273
+    .line 280
     iput-object p1, p0, Lcom/android/camera/actionscreen/RequestActionScreen$5;->this$0:Lcom/android/camera/actionscreen/RequestActionScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "v"
 
     .prologue
-    .line 276
+    .line 283
     iget-object v0, p0, Lcom/android/camera/actionscreen/RequestActionScreen$5;->this$0:Lcom/android/camera/actionscreen/RequestActionScreen;
 
     #calls: Lcom/android/camera/actionscreen/RequestActionScreen;->onReCaptureClicked()V
     invoke-static {v0}, Lcom/android/camera/actionscreen/RequestActionScreen;->access$500(Lcom/android/camera/actionscreen/RequestActionScreen;)V
 
-    .line 277
+    .line 284
     return-void
 .end method

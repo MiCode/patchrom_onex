@@ -74,6 +74,34 @@
 
 .field public static final PROC_COMBINE:I = 0x100
 
+.field public static final PROC_MEM_ANONYMOUS:I = 0x8
+
+.field public static final PROC_MEM_ANON_HUGE_PAGES:I = 0x9
+
+.field public static final PROC_MEM_KERNEL_PAGE_SIZE:I = 0xb
+
+.field public static final PROC_MEM_LOCKED:I = 0xd
+
+.field public static final PROC_MEM_MMU_PAGE_SIZE:I = 0xc
+
+.field public static final PROC_MEM_PRIVATE_CLEAN:I = 0x5
+
+.field public static final PROC_MEM_PRIVATE_DIRTY:I = 0x6
+
+.field public static final PROC_MEM_PSS:I = 0x2
+
+.field public static final PROC_MEM_REFERENCED:I = 0x7
+
+.field public static final PROC_MEM_RSS:I = 0x1
+
+.field public static final PROC_MEM_SHARED_CLEAN:I = 0x3
+
+.field public static final PROC_MEM_SHARED_DIRTY:I = 0x4
+
+.field public static final PROC_MEM_SWAP:I = 0xa
+
+.field public static final PROC_MEM_VSS:I = 0x0
+
 .field public static final PROC_OUT_FLOAT:I = 0x4000
 
 .field public static final PROC_OUT_LONG:I = 0x2000
@@ -153,17 +181,36 @@
     .line 44
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 903
+    .line 946
     return-void
 .end method
 
-.method public static final native dumpProcessStats(I)V
+.method public static final native dumpProcessStats(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public static final native getDetailRegionMemory(ILjava/lang/String;)[I
 .end method
 
 .method public static final native getElapsedCpuTime()J
 .end method
 
 .method public static final native getFreeMemory()J
+.end method
+
+.method public static native getGfxMem(I)J
+.end method
+
+.method public static getGfxVss(I)J
+    .locals 2
+    .parameter "pid"
+
+    .prologue
+    .line 1051
+    invoke-static {p0}, Landroid/os/Process;->getGfxMem(I)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
 .method public static final native getGidForName(Ljava/lang/String;)I
@@ -332,7 +379,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "killProcess, pid="
+    const-string v6, "killProcess, pid="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -407,7 +454,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "killProcessQuiet, pid="
+    const-string v6, "killProcessQuiet, pid="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1138,15 +1185,15 @@
     .parameter "nice"
 
     .prologue
-    .line 950
+    .line 993
     packed-switch p1, :pswitch_data_0
 
-    .line 971
+    .line 1014
     :cond_0
     :goto_0
     return-void
 
-    .line 952
+    .line 995
     :pswitch_0
     invoke-static {}, Landroid/os/StrictMode;->vmIllegalSetOomAdjEnabled()Z
 
@@ -1154,7 +1201,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 953
+    .line 996
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1193,7 +1240,7 @@
 
     goto :goto_0
 
-    .line 958
+    .line 1001
     :pswitch_1
     invoke-static {}, Landroid/os/StrictMode;->vmIllegalSetThreadPriorityEnabled()Z
 
@@ -1201,7 +1248,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 960
+    .line 1003
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -1210,7 +1257,7 @@
 
     move-result-object v0
 
-    .line 961
+    .line 1004
     .local v0, threadName:Ljava/lang/String;
     const-string v1, "SensorThread"
 
@@ -1220,7 +1267,7 @@
 
     if-nez v1, :cond_0
 
-    .line 966
+    .line 1009
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1281,7 +1328,7 @@
 
     goto/16 :goto_0
 
-    .line 950
+    .line 993
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

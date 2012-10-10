@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 818
+    .line 909
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 823
+    .line 914
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Long;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Long;>;"
     iget-object v9, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -77,7 +77,7 @@
 
     move-result-wide v6
 
-    .line 824
+    .line 915
     .local v6, seconds:J
     const-wide/16 v9, 0x0
 
@@ -85,12 +85,12 @@
 
     if-gez v9, :cond_1
 
-    .line 894
+    .line 985
     :cond_0
     :goto_0
     return-void
 
-    .line 828
+    .line 919
     :cond_1
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -111,7 +111,7 @@
 
     if-nez v9, :cond_2
 
-    .line 832
+    .line 923
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-virtual {v9}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
@@ -124,21 +124,21 @@
 
     if-eqz v9, :cond_7
 
-    .line 833
+    .line 924
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsPortrait:[Landroid/graphics/drawable/Drawable;
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2300(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2500(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 836
+    .line 927
     .local v2, icons:[Landroid/graphics/drawable/Drawable;
     :goto_1
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2500(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v9
 
@@ -154,7 +154,7 @@
 
     invoke-virtual {v9, v10}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 839
+    .line 930
     const-wide/16 v9, 0x0
 
     cmp-long v9, v6, v9
@@ -164,41 +164,41 @@
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->isSlowMotionMode()Z
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2100(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2300(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v9
 
     if-eqz v9, :cond_2
 
-    .line 841
+    .line 932
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     const/4 v10, 0x1
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSlowMotionIndicator(Z)V
-    invoke-static {v9, v10}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v9, v10}, Lcom/android/camera/component/CaptureBar;->access$2400(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 842
+    .line 933
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     const/4 v10, 0x1
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSlowMotionIcon(Z)V
-    invoke-static {v9, v10}, Lcom/android/camera/component/CaptureBar;->access$2600(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v9, v10}, Lcom/android/camera/component/CaptureBar;->access$2800(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 847
+    .line 938
     .end local v2           #icons:[Landroid/graphics/drawable/Drawable;
     :cond_2
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewPortrait:Landroid/widget/TextView;
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
 
     move-result-object v9
 
     if-eqz v9, :cond_0
 
-    .line 851
+    .line 942
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-virtual {v9}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
@@ -211,15 +211,15 @@
 
     if-eqz v9, :cond_8
 
-    .line 852
+    .line 943
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewPortrait:Landroid/widget/TextView;
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
 
     move-result-object v8
 
-    .line 855
+    .line 946
     .local v8, timerTextView:Landroid/widget/TextView;
     :goto_2
     const-wide/16 v9, 0x0
@@ -228,7 +228,7 @@
 
     if-nez v9, :cond_3
 
-    .line 857
+    .line 948
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     const v10, 0x7f090013
@@ -239,15 +239,15 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 858
+    .line 949
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     const/4 v10, 0x1
 
     #calls: Lcom/android/camera/component/CaptureBar;->showRecordingTimer(Z)V
-    invoke-static {v9, v10}, Lcom/android/camera/component/CaptureBar;->access$2900(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v9, v10}, Lcom/android/camera/component/CaptureBar;->access$3100(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 863
+    .line 954
     :cond_3
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -259,11 +259,11 @@
 
     move-result-object v3
 
-    .line 864
+    .line 955
     .local v3, limitCheck:Lcom/android/camera/RecordLimitCheck;
     if-eqz v3, :cond_9
 
-    .line 865
+    .line 956
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-virtual {v9}, Lcom/android/camera/component/CaptureBar;->getCameraThread()Lcom/android/camera/CameraThread;
@@ -278,30 +278,19 @@
 
     move-result-wide v4
 
-    .line 868
+    .line 959
     .local v4, remainingTime:J
     :goto_3
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
-    invoke-virtual {v9}, Lcom/android/camera/component/CaptureBar;->getSettings()Lcom/android/camera/CameraSettings;
-
-    move-result-object v9
-
-    iget-object v9, v9, Lcom/android/camera/CameraSettings;->isSlowMotionEnabled:Lcom/android/camera/property/Property;
-
-    invoke-virtual {v9}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Ljava/lang/Boolean;
-
-    invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
+    #calls: Lcom/android/camera/component/CaptureBar;->isSlowMotionMode()Z
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2300(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v9
 
     if-eqz v9, :cond_5
 
-    .line 870
+    .line 961
     sget-short v9, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v10, 0xdf
@@ -320,7 +309,7 @@
 
     if-ne v9, v10, :cond_a
 
-    .line 874
+    .line 965
     :cond_4
     long-to-float v9, v4
 
@@ -330,7 +319,7 @@
 
     float-to-long v4, v9
 
-    .line 880
+    .line 971
     :cond_5
     :goto_4
     if-eqz v3, :cond_6
@@ -349,28 +338,28 @@
 
     if-gtz v9, :cond_6
 
-    .line 881
+    .line 972
     const/high16 v9, -0x1
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 884
+    .line 975
     :cond_6
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->getRecordingTimeString(J)Ljava/lang/String;
-    invoke-static {v9, v4, v5}, Lcom/android/camera/component/CaptureBar;->access$3000(Lcom/android/camera/component/CaptureBar;J)Ljava/lang/String;
+    invoke-static {v9, v4, v5}, Lcom/android/camera/component/CaptureBar;->access$3200(Lcom/android/camera/component/CaptureBar;J)Ljava/lang/String;
 
     move-result-object v9
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 887
+    .line 978
     const-wide/16 v9, 0xe10
 
     div-long v0, v4, v9
 
-    .line 888
+    .line 979
     .local v0, hours:J
     const-wide/16 v9, 0x0
 
@@ -378,11 +367,11 @@
 
     if-lez v9, :cond_0
 
-    .line 890
+    .line 981
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$3100(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$3300(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
 
     move-result-object v9
 
@@ -410,13 +399,13 @@
 
     invoke-virtual {v9, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 891
+    .line 982
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v10, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
-    invoke-static {v10}, Lcom/android/camera/component/CaptureBar;->access$3200(Lcom/android/camera/component/CaptureBar;)Lcom/android/camera/rotate/RotateRelativeLayout;
+    invoke-static {v10}, Lcom/android/camera/component/CaptureBar;->access$3400(Lcom/android/camera/component/CaptureBar;)Lcom/android/camera/rotate/RotateRelativeLayout;
 
     move-result-object v10
 
@@ -428,7 +417,7 @@
 
     goto/16 :goto_0
 
-    .line 835
+    .line 926
     .end local v0           #hours:J
     .end local v3           #limitCheck:Lcom/android/camera/RecordLimitCheck;
     .end local v4           #remainingTime:J
@@ -437,27 +426,27 @@
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsLandscape:[Landroid/graphics/drawable/Drawable;
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2400(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2600(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     .restart local v2       #icons:[Landroid/graphics/drawable/Drawable;
     goto/16 :goto_1
 
-    .line 854
+    .line 945
     .end local v2           #icons:[Landroid/graphics/drawable/Drawable;
     :cond_8
     iget-object v9, p0, Lcom/android/camera/component/CaptureBar$14;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewLandscape:Landroid/widget/TextView;
-    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$2800(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    invoke-static {v9}, Lcom/android/camera/component/CaptureBar;->access$3000(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
 
     move-result-object v8
 
     .restart local v8       #timerTextView:Landroid/widget/TextView;
     goto/16 :goto_2
 
-    .line 867
+    .line 958
     .restart local v3       #limitCheck:Lcom/android/camera/RecordLimitCheck;
     :cond_9
     move-wide v4, v6
@@ -465,7 +454,7 @@
     .restart local v4       #remainingTime:J
     goto/16 :goto_3
 
-    .line 876
+    .line 967
     :cond_a
     long-to-float v9, v4
 

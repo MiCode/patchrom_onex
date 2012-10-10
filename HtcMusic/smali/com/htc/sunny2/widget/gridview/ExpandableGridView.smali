@@ -4060,10 +4060,6 @@
 
     .line 634
     :goto_0
-    iget v5, p0, Lcom/htc/sunny2/widget/gridview/GridView;->mFirstIdx:I
-
-    if-eqz v5, :cond_3
-
     if-lez v2, :cond_3
 
     .line 635
@@ -4107,6 +4103,10 @@
     mul-int/2addr v5, v3
 
     iget v6, v0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->y:I
+
+    add-int/2addr v5, v6
+
+    iget v6, p0, Lcom/htc/sunny2/view/SView;->mPaddingTop:I
 
     add-int/2addr v5, v6
 
@@ -4216,6 +4216,10 @@
     mul-int/2addr v5, v3
 
     iget v6, v0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->x:I
+
+    sub-int/2addr v5, v6
+
+    iget v6, p0, Lcom/htc/sunny2/view/SView;->mPaddingLeft:I
 
     add-int/2addr v5, v6
 
@@ -6040,7 +6044,7 @@
 
     add-int/2addr v2, v3
 
-    sub-int/2addr v1, v2
+    add-int/2addr v1, v2
 
     .line 1668
     iget v2, p0, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->mChildNumRow:I
@@ -6059,7 +6063,7 @@
 
     add-int/2addr v2, v3
 
-    sub-int/2addr v1, v2
+    add-int/2addr v1, v2
 
     .line 1672
     iget v2, p0, Lcom/htc/sunny2/widget/gridview/GridView;->mNumRow:I

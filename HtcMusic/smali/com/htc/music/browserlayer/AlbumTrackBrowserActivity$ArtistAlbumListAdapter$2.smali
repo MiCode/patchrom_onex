@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1046
+    .line 1062
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .parameter "v"
 
     .prologue
-    .line 1048
+    .line 1064
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 1049
+    .line 1065
     .local v1, data:Landroid/os/Bundle;
     const-string v8, "groupPos"
 
@@ -57,7 +57,7 @@
 
     move-result v3
 
-    .line 1050
+    .line 1066
     .local v3, groupPos:I
     const-string v8, "childPos"
 
@@ -65,7 +65,7 @@
 
     move-result v0
 
-    .line 1051
+    .line 1067
     .local v0, childPos:I
     const-string v8, "name"
 
@@ -73,7 +73,7 @@
 
     move-result-object v6
 
-    .line 1052
+    .line 1068
     .local v6, name:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -81,7 +81,7 @@
 
     check-cast v5, Landroid/view/ViewGroup;
 
-    .line 1053
+    .line 1069
     .local v5, lastParent:Landroid/view/ViewGroup;
     if-eqz v5, :cond_0
 
@@ -89,14 +89,14 @@
 
     if-nez v8, :cond_0
 
-    .line 1054
+    .line 1070
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
 
     check-cast v7, Landroid/view/ViewGroup;
 
-    .line 1055
+    .line 1071
     .local v7, parent:Landroid/view/ViewGroup;
     :goto_0
     if-eqz v7, :cond_0
@@ -105,10 +105,10 @@
 
     if-nez v8, :cond_0
 
-    .line 1056
+    .line 1072
     move-object v5, v7
 
-    .line 1057
+    .line 1073
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
@@ -119,23 +119,23 @@
     .restart local v7       #parent:Landroid/view/ViewGroup;
     goto :goto_0
 
-    .line 1061
+    .line 1077
     .end local v7           #parent:Landroid/view/ViewGroup;
     :cond_0
     const/4 v4, -0x1
 
-    .line 1062
+    .line 1078
     .local v4, index:I
     if-eqz v5, :cond_1
 
-    .line 1063
+    .line 1079
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
 
     check-cast v7, Landroid/view/ViewGroup;
 
-    .line 1064
+    .line 1080
     .restart local v7       #parent:Landroid/view/ViewGroup;
     if-eqz v7, :cond_1
 
@@ -143,12 +143,12 @@
 
     if-eqz v8, :cond_1
 
-    .line 1065
+    .line 1081
     invoke-virtual {v7, v5}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
     move-result v4
 
-    .line 1070
+    .line 1086
     .end local v7           #parent:Landroid/view/ViewGroup;
     :cond_1
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
@@ -161,7 +161,7 @@
 
     check-cast v2, Landroid/os/Bundle;
 
-    .line 1071
+    .line 1087
     .local v2, data2:Landroid/os/Bundle;
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
@@ -176,7 +176,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mSelectedAudioId:I
     invoke-static {v8, v9}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$402(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;I)I
 
-    .line 1072
+    .line 1088
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     iget-object v8, v8, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -186,7 +186,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mSelectedAlbumId:I
     invoke-static {v8, v9}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$502(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;I)I
 
-    .line 1073
+    .line 1089
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     iget-object v8, v8, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -200,7 +200,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mSelectedAlbumName:Ljava/lang/String;
     invoke-static {v8, v9}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$602(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1074
+    .line 1090
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     iget-object v8, v8, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -214,7 +214,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mSelectedArtistName:Ljava/lang/String;
     invoke-static {v8, v9}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$702(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1075
+    .line 1091
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     iget-object v8, v8, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -228,7 +228,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mSelectedTrackName:Ljava/lang/String;
     invoke-static {v8, v9}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$1002(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1076
+    .line 1092
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     iget-object v8, v8, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -242,17 +242,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mSelectedFilePath:Ljava/lang/String;
     invoke-static {v8, v9}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$1102(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1077
-    iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
-
-    #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mActivity:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
-    invoke-static {v8}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->access$800(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;)Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
-
-    .line 1078
+    .line 1093
     iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mActivity:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -263,6 +253,6 @@
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->showTrackOptions(Ljava/lang/String;III)V
     invoke-static {v8, v6, v3, v0, v4}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$900(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;III)V
 
-    .line 1079
+    .line 1094
     return-void
 .end method

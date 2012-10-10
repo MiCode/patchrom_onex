@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2117
+    .line 2136
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$2;->this$1:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +42,6 @@
     .parameter "mp"
 
     .prologue
-    .line 2121
+    .line 2140
     return-void
 .end method

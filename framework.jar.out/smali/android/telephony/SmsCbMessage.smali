@@ -63,7 +63,7 @@
 
     aput-object v1, v0, v5
 
-    const-string/jumbo v1, "it"
+    const-string v1, "it"
 
     aput-object v1, v0, v6
 
@@ -127,7 +127,7 @@
 
     const/16 v1, 0xd
 
-    const-string/jumbo v2, "hu"
+    const-string v2, "hu"
 
     aput-object v2, v0, v1
 
@@ -166,7 +166,7 @@
 
     const/4 v1, 0x4
 
-    const-string/jumbo v2, "is"
+    const-string v2, "is"
 
     aput-object v2, v0, v1
 

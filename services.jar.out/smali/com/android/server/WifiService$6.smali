@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 816
+    .line 863
     iput-object p1, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,38 +35,89 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+    .locals 6
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 820
-    const-string v0, "WifiService"
+    const/4 v5, 0x1
 
-    const-string v1, ">>>>>>>>sky: start checkHtcCustomization<<<<<<<<"
+    .line 866
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v0
 
-    .line 821
-    iget-object v0, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
+    .line 868
+    .local v0, action:Ljava/lang/String;
+    const-string v2, "android.app.admin.intent.ALLOW_WIFI_CHANGE"
 
-    iget-object v1, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    #getter for: Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/server/WifiService;->access$200(Lcom/android/server/WifiService;)Landroid/content/Context;
+    move-result v2
 
-    move-result-object v1
+    if-eqz v2, :cond_0
 
-    #calls: Lcom/android/server/WifiService;->checkHtcCustomization(Landroid/content/Context;)V
-    invoke-static {v0, v1}, Lcom/android/server/WifiService;->access$2700(Lcom/android/server/WifiService;Landroid/content/Context;)V
+    .line 869
+    const-string v2, "android.app.admin.extra.ALLOW_STATUS"
 
-    .line 822
-    const-string v0, "WifiService"
+    invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    const-string v1, ">>>>>>>>sky: end checkHtcCustomization<<<<<<<<"
+    move-result v1
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 870
+    .local v1, allowStatus:I
+    const-string v2, "WifiService"
 
-    .line 823
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "GOT INTENT_ALLOW_WIFI_CHANGE: status="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 871
+    if-nez v1, :cond_1
+
+    .line 872
+    iget-object v2, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
+
+    #setter for: Lcom/android/server/WifiService;->mForbiddenByExchangePolicy:Z
+    invoke-static {v2, v5}, Lcom/android/server/WifiService;->access$2902(Lcom/android/server/WifiService;Z)Z
+
+    .line 877
+    :goto_0
+    iget-object v2, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
+
+    #calls: Lcom/android/server/WifiService;->updateWifiState()V
+    invoke-static {v2}, Lcom/android/server/WifiService;->access$1900(Lcom/android/server/WifiService;)V
+
+    .line 879
+    .end local v1           #allowStatus:I
+    :cond_0
     return-void
+
+    .line 875
+    .restart local v1       #allowStatus:I
+    :cond_1
+    iget-object v2, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
+
+    const/4 v3, 0x0
+
+    #setter for: Lcom/android/server/WifiService;->mForbiddenByExchangePolicy:Z
+    invoke-static {v2, v3}, Lcom/android/server/WifiService;->access$2902(Lcom/android/server/WifiService;Z)Z
+
+    goto :goto_0
 .end method

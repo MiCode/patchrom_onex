@@ -58,6 +58,8 @@
 
 .field private mTrackId:Ljava/lang/String;
 
+.field private mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
 .field minetype:Ljava/lang/String;
 
 .field protected osc:Landroid/content/ServiceConnection;
@@ -74,134 +76,137 @@
 
     const/4 v1, 0x0
 
-    .line 95
+    .line 98
     invoke-direct {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;-><init>()V
 
-    .line 43
+    .line 44
     const-string v0, "[PropertyListActivity]"
 
     iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->TAG:Ljava/lang/String;
 
-    .line 45
-    iput v1, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_LENGTH:I
+    .line 46
+    iput v2, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_LENGTH:I
 
-    .line 47
+    .line 48
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_FILENAME:I
 
-    .line 49
+    .line 50
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_TRACK:I
 
-    .line 51
+    .line 52
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_ARTIST:I
 
-    .line 53
+    .line 54
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_ALBUM:I
 
-    .line 55
+    .line 56
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_GENRE:I
 
-    .line 57
+    .line 58
     const/4 v0, 0x6
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_COMPOSER:I
 
-    .line 59
+    .line 60
     const/4 v0, 0x7
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_DISC_NUMBER:I
 
-    .line 61
+    .line 62
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_TRACK_NUMBER:I
 
-    .line 63
+    .line 64
     const/16 v0, 0x9
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_TRACK_YEAR:I
 
-    .line 65
+    .line 66
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_LOCATION:I
 
-    .line 67
+    .line 68
     const/16 v0, 0xb
 
     iput v0, p0, Lcom/htc/music/PropertyListActivity;->PROPERTY_DRM_TYPE:I
 
-    .line 69
-    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
+    .line 70
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 73
-    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->titleArray:[Ljava/lang/String;
+    .line 74
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->titleArray:[Ljava/lang/String;
 
-    .line 75
-    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
+    .line 76
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
-    .line 78
-    iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->isWMdrm:Z
+    .line 79
+    iput-boolean v2, p0, Lcom/htc/music/PropertyListActivity;->isWMdrm:Z
 
-    .line 82
-    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
+    .line 83
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
-    .line 84
-    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
+    .line 85
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
-    .line 86
-    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mDrmConstraint:Landroid/provider/DrmStore$DrmConstraint;
+    .line 87
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mDrmConstraint:Landroid/provider/DrmStore$DrmConstraint;
 
-    .line 88
-    iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mOneShot:Z
+    .line 89
+    iput-boolean v2, p0, Lcom/htc/music/PropertyListActivity;->mOneShot:Z
 
-    .line 90
-    iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mAudiopreview:Z
-
-    .line 92
-    iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mNeedBindSerive:Z
+    .line 91
+    iput-boolean v2, p0, Lcom/htc/music/PropertyListActivity;->mAudiopreview:Z
 
     .line 93
-    iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mIsSeriveBinded:Z
+    iput-boolean v2, p0, Lcom/htc/music/PropertyListActivity;->mNeedBindSerive:Z
 
-    .line 291
-    new-instance v0, Lcom/htc/music/PropertyListActivity$1;
+    .line 94
+    iput-boolean v2, p0, Lcom/htc/music/PropertyListActivity;->mIsSeriveBinded:Z
 
-    invoke-direct {v0, p0}, Lcom/htc/music/PropertyListActivity$1;-><init>(Lcom/htc/music/PropertyListActivity;)V
+    .line 96
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
 
-    iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->osc:Landroid/content/ServiceConnection;
-
-    .line 317
+    .line 316
     new-instance v0, Lcom/htc/music/PropertyListActivity$2;
 
     invoke-direct {v0, p0}, Lcom/htc/music/PropertyListActivity$2;-><init>(Lcom/htc/music/PropertyListActivity;)V
 
-    iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->mScanListener:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->osc:Landroid/content/ServiceConnection;
 
-    .line 345
+    .line 342
     new-instance v0, Lcom/htc/music/PropertyListActivity$3;
 
     invoke-direct {v0, p0}, Lcom/htc/music/PropertyListActivity$3;-><init>(Lcom/htc/music/PropertyListActivity;)V
 
-    iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->mStatusListener:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
-    .line 431
+    .line 370
     new-instance v0, Lcom/htc/music/PropertyListActivity$4;
 
     invoke-direct {v0, p0}, Lcom/htc/music/PropertyListActivity$4;-><init>(Lcom/htc/music/PropertyListActivity;)V
 
+    iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->mStatusListener:Landroid/content/BroadcastReceiver;
+
+    .line 456
+    new-instance v0, Lcom/htc/music/PropertyListActivity$5;
+
+    invoke-direct {v0, p0}, Lcom/htc/music/PropertyListActivity$5;-><init>(Lcom/htc/music/PropertyListActivity;)V
+
     iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->mPropertyAdapter:Landroid/widget/BaseAdapter;
 
-    .line 96
+    .line 99
     return-void
 .end method
 
@@ -210,7 +215,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -221,7 +226,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-boolean v0, p0, Lcom/htc/music/PropertyListActivity;->mNeedBindSerive:Z
 
     return v0
@@ -232,7 +237,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     return-object v0
@@ -243,7 +248,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mDrmConstraint:Landroid/provider/DrmStore$DrmConstraint;
 
     return-object v0
@@ -255,7 +260,7 @@
     .parameter "x1"
 
     .prologue
-    .line 41
+    .line 42
     invoke-direct {p0, p1}, Lcom/htc/music/PropertyListActivity;->wasDRMFilePlaying(Ljava/lang/String;)Z
 
     move-result v0
@@ -269,7 +274,7 @@
     .parameter "x1"
 
     .prologue
-    .line 41
+    .line 42
     iput-boolean p1, p0, Lcom/htc/music/PropertyListActivity;->mIsSeriveBinded:Z
 
     return p1
@@ -280,7 +285,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     return-object v0
@@ -292,7 +297,7 @@
     .parameter "x1"
 
     .prologue
-    .line 41
+    .line 42
     iput-object p1, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     return-object p1
@@ -303,7 +308,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
     return-object v0
@@ -314,7 +319,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     return-object v0
@@ -326,7 +331,7 @@
     .parameter "x1"
 
     .prologue
-    .line 41
+    .line 42
     iput-object p1, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     return-object p1
@@ -337,7 +342,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-boolean v0, p0, Lcom/htc/music/PropertyListActivity;->mOneShot:Z
 
     return v0
@@ -348,7 +353,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     invoke-direct {p0}, Lcom/htc/music/PropertyListActivity;->showPoperty()V
 
     return-void
@@ -359,7 +364,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->titleArray:[Ljava/lang/String;
 
     return-object v0
@@ -370,7 +375,7 @@
     .parameter "x0"
 
     .prologue
-    .line 41
+    .line 42
     iget-boolean v0, p0, Lcom/htc/music/PropertyListActivity;->isWMdrm:Z
 
     return v0
@@ -380,20 +385,20 @@
     .locals 1
 
     .prologue
-    .line 368
+    .line 393
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 372
+    .line 397
     :goto_0
     return-void
 
-    .line 370
+    .line 395
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->init()V
 
-    .line 371
+    .line 396
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mPropertyList:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcListView;->invalidateViews()V
@@ -406,7 +411,7 @@
     .parameter "path"
 
     .prologue
-    .line 375
+    .line 400
     if-eqz p1, :cond_0
 
     const-string v0, "content://drm/"
@@ -417,10 +422,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 376
+    .line 401
     const/4 v0, 0x1
 
-    .line 378
+    .line 403
     :goto_0
     return v0
 
@@ -437,18 +442,18 @@
     .parameter "deliveryType"
 
     .prologue
-    .line 412
+    .line 437
     const-string v0, ""
 
-    .line 414
+    .line 439
     .local v0, type:Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 428
+    .line 453
     :goto_0
     return-object v0
 
-    .line 416
+    .line 441
     :pswitch_0
     const v1, 0x7f07008e
 
@@ -456,10 +461,10 @@
 
     move-result-object v0
 
-    .line 417
+    .line 442
     goto :goto_0
 
-    .line 420
+    .line 445
     :pswitch_1
     const v1, 0x7f070090
 
@@ -467,10 +472,10 @@
 
     move-result-object v0
 
-    .line 421
+    .line 446
     goto :goto_0
 
-    .line 423
+    .line 448
     :pswitch_2
     const v1, 0x7f07008f
 
@@ -478,10 +483,10 @@
 
     move-result-object v0
 
-    .line 424
+    .line 449
     goto :goto_0
 
-    .line 414
+    .line 439
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -506,10 +511,10 @@
 
     const/4 v2, 0x0
 
-    .line 382
+    .line 407
     if-eqz p1, :cond_0
 
-    .line 383
+    .line 408
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
@@ -624,7 +629,7 @@
 
     aput-object v2, v0, v1
 
-    .line 396
+    .line 421
     :goto_0
     return-object v0
 
@@ -746,44 +751,44 @@
 
     const/4 v6, 0x0
 
-    .line 138
+    .line 155
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     if-eqz v3, :cond_0
 
-    .line 139
+    .line 156
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 140
+    .line 157
     iput-object v6, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
-    .line 142
+    .line 159
     :cond_0
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     if-eqz v3, :cond_1
 
-    .line 143
+    .line 160
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 144
+    .line 161
     iput-object v6, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
-    .line 148
+    .line 165
     :cond_1
     iput-boolean v4, p0, Lcom/htc/music/PropertyListActivity;->isWMdrm:Z
 
-    .line 151
+    .line 168
     iput-object v6, p0, Lcom/htc/music/PropertyListActivity;->mDrmConstraint:Landroid/provider/DrmStore$DrmConstraint;
 
-    .line 152
+    .line 169
     const/4 v1, 0x0
 
-    .line 153
+    .line 170
     .local v1, path:Ljava/lang/String;
     const/16 v3, 0xc
 
@@ -857,25 +862,25 @@
 
     aput-object v4, v0, v3
 
-    .line 165
+    .line 182
     .local v0, CursorCols:[Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 166
+    .line 183
     .local v2, trackId:Ljava/lang/String;
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
     if-eqz v3, :cond_5
 
-    .line 167
+    .line 184
     iget-object v2, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
-    .line 175
+    .line 192
     :cond_2
     :goto_0
     if-eqz v2, :cond_3
 
-    .line 176
+    .line 193
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v3
@@ -890,12 +895,12 @@
 
     iput-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
-    .line 187
+    .line 204
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     if-eqz v3, :cond_3
 
-    .line 188
+    .line 205
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
@@ -904,12 +909,12 @@
 
     if-lez v3, :cond_6
 
-    .line 189
+    .line 206
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 190
+    .line 207
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     iget-object v4, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
@@ -924,7 +929,7 @@
 
     move-result-object v1
 
-    .line 193
+    .line 210
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     iget-object v4, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
@@ -941,7 +946,7 @@
 
     iput-object v3, p0, Lcom/htc/music/PropertyListActivity;->minetype:Ljava/lang/String;
 
-    .line 201
+    .line 218
     :cond_3
     :goto_1
     invoke-direct {p0, v1}, Lcom/htc/music/PropertyListActivity;->wasDRMFilePlaying(Ljava/lang/String;)Z
@@ -950,7 +955,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 202
+    .line 219
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
@@ -961,12 +966,12 @@
 
     iput-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
-    .line 203
+    .line 220
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     if-eqz v3, :cond_4
 
-    .line 204
+    .line 221
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
@@ -975,12 +980,12 @@
 
     if-lez v3, :cond_7
 
-    .line 205
+    .line 222
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 206
+    .line 223
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
@@ -995,7 +1000,7 @@
 
     iput-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmConstraint:Landroid/provider/DrmStore$DrmConstraint;
 
-    .line 216
+    .line 233
     :cond_4
     :goto_2
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->isWMDRMSupported()Z
@@ -1018,27 +1023,27 @@
 
     if-eqz v3, :cond_8
 
-    .line 218
+    .line 235
     iput-boolean v7, p0, Lcom/htc/music/PropertyListActivity;->isWMdrm:Z
 
-    .line 219
+    .line 236
     invoke-virtual {p0, v7}, Lcom/htc/music/PropertyListActivity;->getProperties(Z)[Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/htc/music/PropertyListActivity;->titleArray:[Ljava/lang/String;
 
-    .line 224
+    .line 241
     :goto_3
     return-void
 
-    .line 168
+    .line 185
     :cond_5
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v3, :cond_2
 
-    .line 170
+    .line 187
     :try_start_0
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -1054,29 +1059,29 @@
 
     goto/16 :goto_0
 
-    .line 196
+    .line 213
     :cond_6
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 197
+    .line 214
     iput-object v6, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
     goto :goto_1
 
-    .line 209
+    .line 226
     :cond_7
     iget-object v3, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 210
+    .line 227
     iput-object v6, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
     goto :goto_2
 
-    .line 223
+    .line 240
     :cond_8
     invoke-direct {p0, v1}, Lcom/htc/music/PropertyListActivity;->wasDRMFilePlaying(Ljava/lang/String;)Z
 
@@ -1090,7 +1095,7 @@
 
     goto :goto_3
 
-    .line 171
+    .line 188
     :catch_0
     move-exception v3
 
@@ -1104,18 +1109,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 101
+    .line 104
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 102
+    .line 105
     const/4 v1, 0x3
 
     invoke-virtual {p0, v1}, Lcom/htc/music/PropertyListActivity;->setVolumeControlStream(I)V
 
-    .line 104
-    if-eqz p1, :cond_1
+    .line 107
+    if-eqz p1, :cond_3
 
-    .line 105
+    .line 108
     const-string v1, "track"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1124,7 +1129,7 @@
 
     iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
-    .line 106
+    .line 109
     const-string v1, "oneshot"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1133,7 +1138,7 @@
 
     iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mOneShot:Z
 
-    .line 107
+    .line 110
     const-string v1, "audiopreview"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1142,79 +1147,79 @@
 
     iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mAudiopreview:Z
 
-    .line 114
+    .line 117
     :goto_0
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 115
+    .line 118
     .local v0, f:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.MEDIA_UNMOUNTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 116
+    .line 119
     const-string v1, "file"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 117
+    .line 120
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1, v0}, Lcom/htc/music/PropertyListActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 119
+    .line 122
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0           #f:Landroid/content/IntentFilter;
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 120
+    .line 123
     .restart local v0       #f:Landroid/content/IntentFilter;
     const-string v1, "com.htc.music.metachanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 121
+    .line 124
     const-string v1, "com.htc.music.playbackcomplete"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 122
+    .line 125
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mStatusListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1, v0}, Lcom/htc/music/PropertyListActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 124
+    .line 127
     const v1, 0x7f03004b
 
     invoke-virtual {p0, v1}, Lcom/htc/music/PropertyListActivity;->setContentView(I)V
 
-    .line 125
+    .line 128
     new-instance v1, Lcom/htc/widget/ActionBarText;
 
     invoke-direct {v1, p0}, Lcom/htc/widget/ActionBarText;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mHeaderText:Lcom/htc/widget/ActionBarText;
 
-    .line 126
+    .line 129
     iget-object v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v1, :cond_0
 
-    .line 127
+    .line 130
     iget-object v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mHeaderText:Lcom/htc/widget/ActionBarText;
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ActionBarContainer;->addCenterView(Landroid/view/View;)V
 
-    .line 129
+    .line 132
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->init()V
 
-    .line 131
+    .line 134
     const v1, 0x102000a
 
     invoke-virtual {p0, v1}, Lcom/htc/music/PropertyListActivity;->findViewById(I)Landroid/view/View;
@@ -1225,24 +1230,56 @@
 
     iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mPropertyList:Lcom/htc/widget/HtcListView;
 
-    .line 132
+    .line 135
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mPropertyList:Lcom/htc/widget/HtcListView;
 
     iget-object v2, p0, Lcom/htc/music/PropertyListActivity;->mPropertyAdapter:Landroid/widget/BaseAdapter;
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 134
+    .line 137
     const v1, 0x7f07007d
 
     invoke-virtual {p0, v1}, Lcom/htc/music/PropertyListActivity;->setTitle(I)V
 
-    .line 135
+    .line 140
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 141
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    if-nez v1, :cond_1
+
+    .line 142
+    new-instance v1, Lcom/htc/music/PropertyListActivity$1;
+
+    invoke-direct {v1, p0}, Lcom/htc/music/PropertyListActivity$1;-><init>(Lcom/htc/music/PropertyListActivity;)V
+
+    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    .line 150
+    :cond_1
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v2, Landroid/content/IntentFilter;
+
+    const-string v3, "com.htc.music.lockscreen_start"
+
+    invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v1, v2}, Lcom/htc/music/PropertyListActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 152
+    :cond_2
     return-void
 
-    .line 109
+    .line 112
     .end local v0           #f:Landroid/content/IntentFilter;
-    :cond_1
+    :cond_3
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1255,7 +1292,7 @@
 
     iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
-    .line 110
+    .line 113
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1268,7 +1305,7 @@
 
     iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mOneShot:Z
 
-    .line 111
+    .line 114
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1281,71 +1318,102 @@
 
     iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mAudiopreview:Z
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method public onDestroy()V
-    .locals 2
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 228
-    iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mStatusListener:Landroid/content/BroadcastReceiver;
+    .line 245
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mStatusListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/htc/music/PropertyListActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v1}, Lcom/htc/music/PropertyListActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 229
-    iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mScanListener:Landroid/content/BroadcastReceiver;
+    .line 246
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/htc/music/PropertyListActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v1}, Lcom/htc/music/PropertyListActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 231
-    iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
+    .line 248
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 232
-    iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
+    .line 249
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 233
-    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
+    .line 250
+    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
 
-    .line 235
+    .line 252
     :cond_0
-    iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 236
-    iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
+    .line 253
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 237
-    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
+    .line 254
+    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mDrmCursor:Landroid/database/Cursor;
 
-    .line 239
+    .line 256
     :cond_1
-    iput-object v1, p0, Lcom/htc/music/PropertyListActivity;->mDrmConstraint:Landroid/provider/DrmStore$DrmConstraint;
+    iput-object v2, p0, Lcom/htc/music/PropertyListActivity;->mDrmConstraint:Landroid/provider/DrmStore$DrmConstraint;
 
-    .line 241
+    .line 258
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 260
+    :try_start_0
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v1}, Lcom/htc/music/PropertyListActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 266
+    :cond_2
+    :goto_0
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onDestroy()V
 
-    .line 242
+    .line 267
     return-void
+
+    .line 261
+    :catch_0
+    move-exception v0
+
+    .line 262
+    .local v0, ex:Ljava/lang/IllegalArgumentException;
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->TAG:Ljava/lang/String;
+
+    const-string v2, "onDestroy, fail to unregisterReceiver(mUnlockReceiver)"
+
+    invoke-static {v1, v2, v0}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method
 
 .method public onPause()V
     .locals 0
 
     .prologue
-    .line 279
+    .line 304
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onPause()V
 
-    .line 280
+    .line 305
     return-void
 .end method
 
@@ -1353,15 +1421,15 @@
     .locals 1
 
     .prologue
-    .line 273
+    .line 298
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onResume()V
 
-    .line 274
+    .line 299
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mPropertyList:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcListView;->invalidateViews()V
 
-    .line 275
+    .line 300
     return-void
 .end method
 
@@ -1370,7 +1438,7 @@
     .parameter "outState"
 
     .prologue
-    .line 284
+    .line 309
     const-string v1, "configchange"
 
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->getChangingConfigurations()I
@@ -1384,34 +1452,34 @@
     :goto_0
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 285
+    .line 310
     const-string v0, "oneshot"
 
     iget-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mOneShot:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 286
+    .line 311
     const-string v0, "track"
 
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity;->mTrackId:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 287
+    .line 312
     const-string v0, "audiopreview"
 
     iget-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mAudiopreview:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 288
+    .line 313
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 289
+    .line 314
     return-void
 
-    .line 284
+    .line 309
     :cond_0
     const/4 v0, 0x0
 
@@ -1422,23 +1490,23 @@
     .locals 2
 
     .prologue
-    .line 246
+    .line 271
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v0, :cond_0
 
-    .line 247
+    .line 272
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 249
+    .line 274
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/PropertyListActivity;->mNeedBindSerive:Z
 
-    .line 250
+    .line 275
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1451,23 +1519,23 @@
 
     if-nez v0, :cond_1
 
-    .line 252
+    .line 277
     iget-object v0, p0, Lcom/htc/music/PropertyListActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "onStart, Fail to bind service."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 253
+    .line 278
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/PropertyListActivity;->mNeedBindSerive:Z
 
-    .line 256
+    .line 281
     :cond_1
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onStart()V
 
-    .line 257
+    .line 282
     return-void
 .end method
 
@@ -1477,34 +1545,34 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 261
+    .line 286
     iget-boolean v0, p0, Lcom/htc/music/PropertyListActivity;->mIsSeriveBinded:Z
 
     if-eqz v0, :cond_0
 
-    .line 262
+    .line 287
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, v0}, Lcom/htc/music/util/MusicUtils;->unbindFromService(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 263
+    .line 288
     iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mIsSeriveBinded:Z
 
-    .line 265
+    .line 290
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 266
+    .line 291
     iput-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mNeedBindSerive:Z
 
-    .line 268
+    .line 293
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onStop()V
 
-    .line 269
+    .line 294
     return-void
 .end method
 
@@ -1512,19 +1580,19 @@
     .locals 3
 
     .prologue
-    .line 735
+    .line 760
     iget-boolean v1, p0, Lcom/htc/music/PropertyListActivity;->mAudiopreview:Z
 
     if-eqz v1, :cond_0
 
-    .line 736
+    .line 761
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.musicservicecommand"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 737
+    .line 762
     .local v0, i:Landroid/content/Intent;
     const-string v1, "command"
 
@@ -1532,17 +1600,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 738
+    .line 763
     invoke-virtual {p0, v0}, Lcom/htc/music/PropertyListActivity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 739
+    .line 764
     invoke-virtual {p0}, Lcom/htc/music/PropertyListActivity;->finish()V
 
-    .line 741
+    .line 766
     .end local v0           #i:Landroid/content/Intent;
     :cond_0
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onUserLeaveHint()V
 
-    .line 742
+    .line 767
     return-void
 .end method

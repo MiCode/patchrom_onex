@@ -942,8 +942,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 313
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 336
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 103
     iput-boolean v2, p0, Landroid/media/MediaInfo;->mIsSDSrc:Z
@@ -953,7 +953,7 @@
 
     iput v0, p0, Landroid/media/MediaInfo;->mAlbumhash:I
 
-    .line 324
+    .line 347
     new-instance v0, Landroid/media/MediaInfo$MyMediaScannerClient;
 
     const/4 v1, 0x0
@@ -962,29 +962,29 @@
 
     iput-object v0, p0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
 
-    .line 314
+    .line 337
     sget-boolean v0, Landroid/media/MediaInfo;->libloaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 315
+    .line 338
     invoke-direct {p0}, Landroid/media/MediaInfo;->native_setup()V
 
-    .line 316
+    .line 339
     :cond_0
     iput-object p1, p0, Landroid/media/MediaInfo;->mContext:Landroid/content/Context;
 
-    .line 318
+    .line 341
     invoke-static {}, Landroid/os/Process;->supportsProcesses()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 319
+    .line 342
     iput-boolean v2, p0, Landroid/media/MediaInfo;->mCaseInsensitivePaths:Z
 
-    .line 321
+    .line 344
     :cond_1
     return-void
 .end method
@@ -1029,12 +1029,12 @@
     .parameter "path"
 
     .prologue
-    .line 578
+    .line 623
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 579
+    .line 624
     .local v0, file:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1042,17 +1042,17 @@
 
     if-nez v1, :cond_0
 
-    .line 580
+    .line 625
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 581
+    .line 626
     const-string v1, "MediaInfo"
 
     const-string v2, "ensureDirExists - make dir."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 583
+    .line 628
     :cond_0
     return-void
 .end method
@@ -1065,14 +1065,14 @@
     .parameter "directoryName"
 
     .prologue
-    .line 539
+    .line 584
     const-string v2, "_data"
 
     invoke-virtual {p2, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 540
+    .line 585
     .local v0, file:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1080,23 +1080,23 @@
 
     if-eqz v2, :cond_0
 
-    .line 541
+    .line 586
     invoke-direct {p0, p1, p3, p4}, Landroid/media/MediaInfo;->generateFileName(ZLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 542
+    .line 587
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1, p2}, Landroid/content/ContentValues;-><init>(Landroid/content/ContentValues;)V
 
-    .line 543
+    .line 588
     .local v1, values:Landroid/content/ContentValues;
     const-string v2, "_data"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 548
+    .line 593
     :goto_0
     invoke-direct {p0, v0}, Landroid/media/MediaInfo;->ensureFileExists(Ljava/lang/String;)Z
 
@@ -1104,7 +1104,7 @@
 
     if-nez v2, :cond_1
 
-    .line 549
+    .line 594
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1129,7 +1129,7 @@
 
     throw v2
 
-    .line 545
+    .line 590
     .end local v1           #values:Landroid/content/ContentValues;
     :cond_0
     move-object v1, p2
@@ -1137,7 +1137,7 @@
     .restart local v1       #values:Landroid/content/ContentValues;
     goto :goto_0
 
-    .line 551
+    .line 596
     :cond_1
     return-object v1
 .end method
@@ -1151,12 +1151,12 @@
 
     const/4 v6, 0x0
 
-    .line 587
+    .line 632
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 588
+    .line 633
     .local v2, file:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1164,11 +1164,11 @@
 
     if-eqz v7, :cond_0
 
-    .line 605
+    .line 650
     :goto_0
     return v5
 
-    .line 593
+    .line 638
     :cond_0
     const/16 v7, 0x2f
 
@@ -1176,7 +1176,7 @@
 
     move-result v4
 
-    .line 594
+    .line 639
     .local v4, secondSlash:I
     if-ge v4, v5, :cond_1
 
@@ -1184,19 +1184,19 @@
 
     goto :goto_0
 
-    .line 595
+    .line 640
     :cond_1
     invoke-virtual {p1, v6, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 596
+    .line 641
     .local v1, directoryPath:Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 597
+    .line 642
     .local v0, directory:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1206,10 +1206,10 @@
 
     move v5, v6
 
-    .line 598
+    .line 643
     goto :goto_0
 
-    .line 599
+    .line 644
     :cond_2
     invoke-virtual {v2}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -1217,7 +1217,7 @@
 
     invoke-virtual {v5}, Ljava/io/File;->mkdirs()Z
 
-    .line 601
+    .line 646
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
     :try_end_0
@@ -1227,11 +1227,11 @@
 
     goto :goto_0
 
-    .line 602
+    .line 647
     :catch_0
     move-exception v3
 
-    .line 603
+    .line 648
     .local v3, ioe:Ljava/io/IOException;
     const-string v5, "MediaInfo"
 
@@ -1241,7 +1241,7 @@
 
     move v5, v6
 
-    .line 605
+    .line 650
     goto :goto_0
 .end method
 
@@ -1255,7 +1255,7 @@
     .parameter "directoryName"
 
     .prologue
-    .line 557
+    .line 602
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -1264,11 +1264,11 @@
 
     move-result-object v1
 
-    .line 559
+    .line 604
     .local v1, name:Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 560
+    .line 605
     new-instance v2, Ljava/lang/UnsupportedOperationException;
 
     const-string v3, "Writing to internal storage is not supported."
@@ -1277,7 +1277,7 @@
 
     throw v2
 
-    .line 563
+    .line 608
     :cond_0
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
@@ -1287,7 +1287,7 @@
 
     move-result-object v0
 
-    .line 568
+    .line 613
     .local v0, directoryStr:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1313,7 +1313,7 @@
 
     invoke-direct {p0, v2}, Landroid/media/MediaInfo;->ensureDirExists(Ljava/lang/String;)V
 
-    .line 570
+    .line 615
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1360,17 +1360,17 @@
     .parameter "rowId"
 
     .prologue
-    .line 981
+    .line 1029
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1029
+    .line 1077
     :cond_0
     :goto_0
     return-void
 
-    .line 984
+    .line 1032
     :cond_1
     iget-object v9, p0, Landroid/media/MediaInfo;->mContext:Landroid/content/Context;
 
@@ -1384,11 +1384,11 @@
 
     move-result-object v6
 
-    .line 985
+    .line 1033
     .local v6, mediaProvider:Landroid/content/IContentProvider;
     if-nez v6, :cond_2
 
-    .line 986
+    .line 1034
     const-string v9, "MediaInfo"
 
     const-string v10, "Can\'t acquire MediaProvider"
@@ -1397,7 +1397,7 @@
 
     goto :goto_0
 
-    .line 991
+    .line 1039
     :cond_2
     iget-boolean v9, p0, Landroid/media/MediaInfo;->mIsSDSrc:Z
 
@@ -1405,32 +1405,32 @@
 
     sget-object v0, Landroid/media/MediaInfo;->ALBUMART_URI:Landroid/net/Uri;
 
-    .line 993
+    .line 1041
     .local v0, albumArtUri:Landroid/net/Uri;
     :goto_1
     const/4 v3, 0x0
 
-    .line 994
+    .line 1042
     .local v3, cursor:Landroid/database/Cursor;
     new-instance v8, Landroid/content/ContentValues;
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 996
+    .line 1044
     .local v8, values:Landroid/content/ContentValues;
     :try_start_0
     invoke-virtual {p0, p2}, Landroid/media/MediaInfo;->getAlbumCursor(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v3
 
-    .line 997
+    .line 1045
     const-wide/16 v1, 0x0
 
-    .line 998
+    .line 1046
     .local v1, albumId:J
     const/4 v5, 0x0
 
-    .line 999
+    .line 1047
     .local v5, existingAlbumArt:Ljava/lang/String;
     if-eqz v3, :cond_3
 
@@ -1440,10 +1440,10 @@
 
     if-lez v9, :cond_3
 
-    .line 1000
+    .line 1048
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1001
+    .line 1049
     const-string v9, "_id"
 
     invoke-interface {v3, v9}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1454,7 +1454,7 @@
 
     move-result-wide v1
 
-    .line 1002
+    .line 1050
     const-string v9, "album_art"
 
     invoke-interface {v3, v9}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1465,7 +1465,7 @@
 
     move-result-object v5
 
-    .line 1004
+    .line 1052
     :cond_3
     const-wide/16 v9, 0x0
 
@@ -1475,7 +1475,7 @@
 
     if-nez v5, :cond_4
 
-    .line 1006
+    .line 1054
     const-string v9, "album_id"
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1484,7 +1484,7 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1007
+    .line 1055
     const-string v9, "_data"
 
     invoke-virtual {v8, v9, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
@@ -1492,13 +1492,13 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1009
+    .line 1057
     :try_start_1
     invoke-interface {v6, v0, v8}, Landroid/content/IContentProvider;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v7
 
-    .line 1010
+    .line 1058
     .local v7, out:Landroid/net/Uri;
     const-string v9, "MediaInfo"
 
@@ -1526,26 +1526,26 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1019
+    .line 1067
     .end local v7           #out:Landroid/net/Uri;
     :cond_4
     :goto_2
     if-eqz v3, :cond_5
 
-    .line 1020
+    .line 1068
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 1021
+    .line 1069
     const/4 v3, 0x0
 
-    .line 1024
+    .line 1072
     :cond_5
     if-eqz v8, :cond_0
 
-    .line 1025
+    .line 1073
     invoke-virtual {v8}, Landroid/content/ContentValues;->clear()V
 
-    .line 1026
+    .line 1074
     .end local v1           #albumId:J
     .end local v5           #existingAlbumArt:Ljava/lang/String;
     :goto_3
@@ -1553,7 +1553,7 @@
 
     goto/16 :goto_0
 
-    .line 991
+    .line 1039
     .end local v0           #albumArtUri:Landroid/net/Uri;
     .end local v3           #cursor:Landroid/database/Cursor;
     .end local v8           #values:Landroid/content/ContentValues;
@@ -1562,7 +1562,7 @@
 
     goto :goto_1
 
-    .line 1011
+    .line 1059
     .restart local v0       #albumArtUri:Landroid/net/Uri;
     .restart local v1       #albumId:J
     .restart local v3       #cursor:Landroid/database/Cursor;
@@ -1571,7 +1571,7 @@
     :catch_0
     move-exception v4
 
-    .line 1012
+    .line 1060
     .local v4, ex:Ljava/lang/IllegalStateException;
     :try_start_2
     const-string v9, "MediaInfo"
@@ -1601,66 +1601,66 @@
 
     goto :goto_2
 
-    .line 1015
+    .line 1063
     .end local v1           #albumId:J
     .end local v4           #ex:Ljava/lang/IllegalStateException;
     .end local v5           #existingAlbumArt:Ljava/lang/String;
     :catch_1
     move-exception v4
 
-    .line 1016
+    .line 1064
     .local v4, ex:Landroid/os/RemoteException;
     :try_start_3
     const-string v9, "MediaInfo"
 
-    const-string/jumbo v10, "insertAlbumArt RemoteException "
+    const-string v10, "insertAlbumArt RemoteException "
 
     invoke-static {v9, v10, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1019
+    .line 1067
     if-eqz v3, :cond_7
 
-    .line 1020
+    .line 1068
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 1021
+    .line 1069
     const/4 v3, 0x0
 
-    .line 1024
+    .line 1072
     :cond_7
     if-eqz v8, :cond_0
 
-    .line 1025
+    .line 1073
     invoke-virtual {v8}, Landroid/content/ContentValues;->clear()V
 
     goto :goto_3
 
-    .line 1019
+    .line 1067
     .end local v4           #ex:Landroid/os/RemoteException;
     :catchall_0
     move-exception v9
 
     if-eqz v3, :cond_8
 
-    .line 1020
+    .line 1068
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 1021
+    .line 1069
     const/4 v3, 0x0
 
-    .line 1024
+    .line 1072
     :cond_8
     if-eqz v8, :cond_9
 
-    .line 1025
+    .line 1073
     invoke-virtual {v8}, Landroid/content/ContentValues;->clear()V
 
-    .line 1026
+    .line 1074
     const/4 v8, 0x0
 
-    .line 1019
+    .line 1067
     :cond_9
     throw v9
 .end method
@@ -1671,7 +1671,7 @@
     .parameter "rowId"
 
     .prologue
-    .line 917
+    .line 965
     iget-boolean v2, p0, Landroid/media/MediaInfo;->mIsSDSrc:Z
 
     if-eqz v2, :cond_1
@@ -1682,19 +1682,19 @@
 
     move-result-object v1
 
-    .line 920
+    .line 968
     .local v1, genresUri:Landroid/net/Uri;
     :goto_0
     if-eqz v1, :cond_0
 
     if-nez p1, :cond_2
 
-    .line 976
+    .line 1024
     :cond_0
     :goto_1
     return-void
 
-    .line 917
+    .line 965
     .end local v1           #genresUri:Landroid/net/Uri;
     :cond_1
     const-string/jumbo v2, "phoneStorage"
@@ -1705,7 +1705,7 @@
 
     goto :goto_0
 
-    .line 923
+    .line 971
     .restart local v1       #genresUri:Landroid/net/Uri;
     :cond_2
     iget-object v2, p0, Landroid/media/MediaInfo;->mContext:Landroid/content/Context;
@@ -1720,11 +1720,11 @@
 
     move-result-object v0
 
-    .line 924
+    .line 972
     .local v0, mediaProvider:Landroid/content/IContentProvider;
     if-nez v0, :cond_3
 
-    .line 925
+    .line 973
     const-string v2, "MediaInfo"
 
     const-string v3, "Can\'t acquire MediaProvider"
@@ -1733,21 +1733,21 @@
 
     goto :goto_1
 
-    .line 929
+    .line 977
     :cond_3
     const/4 v8, 0x0
 
-    .line 930
+    .line 978
     .local v8, uri:Landroid/net/Uri;
     const/4 v6, 0x0
 
-    .line 931
+    .line 979
     .local v6, cursor:Landroid/database/Cursor;
     new-instance v9, Landroid/content/ContentValues;
 
     invoke-direct {v9}, Landroid/content/ContentValues;-><init>()V
 
-    .line 934
+    .line 982
     .local v9, values:Landroid/content/ContentValues;
     :try_start_0
     sget-object v2, Landroid/media/MediaInfo;->GENRE_LOOKUP_PROJECTION:[Ljava/lang/String;
@@ -1768,7 +1768,7 @@
 
     move-result-object v6
 
-    .line 938
+    .line 986
     if-eqz v6, :cond_4
 
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -1777,7 +1777,7 @@
 
     if-nez v2, :cond_9
 
-    .line 941
+    .line 989
     :cond_4
     const-string/jumbo v2, "name"
 
@@ -1786,13 +1786,13 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 943
+    .line 991
     :try_start_1
     invoke-interface {v0, v1, v9}, Landroid/content/IContentProvider;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v8
 
-    .line 944
+    .line 992
     const-string v2, "MediaInfo"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1819,11 +1819,11 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 953
+    .line 1001
     :goto_2
     if-eqz v8, :cond_5
 
-    .line 954
+    .line 1002
     :try_start_2
     const-string/jumbo v2, "members"
 
@@ -1831,14 +1831,14 @@
 
     move-result-object v8
 
-    .line 957
+    .line 1005
     :cond_5
     if-eqz v8, :cond_6
 
-    .line 959
+    .line 1007
     invoke-virtual {v9}, Landroid/content/ContentValues;->clear()V
 
-    .line 960
+    .line 1008
     const-string v2, "audio_id"
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1847,40 +1847,40 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 961
+    .line 1009
     invoke-interface {v0, v8, v9}, Landroid/content/IContentProvider;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 967
+    .line 1015
     :cond_6
     if-eqz v6, :cond_7
 
-    .line 968
+    .line 1016
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 969
+    .line 1017
     const/4 v6, 0x0
 
-    .line 971
+    .line 1019
     :cond_7
     if-eqz v9, :cond_0
 
-    .line 972
+    .line 1020
     invoke-virtual {v9}, Landroid/content/ContentValues;->clear()V
 
-    .line 973
+    .line 1021
     :goto_3
     const/4 v9, 0x0
 
     goto/16 :goto_1
 
-    .line 945
+    .line 993
     :catch_0
     move-exception v7
 
-    .line 946
+    .line 994
     .local v7, ex:Ljava/lang/IllegalStateException;
     :try_start_3
     const-string v2, "MediaInfo"
@@ -1894,47 +1894,47 @@
 
     goto :goto_2
 
-    .line 963
+    .line 1011
     .end local v7           #ex:Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v7
 
-    .line 964
+    .line 1012
     .local v7, ex:Landroid/os/RemoteException;
     :try_start_4
     const-string v2, "MediaInfo"
 
-    const-string/jumbo v3, "insertGenre RemoteException "
+    const-string v3, "insertGenre RemoteException "
 
     invoke-static {v2, v3, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 967
+    .line 1015
     if-eqz v6, :cond_8
 
-    .line 968
+    .line 1016
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 969
+    .line 1017
     const/4 v6, 0x0
 
-    .line 971
+    .line 1019
     :cond_8
     if-eqz v9, :cond_0
 
-    .line 972
+    .line 1020
     invoke-virtual {v9}, Landroid/content/ContentValues;->clear()V
 
     goto :goto_3
 
-    .line 950
+    .line 998
     .end local v7           #ex:Landroid/os/RemoteException;
     :cond_9
     :try_start_5
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 951
+    .line 999
     const-string v2, "_id"
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1954,29 +1954,29 @@
 
     goto :goto_2
 
-    .line 967
+    .line 1015
     :catchall_0
     move-exception v2
 
     if-eqz v6, :cond_a
 
-    .line 968
+    .line 1016
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 969
+    .line 1017
     const/4 v6, 0x0
 
-    .line 971
+    .line 1019
     :cond_a
     if-eqz v9, :cond_b
 
-    .line 972
+    .line 1020
     invoke-virtual {v9}, Landroid/content/ContentValues;->clear()V
 
-    .line 973
+    .line 1021
     const/4 v9, 0x0
 
-    .line 967
+    .line 1015
     :cond_b
     throw v2
 .end method
@@ -2004,12 +2004,12 @@
     .parameter "mediaTag"
 
     .prologue
-    .line 854
+    .line 902
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 857
+    .line 905
     .local v0, map:Landroid/content/ContentValues;
     const-string/jumbo v1, "title"
 
@@ -2017,7 +2017,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 858
+    .line 906
     const-string v1, "date_modified"
 
     iget-wide v2, p1, Landroid/media/MediaInfo$MediaTag;->mLastModified:J
@@ -2028,7 +2028,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 859
+    .line 907
     const-string v1, "_size"
 
     iget-wide v2, p1, Landroid/media/MediaInfo$MediaTag;->mFileSize:J
@@ -2039,14 +2039,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 860
+    .line 908
     const-string/jumbo v1, "mime_type"
 
     iget-object v2, p1, Landroid/media/MediaInfo$MediaTag;->mMimeType:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 862
+    .line 910
     const-string v2, "artist"
 
     iget-object v1, p1, Landroid/media/MediaInfo$MediaTag;->mArtist:Ljava/lang/String;
@@ -2066,7 +2066,7 @@
     :goto_0
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 863
+    .line 911
     const-string v2, "album"
 
     iget-object v1, p1, Landroid/media/MediaInfo$MediaTag;->mAlbum:Ljava/lang/String;
@@ -2086,19 +2086,19 @@
     :goto_1
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 864
+    .line 912
     const-string v1, "composer"
 
     iget-object v2, p1, Landroid/media/MediaInfo$MediaTag;->mComposer:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 865
+    .line 913
     iget v1, p1, Landroid/media/MediaInfo$MediaTag;->mYear:I
 
     if-eqz v1, :cond_0
 
-    .line 866
+    .line 914
     const-string/jumbo v1, "year"
 
     iget v2, p1, Landroid/media/MediaInfo$MediaTag;->mYear:I
@@ -2109,7 +2109,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 868
+    .line 916
     :cond_0
     const-string/jumbo v1, "track"
 
@@ -2121,7 +2121,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 869
+    .line 917
     const-string v1, "duration"
 
     iget v2, p1, Landroid/media/MediaInfo$MediaTag;->mDuration:I
@@ -2132,16 +2132,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 872
+    .line 920
     return-object v0
 
-    .line 862
+    .line 910
     :cond_1
     const-string v1, "<unknown>"
 
     goto :goto_0
 
-    .line 863
+    .line 911
     :cond_2
     const-string v1, "<unknown>"
 
@@ -2158,21 +2158,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 901
+    .line 949
     if-nez p2, :cond_0
 
-    .line 902
+    .line 950
     const-string v1, "MediaInfo"
 
     const-string v2, "DRM uri should not be null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 911
+    .line 959
     :goto_0
     return v0
 
-    .line 906
+    .line 954
     :cond_0
     iget-object v1, p1, Landroid/media/MediaInfo$MediaTag;->mMimeType:Ljava/lang/String;
 
@@ -2194,7 +2194,7 @@
 
     if-nez v1, :cond_1
 
-    .line 907
+    .line 955
     const-string v1, "MediaInfo"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2221,7 +2221,7 @@
 
     goto :goto_0
 
-    .line 911
+    .line 959
     :cond_1
     const/4 v0, 0x1
 
@@ -2238,7 +2238,7 @@
     .end annotation
 
     .prologue
-    .line 1244
+    .line 1296
     const-string v4, "MediaInfo"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2261,14 +2261,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1245
+    .line 1297
     if-nez p1, :cond_0
 
-    .line 1269
+    .line 1321
     :goto_0
     return-void
 
-    .line 1248
+    .line 1300
     :cond_0
     iget-object v4, p0, Landroid/media/MediaInfo;->mContext:Landroid/content/Context;
 
@@ -2282,11 +2282,11 @@
 
     move-result-object v2
 
-    .line 1249
+    .line 1301
     .local v2, mediaProvider:Landroid/content/IContentProvider;
     if-nez v2, :cond_1
 
-    .line 1250
+    .line 1302
     const-string v4, "MediaInfo"
 
     const-string v5, "Can\'t acquire MediaProvider"
@@ -2295,7 +2295,7 @@
 
     goto :goto_0
 
-    .line 1255
+    .line 1307
     :cond_1
     iget-boolean v4, p0, Landroid/media/MediaInfo;->mIsSDSrc:Z
 
@@ -2307,7 +2307,7 @@
 
     move-result-object v0
 
-    .line 1259
+    .line 1311
     .local v0, audioUri:Landroid/net/Uri;
     :goto_1
     :try_start_0
@@ -2339,7 +2339,7 @@
 
     move-result-object v3
 
-    .line 1260
+    .line 1312
     .local v3, where:Ljava/lang/String;
     const-string v4, "_data=?"
 
@@ -2357,7 +2357,7 @@
 
     invoke-interface {v2, v0, v4, v5}, Landroid/content/IContentProvider;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1261
+    .line 1313
     iget-object v4, p0, Landroid/media/MediaInfo;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2377,12 +2377,12 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1267
+    .line 1319
     .end local v3           #where:Ljava/lang/String;
     :goto_2
     const/4 v2, 0x0
 
-    .line 1268
+    .line 1320
     const-string v4, "MediaInfo"
 
     const-string v5, "DRMAudio deleted"
@@ -2391,7 +2391,7 @@
 
     goto :goto_0
 
-    .line 1255
+    .line 1307
     .end local v0           #audioUri:Landroid/net/Uri;
     :cond_2
     const-string/jumbo v4, "phoneStorage"
@@ -2402,12 +2402,12 @@
 
     goto :goto_1
 
-    .line 1262
+    .line 1314
     .restart local v0       #audioUri:Landroid/net/Uri;
     :catch_0
     move-exception v1
 
-    .line 1263
+    .line 1315
     .local v1, ex:Landroid/os/RemoteException;
     :try_start_1
     const-string v4, "MediaInfo"
@@ -2420,7 +2420,7 @@
 
     goto :goto_2
 
-    .line 1264
+    .line 1316
     .end local v1           #ex:Landroid/os/RemoteException;
     :catchall_0
     move-exception v4
@@ -2432,16 +2432,16 @@
     .locals 1
 
     .prologue
-    .line 1285
+    .line 1338
     sget-boolean v0, Landroid/media/MediaInfo;->libloaded:Z
 
     if-nez v0, :cond_0
 
-    .line 1288
+    .line 1341
     :goto_0
     return-void
 
-    .line 1287
+    .line 1340
     :cond_0
     invoke-direct {p0}, Landroid/media/MediaInfo;->native_finalize()V
 
@@ -2460,7 +2460,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 683
+    .line 729
     iget-object v2, p0, Landroid/media/MediaInfo;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2473,34 +2473,34 @@
 
     move-result-object v0
 
-    .line 684
+    .line 730
     .local v0, mediaProvider:Landroid/content/IContentProvider;
     if-nez v0, :cond_0
 
-    .line 685
+    .line 731
     const-string v2, "MediaInfo"
 
     const-string v3, "Can\'t acquire MediaProvider"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 703
+    .line 749
     :goto_0
     return-object v5
 
-    .line 688
+    .line 734
     :cond_0
     invoke-static {p1}, Landroid/provider/MediaStore$Audio;->keyFor(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 691
+    .line 737
     .local v7, k:Ljava/lang/String;
     iget v2, p0, Landroid/media/MediaInfo;->mAlbumhash:I
 
     if-lez v2, :cond_1
 
-    .line 692
+    .line 738
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2519,7 +2519,7 @@
 
     move-result-object v7
 
-    .line 696
+    .line 742
     :cond_1
     const/4 v2, 0x1
 
@@ -2529,7 +2529,7 @@
 
     aput-object v7, v4, v2
 
-    .line 698
+    .line 744
     .local v4, selargs:[Ljava/lang/String;
     iget-boolean v2, p0, Landroid/media/MediaInfo;->mIsSDSrc:Z
 
@@ -2541,7 +2541,7 @@
 
     move-result-object v1
 
-    .line 701
+    .line 747
     .local v1, albumUri:Landroid/net/Uri;
     :goto_1
     sget-object v2, Landroid/media/MediaInfo;->ALBUM_LOOKUP_PROJECTION:[Ljava/lang/String;
@@ -2555,10 +2555,10 @@
     .local v6, c:Landroid/database/Cursor;
     move-object v5, v6
 
-    .line 703
+    .line 749
     goto :goto_0
 
-    .line 698
+    .line 744
     .end local v1           #albumUri:Landroid/net/Uri;
     .end local v6           #c:Landroid/database/Cursor;
     :cond_2
@@ -2580,30 +2580,30 @@
 
     const/4 v2, 0x0
 
-    .line 824
+    .line 872
     sget-boolean v4, Landroid/media/MediaInfo;->libloaded:Z
 
     if-nez v4, :cond_1
 
-    .line 844
+    .line 892
     :cond_0
     :goto_0
     return v2
 
-    .line 827
+    .line 875
     :cond_1
     invoke-static {p1}, Landroid/media/MediaFile;->getFileType(Ljava/lang/String;)Landroid/media/MediaFile$MediaFileType;
 
     move-result-object v1
 
-    .line 828
+    .line 876
     .local v1, mediaFileType:Landroid/media/MediaFile$MediaFileType;
     if-eqz v1, :cond_0
 
-    .line 831
+    .line 879
     iget v0, v1, Landroid/media/MediaFile$MediaFileType;->fileType:I
 
-    .line 832
+    .line 880
     .local v0, fileType:I
     const/16 v4, 0x15
 
@@ -2619,20 +2619,20 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 834
+    .line 882
     :cond_2
     iget-object v4, p0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
 
     invoke-virtual {v4}, Landroid/media/MediaInfo$MyMediaScannerClient;->reset()V
 
-    .line 835
+    .line 883
     const-string v4, ""
 
     iget-object v5, p0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
 
     invoke-direct {p0, p1, v4, v5}, Landroid/media/MediaInfo;->processFile(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaScannerClient;)V
 
-    .line 836
+    .line 884
     iget-object v4, p0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
 
     invoke-virtual {v4}, Landroid/media/MediaInfo$MyMediaScannerClient;->getMimeType()Ljava/lang/String;
@@ -2643,7 +2643,7 @@
 
     move-result v0
 
-    .line 839
+    .line 887
     :cond_3
     invoke-static {v0}, Landroid/media/MediaFile;->isAudioFileType(I)Z
 
@@ -2651,12 +2651,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 840
+    .line 888
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 841
+    .line 889
     :cond_4
     invoke-static {v0}, Landroid/media/MediaFile;->isVideoFileType(I)Z
 
@@ -2666,7 +2666,7 @@
 
     move v2, v3
 
-    .line 842
+    .line 890
     goto :goto_0
 .end method
 
@@ -2675,10 +2675,10 @@
     .parameter "path"
 
     .prologue
-    .line 883
+    .line 931
     move-object v0, p1
 
-    .line 884
+    .line 932
     .local v0, filename:Ljava/lang/String;
     const/16 v3, 0x2f
 
@@ -2686,26 +2686,26 @@
 
     move-result v2
 
-    .line 885
+    .line 933
     .local v2, lastSlash:I
     if-ltz v2, :cond_0
 
-    .line 886
+    .line 934
     add-int/lit8 v2, v2, 0x1
 
-    .line 887
+    .line 935
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v3
 
     if-ge v2, v3, :cond_0
 
-    .line 888
+    .line 936
     invoke-virtual {v0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 892
+    .line 940
     :cond_0
     const/16 v3, 0x2e
 
@@ -2713,18 +2713,18 @@
 
     move-result v1
 
-    .line 893
+    .line 941
     .local v1, lastDot:I
     if-lez v1, :cond_1
 
-    .line 894
+    .line 942
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 897
+    .line 945
     :cond_1
     return-object v0
 .end method
@@ -2740,7 +2740,7 @@
     .end annotation
 
     .prologue
-    .line 1150
+    .line 1200
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaInfo;->insertDRMAudioToMediaProvider(Landroid/media/MediaInfo$MediaTag;Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v0
@@ -2759,14 +2759,14 @@
     .end annotation
 
     .prologue
-    .line 1035
+    .line 1084
     const-string v5, "MediaInfo"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "insertDRMAudioToMediaProvider drmUri= "
+    const-string v7, "insertDRMAudioToMediaProvider drmUri= "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2784,13 +2784,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1039
+    .line 1088
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v16
 
-    .line 1040
+    .line 1089
     .local v16, path:Ljava/lang/String;
     const/4 v5, 0x0
 
@@ -2818,7 +2818,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1046
+    .line 1095
     .end local v16           #path:Ljava/lang/String;
     :goto_0
     invoke-virtual/range {p0 .. p2}, Landroid/media/MediaInfo;->checkMediaTag(Landroid/media/MediaInfo$MediaTag;Landroid/net/Uri;)Z
@@ -2827,25 +2827,25 @@
 
     if-nez v5, :cond_1
 
-    .line 1047
+    .line 1096
     const/16 v18, 0x0
 
-    .line 1146
+    .line 1195
     :cond_0
     :goto_1
     return-object v18
 
-    .line 1041
+    .line 1090
     :catch_0
     move-exception v11
 
-    .line 1042
+    .line 1091
     .local v11, ex:Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1048
+    .line 1097
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_1
     move-object/from16 v0, p1
@@ -2858,13 +2858,13 @@
 
     move-result-object v12
 
-    .line 1049
+    .line 1098
     .local v12, filename:Ljava/lang/String;
     move-object/from16 v0, p1
 
     iput-object v12, v0, Landroid/media/MediaInfo$MediaTag;->mFilename:Ljava/lang/String;
 
-    .line 1050
+    .line 1099
     move-object/from16 v0, p1
 
     iget-object v5, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
@@ -2875,12 +2875,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 1051
+    .line 1100
     move-object/from16 v0, p1
 
     iput-object v12, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
-    .line 1053
+    .line 1102
     :cond_2
     move-object/from16 v0, p0
 
@@ -2896,23 +2896,23 @@
 
     move-result-object v3
 
-    .line 1054
+    .line 1103
     .local v3, mediaProvider:Landroid/content/IContentProvider;
     if-nez v3, :cond_3
 
-    .line 1055
+    .line 1104
     const-string v5, "MediaInfo"
 
     const-string v6, "Can\'t acquire MediaProvider"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1056
+    .line 1105
     const/16 v18, 0x0
 
     goto :goto_1
 
-    .line 1059
+    .line 1108
     :cond_3
     move-object/from16 v0, p0
 
@@ -2926,7 +2926,7 @@
 
     move-result-object v4
 
-    .line 1064
+    .line 1113
     .local v4, audioUri:Landroid/net/Uri;
     :goto_2
     move-object/from16 v0, p1
@@ -2945,7 +2945,7 @@
 
     if-nez v5, :cond_5
 
-    .line 1065
+    .line 1114
     :cond_4
     move-object/from16 v0, p1
 
@@ -2955,19 +2955,19 @@
 
     iput-object v5, v0, Landroid/media/MediaInfo$MediaTag;->mArtist:Ljava/lang/String;
 
-    .line 1067
+    .line 1116
     :cond_5
     const/16 v21, 0x0
 
-    .line 1068
+    .line 1117
     .local v21, values:Landroid/content/ContentValues;
     const/16 v18, 0x0
 
-    .line 1069
+    .line 1118
     .local v18, result:Landroid/net/Uri;
     const/4 v10, 0x0
 
-    .line 1072
+    .line 1121
     .local v10, cursor:Landroid/database/Cursor;
     :try_start_1
     sget-object v5, Landroid/media/MediaInfo;->AUDIO_PROJECTION:[Ljava/lang/String;
@@ -2992,7 +2992,7 @@
 
     move-result-object v10
 
-    .line 1076
+    .line 1125
     if-eqz v10, :cond_8
 
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
@@ -3001,13 +3001,13 @@
 
     if-lez v5, :cond_8
 
-    .line 1077
+    .line 1126
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1078
+    .line 1127
     const/4 v10, 0x0
 
-    .line 1080
+    .line 1129
     const-string v5, "MediaInfo"
 
     const-string v6, "Track already exists"
@@ -3017,32 +3017,32 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1081
+    .line 1130
     const/16 v18, 0x0
 
-    .line 1133
+    .line 1182
     .end local v18           #result:Landroid/net/Uri;
     if-eqz v10, :cond_6
 
-    .line 1134
+    .line 1183
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1135
+    .line 1184
     const/4 v10, 0x0
 
-    .line 1137
+    .line 1186
     :cond_6
     if-eqz v21, :cond_0
 
-    .line 1138
-    throw v21
+    .line 1187
+    invoke-virtual/range {v21 .. v21}, Landroid/content/ContentValues;->clear()V
 
-    .line 1139
+    .line 1188
     const/16 v21, 0x0
 
     goto/16 :goto_1
 
-    .line 1059
+    .line 1108
     .end local v4           #audioUri:Landroid/net/Uri;
     .end local v10           #cursor:Landroid/database/Cursor;
     .end local v21           #values:Landroid/content/ContentValues;
@@ -3055,7 +3055,7 @@
 
     goto :goto_2
 
-    .line 1084
+    .line 1133
     .restart local v4       #audioUri:Landroid/net/Uri;
     .restart local v10       #cursor:Landroid/database/Cursor;
     .restart local v18       #result:Landroid/net/Uri;
@@ -3070,7 +3070,7 @@
 
     add-int/lit8 v14, v5, 0x1
 
-    .line 1085
+    .line 1134
     .local v14, isMusic:I
     const-string v5, "MediaInfo"
 
@@ -3108,12 +3108,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1088
+    .line 1137
     invoke-direct/range {p0 .. p1}, Landroid/media/MediaInfo;->toValues(Landroid/media/MediaInfo$MediaTag;)Landroid/content/ContentValues;
 
     move-result-object v21
 
-    .line 1089
+    .line 1138
     const-string v5, "_data"
 
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -3124,8 +3124,8 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1090
-    const-string/jumbo v5, "is_ringtone"
+    .line 1139
+    const-string v5, "is_ringtone"
 
     const/4 v6, 0x0
 
@@ -3137,8 +3137,8 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1091
-    const-string/jumbo v5, "is_notification"
+    .line 1140
+    const-string v5, "is_notification"
 
     const/4 v6, 0x0
 
@@ -3150,8 +3150,8 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1092
-    const-string/jumbo v5, "is_alarm"
+    .line 1141
+    const-string v5, "is_alarm"
 
     const/4 v6, 0x0
 
@@ -3163,8 +3163,8 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1093
-    const-string/jumbo v5, "is_music"
+    .line 1142
+    const-string v5, "is_music"
 
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -3174,8 +3174,8 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1094
-    const-string/jumbo v5, "is_podcast"
+    .line 1143
+    const-string v5, "is_podcast"
 
     const/4 v6, 0x0
 
@@ -3187,7 +3187,7 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1097
+    .line 1146
     const-string v5, "album"
 
     move-object/from16 v0, v21
@@ -3196,7 +3196,7 @@
 
     move-result-object v9
 
-    .line 1098
+    .line 1147
     .local v9, album:Ljava/lang/String;
     const-string v5, "<unknown>"
 
@@ -3206,26 +3206,26 @@
 
     if-eqz v5, :cond_a
 
-    .line 1099
+    .line 1148
     move-object/from16 v0, p1
 
     iget-object v9, v0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
-    .line 1101
+    .line 1150
     const/16 v5, 0x2f
 
     invoke-virtual {v9, v5}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v15
 
-    .line 1102
+    .line 1151
     .local v15, lastSlash:I
     if-ltz v15, :cond_a
 
-    .line 1103
+    .line 1152
     const/16 v17, 0x0
 
-    .line 1105
+    .line 1154
     .local v17, previousSlash:I
     :goto_3
     const/16 v5, 0x2f
@@ -3236,31 +3236,31 @@
 
     move-result v13
 
-    .line 1106
+    .line 1155
     .local v13, idx:I
     if-ltz v13, :cond_9
 
     if-lt v13, v15, :cond_e
 
-    .line 1111
+    .line 1160
     :cond_9
     if-eqz v17, :cond_a
 
-    .line 1112
+    .line 1161
     add-int/lit8 v5, v17, 0x1
 
     invoke-virtual {v9, v5, v15}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1113
+    .line 1162
     const-string v5, "album"
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v5, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1114
+    .line 1163
     const-string v5, "MediaInfo"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -3283,14 +3283,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1120
+    .line 1169
     .end local v13           #idx:I
     .end local v15           #lastSlash:I
     .end local v17           #previousSlash:I
     :cond_a
     const-wide/16 v19, 0x0
 
-    .line 1121
+    .line 1170
     .local v19, rowId:J
     move-object/from16 v0, v21
 
@@ -3298,15 +3298,15 @@
 
     move-result-object v18
 
-    .line 1122
+    .line 1171
     if-eqz v18, :cond_b
 
-    .line 1123
+    .line 1172
     invoke-static/range {v18 .. v18}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v19
 
-    .line 1125
+    .line 1174
     move-object/from16 v0, p1
 
     iget-object v5, v0, Landroid/media/MediaInfo$MediaTag;->mGenre:Ljava/lang/String;
@@ -3317,7 +3317,7 @@
 
     invoke-direct {v0, v5, v1, v2}, Landroid/media/MediaInfo;->insertGenre(Ljava/lang/String;J)V
 
-    .line 1127
+    .line 1176
     move-object/from16 v0, p1
 
     iget-object v5, v0, Landroid/media/MediaInfo$MediaTag;->mAlbumArt:Ljava/lang/String;
@@ -3331,31 +3331,31 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1133
+    .line 1182
     :cond_b
     if-eqz v10, :cond_c
 
-    .line 1134
+    .line 1183
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1135
+    .line 1184
     const/4 v10, 0x0
 
-    .line 1137
+    .line 1186
     :cond_c
     if-eqz v21, :cond_d
 
-    .line 1138
+    .line 1187
     invoke-virtual/range {v21 .. v21}, Landroid/content/ContentValues;->clear()V
 
-    .line 1139
+    .line 1188
     .end local v9           #album:Ljava/lang/String;
     .end local v14           #isMusic:I
     .end local v19           #rowId:J
     :goto_4
     const/16 v21, 0x0
 
-    .line 1143
+    .line 1192
     :cond_d
     const-string v5, "MediaInfo"
 
@@ -3363,7 +3363,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "insertDRMAudioToMediaProvider result= "
+    const-string v7, "insertDRMAudioToMediaProvider result= "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3381,13 +3381,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1144
+    .line 1193
     const/4 v3, 0x0
 
-    .line 1146
+    .line 1195
     goto/16 :goto_1
 
-    .line 1109
+    .line 1158
     .restart local v9       #album:Ljava/lang/String;
     .restart local v13       #idx:I
     .restart local v14       #isMusic:I
@@ -3396,10 +3396,10 @@
     :cond_e
     move/from16 v17, v13
 
-    .line 1110
+    .line 1159
     goto/16 :goto_3
 
-    .line 1129
+    .line 1178
     .end local v9           #album:Ljava/lang/String;
     .end local v13           #idx:I
     .end local v14           #isMusic:I
@@ -3408,7 +3408,7 @@
     :catch_1
     move-exception v11
 
-    .line 1130
+    .line 1179
     .local v11, ex:Landroid/os/RemoteException;
     :try_start_3
     const-string v5, "MediaInfo"
@@ -3419,48 +3419,48 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1133
+    .line 1182
     if-eqz v10, :cond_f
 
-    .line 1134
+    .line 1183
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1135
+    .line 1184
     const/4 v10, 0x0
 
-    .line 1137
+    .line 1186
     :cond_f
     if-eqz v21, :cond_d
 
-    .line 1138
+    .line 1187
     invoke-virtual/range {v21 .. v21}, Landroid/content/ContentValues;->clear()V
 
     goto :goto_4
 
-    .line 1133
+    .line 1182
     .end local v11           #ex:Landroid/os/RemoteException;
     :catchall_0
     move-exception v5
 
     if-eqz v10, :cond_10
 
-    .line 1134
+    .line 1183
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1135
+    .line 1184
     const/4 v10, 0x0
 
-    .line 1137
+    .line 1186
     :cond_10
     if-eqz v21, :cond_11
 
-    .line 1138
+    .line 1187
     invoke-virtual/range {v21 .. v21}, Landroid/content/ContentValues;->clear()V
 
-    .line 1139
+    .line 1188
     const/16 v21, 0x0
 
-    .line 1133
+    .line 1182
     :cond_11
     throw v5
 .end method
@@ -3470,7 +3470,7 @@
     .parameter "mimeType"
 
     .prologue
-    .line 876
+    .line 924
     if-eqz p1, :cond_0
 
     const-string v0, "audio/"
@@ -3481,10 +3481,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 877
+    .line 925
     const/4 v0, 0x1
 
-    .line 879
+    .line 927
     :goto_0
     return v0
 
@@ -3504,10 +3504,10 @@
     .end annotation
 
     .prologue
-    .line 610
+    .line 656
     const/16 v17, 0x0
 
-    .line 612
+    .line 658
     .local v17, thumbName:Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p0
@@ -3526,26 +3526,26 @@
 
     move-result-object v11
 
-    .line 613
+    .line 659
     .local v11, mediaProvider:Landroid/content/IContentProvider;
     if-nez v11, :cond_0
 
-    .line 614
+    .line 660
     const-string v18, "MediaInfo"
 
     const-string v19, "Can\'t acquire MediaProvider"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 615
+    .line 661
     const/16 v18, 0x0
 
-    .line 679
+    .line 725
     .end local v11           #mediaProvider:Landroid/content/IContentProvider;
     :goto_0
     return-object v18
 
-    .line 618
+    .line 664
     .restart local v11       #mediaProvider:Landroid/content/IContentProvider;
     :cond_0
     new-instance v9, Ljava/io/File;
@@ -3554,7 +3554,7 @@
 
     invoke-direct {v9, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 619
+    .line 665
     .local v9, f:Ljava/io/File;
     const/high16 v18, 0x1000
 
@@ -3564,7 +3564,7 @@
 
     move-result-object v14
 
-    .line 620
+    .line 666
     .local v14, pfd:Landroid/os/ParcelFileDescriptor;
     new-instance v15, Landroid/media/MediaScanner;
 
@@ -3578,7 +3578,7 @@
 
     invoke-direct {v15, v0}, Landroid/media/MediaScanner;-><init>(Landroid/content/Context;)V
 
-    .line 621
+    .line 667
     .local v15, scanner:Landroid/media/MediaScanner;
     invoke-virtual {v14}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -3590,26 +3590,26 @@
 
     move-result-object v4
 
-    .line 622
+    .line 668
     .local v4, art:[B
     invoke-virtual {v14}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 623
+    .line 669
     const/4 v5, 0x0
 
-    .line 624
+    .line 670
     .local v5, bm:Landroid/graphics/Bitmap;
     if-eqz v4, :cond_2
 
-    .line 627
+    .line 673
     :try_start_1
     new-instance v12, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v12}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 628
+    .line 674
     .local v12, opts:Landroid/graphics/BitmapFactory$Options;
     const/16 v18, 0x1
 
@@ -3617,14 +3617,14 @@
 
     iput-boolean v0, v12, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 629
+    .line 675
     const/16 v18, 0x1
 
     move/from16 v0, v18
 
     iput v0, v12, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 630
+    .line 676
     const/16 v18, 0x0
 
     array-length v0, v4
@@ -3637,7 +3637,7 @@
 
     invoke-static {v4, v0, v1, v12}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 634
+    .line 680
     :goto_1
     iget v0, v12, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
@@ -3663,7 +3663,7 @@
 
     if-le v0, v1, :cond_5
 
-    .line 635
+    .line 681
     :cond_1
     iget v0, v12, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
@@ -3675,7 +3675,7 @@
 
     iput v0, v12, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 636
+    .line 682
     iget v0, v12, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     move/from16 v18, v0
@@ -3686,7 +3686,7 @@
 
     iput v0, v12, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 637
+    .line 683
     iget v0, v12, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     move/from16 v18, v0
@@ -3702,24 +3702,24 @@
 
     goto :goto_1
 
-    .line 644
+    .line 690
     .end local v12           #opts:Landroid/graphics/BitmapFactory$Options;
     :catch_0
     move-exception v7
 
-    .line 645
+    .line 691
     .local v7, e:Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 646
+    .line 692
     const-string v18, "MediaInfo"
 
     const-string/jumbo v19, "makeThumb - fail to makeThumb"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 649
+    .line 695
     .end local v7           #e:Ljava/lang/Exception;
     :cond_2
     :goto_2
@@ -3731,7 +3731,7 @@
 
     if-nez v18, :cond_3
 
-    .line 650
+    .line 696
     sget-object v18, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     const/16 v19, 0x0
@@ -3746,14 +3746,14 @@
 
     move-result-object v5
 
-    .line 652
+    .line 698
     :cond_3
     if-eqz v5, :cond_4
 
-    .line 654
+    .line 700
     const/16 v16, 0x0
 
-    .line 656
+    .line 702
     .local v16, success:Z
     const/16 v18, 0x0
 
@@ -3774,13 +3774,13 @@
 
     move-result-object v6
 
-    .line 658
+    .line 704
     .local v6, bmpfilename:Ljava/lang/String;
     new-instance v13, Ljava/io/FileOutputStream;
 
     invoke-direct {v13, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 662
+    .line 708
     .local v13, outstream:Ljava/io/OutputStream;
     sget-object v18, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -3794,13 +3794,13 @@
 
     move-result v16
 
-    .line 663
-    invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
+    .line 709
+    invoke-virtual {v13}, Ljava/io/OutputStream;->close()V
 
-    .line 665
+    .line 711
     if-nez v16, :cond_6
 
-    .line 666
+    .line 712
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -3808,7 +3808,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 667
+    .line 713
     .end local v9           #f:Ljava/io/File;
     .local v10, f:Ljava/io/File;
     :try_start_4
@@ -3819,7 +3819,7 @@
 
     move-object v9, v10
 
-    .line 675
+    .line 721
     .end local v6           #bmpfilename:Ljava/lang/String;
     .end local v10           #f:Ljava/io/File;
     .end local v13           #outstream:Ljava/io/OutputStream;
@@ -3855,10 +3855,10 @@
     :goto_4
     move-object/from16 v18, v17
 
-    .line 679
+    .line 725
     goto/16 :goto_0
 
-    .line 641
+    .line 687
     .restart local v4       #art:[B
     .restart local v5       #bm:Landroid/graphics/Bitmap;
     .restart local v9       #f:Ljava/io/File;
@@ -3874,14 +3874,14 @@
 
     iput-boolean v0, v12, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 642
+    .line 688
     sget-object v18, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     move-object/from16 v0, v18
 
     iput-object v0, v12, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 643
+    .line 689
     const/16 v18, 0x0
 
     array-length v0, v4
@@ -3901,7 +3901,7 @@
 
     goto :goto_2
 
-    .line 669
+    .line 715
     .end local v12           #opts:Landroid/graphics/BitmapFactory$Options;
     .restart local v6       #bmpfilename:Ljava/lang/String;
     .restart local v13       #outstream:Ljava/io/OutputStream;
@@ -3911,13 +3911,13 @@
 
     goto :goto_3
 
-    .line 670
+    .line 716
     .end local v6           #bmpfilename:Ljava/lang/String;
     .end local v13           #outstream:Ljava/io/OutputStream;
     :catch_1
     move-exception v8
 
-    .line 671
+    .line 717
     .local v8, ex:Ljava/io/FileNotFoundException;
     :goto_5
     :try_start_7
@@ -3933,7 +3933,7 @@
 
     goto :goto_3
 
-    .line 677
+    .line 723
     .end local v4           #art:[B
     .end local v5           #bm:Landroid/graphics/Bitmap;
     .end local v8           #ex:Ljava/io/FileNotFoundException;
@@ -3947,7 +3947,7 @@
 
     goto :goto_4
 
-    .line 672
+    .line 718
     .restart local v4       #art:[B
     .restart local v5       #bm:Landroid/graphics/Bitmap;
     .restart local v9       #f:Ljava/io/File;
@@ -3958,7 +3958,7 @@
     :catch_3
     move-exception v8
 
-    .line 673
+    .line 719
     .local v8, ex:Ljava/io/IOException;
     :goto_6
     const-string v18, "MediaInfo"
@@ -3975,7 +3975,7 @@
 
     goto :goto_3
 
-    .line 672
+    .line 718
     .end local v8           #ex:Ljava/io/IOException;
     .end local v9           #f:Ljava/io/File;
     .restart local v6       #bmpfilename:Ljava/lang/String;
@@ -3990,7 +3990,7 @@
     .restart local v9       #f:Ljava/io/File;
     goto :goto_6
 
-    .line 670
+    .line 716
     .end local v9           #f:Ljava/io/File;
     .restart local v10       #f:Ljava/io/File;
     :catch_5
@@ -4013,26 +4013,26 @@
     .end annotation
 
     .prologue
-    .line 708
+    .line 755
     sget-boolean v2, Landroid/media/MediaInfo;->libloaded:Z
 
     if-nez v2, :cond_0
 
-    .line 709
+    .line 756
     const-string v2, "MediaInfo"
 
     const-string/jumbo v3, "parseSingleFile lib not loaded"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
+    .line 757
     const/4 v1, 0x0
 
-    .line 819
+    .line 866
     :goto_0
     return-object v1
 
-    .line 712
+    .line 759
     :cond_0
     const-string/jumbo v2, "zh"
 
@@ -4040,7 +4040,7 @@
 
     invoke-direct {v0, v2}, Landroid/media/MediaInfo;->setLocale(Ljava/lang/String;)V
 
-    .line 715
+    .line 762
     const-string v2, "/cache/"
 
     move-object/from16 v0, p1
@@ -4051,12 +4051,12 @@
 
     if-eqz v2, :cond_7
 
-    .line 717
+    .line 764
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v18
 
-    .line 718
+    .line 765
     .local v18, status:Ljava/lang/String;
     const-string/jumbo v2, "mounted"
 
@@ -4068,14 +4068,14 @@
 
     if-eqz v2, :cond_6
 
-    .line 719
+    .line 766
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Landroid/media/MediaInfo;->mIsSDSrc:Z
 
-    .line 727
+    .line 774
     .end local v18           #status:Ljava/lang/String;
     :goto_1
     const-string v2, "MediaInfo"
@@ -4116,14 +4116,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 730
+    .line 777
     new-instance v13, Ljava/io/File;
 
     move-object/from16 v0, p1
 
     invoke-direct {v13, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 731
+    .line 778
     .local v13, file:Ljava/io/File;
     move-object/from16 v0, p0
 
@@ -4145,14 +4145,14 @@
 
     invoke-virtual/range {v1 .. v8}, Landroid/media/MediaInfo$MyMediaScannerClient;->scanFile(Ljava/lang/String;JJZZ)V
 
-    .line 733
+    .line 780
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
 
     iget-object v4, v2, Landroid/media/MediaInfo$MyMediaScannerClient;->mAlbum:Ljava/lang/String;
 
-    .line 734
+    .line 781
     .local v4, album:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -4160,11 +4160,11 @@
 
     iget-object v5, v2, Landroid/media/MediaInfo$MyMediaScannerClient;->mArtist:Ljava/lang/String;
 
-    .line 735
+    .line 782
     .local v5, artist:Ljava/lang/String;
     move-object/from16 v14, p1
 
-    .line 738
+    .line 785
     .local v14, filename:Ljava/lang/String;
     const/16 v2, 0x2f
 
@@ -4172,14 +4172,14 @@
 
     move-result v16
 
-    .line 739
+    .line 786
     .local v16, lastSlash:I
     if-ltz v16, :cond_1
 
-    .line 740
+    .line 787
     add-int/lit8 v16, v16, 0x1
 
-    .line 741
+    .line 788
     invoke-virtual {v14}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -4188,14 +4188,14 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 742
+    .line 789
     move/from16 v0, v16
 
     invoke-virtual {v14, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 746
+    .line 793
     :cond_1
     const/16 v2, 0x2e
 
@@ -4203,18 +4203,18 @@
 
     move-result v15
 
-    .line 747
+    .line 794
     .local v15, lastDot:I
     if-lez v15, :cond_2
 
-    .line 748
+    .line 795
     const/4 v2, 0x0
 
     invoke-virtual {v14, v2, v15}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 753
+    .line 800
     :cond_2
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -4222,10 +4222,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 754
+    .line 801
     const-string v4, "<unknown>"
 
-    .line 755
+    .line 802
     :cond_3
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -4233,10 +4233,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 756
+    .line 803
     const-string v5, "<unknown>"
 
-    .line 758
+    .line 805
     :cond_4
     new-instance v1, Landroid/media/MediaInfo$MediaTag;
 
@@ -4264,7 +4264,7 @@
 
     invoke-direct/range {v1 .. v10}, Landroid/media/MediaInfo$MediaTag;-><init>(Landroid/media/MediaInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJ)V
 
-    .line 759
+    .line 806
     .local v1, mediaTag:Landroid/media/MediaInfo$MediaTag;
     move-object/from16 v0, p0
 
@@ -4274,7 +4274,7 @@
 
     iput-object v2, v1, Landroid/media/MediaInfo$MediaTag;->mAlbumArtist:Ljava/lang/String;
 
-    .line 760
+    .line 807
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4283,7 +4283,7 @@
 
     iput-object v2, v1, Landroid/media/MediaInfo$MediaTag;->mComposer:Ljava/lang/String;
 
-    .line 761
+    .line 808
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4292,7 +4292,7 @@
 
     iput-object v2, v1, Landroid/media/MediaInfo$MediaTag;->mGenre:Ljava/lang/String;
 
-    .line 762
+    .line 809
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4301,7 +4301,7 @@
 
     iput-object v2, v1, Landroid/media/MediaInfo$MediaTag;->mMimeType:Ljava/lang/String;
 
-    .line 763
+    .line 810
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4310,7 +4310,7 @@
 
     iput v2, v1, Landroid/media/MediaInfo$MediaTag;->mFileType:I
 
-    .line 764
+    .line 811
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4319,7 +4319,7 @@
 
     iput v2, v1, Landroid/media/MediaInfo$MediaTag;->mYear:I
 
-    .line 765
+    .line 812
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4328,10 +4328,10 @@
 
     iput v2, v1, Landroid/media/MediaInfo$MediaTag;->mDuration:I
 
-    .line 766
+    .line 813
     iput-object v14, v1, Landroid/media/MediaInfo$MediaTag;->mFilename:Ljava/lang/String;
 
-    .line 767
+    .line 814
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4340,7 +4340,7 @@
 
     iput v2, v1, Landroid/media/MediaInfo$MediaTag;->mTrack:I
 
-    .line 769
+    .line 816
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/MediaInfo;->mClient:Landroid/media/MediaInfo$MyMediaScannerClient;
@@ -4349,7 +4349,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 770
+    .line 817
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4378,7 +4378,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 771
+    .line 818
     :cond_5
     const-string v2, "@@@@"
 
@@ -4402,7 +4402,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 772
+    .line 819
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4425,7 +4425,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 773
+    .line 820
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4450,7 +4450,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 774
+    .line 821
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4479,7 +4479,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 775
+    .line 822
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4508,14 +4508,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 776
+    .line 823
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "mAlbumArtist= "
+    const-string v6, "mAlbumArtist= "
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4537,7 +4537,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 777
+    .line 824
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4566,7 +4566,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
+    .line 825
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4595,7 +4595,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 779
+    .line 826
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4624,7 +4624,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 780
+    .line 827
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4653,7 +4653,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
+    .line 828
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4682,7 +4682,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 782
+    .line 829
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4707,7 +4707,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
+    .line 830
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4736,10 +4736,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 786
+    .line 833
     const/4 v11, 0x0
 
-    .line 788
+    .line 835
     .local v11, albumArt:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -4755,23 +4755,23 @@
 
     move-result-object v17
 
-    .line 789
+    .line 836
     .local v17, mediaProvider:Landroid/content/IContentProvider;
     if-nez v17, :cond_9
 
-    .line 790
+    .line 837
     const-string v2, "MediaInfo"
 
     const-string v3, "Can\'t acquire MediaProvider"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 791
+    .line 838
     const/4 v1, 0x0
 
     goto/16 :goto_0
 
-    .line 721
+    .line 768
     .end local v1           #mediaTag:Landroid/media/MediaInfo$MediaTag;
     .end local v4           #album:Ljava/lang/String;
     .end local v5           #artist:Ljava/lang/String;
@@ -4791,7 +4791,7 @@
 
     goto/16 :goto_1
 
-    .line 723
+    .line 770
     .end local v18           #status:Ljava/lang/String;
     :cond_7
     const-string v2, "/data/drm/rights/PHONE"
@@ -4804,7 +4804,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 724
+    .line 771
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -4813,7 +4813,7 @@
 
     goto/16 :goto_1
 
-    .line 726
+    .line 773
     :cond_8
     const/4 v2, 0x1
 
@@ -4823,7 +4823,7 @@
 
     goto/16 :goto_1
 
-    .line 794
+    .line 841
     .restart local v1       #mediaTag:Landroid/media/MediaInfo$MediaTag;
     .restart local v4       #album:Ljava/lang/String;
     .restart local v5       #artist:Ljava/lang/String;
@@ -4840,46 +4840,46 @@
 
     move-result-object v12
 
-    .line 796
+    .line 843
     .local v12, c:Landroid/database/Cursor;
     if-eqz v12, :cond_d
 
-    .line 797
+    .line 844
     invoke-interface {v12}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
 
     if-nez v2, :cond_c
 
-    .line 798
+    .line 845
     invoke-virtual/range {p0 .. p1}, Landroid/media/MediaInfo;->makeThumb(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 807
+    .line 854
     :cond_a
     :goto_2
     if-eqz v12, :cond_b
 
-    .line 808
+    .line 855
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
-    .line 809
+    .line 856
     const/4 v12, 0x0
 
-    .line 816
+    .line 863
     :cond_b
     :goto_3
     iput-object v11, v1, Landroid/media/MediaInfo$MediaTag;->mAlbumArt:Ljava/lang/String;
 
-    .line 817
+    .line 864
     const-string v2, "@@@@"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "mAlbumArt= "
+    const-string v6, "mAlbumArt= "
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4899,11 +4899,11 @@
 
     goto/16 :goto_0
 
-    .line 800
+    .line 847
     :cond_c
     invoke-interface {v12}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 801
+    .line 848
     const-string v2, "album_art"
 
     invoke-interface {v12, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -4914,17 +4914,17 @@
 
     move-result-object v11
 
-    .line 802
+    .line 849
     if-nez v11, :cond_a
 
-    .line 803
+    .line 850
     invoke-virtual/range {p0 .. p1}, Landroid/media/MediaInfo;->makeThumb(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
     goto :goto_2
 
-    .line 813
+    .line 860
     :cond_d
     const-string v2, "MediaInfo"
 
@@ -4939,16 +4939,16 @@
     .locals 1
 
     .prologue
-    .line 1291
+    .line 1345
     sget-boolean v0, Landroid/media/MediaInfo;->libloaded:Z
 
     if-nez v0, :cond_0
 
-    .line 1294
+    .line 1348
     :goto_0
     return-void
 
-    .line 1293
+    .line 1347
     :cond_0
     invoke-direct {p0}, Landroid/media/MediaInfo;->native_setup()V
 
@@ -4966,7 +4966,7 @@
     .end annotation
 
     .prologue
-    .line 1154
+    .line 1205
     const-string v3, "MediaInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4991,29 +4991,29 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1155
+    .line 1206
     invoke-virtual/range {p0 .. p2}, Landroid/media/MediaInfo;->checkMediaTag(Landroid/media/MediaInfo$MediaTag;Landroid/net/Uri;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 1156
+    .line 1207
     const/4 v13, 0x0
 
-    .line 1240
+    .line 1291
     :cond_0
     :goto_0
     return-object v13
 
-    .line 1160
+    .line 1211
     :cond_1
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 1161
+    .line 1212
     .local v10, path:Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -5037,7 +5037,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1167
+    .line 1218
     .end local v10           #path:Ljava/lang/String;
     :goto_1
     move-object/from16 v0, p1
@@ -5050,13 +5050,13 @@
 
     move-result-object v9
 
-    .line 1168
+    .line 1219
     .local v9, filename:Ljava/lang/String;
     move-object/from16 v0, p1
 
     iput-object v9, v0, Landroid/media/MediaInfo$MediaTag;->mFilename:Ljava/lang/String;
 
-    .line 1169
+    .line 1220
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
@@ -5067,12 +5067,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 1170
+    .line 1221
     move-object/from16 v0, p1
 
     iput-object v9, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
-    .line 1173
+    .line 1224
     :cond_2
     move-object/from16 v0, p0
 
@@ -5088,35 +5088,35 @@
 
     move-result-object v1
 
-    .line 1174
+    .line 1225
     .local v1, mediaProvider:Landroid/content/IContentProvider;
     if-nez v1, :cond_3
 
-    .line 1175
+    .line 1226
     const-string v3, "MediaInfo"
 
     const-string v4, "Can\'t acquire MediaProvider"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1176
+    .line 1227
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 1162
+    .line 1213
     .end local v1           #mediaProvider:Landroid/content/IContentProvider;
     .end local v9           #filename:Ljava/lang/String;
     :catch_0
     move-exception v8
 
-    .line 1163
+    .line 1214
     .local v8, ex:Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1180
+    .line 1231
     .end local v8           #ex:Ljava/lang/Exception;
     .restart local v1       #mediaProvider:Landroid/content/IContentProvider;
     .restart local v9       #filename:Ljava/lang/String;
@@ -5133,24 +5133,24 @@
 
     move-result-object v2
 
-    .line 1183
+    .line 1234
     .local v2, audioUri:Landroid/net/Uri;
     :goto_2
     const/4 v13, 0x0
 
-    .line 1184
+    .line 1235
     .local v13, uri:Landroid/net/Uri;
     const/4 v7, 0x0
 
-    .line 1185
+    .line 1236
     .local v7, cursor:Landroid/database/Cursor;
     const/4 v14, 0x0
 
-    .line 1186
+    .line 1237
     .local v14, values:Landroid/content/ContentValues;
     const-wide/16 v11, 0x0
 
-    .line 1189
+    .line 1240
     .local v11, rowId:J
     :try_start_1
     sget-object v3, Landroid/media/MediaInfo;->AUDIO_PROJECTION:[Ljava/lang/String;
@@ -5175,7 +5175,7 @@
 
     move-result-object v7
 
-    .line 1193
+    .line 1244
     if-eqz v7, :cond_4
 
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
@@ -5184,17 +5184,17 @@
 
     if-nez v3, :cond_8
 
-    .line 1194
+    .line 1245
     :cond_4
     if-eqz v7, :cond_5
 
-    .line 1195
+    .line 1246
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1196
+    .line 1247
     const/4 v7, 0x0
 
-    .line 1198
+    .line 1249
     :cond_5
     const-string v3, "MediaInfo"
 
@@ -5223,32 +5223,32 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1199
+    .line 1250
     const/4 v13, 0x0
 
-    .line 1227
+    .line 1278
     .end local v13           #uri:Landroid/net/Uri;
     if-eqz v7, :cond_6
 
-    .line 1228
+    .line 1279
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1229
+    .line 1280
     const/4 v7, 0x0
 
-    .line 1232
+    .line 1283
     :cond_6
     if-eqz v14, :cond_0
 
-    .line 1233
-    throw v14
+    .line 1284
+    invoke-virtual {v14}, Landroid/content/ContentValues;->clear()V
 
-    .line 1234
+    .line 1285
     const/4 v14, 0x0
 
     goto/16 :goto_0
 
-    .line 1180
+    .line 1231
     .end local v2           #audioUri:Landroid/net/Uri;
     .end local v7           #cursor:Landroid/database/Cursor;
     .end local v11           #rowId:J
@@ -5262,7 +5262,7 @@
 
     goto :goto_2
 
-    .line 1202
+    .line 1253
     .restart local v2       #audioUri:Landroid/net/Uri;
     .restart local v7       #cursor:Landroid/database/Cursor;
     .restart local v11       #rowId:J
@@ -5272,7 +5272,7 @@
     :try_start_2
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1203
+    .line 1254
     const-string v3, "_id"
 
     invoke-interface {v7, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -5283,17 +5283,17 @@
 
     move-result-wide v11
 
-    .line 1204
+    .line 1255
     invoke-static {v2, v11, v12}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v13
 
-    .line 1207
+    .line 1258
     invoke-direct/range {p0 .. p1}, Landroid/media/MediaInfo;->toValues(Landroid/media/MediaInfo$MediaTag;)Landroid/content/ContentValues;
 
     move-result-object v14
 
-    .line 1208
+    .line 1259
     const-string v3, "_data"
 
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -5302,7 +5302,7 @@
 
     invoke-virtual {v14, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1210
+    .line 1261
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/media/MediaInfo$MediaTag;->mArtist:Ljava/lang/String;
@@ -5319,7 +5319,7 @@
 
     if-nez v3, :cond_a
 
-    .line 1211
+    .line 1262
     :cond_9
     move-object/from16 v0, p1
 
@@ -5329,7 +5329,7 @@
 
     iput-object v3, v0, Landroid/media/MediaInfo$MediaTag;->mArtist:Ljava/lang/String;
 
-    .line 1215
+    .line 1266
     :cond_a
     const/4 v3, 0x0
 
@@ -5337,7 +5337,7 @@
 
     invoke-interface {v1, v13, v14, v3, v4}, Landroid/content/IContentProvider;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1218
+    .line 1269
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/media/MediaInfo$MediaTag;->mGenre:Ljava/lang/String;
@@ -5346,7 +5346,7 @@
 
     invoke-direct {v0, v3, v11, v12}, Landroid/media/MediaInfo;->insertGenre(Ljava/lang/String;J)V
 
-    .line 1221
+    .line 1272
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/media/MediaInfo$MediaTag;->mAlbumArt:Ljava/lang/String;
@@ -5362,31 +5362,31 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1227
+    .line 1278
     if-eqz v7, :cond_b
 
-    .line 1228
+    .line 1279
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1229
+    .line 1280
     const/4 v7, 0x0
 
-    .line 1232
+    .line 1283
     :cond_b
     if-eqz v14, :cond_c
 
-    .line 1233
+    .line 1284
     invoke-virtual {v14}, Landroid/content/ContentValues;->clear()V
 
-    .line 1234
+    .line 1285
     :goto_3
     const/4 v14, 0x0
 
-    .line 1238
+    .line 1289
     :cond_c
     const/4 v1, 0x0
 
-    .line 1239
+    .line 1290
     const-string v3, "MediaInfo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5411,11 +5411,11 @@
 
     goto/16 :goto_0
 
-    .line 1223
+    .line 1274
     :catch_1
     move-exception v8
 
-    .line 1224
+    .line 1275
     .local v8, ex:Landroid/os/RemoteException;
     :try_start_3
     const-string v3, "MediaInfo"
@@ -5426,48 +5426,48 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1227
+    .line 1278
     if-eqz v7, :cond_d
 
-    .line 1228
+    .line 1279
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1229
+    .line 1280
     const/4 v7, 0x0
 
-    .line 1232
+    .line 1283
     :cond_d
     if-eqz v14, :cond_c
 
-    .line 1233
+    .line 1284
     invoke-virtual {v14}, Landroid/content/ContentValues;->clear()V
 
     goto :goto_3
 
-    .line 1227
+    .line 1278
     .end local v8           #ex:Landroid/os/RemoteException;
     :catchall_0
     move-exception v3
 
     if-eqz v7, :cond_e
 
-    .line 1228
+    .line 1279
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1229
+    .line 1280
     const/4 v7, 0x0
 
-    .line 1232
+    .line 1283
     :cond_e
     if-eqz v14, :cond_f
 
-    .line 1233
+    .line 1284
     invoke-virtual {v14}, Landroid/content/ContentValues;->clear()V
 
-    .line 1234
+    .line 1285
     const/4 v14, 0x0
 
-    .line 1227
+    .line 1278
     :cond_f
     throw v3
 .end method

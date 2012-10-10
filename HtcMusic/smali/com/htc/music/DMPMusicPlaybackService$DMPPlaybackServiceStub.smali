@@ -33,17 +33,17 @@
     .parameter "service"
 
     .prologue
-    .line 3415
+    .line 3448
     invoke-direct {p0}, Lcom/htc/music/IMusicPluginService$Stub;-><init>()V
 
-    .line 3416
+    .line 3449
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    .line 3417
+    .line 3450
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .end annotation
 
     .prologue
-    .line 3572
+    .line 3605
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/DMPMusicPlaybackService;->clearAlbumArtRequests()V
 
-    .line 3573
+    .line 3606
     return-void
 .end method
 
@@ -82,7 +82,7 @@
     .end annotation
 
     .prologue
-    .line 3576
+    .line 3609
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -93,12 +93,13 @@
 
     invoke-virtual {v0}, Lcom/htc/music/DMPMusicPlaybackService;->clearNowplayingQueueRequests()V
 
-    .line 3577
+    .line 3610
     return-void
 .end method
 
-.method public close()V
+.method public close(Z)V
     .locals 0
+    .parameter "isPowerOff"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -106,7 +107,7 @@
     .end annotation
 
     .prologue
-    .line 3647
+    .line 3680
     return-void
 .end method
 
@@ -114,7 +115,7 @@
     .locals 2
 
     .prologue
-    .line 3476
+    .line 3509
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -135,7 +136,7 @@
     .parameter "index"
 
     .prologue
-    .line 3528
+    .line 3561
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -155,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 3524
+    .line 3557
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -166,7 +167,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/DMPMusicPlaybackService;->getAlbumArtPath()V
 
-    .line 3525
+    .line 3558
     return-void
 .end method
 
@@ -180,7 +181,7 @@
     .end annotation
 
     .prologue
-    .line 3580
+    .line 3613
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -206,7 +207,7 @@
     .end annotation
 
     .prologue
-    .line 3584
+    .line 3617
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -231,7 +232,7 @@
     .end annotation
 
     .prologue
-    .line 3636
+    .line 3669
     const/4 v0, -0x1
 
     return v0
@@ -241,7 +242,7 @@
     .locals 1
 
     .prologue
-    .line 3492
+    .line 3525
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -261,7 +262,7 @@
     .locals 1
 
     .prologue
-    .line 3496
+    .line 3529
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -286,7 +287,7 @@
     .end annotation
 
     .prologue
-    .line 3617
+    .line 3650
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -306,7 +307,7 @@
     .locals 1
 
     .prologue
-    .line 3568
+    .line 3601
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -326,7 +327,7 @@
     .locals 1
 
     .prologue
-    .line 3560
+    .line 3593
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -346,7 +347,7 @@
     .locals 1
 
     .prologue
-    .line 3552
+    .line 3585
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -366,7 +367,7 @@
     .locals 1
 
     .prologue
-    .line 3556
+    .line 3589
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -386,7 +387,7 @@
     .locals 1
 
     .prologue
-    .line 3564
+    .line 3597
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -406,7 +407,7 @@
     .locals 1
 
     .prologue
-    .line 3536
+    .line 3569
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -432,7 +433,7 @@
     .end annotation
 
     .prologue
-    .line 3589
+    .line 3622
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -452,22 +453,22 @@
 
     move-result-object v1
 
-    .line 3590
+    .line 3623
     .local v1, msg:Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 3591
+    .line 3624
     .local v0, data:Landroid/os/Bundle;
     const-string v2, "interval"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 3592
+    .line 3625
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 3593
+    .line 3626
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -483,7 +484,7 @@
 
     invoke-virtual {v2, v1}, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 3594
+    .line 3627
     return-void
 .end method
 
@@ -496,7 +497,7 @@
     .end annotation
 
     .prologue
-    .line 3631
+    .line 3664
     const/4 v0, 0x0
 
     return-object v0
@@ -506,7 +507,7 @@
     .locals 1
 
     .prologue
-    .line 3532
+    .line 3565
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -531,7 +532,7 @@
     .end annotation
 
     .prologue
-    .line 3609
+    .line 3642
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -557,7 +558,7 @@
     .end annotation
 
     .prologue
-    .line 3597
+    .line 3630
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -577,7 +578,7 @@
     .locals 1
 
     .prologue
-    .line 3420
+    .line 3453
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -597,7 +598,7 @@
     .locals 1
 
     .prologue
-    .line 3520
+    .line 3553
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -617,7 +618,7 @@
     .locals 1
 
     .prologue
-    .line 3516
+    .line 3549
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -637,7 +638,7 @@
     .locals 1
 
     .prologue
-    .line 3508
+    .line 3541
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -663,7 +664,7 @@
     .end annotation
 
     .prologue
-    .line 3605
+    .line 3638
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -689,7 +690,7 @@
     .end annotation
 
     .prologue
-    .line 3601
+    .line 3634
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -700,7 +701,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/DMPMusicPlaybackService;->getTrackDetails(I)V
 
-    .line 3602
+    .line 3635
     return-void
 .end method
 
@@ -708,7 +709,7 @@
     .locals 1
 
     .prologue
-    .line 3488
+    .line 3521
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -733,7 +734,7 @@
     .end annotation
 
     .prologue
-    .line 3622
+    .line 3655
     const/4 v0, 0x0
 
     return v0
@@ -748,7 +749,7 @@
     .end annotation
 
     .prologue
-    .line 3641
+    .line 3674
     const/4 v0, 0x0
 
     return v0
@@ -758,7 +759,7 @@
     .locals 1
 
     .prologue
-    .line 3424
+    .line 3457
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -783,7 +784,7 @@
     .end annotation
 
     .prologue
-    .line 3613
+    .line 3646
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -806,10 +807,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3460
+    .line 3493
     if-nez p1, :cond_0
 
-    .line 3461
+    .line 3494
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -822,11 +823,11 @@
 
     invoke-virtual {v1, v3, v2}, Lcom/htc/music/DMPMusicPlaybackService;->next(ZZ)V
 
-    .line 3473
+    .line 3506
     :goto_0
     return-void
 
-    .line 3464
+    .line 3497
     :cond_0
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
@@ -843,7 +844,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 3465
+    .line 3498
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -863,7 +864,7 @@
 
     move-result-object v0
 
-    .line 3466
+    .line 3499
     .local v0, msg:Landroid/os/Message;
     if-eqz p1, :cond_1
 
@@ -872,7 +873,7 @@
     :goto_1
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 3467
+    .line 3500
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -893,10 +894,10 @@
     :cond_1
     move v1, v2
 
-    .line 3466
+    .line 3499
     goto :goto_1
 
-    .line 3471
+    .line 3504
     .end local v0           #msg:Landroid/os/Message;
     :cond_2
     const-string v1, "[DMPMusicPlaybackService]"
@@ -912,7 +913,7 @@
     .locals 1
 
     .prologue
-    .line 3432
+    .line 3465
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -923,7 +924,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/DMPMusicPlaybackService;->pause()V
 
-    .line 3433
+    .line 3466
     return-void
 .end method
 
@@ -931,7 +932,7 @@
     .locals 1
 
     .prologue
-    .line 3436
+    .line 3469
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -942,7 +943,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/DMPMusicPlaybackService;->play()V
 
-    .line 3437
+    .line 3470
     return-void
 .end method
 
@@ -950,7 +951,7 @@
     .locals 2
 
     .prologue
-    .line 3480
+    .line 3513
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -973,10 +974,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3442
+    .line 3475
     if-nez p1, :cond_0
 
-    .line 3443
+    .line 3476
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -987,11 +988,11 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/music/DMPMusicPlaybackService;->prev(Z)V
 
-    .line 3455
+    .line 3488
     :goto_0
     return-void
 
-    .line 3446
+    .line 3479
     :cond_0
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
@@ -1008,7 +1009,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 3447
+    .line 3480
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1028,7 +1029,7 @@
 
     move-result-object v0
 
-    .line 3448
+    .line 3481
     .local v0, msg:Landroid/os/Message;
     if-eqz p1, :cond_1
 
@@ -1037,7 +1038,7 @@
     :goto_1
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 3449
+    .line 3482
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1058,10 +1059,10 @@
     :cond_1
     move v1, v2
 
-    .line 3448
+    .line 3481
     goto :goto_1
 
-    .line 3453
+    .line 3486
     .end local v0           #msg:Landroid/os/Message;
     :cond_2
     const-string v1, "[DMPMusicPlaybackService]"
@@ -1083,7 +1084,7 @@
     .end annotation
 
     .prologue
-    .line 3540
+    .line 3573
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1094,7 +1095,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/DMPMusicPlaybackService;->registerCallback(Lcom/htc/music/IPluginIPCNotify;)V
 
-    .line 3541
+    .line 3574
     return-void
 .end method
 
@@ -1103,7 +1104,7 @@
     .parameter "pos"
 
     .prologue
-    .line 3484
+    .line 3517
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1124,7 +1125,7 @@
     .parameter "index"
 
     .prologue
-    .line 3500
+    .line 3533
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1135,7 +1136,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/DMPMusicPlaybackService;->setQueuePosition(I)V
 
-    .line 3501
+    .line 3534
     return-void
 .end method
 
@@ -1144,7 +1145,7 @@
     .parameter "repeatmode"
 
     .prologue
-    .line 3512
+    .line 3545
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1155,7 +1156,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/DMPMusicPlaybackService;->setRepeatMode(I)V
 
-    .line 3513
+    .line 3546
     return-void
 .end method
 
@@ -1164,7 +1165,7 @@
     .parameter "shufflemode"
 
     .prologue
-    .line 3504
+    .line 3537
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1175,7 +1176,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/DMPMusicPlaybackService;->setShuffleMode(I)V
 
-    .line 3505
+    .line 3538
     return-void
 .end method
 
@@ -1189,7 +1190,7 @@
     .end annotation
 
     .prologue
-    .line 3627
+    .line 3660
     return-void
 .end method
 
@@ -1197,7 +1198,7 @@
     .locals 1
 
     .prologue
-    .line 3548
+    .line 3581
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1208,7 +1209,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/DMPMusicPlaybackService;->startPluginActivity()V
 
-    .line 3549
+    .line 3582
     return-void
 .end method
 
@@ -1217,7 +1218,7 @@
     .parameter "stateChanged"
 
     .prologue
-    .line 3428
+    .line 3461
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1229,7 +1230,7 @@
     #calls: Lcom/htc/music/DMPMusicPlaybackService;->stop(Z)V
     invoke-static {v0, p1}, Lcom/htc/music/DMPMusicPlaybackService;->access$2400(Lcom/htc/music/DMPMusicPlaybackService;Z)V
 
-    .line 3429
+    .line 3462
     return-void
 .end method
 
@@ -1237,7 +1238,7 @@
     .locals 1
 
     .prologue
-    .line 3544
+    .line 3577
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$DMPPlaybackServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1248,6 +1249,6 @@
 
     invoke-virtual {v0}, Lcom/htc/music/DMPMusicPlaybackService;->unregisterCallback()V
 
-    .line 3545
+    .line 3578
     return-void
 .end method

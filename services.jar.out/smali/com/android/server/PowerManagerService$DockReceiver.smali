@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 577
+    .line 585
     iput-object p1, p0, Lcom/android/server/PowerManagerService$DockReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 577
+    .line 585
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$DockReceiver;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -56,28 +56,28 @@
 
     const/4 v3, 0x0
 
-    .line 580
+    .line 588
     const-string v4, "android.intent.extra.DOCK_STATE"
 
     invoke-virtual {p2, v4, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 582
+    .line 590
     .local v0, state:I
     iget-object v4, p0, Lcom/android/server/PowerManagerService$DockReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->dockStateChanged(I)V
     invoke-static {v4, v0}, Lcom/android/server/PowerManagerService;->access$1800(Lcom/android/server/PowerManagerService;I)V
 
-    .line 584
+    .line 592
     invoke-static {}, Lcom/android/server/PowerManagerService;->access$1300()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 585
+    .line 593
     iget-object v4, p0, Lcom/android/server/PowerManagerService$DockReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mDeskModeEnabled:Z
@@ -85,7 +85,7 @@
 
     move-result v1
 
-    .line 588
+    .line 596
     .local v1, wasDeskModeEnabled:Z
     iget-object v4, p0, Lcom/android/server/PowerManagerService$DockReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -108,7 +108,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mDeskModeEnabled:Z
     invoke-static {v4, v2}, Lcom/android/server/PowerManagerService;->access$1402(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 590
+    .line 598
     iget-object v2, p0, Lcom/android/server/PowerManagerService$DockReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mDeskModeEnabled:Z
@@ -118,13 +118,13 @@
 
     if-eq v2, v1, :cond_1
 
-    .line 592
+    .line 600
     iget-object v2, p0, Lcom/android/server/PowerManagerService$DockReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
     invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$1500(Lcom/android/server/PowerManagerService;)V
 
-    .line 593
+    .line 601
     iget-object v2, p0, Lcom/android/server/PowerManagerService$DockReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -133,7 +133,7 @@
 
     invoke-virtual {v2, v4, v5, v3}, Lcom/android/server/PowerManagerService;->userActivity(JZ)V
 
-    .line 597
+    .line 605
     .end local v1           #wasDeskModeEnabled:Z
     :cond_1
     return-void
@@ -142,6 +142,6 @@
     :cond_2
     move v2, v3
 
-    .line 588
+    .line 596
     goto :goto_0
 .end method

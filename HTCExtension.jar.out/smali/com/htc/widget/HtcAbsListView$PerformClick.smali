@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 2804
+    .line 2820
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v0, 0x0
@@ -45,7 +45,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2804
+    .line 2820
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcAbsListView$PerformClick;-><init>(Lcom/htc/widget/HtcAbsListView;)V
 
     return-void
@@ -57,29 +57,29 @@
     .locals 6
 
     .prologue
-    .line 2814
+    .line 2830
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-boolean v3, v3, Lcom/htc/widget/HtcAdapterView;->mDataChanged:Z
 
     if-eqz v3, :cond_1
 
-    .line 2828
+    .line 2844
     :cond_0
     :goto_0
     return-void
 
-    .line 2816
+    .line 2832
     :cond_1
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v0, v3, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 2817
+    .line 2833
     .local v0, adapter:Landroid/widget/ListAdapter;
     iget v1, p0, Lcom/htc/widget/HtcAbsListView$PerformClick;->mClickMotionPosition:I
 
-    .line 2818
+    .line 2834
     .local v1, motionPosition:I
     if-eqz v0, :cond_0
 
@@ -105,7 +105,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 2821
+    .line 2837
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -118,11 +118,11 @@
 
     move-result-object v2
 
-    .line 2824
+    .line 2840
     .local v2, view:Landroid/view/View;
     if-eqz v2, :cond_0
 
-    .line 2825
+    .line 2841
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->getItemId(I)J

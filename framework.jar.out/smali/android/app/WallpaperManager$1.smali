@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 732
+    .line 786
     iput-object p1, p0, Landroid/app/WallpaperManager$1;->this$0:Landroid/app/WallpaperManager;
 
     iput-object p2, p0, Landroid/app/WallpaperManager$1;->val$fWindowToken:Landroid/os/IBinder;
@@ -56,12 +56,12 @@
     .locals 6
 
     .prologue
-    .line 736
+    .line 790
     :try_start_0
     iget-object v0, p0, Landroid/app/WallpaperManager$1;->this$0:Landroid/app/WallpaperManager;
 
     #getter for: Landroid/app/WallpaperManager;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Landroid/app/WallpaperManager;->access$900(Landroid/app/WallpaperManager;)Landroid/content/Context;
+    invoke-static {v0}, Landroid/app/WallpaperManager;->access$1000(Landroid/app/WallpaperManager;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -82,14 +82,14 @@
     iget-object v4, p0, Landroid/app/WallpaperManager$1;->this$0:Landroid/app/WallpaperManager;
 
     #getter for: Landroid/app/WallpaperManager;->mWallpaperXStep:F
-    invoke-static {v4}, Landroid/app/WallpaperManager;->access$700(Landroid/app/WallpaperManager;)F
+    invoke-static {v4}, Landroid/app/WallpaperManager;->access$800(Landroid/app/WallpaperManager;)F
 
     move-result v4
 
     iget-object v5, p0, Landroid/app/WallpaperManager$1;->this$0:Landroid/app/WallpaperManager;
 
     #getter for: Landroid/app/WallpaperManager;->mWallpaperYStep:F
-    invoke-static {v5}, Landroid/app/WallpaperManager;->access$800(Landroid/app/WallpaperManager;)F
+    invoke-static {v5}, Landroid/app/WallpaperManager;->access$900(Landroid/app/WallpaperManager;)F
 
     move-result v5
 
@@ -98,17 +98,17 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 745
+    .line 799
     :goto_0
     return-void
 
-    .line 741
+    .line 795
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 739
+    .line 793
     :catch_1
     move-exception v0
 

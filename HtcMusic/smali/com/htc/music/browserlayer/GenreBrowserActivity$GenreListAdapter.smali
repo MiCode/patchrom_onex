@@ -118,7 +118,7 @@
 
     .line 978
     .local v7, r:Landroid/content/res/Resources;
-    const v0, 0x7f020050
+    const v0, 0x7f020052
 
     invoke-static {v7, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

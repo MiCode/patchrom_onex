@@ -29,7 +29,7 @@
 
     .prologue
     .line 40
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -228,7 +228,7 @@
 
     .line 132
     :cond_6
-    const-string/jumbo v4, "htcgl"
+    const-string v4, "htcgl"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -347,7 +347,7 @@
 
     .line 319
     .local v3, name:Ljava/lang/String;
-    const-string/jumbo v5, "linearInterpolator"
+    const-string v5, "linearInterpolator"
 
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -635,7 +635,7 @@
 
     .line 199
     .local v2, name:Ljava/lang/String;
-    const-string/jumbo v4, "layoutAnimation"
+    const-string v4, "layoutAnimation"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

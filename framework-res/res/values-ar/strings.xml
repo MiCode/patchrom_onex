@@ -210,7 +210,7 @@
     <string name="RestrictedOnEmergency">تم حظر خدمة الطوارئ.</string>
     <string name="RestrictedOnNormal">تم حظر الخدمة الصوتية.</string>
     <string name="RestrictedOnAllVoice">تم حظر جميع الرسائل الصوتية.</string>
-    <string name="RestrictedOnSms">تم حظر خدمة SMS.</string>
+    <string name="RestrictedOnSms">تم حظر خدمة الرسائل القصيرة SMS.</string>
     <string name="RestrictedOnVoiceData">تم حظر الخدمات الصوتية/خدمات البيانات.</string>
     <string name="RestrictedOnVoiceSms">تم حظر الخدمات الصوتية/خدمات رسائل SMS.</string>
     <string name="RestrictedOnAll">تم حظر كل الخدمات الصوتية/ خدمات البيانات/رسائل SMS.</string>
@@ -540,7 +540,7 @@
     <string name="permdesc_masterClear">السماح لتطبيق بإعادة تعيين النظام بالكامل إلى إعدادات المصنع، مما يؤدي إلى مسح كل البيانات والتكوينات والتطبيقات المثبتة.</string>
     <string name="permlab_setTime">تعيين الوقت</string>
     <string name="permdesc_setTime">السماح لتطبيق بتغيير وقت ساعة الهاتف.</string>
-    <string name="permlab_setTimeZone">تحديد المنطقة الزمنية</string>
+    <string name="permlab_setTimeZone">تعيين المنطقة الزمنية</string>
     <string name="permdesc_setTimeZone">السماح لتطبيق بتغيير المنطقة الزمنية للهاتف.</string>
     <string name="permlab_accountManagerService">العمل كخدمة AccountManagerService</string>
     <string name="permdesc_accountManagerService">السماح لتطبيق بإجراء مكالمات مع AccountAuthenticators</string>

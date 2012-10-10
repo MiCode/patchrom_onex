@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Добавяне на списък за изпълнение</string>
     <string name="htc_delete_playlists">Изтриване на списъци за изпълнение</string>
     <string name="htc_delete_playlist">Изтриване на списък за изпълнение</string>
+    <string name="htc_delete_all_playlists">Изтриване на всички списъци за възпроизвеждане</string>
     <string name="htc_playlist_add_songs">Добавяне на песни</string>
     <string name="htc_playlist_del_songs">Изтриване на песни</string>
     <string name="htc_playlist_remove_songs">Премахване на песни</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Буфериране...</string>
     <string name="title_send_content">Изпращане на съдържание...</string>
     <string name="no_downloaded_apps_found">Не са намерени изтеглени приложения</string>
+    <string name="music_folder_picker_dialog_msg">Добавяне на песни към списъците за изпълнение чрез избор на папка? „Не“ за добавяне на песни по другия начин</string>
 </resources>

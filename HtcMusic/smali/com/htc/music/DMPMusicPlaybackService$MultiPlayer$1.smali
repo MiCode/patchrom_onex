@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2107
+    .line 2126
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$1;->this$1:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .parameter "extra"
 
     .prologue
-    .line 2111
+    .line 2130
     const-string v0, "[DMPMusicPlaybackService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -77,7 +77,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2112
+    .line 2131
     const/4 v0, 0x0
 
     return v0

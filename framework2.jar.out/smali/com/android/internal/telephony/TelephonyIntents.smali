@@ -66,6 +66,10 @@
 
 .field public static final ACTION_VOICE_CALL_STARTED:Ljava/lang/String; = "android.intent.action.VOICE_CALL_STARTED"
 
+.field public static final ACTION_VoIP_AUDIO_VIDEO_CHANGED:Ljava/lang/String; = "android.intent.action.VoIP_AUDIO_VIDEO_CHANGED"
+
+.field public static final ACTION_VoIP_MUTE_CS_CALL:Ljava/lang/String; = "android.intent.action.VoIP_MUTE_CS_CALL"
+
 .field public static final EF_ADN:I = 0x6f3a
 
 .field public static final EXTRA:Ljava/lang/String; = "extra"

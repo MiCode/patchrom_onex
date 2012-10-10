@@ -39,17 +39,17 @@
     .parameter "context"
 
     .prologue
-    .line 240
+    .line 244
     iput-object p1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->this$0:Lcom/htc/widget/HtcSpinner;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 241
+    .line 245
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 242
+    .line 246
     .local v0, res:Landroid/content/res/Resources;
     const v1, 0x208001b
 
@@ -59,12 +59,12 @@
 
     iput-object v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuterPressed:Landroid/graphics/drawable/Drawable;
 
-    .line 243
+    .line 248
     iget-object v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuterPressed:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    .line 244
+    .line 249
     const v1, 0x208001c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -73,12 +73,12 @@
 
     iput-object v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mButtonRest:Landroid/graphics/drawable/Drawable;
 
-    .line 245
+    .line 251
     iget-object v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mButtonRest:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    .line 246
+    .line 252
     const v1, 0x208001a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -87,12 +87,12 @@
 
     iput-object v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuter:Landroid/graphics/drawable/Drawable;
 
-    .line 247
+    .line 254
     iget-object v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuter:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    .line 248
+    .line 255
     return-void
 .end method
 
@@ -103,12 +103,12 @@
     .parameter "canvas"
 
     .prologue
-    .line 252
+    .line 259
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuter:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 253
+    .line 260
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->this$0:Lcom/htc/widget/HtcSpinner;
 
     #getter for: Lcom/htc/widget/HtcSpinner;->mIsAnimating:Z
@@ -126,7 +126,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 254
+    .line 261
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuterPressed:Landroid/graphics/drawable/Drawable;
 
@@ -141,18 +141,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 255
+    .line 262
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuterPressed:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 257
+    .line 264
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mButtonRest:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 258
+    .line 265
     return-void
 .end method
 
@@ -160,7 +160,7 @@
     .locals 1
 
     .prologue
-    .line 310
+    .line 317
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuter:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -174,7 +174,7 @@
     .locals 1
 
     .prologue
-    .line 305
+    .line 312
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuter:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -188,7 +188,7 @@
     .locals 1
 
     .prologue
-    .line 292
+    .line 299
     const/4 v0, 0x1
 
     return v0
@@ -198,7 +198,7 @@
     .locals 1
 
     .prologue
-    .line 300
+    .line 307
     const/4 v0, 0x0
 
     return v0
@@ -209,25 +209,25 @@
     .parameter "bounds"
 
     .prologue
-    .line 262
+    .line 269
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 263
+    .line 270
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuterPressed:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 264
+    .line 271
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mButtonRest:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 265
+    .line 272
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuter:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 266
+    .line 273
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->right:I
@@ -238,7 +238,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mCenterX:I
 
-    .line 267
+    .line 274
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
     iget v1, p1, Landroid/graphics/Rect;->bottom:I
@@ -249,7 +249,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mCenterY:I
 
-    .line 268
+    .line 275
     iget v0, p1, Landroid/graphics/Rect;->right:I
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -258,7 +258,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mWidth:I
 
-    .line 269
+    .line 276
     iget v0, p1, Landroid/graphics/Rect;->bottom:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -267,7 +267,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mHeight:I
 
-    .line 270
+    .line 277
     return-void
 .end method
 
@@ -276,12 +276,12 @@
     .parameter "alpha"
 
     .prologue
-    .line 273
+    .line 280
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mOuterPressed:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 274
+    .line 281
     return-void
 .end method
 
@@ -290,7 +290,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 296
+    .line 303
     return-void
 .end method
 
@@ -299,7 +299,7 @@
     .parameter "scale"
 
     .prologue
-    .line 283
+    .line 290
     iget v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mWidth:I
 
     iget v2, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mHeight:I
@@ -322,7 +322,7 @@
 
     div-int/lit8 v0, v1, 0x2
 
-    .line 284
+    .line 291
     .local v0, scaleValue:I
     iget-object v1, p0, Lcom/htc/widget/HtcSpinner$BackgroundDrawable;->mButtonRest:Landroid/graphics/drawable/Drawable;
 
@@ -368,6 +368,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 288
+    .line 295
     return-void
 .end method

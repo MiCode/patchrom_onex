@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 5263
+    .line 5324
     iput-object p1, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
@@ -43,19 +43,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5275
+    .line 5336
     const/4 v2, 0x6
 
     if-ne p1, v2, :cond_1
 
-    .line 5276
+    .line 5337
     iget-object v2, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v2}, Landroid/widget/AbsListView;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    const-string/jumbo v3, "input_method"
+    const-string v3, "input_method"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -63,11 +63,11 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 5279
+    .line 5340
     .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
-    .line 5280
+    .line 5341
     iget-object v2, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v2}, Landroid/widget/AbsListView;->getWindowToken()Landroid/os/IBinder;
@@ -76,11 +76,11 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 5282
+    .line 5343
     :cond_0
     const/4 v1, 0x1
 
-    .line 5284
+    .line 5345
     .end local v0           #imm:Landroid/view/inputmethod/InputMethodManager;
     :cond_1
     return v1
@@ -91,7 +91,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 5268
+    .line 5329
     iget-object v0, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     #getter for: Landroid/widget/AbsListView;->mDefInputConnection:Landroid/view/inputmethod/InputConnection;
@@ -111,7 +111,7 @@
     .parameter "event"
 
     .prologue
-    .line 5292
+    .line 5353
     iget-object v0, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     #getter for: Landroid/widget/AbsListView;->mDefInputConnection:Landroid/view/inputmethod/InputConnection;

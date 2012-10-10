@@ -71,6 +71,14 @@
     .end annotation
 .end method
 
+.method public abstract getHeadsetProfile()[I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getLastAudibleStreamVolume(I)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -95,6 +103,14 @@
     .end annotation
 .end method
 
+.method public abstract getSpeakerProfile()[I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getStreamMaxVolume(I)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -112,6 +128,14 @@
 .end method
 
 .method public abstract getVibrateSetting(I)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract isBTConnected()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -152,6 +176,14 @@
 .end method
 
 .method public abstract isFMActive()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract isHeadsetPlugged()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -263,7 +295,7 @@
     .end annotation
 .end method
 
-.method public abstract setBeatsHeadset(I)V
+.method public abstract restoreEffect(Z)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -303,6 +335,22 @@
     .end annotation
 .end method
 
+.method public abstract setHeadsetProfile([I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setHtcSpecificAPdefault()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setIgnoreNotificationMuteSetting(Z)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -327,7 +375,23 @@
     .end annotation
 .end method
 
+.method public abstract setSpeakerProfile([I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setSpeakerphoneOn(Z)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setStreamLastaudibleIndex(II)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -400,6 +464,14 @@
 .end method
 
 .method public abstract triggerBeatsLogo(Z)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract triggerBeatsLogo_audio(ZZZ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

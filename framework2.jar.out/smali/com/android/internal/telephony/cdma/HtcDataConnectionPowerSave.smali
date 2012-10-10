@@ -100,12 +100,12 @@
     .locals 3
 
     .prologue
-    .line 433
+    .line 485
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
     if-eqz v1, :cond_0
 
-    .line 434
+    .line 486
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mContext:Landroid/content/Context;
 
     const-string v2, "alarm"
@@ -116,30 +116,30 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 435
+    .line 487
     .local v0, am:Landroid/app/AlarmManager;
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 436
+    .line 488
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
-    .line 437
+    .line 489
     iget v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIndex:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIndex:I
 
-    .line 438
+    .line 490
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingWaitingForConnectingMode:Z
 
-    .line 440
+    .line 492
     .end local v0           #am:Landroid/app/AlarmManager;
     :cond_0
     return-void
@@ -149,23 +149,23 @@
     .locals 2
 
     .prologue
-    .line 542
+    .line 594
     const/4 v0, 0x0
 
-    .line 543
+    .line 595
     .local v0, settingOn:Z
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
     if-eqz v1, :cond_0
 
-    .line 544
+    .line 596
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
     invoke-interface {v1}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;->htcDataConnectionPowerSave_SettingOn()Z
 
     move-result v0
 
-    .line 546
+    .line 598
     :cond_0
     return v0
 .end method
@@ -178,16 +178,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 388
+    .line 440
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
     if-eqz v5, :cond_0
 
-    .line 428
+    .line 480
     :goto_0
     return v4
 
-    .line 391
+    .line 443
     :cond_0
     new-instance v3, Landroid/content/Intent;
 
@@ -195,7 +195,7 @@
 
     invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 392
+    .line 444
     .local v3, intent:Landroid/content/Intent;
     const-string v5, "Connection"
 
@@ -203,21 +203,21 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 393
+    .line 445
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIndex:I
 
     add-int/lit8 v5, v5, 0x1
 
     iput v5, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIndex:I
 
-    .line 394
+    .line 446
     const-string v5, "Index"
 
     iget v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIndex:I
 
     invoke-virtual {v3, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 395
+    .line 447
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mContext:Landroid/content/Context;
 
     const/high16 v6, 0x800
@@ -228,36 +228,36 @@
 
     iput-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
-    .line 397
+    .line 449
     if-eqz p1, :cond_1
 
-    .line 398
+    .line 450
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownConnectionOn:Z
 
-    .line 403
+    .line 455
     :goto_1
     iput-boolean p2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingWaitingForConnectingMode:Z
 
-    .line 404
+    .line 456
     const-wide/16 v1, 0x0
 
-    .line 405
+    .line 457
     .local v1, countDownDelay:J
     if-eqz p2, :cond_3
 
-    .line 406
+    .line 458
     iget-boolean v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownConnectionOn:Z
 
     if-eqz v4, :cond_2
 
-    .line 408
+    .line 460
     const-wide/32 v1, 0x493e0
 
-    .line 425
+    .line 477
     :goto_2
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mContext:Landroid/content/Context;
 
@@ -269,7 +269,7 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 426
+    .line 478
     .local v0, am:Landroid/app/AlarmManager;
     const/4 v4, 0x2
 
@@ -283,12 +283,12 @@
 
     invoke-virtual {v0, v4, v5, v6, v7}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 428
+    .line 480
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 401
+    .line 453
     .end local v0           #am:Landroid/app/AlarmManager;
     .end local v1           #countDownDelay:J
     :cond_1
@@ -298,25 +298,25 @@
 
     goto :goto_1
 
-    .line 412
+    .line 464
     .restart local v1       #countDownDelay:J
     :cond_2
     const-wide/32 v1, 0x1b7740
 
     goto :goto_2
 
-    .line 416
+    .line 468
     :cond_3
     iget-boolean v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownConnectionOn:Z
 
     if-eqz v4, :cond_4
 
-    .line 418
+    .line 470
     const-wide/32 v1, 0x493e0
 
     goto :goto_2
 
-    .line 422
+    .line 474
     :cond_4
     const-wide/32 v1, 0x1b7740
 
@@ -332,7 +332,7 @@
 
     const/4 v5, 0x0
 
-    .line 444
+    .line 496
     const-string v6, "Connection"
 
     invoke-virtual {p1, v6}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -341,7 +341,7 @@
 
     if-nez v6, :cond_0
 
-    .line 445
+    .line 497
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -390,11 +390,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
+    .line 590
     :goto_0
     return-void
 
-    .line 449
+    .line 501
     :cond_0
     const-string v6, "Connection"
 
@@ -402,7 +402,7 @@
 
     move-result v0
 
-    .line 450
+    .line 502
     .local v0, forConnectionOn:Z
     const-string v6, "Index"
 
@@ -410,11 +410,11 @@
 
     move-result v2
 
-    .line 452
+    .line 504
     .local v2, requestIndex:I
     monitor-enter p0
 
-    .line 453
+    .line 505
     :try_start_0
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
@@ -424,7 +424,7 @@
 
     if-eq v2, v6, :cond_3
 
-    .line 455
+    .line 507
     :cond_1
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
@@ -487,12 +487,12 @@
 
     invoke-static {v6, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
+    .line 510
     monitor-exit p0
 
     goto :goto_0
 
-    .line 537
+    .line 589
     :catchall_0
     move-exception v4
 
@@ -505,29 +505,29 @@
     :cond_2
     move v4, v5
 
-    .line 455
+    .line 507
     goto :goto_1
 
-    .line 460
+    .line 512
     :cond_3
     const/4 v6, 0x0
 
     :try_start_1
     iput-object v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
-    .line 461
+    .line 513
     iget v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIndex:I
 
     add-int/lit8 v6, v6, 0x1
 
     iput v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIndex:I
 
-    .line 463
+    .line 515
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->getPowerSavingSetting()Z
 
     move-result v1
 
-    .line 464
+    .line 516
     .local v1, powerSavingSetting:Z
     iget-boolean v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingSupportConnectingPeriod:Z
 
@@ -539,14 +539,14 @@
 
     move v3, v4
 
-    .line 465
+    .line 517
     .local v3, waitingForConnecting:Z
     :goto_2
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingWaitingForConnectingMode:Z
 
-    .line 466
+    .line 518
     iget-boolean v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
     if-nez v6, :cond_4
@@ -561,7 +561,7 @@
 
     if-nez v1, :cond_9
 
-    .line 468
+    .line 520
     :cond_4
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
@@ -583,7 +583,7 @@
 
     if-ne v4, v5, :cond_8
 
-    .line 473
+    .line 525
     :cond_5
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
@@ -591,7 +591,7 @@
 
     invoke-interface {v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;->htcDataConnectionPowerSave_RequestConnection(Z)V
 
-    .line 537
+    .line 589
     :cond_6
     :goto_3
     monitor-exit p0
@@ -602,15 +602,15 @@
     :cond_7
     move v3, v5
 
-    .line 464
+    .line 516
     goto :goto_2
 
-    .line 476
+    .line 528
     .restart local v3       #waitingForConnecting:Z
     :cond_8
     if-eqz v1, :cond_6
 
-    .line 477
+    .line 529
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -661,23 +661,23 @@
 
     goto :goto_3
 
-    .line 484
+    .line 536
     :cond_9
     if-eqz v3, :cond_d
 
-    .line 487
+    .line 539
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     sget-object v7, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->ExternalDisconnect:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     if-eq v6, v7, :cond_6
 
-    .line 490
+    .line 542
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
     if-eqz v6, :cond_a
 
-    .line 491
+    .line 543
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
     if-nez v0, :cond_b
@@ -687,7 +687,7 @@
     :goto_4
     invoke-interface {v7, v6}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;->htcDataConnectionPowerSave_RequestConnection(Z)V
 
-    .line 493
+    .line 545
     :cond_a
     new-instance v6, Ljava/lang/Boolean;
 
@@ -700,7 +700,7 @@
 
     invoke-direct {p0, v6, v4}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->startCountingDown(Ljava/lang/Boolean;Z)Z
 
-    .line 494
+    .line 546
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -752,25 +752,25 @@
     :cond_b
     move v6, v5
 
-    .line 491
+    .line 543
     goto :goto_4
 
     :cond_c
     move v4, v5
 
-    .line 493
+    .line 545
     goto :goto_5
 
-    .line 499
+    .line 551
     :cond_d
     if-eqz v0, :cond_10
 
-    .line 500
+    .line 552
     iget-boolean v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mDataConnectionIsOn:Z
 
     if-eqz v4, :cond_f
 
-    .line 501
+    .line 553
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
     if-eqz v4, :cond_e
@@ -781,14 +781,14 @@
 
     if-eq v4, v5, :cond_e
 
-    .line 503
+    .line 555
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
     const/4 v5, 0x0
 
     invoke-interface {v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;->htcDataConnectionPowerSave_RequestConnection(Z)V
 
-    .line 504
+    .line 556
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -827,7 +827,7 @@
 
     goto/16 :goto_3
 
-    .line 508
+    .line 560
     :cond_e
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
@@ -867,7 +867,7 @@
 
     goto/16 :goto_3
 
-    .line 513
+    .line 565
     :cond_f
     const/4 v4, 0x0
 
@@ -875,7 +875,7 @@
 
     invoke-direct {p0, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->startCountingDown(Ljava/lang/Boolean;Z)Z
 
-    .line 514
+    .line 566
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -914,20 +914,20 @@
 
     goto/16 :goto_3
 
-    .line 519
+    .line 571
     :cond_10
     iget-boolean v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mDataConnectionIsOn:Z
 
     if-eqz v4, :cond_11
 
-    .line 520
+    .line 572
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
     invoke-direct {p0, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->startCountingDown(Ljava/lang/Boolean;Z)Z
 
-    .line 521
+    .line 573
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -966,7 +966,7 @@
 
     goto/16 :goto_3
 
-    .line 525
+    .line 577
     :cond_11
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
@@ -984,7 +984,7 @@
 
     if-ne v4, v5, :cond_13
 
-    .line 528
+    .line 580
     :cond_12
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
@@ -994,7 +994,7 @@
 
     goto/16 :goto_3
 
-    .line 531
+    .line 583
     :cond_13
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
@@ -1048,7 +1048,7 @@
 
     const/4 v2, 0x0
 
-    .line 326
+    .line 378
     iget-boolean v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
     if-nez v4, :cond_0
@@ -1064,18 +1064,18 @@
     :cond_0
     move v1, v3
 
-    .line 327
+    .line 379
     .local v1, previousOn:Z
     :goto_0
     iput-boolean p1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
-    .line 328
+    .line 380
     iput-boolean p2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mChargerIsOn:Z
 
-    .line 329
+    .line 381
     iput-boolean p3, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mFunctionPaused:Z
 
-    .line 330
+    .line 382
     iget-boolean v4, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
     if-nez v4, :cond_1
@@ -1091,12 +1091,12 @@
     :cond_1
     move v0, v3
 
-    .line 331
+    .line 383
     .local v0, currentOn:Z
     :goto_1
     if-ne v1, v0, :cond_5
 
-    .line 332
+    .line 384
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1157,7 +1157,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
+    .line 431
     :cond_2
     :goto_2
     return-void
@@ -1167,25 +1167,25 @@
     :cond_3
     move v1, v2
 
-    .line 326
+    .line 378
     goto :goto_0
 
     .restart local v1       #previousOn:Z
     :cond_4
     move v0, v2
 
-    .line 330
+    .line 382
     goto :goto_1
 
-    .line 336
+    .line 388
     .restart local v0       #currentOn:Z
     :cond_5
     if-eqz v0, :cond_8
 
-    .line 338
+    .line 390
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
 
-    .line 340
+    .line 392
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
     if-eqz v2, :cond_7
@@ -1206,7 +1206,7 @@
 
     if-ne v2, v4, :cond_7
 
-    .line 345
+    .line 397
     :cond_6
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
@@ -1214,7 +1214,7 @@
 
     goto :goto_2
 
-    .line 348
+    .line 400
     :cond_7
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->getPowerSavingSetting()Z
 
@@ -1222,7 +1222,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 349
+    .line 401
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1273,7 +1273,7 @@
 
     goto :goto_2
 
-    .line 356
+    .line 408
     :cond_8
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->getPowerSavingSetting()Z
 
@@ -1281,14 +1281,14 @@
 
     if-eqz v3, :cond_b
 
-    .line 357
+    .line 409
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     sget-object v4, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->ExternalDisconnect:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     if-eq v3, v4, :cond_a
 
-    .line 359
+    .line 411
     const/4 v3, 0x0
 
     invoke-direct {p0, v3, v2}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->startCountingDown(Ljava/lang/Boolean;Z)Z
@@ -1297,7 +1297,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 360
+    .line 412
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1348,7 +1348,7 @@
 
     goto/16 :goto_2
 
-    .line 365
+    .line 417
     :cond_9
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
@@ -1388,7 +1388,7 @@
 
     goto/16 :goto_2
 
-    .line 370
+    .line 422
     :cond_a
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
@@ -1440,7 +1440,7 @@
 
     goto/16 :goto_2
 
-    .line 376
+    .line 428
     :cond_b
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
 
@@ -1452,18 +1452,18 @@
     .parameter "isCharging"
 
     .prologue
-    .line 315
+    .line 367
     if-nez p1, :cond_0
 
-    .line 323
+    .line 375
     :goto_0
     return-void
 
-    .line 318
+    .line 370
     :cond_0
     monitor-enter p0
 
-    .line 319
+    .line 371
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mChargerIsOn:Z
 
@@ -1473,7 +1473,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 320
+    .line 372
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1484,7 +1484,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->updateChageState(ZZZ)V
 
-    .line 322
+    .line 374
     :cond_1
     monitor-exit p0
 
@@ -1505,18 +1505,18 @@
     .parameter "isScreenChangeToOn"
 
     .prologue
-    .line 303
+    .line 355
     if-nez p1, :cond_0
 
-    .line 311
+    .line 363
     :goto_0
     return-void
 
-    .line 306
+    .line 358
     :cond_0
     monitor-enter p0
 
-    .line 307
+    .line 359
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
@@ -1526,7 +1526,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 308
+    .line 360
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -1537,7 +1537,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->updateChageState(ZZZ)V
 
-    .line 310
+    .line 362
     :cond_1
     monitor-exit p0
 
@@ -1560,31 +1560,31 @@
     .parameter "isSupported"
 
     .prologue
-    .line 251
+    .line 295
     monitor-enter p0
 
-    .line 252
+    .line 296
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingSupportConnectingPeriod:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 253
+    .line 297
     iput-boolean p1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingSupportConnectingPeriod:Z
 
-    .line 254
+    .line 298
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingSupportConnectingPeriod:Z
 
     if-eqz v0, :cond_0
 
-    .line 261
+    .line 305
     :cond_0
     monitor-exit p0
 
-    .line 262
+    .line 306
     return-void
 
-    .line 261
+    .line 305
     :catchall_0
     move-exception v0
 
@@ -1600,30 +1600,30 @@
     .parameter "isSupported"
 
     .prologue
-    .line 265
+    .line 313
     monitor-enter p0
 
-    .line 266
+    .line 314
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mFunctionPaused:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 267
+    .line 315
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
     iget-boolean v1, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mChargerIsOn:Z
 
     invoke-direct {p0, v0, v1, p1}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->updateChageState(ZZZ)V
 
-    .line 269
+    .line 317
     :cond_0
     monitor-exit p0
 
-    .line 270
+    .line 318
     return-void
 
-    .line 269
+    .line 317
     :catchall_0
     move-exception v0
 
@@ -1638,25 +1638,25 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 79
     monitor-enter p0
 
-    .line 76
+    .line 80
     :try_start_0
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
 
-    .line 77
+    .line 81
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mModifyConnection:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$onModifyPowerSaveListener;
 
-    .line 78
+    .line 82
     monitor-exit p0
 
-    .line 79
+    .line 83
     return-void
 
-    .line 78
+    .line 82
     :catchall_0
     move-exception v0
 
@@ -1671,14 +1671,14 @@
     .locals 2
 
     .prologue
-    .line 81
+    .line 89
     const-string v0, "PowSv"
 
     const-string v1, "HtcDataConnectionPowerSave finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
+    .line 90
     return-void
 .end method
 
@@ -1686,20 +1686,20 @@
     .locals 3
 
     .prologue
-    .line 240
+    .line 280
     const/4 v0, 0x0
 
-    .line 241
+    .line 281
     .local v0, underControl:Ljava/lang/Boolean;
     monitor-enter p0
 
-    .line 242
+    .line 282
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownIntent:Landroid/app/PendingIntent;
 
     if-eqz v2, :cond_0
 
-    .line 243
+    .line 283
     new-instance v1, Ljava/lang/Boolean;
 
     iget-boolean v2, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownConnectionOn:Z
@@ -1710,16 +1710,16 @@
     .local v1, underControl:Ljava/lang/Boolean;
     move-object v0, v1
 
-    .line 245
+    .line 285
     .end local v1           #underControl:Ljava/lang/Boolean;
     .restart local v0       #underControl:Ljava/lang/Boolean;
     :cond_0
     monitor-exit p0
 
-    .line 246
+    .line 286
     return-object v0
 
-    .line 245
+    .line 285
     :catchall_0
     move-exception v2
 
@@ -1735,7 +1735,7 @@
     .parameter "msg"
 
     .prologue
-    .line 281
+    .line 333
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->GENERIC_WPHONE_CONFIG()Z
 
     move-result v0
@@ -1746,7 +1746,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 282
+    .line 334
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1771,11 +1771,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
+    .line 349
     :goto_0
     return-void
 
-    .line 286
+    .line 338
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -1783,7 +1783,7 @@
 
     goto :goto_0
 
-    .line 288
+    .line 340
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1793,7 +1793,7 @@
 
     goto :goto_0
 
-    .line 291
+    .line 343
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1803,7 +1803,7 @@
 
     goto :goto_0
 
-    .line 294
+    .line 346
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1813,7 +1813,7 @@
 
     goto :goto_0
 
-    .line 286
+    .line 338
     nop
 
     :pswitch_data_0
@@ -1829,7 +1829,7 @@
     .parameter "isCharging"
 
     .prologue
-    .line 94
+    .line 114
     const/4 v0, 0x3
 
     new-instance v1, Ljava/lang/Boolean;
@@ -1842,7 +1842,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->sendMessage(Landroid/os/Message;)Z
 
-    .line 95
+    .line 115
     return-void
 .end method
 
@@ -1850,16 +1850,16 @@
     .locals 3
 
     .prologue
-    .line 207
+    .line 243
     monitor-enter p0
 
-    .line 208
+    .line 244
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mDataConnectionIsOn:Z
 
-    .line 210
+    .line 246
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
     if-nez v0, :cond_2
@@ -1882,7 +1882,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 212
+    .line 248
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v1, 0x1
@@ -1893,7 +1893,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 213
+    .line 249
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1930,30 +1930,30 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
+    .line 268
     :goto_0
     monitor-exit p0
 
-    .line 233
+    .line 269
     return-void
 
-    .line 217
+    .line 253
     :cond_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingCountingDownConnectionOn:Z
 
     if-eqz v0, :cond_1
 
-    .line 218
+    .line 254
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
 
-    .line 219
+    .line 255
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->startCountingDown(Ljava/lang/Boolean;Z)Z
 
-    .line 220
+    .line 256
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1992,7 +1992,7 @@
 
     goto :goto_0
 
-    .line 232
+    .line 268
     :catchall_0
     move-exception v0
 
@@ -2002,7 +2002,7 @@
 
     throw v0
 
-    .line 224
+    .line 260
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
@@ -2043,7 +2043,7 @@
 
     goto :goto_0
 
-    .line 230
+    .line 266
     :cond_2
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
     :try_end_1
@@ -2057,10 +2057,10 @@
     .parameter "fromExternal"
 
     .prologue
-    .line 141
+    .line 169
     monitor-enter p0
 
-    .line 142
+    .line 170
     :try_start_0
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$1;->$SwitchMap$com$android$internal$telephony$cdma$HtcDataConnectionPowerSave$ConnectionRequestState:[I
 
@@ -2074,16 +2074,16 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 164
+    .line 192
     :cond_0
     :goto_0
     :pswitch_0
     if-eqz p1, :cond_1
 
-    .line 165
+    .line 193
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
 
-    .line 166
+    .line 194
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2120,25 +2120,25 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
+    .line 197
     :cond_1
     monitor-exit p0
 
-    .line 170
+    .line 198
     return-void
 
-    .line 144
+    .line 172
     :pswitch_1
     if-eqz p1, :cond_2
 
-    .line 145
+    .line 173
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->External:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     goto :goto_0
 
-    .line 169
+    .line 197
     :catchall_0
     move-exception v0
 
@@ -2148,7 +2148,7 @@
 
     throw v0
 
-    .line 148
+    .line 176
     :cond_2
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->InternalOnly:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
@@ -2157,22 +2157,22 @@
 
     goto :goto_0
 
-    .line 152
+    .line 180
     :pswitch_2
     if-eqz p1, :cond_0
 
-    .line 153
+    .line 181
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->External:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     goto :goto_0
 
-    .line 159
+    .line 187
     :pswitch_3
     if-eqz p1, :cond_0
 
-    .line 160
+    .line 188
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->External:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
@@ -2181,7 +2181,7 @@
 
     goto :goto_0
 
-    .line 142
+    .line 170
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -2195,28 +2195,28 @@
     .locals 3
 
     .prologue
-    .line 173
+    .line 205
     monitor-enter p0
 
-    .line 174
+    .line 206
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mDataConnectionIsOn:Z
 
-    .line 175
+    .line 207
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     sget-object v1, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->None:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     if-ne v0, v1, :cond_0
 
-    .line 176
+    .line 208
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->InternalOnly:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
-    .line 180
+    .line 212
     :cond_0
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
@@ -2236,7 +2236,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 182
+    .line 214
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2247,7 +2247,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 183
+    .line 215
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2284,14 +2284,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
+    .line 235
     :goto_0
     monitor-exit p0
 
-    .line 204
+    .line 236
     return-void
 
-    .line 187
+    .line 219
     :cond_1
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mPowerSavingWaitingForConnectingMode:Z
 
@@ -2301,7 +2301,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 189
+    .line 221
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2340,7 +2340,7 @@
 
     goto :goto_0
 
-    .line 203
+    .line 235
     :catchall_0
     move-exception v0
 
@@ -2350,19 +2350,19 @@
 
     throw v0
 
-    .line 193
+    .line 225
     :cond_2
     :try_start_1
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
 
-    .line 194
+    .line 226
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->startCountingDown(Ljava/lang/Boolean;Z)Z
 
-    .line 195
+    .line 227
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2401,7 +2401,7 @@
 
     goto :goto_0
 
-    .line 201
+    .line 233
     :cond_3
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->cancelCountingDown()V
     :try_end_1
@@ -2415,10 +2415,10 @@
     .parameter "fromExternal"
 
     .prologue
-    .line 99
+    .line 123
     monitor-enter p0
 
-    .line 100
+    .line 124
     :try_start_0
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$1;->$SwitchMap$com$android$internal$telephony$cdma$HtcDataConnectionPowerSave$ConnectionRequestState:[I
 
@@ -2432,14 +2432,14 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 122
+    .line 146
     :cond_0
     :goto_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mDataConnectionIsOn:Z
 
-    .line 123
+    .line 147
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mScreenIsOn:Z
 
     if-nez v0, :cond_1
@@ -2458,7 +2458,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 125
+    .line 149
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2469,7 +2469,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 127
+    .line 151
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2506,26 +2506,26 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
+    .line 161
     :cond_1
     :goto_1
     monitor-exit p0
 
-    .line 138
+    .line 162
     return-void
 
-    .line 102
+    .line 126
     :pswitch_0
     if-eqz p1, :cond_0
 
-    .line 103
+    .line 127
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->ExternalDisconnect:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     goto :goto_0
 
-    .line 137
+    .line 161
     :catchall_0
     move-exception v0
 
@@ -2535,11 +2535,11 @@
 
     throw v0
 
-    .line 107
+    .line 131
     :pswitch_1
     if-eqz p1, :cond_0
 
-    .line 108
+    .line 132
     :try_start_1
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->ExternalDisconnect:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
@@ -2547,18 +2547,18 @@
 
     goto :goto_0
 
-    .line 115
+    .line 139
     :pswitch_2
     if-eqz p1, :cond_0
 
-    .line 116
+    .line 140
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;->ExternalDisconnect:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mConnectionRequestStatus:Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave$ConnectionRequestState;
 
     goto :goto_0
 
-    .line 131
+    .line 155
     :cond_2
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->mLogTag:Ljava/lang/String;
 
@@ -2624,7 +2624,7 @@
 
     goto :goto_1
 
-    .line 100
+    .line 124
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2638,7 +2638,7 @@
     .parameter "intent"
 
     .prologue
-    .line 90
+    .line 106
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -2647,7 +2647,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->sendMessage(Landroid/os/Message;)Z
 
-    .line 91
+    .line 107
     return-void
 .end method
 
@@ -2656,7 +2656,7 @@
     .parameter "isScreenChangeToOn"
 
     .prologue
-    .line 86
+    .line 98
     const/4 v0, 0x1
 
     new-instance v1, Ljava/lang/Boolean;
@@ -2669,6 +2669,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataConnectionPowerSave;->sendMessage(Landroid/os/Message;)Z
 
-    .line 87
+    .line 99
     return-void
 .end method

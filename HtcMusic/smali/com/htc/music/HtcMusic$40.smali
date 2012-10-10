@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 6227
+    .line 6260
     iput-object p1, p0, Lcom/htc/music/HtcMusic$40;->this$0:Lcom/htc/music/HtcMusic;
 
     iput p2, p0, Lcom/htc/music/HtcMusic$40;->val$nState:I
@@ -46,13 +46,13 @@
     .locals 2
 
     .prologue
-    .line 6229
+    .line 6262
     iget-object v0, p0, Lcom/htc/music/HtcMusic$40;->this$0:Lcom/htc/music/HtcMusic;
 
     iget v1, p0, Lcom/htc/music/HtcMusic$40;->val$nState:I
 
     invoke-virtual {v0, v1}, Lcom/htc/music/HtcMusic;->onStateChangeUI(I)V
 
-    .line 6230
+    .line 6263
     return-void
 .end method

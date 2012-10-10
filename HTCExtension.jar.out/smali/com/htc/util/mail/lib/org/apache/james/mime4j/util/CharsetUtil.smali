@@ -1099,7 +1099,7 @@
 
     const/4 v11, 0x3
 
-    const-string v12, "x-eucjp"
+    const-string/jumbo v12, "x-eucjp"
 
     aput-object v12, v10, v11
 
@@ -1111,7 +1111,7 @@
 
     const/4 v11, 0x5
 
-    const-string v12, "x-euc-jp"
+    const-string/jumbo v12, "x-euc-jp"
 
     aput-object v12, v10, v11
 
@@ -1225,7 +1225,7 @@
 
     const/4 v11, 0x0
 
-    const-string v12, "x-EUC-CN"
+    const-string/jumbo v12, "x-EUC-CN"
 
     aput-object v12, v10, v11
 
@@ -1309,7 +1309,7 @@
 
     const/4 v11, 0x3
 
-    const-string v12, "x-mswin-936"
+    const-string/jumbo v12, "x-mswin-936"
 
     aput-object v12, v10, v11
 
@@ -3007,7 +3007,7 @@
 
     const/4 v11, 0x1
 
-    const-string v12, "x0212"
+    const-string/jumbo v12, "x0212"
 
     aput-object v12, v10, v11
 
@@ -3043,7 +3043,7 @@
 
     const/4 v11, 0x0
 
-    const-string v12, "x-JIS0208"
+    const-string/jumbo v12, "x-JIS0208"
 
     aput-object v12, v10, v11
 
@@ -3061,7 +3061,7 @@
 
     const/4 v11, 0x3
 
-    const-string v12, "x0208"
+    const-string/jumbo v12, "x0208"
 
     aput-object v12, v10, v11
 
@@ -3115,7 +3115,7 @@
 
     const/4 v11, 0x3
 
-    const-string v12, "x-sjis"
+    const-string/jumbo v12, "x-sjis"
 
     aput-object v12, v10, v11
 
@@ -3175,7 +3175,7 @@
 
     const/4 v11, 0x2
 
-    const-string v12, "x-ms-cp932"
+    const-string/jumbo v12, "x-ms-cp932"
 
     aput-object v12, v10, v11
 
@@ -3199,7 +3199,7 @@
 
     const/4 v11, 0x0
 
-    const-string v12, "x-EUC-TW"
+    const-string/jumbo v12, "x-EUC-TW"
 
     aput-object v12, v10, v11
 
@@ -3225,7 +3225,7 @@
 
     new-instance v7, Lcom/htc/util/mail/lib/org/apache/james/mime4j/util/CharsetUtil$Charset;
 
-    const-string v8, "x-Johab"
+    const-string/jumbo v8, "x-Johab"
 
     const-string v9, "johab"
 
@@ -3337,7 +3337,7 @@
 
     const/4 v11, 0x2
 
-    const-string v12, "x-windows-949"
+    const-string/jumbo v12, "x-windows-949"
 
     aput-object v12, v10, v11
 
@@ -3361,7 +3361,7 @@
 
     const/4 v11, 0x0
 
-    const-string v12, "x-windows-950"
+    const-string/jumbo v12, "x-windows-950"
 
     aput-object v12, v10, v11
 
@@ -4015,7 +4015,7 @@
 
     const/4 v11, 0x0
 
-    const-string v12, "x-ISCII91"
+    const-string/jumbo v12, "x-ISCII91"
 
     aput-object v12, v10, v11
 
@@ -4071,7 +4071,7 @@
 
     new-instance v7, Lcom/htc/util/mail/lib/org/apache/james/mime4j/util/CharsetUtil$Charset;
 
-    const-string v8, "x-iso-8859-11"
+    const-string/jumbo v8, "x-iso-8859-11"
 
     const/4 v9, 0x0
 
@@ -4767,8 +4767,6 @@
     goto/16 :goto_1
 
     .line 1021
-    nop
-
     :array_0
     .array-data 0x1
         0x64t

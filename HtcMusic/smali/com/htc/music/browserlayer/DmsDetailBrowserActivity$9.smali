@@ -202,7 +202,7 @@
     .line 939
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;
 
-    const v8, 0x7f0700d3
+    const v8, 0x7f0700d4
 
     invoke-virtual {v7, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;->showEmptyView(I)V
 
@@ -225,7 +225,7 @@
     :cond_5
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;
 
-    const v8, 0x7f0700c9
+    const v8, 0x7f0700ca
 
     invoke-virtual {v7, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;->showEmptyView(I)V
 

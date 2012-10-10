@@ -109,7 +109,7 @@
 
     aput-object v0, v2, v4
 
-    const-string/jumbo v0, "lookup"
+    const-string v0, "lookup"
 
     aput-object v0, v2, v5
 

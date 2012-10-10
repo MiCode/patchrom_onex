@@ -32,15 +32,15 @@
     .parameter
 
     .prologue
-    .line 246
+    .line 250
     iput-object p1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
-    .line 247
+    .line 251
     const-string v0, "Final Storage Checker"
 
     invoke-direct {p0, v0}, Lcom/android/camera/WorkerThread;-><init>(Ljava/lang/String;)V
 
-    .line 240
+    .line 244
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     const/4 v1, 0x0
@@ -49,7 +49,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->m_Semaphore:Ljava/util/concurrent/Semaphore;
 
-    .line 248
+    .line 252
     return-void
 .end method
 
@@ -62,7 +62,7 @@
 
     const/4 v5, 0x1
 
-    .line 260
+    .line 264
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v1, v1, Lcom/android/camera/CameraThread;->storageState:Lcom/android/camera/property/Property;
@@ -73,26 +73,26 @@
 
     check-cast v0, Lcom/android/camera/io/StorageState;
 
-    .line 261
+    .line 265
     .local v0, storageState:Lcom/android/camera/io/StorageState;
     sget-object v1, Lcom/android/camera/io/StorageState;->OK:Lcom/android/camera/io/StorageState;
 
     if-eq v0, v1, :cond_1
 
-    .line 262
+    .line 266
     iget-object v1, p0, Lcom/android/camera/WorkerThread;->TAG:Ljava/lang/String;
 
     const-string v2, "storage error"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 263
+    .line 267
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #calls: Lcom/android/camera/CameraThread;->checkStorageStateInternal(Lcom/android/camera/io/StorageState;ZJ)V
     invoke-static {v1, v0, v5, p1, p2}, Lcom/android/camera/CameraThread;->access$000(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageState;ZJ)V
 
-    .line 266
+    .line 270
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v1, v1, Lcom/android/camera/CameraThread;->storageState:Lcom/android/camera/property/Property;
@@ -105,17 +105,17 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 267
+    .line 271
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #setter for: Lcom/android/camera/CameraThread;->mbCanTakePicture:Z
     invoke-static {v1, v6}, Lcom/android/camera/CameraThread;->access$102(Lcom/android/camera/CameraThread;Z)Z
 
-    .line 289
+    .line 293
     :goto_0
     return-void
 
-    .line 269
+    .line 273
     :cond_0
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -124,7 +124,7 @@
 
     goto :goto_0
 
-    .line 273
+    .line 277
     :cond_1
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -156,7 +156,7 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/android/camera/RecordLimitCheck;->setByteRate(Lcom/android/camera/HTCCamera;Lcom/android/camera/CameraType;)V
 
-    .line 274
+    .line 278
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #getter for: Lcom/android/camera/CameraThread;->mCameraActivity:Lcom/android/camera/HTCCamera;
@@ -187,7 +187,7 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/android/camera/RecordLimitCheck;->setRecordingLength(Lcom/android/camera/HTCCamera;Lcom/android/camera/CameraType;)V
 
-    .line 275
+    .line 279
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #getter for: Lcom/android/camera/CameraThread;->mCameraActivity:Lcom/android/camera/HTCCamera;
@@ -219,7 +219,7 @@
 
     if-gez v1, :cond_3
 
-    .line 276
+    .line 280
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     sget-object v2, Lcom/android/camera/io/StorageState;->Full:Lcom/android/camera/io/StorageState;
@@ -227,7 +227,7 @@
     #calls: Lcom/android/camera/CameraThread;->checkStorageStateInternal(Lcom/android/camera/io/StorageState;ZJ)V
     invoke-static {v1, v2, v5, p1, p2}, Lcom/android/camera/CameraThread;->access$000(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageState;ZJ)V
 
-    .line 279
+    .line 283
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v1, v1, Lcom/android/camera/CameraThread;->storageState:Lcom/android/camera/property/Property;
@@ -240,7 +240,7 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 280
+    .line 284
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #setter for: Lcom/android/camera/CameraThread;->mbCanTakePicture:Z
@@ -248,7 +248,7 @@
 
     goto :goto_0
 
-    .line 282
+    .line 286
     :cond_2
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -257,7 +257,7 @@
 
     goto :goto_0
 
-    .line 285
+    .line 289
     :cond_3
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -276,7 +276,7 @@
 
     const/4 v5, 0x1
 
-    .line 301
+    .line 305
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v1, v1, Lcom/android/camera/CameraThread;->storageState:Lcom/android/camera/property/Property;
@@ -287,26 +287,26 @@
 
     check-cast v0, Lcom/android/camera/io/StorageState;
 
-    .line 302
+    .line 306
     .local v0, storageState:Lcom/android/camera/io/StorageState;
     sget-object v1, Lcom/android/camera/io/StorageState;->OK:Lcom/android/camera/io/StorageState;
 
     if-eq v0, v1, :cond_2
 
-    .line 303
+    .line 307
     iget-object v1, p0, Lcom/android/camera/WorkerThread;->TAG:Ljava/lang/String;
 
     const-string v2, "storage error"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 304
+    .line 308
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #calls: Lcom/android/camera/CameraThread;->checkStorageStateInternal(Lcom/android/camera/io/StorageState;ZJ)V
     invoke-static {v1, v0, v5, p1, p2}, Lcom/android/camera/CameraThread;->access$000(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageState;ZJ)V
 
-    .line 307
+    .line 311
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v1, v1, Lcom/android/camera/CameraThread;->storageState:Lcom/android/camera/property/Property;
@@ -319,13 +319,13 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 308
+    .line 312
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #setter for: Lcom/android/camera/CameraThread;->mbCanTakePicture:Z
     invoke-static {v1, v6}, Lcom/android/camera/CameraThread;->access$102(Lcom/android/camera/CameraThread;Z)Z
 
-    .line 326
+    .line 330
     :goto_0
     invoke-static {}, Lcom/android/camera/DisplayDevice;->contactsNoStorage()Z
 
@@ -348,22 +348,22 @@
 
     if-ne v1, v5, :cond_0
 
-    .line 328
+    .line 332
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #setter for: Lcom/android/camera/CameraThread;->mbCanTakePicture:Z
     invoke-static {v1, v5}, Lcom/android/camera/CameraThread;->access$102(Lcom/android/camera/CameraThread;Z)Z
 
-    .line 331
+    .line 335
     :cond_0
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->m_Semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 332
+    .line 336
     return-void
 
-    .line 310
+    .line 314
     :cond_1
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -372,7 +372,7 @@
 
     goto :goto_0
 
-    .line 312
+    .line 316
     :cond_2
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -386,7 +386,7 @@
 
     if-gez v1, :cond_4
 
-    .line 313
+    .line 317
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     sget-object v2, Lcom/android/camera/io/StorageState;->Full:Lcom/android/camera/io/StorageState;
@@ -394,7 +394,7 @@
     #calls: Lcom/android/camera/CameraThread;->checkStorageStateInternal(Lcom/android/camera/io/StorageState;ZJ)V
     invoke-static {v1, v2, v5, p1, p2}, Lcom/android/camera/CameraThread;->access$000(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageState;ZJ)V
 
-    .line 316
+    .line 320
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v1, v1, Lcom/android/camera/CameraThread;->storageState:Lcom/android/camera/property/Property;
@@ -407,7 +407,7 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 317
+    .line 321
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
     #setter for: Lcom/android/camera/CameraThread;->mbCanTakePicture:Z
@@ -415,7 +415,7 @@
 
     goto :goto_0
 
-    .line 319
+    .line 323
     :cond_3
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -424,7 +424,7 @@
 
     goto :goto_0
 
-    .line 322
+    .line 326
     :cond_4
     iget-object v1, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->this$0:Lcom/android/camera/CameraThread;
 
@@ -441,10 +441,10 @@
     .parameter "pendingFileSize"
 
     .prologue
-    .line 256
+    .line 260
     invoke-direct {p0, p1, p2}, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->checkForRecordingInternal(J)V
 
-    .line 257
+    .line 261
     return-void
 .end method
 
@@ -453,10 +453,10 @@
     .parameter "pendingFileSize"
 
     .prologue
-    .line 297
+    .line 301
     invoke-direct {p0, p1, p2}, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->checkForTakingPictureInternal(J)V
 
-    .line 298
+    .line 302
     return-void
 .end method
 
@@ -465,19 +465,19 @@
     .parameter "msg"
 
     .prologue
-    .line 340
+    .line 344
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 349
+    .line 353
     invoke-super {p0, p1}, Lcom/android/camera/WorkerThread;->handleMessage(Landroid/os/Message;)V
 
-    .line 352
+    .line 356
     :goto_0
     return-void
 
-    .line 343
+    .line 347
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -491,7 +491,7 @@
 
     goto :goto_0
 
-    .line 346
+    .line 350
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -505,7 +505,7 @@
 
     goto :goto_0
 
-    .line 340
+    .line 344
     nop
 
     :pswitch_data_0
@@ -524,11 +524,11 @@
     .end annotation
 
     .prologue
-    .line 359
+    .line 363
     iget-object v0, p0, Lcom/android/camera/CameraThread$FinalStorageCheckThread;->m_Semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->acquire()V
 
-    .line 360
+    .line 364
     return-void
 .end method

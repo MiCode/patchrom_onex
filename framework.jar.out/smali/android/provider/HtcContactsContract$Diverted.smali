@@ -25,7 +25,7 @@
     .locals 2
 
     .prologue
-    .line 1507
+    .line 1638
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "diverted"
@@ -36,7 +36,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$Diverted;->DIVERTED_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1512
+    .line 1644
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "diverted_candidate"
@@ -54,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 1503
+    .line 1633
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

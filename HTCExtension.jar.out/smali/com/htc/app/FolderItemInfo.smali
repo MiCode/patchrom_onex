@@ -1,10 +1,6 @@
 .class Lcom/htc/app/FolderItemInfo;
-.super Lcom/htc/widget/MoreExpandableItemInfo;
+.super Ljava/lang/Object;
 .source "FolderItemInfo.java"
-
-
-# static fields
-.field private static id:I
 
 
 # instance fields
@@ -19,17 +15,6 @@
 .field private mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
 .field private mChecked:Z
-
-.field private mChildren:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/htc/app/FolderItemInfo;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private mCloudId:J
 
@@ -57,22 +42,12 @@
 
 .field private mRadioButton:Lcom/htc/widget/HtcRadioButton;
 
+.field private mServiceName:Ljava/lang/String;
+
 .field private mSyncState:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .prologue
-    .line 309
-    const/4 v0, 0x0
-
-    sput v0, Lcom/htc/app/FolderItemInfo;->id:I
-
-    return-void
-.end method
-
 .method public constructor <init>(ZJLjava/lang/String;Ljava/lang/String;JIZZ)V
     .locals 3
     .parameter "isCloudItem"
@@ -87,14 +62,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 313
-    sget v0, Lcom/htc/app/FolderItemInfo;->id:I
+    .line 281
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v0, v0
-
-    invoke-direct {p0, v0, v1, p9}, Lcom/htc/widget/MoreExpandableItemInfo;-><init>(JZ)V
-
-    .line 20
+    .line 19
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -105,63 +76,61 @@
 
     iput-object v0, p0, Lcom/htc/app/FolderItemInfo;->TAG:Ljava/lang/String;
 
-    .line 21
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/app/FolderItemInfo;->mChildren:Ljava/util/List;
-
-    .line 22
+    .line 20
     const/4 v0, -0x3
 
     iput v0, p0, Lcom/htc/app/FolderItemInfo;->mItemDataSourceType:I
 
-    .line 23
+    .line 21
     iput-boolean v2, p0, Lcom/htc/app/FolderItemInfo;->mChecked:Z
 
-    .line 25
+    .line 23
     iput-boolean v2, p0, Lcom/htc/app/FolderItemInfo;->isRecentFile:Z
 
-    .line 26
+    .line 24
     iput-boolean v2, p0, Lcom/htc/app/FolderItemInfo;->mIsCloudItem:Z
 
-    .line 32
+    .line 30
     iput v2, p0, Lcom/htc/app/FolderItemInfo;->mProgress:I
 
-    .line 35
+    .line 33
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/app/FolderItemInfo;->mFileSize:J
 
-    .line 538
+    .line 36
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/htc/app/FolderItemInfo;->mServiceName:Ljava/lang/String;
+
+    .line 506
     iput-boolean v2, p0, Lcom/htc/app/FolderItemInfo;->mSyncState:Z
 
-    .line 314
+    .line 282
     iput-boolean p1, p0, Lcom/htc/app/FolderItemInfo;->mIsCloudItem:Z
 
-    .line 315
+    .line 283
     iput-wide p2, p0, Lcom/htc/app/FolderItemInfo;->mCloudId:J
 
-    .line 316
+    .line 284
     iput-object p4, p0, Lcom/htc/app/FolderItemInfo;->mFileName:Ljava/lang/String;
 
-    .line 317
+    .line 285
     iput-boolean p9, p0, Lcom/htc/app/FolderItemInfo;->isFolder:Z
 
-    .line 318
+    .line 286
     invoke-virtual {p0, p5}, Lcom/htc/app/FolderItemInfo;->setAbsolutePath(Ljava/lang/String;)V
 
-    .line 319
+    .line 287
     invoke-virtual {p0, p6, p7}, Lcom/htc/app/FolderItemInfo;->setLastModified(J)V
 
-    .line 320
+    .line 288
     iput p8, p0, Lcom/htc/app/FolderItemInfo;->mItemDataSourceType:I
 
-    .line 321
+    .line 289
     iput-boolean p10, p0, Lcom/htc/app/FolderItemInfo;->mIsNothing:Z
 
-    .line 322
+    .line 290
     return-void
 .end method
 
@@ -175,14 +144,14 @@
     .parameter "isDirectory"
 
     .prologue
-    .line 331
+    .line 299
     const/4 v1, 0x1
 
-    .line 332
+    .line 300
     .local v1, isCloudItem:Z
     const/4 v10, 0x0
 
-    .line 333
+    .line 301
     .local v10, isNothing:Z
     new-instance v0, Lcom/htc/app/FolderItemInfo;
 
@@ -200,7 +169,7 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/htc/app/FolderItemInfo;-><init>(ZJLjava/lang/String;Ljava/lang/String;JIZZ)V
 
-    .line 335
+    .line 303
     .local v0, folderItemInfo:Lcom/htc/app/FolderItemInfo;
     return-object v0
 .end method
@@ -210,52 +179,52 @@
     .parameter "file"
 
     .prologue
-    .line 344
+    .line 312
     const/4 v1, 0x0
 
-    .line 345
+    .line 313
     .local v1, isCloudItem:Z
     const-wide/16 v2, -0x1
 
-    .line 346
+    .line 314
     .local v2, cloudId:J
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 347
+    .line 315
     .local v4, fileName:Ljava/lang/String;
     const/4 v8, -0x3
 
-    .line 348
+    .line 316
     .local v8, itemType:I
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 349
+    .line 317
     .local v5, path:Ljava/lang/String;
     invoke-virtual {p0}, Ljava/io/File;->lastModified()J
 
     move-result-wide v6
 
-    .line 350
+    .line 318
     .local v6, lastModified:J
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v9
 
-    .line 351
+    .line 319
     .local v9, isDirectory:Z
     const/4 v10, 0x0
 
-    .line 352
+    .line 320
     .local v10, isNothing:Z
     new-instance v0, Lcom/htc/app/FolderItemInfo;
 
     invoke-direct/range {v0 .. v10}, Lcom/htc/app/FolderItemInfo;-><init>(ZJLjava/lang/String;Ljava/lang/String;JIZZ)V
 
-    .line 354
+    .line 322
     .local v0, folderItemInfo:Lcom/htc/app/FolderItemInfo;
     return-object v0
 .end method
@@ -265,12 +234,12 @@
     .parameter "path"
 
     .prologue
-    .line 382
+    .line 350
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 383
+    .line 351
     .local v0, file:Ljava/io/File;
     invoke-static {v0}, Lcom/htc/app/FolderItemInfo;->getLocalFileInstance(Ljava/io/File;)Lcom/htc/app/FolderItemInfo;
 
@@ -285,40 +254,40 @@
     .parameter "file"
 
     .prologue
-    .line 364
+    .line 332
     const/4 v1, 0x0
 
-    .line 365
+    .line 333
     .local v1, isCloudItem:Z
     const/4 v10, 0x0
 
-    .line 366
+    .line 334
     .local v10, isNothing:Z
     const-wide/16 v2, -0x1
 
-    .line 367
+    .line 335
     .local v2, cloudId:J
     const/4 v8, -0x3
 
-    .line 368
+    .line 336
     .local v8, itemType:I
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 369
+    .line 337
     .local v5, path:Ljava/lang/String;
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v6
 
-    .line 370
+    .line 338
     .local v6, lastModified:J
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v9
 
-    .line 371
+    .line 339
     .local v9, isDirectory:Z
     new-instance v0, Lcom/htc/app/FolderItemInfo;
 
@@ -326,7 +295,7 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/htc/app/FolderItemInfo;-><init>(ZJLjava/lang/String;Ljava/lang/String;JIZZ)V
 
-    .line 373
+    .line 341
     .local v0, folderItemInfo:Lcom/htc/app/FolderItemInfo;
     return-object v0
 .end method
@@ -339,10 +308,10 @@
     .parameter "isCloudItem"
 
     .prologue
-    .line 393
+    .line 361
     const-wide/16 v2, -0x1
 
-    .line 394
+    .line 362
     .local v2, cloudId:J
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -366,21 +335,21 @@
 
     move-result-object v5
 
-    .line 395
+    .line 363
     .local v5, absolutePath:Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 396
+    .line 364
     .local v6, lastModified:J
     const/4 v10, 0x1
 
-    .line 397
+    .line 365
     .local v10, isNothing:Z
     const/4 v9, 0x0
 
-    .line 398
+    .line 366
     .local v9, isDirectory:Z
     new-instance v0, Lcom/htc/app/FolderItemInfo;
 
@@ -392,7 +361,7 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/htc/app/FolderItemInfo;-><init>(ZJLjava/lang/String;Ljava/lang/String;JIZZ)V
 
-    .line 401
+    .line 369
     .local v0, folderItemInfo:Lcom/htc/app/FolderItemInfo;
     return-object v0
 .end method
@@ -404,35 +373,35 @@
     .parameter "that"
 
     .prologue
-    .line 491
+    .line 459
     instance-of v3, p1, Lcom/htc/app/FolderItemInfo;
 
     if-eqz v3, :cond_0
 
     move-object v0, p1
 
-    .line 492
+    .line 460
     check-cast v0, Lcom/htc/app/FolderItemInfo;
 
-    .line 493
+    .line 461
     .local v0, p:Lcom/htc/app/FolderItemInfo;
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 494
+    .line 462
     .local v2, thisPath:Ljava/lang/String;
     invoke-virtual {v0}, Lcom/htc/app/FolderItemInfo;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 495
+    .line 463
     .local v1, thatPath:Ljava/lang/String;
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    .line 497
+    .line 465
     .end local v0           #p:Lcom/htc/app/FolderItemInfo;
     .end local v1           #thatPath:Ljava/lang/String;
     .end local v2           #thisPath:Ljava/lang/String;
@@ -449,10 +418,10 @@
     .locals 2
 
     .prologue
-    .line 461
+    .line 429
     sget-object v0, Ljava/io/File;->separator:Ljava/lang/String;
 
-    .line 462
+    .line 430
     .local v0, path:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->isCloudItem()Z
 
@@ -460,16 +429,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 463
+    .line 431
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->getCloudPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 467
+    .line 435
     :goto_0
     return-object v0
 
-    .line 465
+    .line 433
     :cond_0
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->getLocalPath()Ljava/lang/String;
 
@@ -482,7 +451,7 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 47
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mAccountId:Ljava/lang/String;
 
     return-object v0
@@ -492,41 +461,9 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 58
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    return-object v0
-.end method
-
-.method public getChildren()Ljava/util/List;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/htc/app/FolderItemInfo;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 111
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 112
-    .local v0, result:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/FolderItemInfo;>;"
-    iget-object v1, p0, Lcom/htc/app/FolderItemInfo;->mChildren:Ljava/util/List;
-
-    if-eqz v1, :cond_0
-
-    .line 113
-    iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mChildren:Ljava/util/List;
-
-    .line 114
-    :cond_0
     return-object v0
 .end method
 
@@ -534,7 +471,7 @@
     .locals 2
 
     .prologue
-    .line 229
+    .line 199
     iget-wide v0, p0, Lcom/htc/app/FolderItemInfo;->mCloudId:J
 
     return-wide v0
@@ -544,7 +481,7 @@
     .locals 1
 
     .prologue
-    .line 238
+    .line 208
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mCloudPath:Ljava/lang/String;
 
     return-object v0
@@ -554,7 +491,7 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 78
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mCloudShareLink:Ljava/lang/String;
 
     return-object v0
@@ -564,7 +501,7 @@
     .locals 2
 
     .prologue
-    .line 175
+    .line 145
     iget-wide v0, p0, Lcom/htc/app/FolderItemInfo;->mCouldLastModified:J
 
     return-wide v0
@@ -574,7 +511,7 @@
     .locals 1
 
     .prologue
-    .line 297
+    .line 267
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mFileName:Ljava/lang/String;
 
     return-object v0
@@ -584,7 +521,7 @@
     .locals 2
 
     .prologue
-    .line 84
+    .line 91
     iget-wide v0, p0, Lcom/htc/app/FolderItemInfo;->mFileSize:J
 
     return-wide v0
@@ -594,7 +531,7 @@
     .locals 1
 
     .prologue
-    .line 148
+    .line 118
     iget v0, p0, Lcom/htc/app/FolderItemInfo;->mItemDataSourceType:I
 
     return v0
@@ -605,12 +542,12 @@
     .parameter "context"
 
     .prologue
-    .line 477
+    .line 445
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 478
+    .line 446
     .local v0, textPath:Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -646,7 +583,7 @@
 
     move-result-object v0
 
-    .line 481
+    .line 449
     return-object v0
 .end method
 
@@ -654,7 +591,7 @@
     .locals 2
 
     .prologue
-    .line 193
+    .line 163
     iget-wide v0, p0, Lcom/htc/app/FolderItemInfo;->mLocalLastModified:J
 
     return-wide v0
@@ -664,7 +601,7 @@
     .locals 1
 
     .prologue
-    .line 211
+    .line 181
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mLocalPath:Ljava/lang/String;
 
     return-object v0
@@ -674,7 +611,7 @@
     .locals 1
 
     .prologue
-    .line 102
+    .line 109
     iget v0, p0, Lcom/htc/app/FolderItemInfo;->mProgress:I
 
     return v0
@@ -684,8 +621,18 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 68
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mRadioButton:Lcom/htc/widget/HtcRadioButton;
+
+    return-object v0
+.end method
+
+.method getServiceName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 39
+    iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mServiceName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -694,7 +641,7 @@
     .locals 1
 
     .prologue
-    .line 546
+    .line 514
     iget-boolean v0, p0, Lcom/htc/app/FolderItemInfo;->mSyncState:Z
 
     return v0
@@ -704,14 +651,14 @@
     .locals 3
 
     .prologue
-    .line 507
+    .line 475
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->lastModified()J
 
     move-result-wide v1
 
     long-to-int v0, v1
 
-    .line 508
+    .line 476
     .local v0, i:I
     add-int/lit8 v1, v0, 0x29
 
@@ -728,7 +675,7 @@
     .locals 1
 
     .prologue
-    .line 419
+    .line 387
     iget-boolean v0, p0, Lcom/htc/app/FolderItemInfo;->mChecked:Z
 
     return v0
@@ -738,7 +685,7 @@
     .locals 1
 
     .prologue
-    .line 517
+    .line 485
     iget-boolean v0, p0, Lcom/htc/app/FolderItemInfo;->mIsCloudItem:Z
 
     return v0
@@ -748,7 +695,7 @@
     .locals 1
 
     .prologue
-    .line 452
+    .line 420
     iget-boolean v0, p0, Lcom/htc/app/FolderItemInfo;->isFolder:Z
 
     return v0
@@ -758,7 +705,7 @@
     .locals 1
 
     .prologue
-    .line 410
+    .line 378
     iget-boolean v0, p0, Lcom/htc/app/FolderItemInfo;->mIsNothing:Z
 
     return v0
@@ -768,7 +715,7 @@
     .locals 1
 
     .prologue
-    .line 526
+    .line 494
     iget-boolean v0, p0, Lcom/htc/app/FolderItemInfo;->isRecentFile:Z
 
     return v0
@@ -778,17 +725,17 @@
     .locals 2
 
     .prologue
-    .line 269
+    .line 239
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->isCloudItem()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 270
+    .line 240
     iget-wide v0, p0, Lcom/htc/app/FolderItemInfo;->mCouldLastModified:J
 
-    .line 272
+    .line 242
     :goto_0
     return-wide v0
 
@@ -803,21 +750,21 @@
     .parameter "path"
 
     .prologue
-    .line 247
+    .line 217
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->isCloudItem()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 248
+    .line 218
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mCloudPath:Ljava/lang/String;
 
-    .line 252
+    .line 222
     :goto_0
     return-void
 
-    .line 250
+    .line 220
     :cond_0
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mLocalPath:Ljava/lang/String;
 
@@ -829,10 +776,10 @@
     .parameter "accountId"
 
     .prologue
-    .line 44
+    .line 51
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mAccountId:Ljava/lang/String;
 
-    .line 45
+    .line 52
     return-void
 .end method
 
@@ -841,10 +788,10 @@
     .parameter "checkBox"
 
     .prologue
-    .line 55
+    .line 62
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 56
+    .line 63
     return-void
 .end method
 
@@ -853,20 +800,20 @@
     .parameter "checked"
 
     .prologue
-    .line 440
+    .line 408
     iput-boolean p1, p0, Lcom/htc/app/FolderItemInfo;->mChecked:Z
 
-    .line 441
+    .line 409
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 442
+    .line 410
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
-    .line 444
+    .line 412
     :cond_0
     return-void
 .end method
@@ -876,114 +823,10 @@
     .parameter "checked"
 
     .prologue
-    .line 428
+    .line 396
     iput-boolean p1, p0, Lcom/htc/app/FolderItemInfo;->mChecked:Z
 
-    .line 429
-    return-void
-.end method
-
-.method public setChildren(Ljava/util/List;)V
-    .locals 3
-    .parameter
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/htc/app/FolderItemInfo;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 121
-    .local p1, children:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/FolderItemInfo;>;"
-    iget-object v2, p0, Lcom/htc/app/FolderItemInfo;->mChildren:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->clear()V
-
-    .line 122
-    if-eqz p1, :cond_0
-
-    .line 123
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    .local v1, i$:Ljava/util/Iterator;
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/app/FolderItemInfo;
-
-    .line 124
-    .local v0, childItem:Lcom/htc/app/FolderItemInfo;
-    iget-object v2, p0, Lcom/htc/app/FolderItemInfo;->mChildren:Ljava/util/List;
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 127
-    .end local v0           #childItem:Lcom/htc/app/FolderItemInfo;
-    .end local v1           #i$:Ljava/util/Iterator;
-    :cond_0
-    return-void
-.end method
-
-.method public setChildrenChecked()V
-    .locals 3
-
-    .prologue
-    .line 135
-    iget-object v2, p0, Lcom/htc/app/FolderItemInfo;->mChildren:Ljava/util/List;
-
-    if-eqz v2, :cond_0
-
-    .line 136
-    iget-object v2, p0, Lcom/htc/app/FolderItemInfo;->mChildren:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    .local v1, i$:Ljava/util/Iterator;
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/app/FolderItemInfo;
-
-    .line 137
-    .local v0, childItem:Lcom/htc/app/FolderItemInfo;
-    invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->isChecked()Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lcom/htc/app/FolderItemInfo;->setChecked(Z)V
-
-    goto :goto_0
-
-    .line 140
-    .end local v0           #childItem:Lcom/htc/app/FolderItemInfo;
-    .end local v1           #i$:Ljava/util/Iterator;
-    :cond_0
+    .line 397
     return-void
 .end method
 
@@ -992,10 +835,10 @@
     .parameter "cloudPath"
 
     .prologue
-    .line 260
+    .line 230
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mCloudPath:Ljava/lang/String;
 
-    .line 261
+    .line 231
     return-void
 .end method
 
@@ -1004,10 +847,10 @@
     .parameter "cloudShareLink"
 
     .prologue
-    .line 75
+    .line 82
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mCloudShareLink:Ljava/lang/String;
 
-    .line 76
+    .line 83
     return-void
 .end method
 
@@ -1016,10 +859,10 @@
     .parameter "couldLastModified"
 
     .prologue
-    .line 184
+    .line 154
     iput-wide p1, p0, Lcom/htc/app/FolderItemInfo;->mCouldLastModified:J
 
-    .line 185
+    .line 155
     return-void
 .end method
 
@@ -1028,10 +871,10 @@
     .parameter "fileName"
 
     .prologue
-    .line 306
+    .line 276
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mFileName:Ljava/lang/String;
 
-    .line 307
+    .line 277
     return-void
 .end method
 
@@ -1040,10 +883,10 @@
     .parameter "fileSize"
 
     .prologue
-    .line 93
+    .line 100
     iput-wide p1, p0, Lcom/htc/app/FolderItemInfo;->mFileSize:J
 
-    .line 94
+    .line 101
     return-void
 .end method
 
@@ -1052,10 +895,10 @@
     .parameter "itemType"
 
     .prologue
-    .line 157
+    .line 127
     iput p1, p0, Lcom/htc/app/FolderItemInfo;->mItemDataSourceType:I
 
-    .line 158
+    .line 128
     return-void
 .end method
 
@@ -1064,21 +907,21 @@
     .parameter "lastModified"
 
     .prologue
-    .line 283
+    .line 253
     invoke-virtual {p0}, Lcom/htc/app/FolderItemInfo;->isCloudItem()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 284
+    .line 254
     iput-wide p1, p0, Lcom/htc/app/FolderItemInfo;->mCouldLastModified:J
 
-    .line 289
+    .line 259
     :goto_0
     return-void
 
-    .line 286
+    .line 256
     :cond_0
     iput-wide p1, p0, Lcom/htc/app/FolderItemInfo;->mLocalLastModified:J
 
@@ -1090,10 +933,10 @@
     .parameter "localLastModified"
 
     .prologue
-    .line 202
+    .line 172
     iput-wide p1, p0, Lcom/htc/app/FolderItemInfo;->mLocalLastModified:J
 
-    .line 203
+    .line 173
     return-void
 .end method
 
@@ -1102,10 +945,10 @@
     .parameter "localPath"
 
     .prologue
-    .line 220
+    .line 190
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mLocalPath:Ljava/lang/String;
 
-    .line 221
+    .line 191
     return-void
 .end method
 
@@ -1114,10 +957,10 @@
     .parameter "mProgress"
 
     .prologue
-    .line 166
+    .line 136
     iput p1, p0, Lcom/htc/app/FolderItemInfo;->mProgress:I
 
-    .line 167
+    .line 137
     return-void
 .end method
 
@@ -1126,10 +969,10 @@
     .parameter "radioButton"
 
     .prologue
-    .line 65
+    .line 72
     iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mRadioButton:Lcom/htc/widget/HtcRadioButton;
 
-    .line 66
+    .line 73
     return-void
 .end method
 
@@ -1138,20 +981,20 @@
     .parameter "checked"
 
     .prologue
-    .line 432
+    .line 400
     iput-boolean p1, p0, Lcom/htc/app/FolderItemInfo;->mChecked:Z
 
-    .line 433
+    .line 401
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mRadioButton:Lcom/htc/widget/HtcRadioButton;
 
     if-eqz v0, :cond_0
 
-    .line 434
+    .line 402
     iget-object v0, p0, Lcom/htc/app/FolderItemInfo;->mRadioButton:Lcom/htc/widget/HtcRadioButton;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcRadioButton;->setChecked(Z)V
 
-    .line 437
+    .line 405
     :cond_0
     return-void
 .end method
@@ -1161,10 +1004,22 @@
     .parameter "isRecentFile"
 
     .prologue
-    .line 535
+    .line 503
     iput-boolean p1, p0, Lcom/htc/app/FolderItemInfo;->isRecentFile:Z
 
-    .line 536
+    .line 504
+    return-void
+.end method
+
+.method setServiceName(Ljava/lang/String;)V
+    .locals 0
+    .parameter "serviceName"
+
+    .prologue
+    .line 43
+    iput-object p1, p0, Lcom/htc/app/FolderItemInfo;->mServiceName:Ljava/lang/String;
+
+    .line 44
     return-void
 .end method
 
@@ -1173,9 +1028,9 @@
     .parameter "syncState"
 
     .prologue
-    .line 555
+    .line 523
     iput-boolean p1, p0, Lcom/htc/app/FolderItemInfo;->mSyncState:Z
 
-    .line 556
+    .line 524
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1437
+    .line 1518
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$7;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1440
+    .line 1521
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1441
+    .line 1522
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.ACTION_SHUTDOWN"
 
@@ -63,7 +63,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 1443
+    .line 1524
     :cond_0
     const-string v2, "[MediaPlaybackService]"
 
@@ -71,7 +71,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1445
+    .line 1526
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/MediaPlaybackService$7;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -79,16 +79,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1451
+    .line 1532
     :cond_1
     :goto_0
     return-void
 
-    .line 1447
+    .line 1528
     :catch_0
     move-exception v1
 
-    .line 1448
+    .line 1529
     .local v1, exp:Ljava/lang/Exception;
     const-string v2, "[MediaPlaybackService]"
 

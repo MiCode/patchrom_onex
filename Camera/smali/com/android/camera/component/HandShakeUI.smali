@@ -612,7 +612,7 @@
     iput v2, p0, Lcom/android/camera/component/HandShakeUI;->m_marginRight:I
 
     .line 399
-    const v2, 0x7f0b0080
+    const v2, 0x7f0b0081
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

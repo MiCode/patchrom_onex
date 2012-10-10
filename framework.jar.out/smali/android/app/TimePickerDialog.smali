@@ -106,7 +106,7 @@
     invoke-virtual {p0, v5, v6, v3}, Landroid/app/TimePickerDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 103
-    const-string/jumbo v3, "layout_inflater"
+    const-string v3, "layout_inflater"
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -286,7 +286,7 @@
     .local v1, minute:I
     iget-object v2, p0, Landroid/app/TimePickerDialog;->mTimePicker:Landroid/widget/TimePicker;
 
-    const-string/jumbo v3, "is24hour"
+    const-string v3, "is24hour"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -361,7 +361,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 138
-    const-string/jumbo v1, "is24hour"
+    const-string v1, "is24hour"
 
     iget-object v2, p0, Landroid/app/TimePickerDialog;->mTimePicker:Landroid/widget/TimePicker;
 

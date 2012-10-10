@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1293
+    .line 1331
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$5;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 1297
+    .line 1335
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$5;->this$0:Lcom/htc/app/FilePickerCore;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$5;->this$0:Lcom/htc/app/FilePickerCore;
@@ -52,9 +52,9 @@
     move-result-object v1
 
     #calls: Lcom/htc/app/FilePickerCore;->checkCloudServiceDataSourceFromIntentRequest(Lcom/htc/app/FilePickerCloudHelper;)Z
-    invoke-static {v0, v1}, Lcom/htc/app/FilePickerCore;->access$1300(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerCloudHelper;)Z
+    invoke-static {v0, v1}, Lcom/htc/app/FilePickerCore;->access$1500(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerCloudHelper;)Z
 
-    .line 1298
+    .line 1336
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$5;->this$0:Lcom/htc/app/FilePickerCore;
 
     const/4 v1, 0x7
@@ -62,6 +62,6 @@
     #calls: Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
     invoke-static {v0, v1}, Lcom/htc/app/FilePickerCore;->access$700(Lcom/htc/app/FilePickerCore;I)V
 
-    .line 1300
+    .line 1338
     return-void
 .end method

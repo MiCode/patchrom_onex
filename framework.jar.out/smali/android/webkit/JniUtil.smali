@@ -8,11 +8,15 @@
 
 .field private static final LOGTAG:Ljava/lang/String; = "webkit"
 
+.field private static final memThreshold:J = 0x4000000L
+
 .field private static sCacheDirectory:Ljava/lang/String;
 
 .field private static sContext:Landroid/content/Context;
 
 .field private static sDatabaseDirectory:Ljava/lang/String;
+
+.field private static sLowMemory:Z
 
 .field private static sUseChromiumHttpStack:Ljava/lang/Boolean;
 
@@ -32,7 +36,11 @@
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 33
+    .line 206
+    const/4 v0, 0x0
+
+    sput-boolean v0, Landroid/webkit/JniUtil;->sLowMemory:Z
+
     return-void
 .end method
 
@@ -47,58 +55,86 @@
 .end method
 
 .method private static canSatisfyMemoryAllocation(J)Z
-    .locals 8
+    .locals 10
     .parameter "bytesRequested"
 
     .prologue
-    .line 185
-    invoke-static {}, Landroid/webkit/JniUtil;->checkInitialized()V
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
 
     .line 186
-    sget-object v4, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
+    invoke-static {}, Landroid/webkit/JniUtil;->checkInitialized()V
 
-    const-string v5, "activity"
+    .line 190
+    sget-boolean v6, Landroid/webkit/JniUtil;->sLowMemory:Z
 
-    invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    if-nez v6, :cond_1
+
+    .line 203
+    :cond_0
+    :goto_0
+    return v4
+
+    .line 194
+    :cond_1
+    sget-object v6, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
+
+    const-string v7, "activity"
+
+    invoke-virtual {v6, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/app/ActivityManager;
 
-    .line 188
+    .line 196
     .local v2, manager:Landroid/app/ActivityManager;
     new-instance v3, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v3}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 189
+    .line 197
     .local v3, memInfo:Landroid/app/ActivityManager$MemoryInfo;
     invoke-virtual {v2, v3}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 190
-    iget-wide v4, v3, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
+    .line 198
+    iget-wide v6, v3, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
-    iget-wide v6, v3, Landroid/app/ActivityManager$MemoryInfo;->threshold:J
+    iget-wide v8, v3, Landroid/app/ActivityManager$MemoryInfo;->threshold:J
 
-    sub-long v0, v4, v6
+    sub-long v0, v6, v8
 
-    .line 191
+    .line 199
     .local v0, leftToAllocate:J
-    iget-boolean v4, v3, Landroid/app/ActivityManager$MemoryInfo;->lowMemory:Z
+    const-wide/32 v6, 0x4000000
 
-    if-nez v4, :cond_0
+    cmp-long v6, v0, v6
 
-    cmp-long v4, p0, v0
+    if-lez v6, :cond_2
 
-    if-gez v4, :cond_0
+    .line 200
+    const-string/jumbo v6, "webkit"
 
-    const/4 v4, 0x1
+    const-string v7, "left memories are enough, disable Memory checking"
 
-    :goto_0
-    return v4
+    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    const/4 v4, 0x0
+    .line 201
+    sput-boolean v5, Landroid/webkit/JniUtil;->sLowMemory:Z
+
+    .line 203
+    :cond_2
+    iget-boolean v6, v3, Landroid/app/ActivityManager$MemoryInfo;->lowMemory:Z
+
+    if-nez v6, :cond_3
+
+    cmp-long v6, p0, v0
+
+    if-ltz v6, :cond_0
+
+    :cond_3
+    move v4, v5
 
     goto :goto_0
 .end method
@@ -610,6 +646,26 @@
 .end method
 
 .method private static native nativeUseChromiumHttpStack()Z
+.end method
+
+.method public static onLowMemory()V
+    .locals 2
+
+    .prologue
+    .line 211
+    const-string/jumbo v0, "webkit"
+
+    const-string/jumbo v1, "onLowMemory, enable Memory checking"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 212
+    const/4 v0, 0x1
+
+    sput-boolean v0, Landroid/webkit/JniUtil;->sLowMemory:Z
+
+    .line 213
+    return-void
 .end method
 
 .method protected static declared-synchronized setContext(Landroid/content/Context;)V

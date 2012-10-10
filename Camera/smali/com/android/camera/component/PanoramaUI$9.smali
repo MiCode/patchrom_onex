@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1489
+    .line 1494
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +72,7 @@
 
     const/4 v3, 0x0
 
-    .line 1493
+    .line 1498
     sget-object v2, Lcom/android/camera/component/PanoramaUI$17;->$SwitchMap$com$android$camera$UIState:[I
 
     iget-object v1, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -87,12 +87,12 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1518
+    .line 1523
     :cond_0
     :goto_0
     return-void
 
-    .line 1498
+    .line 1503
     :pswitch_0
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -100,7 +100,7 @@
 
     move-result-object v0
 
-    .line 1499
+    .line 1504
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -117,13 +117,13 @@
 
     if-nez v1, :cond_0
 
-    .line 1503
+    .line 1508
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #calls: Lcom/android/camera/component/PanoramaUI;->showIndicator(ZZ)V
     invoke-static {v1, v4, v4}, Lcom/android/camera/component/PanoramaUI;->access$1400(Lcom/android/camera/component/PanoramaUI;ZZ)V
 
-    .line 1506
+    .line 1511
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
@@ -161,7 +161,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1507
+    .line 1512
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -175,7 +175,7 @@
 
     goto :goto_0
 
-    .line 1512
+    .line 1517
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     :pswitch_1
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -183,7 +183,7 @@
     #calls: Lcom/android/camera/component/PanoramaUI;->showIndicator(ZZ)V
     invoke-static {v1, v3, v3}, Lcom/android/camera/component/PanoramaUI;->access$1400(Lcom/android/camera/component/PanoramaUI;ZZ)V
 
-    .line 1513
+    .line 1518
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
@@ -193,7 +193,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1514
+    .line 1519
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI$9;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -207,7 +207,7 @@
 
     goto :goto_0
 
-    .line 1493
+    .line 1498
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

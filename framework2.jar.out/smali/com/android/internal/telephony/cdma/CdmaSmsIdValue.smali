@@ -487,7 +487,7 @@
     .locals 1
 
     .prologue
-    .line 213
+    .line 344
     const/16 v0, 0x18
 
     new-array v0, v0, [B

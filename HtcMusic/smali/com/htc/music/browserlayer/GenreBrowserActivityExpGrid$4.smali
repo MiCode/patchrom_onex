@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 483
+    .line 494
     iput-object p1, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$4;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .parameter "inValue"
 
     .prologue
-    .line 501
+    .line 512
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$4;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -54,7 +54,7 @@
 
     invoke-virtual {v0, p2}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataInvalidate(I)V
 
-    .line 502
+    .line 513
     return-void
 .end method
 
@@ -65,7 +65,7 @@
     .parameter "inValue"
 
     .prologue
-    .line 495
+    .line 506
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$4;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -75,7 +75,7 @@
 
     invoke-virtual {v0, p2}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataInvalidate(I)V
 
-    .line 496
+    .line 507
     return-void
 .end method
 
@@ -86,7 +86,7 @@
     .parameter "inValue"
 
     .prologue
-    .line 490
+    .line 501
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$4;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -96,6 +96,6 @@
 
     invoke-virtual {v0, p2}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataInvalidate(I)V
 
-    .line 491
+    .line 502
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2411
+    .line 2409
     iput-object p1, p0, Lcom/htc/music/DMCMusicPlaybackService$DLNAMusicServiceStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2411
+    .line 2409
     invoke-direct {p0, p1}, Lcom/htc/music/DMCMusicPlaybackService$DLNAMusicServiceStatusListener;-><init>(Lcom/htc/music/DMCMusicPlaybackService;)V
 
     return-void
@@ -53,14 +53,14 @@
     .locals 2
 
     .prologue
-    .line 2417
+    .line 2415
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "DLNAMusicServiceStatusListener onServiceConnected()"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2418
+    .line 2416
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$DLNAMusicServiceStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     const/4 v1, 0x1
@@ -68,24 +68,24 @@
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mIsDLNAManagerConnected:Z
     invoke-static {v0, v1}, Lcom/htc/music/DMCMusicPlaybackService;->access$2402(Lcom/htc/music/DMCMusicPlaybackService;Z)Z
 
-    .line 2420
+    .line 2418
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$DLNAMusicServiceStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #calls: Lcom/htc/music/DMCMusicPlaybackService;->setRenderer()V
     invoke-static {v0}, Lcom/htc/music/DMCMusicPlaybackService;->access$2500(Lcom/htc/music/DMCMusicPlaybackService;)V
 
-    .line 2421
+    .line 2419
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$DLNAMusicServiceStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #calls: Lcom/htc/music/DMCMusicPlaybackService;->startToPlay()V
     invoke-static {v0}, Lcom/htc/music/DMCMusicPlaybackService;->access$2600(Lcom/htc/music/DMCMusicPlaybackService;)V
 
-    .line 2422
+    .line 2420
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$DLNAMusicServiceStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-virtual {v0}, Lcom/htc/music/DMCMusicPlaybackService;->notifyDlnaConnected()V
 
-    .line 2424
+    .line 2422
     return-void
 .end method
 
@@ -93,14 +93,14 @@
     .locals 2
 
     .prologue
-    .line 2430
+    .line 2428
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "DLNAMusicServiceStatusListener onServiceDisconnected "
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2431
+    .line 2429
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$DLNAMusicServiceStatusListener;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     const/4 v1, 0x0
@@ -108,7 +108,7 @@
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mIsDLNAManagerConnected:Z
     invoke-static {v0, v1}, Lcom/htc/music/DMCMusicPlaybackService;->access$2402(Lcom/htc/music/DMCMusicPlaybackService;Z)Z
 
-    .line 2432
+    .line 2430
     return-void
 .end method
 
@@ -116,13 +116,13 @@
     .locals 2
 
     .prologue
-    .line 2437
+    .line 2435
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "DLNAMusicServiceStatusListener onServiceError "
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2439
+    .line 2437
     return-void
 .end method

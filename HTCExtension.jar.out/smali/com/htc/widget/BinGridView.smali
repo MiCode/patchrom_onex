@@ -97,96 +97,96 @@
 
     const/4 v1, -0x1
 
-    .line 91
+    .line 92
     invoke-direct {p0, p1}, Landroid/widget/GridView;-><init>(Landroid/content/Context;)V
 
-    .line 44
+    .line 45
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->mPath:Landroid/graphics/Path;
 
-    .line 149
+    .line 150
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
 
-    .line 151
+    .line 152
     iput v1, p0, Lcom/htc/widget/BinGridView;->removeableColor:I
 
-    .line 152
+    .line 153
     iput v1, p0, Lcom/htc/widget/BinGridView;->unremoveableColor:I
 
-    .line 154
+    .line 155
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->skipFocusLine:Z
 
-    .line 217
+    .line 218
     iput v1, p0, Lcom/htc/widget/BinGridView;->numColumn:I
 
-    .line 218
+    .line 219
     iput v1, p0, Lcom/htc/widget/BinGridView;->portColumnNum:I
 
-    .line 219
+    .line 220
     iput v1, p0, Lcom/htc/widget/BinGridView;->landColumnNum:I
 
-    .line 220
+    .line 221
     iput v1, p0, Lcom/htc/widget/BinGridView;->verticalPadding:I
 
-    .line 249
+    .line 250
     iput v1, p0, Lcom/htc/widget/BinGridView;->widgetSpace:I
 
-    .line 250
+    .line 251
     iput v1, p0, Lcom/htc/widget/BinGridView;->orientation:I
 
-    .line 252
+    .line 253
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->isPortrait:Z
 
-    .line 254
+    .line 255
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->display:Landroid/view/Display;
 
-    .line 281
+    .line 282
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->isBinAdapter:Z
 
-    .line 282
+    .line 283
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->isDrawNextItem:Z
 
-    .line 285
+    .line 286
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->binAdapter:Lcom/htc/widget/BinAdapter;
 
-    .line 332
+    .line 333
     iput v2, p0, Lcom/htc/widget/BinGridView;->dummyItemCount:I
 
-    .line 335
+    .line 336
     new-instance v0, Lcom/htc/widget/BinGridView$1;
 
     invoke-direct {v0, p0}, Lcom/htc/widget/BinGridView$1;-><init>(Lcom/htc/widget/BinGridView;)V
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->dummyAdapter:Landroid/widget/BaseAdapter;
 
-    .line 368
+    .line 369
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->gridPoolIcon:Landroid/graphics/drawable/Drawable;
-
-    .line 561
-    new-array v0, v4, [I
-
-    iput-object v0, p0, Lcom/htc/widget/BinGridView;->gridLocation:[I
 
     .line 562
     new-array v0, v4, [I
 
+    iput-object v0, p0, Lcom/htc/widget/BinGridView;->gridLocation:[I
+
+    .line 563
+    new-array v0, v4, [I
+
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
-    .line 94
+    .line 95
     invoke-direct {p0}, Lcom/htc/widget/BinGridView;->setOrientation()V
 
-    .line 95
+    .line 96
     invoke-direct {p0}, Lcom/htc/widget/BinGridView;->gInit()V
 
-    .line 96
+    .line 97
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->setColumnWidthByCurrentMode()V
 
-    .line 98
+    .line 99
     return-void
 .end method
 
@@ -204,108 +204,108 @@
 
     const/4 v1, -0x1
 
-    .line 101
+    .line 102
     invoke-direct {p0, p1, p2}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 44
+    .line 45
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->mPath:Landroid/graphics/Path;
 
-    .line 149
+    .line 150
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
 
-    .line 151
+    .line 152
     iput v1, p0, Lcom/htc/widget/BinGridView;->removeableColor:I
 
-    .line 152
+    .line 153
     iput v1, p0, Lcom/htc/widget/BinGridView;->unremoveableColor:I
 
-    .line 154
+    .line 155
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->skipFocusLine:Z
 
-    .line 217
+    .line 218
     iput v1, p0, Lcom/htc/widget/BinGridView;->numColumn:I
 
-    .line 218
+    .line 219
     iput v1, p0, Lcom/htc/widget/BinGridView;->portColumnNum:I
 
-    .line 219
+    .line 220
     iput v1, p0, Lcom/htc/widget/BinGridView;->landColumnNum:I
 
-    .line 220
+    .line 221
     iput v1, p0, Lcom/htc/widget/BinGridView;->verticalPadding:I
 
-    .line 249
+    .line 250
     iput v1, p0, Lcom/htc/widget/BinGridView;->widgetSpace:I
 
-    .line 250
+    .line 251
     iput v1, p0, Lcom/htc/widget/BinGridView;->orientation:I
 
-    .line 252
+    .line 253
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->isPortrait:Z
 
-    .line 254
+    .line 255
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->display:Landroid/view/Display;
 
-    .line 281
+    .line 282
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->isBinAdapter:Z
 
-    .line 282
+    .line 283
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->isDrawNextItem:Z
 
-    .line 285
+    .line 286
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->binAdapter:Lcom/htc/widget/BinAdapter;
 
-    .line 332
+    .line 333
     iput v2, p0, Lcom/htc/widget/BinGridView;->dummyItemCount:I
 
-    .line 335
+    .line 336
     new-instance v0, Lcom/htc/widget/BinGridView$1;
 
     invoke-direct {v0, p0}, Lcom/htc/widget/BinGridView$1;-><init>(Lcom/htc/widget/BinGridView;)V
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->dummyAdapter:Landroid/widget/BaseAdapter;
 
-    .line 368
+    .line 369
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->gridPoolIcon:Landroid/graphics/drawable/Drawable;
-
-    .line 561
-    new-array v0, v4, [I
-
-    iput-object v0, p0, Lcom/htc/widget/BinGridView;->gridLocation:[I
 
     .line 562
     new-array v0, v4, [I
 
+    iput-object v0, p0, Lcom/htc/widget/BinGridView;->gridLocation:[I
+
+    .line 563
+    new-array v0, v4, [I
+
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
-    .line 104
+    .line 105
     invoke-direct {p0}, Lcom/htc/widget/BinGridView;->setOrientation()V
 
-    .line 105
+    .line 106
     invoke-direct {p0}, Lcom/htc/widget/BinGridView;->gInit()V
 
-    .line 106
+    .line 107
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->setColumnWidthByCurrentMode()V
 
-    .line 110
+    .line 111
     new-instance v0, Landroid/view/GestureDetector;
 
     invoke-direct {v0, p1, p0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 111
+    .line 112
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, v2}, Landroid/view/GestureDetector;->setIsLongpressEnabled(Z)V
 
-    .line 113
+    .line 114
     return-void
 .end method
 
@@ -315,27 +315,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 74
+    .line 75
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->mPaint:Landroid/graphics/Paint;
 
-    .line 75
+    .line 76
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 76
+    .line 77
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->mIsFocused:Z
 
-    .line 77
+    .line 78
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
-    .line 79
+    .line 80
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -348,13 +348,13 @@
 
     iput v0, p0, Lcom/htc/widget/BinGridView;->mPoolFocusWidth:I
 
-    .line 80
+    .line 81
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->initFlags()V
 
-    .line 82
+    .line 83
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->mIsUnremovable:Z
 
-    .line 83
+    .line 84
     return-void
 .end method
 
@@ -367,12 +367,12 @@
 
     const/4 v2, 0x0
 
-    .line 567
+    .line 568
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->gridLocation:[I
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->getLocationOnScreen([I)V
 
-    .line 569
+    .line 570
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
     aget v0, v0, v2
@@ -385,7 +385,7 @@
 
     aput v0, p1, v2
 
-    .line 570
+    .line 571
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
     aget v0, v0, v3
@@ -398,7 +398,7 @@
 
     aput v0, p1, v3
 
-    .line 571
+    .line 572
     return-void
 .end method
 
@@ -406,12 +406,12 @@
     .locals 2
 
     .prologue
-    .line 258
+    .line 259
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->display:Landroid/view/Display;
 
     if-nez v0, :cond_0
 
-    .line 259
+    .line 260
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mContext:Landroid/content/Context;
 
     const-string v1, "window"
@@ -428,7 +428,7 @@
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->display:Landroid/view/Display;
 
-    .line 261
+    .line 262
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->display:Landroid/view/Display;
 
@@ -438,12 +438,12 @@
 
     iput v0, p0, Lcom/htc/widget/BinGridView;->orientation:I
 
-    .line 263
+    .line 264
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->isPortrait:Z
 
-    .line 264
+    .line 265
     return-void
 .end method
 
@@ -459,12 +459,12 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 609
+    .line 610
     move-object v0, p6
 
     check-cast v0, Lcom/htc/widget/TaskInfo;
 
-    .line 610
+    .line 611
     .local v0, info:Lcom/htc/widget/TaskInfo;
     check-cast p1, Lcom/htc/widget/DropTarget;
 
@@ -475,10 +475,10 @@
 
     if-nez v1, :cond_0
 
-    .line 611
+    .line 612
     const/4 v1, 0x0
 
-    .line 614
+    .line 615
     :goto_0
     return v1
 
@@ -494,26 +494,26 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 511
+    .line 512
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v7
 
     check-cast v7, Lcom/htc/widget/BinAdapter;
 
-    .line 512
+    .line 513
     .local v7, adapter:Lcom/htc/widget/BinAdapter;
     invoke-virtual {v7}, Lcom/htc/widget/BinAdapter;->getHandler()Lcom/htc/content/NotifyingAsyncQueryHandler;
 
     move-result-object v0
 
-    .line 513
+    .line 514
     .local v0, handle:Lcom/htc/content/NotifyingAsyncQueryHandler;
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 514
+    .line 515
     .local v4, values:Landroid/content/ContentValues;
     const-string v1, "is_host"
 
@@ -523,10 +523,10 @@
 
     invoke-virtual {v4, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 516
+    .line 517
     if-eqz v0, :cond_0
 
-    .line 517
+    .line 518
     const/16 v1, 0x3e9
 
     const/4 v2, -0x1
@@ -561,18 +561,18 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/htc/content/NotifyingAsyncQueryHandler;->startUpdate(ILjava/lang/Object;Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 518
+    .line 519
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/widget/BinGridView;->mIsDrop:Z
 
-    .line 519
+    .line 520
     iput-boolean v10, p0, Lcom/htc/widget/BinGridView;->mIsRemove:Z
 
-    .line 523
+    .line 524
     return-void
 
-    .line 521
+    .line 522
     :cond_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -588,10 +588,10 @@
     .parameter "canvas"
 
     .prologue
-    .line 445
+    .line 446
     invoke-super {p0, p1}, Landroid/widget/GridView;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 448
+    .line 449
     iget-boolean v0, p0, Lcom/htc/widget/BinGridView;->isDrawNextItem:Z
 
     if-eqz v0, :cond_0
@@ -600,12 +600,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 449
+    .line 450
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->gridPoolIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 450
+    .line 451
     :cond_0
     return-void
 .end method
@@ -621,15 +621,15 @@
 
     const/high16 v5, 0x4120
 
-    .line 162
+    .line 163
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 164
+    .line 165
     iget v1, p0, Lcom/htc/widget/BinGridView;->widgetSpace:I
 
     if-gez v1, :cond_0
 
-    .line 165
+    .line 166
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -642,18 +642,18 @@
 
     iput v1, p0, Lcom/htc/widget/BinGridView;->widgetSpace:I
 
-    .line 167
+    .line 168
     :cond_0
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
 
     iput v4, v1, Landroid/graphics/RectF;->top:F
 
-    .line 168
+    .line 169
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
 
     iput v4, v1, Landroid/graphics/RectF;->left:F
 
-    .line 170
+    .line 171
     iget-object v3, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getWidth()I
@@ -673,7 +673,7 @@
 
     iput v1, v3, Landroid/graphics/RectF;->right:F
 
-    .line 171
+    .line 172
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getHeight()I
@@ -695,7 +695,7 @@
 
     iput v2, v1, Landroid/graphics/RectF;->bottom:F
 
-    .line 175
+    .line 176
     iget-boolean v1, p0, Lcom/htc/widget/BinGridView;->mIsFocused:Z
 
     if-eqz v1, :cond_8
@@ -704,17 +704,17 @@
 
     if-nez v1, :cond_8
 
-    .line 177
+    .line 178
     iget-boolean v1, p0, Lcom/htc/widget/BinGridView;->mIsUnremovable:Z
 
     if-eqz v1, :cond_6
 
-    .line 179
+    .line 180
     iget v1, p0, Lcom/htc/widget/BinGridView;->unremoveableColor:I
 
     if-gez v1, :cond_2
 
-    .line 180
+    .line 181
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -727,50 +727,50 @@
 
     iput v1, p0, Lcom/htc/widget/BinGridView;->unremoveableColor:I
 
-    .line 182
+    .line 183
     :cond_2
     iget v0, p0, Lcom/htc/widget/BinGridView;->unremoveableColor:I
 
-    .line 193
+    .line 194
     .local v0, color:I
     :goto_1
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mPath:Landroid/graphics/Path;
 
     if-nez v1, :cond_3
 
-    .line 194
+    .line 195
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
     iput-object v1, p0, Lcom/htc/widget/BinGridView;->mPath:Landroid/graphics/Path;
 
-    .line 196
+    .line 197
     :cond_3
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    .line 197
+    .line 198
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 198
+    .line 199
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mPaint:Landroid/graphics/Paint;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 199
+    .line 200
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 200
+    .line 201
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/htc/widget/BinGridView;->mPoolFocusWidth:I
@@ -779,7 +779,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 201
+    .line 202
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mPath:Landroid/graphics/Path;
 
     iget-object v2, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
@@ -788,17 +788,17 @@
 
     invoke-virtual {v1, v2, v5, v5, v3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
 
-    .line 203
+    .line 204
     invoke-super {p0, p1}, Landroid/widget/GridView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 204
+    .line 205
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->focusRect:Landroid/graphics/RectF;
 
     iget-object v2, p0, Lcom/htc/widget/BinGridView;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1, v5, v5, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 209
+    .line 210
     .end local v0           #color:I
     :goto_2
     iget-boolean v1, p0, Lcom/htc/widget/BinGridView;->mIsDrop:Z
@@ -809,21 +809,21 @@
 
     if-eqz v1, :cond_4
 
-    .line 211
+    .line 212
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
     check-cast v1, Lcom/htc/widget/CarouselHost;
 
     invoke-virtual {v1}, Lcom/htc/widget/CarouselHost;->removeIndicator()V
 
-    .line 212
+    .line 213
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->initFlags()V
 
-    .line 214
+    .line 215
     :cond_4
     return-void
 
-    .line 170
+    .line 171
     :cond_5
     iget v1, p0, Lcom/htc/widget/BinGridView;->widgetSpace:I
 
@@ -831,13 +831,13 @@
 
     goto/16 :goto_0
 
-    .line 186
+    .line 187
     :cond_6
     iget v1, p0, Lcom/htc/widget/BinGridView;->removeableColor:I
 
     if-gez v1, :cond_7
 
-    .line 187
+    .line 188
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -860,14 +860,14 @@
 
     iput v1, p0, Lcom/htc/widget/BinGridView;->removeableColor:I
 
-    .line 190
+    .line 191
     :cond_7
     iget v0, p0, Lcom/htc/widget/BinGridView;->removeableColor:I
 
     .restart local v0       #color:I
     goto :goto_1
 
-    .line 207
+    .line 208
     .end local v0           #color:I
     :cond_8
     invoke-super {p0, p1}, Landroid/widget/GridView;->draw(Landroid/graphics/Canvas;)V
@@ -883,7 +883,7 @@
 
     const/4 v2, 0x0
 
-    .line 316
+    .line 317
     iget-boolean v0, p0, Lcom/htc/widget/BinGridView;->isBinAdapter:Z
 
     if-eq v0, v3, :cond_0
@@ -892,12 +892,12 @@
 
     if-nez v0, :cond_1
 
-    .line 330
+    .line 331
     :cond_0
     :goto_0
     return-void
 
-    .line 320
+    .line 321
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
@@ -911,7 +911,7 @@
 
     aput v1, v0, v2
 
-    .line 321
+    .line 322
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
     invoke-virtual {p0, v2}, Lcom/htc/widget/BinGridView;->getChildAt(I)Landroid/view/View;
@@ -924,20 +924,20 @@
 
     aput v1, v0, v3
 
-    .line 324
+    .line 325
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->binAdapter:Lcom/htc/widget/BinAdapter;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 325
+    .line 326
     iput-boolean v3, p0, Lcom/htc/widget/BinGridView;->isBinAdapter:Z
 
-    .line 326
+    .line 327
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->binAdapter:Lcom/htc/widget/BinAdapter;
 
-    .line 329
+    .line 330
     const-string v0, "Carousel"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -971,13 +971,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 86
+    .line 87
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->mIsDrop:Z
 
-    .line 87
+    .line 88
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->mIsRemove:Z
 
-    .line 88
+    .line 89
     return-void
 .end method
 
@@ -985,10 +985,10 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 142
     invoke-super {p0}, Landroid/widget/GridView;->layoutChildren()V
 
-    .line 142
+    .line 143
     iget-boolean v0, p0, Lcom/htc/widget/BinGridView;->mIsDrop:Z
 
     if-eqz v0, :cond_0
@@ -997,17 +997,17 @@
 
     if-nez v0, :cond_0
 
-    .line 143
+    .line 144
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->mIsDrop:Z
 
-    .line 144
+    .line 145
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->mIsRemove:Z
 
-    .line 146
+    .line 147
     :cond_0
     return-void
 .end method
@@ -1017,19 +1017,19 @@
     .parameter "newConfig"
 
     .prologue
-    .line 273
+    .line 274
     invoke-super {p0, p1}, Landroid/widget/GridView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 275
+    .line 276
     invoke-direct {p0}, Lcom/htc/widget/BinGridView;->setOrientation()V
 
-    .line 276
+    .line 277
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->setColumnWidthByCurrentMode()V
 
-    .line 278
+    .line 279
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->initFlags()V
 
-    .line 279
+    .line 280
     return-void
 .end method
 
@@ -1038,7 +1038,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 639
+    .line 640
     const/4 v0, 0x1
 
     return v0
@@ -1056,31 +1056,31 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 579
+    .line 580
     invoke-virtual {p0, v2}, Lcom/htc/widget/BinGridView;->setFocus(Z)V
 
     move-object v0, p6
 
-    .line 580
+    .line 581
     check-cast v0, Lcom/htc/widget/TaskInfo;
 
-    .line 581
+    .line 582
     .local v0, info:Lcom/htc/widget/TaskInfo;
     iget v1, v0, Lcom/htc/widget/TaskInfo;->isRemovable:I
 
     if-nez v1, :cond_0
 
-    .line 582
+    .line 583
     iput-boolean v2, p0, Lcom/htc/widget/BinGridView;->mIsUnremovable:Z
 
-    .line 586
+    .line 587
     :goto_0
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->invalidate()V
 
-    .line 587
+    .line 588
     return-void
 
-    .line 584
+    .line 585
     :cond_0
     const/4 v1, 0x0
 
@@ -1099,15 +1099,15 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 600
+    .line 601
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->setFocus(Z)V
 
-    .line 601
+    .line 602
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->invalidate()V
 
-    .line 602
+    .line 603
     return-void
 .end method
 
@@ -1121,7 +1121,7 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 593
+    .line 594
     return-void
 .end method
 
@@ -1135,36 +1135,36 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 530
+    .line 531
     const/4 v6, 0x2
 
     new-array v2, v6, [I
 
-    .line 532
+    .line 533
     .local v2, loc:[I
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->initFlags()V
 
-    .line 533
+    .line 534
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->endDragOneItem()V
 
-    .line 534
+    .line 535
     const/4 v6, 0x0
 
     invoke-virtual {p0, v6}, Lcom/htc/widget/BinGridView;->setDrawNextItem(Z)V
 
     move-object v6, p1
 
-    .line 536
+    .line 537
     check-cast v6, Lcom/htc/widget/DropTarget;
 
     if-eq p0, v6, :cond_1
 
     move-object v1, p6
 
-    .line 537
+    .line 538
     check-cast v1, Lcom/htc/widget/TaskInfo;
 
-    .line 539
+    .line 540
     .local v1, info:Lcom/htc/widget/TaskInfo;
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getAdapter()Landroid/widget/ListAdapter;
 
@@ -1172,13 +1172,13 @@
 
     check-cast v0, Lcom/htc/widget/BinAdapter;
 
-    .line 540
+    .line 541
     .local v0, adapter:Lcom/htc/widget/BinAdapter;
     invoke-virtual {v0}, Lcom/htc/widget/BinAdapter;->getUri()Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 541
+    .line 542
     .local v5, uri:Landroid/net/Uri;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1206,7 +1206,7 @@
 
     move-result-object v3
 
-    .line 542
+    .line 543
     .local v3, removeUri:Landroid/net/Uri;
     const-string v6, "gId"
 
@@ -1214,7 +1214,7 @@
 
     move-result-object v4
 
-    .line 543
+    .line 544
     .local v4, tabId:Ljava/lang/String;
     const-string v6, "remove"
 
@@ -1222,7 +1222,7 @@
 
     move-result-object v3
 
-    .line 544
+    .line 545
     invoke-virtual {v3}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v6
@@ -1237,18 +1237,18 @@
 
     move-result-object v3
 
-    .line 545
+    .line 546
     iput-object v3, p0, Lcom/htc/widget/BinGridView;->mRemoveUri:Landroid/net/Uri;
 
-    .line 546
+    .line 547
     iget-wide v6, v1, Lcom/htc/widget/TaskInfo;->_id:J
 
     iput-wide v6, p0, Lcom/htc/widget/BinGridView;->mDragId:J
 
-    .line 548
+    .line 549
     invoke-direct {p0, v2}, Lcom/htc/widget/BinGridView;->getLocationForNewItem([I)V
 
-    .line 549
+    .line 550
     iget-object v6, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
     check-cast v6, Lcom/htc/widget/CarouselHost;
@@ -1267,18 +1267,18 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/htc/widget/CarouselHost;->doAnimationForDragIcon(FF)V
 
-    .line 551
+    .line 552
     instance-of v6, p1, Lcom/htc/widget/CarouselWidget;
 
     if-eqz v6, :cond_0
 
-    .line 552
+    .line 553
     check-cast p1, Lcom/htc/widget/CarouselWidget;
 
     .end local p1
     invoke-virtual {p1, p0}, Lcom/htc/widget/CarouselWidget;->doAnimationForDifferentTarget(Lcom/htc/widget/DropTarget;)V
 
-    .line 558
+    .line 559
     .end local v0           #adapter:Lcom/htc/widget/BinAdapter;
     .end local v1           #info:Lcom/htc/widget/TaskInfo;
     .end local v3           #removeUri:Landroid/net/Uri;
@@ -1288,14 +1288,14 @@
     :goto_0
     return-void
 
-    .line 555
+    .line 556
     .restart local p1
     :cond_1
     iget-object v6, p0, Lcom/htc/widget/BinGridView;->mDragItemView:Landroid/view/View;
 
     invoke-virtual {v6, v2}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 556
+    .line 557
     iget-object v6, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
     check-cast v6, Lcom/htc/widget/CarouselHost;
@@ -1322,7 +1322,7 @@
     .parameter "target"
 
     .prologue
-    .line 496
+    .line 497
     if-eqz p1, :cond_0
 
     check-cast p1, Lcom/htc/widget/DragSource;
@@ -1330,33 +1330,33 @@
     .end local p1
     if-ne p0, p1, :cond_2
 
-    .line 497
+    .line 498
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDragItemView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 498
+    .line 499
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDragItemView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 499
+    .line 500
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
     check-cast v0, Lcom/htc/widget/CarouselHost;
 
     invoke-virtual {v0}, Lcom/htc/widget/CarouselHost;->removeIndicator()V
 
-    .line 502
+    .line 503
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->mDragItemView:Landroid/view/View;
 
-    .line 504
+    .line 505
     :cond_2
     return-void
 .end method
@@ -1367,34 +1367,34 @@
     .parameter "success"
 
     .prologue
-    .line 482
+    .line 483
     if-eqz p2, :cond_1
 
-    .line 483
+    .line 484
     check-cast p1, Lcom/htc/widget/DragSource;
 
     .end local p1
     if-ne p0, p1, :cond_0
 
-    .line 489
+    .line 490
     :cond_0
     :goto_0
     return-void
 
-    .line 485
+    .line 486
     .restart local p1
     :cond_1
     const/4 v1, 0x2
 
     new-array v0, v1, [I
 
-    .line 486
+    .line 487
     .local v0, loc:[I
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mDragItemView:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 487
+    .line 488
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
     check-cast v1, Lcom/htc/widget/CarouselHost;
@@ -1420,10 +1420,10 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 121
     invoke-virtual {p0, p0}, Lcom/htc/widget/BinGridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 121
+    .line 122
     return-void
 .end method
 
@@ -1435,7 +1435,7 @@
     .parameter "arg3"
 
     .prologue
-    .line 650
+    .line 651
     const/4 v0, 0x0
 
     return v0
@@ -1461,25 +1461,25 @@
     .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     const/4 v0, 0x0
 
-    .line 458
+    .line 459
     invoke-virtual {p2}, Landroid/view/View;->isInTouchMode()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 466
+    .line 467
     :goto_0
     return v0
 
-    .line 462
+    .line 463
     :cond_0
     iput-object p2, p0, Lcom/htc/widget/BinGridView;->mDragItemView:Landroid/view/View;
 
-    .line 463
+    .line 464
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->initFlags()V
 
-    .line 464
+    .line 465
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -1488,7 +1488,7 @@
 
     invoke-interface {v1, p2, p0, v2, v0}, Lcom/htc/widget/DragController;->startDrag(Landroid/view/View;Lcom/htc/widget/DragSource;Ljava/lang/Object;I)V
 
-    .line 466
+    .line 467
     const/4 v0, 0x1
 
     goto :goto_0
@@ -1499,7 +1499,7 @@
     .parameter "e"
 
     .prologue
-    .line 661
+    .line 662
     return-void
 .end method
 
@@ -1511,7 +1511,7 @@
     .parameter "arg3"
 
     .prologue
-    .line 671
+    .line 672
     const/4 v0, 0x0
 
     return v0
@@ -1524,7 +1524,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 683
+    .line 684
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -1543,27 +1543,27 @@
 
     iput v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchPosition:I
 
-    .line 685
+    .line 686
     iget v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchPosition:I
 
     if-ltz v0, :cond_1
 
-    .line 686
+    .line 687
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 687
+    .line 688
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setPressed(Z)V
 
-    .line 688
+    .line 689
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 691
+    .line 692
     :cond_0
     iget v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchPosition:I
 
@@ -1579,19 +1579,19 @@
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
 
-    .line 692
+    .line 693
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setPressed(Z)V
 
-    .line 693
+    .line 694
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 697
+    .line 698
     :cond_1
     iget v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchPosition:I
 
@@ -1613,24 +1613,24 @@
 
     if-nez v0, :cond_3
 
-    .line 707
+    .line 708
     :cond_2
     :goto_0
     return-void
 
-    .line 702
+    .line 703
     :cond_3
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->mDragItemView:Landroid/view/View;
 
-    .line 703
+    .line 704
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->initFlags()V
 
-    .line 704
+    .line 705
     invoke-virtual {p0, v3}, Lcom/htc/widget/BinGridView;->performHapticFeedback(I)Z
 
-    .line 706
+    .line 707
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mDownTouchView:Landroid/view/View;
@@ -1651,7 +1651,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 716
+    .line 717
     const/4 v0, 0x0
 
     return v0
@@ -1662,14 +1662,14 @@
     .parameter "event"
 
     .prologue
-    .line 625
+    .line 626
     iget-object v1, p0, Lcom/htc/widget/BinGridView;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v1, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 628
+    .line 629
     .local v0, retValue:Z
     return v0
 .end method
@@ -1678,17 +1678,17 @@
     .locals 2
 
     .prologue
-    .line 225
+    .line 226
     iget-boolean v0, p0, Lcom/htc/widget/BinGridView;->isPortrait:Z
 
     if-eqz v0, :cond_2
 
-    .line 227
+    .line 228
     iget v0, p0, Lcom/htc/widget/BinGridView;->portColumnNum:I
 
     if-gez v0, :cond_0
 
-    .line 228
+    .line 229
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1701,19 +1701,19 @@
 
     iput v0, p0, Lcom/htc/widget/BinGridView;->portColumnNum:I
 
-    .line 230
+    .line 231
     :cond_0
     iget v0, p0, Lcom/htc/widget/BinGridView;->portColumnNum:I
 
     iput v0, p0, Lcom/htc/widget/BinGridView;->numColumn:I
 
-    .line 240
+    .line 241
     :goto_0
     iget v0, p0, Lcom/htc/widget/BinGridView;->verticalPadding:I
 
     if-gez v0, :cond_1
 
-    .line 241
+    .line 242
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1726,37 +1726,37 @@
 
     iput v0, p0, Lcom/htc/widget/BinGridView;->verticalPadding:I
 
-    .line 243
+    .line 244
     :cond_1
     iget v0, p0, Lcom/htc/widget/BinGridView;->numColumn:I
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->setNumColumns(I)V
 
-    .line 244
+    .line 245
     iget v0, p0, Lcom/htc/widget/BinGridView;->verticalPadding:I
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->setVerticalSpacing(I)V
 
-    .line 245
+    .line 246
     const/16 v0, 0x11
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->setGravity(I)V
 
-    .line 246
+    .line 247
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->setStretchMode(I)V
 
-    .line 247
+    .line 248
     return-void
 
-    .line 234
+    .line 235
     :cond_2
     iget v0, p0, Lcom/htc/widget/BinGridView;->landColumnNum:I
 
     if-gez v0, :cond_3
 
-    .line 235
+    .line 236
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1769,7 +1769,7 @@
 
     iput v0, p0, Lcom/htc/widget/BinGridView;->landColumnNum:I
 
-    .line 237
+    .line 238
     :cond_3
     iget v0, p0, Lcom/htc/widget/BinGridView;->landColumnNum:I
 
@@ -1783,10 +1783,10 @@
     .parameter "dragger"
 
     .prologue
-    .line 474
+    .line 475
     iput-object p1, p0, Lcom/htc/widget/BinGridView;->mDragger:Lcom/htc/widget/DragController;
 
-    .line 475
+    .line 476
     return-void
 .end method
 
@@ -1799,25 +1799,25 @@
 
     const/4 v9, 0x0
 
-    .line 376
+    .line 377
     iget-boolean v8, p0, Lcom/htc/widget/BinGridView;->isDrawNextItem:Z
 
     if-ne v8, p1, :cond_0
 
-    .line 436
+    .line 437
     :goto_0
     return-void
 
-    .line 379
+    .line 380
     :cond_0
     iput-boolean p1, p0, Lcom/htc/widget/BinGridView;->isDrawNextItem:Z
 
-    .line 380
+    .line 381
     iget-boolean v8, p0, Lcom/htc/widget/BinGridView;->isDrawNextItem:Z
 
     if-ne v8, v12, :cond_8
 
-    .line 382
+    .line 383
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v8
@@ -1826,17 +1826,17 @@
 
     move-result v0
 
-    .line 383
+    .line 384
     .local v0, childCount:I
     const/4 v4, 0x0
 
-    .line 386
+    .line 387
     .local v4, columnWidth:I
     invoke-virtual {p0, v9}, Lcom/htc/widget/BinGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 387
+    .line 388
     .local v5, firstView:Landroid/view/View;
     add-int/lit8 v8, v0, -0x1
 
@@ -1844,13 +1844,13 @@
 
     move-result-object v6
 
-    .line 389
+    .line 390
     .local v6, previousView:Landroid/view/View;
     if-eqz v5, :cond_1
 
     if-nez v6, :cond_2
 
-    .line 392
+    .line 393
     :cond_1
     const-string v8, "Carousel"
 
@@ -1884,18 +1884,18 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
+    .line 395
     iput-boolean v9, p0, Lcom/htc/widget/BinGridView;->isDrawNextItem:Z
 
     goto :goto_0
 
-    .line 398
+    .line 399
     :cond_2
     iget v8, p0, Lcom/htc/widget/BinGridView;->verticalPadding:I
 
     if-gez v8, :cond_3
 
-    .line 399
+    .line 400
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -1908,13 +1908,13 @@
 
     iput v8, p0, Lcom/htc/widget/BinGridView;->verticalPadding:I
 
-    .line 402
+    .line 403
     :cond_3
     const/4 v8, 0x2
 
     if-ge v0, v8, :cond_5
 
-    .line 403
+    .line 404
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getWidth()I
 
     move-result v8
@@ -1937,19 +1937,19 @@
 
     div-int v4, v8, v10
 
-    .line 408
+    .line 409
     :goto_1
     iget v8, p0, Lcom/htc/widget/BinGridView;->numColumn:I
 
     div-int v7, v0, v8
 
-    .line 409
+    .line 410
     .local v7, row:I
     iget v8, p0, Lcom/htc/widget/BinGridView;->numColumn:I
 
     rem-int v3, v0, v8
 
-    .line 412
+    .line 413
     .local v3, col:I
     invoke-virtual {v6}, Landroid/view/View;->getTop()I
 
@@ -1970,7 +1970,7 @@
     :goto_2
     add-int v2, v10, v8
 
-    .line 413
+    .line 414
     .local v2, childTop:I
     if-nez v3, :cond_7
 
@@ -1980,24 +1980,24 @@
 
     move-result v1
 
-    .line 416
+    .line 417
     .local v1, childLeft:I
     :goto_3
     iget-object v8, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
     aput v1, v8, v9
 
-    .line 417
+    .line 418
     iget-object v8, p0, Lcom/htc/widget/BinGridView;->nextLocation:[I
 
     aput v2, v8, v12
 
-    .line 420
+    .line 421
     iget-object v8, p0, Lcom/htc/widget/BinGridView;->gridPoolIcon:Landroid/graphics/drawable/Drawable;
 
     if-nez v8, :cond_4
 
-    .line 421
+    .line 422
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -2010,7 +2010,7 @@
 
     iput-object v8, p0, Lcom/htc/widget/BinGridView;->gridPoolIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 424
+    .line 425
     :cond_4
     iget-object v8, p0, Lcom/htc/widget/BinGridView;->gridPoolIcon:Landroid/graphics/drawable/Drawable;
 
@@ -2028,7 +2028,7 @@
 
     invoke-virtual {v8, v1, v2, v9, v10}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 427
+    .line 428
     const-string v8, "Carousel"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2061,7 +2061,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
+    .line 436
     .end local v0           #childCount:I
     .end local v1           #childLeft:I
     .end local v2           #childTop:I
@@ -2075,7 +2075,7 @@
 
     goto/16 :goto_0
 
-    .line 405
+    .line 406
     .restart local v0       #childCount:I
     .restart local v4       #columnWidth:I
     .restart local v5       #firstView:Landroid/view/View;
@@ -2102,10 +2102,10 @@
     :cond_6
     move v8, v9
 
-    .line 412
+    .line 413
     goto :goto_2
 
-    .line 413
+    .line 414
     .restart local v2       #childTop:I
     :cond_7
     invoke-virtual {v6}, Landroid/view/View;->getLeft()I
@@ -2116,7 +2116,7 @@
 
     goto :goto_3
 
-    .line 432
+    .line 433
     .end local v0           #childCount:I
     .end local v2           #childTop:I
     .end local v3           #col:I
@@ -2139,10 +2139,10 @@
     .parameter "focus"
 
     .prologue
-    .line 132
+    .line 133
     iput-boolean p1, p0, Lcom/htc/widget/BinGridView;->mIsFocused:Z
 
-    .line 133
+    .line 134
     return-void
 .end method
 
@@ -2150,23 +2150,23 @@
     .locals 3
 
     .prologue
-    .line 294
+    .line 295
     iget-boolean v0, p0, Lcom/htc/widget/BinGridView;->isBinAdapter:Z
 
     if-nez v0, :cond_1
 
-    .line 308
+    .line 309
     :cond_0
     :goto_0
     return-void
 
-    .line 297
+    .line 298
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->binAdapter:Lcom/htc/widget/BinAdapter;
 
-    .line 298
+    .line 299
     invoke-virtual {p0}, Lcom/htc/widget/BinGridView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
@@ -2175,7 +2175,7 @@
 
     iput-object v0, p0, Lcom/htc/widget/BinGridView;->binAdapter:Lcom/htc/widget/BinAdapter;
 
-    .line 299
+    .line 300
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->binAdapter:Lcom/htc/widget/BinAdapter;
 
     if-eqz v0, :cond_0
@@ -2188,17 +2188,17 @@
 
     if-nez v0, :cond_0
 
-    .line 303
+    .line 304
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/BinGridView;->isBinAdapter:Z
 
-    .line 304
+    .line 305
     iget-object v0, p0, Lcom/htc/widget/BinGridView;->dummyAdapter:Landroid/widget/BaseAdapter;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/BinGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 307
+    .line 308
     const-string v0, "Carousel"
 
     new-instance v1, Ljava/lang/StringBuilder;

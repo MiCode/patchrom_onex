@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 7321
+    .line 7354
     iput-object p1, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "arg1"
 
     .prologue
-    .line 7323
+    .line 7356
     const-string v2, "EQStyleClickListener"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -76,7 +76,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7325
+    .line 7358
     iget-object v2, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v3, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
@@ -85,7 +85,7 @@
 
     iput v3, v2, Lcom/htc/music/HtcMusic;->mSelectEQIndex:I
 
-    .line 7326
+    .line 7359
     iget-object v2, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v3, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
@@ -93,13 +93,13 @@
     iget v3, v3, Lcom/htc/music/HtcMusic;->mTempSelectedEQIndex:I
 
     #setter for: Lcom/htc/music/HtcMusic;->mTempShowingEQIndex:I
-    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$8802(Lcom/htc/music/HtcMusic;I)I
+    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$8902(Lcom/htc/music/HtcMusic;I)I
 
-    .line 7327
+    .line 7360
     iget-object v2, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->LocalizedEqualizerStyle:[Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$8900(Lcom/htc/music/HtcMusic;)[Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$9000(Lcom/htc/music/HtcMusic;)[Ljava/lang/String;
 
     move-result-object v2
 
@@ -109,12 +109,12 @@
 
     aget-object v1, v2, v3
 
-    .line 7329
+    .line 7362
     .local v1, style:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mSoundEffectList:Ljava/util/ArrayList;
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$8500(Lcom/htc/music/HtcMusic;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$8600(Lcom/htc/music/HtcMusic;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -126,7 +126,7 @@
 
     check-cast v0, Lcom/htc/music/util/SoundEffectItem;
 
-    .line 7331
+    .line 7364
     .local v0, equalizerSettingItem:Lcom/htc/music/util/SoundEffectItem;
     iget-object v2, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -138,19 +138,19 @@
 
     iput-object v2, v0, Lcom/htc/music/util/SoundEffectItem;->mType:Ljava/lang/String;
 
-    .line 7332
+    .line 7365
     invoke-virtual {v0, v1}, Lcom/htc/music/util/SoundEffectItem;->setEqualizerStyle(Ljava/lang/String;)V
 
-    .line 7333
+    .line 7366
     iget-object v2, p0, Lcom/htc/music/HtcMusic$47;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mSoundEffectAdapter:Lcom/htc/music/widget/SoundEffectAdapter;
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$3500(Lcom/htc/music/HtcMusic;)Lcom/htc/music/widget/SoundEffectAdapter;
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$3600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/widget/SoundEffectAdapter;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lcom/htc/music/widget/SoundEffectAdapter;->notifyDataSetChanged()V
 
-    .line 7334
+    .line 7367
     return-void
 .end method

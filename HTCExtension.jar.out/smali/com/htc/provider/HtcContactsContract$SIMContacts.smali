@@ -45,7 +45,7 @@
     .locals 2
 
     .prologue
-    .line 2912
+    .line 2916
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "sim"
@@ -56,7 +56,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$SIMContacts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2949
+    .line 2953
     sget-object v0, Lcom/htc/provider/HtcContactsContract$SIMContacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "source_id"
@@ -67,7 +67,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$SIMContacts;->CONTENT_URI_SOURCE_ID:Landroid/net/Uri;
 
-    .line 2952
+    .line 2956
     sget-object v0, Lcom/htc/provider/HtcContactsContract$SIMContacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "source_id_account_type"
@@ -78,7 +78,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$SIMContacts;->CONTENT_URI_SOURCE_ID_ACCOUNT_TYPE:Landroid/net/Uri;
 
-    .line 2958
+    .line 2962
     sget-object v0, Lcom/htc/provider/HtcContactsContract$SIMContacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "import_all"
@@ -96,9 +96,9 @@
     .locals 0
 
     .prologue
-    .line 2892
+    .line 2896
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2893
+    .line 2897
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 642
+    .line 648
     iput-object p1, p0, Lcom/htc/app/HtcShutdownThread$6;->this$0:Lcom/htc/app/HtcShutdownThread;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,11 +40,11 @@
     .parameter "intent"
 
     .prologue
-    .line 645
+    .line 651
     iget-object v0, p0, Lcom/htc/app/HtcShutdownThread$6;->this$0:Lcom/htc/app/HtcShutdownThread;
 
     invoke-virtual {v0}, Lcom/htc/app/HtcShutdownThread;->actionDone()V
 
-    .line 646
+    .line 652
     return-void
 .end method

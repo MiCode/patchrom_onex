@@ -35,29 +35,29 @@
     .parameter "pm"
 
     .prologue
-    .line 835
+    .line 849
     const-string v0, "WindowManagerPolicy"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 830
+    .line 844
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mRunning:Z
 
-    .line 836
+    .line 850
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mPolicy:Landroid/view/WindowManagerPolicy;
 
-    .line 837
+    .line 851
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 838
+    .line 852
     iput-object p3, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mContext:Landroid/content/Context;
 
-    .line 839
+    .line 853
     iput-object p4, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mPM:Lcom/android/server/PowerManagerService;
 
-    .line 840
+    .line 854
     return-void
 .end method
 
@@ -67,27 +67,27 @@
     .locals 5
 
     .prologue
-    .line 843
+    .line 857
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 844
+    .line 858
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-static {p0, v0}, Lcom/android/internal/view/WindowManagerPolicyThread;->set(Ljava/lang/Thread;Landroid/os/Looper;)V
 
-    .line 848
+    .line 862
     const/4 v0, -0x2
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 850
+    .line 864
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/os/Process;->setCanSelfBackground(Z)V
 
-    .line 851
+    .line 865
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mPolicy:Landroid/view/WindowManagerPolicy;
 
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mContext:Landroid/content/Context;
@@ -100,45 +100,45 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Landroid/view/WindowManagerPolicy;->init(Landroid/content/Context;Landroid/view/IWindowManager;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;Landroid/os/LocalPowerManager;)V
 
-    .line 853
+    .line 867
     monitor-enter p0
 
-    .line 854
+    .line 868
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/wm/WindowManagerService$PolicyThread;->mRunning:Z
 
-    .line 855
+    .line 869
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 856
+    .line 870
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 859
+    .line 873
     invoke-static {}, Landroid/os/StrictMode;->conditionallyEnableDebugLogging()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 860
+    .line 874
     const-string v0, "WindowManager"
 
     const-string v1, "Enabled StrictMode for PolicyThread\'s Looper"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 863
+    .line 877
     :cond_0
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 864
+    .line 878
     return-void
 
-    .line 856
+    .line 870
     :catchall_0
     move-exception v0
 

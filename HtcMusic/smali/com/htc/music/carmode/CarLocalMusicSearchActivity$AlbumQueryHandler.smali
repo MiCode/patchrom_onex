@@ -25,17 +25,17 @@
     .parameter "res"
 
     .prologue
-    .line 1607
+    .line 1621
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    .line 1608
+    .line 1622
     const/4 v0, 0x0
 
     iget-boolean v1, p1, Lcom/htc/music/carmode/MusicMaActivity;->mIsEnhancerExist:Z
 
     invoke-direct {p0, p2, v0, v1}, Lcom/htc/music/util/DlArtAsyncQueryHandler;-><init>(Landroid/content/ContentResolver;ZZ)V
 
-    .line 1609
+    .line 1623
     return-void
 .end method
 
@@ -52,7 +52,7 @@
 
     const/4 v4, 0x0
 
-    .line 1613
+    .line 1627
     const-string v1, "[CarLocalMusicSearchActivity]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -75,7 +75,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1614
+    .line 1628
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mCurrentSearchToken:I
@@ -85,11 +85,11 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 1646
+    .line 1660
     :goto_0
     return-void
 
-    .line 1618
+    .line 1632
     :cond_0
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
@@ -100,7 +100,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1619
+    .line 1633
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
@@ -114,7 +114,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1620
+    .line 1634
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
@@ -124,7 +124,7 @@
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 1621
+    .line 1635
     :cond_1
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
@@ -133,19 +133,19 @@
     #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
     invoke-static {v1, v2}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$802(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 1624
+    .line 1638
     :cond_2
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
     invoke-static {v1, p3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$802(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 1625
+    .line 1639
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     iput-boolean v4, v1, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAsyncQuerying:Z
 
-    .line 1627
+    .line 1641
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
@@ -155,7 +155,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 1629
+    .line 1643
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     iget-object v2, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
@@ -174,7 +174,7 @@
     #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorIdIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1002(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
 
-    .line 1631
+    .line 1645
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     iget-object v2, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
@@ -193,7 +193,7 @@
     #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorAlbumIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1102(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
 
-    .line 1633
+    .line 1647
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     iget-object v2, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
@@ -212,7 +212,7 @@
     #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorArtIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1202(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
 
-    .line 1637
+    .line 1651
     :cond_3
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
@@ -225,11 +225,11 @@
 
     move-result-object v0
 
-    .line 1638
+    .line 1652
     .local v0, msg:Landroid/os/Message;
     iput v5, v0, Landroid/os/Message;->arg1:I
 
-    .line 1639
+    .line 1653
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mUiHandler:Landroid/os/Handler;
@@ -239,7 +239,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1641
+    .line 1655
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$AlbumQueryHandler;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #calls: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->handleProgress(Z)V

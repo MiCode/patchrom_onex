@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Bir çalma listesi ekle</string>
     <string name="htc_delete_playlists">Çalma listelerini sil</string>
     <string name="htc_delete_playlist">Çalma listesini sil</string>
+    <string name="htc_delete_all_playlists">Tüm çalma listelerini sil</string>
     <string name="htc_playlist_add_songs">Şarkı ekle</string>
     <string name="htc_playlist_del_songs">Şarkıları sil</string>
     <string name="htc_playlist_remove_songs">Şarkıları kaldır</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Arabl.alınıyor...</string>
     <string name="title_send_content">İçerik göndrlyr...</string>
     <string name="no_downloaded_apps_found">İndirilen uygulama bulunmadı</string>
+    <string name="music_folder_picker_dialog_msg">Klasör seçerek şarkılar çalma listesine eklensin mi? Şarkıları başka türlü eklemek için Hayır</string>
 </resources>

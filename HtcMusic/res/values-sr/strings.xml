@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Dodaj listu pesama</string>
     <string name="htc_delete_playlists">Izbriši liste pesama</string>
     <string name="htc_delete_playlist">Izbriši listu pesama</string>
+    <string name="htc_delete_all_playlists">Izbriši sve liste pesama</string>
     <string name="htc_playlist_add_songs">Dodaj pesme</string>
     <string name="htc_playlist_del_songs">Izbriši pesme</string>
     <string name="htc_playlist_remove_songs">Uklanjanje pesama</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Baferuje...</string>
     <string name="title_send_content">Šalje sadržaj...</string>
     <string name="no_downloaded_apps_found">Nisu pronađene preuzete aplikacije</string>
+    <string name="music_folder_picker_dialog_msg">Da li pesme dodati u listu pesama putem izbora fascikle? Ne, pesme dodati na drugi način</string>
 </resources>

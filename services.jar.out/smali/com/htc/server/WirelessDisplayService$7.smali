@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1778
+    .line 2014
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,97 +35,110 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 5
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 1781
-    const-string v2, "WirelessDisplayService"
+    const/16 v4, 0xb
 
-    const-string v3, "Receive com.htc.wifidisplay.SWITCH_ON_OFF_MIRROR_MODE intent."
+    .line 2017
+    iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v1}, Lcom/htc/server/WirelessDisplayService;->access$400(Lcom/htc/server/WirelessDisplayService;)Landroid/net/wifi/WifiManager;
 
-    .line 1782
+    const-string v1, "wifi_state"
+
     iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
 
-    #getter for: Lcom/htc/server/WirelessDisplayService;->mMirrorOnOff:Ljava/util/concurrent/atomic/AtomicBoolean;
-    invoke-static {v2}, Lcom/htc/server/WirelessDisplayService;->access$1300(Lcom/htc/server/WirelessDisplayService;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v2}, Lcom/htc/server/WirelessDisplayService;->access$400(Lcom/htc/server/WirelessDisplayService;)Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 2018
+    .local v0, state:I
+    const-string v1, "WirelessDisplayService"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "WIFI Hotspot state change, is DFS: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6800()Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result v2
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    .line 1783
-    const-string v2, "WirelessDisplayService"
+    move-result v3
 
-    const-string v3, "Stop mirror mode from notification indicator."
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v2
 
-    .line 1784
-    iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
+    const-string v3, ", state: "
 
-    const/4 v3, 0x0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Lcom/htc/server/WirelessDisplayService;->mirrorModeStartStop(Z)Z
+    move-result-object v2
 
-    .line 1797
-    :goto_0
-    return-void
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1788
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2019
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6800()Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v1}, Lcom/htc/server/WirelessDisplayService;->access$400(Lcom/htc/server/WirelessDisplayService;)Landroid/net/wifi/WifiManager;
+
+    if-ne v0, v4, :cond_0
+
+    .line 2020
+    iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v1}, Lcom/htc/server/WirelessDisplayService;->access$400(Lcom/htc/server/WirelessDisplayService;)Landroid/net/wifi/WifiManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->reconnect()Z
+
+    .line 2021
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6800()Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 2023
     :cond_0
-    const-string v2, "WirelessDisplayService"
-
-    const-string v3, "Sending connecting intent from notification indicator."
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1789
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "com.htc.wifidisplay.CONFIGURE_MODE_NOTIFICATION_MIRROR"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 1790
-    .local v1, connectingIntent:Landroid/content/Intent;
-    const/high16 v2, 0x1000
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 1792
-    :try_start_0
-    iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
-
-    #getter for: Lcom/htc/server/WirelessDisplayService;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/htc/server/WirelessDisplayService;->access$1800(Lcom/htc/server/WirelessDisplayService;)Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 1793
-    :catch_0
-    move-exception v0
-
-    .line 1794
-    .local v0, ae:Landroid/content/ActivityNotFoundException;
-    const-string v2, "WirelessDisplayService"
-
-    const-string v3, "ActivityNotFoundException, intent: com.htc.wifidisplay.CONFIGURE_MODE_NOTIFICATION_MIRROR"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    return-void
 .end method

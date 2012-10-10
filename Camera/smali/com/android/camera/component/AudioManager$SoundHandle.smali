@@ -38,19 +38,19 @@
     .parameter "soundId"
 
     .prologue
-    .line 68
+    .line 70
     invoke-direct {p0, p1}, Lcom/android/camera/Handle;-><init>(Ljava/lang/String;)V
 
-    .line 60
+    .line 62
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/AudioManager$SoundHandle;->pendingStreams:Ljava/util/ArrayList;
 
-    .line 69
+    .line 71
     iput p2, p0, Lcom/android/camera/component/AudioManager$SoundHandle;->soundId:I
 
-    .line 70
+    .line 72
     return-void
 .end method

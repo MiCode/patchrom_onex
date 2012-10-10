@@ -82,7 +82,7 @@
 
     const/4 v3, 0x0
 
-    .line 138
+    .line 149
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "BROWSER_SNAP_CENTER"
@@ -91,7 +91,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->BROWSER_SNAP_CENTER:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 139
+    .line 150
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "BROWSER_TEXT_SIZE_CHANGE"
@@ -100,7 +100,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->BROWSER_TEXT_SIZE_CHANGE:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 140
+    .line 151
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "BROWSER_ZOOM_OVERVIEW"
@@ -109,7 +109,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->BROWSER_ZOOM_OVERVIEW:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 142
+    .line 153
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "CRASHES_REPORTED"
@@ -118,7 +118,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->CRASHES_REPORTED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 143
+    .line 154
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "CRASHES_TRUNCATED"
@@ -127,7 +127,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->CRASHES_TRUNCATED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 144
+    .line 155
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "ELAPSED_REALTIME_SEC"
@@ -138,7 +138,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->ELAPSED_REALTIME_SEC:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 145
+    .line 156
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "ELAPSED_UPTIME_SEC"
@@ -149,7 +149,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->ELAPSED_UPTIME_SEC:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 146
+    .line 157
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "HTTP_REQUEST"
@@ -160,7 +160,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->HTTP_REQUEST:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 147
+    .line 158
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "HTTP_REUSED"
@@ -171,7 +171,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->HTTP_REUSED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 148
+    .line 159
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "HTTP_STATUS"
@@ -182,7 +182,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->HTTP_STATUS:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 149
+    .line 160
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "PHONE_GSM_REGISTERED"
@@ -193,7 +193,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->PHONE_GSM_REGISTERED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 150
+    .line 161
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "PHONE_GPRS_ATTEMPTED"
@@ -204,7 +204,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->PHONE_GPRS_ATTEMPTED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 151
+    .line 162
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "PHONE_GPRS_CONNECTED"
@@ -215,7 +215,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->PHONE_GPRS_CONNECTED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 152
+    .line 163
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "PHONE_RADIO_RESETS"
@@ -226,7 +226,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->PHONE_RADIO_RESETS:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 153
+    .line 164
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "TEST"
@@ -237,7 +237,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->TEST:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 154
+    .line 165
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "NETWORK_RX_MOBILE"
@@ -248,7 +248,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->NETWORK_RX_MOBILE:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 155
+    .line 166
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "NETWORK_TX_MOBILE"
@@ -259,7 +259,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->NETWORK_TX_MOBILE:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 156
+    .line 167
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "PHONE_CDMA_REGISTERED"
@@ -270,7 +270,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->PHONE_CDMA_REGISTERED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 157
+    .line 168
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "PHONE_CDMA_DATA_ATTEMPTED"
@@ -281,7 +281,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->PHONE_CDMA_DATA_ATTEMPTED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 158
+    .line 169
     new-instance v0, Landroid/provider/Checkin$Stats$Tag;
 
     const-string v1, "PHONE_CDMA_DATA_CONNECTED"
@@ -292,7 +292,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Stats$Tag;->PHONE_CDMA_DATA_CONNECTED:Landroid/provider/Checkin$Stats$Tag;
 
-    .line 137
+    .line 148
     const/16 v0, 0x14
 
     new-array v0, v0, [Landroid/provider/Checkin$Stats$Tag;
@@ -423,7 +423,7 @@
     .end annotation
 
     .prologue
-    .line 137
+    .line 148
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -434,7 +434,7 @@
     .parameter "name"
 
     .prologue
-    .line 137
+    .line 148
     const-class v0, Landroid/provider/Checkin$Stats$Tag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -450,7 +450,7 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 148
     sget-object v0, Landroid/provider/Checkin$Stats$Tag;->$VALUES:[Landroid/provider/Checkin$Stats$Tag;
 
     invoke-virtual {v0}, [Landroid/provider/Checkin$Stats$Tag;->clone()Ljava/lang/Object;

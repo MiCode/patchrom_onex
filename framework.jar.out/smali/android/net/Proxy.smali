@@ -104,7 +104,7 @@
 
     .prologue
     .line 186
-    const-string/jumbo v1, "http.proxyHost"
+    const-string v1, "http.proxyHost"
 
     invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
@@ -148,7 +148,7 @@
     .end local v0           #e:Ljava/lang/NumberFormatException;
     :cond_0
     :try_start_0
-    const-string/jumbo v2, "http.proxyPort"
+    const-string v2, "http.proxyPort"
 
     invoke-static {v2}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
@@ -478,7 +478,7 @@
 
     .line 248
     :try_start_0
-    const-string/jumbo v2, "localhost"
+    const-string v2, "localhost"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -587,12 +587,12 @@
     if-eqz p0, :cond_1
 
     .line 356
-    const-string/jumbo v0, "http.proxyHost"
+    const-string v0, "http.proxyHost"
 
     invoke-static {v0, p0}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 357
-    const-string/jumbo v0, "https.proxyHost"
+    const-string v0, "https.proxyHost"
 
     invoke-static {v0, p0}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -601,12 +601,12 @@
     if-eqz p1, :cond_2
 
     .line 363
-    const-string/jumbo v0, "http.proxyPort"
+    const-string v0, "http.proxyPort"
 
     invoke-static {v0, p1}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 364
-    const-string/jumbo v0, "https.proxyPort"
+    const-string v0, "https.proxyPort"
 
     invoke-static {v0, p1}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -615,12 +615,12 @@
     if-eqz p2, :cond_3
 
     .line 370
-    const-string/jumbo v0, "http.nonProxyHosts"
+    const-string v0, "http.nonProxyHosts"
 
     invoke-static {v0, p2}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 371
-    const-string/jumbo v0, "https.nonProxyHosts"
+    const-string v0, "https.nonProxyHosts"
 
     invoke-static {v0, p2}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -630,12 +630,12 @@
 
     .line 359
     :cond_1
-    const-string/jumbo v0, "http.proxyHost"
+    const-string v0, "http.proxyHost"
 
     invoke-static {v0}, Ljava/lang/System;->clearProperty(Ljava/lang/String;)Ljava/lang/String;
 
     .line 360
-    const-string/jumbo v0, "https.proxyHost"
+    const-string v0, "https.proxyHost"
 
     invoke-static {v0}, Ljava/lang/System;->clearProperty(Ljava/lang/String;)Ljava/lang/String;
 
@@ -643,12 +643,12 @@
 
     .line 366
     :cond_2
-    const-string/jumbo v0, "http.proxyPort"
+    const-string v0, "http.proxyPort"
 
     invoke-static {v0}, Ljava/lang/System;->clearProperty(Ljava/lang/String;)Ljava/lang/String;
 
     .line 367
-    const-string/jumbo v0, "https.proxyPort"
+    const-string v0, "https.proxyPort"
 
     invoke-static {v0}, Ljava/lang/System;->clearProperty(Ljava/lang/String;)Ljava/lang/String;
 
@@ -656,12 +656,12 @@
 
     .line 373
     :cond_3
-    const-string/jumbo v0, "http.nonProxyHosts"
+    const-string v0, "http.nonProxyHosts"
 
     invoke-static {v0}, Ljava/lang/System;->clearProperty(Ljava/lang/String;)Ljava/lang/String;
 
     .line 374
-    const-string/jumbo v0, "https.nonProxyHosts"
+    const-string v0, "https.nonProxyHosts"
 
     invoke-static {v0}, Ljava/lang/System;->clearProperty(Ljava/lang/String;)Ljava/lang/String;
 

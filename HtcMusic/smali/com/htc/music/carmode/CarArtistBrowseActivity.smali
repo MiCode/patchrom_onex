@@ -126,7 +126,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1035
+    .line 1047
     if-gez p1, :cond_0
 
     iget-object v4, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -137,11 +137,11 @@
 
     if-lt p1, v4, :cond_0
 
-    .line 1055
+    .line 1067
     :goto_0
     return-object v3
 
-    .line 1037
+    .line 1049
     :cond_0
     iget-object v4, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -149,7 +149,7 @@
 
     move-result-object v1
 
-    .line 1038
+    .line 1050
     .local v1, artistId:Ljava/lang/String;
     iget-object v4, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -157,7 +157,7 @@
 
     move-result-object v0
 
-    .line 1040
+    .line 1052
     .local v0, artist:Ljava/lang/String;
     iget-object v4, p0, Lcom/htc/music/carmode/CarArtistBrowseActivity;->mAlbumCols:[Ljava/lang/String;
 
@@ -165,7 +165,7 @@
 
     move-result-object v2
 
-    .line 1041
+    .line 1053
     .local v2, cursor:Landroid/database/Cursor;
     if-eqz v2, :cond_1
 
@@ -175,14 +175,14 @@
 
     if-nez v4, :cond_2
 
-    .line 1042
+    .line 1054
     :cond_1
     const/4 v2, 0x0
 
-    .line 1043
+    .line 1055
     goto :goto_0
 
-    .line 1048
+    .line 1060
     :cond_2
     const/4 v4, 0x0
 
@@ -190,11 +190,11 @@
 
     move-result-object v3
 
-    .line 1054
+    .line 1066
     .local v3, ret:Landroid/database/Cursor;
     const/4 v2, 0x0
 
-    .line 1055
+    .line 1067
     goto :goto_0
 .end method
 
@@ -209,29 +209,29 @@
 
     const/4 v4, 0x0
 
-    .line 973
+    .line 981
     invoke-direct {p0, p3, v4}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->getArtistAlbumsCursor(Ljava/lang/String;Z)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 975
+    .line 983
     .local v0, ret:Landroid/database/Cursor;
     invoke-direct {p0, p3, v5}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->getArtistAlbumsCursor(Ljava/lang/String;Z)Landroid/database/Cursor;
 
     move-result-object v2
 
-    .line 976
+    .line 984
     .local v2, unknown:Landroid/database/Cursor;
     if-eqz v2, :cond_0
 
-    .line 977
+    .line 985
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
     move-result v3
 
     if-lez v3, :cond_1
 
-    .line 978
+    .line 986
     new-instance v1, Landroid/database/MergeCursor;
 
     const/4 v3, 0x2
@@ -248,18 +248,18 @@
     .local v1, ret:Landroid/database/Cursor;
     move-object v0, v1
 
-    .line 987
+    .line 995
     .end local v1           #ret:Landroid/database/Cursor;
     .restart local v0       #ret:Landroid/database/Cursor;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 982
+    .line 990
     :cond_1
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 983
+    .line 991
     const/4 v2, 0x0
 
     goto :goto_0
@@ -271,12 +271,12 @@
     .parameter "unknown"
 
     .prologue
-    .line 991
+    .line 999
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 992
+    .line 1000
     .local v7, where:Ljava/lang/StringBuilder;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -304,32 +304,24 @@
 
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 993
+    .line 1001
     const-string v0, " AND album != \'\'"
 
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 994
+    .line 1002
     if-nez p2, :cond_1
 
-    .line 995
+    .line 1003
     const-string v0, " AND album != \'<unknown>\'"
 
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 998
+    .line 1010
     :goto_0
     const-string v0, "external"
 
-    invoke-static {p1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v1
-
-    invoke-static {v0, v1, v2}, Landroid/provider/MediaStore$Audio$Artists$Albums;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
+    invoke-static {v0, p1}, Lcom/htc/music/carmode/util/CarMusicUtils$Artists2$Albums;->getContentUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -349,7 +341,7 @@
 
     move-result-object v6
 
-    .line 1002
+    .line 1014
     .local v6, ret:Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -365,7 +357,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1003
+    .line 1015
     invoke-virtual {p0}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -374,11 +366,11 @@
 
     move-result-object v6
 
-    .line 1006
+    .line 1018
     :cond_0
     return-object v6
 
-    .line 997
+    .line 1005
     .end local v6           #ret:Landroid/database/Cursor;
     :cond_1
     const-string v0, " AND album = \'<unknown>\'"
@@ -394,14 +386,14 @@
     .parameter "filterstring"
 
     .prologue
-    .line 1095
+    .line 1107
     const-string v1, "[ArtistBrowserActivityExpGrid]"
 
     const-string v2, "@@@@ getArtistCursor() - start"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1097
+    .line 1109
     if-eqz p2, :cond_0
 
     const-string v1, ""
@@ -414,16 +406,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 1098
+    .line 1110
     const/16 p2, 0x0
 
-    .line 1100
+    .line 1112
     :cond_0
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1101
+    .line 1113
     .local v17, where:Ljava/lang/StringBuilder;
     const-string v1, "artist != \'\' "
 
@@ -431,23 +423,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1102
+    .line 1114
     const-string v1, " AND artist != \'<unknown>\'"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1104
+    .line 1116
     const/4 v7, 0x0
 
-    .line 1105
+    .line 1117
     .local v7, keywords:[Ljava/lang/String;
     if-nez p2, :cond_2
 
     const/4 v13, 0x1
 
-    .line 1106
+    .line 1118
     .local v13, searchContainsUnkown:Z
     :goto_0
     if-eqz p2, :cond_4
@@ -458,7 +450,7 @@
 
     if-lez v1, :cond_4
 
-    .line 1108
+    .line 1120
     const v1, 0x7f07004d
 
     move-object/from16 v0, p0
@@ -471,7 +463,7 @@
 
     move-result-object v16
 
-    .line 1109
+    .line 1121
     .local v16, unknownArtist:Ljava/lang/String;
     const-string v1, " "
 
@@ -481,24 +473,24 @@
 
     move-result-object v14
 
-    .line 1110
+    .line 1122
     .local v14, searchWords:[Ljava/lang/String;
     array-length v1, v14
 
     new-array v7, v1, [Ljava/lang/String;
 
-    .line 1111
+    .line 1123
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v9
 
-    .line 1112
+    .line 1124
     .local v9, col:Ljava/text/Collator;
     const/4 v1, 0x0
 
     invoke-virtual {v9, v1}, Ljava/text/Collator;->setStrength(I)V
 
-    .line 1113
+    .line 1125
     const/4 v10, 0x0
 
     .local v10, i:I
@@ -507,7 +499,7 @@
 
     if-ge v10, v1, :cond_3
 
-    .line 1114
+    .line 1126
     aget-object v1, v14, v10
 
     invoke-virtual {v1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -522,10 +514,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1115
+    .line 1127
     const/4 v13, 0x1
 
-    .line 1116
+    .line 1128
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -555,12 +547,12 @@
 
     aput-object v1, v7, v10
 
-    .line 1113
+    .line 1125
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 1105
+    .line 1117
     .end local v9           #col:Ljava/text/Collator;
     .end local v10           #i:I
     .end local v13           #searchContainsUnkown:Z
@@ -571,7 +563,7 @@
 
     goto :goto_0
 
-    .line 1118
+    .line 1130
     .restart local v9       #col:Ljava/text/Collator;
     .restart local v10       #i:I
     .restart local v13       #searchContainsUnkown:Z
@@ -585,26 +577,26 @@
 
     if-ge v10, v1, :cond_4
 
-    .line 1119
+    .line 1131
     const-string v1, " AND "
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1124
+    .line 1136
     const-string v1, "artist LIKE ?"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1118
+    .line 1130
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
-    .line 1128
+    .line 1140
     .end local v9           #col:Ljava/text/Collator;
     .end local v10           #i:I
     .end local v14           #searchWords:[Ljava/lang/String;
@@ -614,7 +606,7 @@
 
     move-result-object v6
 
-    .line 1130
+    .line 1142
     .local v6, whereclause:Ljava/lang/String;
     const-string v1, "[ArtistBrowserActivityExpGrid]"
 
@@ -622,33 +614,33 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1131
+    .line 1143
     const/4 v11, 0x0
 
-    .line 1132
+    .line 1144
     .local v11, ret:Landroid/database/Cursor;
     if-eqz p1, :cond_7
 
-    .line 1133
+    .line 1145
     const-string v1, "[ArtistBrowserActivityExpGrid]"
 
     const-string v2, "getArtistCursor() - 2"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1134
+    .line 1146
     const/4 v1, 0x1
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->setAsyncQueryStatus(Z)V
 
-    .line 1135
+    .line 1149
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    sget-object v4, Landroid/provider/MediaStore$Audio$Artists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    sget-object v4, Lcom/htc/music/carmode/util/CarMusicUtils$Artists2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     move-object/from16 v0, p0
 
@@ -660,25 +652,25 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/htc/music/util/DlArtAsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1151
+    .line 1167
     :cond_5
     :goto_3
     if-eqz v11, :cond_6
 
     if-eqz p1, :cond_6
 
-    .line 1152
+    .line 1168
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v11, v1}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->init(Landroid/database/Cursor;Z)V
 
-    .line 1156
+    .line 1172
     :cond_6
     return-object v11
 
-    .line 1138
+    .line 1152
     :cond_7
     const-string v1, "[ArtistBrowserActivityExpGrid]"
 
@@ -686,8 +678,8 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1139
-    sget-object v4, Landroid/provider/MediaStore$Audio$Artists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    .line 1155
+    sget-object v4, Lcom/htc/music/carmode/util/CarMusicUtils$Artists2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     move-object/from16 v0, p0
 
@@ -701,10 +693,10 @@
 
     move-result-object v11
 
-    .line 1141
+    .line 1157
     if-eqz v13, :cond_5
 
-    .line 1142
+    .line 1158
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
@@ -713,11 +705,11 @@
 
     move-result-object v15
 
-    .line 1143
+    .line 1159
     .local v15, unknown:Landroid/database/Cursor;
     if-eqz v15, :cond_5
 
-    .line 1144
+    .line 1160
     new-instance v12, Landroid/database/MergeCursor;
 
     const/4 v1, 0x2
@@ -1572,28 +1564,28 @@
 
     const/4 v5, 0x0
 
-    .line 1015
+    .line 1027
     if-nez p1, :cond_0
 
-    .line 1029
+    .line 1041
     .end local p1
     :goto_0
     return-object p1
 
-    .line 1017
+    .line 1029
     .restart local p1
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1018
+    .line 1030
     .local v0, albumList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/ArrayList;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1019
+    .line 1031
     .local v2, row:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     new-instance v2, Ljava/util/ArrayList;
 
@@ -1604,7 +1596,7 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1020
+    .line 1032
     .restart local v2       #row:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     new-instance v3, Ljava/lang/Integer;
 
@@ -1612,51 +1604,51 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1021
+    .line 1033
     iget-object v3, p0, Lcom/htc/music/carmode/CarArtistBrowseActivity;->mAllSongsLabel:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1022
+    .line 1034
     invoke-virtual {v2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1023
+    .line 1035
     new-instance v3, Ljava/lang/Integer;
 
     invoke-direct {v3, p4}, Ljava/lang/Integer;-><init>(I)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1024
+    .line 1036
     new-instance v3, Ljava/lang/Integer;
 
     invoke-direct {v3, v5}, Ljava/lang/Integer;-><init>(I)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1025
+    .line 1037
     new-instance v3, Ljava/lang/Integer;
 
     invoke-direct {v3, v5}, Ljava/lang/Integer;-><init>(I)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1026
+    .line 1038
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1027
+    .line 1039
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1028
+    .line 1040
     new-instance v1, Lcom/htc/music/util/ArrayListCursor;
 
     iget-object v3, p0, Lcom/htc/music/carmode/CarArtistBrowseActivity;->mAlbumCols:[Ljava/lang/String;
 
     invoke-direct {v1, v3, v0}, Lcom/htc/music/util/ArrayListCursor;-><init>([Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 1029
+    .line 1041
     .local v1, albumListCursor:Lcom/htc/music/util/ArrayListCursor;
     new-instance v3, Landroid/database/MergeCursor;
 
@@ -1840,7 +1832,7 @@
     .locals 1
 
     .prologue
-    .line 1204
+    .line 1223
     const/4 v0, 0x1
 
     return v0
@@ -1850,7 +1842,7 @@
     .locals 1
 
     .prologue
-    .line 1209
+    .line 1228
     const/4 v0, 0x1
 
     return v0
@@ -1860,7 +1852,7 @@
     .locals 2
 
     .prologue
-    .line 1090
+    .line 1102
     iget-object v0, p0, Lcom/htc/music/carmode/CarArtistBrowseActivity;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
     const/4 v1, 0x0
@@ -1879,8 +1871,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1161
-    sget-object v1, Landroid/provider/MediaStore$Audio$Artists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    .line 1180
+    sget-object v1, Lcom/htc/music/carmode/util/CarMusicUtils$Artists2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     iget-object v2, p0, Lcom/htc/music/carmode/CarArtistBrowseActivity;->mArtistCols:[Ljava/lang/String;
 
@@ -1894,7 +1886,7 @@
 
     move-result-object v6
 
-    .line 1164
+    .line 1183
     .local v6, cur:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -1910,37 +1902,37 @@
 
     const/4 v2, -0x1
 
-    .line 946
+    .line 954
     sparse-switch p1, :sswitch_data_0
 
-    .line 962
+    .line 970
     :cond_0
     :goto_0
     return-void
 
-    .line 948
+    .line 956
     :sswitch_0
     if-ne p2, v2, :cond_0
 
-    .line 949
+    .line 957
     const/4 v2, 0x0
 
     invoke-direct {p0, v3, v2}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->getSelectList(ZLcom/htc/music/NpCategory;)[I
 
     move-result-object v0
 
-    .line 950
+    .line 958
     .local v0, list:[I
     if-eqz v0, :cond_0
 
-    .line 951
+    .line 959
     const-string v2, "playlist"
 
     invoke-virtual {p3, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 952
+    .line 960
     .local v1, playlist:I
     int-to-long v2, v1
 
@@ -1948,18 +1940,18 @@
 
     goto :goto_0
 
-    .line 957
+    .line 965
     .end local v0           #list:[I
     .end local v1           #playlist:I
     :sswitch_1
     if-ne p2, v2, :cond_0
 
-    .line 958
+    .line 966
     invoke-virtual {p0}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->finish()V
 
     goto :goto_0
 
-    .line 946
+    .line 954
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -2101,31 +2093,31 @@
     .parameter "adjustedIndex"
 
     .prologue
-    .line 1195
+    .line 1214
     iget-object v1, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridViewHandler:Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1196
+    .line 1215
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x4
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 1197
+    .line 1216
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1198
+    .line 1217
     iput p2, v0, Landroid/os/Message;->arg2:I
 
-    .line 1199
+    .line 1218
     iget-object v1, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridViewHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1200
+    .line 1219
     return-void
 .end method
 
@@ -2201,11 +2193,11 @@
     .prologue
     const/16 v9, 0xb
 
-    const/4 v8, 0x2
+    const/4 v8, 0x0
 
     const/4 v7, 0x0
 
-    const/4 v6, 0x0
+    const/4 v6, 0x2
 
     .line 573
     iget v3, p1, Landroid/os/Message;->arg1:I
@@ -2249,7 +2241,7 @@
     .line 580
     const-string v3, "pickermode"
 
-    invoke-virtual {v0, v3, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 581
     const/16 v3, 0xf
@@ -2317,7 +2309,7 @@
 
     move-result v4
 
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->getSongListForArtist(Landroid/content/Context;I)[I
+    invoke-static {v3, v6, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->getSongListForArtist(Landroid/content/Context;II)[I
 
     move-result-object v1
 
@@ -2327,7 +2319,7 @@
 
     new-instance v4, Lcom/htc/music/NpCategory;
 
-    invoke-direct {v4, v8}, Lcom/htc/music/NpCategory;-><init>(S)V
+    invoke-direct {v4, v6}, Lcom/htc/music/NpCategory;-><init>(S)V
 
     iget-object v5, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mCurrentArtistId:Ljava/lang/String;
 
@@ -2335,7 +2327,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v1, v6, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->playAllAndPrepare(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
+    invoke-static {v3, v1, v7, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->playAllAndPrepare(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
 
     goto :goto_0
 
@@ -2348,11 +2340,11 @@
 
     iget-object v5, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mCurrentArtistId:Ljava/lang/String;
 
-    invoke-static {v4, v5, v7, v7}, Lcom/htc/music/carmode/util/CarMusicUtils;->getQueryString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5, v8, v8}, Lcom/htc/music/carmode/util/CarMusicUtils;->getQueryString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->getSongListForAlbum(Landroid/content/Context;Ljava/lang/String;)[I
+    invoke-static {v3, v6, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->getSongListForAlbum(Landroid/content/Context;ILjava/lang/String;)[I
 
     move-result-object v1
 
@@ -2376,7 +2368,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v1, v6, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->playAllAndPrepare(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
+    invoke-static {v3, v1, v7, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->playAllAndPrepare(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
 
     goto :goto_0
 
@@ -2411,11 +2403,11 @@
 
     iget-object v5, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mCurrentArtistId:Ljava/lang/String;
 
-    invoke-static {v4, v5, v7, v7}, Lcom/htc/music/carmode/util/CarMusicUtils;->getQueryString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5, v8, v8}, Lcom/htc/music/carmode/util/CarMusicUtils;->getQueryString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->getSongListForAlbum(Landroid/content/Context;Ljava/lang/String;)[I
+    invoke-static {v3, v6, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->getSongListForAlbum(Landroid/content/Context;ILjava/lang/String;)[I
 
     move-result-object v1
 
@@ -2439,7 +2431,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v1, v6, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->playAllAndPrepare(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
+    invoke-static {v3, v1, v7, v4}, Lcom/htc/music/carmode/util/CarMusicUtils;->playAllAndPrepare(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
 
     goto/16 :goto_0
 
@@ -2448,7 +2440,7 @@
     :cond_4
     iget-object v3, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
-    invoke-virtual {v3, v6}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->resumePreparator(Z)V
+    invoke-virtual {v3, v7}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->resumePreparator(Z)V
 
     .line 618
     iget-object v3, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -2529,28 +2521,28 @@
     .parameter "clickIndex"
 
     .prologue
-    .line 966
+    .line 974
     iget-object v1, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridViewHandler:Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 967
+    .line 975
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 968
+    .line 976
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 969
+    .line 977
     iget-object v1, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridViewHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 970
+    .line 978
     return-void
 .end method
 
@@ -2584,8 +2576,8 @@
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 910
-    sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    .line 914
+    sget-object v1, Lcom/htc/music/carmode/util/CarMusicUtils$Media2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v0, 0x2
 
@@ -2617,28 +2609,28 @@
 
     move-result-object v7
 
-    .line 914
+    .line 918
     const/4 v9, 0x0
 
-    .line 915
+    .line 919
     .local v9, unknown:Landroid/database/Cursor;
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 916
+    .line 920
     .local v11, whereUnknown:Ljava/lang/StringBuilder;
     const-string v0, "is_music>=1"
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 917
+    .line 921
     const-string v0, " AND artist= \'<unknown>\'"
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 918
-    sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    .line 922
+    sget-object v1, Lcom/htc/music/carmode/util/CarMusicUtils$Media2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v0, 0x2
 
@@ -2670,12 +2662,12 @@
 
     move-result-object v9
 
-    .line 923
+    .line 931
     if-eqz v7, :cond_2
 
     if-eqz v9, :cond_2
 
-    .line 924
+    .line 932
     new-instance v8, Landroid/database/MergeCursor;
 
     const/4 v0, 0x2
@@ -2696,17 +2688,17 @@
     .local v8, cursor:Landroid/database/Cursor;
     move-object v7, v8
 
-    .line 928
+    .line 936
     .end local v8           #cursor:Landroid/database/Cursor;
     .restart local v7       #cursor:Landroid/database/Cursor;
     :cond_0
     :goto_0
     if-eqz v7, :cond_1
 
-    .line 929
+    .line 937
     const/4 v6, 0x0
 
-    .line 931
+    .line 939
     .local v6, category:Lcom/htc/music/NpCategory;
     new-instance v6, Lcom/htc/music/NpCategory;
 
@@ -2715,37 +2707,37 @@
 
     invoke-direct {v6, v0}, Lcom/htc/music/NpCategory;-><init>(S)V
 
-    .line 933
+    .line 941
     .restart local v6       #category:Lcom/htc/music/NpCategory;
     if-eqz p1, :cond_3
 
-    .line 934
+    .line 942
     invoke-static {p0, v7, v6}, Lcom/htc/music/carmode/util/CarMusicUtils;->shuffleAll(Landroid/content/Context;Landroid/database/Cursor;Lcom/htc/music/NpCategory;)V
 
-    .line 937
+    .line 945
     :goto_1
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 938
+    .line 946
     const/4 v7, 0x0
 
-    .line 940
+    .line 948
     .end local v6           #category:Lcom/htc/music/NpCategory;
     :cond_1
     const/4 v0, 0x1
 
     return v0
 
-    .line 925
+    .line 933
     :cond_2
     if-eqz v9, :cond_0
 
-    .line 926
+    .line 934
     move-object v7, v9
 
     goto :goto_0
 
-    .line 936
+    .line 944
     .restart local v6       #category:Lcom/htc/music/NpCategory;
     :cond_3
     invoke-static {p0, v7, v6}, Lcom/htc/music/carmode/util/CarMusicUtils;->playAll(Landroid/content/Context;Landroid/database/Cursor;Lcom/htc/music/NpCategory;)V
@@ -2757,12 +2749,12 @@
     .locals 1
 
     .prologue
-    .line 1190
+    .line 1209
     const v0, 0x7f070039
 
     invoke-virtual {p0, v0}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->showEmptyView(I)V
 
-    .line 1191
+    .line 1210
     return-void
 .end method
 
@@ -2772,12 +2764,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1171
+    .line 1190
     iget-object v0, p0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mPlaylistUri:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 1174
+    .line 1193
     const v0, 0x7f070073
 
     invoke-virtual {p0, v0}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->getString(I)Ljava/lang/String;
@@ -2786,14 +2778,14 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->setCatgoryMainTitle(Ljava/lang/String;)V
 
-    .line 1175
+    .line 1194
     invoke-virtual {p0, v1}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->setCategorySecondaryTitleVisible(Z)V
 
-    .line 1186
+    .line 1205
     :goto_0
     return-void
 
-    .line 1183
+    .line 1202
     :cond_0
     const v0, 0x7f070021
 
@@ -2803,7 +2795,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->setCatgoryMainTitle(Ljava/lang/String;)V
 
-    .line 1184
+    .line 1203
     invoke-virtual {p0, v1}, Lcom/htc/music/carmode/CarArtistBrowseActivity;->setCategorySecondaryTitleVisible(Z)V
 
     goto :goto_0

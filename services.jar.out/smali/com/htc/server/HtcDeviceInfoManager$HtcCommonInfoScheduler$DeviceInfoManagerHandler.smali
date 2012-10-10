@@ -25,13 +25,13 @@
     .parameter "looper"
 
     .prologue
-    .line 728
+    .line 765
     iput-object p1, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler$DeviceInfoManagerHandler;->this$0:Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;
 
-    .line 729
+    .line 766
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 730
+    .line 767
     return-void
 .end method
 
@@ -42,11 +42,11 @@
     .parameter "msg"
 
     .prologue
-    .line 734
+    .line 771
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler$DeviceInfoManagerHandler;->this$0:Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;
 
     invoke-virtual {v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$HtcCommonInfoScheduler;->onHandleMessage(Landroid/os/Message;)V
 
-    .line 735
+    .line 772
     return-void
 .end method

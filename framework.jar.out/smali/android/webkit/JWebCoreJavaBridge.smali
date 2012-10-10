@@ -41,6 +41,8 @@
     .end annotation
 .end field
 
+.field private mDelayTime:Z
+
 .field private mHasDeferredTimers:Z
 
 .field private mHasInstantTimer:Z
@@ -55,7 +57,7 @@
     .locals 2
 
     .prologue
-    .line 48
+    .line 50
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
@@ -64,7 +66,7 @@
 
     sput-object v0, Landroid/webkit/JWebCoreJavaBridge;->sCurrentMainWebView:Ljava/lang/ref/WeakReference;
 
-    .line 52
+    .line 54
     const/4 v0, 0x0
 
     sput v0, Landroid/webkit/JWebCoreJavaBridge;->sCurrentWebViewCoreHashCode:I
@@ -76,13 +78,13 @@
     .locals 0
 
     .prologue
-    .line 63
+    .line 65
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 64
+    .line 66
     invoke-direct {p0}, Landroid/webkit/JWebCoreJavaBridge;->nativeConstructor()V
 
-    .line 66
+    .line 68
     return-void
 .end method
 
@@ -91,7 +93,7 @@
     .parameter "url"
 
     .prologue
-    .line 216
+    .line 237
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
@@ -107,7 +109,7 @@
     .locals 1
 
     .prologue
-    .line 223
+    .line 244
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
@@ -123,15 +125,15 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 105
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasInstantTimer:Z
 
-    .line 104
+    .line 106
     invoke-direct {p0}, Landroid/webkit/JWebCoreJavaBridge;->sharedTimerFired()V
 
-    .line 105
+    .line 107
     return-void
 .end method
 
@@ -139,7 +141,7 @@
     .locals 1
 
     .prologue
-    .line 278
+    .line 299
     invoke-static {}, Landroid/webkit/CertTool;->getKeyStrengthList()[Ljava/lang/String;
 
     move-result-object v0
@@ -151,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 230
+    .line 251
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/webkit/PluginManager;->getInstance(Landroid/content/Context;)Landroid/webkit/PluginManager;
@@ -169,7 +171,7 @@
     .locals 1
 
     .prologue
-    .line 237
+    .line 258
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/webkit/PluginManager;->getInstance(Landroid/content/Context;)Landroid/webkit/PluginManager;
@@ -190,7 +192,7 @@
     .parameter "url"
 
     .prologue
-    .line 283
+    .line 304
     monitor-enter p0
 
     :try_start_0
@@ -202,11 +204,11 @@
 
     check-cast v0, Landroid/webkit/WebView;
 
-    .line 284
+    .line 305
     .local v0, current:Landroid/webkit/WebView;
     if-eqz v0, :cond_0
 
-    .line 287
+    .line 308
     invoke-virtual {v0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -217,13 +219,13 @@
 
     move-result-object v1
 
-    .line 291
+    .line 312
     :goto_0
     monitor-exit p0
 
     return-object v1
 
-    .line 290
+    .line 311
     :cond_0
     :try_start_1
     const-string/jumbo v1, "webkit-timers"
@@ -232,14 +234,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
+    .line 312
     const-string v1, ""
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 283
+    .line 304
     .end local v0           #current:Landroid/webkit/WebView;
     :catchall_0
     move-exception v1
@@ -266,7 +268,7 @@
     .parameter "webview"
 
     .prologue
-    .line 91
+    .line 93
     const-class v1, Landroid/webkit/JWebCoreJavaBridge;
 
     monitor-enter v1
@@ -282,13 +284,13 @@
 
     if-eq v0, p0, :cond_0
 
-    .line 96
+    .line 98
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 95
+    .line 97
     :cond_0
     :try_start_1
     sget-object v0, Landroid/webkit/JWebCoreJavaBridge;->sCurrentMainWebView:Ljava/lang/ref/WeakReference;
@@ -299,7 +301,7 @@
 
     goto :goto_0
 
-    .line 91
+    .line 93
     :catchall_0
     move-exception v0
 
@@ -313,12 +315,12 @@
     .parameter "uri"
 
     .prologue
-    .line 297
+    .line 318
     iget-object v2, p0, Landroid/webkit/JWebCoreJavaBridge;->mContentUriToFilePathMap:Ljava/util/HashMap;
 
     if-eqz v2, :cond_0
 
-    .line 298
+    .line 319
     iget-object v2, p0, Landroid/webkit/JWebCoreJavaBridge;->mContentUriToFilePathMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -327,22 +329,22 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 299
+    .line 320
     .local v0, fileName:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 307
+    .line 328
     .end local v0           #fileName:Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 306
+    .line 327
     :cond_0
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 307
+    .line 328
     .local v1, jUri:Landroid/net/Uri;
     invoke-virtual {v1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
@@ -356,7 +358,7 @@
     .parameter "webview"
 
     .prologue
-    .line 83
+    .line 85
     const-class v1, Landroid/webkit/JWebCoreJavaBridge;
 
     monitor-enter v1
@@ -372,13 +374,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 88
+    .line 90
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 87
+    .line 89
     :cond_0
     :try_start_1
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -391,7 +393,7 @@
 
     goto :goto_0
 
-    .line 83
+    .line 85
     :catchall_0
     move-exception v0
 
@@ -408,7 +410,7 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 187
+    .line 208
     const-string v6, "\r"
 
     invoke-virtual {p2, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -425,37 +427,37 @@
 
     if-eqz v6, :cond_7
 
-    .line 189
+    .line 210
     :cond_0
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 190
+    .line 211
     .local v5, size:I
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 191
+    .line 212
     .local v0, buffer:Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
-    .line 192
+    .line 213
     .local v1, i:I
     :goto_0
     if-eq v1, v7, :cond_6
 
     if-ge v1, v5, :cond_6
 
-    .line 193
+    .line 214
     const/16 v6, 0xd
 
     invoke-virtual {p2, v6, v1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v3
 
-    .line 194
+    .line 215
     .local v3, ir:I
     const/16 v6, 0xa
 
@@ -463,32 +465,32 @@
 
     move-result v2
 
-    .line 195
+    .line 216
     .local v2, in:I
     if-ne v3, v7, :cond_2
 
     move v4, v2
 
-    .line 197
+    .line 218
     .local v4, newi:I
     :goto_1
     if-le v4, v1, :cond_5
 
-    .line 198
+    .line 219
     invoke-virtual {p2, v1, v4}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v6
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 203
+    .line 224
     :cond_1
     add-int/lit8 v1, v4, 0x1
 
-    .line 204
+    .line 225
     goto :goto_0
 
-    .line 195
+    .line 216
     .end local v4           #newi:I
     :cond_2
     if-ne v2, v7, :cond_3
@@ -509,19 +511,19 @@
 
     goto :goto_1
 
-    .line 199
+    .line 220
     .restart local v4       #newi:I
     :cond_5
     if-ne v4, v7, :cond_1
 
-    .line 200
+    .line 221
     invoke-virtual {p2, v1, v5}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v6
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 205
+    .line 226
     .end local v2           #in:I
     .end local v3           #ir:I
     .end local v4           #newi:I
@@ -530,7 +532,7 @@
 
     move-result-object p2
 
-    .line 207
+    .line 228
     .end local v0           #buffer:Ljava/lang/StringBuilder;
     .end local v1           #i:I
     .end local v5           #size:I
@@ -541,7 +543,7 @@
 
     invoke-virtual {v6, p1, p2}, Landroid/webkit/CookieManager;->setCookie(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 208
+    .line 229
     return-void
 .end method
 
@@ -550,7 +552,7 @@
     .parameter "webview"
 
     .prologue
-    .line 75
+    .line 77
     const-class v1, Landroid/webkit/JWebCoreJavaBridge;
 
     monitor-enter v1
@@ -564,7 +566,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 76
+    .line 78
     invoke-virtual {p0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
 
     move-result-object v0
@@ -577,13 +579,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
+    .line 81
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 78
+    .line 80
     :cond_0
     const/4 v0, 0x0
 
@@ -594,7 +596,7 @@
 
     goto :goto_0
 
-    .line 75
+    .line 77
     :catchall_0
     move-exception v0
 
@@ -610,45 +612,45 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 247
+    .line 268
     const-wide/16 v1, 0x0
 
     cmp-long v1, p1, v1
 
     if-gtz v1, :cond_1
 
-    .line 252
+    .line 273
     iget-boolean v1, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasInstantTimer:Z
 
     if-eqz v1, :cond_0
 
-    .line 263
+    .line 284
     :goto_0
     return-void
 
-    .line 255
+    .line 276
     :cond_0
     iput-boolean v3, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasInstantTimer:Z
 
-    .line 256
+    .line 277
     invoke-virtual {p0, v3}, Landroid/webkit/JWebCoreJavaBridge;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 257
+    .line 278
     .local v0, msg:Landroid/os/Message;
     invoke-virtual {p0, v0, p1, p2}, Landroid/webkit/JWebCoreJavaBridge;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
 
-    .line 260
+    .line 281
     .end local v0           #msg:Landroid/os/Message;
     :cond_1
     invoke-virtual {p0, v3}, Landroid/webkit/JWebCoreJavaBridge;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 261
+    .line 282
     .restart local v0       #msg:Landroid/os/Message;
     invoke-virtual {p0, v0, p1, p2}, Landroid/webkit/JWebCoreJavaBridge;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -662,18 +664,18 @@
     .locals 2
 
     .prologue
-    .line 146
+    .line 167
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1}, Landroid/webkit/JWebCoreJavaBridge;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 147
+    .line 168
     .local v0, msg:Landroid/os/Message;
     invoke-virtual {p0, v0}, Landroid/webkit/JWebCoreJavaBridge;->sendMessage(Landroid/os/Message;)Z
 
-    .line 148
+    .line 169
     return-void
 .end method
 
@@ -683,18 +685,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 272
+    .line 293
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/webkit/JWebCoreJavaBridge;->removeMessages(I)V
 
-    .line 273
+    .line 294
     iput-boolean v1, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasInstantTimer:Z
 
-    .line 274
+    .line 295
     iput-boolean v1, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasDeferredTimers:Z
 
-    .line 275
+    .line 296
     return-void
 .end method
 
@@ -719,19 +721,21 @@
     .locals 0
 
     .prologue
-    .line 70
+    .line 72
     invoke-direct {p0}, Landroid/webkit/JWebCoreJavaBridge;->nativeFinalize()V
 
-    .line 71
+    .line 73
     return-void
 .end method
 
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 5
+    .locals 6
     .parameter "msg"
 
     .prologue
-    .line 119
+    const/4 v5, 0x1
+
+    .line 121
     sget v0, Landroid/webkit/JWebCoreJavaBridge;->sCurrentWebViewCoreHashCode:I
 
     const/4 v1, 0x3
@@ -746,12 +750,12 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroid/webkit/WebViewCore;->enterMsgHandle(IIID)V
 
-    .line 121
+    .line 123
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 140
+    .line 153
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -761,35 +765,46 @@
 
     invoke-static {v0, v1}, Landroid/webkit/WebViewCore;->leaveMsgHandle(D)V
 
-    .line 142
+    .line 155
     return-void
 
-    .line 123
+    .line 125
     :sswitch_0
     iget-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mTimerPaused:Z
 
     if-eqz v0, :cond_0
 
-    .line 124
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasDeferredTimers:Z
+    .line 126
+    iput-boolean v5, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasDeferredTimers:Z
 
     goto :goto_0
 
-    .line 126
+    .line 130
     :cond_0
+    iget-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mDelayTime:Z
+
+    if-ne v0, v5, :cond_1
+
+    .line 131
+    const-wide/16 v0, 0x64
+
+    invoke-direct {p0, v0, v1}, Landroid/webkit/JWebCoreJavaBridge;->setSharedTimer(J)V
+
+    goto :goto_0
+
+    .line 134
+    :cond_1
     invoke-direct {p0}, Landroid/webkit/JWebCoreJavaBridge;->fireSharedTimer()V
 
     goto :goto_0
 
-    .line 131
+    .line 144
     :sswitch_1
     invoke-direct {p0}, Landroid/webkit/JWebCoreJavaBridge;->nativeServiceFuncPtrQueue()V
 
     goto :goto_0
 
-    .line 134
+    .line 147
     :sswitch_2
     const/4 v0, 0x0
 
@@ -813,7 +828,7 @@
 
     goto :goto_0
 
-    .line 121
+    .line 123
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -829,22 +844,22 @@
     .locals 1
 
     .prologue
-    .line 156
+    .line 177
     iget-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mTimerPaused:Z
 
     if-nez v0, :cond_0
 
-    .line 157
+    .line 178
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mTimerPaused:Z
 
-    .line 158
+    .line 179
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasDeferredTimers:Z
 
-    .line 160
+    .line 181
     :cond_0
     return-void
 .end method
@@ -858,26 +873,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 166
+    .line 187
     iget-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mTimerPaused:Z
 
     if-eqz v0, :cond_0
 
-    .line 167
+    .line 188
     iput-boolean v1, p0, Landroid/webkit/JWebCoreJavaBridge;->mTimerPaused:Z
 
-    .line 168
+    .line 189
     iget-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasDeferredTimers:Z
 
     if-eqz v0, :cond_0
 
-    .line 169
+    .line 190
     iput-boolean v1, p0, Landroid/webkit/JWebCoreJavaBridge;->mHasDeferredTimers:Z
 
-    .line 170
+    .line 191
     invoke-direct {p0}, Landroid/webkit/JWebCoreJavaBridge;->fireSharedTimer()V
 
-    .line 173
+    .line 194
     :cond_0
     return-void
 .end method
@@ -891,31 +906,57 @@
 .method public native setNetworkType(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
+.method public startDelayTimer()V
+    .locals 1
+
+    .prologue
+    .line 158
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mDelayTime:Z
+
+    .line 159
+    return-void
+.end method
+
+.method public stopDelayTimer()V
+    .locals 1
+
+    .prologue
+    .line 162
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mDelayTime:Z
+
+    .line 163
+    return-void
+.end method
+
 .method public storeFilePathForContentUri(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .parameter "path"
     .parameter "contentUri"
 
     .prologue
-    .line 311
+    .line 332
     iget-object v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mContentUriToFilePathMap:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
-    .line 312
+    .line 333
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mContentUriToFilePathMap:Ljava/util/HashMap;
 
-    .line 314
+    .line 335
     :cond_0
     iget-object v0, p0, Landroid/webkit/JWebCoreJavaBridge;->mContentUriToFilePathMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 315
+    .line 336
     return-void
 .end method
 
@@ -924,37 +965,37 @@
     .parameter "proxyProperties"
 
     .prologue
-    .line 318
+    .line 339
     if-nez p1, :cond_0
 
-    .line 319
+    .line 340
     const-string v2, ""
 
     const-string v3, ""
 
     invoke-virtual {p0, v2, v3}, Landroid/webkit/JWebCoreJavaBridge;->nativeUpdateProxy(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
+    .line 350
     :goto_0
     return-void
 
-    .line 323
+    .line 344
     :cond_0
     invoke-virtual {p1}, Landroid/net/ProxyProperties;->getHost()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 324
+    .line 345
     .local v0, host:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/net/ProxyProperties;->getPort()I
 
     move-result v1
 
-    .line 325
+    .line 346
     .local v1, port:I
     if-eqz v1, :cond_1
 
-    .line 326
+    .line 347
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -977,7 +1018,7 @@
 
     move-result-object v0
 
-    .line 328
+    .line 349
     :cond_1
     invoke-virtual {p1}, Landroid/net/ProxyProperties;->getExclusionList()Ljava/lang/String;
 

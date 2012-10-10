@@ -578,13 +578,13 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a00aa
+    const v4, 0x7f0a00b1
 
     invoke-virtual {v3, v4}, Lcom/android/camera/rotate/RotateDialog$Builder;->setTitle(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
     move-result-object v3
 
-    const v4, 0x7f0a011b
+    const v4, 0x7f0a0122
 
     invoke-virtual {v3, v4}, Lcom/android/camera/rotate/RotateDialog$Builder;->setMessage(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
@@ -645,13 +645,13 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a019d
+    const v4, 0x7f0a01a6
 
     invoke-virtual {v3, v4}, Lcom/android/camera/rotate/RotateDialog$Builder;->setTitle(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
     move-result-object v3
 
-    const v4, 0x7f0a019e
+    const v4, 0x7f0a01a7
 
     invoke-virtual {v3, v4}, Lcom/android/camera/rotate/RotateDialog$Builder;->setMessage(I)Lcom/android/camera/rotate/RotateDialog$Builder;
 
@@ -912,7 +912,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/camera/menu/SettingsMenu;->m_AutoUploadItem:Lcom/android/camera/menu/MenuItem;
 
-    const v3, 0x7f0a00a9
+    const v3, 0x7f0a00b0
 
     invoke-virtual {v2, v3}, Lcom/android/camera/menu/MenuItem;->setSummary(I)V
 
@@ -1014,7 +1014,7 @@
 
     .line 799
     .local v1, itemId:I
-    const v4, 0x7f0a00b8
+    const v4, 0x7f0a00bf
 
     .line 810
     .local v4, summary:I
@@ -1067,7 +1067,7 @@
 
     .line 803
     .restart local v1       #itemId:I
-    const v4, 0x7f0a00b9
+    const v4, 0x7f0a00c0
 
     .line 804
     .restart local v4       #summary:I
@@ -1234,7 +1234,7 @@
 
     if-eqz v4, :cond_6
 
-    const v4, 0x7f0a005d
+    const v4, 0x7f0a0064
 
     :goto_3
     invoke-virtual {v5, v4}, Lcom/android/camera/menu/MenuItem;->setSummary(I)V
@@ -1325,7 +1325,7 @@
 
     .line 842
     :cond_6
-    const v4, 0x7f0a005e
+    const v4, 0x7f0a0065
 
     goto :goto_3
 .end method
@@ -1900,7 +1900,7 @@
     .line 166
     new-instance v1, Lcom/android/camera/menu/MenuItem;
 
-    const v4, 0x7f0a00b7
+    const v4, 0x7f0a00be
 
     const/4 v5, 0x0
 
@@ -1923,7 +1923,7 @@
     .line 171
     new-instance v13, Lcom/android/camera/menu/RadioButtonMenuItem;
 
-    const v1, 0x7f0a00b8
+    const v1, 0x7f0a00bf
 
     invoke-direct {v13, v1}, Lcom/android/camera/menu/RadioButtonMenuItem;-><init>(I)V
 
@@ -1940,7 +1940,7 @@
     new-instance v13, Lcom/android/camera/menu/RadioButtonMenuItem;
 
     .end local v13           #itemL2:Lcom/android/camera/menu/MenuItem;
-    const v1, 0x7f0a00b9
+    const v1, 0x7f0a00c0
 
     invoke-direct {v13, v1}, Lcom/android/camera/menu/RadioButtonMenuItem;-><init>(I)V
 
@@ -1972,7 +1972,7 @@
     .line 188
     new-instance v1, Lcom/android/camera/menu/SelfTimerMenuItem;
 
-    const v4, 0x7f0a00b0
+    const v4, 0x7f0a00b7
 
     invoke-direct {v1, v2, v4}, Lcom/android/camera/menu/SelfTimerMenuItem;-><init>(Lcom/android/camera/HTCCamera;I)V
 
@@ -2000,7 +2000,7 @@
 
     sget-object v4, Lcom/android/camera/CameraMode;->Photo:Lcom/android/camera/CameraMode;
 
-    const v5, 0x7f0a00be
+    const v5, 0x7f0a00c5
 
     invoke-direct {v1, v2, v4, v5}, Lcom/android/camera/menu/ResolutionMenuItem;-><init>(Lcom/android/camera/HTCCamera;Lcom/android/camera/CameraMode;I)V
 
@@ -2028,7 +2028,7 @@
 
     sget-object v4, Lcom/android/camera/CameraMode;->Video:Lcom/android/camera/CameraMode;
 
-    const v5, 0x7f0a00bd
+    const v5, 0x7f0a00c4
 
     invoke-direct {v1, v2, v4, v5}, Lcom/android/camera/menu/ResolutionMenuItem;-><init>(Lcom/android/camera/HTCCamera;Lcom/android/camera/CameraMode;I)V
 
@@ -2047,7 +2047,7 @@
 
     const-string v4, "pref_camera_review_duration"
 
-    const v5, 0x7f0a0081
+    const v5, 0x7f0a0088
 
     const v6, 0x7f070001
 
@@ -2072,7 +2072,7 @@
     :cond_5
     new-instance v1, Lcom/android/camera/menu/ImageAdjustmentMenuItem;
 
-    const v4, 0x7f0a00ba
+    const v4, 0x7f0a00c1
 
     invoke-direct {v1, v2, v4}, Lcom/android/camera/menu/ImageAdjustmentMenuItem;-><init>(Lcom/android/camera/HTCCamera;I)V
 
@@ -2090,7 +2090,7 @@
     .line 236
     new-instance v1, Lcom/android/camera/menu/CameraIsoMenuItem;
 
-    const v4, 0x7f0a00bf
+    const v4, 0x7f0a00c6
 
     invoke-direct {v1, v2, v4}, Lcom/android/camera/menu/CameraIsoMenuItem;-><init>(Lcom/android/camera/HTCCamera;I)V
 
@@ -2108,7 +2108,7 @@
     .line 242
     new-instance v1, Lcom/android/camera/menu/WhiteBalanceMenuItem;
 
-    const v4, 0x7f0a00bb
+    const v4, 0x7f0a00c2
 
     invoke-direct {v1, v2, v4}, Lcom/android/camera/menu/WhiteBalanceMenuItem;-><init>(Lcom/android/camera/HTCCamera;I)V
 
@@ -2133,7 +2133,7 @@
     .line 250
     new-instance v1, Lcom/android/camera/menu/CameraStorageLocationMenuItem;
 
-    const v4, 0x7f0a0094
+    const v4, 0x7f0a009b
 
     invoke-direct {v1, v2, v4}, Lcom/android/camera/menu/CameraStorageLocationMenuItem;-><init>(Lcom/android/camera/HTCCamera;I)V
 
@@ -2165,7 +2165,7 @@
     .line 262
     new-instance v1, Lcom/android/camera/menu/MenuItem;
 
-    const v4, 0x7f0a00c5
+    const v4, 0x7f0a00cc
 
     const/4 v5, 0x0
 
@@ -2190,7 +2190,7 @@
 
     const-string v1, "pref_continuous_burst"
 
-    const v4, 0x7f0a00c5
+    const v4, 0x7f0a00cc
 
     const/4 v5, 0x1
 
@@ -2210,7 +2210,7 @@
 
     const-string v4, "pref_continuous_burst_limit"
 
-    const v5, 0x7f0a00c6
+    const v5, 0x7f0a00cd
 
     const/4 v6, 0x1
 
@@ -2232,7 +2232,7 @@
 
     const-string v4, "pref_continuous_burst_auto_review"
 
-    const v5, 0x7f0a00c7
+    const v5, 0x7f0a00ce
 
     const/4 v6, 0x1
 
@@ -2268,7 +2268,7 @@
     .line 300
     new-instance v12, Lcom/android/camera/menu/MenuItem;
 
-    const v1, 0x7f0a00c0
+    const v1, 0x7f0a00c7
 
     const/4 v4, 0x0
 
@@ -2288,12 +2288,18 @@
 
     if-nez v1, :cond_8
 
+    invoke-static {}, Lcom/android/camera/DisplayDevice;->hasAutoFocus()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
     .line 330
     new-instance v1, Lcom/android/camera/menu/CheckBoxPreferenceMenuItem;
 
     const-string v4, "pref_camera_auto_focus"
 
-    const v5, 0x7f0a009c
+    const v5, 0x7f0a00a3
 
     const/4 v6, 0x1
 
@@ -2325,7 +2331,7 @@
 
     const-string v4, "pref_face_detection"
 
-    const v5, 0x7f0a00c3
+    const v5, 0x7f0a00ca
 
     const/4 v6, 0x1
 
@@ -2356,7 +2362,7 @@
 
     const-string v4, "pref_smile_capture"
 
-    const v5, 0x7f0a00c4
+    const v5, 0x7f0a00cb
 
     const/4 v6, 0x0
 
@@ -2403,7 +2409,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 374
-    const v8, 0x7f0a00cd
+    const v8, 0x7f0a00d4
 
     .line 377
     .local v8, resId:I
@@ -2412,9 +2418,9 @@
 
     const-string v6, "pref_camera_image_ratio"
 
-    const v7, 0x7f0a00c9
+    const v7, 0x7f0a00d0
 
-    const v9, 0x7f0a00cd
+    const v9, 0x7f0a00d4
 
     const/4 v10, 0x1
 
@@ -2449,7 +2455,7 @@
 
     const-string v1, "pref_camera_geo_tagging"
 
-    const v4, 0x7f0a00ce
+    const v4, 0x7f0a00d5
 
     const/4 v5, 0x1
 
@@ -2476,7 +2482,7 @@
 
     const-string v4, "pref_post_processing"
 
-    const v5, 0x7f0a00cf
+    const v5, 0x7f0a00d6
 
     const/4 v6, 0x1
 
@@ -2501,7 +2507,7 @@
     .line 415
     new-instance v12, Lcom/android/camera/menu/MenuItem;
 
-    const v1, 0x7f0a00d0
+    const v1, 0x7f0a00d7
 
     const/4 v4, 0x0
 
@@ -2526,7 +2532,7 @@
 
     const-string v4, "pref_video_stabilization"
 
-    const v5, 0x7f0a00d1
+    const v5, 0x7f0a00d8
 
     const/4 v6, 0x1
 
@@ -2549,7 +2555,7 @@
 
     const-string v4, "pref_camera_record_with_audio"
 
-    const v5, 0x7f0a00d3
+    const v5, 0x7f0a00da
 
     const/4 v6, 0x1
 
@@ -2587,7 +2593,7 @@
 
     const-string v4, "pref_stereo_recording"
 
-    const v5, 0x7f0a00d4
+    const v5, 0x7f0a00db
 
     const/4 v6, 0x1
 
@@ -2613,7 +2619,7 @@
     :cond_e
     new-instance v12, Lcom/android/camera/menu/MenuItem;
 
-    const v1, 0x7f0a00d5
+    const v1, 0x7f0a00dc
 
     const/4 v4, 0x0
 
@@ -2647,7 +2653,7 @@
 
     const-string v4, "pref_grid"
 
-    const v5, 0x7f0a00d7
+    const v5, 0x7f0a00de
 
     const/4 v6, 0x0
 
@@ -2668,7 +2674,7 @@
 
     const-string v4, "pref_play_shutter_sound"
 
-    const v5, 0x7f0a00d6
+    const v5, 0x7f0a00dd
 
     const/4 v6, 0x1
 
@@ -2721,7 +2727,7 @@
     .line 490
     new-instance v1, Lcom/android/camera/menu/MenuItem;
 
-    const v4, 0x7f0a00d8
+    const v4, 0x7f0a00df
 
     const/4 v5, 0x0
 
@@ -2796,7 +2802,7 @@
 
     iget-object v1, v0, Lcom/android/camera/menu/SettingsMenu;->m_AutoUploadItem:Lcom/android/camera/menu/MenuItem;
 
-    const v4, 0x7f0a00a9
+    const v4, 0x7f0a00b0
 
     invoke-virtual {v1, v4}, Lcom/android/camera/menu/MenuItem;->setSummary(I)V
 
@@ -2807,7 +2813,7 @@
     new-instance v12, Lcom/android/camera/menu/MenuItem;
 
     .end local v12           #itemL1:Lcom/android/camera/menu/MenuItem;
-    const v1, 0x7f0a00d9
+    const v1, 0x7f0a00e0
 
     const/4 v4, 0x0
 
@@ -2853,7 +2859,7 @@
 
     .line 365
     :pswitch_0
-    const v8, 0x7f0a00ca
+    const v8, 0x7f0a00d1
 
     .line 366
     .restart local v8       #resId:I
@@ -2862,7 +2868,7 @@
     .line 368
     .end local v8           #resId:I
     :pswitch_1
-    const v8, 0x7f0a00cb
+    const v8, 0x7f0a00d2
 
     .line 369
     .restart local v8       #resId:I
@@ -2871,7 +2877,7 @@
     .line 371
     .end local v8           #resId:I
     :pswitch_2
-    const v8, 0x7f0a00cc
+    const v8, 0x7f0a00d3
 
     .line 372
     .restart local v8       #resId:I
@@ -3056,7 +3062,7 @@
     .line 568
     iget-object v1, p0, Lcom/android/camera/menu/SettingsMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
-    const v2, 0x7f0a011a
+    const v2, 0x7f0a0121
 
     invoke-virtual {v1, v2}, Lcom/android/camera/HTCCamera;->showToast(I)V
 

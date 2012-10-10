@@ -1864,7 +1864,7 @@
     .line 436
     :cond_7
     :goto_6
-    const-string/jumbo v7, "http://"
+    const-string v7, "http://"
 
     .line 437
     goto/16 :goto_2
@@ -2321,7 +2321,7 @@
     :cond_3
     new-instance v3, Ljava/lang/AssertionError;
 
-    const-string/jumbo v4, "last chunk did not end at word break"
+    const-string v4, "last chunk did not end at word break"
 
     invoke-direct {v3, v4}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 

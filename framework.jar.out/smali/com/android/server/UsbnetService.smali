@@ -94,6 +94,8 @@
 
 .field private mScreenOff:Z
 
+.field private mUsbnetConnected:Z
+
 .field private mUsbnetHandler:Lcom/android/server/UsbnetService$UsbnetHandler;
 
 .field private final mUsbnetStateTracker:Lcom/htc/net/usbnet/UsbnetStateTracker;
@@ -120,6 +122,9 @@
 
     iput-object v4, p0, Lcom/android/server/UsbnetService;->mLocks:Lcom/android/server/UsbnetService$LockList;
 
+    .line 86
+    iput-boolean v6, p0, Lcom/android/server/UsbnetService;->mUsbnetConnected:Z
+
     .line 293
     new-instance v4, Lcom/android/server/UsbnetService$1;
 
@@ -127,7 +132,7 @@
 
     iput-object v4, p0, Lcom/android/server/UsbnetService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 727
+    .line 736
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
@@ -507,14 +512,14 @@
     .parameter "args"
 
     .prologue
-    .line 737
+    .line 746
     new-instance v0, Lcom/android/server/UsbnetService$HtcUsbHistory;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/UsbnetService$HtcUsbHistory;-><init>(Lcom/android/server/UsbnetService;Lcom/android/server/UsbnetService$1;)V
 
-    .line 738
+    .line 747
     .local v0, hist:Lcom/android/server/UsbnetService$HtcUsbHistory;
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -522,22 +527,22 @@
 
     iput-wide v1, v0, Lcom/android/server/UsbnetService$HtcUsbHistory;->timeStamp:J
 
-    .line 739
+    .line 748
     iput p1, v0, Lcom/android/server/UsbnetService$HtcUsbHistory;->event:I
 
-    .line 740
+    .line 749
     iput-object p2, v0, Lcom/android/server/UsbnetService$HtcUsbHistory;->args:[Ljava/lang/Object;
 
-    .line 741
+    .line 750
     monitor-enter p0
 
-    .line 742
+    .line 751
     :try_start_0
     iget-object v1, p0, Lcom/android/server/UsbnetService;->mLogUsb:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
 
-    .line 743
+    .line 752
     iget-object v1, p0, Lcom/android/server/UsbnetService;->mLogUsb:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
@@ -548,19 +553,19 @@
 
     if-le v1, v2, :cond_0
 
-    .line 744
+    .line 753
     iget-object v1, p0, Lcom/android/server/UsbnetService;->mLogUsb:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-    .line 746
+    .line 755
     :cond_0
     monitor-exit p0
 
-    .line 748
+    .line 757
     return-void
 
-    .line 746
+    .line 755
     :catchall_0
     move-exception v1
 
@@ -598,7 +603,7 @@
     .line 241
     const-string v2, "UsbnetService"
 
-    const-string/jumbo v3, "isAirplaneModeOn +-"
+    const-string v3, "isAirplaneModeOn +-"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -906,7 +911,7 @@
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 642
+    .line 651
     :cond_1
     :goto_0
     if-nez v1, :cond_2
@@ -915,32 +920,32 @@
 
     if-eq v0, v4, :cond_2
 
-    .line 644
+    .line 653
     invoke-static {}, Landroid/app/ActivityManagerNative;->isSystemReady()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 646
+    .line 655
     new-instance v2, Landroid/content/Intent;
 
     const-string v4, "com.htc.net.usbnet.STATE_NOTIFY"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 647
+    .line 656
     .local v2, intent:Landroid/content/Intent;
     const-string/jumbo v4, "newNetworkState"
 
     invoke-virtual {v2, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 648
+    .line 657
     iget-object v4, p0, Lcom/android/server/UsbnetService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 651
+    .line 660
     .end local v2           #intent:Landroid/content/Intent;
     :cond_2
     const-string v4, "UsbnetService"
@@ -977,7 +982,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 652
+    .line 661
     monitor-exit p0
 
     return v1
@@ -1123,6 +1128,12 @@
 
     .line 613
     :goto_1
+    const/4 v4, 0x1
+
+    :try_start_8
+    iput-boolean v4, p0, Lcom/android/server/UsbnetService;->mUsbnetConnected:Z
+
+    .line 614
     const/4 v0, 0x1
 
     goto/16 :goto_0
@@ -1133,7 +1144,6 @@
 
     .line 609
     .restart local v3       #sEx:Ljava/lang/Exception;
-    :try_start_8
     const-string v4, "UsbnetService"
 
     const-string v5, "Exception in TYPE_USB_IPT"
@@ -1145,23 +1155,28 @@
 
     goto :goto_1
 
-    .line 615
+    .line 616
     .end local v3           #sEx:Ljava/lang/Exception;
     :cond_5
     const-string/jumbo v4, "usb_none"
 
     invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    .line 620
+    .line 624
+    iget-boolean v4, p0, Lcom/android/server/UsbnetService;->mUsbnetConnected:Z
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    if-eqz v4, :cond_1
+
+    .line 626
     const/4 v1, 0x0
 
-    .line 622
+    .line 628
     :try_start_9
     iget-object v4, p0, Lcom/android/server/UsbnetService;->nwService:Landroid/os/INetworkManagementService;
 
@@ -1169,7 +1184,7 @@
 
     invoke-interface {v4, v5}, Landroid/os/INetworkManagementService;->startIptMode(I)V
 
-    .line 623
+    .line 629
     iget-object v4, p0, Lcom/android/server/UsbnetService;->nwService:Landroid/os/INetworkManagementService;
 
     const/4 v5, 0x0
@@ -1179,47 +1194,60 @@
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_3
 
-    .line 629
+    .line 634
     :goto_2
+    const/4 v4, 0x0
+
+    :try_start_a
+    iput-boolean v4, p0, Lcom/android/server/UsbnetService;->mUsbnetConnected:Z
+
+    .line 635
+    const/4 v1, 0x0
+
+    .line 636
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 624
+    .line 630
     :catch_3
     move-exception v3
 
-    .line 625
+    .line 631
     .restart local v3       #sEx:Ljava/lang/Exception;
-    :try_start_a
     const-string v4, "UsbnetService"
 
     const-string v5, "Exception in TYPE_USB_NONE"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 626
+    .line 632
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 631
+    .line 639
     .end local v3           #sEx:Ljava/lang/Exception;
     :cond_6
     const-string/jumbo v4, "usb_conn"
 
     invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_0
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 633
+    .line 641
+    const/4 v4, 0x1
+
+    iput-boolean v4, p0, Lcom/android/server/UsbnetService;->mUsbnetConnected:Z
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_0
+
+    .line 642
     const/4 v1, 0x0
 
-    .line 634
+    .line 643
     const/4 v0, 0x2
 
     goto/16 :goto_0
@@ -1238,7 +1266,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 671
+    .line 680
     const-string v2, "UsbnetService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1261,12 +1289,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 672
+    .line 681
     iget-object v2, p0, Lcom/android/server/UsbnetService;->nwService:Landroid/os/INetworkManagementService;
 
     if-nez v2, :cond_0
 
-    .line 674
+    .line 683
     const-string/jumbo v2, "network_management"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1275,12 +1303,12 @@
 
     iput-object v2, p0, Lcom/android/server/UsbnetService;->iBd:Landroid/os/IBinder;
 
-    .line 675
+    .line 684
     iget-object v2, p0, Lcom/android/server/UsbnetService;->iBd:Landroid/os/IBinder;
 
     if-eqz v2, :cond_0
 
-    .line 676
+    .line 685
     iget-object v2, p0, Lcom/android/server/UsbnetService;->iBd:Landroid/os/IBinder;
 
     invoke-static {v2}, Landroid/os/INetworkManagementService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/INetworkManagementService;
@@ -1289,31 +1317,31 @@
 
     iput-object v2, p0, Lcom/android/server/UsbnetService;->nwService:Landroid/os/INetworkManagementService;
 
-    .line 679
+    .line 688
     :cond_0
     const/4 v2, 0x2
 
     if-ne p1, v2, :cond_1
 
-    .line 680
+    .line 689
     const-string/jumbo v2, "usb_conn"
 
     invoke-virtual {p0, v5, v2}, Lcom/android/server/UsbnetService;->UsbMiscControl(ILjava/lang/String;)I
 
     move-result v2
 
-    .line 716
+    .line 725
     :goto_0
     return v2
 
-    .line 683
+    .line 692
     :cond_1
     if-ne p1, v5, :cond_2
 
-    .line 689
+    .line 698
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 690
+    .line 699
     .local v0, mDhcpList:[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -1327,7 +1355,7 @@
 
     aput-object v3, v0, v2
 
-    .line 693
+    .line 702
     :try_start_0
     iget-object v2, p0, Lcom/android/server/UsbnetService;->nwService:Landroid/os/INetworkManagementService;
 
@@ -1335,7 +1363,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 701
+    .line 710
     :goto_1
     const-string/jumbo v2, "usb_ipt"
 
@@ -1345,11 +1373,11 @@
 
     goto :goto_0
 
-    .line 695
+    .line 704
     :catch_0
     move-exception v1
 
-    .line 697
+    .line 706
     .local v1, sEx:Ljava/lang/Exception;
     const-string v2, "UsbnetService"
 
@@ -1357,12 +1385,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 698
+    .line 707
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 708
+    .line 717
     .end local v0           #mDhcpList:[Ljava/lang/String;
     .end local v1           #sEx:Ljava/lang/Exception;
     :cond_2
@@ -1373,7 +1401,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 716
+    .line 725
     :goto_2
     const-string/jumbo v2, "usb_none"
 
@@ -1383,11 +1411,11 @@
 
     goto :goto_0
 
-    .line 710
+    .line 719
     :catch_1
     move-exception v1
 
-    .line 712
+    .line 721
     .restart local v1       #sEx:Ljava/lang/Exception;
     const-string v2, "UsbnetService"
 
@@ -1395,7 +1423,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 713
+    .line 722
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
@@ -1408,7 +1436,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 657
+    .line 666
     const-string v0, "UsbnetService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1431,17 +1459,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 658
+    .line 667
     if-ne p1, v3, :cond_0
 
-    .line 659
+    .line 668
     const-string/jumbo v0, "usb_mtp"
 
     invoke-virtual {p0, v3, v0}, Lcom/android/server/UsbnetService;->UsbMiscControl(ILjava/lang/String;)I
 
     move-result v0
 
-    .line 661
+    .line 670
     :goto_0
     return v0
 
@@ -1523,14 +1551,14 @@
     .parameter "args"
 
     .prologue
-    .line 752
+    .line 761
     if-nez p2, :cond_0
 
-    .line 812
+    .line 821
     :goto_0
     return-void
 
-    .line 755
+    .line 764
     :cond_0
     move-object/from16 v0, p0
 
@@ -1546,7 +1574,7 @@
 
     if-eqz v18, :cond_1
 
-    .line 757
+    .line 766
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1591,7 +1619,7 @@
 
     goto :goto_0
 
-    .line 763
+    .line 772
     :cond_1
     move-object/from16 v0, p0
 
@@ -1601,7 +1629,7 @@
 
     monitor-enter v19
 
-    .line 764
+    .line 773
     :try_start_0
     const-string v18, "UsbnetService State:"
 
@@ -1611,22 +1639,22 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 765
+    .line 774
     monitor-exit v19
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 768
+    .line 777
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 769
+    .line 778
     const/4 v12, 0x0
 
-    .line 770
+    .line 779
     .local v12, mHistArray:[Ljava/lang/Object;
     monitor-enter p0
 
-    .line 772
+    .line 781
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1641,22 +1669,22 @@
 
     move-result-object v12
 
-    .line 776
+    .line 785
     :goto_1
     :try_start_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 777
+    .line 786
     if-eqz v12, :cond_4
 
-    .line 778
+    .line 787
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    .line 779
+    .line 788
     .local v8, iTimeStamp:J
     new-instance v15, Ljava/text/SimpleDateFormat;
 
@@ -1666,17 +1694,17 @@
 
     invoke-direct {v15, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 780
+    .line 789
     .local v15, sdf:Ljava/text/SimpleDateFormat;
     new-instance v4, Ljava/util/Date;
 
     invoke-direct {v4}, Ljava/util/Date;-><init>()V
 
-    .line 782
+    .line 791
     .local v4, dataTimeStamp:Ljava/util/Date;
     const-wide/16 v16, -0x1
 
-    .line 784
+    .line 793
     .local v16, timeStamp:J
     :try_start_3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1685,7 +1713,7 @@
 
     move-result-wide v16
 
-    .line 787
+    .line 796
     :goto_2
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -1765,7 +1793,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 791
+    .line 800
     move-object v3, v12
 
     .local v3, arr$:[Ljava/lang/Object;
@@ -1783,18 +1811,18 @@
     .local v13, oHist:Ljava/lang/Object;
     move-object v6, v13
 
-    .line 792
+    .line 801
     check-cast v6, Lcom/android/server/UsbnetService$HtcUsbHistory;
 
-    .line 793
+    .line 802
     .local v6, hist:Lcom/android/server/UsbnetService$HtcUsbHistory;
     const-string v2, ""
 
-    .line 794
+    .line 803
     .local v2, argStr:Ljava/lang/String;
     if-eqz v6, :cond_3
 
-    .line 795
+    .line 804
     iget-object v0, v6, Lcom/android/server/UsbnetService$HtcUsbHistory;->args:[Ljava/lang/Object;
 
     move-object/from16 v18, v0
@@ -1809,12 +1837,12 @@
 
     array-length v5, v0
 
-    .line 796
+    .line 805
     .local v5, hisargs:I
     :goto_4
     if-lez v5, :cond_3
 
-    .line 797
+    .line 806
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1841,14 +1869,14 @@
 
     move-result-object v2
 
-    .line 798
+    .line 807
     const/4 v10, 0x1
 
     .local v10, ii:I
     :goto_5
     if-ge v10, v5, :cond_3
 
-    .line 799
+    .line 808
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -1879,12 +1907,12 @@
 
     move-result-object v2
 
-    .line 798
+    .line 807
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_5
 
-    .line 765
+    .line 774
     .end local v2           #argStr:Ljava/lang/String;
     .end local v3           #arr$:[Ljava/lang/Object;
     .end local v4           #dataTimeStamp:Ljava/util/Date;
@@ -1908,12 +1936,12 @@
 
     throw v18
 
-    .line 773
+    .line 782
     .restart local v12       #mHistArray:[Ljava/lang/Object;
     :catch_0
     move-exception v14
 
-    .line 774
+    .line 783
     .local v14, sEx:Ljava/lang/Exception;
     :try_start_5
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1944,7 +1972,7 @@
 
     goto/16 :goto_1
 
-    .line 776
+    .line 785
     .end local v14           #sEx:Ljava/lang/Exception;
     :catchall_1
     move-exception v18
@@ -1955,7 +1983,7 @@
 
     throw v18
 
-    .line 795
+    .line 804
     .restart local v2       #argStr:Ljava/lang/String;
     .restart local v3       #arr$:[Ljava/lang/Object;
     .restart local v4       #dataTimeStamp:Ljava/util/Date;
@@ -1971,7 +1999,7 @@
 
     goto :goto_4
 
-    .line 803
+    .line 812
     :cond_3
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -2037,7 +2065,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 804
+    .line 813
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -2080,12 +2108,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 791
+    .line 800
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_3
 
-    .line 808
+    .line 817
     .end local v2           #argStr:Ljava/lang/String;
     .end local v3           #arr$:[Ljava/lang/Object;
     .end local v4           #dataTimeStamp:Ljava/util/Date;
@@ -2105,13 +2133,13 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 810
+    .line 819
     :cond_5
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
     goto/16 :goto_0
 
-    .line 785
+    .line 794
     .restart local v4       #dataTimeStamp:Ljava/util/Date;
     .restart local v8       #iTimeStamp:J
     .restart local v15       #sdf:Ljava/text/SimpleDateFormat;
@@ -2191,7 +2219,7 @@
     .line 249
     const-string v0, "UsbnetService"
 
-    const-string/jumbo v1, "isDeviceReady +-"
+    const-string v1, "isDeviceReady +-"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

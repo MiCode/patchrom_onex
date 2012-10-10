@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5599
+    .line 5612
     iput-object p1, p0, Lcom/htc/widget/HtcListView$9;->this$0:Lcom/htc/widget/HtcListView;
 
     iput-object p2, p0, Lcom/htc/widget/HtcListView$9;->val$animator:Landroid/animation/Animator;
@@ -44,21 +44,21 @@
     .parameter "animation"
 
     .prologue
-    .line 5609
+    .line 5622
     iget-object v0, p0, Lcom/htc/widget/HtcListView$9;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 5610
+    .line 5623
     iget-object v0, p0, Lcom/htc/widget/HtcListView$9;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 5611
+    .line 5624
     :cond_0
     return-void
 .end method
@@ -68,7 +68,7 @@
     .parameter "animation"
 
     .prologue
-    .line 5601
+    .line 5614
     iget-object v0, p0, Lcom/htc/widget/HtcListView$9;->val$animator:Landroid/animation/Animator;
 
     if-eqz v0, :cond_0
@@ -81,12 +81,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 5602
+    .line 5615
     iget-object v0, p0, Lcom/htc/widget/HtcListView$9;->val$animator:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->end()V
 
-    .line 5604
+    .line 5617
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListView$9;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -94,14 +94,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 5605
+    .line 5618
     iget-object v0, p0, Lcom/htc/widget/HtcListView$9;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 5606
+    .line 5619
     :cond_1
     return-void
 .end method

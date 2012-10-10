@@ -41,27 +41,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 641
+    .line 640
     iput-object p1, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 642
+    .line 641
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mContext:Landroid/content/Context;
 
-    .line 643
+    .line 642
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mUri:Landroid/net/Uri;
 
-    .line 644
+    .line 643
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mProjection:[Ljava/lang/String;
 
-    .line 645
+    .line 644
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mWhere:Ljava/lang/String;
 
-    .line 646
+    .line 645
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mSelectionArgs:[Ljava/lang/String;
 
-    .line 647
+    .line 646
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mSortOrder:Ljava/lang/String;
 
     return-void
@@ -73,7 +73,7 @@
     .parameter "x1"
 
     .prologue
-    .line 641
+    .line 640
     invoke-direct {p0, p1}, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;-><init>(Lcom/htc/music/widget/MusicMaActivity;)V
 
     return-void
@@ -91,25 +91,25 @@
     .parameter "sortOrder"
 
     .prologue
-    .line 650
+    .line 649
     iput-object p1, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mContext:Landroid/content/Context;
 
-    .line 651
+    .line 650
     iput-object p2, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mUri:Landroid/net/Uri;
 
-    .line 652
+    .line 651
     iput-object p3, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mProjection:[Ljava/lang/String;
 
-    .line 653
+    .line 652
     iput-object p4, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mWhere:Ljava/lang/String;
 
-    .line 654
+    .line 653
     iput-object p5, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mSelectionArgs:[Ljava/lang/String;
 
-    .line 655
+    .line 654
     iput-object p6, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mSortOrder:Ljava/lang/String;
 
-    .line 656
+    .line 655
     return-void
 .end method
 
@@ -117,22 +117,22 @@
     .locals 9
 
     .prologue
-    .line 659
+    .line 658
     const-string v0, "[MusicMaActivity]"
 
     const-string v1, "at runable thread run"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 660
+    .line 659
     iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mContext:Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 661
+    .line 660
     const/4 v6, 0x0
 
-    .line 662
+    .line 661
     .local v6, cursor:Landroid/database/Cursor;
     iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mContext:Landroid/content/Context;
 
@@ -150,11 +150,36 @@
 
     move-result-object v6
 
-    .line 664
-    if-eqz v6, :cond_0
+    .line 663
+    if-eqz v6, :cond_1
 
-    .line 667
+    .line 665
     :try_start_0
+    iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mUri:Landroid/net/Uri;
+
+    sget-object v1, Lcom/htc/music/util/MusicUtils$Media2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 666
+    iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mWhere:Ljava/lang/String;
+
+    const-string v1, "artist_id"
+
+    const-string v2, "artist2_id"
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mWhere:Ljava/lang/String;
+
+    .line 668
+    :cond_0
     iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->mWhere:Ljava/lang/String;
@@ -163,7 +188,7 @@
 
     move-result-object v8
 
-    .line 668
+    .line 669
     .local v8, toastMsg:Ljava/lang/String;
     iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -178,11 +203,11 @@
 
     move-result-object v7
 
-    .line 669
+    .line 670
     .local v7, msg:Landroid/os/Message;
     iput-object v8, v7, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 670
+    .line 671
     iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->messageHandler:Landroid/os/Handler;
@@ -194,42 +219,42 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 673
-    if-eqz v6, :cond_0
-
     .line 674
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    if-eqz v6, :cond_1
 
     .line 675
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 676
     const/4 v6, 0x0
 
-    .line 680
+    .line 681
     .end local v6           #cursor:Landroid/database/Cursor;
     .end local v7           #msg:Landroid/os/Message;
     .end local v8           #toastMsg:Ljava/lang/String;
-    :cond_0
+    :cond_1
     const-string v0, "[MusicMaActivity]"
 
     const-string v1, "at runable thread run after"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 681
+    .line 682
     return-void
 
-    .line 673
+    .line 674
     .restart local v6       #cursor:Landroid/database/Cursor;
     :catchall_0
     move-exception v0
 
-    if-eqz v6, :cond_1
-
-    .line 674
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    if-eqz v6, :cond_2
 
     .line 675
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 676
     const/4 v6, 0x0
 
-    :cond_1
+    :cond_2
     throw v0
 .end method

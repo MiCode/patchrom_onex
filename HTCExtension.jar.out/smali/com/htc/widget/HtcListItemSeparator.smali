@@ -296,17 +296,17 @@
     .parameter "style"
 
     .prologue
-    .line 718
+    .line 746
     const v1, 0x206004c
 
-    .line 719
+    .line 747
     .local v1, colorId:I
     if-nez p1, :cond_2
 
-    .line 721
+    .line 749
     const v1, 0x206004c
 
-    .line 729
+    .line 757
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
@@ -323,11 +323,11 @@
 
     aget-object v4, v0, v2
 
-    .line 730
+    .line 758
     .local v4, text:Landroid/widget/TextView;
     if-eqz v4, :cond_1
 
-    .line 731
+    .line 759
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -338,13 +338,13 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 729
+    .line 757
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 722
+    .line 750
     .end local v0           #arr$:[Landroid/widget/TextView;
     .end local v2           #i$:I
     .end local v3           #len$:I
@@ -354,23 +354,23 @@
 
     if-ne p1, v5, :cond_3
 
-    .line 724
+    .line 752
     const v1, 0x2060050
 
     goto :goto_0
 
-    .line 725
+    .line 753
     :cond_3
     const/4 v5, 0x4
 
     if-ne p1, v5, :cond_0
 
-    .line 727
+    .line 755
     const v1, 0x206004f
 
     goto :goto_0
 
-    .line 732
+    .line 760
     .restart local v0       #arr$:[Landroid/widget/TextView;
     .restart local v2       #i$:I
     .restart local v3       #len$:I
@@ -508,14 +508,14 @@
     .parameter "whichIcon"
 
     .prologue
-    .line 581
+    .line 609
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
     aget-object v0, v0, p1
 
     if-nez v0, :cond_0
 
-    .line 582
+    .line 610
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
     new-instance v1, Landroid/widget/ImageView;
@@ -526,7 +526,7 @@
 
     aput-object v1, v0, p1
 
-    .line 583
+    .line 611
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
     aget-object v0, v0, p1
@@ -541,12 +541,12 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/widget/HtcListItemSeparator;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 585
+    .line 613
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mUseSectionDivider:Z
 
-    .line 587
+    .line 615
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
@@ -556,20 +556,22 @@
 .end method
 
 .method private getTextView(I)Landroid/widget/TextView;
-    .locals 4
+    .locals 5
     .parameter "whichText"
 
     .prologue
-    const/4 v3, -0x2
+    const/4 v4, -0x2
 
-    .line 547
+    const/4 v3, 0x0
+
+    .line 571
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p1
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 548
+    .line 572
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     new-instance v1, Landroid/widget/TextView;
@@ -580,24 +582,42 @@
 
     aput-object v1, v0, p1
 
-    .line 549
+    .line 573
+    if-nez p1, :cond_0
+
+    .line 574
+    iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    aget-object v0, v0, v3
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->setSingleLine()V
+
+    .line 575
+    iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    aget-object v0, v0, v3
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHorizontalFadingEdgeEnabled(Z)V
+
+    .line 577
+    :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p1
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {v1, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v1, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/widget/HtcListItemSeparator;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 551
-    const/4 v0, 0x0
+    .line 579
+    iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mUseSectionDivider:Z
 
-    iput-boolean v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mUseSectionDivider:Z
-
-    .line 553
-    :cond_0
+    .line 581
+    :cond_1
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p1
@@ -954,15 +974,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 709
+    .line 737
     if-nez p1, :cond_1
 
-    .line 713
+    .line 741
     :cond_0
     :goto_0
     return v0
 
-    .line 711
+    .line 739
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
@@ -970,7 +990,7 @@
 
     if-nez v1, :cond_0
 
-    .line 712
+    .line 740
     const/4 v0, 0x1
 
     goto :goto_0
@@ -980,12 +1000,12 @@
     .locals 4
 
     .prologue
-    .line 755
+    .line 783
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getChildCount()I
 
     move-result v0
 
-    .line 757
+    .line 785
     .local v0, count:I
     add-int/lit8 v1, v0, -0x1
 
@@ -993,12 +1013,12 @@
     :goto_0
     if-ltz v1, :cond_2
 
-    .line 758
+    .line 786
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListItemSeparator;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 759
+    .line 787
     .local v2, v:Landroid/view/View;
     instance-of v3, v2, Lcom/htc/widget/HtcIconButton;
 
@@ -1012,17 +1032,17 @@
 
     if-eqz v3, :cond_1
 
-    .line 760
+    .line 788
     :cond_0
     invoke-virtual {p0, v2}, Lcom/htc/widget/HtcListItemSeparator;->removeView(Landroid/view/View;)V
 
-    .line 757
+    .line 785
     :cond_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 763
+    .line 791
     .end local v2           #v:Landroid/view/View;
     :cond_2
     return-void
@@ -1035,50 +1055,50 @@
     .prologue
     const v1, 0x208011e
 
-    .line 640
+    .line 668
     iget-boolean v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mUseSectionDivider:Z
 
     if-eqz v0, :cond_1
 
-    .line 641
+    .line 669
     const v0, 0x2080042
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundResource(I)V
 
-    .line 652
+    .line 680
     :cond_0
     :goto_0
     return-void
 
-    .line 644
+    .line 672
     :cond_1
     if-nez p1, :cond_2
 
-    .line 645
+    .line 673
     const v0, 0x2080099
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundResource(I)V
 
     goto :goto_0
 
-    .line 646
+    .line 674
     :cond_2
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_3
 
-    .line 647
+    .line 675
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundResource(I)V
 
     goto :goto_0
 
-    .line 649
+    .line 677
     :cond_3
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_0
 
-    .line 650
+    .line 678
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundResource(I)V
 
     goto :goto_0
@@ -1176,10 +1196,10 @@
 
     const/4 v3, 0x1
 
-    .line 661
+    .line 689
     if-nez p1, :cond_5
 
-    .line 662
+    .line 690
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1210,7 +1230,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 663
+    .line 691
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1221,7 +1241,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 664
+    .line 692
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v3
@@ -1230,7 +1250,7 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 665
+    .line 693
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v4
@@ -1241,29 +1261,29 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 674
+    .line 702
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     if-eqz v0, :cond_1
 
-    .line 675
+    .line 703
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1, v6}, Lcom/htc/widget/HtcIconButton;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 704
+    .line 732
     :cond_1
     :goto_1
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcListItemSeparator;->changeTextColor(I)V
 
-    .line 706
+    .line 734
     return-void
 
-    .line 667
+    .line 695
     :cond_2
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1275,7 +1295,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 668
+    .line 696
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1284,7 +1304,7 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 669
+    .line 697
     :cond_3
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1296,7 +1316,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 670
+    .line 698
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v3
@@ -1305,7 +1325,7 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 671
+    .line 699
     :cond_4
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1317,7 +1337,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 672
+    .line 700
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v4
@@ -1328,11 +1348,11 @@
 
     goto :goto_0
 
-    .line 677
+    .line 705
     :cond_5
     if-ne p1, v3, :cond_a
 
-    .line 678
+    .line 706
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1363,7 +1383,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 679
+    .line 707
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1374,7 +1394,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 680
+    .line 708
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v3
@@ -1383,7 +1403,7 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 681
+    .line 709
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v4
@@ -1394,14 +1414,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 690
+    .line 718
     :cond_6
     :goto_2
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     if-eqz v0, :cond_1
 
-    .line 691
+    .line 719
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mContext:Landroid/content/Context;
@@ -1410,7 +1430,7 @@
 
     goto/16 :goto_1
 
-    .line 683
+    .line 711
     :cond_7
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1422,7 +1442,7 @@
 
     if-eqz v0, :cond_8
 
-    .line 684
+    .line 712
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1431,7 +1451,7 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 685
+    .line 713
     :cond_8
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1443,7 +1463,7 @@
 
     if-eqz v0, :cond_9
 
-    .line 686
+    .line 714
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v3
@@ -1452,7 +1472,7 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 687
+    .line 715
     :cond_9
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1464,7 +1484,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 688
+    .line 716
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v4
@@ -1475,13 +1495,13 @@
 
     goto :goto_2
 
-    .line 694
+    .line 722
     :cond_a
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_1
 
-    .line 695
+    .line 723
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1492,7 +1512,7 @@
 
     if-eqz v0, :cond_b
 
-    .line 696
+    .line 724
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
@@ -1503,7 +1523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 697
+    .line 725
     :cond_b
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1515,7 +1535,7 @@
 
     if-eqz v0, :cond_c
 
-    .line 698
+    .line 726
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v3
@@ -1526,7 +1546,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 699
+    .line 727
     :cond_c
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
@@ -1538,7 +1558,7 @@
 
     if-eqz v0, :cond_d
 
-    .line 700
+    .line 728
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v0, v0, v4
@@ -1549,13 +1569,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 701
+    .line 729
     :cond_d
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     if-eqz v0, :cond_1
 
-    .line 702
+    .line 730
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mContext:Landroid/content/Context;
@@ -1571,7 +1591,7 @@
     .locals 4
 
     .prologue
-    .line 746
+    .line 774
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -1580,7 +1600,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 747
+    .line 775
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mCustomTextStyle:[I
 
     aget v1, v1, v0
@@ -1593,7 +1613,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 748
+    .line 776
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
     aget-object v1, v1, v0
@@ -1606,13 +1626,13 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 746
+    .line 774
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 752
+    .line 780
     :cond_1
     return-void
 .end method
@@ -1624,17 +1644,17 @@
     .parameter "whichIcon"
 
     .prologue
-    .line 596
+    .line 624
     packed-switch p1, :pswitch_data_0
 
-    .line 602
+    .line 630
     :cond_0
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 599
+    .line 627
     :pswitch_0
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
@@ -1646,14 +1666,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 600
+    .line 628
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
     aget-object v0, v0, p1
 
     goto :goto_0
 
-    .line 596
+    .line 624
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1662,7 +1682,7 @@
 .end method
 
 .method protected onLayout(ZIIII)V
-    .locals 10
+    .locals 11
     .parameter "changed"
     .parameter "left"
     .parameter "top"
@@ -1671,917 +1691,311 @@
 
     .prologue
     .line 361
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     .line 362
-    .local v4, width:I
+    .local v5, width:I
     const/4 v0, 0x0
 
     .line 363
     .local v0, height:I
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 364
-    .local v3, tmpright:I
+    .local v4, tmpright:I
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+
+    move-result v3
+
+    .line 365
+    .local v3, tmpleft:I
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
 
     move-result v2
 
-    .line 365
-    .local v2, tmpleft:I
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+    .line 367
+    .local v2, rightedge:I
+    move v1, v3
 
-    move-result v1
+    .line 370
+    .local v1, rightBoundary:I
+    iget-boolean v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mButtonFound:Z
 
-    .line 368
-    .local v1, rightedge:I
-    iget-boolean v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mButtonFound:Z
-
-    if-eqz v5, :cond_0
-
-    .line 369
-    iget-boolean v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsIconButton:Z
-
-    if-eqz v5, :cond_4
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
-
-    if-eqz v5, :cond_4
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
-
-    invoke-virtual {v5}, Lcom/htc/widget/HtcIconButton;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_4
+    if-eqz v6, :cond_0
 
     .line 371
-    sget v4, Lcom/htc/widget/HtcListItemSeparator;->WIDTH_ICONBUTTON:I
+    iget-boolean v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsIconButton:Z
 
-    .line 372
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
+    if-eqz v6, :cond_4
 
-    invoke-virtual {v5}, Lcom/htc/widget/HtcIconButton;->getMeasuredHeight()I
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
-    move-result v0
+    if-eqz v6, :cond_4
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
+
+    invoke-virtual {v6}, Lcom/htc/widget/HtcIconButton;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_4
 
     .line 373
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
+    sget v5, Lcom/htc/widget/HtcListItemSeparator;->WIDTH_ICONBUTTON:I
+
+    .line 374
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
+
+    invoke-virtual {v6}, Lcom/htc/widget/HtcIconButton;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 375
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v6
-
-    sub-int/2addr v6, v4
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
     move-result v7
 
-    sub-int/2addr v7, v0
-
-    div-int/lit8 v7, v7, 0x2
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v8
+    sub-int/2addr v7, v5
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
-    move-result v9
+    move-result v8
 
-    add-int/2addr v9, v0
+    sub-int/2addr v8, v0
 
-    div-int/lit8 v9, v9, 0x2
+    div-int/lit8 v8, v8, 0x2
 
-    invoke-virtual {v5, v6, v7, v8, v9}, Lcom/htc/widget/HtcIconButton;->layout(IIII)V
-
-    .line 379
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
 
-    move-result v5
+    move-result v9
 
-    sub-int v2, v5, v4
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
-    .line 380
-    const/4 v4, 0x2
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Lcom/htc/widget/HtcIconButton;->layout(IIII)V
 
     .line 381
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
 
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getMeasuredHeight()I
+    move-result v6
 
-    move-result v0
+    sub-int v3, v6, v5
 
     .line 382
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+    const/4 v5, 0x2
 
-    sub-int v6, v2, v4
+    .line 383
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getMeasuredHeight()I
 
-    move-result v7
+    move-result v0
 
-    sub-int/2addr v7, v0
+    .line 384
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
 
-    div-int/lit8 v7, v7, 0x2
+    sub-int v7, v3, v5
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
     move-result v8
 
-    add-int/2addr v8, v0
+    sub-int/2addr v8, v0
 
     div-int/lit8 v8, v8, 0x2
 
-    invoke-virtual {v5, v6, v7, v2, v8}, Landroid/widget/ImageView;->layout(IIII)V
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
-    .line 387
-    sub-int/2addr v2, v4
+    move-result v9
 
-    .line 388
-    move v1, v2
+    add-int/2addr v9, v0
+
+    div-int/lit8 v9, v9, 0x2
+
+    invoke-virtual {v6, v7, v8, v3, v9}, Landroid/widget/ImageView;->layout(IIII)V
+
+    .line 389
+    sub-int/2addr v3, v5
 
     .line 390
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+    move v2, v3
 
-    const/4 v6, 0x0
+    .line 392
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
 
-    invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
+    const/4 v7, 0x0
 
-    .line 433
-    :cond_0
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 432
     :goto_0
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    if-eqz v5, :cond_7
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_7
-
-    .line 434
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getMeasuredWidth()I
-
-    move-result v4
-
-    .line 435
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getMeasuredHeight()I
-
-    move-result v0
+    move v1, v3
 
     .line 436
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
+    :cond_0
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    aget-object v5, v5, v6
+    aget-object v6, v6, v7
 
-    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M5:I
+    if-eqz v6, :cond_7
 
-    sub-int v6, v2, v6
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
-    sub-int/2addr v6, v4
+    const/4 v7, 0x1
 
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+    aget-object v6, v6, v7
 
-    move-result v7
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getVisibility()I
 
-    sub-int/2addr v7, v0
+    move-result v6
 
-    div-int/lit8 v7, v7, 0x2
+    const/16 v7, 0x8
 
-    sget v8, Lcom/htc/widget/HtcListItemSeparator;->M5:I
+    if-eq v6, v7, :cond_7
 
-    sub-int v8, v2, v8
+    .line 437
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+    const/4 v7, 0x1
 
-    move-result v9
+    aget-object v6, v6, v7
 
-    add-int/2addr v9, v0
-
-    div-int/lit8 v9, v9, 0x2
-
-    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/widget/ImageView;->layout(IIII)V
-
-    .line 442
-    sub-int v5, v2, v4
-
-    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M5:I
-
-    sub-int/2addr v5, v6
-
-    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M7:I
-
-    sub-int v2, v5, v6
-
-    .line 443
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    if-eqz v5, :cond_1
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getVisibility()I
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getMeasuredWidth()I
 
     move-result v5
 
-    const/16 v6, 0x8
+    .line 438
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
-    if-eq v5, v6, :cond_1
+    const/4 v7, 0x1
 
-    .line 444
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+    aget-object v6, v6, v7
 
-    const/4 v6, 0x2
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getMeasuredHeight()I
 
-    aget-object v5, v5, v6
+    move-result v0
 
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredWidth()I
+    .line 439
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
 
-    move-result v4
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M5:I
+
+    sub-int v7, v3, v7
+
+    sub-int/2addr v7, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    sget v9, Lcom/htc/widget/HtcListItemSeparator;->M5:I
+
+    sub-int v9, v3, v9
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Landroid/widget/ImageView;->layout(IIII)V
 
     .line 445
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+    sub-int v6, v3, v5
 
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 446
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    sub-int v6, v2, v4
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v7
-
-    sub-int/2addr v7, v0
-
-    div-int/lit8 v7, v7, 0x2
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v8
-
-    add-int/2addr v8, v0
-
-    div-int/lit8 v8, v8, 0x2
-
-    invoke-virtual {v5, v6, v7, v2, v8}, Landroid/widget/TextView;->layout(IIII)V
-
-    .line 465
-    :cond_1
-    :goto_1
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    if-eqz v5, :cond_8
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_8
-
-    .line 466
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getMeasuredWidth()I
-
-    move-result v4
-
-    .line 467
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 468
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M5:I
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v7
-
-    sub-int/2addr v7, v0
-
-    div-int/lit8 v7, v7, 0x2
-
-    sget v8, Lcom/htc/widget/HtcListItemSeparator;->M5:I
-
-    add-int/2addr v8, v4
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v9
-
-    add-int/2addr v9, v0
-
-    div-int/lit8 v9, v9, 0x2
-
-    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/widget/ImageView;->layout(IIII)V
-
-    .line 474
-    sget v5, Lcom/htc/widget/HtcListItemSeparator;->M5:I
-
-    add-int/2addr v5, v4
-
-    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M7:I
-
-    add-int v3, v5, v6
-
-    .line 475
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    if-eqz v5, :cond_2
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_2
-
-    .line 476
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredWidth()I
-
-    move-result v4
-
-    .line 477
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 478
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v6
-
-    sub-int/2addr v6, v0
-
-    div-int/lit8 v6, v6, 0x2
-
-    add-int v7, v3, v4
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v8
-
-    add-int/2addr v8, v0
-
-    div-int/lit8 v8, v8, 0x2
-
-    invoke-virtual {v5, v3, v6, v7, v8}, Landroid/widget/TextView;->layout(IIII)V
-
-    .line 507
-    :cond_2
-    :goto_2
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    if-eqz v5, :cond_3
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_3
-
-    .line 508
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredWidth()I
-
-    move-result v4
-
-    .line 509
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 510
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x1
-
-    aget-object v5, v5, v6
-
-    sub-int v6, v1, v4
-
-    div-int/lit8 v6, v6, 0x2
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v7
-
-    sub-int/2addr v7, v0
-
-    div-int/lit8 v7, v7, 0x2
-
-    add-int v8, v1, v4
-
-    div-int/lit8 v8, v8, 0x2
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v9
-
-    add-int/2addr v9, v0
-
-    div-int/lit8 v9, v9, 0x2
-
-    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/widget/TextView;->layout(IIII)V
-
-    .line 516
-    :cond_3
-    return-void
-
-    .line 391
-    :cond_4
-    iget-boolean v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsToggleButton:Z
-
-    if-eqz v5, :cond_5
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
-
-    if-eqz v5, :cond_5
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
-
-    invoke-virtual {v5}, Lcom/htc/widget/HtcToggleButton;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_5
-
-    .line 393
-    const/16 v4, 0x7a
-
-    .line 394
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
-
-    invoke-virtual {v5}, Lcom/htc/widget/HtcToggleButton;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 395
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v6
-
-    sub-int/2addr v6, v4
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v7
-
-    sub-int/2addr v7, v0
-
-    div-int/lit8 v7, v7, 0x2
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v8
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v9
-
-    add-int/2addr v9, v0
-
-    div-int/lit8 v9, v9, 0x2
-
-    invoke-virtual {v5, v6, v7, v8, v9}, Lcom/htc/widget/HtcToggleButton;->layout(IIII)V
-
-    .line 401
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v5
-
-    sub-int v2, v5, v4
-
-    .line 402
-    move v1, v2
-
-    .line 404
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
-
-    const/16 v6, 0x8
-
-    invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto/16 :goto_0
-
-    .line 405
-    :cond_5
-    iget-boolean v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsImageButton:Z
-
-    if-eqz v5, :cond_6
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
-
-    if-eqz v5, :cond_6
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
-
-    invoke-virtual {v5}, Lcom/htc/widget/HtcImageButton;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_6
-
-    .line 407
-    sget v4, Lcom/htc/widget/HtcListItemSeparator;->WIDTH_IMAGEBUTTON:I
-
-    .line 408
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
-
-    invoke-virtual {v5}, Lcom/htc/widget/HtcImageButton;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 409
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v6
-
-    sub-int/2addr v6, v4
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v7
-
-    sub-int/2addr v7, v0
-
-    div-int/lit8 v7, v7, 0x2
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v8
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v9
-
-    add-int/2addr v9, v0
-
-    div-int/lit8 v9, v9, 0x2
-
-    invoke-virtual {v5, v6, v7, v8, v9}, Lcom/htc/widget/HtcImageButton;->layout(IIII)V
-
-    .line 415
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
-
-    move-result v5
-
-    sub-int v2, v5, v4
-
-    .line 416
-    const/4 v4, 0x2
-
-    .line 417
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
-
-    invoke-virtual {v5}, Landroid/widget/ImageView;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 418
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
-
-    sub-int v6, v2, v4
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v7
-
-    sub-int/2addr v7, v0
-
-    div-int/lit8 v7, v7, 0x2
-
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
-
-    move-result v8
-
-    add-int/2addr v8, v0
-
-    div-int/lit8 v8, v8, 0x2
-
-    invoke-virtual {v5, v6, v7, v2, v8}, Landroid/widget/ImageView;->layout(IIII)V
-
-    .line 423
-    sub-int/2addr v2, v4
-
-    .line 424
-    move v1, v2
-
-    .line 426
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto/16 :goto_0
-
-    .line 428
-    :cond_6
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
-
-    const/16 v6, 0x8
-
-    invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto/16 :goto_0
-
-    .line 453
-    :cond_7
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    if-eqz v5, :cond_1
-
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getVisibility()I
-
-    move-result v5
-
-    const/16 v6, 0x8
-
-    if-eq v5, v6, :cond_1
-
-    .line 454
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredWidth()I
-
-    move-result v4
-
-    .line 455
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredHeight()I
-
-    move-result v0
-
-    .line 456
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    aget-object v5, v5, v6
-
-    sub-int v6, v2, v4
-
-    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M5:I
 
     sub-int/2addr v6, v7
 
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M7:I
 
-    move-result v7
+    sub-int v3, v6, v7
 
-    sub-int/2addr v7, v0
+    .line 446
+    move v1, v3
 
-    div-int/lit8 v7, v7, 0x2
+    .line 447
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
-    sget v8, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+    const/4 v7, 0x2
 
-    sub-int v8, v2, v8
+    aget-object v6, v6, v7
 
-    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+    if-eqz v6, :cond_1
 
-    move-result v9
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
-    add-int/2addr v9, v0
+    const/4 v7, 0x2
 
-    div-int/lit8 v9, v9, 0x2
+    aget-object v6, v6, v7
 
-    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/widget/TextView;->layout(IIII)V
+    invoke-virtual {v6}, Landroid/widget/TextView;->getVisibility()I
 
-    goto/16 :goto_1
+    move-result v6
 
-    .line 485
-    :cond_8
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+    const/16 v7, 0x8
 
-    const/4 v6, 0x0
+    if-eq v6, v7, :cond_1
 
-    aget-object v5, v5, v6
+    .line 448
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
-    if-eqz v5, :cond_2
+    const/4 v7, 0x2
 
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+    aget-object v6, v6, v7
 
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getVisibility()I
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v5
 
-    const/16 v6, 0x8
+    .line 449
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
-    if-eq v5, v6, :cond_2
+    const/4 v7, 0x2
 
-    .line 486
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+    aget-object v6, v6, v7
 
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredWidth()I
-
-    move-result v4
-
-    .line 487
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v5}, Landroid/widget/TextView;->getMeasuredHeight()I
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredHeight()I
 
     move-result v0
 
-    .line 489
-    iget v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
+    .line 450
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
 
-    const/4 v6, 0x4
+    const/4 v7, 0x2
 
-    if-ne v5, v6, :cond_9
+    aget-object v6, v6, v7
 
-    .line 490
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
-    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M1:I
+    sub-int v7, v3, v5
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
-    move-result v7
+    move-result v8
 
-    sub-int/2addr v7, v0
+    sub-int/2addr v8, v0
 
-    div-int/lit8 v7, v7, 0x2
-
-    sget v8, Lcom/htc/widget/HtcListItemSeparator;->M1:I
-
-    add-int/2addr v8, v4
+    div-int/lit8 v8, v8, 0x2
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
@@ -2591,19 +2005,159 @@
 
     div-int/lit8 v9, v9, 0x2
 
-    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/widget/TextView;->layout(IIII)V
+    invoke-virtual {v6, v7, v8, v3, v9}, Landroid/widget/TextView;->layout(IIII)V
 
-    goto/16 :goto_2
+    .line 455
+    sub-int v1, v3, v5
 
-    .line 496
-    :cond_9
-    iget-object v5, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    aget-object v5, v5, v6
-
+    .line 470
+    :cond_1
+    :goto_1
     sget v6, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+
+    sub-int/2addr v1, v6
+
+    .line 472
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    if-eqz v6, :cond_9
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_9
+
+    .line 473
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getMeasuredWidth()I
+
+    move-result v5
+
+    .line 474
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 475
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageView:[Landroid/widget/ImageView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M5:I
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    sget v9, Lcom/htc/widget/HtcListItemSeparator;->M5:I
+
+    add-int/2addr v9, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Landroid/widget/ImageView;->layout(IIII)V
+
+    .line 481
+    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M5:I
+
+    add-int/2addr v6, v5
+
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M7:I
+
+    add-int v4, v6, v7
+
+    .line 482
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    if-eqz v6, :cond_2
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_2
+
+    .line 483
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredWidth()I
+
+    move-result v5
+
+    .line 484
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 486
+    add-int v6, v4, v5
+
+    if-gt v6, v1, :cond_8
+
+    .line 487
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
@@ -2612,10 +2166,571 @@
     sub-int/2addr v7, v0
 
     div-int/lit8 v7, v7, 0x2
+
+    add-int v8, v4, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v9
+
+    add-int/2addr v9, v0
+
+    div-int/lit8 v9, v9, 0x2
+
+    invoke-virtual {v6, v4, v7, v8, v9}, Landroid/widget/TextView;->layout(IIII)V
+
+    .line 531
+    :cond_2
+    :goto_2
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    if-eqz v6, :cond_3
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_3
+
+    .line 532
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredWidth()I
+
+    move-result v5
+
+    .line 533
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 534
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x1
+
+    aget-object v6, v6, v7
+
+    sub-int v7, v2, v5
+
+    div-int/lit8 v7, v7, 0x2
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    add-int v9, v2, v5
+
+    div-int/lit8 v9, v9, 0x2
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Landroid/widget/TextView;->layout(IIII)V
+
+    .line 540
+    :cond_3
+    return-void
+
+    .line 393
+    :cond_4
+    iget-boolean v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsToggleButton:Z
+
+    if-eqz v6, :cond_5
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
+
+    if-eqz v6, :cond_5
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
+
+    invoke-virtual {v6}, Lcom/htc/widget/HtcToggleButton;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_5
+
+    .line 395
+    const/16 v5, 0x7a
+
+    .line 396
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
+
+    invoke-virtual {v6}, Lcom/htc/widget/HtcToggleButton;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 397
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+
+    move-result v7
+
+    sub-int/2addr v7, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+
+    move-result v9
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Lcom/htc/widget/HtcToggleButton;->layout(IIII)V
+
+    .line 403
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+
+    move-result v6
+
+    sub-int v3, v6, v5
+
+    .line 404
+    move v2, v3
+
+    .line 406
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+
+    const/16 v7, 0x8
+
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto/16 :goto_0
+
+    .line 407
+    :cond_5
+    iget-boolean v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsImageButton:Z
+
+    if-eqz v6, :cond_6
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
+
+    if-eqz v6, :cond_6
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
+
+    invoke-virtual {v6}, Lcom/htc/widget/HtcImageButton;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_6
+
+    .line 409
+    sget v5, Lcom/htc/widget/HtcListItemSeparator;->WIDTH_IMAGEBUTTON:I
+
+    .line 410
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
+
+    invoke-virtual {v6}, Lcom/htc/widget/HtcImageButton;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 411
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+
+    move-result v7
+
+    sub-int/2addr v7, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+
+    move-result v9
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Lcom/htc/widget/HtcImageButton;->layout(IIII)V
+
+    .line 417
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredWidth()I
+
+    move-result v6
+
+    sub-int v3, v6, v5
+
+    .line 418
+    const/4 v5, 0x2
+
+    .line 419
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+
+    invoke-virtual {v6}, Landroid/widget/ImageView;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 420
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+
+    sub-int v7, v3, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v9
+
+    add-int/2addr v9, v0
+
+    div-int/lit8 v9, v9, 0x2
+
+    invoke-virtual {v6, v7, v8, v3, v9}, Landroid/widget/ImageView;->layout(IIII)V
+
+    .line 425
+    sub-int/2addr v3, v5
+
+    .line 426
+    move v2, v3
+
+    .line 428
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto/16 :goto_0
+
+    .line 430
+    :cond_6
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mDivider:Landroid/widget/ImageView;
+
+    const/16 v7, 0x8
+
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto/16 :goto_0
+
+    .line 458
+    :cond_7
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x2
+
+    aget-object v6, v6, v7
+
+    if-eqz v6, :cond_1
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x2
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_1
+
+    .line 459
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x2
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredWidth()I
+
+    move-result v5
+
+    .line 460
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x2
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 461
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x2
+
+    aget-object v6, v6, v7
+
+    sub-int v7, v3, v5
 
     sget v8, Lcom/htc/widget/HtcListItemSeparator;->M2:I
 
-    add-int/2addr v8, v4
+    sub-int/2addr v7, v8
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    sget v9, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+
+    sub-int v9, v3, v9
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Landroid/widget/TextView;->layout(IIII)V
+
+    .line 466
+    sub-int v6, v3, v5
+
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+
+    sub-int v1, v6, v7
+
+    goto/16 :goto_1
+
+    .line 493
+    :cond_8
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v7
+
+    sub-int/2addr v7, v0
+
+    div-int/lit8 v7, v7, 0x2
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    add-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    invoke-virtual {v6, v4, v7, v1, v8}, Landroid/widget/TextView;->layout(IIII)V
+
+    goto/16 :goto_2
+
+    .line 501
+    :cond_9
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    if-eqz v6, :cond_2
+
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getVisibility()I
+
+    move-result v6
+
+    const/16 v7, 0x8
+
+    if-eq v6, v7, :cond_2
+
+    .line 502
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredWidth()I
+
+    move-result v5
+
+    .line 503
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    invoke-virtual {v6}, Landroid/widget/TextView;->getMeasuredHeight()I
+
+    move-result v0
+
+    .line 505
+    iget v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
+
+    const/4 v7, 0x4
+
+    if-ne v6, v7, :cond_a
+
+    .line 506
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M1:I
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    sget v9, Lcom/htc/widget/HtcListItemSeparator;->M1:I
+
+    add-int/2addr v9, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Landroid/widget/TextView;->layout(IIII)V
+
+    goto/16 :goto_2
+
+    .line 512
+    :cond_a
+    sget v6, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+
+    add-int/2addr v6, v5
+
+    if-gt v6, v1, :cond_b
+
+    .line 513
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
+
+    sget v9, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+
+    add-int/2addr v9, v5
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v10
+
+    add-int/2addr v10, v0
+
+    div-int/lit8 v10, v10, 0x2
+
+    invoke-virtual {v6, v7, v8, v9, v10}, Landroid/widget/TextView;->layout(IIII)V
+
+    goto/16 :goto_2
+
+    .line 519
+    :cond_b
+    iget-object v6, p0, Lcom/htc/widget/HtcListItemSeparator;->mTextView:[Landroid/widget/TextView;
+
+    const/4 v7, 0x0
+
+    aget-object v6, v6, v7
+
+    sget v7, Lcom/htc/widget/HtcListItemSeparator;->M2:I
+
+    invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    div-int/lit8 v8, v8, 0x2
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItemSeparator;->getMeasuredHeight()I
 
@@ -2625,7 +2740,7 @@
 
     div-int/lit8 v9, v9, 0x2
 
-    invoke-virtual {v5, v6, v7, v8, v9}, Landroid/widget/TextView;->layout(IIII)V
+    invoke-virtual {v6, v7, v8, v1, v9}, Landroid/widget/TextView;->layout(IIII)V
 
     goto/16 :goto_2
 .end method
@@ -3035,7 +3150,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 614
+    .line 642
     if-eqz p1, :cond_1
 
     if-eq p1, v1, :cond_1
@@ -3044,31 +3159,31 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 634
+    .line 662
     :cond_0
     :goto_0
     return-void
 
-    .line 616
+    .line 644
     :cond_1
     iput p1, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
-    .line 617
+    .line 645
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundImage(I)V
 
-    .line 618
+    .line 646
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcListItemSeparator;->setDivider(I)V
 
-    .line 619
+    .line 647
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcListItemSeparator;->setTextAppearance(I)V
 
-    .line 620
+    .line 648
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
 
     if-eqz v0, :cond_0
@@ -3081,7 +3196,7 @@
 
     if-nez v0, :cond_0
 
-    .line 621
+    .line 649
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     packed-switch v0, :pswitch_data_0
@@ -3089,7 +3204,7 @@
     :pswitch_0
     goto :goto_0
 
-    .line 623
+    .line 651
     :pswitch_1
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
 
@@ -3099,7 +3214,7 @@
 
     goto :goto_0
 
-    .line 626
+    .line 654
     :pswitch_2
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
 
@@ -3107,7 +3222,7 @@
 
     goto :goto_0
 
-    .line 630
+    .line 658
     :pswitch_3
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
 
@@ -3115,7 +3230,7 @@
 
     goto :goto_0
 
-    .line 621
+    .line 649
     nop
 
     :pswitch_data_0
@@ -3134,14 +3249,14 @@
     .parameter "resId"
 
     .prologue
-    .line 573
+    .line 601
     packed-switch p1, :pswitch_data_0
 
-    .line 578
+    .line 606
     :goto_0
     return-void
 
-    .line 576
+    .line 604
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcListItemSeparator;->getImageView(I)Landroid/widget/ImageView;
 
@@ -3151,7 +3266,7 @@
 
     goto :goto_0
 
-    .line 573
+    .line 601
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -3165,14 +3280,14 @@
     .parameter "d"
 
     .prologue
-    .line 561
+    .line 589
     packed-switch p1, :pswitch_data_0
 
-    .line 566
+    .line 594
     :goto_0
     return-void
 
-    .line 564
+    .line 592
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcListItemSeparator;->getImageView(I)Landroid/widget/ImageView;
 
@@ -3182,7 +3297,7 @@
 
     goto :goto_0
 
-    .line 561
+    .line 589
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -3199,10 +3314,10 @@
 
     const/4 v3, 0x1
 
-    .line 766
+    .line 794
     if-eqz p1, :cond_0
 
-    .line 767
+    .line 795
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v1, -0x2
@@ -3213,27 +3328,27 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/widget/HtcListItemSeparator;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 768
+    .line 796
     iput-object p1, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
-    .line 769
+    .line 797
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mButtonFound:Z
 
-    .line 770
+    .line 798
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsIconButton:Z
 
-    .line 771
+    .line 799
     iput-boolean v4, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsToggleButton:Z
 
-    .line 772
+    .line 800
     iput-boolean v4, p0, Lcom/htc/widget/HtcListItemSeparator;->mUseSectionDivider:Z
 
-    .line 773
+    .line 801
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     if-nez v0, :cond_1
 
-    .line 774
+    .line 802
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mContext:Landroid/content/Context;
@@ -3242,18 +3357,18 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/widget/HtcIconButton;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 784
+    .line 812
     :cond_0
     :goto_0
     return-void
 
-    .line 775
+    .line 803
     :cond_1
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     if-ne v0, v3, :cond_2
 
-    .line 776
+    .line 804
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mContext:Landroid/content/Context;
@@ -3264,7 +3379,7 @@
 
     goto :goto_0
 
-    .line 779
+    .line 807
     :cond_2
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
@@ -3272,7 +3387,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 780
+    .line 808
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mIconButton:Lcom/htc/widget/HtcIconButton;
 
     iget-object v1, p0, Lcom/htc/widget/HtcListItemSeparator;->mContext:Landroid/content/Context;
@@ -3293,10 +3408,10 @@
 
     const/4 v3, 0x0
 
-    .line 788
+    .line 816
     if-eqz p1, :cond_0
 
-    .line 789
+    .line 817
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v1, -0x2
@@ -3307,25 +3422,25 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/widget/HtcListItemSeparator;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 790
+    .line 818
     iput-object p1, p0, Lcom/htc/widget/HtcListItemSeparator;->mImageButton:Lcom/htc/widget/HtcImageButton;
 
-    .line 791
+    .line 819
     iput-boolean v4, p0, Lcom/htc/widget/HtcListItemSeparator;->mButtonFound:Z
 
-    .line 792
+    .line 820
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsIconButton:Z
 
-    .line 793
+    .line 821
     iput-boolean v4, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsImageButton:Z
 
-    .line 794
+    .line 822
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsToggleButton:Z
 
-    .line 795
+    .line 823
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mUseSectionDivider:Z
 
-    .line 797
+    .line 825
     :cond_0
     return-void
 .end method
@@ -3336,14 +3451,14 @@
     .parameter "resId"
 
     .prologue
-    .line 537
+    .line 561
     packed-switch p1, :pswitch_data_0
 
-    .line 544
+    .line 568
     :goto_0
     return-void
 
-    .line 541
+    .line 565
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcListItemSeparator;->getTextView(I)Landroid/widget/TextView;
 
@@ -3351,14 +3466,14 @@
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 542
+    .line 566
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcListItemSeparator;->setTextAppearance(I)V
 
     goto :goto_0
 
-    .line 537
+    .line 561
     nop
 
     :pswitch_data_0
@@ -3375,14 +3490,14 @@
     .parameter "text"
 
     .prologue
-    .line 523
+    .line 547
     packed-switch p1, :pswitch_data_0
 
-    .line 530
+    .line 554
     :goto_0
     return-void
 
-    .line 527
+    .line 551
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcListItemSeparator;->getTextView(I)Landroid/widget/TextView;
 
@@ -3390,14 +3505,14 @@
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 528
+    .line 552
     iget v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mMode:I
 
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcListItemSeparator;->setTextAppearance(I)V
 
     goto :goto_0
 
-    .line 523
+    .line 547
     nop
 
     :pswitch_data_0
@@ -3414,19 +3529,19 @@
     .parameter "style"
 
     .prologue
-    .line 741
+    .line 769
     if-ltz p1, :cond_0
 
     const/4 v0, 0x3
 
     if-ge p1, v0, :cond_0
 
-    .line 742
+    .line 770
     iget-object v0, p0, Lcom/htc/widget/HtcListItemSeparator;->mCustomTextStyle:[I
 
     aput p2, v0, p1
 
-    .line 743
+    .line 771
     :cond_0
     return-void
 .end method
@@ -3440,10 +3555,10 @@
 
     const/4 v3, 0x0
 
-    .line 805
+    .line 833
     if-eqz p1, :cond_0
 
-    .line 806
+    .line 834
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v1, -0x2
@@ -3454,22 +3569,22 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/widget/HtcListItemSeparator;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 807
+    .line 835
     iput-object p1, p0, Lcom/htc/widget/HtcListItemSeparator;->mToggleButton:Lcom/htc/widget/HtcToggleButton;
 
-    .line 808
+    .line 836
     iput-boolean v4, p0, Lcom/htc/widget/HtcListItemSeparator;->mButtonFound:Z
 
-    .line 809
+    .line 837
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsIconButton:Z
 
-    .line 810
+    .line 838
     iput-boolean v4, p0, Lcom/htc/widget/HtcListItemSeparator;->mIsToggleButton:Z
 
-    .line 811
+    .line 839
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItemSeparator;->mUseSectionDivider:Z
 
-    .line 813
+    .line 841
     :cond_0
     return-void
 .end method

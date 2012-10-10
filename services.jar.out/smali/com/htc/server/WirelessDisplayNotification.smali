@@ -32,7 +32,7 @@
 
 .field private static final INTENT_CONFIG_DONGLE:Ljava/lang/String; = "com.htc.wifidisplay.CONFIGURE_MODE_NOTIFICATION_CONFIG"
 
-.field private static final INTENT_CONFIG_DONGLES_LIST:Ljava/lang/String; = "com.htc.wifidisplay.CONFIGURE_MODE_NOTIFICATION_LIST"
+.field private static final INTENT_CONFIG_DONGLES_LIST:Ljava/lang/String; = "com.htc.wifidisplay.NOTIFICATION_CONFIGURE_TOOL"
 
 .field private static final INTENT_DONGLE_FIRMWARE_UPDATE:Ljava/lang/String; = "com.htc.wifidisplay.intent.DONGLE_FIRMWARE_UPDATE"
 
@@ -66,6 +66,8 @@
 
 .field private mNotificationPreference:Z
 
+.field private mNotificationWhen:J
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -75,50 +77,55 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 118
+    .line 122
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
+    .line 100
     iput-object v3, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
 
-    .line 102
+    .line 103
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationPreference:Z
 
-    .line 108
+    .line 106
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+
+    .line 112
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
 
-    .line 111
+    .line 115
     iput-object v3, p0, Lcom/htc/server/WirelessDisplayNotification;->mHandler:Lcom/htc/server/WirelessDisplayNotification$H;
 
-    .line 119
+    .line 123
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
 
-    .line 122
+    .line 126
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 123
+    .line 127
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 124
+    .line 128
     const-string v1, "com.htc.wifidisplay.NOTIFICATION_STATUS_UPDATE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 125
+    .line 129
     const-string v1, "com.htc.wifidisplay.NOTIFICATION_BTN_CLICK"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 126
+    .line 130
     iget-object v1, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/htc/server/WirelessDisplayNotification$BroadcastHandler;
@@ -127,14 +134,14 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 129
+    .line 133
     new-instance v1, Lcom/htc/server/WirelessDisplayNotification$H;
 
     invoke-direct {v1, p0}, Lcom/htc/server/WirelessDisplayNotification$H;-><init>(Lcom/htc/server/WirelessDisplayNotification;)V
 
     iput-object v1, p0, Lcom/htc/server/WirelessDisplayNotification;->mHandler:Lcom/htc/server/WirelessDisplayNotification$H;
 
-    .line 130
+    .line 134
     return-void
 .end method
 
@@ -187,7 +194,19 @@
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/htc/server/WirelessDisplayNotification;)Lcom/htc/server/WirelessDisplayNotification$H;
+.method static synthetic access$402(Lcom/htc/server/WirelessDisplayNotification;J)J
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 42
+    iput-wide p1, p0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$500(Lcom/htc/server/WirelessDisplayNotification;)Lcom/htc/server/WirelessDisplayNotification$H;
     .locals 1
     .parameter "x0"
 
@@ -198,7 +217,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
+.method static synthetic access$600(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
     .locals 1
     .parameter "x0"
 
@@ -216,12 +235,12 @@
     .parameter "isEnablingOrDisabling"
 
     .prologue
-    .line 242
+    .line 248
     new-instance v5, Landroid/app/Notification;
 
     invoke-direct {v5}, Landroid/app/Notification;-><init>()V
 
-    .line 243
+    .line 249
     .local v5, n:Landroid/app/Notification;
     iget-object v11, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
 
@@ -229,7 +248,7 @@
 
     move-result-object v7
 
-    .line 246
+    .line 252
     .local v7, res:Landroid/content/res/Resources;
     new-instance v2, Landroid/widget/RemoteViews;
 
@@ -243,42 +262,57 @@
 
     invoke-direct {v2, v11, v12}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    .line 248
+    .line 254
     .local v2, contentView:Landroid/widget/RemoteViews;
     iput-object v2, v5, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    .line 249
+    .line 255
+    const-wide/16 v11, 0x0
+
+    iget-wide v13, p0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+
+    cmp-long v11, v11, v13
+
+    if-nez v11, :cond_0
+
+    .line 256
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v11
 
+    iput-wide v11, p0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+
+    .line 258
+    :cond_0
+    iget-wide v11, p0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+
     iput-wide v11, v5, Landroid/app/Notification;->when:J
 
-    .line 250
+    .line 259
     const/16 v11, 0x20
 
     iput v11, v5, Landroid/app/Notification;->flags:I
 
-    .line 252
+    .line 261
     const/4 v6, 0x0
 
-    .line 253
+    .line 262
     .local v6, nSwitchViewStatus:I
     const v3, 0x10800de
 
-    .line 255
+    .line 264
     .local v3, iconSwitch:I
     const/4 v9, 0x0
 
-    .line 256
+    .line 265
     .local v9, strTitle:Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 259
+    .line 268
     .local v8, strText:Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 297
+    .line 306
     :goto_0
     const v11, 0x1020006
 
@@ -286,55 +320,55 @@
 
     invoke-virtual {v2, v11, v12}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
-    .line 298
+    .line 307
     const v11, 0x1020016
 
     invoke-virtual {v2, v11, v9}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 299
+    .line 308
     const v11, 0x1020046
 
     invoke-virtual {v2, v11, v8}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 300
+    .line 309
     const v11, 0x1020340
 
     invoke-virtual {v2, v11, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 301
-    if-nez v6, :cond_3
+    .line 310
+    if-nez v6, :cond_4
 
-    .line 302
+    .line 311
     const/4 v11, 0x3
 
     move/from16 v0, p1
 
-    if-ne v0, v11, :cond_0
+    if-ne v0, v11, :cond_1
 
-    if-eqz p3, :cond_1
+    if-eqz p3, :cond_2
 
-    :cond_0
+    :cond_1
     const/4 v11, 0x4
 
     move/from16 v0, p1
 
-    if-ne v0, v11, :cond_2
+    if-ne v0, v11, :cond_3
 
-    .line 304
-    :cond_1
+    .line 313
+    :cond_2
     new-instance v10, Landroid/content/Intent;
 
     const-string v11, "com.htc.wifidisplay.NOTIFICATION_BTN_CLICK"
 
     invoke-direct {v10, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 305
+    .line 314
     .local v10, switchIntent:Landroid/content/Intent;
     const/high16 v11, 0x4000
 
     invoke-virtual {v10, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 306
+    .line 315
     const v11, 0x1020340
 
     iget-object v12, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
@@ -349,26 +383,26 @@
 
     invoke-virtual {v2, v11, v12}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    .line 309
+    .line 318
     .end local v10           #switchIntent:Landroid/content/Intent;
-    :cond_2
+    :cond_3
     const v11, 0x1020340
 
     invoke-virtual {v2, v11, v3}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
-    .line 313
-    :cond_3
+    .line 322
+    :cond_4
     const/4 v4, 0x0
 
-    .line 314
+    .line 323
     .local v4, intent:Landroid/content/Intent;
     const/4 v11, 0x1
 
     move/from16 v0, p1
 
-    if-ne v11, v0, :cond_6
+    if-ne v11, v0, :cond_7
 
-    .line 315
+    .line 324
     new-instance v4, Landroid/content/Intent;
 
     .end local v4           #intent:Landroid/content/Intent;
@@ -376,13 +410,13 @@
 
     invoke-direct {v4, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 316
+    .line 325
     .restart local v4       #intent:Landroid/content/Intent;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 317
+    .line 326
     .local v1, bundle:Landroid/os/Bundle;
     const-string v11, "DONGLE_MAC"
 
@@ -390,22 +424,20 @@
 
     invoke-virtual {v1, v11, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
+    .line 327
     invoke-virtual {v4, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 322
-    .end local v1           #bundle:Landroid/os/Bundle;
-    :goto_1
+    .line 328
     const/high16 v11, 0x1000
 
     invoke-virtual {v4, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 325
+    .line 330
     const/4 v11, 0x4
 
     invoke-interface {v4, v11}, Landroid/content/HtcIfIntent;->addHtcIntentFlag(I)Landroid/content/Intent;
 
-    .line 328
+    .line 332
     iget-object v11, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
 
     const/4 v12, 0x0
@@ -418,27 +450,29 @@
 
     iput-object v11, v5, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
-    .line 331
+    .line 339
+    .end local v1           #bundle:Landroid/os/Bundle;
+    :goto_1
     iget v11, p0, Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
 
     move/from16 v0, p1
 
-    if-eq v0, v11, :cond_4
+    if-eq v0, v11, :cond_5
 
-    .line 332
+    .line 340
     iget v11, p0, Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
 
-    if-nez v11, :cond_8
+    if-nez v11, :cond_9
 
-    .line 333
+    .line 341
     const/4 v11, 0x4
 
     move/from16 v0, p1
 
-    if-ne v11, v0, :cond_7
+    if-ne v11, v0, :cond_8
 
-    .line 334
-    const v11, 0x4040011
+    .line 342
+    const v11, 0x4080013
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -446,86 +480,86 @@
 
     iput-object v11, v5, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
-    .line 345
-    :cond_4
+    .line 353
+    :cond_5
     :goto_2
     return-object v5
 
-    .line 261
+    .line 270
     .end local v4           #intent:Landroid/content/Intent;
     :pswitch_0
     const v11, 0x10805e5
 
     iput v11, v5, Landroid/app/Notification;->icon:I
 
-    .line 262
+    .line 271
     const/4 v6, 0x0
 
-    .line 263
+    .line 272
     const v3, 0x10800de
 
-    .line 264
+    .line 273
     const v11, 0x104056b
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 265
-    const v11, 0x4040010
+    .line 274
+    const v11, 0x4080012
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 266
+    .line 275
     goto/16 :goto_0
 
-    .line 269
+    .line 278
     :pswitch_1
     const v11, 0x10805e5
 
     iput v11, v5, Landroid/app/Notification;->icon:I
 
-    .line 270
+    .line 279
     const/16 v6, 0x8
 
-    .line 271
+    .line 280
     const v3, 0x10800de
 
-    .line 272
+    .line 281
     const v11, 0x104056b
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 273
+    .line 282
     const v11, 0x104056c
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 274
+    .line 283
     goto/16 :goto_0
 
-    .line 277
+    .line 286
     :pswitch_2
     const v11, 0x10805e6
 
     iput v11, v5, Landroid/app/Notification;->icon:I
 
-    .line 278
+    .line 287
     const/4 v6, 0x0
 
-    .line 279
-    if-nez p3, :cond_5
+    .line 288
+    if-nez p3, :cond_6
 
-    .line 280
+    .line 289
     const v3, 0x10800de
 
-    .line 284
+    .line 293
     :goto_3
     const v11, 0x104056b
 
@@ -533,43 +567,43 @@
 
     move-result-object v9
 
-    .line 285
-    const v11, 0x4040010
+    .line 294
+    const v11, 0x4080012
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 286
+    .line 295
     goto/16 :goto_0
 
-    .line 282
-    :cond_5
+    .line 291
+    :cond_6
     const v3, 0x10800df
 
     goto :goto_3
 
-    .line 289
+    .line 298
     :pswitch_3
     const v11, 0x10805e7
 
     iput v11, v5, Landroid/app/Notification;->icon:I
 
-    .line 290
+    .line 299
     const/4 v6, 0x0
 
-    .line 291
+    .line 300
     const v3, 0x10800f4
 
-    .line 292
+    .line 301
     const v11, 0x104056b
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 293
-    const v11, 0x404000f
+    .line 302
+    const v11, 0x4080011
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -577,21 +611,34 @@
 
     goto/16 :goto_0
 
-    .line 320
+    .line 334
     .restart local v4       #intent:Landroid/content/Intent;
-    :cond_6
+    :cond_7
     new-instance v4, Landroid/content/Intent;
 
     .end local v4           #intent:Landroid/content/Intent;
-    const-string v11, "com.htc.wifidisplay.CONFIGURE_MODE_NOTIFICATION_LIST"
+    const-string v11, "com.htc.wifidisplay.NOTIFICATION_CONFIGURE_TOOL"
 
     invoke-direct {v4, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 335
     .restart local v4       #intent:Landroid/content/Intent;
+    iget-object v11, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
+
+    const/4 v12, 0x0
+
+    const/high16 v13, 0x800
+
+    invoke-static {v11, v12, v4, v13}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v11
+
+    iput-object v11, v5, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
+
     goto/16 :goto_1
 
-    .line 336
-    :cond_7
+    .line 344
+    :cond_8
     const v11, 0x1040569
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -600,18 +647,18 @@
 
     iput-object v11, v5, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
-    goto :goto_2
+    goto/16 :goto_2
 
-    .line 338
-    :cond_8
+    .line 346
+    :cond_9
     const/4 v11, 0x4
 
     move/from16 v0, p1
 
-    if-ne v11, v0, :cond_9
+    if-ne v11, v0, :cond_a
 
-    .line 339
-    const v11, 0x4040011
+    .line 347
+    const v11, 0x4080013
 
     invoke-virtual {v7, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -621,15 +668,15 @@
 
     goto/16 :goto_2
 
-    .line 341
-    :cond_9
+    .line 349
+    :cond_a
     const/4 v11, 0x0
 
     iput-object v11, v5, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
     goto/16 :goto_2
 
-    .line 259
+    .line 268
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -646,10 +693,10 @@
     .prologue
     const/4 v12, 0x1
 
-    .line 349
+    .line 357
     const/4 v6, 0x1
 
-    .line 350
+    .line 358
     .local v6, bRet:Z
     const-string v2, "content://com.htc.wifidisplay.provider.setting"
 
@@ -657,19 +704,19 @@
 
     move-result-object v1
 
-    .line 352
+    .line 360
     .local v1, uri:Landroid/net/Uri;
     if-nez v1, :cond_0
 
     move v7, v6
 
-    .line 379
+    .line 387
     .end local v6           #bRet:Z
     .local v7, bRet:I
     :goto_0
     return v7
 
-    .line 355
+    .line 363
     .end local v7           #bRet:I
     .restart local v6       #bRet:Z
     :cond_0
@@ -681,22 +728,22 @@
 
     move-result-object v0
 
-    .line 356
+    .line 364
     .local v0, client:Landroid/content/ContentProviderClient;
     if-nez v0, :cond_1
 
     move v7, v6
 
-    .line 357
+    .line 365
     .restart local v7       #bRet:I
     goto :goto_0
 
-    .line 359
+    .line 367
     .end local v7           #bRet:I
     :cond_1
     const/4 v8, 0x0
 
-    .line 361
+    .line 369
     .local v8, cursor:Landroid/database/Cursor;
     const/4 v2, 0x0
 
@@ -714,26 +761,26 @@
 
     move-result-object v8
 
-    .line 362
+    .line 370
     if-nez v8, :cond_3
 
-    .line 373
+    .line 381
     if-eqz v8, :cond_2
 
-    .line 374
+    .line 382
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 376
+    .line 384
     :cond_2
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     move v7, v6
 
-    .line 363
+    .line 371
     .restart local v7       #bRet:I
     goto :goto_0
 
-    .line 365
+    .line 373
     .end local v7           #bRet:I
     :cond_3
     :try_start_1
@@ -743,14 +790,14 @@
 
     if-ne v12, v2, :cond_4
 
-    .line 366
+    .line 374
     const-string v2, "notification"
 
     invoke-interface {v8, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v11
 
-    .line 367
+    .line 375
     .local v11, nameColumn:I
     invoke-interface {v8, v11}, Landroid/database/Cursor;->getInt(I)I
     :try_end_1
@@ -759,34 +806,34 @@
 
     move-result v10
 
-    .line 368
+    .line 376
     .local v10, f:I
     if-eqz v10, :cond_6
 
     move v6, v12
 
-    .line 373
+    .line 381
     .end local v10           #f:I
     .end local v11           #nameColumn:I
     :cond_4
     :goto_1
     if-eqz v8, :cond_5
 
-    .line 374
+    .line 382
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 376
+    .line 384
     :cond_5
     :goto_2
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
     move v7, v6
 
-    .line 379
+    .line 387
     .restart local v7       #bRet:I
     goto :goto_0
 
-    .line 368
+    .line 376
     .end local v7           #bRet:I
     .restart local v10       #f:I
     .restart local v11       #nameColumn:I
@@ -795,13 +842,13 @@
 
     goto :goto_1
 
-    .line 370
+    .line 378
     .end local v10           #f:I
     .end local v11           #nameColumn:I
     :catch_0
     move-exception v9
 
-    .line 371
+    .line 379
     .local v9, e:Landroid/os/RemoteException;
     :try_start_2
     const-string v2, "WirelessDisplayNotification"
@@ -810,29 +857,29 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 373
+    .line 381
     if-eqz v8, :cond_5
 
-    .line 374
+    .line 382
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
 
-    .line 373
+    .line 381
     .end local v9           #e:Landroid/os/RemoteException;
     :catchall_0
     move-exception v2
 
     if-eqz v8, :cond_7
 
-    .line 374
+    .line 382
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 376
+    .line 384
     :cond_7
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
-    .line 373
+    .line 381
     throw v2
 .end method
 
@@ -844,30 +891,30 @@
     .parameter "strVersion"
 
     .prologue
-    .line 134
+    .line 138
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.wifidisplay.intent.DONGLE_FIRMWARE_UPDATE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 135
+    .line 139
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.htc.wifidisplay.intent.extra.DONGLE_IP_ADDR"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 136
+    .line 140
     const-string v1, "com.htc.wifidisplay.intent.extra.DONGLE_VERSION"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 137
+    .line 141
     iget-object v1, p0, Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 138
+    .line 142
     return-void
 .end method
 
@@ -888,35 +935,35 @@
     .end annotation
 
     .prologue
-    .line 149
+    .line 153
     .local p4, mDongleInfos:Ljava/util/List;,"Ljava/util/List<Lcom/htc/service/DongleInfo;>;"
     const/4 v5, 0x0
 
-    .line 150
+    .line 154
     .local v5, isOneUncfgDongle:Z
     const/4 v4, 0x0
 
-    .line 151
+    .line 155
     .local v4, isOneReadyDongle:Z
     const/4 v3, 0x0
 
-    .line 153
+    .line 157
     .local v3, isEnablingOrDisabling:Z
     const/4 v13, 0x0
 
-    .line 154
+    .line 158
     .local v13, wpsCount:I
     const/4 v9, 0x0
 
-    .line 155
+    .line 159
     .local v9, readyCount:I
     const/4 v11, 0x0
 
-    .line 157
+    .line 161
     .local v11, updateType:I
     const/4 v10, 0x0
 
-    .line 163
+    .line 167
     .local v10, uncfgDongle:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -930,15 +977,15 @@
 
     check-cast v7, Landroid/app/NotificationManager;
 
-    .line 165
+    .line 169
     .local v7, nm:Landroid/app/NotificationManager;
     if-nez v7, :cond_0
 
-    .line 239
+    .line 245
     :goto_0
     return-void
 
-    .line 170
+    .line 174
     :cond_0
     if-eqz p3, :cond_1
 
@@ -950,22 +997,29 @@
 
     if-nez v14, :cond_2
 
-    .line 171
+    .line 175
     :cond_1
     const v14, 0x10805e5
 
     invoke-virtual {v7, v14}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 172
+    .line 176
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
 
+    .line 177
+    const-wide/16 v14, 0x0
+
+    move-object/from16 v0, p0
+
+    iput-wide v14, v0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+
     goto :goto_0
 
-    .line 176
+    .line 181
     :cond_2
     move-object/from16 v0, p0
 
@@ -979,16 +1033,16 @@
 
     check-cast v12, Lcom/htc/service/WirelessDisplayManager;
 
-    .line 178
+    .line 183
     .local v12, wdm:Lcom/htc/service/WirelessDisplayManager;
     if-eqz v12, :cond_3
 
-    .line 179
+    .line 184
     invoke-virtual {v12}, Lcom/htc/service/WirelessDisplayManager;->getMirrorModeState()I
 
     move-result v6
 
-    .line 180
+    .line 185
     .local v6, nMirrorState:I
     const/4 v14, 0x1
 
@@ -1000,13 +1054,13 @@
 
     if-ne v6, v14, :cond_8
 
-    .line 183
+    .line 188
     const/16 p1, 0x0
 
-    .line 184
+    .line 189
     const/4 v3, 0x1
 
-    .line 192
+    .line 197
     .end local v6           #nMirrorState:I
     :cond_3
     :goto_1
@@ -1029,7 +1083,7 @@
 
     check-cast v2, Lcom/htc/service/DongleInfo;
 
-    .line 193
+    .line 198
     .local v2, info:Lcom/htc/service/DongleInfo;
     iget v14, v2, Lcom/htc/service/DongleInfo;->status:I
 
@@ -1043,14 +1097,14 @@
 
     if-ne v14, v15, :cond_6
 
-    .line 194
+    .line 199
     :cond_5
     add-int/lit8 v13, v13, 0x1
 
-    .line 195
+    .line 200
     iget-object v10, v2, Lcom/htc/service/DongleInfo;->bssid:Ljava/lang/String;
 
-    .line 198
+    .line 203
     :cond_6
     iget-boolean v14, v2, Lcom/htc/service/DongleInfo;->isDiscoveredByWivu:Z
 
@@ -1064,13 +1118,13 @@
 
     if-ne v14, v15, :cond_4
 
-    .line 199
+    .line 204
     :cond_7
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 185
+    .line 190
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #info:Lcom/htc/service/DongleInfo;
     .restart local v6       #nMirrorState:I
@@ -1079,12 +1133,12 @@
 
     if-nez v6, :cond_3
 
-    .line 188
+    .line 193
     const/4 v3, 0x1
 
     goto :goto_1
 
-    .line 206
+    .line 211
     .end local v6           #nMirrorState:I
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_9
@@ -1092,21 +1146,28 @@
 
     if-nez v9, :cond_a
 
-    .line 207
+    .line 212
     const v14, 0x10805e5
 
     invoke-virtual {v7, v14}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 208
+    .line 213
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
 
+    .line 214
+    const-wide/16 v14, 0x0
+
+    move-object/from16 v0, p0
+
+    iput-wide v14, v0, Lcom/htc/server/WirelessDisplayNotification;->mNotificationWhen:J
+
     goto :goto_0
 
-    .line 212
+    .line 218
     :cond_a
     const/4 v14, 0x1
 
@@ -1114,26 +1175,26 @@
 
     if-nez v9, :cond_b
 
-    .line 213
+    .line 219
     const/4 v5, 0x1
 
-    .line 215
+    .line 221
     :cond_b
     const/4 v14, 0x1
 
     if-ne v9, v14, :cond_c
 
-    .line 216
+    .line 222
     const/4 v4, 0x1
 
-    .line 219
+    .line 225
     :cond_c
     if-eqz p1, :cond_e
 
-    .line 220
+    .line 226
     const/4 v11, 0x4
 
-    .line 232
+    .line 238
     :goto_3
     move-object/from16 v0, p0
 
@@ -1141,7 +1202,7 @@
 
     move-result-object v8
 
-    .line 234
+    .line 240
     .local v8, notification:Landroid/app/Notification;
     move-object/from16 v0, p0
 
@@ -1149,44 +1210,44 @@
 
     if-eq v11, v14, :cond_d
 
-    .line 235
+    .line 241
     const v14, 0x10805e5
 
     invoke-virtual {v7, v14}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 237
+    .line 243
     :cond_d
     const v14, 0x10805e5
 
     invoke-virtual {v7, v14, v8}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 238
+    .line 244
     move-object/from16 v0, p0
 
     iput v11, v0, Lcom/htc/server/WirelessDisplayNotification;->mCurrNotificationType:I
 
     goto/16 :goto_0
 
-    .line 221
+    .line 227
     .end local v8           #notification:Landroid/app/Notification;
     :cond_e
     if-eqz v4, :cond_f
 
-    .line 222
+    .line 228
     const/4 v11, 0x3
 
     goto :goto_3
 
-    .line 223
+    .line 229
     :cond_f
     if-eqz v5, :cond_10
 
-    .line 225
+    .line 231
     const/4 v11, 0x2
 
     goto :goto_3
 
-    .line 229
+    .line 235
     :cond_10
     const/4 v11, 0x2
 
@@ -1211,23 +1272,23 @@
     .end annotation
 
     .prologue
-    .line 141
+    .line 145
     .local p4, mDongleInfos:Ljava/util/List;,"Ljava/util/List<Lcom/htc/service/DongleInfo;>;"
     const/4 v0, 0x1
 
     if-ne v0, p5, :cond_0
 
-    .line 142
+    .line 146
     const-string v0, "WirelessDisplayNotification"
 
     const-string v1, "Firmware Upgrade Notification!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
+    .line 149
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/htc/server/WirelessDisplayNotification;->updateNotification(ZIZLjava/util/List;)V
 
-    .line 146
+    .line 150
     return-void
 .end method

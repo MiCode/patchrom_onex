@@ -213,24 +213,24 @@
     .parameter "message"
 
     .prologue
-    .line 607
+    .line 608
     :try_start_0
     iget-object v1, p1, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IncompatibleClassChangeError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 612
+    .line 613
     :goto_0
     return-void
 
-    .line 608
+    .line 609
     :catch_0
     move-exception v0
 
-    .line 609
-    .local v0, e:Ljava/lang/Exception;
+    .line 610
+    .local v0, error:Ljava/lang/IncompatibleClassChangeError;
     const-string v1, "Handler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -353,7 +353,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "looper uninitialized"
+    const-string v1, "looper uninitialized"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

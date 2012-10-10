@@ -339,35 +339,35 @@
 
     iput v0, p0, Landroid/media/AudioManager;->mVolumeControlStream:I
 
-    .line 1612
+    .line 1685
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/media/AudioManager;->mAudioFocusIdListenerMap:Ljava/util/HashMap;
 
-    .line 1618
+    .line 1691
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/media/AudioManager;->mFocusListenerLock:Ljava/lang/Object;
 
-    .line 1627
+    .line 1700
     new-instance v0, Landroid/media/AudioManager$FocusEventHandlerDelegate;
 
     invoke-direct {v0, p0}, Landroid/media/AudioManager$FocusEventHandlerDelegate;-><init>(Landroid/media/AudioManager;)V
 
     iput-object v0, p0, Landroid/media/AudioManager;->mAudioFocusEventHandlerDelegate:Landroid/media/AudioManager$FocusEventHandlerDelegate;
 
-    .line 1666
+    .line 1739
     new-instance v0, Landroid/media/AudioManager$1;
 
     invoke-direct {v0, p0}, Landroid/media/AudioManager$1;-><init>(Landroid/media/AudioManager;)V
 
     iput-object v0, p0, Landroid/media/AudioManager;->mAudioFocusDispatcher:Landroid/media/IAudioFocusDispatcher;
 
-    .line 2023
+    .line 2096
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
@@ -433,7 +433,7 @@
     .parameter "id"
 
     .prologue
-    .line 1621
+    .line 1694
     iget-object v0, p0, Landroid/media/AudioManager;->mAudioFocusIdListenerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -450,10 +450,10 @@
     .parameter "l"
 
     .prologue
-    .line 1676
+    .line 1749
     if-nez p1, :cond_0
 
-    .line 1677
+    .line 1750
     new-instance v0, Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -462,7 +462,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    .line 1679
+    .line 1752
     :goto_0
     return-object v0
 
@@ -542,16 +542,16 @@
     .locals 6
 
     .prologue
-    .line 1334
+    .line 1407
     const/4 v0, 0x0
 
-    .line 1335
+    .line 1408
     .local v0, active:Z
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 1337
+    .line 1410
     .local v2, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->isDongleConnected()Z
@@ -560,15 +560,15 @@
 
     move-result v0
 
-    .line 1341
+    .line 1414
     :goto_0
     return v0
 
-    .line 1338
+    .line 1411
     :catch_0
     move-exception v1
 
-    .line 1339
+    .line 1412
     .local v1, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -576,7 +576,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "Dead object in playSoundEffect"
+    const-string v5, "Dead object in isDongleConnected"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -599,16 +599,16 @@
     .locals 6
 
     .prologue
-    .line 1323
+    .line 1396
     const/4 v0, 0x0
 
-    .line 1324
+    .line 1397
     .local v0, active:Z
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 1326
+    .line 1399
     .local v2, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->isFMActive()Z
@@ -617,15 +617,15 @@
 
     move-result v0
 
-    .line 1330
+    .line 1403
     :goto_0
     return v0
 
-    .line 1327
+    .line 1400
     :catch_0
     move-exception v1
 
-    .line 1328
+    .line 1401
     .local v1, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -633,7 +633,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "Dead object in playSoundEffect"
+    const-string v5, "Dead object in isFMActive"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -648,6 +648,39 @@
     move-result-object v4
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
+.method public static isSpecialCase()Z
+    .locals 3
+
+    .prologue
+    .line 2346
+    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v2, 0x31
+
+    if-eq v1, v2, :cond_0
+
+    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v2, 0x32
+
+    if-ne v1, v2, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 2348
+    .local v0, isSpecial:Z
+    :goto_0
+    return v0
+
+    .line 2346
+    .end local v0           #isSpecial:Z
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -684,7 +717,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1514
+    .line 1587
     iget-object v1, p0, Landroid/media/AudioManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -712,19 +745,19 @@
     .parameter "l"
 
     .prologue
-    .line 1764
+    .line 1837
     const/4 v2, 0x0
 
-    .line 1765
+    .line 1838
     .local v2, status:I
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->unregisterAudioFocusListener(Landroid/media/AudioManager$OnAudioFocusChangeListener;)V
 
-    .line 1766
+    .line 1839
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1768
+    .line 1841
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     iget-object v3, p0, Landroid/media/AudioManager;->mAudioFocusDispatcher:Landroid/media/IAudioFocusDispatcher;
@@ -739,15 +772,15 @@
 
     move-result v2
 
-    .line 1773
+    .line 1846
     :goto_0
     return v2
 
-    .line 1770
+    .line 1843
     :catch_0
     move-exception v0
 
-    .line 1771
+    .line 1844
     .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -990,10 +1023,10 @@
     .parameter "streamType"
 
     .prologue
-    .line 742
+    .line 794
     iput p1, p0, Landroid/media/AudioManager;->mVolumeControlStream:I
 
-    .line 743
+    .line 795
     return-void
 .end method
 
@@ -1001,16 +1034,16 @@
     .locals 5
 
     .prologue
-    .line 2247
+    .line 2321
     const/16 v1, -0x3e9
 
-    .line 2248
+    .line 2322
     .local v1, headset:I
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 2250
+    .line 2324
     .local v2, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->getBeatsHeadset()I
@@ -1019,15 +1052,15 @@
 
     move-result v1
 
-    .line 2254
+    .line 2328
     :goto_0
     return v1
 
-    .line 2251
+    .line 2325
     :catch_0
     move-exception v0
 
-    .line 2252
+    .line 2326
     .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1042,16 +1075,16 @@
     .locals 5
 
     .prologue
-    .line 2169
+    .line 2242
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 2170
+    .line 2243
     .local v1, service:Landroid/media/IAudioService;
     const/4 v2, 0x0
 
-    .line 2172
+    .line 2245
     .local v2, state:Z
     :try_start_0
     invoke-interface {v1}, Landroid/media/IAudioService;->getBeatsState()Z
@@ -1060,15 +1093,15 @@
 
     move-result v2
 
-    .line 2176
+    .line 2249
     :goto_0
     return v2
 
-    .line 2173
+    .line 2246
     :catch_0
     move-exception v0
 
-    .line 2174
+    .line 2247
     .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1084,17 +1117,17 @@
     .parameter "streamType"
 
     .prologue
-    .line 2129
+    .line 2202
     packed-switch p1, :pswitch_data_0
 
-    .line 2139
+    .line 2212
     :pswitch_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 2137
+    .line 2210
     :pswitch_1
     invoke-static {p1}, Landroid/media/AudioSystem;->getDevicesForStream(I)I
 
@@ -1102,7 +1135,7 @@
 
     goto :goto_0
 
-    .line 2129
+    .line 2202
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1121,16 +1154,16 @@
     .locals 5
 
     .prologue
-    .line 2219
+    .line 2292
     const/16 v1, -0x64
 
-    .line 2220
+    .line 2293
     .local v1, effect:I
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 2222
+    .line 2295
     .local v2, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->getGlobalEffect()I
@@ -1139,21 +1172,68 @@
 
     move-result v1
 
-    .line 2226
+    .line 2299
     :goto_0
     return v1
 
-    .line 2223
+    .line 2296
     :catch_0
     move-exception v0
 
-    .line 2224
+    .line 2297
     .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
     const-string v4, "Dead object in getGlobalEffect"
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method public getHeadsetProfile()[I
+    .locals 4
+
+    .prologue
+    .line 695
+    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
+
+    move-result-object v1
+
+    .line 697
+    .local v1, service:Landroid/media/IAudioService;
+    :try_start_0
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v3, "getHeadsetProfile()"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 698
+    invoke-interface {v1}, Landroid/media/IAudioService;->getHeadsetProfile()[I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v2
+
+    .line 701
+    :goto_0
+    return-object v2
+
+    .line 699
+    :catch_0
+    move-exception v0
+
+    .line 700
+    .local v0, e:Landroid/os/RemoteException;
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v3, "Dear object in getHeadsetProfile()"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 701
+    const/4 v2, 0x0
 
     goto :goto_0
 .end method
@@ -1203,12 +1283,12 @@
     .locals 4
 
     .prologue
-    .line 1198
+    .line 1274
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1200
+    .line 1276
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1}, Landroid/media/IAudioService;->getMode()I
@@ -1217,15 +1297,15 @@
 
     move-result v2
 
-    .line 1203
+    .line 1279
     :goto_0
     return v2
 
-    .line 1201
+    .line 1277
     :catch_0
     move-exception v0
 
-    .line 1202
+    .line 1278
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1233,7 +1313,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1203
+    .line 1279
     const/4 v2, -0x2
 
     goto :goto_0
@@ -1244,21 +1324,21 @@
     .parameter "keys"
 
     .prologue
-    .line 1382
-    const-string/jumbo v3, "isFMActive"
+    .line 1455
+    const-string v3, "isFMActive"
 
     if-ne p1, v3, :cond_1
 
-    .line 1383
+    .line 1456
     const/4 v0, 0x0
 
-    .line 1384
+    .line 1457
     .local v0, active:Z
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 1386
+    .line 1459
     .local v2, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->isFMActive()Z
@@ -1267,25 +1347,25 @@
 
     move-result v0
 
-    .line 1390
+    .line 1463
     :goto_0
     if-eqz v0, :cond_0
 
     const-string/jumbo v3, "true"
 
-    .line 1393
+    .line 1466
     .end local v0           #active:Z
     .end local v2           #service:Landroid/media/IAudioService;
     :goto_1
     return-object v3
 
-    .line 1387
+    .line 1460
     .restart local v0       #active:Z
     .restart local v2       #service:Landroid/media/IAudioService;
     :catch_0
     move-exception v1
 
-    .line 1388
+    .line 1461
     .local v1, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1311,14 +1391,14 @@
 
     goto :goto_0
 
-    .line 1390
+    .line 1463
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_0
     const-string v3, "false"
 
     goto :goto_1
 
-    .line 1393
+    .line 1466
     .end local v0           #active:Z
     .end local v2           #service:Landroid/media/IAudioService;
     :cond_1
@@ -1376,10 +1456,57 @@
     .end annotation
 
     .prologue
-    .line 1307
+    .line 1383
     const/4 v0, -0x1
 
     return v0
+.end method
+
+.method public getSpeakerProfile()[I
+    .locals 4
+
+    .prologue
+    .line 706
+    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
+
+    move-result-object v1
+
+    .line 708
+    .local v1, service:Landroid/media/IAudioService;
+    :try_start_0
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v3, "getSpeakerProfile()"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 709
+    invoke-interface {v1}, Landroid/media/IAudioService;->getSpeakerProfile()[I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v2
+
+    .line 712
+    :goto_0
+    return-object v2
+
+    .line 710
+    :catch_0
+    move-exception v0
+
+    .line 711
+    .local v0, e:Landroid/os/RemoteException;
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v3, "Dear object in getSpeakerProfile()"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 712
+    const/4 v2, 0x0
+
+    goto :goto_0
 .end method
 
 .method public getStreamMaxVolume(I)I
@@ -1469,12 +1596,12 @@
     .parameter "vibrateType"
 
     .prologue
-    .line 788
+    .line 840
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 790
+    .line 842
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->getVibrateSetting(I)I
@@ -1483,15 +1610,15 @@
 
     move-result v2
 
-    .line 793
+    .line 845
     :goto_0
     return v2
 
-    .line 791
+    .line 843
     :catch_0
     move-exception v0
 
-    .line 792
+    .line 844
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1499,7 +1626,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 793
+    .line 845
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1613,20 +1740,85 @@
     .end packed-switch
 .end method
 
-.method public isBeatsHeadset()Z
-    .locals 5
+.method public isBTConnected()Z
+    .locals 6
 
     .prologue
-    .line 2188
+    .line 969
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 2189
+    .line 971
+    .local v2, service:Landroid/media/IAudioService;
+    :try_start_0
+    invoke-interface {v2}, Landroid/media/IAudioService;->isBTConnected()Z
+
+    move-result v0
+
+    .line 972
+    .local v0, check:Z
+    sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "isBTConnected?   "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 977
+    .end local v0           #check:Z
+    :goto_0
+    return v0
+
+    .line 974
+    :catch_0
+    move-exception v1
+
+    .line 975
+    .local v1, e:Landroid/os/RemoteException;
+    sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v4, "Dead object in isBTConnected()"
+
+    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 977
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isBeatsHeadset()Z
+    .locals 5
+
+    .prologue
+    .line 2261
+    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
+
+    move-result-object v2
+
+    .line 2262
     .local v2, service:Landroid/media/IAudioService;
     const/4 v1, 0x0
 
-    .line 2191
+    .line 2264
     .local v1, isBeats:Z
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->isBeatsHeadset()Z
@@ -1635,15 +1827,15 @@
 
     move-result v1
 
-    .line 2195
+    .line 2268
     :goto_0
     return v1
 
-    .line 2192
+    .line 2265
     :catch_0
     move-exception v0
 
-    .line 2193
+    .line 2266
     .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1658,16 +1850,16 @@
     .locals 5
 
     .prologue
-    .line 2199
+    .line 2272
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 2200
+    .line 2273
     .local v2, service:Landroid/media/IAudioService;
     const/4 v1, 0x0
 
-    .line 2202
+    .line 2275
     .local v1, isBeats:Z
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->isBeatsHeadsetBT()Z
@@ -1676,15 +1868,15 @@
 
     move-result v1
 
-    .line 2206
+    .line 2279
     :goto_0
     return v1
 
-    .line 2203
+    .line 2276
     :catch_0
     move-exception v0
 
-    .line 2204
+    .line 2277
     .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1699,7 +1891,7 @@
     .locals 2
 
     .prologue
-    .line 1106
+    .line 1182
     const/16 v0, 0x80
 
     const-string v1, ""
@@ -1710,10 +1902,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1108
+    .line 1184
     const/4 v0, 0x0
 
-    .line 1110
+    .line 1186
     :goto_0
     return v0
 
@@ -1727,7 +1919,7 @@
     .locals 2
 
     .prologue
-    .line 986
+    .line 1062
     iget-object v0, p0, Landroid/media/AudioManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1747,12 +1939,12 @@
     .locals 4
 
     .prologue
-    .line 1082
+    .line 1158
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1084
+    .line 1160
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1}, Landroid/media/IAudioService;->isBluetoothScoOn()Z
@@ -1761,15 +1953,15 @@
 
     move-result v2
 
-    .line 1087
+    .line 1163
     :goto_0
     return v2
 
-    .line 1085
+    .line 1161
     :catch_0
     move-exception v0
 
-    .line 1086
+    .line 1162
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1777,8 +1969,73 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1087
+    .line 1163
     const/4 v2, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isHeadsetPlugged()Z
+    .locals 6
+
+    .prologue
+    .line 957
+    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
+
+    move-result-object v2
+
+    .line 959
+    .local v2, service:Landroid/media/IAudioService;
+    :try_start_0
+    invoke-interface {v2}, Landroid/media/IAudioService;->isHeadsetPlugged()Z
+
+    move-result v0
+
+    .line 960
+    .local v0, check:Z
+    sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "isHeadsetPlugged?   "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 965
+    .end local v0           #check:Z
+    :goto_0
+    return v0
+
+    .line 962
+    :catch_0
+    move-exception v1
+
+    .line 963
+    .local v1, e:Landroid/os/RemoteException;
+    sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v4, "Dead object in isHeadsetPlugged()"
+
+    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 965
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -1787,7 +2044,7 @@
     .locals 1
 
     .prologue
-    .line 1163
+    .line 1239
     invoke-static {}, Landroid/media/AudioSystem;->isMicrophoneMuted()Z
 
     move-result v0
@@ -1796,12 +2053,12 @@
 .end method
 
 .method public isMusicActive()Z
-    .locals 4
+    .locals 2
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1316
+    .line 1392
     const/4 v1, 0x3
 
     invoke-static {v1, v0}, Landroid/media/AudioSystem;->isStreamActive(II)Z
@@ -1825,32 +2082,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 1317
-    .local v0, returnVal:Z
     :cond_1
-    sget-object v1, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v3, "isMusicActive()? --> "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1318
     return v0
 .end method
 
@@ -1860,24 +2092,24 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2035
+    .line 2108
     invoke-virtual {p0}, Landroid/media/AudioManager;->getRingerMode()I
 
     move-result v0
 
-    .line 2036
+    .line 2109
     .local v0, ringerMode:I
     if-eqz v0, :cond_0
 
     if-ne v0, v1, :cond_1
 
-    .line 2039
+    .line 2112
     .local v1, silentMode:Z
     :cond_0
     :goto_0
     return v1
 
-    .line 2036
+    .line 2109
     .end local v1           #silentMode:Z
     :cond_1
     const/4 v1, 0x0
@@ -1889,12 +2121,12 @@
     .locals 4
 
     .prologue
-    .line 846
+    .line 898
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 848
+    .line 900
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1}, Landroid/media/IAudioService;->isSpeakerphoneOn()Z
@@ -1903,15 +2135,15 @@
 
     move-result v2
 
-    .line 851
+    .line 903
     :goto_0
     return v2
 
-    .line 849
+    .line 901
     :catch_0
     move-exception v0
 
-    .line 850
+    .line 902
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1919,7 +2151,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 851
+    .line 903
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1930,12 +2162,12 @@
     .parameter "streamType"
 
     .prologue
-    .line 725
+    .line 777
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 727
+    .line 779
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->isStreamMute(I)Z
@@ -1944,15 +2176,15 @@
 
     move-result v2
 
-    .line 730
+    .line 782
     :goto_0
     return v2
 
-    .line 728
+    .line 780
     :catch_0
     move-exception v0
 
-    .line 729
+    .line 781
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -1960,7 +2192,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 730
+    .line 782
     const/4 v2, 0x0
 
     goto :goto_0
@@ -1970,7 +2202,7 @@
     .locals 2
 
     .prologue
-    .line 1134
+    .line 1210
     const/4 v0, 0x4
 
     const-string v1, ""
@@ -1991,10 +2223,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1138
+    .line 1214
     const/4 v0, 0x0
 
-    .line 1140
+    .line 1216
     :goto_0
     return v0
 
@@ -2008,27 +2240,27 @@
     .locals 5
 
     .prologue
-    .line 1523
+    .line 1596
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1525
+    .line 1598
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1}, Landroid/media/IAudioService;->loadSoundEffects()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1529
+    .line 1602
     :goto_0
     return-void
 
-    .line 1526
+    .line 1599
     :catch_0
     move-exception v0
 
-    .line 1527
+    .line 1600
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2060,19 +2292,19 @@
     .parameter "effectType"
 
     .prologue
-    .line 1463
+    .line 1536
     if-ltz p1, :cond_0
 
     const/16 v2, 0x9
 
     if-lt p1, v2, :cond_1
 
-    .line 1477
+    .line 1550
     :cond_0
     :goto_0
     return-void
 
-    .line 1467
+    .line 1540
     :cond_1
     invoke-direct {p0}, Landroid/media/AudioManager;->querySoundEffectsEnabled()Z
 
@@ -2080,12 +2312,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 1471
+    .line 1544
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1473
+    .line 1546
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->playSoundEffect(I)V
@@ -2094,11 +2326,11 @@
 
     goto :goto_0
 
-    .line 1474
+    .line 1547
     :catch_0
     move-exception v0
 
-    .line 1475
+    .line 1548
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2131,25 +2363,25 @@
     .parameter "volume"
 
     .prologue
-    .line 1498
+    .line 1571
     if-ltz p1, :cond_0
 
     const/16 v2, 0x9
 
     if-lt p1, v2, :cond_1
 
-    .line 1508
+    .line 1581
     :cond_0
     :goto_0
     return-void
 
-    .line 1502
+    .line 1575
     :cond_1
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1504
+    .line 1577
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1, p2}, Landroid/media/IAudioService;->playSoundEffectVolume(IF)V
@@ -2158,11 +2390,11 @@
 
     goto :goto_0
 
-    .line 1505
+    .line 1578
     :catch_0
     move-exception v0
 
-    .line 1506
+    .line 1579
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2238,16 +2470,16 @@
     .locals 5
 
     .prologue
-    .line 2230
+    .line 2303
     const/4 v1, 0x0
 
-    .line 2231
+    .line 2304
     .local v1, list:[I
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 2233
+    .line 2306
     .local v2, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v2}, Landroid/media/IAudioService;->queryGlobalEffectList()[I
@@ -2256,15 +2488,15 @@
 
     move-result-object v1
 
-    .line 2237
+    .line 2310
     :goto_0
     return-object v1
 
-    .line 2234
+    .line 2307
     :catch_0
     move-exception v0
 
-    .line 2235
+    .line 2308
     .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2280,12 +2512,12 @@
     .parameter "l"
 
     .prologue
-    .line 1691
+    .line 1764
     iget-object v1, p0, Landroid/media/AudioManager;->mFocusListenerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1692
+    .line 1765
     :try_start_0
     iget-object v0, p0, Landroid/media/AudioManager;->mAudioFocusIdListenerMap:Ljava/util/HashMap;
 
@@ -2299,14 +2531,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1693
+    .line 1766
     monitor-exit v1
 
-    .line 1697
+    .line 1770
     :goto_0
     return-void
 
-    .line 1695
+    .line 1768
     :cond_0
     iget-object v0, p0, Landroid/media/AudioManager;->mAudioFocusIdListenerMap:Ljava/util/HashMap;
 
@@ -2316,7 +2548,7 @@
 
     invoke-virtual {v0, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1696
+    .line 1769
     monitor-exit v1
 
     goto :goto_0
@@ -2338,14 +2570,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1787
+    .line 1860
     if-nez p1, :cond_0
 
-    .line 1802
+    .line 1875
     :goto_0
     return-void
 
-    .line 1790
+    .line 1863
     :cond_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -2363,7 +2595,7 @@
 
     if-nez v2, :cond_1
 
-    .line 1791
+    .line 1864
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "registerMediaButtonEventReceiver() error: receiver and context package names don\'t match"
@@ -2372,7 +2604,7 @@
 
     goto :goto_0
 
-    .line 1796
+    .line 1869
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -2380,18 +2612,18 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1798
+    .line 1871
     .local v0, mediaButtonIntent:Landroid/content/Intent;
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1799
+    .line 1872
     iget-object v2, p0, Landroid/media/AudioManager;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v4, v0, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v1
 
-    .line 1801
+    .line 1874
     .local v1, pi:Landroid/app/PendingIntent;
     invoke-virtual {p0, v1, p1}, Landroid/media/AudioManager;->registerMediaButtonIntent(Landroid/app/PendingIntent;Landroid/content/ComponentName;)V
 
@@ -2404,12 +2636,12 @@
     .parameter "eventReceiver"
 
     .prologue
-    .line 1809
+    .line 1882
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1810
+    .line 1883
     :cond_0
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2417,17 +2649,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1820
+    .line 1893
     :goto_0
     return-void
 
-    .line 1813
+    .line 1886
     :cond_1
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1816
+    .line 1889
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1, p2}, Landroid/media/IAudioService;->registerMediaButtonIntent(Landroid/app/PendingIntent;Landroid/content/ComponentName;)V
@@ -2436,11 +2668,11 @@
 
     goto :goto_0
 
-    .line 1817
+    .line 1890
     :catch_0
     move-exception v0
 
-    .line 1818
+    .line 1891
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2472,7 +2704,7 @@
     .parameter "rcClient"
 
     .prologue
-    .line 1860
+    .line 1933
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/media/RemoteControlClient;->getRcMediaIntent()Landroid/app/PendingIntent;
@@ -2481,18 +2713,18 @@
 
     if-nez v2, :cond_1
 
-    .line 1872
+    .line 1945
     :cond_0
     :goto_0
     return-void
 
-    .line 1863
+    .line 1936
     :cond_1
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1865
+    .line 1938
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-virtual {p1}, Landroid/media/RemoteControlClient;->getRcMediaIntent()Landroid/app/PendingIntent;
@@ -2515,11 +2747,11 @@
 
     goto :goto_0
 
-    .line 1869
+    .line 1942
     :catch_0
     move-exception v0
 
-    .line 1870
+    .line 1943
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2551,20 +2783,20 @@
     .parameter "rcd"
 
     .prologue
-    .line 1899
+    .line 1972
     if-nez p1, :cond_0
 
-    .line 1908
+    .line 1981
     :goto_0
     return-void
 
-    .line 1902
+    .line 1975
     :cond_0
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1904
+    .line 1977
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->registerRemoteControlDisplay(Landroid/media/IRemoteControlDisplay;)V
@@ -2573,11 +2805,11 @@
 
     goto :goto_0
 
-    .line 1905
+    .line 1978
     :catch_0
     move-exception v0
 
-    .line 1906
+    .line 1979
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2608,27 +2840,27 @@
     .locals 5
 
     .prologue
-    .line 2012
+    .line 2085
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 2014
+    .line 2087
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1}, Landroid/media/IAudioService;->reloadAudioSettings()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2018
+    .line 2091
     :goto_0
     return-void
 
-    .line 2015
+    .line 2088
     :catch_0
     move-exception v0
 
-    .line 2016
+    .line 2089
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2662,20 +2894,20 @@
     .parameter "h"
 
     .prologue
-    .line 1937
+    .line 2010
     if-nez p1, :cond_0
 
-    .line 1946
+    .line 2019
     :goto_0
     return-void
 
-    .line 1940
+    .line 2013
     :cond_0
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1942
+    .line 2015
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1, p2, p3}, Landroid/media/IAudioService;->remoteControlDisplayUsesBitmapSize(Landroid/media/IRemoteControlDisplay;II)V
@@ -2684,11 +2916,11 @@
 
     goto :goto_0
 
-    .line 1943
+    .line 2016
     :catch_0
     move-exception v0
 
-    .line 1944
+    .line 2017
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2722,10 +2954,10 @@
     .parameter "durationHint"
 
     .prologue
-    .line 1738
+    .line 1811
     const/4 v8, 0x0
 
-    .line 1739
+    .line 1812
     .local v8, status:I
     const/4 v1, 0x1
 
@@ -2735,7 +2967,7 @@
 
     if-le p3, v1, :cond_1
 
-    .line 1741
+    .line 1814
     :cond_0
     sget-object v1, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2745,24 +2977,24 @@
 
     move v9, v8
 
-    .line 1754
+    .line 1827
     .end local v8           #status:I
     .local v9, status:I
     :goto_0
     return v9
 
-    .line 1744
+    .line 1817
     .end local v9           #status:I
     .restart local v8       #status:I
     :cond_1
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->registerAudioFocusListener(Landroid/media/AudioManager$OnAudioFocusChangeListener;)V
 
-    .line 1746
+    .line 1819
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v0
 
-    .line 1748
+    .line 1821
     .local v0, service:Landroid/media/IAudioService;
     :try_start_0
     iget-object v3, p0, Landroid/media/AudioManager;->mICallBack:Landroid/os/IBinder;
@@ -2792,18 +3024,18 @@
     :goto_1
     move v9, v8
 
-    .line 1754
+    .line 1827
     .end local v8           #status:I
     .restart local v9       #status:I
     goto :goto_0
 
-    .line 1751
+    .line 1824
     .end local v9           #status:I
     .restart local v8       #status:I
     :catch_0
     move-exception v7
 
-    .line 1752
+    .line 1825
     .local v7, e:Landroid/os/RemoteException;
     sget-object v1, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2831,39 +3063,12 @@
 .end method
 
 .method public setBeatsHeadset(I)V
-    .locals 4
+    .locals 0
     .parameter "headsetType"
 
     .prologue
-    .line 2258
-    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
-
-    move-result-object v1
-
-    .line 2260
-    .local v1, service:Landroid/media/IAudioService;
-    :try_start_0
-    invoke-interface {v1, p1}, Landroid/media/IAudioService;->setBeatsHeadset(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 2264
-    :goto_0
+    .line 2332
     return-void
-
-    .line 2261
-    :catch_0
-    move-exception v0
-
-    .line 2262
-    .local v0, e:Landroid/os/RemoteException;
-    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
-
-    const-string v3, "Dead object in setBeatsHeadset"
-
-    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
 .end method
 
 .method public setBeatsState(ZLjava/lang/String;)V
@@ -2872,27 +3077,27 @@
     .parameter "appName"
 
     .prologue
-    .line 2160
+    .line 2233
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 2162
+    .line 2235
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1, p2}, Landroid/media/IAudioService;->setBeatsState(ZLjava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2166
+    .line 2239
     :goto_0
     return-void
 
-    .line 2163
+    .line 2236
     :catch_0
     move-exception v0
 
-    .line 2164
+    .line 2237
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2910,7 +3115,7 @@
     .end annotation
 
     .prologue
-    .line 1097
+    .line 1173
     return-void
 .end method
 
@@ -2919,27 +3124,27 @@
     .parameter "on"
 
     .prologue
-    .line 1067
+    .line 1143
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1069
+    .line 1145
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->setBluetoothScoOn(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1073
+    .line 1149
     :goto_0
     return-void
 
-    .line 1070
+    .line 1146
     :catch_0
     move-exception v0
 
-    .line 1071
+    .line 1147
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -2955,7 +3160,7 @@
     .parameter "on"
 
     .prologue
-    .line 868
+    .line 920
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2984,27 +3189,27 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 869
+    .line 921
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 871
+    .line 923
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->setCSCallVolumeOn(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 875
+    .line 927
     :goto_0
     return-void
 
-    .line 872
+    .line 924
     :catch_0
     move-exception v0
 
-    .line 873
+    .line 925
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3021,31 +3226,74 @@
     .parameter "appName"
 
     .prologue
-    .line 2210
+    .line 2283
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 2212
+    .line 2285
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1, p2}, Landroid/media/IAudioService;->setGlobalEffect(ILjava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2216
+    .line 2289
     :goto_0
     return-void
 
-    .line 2213
+    .line 2286
     :catch_0
     move-exception v0
 
-    .line 2214
+    .line 2287
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
     const-string v3, "Dead object in setGlobalEffect"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method public setHeadsetProfile([I)V
+    .locals 4
+    .parameter "streamSettings"
+
+    .prologue
+    .line 675
+    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
+
+    move-result-object v1
+
+    .line 677
+    .local v1, service:Landroid/media/IAudioService;
+    :try_start_0
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v3, "setHeadsetProfile()"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 678
+    invoke-interface {v1, p1}, Landroid/media/IAudioService;->setHeadsetProfile([I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 682
+    :goto_0
+    return-void
+
+    .line 679
+    :catch_0
+    move-exception v0
+
+    .line 680
+    .local v0, e:Landroid/os/RemoteException;
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v3, "Dear object in setHeadsetProfile()"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -3057,7 +3305,7 @@
     .parameter "ignore"
 
     .prologue
-    .line 891
+    .line 943
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3086,29 +3334,29 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 892
+    .line 944
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 894
+    .line 946
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->setIgnoreNotificationMuteSetting(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 899
+    .line 951
     :goto_0
     const/4 v2, 0x0
 
     return v2
 
-    .line 895
+    .line 947
     :catch_0
     move-exception v0
 
-    .line 896
+    .line 948
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3124,10 +3372,10 @@
     .parameter "on"
 
     .prologue
-    .line 1154
+    .line 1230
     invoke-static {p1}, Landroid/media/AudioSystem;->muteMicrophone(Z)I
 
-    .line 1155
+    .line 1231
     return-void
 .end method
 
@@ -3136,12 +3384,12 @@
     .parameter "mode"
 
     .prologue
-    .line 1182
+    .line 1258
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1184
+    .line 1260
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     iget-object v2, p0, Landroid/media/AudioManager;->mICallBack:Landroid/os/IBinder;
@@ -3150,15 +3398,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1188
+    .line 1264
     :goto_0
     return-void
 
-    .line 1185
+    .line 1261
     :catch_0
     move-exception v0
 
-    .line 1186
+    .line 1262
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3177,7 +3425,7 @@
     .end annotation
 
     .prologue
-    .line 1360
+    .line 1433
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3202,7 +3450,7 @@
 
     invoke-virtual {p0, v0}, Landroid/media/AudioManager;->setParameters(Ljava/lang/String;)V
 
-    .line 1361
+    .line 1434
     return-void
 .end method
 
@@ -3211,10 +3459,10 @@
     .parameter "keyValuePairs"
 
     .prologue
-    .line 1371
+    .line 1444
     invoke-static {p1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 1372
+    .line 1445
     return-void
 .end method
 
@@ -3273,8 +3521,51 @@
     .end annotation
 
     .prologue
-    .line 1294
+    .line 1370
     return-void
+.end method
+
+.method public setSpeakerProfile([I)V
+    .locals 4
+    .parameter "streamSettings"
+
+    .prologue
+    .line 685
+    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
+
+    move-result-object v1
+
+    .line 687
+    .local v1, service:Landroid/media/IAudioService;
+    :try_start_0
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v3, "setSpeakerProfile()"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 688
+    invoke-interface {v1, p1}, Landroid/media/IAudioService;->setSpeakerProfile([I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 692
+    :goto_0
+    return-void
+
+    .line 689
+    :catch_0
+    move-exception v0
+
+    .line 690
+    .local v0, e:Landroid/os/RemoteException;
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v3, "Dear object in setSpeakerProfile()"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
 .end method
 
 .method public setSpeakerphoneOn(Z)V
@@ -3282,31 +3573,107 @@
     .parameter "on"
 
     .prologue
-    .line 832
+    .line 884
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 834
+    .line 886
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->setSpeakerphoneOn(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 838
+    .line 890
     :goto_0
     return-void
 
-    .line 835
+    .line 887
     :catch_0
     move-exception v0
 
-    .line 836
+    .line 888
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
     const-string v3, "Dead object in setSpeakerphoneOn"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method public setStreamLastaudibleIndex(II)V
+    .locals 5
+    .parameter "stream"
+    .parameter "index"
+
+    .prologue
+    .line 665
+    invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
+
+    move-result-object v1
+
+    .line 667
+    .local v1, service:Landroid/media/IAudioService;
+    :try_start_0
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "setStreamLastaudiobleIndex(streamType:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", index:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ")"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 668
+    invoke-interface {v1, p1, p2}, Landroid/media/IAudioService;->setStreamLastaudibleIndex(II)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 672
+    :goto_0
+    return-void
+
+    .line 669
+    :catch_0
+    move-exception v0
+
+    .line 670
+    .local v0, e:Landroid/os/RemoteException;
+    sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
+
+    const-string v3, "Dead object in setStreamLastaudiobleIndex"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -3319,12 +3686,12 @@
     .parameter "state"
 
     .prologue
-    .line 711
+    .line 763
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 713
+    .line 765
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     iget-object v2, p0, Landroid/media/AudioManager;->mICallBack:Landroid/os/IBinder;
@@ -3333,15 +3700,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 717
+    .line 769
     :goto_0
     return-void
 
-    .line 714
+    .line 766
     :catch_0
     move-exception v0
 
-    .line 715
+    .line 767
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3358,12 +3725,12 @@
     .parameter "state"
 
     .prologue
-    .line 682
+    .line 734
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 684
+    .line 736
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     iget-object v2, p0, Landroid/media/AudioManager;->mICallBack:Landroid/os/IBinder;
@@ -3372,15 +3739,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 688
+    .line 740
     :goto_0
     return-void
 
-    .line 685
+    .line 737
     :catch_0
     move-exception v0
 
-    .line 686
+    .line 738
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3484,27 +3851,27 @@
     .parameter "vibrateSetting"
 
     .prologue
-    .line 814
+    .line 866
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 816
+    .line 868
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1, p2}, Landroid/media/IAudioService;->setVibrateSetting(II)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 820
+    .line 872
     :goto_0
     return-void
 
-    .line 817
+    .line 869
     :catch_0
     move-exception v0
 
-    .line 818
+    .line 870
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3520,27 +3887,27 @@
     .parameter "orientation"
 
     .prologue
-    .line 2146
+    .line 2219
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 2148
+    .line 2221
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->setVolumePanelOrientation(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2152
+    .line 2225
     :goto_0
     return-void
 
-    .line 2149
+    .line 2222
     :catch_0
     move-exception v0
 
-    .line 2150
+    .line 2223
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3558,7 +3925,7 @@
     .end annotation
 
     .prologue
-    .line 1122
+    .line 1198
     return-void
 .end method
 
@@ -3567,12 +3934,12 @@
     .parameter "vibrateType"
 
     .prologue
-    .line 763
+    .line 815
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 765
+    .line 817
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->shouldVibrate(I)Z
@@ -3581,15 +3948,15 @@
 
     move-result v2
 
-    .line 768
+    .line 820
     :goto_0
     return v2
 
-    .line 766
+    .line 818
     :catch_0
     move-exception v0
 
-    .line 767
+    .line 819
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3597,7 +3964,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 768
+    .line 820
     const/4 v2, 0x0
 
     goto :goto_0
@@ -3607,12 +3974,12 @@
     .locals 4
 
     .prologue
-    .line 1031
+    .line 1107
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1033
+    .line 1109
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     iget-object v2, p0, Landroid/media/AudioManager;->mICallBack:Landroid/os/IBinder;
@@ -3621,15 +3988,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1037
+    .line 1113
     :goto_0
     return-void
 
-    .line 1034
+    .line 1110
     :catch_0
     move-exception v0
 
-    .line 1035
+    .line 1111
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3644,12 +4011,12 @@
     .locals 4
 
     .prologue
-    .line 1049
+    .line 1125
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1051
+    .line 1127
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     iget-object v2, p0, Landroid/media/AudioManager;->mICallBack:Landroid/os/IBinder;
@@ -3658,15 +4025,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1055
+    .line 1131
     :goto_0
     return-void
 
-    .line 1052
+    .line 1128
     :catch_0
     move-exception v0
 
-    .line 1053
+    .line 1129
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3682,27 +4049,27 @@
     .parameter "on"
 
     .prologue
-    .line 2180
+    .line 2253
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 2182
+    .line 2255
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->triggerBeatsLogo(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2186
+    .line 2259
     :goto_0
     return-void
 
-    .line 2183
+    .line 2256
     :catch_0
     move-exception v0
 
-    .line 2184
+    .line 2257
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3717,27 +4084,27 @@
     .locals 5
 
     .prologue
-    .line 1537
+    .line 1610
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1539
+    .line 1612
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1}, Landroid/media/IAudioService;->unloadSoundEffects()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1543
+    .line 1616
     :goto_0
     return-void
 
-    .line 1540
+    .line 1613
     :catch_0
     move-exception v0
 
-    .line 1541
+    .line 1614
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3769,12 +4136,12 @@
     .parameter "l"
 
     .prologue
-    .line 1707
+    .line 1780
     iget-object v1, p0, Landroid/media/AudioManager;->mFocusListenerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1708
+    .line 1781
     :try_start_0
     iget-object v0, p0, Landroid/media/AudioManager;->mAudioFocusIdListenerMap:Ljava/util/HashMap;
 
@@ -3784,13 +4151,13 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1709
+    .line 1782
     monitor-exit v1
 
-    .line 1710
+    .line 1783
     return-void
 
-    .line 1709
+    .line 1782
     :catchall_0
     move-exception v0
 
@@ -3808,14 +4175,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1828
+    .line 1901
     if-nez p1, :cond_0
 
-    .line 1838
+    .line 1911
     :goto_0
     return-void
 
-    .line 1832
+    .line 1905
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -3823,18 +4190,18 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1834
+    .line 1907
     .local v0, mediaButtonIntent:Landroid/content/Intent;
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1835
+    .line 1908
     iget-object v2, p0, Landroid/media/AudioManager;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v3, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v1
 
-    .line 1837
+    .line 1910
     .local v1, pi:Landroid/app/PendingIntent;
     invoke-virtual {p0, v1, p1}, Landroid/media/AudioManager;->unregisterMediaButtonIntent(Landroid/app/PendingIntent;Landroid/content/ComponentName;)V
 
@@ -3847,27 +4214,27 @@
     .parameter "eventReceiver"
 
     .prologue
-    .line 1844
+    .line 1917
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1846
+    .line 1919
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1, p2}, Landroid/media/IAudioService;->unregisterMediaButtonIntent(Landroid/app/PendingIntent;Landroid/content/ComponentName;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1850
+    .line 1923
     :goto_0
     return-void
 
-    .line 1847
+    .line 1920
     :catch_0
     move-exception v0
 
-    .line 1848
+    .line 1921
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3899,7 +4266,7 @@
     .parameter "rcClient"
 
     .prologue
-    .line 1881
+    .line 1954
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/media/RemoteControlClient;->getRcMediaIntent()Landroid/app/PendingIntent;
@@ -3908,18 +4275,18 @@
 
     if-nez v2, :cond_1
 
-    .line 1891
+    .line 1964
     :cond_0
     :goto_0
     return-void
 
-    .line 1884
+    .line 1957
     :cond_1
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1886
+    .line 1959
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-virtual {p1}, Landroid/media/RemoteControlClient;->getRcMediaIntent()Landroid/app/PendingIntent;
@@ -3936,11 +4303,11 @@
 
     goto :goto_0
 
-    .line 1888
+    .line 1961
     :catch_0
     move-exception v0
 
-    .line 1889
+    .line 1962
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
@@ -3972,20 +4339,20 @@
     .parameter "rcd"
 
     .prologue
-    .line 1916
+    .line 1989
     if-nez p1, :cond_0
 
-    .line 1925
+    .line 1998
     :goto_0
     return-void
 
-    .line 1919
+    .line 1992
     :cond_0
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v1
 
-    .line 1921
+    .line 1994
     .local v1, service:Landroid/media/IAudioService;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->unregisterRemoteControlDisplay(Landroid/media/IRemoteControlDisplay;)V
@@ -3994,11 +4361,11 @@
 
     goto :goto_0
 
-    .line 1922
+    .line 1995
     :catch_0
     move-exception v0
 
-    .line 1923
+    .line 1996
     .local v0, e:Landroid/os/RemoteException;
     sget-object v2, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 

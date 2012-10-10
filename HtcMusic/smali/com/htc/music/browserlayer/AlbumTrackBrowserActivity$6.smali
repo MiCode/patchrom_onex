@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1562
+    .line 1591
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$6;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,26 +43,26 @@
     .parameter "which"
 
     .prologue
-    .line 1564
+    .line 1593
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1565
+    .line 1594
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$6;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mContextMenuIds:[I
-    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2300(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;)[I
+    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;)[I
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1566
+    .line 1595
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$6;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$6;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mContextMenuIds:[I
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2300(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;)[I
+    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2400(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;)[I
 
     move-result-object v1
 
@@ -70,7 +70,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->onHtcContextItemSelected(I)Z
 
-    .line 1567
+    .line 1596
     :cond_0
     return-void
 .end method

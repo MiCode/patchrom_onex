@@ -65,10 +65,10 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 68
+    .line 80
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
+    .line 82
     if-eqz p1, :cond_4
 
     array-length v3, p1
@@ -77,7 +77,7 @@
 
     if-le v3, v4, :cond_4
 
-    .line 71
+    .line 83
     const/4 v3, 0x0
 
     aget-byte v3, p1, v3
@@ -86,10 +86,10 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 72
+    .line 84
     iput-boolean v5, p0, Lcom/android/internal/telephony/IccFcp;->isTlvFormat:Z
 
-    .line 75
+    .line 87
     aget-byte v3, p1, v5
 
     and-int/lit16 v3, v3, 0xff
@@ -100,10 +100,10 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 76
+    .line 88
     const/4 v0, 0x2
 
-    .line 81
+    .line 93
     .local v0, offset:I
     :goto_0
     new-instance v2, Lcom/android/internal/telephony/gsm/SimTlv;
@@ -112,7 +112,7 @@
 
     invoke-direct {v2, p1, v0, v3}, Lcom/android/internal/telephony/gsm/SimTlv;-><init>([BII)V
 
-    .line 82
+    .line 94
     .local v2, tlv:Lcom/android/internal/telephony/gsm/SimTlv;
     :goto_1
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/SimTlv;->isValidObject()Z
@@ -121,32 +121,32 @@
 
     if-eqz v3, :cond_4
 
-    .line 83
+    .line 95
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/SimTlv;->getTag()I
 
     move-result v1
 
-    .line 84
+    .line 96
     .local v1, tag:I
     const/16 v3, 0x82
 
     if-ne v1, v3, :cond_2
 
-    .line 85
+    .line 97
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/SimTlv;->getData()[B
 
     move-result-object v3
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/IccFcp;->parseFileDescriptor([B)V
 
-    .line 82
+    .line 94
     :cond_0
     :goto_2
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/SimTlv;->nextObject()Z
 
     goto :goto_1
 
-    .line 78
+    .line 90
     .end local v0           #offset:I
     .end local v1           #tag:I
     .end local v2           #tlv:Lcom/android/internal/telephony/gsm/SimTlv;
@@ -156,7 +156,7 @@
     .restart local v0       #offset:I
     goto :goto_0
 
-    .line 86
+    .line 98
     .restart local v1       #tag:I
     .restart local v2       #tlv:Lcom/android/internal/telephony/gsm/SimTlv;
     :cond_2
@@ -164,7 +164,7 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 87
+    .line 99
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/SimTlv;->getData()[B
 
     move-result-object v3
@@ -173,20 +173,20 @@
 
     goto :goto_2
 
-    .line 88
+    .line 100
     :cond_3
     const/16 v3, 0x80
 
     if-ne v1, v3, :cond_0
 
-    .line 89
+    .line 101
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/SimTlv;->getData()[B
 
     move-result-object v3
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/IccFcp;->parseFileSize([B)V
 
-    .line 95
+    .line 107
     .end local v0           #offset:I
     .end local v1           #tag:I
     .end local v2           #tlv:Lcom/android/internal/telephony/gsm/SimTlv;
@@ -201,14 +201,14 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 98
+    .line 110
     if-eqz p1, :cond_1
 
     array-length v0, p1
 
     if-lt v0, v2, :cond_1
 
-    .line 99
+    .line 111
     const/4 v0, 0x0
 
     aget-byte v0, p1, v0
@@ -217,7 +217,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/IccFcp;->fileType:I
 
-    .line 100
+    .line 112
     iget v0, p0, Lcom/android/internal/telephony/IccFcp;->fileType:I
 
     if-eq v0, v2, :cond_0
@@ -228,7 +228,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 102
+    .line 114
     :cond_0
     aget-byte v0, p1, v2
 
@@ -246,7 +246,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/IccFcp;->recordLength:I
 
-    .line 104
+    .line 116
     const/4 v0, 0x4
 
     aget-byte v0, p1, v0
@@ -255,7 +255,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/IccFcp;->numOfRecords:I
 
-    .line 107
+    .line 119
     :cond_1
     return-void
 .end method
@@ -265,7 +265,7 @@
     .parameter "data"
 
     .prologue
-    .line 110
+    .line 122
     if-eqz p1, :cond_0
 
     array-length v0, p1
@@ -274,7 +274,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 111
+    .line 123
     const/4 v0, 0x0
 
     aget-byte v0, p1, v0
@@ -293,7 +293,7 @@
 
     iput v0, p0, Lcom/android/internal/telephony/IccFcp;->fileId:I
 
-    .line 114
+    .line 126
     :cond_0
     return-void
 .end method
@@ -303,13 +303,13 @@
     .parameter "data"
 
     .prologue
-    .line 117
+    .line 129
     if-eqz p1, :cond_0
 
-    .line 118
+    .line 130
     array-length v1, p1
 
-    .line 119
+    .line 131
     .local v1, len:I
     const/4 v0, 0x0
 
@@ -317,7 +317,7 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 120
+    .line 132
     iget v2, p0, Lcom/android/internal/telephony/IccFcp;->fileSize:I
 
     aget-byte v3, p1, v0
@@ -336,12 +336,12 @@
 
     iput v2, p0, Lcom/android/internal/telephony/IccFcp;->fileSize:I
 
-    .line 119
+    .line 131
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 123
+    .line 135
     .end local v0           #i:I
     .end local v1           #len:I
     :cond_0
@@ -354,7 +354,7 @@
     .locals 2
 
     .prologue
-    .line 126
+    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

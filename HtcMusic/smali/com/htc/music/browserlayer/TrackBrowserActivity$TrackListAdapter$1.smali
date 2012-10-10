@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4385
+    .line 4386
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "clickedView"
 
     .prologue
-    .line 4389
+    .line 4390
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -53,7 +53,7 @@
 
     move-result v0
 
-    .line 4391
+    .line 4392
     .local v0, pos:I
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
@@ -69,7 +69,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 4392
+    .line 4393
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -101,7 +101,7 @@
 
     if-nez v1, :cond_1
 
-    .line 4393
+    .line 4394
     const-string v1, "[PluginNowPlayingListActivity]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -124,7 +124,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4394
+    .line 4395
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -143,12 +143,12 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4400
+    .line 4401
     :cond_0
     :goto_0
     return-void
 
-    .line 4396
+    .line 4397
     :cond_1
     const-string v1, "[PluginNowPlayingListActivity]"
 
@@ -172,7 +172,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4397
+    .line 4398
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;

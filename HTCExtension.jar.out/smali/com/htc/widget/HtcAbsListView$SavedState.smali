@@ -63,7 +63,7 @@
     .locals 1
 
     .prologue
-    .line 1667
+    .line 1676
     new-instance v0, Lcom/htc/widget/HtcAbsListView$SavedState$1;
 
     invoke-direct {v0}, Lcom/htc/widget/HtcAbsListView$SavedState$1;-><init>()V
@@ -78,52 +78,52 @@
     .parameter "in"
 
     .prologue
-    .line 1601
+    .line 1610
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1602
+    .line 1611
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v5
 
     iput-wide v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->selectedId:J
 
-    .line 1603
+    .line 1612
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v5
 
     iput-wide v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->firstId:J
 
-    .line 1604
+    .line 1613
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
     iput v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->viewTop:I
 
-    .line 1605
+    .line 1614
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
     iput v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->position:I
 
-    .line 1606
+    .line 1615
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
     iput v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->height:I
 
-    .line 1607
+    .line 1616
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->filter:Ljava/lang/String;
 
-    .line 1608
+    .line 1617
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v5
@@ -135,55 +135,55 @@
     :goto_0
     iput-boolean v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->inActionMode:Z
 
-    .line 1609
+    .line 1618
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
     iput v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkedItemCount:I
 
-    .line 1610
+    .line 1619
     invoke-virtual {p1}, Landroid/os/Parcel;->readSparseBooleanArray()Landroid/util/SparseBooleanArray;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkState:Landroid/util/SparseBooleanArray;
 
-    .line 1611
+    .line 1620
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 1612
+    .line 1621
     .local v0, N:I
     if-lez v0, :cond_1
 
-    .line 1613
+    .line 1622
     new-instance v5, Landroid/util/LongSparseArray;
 
     invoke-direct {v5}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkIdState:Landroid/util/LongSparseArray;
 
-    .line 1614
+    .line 1623
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_1
     if-ge v1, v0, :cond_1
 
-    .line 1615
+    .line 1624
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 1616
+    .line 1625
     .local v2, key:J
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 1617
+    .line 1626
     .local v4, value:I
     iget-object v5, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkIdState:Landroid/util/LongSparseArray;
 
@@ -193,12 +193,12 @@
 
     invoke-virtual {v5, v2, v3, v6}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 1614
+    .line 1623
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1608
+    .line 1617
     .end local v0           #N:I
     .end local v1           #i:I
     .end local v2           #key:J
@@ -208,7 +208,7 @@
 
     goto :goto_0
 
-    .line 1620
+    .line 1629
     .restart local v0       #N:I
     :cond_1
     return-void
@@ -220,7 +220,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1578
+    .line 1587
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcAbsListView$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -231,10 +231,10 @@
     .parameter "superState"
 
     .prologue
-    .line 1594
+    .line 1603
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1595
+    .line 1604
     return-void
 .end method
 
@@ -244,7 +244,7 @@
     .locals 3
 
     .prologue
-    .line 1652
+    .line 1661
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,7 +351,7 @@
 
     move-result-object v0
 
-    const-string v1, "}"
+    const-string/jumbo v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -372,40 +372,40 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1628
+    .line 1637
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1629
+    .line 1638
     iget-wide v4, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->selectedId:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1630
+    .line 1639
     iget-wide v4, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->firstId:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1631
+    .line 1640
     iget v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->viewTop:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1632
+    .line 1641
     iget v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->position:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1633
+    .line 1642
     iget v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->height:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1634
+    .line 1643
     iget-object v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->filter:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1635
+    .line 1644
     iget-boolean v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->inActionMode:Z
 
     if-eqz v2, :cond_0
@@ -417,17 +417,17 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 1636
+    .line 1645
     iget v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkedItemCount:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1637
+    .line 1646
     iget-object v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkState:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeSparseBooleanArray(Landroid/util/SparseBooleanArray;)V
 
-    .line 1638
+    .line 1647
     iget-object v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkIdState:Landroid/util/LongSparseArray;
 
     if-eqz v2, :cond_1
@@ -438,19 +438,19 @@
 
     move-result v0
 
-    .line 1639
+    .line 1648
     .local v0, N:I
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1640
+    .line 1649
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_2
     if-ge v1, v0, :cond_2
 
-    .line 1641
+    .line 1650
     iget-object v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkIdState:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/LongSparseArray;->keyAt(I)J
@@ -459,7 +459,7 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1642
+    .line 1651
     iget-object v2, p0, Lcom/htc/widget/HtcAbsListView$SavedState;->checkIdState:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
@@ -474,7 +474,7 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1640
+    .line 1649
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
@@ -484,16 +484,16 @@
     :cond_0
     move v2, v3
 
-    .line 1635
+    .line 1644
     goto :goto_0
 
     :cond_1
     move v0, v3
 
-    .line 1638
+    .line 1647
     goto :goto_1
 
-    .line 1644
+    .line 1653
     .restart local v0       #N:I
     .restart local v1       #i:I
     :cond_2

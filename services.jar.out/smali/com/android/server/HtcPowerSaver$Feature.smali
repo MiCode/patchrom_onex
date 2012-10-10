@@ -38,17 +38,17 @@
     .parameter "sysProp"
 
     .prologue
-    .line 564
+    .line 560
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$Feature;->this$0:Lcom/android/server/HtcPowerSaver;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 556
+    .line 552
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->mApplied:Z
 
-    .line 565
+    .line 561
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,19 +69,19 @@
 
     iput-object v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
-    .line 566
+    .line 562
     iput-object p3, p0, Lcom/android/server/HtcPowerSaver$Feature;->KEY_FEATURE_SWITCH:Ljava/lang/String;
 
-    .line 567
+    .line 563
     iput-boolean p4, p0, Lcom/android/server/HtcPowerSaver$Feature;->DEFAULT_SWITCH_VALUE:Z
 
-    .line 568
+    .line 564
     iput-object p5, p0, Lcom/android/server/HtcPowerSaver$Feature;->KEY_FEATURE_SYSPROP:Ljava/lang/String;
 
-    .line 569
+    .line 565
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Feature;->updateSystemProperties()V
 
-    .line 570
+    .line 566
     return-void
 .end method
 
@@ -90,7 +90,7 @@
     .parameter "x0"
 
     .prologue
-    .line 554
+    .line 550
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Feature;->apply()Z
 
     move-result v0
@@ -103,7 +103,7 @@
     .parameter "x0"
 
     .prologue
-    .line 554
+    .line 550
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Feature;->restore()V
 
     return-void
@@ -113,46 +113,46 @@
     .locals 2
 
     .prologue
-    .line 608
+    .line 604
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->mApplied:Z
 
-    .line 611
+    .line 607
     invoke-virtual {p0}, Lcom/android/server/HtcPowerSaver$Feature;->saveSystemSettings()I
 
-    .line 613
+    .line 609
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Feature;->isEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 615
+    .line 611
     invoke-virtual {p0}, Lcom/android/server/HtcPowerSaver$Feature;->applyPowerSaverSettings()I
 
-    .line 616
+    .line 612
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->mApplied:Z
 
-    .line 617
+    .line 613
     iget-object v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
     const-string v1, "Applied."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 622
+    .line 618
     :goto_0
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Feature;->updateSystemProperties()V
 
-    .line 624
+    .line 620
     iget-boolean v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->mApplied:Z
 
     return v0
 
-    .line 619
+    .line 615
     :cond_0
     iget-object v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
@@ -170,21 +170,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 573
+    .line 569
     if-nez p1, :cond_0
 
-    .line 574
+    .line 570
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
     const-string v4, "getSettingsSharedPreferences: Context is null."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
+    .line 580
     :goto_0
     return-object v2
 
-    .line 579
+    .line 575
     :cond_0
     :try_start_0
     const-string v3, "com.android.settings"
@@ -197,7 +197,7 @@
 
     move-result-object v0
 
-    .line 584
+    .line 580
     .local v0, appsContext:Landroid/content/Context;
     const-string v2, "powersaver_shared"
 
@@ -209,12 +209,12 @@
 
     goto :goto_0
 
-    .line 580
+    .line 576
     .end local v0           #appsContext:Landroid/content/Context;
     :catch_0
     move-exception v1
 
-    .line 581
+    .line 577
     .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v1}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
@@ -225,7 +225,7 @@
     .locals 5
 
     .prologue
-    .line 597
+    .line 593
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$Feature;->this$0:Lcom/android/server/HtcPowerSaver;
 
     #getter for: Lcom/android/server/HtcPowerSaver;->mContext:Landroid/content/Context;
@@ -237,25 +237,25 @@
 
     move-result-object v1
 
-    .line 598
+    .line 594
     .local v1, sp:Landroid/content/SharedPreferences;
     if-nez v1, :cond_0
 
-    .line 599
+    .line 595
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
     const-string v3, "isEnable: Get SharedPreferences fail."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 600
+    .line 596
     const/4 v0, 0x0
 
-    .line 604
+    .line 600
     :goto_0
     return v0
 
-    .line 602
+    .line 598
     :cond_0
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$Feature;->KEY_FEATURE_SWITCH:Ljava/lang/String;
 
@@ -265,7 +265,7 @@
 
     move-result v0
 
-    .line 603
+    .line 599
     .local v0, ret:Z
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
@@ -320,7 +320,7 @@
     .locals 2
 
     .prologue
-    .line 631
+    .line 627
     iget-boolean v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->mApplied:Z
 
     if-nez v0, :cond_0
@@ -340,30 +340,30 @@
 
     if-eqz v0, :cond_1
 
-    .line 632
+    .line 628
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/HtcPowerSaver$Feature;->restoreSystemSettings()I
 
-    .line 633
+    .line 629
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->mApplied:Z
 
-    .line 634
+    .line 630
     iget-object v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
     const-string v1, "Restored."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 638
+    .line 634
     :goto_0
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$Feature;->updateSystemProperties()V
 
-    .line 639
+    .line 635
     return-void
 
-    .line 636
+    .line 632
     :cond_1
     iget-object v0, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 
@@ -378,7 +378,7 @@
     .locals 4
 
     .prologue
-    .line 589
+    .line 585
     :try_start_0
     iget-object v1, p0, Lcom/android/server/HtcPowerSaver$Feature;->KEY_FEATURE_SYSPROP:Ljava/lang/String;
 
@@ -396,15 +396,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 593
+    .line 589
     :goto_0
     return-void
 
-    .line 590
+    .line 586
     :catch_0
     move-exception v0
 
-    .line 591
+    .line 587
     .local v0, e:Ljava/lang/Exception;
     iget-object v1, p0, Lcom/android/server/HtcPowerSaver$Feature;->TAG:Ljava/lang/String;
 

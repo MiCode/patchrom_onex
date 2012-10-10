@@ -25,13 +25,13 @@
     .parameter "looper"
 
     .prologue
-    .line 1783
+    .line 1792
     iput-object p1, p0, Landroid/accounts/AccountManagerService$MessageHandler;->this$0:Landroid/accounts/AccountManagerService;
 
-    .line 1784
+    .line 1793
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1785
+    .line 1794
     return-void
 .end method
 
@@ -42,12 +42,12 @@
     .parameter "msg"
 
     .prologue
-    .line 1788
+    .line 1797
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1795
+    .line 1804
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -74,20 +74,20 @@
 
     throw v1
 
-    .line 1790
+    .line 1799
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/accounts/AccountManagerService$Session;
 
-    .line 1791
+    .line 1800
     .local v0, session:Landroid/accounts/AccountManagerService$Session;
     invoke-virtual {v0}, Landroid/accounts/AccountManagerService$Session;->onTimedOut()V
 
-    .line 1797
+    .line 1806
     return-void
 
-    .line 1788
+    .line 1797
     nop
 
     :pswitch_data_0

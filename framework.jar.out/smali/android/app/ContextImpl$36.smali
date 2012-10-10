@@ -32,7 +32,7 @@
 
     .prologue
     .line 515
-    const-string/jumbo v1, "htchardware"
+    const-string v1, "htchardware"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 

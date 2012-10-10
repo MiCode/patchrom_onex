@@ -3,14 +3,6 @@
 .source "IdleScreenService.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/htc/lockscreen/idlescreen/IdleScreenService$IdleScreenServiceWrapper;
-    }
-.end annotation
-
-
 # static fields
 .field public static final ACTION_LOCKSCREEN_HIDE_LIVEWALLPAPPER:Ljava/lang/String; = "idleScreenHideLiveWallpaper"
 
@@ -120,18 +112,9 @@
 
 
 # instance fields
-.field private mActiveEngines:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private mCallbackLooper:Landroid/os/Looper;
+
+.field private mEngineHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;
 
 
 # direct methods
@@ -139,153 +122,76 @@
     .locals 1
 
     .prologue
-    .line 15
+    .line 10
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 145
+    .line 140
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mCallbackLooper:Landroid/os/Looper;
 
-    .line 146
-    new-instance v0, Ljava/util/ArrayList;
+    .line 142
+    new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenService$1;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenService$1;-><init>(Lcom/htc/lockscreen/idlescreen/IdleScreenService;)V
 
-    iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
+    iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mEngineHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;
 
-    .line 214
     return-void
-.end method
-
-.method static synthetic access$000(Lcom/htc/lockscreen/idlescreen/IdleScreenService;)Landroid/os/Looper;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 15
-    iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mCallbackLooper:Landroid/os/Looper;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public addEngine(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
-    .locals 2
-    .parameter "engine"
+.method getEnginesHelper()Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;
+    .locals 1
 
     .prologue
-    .line 189
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
+    .line 222
+    iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mEngineHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;
 
-    monitor-enter v1
-
-    .line 190
-    :try_start_0
-    iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 191
-    monitor-exit v1
-
-    .line 192
-    return-void
-
-    .line 191
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
+    return-object v0
 .end method
 
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
-    .locals 1
+    .locals 2
     .parameter "intent"
 
     .prologue
-    .line 180
-    new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenService$IdleScreenServiceWrapper;
+    .line 179
+    new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenServiceStub;
 
-    invoke-direct {v0, p0, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenService$IdleScreenServiceWrapper;-><init>(Lcom/htc/lockscreen/idlescreen/IdleScreenService;Lcom/htc/lockscreen/idlescreen/IdleScreenService;)V
+    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mEngineHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;
+
+    invoke-direct {v0, p0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenServiceStub;-><init>(Landroid/content/Context;Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;)V
 
     return-object v0
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 3
+    .locals 1
     .parameter "config"
 
     .prologue
-    .line 235
+    .line 213
     invoke-super {p0, p1}, Landroid/app/Service;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 236
-    iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
+    .line 214
+    iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mEngineHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;
 
-    monitor-enter v2
+    invoke-virtual {v0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;->dispatchConfiguration(Landroid/content/res/Configuration;)V
 
-    .line 237
-    const/4 v0, 0x0
-
-    .local v0, i:I
-    :goto_0
-    :try_start_0
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 238
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
-
-    invoke-virtual {v1, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    .line 237
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 240
-    :cond_0
-    monitor-exit v2
-
-    .line 241
+    .line 215
     return-void
-
-    .line 240
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
 .end method
 
 .method public onCreate()V
     .locals 0
 
     .prologue
-    .line 155
+    .line 159
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 156
+    .line 160
     return-void
 .end method
 
@@ -293,104 +199,19 @@
 .end method
 
 .method public onDestroy()V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 164
-    iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    monitor-enter v2
-
-    .line 165
-    const/4 v0, 0x0
-
-    .local v0, i:I
-    :goto_0
-    :try_start_0
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 166
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
-
-    invoke-virtual {v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->detach()V
-
-    .line 165
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
     .line 168
-    :cond_0
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
+    iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mEngineHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;
 
-    invoke-interface {v1}, Ljava/util/List;->clear()V
+    invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineHelper;->removeAll()V
 
     .line 169
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 170
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 171
+    .line 170
     return-void
-
-    .line 169
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public removeEngine(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
-    .locals 2
-    .parameter "engine"
-
-    .prologue
-    .line 200
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    monitor-enter v1
-
-    .line 201
-    :try_start_0
-    iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mActiveEngines:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    .line 202
-    monitor-exit v1
-
-    .line 203
-    return-void
-
-    .line 202
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method
 
 .method public setCallbackLooper(Landroid/os/Looper;)V
@@ -398,9 +219,9 @@
     .parameter "looper"
 
     .prologue
-    .line 211
+    .line 189
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->mCallbackLooper:Landroid/os/Looper;
 
-    .line 212
+    .line 190
     return-void
 .end method

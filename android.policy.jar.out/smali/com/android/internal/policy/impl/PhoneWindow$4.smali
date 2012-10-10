@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3941
+    .line 4071
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "arg1"
 
     .prologue
-    .line 3944
+    .line 4074
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindow;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
@@ -60,18 +60,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 3946
+    .line 4076
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 3947
+    .line 4077
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "android.intent.action.NEVER_SHOW_MENU"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3948
+    .line 4078
     const-string v1, "neverShow"
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3949
+    .line 4079
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/PhoneWindow;->getContext()Landroid/content/Context;
@@ -93,7 +93,7 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 3951
+    .line 4081
     .end local v0           #intent:Landroid/content/Intent;
     :cond_0
     return-void

@@ -558,10 +558,10 @@
     .locals 21
 
     .prologue
-    .line 1333
+    .line 1303
     const/16 v17, 0x0
 
-    .line 1335
+    .line 1305
     .local v17, otherHeights:I
     move-object/from16 v0, p0
 
@@ -569,12 +569,12 @@
 
     if-nez v1, :cond_7
 
-    .line 1336
+    .line 1306
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mContext:Landroid/content/Context;
 
-    .line 1344
+    .line 1314
     .local v8, context:Landroid/content/Context;
     new-instance v1, Lcom/htc/widget/ExpandableListPopupBubbleWindow$1;
 
@@ -586,7 +586,7 @@
 
     iput-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mShowDropDownRunnable:Ljava/lang/Runnable;
 
-    .line 1354
+    .line 1324
     new-instance v2, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     move-object/from16 v0, p0
@@ -604,14 +604,14 @@
 
     iput-object v2, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
-    .line 1356
+    .line 1326
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownListHighlight:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    .line 1357
+    .line 1327
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -622,7 +622,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1359
+    .line 1329
     :cond_0
     move-object/from16 v0, p0
 
@@ -634,7 +634,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setAdapter(Landroid/widget/ExpandableListAdapter;)V
 
-    .line 1360
+    .line 1330
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -643,7 +643,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setVerticalFadingEdgeEnabled(Z)V
 
-    .line 1362
+    .line 1332
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -654,7 +654,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setOnGroupClickListener(Lcom/htc/widget/HtcExpandableListView$OnGroupClickListener;)V
 
-    .line 1363
+    .line 1333
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -665,7 +665,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setOnChildClickListener(Lcom/htc/widget/HtcExpandableListView$OnChildClickListener;)V
 
-    .line 1364
+    .line 1334
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -676,7 +676,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setOnGroupExpandListener(Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;)V
 
-    .line 1365
+    .line 1335
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -687,7 +687,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setOnGroupCollapseListener(Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;)V
 
-    .line 1368
+    .line 1338
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -696,7 +696,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setFocusable(Z)V
 
-    .line 1369
+    .line 1339
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -705,7 +705,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setFocusableInTouchMode(Z)V
 
-    .line 1370
+    .line 1340
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -718,7 +718,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setOnItemSelectedListener(Lcom/htc/widget/HtcAdapterView$OnItemSelectedListener;)V
 
-    .line 1386
+    .line 1356
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -729,14 +729,14 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setOnScrollListener(Lcom/htc/widget/HtcAbsListView$OnScrollListener;)V
 
-    .line 1388
+    .line 1358
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mItemSelectedListener:Lcom/htc/widget/HtcAdapterView$OnItemSelectedListener;
 
     if-eqz v1, :cond_1
 
-    .line 1389
+    .line 1359
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -747,34 +747,34 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setOnItemSelectedListener(Lcom/htc/widget/HtcAdapterView$OnItemSelectedListener;)V
 
-    .line 1392
+    .line 1362
     :cond_1
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
-    .line 1394
+    .line 1364
     .local v9, dropDownView:Landroid/view/ViewGroup;
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPromptView:Landroid/view/View;
 
-    .line 1395
+    .line 1365
     .local v13, hintView:Landroid/view/View;
     if-eqz v13, :cond_2
 
-    .line 1398
+    .line 1368
     new-instance v11, Landroid/widget/LinearLayout;
 
     invoke-direct {v11, v8}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1399
+    .line 1369
     .local v11, hintContainer:Landroid/widget/LinearLayout;
     const/4 v1, 0x1
 
     invoke-virtual {v11, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 1401
+    .line 1371
     new-instance v12, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x1
@@ -785,7 +785,7 @@
 
     invoke-direct {v12, v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 1405
+    .line 1375
     .local v12, hintParams:Landroid/widget/LinearLayout$LayoutParams;
     move-object/from16 v0, p0
 
@@ -793,7 +793,7 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1417
+    .line 1387
     const-string v1, "ExpanableListPopupBubbleWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -820,7 +820,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1423
+    .line 1393
     :goto_1
     move-object/from16 v0, p0
 
@@ -832,17 +832,17 @@
 
     move-result v20
 
-    .line 1424
+    .line 1394
     .local v20, widthSpec:I
     const/4 v10, 0x0
 
-    .line 1425
+    .line 1395
     .local v10, heightSpec:I
     move/from16 v0, v20
 
     invoke-virtual {v13, v0, v10}, Landroid/view/View;->measure(II)V
 
-    .line 1426
+    .line 1396
     invoke-virtual {v13}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v12
@@ -850,7 +850,7 @@
     .end local v12           #hintParams:Landroid/widget/LinearLayout$LayoutParams;
     check-cast v12, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1427
+    .line 1397
     .restart local v12       #hintParams:Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual {v13}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -864,10 +864,10 @@
 
     add-int v17, v1, v2
 
-    .line 1430
+    .line 1400
     move-object v9, v11
 
-    .line 1433
+    .line 1403
     .end local v10           #heightSpec:I
     .end local v11           #hintContainer:Landroid/widget/LinearLayout;
     .end local v12           #hintParams:Landroid/widget/LinearLayout$LayoutParams;
@@ -879,7 +879,7 @@
 
     invoke-virtual {v1, v9}, Lcom/htc/widget/PopupBubbleWindow;->setContentView(Landroid/view/View;)V
 
-    .line 1446
+    .line 1416
     .end local v8           #context:Landroid/content/Context;
     .end local v13           #hintView:Landroid/view/View;
     :cond_3
@@ -898,7 +898,7 @@
 
     const/4 v14, 0x1
 
-    .line 1448
+    .line 1418
     .local v14, ignoreBottomDecorations:Z
     :goto_3
     move-object/from16 v0, p0
@@ -917,11 +917,11 @@
 
     move-result v16
 
-    .line 1453
+    .line 1423
     .local v16, maxHeight:I
     const/16 v18, 0x0
 
-    .line 1454
+    .line 1424
     .local v18, padding:I
     move-object/from16 v0, p0
 
@@ -931,18 +931,18 @@
 
     move-result-object v7
 
-    .line 1455
+    .line 1425
     .local v7, background:Landroid/graphics/drawable/Drawable;
     if-eqz v7, :cond_4
 
-    .line 1456
+    .line 1426
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v7, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 1457
+    .line 1427
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mTempRect:Landroid/graphics/Rect;
@@ -957,7 +957,7 @@
 
     add-int v18, v1, v2
 
-    .line 1460
+    .line 1430
     :cond_4
     move-object/from16 v0, p0
 
@@ -973,15 +973,15 @@
 
     if-ne v1, v2, :cond_9
 
-    .line 1461
+    .line 1431
     :cond_5
     add-int v1, v16, v18
 
-    .line 1473
+    .line 1443
     :goto_4
     return v1
 
-    .line 1354
+    .line 1324
     .end local v7           #background:Landroid/graphics/drawable/Drawable;
     .end local v9           #dropDownView:Landroid/view/ViewGroup;
     .end local v14           #ignoreBottomDecorations:Z
@@ -993,7 +993,7 @@
 
     goto/16 :goto_0
 
-    .line 1407
+    .line 1377
     .restart local v9       #dropDownView:Landroid/view/ViewGroup;
     .restart local v11       #hintContainer:Landroid/widget/LinearLayout;
     .restart local v12       #hintParams:Landroid/widget/LinearLayout$LayoutParams;
@@ -1001,21 +1001,21 @@
     :pswitch_0
     invoke-virtual {v11, v9, v12}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1408
+    .line 1378
     invoke-virtual {v11, v13}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     goto :goto_1
 
-    .line 1412
+    .line 1382
     :pswitch_1
     invoke-virtual {v11, v13}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 1413
+    .line 1383
     invoke-virtual {v11, v9, v12}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto/16 :goto_1
 
-    .line 1435
+    .line 1405
     .end local v8           #context:Landroid/content/Context;
     .end local v9           #dropDownView:Landroid/view/ViewGroup;
     .end local v11           #hintContainer:Landroid/widget/LinearLayout;
@@ -1032,7 +1032,7 @@
 
     check-cast v9, Landroid/view/ViewGroup;
 
-    .line 1436
+    .line 1406
     .restart local v9       #dropDownView:Landroid/view/ViewGroup;
     move-object/from16 v0, p0
 
@@ -1040,18 +1040,18 @@
 
     move-object/from16 v19, v0
 
-    .line 1437
+    .line 1407
     .local v19, view:Landroid/view/View;
     if-eqz v19, :cond_3
 
-    .line 1438
+    .line 1408
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v12
 
     check-cast v12, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1440
+    .line 1410
     .restart local v12       #hintParams:Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -1067,7 +1067,7 @@
 
     goto/16 :goto_2
 
-    .line 1446
+    .line 1416
     .end local v12           #hintParams:Landroid/widget/LinearLayout$LayoutParams;
     .end local v19           #view:Landroid/view/View;
     :cond_8
@@ -1075,7 +1075,7 @@
 
     goto :goto_3
 
-    .line 1464
+    .line 1434
     .restart local v7       #background:Landroid/graphics/drawable/Drawable;
     .restart local v14       #ignoreBottomDecorations:Z
     .restart local v16       #maxHeight:I
@@ -1099,13 +1099,13 @@
 
     move-result v15
 
-    .line 1468
+    .line 1438
     .local v15, listContent:I
     if-lez v15, :cond_a
 
     add-int v17, v17, v18
 
-    .line 1471
+    .line 1441
     :cond_a
     move-object/from16 v0, p0
 
@@ -1151,12 +1151,12 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setIndicatorBounds(II)V
 
-    .line 1473
+    .line 1443
     add-int v1, v15, v17
 
     goto :goto_4
 
-    .line 1405
+    .line 1375
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1169,21 +1169,21 @@
     .parameter "width"
 
     .prologue
-    .line 616
+    .line 612
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mMinWidth:I
 
     invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    .line 617
+    .line 613
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mMaxWidth:I
 
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    .line 618
+    .line 614
     return p1
 .end method
 
@@ -1196,36 +1196,36 @@
 
     const/4 v3, 0x0
 
-    .line 1789
+    .line 1759
     const/4 v11, 0x0
 
-    .line 1790
+    .line 1760
     .local v11, width:I
     const/4 v10, 0x0
 
-    .line 1791
+    .line 1761
     .local v10, itemView:Landroid/view/View;
     const/4 v9, 0x0
 
-    .line 1792
+    .line 1762
     .local v9, itemType:I
     invoke-static {v3, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v12
 
-    .line 1794
+    .line 1764
     .local v12, widthMeasureSpec:I
     invoke-static {v3, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v8
 
-    .line 1796
+    .line 1766
     .local v8, heightMeasureSpec:I
     invoke-interface {p1}, Landroid/widget/ExpandableListAdapter;->getGroupCount()I
 
     move-result v7
 
-    .line 1797
+    .line 1767
     .local v7, groupCount:I
     const/4 v1, 0x0
 
@@ -1233,15 +1233,15 @@
     :goto_0
     if-ge v1, v7, :cond_1
 
-    .line 1799
+    .line 1769
     invoke-interface {p1, v1, v3, v4, v4}, Landroid/widget/ExpandableListAdapter;->getGroupView(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v10
 
-    .line 1800
+    .line 1770
     invoke-virtual {v10, v12, v8}, Landroid/view/View;->measure(II)V
 
-    .line 1801
+    .line 1771
     invoke-virtual {v10}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -1250,12 +1250,12 @@
 
     move-result v11
 
-    .line 1802
+    .line 1772
     invoke-interface {p1, v1}, Landroid/widget/ExpandableListAdapter;->getChildrenCount(I)I
 
     move-result v6
 
-    .line 1803
+    .line 1773
     .local v6, childCount:I
     const/4 v2, 0x0
 
@@ -1267,15 +1267,15 @@
 
     move-object v5, v4
 
-    .line 1804
+    .line 1774
     invoke-interface/range {v0 .. v5}, Landroid/widget/ExpandableListAdapter;->getChildView(IIZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v10
 
-    .line 1805
+    .line 1775
     invoke-virtual {v10, v12, v8}, Landroid/view/View;->measure(II)V
 
-    .line 1806
+    .line 1776
     invoke-virtual {v10}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -1284,18 +1284,18 @@
 
     move-result v11
 
-    .line 1803
+    .line 1773
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1797
+    .line 1767
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1809
+    .line 1779
     .end local v2           #j:I
     .end local v6           #childCount:I
     :cond_1
@@ -1306,19 +1306,19 @@
     .locals 3
 
     .prologue
-    .line 907
+    .line 881
     iget-object v2, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPromptView:Landroid/view/View;
 
     if-eqz v2, :cond_0
 
-    .line 908
+    .line 882
     iget-object v2, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPromptView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 909
+    .line 883
     .local v1, parent:Landroid/view/ViewParent;
     instance-of v2, v1, Landroid/view/ViewGroup;
 
@@ -1326,16 +1326,16 @@
 
     move-object v0, v1
 
-    .line 910
+    .line 884
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 911
+    .line 885
     .local v0, group:Landroid/view/ViewGroup;
     iget-object v2, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPromptView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 914
+    .line 888
     .end local v0           #group:Landroid/view/ViewGroup;
     .end local v1           #parent:Landroid/view/ViewParent;
     :cond_0
@@ -1348,23 +1348,23 @@
     .locals 2
 
     .prologue
-    .line 979
+    .line 949
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
-    .line 980
+    .line 950
     .local v0, list:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
     if-eqz v0, :cond_0
 
-    .line 982
+    .line 952
     const/4 v1, 0x1
 
     #setter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mListSelectionHidden:Z
     invoke-static {v0, v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->access$602(Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;Z)Z
 
-    .line 985
+    .line 955
     invoke-virtual {v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->requestLayout()V
 
-    .line 987
+    .line 957
     :cond_0
     return-void
 .end method
@@ -1375,25 +1375,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 858
+    .line 836
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->dismiss()V
 
-    .line 859
+    .line 837
     invoke-direct {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->removePromptView()V
 
-    .line 860
+    .line 838
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/PopupBubbleWindow;->setContentView(Landroid/view/View;)V
 
-    .line 862
+    .line 840
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     if-eqz v0, :cond_0
 
-    .line 863
+    .line 841
     iget-object v2, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     move-object v0, v1
@@ -1402,18 +1402,18 @@
 
     invoke-virtual {v2, v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setAdapter(Landroid/widget/ExpandableListAdapter;)V
 
-    .line 865
+    .line 843
     :cond_0
     iput-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
-    .line 866
+    .line 844
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mResizePopupRunnable:Lcom/htc/widget/ExpandableListPopupBubbleWindow$ResizePopupRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 867
+    .line 845
     return-void
 .end method
 
@@ -1423,25 +1423,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 874
+    .line 852
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->dismissWithoutAnimation()V
 
-    .line 875
+    .line 853
     invoke-direct {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->removePromptView()V
 
-    .line 876
+    .line 854
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/PopupBubbleWindow;->setContentView(Landroid/view/View;)V
 
-    .line 878
+    .line 856
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     if-eqz v0, :cond_0
 
-    .line 879
+    .line 857
     iget-object v2, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     move-object v0, v1
@@ -1450,18 +1450,18 @@
 
     invoke-virtual {v2, v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setAdapter(Landroid/widget/ExpandableListAdapter;)V
 
-    .line 881
+    .line 859
     :cond_0
     iput-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
-    .line 882
+    .line 860
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mResizePopupRunnable:Lcom/htc/widget/ExpandableListPopupBubbleWindow$ResizePopupRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 884
+    .line 862
     return-void
 .end method
 
@@ -1469,7 +1469,7 @@
     .locals 1
 
     .prologue
-    .line 514
+    .line 510
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownAnchorView:Landroid/view/View;
 
     return-object v0
@@ -1479,7 +1479,7 @@
     .locals 1
 
     .prologue
-    .line 501
+    .line 497
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->getAnimationStyle()I
@@ -1493,7 +1493,7 @@
     .locals 1
 
     .prologue
-    .line 461
+    .line 457
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1507,7 +1507,7 @@
     .locals 1
 
     .prologue
-    .line 1321
+    .line 1291
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->getExpandDirection()I
@@ -1521,7 +1521,7 @@
     .locals 1
 
     .prologue
-    .line 1106
+    .line 1076
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     return-object v0
@@ -1531,7 +1531,7 @@
     .locals 1
 
     .prologue
-    .line 629
+    .line 625
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHeight:I
 
     return v0
@@ -1541,7 +1541,7 @@
     .locals 1
 
     .prologue
-    .line 535
+    .line 531
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHorizontalOffset:I
 
     return v0
@@ -1551,7 +1551,7 @@
     .locals 1
 
     .prologue
-    .line 946
+    .line 916
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->getInputMethodMode()I
@@ -1575,17 +1575,17 @@
     .locals 1
 
     .prologue
-    .line 1040
+    .line 1010
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1041
+    .line 1011
     const/4 v0, 0x0
 
-    .line 1043
+    .line 1013
     :goto_0
     return-object v0
 
@@ -1603,17 +1603,17 @@
     .locals 2
 
     .prologue
-    .line 1074
+    .line 1044
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1075
+    .line 1045
     const-wide/high16 v0, -0x8000
 
-    .line 1077
+    .line 1047
     :goto_0
     return-wide v0
 
@@ -1631,17 +1631,17 @@
     .locals 1
 
     .prologue
-    .line 1057
+    .line 1027
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1058
+    .line 1028
     const/4 v0, -0x1
 
-    .line 1060
+    .line 1030
     :goto_0
     return v0
 
@@ -1659,17 +1659,17 @@
     .locals 1
 
     .prologue
-    .line 1091
+    .line 1061
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1092
+    .line 1062
     const/4 v0, 0x0
 
-    .line 1094
+    .line 1064
     :goto_0
     return-object v0
 
@@ -1687,7 +1687,7 @@
     .locals 1
 
     .prologue
-    .line 437
+    .line 433
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->getSoftInputMode()I
@@ -1701,17 +1701,17 @@
     .locals 1
 
     .prologue
-    .line 760
+    .line 738
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     if-eqz v0, :cond_0
 
-    .line 761
+    .line 739
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->getTriangleOffset()I
 
-    .line 762
+    .line 740
     :cond_0
     const/4 v0, 0x0
 
@@ -1722,7 +1722,7 @@
     .locals 1
 
     .prologue
-    .line 559
+    .line 555
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownVerticalOffset:I
 
     return v0
@@ -1732,7 +1732,7 @@
     .locals 1
 
     .prologue
-    .line 583
+    .line 579
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
     return v0
@@ -1742,22 +1742,22 @@
     .locals 2
 
     .prologue
-    .line 888
+    .line 866
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->dismiss()V
 
-    .line 889
+    .line 867
     invoke-direct {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->removePromptView()V
 
-    .line 890
+    .line 868
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mResizePopupRunnable:Lcom/htc/widget/ExpandableListPopupBubbleWindow$ResizePopupRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 891
+    .line 869
     return-void
 .end method
 
@@ -1765,7 +1765,7 @@
     .locals 1
 
     .prologue
-    .line 405
+    .line 401
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownAlwaysVisible:Z
 
     return v0
@@ -1775,7 +1775,7 @@
     .locals 2
 
     .prologue
-    .line 1005
+    .line 975
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->getInputMethodMode()I
@@ -1801,7 +1801,7 @@
     .locals 1
 
     .prologue
-    .line 370
+    .line 366
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mModal:Z
 
     return v0
@@ -1811,7 +1811,7 @@
     .locals 1
 
     .prologue
-    .line 993
+    .line 963
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->isShowing()Z
@@ -1835,14 +1835,14 @@
 
     const/4 v7, 0x1
 
-    .line 1135
+    .line 1105
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v9
 
     if-eqz v9, :cond_8
 
-    .line 1141
+    .line 1111
     const/16 v9, 0x3e
 
     if-eq p1, v9, :cond_8
@@ -1863,7 +1863,7 @@
 
     if-eq p1, v9, :cond_8
 
-    .line 1145
+    .line 1115
     :cond_0
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
@@ -1871,7 +1871,7 @@
 
     move-result v4
 
-    .line 1148
+    .line 1118
     .local v4, curIndex:I
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
@@ -1883,7 +1883,7 @@
 
     move v2, v7
 
-    .line 1150
+    .line 1120
     .local v2, below:Z
     :goto_0
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -1892,30 +1892,30 @@
 
     move-result-object v0
 
-    .line 1153
+    .line 1123
     .local v0, adapter:Landroid/widget/ListAdapter;
     const v5, 0x7fffffff
 
-    .line 1154
+    .line 1124
     .local v5, firstItem:I
     const/high16 v6, -0x8000
 
-    .line 1156
+    .line 1126
     .local v6, lastItem:I
     if-eqz v0, :cond_1
 
-    .line 1158
+    .line 1128
     invoke-interface {v0}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
 
     move-result v1
 
-    .line 1159
+    .line 1129
     .local v1, allEnabled:Z
     if-eqz v1, :cond_5
 
     move v5, v8
 
-    .line 1161
+    .line 1131
     :goto_1
     if-eqz v1, :cond_6
 
@@ -1925,7 +1925,7 @@
 
     add-int/lit8 v6, v9, -0x1
 
-    .line 1165
+    .line 1135
     .end local v1           #allEnabled:Z
     :cond_1
     :goto_2
@@ -1942,19 +1942,19 @@
 
     if-lt v4, v6, :cond_7
 
-    .line 1169
+    .line 1139
     :cond_3
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->clearListSelection()V
 
-    .line 1170
+    .line 1140
     iget-object v8, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v8, v7}, Lcom/htc/widget/PopupBubbleWindow;->setInputMethodMode(I)V
 
-    .line 1171
+    .line 1141
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->show()V
 
-    .line 1217
+    .line 1187
     .end local v0           #adapter:Landroid/widget/ListAdapter;
     .end local v2           #below:Z
     .end local v4           #curIndex:I
@@ -1968,10 +1968,10 @@
     :cond_4
     move v2, v8
 
-    .line 1148
+    .line 1118
     goto :goto_0
 
-    .line 1159
+    .line 1129
     .restart local v0       #adapter:Landroid/widget/ListAdapter;
     .restart local v1       #allEnabled:Z
     .restart local v2       #below:Z
@@ -1986,7 +1986,7 @@
 
     goto :goto_1
 
-    .line 1161
+    .line 1131
     :cond_6
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
@@ -2002,7 +2002,7 @@
 
     goto :goto_2
 
-    .line 1176
+    .line 1146
     .end local v1           #allEnabled:Z
     :cond_7
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -2010,33 +2010,33 @@
     #setter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mListSelectionHidden:Z
     invoke-static {v9, v8}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->access$602(Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;Z)Z
 
-    .line 1179
+    .line 1149
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     invoke-virtual {v9, p1, p2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v3
 
-    .line 1182
+    .line 1152
     .local v3, consumed:Z
     if-eqz v3, :cond_9
 
-    .line 1185
+    .line 1155
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     const/4 v10, 0x2
 
     invoke-virtual {v9, v10}, Lcom/htc/widget/PopupBubbleWindow;->setInputMethodMode(I)V
 
-    .line 1190
+    .line 1160
     iget-object v9, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     invoke-virtual {v9}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->requestFocusFromTouch()Z
 
-    .line 1191
+    .line 1161
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->show()V
 
-    .line 1193
+    .line 1163
     sparse-switch p1, :sswitch_data_0
 
     .end local v0           #adapter:Landroid/widget/ListAdapter;
@@ -2048,10 +2048,10 @@
     :cond_8
     move v7, v8
 
-    .line 1217
+    .line 1187
     goto :goto_3
 
-    .line 1203
+    .line 1173
     .restart local v0       #adapter:Landroid/widget/ListAdapter;
     .restart local v2       #below:Z
     .restart local v3       #consumed:Z
@@ -2063,12 +2063,12 @@
 
     if-ne p1, v12, :cond_a
 
-    .line 1206
+    .line 1176
     if-ne v4, v6, :cond_8
 
     goto :goto_3
 
-    .line 1209
+    .line 1179
     :cond_a
     if-nez v2, :cond_8
 
@@ -2078,7 +2078,7 @@
 
     goto :goto_3
 
-    .line 1193
+    .line 1163
     nop
 
     :sswitch_data_0
@@ -2098,7 +2098,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1269
+    .line 1239
     const/4 v3, 0x4
 
     if-ne p1, v3, :cond_3
@@ -2109,10 +2109,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 1272
+    .line 1242
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownAnchorView:Landroid/view/View;
 
-    .line 1273
+    .line 1243
     .local v0, anchorView:Landroid/view/View;
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
 
@@ -2126,26 +2126,26 @@
 
     if-nez v3, :cond_1
 
-    .line 1274
+    .line 1244
     invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v1
 
-    .line 1275
+    .line 1245
     .local v1, state:Landroid/view/KeyEvent$DispatcherState;
     if-eqz v1, :cond_0
 
-    .line 1276
+    .line 1246
     invoke-virtual {v1, p2, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
-    .line 1290
+    .line 1260
     .end local v0           #anchorView:Landroid/view/View;
     .end local v1           #state:Landroid/view/KeyEvent$DispatcherState;
     :cond_0
     :goto_0
     return v2
 
-    .line 1279
+    .line 1249
     .restart local v0       #anchorView:Landroid/view/View;
     :cond_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
@@ -2154,19 +2154,19 @@
 
     if-ne v3, v2, :cond_3
 
-    .line 1280
+    .line 1250
     invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v1
 
-    .line 1281
+    .line 1251
     .restart local v1       #state:Landroid/view/KeyEvent$DispatcherState;
     if-eqz v1, :cond_2
 
-    .line 1282
+    .line 1252
     invoke-virtual {v1, p2}, Landroid/view/KeyEvent$DispatcherState;->handleUpEvent(Landroid/view/KeyEvent;)V
 
-    .line 1284
+    .line 1254
     :cond_2
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isTracking()Z
 
@@ -2180,12 +2180,12 @@
 
     if-nez v3, :cond_3
 
-    .line 1285
+    .line 1255
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->dismiss()V
 
     goto :goto_0
 
-    .line 1290
+    .line 1260
     .end local v0           #anchorView:Landroid/view/View;
     .end local v1           #state:Landroid/view/KeyEvent$DispatcherState;
     :cond_3
@@ -2200,7 +2200,7 @@
     .parameter "event"
 
     .prologue
-    .line 1235
+    .line 1205
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v1
@@ -2215,41 +2215,41 @@
 
     if-ltz v1, :cond_1
 
-    .line 1236
+    .line 1206
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     invoke-virtual {v1, p1, p2}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
-    .line 1237
+    .line 1207
     .local v0, consumed:Z
     if-eqz v0, :cond_0
 
-    .line 1238
+    .line 1208
     sparse-switch p1, :sswitch_data_0
 
-    .line 1250
+    .line 1220
     .end local v0           #consumed:Z
     :cond_0
     :goto_0
     return v0
 
-    .line 1244
+    .line 1214
     .restart local v0       #consumed:Z
     :sswitch_0
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->dismiss()V
 
     goto :goto_0
 
-    .line 1250
+    .line 1220
     .end local v0           #consumed:Z
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1238
+    .line 1208
     :sswitch_data_0
     .sparse-switch
         0x17 -> :sswitch_0
@@ -2262,22 +2262,22 @@
     .parameter "position"
 
     .prologue
-    .line 1020
+    .line 990
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1021
+    .line 991
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 1022
+    .line 992
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
-    .line 1023
+    .line 993
     .local v1, list:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
     invoke-virtual {v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getFirstVisiblePosition()I
 
@@ -2289,13 +2289,13 @@
 
     move-result-object v2
 
-    .line 1024
+    .line 994
     .local v2, child:Landroid/view/View;
     invoke-virtual {v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v6
 
-    .line 1025
+    .line 995
     .local v6, adapter:Landroid/widget/ListAdapter;
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
@@ -2307,14 +2307,14 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/htc/widget/HtcAdapterView$OnItemClickListener;->onItemClick(Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)V
 
-    .line 1027
+    .line 997
     .end local v1           #list:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
     .end local v2           #child:Landroid/view/View;
     .end local v6           #adapter:Landroid/widget/ListAdapter;
     :cond_0
     const/4 v0, 0x1
 
-    .line 1029
+    .line 999
     :goto_0
     return v0
 
@@ -2328,14 +2328,14 @@
     .locals 2
 
     .prologue
-    .line 751
+    .line 729
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mShowDropDownRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 752
+    .line 730
     return-void
 .end method
 
@@ -2435,10 +2435,10 @@
     .parameter "anchor"
 
     .prologue
-    .line 524
+    .line 520
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownAnchorView:Landroid/view/View;
 
-    .line 525
+    .line 521
     return-void
 .end method
 
@@ -2447,17 +2447,17 @@
     .parameter "listener"
 
     .prologue
-    .line 702
+    .line 680
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     if-eqz v0, :cond_0
 
-    .line 703
+    .line 681
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 705
+    .line 683
     :cond_0
     return-void
 .end method
@@ -2467,12 +2467,12 @@
     .parameter "animationStyle"
 
     .prologue
-    .line 487
+    .line 483
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setAnimationStyle(I)V
 
-    .line 488
+    .line 484
     return-void
 .end method
 
@@ -2481,12 +2481,12 @@
     .parameter "d"
 
     .prologue
-    .line 474
+    .line 470
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 475
+    .line 471
     return-void
 .end method
 
@@ -2495,28 +2495,28 @@
     .parameter "width"
 
     .prologue
-    .line 607
+    .line 603
     invoke-direct {p0, p1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->checkWidthLimit(I)I
 
     move-result p1
 
-    .line 608
+    .line 604
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v1}, Lcom/htc/widget/PopupBubbleWindow;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 609
+    .line 605
     .local v0, popupBackground:Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 610
+    .line 606
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 611
+    .line 607
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mTempRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
@@ -2531,7 +2531,7 @@
 
     iput v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
-    .line 613
+    .line 609
     :cond_0
     return-void
 .end method
@@ -2541,10 +2541,10 @@
     .parameter "dropDownAlwaysVisible"
 
     .prologue
-    .line 396
+    .line 392
     iput-boolean p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownAlwaysVisible:Z
 
-    .line 397
+    .line 393
     return-void
 .end method
 
@@ -2553,12 +2553,12 @@
     .parameter "direction"
 
     .prologue
-    .line 1308
+    .line 1278
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setExpandDirection(I)V
 
-    .line 1309
+    .line 1279
     return-void
 .end method
 
@@ -2567,10 +2567,10 @@
     .parameter "forceIgnoreOutsideTouch"
 
     .prologue
-    .line 381
+    .line 377
     iput-boolean p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mForceIgnoreOutsideTouch:Z
 
-    .line 382
+    .line 378
     return-void
 .end method
 
@@ -2579,10 +2579,10 @@
     .parameter "height"
 
     .prologue
-    .line 642
+    .line 638
     iput p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHeight:I
 
-    .line 643
+    .line 639
     return-void
 .end method
 
@@ -2591,10 +2591,10 @@
     .parameter "offset"
 
     .prologue
-    .line 548
+    .line 544
     iput p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHorizontalOffset:I
 
-    .line 549
+    .line 545
     return-void
 .end method
 
@@ -2603,12 +2603,12 @@
     .parameter "mode"
 
     .prologue
-    .line 933
+    .line 903
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setInputMethodMode(I)V
 
-    .line 934
+    .line 904
     return-void
 .end method
 
@@ -2617,10 +2617,10 @@
     .parameter "max"
 
     .prologue
-    .line 1116
+    .line 1086
     iput p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mListItemExpandMaximum:I
 
-    .line 1117
+    .line 1087
     return-void
 .end method
 
@@ -2629,10 +2629,10 @@
     .parameter "selector"
 
     .prologue
-    .line 450
+    .line 446
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownListHighlight:Landroid/graphics/drawable/Drawable;
 
-    .line 451
+    .line 447
     return-void
 .end method
 
@@ -2641,17 +2641,17 @@
     .parameter "modal"
 
     .prologue
-    .line 356
+    .line 352
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mModal:Z
 
-    .line 357
+    .line 353
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setFocusable(Z)V
 
-    .line 358
+    .line 354
     return-void
 .end method
 
@@ -2660,10 +2660,10 @@
     .parameter "onChildClickListener"
 
     .prologue
-    .line 667
+    .line 658
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnChildClickListener:Lcom/htc/widget/HtcExpandableListView$OnChildClickListener;
 
-    .line 668
+    .line 659
     return-void
 .end method
 
@@ -2672,12 +2672,12 @@
     .parameter "listener"
 
     .prologue
-    .line 903
+    .line 877
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setOnDismissListener(Lcom/htc/widget/PopupBubbleWindow$OnDismissListener;)V
 
-    .line 904
+    .line 878
     return-void
 .end method
 
@@ -2686,10 +2686,10 @@
     .parameter "onGroupClickListener"
 
     .prologue
-    .line 675
+    .line 662
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnGroupClickListener:Lcom/htc/widget/HtcExpandableListView$OnGroupClickListener;
 
-    .line 676
+    .line 663
     return-void
 .end method
 
@@ -2698,10 +2698,10 @@
     .parameter "onGroupCollapseListener"
 
     .prologue
-    .line 685
+    .line 667
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
 
-    .line 686
+    .line 668
     return-void
 .end method
 
@@ -2710,10 +2710,10 @@
     .parameter "onGroupExpandListener"
 
     .prologue
-    .line 694
+    .line 672
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
 
-    .line 695
+    .line 673
     return-void
 .end method
 
@@ -2722,10 +2722,10 @@
     .parameter "clickListener"
 
     .prologue
-    .line 658
+    .line 654
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 659
+    .line 655
     return-void
 .end method
 
@@ -2734,10 +2734,10 @@
     .parameter "selectedListener"
 
     .prologue
-    .line 719
+    .line 697
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mItemSelectedListener:Lcom/htc/widget/HtcAdapterView$OnItemSelectedListener;
 
-    .line 720
+    .line 698
     return-void
 .end method
 
@@ -2758,29 +2758,29 @@
     .parameter "prompt"
 
     .prologue
-    .line 733
+    .line 711
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
     move-result v0
 
-    .line 734
+    .line 712
     .local v0, showing:Z
     if-eqz v0, :cond_0
 
-    .line 735
+    .line 713
     invoke-direct {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->removePromptView()V
 
-    .line 737
+    .line 715
     :cond_0
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPromptView:Landroid/view/View;
 
-    .line 738
+    .line 716
     if-eqz v0, :cond_1
 
-    .line 739
+    .line 717
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->show()V
 
-    .line 741
+    .line 719
     :cond_1
     return-void
 .end method
@@ -2790,10 +2790,10 @@
     .parameter "position"
 
     .prologue
-    .line 960
+    .line 930
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
-    .line 961
+    .line 931
     .local v0, list:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isShowing()Z
 
@@ -2803,28 +2803,28 @@
 
     if-eqz v0, :cond_0
 
-    .line 962
+    .line 932
     const/4 v1, 0x0
 
     #setter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mListSelectionHidden:Z
     invoke-static {v0, v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->access$602(Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;Z)Z
 
-    .line 963
+    .line 933
     invoke-virtual {v0, p1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setSelection(I)V
 
-    .line 964
+    .line 934
     invoke-virtual {v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->getChoiceMode()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 965
+    .line 935
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setItemChecked(IZ)V
 
-    .line 968
+    .line 938
     :cond_0
     return-void
 .end method
@@ -2834,12 +2834,12 @@
     .parameter "mode"
 
     .prologue
-    .line 423
+    .line 419
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setSoftInputMode(I)V
 
-    .line 424
+    .line 420
     return-void
 .end method
 
@@ -2848,17 +2848,17 @@
     .parameter "offset"
 
     .prologue
-    .line 755
+    .line 733
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     if-eqz v0, :cond_0
 
-    .line 756
+    .line 734
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/PopupBubbleWindow;->setTriangleOffset(I)V
 
-    .line 757
+    .line 735
     :cond_0
     return-void
 .end method
@@ -2868,10 +2868,10 @@
     .parameter "offset"
 
     .prologue
-    .line 572
+    .line 568
     iput p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownVerticalOffset:I
 
-    .line 573
+    .line 569
     return-void
 .end method
 
@@ -2880,10 +2880,10 @@
     .parameter "width"
 
     .prologue
-    .line 597
+    .line 593
     iput p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
-    .line 598
+    .line 594
     return-void
 .end method
 
@@ -2899,26 +2899,26 @@
 
     const/4 v3, -0x1
 
-    .line 770
+    .line 748
     invoke-direct {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->buildDropDown()I
 
     move-result v6
 
-    .line 772
+    .line 750
     .local v6, height:I
     const/4 v4, 0x0
 
-    .line 773
+    .line 751
     .local v4, widthSpec:I
     const/4 v5, 0x0
 
-    .line 775
+    .line 753
     .local v5, heightSpec:I
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->isInputMethodNotNeeded()Z
 
     move-result v7
 
-    .line 776
+    .line 754
     .local v7, noInputMethod:Z
     iget-object v8, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
@@ -2929,7 +2929,7 @@
     :goto_0
     invoke-virtual {v8, v0}, Lcom/htc/widget/PopupBubbleWindow;->setAllowScrollingAnchorParent(Z)V
 
-    .line 778
+    .line 756
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/PopupBubbleWindow;->isShowing()Z
@@ -2938,30 +2938,30 @@
 
     if-eqz v0, :cond_b
 
-    .line 779
+    .line 757
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
     if-ne v0, v3, :cond_2
 
-    .line 782
+    .line 760
     const/4 v4, -0x1
 
-    .line 789
+    .line 767
     :goto_1
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHeight:I
 
     if-ne v0, v3, :cond_8
 
-    .line 792
+    .line 770
     if-eqz v7, :cond_4
 
     move v5, v6
 
-    .line 793
+    .line 771
     :goto_2
     if-eqz v7, :cond_6
 
-    .line 794
+    .line 772
     iget-object v8, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
@@ -2973,7 +2973,7 @@
     :goto_3
     invoke-virtual {v8, v0, v2}, Lcom/htc/widget/PopupBubbleWindow;->setWindowLayoutMode(II)V
 
-    .line 809
+    .line 787
     :goto_4
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
@@ -2988,7 +2988,7 @@
     :goto_5
     invoke-virtual {v0, v1}, Lcom/htc/widget/PopupBubbleWindow;->setOutsideTouchable(Z)V
 
-    .line 811
+    .line 789
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->getAnchorView()Landroid/view/View;
@@ -3001,7 +3001,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/PopupBubbleWindow;->update(Landroid/view/View;IIII)V
 
-    .line 852
+    .line 830
     :cond_0
     :goto_6
     return-void
@@ -3009,16 +3009,16 @@
     :cond_1
     move v0, v2
 
-    .line 776
+    .line 754
     goto :goto_0
 
-    .line 783
+    .line 761
     :cond_2
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
     if-ne v0, v9, :cond_3
 
-    .line 784
+    .line 762
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->getAnchorView()Landroid/view/View;
 
     move-result-object v0
@@ -3029,7 +3029,7 @@
 
     goto :goto_1
 
-    .line 786
+    .line 764
     :cond_3
     iget v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
@@ -3038,16 +3038,16 @@
     :cond_4
     move v5, v3
 
-    .line 792
+    .line 770
     goto :goto_2
 
     :cond_5
     move v0, v2
 
-    .line 794
+    .line 772
     goto :goto_3
 
-    .line 798
+    .line 776
     :cond_6
     iget-object v8, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
@@ -3067,18 +3067,18 @@
 
     goto :goto_7
 
-    .line 803
+    .line 781
     :cond_8
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHeight:I
 
     if-ne v0, v9, :cond_9
 
-    .line 804
+    .line 782
     move v5, v6
 
     goto :goto_4
 
-    .line 806
+    .line 784
     :cond_9
     iget v5, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHeight:I
 
@@ -3087,39 +3087,39 @@
     :cond_a
     move v1, v2
 
-    .line 809
+    .line 787
     goto :goto_5
 
-    .line 814
+    .line 792
     :cond_b
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
     if-ne v0, v3, :cond_e
 
-    .line 815
+    .line 793
     const/4 v4, -0x1
 
-    .line 824
+    .line 802
     :goto_8
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHeight:I
 
     if-ne v0, v3, :cond_10
 
-    .line 825
+    .line 803
     const/4 v5, -0x1
 
-    .line 834
+    .line 812
     :goto_9
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, v4, v5}, Lcom/htc/widget/PopupBubbleWindow;->setWindowLayoutMode(II)V
 
-    .line 835
+    .line 813
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/PopupBubbleWindow;->setClipToScreenEnabled(Z)V
 
-    .line 839
+    .line 817
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     iget-boolean v8, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mForceIgnoreOutsideTouch:Z
@@ -3133,14 +3133,14 @@
     :goto_a
     invoke-virtual {v0, v1}, Lcom/htc/widget/PopupBubbleWindow;->setOutsideTouchable(Z)V
 
-    .line 840
+    .line 818
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mTouchInterceptor:Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupTouchInterceptor;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/PopupBubbleWindow;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
 
-    .line 841
+    .line 819
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->getAnchorView()Landroid/view/View;
@@ -3153,12 +3153,12 @@
 
     invoke-virtual {v0, v1, v2, v8}, Lcom/htc/widget/PopupBubbleWindow;->showAsDropDown(Landroid/view/View;II)V
 
-    .line 843
+    .line 821
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
 
     invoke-virtual {v0, v3}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->setSelection(I)V
 
-    .line 845
+    .line 823
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mModal:Z
 
     if-eqz v0, :cond_c
@@ -3171,17 +3171,17 @@
 
     if-eqz v0, :cond_d
 
-    .line 846
+    .line 824
     :cond_c
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->clearListSelection()V
 
-    .line 848
+    .line 826
     :cond_d
     iget-boolean v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mModal:Z
 
     if-nez v0, :cond_0
 
-    .line 849
+    .line 827
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHideSelector:Lcom/htc/widget/ExpandableListPopupBubbleWindow$ListSelectorHider;
@@ -3190,13 +3190,13 @@
 
     goto/16 :goto_6
 
-    .line 817
+    .line 795
     :cond_e
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownWidth:I
 
     if-ne v0, v9, :cond_f
 
-    .line 818
+    .line 796
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {p0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->getAnchorView()Landroid/view/View;
@@ -3211,7 +3211,7 @@
 
     goto :goto_8
 
-    .line 820
+    .line 798
     :cond_f
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
@@ -3221,20 +3221,20 @@
 
     goto :goto_8
 
-    .line 827
+    .line 805
     :cond_10
     iget v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownHeight:I
 
     if-ne v0, v9, :cond_11
 
-    .line 828
+    .line 806
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
     invoke-virtual {v0, v6}, Lcom/htc/widget/PopupBubbleWindow;->setHeight(I)V
 
     goto :goto_9
 
-    .line 830
+    .line 808
     :cond_11
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mPopup:Lcom/htc/widget/PopupBubbleWindow;
 
@@ -3247,6 +3247,6 @@
     :cond_12
     move v1, v2
 
-    .line 839
+    .line 817
     goto :goto_a
 .end method

@@ -42,7 +42,7 @@
     .line 74
     iput-object p1, p0, Landroid/webkit/DefaultActionMenu$DefaultAction;->this$0:Landroid/webkit/DefaultActionMenu;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 72
     const/4 v0, 0x1

@@ -302,32 +302,15 @@
 .end method
 
 .method public onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
-    .locals 2
+    .locals 1
     .parameter "mode"
     .parameter "menu"
 
     .prologue
-    .line 81
-    const v1, 0x1020368
-
-    invoke-interface {p2, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    .line 82
-    .local v0, selectAll:Landroid/view/MenuItem;
-    if-eqz v0, :cond_0
-
-    .line 84
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
-
     .line 87
-    :cond_0
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    return v1
+    return v0
 .end method
 
 .method setWebView(Landroid/webkit/WebView;)V

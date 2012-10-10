@@ -85,7 +85,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Lcom/android/internal/widget/LockPatternUtils;)V
-    .locals 8
+    .locals 7
     .parameter "context"
     .parameter "configuration"
     .parameter "updateMonitor"
@@ -95,7 +95,7 @@
     .prologue
     const/4 v1, 0x0
 
-    const/4 v7, 0x1
+    const/4 v5, 0x1
 
     .line 74
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -131,12 +131,12 @@
     .local v6, inflater:Landroid/view/LayoutInflater;
     iget v0, p0, Lcom/android/internal/policy/impl/SimPukUnlockScreen;->mKeyboardHidden:I
 
-    if-ne v0, v7, :cond_0
+    if-ne v0, v5, :cond_0
 
     .line 84
     const v0, 0x1090052
 
-    invoke-virtual {v6, v0, p0, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v6, v0, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 92
     :goto_0
@@ -224,12 +224,10 @@
     .line 106
     iget-object v0, p0, Lcom/android/internal/policy/impl/SimPukUnlockScreen;->mHeaderText:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setSelected(Z)V
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setSelected(Z)V
 
     .line 108
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
-
-    const/4 v5, 0x0
 
     move-object v1, p0
 
@@ -246,7 +244,7 @@
     .line 111
     iget-object v0, p0, Lcom/android/internal/policy/impl/SimPukUnlockScreen;->mPinText:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setFocusableInTouchMode(Z)V
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setFocusableInTouchMode(Z)V
 
     .line 112
     iget-object v0, p0, Lcom/android/internal/policy/impl/SimPukUnlockScreen;->mPinText:Landroid/widget/TextView;
@@ -256,7 +254,7 @@
     .line 113
     iget-object v0, p0, Lcom/android/internal/policy/impl/SimPukUnlockScreen;->mPukText:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setFocusableInTouchMode(Z)V
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setFocusableInTouchMode(Z)V
 
     .line 114
     iget-object v0, p0, Lcom/android/internal/policy/impl/SimPukUnlockScreen;->mPukText:Landroid/widget/TextView;
@@ -270,7 +268,7 @@
     :cond_0
     const v0, 0x1090053
 
-    invoke-virtual {v6, v0, p0, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v6, v0, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 89
     new-instance v0, Lcom/android/internal/policy/impl/SimPukUnlockScreen$TouchInput;

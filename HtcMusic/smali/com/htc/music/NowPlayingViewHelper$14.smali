@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1825
+    .line 1857
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$14;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +39,17 @@
     .parameter "msg"
 
     .prologue
-    .line 1828
+    .line 1860
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1839
+    .line 1871
     :cond_0
     :goto_0
     return-void
 
-    .line 1830
+    .line 1862
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$14;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1831
+    .line 1863
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$14;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mRingtoneHelper:Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;
@@ -72,7 +72,7 @@
 
     goto :goto_0
 
-    .line 1828
+    .line 1860
     :pswitch_data_0
     .packed-switch 0x66
         :pswitch_0

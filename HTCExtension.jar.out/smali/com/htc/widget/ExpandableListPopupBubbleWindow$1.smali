@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1344
+    .line 1314
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$1;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 1347
+    .line 1317
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$1;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-virtual {v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->getAnchorView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1348
+    .line 1318
     .local v0, view:Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -58,12 +58,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1349
+    .line 1319
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$1;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-virtual {v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->show()V
 
-    .line 1351
+    .line 1321
     :cond_0
     return-void
 .end method

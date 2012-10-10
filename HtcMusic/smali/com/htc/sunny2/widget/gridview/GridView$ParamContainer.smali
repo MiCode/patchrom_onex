@@ -38,26 +38,26 @@
 
     const v0, 0x7fffffff
 
-    .line 3550
+    .line 3572
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$ParamContainer;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3551
+    .line 3573
     iput-boolean v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$ParamContainer;->isEnd:Z
 
-    .line 3552
+    .line 3574
     iput v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$ParamContainer;->oldFirstItemPositionX:I
 
-    .line 3553
+    .line 3575
     iput v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$ParamContainer;->oldFirstItemPositionY:I
 
-    .line 3554
+    .line 3576
     iput v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$ParamContainer;->oldFirstItemIndex:I
 
-    .line 3555
+    .line 3577
     iput-boolean v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$ParamContainer;->bSetNewList:Z
 
-    .line 3556
+    .line 3578
     return-void
 .end method

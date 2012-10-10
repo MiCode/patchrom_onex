@@ -132,7 +132,7 @@
 
     .prologue
     .line 78
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

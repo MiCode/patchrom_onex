@@ -145,4 +145,5 @@
     <integer name="psnt_track_list_bg_height">438</integer>
     <integer name="psnt_track_list_item_width">400</integer>
     <integer name="psnt_track_list_item_animation_offset">25</integer>
+    <integer name="track_options_delegate">100</integer>
 </resources>

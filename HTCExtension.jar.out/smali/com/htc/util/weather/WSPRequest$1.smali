@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 43
+    .line 44
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
     .parameter "in"
 
     .prologue
-    .line 45
+    .line 46
     new-instance v0, Lcom/htc/util/weather/WSPRequest;
 
     const/4 v1, 0x0
@@ -50,7 +50,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 44
     invoke-virtual {p0, p1}, Lcom/htc/util/weather/WSPRequest$1;->createFromParcel(Landroid/os/Parcel;)Lcom/htc/util/weather/WSPRequest;
 
     move-result-object v0
@@ -63,7 +63,7 @@
     .parameter "size"
 
     .prologue
-    .line 49
+    .line 50
     new-array v0, p1, [Lcom/htc/util/weather/WSPRequest;
 
     return-object v0
@@ -74,7 +74,7 @@
     .parameter "x0"
 
     .prologue
-    .line 43
+    .line 44
     invoke-virtual {p0, p1}, Lcom/htc/util/weather/WSPRequest$1;->newArray(I)[Lcom/htc/util/weather/WSPRequest;
 
     move-result-object v0

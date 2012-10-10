@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 6253
+    .line 6399
     iput-object p1, p0, Lcom/android/camera/HTCCamera$27;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +72,7 @@
     .end annotation
 
     .prologue
-    .line 6257
+    .line 6403
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/io/StorageSlot;>;>;"
     .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/io/StorageSlot;>;"
     iget-object v1, p0, Lcom/android/camera/HTCCamera$27;->this$0:Lcom/android/camera/HTCCamera;
@@ -81,10 +81,10 @@
 
     check-cast v0, Lcom/android/camera/io/StorageSlot;
 
-    #calls: Lcom/android/camera/HTCCamera;->onStorageMounted(Lcom/android/camera/io/StorageSlot;)V
-    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4800(Lcom/android/camera/HTCCamera;Lcom/android/camera/io/StorageSlot;)V
+    #calls: Lcom/android/camera/HTCCamera;->onStorageUnmounted(Lcom/android/camera/io/StorageSlot;)V
+    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4900(Lcom/android/camera/HTCCamera;Lcom/android/camera/io/StorageSlot;)V
 
-    .line 6258
+    .line 6404
     return-void
 .end method
 
@@ -95,7 +95,7 @@
     .parameter "x2"
 
     .prologue
-    .line 6253
+    .line 6399
     check-cast p3, Lcom/android/camera/OneValueEventArgs;
 
     .end local p3

@@ -54,25 +54,25 @@
 
     const/4 v3, 0x1
 
-    .line 975
+    .line 996
     iput-object p1, p0, Lcom/android/server/PowerManagerService$WakeLock;->this$0:Lcom/android/server/PowerManagerService;
 
-    .line 976
+    .line 997
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1009
+    .line 1032
     iput-boolean v3, p0, Lcom/android/server/PowerManagerService$WakeLock;->activated:Z
 
-    .line 977
+    .line 998
     iput p2, p0, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
-    .line 978
+    .line 999
     iput-object p3, p0, Lcom/android/server/PowerManagerService$WakeLock;->binder:Landroid/os/IBinder;
 
-    .line 979
+    .line 1000
     iput-object p4, p0, Lcom/android/server/PowerManagerService$WakeLock;->tag:Ljava/lang/String;
 
-    .line 980
+    .line 1001
     #getter for: Lcom/android/server/PowerManagerService;->MY_UID:I
     invoke-static {p1}, Lcom/android/server/PowerManagerService;->access$500(Lcom/android/server/PowerManagerService;)I
 
@@ -85,10 +85,10 @@
     :goto_0
     iput v1, p0, Lcom/android/server/PowerManagerService$WakeLock;->uid:I
 
-    .line 981
+    .line 1002
     iput p6, p0, Lcom/android/server/PowerManagerService$WakeLock;->pid:I
 
-    .line 982
+    .line 1003
     #getter for: Lcom/android/server/PowerManagerService;->MY_UID:I
     invoke-static {p1}, Lcom/android/server/PowerManagerService;->access$500(Lcom/android/server/PowerManagerService;)I
 
@@ -116,7 +116,7 @@
 
     if-nez v1, :cond_3
 
-    .line 985
+    .line 1006
     :cond_0
     and-int/lit8 v1, p2, 0x7f
 
@@ -127,7 +127,7 @@
     :goto_1
     iput v1, p0, Lcom/android/server/PowerManagerService$WakeLock;->monitorType:I
 
-    .line 992
+    .line 1013
     :goto_2
     const/4 v1, 0x0
 
@@ -136,23 +136,23 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 996
+    .line 1017
     :goto_3
     return-void
 
     :cond_1
     move v1, p5
 
-    .line 980
+    .line 1001
     goto :goto_0
 
     :cond_2
     move v1, v3
 
-    .line 985
+    .line 1006
     goto :goto_1
 
-    .line 989
+    .line 1010
     :cond_3
     const/4 v1, -0x1
 
@@ -160,11 +160,11 @@
 
     goto :goto_2
 
-    .line 993
+    .line 1014
     :catch_0
     move-exception v0
 
-    .line 994
+    .line 1015
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$WakeLock;->binderDied()V
 
@@ -177,7 +177,7 @@
     .locals 5
 
     .prologue
-    .line 998
+    .line 1020
     iget-object v0, p0, Lcom/android/server/PowerManagerService$WakeLock;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -187,7 +187,7 @@
 
     monitor-enter v1
 
-    .line 999
+    .line 1021
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$WakeLock;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -200,13 +200,13 @@
     #calls: Lcom/android/server/PowerManagerService;->releaseWakeLockLocked(Landroid/os/IBinder;IZ)V
     invoke-static {v0, v2, v3, v4}, Lcom/android/server/PowerManagerService;->access$700(Lcom/android/server/PowerManagerService;Landroid/os/IBinder;IZ)V
 
-    .line 1000
+    .line 1022
     monitor-exit v1
 
-    .line 1001
+    .line 1023
     return-void
 
-    .line 1000
+    .line 1022
     :catchall_0
     move-exception v0
 

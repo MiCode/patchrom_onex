@@ -4,7 +4,15 @@
 
 
 # instance fields
+.field channelData:[B
+
+.field channelDataLength:I
+
+.field channelStatus:[I
+
 .field cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
+
+.field envelopeCmd:Ljava/lang/String;
 
 .field resCode:Lcom/android/internal/telephony/cat/ResultCode;
 
@@ -27,11 +35,11 @@
 
     const/4 v1, 0x0
 
-    .line 27
+    .line 33
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 20
-    iput-object v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
     .line 21
     sget-object v0, Lcom/android/internal/telephony/cat/ResultCode;->OK:Lcom/android/internal/telephony/cat/ResultCode;
@@ -39,23 +47,35 @@
     iput-object v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->resCode:Lcom/android/internal/telephony/cat/ResultCode;
 
     .line 22
-    iput v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersMenuSelection:I
+    iput v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersMenuSelection:I
 
     .line 23
-    iput-object v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersInput:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersInput:Ljava/lang/String;
 
     .line 24
-    iput-boolean v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersYesNoSelection:Z
+    iput-boolean v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersYesNoSelection:Z
 
     .line 25
-    iput-boolean v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersConfirm:Z
+    iput-boolean v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersConfirm:Z
+
+    .line 27
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->envelopeCmd:Ljava/lang/String;
 
     .line 28
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelData:[B
+
+    .line 29
+    iput v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelDataLength:I
+
+    .line 30
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelStatus:[I
+
+    .line 34
     iget-object v0, p1, Lcom/android/internal/telephony/cat/CatCmdMessage;->mCmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
-    .line 29
+    .line 35
     return-void
 .end method
 
@@ -68,11 +88,11 @@
 
     const/4 v1, 0x0
 
-    .line 31
+    .line 37
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 20
-    iput-object v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
     .line 21
     sget-object v0, Lcom/android/internal/telephony/cat/ResultCode;->OK:Lcom/android/internal/telephony/cat/ResultCode;
@@ -80,21 +100,33 @@
     iput-object v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->resCode:Lcom/android/internal/telephony/cat/ResultCode;
 
     .line 22
-    iput v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersMenuSelection:I
+    iput v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersMenuSelection:I
 
     .line 23
-    iput-object v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersInput:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersInput:Ljava/lang/String;
 
     .line 24
-    iput-boolean v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersYesNoSelection:Z
+    iput-boolean v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersYesNoSelection:Z
 
     .line 25
-    iput-boolean v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersConfirm:Z
+    iput-boolean v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersConfirm:Z
 
-    .line 32
+    .line 27
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->envelopeCmd:Ljava/lang/String;
+
+    .line 28
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelData:[B
+
+    .line 29
+    iput v2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelDataLength:I
+
+    .line 30
+    iput-object v1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelStatus:[I
+
+    .line 38
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
-    .line 33
+    .line 39
     return-void
 .end method
 
@@ -104,7 +136,7 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 73
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->cmdDet:Lcom/android/internal/telephony/cat/CommandDetails;
 
     return-object v0
@@ -114,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 93
     iget-boolean v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersConfirm:Z
 
     return v0
@@ -124,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 85
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersInput:Ljava/lang/String;
 
     return-object v0
@@ -134,7 +166,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 77
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->resCode:Lcom/android/internal/telephony/cat/ResultCode;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/cat/ResultCode;->value()I
@@ -148,7 +180,7 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 81
     iget v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersMenuSelection:I
 
     return v0
@@ -158,10 +190,38 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 89
     iget-boolean v0, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersYesNoSelection:Z
 
     return v0
+.end method
+
+.method public setChannelData([BI)V
+    .locals 0
+    .parameter "data"
+    .parameter "len"
+
+    .prologue
+    .line 63
+    iput-object p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelData:[B
+
+    .line 64
+    iput p2, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelDataLength:I
+
+    .line 65
+    return-void
+.end method
+
+.method public setChannelStatus([I)V
+    .locals 0
+    .parameter "status"
+
+    .prologue
+    .line 68
+    iput-object p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->channelStatus:[I
+
+    .line 69
+    return-void
 .end method
 
 .method public setConfirmation(Z)V
@@ -169,10 +229,10 @@
     .parameter "confirm"
 
     .prologue
-    .line 52
+    .line 58
     iput-boolean p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersConfirm:Z
 
-    .line 53
+    .line 59
     return-void
 .end method
 
@@ -181,10 +241,10 @@
     .parameter "input"
 
     .prologue
-    .line 44
+    .line 50
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersInput:Ljava/lang/String;
 
-    .line 45
+    .line 51
     return-void
 .end method
 
@@ -193,10 +253,10 @@
     .parameter "selection"
 
     .prologue
-    .line 40
+    .line 46
     iput p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersMenuSelection:I
 
-    .line 41
+    .line 47
     return-void
 .end method
 
@@ -205,10 +265,10 @@
     .parameter "resCode"
 
     .prologue
-    .line 36
+    .line 42
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->resCode:Lcom/android/internal/telephony/cat/ResultCode;
 
-    .line 37
+    .line 43
     return-void
 .end method
 
@@ -217,9 +277,9 @@
     .parameter "yesNo"
 
     .prologue
-    .line 48
+    .line 54
     iput-boolean p1, p0, Lcom/android/internal/telephony/cat/CatResponseMessage;->usersYesNoSelection:Z
 
-    .line 49
+    .line 55
     return-void
 .end method

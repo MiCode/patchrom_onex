@@ -1,14 +1,11 @@
 .class Lcom/htc/music/MediaPlaybackErrorActivity$1;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "MediaPlaybackErrorActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/MediaPlaybackErrorActivity;->initTitleBar()V
+    value = Lcom/htc/music/MediaPlaybackErrorActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,27 +24,31 @@
     .parameter
 
     .prologue
-    .line 217
+    .line 145
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackErrorActivity$1;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter "arg0"
+    .parameter "context"
+    .parameter "intent"
 
     .prologue
-    .line 220
+    .line 148
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackErrorActivity$1;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
 
-    #calls: Lcom/htc/music/MediaPlaybackErrorActivity;->startBrowserTabActivity()V
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackErrorActivity;->access$000(Lcom/htc/music/MediaPlaybackErrorActivity;)V
+    invoke-virtual {v0}, Lcom/htc/music/MediaPlaybackErrorActivity;->getApplicationContext()Landroid/content/Context;
 
-    .line 222
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
+
+    .line 149
     return-void
 .end method

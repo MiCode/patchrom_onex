@@ -47,15 +47,15 @@
     .parameter "layoutRes"
 
     .prologue
-    .line 3302
+    .line 3523
     .local p0, this:Landroid/provider/HtcUnionContact$HtcArrayAdapter;,"Landroid/provider/HtcUnionContact$HtcArrayAdapter<TE;>;"
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 3303
+    .line 3524
     iput-object p1, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mContext:Landroid/content/Context;
 
-    .line 3304
-    const-string/jumbo v0, "layout_inflater"
+    .line 3525
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -65,10 +65,10 @@
 
     iput-object v0, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 3305
+    .line 3526
     iput p2, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mLayoutRes:I
 
-    .line 3306
+    .line 3527
     return-void
 .end method
 
@@ -88,7 +88,7 @@
     .locals 1
 
     .prologue
-    .line 3323
+    .line 3548
     .local p0, this:Landroid/provider/HtcUnionContact$HtcArrayAdapter;,"Landroid/provider/HtcUnionContact$HtcArrayAdapter<TE;>;"
     iget-object v0, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mList:Ljava/util/List;
 
@@ -114,7 +114,7 @@
     .parameter "position"
 
     .prologue
-    .line 3327
+    .line 3553
     .local p0, this:Landroid/provider/HtcUnionContact$HtcArrayAdapter;,"Landroid/provider/HtcUnionContact$HtcArrayAdapter<TE;>;"
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -128,7 +128,7 @@
     .parameter "position"
 
     .prologue
-    .line 3331
+    .line 3558
     .local p0, this:Landroid/provider/HtcUnionContact$HtcArrayAdapter;,"Landroid/provider/HtcUnionContact$HtcArrayAdapter<TE;>;"
     int-to-long v0, p1
 
@@ -142,11 +142,11 @@
     .parameter "parent"
 
     .prologue
-    .line 3336
+    .line 3564
     .local p0, this:Landroid/provider/HtcUnionContact$HtcArrayAdapter;,"Landroid/provider/HtcUnionContact$HtcArrayAdapter<TE;>;"
     if-nez p2, :cond_0
 
-    .line 3337
+    .line 3565
     iget-object v1, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget v2, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mLayoutRes:I
@@ -157,7 +157,7 @@
 
     move-result-object v0
 
-    .line 3341
+    .line 3569
     .local v0, view:Landroid/view/View;
     :goto_0
     iget-object v1, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mList:Ljava/util/List;
@@ -168,10 +168,10 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->bindView(Landroid/view/View;Ljava/lang/Object;)V
 
-    .line 3342
+    .line 3570
     return-object v0
 
-    .line 3339
+    .line 3567
     .end local v0           #view:Landroid/view/View;
     :cond_0
     move-object v0, p2
@@ -190,16 +190,16 @@
     .end annotation
 
     .prologue
-    .line 3315
+    .line 3539
     .local p0, this:Landroid/provider/HtcUnionContact$HtcArrayAdapter;,"Landroid/provider/HtcUnionContact$HtcArrayAdapter<TE;>;"
     iget-object v0, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 3316
+    .line 3540
     const/4 v0, 0x0
 
-    .line 3319
+    .line 3543
     :goto_0
     return-object v0
 
@@ -225,11 +225,11 @@
     .end annotation
 
     .prologue
-    .line 3309
+    .line 3531
     .local p0, this:Landroid/provider/HtcUnionContact$HtcArrayAdapter;,"Landroid/provider/HtcUnionContact$HtcArrayAdapter<TE;>;"
     .local p1, list:Ljava/util/List;,"Ljava/util/List<TE;>;"
     iput-object p1, p0, Landroid/provider/HtcUnionContact$HtcArrayAdapter;->mList:Ljava/util/List;
 
-    .line 3310
+    .line 3532
     return-void
 .end method

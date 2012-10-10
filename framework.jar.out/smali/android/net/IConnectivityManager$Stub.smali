@@ -64,6 +64,8 @@
 
 .field static final TRANSACTION_getPhoneMobileDataEnabled:I = 0x32
 
+.field static final TRANSACTION_getPolicyEnable:I = 0x36
+
 .field static final TRANSACTION_getProxy:I = 0x25
 
 .field static final TRANSACTION_getTetherableBluetoothRegexs:I = 0x1f
@@ -113,6 +115,8 @@
 .field static final TRANSACTION_setNetworkPreference:I = 0x1
 
 .field static final TRANSACTION_setPolicyDataEnable:I = 0x14
+
+.field static final TRANSACTION_setPolicyEnable:I = 0x35
 
 .field static final TRANSACTION_setRadio:I = 0xd
 
@@ -224,7 +228,7 @@
     .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 651
+    .line 676
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -1994,6 +1998,91 @@
 
     goto/16 :goto_0
 
+    .line 652
+    .end local v1           #_arg0:I
+    .end local v6           #_result:Z
+    :sswitch_35
+    const-string v8, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 654
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 656
+    .restart local v1       #_arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v8
+
+    if-eqz v8, :cond_22
+
+    move v2, v7
+
+    .line 658
+    .local v2, _arg1:Z
+    :goto_d
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    .line 659
+    .restart local v3       #_arg2:I
+    invoke-virtual {p0, v1, v2, v3}, Landroid/net/IConnectivityManager$Stub;->setPolicyEnable(IZI)V
+
+    .line 660
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    .end local v2           #_arg1:Z
+    .end local v3           #_arg2:I
+    :cond_22
+    move v2, v0
+
+    .line 656
+    goto :goto_d
+
+    .line 665
+    .end local v1           #_arg0:I
+    :sswitch_36
+    const-string v8, "android.net.IConnectivityManager"
+
+    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 667
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 669
+    .restart local v1       #_arg0:I
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    .line 670
+    .local v2, _arg1:I
+    invoke-virtual {p0, v1, v2}, Landroid/net/IConnectivityManager$Stub;->getPolicyEnable(II)Z
+
+    move-result v6
+
+    .line 671
+    .restart local v6       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 672
+    if-eqz v6, :cond_23
+
+    move v0, v7
+
+    :cond_23
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
     .line 43
     nop
 
@@ -2051,6 +2140,8 @@
         0x32 -> :sswitch_32
         0x33 -> :sswitch_33
         0x34 -> :sswitch_34
+        0x35 -> :sswitch_35
+        0x36 -> :sswitch_36
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

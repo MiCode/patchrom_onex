@@ -47,18 +47,18 @@
     .parameter "intent"
 
     .prologue
-    .line 95
+    .line 97
     iput-object p1, p0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->this$0:Lcom/htc/music/widget/SharedAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
+    .line 98
     iput-object p2, p0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 97
+    .line 99
     iput-object p3, p0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->intent:Landroid/content/Intent;
 
-    .line 98
+    .line 100
     return-void
 .end method
 
@@ -69,7 +69,7 @@
     .parameter "another"
 
     .prologue
-    .line 125
+    .line 127
     iget v2, p1, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->weight:F
 
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -84,11 +84,11 @@
 
     sub-int v1, v2, v3
 
-    .line 127
+    .line 129
     .local v1, weightOrder:I
     if-nez v1, :cond_0
 
-    .line 128
+    .line 130
     iget-object v2, p1, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     iget-object v3, p0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->this$0:Lcom/htc/music/widget/SharedAdapter;
@@ -110,7 +110,7 @@
 
     move-result-object v0
 
-    .line 130
+    .line 132
     .local v0, lab:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->lable:Ljava/lang/CharSequence;
 
@@ -122,7 +122,7 @@
 
     move-result v1
 
-    .line 133
+    .line 135
     .end local v0           #lab:Ljava/lang/String;
     .end local v1           #weightOrder:I
     :cond_0
@@ -134,7 +134,7 @@
     .parameter "x0"
 
     .prologue
-    .line 70
+    .line 72
     check-cast p1, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;
 
     .end local p1
@@ -154,24 +154,24 @@
 
     const/4 v2, 0x0
 
-    .line 107
+    .line 109
     if-ne p0, p1, :cond_1
 
-    .line 121
+    .line 123
     :cond_0
     :goto_0
     return v1
 
-    .line 110
+    .line 112
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 111
+    .line 113
     goto :goto_0
 
-    .line 113
+    .line 115
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -185,16 +185,16 @@
 
     move v1, v2
 
-    .line 114
+    .line 116
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 116
+    .line 118
     check-cast v0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;
 
-    .line 117
+    .line 119
     .local v0, other:Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;
     iget v3, p0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->weight:F
 
@@ -212,7 +212,7 @@
 
     move v1, v2
 
-    .line 119
+    .line 121
     goto :goto_0
 .end method
 
@@ -220,7 +220,7 @@
     .locals 1
 
     .prologue
-    .line 102
+    .line 104
     iget v0, p0, Lcom/htc/music/widget/SharedAdapter$ActivityResolveInfo;->weight:F
 
     invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -236,18 +236,18 @@
     .locals 5
 
     .prologue
-    .line 139
+    .line 141
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 140
+    .line 142
     .local v0, builder:Ljava/lang/StringBuilder;
     const-string v1, "["
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
+    .line 143
     const-string v1, "resolveInfo:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -262,7 +262,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 142
+    .line 144
     const-string v1, "; weight:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -279,12 +279,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 143
+    .line 145
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 144
+    .line 146
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

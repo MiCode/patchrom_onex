@@ -372,7 +372,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 244
+    .line 245
     :goto_0
     return-void
 
@@ -507,6 +507,11 @@
     invoke-static {v4, v5, v0}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 242
+    const/4 v4, 0x0
+
+    iput-boolean v4, p0, Lcom/android/camera/mirror/MirrorThread;->m_IsPreviewStarted:Z
+
+    .line 243
     iget-object v4, p0, Lcom/android/camera/mirror/MirrorThread;->m_MirrorActivity:Lcom/android/camera/mirror/MirrorActivity;
 
     invoke-virtual {v4}, Lcom/android/camera/mirror/MirrorActivity;->getMessageHandler()Landroid/os/Handler;
@@ -539,27 +544,27 @@
     .locals 2
 
     .prologue
-    .line 255
+    .line 256
     iget-boolean v0, p0, Lcom/android/camera/mirror/MirrorThread;->m_IsPreviewStarted:Z
 
     if-eqz v0, :cond_0
 
-    .line 257
+    .line 258
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/mirror/MirrorThread;->m_IsPreviewStarted:Z
 
-    .line 258
+    .line 259
     iget-object v0, p0, Lcom/android/camera/mirror/MirrorThread;->m_Camera:Landroid/hardware/Camera;
 
     if-eqz v0, :cond_0
 
-    .line 260
+    .line 261
     iget-object v0, p0, Lcom/android/camera/mirror/MirrorThread;->m_Camera:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Landroid/hardware/Camera;->stopPreview()V
 
-    .line 261
+    .line 262
     iget-object v0, p0, Lcom/android/camera/mirror/MirrorThread;->m_MirrorActivity:Lcom/android/camera/mirror/MirrorActivity;
 
     invoke-virtual {v0}, Lcom/android/camera/mirror/MirrorActivity;->getMessageHandler()Landroid/os/Handler;
@@ -570,7 +575,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/MessageHandler;->sendEmptyMessage(Landroid/os/Handler;I)V
 
-    .line 264
+    .line 265
     :cond_0
     return-void
 .end method
@@ -642,14 +647,14 @@
     .locals 4
 
     .prologue
-    .line 277
+    .line 278
     const-string v1, "MirrorThread"
 
     const-string v2, "Mirror thread start"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 282
+    .line 283
     :try_start_0
     sget-object v1, Lcom/android/camera/mirror/MirrorThread;->m_CameraSemaphore:Ljava/util/concurrent/Semaphore;
 
@@ -657,7 +662,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 294
+    .line 295
     :try_start_1
     iget-object v2, p0, Lcom/android/camera/mirror/MirrorThread;->m_MessageHandlerSyncRoot:Ljava/lang/Object;
 
@@ -665,28 +670,28 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 296
+    .line 297
     :try_start_2
     iget-boolean v1, p0, Lcom/android/camera/mirror/MirrorThread;->m_Closing:Z
 
     if-nez v1, :cond_0
 
-    .line 298
+    .line 299
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 299
+    .line 300
     new-instance v1, Lcom/android/camera/mirror/MirrorThread$2;
 
     invoke-direct {v1, p0}, Lcom/android/camera/mirror/MirrorThread$2;-><init>(Lcom/android/camera/mirror/MirrorThread;)V
 
     iput-object v1, p0, Lcom/android/camera/mirror/MirrorThread;->m_MessageHandler:Landroid/os/Handler;
 
-    .line 310
+    .line 311
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 311
+    .line 312
     :try_start_3
     iget-object v1, p0, Lcom/android/camera/mirror/MirrorThread;->m_MessageHandler:Landroid/os/Handler;
 
@@ -694,35 +699,35 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 312
+    .line 313
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 315
+    .line 316
     invoke-direct {p0}, Lcom/android/camera/mirror/MirrorThread;->closeCamera()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 320
+    .line 321
     sget-object v1, Lcom/android/camera/mirror/MirrorThread;->m_CameraSemaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 323
+    .line 324
     const-string v1, "MirrorThread"
 
     const-string v2, "Mirror thread stop"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 325
+    .line 326
     :goto_0
     return-void
 
-    .line 284
+    .line 285
     :catch_0
     move-exception v0
 
-    .line 286
+    .line 287
     .local v0, ex:Ljava/lang/InterruptedException;
     const-string v1, "MirrorThread"
 
@@ -732,7 +737,7 @@
 
     goto :goto_0
 
-    .line 309
+    .line 310
     .end local v0           #ex:Ljava/lang/InterruptedException;
     :cond_0
     :try_start_4
@@ -740,12 +745,12 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 320
+    .line 321
     sget-object v1, Lcom/android/camera/mirror/MirrorThread;->m_CameraSemaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 323
+    .line 324
     const-string v1, "MirrorThread"
 
     const-string v2, "Mirror thread stop"
@@ -754,7 +759,7 @@
 
     goto :goto_0
 
-    .line 310
+    .line 311
     :catchall_0
     move-exception v1
 
@@ -768,7 +773,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 320
+    .line 321
     :catchall_1
     move-exception v1
 
@@ -776,7 +781,7 @@
 
     invoke-virtual {v2}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 323
+    .line 324
     const-string v2, "MirrorThread"
 
     const-string v3, "Mirror thread stop"

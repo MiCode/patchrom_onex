@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4569
+    .line 4601
     iput-object p1, p0, Lcom/htc/music/HtcMusic$27;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .parameter "animation"
 
     .prologue
-    .line 4571
+    .line 4603
     iget-object v1, p0, Lcom/htc/music/HtcMusic$27;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v1, v1, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v1, :cond_0
 
-    .line 4573
+    .line 4605
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/HtcMusic$27;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -59,16 +59,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4578
+    .line 4610
     :cond_0
     :goto_0
     return-void
 
-    .line 4574
+    .line 4606
     :catch_0
     move-exception v0
 
-    .line 4575
+    .line 4607
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -80,7 +80,7 @@
     .parameter "animation"
 
     .prologue
-    .line 4581
+    .line 4613
     return-void
 .end method
 
@@ -89,6 +89,6 @@
     .parameter "animation"
 
     .prologue
-    .line 4584
+    .line 4616
     return-void
 .end method

@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 1379
+    .line 1383
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$10;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iput-object p2, p0, Lcom/htc/music/NowPlayingViewHelper$10;->val$textview:Landroid/widget/AutoCompleteTextView;
@@ -48,7 +48,7 @@
     .parameter "which"
 
     .prologue
-    .line 1381
+    .line 1385
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$10;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v1, v1, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
@@ -67,7 +67,7 @@
 
     move-result v0
 
-    .line 1382
+    .line 1386
     .local v0, id:I
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$10;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -94,6 +94,6 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/htc/music/util/MusicUtils;->addToPlaylist(Landroid/content/Context;[IJ)V
 
-    .line 1383
+    .line 1387
     return-void
 .end method

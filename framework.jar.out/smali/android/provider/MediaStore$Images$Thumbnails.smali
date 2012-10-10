@@ -51,7 +51,7 @@
 
     .prologue
     .line 1003
-    const-string/jumbo v0, "internal"
+    const-string v0, "internal"
 
     invoke-static {v0}, Landroid/provider/MediaStore$Images$Thumbnails;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -241,7 +241,7 @@
     const/4 v3, 0x0
 
     .line 911
-    const-string/jumbo v5, "image_id ASC"
+    const-string v5, "image_id ASC"
 
     move-object v0, p0
 
@@ -275,7 +275,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "image_id = "
+    const-string v2, "image_id = "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -291,7 +291,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "kind"
+    const-string v2, "kind"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -337,7 +337,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "kind = "
+    const-string v1, "kind = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -353,7 +353,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "image_id ASC"
+    const-string v5, "image_id ASC"
 
     move-object v0, p0
 

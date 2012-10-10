@@ -47,23 +47,23 @@
     .end annotation
 
     .prologue
-    .line 496
+    .line 521
     .local p2, records:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$PbrFile;->this$0:Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 497
+    .line 522
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$PbrFile;->mFileIds:Ljava/util/HashMap;
 
-    .line 499
+    .line 524
     const/4 v1, 0x0
 
-    .line 500
+    .line 525
     .local v1, recNum:I
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -83,7 +83,7 @@
 
     check-cast v3, [B
 
-    .line 501
+    .line 526
     .local v3, record:[B
     new-instance v2, Lcom/android/internal/telephony/gsm/SimTlv;
 
@@ -93,16 +93,16 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/gsm/SimTlv;-><init>([BII)V
 
-    .line 502
+    .line 527
     .local v2, recTlv:Lcom/android/internal/telephony/gsm/SimTlv;
     invoke-virtual {p0, v2, v1}, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$PbrFile;->parseTag(Lcom/android/internal/telephony/gsm/SimTlv;I)V
 
-    .line 503
+    .line 528
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 505
+    .line 530
     .end local v2           #recTlv:Lcom/android/internal/telephony/gsm/SimTlv;
     .end local v3           #record:[B
     :cond_0
@@ -132,17 +132,17 @@
     .local p2, val:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/4 v6, 0x1
 
-    .line 530
+    .line 555
     const/4 v3, 0x0
 
-    .line 532
+    .line 557
     .local v3, tagNumberWithinParentTag:I
     :cond_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getTag()I
 
     move-result v2
 
-    .line 533
+    .line 558
     .local v2, tag:I
     const/16 v4, 0xa9
 
@@ -152,43 +152,43 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 534
+    .line 559
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$PbrFile;->this$0:Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;
 
     #setter for: Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;->mEmailPresentInIap:Z
     invoke-static {v4, v6}, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;->access$002(Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;Z)Z
 
-    .line 535
+    .line 560
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$PbrFile;->this$0:Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;
 
     #setter for: Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;->mEmailTagNumberInIap:I
     invoke-static {v4, v3}, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;->access$102(Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;I)I
 
-    .line 537
+    .line 562
     :cond_1
     packed-switch v2, :pswitch_data_0
 
-    .line 555
+    .line 580
     :goto_0
     add-int/lit8 v3, v3, 0x1
 
-    .line 556
+    .line 581
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->nextObject()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 557
+    .line 582
     return-void
 
-    .line 550
+    .line 575
     :pswitch_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getData()[B
 
     move-result-object v0
 
-    .line 551
+    .line 576
     .local v0, data:[B
     const/4 v4, 0x0
 
@@ -204,7 +204,7 @@
 
     or-int v1, v4, v5
 
-    .line 552
+    .line 577
     .local v1, efid:I
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -218,7 +218,7 @@
 
     goto :goto_0
 
-    .line 537
+    .line 562
     nop
 
     :pswitch_data_0
@@ -244,23 +244,23 @@
     .parameter "recNum"
 
     .prologue
-    .line 511
+    .line 536
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 513
+    .line 538
     .local v3, val:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     :cond_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getTag()I
 
     move-result v1
 
-    .line 514
+    .line 539
     .local v1, tag:I
     packed-switch v1, :pswitch_data_0
 
-    .line 523
+    .line 548
     :goto_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->nextObject()Z
 
@@ -268,7 +268,7 @@
 
     if-nez v4, :cond_0
 
-    .line 524
+    .line 549
     iget-object v4, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$PbrFile;->mFileIds:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -277,16 +277,16 @@
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 525
+    .line 550
     return-void
 
-    .line 518
+    .line 543
     :pswitch_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getData()[B
 
     move-result-object v0
 
-    .line 519
+    .line 544
     .local v0, data:[B
     new-instance v2, Lcom/android/internal/telephony/gsm/SimTlv;
 
@@ -296,13 +296,13 @@
 
     invoke-direct {v2, v0, v4, v5}, Lcom/android/internal/telephony/gsm/SimTlv;-><init>([BII)V
 
-    .line 520
+    .line 545
     .local v2, tlvEf:Lcom/android/internal/telephony/gsm/SimTlv;
     invoke-virtual {p0, v2, v3, v1}, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$PbrFile;->parseEf(Lcom/android/internal/telephony/gsm/SimTlv;Ljava/util/Map;I)V
 
     goto :goto_0
 
-    .line 514
+    .line 539
     nop
 
     :pswitch_data_0

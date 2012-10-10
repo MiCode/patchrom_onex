@@ -31,21 +31,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 753
+    .line 794
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 754
+    .line 795
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/music/GliderAdapter$AlbumInfo;->mAlbumId:I
 
-    .line 755
+    .line 796
     iput-object v1, p0, Lcom/htc/music/GliderAdapter$AlbumInfo;->mAlbumName:Ljava/lang/String;
 
-    .line 756
+    .line 797
     iput-object v1, p0, Lcom/htc/music/GliderAdapter$AlbumInfo;->mArtistName:Ljava/lang/String;
 
-    .line 757
+    .line 798
     iput-object v1, p0, Lcom/htc/music/GliderAdapter$AlbumInfo;->mDlArtPath:Ljava/lang/String;
 
     return-void

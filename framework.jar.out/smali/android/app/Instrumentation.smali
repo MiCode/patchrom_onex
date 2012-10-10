@@ -81,12 +81,12 @@
     const/4 v1, 0x0
 
     .line 96
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 82
     new-instance v0, Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/app/Instrumentation;->mSync:Ljava/lang/Object;
 
@@ -3934,7 +3934,7 @@
 
     .line 379
     .local v3, myProc:Ljava/lang/String;
-    iget-object v4, v0, Landroid/content/pm/ComponentInfo;->processName:Ljava/lang/String;
+    iget-object v4, v0, Landroid/content/pm/ActivityInfo;->processName:Ljava/lang/String;
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3965,7 +3965,7 @@
 
     move-result-object v6
 
-    iget-object v7, v0, Landroid/content/pm/ComponentInfo;->processName:Ljava/lang/String;
+    iget-object v7, v0, Landroid/content/pm/ActivityInfo;->processName:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3993,11 +3993,11 @@
     :cond_1
     new-instance v4, Landroid/content/ComponentName;
 
-    iget-object v6, v0, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v6, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v6, v6, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
+    iget-object v6, v6, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iget-object v7, v0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
+    iget-object v7, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     invoke-direct {v4, v6, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

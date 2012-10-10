@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1354
+    .line 1358
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$8;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,6 @@
     .parameter "which"
 
     .prologue
-    .line 1357
+    .line 1361
     return-void
 .end method

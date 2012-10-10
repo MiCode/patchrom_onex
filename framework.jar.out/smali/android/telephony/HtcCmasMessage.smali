@@ -85,42 +85,42 @@
     .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 38
     iput v1, p0, Landroid/telephony/HtcCmasMessage;->cmasFormat:I
 
-    .line 71
+    .line 82
     iput-boolean v1, p0, Landroid/telephony/HtcCmasMessage;->charSetEncodingSet:Z
 
-    .line 76
+    .line 90
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->category:I
 
-    .line 77
+    .line 92
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->responseType:I
 
-    .line 78
+    .line 94
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->severity:I
 
-    .line 79
+    .line 96
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->urgency:I
 
-    .line 80
+    .line 98
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->certainty:I
 
-    .line 83
+    .line 102
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->cmasId:I
 
-    .line 84
+    .line 104
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->alertHandling:I
 
-    .line 85
+    .line 106
     iput v0, p0, Landroid/telephony/HtcCmasMessage;->language:I
 
-    .line 96
+    .line 122
     sget-object v0, Landroid/telephony/SmsMessage$MessageClass;->UNKNOWN:Landroid/telephony/SmsMessage$MessageClass;
 
     iput-object v0, p0, Landroid/telephony/HtcCmasMessage;->messageClass:Landroid/telephony/SmsMessage$MessageClass;
 
-    .line 111
+    .line 141
     iput v1, p0, Landroid/telephony/HtcCmasMessage;->cmasType:I
 
     return-void
@@ -132,16 +132,16 @@
     .parameter "cateId"
 
     .prologue
-    .line 200
+    .line 233
     packed-switch p0, :pswitch_data_0
 
-    .line 205
+    .line 238
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 202
+    .line 235
     :pswitch_0
     invoke-static {p1}, Lcom/android/internal/telephony/cdma/sms/CdmaCmasMessage;->getCmaeCategory(I)Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     goto :goto_0
 
-    .line 200
+    .line 233
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -161,22 +161,22 @@
     .parameter "cerId"
 
     .prologue
-    .line 258
+    .line 291
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 259
+    .line 292
     .local v0, r:Landroid/content/res/Resources;
     packed-switch p0, :pswitch_data_0
 
-    .line 265
+    .line 298
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 261
+    .line 294
     :pswitch_0
     const v1, 0x104053a
 
@@ -186,7 +186,7 @@
 
     goto :goto_0
 
-    .line 263
+    .line 296
     :pswitch_1
     const v1, 0x104053b
 
@@ -196,7 +196,7 @@
 
     goto :goto_0
 
-    .line 259
+    .line 292
     nop
 
     :pswitch_data_0
@@ -212,16 +212,16 @@
     .parameter "respId"
 
     .prologue
-    .line 215
+    .line 248
     packed-switch p0, :pswitch_data_0
 
-    .line 220
+    .line 253
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 217
+    .line 250
     :pswitch_0
     invoke-static {p1}, Lcom/android/internal/telephony/cdma/sms/CdmaCmasMessage;->getCmaeResponseType(I)Ljava/lang/String;
 
@@ -229,7 +229,7 @@
 
     goto :goto_0
 
-    .line 215
+    .line 248
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -241,22 +241,22 @@
     .parameter "sevId"
 
     .prologue
-    .line 228
+    .line 261
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 229
+    .line 262
     .local v0, r:Landroid/content/res/Resources;
     packed-switch p0, :pswitch_data_0
 
-    .line 235
+    .line 268
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 231
+    .line 264
     :pswitch_0
     const v1, 0x1040536
 
@@ -266,7 +266,7 @@
 
     goto :goto_0
 
-    .line 233
+    .line 266
     :pswitch_1
     const v1, 0x1040537
 
@@ -276,7 +276,7 @@
 
     goto :goto_0
 
-    .line 229
+    .line 262
     nop
 
     :pswitch_data_0
@@ -291,22 +291,22 @@
     .parameter "urgId"
 
     .prologue
-    .line 243
+    .line 276
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 244
+    .line 277
     .local v0, r:Landroid/content/res/Resources;
     packed-switch p0, :pswitch_data_0
 
-    .line 250
+    .line 283
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 246
+    .line 279
     :pswitch_0
     const v1, 0x1040538
 
@@ -316,7 +316,7 @@
 
     goto :goto_0
 
-    .line 248
+    .line 281
     :pswitch_1
     const v1, 0x1040539
 
@@ -326,7 +326,7 @@
 
     goto :goto_0
 
-    .line 244
+    .line 277
     nop
 
     :pswitch_data_0
@@ -342,28 +342,28 @@
     .parameter "pdu"
 
     .prologue
-    .line 127
+    .line 158
     packed-switch p0, :pswitch_data_0
 
-    .line 135
+    .line 166
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 130
+    .line 161
     :pswitch_0
     new-instance v0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/GsmCmasMessage;-><init>()V
 
-    .line 132
+    .line 163
     .local v0, gsmCmas:Lcom/android/internal/telephony/gsm/GsmCmasMessage;
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->parseGsmPdu([B)V
 
     goto :goto_0
 
-    .line 127
+    .line 158
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -375,7 +375,7 @@
     .locals 1
 
     .prologue
-    .line 180
+    .line 212
     const/4 v0, 0x3
 
     return v0
@@ -385,7 +385,7 @@
     .locals 1
 
     .prologue
-    .line 173
+    .line 205
     const-string v0, "4370,4371,4372,4373,4374,4375,4376,4377,4378,4379,4380"
 
     return-object v0
@@ -402,16 +402,16 @@
 
     const/4 v2, 0x0
 
-    .line 139
+    .line 171
     packed-switch p0, :pswitch_data_0
 
-    .line 151
+    .line 183
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 141
+    .line 173
     :pswitch_0
     new-array v0, v0, [I
 
@@ -421,7 +421,7 @@
 
     goto :goto_0
 
-    .line 143
+    .line 175
     :pswitch_1
     new-array v0, v1, [I
 
@@ -429,7 +429,7 @@
 
     goto :goto_0
 
-    .line 145
+    .line 177
     :pswitch_2
     new-array v0, v1, [I
 
@@ -437,7 +437,7 @@
 
     goto :goto_0
 
-    .line 147
+    .line 179
     :pswitch_3
     new-array v0, v0, [I
 
@@ -447,7 +447,7 @@
 
     goto :goto_0
 
-    .line 149
+    .line 181
     :pswitch_4
     new-array v0, v0, [I
 
@@ -457,7 +457,7 @@
 
     goto :goto_0
 
-    .line 139
+    .line 171
     nop
 
     :pswitch_data_0
@@ -469,7 +469,7 @@
         :pswitch_4
     .end packed-switch
 
-    .line 143
+    .line 175
     :array_0
     .array-data 0x4
         0x13t 0x11t 0x0t 0x0t
@@ -478,7 +478,7 @@
         0x16t 0x11t 0x0t 0x0t
     .end array-data
 
-    .line 145
+    .line 177
     :array_1
     .array-data 0x4
         0x17t 0x11t 0x0t 0x0t
@@ -493,46 +493,46 @@
     .parameter "c_type"
 
     .prologue
-    .line 155
+    .line 187
     packed-switch p0, :pswitch_data_0
 
-    .line 169
+    .line 201
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 157
+    .line 189
     :pswitch_0
     const-string v0, "4370"
 
     goto :goto_0
 
-    .line 160
+    .line 192
     :pswitch_1
     const-string v0, "4371-4374"
 
     goto :goto_0
 
-    .line 162
+    .line 194
     :pswitch_2
     const-string v0, "4375-4378"
 
     goto :goto_0
 
-    .line 165
+    .line 197
     :pswitch_3
     const-string v0, "4379"
 
     goto :goto_0
 
-    .line 167
+    .line 199
     :pswitch_4
     const-string v0, "4380"
 
     goto :goto_0
 
-    .line 155
+    .line 187
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -548,7 +548,7 @@
     .parameter "msgId"
 
     .prologue
-    .line 185
+    .line 218
     const/16 v0, 0x1112
 
     if-lt p0, v0, :cond_0
@@ -557,10 +557,10 @@
 
     if-gt p0, v0, :cond_0
 
-    .line 186
+    .line 219
     const/4 v0, 0x1
 
-    .line 188
+    .line 221
     :goto_0
     return v0
 
@@ -576,7 +576,7 @@
     .locals 1
 
     .prologue
-    .line 441
+    .line 491
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->alertHandling:I
 
     return v0
@@ -586,7 +586,7 @@
     .locals 1
 
     .prologue
-    .line 329
+    .line 370
     iget-object v0, p0, Landroid/telephony/HtcCmasMessage;->alertText:[B
 
     return-object v0
@@ -596,7 +596,7 @@
     .locals 1
 
     .prologue
-    .line 343
+    .line 385
     iget-object v0, p0, Landroid/telephony/HtcCmasMessage;->alertTextStr:Ljava/lang/String;
 
     return-object v0
@@ -606,7 +606,7 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 399
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->category:I
 
     return v0
@@ -616,7 +616,7 @@
     .locals 1
 
     .prologue
-    .line 413
+    .line 459
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->certainty:I
 
     return v0
@@ -626,7 +626,7 @@
     .locals 1
 
     .prologue
-    .line 301
+    .line 338
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->charSetEncoding:I
 
     return v0
@@ -636,7 +636,7 @@
     .locals 1
 
     .prologue
-    .line 273
+    .line 306
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->cmasFormat:I
 
     return v0
@@ -646,7 +646,7 @@
     .locals 1
 
     .prologue
-    .line 427
+    .line 475
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->cmasId:I
 
     return v0
@@ -656,7 +656,7 @@
     .locals 1
 
     .prologue
-    .line 120
+    .line 150
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->cmasType:I
 
     return v0
@@ -666,7 +666,7 @@
     .locals 2
 
     .prologue
-    .line 469
+    .line 522
     iget-wide v0, p0, Landroid/telephony/HtcCmasMessage;->expiredMillis:J
 
     return-wide v0
@@ -676,7 +676,7 @@
     .locals 1
 
     .prologue
-    .line 497
+    .line 554
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->gs:I
 
     return v0
@@ -686,7 +686,7 @@
     .locals 1
 
     .prologue
-    .line 455
+    .line 507
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->language:I
 
     return v0
@@ -696,7 +696,7 @@
     .locals 1
 
     .prologue
-    .line 525
+    .line 585
     iget-object v0, p0, Landroid/telephony/HtcCmasMessage;->messageClass:Landroid/telephony/SmsMessage$MessageClass;
 
     return-object v0
@@ -706,7 +706,7 @@
     .locals 1
 
     .prologue
-    .line 511
+    .line 569
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->msgId:I
 
     return v0
@@ -716,7 +716,7 @@
     .locals 1
 
     .prologue
-    .line 553
+    .line 617
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->pageCount:I
 
     return v0
@@ -726,7 +726,7 @@
     .locals 1
 
     .prologue
-    .line 539
+    .line 601
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->pageSeg:I
 
     return v0
@@ -736,7 +736,7 @@
     .locals 1
 
     .prologue
-    .line 567
+    .line 632
     iget-object v0, p0, Landroid/telephony/HtcCmasMessage;->mPdu:[B
 
     return-object v0
@@ -746,7 +746,7 @@
     .locals 1
 
     .prologue
-    .line 287
+    .line 322
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->protocolVersion:I
 
     return v0
@@ -756,7 +756,7 @@
     .locals 1
 
     .prologue
-    .line 371
+    .line 414
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->responseType:I
 
     return v0
@@ -766,7 +766,7 @@
     .locals 1
 
     .prologue
-    .line 385
+    .line 429
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->severity:I
 
     return v0
@@ -776,7 +776,7 @@
     .locals 1
 
     .prologue
-    .line 483
+    .line 538
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->sn:I
 
     return v0
@@ -786,7 +786,7 @@
     .locals 1
 
     .prologue
-    .line 399
+    .line 444
     iget v0, p0, Landroid/telephony/HtcCmasMessage;->urgency:I
 
     return v0
@@ -796,7 +796,7 @@
     .locals 1
 
     .prologue
-    .line 315
+    .line 354
     iget-boolean v0, p0, Landroid/telephony/HtcCmasMessage;->charSetEncodingSet:Z
 
     return v0
@@ -807,7 +807,7 @@
     .parameter "pdu"
 
     .prologue
-    .line 124
+    .line 155
     return-void
 .end method
 
@@ -816,10 +816,10 @@
     .parameter "alertHandling"
 
     .prologue
-    .line 448
+    .line 499
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->alertHandling:I
 
-    .line 449
+    .line 500
     return-void
 .end method
 
@@ -828,10 +828,10 @@
     .parameter "alertText"
 
     .prologue
-    .line 336
+    .line 378
     iput-object p1, p0, Landroid/telephony/HtcCmasMessage;->alertText:[B
 
-    .line 337
+    .line 379
     return-void
 .end method
 
@@ -840,10 +840,10 @@
     .parameter "alertTextStr"
 
     .prologue
-    .line 350
+    .line 392
     iput-object p1, p0, Landroid/telephony/HtcCmasMessage;->alertTextStr:Ljava/lang/String;
 
-    .line 351
+    .line 393
     return-void
 .end method
 
@@ -852,10 +852,10 @@
     .parameter "category"
 
     .prologue
-    .line 364
+    .line 407
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->category:I
 
-    .line 365
+    .line 408
     return-void
 .end method
 
@@ -864,10 +864,10 @@
     .parameter "certainty"
 
     .prologue
-    .line 420
+    .line 467
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->certainty:I
 
-    .line 421
+    .line 468
     return-void
 .end method
 
@@ -876,10 +876,10 @@
     .parameter "charSetEncoding"
 
     .prologue
-    .line 308
+    .line 346
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->charSetEncoding:I
 
-    .line 309
+    .line 347
     return-void
 .end method
 
@@ -888,10 +888,10 @@
     .parameter "charSetEncodingSet"
 
     .prologue
-    .line 322
+    .line 362
     iput-boolean p1, p0, Landroid/telephony/HtcCmasMessage;->charSetEncodingSet:Z
 
-    .line 323
+    .line 363
     return-void
 .end method
 
@@ -900,10 +900,10 @@
     .parameter "cmasFormat"
 
     .prologue
-    .line 280
+    .line 314
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->cmasFormat:I
 
-    .line 281
+    .line 315
     return-void
 .end method
 
@@ -912,10 +912,10 @@
     .parameter "cmasId"
 
     .prologue
-    .line 434
+    .line 483
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->cmasId:I
 
-    .line 435
+    .line 484
     return-void
 .end method
 
@@ -924,10 +924,10 @@
     .parameter "expiredMillis"
 
     .prologue
-    .line 476
+    .line 530
     iput-wide p1, p0, Landroid/telephony/HtcCmasMessage;->expiredMillis:J
 
-    .line 477
+    .line 531
     return-void
 .end method
 
@@ -936,10 +936,10 @@
     .parameter "gs"
 
     .prologue
-    .line 504
+    .line 562
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->gs:I
 
-    .line 505
+    .line 563
     return-void
 .end method
 
@@ -948,10 +948,10 @@
     .parameter "language"
 
     .prologue
-    .line 462
+    .line 515
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->language:I
 
-    .line 463
+    .line 516
     return-void
 .end method
 
@@ -960,10 +960,10 @@
     .parameter "messageClass"
 
     .prologue
-    .line 532
+    .line 593
     iput-object p1, p0, Landroid/telephony/HtcCmasMessage;->messageClass:Landroid/telephony/SmsMessage$MessageClass;
 
-    .line 533
+    .line 594
     return-void
 .end method
 
@@ -972,10 +972,10 @@
     .parameter "msgId"
 
     .prologue
-    .line 518
+    .line 577
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->msgId:I
 
-    .line 519
+    .line 578
     return-void
 .end method
 
@@ -984,10 +984,10 @@
     .parameter "pageCount"
 
     .prologue
-    .line 560
+    .line 625
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->pageCount:I
 
-    .line 561
+    .line 626
     return-void
 .end method
 
@@ -996,10 +996,10 @@
     .parameter "pageSeg"
 
     .prologue
-    .line 546
+    .line 609
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->pageSeg:I
 
-    .line 547
+    .line 610
     return-void
 .end method
 
@@ -1008,10 +1008,10 @@
     .parameter "protocolVersion"
 
     .prologue
-    .line 294
+    .line 330
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->protocolVersion:I
 
-    .line 295
+    .line 331
     return-void
 .end method
 
@@ -1020,10 +1020,10 @@
     .parameter "responseType"
 
     .prologue
-    .line 378
+    .line 422
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->responseType:I
 
-    .line 379
+    .line 423
     return-void
 .end method
 
@@ -1032,10 +1032,10 @@
     .parameter "severity"
 
     .prologue
-    .line 392
+    .line 437
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->severity:I
 
-    .line 393
+    .line 438
     return-void
 .end method
 
@@ -1044,10 +1044,10 @@
     .parameter "sn"
 
     .prologue
-    .line 490
+    .line 546
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->sn:I
 
-    .line 491
+    .line 547
     return-void
 .end method
 
@@ -1056,10 +1056,10 @@
     .parameter "urgency"
 
     .prologue
-    .line 406
+    .line 452
     iput p1, p0, Landroid/telephony/HtcCmasMessage;->urgency:I
 
-    .line 407
+    .line 453
     return-void
 .end method
 
@@ -1068,9 +1068,9 @@
     .parameter "mPdu"
 
     .prologue
-    .line 574
+    .line 640
     iput-object p1, p0, Landroid/telephony/HtcCmasMessage;->mPdu:[B
 
-    .line 575
+    .line 641
     return-void
 .end method

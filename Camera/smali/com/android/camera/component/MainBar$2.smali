@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 110
+    .line 115
     iput-object p1, p0, Lcom/android/camera/component/MainBar$2;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "bubble"
 
     .prologue
-    .line 115
+    .line 120
     iget-object v1, p0, Lcom/android/camera/component/MainBar$2;->this$0:Lcom/android/camera/component/MainBar;
 
     #getter for: Lcom/android/camera/component/MainBar;->m_CurrentPopup:Lcom/android/camera/widget/PopupBubble;
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    .line 116
+    .line 121
     .local v0, menuView:Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -62,13 +62,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 117
+    .line 122
     check-cast v0, Lcom/htc/widget/HtcListView;
 
     .end local v0           #menuView:Landroid/view/View;
     invoke-virtual {v0}, Lcom/htc/widget/HtcListView;->startIntroAnimation()V
 
-    .line 119
+    .line 124
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/MainBar$2;->this$0:Lcom/android/camera/component/MainBar;
 
@@ -78,6 +78,6 @@
 
     invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->notifyPopupBubbleOpened()V
 
-    .line 120
+    .line 125
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4214
+    .line 4246
     iput-object p1, p0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 4217
+    .line 4249
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -48,24 +48,24 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mUINotInit:Z
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5000(Lcom/htc/music/HtcMusic;)Z
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5100(Lcom/htc/music/HtcMusic;)Z
 
     move-result v22
 
     if-eqz v22, :cond_1
 
-    .line 4520
+    .line 4552
     :cond_0
     :goto_0
     return-void
 
-    .line 4219
+    .line 4251
     :cond_1
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 4220
+    .line 4252
     .local v3, action:Ljava/lang/String;
     const-string v22, "com.htc.music.metachanged"
 
@@ -77,14 +77,14 @@
 
     if-eqz v22, :cond_7
 
-    .line 4221
+    .line 4253
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========META_CHANGED"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4224
+    .line 4256
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -92,7 +92,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -100,7 +100,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/htc/music/HtcMusic$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 4226
+    .line 4258
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -108,9 +108,9 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->setPauseButtonImage()V
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5100(Lcom/htc/music/HtcMusic;)V
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)V
 
-    .line 4227
+    .line 4259
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -125,7 +125,7 @@
 
     if-eqz v22, :cond_2
 
-    .line 4229
+    .line 4261
     :try_start_0
     move-object/from16 v0, p0
 
@@ -145,7 +145,7 @@
 
     if-eqz v22, :cond_5
 
-    .line 4230
+    .line 4262
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -155,11 +155,11 @@
     const-wide/16 v23, 0x1
 
     #calls: Lcom/htc/music/HtcMusic;->queueNextRefresh(J)V
-    invoke-static/range {v22 .. v24}, Lcom/htc/music/HtcMusic;->access$3400(Lcom/htc/music/HtcMusic;J)V
+    invoke-static/range {v22 .. v24}, Lcom/htc/music/HtcMusic;->access$3500(Lcom/htc/music/HtcMusic;J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4239
+    .line 4271
     :cond_2
     :goto_1
     move-object/from16 v0, p0
@@ -176,10 +176,10 @@
 
     if-eqz v22, :cond_4
 
-    .line 4241
+    .line 4273
     const/4 v12, 0x0
 
-    .line 4242
+    .line 4274
     .local v12, nSelectPos:I
     :try_start_1
     move-object/from16 v0, p0
@@ -196,7 +196,7 @@
 
     if-eqz v22, :cond_3
 
-    .line 4243
+    .line 4275
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -213,7 +213,7 @@
 
     move-result v12
 
-    .line 4244
+    .line 4276
     :cond_3
     move-object/from16 v0, p0
 
@@ -222,7 +222,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderAdapter:Lcom/htc/music/GliderAdapter;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
 
     move-result-object v22
 
@@ -242,7 +242,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4246
+    .line 4278
     if-ltz v12, :cond_6
 
     move-object/from16 v0, p0
@@ -252,7 +252,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderAdapter:Lcom/htc/music/GliderAdapter;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
 
     move-result-object v22
 
@@ -264,7 +264,7 @@
 
     if-ge v12, v0, :cond_6
 
-    .line 4248
+    .line 4280
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -288,7 +288,7 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 4259
+    .line 4291
     .end local v12           #nSelectPos:I
     :cond_4
     :goto_2
@@ -299,7 +299,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mDownloadAlbumArtDialog:Landroid/app/Dialog;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Landroid/app/Dialog;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5400(Lcom/htc/music/HtcMusic;)Landroid/app/Dialog;
 
     move-result-object v22
 
@@ -312,7 +312,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mDownloadAlbumArtDialog:Landroid/app/Dialog;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Landroid/app/Dialog;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5400(Lcom/htc/music/HtcMusic;)Landroid/app/Dialog;
 
     move-result-object v22
 
@@ -322,7 +322,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4261
+    .line 4293
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -336,7 +336,7 @@
     move-object/from16 v23, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mDownloadAlbumArtDialog:Landroid/app/Dialog;
-    invoke-static/range {v23 .. v23}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Landroid/app/Dialog;
+    invoke-static/range {v23 .. v23}, Lcom/htc/music/HtcMusic;->access$5400(Lcom/htc/music/HtcMusic;)Landroid/app/Dialog;
 
     move-result-object v23
 
@@ -344,7 +344,7 @@
 
     goto/16 :goto_0
 
-    .line 4232
+    .line 4264
     :cond_5
     :try_start_2
     move-object/from16 v0, p0
@@ -354,19 +354,19 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->refreshNow()J
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$1200(Lcom/htc/music/HtcMusic;)J
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$1300(Lcom/htc/music/HtcMusic;)J
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
     goto/16 :goto_1
 
-    .line 4233
+    .line 4265
     :catch_0
     move-exception v22
 
     goto/16 :goto_1
 
-    .line 4250
+    .line 4282
     .restart local v12       #nSelectPos:I
     :cond_6
     :try_start_3
@@ -393,28 +393,28 @@
 
     goto :goto_2
 
-    .line 4252
+    .line 4284
     :catch_1
     move-exception v7
 
-    .line 4253
+    .line 4285
     .local v7, e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 4254
+    .line 4286
     .end local v7           #e:Landroid/os/RemoteException;
     :catch_2
     move-exception v9
 
-    .line 4255
+    .line 4287
     .local v9, ex:Ljava/lang/NullPointerException;
     invoke-virtual {v9}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 4262
+    .line 4294
     .end local v9           #ex:Ljava/lang/NullPointerException;
     .end local v12           #nSelectPos:I
     :cond_7
@@ -428,7 +428,7 @@
 
     if-eqz v22, :cond_8
 
-    .line 4263
+    .line 4295
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -438,9 +438,9 @@
     const/16 v23, 0x1
 
     #setter for: Lcom/htc/music/HtcMusic;->mPaused:Z
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5402(Lcom/htc/music/HtcMusic;Z)Z
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5502(Lcom/htc/music/HtcMusic;Z)Z
 
-    .line 4264
+    .line 4296
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -448,11 +448,11 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->setPauseButtonImage()V
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5100(Lcom/htc/music/HtcMusic;)V
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)V
 
     goto/16 :goto_0
 
-    .line 4265
+    .line 4297
     :cond_8
     const-string v22, "com.htc.music.playstatechanged"
 
@@ -464,7 +464,7 @@
 
     if-eqz v22, :cond_d
 
-    .line 4267
+    .line 4299
     const-string v22, "extrastate"
 
     move-object/from16 v0, p2
@@ -475,18 +475,18 @@
 
     move-result-object v10
 
-    .line 4268
+    .line 4300
     .local v10, extraState:Ljava/lang/String;
     if-eqz v10, :cond_b
 
-    .line 4269
+    .line 4301
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========PLAYSTATE_CHANGED extraState"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4270
+    .line 4302
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -496,11 +496,11 @@
     const/16 v23, 0x0
 
     #calls: Lcom/htc/music/HtcMusic;->buildTitleInfo(Ljava/lang/String;)Ljava/lang/String;
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5500(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5600(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v19
 
-    .line 4272
+    .line 4304
     .local v19, szTitleInfo:Ljava/lang/String;
     invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -508,7 +508,7 @@
 
     if-nez v22, :cond_9
 
-    .line 4273
+    .line 4305
     const-string v22, "buffering"
 
     move-object/from16 v0, v22
@@ -519,88 +519,7 @@
 
     if-eqz v22, :cond_a
 
-    .line 4274
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
-
-    move-object/from16 v22, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
-
-    move-object/from16 v23, v0
-
-    const v24, 0x7f0701d6
-
-    invoke-virtual/range {v23 .. v24}, Lcom/htc/music/HtcMusic;->getString(I)Ljava/lang/String;
-
-    move-result-object v23
-
-    #calls: Lcom/htc/music/HtcMusic;->buildTitleInfo(Ljava/lang/String;)Ljava/lang/String;
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5500(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v19
-
-    .line 4280
-    :cond_9
-    :goto_3
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
-
-    move-object/from16 v22, v0
-
-    #getter for: Lcom/htc/music/HtcMusic;->mTitle:Lcom/htc/widget/ActionBarText;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5600(Lcom/htc/music/HtcMusic;)Lcom/htc/widget/ActionBarText;
-
-    move-result-object v22
-
-    if-eqz v22, :cond_0
-
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
-
-    move-object/from16 v22, v0
-
-    #getter for: Lcom/htc/music/HtcMusic;->mQueueInfo:Ljava/lang/String;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5700(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
-
-    move-result-object v22
-
-    if-eqz v22, :cond_0
-
-    .line 4282
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
-
-    move-object/from16 v22, v0
-
-    move-object/from16 v0, v22
-
-    move-object/from16 v1, v19
-
-    #calls: Lcom/htc/music/HtcMusic;->setSecondaryTitle(Ljava/lang/String;)V
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$5800(Lcom/htc/music/HtcMusic;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 4275
-    :cond_a
-    const-string v22, "waiting"
-
-    move-object/from16 v0, v22
-
-    invoke-virtual {v0, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v22
-
-    if-eqz v22, :cond_9
-
-    .line 4276
+    .line 4306
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -620,13 +539,94 @@
     move-result-object v23
 
     #calls: Lcom/htc/music/HtcMusic;->buildTitleInfo(Ljava/lang/String;)Ljava/lang/String;
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5500(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5600(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v19
+
+    .line 4312
+    :cond_9
+    :goto_3
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
+
+    move-object/from16 v22, v0
+
+    #getter for: Lcom/htc/music/HtcMusic;->mTitle:Lcom/htc/widget/ActionBarText;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5700(Lcom/htc/music/HtcMusic;)Lcom/htc/widget/ActionBarText;
+
+    move-result-object v22
+
+    if-eqz v22, :cond_0
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
+
+    move-object/from16 v22, v0
+
+    #getter for: Lcom/htc/music/HtcMusic;->mQueueInfo:Ljava/lang/String;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5800(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
+
+    move-result-object v22
+
+    if-eqz v22, :cond_0
+
+    .line 4314
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
+
+    move-object/from16 v22, v0
+
+    move-object/from16 v0, v22
+
+    move-object/from16 v1, v19
+
+    #calls: Lcom/htc/music/HtcMusic;->setSecondaryTitle(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$5900(Lcom/htc/music/HtcMusic;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 4307
+    :cond_a
+    const-string v22, "waiting"
+
+    move-object/from16 v0, v22
+
+    invoke-virtual {v0, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v22
+
+    if-eqz v22, :cond_9
+
+    .line 4308
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
+
+    move-object/from16 v22, v0
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
+
+    move-object/from16 v23, v0
+
+    const v24, 0x7f0701d8
+
+    invoke-virtual/range {v23 .. v24}, Lcom/htc/music/HtcMusic;->getString(I)Ljava/lang/String;
+
+    move-result-object v23
+
+    #calls: Lcom/htc/music/HtcMusic;->buildTitleInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5600(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v19
 
     goto :goto_3
 
-    .line 4287
+    .line 4319
     .end local v19           #szTitleInfo:Ljava/lang/String;
     :cond_b
     const-string v22, "[HtcMusic]"
@@ -635,7 +635,7 @@
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4289
+    .line 4321
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -643,9 +643,9 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->setPauseButtonImage()V
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5100(Lcom/htc/music/HtcMusic;)V
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)V
 
-    .line 4291
+    .line 4323
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -660,7 +660,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4293
+    .line 4325
     :try_start_4
     move-object/from16 v0, p0
 
@@ -680,7 +680,7 @@
 
     if-eqz v22, :cond_c
 
-    .line 4294
+    .line 4326
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -690,9 +690,9 @@
     const/16 v23, 0x0
 
     #setter for: Lcom/htc/music/HtcMusic;->mPaused:Z
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5402(Lcom/htc/music/HtcMusic;Z)Z
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5502(Lcom/htc/music/HtcMusic;Z)Z
 
-    .line 4295
+    .line 4327
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -700,11 +700,11 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->refreshNow()J
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$1200(Lcom/htc/music/HtcMusic;)J
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$1300(Lcom/htc/music/HtcMusic;)J
 
     move-result-wide v13
 
-    .line 4296
+    .line 4328
     .local v13, next:J
     move-object/from16 v0, p0
 
@@ -715,18 +715,18 @@
     move-object/from16 v0, v22
 
     #calls: Lcom/htc/music/HtcMusic;->queueNextRefresh(J)V
-    invoke-static {v0, v13, v14}, Lcom/htc/music/HtcMusic;->access$3400(Lcom/htc/music/HtcMusic;J)V
+    invoke-static {v0, v13, v14}, Lcom/htc/music/HtcMusic;->access$3500(Lcom/htc/music/HtcMusic;J)V
 
     goto/16 :goto_0
 
-    .line 4301
+    .line 4333
     .end local v13           #next:J
     :catch_3
     move-exception v22
 
     goto/16 :goto_0
 
-    .line 4298
+    .line 4330
     :cond_c
     move-object/from16 v0, p0
 
@@ -737,9 +737,9 @@
     const/16 v23, 0x1
 
     #setter for: Lcom/htc/music/HtcMusic;->mPaused:Z
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5402(Lcom/htc/music/HtcMusic;Z)Z
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$5502(Lcom/htc/music/HtcMusic;Z)Z
 
-    .line 4299
+    .line 4331
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -747,13 +747,13 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->refreshNow()J
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$1200(Lcom/htc/music/HtcMusic;)J
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$1300(Lcom/htc/music/HtcMusic;)J
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_3
 
     goto/16 :goto_0
 
-    .line 4305
+    .line 4337
     .end local v10           #extraState:Ljava/lang/String;
     :cond_d
     const-string v22, "com.htc.music.rotateleft"
@@ -766,14 +766,14 @@
 
     if-eqz v22, :cond_12
 
-    .line 4306
+    .line 4338
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_MOVE_PREV"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4307
+    .line 4339
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -788,7 +788,7 @@
 
     if-eqz v22, :cond_11
 
-    .line 4309
+    .line 4341
     :try_start_5
     move-object/from16 v0, p0
 
@@ -797,7 +797,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderState:I
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5900(Lcom/htc/music/HtcMusic;)I
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6000(Lcom/htc/music/HtcMusic;)I
 
     move-result v22
 
@@ -825,12 +825,12 @@
 
     const/4 v4, 0x1
 
-    .line 4310
+    .line 4342
     .local v4, bAnimated:Z
     :goto_4
     if-nez v4, :cond_f
 
-    .line 4311
+    .line 4343
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -845,7 +845,7 @@
 
     invoke-interface/range {v22 .. v22}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 4312
+    .line 4344
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -864,25 +864,25 @@
 
     goto/16 :goto_0
 
-    .line 4325
+    .line 4357
     .end local v4           #bAnimated:Z
     :catch_4
     move-exception v7
 
-    .line 4326
+    .line 4358
     .restart local v7       #e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 4309
+    .line 4341
     .end local v7           #e:Landroid/os/RemoteException;
     :cond_e
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 4316
+    .line 4348
     .restart local v4       #bAnimated:Z
     :cond_f
     :try_start_6
@@ -900,7 +900,7 @@
 
     invoke-interface/range {v22 .. v22}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 4317
+    .line 4349
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -917,7 +917,7 @@
 
     move-result v11
 
-    .line 4318
+    .line 4350
     .local v11, len:I
     move-object/from16 v0, p0
 
@@ -935,7 +935,7 @@
 
     move-result v15
 
-    .line 4319
+    .line 4351
     .local v15, pos:I
     add-int/lit8 v22, v11, -0x1
 
@@ -943,7 +943,7 @@
 
     if-ne v15, v0, :cond_10
 
-    .line 4320
+    .line 4352
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -962,7 +962,7 @@
 
     invoke-virtual/range {v22 .. v24}, Lcom/htc/sunny2/widget/presentation/SPresentation;->setSelection(IZ)V
 
-    .line 4321
+    .line 4353
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -979,7 +979,7 @@
 
     goto/16 :goto_0
 
-    .line 4323
+    .line 4355
     :cond_10
     move-object/from16 v0, p0
 
@@ -1001,7 +1001,7 @@
 
     goto/16 :goto_0
 
-    .line 4329
+    .line 4361
     .end local v4           #bAnimated:Z
     .end local v11           #len:I
     .end local v15           #pos:I
@@ -1014,7 +1014,7 @@
 
     goto/16 :goto_0
 
-    .line 4331
+    .line 4363
     :cond_12
     const-string v22, "com.htc.music.rotateright"
 
@@ -1026,14 +1026,14 @@
 
     if-eqz v22, :cond_17
 
-    .line 4332
+    .line 4364
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_MOVE_NEXT"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4333
+    .line 4365
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1048,7 +1048,7 @@
 
     if-eqz v22, :cond_16
 
-    .line 4335
+    .line 4367
     :try_start_7
     move-object/from16 v0, p0
 
@@ -1057,7 +1057,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderState:I
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5900(Lcom/htc/music/HtcMusic;)I
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6000(Lcom/htc/music/HtcMusic;)I
 
     move-result v22
 
@@ -1085,12 +1085,12 @@
 
     const/4 v4, 0x1
 
-    .line 4336
+    .line 4368
     .restart local v4       #bAnimated:Z
     :goto_5
     if-nez v4, :cond_14
 
-    .line 4337
+    .line 4369
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1105,7 +1105,7 @@
 
     invoke-interface/range {v22 .. v22}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 4338
+    .line 4370
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1124,25 +1124,25 @@
 
     goto/16 :goto_0
 
-    .line 4351
+    .line 4383
     .end local v4           #bAnimated:Z
     :catch_5
     move-exception v7
 
-    .line 4352
+    .line 4384
     .restart local v7       #e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 4335
+    .line 4367
     .end local v7           #e:Landroid/os/RemoteException;
     :cond_13
     const/4 v4, 0x0
 
     goto :goto_5
 
-    .line 4342
+    .line 4374
     .restart local v4       #bAnimated:Z
     :cond_14
     :try_start_8
@@ -1160,7 +1160,7 @@
 
     invoke-interface/range {v22 .. v22}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 4343
+    .line 4375
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1177,11 +1177,11 @@
 
     move-result v15
 
-    .line 4344
+    .line 4376
     .restart local v15       #pos:I
     if-nez v15, :cond_15
 
-    .line 4345
+    .line 4377
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1202,7 +1202,7 @@
 
     invoke-virtual {v0, v15, v1}, Lcom/htc/sunny2/widget/presentation/SPresentation;->setSelection(IZ)V
 
-    .line 4346
+    .line 4378
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1219,7 +1219,7 @@
 
     goto/16 :goto_0
 
-    .line 4348
+    .line 4380
     :cond_15
     move-object/from16 v0, p0
 
@@ -1237,7 +1237,7 @@
 
     invoke-virtual {v0, v15}, Lcom/htc/sunny2/widget/presentation/SPresentation;->scrollTo(I)V
 
-    .line 4349
+    .line 4381
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1258,7 +1258,7 @@
 
     goto/16 :goto_0
 
-    .line 4355
+    .line 4387
     .end local v4           #bAnimated:Z
     .end local v15           #pos:I
     :cond_16
@@ -1270,7 +1270,7 @@
 
     goto/16 :goto_0
 
-    .line 4357
+    .line 4389
     :cond_17
     const-string v22, "com.htc.music.rotatecircle_next"
 
@@ -1282,14 +1282,14 @@
 
     if-eqz v22, :cond_18
 
-    .line 4359
+    .line 4391
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_ROTATE_SELF_NEXT"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4360
+    .line 4392
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1299,11 +1299,11 @@
     const/16 v23, 0x1
 
     #calls: Lcom/htc/music/HtcMusic;->onAnimationRotateSelf(Z)V
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$6000(Lcom/htc/music/HtcMusic;Z)V
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$6100(Lcom/htc/music/HtcMusic;Z)V
 
     goto/16 :goto_0
 
-    .line 4361
+    .line 4393
     :cond_18
     const-string v22, "com.htc.music.rotatecircle_previous"
 
@@ -1315,14 +1315,14 @@
 
     if-eqz v22, :cond_19
 
-    .line 4363
+    .line 4395
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_ROTATE_SELF_PREV"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4364
+    .line 4396
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1332,11 +1332,11 @@
     const/16 v23, 0x0
 
     #calls: Lcom/htc/music/HtcMusic;->onAnimationRotateSelf(Z)V
-    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$6000(Lcom/htc/music/HtcMusic;Z)V
+    invoke-static/range {v22 .. v23}, Lcom/htc/music/HtcMusic;->access$6100(Lcom/htc/music/HtcMusic;Z)V
 
     goto/16 :goto_0
 
-    .line 4365
+    .line 4397
     :cond_19
     const-string v22, "com.htc.music.rotatequickly"
 
@@ -1348,7 +1348,7 @@
 
     if-eqz v22, :cond_1a
 
-    .line 4366
+    .line 4398
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_ROTATE_CIRCLE_QUICK"
@@ -1357,7 +1357,7 @@
 
     goto/16 :goto_0
 
-    .line 4367
+    .line 4399
     :cond_1a
     const-string v22, "com.htc.music.queuechanged"
 
@@ -1369,14 +1369,14 @@
 
     if-eqz v22, :cond_1d
 
-    .line 4368
+    .line 4400
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========QUEUE_CHANGED"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4369
+    .line 4401
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1384,7 +1384,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -1397,7 +1397,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -1409,14 +1409,14 @@
 
     if-eqz v22, :cond_1b
 
-    .line 4371
+    .line 4403
     const-string v22, "[HtcMusic]"
 
     const-string v23, "remove message PLAY_ALBUM since QUEUE_CHANGED"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4372
+    .line 4404
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1424,7 +1424,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -1432,7 +1432,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/htc/music/HtcMusic$NonUiHandler;->removeMessages(I)V
 
-    .line 4375
+    .line 4407
     :cond_1b
     move-object/from16 v0, p0
 
@@ -1448,7 +1448,7 @@
 
     if-eqz v22, :cond_1c
 
-    .line 4377
+    .line 4409
     :try_start_9
     move-object/from16 v0, p0
 
@@ -1466,11 +1466,11 @@
 
     move-result v16
 
-    .line 4378
+    .line 4410
     .local v16, queueSize:I
     if-gtz v16, :cond_1c
 
-    .line 4379
+    .line 4411
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1478,13 +1478,13 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
     if-eqz v22, :cond_1c
 
-    .line 4380
+    .line 4412
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1492,7 +1492,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -1500,7 +1500,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/htc/music/HtcMusic$NonUiHandler;->removeMessages(I)V
 
-    .line 4381
+    .line 4413
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1508,7 +1508,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -1518,7 +1518,7 @@
     :try_end_9
     .catch Landroid/os/RemoteException; {:try_start_9 .. :try_end_9} :catch_6
 
-    .line 4390
+    .line 4422
     .end local v16           #queueSize:I
     :cond_1c
     :goto_6
@@ -1529,9 +1529,9 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->updateGlider()V
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6100(Lcom/htc/music/HtcMusic;)V
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6200(Lcom/htc/music/HtcMusic;)V
 
-    .line 4391
+    .line 4423
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1539,7 +1539,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -1549,17 +1549,17 @@
 
     goto/16 :goto_0
 
-    .line 4385
+    .line 4417
     :catch_6
     move-exception v7
 
-    .line 4386
+    .line 4418
     .restart local v7       #e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_6
 
-    .line 4392
+    .line 4424
     .end local v7           #e:Landroid/os/RemoteException;
     :cond_1d
     const-string v22, "com.htc.music.shuffle"
@@ -1572,14 +1572,14 @@
 
     if-eqz v22, :cond_1e
 
-    .line 4393
+    .line 4425
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_SHUFFLE "
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4394
+    .line 4426
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1594,7 +1594,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4396
+    .line 4428
     :try_start_a
     move-object/from16 v0, p0
 
@@ -1610,7 +1610,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4397
+    .line 4429
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1625,7 +1625,7 @@
 
     invoke-interface/range {v22 .. v22}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 4398
+    .line 4430
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1645,7 +1645,7 @@
     move-object/from16 v23, v0
 
     #calls: Lcom/htc/music/HtcMusic;->getAlbumQueuePosition()I
-    invoke-static/range {v23 .. v23}, Lcom/htc/music/HtcMusic;->access$6200(Lcom/htc/music/HtcMusic;)I
+    invoke-static/range {v23 .. v23}, Lcom/htc/music/HtcMusic;->access$6300(Lcom/htc/music/HtcMusic;)I
 
     move-result v23
 
@@ -1653,7 +1653,7 @@
 
     invoke-virtual/range {v22 .. v24}, Lcom/htc/sunny2/widget/presentation/SPresentation;->setSelection(IZ)V
 
-    .line 4400
+    .line 4432
     const/16 v22, 0x1
 
     move-object/from16 v0, p0
@@ -1678,7 +1678,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 4401
+    .line 4433
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1697,17 +1697,17 @@
 
     goto/16 :goto_0
 
-    .line 4403
+    .line 4435
     :catch_7
     move-exception v7
 
-    .line 4404
+    .line 4436
     .restart local v7       #e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 4407
+    .line 4439
     .end local v7           #e:Landroid/os/RemoteException;
     :cond_1e
     const-string v22, "com.htc.music.refresh"
@@ -1720,14 +1720,14 @@
 
     if-eqz v22, :cond_1f
 
-    .line 4408
+    .line 4440
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_REFRESH "
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4409
+    .line 4441
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1735,9 +1735,9 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->animationRefresh()V
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$3300(Lcom/htc/music/HtcMusic;)V
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$3400(Lcom/htc/music/HtcMusic;)V
 
-    .line 4410
+    .line 4442
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1745,7 +1745,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -1755,7 +1755,7 @@
 
     goto/16 :goto_0
 
-    .line 4411
+    .line 4443
     :cond_1f
     const-string v22, "com.htc.music.changeart"
 
@@ -1767,14 +1767,14 @@
 
     if-eqz v22, :cond_24
 
-    .line 4412
+    .line 4444
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========ANIMATION_CHANGE_ART "
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4413
+    .line 4445
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1789,7 +1789,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4415
+    .line 4447
     const/16 v22, 0x0
 
     :try_start_b
@@ -1817,7 +1817,7 @@
 
     if-eqz v22, :cond_23
 
-    .line 4417
+    .line 4449
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1834,7 +1834,7 @@
 
     move-result-object v21
 
-    .line 4419
+    .line 4451
     .local v21, temp:Ljava/lang/String;
     const-string v22, "[HtcMusic]"
 
@@ -1862,7 +1862,7 @@
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4420
+    .line 4452
     const-string v22, "[HtcMusic]"
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -1882,7 +1882,7 @@
     move-object/from16 v24, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mLastPluginArtPath:Ljava/lang/String;
-    invoke-static/range {v24 .. v24}, Lcom/htc/music/HtcMusic;->access$6300(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
+    invoke-static/range {v24 .. v24}, Lcom/htc/music/HtcMusic;->access$6400(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
 
     move-result-object v24
 
@@ -1896,10 +1896,10 @@
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4422
+    .line 4454
     const/4 v5, 0x1
 
-    .line 4423
+    .line 4455
     .local v5, changed:Z
     move-object/from16 v0, p0
 
@@ -1908,7 +1908,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mLastPluginArtPath:Ljava/lang/String;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6300(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6400(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
 
     move-result-object v22
 
@@ -1923,7 +1923,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mLastPluginArtPath:Ljava/lang/String;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6300(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$6400(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
 
     move-result-object v22
 
@@ -1933,14 +1933,14 @@
 
     if-eqz v22, :cond_20
 
-    .line 4425
+    .line 4457
     const/4 v5, 0x0
 
-    .line 4428
+    .line 4460
     :cond_20
     if-eqz v5, :cond_0
 
-    .line 4429
+    .line 4461
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1952,9 +1952,9 @@
     move-object/from16 v1, v21
 
     #setter for: Lcom/htc/music/HtcMusic;->mLastPluginArtPath:Ljava/lang/String;
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6302(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6402(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 4430
+    .line 4462
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -1971,7 +1971,7 @@
 
     move-result v12
 
-    .line 4432
+    .line 4464
     .restart local v12       #nSelectPos:I
     move-object/from16 v0, p0
 
@@ -1980,13 +1980,13 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderAdapter:Lcom/htc/music/GliderAdapter;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
 
     move-result-object v22
 
     if-eqz v22, :cond_22
 
-    .line 4434
+    .line 4466
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2005,7 +2005,7 @@
 
     if-eqz v22, :cond_21
 
-    .line 4435
+    .line 4467
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2013,16 +2013,16 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderAdapter:Lcom/htc/music/GliderAdapter;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
 
     move-result-object v22
 
     invoke-virtual/range {v22 .. v22}, Lcom/htc/music/GliderAdapter;->clearAllCache()V
 
-    .line 4436
+    .line 4468
     const/4 v12, 0x0
 
-    .line 4438
+    .line 4470
     :cond_21
     move-object/from16 v0, p0
 
@@ -2031,7 +2031,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderAdapter:Lcom/htc/music/GliderAdapter;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
 
     move-result-object v22
 
@@ -2039,7 +2039,7 @@
 
     invoke-virtual {v0, v12}, Lcom/htc/music/GliderAdapter;->requestAllBitmap(I)V
 
-    .line 4440
+    .line 4472
     :cond_22
     move-object/from16 v0, p0
 
@@ -2065,20 +2065,20 @@
 
     goto/16 :goto_0
 
-    .line 4448
+    .line 4480
     .end local v5           #changed:Z
     .end local v12           #nSelectPos:I
     .end local v21           #temp:Ljava/lang/String;
     :catch_8
     move-exception v7
 
-    .line 4449
+    .line 4481
     .restart local v7       #e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 4444
+    .line 4476
     .end local v7           #e:Landroid/os/RemoteException;
     :cond_23
     :try_start_c
@@ -2098,7 +2098,7 @@
 
     move-result v17
 
-    .line 4446
+    .line 4478
     .local v17, selectedPos:I
     move-object/from16 v0, p0
 
@@ -2126,7 +2126,7 @@
 
     goto/16 :goto_0
 
-    .line 4452
+    .line 4484
     .end local v17           #selectedPos:I
     :cond_24
     const-string v22, "com.htc.music.onerror"
@@ -2139,14 +2139,14 @@
 
     if-eqz v22, :cond_2a
 
-    .line 4453
+    .line 4485
     const-string v22, "[HtcMusic]"
 
     const-string v23, "==========OS_ON_ERROR "
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4454
+    .line 4486
     const-string v22, "error_id"
 
     const/16 v23, -0x2710
@@ -2161,7 +2161,7 @@
 
     move-result v8
 
-    .line 4456
+    .line 4488
     .local v8, errorId:I
     const/16 v22, -0x2710
 
@@ -2169,7 +2169,7 @@
 
     if-eq v8, v0, :cond_25
 
-    .line 4457
+    .line 4489
     const-string v22, "[HtcMusic]"
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -2194,7 +2194,7 @@
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4458
+    .line 4490
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2204,11 +2204,11 @@
     move-object/from16 v0, v22
 
     #calls: Lcom/htc/music/HtcMusic;->handleDMCError(I)V
-    invoke-static {v0, v8}, Lcom/htc/music/HtcMusic;->access$6400(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v0, v8}, Lcom/htc/music/HtcMusic;->access$6500(Lcom/htc/music/HtcMusic;I)V
 
     goto/16 :goto_0
 
-    .line 4459
+    .line 4491
     :cond_25
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->isPluginMode()Z
 
@@ -2216,7 +2216,7 @@
 
     if-eqz v22, :cond_29
 
-    .line 4461
+    .line 4493
     :try_start_d
     move-object/from16 v0, p0
 
@@ -2252,7 +2252,7 @@
 
     if-nez v22, :cond_0
 
-    .line 4467
+    .line 4499
     :cond_26
     :goto_7
     move-object/from16 v0, p0
@@ -2263,12 +2263,12 @@
 
     invoke-virtual/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->finish()V
 
-    .line 4468
+    .line 4500
     new-instance v20, Landroid/content/Intent;
 
     invoke-direct/range {v20 .. v20}, Landroid/content/Intent;-><init>()V
 
-    .line 4469
+    .line 4501
     .local v20, targetIntent:Landroid/content/Intent;
     const/high16 v22, 0x1400
 
@@ -2278,7 +2278,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 4471
+    .line 4503
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2295,7 +2295,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 4473
+    .line 4505
     const-string v22, "pluginmode"
 
     const/16 v23, 0x1
@@ -2308,7 +2308,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 4474
+    .line 4506
     const-string v22, "errorcause"
 
     const-string v23, "message"
@@ -2329,10 +2329,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4477
+    .line 4509
     const/16 v18, 0x0
 
-    .line 4478
+    .line 4510
     .local v18, szCurPluginName:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2348,7 +2348,7 @@
 
     if-eqz v22, :cond_27
 
-    .line 4480
+    .line 4512
     :try_start_e
     move-object/from16 v0, p0
 
@@ -2370,7 +2370,7 @@
 
     move-result-object v18
 
-    .line 4485
+    .line 4517
     :cond_27
     :goto_8
     invoke-static/range {v18 .. v18}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2379,7 +2379,7 @@
 
     if-nez v22, :cond_28
 
-    .line 4486
+    .line 4518
     const-string v22, ".DMCMusicPlaybackService"
 
     move-object/from16 v0, v18
@@ -2392,7 +2392,7 @@
 
     if-eqz v22, :cond_28
 
-    .line 4487
+    .line 4519
     const-string v22, "[HtcMusic]"
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -2427,13 +2427,13 @@
 
     goto/16 :goto_0
 
-    .line 4463
+    .line 4495
     .end local v18           #szCurPluginName:Ljava/lang/String;
     .end local v20           #targetIntent:Landroid/content/Intent;
     :catch_9
     move-exception v9
 
-    .line 4464
+    .line 4496
     .local v9, ex:Landroid/os/RemoteException;
     const-string v22, "[HtcMusic]"
 
@@ -2443,20 +2443,20 @@
 
     goto/16 :goto_7
 
-    .line 4481
+    .line 4513
     .end local v9           #ex:Landroid/os/RemoteException;
     .restart local v18       #szCurPluginName:Ljava/lang/String;
     .restart local v20       #targetIntent:Landroid/content/Intent;
     :catch_a
     move-exception v7
 
-    .line 4482
+    .line 4514
     .restart local v7       #e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_8
 
-    .line 4493
+    .line 4525
     .end local v7           #e:Landroid/os/RemoteException;
     :cond_28
     move-object/from16 v0, p0
@@ -2471,7 +2471,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/HtcMusic;->startActivity(Landroid/content/Intent;)V
 
-    .line 4494
+    .line 4526
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2486,7 +2486,7 @@
 
     goto/16 :goto_0
 
-    .line 4496
+    .line 4528
     .end local v18           #szCurPluginName:Ljava/lang/String;
     .end local v20           #targetIntent:Landroid/content/Intent;
     :cond_29
@@ -2498,7 +2498,7 @@
 
     goto/16 :goto_0
 
-    .line 4499
+    .line 4531
     .end local v8           #errorId:I
     :cond_2a
     const-string v22, "com.broadcom.bluetooth.avrcp"
@@ -2511,7 +2511,7 @@
 
     if-eqz v22, :cond_2c
 
-    .line 4500
+    .line 4532
     const-string v22, "name"
 
     move-object/from16 v0, p2
@@ -2530,7 +2530,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4501
+    .line 4533
     const-string v22, "controls"
 
     move-object/from16 v0, p2
@@ -2541,7 +2541,7 @@
 
     move-result-object v6
 
-    .line 4503
+    .line 4535
     .local v6, controls:Ljava/lang/String;
     const-string v22, "shuffle"
 
@@ -2553,7 +2553,7 @@
 
     if-eqz v22, :cond_2b
 
-    .line 4504
+    .line 4536
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2561,11 +2561,11 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->setShuffleButtonImage()V
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)V
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4900(Lcom/htc/music/HtcMusic;)V
 
     goto/16 :goto_0
 
-    .line 4505
+    .line 4537
     :cond_2b
     const-string v22, "repeat"
 
@@ -2577,7 +2577,7 @@
 
     if-eqz v22, :cond_0
 
-    .line 4506
+    .line 4538
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2585,11 +2585,11 @@
     move-object/from16 v22, v0
 
     #calls: Lcom/htc/music/HtcMusic;->setRepeatButtonImage()V
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)V
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$5000(Lcom/htc/music/HtcMusic;)V
 
     goto/16 :goto_0
 
-    .line 4508
+    .line 4540
     .end local v6           #controls:Ljava/lang/String;
     :cond_2c
     const-string v22, "com.htc.music.pluginservicebinded"
@@ -2602,14 +2602,14 @@
 
     if-eqz v22, :cond_2d
 
-    .line 4509
+    .line 4541
     const-string v22, "[HtcMusic]"
 
     const-string v23, "mStatusListener, Receive PLUGIN_SERVICE_BINDED"
 
     invoke-static/range {v22 .. v23}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4510
+    .line 4542
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2617,13 +2617,13 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
     if-eqz v22, :cond_0
 
-    .line 4511
+    .line 4543
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2631,7 +2631,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -2639,7 +2639,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/htc/music/HtcMusic$NonUiHandler;->removeMessages(I)V
 
-    .line 4512
+    .line 4544
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2647,7 +2647,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -2655,7 +2655,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/htc/music/HtcMusic$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 4513
+    .line 4545
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2663,7 +2663,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -2671,7 +2671,7 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/htc/music/HtcMusic$NonUiHandler;->removeMessages(I)V
 
-    .line 4514
+    .line 4546
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$25;->this$0:Lcom/htc/music/HtcMusic;
@@ -2679,7 +2679,7 @@
     move-object/from16 v22, v0
 
     #getter for: Lcom/htc/music/HtcMusic;->mNonUiHandler:Lcom/htc/music/HtcMusic$NonUiHandler;
-    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4600(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
+    invoke-static/range {v22 .. v22}, Lcom/htc/music/HtcMusic;->access$4800(Lcom/htc/music/HtcMusic;)Lcom/htc/music/HtcMusic$NonUiHandler;
 
     move-result-object v22
 
@@ -2689,7 +2689,7 @@
 
     goto/16 :goto_0
 
-    .line 4517
+    .line 4549
     :cond_2d
     const-string v22, "[HtcMusic]"
 

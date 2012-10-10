@@ -17,6 +17,8 @@
 
 
 # static fields
+.field private static final MSG_ABANDON_AUDIO_FOCUS:I = 0x2711
+
 .field static final NAME:Ljava/lang/String; = "Audio Manager"
 
 .field private static final SCREEN_MODE_ILANDSCAPE:I = 0x3
@@ -68,10 +70,10 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 45
+    .line 47
     sput v0, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeAlarm:I
 
-    .line 46
+    .line 48
     sput v0, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeRing:I
 
     return-void
@@ -83,24 +85,22 @@
     .parameter "cameraThread"
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    .line 164
+    .line 166
     const-string v0, "Audio Manager"
 
     invoke-direct {p0, v0, v3, p1, p2}, Lcom/android/camera/component/CameraCompoment;-><init>(Ljava/lang/String;ZLcom/android/camera/HTCCamera;Lcom/android/camera/CameraThread;)V
 
-    .line 47
+    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SoundHandles:Ljava/util/ArrayList;
 
-    .line 48
+    .line 50
     new-instance v1, Landroid/media/SoundPool;
-
-    const/4 v2, 0x1
 
     invoke-static {}, Lcom/android/camera/DisplayDevice;->forceSutterSound()Z
 
@@ -108,28 +108,30 @@
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x4
+    const/4 v0, 0x7
 
     :goto_0
-    invoke-direct {v1, v2, v0, v3}, Landroid/media/SoundPool;-><init>(III)V
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v3, v0, v2}, Landroid/media/SoundPool;-><init>(III)V
 
     iput-object v1, p0, Lcom/android/camera/component/AudioManager;->m_SoundPool:Landroid/media/SoundPool;
 
-    .line 97
+    .line 99
     new-instance v0, Lcom/android/camera/component/AudioManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/AudioManager$1;-><init>(Lcom/android/camera/component/AudioManager;)V
 
     iput-object v0, p0, Lcom/android/camera/component/AudioManager;->m_AudioFocusChangeListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
-    .line 121
+    .line 123
     new-instance v0, Lcom/android/camera/component/AudioManager$2;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/AudioManager$2;-><init>(Lcom/android/camera/component/AudioManager;)V
 
     iput-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SoundLoadedListener:Landroid/media/SoundPool$OnLoadCompleteListener;
 
-    .line 165
+    .line 167
     const-string v0, "audio"
 
     invoke-virtual {p1, v0}, Lcom/android/camera/HTCCamera;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -140,24 +142,24 @@
 
     iput-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
-    .line 166
+    .line 168
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SoundPool:Landroid/media/SoundPool;
 
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_SoundLoadedListener:Landroid/media/SoundPool$OnLoadCompleteListener;
 
     invoke-virtual {v0, v1}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 167
+    .line 169
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     check-cast v0, Landroid/media/HtcIfAudioManager;
 
     iput-object v0, p0, Lcom/android/camera/component/AudioManager;->m_HtcAudioManager:Landroid/media/HtcIfAudioManager;
 
-    .line 168
+    .line 170
     return-void
 
-    .line 48
+    .line 50
     :cond_0
     const/4 v0, 0x2
 
@@ -169,7 +171,7 @@
     .parameter "x0"
 
     .prologue
-    .line 27
+    .line 28
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SoundHandles:Ljava/util/ArrayList;
 
     return-object v0
@@ -181,7 +183,7 @@
     .parameter "x1"
 
     .prologue
-    .line 27
+    .line 28
     invoke-direct {p0, p1}, Lcom/android/camera/component/AudioManager;->playInMemorySound(Lcom/android/camera/component/AudioManager$StreamHandle;)V
 
     return-void
@@ -192,7 +194,7 @@
     .parameter "x0"
 
     .prologue
-    .line 27
+    .line 28
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_HtcAudioManager:Landroid/media/HtcIfAudioManager;
 
     return-object v0
@@ -204,7 +206,7 @@
     .parameter "x1"
 
     .prologue
-    .line 27
+    .line 28
     invoke-direct {p0, p1}, Lcom/android/camera/component/AudioManager;->setVolumePanelOrientation(Lcom/android/camera/rotate/UIRotation;)V
 
     return-void
@@ -215,7 +217,7 @@
     .parameter "max"
 
     .prologue
-    .line 201
+    .line 222
     invoke-static {}, Lcom/android/camera/DisplayDevice;->forceSutterSound()Z
 
     move-result v0
@@ -228,7 +230,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 202
+    .line 223
     int-to-double v0, p1
 
     const-wide v2, 0x3feccccccccccccdL
@@ -241,11 +243,11 @@
 
     double-to-int v0, v0
 
-    .line 212
+    .line 233
     :goto_0
     return v0
 
-    .line 204
+    .line 225
     :cond_0
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -253,14 +255,14 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 206
+    .line 227
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v1, 0x7b
 
     if-ne v0, v1, :cond_1
 
-    .line 207
+    .line 228
     int-to-double v0, p1
 
     const-wide v2, 0x3fe999999999999aL
@@ -275,7 +277,7 @@
 
     goto :goto_0
 
-    .line 209
+    .line 230
     :cond_1
     mul-int/lit8 v0, p1, 0x1
 
@@ -289,7 +291,7 @@
 
     goto :goto_0
 
-    .line 212
+    .line 233
     :cond_2
     mul-int/lit8 v0, p1, 0x1
 
@@ -309,29 +311,29 @@
     .parameter "streamHandle"
 
     .prologue
-    .line 397
+    .line 422
     iget-boolean v0, p1, Lcom/android/camera/component/AudioManager$StreamHandle;->audioFocus:Z
 
     if-eqz v0, :cond_0
 
-    .line 399
+    .line 424
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "playInMemorySound() - Request audio focus"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 400
+    .line 425
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->requestAudioFocus()V
 
-    .line 406
+    .line 431
     :cond_0
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 408
+    .line 433
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SoundPool:Landroid/media/SoundPool;
 
@@ -353,39 +355,39 @@
 
     move-result v7
 
-    .line 409
+    .line 434
     .local v7, streamID:I
     if-eqz v7, :cond_2
 
-    .line 410
+    .line 435
     iput v7, p1, Lcom/android/camera/component/AudioManager$StreamHandle;->streamId:I
 
-    .line 413
+    .line 438
     :goto_0
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 418
+    .line 443
     iget-boolean v0, p1, Lcom/android/camera/component/AudioManager$StreamHandle;->audioFocus:Z
 
     if-eqz v0, :cond_1
 
-    .line 420
+    .line 445
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "playInMemorySound() - Abandon audio focus"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
+    .line 446
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->abandonAudioFocus()V
 
-    .line 424
+    .line 449
     :cond_1
     return-void
 
-    .line 412
+    .line 437
     :cond_2
     :try_start_2
     const-string v0, "AudioManager(Camera)"
@@ -396,7 +398,7 @@
 
     goto :goto_0
 
-    .line 413
+    .line 438
     .end local v7           #streamID:I
     :catchall_0
     move-exception v0
@@ -410,7 +412,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 418
+    .line 443
     :catchall_1
     move-exception v0
 
@@ -418,14 +420,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 420
+    .line 445
     const-string v1, "AudioManager(Camera)"
 
     const-string v2, "playInMemorySound() - Abandon audio focus"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
+    .line 446
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->abandonAudioFocus()V
 
     :cond_3
@@ -437,18 +439,18 @@
     .parameter "audioStreamType"
 
     .prologue
-    const/4 v5, 0x4
+    const/4 v5, 0x7
 
     const/4 v3, 0x2
 
     const/4 v4, -0x1
 
-    .line 495
+    .line 520
     const-class v2, Lcom/android/camera/component/AudioManager;
 
     monitor-enter v2
 
-    .line 497
+    .line 522
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
@@ -464,7 +466,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 501
+    .line 526
     :cond_0
     if-ne p1, v5, :cond_1
 
@@ -472,14 +474,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 502
+    .line 527
     monitor-exit v2
 
-    .line 533
+    .line 558
     :goto_0
     return-void
 
-    .line 503
+    .line 528
     :cond_1
     if-ne p1, v3, :cond_2
 
@@ -487,12 +489,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 504
+    .line 529
     monitor-exit v2
 
     goto :goto_0
 
-    .line 532
+    .line 557
     :catchall_0
     move-exception v1
 
@@ -502,7 +504,7 @@
 
     throw v1
 
-    .line 507
+    .line 532
     :cond_2
     :try_start_1
     const-string v1, "AudioManager(Camera)"
@@ -511,20 +513,20 @@
 
     invoke-static {v1, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 508
+    .line 533
     if-ne p1, v5, :cond_5
 
-    .line 510
+    .line 535
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/camera/component/AudioManager;->m_IsAlarmVolumeAdjusted:Z
 
-    .line 511
+    .line 536
     sget v1, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeAlarm:I
 
     if-ne v1, v4, :cond_3
 
-    .line 513
+    .line 538
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v1, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -533,7 +535,7 @@
 
     sput v1, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeAlarm:I
 
-    .line 514
+    .line 539
     const-string v1, "AudioManager(Camera)"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -558,7 +560,7 @@
 
     invoke-static {v1, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 528
+    .line 553
     :cond_3
     :goto_1
     const-string v1, "AudioManager(Camera)"
@@ -567,14 +569,14 @@
 
     invoke-static {v1, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 529
+    .line 554
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v1, p1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
     move-result v0
 
-    .line 530
+    .line 555
     .local v0, maxVoluume:I
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
@@ -586,25 +588,25 @@
 
     invoke-virtual {v1, p1, v3, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 532
+    .line 557
     .end local v0           #maxVoluume:I
     :cond_4
     monitor-exit v2
 
     goto :goto_0
 
-    .line 519
+    .line 544
     :cond_5
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/camera/component/AudioManager;->m_IsRingVolumeAdjusted:Z
 
-    .line 520
+    .line 545
     sget v1, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeRing:I
 
     if-ne v1, v4, :cond_3
 
-    .line 522
+    .line 547
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v1, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -613,7 +615,7 @@
 
     sput v1, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeRing:I
 
-    .line 523
+    .line 548
     const-string v1, "AudioManager(Camera)"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -648,7 +650,7 @@
     .parameter "rotation"
 
     .prologue
-    .line 550
+    .line 575
     sget-object v1, Lcom/android/camera/component/AudioManager$6;->$SwitchMap$com$android$camera$rotate$UIRotation:[I
 
     invoke-virtual {p1}, Lcom/android/camera/rotate/UIRotation;->ordinal()I
@@ -659,47 +661,47 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 562
+    .line 587
     const/4 v0, 0x1
 
-    .line 565
+    .line 590
     .local v0, panelRotation:I
     :goto_0
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_HtcAudioManager:Landroid/media/HtcIfAudioManager;
 
     invoke-interface {v1, v0}, Landroid/media/HtcIfAudioManager;->setVolumePanelOrientation(I)V
 
-    .line 566
+    .line 591
     return-void
 
-    .line 553
+    .line 578
     .end local v0           #panelRotation:I
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 554
+    .line 579
     .restart local v0       #panelRotation:I
     goto :goto_0
 
-    .line 556
+    .line 581
     .end local v0           #panelRotation:I
     :pswitch_1
     const/4 v0, 0x2
 
-    .line 557
+    .line 582
     .restart local v0       #panelRotation:I
     goto :goto_0
 
-    .line 559
+    .line 584
     .end local v0           #panelRotation:I
     :pswitch_2
     const/4 v0, 0x3
 
-    .line 560
+    .line 585
     .restart local v0       #panelRotation:I
     goto :goto_0
 
-    .line 550
+    .line 575
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -711,10 +713,10 @@
 
 # virtual methods
 .method public abandonAudioFocus()V
-    .locals 2
+    .locals 6
 
     .prologue
-    .line 176
+    .line 195
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->getCameraMode()Lcom/android/camera/CameraMode;
 
     move-result-object v0
@@ -723,14 +725,20 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 177
-    iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
+    .line 197
+    const/16 v2, 0x2711
 
-    iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_AudioFocusChangeListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    const-wide/16 v3, 0x96
 
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+    const/4 v5, 0x1
 
-    .line 178
+    move-object v0, p0
+
+    move-object v1, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/component/AudioManager;->sendMessage(Lcom/android/camera/component/Component;IJZ)Z
+
+    .line 199
     :cond_0
     return-void
 .end method
@@ -739,27 +747,27 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 208
     monitor-enter p0
 
-    .line 189
+    .line 210
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SoundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
-    .line 190
+    .line 211
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 193
+    .line 214
     invoke-super {p0}, Lcom/android/camera/component/CameraCompoment;->deinitializeOverride()V
 
-    .line 194
+    .line 215
     return-void
 
-    .line 190
+    .line 211
     :catchall_0
     move-exception v0
 
@@ -775,7 +783,7 @@
     .locals 2
 
     .prologue
-    .line 232
+    .line 253
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -786,7 +794,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 233
+    .line 254
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
@@ -799,7 +807,7 @@
 
     check-cast v0, Lcom/android/camera/CameraMode;
 
-    .line 234
+    .line 255
     :goto_0
     return-object v0
 
@@ -823,7 +831,7 @@
     .locals 2
 
     .prologue
-    .line 243
+    .line 264
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -834,7 +842,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 244
+    .line 265
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
@@ -847,7 +855,7 @@
 
     check-cast v0, Lcom/android/camera/CameraType;
 
-    .line 245
+    .line 266
     :goto_0
     return-object v0
 
@@ -872,7 +880,7 @@
     .parameter "audioStreamType"
 
     .prologue
-    .line 223
+    .line 244
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -882,19 +890,55 @@
     return v0
 .end method
 
+.method protected handleMessage(Landroid/os/Message;)V
+    .locals 2
+    .parameter "msg"
+
+    .prologue
+    .line 178
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 184
+    invoke-super {p0, p1}, Lcom/android/camera/component/CameraCompoment;->handleMessage(Landroid/os/Message;)V
+
+    .line 187
+    :goto_0
+    return-void
+
+    .line 181
+    :pswitch_0
+    iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
+
+    iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_AudioFocusChangeListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+
+    goto :goto_0
+
+    .line 178
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2711
+        :pswitch_0
+    .end packed-switch
+.end method
+
 .method protected initializeOverride()V
     .locals 5
 
     .prologue
-    .line 255
+    .line 276
     invoke-super {p0}, Lcom/android/camera/component/CameraCompoment;->initializeOverride()V
 
-    .line 258
+    .line 279
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 259
+    .line 280
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -910,7 +954,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 261
+    .line 282
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/AudioManager$3;
@@ -927,7 +971,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 275
+    .line 296
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->rotation:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/AudioManager$4;
@@ -936,7 +980,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 284
+    .line 305
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->actionScreenState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/AudioManager$5;
@@ -945,7 +989,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 296
+    .line 317
     :cond_0
     invoke-static {}, Lcom/android/camera/FeatureConfig;->canChangeZoomByVolumeKeys()Z
 
@@ -953,23 +997,23 @@
 
     if-eqz v1, :cond_1
 
-    .line 297
+    .line 318
     invoke-static {}, Lcom/android/camera/DisplayDevice;->forceSutterSound()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    const/4 v1, 0x4
+    const/4 v1, 0x7
 
     :goto_0
     invoke-direct {p0, v1}, Lcom/android/camera/component/AudioManager;->setAudioStreamVolume(I)V
 
-    .line 298
+    .line 319
     :cond_1
     return-void
 
-    .line 297
+    .line 318
     :cond_2
     const/4 v1, 0x2
 
@@ -981,7 +1025,7 @@
     .parameter "audioResId"
 
     .prologue
-    .line 306
+    .line 327
     const-string v2, "AudioManager(Camera)"
 
     const-string v3, "loadSoundToMemory("
@@ -994,10 +1038,10 @@
 
     invoke-static {v2, v3, v4, v5}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 309
+    .line 330
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->threadAccessCheck()V
 
-    .line 310
+    .line 331
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->getState()I
 
     move-result v2
@@ -1006,25 +1050,25 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 312
+    .line 333
     const-string v2, "AudioManager(Camera)"
 
     const-string v3, "loadSoundToMemory() - Component is not running"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 313
+    .line 334
     const/4 v0, 0x0
 
-    .line 323
+    .line 344
     :goto_0
     return-object v0
 
-    .line 317
+    .line 338
     :cond_0
     monitor-enter p0
 
-    .line 319
+    .line 340
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/component/AudioManager;->m_SoundPool:Landroid/media/SoundPool;
 
@@ -1038,7 +1082,7 @@
 
     move-result v1
 
-    .line 320
+    .line 341
     .local v1, soundId:I
     new-instance v0, Lcom/android/camera/component/AudioManager$SoundHandle;
 
@@ -1072,13 +1116,13 @@
 
     invoke-direct {v0, v2, v1}, Lcom/android/camera/component/AudioManager$SoundHandle;-><init>(Ljava/lang/String;I)V
 
-    .line 321
+    .line 342
     .local v0, handle:Lcom/android/camera/component/AudioManager$SoundHandle;
     iget-object v2, p0, Lcom/android/camera/component/AudioManager;->m_SoundHandles:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 322
+    .line 343
     const-string v2, "AudioManager(Camera)"
 
     const-string v3, "loadSoundToMemory() - Sound ID = "
@@ -1089,12 +1133,12 @@
 
     invoke-static {v2, v3, v4}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 323
+    .line 344
     monitor-exit p0
 
     goto :goto_0
 
-    .line 324
+    .line 345
     .end local v0           #handle:Lcom/android/camera/component/AudioManager$SoundHandle;
     .end local v1           #soundId:I
     :catchall_0
@@ -1116,27 +1160,27 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 352
+    .line 377
     if-nez p1, :cond_0
 
-    .line 354
+    .line 379
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "playInMemorySound() - Null handle"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 392
+    .line 417
     :goto_0
     return-object v7
 
-    .line 357
+    .line 382
     :cond_0
     instance-of v0, p1, Lcom/android/camera/component/AudioManager$SoundHandle;
 
     if-nez v0, :cond_1
 
-    .line 359
+    .line 384
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "playInMemorySound() - Invalid handle"
@@ -1145,11 +1189,11 @@
 
     goto :goto_0
 
-    .line 364
+    .line 389
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->threadAccessCheck()V
 
-    .line 365
+    .line 390
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->getState()I
 
     move-result v0
@@ -1158,7 +1202,7 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 367
+    .line 392
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "playInMemorySound() - Component is not running"
@@ -1167,7 +1211,7 @@
 
     goto :goto_0
 
-    .line 371
+    .line 396
     :cond_2
     const-string v0, "AudioManager(Camera)"
 
@@ -1181,10 +1225,10 @@
 
     move-object v6, p1
 
-    .line 374
+    .line 399
     check-cast v6, Lcom/android/camera/component/AudioManager$SoundHandle;
 
-    .line 375
+    .line 400
     .local v6, soundHandle:Lcom/android/camera/component/AudioManager$SoundHandle;
     new-instance v7, Lcom/android/camera/component/AudioManager$StreamHandle;
 
@@ -1210,7 +1254,7 @@
 
     invoke-direct {v7, v0, v6, p2, p3}, Lcom/android/camera/component/AudioManager$StreamHandle;-><init>(Ljava/lang/String;Lcom/android/camera/component/AudioManager$SoundHandle;IZ)V
 
-    .line 377
+    .line 402
     .local v7, streamHandle:Lcom/android/camera/component/AudioManager$StreamHandle;
     const-string v0, "AudioManager(Camera)"
 
@@ -1232,33 +1276,33 @@
 
     invoke-static/range {v0 .. v5}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 380
+    .line 405
     monitor-enter p0
 
-    .line 382
+    .line 407
     :try_start_0
     iget-boolean v0, v6, Lcom/android/camera/component/AudioManager$SoundHandle;->isLoaded:Z
 
     if-nez v0, :cond_3
 
-    .line 384
+    .line 409
     iget-object v0, v6, Lcom/android/camera/component/AudioManager$SoundHandle;->pendingStreams:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 385
+    .line 410
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "playInMemorySound() - Sound is not loaded yet, play later"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 386
+    .line 411
     monitor-exit p0
 
     goto :goto_0
 
-    .line 388
+    .line 413
     :catchall_0
     move-exception v0
 
@@ -1274,7 +1318,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 391
+    .line 416
     invoke-direct {p0, v7}, Lcom/android/camera/component/AudioManager;->playInMemorySound(Lcom/android/camera/component/AudioManager$StreamHandle;)V
 
     goto :goto_0
@@ -1284,12 +1328,17 @@
     .locals 1
 
     .prologue
-    .line 333
+    .line 356
+    const/16 v0, 0x2711
+
+    invoke-virtual {p0, v0}, Lcom/android/camera/component/AudioManager;->removeMessages(I)V
+
+    .line 358
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/AudioManager;->requestAudioFocus(I)V
 
-    .line 334
+    .line 359
     return-void
 .end method
 
@@ -1298,7 +1347,7 @@
     .parameter "durationHint"
 
     .prologue
-    .line 338
+    .line 363
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     iget-object v1, p0, Lcom/android/camera/component/AudioManager;->m_AudioFocusChangeListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
@@ -1307,7 +1356,7 @@
 
     invoke-virtual {v0, v1, v2, p1}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
-    .line 343
+    .line 368
     return-void
 .end method
 
@@ -1317,28 +1366,28 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 471
+    .line 496
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "restoreAudioStreamVolume()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 473
+    .line 498
     const-class v1, Lcom/android/camera/component/AudioManager;
 
     monitor-enter v1
 
-    .line 475
+    .line 500
     :try_start_0
     sget v0, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeAlarm:I
 
     if-eq v0, v5, :cond_0
 
-    .line 477
+    .line 502
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
-    const/4 v2, 0x4
+    const/4 v2, 0x7
 
     sget v3, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeAlarm:I
 
@@ -1346,18 +1395,18 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 478
+    .line 503
     const/4 v0, -0x1
 
     sput v0, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeAlarm:I
 
-    .line 480
+    .line 505
     :cond_0
     sget v0, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeRing:I
 
     if-eq v0, v5, :cond_1
 
-    .line 482
+    .line 507
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     const/4 v2, 0x2
@@ -1368,29 +1417,29 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 483
+    .line 508
     const/4 v0, -0x1
 
     sput v0, Lcom/android/camera/component/AudioManager;->m_OriginalVolumeRing:I
 
-    .line 485
+    .line 510
     :cond_1
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/camera/component/AudioManager;->m_IsAlarmVolumeAdjusted:Z
 
-    .line 486
+    .line 511
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/camera/component/AudioManager;->m_IsRingVolumeAdjusted:Z
 
-    .line 487
+    .line 512
     monitor-exit v1
 
-    .line 488
+    .line 513
     return-void
 
-    .line 487
+    .line 512
     :catchall_0
     move-exception v0
 
@@ -1406,12 +1455,12 @@
     .parameter "values"
 
     .prologue
-    .line 541
+    .line 566
     iget-object v0, p0, Lcom/android/camera/component/AudioManager;->m_SysAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->setParameters(Ljava/lang/String;)V
 
-    .line 542
+    .line 567
     return-void
 .end method
 
@@ -1420,27 +1469,27 @@
     .parameter "handle"
 
     .prologue
-    .line 433
+    .line 458
     if-nez p1, :cond_0
 
-    .line 435
+    .line 460
     const-string v2, "AudioManager(Camera)"
 
     const-string v3, "stopInMemorySound() - Null handle"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 464
+    .line 489
     :goto_0
     return-void
 
-    .line 438
+    .line 463
     :cond_0
     instance-of v2, p1, Lcom/android/camera/component/AudioManager$StreamHandle;
 
     if-nez v2, :cond_1
 
-    .line 440
+    .line 465
     const-string v2, "AudioManager(Camera)"
 
     const-string v3, "stopInMemorySound() - Invalid handle"
@@ -1449,11 +1498,11 @@
 
     goto :goto_0
 
-    .line 445
+    .line 470
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->threadAccessCheck()V
 
-    .line 446
+    .line 471
     invoke-virtual {p0}, Lcom/android/camera/component/AudioManager;->getState()I
 
     move-result v2
@@ -1462,7 +1511,7 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 448
+    .line 473
     const-string v2, "AudioManager(Camera)"
 
     const-string v3, "stopInMemorySound() - Component is not running"
@@ -1471,7 +1520,7 @@
 
     goto :goto_0
 
-    .line 452
+    .line 477
     :cond_2
     const-string v2, "AudioManager(Camera)"
 
@@ -1483,10 +1532,10 @@
 
     invoke-static {v2, v3, v4, v5}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 455
+    .line 480
     monitor-enter p0
 
-    .line 457
+    .line 482
     :try_start_0
     move-object v0, p1
 
@@ -1494,7 +1543,7 @@
 
     move-object v1, v0
 
-    .line 458
+    .line 483
     .local v1, streamHandle:Lcom/android/camera/component/AudioManager$StreamHandle;
     iget-object v2, v1, Lcom/android/camera/component/AudioManager$StreamHandle;->sound:Lcom/android/camera/component/AudioManager$SoundHandle;
 
@@ -1502,14 +1551,14 @@
 
     if-eqz v2, :cond_3
 
-    .line 459
+    .line 484
     iget-object v2, p0, Lcom/android/camera/component/AudioManager;->m_SoundPool:Landroid/media/SoundPool;
 
     iget v3, v1, Lcom/android/camera/component/AudioManager$StreamHandle;->streamId:I
 
     invoke-virtual {v2, v3}, Landroid/media/SoundPool;->stop(I)V
 
-    .line 462
+    .line 487
     :goto_1
     monitor-exit p0
 
@@ -1525,7 +1574,7 @@
 
     throw v2
 
-    .line 461
+    .line 486
     .restart local v1       #streamHandle:Lcom/android/camera/component/AudioManager$StreamHandle;
     :cond_3
     :try_start_1

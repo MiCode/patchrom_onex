@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 190
+    .line 199
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .parameter "in"
 
     .prologue
-    .line 192
+    .line 201
     new-instance v0, Lcom/htc/lockscreen/telephony/TelephonyState;
 
     invoke-direct {v0, p1}, Lcom/htc/lockscreen/telephony/TelephonyState;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +58,7 @@
     .parameter "x0"
 
     .prologue
-    .line 190
+    .line 199
     invoke-virtual {p0, p1}, Lcom/htc/lockscreen/telephony/TelephonyState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/htc/lockscreen/telephony/TelephonyState;
 
     move-result-object v0
@@ -71,7 +71,7 @@
     .parameter "size"
 
     .prologue
-    .line 196
+    .line 205
     new-array v0, p1, [Lcom/htc/lockscreen/telephony/TelephonyState;
 
     return-object v0
@@ -82,7 +82,7 @@
     .parameter "x0"
 
     .prologue
-    .line 190
+    .line 199
     invoke-virtual {p0, p1}, Lcom/htc/lockscreen/telephony/TelephonyState$1;->newArray(I)[Lcom/htc/lockscreen/telephony/TelephonyState;
 
     move-result-object v0

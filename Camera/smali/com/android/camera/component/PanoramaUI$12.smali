@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1579
+    .line 1584
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$12;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1582
+    .line 1587
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -79,17 +79,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 1583
+    .line 1588
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$12;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #calls: Lcom/android/camera/component/PanoramaUI;->openCaptureUI()V
     invoke-static {v0}, Lcom/android/camera/component/PanoramaUI;->access$2100(Lcom/android/camera/component/PanoramaUI;)V
 
-    .line 1586
+    .line 1591
     :goto_0
     return-void
 
-    .line 1585
+    .line 1590
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$12;->this$0:Lcom/android/camera/component/PanoramaUI;
 

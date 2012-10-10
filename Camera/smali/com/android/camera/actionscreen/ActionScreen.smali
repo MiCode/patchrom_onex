@@ -51,17 +51,17 @@
     .parameter "layoutId"
 
     .prologue
-    .line 50
+    .line 48
     const/4 v0, 0x1
 
     const v1, 0x7f080055
 
     invoke-direct {p0, p1, v0, p2, v1}, Lcom/android/camera/component/UIComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/HTCCamera;I)V
 
-    .line 53
+    .line 51
     iput p3, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_LayoutID:I
 
-    .line 56
+    .line 54
     const-string v0, "ActionScreen.CloseReason"
 
     sget-object v1, Lcom/android/camera/actionscreen/ActionScreenCloseReason;->Unknown:Lcom/android/camera/actionscreen/ActionScreenCloseReason;
@@ -72,7 +72,7 @@
 
     iput-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->closeReason:Lcom/android/camera/property/Property;
 
-    .line 57
+    .line 55
     const-string v0, "ActionScreen.State"
 
     sget-object v1, Lcom/android/camera/UIState;->Closed:Lcom/android/camera/UIState;
@@ -83,7 +83,7 @@
 
     iput-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
-    .line 58
+    .line 56
     return-void
 .end method
 
@@ -92,7 +92,7 @@
     .parameter "x0"
 
     .prologue
-    .line 25
+    .line 23
     iget-boolean v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsPrepared:Z
 
     return v0
@@ -103,7 +103,7 @@
     .parameter "x0"
 
     .prologue
-    .line 25
+    .line 23
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -114,7 +114,7 @@
     .parameter "x0"
 
     .prologue
-    .line 25
+    .line 23
     iget-boolean v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsMediaSaved:Z
 
     return v0
@@ -126,7 +126,7 @@
     .parameter "x1"
 
     .prologue
-    .line 25
+    .line 23
     iput-boolean p1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsMediaSaved:Z
 
     return p1
@@ -138,7 +138,7 @@
     .parameter "x1"
 
     .prologue
-    .line 25
+    .line 23
     iput-object p1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_LatestSavedMedia:Lcom/android/camera/MediaEventArgs;
 
     return-object p1
@@ -149,7 +149,7 @@
     .parameter "x0"
 
     .prologue
-    .line 25
+    .line 23
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -163,15 +163,15 @@
     .parameter "animation"
 
     .prologue
-    .line 91
+    .line 89
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->closeReason:Lcom/android/camera/property/Property;
 
     invoke-virtual {v0, p0, p1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 92
+    .line 90
     invoke-virtual {p0, p2}, Lcom/android/camera/actionscreen/ActionScreen;->close(Z)V
 
-    .line 93
+    .line 91
     return-void
 .end method
 
@@ -180,14 +180,14 @@
     .parameter "animation"
 
     .prologue
-    .line 65
+    .line 63
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "close() - start"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
+    .line 66
     iget-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     invoke-virtual {v1}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -198,18 +198,18 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 70
+    .line 68
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Action screen is already closed"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 88
+    .line 86
     :goto_0
     return-void
 
-    .line 75
+    .line 73
     :cond_0
     const-class v1, Lcom/android/camera/ICaptureUIBlockManager;
 
@@ -219,11 +219,11 @@
 
     check-cast v0, Lcom/android/camera/ICaptureUIBlockManager;
 
-    .line 76
+    .line 74
     .local v0, blockManager:Lcom/android/camera/ICaptureUIBlockManager;
     if-eqz v0, :cond_1
 
-    .line 77
+    .line 75
     const-string v1, "Closing action screen"
 
     const/4 v2, 0x0
@@ -234,7 +234,7 @@
 
     iput-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_ClosingBlockHandle:Lcom/android/camera/Handle;
 
-    .line 80
+    .line 78
     :cond_1
     iget-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
@@ -242,16 +242,16 @@
 
     invoke-virtual {v1, p0, v2}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 81
+    .line 79
     invoke-virtual {p0, p1}, Lcom/android/camera/actionscreen/ActionScreen;->closeActionScreen(Z)V
 
-    .line 84
+    .line 82
     if-nez p1, :cond_2
 
-    .line 85
+    .line 83
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/ActionScreen;->completeCloseActionScreen()V
 
-    .line 87
+    .line 85
     :cond_2
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -271,14 +271,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 101
+    .line 99
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "completeCloseActionScreen() - start"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 104
+    .line 102
     iget-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     invoke-virtual {v1}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -289,18 +289,18 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 106
+    .line 104
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Action screen is not closing"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 123
+    .line 121
     :goto_0
     return-void
 
-    .line 111
+    .line 109
     :cond_0
     const-class v1, Lcom/android/camera/ICaptureUIBlockManager;
 
@@ -310,42 +310,42 @@
 
     check-cast v0, Lcom/android/camera/ICaptureUIBlockManager;
 
-    .line 112
+    .line 110
     .local v0, blockManager:Lcom/android/camera/ICaptureUIBlockManager;
     if-eqz v0, :cond_1
 
-    .line 113
+    .line 111
     iget-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_ClosingBlockHandle:Lcom/android/camera/Handle;
 
     invoke-interface {v0, v1}, Lcom/android/camera/ICaptureUIBlockManager;->unblockCaptureUI(Lcom/android/camera/Handle;)Z
 
-    .line 114
+    .line 112
     :cond_1
     iput-object v3, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_ClosingBlockHandle:Lcom/android/camera/Handle;
 
-    .line 117
+    .line 115
     iget-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     sget-object v2, Lcom/android/camera/UIState;->Closed:Lcom/android/camera/UIState;
 
     invoke-virtual {v1, p0, v2}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 118
+    .line 116
     iget-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->closeReason:Lcom/android/camera/property/Property;
 
     sget-object v2, Lcom/android/camera/actionscreen/ActionScreenCloseReason;->AutoClose:Lcom/android/camera/actionscreen/ActionScreenCloseReason;
 
     invoke-virtual {v1, p0, v2}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 119
+    .line 117
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsPrepared:Z
 
-    .line 120
+    .line 118
     iput-object v3, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_LatestSavedMedia:Lcom/android/camera/MediaEventArgs;
 
-    .line 122
+    .line 120
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "completeCloseActionScreen() - end"
@@ -359,13 +359,13 @@
     .locals 0
 
     .prologue
-    .line 132
+    .line 130
     invoke-static {p0}, Lcom/android/camera/property/Property;->destroyAllProperties(Ljava/lang/Object;)V
 
-    .line 135
+    .line 133
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->deinitializeOverride()V
 
-    .line 136
+    .line 134
     return-void
 .end method
 
@@ -373,124 +373,91 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 141
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_Layout:Landroid/view/View;
 
     return-object v0
 .end method
 
 .method protected initializeOverride()V
-    .locals 7
+    .locals 6
 
     .prologue
-    .line 153
+    .line 151
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->initializeOverride()V
 
-    .line 156
+    .line 154
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/ActionScreen;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 157
+    .line 155
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
-    iget-object v5, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
+    iget-object v4, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
-    iget-object v6, v0, Lcom/android/camera/HTCCamera;->actionScreenState:Lcom/android/camera/property/Property;
+    iget-object v5, v0, Lcom/android/camera/HTCCamera;->actionScreenState:Lcom/android/camera/property/Property;
 
-    invoke-virtual {v0, v5, v6}, Lcom/android/camera/HTCCamera;->bindProperties(Lcom/android/camera/property/Property;Lcom/android/camera/property/Property;)V
+    invoke-virtual {v0, v4, v5}, Lcom/android/camera/HTCCamera;->bindProperties(Lcom/android/camera/property/Property;Lcom/android/camera/property/Property;)V
 
-    .line 158
-    iget-object v5, p0, Lcom/android/camera/actionscreen/ActionScreen;->closeReason:Lcom/android/camera/property/Property;
+    .line 156
+    iget-object v4, p0, Lcom/android/camera/actionscreen/ActionScreen;->closeReason:Lcom/android/camera/property/Property;
 
-    iget-object v6, v0, Lcom/android/camera/HTCCamera;->actionScreenCloseReason:Lcom/android/camera/property/Property;
+    iget-object v5, v0, Lcom/android/camera/HTCCamera;->actionScreenCloseReason:Lcom/android/camera/property/Property;
 
-    invoke-virtual {v0, v5, v6}, Lcom/android/camera/HTCCamera;->bindProperties(Lcom/android/camera/property/Property;Lcom/android/camera/property/Property;)V
+    invoke-virtual {v0, v4, v5}, Lcom/android/camera/HTCCamera;->bindProperties(Lcom/android/camera/property/Property;Lcom/android/camera/property/Property;)V
 
-    .line 161
-    iget-object v5, v0, Lcom/android/camera/HTCCamera;->keyDownEvent:Lcom/android/camera/event/Event;
+    .line 159
+    iget-object v4, v0, Lcom/android/camera/HTCCamera;->keyDownEvent:Lcom/android/camera/event/Event;
 
-    new-instance v6, Lcom/android/camera/actionscreen/ActionScreen$1;
+    new-instance v5, Lcom/android/camera/actionscreen/ActionScreen$1;
 
-    invoke-direct {v6, p0}, Lcom/android/camera/actionscreen/ActionScreen$1;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
+    invoke-direct {v5, p0}, Lcom/android/camera/actionscreen/ActionScreen$1;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
 
-    invoke-virtual {v5, v6}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
+    invoke-virtual {v4, v5}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 169
-    iget-object v5, v0, Lcom/android/camera/HTCCamera;->keyUpEvent:Lcom/android/camera/event/Event;
+    .line 167
+    iget-object v4, v0, Lcom/android/camera/HTCCamera;->keyUpEvent:Lcom/android/camera/event/Event;
 
-    new-instance v6, Lcom/android/camera/actionscreen/ActionScreen$2;
+    new-instance v5, Lcom/android/camera/actionscreen/ActionScreen$2;
 
-    invoke-direct {v6, p0}, Lcom/android/camera/actionscreen/ActionScreen$2;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
+    invoke-direct {v5, p0}, Lcom/android/camera/actionscreen/ActionScreen$2;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
 
-    invoke-virtual {v5, v6}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
+    invoke-virtual {v4, v5}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 179
+    .line 177
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/ActionScreen;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v1
 
-    .line 180
+    .line 178
     .local v1, cameraThread:Lcom/android/camera/CameraThread;
-    invoke-virtual {v1}, Lcom/android/camera/CameraThread;->getHandler()Landroid/os/Handler;
+    new-instance v2, Lcom/android/camera/actionscreen/ActionScreen$3;
 
-    move-result-object v2
+    invoke-direct {v2, p0}, Lcom/android/camera/actionscreen/ActionScreen$3;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
 
-    .line 181
-    .local v2, cameraThreadHandler:Landroid/os/Handler;
-    if-nez v2, :cond_0
+    .line 203
+    .local v2, captureFailedEventHandler:Lcom/android/camera/event/EventHandler;,"Lcom/android/camera/event/EventHandler<Lcom/android/camera/event/EventArgs;>;"
+    new-instance v3, Lcom/android/camera/actionscreen/ActionScreen$4;
 
-    .line 183
-    iget-object v5, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+    invoke-direct {v3, p0}, Lcom/android/camera/actionscreen/ActionScreen$4;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
 
-    const-string v6, "cameraThreadHandler == null"
+    .line 238
+    .local v3, mediaSavedEventHandler:Lcom/android/camera/event/EventHandler;,"Lcom/android/camera/event/EventHandler<Lcom/android/camera/MediaEventArgs;>;"
+    new-instance v4, Lcom/android/camera/actionscreen/ActionScreen$5;
 
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, p0, v1, v3, v2}, Lcom/android/camera/actionscreen/ActionScreen$5;-><init>(Lcom/android/camera/actionscreen/ActionScreen;Lcom/android/camera/CameraThread;Lcom/android/camera/event/EventHandler;Lcom/android/camera/event/EventHandler;)V
 
-    .line 250
-    :goto_0
-    return-void
-
-    .line 186
-    :cond_0
-    new-instance v3, Lcom/android/camera/actionscreen/ActionScreen$3;
-
-    invoke-direct {v3, p0}, Lcom/android/camera/actionscreen/ActionScreen$3;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
-
-    .line 211
-    .local v3, captureFailedEventHandler:Lcom/android/camera/event/EventHandler;,"Lcom/android/camera/event/EventHandler<Lcom/android/camera/event/EventArgs;>;"
-    new-instance v4, Lcom/android/camera/actionscreen/ActionScreen$4;
-
-    invoke-direct {v4, p0}, Lcom/android/camera/actionscreen/ActionScreen$4;-><init>(Lcom/android/camera/actionscreen/ActionScreen;)V
-
-    .line 246
-    .local v4, mediaSavedEventHandler:Lcom/android/camera/event/EventHandler;,"Lcom/android/camera/event/EventHandler<Lcom/android/camera/MediaEventArgs;>;"
-    iget-object v5, v1, Lcom/android/camera/CameraThread;->mediaSavedEvent:Lcom/android/camera/event/Event;
-
-    invoke-static {v5, v2, v4}, Lcom/android/camera/event/EventUtility;->addHandlerAsync(Lcom/android/camera/event/Event;Landroid/os/Handler;Lcom/android/camera/event/EventHandler;)V
-
-    .line 247
-    iget-object v5, v1, Lcom/android/camera/CameraThread;->mediaSaveFailedEvent:Lcom/android/camera/event/Event;
-
-    invoke-static {v5, v2, v4}, Lcom/android/camera/event/EventUtility;->addHandlerAsync(Lcom/android/camera/event/Event;Landroid/os/Handler;Lcom/android/camera/event/EventHandler;)V
-
-    .line 248
-    iget-object v5, v1, Lcom/android/camera/CameraThread;->recordingFailedEvent:Lcom/android/camera/event/Event;
-
-    invoke-static {v5, v2, v3}, Lcom/android/camera/event/EventUtility;->addHandlerAsync(Lcom/android/camera/event/Event;Landroid/os/Handler;Lcom/android/camera/event/EventHandler;)V
+    invoke-virtual {v1, v4}, Lcom/android/camera/CameraThread;->invokeAsync(Ljava/lang/Runnable;)Z
 
     .line 249
-    iget-object v5, v1, Lcom/android/camera/CameraThread;->takingPictureFailedEvent:Lcom/android/camera/event/Event;
-
-    invoke-static {v5, v2, v3}, Lcom/android/camera/event/EventUtility;->addHandlerAsync(Lcom/android/camera/event/Event;Landroid/os/Handler;Lcom/android/camera/event/EventHandler;)V
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public final isClosing()Z
     .locals 2
 
     .prologue
-    .line 257
+    .line 256
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -516,7 +483,7 @@
     .locals 1
 
     .prologue
-    .line 265
+    .line 264
     iget-boolean v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsMediaSaved:Z
 
     return v0
@@ -526,7 +493,7 @@
     .locals 2
 
     .prologue
-    .line 273
+    .line 272
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -552,7 +519,7 @@
     .locals 2
 
     .prologue
-    .line 281
+    .line 280
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -578,14 +545,14 @@
     .locals 2
 
     .prologue
-    .line 289
+    .line 288
     sget-object v0, Lcom/android/camera/actionscreen/ActionScreenCloseReason;->AutoClose:Lcom/android/camera/actionscreen/ActionScreenCloseReason;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/actionscreen/ActionScreen;->close(Lcom/android/camera/actionscreen/ActionScreenCloseReason;Z)V
 
-    .line 290
+    .line 289
     return-void
 .end method
 
@@ -595,7 +562,7 @@
     .parameter "e"
 
     .prologue
-    .line 297
+    .line 296
     const/4 v0, 0x1
 
     return v0
@@ -607,7 +574,7 @@
     .parameter "e"
 
     .prologue
-    .line 305
+    .line 304
     const/4 v0, 0x1
 
     return v0
@@ -618,7 +585,7 @@
     .parameter "e"
 
     .prologue
-    .line 312
+    .line 311
     return-void
 .end method
 
@@ -626,14 +593,14 @@
     .locals 4
 
     .prologue
-    .line 319
+    .line 318
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "open() - start"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 322
+    .line 321
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -644,24 +611,24 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 324
+    .line 323
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "Action screen is not closed"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
+    .line 346
     :goto_0
     return-void
 
-    .line 327
+    .line 326
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsPrepared:Z
 
     if-nez v0, :cond_1
 
-    .line 329
+    .line 328
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "Action screen is not prepared"
@@ -670,7 +637,7 @@
 
     goto :goto_0
 
-    .line 334
+    .line 333
     :cond_1
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
@@ -678,17 +645,17 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 335
+    .line 334
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/ActionScreen;->openActionScreen()V
 
-    .line 336
+    .line 335
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->state:Lcom/android/camera/property/Property;
 
     sget-object v1, Lcom/android/camera/UIState;->Opened:Lcom/android/camera/UIState;
 
     invoke-virtual {v0, p0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 339
+    .line 338
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_LatestSavedMedia:Lcom/android/camera/MediaEventArgs;
 
     if-eqz v0, :cond_2
@@ -709,22 +676,22 @@
 
     if-nez v0, :cond_2
 
-    .line 341
+    .line 340
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsMediaSaved:Z
 
-    .line 342
+    .line 341
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_LatestSavedMedia:Lcom/android/camera/MediaEventArgs;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/actionscreen/ActionScreen;->onMediaSaveCompleted(Lcom/android/camera/MediaEventArgs;)V
 
-    .line 343
+    .line 342
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_LatestSavedMedia:Lcom/android/camera/MediaEventArgs;
 
-    .line 346
+    .line 345
     :cond_2
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -742,14 +709,14 @@
     .locals 3
 
     .prologue
-    .line 355
+    .line 354
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "prepare() - start"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 358
+    .line 357
     iget-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_Layout:Landroid/view/View;
 
     if-nez v1, :cond_0
@@ -758,7 +725,7 @@
 
     if-lez v1, :cond_0
 
-    .line 360
+    .line 359
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/ActionScreen;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
@@ -767,7 +734,7 @@
 
     move-result-object v0
 
-    .line 361
+    .line 360
     .local v0, inflater:Landroid/view/LayoutInflater;
     iget v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_LayoutID:I
 
@@ -779,7 +746,7 @@
 
     iput-object v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_Layout:Landroid/view/View;
 
-    .line 362
+    .line 361
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/ActionScreen;->getBaseLayout()Landroid/view/View;
 
     move-result-object v1
@@ -790,29 +757,29 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 366
+    .line 365
     .end local v0           #inflater:Landroid/view/LayoutInflater;
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsMediaSaved:Z
 
-    .line 369
+    .line 368
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/ActionScreen;->prepareActionScreen()V
 
-    .line 370
+    .line 369
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/camera/actionscreen/ActionScreen;->m_IsPrepared:Z
 
-    .line 372
+    .line 371
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "prepare() - end"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 373
+    .line 372
     return-void
 .end method
 

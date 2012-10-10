@@ -219,7 +219,7 @@
     .parameter "params"
 
     .prologue
-    .line 1136
+    .line 1135
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     :try_end_0
@@ -229,11 +229,11 @@
 
     return-object v1
 
-    .line 1137
+    .line 1136
     :catch_0
     move-exception v0
 
-    .line 1138
+    .line 1137
     .local v0, e:Ljava/lang/NoSuchMethodException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -287,7 +287,7 @@
     .parameter "params"
 
     .prologue
-    .line 1148
+    .line 1147
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -298,11 +298,11 @@
 
     return-object v2
 
-    .line 1149
+    .line 1148
     :catch_0
     move-exception v1
 
-    .line 1150
+    .line 1149
     .local v1, e:Ljava/lang/IllegalAccessException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -312,43 +312,43 @@
 
     throw v2
 
-    .line 1153
+    .line 1152
     .end local v1           #e:Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v1
 
-    .line 1154
+    .line 1153
     .local v1, e:Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    .line 1155
+    .line 1154
     .local v0, cause:Ljava/lang/Throwable;
     instance-of v2, v0, Ljava/lang/RuntimeException;
 
     if-eqz v2, :cond_0
 
-    .line 1156
+    .line 1155
     check-cast v0, Ljava/lang/RuntimeException;
 
     .end local v0           #cause:Ljava/lang/Throwable;
     throw v0
 
-    .line 1157
+    .line 1156
     .restart local v0       #cause:Ljava/lang/Throwable;
     :cond_0
     instance-of v2, v0, Ljava/lang/Error;
 
     if-eqz v2, :cond_1
 
-    .line 1158
+    .line 1157
     check-cast v0, Ljava/lang/Error;
 
     .end local v0           #cause:Ljava/lang/Throwable;
     throw v0
 
-    .line 1160
+    .line 1159
     .restart local v0       #cause:Ljava/lang/Throwable;
     :cond_1
     new-instance v2, Ljava/lang/RuntimeException;
@@ -380,7 +380,7 @@
     .end annotation
 
     .prologue
-    .line 930
+    .line 929
     .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<TType;>;"
     invoke-virtual {p0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
@@ -388,7 +388,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 931
+    .line 930
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must call newRepeatedGeneratedExtension() for repeated types."
@@ -397,7 +397,7 @@
 
     throw v0
 
-    .line 934
+    .line 933
     :cond_0
     new-instance v0, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;
 
@@ -430,7 +430,7 @@
     .end annotation
 
     .prologue
-    .line 946
+    .line 945
     .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<TType;>;"
     invoke-virtual {p0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
@@ -438,7 +438,7 @@
 
     if-nez v0, :cond_0
 
-    .line 947
+    .line 946
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must call newGeneratedExtension() for non-repeated types."
@@ -447,7 +447,7 @@
 
     throw v0
 
-    .line 950
+    .line 949
     :cond_0
     new-instance v0, Lcom/htc/protobuf/GeneratedMessage$GeneratedExtension;
 

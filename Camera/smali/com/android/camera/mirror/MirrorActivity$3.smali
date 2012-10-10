@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 190
+    .line 201
     invoke-static {}, Lcom/android/camera/DisplayDevice$Resolution;->values()[Lcom/android/camera/DisplayDevice$Resolution;
 
     move-result-object v0

@@ -154,7 +154,7 @@
 
     const/4 v2, 0x0
 
-    .line 1111
+    .line 1122
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 101
@@ -212,34 +212,34 @@
 
     iput-boolean v0, p0, Lcom/htc/util/mail/Folder;->mIsMessageListFirstTimeQuery:Z
 
-    .line 1112
+    .line 1123
     iput-object p1, p0, Lcom/htc/util/mail/Folder;->mContext:Landroid/content/Context;
 
-    .line 1114
+    .line 1125
     iput-object p2, p0, Lcom/htc/util/mail/Folder;->mBelongAccount:Lcom/htc/util/mail/MailAccount;
 
-    .line 1115
+    .line 1126
     iput-object p3, p0, Lcom/htc/util/mail/Folder;->mBelongRealAccount:Lcom/htc/util/mail/MailAccount;
 
-    .line 1116
+    .line 1127
     iput-object p4, p0, Lcom/htc/util/mail/Folder;->mFolderPathName:Ljava/lang/String;
 
-    .line 1117
+    .line 1128
     iput-object p5, p0, Lcom/htc/util/mail/Folder;->mFolderShortName:Ljava/lang/String;
 
-    .line 1118
+    .line 1129
     iput-wide p6, p0, Lcom/htc/util/mail/Folder;->mFolderId:J
 
-    .line 1119
+    .line 1130
     iput p8, p0, Lcom/htc/util/mail/Folder;->mDefaultFolder:I
 
-    .line 1120
+    .line 1131
     iput p9, p0, Lcom/htc/util/mail/Folder;->mServerId:I
 
-    .line 1121
+    .line 1132
     iput p10, p0, Lcom/htc/util/mail/Folder;->mParentId:I
 
-    .line 1123
+    .line 1134
     return-void
 .end method
 
@@ -275,18 +275,18 @@
     .parameter "priorityMask"
 
     .prologue
-    .line 960
+    .line 971
     and-int/lit8 v2, p1, 0x7
 
     if-nez v2, :cond_0
 
     const-string v2, ""
 
-    .line 982
+    .line 993
     :goto_0
     return-object v2
 
-    .line 962
+    .line 973
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -298,11 +298,11 @@
 
     move-result-object v1
 
-    .line 963
+    .line 974
     .local v1, sb:Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    .line 965
+    .line 976
     .local v0, isSet:Z
     const/4 v2, 0x1
 
@@ -310,15 +310,15 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 966
+    .line 977
     const-string v2, " _importance=0 "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 967
+    .line 978
     const/4 v0, 0x1
 
-    .line 970
+    .line 981
     :cond_1
     const/4 v2, 0x2
 
@@ -326,23 +326,23 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 971
+    .line 982
     if-eqz v0, :cond_2
 
     const-string v2, " OR "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 972
+    .line 983
     :cond_2
     const-string v2, " _importance=1 "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 973
+    .line 984
     const/4 v0, 0x1
 
-    .line 976
+    .line 987
     :cond_3
     const/4 v2, 0x4
 
@@ -350,23 +350,23 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 977
+    .line 988
     if-eqz v0, :cond_4
 
     const-string v2, " OR "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 978
+    .line 989
     :cond_4
     const-string v2, " _importance=2 "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 979
+    .line 990
     const/4 v0, 0x1
 
-    .line 982
+    .line 993
     :cond_5
     const-string v2, ") "
 
@@ -386,28 +386,28 @@
     .parameter "readStatus"
 
     .prologue
-    .line 949
+    .line 960
     if-nez p1, :cond_0
 
-    .line 950
+    .line 961
     const-string v0, " AND _read=1"
 
-    .line 954
+    .line 965
     :goto_0
     return-object v0
 
-    .line 951
+    .line 962
     :cond_0
     const/4 v0, 0x1
 
     if-ne v0, p1, :cond_1
 
-    .line 952
+    .line 963
     const-string v0, " AND _read=0"
 
     goto :goto_0
 
-    .line 954
+    .line 965
     :cond_1
     const-string v0, ""
 
@@ -429,17 +429,17 @@
     .end annotation
 
     .prologue
-    .line 986
+    .line 997
     .local p1, recipients:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez p1, :cond_0
 
     const-string v3, ""
 
-    .line 998
+    .line 1009
     :goto_0
     return-object v3
 
-    .line 987
+    .line 998
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -451,19 +451,19 @@
 
     goto :goto_0
 
-    .line 989
+    .line 1000
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 990
+    .line 1001
     .local v2, sb:Ljava/lang/StringBuilder;
     const-string v3, " AND ("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 991
+    .line 1002
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -482,7 +482,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 992
+    .line 1003
     .local v1, r:Ljava/lang/String;
     const-string v3, "_to like \"%"
 
@@ -500,135 +500,24 @@
 
     goto :goto_1
 
-    .line 996
+    .line 1007
     .end local v1           #r:Ljava/lang/String;
     :cond_2
     const-string v3, "\"false\""
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 997
+    .line 1008
     const-string v3, ")"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 998
+    .line 1009
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     goto :goto_0
-.end method
-
-.method private isInList(Lcom/htc/util/mail/Folder$BasicMessageInfo;Ljava/util/ArrayList;)Z
-    .locals 8
-    .parameter "info"
-    .parameter
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/htc/util/mail/Folder$BasicMessageInfo;",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/htc/util/mail/Folder$BasicMessageInfo;",
-            ">;)Z"
-        }
-    .end annotation
-
-    .prologue
-    .line 842
-    .local p2, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/Folder$BasicMessageInfo;>;"
-    monitor-enter p2
-
-    .line 844
-    :try_start_0
-    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    .line 845
-    .local v3, size:I
-    const/4 v1, 0x0
-
-    .local v1, i:I
-    :goto_0
-    if-ge v1, v3, :cond_1
-
-    .line 846
-    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/util/mail/Folder$BasicMessageInfo;
-
-    .line 847
-    .local v2, item:Lcom/htc/util/mail/Folder$BasicMessageInfo;
-    iget-wide v4, v2, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
-
-    iget-wide v6, p1, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    cmp-long v4, v4, v6
-
-    if-nez v4, :cond_0
-
-    const/4 v4, 0x1
-
-    :try_start_1
-    monitor-exit p2
-
-    .line 853
-    .end local v1           #i:I
-    .end local v2           #item:Lcom/htc/util/mail/Folder$BasicMessageInfo;
-    .end local v3           #size:I
-    :goto_1
-    return v4
-
-    .line 845
-    .restart local v1       #i:I
-    .restart local v2       #item:Lcom/htc/util/mail/Folder$BasicMessageInfo;
-    .restart local v3       #size:I
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 849
-    .end local v1           #i:I
-    .end local v2           #item:Lcom/htc/util/mail/Folder$BasicMessageInfo;
-    .end local v3           #size:I
-    :catch_0
-    move-exception v0
-
-    .line 850
-    .local v0, e:Ljava/lang/Exception;
-    const-string v4, "Folder"
-
-    const-string v5, "isInList exception "
-
-    invoke-static {v4, v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 852
-    .end local v0           #e:Ljava/lang/Exception;
-    :cond_1
-    monitor-exit p2
-
-    .line 853
-    const/4 v4, 0x0
-
-    goto :goto_1
-
-    .line 852
-    :catchall_0
-    move-exception v4
-
-    monitor-exit p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v4
 .end method
 
 .method private isMessagesExist()Z
@@ -775,13 +664,13 @@
     .end annotation
 
     .prologue
-    .line 1153
+    .line 1164
     invoke-virtual {p0}, Lcom/htc/util/mail/Folder;->release()V
 
-    .line 1154
+    .line 1165
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 1155
+    .line 1166
     return-void
 .end method
 
@@ -789,7 +678,7 @@
     .locals 3
 
     .prologue
-    .line 938
+    .line 949
     invoke-direct {p0}, Lcom/htc/util/mail/Folder;->isMessagesExist()Z
 
     move-result v0
@@ -798,11 +687,11 @@
 
     const/4 v0, 0x0
 
-    .line 945
+    .line 956
     :goto_0
     return v0
 
-    .line 941
+    .line 952
     :cond_0
     new-instance v0, Landroid/os/Handler;
 
@@ -824,7 +713,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 945
+    .line 956
     const/4 v0, 0x1
 
     goto :goto_0
@@ -1205,7 +1094,7 @@
 .end method
 
 .method public getDelMailList()Ljava/util/ArrayList;
-    .locals 4
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1217,91 +1106,188 @@
     .end annotation
 
     .prologue
-    .line 827
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
+    .line 840
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
 
-    if-nez v2, :cond_0
+    if-nez v5, :cond_0
 
-    new-instance v2, Ljava/util/ArrayList;
+    new-instance v5, Ljava/util/ArrayList;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
+    iput-object v5, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
 
-    .line 828
+    .line 841
     :cond_0
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 830
-    iget-object v3, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
+    .line 843
+    iget-object v6, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
 
-    monitor-enter v3
+    monitor-enter v6
 
-    .line 831
+    .line 844
     :try_start_0
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    if-nez v5, :cond_1
 
-    move-result-object v0
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
 
-    .local v0, i$:Ljava/util/Iterator;
-    :cond_1
+    monitor-exit v6
+
+    .line 864
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object v5
 
-    move-result v2
+    .line 846
+    :cond_1
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result v4
 
-    move-result-object v1
+    .line 847
+    .local v4, size:I
+    new-instance v2, Ljava/util/HashMap;
 
-    check-cast v1, Lcom/htc/util/mail/Folder$BasicMessageInfo;
+    invoke-direct {v2, v4}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 832
-    .local v1, info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
+    .line 849
+    .local v2, ids:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v1, v2}, Lcom/htc/util/mail/Folder;->isInList(Lcom/htc/util/mail/Folder$BasicMessageInfo;Ljava/util/ArrayList;)Z
+    .local v0, i:I
+    :goto_1
+    if-ge v0, v4, :cond_3
 
-    move-result v2
+    .line 850
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
 
-    if-nez v2, :cond_1
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 833
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
+    move-result-object v5
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-nez v5, :cond_2
 
-    goto :goto_0
+    .line 849
+    :goto_2
+    add-int/lit8 v0, v0, 0x1
 
-    .line 836
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
+    goto :goto_1
+
+    .line 852
+    :cond_2
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;
+
+    iget-wide v7, v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;
+
+    iget-wide v8, v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    .line 862
+    .end local v0           #i:I
+    .end local v2           #ids:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
+    .end local v4           #size:I
     :catchall_0
-    move-exception v2
+    move-exception v5
 
-    monitor-exit v3
+    monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v2
+    throw v5
 
-    .restart local v0       #i$:Ljava/util/Iterator;
-    :cond_2
+    .line 855
+    .restart local v0       #i:I
+    .restart local v2       #ids:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
+    .restart local v4       #size:I
+    :cond_3
     :try_start_1
-    monitor-exit v3
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .local v1, i$:Ljava/util/Iterator;
+    :cond_4
+    :goto_3
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/htc/util/mail/Folder$BasicMessageInfo;
+
+    .line 856
+    .local v3, info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
+    if-eqz v3, :cond_4
+
+    .line 858
+    iget-wide v7, v3, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-nez v5, :cond_4
+
+    .line 859
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    .line 862
+    .end local v3           #info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
+    :cond_5
+    monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 838
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
+    .line 864
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mDelMessageList:Ljava/util/ArrayList;
 
-    return-object v2
+    goto :goto_0
 .end method
 
 .method public getFolderId()J
@@ -1339,7 +1325,7 @@
     .parameter "messageId"
 
     .prologue
-    .line 916
+    .line 927
     invoke-virtual {p0, p1, p2}, Lcom/htc/util/mail/Folder;->isMessageExist(J)Z
 
     move-result v0
@@ -1348,11 +1334,11 @@
 
     const/4 v0, 0x0
 
-    .line 922
+    .line 933
     :goto_0
     return v0
 
-    .line 918
+    .line 929
     :cond_0
     new-instance v0, Landroid/os/Handler;
 
@@ -1370,7 +1356,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 922
+    .line 933
     const/4 v0, 0x1
 
     goto :goto_0
@@ -1428,7 +1414,7 @@
     .local p6, recipients:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x1
 
-    .line 1027
+    .line 1038
     invoke-direct {p0}, Lcom/htc/util/mail/Folder;->isMessagesExist()Z
 
     move-result v2
@@ -1437,17 +1423,17 @@
 
     const/4 v1, 0x0
 
-    .line 1068
+    .line 1079
     :goto_0
     return v1
 
-    .line 1029
+    .line 1040
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1030
+    .line 1041
     .local v0, sb:Ljava/lang/StringBuilder;
     invoke-direct {p0}, Lcom/htc/util/mail/Folder;->getMessagesWhere()Ljava/lang/String;
 
@@ -1455,12 +1441,12 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1033
+    .line 1044
     and-int/lit8 v2, p9, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 1034
+    .line 1045
     const-string v2, " AND _internaldate>="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1479,7 +1465,7 @@
 
     invoke-virtual {v2, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1040
+    .line 1051
     :cond_1
     const/4 v2, 0x2
 
@@ -1487,14 +1473,14 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 1041
+    .line 1052
     invoke-direct {p0, p5}, Lcom/htc/util/mail/Folder;->getQueryReadStatusString(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1044
+    .line 1055
     :cond_2
     const/4 v2, 0x4
 
@@ -1502,14 +1488,14 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 1045
+    .line 1056
     invoke-direct {p0, p6}, Lcom/htc/util/mail/Folder;->getQueryRecipientsString(Ljava/util/ArrayList;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1048
+    .line 1059
     :cond_3
     const/16 v2, 0x8
 
@@ -1517,10 +1503,10 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 1049
+    .line 1060
     if-eqz p7, :cond_4
 
-    .line 1050
+    .line 1061
     const-string v2, " AND ("
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1563,7 +1549,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1057
+    .line 1068
     :cond_4
     const/16 v2, 0x10
 
@@ -1571,14 +1557,14 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 1058
+    .line 1069
     invoke-direct {p0, p8}, Lcom/htc/util/mail/Folder;->getQueryPriorityString(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1061
+    .line 1072
     :cond_5
     sget-boolean v2, Lcom/htc/util/mail/Folder;->DEBUG:Z
 
@@ -1592,7 +1578,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1064
+    .line 1075
     :cond_6
     new-instance v2, Landroid/os/Handler;
 
@@ -1621,14 +1607,14 @@
     .locals 1
 
     .prologue
-    .line 1138
+    .line 1149
     iget v0, p0, Lcom/htc/util/mail/Folder;->mServerId:I
 
     return v0
 .end method
 
 .method public getNewMailList()Ljava/util/ArrayList;
-    .locals 4
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1641,90 +1627,187 @@
 
     .prologue
     .line 806
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
 
-    if-nez v2, :cond_0
+    if-nez v5, :cond_0
 
-    new-instance v2, Ljava/util/ArrayList;
+    new-instance v5, Ljava/util/ArrayList;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
+    iput-object v5, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
 
     .line 807
     :cond_0
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
     .line 809
-    iget-object v3, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
 
-    monitor-enter v3
+    monitor-enter v6
 
     .line 810
     :try_start_0
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    if-nez v5, :cond_1
 
-    move-result-object v0
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
 
-    .local v0, i$:Ljava/util/Iterator;
-    :cond_1
+    monitor-exit v6
+
+    .line 830
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/htc/util/mail/Folder$BasicMessageInfo;
-
-    .line 811
-    .local v1, info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
-
-    invoke-direct {p0, v1, v2}, Lcom/htc/util/mail/Folder;->isInList(Lcom/htc/util/mail/Folder$BasicMessageInfo;Ljava/util/ArrayList;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
+    return-object v5
 
     .line 812
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
+    :cond_1
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    goto :goto_0
+    move-result v4
+
+    .line 813
+    .local v4, size:I
+    new-instance v2, Ljava/util/HashMap;
+
+    invoke-direct {v2, v4}, Ljava/util/HashMap;-><init>(I)V
 
     .line 815
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
-    :catchall_0
-    move-exception v2
+    .local v2, ids:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
+    const/4 v0, 0x0
 
-    monitor-exit v3
+    .local v0, i:I
+    :goto_1
+    if-ge v0, v4, :cond_3
+
+    .line 816
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-nez v5, :cond_2
+
+    .line 815
+    :goto_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    .line 818
+    :cond_2
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;
+
+    iget-wide v7, v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mLastMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;
+
+    iget-wide v8, v5, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    .line 828
+    .end local v0           #i:I
+    .end local v2           #ids:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
+    .end local v4           #size:I
+    :catchall_0
+    move-exception v5
+
+    monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v2
+    throw v5
 
-    .restart local v0       #i$:Ljava/util/Iterator;
-    :cond_2
+    .line 821
+    .restart local v0       #i:I
+    .restart local v2       #ids:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
+    .restart local v4       #size:I
+    :cond_3
     :try_start_1
-    monitor-exit v3
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .local v1, i$:Ljava/util/Iterator;
+    :cond_4
+    :goto_3
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/htc/util/mail/Folder$BasicMessageInfo;
+
+    .line 822
+    .local v3, info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
+    if-eqz v3, :cond_4
+
+    .line 824
+    iget-wide v7, v3, Lcom/htc/util/mail/Folder$BasicMessageInfo;->messageId:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-nez v5, :cond_4
+
+    .line 825
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    .line 828
+    .end local v3           #info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
+    :cond_5
+    monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 817
-    iget-object v2, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
+    .line 830
+    iget-object v5, p0, Lcom/htc/util/mail/Folder;->mNewMessageList:Ljava/util/ArrayList;
 
-    return-object v2
+    goto :goto_0
 .end method
 
 .method public getParentFolder()Lcom/htc/util/mail/Folder;
@@ -1919,7 +2002,7 @@
     .locals 1
 
     .prologue
-    .line 1130
+    .line 1141
     iget v0, p0, Lcom/htc/util/mail/Folder;->mParentId:I
 
     return v0
@@ -2808,9 +2891,9 @@
     .parameter "listener"
 
     .prologue
-    .line 870
+    .line 881
     iput-object p1, p0, Lcom/htc/util/mail/Folder;->mMailMessageListener:Lcom/htc/util/mail/IMailMessageListener;
 
-    .line 871
+    .line 882
     return-void
 .end method

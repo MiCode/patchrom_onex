@@ -50,7 +50,7 @@
     sput-object v0, Lcom/htc/text/util/HtcStringUtils;->LINE_FEED_TAG:Ljava/lang/CharSequence;
 
     .line 23
-    const-string v0, "\ufffc"
+    const-string/jumbo v0, "\ufffc"
 
     sput-object v0, Lcom/htc/text/util/HtcStringUtils;->NOT_A_CHAR:Ljava/lang/CharSequence;
 

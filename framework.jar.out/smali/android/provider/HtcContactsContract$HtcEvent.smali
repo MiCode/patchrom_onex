@@ -85,7 +85,7 @@
     .locals 2
 
     .prologue
-    .line 335
+    .line 355
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "data"
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "htc_events"
+    const-string v1, "htc_events"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -109,7 +109,7 @@
     .locals 0
 
     .prologue
-    .line 320
+    .line 339
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -122,15 +122,15 @@
     .prologue
     const v0, 0x10402b7
 
-    .line 448
+    .line 487
     if-nez p0, :cond_0
 
-    .line 456
+    .line 495
     :goto_0
     :pswitch_0
     return v0
 
-    .line 451
+    .line 490
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -140,19 +140,19 @@
 
     goto :goto_0
 
-    .line 454
+    .line 493
     :pswitch_1
     const v0, 0x10402b5
 
     goto :goto_0
 
-    .line 453
+    .line 492
     :pswitch_2
     const v0, 0x10402b6
 
     goto :goto_0
 
-    .line 451
+    .line 490
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

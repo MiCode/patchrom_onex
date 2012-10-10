@@ -35,7 +35,7 @@
     .parameter
 
     .prologue
-    .line 1100
+    .line 1098
     iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -52,10 +52,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1104
+    .line 1102
     aget-object v0, p1, v4
 
-    .line 1106
+    .line 1104
     .local v0, bitmap:Landroid/graphics/Bitmap;
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
@@ -73,7 +73,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1108
+    .line 1106
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
     iget-object v1, v1, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -84,7 +84,7 @@
 
     move-result-object v0
 
-    .line 1110
+    .line 1108
     :cond_0
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
@@ -109,7 +109,7 @@
 
     move-result-object v0
 
-    .line 1113
+    .line 1111
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
     iget-object v1, v1, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1114
+    .line 1112
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
     iget-object v1, v1, Lcom/htc/graphics/drawable/UrlDrawable;->mContext:Landroid/content/Context;
@@ -127,7 +127,7 @@
 
     move-result-object v0
 
-    .line 1117
+    .line 1115
     :cond_1
     return-object v0
 .end method
@@ -137,7 +137,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1100
+    .line 1098
     check-cast p1, [Landroid/graphics/Bitmap;
 
     .end local p1
@@ -153,26 +153,26 @@
     .parameter "result"
 
     .prologue
-    .line 1122
+    .line 1120
     invoke-static {p1}, Lcom/htc/graphics/drawable/UrlDrawable;->isValidBitmap(Landroid/graphics/Bitmap;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1123
+    .line 1121
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
     iget-object v0, v0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iput-object p1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->defaultBitmap:Landroid/graphics/Bitmap;
 
-    .line 1124
+    .line 1122
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$4;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
     invoke-virtual {v0}, Lcom/htc/graphics/drawable/UrlDrawable;->invalidateSelf()V
 
-    .line 1126
+    .line 1124
     :cond_0
     return-void
 .end method
@@ -182,7 +182,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1100
+    .line 1098
     check-cast p1, Landroid/graphics/Bitmap;
 
     .end local p1

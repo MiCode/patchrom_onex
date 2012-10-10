@@ -386,7 +386,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Landroid/view/View;->mLayerPaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Landroid/view/TextureView;->mLayerPaint:Landroid/graphics/Paint;
 
     .line 169
     return-void
@@ -553,7 +553,7 @@
     if-eqz v1, :cond_1
 
     .line 525
-    iget-object v0, p0, Landroid/view/View;->mAttachInfo:Landroid/view/View$AttachInfo;
+    iget-object v0, p0, Landroid/view/TextureView;->mAttachInfo:Landroid/view/View$AttachInfo;
 
     .line 526
     .local v0, info:Landroid/view/View$AttachInfo;
@@ -617,11 +617,11 @@
     if-nez v0, :cond_2
 
     .line 320
-    iget-object v0, p0, Landroid/view/View;->mAttachInfo:Landroid/view/View$AttachInfo;
+    iget-object v0, p0, Landroid/view/TextureView;->mAttachInfo:Landroid/view/View$AttachInfo;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/view/View;->mAttachInfo:Landroid/view/View$AttachInfo;
+    iget-object v0, p0, Landroid/view/TextureView;->mAttachInfo:Landroid/view/View$AttachInfo;
 
     iget-object v0, v0, Landroid/view/View$AttachInfo;->mHardwareRenderer:Landroid/view/HardwareRenderer;
 
@@ -637,7 +637,7 @@
 
     .line 324
     :cond_1
-    iget-object v0, p0, Landroid/view/View;->mAttachInfo:Landroid/view/View$AttachInfo;
+    iget-object v0, p0, Landroid/view/TextureView;->mAttachInfo:Landroid/view/View$AttachInfo;
 
     iget-object v0, v0, Landroid/view/View$AttachInfo;->mHardwareRenderer:Landroid/view/HardwareRenderer;
 
@@ -650,7 +650,7 @@
     iput-object v0, p0, Landroid/view/TextureView;->mLayer:Landroid/view/HardwareLayer;
 
     .line 325
-    iget-object v0, p0, Landroid/view/View;->mAttachInfo:Landroid/view/View$AttachInfo;
+    iget-object v0, p0, Landroid/view/TextureView;->mAttachInfo:Landroid/view/View$AttachInfo;
 
     iget-object v0, v0, Landroid/view/View$AttachInfo;->mHardwareRenderer:Landroid/view/HardwareRenderer;
 
@@ -1065,12 +1065,12 @@
 
     .prologue
     .line 242
-    iget-object v0, p0, Landroid/view/View;->mLayerPaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Landroid/view/TextureView;->mLayerPaint:Landroid/graphics/Paint;
 
     if-eq p2, v0, :cond_0
 
     .line 243
-    iput-object p2, p0, Landroid/view/View;->mLayerPaint:Landroid/graphics/Paint;
+    iput-object p2, p0, Landroid/view/TextureView;->mLayerPaint:Landroid/graphics/Paint;
 
     .line 244
     invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V

@@ -186,7 +186,7 @@
     :cond_0
     const-string v0, "[HtcDLNAController]"
 
-    const-string/jumbo v1, "isPlaying() state:YES(0)"
+    const-string v1, "isPlaying() state:YES(0)"
 
     invoke-static {v0, v1}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -205,7 +205,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "isPlaying() state:"
+    const-string v2, "isPlaying() state:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

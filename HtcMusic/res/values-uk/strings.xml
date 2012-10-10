@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Додати список відтворення</string>
     <string name="htc_delete_playlists">Видалити списки відтворення</string>
     <string name="htc_delete_playlist">Видалити список відтворення</string>
+    <string name="htc_delete_all_playlists">Видалити всі списки відтворення</string>
     <string name="htc_playlist_add_songs">Додати пісні</string>
     <string name="htc_playlist_del_songs">Видалити пісні</string>
     <string name="htc_playlist_remove_songs">Вилучити пісні</string>
@@ -201,7 +202,7 @@
     <string name="dmc_timeout">Час очікування контролера</string>
     <string name="dmc_timeout_title">Час очікування контролера</string>
     <string name="dmc_timeout_desc">Вимкніть контролер, якщо він був бездіяльним деякий період часу</string>
-    <string name="dlna_connection_failed_title">Unable to connect</string>
+    <string name="dlna_connection_failed_title">"Під'єднатися не вдалося"</string>
     <string name="dlna_connection_failed_content">Для цієї функції необхідний доступ до Wi-Fi. Увімкніть Wi-Fi для використання мережевих медіасерверів і програвачів.</string>
     <string name="dmc_dmr_noresponse">Вибраний програвач не відповідає. Перевірте його та повторіть спробу.</string>
     <string name="dmc_dmr_nopause">Цей програвач не підтримує призупинення. Відтворення буде зупинено.</string>
@@ -223,12 +224,12 @@
     <string name="update_current_album">Оновити поточне</string>
     <string name="reset_current_albumart">Відмінити поточне</string>
     <string name="update_all_albumart">Оновити все</string>
-    <string name="device_info_default">My phone</string>
+    <string name="device_info_default">Мій телефон</string>
     <string name="glance_titlebar_queue">Черга</string>
-    <string name="glance_taskbar_listview">Library</string>
-    <string name="glance_taskbar_nowplaying">Playing</string>
-    <string name="glance_taskbar_next">Next</string>
-    <string name="glance_taskbar_previous">Previous</string>
+    <string name="glance_taskbar_listview">Біб-тека</string>
+    <string name="glance_taskbar_nowplaying">Відтворення</string>
+    <string name="glance_taskbar_next">Наступне</string>
+    <string name="glance_taskbar_previous">Попередне</string>
     <string name="media_playlist_label">Мої списки відтворення</string>
     <string name="store_front_title">Магазин музики</string>
     <string name="store_front_feature">Пропоноване</string>
@@ -415,5 +416,6 @@
     <string name="no_recently_played_albums">Немає недавно відтворюваних альбомів</string>
     <string name="title_buffering">Buffering…</string>
     <string name="title_send_content">Sending content…</string>
-    <string name="no_downloaded_apps_found">No downloaded apps found</string>
+    <string name="no_downloaded_apps_found">Завантажених програм не знайдено</string>
+    <string name="music_folder_picker_dialog_msg">Додати пісні до списків відтворення шляхом вибору папки? Натисніть Ні, щоб додати пісні іншим способом</string>
 </resources>

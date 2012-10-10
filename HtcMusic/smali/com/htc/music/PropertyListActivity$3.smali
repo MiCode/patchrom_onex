@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 345
+    .line 342
     iput-object p1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,21 +35,18 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+    .locals 3
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 348
-    iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
+    .line 345
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    #getter for: Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
-    invoke-static {v1}, Lcom/htc/music/PropertyListActivity;->access$300(Lcom/htc/music/PropertyListActivity;)Lcom/htc/music/IMediaPlaybackService;
+    move-result-object v0
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
+    .line 347
+    .local v0, action:Ljava/lang/String;
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
 
     #getter for: Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
@@ -59,38 +56,14 @@
 
     if-nez v1, :cond_1
 
-    .line 364
+    .line 367
     :cond_0
     :goto_0
     return-void
 
-    .line 351
+    .line 350
     :cond_1
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 352
-    .local v0, action:Ljava/lang/String;
-    const-string v1, "com.htc.music.metachanged"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 354
-    iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
-
-    #calls: Lcom/htc/music/PropertyListActivity;->showPoperty()V
-    invoke-static {v1}, Lcom/htc/music/PropertyListActivity;->access$700(Lcom/htc/music/PropertyListActivity;)V
-
-    goto :goto_0
-
-    .line 355
-    :cond_2
-    const-string v1, "com.htc.music.playbackcomplete"
+    const-string v1, "android.intent.action.MEDIA_UNMOUNTED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -98,7 +71,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 356
+    .line 352
+    invoke-static {p2}, Lcom/htc/music/util/MusicUtils;->isExternalStorageUnMount(Landroid/content/Intent;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 353
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
 
     #getter for: Lcom/htc/music/PropertyListActivity;->mOneShot:Z
@@ -106,10 +86,20 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_2
 
-    .line 358
+    .line 355
     :try_start_0
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
+
+    #getter for: Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
+    invoke-static {v1}, Lcom/htc/music/PropertyListActivity;->access$300(Lcom/htc/music/PropertyListActivity;)Lcom/htc/music/IMediaPlaybackService;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    .line 356
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
 
     #getter for: Lcom/htc/music/PropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -121,15 +111,45 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 361
+    .line 360
+    :cond_2
     :goto_1
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
+
+    #getter for: Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v1}, Lcom/htc/music/PropertyListActivity;->access$500(Lcom/htc/music/PropertyListActivity;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    .line 361
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
+
+    #getter for: Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v1}, Lcom/htc/music/PropertyListActivity;->access$500(Lcom/htc/music/PropertyListActivity;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 362
+    iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
+
+    const/4 v2, 0x0
+
+    #setter for: Lcom/htc/music/PropertyListActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v1, v2}, Lcom/htc/music/PropertyListActivity;->access$502(Lcom/htc/music/PropertyListActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+
+    .line 365
+    :cond_3
     iget-object v1, p0, Lcom/htc/music/PropertyListActivity$3;->this$0:Lcom/htc/music/PropertyListActivity;
 
     invoke-virtual {v1}, Lcom/htc/music/PropertyListActivity;->finish()V
 
     goto :goto_0
 
-    .line 359
+    .line 357
     :catch_0
     move-exception v1
 

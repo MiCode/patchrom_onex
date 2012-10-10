@@ -23,7 +23,7 @@
 
     .prologue
     .line 5
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 25
     const/4 v0, 0x0
@@ -55,25 +55,25 @@
     .parameter "newMode"
 
     .prologue
-    .line 33
+    .line 34
     iget-object v1, p0, Landroid/webkit/WebViewSelectionMethod;->mMode:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
 
     if-ne v1, p1, :cond_0
 
-    .line 34
+    .line 35
     const/4 v1, 0x0
 
-    .line 45
+    .line 46
     :goto_0
     return v1
 
-    .line 36
+    .line 37
     :cond_0
     iget-object v1, p0, Landroid/webkit/WebViewSelectionMethod;->mSelectionWatcher:Lcom/htc/textselection/SelectionWatcher;
 
     if-eqz v1, :cond_1
 
-    .line 37
+    .line 38
     iget-object v1, p0, Landroid/webkit/WebViewSelectionMethod;->mSelectionWatcher:Lcom/htc/textselection/SelectionWatcher;
 
     iget-object v2, p0, Landroid/webkit/WebViewSelectionMethod;->mMode:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
@@ -90,7 +90,7 @@
 
     invoke-interface {v1, v2, v3}, Lcom/htc/textselection/SelectionWatcher;->onModeChanged(II)V
 
-    .line 38
+    .line 39
     sget-object v1, Landroid/webkit/WebViewSelectionMethod$SelectionMode;->CURSOR:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
 
     #getter for: Landroid/webkit/WebViewSelectionMethod$SelectionMode;->value:I
@@ -98,7 +98,7 @@
 
     move-result v0
 
-    .line 39
+    .line 40
     .local v0, cursorModeValue:I
     iget-object v1, p0, Landroid/webkit/WebViewSelectionMethod;->mMode:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
 
@@ -116,7 +116,7 @@
 
     if-le v1, v0, :cond_2
 
-    .line 40
+    .line 41
     iget-object v1, p0, Landroid/webkit/WebViewSelectionMethod;->mSelectionWatcher:Lcom/htc/textselection/SelectionWatcher;
 
     #getter for: Landroid/webkit/WebViewSelectionMethod$SelectionMode;->value:I
@@ -126,18 +126,18 @@
 
     invoke-interface {v1, v2}, Lcom/htc/textselection/SelectionWatcher;->onStartSelection(I)V
 
-    .line 44
+    .line 45
     .end local v0           #cursorModeValue:I
     :cond_1
     :goto_1
     iput-object p1, p0, Landroid/webkit/WebViewSelectionMethod;->mMode:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
 
-    .line 45
+    .line 46
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 41
+    .line 42
     .restart local v0       #cursorModeValue:I
     :cond_2
     #getter for: Landroid/webkit/WebViewSelectionMethod$SelectionMode;->value:I
@@ -156,7 +156,7 @@
 
     if-le v1, v0, :cond_1
 
-    .line 42
+    .line 43
     iget-object v1, p0, Landroid/webkit/WebViewSelectionMethod;->mSelectionWatcher:Lcom/htc/textselection/SelectionWatcher;
 
     #getter for: Landroid/webkit/WebViewSelectionMethod$SelectionMode;->value:I
@@ -174,9 +174,9 @@
     .parameter "watcher"
 
     .prologue
-    .line 49
+    .line 50
     iput-object p1, p0, Landroid/webkit/WebViewSelectionMethod;->mSelectionWatcher:Lcom/htc/textselection/SelectionWatcher;
 
-    .line 50
+    .line 51
     return-void
 .end method

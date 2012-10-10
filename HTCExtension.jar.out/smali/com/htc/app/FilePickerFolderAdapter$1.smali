@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/app/FilePickerFolderAdapter;->getGroupView(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/htc/app/FilePickerFolderAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 430
+    .line 87
     iput-object p1, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,161 +38,179 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 7
-    .parameter "view"
+    .locals 10
+    .parameter "btn"
 
     .prologue
-    .line 434
+    const/4 v9, 0x1
+
+    const/4 v8, 0x0
+
+    .line 90
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Lcom/htc/app/FolderItemInfo;
+    check-cast v0, Lcom/htc/app/FolderItemInfo;
 
-    .local v1, currentSingleChoiceItem:Lcom/htc/app/FolderItemInfo;
-    move-object v5, p1
+    .line 92
+    .local v0, currentChoiceItem:Lcom/htc/app/FolderItemInfo;
+    invoke-virtual {v0}, Lcom/htc/app/FolderItemInfo;->isChecked()Z
 
-    .line 436
-    check-cast v5, Lcom/htc/widget/HtcRadioButton;
+    move-result v1
 
-    .line 437
-    .local v5, thisRadioButton:Lcom/htc/widget/HtcRadioButton;
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
+    .line 93
+    .local v1, isChecked:Z
+    const v4, 0x20200b3
 
-    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mChangeRootItemLists:Ljava/util/LinkedList;
-    invoke-static {v6}, Lcom/htc/app/FilePickerFolderAdapter;->access$000(Lcom/htc/app/FilePickerFolderAdapter;)Ljava/util/LinkedList;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
-
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
-
-    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mChangeRootItemLists:Ljava/util/LinkedList;
-    invoke-static {v6}, Lcom/htc/app/FilePickerFolderAdapter;->access$000(Lcom/htc/app/FilePickerFolderAdapter;)Ljava/util/LinkedList;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    .line 438
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
-
-    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mChangeRootItemLists:Ljava/util/LinkedList;
-    invoke-static {v6}, Lcom/htc/app/FilePickerFolderAdapter;->access$000(Lcom/htc/app/FilePickerFolderAdapter;)Ljava/util/LinkedList;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    .local v4, i$:Ljava/util/Iterator;
-    :cond_0
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, v4}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/htc/app/FolderItemInfo;
+    check-cast v2, Landroid/view/View;
 
-    .line 439
-    .local v2, folderItemInfo:Lcom/htc/app/FolderItemInfo;
-    invoke-virtual {v2}, Lcom/htc/app/FolderItemInfo;->getRadioButton()Lcom/htc/widget/HtcRadioButton;
+    .line 95
+    .local v2, itemView:Landroid/view/View;
+    if-nez v1, :cond_2
+
+    .line 97
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
-    .line 440
-    .local v3, htcRadioButton:Lcom/htc/widget/HtcRadioButton;
-    if-eqz v3, :cond_0
+    .line 98
+    .local v3, lp:Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lcom/htc/app/FolderItemInfo;->isFolder()Z
 
-    .line 441
-    invoke-virtual {v5, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result v0
+    if-eqz v4, :cond_1
 
-    .line 442
-    .local v0, checked:Z
-    invoke-virtual {v3, v0}, Lcom/htc/widget/HtcRadioButton;->setChecked(Z)V
+    .line 99
+    new-instance v4, Lcom/htc/widget/HtcAbsListView$LayoutParams;
+
+    iget v5, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget v6, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    const/4 v7, 0x2
+
+    invoke-direct {v4, v5, v6, v7}, Lcom/htc/widget/HtcAbsListView$LayoutParams;-><init>(III)V
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 105
+    :goto_0
+    invoke-virtual {v0, v9}, Lcom/htc/app/FolderItemInfo;->setCheckBoxChecked(Z)V
+
+    .line 106
+    iget-object v4, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
+
+    invoke-virtual {v4, v0}, Lcom/htc/app/FilePickerFolderAdapter;->addToCheckedListWithoutNotify(Lcom/htc/app/FolderItemInfo;)V
+
+    .line 121
+    :goto_1
+    iget-object v4, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
+
+    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFolderModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
+    invoke-static {v4}, Lcom/htc/app/FilePickerFolderAdapter;->access$000(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->getActionMode()Landroid/view/ActionMode;
+
+    move-result-object v4
+
+    if-nez v4, :cond_0
+
+    .line 122
+    iget-object v4, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
+
+    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFolderModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
+    invoke-static {v4}, Lcom/htc/app/FilePickerFolderAdapter;->access$000(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+
+    .line 124
+    :cond_0
+    iget-object v4, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
+
+    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFolderModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
+    invoke-static {v4}, Lcom/htc/app/FilePickerFolderAdapter;->access$000(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->updateActionModeTitleForCount()V
+
+    .line 125
+    return-void
+
+    .line 102
+    :cond_1
+    new-instance v4, Lcom/htc/widget/HtcAbsListView$LayoutParams;
+
+    iget v5, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget v6, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-direct {v4, v5, v6, v8}, Lcom/htc/widget/HtcAbsListView$LayoutParams;-><init>(III)V
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
-    .line 447
-    .end local v0           #checked:Z
-    .end local v2           #folderItemInfo:Lcom/htc/app/FolderItemInfo;
-    .end local v3           #htcRadioButton:Lcom/htc/widget/HtcRadioButton;
-    .end local v4           #i$:Ljava/util/Iterator;
-    :cond_1
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
-
-    invoke-virtual {v6}, Lcom/htc/app/FilePickerFolderAdapter;->resetAllChecked()V
-
-    .line 448
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
-
-    invoke-virtual {v6, v1}, Lcom/htc/app/FilePickerFolderAdapter;->addToCheckedListWithoutNotify(Lcom/htc/app/FolderItemInfo;)Z
-
-    .line 449
-    const/4 v6, 0x1
-
-    invoke-virtual {v1, v6}, Lcom/htc/app/FolderItemInfo;->setRadioButtonChecked(Z)V
-
-    .line 450
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
-
-    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFolderModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
-    invoke-static {v6}, Lcom/htc/app/FilePickerFolderAdapter;->access$100(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_3
-
-    .line 451
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
-
-    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFolderModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
-    invoke-static {v6}, Lcom/htc/app/FilePickerFolderAdapter;->access$100(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->getActionMode()Landroid/view/ActionMode;
-
-    move-result-object v6
-
-    if-nez v6, :cond_2
-
-    .line 452
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
-
-    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFolderModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
-    invoke-static {v6}, Lcom/htc/app/FilePickerFolderAdapter;->access$100(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
-
-    move-result-object v6
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-
-    .line 453
+    .line 108
+    .end local v3           #lp:Landroid/view/ViewGroup$LayoutParams;
     :cond_2
-    iget-object v6, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFolderModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
-    invoke-static {v6}, Lcom/htc/app/FilePickerFolderAdapter;->access$100(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;
+    move-result-object v3
 
-    move-result-object v6
+    .line 109
+    .restart local v3       #lp:Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lcom/htc/app/FolderItemInfo;->isFolder()Z
 
-    invoke-virtual {v6}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->updateActionModeTitleForCount()V
+    move-result v4
 
-    .line 456
+    if-eqz v4, :cond_3
+
+    .line 110
+    new-instance v4, Lcom/htc/widget/HtcAbsListView$LayoutParams;
+
+    iget v5, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget v6, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    const/4 v7, 0x3
+
+    invoke-direct {v4, v5, v6, v7}, Lcom/htc/widget/HtcAbsListView$LayoutParams;-><init>(III)V
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 117
+    :goto_2
+    iget-object v4, p0, Lcom/htc/app/FilePickerFolderAdapter$1;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
+
+    invoke-virtual {v4, v0}, Lcom/htc/app/FilePickerFolderAdapter;->removeFromCheckedListWithoutNotify(Lcom/htc/app/FolderItemInfo;)V
+
+    .line 118
+    invoke-virtual {v0, v8}, Lcom/htc/app/FolderItemInfo;->setCheckBoxChecked(Z)V
+
+    goto :goto_1
+
+    .line 113
     :cond_3
-    return-void
+    new-instance v4, Lcom/htc/widget/HtcAbsListView$LayoutParams;
+
+    iget v5, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget v6, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-direct {v4, v5, v6, v9}, Lcom/htc/widget/HtcAbsListView$LayoutParams;-><init>(III)V
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    goto :goto_2
 .end method

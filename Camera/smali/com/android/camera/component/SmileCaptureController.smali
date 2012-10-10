@@ -126,8 +126,12 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 144
+    .line 141
     :goto_0
+    invoke-virtual {v0}, Lcom/android/camera/CameraController;->doSetCameraParameters()V
+
+    .line 145
+    :goto_1
     return-void
 
     .line 130
@@ -189,7 +193,7 @@
 
     goto :goto_0
 
-    .line 143
+    .line 144
     :cond_2
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -197,7 +201,7 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 

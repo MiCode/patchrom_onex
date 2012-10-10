@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 177
+    .line 192
     new-instance v0, Landroid/provider/Checkin$Properties$Tag;
 
     const-string v1, "DESIRED_BUILD"
@@ -49,7 +49,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Properties$Tag;->DESIRED_BUILD:Landroid/provider/Checkin$Properties$Tag;
 
-    .line 178
+    .line 193
     new-instance v0, Landroid/provider/Checkin$Properties$Tag;
 
     const-string v1, "MARKET_CHECKIN"
@@ -58,7 +58,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Properties$Tag;->MARKET_CHECKIN:Landroid/provider/Checkin$Properties$Tag;
 
-    .line 176
+    .line 191
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/provider/Checkin$Properties$Tag;
@@ -87,7 +87,7 @@
     .end annotation
 
     .prologue
-    .line 176
+    .line 191
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -98,7 +98,7 @@
     .parameter "name"
 
     .prologue
-    .line 176
+    .line 191
     const-class v0, Landroid/provider/Checkin$Properties$Tag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -114,7 +114,7 @@
     .locals 1
 
     .prologue
-    .line 176
+    .line 191
     sget-object v0, Landroid/provider/Checkin$Properties$Tag;->$VALUES:[Landroid/provider/Checkin$Properties$Tag;
 
     invoke-virtual {v0}, [Landroid/provider/Checkin$Properties$Tag;->clone()Ljava/lang/Object;

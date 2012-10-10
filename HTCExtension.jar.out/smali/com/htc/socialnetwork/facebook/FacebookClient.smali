@@ -3585,7 +3585,7 @@
 
     move-result-object v12
 
-    const-string v13, "| "
+    const-string/jumbo v13, "| "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3778,8 +3778,6 @@
     throw v12
 
     .line 602
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0

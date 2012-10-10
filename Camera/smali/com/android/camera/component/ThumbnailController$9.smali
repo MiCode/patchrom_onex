@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 637
+    .line 634
     iput-object p1, p0, Lcom/android/camera/component/ThumbnailController$9;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 641
+    .line 638
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController$9;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     #calls: Lcom/android/camera/component/ThumbnailController;->onMediaCaptureStarted()V
     invoke-static {v0}, Lcom/android/camera/component/ThumbnailController;->access$1300(Lcom/android/camera/component/ThumbnailController;)V
 
-    .line 642
+    .line 639
     return-void
 .end method

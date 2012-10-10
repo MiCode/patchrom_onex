@@ -22,6 +22,9 @@
 .method public abstract getHasUpdatedCallLog()Z
 .end method
 
+.method public abstract getRawDisconnectCause()I
+.end method
+
 .method public abstract getRawDisonnectCause()I
 .end method
 

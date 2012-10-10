@@ -3,7 +3,7 @@
 #
 
 # The original zip file, MUST be specified by each product
-local-zip-file     := onex_1.29.707.11.zip
+local-zip-file     := stockrom.zip
 
 # The output zip file of MIUI rom, the default is update.zip if not specified
 # local-out-zip-file :=
@@ -32,6 +32,8 @@ local-phone-apps := AppSharing BackupRestoreConfirmation \
 # (2) the name should be leaded with local- to prevent any conflict with global targets
 local-pre-zip := local-zip-misc
 local-after-zip:= local-test
+
+local-rewrite-skia-lib:= false
 
 # The local targets after the zip file is generated, could include 'zip2sd' to 
 # deliver the zip file to phone, or to customize other actions

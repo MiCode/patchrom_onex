@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1399
+    .line 1404
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$13;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "which"
 
     .prologue
-    .line 1401
+    .line 1406
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1402
+    .line 1407
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$13;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v0, v0, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
@@ -55,6 +55,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->removeDialog(I)V
 
-    .line 1403
+    .line 1408
     return-void
 .end method

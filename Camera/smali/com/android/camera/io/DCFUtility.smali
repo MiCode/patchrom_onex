@@ -10,6 +10,8 @@
 
 .field public static final DCF_MAX_DIRECTORY_NUMBER:I = 0x3e7
 
+.field public static final DCF_MAX_FILE_COUNT:I = 0x270f
+
 .field public static final DCF_MAX_FILE_NUMBER:I = 0x270f
 
 .field public static final DCF_ROOT_DIRECTORY:Ljava/lang/String; = "DCIM"
@@ -37,21 +39,21 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/io/DCFUtility;->m_DCFInfos:Ljava/util/ArrayList;
 
-    .line 131
+    .line 132
     new-instance v0, Lcom/android/camera/io/DCFUtility$1;
 
     invoke-direct {v0}, Lcom/android/camera/io/DCFUtility$1;-><init>()V
 
     sput-object v0, Lcom/android/camera/io/DCFUtility;->m_EnumFilesForDirCounter:Lcom/android/camera/io/FileUtility$FileEnumerationCallback;
 
-    .line 197
+    .line 198
     new-instance v0, Lcom/android/camera/io/DCFUtility$2;
 
     invoke-direct {v0}, Lcom/android/camera/io/DCFUtility$2;-><init>()V
@@ -65,7 +67,7 @@
     .locals 0
 
     .prologue
-    .line 36
+    .line 37
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,7 +81,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 44
+    .line 45
     const-string v4, "DCIM"
 
     invoke-static {p1, v4}, Lcom/android/camera/io/FileUtility;->backupDirectory(Ljava/lang/String;Ljava/lang/String;)Z
@@ -88,18 +90,18 @@
 
     if-nez v4, :cond_0
 
-    .line 46
+    .line 47
     const-string v4, "DCFUtility"
 
     const-string v5, "Cannot backup \'DCIM\' directory."
 
     invoke-static {v4, v5}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
+    .line 70
     :goto_0
     return v3
 
-    .line 51
+    .line 52
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -129,7 +131,7 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 52
+    .line 53
     .local v1, dcimDir:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
@@ -137,7 +139,7 @@
 
     if-nez v4, :cond_1
 
-    .line 54
+    .line 55
     const-string v4, "DCFUtility"
 
     const-string v5, "Cannot create new \'DCIM\' directory."
@@ -146,13 +148,13 @@
 
     goto :goto_0
 
-    .line 59
+    .line 60
     :cond_1
     sget-object v4, Lcom/android/camera/io/DCFUtility;->m_DCFInfos:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 61
+    .line 62
     :try_start_0
     sget-object v3, Lcom/android/camera/io/DCFUtility;->m_DCFInfos:Ljava/util/ArrayList;
 
@@ -174,7 +176,7 @@
 
     check-cast v0, Lcom/android/camera/io/DCFInfo;
 
-    .line 63
+    .line 64
     .local v0, dcfInfo:Lcom/android/camera/io/DCFInfo;
     iget-object v3, v0, Lcom/android/camera/io/DCFInfo;->fileCounterPrefKey:Ljava/lang/String;
 
@@ -182,7 +184,7 @@
 
     invoke-static {p0, v3, v5}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
 
-    .line 64
+    .line 65
     iget-object v3, v0, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
 
     const-string v5, "null"
@@ -191,7 +193,7 @@
 
     goto :goto_1
 
-    .line 66
+    .line 67
     .end local v0           #dcfInfo:Lcom/android/camera/io/DCFInfo;
     .end local v2           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -210,7 +212,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 69
+    .line 70
     const/4 v3, 0x1
 
     goto :goto_0
@@ -224,7 +226,7 @@
     .parameter "format"
 
     .prologue
-    .line 77
+    .line 78
     invoke-static {p1, p2, p3}, Lcom/android/camera/io/DCFUtility;->getFileName(Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileCounter;Lcom/android/camera/io/FileFormat;)Ljava/lang/String;
 
     move-result-object v1
@@ -233,7 +235,7 @@
 
     move-result-object v0
 
-    .line 78
+    .line 79
     .local v0, path:Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
@@ -257,19 +259,19 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 87
+    .line 88
     const/16 v3, 0x3e7
 
     if-le p3, v3, :cond_1
 
-    .line 90
+    .line 91
     invoke-static {p0, p1}, Lcom/android/camera/io/DCFUtility;->backupDcimDirectory(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 92
+    .line 93
     const-string v3, "DCFUtility"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -298,15 +300,15 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 125
+    .line 126
     :goto_0
     return v2
 
-    .line 97
+    .line 98
     :cond_0
     const/16 p3, 0x64
 
-    .line 101
+    .line 102
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -334,7 +336,7 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 102
+    .line 103
     .local v0, dir:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -348,7 +350,7 @@
 
     if-nez v3, :cond_2
 
-    .line 104
+    .line 105
     const-string v3, "DCFUtility"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -383,7 +385,7 @@
 
     goto :goto_0
 
-    .line 109
+    .line 110
     :cond_2
     new-instance v1, Ljava/io/File;
 
@@ -405,7 +407,7 @@
 
     invoke-direct {v1, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 110
+    .line 111
     .end local v0           #dir:Ljava/io/File;
     .local v1, dir:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -414,14 +416,14 @@
 
     if-eqz v3, :cond_4
 
-    .line 112
+    .line 113
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 114
+    .line 115
     const-string v2, "DCFUtility"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -454,7 +456,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 115
+    .line 116
     add-int/lit8 v2, p3, 0x1
 
     invoke-static {p0, p1, p2, v2, p4}, Lcom/android/camera/io/DCFUtility;->ensureDirectoryExists(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)I
@@ -464,10 +466,10 @@
     :cond_3
     move v2, p3
 
-    .line 125
+    .line 126
     goto/16 :goto_0
 
-    .line 118
+    .line 119
     :cond_4
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
@@ -475,7 +477,7 @@
 
     if-nez v3, :cond_3
 
-    .line 120
+    .line 121
     const-string v3, "DCFUtility"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -517,7 +519,7 @@
     .parameter "dcfInfo"
 
     .prologue
-    .line 182
+    .line 183
     const/4 v3, 0x1
 
     :try_start_0
@@ -529,7 +531,7 @@
 
     aput v4, v1, v3
 
-    .line 183
+    .line 184
     .local v1, maxDirCounter:[I
     const/4 v3, 0x2
 
@@ -543,30 +545,30 @@
 
     aput-object v1, v2, v3
 
-    .line 184
+    .line 185
     .local v2, params:[Ljava/lang/Object;
     sget-object v3, Lcom/android/camera/io/DCFUtility;->m_EnumFilesForDirCounter:Lcom/android/camera/io/FileUtility$FileEnumerationCallback;
 
     invoke-static {p0, v3, v2}, Lcom/android/camera/io/FileUtility;->enumerateFiles(Ljava/lang/String;Lcom/android/camera/io/FileUtility$FileEnumerationCallback;Ljava/lang/Object;)Z
 
-    .line 185
+    .line 186
     const/4 v3, 0x0
 
     aget v3, v1, v3
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 190
+    .line 191
     .end local v1           #maxDirCounter:[I
     .end local v2           #params:[Ljava/lang/Object;
     :goto_0
     return v3
 
-    .line 187
+    .line 188
     :catch_0
     move-exception v0
 
-    .line 189
+    .line 190
     .local v0, ex:Ljava/lang/Throwable;
     const-string v3, "DCFUtility"
 
@@ -574,7 +576,7 @@
 
     invoke-static {v3, v4, v0}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 190
+    .line 191
     const/4 v3, -0x1
 
     goto :goto_0
@@ -586,7 +588,7 @@
     .parameter "dcfInfo"
 
     .prologue
-    .line 248
+    .line 249
     const/4 v3, 0x1
 
     :try_start_0
@@ -598,7 +600,7 @@
 
     aput v4, v1, v3
 
-    .line 249
+    .line 250
     .local v1, maxFileCounter:[I
     const/4 v3, 0x2
 
@@ -612,30 +614,30 @@
 
     aput-object v1, v2, v3
 
-    .line 250
+    .line 251
     .local v2, params:[Ljava/lang/Object;
     sget-object v3, Lcom/android/camera/io/DCFUtility;->m_EnumFilesForFileCounter:Lcom/android/camera/io/FileUtility$FileEnumerationCallback;
 
     invoke-static {p0, v3, v2}, Lcom/android/camera/io/FileUtility;->enumerateFiles(Ljava/lang/String;Lcom/android/camera/io/FileUtility$FileEnumerationCallback;Ljava/lang/Object;)Z
 
-    .line 251
+    .line 252
     const/4 v3, 0x0
 
     aget v3, v1, v3
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 256
+    .line 257
     .end local v1           #maxFileCounter:[I
     .end local v2           #params:[Ljava/lang/Object;
     :goto_0
     return v3
 
-    .line 253
+    .line 254
     :catch_0
     move-exception v0
 
-    .line 255
+    .line 256
     .local v0, ex:Ljava/lang/Throwable;
     const-string v3, "DCFUtility"
 
@@ -643,14 +645,14 @@
 
     invoke-static {v3, v4, v0}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 256
+    .line 257
     const/4 v3, -0x1
 
     goto :goto_0
 .end method
 
 .method public static findNextDirAndFileCounters(Lcom/android/camera/Settings;Ljava/lang/String;Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileFormat;Lcom/android/camera/Reference;Lcom/android/camera/Reference;)Z
-    .locals 9
+    .locals 7
     .parameter "settings"
     .parameter "rootDirectory"
     .parameter "dcfInfo"
@@ -676,420 +678,671 @@
     .end annotation
 
     .prologue
+    .line 266
     .local p4, resultDirCounter:Lcom/android/camera/Reference;,"Lcom/android/camera/Reference<Ljava/lang/Integer;>;"
     .local p5, resultFileCounter:Lcom/android/camera/Reference;,"Lcom/android/camera/Reference<Ljava/lang/Integer;>;"
-    const/16 v8, 0x64
+    sget-object v4, Lcom/android/camera/io/FileUtility$InformationSource;->Cache:Lcom/android/camera/io/FileUtility$InformationSource;
 
-    const/4 v4, 0x0
+    move-object v0, p0
 
-    .line 268
-    :try_start_0
-    iget-object v5, p2, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
+    move-object v1, p1
 
-    const/16 v6, 0x64
+    move-object v2, p2
 
-    iget v7, p2, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
+    move-object v3, p3
 
-    invoke-static {p0, v5, v6, v7}, Lcom/android/camera/io/DCFUtility;->getCounterFromPreference(Lcom/android/camera/Settings;Ljava/lang/String;II)I
+    move-object v5, p4
+
+    move-object v6, p5
+
+    invoke-static/range {v0 .. v6}, Lcom/android/camera/io/DCFUtility;->findNextDirAndFileCounters(Lcom/android/camera/Settings;Ljava/lang/String;Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileFormat;Lcom/android/camera/io/FileUtility$InformationSource;Lcom/android/camera/Reference;Lcom/android/camera/Reference;)Z
 
     move-result v0
 
-    .line 269
-    .local v0, dirCounter:I
-    iget-object v5, p2, Lcom/android/camera/io/DCFInfo;->fileCounterPrefKey:Ljava/lang/String;
+    return v0
+.end method
 
-    const/4 v6, 0x0
+.method public static findNextDirAndFileCounters(Lcom/android/camera/Settings;Ljava/lang/String;Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileFormat;Lcom/android/camera/io/FileUtility$InformationSource;Lcom/android/camera/Reference;Lcom/android/camera/Reference;)Z
+    .locals 11
+    .parameter "settings"
+    .parameter "rootDirectory"
+    .parameter "dcfInfo"
+    .parameter "format"
+    .parameter "fileCountSource"
+    .parameter
+    .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/camera/Settings;",
+            "Ljava/lang/String;",
+            "Lcom/android/camera/io/DCFInfo;",
+            "Lcom/android/camera/io/FileFormat;",
+            "Lcom/android/camera/io/FileUtility$InformationSource;",
+            "Lcom/android/camera/Reference",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Lcom/android/camera/Reference",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;)Z"
+        }
+    .end annotation
 
-    iget v7, p2, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
-
-    invoke-static {p0, v5, v6, v7}, Lcom/android/camera/io/DCFUtility;->getCounterFromPreference(Lcom/android/camera/Settings;Ljava/lang/String;II)I
-
-    move-result v3
-
-    .line 272
-    .local v3, fileCounter:I
-    add-int/lit8 v3, v3, 0x1
-
+    .prologue
     .line 273
-    iget v5, p2, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
+    .local p5, resultDirCounter:Lcom/android/camera/Reference;,"Lcom/android/camera/Reference<Ljava/lang/Integer;>;"
+    .local p6, resultFileCounter:Lcom/android/camera/Reference;,"Lcom/android/camera/Reference<Ljava/lang/Integer;>;"
+    :try_start_0
+    iget-object v8, p2, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
 
-    if-le v3, v5, :cond_1
+    const/16 v9, 0x64
 
-    .line 275
-    iget v5, p2, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
+    iget v10, p2, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
 
-    if-lt v0, v5, :cond_0
+    invoke-static {p0, v8, v9, v10}, Lcom/android/camera/io/DCFUtility;->getCounterFromPreference(Lcom/android/camera/Settings;Ljava/lang/String;II)I
 
-    .line 277
-    const-string v5, "DCFUtility"
+    move-result v1
 
-    const-string v6, "findNextDirAndFileCounters() - No more directory and file counters"
+    .line 274
+    .local v1, dirCounter:I
+    iget-object v8, p2, Lcom/android/camera/io/DCFInfo;->fileCounterPrefKey:Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v9, 0x0
 
-    .line 347
-    .end local v0           #dirCounter:I
-    .end local v3           #fileCounter:I
-    :goto_0
-    return v4
+    iget v10, p2, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
 
-    .line 280
-    .restart local v0       #dirCounter:I
-    .restart local v3       #fileCounter:I
-    :cond_0
-    const/4 v3, 0x1
-
-    .line 281
-    add-int/lit8 v0, v0, 0x1
-
-    .line 285
-    :cond_1
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    iget-object v6, p2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {p1, v5}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 286
-    .local v1, dirPath:Ljava/lang/String;
-    new-instance v5, Lcom/android/camera/io/FileCounter;
-
-    invoke-direct {v5, v3}, Lcom/android/camera/io/FileCounter;-><init>(I)V
-
-    invoke-static {v1, p2, v5, p3}, Lcom/android/camera/io/DCFUtility;->checkFileExistence(Ljava/lang/String;Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileCounter;Lcom/android/camera/io/FileFormat;)Z
+    invoke-static {p0, v8, v9, v10}, Lcom/android/camera/io/DCFUtility;->getCounterFromPreference(Lcom/android/camera/Settings;Ljava/lang/String;II)I
 
     move-result v5
 
-    if-eqz v5, :cond_6
+    .line 277
+    .local v5, fileCounter:I
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    .line 288
-    const-string v5, "DCFUtility"
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "findNextDirAndFileCounters() - Scan for latest directory and file counters"
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v8
 
-    .line 291
-    invoke-static {p1, p2}, Lcom/android/camera/io/DCFUtility;->findLatestDirectoryCounter(Ljava/lang/String;Lcom/android/camera/io/DCFInfo;)I
+    iget-object v9, p2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {p1, v8}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 278
+    .local v2, dirPath:Ljava/lang/String;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    .line 279
+    .local v6, t:J
+    const/16 v8, 0x270f
+
+    invoke-static {v2, v8, p4}, Lcom/android/camera/io/FileUtility;->getFileCount(Ljava/lang/String;ILcom/android/camera/io/FileUtility$InformationSource;)I
+
+    move-result v4
+
+    .line 280
+    .local v4, fileCount:I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v8
+
+    sub-long v6, v8, v6
+
+    .line 281
+    const-string v8, "DCFUtility"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "findNextDirAndFileCounters() - File count in \'"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, "\' is "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, ", cost "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, " ms"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 284
+    add-int/lit8 v5, v5, 0x1
+
+    .line 285
+    iget v8, p2, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
+
+    if-gt v5, v8, :cond_0
+
+    const/16 v8, 0x270f
+
+    if-lt v4, v8, :cond_2
+
+    .line 287
+    :cond_0
+    iget v8, p2, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
+
+    if-lt v1, v8, :cond_1
+
+    .line 289
+    const-string v8, "DCFUtility"
+
+    const-string v9, "findNextDirAndFileCounters() - No more directory and file counters"
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 290
+    const/4 v8, 0x0
+
+    .line 371
+    .end local v1           #dirCounter:I
+    .end local v2           #dirPath:Ljava/lang/String;
+    .end local v4           #fileCount:I
+    .end local v5           #fileCounter:I
+    .end local v6           #t:J
+    :goto_0
+    return v8
 
     .line 292
-    if-gez v0, :cond_2
+    .restart local v1       #dirCounter:I
+    .restart local v2       #dirPath:Ljava/lang/String;
+    .restart local v4       #fileCount:I
+    .restart local v5       #fileCounter:I
+    .restart local v6       #t:J
+    :cond_1
+    const/4 v5, 0x1
 
-    .line 294
-    const-string v5, "DCFUtility"
-
-    const-string v6, "findNextDirAndFileCounters() - Cannot find latest directory counter"
-
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 344
-    .end local v0           #dirCounter:I
-    .end local v1           #dirPath:Ljava/lang/String;
-    .end local v3           #fileCounter:I
-    :catch_0
-    move-exception v2
-
-    .line 346
-    .local v2, ex:Ljava/lang/Throwable;
-    const-string v5, "DCFUtility"
-
-    const-string v6, "findNextDirAndFileCounters() - Cannot find next available counters"
-
-    invoke-static {v5, v6, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
+    .line 293
+    add-int/lit8 v1, v1, 0x1
 
     .line 297
-    .end local v2           #ex:Ljava/lang/Throwable;
-    .restart local v0       #dirCounter:I
-    .restart local v1       #dirPath:Ljava/lang/String;
-    .restart local v3       #fileCounter:I
     :cond_2
-    if-ge v0, v8, :cond_3
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    iget-object v9, p2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {p1, v8}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
 
     .line 298
-    const/16 v0, 0x64
+    new-instance v8, Lcom/android/camera/io/FileCounter;
 
-    .line 299
-    :cond_3
-    :try_start_1
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-direct {v8, v5}, Lcom/android/camera/io/FileCounter;-><init>(I)V
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v2, p2, v8, p3}, Lcom/android/camera/io/DCFUtility;->checkFileExistence(Ljava/lang/String;Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileCounter;Lcom/android/camera/io/FileFormat;)Z
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v8
 
-    move-result-object v5
+    if-eqz v8, :cond_8
 
-    iget-object v6, p2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
+    .line 300
+    const-string v8, "DCFUtility"
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v9, "findNextDirAndFileCounters() - Scan for latest directory and file counters"
 
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {p1, v5}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 302
-    invoke-static {v1, p2}, Lcom/android/camera/io/DCFUtility;->findLatestMainFileCounter(Ljava/lang/String;Lcom/android/camera/io/DCFInfo;)I
-
-    move-result v3
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 303
-    if-gez v3, :cond_4
+    invoke-static {p1, p2}, Lcom/android/camera/io/DCFUtility;->findLatestDirectoryCounter(Ljava/lang/String;Lcom/android/camera/io/DCFInfo;)I
 
-    .line 305
-    const-string v5, "DCFUtility"
+    move-result v1
 
-    const-string v6, "findNextDirAndFileCounters() - Cannot find latest file counter"
+    .line 304
+    if-gez v1, :cond_3
 
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    .line 306
+    const-string v8, "DCFUtility"
+
+    const-string v9, "findNextDirAndFileCounters() - Cannot find latest directory counter"
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 307
+    const/4 v8, 0x0
 
     goto :goto_0
 
     .line 309
+    :cond_3
+    const/16 v8, 0x64
+
+    if-ge v1, v8, :cond_4
+
+    .line 310
+    const/16 v1, 0x64
+
+    .line 311
     :cond_4
-    const-string v5, "DCFUtility"
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v7, "findNextDirAndFileCounters() - Latest directory counter = "
+    move-result-object v8
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v9, p2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
 
-    move-result-object v6
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v8
 
-    move-result-object v6
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v7, ", file counter = "
+    move-result-object v8
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v8}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 314
+    invoke-static {v2, p2}, Lcom/android/camera/io/DCFUtility;->findLatestMainFileCounter(Ljava/lang/String;Lcom/android/camera/io/DCFInfo;)I
 
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 312
-    add-int/lit8 v3, v3, 0x1
-
-    .line 313
-    iget v5, p2, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
-
-    if-le v3, v5, :cond_6
+    move-result v5
 
     .line 315
-    iget v5, p2, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
-
-    if-lt v0, v5, :cond_5
+    if-gez v5, :cond_5
 
     .line 317
-    const-string v5, "DCFUtility"
+    const-string v8, "DCFUtility"
 
-    const-string v6, "findNextDirAndFileCounters() - No more directory and file counters"
+    const-string v9, "findNextDirAndFileCounters() - Cannot find latest file counter"
 
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_0
+    .line 318
+    const/4 v8, 0x0
 
-    .line 320
-    :cond_5
-    const/4 v3, 0x1
+    goto :goto_0
 
     .line 321
-    add-int/lit8 v0, v0, 0x1
+    :cond_5
+    const-string v8, "DCFUtility"
 
-    .line 322
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v10, "findNextDirAndFileCounters() - Latest directory counter = "
 
-    move-result-object v5
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v6, p2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
+    move-result-object v9
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v9
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v10, ", file counter = "
 
-    move-result-object v5
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v5}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v9
 
-    move-result-object v1
+    invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 327
-    :cond_6
-    invoke-static {p1}, Lcom/android/camera/io/FileUtility;->createDirectory(Ljava/lang/String;)Z
+    :goto_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result v5
+    move-result-wide v6
 
-    if-nez v5, :cond_7
+    .line 328
+    const/16 v8, 0x270f
+
+    invoke-static {v2, v8, p4}, Lcom/android/camera/io/FileUtility;->getFileCount(Ljava/lang/String;ILcom/android/camera/io/FileUtility$InformationSource;)I
+
+    move-result v4
 
     .line 329
-    const-string v5, "DCFUtility"
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    move-result-wide v8
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    sub-long v6, v8, v6
 
-    const-string v7, "findNextDirAndFileCounters() - Cannot create directory \'"
+    .line 330
+    const-string v8, "DCFUtility"
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v10, "findNextDirAndFileCounters() - File count in \'"
 
-    move-result-object v6
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v7, "\'"
+    move-result-object v9
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v9
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v10, "\' is "
 
-    move-result-object v6
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v9
 
-    goto/16 :goto_0
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 332
-    :cond_7
-    invoke-static {v1}, Lcom/android/camera/io/FileUtility;->createDirectory(Ljava/lang/String;)Z
+    move-result-object v9
 
-    move-result v5
+    const-string v10, ", cost "
 
-    if-nez v5, :cond_8
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, " ms"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 333
+    add-int/lit8 v5, v5, 0x1
 
     .line 334
-    const-string v5, "DCFUtility"
+    iget v8, p2, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    if-gt v5, v8, :cond_6
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    const/16 v8, 0x270f
 
-    const-string v7, "findNextDirAndFileCounters() - Cannot create directory \'"
+    if-lt v4, v8, :cond_8
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 336
+    :cond_6
+    iget v8, p2, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
 
-    move-result-object v6
+    if-lt v1, v8, :cond_7
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 338
+    const-string v8, "DCFUtility"
 
-    move-result-object v6
+    const-string v9, "findNextDirAndFileCounters() - No more directory and file counters"
 
-    const-string v7, "\'"
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+    .line 339
+    const/4 v8, 0x0
 
     goto/16 :goto_0
 
-    .line 339
-    :cond_8
-    const-string v5, "DCFUtility"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "findNextDirAndFileCounters() - Directory counter = "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, ", file counter = "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 340
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    iput-object v5, p4, Lcom/android/camera/Reference;->target:Ljava/lang/Object;
-
     .line 341
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    iput-object v5, p5, Lcom/android/camera/Reference;->target:Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    :cond_7
+    const/4 v5, 0x0
 
     .line 342
-    const/4 v4, 0x1
+    add-int/lit8 v1, v1, 0x1
+
+    .line 343
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    iget-object v9, p2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {p1, v8}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    .line 351
+    :cond_8
+    invoke-static {p1}, Lcom/android/camera/io/FileUtility;->createDirectory(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_9
+
+    .line 353
+    const-string v8, "DCFUtility"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "findNextDirAndFileCounters() - Cannot create directory \'"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, "\'"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 354
+    const/4 v8, 0x0
+
+    goto/16 :goto_0
+
+    .line 356
+    :cond_9
+    invoke-static {v2}, Lcom/android/camera/io/FileUtility;->createDirectory(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_a
+
+    .line 358
+    const-string v8, "DCFUtility"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "findNextDirAndFileCounters() - Cannot create directory \'"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, "\'"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 359
+    const/4 v8, 0x0
+
+    goto/16 :goto_0
+
+    .line 363
+    :cond_a
+    const-string v8, "DCFUtility"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "findNextDirAndFileCounters() - Directory counter = "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, ", file counter = "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 364
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    move-object/from16 v0, p5
+
+    iput-object v8, v0, Lcom/android/camera/Reference;->target:Ljava/lang/Object;
+
+    .line 365
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    move-object/from16 v0, p6
+
+    iput-object v8, v0, Lcom/android/camera/Reference;->target:Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 366
+    const/4 v8, 0x1
+
+    goto/16 :goto_0
+
+    .line 368
+    .end local v1           #dirCounter:I
+    .end local v2           #dirPath:Ljava/lang/String;
+    .end local v4           #fileCount:I
+    .end local v5           #fileCounter:I
+    .end local v6           #t:J
+    :catch_0
+    move-exception v3
+
+    .line 370
+    .local v3, ex:Ljava/lang/Throwable;
+    const-string v8, "DCFUtility"
+
+    const-string v9, "findNextDirAndFileCounters() - Cannot find next available counters"
+
+    invoke-static {v8, v9, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 371
+    const/4 v8, 0x0
 
     goto/16 :goto_0
 .end method
@@ -1102,16 +1355,16 @@
     .parameter "maxCounter"
 
     .prologue
-    .line 358
+    .line 382
     if-nez p1, :cond_1
 
-    .line 370
+    .line 394
     .end local p2
     :cond_0
     :goto_0
     return p2
 
-    .line 360
+    .line 384
     .restart local p2
     :cond_1
     :try_start_0
@@ -1121,30 +1374,30 @@
 
     move-result v0
 
-    .line 361
+    .line 385
     .local v0, counter:I
     if-lt v0, p2, :cond_0
 
-    .line 363
+    .line 387
     if-le v0, p3, :cond_2
 
     move p2, p3
 
-    .line 364
+    .line 388
     goto :goto_0
 
     :cond_2
     move p2, v0
 
-    .line 365
+    .line 389
     goto :goto_0
 
-    .line 367
+    .line 391
     .end local v0           #counter:I
     :catch_0
     move-exception v1
 
-    .line 369
+    .line 393
     .local v1, ex:Ljava/lang/Throwable;
     const-string v2, "DCFUtility"
 
@@ -1160,7 +1413,7 @@
     .parameter "storageSlot"
 
     .prologue
-    .line 379
+    .line 403
     iget-object v0, p0, Lcom/android/camera/io/StorageSlot;->directoryPath:Ljava/lang/String;
 
     const-string v1, "DCIM"
@@ -1178,7 +1431,7 @@
     .parameter "counter"
 
     .prologue
-    .line 387
+    .line 411
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1202,6 +1455,44 @@
     return-object v0
 .end method
 
+.method public static getDirectoryPath(Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/StorageSlot;Lcom/android/camera/io/FileCounter;)Ljava/lang/String;
+    .locals 1
+    .parameter "dcfInfo"
+    .parameter "storageSlot"
+    .parameter "dirCounter"
+
+    .prologue
+    .line 419
+    invoke-static {p1}, Lcom/android/camera/io/DCFUtility;->getDcimPath(Lcom/android/camera/io/StorageSlot;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0, p2}, Lcom/android/camera/io/DCFUtility;->getDirectoryPath(Lcom/android/camera/io/DCFInfo;Ljava/lang/String;Lcom/android/camera/io/FileCounter;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getDirectoryPath(Lcom/android/camera/io/DCFInfo;Ljava/lang/String;Lcom/android/camera/io/FileCounter;)Ljava/lang/String;
+    .locals 1
+    .parameter "dcfInfo"
+    .parameter "rootDirectory"
+    .parameter "dirCounter"
+
+    .prologue
+    .line 423
+    invoke-static {p0, p2}, Lcom/android/camera/io/DCFUtility;->getDirectoryName(Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileCounter;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/android/camera/io/Path;->combine(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static getFileName(Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileCounter;Lcom/android/camera/io/FileFormat;)Ljava/lang/String;
     .locals 7
     .parameter "dcfInfo"
@@ -1211,39 +1502,39 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 396
+    .line 432
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/16 v4, 0x20
 
     invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 397
+    .line 433
     .local v1, fileName:Ljava/lang/StringBuilder;
     iget-object v4, p0, Lcom/android/camera/io/DCFInfo;->fileTag:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 398
+    .line 434
     iget v3, p1, Lcom/android/camera/io/FileCounter;->mainCounter:I
 
-    .line 399
+    .line 435
     .local v3, mainCounter:I
     const/16 v4, 0x2710
 
     if-ge v3, v4, :cond_1
 
-    .line 401
+    .line 437
     iget v4, p0, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
 
     const/16 v5, 0x3e8
 
     if-ge v4, v5, :cond_0
 
-    .line 402
+    .line 438
     add-int/lit16 v3, v3, 0x3e8
 
-    .line 405
+    .line 441
     :goto_0
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1259,16 +1550,16 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 411
+    .line 447
     :goto_1
     iget v4, p0, Lcom/android/camera/io/DCFInfo;->subCounterDigits:I
 
     if-lez v4, :cond_3
 
-    .line 413
+    .line 449
     const/4 v0, 0x1
 
-    .line 414
+    .line 450
     .local v0, base:I
     iget v2, p0, Lcom/android/camera/io/DCFInfo;->subCounterDigits:I
 
@@ -1276,15 +1567,15 @@
     :goto_2
     if-lez v2, :cond_2
 
-    .line 415
+    .line 451
     mul-int/lit8 v0, v0, 0xa
 
-    .line 414
+    .line 450
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_2
 
-    .line 404
+    .line 440
     .end local v0           #base:I
     .end local v2           #i:I
     :cond_0
@@ -1292,13 +1583,13 @@
 
     goto :goto_0
 
-    .line 408
+    .line 444
     :cond_1
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 416
+    .line 452
     .restart local v0       #base:I
     .restart local v2       #i:I
     :cond_2
@@ -1326,18 +1617,18 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 420
+    .line 456
     .end local v0           #base:I
     .end local v2           #i:I
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 421
+    .line 457
     iget-object v4, p2, Lcom/android/camera/io/FileFormat;->fileNameExtension:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 424
+    .line 460
     :cond_4
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1355,7 +1646,7 @@
     .parameter "format"
 
     .prologue
-    .line 432
+    .line 468
     invoke-static {p1}, Lcom/android/camera/io/DCFUtility;->getDcimPath(Lcom/android/camera/io/StorageSlot;)Ljava/lang/String;
 
     move-result-object v0
@@ -1376,7 +1667,7 @@
     .parameter "format"
 
     .prologue
-    .line 436
+    .line 472
     invoke-static {p0, p2}, Lcom/android/camera/io/DCFUtility;->getDirectoryName(Lcom/android/camera/io/DCFInfo;Lcom/android/camera/io/FileCounter;)Ljava/lang/String;
 
     move-result-object v0
@@ -1402,17 +1693,17 @@
     .parameter "dirSuffix"
 
     .prologue
-    .line 447
+    .line 483
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 448
+    .line 484
     .local v1, dirNameSuffixLength:I
     add-int/lit8 v0, v1, 0x3
 
-    .line 449
+    .line 485
     .local v0, dirNameLength:I
     const/4 v4, 0x1
 
@@ -1428,7 +1719,7 @@
 
     aput-object v5, v3, v4
 
-    .line 450
+    .line 486
     .local v3, params:[Ljava/lang/Object;
     new-instance v4, Lcom/android/camera/io/DCFUtility$3;
 
@@ -1436,7 +1727,7 @@
 
     invoke-static {p0, v4, v3}, Lcom/android/camera/io/FileUtility;->enumerateFiles(Ljava/lang/String;Lcom/android/camera/io/FileUtility$FileEnumerationCallback;Ljava/lang/Object;)Z
 
-    .line 496
+    .line 532
     const/4 v4, 0x0
 
     aget-object v4, v3, v4
@@ -1449,18 +1740,18 @@
 
     move-result v4
 
-    .line 501
+    .line 537
     .end local v0           #dirNameLength:I
     .end local v1           #dirNameSuffixLength:I
     .end local v3           #params:[Ljava/lang/Object;
     :goto_0
     return v4
 
-    .line 498
+    .line 534
     :catch_0
     move-exception v2
 
-    .line 500
+    .line 536
     .local v2, ex:Ljava/io/IOException;
     const-string v4, "DCFUtility"
 
@@ -1490,7 +1781,7 @@
 
     invoke-static {v4, v5, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 501
+    .line 537
     const/4 v4, -0x1
 
     goto :goto_0
@@ -1501,18 +1792,18 @@
     .parameter "slot"
 
     .prologue
-    .line 511
+    .line 547
     if-nez p0, :cond_0
 
-    .line 513
+    .line 549
     const-string v0, "slot"
 
     invoke-static {v0}, Lcom/android/camera/debug/Debugger;->printArgumentNullLog(Ljava/lang/String;)V
 
-    .line 514
+    .line 550
     const/4 v0, 0x0
 
-    .line 518
+    .line 554
     :goto_0
     return v0
 
@@ -1531,31 +1822,31 @@
     .parameter "dcfInfo"
 
     .prologue
-    .line 526
+    .line 562
     if-nez p0, :cond_0
 
-    .line 528
+    .line 564
     const-string v0, "dcfInfo"
 
     invoke-static {v0}, Lcom/android/camera/debug/Debugger;->printArgumentNullLog(Ljava/lang/String;)V
 
-    .line 535
+    .line 571
     :goto_0
     return-void
 
-    .line 531
+    .line 567
     :cond_0
     sget-object v1, Lcom/android/camera/io/DCFUtility;->m_DCFInfos:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 533
+    .line 569
     :try_start_0
     sget-object v0, Lcom/android/camera/io/DCFUtility;->m_DCFInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 534
+    .line 570
     monitor-exit v1
 
     goto :goto_0
@@ -1580,23 +1871,23 @@
 
     const/4 v4, 0x1
 
-    .line 543
+    .line 579
     iget-object v2, p1, Lcom/android/camera/io/DCFInfo;->fileCounterPrefKey:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 545
+    .line 581
     const-string v2, "DCFUtility"
 
     const-string v3, "restoreFileCounter() - No file counter preference"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 582
+    .line 618
     :goto_0
     return-void
 
-    .line 548
+    .line 584
     :cond_0
     iget-object v2, p1, Lcom/android/camera/io/DCFInfo;->fileCounterPrefKey:Ljava/lang/String;
 
@@ -1606,19 +1897,19 @@
 
     move-result v1
 
-    .line 551
+    .line 587
     .local v1, fileCounter:I
     add-int/lit8 v1, v1, -0x1
 
-    .line 552
+    .line 588
     if-ge v1, v4, :cond_1
 
-    .line 554
+    .line 590
     iget-object v2, p1, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
 
     if-eqz v2, :cond_3
 
-    .line 557
+    .line 593
     iget-object v2, p1, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
 
     iget v3, p1, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
@@ -1627,17 +1918,17 @@
 
     move-result v0
 
-    .line 560
+    .line 596
     .local v0, dirCounter:I
     if-le v0, v5, :cond_2
 
-    .line 562
+    .line 598
     add-int/lit8 v0, v0, -0x1
 
-    .line 563
+    .line 599
     iget v1, p1, Lcom/android/camera/io/DCFInfo;->maxFileCounter:I
 
-    .line 564
+    .line 600
     const-string v2, "DCFUtility"
 
     const-string v3, "restoreFileCounter() - Restore directory counter to "
@@ -1654,7 +1945,7 @@
 
     invoke-static {v2, v3, v4, v5, v6}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 565
+    .line 601
     iget-object v2, p1, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1663,7 +1954,7 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/android/camera/Settings;->set(Ljava/lang/String;Ljava/lang/Object;)Z
 
-    .line 581
+    .line 617
     .end local v0           #dirCounter:I
     :cond_1
     :goto_1
@@ -1677,7 +1968,7 @@
 
     goto :goto_0
 
-    .line 569
+    .line 605
     .restart local v0       #dirCounter:I
     :cond_2
     const-string v2, "DCFUtility"
@@ -1686,12 +1977,12 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 570
+    .line 606
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 575
+    .line 611
     .end local v0           #dirCounter:I
     :cond_3
     const-string v2, "DCFUtility"
@@ -1700,7 +1991,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 576
+    .line 612
     const/4 v1, 0x1
 
     goto :goto_1

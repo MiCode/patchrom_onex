@@ -69,7 +69,7 @@
     .locals 1
 
     .prologue
-    .line 2739
+    .line 2742
     const-string v0, "content://mms-sms/"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -78,7 +78,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2743
+    .line 2746
     const-string v0, "content://mms-sms/conversations"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -87,7 +87,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_CONVERSATIONS_URI:Landroid/net/Uri;
 
-    .line 2749
+    .line 2752
     const-string v0, "content://mms-sms/messages/byphone"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -96,7 +96,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_FILTER_BYPHONE_URI:Landroid/net/Uri;
 
-    .line 2752
+    .line 2755
     const-string v0, "content://mms-sms/undelivered"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -105,7 +105,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_UNDELIVERED_URI:Landroid/net/Uri;
 
-    .line 2758
+    .line 2761
     const-string v0, "content://mms-sms/draft"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -114,7 +114,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_DRAFT_URI:Landroid/net/Uri;
 
-    .line 2776
+    .line 2779
     const-string v0, "content://mms-sms/locked"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -123,7 +123,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_LOCKED_URI:Landroid/net/Uri;
 
-    .line 2784
+    .line 2787
     const-string v0, "content://mms-sms/search"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -139,9 +139,9 @@
     .locals 0
 
     .prologue
-    .line 2724
+    .line 2727
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2845
+    .line 2848
     return-void
 .end method

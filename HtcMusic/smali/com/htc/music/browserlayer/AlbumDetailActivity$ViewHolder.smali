@@ -27,13 +27,13 @@
     .parameter "viewType"
 
     .prologue
-    .line 1604
+    .line 1679
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1605
+    .line 1680
     iput p1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;->viewType:I
 
-    .line 1606
+    .line 1681
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 1610
+    .line 1685
     const/4 v0, 0x1
 
     return v0
@@ -56,18 +56,18 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1615
+    .line 1690
     move-object v0, p1
 
     check-cast v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
 
-    .line 1616
+    .line 1691
     .local v0, temp:Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
     iget v2, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;->viewType:I
 
     if-ne v2, v1, :cond_0
 
-    .line 1619
+    .line 1694
     :goto_0
     return v1
 

@@ -605,6 +605,9 @@
     goto :goto_0
 .end method
 
+.method private static native setCameraMode_native(I)I
+.end method
+
 .method private static native setCapsLedState_native(Z)V
 .end method
 
@@ -624,6 +627,9 @@
 .end method
 
 .method private static native setJogBallMode_native(I)V
+.end method
+
+.method private static native setNaviMode_native(I)I
 .end method
 
 
@@ -1092,6 +1098,19 @@
     goto :goto_2
 .end method
 
+.method public setCameraMode(I)I
+    .locals 1
+    .parameter "value"
+
+    .prologue
+    .line 424
+    invoke-static {p1}, Lcom/android/server/HtcHardwareService;->setCameraMode_native(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public setCapsLedState(Z)V
     .locals 2
     .parameter "on"
@@ -1291,4 +1310,17 @@
 
     .line 123
     return-void
+.end method
+
+.method public setNaviMode(I)I
+    .locals 1
+    .parameter "value"
+
+    .prologue
+    .line 417
+    invoke-static {p1}, Lcom/android/server/HtcHardwareService;->setNaviMode_native(I)I
+
+    move-result v0
+
+    return v0
 .end method

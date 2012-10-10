@@ -101,6 +101,17 @@
     return v0
 .end method
 
+.method public initAccountAuthentication(Lcom/htc/opensense/album/plugin/IAuthenticationResult;)Z
+    .locals 1
+    .parameter "callback"
+
+    .prologue
+    .line 236
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public initAccountSignIn(Lcom/htc/opensense/album/plugin/ISignInResult;)V
     .locals 0
     .parameter "callback"
@@ -121,6 +132,16 @@
 .end method
 
 .method public abstract onDeInit()V
+.end method
+
+.method public onEnableAuthenticationProcedure()Z
+    .locals 1
+
+    .prologue
+    .line 224
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public onEnableCacheList()Z

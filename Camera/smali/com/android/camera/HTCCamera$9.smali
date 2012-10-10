@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1631
+    .line 1894
     iput-object p1, p0, Lcom/android/camera/HTCCamera$9;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,11 @@
     .locals 1
 
     .prologue
-    .line 1635
+    .line 1898
     iget-object v0, p0, Lcom/android/camera/HTCCamera$9;->this$0:Lcom/android/camera/HTCCamera;
 
-    #calls: Lcom/android/camera/HTCCamera;->recoverRotateAnimation()V
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$3400(Lcom/android/camera/HTCCamera;)V
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->finish()V
 
-    .line 1636
+    .line 1899
     return-void
 .end method

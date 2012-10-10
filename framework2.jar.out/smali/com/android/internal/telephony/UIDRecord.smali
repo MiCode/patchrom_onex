@@ -18,10 +18,10 @@
     .locals 0
 
     .prologue
-    .line 263
+    .line 267
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 265
+    .line 269
     return-void
 .end method
 
@@ -31,16 +31,16 @@
     .parameter "record"
 
     .prologue
-    .line 271
+    .line 275
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 272
+    .line 276
     iput p1, p0, Lcom/android/internal/telephony/UIDRecord;->mRecordNumber:I
 
-    .line 273
+    .line 277
     iput-object p2, p0, Lcom/android/internal/telephony/UIDRecord;->mRecordData:[B
 
-    .line 274
+    .line 278
     return-void
 .end method
 
@@ -49,12 +49,12 @@
     .parameter "record"
 
     .prologue
-    .line 268
+    .line 272
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Lcom/android/internal/telephony/UIDRecord;-><init>(I[B)V
 
-    .line 269
+    .line 273
     return-void
 .end method
 
@@ -67,10 +67,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 291
+    .line 303
     new-array v1, p1, [B
 
-    .line 293
+    .line 305
     .local v1, recordString:[B
     const/4 v0, 0x0
 
@@ -78,17 +78,17 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
-    .line 294
+    .line 306
     const/4 v2, -0x1
 
     aput-byte v2, v1, v0
 
-    .line 293
+    .line 305
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 297
+    .line 309
     :cond_0
     iget v2, p0, Lcom/android/internal/telephony/UIDRecord;->mRecordNumber:I
 
@@ -100,7 +100,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 298
+    .line 310
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecord;->mRecordData:[B
 
     iget-object v3, p0, Lcom/android/internal/telephony/UIDRecord;->mRecordData:[B
@@ -109,7 +109,7 @@
 
     invoke-static {v2, v4, v1, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 301
+    .line 313
     const-string v2, "UIDRecord"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -134,7 +134,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
+    .line 316
     const/4 v0, 0x0
 
     :goto_1
@@ -144,7 +144,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 305
+    .line 317
     const-string v2, "UIDRecord"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -171,12 +171,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
+    .line 316
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 310
+    .line 322
     :cond_1
     return-object v1
 .end method
@@ -185,7 +185,7 @@
     .locals 1
 
     .prologue
-    .line 277
+    .line 285
     iget-object v0, p0, Lcom/android/internal/telephony/UIDRecord;->mRecordData:[B
 
     return-object v0

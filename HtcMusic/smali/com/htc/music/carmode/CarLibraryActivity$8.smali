@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 812
+    .line 816
     iput-object p1, p0, Lcom/htc/music/carmode/CarLibraryActivity$8;->this$0:Lcom/htc/music/carmode/CarLibraryActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "view"
 
     .prologue
-    .line 815
+    .line 819
     if-eqz p1, :cond_1
 
     instance-of v2, p1, Lcom/htc/widget/HeaderBarImage;
@@ -51,10 +51,10 @@
 
     move-object v1, p1
 
-    .line 816
+    .line 820
     check-cast v1, Lcom/htc/widget/HeaderBarImage;
 
-    .line 817
+    .line 821
     .local v1, headerBarImage:Lcom/htc/widget/HeaderBarImage;
     invoke-virtual {v1}, Lcom/htc/widget/HeaderBarImage;->isBubbleWindowShow()Z
 
@@ -62,22 +62,22 @@
 
     if-eqz v2, :cond_0
 
-    .line 818
+    .line 822
     invoke-virtual {v1}, Lcom/htc/widget/HeaderBarImage;->dismiss()V
 
-    .line 832
+    .line 836
     .end local v1           #headerBarImage:Lcom/htc/widget/HeaderBarImage;
     :goto_0
     return-void
 
-    .line 820
+    .line 824
     .restart local v1       #headerBarImage:Lcom/htc/widget/HeaderBarImage;
     :cond_0
     invoke-virtual {v1}, Lcom/htc/widget/HeaderBarImage;->show()V
 
     goto :goto_0
 
-    .line 822
+    .line 826
     .end local v1           #headerBarImage:Lcom/htc/widget/HeaderBarImage;
     :cond_1
     if-eqz p1, :cond_3
@@ -88,10 +88,10 @@
 
     move-object v0, p1
 
-    .line 823
+    .line 827
     check-cast v0, Lcom/htc/widget/ActionBarDropDown;
 
-    .line 824
+    .line 828
     .local v0, actionBarDropDown:Lcom/htc/widget/ActionBarDropDown;
     invoke-virtual {v0}, Lcom/htc/widget/ActionBarDropDown;->isBubbleWindowShow()Z
 
@@ -99,18 +99,18 @@
 
     if-eqz v2, :cond_2
 
-    .line 825
+    .line 829
     invoke-virtual {v0}, Lcom/htc/widget/ActionBarDropDown;->dismiss()V
 
     goto :goto_0
 
-    .line 827
+    .line 831
     :cond_2
     invoke-virtual {v0}, Lcom/htc/widget/ActionBarDropDown;->show()V
 
     goto :goto_0
 
-    .line 830
+    .line 834
     .end local v0           #actionBarDropDown:Lcom/htc/widget/ActionBarDropDown;
     :cond_3
     const-string v2, "[CarLibraryActivity]"

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 213
+    .line 237
     iput-object p1, p0, Lcom/android/camera/component/MainBar$4;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "view"
 
     .prologue
-    .line 217
+    .line 241
     iget-object v0, p0, Lcom/android/camera/component/MainBar$4;->this$0:Lcom/android/camera/component/MainBar;
 
     #calls: Lcom/android/camera/component/MainBar;->showScenePanel()Z
@@ -52,7 +52,7 @@
 
     if-nez v0, :cond_0
 
-    .line 218
+    .line 242
     iget-object v0, p0, Lcom/android/camera/component/MainBar$4;->this$0:Lcom/android/camera/component/MainBar;
 
     #getter for: Lcom/android/camera/component/MainBar;->m_ScenesButton:Lcom/htc/widget/HtcIconButton;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcIconButton;->setColorOn(Z)V
 
-    .line 219
+    .line 243
     :cond_0
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 6030
+    .line 6039
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$31;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "arg0"
 
     .prologue
-    .line 6032
+    .line 6041
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 6033
+    .line 6042
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$31;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 6034
+    .line 6043
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$31;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mSelectedPlaylistName:Ljava/lang/String;
@@ -65,7 +65,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 6035
+    .line 6044
     const-string v1, "playlistname"
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$31;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -77,7 +77,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6037
+    .line 6046
     :cond_0
     const-string v1, "playlist"
 
@@ -90,13 +90,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6038
+    .line 6047
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$31;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     const/16 v2, 0x29
 
     invoke-virtual {v1, v0, v2}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 6039
+    .line 6048
     return-void
 .end method

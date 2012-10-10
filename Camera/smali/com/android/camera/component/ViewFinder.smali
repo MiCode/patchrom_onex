@@ -139,10 +139,10 @@
     .locals 0
 
     .prologue
-    .line 121
+    .line 120
     invoke-static {}, Lcom/android/camera/CameraNativeLibrary;->initialize()V
 
-    .line 122
+    .line 121
     return-void
 .end method
 
@@ -151,7 +151,7 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 130
+    .line 129
     const-string v0, "View Finder"
 
     const/4 v1, 0x1
@@ -160,55 +160,55 @@
 
     invoke-direct {p0, v0, v1, p1, v2}, Lcom/android/camera/component/UIComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/HTCCamera;I)V
 
-    .line 89
+    .line 88
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_CameraThreadTriggers:Ljava/util/ArrayList;
 
-    .line 94
+    .line 93
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
-    .line 98
+    .line 97
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_InitialFlipImageBounds:Landroid/graphics/Rect;
 
-    .line 105
+    .line 104
     sget-object v0, Lcom/android/camera/CameraType;->Main:Lcom/android/camera/CameraType;
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameCameraType:Lcom/android/camera/CameraType;
 
-    .line 107
+    .line 106
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
-    .line 113
+    .line 112
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/camera/component/ViewFinder;->m_State:I
 
-    .line 114
+    .line 113
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_StateSyncRoot:Ljava/lang/Object;
 
-    .line 133
+    .line 132
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->initialize()V
 
-    .line 134
+    .line 133
     return-void
 .end method
 
@@ -218,7 +218,7 @@
     .parameter "x1"
 
     .prologue
-    .line 51
+    .line 50
     invoke-direct {p0, p1}, Lcom/android/camera/component/ViewFinder;->handlePreviewThreadMessage(Landroid/os/Message;)Z
 
     move-result v0
@@ -231,7 +231,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -242,7 +242,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -253,7 +253,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
     return-object v0
@@ -265,7 +265,7 @@
     .parameter "x1"
 
     .prologue
-    .line 51
+    .line 50
     invoke-direct {p0, p1}, Lcom/android/camera/component/ViewFinder;->sendPreviewThreadMessage(I)V
 
     return-void
@@ -276,7 +276,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -287,7 +287,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -298,7 +298,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_StateSyncRoot:Ljava/lang/Object;
 
     return-object v0
@@ -310,7 +310,7 @@
     .parameter "x1"
 
     .prologue
-    .line 51
+    .line 50
     iput p1, p0, Lcom/android/camera/component/ViewFinder;->m_State:I
 
     return p1
@@ -321,7 +321,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -333,7 +333,7 @@
     .parameter "x1"
 
     .prologue
-    .line 51
+    .line 50
     iput-boolean p1, p0, Lcom/android/camera/component/ViewFinder;->m_IsReviewImageShown:Z
 
     return p1
@@ -344,7 +344,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->setupCameraThreadEventHandlers()V
 
     return-void
@@ -355,29 +355,18 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$2000(Lcom/android/camera/component/ViewFinder;)Ljava/lang/String;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 51
-    iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2100(Lcom/android/camera/component/ViewFinder;)V
+.method static synthetic access$2000(Lcom/android/camera/component/ViewFinder;)V
     .locals 0
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->updateViewFinderSize()V
 
     return-void
@@ -388,7 +377,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -399,7 +388,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_CameraThreadTriggers:Ljava/util/ArrayList;
 
     return-object v0
@@ -410,7 +399,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->clearPostViewBitmap()V
 
     return-void
@@ -421,7 +410,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     return-object v0
@@ -433,7 +422,7 @@
     .parameter "x1"
 
     .prologue
-    .line 51
+    .line 50
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSize:Lcom/android/camera/imaging/Size;
 
     return-object p1
@@ -445,7 +434,7 @@
     .parameter "x1"
 
     .prologue
-    .line 51
+    .line 50
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewYuvBuffer:Ljava/nio/ByteBuffer;
 
     return-object p1
@@ -456,7 +445,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 50
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -466,40 +455,40 @@
     .locals 2
 
     .prologue
-    .line 141
+    .line 140
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 143
+    .line 142
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 145
+    .line 144
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 146
+    .line 145
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
-    .line 148
+    .line 147
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewImage:Lcom/android/camera/imaging/RawImageEventArgs;
 
-    .line 149
+    .line 148
     monitor-exit v1
 
-    .line 150
+    .line 149
     return-void
 
-    .line 149
+    .line 148
     :catchall_0
     move-exception v0
 
@@ -518,19 +507,19 @@
 
     const/4 v10, 0x0
 
-    .line 157
+    .line 156
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "createPreviewFrameBitmap()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
+    .line 157
     iget-object v11, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 160
+    .line 159
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSize:Lcom/android/camera/imaging/Size;
 
@@ -542,10 +531,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 162
+    .line 161
     const/4 v7, 0x0
 
-    .line 167
+    .line 166
     .local v7, bitmap:Landroid/graphics/Bitmap;
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSize:Lcom/android/camera/imaging/Size;
@@ -564,7 +553,7 @@
 
     if-le v0, v1, :cond_1
 
-    .line 169
+    .line 168
     :cond_0
     sget v0, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
 
@@ -582,7 +571,7 @@
 
     move-result-object v8
 
-    .line 174
+    .line 173
     .local v8, bitmapSize:Lcom/android/camera/imaging/Size;
     iget v0, v8, Lcom/android/camera/imaging/Size;->width:I
 
@@ -590,22 +579,22 @@
 
     iput v0, v8, Lcom/android/camera/imaging/Size;->width:I
 
-    .line 175
+    .line 174
     iget v0, v8, Lcom/android/camera/imaging/Size;->height:I
 
     and-int/2addr v0, v12
 
     iput v0, v8, Lcom/android/camera/imaging/Size;->height:I
 
-    .line 181
+    .line 180
     :goto_0
     iget v5, v8, Lcom/android/camera/imaging/Size;->width:I
 
-    .line 182
+    .line 181
     .local v5, yuvWidth:I
     iget v4, v8, Lcom/android/camera/imaging/Size;->height:I
 
-    .line 183
+    .line 182
     .local v4, yuvHeight:I
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -639,14 +628,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
+    .line 183
     sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v4, v5, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v7
 
-    .line 187
+    .line 186
     mul-int v0, v5, v4
 
     mul-int/lit8 v0, v0, 0x2
@@ -655,7 +644,7 @@
 
     move-result-object v3
 
-    .line 188
+    .line 187
     .local v3, rgbBuffer:Ljava/nio/ByteBuffer;
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewYuvBuffer:Ljava/nio/ByteBuffer;
 
@@ -679,20 +668,20 @@
 
     if-nez v0, :cond_2
 
-    .line 197
+    .line 196
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "Cannot prepare preview frame"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
+    .line 197
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 199
+    .line 198
     :try_start_2
     monitor-exit v11
     :try_end_2
@@ -700,7 +689,7 @@
 
     move-object v7, v10
 
-    .line 216
+    .line 215
     .end local v3           #rgbBuffer:Ljava/nio/ByteBuffer;
     .end local v4           #yuvHeight:I
     .end local v5           #yuvWidth:I
@@ -709,7 +698,7 @@
     :goto_1
     return-object v7
 
-    .line 178
+    .line 177
     .restart local v7       #bitmap:Landroid/graphics/Bitmap;
     :cond_1
     :try_start_3
@@ -728,7 +717,7 @@
     .restart local v8       #bitmapSize:Lcom/android/camera/imaging/Size;
     goto :goto_0
 
-    .line 203
+    .line 202
     .restart local v3       #rgbBuffer:Ljava/nio/ByteBuffer;
     .restart local v4       #yuvHeight:I
     .restart local v5       #yuvWidth:I
@@ -738,13 +727,13 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 206
+    .line 205
     :try_start_4
     monitor-exit v11
 
     goto :goto_1
 
-    .line 217
+    .line 216
     .end local v3           #rgbBuffer:Ljava/nio/ByteBuffer;
     .end local v4           #yuvHeight:I
     .end local v5           #yuvWidth:I
@@ -759,12 +748,12 @@
 
     throw v0
 
-    .line 208
+    .line 207
     .restart local v7       #bitmap:Landroid/graphics/Bitmap;
     :catch_0
     move-exception v9
 
-    .line 210
+    .line 209
     .local v9, ex:Ljava/lang/Throwable;
     :try_start_5
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -773,13 +762,13 @@
 
     invoke-static {v0, v1, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 211
+    .line 210
     if-eqz v7, :cond_3
 
-    .line 212
+    .line 211
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 213
+    .line 212
     :cond_3
     monitor-exit v11
 
@@ -787,7 +776,7 @@
 
     goto :goto_1
 
-    .line 216
+    .line 215
     .end local v7           #bitmap:Landroid/graphics/Bitmap;
     .end local v9           #ex:Ljava/lang/Throwable;
     :cond_4
@@ -804,18 +793,18 @@
     .locals 17
 
     .prologue
-    .line 240
+    .line 239
     move-object/from16 v0, p0
 
     iget v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
     if-nez v13, :cond_0
 
-    .line 327
+    .line 326
     :goto_0
     return-void
 
-    .line 244
+    .line 243
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -833,7 +822,7 @@
 
     div-double v11, v13, v15
 
-    .line 247
+    .line 246
     .local v11, time:D
     const-wide/high16 v13, 0x3ff0
 
@@ -841,12 +830,12 @@
 
     if-ltz v13, :cond_1
 
-    .line 249
+    .line 248
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/component/ViewFinder;->stopFlipAnimation()V
 
     goto :goto_0
 
-    .line 254
+    .line 253
     :cond_1
     move-object/from16 v0, p0
 
@@ -862,14 +851,14 @@
 
     if-ltz v13, :cond_2
 
-    .line 256
+    .line 255
     const/4 v13, 0x2
 
     move-object/from16 v0, p0
 
     iput v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
-    .line 257
+    .line 256
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/camera/component/ViewFinder;->m_FirstPreviewBitmap:Landroid/graphics/Bitmap;
@@ -878,14 +867,14 @@
 
     iput-object v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipImage:Landroid/graphics/Bitmap;
 
-    .line 258
+    .line 257
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipImage:Landroid/graphics/Bitmap;
 
     if-eqz v13, :cond_2
 
-    .line 260
+    .line 259
     new-instance v10, Landroid/graphics/Rect;
 
     const/4 v13, 0x0
@@ -900,7 +889,7 @@
 
     invoke-direct {v10, v13, v14, v15, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 261
+    .line 260
     .local v10, screenBounds:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -936,12 +925,12 @@
 
     invoke-virtual {v13, v14}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 266
+    .line 265
     .end local v10           #screenBounds:Landroid/graphics/Rect;
     :cond_2
     const-wide/high16 v8, 0x3ff0
 
-    .line 277
+    .line 276
     .local v8, scaleRatio:D
     move-object/from16 v0, p0
 
@@ -957,7 +946,7 @@
 
     double-to-int v2, v13
 
-    .line 278
+    .line 277
     .local v2, flipImageWidth:I
     move-object/from16 v0, p0
 
@@ -973,7 +962,7 @@
 
     double-to-int v1, v13
 
-    .line 291
+    .line 290
     .local v1, flipImageHeight:I
     const-wide/high16 v13, 0x3fe0
 
@@ -981,7 +970,7 @@
 
     if-gtz v13, :cond_3
 
-    .line 292
+    .line 291
     const-wide v13, 0x400921fb54442d18L
 
     mul-double/2addr v13, v11
@@ -990,7 +979,7 @@
 
     move-result-wide v5
 
-    .line 297
+    .line 296
     .local v5, flipRatio:D
     :goto_1
     int-to-double v13, v1
@@ -999,7 +988,7 @@
 
     double-to-int v1, v13
 
-    .line 300
+    .line 299
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
@@ -1012,7 +1001,7 @@
 
     iput v14, v13, Landroid/graphics/Rect;->left:I
 
-    .line 301
+    .line 300
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
@@ -1025,7 +1014,7 @@
 
     iput v14, v13, Landroid/graphics/Rect;->top:I
 
-    .line 302
+    .line 301
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
@@ -1040,7 +1029,7 @@
 
     iput v14, v13, Landroid/graphics/Rect;->right:I
 
-    .line 303
+    .line 302
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
@@ -1055,14 +1044,14 @@
 
     iput v14, v13, Landroid/graphics/Rect;->bottom:I
 
-    .line 315
+    .line 314
     const-wide/high16 v13, 0x3fe0
 
     cmpg-double v13, v11, v13
 
     if-gtz v13, :cond_4
 
-    .line 316
+    .line 315
     const-wide v13, 0x400921fb54442d18L
 
     mul-double/2addr v13, v11
@@ -1071,7 +1060,7 @@
 
     move-result-wide v3
 
-    .line 319
+    .line 318
     .local v3, flipMaskRatio:D
     :goto_2
     move-object/from16 v0, p0
@@ -1090,7 +1079,7 @@
 
     double-to-int v7, v13
 
-    .line 320
+    .line 319
     .local v7, maxMaskOffset:I
     int-to-double v13, v7
 
@@ -1102,14 +1091,14 @@
 
     iput v13, v0, Lcom/android/camera/component/ViewFinder;->m_FlipMaskOffset:I
 
-    .line 323
+    .line 322
     const/4 v13, 0x1
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/android/camera/component/ViewFinder;->drawAnimationSurface(I)V
 
-    .line 326
+    .line 325
     const/16 v13, 0x2713
 
     move-object/from16 v0, p0
@@ -1118,7 +1107,7 @@
 
     goto/16 :goto_0
 
-    .line 294
+    .line 293
     .end local v3           #flipMaskRatio:D
     .end local v5           #flipRatio:D
     .end local v7           #maxMaskOffset:I
@@ -1138,7 +1127,7 @@
     .restart local v5       #flipRatio:D
     goto :goto_1
 
-    .line 318
+    .line 317
     :cond_4
     const-wide/high16 v13, 0x3ff0
 
@@ -1161,33 +1150,33 @@
     .parameter "action"
 
     .prologue
-    .line 334
+    .line 333
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_AnimationSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 335
+    .line 334
     .local v1, holder:Landroid/view/SurfaceHolder;
     if-eqz v1, :cond_2
 
-    .line 337
+    .line 336
     monitor-enter v1
 
-    .line 339
+    .line 338
     const/4 v0, 0x0
 
-    .line 342
+    .line 341
     .local v0, canvas:Landroid/graphics/Canvas;
     :try_start_0
     invoke-interface {v1}, Landroid/view/SurfaceHolder;->lockCanvas()Landroid/graphics/Canvas;
 
     move-result-object v0
 
-    .line 343
+    .line 342
     if-eqz v0, :cond_0
 
-    .line 345
+    .line 344
     packed-switch p1, :pswitch_data_0
 
-    .line 361
+    .line 360
     :cond_0
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/camera/component/ViewFinder;->drawPreviewFilter(Landroid/graphics/Canvas;)V
@@ -1195,26 +1184,26 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 367
+    .line 366
     if-eqz v0, :cond_1
 
-    .line 368
+    .line 367
     :try_start_1
     invoke-interface {v1, v0}, Landroid/view/SurfaceHolder;->unlockCanvasAndPost(Landroid/graphics/Canvas;)V
 
-    .line 370
+    .line 369
     :cond_1
     :goto_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 372
+    .line 371
     .end local v0           #canvas:Landroid/graphics/Canvas;
     :cond_2
     return-void
 
-    .line 348
+    .line 347
     .restart local v0       #canvas:Landroid/graphics/Canvas;
     :pswitch_0
     const/4 v2, 0x0
@@ -1229,20 +1218,20 @@
 
     goto :goto_0
 
-    .line 363
+    .line 362
     :catch_0
     move-exception v2
 
-    .line 367
+    .line 366
     if-eqz v0, :cond_1
 
-    .line 368
+    .line 367
     :try_start_3
     invoke-interface {v1, v0}, Landroid/view/SurfaceHolder;->unlockCanvasAndPost(Landroid/graphics/Canvas;)V
 
     goto :goto_1
 
-    .line 370
+    .line 369
     :catchall_0
     move-exception v2
 
@@ -1252,7 +1241,7 @@
 
     throw v2
 
-    .line 351
+    .line 350
     :pswitch_1
     :try_start_4
     invoke-direct {p0, v0}, Lcom/android/camera/component/ViewFinder;->drawFlipAnimation(Landroid/graphics/Canvas;)V
@@ -1262,13 +1251,13 @@
 
     goto :goto_0
 
-    .line 367
+    .line 366
     :catchall_1
     move-exception v2
 
     if-eqz v0, :cond_3
 
-    .line 368
+    .line 367
     :try_start_5
     invoke-interface {v1, v0}, Landroid/view/SurfaceHolder;->unlockCanvasAndPost(Landroid/graphics/Canvas;)V
 
@@ -1277,14 +1266,14 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 354
+    .line 353
     :pswitch_2
     :try_start_6
     invoke-direct {p0, v0}, Lcom/android/camera/component/ViewFinder;->drawRealtimePreview(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 357
+    .line 356
     :pswitch_3
     invoke-direct {p0, v0}, Lcom/android/camera/component/ViewFinder;->drawReviewImage(Landroid/graphics/Canvas;)V
     :try_end_6
@@ -1293,7 +1282,7 @@
 
     goto :goto_0
 
-    .line 345
+    .line 344
     nop
 
     :pswitch_data_0
@@ -1318,22 +1307,22 @@
 
     const/4 v6, 0x0
 
-    .line 380
+    .line 379
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {p1, v7, v4}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 383
+    .line 382
     iget v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
     if-eqz v4, :cond_4
 
-    .line 386
+    .line 385
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImage:Landroid/graphics/Bitmap;
 
     if-eqz v4, :cond_1
 
-    .line 388
+    .line 387
     new-instance v3, Landroid/graphics/Rect;
 
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImage:Landroid/graphics/Bitmap;
@@ -1350,7 +1339,7 @@
 
     invoke-direct {v3, v6, v6, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 389
+    .line 388
     .local v3, srcRect:Landroid/graphics/Rect;
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImage:Landroid/graphics/Bitmap;
 
@@ -1358,34 +1347,34 @@
 
     invoke-virtual {p1, v4, v3, v5, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 399
+    .line 398
     .end local v3           #srcRect:Landroid/graphics/Rect;
     :goto_0
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 400
+    .line 399
     .local v0, maskPaint:Landroid/graphics/Paint;
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 401
+    .line 400
     sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 404
+    .line 403
     new-instance v2, Landroid/graphics/Path;
 
     invoke-direct {v2}, Landroid/graphics/Path;-><init>()V
 
-    .line 405
+    .line 404
     .local v2, path:Landroid/graphics/Path;
     iget v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
     if-ne v4, v8, :cond_2
 
-    .line 407
+    .line 406
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
@@ -1400,7 +1389,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 408
+    .line 407
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
@@ -1423,7 +1412,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 409
+    .line 408
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
@@ -1442,22 +1431,22 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 425
+    .line 424
     :goto_1
     invoke-virtual {v2}, Landroid/graphics/Path;->close()V
 
-    .line 426
+    .line 425
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 429
+    .line 428
     invoke-virtual {v2}, Landroid/graphics/Path;->reset()V
 
-    .line 430
+    .line 429
     iget v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
     if-ne v4, v8, :cond_3
 
-    .line 432
+    .line 431
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->right:I
@@ -1472,7 +1461,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 433
+    .line 432
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->right:I
@@ -1495,7 +1484,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 434
+    .line 433
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->right:I
@@ -1514,40 +1503,40 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 450
+    .line 449
     :goto_2
     invoke-virtual {v2}, Landroid/graphics/Path;->close()V
 
-    .line 451
+    .line 450
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 462
+    .line 461
     .end local v0           #maskPaint:Landroid/graphics/Paint;
     .end local v2           #path:Landroid/graphics/Path;
     :cond_0
     :goto_3
     return-void
 
-    .line 393
+    .line 392
     :cond_1
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    .line 394
+    .line 393
     .local v1, paint:Landroid/graphics/Paint;
     const v4, -0x777778
 
     invoke-virtual {v1, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 395
+    .line 394
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v4, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     goto/16 :goto_0
 
-    .line 413
+    .line 412
     .end local v1           #paint:Landroid/graphics/Paint;
     .restart local v0       #maskPaint:Landroid/graphics/Paint;
     .restart local v2       #path:Landroid/graphics/Path;
@@ -1574,7 +1563,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 414
+    .line 413
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
@@ -1589,7 +1578,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 415
+    .line 414
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
@@ -1610,7 +1599,7 @@
 
     goto/16 :goto_1
 
-    .line 438
+    .line 437
     :cond_3
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
@@ -1634,7 +1623,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 439
+    .line 438
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->right:I
@@ -1649,7 +1638,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 440
+    .line 439
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImageBounds:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->right:I
@@ -1670,7 +1659,7 @@
 
     goto :goto_2
 
-    .line 456
+    .line 455
     .end local v0           #maskPaint:Landroid/graphics/Paint;
     .end local v2           #path:Landroid/graphics/Path;
     :cond_4
@@ -1678,7 +1667,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 458
+    .line 457
     new-instance v3, Landroid/graphics/Rect;
 
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_LastPreviewBitmap:Landroid/graphics/Bitmap;
@@ -1695,7 +1684,7 @@
 
     invoke-direct {v3, v6, v6, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 459
+    .line 458
     .restart local v3       #srcRect:Landroid/graphics/Rect;
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_LastPreviewBitmap:Landroid/graphics/Bitmap;
 
@@ -1713,7 +1702,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 470
+    .line 469
     sget-object v3, Lcom/android/camera/component/ViewFinder$20;->$SwitchMap$com$android$camera$CameraStartMode:[I
 
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -1732,11 +1721,11 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 489
+    .line 488
     :goto_0
     return-void
 
-    .line 480
+    .line 479
     :pswitch_0
     sget v3, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
 
@@ -1746,7 +1735,7 @@
 
     div-int/lit8 v0, v3, 0x2
 
-    .line 481
+    .line 480
     .local v0, filterSize:I
     new-instance v2, Landroid/graphics/Rect;
 
@@ -1754,44 +1743,44 @@
 
     invoke-direct {v2, v5, v5, v3, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 482
+    .line 481
     .local v2, rect:Landroid/graphics/Rect;
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    .line 483
+    .line 482
     .local v1, paint:Landroid/graphics/Paint;
     iget v3, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFilterColor:I
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 484
+    .line 483
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 485
+    .line 484
     invoke-virtual {p1, v2, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 486
+    .line 485
     sget v3, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
 
     iput v3, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 487
+    .line 486
     iget v3, v2, Landroid/graphics/Rect;->bottom:I
 
     sub-int/2addr v3, v0
 
     iput v3, v2, Landroid/graphics/Rect;->top:I
 
-    .line 488
+    .line 487
     invoke-virtual {p1, v2, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     goto :goto_0
 
-    .line 470
+    .line 469
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1804,7 +1793,7 @@
     .parameter "canvas"
 
     .prologue
-    .line 496
+    .line 495
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
@@ -1813,7 +1802,7 @@
 
     monitor-enter v19
 
-    .line 499
+    .line 498
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1821,14 +1810,14 @@
 
     if-nez v1, :cond_0
 
-    .line 500
+    .line 499
     monitor-exit v19
 
-    .line 571
+    .line 570
     :goto_0
     return-void
 
-    .line 503
+    .line 502
     :cond_0
     const/4 v1, 0x0
 
@@ -1838,25 +1827,25 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 506
+    .line 505
     new-instance v13, Landroid/graphics/Paint;
 
     invoke-direct {v13}, Landroid/graphics/Paint;-><init>()V
 
-    .line 507
+    .line 506
     .local v13, paint:Landroid/graphics/Paint;
     const/high16 v1, -0x100
 
     invoke-virtual {v13, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 510
+    .line 509
     const/4 v14, 0x3
 
-    .line 511
+    .line 510
     .local v14, rowCount:I
     const/4 v8, 0x3
 
-    .line 512
+    .line 511
     .local v8, columnCount:I
     move-object/from16 v0, p0
 
@@ -1866,7 +1855,7 @@
 
     move-result v2
 
-    .line 513
+    .line 512
     .local v2, bitmapWidth:I
     move-object/from16 v0, p0
 
@@ -1876,15 +1865,15 @@
 
     move-result v3
 
-    .line 514
+    .line 513
     .local v3, bitmapHeight:I
     add-int/lit8 v11, v2, 0x2
 
-    .line 515
+    .line 514
     .local v11, frameWidth:I
     add-int/lit8 v10, v3, 0x2
 
-    .line 516
+    .line 515
     .local v10, frameHeight:I
     sget v1, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
 
@@ -1894,7 +1883,7 @@
 
     div-int/lit8 v12, v1, 0x2
 
-    .line 517
+    .line 516
     .local v12, left:I
     sget v1, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
 
@@ -1904,7 +1893,7 @@
 
     div-int/lit8 v16, v1, 0x2
 
-    .line 518
+    .line 517
     .local v16, top:I
     new-instance v15, Landroid/graphics/Rect;
 
@@ -1914,13 +1903,13 @@
 
     invoke-direct {v15, v1, v4, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 519
+    .line 518
     .local v15, srcRect:Landroid/graphics/Rect;
     new-instance v9, Landroid/graphics/Rect;
 
     invoke-direct {v9}, Landroid/graphics/Rect;-><init>()V
 
-    .line 520
+    .line 519
     .local v9, destRect:Landroid/graphics/Rect;
     const/16 v18, 0x0
 
@@ -1930,21 +1919,21 @@
 
     if-ge v0, v14, :cond_7
 
-    .line 522
+    .line 521
     mul-int v1, v18, v10
 
     add-int v1, v1, v16
 
     iput v1, v9, Landroid/graphics/Rect;->top:I
 
-    .line 523
+    .line 522
     iget v1, v9, Landroid/graphics/Rect;->top:I
 
     add-int/2addr v1, v10
 
     iput v1, v9, Landroid/graphics/Rect;->bottom:I
 
-    .line 524
+    .line 523
     const/16 v17, 0x0
 
     .local v17, x:I
@@ -1953,64 +1942,64 @@
 
     if-ge v0, v8, :cond_6
 
-    .line 526
+    .line 525
     mul-int v1, v17, v11
 
     add-int/2addr v1, v12
 
     iput v1, v9, Landroid/graphics/Rect;->left:I
 
-    .line 527
+    .line 526
     iget v1, v9, Landroid/graphics/Rect;->left:I
 
     add-int/2addr v1, v11
 
     iput v1, v9, Landroid/graphics/Rect;->right:I
 
-    .line 528
+    .line 527
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v9, v13}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 529
+    .line 528
     iget v1, v9, Landroid/graphics/Rect;->left:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v9, Landroid/graphics/Rect;->left:I
 
-    .line 530
+    .line 529
     iget v1, v9, Landroid/graphics/Rect;->top:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v9, Landroid/graphics/Rect;->top:I
 
-    .line 531
+    .line 530
     iget v1, v9, Landroid/graphics/Rect;->right:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, v9, Landroid/graphics/Rect;->right:I
 
-    .line 532
+    .line 531
     iget v1, v9, Landroid/graphics/Rect;->bottom:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, v9, Landroid/graphics/Rect;->bottom:I
 
-    .line 534
+    .line 533
     const/4 v7, 0x0
 
-    .line 535
+    .line 534
     .local v7, applyEffect:Z
     if-nez v18, :cond_2
 
-    .line 537
+    .line 536
     const/4 v7, 0x1
 
-    .line 538
+    .line 537
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/camera/component/ViewFinder;->m_PreviewRgbBuffer:Ljava/nio/ByteBuffer;
@@ -2025,12 +2014,12 @@
 
     invoke-static/range {v1 .. v6}, Lcom/android/camera/effect/RealtimeEffect;->channelFilter(Ljava/nio/ByteBuffer;IIILjava/nio/ByteBuffer;I)Z
 
-    .line 556
+    .line 555
     :cond_1
     :goto_3
     if-eqz v7, :cond_5
 
-    .line 558
+    .line 557
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/camera/component/ViewFinder;->m_EffectPreviewBitmap:Landroid/graphics/Bitmap;
@@ -2041,7 +2030,7 @@
 
     invoke-virtual {v1, v4}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    .line 559
+    .line 558
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/camera/component/ViewFinder;->m_EffectPreviewBitmap:Landroid/graphics/Bitmap;
@@ -2052,7 +2041,7 @@
 
     invoke-virtual {v0, v1, v15, v9, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 564
+    .line 563
     :goto_4
     iget v1, v9, Landroid/graphics/Rect;->left:I
 
@@ -2060,33 +2049,33 @@
 
     iput v1, v9, Landroid/graphics/Rect;->left:I
 
-    .line 565
+    .line 564
     iget v1, v9, Landroid/graphics/Rect;->top:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, v9, Landroid/graphics/Rect;->top:I
 
-    .line 566
+    .line 565
     iget v1, v9, Landroid/graphics/Rect;->right:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v9, Landroid/graphics/Rect;->right:I
 
-    .line 567
+    .line 566
     iget v1, v9, Landroid/graphics/Rect;->bottom:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v9, Landroid/graphics/Rect;->bottom:I
 
-    .line 524
+    .line 523
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_2
 
-    .line 540
+    .line 539
     :cond_2
     const/4 v1, 0x1
 
@@ -2096,10 +2085,10 @@
 
     if-nez v17, :cond_3
 
-    .line 542
+    .line 541
     const/4 v7, 0x1
 
-    .line 543
+    .line 542
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/camera/component/ViewFinder;->m_PreviewRgbBuffer:Ljava/nio/ByteBuffer;
@@ -2116,7 +2105,7 @@
 
     goto :goto_3
 
-    .line 570
+    .line 569
     .end local v2           #bitmapWidth:I
     .end local v3           #bitmapHeight:I
     .end local v7           #applyEffect:Z
@@ -2140,7 +2129,7 @@
 
     throw v1
 
-    .line 545
+    .line 544
     .restart local v2       #bitmapWidth:I
     .restart local v3       #bitmapHeight:I
     .restart local v7       #applyEffect:Z
@@ -2168,10 +2157,10 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 547
+    .line 546
     const/4 v7, 0x1
 
-    .line 548
+    .line 547
     :try_start_1
     move-object/from16 v0, p0
 
@@ -2189,7 +2178,7 @@
 
     goto :goto_3
 
-    .line 550
+    .line 549
     :cond_4
     const/4 v1, 0x2
 
@@ -2197,10 +2186,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 552
+    .line 551
     const/4 v7, 0x1
 
-    .line 553
+    .line 552
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/camera/component/ViewFinder;->m_PreviewRgbBuffer:Ljava/nio/ByteBuffer;
@@ -2217,7 +2206,7 @@
 
     goto :goto_3
 
-    .line 562
+    .line 561
     :cond_5
     move-object/from16 v0, p0
 
@@ -2231,14 +2220,14 @@
 
     goto :goto_4
 
-    .line 520
+    .line 519
     .end local v7           #applyEffect:Z
     :cond_6
     add-int/lit8 v18, v18, 0x1
 
     goto/16 :goto_1
 
-    .line 570
+    .line 569
     .end local v17           #x:I
     :cond_7
     monitor-exit v19
@@ -2253,32 +2242,32 @@
     .parameter "canvas"
 
     .prologue
-    .line 579
+    .line 578
     const/high16 v2, -0x100
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 582
+    .line 581
     iget-object v3, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 585
+    .line 584
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/component/ViewFinder;->m_ReviewBitmap:Landroid/graphics/Bitmap;
 
     if-nez v2, :cond_0
 
-    .line 586
+    .line 585
     monitor-exit v3
 
-    .line 596
+    .line 595
     :goto_0
     return-void
 
-    .line 589
+    .line 588
     :cond_0
     new-instance v1, Landroid/graphics/Rect;
 
@@ -2300,7 +2289,7 @@
 
     invoke-direct {v1, v2, v4, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 590
+    .line 589
     .local v1, srcRect:Landroid/graphics/Rect;
     new-instance v2, Landroid/graphics/Rect;
 
@@ -2336,7 +2325,7 @@
 
     move-result-object v0
 
-    .line 594
+    .line 593
     .local v0, destRect:Landroid/graphics/Rect;
     iget-object v2, p0, Lcom/android/camera/component/ViewFinder;->m_ReviewBitmap:Landroid/graphics/Bitmap;
 
@@ -2344,7 +2333,7 @@
 
     invoke-virtual {p1, v2, v1, v0, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 595
+    .line 594
     monitor-exit v3
 
     goto :goto_0
@@ -2368,7 +2357,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 603
+    .line 602
     new-instance v1, Landroid/graphics/Rect;
 
     sget v2, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
@@ -2391,7 +2380,7 @@
 
     move-result-object v0
 
-    .line 607
+    .line 606
     .local v0, bounds:Landroid/graphics/Rect;
     new-instance v1, Lcom/android/camera/imaging/Size;
 
@@ -2415,17 +2404,17 @@
     .prologue
     const v3, 0x7ffffffc
 
-    .line 615
+    .line 614
     if-nez p1, :cond_0
 
-    .line 616
+    .line 615
     const/4 v0, 0x0
 
-    .line 620
+    .line 619
     :goto_0
     return-object v0
 
-    .line 617
+    .line 616
     :cond_0
     new-instance v0, Lcom/android/camera/imaging/Size;
 
@@ -2439,14 +2428,14 @@
 
     move-result-object p1
 
-    .line 618
+    .line 617
     iget v0, p1, Lcom/android/camera/imaging/Size;->width:I
 
     and-int/2addr v0, v3
 
     iput v0, p1, Lcom/android/camera/imaging/Size;->width:I
 
-    .line 619
+    .line 618
     iget v0, p1, Lcom/android/camera/imaging/Size;->height:I
 
     and-int/2addr v0, v3
@@ -2455,7 +2444,7 @@
 
     move-object v0, p1
 
-    .line 620
+    .line 619
     goto :goto_0
 .end method
 
@@ -2464,30 +2453,30 @@
     .parameter "msg"
 
     .prologue
-    .line 654
+    .line 653
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 678
+    .line 677
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 680
+    .line 679
     :goto_0
     return v0
 
-    .line 657
+    .line 656
     :pswitch_1
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->doFlipAnimation()V
 
-    .line 680
+    .line 679
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 660
+    .line 659
     :pswitch_2
     const/4 v0, 0x2
 
@@ -2495,13 +2484,13 @@
 
     goto :goto_1
 
-    .line 663
+    .line 662
     :pswitch_3
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->hideReviewImage()V
 
     goto :goto_1
 
-    .line 666
+    .line 665
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -2511,7 +2500,7 @@
 
     goto :goto_1
 
-    .line 669
+    .line 668
     :pswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -2521,7 +2510,7 @@
 
     goto :goto_1
 
-    .line 672
+    .line 671
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -2531,13 +2520,13 @@
 
     goto :goto_1
 
-    .line 675
+    .line 674
     :pswitch_7
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->stopFlipAnimation()V
 
     goto :goto_1
 
-    .line 654
+    .line 653
     nop
 
     :pswitch_data_0
@@ -2558,42 +2547,42 @@
     .locals 2
 
     .prologue
-    .line 689
+    .line 688
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 691
+    .line 690
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_ReviewBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 693
+    .line 692
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_ReviewBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 694
+    .line 693
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_ReviewBitmap:Landroid/graphics/Bitmap;
 
-    .line 696
+    .line 695
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 699
+    .line 698
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/camera/component/ViewFinder;->drawAnimationSurface(I)V
 
-    .line 700
+    .line 699
     return-void
 
-    .line 696
+    .line 695
     :catchall_0
     move-exception v0
 
@@ -2609,12 +2598,12 @@
     .locals 3
 
     .prologue
-    .line 1402
+    .line 1396
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 1403
+    .line 1397
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -2622,7 +2611,7 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1405
+    .line 1399
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->isIdle()Z
 
     move-result v1
@@ -2643,35 +2632,35 @@
 
     if-nez v1, :cond_0
 
-    .line 1407
+    .line 1401
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/view/SurfaceView;->setVisibility(I)V
 
-    .line 1408
+    .line 1402
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "hideSurfaceView  m_PreviewSurfaceView INVISIBLE"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1410
+    .line 1404
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/SurfaceView;->setVisibility(I)V
 
-    .line 1411
+    .line 1405
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "hideSurfaceView  m_PreviewSurfaceView VISIBLE"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1413
+    .line 1407
     :cond_0
     return-void
 .end method
@@ -2681,12 +2670,12 @@
     .parameter "previewFrame"
 
     .prologue
-    .line 803
+    .line 802
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_StateSyncRoot:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 805
+    .line 804
     :try_start_0
     iget v0, p0, Lcom/android/camera/component/ViewFinder;->m_State:I
 
@@ -2694,12 +2683,12 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 808
+    .line 807
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/camera/component/ViewFinder;->m_State:I
 
-    .line 811
+    .line 810
     const/16 v0, 0x2712
 
     const/4 v2, 0x0
@@ -2708,14 +2697,14 @@
 
     invoke-direct {p0, v0, v2, v3, p1}, Lcom/android/camera/component/ViewFinder;->sendPreviewThreadMessage(IIILjava/lang/Object;)V
 
-    .line 813
+    .line 812
     :cond_0
     monitor-exit v1
 
-    .line 814
+    .line 813
     return-void
 
-    .line 813
+    .line 812
     :catchall_0
     move-exception v0
 
@@ -2731,33 +2720,33 @@
     .parameter "e"
 
     .prologue
-    .line 821
+    .line 820
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 823
+    .line 822
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 824
+    .line 823
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 825
+    .line 824
     :cond_0
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewImage:Lcom/android/camera/imaging/RawImageEventArgs;
 
-    .line 826
+    .line 825
     monitor-exit v1
 
-    .line 827
+    .line 826
     return-void
 
-    .line 826
+    .line 825
     :catchall_0
     move-exception v0
 
@@ -2773,12 +2762,12 @@
     .parameter "e"
 
     .prologue
-    .line 834
+    .line 833
     iget-object v6, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 839
+    .line 838
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSize:Lcom/android/camera/imaging/Size;
     :try_end_0
@@ -2787,17 +2776,17 @@
 
     if-nez v0, :cond_0
 
-    .line 840
+    .line 839
     :try_start_1
     monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 886
+    .line 885
     :goto_0
     return-void
 
-    .line 843
+    .line 842
     :cond_0
     :try_start_2
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewYuvBuffer:Ljava/nio/ByteBuffer;
@@ -2816,7 +2805,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 844
+    .line 843
     :cond_1
     iget-object v0, p1, Lcom/android/camera/imaging/RawImageEventArgs;->rawImage:[B
 
@@ -2828,7 +2817,7 @@
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewYuvBuffer:Ljava/nio/ByteBuffer;
 
-    .line 845
+    .line 844
     :cond_2
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewYuvBuffer:Ljava/nio/ByteBuffer;
 
@@ -2836,14 +2825,14 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 846
+    .line 845
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewYuvBuffer:Ljava/nio/ByteBuffer;
 
     iget-object v1, p1, Lcom/android/camera/imaging/RawImageEventArgs;->rawImage:[B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 849
+    .line 848
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
@@ -2858,7 +2847,7 @@
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameCameraType:Lcom/android/camera/CameraType;
 
-    .line 869
+    .line 868
     iget-object v7, p0, Lcom/android/camera/component/ViewFinder;->m_StateSyncRoot:Ljava/lang/Object;
 
     monitor-enter v7
@@ -2866,7 +2855,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 871
+    .line 870
     :try_start_3
     iget v0, p0, Lcom/android/camera/component/ViewFinder;->m_State:I
 
@@ -2874,19 +2863,19 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 873
+    .line 872
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "Got first preview frame"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 876
+    .line 875
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->createPreviewFrameBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 879
+    .line 878
     .local v5, previewFrame:Landroid/graphics/Bitmap;
     const/16 v2, 0x2710
 
@@ -2900,14 +2889,14 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/component/ViewFinder;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;)Z
 
-    .line 881
+    .line 880
     .end local v5           #previewFrame:Landroid/graphics/Bitmap;
     :cond_3
     monitor-exit v7
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 885
+    .line 884
     :goto_1
     :try_start_4
     monitor-exit v6
@@ -2923,7 +2912,7 @@
 
     throw v0
 
-    .line 881
+    .line 880
     :catchall_1
     move-exception v0
 
@@ -2938,7 +2927,7 @@
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 883
+    .line 882
     :catch_0
     move-exception v0
 
@@ -2950,12 +2939,12 @@
     .parameter "previewSize"
 
     .prologue
-    .line 894
+    .line 893
     invoke-direct {p0, p1}, Lcom/android/camera/component/ViewFinder;->getPreviewSizeInUI(Lcom/android/camera/imaging/Size;)Lcom/android/camera/imaging/Size;
 
     move-result-object v0
 
-    .line 897
+    .line 896
     .local v0, viewSize:Lcom/android/camera/imaging/Size;
     sget-object v1, Lcom/android/camera/rotate/UIRotation;->SCREEN_ROTATION:Lcom/android/camera/rotate/UIRotation;
 
@@ -2965,7 +2954,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 898
+    .line 897
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
     iget v2, v0, Lcom/android/camera/imaging/Size;->width:I
@@ -2974,11 +2963,11 @@
 
     invoke-static {v1, v2, v3}, Lcom/android/camera/ViewUtil;->setSize(Landroid/view/View;II)V
 
-    .line 901
+    .line 900
     :goto_0
     return-void
 
-    .line 900
+    .line 899
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
@@ -2995,12 +2984,12 @@
     .locals 3
 
     .prologue
-    .line 908
+    .line 907
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_StateSyncRoot:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 910
+    .line 909
     :try_start_0
     iget v0, p0, Lcom/android/camera/component/ViewFinder;->m_State:I
 
@@ -3008,19 +2997,19 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 911
+    .line 910
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/camera/component/ViewFinder;->m_State:I
 
-    .line 912
+    .line 911
     :cond_0
     monitor-exit v1
 
-    .line 913
+    .line 912
     return-void
 
-    .line 912
+    .line 911
     :catchall_0
     move-exception v0
 
@@ -3041,12 +3030,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 925
+    .line 924
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v1, v1, v0}, Lcom/android/camera/component/ViewFinder;->sendPreviewThreadMessage(IIILjava/lang/Object;)V
 
-    .line 926
+    .line 925
     return-void
 .end method
 
@@ -3058,14 +3047,14 @@
     .parameter "obj"
 
     .prologue
-    .line 929
+    .line 928
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewThread:Lcom/android/camera/WorkerThread;
 
-    .line 930
+    .line 929
     .local v0, previewThread:Lcom/android/camera/WorkerThread;
     if-eqz v0, :cond_0
 
-    .line 934
+    .line 933
     :try_start_0
     invoke-virtual {v0}, Lcom/android/camera/WorkerThread;->getHandler()Landroid/os/Handler;
 
@@ -3079,12 +3068,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 939
+    .line 938
     :cond_0
     :goto_0
     return-void
 
-    .line 936
+    .line 935
     :catch_0
     move-exception v1
 
@@ -3097,12 +3086,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 947
+    .line 946
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    .line 950
+    .line 949
     .local v0, cameraThread:Lcom/android/camera/CameraThread;
     iget-object v1, v0, Lcom/android/camera/CameraThread;->exitingEvent:Lcom/android/camera/event/Event;
 
@@ -3112,7 +3101,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 962
+    .line 961
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_CameraThreadTriggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/ViewFinder$5;
@@ -3127,7 +3116,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 972
+    .line 971
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_CameraThreadTriggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/ViewFinder$6;
@@ -3142,7 +3131,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1006
+    .line 1005
     iget-object v1, v0, Lcom/android/camera/CameraThread;->previewSize:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/ViewFinder$9;
@@ -3151,7 +3140,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1034
+    .line 1033
     iget-object v1, v0, Lcom/android/camera/CameraThread;->previewStartedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/ViewFinder$10;
@@ -3160,7 +3149,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1043
+    .line 1042
     iget-object v1, v0, Lcom/android/camera/CameraThread;->previewStoppedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/ViewFinder$11;
@@ -3169,7 +3158,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1053
+    .line 1052
     return-void
 .end method
 
@@ -3178,7 +3167,7 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 1061
+    .line 1060
     iget-object v0, p1, Lcom/android/camera/HTCCamera;->queryPreviewSurfaceHitRectEvent:Lcom/android/camera/event/Event;
 
     new-instance v1, Lcom/android/camera/component/ViewFinder$12;
@@ -3187,7 +3176,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1072
+    .line 1071
     iget-object v0, p1, Lcom/android/camera/HTCCamera;->selfFinishingEvent:Lcom/android/camera/event/Event;
 
     new-instance v1, Lcom/android/camera/component/ViewFinder$13;
@@ -3196,7 +3185,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1087
+    .line 1086
     iget-object v0, p1, Lcom/android/camera/HTCCamera;->stoppingEvent:Lcom/android/camera/event/Event;
 
     new-instance v1, Lcom/android/camera/component/ViewFinder$14;
@@ -3205,7 +3194,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1100
+    .line 1099
     iget-object v0, p1, Lcom/android/camera/HTCCamera;->newIntentEvent:Lcom/android/camera/event/Event;
 
     new-instance v1, Lcom/android/camera/component/ViewFinder$15;
@@ -3214,7 +3203,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 1110
+    .line 1109
     return-void
 .end method
 
@@ -3223,7 +3212,7 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 1141
+    .line 1140
     iget-object v0, p1, Lcom/android/camera/HTCCamera;->isActivityPaused:Lcom/android/camera/property/Property;
 
     new-instance v1, Lcom/android/camera/component/ViewFinder$17;
@@ -3232,7 +3221,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1180
+    .line 1179
     iget-object v0, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/component/ViewFinder$18;
@@ -3249,7 +3238,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1202
+    .line 1196
     iget-object v0, p1, Lcom/android/camera/HTCCamera;->previewSize:Lcom/android/camera/property/Property;
 
     new-instance v1, Lcom/android/camera/component/ViewFinder$19;
@@ -3258,7 +3247,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1211
+    .line 1205
     return-void
 .end method
 
@@ -3269,13 +3258,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1219
+    .line 1213
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->stopFlipAnimation()V
 
-    .line 1222
+    .line 1216
     if-eqz p1, :cond_0
 
-    .line 1224
+    .line 1218
     new-instance v0, Landroid/graphics/Rect;
 
     sget v1, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
@@ -3284,7 +3273,7 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1225
+    .line 1219
     .local v0, screenBounds:Landroid/graphics/Rect;
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_InitialFlipImageBounds:Landroid/graphics/Rect;
 
@@ -3306,20 +3295,20 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1229
+    .line 1223
     .end local v0           #screenBounds:Landroid/graphics/Rect;
     :goto_0
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder;->m_LastPreviewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1232
+    .line 1226
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Lcom/android/camera/component/ViewFinder;->drawAnimationSurface(I)V
 
-    .line 1233
+    .line 1227
     return-void
 
-    .line 1228
+    .line 1222
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_InitialFlipImageBounds:Landroid/graphics/Rect;
 
@@ -3332,22 +3321,22 @@
     .locals 10
 
     .prologue
-    .line 1241
+    .line 1235
     iget-boolean v4, p0, Lcom/android/camera/component/ViewFinder;->m_IsReviewImageShown:Z
 
     if-eqz v4, :cond_0
 
-    .line 1294
+    .line 1288
     :goto_0
     return-void
 
-    .line 1245
+    .line 1239
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 1246
+    .line 1240
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v4, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
 
@@ -3357,7 +3346,7 @@
 
     check-cast v3, Lcom/android/camera/TakingPictureState;
 
-    .line 1247
+    .line 1241
     .local v3, takingPictureState:Lcom/android/camera/TakingPictureState;
     iget-object v4, v0, Lcom/android/camera/HTCCamera;->recordingState:Lcom/android/camera/property/Property;
 
@@ -3367,7 +3356,7 @@
 
     check-cast v1, Lcom/android/camera/RecordingState;
 
-    .line 1250
+    .line 1244
     .local v1, recordingState:Lcom/android/camera/RecordingState;
     sget-object v4, Lcom/android/camera/component/ViewFinder$20;->$SwitchMap$com$android$camera$TakingPictureState:[I
 
@@ -3381,7 +3370,7 @@
 
     goto :goto_0
 
-    .line 1259
+    .line 1253
     :pswitch_0
     sget-object v4, Lcom/android/camera/component/ViewFinder$20;->$SwitchMap$com$android$camera$RecordingState:[I
 
@@ -3395,13 +3384,13 @@
 
     goto :goto_0
 
-    .line 1270
+    .line 1264
     :pswitch_1
     iget-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 1272
+    .line 1266
     :try_start_0
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->isActionScreenOpen()Z
 
@@ -3409,29 +3398,29 @@
 
     if-nez v4, :cond_1
 
-    .line 1273
+    .line 1267
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->createPreviewFrameBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 1288
+    .line 1282
     .local v2, reviewBitmap:Landroid/graphics/Bitmap;
     :goto_1
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1292
+    .line 1286
     invoke-direct {p0, v2}, Lcom/android/camera/component/ViewFinder;->showReviewImage(Landroid/graphics/Bitmap;)V
 
-    .line 1293
+    .line 1287
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/camera/component/ViewFinder;->m_IsReviewImageShown:Z
 
     goto :goto_0
 
-    .line 1274
+    .line 1268
     .end local v2           #reviewBitmap:Landroid/graphics/Bitmap;
     :cond_1
     :try_start_1
@@ -3439,7 +3428,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 1276
+    .line 1270
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewImage:Lcom/android/camera/imaging/RawImageEventArgs;
 
     iget-object v4, v4, Lcom/android/camera/imaging/RawImageEventArgs;->rawImage:[B
@@ -3468,23 +3457,23 @@
 
     iput-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1282
+    .line 1276
     iget-object v2, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1283
+    .line 1277
     .restart local v2       #reviewBitmap:Landroid/graphics/Bitmap;
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1284
+    .line 1278
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_PostViewImage:Lcom/android/camera/imaging/RawImageEventArgs;
 
     goto :goto_1
 
-    .line 1288
+    .line 1282
     .end local v2           #reviewBitmap:Landroid/graphics/Bitmap;
     :catchall_0
     move-exception v4
@@ -3495,7 +3484,7 @@
 
     throw v4
 
-    .line 1287
+    .line 1281
     :cond_2
     :try_start_2
     monitor-exit v5
@@ -3504,7 +3493,7 @@
 
     goto :goto_0
 
-    .line 1250
+    .line 1244
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3512,7 +3501,7 @@
         :pswitch_0
     .end packed-switch
 
-    .line 1259
+    .line 1253
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_1
@@ -3525,29 +3514,29 @@
     .parameter "reviewBitmap"
 
     .prologue
-    .line 1302
+    .line 1296
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSyncRoot:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1304
+    .line 1298
     :try_start_0
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder;->m_ReviewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1305
+    .line 1299
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1308
+    .line 1302
     const/4 v0, 0x3
 
     invoke-direct {p0, v0}, Lcom/android/camera/component/ViewFinder;->drawAnimationSurface(I)V
 
-    .line 1309
+    .line 1303
     return-void
 
-    .line 1305
+    .line 1299
     :catchall_0
     move-exception v0
 
@@ -3564,37 +3553,37 @@
     .parameter "previewFrame"
 
     .prologue
-    .line 1317
+    .line 1311
     iget v0, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
     if-eqz v0, :cond_0
 
-    .line 1328
+    .line 1322
     :goto_0
     return-void
 
-    .line 1321
+    .line 1315
     :cond_0
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
-    .line 1322
+    .line 1316
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStartTime:J
 
-    .line 1323
+    .line 1317
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_LastPreviewBitmap:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImage:Landroid/graphics/Bitmap;
 
-    .line 1324
+    .line 1318
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder;->m_FirstPreviewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1327
+    .line 1321
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->doFlipAnimation()V
 
     goto :goto_0
@@ -3608,58 +3597,58 @@
 
     const/4 v2, 0x0
 
-    .line 1336
+    .line 1330
     iget v1, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
     if-nez v1, :cond_0
 
-    .line 1367
+    .line 1361
     :goto_0
     return-void
 
-    .line 1340
+    .line 1334
     :cond_0
     iput v3, p0, Lcom/android/camera/component/ViewFinder;->m_FlipStage:I
 
-    .line 1341
+    .line 1335
     iput-object v2, p0, Lcom/android/camera/component/ViewFinder;->m_FlipImage:Landroid/graphics/Bitmap;
 
-    .line 1342
+    .line 1336
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_LastPreviewBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_1
 
-    .line 1344
+    .line 1338
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_LastPreviewBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1345
+    .line 1339
     iput-object v2, p0, Lcom/android/camera/component/ViewFinder;->m_LastPreviewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1347
+    .line 1341
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_FirstPreviewBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_2
 
-    .line 1349
+    .line 1343
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder;->m_FirstPreviewBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1350
+    .line 1344
     iput-object v2, p0, Lcom/android/camera/component/ViewFinder;->m_FirstPreviewBitmap:Landroid/graphics/Bitmap;
 
-    .line 1354
+    .line 1348
     :cond_2
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewThread:Lcom/android/camera/WorkerThread;
 
-    .line 1355
+    .line 1349
     .local v0, previewThread:Lcom/android/camera/WorkerThread;
     if-eqz v0, :cond_3
 
-    .line 1359
+    .line 1353
     :try_start_0
     invoke-virtual {v0}, Lcom/android/camera/WorkerThread;->getHandler()Landroid/os/Handler;
 
@@ -3671,14 +3660,14 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1366
+    .line 1360
     :cond_3
     :goto_1
     invoke-direct {p0, v3}, Lcom/android/camera/component/ViewFinder;->drawAnimationSurface(I)V
 
     goto :goto_0
 
-    .line 1361
+    .line 1355
     :catch_0
     move-exception v1
 
@@ -3689,7 +3678,7 @@
     .locals 6
 
     .prologue
-    .line 1375
+    .line 1369
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraMode()Lcom/android/camera/CameraMode;
 
     move-result-object v4
@@ -3698,7 +3687,7 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 1378
+    .line 1372
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraType()Lcom/android/camera/CameraType;
 
     move-result-object v4
@@ -3715,7 +3704,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 1379
+    .line 1373
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getSettings()Lcom/android/camera/CameraSettings;
 
@@ -3733,14 +3722,14 @@
 
     move-result v0
 
-    .line 1382
+    .line 1376
     .local v0, isWideRatio:Z
     :goto_0
     if-eqz v0, :cond_3
 
     const/4 v3, -0x1
 
-    .line 1395
+    .line 1389
     .end local v0           #isWideRatio:Z
     .local v3, width:I
     :goto_1
@@ -3752,25 +3741,25 @@
 
     if-eqz v4, :cond_5
 
-    .line 1396
+    .line 1390
     iget-object v4, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
     invoke-static {v4, v3}, Lcom/android/camera/ViewUtil;->setHeight(Landroid/view/View;I)V
 
-    .line 1399
+    .line 1393
     .end local v3           #width:I
     :cond_1
     :goto_2
     return-void
 
-    .line 1381
+    .line 1375
     :cond_2
     const/4 v0, 0x0
 
     .restart local v0       #isWideRatio:Z
     goto :goto_0
 
-    .line 1382
+    .line 1376
     :cond_3
     sget v4, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
 
@@ -3780,7 +3769,7 @@
 
     goto :goto_1
 
-    .line 1386
+    .line 1380
     .end local v0           #isWideRatio:Z
     :cond_4
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraThread()Lcom/android/camera/CameraThread;
@@ -3795,11 +3784,11 @@
 
     check-cast v1, Lcom/android/camera/imaging/Size;
 
-    .line 1387
+    .line 1381
     .local v1, previewSize:Lcom/android/camera/imaging/Size;
     if-eqz v1, :cond_1
 
-    .line 1389
+    .line 1383
     iget v4, v1, Lcom/android/camera/imaging/Size;->width:I
 
     int-to-float v4, v4
@@ -3810,7 +3799,7 @@
 
     div-float v2, v4, v5
 
-    .line 1390
+    .line 1384
     .local v2, ratio:F
     sget v4, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
 
@@ -3820,11 +3809,11 @@
 
     float-to-int v3, v4
 
-    .line 1391
+    .line 1385
     .restart local v3       #width:I
     goto :goto_1
 
-    .line 1398
+    .line 1392
     .end local v1           #previewSize:Lcom/android/camera/imaging/Size;
     .end local v2           #ratio:F
     :cond_5
@@ -3841,20 +3830,20 @@
     .locals 1
 
     .prologue
-    .line 227
+    .line 226
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v0}, Lcom/android/camera/WorkerThread;->exit()V
 
-    .line 228
+    .line 227
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewThread:Lcom/android/camera/WorkerThread;
 
-    .line 231
+    .line 230
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->deinitializeOverride()V
 
-    .line 232
+    .line 231
     return-void
 .end method
 
@@ -3863,19 +3852,19 @@
     .parameter "msg"
 
     .prologue
-    .line 629
+    .line 628
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 644
+    .line 643
     invoke-super {p0, p1}, Lcom/android/camera/component/UIComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 647
+    .line 646
     :goto_0
     return-void
 
-    .line 632
+    .line 631
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -3885,7 +3874,7 @@
 
     goto :goto_0
 
-    .line 635
+    .line 634
     :sswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -3895,19 +3884,19 @@
 
     goto :goto_0
 
-    .line 638
+    .line 637
     :sswitch_2
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->onPreviewStarted()V
 
     goto :goto_0
 
-    .line 641
+    .line 640
     :sswitch_3
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->hideSurfaceView()V
 
     goto :goto_0
 
-    .line 629
+    .line 628
     nop
 
     :sswitch_data_0
@@ -3923,10 +3912,10 @@
     .locals 7
 
     .prologue
-    .line 709
+    .line 708
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->initializeOverride()V
 
-    .line 712
+    .line 711
     new-instance v5, Lcom/android/camera/component/ViewFinder$1;
 
     const-string v6, "Preview Thread"
@@ -3935,17 +3924,17 @@
 
     iput-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewThread:Lcom/android/camera/WorkerThread;
 
-    .line 721
+    .line 720
     iget-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v5}, Lcom/android/camera/WorkerThread;->start()V
 
-    .line 724
+    .line 723
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getBaseLayout()Landroid/view/View;
 
     move-result-object v0
 
-    .line 725
+    .line 724
     .local v0, baseLayout:Landroid/view/View;
     const v5, 0x7f080026
 
@@ -3957,7 +3946,7 @@
 
     iput-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
-    .line 726
+    .line 725
     const v5, 0x7f080027
 
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -3968,7 +3957,7 @@
 
     iput-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_AnimationSurfaceView:Landroid/view/SurfaceView;
 
-    .line 727
+    .line 726
     iget-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_AnimationSurfaceView:Landroid/view/SurfaceView;
 
     invoke-virtual {v5}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
@@ -3977,14 +3966,14 @@
 
     iput-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_AnimationSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 730
+    .line 729
     iget-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewSurfaceView:Landroid/view/SurfaceView;
 
     invoke-virtual {v5}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v2
 
-    .line 731
+    .line 730
     .local v2, holder:Landroid/view/SurfaceHolder;
     new-instance v5, Lcom/android/camera/component/ViewFinder$2;
 
@@ -3992,21 +3981,21 @@
 
     invoke-interface {v2, v5}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 752
+    .line 751
     iget-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_AnimationSurfaceView:Landroid/view/SurfaceView;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Landroid/view/SurfaceView;->setZOrderMediaOverlay(Z)V
 
-    .line 753
+    .line 752
     iget-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_AnimationSurfaceHolder:Landroid/view/SurfaceHolder;
 
     const/4 v6, -0x3
 
     invoke-interface {v5, v6}, Landroid/view/SurfaceHolder;->setFormat(I)V
 
-    .line 754
+    .line 753
     iget-object v5, p0, Lcom/android/camera/component/ViewFinder;->m_AnimationSurfaceHolder:Landroid/view/SurfaceHolder;
 
     new-instance v6, Lcom/android/camera/component/ViewFinder$3;
@@ -4015,12 +4004,12 @@
 
     invoke-interface {v5, v6}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 769
+    .line 768
     invoke-virtual {p0}, Lcom/android/camera/component/ViewFinder;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
 
-    .line 770
+    .line 769
     .local v1, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->getResources()Landroid/content/res/Resources;
 
@@ -4034,12 +4023,12 @@
 
     iput v5, p0, Lcom/android/camera/component/ViewFinder;->m_PreviewFilterColor:I
 
-    .line 773
+    .line 772
     invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->getStartMode()Lcom/android/camera/CameraStartMode;
 
     move-result-object v3
 
-    .line 774
+    .line 773
     .local v3, startMode:Lcom/android/camera/CameraStartMode;
     sget-object v5, Lcom/android/camera/component/ViewFinder$20;->$SwitchMap$com$android$camera$CameraStartMode:[I
 
@@ -4051,20 +4040,20 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 789
+    .line 788
     :goto_0
     invoke-direct {p0, v1}, Lcom/android/camera/component/ViewFinder;->setupUIEventHandlers(Lcom/android/camera/HTCCamera;)V
 
-    .line 792
+    .line 791
     invoke-direct {p0, v1}, Lcom/android/camera/component/ViewFinder;->setupUIPropertyChangedCallbacks(Lcom/android/camera/HTCCamera;)V
 
-    .line 795
+    .line 794
     invoke-direct {p0}, Lcom/android/camera/component/ViewFinder;->updateViewFinderSize()V
 
-    .line 796
+    .line 795
     return-void
 
-    .line 779
+    .line 778
     :pswitch_0
     const v5, 0x7f080028
 
@@ -4078,13 +4067,13 @@
 
     move-result-object v5
 
-    const v6, 0x7f0800cb
+    const v6, 0x7f0800cd
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 780
+    .line 779
     .local v4, view:Landroid/view/View;
     sget-object v5, Lcom/android/camera/rotate/UIRotation;->SCREEN_ROTATION:Lcom/android/camera/rotate/UIRotation;
 
@@ -4094,14 +4083,14 @@
 
     if-eqz v5, :cond_0
 
-    .line 781
+    .line 780
     sget v5, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
 
     invoke-static {v4, v5}, Lcom/android/camera/ViewUtil;->setHeight(Landroid/view/View;I)V
 
     goto :goto_0
 
-    .line 783
+    .line 782
     :cond_0
     sget v5, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
 
@@ -4109,7 +4098,7 @@
 
     goto :goto_0
 
-    .line 774
+    .line 773
     nop
 
     :pswitch_data_0

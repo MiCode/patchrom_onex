@@ -30,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 395
+    .line 401
     const-string v0, "(?:\\r\\n?|\\n)[ \t]"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -39,7 +39,7 @@
 
     sput-object v0, Lcom/android/calendarcommon/RecurrenceSet;->IGNORABLE_ICAL_WHITESPACE_RE:Ljava/util/regex/Pattern;
 
-    .line 398
+    .line 404
     const-string v0, ".{75}"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -251,24 +251,24 @@
     .parameter "ruleStr"
 
     .prologue
-    .line 370
+    .line 376
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 379
+    .line 385
     :cond_0
     return-void
 
-    .line 373
+    .line 379
     :cond_1
     invoke-static {p2}, Lcom/android/calendarcommon/RecurrenceSet;->getRuleStrings(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 374
+    .line 380
     .local v5, rrules:[Ljava/lang/String;
     move-object v0, v5
 
@@ -284,20 +284,20 @@
 
     aget-object v4, v0, v1
 
-    .line 375
+    .line 381
     .local v4, rrule:Ljava/lang/String;
     new-instance v3, Lcom/android/calendarcommon/ICalendar$Property;
 
     invoke-direct {v3, p1}, Lcom/android/calendarcommon/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
-    .line 376
+    .line 382
     .local v3, prop:Lcom/android/calendarcommon/ICalendar$Property;
     invoke-virtual {v3, v4}, Lcom/android/calendarcommon/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
-    .line 377
+    .line 383
     invoke-virtual {p0, v3}, Lcom/android/calendarcommon/ICalendar$Component;->addProperty(Lcom/android/calendarcommon/ICalendar$Property;)V
 
-    .line 374
+    .line 380
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -310,28 +310,28 @@
     .parameter "dateStr"
 
     .prologue
-    .line 430
+    .line 436
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 446
+    .line 452
     :goto_0
     return-void
 
-    .line 434
+    .line 440
     :cond_0
     new-instance v0, Lcom/android/calendarcommon/ICalendar$Property;
 
     invoke-direct {v0, p1}, Lcom/android/calendarcommon/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
-    .line 435
+    .line 441
     .local v0, prop:Lcom/android/calendarcommon/ICalendar$Property;
     const/4 v1, 0x0
 
-    .line 436
+    .line 442
     .local v1, tz:Ljava/lang/String;
     const-string v3, ";"
 
@@ -339,27 +339,27 @@
 
     move-result v2
 
-    .line 437
+    .line 443
     .local v2, tzidx:I
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_1
 
-    .line 438
+    .line 444
     const/4 v3, 0x0
 
     invoke-virtual {p2, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 439
+    .line 445
     add-int/lit8 v3, v2, 0x1
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 441
+    .line 447
     :cond_1
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -367,7 +367,7 @@
 
     if-nez v3, :cond_2
 
-    .line 442
+    .line 448
     new-instance v3, Lcom/android/calendarcommon/ICalendar$Parameter;
 
     const-string v4, "TZID"
@@ -376,11 +376,11 @@
 
     invoke-virtual {v0, v3}, Lcom/android/calendarcommon/ICalendar$Property;->addParameter(Lcom/android/calendarcommon/ICalendar$Parameter;)V
 
-    .line 444
+    .line 450
     :cond_2
     invoke-virtual {v0, p2}, Lcom/android/calendarcommon/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
-    .line 445
+    .line 451
     invoke-virtual {p0, v0}, Lcom/android/calendarcommon/ICalendar$Component;->addProperty(Lcom/android/calendarcommon/ICalendar$Property;)V
 
     goto :goto_0
@@ -392,27 +392,27 @@
     .parameter "component"
 
     .prologue
-    .line 451
+    .line 457
     const-string v9, "DURATION"
 
     invoke-virtual {p1, v9}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
 
     move-result-object v3
 
-    .line 453
+    .line 459
     .local v3, durationProperty:Lcom/android/calendarcommon/ICalendar$Property;
     if-eqz v3, :cond_0
 
-    .line 455
+    .line 461
     invoke-virtual {v3}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 478
+    .line 484
     :goto_0
     return-object v9
 
-    .line 459
+    .line 465
     :cond_0
     const-string v9, "DTEND"
 
@@ -420,16 +420,16 @@
 
     move-result-object v0
 
-    .line 461
+    .line 467
     .local v0, dtendProperty:Lcom/android/calendarcommon/ICalendar$Property;
     if-nez v0, :cond_1
 
-    .line 463
+    .line 469
     const-string v9, "+P0S"
 
     goto :goto_0
 
-    .line 465
+    .line 471
     :cond_1
     const-string v9, "TZID"
 
@@ -437,20 +437,20 @@
 
     move-result-object v8
 
-    .line 467
+    .line 473
     .local v8, endTzidParameter:Lcom/android/calendarcommon/ICalendar$Parameter;
     if-nez v8, :cond_2
 
     iget-object v7, p0, Landroid/text/format/Time;->timezone:Ljava/lang/String;
 
-    .line 470
+    .line 476
     .local v7, endTzid:Ljava/lang/String;
     :goto_1
     new-instance v6, Landroid/text/format/Time;
 
     invoke-direct {v6, v7}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 471
+    .line 477
     .local v6, end:Landroid/text/format/Time;
     invoke-virtual {v0}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -458,7 +458,7 @@
 
     invoke-virtual {v6, v9}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 472
+    .line 478
     const/4 v9, 0x0
 
     invoke-virtual {v6, v9}, Landroid/text/format/Time;->toMillis(Z)J
@@ -473,13 +473,13 @@
 
     sub-long v1, v9, v11
 
-    .line 474
+    .line 480
     .local v1, durationMillis:J
     const-wide/16 v9, 0x3e8
 
     div-long v4, v1, v9
 
-    .line 475
+    .line 481
     .local v4, durationSeconds:J
     iget-boolean v9, p0, Landroid/text/format/Time;->allDay:Z
 
@@ -495,7 +495,7 @@
 
     if-nez v9, :cond_3
 
-    .line 476
+    .line 482
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -526,7 +526,7 @@
 
     goto :goto_0
 
-    .line 467
+    .line 473
     .end local v1           #durationMillis:J
     .end local v4           #durationSeconds:J
     .end local v6           #end:Landroid/text/format/Time;
@@ -536,7 +536,7 @@
 
     goto :goto_1
 
-    .line 478
+    .line 484
     .restart local v1       #durationMillis:J
     .restart local v4       #durationSeconds:J
     .restart local v6       #end:Landroid/text/format/Time;
@@ -574,17 +574,17 @@
     .parameter "recurrence"
 
     .prologue
-    .line 510
+    .line 516
     if-nez p0, :cond_0
 
-    .line 511
+    .line 517
     const/4 v1, 0x0
 
-    .line 518
+    .line 524
     :goto_0
     return-object v1
 
-    .line 513
+    .line 519
     :cond_0
     const-string v1, "TZID"
 
@@ -592,11 +592,11 @@
 
     move-result-object v0
 
-    .line 515
+    .line 521
     .local v0, tzidParam:Lcom/android/calendarcommon/ICalendar$Parameter;
     if-eqz v0, :cond_1
 
-    .line 516
+    .line 522
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -627,7 +627,7 @@
 
     goto :goto_0
 
-    .line 518
+    .line 524
     :cond_1
     invoke-virtual {p0}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -642,12 +642,12 @@
     .parameter "name"
 
     .prologue
-    .line 484
+    .line 490
     invoke-virtual {p0, p1}, Lcom/android/calendarcommon/ICalendar$Component;->getProperties(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 485
+    .line 491
     .local v2, properties:Ljava/util/List;,"Ljava/util/List<Lcom/android/calendarcommon/ICalendar$Property;>;"
     if-eqz v2, :cond_0
 
@@ -657,15 +657,15 @@
 
     if-eqz v5, :cond_1
 
-    .line 486
+    .line 492
     :cond_0
     const/4 v5, 0x0
 
-    .line 506
+    .line 512
     :goto_0
     return-object v5
 
-    .line 489
+    .line 495
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -675,7 +675,7 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 490
+    .line 496
     const/4 v5, 0x0
 
     invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -690,17 +690,17 @@
 
     goto :goto_0
 
-    .line 493
+    .line 499
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 495
+    .line 501
     .local v4, sb:Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 496
+    .line 502
     .local v0, first:Z
     invoke-virtual {p0, p1}, Lcom/android/calendarcommon/ICalendar$Component;->getProperties(Ljava/lang/String;)Ljava/util/List;
 
@@ -724,14 +724,14 @@
 
     check-cast v3, Lcom/android/calendarcommon/ICalendar$Property;
 
-    .line 497
+    .line 503
     .local v3, property:Lcom/android/calendarcommon/ICalendar$Property;
     if-eqz v0, :cond_3
 
-    .line 498
+    .line 504
     const/4 v0, 0x0
 
-    .line 504
+    .line 510
     :goto_2
     invoke-virtual {v3}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -741,7 +741,7 @@
 
     goto :goto_1
 
-    .line 502
+    .line 508
     :cond_3
     const-string v5, "\n"
 
@@ -749,7 +749,7 @@
 
     goto :goto_2
 
-    .line 506
+    .line 512
     .end local v3           #property:Lcom/android/calendarcommon/ICalendar$Property;
     :cond_4
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -764,7 +764,7 @@
     .parameter "unfoldedIcalContent"
 
     .prologue
-    .line 419
+    .line 425
     sget-object v0, Lcom/android/calendarcommon/RecurrenceSet;->FOLD_RE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -785,25 +785,25 @@
     .parameter "ruleStr"
 
     .prologue
-    .line 382
+    .line 388
     if-nez p0, :cond_1
 
-    .line 383
+    .line 389
     const/4 v4, 0x0
 
     new-array v2, v4, [Ljava/lang/String;
 
-    .line 391
+    .line 397
     :cond_0
     return-object v2
 
-    .line 385
+    .line 391
     :cond_1
     invoke-static {p0}, Lcom/android/calendarcommon/RecurrenceSet;->unfold(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 386
+    .line 392
     .local v3, unfoldedRuleStr:Ljava/lang/String;
     const-string v4, "\n"
 
@@ -811,11 +811,11 @@
 
     move-result-object v2
 
-    .line 387
+    .line 393
     .local v2, split:[Ljava/lang/String;
     array-length v0, v2
 
-    .line 388
+    .line 394
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -823,7 +823,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 389
+    .line 395
     aget-object v4, v2, v1
 
     invoke-static {v4}, Lcom/android/calendarcommon/RecurrenceSet;->fold(Ljava/lang/String;)Ljava/lang/String;
@@ -832,7 +832,7 @@
 
     aput-object v4, v2, v1
 
-    .line 388
+    .line 394
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -1157,10 +1157,10 @@
     .parameter "component"
 
     .prologue
-    .line 310
+    .line 316
     const-wide/16 v3, -0x1
 
-    .line 311
+    .line 317
     .local v3, dtstart:J
     const-string v14, "dtstart"
 
@@ -1172,7 +1172,7 @@
 
     if-eqz v14, :cond_0
 
-    .line 312
+    .line 318
     const-string v14, "dtstart"
 
     move-object/from16 v0, p0
@@ -1185,7 +1185,7 @@
 
     move-result-wide v3
 
-    .line 314
+    .line 320
     :cond_0
     const-string v14, "duration"
 
@@ -1195,7 +1195,7 @@
 
     move-result-object v7
 
-    .line 315
+    .line 321
     .local v7, duration:Ljava/lang/String;
     const-string v14, "eventTimezone"
 
@@ -1205,7 +1205,7 @@
 
     move-result-object v13
 
-    .line 316
+    .line 322
     .local v13, tzid:Ljava/lang/String;
     const-string v14, "rrule"
 
@@ -1215,7 +1215,7 @@
 
     move-result-object v12
 
-    .line 317
+    .line 323
     .local v12, rruleStr:Ljava/lang/String;
     const-string v14, "rdate"
 
@@ -1225,7 +1225,7 @@
 
     move-result-object v11
 
-    .line 318
+    .line 324
     .local v11, rdateStr:Ljava/lang/String;
     const-string v14, "exrule"
 
@@ -1235,7 +1235,7 @@
 
     move-result-object v10
 
-    .line 319
+    .line 325
     .local v10, exruleStr:Ljava/lang/String;
     const-string v14, "exdate"
 
@@ -1245,7 +1245,7 @@
 
     move-result-object v9
 
-    .line 320
+    .line 326
     .local v9, exdateStr:Ljava/lang/String;
     const-string v14, "allDay"
 
@@ -1255,7 +1255,7 @@
 
     move-result-object v2
 
-    .line 321
+    .line 327
     .local v2, allDayInteger:Ljava/lang/Integer;
     if-eqz v2, :cond_3
 
@@ -1269,7 +1269,7 @@
 
     const/4 v1, 0x1
 
-    .line 323
+    .line 329
     .local v1, allDay:Z
     :goto_0
     const-wide/16 v14, -0x1
@@ -1296,15 +1296,15 @@
 
     if-eqz v14, :cond_4
 
-    .line 328
+    .line 334
     :cond_1
     const/4 v14, 0x0
 
-    .line 364
+    .line 370
     :goto_1
     return v14
 
-    .line 321
+    .line 327
     .end local v1           #allDay:Z
     :cond_2
     const/4 v1, 0x0
@@ -1316,7 +1316,7 @@
 
     goto :goto_0
 
-    .line 331
+    .line 337
     .restart local v1       #allDay:Z
     :cond_4
     new-instance v5, Lcom/android/calendarcommon/ICalendar$Property;
@@ -1325,11 +1325,11 @@
 
     invoke-direct {v5, v14}, Lcom/android/calendarcommon/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
-    .line 332
+    .line 338
     .local v5, dtstartProp:Lcom/android/calendarcommon/ICalendar$Property;
     const/4 v6, 0x0
 
-    .line 333
+    .line 339
     .local v6, dtstartTime:Landroid/text/format/Time;
     invoke-static {v13}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1337,10 +1337,10 @@
 
     if-nez v14, :cond_7
 
-    .line 334
+    .line 340
     if-nez v1, :cond_5
 
-    .line 335
+    .line 341
     new-instance v14, Lcom/android/calendarcommon/ICalendar$Parameter;
 
     const-string v15, "TZID"
@@ -1349,22 +1349,22 @@
 
     invoke-virtual {v5, v14}, Lcom/android/calendarcommon/ICalendar$Property;->addParameter(Lcom/android/calendarcommon/ICalendar$Parameter;)V
 
-    .line 337
+    .line 343
     :cond_5
     new-instance v6, Landroid/text/format/Time;
 
     .end local v6           #dtstartTime:Landroid/text/format/Time;
     invoke-direct {v6, v13}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 343
+    .line 349
     .restart local v6       #dtstartTime:Landroid/text/format/Time;
     :goto_2
     invoke-virtual {v6, v3, v4}, Landroid/text/format/Time;->set(J)V
 
-    .line 346
+    .line 352
     if-eqz v1, :cond_6
 
-    .line 347
+    .line 353
     new-instance v14, Lcom/android/calendarcommon/ICalendar$Parameter;
 
     const-string v15, "VALUE"
@@ -1375,27 +1375,27 @@
 
     invoke-virtual {v5, v14}, Lcom/android/calendarcommon/ICalendar$Property;->addParameter(Lcom/android/calendarcommon/ICalendar$Parameter;)V
 
-    .line 348
+    .line 354
     const/4 v14, 0x1
 
     iput-boolean v14, v6, Landroid/text/format/Time;->allDay:Z
 
-    .line 349
+    .line 355
     const/4 v14, 0x0
 
     iput v14, v6, Landroid/text/format/Time;->hour:I
 
-    .line 350
+    .line 356
     const/4 v14, 0x0
 
     iput v14, v6, Landroid/text/format/Time;->minute:I
 
-    .line 351
+    .line 357
     const/4 v14, 0x0
 
     iput v14, v6, Landroid/text/format/Time;->second:I
 
-    .line 354
+    .line 360
     :cond_6
     invoke-virtual {v6}, Landroid/text/format/Time;->format2445()Ljava/lang/String;
 
@@ -1403,61 +1403,61 @@
 
     invoke-virtual {v5, v14}, Lcom/android/calendarcommon/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
-    .line 355
+    .line 361
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5}, Lcom/android/calendarcommon/ICalendar$Component;->addProperty(Lcom/android/calendarcommon/ICalendar$Property;)V
 
-    .line 356
+    .line 362
     new-instance v8, Lcom/android/calendarcommon/ICalendar$Property;
 
     const-string v14, "DURATION"
 
     invoke-direct {v8, v14}, Lcom/android/calendarcommon/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
-    .line 357
+    .line 363
     .local v8, durationProp:Lcom/android/calendarcommon/ICalendar$Property;
     invoke-virtual {v8, v7}, Lcom/android/calendarcommon/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
-    .line 358
+    .line 364
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8}, Lcom/android/calendarcommon/ICalendar$Component;->addProperty(Lcom/android/calendarcommon/ICalendar$Property;)V
 
-    .line 360
+    .line 366
     const-string v14, "RRULE"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v14, v12}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertiesForRuleStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 361
+    .line 367
     const-string v14, "RDATE"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v14, v11}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertyForDateStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 362
+    .line 368
     const-string v14, "EXRULE"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v14, v10}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertiesForRuleStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 363
+    .line 369
     const-string v14, "EXDATE"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v14, v9}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertyForDateStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 364
+    .line 370
     const/4 v14, 0x1
 
     goto :goto_1
 
-    .line 340
+    .line 346
     .end local v8           #durationProp:Lcom/android/calendarcommon/ICalendar$Property;
     :cond_7
     new-instance v6, Landroid/text/format/Time;
@@ -1477,7 +1477,7 @@
     .parameter "component"
 
     .prologue
-    .line 242
+    .line 248
     const-string v23, "dtstart"
 
     move-object/from16 v0, p0
@@ -1488,7 +1488,7 @@
 
     move-result v7
 
-    .line 243
+    .line 249
     .local v7, dtstartColumn:I
     const-string v23, "duration"
 
@@ -1500,7 +1500,7 @@
 
     move-result v11
 
-    .line 244
+    .line 250
     .local v11, durationColumn:I
     const-string v23, "eventTimezone"
 
@@ -1512,7 +1512,7 @@
 
     move-result v22
 
-    .line 245
+    .line 251
     .local v22, tzidColumn:I
     const-string v23, "rrule"
 
@@ -1524,7 +1524,7 @@
 
     move-result v19
 
-    .line 246
+    .line 252
     .local v19, rruleColumn:I
     const-string v23, "rdate"
 
@@ -1536,7 +1536,7 @@
 
     move-result v17
 
-    .line 247
+    .line 253
     .local v17, rdateColumn:I
     const-string v23, "exrule"
 
@@ -1548,7 +1548,7 @@
 
     move-result v15
 
-    .line 248
+    .line 254
     .local v15, exruleColumn:I
     const-string v23, "exdate"
 
@@ -1560,7 +1560,7 @@
 
     move-result v13
 
-    .line 249
+    .line 255
     .local v13, exdateColumn:I
     const-string v23, "allDay"
 
@@ -1572,11 +1572,11 @@
 
     move-result v4
 
-    .line 252
+    .line 258
     .local v4, allDayColumn:I
     const-wide/16 v5, -0x1
 
-    .line 253
+    .line 259
     .local v5, dtstart:J
     move-object/from16 v0, p0
 
@@ -1586,14 +1586,14 @@
 
     if-nez v23, :cond_0
 
-    .line 254
+    .line 260
     move-object/from16 v0, p0
 
     invoke-interface {v0, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v5
 
-    .line 256
+    .line 262
     :cond_0
     move-object/from16 v0, p0
 
@@ -1601,7 +1601,7 @@
 
     move-result-object v10
 
-    .line 257
+    .line 263
     .local v10, duration:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1611,7 +1611,7 @@
 
     move-result-object v21
 
-    .line 258
+    .line 264
     .local v21, tzid:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1621,7 +1621,7 @@
 
     move-result-object v20
 
-    .line 259
+    .line 265
     .local v20, rruleStr:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1631,7 +1631,7 @@
 
     move-result-object v18
 
-    .line 260
+    .line 266
     .local v18, rdateStr:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1639,7 +1639,7 @@
 
     move-result-object v16
 
-    .line 261
+    .line 267
     .local v16, exruleStr:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1647,7 +1647,7 @@
 
     move-result-object v14
 
-    .line 262
+    .line 268
     .local v14, exdateStr:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1665,7 +1665,7 @@
 
     const/4 v3, 0x1
 
-    .line 264
+    .line 270
     .local v3, allDay:Z
     :goto_0
     const-wide/16 v23, -0x1
@@ -1692,22 +1692,22 @@
 
     if-eqz v23, :cond_3
 
-    .line 269
+    .line 275
     :cond_1
     const/16 v23, 0x0
 
-    .line 305
+    .line 311
     :goto_1
     return v23
 
-    .line 262
+    .line 268
     .end local v3           #allDay:Z
     :cond_2
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 272
+    .line 278
     .restart local v3       #allDay:Z
     :cond_3
     new-instance v8, Lcom/android/calendarcommon/ICalendar$Property;
@@ -1718,11 +1718,11 @@
 
     invoke-direct {v8, v0}, Lcom/android/calendarcommon/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
-    .line 273
+    .line 279
     .local v8, dtstartProp:Lcom/android/calendarcommon/ICalendar$Property;
     const/4 v9, 0x0
 
-    .line 274
+    .line 280
     .local v9, dtstartTime:Landroid/text/format/Time;
     invoke-static/range {v21 .. v21}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1730,10 +1730,10 @@
 
     if-nez v23, :cond_6
 
-    .line 275
+    .line 281
     if-nez v3, :cond_4
 
-    .line 276
+    .line 282
     new-instance v23, Lcom/android/calendarcommon/ICalendar$Parameter;
 
     const-string v24, "TZID"
@@ -1750,7 +1750,7 @@
 
     invoke-virtual {v8, v0}, Lcom/android/calendarcommon/ICalendar$Property;->addParameter(Lcom/android/calendarcommon/ICalendar$Parameter;)V
 
-    .line 278
+    .line 284
     :cond_4
     new-instance v9, Landroid/text/format/Time;
 
@@ -1759,15 +1759,15 @@
 
     invoke-direct {v9, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 284
+    .line 290
     .restart local v9       #dtstartTime:Landroid/text/format/Time;
     :goto_2
     invoke-virtual {v9, v5, v6}, Landroid/text/format/Time;->set(J)V
 
-    .line 287
+    .line 293
     if-eqz v3, :cond_5
 
-    .line 288
+    .line 294
     new-instance v23, Lcom/android/calendarcommon/ICalendar$Parameter;
 
     const-string v24, "VALUE"
@@ -1780,35 +1780,35 @@
 
     invoke-virtual {v8, v0}, Lcom/android/calendarcommon/ICalendar$Property;->addParameter(Lcom/android/calendarcommon/ICalendar$Parameter;)V
 
-    .line 289
+    .line 295
     const/16 v23, 0x1
 
     move/from16 v0, v23
 
     iput-boolean v0, v9, Landroid/text/format/Time;->allDay:Z
 
-    .line 290
+    .line 296
     const/16 v23, 0x0
 
     move/from16 v0, v23
 
     iput v0, v9, Landroid/text/format/Time;->hour:I
 
-    .line 291
+    .line 297
     const/16 v23, 0x0
 
     move/from16 v0, v23
 
     iput v0, v9, Landroid/text/format/Time;->minute:I
 
-    .line 292
+    .line 298
     const/16 v23, 0x0
 
     move/from16 v0, v23
 
     iput v0, v9, Landroid/text/format/Time;->second:I
 
-    .line 295
+    .line 301
     :cond_5
     invoke-virtual {v9}, Landroid/text/format/Time;->format2445()Ljava/lang/String;
 
@@ -1818,12 +1818,12 @@
 
     invoke-virtual {v8, v0}, Lcom/android/calendarcommon/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
-    .line 296
+    .line 302
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8}, Lcom/android/calendarcommon/ICalendar$Component;->addProperty(Lcom/android/calendarcommon/ICalendar$Property;)V
 
-    .line 297
+    .line 303
     new-instance v12, Lcom/android/calendarcommon/ICalendar$Property;
 
     const-string v23, "DURATION"
@@ -1832,16 +1832,16 @@
 
     invoke-direct {v12, v0}, Lcom/android/calendarcommon/ICalendar$Property;-><init>(Ljava/lang/String;)V
 
-    .line 298
+    .line 304
     .local v12, durationProp:Lcom/android/calendarcommon/ICalendar$Property;
     invoke-virtual {v12, v10}, Lcom/android/calendarcommon/ICalendar$Property;->setValue(Ljava/lang/String;)V
 
-    .line 299
+    .line 305
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v12}, Lcom/android/calendarcommon/ICalendar$Component;->addProperty(Lcom/android/calendarcommon/ICalendar$Property;)V
 
-    .line 301
+    .line 307
     const-string v23, "RRULE"
 
     move-object/from16 v0, p1
@@ -1852,7 +1852,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertiesForRuleStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 302
+    .line 308
     const-string v23, "RDATE"
 
     move-object/from16 v0, p1
@@ -1863,7 +1863,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertyForDateStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
+    .line 309
     const-string v23, "EXRULE"
 
     move-object/from16 v0, p1
@@ -1874,7 +1874,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertiesForRuleStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 304
+    .line 310
     const-string v23, "EXDATE"
 
     move-object/from16 v0, p1
@@ -1883,12 +1883,12 @@
 
     invoke-static {v0, v1, v14}, Lcom/android/calendarcommon/RecurrenceSet;->addPropertyForDateStr(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 305
+    .line 311
     const/16 v23, 0x1
 
     goto/16 :goto_1
 
-    .line 281
+    .line 287
     .end local v12           #durationProp:Lcom/android/calendarcommon/ICalendar$Property;
     :cond_6
     new-instance v9, Landroid/text/format/Time;
@@ -1905,342 +1905,405 @@
 .end method
 
 .method public static populateContentValues(Lcom/android/calendarcommon/ICalendar$Component;Landroid/content/ContentValues;)Z
-    .locals 19
+    .locals 21
     .parameter "component"
     .parameter "values"
 
     .prologue
-    .line 181
-    const-string v17, "DTSTART"
+    .line 182
+    :try_start_0
+    const-string v18, "DTSTART"
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v17
+    move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
 
     move-result-object v5
 
-    .line 183
+    .line 184
     .local v5, dtstartProperty:Lcom/android/calendarcommon/ICalendar$Property;
     invoke-virtual {v5}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 184
+    .line 185
     .local v4, dtstart:Ljava/lang/String;
-    const-string v17, "TZID"
+    const-string v18, "TZID"
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     invoke-virtual {v5, v0}, Lcom/android/calendarcommon/ICalendar$Property;->getFirstParameter(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Parameter;
 
-    move-result-object v16
-
-    .line 187
-    .local v16, tzidParam:Lcom/android/calendarcommon/ICalendar$Parameter;
-    if-nez v16, :cond_3
-
-    const/4 v15, 0x0
+    move-result-object v17
 
     .line 188
-    .local v15, tzid:Ljava/lang/String;
-    :goto_0
-    new-instance v14, Landroid/text/format/Time;
+    .local v17, tzidParam:Lcom/android/calendarcommon/ICalendar$Parameter;
+    if-nez v17, :cond_3
 
-    if-nez v16, :cond_4
-
-    const-string v17, "UTC"
-
-    :goto_1
-    move-object/from16 v0, v17
-
-    invoke-direct {v14, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
+    const/16 v16, 0x0
 
     .line 189
-    .local v14, start:Landroid/text/format/Time;
-    invoke-virtual {v14, v4}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
+    .local v16, tzid:Ljava/lang/String;
+    :goto_0
+    new-instance v15, Landroid/text/format/Time;
 
-    move-result v9
+    if-nez v17, :cond_4
+
+    const-string v18, "UTC"
+
+    :goto_1
+    move-object/from16 v0, v18
+
+    invoke-direct {v15, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
     .line 190
-    .local v9, inUtc:Z
-    iget-boolean v3, v14, Landroid/text/format/Time;->allDay:Z
+    .local v15, start:Landroid/text/format/Time;
+    invoke-virtual {v15, v4}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 194
+    move-result v10
+
+    .line 191
+    .local v10, inUtc:Z
+    iget-boolean v3, v15, Landroid/text/format/Time;->allDay:Z
+
+    .line 195
     .local v3, allDay:Z
-    if-nez v9, :cond_0
+    if-nez v10, :cond_0
 
     if-eqz v3, :cond_1
 
-    .line 195
+    .line 196
     :cond_0
-    const-string v15, "UTC"
+    const-string v16, "UTC"
 
-    .line 198
+    .line 199
     :cond_1
     move-object/from16 v0, p0
 
-    invoke-static {v14, v0}, Lcom/android/calendarcommon/RecurrenceSet;->computeDuration(Landroid/text/format/Time;Lcom/android/calendarcommon/ICalendar$Component;)Ljava/lang/String;
+    invoke-static {v15, v0}, Lcom/android/calendarcommon/RecurrenceSet;->computeDuration(Landroid/text/format/Time;Lcom/android/calendarcommon/ICalendar$Component;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 199
+    .line 200
     .local v6, duration:Ljava/lang/String;
-    const-string v17, "RRULE"
+    const-string v18, "RRULE"
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v17
+    move-object/from16 v1, v18
 
     invoke-static {v0, v1}, Lcom/android/calendarcommon/RecurrenceSet;->flattenProperties(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v13
-
-    .line 200
-    .local v13, rrule:Ljava/lang/String;
-    const-string v17, "RDATE"
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v17
-
-    invoke-virtual {v0, v1}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
-
-    move-result-object v17
-
-    invoke-static/range {v17 .. v17}, Lcom/android/calendarcommon/RecurrenceSet;->extractDates(Lcom/android/calendarcommon/ICalendar$Property;)Ljava/lang/String;
-
-    move-result-object v12
+    move-result-object v14
 
     .line 201
-    .local v12, rdate:Ljava/lang/String;
-    const-string v17, "EXRULE"
+    .local v14, rrule:Ljava/lang/String;
+    const-string v18, "RDATE"
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v17
-
-    invoke-static {v0, v1}, Lcom/android/calendarcommon/RecurrenceSet;->flattenProperties(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    .line 202
-    .local v8, exrule:Ljava/lang/String;
-    const-string v17, "EXDATE"
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v17
+    move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
-
-    move-result-object v17
-
-    invoke-static/range {v17 .. v17}, Lcom/android/calendarcommon/RecurrenceSet;->extractDates(Lcom/android/calendarcommon/ICalendar$Property;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 204
-    .local v7, exdate:Ljava/lang/String;
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v17
-
-    if-nez v17, :cond_2
-
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v17
-
-    if-nez v17, :cond_2
-
-    invoke-static {v13}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v17
-
-    if-eqz v17, :cond_5
-
-    invoke-static {v12}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v17
-
-    if-eqz v17, :cond_5
-
-    .line 213
-    :cond_2
-    const/16 v17, 0x0
-
-    .line 235
-    :goto_2
-    return v17
-
-    .line 187
-    .end local v3           #allDay:Z
-    .end local v6           #duration:Ljava/lang/String;
-    .end local v7           #exdate:Ljava/lang/String;
-    .end local v8           #exrule:Ljava/lang/String;
-    .end local v9           #inUtc:Z
-    .end local v12           #rdate:Ljava/lang/String;
-    .end local v13           #rrule:Ljava/lang/String;
-    .end local v14           #start:Landroid/text/format/Time;
-    .end local v15           #tzid:Ljava/lang/String;
-    :cond_3
-    move-object/from16 v0, v16
-
-    iget-object v15, v0, Lcom/android/calendarcommon/ICalendar$Parameter;->value:Ljava/lang/String;
-
-    goto :goto_0
-
-    .restart local v15       #tzid:Ljava/lang/String;
-    :cond_4
-    move-object/from16 v17, v15
-
-    .line 188
-    goto :goto_1
-
-    .line 216
-    .restart local v3       #allDay:Z
-    .restart local v6       #duration:Ljava/lang/String;
-    .restart local v7       #exdate:Ljava/lang/String;
-    .restart local v8       #exrule:Ljava/lang/String;
-    .restart local v9       #inUtc:Z
-    .restart local v12       #rdate:Ljava/lang/String;
-    .restart local v13       #rrule:Ljava/lang/String;
-    .restart local v14       #start:Landroid/text/format/Time;
-    :cond_5
-    if-eqz v3, :cond_6
-
-    .line 217
-    const-string v17, "UTC"
-
-    move-object/from16 v0, v17
-
-    iput-object v0, v14, Landroid/text/format/Time;->timezone:Ljava/lang/String;
-
-    .line 219
-    :cond_6
-    const/16 v17, 0x0
-
-    move/from16 v0, v17
-
-    invoke-virtual {v14, v0}, Landroid/text/format/Time;->toMillis(Z)J
-
-    move-result-wide v10
-
-    .line 220
-    .local v10, millis:J
-    const-string v17, "dtstart"
-
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v18
 
-    move-object/from16 v0, p1
+    invoke-static/range {v18 .. v18}, Lcom/android/calendarcommon/RecurrenceSet;->extractDates(Lcom/android/calendarcommon/ICalendar$Property;)Ljava/lang/String;
 
-    move-object/from16 v1, v17
+    move-result-object v13
 
-    move-object/from16 v2, v18
+    .line 202
+    .local v13, rdate:Ljava/lang/String;
+    const-string v18, "EXRULE"
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v18
+
+    invoke-static {v0, v1}, Lcom/android/calendarcommon/RecurrenceSet;->flattenProperties(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 203
+    .local v9, exrule:Ljava/lang/String;
+    const-string v18, "EXDATE"
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
+
+    move-result-object v18
+
+    invoke-static/range {v18 .. v18}, Lcom/android/calendarcommon/RecurrenceSet;->extractDates(Lcom/android/calendarcommon/ICalendar$Property;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 205
+    .local v8, exdate:Ljava/lang/String;
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v18
+
+    if-nez v18, :cond_2
+
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v18
+
+    if-nez v18, :cond_2
+
+    invoke-static {v14}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_5
+
+    invoke-static {v13}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_5
+
+    .line 214
+    :cond_2
+    const/16 v18, 0x0
+
+    .line 240
+    .end local v3           #allDay:Z
+    .end local v4           #dtstart:Ljava/lang/String;
+    .end local v5           #dtstartProperty:Lcom/android/calendarcommon/ICalendar$Property;
+    .end local v6           #duration:Ljava/lang/String;
+    .end local v8           #exdate:Ljava/lang/String;
+    .end local v9           #exrule:Ljava/lang/String;
+    .end local v10           #inUtc:Z
+    .end local v13           #rdate:Ljava/lang/String;
+    .end local v14           #rrule:Ljava/lang/String;
+    .end local v15           #start:Landroid/text/format/Time;
+    .end local v16           #tzid:Ljava/lang/String;
+    .end local v17           #tzidParam:Lcom/android/calendarcommon/ICalendar$Parameter;
+    :goto_2
+    return v18
+
+    .line 188
+    .restart local v4       #dtstart:Ljava/lang/String;
+    .restart local v5       #dtstartProperty:Lcom/android/calendarcommon/ICalendar$Property;
+    .restart local v17       #tzidParam:Lcom/android/calendarcommon/ICalendar$Parameter;
+    :cond_3
+    move-object/from16 v0, v17
+
+    iget-object v0, v0, Lcom/android/calendarcommon/ICalendar$Parameter;->value:Ljava/lang/String;
+
+    move-object/from16 v16, v0
+
+    goto :goto_0
+
+    .restart local v16       #tzid:Ljava/lang/String;
+    :cond_4
+    move-object/from16 v18, v16
+
+    .line 189
+    goto :goto_1
+
+    .line 217
+    .restart local v3       #allDay:Z
+    .restart local v6       #duration:Ljava/lang/String;
+    .restart local v8       #exdate:Ljava/lang/String;
+    .restart local v9       #exrule:Ljava/lang/String;
+    .restart local v10       #inUtc:Z
+    .restart local v13       #rdate:Ljava/lang/String;
+    .restart local v14       #rrule:Ljava/lang/String;
+    .restart local v15       #start:Landroid/text/format/Time;
+    :cond_5
+    if-eqz v3, :cond_6
+
+    .line 218
+    const-string v18, "UTC"
+
+    move-object/from16 v0, v18
+
+    iput-object v0, v15, Landroid/text/format/Time;->timezone:Ljava/lang/String;
+
+    .line 220
+    :cond_6
+    const/16 v18, 0x0
+
+    move/from16 v0, v18
+
+    invoke-virtual {v15, v0}, Landroid/text/format/Time;->toMillis(Z)J
+
+    move-result-wide v11
 
     .line 221
-    const-wide/16 v17, -0x1
+    .local v11, millis:J
+    const-string v18, "dtstart"
 
-    cmp-long v17, v10, v17
+    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-nez v17, :cond_7
-
-    .line 225
-    const/16 v17, 0x0
-
-    goto :goto_2
-
-    .line 228
-    :cond_7
-    const-string v17, "rrule"
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v17
-
-    invoke-virtual {v0, v1, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 229
-    const-string v17, "rdate"
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v17
-
-    invoke-virtual {v0, v1, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 230
-    const-string v17, "exrule"
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v17
-
-    invoke-virtual {v0, v1, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 231
-    const-string v17, "exdate"
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v17
-
-    invoke-virtual {v0, v1, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 232
-    const-string v17, "eventTimezone"
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v17
-
-    invoke-virtual {v0, v1, v15}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 233
-    const-string v17, "duration"
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, v17
-
-    invoke-virtual {v0, v1, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 234
-    const-string v18, "allDay"
-
-    if-eqz v3, :cond_8
-
-    const/16 v17, 0x1
-
-    :goto_3
-    invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v17
+    move-result-object v19
 
     move-object/from16 v0, p1
 
     move-object/from16 v1, v18
 
-    move-object/from16 v2, v17
+    move-object/from16 v2, v19
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 235
-    const/16 v17, 0x1
+    .line 222
+    const-wide/16 v18, -0x1
+
+    cmp-long v18, v11, v18
+
+    if-nez v18, :cond_7
+
+    .line 226
+    const/16 v18, 0x0
 
     goto :goto_2
 
+    .line 229
+    :cond_7
+    const-string v18, "rrule"
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1, v14}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 230
+    const-string v18, "rdate"
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 231
+    const-string v18, "exrule"
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 232
+    const-string v18, "exdate"
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 233
+    const-string v18, "eventTimezone"
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v18
+
+    move-object/from16 v2, v16
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
     .line 234
+    const-string v18, "duration"
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 235
+    const-string v19, "allDay"
+
+    if-eqz v3, :cond_8
+
+    const/16 v18, 0x1
+
+    :goto_3
+    invoke-static/range {v18 .. v18}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v18
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, v19
+
+    move-object/from16 v2, v18
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    :try_end_0
+    .catch Landroid/util/TimeFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 236
+    const/16 v18, 0x1
+
+    goto :goto_2
+
+    .line 235
     :cond_8
-    const/16 v17, 0x0
+    const/16 v18, 0x0
 
     goto :goto_3
+
+    .line 237
+    .end local v3           #allDay:Z
+    .end local v4           #dtstart:Ljava/lang/String;
+    .end local v5           #dtstartProperty:Lcom/android/calendarcommon/ICalendar$Property;
+    .end local v6           #duration:Ljava/lang/String;
+    .end local v8           #exdate:Ljava/lang/String;
+    .end local v9           #exrule:Ljava/lang/String;
+    .end local v10           #inUtc:Z
+    .end local v11           #millis:J
+    .end local v13           #rdate:Ljava/lang/String;
+    .end local v14           #rrule:Ljava/lang/String;
+    .end local v15           #start:Landroid/text/format/Time;
+    .end local v16           #tzid:Ljava/lang/String;
+    .end local v17           #tzidParam:Lcom/android/calendarcommon/ICalendar$Parameter;
+    :catch_0
+    move-exception v7
+
+    .line 239
+    .local v7, e:Landroid/util/TimeFormatException;
+    const-string v18, "RecurrenceSet"
+
+    new-instance v19, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v20, "Failed to parse event: "
+
+    invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v19
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/calendarcommon/ICalendar$Component;->toString()Ljava/lang/String;
+
+    move-result-object v20
+
+    invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v19
+
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 240
+    const/16 v18, 0x0
+
+    goto/16 :goto_2
 .end method
 
 .method public static unfold(Ljava/lang/String;)Ljava/lang/String;
@@ -2248,7 +2311,7 @@
     .parameter "foldedIcalContent"
 
     .prologue
-    .line 423
+    .line 429
     sget-object v0, Lcom/android/calendarcommon/RecurrenceSet;->IGNORABLE_ICAL_WHITESPACE_RE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;

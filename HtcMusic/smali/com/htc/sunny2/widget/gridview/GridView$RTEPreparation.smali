@@ -26,13 +26,13 @@
     .parameter "name"
 
     .prologue
-    .line 2481
+    .line 2483
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEPreparation;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
-    .line 2482
+    .line 2484
     invoke-direct {p0, p2, p3}, Lcom/htc/sunny2/RenderThreadEvent;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2483
+    .line 2485
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .parameter "cancelReason"
 
     .prologue
-    .line 2499
+    .line 2501
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2487
+    .line 2489
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEPreparation;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -63,14 +63,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2489
+    .line 2491
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEPreparation;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/gridview/GridView;->mMediaList:Lcom/htc/sunny2/IMediaList;
 
     if-eqz v0, :cond_0
 
-    .line 2491
+    .line 2493
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEPreparation;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v3, v1, v3}, Lcom/htc/sunny2/widget/gridview/GridViewPreparator;->bind(ILcom/htc/sunny2/IMediaList;I)V
 
-    .line 2492
+    .line 2494
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEPreparation;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v3, v1, v2}, Lcom/htc/sunny2/widget/gridview/GridViewPreparator;->setVisibleRange(III)V
 
-    .line 2494
+    .line 2496
     :cond_0
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$RTEPreparation;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -117,7 +117,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/RenderThread;->pushPreparationIRT(Lcom/htc/sunny2/RenderThreadPreparation;)Z
 
-    .line 2496
+    .line 2498
     :cond_1
     return-void
 .end method

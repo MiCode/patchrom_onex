@@ -41,7 +41,7 @@
 
     .prologue
     .line 123
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 93
     const/4 v0, 0x0
@@ -73,7 +73,7 @@
 
     .prologue
     .line 143
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 93
     const/4 v0, 0x0
@@ -266,7 +266,7 @@
     invoke-virtual {p0, v3}, Landroid/content/ContentProvider;->setPathPermissions([Landroid/content/pm/PathPermission;)V
 
     .line 953
-    iget-boolean v3, p2, Landroid/content/pm/ComponentInfo;->exported:Z
+    iget-boolean v3, p2, Landroid/content/pm/ProviderInfo;->exported:Z
 
     iput-boolean v3, p0, Landroid/content/ContentProvider;->mExported:Z
 
@@ -1007,7 +1007,7 @@
     .line 1034
     const-string v0, "ContentProvider"
 
-    const-string/jumbo v1, "implement ContentProvider shutdown() to make sure all database connections are gracefully shutdown"
+    const-string v1, "implement ContentProvider shutdown() to make sure all database connections are gracefully shutdown"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

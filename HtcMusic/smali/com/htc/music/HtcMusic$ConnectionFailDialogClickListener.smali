@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 7872
+    .line 7905
     iput-object p1, p0, Lcom/htc/music/HtcMusic$ConnectionFailDialogClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "which"
 
     .prologue
-    .line 7874
+    .line 7907
     packed-switch p2, :pswitch_data_0
 
-    .line 7886
+    .line 7919
     const-string v1, "[HtcMusic]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,12 +69,12 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7889
+    .line 7922
     :goto_0
     :pswitch_0
     return-void
 
-    .line 7876
+    .line 7909
     :pswitch_1
     new-instance v0, Landroid/content/Intent;
 
@@ -82,25 +82,25 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 7877
+    .line 7910
     .local v0, intentSetting:Landroid/content/Intent;
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 7878
+    .line 7911
     const/high16 v1, 0x4000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 7879
+    .line 7912
     iget-object v1, p0, Lcom/htc/music/HtcMusic$ConnectionFailDialogClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v1, v0}, Lcom/htc/music/HtcMusic;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 7874
+    .line 7907
     nop
 
     :pswitch_data_0

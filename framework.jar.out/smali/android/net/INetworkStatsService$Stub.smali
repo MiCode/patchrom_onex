@@ -38,6 +38,10 @@
 
 .field static final TRANSACTION_getSummaryForNetwork:I = 0x3
 
+.field static final TRANSACTION_getSummaryForRxByte:I = 0xa
+
+.field static final TRANSACTION_getSummaryForTxByte:I = 0x9
+
 .field static final TRANSACTION_incrementOperationCount:I = 0x6
 
 .field static final TRANSACTION_setUidForeground:I = 0x7
@@ -117,7 +121,7 @@
 .end method
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 15
+    .locals 16
     .parameter "code"
     .parameter "data"
     .parameter "reply"
@@ -132,7 +136,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 198
+    .line 214
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -188,7 +192,9 @@
 
     .line 58
     .local v3, _arg1:I
-    invoke-virtual {p0, v2, v3}, Landroid/net/INetworkStatsService$Stub;->getHistoryForNetwork(Landroid/net/NetworkTemplate;I)Landroid/net/NetworkStatsHistory;
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2, v3}, Landroid/net/INetworkStatsService$Stub;->getHistoryForNetwork(Landroid/net/NetworkTemplate;I)Landroid/net/NetworkStatsHistory;
 
     move-result-object v14
 
@@ -296,7 +302,7 @@
     move-result v6
 
     .local v6, _arg4:I
-    move-object v1, p0
+    move-object/from16 v1, p0
 
     .line 87
     invoke-virtual/range {v1 .. v6}, Landroid/net/INetworkStatsService$Stub;->getHistoryForUid(Landroid/net/NetworkTemplate;IIII)Landroid/net/NetworkStatsHistory;
@@ -404,7 +410,7 @@
     move-result-wide v11
 
     .local v11, _arg2:J
-    move-object v7, p0
+    move-object/from16 v7, p0
 
     move-object v8, v2
 
@@ -519,7 +525,7 @@
 
     .local v5, _arg3:Z
     :goto_8
-    move-object v7, p0
+    move-object/from16 v7, p0
 
     move-object v8, v2
 
@@ -609,7 +615,9 @@
 
     .line 155
     .local v2, _arg0:I
-    invoke-virtual {p0, v2}, Landroid/net/INetworkStatsService$Stub;->getDataLayerSnapshotForUid(I)Landroid/net/NetworkStats;
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2}, Landroid/net/INetworkStatsService$Stub;->getDataLayerSnapshotForUid(I)Landroid/net/NetworkStats;
 
     move-result-object v14
 
@@ -679,7 +687,9 @@
 
     .line 175
     .restart local v4       #_arg2:I
-    invoke-virtual {p0, v2, v3, v4}, Landroid/net/INetworkStatsService$Stub;->incrementOperationCount(III)V
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2, v3, v4}, Landroid/net/INetworkStatsService$Stub;->incrementOperationCount(III)V
 
     .line 176
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
@@ -718,7 +728,9 @@
     .line 186
     .local v3, _arg1:Z
     :goto_b
-    invoke-virtual {p0, v2, v3}, Landroid/net/INetworkStatsService$Stub;->setUidForeground(IZ)V
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2, v3}, Landroid/net/INetworkStatsService$Stub;->setUidForeground(IZ)V
 
     .line 187
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
@@ -745,7 +757,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 193
-    invoke-virtual {p0}, Landroid/net/INetworkStatsService$Stub;->forceUpdate()V
+    invoke-virtual/range {p0 .. p0}, Landroid/net/INetworkStatsService$Stub;->forceUpdate()V
 
     .line 194
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
@@ -755,7 +767,64 @@
 
     goto/16 :goto_0
 
+    .line 199
+    :sswitch_9
+    const-string v1, "android.net.INetworkStatsService"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 200
+    invoke-virtual/range {p0 .. p0}, Landroid/net/INetworkStatsService$Stub;->getSummaryForTxByte()J
+
+    move-result-wide v14
+
+    .line 201
+    .local v14, _result:J
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 202
+    move-object/from16 v0, p3
+
+    invoke-virtual {v0, v14, v15}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 203
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 207
+    .end local v14           #_result:J
+    :sswitch_a
+    const-string v1, "android.net.INetworkStatsService"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 208
+    invoke-virtual/range {p0 .. p0}, Landroid/net/INetworkStatsService$Stub;->getSummaryForRxByte()J
+
+    move-result-wide v14
+
+    .line 209
+    .restart local v14       #_result:J
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 210
+    move-object/from16 v0, p3
+
+    invoke-virtual {v0, v14, v15}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 211
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
     .line 39
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -766,6 +835,8 @@
         0x6 -> :sswitch_6
         0x7 -> :sswitch_7
         0x8 -> :sswitch_8
+        0x9 -> :sswitch_9
+        0xa -> :sswitch_a
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

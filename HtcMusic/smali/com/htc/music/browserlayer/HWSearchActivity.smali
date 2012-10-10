@@ -17,11 +17,13 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 12
+    .locals 13
     .parameter "savedInstanceState"
 
     .prologue
-    const/high16 v11, 0x2
+    const/high16 v12, 0x2
+
+    const/4 v11, 0x2
 
     const/4 v9, 0x0
 
@@ -37,7 +39,7 @@
     .local v4, intent:Landroid/content/Intent;
     if-nez v4, :cond_1
 
-    .line 62
+    .line 64
     :cond_0
     :goto_0
     return-void
@@ -176,17 +178,22 @@
     invoke-virtual {v2, v8, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 46
-    invoke-virtual {v2, v11}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    const-string v8, "dbTable"
+
+    invoke-virtual {v2, v8, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 47
-    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/HWSearchActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v12}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 48
+    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/HWSearchActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 49
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/HWSearchActivity;->finish()V
 
     goto :goto_0
 
-    .line 50
+    .line 51
     .end local v1           #albumId:Ljava/lang/String;
     .end local v2           #i:Landroid/content/Intent;
     :cond_3
@@ -198,14 +205,14 @@
 
     if-eqz v8, :cond_0
 
-    .line 52
+    .line 53
     new-instance v2, Landroid/content/Intent;
 
     const-string v8, "android.intent.action.PICK"
 
     invoke-direct {v2, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 53
+    .line 54
     .restart local v2       #i:Landroid/content/Intent;
     sget-object v8, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
@@ -213,7 +220,7 @@
 
     invoke-virtual {v2, v8, v9}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 54
+    .line 55
     const-string v8, "artistid"
 
     invoke-virtual {v7}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
@@ -222,13 +229,18 @@
 
     invoke-virtual {v2, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 55
-    invoke-virtual {v2, v11}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
     .line 56
-    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/HWSearchActivity;->startActivity(Landroid/content/Intent;)V
+    const-string v8, "dbTable"
+
+    invoke-virtual {v2, v8, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 57
+    invoke-virtual {v2, v12}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    .line 58
+    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/HWSearchActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 59
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/HWSearchActivity;->finish()V
 
     goto/16 :goto_0

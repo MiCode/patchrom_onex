@@ -43,14 +43,14 @@
 
     const/4 v3, 0x1
 
-    .line 812
+    .line 768
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     sput-object v0, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->UTF82ASCII:Ljava/util/TreeMap;
 
-    .line 814
+    .line 770
     const/16 v0, 0x41
 
     const/16 v1, 0xc0
@@ -59,72 +59,72 @@
 
     invoke-static {v0, v1, v2}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 815
+    .line 771
     const/16 v0, 0x43
 
     const/16 v1, 0xc7
 
     invoke-static {v0, v1, v3}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 816
+    .line 772
     const/16 v0, 0x45
 
     const/16 v1, 0xc8
 
     invoke-static {v0, v1, v4}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 817
+    .line 773
     const/16 v0, 0x49
 
     const/16 v1, 0xcc
 
     invoke-static {v0, v1, v4}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 818
+    .line 774
     const/16 v0, 0x4e
 
     const/16 v1, 0xd1
 
     invoke-static {v0, v1, v3}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 819
+    .line 775
     const/16 v0, 0xd2
 
     const/4 v1, 0x5
 
     invoke-static {v6, v0, v1}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 820
+    .line 776
     const/16 v0, 0x150
 
     invoke-static {v6, v0, v3}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 821
+    .line 777
     const/16 v0, 0xd9
 
     invoke-static {v7, v0, v4}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 822
+    .line 778
     const/16 v0, 0x170
 
     invoke-static {v7, v0, v3}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 823
+    .line 779
     const/16 v0, 0xdd
 
     invoke-static {v5, v0, v3}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 824
+    .line 780
     const/16 v0, 0x176
 
     invoke-static {v5, v0, v3}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 825
+    .line 781
     const/16 v0, 0x178
 
     invoke-static {v5, v0, v3}, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->addEntry(CSB)V
 
-    .line 826
+    .line 782
     return-void
 .end method
 
@@ -132,7 +132,7 @@
     .locals 0
 
     .prologue
-    .line 811
+    .line 767
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -145,14 +145,14 @@
     .parameter "max"
 
     .prologue
-    .line 829
+    .line 785
     const/4 v0, 0x0
 
     .local v0, i:B
     :goto_0
     if-ge v0, p2, :cond_0
 
-    .line 830
+    .line 786
     sget-object v1, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->UTF82ASCII:Ljava/util/TreeMap;
 
     add-int v2, p1, v0
@@ -169,14 +169,14 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 829
+    .line 785
     add-int/lit8 v1, v0, 0x1
 
     int-to-byte v0, v1
 
     goto :goto_0
 
-    .line 832
+    .line 788
     :cond_0
     return-void
 .end method
@@ -186,35 +186,35 @@
     .parameter "txt"
 
     .prologue
-    .line 835
+    .line 791
     if-nez p0, :cond_0
 
-    .line 836
+    .line 792
     const/4 v6, 0x0
 
-    .line 849
+    .line 805
     :goto_0
     return-object v6
 
-    .line 839
+    .line 795
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 840
+    .line 796
     .local v5, tmp:Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 842
+    .line 798
     .local v4, sb:Ljava/lang/StringBuilder;
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 843
+    .line 799
     .local v3, n:I
     const/4 v2, 0x0
 
@@ -222,12 +222,12 @@
     :goto_1
     if-ge v2, v3, :cond_2
 
-    .line 844
+    .line 800
     invoke-virtual {v5, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 845
+    .line 801
     .local v0, c:C
     sget-object v6, Lcom/htc/text/AbstractSocialMarkupRenderer$Normalization;->UTF82ASCII:Ljava/util/TreeMap;
 
@@ -241,7 +241,7 @@
 
     check-cast v1, Ljava/lang/Character;
 
-    .line 846
+    .line 802
     .local v1, character:Ljava/lang/Character;
     if-eqz v1, :cond_1
 
@@ -249,16 +249,16 @@
 
     move-result v0
 
-    .line 847
+    .line 803
     :cond_1
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 843
+    .line 799
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 849
+    .line 805
     .end local v0           #c:C
     .end local v1           #character:Ljava/lang/Character;
     :cond_2

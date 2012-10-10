@@ -33,17 +33,17 @@
     .parameter "service"
 
     .prologue
-    .line 7235
+    .line 7367
     invoke-direct {p0}, Lcom/htc/music/IHtcMediaPlaybackService$Stub;-><init>()V
 
-    .line 7236
+    .line 7368
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
-    .line 7237
+    .line 7369
     return-void
 .end method
 
@@ -53,17 +53,17 @@
     .locals 2
 
     .prologue
-    .line 7328
+    .line 7460
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7329
+    .line 7461
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -76,7 +76,7 @@
 
     move-result-wide v0
 
-    .line 7331
+    .line 7463
     :goto_0
     return-wide v0
 
@@ -90,17 +90,17 @@
     .locals 1
 
     .prologue
-    .line 7320
+    .line 7452
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7321
+    .line 7453
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    .line 7323
+    .line 7455
     :goto_0
     return-object v0
 
@@ -127,17 +127,17 @@
     .locals 1
 
     .prologue
-    .line 7285
+    .line 7417
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7286
+    .line 7418
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -150,7 +150,7 @@
 
     move-result v0
 
-    .line 7288
+    .line 7420
     :goto_0
     return v0
 
@@ -164,17 +164,17 @@
     .locals 1
 
     .prologue
-    .line 7278
+    .line 7410
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7279
+    .line 7411
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -187,7 +187,7 @@
 
     move-result-object v0
 
-    .line 7281
+    .line 7413
     :goto_0
     return-object v0
 
@@ -201,17 +201,17 @@
     .locals 1
 
     .prologue
-    .line 7299
+    .line 7431
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7300
+    .line 7432
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -224,7 +224,7 @@
 
     move-result v0
 
-    .line 7302
+    .line 7434
     :goto_0
     return v0
 
@@ -238,17 +238,17 @@
     .locals 1
 
     .prologue
-    .line 7292
+    .line 7424
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7293
+    .line 7425
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -261,7 +261,7 @@
 
     move-result-object v0
 
-    .line 7295
+    .line 7427
     :goto_0
     return-object v0
 
@@ -275,17 +275,17 @@
     .locals 1
 
     .prologue
-    .line 7313
+    .line 7445
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7314
+    .line 7446
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -298,7 +298,7 @@
 
     move-result v0
 
-    .line 7316
+    .line 7448
     :goto_0
     return v0
 
@@ -312,17 +312,17 @@
     .locals 1
 
     .prologue
-    .line 7306
+    .line 7438
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7307
+    .line 7439
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -335,7 +335,7 @@
 
     move-result-object v0
 
-    .line 7309
+    .line 7441
     :goto_0
     return-object v0
 
@@ -349,17 +349,17 @@
     .locals 1
 
     .prologue
-    .line 7366
+    .line 7498
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7367
+    .line 7499
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -372,7 +372,7 @@
 
     move-result v0
 
-    .line 7369
+    .line 7501
     :goto_0
     return v0
 
@@ -386,17 +386,17 @@
     .locals 1
 
     .prologue
-    .line 7354
+    .line 7486
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7355
+    .line 7487
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -409,7 +409,7 @@
 
     move-result v0
 
-    .line 7357
+    .line 7489
     :goto_0
     return v0
 
@@ -423,17 +423,17 @@
     .locals 1
 
     .prologue
-    .line 7271
+    .line 7403
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7272
+    .line 7404
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -446,7 +446,7 @@
 
     move-result-object v0
 
-    .line 7274
+    .line 7406
     :goto_0
     return-object v0
 
@@ -460,17 +460,17 @@
     .locals 1
 
     .prologue
-    .line 7373
+    .line 7505
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7374
+    .line 7506
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -483,7 +483,7 @@
 
     move-result v0
 
-    .line 7376
+    .line 7508
     :goto_0
     return v0
 
@@ -497,17 +497,17 @@
     .locals 1
 
     .prologue
-    .line 7239
+    .line 7371
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7240
+    .line 7372
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -520,7 +520,7 @@
 
     move-result v0
 
-    .line 7242
+    .line 7374
     :goto_0
     return v0
 
@@ -534,17 +534,17 @@
     .locals 2
 
     .prologue
-    .line 7266
+    .line 7398
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7267
+    .line 7399
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -557,7 +557,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MediaPlaybackService;->next(Z)V
 
-    .line 7268
+    .line 7400
     :cond_0
     return-void
 .end method
@@ -566,17 +566,17 @@
     .locals 1
 
     .prologue
-    .line 7251
+    .line 7383
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7252
+    .line 7384
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -587,7 +587,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/MediaPlaybackService;->pause()V
 
-    .line 7253
+    .line 7385
     :cond_0
     return-void
 .end method
@@ -596,17 +596,17 @@
     .locals 1
 
     .prologue
-    .line 7256
+    .line 7388
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7257
+    .line 7389
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -617,7 +617,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/MediaPlaybackService;->play()V
 
-    .line 7258
+    .line 7390
     :cond_0
     return-void
 .end method
@@ -626,17 +626,17 @@
     .locals 2
 
     .prologue
-    .line 7335
+    .line 7467
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7336
+    .line 7468
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -649,7 +649,7 @@
 
     move-result-wide v0
 
-    .line 7338
+    .line 7470
     :goto_0
     return-wide v0
 
@@ -663,17 +663,17 @@
     .locals 1
 
     .prologue
-    .line 7261
+    .line 7393
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7262
+    .line 7394
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -684,7 +684,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/MediaPlaybackService;->prev()V
 
-    .line 7263
+    .line 7395
     :cond_0
     return-void
 .end method
@@ -694,17 +694,17 @@
     .parameter "pos"
 
     .prologue
-    .line 7342
+    .line 7474
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7343
+    .line 7475
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -717,7 +717,7 @@
 
     move-result-wide v0
 
-    .line 7345
+    .line 7477
     :goto_0
     return-wide v0
 
@@ -732,17 +732,17 @@
     .parameter "repeatmode"
 
     .prologue
-    .line 7361
+    .line 7493
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7362
+    .line 7494
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -753,7 +753,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/MediaPlaybackService;->setRepeatMode(I)V
 
-    .line 7363
+    .line 7495
     :cond_0
     return-void
 .end method
@@ -763,17 +763,17 @@
     .parameter "shufflemode"
 
     .prologue
-    .line 7349
+    .line 7481
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7350
+    .line 7482
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -784,7 +784,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/MediaPlaybackService;->setShuffleMode(I)V
 
-    .line 7351
+    .line 7483
     :cond_0
     return-void
 .end method
@@ -794,17 +794,17 @@
     .parameter "nVol"
 
     .prologue
-    .line 7380
+    .line 7512
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7381
+    .line 7513
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -815,7 +815,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/music/MediaPlaybackService;->setVolume(I)V
 
-    .line 7382
+    .line 7514
     :cond_0
     return-void
 .end method
@@ -824,17 +824,17 @@
     .locals 1
 
     .prologue
-    .line 7246
+    .line 7378
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$8600(Ljava/lang/ref/WeakReference;)Z
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService;->access$9100(Ljava/lang/ref/WeakReference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7247
+    .line 7379
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$PublicServiceStub;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -845,7 +845,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/MediaPlaybackService;->stop()V
 
-    .line 7248
+    .line 7380
     :cond_0
     return-void
 .end method

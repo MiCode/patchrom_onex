@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4897
+    .line 4959
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +43,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 4899
+    .line 4961
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcAbsListView;->mCachingStarted:Z
 
     if-eqz v0, :cond_1
 
-    .line 4900
+    .line 4962
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -59,13 +59,13 @@
 
     iput-boolean v2, v0, Lcom/htc/widget/HtcAbsListView;->mCachingStarted:Z
 
-    .line 4901
+    .line 4963
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     #calls: Lcom/htc/widget/HtcAbsListView;->setChildrenDrawnWithCacheEnabled(Z)V
     invoke-static {v0, v2}, Lcom/htc/widget/HtcAbsListView;->access$3100(Lcom/htc/widget/HtcAbsListView;Z)V
 
-    .line 4902
+    .line 4964
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     #getter for: Lcom/htc/widget/HtcAbsListView;->mPersistentDrawingCache:I
@@ -77,13 +77,13 @@
 
     if-nez v0, :cond_0
 
-    .line 4903
+    .line 4965
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     #calls: Lcom/htc/widget/HtcAbsListView;->setChildrenDrawingCacheEnabled(Z)V
     invoke-static {v0, v2}, Lcom/htc/widget/HtcAbsListView;->access$3300(Lcom/htc/widget/HtcAbsListView;Z)V
 
-    .line 4905
+    .line 4967
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -93,12 +93,12 @@
 
     if-nez v0, :cond_1
 
-    .line 4906
+    .line 4968
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$2;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAbsListView;->invalidate()V
 
-    .line 4909
+    .line 4971
     :cond_1
     return-void
 .end method

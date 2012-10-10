@@ -61,7 +61,7 @@
     .parameter "isLandscape"
 
     .prologue
-    .line 191
+    .line 187
     const/4 v0, 0x1
 
     invoke-static {p0, v0}, Lcom/htc/util/res/HtcResUtil;->getBlurWallpaper(Landroid/content/Context;Z)Landroid/graphics/drawable/Drawable;
@@ -104,19 +104,19 @@
     .parameter "context"
 
     .prologue
-    .line 183
+    .line 179
     invoke-static {}, Lcom/htc/util/contacts/BuildUtils$Customization;->isTmousCustomization()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 184
+    .line 180
     invoke-static {p0}, Lcom/htc/res/HtcResources;->getCurrentThemePackage(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 186
+    .line 182
     :goto_0
     return-object v0
 

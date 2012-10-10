@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 728
+    .line 729
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$7;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,27 +44,27 @@
     .parameter "event"
 
     .prologue
-    .line 730
+    .line 731
     packed-switch p2, :pswitch_data_0
 
-    .line 735
+    .line 736
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 732
+    .line 733
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$7;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/DRMActionActivity;->finish()V
 
-    .line 733
+    .line 734
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 730
+    .line 731
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_0

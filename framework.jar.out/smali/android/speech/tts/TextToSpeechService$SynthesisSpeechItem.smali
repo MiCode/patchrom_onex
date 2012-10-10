@@ -200,7 +200,7 @@
 
     .prologue
     .line 596
-    const-string/jumbo v0, "language"
+    const-string v0, "language"
 
     const/4 v1, 0x0
 
@@ -309,7 +309,7 @@
 
     .prologue
     .line 592
-    const-string/jumbo v0, "language"
+    const-string v0, "language"
 
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItem;->mDefaultLocale:[Ljava/lang/String;
 

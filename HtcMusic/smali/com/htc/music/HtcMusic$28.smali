@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4854
+    .line 4886
     iput-object p1, p0, Lcom/htc/music/HtcMusic$28;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,19 +42,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 4857
+    .line 4889
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->isPluginMode()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 4890
+    .line 4922
     :cond_0
     :goto_0
     return-void
 
-    .line 4863
+    .line 4895
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -68,42 +68,42 @@
 
     if-eqz v1, :cond_2
 
-    .line 4867
+    .line 4899
     iget-object v1, p0, Lcom/htc/music/HtcMusic$28;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v1}, Lcom/htc/music/HtcMusic;->finish()V
 
-    .line 4868
+    .line 4900
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 4869
+    .line 4901
     .local v0, targetIntent:Landroid/content/Intent;
     const/high16 v1, 0x1400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 4871
+    .line 4903
     iget-object v1, p0, Lcom/htc/music/HtcMusic$28;->this$0:Lcom/htc/music/HtcMusic;
 
     const-class v2, Lcom/htc/music/MediaPlaybackErrorActivity;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 4873
+    .line 4905
     iget-object v1, p0, Lcom/htc/music/HtcMusic$28;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v1, v0}, Lcom/htc/music/HtcMusic;->startActivity(Landroid/content/Intent;)V
 
-    .line 4877
+    .line 4909
     iget-object v1, p0, Lcom/htc/music/HtcMusic$28;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v1, v3, v3}, Lcom/htc/music/HtcMusic;->overridePendingTransition(II)V
 
     goto :goto_0
 
-    .line 4878
+    .line 4910
     .end local v0           #targetIntent:Landroid/content/Intent;
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 4880
+    .line 4912
     const-string v1, "[HtcMusic]"
 
     const-string v2, "onReceive: ACTION_MEDIA_SCANNER_FINISHED"

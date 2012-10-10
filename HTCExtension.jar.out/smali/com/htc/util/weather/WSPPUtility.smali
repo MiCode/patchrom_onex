@@ -341,9 +341,7 @@
 
     move-result v0
 
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
+    if-lez v0, :cond_0
 
     invoke-interface {v14}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -592,13 +590,11 @@
 .end method
 
 .method private static _getCurCacheData(Landroid/content/Context;Lcom/htc/util/weather/WSPRequest;)Lcom/htc/util/weather/WSPPData;
-    .locals 9
+    .locals 8
     .parameter "context"
     .parameter "req"
 
     .prologue
-    const/4 v8, 0x1
-
     const/4 v6, 0x0
 
     .line 230
@@ -606,7 +602,9 @@
 
     move-result v0
 
-    if-eq v0, v8, :cond_1
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
 
     .line 257
     :cond_0
@@ -667,7 +665,7 @@
 
     move-result v0
 
-    if-ne v0, v8, :cond_2
+    if-lez v0, :cond_2
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -889,7 +887,9 @@
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 346
-    invoke-virtual {p0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    const-string v2, "htc.permission.weather.USE_DATA"
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -3333,7 +3333,7 @@
 
     .line 160
     .local v14, areBackgroundDataAndAutoSyncEnabled:Z
-    if-eqz v17, :cond_9
+    if-eqz v17, :cond_a
 
     const/16 v20, 0x1
 
@@ -3369,7 +3369,7 @@
     .local v18, cacheDataUpdate:J
     cmp-long v4, v18, v12
 
-    if-gez v4, :cond_a
+    if-gez v4, :cond_b
 
     const/16 v21, 0x1
 
@@ -3379,7 +3379,7 @@
     .end local v18           #cacheDataUpdate:J
     :cond_5
     :goto_3
-    if-eqz v22, :cond_7
+    if-eqz v22, :cond_8
 
     .line 176
     if-eqz v20, :cond_6
@@ -3404,9 +3404,9 @@
 
     .line 194
     :cond_6
-    if-nez v14, :cond_7
+    if-nez v14, :cond_8
 
-    if-nez v20, :cond_7
+    if-nez v20, :cond_8
 
     .line 196
     new-instance v3, Lcom/htc/util/weather/WSPPData;
@@ -3500,10 +3500,10 @@
 
     .line 207
     .local v24, ret:I
-    if-lez v24, :cond_b
+    if-lez v24, :cond_7
 
     .line 214
-    :goto_4
+    :cond_7
     move-object/from16 v0, p0
 
     invoke-static {v0, v3}, Lcom/htc/util/weather/WSPPUtility;->broadcastDataIntent(Landroid/content/Context;Lcom/htc/util/weather/WSPPData;)V
@@ -3514,19 +3514,19 @@
     .end local v7           #curLocLngTrim:Ljava/lang/String;
     .end local v24           #ret:I
     .end local v27           #where:Ljava/lang/String;
-    :cond_7
+    :cond_8
     if-eqz v23, :cond_c
 
-    if-eqz v20, :cond_8
+    if-eqz v20, :cond_9
 
     if-eqz v21, :cond_c
 
-    :cond_8
+    :cond_9
     const/16 v26, 0x1
 
     .line 222
     .local v26, triggerSyncService:Z
-    :goto_5
+    :goto_4
     if-eqz v26, :cond_2
 
     .line 223
@@ -3552,7 +3552,7 @@
     .end local v20           #hasCacheData:Z
     .end local v21           #isCacheOverdue:Z
     .end local v26           #triggerSyncService:Z
-    :cond_9
+    :cond_a
     const/16 v20, 0x0
 
     goto/16 :goto_2
@@ -3563,59 +3563,19 @@
     .restart local v18       #cacheDataUpdate:J
     .restart local v20       #hasCacheData:Z
     .restart local v21       #isCacheOverdue:Z
-    :cond_a
+    :cond_b
     const/16 v21, 0x0
 
     goto/16 :goto_3
 
-    .line 210
+    .line 218
     .end local v12           #acceptablyTime:J
     .end local v15           #autoSyncFrequency:J
     .end local v18           #cacheDataUpdate:J
-    .restart local v3       #d:Lcom/htc/util/weather/WSPPData;
-    .restart local v6       #curLocLatTrim:Ljava/lang/String;
-    .restart local v7       #curLocLngTrim:Ljava/lang/String;
-    .restart local v24       #ret:I
-    .restart local v27       #where:Ljava/lang/String;
-    :cond_b
-    const-string v4, "WSPPUtility"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "(auto-sync is disabled and no cur in cache) save new cur loc data to cache failed, "
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Lcom/htc/util/weather/WSPPData;->toDebugInfo()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_4
-
-    .line 218
-    .end local v3           #d:Lcom/htc/util/weather/WSPPData;
-    .end local v6           #curLocLatTrim:Ljava/lang/String;
-    .end local v7           #curLocLngTrim:Ljava/lang/String;
-    .end local v24           #ret:I
-    .end local v27           #where:Ljava/lang/String;
     :cond_c
     const/16 v26, 0x0
 
-    goto :goto_5
+    goto :goto_4
 .end method
 
 .method private static safe_parseInt(Ljava/lang/String;)I

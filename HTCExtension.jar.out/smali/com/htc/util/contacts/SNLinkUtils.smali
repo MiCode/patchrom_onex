@@ -1477,7 +1477,7 @@
     .local v13, subText:Ljava/lang/String;
     new-instance v6, Ljava/util/StringTokenizer;
 
-    const-string v15, "|"
+    const-string/jumbo v15, "|"
 
     invoke-direct {v6, v13, v15}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

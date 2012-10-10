@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Dodaj popis za izvođenje</string>
     <string name="htc_delete_playlists">Izbriši popise za reprodukciju</string>
     <string name="htc_delete_playlist">Izbriši popis za reprodukciju</string>
+    <string name="htc_delete_all_playlists">Izbriši sve popise za reprodukciju</string>
     <string name="htc_playlist_add_songs">Dodaj melodije</string>
     <string name="htc_playlist_del_songs">Izbriši melodije</string>
     <string name="htc_playlist_remove_songs">Ukloni melodije</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Međumemoriranje...</string>
     <string name="title_send_content">Slanje sadržaja...</string>
     <string name="no_downloaded_apps_found">Nisu pronađene preuzete aplikacije</string>
+    <string name="music_folder_picker_dialog_msg">Dodati melodije u popis za reprodukciju odabirom mape? Ne da biste dodali melodije na drugačiji način</string>
 </resources>

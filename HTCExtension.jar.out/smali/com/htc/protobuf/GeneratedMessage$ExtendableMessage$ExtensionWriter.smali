@@ -53,13 +53,13 @@
     .parameter "messageSetWireFormat"
 
     .prologue
-    .line 494
+    .line 493
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>.ExtensionWriter;"
     iput-object p1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->this$0:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 489
+    .line 488
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->this$0:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;
 
     #getter for: Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;->extensions:Lcom/htc/protobuf/FieldSet;
@@ -73,7 +73,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->iter:Ljava/util/Iterator;
 
-    .line 495
+    .line 494
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->iter:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -82,7 +82,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 496
+    .line 495
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->iter:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -93,11 +93,11 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->next:Ljava/util/Map$Entry;
 
-    .line 498
+    .line 497
     :cond_0
     iput-boolean p2, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->messageSetWireFormat:Z
 
-    .line 499
+    .line 498
     return-void
 .end method
 
@@ -108,7 +108,7 @@
     .parameter "x2"
 
     .prologue
-    .line 485
+    .line 484
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>.ExtensionWriter;"
     invoke-direct {p0, p1, p2}, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;-><init>(Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage;Z)V
 
@@ -128,7 +128,7 @@
     .end annotation
 
     .prologue
-    .line 507
+    .line 506
     .local p0, this:Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;,"Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage<TMessageType;>.ExtensionWriter;"
     :goto_0
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->next:Ljava/util/Map$Entry;
@@ -149,7 +149,7 @@
 
     if-ge v1, p1, :cond_2
 
-    .line 508
+    .line 507
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->next:Ljava/util/Map$Entry;
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -158,7 +158,7 @@
 
     check-cast v0, Lcom/htc/protobuf/Descriptors$FieldDescriptor;
 
-    .line 509
+    .line 508
     .local v0, descriptor:Lcom/htc/protobuf/Descriptors$FieldDescriptor;
     iget-boolean v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->messageSetWireFormat:Z
 
@@ -178,7 +178,7 @@
 
     if-nez v1, :cond_0
 
-    .line 512
+    .line 511
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getNumber()I
 
     move-result v2
@@ -193,7 +193,7 @@
 
     invoke-virtual {p2, v2, v1}, Lcom/htc/protobuf/CodedOutputStream;->writeMessageSetExtension(ILcom/htc/protobuf/MessageLite;)V
 
-    .line 517
+    .line 516
     :goto_1
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->iter:Ljava/util/Iterator;
 
@@ -203,7 +203,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 518
+    .line 517
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->iter:Ljava/util/Iterator;
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -216,7 +216,7 @@
 
     goto :goto_0
 
-    .line 515
+    .line 514
     :cond_0
     iget-object v1, p0, Lcom/htc/protobuf/GeneratedMessage$ExtendableMessage$ExtensionWriter;->next:Ljava/util/Map$Entry;
 
@@ -228,7 +228,7 @@
 
     goto :goto_1
 
-    .line 520
+    .line 519
     :cond_1
     const/4 v1, 0x0
 
@@ -236,7 +236,7 @@
 
     goto :goto_0
 
-    .line 523
+    .line 522
     .end local v0           #descriptor:Lcom/htc/protobuf/Descriptors$FieldDescriptor;
     :cond_2
     return-void

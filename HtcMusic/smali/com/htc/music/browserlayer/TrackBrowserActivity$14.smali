@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2781
+    .line 2782
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +45,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2784
+    .line 2785
     new-array v1, v3, [I
 
-    .line 2785
+    .line 2786
     .local v1, list:[I
     const/4 v3, 0x0
 
@@ -63,12 +63,12 @@
 
     aput v4, v1, v3
 
-    .line 2788
+    .line 2789
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-static {v3, v1}, Lcom/htc/music/util/MusicUtils;->deleteTracks(Landroid/content/Context;[I)V
 
-    .line 2791
+    .line 2792
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mTrackCursor:Landroid/database/Cursor;
@@ -91,7 +91,7 @@
 
     if-nez v3, :cond_0
 
-    .line 2793
+    .line 2794
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     iget-object v4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -110,7 +110,7 @@
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->getTrackCursor(Lcom/htc/music/util/DlArtAsyncQueryHandler;Ljava/lang/String;)Landroid/database/Cursor;
     invoke-static {v3, v4, v5}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$1200(Lcom/htc/music/browserlayer/TrackBrowserActivity;Lcom/htc/music/util/DlArtAsyncQueryHandler;Ljava/lang/String;)Landroid/database/Cursor;
 
-    .line 2797
+    .line 2798
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -122,14 +122,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 2798
+    .line 2799
     new-instance v2, Ljava/util/ArrayList;
 
     const/4 v3, 0x1
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 2799
+    .line 2800
     .local v2, removeList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2800
+    .line 2801
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$14;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mTrackList:Lcom/htc/widget/HtcListView;
@@ -156,13 +156,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2807
+    .line 2808
     .end local v2           #removeList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :cond_1
     :goto_0
     return-void
 
-    .line 2802
+    .line 2803
     :catch_0
     move-exception v0
 

@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Dodaj do listy odtwarzania</string>
     <string name="htc_delete_playlists">Usuń listy odtwarzania</string>
     <string name="htc_delete_playlist">Usuń listę odtwarzania</string>
+    <string name="htc_delete_all_playlists">Usuń wszystkie listy odtwarzania</string>
     <string name="htc_playlist_add_songs">Dodaj utwory</string>
     <string name="htc_playlist_del_songs">Usuń utwory</string>
     <string name="htc_playlist_remove_songs">Usuń utwory</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Buforowanie...</string>
     <string name="title_send_content">Wysyłanie zawart....</string>
     <string name="no_downloaded_apps_found">Nie znaleziono pobranych aplikacji</string>
+    <string name="music_folder_picker_dialog_msg">Dodać utwory do list odtwarzania poprzez wybranie folderu? Wybierz „Nie”, aby dodać utwory w inny sposób</string>
 </resources>

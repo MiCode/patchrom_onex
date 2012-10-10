@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 233
+    .line 257
     iput-object p1, p0, Lcom/android/camera/component/MainBar$6;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .parameter "x2"
 
     .prologue
-    .line 233
+    .line 257
     check-cast p3, Lcom/android/camera/input/KeyEventArgs;
 
     .end local p3
@@ -82,7 +82,7 @@
     .end annotation
 
     .prologue
-    .line 237
+    .line 261
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/input/KeyEventArgs;>;"
     iget v0, p3, Lcom/android/camera/input/KeyEventArgs;->keyCode:I
 
@@ -94,7 +94,7 @@
 
     if-nez v0, :cond_1
 
-    .line 239
+    .line 263
     iget-object v0, p0, Lcom/android/camera/component/MainBar$6;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-virtual {v0}, Lcom/android/camera/component/MainBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -137,17 +137,17 @@
 
     if-nez v0, :cond_0
 
-    .line 244
+    .line 268
     iget-object v0, p0, Lcom/android/camera/component/MainBar$6;->this$0:Lcom/android/camera/component/MainBar;
 
     #calls: Lcom/android/camera/component/MainBar;->toggleSettingsPanel()V
     invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$800(Lcom/android/camera/component/MainBar;)V
 
-    .line 246
+    .line 270
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera/input/KeyEventArgs;->setHandled()V
 
-    .line 248
+    .line 272
     :cond_1
     return-void
 .end method

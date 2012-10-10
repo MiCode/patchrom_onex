@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 1004
+    .line 993
     new-instance v0, Lcom/htc/widget/HtcAbsListView2$SavedState$1;
 
     invoke-direct {v0}, Lcom/htc/widget/HtcAbsListView2$SavedState$1;-><init>()V
@@ -65,66 +65,66 @@
     .parameter "in"
 
     .prologue
-    .line 954
+    .line 943
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 955
+    .line 944
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->selectedId:J
 
-    .line 956
+    .line 945
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->firstId:J
 
-    .line 957
+    .line 946
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->viewTop:I
 
-    .line 958
+    .line 947
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->viewLeft:I
 
-    .line 959
+    .line 948
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->position:I
 
-    .line 960
+    .line 949
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->height:I
 
-    .line 961
+    .line 950
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->width:I
 
-    .line 962
+    .line 951
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->filter:Ljava/lang/String;
 
-    .line 963
+    .line 952
     return-void
 .end method
 
@@ -134,7 +134,7 @@
     .parameter "x1"
 
     .prologue
-    .line 933
+    .line 922
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcAbsListView2$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -145,10 +145,10 @@
     .parameter "superState"
 
     .prologue
-    .line 947
+    .line 936
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 948
+    .line 937
     return-void
 .end method
 
@@ -158,7 +158,7 @@
     .locals 3
 
     .prologue
-    .line 988
+    .line 977
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,7 +277,7 @@
 
     move-result-object v0
 
-    const-string v1, "}"
+    const-string/jumbo v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -296,49 +296,49 @@
     .parameter "flags"
 
     .prologue
-    .line 971
+    .line 960
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 972
+    .line 961
     iget-wide v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->selectedId:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 973
+    .line 962
     iget-wide v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->firstId:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 974
+    .line 963
     iget v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->viewTop:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 975
+    .line 964
     iget v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->viewLeft:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 976
+    .line 965
     iget v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->position:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 977
+    .line 966
     iget v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->height:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 978
+    .line 967
     iget v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->width:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 979
+    .line 968
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$SavedState;->filter:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 980
+    .line 969
     return-void
 .end method

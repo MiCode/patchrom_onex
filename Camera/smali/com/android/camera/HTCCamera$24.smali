@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 6217
+    .line 6366
     iput-object p1, p0, Lcom/android/camera/HTCCamera$24;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,28 +72,28 @@
     .end annotation
 
     .prologue
-    .line 6221
+    .line 6370
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;>;"
     .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;"
     iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 6222
+    .line 6371
     iget-object v1, p0, Lcom/android/camera/HTCCamera$24;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/SurfaceHolder;
 
-    #calls: Lcom/android/camera/HTCCamera;->onPreviewSurfaceCreated(Landroid/view/SurfaceHolder;)V
-    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4500(Lcom/android/camera/HTCCamera;Landroid/view/SurfaceHolder;)V
+    #calls: Lcom/android/camera/HTCCamera;->onPreviewSurfaceDestroyed(Landroid/view/SurfaceHolder;)V
+    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4600(Lcom/android/camera/HTCCamera;Landroid/view/SurfaceHolder;)V
 
-    .line 6225
+    .line 6374
     :goto_0
     return-void
 
-    .line 6224
+    .line 6373
     :cond_0
     const-string v0, "HTCCamera"
 
@@ -111,7 +111,7 @@
     .parameter "x2"
 
     .prologue
-    .line 6217
+    .line 6366
     check-cast p3, Lcom/android/camera/OneValueEventArgs;
 
     .end local p3

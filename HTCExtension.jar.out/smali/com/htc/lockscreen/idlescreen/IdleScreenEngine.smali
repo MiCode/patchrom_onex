@@ -19,10 +19,10 @@
 # static fields
 .field private static final PREFIX:Ljava/lang/String; = "IdleScreenEngine"
 
-.field public static final WAKELOCK_TIME:I = 0x3a98
-
 
 # instance fields
+.field protected mContext:Landroid/content/Context;
+
 .field mDestroyed:Z
 
 .field private mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
@@ -50,6 +50,9 @@
 .field mScreenOn:Z
 
 .field protected mService:Lcom/htc/lockscreen/idlescreen/IdleScreenService;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field mStarted:Z
 
@@ -61,7 +64,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/htc/lockscreen/idlescreen/IdleScreenService;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 3
     .parameter "service"
 
@@ -73,42 +76,42 @@
     .line 86
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
+    .line 64
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mInitializing:Z
 
-    .line 60
+    .line 65
     iput-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
-    .line 61
+    .line 66
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mScreenOn:Z
 
-    .line 67
+    .line 72
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLock:Ljava/lang/Object;
 
-    .line 71
+    .line 76
     new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
 
     invoke-direct {v0, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;-><init>(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mWakeLockHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
 
-    .line 81
+    .line 80
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIsResume:Z
 
-    .line 82
+    .line 81
     sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->NONE:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
-    .line 83
+    .line 82
     iput v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLockScreenState:I
 
     .line 87
-    iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mService:Lcom/htc/lockscreen/idlescreen/IdleScreenService;
+    iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mContext:Landroid/content/Context;
 
     .line 88
     new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenWindowBase;
@@ -123,13 +126,89 @@
     .line 90
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mWakeLockHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
 
-    invoke-virtual {p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->setTag(Ljava/lang/String;)V
 
     .line 92
+    :cond_0
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/htc/lockscreen/idlescreen/IdleScreenService;)V
+    .locals 3
+    .parameter "service"
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    .line 94
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+
+    .line 64
+    iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mInitializing:Z
+
+    .line 65
+    iput-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
+
+    .line 66
+    iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mScreenOn:Z
+
+    .line 72
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLock:Ljava/lang/Object;
+
+    .line 76
+    new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
+
+    invoke-direct {v0, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;-><init>(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
+
+    iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mWakeLockHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
+
+    .line 80
+    iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIsResume:Z
+
+    .line 81
+    sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->NONE:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
+
+    iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
+
+    .line 82
+    iput v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLockScreenState:I
+
+    .line 95
+    iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mService:Lcom/htc/lockscreen/idlescreen/IdleScreenService;
+
+    .line 96
+    iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mContext:Landroid/content/Context;
+
+    .line 97
+    new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenWindowBase;
+
+    invoke-direct {v0, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindowBase;-><init>(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
+
+    iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
+
+    .line 98
+    if-eqz p1, :cond_0
+
+    .line 99
+    iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mWakeLockHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
+
+    invoke-virtual {p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->setTag(Ljava/lang/String;)V
+
+    .line 101
     :cond_0
     return-void
 .end method
@@ -144,58 +223,61 @@
 
     const/4 v1, 0x1
 
-    .line 94
+    .line 103
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
+    .line 64
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mInitializing:Z
 
-    .line 60
+    .line 65
     iput-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
-    .line 61
+    .line 66
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mScreenOn:Z
 
-    .line 67
+    .line 72
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLock:Ljava/lang/Object;
 
-    .line 71
+    .line 76
     new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
 
     invoke-direct {v0, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;-><init>(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mWakeLockHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
 
-    .line 81
+    .line 80
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIsResume:Z
 
-    .line 82
+    .line 81
     sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->NONE:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
-    .line 83
+    .line 82
     iput v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLockScreenState:I
 
-    .line 95
+    .line 104
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mService:Lcom/htc/lockscreen/idlescreen/IdleScreenService;
 
-    .line 96
+    .line 105
+    iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mContext:Landroid/content/Context;
+
+    .line 106
     iput-object p2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
-    .line 97
+    .line 107
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->setEngine(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
 
-    .line 99
+    .line 109
     if-eqz p1, :cond_0
 
-    .line 100
+    .line 110
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mWakeLockHelper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;
 
     invoke-virtual {p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->getPackageName()Ljava/lang/String;
@@ -204,7 +286,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$WakeLockHelper;->setTag(Ljava/lang/String;)V
 
-    .line 102
+    .line 112
     :cond_0
     return-void
 .end method
@@ -214,7 +296,7 @@
     .parameter "context"
 
     .prologue
-    .line 447
+    .line 453
     const-string v2, "power"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -223,20 +305,20 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 448
+    .line 454
     .local v1, pm:Landroid/os/PowerManager;
     const/4 v0, 0x0
 
-    .line 449
+    .line 455
     .local v0, bScreenOn:Z
     if-eqz v1, :cond_0
 
-    .line 450
+    .line 456
     invoke-virtual {v1}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v0
 
-    .line 452
+    .line 458
     :cond_0
     return v0
 .end method
@@ -250,7 +332,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 354
+    .line 360
     const-string v1, "IdleScreenEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -283,68 +365,68 @@
 
     invoke-static {v1, v2}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 355
+    .line 361
     iget-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-eqz v1, :cond_0
 
-    .line 384
+    .line 390
     :goto_0
     return-void
 
-    .line 359
+    .line 365
     :cond_0
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
-    .line 364
+    .line 370
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->setSurfaceSize()V
 
-    .line 365
+    .line 371
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mInitializing:Z
 
-    .line 366
+    .line 372
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->attach()V
 
-    .line 371
+    .line 377
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v1, :cond_1
 
-    .line 372
+    .line 378
     new-instance v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;
 
     invoke-direct {v1, p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;-><init>(Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;)V
 
     iput-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 373
+    .line 379
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 374
+    .line 380
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 375
+    .line 381
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 376
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mService:Lcom/htc/lockscreen/idlescreen/IdleScreenService;
+    .line 382
+    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v1, v2, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 379
+    .line 385
     .end local v0           #filter:Landroid/content/IntentFilter;
     :cond_1
     const-string v1, "IdleScreenEngine"
@@ -369,7 +451,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 380
+    .line 386
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->getSurfaceHolder()Landroid/view/SurfaceHolder;
@@ -378,10 +460,10 @@
 
     invoke-virtual {p0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doCreate(Landroid/view/SurfaceHolder;)V
 
-    .line 382
+    .line 388
     iput-boolean v4, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mInitializing:Z
 
-    .line 383
+    .line 389
     invoke-virtual {p0, v4, v4, v4}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->updateSurface(ZZZ)V
 
     goto :goto_0
@@ -393,37 +475,37 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 714
+    .line 720
     iget-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-eqz v1, :cond_0
 
-    .line 745
+    .line 751
     :goto_0
     return-void
 
-    .line 718
+    .line 724
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
-    .line 720
+    .line 726
     iget-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
     if-eqz v1, :cond_1
 
-    .line 721
+    .line 727
     iput-boolean v4, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
-    .line 722
+    .line 728
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->setWindowVisibility(I)V
 
-    .line 723
+    .line 729
     const-string v1, "IdleScreenEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -446,36 +528,36 @@
 
     invoke-static {v1, v2}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 724
+    .line 730
     invoke-virtual {p0, v4}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onVisibilityChanged(Z)V
 
-    .line 726
+    .line 732
     :cond_1
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->detach()V
 
-    .line 732
+    .line 738
     :try_start_0
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v1, :cond_2
 
-    .line 733
-    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mService:Lcom/htc/lockscreen/idlescreen/IdleScreenService;
+    .line 739
+    iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v1, v2}, Lcom/htc/lockscreen/idlescreen/IdleScreenService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 734
+    .line 740
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReceiver:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 741
+    .line 747
     :cond_2
     :goto_1
     const-string v1, "IdleScreenEngine"
@@ -500,16 +582,16 @@
 
     invoke-static {v1, v2}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 742
+    .line 748
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doDestroy()V
 
     goto :goto_0
 
-    .line 736
+    .line 742
     :catch_0
     move-exception v0
 
-    .line 737
+    .line 743
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v1, "IdleScreenEngine"
 
@@ -526,28 +608,28 @@
     .parameter "id"
 
     .prologue
-    .line 1056
+    .line 1062
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1057
+    .line 1063
     .local v0, extras:Landroid/os/Bundle;
     const-string v1, "Key_ReminderType"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1058
+    .line 1064
     const-string v1, "Key_ReminderId"
 
     invoke-virtual {v0, v1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 1059
+    .line 1065
     const-string v1, "idleScreenReminderDismiss"
 
     invoke-virtual {p0, v1, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1060
+    .line 1066
     return-void
 .end method
 
@@ -556,25 +638,25 @@
     .parameter "cmd"
 
     .prologue
-    .line 573
+    .line 579
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-nez v3, :cond_1
 
-    .line 574
+    .line 580
     move-object/from16 v0, p1
 
     iget-object v10, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenCommand;->action:Ljava/lang/String;
 
-    .line 575
+    .line 581
     .local v10, action:Ljava/lang/String;
     move-object/from16 v0, p1
 
     iget-object v11, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenCommand;->extras:Landroid/os/Bundle;
 
-    .line 576
+    .line 582
     .local v11, extras:Landroid/os/Bundle;
     const-string v3, "idleScreenTelephonyUpdate"
 
@@ -584,18 +666,18 @@
 
     if-eqz v3, :cond_2
 
-    .line 577
+    .line 583
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mTeleListener:Lcom/htc/lockscreen/telephony/TelephonyListener;
 
     move-object/from16 v21, v0
 
-    .line 578
+    .line 584
     .local v21, telephonyListener:Lcom/htc/lockscreen/telephony/TelephonyListener;
     if-eqz v11, :cond_1
 
-    .line 579
+    .line 585
     const-string v3, "Key_TelephonyState"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -604,18 +686,18 @@
 
     check-cast v20, Lcom/htc/lockscreen/telephony/TelephonyState;
 
-    .line 580
+    .line 586
     .local v20, state:Lcom/htc/lockscreen/telephony/TelephonyState;
     if-eqz v21, :cond_0
 
-    .line 581
+    .line 587
     move-object/from16 v0, v21
 
     move-object/from16 v1, v20
 
     invoke-interface {v0, v1}, Lcom/htc/lockscreen/telephony/TelephonyListener;->onTelephonyStateChange(Lcom/htc/lockscreen/telephony/TelephonyState;)V
 
-    .line 583
+    .line 589
     :cond_0
     move-object/from16 v0, p0
 
@@ -623,7 +705,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onTelephonyStateChange(Lcom/htc/lockscreen/telephony/TelephonyState;)V
 
-    .line 665
+    .line 671
     .end local v10           #action:Ljava/lang/String;
     .end local v11           #extras:Landroid/os/Bundle;
     .end local v20           #state:Lcom/htc/lockscreen/telephony/TelephonyState;
@@ -632,7 +714,7 @@
     :goto_0
     return-void
 
-    .line 586
+    .line 592
     .restart local v10       #action:Ljava/lang/String;
     .restart local v11       #extras:Landroid/os/Bundle;
     :cond_2
@@ -644,18 +726,18 @@
 
     if-eqz v3, :cond_4
 
-    .line 587
+    .line 593
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReminderListener:Lcom/htc/lockscreen/reminder/ReminderListener;
 
     move-object/from16 v16, v0
 
-    .line 588
+    .line 594
     .local v16, listener:Lcom/htc/lockscreen/reminder/ReminderListener;
     if-eqz v11, :cond_1
 
-    .line 589
+    .line 595
     const-string v3, "Key_ReminderState"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -664,7 +746,7 @@
 
     check-cast v20, Lcom/htc/lockscreen/reminder/ReminderState;
 
-    .line 590
+    .line 596
     .local v20, state:Lcom/htc/lockscreen/reminder/ReminderState;
     const-string v3, "Key_ReminderType"
 
@@ -672,11 +754,11 @@
 
     move-result v22
 
-    .line 591
+    .line 597
     .local v22, type:I
     if-eqz v16, :cond_3
 
-    .line 592
+    .line 598
     move-object/from16 v0, v16
 
     move/from16 v1, v22
@@ -685,7 +767,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/htc/lockscreen/reminder/ReminderListener;->onReminderStateChange(ILcom/htc/lockscreen/reminder/ReminderState;)V
 
-    .line 594
+    .line 600
     :cond_3
     move-object/from16 v0, p0
 
@@ -697,7 +779,7 @@
 
     goto :goto_0
 
-    .line 597
+    .line 603
     .end local v16           #listener:Lcom/htc/lockscreen/reminder/ReminderListener;
     .end local v20           #state:Lcom/htc/lockscreen/reminder/ReminderState;
     .end local v22           #type:I
@@ -710,10 +792,10 @@
 
     if-eqz v3, :cond_6
 
-    .line 598
+    .line 604
     if-eqz v11, :cond_5
 
-    .line 599
+    .line 605
     const-string v3, "Key_IsResume"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -724,7 +806,7 @@
 
     iput-boolean v3, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIsResume:Z
 
-    .line 601
+    .line 607
     :cond_5
     const-string v3, "idleScreen_Survive"
 
@@ -734,12 +816,12 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 602
+    .line 608
     invoke-virtual/range {p0 .. p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->reportVisibility()V
 
     goto :goto_0
 
-    .line 604
+    .line 610
     :cond_6
     const-string v3, "idleScreenViewMode"
 
@@ -749,10 +831,10 @@
 
     if-eqz v3, :cond_8
 
-    .line 605
+    .line 611
     if-eqz v11, :cond_1
 
-    .line 606
+    .line 612
     const-string v3, "Key_ViewMode"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -763,7 +845,7 @@
 
     iput v3, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLockScreenState:I
 
-    .line 608
+    .line 614
     const-string v3, "IdleScreenEngine"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -790,7 +872,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
+    .line 615
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLockScreenState:I
@@ -799,7 +881,7 @@
 
     invoke-virtual {v0, v3}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onLockScreenStateChanged(I)V
 
-    .line 610
+    .line 616
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLockScreenState:I
@@ -808,7 +890,7 @@
 
     const/16 v24, 0x1
 
-    .line 611
+    .line 617
     .local v24, windowShow:Z
     :goto_1
     move-object/from16 v0, p0
@@ -817,19 +899,19 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->setWindowShow(Z)V
 
-    .line 612
+    .line 618
     invoke-virtual/range {p0 .. p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->reportVisibility()V
 
     goto/16 :goto_0
 
-    .line 610
+    .line 616
     .end local v24           #windowShow:Z
     :cond_7
     const/16 v24, 0x0
 
     goto :goto_1
 
-    .line 615
+    .line 621
     :cond_8
     const-string v3, "idlescreen_Phone_state_update"
 
@@ -839,7 +921,7 @@
 
     if-eqz v3, :cond_9
 
-    .line 616
+    .line 622
     const-string v3, "Key_PhoneState"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -848,7 +930,7 @@
 
     check-cast v20, Lcom/htc/lockscreen/telephony/PhoneState;
 
-    .line 617
+    .line 623
     .local v20, state:Lcom/htc/lockscreen/telephony/PhoneState;
     move-object/from16 v0, p0
 
@@ -858,7 +940,7 @@
 
     goto/16 :goto_0
 
-    .line 619
+    .line 625
     .end local v20           #state:Lcom/htc/lockscreen/telephony/PhoneState;
     :cond_9
     const-string v3, "idleScreen_key_down"
@@ -869,17 +951,17 @@
 
     if-eqz v3, :cond_a
 
-    .line 620
+    .line 626
     if-eqz v11, :cond_1
 
-    .line 621
+    .line 627
     const-string v3, "Key_keycode"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v14
 
-    .line 622
+    .line 628
     .local v14, keycode:I
     const-string v3, "Key_keyEvent"
 
@@ -889,7 +971,7 @@
 
     check-cast v13, Landroid/view/KeyEvent;
 
-    .line 623
+    .line 629
     .local v13, keyEvent:Landroid/view/KeyEvent;
     move-object/from16 v0, p0
 
@@ -897,7 +979,7 @@
 
     goto/16 :goto_0
 
-    .line 627
+    .line 633
     .end local v13           #keyEvent:Landroid/view/KeyEvent;
     .end local v14           #keycode:I
     :cond_a
@@ -909,17 +991,17 @@
 
     if-eqz v3, :cond_b
 
-    .line 628
+    .line 634
     if-eqz v11, :cond_1
 
-    .line 629
+    .line 635
     const-string v3, "Key_keycode"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v14
 
-    .line 630
+    .line 636
     .restart local v14       #keycode:I
     const-string v3, "Key_keyEvent"
 
@@ -929,7 +1011,7 @@
 
     check-cast v13, Landroid/view/KeyEvent;
 
-    .line 631
+    .line 637
     .restart local v13       #keyEvent:Landroid/view/KeyEvent;
     move-object/from16 v0, p0
 
@@ -937,7 +1019,7 @@
 
     goto/16 :goto_0
 
-    .line 635
+    .line 641
     .end local v13           #keyEvent:Landroid/view/KeyEvent;
     .end local v14           #keycode:I
     :cond_b
@@ -949,10 +1031,10 @@
 
     if-eqz v3, :cond_c
 
-    .line 636
+    .line 642
     if-eqz v11, :cond_1
 
-    .line 637
+    .line 643
     const-string v3, "Key_remoteView"
 
     invoke-virtual {v11, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -961,7 +1043,7 @@
 
     check-cast v17, Lcom/htc/lockscreen/idlescreen/pub/IdlePubView;
 
-    .line 638
+    .line 644
     .local v17, remoteView:Lcom/htc/lockscreen/idlescreen/pub/IdlePubView;
     move-object/from16 v0, p0
 
@@ -971,7 +1053,7 @@
 
     goto/16 :goto_0
 
-    .line 641
+    .line 647
     .end local v17           #remoteView:Lcom/htc/lockscreen/idlescreen/pub/IdlePubView;
     :cond_c
     const-string v3, "idlescreen_shortcut_update"
@@ -982,13 +1064,13 @@
 
     if-eqz v3, :cond_f
 
-    .line 642
+    .line 648
     if-eqz v11, :cond_1
 
-    .line 643
+    .line 649
     const/16 v19, 0x0
 
-    .line 644
+    .line 650
     .local v19, shortcutInfos:[Lcom/htc/lockscreen/widget/ShortcutInfo;
     const-string v3, "Key_shortcut_visibility"
 
@@ -998,7 +1080,7 @@
 
     move-result v23
 
-    .line 645
+    .line 651
     .local v23, visibility:I
     const-string v3, "Key_shortcut_list"
 
@@ -1006,47 +1088,47 @@
 
     move-result-object v18
 
-    .line 646
+    .line 652
     .local v18, shorcutArray:[Landroid/os/Parcelable;
     if-eqz v18, :cond_e
 
-    .line 647
+    .line 653
     move-object/from16 v0, v18
 
     array-length v15, v0
 
-    .line 648
+    .line 654
     .local v15, length:I
     new-array v0, v15, [Lcom/htc/lockscreen/widget/ShortcutInfo;
 
     move-object/from16 v19, v0
 
-    .line 649
+    .line 655
     const/4 v12, 0x0
 
     .local v12, i:I
     :goto_2
     if-ge v12, v15, :cond_e
 
-    .line 650
+    .line 656
     aget-object v3, v18, v12
 
     if-eqz v3, :cond_d
 
-    .line 651
+    .line 657
     aget-object v3, v18, v12
 
     check-cast v3, Lcom/htc/lockscreen/widget/ShortcutInfo;
 
     aput-object v3, v19, v12
 
-    .line 649
+    .line 655
     :cond_d
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_2
 
-    .line 655
+    .line 661
     .end local v12           #i:I
     .end local v15           #length:I
     :cond_e
@@ -1060,7 +1142,7 @@
 
     goto/16 :goto_0
 
-    .line 659
+    .line 665
     .end local v18           #shorcutArray:[Landroid/os/Parcelable;
     .end local v19           #shortcutInfos:[Lcom/htc/lockscreen/widget/ShortcutInfo;
     .end local v23           #visibility:I
@@ -1101,10 +1183,10 @@
     .parameter "surfaceHolder"
 
     .prologue
-    .line 111
+    .line 121
     invoke-virtual {p0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onCreate(Landroid/view/SurfaceHolder;)V
 
-    .line 112
+    .line 122
     return-void
 .end method
 
@@ -1114,12 +1196,12 @@
     .parameter "desiredHeight"
 
     .prologue
-    .line 412
+    .line 418
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-nez v0, :cond_0
 
-    .line 413
+    .line 419
     const-string v0, "IdleScreenEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1162,10 +1244,10 @@
 
     invoke-static {v0, v1}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 415
+    .line 421
     invoke-virtual {p0, p1, p2}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onDesiredSizeChanged(II)V
 
-    .line 417
+    .line 423
     :cond_0
     return-void
 .end method
@@ -1176,26 +1258,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 120
+    .line 130
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->pokeWakeLock(I)V
 
-    .line 121
+    .line 131
     iput-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mTeleListener:Lcom/htc/lockscreen/telephony/TelephonyListener;
 
-    .line 122
+    .line 132
     iput-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReminderListener:Lcom/htc/lockscreen/reminder/ReminderListener;
 
-    .line 123
+    .line 133
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onDestroy()V
 
-    .line 125
+    .line 135
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->doDestroy()V
 
-    .line 126
+    .line 136
     return-void
 .end method
 
@@ -1203,10 +1285,10 @@
     .locals 0
 
     .prologue
-    .line 825
+    .line 831
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onPause()V
 
-    .line 826
+    .line 832
     return-void
 .end method
 
@@ -1214,10 +1296,10 @@
     .locals 0
 
     .prologue
-    .line 816
+    .line 822
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onResume()V
 
-    .line 817
+    .line 823
     return-void
 .end method
 
@@ -1225,17 +1307,17 @@
     .locals 2
 
     .prologue
-    .line 806
+    .line 812
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onStart()V
 
-    .line 807
+    .line 813
     const-string v0, "idlescreen_surface_create"
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 808
+    .line 814
     return-void
 .end method
 
@@ -1243,10 +1325,10 @@
     .locals 0
 
     .prologue
-    .line 834
+    .line 840
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onStop()V
 
-    .line 835
+    .line 841
     return-void
 .end method
 
@@ -1257,59 +1339,59 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 420
+    .line 426
     iget-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-nez v1, :cond_2
 
-    .line 421
+    .line 427
     iput-boolean p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
-    .line 422
+    .line 428
     const/16 v0, 0x8
 
-    .line 423
+    .line 429
     .local v0, visibility:I
     if-eqz p1, :cond_0
 
-    .line 424
+    .line 430
     const/4 v0, 0x0
 
-    .line 426
+    .line 432
     :cond_0
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v1, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->setWindowVisibility(I)V
 
-    .line 428
+    .line 434
     iget-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
     if-eqz v1, :cond_3
 
-    .line 429
+    .line 435
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->goToStart()V
 
-    .line 435
+    .line 441
     :cond_1
     :goto_0
     invoke-virtual {p0, v2, v2, v2}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->updateSurface(ZZZ)V
 
-    .line 437
+    .line 443
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->reportVisibility()V
 
-    .line 439
+    .line 445
     .end local v0           #visibility:I
     :cond_2
     return-void
 
-    .line 431
+    .line 437
     .restart local v0       #visibility:I
     :cond_3
     iget-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
     if-nez v1, :cond_1
 
-    .line 432
+    .line 438
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->goToStop()V
 
     goto :goto_0
@@ -1319,12 +1401,12 @@
     .locals 1
 
     .prologue
-    .line 1204
+    .line 1210
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->finishDrawing()V
 
-    .line 1205
+    .line 1211
     return-void
 .end method
 
@@ -1333,7 +1415,7 @@
     .parameter "viewMode"
 
     .prologue
-    .line 993
+    .line 999
     const/4 v0, 0x0
 
     return v0
@@ -1343,7 +1425,7 @@
     .locals 1
 
     .prologue
-    .line 247
+    .line 253
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mReqHeight:I
@@ -1355,7 +1437,7 @@
     .locals 1
 
     .prologue
-    .line 238
+    .line 244
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mReqWidth:I
@@ -1367,7 +1449,7 @@
     .locals 1
 
     .prologue
-    .line 395
+    .line 401
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     return-object v0
@@ -1377,7 +1459,7 @@
     .locals 1
 
     .prologue
-    .line 977
+    .line 983
     iget v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mLockScreenState:I
 
     return v0
@@ -1387,7 +1469,7 @@
     .locals 1
 
     .prologue
-    .line 391
+    .line 397
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->getSession()Landroid/view/IWindowSession;
@@ -1401,7 +1483,7 @@
     .locals 1
 
     .prologue
-    .line 229
+    .line 235
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->getSurfaceHolder()Landroid/view/SurfaceHolder;
@@ -1415,17 +1497,17 @@
     .locals 1
 
     .prologue
-    .line 1135
+    .line 1141
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 1136
+    .line 1142
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mWindowAnimation:I
 
-    .line 1138
+    .line 1144
     :goto_0
     return v0
 
@@ -1439,7 +1521,7 @@
     .locals 1
 
     .prologue
-    .line 1155
+    .line 1161
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->getWindowFlag()I
@@ -1453,17 +1535,17 @@
     .locals 1
 
     .prologue
-    .line 1111
+    .line 1117
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 1112
+    .line 1118
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget-object v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mWindowToken:Landroid/os/IBinder;
 
-    .line 1114
+    .line 1120
     :goto_0
     return-object v0
 
@@ -1477,17 +1559,17 @@
     .locals 1
 
     .prologue
-    .line 1123
+    .line 1129
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 1124
+    .line 1130
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mWindowType:I
 
-    .line 1126
+    .line 1132
     :goto_0
     return v0
 
@@ -1501,22 +1583,22 @@
     .locals 2
 
     .prologue
-    .line 546
+    .line 552
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     sget-object v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->RESUME:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     if-ne v0, v1, :cond_0
 
-    .line 547
+    .line 553
     sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->PAUSE:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
-    .line 548
+    .line 554
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doPause()V
 
-    .line 550
+    .line 556
     :cond_0
     return-void
 .end method
@@ -1525,7 +1607,7 @@
     .locals 2
 
     .prologue
-    .line 528
+    .line 534
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     sget-object v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->NONE:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
@@ -1538,24 +1620,24 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 529
+    .line 535
     :cond_0
     sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->RESUME:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
-    .line 530
+    .line 536
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doStart()V
 
-    .line 531
+    .line 537
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doResume()V
 
-    .line 538
+    .line 544
     :cond_1
     :goto_0
     return-void
 
-    .line 533
+    .line 539
     :cond_2
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
@@ -1569,13 +1651,13 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 534
+    .line 540
     :cond_3
     sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->RESUME:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
-    .line 535
+    .line 541
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doResume()V
 
     goto :goto_0
@@ -1585,7 +1667,7 @@
     .locals 2
 
     .prologue
-    .line 516
+    .line 522
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     sget-object v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->NONE:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
@@ -1598,16 +1680,16 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 517
+    .line 523
     :cond_0
     sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->START:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
-    .line 518
+    .line 524
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doStart()V
 
-    .line 520
+    .line 526
     :cond_1
     return-void
 .end method
@@ -1616,27 +1698,27 @@
     .locals 2
 
     .prologue
-    .line 558
+    .line 564
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     sget-object v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->START:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     if-ne v0, v1, :cond_1
 
-    .line 559
+    .line 565
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doStop()V
 
-    .line 568
+    .line 574
     :cond_0
     :goto_0
     sget-object v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;->STOP:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
-    .line 569
+    .line 575
     return-void
 
-    .line 561
+    .line 567
     :cond_1
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
@@ -1644,15 +1726,15 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 562
+    .line 568
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doPause()V
 
-    .line 563
+    .line 569
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doStop()V
 
     goto :goto_0
 
-    .line 565
+    .line 571
     :cond_2
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mState:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$State;
 
@@ -1660,7 +1742,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 566
+    .line 572
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->doStop()V
 
     goto :goto_0
@@ -1673,19 +1755,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1081
+    .line 1087
     if-eqz p1, :cond_0
 
-    .line 1082
+    .line 1088
     const-string v0, "idleScreenReminderSnoozeAll"
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1087
+    .line 1093
     :goto_0
     return-void
 
-    .line 1085
+    .line 1091
     :cond_0
     const-string v0, "idleScreenReminderHandleAll"
 
@@ -1698,7 +1780,7 @@
     .locals 1
 
     .prologue
-    .line 1103
+    .line 1109
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     return v0
@@ -1708,7 +1790,7 @@
     .locals 1
 
     .prologue
-    .line 287
+    .line 293
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget-boolean v0, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mIsPreview:Z
@@ -1720,7 +1802,7 @@
     .locals 1
 
     .prologue
-    .line 507
+    .line 513
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mRenderable:Z
 
     return v0
@@ -1730,7 +1812,7 @@
     .locals 1
 
     .prologue
-    .line 283
+    .line 289
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIsResume:Z
 
     return v0
@@ -1740,7 +1822,7 @@
     .locals 1
 
     .prologue
-    .line 265
+    .line 271
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mScreenOn:Z
 
     return v0
@@ -1750,7 +1832,7 @@
     .locals 1
 
     .prologue
-    .line 274
+    .line 280
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
     return v0
@@ -1760,7 +1842,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 262
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReportedVisible:Z
 
     return v0
@@ -1776,7 +1858,7 @@
     .parameter "resultRequested"
 
     .prologue
-    .line 164
+    .line 170
     const/4 v0, 0x0
 
     return-object v0
@@ -1787,7 +1869,7 @@
     .parameter "config"
 
     .prologue
-    .line 1095
+    .line 1101
     return-void
 .end method
 
@@ -1796,7 +1878,7 @@
     .parameter "surfaceHolder"
 
     .prologue
-    .line 129
+    .line 139
     return-void
 .end method
 
@@ -1806,7 +1888,7 @@
     .parameter "desiredHeight"
 
     .prologue
-    .line 174
+    .line 180
     return-void
 .end method
 
@@ -1814,7 +1896,7 @@
     .locals 0
 
     .prologue
-    .line 132
+    .line 142
     return-void
 .end method
 
@@ -1824,7 +1906,7 @@
     .parameter "keyEvent"
 
     .prologue
-    .line 1010
+    .line 1016
     return-void
 .end method
 
@@ -1834,7 +1916,7 @@
     .parameter "keyEvent"
 
     .prologue
-    .line 1018
+    .line 1024
     return-void
 .end method
 
@@ -1843,7 +1925,7 @@
     .parameter "state"
 
     .prologue
-    .line 774
+    .line 780
     return-void
 .end method
 
@@ -1857,7 +1939,7 @@
     .parameter "yPixelOffset"
 
     .prologue
-    .line 154
+    .line 160
     return-void
 .end method
 
@@ -1865,7 +1947,7 @@
     .locals 0
 
     .prologue
-    .line 847
+    .line 853
     return-void
 .end method
 
@@ -1874,7 +1956,7 @@
     .parameter "state"
 
     .prologue
-    .line 1002
+    .line 1008
     return-void
 .end method
 
@@ -1884,7 +1966,7 @@
     .parameter "state"
 
     .prologue
-    .line 1041
+    .line 1047
     return-void
 .end method
 
@@ -1893,7 +1975,7 @@
     .parameter "remoteView"
 
     .prologue
-    .line 1026
+    .line 1032
     return-void
 .end method
 
@@ -1902,7 +1984,7 @@
     .parameter "bRenderable"
 
     .prologue
-    .line 499
+    .line 505
     return-void
 .end method
 
@@ -1910,7 +1992,7 @@
     .locals 0
 
     .prologue
-    .line 843
+    .line 849
     return-void
 .end method
 
@@ -1919,7 +2001,7 @@
     .parameter "screenOn"
 
     .prologue
-    .line 783
+    .line 789
     return-void
 .end method
 
@@ -1929,7 +2011,7 @@
     .parameter "visibility"
 
     .prologue
-    .line 1034
+    .line 1040
     return-void
 .end method
 
@@ -1937,7 +2019,7 @@
     .locals 0
 
     .prologue
-    .line 839
+    .line 845
     return-void
 .end method
 
@@ -1945,7 +2027,7 @@
     .locals 0
 
     .prologue
-    .line 851
+    .line 857
     return-void
 .end method
 
@@ -1957,7 +2039,7 @@
     .parameter "height"
 
     .prologue
-    .line 182
+    .line 188
     return-void
 .end method
 
@@ -1966,7 +2048,7 @@
     .parameter "holder"
 
     .prologue
-    .line 213
+    .line 219
     return-void
 .end method
 
@@ -1975,7 +2057,7 @@
     .parameter "holder"
 
     .prologue
-    .line 190
+    .line 196
     return-void
 .end method
 
@@ -1984,7 +2066,7 @@
     .parameter "holder"
 
     .prologue
-    .line 220
+    .line 226
     return-void
 .end method
 
@@ -1993,7 +2075,7 @@
     .parameter "holder"
 
     .prologue
-    .line 205
+    .line 211
     return-void
 .end method
 
@@ -2003,7 +2085,7 @@
     .parameter "visibility"
 
     .prologue
-    .line 198
+    .line 204
     return-void
 .end method
 
@@ -2012,7 +2094,7 @@
     .parameter "state"
 
     .prologue
-    .line 1048
+    .line 1054
     return-void
 .end method
 
@@ -2021,7 +2103,7 @@
     .parameter "event"
 
     .prologue
-    .line 143
+    .line 149
     return-void
 .end method
 
@@ -2031,7 +2113,7 @@
     .parameter "extras"
 
     .prologue
-    .line 986
+    .line 992
     return-void
 .end method
 
@@ -2040,7 +2122,7 @@
     .parameter "visible"
 
     .prologue
-    .line 135
+    .line 145
     return-void
 .end method
 
@@ -2056,7 +2138,7 @@
     .end annotation
 
     .prologue
-    .line 798
+    .line 804
     return-void
 .end method
 
@@ -2064,12 +2146,12 @@
     .locals 1
 
     .prologue
-    .line 871
-    const/16 v0, 0x3a98
+    .line 877
+    const/16 v0, 0x2ee0
 
     invoke-virtual {p0, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->pokeWakeLock(I)V
 
-    .line 872
+    .line 878
     return-void
 .end method
 
@@ -2078,14 +2160,14 @@
     .parameter "ms"
 
     .prologue
-    .line 880
+    .line 886
     const-string v0, "idleScreenWakeLock"
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 881
+    .line 887
     return-void
 .end method
 
@@ -2093,14 +2175,14 @@
     .locals 2
 
     .prologue
-    .line 692
+    .line 698
     const-string v0, "idleScreenPrepareUnlock"
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 693
+    .line 699
     return-void
 .end method
 
@@ -2109,17 +2191,17 @@
     .parameter "reminderListener"
 
     .prologue
-    .line 957
+    .line 963
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReminderListener:Lcom/htc/lockscreen/reminder/ReminderListener;
 
-    .line 958
+    .line 964
     const-string v0, "idleScreenReminderRegister"
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 959
+    .line 965
     return-void
 .end method
 
@@ -2128,17 +2210,17 @@
     .parameter "telephonyListener"
 
     .prologue
-    .line 935
+    .line 941
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mTeleListener:Lcom/htc/lockscreen/telephony/TelephonyListener;
 
-    .line 936
+    .line 942
     const-string v0, "idleScreenTelephonyRegister"
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 937
+    .line 943
     return-void
 .end method
 
@@ -2146,7 +2228,7 @@
     .locals 5
 
     .prologue
-    .line 457
+    .line 463
     const-string v2, "IdleScreenEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2207,13 +2289,13 @@
 
     invoke-static {v2, v3}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 461
+    .line 467
     iget-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-nez v2, :cond_1
 
-    .line 462
-    iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mService:Lcom/htc/lockscreen/idlescreen/IdleScreenService;
+    .line 468
+    iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->isScreenOn(Landroid/content/Context;)Z
 
@@ -2221,7 +2303,7 @@
 
     iput-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mScreenOn:Z
 
-    .line 463
+    .line 469
     iget-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
     if-eqz v2, :cond_2
@@ -2240,33 +2322,33 @@
 
     const/4 v1, 0x1
 
-    .line 464
+    .line 470
     .local v1, visible:Z
     :goto_0
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mStarted:Z
 
-    .line 465
+    .line 471
     .local v0, bRender:Z
     iget-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mRenderable:Z
 
     if-eq v2, v0, :cond_0
 
-    .line 466
+    .line 472
     iput-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mRenderable:Z
 
-    .line 467
+    .line 473
     invoke-virtual {p0, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onRenderableChange(Z)V
 
-    .line 469
+    .line 475
     :cond_0
     iget-boolean v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReportedVisible:Z
 
     if-eq v2, v1, :cond_1
 
-    .line 470
+    .line 476
     iput-boolean v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReportedVisible:Z
 
-    .line 471
+    .line 477
     const-string v2, "IdleScreenEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2299,29 +2381,29 @@
 
     invoke-static {v2, v3}, Lcom/htc/lockscreen/idlescreen/ISLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 481
+    .line 487
     invoke-virtual {p0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onVisibilityChanged(Z)V
 
-    .line 482
+    .line 488
     if-eqz v1, :cond_3
 
-    .line 483
+    .line 489
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->goToResume()V
 
-    .line 490
+    .line 496
     .end local v0           #bRender:Z
     .end local v1           #visible:Z
     :cond_1
     :goto_1
     return-void
 
-    .line 463
+    .line 469
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 486
+    .line 492
     .restart local v0       #bRender:Z
     .restart local v1       #visible:Z
     :cond_3
@@ -2337,12 +2419,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1183
+    .line 1189
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 1184
+    .line 1190
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget-object v3, v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mCaller:Landroid/os/Handler;
@@ -2358,7 +2440,7 @@
 
     move-result-object v0
 
-    .line 1186
+    .line 1192
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
@@ -2366,7 +2448,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1188
+    .line 1194
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return-void
@@ -2374,7 +2456,7 @@
     :cond_1
     move v1, v2
 
-    .line 1184
+    .line 1190
     goto :goto_0
 .end method
 
@@ -2385,12 +2467,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1196
+    .line 1202
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 1197
+    .line 1203
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget-object v3, v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mCaller:Landroid/os/Handler;
@@ -2406,7 +2488,7 @@
 
     move-result-object v0
 
-    .line 1199
+    .line 1205
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
@@ -2414,7 +2496,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1201
+    .line 1207
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return-void
@@ -2422,7 +2504,7 @@
     :cond_1
     move v1, v2
 
-    .line 1197
+    .line 1203
     goto :goto_0
 .end method
 
@@ -2430,12 +2512,12 @@
     .locals 3
 
     .prologue
-    .line 1165
+    .line 1171
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 1166
+    .line 1172
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget-object v1, v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mCaller:Landroid/os/Handler;
@@ -2446,7 +2528,7 @@
 
     move-result-object v0
 
-    .line 1167
+    .line 1173
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
@@ -2454,7 +2536,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1169
+    .line 1175
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return-void
@@ -2465,12 +2547,12 @@
     .parameter "delay"
 
     .prologue
-    .line 1172
+    .line 1178
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 1173
+    .line 1179
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget-object v1, v1, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mCaller:Landroid/os/Handler;
@@ -2481,7 +2563,7 @@
 
     move-result-object v0
 
-    .line 1174
+    .line 1180
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
@@ -2489,7 +2571,7 @@
 
     invoke-virtual {v1, v0, p1, p2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1176
+    .line 1182
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return-void
@@ -2501,19 +2583,19 @@
     .parameter "extra"
 
     .prologue
-    .line 332
+    .line 338
     new-instance v0, Lcom/android/internal/os/HandlerCaller$SomeArgs;
 
     invoke-direct {v0}, Lcom/android/internal/os/HandlerCaller$SomeArgs;-><init>()V
 
-    .line 333
+    .line 339
     .local v0, args:Lcom/android/internal/os/HandlerCaller$SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/HandlerCaller$SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 334
+    .line 340
     iput-object p2, v0, Lcom/android/internal/os/HandlerCaller$SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 336
+    .line 342
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
     iget-object v2, v2, Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;->mCaller:Landroid/os/Handler;
@@ -2524,7 +2606,7 @@
 
     move-result-object v1
 
-    .line 338
+    .line 344
     .local v1, msg:Landroid/os/Message;
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mEngineWrapper:Lcom/htc/lockscreen/idlescreen/IdleScreenEngineWrapper;
 
@@ -2532,7 +2614,7 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 339
+    .line 345
     return-void
 .end method
 
@@ -2541,12 +2623,12 @@
     .parameter "show"
 
     .prologue
-    .line 328
+    .line 334
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->setShowLiveWallpaper(Z)V
 
-    .line 329
+    .line 335
     return-void
 .end method
 
@@ -2555,12 +2637,12 @@
     .parameter "format"
 
     .prologue
-    .line 350
+    .line 356
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->setFormat(I)V
 
-    .line 351
+    .line 357
     return-void
 .end method
 
@@ -2570,19 +2652,19 @@
     .end annotation
 
     .prologue
-    .line 403
+    .line 409
     invoke-virtual {p0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->getSurfaceHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
-    .line 404
+    .line 410
     .local v0, holder:Landroid/view/SurfaceHolder;
     if-eqz v0, :cond_0
 
-    .line 405
+    .line 411
     invoke-interface {v0}, Landroid/view/SurfaceHolder;->setSizeFromLayout()V
 
-    .line 409
+    .line 415
     :cond_0
     return-void
 .end method
@@ -2592,12 +2674,12 @@
     .parameter "flag"
 
     .prologue
-    .line 1146
+    .line 1152
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->setWindowFlag(I)V
 
-    .line 1147
+    .line 1153
     return-void
 .end method
 
@@ -2608,30 +2690,30 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 311
+    .line 317
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-eqz v0, :cond_0
 
-    .line 312
+    .line 318
     const-string v0, "IdleScreenEngine"
 
     const-string v1, "updateSurface~ destroyed"
 
     invoke-static {v0, v1}, Lcom/htc/lockscreen/idlescreen/ISLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 314
+    .line 320
     :cond_0
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->setWindowShow(Z)V
 
-    .line 315
+    .line 321
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0, v2, v2, v2}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->updateSurface(ZZZ)V
 
-    .line 316
+    .line 322
     return-void
 .end method
 
@@ -2642,33 +2724,33 @@
     .parameter "action"
 
     .prologue
-    .line 1068
+    .line 1074
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1069
+    .line 1075
     .local v0, extras:Landroid/os/Bundle;
     const-string v1, "Key_ReminderType"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1070
+    .line 1076
     const-string v1, "Key_ReminderId"
 
     invoke-virtual {v0, v1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 1071
+    .line 1077
     const-string v1, "Key_ReminderAction"
 
     invoke-virtual {v0, v1, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1072
+    .line 1078
     const-string v1, "idleScreenReminderSnooze"
 
     invoke-virtual {p0, v1, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1073
+    .line 1079
     return-void
 .end method
 
@@ -2679,33 +2761,33 @@
     .parameter "className"
 
     .prologue
-    .line 680
+    .line 686
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 681
+    .line 687
     .local v0, extras:Landroid/os/Bundle;
     const-string v1, "KEY_ACTIVITY_INTENT"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 682
+    .line 688
     const-string v1, "KEY_ACTIVITY_PACKAGE"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 683
+    .line 689
     const-string v1, "KEY_ACTIVITY_CLASS"
 
     invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 684
+    .line 690
     const-string v1, "ACTION_LOCKSCREEN_START_PENDING"
 
     invoke-virtual {p0, v1, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 685
+    .line 691
     return-void
 .end method
 
@@ -2716,33 +2798,33 @@
     .parameter "className"
 
     .prologue
-    .line 672
+    .line 678
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 673
+    .line 679
     .local v0, extras:Landroid/os/Bundle;
     const-string v1, "KEY_ACTIVITY_INTENT"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 674
+    .line 680
     const-string v1, "KEY_ACTIVITY_PACKAGE"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 675
+    .line 681
     const-string v1, "KEY_ACTIVITY_CLASS"
 
     invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 676
+    .line 682
     const-string v1, "startActivityAndUnlock"
 
     invoke-virtual {p0, v1, v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 677
+    .line 683
     return-void
 .end method
 
@@ -2750,14 +2832,14 @@
     .locals 2
 
     .prologue
-    .line 858
+    .line 864
     const-string v0, "idleScreenUnlock"
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 859
+    .line 865
     return-void
 .end method
 
@@ -2766,12 +2848,12 @@
     .parameter "extra"
 
     .prologue
-    .line 862
+    .line 868
     const-string v0, "idleScreenUnlock"
 
     invoke-virtual {p0, v0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 863
+    .line 869
     return-void
 .end method
 
@@ -2781,15 +2863,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 968
+    .line 974
     iput-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mReminderListener:Lcom/htc/lockscreen/reminder/ReminderListener;
 
-    .line 969
+    .line 975
     const-string v0, "idleScreenReminderUnRegister"
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 970
+    .line 976
     return-void
 .end method
 
@@ -2799,15 +2881,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 946
+    .line 952
     iput-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mTeleListener:Lcom/htc/lockscreen/telephony/TelephonyListener;
 
-    .line 947
+    .line 953
     const-string v0, "idleScreenTelephonyUnRegister"
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->sendLockScreenCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 948
+    .line 954
     return-void
 .end method
 
@@ -2818,24 +2900,24 @@
     .parameter "redrawNeeded"
 
     .prologue
-    .line 343
+    .line 349
     iget-boolean v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mDestroyed:Z
 
     if-eqz v0, :cond_0
 
-    .line 344
+    .line 350
     const-string v0, "IdleScreenEngine"
 
     const-string v1, "updateSurface~ destroyed"
 
     invoke-static {v0, v1}, Lcom/htc/lockscreen/idlescreen/ISLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
+    .line 352
     :cond_0
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mIdleWindow:Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/lockscreen/idlescreen/IdleScreenWindow;->updateSurface(ZZZ)V
 
-    .line 347
+    .line 353
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 732
+    .line 731
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$2;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .parameter "arg3"
 
     .prologue
-    .line 747
+    .line 746
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$2;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -57,7 +57,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 748
+    .line 747
     return-void
 .end method
 
@@ -66,7 +66,7 @@
     .parameter "holder"
 
     .prologue
-    .line 741
+    .line 740
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$2;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -78,7 +78,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 742
+    .line 741
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$2;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-virtual {v0}, Lcom/android/camera/component/ViewFinder;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -95,7 +95,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    .line 743
+    .line 742
     return-void
 .end method
 
@@ -104,7 +104,7 @@
     .parameter "holder"
 
     .prologue
-    .line 735
+    .line 734
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$2;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -116,7 +116,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 736
+    .line 735
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$2;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-virtual {v0}, Lcom/android/camera/component/ViewFinder;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -133,6 +133,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    .line 737
+    .line 736
     return-void
 .end method

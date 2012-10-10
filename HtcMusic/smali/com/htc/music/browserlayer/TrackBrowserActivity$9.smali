@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1818
+    .line 1819
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$9;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "which"
 
     .prologue
-    .line 1820
+    .line 1821
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$9;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->removePlaylistItem(I)V
     invoke-static {v0, p1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$1800(Lcom/htc/music/browserlayer/TrackBrowserActivity;I)V
 
-    .line 1821
+    .line 1822
     return-void
 .end method

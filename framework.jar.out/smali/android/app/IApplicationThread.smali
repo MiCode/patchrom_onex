@@ -87,6 +87,8 @@
 
 .field public static final SCHEDULE_RELAUNCH_ACTIVITY_TRANSACTION:I = 0x1a
 
+.field public static final SCHEDULE_REPORT_APP_TRANSITION_END:I = 0x68
+
 .field public static final SCHEDULE_RESUME_ACTIVITY_TRANSACTION:I = 0x5
 
 .field public static final SCHEDULE_SEND_RESULT_TRANSACTION:I = 0x6
@@ -443,6 +445,14 @@
         }
     .end annotation
 
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract scheduleReportAppTransitionEnd(Landroid/os/IBinder;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -40,7 +40,7 @@
     .parameter "name"
 
     .prologue
-    .line 846
+    .line 838
     invoke-static {p0, p1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -56,41 +56,41 @@
     .parameter "value"
 
     .prologue
-    .line 830
+    .line 822
     :try_start_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 831
+    .line 823
     .local v1, values:Landroid/content/ContentValues;
     const-string v2, "name"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 832
+    .line 824
     const-string v2, "value"
 
     invoke-virtual {v1, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 833
+    .line 825
     invoke-virtual {p0, p1, v1}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_0
     .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 834
+    .line 826
     const/4 v2, 0x1
 
-    .line 837
+    .line 829
     .end local v1           #values:Landroid/content/ContentValues;
     :goto_0
     return v2
 
-    .line 835
+    .line 827
     :catch_0
     move-exception v0
 
-    .line 836
+    .line 828
     .local v0, e:Landroid/database/SQLException;
     const-string v2, "Settings"
 
@@ -124,7 +124,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 837
+    .line 829
     const/4 v2, 0x0
 
     goto :goto_0

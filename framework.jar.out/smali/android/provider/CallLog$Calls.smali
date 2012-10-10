@@ -490,7 +490,7 @@
     if-ne v0, v4, :cond_6
 
     .line 505
-    const-string/jumbo v4, "is_read"
+    const-string v4, "is_read"
 
     const/4 v5, 0x0
 

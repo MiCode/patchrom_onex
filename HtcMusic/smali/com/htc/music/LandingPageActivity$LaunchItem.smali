@@ -37,8 +37,6 @@
 
 .field mPackageName:Ljava/lang/String;
 
-.field mPreloadId:Ljava/lang/String;
-
 .field final synthetic this$0:Lcom/htc/music/LandingPageActivity;
 
 
@@ -52,62 +50,59 @@
 
     const/4 v1, 0x0
 
-    .line 252
+    .line 231
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->this$0:Lcom/htc/music/LandingPageActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 190
+    .line 166
     new-instance v0, Lcom/htc/music/LandingPageActivity$LaunchItem$1;
 
     invoke-direct {v0, p0}, Lcom/htc/music/LandingPageActivity$LaunchItem$1;-><init>(Lcom/htc/music/LandingPageActivity$LaunchItem;)V
 
     iput-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemClickListener:Landroid/view/View$OnClickListener;
 
-    .line 210
+    .line 189
     new-instance v0, Lcom/htc/music/LandingPageActivity$LaunchItem$2;
 
     invoke-direct {v0, p0}, Lcom/htc/music/LandingPageActivity$LaunchItem$2;-><init>(Lcom/htc/music/LandingPageActivity$LaunchItem;)V
 
     iput-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemLongClickListener:Landroid/view/View$OnLongClickListener;
 
-    .line 227
+    .line 206
     new-instance v0, Lcom/htc/music/LandingPageActivity$LaunchItem$3;
 
     invoke-direct {v0, p0}, Lcom/htc/music/LandingPageActivity$LaunchItem$3;-><init>(Lcom/htc/music/LandingPageActivity$LaunchItem;)V
 
     iput-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemTouchListener:Landroid/view/View$OnTouchListener;
 
-    .line 253
+    .line 232
     iput v2, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIconId:I
 
-    .line 254
+    .line 233
     iput-object v1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 255
+    .line 234
     iput-object v1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mName:Ljava/lang/String;
 
-    .line 256
+    .line 235
     iput-object v1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchIntent:Landroid/content/Intent;
 
-    .line 257
+    .line 236
     iput-boolean v2, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIsInnerItem:Z
 
-    .line 258
+    .line 237
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mItemType:I
 
-    .line 259
+    .line 238
     iput-boolean v2, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIsSoundHound:Z
 
-    .line 260
-    iput-object v1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mPreloadId:Ljava/lang/String;
-
-    .line 261
+    .line 239
     iput-object v1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mPackageName:Ljava/lang/String;
 
-    .line 262
+    .line 240
     return-void
 .end method
 
@@ -117,7 +112,7 @@
     .parameter "x1"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setLaunchIntent(Landroid/content/Intent;)V
 
     return-void
@@ -128,7 +123,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getLaunchIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -141,7 +136,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getItemType()I
 
     move-result v0
@@ -154,8 +149,8 @@
     .parameter "x0"
 
     .prologue
-    .line 179
-    invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getPreloadId()Ljava/lang/String;
+    .line 156
+    invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -168,7 +163,7 @@
     .parameter "x1"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -180,32 +175,32 @@
     .parameter "x1"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setName(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$2300(Lcom/htc/music/LandingPageActivity$LaunchItem;Z)V
+.method static synthetic access$2300(Lcom/htc/music/LandingPageActivity$LaunchItem;Ljava/lang/String;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 179
-    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setInnerItemEnable(Z)V
+    .line 156
+    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setPackageName(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$2400(Lcom/htc/music/LandingPageActivity$LaunchItem;I)V
+.method static synthetic access$2400(Lcom/htc/music/LandingPageActivity$LaunchItem;Z)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 179
-    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setItemType(I)V
+    .line 156
+    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setInnerItemEnable(Z)V
 
     return-void
 .end method
@@ -216,20 +211,20 @@
     .parameter "x1"
 
     .prologue
-    .line 179
-    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setIcon(I)V
+    .line 156
+    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setItemType(I)V
 
     return-void
 .end method
 
-.method static synthetic access$2600(Lcom/htc/music/LandingPageActivity$LaunchItem;Ljava/lang/String;)V
+.method static synthetic access$2600(Lcom/htc/music/LandingPageActivity$LaunchItem;I)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 179
-    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setPreloadId(Ljava/lang/String;)V
+    .line 156
+    invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setIcon(I)V
 
     return-void
 .end method
@@ -240,7 +235,7 @@
     .parameter "x1"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0, p1}, Lcom/htc/music/LandingPageActivity$LaunchItem;->setSoundHoundEnable(Z)V
 
     return-void
@@ -251,7 +246,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -264,7 +259,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getClickListener()Landroid/view/View$OnClickListener;
 
     move-result-object v0
@@ -277,7 +272,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getLongClickListener()Landroid/view/View$OnLongClickListener;
 
     move-result-object v0
@@ -290,7 +285,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getOnTouchListener()Landroid/view/View$OnTouchListener;
 
     move-result-object v0
@@ -303,7 +298,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getIconId()I
 
     move-result v0
@@ -316,7 +311,7 @@
     .parameter "x0"
 
     .prologue
-    .line 179
+    .line 156
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$LaunchItem;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -328,7 +323,7 @@
     .locals 1
 
     .prologue
-    .line 301
+    .line 279
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemClickListener:Landroid/view/View$OnClickListener;
 
     return-object v0
@@ -338,7 +333,7 @@
     .locals 1
 
     .prologue
-    .line 277
+    .line 255
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIcon:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -348,7 +343,7 @@
     .locals 1
 
     .prologue
-    .line 273
+    .line 251
     iget v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIconId:I
 
     return v0
@@ -358,7 +353,7 @@
     .locals 1
 
     .prologue
-    .line 333
+    .line 311
     iget v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mItemType:I
 
     return v0
@@ -368,7 +363,7 @@
     .locals 1
 
     .prologue
-    .line 293
+    .line 271
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchIntent:Landroid/content/Intent;
 
     return-object v0
@@ -378,7 +373,7 @@
     .locals 1
 
     .prologue
-    .line 309
+    .line 287
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemLongClickListener:Landroid/view/View$OnLongClickListener;
 
     return-object v0
@@ -388,7 +383,7 @@
     .locals 1
 
     .prologue
-    .line 285
+    .line 263
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mName:Ljava/lang/String;
 
     return-object v0
@@ -398,7 +393,7 @@
     .locals 1
 
     .prologue
-    .line 317
+    .line 295
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemTouchListener:Landroid/view/View$OnTouchListener;
 
     return-object v0
@@ -408,18 +403,8 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 327
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mPackageName:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method private getPreloadId()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 349
-    iget-object v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mPreloadId:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -428,7 +413,7 @@
     .locals 1
 
     .prologue
-    .line 325
+    .line 303
     iget-boolean v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIsInnerItem:Z
 
     return v0
@@ -438,7 +423,7 @@
     .locals 1
 
     .prologue
-    .line 341
+    .line 319
     iget-boolean v0, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIsSoundHound:Z
 
     return v0
@@ -449,10 +434,10 @@
     .parameter "listener"
 
     .prologue
-    .line 297
+    .line 275
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemClickListener:Landroid/view/View$OnClickListener;
 
-    .line 298
+    .line 276
     return-void
 .end method
 
@@ -461,10 +446,10 @@
     .parameter "icon"
 
     .prologue
-    .line 269
+    .line 247
     iput p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIconId:I
 
-    .line 270
+    .line 248
     return-void
 .end method
 
@@ -473,10 +458,10 @@
     .parameter "icon"
 
     .prologue
-    .line 265
+    .line 243
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 266
+    .line 244
     return-void
 .end method
 
@@ -485,10 +470,10 @@
     .parameter "isInnerItem"
 
     .prologue
-    .line 321
+    .line 299
     iput-boolean p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIsInnerItem:Z
 
-    .line 322
+    .line 300
     return-void
 .end method
 
@@ -497,10 +482,10 @@
     .parameter "itemType"
 
     .prologue
-    .line 329
+    .line 307
     iput p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mItemType:I
 
-    .line 330
+    .line 308
     return-void
 .end method
 
@@ -509,10 +494,10 @@
     .parameter "launchIntent"
 
     .prologue
-    .line 289
+    .line 267
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchIntent:Landroid/content/Intent;
 
-    .line 290
+    .line 268
     return-void
 .end method
 
@@ -521,10 +506,10 @@
     .parameter "listener"
 
     .prologue
-    .line 305
+    .line 283
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemLongClickListener:Landroid/view/View$OnLongClickListener;
 
-    .line 306
+    .line 284
     return-void
 .end method
 
@@ -533,10 +518,10 @@
     .parameter "name"
 
     .prologue
-    .line 281
+    .line 259
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mName:Ljava/lang/String;
 
-    .line 282
+    .line 260
     return-void
 .end method
 
@@ -545,10 +530,10 @@
     .parameter "listener"
 
     .prologue
-    .line 313
+    .line 291
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mLaunchItemTouchListener:Landroid/view/View$OnTouchListener;
 
-    .line 314
+    .line 292
     return-void
 .end method
 
@@ -557,22 +542,10 @@
     .parameter "name"
 
     .prologue
-    .line 353
+    .line 323
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mPackageName:Ljava/lang/String;
 
-    .line 354
-    return-void
-.end method
-
-.method private setPreloadId(Ljava/lang/String;)V
-    .locals 0
-    .parameter "id"
-
-    .prologue
-    .line 345
-    iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mPreloadId:Ljava/lang/String;
-
-    .line 346
+    .line 324
     return-void
 .end method
 
@@ -581,9 +554,9 @@
     .parameter "isSoundHound"
 
     .prologue
-    .line 337
+    .line 315
     iput-boolean p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem;->mIsSoundHound:Z
 
-    .line 338
+    .line 316
     return-void
 .end method

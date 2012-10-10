@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 216
+    .line 208
     iput-object p1, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 
     iput-object p2, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->val$e:Lcom/android/camera/MediaEventArgs;
@@ -46,7 +46,7 @@
     .locals 4
 
     .prologue
-    .line 220
+    .line 212
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 
     iget-object v0, v0, Lcom/android/camera/actionscreen/ActionScreen$4;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
@@ -58,12 +58,12 @@
 
     if-nez v0, :cond_1
 
-    .line 239
+    .line 231
     :cond_0
     :goto_0
     return-void
 
-    .line 224
+    .line 216
     :cond_1
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->val$e:Lcom/android/camera/MediaEventArgs;
 
@@ -85,7 +85,7 @@
 
     if-nez v0, :cond_0
 
-    .line 228
+    .line 220
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 
     iget-object v0, v0, Lcom/android/camera/actionscreen/ActionScreen$4;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
@@ -100,7 +100,7 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 230
+    .line 222
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 
     iget-object v0, v0, Lcom/android/camera/actionscreen/ActionScreen$4;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
@@ -112,7 +112,7 @@
 
     if-nez v0, :cond_2
 
-    .line 232
+    .line 224
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 
     iget-object v0, v0, Lcom/android/camera/actionscreen/ActionScreen$4;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
@@ -122,7 +122,7 @@
     #setter for: Lcom/android/camera/actionscreen/ActionScreen;->m_IsMediaSaved:Z
     invoke-static {v0, v1}, Lcom/android/camera/actionscreen/ActionScreen;->access$202(Lcom/android/camera/actionscreen/ActionScreen;Z)Z
 
-    .line 233
+    .line 225
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 
     iget-object v0, v0, Lcom/android/camera/actionscreen/ActionScreen$4;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
@@ -131,7 +131,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/actionscreen/ActionScreen;->onMediaSaveCompleted(Lcom/android/camera/MediaEventArgs;)V
 
-    .line 235
+    .line 227
     :cond_2
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 
@@ -144,7 +144,7 @@
 
     goto :goto_0
 
-    .line 238
+    .line 230
     :cond_3
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$4$1;->this$1:Lcom/android/camera/actionscreen/ActionScreen$4;
 

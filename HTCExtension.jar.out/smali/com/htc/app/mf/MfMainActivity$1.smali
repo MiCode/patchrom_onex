@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 440
+    .line 442
     iput-object p1, p0, Lcom/htc/app/mf/MfMainActivity$1;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 443
+    .line 445
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$1;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     #calls: Lcom/htc/app/mf/MfMainActivity;->superInvalidateOptionsMenu()V
     invoke-static {v0}, Lcom/htc/app/mf/MfMainActivity;->access$600(Lcom/htc/app/mf/MfMainActivity;)V
 
-    .line 444
+    .line 446
     return-void
 .end method

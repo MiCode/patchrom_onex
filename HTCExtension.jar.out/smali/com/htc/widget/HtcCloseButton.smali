@@ -71,21 +71,19 @@
 .end method
 
 .method private init()V
-    .locals 8
+    .locals 6
 
     .prologue
-    const v2, 0x2080020
+    const v4, 0x208015e
 
-    const v1, 0x208001f
+    const v5, 0x208015d
 
-    const v7, 0x2080008
+    const v3, 0x2080021
 
-    const v6, 0x2080007
-
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     .line 28
-    iput-boolean v3, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
+    iput-boolean v1, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
 
     .line 29
     const/4 v0, 0x0
@@ -98,11 +96,9 @@
     if-nez v0, :cond_0
 
     .line 31
-    const v3, 0x2080021
+    const v1, 0x208001f
 
-    const v4, 0x208015e
-
-    const v5, 0x208015d
+    const v2, 0x2080020
 
     move-object v0, p0
 
@@ -116,20 +112,14 @@
     :cond_0
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
 
-    if-ne v0, v3, :cond_1
+    if-ne v0, v1, :cond_1
 
     .line 34
-    const v3, 0x2080021
+    const v1, 0x2080007
 
-    const v4, 0x208015e
-
-    const v5, 0x208015d
+    const v2, 0x2080008
 
     move-object v0, p0
-
-    move v1, v6
-
-    move v2, v7
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcCloseButton;->setButtonDrawableResources(IIIII)V
 
@@ -139,11 +129,15 @@
     :cond_1
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
 
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v1, :cond_2
 
     .line 37
+    const v1, 0x208012e
+
+    const v2, 0x208012f
+
     const v3, 0x2080136
 
     const v4, 0x2080131
@@ -152,16 +146,16 @@
 
     move-object v0, p0
 
-    move v1, v6
-
-    move v2, v7
-
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcCloseButton;->setButtonDrawableResources(IIIII)V
 
     goto :goto_0
 
     .line 40
     :cond_2
+    const v1, 0x2080139
+
+    const v2, 0x208013a
+
     const v3, 0x2080141
 
     const v4, 0x208013d

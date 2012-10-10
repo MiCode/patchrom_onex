@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 280
+    .line 279
     iput-object p1, p0, Lcom/htc/music/HtcMusic$1;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcTVDisplayHelper$HtcTVDisplayListener;-><init>()V
@@ -38,14 +38,14 @@
     .locals 2
 
     .prologue
-    .line 301
+    .line 300
     const-string v0, "[HtcMusic]"
 
     const-string v1, "HtcTVDisplayListener, onNoReadyDongle is called."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 302
+    .line 301
     return-void
 .end method
 
@@ -53,21 +53,21 @@
     .locals 3
 
     .prologue
-    .line 307
+    .line 306
     const-string v0, "[HtcMusic]"
 
     const-string v1, "HtcTVDisplayListener, onNoTVToPlay is called. launchDMR to get default Render."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 308
+    .line 307
     iget-object v0, p0, Lcom/htc/music/HtcMusic$1;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-boolean v0, v0, Lcom/htc/music/HtcMusic;->mNowPlayingViewOn:Z
 
     if-nez v0, :cond_0
 
-    .line 309
+    .line 308
     iget-object v0, p0, Lcom/htc/music/HtcMusic$1;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x0
@@ -77,7 +77,7 @@
     #calls: Lcom/htc/music/HtcMusic;->launchDMR(IZ)V
     invoke-static {v0, v1, v2}, Lcom/htc/music/HtcMusic;->access$200(Lcom/htc/music/HtcMusic;IZ)V
 
-    .line 311
+    .line 310
     :cond_0
     return-void
 .end method
@@ -87,14 +87,14 @@
     .parameter "dongle"
 
     .prologue
-    .line 296
+    .line 295
     const-string v0, "[HtcMusic]"
 
     const-string v1, "HtcTVDisplayListener, onReadyDongleFound is called."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 297
+    .line 296
     return-void
 .end method
 
@@ -102,14 +102,14 @@
     .locals 2
 
     .prologue
-    .line 291
+    .line 290
     const-string v0, "[HtcMusic]"
 
     const-string v1, "HtcTVDisplayListener, onTVOff is called."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 292
+    .line 291
     return-void
 .end method
 
@@ -117,14 +117,14 @@
     .locals 2
 
     .prologue
-    .line 285
+    .line 284
     const-string v0, "[HtcMusic]"
 
     const-string v1, "HtcTVDisplayListener, onTVOn is called."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 286
+    .line 285
     return-void
 .end method
 
@@ -132,19 +132,19 @@
     .locals 2
 
     .prologue
-    .line 316
+    .line 315
     const-string v0, "[HtcMusic]"
 
     const-string v1, "HtcTVDisplayListener, onTVReadyToPlay is called. Go to DMC!"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
+    .line 317
     iget-object v0, p0, Lcom/htc/music/HtcMusic$1;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->handleTVReadyToPlay()V
     invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$300(Lcom/htc/music/HtcMusic;)V
 
-    .line 319
+    .line 318
     return-void
 .end method

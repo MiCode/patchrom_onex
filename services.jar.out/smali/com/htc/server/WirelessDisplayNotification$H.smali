@@ -28,12 +28,12 @@
     .parameter
 
     .prologue
-    .line 434
+    .line 444
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayNotification$H;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 435
+    .line 445
     return-void
 .end method
 
@@ -41,15 +41,15 @@
     .locals 7
 
     .prologue
-    .line 450
+    .line 460
     const/4 v0, 0x0
 
-    .line 451
+    .line 461
     .local v0, bMirrorEnablingOrDisabling:Z
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayNotification$H;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #getter for: Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
-    invoke-static {v5}, Lcom/htc/server/WirelessDisplayNotification;->access$500(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayNotification;->access$600(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
 
     move-result-object v5
 
@@ -61,16 +61,16 @@
 
     check-cast v4, Lcom/htc/service/WirelessDisplayManager;
 
-    .line 452
+    .line 462
     .local v4, wdm:Lcom/htc/service/WirelessDisplayManager;
     if-eqz v4, :cond_1
 
-    .line 453
+    .line 463
     invoke-virtual {v4}, Lcom/htc/service/WirelessDisplayManager;->getMirrorModeState()I
 
     move-result v2
 
-    .line 454
+    .line 464
     .local v2, nMirrorState:I
     const/4 v5, 0x2
 
@@ -81,57 +81,57 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 460
+    .line 470
     .end local v2           #nMirrorState:I
     :cond_1
     :goto_0
     if-nez v0, :cond_3
 
-    .line 461
+    .line 471
     new-instance v3, Landroid/content/Intent;
 
     const-string v5, "com.htc.wifidisplay.SWITCH_ON_OFF_MIRROR_MODE"
 
     invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 462
+    .line 472
     .local v3, switchMirrorIntent:Landroid/content/Intent;
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayNotification$H;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #getter for: Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
-    invoke-static {v5}, Lcom/htc/server/WirelessDisplayNotification;->access$500(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayNotification;->access$600(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
 
     move-result-object v5
 
     invoke-virtual {v5, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 469
+    .line 479
     .end local v3           #switchMirrorIntent:Landroid/content/Intent;
     :goto_1
     return-void
 
-    .line 454
+    .line 464
     .restart local v2       #nMirrorState:I
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 466
+    .line 476
     .end local v2           #nMirrorState:I
     :cond_3
     new-instance v1, Landroid/content/Intent;
 
-    const-string v5, "com.htc.wifidisplay.CONFIGURE_MODE_NOTIFICATION_LIST"
+    const-string v5, "com.htc.wifidisplay.NOTIFICATION_CONFIGURE_TOOL"
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 467
+    .line 477
     .local v1, dongleListIntent:Landroid/content/Intent;
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayNotification$H;->this$0:Lcom/htc/server/WirelessDisplayNotification;
 
     #getter for: Lcom/htc/server/WirelessDisplayNotification;->mContext:Landroid/content/Context;
-    invoke-static {v5}, Lcom/htc/server/WirelessDisplayNotification;->access$500(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayNotification;->access$600(Lcom/htc/server/WirelessDisplayNotification;)Landroid/content/Context;
 
     move-result-object v5
 
@@ -147,22 +147,22 @@
     .parameter "msg"
 
     .prologue
-    .line 439
+    .line 449
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 447
+    .line 457
     :goto_0
     return-void
 
-    .line 441
+    .line 451
     :pswitch_0
     invoke-direct {p0}, Lcom/htc/server/WirelessDisplayNotification$H;->handleBtnClick()V
 
     goto :goto_0
 
-    .line 439
+    .line 449
     :pswitch_data_0
     .packed-switch 0x1f5
         :pswitch_0

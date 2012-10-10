@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 98
+    .line 101
     iput-object p1, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,23 +35,25 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 7
+    .locals 8
     .parameter "msg"
 
     .prologue
+    const/16 v7, 0x64
+
     const/4 v6, 0x1
 
-    .line 102
+    .line 105
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 144
+    .line 159
     :cond_0
     :goto_0
     return-void
 
-    .line 106
+    .line 109
     :pswitch_0
     const-string v3, "ExternalStorageFormatter"
 
@@ -89,14 +91,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
+    .line 110
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 108
+    .line 111
     .local v2, whichStorage:I
     iget v1, p1, Landroid/os/Message;->arg2:I
 
-    .line 110
+    .line 113
     .local v1, timeoutCnt:I
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
@@ -104,52 +106,61 @@
 
     move-result v3
 
-    if-eq v3, v6, :cond_1
+    if-nez v3, :cond_1
 
-    const/16 v3, 0x64
+    if-le v1, v7, :cond_6
 
-    if-le v1, v3, :cond_5
-
-    .line 112
+    .line 116
     :cond_1
+    if-le v1, v7, :cond_2
+
+    iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
+
+    const/4 v4, -0x1
+
+    #setter for: Lcom/android/internal/os/storage/ExternalStorageFormatter;->mCurrentStorageResult:I
+    invoke-static {v3, v4}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$002(Lcom/android/internal/os/storage/ExternalStorageFormatter;I)I
+
+    .line 118
+    :cond_2
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     #getter for: Lcom/android/internal/os/storage/ExternalStorageFormatter;->htcFormatAction:I
-    invoke-static {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$000(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
+    invoke-static {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$100(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
 
     move-result v3
 
-    if-ne v3, v6, :cond_2
+    if-ne v3, v6, :cond_3
 
-    .line 114
+    .line 120
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v3, v6}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->mountStorage(I)V
 
-    .line 115
+    .line 121
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->stopSelf()V
 
     goto :goto_0
 
-    .line 117
-    :cond_2
+    .line 123
+    :cond_3
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     #getter for: Lcom/android/internal/os/storage/ExternalStorageFormatter;->htcFormatAction:I
-    invoke-static {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$000(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
+    invoke-static {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$100(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
 
     move-result v3
 
     const/4 v4, 0x2
 
-    if-eq v3, v4, :cond_3
+    if-eq v3, v4, :cond_4
 
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     #getter for: Lcom/android/internal/os/storage/ExternalStorageFormatter;->htcFormatAction:I
-    invoke-static {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$000(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
+    invoke-static {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$100(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
 
     move-result v3
 
@@ -157,39 +168,67 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 121
-    :cond_3
-    if-ne v2, v6, :cond_4
+    .line 127
+    :cond_4
+    if-ne v2, v6, :cond_5
 
-    .line 122
+    .line 128
     const-string v3, "ExternalStorageFormatter"
 
     const-string v4, "MSG_CHECK_MOUNT_OK updateProgressState"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
+    .line 135
+    iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
+
+    iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
+
+    #getter for: Lcom/android/internal/os/storage/ExternalStorageFormatter;->mCurrentStorageResult:I
+    invoke-static {v4}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$000(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    #calls: Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateReplyResult(IIZ)V
+    invoke-static {v3, v2, v4, v5}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$200(Lcom/android/internal/os/storage/ExternalStorageFormatter;IIZ)V
+
+    .line 138
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v3, v6}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressState(Z)V
 
     goto :goto_0
 
-    .line 129
-    :cond_4
+    .line 142
+    :cond_5
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v3, v6}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->mountStorage(I)V
 
-    .line 130
+    .line 144
+    iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
+
+    iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
+
+    #getter for: Lcom/android/internal/os/storage/ExternalStorageFormatter;->mCurrentStorageResult:I
+    invoke-static {v4}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$000(Lcom/android/internal/os/storage/ExternalStorageFormatter;)I
+
+    move-result v4
+
+    #calls: Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateReplyResult(IIZ)V
+    invoke-static {v3, v2, v4, v6}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->access$200(Lcom/android/internal/os/storage/ExternalStorageFormatter;IIZ)V
+
+    .line 145
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v3}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->stopSelf()V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 135
-    :cond_5
+    .line 150
+    :cond_6
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     iget-object v3, v3, Lcom/android/internal/os/storage/ExternalStorageFormatter;->mHandler:Landroid/os/Handler;
@@ -202,7 +241,7 @@
 
     move-result-object v0
 
-    .line 136
+    .line 151
     .local v0, checkMsg:Landroid/os/Message;
     iget-object v3, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$1;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
@@ -214,7 +253,7 @@
 
     goto/16 :goto_0
 
-    .line 102
+    .line 105
     :pswitch_data_0
     .packed-switch 0x15667
         :pswitch_0

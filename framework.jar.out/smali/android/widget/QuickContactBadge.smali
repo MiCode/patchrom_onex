@@ -70,7 +70,7 @@
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "lookup"
+    const-string v1, "lookup"
 
     aput-object v1, v0, v3
 
@@ -83,7 +83,7 @@
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "lookup"
+    const-string v1, "lookup"
 
     aput-object v1, v0, v3
 
@@ -137,7 +137,7 @@
     iput-object v1, p0, Landroid/widget/QuickContactBadge;->mExcludeMimes:[Ljava/lang/String;
 
     .line 96
-    iget-object v1, p0, Landroid/widget/QuickContactBadge;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     sget-object v2, Lcom/android/internal/R$styleable;->Theme:[I
 
@@ -161,7 +161,7 @@
     .line 101
     new-instance v1, Landroid/widget/QuickContactBadge$QueryHandler;
 
-    iget-object v2, p0, Landroid/widget/QuickContactBadge;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 

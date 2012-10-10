@@ -27,12 +27,12 @@
     .parameter
 
     .prologue
-    .line 180
+    .line 183
     iput-object p1, p0, Landroid/media/audiofx/BassEnhance$BaseParameterListener;->this$0:Landroid/media/audiofx/BassEnhance;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 182
+    .line 185
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .parameter "x1"
 
     .prologue
-    .line 179
+    .line 182
     invoke-direct {p0, p1}, Landroid/media/audiofx/BassEnhance$BaseParameterListener;-><init>(Landroid/media/audiofx/BassEnhance;)V
 
     return-void
@@ -62,10 +62,10 @@
 
     const/4 v5, -0x1
 
-    .line 184
+    .line 188
     const/4 v0, 0x0
 
-    .line 186
+    .line 190
     .local v0, l:Landroid/media/audiofx/BassEnhance$OnParameterChangeListener;
     iget-object v3, p0, Landroid/media/audiofx/BassEnhance$BaseParameterListener;->this$0:Landroid/media/audiofx/BassEnhance;
 
@@ -76,7 +76,7 @@
 
     monitor-enter v4
 
-    .line 187
+    .line 191
     :try_start_0
     iget-object v3, p0, Landroid/media/audiofx/BassEnhance$BaseParameterListener;->this$0:Landroid/media/audiofx/BassEnhance;
 
@@ -87,7 +87,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 188
+    .line 192
     iget-object v3, p0, Landroid/media/audiofx/BassEnhance$BaseParameterListener;->this$0:Landroid/media/audiofx/BassEnhance;
 
     #getter for: Landroid/media/audiofx/BassEnhance;->mParamListener:Landroid/media/audiofx/BassEnhance$OnParameterChangeListener;
@@ -95,23 +95,23 @@
 
     move-result-object v0
 
-    .line 190
+    .line 194
     :cond_0
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 191
+    .line 195
     if-eqz v0, :cond_3
 
-    .line 192
+    .line 196
     const/4 v1, -0x1
 
-    .line 193
+    .line 197
     .local v1, p:I
     const/4 v2, -0x1
 
-    .line 195
+    .line 199
     .local v2, v:S
     array-length v3, p3
 
@@ -119,14 +119,14 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 196
+    .line 200
     iget-object v3, p0, Landroid/media/audiofx/BassEnhance$BaseParameterListener;->this$0:Landroid/media/audiofx/BassEnhance;
 
     invoke-virtual {v3, p3, v6}, Landroid/media/audiofx/BassEnhance;->byteArrayToInt([BI)I
 
     move-result v1
 
-    .line 198
+    .line 202
     :cond_1
     array-length v3, p4
 
@@ -134,31 +134,31 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 199
+    .line 203
     iget-object v3, p0, Landroid/media/audiofx/BassEnhance$BaseParameterListener;->this$0:Landroid/media/audiofx/BassEnhance;
 
     invoke-virtual {v3, p4, v6}, Landroid/media/audiofx/BassEnhance;->byteArrayToShort([BI)S
 
     move-result v2
 
-    .line 201
+    .line 205
     :cond_2
     if-eq v1, v5, :cond_3
 
     if-eq v2, v5, :cond_3
 
-    .line 202
+    .line 206
     iget-object v3, p0, Landroid/media/audiofx/BassEnhance$BaseParameterListener;->this$0:Landroid/media/audiofx/BassEnhance;
 
     invoke-interface {v0, v3, p2, v1, v2}, Landroid/media/audiofx/BassEnhance$OnParameterChangeListener;->onParameterChange(Landroid/media/audiofx/BassEnhance;IIS)V
 
-    .line 205
+    .line 209
     .end local v1           #p:I
     .end local v2           #v:S
     :cond_3
     return-void
 
-    .line 190
+    .line 194
     :catchall_0
     move-exception v3
 

@@ -155,6 +155,7 @@
     <string name="htc_add_a_playlist">Add a playlist</string>
     <string name="htc_delete_playlists">Delete playlists</string>
     <string name="htc_delete_playlist">Delete playlist</string>
+    <string name="htc_delete_all_playlists">Delete all playlists</string>
     <string name="htc_playlist_add_songs">Add songs</string>
     <string name="htc_playlist_del_songs">Delete songs</string>
     <string name="htc_playlist_remove_songs">Remove songs</string>
@@ -475,6 +476,7 @@ Tap Next to continue."</string>
     <string name="title_buffering">Buffering…</string>
     <string name="title_send_content">Sending content…</string>
     <string name="no_downloaded_apps_found">No downloaded apps found</string>
+    <string name="music_folder_picker_dialog_msg">Add songs to playlists by selecting the folder? “No” to add songs the other way</string>
     <string name="albumsongseparator">"
 "</string>
     <string name="notification_artist_album">%2$s - %1$s</string>

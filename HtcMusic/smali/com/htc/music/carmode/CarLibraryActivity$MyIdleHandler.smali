@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 772
+    .line 776
     iput-object p1, p0, Lcom/htc/music/carmode/CarLibraryActivity$MyIdleHandler;->this$0:Lcom/htc/music/carmode/CarLibraryActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 775
+    .line 779
     iget-object v1, p0, Lcom/htc/music/carmode/CarLibraryActivity$MyIdleHandler;->this$0:Lcom/htc/music/carmode/CarLibraryActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLibraryActivity;->mUIHandler:Landroid/os/Handler;
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    .line 776
+    .line 780
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/music/carmode/CarLibraryActivity$MyIdleHandler;->this$0:Lcom/htc/music/carmode/CarLibraryActivity;
 
@@ -63,7 +63,7 @@
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 777
+    .line 781
     iget-object v1, p0, Lcom/htc/music/carmode/CarLibraryActivity$MyIdleHandler;->this$0:Lcom/htc/music/carmode/CarLibraryActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLibraryActivity;->mUIHandler:Landroid/os/Handler;
@@ -73,7 +73,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 779
+    .line 783
     const/4 v1, 0x0
 
     return v1

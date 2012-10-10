@@ -3,29 +3,17 @@
 .source "HTCCamera.java"
 
 # interfaces
-.implements Lcom/android/camera/event/EventHandler;
+.implements Landroid/content/DialogInterface$OnKeyListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/HTCCamera;->setupEventHandlers()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/camera/HTCCamera;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/android/camera/event/EventHandler",
-        "<",
-        "Lcom/android/camera/OneValueEventArgs",
-        "<",
-        "Lcom/android/camera/io/StorageSlot;",
-        ">;>;"
-    }
 .end annotation
 
 
@@ -39,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 6263
+    .line 7660
     iput-object p1, p0, Lcom/android/camera/HTCCamera$28;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -49,57 +37,42 @@
 
 
 # virtual methods
-.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/OneValueEventArgs;)V
-    .locals 2
-    .parameter
-    .parameter "sender"
-    .parameter
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/camera/event/Event",
-            "<",
-            "Lcom/android/camera/OneValueEventArgs",
-            "<",
-            "Lcom/android/camera/io/StorageSlot;",
-            ">;>;",
-            "Ljava/lang/Object;",
-            "Lcom/android/camera/OneValueEventArgs",
-            "<",
-            "Lcom/android/camera/io/StorageSlot;",
-            ">;)V"
-        }
-    .end annotation
+.method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
+    .locals 1
+    .parameter "dialog"
+    .parameter "keyCode"
+    .parameter "event"
 
     .prologue
-    .line 6267
-    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/io/StorageSlot;>;>;"
-    .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/io/StorageSlot;>;"
-    iget-object v1, p0, Lcom/android/camera/HTCCamera$28;->this$0:Lcom/android/camera/HTCCamera;
+    .line 7663
+    sparse-switch p2, :sswitch_data_0
 
-    iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
+    .line 7672
+    const/4 v0, 0x0
 
-    check-cast v0, Lcom/android/camera/io/StorageSlot;
+    :goto_0
+    return v0
 
-    #calls: Lcom/android/camera/HTCCamera;->onStorageUnmounted(Lcom/android/camera/io/StorageSlot;)V
-    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4900(Lcom/android/camera/HTCCamera;Lcom/android/camera/io/StorageSlot;)V
+    .line 7667
+    :sswitch_0
+    const/4 v0, 0x1
 
-    .line 6268
-    return-void
-.end method
+    goto :goto_0
 
-.method public bridge synthetic onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .line 7670
+    :sswitch_1
+    invoke-static {}, Lcom/android/camera/FeatureConfig;->canChangeZoomByVolumeKeys()Z
 
-    .prologue
-    .line 6263
-    check-cast p3, Lcom/android/camera/OneValueEventArgs;
+    move-result v0
 
-    .end local p3
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/HTCCamera$28;->onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/OneValueEventArgs;)V
+    goto :goto_0
 
-    return-void
+    .line 7663
+    :sswitch_data_0
+    .sparse-switch
+        0x18 -> :sswitch_1
+        0x19 -> :sswitch_1
+        0x52 -> :sswitch_0
+        0x54 -> :sswitch_0
+    .end sparse-switch
 .end method

@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera/property/PropertyChangedCallback",
         "<",
-        "Lcom/android/camera/TakingPictureState;",
+        "Lcom/android/camera/UIState;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 344
+    .line 370
     iput-object p1, p0, Lcom/android/camera/component/MainBar$15;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
 # virtual methods
 .method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
-    .locals 1
+    .locals 2
     .parameter
     .parameter
     .annotation system Ldalvik/annotation/Signature;
@@ -56,24 +56,28 @@
             "(",
             "Lcom/android/camera/property/Property",
             "<",
-            "Lcom/android/camera/TakingPictureState;",
+            "Lcom/android/camera/UIState;",
             ">;",
             "Lcom/android/camera/property/PropertyChangedEventArgs",
             "<",
-            "Lcom/android/camera/TakingPictureState;",
+            "Lcom/android/camera/UIState;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 348
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/TakingPictureState;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/TakingPictureState;>;"
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$15;->this$0:Lcom/android/camera/component/MainBar;
+    .line 374
+    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/UIState;>;"
+    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/UIState;>;"
+    iget-object v1, p0, Lcom/android/camera/component/MainBar$15;->this$0:Lcom/android/camera/component/MainBar;
 
-    #calls: Lcom/android/camera/component/MainBar;->updateButtonStates()V
-    invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1400(Lcom/android/camera/component/MainBar;)V
+    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
-    .line 349
+    check-cast v0, Lcom/android/camera/UIState;
+
+    #calls: Lcom/android/camera/component/MainBar;->onSettingsPanelStateChanged(Lcom/android/camera/UIState;)V
+    invoke-static {v1, v0}, Lcom/android/camera/component/MainBar;->access$1600(Lcom/android/camera/component/MainBar;Lcom/android/camera/UIState;)V
+
+    .line 375
     return-void
 .end method

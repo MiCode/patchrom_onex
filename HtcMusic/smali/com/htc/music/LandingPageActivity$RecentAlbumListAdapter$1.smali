@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 1487
+    .line 1316
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->this$0:Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
 
     iput-object p2, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$tempActivity:Lcom/htc/music/LandingPageActivity;
@@ -62,12 +62,12 @@
     .parameter "arg0"
 
     .prologue
-    .line 1490
+    .line 1319
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$tempActivity:Lcom/htc/music/LandingPageActivity;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 1491
+    .line 1320
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$tempActivity:Lcom/htc/music/LandingPageActivity;
 
     iget-object v1, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$albumName:Ljava/lang/String;
@@ -75,7 +75,7 @@
     #setter for: Lcom/htc/music/LandingPageActivity;->mSelectedAlbumName:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/htc/music/LandingPageActivity;->access$4502(Lcom/htc/music/LandingPageActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1492
+    .line 1321
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$tempActivity:Lcom/htc/music/LandingPageActivity;
 
     iget-object v1, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$artistName:Ljava/lang/String;
@@ -83,7 +83,7 @@
     #setter for: Lcom/htc/music/LandingPageActivity;->mSelectedArtistName:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/htc/music/LandingPageActivity;->access$4602(Lcom/htc/music/LandingPageActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1493
+    .line 1322
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$tempActivity:Lcom/htc/music/LandingPageActivity;
 
     iget v1, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$albumId:I
@@ -91,12 +91,12 @@
     #setter for: Lcom/htc/music/LandingPageActivity;->mSelectedAlbumId:I
     invoke-static {v0, v1}, Lcom/htc/music/LandingPageActivity;->access$4702(Lcom/htc/music/LandingPageActivity;I)I
 
-    .line 1494
+    .line 1323
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$1;->val$tempActivity:Lcom/htc/music/LandingPageActivity;
 
     #calls: Lcom/htc/music/LandingPageActivity;->showAlbumOptions()V
     invoke-static {v0}, Lcom/htc/music/LandingPageActivity;->access$4800(Lcom/htc/music/LandingPageActivity;)V
 
-    .line 1495
+    .line 1324
     return-void
 .end method

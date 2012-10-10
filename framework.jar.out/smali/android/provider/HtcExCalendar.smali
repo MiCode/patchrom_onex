@@ -48,12 +48,12 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 62
     const/4 v0, -0x1
 
     sput v0, Landroid/provider/HtcExCalendar;->isFacebookAccountTypeChecked:I
 
-    .line 80
+    .line 92
     const-string v0, "content://com.android.calendar/eas_tracking"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -62,7 +62,7 @@
 
     sput-object v0, Landroid/provider/HtcExCalendar;->EAS_TRACKING_URI:Landroid/net/Uri;
 
-    .line 86
+    .line 98
     const-string v0, "content://com.android.calendar/easSyncInfo"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroid/provider/HtcExCalendar;->CONTENT_EAS_SYNCINFO_URI:Landroid/net/Uri;
 
-    .line 89
+    .line 102
     const-string v0, "content://com.android.calendar/pcsc_tracking"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -80,7 +80,7 @@
 
     sput-object v0, Landroid/provider/HtcExCalendar;->PCSC_TRACKING_URI:Landroid/net/Uri;
 
-    .line 92
+    .line 106
     const-string v0, "content://com.android.calendar/myphonebook_tracking"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -99,7 +99,7 @@
     .line 16
     invoke-direct {p0}, Landroid/provider/HtcCalendarContract;-><init>()V
 
-    .line 339
+    .line 365
     return-void
 .end method
 
@@ -107,7 +107,7 @@
     .locals 1
 
     .prologue
-    .line 26
+    .line 28
     const-string v0, "com.google"
 
     return-object v0
@@ -117,7 +117,7 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 32
     const-string v0, "com.htc.android.mail.eas"
 
     return-object v0
@@ -130,14 +130,14 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 54
+    .line 65
     const-string v0, "com.facebook.auth.login"
 
-    .line 55
+    .line 66
     .local v0, FacebookSSOType:Ljava/lang/String;
     const-string v1, "com.htc.socialnetwork.facebook"
 
-    .line 57
+    .line 68
     .local v1, FacebookType:Ljava/lang/String;
     sget v6, Landroid/provider/HtcExCalendar;->isFacebookAccountTypeChecked:I
 
@@ -145,12 +145,12 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 58
+    .line 69
     const/4 v6, 0x0
 
     sput v6, Landroid/provider/HtcExCalendar;->isFacebookAccountTypeChecked:I
 
-    .line 60
+    .line 71
     invoke-static {p0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
     move-result-object v6
@@ -159,11 +159,11 @@
 
     move-result-object v2
 
-    .line 61
+    .line 72
     .local v2, authDescs:[Landroid/accounts/AuthenticatorDescription;
     array-length v4, v2
 
-    .line 62
+    .line 73
     .local v4, len:I
     const/4 v3, 0x0
 
@@ -171,12 +171,12 @@
     :goto_0
     if-ge v3, v4, :cond_1
 
-    .line 63
+    .line 74
     aget-object v6, v2, v3
 
     iget-object v5, v6, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
-    .line 64
+    .line 75
     .local v5, tt:Ljava/lang/String;
     aget-object v6, v2, v3
 
@@ -188,16 +188,16 @@
 
     if-eqz v6, :cond_0
 
-    .line 65
+    .line 76
     sput v8, Landroid/provider/HtcExCalendar;->isFacebookAccountTypeChecked:I
 
-    .line 62
+    .line 73
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 69
+    .line 80
     .end local v2           #authDescs:[Landroid/accounts/AuthenticatorDescription;
     .end local v3           #i:I
     .end local v4           #len:I
@@ -218,11 +218,21 @@
     goto :goto_1
 .end method
 
+.method public static getHtcGooleTaskAccountType()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 59
+    const-string v0, "com.google/task"
+
+    return-object v0
+.end method
+
 .method public static getHtcGreetingAccountType()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 48
+    .line 50
     const-string v0, "HTC_BirthdayEvent"
 
     return-object v0
@@ -232,7 +242,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 46
     const-string v0, "com.htc.task/task"
 
     return-object v0
@@ -242,7 +252,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 36
     const-string v0, "com.htc.pcsc"
 
     return-object v0
@@ -252,7 +262,7 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 40
     const-string v0, "com.htc.android.mail.eas/task"
 
     return-object v0
@@ -262,8 +272,18 @@
     .locals 1
 
     .prologue
-    .line 41
+    .line 43
     const-string v0, "com.htc.android.windowslive"
+
+    return-object v0
+.end method
+
+.method public static getHtcWindowsLiveTaskAccountType()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 55
+    const-string v0, "com.htc.android.windowslive/task"
 
     return-object v0
 .end method
@@ -272,7 +292,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 85
     const-string v0, "com.tmi.myphonebook"
 
     return-object v0

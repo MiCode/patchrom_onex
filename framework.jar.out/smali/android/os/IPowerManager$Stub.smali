@@ -32,6 +32,8 @@
 
 .field static final TRANSACTION_crash:I = 0x10
 
+.field static final TRANSACTION_fetchCurrentBrightnessValue:I = 0x1a
+
 .field static final TRANSACTION_getProximitySensorActive:I = 0x18
 
 .field static final TRANSACTION_getSupportedWakeLockFlags:I = 0xa
@@ -166,7 +168,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 312
+    .line 320
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -1035,6 +1037,30 @@
 
     goto :goto_a
 
+    .line 313
+    .end local v1           #_arg0:J
+    :sswitch_1a
+    const-string v0, "android.os.IPowerManager"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 314
+    invoke-virtual {p0}, Landroid/os/IPowerManager$Stub;->fetchCurrentBrightnessValue()I
+
+    move-result v9
+
+    .line 315
+    .local v9, _result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 316
+    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 317
+    const/4 v0, 0x1
+
+    goto/16 :goto_0
+
     .line 39
     :sswitch_data_0
     .sparse-switch
@@ -1063,6 +1089,7 @@
         0x17 -> :sswitch_17
         0x18 -> :sswitch_18
         0x19 -> :sswitch_19
+        0x1a -> :sswitch_1a
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 169
+    .line 179
     iput-object p1, p0, Lcom/android/camera/mirror/MirrorActivity$1;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,12 +39,12 @@
     .parameter "msg"
 
     .prologue
-    .line 173
+    .line 183
     iget-object v0, p0, Lcom/android/camera/mirror/MirrorActivity$1;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     #calls: Lcom/android/camera/mirror/MirrorActivity;->handleMessage(Landroid/os/Message;)V
-    invoke-static {v0, p1}, Lcom/android/camera/mirror/MirrorActivity;->access$000(Lcom/android/camera/mirror/MirrorActivity;Landroid/os/Message;)V
+    invoke-static {v0, p1}, Lcom/android/camera/mirror/MirrorActivity;->access$100(Lcom/android/camera/mirror/MirrorActivity;Landroid/os/Message;)V
 
-    .line 174
+    .line 184
     return-void
 .end method

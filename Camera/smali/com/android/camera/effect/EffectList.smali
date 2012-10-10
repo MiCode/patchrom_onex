@@ -63,33 +63,33 @@
     .end annotation
 
     .prologue
-    .line 41
+    .line 42
     .local p2, allEffects:Ljava/util/List;,"Ljava/util/List<Lcom/android/camera/effect/EffectBase;>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
 
-    .line 34
+    .line 35
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
-    .line 42
+    .line 43
     if-nez p1, :cond_0
 
-    .line 44
+    .line 45
     const-string v0, "cameraActivity"
 
     invoke-static {v0}, Lcom/android/camera/debug/Debugger;->printArgumentNullLog(Ljava/lang/String;)V
 
-    .line 45
+    .line 46
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "cameraActivity is NULL"
@@ -98,16 +98,16 @@
 
     throw v0
 
-    .line 47
+    .line 48
     :cond_0
     iput-object p1, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
-    .line 48
+    .line 49
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 49
+    .line 50
     return-void
 .end method
 
@@ -117,7 +117,7 @@
     .parameter "flags"
 
     .prologue
-    .line 131
+    .line 132
     const-string v0, "EffectList"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -150,12 +150,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 132
+    .line 133
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
 
     invoke-virtual {p1, v0, p2}, Lcom/android/camera/effect/EffectBase;->prepareApply(Lcom/android/camera/effect/EffectBase;I)V
 
-    .line 133
+    .line 134
     return-void
 .end method
 
@@ -166,7 +166,7 @@
     .parameter "flags"
 
     .prologue
-    .line 164
+    .line 165
     const-string v0, "EffectList"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -199,10 +199,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
+    .line 166
     invoke-virtual {p1, p2, p3}, Lcom/android/camera/effect/EffectBase;->prepareApply(Lcom/android/camera/effect/EffectBase;I)V
 
-    .line 166
+    .line 167
     return-void
 .end method
 
@@ -211,27 +211,27 @@
     .parameter "effect"
 
     .prologue
-    .line 206
+    .line 207
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
 
-    .line 207
+    .line 208
     .local v0, prevEffect:Lcom/android/camera/effect/EffectBase;
     if-eqz v0, :cond_0
 
-    .line 208
+    .line 209
     invoke-virtual {v0, p1}, Lcom/android/camera/effect/EffectBase;->cancel(Lcom/android/camera/effect/EffectBase;)V
 
-    .line 211
+    .line 212
     :cond_0
     iput-object p1, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
 
-    .line 212
+    .line 213
     if-eqz p1, :cond_1
 
-    .line 213
+    .line 214
     invoke-virtual {p1, v0}, Lcom/android/camera/effect/EffectBase;->apply(Lcom/android/camera/effect/EffectBase;)V
 
-    .line 214
+    .line 215
     :cond_1
     return-void
 .end method
@@ -242,7 +242,7 @@
     .locals 2
 
     .prologue
-    .line 56
+    .line 57
     iget-object v1, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -251,13 +251,13 @@
 
     new-array v0, v1, [Lcom/android/camera/effect/EffectBase;
 
-    .line 57
+    .line 58
     .local v0, effects:[Lcom/android/camera/effect/EffectBase;
     iget-object v1, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 58
+    .line 59
     return-object v0
 .end method
 
@@ -265,7 +265,7 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
 
     return-object v0
@@ -275,7 +275,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -290,7 +290,7 @@
     .parameter "index"
 
     .prologue
-    .line 82
+    .line 83
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -307,15 +307,15 @@
     .parameter "name"
 
     .prologue
-    .line 87
+    .line 88
     if-nez p1, :cond_0
 
-    .line 89
+    .line 90
     const-string v2, "name"
 
     invoke-static {v2}, Lcom/android/camera/debug/Debugger;->printArgumentNullLog(Ljava/lang/String;)V
 
-    .line 90
+    .line 91
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "name is NULL"
@@ -324,7 +324,7 @@
 
     throw v2
 
-    .line 94
+    .line 95
     :cond_0
     iget-object v2, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
@@ -346,7 +346,7 @@
 
     check-cast v0, Lcom/android/camera/effect/EffectBase;
 
-    .line 96
+    .line 97
     .local v0, effect:Lcom/android/camera/effect/EffectBase;
     invoke-virtual {v0}, Lcom/android/camera/effect/EffectBase;->getName()Ljava/lang/String;
 
@@ -358,7 +358,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 99
+    .line 100
     .end local v0           #effect:Lcom/android/camera/effect/EffectBase;
     :goto_0
     return-object v0
@@ -375,7 +375,7 @@
     .parameter "flags"
 
     .prologue
-    .line 127
+    .line 128
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -386,7 +386,7 @@
 
     invoke-direct {p0, v0, p2}, Lcom/android/camera/effect/EffectList;->prepareApplyEffectInternal(Lcom/android/camera/effect/EffectBase;I)V
 
-    .line 128
+    .line 129
     return-void
 .end method
 
@@ -396,15 +396,15 @@
     .parameter "flags"
 
     .prologue
-    .line 108
+    .line 109
     if-nez p1, :cond_0
 
-    .line 110
+    .line 111
     const-string v2, "name"
 
     invoke-static {v2}, Lcom/android/camera/debug/Debugger;->printArgumentNullLog(Ljava/lang/String;)V
 
-    .line 111
+    .line 112
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "name is NULL"
@@ -413,7 +413,7 @@
 
     throw v2
 
-    .line 115
+    .line 116
     :cond_0
     iget-object v2, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
@@ -435,7 +435,7 @@
 
     check-cast v0, Lcom/android/camera/effect/EffectBase;
 
-    .line 117
+    .line 118
     .local v0, effect:Lcom/android/camera/effect/EffectBase;
     invoke-virtual {v0}, Lcom/android/camera/effect/EffectBase;->getName()Ljava/lang/String;
 
@@ -447,15 +447,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 119
+    .line 120
     invoke-direct {p0, v0, p2}, Lcom/android/camera/effect/EffectList;->prepareApplyEffectInternal(Lcom/android/camera/effect/EffectBase;I)V
 
-    .line 124
+    .line 125
     .end local v0           #effect:Lcom/android/camera/effect/EffectBase;
     :goto_0
     return-void
 
-    .line 123
+    .line 124
     :cond_2
     const-string v2, "EffectList"
 
@@ -495,7 +495,7 @@
     .parameter "flags"
 
     .prologue
-    .line 160
+    .line 161
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -506,7 +506,7 @@
 
     invoke-direct {p0, v0, p2, p3}, Lcom/android/camera/effect/EffectList;->prepareCancelEffectInternal(Lcom/android/camera/effect/EffectBase;Lcom/android/camera/effect/EffectBase;I)V
 
-    .line 161
+    .line 162
     return-void
 .end method
 
@@ -517,15 +517,15 @@
     .parameter "flags"
 
     .prologue
-    .line 141
+    .line 142
     if-nez p1, :cond_0
 
-    .line 143
+    .line 144
     const-string v2, "name"
 
     invoke-static {v2}, Lcom/android/camera/debug/Debugger;->printArgumentNullLog(Ljava/lang/String;)V
 
-    .line 144
+    .line 145
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "name is NULL"
@@ -534,7 +534,7 @@
 
     throw v2
 
-    .line 148
+    .line 149
     :cond_0
     iget-object v2, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
@@ -556,7 +556,7 @@
 
     check-cast v0, Lcom/android/camera/effect/EffectBase;
 
-    .line 150
+    .line 151
     .local v0, effect:Lcom/android/camera/effect/EffectBase;
     invoke-virtual {v0}, Lcom/android/camera/effect/EffectBase;->getName()Ljava/lang/String;
 
@@ -568,15 +568,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 152
+    .line 153
     invoke-direct {p0, v0, p2, p3}, Lcom/android/camera/effect/EffectList;->prepareCancelEffectInternal(Lcom/android/camera/effect/EffectBase;Lcom/android/camera/effect/EffectBase;I)V
 
-    .line 157
+    .line 158
     .end local v0           #effect:Lcom/android/camera/effect/EffectBase;
     :goto_0
     return-void
 
-    .line 156
+    .line 157
     :cond_2
     const-string v2, "EffectList"
 
@@ -614,19 +614,19 @@
     .parameter "effect"
 
     .prologue
-    .line 185
+    .line 186
     if-nez p1, :cond_0
 
-    .line 187
+    .line 188
     const-string v0, "effect"
 
     invoke-static {v0}, Lcom/android/camera/debug/Debugger;->printArgumentNullLog(Ljava/lang/String;)V
 
-    .line 202
+    .line 203
     :goto_0
     return-void
 
-    .line 190
+    .line 191
     :cond_0
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
@@ -636,7 +636,7 @@
 
     if-nez v0, :cond_1
 
-    .line 192
+    .line 193
     const-string v0, "EffectList"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -671,20 +671,20 @@
 
     goto :goto_0
 
-    .line 197
+    .line 198
     :cond_1
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_OnEffectChangedListener:Lcom/android/camera/effect/EffectList$OnEffectChangedListener;
 
     if-eqz v0, :cond_2
 
-    .line 198
+    .line 199
     iget-object v0, p0, Lcom/android/camera/effect/EffectList;->m_OnEffectChangedListener:Lcom/android/camera/effect/EffectList$OnEffectChangedListener;
 
     iget-object v1, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
 
     invoke-interface {v0, p0, v1, p1}, Lcom/android/camera/effect/EffectList$OnEffectChangedListener;->onEffectChanged(Lcom/android/camera/effect/EffectList;Lcom/android/camera/effect/EffectBase;Lcom/android/camera/effect/EffectBase;)V
 
-    .line 201
+    .line 202
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectList;->setEffectInternal(Lcom/android/camera/effect/EffectBase;)V
 
@@ -705,7 +705,7 @@
     .end annotation
 
     .prologue
-    .line 173
+    .line 174
     .local p1, effectClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/android/camera/effect/EffectBase;>;"
     iget-object v2, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
@@ -727,7 +727,7 @@
 
     check-cast v0, Lcom/android/camera/effect/EffectBase;
 
-    .line 175
+    .line 176
     .local v0, effect:Lcom/android/camera/effect/EffectBase;
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -739,10 +739,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 177
+    .line 178
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/EffectList;->setCurrentEffect(Lcom/android/camera/effect/EffectBase;)V
 
-    .line 181
+    .line 182
     .end local v0           #effect:Lcom/android/camera/effect/EffectBase;
     :cond_1
     return-void
@@ -753,248 +753,275 @@
     .parameter "listener"
 
     .prologue
-    .line 221
+    .line 222
     iput-object p1, p0, Lcom/android/camera/effect/EffectList;->m_OnEffectChangedListener:Lcom/android/camera/effect/EffectList$OnEffectChangedListener;
 
-    .line 222
+    .line 223
     return-void
 .end method
 
 .method public final updateCurrentEffects()V
-    .locals 11
+    .locals 12
 
     .prologue
-    .line 230
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
+    .line 231
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
-    iget-object v8, v8, Lcom/android/camera/HTCCamera;->cameraMode:Lcom/android/camera/property/Property;
+    iget-object v9, v9, Lcom/android/camera/HTCCamera;->cameraMode:Lcom/android/camera/property/Property;
 
-    invoke-virtual {v8}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+    invoke-virtual {v9}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/android/camera/CameraMode;
+
+    .line 232
+    .local v7, mode:Lcom/android/camera/CameraMode;
+    sget-object v9, Lcom/android/camera/CameraMode;->Photo:Lcom/android/camera/CameraMode;
+
+    if-ne v7, v9, :cond_2
+
+    const/16 v8, 0x10
+
+    .line 234
+    .local v8, modeCapabilityFlag:I
+    :goto_0
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
+
+    invoke-virtual {v9}, Lcom/android/camera/HTCCamera;->getStartMode()Lcom/android/camera/CameraStartMode;
 
     move-result-object v6
 
-    check-cast v6, Lcom/android/camera/CameraMode;
+    .line 235
+    .local v6, mStartMode:Lcom/android/camera/CameraStartMode;
+    iget-boolean v9, v6, Lcom/android/camera/CameraStartMode;->isServiceMode:Z
 
-    .line 231
-    .local v6, mode:Lcom/android/camera/CameraMode;
-    sget-object v8, Lcom/android/camera/CameraMode;->Photo:Lcom/android/camera/CameraMode;
+    if-eqz v9, :cond_0
 
-    if-ne v6, v8, :cond_1
+    iget-boolean v9, v6, Lcom/android/camera/CameraStartMode;->supportsVideoMode:Z
 
-    const/16 v7, 0x10
+    if-eqz v9, :cond_0
 
-    .line 234
-    .local v7, modeCapabilityFlag:I
-    :goto_0
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
+    iget-boolean v9, v6, Lcom/android/camera/CameraStartMode;->supportsPhotoMode:Z
 
-    iget-object v8, v8, Lcom/android/camera/HTCCamera;->cameraType:Lcom/android/camera/property/Property;
+    if-nez v9, :cond_0
 
-    invoke-virtual {v8}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+    .line 236
+    const/16 v8, 0x20
+
+    .line 239
+    :cond_0
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
+
+    iget-object v9, v9, Lcom/android/camera/HTCCamera;->cameraType:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v9}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera/CameraType;
 
-    .line 236
+    .line 241
     .local v1, cameraType:Lcom/android/camera/CameraType;
-    sget-object v8, Lcom/android/camera/effect/EffectList$1;->$SwitchMap$com$android$camera$CameraType:[I
+    sget-object v9, Lcom/android/camera/effect/EffectList$1;->$SwitchMap$com$android$camera$CameraType:[I
 
     invoke-virtual {v1}, Lcom/android/camera/CameraType;->ordinal()I
 
-    move-result v9
+    move-result v10
 
-    aget v8, v8, v9
+    aget v9, v9, v10
 
-    packed-switch v8, :pswitch_data_0
+    packed-switch v9, :pswitch_data_0
 
-    .line 248
-    const-string v8, "EffectList"
+    .line 253
+    const-string v9, "EffectList"
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "Unknown camera type : "
+    const-string v11, "Unknown camera type : "
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-static {v8, v9}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 249
-    const/4 v0, 0x0
+    invoke-static {v9, v10}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 254
+    const/4 v0, 0x0
+
+    .line 259
     .local v0, cameraCapabilityFlag:I
     :goto_1
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
-    invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
 
-    .line 255
+    .line 260
     const/4 v5, 0x0
 
     .local v5, i:I
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
 
-    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
     .local v3, count:I
     :goto_2
-    if-ge v5, v3, :cond_3
+    if-ge v5, v3, :cond_4
 
-    .line 257
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
+    .line 262
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_AllEffects:Ljava/util/ArrayList;
 
-    invoke-virtual {v8, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v9, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/camera/effect/EffectBase;
 
-    .line 258
+    .line 263
     .local v4, effect:Lcom/android/camera/effect/EffectBase;
     invoke-virtual {v4}, Lcom/android/camera/effect/EffectBase;->getCapabilities()I
 
     move-result v2
 
-    .line 259
+    .line 264
     .local v2, capabilities:I
-    and-int v8, v2, v7
+    and-int v9, v2, v8
 
-    if-ne v8, v7, :cond_2
+    if-ne v9, v8, :cond_3
 
-    and-int v8, v2, v0
+    and-int v9, v2, v0
 
-    if-ne v8, v0, :cond_2
+    if-ne v9, v0, :cond_3
+
+    .line 265
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
+
+    invoke-virtual {v9, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 260
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
-
-    invoke-virtual {v8, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 255
-    :cond_0
+    :cond_1
     :goto_3
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 231
+    .line 232
     .end local v0           #cameraCapabilityFlag:I
     .end local v1           #cameraType:Lcom/android/camera/CameraType;
     .end local v2           #capabilities:I
     .end local v3           #count:I
     .end local v4           #effect:Lcom/android/camera/effect/EffectBase;
     .end local v5           #i:I
-    .end local v7           #modeCapabilityFlag:I
-    :cond_1
-    const/16 v7, 0x20
+    .end local v6           #mStartMode:Lcom/android/camera/CameraStartMode;
+    .end local v8           #modeCapabilityFlag:I
+    :cond_2
+    const/16 v8, 0x20
 
     goto :goto_0
 
-    .line 239
+    .line 244
     .restart local v1       #cameraType:Lcom/android/camera/CameraType;
-    .restart local v7       #modeCapabilityFlag:I
+    .restart local v6       #mStartMode:Lcom/android/camera/CameraStartMode;
+    .restart local v8       #modeCapabilityFlag:I
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 240
+    .line 245
     .restart local v0       #cameraCapabilityFlag:I
     goto :goto_1
 
-    .line 242
+    .line 247
     .end local v0           #cameraCapabilityFlag:I
     :pswitch_1
     const/4 v0, 0x2
 
-    .line 243
+    .line 248
     .restart local v0       #cameraCapabilityFlag:I
     goto :goto_1
 
-    .line 245
+    .line 250
     .end local v0           #cameraCapabilityFlag:I
     :pswitch_2
     const/4 v0, 0x4
 
-    .line 246
+    .line 251
     .restart local v0       #cameraCapabilityFlag:I
     goto :goto_1
 
-    .line 261
+    .line 266
     .restart local v2       #capabilities:I
     .restart local v3       #count:I
     .restart local v4       #effect:Lcom/android/camera/effect/EffectBase;
     .restart local v5       #i:I
-    :cond_2
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
+    :cond_3
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
 
-    if-ne v8, v4, :cond_0
+    if-ne v9, v4, :cond_1
 
-    .line 262
-    const/4 v8, 0x0
+    .line 267
+    const/4 v9, 0x0
 
-    invoke-direct {p0, v8}, Lcom/android/camera/effect/EffectList;->setEffectInternal(Lcom/android/camera/effect/EffectBase;)V
+    invoke-direct {p0, v9}, Lcom/android/camera/effect/EffectList;->setEffectInternal(Lcom/android/camera/effect/EffectBase;)V
 
     goto :goto_3
 
-    .line 266
+    .line 271
     .end local v2           #capabilities:I
     .end local v4           #effect:Lcom/android/camera/effect/EffectBase;
-    :cond_3
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
-
-    if-nez v8, :cond_4
-
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
-
-    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
-
-    move-result v8
-
-    if-lez v8, :cond_4
-
-    .line 267
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v8, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/android/camera/effect/EffectBase;
-
-    invoke-direct {p0, v8}, Lcom/android/camera/effect/EffectList;->setEffectInternal(Lcom/android/camera/effect/EffectBase;)V
-
-    .line 270
     :cond_4
-    iget-object v8, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffect:Lcom/android/camera/effect/EffectBase;
 
-    iget-object v8, v8, Lcom/android/camera/HTCCamera;->effectListUpdatedEvent:Lcom/android/camera/event/Event;
+    if-nez v9, :cond_5
 
-    new-instance v9, Lcom/android/camera/OneValueEventArgs;
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
 
-    invoke-direct {v9, p0}, Lcom/android/camera/OneValueEventArgs;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v8, p0, v9}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+    move-result v9
 
-    .line 271
+    if-lez v9, :cond_5
+
+    .line 272
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CurrentEffects:Ljava/util/ArrayList;
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v9, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lcom/android/camera/effect/EffectBase;
+
+    invoke-direct {p0, v9}, Lcom/android/camera/effect/EffectList;->setEffectInternal(Lcom/android/camera/effect/EffectBase;)V
+
+    .line 275
+    :cond_5
+    iget-object v9, p0, Lcom/android/camera/effect/EffectList;->m_CameraActivity:Lcom/android/camera/HTCCamera;
+
+    iget-object v9, v9, Lcom/android/camera/HTCCamera;->effectListUpdatedEvent:Lcom/android/camera/event/Event;
+
+    new-instance v10, Lcom/android/camera/OneValueEventArgs;
+
+    invoke-direct {v10, p0}, Lcom/android/camera/OneValueEventArgs;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v9, p0, v10}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+
+    .line 276
     return-void
 
-    .line 236
+    .line 241
     nop
 
     :pswitch_data_0

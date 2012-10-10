@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 124
+    .line 172
     iput-object p1, p0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 145
+    .line 189
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 146
+    .line 190
     .local v4, action:Ljava/lang/String;
     const-string v18, "android.bluetooth.device.extra.DEVICE"
 
@@ -59,11 +59,11 @@
 
     check-cast v9, Landroid/bluetooth/BluetoothDevice;
 
-    .line 151
+    .line 195
     .local v9, device:Landroid/bluetooth/BluetoothDevice;
     const/4 v8, 0x0
 
-    .line 153
+    .line 197
     .local v8, delayResume:Z
     const-string v18, "android.bluetooth.adapter.action.STATE_CHANGED"
 
@@ -75,7 +75,7 @@
 
     if-eqz v18, :cond_1
 
-    .line 154
+    .line 198
     const-string v18, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v19, -0x8000
@@ -90,17 +90,17 @@
 
     move-result v16
 
-    .line 156
+    .line 200
     .local v16, state:I
     packed-switch v16, :pswitch_data_0
 
-    .line 262
+    .line 317
     .end local v16           #state:I
     :cond_0
     :goto_0
     return-void
 
-    .line 161
+    .line 205
     .restart local v16       #state:I
     :pswitch_0
     move-object/from16 v0, p0
@@ -114,7 +114,7 @@
 
     goto :goto_0
 
-    .line 167
+    .line 211
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -127,7 +127,7 @@
 
     goto :goto_0
 
-    .line 170
+    .line 214
     .end local v16           #state:I
     :cond_1
     const-string v18, "android.bluetooth.device.action.BOND_STATE_CHANGED"
@@ -140,7 +140,7 @@
 
     if-eqz v18, :cond_4
 
-    .line 171
+    .line 215
     const-string v18, "android.bluetooth.device.extra.BOND_STATE"
 
     const/high16 v19, -0x8000
@@ -155,14 +155,14 @@
 
     move-result v6
 
-    .line 173
+    .line 217
     .local v6, bondState:I
     packed-switch v6, :pswitch_data_1
 
     :pswitch_2
     goto :goto_0
 
-    .line 189
+    .line 233
     :pswitch_3
     move-object/from16 v0, p0
 
@@ -180,21 +180,21 @@
 
     goto :goto_0
 
-    .line 175
+    .line 219
     :pswitch_4
     const/4 v14, 0x0
 
-    .line 176
+    .line 220
     .local v14, priority:I
     invoke-virtual {v9}, Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;
 
     move-result-object v3
 
-    .line 177
+    .line 221
     .local v3, BtClass:Landroid/bluetooth/BluetoothClass;
     if-eqz v3, :cond_3
 
-    .line 178
+    .line 222
     invoke-virtual {v3}, Landroid/bluetooth/BluetoothClass;->getMajorDeviceClass()I
 
     move-result v18
@@ -207,17 +207,17 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 179
+    .line 223
     const-string v18, "BluetoothA2dpService"
 
     const-string v19, "Remote device matches connectable priority"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
+    .line 224
     const/16 v14, 0x64
 
-    .line 186
+    .line 230
     :cond_2
     :goto_1
     move-object/from16 v0, p0
@@ -232,7 +232,7 @@
 
     goto :goto_0
 
-    .line 184
+    .line 228
     :cond_3
     const-string v18, "BluetoothA2dpService"
 
@@ -242,7 +242,7 @@
 
     goto :goto_1
 
-    .line 192
+    .line 236
     .end local v3           #BtClass:Landroid/bluetooth/BluetoothClass;
     .end local v6           #bondState:I
     .end local v14           #priority:I
@@ -257,10 +257,10 @@
 
     if-eqz v18, :cond_6
 
-    .line 193
+    .line 237
     monitor-enter p0
 
-    .line 194
+    .line 238
     :try_start_0
     move-object/from16 v0, p0
 
@@ -281,7 +281,7 @@
 
     if-eqz v18, :cond_5
 
-    .line 195
+    .line 239
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -305,7 +305,7 @@
 
     move-result v16
 
-    .line 196
+    .line 240
     .restart local v16       #state:I
     move-object/from16 v0, p0
 
@@ -324,7 +324,7 @@
     #calls: Landroid/server/BluetoothA2dpService;->handleSinkStateChange(Landroid/bluetooth/BluetoothDevice;II)V
     invoke-static {v0, v9, v1, v2}, Landroid/server/BluetoothA2dpService;->access$400(Landroid/server/BluetoothA2dpService;Landroid/bluetooth/BluetoothDevice;II)V
 
-    .line 198
+    .line 242
     .end local v16           #state:I
     :cond_5
     monitor-exit p0
@@ -340,7 +340,7 @@
 
     throw v18
 
-    .line 199
+    .line 243
     :cond_6
     const-string v18, "android.media.VOLUME_CHANGED_ACTION"
 
@@ -352,7 +352,7 @@
 
     if-eqz v18, :cond_8
 
-    .line 200
+    .line 244
     const-string v18, "android.media.EXTRA_VOLUME_STREAM_TYPE"
 
     const/16 v19, -0x1
@@ -367,7 +367,7 @@
 
     move-result v17
 
-    .line 201
+    .line 245
     .local v17, streamType:I
     const/16 v18, 0x3
 
@@ -377,7 +377,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 202
+    .line 246
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -388,7 +388,7 @@
 
     move-result-object v15
 
-    .line 204
+    .line 248
     .local v15, sinks:Ljava/util/List;,"Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-interface {v15}, Ljava/util/List;->size()I
 
@@ -423,7 +423,7 @@
 
     if-eqz v18, :cond_0
 
-    .line 205
+    .line 249
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -438,7 +438,7 @@
 
     move-result-object v5
 
-    .line 206
+    .line 250
     .local v5, address:Ljava/lang/String;
     const-string v18, "android.media.EXTRA_VOLUME_STREAM_VALUE"
 
@@ -454,7 +454,7 @@
 
     move-result v11
 
-    .line 208
+    .line 252
     .local v11, newVolLevel:I
     const-string v18, "android.media.EXTRA_PREV_VOLUME_STREAM_VALUE"
 
@@ -470,7 +470,7 @@
 
     move-result v12
 
-    .line 210
+    .line 254
     .local v12, oldVolLevel:I
     move-object/from16 v0, p0
 
@@ -489,11 +489,11 @@
 
     move-result-object v13
 
-    .line 211
+    .line 255
     .local v13, path:Ljava/lang/String;
     if-le v11, v12, :cond_7
 
-    .line 212
+    .line 256
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -507,11 +507,11 @@
 
     goto/16 :goto_0
 
-    .line 213
+    .line 257
     :cond_7
     if-ge v11, v12, :cond_0
 
-    .line 214
+    .line 258
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -525,7 +525,7 @@
 
     goto/16 :goto_0
 
-    .line 218
+    .line 262
     .end local v5           #address:Ljava/lang/String;
     .end local v11           #newVolLevel:I
     .end local v12           #oldVolLevel:I
@@ -541,9 +541,20 @@
 
     move-result v18
 
-    if-eqz v18, :cond_0
+    if-nez v18, :cond_9
 
-    .line 219
+    const-string v18, "android.intent.action.PHONE_STATE_EXT"
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_10
+
+    .line 263
+    :cond_9
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -554,15 +565,15 @@
 
     move-result-object v15
 
-    .line 221
+    .line 264
     .restart local v15       #sinks:Ljava/util/List;,"Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-interface {v15}, Ljava/util/List;->size()I
 
     move-result v18
 
-    if-eqz v18, :cond_a
+    if-eqz v18, :cond_b
 
-    .line 222
+    .line 265
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -573,11 +584,11 @@
 
     check-cast v7, Landroid/bluetooth/BluetoothDevice;
 
-    .line 224
+    .line 267
     .local v7, conndevice:Landroid/bluetooth/BluetoothDevice;
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_b
 
-    .line 225
+    .line 268
     const/4 v10, 0x0
 
     .local v10, i:I
@@ -601,16 +612,16 @@
 
     move/from16 v0, v18
 
-    if-ge v10, v0, :cond_9
+    if-ge v10, v0, :cond_a
 
-    .line 226
+    .line 269
     const-string v18, "BluetoothA2dpService"
 
     const-string v19, "[A2DP]ACTION_PHONE_STATE_CHANGED entered in for"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 227
+    .line 270
     invoke-virtual {v7}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object v18
@@ -632,20 +643,20 @@
 
     move-result v18
 
-    if-eqz v18, :cond_b
+    if-eqz v18, :cond_c
 
-    .line 228
+    .line 271
     const-string v18, "BluetoothA2dpService"
 
-    const-string v19, "[MYDEBUG]Delay a2dp resume is set to true"
+    const-string v19, "Delay a2dp resume is set to true"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
+    .line 272
     const/4 v8, 0x1
 
-    .line 233
-    :cond_9
+    .line 276
+    :cond_a
     const/4 v10, 0x0
 
     :goto_3
@@ -668,16 +679,16 @@
 
     move/from16 v0, v18
 
-    if-ge v10, v0, :cond_a
+    if-ge v10, v0, :cond_b
 
-    .line 234
+    .line 277
     const-string v18, "BluetoothA2dpService"
 
     const-string v19, "[A2DP]ACTION_PHONE_STATE_CHANGED entered in for familiar device"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 278
     invoke-virtual {v7}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object v18
@@ -699,22 +710,22 @@
 
     move-result v18
 
-    if-eqz v18, :cond_c
+    if-eqz v18, :cond_d
 
-    .line 236
+    .line 279
     const-string v18, "BluetoothA2dpService"
 
-    const-string v19, "[MYDEBUG]Delay a2dp resume is set to true for familiar device"
+    const-string v19, "Delay a2dp resume is set to true for familiar device"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
+    .line 280
     const/4 v8, 0x1
 
-    .line 245
+    .line 287
     .end local v7           #conndevice:Landroid/bluetooth/BluetoothDevice;
     .end local v10           #i:I
-    :cond_a
+    :cond_b
     const-string/jumbo v18, "state"
 
     move-object/from16 v0, p2
@@ -725,7 +736,7 @@
 
     move-result-object v16
 
-    .line 246
+    .line 288
     .local v16, state:Ljava/lang/String;
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -752,7 +763,7 @@
     #calls: Landroid/server/BluetoothA2dpService;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v18}, Landroid/server/BluetoothA2dpService;->access$1100(Ljava/lang/String;)V
 
-    .line 247
+    .line 289
     const-string v18, "OFFHOOK"
 
     move-object/from16 v0, v18
@@ -763,16 +774,16 @@
 
     move-result v18
 
-    if-eqz v18, :cond_d
+    if-eqz v18, :cond_e
 
-    .line 248
+    .line 290
     const-string v18, "BluetoothA2dpService"
 
     const-string v19, "[MYDEBUG]SystemProperties.set bluetooth.call_active 1"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
+    .line 291
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -805,26 +816,26 @@
 
     goto/16 :goto_0
 
-    .line 225
+    .line 268
     .end local v16           #state:Ljava/lang/String;
     .restart local v7       #conndevice:Landroid/bluetooth/BluetoothDevice;
     .restart local v10       #i:I
-    :cond_b
+    :cond_c
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_2
 
-    .line 233
-    :cond_c
+    .line 276
+    :cond_d
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_3
 
-    .line 250
+    .line 292
     .end local v7           #conndevice:Landroid/bluetooth/BluetoothDevice;
     .end local v10           #i:I
     .restart local v16       #state:Ljava/lang/String;
-    :cond_d
+    :cond_e
     const-string v18, "IDLE"
 
     move-object/from16 v0, v18
@@ -837,27 +848,27 @@
 
     if-eqz v18, :cond_0
 
-    .line 251
+    .line 293
     const-string v18, "BluetoothA2dpService"
 
     const-string v19, "[A2DP]SystemProperties.set bluetooth.call_active 0"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
-    if-eqz v8, :cond_e
+    .line 294
+    if-eqz v8, :cond_f
 
-    .line 253
+    .line 295
     const/4 v8, 0x0
 
-    .line 254
+    .line 296
     const-string v18, "BluetoothA2dpService"
 
-    const-string v19, "[MYDEBUG]Delaying a2dp resume after call end"
+    const-string v19, "Delaying a2dp resume after call end"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
+    .line 297
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -892,15 +903,15 @@
 
     goto/16 :goto_0
 
-    .line 257
-    :cond_e
+    .line 299
+    :cond_f
     const-string v18, "BluetoothA2dpService"
 
-    const-string v19, "[MYDEBUG]no delay in a2dp resume"
+    const-string/jumbo v19, "no delay in a2dp resume"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
+    .line 300
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
@@ -933,14 +944,185 @@
 
     goto/16 :goto_0
 
-    .line 156
+    .line 303
+    .end local v15           #sinks:Ljava/util/List;,"Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
+    .end local v16           #state:Ljava/lang/String;
+    :cond_10
+    const-string v18, "android.intent.action.PHONE_STATE"
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_0
+
+    .line 305
+    const-string/jumbo v18, "state"
+
+    move-object/from16 v0, p2
+
+    move-object/from16 v1, v18
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v16
+
+    .line 306
+    .restart local v16       #state:Ljava/lang/String;
+    const-string v18, "BluetoothA2dpService"
+
+    new-instance v19, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v20, "setAvrcpPassThrough ACTION_PHONE_STATE_CHANGED state:"
+
+    invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v19
+
+    move-object/from16 v0, v19
+
+    move-object/from16 v1, v16
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v19
+
+    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 307
+    const-string v18, "RINGING"
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v16
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v18
+
+    if-nez v18, :cond_11
+
+    const-string v18, "OFFHOOK"
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v16
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_12
+
+    .line 308
+    :cond_11
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
+
+    move-object/from16 v18, v0
+
+    #getter for: Landroid/server/BluetoothA2dpService;->mHandler:Landroid/os/Handler;
+    invoke-static/range {v18 .. v18}, Landroid/server/BluetoothA2dpService;->access$1200(Landroid/server/BluetoothA2dpService;)Landroid/os/Handler;
+
+    move-result-object v18
+
+    const/16 v19, 0x4
+
+    invoke-virtual/range {v18 .. v19}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 309
+    const-string v18, "BluetoothA2dpService"
+
+    const-string/jumbo v19, "setAvrcpPassThrough - disable AVRCP"
+
+    invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 310
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
+
+    move-object/from16 v18, v0
+
+    const/16 v19, 0x0
+
+    invoke-virtual/range {v18 .. v19}, Landroid/server/BluetoothA2dpService;->setAvrcpPassThrough(Z)V
+
+    goto/16 :goto_0
+
+    .line 311
+    :cond_12
+    const-string v18, "IDLE"
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v16
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_0
+
+    .line 312
+    const-string v18, "BluetoothA2dpService"
+
+    const-string/jumbo v19, "setAvrcpPassThrough dealy counter start"
+
+    invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 313
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
+
+    move-object/from16 v18, v0
+
+    #getter for: Landroid/server/BluetoothA2dpService;->mHandler:Landroid/os/Handler;
+    invoke-static/range {v18 .. v18}, Landroid/server/BluetoothA2dpService;->access$1200(Landroid/server/BluetoothA2dpService;)Landroid/os/Handler;
+
+    move-result-object v18
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/server/BluetoothA2dpService$2;->this$0:Landroid/server/BluetoothA2dpService;
+
+    move-object/from16 v19, v0
+
+    #getter for: Landroid/server/BluetoothA2dpService;->mHandler:Landroid/os/Handler;
+    invoke-static/range {v19 .. v19}, Landroid/server/BluetoothA2dpService;->access$1200(Landroid/server/BluetoothA2dpService;)Landroid/os/Handler;
+
+    move-result-object v19
+
+    const/16 v20, 0x4
+
+    invoke-virtual/range {v19 .. v20}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v19
+
+    const-wide/16 v20, 0xfa0
+
+    invoke-virtual/range {v18 .. v21}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    goto/16 :goto_0
+
+    .line 200
     :pswitch_data_0
     .packed-switch 0xc
         :pswitch_0
         :pswitch_1
     .end packed-switch
 
-    .line 173
+    .line 217
     :pswitch_data_1
     .packed-switch 0xa
         :pswitch_3

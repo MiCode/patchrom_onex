@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">プレイリストを追加</string>
     <string name="htc_delete_playlists">プレイリストを削除</string>
     <string name="htc_delete_playlist">プレイリストを削除</string>
+    <string name="htc_delete_all_playlists">すべての再生リストを削除</string>
     <string name="htc_playlist_add_songs">曲を追加</string>
     <string name="htc_playlist_del_songs">曲を削除</string>
     <string name="htc_playlist_remove_songs">曲を削除</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">バッファ中です...</string>
     <string name="title_send_content">コンテンツを送信しています...</string>
     <string name="no_downloaded_apps_found">ダウンロードしたアプリが見つかりませんでした</string>
+    <string name="music_folder_picker_dialog_msg">フォルダを選択して再生リストに曲を追加しますか?他の方法で曲を追加する場合は、[いいえ] を選択してください</string>
 </resources>

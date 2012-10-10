@@ -344,7 +344,7 @@
     .line 182
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string v1, "yyyy-MM-dd hh:mm:ss"
+    const-string/jumbo v1, "yyyy-MM-dd hh:mm:ss"
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 

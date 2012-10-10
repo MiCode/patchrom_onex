@@ -123,6 +123,8 @@
 
 .field public static Video_HVGA:Lcom/android/camera/Resolution;
 
+.field public static Video_HVGA480:Lcom/android/camera/Resolution;
+
 .field public static Video_QCIF:Lcom/android/camera/Resolution;
 
 .field public static Video_QCIF_Service:Lcom/android/camera/Resolution;
@@ -179,9 +181,9 @@
 
     const/16 v2, 0x440
 
-    const v3, 0x7f0a0122
+    const v3, 0x7f0a012a
 
-    const v4, 0x7f0a0151
+    const v4, 0x7f0a0159
 
     const-string v5, "1080p"
 
@@ -198,9 +200,9 @@
 
     const/16 v2, 0x2d0
 
-    const v3, 0x7f0a0121
+    const v3, 0x7f0a0129
 
-    const v4, 0x7f0a0152
+    const v4, 0x7f0a015a
 
     const-string v5, "720p"
 
@@ -217,9 +219,9 @@
 
     const/16 v2, 0x220
 
-    const v3, 0x7f0a0120
+    const v3, 0x7f0a0128
 
-    const v4, 0x7f0a0153
+    const v4, 0x7f0a015b
 
     const-string v5, "QHD"
 
@@ -236,9 +238,9 @@
 
     const/16 v2, 0x1e0
 
-    const v3, 0x7f0a011f
+    const v3, 0x7f0a0127
 
-    const v4, 0x7f0a0154
+    const v4, 0x7f0a015c
 
     const-string v5, "WVGA"
 
@@ -255,9 +257,9 @@
 
     const/16 v2, 0x1e0
 
-    const v3, 0x7f0a011e
+    const v3, 0x7f0a0125
 
-    const v4, 0x7f0a0155
+    const v4, 0x7f0a015d
 
     const-string v5, "HVGA"
 
@@ -274,9 +276,9 @@
 
     const/16 v2, 0x1e0
 
-    const v3, 0x7f0a0123
+    const v3, 0x7f0a012b
 
-    const v4, 0x7f0a0156
+    const v4, 0x7f0a015f
 
     const-string v5, "VGA"
 
@@ -289,13 +291,32 @@
     .line 25
     new-instance v0, Lcom/android/camera/Resolution;
 
+    const/16 v1, 0x1e0
+
+    const/16 v2, 0x140
+
+    const v3, 0x7f0a0126
+
+    const v4, 0x7f0a015e
+
+    const-string v5, "HVGA480"
+
+    const/4 v6, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lcom/android/camera/Resolution;-><init>(IIIILjava/lang/String;I)V
+
+    sput-object v0, Lcom/android/camera/Resolution;->Video_HVGA480:Lcom/android/camera/Resolution;
+
+    .line 26
+    new-instance v0, Lcom/android/camera/Resolution;
+
     const/16 v1, 0x140
 
     const/16 v2, 0xf0
 
-    const v3, 0x7f0a011d
+    const v3, 0x7f0a0124
 
-    const v4, 0x7f0a0157
+    const v4, 0x7f0a0160
 
     const-string v5, "QVGA"
 
@@ -305,16 +326,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_QVGA:Lcom/android/camera/Resolution;
 
-    .line 26
+    .line 27
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xb0
 
     const/16 v2, 0x90
 
-    const v3, 0x7f0a011c
+    const v3, 0x7f0a0123
 
-    const v4, 0x7f0a0158
+    const v4, 0x7f0a0161
 
     const-string v5, "QCIF"
 
@@ -324,16 +345,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_QCIF:Lcom/android/camera/Resolution;
 
-    .line 27
+    .line 28
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x2d0
 
-    const v3, 0x7f0a0121
+    const v3, 0x7f0a0129
 
-    const v4, 0x7f0a0159
+    const v4, 0x7f0a0162
 
     const-string v5, "720p_ONLINE"
 
@@ -343,16 +364,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_720p_Online:Lcom/android/camera/Resolution;
 
-    .line 28
+    .line 29
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x780
 
     const/16 v2, 0x440
 
-    const v3, 0x7f0a0122
+    const v3, 0x7f0a012a
 
-    const v4, 0x7f0a015a
+    const v4, 0x7f0a0163
 
     const-string v5, "1080p_ONLINE"
 
@@ -362,16 +383,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_1080p_Online:Lcom/android/camera/Resolution;
 
-    .line 29
+    .line 30
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x280
 
     const/16 v2, 0x1e0
 
-    const v3, 0x7f0a0123
+    const v3, 0x7f0a012b
 
-    const v4, 0x7f0a015b
+    const v4, 0x7f0a0164
 
     const-string v5, "VGA_ONLINE"
 
@@ -381,16 +402,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_VGA_Online:Lcom/android/camera/Resolution;
 
-    .line 32
+    .line 33
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x140
 
     const/16 v2, 0xf0
 
-    const v3, 0x7f0a011d
+    const v3, 0x7f0a0124
 
-    const v4, 0x7f0a014f
+    const v4, 0x7f0a0157
 
     const-string v5, "QVGA"
 
@@ -400,16 +421,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_QVGA_Service:Lcom/android/camera/Resolution;
 
-    .line 33
+    .line 34
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xb0
 
     const/16 v2, 0x90
 
-    const v3, 0x7f0a011c
+    const v3, 0x7f0a0123
 
-    const v4, 0x7f0a0150
+    const v4, 0x7f0a0158
 
     const-string v5, "QCIF"
 
@@ -419,39 +440,22 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_QCIF_Service:Lcom/android/camera/Resolution;
 
-    .line 36
+    .line 37
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x140
 
     const/16 v2, 0xf0
 
-    const v3, 0x7f0a011d
+    const v3, 0x7f0a0124
 
-    const v4, 0x7f0a0165
+    const v4, 0x7f0a016e
 
     const-string v5, "QVGA"
 
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/Resolution;-><init>(IIIILjava/lang/String;)V
 
     sput-object v0, Lcom/android/camera/Resolution;->QVGA:Lcom/android/camera/Resolution;
-
-    .line 37
-    new-instance v0, Lcom/android/camera/Resolution;
-
-    const/16 v1, 0x280
-
-    const/16 v2, 0x1e0
-
-    const v3, 0x7f0a0123
-
-    const v4, 0x7f0a0164
-
-    const-string v5, "VGA"
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/camera/Resolution;-><init>(IIIILjava/lang/String;)V
-
-    sput-object v0, Lcom/android/camera/Resolution;->VGA_Second:Lcom/android/camera/Resolution;
 
     .line 38
     new-instance v0, Lcom/android/camera/Resolution;
@@ -460,9 +464,26 @@
 
     const/16 v2, 0x1e0
 
-    const v3, 0x7f0a0123
+    const v3, 0x7f0a012b
 
-    const v4, 0x7f0a0163
+    const v4, 0x7f0a016d
+
+    const-string v5, "VGA"
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/camera/Resolution;-><init>(IIIILjava/lang/String;)V
+
+    sput-object v0, Lcom/android/camera/Resolution;->VGA_Second:Lcom/android/camera/Resolution;
+
+    .line 39
+    new-instance v0, Lcom/android/camera/Resolution;
+
+    const/16 v1, 0x280
+
+    const/16 v2, 0x1e0
+
+    const v3, 0x7f0a012b
+
+    const v4, 0x7f0a016c
 
     const-string v5, "VGA"
 
@@ -470,16 +491,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->VGA:Lcom/android/camera/Resolution;
 
-    .line 39
+    .line 40
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x3c0
 
-    const v3, 0x7f0a0125
+    const v3, 0x7f0a012d
 
-    const v4, 0x7f0a0161
+    const v4, 0x7f0a016a
 
     const-string v5, "SXGA"
 
@@ -487,16 +508,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SXGA:Lcom/android/camera/Resolution;
 
-    .line 40
+    .line 41
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x3c0
 
     const/16 v2, 0x2d0
 
-    const v3, 0x7f0a0124
+    const v3, 0x7f0a012c
 
-    const v4, 0x7f0a0162
+    const v4, 0x7f0a016b
 
     const-string v5, "Capture_720P_4_3"
 
@@ -504,16 +525,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Capture_720P_4_3:Lcom/android/camera/Resolution;
 
-    .line 41
+    .line 42
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x640
 
     const/16 v2, 0x4b0
 
-    const v3, 0x7f0a0126
+    const v3, 0x7f0a012e
 
-    const v4, 0x7f0a0160
+    const v4, 0x7f0a0169
 
     const-string v5, "UXGA"
 
@@ -521,16 +542,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->UXGA:Lcom/android/camera/Resolution;
 
-    .line 42
+    .line 43
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x800
 
     const/16 v2, 0x600
 
-    const v3, 0x7f0a0127
+    const v3, 0x7f0a012f
 
-    const v4, 0x7f0a015f
+    const v4, 0x7f0a0168
 
     const-string v5, "THREE_MEGA"
 
@@ -538,16 +559,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->THREE_MEGA:Lcom/android/camera/Resolution;
 
-    .line 43
+    .line 44
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x900
 
     const/16 v2, 0x6c0
 
-    const v3, 0x7f0a0128
+    const v3, 0x7f0a0130
 
-    const v4, 0x7f0a015e
+    const v4, 0x7f0a0167
 
     const-string v5, "FOUR_MEGA"
 
@@ -555,16 +576,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->FOUR_MEGA:Lcom/android/camera/Resolution;
 
-    .line 44
+    .line 45
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa20
 
     const/16 v2, 0x7a0
 
-    const v3, 0x7f0a0129
+    const v3, 0x7f0a0131
 
-    const v4, 0x7f0a015d
+    const v4, 0x7f0a0166
 
     const-string v5, "FIVE_MEGA"
 
@@ -572,16 +593,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->FIVE_MEGA:Lcom/android/camera/Resolution;
 
-    .line 45
+    .line 46
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xcc0
 
     const/16 v2, 0x990
 
-    const v3, 0x7f0a012a
+    const v3, 0x7f0a0132
 
-    const v4, 0x7f0a015c
+    const v4, 0x7f0a0165
 
     const-string v5, "EIGHT_MEGA"
 
@@ -589,16 +610,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->EIGHT_MEGA:Lcom/android/camera/Resolution;
 
-    .line 48
+    .line 49
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x400
 
-    const v3, 0x7f0a012b
+    const v3, 0x7f0a0133
 
-    const v4, 0x7f0a0167
+    const v4, 0x7f0a0170
 
     const-string v5, "SXGA_5_4"
 
@@ -606,16 +627,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SXGA_5_4:Lcom/android/camera/Resolution;
 
-    .line 52
+    .line 53
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x110
 
     const/16 v2, 0x110
 
-    const v3, 0x7f0a012c
+    const v3, 0x7f0a0134
 
-    const v4, 0x7f0a0166
+    const v4, 0x7f0a016f
 
     const-string v5, "CONTACT_STYLE"
 
@@ -623,16 +644,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->CONTACT_STYLE:Lcom/android/camera/Resolution;
 
-    .line 55
+    .line 56
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0a012c
+    const v3, 0x7f0a0134
 
-    const v4, 0x7f0a0166
+    const v4, 0x7f0a016f
 
     const-string v5, "SQUARE_STYLE"
 
@@ -640,16 +661,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SQUARE_STYLE:Lcom/android/camera/Resolution;
 
-    .line 58
+    .line 59
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x280
 
     const/16 v2, 0x1a0
 
-    const v3, 0x7f0a012d
+    const v3, 0x7f0a0135
 
-    const v4, 0x7f0a016e
+    const v4, 0x7f0a0177
 
     const-string v5, "VGA_3_2"
 
@@ -659,16 +680,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->VGA_3_2:Lcom/android/camera/Resolution;
 
-    .line 59
+    .line 60
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x350
 
-    const v3, 0x7f0a012e
+    const v3, 0x7f0a0136
 
-    const v4, 0x7f0a016d
+    const v4, 0x7f0a0176
 
     const-string v5, "SXGA_3_2"
 
@@ -678,16 +699,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SXGA_3_2:Lcom/android/camera/Resolution;
 
-    .line 60
+    .line 61
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x630
 
     const/16 v2, 0x420
 
-    const v3, 0x7f0a012f
+    const v3, 0x7f0a0137
 
-    const v4, 0x7f0a016c
+    const v4, 0x7f0a0175
 
     const-string v5, "UXGA_3_2"
 
@@ -697,16 +718,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->UXGA_3_2:Lcom/android/camera/Resolution;
 
-    .line 61
+    .line 62
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x800
 
     const/16 v2, 0x550
 
-    const v3, 0x7f0a0130
+    const v3, 0x7f0a0138
 
-    const v4, 0x7f0a016b
+    const v4, 0x7f0a0174
 
     const-string v5, "THREE_MEGA_3_2"
 
@@ -716,16 +737,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->THREE_MEGA_3_2:Lcom/android/camera/Resolution;
 
-    .line 62
+    .line 63
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x900
 
     const/16 v2, 0x600
 
-    const v3, 0x7f0a0131
+    const v3, 0x7f0a0139
 
-    const v4, 0x7f0a016a
+    const v4, 0x7f0a0173
 
     const-string v5, "FOUR_MEGA_3_2"
 
@@ -735,16 +756,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->FOUR_MEGA_3_2:Lcom/android/camera/Resolution;
 
-    .line 63
+    .line 64
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa20
 
     const/16 v2, 0x6c0
 
-    const v3, 0x7f0a0132
+    const v3, 0x7f0a013a
 
-    const v4, 0x7f0a0169
+    const v4, 0x7f0a0172
 
     const-string v5, "FIVE_3_2"
 
@@ -754,16 +775,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->FIVE_MEGA_3_2:Lcom/android/camera/Resolution;
 
-    .line 64
+    .line 65
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xcc0
 
     const/16 v2, 0x880
 
-    const v3, 0x7f0a0133
+    const v3, 0x7f0a013b
 
-    const v4, 0x7f0a0168
+    const v4, 0x7f0a0171
 
     const-string v5, "EIGHT_MEGA_3_2"
 
@@ -773,16 +794,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->EIGHT_MEGA_3_2:Lcom/android/camera/Resolution;
 
-    .line 67
+    .line 68
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x280
 
     const/16 v2, 0x180
 
-    const v3, 0x7f0a0134
+    const v3, 0x7f0a013c
 
-    const v4, 0x7f0a0173
+    const v4, 0x7f0a017c
 
     const-string v5, "VGA_5_3"
 
@@ -792,16 +813,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->VGA_5_3:Lcom/android/camera/Resolution;
 
-    .line 68
+    .line 69
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x300
 
-    const v3, 0x7f0a0135
+    const v3, 0x7f0a013d
 
-    const v4, 0x7f0a0172
+    const v4, 0x7f0a017b
 
     const-string v5, "SXGA_5_3"
 
@@ -811,16 +832,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SXGA_5_3:Lcom/android/camera/Resolution;
 
-    .line 69
+    .line 70
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x800
 
     const/16 v2, 0x4c0
 
-    const v3, 0x7f0a0136
+    const v3, 0x7f0a013e
 
-    const v4, 0x7f0a0171
+    const v4, 0x7f0a017a
 
     const-string v5, "THREE_MEGA_5_3"
 
@@ -830,16 +851,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->THREE_MEGA_5_3:Lcom/android/camera/Resolution;
 
-    .line 70
+    .line 71
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa20
 
     const/16 v2, 0x610
 
-    const v3, 0x7f0a0137
+    const v3, 0x7f0a013f
 
-    const v4, 0x7f0a0170
+    const v4, 0x7f0a0179
 
     const-string v5, "FIVE_5_3"
 
@@ -849,16 +870,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->FIVE_MEGA_5_3:Lcom/android/camera/Resolution;
 
-    .line 71
+    .line 72
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xcc0
 
     const/16 v2, 0x7a0
 
-    const v3, 0x7f0a0138
+    const v3, 0x7f0a0140
 
-    const v4, 0x7f0a016f
+    const v4, 0x7f0a0178
 
     const-string v5, "EIGHT_MEGA_5_3"
 
@@ -868,16 +889,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->EIGHT_MEGA_5_3:Lcom/android/camera/Resolution;
 
-    .line 75
+    .line 76
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x280
 
     const/16 v2, 0x170
 
-    const v3, 0x7f0a0139
+    const v3, 0x7f0a0141
 
-    const v4, 0x7f0a0179
+    const v4, 0x7f0a0182
 
     const-string v5, "VGA_16_9"
 
@@ -887,16 +908,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->VGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 76
+    .line 77
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x2d0
 
-    const v3, 0x7f0a013a
+    const v3, 0x7f0a0142
 
-    const v4, 0x7f0a0178
+    const v4, 0x7f0a0181
 
     const-string v5, "SXGA_16_9"
 
@@ -906,16 +927,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SXGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 77
+    .line 78
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x640
 
     const/16 v2, 0x380
 
-    const v3, 0x7f0a013b
+    const v3, 0x7f0a0143
 
-    const v4, 0x7f0a0177
+    const v4, 0x7f0a0180
 
     const-string v5, "UXGA_16_9"
 
@@ -925,16 +946,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->UXGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 78
+    .line 79
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x800
 
     const/16 v2, 0x480
 
-    const v3, 0x7f0a013c
+    const v3, 0x7f0a0144
 
-    const v4, 0x7f0a0176
+    const v4, 0x7f0a017f
 
     const-string v5, "THREE_MEGA_16_9"
 
@@ -944,16 +965,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->THREE_MEGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 79
+    .line 80
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa20
 
     const/16 v2, 0x5b0
 
-    const v3, 0x7f0a013d
+    const v3, 0x7f0a0145
 
-    const v4, 0x7f0a0175
+    const v4, 0x7f0a017e
 
     const-string v5, "FIVE_16_9"
 
@@ -963,16 +984,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->FIVE_MEGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 80
+    .line 81
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xcc0
 
     const/16 v2, 0x730
 
-    const v3, 0x7f0a013e
+    const v3, 0x7f0a0146
 
-    const v4, 0x7f0a0174
+    const v4, 0x7f0a017d
 
     const-string v5, "EIGHT_16_9"
 
@@ -982,16 +1003,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->EIGHT_MEGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 83
+    .line 84
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x280
 
     const/16 v2, 0x170
 
-    const v3, 0x7f0a013f
+    const v3, 0x7f0a0147
 
-    const v4, 0x7f0a017d
+    const v4, 0x7f0a0186
 
     const-string v5, "Tablet_VGA_16_9"
 
@@ -1001,16 +1022,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_VGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 84
+    .line 85
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x2f0
 
-    const v3, 0x7f0a0140
+    const v3, 0x7f0a0148
 
-    const v4, 0x7f0a017c
+    const v4, 0x7f0a0185
 
     const-string v5, "Tablet_SXGA_16_9"
 
@@ -1020,16 +1041,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_SXGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 85
+    .line 86
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x4d0
 
     const/16 v2, 0x2d0
 
-    const v3, 0x7f0a0141
+    const v3, 0x7f0a0149
 
-    const v4, 0x7f0a017c
+    const v4, 0x7f0a0185
 
     const-string v5, "Tablet_FrontCam_SXGA_16_9"
 
@@ -1039,16 +1060,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_FrontCam_SXGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 86
+    .line 87
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x800
 
     const/16 v2, 0x4b0
 
-    const v3, 0x7f0a0142
+    const v3, 0x7f0a014a
 
-    const v4, 0x7f0a017b
+    const v4, 0x7f0a0184
 
     const-string v5, "Tablet_THREE_MEGA_16_9"
 
@@ -1058,16 +1079,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_THREE_MEGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 87
+    .line 88
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa20
 
     const/16 v2, 0x5f0
 
-    const v3, 0x7f0a0143
+    const v3, 0x7f0a014b
 
-    const v4, 0x7f0a017a
+    const v4, 0x7f0a0183
 
     const-string v5, "Tablet_FIVE_16_9"
 
@@ -1077,16 +1098,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_FIVE_MEGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 89
+    .line 90
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x280
 
     const/16 v2, 0x170
 
-    const v3, 0x7f0a0144
+    const v3, 0x7f0a014c
 
-    const v4, 0x7f0a0183
+    const v4, 0x7f0a018c
 
     const-string v5, "Tablet_VGA_16_10"
 
@@ -1096,16 +1117,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_VGA_16_10:Lcom/android/camera/Resolution;
 
-    .line 90
+    .line 91
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x2f0
 
-    const v3, 0x7f0a0145
+    const v3, 0x7f0a014d
 
-    const v4, 0x7f0a0182
+    const v4, 0x7f0a018b
 
     const-string v5, "Tablet_SXGA_16_10"
 
@@ -1115,16 +1136,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_SXGA_16_10:Lcom/android/camera/Resolution;
 
-    .line 91
+    .line 92
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x4d0
 
     const/16 v2, 0x2d0
 
-    const v3, 0x7f0a0146
+    const v3, 0x7f0a014e
 
-    const v4, 0x7f0a0181
+    const v4, 0x7f0a018a
 
     const-string v5, "Tablet_FrontCam_SXGA_16_10"
 
@@ -1134,16 +1155,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_FrontCam_SXGA_16_10:Lcom/android/camera/Resolution;
 
-    .line 92
+    .line 93
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x800
 
     const/16 v2, 0x4b0
 
-    const v3, 0x7f0a0147
+    const v3, 0x7f0a014f
 
-    const v4, 0x7f0a0180
+    const v4, 0x7f0a0189
 
     const-string v5, "Tablet_THREE_MEGA_16_10"
 
@@ -1153,16 +1174,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_THREE_MEGA_16_10:Lcom/android/camera/Resolution;
 
-    .line 93
+    .line 94
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa20
 
     const/16 v2, 0x5f0
 
-    const v3, 0x7f0a0148
+    const v3, 0x7f0a0150
 
-    const v4, 0x7f0a017f
+    const v4, 0x7f0a0188
 
     const-string v5, "Tablet_FIVE_16_10"
 
@@ -1172,16 +1193,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_FIVE_MEGA_16_10:Lcom/android/camera/Resolution;
 
-    .line 94
+    .line 95
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xcc0
 
     const/16 v2, 0x780
 
-    const v3, 0x7f0a0149
+    const v3, 0x7f0a0151
 
-    const v4, 0x7f0a017e
+    const v4, 0x7f0a0187
 
     const-string v5, "Tablet_EIGHT_16_10"
 
@@ -1191,16 +1212,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Tablet_EIGHT_MEGA_16_10:Lcom/android/camera/Resolution;
 
-    .line 98
+    .line 99
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x780
 
     const/16 v2, 0x440
 
-    const v3, 0x7f0a014a
+    const v3, 0x7f0a0152
 
-    const v4, 0x7f0a0184
+    const v4, 0x7f0a018d
 
     const-string v5, "Capture_1080P_3D"
 
@@ -1210,16 +1231,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Capture_1080P_3D:Lcom/android/camera/Resolution;
 
-    .line 100
+    .line 101
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0x500
 
     const/16 v2, 0x2d0
 
-    const v3, 0x7f0a014b
+    const v3, 0x7f0a0153
 
-    const v4, 0x7f0a0185
+    const v4, 0x7f0a018e
 
     const-string v5, "Video_720P_3D"
 
@@ -1229,16 +1250,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->Video_720P_3D:Lcom/android/camera/Resolution;
 
-    .line 103
+    .line 104
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa00
 
     const/16 v2, 0x780
 
-    const v3, 0x7f0a014c
+    const v3, 0x7f0a0154
 
-    const v4, 0x7f0a0186
+    const v4, 0x7f0a018f
 
     const-string v5, "SHARP_FIVE_MEGA"
 
@@ -1246,16 +1267,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SHARP_FIVE_MEGA:Lcom/android/camera/Resolution;
 
-    .line 104
+    .line 105
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa00
 
     const/16 v2, 0x5a0
 
-    const v3, 0x7f0a014d
+    const v3, 0x7f0a0155
 
-    const v4, 0x7f0a0187
+    const v4, 0x7f0a0190
 
     const-string v5, "SHARP_FIVE_16_9"
 
@@ -1265,16 +1286,16 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SHARP_FIVE_MEGA_16_9:Lcom/android/camera/Resolution;
 
-    .line 105
+    .line 106
     new-instance v0, Lcom/android/camera/Resolution;
 
     const/16 v1, 0xa00
 
     const/16 v2, 0x600
 
-    const v3, 0x7f0a014e
+    const v3, 0x7f0a0156
 
-    const v4, 0x7f0a0188
+    const v4, 0x7f0a0191
 
     const-string v5, "SHARP_FIVE_5_3"
 
@@ -1284,427 +1305,434 @@
 
     sput-object v0, Lcom/android/camera/Resolution;->SHARP_FIVE_MEGA_5_3:Lcom/android/camera/Resolution;
 
-    .line 107
+    .line 108
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
-    .line 111
+    .line 112
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_1080p:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 112
+    .line 113
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_720p:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 113
+    .line 114
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_QHD:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 114
+    .line 115
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_WVGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 115
+    .line 116
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_HVGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 116
+    .line 117
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_VGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 117
-    sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
-
-    sget-object v1, Lcom/android/camera/Resolution;->Video_QVGA:Lcom/android/camera/Resolution;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
     .line 118
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
-    sget-object v1, Lcom/android/camera/Resolution;->Video_QCIF:Lcom/android/camera/Resolution;
+    sget-object v1, Lcom/android/camera/Resolution;->Video_HVGA480:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 119
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
-    sget-object v1, Lcom/android/camera/Resolution;->Video_720p_Online:Lcom/android/camera/Resolution;
+    sget-object v1, Lcom/android/camera/Resolution;->Video_QVGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 120
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
-    sget-object v1, Lcom/android/camera/Resolution;->Video_VGA_Online:Lcom/android/camera/Resolution;
+    sget-object v1, Lcom/android/camera/Resolution;->Video_QCIF:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 121
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
-    sget-object v1, Lcom/android/camera/Resolution;->Video_1080p_Online:Lcom/android/camera/Resolution;
+    sget-object v1, Lcom/android/camera/Resolution;->Video_720p_Online:Lcom/android/camera/Resolution;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 122
+    sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
+
+    sget-object v1, Lcom/android/camera/Resolution;->Video_VGA_Online:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 123
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
+    sget-object v1, Lcom/android/camera/Resolution;->Video_1080p_Online:Lcom/android/camera/Resolution;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 125
+    sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
+
     sget-object v1, Lcom/android/camera/Resolution;->Video_QVGA_Service:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 124
+    .line 126
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_QCIF_Service:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 127
+    .line 129
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->QVGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 128
+    .line 130
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->VGA_Second:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 130
+    .line 132
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->VGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 131
+    .line 133
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Capture_720P_4_3:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 132
+    .line 134
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SXGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 133
+    .line 135
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->UXGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 134
+    .line 136
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->THREE_MEGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 135
+    .line 137
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->FOUR_MEGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 136
+    .line 138
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->FIVE_MEGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 137
+    .line 139
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->EIGHT_MEGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 140
+    .line 142
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SXGA_5_4:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 142
+    .line 144
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->CONTACT_STYLE:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 145
+    .line 147
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->VGA_3_2:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 146
+    .line 148
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SXGA_3_2:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 147
+    .line 149
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->UXGA_3_2:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 148
+    .line 150
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->THREE_MEGA_3_2:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 149
+    .line 151
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->FOUR_MEGA_3_2:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 150
+    .line 152
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->FIVE_MEGA_3_2:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 151
+    .line 153
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->EIGHT_MEGA_3_2:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 154
+    .line 156
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->VGA_5_3:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 155
+    .line 157
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SXGA_5_3:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 156
+    .line 158
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->THREE_MEGA_5_3:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 157
+    .line 159
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->FIVE_MEGA_5_3:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 158
+    .line 160
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->EIGHT_MEGA_5_3:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 162
+    .line 164
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->VGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 163
+    .line 165
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SXGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 164
+    .line 166
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->UXGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 165
+    .line 167
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->THREE_MEGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 166
+    .line 168
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->FIVE_MEGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
+    .line 169
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->EIGHT_MEGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 170
+    .line 172
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_VGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 171
+    .line 173
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_SXGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 172
+    .line 174
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_FrontCam_SXGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 173
+    .line 175
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_THREE_MEGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 174
+    .line 176
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_FIVE_MEGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 176
+    .line 178
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_VGA_16_10:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 177
+    .line 179
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_SXGA_16_10:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 178
+    .line 180
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_FrontCam_SXGA_16_10:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 179
+    .line 181
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_THREE_MEGA_16_10:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 180
+    .line 182
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_FIVE_MEGA_16_10:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 181
+    .line 183
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Tablet_EIGHT_MEGA_16_10:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 184
+    .line 186
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Capture_1080P_3D:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 185
+    .line 187
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->Video_720P_3D:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 188
+    .line 190
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SHARP_FIVE_MEGA:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 189
+    .line 191
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SHARP_FIVE_MEGA_16_9:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 190
+    .line 192
     sget-object v0, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     sget-object v1, Lcom/android/camera/Resolution;->SHARP_FIVE_MEGA_5_3:Lcom/android/camera/Resolution;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 191
+    .line 193
     return-void
 .end method
 
@@ -1714,7 +1742,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 305
+    .line 307
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
@@ -1735,7 +1763,7 @@
     .line 15
     iput v0, p0, Lcom/android/camera/Resolution;->mPriority:I
 
-    .line 305
+    .line 307
     return-void
 .end method
 
@@ -1750,7 +1778,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 221
+    .line 223
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
@@ -1771,28 +1799,28 @@
     .line 15
     iput v0, p0, Lcom/android/camera/Resolution;->mPriority:I
 
-    .line 222
+    .line 224
     iput p1, p0, Lcom/android/camera/Resolution;->width:I
 
-    .line 223
+    .line 225
     iput p2, p0, Lcom/android/camera/Resolution;->height:I
 
-    .line 224
+    .line 226
     iput p3, p0, Lcom/android/camera/Resolution;->mNameResId:I
 
-    .line 225
+    .line 227
     iput p4, p0, Lcom/android/camera/Resolution;->mDescriptionResId:I
 
-    .line 226
+    .line 228
     iput-object p5, p0, Lcom/android/camera/Resolution;->mName:Ljava/lang/String;
 
-    .line 227
+    .line 229
     iput-boolean v0, p0, Lcom/android/camera/Resolution;->mbWideRatio:Z
 
-    .line 228
+    .line 230
     iput v0, p0, Lcom/android/camera/Resolution;->mPriority:I
 
-    .line 229
+    .line 231
     return-void
 .end method
 
@@ -1808,7 +1836,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 243
+    .line 245
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
@@ -1829,28 +1857,28 @@
     .line 15
     iput v0, p0, Lcom/android/camera/Resolution;->mPriority:I
 
-    .line 244
+    .line 246
     iput p1, p0, Lcom/android/camera/Resolution;->width:I
 
-    .line 245
+    .line 247
     iput p2, p0, Lcom/android/camera/Resolution;->height:I
 
-    .line 246
+    .line 248
     iput p3, p0, Lcom/android/camera/Resolution;->mNameResId:I
 
-    .line 247
+    .line 249
     iput p4, p0, Lcom/android/camera/Resolution;->mDescriptionResId:I
 
-    .line 248
+    .line 250
     iput-object p5, p0, Lcom/android/camera/Resolution;->mName:Ljava/lang/String;
 
-    .line 249
+    .line 251
     iput-boolean v0, p0, Lcom/android/camera/Resolution;->mbWideRatio:Z
 
-    .line 250
+    .line 252
     iput p6, p0, Lcom/android/camera/Resolution;->mPriority:I
 
-    .line 251
+    .line 253
     return-void
 .end method
 
@@ -1866,7 +1894,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 233
+    .line 235
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
@@ -1887,28 +1915,28 @@
     .line 15
     iput v0, p0, Lcom/android/camera/Resolution;->mPriority:I
 
-    .line 234
+    .line 236
     iput p1, p0, Lcom/android/camera/Resolution;->width:I
 
-    .line 235
+    .line 237
     iput p2, p0, Lcom/android/camera/Resolution;->height:I
 
-    .line 236
+    .line 238
     iput p3, p0, Lcom/android/camera/Resolution;->mNameResId:I
 
-    .line 237
+    .line 239
     iput p4, p0, Lcom/android/camera/Resolution;->mDescriptionResId:I
 
-    .line 238
+    .line 240
     iput-object p5, p0, Lcom/android/camera/Resolution;->mName:Ljava/lang/String;
 
-    .line 239
+    .line 241
     iput-boolean p6, p0, Lcom/android/camera/Resolution;->mbWideRatio:Z
 
-    .line 240
+    .line 242
     iput v0, p0, Lcom/android/camera/Resolution;->mPriority:I
 
-    .line 241
+    .line 243
     return-void
 .end method
 
@@ -1918,7 +1946,7 @@
     .parameter "resolution"
 
     .prologue
-    .line 270
+    .line 272
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1931,7 +1959,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 272
+    .line 274
     sget-object v2, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1942,7 +1970,7 @@
 
     iget-object v0, v2, Lcom/android/camera/Resolution;->mName:Ljava/lang/String;
 
-    .line 273
+    .line 275
     .local v0, data:Ljava/lang/String;
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1950,7 +1978,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 275
+    .line 277
     sget-object v2, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1959,19 +1987,19 @@
 
     check-cast v2, Lcom/android/camera/Resolution;
 
-    .line 278
+    .line 280
     .end local v0           #data:Ljava/lang/String;
     :goto_1
     return-object v2
 
-    .line 270
+    .line 272
     .restart local v0       #data:Ljava/lang/String;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 278
+    .line 280
     .end local v0           #data:Ljava/lang/String;
     :cond_1
     const/4 v2, 0x0
@@ -1984,7 +2012,7 @@
     .parameter "resolution"
 
     .prologue
-    .line 283
+    .line 285
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1997,7 +2025,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 285
+    .line 287
     sget-object v2, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2008,7 +2036,7 @@
 
     iget-object v0, v2, Lcom/android/camera/Resolution;->mName:Ljava/lang/String;
 
-    .line 286
+    .line 288
     .local v0, data:Ljava/lang/String;
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2016,7 +2044,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 288
+    .line 290
     sget-object v2, Lcom/android/camera/Resolution;->resolutionStorage:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2025,19 +2053,19 @@
 
     check-cast v2, Lcom/android/camera/Resolution;
 
-    .line 291
+    .line 293
     .end local v0           #data:Ljava/lang/String;
     :goto_1
     return-object v2
 
-    .line 283
+    .line 285
     .restart local v0       #data:Ljava/lang/String;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 291
+    .line 293
     .end local v0           #data:Ljava/lang/String;
     :cond_1
     const/4 v2, 0x0
@@ -2052,26 +2080,26 @@
     .parameter "another"
 
     .prologue
-    .line 295
+    .line 297
     iget v1, p0, Lcom/android/camera/Resolution;->mPriority:I
 
     iget v2, p1, Lcom/android/camera/Resolution;->mPriority:I
 
     if-eq v1, v2, :cond_1
 
-    .line 296
+    .line 298
     iget v1, p1, Lcom/android/camera/Resolution;->mPriority:I
 
     iget v2, p0, Lcom/android/camera/Resolution;->mPriority:I
 
     sub-int v0, v1, v2
 
-    .line 302
+    .line 304
     :cond_0
     :goto_0
     return v0
 
-    .line 298
+    .line 300
     :cond_1
     iget v1, p0, Lcom/android/camera/Resolution;->width:I
 
@@ -2087,11 +2115,11 @@
 
     sub-int v0, v1, v2
 
-    .line 299
+    .line 301
     .local v0, value:I
     if-nez v0, :cond_0
 
-    .line 300
+    .line 302
     iget v1, p0, Lcom/android/camera/Resolution;->width:I
 
     iget v2, p1, Lcom/android/camera/Resolution;->width:I
@@ -2122,12 +2150,12 @@
     .parameter "o"
 
     .prologue
-    .line 264
+    .line 266
     move-object v0, p1
 
     check-cast v0, Lcom/android/camera/Resolution;
 
-    .line 265
+    .line 267
     .local v0, r:Lcom/android/camera/Resolution;
     iget v1, p0, Lcom/android/camera/Resolution;->width:I
 
@@ -2166,7 +2194,7 @@
     .locals 1
 
     .prologue
-    .line 198
+    .line 200
     iget v0, p0, Lcom/android/camera/Resolution;->height:I
 
     return v0
@@ -2176,7 +2204,7 @@
     .locals 1
 
     .prologue
-    .line 210
+    .line 212
     iget-object v0, p0, Lcom/android/camera/Resolution;->mName:Ljava/lang/String;
 
     return-object v0
@@ -2186,7 +2214,7 @@
     .locals 1
 
     .prologue
-    .line 202
+    .line 204
     iget v0, p0, Lcom/android/camera/Resolution;->mNameResId:I
 
     return v0
@@ -2196,7 +2224,7 @@
     .locals 1
 
     .prologue
-    .line 206
+    .line 208
     iget v0, p0, Lcom/android/camera/Resolution;->mDescriptionResId:I
 
     return v0
@@ -2206,7 +2234,7 @@
     .locals 1
 
     .prologue
-    .line 194
+    .line 196
     iget v0, p0, Lcom/android/camera/Resolution;->width:I
 
     return v0
@@ -2216,7 +2244,7 @@
     .locals 1
 
     .prologue
-    .line 254
+    .line 256
     iget-boolean v0, p0, Lcom/android/camera/Resolution;->mbWideRatio:Z
 
     return v0
@@ -2227,10 +2255,10 @@
     .parameter "h"
 
     .prologue
-    .line 218
+    .line 220
     iput p1, p0, Lcom/android/camera/Resolution;->height:I
 
-    .line 219
+    .line 221
     return-void
 .end method
 
@@ -2239,10 +2267,10 @@
     .parameter "w"
 
     .prologue
-    .line 214
+    .line 216
     iput p1, p0, Lcom/android/camera/Resolution;->width:I
 
-    .line 215
+    .line 217
     return-void
 .end method
 
@@ -2250,7 +2278,7 @@
     .locals 2
 
     .prologue
-    .line 259
+    .line 261
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

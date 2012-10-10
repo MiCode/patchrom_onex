@@ -3,7 +3,7 @@
 .source "ZoomBar.java"
 
 # interfaces
-.implements Lcom/android/camera/property/PropertyChangedCallback;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -20,15 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/component/ZoomBar;
 
+.field final synthetic val$cameraThread:Lcom/android/camera/CameraThread;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/component/ZoomBar;)V
+.method constructor <init>(Lcom/android/camera/component/ZoomBar;Lcom/android/camera/CameraThread;)V
     .locals 0
+    .parameter
     .parameter
 
     .prologue
-    .line 242
+    .line 237
     iput-object p1, p0, Lcom/android/camera/component/ZoomBar$5;->this$0:Lcom/android/camera/component/ZoomBar;
+
+    iput-object p2, p0, Lcom/android/camera/component/ZoomBar$5;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,21 +42,21 @@
 
 
 # virtual methods
-.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
-    .locals 3
-    .parameter "property"
-    .parameter "e"
+.method public run()V
+    .locals 2
 
     .prologue
-    .line 246
-    iget-object v0, p0, Lcom/android/camera/component/ZoomBar$5;->this$0:Lcom/android/camera/component/ZoomBar;
+    .line 241
+    iget-object v0, p0, Lcom/android/camera/component/ZoomBar$5;->val$cameraThread:Lcom/android/camera/CameraThread;
 
-    iget-object v1, p0, Lcom/android/camera/component/ZoomBar$5;->this$0:Lcom/android/camera/component/ZoomBar;
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->zoomRange:Lcom/android/camera/property/Property;
 
-    const/16 v2, 0x2711
+    new-instance v1, Lcom/android/camera/component/ZoomBar$5$1;
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/camera/component/ZoomBar;->sendMessage(Lcom/android/camera/component/Component;I)Z
+    invoke-direct {v1, p0}, Lcom/android/camera/component/ZoomBar$5$1;-><init>(Lcom/android/camera/component/ZoomBar$5;)V
 
-    .line 247
+    invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
+
+    .line 249
     return-void
 .end method

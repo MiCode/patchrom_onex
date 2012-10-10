@@ -255,7 +255,7 @@
 
     .prologue
     .line 210
-    const-string/jumbo v1, "layout_inflater"
+    const-string v1, "layout_inflater"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -306,7 +306,7 @@
     .line 767
     const/16 v19, 0x0
 
-    const-string/jumbo v20, "layout"
+    const-string v20, "layout"
 
     const/16 v21, 0x0
 
@@ -329,7 +329,7 @@
     .line 769
     const/16 v19, 0x0
 
-    const-string/jumbo v20, "layout"
+    const-string v20, "layout"
 
     move-object/from16 v0, p3
 
@@ -2205,7 +2205,7 @@
 
     .line 725
     :cond_2
-    const-string/jumbo v6, "include"
+    const-string v6, "include"
 
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3006
+    .line 3018
     iput-object p1, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .parameter "bFromUser"
 
     .prologue
-    .line 3011
+    .line 3023
     const-string v1, "[DMCServiceManager]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -67,7 +67,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3012
+    .line 3024
     if-eqz p3, :cond_0
 
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
@@ -79,7 +79,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3015
+    .line 3027
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
@@ -90,7 +90,7 @@
 
     iput p2, v1, Lcom/htc/music/DMCServiceManager$DMCStatus;->nUserVolume:I
 
-    .line 3016
+    .line 3028
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
     #getter for: Lcom/htc/music/DMCServiceManager;->mVolSetBlocked:Z
@@ -100,7 +100,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3018
+    .line 3030
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
     #getter for: Lcom/htc/music/DMCServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -124,7 +124,7 @@
 
     invoke-interface {v1, v2, v3, p2}, Lcom/htc/dlnainterface/IDLNAPluginService;->setVolume(ILjava/lang/String;I)V
 
-    .line 3019
+    .line 3031
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
     #calls: Lcom/htc/music/DMCServiceManager;->resetVolBlock()V
@@ -132,7 +132,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3025
+    .line 3037
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
@@ -140,14 +140,14 @@
     #calls: Lcom/htc/music/DMCServiceManager;->resetVolUITimeout()V
     invoke-static {v1}, Lcom/htc/music/DMCServiceManager;->access$4000(Lcom/htc/music/DMCServiceManager;)V
 
-    .line 3026
+    .line 3038
     return-void
 
-    .line 3021
+    .line 3033
     :catch_0
     move-exception v0
 
-    .line 3022
+    .line 3034
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -159,7 +159,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 3030
+    .line 3042
     return-void
 .end method
 
@@ -168,14 +168,14 @@
     .parameter "sb"
 
     .prologue
-    .line 3034
+    .line 3046
     const-string v2, "[DMCServiceManager]"
 
     const-string v3, "Vol drag pos stop"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3035
+    .line 3047
     iget-object v2, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
     #getter for: Lcom/htc/music/DMCServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -185,13 +185,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 3038
+    .line 3050
     :try_start_0
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v1
 
-    .line 3039
+    .line 3051
     .local v1, nProgress:I
     iget-object v2, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
@@ -202,7 +202,7 @@
 
     iput v1, v2, Lcom/htc/music/DMCServiceManager$DMCStatus;->nUserVolume:I
 
-    .line 3040
+    .line 3052
     iget-object v2, p0, Lcom/htc/music/DMCServiceManager$13;->this$0:Lcom/htc/music/DMCServiceManager;
 
     #getter for: Lcom/htc/music/DMCServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -228,7 +228,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3045
+    .line 3057
     .end local v1           #nProgress:I
     :cond_0
     :goto_0
@@ -237,14 +237,14 @@
     #calls: Lcom/htc/music/DMCServiceManager;->resetVolUITimeout()V
     invoke-static {v2}, Lcom/htc/music/DMCServiceManager;->access$4000(Lcom/htc/music/DMCServiceManager;)V
 
-    .line 3046
+    .line 3058
     return-void
 
-    .line 3041
+    .line 3053
     :catch_0
     move-exception v0
 
-    .line 3042
+    .line 3054
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

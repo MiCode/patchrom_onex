@@ -35,7 +35,7 @@
     .parameter
 
     .prologue
-    .line 895
+    .line 905
     iput-object p1, p0, Lcom/android/camera/HTCCamera$5;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -61,18 +61,18 @@
     .end annotation
 
     .prologue
-    .line 899
+    .line 909
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<[F>;"
     .local p2, callback:Lcom/android/camera/property/PropertyChangedCallback;,"Lcom/android/camera/property/PropertyChangedCallback<[F>;"
     iget-object v0, p0, Lcom/android/camera/HTCCamera$5;->this$0:Lcom/android/camera/HTCCamera;
 
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2704(Lcom/android/camera/HTCCamera;)I
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2804(Lcom/android/camera/HTCCamera;)I
 
-    .line 900
+    .line 910
     iget-object v0, p0, Lcom/android/camera/HTCCamera$5;->this$0:Lcom/android/camera/HTCCamera;
 
     #getter for: Lcom/android/camera/HTCCamera;->mGSensorUsageCounter:I
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2700(Lcom/android/camera/HTCCamera;)I
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2800(Lcom/android/camera/HTCCamera;)I
 
     move-result v0
 
@@ -80,13 +80,13 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 901
+    .line 911
     iget-object v0, p0, Lcom/android/camera/HTCCamera$5;->this$0:Lcom/android/camera/HTCCamera;
 
     #calls: Lcom/android/camera/HTCCamera;->startAccelerometer()V
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2800(Lcom/android/camera/HTCCamera;)V
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2900(Lcom/android/camera/HTCCamera;)V
 
-    .line 902
+    .line 912
     :cond_0
     return-void
 .end method
@@ -107,30 +107,30 @@
     .end annotation
 
     .prologue
-    .line 906
+    .line 916
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<[F>;"
     .local p2, callback:Lcom/android/camera/property/PropertyChangedCallback;,"Lcom/android/camera/property/PropertyChangedCallback<[F>;"
     iget-object v0, p0, Lcom/android/camera/HTCCamera$5;->this$0:Lcom/android/camera/HTCCamera;
 
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2706(Lcom/android/camera/HTCCamera;)I
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2806(Lcom/android/camera/HTCCamera;)I
 
-    .line 907
+    .line 917
     iget-object v0, p0, Lcom/android/camera/HTCCamera$5;->this$0:Lcom/android/camera/HTCCamera;
 
     #getter for: Lcom/android/camera/HTCCamera;->mGSensorUsageCounter:I
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2700(Lcom/android/camera/HTCCamera;)I
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2800(Lcom/android/camera/HTCCamera;)I
 
     move-result v0
 
     if-gtz v0, :cond_0
 
-    .line 908
+    .line 918
     iget-object v0, p0, Lcom/android/camera/HTCCamera$5;->this$0:Lcom/android/camera/HTCCamera;
 
     #calls: Lcom/android/camera/HTCCamera;->stopAccelerometer()V
-    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$2900(Lcom/android/camera/HTCCamera;)V
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$3000(Lcom/android/camera/HTCCamera;)V
 
-    .line 909
+    .line 919
     :cond_0
     return-void
 .end method

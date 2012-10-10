@@ -187,7 +187,7 @@
     .prologue
     const/16 v2, 0x9b
 
-    .line 68
+    .line 69
     const-string v0, "content://com.android.contacts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -196,7 +196,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 311
+    .line 312
     const-string v0, "content://com.htc.socialnetwork.facebook/rawquery"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -205,7 +205,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract;->FACEBOOK_RAWQUERY_CONTENT_URI:Landroid/net/Uri;
 
-    .line 316
+    .line 317
     const-string v0, "content://com.htc.chirp.provider.Tweet/rawQuery"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -214,7 +214,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract;->TWITTER_RAWQUERY_CONTENT_URI:Landroid/net/Uri;
 
-    .line 317
+    .line 318
     const-string v0, "content://com.htc.htctwitter/rawQuery"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -223,7 +223,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract;->TWITTER_RAWQUERY_CONTENT_URI_3_5:Landroid/net/Uri;
 
-    .line 318
+    .line 319
     const-string v0, "content://plurks/rawquery"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -232,7 +232,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract;->PLURK_RAWQUERY_CONTENT_URI:Landroid/net/Uri;
 
-    .line 3808
+    .line 3812
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v1, 0x30
@@ -272,7 +272,7 @@
     .locals 0
 
     .prologue
-    .line 323
+    .line 324
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -283,10 +283,10 @@
     .parameter "accountType"
 
     .prologue
-    .line 4034
+    .line 4038
     const/4 v0, 0x0
 
-    .line 4036
+    .line 4040
     .local v0, type:I
     const-string v1, "com.anddroid.contacts.sim"
 
@@ -296,15 +296,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 4037
+    .line 4041
     const/4 v0, 0x1
 
-    .line 4045
+    .line 4049
     :cond_0
     :goto_0
     return v0
 
-    .line 4039
+    .line 4043
     :cond_1
     const-string v1, "com.android.contacts.ruim"
 
@@ -314,12 +314,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 4040
+    .line 4044
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 4042
+    .line 4046
     :cond_2
     const-string v1, "com.android.contacts.subsim"
 
@@ -329,7 +329,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 4043
+    .line 4047
     const/4 v0, 0x5
 
     goto :goto_0
@@ -340,21 +340,21 @@
     .parameter "accountType"
 
     .prologue
-    .line 3994
+    .line 3998
     const/4 v0, 0x0
 
-    .line 3995
+    .line 3999
     .local v0, result:Z
     if-nez p0, :cond_0
 
-    .line 3996
+    .line 4000
     const/4 v1, 0x0
 
-    .line 4005
+    .line 4009
     :goto_0
     return v1
 
-    .line 3999
+    .line 4003
     :cond_0
     const-string v1, "com.anddroid.contacts.sim"
 
@@ -380,14 +380,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 4003
+    .line 4007
     :cond_1
     const/4 v0, 0x1
 
     :cond_2
     move v1, v0
 
-    .line 4005
+    .line 4009
     goto :goto_0
 .end method
 
@@ -396,21 +396,21 @@
     .parameter "accountType"
 
     .prologue
-    .line 4022
+    .line 4026
     const/4 v0, 0x0
 
-    .line 4023
+    .line 4027
     .local v0, result:Z
     if-nez p0, :cond_0
 
-    .line 4024
+    .line 4028
     const/4 v1, 0x0
 
-    .line 4029
+    .line 4033
     :goto_0
     return v1
 
-    .line 4026
+    .line 4030
     :cond_0
     const-string v1, "com.android.contacts.subsim"
 
@@ -420,13 +420,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 4027
+    .line 4031
     const/4 v0, 0x1
 
     :cond_1
     move v1, v0
 
-    .line 4029
+    .line 4033
     goto :goto_0
 .end method
 
@@ -435,21 +435,21 @@
     .parameter "accountType"
 
     .prologue
-    .line 4011
+    .line 4015
     const/4 v0, 0x0
 
-    .line 4012
+    .line 4016
     .local v0, result:Z
     if-nez p0, :cond_0
 
-    .line 4013
+    .line 4017
     const/4 v1, 0x0
 
-    .line 4018
+    .line 4022
     :goto_0
     return v1
 
-    .line 4015
+    .line 4019
     :cond_0
     const-string v1, "com.android.contacts.ruim"
 
@@ -459,13 +459,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 4016
+    .line 4020
     const/4 v0, 0x1
 
     :cond_1
     move v1, v0
 
-    .line 4018
+    .line 4022
     goto :goto_0
 .end method
 
@@ -474,7 +474,7 @@
     .parameter "column"
 
     .prologue
-    .line 4049
+    .line 4053
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -557,7 +557,7 @@
     .parameter "column"
 
     .prologue
-    .line 4055
+    .line 4059
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -640,7 +640,7 @@
     .parameter "accountType"
 
     .prologue
-    .line 3558
+    .line 3562
     const/4 v0, 0x0
 
     return v0
@@ -650,7 +650,7 @@
     .locals 5
 
     .prologue
-    .line 3561
+    .line 3565
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/accounts/Account;
@@ -698,7 +698,7 @@
     .locals 3
 
     .prologue
-    .line 3568
+    .line 3572
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;

@@ -48,8 +48,6 @@
 
 .field public static final EXT_GENRE_NAME:Ljava/lang/String; = "genre"
 
-.field public static final EXT_INNER_TRANSITION:Ljava/lang/String; = "inner-transition"
-
 .field public static final EXT_IN_BROWSER_SWITCHER:Ljava/lang/String; = "browserswitcher"
 
 .field public static final EXT_IS_DRM_LIST:Ljava/lang/String; = "isdrmlist"
@@ -71,6 +69,8 @@
 .field public static final EXT_PLAYLIST_NAME:Ljava/lang/String; = "playlistname"
 
 .field public static final EXT_PLAY_LIST_URI:Ljava/lang/String; = "playlisturi"
+
+.field public static final EXT_QUERY_TABLE:Ljava/lang/String; = "dbTable"
 
 .field public static final EXT_SELECT_LIST:Ljava/lang/String; = "selectedlist"
 

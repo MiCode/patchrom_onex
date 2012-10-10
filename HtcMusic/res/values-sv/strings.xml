@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Lägg till en uppspelningslista</string>
     <string name="htc_delete_playlists">Radera uppspelningslistor</string>
     <string name="htc_delete_playlist">Radera uppspelningslistan</string>
+    <string name="htc_delete_all_playlists">Radera alla spellistor</string>
     <string name="htc_playlist_add_songs">Lägg till låtar</string>
     <string name="htc_playlist_del_songs">Radera låtar</string>
     <string name="htc_playlist_remove_songs">Ta bort låtar</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Buffrar...</string>
     <string name="title_send_content">Skickar innehåll...</string>
     <string name="no_downloaded_apps_found">Inga hämtade program hittades</string>
+    <string name="music_folder_picker_dialog_msg">Lägga till sånger i uppspelningslistor genom att markera mappar? Nej för att lägga till låtar på annat sätt</string>
 </resources>

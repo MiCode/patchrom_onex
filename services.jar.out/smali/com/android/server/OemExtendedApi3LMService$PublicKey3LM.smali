@@ -26,18 +26,18 @@
     .parameter "context"
 
     .prologue
-    .line 95
+    .line 99
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
+    .line 100
     iput-object p1, p0, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->mContext:Landroid/content/Context;
 
-    .line 109
+    .line 113
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v0}, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->init3LMPublicKey(Landroid/content/Context;)V
 
-    .line 111
+    .line 115
     return-void
 .end method
 
@@ -46,7 +46,7 @@
     .parameter "blob"
 
     .prologue
-    .line 117
+    .line 121
     :try_start_0
     const-string v3, "X509"
 
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    .line 118
+    .line 122
     .local v0, certFactory:Ljava/security/cert/CertificateFactory;
     new-instance v3, Ljava/io/ByteArrayInputStream;
 
@@ -64,7 +64,7 @@
 
     move-result-object v2
 
-    .line 120
+    .line 124
     .local v2, x509Cert:Ljava/security/cert/Certificate;
     invoke-virtual {v2}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
     :try_end_0
@@ -72,17 +72,17 @@
 
     move-result-object v3
 
-    .line 124
+    .line 128
     .end local v0           #certFactory:Ljava/security/cert/CertificateFactory;
     .end local v2           #x509Cert:Ljava/security/cert/Certificate;
     :goto_0
     return-object v3
 
-    .line 121
+    .line 125
     :catch_0
     move-exception v1
 
-    .line 122
+    .line 126
     .local v1, e:Ljava/security/cert/CertificateException;
     const-string v3, "OemExtendedApi3LM"
 
@@ -106,7 +106,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
+    .line 128
     const/4 v3, 0x0
 
     goto :goto_0
@@ -117,12 +117,12 @@
     .parameter "context"
 
     .prologue
-    .line 142
+    .line 146
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 144
+    .line 148
     .local v2, resources:Landroid/content/res/Resources;
     const-string v3, "1"
 
@@ -138,14 +138,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 145
+    .line 149
     const v3, 0x10404e0
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 149
+    .line 153
     .local v0, cert:Ljava/lang/String;
     :goto_0
     const/4 v3, 0x0
@@ -158,22 +158,22 @@
 
     move-result-object v1
 
-    .line 150
+    .line 154
     .local v1, key:Ljava/security/PublicKey;
     if-eqz v1, :cond_1
 
-    .line 151
+    .line 155
     invoke-interface {v1}, Ljava/security/PublicKey;->getEncoded()[B
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->m3LMPublicKey:[B
 
-    .line 155
+    .line 159
     :goto_1
     return-void
 
-    .line 147
+    .line 151
     .end local v0           #cert:Ljava/lang/String;
     .end local v1           #key:Ljava/security/PublicKey;
     :cond_0
@@ -186,7 +186,7 @@
     .restart local v0       #cert:Ljava/lang/String;
     goto :goto_0
 
-    .line 153
+    .line 157
     .restart local v1       #key:Ljava/security/PublicKey;
     :cond_1
     const-string v3, "OemExtendedApi3LM"
@@ -221,31 +221,31 @@
     .parameter "blob"
 
     .prologue
-    .line 128
+    .line 132
     invoke-direct {p0, p1}, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->extractPublicKey([B)Ljava/security/PublicKey;
 
     move-result-object v0
 
-    .line 130
+    .line 134
     .local v0, blobKey:Ljava/security/PublicKey;
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->m3LMPublicKey:[B
 
     if-nez v1, :cond_0
 
-    .line 131
+    .line 135
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v1}, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->init3LMPublicKey(Landroid/content/Context;)V
 
-    .line 132
+    .line 136
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;->m3LMPublicKey:[B
 
     if-nez v1, :cond_0
 
-    .line 133
+    .line 137
     const/4 v1, 0x1
 
-    .line 137
+    .line 141
     :goto_0
     return v1
 

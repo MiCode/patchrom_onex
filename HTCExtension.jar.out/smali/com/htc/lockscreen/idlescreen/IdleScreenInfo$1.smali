@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 275
+    .line 302
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .parameter "source"
 
     .prologue
-    .line 277
+    .line 304
     new-instance v0, Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
 
     invoke-direct {v0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +58,7 @@
     .parameter "x0"
 
     .prologue
-    .line 275
+    .line 302
     invoke-virtual {p0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
 
     move-result-object v0
@@ -71,7 +71,7 @@
     .parameter "size"
 
     .prologue
-    .line 281
+    .line 308
     new-array v0, p1, [Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
 
     return-object v0
@@ -82,7 +82,7 @@
     .parameter "x0"
 
     .prologue
-    .line 275
+    .line 302
     invoke-virtual {p0, p1}, Lcom/htc/lockscreen/idlescreen/IdleScreenInfo$1;->newArray(I)[Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
 
     move-result-object v0

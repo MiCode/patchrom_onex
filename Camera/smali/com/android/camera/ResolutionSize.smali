@@ -131,813 +131,813 @@
 
     .line 37
     .local v0, basic:Ljava/lang/String;
-    const v4, 0x7f0a0132
+    const v4, 0x7f0a013a
 
     const v5, 0x1312d0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 38
-    const v4, 0x7f0a0132
+    const v4, 0x7f0a013a
 
     const v5, 0x9c400
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 39
-    const v4, 0x7f0a0132
+    const v4, 0x7f0a013a
 
     const v5, 0x5f370
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 40
-    const v4, 0x7f0a0132
+    const v4, 0x7f0a013a
 
     const v5, 0x30d40
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 42
-    const v4, 0x7f0a0130
+    const v4, 0x7f0a0138
 
     const v5, 0xb71b0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 43
-    const v4, 0x7f0a0130
+    const v4, 0x7f0a0138
 
     const v5, 0x5cc60
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 44
-    const v4, 0x7f0a0130
+    const v4, 0x7f0a0138
 
     const v5, 0x35b60
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 45
-    const v4, 0x7f0a0130
+    const v4, 0x7f0a0138
 
     invoke-static {v4, v0, v8}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 47
-    const v4, 0x7f0a012e
+    const v4, 0x7f0a0136
 
     const v5, 0x3f7a0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 48
-    const v4, 0x7f0a012e
+    const v4, 0x7f0a0136
 
     const v5, 0x249f0
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 49
-    const v4, 0x7f0a012e
+    const v4, 0x7f0a0136
 
     const v5, 0x186a0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 50
-    const v4, 0x7f0a012e
+    const v4, 0x7f0a0136
 
     const v5, 0xea60
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 52
-    const v4, 0x7f0a012d
+    const v4, 0x7f0a0135
 
     const v5, 0x13c68
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 53
-    const v4, 0x7f0a012d
+    const v4, 0x7f0a0135
 
     const v5, 0xcf08
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 54
-    const v4, 0x7f0a012d
+    const v4, 0x7f0a0135
 
     const/16 v5, 0x7918
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 55
-    const v4, 0x7f0a012d
+    const v4, 0x7f0a0135
 
     const/16 v5, 0x4e20
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 78
-    const v4, 0x7f0a0138
+    const v4, 0x7f0a0140
 
     const v5, 0x170a70
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 79
-    const v4, 0x7f0a0138
+    const v4, 0x7f0a0140
 
     const v5, 0xe30d0
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 80
-    const v4, 0x7f0a0138
+    const v4, 0x7f0a0140
 
     const v5, 0x7ef40
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 82
-    const v4, 0x7f0a0137
+    const v4, 0x7f0a013f
 
     const v5, 0x147260
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 83
-    const v4, 0x7f0a0137
+    const v4, 0x7f0a013f
 
     invoke-static {v4, v1, v10}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 84
-    const v4, 0x7f0a0137
+    const v4, 0x7f0a013f
 
     invoke-static {v4, v3, v7}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 85
-    const v4, 0x7f0a0137
+    const v4, 0x7f0a013f
 
     invoke-static {v4, v0, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 87
-    const v4, 0x7f0a014e
+    const v4, 0x7f0a0156
 
     const v5, 0x147260
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 88
-    const v4, 0x7f0a014e
+    const v4, 0x7f0a0156
 
     invoke-static {v4, v1, v10}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 89
-    const v4, 0x7f0a014e
+    const v4, 0x7f0a0156
 
     invoke-static {v4, v3, v7}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 90
-    const v4, 0x7f0a014e
+    const v4, 0x7f0a0156
 
     invoke-static {v4, v0, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 92
-    const v4, 0x7f0a0136
+    const v4, 0x7f0a013e
 
     const v5, 0xb4aa0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 93
-    const v4, 0x7f0a0136
+    const v4, 0x7f0a013e
 
     const v5, 0x50910
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 94
-    const v4, 0x7f0a0136
+    const v4, 0x7f0a013e
 
     const v5, 0x41eb0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 95
-    const v4, 0x7f0a0136
+    const v4, 0x7f0a013e
 
     const v5, 0x33450
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 97
-    const v4, 0x7f0a0135
+    const v4, 0x7f0a013d
 
     invoke-static {v4, v2, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 98
-    const v4, 0x7f0a0135
+    const v4, 0x7f0a013d
 
     invoke-static {v4, v1, v9}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 99
-    const v4, 0x7f0a0135
+    const v4, 0x7f0a013d
 
     const v5, 0x27100
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 100
-    const v4, 0x7f0a0135
+    const v4, 0x7f0a013d
 
     const v5, 0x15f90
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 102
-    const v4, 0x7f0a0134
+    const v4, 0x7f0a013c
 
     invoke-static {v4, v2, v8}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 103
-    const v4, 0x7f0a0134
+    const v4, 0x7f0a013c
 
     const v5, 0xe678
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 104
-    const v4, 0x7f0a0134
+    const v4, 0x7f0a013c
 
     const v5, 0x84d0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 105
-    const v4, 0x7f0a0134
+    const v4, 0x7f0a013c
 
     const/16 v5, 0x6978
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 129
-    const v4, 0x7f0a013e
+    const v4, 0x7f0a0146
 
     const v5, 0x170a70
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 130
-    const v4, 0x7f0a013e
+    const v4, 0x7f0a0146
 
     const v5, 0xe30d0
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 131
-    const v4, 0x7f0a013e
+    const v4, 0x7f0a0146
 
     const v5, 0x7ef40
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 133
-    const v4, 0x7f0a013d
+    const v4, 0x7f0a0145
 
     const v5, 0x147260
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 134
-    const v4, 0x7f0a013d
+    const v4, 0x7f0a0145
 
     invoke-static {v4, v1, v10}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 135
-    const v4, 0x7f0a013d
+    const v4, 0x7f0a0145
 
     invoke-static {v4, v3, v7}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 136
-    const v4, 0x7f0a013d
+    const v4, 0x7f0a0145
 
     invoke-static {v4, v0, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 138
-    const v4, 0x7f0a014d
+    const v4, 0x7f0a0155
 
     const v5, 0x147260
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 139
-    const v4, 0x7f0a014d
+    const v4, 0x7f0a0155
 
     invoke-static {v4, v1, v10}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 140
-    const v4, 0x7f0a014d
+    const v4, 0x7f0a0155
 
     invoke-static {v4, v3, v7}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 141
-    const v4, 0x7f0a014d
+    const v4, 0x7f0a0155
 
     invoke-static {v4, v0, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 143
-    const v4, 0x7f0a013c
+    const v4, 0x7f0a0144
 
     const v5, 0xb4aa0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 144
-    const v4, 0x7f0a013c
+    const v4, 0x7f0a0144
 
     const v5, 0x50910
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 145
-    const v4, 0x7f0a013c
+    const v4, 0x7f0a0144
 
     const v5, 0x41eb0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 146
-    const v4, 0x7f0a013c
+    const v4, 0x7f0a0144
 
     const v5, 0x33450
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 149
-    const v4, 0x7f0a013b
+    const v4, 0x7f0a0143
 
     const v5, 0x7a120
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 150
-    const v4, 0x7f0a013b
+    const v4, 0x7f0a0143
 
     const v5, 0x493e0
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 151
-    const v4, 0x7f0a013b
+    const v4, 0x7f0a0143
 
     invoke-static {v4, v3, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 152
-    const v4, 0x7f0a013b
+    const v4, 0x7f0a0143
 
     const v5, 0x222e0
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 154
-    const v4, 0x7f0a013a
+    const v4, 0x7f0a0142
 
     invoke-static {v4, v2, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 155
-    const v4, 0x7f0a013a
+    const v4, 0x7f0a0142
 
     invoke-static {v4, v1, v9}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 156
-    const v4, 0x7f0a013a
+    const v4, 0x7f0a0142
 
     const v5, 0x27100
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 157
-    const v4, 0x7f0a013a
+    const v4, 0x7f0a0142
 
     const v5, 0x15f90
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 159
-    const v4, 0x7f0a0139
+    const v4, 0x7f0a0141
 
     invoke-static {v4, v2, v8}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 160
-    const v4, 0x7f0a0139
+    const v4, 0x7f0a0141
 
     const v5, 0xe678
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 161
-    const v4, 0x7f0a0139
+    const v4, 0x7f0a0141
 
     const v5, 0x84d0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 162
-    const v4, 0x7f0a0139
+    const v4, 0x7f0a0141
 
     const/16 v5, 0x6978
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 165
-    const v4, 0x7f0a0143
+    const v4, 0x7f0a014b
 
     const v5, 0x147260
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 166
-    const v4, 0x7f0a0143
+    const v4, 0x7f0a014b
 
     invoke-static {v4, v1, v10}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 167
-    const v4, 0x7f0a0143
+    const v4, 0x7f0a014b
 
     invoke-static {v4, v3, v7}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 168
-    const v4, 0x7f0a0143
+    const v4, 0x7f0a014b
 
     invoke-static {v4, v0, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 170
-    const v4, 0x7f0a0142
+    const v4, 0x7f0a014a
 
     const v5, 0xb4aa0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 171
-    const v4, 0x7f0a0142
+    const v4, 0x7f0a014a
 
     const v5, 0x50910
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 172
-    const v4, 0x7f0a0142
+    const v4, 0x7f0a014a
 
     const v5, 0x41eb0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 173
-    const v4, 0x7f0a0142
+    const v4, 0x7f0a014a
 
     const v5, 0x33450
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 175
-    const v4, 0x7f0a0140
+    const v4, 0x7f0a0148
 
     invoke-static {v4, v2, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 176
-    const v4, 0x7f0a0140
+    const v4, 0x7f0a0148
 
     invoke-static {v4, v1, v9}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 177
-    const v4, 0x7f0a0140
+    const v4, 0x7f0a0148
 
     const v5, 0x27100
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 178
-    const v4, 0x7f0a0140
+    const v4, 0x7f0a0148
 
     const v5, 0x15f90
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 182
-    const v4, 0x7f0a0141
+    const v4, 0x7f0a0149
 
     invoke-static {v4, v2, v6}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 184
-    const v4, 0x7f0a0141
+    const v4, 0x7f0a0149
 
     invoke-static {v4, v1, v9}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 186
-    const v4, 0x7f0a0141
+    const v4, 0x7f0a0149
 
     const v5, 0x27100
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 188
-    const v4, 0x7f0a0141
+    const v4, 0x7f0a0149
 
     const v5, 0x15f90
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 190
-    const v4, 0x7f0a013f
+    const v4, 0x7f0a0147
 
     invoke-static {v4, v2, v8}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 191
-    const v4, 0x7f0a013f
+    const v4, 0x7f0a0147
 
     const v5, 0xe678
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 192
-    const v4, 0x7f0a013f
+    const v4, 0x7f0a0147
 
     const v5, 0x84d0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 193
-    const v4, 0x7f0a013f
+    const v4, 0x7f0a0147
 
     const/16 v5, 0x6978
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 195
-    const v4, 0x7f0a0144
+    const v4, 0x7f0a014c
 
     invoke-static {v4, v2, v8}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 196
-    const v4, 0x7f0a0144
+    const v4, 0x7f0a014c
 
     const v5, 0xe678
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 197
-    const v4, 0x7f0a0144
+    const v4, 0x7f0a014c
 
     const v5, 0x84d0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 198
-    const v4, 0x7f0a0144
+    const v4, 0x7f0a014c
 
     const/16 v5, 0x6978
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 201
-    const v4, 0x7f0a012a
+    const v4, 0x7f0a0132
 
     const v5, 0x1e8480
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 202
-    const v4, 0x7f0a012a
+    const v4, 0x7f0a0132
 
     const v5, 0x120160
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 203
-    const v4, 0x7f0a012a
+    const v4, 0x7f0a0132
 
     const v5, 0xad570
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 205
-    const v4, 0x7f0a0129
+    const v4, 0x7f0a0131
 
     const v5, 0x17a6b0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 206
-    const v4, 0x7f0a0129
+    const v4, 0x7f0a0131
 
     const v5, 0xdbba0
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 207
-    const v4, 0x7f0a0129
+    const v4, 0x7f0a0131
 
     const v5, 0xa6040
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 208
-    const v4, 0x7f0a0129
+    const v4, 0x7f0a0131
 
     const v5, 0x57e40
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 210
-    const v4, 0x7f0a014c
+    const v4, 0x7f0a0154
 
     const v5, 0x17a6b0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 211
-    const v4, 0x7f0a014c
+    const v4, 0x7f0a0154
 
     const v5, 0xdbba0
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 212
-    const v4, 0x7f0a014c
+    const v4, 0x7f0a0154
 
     const v5, 0xa6040
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 213
-    const v4, 0x7f0a014c
+    const v4, 0x7f0a0154
 
     const v5, 0x57e40
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 215
-    const v4, 0x7f0a0127
+    const v4, 0x7f0a012f
 
     const v5, 0xcaa30
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 216
-    const v4, 0x7f0a0127
+    const v4, 0x7f0a012f
 
     const v5, 0x8b290
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 217
-    const v4, 0x7f0a0127
+    const v4, 0x7f0a012f
 
     invoke-static {v4, v3, v7}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 218
-    const v4, 0x7f0a0127
+    const v4, 0x7f0a012f
 
     const v5, 0x33450
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 221
-    const v4, 0x7f0a0126
+    const v4, 0x7f0a012e
 
     const v5, 0xb71b0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 222
-    const v4, 0x7f0a0126
+    const v4, 0x7f0a012e
 
     const v5, 0x7c830
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 223
-    const v4, 0x7f0a0126
+    const v4, 0x7f0a012e
 
     const v5, 0x5a550
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 224
-    const v4, 0x7f0a0126
+    const v4, 0x7f0a012e
 
     const v5, 0x1a1f8
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 226
-    const v4, 0x7f0a0125
+    const v4, 0x7f0a012d
 
     const v5, 0x900b0
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 227
-    const v4, 0x7f0a0125
+    const v4, 0x7f0a012d
 
     const v5, 0x64190
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 228
-    const v4, 0x7f0a0125
+    const v4, 0x7f0a012d
 
     const v5, 0x53020
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 229
-    const v4, 0x7f0a0125
+    const v4, 0x7f0a012d
 
     const v5, 0x14c08
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 231
-    const v4, 0x7f0a0123
+    const v4, 0x7f0a012b
 
     invoke-static {v4, v2, v9}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 232
-    const v4, 0x7f0a0123
+    const v4, 0x7f0a012b
 
     const v5, 0x222e0
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 233
-    const v4, 0x7f0a0123
+    const v4, 0x7f0a012b
 
     const v5, 0x1fbd0
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 234
-    const v4, 0x7f0a0123
+    const v4, 0x7f0a012b
 
     const v5, 0xbb80
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 257
-    const v4, 0x7f0a014a
+    const v4, 0x7f0a0152
 
     const v5, 0x160c88
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 258
-    const v4, 0x7f0a014a
+    const v4, 0x7f0a0152
 
     const v5, 0xeb988
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 259
-    const v4, 0x7f0a014a
+    const v4, 0x7f0a0152
 
     const v5, 0x83d60
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 260
-    const v4, 0x7f0a014a
+    const v4, 0x7f0a0152
 
     const v5, 0x4a768
 
     invoke-static {v4, v0, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 263
-    const v4, 0x7f0a012c
+    const v4, 0x7f0a0134
 
     const v5, 0xa028
 
     invoke-static {v4, v2, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 264
-    const v4, 0x7f0a012c
+    const v4, 0x7f0a0134
 
     const/16 v5, 0x5208
 
     invoke-static {v4, v1, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 265
-    const v4, 0x7f0a012c
+    const v4, 0x7f0a0134
 
     const/16 v5, 0x32c8
 
     invoke-static {v4, v3, v5}, Lcom/android/camera/ResolutionSize;->put(ILjava/lang/String;I)V
 
     .line 266
-    const v4, 0x7f0a012c
+    const v4, 0x7f0a0134
 
     const/16 v5, 0x2328
 

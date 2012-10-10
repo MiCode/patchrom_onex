@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1217
+    .line 1216
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter$5;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,21 @@
     .locals 1
 
     .prologue
-    .line 1219
+    .line 1218
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$5;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mItemsMap:Ljava/util/Map;
     invoke-static {v0}, Lcom/htc/app/FilePickerListAdapter;->access$1000(Lcom/htc/app/FilePickerListAdapter;)Ljava/util/Map;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 1227
+    iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$5;->this$0:Lcom/htc/app/FilePickerListAdapter;
+
+    #getter for: Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
+    invoke-static {v0}, Lcom/htc/app/FilePickerListAdapter;->access$500(Lcom/htc/app/FilePickerListAdapter;)[Lcom/htc/app/ItemInfo;
 
     move-result-object v0
 
@@ -59,31 +69,21 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    .line 1229
-    iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$5;->this$0:Lcom/htc/app/FilePickerListAdapter;
-
-    #getter for: Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
-    invoke-static {v0}, Lcom/htc/app/FilePickerListAdapter;->access$500(Lcom/htc/app/FilePickerListAdapter;)[Lcom/htc/app/ItemInfo;
-
-    move-result-object v0
-
     array-length v0, v0
 
     if-lez v0, :cond_1
 
-    .line 1230
+    .line 1229
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$5;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
-    .line 1237
+    .line 1236
     :cond_0
     :goto_0
     return-void
 
-    .line 1232
+    .line 1231
     :cond_1
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$5;->this$0:Lcom/htc/app/FilePickerListAdapter;
 

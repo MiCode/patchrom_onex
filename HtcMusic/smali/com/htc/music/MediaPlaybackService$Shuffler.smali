@@ -28,12 +28,12 @@
     .parameter
 
     .prologue
-    .line 4341
+    .line 4438
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$Shuffler;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4343
+    .line 4440
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -49,7 +49,7 @@
     .parameter "x1"
 
     .prologue
-    .line 4341
+    .line 4438
     invoke-direct {p0, p1}, Lcom/htc/music/MediaPlaybackService$Shuffler;-><init>(Lcom/htc/music/MediaPlaybackService;)V
 
     return-void
@@ -62,7 +62,7 @@
     .parameter "interval"
 
     .prologue
-    .line 4347
+    .line 4444
     :cond_0
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$Shuffler;->mRandom:Ljava/util/Random;
 
@@ -70,7 +70,7 @@
 
     move-result v0
 
-    .line 4348
+    .line 4445
     .local v0, ret:I
     iget v1, p0, Lcom/htc/music/MediaPlaybackService$Shuffler;->mPrevious:I
 
@@ -80,10 +80,10 @@
 
     if-gt p1, v1, :cond_0
 
-    .line 4349
+    .line 4446
     :cond_1
     iput v0, p0, Lcom/htc/music/MediaPlaybackService$Shuffler;->mPrevious:I
 
-    .line 4350
+    .line 4447
     return v0
 .end method

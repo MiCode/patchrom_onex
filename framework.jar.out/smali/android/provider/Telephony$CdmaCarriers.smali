@@ -27,7 +27,7 @@
     .locals 1
 
     .prologue
-    .line 3021
+    .line 3024
     const-string v0, "content://cdmaapn/carriers"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 3017
+    .line 3020
     invoke-direct {p0}, Landroid/provider/Telephony$Carriers;-><init>()V
 
     return-void

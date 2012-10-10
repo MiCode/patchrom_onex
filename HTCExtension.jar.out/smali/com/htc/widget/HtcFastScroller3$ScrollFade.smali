@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 787
+    .line 816
     iput-object p1, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->this$0:Lcom/htc/widget/HtcFastScroller3;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
     .prologue
     const-wide/16 v7, 0xd0
 
-    .line 801
+    .line 830
     iget-object v3, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->this$0:Lcom/htc/widget/HtcFastScroller3;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcFastScroller3;->getState()I
@@ -64,20 +64,20 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 802
+    .line 831
     const/16 v0, 0xd0
 
-    .line 811
+    .line 840
     :goto_0
     return v0
 
-    .line 805
+    .line 834
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 806
+    .line 835
     .local v1, now:J
     iget-wide v3, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->mStartTime:J
 
@@ -89,13 +89,13 @@
 
     if-lez v3, :cond_1
 
-    .line 807
+    .line 836
     const/4 v0, 0x0
 
     .local v0, alpha:I
     goto :goto_0
 
-    .line 809
+    .line 838
     .end local v0           #alpha:I
     :cond_1
     iget-wide v3, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->mStartTime:J
@@ -120,7 +120,7 @@
     .locals 2
 
     .prologue
-    .line 819
+    .line 848
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->this$0:Lcom/htc/widget/HtcFastScroller3;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcFastScroller3;->getState()I
@@ -131,14 +131,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 820
+    .line 849
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->startFade()V
 
-    .line 829
+    .line 858
     :goto_0
     return-void
 
-    .line 824
+    .line 853
     :cond_0
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->getAlpha()I
 
@@ -146,7 +146,7 @@
 
     if-lez v0, :cond_1
 
-    .line 825
+    .line 854
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->this$0:Lcom/htc/widget/HtcFastScroller3;
 
     #getter for: Lcom/htc/widget/HtcFastScroller3;->mList:Lcom/htc/widget/HtcAbsListView2;
@@ -158,7 +158,7 @@
 
     goto :goto_0
 
-    .line 827
+    .line 856
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->this$0:Lcom/htc/widget/HtcFastScroller3;
 
@@ -173,25 +173,25 @@
     .locals 2
 
     .prologue
-    .line 795
+    .line 824
     const-wide/16 v0, 0xc8
 
     iput-wide v0, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->mFadeDuration:J
 
-    .line 796
+    .line 825
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->mStartTime:J
 
-    .line 797
+    .line 826
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller3$ScrollFade;->this$0:Lcom/htc/widget/HtcFastScroller3;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcFastScroller3;->setState(I)V
 
-    .line 798
+    .line 827
     return-void
 .end method

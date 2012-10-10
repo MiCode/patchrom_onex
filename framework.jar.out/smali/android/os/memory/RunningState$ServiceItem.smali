@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 244
+    .line 252
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/os/memory/RunningState$BaseItem;-><init>(Z)V
 
-    .line 245
+    .line 253
     return-void
 .end method

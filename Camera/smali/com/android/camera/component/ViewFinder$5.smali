@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 963
+    .line 962
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$5;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 967
+    .line 966
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$5;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #calls: Lcom/android/camera/component/ViewFinder;->clearPostViewBitmap()V
     invoke-static {v0}, Lcom/android/camera/component/ViewFinder;->access$500(Lcom/android/camera/component/ViewFinder;)V
 
-    .line 968
+    .line 967
     return-void
 .end method

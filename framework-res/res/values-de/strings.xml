@@ -1210,7 +1210,7 @@ für Konto %s"</string>
     <string name="permgrouplab_4G">4G</string>
     <string name="permgroupdesc_4G">Auf 4G zugreifen</string>
     <string name="permlab_changeWimaxMulticastState">WiMAX-Multicast-Empfang zulassen</string>
-    <string name="permdesc_changeWimaxMulticastState">Ermöglicht einer Anwendung, Datenpakete zu empfangen, die nicht direkt an Ihr Gerät gerichtet sind. Dies kann bei der Erkennung von in der Nähe angebotenen Diensten hilfreich sein. Diese Einstellung verbraucht mehr Energie als der Nicht-Multicast-Modus.</string>
+    <string name="permdesc_changeWimaxMulticastState">Erlaubt einer Anwendung Pakete zu empfangen, die nicht direkt an das Gerät adressiert sind, nützlich bei verwandten Diensleistungen. Im Modus Multicast wird mehr Energie benötigt.</string>
     <string name="permlab_access4GState">4G-Status anzeigen</string>
     <string name="permdesc_access4GState">Ermöglicht einer Anwendung, die Informationen zum WiMAX-Status einzusehen.</string>
     <string name="permlab_change4GState">4G-Status ändern</string>

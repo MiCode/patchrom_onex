@@ -26,6 +26,12 @@
 
 .field public static final EXPANDABLE_LIST_SIZE:I = 0x5
 
+.field public static final PKG_NAME_HTC_RENREN:Ljava/lang/String; = "com.htc.friendstream.renrenwebplugin"
+
+.field public static final PKG_NAME_HTC_SINA:Ljava/lang/String; = "com.htc.socialnetwork.chinasns"
+
+.field public static final PKG_NAME_HTC_SINAWEIBO:Ljava/lang/String; = "com.htc.friendstream.sinaweiboplugin"
+
 .field private static final TAG:Ljava/lang/String; = "MediaShareListAdapter"
 
 
@@ -68,57 +74,57 @@
     .end annotation
 
     .prologue
-    .line 63
+    .line 66
     .local p2, mediaInfos:Ljava/util/List;,"Ljava/util/List<Lcom/android/camera/MediaInfo;>;"
     invoke-direct {p0, p1}, Lcom/android/camera/share/MediaShareListAdapterBase;-><init>(Landroid/content/Context;)V
 
-    .line 52
+    .line 55
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
-    .line 53
+    .line 56
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpanded:Z
 
-    .line 55
+    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
 
-    .line 66
+    .line 69
     if-eqz p2, :cond_0
 
-    .line 67
+    .line 70
     iget-object v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 70
+    .line 73
     :cond_0
     iput-object p3, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_LastShareAppName:Ljava/lang/String;
 
-    .line 71
+    .line 74
     invoke-direct {p0}, Lcom/android/camera/share/MediaShareListAdapter;->initializeAppInfos()V
 
-    .line 72
+    .line 75
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isDoubleShot()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 73
+    .line 76
     invoke-direct {p0}, Lcom/android/camera/share/MediaShareListAdapter;->sortAppInfos()V
 
-    .line 76
+    .line 79
     :goto_0
     return-void
 
-    .line 75
+    .line 78
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/share/MediaShareListAdapter;->sortAppInfosForDoubleShot()V
 
@@ -131,28 +137,28 @@
     .parameter "appInfo"
 
     .prologue
-    .line 285
+    .line 300
     iget-boolean v1, p2, Lcom/android/camera/share/ExternalAppInfo;->isFake:Z
 
     if-nez v1, :cond_1
 
-    .line 287
+    .line 302
     iget-object v1, p2, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     invoke-virtual {v1, p1}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 288
+    .line 303
     .local v0, label:Ljava/lang/CharSequence;
     if-eqz v0, :cond_0
 
-    .line 292
+    .line 307
     .end local v0           #label:Ljava/lang/CharSequence;
     :goto_0
     return-object v0
 
-    .line 290
+    .line 305
     .restart local v0       #label:Ljava/lang/CharSequence;
     :cond_0
     iget-object v1, p2, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
@@ -163,7 +169,7 @@
 
     goto :goto_0
 
-    .line 292
+    .line 307
     .end local v0           #label:Ljava/lang/CharSequence;
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/share/MediaShareListAdapter;->getContext()Landroid/content/Context;
@@ -189,14 +195,14 @@
 
     const/4 v2, 0x0
 
-    .line 341
+    .line 356
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v1, 0x20
 
     if-ne v0, v1, :cond_0
 
-    .line 343
+    .line 358
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -209,17 +215,17 @@
 
     aput-object v1, v0, v3
 
-    .line 354
+    .line 369
     :goto_0
     return-object v0
 
-    .line 348
+    .line 363
     :cond_0
     sget-boolean v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->HtcVF360Flag:Z
 
     if-eqz v0, :cond_1
 
-    .line 350
+    .line 365
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "com.vodafone.people.engine.contents.photoshare.PhotoShareActivity"
@@ -228,7 +234,7 @@
 
     goto :goto_0
 
-    .line 354
+    .line 369
     :cond_1
     new-array v0, v2, [Ljava/lang/String;
 
@@ -245,7 +251,7 @@
 
     const/4 v11, 0x1
 
-    .line 383
+    .line 398
     iget-object v9, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
@@ -254,24 +260,24 @@
 
     if-nez v9, :cond_1
 
-    .line 456
+    .line 471
     :cond_0
     :goto_0
     return-void
 
-    .line 387
+    .line 402
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/share/MediaShareListAdapter;->getAppInfoList()Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 388
+    .line 403
     .local v2, appInfoList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/camera/share/ExternalAppInfo;>;"
     invoke-virtual {p0}, Lcom/android/camera/share/MediaShareListAdapter;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
-    .line 389
+    .line 404
     .local v7, packageManager:Landroid/content/pm/PackageManager;
     iget-object v9, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
 
@@ -283,7 +289,7 @@
 
     iget-object v6, v9, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
 
-    .line 392
+    .line 407
     .local v6, mimeType:Ljava/lang/String;
     new-instance v4, Landroid/content/Intent;
 
@@ -300,11 +306,11 @@
     :goto_1
     invoke-direct {v4, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 393
+    .line 408
     .local v4, intent:Landroid/content/Intent;
     invoke-virtual {v4, v6}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 394
+    .line 409
     invoke-virtual {v7, v4, v12}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v10
@@ -326,12 +332,12 @@
 
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 400
+    .line 415
     const-string v9, "android.intent.action.USCSEND"
 
     invoke-virtual {v4, v9}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 401
+    .line 416
     invoke-virtual {v7, v4, v12}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v9
@@ -344,7 +350,7 @@
 
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 406
+    .line 421
     iget-object v9, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
@@ -358,7 +364,7 @@
     :goto_3
     invoke-virtual {v4, v9}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 407
+    .line 422
     invoke-virtual {v7, v4, v12}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v10
@@ -380,19 +386,19 @@
 
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 411
+    .line 426
     invoke-static {}, Lcom/android/camera/DisplayDevice;->removeMMS()Z
 
     move-result v9
 
     if-nez v9, :cond_2
 
-    .line 413
+    .line 428
     const-string v9, "android.intent.action.SEND_MSG"
 
     invoke-virtual {v4, v9}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 414
+    .line 429
     invoke-virtual {v7, v4, v12}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v9
@@ -403,7 +409,7 @@
 
     move-result-object v5
 
-    .line 415
+    .line 430
     .local v5, list:Ljava/util/List;,"Ljava/util/List<Lcom/android/camera/share/ExternalAppInfo;>;"
     iget-object v9, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
 
@@ -413,10 +419,10 @@
 
     if-ne v9, v11, :cond_9
 
-    .line 416
+    .line 431
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 428
+    .line 443
     .end local v5           #list:Ljava/util/List;,"Ljava/util/List<Lcom/android/camera/share/ExternalAppInfo;>;"
     :cond_2
     sget-short v9, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
@@ -431,7 +437,7 @@
 
     if-ne v9, v10, :cond_4
 
-    .line 431
+    .line 446
     const-string v9, "image/"
 
     invoke-virtual {v6, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -440,7 +446,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 433
+    .line 448
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -459,15 +465,15 @@
 
     check-cast v1, Lcom/android/camera/share/ExternalAppInfo;
 
-    .line 435
+    .line 450
     .local v1, appInfo:Lcom/android/camera/share/ExternalAppInfo;
     iget-object v8, v1, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 436
+    .line 451
     .local v8, resolveInfo:Landroid/content/pm/ResolveInfo;
     iget-object v0, v8, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 437
+    .line 452
     .local v0, activityInfo:Landroid/content/pm/ActivityInfo;
     iget-object v9, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
@@ -479,13 +485,13 @@
 
     if-eqz v9, :cond_3
 
-    .line 439
+    .line 454
     new-instance v8, Landroid/content/pm/ResolveInfo;
 
     .end local v8           #resolveInfo:Landroid/content/pm/ResolveInfo;
     invoke-direct {v8}, Landroid/content/pm/ResolveInfo;-><init>()V
 
-    .line 440
+    .line 455
     .restart local v8       #resolveInfo:Landroid/content/pm/ResolveInfo;
     new-instance v9, Landroid/content/pm/ActivityInfo;
 
@@ -493,12 +499,12 @@
 
     iput-object v9, v8, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 442
-    const v9, 0x7f0a01a4
+    .line 457
+    const v9, 0x7f0a01ad
 
     iput v9, v8, Landroid/content/pm/ResolveInfo;->labelRes:I
 
-    .line 443
+    .line 458
     new-instance v9, Lcom/android/camera/share/ExternalAppInfo;
 
     const-string v10, "android.intent.action.SEND_MSG"
@@ -507,7 +513,7 @@
 
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 451
+    .line 466
     .end local v0           #activityInfo:Landroid/content/pm/ActivityInfo;
     .end local v1           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     .end local v3           #i$:Ljava/util/Iterator;
@@ -519,41 +525,41 @@
 
     if-eqz v9, :cond_0
 
-    .line 453
+    .line 468
     iput-boolean v11, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
-    .line 454
+    .line 469
     iput-boolean v13, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpanded:Z
 
     goto/16 :goto_0
 
-    .line 392
+    .line 407
     .end local v4           #intent:Landroid/content/Intent;
     :cond_5
     const-string v9, "android.intent.action.SEND_MULTIPLE"
 
     goto/16 :goto_1
 
-    .line 394
+    .line 409
     .restart local v4       #intent:Landroid/content/Intent;
     :cond_6
     const-string v9, "android.intent.action.SEND_MULTIPLE"
 
     goto/16 :goto_2
 
-    .line 406
+    .line 421
     :cond_7
     const-string v9, "com.htc.vmm.SEND_MULTIPLE"
 
     goto/16 :goto_3
 
-    .line 407
+    .line 422
     :cond_8
     const-string v9, "com.htc.vmm.SEND_MULTIPLE"
 
     goto/16 :goto_4
 
-    .line 418
+    .line 433
     .restart local v5       #list:Ljava/util/List;,"Ljava/util/List<Lcom/android/camera/share/ExternalAppInfo;>;"
     :cond_9
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -575,7 +581,7 @@
 
     check-cast v1, Lcom/android/camera/share/ExternalAppInfo;
 
-    .line 420
+    .line 435
     .restart local v1       #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     iget-object v9, v1, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
@@ -591,7 +597,7 @@
 
     if-nez v9, :cond_a
 
-    .line 422
+    .line 437
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
@@ -601,22 +607,22 @@
     .locals 19
 
     .prologue
-    .line 480
+    .line 495
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/share/MediaShareListAdapter;->getAppInfoList()Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 481
+    .line 496
     .local v3, appInfoList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/camera/share/ExternalAppInfo;>;"
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/share/MediaShareListAdapter;->getAppInfoListSortKeys()[Ljava/lang/String;
 
     move-result-object v15
 
-    .line 482
+    .line 497
     .local v15, sortKeys:[Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 483
+    .line 498
     .local v7, fixedItemCount:I
     array-length v0, v15
 
@@ -632,7 +638,7 @@
 
     if-eqz v17, :cond_0
 
-    .line 485
+    .line 500
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v17
@@ -643,14 +649,14 @@
     :goto_0
     if-ltz v8, :cond_0
 
-    .line 487
+    .line 502
     invoke-virtual {v3, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/camera/share/ExternalAppInfo;
 
-    .line 488
+    .line 503
     .local v2, appInfo:Lcom/android/camera/share/ExternalAppInfo;
     iget-object v0, v2, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
@@ -680,20 +686,20 @@
 
     if-eqz v17, :cond_5
 
-    .line 490
+    .line 505
     invoke-virtual {v3, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 491
+    .line 506
     const/16 v17, 0x0
 
     move/from16 v0, v17
 
     invoke-virtual {v3, v0, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 492
+    .line 507
     add-int/lit8 v7, v7, 0x1
 
-    .line 499
+    .line 514
     .end local v2           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     .end local v8           #i:I
     :cond_0
@@ -701,7 +707,7 @@
 
     move-result-object v14
 
-    .line 500
+    .line 515
     .local v14, packageManager:Landroid/content/pm/PackageManager;
     array-length v0, v15
 
@@ -709,14 +715,14 @@
 
     if-nez v17, :cond_9
 
-    .line 503
+    .line 518
     const/4 v5, 0x0
 
-    .line 504
+    .line 519
     .local v5, firstAppLabel:Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 505
+    .line 520
     .local v6, firstAppName:Ljava/lang/String;
     sget-short v17, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -728,22 +734,22 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 506
+    .line 521
     const-string v6, "com.newbay.pixota.Pixota"
 
-    .line 526
+    .line 541
     :cond_1
     :goto_1
     if-eqz v6, :cond_3
 
-    .line 529
+    .line 544
     const-string v17, "ro.cid"
 
     invoke-static/range {v17 .. v17}, Lcom/htc/wrap/android/os/HtcWrapSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 530
+    .line 545
     .local v4, cid:Ljava/lang/String;
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -755,14 +761,14 @@
     :goto_2
     if-ltz v8, :cond_3
 
-    .line 532
+    .line 547
     invoke-virtual {v3, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/camera/share/ExternalAppInfo;
 
-    .line 533
+    .line 548
     .restart local v2       #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     iget-object v0, v2, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
@@ -824,17 +830,17 @@
 
     if-eqz v17, :cond_8
 
-    .line 538
+    .line 553
     :cond_2
     invoke-virtual {v3, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 539
+    .line 554
     invoke-virtual {v3, v7, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 540
+    .line 555
     add-int/lit8 v7, v7, 0x1
 
-    .line 566
+    .line 581
     .end local v2           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     .end local v4           #cid:Ljava/lang/String;
     .end local v5           #firstAppLabel:Ljava/lang/String;
@@ -851,14 +857,14 @@
     :goto_3
     if-le v8, v7, :cond_d
 
-    .line 568
+    .line 583
     add-int/lit8 v10, v8, -0x1
 
     .local v10, j:I
     :goto_4
     if-lt v10, v7, :cond_c
 
-    .line 570
+    .line 585
     invoke-virtual {v3, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v17
@@ -877,7 +883,7 @@
 
     move-result-object v11
 
-    .line 571
+    .line 586
     .local v11, labelI:Ljava/lang/String;
     invoke-virtual {v3, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -897,7 +903,7 @@
 
     move-result-object v12
 
-    .line 572
+    .line 587
     .local v12, labelJ:Ljava/lang/String;
     invoke-virtual {v11, v12}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -905,16 +911,16 @@
 
     if-gez v17, :cond_4
 
-    .line 573
+    .line 588
     invoke-static {v3, v8, v10}, Ljava/util/Collections;->swap(Ljava/util/List;II)V
 
-    .line 568
+    .line 583
     :cond_4
     add-int/lit8 v10, v10, -0x1
 
     goto :goto_4
 
-    .line 485
+    .line 500
     .end local v10           #j:I
     .end local v11           #labelI:Ljava/lang/String;
     .end local v12           #labelJ:Ljava/lang/String;
@@ -925,7 +931,7 @@
 
     goto/16 :goto_0
 
-    .line 509
+    .line 524
     .end local v2           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     .end local v8           #i:I
     .restart local v5       #firstAppLabel:Ljava/lang/String;
@@ -952,21 +958,21 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 512
+    .line 527
     const-string v6, "com.android.mms.ui.ComposeMessageActivity"
 
-    .line 513
+    .line 528
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/share/MediaShareListAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v17
 
-    const v18, 0x7f0a01a4
+    const v18, 0x7f0a01ad
 
     invoke-virtual/range {v17 .. v18}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 517
+    .line 532
     :cond_7
     new-instance v9, Landroid/content/Intent;
 
@@ -976,7 +982,7 @@
 
     invoke-direct {v9, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 518
+    .line 533
     .local v9, intent:Landroid/content/Intent;
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/share/MediaShareListAdapter;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -992,7 +998,7 @@
 
     move-result-object v16
 
-    .line 519
+    .line 534
     .local v16, tmpList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface/range {v16 .. v16}, Ljava/util/List;->size()I
 
@@ -1006,12 +1012,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 521
+    .line 536
     const-string v6, "com.htc.mmsmediaproxy.MMSMediaProxy"
 
     goto/16 :goto_1
 
-    .line 530
+    .line 545
     .end local v9           #intent:Landroid/content/Intent;
     .end local v16           #tmpList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .restart local v2       #appInfo:Lcom/android/camera/share/ExternalAppInfo;
@@ -1022,7 +1028,7 @@
 
     goto/16 :goto_2
 
-    .line 548
+    .line 563
     .end local v2           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     .end local v4           #cid:Ljava/lang/String;
     .end local v5           #firstAppLabel:Ljava/lang/String;
@@ -1041,10 +1047,10 @@
 
     if-ge v8, v0, :cond_3
 
-    .line 550
+    .line 565
     aget-object v13, v15, v8
 
-    .line 551
+    .line 566
     .local v13, name:Ljava/lang/String;
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -1056,14 +1062,14 @@
     :goto_6
     if-lt v10, v7, :cond_a
 
-    .line 553
+    .line 568
     invoke-virtual {v3, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/camera/share/ExternalAppInfo;
 
-    .line 554
+    .line 569
     .restart local v2       #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     iget-object v0, v2, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
@@ -1089,30 +1095,30 @@
 
     if-eqz v17, :cond_b
 
-    .line 556
+    .line 571
     invoke-virtual {v3, v10}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 557
+    .line 572
     invoke-virtual {v3, v7, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 558
+    .line 573
     add-int/lit8 v7, v7, 0x1
 
-    .line 548
+    .line 563
     .end local v2           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     :cond_a
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_5
 
-    .line 551
+    .line 566
     .restart local v2       #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     :cond_b
     add-int/lit8 v10, v10, -0x1
 
     goto :goto_6
 
-    .line 566
+    .line 581
     .end local v2           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     .end local v13           #name:Ljava/lang/String;
     :cond_c
@@ -1120,7 +1126,7 @@
 
     goto/16 :goto_3
 
-    .line 576
+    .line 591
     .end local v10           #j:I
     :cond_d
     return-void
@@ -1130,7 +1136,7 @@
     .locals 8
 
     .prologue
-    .line 580
+    .line 595
     invoke-virtual {p0}, Lcom/android/camera/share/MediaShareListAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v6
@@ -1149,7 +1155,7 @@
 
     move-result-object v5
 
-    .line 581
+    .line 596
     .local v5, sortKeys:[Ljava/lang/String;
     if-eqz v5, :cond_0
 
@@ -1157,17 +1163,17 @@
 
     if-nez v6, :cond_1
 
-    .line 600
+    .line 615
     :cond_0
     return-void
 
-    .line 585
+    .line 600
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/share/MediaShareListAdapter;->getAppInfoList()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 586
+    .line 601
     .local v1, appInfoList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/camera/share/ExternalAppInfo;>;"
     const/4 v2, 0x0
 
@@ -1177,10 +1183,10 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 588
+    .line 603
     aget-object v4, v5, v2
 
-    .line 589
+    .line 604
     .local v4, name:Ljava/lang/String;
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1192,14 +1198,14 @@
     :goto_1
     if-le v3, v2, :cond_2
 
-    .line 591
+    .line 606
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera/share/ExternalAppInfo;
 
-    .line 592
+    .line 607
     .local v0, appInfo:Lcom/android/camera/share/ExternalAppInfo;
     iget-object v6, v0, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
@@ -1213,20 +1219,20 @@
 
     if-eqz v6, :cond_3
 
-    .line 594
+    .line 609
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 595
+    .line 610
     invoke-virtual {v1, v2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 586
+    .line 601
     .end local v0           #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 589
+    .line 604
     .restart local v0       #appInfo:Lcom/android/camera/share/ExternalAppInfo;
     :cond_3
     add-int/lit8 v3, v3, -0x1
@@ -1241,7 +1247,7 @@
     .parameter "position"
 
     .prologue
-    .line 84
+    .line 87
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
@@ -1266,15 +1272,15 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 85
+    .line 88
     const/4 v8, 0x0
 
-    .line 265
+    .line 280
     :cond_0
     :goto_0
     return-object v8
 
-    .line 88
+    .line 91
     :cond_1
     move-object/from16 v0, p0
 
@@ -1288,12 +1294,12 @@
 
     if-nez v17, :cond_2
 
-    .line 89
+    .line 92
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 92
+    .line 95
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/share/MediaShareListAdapter;->getAppInfoList()Ljava/util/ArrayList;
 
@@ -1309,7 +1315,7 @@
 
     check-cast v3, Lcom/android/camera/share/ExternalAppInfo;
 
-    .line 93
+    .line 96
     .local v3, appInfo:Lcom/android/camera/share/ExternalAppInfo;
     iget-object v0, v3, Lcom/android/camera/share/ExternalAppInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
@@ -1319,13 +1325,13 @@
 
     iget-object v2, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 96
+    .line 99
     .local v2, activityInfo:Landroid/content/pm/ActivityInfo;
     new-instance v8, Landroid/content/Intent;
 
     invoke-direct {v8}, Landroid/content/Intent;-><init>()V
 
-    .line 97
+    .line 100
     .local v8, intent:Landroid/content/Intent;
     const/high16 v17, 0x100
 
@@ -1333,7 +1339,7 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 100
+    .line 103
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
@@ -1348,7 +1354,7 @@
 
     check-cast v6, Lcom/android/camera/MediaInfo;
 
-    .line 101
+    .line 104
     .local v6, firstMediaInfo:Lcom/android/camera/MediaInfo;
     move-object/from16 v0, p0
 
@@ -1360,7 +1366,7 @@
 
     move-result v11
 
-    .line 102
+    .line 105
     .local v11, mediaCount:I
     iget-object v0, v3, Lcom/android/camera/share/ExternalAppInfo;->action:Ljava/lang/String;
 
@@ -1372,11 +1378,11 @@
 
     move-result v10
 
-    .line 103
+    .line 106
     .local v10, isHtcMediaUploader:Z
     const/4 v14, 0x0
 
-    .line 104
+    .line 107
     .local v14, needUploadList:Z
     sget-boolean v17, Lcom/android/camera/DisplayDevice;->NOT_SENSE_2_0:Z
 
@@ -1400,7 +1406,7 @@
 
     if-eqz v17, :cond_5
 
-    .line 106
+    .line 109
     new-instance v17, Landroid/content/ComponentName;
 
     iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1423,14 +1429,14 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 107
+    .line 110
     const-string v17, "htc.intent.action.SEND_MULTIPLE"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 108
+    .line 111
     const-string v17, "Launch_Service"
 
     const-string v18, "Facebook"
@@ -1441,24 +1447,24 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 109
+    .line 112
     const/4 v14, 0x1
 
-    .line 110
+    .line 113
     const-string v17, "MediaShareListAdapter"
 
     const-string v18, "Share - action name: htc.intent.action.SEND_MULTIPLE"
 
     invoke-static/range {v17 .. v18}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
+    .line 157
     :cond_3
     :goto_1
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/share/MediaShareListAdapter;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v15
 
-    .line 143
+    .line 158
     .local v15, packageManager:Landroid/content/pm/PackageManager;
     sget-short v17, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -1480,7 +1486,7 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 146
+    .line 161
     iget-object v0, v6, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
 
     move-object/from16 v17, v0
@@ -1505,7 +1511,7 @@
 
     if-eqz v17, :cond_4
 
-    .line 148
+    .line 163
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15, v3}, Lcom/android/camera/share/MediaShareListAdapter;->getActivityLabel(Landroid/content/pm/PackageManager;Lcom/android/camera/share/ExternalAppInfo;)Ljava/lang/CharSequence;
@@ -1516,7 +1522,7 @@
 
     move-result-object v18
 
-    const v19, 0x7f0a01a4
+    const v19, 0x7f0a01ad
 
     invoke-virtual/range {v18 .. v19}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1528,7 +1534,7 @@
 
     if-eqz v17, :cond_4
 
-    .line 149
+    .line 164
     const-string v17, "address"
 
     const-string v18, "4444"
@@ -1539,17 +1545,17 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 154
+    .line 169
     :cond_4
     const/16 v17, 0x1
 
     move/from16 v0, v17
 
-    if-ne v11, v0, :cond_8
+    if-ne v11, v0, :cond_a
 
-    if-nez v10, :cond_8
+    if-nez v10, :cond_a
 
-    .line 156
+    .line 171
     const-string v17, "android.intent.extra.STREAM"
 
     iget-object v0, v6, Lcom/android/camera/MediaInfo;->contentUri:Landroid/net/Uri;
@@ -1562,7 +1568,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 157
+    .line 172
     iget-object v0, v6, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
 
     move-object/from16 v17, v0
@@ -1571,24 +1577,24 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 174
+    .line 189
     :goto_2
-    if-eqz v14, :cond_b
+    if-eqz v14, :cond_d
 
-    .line 176
+    .line 191
     new-instance v16, Ljava/util/ArrayList;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/ArrayList;-><init>()V
 
-    .line 177
+    .line 192
     .local v16, uploadList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/Bundle;>;"
     const/4 v7, 0x0
 
     .local v7, i:I
     :goto_3
-    if-ge v7, v11, :cond_a
+    if-ge v7, v11, :cond_c
 
-    .line 179
+    .line 194
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
@@ -1603,13 +1609,13 @@
 
     check-cast v12, Lcom/android/camera/MediaInfo;
 
-    .line 180
+    .line 195
     .local v12, mediaInfo:Lcom/android/camera/MediaInfo;
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 181
+    .line 196
     .local v4, bundle:Landroid/os/Bundle;
     const-string v17, "com.htc.opensense.upload.URI"
 
@@ -1627,7 +1633,7 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
+    .line 197
     const-string v17, "com.htc.opensense.upload.MIMETYPE"
 
     iget-object v0, v12, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
@@ -1640,7 +1646,7 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 183
+    .line 198
     const-string v17, "com.htc.opensense.upload.TITLE"
 
     const-string v18, ""
@@ -1651,7 +1657,7 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
+    .line 199
     const-string v17, "com.htc.opensense.upload.DESCRIPTION"
 
     const-string v18, ""
@@ -1662,17 +1668,17 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 185
+    .line 200
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 177
+    .line 192
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    .line 112
+    .line 115
     .end local v4           #bundle:Landroid/os/Bundle;
     .end local v7           #i:I
     .end local v12           #mediaInfo:Lcom/android/camera/MediaInfo;
@@ -1701,7 +1707,7 @@
 
     if-eqz v17, :cond_6
 
-    .line 114
+    .line 117
     new-instance v17, Landroid/content/ComponentName;
 
     iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1724,14 +1730,14 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 115
+    .line 118
     const-string v17, "htc.intent.action.SEND_MULTIPLE"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 116
+    .line 119
     const-string v17, "Launch_Service"
 
     const-string v18, "Flickr"
@@ -1742,10 +1748,10 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 117
+    .line 120
     const/4 v14, 0x1
 
-    .line 118
+    .line 121
     const-string v17, "MediaShareListAdapter"
 
     const-string v18, "Share - action name: htc.intent.action.SEND_MULTIPLE"
@@ -1754,11 +1760,11 @@
 
     goto/16 :goto_1
 
-    .line 120
+    .line 123
     :cond_6
     if-eqz v10, :cond_7
 
-    .line 122
+    .line 125
     new-instance v17, Landroid/content/ComponentName;
 
     iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1781,7 +1787,7 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 123
+    .line 126
     iget-object v0, v3, Lcom/android/camera/share/ExternalAppInfo;->action:Ljava/lang/String;
 
     move-object/from16 v17, v0
@@ -1790,31 +1796,31 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 124
+    .line 127
     invoke-static {}, Lcom/android/camera/DisplayDevice;->supportHTCMediaUploader()Z
 
     move-result v17
 
     if-eqz v17, :cond_3
 
-    .line 126
+    .line 129
     const/4 v14, 0x1
 
-    .line 127
+    .line 130
     const/16 v17, 0x1
 
     move/from16 v0, v17
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 128
+    .line 131
     const-string v17, "htc.intent.action.SEND_MULTIPLE"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 129
+    .line 132
     const-string v17, "com.htc.opensense.upload.UPLOAD_TAG_DATA_LIST"
 
     new-instance v18, Ljava/util/ArrayList;
@@ -1831,6 +1837,66 @@
 
     .line 134
     :cond_7
+    sget-boolean v17, Lcom/android/camera/DisplayDevice;->NOT_SENSE_2_0:Z
+
+    if-eqz v17, :cond_9
+
+    iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    move-object/from16 v17, v0
+
+    move-object/from16 v0, v17
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v17, v0
+
+    const-string v18, "com.htc.socialnetwork.chinasns"
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v17
+
+    if-nez v17, :cond_8
+
+    iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    move-object/from16 v17, v0
+
+    move-object/from16 v0, v17
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v17, v0
+
+    const-string v18, "com.htc.friendstream.sinaweiboplugin"
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v17
+
+    if-nez v17, :cond_8
+
+    iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    move-object/from16 v17, v0
+
+    move-object/from16 v0, v17
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v17, v0
+
+    const-string v18, "com.htc.friendstream.renrenwebplugin"
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v17
+
+    if-eqz v17, :cond_9
+
+    .line 141
+    :cond_8
     new-instance v17, Landroid/content/ComponentName;
 
     iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1853,7 +1919,83 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 135
+    .line 142
+    const/4 v14, 0x1
+
+    .line 143
+    const/16 v17, 0x1
+
+    move/from16 v0, v17
+
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 144
+    const-string v17, "htc.intent.action.SEND_MULTIPLE"
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 145
+    const-string v17, "MediaShareListAdapter"
+
+    new-instance v18, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v19, "Share - isCHSCustomerUploadPkgName package name: "
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    move-object/from16 v19, v0
+
+    move-object/from16 v0, v19
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    invoke-static/range {v17 .. v18}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    .line 149
+    :cond_9
+    new-instance v17, Landroid/content/ComponentName;
+
+    iget-object v0, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    move-object/from16 v18, v0
+
+    iget-object v0, v2, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+
+    move-object/from16 v19, v0
+
+    invoke-direct/range {v17 .. v19}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    .line 150
     iget-object v0, v3, Lcom/android/camera/share/ExternalAppInfo;->action:Ljava/lang/String;
 
     move-object/from16 v17, v0
@@ -1862,7 +2004,7 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 136
+    .line 151
     const-string v17, "MediaShareListAdapter"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1889,7 +2031,7 @@
 
     invoke-static/range {v17 .. v18}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
+    .line 152
     const-string v17, "MediaShareListAdapter"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1922,7 +2064,7 @@
 
     invoke-static/range {v17 .. v18}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 138
+    .line 153
     const-string v17, "MediaShareListAdapter"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1951,22 +2093,22 @@
 
     goto/16 :goto_1
 
-    .line 162
+    .line 177
     .restart local v15       #packageManager:Landroid/content/pm/PackageManager;
-    :cond_8
+    :cond_a
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 163
+    .line 178
     .local v5, contentUris:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/net/Uri;>;"
     const/4 v7, 0x0
 
     .restart local v7       #i:I
     :goto_4
-    if-ge v7, v11, :cond_9
+    if-ge v7, v11, :cond_b
 
-    .line 164
+    .line 179
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/share/MediaShareListAdapter;->m_MediaInfos:Ljava/util/ArrayList;
@@ -1991,20 +2133,20 @@
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 163
+    .line 178
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_4
 
-    .line 166
-    :cond_9
+    .line 181
+    :cond_b
     const-string v17, "android.intent.extra.STREAM"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v8, v0, v5}, Landroid/content/Intent;->putParcelableArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 169
+    .line 184
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -2045,17 +2187,17 @@
 
     move-result-object v13
 
-    .line 170
+    .line 185
     .local v13, mimeType:Ljava/lang/String;
     invoke-virtual {v8, v13}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     goto/16 :goto_2
 
-    .line 187
+    .line 202
     .end local v5           #contentUris:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/net/Uri;>;"
     .end local v13           #mimeType:Ljava/lang/String;
     .restart local v16       #uploadList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/Bundle;>;"
-    :cond_a
+    :cond_c
     const-string v17, "com.htc.opensense.upload.UPLOAD_META_DATA_LIST"
 
     move-object/from16 v0, v17
@@ -2064,15 +2206,15 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putParcelableArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 191
+    .line 206
     .end local v7           #i:I
     .end local v16           #uploadList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/Bundle;>;"
-    :cond_b
+    :cond_d
     const/16 v17, 0x1
 
     move/from16 v0, v17
 
-    if-ne v11, v0, :cond_d
+    if-ne v11, v0, :cond_f
 
     iget-object v0, v6, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
 
@@ -2084,7 +2226,7 @@
 
     move-result v17
 
-    if-nez v17, :cond_c
+    if-nez v17, :cond_e
 
     iget-object v0, v6, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
 
@@ -2096,31 +2238,31 @@
 
     move-result v17
 
-    if-eqz v17, :cond_d
+    if-eqz v17, :cond_f
 
-    :cond_c
+    :cond_e
     const/4 v9, 0x1
 
-    .line 192
+    .line 207
     .local v9, is3DPhoto:Z
     :goto_5
     if-eqz v9, :cond_0
 
-    .line 194
+    .line 209
     const/16 v17, 0x0
 
     move-object/from16 v0, v17
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 195
+    .line 210
     const-string v17, "com.htc.album.actions.threedconvert"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 196
+    .line 211
     iget-object v0, v6, Lcom/android/camera/MediaInfo;->contentUri:Landroid/net/Uri;
 
     move-object/from16 v17, v0
@@ -2135,7 +2277,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 197
+    .line 212
     const-string v17, "SharedAdapter.KEY_PACKAGE_FOR_OTHER"
 
     iget-object v0, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -2148,7 +2290,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 198
+    .line 213
     const-string v17, "SharedAdapter.KEY_CLASS_NAME"
 
     iget-object v0, v2, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
@@ -2163,9 +2305,9 @@
 
     goto/16 :goto_0
 
-    .line 191
+    .line 206
     .end local v9           #is3DPhoto:Z
-    :cond_d
+    :cond_f
     const/4 v9, 0x0
 
     goto :goto_5
@@ -2175,7 +2317,7 @@
     .locals 1
 
     .prologue
-    .line 273
+    .line 288
     iget-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
     if-eqz v0, :cond_0
@@ -2184,15 +2326,15 @@
 
     if-nez v0, :cond_0
 
-    .line 275
+    .line 290
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpanded:Z
 
-    .line 276
+    .line 291
     invoke-virtual {p0}, Lcom/android/camera/share/MediaShareListAdapter;->notifyDataSetChanged()V
 
-    .line 278
+    .line 293
     :cond_0
     return-void
 .end method
@@ -2202,7 +2344,7 @@
     .parameter "position"
 
     .prologue
-    .line 333
+    .line 348
     invoke-virtual {p0}, Lcom/android/camera/share/MediaShareListAdapter;->getAppInfoList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -2222,7 +2364,7 @@
     .prologue
     const/4 v0, 0x5
 
-    .line 301
+    .line 316
     iget-boolean v1, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
     if-eqz v1, :cond_0
@@ -2241,7 +2383,7 @@
 
     if-lt v1, v0, :cond_0
 
-    .line 303
+    .line 318
     :goto_0
     return v0
 
@@ -2258,7 +2400,7 @@
     .parameter "position"
 
     .prologue
-    .line 312
+    .line 327
     iget-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
     if-eqz v0, :cond_0
@@ -2271,10 +2413,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 313
+    .line 328
     const/4 v0, 0x0
 
-    .line 314
+    .line 329
     :goto_0
     return-object v0
 
@@ -2291,7 +2433,7 @@
     .parameter "position"
 
     .prologue
-    .line 323
+    .line 338
     iget-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
     if-eqz v0, :cond_0
@@ -2304,10 +2446,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 324
+    .line 339
     const-wide/16 v0, -0x1
 
-    .line 325
+    .line 340
     :goto_0
     return-wide v0
 
@@ -2326,7 +2468,7 @@
     .parameter "parent"
 
     .prologue
-    .line 364
+    .line 379
     iget-boolean v1, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
     if-eqz v1, :cond_0
@@ -2339,7 +2481,7 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 368
+    .line 383
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -2354,7 +2496,7 @@
 
     move-result v0
 
-    .line 369
+    .line 384
     .local v0, id:I
     const-string v1, "com.htc.R.id.txt_1x1"
 
@@ -2370,7 +2512,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 374
+    .line 389
     .end local v0           #id:I
     .end local p2
     :goto_0
@@ -2389,7 +2531,7 @@
     .locals 1
 
     .prologue
-    .line 463
+    .line 478
     iget-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpandable:Z
 
     return v0
@@ -2399,7 +2541,7 @@
     .locals 1
 
     .prologue
-    .line 471
+    .line 486
     iget-boolean v0, p0, Lcom/android/camera/share/MediaShareListAdapter;->m_IsExpanded:Z
 
     return v0

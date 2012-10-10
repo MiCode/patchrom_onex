@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1079
+    .line 1174
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$23;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1083
+    .line 1178
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/SelfTimerValue;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/SelfTimerValue;>;"
     sget-object v1, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$TakingPictureState:[I
@@ -93,11 +93,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1090
+    .line 1185
     :goto_0
     return-void
 
-    .line 1087
+    .line 1182
     :pswitch_0
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$23;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -112,11 +112,11 @@
     move-result v0
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSelfTimerIndicator(ZZ)V
-    invoke-static {v1, v2, v0}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;ZZ)V
+    invoke-static {v1, v2, v0}, Lcom/android/camera/component/CaptureBar;->access$4100(Lcom/android/camera/component/CaptureBar;ZZ)V
 
     goto :goto_0
 
-    .line 1083
+    .line 1178
     nop
 
     :pswitch_data_0

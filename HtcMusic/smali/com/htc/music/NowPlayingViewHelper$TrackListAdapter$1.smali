@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3592
+    .line 3624
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$1;->this$0:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .parameter "clickedView"
 
     .prologue
-    .line 3596
+    .line 3628
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 3597
+    .line 3629
     .local v1, data:Landroid/os/Bundle;
     const-string v3, "audioid"
 
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    .line 3598
+    .line 3630
     .local v0, audioId:I
     const-string v3, "position"
 
@@ -65,7 +65,7 @@
 
     move-result v2
 
-    .line 3599
+    .line 3631
     .local v2, position:I
     const-string v3, "[NowPlayingViewHelper]"
 
@@ -99,7 +99,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3600
+    .line 3632
     iget-object v3, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$1;->this$0:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
@@ -112,6 +112,6 @@
     #calls: Lcom/htc/music/NowPlayingViewHelper;->showTrackOptions(IJ)V
     invoke-static {v3, v2, v4, v5}, Lcom/htc/music/NowPlayingViewHelper;->access$4300(Lcom/htc/music/NowPlayingViewHelper;IJ)V
 
-    .line 3601
+    .line 3633
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 856
+    .line 698
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,39 +41,39 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 859
+    .line 701
     iget v7, p1, Landroid/os/Message;->what:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 938
+    .line 780
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 861
+    .line 703
     :pswitch_1
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v3
 
-    .line 862
+    .line 704
     .local v3, data:Landroid/os/Bundle;
     const/4 v5, 0x0
 
-    .line 864
+    .line 706
     .local v5, notRefresh:Z
     if-eqz v3, :cond_1
 
-    .line 865
+    .line 707
     const-string v7, "NotRefresh"
 
     invoke-virtual {v3, v7}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 868
+    .line 710
     :cond_1
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
@@ -86,7 +86,7 @@
 
     if-eq v5, v8, :cond_2
 
-    .line 869
+    .line 711
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
@@ -96,7 +96,7 @@
 
     invoke-virtual {v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;->notifyDataSetChanged()V
 
-    .line 871
+    .line 713
     :cond_2
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
@@ -111,10 +111,10 @@
 
     if-nez v7, :cond_6
 
-    .line 873
+    .line 715
     const/4 v1, 0x0
 
-    .line 875
+    .line 717
     .local v1, bisBrowseDone:Z
     :try_start_0
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
@@ -126,7 +126,7 @@
 
     if-eqz v7, :cond_3
 
-    .line 876
+    .line 718
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -156,12 +156,12 @@
 
     move-result v1
 
-    .line 883
+    .line 725
     :cond_3
     :goto_1
     const/4 v6, 0x0
 
-    .line 884
+    .line 726
     .local v6, size:I
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
@@ -172,7 +172,7 @@
 
     if-eqz v7, :cond_4
 
-    .line 885
+    .line 727
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
@@ -184,7 +184,7 @@
 
     move-result v6
 
-    .line 887
+    .line 729
     :cond_4
     if-eqz v1, :cond_5
 
@@ -199,39 +199,39 @@
 
     if-nez v7, :cond_5
 
-    .line 888
+    .line 730
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
-    const v8, 0x7f0700d3
+    const v8, 0x7f0700d4
 
     invoke-virtual {v7, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showEmptyView(I)V
 
     goto :goto_0
 
-    .line 879
+    .line 721
     .end local v6           #size:I
     :catch_0
     move-exception v4
 
-    .line 881
+    .line 723
     .local v4, e:Landroid/os/RemoteException;
     invoke-virtual {v4}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 890
+    .line 732
     .end local v4           #e:Landroid/os/RemoteException;
     .restart local v6       #size:I
     :cond_5
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
-    const v8, 0x7f0700c9
+    const v8, 0x7f0700ca
 
     invoke-virtual {v7, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showEmptyView(I)V
 
     goto/16 :goto_0
 
-    .line 892
+    .line 734
     .end local v1           #bisBrowseDone:Z
     .end local v6           #size:I
     :cond_6
@@ -248,14 +248,14 @@
 
     if-lez v7, :cond_0
 
-    .line 893
+    .line 735
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-virtual {v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->hideEmptyErrorView()V
 
     goto/16 :goto_0
 
-    .line 901
+    .line 743
     .end local v3           #data:Landroid/os/Bundle;
     .end local v5           #notRefresh:Z
     :pswitch_2
@@ -267,17 +267,17 @@
 
     goto/16 :goto_0
 
-    .line 905
+    .line 747
     :pswitch_3
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Landroid/database/Cursor;
 
-    .line 907
+    .line 749
     .local v2, cursor:Landroid/database/Cursor;
     if-nez v2, :cond_7
 
-    .line 908
+    .line 750
     const-string v7, "[DMS]"
 
     const-string v8, "get cursor == null"
@@ -286,7 +286,7 @@
 
     goto/16 :goto_0
 
-    .line 912
+    .line 754
     :cond_7
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
@@ -297,27 +297,27 @@
 
     if-eqz v7, :cond_8
 
-    .line 913
+    .line 755
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
 
-    .line 917
+    .line 759
     :cond_8
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-virtual {v7, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->GetCursorInfo(Landroid/database/Cursor;)V
 
-    .line 918
+    .line 760
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 919
+    .line 761
     const/4 v2, 0x0
 
-    .line 920
+    .line 762
     goto/16 :goto_0
 
-    .line 923
+    .line 765
     .end local v2           #cursor:Landroid/database/Cursor;
     :pswitch_4
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
@@ -331,7 +331,7 @@
 
     invoke-virtual {v7, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 924
+    .line 766
     const-string v7, "DLNA"
 
     const-string v8, "DETAIL_PAGE"
@@ -340,14 +340,14 @@
 
     goto/16 :goto_0
 
-    .line 928
+    .line 770
     :pswitch_5
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #calls: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setTitle()V
     invoke-static {v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->access$1000(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
-    .line 929
+    .line 771
     const-string v7, "DLNA"
 
     const-string v8, "Set title"
@@ -356,7 +356,7 @@
 
     goto/16 :goto_0
 
-    .line 933
+    .line 775
     :pswitch_6
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -368,7 +368,7 @@
 
     move-result v0
 
-    .line 936
+    .line 778
     .local v0, ID:I
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
@@ -376,7 +376,7 @@
 
     goto/16 :goto_0
 
-    .line 859
+    .line 701
     nop
 
     :pswitch_data_0

@@ -422,16 +422,16 @@
     iput v3, p0, Landroid/webkit/LoadListener;->finalStatus:I
 
     .line 2143
-    invoke-virtual {v1}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
+    throw v1
 
     move-result-object v3
 
-    iput-object v3, p0, Landroid/webkit/LoadListener;->finalfilename:Ljava/lang/String;
+    throw p0
 
     .line 2144
     const-string/jumbo v3, "title"
 
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    throw v1
 
     move-result-object v2
 
@@ -448,15 +448,15 @@
 
     const-string/jumbo v5, "modifiedTitle:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v4
 
     move-result-object v4
 
@@ -466,20 +466,20 @@
     :goto_1
     if-nez v2, :cond_1
 
-    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+    throw v0
 
     move-result-object v2
 
     .end local v2           #modifiedTitle:Ljava/lang/String;
     :cond_1
-    iput-object v2, p0, Landroid/webkit/LoadListener;->finalfileTitle:Ljava/lang/String;
+    throw p0
 
     .line 2152
-    invoke-virtual {v1}, Landroid/content/Intent;->getType()Ljava/lang/String;
+    throw v1
 
     move-result-object v3
 
-    iput-object v3, p0, Landroid/webkit/LoadListener;->finalmimeType:Ljava/lang/String;
+    throw p0
 
     .line 2156
     const-string/jumbo v3, "webkit"
@@ -490,17 +490,17 @@
 
     const-string v5, "addDRMFile  finalmimeType: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    iget-object v5, p0, Landroid/webkit/LoadListener;->finalmimeType:Ljava/lang/String;
+    throw p0
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v4
 
     move-result-object v4
 
@@ -515,17 +515,17 @@
 
     const-string v5, "addDRMFile  finalStatus: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    iget v5, p0, Landroid/webkit/LoadListener;->finalStatus:I
+    throw p0
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v4
 
     move-result-object v4
 
@@ -540,17 +540,17 @@
 
     const-string v5, "addDRMFile  finalfilename: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    iget-object v5, p0, Landroid/webkit/LoadListener;->finalfilename:Ljava/lang/String;
+    throw p0
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v4
 
     move-result-object v4
 
@@ -567,21 +567,21 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "item.getDataString():"
+    const-string v5, "item.getDataString():"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    invoke-virtual {v1}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
+    throw v1
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw v4
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v4
 
     move-result-object v4
 
@@ -2695,7 +2695,7 @@
 
     iget-object v11, v6, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v11, v11, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    iget-object v11, v11, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3239,7 +3239,7 @@
     .line 2173
     const-string/jumbo v1, "webkit"
 
-    const-string/jumbo v2, "insertDownload()"
+    const-string v2, "insertDownload()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -4977,7 +4977,7 @@
     iput-object v3, p0, Landroid/webkit/LoadListener;->mCacheLoader:Landroid/webkit/CacheLoader;
 
     .line 842
-    const-string/jumbo v3, "if-none-match"
+    const-string v3, "if-none-match"
 
     invoke-interface {p1, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -4985,7 +4985,7 @@
 
     if-nez v3, :cond_1
 
-    const-string/jumbo v3, "if-modified-since"
+    const-string v3, "if-modified-since"
 
     invoke-interface {p1, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 

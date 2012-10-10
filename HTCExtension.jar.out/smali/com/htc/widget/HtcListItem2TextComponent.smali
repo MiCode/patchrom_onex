@@ -107,7 +107,7 @@
     .line 130
     iput-boolean v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mUseFontSizeInStyle:Z
 
-    .line 566
+    .line 570
     iput v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     .line 87
@@ -179,7 +179,7 @@
     .line 130
     iput-boolean v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mUseFontSizeInStyle:Z
 
-    .line 566
+    .line 570
     iput v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     .line 102
@@ -268,7 +268,7 @@
     .line 130
     iput-boolean v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mUseFontSizeInStyle:Z
 
-    .line 566
+    .line 570
     iput v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     .line 92
@@ -341,7 +341,7 @@
     .line 130
     iput-boolean v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mUseFontSizeInStyle:Z
 
-    .line 566
+    .line 570
     iput v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     .line 97
@@ -496,7 +496,7 @@
     .parameter "text"
 
     .prologue
-    .line 169
+    .line 171
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -507,25 +507,29 @@
 
     if-eqz v0, :cond_0
 
-    .line 184
+    .line 188
     :goto_0
     return-void
 
-    .line 171
+    .line 173
     :cond_0
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 173
+    .line 175
     if-nez p2, :cond_1
 
-    .line 174
+    .line 176
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 183
+    :goto_1
+    invoke-virtual {p1}, Landroid/widget/TextView;->requestLayout()V
+
     goto :goto_0
 
-    .line 175
+    .line 177
     :cond_1
     const-string v0, ""
 
@@ -535,20 +539,20 @@
 
     if-eqz v0, :cond_2
 
-    .line 176
+    .line 178
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 178
+    .line 180
     :cond_2
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method private setText(Landroid/widget/TextView;Ljava/lang/String;)V
@@ -568,7 +572,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 166
+    .line 168
     :goto_0
     return-void
 
@@ -583,6 +587,10 @@
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 163
+    :goto_1
+    invoke-virtual {p1}, Landroid/widget/TextView;->requestLayout()V
 
     goto :goto_0
 
@@ -601,7 +609,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_0
+    goto :goto_1
 
     .line 160
     :cond_2
@@ -609,7 +617,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method private setTextStyle(II)V
@@ -676,10 +684,10 @@
     .parameter "arg0"
 
     .prologue
-    .line 541
+    .line 545
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 542
+    .line 546
     return-void
 .end method
 
@@ -688,10 +696,10 @@
     .parameter "enable"
 
     .prologue
-    .line 364
+    .line 368
     iput-boolean p1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mIsMarqueeEnabled:Z
 
-    .line 365
+    .line 369
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -702,7 +710,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcFadingEdgeTextView;->setEnableMarquee(Z)V
 
-    .line 366
+    .line 370
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -713,7 +721,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcFadingEdgeTextView;->setEnableMarquee(Z)V
 
-    .line 369
+    .line 373
     return-void
 .end method
 
@@ -721,7 +729,7 @@
     .locals 2
 
     .prologue
-    .line 255
+    .line 259
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -739,7 +747,7 @@
     .locals 2
 
     .prologue
-    .line 251
+    .line 255
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -763,7 +771,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 555
+    .line 559
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -774,12 +782,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 556
+    .line 560
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
 
-    .line 557
+    .line 561
     :goto_0
     return-object v0
 
@@ -793,7 +801,7 @@
     .locals 2
 
     .prologue
-    .line 263
+    .line 267
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -811,7 +819,7 @@
     .locals 2
 
     .prologue
-    .line 338
+    .line 342
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -829,7 +837,7 @@
     .locals 2
 
     .prologue
-    .line 327
+    .line 331
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -853,7 +861,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 561
+    .line 565
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -864,12 +872,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 562
+    .line 566
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v0, v0, v1
 
-    .line 563
+    .line 567
     :goto_0
     return-object v0
 
@@ -883,7 +891,7 @@
     .locals 2
 
     .prologue
-    .line 342
+    .line 346
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -908,7 +916,7 @@
 
     const/4 v5, 0x1
 
-    .line 457
+    .line 461
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopY:[I
 
     aget v2, v2, v1
@@ -921,19 +929,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 458
+    .line 462
     :cond_0
     iput-boolean v5, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopYUsed:Z
 
-    .line 460
+    .line 464
     :cond_1
     const/4 v0, 0x0
 
-    .line 461
+    .line 465
     .local v0, top:I
     if-nez p1, :cond_4
 
-    .line 462
+    .line 466
     iget v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     invoke-static {v2}, Lcom/htc/widget/HtcListItemUtil;->getPrimaryBaseLine(I)I
@@ -950,17 +958,17 @@
 
     sub-int v0, v2, v3
 
-    .line 467
+    .line 471
     iget-boolean v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopYUsed:Z
 
     if-eqz v2, :cond_2
 
-    .line 468
+    .line 472
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopY:[I
 
     aget v0, v2, v1
 
-    .line 486
+    .line 490
     :cond_2
     :goto_0
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
@@ -997,15 +1005,15 @@
 
     invoke-virtual {v2, v3, v0, v1, v4}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 491
+    .line 495
     :cond_3
     return-void
 
-    .line 469
+    .line 473
     :cond_4
     if-ne p1, v5, :cond_3
 
-    .line 470
+    .line 474
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v2, v2, v5
@@ -1016,7 +1024,7 @@
 
     if-ne v2, v5, :cond_6
 
-    .line 471
+    .line 475
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItem2TextComponent;->getMeasuredHeight()I
 
     move-result v2
@@ -1039,7 +1047,7 @@
 
     sub-int v0, v2, v3
 
-    .line 473
+    .line 477
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v2, v2, v5
@@ -1058,7 +1066,7 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 474
+    .line 478
     iget v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     invoke-static {v2}, Lcom/htc/widget/HtcListItemUtil;->getPrimaryBaseLine(I)I
@@ -1091,21 +1099,21 @@
 
     add-int v0, v2, v3
 
-    .line 481
+    .line 485
     :cond_5
     :goto_3
     iget-boolean v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopYUsed:Z
 
     if-eqz v2, :cond_2
 
-    .line 482
+    .line 486
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopY:[I
 
     aget v0, v2, v5
 
     goto :goto_0
 
-    .line 478
+    .line 482
     :cond_6
     iget v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
@@ -1133,7 +1141,7 @@
 
     goto :goto_3
 
-    .line 486
+    .line 490
     :cond_7
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItem2TextComponent;->getMeasuredWidth()I
 
@@ -1170,7 +1178,7 @@
 
     const/4 v3, 0x1
 
-    .line 505
+    .line 509
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopY:[I
 
     aget v2, v2, v1
@@ -1183,26 +1191,26 @@
 
     if-eqz v2, :cond_1
 
-    .line 506
+    .line 510
     :cond_0
     iput-boolean v3, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopYUsed:Z
 
-    .line 508
+    .line 512
     :cond_1
     if-gt p1, v3, :cond_2
 
     if-gez p1, :cond_3
 
-    .line 531
+    .line 535
     :cond_2
     :goto_0
     return-void
 
-    .line 511
+    .line 515
     :cond_3
     if-ne p1, v3, :cond_4
 
-    .line 512
+    .line 516
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v2, v2, p1
@@ -1213,7 +1221,7 @@
 
     if-eq v2, v3, :cond_4
 
-    .line 518
+    .line 522
     :cond_4
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItem2TextComponent;->getMeasuredHeight()I
 
@@ -1231,18 +1239,18 @@
 
     div-int/lit8 v0, v2, 0x2
 
-    .line 520
+    .line 524
     .local v0, top:I
     iget-boolean v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopYUsed:Z
 
     if-eqz v2, :cond_5
 
-    .line 521
+    .line 525
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mTextTopY:[I
 
     aget v0, v2, p1
 
-    .line 526
+    .line 530
     :cond_5
     iget-object v2, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
@@ -1310,10 +1318,10 @@
     .parameter "itemMode"
 
     .prologue
-    .line 572
+    .line 576
     iput p1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
-    .line 573
+    .line 577
     iget v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     const/4 v1, 0x3
@@ -1325,10 +1333,10 @@
     :goto_0
     iput-boolean v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mIsAutomotiveMode:Z
 
-    .line 574
+    .line 578
     return-void
 
-    .line 573
+    .line 577
     :cond_0
     const/4 v0, 0x0
 
@@ -1341,18 +1349,18 @@
     .parameter "heightSpec"
 
     .prologue
-    .line 377
+    .line 381
     const/4 v10, 0x0
 
-    .line 378
+    .line 382
     .local v10, totalHeight:I
     const/4 v9, 0x0
 
-    .line 379
+    .line 383
     .local v9, maxWidth:I
     const/4 v8, 0x1
 
-    .line 382
+    .line 386
     .local v8, isUseDesiredHeight:Z
     const/4 v7, 0x0
 
@@ -1364,7 +1372,7 @@
 
     if-ge v7, v0, :cond_5
 
-    .line 383
+    .line 387
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v0, v0, v7
@@ -1377,17 +1385,17 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 384
+    .line 388
     if-nez v7, :cond_2
 
-    .line 385
+    .line 389
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v0, v0, v7
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/htc/widget/HtcListItem2TextComponent;->measureChild(Landroid/view/View;II)V
 
-    .line 387
+    .line 391
     iget v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     invoke-static {v0}, Lcom/htc/widget/HtcListItemUtil;->getPrimaryTextBaseLine(I)I
@@ -1396,7 +1404,7 @@
 
     add-int/2addr v10, v0
 
-    .line 412
+    .line 416
     :cond_0
     :goto_1
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
@@ -1411,24 +1419,24 @@
 
     move-result v9
 
-    .line 382
+    .line 386
     :cond_1
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 390
+    .line 394
     :cond_2
     const/4 v0, 0x1
 
     if-ne v7, v0, :cond_0
 
-    .line 391
+    .line 395
     iget-boolean v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mIsFrontImageExist:Z
 
     if-eqz v0, :cond_3
 
-    .line 392
+    .line 396
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     aget-object v1, v0, v7
@@ -1449,7 +1457,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcListItem2TextComponent;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 402
+    .line 406
     :goto_2
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
@@ -1465,10 +1473,10 @@
 
     if-le v0, v1, :cond_4
 
-    .line 403
+    .line 407
     const/4 v8, 0x0
 
-    .line 404
+    .line 408
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -1521,7 +1529,7 @@
 
     goto :goto_1
 
-    .line 394
+    .line 398
     :cond_3
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
@@ -1531,7 +1539,7 @@
 
     goto :goto_2
 
-    .line 408
+    .line 412
     :cond_4
     iget v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
@@ -1543,7 +1551,7 @@
 
     goto :goto_1
 
-    .line 416
+    .line 420
     :cond_5
     iget v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
@@ -1551,11 +1559,11 @@
 
     move-result v6
 
-    .line 417
+    .line 421
     .local v6, desireHeight:I
     if-nez v8, :cond_a
 
-    .line 419
+    .line 423
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1584,7 +1592,7 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 421
+    .line 425
     iget v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
     invoke-static {v0}, Lcom/htc/widget/HtcListItemUtil;->getDesiredTopGap(I)I
@@ -1609,12 +1617,12 @@
 
     add-int/2addr v10, v0
 
-    .line 425
+    .line 429
     if-ge v10, v6, :cond_6
 
     move v10, v6
 
-    .line 440
+    .line 444
     :cond_6
     :goto_3
     invoke-static {v9, p1}, Lcom/htc/widget/HtcListItem2TextComponent;->resolveSize(II)I
@@ -1627,10 +1635,10 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/widget/HtcListItem2TextComponent;->setMeasuredDimension(II)V
 
-    .line 443
+    .line 447
     return-void
 
-    .line 426
+    .line 430
     :cond_7
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
@@ -1660,7 +1668,7 @@
 
     if-eq v0, v1, :cond_9
 
-    .line 428
+    .line 432
     :cond_8
     iget v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mItemMode:I
 
@@ -1680,13 +1688,13 @@
 
     goto :goto_3
 
-    .line 433
+    .line 437
     :cond_9
     move v10, v6
 
     goto :goto_3
 
-    .line 436
+    .line 440
     :cond_a
     move v10, v6
 
@@ -1698,22 +1706,22 @@
     .parameter "enabled"
 
     .prologue
-    .line 347
+    .line 351
     invoke-virtual {p0}, Lcom/htc/widget/HtcListItem2TextComponent;->isEnabled()Z
 
     move-result v2
 
     if-ne v2, p1, :cond_1
 
-    .line 355
+    .line 359
     :cond_0
     return-void
 
-    .line 349
+    .line 353
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 351
+    .line 355
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1724,16 +1732,16 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 352
+    .line 356
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListItem2TextComponent;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 353
+    .line 357
     .local v0, child:Landroid/view/View;
     invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 351
+    .line 355
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -1744,7 +1752,7 @@
     .parameter "color"
 
     .prologue
-    .line 244
+    .line 248
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1753,7 +1761,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLinkTextColor(I)V
 
-    .line 245
+    .line 249
     return-void
 .end method
 
@@ -1762,7 +1770,7 @@
     .parameter "colors"
 
     .prologue
-    .line 240
+    .line 244
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1771,7 +1779,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLinkTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 241
+    .line 245
     return-void
 .end method
 
@@ -1780,7 +1788,7 @@
     .parameter "rId"
 
     .prologue
-    .line 199
+    .line 203
     iget-object v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1791,7 +1799,7 @@
 
     move-result-object v0
 
-    .line 200
+    .line 204
     .local v0, text:Ljava/lang/String;
     iget-object v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
@@ -1801,7 +1809,7 @@
 
     invoke-direct {p0, v1, v0}, Lcom/htc/widget/HtcListItem2TextComponent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 201
+    .line 205
     return-void
 .end method
 
@@ -1810,7 +1818,7 @@
     .parameter "text"
 
     .prologue
-    .line 208
+    .line 212
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1819,7 +1827,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/htc/widget/HtcListItem2TextComponent;->setText(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
-    .line 209
+    .line 213
     return-void
 .end method
 
@@ -1828,7 +1836,7 @@
     .parameter "text"
 
     .prologue
-    .line 191
+    .line 195
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1837,7 +1845,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/htc/widget/HtcListItem2TextComponent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 192
+    .line 196
     return-void
 .end method
 
@@ -1846,7 +1854,7 @@
     .parameter "mask"
 
     .prologue
-    .line 232
+    .line 236
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1855,7 +1863,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setAutoLinkMask(I)V
 
-    .line 233
+    .line 237
     return-void
 .end method
 
@@ -1864,12 +1872,12 @@
     .parameter "style"
 
     .prologue
-    .line 224
+    .line 228
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Lcom/htc/widget/HtcListItem2TextComponent;->setTextStyle(II)V
 
-    .line 225
+    .line 229
     return-void
 .end method
 
@@ -1878,7 +1886,7 @@
     .parameter "visibility"
 
     .prologue
-    .line 216
+    .line 220
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -1887,13 +1895,31 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 217
+    .line 221
     return-void
 .end method
 
 .method public final setSecondaryLinkTextColor(I)V
     .locals 2
     .parameter "color"
+
+    .prologue
+    .line 324
+    iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLinkTextColor(I)V
+
+    .line 325
+    return-void
+.end method
+
+.method public final setSecondaryLinkTextColor(Landroid/content/res/ColorStateList;)V
+    .locals 2
+    .parameter "colors"
 
     .prologue
     .line 320
@@ -1903,27 +1929,9 @@
 
     aget-object v0, v0, v1
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLinkTextColor(I)V
-
-    .line 321
-    return-void
-.end method
-
-.method public final setSecondaryLinkTextColor(Landroid/content/res/ColorStateList;)V
-    .locals 2
-    .parameter "colors"
-
-    .prologue
-    .line 316
-    iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLinkTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 317
+    .line 321
     return-void
 .end method
 
@@ -1932,7 +1940,7 @@
     .parameter "rId"
 
     .prologue
-    .line 287
+    .line 291
     iget-object v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1943,7 +1951,7 @@
 
     move-result-object v0
 
-    .line 288
+    .line 292
     .local v0, text:Ljava/lang/String;
     iget-object v1, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
@@ -1953,7 +1961,7 @@
 
     invoke-direct {p0, v1, v0}, Lcom/htc/widget/HtcListItem2TextComponent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 289
+    .line 293
     return-void
 .end method
 
@@ -1962,7 +1970,7 @@
     .parameter "text"
 
     .prologue
-    .line 279
+    .line 283
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -1971,7 +1979,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/htc/widget/HtcListItem2TextComponent;->setText(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
-    .line 280
+    .line 284
     return-void
 .end method
 
@@ -1980,7 +1988,7 @@
     .parameter "text"
 
     .prologue
-    .line 271
+    .line 275
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -1989,7 +1997,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/htc/widget/HtcListItem2TextComponent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 272
+    .line 276
     return-void
 .end method
 
@@ -1998,7 +2006,7 @@
     .parameter "mask"
 
     .prologue
-    .line 308
+    .line 312
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -2007,7 +2015,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setAutoLinkMask(I)V
 
-    .line 309
+    .line 313
     return-void
 .end method
 
@@ -2016,12 +2024,12 @@
     .parameter "style"
 
     .prologue
-    .line 304
+    .line 308
     const/4 v0, 0x1
 
     invoke-direct {p0, v0, p1}, Lcom/htc/widget/HtcListItem2TextComponent;->setTextStyle(II)V
 
-    .line 305
+    .line 309
     return-void
 .end method
 
@@ -2030,7 +2038,7 @@
     .parameter "visibility"
 
     .prologue
-    .line 296
+    .line 300
     iget-object v0, p0, Lcom/htc/widget/HtcListItem2TextComponent;->mText:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -2039,7 +2047,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 297
+    .line 301
     return-void
 .end method
 

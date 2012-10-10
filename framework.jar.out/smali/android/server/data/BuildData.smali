@@ -176,7 +176,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 92
     iget-object v0, p0, Landroid/server/data/BuildData;->fingerprint:Ljava/lang/String;
 
     return-object v0
@@ -186,7 +186,7 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 97
     iget-object v0, p0, Landroid/server/data/BuildData;->incrementalVersion:Ljava/lang/String;
 
     return-object v0
@@ -196,7 +196,7 @@
     .locals 2
 
     .prologue
-    .line 99
+    .line 102
     iget-wide v0, p0, Landroid/server/data/BuildData;->time:J
 
     return-wide v0

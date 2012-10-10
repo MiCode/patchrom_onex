@@ -63,6 +63,22 @@
     .end annotation
 .end method
 
+.method public abstract getSummaryForRxByte()J
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getSummaryForTxByte()J
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract incrementOperationCount(III)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1301
+    .line 1339
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$6;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V

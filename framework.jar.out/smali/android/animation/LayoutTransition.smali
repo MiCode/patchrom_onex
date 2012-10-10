@@ -298,7 +298,7 @@
     if-nez v6, :cond_0
 
     .line 237
-    const-string/jumbo v6, "left"
+    const-string v6, "left"
 
     new-array v8, v10, [I
 
@@ -547,6 +547,8 @@
     return-void
 
     .line 237
+    nop
+
     :array_0
     .array-data 0x4
         0x0t 0x0t 0x0t 0x0t

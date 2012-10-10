@@ -25,13 +25,13 @@
     .parameter "handler"
 
     .prologue
-    .line 477
+    .line 478
     iput-object p1, p0, Lcom/android/server/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
-    .line 478
+    .line 479
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 479
+    .line 480
     return-void
 .end method
 
@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 482
+    .line 483
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    .line 483
+    .line 484
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "notification_light_pulse"
 
@@ -62,10 +62,10 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 485
+    .line 486
     invoke-virtual {p0}, Lcom/android/server/NotificationManagerService$SettingsObserver;->update()V
 
-    .line 486
+    .line 487
     return-void
 .end method
 
@@ -74,10 +74,10 @@
     .parameter "selfChange"
 
     .prologue
-    .line 489
+    .line 490
     invoke-virtual {p0}, Lcom/android/server/NotificationManagerService$SettingsObserver;->update()V
 
-    .line 490
+    .line 491
     return-void
 .end method
 
@@ -87,7 +87,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 493
+    .line 494
     iget-object v2, p0, Lcom/android/server/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     iget-object v2, v2, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    .line 494
+    .line 495
     .local v1, resolver:Landroid/content/ContentResolver;
     const-string v2, "notification_light_pulse"
 
@@ -108,7 +108,7 @@
 
     const/4 v0, 0x1
 
-    .line 496
+    .line 497
     .local v0, pulseEnabled:Z
     :cond_0
     iget-object v2, p0, Lcom/android/server/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
@@ -120,19 +120,19 @@
 
     if-eq v2, v0, :cond_1
 
-    .line 497
+    .line 498
     iget-object v2, p0, Lcom/android/server/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     #setter for: Lcom/android/server/NotificationManagerService;->mNotificationPulseEnabled:Z
     invoke-static {v2, v0}, Lcom/android/server/NotificationManagerService;->access$2502(Lcom/android/server/NotificationManagerService;Z)Z
 
-    .line 498
+    .line 499
     iget-object v2, p0, Lcom/android/server/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     #calls: Lcom/android/server/NotificationManagerService;->updateNotificationPulse()V
     invoke-static {v2}, Lcom/android/server/NotificationManagerService;->access$2600(Lcom/android/server/NotificationManagerService;)V
 
-    .line 500
+    .line 501
     :cond_1
     return-void
 .end method

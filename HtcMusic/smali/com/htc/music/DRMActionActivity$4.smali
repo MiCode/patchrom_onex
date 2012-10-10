@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 634
+    .line 635
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$4;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "obj"
 
     .prologue
-    .line 636
+    .line 637
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -52,7 +52,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 638
+    .line 639
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$4;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->mNeedBindSerive:Z
@@ -62,7 +62,7 @@
 
     if-nez v0, :cond_1
 
-    .line 639
+    .line 640
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -71,7 +71,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 640
+    .line 641
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$4;->this$0:Lcom/htc/music/DRMActionActivity;
 
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$4;->this$0:Lcom/htc/music/DRMActionActivity;
@@ -82,12 +82,12 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/MusicUtils;->unbindFromService(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 650
+    .line 651
     :cond_0
     :goto_0
     return-void
 
-    .line 643
+    .line 644
     :cond_1
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$4;->this$0:Lcom/htc/music/DRMActionActivity;
 
@@ -96,7 +96,7 @@
     #setter for: Lcom/htc/music/DRMActionActivity;->mIsSeriveBinded:Z
     invoke-static {v0, v1}, Lcom/htc/music/DRMActionActivity;->access$702(Lcom/htc/music/DRMActionActivity;Z)Z
 
-    .line 645
+    .line 646
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$4;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-static {p2}, Lcom/htc/music/IMediaPlaybackService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/music/IMediaPlaybackService;
@@ -106,12 +106,12 @@
     #setter for: Lcom/htc/music/DRMActionActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
     invoke-static {v0, v1}, Lcom/htc/music/DRMActionActivity;->access$802(Lcom/htc/music/DRMActionActivity;Lcom/htc/music/IMediaPlaybackService;)Lcom/htc/music/IMediaPlaybackService;
 
-    .line 646
+    .line 647
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v0, :cond_0
 
-    .line 647
+    .line 648
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$4;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -129,7 +129,7 @@
     .parameter "classname"
 
     .prologue
-    .line 653
+    .line 654
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -138,6 +138,6 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 654
+    .line 655
     return-void
 .end method

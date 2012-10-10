@@ -17,6 +17,8 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/android/camera/RecordingFailedReason;
 
+.field public static final enum HasPopupOrDialog:Lcom/android/camera/RecordingFailedReason;
+
 .field public static final enum LowInternalDataSpace:Lcom/android/camera/RecordingFailedReason;
 
 .field public static final enum StorageError:Lcom/android/camera/RecordingFailedReason;
@@ -26,9 +28,11 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
     .prologue
+    const/4 v5, 0x3
+
     const/4 v4, 0x2
 
     const/4 v3, 0x1
@@ -62,8 +66,17 @@
 
     sput-object v0, Lcom/android/camera/RecordingFailedReason;->LowInternalDataSpace:Lcom/android/camera/RecordingFailedReason;
 
+    .line 8
+    new-instance v0, Lcom/android/camera/RecordingFailedReason;
+
+    const-string v1, "HasPopupOrDialog"
+
+    invoke-direct {v0, v1, v5}, Lcom/android/camera/RecordingFailedReason;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/camera/RecordingFailedReason;->HasPopupOrDialog:Lcom/android/camera/RecordingFailedReason;
+
     .line 3
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/camera/RecordingFailedReason;
 
@@ -78,6 +91,10 @@
     sget-object v1, Lcom/android/camera/RecordingFailedReason;->LowInternalDataSpace:Lcom/android/camera/RecordingFailedReason;
 
     aput-object v1, v0, v4
+
+    sget-object v1, Lcom/android/camera/RecordingFailedReason;->HasPopupOrDialog:Lcom/android/camera/RecordingFailedReason;
+
+    aput-object v1, v0, v5
 
     sput-object v0, Lcom/android/camera/RecordingFailedReason;->$VALUES:[Lcom/android/camera/RecordingFailedReason;
 

@@ -12,6 +12,12 @@
 
 .field public static final RADIO_TECHNOLOGY_EHRPD:I = 0xd
 
+.field public static final RADIO_TECHNOLOGY_EVDO_0:I = 0x7
+
+.field public static final RADIO_TECHNOLOGY_EVDO_A:I = 0x8
+
+.field public static final RADIO_TECHNOLOGY_EVDO_B:I = 0xc
+
 .field public static final RADIO_TECHNOLOGY_LTE:I = 0xe
 
 .field public static final STATE_NETWORK_SEARCHING:I = 0x4
@@ -34,7 +40,7 @@
     .parameter "context"
 
     .prologue
-    .line 178
+    .line 171
     invoke-static {p0, p1}, Landroid/telephony/ServiceState;->getOperatorAlphaLong(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -48,7 +54,7 @@
     .parameter "context"
 
     .prologue
-    .line 168
+    .line 161
     invoke-static {p0, p1}, Landroid/telephony/ServiceState;->getOperatorAlphaShort(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -61,7 +67,7 @@
     .parameter "m"
 
     .prologue
-    .line 142
+    .line 135
     invoke-static {p0}, Landroid/telephony/ServiceState;->newFromBundle(Landroid/os/Bundle;)Landroid/telephony/ServiceState;
 
     move-result-object v0
@@ -75,7 +81,7 @@
     .locals 1
 
     .prologue
-    .line 113
+    .line 106
     invoke-super {p0}, Landroid/telephony/ServiceState;->getAppendixType()I
 
     move-result v0
@@ -87,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 135
+    .line 128
     invoke-super {p0}, Landroid/telephony/ServiceState;->getGPRSState()I
 
     move-result v0
@@ -99,7 +105,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 84
     invoke-super {p0}, Landroid/telephony/ServiceState;->getNetwrorkType()I
 
     move-result v0
@@ -111,8 +117,20 @@
     .locals 1
 
     .prologue
-    .line 160
+    .line 153
     invoke-super {p0}, Landroid/telephony/ServiceState;->getPhoneType()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getRadioTechnology()I
+    .locals 1
+
+    .prologue
+    .line 183
+    invoke-super {p0}, Landroid/telephony/ServiceState;->getRadioTechnology()I
 
     move-result v0
 
@@ -123,7 +141,7 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 58
     invoke-super {p0}, Landroid/telephony/ServiceState;->htcGetCdmaRadioPowerSaveMode()Z
 
     move-result v0
@@ -136,10 +154,10 @@
     .parameter "isPoweSaveMode"
 
     .prologue
-    .line 56
+    .line 49
     invoke-super {p0, p1}, Landroid/telephony/ServiceState;->htcSetCdmaRadioPowerSaveMode(Z)V
 
-    .line 57
+    .line 50
     return-void
 .end method
 
@@ -148,10 +166,10 @@
     .parameter "type"
 
     .prologue
-    .line 104
+    .line 97
     invoke-super {p0, p1}, Landroid/telephony/ServiceState;->setAppendixType(I)V
 
-    .line 105
+    .line 98
     return-void
 .end method
 
@@ -160,10 +178,10 @@
     .parameter "state"
 
     .prologue
-    .line 124
+    .line 117
     invoke-super {p0, p1}, Landroid/telephony/ServiceState;->setGPRSState(I)V
 
-    .line 125
+    .line 118
     return-void
 .end method
 
@@ -172,10 +190,10 @@
     .parameter "networkType"
 
     .prologue
-    .line 79
+    .line 72
     invoke-super {p0, p1}, Landroid/telephony/ServiceState;->setNetworkType(I)V
 
-    .line 80
+    .line 73
     return-void
 .end method
 
@@ -184,10 +202,10 @@
     .parameter "phoneType"
 
     .prologue
-    .line 152
+    .line 145
     invoke-super {p0}, Landroid/telephony/ServiceState;->getGPRSState()I
 
-    .line 153
+    .line 146
     return-void
 .end method
 
@@ -196,9 +214,9 @@
     .parameter "context"
 
     .prologue
-    .line 186
+    .line 179
     invoke-super {p0, p1}, Landroid/telephony/ServiceState;->updateOperatorAlpha(Landroid/content/Context;)V
 
-    .line 187
+    .line 180
     return-void
 .end method

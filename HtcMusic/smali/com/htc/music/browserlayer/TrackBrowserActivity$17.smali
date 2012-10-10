@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2825
+    .line 2826
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$17;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "which"
 
     .prologue
-    .line 2827
+    .line 2828
     const/4 v0, 0x0
 
-    .line 2828
+    .line 2829
     .local v0, category:Lcom/htc/music/NpCategory;
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$17;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -63,7 +63,7 @@
 
     if-nez v1, :cond_0
 
-    .line 2831
+    .line 2832
     new-instance v0, Lcom/htc/music/NpCategory;
 
     .end local v0           #category:Lcom/htc/music/NpCategory;
@@ -76,7 +76,7 @@
 
     invoke-direct {v0, v1}, Lcom/htc/music/NpCategory;-><init>(S)V
 
-    .line 2834
+    .line 2835
     .restart local v0       #category:Lcom/htc/music/NpCategory;
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$17;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -101,6 +101,6 @@
 
     invoke-static {v1, v2, v3, v0, v4}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;Landroid/database/Cursor;ILcom/htc/music/NpCategory;[I)V
 
-    .line 2836
+    .line 2837
     return-void
 .end method

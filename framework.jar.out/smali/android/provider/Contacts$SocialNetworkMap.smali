@@ -214,7 +214,7 @@
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 4789
-    const-string/jumbo v5, "id:"
+    const-string v5, "id:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -491,7 +491,7 @@
     .line 4763
     aget-object v8, v4, v10
 
-    const-string/jumbo v9, "id:"
+    const-string v9, "id:"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -518,7 +518,7 @@
     .local v0, data:Landroid/provider/Contacts$SocialNetworkMap$SNLinkData;
     aget-object v8, v4, v10
 
-    const-string/jumbo v9, "id:"
+    const-string v9, "id:"
 
     invoke-virtual {v9}, Ljava/lang/String;->length()I
 
@@ -3865,7 +3865,7 @@
 
     .line 4705
     .local v1, values:Landroid/content/ContentValues;
-    const-string/jumbo v5, "is_read"
+    const-string v5, "is_read"
 
     if-eqz p3, :cond_0
 
@@ -3902,7 +3902,7 @@
     invoke-virtual {v0, v2, v1, v5, v7}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     .line 4710
-    const-string/jumbo v2, "is_read"
+    const-string v2, "is_read"
 
     if-eqz p3, :cond_1
 
@@ -4063,7 +4063,7 @@
 
     .line 4837
     .local v1, data:Landroid/provider/Contacts$SocialNetworkMap$SNLinkData;
-    const-string/jumbo v7, "id:"
+    const-string v7, "id:"
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

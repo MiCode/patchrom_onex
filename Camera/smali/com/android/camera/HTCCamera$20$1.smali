@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/HTCCamera$20;->onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+    value = Lcom/android/camera/HTCCamera$20;->onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,30 +20,25 @@
 # instance fields
 .field final synthetic this$1:Lcom/android/camera/HTCCamera$20;
 
-.field final synthetic val$e:Lcom/android/camera/event/EventArgs;
+.field final synthetic val$e:Lcom/android/camera/property/PropertyChangedEventArgs;
 
-.field final synthetic val$event:Lcom/android/camera/event/Event;
-
-.field final synthetic val$sender:Ljava/lang/Object;
+.field final synthetic val$property:Lcom/android/camera/property/Property;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/HTCCamera$20;Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+.method constructor <init>(Lcom/android/camera/HTCCamera$20;Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
     .locals 0
-    .parameter
     .parameter
     .parameter
     .parameter
 
     .prologue
-    .line 5979
+    .line 6141
     iput-object p1, p0, Lcom/android/camera/HTCCamera$20$1;->this$1:Lcom/android/camera/HTCCamera$20;
 
-    iput-object p2, p0, Lcom/android/camera/HTCCamera$20$1;->val$event:Lcom/android/camera/event/Event;
+    iput-object p2, p0, Lcom/android/camera/HTCCamera$20$1;->val$property:Lcom/android/camera/property/Property;
 
-    iput-object p3, p0, Lcom/android/camera/HTCCamera$20$1;->val$sender:Ljava/lang/Object;
-
-    iput-object p4, p0, Lcom/android/camera/HTCCamera$20$1;->val$e:Lcom/android/camera/event/EventArgs;
+    iput-object p3, p0, Lcom/android/camera/HTCCamera$20$1;->val$e:Lcom/android/camera/property/PropertyChangedEventArgs;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,23 +48,21 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 5982
+    .line 6144
     iget-object v0, p0, Lcom/android/camera/HTCCamera$20$1;->this$1:Lcom/android/camera/HTCCamera$20;
 
     iget-object v0, v0, Lcom/android/camera/HTCCamera$20;->this$0:Lcom/android/camera/HTCCamera;
 
-    iget-object v1, p0, Lcom/android/camera/HTCCamera$20$1;->val$event:Lcom/android/camera/event/Event;
+    iget-object v1, p0, Lcom/android/camera/HTCCamera$20$1;->val$property:Lcom/android/camera/property/Property;
 
-    iget-object v2, p0, Lcom/android/camera/HTCCamera$20$1;->val$sender:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/android/camera/HTCCamera$20$1;->val$e:Lcom/android/camera/property/PropertyChangedEventArgs;
 
-    iget-object v3, p0, Lcom/android/camera/HTCCamera$20$1;->val$e:Lcom/android/camera/event/EventArgs;
+    #calls: Lcom/android/camera/HTCCamera;->onCameraThreadPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
+    invoke-static {v0, v1, v2}, Lcom/android/camera/HTCCamera;->access$4200(Lcom/android/camera/HTCCamera;Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
 
-    #calls: Lcom/android/camera/HTCCamera;->onCameraThreadEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
-    invoke-static {v0, v1, v2, v3}, Lcom/android/camera/HTCCamera;->access$4100(Lcom/android/camera/HTCCamera;Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
-
-    .line 5983
+    .line 6145
     return-void
 .end method

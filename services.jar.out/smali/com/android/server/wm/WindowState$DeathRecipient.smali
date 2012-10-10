@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1612
+    .line 1641
     iput-object p1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1612
+    .line 1641
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowState$DeathRecipient;-><init>(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -53,7 +53,7 @@
     .locals 7
 
     .prologue
-    .line 1616
+    .line 1645
     :try_start_0
     sget-object v2, Lcom/android/server/SystemServer;->mCrossServiceLock:Ljava/lang/Object;
 
@@ -61,7 +61,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1617
+    .line 1646
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -73,7 +73,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1618
+    .line 1647
     :try_start_2
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -93,7 +93,7 @@
 
     move-result-object v0
 
-    .line 1619
+    .line 1648
     .local v0, win:Lcom/android/server/wm/WindowState;
     const-string v1, "WindowManager"
 
@@ -117,10 +117,10 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1620
+    .line 1649
     if-eqz v0, :cond_0
 
-    .line 1621
+    .line 1650
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowState;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -131,24 +131,24 @@
 
     invoke-virtual {v1, v4, v0}, Lcom/android/server/wm/WindowManagerService;->removeWindowLocked(Lcom/android/server/wm/Session;Lcom/android/server/wm/WindowState;)V
 
-    .line 1623
+    .line 1652
     :cond_0
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1624
+    .line 1653
     :try_start_3
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1630
+    .line 1659
     .end local v0           #win:Lcom/android/server/wm/WindowState;
     :goto_0
     return-void
 
-    .line 1623
+    .line 1652
     :catchall_0
     move-exception v1
 
@@ -160,7 +160,7 @@
     :try_start_5
     throw v1
 
-    .line 1624
+    .line 1653
     :catchall_1
     move-exception v1
 
@@ -173,7 +173,7 @@
     :try_end_6
     .catch Ljava/lang/IllegalArgumentException; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 1626
+    .line 1655
     :catch_0
     move-exception v1
 

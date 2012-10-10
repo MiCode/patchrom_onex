@@ -313,13 +313,13 @@
 .end method
 
 .method public kill()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 109
     iget-object v1, p0, Lcom/android/server/wm/BlackFrame;->mBlackSurfaces:[Lcom/android/server/wm/BlackFrame$BlackSurface;
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     .line 110
     const/4 v0, 0x0
@@ -330,7 +330,7 @@
 
     array-length v1, v1
 
-    if-ge v0, v1, :cond_1
+    if-ge v0, v1, :cond_2
 
     .line 111
     iget-object v1, p0, Lcom/android/server/wm/BlackFrame;->mBlackSurfaces:[Lcom/android/server/wm/BlackFrame$BlackSurface;
@@ -339,7 +339,13 @@
 
     if-eqz v1, :cond_0
 
+    .line 112
+    sget-boolean v1, Lcom/android/server/wm/WindowManagerService;->SHOW_TRANSACTIONS:Z
+
+    if-nez v1, :cond_1
+
     .line 116
+    :goto_1
     iget-object v1, p0, Lcom/android/server/wm/BlackFrame;->mBlackSurfaces:[Lcom/android/server/wm/BlackFrame$BlackSurface;
 
     aget-object v1, v1, v0
@@ -361,9 +367,47 @@
 
     goto :goto_0
 
+    .line 113
+    :cond_1
+    const-string v1, "WindowManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "  BLACK "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/android/server/wm/BlackFrame;->mBlackSurfaces:[Lcom/android/server/wm/BlackFrame$BlackSurface;
+
+    aget-object v3, v3, v0
+
+    iget-object v3, v3, Lcom/android/server/wm/BlackFrame$BlackSurface;->surface:Landroid/view/Surface;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ": DESTROY"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
     .line 121
     .end local v0           #i:I
-    :cond_1
+    :cond_2
     return-void
 .end method
 

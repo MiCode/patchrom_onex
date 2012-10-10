@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 1607
+    .line 1772
     iput-object p1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$2;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iput p2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$2;->val$nX:I
@@ -51,7 +51,7 @@
     .locals 3
 
     .prologue
-    .line 1609
+    .line 1774
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$2;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iget-object v0, v0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
@@ -65,6 +65,6 @@
     #calls: Landroid/webkit/ZoomManager$HTCSmartZoom;->SmartTouchUp(II)V
     invoke-static {v0, v1, v2}, Landroid/webkit/ZoomManager$HTCSmartZoom;->access$2100(Landroid/webkit/ZoomManager$HTCSmartZoom;II)V
 
-    .line 1610
+    .line 1775
     return-void
 .end method

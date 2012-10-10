@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 227
+    .line 206
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$LaunchItem$3;->this$1:Lcom/htc/music/LandingPageActivity$LaunchItem;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,27 +43,27 @@
     .parameter "motionEvent"
 
     .prologue
-    .line 230
+    .line 209
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v9
 
-    .line 231
+    .line 210
     .local v9, action:I
     const/4 v0, 0x0
 
-    .line 232
+    .line 211
     .local v0, scaleAnimation:Landroid/view/animation/ScaleAnimation;
     packed-switch v9, :pswitch_data_0
 
-    .line 247
+    .line 226
     :goto_0
     :pswitch_0
     const/4 v1, 0x0
 
     return v1
 
-    .line 234
+    .line 213
     :pswitch_1
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
@@ -86,23 +86,23 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 235
+    .line 214
     .restart local v0       #scaleAnimation:Landroid/view/animation/ScaleAnimation;
     const-wide/16 v1, 0x3c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 236
+    .line 215
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 237
+    .line 216
     invoke-virtual {p1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     goto :goto_0
 
-    .line 241
+    .line 220
     :pswitch_2
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
@@ -125,23 +125,23 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 242
+    .line 221
     .restart local v0       #scaleAnimation:Landroid/view/animation/ScaleAnimation;
     const-wide/16 v1, 0x3c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 243
+    .line 222
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setFillAfter(Z)V
 
-    .line 244
+    .line 223
     invoke-virtual {p1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     goto :goto_0
 
-    .line 232
+    .line 211
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

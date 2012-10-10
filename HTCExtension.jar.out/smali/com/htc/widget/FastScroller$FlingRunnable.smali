@@ -41,12 +41,12 @@
     .parameter
 
     .prologue
-    .line 2245
+    .line 2246
     iput-object p1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2246
+    .line 2247
     new-instance v0, Landroid/widget/Scroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -62,12 +62,12 @@
 
     iput-object v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
-    .line 2247
+    .line 2248
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mIsRunning:Z
 
-    .line 2248
+    .line 2249
     return-void
 .end method
 
@@ -77,17 +77,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2340
+    .line 2341
     iput-boolean v3, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mIsRunning:Z
 
-    .line 2341
+    .line 2342
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    .line 2343
+    .line 2344
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->isPortrait:Z
@@ -97,7 +97,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 2345
+    .line 2346
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     iget v2, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mEndPostionXY:I
@@ -105,7 +105,7 @@
     #setter for: Lcom/htc/widget/FastScroller;->mThumbLeft:I
     invoke-static {v1, v2}, Lcom/htc/widget/FastScroller;->access$602(Lcom/htc/widget/FastScroller;I)I
 
-    .line 2347
+    .line 2348
     iget v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mEndPostionXY:I
 
     iget-object v2, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -117,16 +117,16 @@
 
     sub-int v0, v1, v2
 
-    .line 2348
+    .line 2349
     .local v0, delta:I
     if-eqz v0, :cond_0
 
-    .line 2350
+    .line 2351
     iget-boolean v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
     if-eqz v1, :cond_1
 
-    .line 2351
+    .line 2352
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     iget-object v2, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -138,7 +138,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/FastScroller;->adjustGallery(I)V
 
-    .line 2358
+    .line 2359
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -150,11 +150,11 @@
     #calls: Lcom/htc/widget/FastScroller;->endAnimation(IZ)V
     invoke-static {v1, v2, v3}, Lcom/htc/widget/FastScroller;->access$3300(Lcom/htc/widget/FastScroller;IZ)V
 
-    .line 2377
+    .line 2378
     :goto_1
     return-void
 
-    .line 2354
+    .line 2355
     :cond_1
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -173,7 +173,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/Gallery;->setUpThumb(Landroid/view/View;)V
 
-    .line 2355
+    .line 2356
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -224,7 +224,7 @@
 
     goto :goto_0
 
-    .line 2362
+    .line 2363
     .end local v0           #delta:I
     :cond_2
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -234,7 +234,7 @@
     #setter for: Lcom/htc/widget/FastScroller;->mThumbTop:I
     invoke-static {v1, v2}, Lcom/htc/widget/FastScroller;->access$1002(Lcom/htc/widget/FastScroller;I)I
 
-    .line 2364
+    .line 2365
     iget v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mEndPostionXY:I
 
     iget-object v2, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -246,16 +246,16 @@
 
     sub-int v0, v1, v2
 
-    .line 2365
+    .line 2366
     .restart local v0       #delta:I
     if-eqz v0, :cond_3
 
-    .line 2367
+    .line 2368
     iget-boolean v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
     if-eqz v1, :cond_4
 
-    .line 2368
+    .line 2369
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     iget-object v2, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -267,7 +267,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/FastScroller;->adjustGallery(I)V
 
-    .line 2375
+    .line 2376
     :cond_3
     :goto_2
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -281,7 +281,7 @@
 
     goto :goto_1
 
-    .line 2371
+    .line 2372
     :cond_4
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -300,7 +300,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/Gallery;->setUpThumb(Landroid/view/View;)V
 
-    .line 2372
+    .line 2373
     iget-object v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -360,7 +360,7 @@
 
     const/4 v6, 0x1
 
-    .line 2253
+    .line 2254
     iget-object v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -370,7 +370,7 @@
 
     invoke-virtual {v4, p0}, Lcom/htc/widget/AbsSpinner;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2255
+    .line 2256
     iget-object v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->isPortrait:Z
@@ -380,7 +380,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 2257
+    .line 2258
     iget-object v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGalleryWidth:I
@@ -417,7 +417,7 @@
 
     sub-int v0, v4, v5
 
-    .line 2258
+    .line 2259
     .local v0, dataArea:I
     iget-object v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -434,7 +434,7 @@
 
     move-result v3
 
-    .line 2259
+    .line 2260
     .local v3, totalItemCount:I
     iget-object v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -443,7 +443,7 @@
 
     move-result v2
 
-    .line 2261
+    .line 2262
     .local v2, itemWidth:I
     mul-int v4, v3, v2
 
@@ -451,25 +451,25 @@
 
     if-lez v4, :cond_0
 
-    .line 2262
+    .line 2263
     iput-boolean v6, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
-    .line 2277
+    .line 2278
     .end local v2           #itemWidth:I
     :goto_0
     iput-boolean v6, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mIsRunning:Z
 
-    .line 2278
+    .line 2279
     return-void
 
-    .line 2264
+    .line 2265
     .restart local v2       #itemWidth:I
     :cond_0
     iput-boolean v7, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
     goto :goto_0
 
-    .line 2268
+    .line 2269
     .end local v0           #dataArea:I
     .end local v2           #itemWidth:I
     .end local v3           #totalItemCount:I
@@ -510,7 +510,7 @@
 
     sub-int v0, v4, v5
 
-    .line 2269
+    .line 2270
     .restart local v0       #dataArea:I
     iget-object v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -527,7 +527,7 @@
 
     move-result v3
 
-    .line 2270
+    .line 2271
     .restart local v3       #totalItemCount:I
     iget-object v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -536,7 +536,7 @@
 
     move-result v1
 
-    .line 2272
+    .line 2273
     .local v1, itemHeight:I
     mul-int v4, v3, v1
 
@@ -544,12 +544,12 @@
 
     if-lez v4, :cond_2
 
-    .line 2273
+    .line 2274
     iput-boolean v6, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
     goto :goto_0
 
-    .line 2275
+    .line 2276
     :cond_2
     iput-boolean v7, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
@@ -562,7 +562,7 @@
     .locals 1
 
     .prologue
-    .line 2334
+    .line 2335
     iget-boolean v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mIsRunning:Z
 
     return v0
@@ -574,7 +574,7 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 2385
+    .line 2386
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mItemCount:I
@@ -584,30 +584,30 @@
 
     if-nez v5, :cond_0
 
-    .line 2387
+    .line 2388
     invoke-direct {p0}, Lcom/htc/widget/FastScroller$FlingRunnable;->endFling()V
 
-    .line 2459
+    .line 2460
     :goto_0
     return-void
 
-    .line 2390
+    .line 2391
     :cond_0
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #setter for: Lcom/htc/widget/FastScroller;->mShouldStopFling:Z
     invoke-static {v5, v7}, Lcom/htc/widget/FastScroller;->access$3802(Lcom/htc/widget/FastScroller;Z)Z
 
-    .line 2392
+    .line 2393
     iget-object v2, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
-    .line 2393
+    .line 2394
     .local v2, scroller:Landroid/widget/Scroller;
     invoke-virtual {v2}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
     move-result v1
 
-    .line 2395
+    .line 2396
     .local v1, more:Z
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -618,22 +618,22 @@
 
     if-eqz v5, :cond_5
 
-    .line 2397
+    .line 2398
     invoke-virtual {v2}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v3
 
-    .line 2400
+    .line 2401
     .local v3, x:I
     iget v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLastFlingXY:I
 
     sub-int v0, v5, v3
 
-    .line 2401
+    .line 2402
     .local v0, delta:I
     if-lez v0, :cond_1
 
-    .line 2402
+    .line 2403
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGalleryWidth:I
@@ -665,7 +665,7 @@
 
     move-result v0
 
-    .line 2406
+    .line 2407
     :goto_1
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -681,12 +681,12 @@
     #setter for: Lcom/htc/widget/FastScroller;->mThumbLeft:I
     invoke-static {v5, v6}, Lcom/htc/widget/FastScroller;->access$602(Lcom/htc/widget/FastScroller;I)I
 
-    .line 2408
+    .line 2409
     iget-boolean v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
     if-eqz v5, :cond_2
 
-    .line 2409
+    .line 2410
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     iget-object v6, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -698,7 +698,7 @@
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/FastScroller;->adjustGallery(I)V
 
-    .line 2419
+    .line 2420
     :goto_2
     if-eqz v1, :cond_4
 
@@ -711,10 +711,10 @@
 
     if-nez v5, :cond_4
 
-    .line 2421
+    .line 2422
     iput v3, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLastFlingXY:I
 
-    .line 2422
+    .line 2423
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -726,7 +726,7 @@
 
     goto :goto_0
 
-    .line 2404
+    .line 2405
     :cond_1
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -763,7 +763,7 @@
 
     goto :goto_1
 
-    .line 2412
+    .line 2413
     :cond_2
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -782,10 +782,10 @@
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/Gallery;->setUpThumb(Landroid/view/View;)V
 
-    .line 2413
+    .line 2414
     if-lez v0, :cond_3
 
-    .line 2414
+    .line 2415
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -836,7 +836,7 @@
 
     goto :goto_2
 
-    .line 2416
+    .line 2417
     :cond_3
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -888,13 +888,13 @@
 
     goto/16 :goto_2
 
-    .line 2425
+    .line 2426
     :cond_4
     invoke-direct {p0}, Lcom/htc/widget/FastScroller$FlingRunnable;->endFling()V
 
     goto/16 :goto_0
 
-    .line 2429
+    .line 2430
     .end local v0           #delta:I
     .end local v3           #x:I
     :cond_5
@@ -902,17 +902,17 @@
 
     move-result v4
 
-    .line 2432
+    .line 2433
     .local v4, y:I
     iget v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLastFlingXY:I
 
     sub-int v0, v5, v4
 
-    .line 2433
+    .line 2434
     .restart local v0       #delta:I
     if-lez v0, :cond_6
 
-    .line 2434
+    .line 2435
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGalleryHeight:I
@@ -944,7 +944,7 @@
 
     move-result v0
 
-    .line 2438
+    .line 2439
     :goto_3
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -960,12 +960,12 @@
     #setter for: Lcom/htc/widget/FastScroller;->mThumbTop:I
     invoke-static {v5, v6}, Lcom/htc/widget/FastScroller;->access$1002(Lcom/htc/widget/FastScroller;I)I
 
-    .line 2440
+    .line 2441
     iget-boolean v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLongMode:Z
 
     if-eqz v5, :cond_7
 
-    .line 2441
+    .line 2442
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     iget-object v6, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
@@ -977,7 +977,7 @@
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/FastScroller;->adjustGallery(I)V
 
-    .line 2451
+    .line 2452
     :goto_4
     if-eqz v1, :cond_9
 
@@ -990,10 +990,10 @@
 
     if-nez v5, :cond_9
 
-    .line 2453
+    .line 2454
     iput v4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLastFlingXY:I
 
-    .line 2454
+    .line 2455
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -1005,7 +1005,7 @@
 
     goto/16 :goto_0
 
-    .line 2436
+    .line 2437
     :cond_6
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -1042,7 +1042,7 @@
 
     goto :goto_3
 
-    .line 2444
+    .line 2445
     :cond_7
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -1061,10 +1061,10 @@
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/Gallery;->setUpThumb(Landroid/view/View;)V
 
-    .line 2445
+    .line 2446
     if-lez v0, :cond_8
 
-    .line 2446
+    .line 2447
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -1115,7 +1115,7 @@
 
     goto :goto_4
 
-    .line 2448
+    .line 2449
     :cond_8
     iget-object v5, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -1167,7 +1167,7 @@
 
     goto/16 :goto_4
 
-    .line 2457
+    .line 2458
     :cond_9
     invoke-direct {p0}, Lcom/htc/widget/FastScroller$FlingRunnable;->endFling()V
 
@@ -1181,12 +1181,12 @@
     .parameter "pos"
 
     .prologue
-    .line 2286
+    .line 2287
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/htc/widget/FastScroller$FlingRunnable;->startUsingDistance(IIIZ)V
 
-    .line 2287
+    .line 2288
     return-void
 .end method
 
@@ -1200,36 +1200,36 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2295
+    .line 2296
     iput-boolean p4, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mIsCloseWindow:Z
 
-    .line 2297
+    .line 2298
     if-nez p1, :cond_0
 
-    .line 2299
+    .line 2300
     iget-object v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #calls: Lcom/htc/widget/FastScroller;->endAnimation(IZ)V
     invoke-static {v0, p3, p4}, Lcom/htc/widget/FastScroller;->access$3300(Lcom/htc/widget/FastScroller;IZ)V
 
-    .line 2314
+    .line 2315
     :goto_0
     return-void
 
-    .line 2302
+    .line 2303
     :cond_0
     invoke-direct {p0}, Lcom/htc/widget/FastScroller$FlingRunnable;->startCommon()V
 
-    .line 2304
+    .line 2305
     iput p3, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mPos:I
 
-    .line 2305
+    .line 2306
     iput v1, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mLastFlingXY:I
 
-    .line 2306
+    .line 2307
     iput p2, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mEndPostionXY:I
 
-    .line 2308
+    .line 2309
     iget-object v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->isPortrait:Z
@@ -1239,7 +1239,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2309
+    .line 2310
     iget-object v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
     neg-int v3, p1
@@ -1257,7 +1257,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
-    .line 2313
+    .line 2314
     :goto_1
     iget-object v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
@@ -1270,7 +1270,7 @@
 
     goto :goto_0
 
-    .line 2311
+    .line 2312
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
@@ -1297,7 +1297,7 @@
     .parameter "scrollIntoSlots"
 
     .prologue
-    .line 2322
+    .line 2323
     iget-object v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -1307,18 +1307,18 @@
 
     invoke-virtual {v0, p0}, Lcom/htc/widget/AbsSpinner;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2323
+    .line 2324
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/FastScroller$FlingRunnable;->mIsRunning:Z
 
-    .line 2324
+    .line 2325
     if-eqz p1, :cond_0
 
-    .line 2325
+    .line 2326
     invoke-direct {p0}, Lcom/htc/widget/FastScroller$FlingRunnable;->endFling()V
 
-    .line 2327
+    .line 2328
     :cond_0
     return-void
 .end method

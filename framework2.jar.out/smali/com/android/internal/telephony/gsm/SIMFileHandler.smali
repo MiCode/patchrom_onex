@@ -520,6 +520,12 @@
 
     if-eqz v0, :cond_0
 
+    invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isIccCardProxyEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     sget-boolean v0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDropEvent:Z
 
     if-eqz v0, :cond_0

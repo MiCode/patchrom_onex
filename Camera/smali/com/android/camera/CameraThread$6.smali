@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1999
+    .line 2050
     iput-object p1, p0, Lcom/android/camera/CameraThread$6;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 2002
+    .line 2054
     iget-object v0, p0, Lcom/android/camera/CameraThread$6;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->stopPreview()V
 
-    .line 2003
+    .line 2055
     return-void
 .end method

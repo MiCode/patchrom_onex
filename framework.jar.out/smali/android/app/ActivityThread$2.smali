@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4890
+    .line 4930
     iput-object p1, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 4892
+    .line 4932
     iget-object v0, p0, Landroid/app/ActivityThread$2;->this$0:Landroid/app/ActivityThread;
 
     invoke-virtual {v0}, Landroid/app/ActivityThread;->ensureJitEnabled()V
 
-    .line 4893
+    .line 4933
     return-void
 .end method

@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 764
+    .line 845
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$10;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,19 +72,19 @@
     .end annotation
 
     .prologue
-    .line 768
+    .line 849
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Ljava/lang/Integer;>;>;"
     .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Ljava/lang/Integer;>;"
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$10;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$1700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$1900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 770
+    .line 851
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,28 +123,28 @@
 
     move-result-object v0
 
-    .line 771
+    .line 852
     .local v0, str:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$10;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewPortrait:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$1800(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2000(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 772
+    .line 853
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$10;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewLandscape:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$1900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2100(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 774
+    .line 855
     .end local v0           #str:Ljava/lang/String;
     :cond_0
     return-void
@@ -157,7 +157,7 @@
     .parameter "x2"
 
     .prologue
-    .line 764
+    .line 845
     check-cast p3, Lcom/android/camera/OneValueEventArgs;
 
     .end local p3

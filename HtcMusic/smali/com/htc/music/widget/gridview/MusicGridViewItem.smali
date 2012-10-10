@@ -148,10 +148,10 @@
 
     iput v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mDataIndex:I
 
-    .line 416
+    .line 422
     iput-boolean v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mIsBinded:Z
 
-    .line 417
+    .line 423
     iput v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mOldTime:I
 
     .line 165
@@ -379,18 +379,18 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 692
+    .line 698
     new-instance v1, Lcom/htc/sunny2/view/animation/SAnimationController;
 
     invoke-direct {v1}, Lcom/htc/sunny2/view/animation/SAnimationController;-><init>()V
 
-    .line 694
+    .line 700
     .local v1, controller:Lcom/htc/sunny2/view/animation/SAnimationController;
     invoke-virtual {p1}, Lcom/htc/sunny2/view/SView;->getPosition()Lcom/htc/sunny2/view/Vector3F;
 
     move-result-object v2
 
-    .line 696
+    .line 702
     .local v2, pos:Lcom/htc/sunny2/view/Vector3F;
     sget-object v3, Lcom/htc/sunny2/widget/gridview/animation/IntroAnimDropIn;->DURATION_FOLDER_INTRO_ITEM_SCALE_BEGIN:Lcom/htc/sunny2/view/Vector3F;
 
@@ -398,12 +398,12 @@
 
     invoke-virtual {v1, v3, v4}, Lcom/htc/sunny2/view/animation/SAnimationController;->setScaleAnimation(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)V
 
-    .line 699
+    .line 705
     invoke-virtual {p1}, Lcom/htc/sunny2/view/SView;->getAlpha()F
 
     move-result v0
 
-    .line 700
+    .line 706
     .local v0, alpha:F
     const/high16 v3, 0x437f
 
@@ -413,32 +413,32 @@
 
     invoke-virtual {v1, v5, v3}, Lcom/htc/sunny2/view/animation/SAnimationController;->setAlphaAnimation(II)V
 
-    .line 702
+    .line 708
     int-to-long v3, p2
 
     invoke-virtual {v1, v3, v4}, Lcom/htc/sunny2/view/animation/SAnimationController;->setStartOffset(J)V
 
-    .line 704
+    .line 710
     invoke-virtual {v1, v5}, Lcom/htc/sunny2/view/animation/SAnimationController;->setFillAfter(Z)V
 
-    .line 705
+    .line 711
     const-wide/16 v3, 0x64
 
     invoke-virtual {v1, v3, v4}, Lcom/htc/sunny2/view/animation/SAnimationController;->setDuration(J)V
 
-    .line 706
+    .line 712
     sget-object v3, Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;->EASEINOUT_CUBIC:Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;
 
     invoke-virtual {v1, v3}, Lcom/htc/sunny2/view/animation/SAnimationController;->setInterpolator(Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;)V
 
-    .line 707
+    .line 713
     new-instance v3, Lcom/htc/music/widget/gridview/MusicGridViewItem$1;
 
     invoke-direct {v3, p0, p1}, Lcom/htc/music/widget/gridview/MusicGridViewItem$1;-><init>(Lcom/htc/music/widget/gridview/MusicGridViewItem;Lcom/htc/sunny2/view/SView;)V
 
     invoke-virtual {v1, v3}, Lcom/htc/sunny2/view/animation/SAnimationController;->setAnimationListener(Lcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;)V
 
-    .line 723
+    .line 729
     return-object v1
 .end method
 
@@ -451,12 +451,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 421
+    .line 427
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
 
     aget-object v1, v3, v5
 
-    .line 422
+    .line 428
     .local v1, s:Lcom/htc/sunny2/Sprite;
     const/4 v3, 0x1
 
@@ -464,7 +464,7 @@
 
     move-result-object v0
 
-    .line 423
+    .line 429
     .local v0, layer:Lcom/htc/sunny2/Sprite$Layer;
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderImageGetter:Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;
 
@@ -474,7 +474,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 424
+    .line 430
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
     const-string v4, "NAME_TEXTURE_BACKGROUND_EXTRA"
@@ -483,27 +483,27 @@
 
     move-result-object v2
 
-    .line 425
+    .line 431
     .local v2, texture:Lcom/htc/sunny2/Texture;
     invoke-virtual {v0, v5, v2}, Lcom/htc/sunny2/Sprite$Layer;->setTexture(ILcom/htc/sunny2/Texture;)V
 
-    .line 429
+    .line 435
     .end local v2           #texture:Lcom/htc/sunny2/Texture;
     :goto_0
     invoke-direct {p0, p1, p2}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setTextView(ILcom/htc/sunny2/IMediaData;)V
 
-    .line 430
+    .line 436
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderImageGetter:Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;
 
     invoke-interface {v3, p1, p2, p3}, Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;->getThumbnailImage(ILcom/htc/sunny2/IMediaData;I)Lcom/htc/sunny2/Texture;
 
     move-result-object v2
 
-    .line 431
+    .line 437
     .restart local v2       #texture:Lcom/htc/sunny2/Texture;
     if-nez v2, :cond_0
 
-    .line 432
+    .line 438
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderImageGetter:Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;
 
     invoke-interface {v3, p1, p2, p3}, Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;->isUseExtraThumbnailImage(ILcom/htc/sunny2/IMediaData;I)Z
@@ -512,7 +512,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 433
+    .line 439
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
     const-string v4, "NAME_TEXTURE_THUMBNAIL_EXTRA"
@@ -521,15 +521,15 @@
 
     move-result-object v2
 
-    .line 438
+    .line 444
     :cond_0
     :goto_1
     invoke-virtual {p0, v2, p3}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setThumbnail(Lcom/htc/sunny2/Texture;I)V
 
-    .line 439
+    .line 445
     return-void
 
-    .line 427
+    .line 433
     .end local v2           #texture:Lcom/htc/sunny2/Texture;
     :cond_1
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBGTexture:Lcom/htc/sunny2/Texture;
@@ -538,7 +538,7 @@
 
     goto :goto_0
 
-    .line 435
+    .line 441
     .restart local v2       #texture:Lcom/htc/sunny2/Texture;
     :cond_2
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
@@ -553,251 +553,357 @@
 .end method
 
 .method private setTextView(ILcom/htc/sunny2/IMediaData;)V
-    .locals 13
+    .locals 16
     .parameter "dataIndex"
     .parameter "mediaData"
 
     .prologue
-    const/high16 v5, 0x4000
-
-    const/4 v12, 0x0
-
     .line 348
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextViewBind:Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;
+    move-object/from16 v0, p0
 
-    if-nez v1, :cond_1
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextViewBind:Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;
 
-    .line 414
+    if-nez v3, :cond_1
+
+    .line 420
     :cond_0
     :goto_0
     return-void
 
     .line 352
     :cond_1
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v1, v12}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
-    move-result-object v0
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v4}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
+
+    move-result-object v2
 
     .line 353
-    .local v0, layer:Lcom/htc/sunny2/Sprite$Layer;
-    const/4 v6, 0x0
+    .local v2, layer:Lcom/htc/sunny2/Sprite$Layer;
+    const/4 v8, 0x0
 
     .line 354
-    .local v6, container:Landroid/view/View;
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextViewBind:Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;
+    .local v8, container:Landroid/view/View;
+    move-object/from16 v0, p0
 
-    iget-object v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextViewBind:Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;
 
-    invoke-interface {v1, p1, p2, v2}, Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;->textViewBinding(ILcom/htc/sunny2/IMediaData;Landroid/view/View;)Landroid/view/View;
+    move-object/from16 v0, p0
 
-    move-result-object v6
+    iget-object v4, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+
+    move/from16 v0, p1
+
+    move-object/from16 v1, p2
+
+    invoke-interface {v3, v0, v1, v4}, Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;->textViewBinding(ILcom/htc/sunny2/IMediaData;Landroid/view/View;)Landroid/view/View;
+
+    move-result-object v8
 
     .line 356
-    if-eqz v6, :cond_0
+    if-eqz v8, :cond_0
 
     .line 357
-    iput-object v6, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    move-object/from16 v0, p0
+
+    iput-object v8, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
 
     .line 361
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    move-object/from16 v0, p0
 
-    iget v1, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    if-lez v1, :cond_2
+    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
 
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    if-lez v3, :cond_4
 
-    iget v1, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+    move-object/from16 v0, p0
 
-    if-lez v1, :cond_2
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+
+    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+
+    if-lez v3, :cond_4
 
     .line 362
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    move-object/from16 v0, p0
 
-    iget v1, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    invoke-static {v1, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
 
-    move-result v9
+    const/high16 v4, 0x4000
+
+    invoke-static {v3, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v11
 
     .line 363
-    .local v9, measureW:I
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    .local v11, measureW:I
+    move-object/from16 v0, p0
 
-    iget v1, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    invoke-static {v1, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    move-result v8
+    const/high16 v4, 0x4000
+
+    invoke-static {v3, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v10
 
     .line 364
-    .local v8, measureH:I
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    .local v10, measureH:I
+    move-object/from16 v0, p0
 
-    invoke-virtual {v1, v9, v8}, Landroid/view/View;->measure(II)V
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+
+    invoke-virtual {v3, v11, v10}, Landroid/view/View;->measure(II)V
 
     .line 365
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    move-object/from16 v0, p0
 
-    iget-object v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
+    const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    const/4 v7, 0x0
 
-    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+    move-object/from16 v0, p0
 
-    invoke-virtual {v1, v12, v12, v2, v5}, Landroid/view/View;->layout(IIII)V
+    iget-object v14, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+
+    iget v14, v14, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
+
+    move-object/from16 v0, p0
+
+    iget-object v15, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+
+    iget v15, v15, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+
+    invoke-virtual {v3, v4, v7, v14, v15}, Landroid/view/View;->layout(IIII)V
 
     .line 366
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    move-object/from16 v0, p0
 
-    iget v10, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+
+    iget v12, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
 
     .line 378
-    .local v10, textViewWidth:I
+    .local v12, textViewWidth:I
     :goto_1
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
 
-    move-result v7
-
-    .line 379
-    .local v7, height:I
-    iget v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mHeight:I
-
-    sub-int v1, v7, v1
-
-    int-to-float v1, v1
-
-    const/high16 v2, 0x4000
-
-    div-float v4, v1, v2
-
-    .line 380
-    .local v4, posY:F
-    const/4 v3, 0x0
-
-    .line 382
-    .local v3, posX:F
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
-
-    iget v1, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
-
-    iget-object v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
-
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
-
-    add-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    add-float/2addr v4, v1
-
-    .line 383
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
-
-    iget v1, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
-
-    int-to-float v1, v1
-
-    sub-float/2addr v3, v1
-
-    .line 385
-    int-to-float v1, v10
-
-    int-to-float v2, v7
-
-    const/4 v5, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
-
-    .line 391
-    iget-object v11, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewTextureContainer:Lcom/htc/sunny2/Texture;
-
-    .line 392
-    .local v11, texture:Lcom/htc/sunny2/Texture;
-    if-nez v11, :cond_3
-
-    .line 393
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
-
-    invoke-static {v1}, Lcom/htc/sunny2/Texture;->createTexture(Landroid/view/View;)Lcom/htc/sunny2/Texture;
-
-    move-result-object v11
-
-    .line 394
-    invoke-virtual {v0, v12, v11}, Lcom/htc/sunny2/Sprite$Layer;->setTexture(ILcom/htc/sunny2/Texture;)V
-
-    .line 395
-    iput-object v11, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewTextureContainer:Lcom/htc/sunny2/Texture;
-
-    .line 406
-    :goto_2
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
-
-    goto :goto_0
-
-    .line 368
-    .end local v3           #posX:F
-    .end local v4           #posY:F
-    .end local v7           #height:I
-    .end local v8           #measureH:I
-    .end local v9           #measureW:I
-    .end local v10           #textViewWidth:I
-    .end local v11           #texture:Lcom/htc/sunny2/Texture;
-    :cond_2
-    iget v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mWidth:I
-
-    invoke-static {v1, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
 
     move-result v9
 
-    .line 369
-    .restart local v9       #measureW:I
-    invoke-static {v12, v12}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    .line 379
+    .local v9, height:I
+    move-object/from16 v0, p0
 
-    move-result v8
+    iget v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mHeight:I
 
-    .line 370
-    .restart local v8       #measureH:I
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    sub-int v3, v9, v3
 
-    invoke-virtual {v1, v9, v8}, Landroid/view/View;->measure(II)V
+    int-to-float v3, v3
 
-    .line 371
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    const/high16 v4, 0x4000
 
-    iget v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mWidth:I
+    div-float v6, v3, v4
 
-    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    .line 380
+    .local v6, posY:F
+    const/4 v5, 0x0
 
-    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
+    .line 382
+    .local v5, posX:F
+    move-object/from16 v0, p0
 
-    move-result v5
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    invoke-virtual {v1, v12, v12, v2, v5}, Landroid/view/View;->layout(IIII)V
+    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    .line 372
-    iget v10, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mWidth:I
+    move-object/from16 v0, p0
 
-    .restart local v10       #textViewWidth:I
-    goto :goto_1
+    iget-object v4, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+
+    iget v4, v4, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
+
+    add-int/2addr v3, v4
+
+    int-to-float v3, v3
+
+    add-float/2addr v6, v3
+
+    .line 383
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+
+    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
+
+    int-to-float v3, v3
+
+    sub-float/2addr v5, v3
+
+    .line 385
+    rem-int/lit8 v3, v12, 0x2
+
+    if-eqz v3, :cond_2
+
+    .line 386
+    const/high16 v3, 0x3f00
+
+    add-float/2addr v5, v3
+
+    .line 388
+    :cond_2
+    rem-int/lit8 v3, v9, 0x2
+
+    if-eqz v3, :cond_3
+
+    .line 389
+    int-to-float v3, v9
+
+    const/high16 v4, 0x3f00
+
+    add-float/2addr v3, v4
+
+    float-to-int v9, v3
+
+    .line 391
+    :cond_3
+    int-to-float v3, v12
+
+    int-to-float v4, v9
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v2 .. v7}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
+
+    .line 397
+    move-object/from16 v0, p0
+
+    iget-object v13, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewTextureContainer:Lcom/htc/sunny2/Texture;
 
     .line 398
-    .restart local v3       #posX:F
-    .restart local v4       #posY:F
-    .restart local v7       #height:I
-    .restart local v11       #texture:Lcom/htc/sunny2/Texture;
-    :cond_3
-    iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+    .local v13, texture:Lcom/htc/sunny2/Texture;
+    if-nez v13, :cond_5
 
-    invoke-virtual {v11, v1}, Lcom/htc/sunny2/Texture;->setView(Landroid/view/View;)V
+    .line 399
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+
+    invoke-static {v3}, Lcom/htc/sunny2/Texture;->createTexture(Landroid/view/View;)Lcom/htc/sunny2/Texture;
+
+    move-result-object v13
+
+    .line 400
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3, v13}, Lcom/htc/sunny2/Sprite$Layer;->setTexture(ILcom/htc/sunny2/Texture;)V
+
+    .line 401
+    move-object/from16 v0, p0
+
+    iput-object v13, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewTextureContainer:Lcom/htc/sunny2/Texture;
+
+    .line 412
+    :goto_2
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
+
+    goto/16 :goto_0
+
+    .line 368
+    .end local v5           #posX:F
+    .end local v6           #posY:F
+    .end local v9           #height:I
+    .end local v10           #measureH:I
+    .end local v11           #measureW:I
+    .end local v12           #textViewWidth:I
+    .end local v13           #texture:Lcom/htc/sunny2/Texture;
+    :cond_4
+    move-object/from16 v0, p0
+
+    iget v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mWidth:I
+
+    const/high16 v4, 0x4000
+
+    invoke-static {v3, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v11
+
+    .line 369
+    .restart local v11       #measureW:I
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-static {v3, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v10
+
+    .line 370
+    .restart local v10       #measureH:I
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+
+    invoke-virtual {v3, v11, v10}, Landroid/view/View;->measure(II)V
+
+    .line 371
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+
+    const/4 v4, 0x0
+
+    const/4 v7, 0x0
+
+    move-object/from16 v0, p0
+
+    iget v14, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mWidth:I
+
+    move-object/from16 v0, p0
+
+    iget-object v15, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+
+    invoke-virtual {v15}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v15
+
+    invoke-virtual {v3, v4, v7, v14, v15}, Landroid/view/View;->layout(IIII)V
+
+    .line 372
+    move-object/from16 v0, p0
+
+    iget v12, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mWidth:I
+
+    .restart local v12       #textViewWidth:I
+    goto/16 :goto_1
+
+    .line 404
+    .restart local v5       #posX:F
+    .restart local v6       #posY:F
+    .restart local v9       #height:I
+    .restart local v13       #texture:Lcom/htc/sunny2/Texture;
+    :cond_5
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mViewContainer:Landroid/view/View;
+
+    invoke-virtual {v13, v3}, Lcom/htc/sunny2/Texture;->setView(Landroid/view/View;)V
 
     goto :goto_2
 .end method
@@ -814,32 +920,32 @@
 
     const/4 v5, 0x1
 
-    .line 443
+    .line 449
     if-nez p2, :cond_1
 
-    .line 445
+    .line 451
     const-string v3, "[MusicGridViewItem]"
 
     const-string v4, "MediaData is null at bindMediaData"
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 502
+    .line 508
     :cond_0
     return-void
 
-    .line 449
+    .line 455
     :cond_1
     iput p1, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mDataIndex:I
 
-    .line 451
+    .line 457
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
     invoke-virtual {v3, v5}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
 
     move-result-object v2
 
-    .line 452
+    .line 458
     .local v2, layer:Lcom/htc/sunny2/Sprite$Layer;
     invoke-interface {p2}, Lcom/htc/sunny2/IMediaData;->isSelected()Z
 
@@ -847,14 +953,14 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
 
-    .line 453
+    .line 459
     invoke-interface {p2}, Lcom/htc/sunny2/IMediaData;->isSelected()Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    .line 454
+    .line 460
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
 
     aget-object v3, v3, v6
@@ -863,13 +969,13 @@
 
     invoke-virtual {v3, v4}, Lcom/htc/sunny2/Sprite;->setAlpha(F)V
 
-    .line 461
+    .line 467
     :goto_0
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderImageGetter:Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;
 
     if-eqz v3, :cond_0
 
-    .line 468
+    .line 474
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -878,7 +984,7 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 471
+    .line 477
     iget-boolean v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mIsBinded:Z
 
     if-nez v3, :cond_2
@@ -903,21 +1009,21 @@
 
     if-eqz v3, :cond_6
 
-    .line 473
+    .line 479
     :cond_2
     invoke-direct {p0, p1, p2, v1}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setItemView(ILcom/htc/sunny2/IMediaData;I)V
 
-    .line 475
+    .line 481
     invoke-virtual {p0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->isVisible()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
-    .line 476
+    .line 482
     invoke-virtual {p0, v5}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setVisibility(Z)V
 
-    .line 477
+    .line 483
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderImageGetter:Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;
 
     invoke-interface {v3}, Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;->isGridViewInitFinish()Z
@@ -930,33 +1036,33 @@
 
     if-nez v3, :cond_3
 
-    .line 478
+    .line 484
     iput-boolean v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mIsBinded:Z
 
-    .line 480
+    .line 486
     :cond_3
     iget-boolean v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mIsBinded:Z
 
     if-nez v3, :cond_4
 
-    .line 481
+    .line 487
     invoke-direct {p0, p0, v6}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->createSAnimationController(Lcom/htc/sunny2/view/SView;I)Lcom/htc/sunny2/view/animation/SAnimationController;
 
     move-result-object v3
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->startAnimation(Lcom/htc/sunny2/view/animation/SAnimationController;)V
 
-    .line 482
+    .line 488
     iput-boolean v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mIsBinded:Z
 
-    .line 468
+    .line 474
     :cond_4
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 456
+    .line 462
     .end local v1           #i:I
     :cond_5
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
@@ -969,7 +1075,7 @@
 
     goto :goto_0
 
-    .line 486
+    .line 492
     .restart local v1       #i:I
     :cond_6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -978,13 +1084,13 @@
 
     long-to-int v0, v3
 
-    .line 487
+    .line 493
     .local v0, currentTime:I
     iget v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mOldTime:I
 
     if-eqz v3, :cond_8
 
-    .line 488
+    .line 494
     iget v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mOldTime:I
 
     sub-int v3, v0, v3
@@ -993,18 +1099,18 @@
 
     if-le v3, v4, :cond_7
 
-    .line 489
+    .line 495
     iput-boolean v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mIsBinded:Z
 
-    .line 490
+    .line 496
     invoke-direct {p0, p1, p2, v1}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setItemView(ILcom/htc/sunny2/IMediaData;I)V
 
-    .line 491
+    .line 497
     invoke-virtual {p0, v5}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setVisibility(Z)V
 
     goto :goto_2
 
-    .line 492
+    .line 498
     :cond_7
     invoke-virtual {p0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->isVisible()Z
 
@@ -1012,12 +1118,12 @@
 
     if-eqz v3, :cond_4
 
-    .line 493
+    .line 499
     invoke-virtual {p0, v6}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setVisibility(Z)V
 
     goto :goto_2
 
-    .line 495
+    .line 501
     :cond_8
     invoke-virtual {p0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->isVisible()Z
 
@@ -1025,10 +1131,10 @@
 
     if-eqz v3, :cond_4
 
-    .line 496
+    .line 502
     invoke-virtual {p0, v6}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setVisibility(Z)V
 
-    .line 497
+    .line 503
     iput v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mOldTime:I
 
     goto :goto_2
@@ -1137,407 +1243,333 @@
 .end method
 
 .method public createResource()V
-    .locals 17
+    .locals 14
 
     .prologue
     .line 215
-    invoke-super/range {p0 .. p0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->createResource()V
+    invoke-super {p0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->createResource()V
 
     .line 216
-    const-string v2, "[MusicGridViewItem]"
+    const-string v5, "[MusicGridViewItem]"
 
-    const-string v3, "createResource+"
+    const-string v6, "createResource+"
 
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 217
-    const-string v2, "[MusicGridViewItem]"
+    const-string v5, "[MusicGridViewItem]"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "mShareTextureKey = "
+    const-string v7, "mShareTextureKey = "
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v6
 
-    move-object/from16 v0, p0
+    iget-object v7, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mShareTextureKey:Ljava/lang/String;
 
-    iget-object v6, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mShareTextureKey:Ljava/lang/String;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v6
 
-    move-result-object v3
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v6
 
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 219
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mShareTextureKey:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mShareTextureKey:Ljava/lang/String;
+    invoke-static {v5}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->getSharedTexture(Ljava/lang/String;)Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
-    invoke-static {v2}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->getSharedTexture(Ljava/lang/String;)Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
+    move-result-object v5
 
-    move-result-object v2
-
-    move-object/from16 v0, p0
-
-    iput-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
+    iput-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
     .line 220
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
-
-    if-nez v2, :cond_0
+    if-nez v5, :cond_0
 
     .line 221
-    new-instance v2, Lcom/htc/music/widget/gridview/MusicGridViewItem$FolderViewSharedTexture;
+    new-instance v5, Lcom/htc/music/widget/gridview/MusicGridViewItem$FolderViewSharedTexture;
 
-    move-object/from16 v0, p0
+    iget-object v6, p0, Lcom/htc/sunny2/view/SView;->mContext:Landroid/content/Context;
 
-    iget-object v3, v0, Lcom/htc/sunny2/view/SView;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    move-object/from16 v0, p0
+    iget-object v8, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v6, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    invoke-direct {v5, p0, v6, v7, v8}, Lcom/htc/music/widget/gridview/MusicGridViewItem$FolderViewSharedTexture;-><init>(Lcom/htc/music/widget/gridview/MusicGridViewItem;Landroid/content/Context;Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;)V
 
-    move-object/from16 v0, p0
-
-    iget-object v7, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v2, v0, v3, v6, v7}, Lcom/htc/music/widget/gridview/MusicGridViewItem$FolderViewSharedTexture;-><init>(Lcom/htc/music/widget/gridview/MusicGridViewItem;Landroid/content/Context;Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;)V
-
-    move-object/from16 v0, p0
-
-    iput-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
+    iput-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
     .line 222
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
+    const/4 v6, 0x0
 
-    const/4 v3, 0x0
-
-    iput v3, v2, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->referenceCount:I
+    iput v6, v5, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->referenceCount:I
 
     .line 223
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mShareTextureKey:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mShareTextureKey:Ljava/lang/String;
+    iget-object v6, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
-
-    invoke-static {v2, v3}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setSharedTexture(Ljava/lang/String;Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;)V
+    invoke-static {v5, v6}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setSharedTexture(Ljava/lang/String;Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;)V
 
     .line 224
-    const-string v2, "[MusicGridViewItem]"
+    const-string v5, "[MusicGridViewItem]"
 
-    const-string v3, "mSharedTexture == null, create new one"
+    const-string v6, "mSharedTexture == null, create new one"
 
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 226
     :cond_0
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
+    iget v6, v5, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->referenceCount:I
 
-    iget v3, v2, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->referenceCount:I
+    add-int/lit8 v6, v6, 0x1
 
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, v2, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->referenceCount:I
+    iput v6, v5, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->referenceCount:I
 
     .line 228
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
+    const-string v6, "NAME_TEXTURE_BACKGROUND"
 
-    const-string v3, "NAME_TEXTURE_BACKGROUND"
+    invoke-virtual {v5, v6}, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->getTexture(Ljava/lang/String;)Lcom/htc/sunny2/Texture;
 
-    invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->getTexture(Ljava/lang/String;)Lcom/htc/sunny2/Texture;
+    move-result-object v5
 
-    move-result-object v2
-
-    move-object/from16 v0, p0
-
-    iput-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBGTexture:Lcom/htc/sunny2/Texture;
+    iput-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBGTexture:Lcom/htc/sunny2/Texture;
 
     .line 229
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
-
-    if-nez v2, :cond_1
+    if-nez v5, :cond_1
 
     .line 230
-    const/4 v2, 0x2
+    const/4 v5, 0x2
 
-    invoke-static {v2}, Lcom/htc/sunny2/Sprite;->obtain(I)Lcom/htc/sunny2/Sprite;
+    invoke-static {v5}, Lcom/htc/sunny2/Sprite;->obtain(I)Lcom/htc/sunny2/Sprite;
 
-    move-result-object v2
+    move-result-object v5
 
-    move-object/from16 v0, p0
-
-    iput-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
+    iput-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
     .line 231
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v2}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->addSprite(Lcom/htc/sunny2/Sprite;)V
+    invoke-virtual {p0, v5}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->addSprite(Lcom/htc/sunny2/Sprite;)V
 
     .line 233
     :cond_1
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
-
-    const/4 v3, 0x0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    invoke-virtual {v2, v3, v6, v7}, Lcom/htc/sunny2/Sprite;->setPosition(FFF)V
+    const/4 v8, 0x0
+
+    invoke-virtual {v5, v6, v7, v8}, Lcom/htc/sunny2/Sprite;->setPosition(FFF)V
 
     .line 234
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
-
-    if-nez v2, :cond_2
+    if-nez v5, :cond_2
 
     .line 236
-    move-object/from16 v0, p0
+    iget v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mNumFolderImage:I
 
-    iget v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mNumFolderImage:I
+    new-array v5, v5, [Lcom/htc/sunny2/Sprite;
 
-    new-array v2, v2, [Lcom/htc/sunny2/Sprite;
-
-    move-object/from16 v0, p0
-
-    iput-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
+    iput-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
 
     .line 237
-    const/4 v13, 0x0
+    const/4 v11, 0x0
 
-    .local v13, i:I
+    .local v11, i:I
     :goto_0
-    move-object/from16 v0, p0
+    iget v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mNumFolderImage:I
 
-    iget v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mNumFolderImage:I
-
-    if-ge v13, v2, :cond_2
+    if-ge v11, v5, :cond_2
 
     .line 238
-    const/4 v2, 0x2
+    const/4 v5, 0x2
 
-    invoke-static {v2}, Lcom/htc/sunny2/Sprite;->obtain(I)Lcom/htc/sunny2/Sprite;
+    invoke-static {v5}, Lcom/htc/sunny2/Sprite;->obtain(I)Lcom/htc/sunny2/Sprite;
 
-    move-result-object v14
+    move-result-object v12
 
     .line 239
-    .local v14, s:Lcom/htc/sunny2/Sprite;
-    move-object/from16 v0, p0
+    .local v12, s:Lcom/htc/sunny2/Sprite;
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
-
-    aput-object v14, v2, v13
+    aput-object v12, v5, v11
 
     .line 240
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v14}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->addSprite(Lcom/htc/sunny2/Sprite;)V
+    invoke-virtual {p0, v12}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->addSprite(Lcom/htc/sunny2/Sprite;)V
 
     .line 243
-    move-object/from16 v0, p0
+    iget v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mHeight:I
 
-    iget v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mHeight:I
+    iget-object v6, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    move-object/from16 v0, p0
+    iget v6, v6, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    sub-int/2addr v5, v6
 
-    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+    int-to-float v5, v5
 
-    sub-int/2addr v2, v3
+    const/high16 v6, 0x4000
 
-    int-to-float v2, v2
+    div-float/2addr v5, v6
 
-    const/high16 v3, 0x4000
+    float-to-int v5, v5
 
-    div-float/2addr v2, v3
-
-    float-to-int v2, v2
-
-    int-to-float v5, v2
+    int-to-float v4, v5
 
     .line 244
-    .local v5, posY:F
-    const/4 v4, 0x0
-
-    .line 245
-    .local v4, posX:F
-    const/4 v2, 0x0
-
+    .local v4, posY:F
     const/4 v3, 0x0
 
-    invoke-virtual {v14, v2, v5, v3}, Lcom/htc/sunny2/Sprite;->setPosition(FFF)V
+    .line 245
+    .local v3, posX:F
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v12, v5, v4, v6}, Lcom/htc/sunny2/Sprite;->setPosition(FFF)V
 
     .line 246
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
-
-    int-to-float v5, v2
+    int-to-float v4, v5
 
     .line 247
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
+    neg-int v5, v5
 
-    neg-int v2, v2
-
-    int-to-float v4, v2
+    int-to-float v3, v5
 
     .line 248
-    const/4 v2, 0x1
+    const/4 v5, 0x1
 
-    invoke-virtual {v14, v2}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
+    invoke-virtual {v12, v5}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
 
-    move-result-object v1
+    move-result-object v0
 
     .line 249
-    .local v1, layer:Lcom/htc/sunny2/Sprite$Layer;
-    move-object/from16 v0, p0
+    .local v0, layer:Lcom/htc/sunny2/Sprite$Layer;
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
+    int-to-float v1, v5
 
-    int-to-float v2, v2
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    move-object/from16 v0, p0
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    int-to-float v2, v5
 
-    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+    const/4 v5, 0x0
 
-    int-to-float v3, v3
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
+    invoke-virtual/range {v0 .. v5}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
 
     .line 260
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
-
-    int-to-float v5, v2
+    int-to-float v4, v5
 
     .line 261
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
+    neg-int v5, v5
 
-    neg-int v2, v2
-
-    int-to-float v4, v2
+    int-to-float v3, v5
 
     .line 262
-    const/4 v2, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {v14, v2}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
+    invoke-virtual {v12, v5}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
 
-    move-result-object v1
+    move-result-object v0
 
     .line 263
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
+    int-to-float v1, v5
 
-    int-to-float v2, v2
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    move-object/from16 v0, p0
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    iget-object v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mThumbnailParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    int-to-float v2, v5
 
-    iget v3, v3, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+    const/4 v5, 0x0
 
-    int-to-float v3, v3
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
+    invoke-virtual/range {v0 .. v5}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
 
     .line 264
-    const/4 v2, 0x1
+    const/4 v5, 0x1
 
-    invoke-virtual {v1, v2}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
+    invoke-virtual {v0, v5}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
 
     .line 237
-    add-int/lit8 v13, v13, 0x1
+    add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
     .line 271
-    .end local v1           #layer:Lcom/htc/sunny2/Sprite$Layer;
-    .end local v4           #posX:F
-    .end local v5           #posY:F
-    .end local v13           #i:I
-    .end local v14           #s:Lcom/htc/sunny2/Sprite;
+    .end local v0           #layer:Lcom/htc/sunny2/Sprite$Layer;
+    .end local v3           #posX:F
+    .end local v4           #posY:F
+    .end local v11           #i:I
+    .end local v12           #s:Lcom/htc/sunny2/Sprite;
     :cond_2
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
-
-    const/4 v3, 0x0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    invoke-virtual {v2, v3, v6, v7}, Lcom/htc/sunny2/Sprite;->setPosition(FFF)V
+    const/4 v8, 0x0
+
+    invoke-virtual {v5, v6, v7, v8}, Lcom/htc/sunny2/Sprite;->setPosition(FFF)V
 
     .line 274
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
+    const/4 v6, 0x0
 
-    const/4 v3, 0x0
+    invoke-virtual {v5, v6}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
 
-    invoke-virtual {v2, v3}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
-
-    move-result-object v1
+    move-result-object v0
 
     .line 275
-    .restart local v1       #layer:Lcom/htc/sunny2/Sprite$Layer;
+    .restart local v0       #layer:Lcom/htc/sunny2/Sprite$Layer;
+    const/4 v6, 0x0
+
     const/4 v7, 0x0
 
     const/4 v8, 0x0
@@ -1546,137 +1578,115 @@
 
     const/4 v10, 0x0
 
-    const/4 v11, 0x0
+    move-object v5, v0
 
-    move-object v6, v1
-
-    invoke-virtual/range {v6 .. v11}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
+    invoke-virtual/range {v5 .. v10}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
 
     .line 276
-    const/4 v2, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
+    invoke-virtual {v0, v5}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
 
     .line 278
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBkSprite:Lcom/htc/sunny2/Sprite;
+    const/4 v6, 0x1
 
-    const/4 v3, 0x1
+    invoke-virtual {v5, v6}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
 
-    invoke-virtual {v2, v3}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
-
-    move-result-object v1
+    move-result-object v0
 
     .line 280
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mSharedTexture:Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;
+    const-string v6, "NAME_TEXTUREE_SELECTED"
 
-    const-string v3, "NAME_TEXTUREE_SELECTED"
+    invoke-virtual {v5, v6}, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->getTexture(Ljava/lang/String;)Lcom/htc/sunny2/Texture;
 
-    invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/resource/SharedTexture;->getTexture(Ljava/lang/String;)Lcom/htc/sunny2/Texture;
-
-    move-result-object v15
+    move-result-object v13
 
     .line 281
-    .local v15, texture:Lcom/htc/sunny2/Texture;
-    if-eqz v15, :cond_3
+    .local v13, texture:Lcom/htc/sunny2/Texture;
+    if-eqz v13, :cond_3
 
     .line 282
-    invoke-virtual {v15}, Lcom/htc/sunny2/Texture;->getHeight()I
+    invoke-virtual {v13}, Lcom/htc/sunny2/Texture;->getHeight()I
 
-    move-result v2
+    move-result v5
 
-    int-to-float v12, v2
+    int-to-float v2, v5
 
     .line 283
-    .local v12, height:F
-    invoke-virtual {v15}, Lcom/htc/sunny2/Texture;->getWidth()I
+    .local v2, height:F
+    invoke-virtual {v13}, Lcom/htc/sunny2/Texture;->getWidth()I
 
-    move-result v2
+    move-result v5
 
-    int-to-float v0, v2
-
-    move/from16 v16, v0
+    int-to-float v1, v5
 
     .line 284
-    .local v16, width:F
-    move-object/from16 v0, p0
+    .local v1, width:F
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mTextLayoutParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
+    neg-int v5, v5
 
-    neg-int v2, v2
+    int-to-float v5, v5
 
-    int-to-float v2, v2
+    const/high16 v6, 0x4000
 
-    const/high16 v3, 0x4000
-
-    div-float v5, v2, v3
+    div-float v4, v5, v6
 
     .line 285
-    .restart local v5       #posY:F
-    const/4 v4, 0x0
+    .restart local v4       #posY:F
+    const/4 v3, 0x0
 
     .line 286
-    .restart local v4       #posX:F
-    move-object/from16 v0, p0
+    .restart local v3       #posX:F
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
+    int-to-float v5, v5
 
-    int-to-float v2, v2
-
-    add-float/2addr v5, v2
+    add-float/2addr v4, v5
 
     .line 287
-    move-object/from16 v0, p0
+    iget-object v5, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
-    iget-object v2, v0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mBackgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
+    iget v5, v5, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
 
-    iget v2, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
+    int-to-float v5, v5
 
-    int-to-float v2, v2
-
-    sub-float/2addr v4, v2
+    sub-float/2addr v3, v5
 
     .line 288
-    const v2, 0x3f666666
+    const/4 v5, 0x0
 
-    mul-float v2, v2, v16
-
-    const v3, 0x3f666666
-
-    mul-float/2addr v3, v12
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
+    invoke-virtual/range {v0 .. v5}, Lcom/htc/sunny2/Sprite$Layer;->setupGeometry(FFFFF)V
 
     .line 289
-    const/4 v2, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {v1, v2, v15}, Lcom/htc/sunny2/Sprite$Layer;->setTexture(ILcom/htc/sunny2/Texture;)V
+    invoke-virtual {v0, v5, v13}, Lcom/htc/sunny2/Sprite$Layer;->setTexture(ILcom/htc/sunny2/Texture;)V
 
     .line 290
-    const/4 v2, 0x0
+    const/4 v5, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
+    invoke-virtual {v0, v5}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
 
     .line 293
-    .end local v4           #posX:F
-    .end local v5           #posY:F
-    .end local v12           #height:F
-    .end local v16           #width:F
+    .end local v1           #width:F
+    .end local v2           #height:F
+    .end local v3           #posX:F
+    .end local v4           #posY:F
     :cond_3
-    const-string v2, "[MusicGridViewItem]"
+    const-string v5, "[MusicGridViewItem]"
 
-    const-string v3, "createResource-"
+    const-string v6, "createResource-"
 
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 294
     return-void
@@ -1810,7 +1820,7 @@
     .locals 1
 
     .prologue
-    .line 551
+    .line 557
     iget v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mNumFolderImage:I
 
     return v0
@@ -1820,7 +1830,7 @@
     .locals 1
 
     .prologue
-    .line 516
+    .line 522
     iget v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mHeight:I
 
     return v0
@@ -1830,7 +1840,7 @@
     .locals 1
 
     .prologue
-    .line 511
+    .line 517
     iget v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mWidth:I
 
     return v0
@@ -1858,7 +1868,7 @@
     .parameter "resId"
 
     .prologue
-    .line 677
+    .line 683
     return-void
 .end method
 
@@ -1867,7 +1877,7 @@
     .parameter "contentGetter"
 
     .prologue
-    .line 689
+    .line 695
     return-void
 .end method
 
@@ -1876,7 +1886,7 @@
     .parameter "style"
 
     .prologue
-    .line 522
+    .line 528
     return-void
 .end method
 
@@ -1897,7 +1907,7 @@
     .parameter "texture"
 
     .prologue
-    .line 683
+    .line 689
     return-void
 .end method
 
@@ -1906,12 +1916,12 @@
     .parameter "texture"
 
     .prologue
-    .line 529
+    .line 535
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setThumbnail(Lcom/htc/sunny2/Texture;I)V
 
-    .line 530
+    .line 536
     return-void
 .end method
 
@@ -1923,14 +1933,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 533
+    .line 539
     add-int/lit8 v2, p2, 0x1
 
     iget v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mNumFolderImage:I
 
     if-le v2, v3, :cond_0
 
-    .line 534
+    .line 540
     new-instance v2, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1967,33 +1977,33 @@
 
     throw v2
 
-    .line 536
+    .line 542
     :cond_0
     iget-object v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mFolderSprite:[Lcom/htc/sunny2/Sprite;
 
     aget-object v1, v2, p2
 
-    .line 538
+    .line 544
     .local v1, s:Lcom/htc/sunny2/Sprite;
     invoke-virtual {v1, v4}, Lcom/htc/sunny2/Sprite;->getLayer(I)Lcom/htc/sunny2/Sprite$Layer;
 
     move-result-object v0
 
-    .line 539
+    .line 545
     .local v0, layer:Lcom/htc/sunny2/Sprite$Layer;
     invoke-virtual {v0, v4, p1}, Lcom/htc/sunny2/Sprite$Layer;->setTexture(ILcom/htc/sunny2/Texture;)V
 
-    .line 540
+    .line 546
     if-nez p1, :cond_1
 
-    .line 541
+    .line 547
     invoke-virtual {v0, v4}, Lcom/htc/sunny2/Sprite$Layer;->setVisible(Z)V
 
-    .line 547
+    .line 553
     :goto_0
     return-void
 
-    .line 544
+    .line 550
     :cond_1
     const/4 v2, 0x1
 
@@ -2018,11 +2028,11 @@
     .locals 1
 
     .prologue
-    .line 506
+    .line 512
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewItem;->mDataIndex:I
 
-    .line 507
+    .line 513
     return-void
 .end method

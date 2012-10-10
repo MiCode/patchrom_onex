@@ -28,6 +28,17 @@
 
 
 # instance fields
+.field private final isFocusKeyPressed:Lcom/android/camera/property/Property;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/android/camera/property/Property",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private final isPhotoButtonPressed:Lcom/android/camera/property/Property;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -120,77 +131,90 @@
     .parameter "cameraActivity"
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
     .line 109
     const-string v0, "Capture Bar"
 
-    invoke-direct {p0, v0, v4, p1, v2}, Lcom/android/camera/component/UIComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/HTCCamera;I)V
+    invoke-direct {p0, v0, v3, p1, v4}, Lcom/android/camera/component/UIComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/HTCCamera;I)V
 
     .line 76
-    iput v2, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
+    iput v4, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
     .line 82
-    new-array v0, v3, [Landroid/graphics/drawable/Drawable;
+    new-array v0, v2, [Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsLandscape:[Landroid/graphics/drawable/Drawable;
 
     .line 83
-    new-array v0, v3, [Landroid/graphics/drawable/Drawable;
+    new-array v0, v2, [Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsPortrait:[Landroid/graphics/drawable/Drawable;
 
     .line 112
-    const-string v0, "CaptureBar.IsPhotoButtonPressed"
+    const-string v0, "CaptureBar.IsFocusKeyPressed"
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v0, v3, p0, v1}, Lcom/android/camera/property/Property;->create(Ljava/lang/String;ILjava/lang/Object;Ljava/lang/Object;)Lcom/android/camera/property/Property;
+    invoke-static {v0, v2, p0, v1}, Lcom/android/camera/property/Property;->create(Ljava/lang/String;ILjava/lang/Object;Ljava/lang/Object;)Lcom/android/camera/property/Property;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->isFocusKeyPressed:Lcom/android/camera/property/Property;
+
+    .line 113
+    const-string v0, "CaptureBar.IsPhotoButtonPressed"
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, p0, v1}, Lcom/android/camera/property/Property;->create(Ljava/lang/String;ILjava/lang/Object;Ljava/lang/Object;)Lcom/android/camera/property/Property;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->isPhotoButtonPressed:Lcom/android/camera/property/Property;
 
-    .line 113
+    .line 114
     const-string v0, "CaptureBar.IsVideoButtonClicked"
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v0, v3, p0, v1}, Lcom/android/camera/property/Property;->create(Ljava/lang/String;ILjava/lang/Object;Ljava/lang/Object;)Lcom/android/camera/property/Property;
+    invoke-static {v0, v2, p0, v1}, Lcom/android/camera/property/Property;->create(Ljava/lang/String;ILjava/lang/Object;Ljava/lang/Object;)Lcom/android/camera/property/Property;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
 
-    .line 114
+    .line 115
     const-string v0, "CaptureBar.IsVideoButtonPressed"
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-static {v0, v3, p0, v1}, Lcom/android/camera/property/Property;->create(Ljava/lang/String;ILjava/lang/Object;Ljava/lang/Object;)Lcom/android/camera/property/Property;
+    invoke-static {v0, v2, p0, v1}, Lcom/android/camera/property/Property;->create(Ljava/lang/String;ILjava/lang/Object;Ljava/lang/Object;)Lcom/android/camera/property/Property;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonPressed:Lcom/android/camera/property/Property;
 
-    .line 117
+    .line 118
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isLowEndDevice()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 119
+    .line 120
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
@@ -203,7 +227,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 132
+    .line 133
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
@@ -211,7 +235,7 @@
 
     iget-object v2, p1, Lcom/android/camera/HTCCamera;->isCameraThreadRunning:Lcom/android/camera/property/Property;
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
@@ -219,7 +243,81 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 140
+    .line 143
+    const v0, 0x7f08002e
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/HTCCamera;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
+
+    .line 144
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->getStartMode()Lcom/android/camera/CameraStartMode;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/CameraStartMode;->supportsAllCameraModes()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 146
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
+
+    const v1, 0x7f08003d
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
+
+    .line 147
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
+
+    const v1, 0x7f080032
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
+
+    .line 148
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
+
+    check-cast v0, Lcom/android/camera/rotate/RotateImageView;
+
+    sget-object v1, Lcom/android/camera/rotate/UIRotation;->Landscape:Lcom/android/camera/rotate/UIRotation;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
+
+    .line 149
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
+
+    check-cast v0, Lcom/android/camera/rotate/RotateImageView;
+
+    sget-object v1, Lcom/android/camera/rotate/UIRotation;->Landscape:Lcom/android/camera/rotate/UIRotation;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
+
+    .line 150
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, v4}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
+
+    .line 152
+    :cond_1
     return-void
 .end method
 
@@ -228,7 +326,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->onCameraThreadRunning()V
 
     return-void
@@ -239,7 +337,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget v0, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
     return v0
@@ -251,7 +349,7 @@
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->onCameraButtonReleased(I)V
 
     return-void
@@ -263,7 +361,7 @@
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->onCamcorderButtonReleased(I)V
 
     return-void
@@ -274,19 +372,41 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
+    invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->unlockAfAecAwb()V
+
+    return-void
+.end method
+
+.method static synthetic access$1300(Lcom/android/camera/component/CaptureBar;)Lcom/android/camera/property/Property;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isFocusKeyPressed:Lcom/android/camera/property/Property;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1400(Lcom/android/camera/component/CaptureBar;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 48
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->reset()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/camera/component/CaptureBar;Landroid/view/KeyEvent;)Z
+.method static synthetic access$1500(Lcom/android/camera/component/CaptureBar;Landroid/view/KeyEvent;)Z
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->onKeyDown(Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -294,13 +414,13 @@
     return v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/camera/component/CaptureBar;Landroid/view/KeyEvent;)Z
+.method static synthetic access$1600(Lcom/android/camera/component/CaptureBar;Landroid/view/KeyEvent;)Z
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->onKeyUp(Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -308,13 +428,13 @@
     return v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/camera/component/CaptureBar;Landroid/view/MotionEvent;)Z
+.method static synthetic access$1700(Lcom/android/camera/component/CaptureBar;Landroid/view/MotionEvent;)Z
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->onPopMenuOutsideTouched(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -322,46 +442,24 @@
     return v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/camera/component/CaptureBar;)V
+.method static synthetic access$1800(Lcom/android/camera/component/CaptureBar;)V
     .locals 0
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->showFakeUIRotation()V
 
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+.method static synthetic access$1900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1800(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewPortrait:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewLandscape:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -371,29 +469,51 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isPhotoButtonPressed:Lcom/android/camera/property/Property;
 
     return-object v0
 .end method
 
-.method static synthetic access$2000(Lcom/android/camera/component/CaptureBar;)V
+.method static synthetic access$2000(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewPortrait:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2100(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewLandscape:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2200(Lcom/android/camera/component/CaptureBar;)V
     .locals 0
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->hideCaptureBar()V
 
     return-void
 .end method
 
-.method static synthetic access$2100(Lcom/android/camera/component/CaptureBar;)Z
+.method static synthetic access$2300(Lcom/android/camera/component/CaptureBar;)Z
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->isSlowMotionMode()Z
 
     move-result v0
@@ -401,95 +521,72 @@
     return v0
 .end method
 
-.method static synthetic access$2200(Lcom/android/camera/component/CaptureBar;Z)V
+.method static synthetic access$2400(Lcom/android/camera/component/CaptureBar;Z)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->showSlowMotionIndicator(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$2300(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
+.method static synthetic access$2500(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsPortrait:[Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
 
-.method static synthetic access$2400(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
+.method static synthetic access$2600(Lcom/android/camera/component/CaptureBar;)[Landroid/graphics/drawable/Drawable;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsLandscape:[Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
 
-.method static synthetic access$2500(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+.method static synthetic access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/camera/component/CaptureBar;Z)V
+.method static synthetic access$2800(Lcom/android/camera/component/CaptureBar;Z)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->showSlowMotionIcon(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+.method static synthetic access$2900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewPortrait:Landroid/widget/TextView;
 
     return-object v0
-.end method
-
-.method static synthetic access$2800(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewLandscape:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2900(Lcom/android/camera/component/CaptureBar;Z)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 49
-    invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->showRecordingTimer(Z)V
-
-    return-void
 .end method
 
 .method static synthetic access$300(Lcom/android/camera/component/CaptureBar;)Lcom/android/camera/property/Property;
@@ -497,19 +594,42 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonPressed:Lcom/android/camera/property/Property;
 
     return-object v0
 .end method
 
-.method static synthetic access$3000(Lcom/android/camera/component/CaptureBar;J)Ljava/lang/String;
+.method static synthetic access$3000(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewLandscape:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$3100(Lcom/android/camera/component/CaptureBar;Z)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 48
+    invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->showRecordingTimer(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$3200(Lcom/android/camera/component/CaptureBar;J)Ljava/lang/String;
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1, p2}, Lcom/android/camera/component/CaptureBar;->getRecordingTimeString(J)Ljava/lang/String;
 
     move-result-object v0
@@ -517,116 +637,91 @@
     return-object v0
 .end method
 
-.method static synthetic access$3100(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
+.method static synthetic access$3300(Lcom/android/camera/component/CaptureBar;)Landroid/widget/TextView;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$3200(Lcom/android/camera/component/CaptureBar;)Lcom/android/camera/rotate/RotateRelativeLayout;
+.method static synthetic access$3400(Lcom/android/camera/component/CaptureBar;)Lcom/android/camera/rotate/RotateRelativeLayout;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$3300(Lcom/android/camera/component/CaptureBar;)Z
+.method static synthetic access$3500(Lcom/android/camera/component/CaptureBar;)Z
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsFakeRotation:Z
 
     return v0
 .end method
 
-.method static synthetic access$3400(Lcom/android/camera/component/CaptureBar;)Z
+.method static synthetic access$3600(Lcom/android/camera/component/CaptureBar;)Z
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsPopupOutsideTouched:Z
 
     return v0
 .end method
 
-.method static synthetic access$3402(Lcom/android/camera/component/CaptureBar;Z)Z
+.method static synthetic access$3602(Lcom/android/camera/component/CaptureBar;Z)Z
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     iput-boolean p1, p0, Lcom/android/camera/component/CaptureBar;->m_IsPopupOutsideTouched:Z
 
     return p1
 .end method
 
-.method static synthetic access$3500(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+.method static synthetic access$3700(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PopupOutsideTouchedView:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$3600(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+.method static synthetic access$3800(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$3700(Lcom/android/camera/component/CaptureBar;)V
+.method static synthetic access$3900(Lcom/android/camera/component/CaptureBar;)V
     .locals 0
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->updateButtonEnableStates()V
-
-    return-void
-.end method
-
-.method static synthetic access$3800(Lcom/android/camera/component/CaptureBar;Z)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 49
-    invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->showSelfTimer(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$3900(Lcom/android/camera/component/CaptureBar;ZZ)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-
-    .prologue
-    .line 49
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/component/CaptureBar;->showSelfTimerIndicator(ZZ)V
 
     return-void
 .end method
@@ -638,40 +733,65 @@
     .parameter "x2"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1, p2}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
 
     return-void
 .end method
 
-.method static synthetic access$4000(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+.method static synthetic access$4000(Lcom/android/camera/component/CaptureBar;Z)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 48
+    invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->showSelfTimer(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$4100(Lcom/android/camera/component/CaptureBar;ZZ)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
+
+    .prologue
+    .line 48
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/component/CaptureBar;->showSelfTimerIndicator(ZZ)V
+
+    return-void
+.end method
+
+.method static synthetic access$4200(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$4100(Lcom/android/camera/component/CaptureBar;)V
+.method static synthetic access$4300(Lcom/android/camera/component/CaptureBar;)V
     .locals 0
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->hideFakeUIRotation()V
 
     return-void
 .end method
 
-.method static synthetic access$4200(Lcom/android/camera/component/CaptureBar;)Z
+.method static synthetic access$4400(Lcom/android/camera/component/CaptureBar;)Z
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsFakeRotationTimeout:Z
 
     return v0
@@ -682,7 +802,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
 
     return-object v0
@@ -693,7 +813,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsTakingPicture:Z
 
     return v0
@@ -705,7 +825,7 @@
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     iput-boolean p1, p0, Lcom/android/camera/component/CaptureBar;->m_IsTakingPicture:Z
 
     return p1
@@ -716,7 +836,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 48
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     return-object v0
@@ -728,7 +848,7 @@
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->onCameraButtonPressed(I)V
 
     return-void
@@ -740,7 +860,7 @@
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 48
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->onCamcorderButtonPressed(I)V
 
     return-void
@@ -757,16 +877,16 @@
 
     const-wide/16 v4, 0x3c
 
-    .line 195
+    .line 207
     div-long v2, p1, v4
 
     rem-long v0, v2, v4
 
-    .line 196
+    .line 208
     .local v0, minutes:J
     rem-long/2addr p1, v4
 
-    .line 197
+    .line 209
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -817,16 +937,16 @@
     .parameter "mv"
 
     .prologue
-    .line 551
+    .line 575
     const/4 v1, 0x0
 
-    .line 553
+    .line 577
     .local v1, view:Landroid/view/View;
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 555
+    .line 579
     .local v0, rect:Landroid/graphics/Rect;
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
@@ -854,25 +974,25 @@
 
     if-eqz v3, :cond_0
 
-    .line 556
+    .line 580
     iget-object v3, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v4, "getTouchedView - m_PhotoCaptureButton"
 
     invoke-static {v3, v4}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 557
+    .line 581
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     move-object v2, v1
 
-    .line 567
+    .line 591
     .end local v1           #view:Landroid/view/View;
     .local v2, view:Landroid/widget/ImageView;
     :goto_0
     return-object v2
 
-    .line 561
+    .line 585
     .end local v2           #view:Landroid/widget/ImageView;
     .restart local v1       #view:Landroid/view/View;
     :cond_0
@@ -902,10 +1022,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 562
+    .line 586
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
-    .line 563
+    .line 587
     iget-object v3, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v4, "getTouchedView - m_VideoCaptureButton"
@@ -914,11 +1034,11 @@
 
     move-object v2, v1
 
-    .line 564
+    .line 588
     .restart local v2       #view:Landroid/widget/ImageView;
     goto :goto_0
 
-    .line 566
+    .line 590
     .end local v2           #view:Landroid/widget/ImageView;
     :cond_1
     iget-object v3, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -929,7 +1049,7 @@
 
     move-object v2, v1
 
-    .line 567
+    .line 591
     .restart local v2       #view:Landroid/widget/ImageView;
     goto :goto_0
 .end method
@@ -940,19 +1060,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 205
+    .line 217
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     invoke-virtual {p0, v0, v2, v2}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
-    .line 206
+    .line 218
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
 
-    .line 207
+    .line 219
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -961,7 +1081,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 208
+    .line 220
     return-void
 .end method
 
@@ -969,12 +1089,12 @@
     .locals 2
 
     .prologue
-    .line 215
+    .line 227
     const/16 v0, 0x2712
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/CaptureBar;->removeMessages(I)V
 
-    .line 216
+    .line 228
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -983,7 +1103,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 217
+    .line 229
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -992,7 +1112,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 218
+    .line 230
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -1001,7 +1121,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 219
+    .line 231
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -1010,17 +1130,17 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 220
+    .line 232
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsFakeRotation:Z
 
-    .line 221
+    .line 233
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsFakeRotationTimeout:Z
 
-    .line 222
+    .line 234
     return-void
 .end method
 
@@ -1028,7 +1148,7 @@
     .locals 2
 
     .prologue
-    .line 362
+    .line 378
     invoke-static {}, Lcom/android/camera/DisplayDevice;->supportFastFrameRecording()Z
 
     move-result v0
@@ -1079,7 +1199,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 396
+    .line 420
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCamcorderButtonPressed("
@@ -1092,12 +1212,12 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 399
+    .line 423
     iget v1, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
     if-eqz v1, :cond_1
 
-    .line 401
+    .line 425
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1122,12 +1242,12 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 435
+    .line 459
     :cond_0
     :goto_0
     return-void
 
-    .line 406
+    .line 430
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonPressed:Lcom/android/camera/property/Property;
 
@@ -1141,7 +1261,7 @@
 
     if-nez v1, :cond_2
 
-    .line 408
+    .line 432
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCamcorderButtonPressed() - Camcorder button is already pressed"
@@ -1150,14 +1270,14 @@
 
     goto :goto_0
 
-    .line 411
+    .line 435
     :cond_2
     iput p1, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
-    .line 414
+    .line 438
     if-ne p1, v5, :cond_3
 
-    .line 416
+    .line 440
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
@@ -1172,7 +1292,7 @@
 
     if-nez v1, :cond_4
 
-    .line 417
+    .line 441
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     const-string v2, "camera_video_btn_pressed"
@@ -1185,14 +1305,14 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 428
+    .line 452
     :cond_3
     :goto_1
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 429
+    .line 453
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->isIdle()Z
 
@@ -1200,24 +1320,24 @@
 
     if-eqz v1, :cond_0
 
-    .line 431
+    .line 455
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCamcorderButtonPressed() - Activate camera"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 432
+    .line 456
     const/4 v1, 0x0
 
     invoke-direct {p0, v1, v5}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
 
-    .line 433
+    .line 457
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->activate()V
 
     goto :goto_0
 
-    .line 420
+    .line 444
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     :cond_4
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
@@ -1230,7 +1350,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 421
+    .line 445
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     const v2, 0x7f02006b
@@ -1239,7 +1359,7 @@
 
     goto :goto_1
 
-    .line 423
+    .line 447
     :cond_5
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
@@ -1257,7 +1377,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 442
+    .line 466
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCamcorderButtonReleased("
@@ -1270,12 +1390,12 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 445
+    .line 469
     iget v1, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
     if-eq v1, p1, :cond_0
 
-    .line 447
+    .line 471
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1300,11 +1420,11 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 474
+    .line 498
     :goto_0
     return-void
 
-    .line 450
+    .line 474
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonPressed:Lcom/android/camera/property/Property;
 
@@ -1320,7 +1440,7 @@
 
     if-nez v1, :cond_1
 
-    .line 452
+    .line 476
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCamcorderButtonReleased() - Camcorder button is not pressed"
@@ -1329,13 +1449,13 @@
 
     goto :goto_0
 
-    .line 457
+    .line 481
     :cond_1
     const/16 v1, 0x2711
 
     invoke-virtual {p0, v1}, Lcom/android/camera/component/CaptureBar;->removeMessages(I)V
 
-    .line 460
+    .line 484
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1344,12 +1464,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 463
+    .line 487
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 464
+    .line 488
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->prepareRecording()Z
 
@@ -1357,10 +1477,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 465
+    .line 489
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->triggerRecord()V
 
-    .line 473
+    .line 497
     :goto_1
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
@@ -1368,7 +1488,7 @@
 
     goto :goto_0
 
-    .line 468
+    .line 492
     :cond_2
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -1376,7 +1496,7 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 469
+    .line 493
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
 
     const/4 v2, 0x0
@@ -1397,7 +1517,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 481
+    .line 505
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCameraButtonPressed("
@@ -1410,12 +1530,12 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 484
+    .line 508
     iget v1, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
     if-eqz v1, :cond_1
 
-    .line 486
+    .line 510
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1440,12 +1560,12 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 518
+    .line 542
     :cond_0
     :goto_0
     return-void
 
-    .line 491
+    .line 515
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->isPhotoButtonPressed:Lcom/android/camera/property/Property;
 
@@ -1459,7 +1579,7 @@
 
     if-nez v1, :cond_2
 
-    .line 493
+    .line 517
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCameraButtonPressed() - Camera button is already pressed"
@@ -1468,18 +1588,18 @@
 
     goto :goto_0
 
-    .line 496
+    .line 520
     :cond_2
     iput p1, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
-    .line 499
+    .line 523
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     const/4 v2, 0x0
 
     invoke-direct {p0, v1, v2}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
 
-    .line 502
+    .line 526
     if-ne p1, v5, :cond_3
 
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -1500,7 +1620,7 @@
 
     if-nez v1, :cond_3
 
-    .line 503
+    .line 527
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     const-string v2, "camera_shutter_btn_pressed"
@@ -1513,13 +1633,13 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 506
+    .line 530
     :cond_3
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 507
+    .line 531
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->isIdle()Z
 
@@ -1527,24 +1647,24 @@
 
     if-eqz v1, :cond_4
 
-    .line 509
+    .line 533
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCameraButtonPressed() - Activate camera"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 510
+    .line 534
     const/4 v1, 0x0
 
     invoke-direct {p0, v1, v5}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
 
-    .line 511
+    .line 535
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->activate()V
 
     goto :goto_0
 
-    .line 516
+    .line 540
     :cond_4
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->takePicture()Z
 
@@ -1552,7 +1672,7 @@
 
     if-nez v1, :cond_0
 
-    .line 517
+    .line 541
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCameraButtonPressed() - Cannot take picture"
@@ -1567,7 +1687,7 @@
     .parameter "buttonType"
 
     .prologue
-    .line 525
+    .line 549
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "onCameraButtonReleased("
@@ -1580,12 +1700,12 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 528
+    .line 552
     iget v0, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
     if-eq v0, p1, :cond_0
 
-    .line 530
+    .line 554
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1610,11 +1730,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 544
+    .line 568
     :goto_0
     return-void
 
-    .line 533
+    .line 557
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isPhotoButtonPressed:Lcom/android/camera/property/Property;
 
@@ -1630,7 +1750,7 @@
 
     if-nez v0, :cond_1
 
-    .line 535
+    .line 559
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "onCameraButtonReleased() - Camera button is not pressed"
@@ -1639,13 +1759,13 @@
 
     goto :goto_0
 
-    .line 540
+    .line 564
     :cond_1
     const/16 v0, 0x2711
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/CaptureBar;->removeMessages(I)V
 
-    .line 543
+    .line 567
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     const/4 v1, 0x1
@@ -1656,136 +1776,297 @@
 .end method
 
 .method private onCameraThreadRunning()V
-    .locals 4
+    .locals 2
 
     .prologue
-    .line 372
+    .line 388
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    .line 373
-    .local v0, cameraThread:Lcom/android/camera/CameraThread;
-    iget-object v1, v0, Lcom/android/camera/CameraThread;->isTakingPicture:Lcom/android/camera/property/Property;
-
-    invoke-virtual {v0}, Lcom/android/camera/CameraThread;->getHandler()Landroid/os/Handler;
-
-    move-result-object v2
-
-    new-instance v3, Lcom/android/camera/component/CaptureBar$4;
-
-    invoke-direct {v3, p0}, Lcom/android/camera/component/CaptureBar$4;-><init>(Lcom/android/camera/component/CaptureBar;)V
-
-    invoke-static {v1, v2, v3}, Lcom/android/camera/property/PropertyUtility;->addChangedCallbackAsync(Lcom/android/camera/property/Property;Landroid/os/Handler;Lcom/android/camera/property/PropertyChangedCallback;)V
-
     .line 389
+    .local v0, cameraThread:Lcom/android/camera/CameraThread;
+    new-instance v1, Lcom/android/camera/component/CaptureBar$4;
+
+    invoke-direct {v1, p0, v0}, Lcom/android/camera/component/CaptureBar$4;-><init>(Lcom/android/camera/component/CaptureBar;Lcom/android/camera/CameraThread;)V
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/CameraThread;->invokeAsync(Ljava/lang/Runnable;)Z
+
+    .line 413
     return-void
 .end method
 
 .method private onKeyDown(Landroid/view/KeyEvent;)Z
-    .locals 2
+    .locals 5
     .parameter "keyEvent"
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    .line 628
+    const/4 v2, 0x1
+
+    .line 652
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
-    move-result v1
+    move-result v3
 
-    packed-switch v1, :pswitch_data_0
+    sparse-switch v3, :sswitch_data_0
 
-    .line 643
+    .line 700
     :cond_0
     :goto_0
-    return v0
+    return v1
 
-    .line 633
-    :pswitch_0
+    .line 657
+    :sswitch_0
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v0
+
+    .line 658
+    .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
+
+    move-result v3
+
+    if-gtz v3, :cond_0
+
+    .line 660
+    iget-boolean v3, p0, Lcom/android/camera/component/CaptureBar;->m_IsTakingPicture:Z
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->isFastShotToShotMode()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 662
+    :cond_1
+    iget-object v3, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
+
+    sget-object v4, Lcom/android/camera/TakingPictureState;->Reviewing:Lcom/android/camera/TakingPictureState;
+
+    invoke-virtual {v3, v4}, Lcom/android/camera/property/Property;->isValueEquals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    iget-object v3, v0, Lcom/android/camera/HTCCamera;->recordingState:Lcom/android/camera/property/Property;
+
+    sget-object v4, Lcom/android/camera/RecordingState;->Reviewing:Lcom/android/camera/RecordingState;
+
+    invoke-virtual {v3, v4}, Lcom/android/camera/property/Property;->isValueEquals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 672
+    const/4 v1, 0x2
+
+    invoke-direct {p0, v1}, Lcom/android/camera/component/CaptureBar;->onCameraButtonPressed(I)V
+
+    move v1, v2
+
+    .line 673
+    goto :goto_0
+
+    .line 678
+    .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
+    :sswitch_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v1
 
-    if-gtz v1, :cond_0
+    const/4 v3, 0x3
 
-    .line 635
-    iget-boolean v1, p0, Lcom/android/camera/component/CaptureBar;->m_IsTakingPicture:Z
+    if-ne v1, v3, :cond_3
 
-    if-eqz v1, :cond_1
+    .line 681
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraThread()Lcom/android/camera/CameraThread;
 
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/android/camera/CameraThread;->isTakingPicture:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v1}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraThread()Lcom/android/camera/CameraThread;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/android/camera/CameraThread;->isRecording:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v1}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 685
+    invoke-static {}, Lcom/android/camera/DisplayDevice;->supportCAF()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 686
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraThread()Lcom/android/camera/CameraThread;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Lcom/android/camera/CameraThread;->setAutoFocusLock(Z)V
+
+    .line 691
+    :goto_1
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraThread()Lcom/android/camera/CameraThread;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Lcom/android/camera/CameraThread;->setAecAwbLock(Z)V
+
+    .line 695
+    :cond_2
+    iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->isFocusKeyPressed:Lcom/android/camera/property/Property;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
+
+    :cond_3
+    move v1, v2
+
+    .line 697
+    goto :goto_0
+
+    .line 688
+    :cond_4
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->isFastShotToShotMode()Z
+    invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->startFocusFromLongPressKey()V
 
-    move-result v1
+    goto :goto_1
 
-    if-eqz v1, :cond_0
-
-    .line 639
-    :cond_1
-    const/4 v0, 0x2
-
-    invoke-direct {p0, v0}, Lcom/android/camera/component/CaptureBar;->onCameraButtonPressed(I)V
-
-    .line 640
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 628
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1b
-        :pswitch_0
-    .end packed-switch
+    .line 652
+    :sswitch_data_0
+    .sparse-switch
+        0x1b -> :sswitch_0
+        0x50 -> :sswitch_1
+    .end sparse-switch
 .end method
 
 .method private onKeyUp(Landroid/view/KeyEvent;)Z
-    .locals 3
+    .locals 6
     .parameter "keyEvent"
 
     .prologue
-    const/4 v2, 0x2
+    const/4 v5, 0x2
 
-    const/4 v0, 0x0
+    const/4 v2, 0x1
 
-    .line 651
+    const/4 v1, 0x0
+
+    .line 708
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
-    move-result v1
+    move-result v3
 
-    packed-switch v1, :pswitch_data_0
+    sparse-switch v3, :sswitch_data_0
 
-    .line 664
+    .line 740
     :cond_0
     :goto_0
-    return v0
+    return v1
 
-    .line 656
-    :pswitch_0
-    iget v1, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
+    .line 713
+    :sswitch_0
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    if-ne v1, v2, :cond_0
+    move-result-object v0
 
-    .line 660
-    invoke-direct {p0, v2}, Lcom/android/camera/component/CaptureBar;->onCameraButtonReleased(I)V
+    .line 714
+    .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
+    iget v3, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
-    .line 661
-    const/4 v0, 0x1
+    if-ne v3, v5, :cond_0
 
+    .line 716
+    iget-object v3, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
+
+    sget-object v4, Lcom/android/camera/TakingPictureState;->Reviewing:Lcom/android/camera/TakingPictureState;
+
+    invoke-virtual {v3, v4}, Lcom/android/camera/property/Property;->isValueEquals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    iget-object v3, v0, Lcom/android/camera/HTCCamera;->recordingState:Lcom/android/camera/property/Property;
+
+    sget-object v4, Lcom/android/camera/RecordingState;->Reviewing:Lcom/android/camera/RecordingState;
+
+    invoke-virtual {v3, v4}, Lcom/android/camera/property/Property;->isValueEquals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 726
+    invoke-direct {p0, v5}, Lcom/android/camera/component/CaptureBar;->onCameraButtonReleased(I)V
+
+    move v1, v2
+
+    .line 727
     goto :goto_0
 
-    .line 651
-    nop
+    .line 733
+    .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
+    :sswitch_1
+    iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->isFocusKeyPressed:Lcom/android/camera/property/Property;
 
-    :pswitch_data_0
-    .packed-switch 0x1b
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
+
+    .line 736
+    invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->unlockAfAecAwb()V
+
+    move v1, v2
+
+    .line 737
+    goto :goto_0
+
+    .line 708
+    :sswitch_data_0
+    .sparse-switch
+        0x1b -> :sswitch_0
+        0x50 -> :sswitch_1
+    .end sparse-switch
 .end method
 
 .method private onPopMenuOutsideTouched(Landroid/view/MotionEvent;)Z
@@ -1797,26 +2078,26 @@
 
     const/4 v1, 0x1
 
-    .line 577
+    .line 601
     iput-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsPopupOutsideTouched:Z
 
-    .line 580
+    .line 604
     invoke-direct {p0, p1}, Lcom/android/camera/component/CaptureBar;->getTouchedView(Landroid/view/MotionEvent;)Landroid/view/View;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_PopupOutsideTouchedView:Landroid/view/View;
 
-    .line 582
+    .line 606
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_PopupOutsideTouchedView:Landroid/view/View;
 
     if-nez v2, :cond_0
 
-    .line 620
+    .line 644
     :goto_0
     return v0
 
-    .line 586
+    .line 610
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1828,10 +2109,10 @@
     :pswitch_0
     move v0, v1
 
-    .line 620
+    .line 644
     goto :goto_0
 
-    .line 591
+    .line 615
     :pswitch_1
     iget-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsTakingPicture:Z
 
@@ -1849,16 +2130,16 @@
 
     move v0, v1
 
-    .line 592
+    .line 616
     goto :goto_0
 
-    .line 602
+    .line 626
     :cond_1
     iput-boolean v1, p0, Lcom/android/camera/component/CaptureBar;->m_IsPopupOutsideTouched:Z
 
     goto :goto_1
 
-    .line 586
+    .line 610
     nop
 
     :pswitch_data_0
@@ -1875,20 +2156,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 672
+    .line 748
     iput-boolean v2, p0, Lcom/android/camera/component/CaptureBar;->m_IsTakingPicture:Z
 
-    .line 673
+    .line 749
     iput v2, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
-    .line 674
+    .line 750
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
 
-    .line 675
+    .line 751
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1897,7 +2178,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 676
+    .line 752
     return-void
 .end method
 
@@ -1909,7 +2190,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 683
+    .line 759
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "resetCaptureButton("
@@ -1922,7 +2203,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 686
+    .line 762
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
@@ -1948,14 +2229,14 @@
 
     if-nez v0, :cond_1
 
-    .line 687
+    .line 763
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     const v1, 0x7f020071
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 688
+    .line 764
     :cond_1
     if-eqz p1, :cond_2
 
@@ -1963,7 +2244,7 @@
 
     if-ne p1, v0, :cond_4
 
-    .line 690
+    .line 766
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -2015,7 +2296,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 693
+    .line 769
     :cond_3
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
@@ -2023,15 +2304,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 704
+    .line 780
     :cond_4
     :goto_0
     if-eqz p2, :cond_5
 
-    .line 706
+    .line 782
     iput v4, p0, Lcom/android/camera/component/CaptureBar;->m_ActiveCaptureButtonType:I
 
-    .line 707
+    .line 783
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isPhotoButtonPressed:Lcom/android/camera/property/Property;
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2040,7 +2321,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 708
+    .line 784
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonPressed:Lcom/android/camera/property/Property;
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2049,14 +2330,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 711
+    .line 787
     :cond_5
     iput-boolean v4, p0, Lcom/android/camera/component/CaptureBar;->m_IsPopupOutsideTouched:Z
 
-    .line 712
+    .line 788
     return-void
 
-    .line 696
+    .line 772
     :cond_6
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
@@ -2068,7 +2349,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 697
+    .line 773
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     const v1, 0x7f02006b
@@ -2077,7 +2358,7 @@
 
     goto :goto_0
 
-    .line 699
+    .line 775
     :cond_7
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
@@ -2092,12 +2373,12 @@
     .locals 3
 
     .prologue
-    .line 719
+    .line 795
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 720
+    .line 796
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->deactivatedEvent:Lcom/android/camera/event/Event;
 
@@ -2107,7 +2388,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 728
+    .line 809
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->keyDownEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$6;
@@ -2116,7 +2397,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 737
+    .line 818
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->keyUpEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$7;
@@ -2125,7 +2406,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 746
+    .line 827
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->popupOutsideTouchEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$8;
@@ -2134,7 +2415,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 755
+    .line 836
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->resumingEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$9;
@@ -2143,7 +2424,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 763
+    .line 844
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->selfTimerCountDownEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$10;
@@ -2152,7 +2433,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 776
+    .line 857
     return-void
 .end method
 
@@ -2162,12 +2443,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 784
+    .line 865
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 787
+    .line 868
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
@@ -2181,7 +2462,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 797
+    .line 878
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->cameraMode:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$12;
@@ -2190,7 +2471,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 807
+    .line 893
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->cameraType:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$13;
@@ -2199,7 +2480,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 817
+    .line 908
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->elapsedRecordingSeconds:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$14;
@@ -2208,7 +2489,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 898
+    .line 989
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$15;
@@ -2223,7 +2504,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 909
+    .line 1004
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$16;
@@ -2238,7 +2519,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 920
+    .line 1015
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$17;
@@ -2255,7 +2536,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 944
+    .line 1039
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isCaptureUIOpen:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$18;
@@ -2264,7 +2545,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 987
+    .line 1082
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isSelfTimerStarted:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$19;
@@ -2273,7 +2554,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 997
+    .line 1092
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getSettings()Lcom/android/camera/CameraSettings;
 
     move-result-object v1
@@ -2286,7 +2567,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1010
+    .line 1105
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->recordingState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$21;
@@ -2295,7 +2576,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1038
+    .line 1133
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->rotation:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$22;
@@ -2304,7 +2585,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1078
+    .line 1173
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->selfTimerValue:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$23;
@@ -2313,7 +2594,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1094
+    .line 1189
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$24;
@@ -2322,7 +2603,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1138
+    .line 1233
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isMirrorMode:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/CaptureBar$25;
@@ -2331,7 +2612,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 1148
+    .line 1243
     return-void
 .end method
 
@@ -2339,32 +2620,32 @@
     .locals 2
 
     .prologue
-    .line 1155
+    .line 1250
     const/16 v0, 0x2712
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/CaptureBar;->removeMessages(I)V
 
-    .line 1156
+    .line 1251
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 1157
+    .line 1252
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 1158
+    .line 1253
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 1159
+    .line 1254
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 1160
+    .line 1255
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -2373,7 +2654,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1161
+    .line 1256
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -2382,7 +2663,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1162
+    .line 1257
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -2391,7 +2672,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1163
+    .line 1258
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
 
     check-cast v0, Lcom/android/camera/rotate/RotateImageView;
@@ -2400,17 +2681,17 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1164
+    .line 1259
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsFakeRotation:Z
 
-    .line 1165
+    .line 1260
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/component/CaptureBar;->m_IsFakeRotationTimeout:Z
 
-    .line 1166
+    .line 1261
     return-void
 .end method
 
@@ -2429,38 +2710,38 @@
 
     const/4 v5, 0x0
 
-    .line 1174
+    .line 1269
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     if-nez v3, :cond_0
 
-    .line 1232
+    .line 1335
     :goto_0
     return-void
 
-    .line 1178
+    .line 1273
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1180
+    .line 1275
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {p0, v3, v5, v5}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1181
+    .line 1276
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {p0, v3, v5, v5}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
 
-    .line 1186
+    .line 1281
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v2
 
-    .line 1187
+    .line 1282
     .local v2, rotation:Lcom/android/camera/rotate/UIRotation;
     invoke-virtual {v2}, Lcom/android/camera/rotate/UIRotation;->isPortrait()Z
 
@@ -2468,7 +2749,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 1189
+    .line 1284
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {v3, v9}, Lcom/android/camera/rotate/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
@@ -2477,7 +2758,7 @@
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1190
+    .line 1285
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v4, 0x7f080038
@@ -2488,17 +2769,17 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1191
+    .line 1286
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewPortrait:Landroid/widget/TextView;
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1192
+    .line 1287
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewLandscape:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1193
+    .line 1288
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerEmptyArea:Landroid/view/View;
 
     const v4, 0x7f0b0023
@@ -2509,36 +2790,42 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/ViewUtil;->setHeight(Landroid/view/View;I)V
 
-    .line 1209
+    .line 1304
     :goto_1
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {v3, v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1212
+    .line 1307
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 1213
+    .line 1308
     .local v0, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v2}, Lcom/android/camera/rotate/UIRotation;->isPortrait()Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
-    .line 1215
-    const/16 v3, 0xc
+    .line 1310
+    sget-object v3, Lcom/android/camera/rotate/UIRotation;->InversePortrait:Lcom/android/camera/rotate/UIRotation;
+
+    if-ne v2, v3, :cond_4
+
+    .line 1311
+    const/16 v3, 0xa
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1216
+    .line 1315
+    :goto_2
     const/16 v3, 0xe
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1217
+    .line 1316
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
 
     const v4, 0x7f0b0025
@@ -2551,30 +2838,30 @@
 
     invoke-virtual {v3, v5, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 1218
+    .line 1317
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3, v5, v5, v5, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 1227
-    :goto_2
+    .line 1330
+    :goto_3
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1228
+    .line 1331
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {v3, v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1231
+    .line 1334
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {p0, v3, v8, v8}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 1197
+    .line 1292
     .end local v0           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     :cond_2
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
@@ -2587,7 +2874,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 1198
+    .line 1293
     .local v1, recTextView:Landroid/widget/TextView;
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
@@ -2597,20 +2884,20 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1199
+    .line 1294
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1200
+    .line 1295
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewPortrait:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1201
+    .line 1296
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewLandscape:Landroid/widget/TextView;
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1202
+    .line 1297
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerEmptyArea:Landroid/view/View;
 
     const v4, 0x7f0b0024
@@ -2621,19 +2908,19 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/ViewUtil;->setHeight(Landroid/view/View;I)V
 
-    .line 1204
+    .line 1299
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->isSlowMotionMode()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 1205
+    .line 1300
     invoke-virtual {v1, v5, v5, v5, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
     goto :goto_1
 
-    .line 1207
+    .line 1302
     :cond_3
     const v3, 0x7f0b0022
 
@@ -2643,22 +2930,36 @@
 
     invoke-virtual {v1, v5, v5, v3, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 1222
+    .line 1313
     .end local v1           #recTextView:Landroid/widget/TextView;
     .restart local v0       #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     :cond_4
-    const/16 v3, 0xb
+    const/16 v3, 0xc
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1223
+    goto :goto_2
+
+    .line 1321
+    :cond_5
+    sget-object v3, Lcom/android/camera/rotate/UIRotation;->InverseLandscape:Lcom/android/camera/rotate/UIRotation;
+
+    if-ne v2, v3, :cond_6
+
+    .line 1322
+    const/16 v3, 0x9
+
+    invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 1326
+    :goto_4
     const/16 v3, 0xf
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1224
+    .line 1327
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
 
     const v4, 0x7f0b0026
@@ -2671,7 +2972,7 @@
 
     invoke-virtual {v3, v5, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 1225
+    .line 1328
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
 
     const v4, 0x7f0b0029
@@ -2682,7 +2983,15 @@
 
     invoke-virtual {v3, v5, v5, v4, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    goto :goto_2
+    goto/16 :goto_3
+
+    .line 1324
+    :cond_6
+    const/16 v3, 0xb
+
+    invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    goto :goto_4
 .end method
 
 .method private showSelfTimer(Z)V
@@ -2700,46 +3009,46 @@
 
     const/4 v4, 0x0
 
-    .line 1240
+    .line 1343
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     if-nez v2, :cond_0
 
-    .line 1286
+    .line 1389
     :goto_0
     return-void
 
-    .line 1244
+    .line 1347
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1246
+    .line 1349
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     const v3, 0x7f020071
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1247
+    .line 1350
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {p0, v2, v4, v4}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
 
-    .line 1252
+    .line 1355
     :cond_1
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 1253
+    .line 1356
     .local v0, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v1
 
-    .line 1254
+    .line 1357
     .local v1, rotation:Lcom/android/camera/rotate/UIRotation;
     invoke-virtual {v1}, Lcom/android/camera/rotate/UIRotation;->isPortrait()Z
 
@@ -2747,7 +3056,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 1256
+    .line 1359
     const v2, 0x7f0b002a
 
     invoke-virtual {p0, v2}, Lcom/android/camera/component/CaptureBar;->getDimension(I)I
@@ -2756,27 +3065,27 @@
 
     iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 1257
+    .line 1360
     const/16 v2, 0xa
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1258
+    .line 1361
     const/16 v2, 0xe
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1259
+    .line 1362
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewPortrait:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1260
+    .line 1363
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewLandscape:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1268
+    .line 1371
     :goto_1
     sget-object v3, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$SelfTimerValue:[I
 
@@ -2800,53 +3109,53 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1277
+    .line 1380
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1280
+    .line 1383
     :goto_2
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1281
+    .line 1384
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1284
+    .line 1387
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1285
+    .line 1388
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {p0, v2, v5, v5}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
 
-    .line 1264
+    .line 1367
     :cond_2
     const/16 v2, 0xd
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 1265
+    .line 1368
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewPortrait:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1266
+    .line 1369
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewLandscape:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 1271
+    .line 1374
     :pswitch_0
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIcon:Landroid/widget/ImageView;
 
@@ -2856,7 +3165,7 @@
 
     goto :goto_2
 
-    .line 1274
+    .line 1377
     :pswitch_1
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIcon:Landroid/widget/ImageView;
 
@@ -2866,7 +3175,7 @@
 
     goto :goto_2
 
-    .line 1268
+    .line 1371
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2884,31 +3193,31 @@
 
     const/4 v3, 0x1
 
-    .line 1294
+    .line 1397
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicatorContainer:Landroid/view/View;
 
     if-nez v1, :cond_0
 
-    .line 1322
+    .line 1425
     :goto_0
     return-void
 
-    .line 1298
+    .line 1401
     :cond_0
     if-nez p2, :cond_1
 
-    .line 1300
+    .line 1403
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v1, v4, v3}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
 
-    .line 1305
+    .line 1408
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 1307
+    .line 1410
     sget-object v2, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$SelfTimerValue:[I
 
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -2931,27 +3240,27 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1319
+    .line 1422
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v0
 
-    .line 1320
+    .line 1423
     .local v0, rotation:Lcom/android/camera/rotate/UIRotation;
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v1, v0, v0, v4}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;I)V
 
-    .line 1321
+    .line 1424
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v1, v3, v3}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
 
-    .line 1310
+    .line 1413
     .end local v0           #rotation:Lcom/android/camera/rotate/UIRotation;
     :pswitch_0
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
@@ -2962,7 +3271,7 @@
 
     goto :goto_1
 
-    .line 1313
+    .line 1416
     :pswitch_1
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
 
@@ -2972,7 +3281,7 @@
 
     goto :goto_1
 
-    .line 1307
+    .line 1410
     nop
 
     :pswitch_data_0
@@ -2987,20 +3296,20 @@
     .parameter "isVisible"
 
     .prologue
-    .line 1330
+    .line 1433
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIcon:Lcom/android/camera/rotate/RotateImageView;
 
     if-nez v1, :cond_0
 
-    .line 1350
+    .line 1453
     :goto_0
     return-void
 
-    .line 1334
+    .line 1437
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1336
+    .line 1439
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIcon:Lcom/android/camera/rotate/RotateImageView;
 
     const/16 v2, 0x8
@@ -3009,19 +3318,19 @@
 
     goto :goto_0
 
-    .line 1341
+    .line 1444
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v0
 
-    .line 1348
+    .line 1451
     .local v0, rotation:Lcom/android/camera/rotate/UIRotation;
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIcon:Lcom/android/camera/rotate/RotateImageView;
 
     invoke-virtual {v1, v0}, Lcom/android/camera/rotate/RotateImageView;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1349
+    .line 1452
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIcon:Lcom/android/camera/rotate/RotateImageView;
 
     const/4 v2, 0x0
@@ -3040,44 +3349,74 @@
 
     const/4 v2, 0x1
 
-    .line 1358
+    .line 1461
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicatorContainer:Landroid/view/View;
 
     if-nez v1, :cond_0
 
-    .line 1374
+    .line 1477
     :goto_0
     return-void
 
-    .line 1362
+    .line 1465
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1364
+    .line 1467
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v1, v3, v2}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
 
-    .line 1369
+    .line 1472
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getRotation()Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v0
 
-    .line 1370
+    .line 1473
     .local v0, rotation:Lcom/android/camera/rotate/UIRotation;
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
 
     invoke-virtual {p0, v1, v0, v0, v3}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;I)V
 
-    .line 1373
+    .line 1476
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicatorContainer:Landroid/view/View;
 
     invoke-virtual {p0, v1, v2, v2}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
     goto :goto_0
+.end method
+
+.method private unlockAfAecAwb()V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 1485
+    invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraThread()Lcom/android/camera/CameraThread;
+
+    move-result-object v0
+
+    .line 1486
+    .local v0, cameraThread:Lcom/android/camera/CameraThread;
+    invoke-static {}, Lcom/android/camera/DisplayDevice;->supportCAF()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 1487
+    invoke-virtual {v0, v2}, Lcom/android/camera/CameraThread;->setAutoFocusLock(Z)V
+
+    .line 1490
+    :cond_0
+    invoke-virtual {v0, v2}, Lcom/android/camera/CameraThread;->setAecAwbLock(Z)V
+
+    .line 1491
+    return-void
 .end method
 
 .method private updateButtonEnableStates()V
@@ -3088,16 +3427,16 @@
 
     const/16 v6, 0x80
 
-    .line 1382
+    .line 1499
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 1383
+    .line 1500
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     const/4 v1, 0x1
 
-    .line 1384
+    .line 1501
     .local v1, isPhotoButtonEnabled:Z
     sget-object v7, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$TakingPictureState:[I
 
@@ -3117,10 +3456,10 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 1416
+    .line 1533
     const/4 v1, 0x0
 
-    .line 1421
+    .line 1538
     :cond_0
     :goto_0
     :pswitch_0
@@ -3128,7 +3467,7 @@
 
     invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 1422
+    .line 1539
     iget-object v7, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_3
@@ -3138,10 +3477,10 @@
     :goto_1
     invoke-virtual {v7, v4}, Landroid/widget/ImageView;->setAlpha(I)V
 
-    .line 1425
+    .line 1542
     const/4 v2, 0x1
 
-    .line 1426
+    .line 1543
     .local v2, isVideoButtonEnabled:Z
     sget-object v7, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$RecordingState:[I
 
@@ -3161,11 +3500,11 @@
 
     packed-switch v4, :pswitch_data_1
 
-    .line 1450
+    .line 1567
     :pswitch_1
     const/4 v2, 0x0
 
-    .line 1455
+    .line 1572
     :cond_1
     :goto_2
     :pswitch_2
@@ -3173,7 +3512,7 @@
 
     invoke-virtual {v4, v2}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 1456
+    .line 1573
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     if-eqz v2, :cond_4
@@ -3181,10 +3520,10 @@
     :goto_3
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setAlpha(I)V
 
-    .line 1457
+    .line 1574
     return-void
 
-    .line 1389
+    .line 1506
     .end local v2           #isVideoButtonEnabled:Z
     :pswitch_3
     sget-object v7, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$RecordingState:[I
@@ -3205,13 +3544,13 @@
 
     packed-switch v4, :pswitch_data_2
 
-    .line 1406
+    .line 1523
     :pswitch_4
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1394
+    .line 1511
     :pswitch_5
     invoke-static {}, Lcom/android/camera/MovieModeHandler;->getMovieModeHandler()Lcom/android/camera/MovieModeHandler;
 
@@ -3229,7 +3568,7 @@
 
     move-result-object v3
 
-    .line 1395
+    .line 1512
     .local v3, videoResolution:Lcom/android/camera/Resolution;
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraType()Lcom/android/camera/CameraType;
 
@@ -3279,7 +3618,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1402
+    .line 1519
     :cond_2
     const/4 v1, 0x0
 
@@ -3289,10 +3628,10 @@
     :cond_3
     move v4, v6
 
-    .line 1422
+    .line 1539
     goto :goto_1
 
-    .line 1429
+    .line 1546
     .restart local v2       #isVideoButtonEnabled:Z
     :pswitch_6
     iget-object v4, v0, Lcom/android/camera/HTCCamera;->takingPictureState:Lcom/android/camera/property/Property;
@@ -3305,12 +3644,12 @@
 
     if-nez v4, :cond_1
 
-    .line 1430
+    .line 1547
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 1437
+    .line 1554
     :pswitch_7
     sget-object v7, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$TakingPictureState:[I
 
@@ -3330,13 +3669,13 @@
 
     packed-switch v4, :pswitch_data_3
 
-    .line 1444
+    .line 1561
     const/4 v2, 0x0
 
-    .line 1445
+    .line 1562
     goto/16 :goto_2
 
-    .line 1440
+    .line 1557
     :pswitch_8
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->isInMirrorMode()Z
 
@@ -3344,7 +3683,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 1441
+    .line 1558
     const/4 v2, 0x0
 
     goto/16 :goto_2
@@ -3352,10 +3691,10 @@
     :cond_4
     move v5, v6
 
-    .line 1456
+    .line 1573
     goto/16 :goto_3
 
-    .line 1384
+    .line 1501
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3364,7 +3703,7 @@
         :pswitch_0
     .end packed-switch
 
-    .line 1426
+    .line 1543
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_7
@@ -3374,7 +3713,7 @@
         :pswitch_6
     .end packed-switch
 
-    .line 1389
+    .line 1506
     :pswitch_data_2
     .packed-switch 0x1
         :pswitch_0
@@ -3383,7 +3722,7 @@
         :pswitch_5
     .end packed-switch
 
-    .line 1437
+    .line 1554
     :pswitch_data_3
     .packed-switch 0x2
         :pswitch_8
@@ -3396,13 +3735,13 @@
     .locals 0
 
     .prologue
-    .line 184
+    .line 196
     invoke-static {p0}, Lcom/android/camera/property/Property;->destroyAllProperties(Ljava/lang/Object;)V
 
-    .line 187
+    .line 199
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->deinitializeOverride()V
 
-    .line 188
+    .line 200
     return-void
 .end method
 
@@ -3413,28 +3752,28 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 148
+    .line 160
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 172
+    .line 184
     invoke-super {p0, p1}, Lcom/android/camera/component/UIComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 175
+    .line 187
     :goto_0
     return-void
 
-    .line 166
+    .line 178
     :pswitch_0
     invoke-direct {p0, v1}, Lcom/android/camera/component/CaptureBar;->onCameraButtonReleased(I)V
 
-    .line 167
+    .line 179
     invoke-direct {p0, v1}, Lcom/android/camera/component/CaptureBar;->onCamcorderButtonReleased(I)V
 
     goto :goto_0
 
-    .line 148
+    .line 160
     nop
 
     :pswitch_data_0
@@ -3455,39 +3794,42 @@
 
     const/4 v8, 0x0
 
-    .line 231
+    .line 243
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->initializeOverride()V
 
-    .line 234
+    .line 246
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 235
+    .line 247
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
+    iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->isFocusKeyPressed:Lcom/android/camera/property/Property;
+
+    iget-object v7, v0, Lcom/android/camera/HTCCamera;->isFocusKeyPressed:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v0, v6, v7}, Lcom/android/camera/HTCCamera;->bindProperties(Lcom/android/camera/property/Property;Lcom/android/camera/property/Property;)V
+
+    .line 248
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->isPhotoButtonPressed:Lcom/android/camera/property/Property;
 
     iget-object v7, v0, Lcom/android/camera/HTCCamera;->isPhotoCaptureButtonPressed:Lcom/android/camera/property/Property;
 
     invoke-virtual {v0, v6, v7}, Lcom/android/camera/HTCCamera;->bindProperties(Lcom/android/camera/property/Property;Lcom/android/camera/property/Property;)V
 
-    .line 236
+    .line 249
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->isVideoButtonPressed:Lcom/android/camera/property/Property;
 
     iget-object v7, v0, Lcom/android/camera/HTCCamera;->isVideoCaptureButtonPressed:Lcom/android/camera/property/Property;
 
     invoke-virtual {v0, v6, v7}, Lcom/android/camera/HTCCamera;->bindProperties(Lcom/android/camera/property/Property;Lcom/android/camera/property/Property;)V
 
-    .line 239
-    const v6, 0x7f08002e
+    .line 252
+    iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v6}, Lcom/android/camera/HTCCamera;->findViewById(I)Landroid/view/View;
+    if-nez v6, :cond_0
 
-    move-result-object v6
-
-    iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
-
-    .line 240
+    .line 253
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f08003d
@@ -3500,7 +3842,13 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
-    .line 241
+    .line 254
+    :cond_0
+    iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
+
+    if-nez v6, :cond_1
+
+    .line 255
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f080032
@@ -3513,7 +3861,8 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
-    .line 242
+    .line 256
+    :cond_1
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f080034
@@ -3524,7 +3873,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicatorContainer:Landroid/view/View;
 
-    .line 243
+    .line 257
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicatorContainer:Landroid/view/View;
 
     const v7, 0x7f080035
@@ -3535,7 +3884,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
 
-    .line 245
+    .line 259
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f080036
@@ -3548,7 +3897,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    .line 246
+    .line 260
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v7, 0x7f08003a
@@ -3561,7 +3910,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewPortrait:Landroid/widget/TextView;
 
-    .line 247
+    .line 261
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v7, 0x7f08003b
@@ -3574,7 +3923,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerTextViewLandscape:Landroid/widget/TextView;
 
-    .line 248
+    .line 262
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v7, 0x7f080039
@@ -3585,7 +3934,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingTimerEmptyArea:Landroid/view/View;
 
-    .line 249
+    .line 263
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f080044
@@ -3598,7 +3947,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    .line 250
+    .line 264
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v7, 0x7f080045
@@ -3611,7 +3960,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingHourTextView:Landroid/widget/TextView;
 
-    .line 251
+    .line 265
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f08003e
@@ -3622,7 +3971,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicatorContainer:Landroid/view/View;
 
-    .line 252
+    .line 266
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicatorContainer:Landroid/view/View;
 
     const v7, 0x7f08003f
@@ -3635,7 +3984,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
 
-    .line 253
+    .line 267
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f080040
@@ -3648,7 +3997,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    .line 254
+    .line 268
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v7, 0x7f080041
@@ -3661,7 +4010,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerIcon:Landroid/widget/ImageView;
 
-    .line 255
+    .line 269
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v7, 0x7f080042
@@ -3674,7 +4023,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewPortrait:Landroid/widget/TextView;
 
-    .line 256
+    .line 270
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const v7, 0x7f080043
@@ -3687,7 +4036,7 @@
 
     iput-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_SelfTimerTextViewLandscape:Landroid/widget/TextView;
 
-    .line 259
+    .line 273
     invoke-virtual {p0}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v6
@@ -3696,7 +4045,7 @@
 
     move-result-object v3
 
-    .line 260
+    .line 274
     .local v3, res:Landroid/content/res/Resources;
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsLandscape:[Landroid/graphics/drawable/Drawable;
 
@@ -3708,7 +4057,7 @@
 
     aput-object v7, v6, v8
 
-    .line 261
+    .line 275
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsLandscape:[Landroid/graphics/drawable/Drawable;
 
     const v7, 0x7f02006b
@@ -3719,7 +4068,7 @@
 
     aput-object v7, v6, v9
 
-    .line 262
+    .line 276
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsPortrait:[Landroid/graphics/drawable/Drawable;
 
     const v7, 0x7f02006e
@@ -3730,7 +4079,7 @@
 
     aput-object v7, v6, v8
 
-    .line 263
+    .line 277
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_RecordingButtonIconsPortrait:[Landroid/graphics/drawable/Drawable;
 
     const v7, 0x7f02006c
@@ -3741,41 +4090,41 @@
 
     aput-object v7, v6, v9
 
-    .line 266
+    .line 280
     const/4 v6, 0x0
 
     invoke-direct {p0, v6, v8}, Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
 
-    .line 269
+    .line 283
     new-instance v2, Lcom/android/camera/component/CaptureBar$3;
 
     invoke-direct {v2, p0}, Lcom/android/camera/component/CaptureBar$3;-><init>(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 320
+    .line 336
     .local v2, listener:Landroid/view/View$OnTouchListener;
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
 
     invoke-virtual {v6, v2}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 321
+    .line 337
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
 
     invoke-virtual {v6, v2}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 324
+    .line 340
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->getStartMode()Lcom/android/camera/CameraStartMode;
 
     move-result-object v4
 
-    .line 325
+    .line 341
     .local v4, startMode:Lcom/android/camera/CameraStartMode;
     invoke-virtual {v4}, Lcom/android/camera/CameraStartMode;->supportsAllCameraModes()Z
 
     move-result v6
 
-    if-nez v6, :cond_0
+    if-nez v6, :cond_2
 
-    .line 328
+    .line 344
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     const v7, 0x7f080030
@@ -3790,19 +4139,19 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 332
+    .line 348
     iget-boolean v6, v4, Lcom/android/camera/CameraStartMode;->supportsPhotoMode:Z
 
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_3
 
-    .line 334
+    .line 350
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     invoke-virtual {v6, v11}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 335
+    .line 351
     .local v5, visibleView:Landroid/view/View;
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
@@ -3810,14 +4159,14 @@
 
     move-result-object v1
 
-    .line 342
+    .line 358
     .local v1, hiddenView:Landroid/view/View;
     :goto_0
     const/16 v6, 0x8
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 343
+    .line 359
     const v6, 0x7f0b0017
 
     invoke-virtual {p0, v6}, Lcom/android/camera/component/CaptureBar;->getDimension(I)I
@@ -3826,33 +4175,33 @@
 
     invoke-static {v5, v6}, Lcom/android/camera/ViewUtil;->setWidth(Landroid/view/View;I)V
 
-    .line 347
+    .line 363
     .end local v1           #hiddenView:Landroid/view/View;
     .end local v5           #visibleView:Landroid/view/View;
-    :cond_0
+    :cond_2
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->setupEventHandlers()V
 
-    .line 348
+    .line 364
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->setupPropertyChangedCallbacks()V
 
-    .line 351
+    .line 367
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->updateButtonEnableStates()V
 
-    .line 354
+    .line 370
     invoke-direct {p0}, Lcom/android/camera/component/CaptureBar;->showFakeUIRotation()V
 
-    .line 355
+    .line 371
     return-void
 
-    .line 339
-    :cond_1
+    .line 355
+    :cond_3
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 
     invoke-virtual {v6, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 340
+    .line 356
     .restart local v5       #visibleView:Landroid/view/View;
     iget-object v6, p0, Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
 

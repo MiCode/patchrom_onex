@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1665
+    .line 1666
     iput-object p1, p0, Lcom/htc/widget/FastScroller$CheckForTap$7;->this$1:Lcom/htc/widget/FastScroller$CheckForTap;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1676
+    .line 1677
     iget-object v0, p0, Lcom/htc/widget/FastScroller$CheckForTap$7;->this$1:Lcom/htc/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/widget/CarouselTextView;
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1677
+    .line 1678
     iget-object v0, p0, Lcom/htc/widget/FastScroller$CheckForTap$7;->this$1:Lcom/htc/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/widget/CarouselTextView;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/CarouselTextView;->enableClickMultiply(Z)V
 
-    .line 1679
+    .line 1680
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/FastScroller$CheckForTap$7;->this$1:Lcom/htc/widget/FastScroller$CheckForTap;
 
@@ -73,7 +73,7 @@
     #setter for: Lcom/htc/widget/FastScroller;->isScaleAnimation:Z
     invoke-static {v0, v1}, Lcom/htc/widget/FastScroller;->access$1202(Lcom/htc/widget/FastScroller;Z)Z
 
-    .line 1680
+    .line 1681
     iget-object v0, p0, Lcom/htc/widget/FastScroller$CheckForTap$7;->this$1:Lcom/htc/widget/FastScroller$CheckForTap;
 
     iget-object v0, v0, Lcom/htc/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/widget/FastScroller;
@@ -85,7 +85,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1682
+    .line 1683
     iget-object v0, p0, Lcom/htc/widget/FastScroller$CheckForTap$7;->this$1:Lcom/htc/widget/FastScroller$CheckForTap;
 
     iget-object v0, v0, Lcom/htc/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/widget/FastScroller;
@@ -94,7 +94,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/FastScroller;->setState(I)V
 
-    .line 1683
+    .line 1684
     iget-object v0, p0, Lcom/htc/widget/FastScroller$CheckForTap$7;->this$1:Lcom/htc/widget/FastScroller$CheckForTap;
 
     iget-object v0, v0, Lcom/htc/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/widget/FastScroller;
@@ -136,7 +136,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/widget/FastScroller$FlingRunnable;->startUsingDistance(III)V
 
-    .line 1685
+    .line 1686
     :cond_1
     return-void
 .end method
@@ -146,7 +146,7 @@
     .parameter "anim"
 
     .prologue
-    .line 1670
+    .line 1671
     return-void
 .end method
 
@@ -155,6 +155,6 @@
     .parameter "anim"
 
     .prologue
-    .line 1667
+    .line 1668
     return-void
 .end method

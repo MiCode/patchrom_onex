@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoCallback;
+.implements Lcom/android/internal/policy/impl/HtcIfInfoPlusCallback;
 
 
 # annotations

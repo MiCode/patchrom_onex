@@ -67,7 +67,7 @@
     .locals 3
 
     .prologue
-    .line 946
+    .line 1041
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -98,17 +98,17 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$MyContactCard;->MY_CONTACT_CARD_PROJECTION:[Ljava/lang/String;
 
-    .line 955
+    .line 1052
     const-string/jumbo v0, "type"
 
     sput-object v0, Landroid/provider/HtcUnionContact$MyContactCard;->COLUMN_TYPE:Ljava/lang/String;
 
-    .line 956
+    .line 1054
     const-string/jumbo v0, "subtype"
 
     sput-object v0, Landroid/provider/HtcUnionContact$MyContactCard;->COLUMN_SUBTYPE:Ljava/lang/String;
 
-    .line 957
+    .line 1056
     const-string v0, "data"
 
     sput-object v0, Landroid/provider/HtcUnionContact$MyContactCard;->COLUMN_DATA:Ljava/lang/String;
@@ -120,7 +120,7 @@
     .locals 0
 
     .prologue
-    .line 941
+    .line 1035
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

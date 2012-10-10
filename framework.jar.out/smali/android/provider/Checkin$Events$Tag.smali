@@ -158,7 +158,7 @@
 
     const/4 v3, 0x0
 
-    .line 60
+    .line 66
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "APANIC_CONSOLE"
@@ -167,7 +167,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->APANIC_CONSOLE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 61
+    .line 67
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "APANIC_THREADS"
@@ -176,7 +176,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->APANIC_THREADS:Landroid/provider/Checkin$Events$Tag;
 
-    .line 62
+    .line 68
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_FAILURE"
@@ -185,7 +185,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_FAILURE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 63
+    .line 69
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_SEQUENCE_BEGIN"
@@ -194,7 +194,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_SEQUENCE_BEGIN:Landroid/provider/Checkin$Events$Tag;
 
-    .line 64
+    .line 70
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_SUITE_BEGIN"
@@ -203,7 +203,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_SUITE_BEGIN:Landroid/provider/Checkin$Events$Tag;
 
-    .line 65
+    .line 71
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_TCPDUMP_BEGIN"
@@ -214,7 +214,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_TCPDUMP_BEGIN:Landroid/provider/Checkin$Events$Tag;
 
-    .line 66
+    .line 72
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_TCPDUMP_DATA"
@@ -225,7 +225,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_TCPDUMP_DATA:Landroid/provider/Checkin$Events$Tag;
 
-    .line 67
+    .line 73
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_TCPDUMP_END"
@@ -236,7 +236,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_TCPDUMP_END:Landroid/provider/Checkin$Events$Tag;
 
-    .line 68
+    .line 74
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_TEST_BEGIN"
@@ -247,7 +247,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_TEST_BEGIN:Landroid/provider/Checkin$Events$Tag;
 
-    .line 69
+    .line 75
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_TEST_FAILURE"
@@ -258,7 +258,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_TEST_FAILURE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 70
+    .line 76
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "AUTOTEST_TEST_SUCCESS"
@@ -269,7 +269,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->AUTOTEST_TEST_SUCCESS:Landroid/provider/Checkin$Events$Tag;
 
-    .line 71
+    .line 77
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "BROWSER_BUG_REPORT"
@@ -280,7 +280,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->BROWSER_BUG_REPORT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 72
+    .line 78
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "CARRIER_BUG_REPORT"
@@ -291,7 +291,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->CARRIER_BUG_REPORT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 73
+    .line 79
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "CHECKIN_FAILURE"
@@ -302,7 +302,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->CHECKIN_FAILURE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 74
+    .line 80
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "CHECKIN_SUCCESS"
@@ -313,7 +313,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->CHECKIN_SUCCESS:Landroid/provider/Checkin$Events$Tag;
 
-    .line 75
+    .line 81
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "CPUFREQ_STATS"
@@ -324,7 +324,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->CPUFREQ_STATS:Landroid/provider/Checkin$Events$Tag;
 
-    .line 76
+    .line 82
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "FOTA_BEGIN"
@@ -335,7 +335,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->FOTA_BEGIN:Landroid/provider/Checkin$Events$Tag;
 
-    .line 77
+    .line 83
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "FOTA_FAILURE"
@@ -346,7 +346,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->FOTA_FAILURE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 78
+    .line 84
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "FOTA_INSTALL"
@@ -357,7 +357,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->FOTA_INSTALL:Landroid/provider/Checkin$Events$Tag;
 
-    .line 79
+    .line 85
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "FOTA_PROMPT"
@@ -368,7 +368,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->FOTA_PROMPT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 80
+    .line 86
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "FOTA_PROMPT_ACCEPT"
@@ -379,7 +379,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->FOTA_PROMPT_ACCEPT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 81
+    .line 87
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "FOTA_PROMPT_REJECT"
@@ -390,7 +390,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->FOTA_PROMPT_REJECT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 82
+    .line 88
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "FOTA_PROMPT_SKIPPED"
@@ -401,7 +401,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->FOTA_PROMPT_SKIPPED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 83
+    .line 89
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "GSERVICES_ERROR"
@@ -412,7 +412,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->GSERVICES_ERROR:Landroid/provider/Checkin$Events$Tag;
 
-    .line 84
+    .line 90
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "GSERVICES_UPDATE"
@@ -423,7 +423,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->GSERVICES_UPDATE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 85
+    .line 91
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "LOGIN_SERVICE_ACCOUNT_TRIED"
@@ -434,7 +434,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->LOGIN_SERVICE_ACCOUNT_TRIED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 86
+    .line 92
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "LOGIN_SERVICE_ACCOUNT_SAVED"
@@ -445,7 +445,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->LOGIN_SERVICE_ACCOUNT_SAVED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 87
+    .line 93
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "LOGIN_SERVICE_AUTHENTICATE"
@@ -456,7 +456,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->LOGIN_SERVICE_AUTHENTICATE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 88
+    .line 94
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "LOGIN_SERVICE_CAPTCHA_ANSWERED"
@@ -467,7 +467,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->LOGIN_SERVICE_CAPTCHA_ANSWERED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 89
+    .line 95
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "LOGIN_SERVICE_CAPTCHA_SHOWN"
@@ -478,7 +478,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->LOGIN_SERVICE_CAPTCHA_SHOWN:Landroid/provider/Checkin$Events$Tag;
 
-    .line 90
+    .line 96
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "LOGIN_SERVICE_PASSWORD_ENTERED"
@@ -489,7 +489,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->LOGIN_SERVICE_PASSWORD_ENTERED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 91
+    .line 97
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "LOGIN_SERVICE_SWITCH_GOOGLE_MAIL"
@@ -500,7 +500,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->LOGIN_SERVICE_SWITCH_GOOGLE_MAIL:Landroid/provider/Checkin$Events$Tag;
 
-    .line 92
+    .line 98
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "NETWORK_DOWN"
@@ -511,7 +511,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->NETWORK_DOWN:Landroid/provider/Checkin$Events$Tag;
 
-    .line 93
+    .line 99
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "NETWORK_UP"
@@ -522,7 +522,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->NETWORK_UP:Landroid/provider/Checkin$Events$Tag;
 
-    .line 94
+    .line 100
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "PHONE_UI"
@@ -533,7 +533,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->PHONE_UI:Landroid/provider/Checkin$Events$Tag;
 
-    .line 95
+    .line 101
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "RADIO_BUG_REPORT"
@@ -544,7 +544,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->RADIO_BUG_REPORT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 96
+    .line 102
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_COMPLETED"
@@ -555,7 +555,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_COMPLETED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 97
+    .line 103
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_INITIATED"
@@ -566,7 +566,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_INITIATED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 98
+    .line 104
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_IO_ERROR"
@@ -577,7 +577,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_IO_ERROR:Landroid/provider/Checkin$Events$Tag;
 
-    .line 99
+    .line 105
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_NETWORK_ERROR"
@@ -588,7 +588,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_NETWORK_ERROR:Landroid/provider/Checkin$Events$Tag;
 
-    .line 100
+    .line 106
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_REQUIRED_CAPTCHA"
@@ -599,7 +599,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_REQUIRED_CAPTCHA:Landroid/provider/Checkin$Events$Tag;
 
-    .line 101
+    .line 107
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_RETRIES_EXHAUSTED"
@@ -610,7 +610,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_RETRIES_EXHAUSTED:Landroid/provider/Checkin$Events$Tag;
 
-    .line 102
+    .line 108
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_SERVER_ERROR"
@@ -621,7 +621,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_SERVER_ERROR:Landroid/provider/Checkin$Events$Tag;
 
-    .line 103
+    .line 109
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_SERVER_TIMEOUT"
@@ -632,7 +632,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_SERVER_TIMEOUT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 104
+    .line 110
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SETUP_NO_DATA_NETWORK"
@@ -643,7 +643,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SETUP_NO_DATA_NETWORK:Landroid/provider/Checkin$Events$Tag;
 
-    .line 105
+    .line 111
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SYSTEM_BOOT"
@@ -654,7 +654,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SYSTEM_BOOT:Landroid/provider/Checkin$Events$Tag;
 
-    .line 106
+    .line 112
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SYSTEM_LAST_KMSG"
@@ -665,7 +665,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SYSTEM_LAST_KMSG:Landroid/provider/Checkin$Events$Tag;
 
-    .line 107
+    .line 113
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SYSTEM_RECOVERY_LOG"
@@ -676,7 +676,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SYSTEM_RECOVERY_LOG:Landroid/provider/Checkin$Events$Tag;
 
-    .line 108
+    .line 114
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SYSTEM_RESTART"
@@ -687,7 +687,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SYSTEM_RESTART:Landroid/provider/Checkin$Events$Tag;
 
-    .line 109
+    .line 115
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SYSTEM_SERVICE_LOOPING"
@@ -698,7 +698,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SYSTEM_SERVICE_LOOPING:Landroid/provider/Checkin$Events$Tag;
 
-    .line 110
+    .line 116
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "SYSTEM_TOMBSTONE"
@@ -709,7 +709,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->SYSTEM_TOMBSTONE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 111
+    .line 117
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "TEST"
@@ -720,7 +720,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->TEST:Landroid/provider/Checkin$Events$Tag;
 
-    .line 112
+    .line 118
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "BATTERY_DISCHARGE_INFO"
@@ -731,7 +731,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->BATTERY_DISCHARGE_INFO:Landroid/provider/Checkin$Events$Tag;
 
-    .line 113
+    .line 119
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "MARKET_DOWNLOAD"
@@ -742,7 +742,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->MARKET_DOWNLOAD:Landroid/provider/Checkin$Events$Tag;
 
-    .line 114
+    .line 120
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "MARKET_INSTALL"
@@ -753,7 +753,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->MARKET_INSTALL:Landroid/provider/Checkin$Events$Tag;
 
-    .line 115
+    .line 121
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "MARKET_REMOVE"
@@ -764,7 +764,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->MARKET_REMOVE:Landroid/provider/Checkin$Events$Tag;
 
-    .line 116
+    .line 122
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "MARKET_REFUND"
@@ -775,7 +775,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->MARKET_REFUND:Landroid/provider/Checkin$Events$Tag;
 
-    .line 117
+    .line 123
     new-instance v0, Landroid/provider/Checkin$Events$Tag;
 
     const-string v1, "MARKET_UNINSTALL"
@@ -786,7 +786,7 @@
 
     sput-object v0, Landroid/provider/Checkin$Events$Tag;->MARKET_UNINSTALL:Landroid/provider/Checkin$Events$Tag;
 
-    .line 59
+    .line 65
     const/16 v0, 0x3a
 
     new-array v0, v0, [Landroid/provider/Checkin$Events$Tag;
@@ -1145,7 +1145,7 @@
     .end annotation
 
     .prologue
-    .line 59
+    .line 65
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -1156,7 +1156,7 @@
     .parameter "name"
 
     .prologue
-    .line 59
+    .line 65
     const-class v0, Landroid/provider/Checkin$Events$Tag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1172,7 +1172,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 65
     sget-object v0, Landroid/provider/Checkin$Events$Tag;->$VALUES:[Landroid/provider/Checkin$Events$Tag;
 
     invoke-virtual {v0}, [Landroid/provider/Checkin$Events$Tag;->clone()Ljava/lang/Object;

@@ -148,7 +148,7 @@
 
     .line 85
     .local v0, res:Landroid/content/res/Resources;
-    const v1, 0x7f0b009f
+    const v1, 0x7f0b00a0
 
     invoke-virtual {v0, v1, v4, v4}, Landroid/content/res/Resources;->getFraction(III)F
 
@@ -157,7 +157,7 @@
     iput v1, p0, Lcom/android/camera/widget/PanoramaIndicatorView;->m_FrameIndicatorAnimationSpeed:F
 
     .line 86
-    const v1, 0x7f0b00a0
+    const v1, 0x7f0b00a1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -166,7 +166,7 @@
     iput v1, p0, Lcom/android/camera/widget/PanoramaIndicatorView;->m_FrameIndicatorOffsetX:I
 
     .line 87
-    const v1, 0x7f0b00a1
+    const v1, 0x7f0b00a2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -175,7 +175,7 @@
     iput v1, p0, Lcom/android/camera/widget/PanoramaIndicatorView;->m_FrameIndicatorOffsetY:I
 
     .line 88
-    const v1, 0x7f0b00a4
+    const v1, 0x7f0b00a5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -184,7 +184,7 @@
     iput v1, p0, Lcom/android/camera/widget/PanoramaIndicatorView;->m_HorizontalLineOffsetX:I
 
     .line 89
-    const v1, 0x7f0b00a5
+    const v1, 0x7f0b00a6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -193,7 +193,7 @@
     iput v1, p0, Lcom/android/camera/widget/PanoramaIndicatorView;->m_HorizontalLineOffsetY:I
 
     .line 90
-    const v1, 0x7f0b009e
+    const v1, 0x7f0b009f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -229,7 +229,7 @@
     .line 118
     iget-object v1, p0, Lcom/android/camera/widget/PanoramaIndicatorView;->m_HorizontalLinePen:Landroid/graphics/Paint;
 
-    const v2, 0x7f0b00a3
+    const v2, 0x7f0b00a4
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

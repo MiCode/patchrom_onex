@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 5620
+    .line 5633
     iput-object p1, p0, Lcom/htc/widget/HtcListView$10;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,21 +39,21 @@
     .parameter "animation"
 
     .prologue
-    .line 5627
+    .line 5640
     iget-object v0, p0, Lcom/htc/widget/HtcListView$10;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 5628
+    .line 5641
     iget-object v0, p0, Lcom/htc/widget/HtcListView$10;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 5629
+    .line 5642
     :cond_0
     return-void
 .end method
@@ -63,21 +63,21 @@
     .parameter "animation"
 
     .prologue
-    .line 5622
+    .line 5635
     iget-object v0, p0, Lcom/htc/widget/HtcListView$10;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 5623
+    .line 5636
     iget-object v0, p0, Lcom/htc/widget/HtcListView$10;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 5624
+    .line 5637
     :cond_0
     return-void
 .end method

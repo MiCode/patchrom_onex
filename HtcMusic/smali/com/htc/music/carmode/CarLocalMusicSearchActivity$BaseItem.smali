@@ -31,24 +31,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 892
+    .line 901
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 893
+    .line 902
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mId:J
 
-    .line 894
+    .line 903
     iput-object v2, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
-    .line 895
+    .line 904
     iput-object v2, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
-    .line 896
+    .line 905
     iput-object v2, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
-    .line 897
+    .line 906
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .parameter "x0"
 
     .prologue
-    .line 885
+    .line 894
     invoke-direct {p0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->getId()J
 
     move-result-wide v0
@@ -70,7 +70,7 @@
     .parameter "x0"
 
     .prologue
-    .line 885
+    .line 894
     invoke-direct {p0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->getPrimaryText()Ljava/lang/String;
 
     move-result-object v0
@@ -83,7 +83,7 @@
     .parameter "x0"
 
     .prologue
-    .line 885
+    .line 894
     invoke-direct {p0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->getSecondaryText()Ljava/lang/String;
 
     move-result-object v0
@@ -96,7 +96,7 @@
     .parameter "x0"
 
     .prologue
-    .line 885
+    .line 894
     invoke-direct {p0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->getArtPath()Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 928
+    .line 937
     iget-object v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
     return-object v0
@@ -118,7 +118,7 @@
     .locals 2
 
     .prologue
-    .line 916
+    .line 925
     iget-wide v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mId:J
 
     return-wide v0
@@ -128,7 +128,7 @@
     .locals 1
 
     .prologue
-    .line 920
+    .line 929
     iget-object v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
     return-object v0
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 924
+    .line 933
     iget-object v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
     return-object v0
@@ -151,10 +151,10 @@
     .parameter "path"
 
     .prologue
-    .line 912
+    .line 921
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
-    .line 913
+    .line 922
     return-void
 .end method
 
@@ -163,10 +163,10 @@
     .parameter "id"
 
     .prologue
-    .line 900
+    .line 909
     iput-wide p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mId:J
 
-    .line 901
+    .line 910
     return-void
 .end method
 
@@ -175,10 +175,10 @@
     .parameter "text"
 
     .prologue
-    .line 904
+    .line 913
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
-    .line 905
+    .line 914
     return-void
 .end method
 
@@ -187,9 +187,9 @@
     .parameter "text"
 
     .prologue
-    .line 908
+    .line 917
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
-    .line 909
+    .line 918
     return-void
 .end method

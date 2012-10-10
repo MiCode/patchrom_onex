@@ -20,12 +20,12 @@
     .parameter "itemName"
 
     .prologue
-    .line 777
+    .line 794
     invoke-direct {p0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;-><init>()V
 
-    .line 778
+    .line 795
     invoke-virtual {p0, p1}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$OnlineSearchItem;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 779
+    .line 796
     return-void
 .end method

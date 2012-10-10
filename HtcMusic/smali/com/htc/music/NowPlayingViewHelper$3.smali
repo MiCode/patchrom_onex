@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1208
+    .line 1210
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$3;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "which"
 
     .prologue
-    .line 1210
+    .line 1212
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1211
+    .line 1213
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$3;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mHtcContextMenuIds:[I
@@ -56,7 +56,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1212
+    .line 1214
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$3;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$3;->this$0:Lcom/htc/music/NowPlayingViewHelper;
@@ -70,7 +70,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/NowPlayingViewHelper;->onHtcContextItemSelected(I)Z
 
-    .line 1213
+    .line 1215
     :cond_0
     return-void
 .end method

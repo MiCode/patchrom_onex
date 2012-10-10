@@ -180,7 +180,7 @@
 
     const/16 v3, 0x1b
 
-    if-eq v0, v3, :cond_2
+    if-eq v0, v3, :cond_3
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -198,101 +198,85 @@
 
     cmpl-float v0, v0, v3
 
-    if-gez v0, :cond_2
+    if-gez v0, :cond_3
 
     :cond_0
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
-    if-ne v0, v5, :cond_1
+    if-eq v0, v5, :cond_1
 
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v3, 0x97
+
+    if-ne v0, v3, :cond_2
+
+    :cond_1
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0xd8
 
-    if-ne v0, v3, :cond_1
+    if-ne v0, v3, :cond_2
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
 
-    if-eq v0, v4, :cond_2
+    if-eq v0, v4, :cond_3
 
-    :cond_1
+    :cond_2
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0xe3
 
-    if-eq v0, v3, :cond_2
+    if-eq v0, v3, :cond_3
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0xe4
 
-    if-ne v0, v3, :cond_6
+    if-eq v0, v3, :cond_3
 
-    :cond_2
-    move v0, v2
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
-    :goto_0
-    sput-boolean v2, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
+    const/16 v3, 0x25
 
-    .line 66
+    if-eq v0, v3, :cond_3
+
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v3, 0xe5
+
+    if-eq v0, v3, :cond_3
+
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
-    const/16 v3, 0x9b
-
-    if-ne v0, v3, :cond_7
-
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v3, 0x7b
+    const/16 v3, 0x17
 
     if-eq v0, v3, :cond_3
 
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
-    const/16 v3, 0x1c
-
-    if-eq v0, v3, :cond_3
-
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v3, 0x89
+    const/16 v3, 0xd8
 
     if-eq v0, v3, :cond_3
 
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
-    const/16 v3, 0xe1
+    const/16 v3, 0xda
 
     if-ne v0, v3, :cond_7
 
     :cond_3
     move v0, v2
 
-    :goto_1
-    sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->TMOUS:Z
+    :goto_0
+    sput-boolean v2, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
-    .line 74
+    .line 73
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
-    if-ne v0, v4, :cond_8
+    const/16 v3, 0x9b
 
-    move v0, v2
-
-    :goto_2
-    sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->ATT_SUPPORTED:Z
-
-    .line 78
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
-
-    const/4 v3, 0x4
-
-    if-eq v0, v3, :cond_4
-
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v3, 0x10
-
-    if-eq v0, v3, :cond_4
+    if-ne v0, v3, :cond_8
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -302,134 +286,187 @@
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
-    if-ne v0, v6, :cond_9
+    const/16 v3, 0x1c
+
+    if-eq v0, v3, :cond_4
+
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v3, 0x89
+
+    if-eq v0, v3, :cond_4
+
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v3, 0xe1
+
+    if-ne v0, v3, :cond_8
+
+    :cond_4
+    move v0, v2
+
+    :goto_1
+    sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->TMOUS:Z
+
+    .line 81
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    if-ne v0, v4, :cond_9
+
+    move v0, v2
+
+    :goto_2
+    sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->ATT_SUPPORTED:Z
+
+    .line 85
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/4 v3, 0x4
+
+    if-eq v0, v3, :cond_5
+
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v3, 0x10
+
+    if-eq v0, v3, :cond_5
+
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v3, 0x7b
+
+    if-eq v0, v3, :cond_5
+
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    if-ne v0, v6, :cond_a
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0xa8
 
-    if-ne v0, v3, :cond_9
+    if-ne v0, v3, :cond_a
 
-    :cond_4
+    :cond_5
     move v0, v2
 
     :goto_3
     sput-boolean v1, Lcom/htc/util/phone/CityIdInfo;->EXCEPTION_PROJECTS:Z
 
-    .line 92
+    .line 99
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0xa
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_6
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0x40
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_6
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
-    if-eq v0, v6, :cond_5
+    if-eq v0, v6, :cond_6
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
-    if-eq v0, v5, :cond_5
+    if-eq v0, v5, :cond_6
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0xb
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_6
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0xa8
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_6
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0xa1
 
-    if-eq v0, v3, :cond_5
+    if-eq v0, v3, :cond_6
 
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->TMOUS:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->ATT_SUPPORTED:Z
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
-    :cond_5
+    :cond_6
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->EXCEPTION_PROJECTS:Z
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_b
 
     move v0, v2
 
     :goto_4
     sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->ENABLED:Z
 
-    .line 113
+    .line 120
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->ENABLED:Z
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_c
 
     move v0, v2
 
     :goto_5
     sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->ECID:Z
 
-    .line 120
+    .line 127
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->ECID:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
-    if-eq v0, v5, :cond_c
+    if-eq v0, v5, :cond_d
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0x61
 
-    if-eq v0, v3, :cond_c
+    if-eq v0, v3, :cond_d
 
     move v0, v2
 
     :goto_6
     sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALLER_ID:Z
 
-    .line 126
+    .line 133
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     const-string v0, "com.htc.china.calllocation"
 
     :goto_7
     sput-object v0, Lcom/htc/util/phone/CityIdInfo;->AUTHORITY:Ljava/lang/String;
 
-    .line 131
+    .line 138
     sget-object v0, Lcom/htc/util/phone/CityIdInfo;->AUTHORITY:Ljava/lang/String;
 
     sput-object v0, Lcom/htc/util/phone/CityIdInfo;->USER_DATA_KEY:Ljava/lang/String;
 
-    .line 145
+    .line 152
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -464,7 +501,7 @@
     :goto_8
     sput-object v0, Lcom/htc/util/phone/CityIdInfo;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 149
+    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -497,66 +534,66 @@
 
     sput-object v0, Lcom/htc/util/phone/CityIdInfo;->CONTENT_URI_OPTIONS:Landroid/net/Uri;
 
-    .line 176
+    .line 183
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     :goto_9
     sput v2, Lcom/htc/util/phone/CityIdInfo;->COLUMN_CITY:I
 
     return-void
 
-    :cond_6
+    :cond_7
     move v0, v1
 
     .line 48
     goto/16 :goto_0
 
-    :cond_7
-    move v0, v1
-
-    .line 66
-    goto/16 :goto_1
-
     :cond_8
     move v0, v1
 
-    .line 74
-    goto/16 :goto_2
+    .line 73
+    goto/16 :goto_1
 
     :cond_9
     move v0, v1
 
-    .line 78
-    goto/16 :goto_3
+    .line 81
+    goto/16 :goto_2
 
     :cond_a
     move v0, v1
 
-    .line 92
-    goto/16 :goto_4
+    .line 85
+    goto/16 :goto_3
 
     :cond_b
     move v0, v1
 
-    .line 113
-    goto :goto_5
+    .line 99
+    goto/16 :goto_4
 
     :cond_c
     move v0, v1
 
     .line 120
+    goto :goto_5
+
+    :cond_d
+    move v0, v1
+
+    .line 127
     goto :goto_6
 
-    .line 126
-    :cond_d
+    .line 133
+    :cond_e
     const-string v0, "com.cequint.ecid"
 
     goto :goto_7
 
-    .line 145
-    :cond_e
+    .line 152
+    :cond_f
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -589,10 +626,10 @@
 
     goto :goto_8
 
-    :cond_f
+    :cond_10
     move v2, v1
 
-    .line 176
+    .line 183
     goto :goto_9
 .end method
 
@@ -607,39 +644,39 @@
     .line 43
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 221
+    .line 228
     iput-boolean v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_isNanp:Z
 
-    .line 242
+    .line 249
     iput-boolean v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_hasLookupBeenPerformed:Z
 
-    .line 259
+    .line 266
     iput-object v2, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCityName:Ljava/lang/String;
 
-    .line 279
+    .line 286
     iput-object v2, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateName:Ljava/lang/String;
 
-    .line 298
+    .line 305
     iput-object v2, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateAbrv:Ljava/lang/String;
 
-    .line 317
+    .line 324
     iput-object v2, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCountryName:Ljava/lang/String;
 
-    .line 337
+    .line 344
     const-string v0, ""
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
-    .line 362
+    .line 369
     iput v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_wDisplayComputed:I
 
-    .line 386
+    .line 393
     iput-boolean v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_isDisplayOneLine:Z
 
-    .line 401
+    .line 408
     iput-boolean v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_isCityIdCurrentlyDisplayed:Z
 
-    .line 416
+    .line 423
     iput-object v2, p0, Lcom/htc/util/phone/CityIdInfo;->m_tvOneLineDisplay:Landroid/widget/TextView;
 
     return-void
@@ -654,7 +691,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 996
+    .line 1003
     if-eqz p1, :cond_1
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -663,18 +700,18 @@
 
     if-nez v3, :cond_1
 
-    .line 998
+    .line 1005
     sget-object v3, Lcom/htc/util/phone/CityIdInfo;->USER_DATA_KEY:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Lcom/android/internal/telephony/CallerInfo;->getUserData(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 1000
+    .line 1007
     .local v2, obj:Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .line 1001
+    .line 1008
     .local v1, info:Lcom/htc/util/phone/CityIdInfo;
     instance-of v3, v2, Lcom/htc/util/phone/CityIdInfo;
 
@@ -682,18 +719,18 @@
 
     move-object v1, v2
 
-    .line 1002
+    .line 1009
     check-cast v1, Lcom/htc/util/phone/CityIdInfo;
 
-    .line 1003
+    .line 1010
     iget-boolean v3, v1, Lcom/htc/util/phone/CityIdInfo;->m_hasLookupBeenPerformed:Z
 
     if-nez v3, :cond_0
 
-    .line 1004
+    .line 1011
     invoke-virtual {v1, p0, p2, v4}, Lcom/htc/util/phone/CityIdInfo;->doLookup(Landroid/content/Context;Ljava/lang/CharSequence;Z)V
 
-    .line 1011
+    .line 1018
     :cond_0
     :goto_0
     const/4 v3, 0x0
@@ -702,20 +739,20 @@
 
     move-result-object v0
 
-    .line 1012
+    .line 1019
     .local v0, cityId:Ljava/lang/String;
     const-string v3, "CITY_ID"
 
     invoke-virtual {p1, v3, v0}, Lcom/android/internal/telephony/CallerInfo;->addUserData(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1014
+    .line 1021
     .end local v0           #cityId:Ljava/lang/String;
     .end local v1           #info:Lcom/htc/util/phone/CityIdInfo;
     .end local v2           #obj:Ljava/lang/Object;
     :cond_1
     return-void
 
-    .line 1007
+    .line 1014
     .restart local v1       #info:Lcom/htc/util/phone/CityIdInfo;
     .restart local v2       #obj:Ljava/lang/Object;
     :cond_2
@@ -724,7 +761,7 @@
     .end local v1           #info:Lcom/htc/util/phone/CityIdInfo;
     invoke-direct {v1}, Lcom/htc/util/phone/CityIdInfo;-><init>()V
 
-    .line 1008
+    .line 1015
     .restart local v1       #info:Lcom/htc/util/phone/CityIdInfo;
     invoke-virtual {v1, p0, p2, v4}, Lcom/htc/util/phone/CityIdInfo;->doLookup(Landroid/content/Context;Ljava/lang/CharSequence;Z)V
 
@@ -738,19 +775,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1017
+    .line 1024
     const/4 v8, 0x0
 
-    .line 1018
+    .line 1025
     .local v8, overrided:Z
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALLER_ID:Z
 
     if-eqz v0, :cond_1
 
-    .line 1019
+    .line 1026
     if-eqz p0, :cond_1
 
-    .line 1020
+    .line 1027
     sget-object v1, Lcom/htc/util/phone/CityIdInfo;->CONTENT_URI_OPTIONS:Landroid/net/Uri;
 
     move-object v0, p0
@@ -765,25 +802,25 @@
 
     move-result-object v6
 
-    .line 1021
+    .line 1028
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
-    .line 1022
+    .line 1029
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1023
+    .line 1030
     const-string v0, "add_contacts_override"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v7
 
-    .line 1024
+    .line 1031
     .local v7, idOverrided:I
     invoke-interface {v6, v7}, Landroid/database/Cursor;->getInt(I)I
 
@@ -793,18 +830,18 @@
 
     const/4 v8, 0x1
 
-    .line 1026
+    .line 1033
     .end local v7           #idOverrided:I
     :cond_0
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 1030
+    .line 1037
     .end local v6           #c:Landroid/database/Cursor;
     :cond_1
     return v8
 
-    .line 1024
+    .line 1031
     .restart local v6       #c:Landroid/database/Cursor;
     .restart local v7       #idOverrided:I
     :cond_2
@@ -820,12 +857,12 @@
     .parameter "availableWidth"
 
     .prologue
-    .line 857
+    .line 864
     invoke-static {p0, p1}, Lcom/htc/util/phone/CityIdInfo;->getWidth(Landroid/graphics/Paint;Ljava/lang/String;)F
 
     move-result v0
 
-    .line 858
+    .line 865
     .local v0, textWidth:F
     int-to-float v1, p2
 
@@ -842,10 +879,10 @@
     .parameter "separator"
 
     .prologue
-    .line 809
+    .line 816
     move-object v5, p1
 
-    .line 811
+    .line 818
     .local v5, result:Ljava/lang/String;
     if-eqz p0, :cond_2
 
@@ -863,31 +900,31 @@
 
     if-lez p2, :cond_2
 
-    .line 815
+    .line 822
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 816
+    .line 823
     .local v6, sb:Ljava/lang/StringBuilder;
     invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 818
+    .line 825
     const-string v8, "..."
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 819
+    .line 826
     .local v3, replaceSize1st:I
     add-int/lit8 v4, v3, 0x1
 
-    .line 822
+    .line 829
     .local v4, replaceSize2nd:I
     const/4 v0, 0x0
 
-    .line 824
+    .line 831
     .local v0, firstTime:Z
     :goto_0
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -904,35 +941,35 @@
 
     if-lez v8, :cond_1
 
-    .line 825
+    .line 832
     invoke-virtual {v6, p3}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 826
+    .line 833
     .local v1, index:I
     if-eqz v0, :cond_0
 
     move v2, v3
 
-    .line 829
+    .line 836
     .local v2, replaceSize:I
     :goto_1
     sub-int v7, v1, v2
 
-    .line 830
+    .line 837
     .local v7, start:I
     if-ltz v7, :cond_1
 
-    .line 831
+    .line 838
     const-string v8, "..."
 
     invoke-virtual {v6, v7, v1, v8}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 837
+    .line 844
     const/4 v0, 0x0
 
-    .line 838
+    .line 845
     goto :goto_0
 
     .end local v2           #replaceSize:I
@@ -940,10 +977,10 @@
     :cond_0
     move v2, v4
 
-    .line 826
+    .line 833
     goto :goto_1
 
-    .line 840
+    .line 847
     .end local v1           #index:I
     :cond_1
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
@@ -952,12 +989,12 @@
 
     if-lez v8, :cond_2
 
-    .line 841
+    .line 848
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 845
+    .line 852
     .end local v0           #firstTime:Z
     .end local v3           #replaceSize1st:I
     .end local v4           #replaceSize2nd:I
@@ -971,7 +1008,7 @@
     .parameter "c"
 
     .prologue
-    .line 950
+    .line 957
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_CITY:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -980,7 +1017,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCityName:Ljava/lang/String;
 
-    .line 954
+    .line 961
     return-void
 .end method
 
@@ -993,10 +1030,10 @@
 
     const/4 v2, 0x0
 
-    .line 924
+    .line 931
     invoke-static {p1}, Lcom/htc/util/phone/CityIdInfo;->readColumnIds(Landroid/database/Cursor;)V
 
-    .line 926
+    .line 933
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_NUMBER:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1005,7 +1042,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_callerId:Ljava/lang/String;
 
-    .line 927
+    .line 934
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_CITY:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1014,7 +1051,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCityName:Ljava/lang/String;
 
-    .line 928
+    .line 935
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_STATE:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1023,7 +1060,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateName:Ljava/lang/String;
 
-    .line 929
+    .line 936
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_STATE_ABRV:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1032,7 +1069,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateAbrv:Ljava/lang/String;
 
-    .line 930
+    .line 937
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_COUNTRY:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1041,7 +1078,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCountryName:Ljava/lang/String;
 
-    .line 932
+    .line 939
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_COMPANY:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1050,7 +1087,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bizName:Ljava/lang/String;
 
-    .line 933
+    .line 940
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_NAME:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1059,7 +1096,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_cname:Ljava/lang/String;
 
-    .line 934
+    .line 941
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_FIRST_NAME:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1068,7 +1105,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_firstName:Ljava/lang/String;
 
-    .line 935
+    .line 942
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_LAST_NAME:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1077,7 +1114,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_lastName:Ljava/lang/String;
 
-    .line 936
+    .line 943
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_IMAGE:I
 
     invoke-static {p1, v0}, Lcom/htc/util/phone/CityIdInfo;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -1086,7 +1123,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_urlPicture:Ljava/lang/String;
 
-    .line 937
+    .line 944
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_SAME_NETWORK:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1100,7 +1137,7 @@
     :goto_0
     iput-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bSameNetwork:Z
 
-    .line 938
+    .line 945
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_FRIENDS:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1114,7 +1151,7 @@
     :goto_1
     iput-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bFriends:Z
 
-    .line 939
+    .line 946
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_PREFER_CID_IMAGE:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1128,7 +1165,7 @@
     :goto_2
     iput-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bPreferCidImage:Z
 
-    .line 946
+    .line 953
     sget v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_ISNANP:I
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1140,31 +1177,31 @@
     :goto_3
     iput-boolean v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_isNanp:Z
 
-    .line 947
+    .line 954
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 937
+    .line 944
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 938
+    .line 945
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 939
+    .line 946
     goto :goto_2
 
     :cond_3
     move v1, v2
 
-    .line 946
+    .line 953
     goto :goto_3
 .end method
 
@@ -1178,31 +1215,31 @@
 
     const/4 v1, 0x0
 
-    .line 772
+    .line 779
     const/4 v0, 0x0
 
-    .line 773
+    .line 780
     .local v0, result:Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 776
+    .line 783
     iput-boolean v1, p1, Lcom/htc/util/phone/CityIdInfo;->m_isDisplayOneLine:Z
 
-    .line 777
+    .line 784
     iput-object v2, p1, Lcom/htc/util/phone/CityIdInfo;->m_tvOneLineDisplay:Landroid/widget/TextView;
 
-    .line 778
+    .line 785
     iput-boolean v1, p1, Lcom/htc/util/phone/CityIdInfo;->m_isCityIdCurrentlyDisplayed:Z
 
-    .line 780
+    .line 787
     iget-boolean v1, p1, Lcom/htc/util/phone/CityIdInfo;->m_hasLookupBeenPerformed:Z
 
     if-eqz v1, :cond_0
 
-    .line 782
+    .line 789
     if-eqz p0, :cond_1
 
-    .line 783
+    .line 790
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v1
@@ -1215,12 +1252,12 @@
 
     move-result-object v0
 
-    .line 790
+    .line 797
     :cond_0
     :goto_0
     return-object v0
 
-    .line 785
+    .line 792
     :cond_1
     const/4 v1, 0x1
 
@@ -1237,19 +1274,19 @@
     .parameter "nColumn"
 
     .prologue
-    .line 978
+    .line 985
     invoke-interface {p0, p1}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 980
+    .line 987
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 981
+    .line 988
     .local v0, str:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1257,7 +1294,7 @@
 
     if-nez v1, :cond_0
 
-    .line 984
+    .line 991
     .end local v0           #str:Ljava/lang/String;
     :goto_0
     return-object v0
@@ -1274,22 +1311,22 @@
     .parameter "input"
 
     .prologue
-    .line 874
+    .line 881
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v6
 
     new-array v5, v6, [F
 
-    .line 875
+    .line 882
     .local v5, widths:[F
     const/4 v3, 0x0
 
-    .line 876
+    .line 883
     .local v3, totalWidth:F
     invoke-virtual {p0, p1, v5}, Landroid/graphics/Paint;->getTextWidths(Ljava/lang/String;[F)I
 
-    .line 878
+    .line 885
     move-object v0, v5
 
     .local v0, arr$:[F
@@ -1304,16 +1341,16 @@
 
     aget v4, v0, v1
 
-    .line 879
+    .line 886
     .local v4, width:F
     add-float/2addr v3, v4
 
-    .line 878
+    .line 885
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 882
+    .line 889
     .end local v4           #width:F
     :cond_0
     return v3
@@ -1326,7 +1363,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1035
+    .line 1042
     invoke-static {}, Lcom/android/internal/telephony/CallManager;->getInstance()Lcom/android/internal/telephony/CallManager;
 
     move-result-object v4
@@ -1335,7 +1372,7 @@
 
     move-result-object v1
 
-    .line 1036
+    .line 1043
     .local v1, connections:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/telephony/Connection;>;"
     if-eqz v1, :cond_1
 
@@ -1345,7 +1382,7 @@
 
     if-nez v4, :cond_1
 
-    .line 1037
+    .line 1044
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1364,7 +1401,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 1038
+    .line 1045
     .local v0, connection:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->isIncoming()Z
 
@@ -1382,13 +1419,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 1059
+    .line 1066
     .end local v0           #connection:Lcom/android/internal/telephony/Connection;
     .end local v2           #i$:Ljava/util/Iterator;
     :goto_0
     return v3
 
-    .line 1043
+    .line 1050
     :cond_1
     invoke-static {}, Lcom/android/internal/telephony/CallManager;->getInstance()Lcom/android/internal/telephony/CallManager;
 
@@ -1402,7 +1439,7 @@
 
     move-result-object v1
 
-    .line 1044
+    .line 1051
     if-eqz v1, :cond_3
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
@@ -1411,7 +1448,7 @@
 
     if-nez v4, :cond_3
 
-    .line 1045
+    .line 1052
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1430,7 +1467,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 1046
+    .line 1053
     .restart local v0       #connection:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->isIncoming()Z
 
@@ -1450,7 +1487,7 @@
 
     goto :goto_0
 
-    .line 1051
+    .line 1058
     .end local v0           #connection:Lcom/android/internal/telephony/Connection;
     .end local v2           #i$:Ljava/util/Iterator;
     :cond_3
@@ -1462,7 +1499,7 @@
 
     move-result-object v1
 
-    .line 1052
+    .line 1059
     if-eqz v1, :cond_5
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
@@ -1471,7 +1508,7 @@
 
     if-nez v4, :cond_5
 
-    .line 1053
+    .line 1060
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1490,7 +1527,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 1054
+    .line 1061
     .restart local v0       #connection:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->isIncoming()Z
 
@@ -1510,7 +1547,7 @@
 
     goto :goto_0
 
-    .line 1059
+    .line 1066
     .end local v0           #connection:Lcom/android/internal/telephony/Connection;
     .end local v2           #i$:Ljava/util/Iterator;
     :cond_5
@@ -1527,7 +1564,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 902
+    .line 909
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -1536,15 +1573,15 @@
 
     move-result v7
 
-    .line 903
+    .line 910
     .local v7, international:Z
     const/4 v8, 0x0
 
-    .line 904
+    .line 911
     .local v8, mo:Z
     if-eqz v7, :cond_0
 
-    .line 905
+    .line 912
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1553,7 +1590,7 @@
 
     move-result v8
 
-    .line 908
+    .line 915
     :cond_0
     sget-object v0, Lcom/htc/util/phone/CityIdInfo;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1561,7 +1598,7 @@
 
     move-result-object v6
 
-    .line 909
+    .line 916
     .local v6, builder:Landroid/net/Uri$Builder;
     const-string v0, "mo"
 
@@ -1571,7 +1608,7 @@
 
     invoke-virtual {v6, v0, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 910
+    .line 917
     const-string v0, "international"
 
     invoke-static {v7}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
@@ -1580,12 +1617,12 @@
 
     invoke-virtual {v6, v0, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 911
+    .line 918
     invoke-virtual {v6}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 919
+    .line 926
     .local v1, uri:Landroid/net/Uri;
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -1613,12 +1650,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 894
+    .line 901
     const/4 v0, 0x2
 
     new-array v4, v0, [Ljava/lang/String;
 
-    .line 895
+    .line 902
     .local v4, flags:[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -1626,7 +1663,7 @@
 
     aput-object v1, v4, v0
 
-    .line 896
+    .line 903
     const/4 v1, 0x1
 
     if-eqz p3, :cond_0
@@ -1636,7 +1673,7 @@
     :goto_0
     aput-object v0, v4, v1
 
-    .line 898
+    .line 905
     sget-object v1, Lcom/htc/util/phone/CityIdInfo;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1653,7 +1690,7 @@
 
     return-object v0
 
-    .line 896
+    .line 903
     :cond_0
     const-string v0, "user"
 
@@ -1665,10 +1702,10 @@
     .parameter "c"
 
     .prologue
-    .line 957
+    .line 964
     if-eqz p0, :cond_0
 
-    .line 958
+    .line 965
     const-string v0, "_ID"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1677,7 +1714,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_ID:I
 
-    .line 959
+    .line 966
     const-string v0, "_COUNT"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1686,7 +1723,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_COUNT:I
 
-    .line 960
+    .line 967
     const-string v0, "cid_pNumber"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1695,7 +1732,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_NUMBER:I
 
-    .line 961
+    .line 968
     const-string v0, "cid_pCityName"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1704,7 +1741,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_CITY:I
 
-    .line 962
+    .line 969
     const-string v0, "cid_pStateName"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1713,7 +1750,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_STATE:I
 
-    .line 963
+    .line 970
     const-string v0, "cid_pStateAbbr"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1722,7 +1759,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_STATE_ABRV:I
 
-    .line 964
+    .line 971
     const-string v0, "cid_pCountryName"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1731,7 +1768,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_COUNTRY:I
 
-    .line 965
+    .line 972
     const-string v0, "cid_pCompany"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1740,7 +1777,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_COMPANY:I
 
-    .line 966
+    .line 973
     const-string v0, "cid_pName"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1749,7 +1786,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_NAME:I
 
-    .line 967
+    .line 974
     const-string v0, "cid_pFirstName"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1758,7 +1795,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_FIRST_NAME:I
 
-    .line 968
+    .line 975
     const-string v0, "cid_pLastName"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1767,7 +1804,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_LAST_NAME:I
 
-    .line 969
+    .line 976
     const-string v0, "cid_pImage"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1776,7 +1813,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_IMAGE:I
 
-    .line 970
+    .line 977
     const-string v0, "cid_bSameNetwork"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1785,7 +1822,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_SAME_NETWORK:I
 
-    .line 971
+    .line 978
     const-string v0, "cid_bFriends"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1794,7 +1831,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_FRIENDS:I
 
-    .line 972
+    .line 979
     const-string v0, "cid_bPreferCidImage"
 
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1803,7 +1840,7 @@
 
     sput v0, Lcom/htc/util/phone/CityIdInfo;->COLUMN_PREFER_CID_IMAGE:I
 
-    .line 974
+    .line 981
     :cond_0
     return-void
 .end method
@@ -1816,30 +1853,30 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 748
+    .line 755
     const/16 v0, 0x8
 
-    .line 749
+    .line 756
     .local v0, nDisplayCityId:I
     if-eqz p1, :cond_0
 
-    .line 752
+    .line 759
     iput-boolean v3, p1, Lcom/htc/util/phone/CityIdInfo;->m_isDisplayOneLine:Z
 
-    .line 753
+    .line 760
     const/4 v2, 0x0
 
     iput-object v2, p1, Lcom/htc/util/phone/CityIdInfo;->m_tvOneLineDisplay:Landroid/widget/TextView;
 
-    .line 754
+    .line 761
     iput-boolean v3, p1, Lcom/htc/util/phone/CityIdInfo;->m_isCityIdCurrentlyDisplayed:Z
 
-    .line 756
+    .line 763
     iget-boolean v2, p1, Lcom/htc/util/phone/CityIdInfo;->m_hasLookupBeenPerformed:Z
 
     if-eqz v2, :cond_0
 
-    .line 758
+    .line 765
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v2
@@ -1852,7 +1889,7 @@
 
     move-result-object v1
 
-    .line 759
+    .line 766
     .local v1, strDisplay:Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1860,18 +1897,18 @@
 
     if-nez v2, :cond_0
 
-    .line 761
+    .line 768
     invoke-virtual {p0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 762
+    .line 769
     const/4 v0, 0x0
 
-    .line 766
+    .line 773
     .end local v1           #strDisplay:Ljava/lang/String;
     :cond_0
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 767
+    .line 774
     return-void
 .end method
 
@@ -1885,12 +1922,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 650
+    .line 657
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_hasLookupBeenPerformed:Z
 
     if-eqz v0, :cond_6
 
-    .line 653
+    .line 660
     iget v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_wDisplayComputed:I
 
     if-ne v0, p2, :cond_0
@@ -1903,26 +1940,26 @@
 
     if-nez v0, :cond_0
 
-    .line 654
+    .line 661
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
-    .line 697
+    .line 704
     :goto_0
     return-object v0
 
-    .line 656
+    .line 663
     :cond_0
     iput-object v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
-    .line 657
+    .line 664
     iput p2, p0, Lcom/htc/util/phone/CityIdInfo;->m_wDisplayComputed:I
 
-    .line 660
+    .line 667
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_isNanp:Z
 
     if-eqz v0, :cond_4
 
-    .line 662
+    .line 669
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCityName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1931,7 +1968,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 664
+    .line 671
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1940,29 +1977,29 @@
 
     if-eqz v0, :cond_2
 
-    .line 665
+    .line 672
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCountryName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
-    .line 694
+    .line 701
     :goto_1
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 695
+    .line 702
     const-string v0, ""
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
-    .line 697
+    .line 704
     :cond_1
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 667
+    .line 674
     :cond_2
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateName:Ljava/lang/String;
 
@@ -1970,7 +2007,7 @@
 
     goto :goto_1
 
-    .line 673
+    .line 680
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2000,7 +2037,7 @@
 
     iput-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
-    .line 677
+    .line 684
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
     const-string v1, ", "
@@ -2013,7 +2050,7 @@
 
     goto :goto_1
 
-    .line 685
+    .line 692
     :cond_4
     sget-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
@@ -2031,7 +2068,7 @@
 
     goto :goto_2
 
-    .line 691
+    .line 698
     :cond_6
     iput-object v1, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
@@ -2045,17 +2082,17 @@
     .parameter "isSystemProvided"
 
     .prologue
-    .line 710
+    .line 717
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 739
+    .line 746
     :cond_0
     :goto_0
     return-void
 
-    .line 714
+    .line 721
     :cond_1
     :try_start_0
     sget-boolean v2, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
@@ -2070,7 +2107,7 @@
 
     move-result-object v0
 
-    .line 718
+    .line 725
     .local v0, c:Landroid/database/Cursor;
     :goto_1
     if-eqz v0, :cond_2
@@ -2081,23 +2118,23 @@
 
     if-eqz v2, :cond_2
 
-    .line 719
+    .line 726
     sget-boolean v2, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
     if-eqz v2, :cond_5
 
-    .line 720
+    .line 727
     invoke-direct {p0, v0}, Lcom/htc/util/phone/CityIdInfo;->extractCallLocation(Landroid/database/Cursor;)V
 
-    .line 732
+    .line 739
     :cond_2
     :goto_2
     if-eqz v0, :cond_3
 
-    .line 733
+    .line 740
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 735
+    .line 742
     :cond_3
     const/4 v2, 0x1
 
@@ -2107,12 +2144,12 @@
 
     goto :goto_0
 
-    .line 736
+    .line 743
     .end local v0           #c:Landroid/database/Cursor;
     :catch_0
     move-exception v1
 
-    .line 737
+    .line 744
     .local v1, e:Ljava/lang/Exception;
     const-string v2, "com.htc.util.phone.CityIdInfo"
 
@@ -2122,7 +2159,7 @@
 
     goto :goto_0
 
-    .line 714
+    .line 721
     .end local v1           #e:Ljava/lang/Exception;
     :cond_4
     :try_start_1
@@ -2136,7 +2173,7 @@
 
     goto :goto_1
 
-    .line 722
+    .line 729
     .restart local v0       #c:Landroid/database/Cursor;
     :cond_5
     invoke-direct {p0, v0}, Lcom/htc/util/phone/CityIdInfo;->extractCityID(Landroid/database/Cursor;)V
@@ -2150,7 +2187,7 @@
     .locals 1
 
     .prologue
-    .line 584
+    .line 591
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bFriends:Z
 
     return v0
@@ -2160,7 +2197,7 @@
     .locals 1
 
     .prologue
-    .line 605
+    .line 612
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bPreferCidImage:Z
 
     return v0
@@ -2170,7 +2207,7 @@
     .locals 1
 
     .prologue
-    .line 563
+    .line 570
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bSameNetwork:Z
 
     return v0
@@ -2180,7 +2217,7 @@
     .locals 1
 
     .prologue
-    .line 437
+    .line 444
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_bizName:Ljava/lang/String;
 
     return-object v0
@@ -2190,7 +2227,7 @@
     .locals 1
 
     .prologue
-    .line 458
+    .line 465
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_cname:Ljava/lang/String;
 
     return-object v0
@@ -2200,7 +2237,7 @@
     .locals 1
 
     .prologue
-    .line 479
+    .line 486
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_callerId:Ljava/lang/String;
 
     return-object v0
@@ -2210,7 +2247,7 @@
     .locals 1
 
     .prologue
-    .line 500
+    .line 507
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_firstName:Ljava/lang/String;
 
     return-object v0
@@ -2220,7 +2257,7 @@
     .locals 1
 
     .prologue
-    .line 244
+    .line 251
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_hasLookupBeenPerformed:Z
 
     return v0
@@ -2230,7 +2267,7 @@
     .locals 1
 
     .prologue
-    .line 403
+    .line 410
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_isCityIdCurrentlyDisplayed:Z
 
     return v0
@@ -2240,7 +2277,7 @@
     .locals 1
 
     .prologue
-    .line 388
+    .line 395
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_isDisplayOneLine:Z
 
     return v0
@@ -2250,7 +2287,7 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 235
     iget-boolean v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_isNanp:Z
 
     return v0
@@ -2260,7 +2297,7 @@
     .locals 1
 
     .prologue
-    .line 521
+    .line 528
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_lastName:Ljava/lang/String;
 
     return-object v0
@@ -2270,7 +2307,7 @@
     .locals 1
 
     .prologue
-    .line 626
+    .line 633
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_picture:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -2280,7 +2317,7 @@
     .locals 1
 
     .prologue
-    .line 262
+    .line 269
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCityName:Ljava/lang/String;
 
     return-object v0
@@ -2290,7 +2327,7 @@
     .locals 1
 
     .prologue
-    .line 319
+    .line 326
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCountryName:Ljava/lang/String;
 
     return-object v0
@@ -2300,7 +2337,7 @@
     .locals 1
 
     .prologue
-    .line 343
+    .line 350
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
     return-object v0
@@ -2310,7 +2347,7 @@
     .locals 1
 
     .prologue
-    .line 300
+    .line 307
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateAbrv:Ljava/lang/String;
 
     return-object v0
@@ -2320,7 +2357,7 @@
     .locals 1
 
     .prologue
-    .line 281
+    .line 288
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateName:Ljava/lang/String;
 
     return-object v0
@@ -2330,7 +2367,7 @@
     .locals 1
 
     .prologue
-    .line 418
+    .line 425
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_tvOneLineDisplay:Landroid/widget/TextView;
 
     return-object v0
@@ -2340,7 +2377,7 @@
     .locals 1
 
     .prologue
-    .line 542
+    .line 549
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_urlPicture:Ljava/lang/String;
 
     return-object v0
@@ -2350,7 +2387,7 @@
     .locals 1
 
     .prologue
-    .line 368
+    .line 375
     iget v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_wDisplayComputed:I
 
     return v0
@@ -2360,7 +2397,7 @@
     .locals 1
 
     .prologue
-    .line 702
+    .line 709
     iget-object v0, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCityName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2409,10 +2446,10 @@
     .parameter "val"
 
     .prologue
-    .line 592
+    .line 599
     iput-boolean p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_bFriends:Z
 
-    .line 593
+    .line 600
     return-void
 .end method
 
@@ -2421,10 +2458,10 @@
     .parameter "val"
 
     .prologue
-    .line 613
+    .line 620
     iput-boolean p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_bPreferCidImage:Z
 
-    .line 614
+    .line 621
     return-void
 .end method
 
@@ -2433,10 +2470,10 @@
     .parameter "val"
 
     .prologue
-    .line 571
+    .line 578
     iput-boolean p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_bSameNetwork:Z
 
-    .line 572
+    .line 579
     return-void
 .end method
 
@@ -2445,10 +2482,10 @@
     .parameter "val"
 
     .prologue
-    .line 445
+    .line 452
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_bizName:Ljava/lang/String;
 
-    .line 446
+    .line 453
     return-void
 .end method
 
@@ -2457,10 +2494,10 @@
     .parameter "val"
 
     .prologue
-    .line 466
+    .line 473
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_cname:Ljava/lang/String;
 
-    .line 467
+    .line 474
     return-void
 .end method
 
@@ -2469,10 +2506,10 @@
     .parameter "val"
 
     .prologue
-    .line 487
+    .line 494
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_callerId:Ljava/lang/String;
 
-    .line 488
+    .line 495
     return-void
 .end method
 
@@ -2481,10 +2518,10 @@
     .parameter "val"
 
     .prologue
-    .line 508
+    .line 515
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_firstName:Ljava/lang/String;
 
-    .line 509
+    .line 516
     return-void
 .end method
 
@@ -2493,10 +2530,10 @@
     .parameter "val"
 
     .prologue
-    .line 248
+    .line 255
     iput-boolean p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_hasLookupBeenPerformed:Z
 
-    .line 249
+    .line 256
     return-void
 .end method
 
@@ -2505,10 +2542,10 @@
     .parameter "val"
 
     .prologue
-    .line 407
+    .line 414
     iput-boolean p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_isCityIdCurrentlyDisplayed:Z
 
-    .line 408
+    .line 415
     return-void
 .end method
 
@@ -2517,10 +2554,10 @@
     .parameter "val"
 
     .prologue
-    .line 392
+    .line 399
     iput-boolean p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_isDisplayOneLine:Z
 
-    .line 393
+    .line 400
     return-void
 .end method
 
@@ -2529,10 +2566,10 @@
     .parameter "val"
 
     .prologue
-    .line 236
+    .line 243
     iput-boolean p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_isNanp:Z
 
-    .line 237
+    .line 244
     return-void
 .end method
 
@@ -2541,10 +2578,10 @@
     .parameter "val"
 
     .prologue
-    .line 529
+    .line 536
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_lastName:Ljava/lang/String;
 
-    .line 530
+    .line 537
     return-void
 .end method
 
@@ -2553,10 +2590,10 @@
     .parameter "val"
 
     .prologue
-    .line 634
+    .line 641
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_picture:Landroid/graphics/Bitmap;
 
-    .line 635
+    .line 642
     return-void
 .end method
 
@@ -2565,10 +2602,10 @@
     .parameter "val"
 
     .prologue
-    .line 270
+    .line 277
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCityName:Ljava/lang/String;
 
-    .line 271
+    .line 278
     return-void
 .end method
 
@@ -2577,10 +2614,10 @@
     .parameter "val"
 
     .prologue
-    .line 327
+    .line 334
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_strCountryName:Ljava/lang/String;
 
-    .line 328
+    .line 335
     return-void
 .end method
 
@@ -2589,10 +2626,10 @@
     .parameter "val"
 
     .prologue
-    .line 351
+    .line 358
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_strDisplayName:Ljava/lang/String;
 
-    .line 352
+    .line 359
     return-void
 .end method
 
@@ -2601,10 +2638,10 @@
     .parameter "val"
 
     .prologue
-    .line 308
+    .line 315
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateAbrv:Ljava/lang/String;
 
-    .line 309
+    .line 316
     return-void
 .end method
 
@@ -2613,10 +2650,10 @@
     .parameter "val"
 
     .prologue
-    .line 289
+    .line 296
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_strStateName:Ljava/lang/String;
 
-    .line 290
+    .line 297
     return-void
 .end method
 
@@ -2625,10 +2662,10 @@
     .parameter "val"
 
     .prologue
-    .line 422
+    .line 429
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_tvOneLineDisplay:Landroid/widget/TextView;
 
-    .line 423
+    .line 430
     return-void
 .end method
 
@@ -2637,10 +2674,10 @@
     .parameter "val"
 
     .prologue
-    .line 550
+    .line 557
     iput-object p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_urlPicture:Ljava/lang/String;
 
-    .line 551
+    .line 558
     return-void
 .end method
 
@@ -2649,9 +2686,9 @@
     .parameter "val"
 
     .prologue
-    .line 376
+    .line 383
     iput p1, p0, Lcom/htc/util/phone/CityIdInfo;->m_wDisplayComputed:I
 
-    .line 377
+    .line 384
     return-void
 .end method

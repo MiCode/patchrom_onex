@@ -36,21 +36,21 @@
     .parameter "pos"
 
     .prologue
-    .line 1489
+    .line 1495
     iput-object p1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1490
+    .line 1496
     iput p2, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->dist:I
 
-    .line 1491
+    .line 1497
     iput p3, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->end:I
 
-    .line 1492
+    .line 1498
     iput p4, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->pos:I
 
-    .line 1493
+    .line 1499
     return-void
 .end method
 
@@ -63,7 +63,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1512
+    .line 1518
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -73,7 +73,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1513
+    .line 1519
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -83,7 +83,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/CarouselTextView;->enableClickMultiply(Z)V
 
-    .line 1516
+    .line 1522
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
@@ -94,7 +94,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1517
+    .line 1523
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->mClickAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
@@ -104,7 +104,7 @@
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 1519
+    .line 1525
     :cond_1
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
@@ -113,7 +113,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->isScaleAnimation:Z
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/FastScroller;->access$1402(Lcom/htc/fragment/widget/FastScroller;Z)Z
 
-    .line 1520
+    .line 1526
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -125,7 +125,7 @@
 
     if-nez v0, :cond_2
 
-    .line 1521
+    .line 1527
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -134,7 +134,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/FastScroller;->setState(I)V
 
-    .line 1522
+    .line 1528
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleOutAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/fragment/widget/FastScroller$FlingRunnable;->startUsingDistance(III)V
 
-    .line 1524
+    .line 1530
     :cond_2
     return-void
 .end method
@@ -162,7 +162,7 @@
     .parameter "anim"
 
     .prologue
-    .line 1507
+    .line 1513
     return-void
 .end method
 
@@ -171,6 +171,6 @@
     .parameter "anim"
 
     .prologue
-    .line 1500
+    .line 1506
     return-void
 .end method

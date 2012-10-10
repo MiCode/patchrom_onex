@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/htc/wrap/android/provider/HtcWrapSettings$Profile;,
         Lcom/htc/wrap/android/provider/HtcWrapSettings$HTCservices;,
         Lcom/htc/wrap/android/provider/HtcWrapSettings$Bookmarks;,
         Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;,
@@ -46,7 +47,7 @@
     .line 40
     invoke-direct {p0}, Lcom/htc/wrap/android/provider/Settings;-><init>()V
 
-    .line 3832
+    .line 4043
     return-void
 .end method
 
@@ -55,12 +56,12 @@
     .parameter "message"
 
     .prologue
-    .line 4166
+    .line 4253
     const-string v0, "HtcWrapSettings"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4167
+    .line 4254
     return-void
 .end method
 
@@ -130,18 +131,18 @@
     .parameter "command"
 
     .prologue
-    .line 4119
+    .line 4206
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 4120
+    .line 4207
     .local v1, content:Ljava/lang/StringBuffer;
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 4124
+    .line 4211
     .local v3, error:Ljava/lang/StringBuffer;
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -152,7 +153,7 @@
 
     move-result-object v5
 
-    .line 4127
+    .line 4214
     .local v5, process:Ljava/lang/Process;
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -166,7 +167,7 @@
 
     invoke-direct {v0, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 4129
+    .line 4216
     .local v0, br:Ljava/io/BufferedReader;
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -176,10 +177,10 @@
     .local v4, line:Ljava/lang/String;
     if-eqz v4, :cond_1
 
-    .line 4130
+    .line 4217
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 4131
+    .line 4218
     const-string v6, "\n"
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -189,25 +190,25 @@
 
     goto :goto_0
 
-    .line 4149
+    .line 4236
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v4           #line:Ljava/lang/String;
     .end local v5           #process:Ljava/lang/Process;
     :catch_0
     move-exception v2
 
-    .line 4150
+    .line 4237
     .local v2, e:Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 4151
+    .line 4238
     const-string v6, "HtcWrapSettings"
 
     const-string v7, "getCommandResults() got an IOException!"
 
     invoke-static {v6, v7, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4157
+    .line 4244
     .end local v2           #e:Ljava/io/IOException;
     :cond_0
     :goto_1
@@ -217,7 +218,7 @@
 
     return-object v6
 
-    .line 4133
+    .line 4220
     .restart local v0       #br:Ljava/io/BufferedReader;
     .restart local v4       #line:Ljava/lang/String;
     .restart local v5       #process:Ljava/lang/Process;
@@ -225,7 +226,7 @@
     :try_start_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
 
-    .line 4136
+    .line 4223
     new-instance v0, Ljava/io/BufferedReader;
 
     .end local v0           #br:Ljava/io/BufferedReader;
@@ -239,7 +240,7 @@
 
     invoke-direct {v0, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 4138
+    .line 4225
     .restart local v0       #br:Ljava/io/BufferedReader;
     :goto_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -248,10 +249,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 4139
+    .line 4226
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 4140
+    .line 4227
     const-string v6, "\n"
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -261,18 +262,18 @@
 
     goto :goto_2
 
-    .line 4152
+    .line 4239
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v4           #line:Ljava/lang/String;
     .end local v5           #process:Ljava/lang/Process;
     :catch_1
     move-exception v2
 
-    .line 4153
+    .line 4240
     .local v2, e:Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 4154
+    .line 4241
     const-string v6, "HtcWrapSettings"
 
     const-string v7, "getCommandResults() got an Exception!"
@@ -281,7 +282,7 @@
 
     goto :goto_1
 
-    .line 4142
+    .line 4229
     .end local v2           #e:Ljava/lang/Exception;
     .restart local v0       #br:Ljava/io/BufferedReader;
     .restart local v4       #line:Ljava/lang/String;
@@ -290,14 +291,14 @@
     :try_start_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
 
-    .line 4145
+    .line 4232
     invoke-virtual {v3}, Ljava/lang/StringBuffer;->length()I
 
     move-result v6
 
     if-lez v6, :cond_0
 
-    .line 4146
+    .line 4233
     const-string v6, "HtcWrapSettings"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -320,7 +321,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4147
+    .line 4234
     const-string v6, "HtcWrapSettings"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -353,6 +354,6 @@
     .locals 0
 
     .prologue
-    .line 4036
+    .line 4123
     return-void
 .end method

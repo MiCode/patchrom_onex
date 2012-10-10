@@ -186,7 +186,7 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "ignore_backoff"
+    const-string v0, "ignore_backoff"
 
     invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -194,7 +194,7 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "ignore_settings"
+    const-string v0, "ignore_settings"
 
     invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -202,7 +202,7 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "initialize"
+    const-string v0, "initialize"
 
     invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -230,7 +230,7 @@
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "illegal extras were set"
+    const-string v1, "illegal extras were set"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2922,7 +2922,7 @@
 
     .line 736
     .local v1, durationMillis:J
-    const-string/jumbo v4, "insert"
+    const-string v4, "insert"
 
     const/4 v5, 0x0
 

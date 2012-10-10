@@ -51,7 +51,7 @@
     .locals 3
 
     .prologue
-    .line 38924
+    .line 39337
     const/16 v0, 0xc
 
     new-array v0, v0, [I
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcom/htc/music/R$styleable;->HtcSeekBar:[I
 
-    .line 39103
+    .line 39516
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -75,7 +75,7 @@
 
     return-void
 
-    .line 38924
+    .line 39337
     :array_0
     .array-data 0x4
         0x1t 0x0t 0x1t 0x7ft
@@ -97,7 +97,7 @@
     .locals 0
 
     .prologue
-    .line 38891
+    .line 39304
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

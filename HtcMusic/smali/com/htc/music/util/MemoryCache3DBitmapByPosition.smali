@@ -78,7 +78,7 @@
 
     if-gtz v10, :cond_1
 
-    .line 91
+    .line 101
     :cond_0
     :goto_0
     return v8
@@ -175,11 +175,25 @@
     move-result v6
 
     .line 49
+    iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmap;->mCount:I
+
+    if-le v10, v11, :cond_4
+
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mMaxDistance:I
 
     if-le v6, v10, :cond_4
 
-    .line 50
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v10
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    if-ge v10, v11, :cond_4
+
+    .line 51
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
 
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
@@ -196,7 +210,7 @@
 
     sub-int v6, v10, v11
 
-    .line 52
+    .line 55
     :cond_4
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -210,12 +224,26 @@
 
     move-result v1
 
-    .line 53
+    .line 56
+    iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmap;->mCount:I
+
+    if-le v10, v11, :cond_5
+
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mMaxDistance:I
 
     if-le v1, v10, :cond_5
 
-    .line 54
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v10
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    if-ge v10, v11, :cond_5
+
+    .line 58
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -232,25 +260,25 @@
 
     sub-int v1, v10, v11
 
-    .line 56
+    .line 62
     :cond_5
     if-le v1, v6, :cond_3
 
-    .line 57
+    .line 63
     move-object v7, v2
 
     goto :goto_1
 
-    .line 63
+    .line 69
     :cond_6
     if-nez v7, :cond_7
 
     move v8, v9
 
-    .line 64
-    goto :goto_0
+    .line 70
+    goto/16 :goto_0
 
-    .line 68
+    .line 74
     :cond_7
     const-string v10, "[MemoryCache3DBitmapByPosition]"
 
@@ -276,10 +304,10 @@
 
     invoke-static {v10, v11}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
+    .line 75
     const/4 v4, 0x0
 
-    .line 70
+    .line 76
     .local v4, keyDisparity:I
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
@@ -293,12 +321,26 @@
 
     move-result v6
 
-    .line 71
+    .line 77
+    iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmap;->mCount:I
+
+    if-le v10, v11, :cond_8
+
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mMaxDistance:I
 
     if-le v6, v10, :cond_8
 
-    .line 72
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v10
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    if-ge v10, v11, :cond_8
+
+    .line 79
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
 
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
@@ -315,7 +357,7 @@
 
     sub-int v6, v10, v11
 
-    .line 75
+    .line 83
     :cond_8
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -329,12 +371,26 @@
 
     move-result v4
 
-    .line 76
+    .line 84
+    iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmap;->mCount:I
+
+    if-le v10, v11, :cond_9
+
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mMaxDistance:I
 
     if-le v4, v10, :cond_9
 
-    .line 77
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v10
+
+    iget v11, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
+
+    if-ge v10, v11, :cond_9
+
+    .line 86
     iget v10, p0, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->mQueueLen:I
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -351,16 +407,16 @@
 
     sub-int v4, v10, v11
 
-    .line 80
+    .line 90
     :cond_9
     if-le v4, v6, :cond_a
 
     move v8, v9
 
-    .line 81
+    .line 91
     goto/16 :goto_0
 
-    .line 84
+    .line 94
     :cond_a
     iget-object v9, p0, Lcom/htc/music/util/MemoryCacheBase;->mItems:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -370,7 +426,7 @@
 
     check-cast v0, Lcom/htc/sunny2/SBitmap;
 
-    .line 85
+    .line 95
     .local v0, bmp:Lcom/htc/sunny2/SBitmap;
     const-string v9, "[MemoryCache3DBitmapByPosition]"
 
@@ -398,10 +454,10 @@
 
     invoke-static {v9, v10}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
+    .line 97
     if-eqz v0, :cond_0
 
-    .line 88
+    .line 98
     invoke-virtual {p0, v0}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->releaseItemResource(Lcom/htc/sunny2/SBitmap;)V
 
     goto/16 :goto_0

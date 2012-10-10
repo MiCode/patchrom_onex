@@ -556,7 +556,7 @@
     iput-object v4, p0, Landroid/appwidget/AppWidgetHostView;->mRemoteContext:Landroid/content/Context;
 
     .line 446
-    const-string/jumbo v5, "layout_inflater"
+    const-string v5, "layout_inflater"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

@@ -300,7 +300,7 @@
 
     .prologue
     .line 434
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -1458,7 +1458,7 @@
 
     .line 713
     .local v1, values:Landroid/content/ContentValues;
-    const-string/jumbo v2, "last_time_contacted"
+    const-string v2, "last_time_contacted"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

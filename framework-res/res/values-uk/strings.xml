@@ -1288,7 +1288,7 @@
     <string name="permdesc_changeUsbnetMulticastState">Дозволяє програмі отримувати пакети, адресовані не напряму для цього пристрою. Це може бути придатним для виявлення працюючих поблизу служб. При цьому споживається більше енергії, ніж в режимі не мультитрансляції.</string>
     <string name="hutch_htctethered_notification_title">PocketWifi активний</string>
     <string name="localized_opertator_name_kddi_roaming">Міжнародний роумінг</string>
-    <string name="localized_opertator_name_unknown">Unknown Network</string>
+    <string name="localized_opertator_name_unknown">Невідома мережа</string>
     <string name="encryption_password_required">Потрібен пароль шифрування</string>
     <string name="encryption_password_text">Введіть пароль шифрування</string>
     <string name="ext_media_ro_notification_title">"Карта пам'яті тільки для читання (не зашифрована)"</string>

@@ -23,6 +23,10 @@
 
 .field private static final CHANGE_WEEKS:I = 0x1e
 
+.field private static final DELETE_ALL_PLAYLISTS:I = 0x23
+
+.field private static final DELETE_ALL_PLAYLISTS_MESSAGE:I = 0x0
+
 .field private static final DELETE_CURRENT_PLAYLIST:I = 0x1b
 
 .field private static final DELETE_PLAYLISTS:I = 0x22
@@ -89,6 +93,10 @@
 
 .field private mSelectedId:I
 
+.field mUiHandler:Landroid/os/Handler;
+
+.field private mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
 .field menuOpened:Z
 
 
@@ -97,7 +105,7 @@
     .locals 1
 
     .prologue
-    .line 106
+    .line 109
     const/4 v0, 0x0
 
     sput v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->RECENT_PLAYLIST_POSITION:I
@@ -117,27 +125,30 @@
 
     const/4 v2, 0x0
 
-    .line 74
+    .line 75
     invoke-direct {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;-><init>()V
 
-    .line 110
+    .line 113
     iput-object v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mAddToPlaylistData:[I
 
-    .line 111
+    .line 114
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
-    .line 112
+    .line 115
     iput v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
-    .line 113
+    .line 116
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mRecentPlayedPos:I
 
-    .line 114
+    .line 117
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mExitByErrorIntent:Z
 
-    .line 159
+    .line 121
+    iput-object v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    .line 164
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -150,17 +161,17 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCols:[Ljava/lang/String;
 
-    .line 199
+    .line 213
     new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$1;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$1;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPlaybackStatusReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 252
+    .line 266
     iput-object v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
-    .line 815
+    .line 843
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -173,7 +184,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPlaylistMemberCols:[Ljava/lang/String;
 
-    .line 819
+    .line 847
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -186,22 +197,29 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCursorCols:[Ljava/lang/String;
 
-    .line 824
+    .line 852
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->menuOpened:Z
 
-    .line 825
-    new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$8;
-
-    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$8;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
-
-    iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mDelayFinishHandler:Landroid/os/Handler;
-
-    .line 889
+    .line 853
     new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$9;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$9;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
+    iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mDelayFinishHandler:Landroid/os/Handler;
+
+    .line 917
+    new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$10;
+
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$10;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+
     iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mAddPlaylistBtnListener:Landroid/view/View$OnClickListener;
+
+    .line 1518
+    new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$14;
+
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$14;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+
+    iput-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUiHandler:Landroid/os/Handler;
 
     return-void
 .end method
@@ -211,7 +229,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -222,7 +240,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     return-object v0
@@ -233,7 +251,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     return-object v0
@@ -244,7 +262,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -255,7 +273,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -268,7 +286,7 @@
     .parameter "x2"
 
     .prologue
-    .line 74
+    .line 75
     invoke-direct {p0, p1, p2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPlaylistFirstTrackCursor(Ljava/lang/String;Z)Landroid/database/Cursor;
 
     move-result-object v0
@@ -281,7 +299,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -292,7 +310,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -303,7 +321,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->createNewPlaylist()V
 
     return-void
@@ -314,7 +332,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
 
     return v0
@@ -325,7 +343,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -336,7 +354,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     return-object v0
@@ -346,7 +364,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 75
     sget v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->RECENT_PLAYLIST_POSITION:I
 
     return v0
@@ -357,7 +375,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
 
     return v0
@@ -368,7 +386,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -380,10 +398,87 @@
     .parameter "x1"
 
     .prologue
-    .line 74
+    .line 75
     iput-boolean p1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewRefreshDisable:Z
 
     return p1
+.end method
+
+.method static synthetic access$2300(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2400(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2500(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2600(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2700(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2800(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mDeleteAnimationListener:Lcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2900(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+
+    return-object v0
 .end method
 
 .method static synthetic access$300(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -391,7 +486,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     return-object v0
@@ -402,7 +497,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     return-object v0
@@ -413,7 +508,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     return-object v0
@@ -424,7 +519,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewPreparator:Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
 
     return-object v0
@@ -435,7 +530,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-boolean v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewInitFinish:Z
 
     return v0
@@ -446,7 +541,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -457,7 +552,7 @@
     .parameter "x0"
 
     .prologue
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     return-object v0
@@ -472,33 +567,33 @@
 
     const/4 v6, 0x0
 
-    .line 850
+    .line 878
     if-nez p1, :cond_1
 
-    .line 863
+    .line 891
     :cond_0
     :goto_0
     return-void
 
-    .line 851
+    .line 879
     :cond_1
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     if-eqz v4, :cond_0
 
-    .line 852
+    .line 880
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     if-eqz v4, :cond_0
 
-    .line 853
+    .line 881
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     invoke-interface {v4}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
 
-    .line 854
+    .line 882
     .local v2, parentCount:I
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -506,7 +601,7 @@
 
     move-result v3
 
-    .line 855
+    .line 883
     .local v3, selectCount:I
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -514,7 +609,7 @@
 
     move-result v0
 
-    .line 857
+    .line 885
     .local v0, deselectCount:I
     const/16 v4, 0x20
 
@@ -525,7 +620,7 @@
     .local v1, item:Landroid/view/MenuItem;
     if-eqz v1, :cond_2
 
-    .line 858
+    .line 886
     if-eq v2, v0, :cond_3
 
     move v4, v5
@@ -533,7 +628,7 @@
     :goto_1
     invoke-interface {v1, v4}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 860
+    .line 888
     :cond_2
     const/16 v4, 0x1f
 
@@ -543,7 +638,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 861
+    .line 889
     if-eq v2, v3, :cond_4
 
     :goto_2
@@ -554,13 +649,13 @@
     :cond_3
     move v4, v6
 
-    .line 858
+    .line 886
     goto :goto_1
 
     :cond_4
     move v5, v6
 
-    .line 861
+    .line 889
     goto :goto_2
 .end method
 
@@ -568,43 +663,43 @@
     .locals 4
 
     .prologue
-    .line 867
+    .line 895
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 868
+    .line 896
     .local v0, intent:Landroid/content/Intent;
     const-class v2, Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-virtual {v0, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 869
+    .line 897
     iget v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
     if-nez v2, :cond_0
 
-    .line 870
+    .line 898
     const-string v2, "addtrack"
 
     const/4 v3, 0x1
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 872
+    .line 900
     :cond_0
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     if-eqz v2, :cond_3
 
-    .line 873
+    .line 901
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
-    .line 874
+    .line 902
     .local v1, playlistCount:I
     iget-boolean v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
@@ -612,45 +707,45 @@
 
     if-lez v1, :cond_1
 
-    .line 875
+    .line 903
     add-int/lit8 v1, v1, -0x1
 
-    .line 877
+    .line 905
     :cond_1
     iget v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mRecentPlayedPos:I
 
     if-ltz v2, :cond_2
 
-    .line 878
+    .line 906
     add-int/lit8 v1, v1, -0x1
 
-    .line 879
+    .line 907
     :cond_2
     const-string v2, "playlistcount"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 882
+    .line 910
     .end local v1           #playlistCount:I
     :cond_3
     iget-object v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mAddToPlaylistData:[I
 
     if-eqz v2, :cond_4
 
-    .line 883
+    .line 911
     const-string v2, "AddToPlaylistData"
 
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mAddToPlaylistData:[I
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[I)Landroid/content/Intent;
 
-    .line 886
+    .line 914
     :cond_4
     const/16 v2, 0x21
 
     invoke-virtual {p0, v0, v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 887
+    .line 915
     return-void
 .end method
 
@@ -658,22 +753,22 @@
     .locals 4
 
     .prologue
-    .line 1060
+    .line 1088
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 1061
+    .line 1089
     .local v0, handler:Landroid/os/Handler;
-    new-instance v1, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$11;
+    new-instance v1, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;
 
-    invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$11;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+    invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
     const-wide/16 v2, 0x64
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1066
+    .line 1094
     return-void
 .end method
 
@@ -681,7 +776,7 @@
     .locals 1
 
     .prologue
-    .line 1037
+    .line 1065
     iget v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
     return v0
@@ -693,49 +788,49 @@
     .parameter "filterstring"
 
     .prologue
-    .line 614
+    .line 642
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 615
+    .line 643
     .local v12, where:Ljava/lang/StringBuilder;
     const-string v0, "name != \'\'"
 
     invoke-virtual {v12, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 618
+    .line 646
     const/4 v6, 0x0
 
-    .line 619
+    .line 647
     .local v6, keywords:[Ljava/lang/String;
     if-eqz p2, :cond_1
 
-    .line 620
+    .line 648
     const-string v0, " "
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v11
 
-    .line 621
+    .line 649
     .local v11, searchWords:[Ljava/lang/String;
     array-length v0, v11
 
     new-array v6, v0, [Ljava/lang/String;
 
-    .line 622
+    .line 650
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v8
 
-    .line 623
+    .line 651
     .local v8, col:Ljava/text/Collator;
     const/4 v0, 0x0
 
     invoke-virtual {v8, v0}, Ljava/text/Collator;->setStrength(I)V
 
-    .line 624
+    .line 652
     const/4 v10, 0x0
 
     .local v10, i:I
@@ -744,7 +839,7 @@
 
     if-ge v10, v0, :cond_0
 
-    .line 625
+    .line 653
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -773,12 +868,12 @@
 
     aput-object v0, v6, v10
 
-    .line 624
+    .line 652
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 627
+    .line 655
     :cond_0
     const/4 v10, 0x0
 
@@ -787,38 +882,38 @@
 
     if-ge v10, v0, :cond_1
 
-    .line 628
+    .line 656
     const-string v0, " AND "
 
     invoke-virtual {v12, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 629
+    .line 657
     const-string v0, "name LIKE ?"
 
     invoke-virtual {v12, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 627
+    .line 655
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 634
+    .line 662
     .end local v8           #col:Ljava/text/Collator;
     .end local v10           #i:I
     .end local v11           #searchWords:[Ljava/lang/String;
     :cond_1
     const/4 v9, 0x0
 
-    .line 635
+    .line 663
     .local v9, cursor:Landroid/database/Cursor;
     if-eqz p1, :cond_2
 
-    .line 636
+    .line 664
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setAsyncQueryStatus(Z)V
 
-    .line 637
+    .line 665
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -837,17 +932,17 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/htc/music/util/DlArtAsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 644
+    .line 672
     :goto_2
     return-object v9
 
-    .line 639
+    .line 667
     :cond_2
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setAsyncQueryStatus(Z)V
 
-    .line 640
+    .line 668
     sget-object v3, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     iget-object v4, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCols:[Ljava/lang/String;
@@ -864,7 +959,7 @@
 
     move-result-object v9
 
-    .line 641
+    .line 669
     const/4 v0, 0x0
 
     invoke-virtual {p0, v9, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mergeExtraCursor(Landroid/database/Cursor;Ljava/lang/String;)Landroid/database/Cursor;
@@ -882,10 +977,10 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 699
+    .line 727
     const/4 v8, 0x0
 
-    .line 700
+    .line 728
     .local v8, ret:Landroid/database/Cursor;
     const-string v0, "[PlaylistBrowserActivityGrid]"
 
@@ -909,18 +1004,18 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 701
+    .line 729
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 702
+    .line 730
     .local v9, where:Ljava/lang/StringBuilder;
     const-string v0, "title != \'\'"
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 703
+    .line 731
     const-string v0, "-5"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -929,22 +1024,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 704
+    .line 732
     const-string v0, "[PlaylistBrowserActivityGrid]"
 
     const-string v1, "prepare recent playlist+"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 705
+    .line 733
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v0, :cond_1
 
-    .line 706
+    .line 734
     const/4 v7, 0x0
 
-    .line 708
+    .line 736
     .local v7, recentPlayed:[I
     :try_start_0
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
@@ -953,14 +1048,14 @@
 
     move-result-object v7
 
-    .line 709
+    .line 737
     if-eqz v7, :cond_0
 
     array-length v0, v7
 
     if-lez v0, :cond_0
 
-    .line 712
+    .line 740
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -985,12 +1080,12 @@
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 722
+    .line 750
     const-string v0, " AND is_music>=1"
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 723
+    .line 751
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCursorCols:[Ljava/lang/String;
@@ -1011,7 +1106,7 @@
 
     move-result-object v8
 
-    .line 743
+    .line 771
     .end local v7           #recentPlayed:[I
     :cond_0
     :goto_0
@@ -1021,7 +1116,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 756
+    .line 784
     :goto_1
     if-eqz v8, :cond_3
 
@@ -1031,21 +1126,21 @@
 
     if-lez v0, :cond_3
 
-    .line 757
+    .line 785
     invoke-direct {p0, v8}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->joinFirstTrackAlbumArt(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 763
+    .line 791
     :goto_2
     return-object v0
 
-    .line 737
+    .line 765
     .restart local v7       #recentPlayed:[I
     :catch_0
     move-exception v6
 
-    .line 738
+    .line 766
     .local v6, ex:Landroid/os/RemoteException;
     const-string v0, "[PlaylistBrowserActivityGrid]"
 
@@ -1055,7 +1150,7 @@
 
     goto :goto_0
 
-    .line 741
+    .line 769
     .end local v6           #ex:Landroid/os/RemoteException;
     .end local v7           #recentPlayed:[I
     :cond_1
@@ -1067,7 +1162,7 @@
 
     goto :goto_0
 
-    .line 747
+    .line 775
     :cond_2
     const-string v0, "external"
 
@@ -1101,7 +1196,7 @@
 
     goto :goto_1
 
-    .line 759
+    .line 787
     :cond_3
     const-string v0, "[PlaylistBrowserActivityGrid]"
 
@@ -1111,7 +1206,7 @@
 
     move-object v0, v10
 
-    .line 763
+    .line 791
     goto :goto_2
 .end method
 
@@ -1121,7 +1216,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 404
+    .line 432
     const v2, 0x7f080073
 
     invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->findViewById(I)Landroid/view/View;
@@ -1132,23 +1227,23 @@
 
     iput-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mSurfaceView:Lcom/htc/sunny2/view/SSurfaceView;
 
-    .line 405
+    .line 433
     new-instance v2, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     invoke-direct {v2, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;-><init>(Landroid/app/Activity;)V
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
-    .line 406
+    .line 434
     new-instance v0, Lcom/htc/music/widget/gridview/MusicGridViewItemParams;
 
     invoke-direct {v0, p0}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams;-><init>(Landroid/content/Context;)V
 
-    .line 407
+    .line 435
     .local v0, folderParam:Lcom/htc/music/widget/gridview/MusicGridViewItemParams;
     invoke-direct {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initMusicGridViewItemParams(Lcom/htc/music/widget/gridview/MusicGridViewItemParams;)V
 
-    .line 409
+    .line 437
     new-instance v1, Lcom/htc/music/widget/gridview/MusicGridViewItem;
 
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mSurfaceView:Lcom/htc/sunny2/view/SSurfaceView;
@@ -1159,11 +1254,11 @@
 
     invoke-direct {v1, p0, v2, v0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;-><init>(Landroid/content/Context;Lcom/htc/sunny2/SunnyContext;Lcom/htc/music/widget/gridview/MusicGridViewItemParams;)V
 
-    .line 410
+    .line 438
     .local v1, gridViewItem:Lcom/htc/music/widget/gridview/MusicGridViewItem;
     invoke-direct {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initMusicGridViewItem(Lcom/htc/music/widget/gridview/MusicGridViewItem;)V
 
-    .line 412
+    .line 440
     new-instance v2, Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1180,15 +1275,15 @@
 
     iput-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewPreparator:Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
 
-    .line 413
+    .line 441
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewPreparator:Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
 
     invoke-direct {p0, v2, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initGridViewPreparator(Lcom/htc/music/widget/gridview/MusicGridViewPreparator;Lcom/htc/music/widget/gridview/MusicGridViewItemParams;)V
 
-    .line 414
+    .line 442
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initMusicGridViewUtil()V
 
-    .line 415
+    .line 443
     new-instance v2, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mSurfaceView:Lcom/htc/sunny2/view/SSurfaceView;
@@ -1201,7 +1296,7 @@
 
     iput-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
-    .line 416
+    .line 444
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
@@ -1210,7 +1305,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setVerticalSpacing(I)V
 
-    .line 417
+    .line 445
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
@@ -1219,35 +1314,35 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setHorizontalSpacing(I)V
 
-    .line 418
+    .line 446
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewItemClickListener:Lcom/htc/sunny2/widget/gridview/GridView$OnItemClickListener;
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setOnItemClickListener(Lcom/htc/sunny2/widget/gridview/GridView$OnItemClickListener;)V
 
-    .line 419
+    .line 447
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mViewItemLongClickListener:Lcom/htc/sunny2/widget/gridview/GridView$OnItemLongClickListener;
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setOnItemLongClickListener(Lcom/htc/sunny2/widget/gridview/GridView$OnItemLongClickListener;)V
 
-    .line 420
+    .line 448
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewPreparator:Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setPreparation(Lcom/htc/sunny2/widget/gridview/GridViewPreparator;)V
 
-    .line 421
+    .line 449
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     const v3, 0x2080001
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setGlobalBackgroundResource(I)V
 
-    .line 423
+    .line 451
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
@@ -1260,33 +1355,33 @@
 
     invoke-virtual {v2, v5, v3, v5, v4}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setPadding(IIII)V
 
-    .line 424
+    .line 452
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mSurfaceView:Lcom/htc/sunny2/view/SSurfaceView;
 
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/view/SSurfaceView;->addView(Lcom/htc/sunny2/view/SView;)V
 
-    .line 425
+    .line 453
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     invoke-virtual {v2, v5}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setVisibility(Z)V
 
-    .line 426
+    .line 454
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewScrollListener:Lcom/htc/sunny2/widget/gridview/interfaces/OnScrollListener;
 
     invoke-virtual {v2, v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setOnScrollListener(Lcom/htc/sunny2/widget/gridview/interfaces/OnScrollListener;)V
 
-    .line 427
+    .line 455
     iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewPreparator:Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
 
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     invoke-virtual {v2, v3}, Lcom/htc/music/widget/gridview/MusicGridViewPreparator;->updateMusicGridViewUtil(Lcom/htc/music/widget/gridview/MusicGridViewUtil;)V
 
-    .line 428
+    .line 456
     return-void
 .end method
 
@@ -1296,7 +1391,7 @@
     .parameter "folderParam"
 
     .prologue
-    .line 586
+    .line 614
     new-instance v0, Lcom/htc/music/widget/gridview/MusicGridViewParamsPreparator;
 
     const/4 v1, 0x1
@@ -1307,18 +1402,18 @@
 
     invoke-direct {v0, v1}, Lcom/htc/music/widget/gridview/MusicGridViewParamsPreparator;-><init>(I)V
 
-    .line 587
+    .line 615
     .local v0, paramsPreparator:Lcom/htc/music/widget/gridview/MusicGridViewParamsPreparator;
     invoke-virtual {p1, p0, v0}, Lcom/htc/music/widget/gridview/MusicGridViewPreparator;->init(Landroid/content/Context;Lcom/htc/sunny2/IParamsPreparator;)V
 
-    .line 588
-    new-instance v1, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$7;
+    .line 616
+    new-instance v1, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$8;
 
-    invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$7;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+    invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$8;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
     invoke-virtual {p1, v1}, Lcom/htc/music/widget/gridview/MusicGridViewPreparator;->setUpdateListener(Lcom/htc/sunny2/Preparator$UpdateListener;)V
 
-    .line 609
+    .line 637
     return-void
 .end method
 
@@ -1327,21 +1422,21 @@
     .parameter "gridViewItem"
 
     .prologue
-    .line 504
-    new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;
-
-    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
-
-    invoke-virtual {p1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setTextViewBindListener(Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;)V
-
-    .line 527
+    .line 532
     new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$5;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$5;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
+    invoke-virtual {p1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setTextViewBindListener(Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;)V
+
+    .line 555
+    new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$6;
+
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$6;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+
     invoke-virtual {p1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewItem;->setViewItemImageGetter(Lcom/htc/music/widget/gridview/MusicGridViewItem$ViewItemImageGetter;)V
 
-    .line 551
+    .line 579
     return-void
 .end method
 
@@ -1350,86 +1445,86 @@
     .parameter "folderParam"
 
     .prologue
-    .line 474
+    .line 502
     new-instance v0, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
     invoke-direct {v0}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;-><init>()V
 
-    .line 475
+    .line 503
     .local v0, backgroundParams:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
     const v3, 0x7f02003d
 
     iput v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->defaultResourceId:I
 
-    .line 476
+    .line 504
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_width:I
 
     iput v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
 
-    .line 477
+    .line 505
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_height:I
 
     iput v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    .line 478
+    .line 506
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_marginLeft:I
 
     iput v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
 
-    .line 479
+    .line 507
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_marginTop:I
 
     iput v3, v0, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
 
-    .line 480
+    .line 508
     const/4 v3, 0x1
 
     invoke-virtual {p1, v0, v3}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams;->setViewItemParams(Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;I)V
 
-    .line 486
+    .line 514
     new-instance v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
     invoke-direct {v2}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;-><init>()V
 
-    .line 487
+    .line 515
     .local v2, thumbnail:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
     const v3, 0x7f02003e
 
     iput v3, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->defaultResourceId:I
 
-    .line 488
+    .line 516
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->thumb_marginLeft:I
 
     iput v3, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
 
-    .line 489
+    .line 517
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->thumb_marginTop:I
 
     iput v3, v2, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
 
-    .line 490
+    .line 518
     const/4 v3, 0x3
 
     invoke-virtual {p1, v2, v3}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams;->setViewItemParams(Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;I)V
 
-    .line 491
+    .line 519
     new-instance v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
 
     invoke-direct {v1}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;-><init>()V
 
-    .line 492
+    .line 520
     .local v1, textLayout:Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
@@ -1437,52 +1532,52 @@
 
     iput v3, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->height:I
 
-    .line 493
+    .line 521
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_width:I
 
     iput v3, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->width:I
 
-    .line 494
+    .line 522
     const v3, 0x7f030029
 
     iput v3, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->defaultResourceId:I
 
-    .line 495
+    .line 523
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_marginLeft:I
 
     iput v3, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginLeft:I
 
-    .line 496
+    .line 524
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_marginTop:I
 
     iput v3, v1, Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;->marginTop:I
 
-    .line 497
+    .line 525
     const/4 v3, 0x4
 
     invoke-virtual {p1, v1, v3}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams;->setViewItemParams(Lcom/htc/music/widget/gridview/MusicGridViewItemParams$ViewItemParams;I)V
 
-    .line 499
+    .line 527
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->width:I
 
     invoke-virtual {p1, v3}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams;->setItemWidth(I)V
 
-    .line 500
+    .line 528
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
 
     iget v3, v3, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->height:I
 
     invoke-virtual {p1, v3}, Lcom/htc/music/widget/gridview/MusicGridViewItemParams;->setItemHeight(I)V
 
-    .line 501
+    .line 529
     return-void
 .end method
 
@@ -1490,7 +1585,7 @@
     .locals 4
 
     .prologue
-    .line 554
+    .line 582
     new-instance v1, Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     sget-object v2, Lcom/htc/music/widget/gridview/MusicGridViewUtil$MediaType;->PLAYLIST_TYPE:Lcom/htc/music/widget/gridview/MusicGridViewUtil$MediaType;
@@ -1501,18 +1596,18 @@
 
     iput-object v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
-    .line 556
-    new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$6;
+    .line 584
+    new-instance v0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$7;
 
-    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$6;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$7;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
-    .line 582
+    .line 610
     .local v0, musicGridViewItemUpdater:Lcom/htc/music/widget/gridview/MusicGridViewUtil$MusicGridViewItemUpdater;
     iget-object v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     invoke-virtual {v1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->setMusicGridViewItemUpdater(Lcom/htc/music/widget/gridview/MusicGridViewUtil$MusicGridViewItemUpdater;)V
 
-    .line 583
+    .line 611
     return-void
 .end method
 
@@ -1521,17 +1616,17 @@
     .parameter "c"
 
     .prologue
-    .line 767
+    .line 795
     if-nez p1, :cond_0
 
-    .line 768
+    .line 796
     const/4 v0, 0x0
 
-    .line 812
+    .line 840
     :goto_0
     return-object v0
 
-    .line 770
+    .line 798
     :cond_0
     instance-of v0, p1, Lcom/htc/music/widget/AlbumArtCursorWrapper;
 
@@ -1544,25 +1639,25 @@
     :cond_1
     move-object v0, p1
 
-    .line 771
+    .line 799
     goto :goto_0
 
-    .line 774
+    .line 802
     :cond_2
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 775
+    .line 803
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 776
+    .line 804
     .local v8, albumArtMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Integer;Ljava/lang/String;>;"
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 777
+    .line 805
     .local v13, where:Ljava/lang/StringBuilder;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1594,7 +1689,7 @@
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 778
+    .line 806
     const/4 v0, 0x3
 
     new-array v2, v0, [Ljava/lang/String;
@@ -1617,7 +1712,7 @@
 
     aput-object v1, v2, v0
 
-    .line 782
+    .line 810
     .local v2, cols:[Ljava/lang/String;
     sget-object v1, Landroid/provider/MediaStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -1635,7 +1730,7 @@
 
     move-result-object v10
 
-    .line 784
+    .line 812
     .local v10, artCursor:Landroid/database/Cursor;
     if-eqz v10, :cond_3
 
@@ -1645,7 +1740,7 @@
 
     if-lez v0, :cond_3
 
-    .line 785
+    .line 813
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1654,10 +1749,10 @@
 
     move-result-object v10
 
-    .line 786
+    .line 814
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 787
+    .line 815
     :goto_1
     invoke-interface {v10}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -1665,7 +1760,7 @@
 
     if-nez v0, :cond_4
 
-    .line 788
+    .line 816
     const/4 v0, 0x0
 
     invoke-interface {v10, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1684,34 +1779,34 @@
 
     invoke-virtual {v8, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 789
+    .line 817
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_1
 
-    .line 794
+    .line 822
     :cond_3
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 795
+    .line 823
     const/4 p1, 0x0
 
-    .line 796
+    .line 824
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 799
+    .line 827
     :cond_4
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 800
+    .line 828
     .local v6, albumArt:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/ArrayList;>;"
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 801
+    .line 829
     :goto_2
     invoke-interface {p1}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -1719,14 +1814,14 @@
 
     if-nez v0, :cond_5
 
-    .line 802
+    .line 830
     new-instance v12, Ljava/util/ArrayList;
 
     const/4 v0, 0x2
 
     invoke-direct {v12, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 803
+    .line 831
     .local v12, row:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     const-string v0, "album_id"
 
@@ -1734,7 +1829,7 @@
 
     move-result v9
 
-    .line 804
+    .line 832
     .local v9, albumIdx:I
     const/4 v0, 0x0
 
@@ -1742,7 +1837,7 @@
 
     move-result v11
 
-    .line 805
+    .line 833
     .local v11, id:I
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1750,7 +1845,7 @@
 
     invoke-virtual {v12, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 806
+    .line 834
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
@@ -1765,15 +1860,15 @@
 
     invoke-virtual {v12, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 807
+    .line 835
     invoke-virtual {v6, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 808
+    .line 836
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_2
 
-    .line 811
+    .line 839
     .end local v9           #albumIdx:I
     .end local v11           #id:I
     .end local v12           #row:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
@@ -1782,7 +1877,7 @@
 
     invoke-direct {v7, v2, v6}, Lcom/htc/music/util/ArrayListCursor;-><init>([Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 812
+    .line 840
     .local v7, albumArtCrsor:Lcom/htc/music/util/ArrayListCursor;
     new-instance v0, Lcom/htc/music/widget/AlbumArtCursorWrapper;
 
@@ -1802,7 +1897,7 @@
 
     const/4 v3, 0x0
 
-    .line 1041
+    .line 1069
     iget v4, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
     if-eq v4, v7, :cond_0
@@ -1813,11 +1908,11 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 1050
+    .line 1078
     :goto_0
     return-void
 
-    .line 1044
+    .line 1072
     :cond_0
     const v4, 0x7f07005e
 
@@ -1837,7 +1932,7 @@
 
     move-result-object v1
 
-    .line 1045
+    .line 1073
     .local v1, text:Ljava/lang/String;
     iget v4, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
@@ -1865,7 +1960,7 @@
 
     move-result-object v1
 
-    .line 1047
+    .line 1075
     :goto_1
     const v4, 0x7f08001d
 
@@ -1875,19 +1970,19 @@
 
     check-cast v0, Lcom/htc/widget/HtcFooterButton;
 
-    .line 1048
+    .line 1076
     .local v0, Save:Lcom/htc/widget/HtcFooterButton;
     if-lez p1, :cond_2
 
     :goto_2
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcFooterButton;->setEnabled(Z)V
 
-    .line 1049
+    .line 1077
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcFooterButton;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 1045
+    .line 1073
     .end local v0           #Save:Lcom/htc/widget/HtcFooterButton;
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1918,7 +2013,7 @@
     :cond_2
     move v2, v3
 
-    .line 1048
+    .line 1076
     goto :goto_2
 .end method
 
@@ -1928,20 +2023,20 @@
     .locals 2
 
     .prologue
-    .line 990
+    .line 1018
     new-instance v0, Lcom/htc/music/NpCategory;
 
     const/16 v1, 0x16
 
     invoke-direct {v0, v1}, Lcom/htc/music/NpCategory;-><init>(S)V
 
-    .line 991
+    .line 1019
     .local v0, npc:Lcom/htc/music/NpCategory;
     const/4 v1, 0x0
 
     invoke-static {p0, v1, v0}, Lcom/htc/music/util/MusicUtils;->playAllPlaylist(Landroid/content/Context;ZLcom/htc/music/NpCategory;)V
 
-    .line 992
+    .line 1020
     const/4 v1, 0x1
 
     return v1
@@ -1952,12 +2047,12 @@
     .parameter "globalIndex"
 
     .prologue
-    .line 1069
+    .line 1097
     iput p1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentClickedIndex:I
 
     iput p1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
 
-    .line 1070
+    .line 1098
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     iget v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
@@ -1968,7 +2063,7 @@
 
     iput-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistId:Ljava/lang/String;
 
-    .line 1071
+    .line 1099
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistId:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1981,7 +2076,7 @@
 
     iput v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
-    .line 1072
+    .line 1100
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     iget v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
@@ -1992,7 +2087,7 @@
 
     iput-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistName:Ljava/lang/String;
 
-    .line 1073
+    .line 1101
     return-void
 .end method
 
@@ -2000,7 +2095,7 @@
     .locals 2
 
     .prologue
-    .line 997
+    .line 1025
     iget-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
     const/4 v1, 0x0
@@ -2017,7 +2112,7 @@
     .parameter "where"
 
     .prologue
-    .line 1002
+    .line 1030
     const/4 v0, 0x0
 
     return-object v0
@@ -2031,7 +2126,7 @@
 
     const/4 v6, 0x0
 
-    .line 440
+    .line 468
     iget v4, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
     if-eq v4, v7, :cond_0
@@ -2042,7 +2137,7 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 441
+    .line 469
     :cond_0
     const v4, 0x7f08004d
 
@@ -2052,11 +2147,11 @@
 
     check-cast v3, Landroid/view/ViewStub;
 
-    .line 442
+    .line 470
     .local v3, savePanelStub:Landroid/view/ViewStub;
     invoke-virtual {v3, v6}, Landroid/view/ViewStub;->setVisibility(I)V
 
-    .line 443
+    .line 471
     const v4, 0x7f08004e
 
     invoke-virtual {p0, v4}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->findViewById(I)Landroid/view/View;
@@ -2065,7 +2160,7 @@
 
     check-cast v2, Lcom/htc/widget/HtcFooter;
 
-    .line 444
+    .line 472
     .local v2, savePanel:Lcom/htc/widget/HtcFooter;
     const v4, 0x7f08001d
 
@@ -2075,7 +2170,7 @@
 
     check-cast v1, Lcom/htc/widget/HtcFooterButton;
 
-    .line 445
+    .line 473
     .local v1, Save:Lcom/htc/widget/HtcFooterButton;
     const v4, 0x2040145
 
@@ -2085,25 +2180,25 @@
 
     invoke-virtual {v1, v4}, Lcom/htc/widget/HtcFooterButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 446
+    .line 474
     iget v4, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
     if-ne v4, v7, :cond_2
 
-    .line 447
+    .line 475
     const v4, 0x20800a6
 
     invoke-virtual {v1, v4}, Lcom/htc/widget/HtcFooterButton;->setImageResource(I)V
 
-    .line 451
+    .line 479
     :goto_0
-    new-instance v4, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$2;
+    new-instance v4, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$3;
 
-    invoke-direct {v4, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$2;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+    invoke-direct {v4, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$3;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
     invoke-virtual {v1, v4}, Lcom/htc/widget/HtcFooterButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 457
+    .line 485
     const v4, 0x7f08001c
 
     invoke-virtual {p0, v4}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->findViewById(I)Landroid/view/View;
@@ -2112,28 +2207,28 @@
 
     check-cast v0, Lcom/htc/widget/HtcFooterButton;
 
-    .line 458
+    .line 486
     .local v0, Cancel:Lcom/htc/widget/HtcFooterButton;
     const v4, 0x2040152
 
     invoke-virtual {v0, v4}, Lcom/htc/widget/HtcFooterButton;->setText(I)V
 
-    .line 459
+    .line 487
     const v4, 0x20800a3
 
     invoke-virtual {v0, v4}, Lcom/htc/widget/HtcFooterButton;->setImageResource(I)V
 
-    .line 460
-    new-instance v4, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$3;
+    .line 488
+    new-instance v4, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;
 
-    invoke-direct {v4, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$3;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+    invoke-direct {v4, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
     invoke-virtual {v0, v4}, Lcom/htc/widget/HtcFooterButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 467
+    .line 495
     invoke-virtual {v2, v6}, Lcom/htc/widget/HtcFooter;->setVisibility(I)V
 
-    .line 470
+    .line 498
     .end local v0           #Cancel:Lcom/htc/widget/HtcFooterButton;
     .end local v1           #Save:Lcom/htc/widget/HtcFooterButton;
     .end local v2           #savePanel:Lcom/htc/widget/HtcFooter;
@@ -2141,10 +2236,10 @@
     :cond_1
     invoke-direct {p0, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->updateButtonCounter(I)V
 
-    .line 471
+    .line 499
     return-void
 
-    .line 449
+    .line 477
     .restart local v1       #Save:Lcom/htc/widget/HtcFooterButton;
     .restart local v2       #savePanel:Lcom/htc/widget/HtcFooter;
     .restart local v3       #savePanelStub:Landroid/view/ViewStub;
@@ -2166,25 +2261,25 @@
 
     const/4 v6, 0x2
 
-    .line 649
+    .line 677
     if-nez p1, :cond_0
 
-    .line 650
+    .line 678
     const/4 p1, 0x0
 
-    .line 695
+    .line 723
     .end local p1
     :goto_0
     return-object p1
 
-    .line 652
+    .line 680
     .restart local p1
     :cond_0
     instance-of v5, p1, Landroid/database/MergeCursor;
 
     if-eqz v5, :cond_1
 
-    .line 654
+    .line 682
     const-string v5, "[PlaylistBrowserActivityGrid]"
 
     const-string v6, "Already wrapped"
@@ -2193,24 +2288,24 @@
 
     goto :goto_0
 
-    .line 657
+    .line 685
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 658
+    .line 686
     .local v2, extraPlaylists:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/ArrayList;>;"
     iget-boolean v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
     if-eqz v5, :cond_2
 
-    .line 659
+    .line 687
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v6}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 660
+    .line 688
     .local v0, all:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     const/4 v5, -0x2
 
@@ -2220,7 +2315,7 @@
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 661
+    .line 689
     const v5, 0x7f07000a
 
     invoke-virtual {p0, v5}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getString(I)Ljava/lang/String;
@@ -2229,10 +2324,10 @@
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 662
+    .line 690
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 682
+    .line 710
     .end local v0           #all:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     :cond_2
     iget v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
@@ -2247,19 +2342,19 @@
 
     if-nez v5, :cond_3
 
-    .line 683
+    .line 711
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v6}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 684
+    .line 712
     .local v4, recent:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     const-string v5, "-5"
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 685
-    const v5, 0x7f070118
+    .line 713
+    const v5, 0x7f070119
 
     invoke-virtual {p0, v5}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getString(I)Ljava/lang/String;
 
@@ -2267,13 +2362,13 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 686
+    .line 714
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 687
+    .line 715
     iput v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mRecentPlayedPos:I
 
-    .line 690
+    .line 718
     .end local v4           #recent:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     :cond_3
     new-instance v3, Lcom/htc/music/util/ArrayListCursor;
@@ -2282,7 +2377,7 @@
 
     invoke-direct {v3, v5, v2}, Lcom/htc/music/util/ArrayListCursor;-><init>([Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 692
+    .line 720
     .local v3, extraPlaylistsCursor:Lcom/htc/music/util/ArrayListCursor;
     new-instance v1, Landroid/database/MergeCursor;
 
@@ -2299,7 +2394,7 @@
     .local v1, cc:Landroid/database/Cursor;
     move-object p1, v1
 
-    .line 695
+    .line 723
     goto :goto_0
 .end method
 
@@ -2312,30 +2407,30 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 936
+    .line 964
     sparse-switch p1, :sswitch_data_0
 
-    .line 985
+    .line 1013
     :cond_0
     :goto_0
     return-void
 
-    .line 938
+    .line 966
     :sswitch_0
     if-nez p2, :cond_1
 
-    .line 939
+    .line 967
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
     goto :goto_0
 
-    .line 941
+    .line 969
     :cond_1
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
     if-eqz v3, :cond_0
 
-    .line 942
+    .line 970
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
     const/4 v4, 0x0
@@ -2344,14 +2439,14 @@
 
     goto :goto_0
 
-    .line 947
+    .line 975
     :sswitch_1
     if-ne p2, v3, :cond_2
 
-    .line 948
+    .line 976
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setTitle()V
 
-    .line 949
+    .line 977
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     if-eqz v3, :cond_2
@@ -2364,7 +2459,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 950
+    .line 978
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     if-eqz v3, :cond_2
@@ -2373,24 +2468,24 @@
 
     if-eqz v3, :cond_2
 
-    .line 951
+    .line 979
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     invoke-interface {v3}, Landroid/database/Cursor;->requery()Z
 
-    .line 952
+    .line 980
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     invoke-virtual {v3, v4}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->updateParentMediaList(Landroid/database/Cursor;)V
 
-    .line 953
+    .line 981
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     invoke-virtual {v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange()V
 
-    .line 957
+    .line 985
     :cond_2
     const/4 v3, 0x1
 
@@ -2406,16 +2501,16 @@
 
     if-nez v3, :cond_0
 
-    .line 958
+    .line 986
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
     goto :goto_0
 
-    .line 963
+    .line 991
     :sswitch_2
     if-ne p2, v3, :cond_0
 
-    .line 964
+    .line 992
     const-string v3, "playlist"
 
     const/4 v4, 0x0
@@ -2424,7 +2519,7 @@
 
     move-result v1
 
-    .line 965
+    .line 993
     .local v1, playlist:I
     iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -2446,7 +2541,7 @@
 
     move-result-object v0
 
-    .line 966
+    .line 994
     .local v0, list:[I
     int-to-long v3, v1
 
@@ -2454,54 +2549,37 @@
 
     goto :goto_0
 
-    .line 970
+    .line 998
     .end local v0           #list:[I
     .end local v1           #playlist:I
     :sswitch_3
     if-ne p2, v3, :cond_0
 
-    .line 971
+    .line 999
     const-string v3, "selectedlist"
 
     invoke-virtual {p3, v3}, Landroid/content/Intent;->getIntegerArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 972
+    .line 1000
     .local v2, selectedList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->toIntList(Ljava/util/ArrayList;)[I
 
     move-result-object v0
 
-    .line 973
+    .line 1001
     .restart local v0       #list:[I
     invoke-static {p0, v0}, Lcom/htc/music/util/MusicUtils;->deletePlaylists(Landroid/content/Context;[I)V
 
-    .line 974
-    iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-
-    invoke-virtual {v3}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->getParentItemSelectedList()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    .line 975
-    invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->toIntList(Ljava/util/ArrayList;)[I
-
-    move-result-object v0
-
-    .line 976
-    iget-object v3, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-
-    iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
-
-    invoke-virtual {v3, v0, v4}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->deleteParentItems([ILcom/htc/sunny2/widget/gridview/ExpandableGridView;)V
-
-    .line 982
+    .line 1010
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setTitle()V
 
     goto/16 :goto_0
 
-    .line 936
+    .line 964
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_2
@@ -2516,44 +2594,44 @@
     .parameter "newConfig"
 
     .prologue
-    .line 183
+    .line 197
     const-string v0, "[PlaylistBrowserActivityGrid]"
 
     const-string v1, "onConfigurationChanged"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
+    .line 198
     iget v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mOrientation:I
 
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
     if-ne v0, v1, :cond_0
 
-    .line 185
+    .line 199
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 197
+    .line 211
     :goto_0
     return-void
 
-    .line 189
+    .line 203
     :cond_0
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
     iput v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mOrientation:I
 
-    .line 190
+    .line 204
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 192
+    .line 206
     iget v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mOrientation:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_1
 
-    .line 193
+    .line 207
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mItemLayoutParams:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$PlaylistViewItemLayoutParams;
@@ -2564,7 +2642,7 @@
 
     goto :goto_0
 
-    .line 195
+    .line 209
     :cond_1
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
@@ -2590,24 +2668,24 @@
 
     const/4 v7, 0x1
 
-    .line 256
+    .line 270
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 258
+    .line 272
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getIntent()Landroid/content/Intent;
 
     move-result-object v9
 
     iput-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
-    .line 259
+    .line 273
     iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
     invoke-virtual {v9}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 260
+    .line 274
     .local v0, action:Ljava/lang/String;
     const-string v9, "android.intent.action.CREATE_SHORTCUT"
 
@@ -2617,14 +2695,14 @@
 
     if-eqz v9, :cond_0
 
-    .line 261
+    .line 275
     iput-boolean v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
-    .line 263
+    .line 277
     :cond_0
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_7
 
-    .line 264
+    .line 278
     const-string v9, "pickermode"
 
     invoke-virtual {p1, v9, v8}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
@@ -2633,7 +2711,7 @@
 
     iput v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
-    .line 265
+    .line 279
     const-string v9, "AddToPlaylistData"
 
     invoke-virtual {p1, v9}, Landroid/os/Bundle;->getIntArray(Ljava/lang/String;)[I
@@ -2642,14 +2720,14 @@
 
     iput-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mAddToPlaylistData:[I
 
-    .line 271
+    .line 285
     :goto_0
     invoke-virtual {p0, v11}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setVolumeControlStream(I)V
 
-    .line 273
+    .line 287
     iput-boolean v8, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mExitByErrorIntent:Z
 
-    .line 275
+    .line 289
     const-string v9, "android.intent.action.VIEW"
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2658,10 +2736,10 @@
 
     if-eqz v9, :cond_1
 
-    .line 277
+    .line 291
     const/4 v5, -0x1
 
-    .line 279
+    .line 293
     .local v5, id:I
     :try_start_0
     iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
@@ -2683,43 +2761,43 @@
 
     move-result v5
 
-    .line 349
+    .line 363
     .end local v5           #id:I
     :cond_1
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 350
+    .line 364
     .local v3, f:Landroid/content/IntentFilter;
     const-string v9, "android.intent.action.MEDIA_SCANNER_STARTED"
 
     invoke-virtual {v3, v9}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 351
+    .line 365
     const-string v9, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
     invoke-virtual {v3, v9}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 352
+    .line 366
     const-string v9, "android.intent.action.MEDIA_UNMOUNTED"
 
     invoke-virtual {v3, v9}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 353
+    .line 367
     const-string v9, "file"
 
     invoke-virtual {v3, v9}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 354
+    .line 368
     iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v9, v3}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 357
+    .line 371
     iput-object p0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mContext:Landroid/content/Context;
 
-    .line 358
+    .line 372
     iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
     if-nez v9, :cond_2
@@ -2734,99 +2812,135 @@
 
     iput-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
-    .line 359
+    .line 373
     :cond_2
     iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
     invoke-direct {p0, v9, v12}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPlaylistCursor(Lcom/htc/music/util/DlArtAsyncQueryHandler;Ljava/lang/String;)Landroid/database/Cursor;
 
-    .line 360
+    .line 374
     invoke-virtual {p0, v7}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setCategoryProgressVisible(Z)V
 
-    .line 368
+    .line 382
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getParent()Landroid/app/Activity;
 
     move-result-object v9
 
-    if-eqz v9, :cond_6
+    if-eqz v9, :cond_8
 
     move v6, v7
 
-    .line 370
+    .line 384
     .local v6, requestOverlay:Z
     :goto_1
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
     move-result v9
 
-    if-nez v9, :cond_7
+    if-nez v9, :cond_9
 
     iget-boolean v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
-    if-nez v9, :cond_7
+    if-nez v9, :cond_9
 
-    .line 371
+    .line 385
     const v9, 0x7f03002a
 
     invoke-virtual {p0, v9, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setContentView(IZ)V
 
-    .line 372
+    .line 386
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 373
+    .line 387
     .local v4, filter:Landroid/content/IntentFilter;
     const-string v9, "com.htc.music.recentplayedchanged"
 
     invoke-virtual {v4, v9}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 374
+    .line 388
     iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPlaybackStatusReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v9, v4}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 375
+    .line 389
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->enableSearch()V
 
-    .line 390
+    .line 405
     .end local v4           #filter:Landroid/content/IntentFilter;
     :cond_3
     :goto_2
+    iget-boolean v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mIsOnlineInnerType:Z
+
+    if-nez v9, :cond_5
+
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_5
+
+    .line 406
+    iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    if-nez v9, :cond_4
+
+    .line 407
+    new-instance v9, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$2;
+
+    invoke-direct {v9, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$2;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+
+    iput-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    .line 415
+    :cond_4
+    iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v10, Landroid/content/IntentFilter;
+
+    const-string v11, "com.htc.music.lockscreen_start"
+
+    invoke-direct {v10, v11}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v9, v10}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 418
+    :cond_5
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initButtonsPanel()V
 
-    .line 391
+    .line 419
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initGridView()V
 
-    .line 392
+    .line 420
     iget v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
-    if-ne v9, v7, :cond_4
+    if-ne v9, v7, :cond_6
 
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->checkPlaylistCount(Landroid/content/Context;)I
 
     move-result v7
 
-    if-gtz v7, :cond_4
+    if-gtz v7, :cond_6
 
-    .line 393
+    .line 421
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->createNewPlaylist()V
 
-    .line 394
+    .line 422
     invoke-virtual {p0, v8, v12}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setResult(ILandroid/content/Intent;)V
 
-    .line 395
+    .line 423
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
-    .line 401
+    .line 429
     .end local v3           #f:Landroid/content/IntentFilter;
     .end local v6           #requestOverlay:Z
-    :cond_4
+    :cond_6
     :goto_3
     return-void
 
-    .line 267
-    :cond_5
+    .line 281
+    :cond_7
     iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
     const-string v10, "pickermode"
@@ -2837,7 +2951,7 @@
 
     iput v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
-    .line 268
+    .line 282
     iget-object v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
     const-string v10, "AddToPlaylistData"
@@ -2850,36 +2964,36 @@
 
     goto/16 :goto_0
 
-    .line 280
+    .line 294
     .restart local v5       #id:I
     :catch_0
     move-exception v1
 
-    .line 281
+    .line 295
     .local v1, e:Ljava/lang/NullPointerException;
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    .line 282
+    .line 296
     iput-boolean v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mExitByErrorIntent:Z
 
-    .line 283
+    .line 297
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
     goto :goto_3
 
-    .line 285
+    .line 299
     .end local v1           #e:Ljava/lang/NullPointerException;
     :catch_1
     move-exception v1
 
-    .line 286
+    .line 300
     .local v1, e:Ljava/lang/NumberFormatException;
     invoke-virtual {v1}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
-    .line 287
+    .line 301
     iput-boolean v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mExitByErrorIntent:Z
 
-    .line 288
+    .line 302
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
     goto :goto_3
@@ -2887,76 +3001,76 @@
     .end local v1           #e:Ljava/lang/NumberFormatException;
     .end local v5           #id:I
     .restart local v3       #f:Landroid/content/IntentFilter;
-    :cond_6
+    :cond_8
     move v6, v8
 
-    .line 368
-    goto :goto_1
+    .line 382
+    goto/16 :goto_1
 
-    .line 377
+    .line 391
     .restart local v6       #requestOverlay:Z
-    :cond_7
+    :cond_9
     const v9, 0x7f03002b
 
     invoke-virtual {p0, v9, v7}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setContentView(IZ)V
 
-    .line 378
+    .line 392
     iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
-    if-eqz v9, :cond_8
+    if-eqz v9, :cond_a
 
     iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mHeaderText:Lcom/htc/widget/ActionBarText;
 
-    if-nez v9, :cond_8
+    if-nez v9, :cond_a
 
-    .line 379
+    .line 393
     new-instance v9, Lcom/htc/widget/ActionBarText;
 
     invoke-direct {v9, p0}, Lcom/htc/widget/ActionBarText;-><init>(Landroid/content/Context;)V
 
     iput-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mHeaderText:Lcom/htc/widget/ActionBarText;
 
-    .line 380
+    .line 394
     iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     iget-object v10, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mHeaderText:Lcom/htc/widget/ActionBarText;
 
     invoke-virtual {v9, v10}, Lcom/htc/widget/ActionBarContainer;->addCenterView(Landroid/view/View;)V
 
-    .line 383
-    :cond_8
+    .line 397
+    :cond_a
     iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
     if-eqz v9, :cond_3
 
-    .line 384
+    .line 398
     iget v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
-    if-eq v9, v11, :cond_9
+    if-eq v9, v11, :cond_b
 
     iget v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
     const/4 v10, 0x2
 
-    if-ne v9, v10, :cond_a
+    if-ne v9, v10, :cond_c
 
-    :cond_9
+    :cond_b
     move v2, v7
 
-    .line 385
+    .line 399
     .local v2, enable:Z
     :goto_4
     iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
     invoke-virtual {v9, v2}, Lcom/htc/widget/ActionBarExt;->enableHTCLandscape(Z)V
 
-    goto :goto_2
+    goto/16 :goto_2
 
     .end local v2           #enable:Z
-    :cond_a
+    :cond_c
     move v2, v8
 
-    .line 384
+    .line 398
     goto :goto_4
 .end method
 
@@ -2973,10 +3087,10 @@
 
     const/4 v2, 0x2
 
-    .line 1331
+    .line 1360
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 1332
+    .line 1361
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
     move-result v0
@@ -2991,7 +3105,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1333
+    .line 1362
     :cond_0
     const/16 v0, 0x1f
 
@@ -2999,62 +3113,77 @@
 
     invoke-interface {p1, v2, v0, v3, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 1334
+    .line 1363
     const/16 v0, 0x20
 
     const v1, 0x2040150
 
     invoke-interface {p1, v2, v0, v3, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 1355
+    .line 1387
     :cond_1
     :goto_0
     return v4
 
-    .line 1335
+    .line 1364
     :cond_2
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     iget v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPickerMode:I
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
-    .line 1336
+    .line 1365
     const/16 v0, 0x9
 
     const v1, 0x7f070009
 
     invoke-interface {p1, v2, v0, v3, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 1337
+    .line 1366
     const/16 v0, 0xc
 
     const v1, 0x7f07000a
 
     invoke-interface {p1, v2, v0, v3, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 1339
+    .line 1368
     const v0, 0x7f070098
 
     invoke-interface {p1, v2, v5, v3, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 1343
+    .line 1372
     const/16 v0, 0x22
 
     const v1, 0x7f070099
 
     invoke-interface {p1, v2, v0, v3, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 1346
+    .line 1374
+    invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isDeleteAllPlaylistEnable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 1375
+    const/16 v0, 0x23
+
+    const v1, 0x7f07009b
+
+    invoke-interface {p1, v2, v0, v3, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
+
+    .line 1378
+    :cond_3
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isSupportListenStore()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1348
+    .line 1380
     const/16 v0, 0x16
 
     const v1, 0x2040218
@@ -3063,15 +3192,15 @@
 
     goto :goto_0
 
-    .line 1350
-    :cond_3
+    .line 1382
+    :cond_4
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
     move-result v0
 
     if-ne v4, v0, :cond_1
 
-    .line 1351
+    .line 1383
     const v0, 0x204025c
 
     invoke-interface {p1, v2, v5, v3, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
@@ -3090,55 +3219,90 @@
 .end method
 
 .method public onDestroy()V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 166
-    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mReScanHandler:Landroid/os/Handler;
+    .line 171
+    iget-object v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mReScanHandler:Landroid/os/Handler;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 168
-    iget-boolean v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mExitByErrorIntent:Z
+    .line 173
+    iget-boolean v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mExitByErrorIntent:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 169
+    .line 174
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onDestroy()V
 
-    .line 178
+    .line 192
     :goto_0
     return-void
 
-    .line 173
+    .line 178
     :cond_0
-    iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mScanListener:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 174
+    .line 179
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    iget-boolean v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
+    iget-boolean v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    .line 175
-    iget-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPlaybackStatusReceiver:Landroid/content/BroadcastReceiver;
+    .line 180
+    iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mPlaybackStatusReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 177
+    .line 183
     :cond_1
+    iget-boolean v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mIsOnlineInnerType:Z
+
+    if-nez v1, :cond_2
+
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 185
+    :try_start_0
+    iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 191
+    :cond_2
+    :goto_1
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onDestroy()V
 
     goto :goto_0
+
+    .line 186
+    :catch_0
+    move-exception v0
+
+    .line 187
+    .local v0, ex:Ljava/lang/IllegalArgumentException;
+    const-string v1, "[PlaylistBrowserActivityGrid]"
+
+    const-string v2, "onDestroy, fail to unregisterReceiver(mUnlockReceiver)"
+
+    invoke-static {v1, v2, v0}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
 .end method
 
 .method protected onGridViewChildItemPrepare(Landroid/os/Message;)V
@@ -3146,7 +3310,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1307
+    .line 1336
     return-void
 .end method
 
@@ -3161,12 +3325,12 @@
 
     const/4 v8, -0x1
 
-    .line 1077
+    .line 1105
     iget v6, p1, Landroid/os/Message;->arg1:I
 
     invoke-virtual {p0, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->clickIndexInit(I)V
 
-    .line 1078
+    .line 1106
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
     move-result v6
@@ -3183,7 +3347,7 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 1079
+    .line 1107
     :cond_0
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -3195,18 +3359,18 @@
 
     invoke-direct {p0, v4}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->updateButtonCounter(I)V
 
-    .line 1080
+    .line 1108
     iget-object v4, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     iget v5, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
 
     invoke-virtual {v4, v5}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange(I)V
 
-    .line 1144
+    .line 1172
     :goto_0
     return-void
 
-    .line 1088
+    .line 1116
     :cond_1
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
@@ -3214,12 +3378,12 @@
 
     if-ne v6, v4, :cond_2
 
-    .line 1089
+    .line 1117
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 1091
+    .line 1119
     .local v0, intent:Landroid/content/Intent;
     const-string v4, "playlist"
 
@@ -3227,70 +3391,70 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1092
+    .line 1120
     invoke-virtual {p0, v8, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setResult(ILandroid/content/Intent;)V
 
-    .line 1100
+    .line 1128
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
     goto :goto_0
 
-    .line 1104
+    .line 1132
     .end local v0           #intent:Landroid/content/Intent;
     :cond_2
     iget-boolean v6, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
     if-eqz v6, :cond_3
 
-    .line 1105
+    .line 1133
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1106
+    .line 1134
     .local v3, shortcut:Landroid/content/Intent;
     const-string v4, "android.intent.action.VIEW"
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1107
+    .line 1135
     sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     const-string v6, "com.htc.media/playlist"
 
     invoke-virtual {v3, v4, v6}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1108
+    .line 1136
     const-string v4, "playlist"
 
     iget-object v6, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistId:Ljava/lang/String;
 
     invoke-virtual {v3, v4, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1109
+    .line 1137
     const/high16 v4, 0x1400
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1111
+    .line 1139
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 1112
+    .line 1140
     .restart local v0       #intent:Landroid/content/Intent;
     const-string v4, "android.intent.extra.shortcut.INTENT"
 
     invoke-virtual {v0, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1113
+    .line 1141
     const-string v4, "android.intent.extra.shortcut.NAME"
 
     iget-object v6, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistName:Ljava/lang/String;
 
     invoke-virtual {v0, v4, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1114
+    .line 1142
     const-string v4, "android.intent.extra.shortcut.ICON_RESOURCE"
 
     const v6, 0x7f02003a
@@ -3301,31 +3465,31 @@
 
     invoke-virtual {v0, v4, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1117
+    .line 1145
     invoke-virtual {p0, v8, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setResult(ILandroid/content/Intent;)V
 
-    .line 1120
+    .line 1148
     new-instance v1, Landroid/content/Intent;
 
     const-string v4, "com.htc.launcher.ThemeChooser.action.silder_change"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1121
+    .line 1149
     .local v1, intent2:Landroid/content/Intent;
     const-string v4, "silder_state"
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1122
+    .line 1150
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1123
+    .line 1151
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finishactivity()V
 
     goto :goto_0
 
-    .line 1129
+    .line 1157
     .end local v0           #intent:Landroid/content/Intent;
     .end local v1           #intent2:Landroid/content/Intent;
     .end local v3           #shortcut:Landroid/content/Intent;
@@ -3334,30 +3498,30 @@
 
     if-ne v6, v4, :cond_4
 
-    .line 1130
+    .line 1158
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 1131
+    .line 1159
     .restart local v0       #intent:Landroid/content/Intent;
     iget v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
 
-    .line 1132
+    .line 1160
     .local v2, playlistId:I
     const-string v4, "playlist_id"
 
     invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1133
+    .line 1161
     invoke-virtual {p0, v8, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setResult(ILandroid/content/Intent;)V
 
-    .line 1134
+    .line 1162
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
     goto/16 :goto_0
 
-    .line 1136
+    .line 1164
     .end local v0           #intent:Landroid/content/Intent;
     .end local v2           #playlistId:I
     :cond_4
@@ -3367,7 +3531,7 @@
 
     invoke-direct {v0, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1137
+    .line 1165
     .restart local v0       #intent:Landroid/content/Intent;
     sget-object v6, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
@@ -3375,14 +3539,14 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1139
+    .line 1167
     const-string v6, "playlist"
 
     iget-object v7, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistId:Ljava/lang/String;
 
     invoke-virtual {v0, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1140
+    .line 1168
     const-string v6, "isrecentplayedplaylist"
 
     iget v7, p1, Landroid/os/Message;->arg1:I
@@ -3394,14 +3558,14 @@
     :goto_1
     invoke-virtual {v0, v6, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1141
+    .line 1169
     const-string v4, "InnerActivityType"
 
     const/4 v5, 0x7
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1142
+    .line 1170
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_0
@@ -3409,7 +3573,7 @@
     :cond_5
     move v4, v5
 
-    .line 1140
+    .line 1168
     goto :goto_1
 .end method
 
@@ -3418,7 +3582,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1321
+    .line 1350
     return-void
 .end method
 
@@ -3426,7 +3590,7 @@
     .locals 0
 
     .prologue
-    .line 1327
+    .line 1356
     return-void
 .end method
 
@@ -3445,12 +3609,12 @@
 
     const/4 v7, 0x0
 
-    .line 1151
+    .line 1179
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     invoke-virtual {p0, v5}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->clickIndexInit(I)V
 
-    .line 1152
+    .line 1180
     iget-boolean v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mCreateShortcut:Z
 
     if-nez v5, :cond_1
@@ -3461,18 +3625,18 @@
 
     if-nez v5, :cond_1
 
-    .line 1155
+    .line 1183
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 1156
+    .line 1184
     .local v0, context:Landroid/content/Context;
     if-nez v0, :cond_0
 
     move-object v0, p0
 
-    .line 1158
+    .line 1186
     :cond_0
     iget-object v5, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -3482,21 +3646,21 @@
 
     move-result-object v2
 
-    .line 1159
+    .line 1187
     .local v2, headerTitle:Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 1160
+    .line 1188
     .local v4, items:[Ljava/lang/CharSequence;
     const/4 v3, 0x0
 
-    .line 1162
+    .line 1190
     .local v3, ids:[I
     iget v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
     if-gez v5, :cond_2
 
-    .line 1163
+    .line 1191
     new-array v4, v8, [Ljava/lang/CharSequence;
 
     .end local v4           #items:[Ljava/lang/CharSequence;
@@ -3506,7 +3670,7 @@
 
     aput-object v5, v4, v7
 
-    .line 1166
+    .line 1194
     .restart local v4       #items:[Ljava/lang/CharSequence;
     new-array v3, v8, [I
 
@@ -3515,15 +3679,15 @@
 
     aput v5, v3, v7
 
-    .line 1204
+    .line 1232
     .restart local v3       #ids:[I
     :goto_0
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->hideHtcContextMenu()V
 
-    .line 1205
+    .line 1233
     invoke-virtual {p0, v2, v4, v3}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->showHtcContextMenu(Ljava/lang/String;[Ljava/lang/CharSequence;[I)V
 
-    .line 1215
+    .line 1243
     .end local v0           #context:Landroid/content/Context;
     .end local v2           #headerTitle:Ljava/lang/String;
     .end local v3           #ids:[I
@@ -3531,7 +3695,7 @@
     :cond_1
     return-void
 
-    .line 1168
+    .line 1196
     .restart local v0       #context:Landroid/content/Context;
     .restart local v2       #headerTitle:Ljava/lang/String;
     .restart local v3       #ids:[I
@@ -3541,11 +3705,11 @@
 
     move-result v1
 
-    .line 1169
+    .line 1197
     .local v1, dlnaMode:I
     if-nez v1, :cond_3
 
-    .line 1171
+    .line 1199
     const/4 v5, 0x4
 
     new-array v4, v5, [Ljava/lang/CharSequence;
@@ -3581,7 +3745,7 @@
 
     aput-object v5, v4, v9
 
-    .line 1179
+    .line 1207
     .restart local v4       #items:[Ljava/lang/CharSequence;
     const/4 v5, 0x4
 
@@ -3593,7 +3757,7 @@
     .restart local v3       #ids:[I
     goto :goto_0
 
-    .line 1188
+    .line 1216
     :cond_3
     new-array v4, v9, [Ljava/lang/CharSequence;
 
@@ -3620,7 +3784,7 @@
 
     aput-object v5, v4, v11
 
-    .line 1195
+    .line 1223
     .restart local v4       #items:[Ljava/lang/CharSequence;
     new-array v3, v9, [I
 
@@ -3630,7 +3794,7 @@
     .restart local v3       #ids:[I
     goto :goto_0
 
-    .line 1179
+    .line 1207
     :array_0
     .array-data 0x4
         0x5t 0x0t 0x0t 0x0t
@@ -3639,7 +3803,7 @@
         0x22t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 1195
+    .line 1223
     :array_1
     .array-data 0x4
         0x5t 0x0t 0x0t 0x0t
@@ -3653,297 +3817,301 @@
     .parameter "msg"
 
     .prologue
-    .line 1301
+    .line 1330
     return-void
 .end method
 
 .method public onHtcContextItemSelected(I)Z
-    .locals 12
+    .locals 13
     .parameter "id"
 
     .prologue
-    const/4 v10, 0x0
-
-    const/4 v9, 0x1
-
     const/4 v11, 0x0
 
-    .line 1219
+    const/4 v10, 0x1
+
+    const/4 v12, 0x0
+
+    .line 1247
     sparse-switch p1, :sswitch_data_0
 
-    .line 1294
+    .line 1323
     :cond_0
     :goto_0
-    return v11
+    return v12
 
-    .line 1221
+    .line 1249
     :sswitch_0
-    iget v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
+    iget v8, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
-    int-to-long v7, v7
+    int-to-long v8, v8
 
-    const-wide/16 v9, -0x4
+    const-wide/16 v10, -0x4
 
-    cmp-long v7, v7, v9
+    cmp-long v8, v8, v10
 
-    if-eqz v7, :cond_0
+    if-eqz v8, :cond_0
 
-    .line 1223
-    iget v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
+    .line 1251
+    iget v8, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
-    const/4 v8, -0x5
+    const/4 v9, -0x5
 
-    if-ne v7, v8, :cond_1
+    if-ne v8, v9, :cond_1
 
-    .line 1225
+    .line 1253
     :try_start_0
-    sget-object v7, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+    sget-object v8, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
-    if-eqz v7, :cond_0
+    if-eqz v8, :cond_0
 
-    .line 1227
-    sget-object v7, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+    .line 1254
+    sget-object v8, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
-    invoke-interface {v7}, Lcom/htc/music/IMediaPlaybackService;->getRecentPlayedPlaylist()[I
+    invoke-interface {v8}, Lcom/htc/music/IMediaPlaybackService;->getRecentPlayedPlaylist()[I
 
-    move-result-object v7
+    move-result-object v6
 
+    .line 1255
+    .local v6, recentTrackId:[I
+    invoke-static {p0, v6}, Lcom/htc/music/util/MusicUtils;->prepareAlbumListByTrackId(Landroid/content/Context;[I)V
+
+    .line 1256
     const/4 v8, 0x0
 
     const/4 v9, 0x0
 
-    invoke-static {p0, v7, v8, v9}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
+    invoke-static {p0, v6, v8, v9}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 1229
+    .line 1258
+    .end local v6           #recentTrackId:[I
     :catch_0
     move-exception v1
 
-    .line 1230
+    .line 1259
     .local v1, e:Landroid/os/RemoteException;
-    const-string v7, "[PlaylistBrowserActivityGrid]"
+    const-string v8, "[PlaylistBrowserActivityGrid]"
 
-    const-string v8, "Exception when playing recent played list."
+    const-string v9, "Exception when playing recent played list."
 
-    invoke-static {v7, v8, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v8, v9, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 1233
+    .line 1262
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_1
-    new-instance v7, Lcom/htc/music/NpCategory;
+    new-instance v8, Lcom/htc/music/NpCategory;
 
-    const/16 v8, 0x14
+    const/16 v9, 0x14
 
-    invoke-direct {v7, v8}, Lcom/htc/music/NpCategory;-><init>(S)V
+    invoke-direct {v8, v9}, Lcom/htc/music/NpCategory;-><init>(S)V
 
-    iget v8, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
+    iget v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
-    invoke-virtual {v7, v8}, Lcom/htc/music/NpCategory;->setPlaylistId(I)Lcom/htc/music/NpCategory;
+    invoke-virtual {v8, v9}, Lcom/htc/music/NpCategory;->setPlaylistId(I)Lcom/htc/music/NpCategory;
 
     move-result-object v5
 
-    .line 1235
+    .line 1264
     .local v5, npc:Lcom/htc/music/NpCategory;
-    iget v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
+    iget v8, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
-    int-to-long v7, v7
+    int-to-long v8, v8
 
-    invoke-static {p0, v7, v8, v5}, Lcom/htc/music/util/MusicUtils;->playPlaylist(Landroid/content/Context;JLcom/htc/music/NpCategory;)Z
+    invoke-static {p0, v8, v9, v5}, Lcom/htc/music/util/MusicUtils;->playPlaylist(Landroid/content/Context;JLcom/htc/music/NpCategory;)Z
 
     goto :goto_0
 
-    .line 1240
+    .line 1269
     .end local v5           #npc:Lcom/htc/music/NpCategory;
     :sswitch_1
-    iget v7, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
+    iget v8, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
-    int-to-long v7, v7
+    int-to-long v8, v8
 
-    invoke-static {p0, v7, v8}, Lcom/htc/music/util/MusicUtils;->getSongListForPlaylist(Landroid/content/Context;J)[I
+    invoke-static {p0, v8, v9}, Lcom/htc/music/util/MusicUtils;->getSongListForPlaylist(Landroid/content/Context;J)[I
 
     move-result-object v0
 
-    .line 1241
+    .line 1270
     .local v0, addToPlaylistData:[I
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1242
+    .line 1271
     .local v3, intent:Landroid/content/Intent;
-    const-class v7, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
+    const-class v8, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
-    invoke-virtual {v3, p0, v7}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-virtual {v3, p0, v8}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 1243
-    const-string v7, "pickermode"
+    .line 1272
+    const-string v8, "pickermode"
 
-    invoke-virtual {v3, v7, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v8, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1244
-    const-string v7, "AddToPlaylistData"
+    .line 1273
+    const-string v8, "AddToPlaylistData"
 
-    invoke-virtual {v3, v7, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[I)Landroid/content/Intent;
+    invoke-virtual {v3, v8, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[I)Landroid/content/Intent;
 
-    .line 1245
-    invoke-virtual {p0, v3, v9}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
+    .line 1274
+    invoke-virtual {p0, v3, v10}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    .line 1249
+    .line 1278
     .end local v0           #addToPlaylistData:[I
     .end local v3           #intent:Landroid/content/Intent;
     :sswitch_2
     :try_start_1
-    sget-object v7, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+    sget-object v8, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
-    if-eqz v7, :cond_0
+    if-eqz v8, :cond_0
 
-    .line 1250
-    sget-object v7, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+    .line 1279
+    sget-object v8, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
-    const/4 v8, 0x3
+    const/4 v9, 0x3
 
-    iget v9, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
+    iget v10, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mSelectedId:I
 
-    invoke-interface {v7, v8, v9}, Lcom/htc/music/IMediaPlaybackService;->addToQueue(II)V
+    invoke-interface {v8, v9, v10}, Lcom/htc/music/IMediaPlaybackService;->addToQueue(II)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_0
 
-    .line 1252
+    .line 1281
     :catch_1
     move-exception v1
 
-    .line 1253
+    .line 1282
     .restart local v1       #e:Landroid/os/RemoteException;
-    const-string v7, "[PlaylistBrowserActivityGrid]"
+    const-string v8, "[PlaylistBrowserActivityGrid]"
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "ADD_TO_QUEUE, long click playlist item, RemoteException e: "
+    const-string v10, "ADD_TO_QUEUE, long click playlist item, RemoteException e: "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v1}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v10
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v7, v8}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1257
+    .line 1286
     .end local v1           #e:Landroid/os/RemoteException;
     :sswitch_3
-    iput-boolean v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewRefreshDisable:Z
+    iput-boolean v10, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewRefreshDisable:Z
 
-    .line 1258
-    sget-object v7, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    .line 1287
+    sget-object v8, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    iget-object v8, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+    iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
-    iget v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
+    iget v10, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
 
-    invoke-virtual {v8, v9}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->getParentMediaDataId(I)Ljava/lang/String;
+    invoke-virtual {v9, v10}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->getParentMediaDataId(I)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v8}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {v9}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v9}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v8
+    move-result-wide v9
 
-    invoke-static {v7, v8, v9}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
+    invoke-static {v8, v9, v10}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
-    move-result-object v6
+    move-result-object v7
 
-    .line 1261
-    .local v6, uri:Landroid/net/Uri;
+    .line 1290
+    .local v7, uri:Landroid/net/Uri;
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7, v6, v10, v10}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v8, v7, v11, v11}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1262
-    const v7, 0x7f070041
+    .line 1291
+    const v8, 0x7f070041
 
-    invoke-static {p0, v7, v11}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {p0, v8, v12}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v8}, Landroid/widget/Toast;->show()V
 
-    .line 1266
+    .line 1295
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    .line 1267
+    .line 1296
     .local v2, handler:Landroid/os/Handler;
-    new-instance v7, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;
+    new-instance v8, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$13;
 
-    invoke-direct {v7, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+    invoke-direct {v8, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$13;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
-    const-wide/16 v8, 0x1f4
+    const-wide/16 v9, 0x1f4
 
-    invoke-virtual {v2, v7, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v2, v8, v9, v10}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto/16 :goto_0
 
-    .line 1287
+    .line 1316
     .end local v2           #handler:Landroid/os/Handler;
-    .end local v6           #uri:Landroid/net/Uri;
+    .end local v7           #uri:Landroid/net/Uri;
     :sswitch_4
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
-    .line 1288
+    .line 1317
     .local v4, intent2:Landroid/content/Intent;
-    const-class v7, Lcom/htc/music/browserlayer/EditPlaylistActivity;
+    const-class v8, Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
-    invoke-virtual {v4, p0, v7}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-virtual {v4, p0, v8}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 1290
-    const-string v7, "playlist"
+    .line 1319
+    const-string v8, "playlist"
 
-    iget-object v8, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistId:Ljava/lang/String;
+    iget-object v9, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mCurrentPlaylistId:Ljava/lang/String;
 
-    invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v4, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1291
-    const/16 v7, 0x1c
+    .line 1320
+    const/16 v8, 0x1c
 
-    invoke-virtual {p0, v4, v7}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v4, v8}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto/16 :goto_0
 
-    .line 1219
-    nop
-
+    .line 1247
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -3960,15 +4128,15 @@
     .parameter "menu"
 
     .prologue
-    .line 841
+    .line 869
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->menuOpened:Z
 
-    .line 844
+    .line 872
     invoke-direct {p0, p2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->applyMenuStatus(Landroid/view/Menu;)V
 
-    .line 846
+    .line 874
     invoke-super {p0, p1, p2}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onMenuOpened(ILandroid/view/Menu;)Z
 
     move-result v0
@@ -3977,134 +4145,264 @@
 .end method
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
-    .locals 4
+    .locals 12
     .parameter "item"
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v11, 0x0
 
-    .line 1405
+    const/4 v5, 0x1
+
+    .line 1440
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    move-result v2
+    move-result v6
 
-    sparse-switch v2, :sswitch_data_0
+    sparse-switch v6, :sswitch_data_0
 
-    .line 1462
+    .line 1513
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
-    move-result v1
+    move-result v5
 
     :goto_0
-    return v1
+    return v5
 
-    .line 1421
+    .line 1456
     :sswitch_0
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->createNewPlaylist()V
 
     goto :goto_0
 
-    .line 1424
+    .line 1459
     :sswitch_1
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->SetDLNASuffleMode(Landroid/content/Context;)V
 
-    .line 1425
-    new-instance v2, Lcom/htc/music/NpCategory;
+    .line 1460
+    new-instance v6, Lcom/htc/music/NpCategory;
 
-    const/16 v3, 0x16
+    const/16 v7, 0x16
 
-    invoke-direct {v2, v3}, Lcom/htc/music/NpCategory;-><init>(S)V
+    invoke-direct {v6, v7}, Lcom/htc/music/NpCategory;-><init>(S)V
 
-    invoke-static {p0, v1, v2}, Lcom/htc/music/util/MusicUtils;->playAllPlaylist(Landroid/content/Context;ZLcom/htc/music/NpCategory;)V
+    invoke-static {p0, v5, v6}, Lcom/htc/music/util/MusicUtils;->playAllPlaylist(Landroid/content/Context;ZLcom/htc/music/NpCategory;)V
 
     goto :goto_0
 
-    .line 1429
+    .line 1464
     :sswitch_2
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->categoryRightAction()Z
 
     goto :goto_0
 
-    .line 1434
+    .line 1469
     :sswitch_3
-    new-instance v0, Landroid/content/Intent;
+    new-instance v2, Landroid/content/Intent;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 1435
-    .local v0, intent:Landroid/content/Intent;
-    const-class v2, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
+    .line 1470
+    .local v2, intent:Landroid/content/Intent;
+    const-class v6, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
-    invoke-virtual {v0, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-virtual {v2, p0, v6}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 1436
-    const-string v2, "pickermode"
+    .line 1471
+    const-string v6, "pickermode"
 
-    const/4 v3, 0x3
+    const/4 v7, 0x3
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v2, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1437
-    const/16 v2, 0x22
+    .line 1472
+    const/16 v6, 0x22
 
-    invoke-virtual {p0, v0, v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v2, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    .line 1442
-    .end local v0           #intent:Landroid/content/Intent;
+    .line 1477
+    .end local v2           #intent:Landroid/content/Intent;
     :sswitch_4
-    iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+    iget-object v6, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
-    invoke-virtual {v2}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->setAllParentItemSelected()I
+    invoke-virtual {v6}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->setAllParentItemSelected()I
 
-    move-result v2
+    move-result v6
 
-    invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->updateButtonCounter(I)V
+    invoke-direct {p0, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->updateButtonCounter(I)V
 
-    .line 1443
-    iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    .line 1478
+    iget-object v6, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
-    invoke-virtual {v2}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange()V
+    invoke-virtual {v6}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange()V
 
     goto :goto_0
 
-    .line 1447
+    .line 1482
     :sswitch_5
-    iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
+    iget-object v6, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
-    invoke-virtual {v2}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->setAllParentItemDeselected()I
+    invoke-virtual {v6}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->setAllParentItemDeselected()I
 
-    move-result v2
+    move-result v6
 
-    invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->updateButtonCounter(I)V
+    invoke-direct {p0, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->updateButtonCounter(I)V
 
-    .line 1448
-    iget-object v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    .line 1483
+    iget-object v6, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
-    invoke-virtual {v2}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange()V
+    invoke-virtual {v6}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange()V
 
     goto :goto_0
 
-    .line 1457
+    .line 1492
     :sswitch_6
-    new-instance v0, Landroid/content/Intent;
+    new-instance v2, Landroid/content/Intent;
 
-    const-string v2, "com.htc.music.settings.Listen_Online_Setting"
+    const-string v6, "com.htc.music.settings.Listen_Online_Setting"
 
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1458
-    .restart local v0       #intent:Landroid/content/Intent;
-    const/4 v2, -0x2
+    .line 1493
+    .restart local v2       #intent:Landroid/content/Intent;
+    const/4 v6, -0x2
 
-    invoke-virtual {p0, v0, v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v2, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    .line 1405
-    nop
+    .line 1497
+    .end local v2           #intent:Landroid/content/Intent;
+    :sswitch_7
+    iput-boolean v5, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewRefreshDisable:Z
 
+    .line 1500
+    :try_start_0
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v6
+
+    sget-object v7, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v6, v7, v8, v9}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 1501
+    .local v0, deletCount:I
+    const-string v6, "[PlaylistBrowserActivityGrid]"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "DELETE_ALL_PLAYLISTS : delete item = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1502
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f0d0005
+
+    const/4 v8, 0x1
+
+    new-array v8, v8, [Ljava/lang/Object;
+
+    const/4 v9, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    aput-object v10, v8, v9
+
+    invoke-virtual {v6, v7, v0, v8}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 1504
+    .local v3, message:Ljava/lang/String;
+    iget-object v6, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUiHandler:Landroid/os/Handler;
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v7, v3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v4
+
+    .line 1505
+    .local v4, msg:Landroid/os/Message;
+    iget-object v6, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mUiHandler:Landroid/os/Handler;
+
+    const-wide/16 v7, 0x1f4
+
+    invoke-virtual {v6, v4, v7, v8}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto/16 :goto_0
+
+    .line 1506
+    .end local v0           #deletCount:I
+    .end local v3           #message:Ljava/lang/String;
+    .end local v4           #msg:Landroid/os/Message;
+    :catch_0
+    move-exception v1
+
+    .line 1507
+    .local v1, e:Ljava/lang/Exception;
+    const-string v6, "[PlaylistBrowserActivityGrid]"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "DELETE_ALL_PLAYLISTS error : "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1508
+    iput-boolean v11, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewRefreshDisable:Z
+
+    goto/16 :goto_0
+
+    .line 1440
     :sswitch_data_0
     .sparse-switch
         0x9 -> :sswitch_1
@@ -4114,6 +4412,7 @@
         0x20 -> :sswitch_5
         0x21 -> :sswitch_0
         0x22 -> :sswitch_3
+        0x23 -> :sswitch_7
     .end sparse-switch
 .end method
 
@@ -4123,17 +4422,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 215
+    .line 229
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
     if-nez v3, :cond_1
 
-    .line 250
+    .line 264
     :cond_0
     :goto_0
     return-void
 
-    .line 216
+    .line 230
     :cond_1
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
@@ -4141,7 +4440,7 @@
 
     move-result-object v0
 
-    .line 217
+    .line 231
     .local v0, action:Ljava/lang/String;
     const-string v3, "android.intent.action.VIEW"
 
@@ -4151,10 +4450,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 219
+    .line 233
     const/4 v2, 0x1
 
-    .line 220
+    .line 234
     .local v2, isPlaylistNotEmpty:Z
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mBeginIntent:Landroid/content/Intent;
 
@@ -4172,25 +4471,25 @@
 
     move-result v1
 
-    .line 221
+    .line 235
     .local v1, id:I
     const/4 v3, -0x2
 
     if-ne v1, v3, :cond_3
 
-    .line 226
+    .line 240
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->getAllSongsAndPrepare(Landroid/content/Context;)[I
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->list:[I
 
-    .line 227
+    .line 241
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->list:[I
 
     if-eqz v3, :cond_2
 
-    .line 228
+    .line 242
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->list:[I
 
     new-instance v4, Lcom/htc/music/NpCategory;
@@ -4199,18 +4498,18 @@
 
     invoke-static {p0, v3, v6, v4}, Lcom/htc/music/util/MusicUtils;->playAll(Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
 
-    .line 236
+    .line 250
     :goto_1
     if-nez v2, :cond_4
 
-    .line 238
+    .line 252
     const-string v3, "[PlaylistBrowserActivityGrid]"
 
     const-string v4, "Send delay finish message"
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
+    .line 253
     iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mDelayFinishHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0x7d0
@@ -4219,7 +4518,7 @@
 
     goto :goto_0
 
-    .line 230
+    .line 244
     :cond_2
     const v3, 0x7f07005f
 
@@ -4231,7 +4530,7 @@
 
     goto :goto_1
 
-    .line 234
+    .line 248
     :cond_3
     int-to-long v3, v1
 
@@ -4243,11 +4542,11 @@
 
     goto :goto_1
 
-    .line 245
+    .line 259
     :cond_4
     invoke-virtual {p0, v6}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setVisible(Z)V
 
-    .line 246
+    .line 260
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
     goto :goto_0
@@ -4262,41 +4561,41 @@
 
     const/4 v3, 0x1
 
-    .line 1360
+    .line 1392
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 1361
+    .line 1393
     const/4 v0, 0x0
 
-    .line 1362
+    .line 1394
     .local v0, enabled:Z
     iget-object v5, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     if-eqz v5, :cond_1
 
-    .line 1363
+    .line 1395
     iget-object v5, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     invoke-interface {v5}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
 
-    .line 1364
+    .line 1396
     .local v2, playlistCount:I
     iget v5, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->mRecentPlayedPos:I
 
     if-ltz v5, :cond_0
 
-    .line 1365
+    .line 1397
     add-int/lit8 v2, v2, -0x1
 
-    .line 1367
+    .line 1399
     :cond_0
-    if-lez v2, :cond_a
+    if-lez v2, :cond_b
 
     move v0, v3
 
-    .line 1372
+    .line 1404
     .end local v2           #playlistCount:I
     :cond_1
     :goto_0
@@ -4306,14 +4605,14 @@
 
     move-result-object v1
 
-    .line 1373
+    .line 1405
     .local v1, item:Landroid/view/MenuItem;
     if-eqz v1, :cond_2
 
-    .line 1374
+    .line 1406
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 1375
+    .line 1407
     :cond_2
     const/16 v5, 0x20
 
@@ -4321,13 +4620,13 @@
 
     move-result-object v1
 
-    .line 1376
+    .line 1408
     if-eqz v1, :cond_3
 
-    .line 1377
+    .line 1409
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 1378
+    .line 1410
     :cond_3
     const/16 v5, 0x21
 
@@ -4335,10 +4634,10 @@
 
     move-result-object v1
 
-    .line 1379
+    .line 1411
     if-eqz v1, :cond_5
 
-    .line 1380
+    .line 1412
     iget-object v5, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mParentCursor:Landroid/database/Cursor;
 
     if-eqz v5, :cond_4
@@ -4348,7 +4647,7 @@
     :cond_4
     invoke-interface {v1, v4}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 1381
+    .line 1413
     :cond_5
     const/16 v4, 0x22
 
@@ -4356,67 +4655,81 @@
 
     move-result-object v1
 
-    .line 1382
+    .line 1414
     if-eqz v1, :cond_6
 
-    .line 1383
+    .line 1415
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 1387
+    .line 1419
     :cond_6
+    const/16 v4, 0x23
+
+    invoke-interface {p1, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v1
+
+    .line 1420
+    if-eqz v1, :cond_7
+
+    .line 1421
+    invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
+
+    .line 1422
+    :cond_7
     const/16 v4, 0x9
 
     invoke-interface {p1, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v1
 
-    .line 1388
-    if-eqz v1, :cond_7
+    .line 1423
+    if-eqz v1, :cond_8
 
-    .line 1389
+    .line 1424
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 1390
-    :cond_7
+    .line 1425
+    :cond_8
     const/16 v4, 0xc
 
     invoke-interface {p1, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v1
 
-    .line 1391
-    if-eqz v1, :cond_8
+    .line 1426
+    if-eqz v1, :cond_9
 
-    .line 1392
+    .line 1427
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 1393
-    :cond_8
+    .line 1428
+    :cond_9
     const/16 v4, 0x16
 
     invoke-interface {p1, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v1
 
-    .line 1394
-    if-eqz v1, :cond_9
+    .line 1429
+    if-eqz v1, :cond_a
 
-    .line 1395
+    .line 1430
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 1397
-    :cond_9
+    .line 1432
+    :cond_a
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->applyMenuStatus(Landroid/view/Menu;)V
 
-    .line 1399
+    .line 1434
     return v3
 
     .end local v1           #item:Landroid/view/MenuItem;
     .restart local v2       #playlistCount:I
-    :cond_a
+    :cond_b
     move v0, v4
 
-    .line 1367
+    .line 1399
     goto :goto_0
 .end method
 
@@ -4424,7 +4737,7 @@
     .locals 3
 
     .prologue
-    .line 431
+    .line 459
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
     move-result v1
@@ -4441,13 +4754,13 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 432
+    .line 460
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 433
+    .line 461
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "selectedlist"
 
@@ -4459,17 +4772,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putIntegerArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 434
+    .line 462
     const/4 v1, -0x1
 
     invoke-virtual {p0, v1, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setResult(ILandroid/content/Intent;)V
 
-    .line 436
+    .line 464
     .end local v0           #intent:Landroid/content/Intent;
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
-    .line 437
+    .line 465
     return-void
 .end method
 
@@ -4480,10 +4793,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1031
+    .line 1059
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->SetDLNASuffleMode(Landroid/content/Context;)V
 
-    .line 1032
+    .line 1060
     new-instance v0, Lcom/htc/music/NpCategory;
 
     const/16 v1, 0x16
@@ -4492,7 +4805,7 @@
 
     invoke-static {p0, v2, v0}, Lcom/htc/music/util/MusicUtils;->playAllPlaylist(Landroid/content/Context;ZLcom/htc/music/NpCategory;)V
 
-    .line 1033
+    .line 1061
     return v2
 .end method
 
@@ -4507,45 +4820,45 @@
 
     const/4 v7, 0x1
 
-    .line 896
+    .line 924
     const/4 v5, 0x0
 
-    .line 897
+    .line 925
     .local v5, setEnableInt:I
     if-eqz p1, :cond_0
 
     const/4 v5, 0x1
 
-    .line 899
+    .line 927
     :cond_0
     iput v5, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableRightBtn:I
 
-    .line 901
+    .line 929
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->isActivityResumed()Z
 
     move-result v6
 
     if-nez v6, :cond_2
 
-    .line 902
+    .line 930
     const-string v6, "[PlaylistBrowserActivityGrid]"
 
     const-string v7, "activity is paused, do not set category right button status"
 
     invoke-static {v6, v7}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 932
+    .line 960
     :cond_1
     :goto_0
     return-void
 
-    .line 906
+    .line 934
     :cond_2
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->findRootParent()Landroid/app/Activity;
 
     move-result-object v4
 
-    .line 907
+    .line 935
     .local v4, parent:Landroid/app/Activity;
     instance-of v6, v4, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
@@ -4553,17 +4866,17 @@
 
     move-object v3, v4
 
-    .line 908
+    .line 936
     check-cast v3, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
-    .line 911
+    .line 939
     .local v3, multiParent:Lcom/htc/music/widget/IMusicTabActivityInterface;
     if-eqz p1, :cond_3
 
-    .line 912
+    .line 940
     invoke-interface {v3, v7}, Lcom/htc/music/widget/IMusicTabActivityInterface;->setCategoryRightBtnEnable(Z)V
 
-    .line 914
+    .line 942
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -4572,13 +4885,13 @@
 
     move-result-object v1
 
-    .line 915
+    .line 943
     .local v1, enableAddIcon:Landroid/graphics/drawable/Drawable;
     const/16 v6, 0xff
 
     invoke-virtual {v1, v6}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 916
+    .line 944
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -4587,25 +4900,25 @@
 
     move-result-object v2
 
-    .line 917
+    .line 945
     .local v2, label:Ljava/lang/String;
     invoke-interface {v3, v1, v2}, Lcom/htc/music/widget/IMusicTabActivityInterface;->setCategoryRightBtnImage(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
-    .line 918
-    new-instance v6, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$10;
+    .line 946
+    new-instance v6, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$11;
 
-    invoke-direct {v6, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$10;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
+    invoke-direct {v6, p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$11;-><init>(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
     invoke-interface {v3, v6}, Lcom/htc/music/widget/IMusicTabActivityInterface;->setCategoryRightBtnOnClick(Landroid/view/View$OnClickListener;)V
 
-    .line 930
+    .line 958
     .end local v1           #enableAddIcon:Landroid/graphics/drawable/Drawable;
     :goto_1
     invoke-interface {v3, v7}, Lcom/htc/music/widget/IMusicTabActivityInterface;->setCategoryRightBtnVisible(Z)V
 
     goto :goto_0
 
-    .line 924
+    .line 952
     .end local v2           #label:Ljava/lang/String;
     :cond_3
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getResources()Landroid/content/res/Resources;
@@ -4616,13 +4929,13 @@
 
     move-result-object v0
 
-    .line 925
+    .line 953
     .local v0, disableAddIcon:Landroid/graphics/drawable/Drawable;
     const/16 v6, 0x6e
 
     invoke-virtual {v0, v6}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 926
+    .line 954
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -4631,13 +4944,13 @@
 
     move-result-object v2
 
-    .line 927
+    .line 955
     .restart local v2       #label:Ljava/lang/String;
     const/4 v6, 0x0
 
     invoke-interface {v3, v6}, Lcom/htc/music/widget/IMusicTabActivityInterface;->setCategoryRightBtnEnable(Z)V
 
-    .line 928
+    .line 956
     invoke-interface {v3, v0, v2}, Lcom/htc/music/widget/IMusicTabActivityInterface;->setCategoryRightBtnImage(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     goto :goto_1
@@ -4647,12 +4960,12 @@
     .locals 1
 
     .prologue
-    .line 1007
+    .line 1035
     const v0, 0x7f07003a
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->showEmptyView(I)V
 
-    .line 1008
+    .line 1036
     return-void
 .end method
 
@@ -4660,7 +4973,7 @@
     .locals 2
 
     .prologue
-    .line 1013
+    .line 1041
     invoke-direct {p0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getPickerMode()I
 
     move-result v1
@@ -4671,7 +4984,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1014
+    .line 1042
     const v1, 0x7f07002b
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getString(I)Ljava/lang/String;
@@ -4680,16 +4993,16 @@
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setCatgoryMainTitle(Ljava/lang/String;)V
 
-    .line 1015
+    .line 1043
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setCategorySecondaryTitleVisible(Z)V
 
-    .line 1027
+    .line 1055
     :goto_0
     return-void
 
-    .line 1023
+    .line 1051
     :cond_0
     const v1, 0x7f070074
 
@@ -4697,7 +5010,7 @@
 
     move-result-object v0
 
-    .line 1024
+    .line 1052
     .local v0, fancyName:Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setTitle(Ljava/lang/String;)V
 

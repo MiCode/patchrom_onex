@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1698
+    .line 1699
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$7;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1700
+    .line 1701
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$7;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     iget-boolean v0, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity;->mIsNowPlayinglist:Z
@@ -74,7 +74,7 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1701
+    .line 1702
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$7;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAdapter:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
@@ -86,7 +86,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->setAutoRequery(ZZ)V
 
-    .line 1711
+    .line 1712
     :cond_0
     return-void
 .end method

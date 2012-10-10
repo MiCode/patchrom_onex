@@ -6251,7 +6251,7 @@
     :cond_5
     new-instance v7, Ljava/text/SimpleDateFormat;
 
-    const-string v18, "yyyy/MM/dd"
+    const-string/jumbo v18, "yyyy/MM/dd"
 
     move-object/from16 v0, v18
 
@@ -6552,7 +6552,7 @@
     .line 1125
     new-instance v9, Ljava/text/SimpleDateFormat;
 
-    const-string v17, "yyyy/MM/dd"
+    const-string/jumbo v17, "yyyy/MM/dd"
 
     move-object/from16 v0, v17
 
@@ -6638,7 +6638,7 @@
     new-instance v9, Ljava/text/SimpleDateFormat;
 
     .end local v9           #f:Ljava/text/SimpleDateFormat;
-    const-string v17, "yyyy/MM/dd"
+    const-string/jumbo v17, "yyyy/MM/dd"
 
     move-object/from16 v0, v17
 
@@ -9639,7 +9639,7 @@
 
     .line 3254
     .local v9, processingDefaultAction:Ljava/lang/String;
-    const-string v15, "|"
+    const-string/jumbo v15, "|"
 
     invoke-virtual {v9, v15}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
@@ -9677,7 +9677,7 @@
     move-result-object v9
 
     .line 3264
-    const-string v15, "|"
+    const-string/jumbo v15, "|"
 
     invoke-virtual {v9, v15}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 

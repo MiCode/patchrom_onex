@@ -157,7 +157,7 @@
     .line 571
     iput-object v2, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mForResultCaller:Lcom/htc/music/carmode/MusicMaActivity;
 
-    .line 812
+    .line 816
     new-instance v0, Lcom/htc/music/carmode/CarLibraryActivity$8;
 
     invoke-direct {v0, p0}, Lcom/htc/music/carmode/CarLibraryActivity$8;-><init>(Lcom/htc/music/carmode/CarLibraryActivity;)V
@@ -406,7 +406,7 @@
     .locals 2
 
     .prologue
-    .line 836
+    .line 840
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.carmode.PLAYBACK_VIEWER"
@@ -415,7 +415,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/music/carmode/CarLibraryActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 837
+    .line 841
     return-void
 .end method
 
@@ -545,7 +545,7 @@
     .line 332
     iget-object v2, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mErrorView:Landroid/view/View;
 
-    const v3, 0x7f080091
+    const v3, 0x7f080092
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -587,7 +587,7 @@
 .end method
 
 .method private startIndicateActivity(Ljava/lang/String;)V
-    .locals 2
+    .locals 1
     .parameter "mimeType"
 
     .prologue
@@ -596,204 +596,217 @@
 
     move-result-object v0
 
+    invoke-direct {p0, p1, v0}, Lcom/htc/music/carmode/CarLibraryActivity;->startIndicateActivity(Ljava/lang/String;Landroid/content/Intent;)V
+
     .line 704
-    .local v0, intent:Landroid/content/Intent;
-    if-eqz v0, :cond_0
-
-    const-string v1, "artistid"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-direct {p0, p1, v1}, Lcom/htc/music/carmode/CarLibraryActivity;->startIndicateActivity(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 705
     return-void
-
-    .line 704
-    :cond_0
-    const/4 v1, 0x0
-
-    goto :goto_0
 .end method
 
-.method private startIndicateActivity(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
+.method private startIndicateActivity(Ljava/lang/String;Landroid/content/Intent;)V
+    .locals 7
     .parameter "mimeType"
-    .parameter "artistId"
+    .parameter "origin"
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    .line 707
+    const/4 v2, 0x0
 
     .line 708
+    .local v2, item:Lcom/htc/music/util/SourceItem;
     const/4 v1, 0x0
 
-    .line 709
-    .local v1, item:Lcom/htc/music/util/SourceItem;
-    const/4 v0, 0x0
-
-    .line 711
-    .local v0, intent:Landroid/content/Intent;
+    .line 710
+    .local v1, intent:Landroid/content/Intent;
     if-eqz p1, :cond_0
 
-    const-string v2, ""
+    const-string v4, ""
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_1
+    if-eqz v4, :cond_1
 
-    .line 713
+    .line 712
     :cond_0
-    invoke-virtual {p0, v3, v3}, Lcom/htc/music/carmode/CarLibraryActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-virtual {p0, v5, v5}, Lcom/htc/music/carmode/CarLibraryActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 739
+    .line 743
     :goto_0
     return-void
 
-    .line 715
+    .line 714
     :cond_1
-    const-string v2, "com.htc.media/album"
+    const-string v4, "com.htc.media/album"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_3
+    if-eqz v4, :cond_3
 
-    .line 716
-    iget-object v2, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
+    .line 715
+    iget-object v4, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
 
-    const-string v3, "AlbumBrowserTabPlugin"
+    const-string v5, "AlbumBrowserTabPlugin"
 
-    invoke-virtual {v2, v3}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+    invoke-virtual {v4, v5}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 736
+    .line 740
     :cond_2
     :goto_1
-    iget-object v2, v1, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+    iget-object v4, v2, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
-    const-string v3, "LaunchFromSwitcher"
+    const-string v5, "LaunchFromSwitcher"
 
-    const/4 v4, 0x1
+    const/4 v6, 0x1
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {v4, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 737
-    iget-object v3, v1, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
+    .line 741
+    iget-object v5, v2, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
-    iget-object v2, v1, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+    iget-object v4, v2, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
 
     :goto_2
-    invoke-virtual {p0, v3, v2}, Lcom/htc/music/carmode/CarLibraryActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-virtual {p0, v5, v4}, Lcom/htc/music/carmode/CarLibraryActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 718
+    .line 717
     :cond_3
-    const-string v2, "com.htc.media/artistalbum"
+    const-string v4, "com.htc.media/artistalbum"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_4
+    if-eqz v4, :cond_4
 
-    .line 719
-    iget-object v2, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
+    .line 718
+    iget-object v4, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
 
-    const-string v3, "AlbumBrowserTabPlugin"
+    const-string v5, "AlbumBrowserTabPlugin"
 
-    invoke-virtual {v2, v3}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+    invoke-virtual {v4, v5}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 721
+    .line 720
     if-eqz p2, :cond_2
 
-    .line 722
-    iget-object v2, v1, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+    .line 721
+    const-string v4, "artistid"
 
-    invoke-virtual {v2}, Landroid/content/Intent;->clone()Ljava/lang/Object;
+    invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .end local v0           #intent:Landroid/content/Intent;
-    check-cast v0, Landroid/content/Intent;
+    .line 722
+    .local v0, artistId:Ljava/lang/String;
+    const-string v4, "dbTable"
+
+    invoke-virtual {p2, v4, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v3
 
     .line 723
-    .restart local v0       #intent:Landroid/content/Intent;
-    const-string v2, "artistid"
+    .local v3, queryTable:I
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    if-eq v3, v6, :cond_2
 
-    goto :goto_1
+    .line 724
+    iget-object v4, v2, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->clone()Ljava/lang/Object;
+
+    move-result-object v1
+
+    .end local v1           #intent:Landroid/content/Intent;
+    check-cast v1, Landroid/content/Intent;
 
     .line 725
-    :cond_4
-    const-string v2, "com.htc.media/track"
+    .restart local v1       #intent:Landroid/content/Intent;
+    const-string v4, "artistid"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
+    invoke-virtual {v1, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 726
-    iget-object v2, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
+    const-string v4, "dbTable"
 
-    const-string v3, "TrackBrowserTabPlugin"
-
-    invoke-virtual {v2, v3}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
-
-    move-result-object v1
+    invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     goto :goto_1
 
-    .line 728
-    :cond_5
-    const-string v2, "com.htc.media/playlist"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
     .line 729
-    iget-object v2, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
+    .end local v0           #artistId:Ljava/lang/String;
+    .end local v3           #queryTable:I
+    :cond_4
+    const-string v4, "com.htc.media/track"
 
-    const-string v3, "PlaylistBrowserTabPlugin"
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+    move-result v4
 
-    move-result-object v1
+    if-eqz v4, :cond_5
+
+    .line 730
+    iget-object v4, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
+
+    const-string v5, "TrackBrowserTabPlugin"
+
+    invoke-virtual {v4, v5}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+
+    move-result-object v2
 
     goto :goto_1
 
     .line 732
+    :cond_5
+    const-string v4, "com.htc.media/playlist"
+
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    .line 733
+    iget-object v4, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
+
+    const-string v5, "PlaylistBrowserTabPlugin"
+
+    invoke-virtual {v4, v5}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    .line 736
     :cond_6
-    iget-object v2, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
+    iget-object v4, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mCategorySwitcherAdapter:Lcom/htc/music/carmode/CategorySwitcherAdapter;
 
-    const-string v3, "ArtistBrowserTabPlugin"
+    const-string v5, "ArtistBrowserTabPlugin"
 
-    invoke-virtual {v2, v3}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
+    invoke-virtual {v4, v5}, Lcom/htc/music/carmode/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
 
-    move-result-object v1
+    move-result-object v2
 
     goto :goto_1
 
     :cond_7
-    move-object v2, v0
+    move-object v4, v1
 
-    .line 737
+    .line 741
     goto :goto_2
 .end method
 
@@ -852,17 +865,17 @@
     .locals 1
 
     .prologue
-    .line 805
+    .line 809
     iget-object v0, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     if-eqz v0, :cond_0
 
-    .line 806
+    .line 810
     iget-object v0, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
     invoke-virtual {v0}, Lcom/htc/widget/ActionBarDropDown;->dismiss()V
 
-    .line 808
+    .line 812
     :cond_0
     return-void
 .end method
@@ -872,21 +885,21 @@
     .parameter "event"
 
     .prologue
-    .line 859
+    .line 863
     invoke-virtual {p0}, Lcom/htc/music/carmode/CarLibraryActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 860
+    .line 864
     .local v0, activity:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
-    .line 861
+    .line 865
     invoke-virtual {v0, p1}, Landroid/app/Activity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v1
 
-    .line 863
+    .line 867
     :goto_0
     return v1
 
@@ -978,7 +991,7 @@
     .locals 1
 
     .prologue
-    .line 868
+    .line 872
     iget-boolean v0, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mActivityResumed:Z
 
     return v0
@@ -1428,13 +1441,7 @@
     :cond_2
     iget-object v3, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mMimeType:Ljava/lang/String;
 
-    const-string v4, "artistid"
-
-    invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {p0, v3, v4}, Lcom/htc/music/carmode/CarLibraryActivity;->startIndicateActivity(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v3, p1}, Lcom/htc/music/carmode/CarLibraryActivity;->startIndicateActivity(Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_0
 .end method
@@ -1443,15 +1450,15 @@
     .locals 1
 
     .prologue
-    .line 786
+    .line 790
     invoke-super {p0}, Landroid/app/ActivityGroup;->onPause()V
 
-    .line 787
+    .line 791
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mActivityResumed:Z
 
-    .line 788
+    .line 792
     return-void
 .end method
 
@@ -1459,10 +1466,10 @@
     .locals 0
 
     .prologue
-    .line 765
+    .line 769
     invoke-super {p0}, Landroid/app/ActivityGroup;->onPostResume()V
 
-    .line 770
+    .line 774
     return-void
 .end method
 
@@ -1471,17 +1478,17 @@
     .parameter "state"
 
     .prologue
-    .line 851
+    .line 855
     const-string v0, "[CarLibraryActivity]"
 
     const-string v1, "tab onRestoreInstanceState"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 852
+    .line 856
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 853
+    .line 857
     return-void
 .end method
 
@@ -1489,15 +1496,15 @@
     .locals 1
 
     .prologue
-    .line 745
+    .line 749
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mActivityResumed:Z
 
-    .line 748
+    .line 752
     invoke-super {p0}, Landroid/app/ActivityGroup;->onResume()V
 
-    .line 758
+    .line 762
     return-void
 .end method
 
@@ -1506,24 +1513,24 @@
     .parameter "outState"
 
     .prologue
-    .line 843
+    .line 847
     const-string v0, "[CarLibraryActivity]"
 
     const-string v1, "tab onSaveInstanceState"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 844
+    .line 848
     invoke-super {p0, p1}, Landroid/app/ActivityGroup;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 846
+    .line 850
     const-string v0, "last_mimetype"
 
     iget-object v1, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mMimeType:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 847
+    .line 851
     return-void
 .end method
 
@@ -1542,13 +1549,13 @@
     .locals 3
 
     .prologue
-    .line 793
+    .line 797
     :try_start_0
     invoke-super {p0}, Landroid/app/ActivityGroup;->onStop()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 798
+    .line 802
     :goto_0
     invoke-virtual {p0}, Lcom/htc/music/carmode/CarLibraryActivity;->getWindow()Landroid/view/Window;
 
@@ -1558,19 +1565,19 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 799
+    .line 803
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/music/carmode/CarLibraryActivity;->firstLaunch:Z
 
-    .line 800
+    .line 804
     return-void
 
-    .line 794
+    .line 798
     :catch_0
     move-exception v0
 
-    .line 795
+    .line 799
     .local v0, ex:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1598,7 +1605,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 935
+    .line 939
     return-void
 .end method
 
@@ -1608,7 +1615,7 @@
     .parameter "labelResId"
 
     .prologue
-    .line 947
+    .line 951
     return-void
 .end method
 
@@ -1618,7 +1625,7 @@
     .parameter "label"
 
     .prologue
-    .line 953
+    .line 957
     return-void
 .end method
 
@@ -1627,7 +1634,7 @@
     .parameter "clickListener"
 
     .prologue
-    .line 959
+    .line 963
     return-void
 .end method
 
@@ -1636,7 +1643,7 @@
     .parameter "setVisibile"
 
     .prologue
-    .line 941
+    .line 945
     return-void
 .end method
 
@@ -1681,7 +1688,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 905
+    .line 909
     return-void
 .end method
 
@@ -1691,7 +1698,7 @@
     .parameter "labelResId"
 
     .prologue
-    .line 917
+    .line 921
     return-void
 .end method
 
@@ -1701,7 +1708,7 @@
     .parameter "label"
 
     .prologue
-    .line 923
+    .line 927
     return-void
 .end method
 
@@ -1710,7 +1717,7 @@
     .parameter "clickListener"
 
     .prologue
-    .line 929
+    .line 933
     return-void
 .end method
 
@@ -1719,7 +1726,7 @@
     .parameter "setVisibile"
 
     .prologue
-    .line 911
+    .line 915
     return-void
 .end method
 
@@ -1728,7 +1735,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 875
+    .line 879
     return-void
 .end method
 
@@ -1738,7 +1745,7 @@
     .parameter "labelResId"
 
     .prologue
-    .line 887
+    .line 891
     return-void
 .end method
 
@@ -1748,7 +1755,7 @@
     .parameter "label"
 
     .prologue
-    .line 893
+    .line 897
     return-void
 .end method
 
@@ -1757,7 +1764,7 @@
     .parameter "clickListener"
 
     .prologue
-    .line 899
+    .line 903
     return-void
 .end method
 
@@ -1766,7 +1773,7 @@
     .parameter "setVisibile"
 
     .prologue
-    .line 881
+    .line 885
     return-void
 .end method
 
@@ -1794,7 +1801,7 @@
     .line 455
     iget-object v0, p0, Lcom/htc/music/carmode/CarLibraryActivity;->mActionbarDropDown:Lcom/htc/widget/ActionBarDropDown;
 
-    const v1, 0x7f0700ec
+    const v1, 0x7f0700ed
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarDropDown;->setPrimaryText(I)V
 

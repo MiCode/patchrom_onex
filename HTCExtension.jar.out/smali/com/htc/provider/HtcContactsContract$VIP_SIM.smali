@@ -29,7 +29,7 @@
     .locals 2
 
     .prologue
-    .line 3865
+    .line 3869
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "vip_sim_contacts"
@@ -47,7 +47,7 @@
     .locals 0
 
     .prologue
-    .line 3860
+    .line 3864
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,5 +1,5 @@
-.class final enum Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-.super Ljava/lang/Enum;
+.class Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+.super Ljava/lang/Object;
 .source "GsmDataConnectionTracker.java"
 
 
@@ -9,133 +9,75 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4018
+    accessFlags = 0xa
     name = "RecoveryAction"
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;",
-        ">;"
-    }
 .end annotation
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+.field public static final CLEANUP:I = 0x1
 
-.field public static final enum RADIO_RESET:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+.field public static final GET_DATA_CALL_LIST:I = 0x0
 
-.field public static final enum RADIO_RESTART:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+.field public static final RADIO_RESTART:I = 0x3
 
-.field public static final enum REREGISTER:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+.field public static final RADIO_RESTART_WITH_PROP:I = 0x4
+
+.field public static final REREGISTER:I = 0x2
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 144
-    new-instance v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    const-string v1, "REREGISTER"
-
-    invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->REREGISTER:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    new-instance v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    const-string v1, "RADIO_RESTART"
-
-    invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->RADIO_RESTART:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    new-instance v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    const-string v1, "RADIO_RESET"
-
-    invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->RADIO_RESET:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    sget-object v1, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->REREGISTER:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->RADIO_RESTART:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->RADIO_RESET:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->$VALUES:[Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>()V
     .locals 0
-    .parameter
-    .parameter
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .prologue
-    .line 144
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 145
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+.method static synthetic access$1300(I)Z
     .locals 1
-    .parameter "name"
+    .parameter "x0"
 
     .prologue
-    .line 144
-    const-class v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+    .line 145
+    invoke-static {p0}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->isAggressiveRecovery(I)Z
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result v0
 
-    move-result-object v0
-
-    check-cast v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-
-    return-object v0
+    return v0
 .end method
 
-.method public static values()[Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
-    .locals 1
+.method private static isAggressiveRecovery(I)Z
+    .locals 2
+    .parameter "value"
 
     .prologue
-    .line 144
-    sget-object v0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->$VALUES:[Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, [Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;->clone()Ljava/lang/Object;
+    .line 153
+    if-eq p0, v0, :cond_0
 
-    move-result-object v0
+    const/4 v1, 0x2
 
-    check-cast v0, [Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecoveryAction;
+    if-eq p0, v1, :cond_0
 
-    return-object v0
+    const/4 v1, 0x3
+
+    if-eq p0, v1, :cond_0
+
+    const/4 v1, 0x4
+
+    if-ne p0, v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

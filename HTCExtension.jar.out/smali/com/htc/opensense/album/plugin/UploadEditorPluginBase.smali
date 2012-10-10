@@ -27,6 +27,9 @@
 
 
 # virtual methods
+.method public abstract getDescriptionHintText()Ljava/lang/String;
+.end method
+
 .method public abstract getIndicatorRes()I
 .end method
 
@@ -34,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 49
     const/4 v0, 0x0
 
     return v0
@@ -44,7 +47,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 59
     const/4 v0, 0x0
 
     return v0
@@ -54,7 +57,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 39
     const/4 v0, 0x0
 
     return v0

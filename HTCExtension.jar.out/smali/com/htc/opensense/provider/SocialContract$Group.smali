@@ -33,7 +33,7 @@
     .locals 2
 
     .prologue
-    .line 285
+    .line 257
     invoke-static {}, Lcom/htc/opensense/provider/SocialContract;->access$000()Landroid/net/Uri;
 
     move-result-object v0
@@ -61,7 +61,7 @@
     .locals 0
 
     .prologue
-    .line 284
+    .line 256
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -73,25 +73,25 @@
     .parameter "accType"
 
     .prologue
-    .line 321
+    .line 281
     sget-object v1, Lcom/htc/opensense/provider/SocialContract$Group;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 322
+    .line 282
     .local v0, builder:Landroid/net/Uri$Builder;
     const-string v1, "group_account_name"
 
     invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 323
+    .line 283
     const-string v1, "group_account_type"
 
     invoke-virtual {v0, v1, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 324
+    .line 284
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
@@ -106,25 +106,25 @@
     .parameter "time"
 
     .prologue
-    .line 307
+    .line 271
     sget-object v1, Lcom/htc/opensense/provider/SocialContract$Group;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 308
+    .line 272
     .local v0, builder:Landroid/net/Uri$Builder;
     const-string v1, "group_account_name"
 
     invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 309
+    .line 273
     const-string v1, "group_account_type"
 
     invoke-virtual {v0, v1, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 310
+    .line 274
     const-string v1, "timestamp"
 
     invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -133,7 +133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 312
+    .line 276
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1

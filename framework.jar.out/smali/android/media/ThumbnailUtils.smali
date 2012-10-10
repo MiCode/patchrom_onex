@@ -38,7 +38,7 @@
 
     .prologue
     .line 46
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 455
     return-void
@@ -286,7 +286,7 @@
 
     iget v10, v3, Landroid/media/MediaFile$MediaFileType;->fileType:I
 
-    const/16 v11, 0x21
+    const/16 v11, 0x1f
 
     if-ne v10, v11, :cond_0
 

@@ -26,6 +26,8 @@
 
 .field public static final COLUMN_LASTMODTIME:Ljava/lang/String; = "last_modified_time"
 
+.field public static final COLUMN_LATEST_USN:Ljava/lang/String; = "latest_usn"
+
 .field public static final COLUMN_NAME:Ljava/lang/String; = "name"
 
 .field public static final COLUMN_SAVEDTIME:Ljava/lang/String; = "saved_time"

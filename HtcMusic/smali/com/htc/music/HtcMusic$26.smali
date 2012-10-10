@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4523
+    .line 4555
     iput-object p1, p0, Lcom/htc/music/HtcMusic$26;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 4526
+    .line 4558
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4527
+    .line 4559
     .local v0, action:Ljava/lang/String;
     const-string v3, "[HtcMusic]"
 
@@ -69,7 +69,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4528
+    .line 4560
     const-string v3, "action_complete_one_download"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -78,22 +78,22 @@
 
     if-eqz v3, :cond_0
 
-    .line 4529
+    .line 4561
     iget-object v3, p0, Lcom/htc/music/HtcMusic$26;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderAdapter:Lcom/htc/music/GliderAdapter;
-    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
+    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
 
     move-result-object v3
 
     if-nez v3, :cond_1
 
-    .line 4543
+    .line 4575
     :cond_0
     :goto_0
     return-void
 
-    .line 4532
+    .line 4564
     :cond_1
     const-string v3, "album_id"
 
@@ -103,7 +103,7 @@
 
     move-result v2
 
-    .line 4534
+    .line 4566
     .local v2, albumId:I
     const-string v3, "albumart_path"
 
@@ -111,7 +111,7 @@
 
     move-result-object v1
 
-    .line 4537
+    .line 4569
     .local v1, albumArtPath:Ljava/lang/String;
     if-ltz v2, :cond_2
 
@@ -121,7 +121,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 4538
+    .line 4570
     :cond_2
     const-string v3, "[HtcMusic]"
 
@@ -131,12 +131,12 @@
 
     goto :goto_0
 
-    .line 4541
+    .line 4573
     :cond_3
     iget-object v3, p0, Lcom/htc/music/HtcMusic$26;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mGliderAdapter:Lcom/htc/music/GliderAdapter;
-    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$5200(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
+    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$5300(Lcom/htc/music/HtcMusic;)Lcom/htc/music/GliderAdapter;
 
     move-result-object v3
 

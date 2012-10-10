@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 970
+    .line 1121
     iput-object p1, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "x1"
 
     .prologue
-    .line 970
+    .line 1121
     invoke-direct {p0, p1}, Landroid/webkit/ZoomManager$ScaleDetectorListener;-><init>(Landroid/webkit/ZoomManager;)V
 
     return-void
@@ -60,7 +60,7 @@
 
     const/4 v7, 0x1
 
-    .line 1045
+    .line 1203
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
     move-result v8
@@ -74,7 +74,7 @@
 
     mul-float v5, v8, v9
 
-    .line 1049
+    .line 1207
     .local v5, scale:F
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -97,7 +97,7 @@
     :cond_0
     move v6, v7
 
-    .line 1053
+    .line 1211
     .local v6, isScaleLimited:Z
     :goto_0
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -116,7 +116,7 @@
 
     move-result v5
 
-    .line 1055
+    .line 1213
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mPinchToZoomAnimating:Z
@@ -134,14 +134,14 @@
 
     if-eqz v8, :cond_2
 
-    .line 1056
+    .line 1214
     :cond_1
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mPinchToZoomAnimating:Z
     invoke-static {v8, v7}, Landroid/webkit/ZoomManager;->access$1202(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1058
+    .line 1216
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -153,7 +153,7 @@
 
     if-lez v8, :cond_4
 
-    .line 1059
+    .line 1217
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -169,7 +169,7 @@
 
     move-result v5
 
-    .line 1063
+    .line 1221
     :goto_1
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -177,7 +177,7 @@
 
     move-result v5
 
-    .line 1065
+    .line 1223
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -199,7 +199,7 @@
 
     if-gez v8, :cond_5
 
-    .line 1082
+    .line 1240
     .end local v6           #isScaleLimited:Z
     :cond_2
     :goto_2
@@ -208,10 +208,10 @@
     :cond_3
     move v6, v0
 
-    .line 1049
+    .line 1207
     goto :goto_0
 
-    .line 1061
+    .line 1219
     .restart local v6       #isScaleLimited:Z
     :cond_4
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -231,7 +231,7 @@
 
     goto :goto_1
 
-    .line 1069
+    .line 1227
     :cond_5
     const/4 v8, 0x2
 
@@ -243,30 +243,30 @@
 
     if-ne v8, v9, :cond_6
 
-    .line 1070
+    .line 1228
     invoke-virtual {p1, v0}, Landroid/view/ScaleGestureDetector;->getX(I)F
 
     move-result v1
 
-    .line 1071
+    .line 1229
     .local v1, x0:F
     invoke-virtual {p1, v0}, Landroid/view/ScaleGestureDetector;->getY(I)F
 
     move-result v2
 
-    .line 1072
+    .line 1230
     .local v2, y0:F
     invoke-virtual {p1, v7}, Landroid/view/ScaleGestureDetector;->getX(I)F
 
     move-result v3
 
-    .line 1073
+    .line 1231
     .local v3, x1:F
     invoke-virtual {p1, v7}, Landroid/view/ScaleGestureDetector;->getY(I)F
 
     move-result v4
 
-    .line 1074
+    .line 1232
     .local v4, y1:F
     iget-object v0, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -274,7 +274,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/webkit/ZoomManager$HTCMultiTouch;->multiTouchOnMoveEvent(FFFFF)Z
 
-    .line 1079
+    .line 1237
     .end local v1           #x0:F
     .end local v2           #y0:F
     .end local v3           #x1:F
@@ -291,10 +291,10 @@
 
     move v6, v7
 
-    .line 1080
+    .line 1238
     goto :goto_2
 
-    .line 1076
+    .line 1234
     :cond_6
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -308,7 +308,7 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/webkit/ZoomManager;->setZoomCenter(FF)V
 
-    .line 1077
+    .line 1235
     iget-object v8, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v8, v5, v0}, Landroid/webkit/ZoomManager;->setZoomScale(FZ)V
@@ -323,7 +323,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1025
+    .line 1183
     iget-object v6, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mFocusX:F
@@ -331,7 +331,7 @@
 
     move-result v2
 
-    .line 1026
+    .line 1184
     .local v2, prevFocusX:F
     iget-object v6, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -340,7 +340,7 @@
 
     move-result v3
 
-    .line 1027
+    .line 1185
     .local v3, prevFocusY:F
     iget-object v6, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -351,7 +351,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mFocusX:F
     invoke-static {v6, v7}, Landroid/webkit/ZoomManager;->access$802(Landroid/webkit/ZoomManager;F)F
 
-    .line 1028
+    .line 1186
     iget-object v6, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
@@ -361,7 +361,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mFocusY:F
     invoke-static {v6, v7}, Landroid/webkit/ZoomManager;->access$902(Landroid/webkit/ZoomManager;F)F
 
-    .line 1029
+    .line 1187
     cmpl-float v6, v2, v5
 
     if-nez v6, :cond_0
@@ -372,7 +372,7 @@
 
     move v1, v5
 
-    .line 1032
+    .line 1190
     .local v1, focusDelta:F
     :goto_0
     iget-object v6, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -385,7 +385,7 @@
     #calls: Landroid/webkit/ZoomManager$FocusMovementQueue;->add(F)V
     invoke-static {v6, v1}, Landroid/webkit/ZoomManager$FocusMovementQueue;->access$1000(Landroid/webkit/ZoomManager$FocusMovementQueue;F)V
 
-    .line 1033
+    .line 1191
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getCurrentSpan()F
 
     move-result v6
@@ -400,7 +400,7 @@
 
     add-float v0, v6, v7
 
-    .line 1035
+    .line 1193
     .local v0, deltaSpan:F
     iget-object v6, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -424,23 +424,23 @@
 
     const/4 v4, 0x1
 
-    .line 1036
+    .line 1194
     .local v4, result:Z
     :goto_1
     if-eqz v4, :cond_2
 
-    .line 1037
+    .line 1195
     iget v5, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->mAccumulatedSpan:F
 
     add-float/2addr v5, v0
 
     iput v5, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->mAccumulatedSpan:F
 
-    .line 1041
+    .line 1199
     :goto_2
     return v4
 
-    .line 1029
+    .line 1187
     .end local v0           #deltaSpan:F
     .end local v1           #focusDelta:F
     .end local v4           #result:Z
@@ -493,7 +493,7 @@
 
     goto :goto_0
 
-    .line 1035
+    .line 1193
     .restart local v0       #deltaSpan:F
     .restart local v1       #focusDelta:F
     :cond_1
@@ -501,7 +501,7 @@
 
     goto :goto_1
 
-    .line 1039
+    .line 1197
     .restart local v4       #result:Z
     :cond_2
     iput v5, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->mAccumulatedSpan:F
@@ -514,7 +514,7 @@
     .parameter "detector"
 
     .prologue
-    .line 1086
+    .line 1244
     invoke-virtual {p0, p1}, Landroid/webkit/ZoomManager$ScaleDetectorListener;->isPanningOnly(Landroid/view/ScaleGestureDetector;)Z
 
     move-result v0
@@ -527,7 +527,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1087
+    .line 1245
     :cond_0
     iget-object v0, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -539,10 +539,10 @@
     #calls: Landroid/webkit/ZoomManager$FocusMovementQueue;->clear()V
     invoke-static {v0}, Landroid/webkit/ZoomManager$FocusMovementQueue;->access$700(Landroid/webkit/ZoomManager$FocusMovementQueue;)V
 
-    .line 1088
+    .line 1246
     const/4 v0, 0x1
 
-    .line 1090
+    .line 1248
     :goto_0
     return v0
 
@@ -559,22 +559,104 @@
     .prologue
     const/high16 v9, 0x3f80
 
-    const/4 v8, 0x1
+    const/4 v8, 0x0
 
     const/4 v7, 0x0
 
-    const/4 v6, 0x0
+    const/4 v6, 0x1
 
-    .line 976
+    .line 1127
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v3}, Landroid/webkit/ZoomManager;->getZoomType()I
 
     move-result v3
 
-    if-ne v8, v3, :cond_2
+    if-ne v6, v3, :cond_4
 
-    .line 978
+    .line 1128
+    iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
+
+    #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v3}, Landroid/webkit/ZoomManager;->access$100(Landroid/webkit/ZoomManager;)Landroid/webkit/WebView;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
+
+    #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v3}, Landroid/webkit/ZoomManager;->access$100(Landroid/webkit/ZoomManager;)Landroid/webkit/WebView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/webkit/WebView;->isInBrowserApp()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
+
+    #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v3}, Landroid/webkit/ZoomManager;->access$100(Landroid/webkit/ZoomManager;)Landroid/webkit/WebView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/webkit/WebSettings;->getLayoutAlgorithm()Landroid/webkit/WebSettings$LayoutAlgorithm;
+
+    move-result-object v3
+
+    sget-object v4, Landroid/webkit/WebSettings$LayoutAlgorithm;->NARROW_COLUMNS:Landroid/webkit/WebSettings$LayoutAlgorithm;
+
+    if-ne v3, v4, :cond_2
+
+    .line 1130
+    iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
+
+    #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v3}, Landroid/webkit/ZoomManager;->access$100(Landroid/webkit/ZoomManager;)Landroid/webkit/WebView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1131
+    iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
+
+    #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v3}, Landroid/webkit/ZoomManager;->access$100(Landroid/webkit/ZoomManager;)Landroid/webkit/WebView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v6}, Landroid/webkit/WebViewCore;->setInterruptDraw(Z)V
+
+    .line 1132
+    :cond_0
+    iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
+
+    #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v3}, Landroid/webkit/ZoomManager;->access$100(Landroid/webkit/ZoomManager;)Landroid/webkit/WebView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/webkit/WebView;->nativeOmitZoomTransition()V
+
+    .line 1136
+    :goto_0
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
@@ -586,9 +668,9 @@
 
     move-result v3
 
-    if-nez v3, :cond_0
+    if-nez v3, :cond_1
 
-    .line 979
+    .line 1137
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
@@ -619,7 +701,7 @@
 
     move-result v1
 
-    .line 980
+    .line 1138
     .local v1, x:I
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -651,7 +733,7 @@
 
     move-result v2
 
-    .line 981
+    .line 1139
     .local v2, y:I
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -668,7 +750,7 @@
 
     iput v4, v3, Landroid/webkit/ZoomManager;->mFocusNodeScaleBegin:I
 
-    .line 984
+    .line 1142
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->m_bIsBrowserApp:Z
@@ -676,7 +758,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_0
+    if-nez v3, :cond_1
 
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -689,9 +771,9 @@
 
     move-result v3
 
-    if-nez v3, :cond_0
+    if-nez v3, :cond_1
 
-    .line 986
+    .line 1144
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -700,17 +782,17 @@
 
     iput v4, v3, Landroid/webkit/ZoomManager;->mFocusNodeScale:I
 
-    .line 987
+    .line 1145
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iput v1, v3, Landroid/webkit/ZoomManager;->mFocusAnchorX:I
 
-    .line 988
+    .line 1146
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iput v2, v3, Landroid/webkit/ZoomManager;->mFocusAnchorY:I
 
-    .line 989
+    .line 1147
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
@@ -726,21 +808,21 @@
 
     iget v4, v4, Landroid/webkit/ZoomManager;->mFocusNodeScaleBegin:I
 
-    invoke-virtual {v3, v4, v8, v7}, Landroid/webkit/HTCWebCore;->nativeGetNodeRect(IZI)Landroid/graphics/Rect;
+    invoke-virtual {v3, v4, v6, v8}, Landroid/webkit/HTCWebCore;->nativeGetNodeRect(IZI)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 991
+    .line 1149
     .local v0, rect:Landroid/graphics/Rect;
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v3
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_3
 
-    .line 992
+    .line 1150
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -765,7 +847,7 @@
 
     iput v4, v3, Landroid/webkit/ZoomManager;->mFocusXratio:F
 
-    .line 993
+    .line 1151
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -790,8 +872,8 @@
 
     iput v4, v3, Landroid/webkit/ZoomManager;->mFocusYratio:F
 
-    .line 998
-    :goto_0
+    .line 1156
+    :goto_1
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -811,7 +893,7 @@
 
     iput v4, v3, Landroid/webkit/ZoomManager;->mFocusAnchorX:I
 
-    .line 999
+    .line 1157
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -831,23 +913,23 @@
 
     iput v4, v3, Landroid/webkit/ZoomManager;->mFocusAnchorY:I
 
-    .line 1011
+    .line 1169
     .end local v0           #rect:Landroid/graphics/Rect;
     .end local v1           #x:I
     .end local v2           #y:I
-    :cond_0
-    :goto_1
+    :cond_1
+    :goto_2
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInitialZoomOverview:Z
-    invoke-static {v3, v7}, Landroid/webkit/ZoomManager;->access$502(Landroid/webkit/ZoomManager;Z)Z
+    invoke-static {v3, v8}, Landroid/webkit/ZoomManager;->access$502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1012
+    .line 1170
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v3}, Landroid/webkit/ZoomManager;->dismissZoomPicker()V
 
-    .line 1013
+    .line 1171
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mFocusMovementQueue:Landroid/webkit/ZoomManager$FocusMovementQueue;
@@ -858,7 +940,7 @@
     #calls: Landroid/webkit/ZoomManager$FocusMovementQueue;->clear()V
     invoke-static {v3}, Landroid/webkit/ZoomManager$FocusMovementQueue;->access$700(Landroid/webkit/ZoomManager$FocusMovementQueue;)V
 
-    .line 1014
+    .line 1172
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
@@ -868,7 +950,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mFocusX:F
     invoke-static {v3, v4}, Landroid/webkit/ZoomManager;->access$802(Landroid/webkit/ZoomManager;F)F
 
-    .line 1015
+    .line 1173
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
@@ -878,7 +960,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mFocusY:F
     invoke-static {v3, v4}, Landroid/webkit/ZoomManager;->access$902(Landroid/webkit/ZoomManager;F)F
 
-    .line 1016
+    .line 1174
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
@@ -890,7 +972,7 @@
 
     invoke-virtual {v3}, Landroid/webkit/ViewManager;->startZoom()V
 
-    .line 1017
+    .line 1175
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
@@ -900,33 +982,46 @@
 
     invoke-virtual {v3}, Landroid/webkit/WebView;->onPinchToZoomAnimationStart()V
 
-    .line 1018
-    iput v6, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->mAccumulatedSpan:F
+    .line 1176
+    iput v7, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->mAccumulatedSpan:F
 
-    .line 1019
-    return v8
+    .line 1177
+    return v6
 
-    .line 995
+    .line 1133
+    :cond_2
+    iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
+
+    #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
+    invoke-static {v3}, Landroid/webkit/ZoomManager;->access$100(Landroid/webkit/ZoomManager;)Landroid/webkit/WebView;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/webkit/WebView;->nativeAllowZoomTransition()V
+
+    goto/16 :goto_0
+
+    .line 1153
     .restart local v0       #rect:Landroid/graphics/Rect;
     .restart local v1       #x:I
     .restart local v2       #y:I
-    :cond_1
+    :cond_3
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
-    iput v6, v3, Landroid/webkit/ZoomManager;->mFocusXratio:F
+    iput v7, v3, Landroid/webkit/ZoomManager;->mFocusXratio:F
 
-    .line 996
+    .line 1154
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
-    iput v6, v3, Landroid/webkit/ZoomManager;->mFocusYratio:F
+    iput v7, v3, Landroid/webkit/ZoomManager;->mFocusYratio:F
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 1003
+    .line 1161
     .end local v0           #rect:Landroid/graphics/Rect;
     .end local v1           #x:I
     .end local v2           #y:I
-    :cond_2
+    :cond_4
     const/4 v3, 0x2
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -935,16 +1030,16 @@
 
     move-result v4
 
-    if-ne v3, v4, :cond_0
+    if-ne v3, v4, :cond_1
 
-    .line 1004
+    .line 1162
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v3, v3, Landroid/webkit/ZoomManager;->mMultiTouch:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_5
 
-    .line 1005
+    .line 1163
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -956,16 +1051,16 @@
 
     iput v4, v3, Landroid/webkit/ZoomManager;->mStartZoomRatio:F
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 1007
-    :cond_3
+    .line 1165
+    :cond_5
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->m_nZoomType:I
-    invoke-static {v3, v7}, Landroid/webkit/ZoomManager;->access$402(Landroid/webkit/ZoomManager;I)I
+    invoke-static {v3, v8}, Landroid/webkit/ZoomManager;->access$402(Landroid/webkit/ZoomManager;I)I
 
-    goto :goto_1
+    goto :goto_2
 .end method
 
 .method public onScaleEnd(Landroid/view/ScaleGestureDetector;)V
@@ -977,7 +1072,7 @@
 
     const/4 v1, 0x0
 
-    .line 1094
+    .line 1252
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mPinchToZoomAnimating:Z
@@ -987,13 +1082,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 1095
+    .line 1253
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mPinchToZoomAnimating:Z
     invoke-static {v3, v1}, Landroid/webkit/ZoomManager;->access$1202(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1096
+    .line 1254
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -1032,7 +1127,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mAnchorX:I
     invoke-static {v3, v4}, Landroid/webkit/ZoomManager;->access$1402(Landroid/webkit/ZoomManager;I)I
 
-    .line 1097
+    .line 1255
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     iget-object v4, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -1071,7 +1166,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mAnchorY:I
     invoke-static {v3, v4}, Landroid/webkit/ZoomManager;->access$1602(Landroid/webkit/ZoomManager;I)I
 
-    .line 1100
+    .line 1258
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v3}, Landroid/webkit/ZoomManager;->canZoomOut()Z
@@ -1109,7 +1204,7 @@
     :cond_0
     move v0, v2
 
-    .line 1104
+    .line 1262
     .local v0, reflowNow:Z
     :goto_0
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -1120,12 +1215,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 1105
+    .line 1263
     iget-object v1, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v1, v2}, Landroid/webkit/ZoomManager;->refreshZoomScale(Z)V
 
-    .line 1111
+    .line 1269
     :goto_1
     iget-object v1, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
@@ -1136,7 +1231,7 @@
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 1114
+    .line 1272
     .end local v0           #reflowNow:Z
     :cond_1
     iget-object v1, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
@@ -1150,7 +1245,7 @@
 
     invoke-virtual {v1}, Landroid/webkit/ViewManager;->endZoom()V
 
-    .line 1115
+    .line 1273
     iget-object v1, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mWebView:Landroid/webkit/WebView;
@@ -1160,16 +1255,16 @@
 
     invoke-virtual {v1, p1}, Landroid/webkit/WebView;->onPinchToZoomAnimationEnd(Landroid/view/ScaleGestureDetector;)V
 
-    .line 1116
+    .line 1274
     return-void
 
     :cond_2
     move v0, v1
 
-    .line 1100
+    .line 1258
     goto :goto_0
 
-    .line 1108
+    .line 1266
     .restart local v0       #reflowNow:Z
     :cond_3
     iget-object v3, p0, Landroid/webkit/ZoomManager$ScaleDetectorListener;->this$0:Landroid/webkit/ZoomManager;

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 413
+    .line 417
     iput-object p1, p0, Landroid/os/MessageQueue$1;->this$0:Landroid/os/MessageQueue;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -49,19 +49,19 @@
 
     const/4 v1, 0x0
 
-    .line 416
+    .line 420
     iget-wide v2, p1, Landroid/os/Message;->expressNo:J
 
     cmp-long v2, v2, v4
 
     if-lez v2, :cond_0
 
-    .line 429
+    .line 433
     :goto_0
     :sswitch_0
     return v0
 
-    .line 418
+    .line 422
     :cond_0
     iget-wide v2, p1, Landroid/os/Message;->expressNo:J
 
@@ -71,10 +71,10 @@
 
     move v0, v1
 
-    .line 419
+    .line 423
     goto :goto_0
 
-    .line 421
+    .line 425
     :cond_1
     iget-object v2, p1, Landroid/os/Message;->target:Landroid/os/Handler;
 
@@ -86,7 +86,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 422
+    .line 426
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
@@ -94,10 +94,10 @@
     :cond_2
     move v0, v1
 
-    .line 429
+    .line 433
     goto :goto_0
 
-    .line 422
+    .line 426
     :sswitch_data_0
     .sparse-switch
         0x3e8 -> :sswitch_0

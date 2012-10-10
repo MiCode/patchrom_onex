@@ -37,17 +37,37 @@
 
 # virtual methods
 .method protected onEnter()V
-    .locals 2
+    .locals 1
 
     .prologue
     .line 52
+    :goto_0
     iget-object v0, p0, Lcom/android/camera/component/HeadsetButtonController$1;->this$0:Lcom/android/camera/component/HeadsetButtonController;
 
-    const/4 v1, 0x0
+    #getter for: Lcom/android/camera/component/HeadsetButtonController;->m_ActionScreenDisableCounter:I
+    invoke-static {v0}, Lcom/android/camera/component/HeadsetButtonController;->access$000(Lcom/android/camera/component/HeadsetButtonController;)I
 
-    #setter for: Lcom/android/camera/component/HeadsetButtonController;->m_ActionScreenDisableCounter:I
-    invoke-static {v0, v1}, Lcom/android/camera/component/HeadsetButtonController;->access$002(Lcom/android/camera/component/HeadsetButtonController;I)I
+    move-result v0
+
+    if-lez v0, :cond_0
 
     .line 53
+    iget-object v0, p0, Lcom/android/camera/component/HeadsetButtonController$1;->this$0:Lcom/android/camera/component/HeadsetButtonController;
+
+    invoke-virtual {v0}, Lcom/android/camera/component/HeadsetButtonController;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->enableActionScreen()V
+
+    .line 52
+    iget-object v0, p0, Lcom/android/camera/component/HeadsetButtonController$1;->this$0:Lcom/android/camera/component/HeadsetButtonController;
+
+    invoke-static {v0}, Lcom/android/camera/component/HeadsetButtonController;->access$006(Lcom/android/camera/component/HeadsetButtonController;)I
+
+    goto :goto_0
+
+    .line 54
+    :cond_0
     return-void
 .end method

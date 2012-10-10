@@ -3,7 +3,7 @@
 .source "MainBar.java"
 
 # interfaces
-.implements Lcom/android/camera/menu/MenuListView$OnMenuItemClickedListener;
+.implements Lcom/android/camera/menu/MenuListView$OnMenuItemContentClickedListener;
 
 
 # annotations
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 435
+    .line 461
     iput-object p1, p0, Lcom/android/camera/component/MainBar$21;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,20 +37,19 @@
 
 
 # virtual methods
-.method public onItemClicked(Lcom/android/camera/menu/MenuListView;Lcom/android/camera/menu/MenuItem;II)V
+.method public onItemContentClicked(Lcom/android/camera/menu/MenuListView;Lcom/android/camera/menu/MenuItem;I)V
     .locals 1
     .parameter "menu"
     .parameter "item"
-    .parameter "index"
     .parameter "id"
 
     .prologue
-    .line 439
+    .line 465
     iget-object v0, p0, Lcom/android/camera/component/MainBar$21;->this$0:Lcom/android/camera/component/MainBar;
 
-    #calls: Lcom/android/camera/component/MainBar;->onSettingsMenuItemClicked(Lcom/android/camera/menu/MenuItem;I)V
-    invoke-static {v0, p2, p4}, Lcom/android/camera/component/MainBar;->access$1900(Lcom/android/camera/component/MainBar;Lcom/android/camera/menu/MenuItem;I)V
+    #calls: Lcom/android/camera/component/MainBar;->resetCloseMenuTimer()V
+    invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1700(Lcom/android/camera/component/MainBar;)V
 
-    .line 440
+    .line 466
     return-void
 .end method

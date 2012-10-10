@@ -15,7 +15,7 @@
     .parameter "context"
 
     .prologue
-    const v6, 0x7f0b00b8
+    const v6, 0x7f0b00b9
 
     .line 31
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
@@ -103,7 +103,7 @@
     iput-object v3, p0, Lcom/android/camera/widget/AppListItem;->m_TextView:Landroid/widget/TextView;
 
     .line 52
-    const v3, 0x7f0800a8
+    const v3, 0x7f0800aa
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

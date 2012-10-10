@@ -30,7 +30,7 @@
     .locals 2
 
     .prologue
-    .line 207
+    .line 195
     invoke-static {}, Lcom/htc/opensense/provider/SocialContract;->access$000()Landroid/net/Uri;
 
     move-result-object v0
@@ -58,7 +58,7 @@
     .locals 0
 
     .prologue
-    .line 205
+    .line 193
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,7 +69,7 @@
     .parameter "uri"
 
     .prologue
-    .line 238
+    .line 222
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
@@ -90,7 +90,7 @@
     .parameter "uri"
 
     .prologue
-    .line 234
+    .line 218
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
@@ -111,7 +111,7 @@
     .parameter "uri"
 
     .prologue
-    .line 246
+    .line 230
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
@@ -132,7 +132,7 @@
     .parameter "uri"
 
     .prologue
-    .line 242
+    .line 226
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
@@ -164,7 +164,7 @@
     .parameter "streamType"
 
     .prologue
-    .line 222
+    .line 206
     sget-object v0, Lcom/htc/opensense/provider/SocialContract$SyncCursors;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;

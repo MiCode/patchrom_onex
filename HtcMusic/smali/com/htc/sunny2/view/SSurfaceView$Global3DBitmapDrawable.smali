@@ -29,15 +29,15 @@
     .parameter "srcHeight"
 
     .prologue
-    .line 1234
+    .line 1243
     invoke-direct {p0, p1, p2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 1235
+    .line 1244
     iput p3, p0, Lcom/htc/sunny2/view/SSurfaceView$Global3DBitmapDrawable;->mBitmapSrcWidth:I
 
-    .line 1236
+    .line 1245
     iput p4, p0, Lcom/htc/sunny2/view/SSurfaceView$Global3DBitmapDrawable;->mBitmapSrcHeight:I
 
-    .line 1237
+    .line 1246
     return-void
 .end method

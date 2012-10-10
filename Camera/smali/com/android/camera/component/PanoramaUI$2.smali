@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 761
+    .line 765
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$2;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 765
+    .line 769
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI$2;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_CancelButton:Landroid/widget/ImageView;
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    .line 766
+    .line 770
     .local v0, obj:Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -70,11 +70,11 @@
 
     if-nez v3, :cond_0
 
-    .line 788
+    .line 792
     :goto_0
     return v5
 
-    .line 770
+    .line 774
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -82,7 +82,7 @@
 
     float-to-int v1, v3
 
-    .line 771
+    .line 775
     .local v1, x:I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -90,7 +90,7 @@
 
     float-to-int v2, v3
 
-    .line 772
+    .line 776
     .local v2, y:I
     if-ltz v1, :cond_1
 
@@ -108,7 +108,7 @@
 
     if-le v2, v3, :cond_2
 
-    .line 774
+    .line 778
     :cond_1
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI$2;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -119,7 +119,7 @@
 
     goto :goto_0
 
-    .line 779
+    .line 783
     :cond_2
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -129,7 +129,7 @@
 
     goto :goto_0
 
-    .line 782
+    .line 786
     :pswitch_0
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI$2;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -138,7 +138,7 @@
 
     goto :goto_0
 
-    .line 785
+    .line 789
     :pswitch_1
     iget-object v3, p0, Lcom/android/camera/component/PanoramaUI$2;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -146,7 +146,7 @@
 
     goto :goto_0
 
-    .line 779
+    .line 783
     nop
 
     :pswitch_data_0

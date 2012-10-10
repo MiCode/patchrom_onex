@@ -1341,14 +1341,14 @@
     .local v1, ex:Ljava/lang/NumberFormatException;
     const-string v5, "Zygote"
 
-    const-string/jumbo v6, "invalid Zygote wire format: non-int at argc"
+    const-string v6, "invalid Zygote wire format: non-int at argc"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 558
     new-instance v5, Ljava/io/IOException;
 
-    const-string/jumbo v6, "invalid wire format"
+    const-string v6, "invalid wire format"
 
     invoke-direct {v5, v6}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 

@@ -150,7 +150,7 @@
     .locals 1
 
     .prologue
-    .line 241
+    .line 229
     const-class v0, Lcom/htc/hfm/HfmClient;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -173,27 +173,27 @@
     .parameter "priority"
 
     .prologue
-    .line 474
+    .line 449
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 387
+    .line 362
     new-instance v0, Lcom/htc/hfm/HfmClient$1;
 
     invoke-direct {v0, p0}, Lcom/htc/hfm/HfmClient$1;-><init>(Lcom/htc/hfm/HfmClient;)V
 
     iput-object v0, p0, Lcom/htc/hfm/HfmClient;->mServiceConnection:Landroid/content/ServiceConnection;
 
-    .line 406
+    .line 381
     new-instance v0, Lcom/htc/hfm/HfmClient$2;
 
     invoke-direct {v0, p0}, Lcom/htc/hfm/HfmClient$2;-><init>(Lcom/htc/hfm/HfmClient;)V
 
     iput-object v0, p0, Lcom/htc/hfm/HfmClient;->mIHfmServiceCallback:Lcom/htc/hfm/IHfmServiceCallback;
 
-    .line 475
+    .line 450
     if-nez p1, :cond_0
 
-    .line 476
+    .line 451
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "callback cannot be null"
@@ -202,14 +202,14 @@
 
     throw v0
 
-    .line 478
+    .line 453
     :cond_0
     iput-object p1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
-    .line 480
+    .line 455
     if-nez p2, :cond_1
 
-    .line 481
+    .line 456
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "context cannot be null"
@@ -218,17 +218,17 @@
 
     throw v0
 
-    .line 483
+    .line 458
     :cond_1
     iput-object p3, p0, Lcom/htc/hfm/HfmClient;->mAppInfo:Landroid/os/Bundle;
 
-    .line 484
+    .line 459
     iput-object p2, p0, Lcom/htc/hfm/HfmClient;->mContext:Landroid/content/Context;
 
-    .line 486
+    .line 461
     if-nez p4, :cond_2
 
-    .line 487
+    .line 462
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "packageName cannot be null"
@@ -237,22 +237,22 @@
 
     throw v0
 
-    .line 489
+    .line 464
     :cond_2
     const/16 v0, 0x3ea
 
     if-ne p7, v0, :cond_3
 
-    .line 490
+    .line 465
     const-string v0, "com.htc.htcspeak"
 
     iput-object v0, p0, Lcom/htc/hfm/HfmClient;->mPackageName:Ljava/lang/String;
 
-    .line 495
+    .line 470
     :goto_0
     if-nez p5, :cond_4
 
-    .line 496
+    .line 471
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "actionName cannot be null"
@@ -261,25 +261,25 @@
 
     throw v0
 
-    .line 492
+    .line 467
     :cond_3
     iput-object p4, p0, Lcom/htc/hfm/HfmClient;->mPackageName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 498
+    .line 473
     :cond_4
     iput-object p5, p0, Lcom/htc/hfm/HfmClient;->mActionName:Ljava/lang/String;
 
-    .line 500
+    .line 475
     if-gez p6, :cond_5
 
-    .line 501
+    .line 476
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/htc/hfm/HfmClient;->mTimeout:I
 
-    .line 506
+    .line 481
     :goto_1
     const/16 v0, 0x3e9
 
@@ -289,19 +289,19 @@
 
     if-gt p7, v0, :cond_6
 
-    .line 507
+    .line 482
     iput p7, p0, Lcom/htc/hfm/HfmClient;->mPriority:I
 
-    .line 511
+    .line 486
     return-void
 
-    .line 503
+    .line 478
     :cond_5
     iput p6, p0, Lcom/htc/hfm/HfmClient;->mTimeout:I
 
     goto :goto_1
 
-    .line 509
+    .line 484
     :cond_6
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -337,14 +337,14 @@
     .end annotation
 
     .prologue
-    .line 794
+    .line 760
     iget-object v0, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/htc/hfm/IHfmService;->abort(Ljava/lang/String;)V
 
-    .line 795
+    .line 761
     return-void
 .end method
 
@@ -357,7 +357,7 @@
     .end annotation
 
     .prologue
-    .line 748
+    .line 714
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v2, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
@@ -366,13 +366,13 @@
 
     move-result v0
 
-    .line 749
+    .line 715
     .local v0, result:I
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
     invoke-virtual {v1, v0}, Lcom/htc/hfm/HfmClient$Callback;->onCancelReservationComplete(I)V
 
-    .line 750
+    .line 716
     return-void
 .end method
 
@@ -384,24 +384,24 @@
 
     const/4 v5, 0x0
 
-    .line 852
+    .line 818
     iget-object v3, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     if-nez v3, :cond_1
 
-    .line 853
+    .line 819
     sget-object v3, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     const-string v4, "current action is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
+    .line 849
     :cond_0
     :goto_0
     return-void
 
-    .line 856
+    .line 822
     :cond_1
     iget-object v3, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
@@ -410,7 +410,7 @@
 
     move-result v0
 
-    .line 857
+    .line 823
     .local v0, actionCode:I
     iget-boolean v3, p0, Lcom/htc/hfm/HfmClient;->mIsBound:Z
 
@@ -420,23 +420,23 @@
 
     if-eqz v3, :cond_2
 
-    .line 859
+    .line 825
     :try_start_0
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->doLastStep()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 864
+    .line 830
     iput-object v5, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     goto :goto_0
 
-    .line 860
+    .line 826
     :catch_0
     move-exception v2
 
-    .line 861
+    .line 827
     .local v2, re:Landroid/os/RemoteException;
     :try_start_1
     sget-object v3, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
@@ -447,14 +447,14 @@
 
     invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 862
+    .line 828
     const/4 v3, -0x4
 
     invoke-direct {p0, v0, v3}, Lcom/htc/hfm/HfmClient;->reportError(II)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 864
+    .line 830
     iput-object v5, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     goto :goto_0
@@ -467,39 +467,39 @@
 
     throw v3
 
-    .line 866
+    .line 832
     :cond_2
     iget-boolean v3, p0, Lcom/htc/hfm/HfmClient;->mIsBound:Z
 
     if-nez v3, :cond_3
 
-    .line 867
+    .line 833
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->bindService()Z
 
     move-result v1
 
-    .line 868
+    .line 834
     .local v1, isBound:Z
     if-nez v1, :cond_0
 
-    .line 869
+    .line 835
     const/4 v3, -0x3
 
     invoke-direct {p0, v0, v3}, Lcom/htc/hfm/HfmClient;->reportError(II)V
 
-    .line 870
+    .line 836
     iput-object v5, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     goto :goto_0
 
-    .line 872
+    .line 838
     .end local v1           #isBound:Z
     :cond_3
     iget-object v3, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
 
     if-nez v3, :cond_4
 
-    .line 874
+    .line 840
     :try_start_2
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->createSession()V
     :try_end_2
@@ -507,11 +507,11 @@
 
     goto :goto_0
 
-    .line 875
+    .line 841
     :catch_1
     move-exception v2
 
-    .line 876
+    .line 842
     .restart local v2       #re:Landroid/os/RemoteException;
     sget-object v3, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -521,15 +521,15 @@
 
     invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 877
+    .line 843
     invoke-direct {p0, v0, v6}, Lcom/htc/hfm/HfmClient;->reportError(II)V
 
-    .line 878
+    .line 844
     iput-object v5, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     goto :goto_0
 
-    .line 881
+    .line 847
     .end local v2           #re:Landroid/os/RemoteException;
     :cond_4
     sget-object v3, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
@@ -580,7 +580,7 @@
     .end annotation
 
     .prologue
-    .line 764
+    .line 730
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v2, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
@@ -589,24 +589,24 @@
 
     move-result v0
 
-    .line 765
+    .line 731
     .local v0, result:I
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
-    .line 766
+    .line 732
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
     invoke-virtual {v1, v0}, Lcom/htc/hfm/HfmClient$Callback;->onReleaseServiceComplete(I)V
 
-    .line 767
+    .line 733
     if-nez v0, :cond_0
 
-    .line 768
+    .line 734
     invoke-virtual {p0}, Lcom/htc/hfm/HfmClient;->close()V
 
-    .line 770
+    .line 736
     :cond_0
     return-void
 .end method
@@ -620,7 +620,7 @@
     .end annotation
 
     .prologue
-    .line 753
+    .line 719
     iget-object v0, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
@@ -637,23 +637,23 @@
 
     move-result v6
 
-    .line 755
+    .line 721
     .local v6, result:I
     const/4 v0, 0x3
 
     if-ne v6, v0, :cond_0
 
-    .line 761
+    .line 727
     :goto_0
     return-void
 
-    .line 758
+    .line 724
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
-    .line 759
+    .line 725
     iget-object v0, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
     invoke-virtual {v0, v6}, Lcom/htc/hfm/HfmClient$Callback;->onReserveServiceComplete(I)V
@@ -670,7 +670,7 @@
     .end annotation
 
     .prologue
-    .line 779
+    .line 745
     iget-object v6, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     #getter for: Lcom/htc/hfm/HfmClient$Action;->arg1:[Lcom/htc/hfm/Speech;
@@ -678,7 +678,7 @@
 
     move-result-object v5
 
-    .line 780
+    .line 746
     .local v5, question:[Lcom/htc/hfm/Speech;
     iget-object v6, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
@@ -687,7 +687,7 @@
 
     move-result-object v2
 
-    .line 781
+    .line 747
     .local v2, commands:[Lcom/htc/hfm/Speech;
     move-object v0, v2
 
@@ -703,7 +703,7 @@
 
     aget-object v1, v0, v3
 
-    .line 782
+    .line 748
     .local v1, command:Lcom/htc/hfm/Speech;
     invoke-virtual {v1}, Lcom/htc/hfm/Speech;->getSpeechType()I
 
@@ -713,7 +713,7 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 783
+    .line 749
     iget-object v6, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
     const/4 v7, -0x5
@@ -722,27 +722,27 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/htc/hfm/HfmClient$Callback;->onSelectCommandComplete(ILjava/lang/String;)V
 
-    .line 791
+    .line 757
     .end local v1           #command:Lcom/htc/hfm/Speech;
     :goto_1
     return-void
 
-    .line 781
+    .line 747
     .restart local v1       #command:Lcom/htc/hfm/Speech;
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 788
+    .line 754
     .end local v1           #command:Lcom/htc/hfm/Speech;
     :cond_1
     invoke-direct {p0, v5}, Lcom/htc/hfm/HfmClient;->convert([Lcom/htc/hfm/Speech;)V
 
-    .line 789
+    .line 755
     invoke-direct {p0, v2}, Lcom/htc/hfm/HfmClient;->convert([Lcom/htc/hfm/Speech;)V
 
-    .line 790
+    .line 756
     iget-object v6, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v7, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
@@ -768,7 +768,7 @@
     .end annotation
 
     .prologue
-    .line 773
+    .line 739
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     #getter for: Lcom/htc/hfm/HfmClient$Action;->arg1:[Lcom/htc/hfm/Speech;
@@ -776,11 +776,11 @@
 
     move-result-object v0
 
-    .line 774
+    .line 740
     .local v0, speeches:[Lcom/htc/hfm/Speech;
     invoke-direct {p0, v0}, Lcom/htc/hfm/HfmClient;->convert([Lcom/htc/hfm/Speech;)V
 
-    .line 775
+    .line 741
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v2, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
@@ -794,7 +794,7 @@
 
     invoke-interface {v1, v2, v0, v3}, Lcom/htc/hfm/IHfmService;->speak(Ljava/lang/String;[Lcom/htc/hfm/Speech;Z)V
 
-    .line 776
+    .line 742
     return-void
 .end method
 
@@ -807,7 +807,7 @@
     .end annotation
 
     .prologue
-    .line 798
+    .line 764
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     #getter for: Lcom/htc/hfm/HfmClient$Action;->arg0:Lcom/htc/hfm/Speech;
@@ -815,11 +815,11 @@
 
     move-result-object v0
 
-    .line 799
+    .line 765
     .local v0, command:Lcom/htc/hfm/Speech;
     invoke-direct {p0, v0}, Lcom/htc/hfm/HfmClient;->convert(Lcom/htc/hfm/Speech;)V
 
-    .line 800
+    .line 766
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v2, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
@@ -833,7 +833,7 @@
 
     invoke-interface {v1, v2, v0, v3}, Lcom/htc/hfm/IHfmService;->startWakeUpMode(Ljava/lang/String;Lcom/htc/hfm/Speech;I)V
 
-    .line 801
+    .line 767
     return-void
 .end method
 
@@ -922,76 +922,76 @@
     .parameter "action"
 
     .prologue
-    .line 963
+    .line 929
     packed-switch p0, :pswitch_data_0
 
-    .line 985
+    .line 951
     const-string v0, "UNKNOWN_ACTION"
 
     :goto_0
     return-object v0
 
-    .line 965
+    .line 931
     :pswitch_0
     const-string v0, "ACTION_RESERVE_SERVICE"
 
     goto :goto_0
 
-    .line 967
+    .line 933
     :pswitch_1
     const-string v0, "ACTION_RELEASE_SERVICE"
 
     goto :goto_0
 
-    .line 969
+    .line 935
     :pswitch_2
     const-string v0, "ACTION_SPEAK"
 
     goto :goto_0
 
-    .line 971
+    .line 937
     :pswitch_3
     const-string v0, "ACTION_SELECT_COMMAND"
 
     goto :goto_0
 
-    .line 973
+    .line 939
     :pswitch_4
     const-string v0, "ACTION_ABORT"
 
     goto :goto_0
 
-    .line 975
+    .line 941
     :pswitch_5
     const-string v0, "ACTION_CANCEL_RESERVATION"
 
     goto :goto_0
 
-    .line 977
+    .line 943
     :pswitch_6
     const-string v0, "ACTION_START_WAKEUP_MODE"
 
     goto :goto_0
 
-    .line 979
+    .line 945
     :pswitch_7
     const-string v0, "ACTION_STOP_WAKEUP_MODE"
 
     goto :goto_0
 
-    .line 981
+    .line 947
     :pswitch_8
     const-string v0, "ACTION_TEST_WAKEUP_PHRASE"
 
     goto :goto_0
 
-    .line 983
+    .line 949
     :pswitch_9
     const-string v0, "ACTION_RESET_TIMEOUT"
 
     goto :goto_0
 
-    .line 963
+    .line 929
     :pswitch_data_0
     .packed-switch 0x7d1
         :pswitch_0
@@ -1011,27 +1011,27 @@
     .locals 4
 
     .prologue
-    .line 804
+    .line 770
     sget-object v1, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     const-string v2, "bindService:"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 805
+    .line 771
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.hfm.HfmService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 806
+    .line 772
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.htc.hfm"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 807
+    .line 773
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/htc/hfm/HfmClient;->mServiceConnection:Landroid/content/ServiceConnection;
@@ -1050,14 +1050,14 @@
     .parameter "speech"
 
     .prologue
-    .line 832
+    .line 798
     if-nez p1, :cond_0
 
-    .line 840
+    .line 806
     :goto_0
     return-void
 
-    .line 836
+    .line 802
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mContext:Landroid/content/Context;
@@ -1068,11 +1068,11 @@
 
     goto :goto_0
 
-    .line 837
+    .line 803
     :catch_0
     move-exception v0
 
-    .line 838
+    .line 804
     .local v0, e:Ljava/lang/Exception;
     sget-object v1, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -1090,7 +1090,7 @@
     .parameter "speeches"
 
     .prologue
-    .line 826
+    .line 792
     move-object v0, p1
 
     .local v0, arr$:[Lcom/htc/hfm/Speech;
@@ -1105,16 +1105,16 @@
 
     aget-object v3, v0, v1
 
-    .line 827
+    .line 793
     .local v3, speech:Lcom/htc/hfm/Speech;
     invoke-direct {p0, v3}, Lcom/htc/hfm/HfmClient;->convert(Lcom/htc/hfm/Speech;)V
 
-    .line 826
+    .line 792
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 829
+    .line 795
     .end local v3           #speech:Lcom/htc/hfm/Speech;
     :cond_0
     return-void
@@ -1129,14 +1129,14 @@
     .end annotation
 
     .prologue
-    .line 812
+    .line 778
     sget-object v0, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     const-string v1, "createSession:"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 813
+    .line 779
     iget-object v0, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mPackageName:Ljava/lang/String;
@@ -1149,10 +1149,10 @@
 
     iput-object v0, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
 
-    .line 814
+    .line 780
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->next()V
 
-    .line 815
+    .line 781
     return-void
 .end method
 
@@ -1165,7 +1165,7 @@
     .end annotation
 
     .prologue
-    .line 818
+    .line 784
     sget-object v0, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1190,24 +1190,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 819
+    .line 785
     iget-object v0, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 820
+    .line 786
     iget-object v0, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/htc/hfm/IHfmService;->disconnect(Ljava/lang/String;)V
 
-    .line 821
+    .line 787
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
 
-    .line 823
+    .line 789
     :cond_0
     return-void
 .end method
@@ -1221,7 +1221,7 @@
     .end annotation
 
     .prologue
-    .line 886
+    .line 852
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     #getter for: Lcom/htc/hfm/HfmClient$Action;->actionCode:I
@@ -1229,11 +1229,11 @@
 
     move-result v0
 
-    .line 887
+    .line 853
     .local v0, actionCode:I
     packed-switch v0, :pswitch_data_0
 
-    .line 919
+    .line 885
     sget-object v1, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1256,53 +1256,53 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 922
+    .line 888
     :goto_0
     return-void
 
-    .line 889
+    .line 855
     :pswitch_0
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->_reserveService()V
 
     goto :goto_0
 
-    .line 892
+    .line 858
     :pswitch_1
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->_releaseService()V
 
     goto :goto_0
 
-    .line 895
+    .line 861
     :pswitch_2
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->_cancelReservation()V
 
     goto :goto_0
 
-    .line 898
+    .line 864
     :pswitch_3
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->_speak()V
 
     goto :goto_0
 
-    .line 901
+    .line 867
     :pswitch_4
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->_selectCommand()V
 
     goto :goto_0
 
-    .line 904
+    .line 870
     :pswitch_5
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->_abort()V
 
     goto :goto_0
 
-    .line 907
+    .line 873
     :pswitch_6
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->_startWakeUpMode()V
 
     goto :goto_0
 
-    .line 910
+    .line 876
     :pswitch_7
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
@@ -1312,7 +1312,7 @@
 
     goto :goto_0
 
-    .line 913
+    .line 879
     :pswitch_8
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
@@ -1329,7 +1329,7 @@
 
     goto :goto_0
 
-    .line 916
+    .line 882
     :pswitch_9
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
@@ -1339,7 +1339,7 @@
 
     goto :goto_0
 
-    .line 887
+    .line 853
     :pswitch_data_0
     .packed-switch 0x7d1
         :pswitch_0
@@ -1359,7 +1359,7 @@
     .locals 3
 
     .prologue
-    .line 844
+    .line 810
     monitor-enter p0
 
     :try_start_0
@@ -1368,17 +1368,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 849
+    .line 815
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 845
+    .line 811
     :catch_0
     move-exception v0
 
-    .line 846
+    .line 812
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     sget-object v1, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
@@ -1389,7 +1389,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 847
+    .line 813
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
@@ -1398,7 +1398,7 @@
 
     goto :goto_0
 
-    .line 844
+    .line 810
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -1413,7 +1413,7 @@
     .parameter "action"
 
     .prologue
-    .line 735
+    .line 701
     sget-object v0, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1445,12 +1445,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 737
+    .line 703
     iget-object v0, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
     if-eqz v0, :cond_0
 
-    .line 738
+    .line 704
     #getter for: Lcom/htc/hfm/HfmClient$Action;->actionCode:I
     invoke-static {p1}, Lcom/htc/hfm/HfmClient$Action;->access$1200(Lcom/htc/hfm/HfmClient$Action;)I
 
@@ -1460,11 +1460,11 @@
 
     invoke-direct {p0, v0, v1}, Lcom/htc/hfm/HfmClient;->reportError(II)V
 
-    .line 745
+    .line 711
     :goto_0
     return-void
 
-    .line 739
+    .line 705
     :cond_0
     invoke-virtual {p0}, Lcom/htc/hfm/HfmClient;->isHandFreeModeEnabled()Z
 
@@ -1482,7 +1482,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 740
+    .line 706
     #getter for: Lcom/htc/hfm/HfmClient$Action;->actionCode:I
     invoke-static {p1}, Lcom/htc/hfm/HfmClient$Action;->access$1200(Lcom/htc/hfm/HfmClient$Action;)I
 
@@ -1494,11 +1494,11 @@
 
     goto :goto_0
 
-    .line 742
+    .line 708
     :cond_1
     iput-object p1, p0, Lcom/htc/hfm/HfmClient;->mCurrentAction:Lcom/htc/hfm/HfmClient$Action;
 
-    .line 743
+    .line 709
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->next()V
 
     goto :goto_0
@@ -1510,7 +1510,7 @@
     .parameter "statusCode"
 
     .prologue
-    .line 925
+    .line 891
     sget-object v1, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1547,10 +1547,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 927
+    .line 893
     packed-switch p1, :pswitch_data_0
 
-    .line 954
+    .line 920
     :try_start_0
     sget-object v1, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -1574,11 +1574,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 960
+    .line 926
     :goto_0
     return-void
 
-    .line 929
+    .line 895
     :pswitch_0
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
@@ -1588,11 +1588,11 @@
 
     goto :goto_0
 
-    .line 957
+    .line 923
     :catch_0
     move-exception v0
 
-    .line 958
+    .line 924
     .local v0, e:Ljava/lang/Exception;
     sget-object v1, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -1604,7 +1604,7 @@
 
     goto :goto_0
 
-    .line 932
+    .line 898
     .end local v0           #e:Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -1614,7 +1614,7 @@
 
     goto :goto_0
 
-    .line 935
+    .line 901
     :pswitch_2
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
@@ -1622,7 +1622,7 @@
 
     goto :goto_0
 
-    .line 938
+    .line 904
     :pswitch_3
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
@@ -1630,7 +1630,7 @@
 
     goto :goto_0
 
-    .line 941
+    .line 907
     :pswitch_4
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
@@ -1640,7 +1640,7 @@
 
     goto :goto_0
 
-    .line 944
+    .line 910
     :pswitch_5
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
@@ -1648,7 +1648,7 @@
 
     goto :goto_0
 
-    .line 948
+    .line 914
     :pswitch_6
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
@@ -1656,7 +1656,7 @@
 
     goto :goto_0
 
-    .line 951
+    .line 917
     :pswitch_7
     iget-object v1, p0, Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
 
@@ -1666,7 +1666,7 @@
 
     goto :goto_0
 
-    .line 927
+    .line 893
     :pswitch_data_0
     .packed-switch 0x7d1
         :pswitch_0
@@ -1687,7 +1687,7 @@
     .locals 3
 
     .prologue
-    .line 723
+    .line 690
     monitor-enter p0
 
     :try_start_0
@@ -1703,12 +1703,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 724
+    .line 691
     monitor-exit p0
 
     return-void
 
-    .line 723
+    .line 690
     :catchall_0
     move-exception v0
 
@@ -1721,7 +1721,7 @@
     .locals 3
 
     .prologue
-    .line 639
+    .line 608
     monitor-enter p0
 
     :try_start_0
@@ -1737,12 +1737,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 640
+    .line 609
     monitor-exit p0
 
     return-void
 
-    .line 639
+    .line 608
     :catchall_0
     move-exception v0
 
@@ -1755,7 +1755,7 @@
     .locals 5
 
     .prologue
-    .line 567
+    .line 541
     monitor-enter p0
 
     :try_start_0
@@ -1767,14 +1767,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 569
+    .line 543
     :try_start_1
     invoke-direct {p0}, Lcom/htc/hfm/HfmClient;->destroySession()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 574
+    .line 548
     :goto_0
     :try_start_2
     sget-object v2, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
@@ -1803,7 +1803,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 576
+    .line 550
     :try_start_3
     iget-object v2, p0, Lcom/htc/hfm/HfmClient;->mContext:Landroid/content/Context;
 
@@ -1814,7 +1814,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 580
+    .line 554
     :goto_1
     const/4 v2, 0x0
 
@@ -1823,16 +1823,16 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 581
+    .line 555
     monitor-exit p0
 
     return-void
 
-    .line 570
+    .line 544
     :catch_0
     move-exception v1
 
-    .line 572
+    .line 546
     .local v1, re:Landroid/os/RemoteException;
     :try_start_5
     sget-object v2, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
@@ -1847,7 +1847,7 @@
 
     goto :goto_0
 
-    .line 567
+    .line 541
     .end local v1           #re:Landroid/os/RemoteException;
     :catchall_0
     move-exception v2
@@ -1856,11 +1856,11 @@
 
     throw v2
 
-    .line 577
+    .line 551
     :catch_1
     move-exception v0
 
-    .line 578
+    .line 552
     .local v0, e:Ljava/lang/Exception;
     :try_start_6
     sget-object v2, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
@@ -1883,7 +1883,7 @@
     .end annotation
 
     .prologue
-    .line 519
+    .line 493
     monitor-enter p0
 
     :try_start_0
@@ -1891,12 +1891,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 520
+    .line 494
     monitor-exit p0
 
     return-void
 
-    .line 519
+    .line 493
     :catchall_0
     move-exception v0
 
@@ -1909,10 +1909,10 @@
     .locals 4
 
     .prologue
-    .line 621
+    .line 591
     const/high16 v0, -0x3d90
 
-    .line 622
+    .line 592
     .local v0, f:F
     iget-boolean v2, p0, Lcom/htc/hfm/HfmClient;->mIsBound:Z
 
@@ -1922,7 +1922,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 624
+    .line 594
     :try_start_0
     iget-object v2, p0, Lcom/htc/hfm/HfmClient;->mIHfmService:Lcom/htc/hfm/IHfmService;
 
@@ -1932,16 +1932,16 @@
 
     move-result v0
 
-    .line 630
+    .line 600
     :cond_0
     :goto_0
     return v0
 
-    .line 625
+    .line 595
     :catch_0
     move-exception v1
 
-    .line 627
+    .line 597
     .local v1, re:Landroid/os/RemoteException;
     sget-object v2, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -1962,7 +1962,7 @@
 
     const/4 v7, 0x1
 
-    .line 527
+    .line 501
     monitor-enter p0
 
     :try_start_0
@@ -1970,7 +1970,7 @@
 
     if-nez v9, :cond_0
 
-    .line 528
+    .line 502
     sget-object v7, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
     const-string v9, "isHandFreeModeEnabled: context is null"
@@ -1979,13 +1979,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 559
+    .line 533
     :goto_0
     monitor-exit p0
 
     return v8
 
-    .line 532
+    .line 506
     :cond_0
     :try_start_1
     iget-object v9, p0, Lcom/htc/hfm/HfmClient;->mContext:Landroid/content/Context;
@@ -1998,21 +1998,21 @@
 
     check-cast v6, Landroid/app/UiModeManager;
 
-    .line 533
+    .line 507
     .local v6, uimm:Landroid/app/UiModeManager;
     invoke-virtual {v6}, Landroid/app/UiModeManager;->getCurrentModeType()I
 
     move-result v2
 
-    .line 534
+    .line 508
     .local v2, modeType:I
     const-string v3, "UNKNOWN_UI_MODE_TYPE"
 
-    .line 535
+    .line 509
     .local v3, modeTypeString:Ljava/lang/String;
     packed-switch v2, :pswitch_data_0
 
-    .line 549
+    .line 523
     :goto_1
     sget-object v9, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -2036,7 +2036,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 551
+    .line 525
     iget-object v9, p0, Lcom/htc/hfm/HfmClient;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2051,7 +2051,7 @@
 
     move-result v0
 
-    .line 552
+    .line 526
     .local v0, carMode:I
     sget-object v9, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -2075,7 +2075,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 553
+    .line 527
     iget-object v9, p0, Lcom/htc/hfm/HfmClient;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2090,7 +2090,7 @@
 
     move-result v4
 
-    .line 554
+    .line 528
     .local v4, readout:I
     sget-object v9, Lcom/htc/hfm/HfmClient;->TAG:Ljava/lang/String;
 
@@ -2114,19 +2114,19 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
+    .line 530
     if-ne v0, v7, :cond_1
 
     move v1, v7
 
-    .line 557
+    .line 531
     .local v1, carModeStatus:Z
     :goto_2
     if-ne v4, v7, :cond_2
 
     move v5, v7
 
-    .line 559
+    .line 533
     .local v5, readoutStatus:Z
     :goto_3
     if-eqz v1, :cond_3
@@ -2138,7 +2138,7 @@
 
     goto/16 :goto_0
 
-    .line 537
+    .line 511
     .end local v0           #carMode:I
     .end local v1           #carModeStatus:Z
     .end local v4           #readout:I
@@ -2146,24 +2146,24 @@
     :pswitch_0
     const-string v3, "UI_MODE_TYPE_CAR"
 
-    .line 538
+    .line 512
     goto :goto_1
 
-    .line 540
+    .line 514
     :pswitch_1
     const-string v3, "UI_MODE_TYPE_DESK"
 
-    .line 541
+    .line 515
     goto :goto_1
 
-    .line 543
+    .line 517
     :pswitch_2
     const-string v3, "UI_MODE_TYPE_NORMAL"
 
-    .line 544
+    .line 518
     goto :goto_1
 
-    .line 546
+    .line 520
     :pswitch_3
     const-string v3, "UI_MODE_TYPE_TELEVISION"
     :try_end_1
@@ -2176,24 +2176,24 @@
     :cond_1
     move v1, v8
 
-    .line 556
+    .line 530
     goto :goto_2
 
     .restart local v1       #carModeStatus:Z
     :cond_2
     move v5, v8
 
-    .line 557
+    .line 531
     goto :goto_3
 
     .restart local v5       #readoutStatus:Z
     :cond_3
     move v7, v8
 
-    .line 559
+    .line 533
     goto :goto_4
 
-    .line 527
+    .line 501
     .end local v0           #carMode:I
     .end local v1           #carModeStatus:Z
     .end local v2           #modeType:I
@@ -2208,7 +2208,7 @@
 
     throw v7
 
-    .line 535
+    .line 509
     nop
 
     :pswitch_data_0
@@ -2224,7 +2224,7 @@
     .locals 3
 
     .prologue
-    .line 654
+    .line 623
     monitor-enter p0
 
     :try_start_0
@@ -2240,12 +2240,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 655
+    .line 624
     monitor-exit p0
 
     return-void
 
-    .line 654
+    .line 623
     :catchall_0
     move-exception v0
 
@@ -2258,7 +2258,7 @@
     .locals 3
 
     .prologue
-    .line 647
+    .line 616
     monitor-enter p0
 
     :try_start_0
@@ -2274,12 +2274,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 648
+    .line 617
     monitor-exit p0
 
     return-void
 
-    .line 647
+    .line 616
     :catchall_0
     move-exception v0
 
@@ -2292,7 +2292,7 @@
     .locals 3
 
     .prologue
-    .line 731
+    .line 697
     monitor-enter p0
 
     :try_start_0
@@ -2308,12 +2308,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 732
+    .line 698
     monitor-exit p0
 
     return-void
 
-    .line 731
+    .line 697
     :catchall_0
     move-exception v0
 
@@ -2328,7 +2328,7 @@
     .parameter "commands"
 
     .prologue
-    .line 681
+    .line 649
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -2338,12 +2338,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 682
+    .line 650
     monitor-exit p0
 
     return-void
 
-    .line 681
+    .line 649
     :catchall_0
     move-exception v0
 
@@ -2359,7 +2359,7 @@
     .parameter "enableFlipAbort"
 
     .prologue
-    .line 693
+    .line 660
     monitor-enter p0
 
     const/4 v1, 0x1
@@ -2367,23 +2367,23 @@
     :try_start_0
     new-array v0, v1, [Lcom/htc/hfm/Speech;
 
-    .line 694
+    .line 661
     .local v0, speeches:[Lcom/htc/hfm/Speech;
     const/4 v1, 0x0
 
     aput-object p1, v0, v1
 
-    .line 695
+    .line 662
     invoke-virtual {p0, v0, p2, p3}, Lcom/htc/hfm/HfmClient;->selectCommand([Lcom/htc/hfm/Speech;[Lcom/htc/hfm/Speech;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 696
+    .line 663
     monitor-exit p0
 
     return-void
 
-    .line 693
+    .line 660
     .end local v0           #speeches:[Lcom/htc/hfm/Speech;
     :catchall_0
     move-exception v1
@@ -2399,7 +2399,7 @@
     .parameter "commands"
 
     .prologue
-    .line 704
+    .line 671
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -2409,12 +2409,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 705
+    .line 672
     monitor-exit p0
 
     return-void
 
-    .line 704
+    .line 671
     :catchall_0
     move-exception v0
 
@@ -2430,7 +2430,7 @@
     .parameter "enableFlipAbort"
 
     .prologue
-    .line 715
+    .line 682
     monitor-enter p0
 
     :try_start_0
@@ -2452,12 +2452,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 716
+    .line 683
     monitor-exit p0
 
     return-void
 
-    .line 715
+    .line 682
     :catchall_0
     move-exception v0
 
@@ -2471,7 +2471,7 @@
     .parameter "speeches"
 
     .prologue
-    .line 662
+    .line 631
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -2481,12 +2481,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 663
+    .line 632
     monitor-exit p0
 
     return-void
 
-    .line 662
+    .line 631
     :catchall_0
     move-exception v0
 
@@ -2501,7 +2501,7 @@
     .parameter "enableFlipAbort"
 
     .prologue
-    .line 671
+    .line 640
     monitor-enter p0
 
     :try_start_0
@@ -2517,12 +2517,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 672
+    .line 641
     monitor-exit p0
 
     return-void
 
-    .line 671
+    .line 640
     :catchall_0
     move-exception v0
 
@@ -2537,7 +2537,7 @@
     .parameter "mode"
 
     .prologue
-    .line 591
+    .line 564
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -2545,7 +2545,7 @@
     :try_start_0
     iput-boolean v0, p0, Lcom/htc/hfm/HfmClient;->mByPassCheck:Z
 
-    .line 592
+    .line 565
     new-instance v0, Lcom/htc/hfm/HfmClient$Action;
 
     const/16 v1, 0x7d7
@@ -2558,12 +2558,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 593
+    .line 566
     monitor-exit p0
 
     return-void
 
-    .line 591
+    .line 564
     :catchall_0
     move-exception v0
 
@@ -2576,7 +2576,7 @@
     .locals 3
 
     .prologue
-    .line 600
+    .line 572
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -2584,7 +2584,7 @@
     :try_start_0
     iput-boolean v0, p0, Lcom/htc/hfm/HfmClient;->mByPassCheck:Z
 
-    .line 601
+    .line 573
     new-instance v0, Lcom/htc/hfm/HfmClient$Action;
 
     const/16 v1, 0x7d8
@@ -2597,12 +2597,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 602
+    .line 574
     monitor-exit p0
 
     return-void
 
-    .line 600
+    .line 572
     :catchall_0
     move-exception v0
 
@@ -2616,7 +2616,7 @@
     .parameter "phrase"
 
     .prologue
-    .line 610
+    .line 581
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -2624,7 +2624,7 @@
     :try_start_0
     iput-boolean v0, p0, Lcom/htc/hfm/HfmClient;->mByPassCheck:Z
 
-    .line 611
+    .line 582
     new-instance v0, Lcom/htc/hfm/HfmClient$Action;
 
     const/16 v1, 0x7d9
@@ -2637,12 +2637,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 612
+    .line 583
     monitor-exit p0
 
     return-void
 
-    .line 610
+    .line 581
     :catchall_0
     move-exception v0
 

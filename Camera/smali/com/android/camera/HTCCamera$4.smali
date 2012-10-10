@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 528
+    .line 530
     iput-object p1, p0, Lcom/android/camera/HTCCamera$4;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "arg1"
 
     .prologue
-    .line 531
+    .line 533
     return-void
 .end method
 
@@ -52,7 +52,7 @@
     .parameter "event"
 
     .prologue
-    .line 536
+    .line 538
     iget-object v0, p0, Lcom/android/camera/HTCCamera$4;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->accelerometerValues:Lcom/android/camera/property/Property;
@@ -76,6 +76,6 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 537
+    .line 539
     return-void
 .end method

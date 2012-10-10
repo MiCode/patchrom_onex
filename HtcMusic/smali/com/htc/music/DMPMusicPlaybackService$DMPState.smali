@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 134
+    .line 135
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
     const-string v1, "READY"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;->READY:Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
-    .line 135
+    .line 136
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
     const-string v1, "SERVER_DISCONNECTED"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;->SERVER_DISCONNECTED:Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
-    .line 136
+    .line 137
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
     const-string v1, "WIFI_DISCONNECTED"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;->WIFI_DISCONNECTED:Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
-    .line 133
+    .line 134
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/htc/music/DMPMusicPlaybackService$DMPState;
@@ -104,7 +104,7 @@
     .end annotation
 
     .prologue
-    .line 133
+    .line 134
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -115,7 +115,7 @@
     .parameter "name"
 
     .prologue
-    .line 133
+    .line 134
     const-class v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -131,7 +131,7 @@
     .locals 1
 
     .prologue
-    .line 133
+    .line 134
     sget-object v0, Lcom/htc/music/DMPMusicPlaybackService$DMPState;->$VALUES:[Lcom/htc/music/DMPMusicPlaybackService$DMPState;
 
     invoke-virtual {v0}, [Lcom/htc/music/DMPMusicPlaybackService$DMPState;->clone()Ljava/lang/Object;

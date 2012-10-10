@@ -3,12 +3,23 @@
 .source "SDEncryptionHelper.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/htc/server/admin/SDEncryptionHelper$1;,
+        Lcom/htc/server/admin/SDEncryptionHelper$EncryptSDTask;
+    }
+.end annotation
+
+
 # static fields
-.field public static SD_ENCRYPTION_STATUS_ACTIVE:I
+.field private static final SD_ENCRYPTION_STATUS_ACTIVE:I = 0x2
 
-.field public static SD_ENCRYPTION_STATUS_NO_SDCARD:I
+.field private static final SD_ENCRYPTION_STATUS_ALREADY_ACTIVE:I = 0x3
 
-.field public static SD_ENCRYPTION_STATUS_PASSWORD_REQUIRED:I
+.field private static final SD_ENCRYPTION_STATUS_NO_SDCARD:I = 0x0
+
+.field private static final SD_ENCRYPTION_STATUS_PASSWORD_REQUIRED:I = 0x1
 
 
 # instance fields
@@ -16,40 +27,30 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .prologue
-    .line 17
-    const/4 v0, 0x0
-
-    sput v0, Lcom/htc/server/admin/SDEncryptionHelper;->SD_ENCRYPTION_STATUS_NO_SDCARD:I
-
-    .line 19
-    const/4 v0, 0x1
-
-    sput v0, Lcom/htc/server/admin/SDEncryptionHelper;->SD_ENCRYPTION_STATUS_PASSWORD_REQUIRED:I
-
-    .line 21
-    const/4 v0, 0x2
-
-    sput v0, Lcom/htc/server/admin/SDEncryptionHelper;->SD_ENCRYPTION_STATUS_ACTIVE:I
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
     .parameter "context"
 
     .prologue
-    .line 23
+    .line 35
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
+    .line 36
     iput-object p1, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
 
-    .line 25
+    .line 37
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/htc/server/admin/SDEncryptionHelper;I)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 20
+    invoke-direct {p0, p1}, Lcom/htc/server/admin/SDEncryptionHelper;->replyResult(I)V
+
     return-void
 .end method
 
@@ -57,10 +58,10 @@
     .locals 2
 
     .prologue
-    .line 98
+    .line 169
     const/4 v0, 0x0
 
-    .line 100
+    .line 171
     .local v0, status:Ljava/lang/String;
     invoke-static {}, Landroid/os/Environment;->hasRemovableStorageSlot()Z
 
@@ -68,16 +69,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 101
+    .line 172
     invoke-static {}, Landroid/os/Environment;->getRemovableStorageState()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 107
+    .line 178
     :goto_0
     return-object v0
 
-    .line 104
+    .line 175
     :cond_0
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
@@ -90,7 +91,7 @@
     .locals 3
 
     .prologue
-    .line 90
+    .line 161
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v2, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
@@ -101,16 +102,16 @@
 
     move-result v0
 
-    .line 91
+    .line 162
     .local v0, quality:I
     const/high16 v1, 0x2
 
     if-ge v0, v1, :cond_0
 
-    .line 92
+    .line 163
     const/4 v1, 0x0
 
-    .line 94
+    .line 165
     :goto_0
     return v1
 
@@ -128,7 +129,7 @@
 
     const/4 v2, 0x0
 
-    .line 70
+    .line 141
     iget-object v3, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -141,7 +142,7 @@
 
     move-result v0
 
-    .line 72
+    .line 143
     .local v0, status:I
     if-ne v0, v1, :cond_0
 
@@ -158,12 +159,12 @@
     .locals 2
 
     .prologue
-    .line 81
+    .line 152
     invoke-direct {p0}, Lcom/htc/server/admin/SDEncryptionHelper;->getRemovableStorageState()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 82
+    .line 153
     .local v0, strStatus:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -175,11 +176,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 84
+    .line 155
     :cond_0
     const/4 v1, 0x0
 
-    .line 86
+    .line 157
     :goto_0
     return v1
 
@@ -189,11 +190,97 @@
     goto :goto_0
 .end method
 
+.method private replyResult(I)V
+    .locals 4
+    .parameter "resultStatus"
+
+    .prologue
+    .line 59
+    const/16 v1, -0x1f7
+
+    .line 61
+    .local v1, errorCode:I
+    packed-switch p1, :pswitch_data_0
+
+    .line 79
+    const/16 v1, -0x1f7
+
+    .line 82
+    :goto_0
+    iget-object v2, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
+
+    if-eqz v2, :cond_0
+
+    .line 83
+    iget-object v2, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
+
+    const-string v3, "device_policy"
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/admin/HtcIfDevicePolicyManager;
+
+    .line 84
+    .local v0, dpm:Landroid/app/admin/HtcIfDevicePolicyManager;
+    if-eqz v0, :cond_0
+
+    .line 85
+    const/16 v2, 0x8
+
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v2, v1, v3}, Landroid/app/admin/HtcIfDevicePolicyManager;->responseAsyncResult(IILandroid/content/Intent;)V
+
+    .line 88
+    .end local v0           #dpm:Landroid/app/admin/HtcIfDevicePolicyManager;
+    :cond_0
+    return-void
+
+    .line 63
+    :pswitch_0
+    const/16 v1, -0x1f4
+
+    .line 64
+    goto :goto_0
+
+    .line 67
+    :pswitch_1
+    const/16 v1, -0x1f5
+
+    .line 68
+    goto :goto_0
+
+    .line 71
+    :pswitch_2
+    const/16 v1, 0x8
+
+    .line 72
+    goto :goto_0
+
+    .line 75
+    :pswitch_3
+    const/16 v1, -0x1f6
+
+    .line 76
+    goto :goto_0
+
+    .line 61
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
 .method private setSDEncryptionActived()V
     .locals 3
 
     .prologue
-    .line 76
+    .line 147
     iget-object v0, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -206,7 +293,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 78
+    .line 149
     return-void
 .end method
 
@@ -214,36 +301,36 @@
     .locals 2
 
     .prologue
-    .line 54
+    .line 125
     invoke-static {}, Landroid/os/Environment;->hasRemovableStorageSlot()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 55
+    .line 126
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.internal.os.storage.FORMAT_ALL_ONLY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 56
+    .line 127
     .local v0, intent:Landroid/content/Intent;
     sget-object v1, Lcom/android/internal/os/storage/ExternalStorageFormatter;->COMPONENT_NAME:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 57
+    .line 128
     iget-object v1, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 67
+    .line 138
     :goto_0
     return-void
 
-    .line 58
+    .line 129
     .end local v0           #intent:Landroid/content/Intent;
     :cond_0
     invoke-static {}, Landroid/os/Environment;->hasInternalFat()Z
@@ -252,27 +339,27 @@
 
     if-eqz v1, :cond_1
 
-    .line 59
+    .line 130
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.internal.os.storage.FORMAT_INTERNAL_STORAGE_ONLY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 60
+    .line 131
     .restart local v0       #intent:Landroid/content/Intent;
     sget-object v1, Lcom/android/internal/os/storage/ExternalStorageFormatter;->COMPONENT_NAME:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 61
+    .line 132
     iget-object v1, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0
 
-    .line 63
+    .line 134
     .end local v0           #intent:Landroid/content/Intent;
     :cond_1
     new-instance v0, Landroid/content/Intent;
@@ -281,13 +368,13 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 64
+    .line 135
     .restart local v0       #intent:Landroid/content/Intent;
     sget-object v1, Lcom/android/internal/os/storage/ExternalStorageFormatter;->COMPONENT_NAME:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 65
+    .line 136
     iget-object v1, p0, Lcom/htc/server/admin/SDEncryptionHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
@@ -301,21 +388,21 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 93
     invoke-direct {p0}, Lcom/htc/server/admin/SDEncryptionHelper;->isSDEncryptionActived()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 30
-    sget v0, Lcom/htc/server/admin/SDEncryptionHelper;->SD_ENCRYPTION_STATUS_ACTIVE:I
+    .line 94
+    const/4 v0, 0x3
 
-    .line 49
+    .line 113
     :goto_0
     return v0
 
-    .line 34
+    .line 98
     :cond_0
     invoke-direct {p0}, Lcom/htc/server/admin/SDEncryptionHelper;->isSDExist()Z
 
@@ -323,12 +410,12 @@
 
     if-nez v0, :cond_1
 
-    .line 35
-    sget v0, Lcom/htc/server/admin/SDEncryptionHelper;->SD_ENCRYPTION_STATUS_NO_SDCARD:I
+    .line 99
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 39
+    .line 103
     :cond_1
     invoke-direct {p0}, Lcom/htc/server/admin/SDEncryptionHelper;->isPasswordExist()Z
 
@@ -336,20 +423,41 @@
 
     if-nez v0, :cond_2
 
-    .line 40
-    sget v0, Lcom/htc/server/admin/SDEncryptionHelper;->SD_ENCRYPTION_STATUS_PASSWORD_REQUIRED:I
+    .line 104
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 44
+    .line 108
     :cond_2
     invoke-direct {p0}, Lcom/htc/server/admin/SDEncryptionHelper;->setSDEncryptionActived()V
 
-    .line 47
+    .line 111
     invoke-direct {p0}, Lcom/htc/server/admin/SDEncryptionHelper;->startFormatter()V
 
-    .line 49
-    sget v0, Lcom/htc/server/admin/SDEncryptionHelper;->SD_ENCRYPTION_STATUS_ACTIVE:I
+    .line 113
+    const/4 v0, 0x2
 
     goto :goto_0
+.end method
+
+.method public encryptSDAsync()V
+    .locals 2
+
+    .prologue
+    .line 119
+    new-instance v0, Lcom/htc/server/admin/SDEncryptionHelper$EncryptSDTask;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/htc/server/admin/SDEncryptionHelper$EncryptSDTask;-><init>(Lcom/htc/server/admin/SDEncryptionHelper;Lcom/htc/server/admin/SDEncryptionHelper$1;)V
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Void;
+
+    invoke-virtual {v0, v1}, Lcom/htc/server/admin/SDEncryptionHelper$EncryptSDTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 120
+    return-void
 .end method

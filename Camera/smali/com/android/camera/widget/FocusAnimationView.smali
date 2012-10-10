@@ -45,12 +45,12 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 54
     iget v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusFail:I
 
     invoke-virtual {p0, v0}, Lcom/android/camera/widget/FocusAnimationView;->setImageResource(I)V
 
-    .line 54
+    .line 55
     return-void
 .end method
 
@@ -58,12 +58,12 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 51
     iget v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusSucess:I
 
     invoke-virtual {p0, v0}, Lcom/android/camera/widget/FocusAnimationView;->setImageResource(I)V
 
-    .line 51
+    .line 52
     return-void
 .end method
 
@@ -72,11 +72,16 @@
 
     .prologue
     .line 34
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/android/camera/widget/FocusAnimationView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 35
     const v0, 0x7f020083
 
     invoke-virtual {p0, v0}, Lcom/android/camera/widget/FocusAnimationView;->setImageResource(I)V
 
-    .line 35
+    .line 36
     invoke-virtual {p0}, Lcom/android/camera/widget/FocusAnimationView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -85,7 +90,7 @@
 
     iput-object v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 37
+    .line 38
     iget-object v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->isRunning()Z
@@ -94,23 +99,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 38
+    .line 39
     iget-object v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
-    .line 39
+    .line 40
     :cond_0
     iget-object v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->invalidateSelf()V
 
-    .line 40
+    .line 41
     iget-object v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 41
+    .line 42
     return-void
 .end method
 
@@ -118,11 +123,11 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/android/camera/widget/FocusAnimationView;->m_FocusAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
-    .line 47
+    .line 48
     return-void
 .end method

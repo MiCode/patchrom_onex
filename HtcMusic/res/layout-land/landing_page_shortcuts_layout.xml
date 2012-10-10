@@ -27,7 +27,7 @@
         <ImageView android:layout_gravity="center" android:id="@id/shortcut_icon_4" android:background="@drawable/music_shortcut_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <TextView android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/shortcut_name_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" style="@com.htc:style/darklist_primary_xs" />
     </LinearLayout>
-    <View android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <View android:id="@id/landing_page_average_view" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" />
     <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/landing_page_shortcut_5" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content"
       xmlns:android="http://schemas.android.com/apk/res/android">
         <ImageView android:layout_gravity="center" android:id="@id/shortcut_icon_5" android:background="@drawable/music_shortcut_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" />

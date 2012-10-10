@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Προσθήκη λίστας αναπαραγωγής</string>
     <string name="htc_delete_playlists">Διαγραφή λιστών αναπαραγωγής</string>
     <string name="htc_delete_playlist">Διαγραφή λίστας αναπαραγωγής</string>
+    <string name="htc_delete_all_playlists">Διαγραφή όλων των λιστών αναπαραγωγής</string>
     <string name="htc_playlist_add_songs">Προσθήκη τραγουδιών</string>
     <string name="htc_playlist_del_songs">Διαγραφή τραγουδιών</string>
     <string name="htc_playlist_remove_songs">Αφαίρεση τραγουδιών</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Αποθ. στο buffer...</string>
     <string name="title_send_content">Αποστ. περιεχομ...</string>
     <string name="no_downloaded_apps_found">Δεν βρέθηκαν ληφθείσες εφαρμογές</string>
+    <string name="music_folder_picker_dialog_msg">Να προστεθούν τραγούδια σε λίστες αναπαραγωγής με επιλογή του φακέλου; Όχι να προστεθούν τραγούδια με τον άλλο τρόπο</string>
 </resources>

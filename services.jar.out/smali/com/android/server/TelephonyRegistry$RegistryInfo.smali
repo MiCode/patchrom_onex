@@ -72,7 +72,7 @@
     .parameter "phoneType"
 
     .prologue
-    const/4 v10, 0x2
+    const/4 v10, 0x5
 
     const/16 v1, 0x63
 
@@ -120,7 +120,7 @@
     iput v9, p0, Lcom/android/server/TelephonyRegistry$RegistryInfo;->mDataActivity:I
 
     .line 88
-    iput v10, p0, Lcom/android/server/TelephonyRegistry$RegistryInfo;->mDataConnectionState:I
+    iput v2, p0, Lcom/android/server/TelephonyRegistry$RegistryInfo;->mDataConnectionState:I
 
     .line 90
     iput-boolean v9, p0, Lcom/android/server/TelephonyRegistry$RegistryInfo;->mDataConnectionPossible:Z
@@ -193,9 +193,7 @@
 
     .line 115
     :cond_0
-    const/4 v0, 0x5
-
-    if-ne p2, v0, :cond_1
+    if-ne p2, v10, :cond_1
 
     .line 116
     new-instance v0, Landroid/telephony/SignalStrength;
@@ -217,9 +215,7 @@
     .line 117
     iget-object v0, p0, Lcom/android/server/TelephonyRegistry$RegistryInfo;->mServiceState:Landroid/telephony/ServiceState;
 
-    const/4 v1, 0x5
-
-    invoke-virtual {v0, v1}, Landroid/telephony/ServiceState;->setPhoneType(I)V
+    invoke-virtual {v0, v10}, Landroid/telephony/ServiceState;->setPhoneType(I)V
 
     goto :goto_0
 
@@ -246,7 +242,9 @@
     .line 121
     iget-object v0, p0, Lcom/android/server/TelephonyRegistry$RegistryInfo;->mServiceState:Landroid/telephony/ServiceState;
 
-    invoke-virtual {v0, v10}, Landroid/telephony/ServiceState;->setPhoneType(I)V
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/telephony/ServiceState;->setPhoneType(I)V
 
     goto :goto_0
 .end method

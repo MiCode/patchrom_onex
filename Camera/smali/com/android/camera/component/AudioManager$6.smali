@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 550
+    .line 575
     invoke-static {}, Lcom/android/camera/rotate/UIRotation;->values()[Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v0

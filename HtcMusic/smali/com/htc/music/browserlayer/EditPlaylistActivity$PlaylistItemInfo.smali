@@ -28,14 +28,14 @@
     .parameter
 
     .prologue
-    .line 1445
+    .line 1533
     const/4 v0, -0x1
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;IZ)V
 
-    .line 1446
+    .line 1534
     return-void
 .end method
 
@@ -45,12 +45,12 @@
     .parameter "trackId"
 
     .prologue
-    .line 1449
+    .line 1537
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;IZ)V
 
-    .line 1450
+    .line 1538
     return-void
 .end method
 
@@ -61,17 +61,17 @@
     .parameter "checked"
 
     .prologue
-    .line 1452
+    .line 1540
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1453
+    .line 1541
     iput p2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;->mTrackId:I
 
-    .line 1454
+    .line 1542
     iput-boolean p3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;->mChecked:Z
 
-    .line 1455
+    .line 1543
     return-void
 .end method

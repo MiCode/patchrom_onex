@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 888
+    .line 967
     iput-object p1, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -42,7 +42,7 @@
 
     const/4 v4, 0x0
 
-    .line 892
+    .line 971
     const-wide/16 v2, 0xfa0
 
     :try_start_0
@@ -50,7 +50,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 898
+    .line 977
     :goto_0
     new-instance v0, Landroid/content/Intent;
 
@@ -58,83 +58,83 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 899
+    .line 978
     .local v0, cancelIntent:Landroid/content/Intent;
     const-string v2, "isCancel"
 
     invoke-virtual {v0, v2, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 903
+    .line 982
     iget-object v2, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->isInterruptShowing:Z
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$600(Lcom/android/server/BatteryService;)Z
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$800(Lcom/android/server/BatteryService;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 904
+    .line 983
     const-string v2, "isInterruptShowing"
 
     invoke-virtual {v0, v2, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 906
+    .line 985
     :cond_0
     iget-object v2, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$500(Lcom/android/server/BatteryService;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$700(Lcom/android/server/BatteryService;)Landroid/content/Context;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 907
+    .line 986
     iget-object v2, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     #setter for: Lcom/android/server/BatteryService;->isShowingInPopingDialog:Z
-    invoke-static {v2, v4}, Lcom/android/server/BatteryService;->access$702(Lcom/android/server/BatteryService;Z)Z
+    invoke-static {v2, v4}, Lcom/android/server/BatteryService;->access$902(Lcom/android/server/BatteryService;Z)Z
 
-    .line 910
+    .line 989
     iget-object v2, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->isInterruptShowing:Z
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$600(Lcom/android/server/BatteryService;)Z
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$800(Lcom/android/server/BatteryService;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 911
+    .line 990
     iget-object v2, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     iget-object v3, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mWirelessChargerStatus:I
-    invoke-static {v3}, Lcom/android/server/BatteryService;->access$800(Lcom/android/server/BatteryService;)I
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1000(Lcom/android/server/BatteryService;)I
 
     move-result v3
 
     #calls: Lcom/android/server/BatteryService;->sendShowWirelessChargingIntent(I)V
-    invoke-static {v2, v3}, Lcom/android/server/BatteryService;->access$900(Lcom/android/server/BatteryService;I)V
+    invoke-static {v2, v3}, Lcom/android/server/BatteryService;->access$1100(Lcom/android/server/BatteryService;I)V
 
-    .line 912
+    .line 991
     iget-object v2, p0, Lcom/android/server/BatteryService$WirelessChargingTimerThread;->this$0:Lcom/android/server/BatteryService;
 
     #setter for: Lcom/android/server/BatteryService;->isInterruptShowing:Z
-    invoke-static {v2, v4}, Lcom/android/server/BatteryService;->access$602(Lcom/android/server/BatteryService;Z)Z
+    invoke-static {v2, v4}, Lcom/android/server/BatteryService;->access$802(Lcom/android/server/BatteryService;Z)Z
 
-    .line 915
+    .line 993
     :cond_1
     return-void
 
-    .line 893
+    .line 972
     .end local v0           #cancelIntent:Landroid/content/Intent;
     :catch_0
     move-exception v1
 
-    .line 894
+    .line 973
     .local v1, e:Ljava/lang/InterruptedException;
     invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
 

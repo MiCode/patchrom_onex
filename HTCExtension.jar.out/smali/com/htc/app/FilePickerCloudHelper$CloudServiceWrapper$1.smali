@@ -38,45 +38,40 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 366
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper$1;->this$1:Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
+    iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper$1;->this$1:Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->mCloudService:Lcom/htc/sdk/service/cloudstorage/HtcCloudService;
-    invoke-static {v0}, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->access$500(Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;)Lcom/htc/sdk/service/cloudstorage/HtcCloudService;
+    invoke-static {v1}, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->access$500(Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;)Lcom/htc/sdk/service/cloudstorage/HtcCloudService;
 
     move-result-object v0
-
-    if-eqz v0, :cond_0
 
     .line 367
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper$1;->this$1:Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
+    .local v0, cloudService:Lcom/htc/sdk/service/cloudstorage/HtcCloudService;
+    if-eqz v0, :cond_0
 
-    #getter for: Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->mCloudService:Lcom/htc/sdk/service/cloudstorage/HtcCloudService;
-    invoke-static {v0}, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->access$500(Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;)Lcom/htc/sdk/service/cloudstorage/HtcCloudService;
-
-    move-result-object v0
-
+    .line 368
     invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudService;->signin()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
 
-    .line 371
+    .line 372
     :goto_0
     return-void
 
-    .line 369
+    .line 370
     :cond_0
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper$1;->this$1:Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
+    iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper$1;->this$1:Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->TAG:Ljava/lang/String;
-    invoke-static {v0}, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->access$600(Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->access$600(Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "sign(): mCloudService is null."
+    const-string v2, "sign(): mCloudService is null."
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 .end method

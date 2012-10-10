@@ -37,10 +37,10 @@
     .parameter "efid"
 
     .prologue
-    .line 128
+    .line 133
     move v1, p1
 
-    .line 129
+    .line 134
     .local v1, newEfid:I
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cdma/HtcCdmaSIMFileHandler;->isCommonIccFile(I)Z
 
@@ -50,12 +50,12 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 130
+    .line 135
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 132
+    .line 137
     .local v2, sb:Ljava/lang/StringBuilder;
     const/16 v3, 0x6f3c
 
@@ -65,13 +65,13 @@
 
     if-ne p1, v3, :cond_2
 
-    .line 133
+    .line 138
     :cond_0
     const-string v3, "7F25"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 137
+    .line 142
     :goto_0
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -79,12 +79,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
+    .line 143
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 139
+    .line 144
     .local v0, fileid:Ljava/lang/String;
     const/16 v3, 0x10
 
@@ -92,13 +92,13 @@
 
     move-result v1
 
-    .line 141
+    .line 146
     .end local v0           #fileid:Ljava/lang/String;
     .end local v2           #sb:Ljava/lang/StringBuilder;
     :cond_1
     return v1
 
-    .line 135
+    .line 140
     .restart local v2       #sb:Ljava/lang/StringBuilder;
     :cond_2
     const-string v3, "7F10"
@@ -112,10 +112,10 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 53
     invoke-super {p0}, Lcom/android/internal/telephony/IccFileHandler;->dispose()V
 
-    .line 53
+    .line 54
     return-void
 .end method
 
@@ -123,14 +123,14 @@
     .locals 2
 
     .prologue
-    .line 56
+    .line 58
     const-string v0, "CDMA"
 
     const-string v1, "HtcCdmaSIMFileHandler finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
+    .line 59
     return-void
 .end method
 
@@ -139,26 +139,26 @@
     .parameter "efid"
 
     .prologue
-    .line 75
+    .line 79
     sparse-switch p1, :sswitch_data_0
 
-    .line 111
+    .line 115
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cdma/HtcCdmaSIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 112
+    .line 116
     .local v1, path:Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 116
+    .line 120
     iget-object v2, p0, Lcom/android/internal/telephony/IccFileHandler;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/PhoneBase;->getIccCard()Lcom/android/internal/telephony/IccCard;
 
     move-result-object v0
 
-    .line 117
+    .line 121
     .local v0, card:Lcom/android/internal/telephony/IccCard;
     if-eqz v0, :cond_2
 
@@ -170,17 +170,17 @@
 
     if-eqz v2, :cond_2
 
-    .line 118
+    .line 122
     const-string v1, "3F007F105F3A"
 
-    .line 122
+    .line 126
     .end local v0           #card:Lcom/android/internal/telephony/IccCard;
     .end local v1           #path:Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 79
+    .line 83
     :sswitch_0
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->enableRUIMCard()Z
 
@@ -188,42 +188,42 @@
 
     if-eqz v2, :cond_1
 
-    .line 80
+    .line 84
     const-string v1, "3F007F25"
 
     goto :goto_0
 
-    .line 84
+    .line 88
     :cond_1
     const-string v1, "3F007F10"
 
     goto :goto_0
 
-    .line 86
+    .line 90
     :sswitch_1
     const-string v1, "7F25"
 
     goto :goto_0
 
-    .line 97
+    .line 101
     :sswitch_2
     const-string v1, "3F007F20"
 
     goto :goto_0
 
-    .line 105
+    .line 109
     :sswitch_3
     const-string v1, "3F007F20"
 
     goto :goto_0
 
-    .line 109
+    .line 113
     :sswitch_4
     const-string v1, "3F007F105F3A"
 
     goto :goto_0
 
-    .line 120
+    .line 124
     .restart local v0       #card:Lcom/android/internal/telephony/IccCard;
     .restart local v1       #path:Ljava/lang/String;
     :cond_2
@@ -235,7 +235,7 @@
 
     goto :goto_0
 
-    .line 75
+    .line 79
     :sswitch_data_0
     .sparse-switch
         0x4f30 -> :sswitch_4
@@ -265,7 +265,7 @@
     .parameter "msg"
 
     .prologue
-    .line 64
+    .line 67
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->GENERIC_WPHONE_CONFIG()Z
 
     move-result v0
@@ -276,7 +276,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 65
+    .line 68
     const-string v0, "HtcCdmaSIMFileHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -301,11 +301,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
+    .line 73
     :goto_0
     return-void
 
-    .line 69
+    .line 72
     :cond_0
     invoke-super {p0, p1}, Lcom/android/internal/telephony/IccFileHandler;->handleMessage(Landroid/os/Message;)V
 
@@ -317,7 +317,7 @@
     .parameter "msg"
 
     .prologue
-    .line 149
+    .line 155
     const-string v0, "HtcCdmaSIMFileHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -340,7 +340,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
+    .line 156
     return-void
 .end method
 
@@ -349,7 +349,7 @@
     .parameter "msg"
 
     .prologue
-    .line 153
+    .line 160
     const-string v0, "HtcCdmaSIMFileHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -372,6 +372,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
+    .line 161
     return-void
 .end method

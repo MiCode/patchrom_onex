@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 447
+    .line 449
     iput-object p1, p0, Lcom/htc/app/mf/MfMainActivity$2;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 450
+    .line 452
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$2;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     const/4 v1, 0x0
@@ -49,6 +49,6 @@
     #setter for: Lcom/htc/app/mf/MfMainActivity;->mRunningTransition:Ljava/lang/Runnable;
     invoke-static {v0, v1}, Lcom/htc/app/mf/MfMainActivity;->access$702(Lcom/htc/app/mf/MfMainActivity;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 451
+    .line 453
     return-void
 .end method

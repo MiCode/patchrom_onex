@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1639
+    .line 1668
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$9;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 1641
+    .line 1670
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$9;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     const/4 v1, 0x1
@@ -63,6 +63,6 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/MusicUtils;->deleteTracks(Landroid/content/Context;[I)V
 
-    .line 1670
+    .line 1699
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1247
+    .line 1249
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$7;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +43,17 @@
     .parameter "which"
 
     .prologue
-    .line 1249
+    .line 1251
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1251
+    .line 1253
     packed-switch p2, :pswitch_data_0
 
-    .line 1259
+    .line 1261
     :goto_0
     return-void
 
-    .line 1253
+    .line 1255
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$7;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -83,7 +83,7 @@
 
     goto :goto_0
 
-    .line 1256
+    .line 1258
     :pswitch_1
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$7;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 1251
+    .line 1253
     nop
 
     :pswitch_data_0

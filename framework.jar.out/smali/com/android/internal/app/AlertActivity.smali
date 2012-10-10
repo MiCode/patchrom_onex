@@ -204,7 +204,7 @@
 
     .line 89
     .local v4, themeres:Landroid/content/res/Resources;
-    const-string/jumbo v5, "list_selector_holo_dark"
+    const-string v5, "list_selector_holo_dark"
 
     const-string v6, "drawable"
 

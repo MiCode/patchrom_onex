@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 68
+    .line 75
     iput-object p1, p0, Lcom/htc/music/AddAppShortcutActivity$1;->this$0:Lcom/htc/music/AddAppShortcutActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 71
+    .line 78
     iget-object v0, p0, Lcom/htc/music/AddAppShortcutActivity$1;->this$0:Lcom/htc/music/AddAppShortcutActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/AddAppShortcutActivity;->getApplicationContext()Landroid/content/Context;
@@ -49,6 +49,6 @@
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguardNow(Landroid/content/Context;)V
 
-    .line 72
+    .line 79
     return-void
 .end method

@@ -39,7 +39,7 @@
     invoke-virtual {p0, v1}, Landroid/widget/ZoomControls;->setFocusable(Z)V
 
     .line 47
-    const-string/jumbo v1, "layout_inflater"
+    const-string v1, "layout_inflater"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

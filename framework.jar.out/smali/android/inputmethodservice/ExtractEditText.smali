@@ -249,12 +249,12 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object v0, p0, Landroid/widget/TextView;->mSelectionManager:Lcom/htc/textselection/HtcTextSelectionManager;
+    iget-object v0, p0, Landroid/inputmethodservice/ExtractEditText;->mSelectionManager:Lcom/htc/textselection/HtcTextSelectionManager;
 
     if-eqz v0, :cond_0
 
     .line 111
-    iget-object v0, p0, Landroid/widget/TextView;->mSelectionManager:Lcom/htc/textselection/HtcTextSelectionManager;
+    iget-object v0, p0, Landroid/inputmethodservice/ExtractEditText;->mSelectionManager:Lcom/htc/textselection/HtcTextSelectionManager;
 
     const/4 v1, 0x0
 

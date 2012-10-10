@@ -867,7 +867,7 @@
 
     .line 362
     .local v16, c:Landroid/database/Cursor;
-    if-eqz v16, :cond_6
+    if-eqz v16, :cond_5
 
     .line 364
     :cond_4
@@ -880,7 +880,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_b
 
     .line 366
     :try_start_1
@@ -974,16 +974,16 @@
     move-exception v4
 
     .line 382
-    :cond_5
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
     .line 385
-    :cond_6
+    :cond_5
+    :goto_4
     invoke-interface/range {v36 .. v36}, Ljava/util/Map;->size()I
 
     move-result v4
 
-    if-lez v4, :cond_a
+    if-lez v4, :cond_8
 
     .line 386
     move-object/from16 v0, p0
@@ -1063,11 +1063,11 @@
     move-result-object v16
 
     .line 395
-    if-eqz v16, :cond_9
+    if-eqz v16, :cond_7
 
     .line 397
-    :cond_7
-    :goto_4
+    :cond_6
+    :goto_5
     :try_start_3
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_3
@@ -1076,7 +1076,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_8
+    if-eqz v4, :cond_c
 
     .line 399
     :try_start_4
@@ -1120,7 +1120,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_6
 
     .line 406
     move-object/from16 v0, v32
@@ -1145,19 +1145,19 @@
 
     move/from16 v0, v23
 
-    if-eq v0, v4, :cond_7
+    if-eq v0, v4, :cond_6
 
     const/4 v4, -0x1
 
     move/from16 v0, v33
 
-    if-eq v0, v4, :cond_7
+    if-eq v0, v4, :cond_6
 
     move/from16 v0, v23
 
     move/from16 v1, v33
 
-    if-eq v0, v1, :cond_7
+    if-eq v0, v1, :cond_6
 
     .line 414
     move-object/from16 v0, v36
@@ -1188,7 +1188,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    goto :goto_4
+    goto :goto_5
 
     .line 419
     .end local v23           #hash:I
@@ -1212,7 +1212,7 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
-    goto :goto_4
+    goto :goto_5
 
     .line 424
     .end local v20           #e:Ljava/lang/Exception;
@@ -1220,11 +1220,11 @@
     move-exception v4
 
     .line 427
-    :cond_8
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
 
     .line 430
-    :cond_9
+    :cond_7
+    :goto_6
     move-object/from16 v0, p0
 
     move-object/from16 v1, v36
@@ -1232,7 +1232,7 @@
     invoke-virtual {v0, v1}, Lcom/htc/opensense/provider/BaseContactDbWriter;->updateUserHashes(Ljava/util/Map;)V
 
     .line 433
-    :cond_a
+    :cond_8
     const/16 v24, 0x0
 
     .line 434
@@ -1247,7 +1247,7 @@
 
     .line 435
     .local v28, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/htc/socialnetwork/User;>;"
-    :goto_5
+    :goto_7
     invoke-interface/range {v28 .. v28}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
@@ -1371,7 +1371,7 @@
 
     .line 446
     .local v19, delCols:[Ljava/lang/String;
-    if-nez v19, :cond_b
+    if-nez v19, :cond_9
 
     .line 447
     const/4 v4, 0x0
@@ -1381,7 +1381,7 @@
     move-object/from16 v19, v0
 
     .line 449
-    :cond_b
+    :cond_9
     move-object/from16 v0, v19
 
     array-length v4, v0
@@ -1426,7 +1426,7 @@
     add-int/lit8 v29, v4, -0x1
 
     .local v29, j:I
-    :goto_6
+    :goto_8
     if-ltz v29, :cond_d
 
     .line 454
@@ -1448,7 +1448,7 @@
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 456
-    if-eqz v29, :cond_c
+    if-eqz v29, :cond_a
 
     .line 457
     const-string v4, " OR "
@@ -1456,10 +1456,10 @@
     invoke-virtual {v15, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 453
-    :cond_c
+    :cond_a
     add-int/lit8 v29, v29, -0x1
 
-    goto :goto_6
+    goto :goto_8
 
     .line 382
     .end local v19           #delCols:[Ljava/lang/String;
@@ -1469,6 +1469,11 @@
     .end local v35           #rawContact:Lcom/htc/opensense/provider/BaseContactDbWriter$UserHash;
     .end local v40           #selectionArgs:[Ljava/lang/String;
     .end local v45           #user:Lcom/htc/socialnetwork/User;
+    :cond_b
+    invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
+
+    goto/16 :goto_4
+
     :catchall_0
     move-exception v4
 
@@ -1477,6 +1482,11 @@
     throw v4
 
     .line 427
+    :cond_c
+    invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
+
+    goto/16 :goto_6
+
     :catchall_1
     move-exception v4
 
@@ -1695,7 +1705,7 @@
     if-eqz v16, :cond_11
 
     .line 491
-    :goto_7
+    :goto_9
     :try_start_6
     invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_6
@@ -1757,7 +1767,7 @@
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
 
-    goto :goto_7
+    goto :goto_9
 
     .line 501
     .end local v26           #id:J
@@ -1765,19 +1775,7 @@
     :catch_4
     move-exception v4
 
-    goto :goto_7
-
-    .line 508
-    :catchall_2
-    move-exception v4
-
-    invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
-
-    throw v4
-
-    .line 505
-    :catch_5
-    move-exception v4
+    goto :goto_9
 
     .line 508
     :cond_10
@@ -1785,6 +1783,7 @@
 
     .line 511
     :cond_11
+    :goto_a
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
@@ -1802,7 +1801,7 @@
     .end local v39           #selection:Ljava/lang/String;
     .end local v40           #selectionArgs:[Ljava/lang/String;
     :cond_12
-    :goto_8
+    :goto_b
     invoke-interface/range {v28 .. v28}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
@@ -1861,12 +1860,38 @@
     .line 435
     .end local v38           #results:[Landroid/content/ContentProviderResult;
     :cond_13
-    :goto_9
+    :goto_c
     add-int/lit8 v24, v24, 0x1
 
-    goto/16 :goto_5
+    goto/16 :goto_7
+
+    .line 505
+    .restart local v14       #backRefIndex:I
+    .restart local v19       #delCols:[Ljava/lang/String;
+    .restart local v35       #rawContact:Lcom/htc/opensense/provider/BaseContactDbWriter$UserHash;
+    .restart local v39       #selection:Ljava/lang/String;
+    .restart local v40       #selectionArgs:[Ljava/lang/String;
+    :catch_5
+    move-exception v4
+
+    .line 508
+    invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
+
+    goto :goto_a
+
+    :catchall_2
+    move-exception v4
+
+    invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
+
+    throw v4
 
     .line 515
+    .end local v14           #backRefIndex:I
+    .end local v19           #delCols:[Ljava/lang/String;
+    .end local v35           #rawContact:Lcom/htc/opensense/provider/BaseContactDbWriter$UserHash;
+    .end local v39           #selection:Ljava/lang/String;
+    .end local v40           #selectionArgs:[Ljava/lang/String;
     :cond_14
     new-instance v33, Lcom/htc/opensense/provider/BaseContactDbWriter$UserHash;
 
@@ -2077,7 +2102,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/opensense/provider/BaseContactDbWriter;->addEventOps(Ljava/util/ArrayList;ILcom/htc/socialnetwork/User;)V
 
-    goto/16 :goto_8
+    goto/16 :goto_b
 
     .line 554
     .end local v14           #backRefIndex:I
@@ -2122,7 +2147,7 @@
 
     invoke-static {v4, v0, v1, v5}, Lcom/htc/opensense/provider/BaseContactDbWriter;->applyBatchStatusUpdates(Landroid/content/ContentResolver;[Landroid/content/ContentProviderResult;Ljava/util/Map;Z)V
 
-    goto/16 :goto_9
+    goto/16 :goto_c
 
     .line 559
     .end local v38           #results:[Landroid/content/ContentProviderResult;
@@ -2156,7 +2181,7 @@
 
     invoke-static {v4, v5, v0, v6}, Lcom/htc/opensense/provider/BaseContactDbWriter;->applyBatch(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/util/ArrayList;Z)[Landroid/content/ContentProviderResult;
 
-    goto/16 :goto_9
+    goto/16 :goto_c
 
     .line 568
     .end local v45           #user:Lcom/htc/socialnetwork/User;
@@ -2194,7 +2219,7 @@
     move-result-object v11
 
     .line 577
-    :goto_a
+    :goto_d
     const/16 v31, 0x1
 
     .line 578
@@ -2213,7 +2238,7 @@
     const/16 v25, 0x0
 
     .local v25, i$:I
-    :goto_b
+    :goto_e
     move/from16 v0, v25
 
     move/from16 v1, v30
@@ -2243,7 +2268,7 @@
     :cond_19
     add-int/lit8 v25, v25, 0x1
 
-    goto :goto_b
+    goto :goto_e
 
     .line 573
     .end local v10           #account:Landroid/accounts/Account;
@@ -2284,7 +2309,7 @@
 
     invoke-static {v4, v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_a
+    goto :goto_d
 
     .line 587
     .end local v20           #e:Ljava/lang/Exception;
@@ -2559,22 +2584,11 @@
     goto :goto_1
 
     .line 679
-    :catchall_0
-    move-exception v1
-
-    invoke-interface {v8}, Landroid/database/Cursor;->close()V
-
-    throw v1
-
-    .line 676
-    :catch_1
-    move-exception v1
-
-    .line 679
     :cond_2
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     .line 681
+    :goto_2
     move-object/from16 v0, p1
 
     invoke-interface {v14, v0}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
@@ -2669,7 +2683,7 @@
     move-result-object v12
 
     .local v12, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
-    :goto_2
+    :goto_3
     invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -2816,10 +2830,36 @@
     :cond_4
     add-int/lit8 v11, v11, 0x1
 
+    goto/16 :goto_3
+
+    .line 676
+    .end local v9           #dataOps:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
+    .end local v10           #hashes:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/htc/opensense/provider/BaseContactDbWriter$UserHash;>;"
+    .end local v11           #i:I
+    .end local v12           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local v13           #uidToDelete:Ljava/lang/String;
+    .end local v15           #uri:Landroid/net/Uri;
+    :catch_1
+    move-exception v1
+
+    .line 679
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
     goto/16 :goto_2
 
+    :catchall_0
+    move-exception v1
+
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    throw v1
+
     .line 725
-    .end local v13           #uidToDelete:Ljava/lang/String;
+    .restart local v9       #dataOps:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
+    .restart local v10       #hashes:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/htc/opensense/provider/BaseContactDbWriter$UserHash;>;"
+    .restart local v11       #i:I
+    .restart local v12       #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .restart local v15       #uri:Landroid/net/Uri;
     :cond_5
     move-object/from16 v0, p0
 
@@ -2996,17 +3036,17 @@
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v7
 
     .line 291
     :cond_0
-    :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     .line 294
     :cond_1
+    :goto_0
     iget-boolean v0, p0, Lcom/htc/opensense/provider/BaseContactDbWriter;->mSyncCalendarEvents:Z
 
     if-eqz v0, :cond_2
@@ -3055,7 +3095,7 @@
 
     invoke-virtual {v0, v1, v8, v2, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 330
     .end local v8           #values:Landroid/content/ContentValues;
@@ -3063,7 +3103,15 @@
     :goto_1
     return v7
 
+    .line 288
+    :catch_0
+    move-exception v0
+
     .line 291
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
     :catchall_0
     move-exception v0
 
@@ -3195,30 +3243,23 @@
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     move-result v7
 
     goto/16 :goto_1
 
     .line 325
-    :catch_0
-    move-exception v0
-
-    goto/16 :goto_1
-
-    .line 302
     :catch_1
     move-exception v0
 
     goto/16 :goto_1
 
-    .line 288
-    .end local v8           #values:Landroid/content/ContentValues;
+    .line 302
     :catch_2
     move-exception v0
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 .end method
 
 .method public sendFinishBroadcast(Z)V
@@ -3603,7 +3644,7 @@
 
     .line 982
     .local v8, c:Landroid/database/Cursor;
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_6
 
     .line 984
     :goto_2
@@ -3612,7 +3653,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_a
 
     .line 985
     const-string v2, "sourceid"
@@ -3655,11 +3696,11 @@
     move-exception v2
 
     .line 994
-    :cond_6
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     .line 998
-    :cond_7
+    :cond_6
+    :goto_3
     invoke-virtual {v12}, Ljava/util/HashMap;->size()I
 
     move-result v2
@@ -3681,7 +3722,7 @@
     move-result-object v13
 
     .local v13, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/htc/socialnetwork/User;>;"
-    :goto_3
+    :goto_4
     invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -3707,7 +3748,7 @@
 
     .line 1008
     .local v18, statusBuilder:Landroid/content/ContentProviderOperation$Builder;
-    if-eqz v18, :cond_8
+    if-eqz v18, :cond_7
 
     invoke-virtual/range {v21 .. v21}, Lcom/htc/socialnetwork/User;->getId()Ljava/lang/String;
 
@@ -3717,7 +3758,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_7
 
     .line 1009
     invoke-virtual/range {v21 .. v21}, Lcom/htc/socialnetwork/User;->getId()Ljava/lang/String;
@@ -3740,21 +3781,21 @@
 
     .line 1013
     .end local v9           #dataId:Ljava/lang/String;
-    :cond_8
+    :cond_7
     invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_8
 
-    if-lez v10, :cond_a
+    if-lez v10, :cond_9
 
     rem-int/lit8 v2, v10, 0x5
 
-    if-nez v2, :cond_a
+    if-nez v2, :cond_9
 
     .line 1015
-    :cond_9
+    :cond_8
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/opensense/provider/BaseContactDbWriter;->mResolver:Landroid/content/ContentResolver;
@@ -3766,16 +3807,21 @@
     invoke-static {v2, v0, v3}, Lcom/htc/opensense/provider/BaseContactDbWriter;->applyBatchStatusUpdates(Landroid/content/ContentResolver;Ljava/util/Map;Z)V
 
     .line 1004
-    :cond_a
+    :cond_9
     add-int/lit8 v10, v10, 0x1
 
-    goto :goto_3
+    goto :goto_4
 
     .line 994
     .end local v13           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/htc/socialnetwork/User;>;"
     .end local v18           #statusBuilder:Landroid/content/ContentProviderOperation$Builder;
     .end local v19           #statusUpdateOps:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Landroid/content/ContentProviderOperation$Builder;>;"
     .end local v21           #user:Lcom/htc/socialnetwork/User;
+    :cond_a
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    goto :goto_3
+
     :catchall_0
     move-exception v2
 

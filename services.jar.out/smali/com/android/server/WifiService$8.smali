@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 845
+    .line 898
     iput-object p1, p0, Lcom/android/server/WifiService$8;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,104 +35,78 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 6
+    .locals 4
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    const/4 v5, 0x0
-
-    .line 848
-    iget-object v3, p0, Lcom/android/server/WifiService$8;->this$0:Lcom/android/server/WifiService;
+    .line 901
+    iget-object v2, p0, Lcom/android/server/WifiService$8;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/server/WifiService;->access$200(Lcom/android/server/WifiService;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/server/WifiService;->access$200(Lcom/android/server/WifiService;)Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v3
+    move-result-object v2
 
-    const-string v4, "hotspot_password"
+    const-string v3, "hotspot_password"
 
-    invoke-static {v3, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 849
+    .line 902
     .local v0, key:Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/server/WifiService$8;->this$0:Lcom/android/server/WifiService;
+    if-nez v0, :cond_1
 
-    #getter for: Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/server/WifiService;->access$200(Lcom/android/server/WifiService;)Landroid/content/Context;
+    .line 903
+    const-string v2, "ss"
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    const-string v4, "hotspot_ssid"
-
-    invoke-static {v3, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 850
-    .local v1, ssid:Ljava/lang/String;
-    if-eqz v0, :cond_0
+    .line 904
+    .local v1, state:Ljava/lang/String;
+    const-string v2, "IMSI"
 
-    if-nez v1, :cond_2
-
-    .line 851
-    :cond_0
-    const-string v3, "state"
-
-    const/4 v4, -0x1
-
-    invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    .line 856
-    .local v2, state:I
+    if-nez v2, :cond_0
+
+    const-string v2, "LOADED"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
     if-eqz v2, :cond_1
 
-    const/4 v3, 0x1
+    .line 905
+    :cond_0
+    const-string v2, "WifiService"
 
-    if-eq v2, v3, :cond_1
+    const-string v3, "Got IccCard.INTENT_VALUE_ICC_IMSI or IccCard.INTENT_VALUE_ICC_LOADED"
 
-    const/4 v3, 0x2
+    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-ne v2, v3, :cond_2
+    .line 906
+    iget-object v2, p0, Lcom/android/server/WifiService$8;->this$0:Lcom/android/server/WifiService;
 
-    .line 857
+    #getter for: Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
+    invoke-static {v2}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/net/wifi/WifiStateMachine;->checkWifiApPassword()V
+
+    .line 909
+    .end local v1           #state:Ljava/lang/String;
     :cond_1
-    const-string v3, "WifiService"
-
-    const-string v4, "Got TelephonyIntents.ACTION_SERVICE_STATE_CHANGED: state not power off"
-
-    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 858
-    iget-object v3, p0, Lcom/android/server/WifiService$8;->this$0:Lcom/android/server/WifiService;
-
-    #getter for: Lcom/android/server/WifiService;->mAsyncServiceHandler:Lcom/android/server/WifiService$AsyncServiceHandler;
-    invoke-static {v3}, Lcom/android/server/WifiService;->access$2800(Lcom/android/server/WifiService;)Lcom/android/server/WifiService$AsyncServiceHandler;
-
-    move-result-object v3
-
-    const/16 v4, 0x29
-
-    invoke-static {v3, v4, v5, v5}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
-
-    .line 861
-    .end local v2           #state:I
-    :cond_2
     return-void
 .end method

@@ -1079,7 +1079,7 @@
     new-instance v3, Ljava/util/StringTokenizer;
 
     .end local v3           #idListTokens:Ljava/util/StringTokenizer;
-    const-string v8, "|"
+    const-string/jumbo v8, "|"
 
     invoke-direct {v3, v5, v8}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

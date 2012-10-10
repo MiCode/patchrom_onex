@@ -1629,7 +1629,7 @@
     .line 233
     iget-object v1, p0, Landroid/widget/MediaController;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "layout_inflater"
+    const-string v2, "layout_inflater"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

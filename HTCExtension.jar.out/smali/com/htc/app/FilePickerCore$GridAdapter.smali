@@ -42,28 +42,28 @@
     .parameter "tab"
 
     .prologue
-    .line 2120
+    .line 2468
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 2121
+    .line 2469
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->inflater:Landroid/view/LayoutInflater;
 
-    .line 2122
+    .line 2470
     iput-object p3, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->name:[Ljava/lang/String;
 
-    .line 2123
+    .line 2471
     iput-object p4, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->iconarray:[Ljava/lang/Integer;
 
-    .line 2124
+    .line 2472
     iput-object p5, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->tab:[Ljava/lang/String;
 
-    .line 2125
+    .line 2473
     return-void
 .end method
 
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 2129
+    .line 2477
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->name:[Ljava/lang/String;
 
     array-length v0, v0
@@ -86,7 +86,7 @@
     .parameter "position"
 
     .prologue
-    .line 2134
+    .line 2482
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -99,7 +99,7 @@
     .parameter "position"
 
     .prologue
-    .line 2139
+    .line 2487
     int-to-long v0, p1
 
     return-wide v0
@@ -116,15 +116,15 @@
 
     const/4 v4, 0x0
 
-    .line 2145
+    .line 2493
     if-nez p2, :cond_0
 
-    .line 2146
+    .line 2494
     new-instance v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;
 
     invoke-direct {v0, p0, v5}, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;-><init>(Lcom/htc/app/FilePickerCore$GridAdapter;Lcom/htc/app/FilePickerCore$1;)V
 
-    .line 2147
+    .line 2495
     .local v0, holder:Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->inflater:Landroid/view/LayoutInflater;
 
@@ -134,7 +134,7 @@
 
     move-result-object p2
 
-    .line 2148
+    .line 2496
     const v2, 0x20200c7
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -145,7 +145,7 @@
 
     iput-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->iv:Landroid/widget/ImageView;
 
-    .line 2149
+    .line 2497
     iget-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->iv:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -154,50 +154,50 @@
 
     check-cast v1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 2151
+    .line 2499
     .local v1, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->gridItemSize:I
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$2600(Lcom/htc/app/FilePickerCore;)I
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4400(Lcom/htc/app/FilePickerCore;)I
 
     move-result v2
 
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 2152
+    .line 2500
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->gridItemSize:I
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$2600(Lcom/htc/app/FilePickerCore;)I
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4400(Lcom/htc/app/FilePickerCore;)I
 
     move-result v2
 
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 2153
+    .line 2501
     iget-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->iv:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2154
+    .line 2502
     iget-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->iv:Landroid/widget/ImageView;
 
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->gridItemBkg:Landroid/graphics/drawable/LayerDrawable;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$2700(Lcom/htc/app/FilePickerCore;)Landroid/graphics/drawable/LayerDrawable;
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$4500(Lcom/htc/app/FilePickerCore;)Landroid/graphics/drawable/LayerDrawable;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2155
+    .line 2503
     iget-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->iv:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v4, v4, v4, v4}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 2156
+    .line 2504
     const v2, 0x20200c8
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -208,10 +208,10 @@
 
     iput-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->tv:Landroid/widget/TextView;
 
-    .line 2157
+    .line 2505
     invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 2161
+    .line 2509
     .end local v1           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
     :goto_0
     iget-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->iv:Landroid/widget/ImageView;
@@ -226,7 +226,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 2162
+    .line 2510
     iget-object v2, v0, Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;->tv:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/htc/app/FilePickerCore$GridAdapter;->name:[Ljava/lang/String;
@@ -235,10 +235,10 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2163
+    .line 2511
     return-object p2
 
-    .line 2159
+    .line 2507
     .end local v0           #holder:Lcom/htc/app/FilePickerCore$GridAdapter$ViewHolder;
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;

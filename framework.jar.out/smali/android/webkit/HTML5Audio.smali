@@ -174,7 +174,14 @@
     .locals 2
 
     .prologue
-    .line 314
+    .line 320
+    iget v0, p0, Landroid/webkit/HTML5Audio;->mState:I
+
+    sget v1, Landroid/webkit/HTML5Audio;->PREPARED:I
+
+    if-lt v0, v1, :cond_0
+
+    .line 321
     iget-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
@@ -187,13 +194,23 @@
 
     div-float/2addr v0, v1
 
+    .line 323
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method private native nativeOnBuffering(II)V
 .end method
 
 .method private native nativeOnEnded(I)V
+.end method
+
+.method private native nativeOnPaused(I)V
 .end method
 
 .method private native nativeOnPrepared(IIII)V
@@ -597,31 +614,53 @@
     goto :goto_1
 .end method
 
+.method private setVolume(F)V
+    .locals 2
+    .parameter "volume"
+
+    .prologue
+    .line 303
+    iget v0, p0, Landroid/webkit/HTML5Audio;->mState:I
+
+    sget v1, Landroid/webkit/HTML5Audio;->PREPARED:I
+
+    if-lt v0, v1, :cond_0
+
+    .line 304
+    iget-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p1, p1}, Landroid/media/MediaPlayer;->setVolume(FF)V
+
+    .line 306
+    :cond_0
+    return-void
+.end method
+
 .method private teardown()V
     .locals 1
 
     .prologue
-    .line 307
+    .line 313
     iget-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 308
+    .line 314
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 309
+    .line 315
     sget v0, Landroid/webkit/HTML5Audio;->ERROR:I
 
     iput v0, p0, Landroid/webkit/HTML5Audio;->mState:I
 
-    .line 310
+    .line 316
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/HTML5Audio;->mNativePointer:I
 
-    .line 311
+    .line 317
     return-void
 .end method
 
@@ -766,14 +805,12 @@
     if-eqz v0, :cond_0
 
     .line 252
-    iget-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
+    invoke-direct {p0}, Landroid/webkit/HTML5Audio;->pause()V
 
     .line 253
-    sget v0, Landroid/webkit/HTML5Audio;->STOPPED:I
+    iget v0, p0, Landroid/webkit/HTML5Audio;->mNativePointer:I
 
-    iput v0, p0, Landroid/webkit/HTML5Audio;->mState:I
+    invoke-direct {p0, v0}, Landroid/webkit/HTML5Audio;->nativeOnPaused(I)V
 
     goto :goto_0
 
@@ -798,6 +835,8 @@
     goto :goto_0
 
     .line 238
+    nop
+
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_3

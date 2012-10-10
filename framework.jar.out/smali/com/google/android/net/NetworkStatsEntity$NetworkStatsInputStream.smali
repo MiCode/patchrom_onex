@@ -25,13 +25,13 @@
     .parameter "wrapped"
 
     .prologue
-    .line 38
+    .line 39
     iput-object p1, p0, Lcom/google/android/net/NetworkStatsEntity$NetworkStatsInputStream;->this$0:Lcom/google/android/net/NetworkStatsEntity;
 
-    .line 39
+    .line 40
     invoke-direct {p0, p2}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 40
+    .line 41
     return-void
 .end method
 
@@ -46,13 +46,13 @@
     .end annotation
 
     .prologue
-    .line 45
+    .line 47
     :try_start_0
     invoke-super {p0}, Ljava/io/FilterInputStream;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 47
+    .line 49
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
@@ -66,7 +66,7 @@
 
     sub-long v0, v6, v8
 
-    .line 48
+    .line 50
     .local v0, processingTime:J
     iget-object v6, p0, Lcom/google/android/net/NetworkStatsEntity$NetworkStatsInputStream;->this$0:Lcom/google/android/net/NetworkStatsEntity;
 
@@ -79,7 +79,7 @@
 
     move-result-wide v4
 
-    .line 49
+    .line 51
     .local v4, tx:J
     iget-object v6, p0, Lcom/google/android/net/NetworkStatsEntity$NetworkStatsInputStream;->this$0:Lcom/google/android/net/NetworkStatsEntity;
 
@@ -92,7 +92,7 @@
 
     move-result-wide v2
 
-    .line 51
+    .line 53
     .local v2, rx:J
     const v6, 0xcb21
 
@@ -170,10 +170,10 @@
 
     invoke-static {v6, v7}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 54
+    .line 56
     return-void
 
-    .line 47
+    .line 49
     .end local v0           #processingTime:J
     .end local v2           #rx:J
     .end local v4           #tx:J
@@ -193,7 +193,7 @@
 
     sub-long v0, v7, v9
 
-    .line 48
+    .line 50
     .restart local v0       #processingTime:J
     iget-object v7, p0, Lcom/google/android/net/NetworkStatsEntity$NetworkStatsInputStream;->this$0:Lcom/google/android/net/NetworkStatsEntity;
 
@@ -206,7 +206,7 @@
 
     move-result-wide v4
 
-    .line 49
+    .line 51
     .restart local v4       #tx:J
     iget-object v7, p0, Lcom/google/android/net/NetworkStatsEntity$NetworkStatsInputStream;->this$0:Lcom/google/android/net/NetworkStatsEntity;
 
@@ -219,7 +219,7 @@
 
     move-result-wide v2
 
-    .line 51
+    .line 53
     .restart local v2       #rx:J
     const v7, 0xcb21
 
@@ -297,6 +297,6 @@
 
     invoke-static {v7, v8}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 47
+    .line 49
     throw v6
 .end method

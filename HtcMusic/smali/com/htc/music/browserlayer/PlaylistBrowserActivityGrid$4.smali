@@ -3,12 +3,12 @@
 .source "PlaylistBrowserActivityGrid.java"
 
 # interfaces
-.implements Lcom/htc/music/widget/gridview/MusicGridViewItem$ITextViewBind;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initMusicGridViewItem(Lcom/htc/music/widget/gridview/MusicGridViewItem;)V
+    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->initButtonsPanel()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 504
+    .line 488
     iput-object p1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,100 +37,16 @@
 
 
 # virtual methods
-.method public textViewBinding(ILcom/htc/sunny2/IMediaData;Landroid/view/View;)Landroid/view/View;
-    .locals 4
-    .parameter "index"
-    .parameter "mediaData"
-    .parameter "container"
+.method public onClick(Landroid/view/View;)V
+    .locals 1
+    .parameter "v"
 
     .prologue
-    .line 509
-    if-nez p3, :cond_1
+    .line 490
+    iget-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
-    .line 510
-    iget-object v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
+    invoke-virtual {v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->getLayoutInflater()Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    .line 511
-    .local v0, inflator:Landroid/view/LayoutInflater;
-    const v2, 0x7f030029
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p3
-
-    .line 512
-    const v2, 0x7f080046
-
-    invoke-virtual {p3, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    .line 513
-    .local v1, textView:Landroid/widget/TextView;
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setSingleLine(Z)V
-
-    .line 514
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setLines(I)V
-
-    .line 515
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
-
-    .line 516
-    invoke-virtual {p3, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    .line 521
-    .end local v0           #inflator:Landroid/view/LayoutInflater;
-    :goto_0
-    iget-object v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$400(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 522
-    iget-object v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$4;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$500(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p2}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->getParentMediaDataName(Lcom/htc/sunny2/IMediaData;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 524
-    :cond_0
-    return-object p3
-
-    .line 518
-    .end local v1           #textView:Landroid/widget/TextView;
-    :cond_1
-    invoke-virtual {p3}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    .restart local v1       #textView:Landroid/widget/TextView;
-    goto :goto_0
+    .line 491
+    return-void
 .end method

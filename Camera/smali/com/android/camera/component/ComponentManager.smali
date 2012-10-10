@@ -185,12 +185,12 @@
     .parameter "component"
 
     .prologue
-    .line 221
+    .line 218
     sget-boolean v0, Lcom/android/camera/component/ComponentManager;->PRINT_INIT_LOGS:Z
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 219
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -241,11 +241,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
+    .line 222
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera/component/Component;->initialize()V
 
-    .line 226
+    .line 223
     return-void
 .end method
 
@@ -825,14 +825,11 @@
 
     .line 193
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/component/ComponentManager;->threadAccessCheck()V
-
-    .line 196
     iget-object v3, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
     monitor-enter v3
 
-    .line 198
+    .line 195
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
@@ -858,7 +855,7 @@
 
     check-cast v0, Lcom/android/camera/component/Component;
 
-    .line 200
+    .line 197
     .local v0, component:Lcom/android/camera/component/Component;
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -870,24 +867,24 @@
 
     if-eqz v2, :cond_1
 
-    .line 201
+    .line 198
     monitor-exit v3
 
-    .line 204
+    .line 201
     .end local v0           #component:Lcom/android/camera/component/Component;
     :goto_0
     return-object v0
 
-    .line 203
+    .line 200
     :cond_2
     monitor-exit v3
 
-    .line 204
+    .line 201
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 203
+    .line 200
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
     move-exception v2
@@ -903,7 +900,7 @@
     .locals 1
 
     .prologue
-    .line 212
+    .line 209
     iget-object v0, p0, Lcom/android/camera/component/ComponentManager;->m_Owner:Lcom/android/camera/component/IComponentOwner;
 
     return-object v0
@@ -913,15 +910,15 @@
     .locals 4
 
     .prologue
-    .line 234
+    .line 231
     invoke-virtual {p0}, Lcom/android/camera/component/ComponentManager;->threadAccessCheck()V
 
-    .line 237
+    .line 234
     iget-object v3, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
     monitor-enter v3
 
-    .line 239
+    .line 236
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
@@ -947,13 +944,13 @@
 
     check-cast v0, Lcom/android/camera/component/Component;
 
-    .line 240
+    .line 237
     .local v0, component:Lcom/android/camera/component/Component;
     invoke-direct {p0, v0}, Lcom/android/camera/component/ComponentManager;->initializeComponent(Lcom/android/camera/component/Component;)V
 
     goto :goto_0
 
-    .line 241
+    .line 238
     .end local v0           #component:Lcom/android/camera/component/Component;
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -972,7 +969,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 242
+    .line 239
     return-void
 .end method
 
@@ -981,20 +978,20 @@
     .parameter "component"
 
     .prologue
-    .line 251
+    .line 248
     invoke-virtual {p0}, Lcom/android/camera/component/ComponentManager;->threadAccessCheck()V
 
-    .line 254
+    .line 251
     if-nez p1, :cond_0
 
-    .line 256
+    .line 253
     iget-object v2, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v3, "component is NULL in addComponent()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
+    .line 254
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "component is NULL"
@@ -1003,19 +1000,19 @@
 
     throw v2
 
-    .line 261
+    .line 258
     :cond_0
     iget-object v3, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
     monitor-enter v3
 
-    .line 263
+    .line 260
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera/component/Component;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 264
+    .line 261
     .local v1, name:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
@@ -1025,19 +1022,19 @@
 
     check-cast v0, Lcom/android/camera/component/Component;
 
-    .line 265
+    .line 262
     .local v0, candComponent:Lcom/android/camera/component/Component;
     if-ne v0, p1, :cond_2
 
-    .line 268
+    .line 265
     invoke-direct {p0, p1}, Lcom/android/camera/component/ComponentManager;->deinitializeComponent(Lcom/android/camera/component/Component;)V
 
-    .line 271
+    .line 268
     sget-boolean v2, Lcom/android/camera/component/ComponentManager;->PRINT_ADD_REMOVE_LOGS:Z
 
     if-eqz v2, :cond_1
 
-    .line 272
+    .line 269
     iget-object v2, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1088,23 +1085,23 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
+    .line 272
     :cond_1
     const/4 v2, 0x0
 
     invoke-virtual {p1, v2}, Lcom/android/camera/component/Component;->setOwner(Lcom/android/camera/component/IComponentOwner;)V
 
-    .line 276
+    .line 273
     iget-object v2, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
     invoke-virtual {v2, v1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 277
+    .line 274
     const/4 v2, 0x1
 
     monitor-exit v3
 
-    .line 279
+    .line 276
     :goto_0
     return v2
 
@@ -1115,7 +1112,7 @@
 
     goto :goto_0
 
-    .line 280
+    .line 277
     .end local v0           #candComponent:Lcom/android/camera/component/Component;
     .end local v1           #name:Ljava/lang/String;
     :catchall_0
@@ -1132,15 +1129,15 @@
     .locals 10
 
     .prologue
-    .line 290
+    .line 287
     invoke-virtual {p0}, Lcom/android/camera/component/ComponentManager;->threadAccessCheck()V
 
-    .line 293
+    .line 290
     iget-object v7, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
     monitor-enter v7
 
-    .line 296
+    .line 293
     :try_start_0
     iget-object v6, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
@@ -1150,7 +1147,7 @@
 
     new-array v5, v6, [Ljava/lang/String;
 
-    .line 297
+    .line 294
     .local v5, names:[Ljava/lang/String;
     iget-object v6, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
@@ -1160,7 +1157,7 @@
 
     invoke-interface {v6, v5}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 300
+    .line 297
     move-object v0, v5
 
     .local v0, arr$:[Ljava/lang/String;
@@ -1175,7 +1172,7 @@
 
     aget-object v4, v0, v2
 
-    .line 303
+    .line 300
     .local v4, name:Ljava/lang/String;
     iget-object v6, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
@@ -1185,16 +1182,16 @@
 
     check-cast v1, Lcom/android/camera/component/Component;
 
-    .line 304
+    .line 301
     .local v1, component:Lcom/android/camera/component/Component;
     invoke-direct {p0, v1}, Lcom/android/camera/component/ComponentManager;->deinitializeComponent(Lcom/android/camera/component/Component;)V
 
-    .line 307
+    .line 304
     sget-boolean v6, Lcom/android/camera/component/ComponentManager;->PRINT_ADD_REMOVE_LOGS:Z
 
     if-eqz v6, :cond_0
 
-    .line 308
+    .line 305
     iget-object v6, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1241,32 +1238,32 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
+    .line 308
     :cond_0
     const/4 v6, 0x0
 
     invoke-virtual {v1, v6}, Lcom/android/camera/component/Component;->setOwner(Lcom/android/camera/component/IComponentOwner;)V
 
-    .line 312
+    .line 309
     iget-object v6, p0, Lcom/android/camera/component/ComponentManager;->m_Components:Ljava/util/Hashtable;
 
     invoke-virtual {v6, v4}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 300
+    .line 297
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 314
+    .line 311
     .end local v1           #component:Lcom/android/camera/component/Component;
     .end local v4           #name:Ljava/lang/String;
     :cond_1
     monitor-exit v7
 
-    .line 315
+    .line 312
     return-void
 
-    .line 314
+    .line 311
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v2           #i$:I
     .end local v3           #len$:I

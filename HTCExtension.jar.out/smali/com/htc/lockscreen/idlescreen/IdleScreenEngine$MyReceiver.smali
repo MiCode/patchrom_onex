@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 747
+    .line 753
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 754
+    .line 760
     const-string v0, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,19 +53,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 755
+    .line 761
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mScreenOn:Z
 
-    .line 756
+    .line 762
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->reportVisibility()V
 
-    .line 757
+    .line 763
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
@@ -74,12 +74,12 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->onScreenOnOffChanged(Z)V
 
-    .line 764
+    .line 770
     :cond_0
     :goto_0
     return-void
 
-    .line 758
+    .line 764
     :cond_1
     const-string v0, "android.intent.action.SCREEN_OFF"
 
@@ -93,19 +93,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 759
+    .line 765
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->mScreenOn:Z
 
-    .line 760
+    .line 766
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     invoke-virtual {v0}, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;->reportVisibility()V
 
-    .line 761
+    .line 767
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;
 
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/IdleScreenEngine$MyReceiver;->this$0:Lcom/htc/lockscreen/idlescreen/IdleScreenEngine;

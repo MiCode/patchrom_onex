@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 670
+    .line 688
     iput-object p1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x1
 
-    .line 673
+    .line 691
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -57,14 +57,14 @@
 
     if-eqz v3, :cond_2
 
-    .line 674
+    .line 692
     const-string v3, "wifi_state"
 
     invoke-virtual {p2, v3, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 677
+    .line 695
     .local v0, wifiState:I
     iget-object v3, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
@@ -76,13 +76,13 @@
     #setter for: Lcom/android/server/WifiService;->mWifiEnabled:Z
     invoke-static {v3, v1}, Lcom/android/server/WifiService;->access$2002(Lcom/android/server/WifiService;Z)Z
 
-    .line 680
+    .line 698
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->resetNotification()V
     invoke-static {v1}, Lcom/android/server/WifiService;->access$2100(Lcom/android/server/WifiService;)V
 
-    .line 703
+    .line 727
     .end local v0           #wifiState:I
     :cond_0
     :goto_1
@@ -92,10 +92,10 @@
     :cond_1
     move v1, v2
 
-    .line 677
+    .line 695
     goto :goto_0
 
-    .line 681
+    .line 699
     .end local v0           #wifiState:I
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -110,7 +110,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 683
+    .line 701
     iget-object v2, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     const-string v1, "networkInfo"
@@ -123,8 +123,8 @@
 
     iput-object v1, v2, Lcom/android/server/WifiService;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 686
-    sget-object v1, Lcom/android/server/WifiService$13;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
+    .line 704
+    sget-object v1, Lcom/android/server/WifiService$14;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
 
     iget-object v2, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
@@ -144,14 +144,14 @@
 
     goto :goto_1
 
-    .line 689
+    .line 707
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->evaluateTrafficStatsPolling()V
     invoke-static {v1}, Lcom/android/server/WifiService;->access$2200(Lcom/android/server/WifiService;)V
 
-    .line 690
+    .line 708
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->resetNotification()V
@@ -159,7 +159,7 @@
 
     goto :goto_1
 
-    .line 693
+    .line 711
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 695
+    .line 713
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->checkAndSetNotification()V
@@ -181,7 +181,7 @@
 
     goto :goto_1
 
-    .line 697
+    .line 715
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -195,7 +195,7 @@
 
     if-eqz v3, :cond_5
 
-    .line 698
+    .line 716
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mScreenOffSaved:Z
@@ -203,7 +203,7 @@
 
     goto :goto_1
 
-    .line 699
+    .line 717
     :cond_5
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -215,9 +215,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_6
 
-    .line 700
+    .line 718
     iget-object v2, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mScreenOffSaved:Z
@@ -225,9 +225,84 @@
 
     goto :goto_1
 
-    .line 686
-    nop
+    .line 719
+    :cond_6
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
+    move-result-object v1
+
+    const-string v2, "android.intent.action.BOOT_COMPLETED"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 720
+    iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
+
+    #calls: Lcom/android/server/WifiService;->updateDevicePolicy()V
+    invoke-static {v1}, Lcom/android/server/WifiService;->access$2500(Lcom/android/server/WifiService;)V
+
+    .line 721
+    iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
+
+    iget-object v1, v1, Lcom/android/server/WifiService;->mNetworkInfo:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v1}, Landroid/net/NetworkInfo;->getTypeName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "WIFI"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
+
+    iget-object v1, v1, Lcom/android/server/WifiService;->mNetworkInfo:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v1}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
+
+    move-result-object v1
+
+    sget-object v2, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
+
+    #getter for: Lcom/android/server/WifiService;->mScreenOff:Z
+    invoke-static {v1}, Lcom/android/server/WifiService;->access$2600(Lcom/android/server/WifiService;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 722
+    const-string v1, "WifiService"
+
+    const-string v2, "forceUpdateRSSI when receive boot complete"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 723
+    iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
+
+    #getter for: Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
+    invoke-static {v1}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/wifi/WifiStateMachine;->forceUpdateRSSI()V
+
+    goto/16 :goto_1
+
+    .line 704
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

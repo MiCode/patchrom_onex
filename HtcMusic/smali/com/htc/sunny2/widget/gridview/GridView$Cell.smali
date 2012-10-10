@@ -40,35 +40,35 @@
 
     const/4 v1, -0x2
 
-    .line 3146
+    .line 3168
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3139
+    .line 3161
     new-instance v0, Lcom/htc/sunny2/view/SViewGroup$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Lcom/htc/sunny2/view/SViewGroup$LayoutParams;-><init>(II)V
 
     iput-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->defaultLayoutParams:Lcom/htc/sunny2/view/SViewGroup$LayoutParams;
 
-    .line 3142
+    .line 3164
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->idx:I
 
-    .line 3143
+    .line 3165
     iput v2, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->x:I
 
-    .line 3144
+    .line 3166
     iput v2, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->y:I
 
-    .line 3147
+    .line 3169
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
-    .line 3148
+    .line 3170
     return-void
 .end method
 
@@ -82,47 +82,47 @@
 
     const/4 v1, -0x2
 
-    .line 3156
+    .line 3178
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3139
+    .line 3161
     new-instance v0, Lcom/htc/sunny2/view/SViewGroup$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Lcom/htc/sunny2/view/SViewGroup$LayoutParams;-><init>(II)V
 
     iput-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->defaultLayoutParams:Lcom/htc/sunny2/view/SViewGroup$LayoutParams;
 
-    .line 3142
+    .line 3164
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->idx:I
 
-    .line 3143
+    .line 3165
     iput v2, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->x:I
 
-    .line 3144
+    .line 3166
     iput v2, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->y:I
 
-    .line 3157
+    .line 3179
     instance-of v0, p2, Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     if-eqz v0, :cond_0
 
-    .line 3158
+    .line 3180
     check-cast p2, Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     .end local p2
     iput-object p2, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
-    .line 3164
+    .line 3186
     invoke-virtual {p0}, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->initViewItem()V
 
-    .line 3165
+    .line 3187
     return-void
 
-    .line 3161
+    .line 3183
     .restart local p2
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
@@ -141,13 +141,13 @@
     .parameter "isChild"
 
     .prologue
-    .line 3152
+    .line 3174
     invoke-direct {p0, p1, p2}, Lcom/htc/sunny2/widget/gridview/GridView$Cell;-><init>(Lcom/htc/sunny2/widget/gridview/GridView;Lcom/htc/sunny2/ViewItem;)V
 
-    .line 3153
+    .line 3175
     iput-boolean p3, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->mIsChild:Z
 
-    .line 3154
+    .line 3176
     return-void
 .end method
 
@@ -162,13 +162,13 @@
     .end annotation
 
     .prologue
-    .line 3237
+    .line 3259
     invoke-virtual {p0}, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->recycle()V
 
-    .line 3238
+    .line 3260
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 3239
+    .line 3261
     return-void
 .end method
 
@@ -176,7 +176,7 @@
     .locals 1
 
     .prologue
-    .line 3219
+    .line 3241
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     if-nez v0, :cond_0
@@ -200,7 +200,7 @@
     .locals 2
 
     .prologue
-    .line 3168
+    .line 3190
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget v1, v0, Lcom/htc/sunny2/widget/gridview/GridView;->mChildNodeCount:I
@@ -209,21 +209,21 @@
 
     iput v1, v0, Lcom/htc/sunny2/widget/gridview/GridView;->mChildNodeCount:I
 
-    .line 3169
+    .line 3191
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->setParent(Lcom/htc/sunny2/view/SViewParent;)V
 
-    .line 3170
+    .line 3192
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->dispatchResourceCreation(Z)V
 
-    .line 3171
+    .line 3193
     return-void
 .end method
 
@@ -231,7 +231,7 @@
     .locals 1
 
     .prologue
-    .line 3245
+    .line 3267
     iget-boolean v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->mIsChild:Z
 
     return v0
@@ -250,10 +250,10 @@
 
     const/high16 v2, -0x8000
 
-    .line 3175
+    .line 3197
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
-    .line 3176
+    .line 3198
     .local v0, item:Lcom/htc/sunny2/widget/gridview/GridViewItem;
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -261,10 +261,10 @@
 
     invoke-virtual {v1, v0}, Lcom/htc/sunny2/SceneNode;->addSceneNode(Lcom/htc/sunny2/SceneNode;)V
 
-    .line 3177
+    .line 3199
     invoke-virtual {v0, p1, p2}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->bindMediaData(ILcom/htc/sunny2/IMediaData;)V
 
-    .line 3179
+    .line 3201
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/view/SView;->mWidth:I
@@ -276,7 +276,7 @@
 
     move-result v8
 
-    .line 3180
+    .line 3202
     .local v8, measureW:I
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -289,40 +289,40 @@
 
     move-result v7
 
-    .line 3182
+    .line 3204
     .local v7, measureH:I
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->getLayoutParams()Lcom/htc/sunny2/view/SViewGroup$LayoutParams;
 
     move-result-object v6
 
-    .line 3183
+    .line 3205
     .local v6, lp:Lcom/htc/sunny2/view/SViewGroup$LayoutParams;
     if-nez v6, :cond_0
 
-    .line 3184
+    .line 3206
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->defaultLayoutParams:Lcom/htc/sunny2/view/SViewGroup$LayoutParams;
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->setLayoutParamsWithoutLayout(Lcom/htc/sunny2/view/SViewGroup$LayoutParams;)V
 
-    .line 3187
+    .line 3209
     :cond_0
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #calls: Lcom/htc/sunny2/widget/gridview/GridView;->measureChild(Lcom/htc/sunny2/view/SView;II)V
     invoke-static {v1, v0, v8, v7}, Lcom/htc/sunny2/widget/gridview/GridView;->access$1600(Lcom/htc/sunny2/widget/gridview/GridView;Lcom/htc/sunny2/view/SView;II)V
 
-    .line 3189
+    .line 3211
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->getMeasuredWidth()I
 
     move-result v4
 
-    .line 3190
+    .line 3212
     .local v4, w:I
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->getMeasuredHeight()I
 
     move-result v5
 
-    .line 3192
+    .line 3214
     .local v5, h:I
     div-int/lit8 v1, v4, 0x2
 
@@ -340,16 +340,16 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->layout(FFFII)V
 
-    .line 3194
+    .line 3216
     iput p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->idx:I
 
-    .line 3195
+    .line 3217
     iput p3, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->x:I
 
-    .line 3196
+    .line 3218
     iput p4, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->y:I
 
-    .line 3199
+    .line 3221
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mSelectedHighlightEnabled:Z
@@ -368,10 +368,10 @@
 
     if-ne v1, p1, :cond_2
 
-    .line 3200
+    .line 3222
     invoke-virtual {v0, v9}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->setPressed(Z)V
 
-    .line 3205
+    .line 3227
     :goto_0
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -382,7 +382,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 3206
+    .line 3228
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mScreenCacheHandler:Lcom/htc/sunny2/widget/gridview/ScreenCacheHandler;
@@ -394,11 +394,11 @@
 
     invoke-virtual {v1, p1, v2, v0}, Lcom/htc/sunny2/widget/gridview/ScreenCacheHandler;->onTagSnapShotFlagIRT(ILcom/htc/sunny2/SceneNode;Lcom/htc/sunny2/SceneNode;)V
 
-    .line 3207
+    .line 3229
     :cond_1
     return-void
 
-    .line 3203
+    .line 3225
     :cond_2
     const/4 v1, 0x0
 
@@ -413,32 +413,32 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3227
+    .line 3249
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     if-eqz v0, :cond_0
 
-    .line 3228
+    .line 3250
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->dispatchResourceCreation(Z)V
 
-    .line 3229
+    .line 3251
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     invoke-virtual {v0, v2}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->setParent(Lcom/htc/sunny2/view/SViewParent;)V
 
-    .line 3230
+    .line 3252
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->release()V
 
-    .line 3231
+    .line 3253
     iput-object v2, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
-    .line 3232
+    .line 3254
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget v1, v0, Lcom/htc/sunny2/widget/gridview/GridView;->mChildNodeCount:I
@@ -447,7 +447,7 @@
 
     iput v1, v0, Lcom/htc/sunny2/widget/gridview/GridView;->mChildNodeCount:I
 
-    .line 3234
+    .line 3256
     :cond_0
     return-void
 .end method
@@ -459,7 +459,7 @@
     .parameter "z"
 
     .prologue
-    .line 3216
+    .line 3238
     return-void
 .end method
 
@@ -467,7 +467,7 @@
     .locals 2
 
     .prologue
-    .line 3210
+    .line 3232
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/gridview/GridView;->mRootNode:Lcom/htc/sunny2/SceneNode;
@@ -476,12 +476,12 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/SceneNode;->removeSceneNode(Lcom/htc/sunny2/SceneNode;)V
 
-    .line 3211
+    .line 3233
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->unbindMediaData()V
 
-    .line 3212
+    .line 3234
     return-void
 .end method
 
@@ -489,7 +489,7 @@
     .locals 1
 
     .prologue
-    .line 3223
+    .line 3245
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$Cell;->viewItem:Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     if-nez v0, :cond_0

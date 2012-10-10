@@ -25,13 +25,13 @@
     .parameter "looper"
 
     .prologue
-    .line 970
+    .line 975
     iput-object p1, p0, Lcom/htc/music/MiniPlayer$NonUIHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
-    .line 971
+    .line 976
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 972
+    .line 977
     return-void
 .end method
 
@@ -46,65 +46,65 @@
 
     const/4 v9, 0x0
 
-    .line 975
+    .line 980
     iget v8, p1, Landroid/os/Message;->what:I
 
     packed-switch v8, :pswitch_data_0
 
-    .line 1064
+    .line 1069
     :cond_0
     :goto_0
     return-void
 
-    .line 977
+    .line 982
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 978
+    .line 983
     .local v0, albumArtPath:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 979
+    .line 984
     const/4 v7, 0x1
 
-    .line 981
+    .line 986
     .local v7, sampleSize:I
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 982
+    .line 987
     .local v2, bitmapOptions:Landroid/graphics/BitmapFactory$Options;
     sget-object v8, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     iput-object v8, v2, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 983
+    .line 988
     iput-boolean v9, v2, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 984
+    .line 989
     iput v10, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 985
+    .line 990
     iput-boolean v10, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 986
+    .line 991
     invoke-static {v0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 987
+    .line 992
     iget v8, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     shr-int/lit8 v6, v8, 0x1
 
-    .line 988
+    .line 993
     .local v6, nextWidth:I
     iget v8, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     shr-int/lit8 v5, v8, 0x1
 
-    .line 989
+    .line 994
     .local v5, nextHeight:I
     :goto_1
     iget-object v8, p0, Lcom/htc/music/MiniPlayer$NonUIHandler;->this$0:Lcom/htc/music/MiniPlayer;
@@ -125,30 +125,30 @@
 
     if-le v5, v8, :cond_1
 
-    .line 990
+    .line 995
     shl-int/lit8 v7, v7, 0x1
 
-    .line 991
+    .line 996
     shr-int/lit8 v6, v6, 0x1
 
-    .line 992
+    .line 997
     shr-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 995
+    .line 1000
     :cond_1
     iput v7, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 996
+    .line 1001
     iput-boolean v9, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 997
+    .line 1002
     invoke-static {v0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 1000
+    .line 1005
     .local v1, bitmap:Landroid/graphics/Bitmap;
     iget-object v8, p0, Lcom/htc/music/MiniPlayer$NonUIHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
@@ -161,25 +161,25 @@
 
     move-result-object v4
 
-    .line 1001
+    .line 1006
     .local v4, msgUI:Landroid/os/Message;
     iput-object v0, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1003
+    .line 1008
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 1004
+    .line 1009
     .local v3, data:Landroid/os/Bundle;
     const-string v8, "DECODED_BITMAP"
 
     invoke-virtual {v3, v8, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1005
+    .line 1010
     invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 1007
+    .line 1012
     iget-object v8, p0, Lcom/htc/music/MiniPlayer$NonUIHandler;->this$0:Lcom/htc/music/MiniPlayer;
 
     #getter for: Lcom/htc/music/MiniPlayer;->mUIHandler:Landroid/os/Handler;
@@ -191,7 +191,7 @@
 
     goto :goto_0
 
-    .line 975
+    .line 980
     nop
 
     :pswitch_data_0

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 404
+    .line 415
     iput-object p1, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$2;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .parameter "bkgTextureId"
 
     .prologue
-    .line 412
+    .line 423
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$2;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewPreparator:Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 430
+    .line 441
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$2;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewInitFinish:Z
@@ -85,7 +85,7 @@
     .parameter "bkgTextureId"
 
     .prologue
-    .line 424
+    .line 435
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$2;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -126,7 +126,7 @@
     .parameter "bkgTextureId"
 
     .prologue
-    .line 418
+    .line 429
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$2;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;

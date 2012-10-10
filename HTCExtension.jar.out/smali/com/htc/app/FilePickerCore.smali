@@ -52,6 +52,10 @@
 
 .field private static final KEY_CLOUD_FUNCTION_ENABLED:Ljava/lang/String; = "CloudFunctionEnabled"
 
+.field static final KEY_CLOUD_SERVICE_ACCOUNT_REQUEST:Ljava/lang/String; = "CloudServiceAccountName"
+
+.field static final KEY_CLOUD_SERVICE_NAME_REQUEST:Ljava/lang/String; = "CloudServiceType"
+
 .field public static final KEY_DRM_FILTER:Ljava/lang/String; = "drm_filter"
 
 .field public static final KEY_DROPBOX_SHARE_LINK_ENABLE:Ljava/lang/String; = "returnDropBoxShareLinkEnable"
@@ -148,17 +152,17 @@
 
 .field private final DEFAULT_SORT_TYPE:I
 
-.field Default_PaddingBottom:I
+.field Default_Landscape_Padding_Bottom:I
 
-.field Default_PaddingTop:I
+.field Default_Landscape_Padding_Top:I
+
+.field Default_Portrait_Padding_Bottom:I
+
+.field Default_Portrait_Padding_Top:I
 
 .field private final FILE_PICKER_PREFERENCE:Ljava/lang/String;
 
 .field private final INIT_TAG:Ljava/lang/String;
-
-.field private final KEY_CLOUD_SERVICE_ACCOUNT_REQUEST:Ljava/lang/String;
-
-.field private final KEY_CLOUD_SERVICE_NAME_REQUEST:Ljava/lang/String;
 
 .field private final KEY_CURRENT_ADAPTER_IS_LOCAL_MODE:Ljava/lang/String;
 
@@ -369,17 +373,6 @@
     .end annotation
 .end field
 
-.field mSelectedItemInfoLists:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/htc/app/ItemInfo;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private mSelectionType:I
 
 .field private mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
@@ -451,19 +444,19 @@
 
     const/4 v2, 0x0
 
-    .line 172
+    .line 170
     invoke-direct {p0}, Lcom/htc/app/FilePickerActivity$AbstractFilePickerCore;-><init>()V
 
-    .line 74
+    .line 72
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->DEBUG:Z
 
-    .line 75
+    .line 73
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->localLOGV:Z
 
-    .line 76
+    .line 74
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->initLog:Z
 
-    .line 77
+    .line 75
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -474,63 +467,63 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
 
-    .line 79
+    .line 77
     iput v2, p0, Lcom/htc/app/FilePickerCore;->DEFAULT_SORT_TYPE:I
 
-    .line 80
+    .line 78
     iput v2, p0, Lcom/htc/app/FilePickerCore;->DEFAULT_SORT_ORDER:I
 
-    .line 81
+    .line 79
     const-string v0, "initial"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->INIT_TAG:Ljava/lang/String;
 
-    .line 83
+    .line 81
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsSortMenuItemVisabled:Z
 
-    .line 86
+    .line 84
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsLocalDataSourceItemsEnabled:Z
 
-    .line 87
+    .line 85
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
 
-    .line 103
+    .line 101
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->gridItemBkg:Landroid/graphics/drawable/LayerDrawable;
 
-    .line 123
+    .line 121
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->handler:Landroid/os/Handler;
 
-    .line 125
+    .line 123
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->isSdcardRoot:Z
 
-    .line 133
+    .line 131
     iput v2, p0, Lcom/htc/app/FilePickerCore;->mSortSelectedItem:I
 
-    .line 135
+    .line 133
     iput v5, p0, Lcom/htc/app/FilePickerCore;->mOrientation:I
 
-    .line 137
+    .line 135
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
-    .line 140
+    .line 138
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mFilter:[Ljava/lang/String;
 
-    .line 149
+    .line 147
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mFilePickerMainView:Landroid/view/View;
 
-    .line 152
+    .line 150
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mFilePickerLandingView:Landroid/view/View;
 
-    .line 201
+    .line 199
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/app/FilePickerCore;->mInitialTime:J
 
-    .line 202
+    .line 200
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     .line 272
@@ -566,212 +559,202 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mAppBackUpOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 654
+    .line 666
     new-instance v0, Lcom/htc/app/FilePickerCore$3;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$3;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mAppSearchContainerBackUpOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 670
+    .line 682
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsUsbConnectionMode:Z
 
-    .line 672
+    .line 684
     new-instance v0, Lcom/htc/app/FilePickerCore$4;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$4;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownOnItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 1091
+    .line 1130
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
 
-    .line 1092
+    .line 1131
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsOnlyShowCanWriteFolder:Z
 
-    .line 1093
+    .line 1132
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsFolderPickerModeEnabled:Z
 
-    .line 1094
+    .line 1133
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsFilePickerModeEnabled:Z
 
-    .line 1125
+    .line 1164
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsShowPath:Z
 
-    .line 1817
+    .line 2168
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
-    .line 1967
+    .line 2315
     const-string v0, "ItemImage"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mItemImageStr:Ljava/lang/String;
 
-    .line 1968
+    .line 2316
     const-string v0, "ItemText"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mItemTextStr:Ljava/lang/String;
 
-    .line 1969
+    .line 2317
     const-string v0, "ItemTabType"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mItemTabTypeStr:Ljava/lang/String;
 
-    .line 2112
+    .line 2460
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    .line 2451
+    .line 2800
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->mUsbConnetionViewMode:I
 
-    .line 2904
+    .line 3250
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
 
-    .line 2984
+    .line 3339
     new-instance v0, Lcom/htc/app/FilePickerCore$12;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$12;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 3028
+    .line 3383
     new-instance v0, Lcom/htc/app/FilePickerCore$13;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$13;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoriteDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 3149
+    .line 3505
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
-    .line 3156
+    .line 3512
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsRecentStopScan:Z
 
-    .line 3157
+    .line 3513
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsFavoriteStopScan:Z
 
-    .line 3168
+    .line 3524
     new-instance v0, Lcom/htc/app/FilePickerCore$14;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$14;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 3801
+    .line 4161
     iput v2, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_RESCAN_FILES:I
 
-    .line 3804
+    .line 4164
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_RECENT_DATA_CHANGE:I
 
-    .line 3805
+    .line 4165
     iput v5, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_FAVORITE_DATA_CHANGE:I
 
-    .line 3806
+    .line 4166
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_FILEPICKER_INITIAL_TASK:I
 
-    .line 3807
+    .line 4167
     const/4 v0, 0x6
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->SHOW_USB_CONNECTION_PICKER_VIEW_TASK:I
 
-    .line 3808
+    .line 4168
     const/4 v0, 0x7
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->SHOW_CLOUD_PICKER_VIEW_TASK:I
 
-    .line 3809
+    .line 4169
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->SHOW_LOCAL_PICKER_VIEW_TASK:I
 
-    .line 4296
+    .line 4658
     const-string v0, "onlyShowCanWriteFolder"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_ONLY_SHOW_CAN_WRITE_FOLDER:Ljava/lang/String;
 
-    .line 4334
+    .line 4696
     const-string v0, "UsbConnectionMode"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_USB_CONNECTION_MODE:Ljava/lang/String;
 
-    .line 4335
+    .line 4697
     const-string v0, "pref_key_filepicker_local_files_scope_type"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_SHOW_LOCAL_FILES_SCOPE:Ljava/lang/String;
 
-    .line 4336
+    .line 4698
     const-string v0, "pref_key_filepicker_cloud_files_scope_type"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_SHOW_CLOUD_FILES_SCOPE:Ljava/lang/String;
 
-    .line 4337
+    .line 4699
     const-string v0, "pref_key_filepicker_files_cloud_service_name"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CLOUD_SERVICE_NAME:Ljava/lang/String;
 
-    .line 4338
+    .line 4700
     const-string v0, "pref_key_filepicker_files_cloud_account_name"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CLOUD_ACCOUNT_NAME:Ljava/lang/String;
 
-    .line 4339
+    .line 4701
     const-string v0, "pref_key_filepicker_cloud_service_end_time"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CLOUD_REFRESH_END_TIME:Ljava/lang/String;
 
-    .line 4340
+    .line 4702
     const-string v0, "pref_key_filepicker_carousel_default_tab"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CAROUSEL_DEFAULT_TAB:Ljava/lang/String;
 
-    .line 4342
+    .line 4704
     const-string v0, "FilePickerPreference"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->FILE_PICKER_PREFERENCE:Ljava/lang/String;
 
-    .line 4344
+    .line 4706
     const-string v0, "FOLDER_PICKER_MODE_ENABLED"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_FOLDER_PICKER_MODE_ENABLED:Ljava/lang/String;
 
-    .line 4345
+    .line 4707
     const-string v0, "FILE_PICKER_MODE_ENABLED"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_FILE_PICKER_MODE_ENABLED:Ljava/lang/String;
 
-    .line 4346
+    .line 4708
     const-string v0, "LocalDataSourceEnable"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_LOCAL_DATA_SOURCE_ENABLED:Ljava/lang/String;
 
-    .line 4349
-    const-string v0, "CloudServiceType"
-
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_CLOUD_SERVICE_NAME_REQUEST:Ljava/lang/String;
-
-    .line 4350
-    const-string v0, "CloudServiceAccountName"
-
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_CLOUD_SERVICE_ACCOUNT_REQUEST:Ljava/lang/String;
-
-    .line 4351
+    .line 4713
     const-string v0, "CurrentAppAdapterIsLocalMode"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_CURRENT_ADAPTER_IS_LOCAL_MODE:Ljava/lang/String;
 
-    .line 174
+    .line 172
     return-void
 .end method
 
@@ -789,19 +772,19 @@
 
     const/4 v2, 0x0
 
-    .line 176
+    .line 174
     invoke-direct {p0}, Lcom/htc/app/FilePickerActivity$AbstractFilePickerCore;-><init>()V
 
-    .line 74
+    .line 72
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->DEBUG:Z
 
-    .line 75
+    .line 73
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->localLOGV:Z
 
-    .line 76
+    .line 74
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->initLog:Z
 
-    .line 77
+    .line 75
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -812,63 +795,63 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
 
-    .line 79
+    .line 77
     iput v2, p0, Lcom/htc/app/FilePickerCore;->DEFAULT_SORT_TYPE:I
 
-    .line 80
+    .line 78
     iput v2, p0, Lcom/htc/app/FilePickerCore;->DEFAULT_SORT_ORDER:I
 
-    .line 81
+    .line 79
     const-string v0, "initial"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->INIT_TAG:Ljava/lang/String;
 
-    .line 83
+    .line 81
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsSortMenuItemVisabled:Z
 
-    .line 86
+    .line 84
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsLocalDataSourceItemsEnabled:Z
 
-    .line 87
+    .line 85
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
 
-    .line 103
+    .line 101
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->gridItemBkg:Landroid/graphics/drawable/LayerDrawable;
 
-    .line 123
+    .line 121
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->handler:Landroid/os/Handler;
 
-    .line 125
+    .line 123
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->isSdcardRoot:Z
 
-    .line 133
+    .line 131
     iput v2, p0, Lcom/htc/app/FilePickerCore;->mSortSelectedItem:I
 
-    .line 135
+    .line 133
     iput v5, p0, Lcom/htc/app/FilePickerCore;->mOrientation:I
 
-    .line 137
+    .line 135
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
-    .line 140
+    .line 138
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mFilter:[Ljava/lang/String;
 
-    .line 149
+    .line 147
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mFilePickerMainView:Landroid/view/View;
 
-    .line 152
+    .line 150
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mFilePickerLandingView:Landroid/view/View;
 
-    .line 201
+    .line 199
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/app/FilePickerCore;->mInitialTime:J
 
-    .line 202
+    .line 200
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     .line 272
@@ -904,218 +887,208 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mAppBackUpOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 654
+    .line 666
     new-instance v0, Lcom/htc/app/FilePickerCore$3;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$3;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mAppSearchContainerBackUpOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 670
+    .line 682
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsUsbConnectionMode:Z
 
-    .line 672
+    .line 684
     new-instance v0, Lcom/htc/app/FilePickerCore$4;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$4;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownOnItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 1091
+    .line 1130
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
 
-    .line 1092
+    .line 1131
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsOnlyShowCanWriteFolder:Z
 
-    .line 1093
+    .line 1132
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsFolderPickerModeEnabled:Z
 
-    .line 1094
+    .line 1133
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsFilePickerModeEnabled:Z
 
-    .line 1125
+    .line 1164
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsShowPath:Z
 
-    .line 1817
+    .line 2168
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
-    .line 1967
+    .line 2315
     const-string v0, "ItemImage"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mItemImageStr:Ljava/lang/String;
 
-    .line 1968
+    .line 2316
     const-string v0, "ItemText"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mItemTextStr:Ljava/lang/String;
 
-    .line 1969
+    .line 2317
     const-string v0, "ItemTabType"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mItemTabTypeStr:Ljava/lang/String;
 
-    .line 2112
+    .line 2460
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    .line 2451
+    .line 2800
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->mUsbConnetionViewMode:I
 
-    .line 2904
+    .line 3250
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
 
-    .line 2984
+    .line 3339
     new-instance v0, Lcom/htc/app/FilePickerCore$12;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$12;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 3028
+    .line 3383
     new-instance v0, Lcom/htc/app/FilePickerCore$13;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$13;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoriteDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 3149
+    .line 3505
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
-    .line 3156
+    .line 3512
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsRecentStopScan:Z
 
-    .line 3157
+    .line 3513
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsFavoriteStopScan:Z
 
-    .line 3168
+    .line 3524
     new-instance v0, Lcom/htc/app/FilePickerCore$14;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$14;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 3801
+    .line 4161
     iput v2, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_RESCAN_FILES:I
 
-    .line 3804
+    .line 4164
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_RECENT_DATA_CHANGE:I
 
-    .line 3805
+    .line 4165
     iput v5, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_FAVORITE_DATA_CHANGE:I
 
-    .line 3806
+    .line 4166
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->NOTIFY_FILEPICKER_INITIAL_TASK:I
 
-    .line 3807
+    .line 4167
     const/4 v0, 0x6
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->SHOW_USB_CONNECTION_PICKER_VIEW_TASK:I
 
-    .line 3808
+    .line 4168
     const/4 v0, 0x7
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->SHOW_CLOUD_PICKER_VIEW_TASK:I
 
-    .line 3809
+    .line 4169
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/htc/app/FilePickerCore;->SHOW_LOCAL_PICKER_VIEW_TASK:I
 
-    .line 4296
+    .line 4658
     const-string v0, "onlyShowCanWriteFolder"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_ONLY_SHOW_CAN_WRITE_FOLDER:Ljava/lang/String;
 
-    .line 4334
+    .line 4696
     const-string v0, "UsbConnectionMode"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_USB_CONNECTION_MODE:Ljava/lang/String;
 
-    .line 4335
+    .line 4697
     const-string v0, "pref_key_filepicker_local_files_scope_type"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_SHOW_LOCAL_FILES_SCOPE:Ljava/lang/String;
 
-    .line 4336
+    .line 4698
     const-string v0, "pref_key_filepicker_cloud_files_scope_type"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_SHOW_CLOUD_FILES_SCOPE:Ljava/lang/String;
 
-    .line 4337
+    .line 4699
     const-string v0, "pref_key_filepicker_files_cloud_service_name"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CLOUD_SERVICE_NAME:Ljava/lang/String;
 
-    .line 4338
+    .line 4700
     const-string v0, "pref_key_filepicker_files_cloud_account_name"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CLOUD_ACCOUNT_NAME:Ljava/lang/String;
 
-    .line 4339
+    .line 4701
     const-string v0, "pref_key_filepicker_cloud_service_end_time"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CLOUD_REFRESH_END_TIME:Ljava/lang/String;
 
-    .line 4340
+    .line 4702
     const-string v0, "pref_key_filepicker_carousel_default_tab"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->USER_PREFER_CAROUSEL_DEFAULT_TAB:Ljava/lang/String;
 
-    .line 4342
+    .line 4704
     const-string v0, "FilePickerPreference"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->FILE_PICKER_PREFERENCE:Ljava/lang/String;
 
-    .line 4344
+    .line 4706
     const-string v0, "FOLDER_PICKER_MODE_ENABLED"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_FOLDER_PICKER_MODE_ENABLED:Ljava/lang/String;
 
-    .line 4345
+    .line 4707
     const-string v0, "FILE_PICKER_MODE_ENABLED"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_FILE_PICKER_MODE_ENABLED:Ljava/lang/String;
 
-    .line 4346
+    .line 4708
     const-string v0, "LocalDataSourceEnable"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_LOCAL_DATA_SOURCE_ENABLED:Ljava/lang/String;
 
-    .line 4349
-    const-string v0, "CloudServiceType"
-
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_CLOUD_SERVICE_NAME_REQUEST:Ljava/lang/String;
-
-    .line 4350
-    const-string v0, "CloudServiceAccountName"
-
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_CLOUD_SERVICE_ACCOUNT_REQUEST:Ljava/lang/String;
-
-    .line 4351
+    .line 4713
     const-string v0, "CurrentAppAdapterIsLocalMode"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->KEY_CURRENT_ADAPTER_IS_LOCAL_MODE:Ljava/lang/String;
 
-    .line 177
+    .line 175
     iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerAct:Landroid/app/Activity;
 
-    .line 178
+    .line 176
     iput-object p2, p0, Lcom/htc/app/FilePickerCore;->mContext:Landroid/content/Context;
 
-    .line 179
+    .line 177
     return-void
 .end method
 
@@ -1126,15 +1099,15 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 3868
+    .line 4228
     packed-switch p1, :pswitch_data_0
 
-    .line 4099
+    .line 4461
     :cond_0
     :goto_0
     return-void
 
-    .line 3871
+    .line 4231
     :pswitch_0
     new-instance v5, Ljava/lang/Thread;
 
@@ -1144,16 +1117,16 @@
 
     invoke-direct {v5, v7}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 3877
+    .line 4237
     .local v5, performOnResultAndFinishThread:Ljava/lang/Thread;
     invoke-virtual {v5, v9}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 3878
+    .line 4238
     invoke-virtual {v5}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
-    .line 3881
+    .line 4241
     .end local v5           #performOnResultAndFinishThread:Ljava/lang/Thread;
     :pswitch_1
     new-instance v7, Lcom/htc/app/FilePickerCore$25;
@@ -1162,12 +1135,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->showLocalPickerViewRunnable:Ljava/lang/Runnable;
 
-    .line 3886
+    .line 4246
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3887
+    .line 4247
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->showLocalPickerViewRunnable:Ljava/lang/Runnable;
@@ -1176,7 +1149,7 @@
 
     goto :goto_0
 
-    .line 3890
+    .line 4250
     :pswitch_2
     new-instance v7, Lcom/htc/app/FilePickerCore$26;
 
@@ -1184,12 +1157,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->showCloudPickerViewRunnable:Ljava/lang/Runnable;
 
-    .line 3895
+    .line 4255
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3896
+    .line 4256
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->showCloudPickerViewRunnable:Ljava/lang/Runnable;
@@ -1198,7 +1171,7 @@
 
     goto :goto_0
 
-    .line 3899
+    .line 4259
     :pswitch_3
     new-instance v7, Lcom/htc/app/FilePickerCore$27;
 
@@ -1206,12 +1179,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->showUsbConnectionPickerViewRunnable:Ljava/lang/Runnable;
 
-    .line 3904
+    .line 4264
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3905
+    .line 4265
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->showUsbConnectionPickerViewRunnable:Ljava/lang/Runnable;
@@ -1220,7 +1193,7 @@
 
     goto :goto_0
 
-    .line 3908
+    .line 4268
     :pswitch_4
     new-instance v7, Lcom/htc/app/FilePickerCore$28;
 
@@ -1228,12 +1201,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyFilePikcerInitialRunnable:Ljava/lang/Runnable;
 
-    .line 3913
+    .line 4273
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3914
+    .line 4274
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyFilePikcerInitialRunnable:Ljava/lang/Runnable;
@@ -1242,7 +1215,7 @@
 
     goto :goto_0
 
-    .line 3917
+    .line 4277
     :pswitch_5
     new-instance v7, Lcom/htc/app/FilePickerCore$29;
 
@@ -1250,12 +1223,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyReScanFilesRunnable:Ljava/lang/Runnable;
 
-    .line 3922
+    .line 4282
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3923
+    .line 4283
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyReScanFilesRunnable:Ljava/lang/Runnable;
@@ -1264,7 +1237,7 @@
 
     goto :goto_0
 
-    .line 3927
+    .line 4287
     :pswitch_6
     new-instance v6, Ljava/lang/Thread;
 
@@ -1274,22 +1247,22 @@
 
     invoke-direct {v6, v7}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 3933
+    .line 4293
     .local v6, thread:Ljava/lang/Thread;
     invoke-virtual {v6, v9}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 3934
+    .line 4294
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 3935
+    .line 4295
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showProcessingPage()V
 
-    .line 3936
+    .line 4296
     invoke-virtual {v6}, Ljava/lang/Thread;->start()V
 
     goto/16 :goto_0
 
-    .line 3939
+    .line 4299
     .end local v6           #thread:Ljava/lang/Thread;
     :pswitch_7
     new-instance v7, Lcom/htc/app/FilePickerCore$31;
@@ -1298,12 +1271,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyCloudFileDownloadFinishRunnable:Ljava/lang/Runnable;
 
-    .line 3953
+    .line 4314
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3954
+    .line 4315
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyCloudFileDownloadFinishRunnable:Ljava/lang/Runnable;
@@ -1312,7 +1285,7 @@
 
     goto/16 :goto_0
 
-    .line 3957
+    .line 4318
     :pswitch_8
     new-instance v7, Lcom/htc/app/FilePickerCore$32;
 
@@ -1320,12 +1293,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyRecentDateChangeRunnable:Ljava/lang/Runnable;
 
-    .line 3963
+    .line 4324
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3964
+    .line 4325
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyRecentDateChangeRunnable:Ljava/lang/Runnable;
@@ -1334,7 +1307,7 @@
 
     goto/16 :goto_0
 
-    .line 3967
+    .line 4328
     :pswitch_9
     new-instance v7, Lcom/htc/app/FilePickerCore$33;
 
@@ -1342,12 +1315,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyFavoriteDateChangeRunnable:Ljava/lang/Runnable;
 
-    .line 3973
+    .line 4334
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3974
+    .line 4335
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyFavoriteDateChangeRunnable:Ljava/lang/Runnable;
@@ -1356,7 +1329,7 @@
 
     goto/16 :goto_0
 
-    .line 3978
+    .line 4339
     :pswitch_a
     new-instance v7, Lcom/htc/app/FilePickerCore$34;
 
@@ -1364,12 +1337,12 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyDownloadFailRunnable:Ljava/lang/Runnable;
 
-    .line 3987
+    .line 4348
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 3988
+    .line 4349
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyDownloadFailRunnable:Ljava/lang/Runnable;
@@ -1378,7 +1351,7 @@
 
     goto/16 :goto_0
 
-    .line 3991
+    .line 4352
     :pswitch_b
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getFilePickerUtil()Lcom/htc/app/FilePickerUtil;
 
@@ -1388,14 +1361,30 @@
 
     move-result v4
 
-    .line 3993
+    .line 4354
     .local v4, dataSourceType:I
     packed-switch v4, :pswitch_data_1
 
     goto/16 :goto_0
 
-    .line 3995
+    .line 4356
     :pswitch_c
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
+
+    move-result-object v7
+
+    const v8, 0x20403cd
+
+    invoke-static {v7, v8, v9}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/widget/Toast;->show()V
+
+    goto/16 :goto_0
+
+    .line 4361
+    :pswitch_d
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
@@ -1410,23 +1399,7 @@
 
     goto/16 :goto_0
 
-    .line 4000
-    :pswitch_d
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
-
-    move-result-object v7
-
-    const v8, 0x20403cb
-
-    invoke-static {v7, v8, v9}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/widget/Toast;->show()V
-
-    goto/16 :goto_0
-
-    .line 4007
+    .line 4368
     .end local v4           #dataSourceType:I
     :pswitch_e
     new-instance v7, Lcom/htc/app/FilePickerCore$35;
@@ -1435,26 +1408,26 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyCloudLoginCheckRunnable:Ljava/lang/Runnable;
 
-    .line 4026
+    .line 4387
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 4027
+    .line 4388
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v8, 0xc
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 4028
+    .line 4389
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyCloudLoginCheckRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 4029
+    .line 4390
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyCloudLoginCheckRunnable:Ljava/lang/Runnable;
@@ -1463,7 +1436,7 @@
 
     goto/16 :goto_0
 
-    .line 4034
+    .line 4395
     :pswitch_f
     new-instance v7, Lcom/htc/app/FilePickerCore$36;
 
@@ -1473,42 +1446,42 @@
 
     goto/16 :goto_0
 
-    .line 4070
+    .line 4431
     :pswitch_10
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isInternalStorageAvailable()Z
 
     move-result v2
 
-    .line 4071
+    .line 4432
     .local v2, bIntStorageAvailable:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageAvailable()Z
 
     move-result v0
 
-    .line 4072
+    .line 4433
     .local v0, bExtStorageAvailable:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isInternalStorageShared()Z
 
     move-result v3
 
-    .line 4073
+    .line 4434
     .local v3, bIntStorageShared:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageShared()Z
 
     move-result v1
 
-    .line 4075
+    .line 4436
     .local v1, bExtStorageShared:Z
     if-nez v2, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 4076
+    .line 4437
     if-nez v3, :cond_1
 
     if-eqz v1, :cond_2
 
-    .line 4077
+    .line 4438
     :cond_1
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -1524,7 +1497,7 @@
 
     goto/16 :goto_0
 
-    .line 4080
+    .line 4441
     :cond_2
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -1540,7 +1513,7 @@
 
     goto/16 :goto_0
 
-    .line 4086
+    .line 4448
     .end local v0           #bExtStorageAvailable:Z
     .end local v1           #bExtStorageShared:Z
     .end local v2           #bIntStorageAvailable:Z
@@ -1552,26 +1525,26 @@
 
     iput-object v7, p0, Lcom/htc/app/FilePickerCore;->notifyLoadFilesRunnable:Ljava/lang/Runnable;
 
-    .line 4092
+    .line 4454
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v7, :cond_0
 
-    .line 4093
+    .line 4455
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v8, 0xf
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 4094
+    .line 4456
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyLoadFilesRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 4095
+    .line 4457
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->notifyLoadFilesRunnable:Ljava/lang/Runnable;
@@ -1580,7 +1553,7 @@
 
     goto/16 :goto_0
 
-    .line 3868
+    .line 4228
     nop
 
     :pswitch_data_0
@@ -1603,7 +1576,7 @@
         :pswitch_11
     .end packed-switch
 
-    .line 3993
+    .line 4354
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_c
@@ -1616,7 +1589,7 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
 
     return v0
@@ -1628,7 +1601,7 @@
     .parameter "x1"
 
     .prologue
-    .line 73
+    .line 71
     iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
 
     return p1
@@ -1639,21 +1612,10 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
     return-object v0
-.end method
-
-.method static synthetic access$1000(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideSearchBar()V
-
-    return-void
 .end method
 
 .method static synthetic access$102(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerCloudHelper;
@@ -1662,7 +1624,7 @@
     .parameter "x1"
 
     .prologue
-    .line 73
+    .line 71
     iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
     return-object p1
@@ -1673,31 +1635,53 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLandingPage()V
+
+    return-void
+.end method
+
+.method static synthetic access$1200(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideSearchBar()V
+
+    return-void
+.end method
+
+.method static synthetic access$1300(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showSearchBar()V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerAppDropDownAdapter$AppListItem;)V
+.method static synthetic access$1400(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerAppDropDownAdapter$AppListItem;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->performDropDownItemClick(Lcom/htc/app/FilePickerAppDropDownAdapter$AppListItem;)V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerCloudHelper;)Z
+.method static synthetic access$1500(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerCloudHelper;)Z
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->checkCloudServiceDataSourceFromIntentRequest(Lcom/htc/app/FilePickerCloudHelper;)Z
 
     move-result v0
@@ -1705,51 +1689,16 @@
     return v0
 .end method
 
-.method static synthetic access$1400(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)V
+.method static synthetic access$1600(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->showViewByTab(Ljava/lang/String;)V
 
     return-void
-.end method
-
-.method static synthetic access$1700(Lcom/htc/app/FilePickerCore;)Landroid/content/res/Resources;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$1800(Lcom/htc/app/FilePickerCore;)Z
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->isFolderItemSelectedEnabled:Z
-
-    return v0
-.end method
-
-.method static synthetic access$1900(Lcom/htc/app/FilePickerCore;)Z
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->isReturnCloudShareLinkEnabled:Z
-
-    return v0
 .end method
 
 .method static synthetic access$200(Lcom/htc/app/FilePickerCore;)Landroid/content/Context;
@@ -1757,7 +1706,7 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1765,120 +1714,48 @@
     return-object v0
 .end method
 
-.method static synthetic access$2100(Lcom/htc/app/FilePickerCore;)I
+.method static synthetic access$2300(Lcom/htc/app/FilePickerCore;)Landroid/content/Context;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method static synthetic access$2400(Lcom/htc/app/FilePickerCore;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
     iget v0, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
     return v0
 .end method
 
-.method static synthetic access$2200(Lcom/htc/app/FilePickerCore;)Z
+.method static synthetic access$2800(Lcom/htc/app/FilePickerCore;)Z
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
+    .line 71
+    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->isFolderItemSelectedEnabled:Z
 
     return v0
 .end method
 
-.method static synthetic access$2202(Lcom/htc/app/FilePickerCore;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
-
-    return p1
-.end method
-
-.method static synthetic access$2300(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+.method static synthetic access$2900(Lcom/htc/app/FilePickerCore;)Z
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2400(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerCloudHelper;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$2600(Lcom/htc/app/FilePickerCore;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget v0, p0, Lcom/htc/app/FilePickerCore;->gridItemSize:I
+    .line 71
+    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->isReturnCloudShareLinkEnabled:Z
 
     return v0
-.end method
-
-.method static synthetic access$2700(Lcom/htc/app/FilePickerCore;)Landroid/graphics/drawable/LayerDrawable;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->gridItemBkg:Landroid/graphics/drawable/LayerDrawable;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2800(Lcom/htc/app/FilePickerCore;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->loadLocalDataSourceTypePreferences()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$2900(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$2902(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
-
-    return-object p1
 .end method
 
 .method static synthetic access$300(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerUtil;
@@ -1886,42 +1763,8 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-
-    return-object v0
-.end method
-
-.method static synthetic access$3002(Lcom/htc/app/FilePickerCore;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
-
-    return p1
-.end method
-
-.method static synthetic access$3100(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchLocalPicker()V
-
-    return-void
-.end method
-
-.method static synthetic access$3200(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mDropboxText:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -1931,78 +1774,89 @@
     .parameter "x0"
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFilePicker()V
-
-    return-void
-.end method
-
-.method static synthetic access$3400(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSkyDriveText:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$3500(Lcom/htc/app/FilePickerCore;Z)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$3600(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerAppDropDownAdapter;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getAppDropDownLocalAdapter()Lcom/htc/app/FilePickerAppDropDownAdapter;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$3700(Lcom/htc/app/FilePickerCore;I)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->showNoSdCard(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$3800(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
+    .line 71
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->checkActionBarContainerBackUpEnabled()V
 
     return-void
 .end method
 
-.method static synthetic access$3900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerDBHelper;
+.method static synthetic access$3500(Lcom/htc/app/FilePickerCore;)Landroid/os/Handler;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$3600(Lcom/htc/app/FilePickerCore;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget v0, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+
+    return v0
+.end method
+
+.method static synthetic access$3602(Lcom/htc/app/FilePickerCore;I)I
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    iput p1, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+
+    return p1
+.end method
+
+.method static synthetic access$3700(Lcom/htc/app/FilePickerCore;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget v0, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+
+    return v0
+.end method
+
+.method static synthetic access$3702(Lcom/htc/app/FilePickerCore;I)I
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    iput p1, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+
+    return p1
+.end method
+
+.method static synthetic access$3800(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$3900(Lcom/htc/app/FilePickerCore;)Landroid/content/res/Resources;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -2012,116 +1866,115 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialSharedPreferences()V
 
     return-void
 .end method
 
-.method static synthetic access$4000(Lcom/htc/app/FilePickerCore;)V
+.method static synthetic access$4000(Lcom/htc/app/FilePickerCore;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
+
+    return v0
+.end method
+
+.method static synthetic access$4002(Lcom/htc/app/FilePickerCore;Z)Z
     .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideDialog()V
-
-    return-void
-.end method
-
-.method static synthetic access$4100(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
-
-    return-object v0
-.end method
-
-.method static synthetic access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
-
-    return-object v0
-.end method
-
-.method static synthetic access$4300(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
-
-    return-object v0
-.end method
-
-.method static synthetic access$4400(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
-    .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 73
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
+    .line 71
+    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
+
+    return p1
+.end method
+
+.method static synthetic access$4100(Lcom/htc/app/FilePickerCore;)[Ljava/lang/String;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilter:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerCloudHelper;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$4500(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-
-    .prologue
-    .line 73
-    invoke-direct {p0, p1, p2}, Lcom/htc/app/FilePickerCore;->setListViewHeaderText(ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$4602(Lcom/htc/app/FilePickerCore;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsRecentStopScan:Z
-
-    return p1
-.end method
-
-.method static synthetic access$4702(Lcom/htc/app/FilePickerCore;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsFavoriteStopScan:Z
-
-    return p1
-.end method
-
-.method static synthetic access$4800(Lcom/htc/app/FilePickerCore;)Z
+.method static synthetic access$4400(Lcom/htc/app/FilePickerCore;)I
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
+    .line 71
+    iget v0, p0, Lcom/htc/app/FilePickerCore;->gridItemSize:I
 
     return v0
+.end method
+
+.method static synthetic access$4500(Lcom/htc/app/FilePickerCore;)Landroid/graphics/drawable/LayerDrawable;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->gridItemBkg:Landroid/graphics/drawable/LayerDrawable;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4600(Lcom/htc/app/FilePickerCore;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->loadLocalDataSourceTypePreferences()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$4700(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$4702(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+
+    return-object p1
 .end method
 
 .method static synthetic access$4802(Lcom/htc/app/FilePickerCore;Z)Z
@@ -2130,21 +1983,21 @@
     .parameter "x1"
 
     .prologue
-    .line 73
-    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
+    .line 71
+    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
 
     return p1
 .end method
 
-.method static synthetic access$4900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FileSorter;
-    .locals 1
+.method static synthetic access$4900(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
     .parameter "x0"
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchLocalPicker()V
 
-    return-object v0
+    return-void
 .end method
 
 .method static synthetic access$500(Lcom/htc/app/FilePickerCore;)Z
@@ -2152,7 +2005,7 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->checkCloudServiceEnabledFromIntentRequest()Z
 
     move-result v0
@@ -2160,147 +2013,118 @@
     return v0
 .end method
 
-.method static synthetic access$5000(Lcom/htc/app/FilePickerCore;)I
+.method static synthetic access$5000(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    iget v0, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mDropboxText:Ljava/lang/String;
 
-    return v0
+    return-object v0
 .end method
 
-.method static synthetic access$5002(Lcom/htc/app/FilePickerCore;I)I
+.method static synthetic access$5100(Lcom/htc/app/FilePickerCore;)V
     .locals 0
     .parameter "x0"
-    .parameter "x1"
 
     .prologue
-    .line 73
-    iput p1, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
-
-    return p1
-.end method
-
-.method static synthetic access$5100(Lcom/htc/app/FilePickerCore;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget v0, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
-
-    return v0
-.end method
-
-.method static synthetic access$5102(Lcom/htc/app/FilePickerCore;I)I
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput p1, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
-
-    return p1
-.end method
-
-.method static synthetic access$5200(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->notifyTextChanged(Ljava/lang/String;)V
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFilePicker()V
 
     return-void
 .end method
 
-.method static synthetic access$5300(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
+.method static synthetic access$5200(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->notifyTextChanged()V
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSkyDriveText:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$5300(Lcom/htc/app/FilePickerCore;Z)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$5400(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+.method static synthetic access$5400(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerAppDropDownAdapter;
     .locals 1
     .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
     .prologue
-    .line 73
-    invoke-direct {p0, p1, p2}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getAppDropDownLocalAdapter()Lcom/htc/app/FilePickerAppDropDownAdapter;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$5500(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerListAdapter;)V
+.method static synthetic access$5500(Lcom/htc/app/FilePickerCore;I)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 73
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->sort(Lcom/htc/app/FilePickerListAdapter;)V
+    .line 71
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->showNoSdCard(I)V
 
     return-void
 .end method
 
-.method static synthetic access$5600(Lcom/htc/app/FilePickerCore;II)V
-    .locals 0
+.method static synthetic access$5600(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerDBHelper;
+    .locals 1
     .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
     .prologue
-    .line 73
-    invoke-direct {p0, p1, p2}, Lcom/htc/app/FilePickerCore;->saveSortPreferences(II)V
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
+
+    return-object v0
+.end method
+
+.method static synthetic access$5700(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideDialog()V
 
     return-void
 .end method
 
-.method static synthetic access$5702(Lcom/htc/app/FilePickerCore;I)I
-    .locals 0
+.method static synthetic access$5800(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    .locals 1
     .parameter "x0"
-    .parameter "x1"
 
     .prologue
-    .line 73
-    iput p1, p0, Lcom/htc/app/FilePickerCore;->mSortSelectedItem:I
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    return p1
+    return-object v0
 .end method
 
-.method static synthetic access$5800(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
+.method static synthetic access$5900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->performOnResultAndFinishTask()V
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    return-void
-.end method
-
-.method static synthetic access$5900(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLocalFilePickerView()V
-
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic access$600(Lcom/htc/app/FilePickerCore;)V
@@ -2308,101 +2132,118 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialSettings()V
 
     return-void
 .end method
 
-.method static synthetic access$6000(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showCloudPickerView()V
-
-    return-void
-.end method
-
-.method static synthetic access$6100(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showUsbConnectionPickerView()V
-
-    return-void
-.end method
-
-.method static synthetic access$6200(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->switchLayoutByPicker()V
-
-    return-void
-.end method
-
-.method static synthetic access$6300(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->reStartToScan()V
-
-    return-void
-.end method
-
-.method static synthetic access$6400(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->performDoneButtonOnClickListenerClick()V
-
-    return-void
-.end method
-
-.method static synthetic access$6500(Lcom/htc/app/FilePickerCore;[Ljava/lang/String;II)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-
-    .prologue
-    .line 73
-    invoke-direct {p0, p1, p2, p3}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
-
-    return-void
-.end method
-
-.method static synthetic access$6600(Lcom/htc/app/FilePickerCore;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
-
-    return-void
-.end method
-
-.method static synthetic access$6700(Lcom/htc/app/FilePickerCore;)Z
+.method static synthetic access$6000(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 73
-    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
+
+    return-object v0
+.end method
+
+.method static synthetic access$6100(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
+    .locals 1
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$6200(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
+
+    .prologue
+    .line 71
+    invoke-direct {p0, p1, p2}, Lcom/htc/app/FilePickerCore;->setListViewHeaderText(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic access$6302(Lcom/htc/app/FilePickerCore;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsRecentStopScan:Z
+
+    return p1
+.end method
+
+.method static synthetic access$6402(Lcom/htc/app/FilePickerCore;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsFavoriteStopScan:Z
+
+    return p1
+.end method
+
+.method static synthetic access$6500(Lcom/htc/app/FilePickerCore;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
     return v0
+.end method
+
+.method static synthetic access$6502(Lcom/htc/app/FilePickerCore;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    iput-boolean p1, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
+
+    return p1
+.end method
+
+.method static synthetic access$6600(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FileSorter;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
+
+    return-object v0
+.end method
+
+.method static synthetic access$6700(Lcom/htc/app/FilePickerCore;Ljava/lang/String;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->notifyTextChanged(Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method static synthetic access$6800(Lcom/htc/app/FilePickerCore;)V
@@ -2410,23 +2251,22 @@
     .parameter "x0"
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFolderPicker()V
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->notifyTextChanged()V
 
     return-void
 .end method
 
-.method static synthetic access$6900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerAppDropDownAdapter;
-    .locals 1
+.method static synthetic access$6900(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerListAdapter;)V
+    .locals 0
     .parameter "x0"
+    .parameter "x1"
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getAppDropDownCloudAdapter()Lcom/htc/app/FilePickerAppDropDownAdapter;
+    .line 71
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->sort(Lcom/htc/app/FilePickerListAdapter;)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
 .method static synthetic access$700(Lcom/htc/app/FilePickerCore;I)V
@@ -2435,32 +2275,35 @@
     .parameter "x1"
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
 
     return-void
 .end method
 
-.method static synthetic access$7000(Lcom/htc/app/FilePickerCore;)Landroid/os/Handler;
-    .locals 1
+.method static synthetic access$7000(Lcom/htc/app/FilePickerCore;II)V
+    .locals 0
     .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
+    .line 71
+    invoke-direct {p0, p1, p2}, Lcom/htc/app/FilePickerCore;->saveSortPreferences(II)V
 
-    return-object v0
+    return-void
 .end method
 
-.method static synthetic access$7100(Lcom/htc/app/FilePickerCore;)Ljava/lang/Runnable;
-    .locals 1
+.method static synthetic access$7102(Lcom/htc/app/FilePickerCore;I)I
+    .locals 0
     .parameter "x0"
+    .parameter "x1"
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->notifyCloudLoginCheckRunnable:Ljava/lang/Runnable;
+    .line 71
+    iput p1, p0, Lcom/htc/app/FilePickerCore;->mSortSelectedItem:I
 
-    return-object v0
+    return p1
 .end method
 
 .method static synthetic access$7200(Lcom/htc/app/FilePickerCore;)V
@@ -2468,8 +2311,88 @@
     .parameter "x0"
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->doScanFiles()V
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->performOnResultAndFinishTask()V
+
+    return-void
+.end method
+
+.method static synthetic access$7300(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLocalFilePickerView()V
+
+    return-void
+.end method
+
+.method static synthetic access$7400(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showCloudPickerView()V
+
+    return-void
+.end method
+
+.method static synthetic access$7500(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showUsbConnectionPickerView()V
+
+    return-void
+.end method
+
+.method static synthetic access$7600(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->switchLayoutByPicker()V
+
+    return-void
+.end method
+
+.method static synthetic access$7700(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->reStartToScan()V
+
+    return-void
+.end method
+
+.method static synthetic access$7800(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->performDoneButtonOnClickListenerClick()V
+
+    return-void
+.end method
+
+.method static synthetic access$7900(Lcom/htc/app/FilePickerCore;[Ljava/lang/String;II)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
+    .parameter "x3"
+
+    .prologue
+    .line 71
+    invoke-direct {p0, p1, p2, p3}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
 
     return-void
 .end method
@@ -2479,21 +2402,105 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 71
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/htc/app/FilePickerCore;)V
+.method static synthetic access$8000(Lcom/htc/app/FilePickerCore;Landroid/os/Bundle;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 71
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method static synthetic access$8100(Lcom/htc/app/FilePickerCore;)V
     .locals 0
     .parameter "x0"
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLandingPage()V
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
 
     return-void
+.end method
+
+.method static synthetic access$8200(Lcom/htc/app/FilePickerCore;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
+
+    return v0
+.end method
+
+.method static synthetic access$8300(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFolderPicker()V
+
+    return-void
+.end method
+
+.method static synthetic access$8400(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerAppDropDownAdapter;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getAppDropDownCloudAdapter()Lcom/htc/app/FilePickerAppDropDownAdapter;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$8500(Lcom/htc/app/FilePickerCore;)Ljava/lang/Runnable;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore;->notifyCloudLoginCheckRunnable:Ljava/lang/Runnable;
+
+    return-object v0
+.end method
+
+.method static synthetic access$8600(Lcom/htc/app/FilePickerCore;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 71
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->doScanFiles()V
+
+    return-void
+.end method
+
+.method static synthetic access$900(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .locals 1
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
+
+    .prologue
+    .line 71
+    invoke-direct {p0, p1, p2}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private addMoreExpanedObjectToList(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
@@ -2501,19 +2508,19 @@
     .parameter "target"
 
     .prologue
-    .line 1820
+    .line 2171
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
     if-nez v3, :cond_0
 
-    .line 1821
+    .line 2172
     new-instance v3, Ljava/util/LinkedList;
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
-    .line 1823
+    .line 2174
     :cond_0
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
@@ -2523,21 +2530,21 @@
 
     if-eqz v3, :cond_2
 
-    .line 1824
+    .line 2175
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
     invoke-interface {v3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1836
+    .line 2187
     :cond_1
     :goto_0
     return-void
 
-    .line 1826
+    .line 2177
     :cond_2
     const/4 v1, 0x1
 
-    .line 1827
+    .line 2178
     .local v1, isNeedNew:Z
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
@@ -2560,7 +2567,7 @@
 
     check-cast v2, Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    .line 1828
+    .line 2179
     .local v2, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2568,17 +2575,17 @@
 
     if-eqz v3, :cond_3
 
-    .line 1829
+    .line 2180
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 1832
+    .line 2183
     .end local v2           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     :cond_4
     if-eqz v1, :cond_1
 
-    .line 1833
+    .line 2184
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
     invoke-interface {v3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2590,49 +2597,55 @@
     .locals 2
 
     .prologue
-    .line 2338
+    .line 2686
     const/4 v0, 0x0
 
-    .line 2339
+    .line 2687
     .local v0, actionBarContainerBackUpEnabled:Z
     iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsLocalDataSourceItemsEnabled:Z
 
-    if-eqz v1, :cond_1
-
-    iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
-
-    if-eqz v1, :cond_1
-
-    .line 2340
-    const/4 v0, 0x1
-
-    .line 2346
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
-
-    invoke-virtual {v1, v0}, Lcom/htc/app/FilePickerActionBarExtController;->setActionBarContainerBackUpEnabled(Z)V
-
-    .line 2347
-    return-void
-
-    .line 2341
-    :cond_1
-    iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsLocalDataSourceItemsEnabled:Z
-
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
     iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
 
     if-eqz v1, :cond_2
 
-    .line 2342
+    .line 2688
+    const/4 v0, 0x1
+
+    .line 2694
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    if-eqz v1, :cond_1
+
+    .line 2695
+    iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    invoke-virtual {v1, v0}, Lcom/htc/app/FilePickerActionBarExtController;->setActionBarContainerBackUpEnabled(Z)V
+
+    .line 2696
+    :cond_1
+    return-void
+
+    .line 2689
+    :cond_2
+    iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsLocalDataSourceItemsEnabled:Z
+
+    if-nez v1, :cond_3
+
+    iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
+
+    if-eqz v1, :cond_3
+
+    .line 2690
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2343
-    :cond_2
+    .line 2691
+    :cond_3
     iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsLocalDataSourceItemsEnabled:Z
 
     if-eqz v1, :cond_0
@@ -2641,7 +2654,7 @@
 
     if-nez v1, :cond_0
 
-    .line 2344
+    .line 2692
     const/4 v0, 0x0
 
     goto :goto_0
@@ -3051,7 +3064,7 @@
     .parameter "forceHTCLandscapeEnabled"
 
     .prologue
-    .line 1063
+    .line 1102
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
@@ -3062,7 +3075,7 @@
 
     move-result-object v3
 
-    .line 1064
+    .line 1103
     .local v3, localLayout:Landroid/view/View;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -3074,7 +3087,7 @@
 
     move-result-object v0
 
-    .line 1065
+    .line 1104
     .local v0, cloudLayout:Landroid/view/View;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -3086,11 +3099,11 @@
 
     move-result-object v2
 
-    .line 1066
+    .line 1105
     .local v2, landingPageLayout:Landroid/view/View;
     const/4 v1, 0x0
 
-    .line 1067
+    .line 1106
     .local v1, enableHTCLandscape:Z
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
@@ -3098,16 +3111,16 @@
 
     if-nez v5, :cond_2
 
-    .line 1068
+    .line 1107
     const/4 v1, 0x0
 
-    .line 1081
+    .line 1120
     :goto_0
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     if-eqz v5, :cond_1
 
-    .line 1082
+    .line 1121
     iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     if-nez v1, :cond_0
@@ -3124,11 +3137,11 @@
 
     invoke-virtual {v6, v5}, Lcom/htc/app/FilePickerActionBarExtController;->enableHTCLandscape(Ljava/lang/Boolean;)V
 
-    .line 1084
+    .line 1123
     :cond_1
     return-void
 
-    .line 1069
+    .line 1108
     :cond_2
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -3136,12 +3149,12 @@
 
     if-nez v5, :cond_3
 
-    .line 1070
+    .line 1109
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1071
+    .line 1110
     :cond_3
     invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
 
@@ -3149,14 +3162,14 @@
 
     if-nez v5, :cond_5
 
-    .line 1072
+    .line 1111
     const v5, 0x20200bf
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 1073
+    .line 1112
     .local v4, localVarouselView:Landroid/view/View;
     invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
 
@@ -3164,25 +3177,25 @@
 
     if-nez v5, :cond_4
 
-    .line 1074
+    .line 1113
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1076
+    .line 1115
     :cond_4
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1079
+    .line 1118
     .end local v4           #localVarouselView:Landroid/view/View;
     :cond_5
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1082
+    .line 1121
     :cond_6
     const/4 v5, 0x0
 
@@ -3200,7 +3213,7 @@
 
     const/4 v6, 0x0
 
-    .line 1972
+    .line 2320
     const v5, 0x20200aa
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -3209,7 +3222,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 1973
+    .line 2321
     .local v2, emptyView:Landroid/widget/TextView;
     const v5, 0x20200af
 
@@ -3217,11 +3230,11 @@
 
     move-result-object v4
 
-    .line 1974
+    .line 2322
     .local v4, noLoginLayout:Landroid/view/View;
     if-eqz v4, :cond_0
 
-    .line 1975
+    .line 2323
     const v5, 0x20200ac
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -3238,7 +3251,7 @@
 
     move-result v1
 
-    .line 1977
+    .line 2325
     .local v1, cloudDataSourceType:I
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
@@ -3250,27 +3263,27 @@
 
     if-eqz v5, :cond_1
 
-    .line 1978
+    .line 2326
     invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1979
+    .line 2327
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1981
+    .line 2329
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v5
 
     invoke-static {v2, v1, v5}, Lcom/htc/app/FilePickerUtil;->setMoreExpandNoFileFoundText(Landroid/widget/TextView;ILandroid/content/Context;)V
 
-    .line 1984
+    .line 2332
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
     invoke-virtual {v5, v1}, Lcom/htc/app/FilePickerCloudHelper;->getAccountIds(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1985
+    .line 2333
     .local v0, accounts:[Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -3278,21 +3291,21 @@
 
     if-lez v5, :cond_0
 
-    .line 1986
+    .line 2334
     invoke-direct {p0, v1, v8}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
     move-result-object v3
 
-    .line 1988
+    .line 2336
     .local v3, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     if-eqz v3, :cond_0
 
-    .line 1989
+    .line 2337
     aget-object v5, v0, v6
 
     invoke-virtual {v3, v5}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->setAccountId(Ljava/lang/String;)V
 
-    .line 1998
+    .line 2346
     .end local v0           #accounts:[Ljava/lang/String;
     .end local v1           #cloudDataSourceType:I
     .end local v3           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
@@ -3300,15 +3313,15 @@
     :goto_0
     return-void
 
-    .line 1993
+    .line 2341
     .restart local v1       #cloudDataSourceType:I
     :cond_1
     invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1994
+    .line 2342
     invoke-virtual {v2, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1995
+    .line 2343
     invoke-virtual {v2, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
@@ -3319,7 +3332,7 @@
     .parameter "resId"
 
     .prologue
-    .line 3745
+    .line 4105
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -3328,22 +3341,22 @@
 
     move-result-object v0
 
-    .line 3746
+    .line 4106
     .local v0, view:Landroid/view/View;
     if-nez v0, :cond_1
 
-    .line 3753
+    .line 4113
     :cond_0
     :goto_0
     return-void
 
-    .line 3748
+    .line 4108
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 3749
+    .line 4109
     .local v2, visibleTag:Ljava/lang/Object;
     if-eqz v2, :cond_0
 
@@ -3351,7 +3364,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 3750
+    .line 4110
     check-cast v2, Ljava/lang/Integer;
 
     .end local v2           #visibleTag:Ljava/lang/Object;
@@ -3359,7 +3372,7 @@
 
     move-result v1
 
-    .line 3751
+    .line 4111
     .local v1, visibility:I
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -3370,201 +3383,201 @@
     .locals 2
 
     .prologue
-    .line 3819
+    .line 4179
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 3820
+    .line 4180
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3821
+    .line 4181
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3822
+    .line 4182
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3823
+    .line 4183
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3824
+    .line 4184
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3825
+    .line 4185
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3826
+    .line 4186
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3827
+    .line 4187
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/4 v1, 0x7
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3828
+    .line 4188
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3829
+    .line 4189
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v1, 0x9
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3830
+    .line 4190
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3831
+    .line 4191
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3832
+    .line 4192
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3833
+    .line 4193
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3834
+    .line 4194
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v1, 0xf
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3836
+    .line 4196
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyReScanFilesRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3837
+    .line 4197
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyCloudFileDownloadFinishRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3838
+    .line 4198
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyFolderViewSelectTaskFinishRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3839
+    .line 4199
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyFavoriteDateChangeRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3840
+    .line 4200
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyFilePikcerInitialRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3841
+    .line 4201
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->showUsbConnectionPickerViewRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3842
+    .line 4202
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->showCloudPickerViewRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3843
+    .line 4203
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->showLocalPickerViewRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3844
+    .line 4204
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyDownloadFailRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3845
+    .line 4205
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyCloudLoginCheckRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3846
+    .line 4206
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyCloudExceptionRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3847
+    .line 4207
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->notifyLoadFilesRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3849
+    .line 4209
     :cond_0
     return-void
 .end method
@@ -3576,7 +3589,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3265
+    .line 3622
     new-instance v0, Lcom/htc/app/HtcProgressDialog;
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -3585,7 +3598,7 @@
 
     invoke-direct {v0, v1}, Lcom/htc/app/HtcProgressDialog;-><init>(Landroid/content/Context;)V
 
-    .line 3266
+    .line 3623
     .local v0, progressDialog:Lcom/htc/app/HtcProgressDialog;
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
@@ -3597,18 +3610,18 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 3267
+    .line 3624
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcProgressDialog;->setIndeterminate(Z)V
 
-    .line 3268
+    .line 3625
     invoke-virtual {v0, v2}, Lcom/htc/app/HtcProgressDialog;->setCancelable(Z)V
 
-    .line 3269
+    .line 3626
     invoke-virtual {v0, v2}, Lcom/htc/app/HtcProgressDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 3270
+    .line 3627
     return-object v0
 .end method
 
@@ -3616,16 +3629,16 @@
     .locals 3
 
     .prologue
-    .line 3296
+    .line 3653
     const/4 v0, 0x0
 
-    .line 3298
+    .line 3655
     .local v0, htcProgressDialog:Lcom/htc/app/HtcProgressDialog;
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     if-eqz v1, :cond_0
 
-    .line 3299
+    .line 3656
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -3636,12 +3649,12 @@
 
     move-result-object v0
 
-    .line 3300
+    .line 3657
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcProgressDialog;->setProgress(I)V
 
-    .line 3302
+    .line 3659
     :cond_0
     return-object v0
 .end method
@@ -3650,7 +3663,7 @@
     .locals 8
 
     .prologue
-    .line 3308
+    .line 3665
     :try_start_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -3662,11 +3675,11 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3312
+    .line 3669
     :goto_0
     const v4, 0x20400eb
 
-    .line 3313
+    .line 3670
     .local v4, titleId:I
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -3674,7 +3687,7 @@
 
     move-result v1
 
-    .line 3314
+    .line 3671
     .local v1, dataSourceType:I
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getFilePickerUtil()Lcom/htc/app/FilePickerUtil;
 
@@ -3684,19 +3697,19 @@
 
     move-result v0
 
-    .line 3315
+    .line 3672
     .local v0, cloudExceptionType:I
-    const v3, 0x20403e7
+    const v3, 0x20403e8
 
-    .line 3317
+    .line 3674
     .local v3, strId:I
     packed-switch v0, :pswitch_data_0
 
-    .line 3341
+    .line 3698
     :pswitch_0
     packed-switch v1, :pswitch_data_1
 
-    .line 3353
+    .line 3710
     :goto_1
     new-instance v5, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3730,7 +3743,7 @@
 
     return-object v5
 
-    .line 3309
+    .line 3666
     .end local v0           #cloudExceptionType:I
     .end local v1           #dataSourceType:I
     .end local v3           #strId:I
@@ -3738,80 +3751,80 @@
     :catch_0
     move-exception v2
 
-    .line 3310
+    .line 3667
     .local v2, e:Ljava/lang/IllegalArgumentException;
     invoke-virtual {v2}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 3320
+    .line 3677
     .end local v2           #e:Ljava/lang/IllegalArgumentException;
     .restart local v0       #cloudExceptionType:I
     .restart local v1       #dataSourceType:I
     .restart local v3       #strId:I
     .restart local v4       #titleId:I
     :pswitch_1
-    const v3, 0x20403e6
-
-    .line 3321
-    goto :goto_1
-
-    .line 3323
-    :pswitch_2
     const v3, 0x20403e7
 
-    .line 3324
+    .line 3678
     goto :goto_1
 
-    .line 3326
-    :pswitch_3
+    .line 3680
+    :pswitch_2
     const v3, 0x20403e8
 
-    .line 3327
+    .line 3681
     goto :goto_1
 
-    .line 3329
-    :pswitch_4
+    .line 3683
+    :pswitch_3
     const v3, 0x20403e9
 
-    .line 3330
+    .line 3684
     goto :goto_1
 
-    .line 3332
-    :pswitch_5
+    .line 3686
+    :pswitch_4
     const v3, 0x20403ea
 
-    .line 3333
+    .line 3687
     goto :goto_1
 
-    .line 3335
-    :pswitch_6
+    .line 3689
+    :pswitch_5
     const v3, 0x20403eb
 
-    .line 3336
+    .line 3690
     goto :goto_1
 
-    .line 3338
-    :pswitch_7
+    .line 3692
+    :pswitch_6
     const v3, 0x20403ec
 
-    .line 3339
+    .line 3693
     goto :goto_1
 
-    .line 3343
+    .line 3695
+    :pswitch_7
+    const v3, 0x20403ed
+
+    .line 3696
+    goto :goto_1
+
+    .line 3700
     :pswitch_8
-    const v3, 0x20403e4
-
-    .line 3344
-    goto :goto_1
-
-    .line 3346
-    :pswitch_9
     const v3, 0x20403e5
 
+    .line 3701
     goto :goto_1
 
-    .line 3317
+    .line 3703
+    :pswitch_9
+    const v3, 0x20403e6
+
+    goto :goto_1
+
+    .line 3674
     nop
 
     :pswitch_data_0
@@ -3829,7 +3842,7 @@
         :pswitch_1
     .end packed-switch
 
-    .line 3341
+    .line 3698
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_8
@@ -3841,7 +3854,7 @@
     .locals 3
 
     .prologue
-    .line 3362
+    .line 3719
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -3854,7 +3867,7 @@
 
     move-result-object v1
 
-    const v2, 0x20403c5
+    const v2, 0x20403c6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3864,7 +3877,7 @@
 
     move-result-object v0
 
-    const v1, 0x20403c6
+    const v1, 0x20403c7
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3912,7 +3925,7 @@
     .parameter "buttonStringId"
 
     .prologue
-    .line 3283
+    .line 3640
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -3921,7 +3934,7 @@
 
     move-result-object v1
 
-    .line 3284
+    .line 3641
     .local v1, title:Ljava/lang/String;
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
@@ -3931,7 +3944,7 @@
 
     move-result-object v0
 
-    .line 3286
+    .line 3643
     .local v0, message:Ljava/lang/String;
     new-instance v2, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3968,7 +3981,7 @@
     .locals 3
 
     .prologue
-    .line 3447
+    .line 3797
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -4029,7 +4042,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 3274
+    .line 3631
     new-instance v0, Lcom/htc/app/HtcProgressDialog;
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -4038,7 +4051,7 @@
 
     invoke-direct {v0, v1}, Lcom/htc/app/HtcProgressDialog;-><init>(Landroid/content/Context;)V
 
-    .line 3275
+    .line 3632
     .local v0, progressDialog:Lcom/htc/app/HtcProgressDialog;
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
@@ -4050,18 +4063,18 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 3276
+    .line 3633
     invoke-virtual {v0, v2}, Lcom/htc/app/HtcProgressDialog;->setIndeterminate(Z)V
 
-    .line 3277
+    .line 3634
     invoke-virtual {v0, v2}, Lcom/htc/app/HtcProgressDialog;->setCancelable(Z)V
 
-    .line 3278
+    .line 3635
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcProgressDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 3279
+    .line 3636
     return-object v0
 .end method
 
@@ -4069,7 +4082,7 @@
     .locals 4
 
     .prologue
-    .line 3470
+    .line 3820
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -4141,7 +4154,7 @@
     .locals 3
 
     .prologue
-    .line 3853
+    .line 4213
     :try_start_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -4153,15 +4166,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3857
+    .line 4217
     :goto_0
     return-void
 
-    .line 3854
+    .line 4214
     :catch_0
     move-exception v0
 
-    .line 3855
+    .line 4215
     .local v0, iae:Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -4172,7 +4185,7 @@
     .locals 3
 
     .prologue
-    .line 3861
+    .line 4221
     :try_start_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -4184,15 +4197,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3865
+    .line 4225
     :goto_0
     return-void
 
-    .line 3862
+    .line 4222
     :catch_0
     move-exception v0
 
-    .line 3863
+    .line 4223
     .local v0, iae:Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -4203,12 +4216,12 @@
     .locals 7
 
     .prologue
-    .line 3210
+    .line 3567
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
     invoke-direct {p0, v4}, Lcom/htc/app/FilePickerCore;->saveCarouselDefaultTabPreferences(Ljava/lang/String;)V
 
-    .line 3211
+    .line 3568
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
@@ -4221,76 +4234,76 @@
 
     invoke-direct {p0, v4}, Lcom/htc/app/FilePickerCore;->saveCurrentDataSourceIsLocalPreferences(Z)V
 
-    .line 3214
+    .line 3571
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v4, :cond_0
 
-    .line 3215
+    .line 3572
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 3216
+    .line 3573
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidated()V
 
-    .line 3219
+    .line 3576
     :cond_0
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v4, :cond_1
 
-    .line 3220
+    .line 3577
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 3221
+    .line 3578
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidated()V
 
-    .line 3224
+    .line 3581
     :cond_1
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v4, :cond_2
 
-    .line 3225
+    .line 3582
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 3226
+    .line 3583
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidated()V
 
-    .line 3229
+    .line 3586
     :cond_2
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v4, :cond_3
 
-    .line 3230
+    .line 3587
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->clear()V
 
-    .line 3233
+    .line 3590
     :cond_3
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v4, :cond_4
 
-    .line 3234
+    .line 3591
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->clear()V
 
-    .line 3237
+    .line 3594
     :cond_4
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
@@ -4304,7 +4317,7 @@
 
     if-nez v4, :cond_7
 
-    .line 3238
+    .line 3595
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -4326,25 +4339,25 @@
 
     check-cast v3, Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    .line 3239
+    .line 3596
     .local v3, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     invoke-virtual {v3}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getFolderAdapter()Lcom/htc/app/FilePickerFolderAdapter;
 
     move-result-object v1
 
-    .line 3240
+    .line 3597
     .local v1, adapter:Lcom/htc/app/FilePickerFolderAdapter;
     if-eqz v1, :cond_5
 
-    .line 3241
+    .line 3598
     invoke-virtual {v1}, Lcom/htc/app/FilePickerFolderAdapter;->close()V
 
-    .line 3242
+    .line 3599
     invoke-virtual {v3}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getAccountId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3243
+    .line 3600
     .local v0, accountId:Ljava/lang/String;
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
 
@@ -4396,7 +4409,7 @@
 
     goto :goto_0
 
-    .line 3250
+    .line 3607
     .end local v0           #accountId:Ljava/lang/String;
     .end local v1           #adapter:Lcom/htc/app/FilePickerFolderAdapter;
     .end local v3           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
@@ -4405,38 +4418,38 @@
 
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
-    .line 3252
+    .line 3609
     .end local v2           #i$:Ljava/util/Iterator;
     :cond_7
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
-    .line 3254
+    .line 3611
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v4, :cond_8
 
-    .line 3255
+    .line 3612
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->clear()V
 
-    .line 3256
+    .line 3613
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerListAdapter;->close()V
 
-    .line 3259
+    .line 3616
     :cond_8
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v4, :cond_9
 
-    .line 3260
+    .line 3617
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->clearHandler()V
 
-    .line 3262
+    .line 3619
     :cond_9
     return-void
 .end method
@@ -4445,19 +4458,19 @@
     .locals 9
 
     .prologue
-    .line 2819
+    .line 3166
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
-    .line 2822
+    .line 3169
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getFavoritesFragment()Lcom/htc/app/FilePickerFavoritesFragment;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 2823
+    .line 3170
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getFavoritesFragment()Lcom/htc/app/FilePickerFavoritesFragment;
 
     move-result-object v5
@@ -4466,18 +4479,18 @@
 
     invoke-virtual {v5, v6}, Lcom/htc/app/FilePickerFavoritesFragment;->NotifyToDoTask(I)V
 
-    .line 2825
+    .line 3172
     :cond_0
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v5, :cond_1
 
-    .line 2826
+    .line 3173
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v5}, Lcom/htc/app/FilePickerListAdapter;->startScanFiles()V
 
-    .line 2829
+    .line 3176
     :cond_1
     :try_start_0
     new-instance v2, Lcom/htc/app/FileScanner;
@@ -4494,13 +4507,13 @@
 
     invoke-direct {v2, v5, v6, v7, v8}, Lcom/htc/app/FileScanner;-><init>(Landroid/content/Context;Lcom/htc/app/FilePickerListAdapter;[Ljava/lang/String;Lcom/htc/app/FilePickerDBHelper;)V
 
-    .line 2831
+    .line 3178
     .local v2, fileScannerOfFavorites:Lcom/htc/app/FileScanner;
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v2, v5}, Lcom/htc/app/FileScanner;->setFilePickerUtil(Lcom/htc/app/FilePickerUtil;)V
 
-    .line 2832
+    .line 3179
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v5, Lcom/htc/app/FilePickerCore$10;
@@ -4509,13 +4522,13 @@
 
     invoke-direct {v1, v5}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2839
+    .line 3186
     .local v1, favoriteThread:Ljava/lang/Thread;
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2846
+    .line 3193
     .end local v1           #favoriteThread:Ljava/lang/Thread;
     .end local v2           #fileScannerOfFavorites:Lcom/htc/app/FileScanner;
     :goto_0
@@ -4534,20 +4547,20 @@
 
     invoke-direct {v3, v5, v6, v7, v8}, Lcom/htc/app/FileScanner;-><init>(Landroid/content/Context;Lcom/htc/app/FilePickerListAdapter;[Ljava/lang/String;Lcom/htc/app/FilePickerDBHelper;)V
 
-    .line 2848
+    .line 3195
     .local v3, fileScannerOfRecent:Lcom/htc/app/FileScanner;
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v3, v5}, Lcom/htc/app/FileScanner;->setFilePickerUtil(Lcom/htc/app/FilePickerUtil;)V
 
-    .line 2849
+    .line 3196
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mRecentFiles:[Ljava/lang/String;
 
     iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mRecentFilesTime:[J
 
     invoke-virtual {v3, v5, v6}, Lcom/htc/app/FileScanner;->setRecentFiles([Ljava/lang/String;[J)V
 
-    .line 2850
+    .line 3197
     new-instance v4, Ljava/lang/Thread;
 
     new-instance v5, Lcom/htc/app/FilePickerCore$11;
@@ -4556,23 +4569,23 @@
 
     invoke-direct {v4, v5}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2857
+    .line 3204
     .local v4, recentThread:Ljava/lang/Thread;
     invoke-virtual {v4}, Ljava/lang/Thread;->start()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 2862
+    .line 3209
     .end local v3           #fileScannerOfRecent:Lcom/htc/app/FileScanner;
     .end local v4           #recentThread:Ljava/lang/Thread;
     :goto_1
     return-void
 
-    .line 2840
+    .line 3187
     :catch_0
     move-exception v0
 
-    .line 2841
+    .line 3188
     .local v0, e:Ljava/lang/Exception;
     const-string v5, "FilePickerWithDB"
 
@@ -4580,17 +4593,17 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2842
+    .line 3189
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 2858
+    .line 3205
     .end local v0           #e:Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 2859
+    .line 3206
     .restart local v0       #e:Ljava/lang/Exception;
     const-string v5, "FilePickerWithDB"
 
@@ -4598,7 +4611,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2860
+    .line 3207
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -4610,23 +4623,23 @@
     .parameter "accountId"
 
     .prologue
-    .line 1839
+    .line 2190
     const/4 v4, 0x0
 
-    .line 1840
+    .line 2191
     .local v4, result:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
     if-nez v5, :cond_0
 
-    .line 1841
+    .line 2192
     new-instance v5, Ljava/util/LinkedList;
 
     invoke-direct {v5}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v5, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
-    .line 1842
+    .line 2193
     :cond_0
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
@@ -4636,15 +4649,15 @@
 
     if-nez v5, :cond_1
 
-    .line 1843
+    .line 2194
     packed-switch p1, :pswitch_data_0
 
-    .line 1873
+    .line 2224
     :cond_1
     :pswitch_0
     return-object v4
 
-    .line 1847
+    .line 2198
     :pswitch_1
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
@@ -4667,22 +4680,22 @@
 
     check-cast v3, Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    .line 1848
+    .line 2199
     .local v3, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     invoke-virtual {v3}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getDataSourceType()I
 
     move-result v2
 
-    .line 1849
+    .line 2200
     .local v2, moreExpandDataSourceType:I
     if-ne v2, p1, :cond_2
 
-    .line 1850
+    .line 2201
     move-object v4, v3
 
     goto :goto_0
 
-    .line 1856
+    .line 2207
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v2           #moreExpandDataSourceType:I
     .end local v3           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
@@ -4708,31 +4721,31 @@
 
     check-cast v3, Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    .line 1857
+    .line 2208
     .restart local v3       #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     invoke-virtual {v3}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getDataSourceType()I
 
     move-result v2
 
-    .line 1858
+    .line 2209
     .restart local v2       #moreExpandDataSourceType:I
     if-ne v2, p1, :cond_3
 
-    .line 1859
+    .line 2210
     invoke-virtual {v3}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getAccountId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1860
+    .line 2211
     .local v1, moreExpandAccountId:Ljava/lang/String;
     if-nez v1, :cond_4
 
-    .line 1861
+    .line 2212
     move-object v4, v3
 
     goto :goto_1
 
-    .line 1863
+    .line 2214
     :cond_4
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4740,12 +4753,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 1864
+    .line 2215
     move-object v4, v3
 
     goto :goto_1
 
-    .line 1843
+    .line 2194
     :pswitch_data_0
     .packed-switch -0x9
         :pswitch_1
@@ -4766,7 +4779,7 @@
     .locals 1
 
     .prologue
-    .line 3688
+    .line 4048
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -4777,14 +4790,14 @@
 
     if-nez v0, :cond_0
 
-    .line 3689
+    .line 4049
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 3691
+    .line 4051
     :cond_0
     return-void
 .end method
@@ -4901,15 +4914,15 @@
     .locals 1
 
     .prologue
-    .line 189
+    .line 187
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 190
+    .line 188
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mContext:Landroid/content/Context;
 
-    .line 192
+    .line 190
     :goto_0
     return-object v0
 
@@ -4921,6 +4934,52 @@
     move-result-object v0
 
     goto :goto_0
+.end method
+
+.method private getBundle([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 3
+    .parameter "outputs"
+    .parameter "serviceNames"
+    .parameter "accountIds"
+
+    .prologue
+    .line 820
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 821
+    .local v0, bundle:Landroid/os/Bundle;
+    const-string v1, "output"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 822
+    const-string v1, "CloudServiceType"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 823
+    const-string v1, "CloudServiceAccountName"
+
+    invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 824
+    const-string v1, "sort_type"
+
+    iget v2, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 825
+    const-string v1, "sort_order"
+
+    iget v2, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 826
+    return-object v0
 .end method
 
 .method private getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
@@ -4968,54 +5027,16 @@
     .parameter "count"
 
     .prologue
-    .line 3409
+    .line 3759
     const/4 v0, 0x0
 
-    .line 3410
+    .line 3760
     .local v0, text:Ljava/lang/String;
     const/4 v1, 0x1
 
     if-le p1, v1, :cond_0
 
-    .line 3411
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x20403d9
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 3415
-    :goto_0
-    return-object v0
-
-    .line 3413
-    :cond_0
+    .line 3761
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5035,6 +5056,44 @@
     move-result-object v2
 
     const v3, 0x20403da
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3765
+    :goto_0
+    return-object v0
+
+    .line 3763
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x20403db
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -5157,83 +5216,107 @@
     return-object v3
 .end method
 
-.method private getListAdapterSelectOutput(Lcom/htc/app/FilePickerListAdapter;)[Ljava/lang/String;
-    .locals 5
+.method private getListAdapterSelectBundle(Lcom/htc/app/FilePickerListAdapter;)Landroid/os/Bundle;
+    .locals 9
     .parameter "adapter"
 
     .prologue
-    .line 2907
-    const/4 v4, 0x0
+    const/4 v8, 0x0
 
-    new-array v3, v4, [Ljava/lang/String;
+    .line 3253
+    new-array v4, v8, [Ljava/lang/String;
 
-    .line 2908
-    .local v3, output:[Ljava/lang/String;
+    .line 3254
+    .local v4, output:[Ljava/lang/String;
+    new-array v0, v8, [Ljava/lang/String;
+
+    .line 3255
+    .local v0, accountIds:[Ljava/lang/String;
+    new-array v6, v8, [Ljava/lang/String;
+
+    .line 3256
+    .local v6, serviceNames:[Ljava/lang/String;
     if-eqz p1, :cond_1
 
-    .line 2909
+    .line 3257
     invoke-virtual {p1}, Lcom/htc/app/FilePickerListAdapter;->getSelectItems()Ljava/util/ArrayList;
 
-    move-result-object v4
+    move-result-object v5
 
-    iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mSelectedItemInfoLists:Ljava/util/ArrayList;
+    .line 3258
+    .local v5, selectedItemInfoLists:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    .line 2910
-    iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mSelectedItemInfoLists:Ljava/util/ArrayList;
+    move-result v7
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    .line 3259
+    .local v7, size:I
+    new-array v4, v7, [Ljava/lang/String;
 
-    move-result v4
+    .line 3260
+    new-array v0, v7, [Ljava/lang/String;
 
-    new-array v3, v4, [Ljava/lang/String;
+    .line 3261
+    new-array v6, v7, [Ljava/lang/String;
 
-    .line 2911
-    const/4 v0, 0x0
+    .line 3262
+    const/4 v2, 0x0
 
-    .local v0, i:I
+    .local v2, i:I
     :goto_0
-    array-length v4, v3
+    if-ge v2, v7, :cond_0
 
-    if-ge v0, v4, :cond_0
+    .line 3263
+    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 2912
-    iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mSelectedItemInfoLists:Ljava/util/ArrayList;
+    move-result-object v3
 
-    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    check-cast v3, Lcom/htc/app/ItemInfo;
 
-    move-result-object v2
+    .line 3264
+    .local v3, itemInfo:Lcom/htc/app/ItemInfo;
+    invoke-virtual {v3}, Lcom/htc/app/ItemInfo;->getAbsolutePath()Ljava/lang/String;
 
-    check-cast v2, Lcom/htc/app/ItemInfo;
+    move-result-object v8
 
-    .line 2913
-    .local v2, itemInfo:Lcom/htc/app/ItemInfo;
-    invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->isCloudItem()Z
+    aput-object v8, v4, v2
 
-    move-result v1
+    .line 3265
+    invoke-virtual {v3}, Lcom/htc/app/ItemInfo;->getAccountId()Ljava/lang/String;
 
-    .line 2917
-    .local v1, isCloudItem:Z
-    invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->getAbsolutePath()Ljava/lang/String;
+    move-result-object v8
 
-    move-result-object v4
+    aput-object v8, v0, v2
 
-    aput-object v4, v3, v0
+    .line 3266
+    invoke-virtual {v3}, Lcom/htc/app/ItemInfo;->getServiceName()Ljava/lang/String;
 
-    .line 2911
-    add-int/lit8 v0, v0, 0x1
+    move-result-object v8
+
+    aput-object v8, v6, v2
+
+    .line 3262
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2920
-    .end local v1           #isCloudItem:Z
-    .end local v2           #itemInfo:Lcom/htc/app/ItemInfo;
+    .line 3268
+    .end local v3           #itemInfo:Lcom/htc/app/ItemInfo;
     :cond_0
     invoke-virtual {p1}, Lcom/htc/app/FilePickerListAdapter;->resetAllChecked()V
 
-    .line 2922
-    .end local v0           #i:I
+    .line 3270
+    .end local v2           #i:I
+    .end local v5           #selectedItemInfoLists:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
+    .end local v7           #size:I
     :cond_1
-    return-object v3
+    invoke-direct {p0, v4, v6, v0}, Lcom/htc/app/FilePickerCore;->getBundle([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    .line 3271
+    .local v1, bundle:Landroid/os/Bundle;
+    return-object v1
 .end method
 
 .method private getMainView()Landroid/view/View;
@@ -5282,7 +5365,7 @@
     .locals 1
 
     .prologue
-    .line 197
+    .line 195
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -5298,7 +5381,7 @@
     .locals 3
 
     .prologue
-    .line 2977
+    .line 3332
     :try_start_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -5310,15 +5393,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2981
+    .line 3336
     :goto_0
     return-void
 
-    .line 2978
+    .line 3333
     :catch_0
     move-exception v0
 
-    .line 2979
+    .line 3334
     .local v0, iae:Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -5331,42 +5414,42 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3756
+    .line 4116
     const v2, 0x20200bf
 
     invoke-direct {p0, v2}, Lcom/htc/app/FilePickerCore;->checkShowViewByTag(I)V
 
-    .line 3757
+    .line 4117
     const v2, 0x20200c0
 
     invoke-direct {p0, v2}, Lcom/htc/app/FilePickerCore;->checkShowViewByTag(I)V
 
-    .line 3758
+    .line 4118
     const v2, 0x20200c1
 
     const/16 v3, 0x8
 
     invoke-direct {p0, v2, v3}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 3760
+    .line 4120
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     if-eqz v2, :cond_1
 
-    .line 3761
+    .line 4121
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
 
     move-result v0
 
-    .line 3762
+    .line 4122
     .local v0, dataSourceType:I
     invoke-static {v0}, Lcom/htc/app/FilePickerUtil;->isLocalDataSourceType(I)Z
 
     move-result v1
 
-    .line 3763
+    .line 4123
     .local v1, isLocalDataSource:Z
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
@@ -5376,20 +5459,20 @@
 
     if-eqz v2, :cond_2
 
-    .line 3764
+    .line 4124
     :cond_0
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v2, v4}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
 
-    .line 3771
+    .line 4131
     .end local v0           #dataSourceType:I
     .end local v1           #isLocalDataSource:Z
     :cond_1
     :goto_0
     return-void
 
-    .line 3765
+    .line 4125
     .restart local v0       #dataSourceType:I
     .restart local v1       #isLocalDataSource:Z
     :cond_2
@@ -5397,14 +5480,14 @@
 
     if-eqz v2, :cond_3
 
-    .line 3766
+    .line 4126
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v2, v4}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
 
     goto :goto_0
 
-    .line 3768
+    .line 4128
     :cond_3
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
@@ -5421,7 +5504,7 @@
     .locals 3
 
     .prologue
-    .line 3699
+    .line 4059
     const-string v1, "Tab_Type"
 
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
@@ -5432,7 +5515,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3700
+    .line 4060
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -5443,7 +5526,7 @@
 
     move-result-object v0
 
-    .line 3701
+    .line 4061
     .local v0, view:Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -5453,12 +5536,12 @@
 
     if-nez v1, :cond_0
 
-    .line 3702
+    .line 4062
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mEditor:Landroid/widget/AutoCompleteTextView;
 
     if-eqz v1, :cond_0
 
-    .line 3703
+    .line 4063
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mEditor:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v1}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
@@ -5471,26 +5554,26 @@
 
     if-lez v1, :cond_0
 
-    .line 3704
+    .line 4064
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mEditor:Landroid/widget/AutoCompleteTextView;
 
     const-string v2, ""
 
     invoke-virtual {v1, v2}, Landroid/widget/AutoCompleteTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3710
+    .line 4070
     .end local v0           #view:Landroid/view/View;
     :cond_0
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     if-eqz v1, :cond_1
 
-    .line 3711
+    .line 4071
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerActionBarExtController;->hideSearchBarMode()V
 
-    .line 3712
+    .line 4072
     :cond_1
     return-void
 .end method
@@ -5537,7 +5620,7 @@
 
     move-result-object v1
 
-    const v2, 0x20403d8
+    const v2, 0x20403d9
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -5685,7 +5768,7 @@
     .locals 4
 
     .prologue
-    .line 694
+    .line 706
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -5696,11 +5779,11 @@
 
     move-result-object v1
 
-    .line 695
+    .line 707
     .local v1, favoritesViewLayout:Landroid/view/View;
     if-eqz v1, :cond_0
 
-    .line 696
+    .line 708
     const v2, 0x20200aa
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5709,13 +5792,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 697
+    .line 709
     .local v0, emptyView:Landroid/widget/TextView;
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 699
+    .line 711
     .end local v0           #emptyView:Landroid/widget/TextView;
     :cond_0
     return-void
@@ -5725,7 +5808,7 @@
     .locals 4
 
     .prologue
-    .line 702
+    .line 714
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -5736,11 +5819,11 @@
 
     move-result-object v1
 
-    .line 703
+    .line 715
     .local v1, recentViewLayout:Landroid/view/View;
     if-eqz v1, :cond_0
 
-    .line 704
+    .line 716
     const v2, 0x20200aa
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5749,13 +5832,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 705
+    .line 717
     .local v0, emptyView:Landroid/widget/TextView;
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 707
+    .line 719
     .end local v0           #emptyView:Landroid/widget/TextView;
     :cond_0
     return-void
@@ -5765,7 +5848,7 @@
     .locals 4
 
     .prologue
-    .line 686
+    .line 698
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -5776,11 +5859,11 @@
 
     move-result-object v1
 
-    .line 687
+    .line 699
     .local v1, typeViewLayout:Landroid/view/View;
     if-eqz v1, :cond_0
 
-    .line 688
+    .line 700
     const v2, 0x20200aa
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5789,13 +5872,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 689
+    .line 701
     .local v0, emptyView:Landroid/widget/TextView;
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 691
+    .line 703
     .end local v0           #emptyView:Landroid/widget/TextView;
     :cond_0
     return-void
@@ -6154,7 +6237,7 @@
     .locals 7
 
     .prologue
-    .line 1140
+    .line 1178
     new-instance v0, Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
@@ -6177,7 +6260,7 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 1143
+    .line 1181
     new-instance v0, Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
@@ -6200,7 +6283,7 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 1145
+    .line 1183
     new-instance v0, Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
@@ -6223,98 +6306,98 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 1155
+    .line 1193
     new-instance v0, Lcom/htc/app/FileSorter;
 
     invoke-direct {v0}, Lcom/htc/app/FileSorter;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
-    .line 1157
+    .line 1195
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
     iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FileSorter;->setSortBy(I)V
 
-    .line 1158
+    .line 1196
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
     iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FileSorter;->setSortOrder(I)V
 
-    .line 1159
+    .line 1197
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setFileSorter(Lcom/htc/app/FileSorter;)V
 
-    .line 1160
+    .line 1198
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     const-string v1, "Tab_Type"
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setAdapterType(Ljava/lang/String;)V
 
-    .line 1161
+    .line 1199
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     const-string v1, "Tab_Recent"
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setAdapterType(Ljava/lang/String;)V
 
-    .line 1162
+    .line 1200
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     const-string v1, "Tab_Favorites"
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setAdapterType(Ljava/lang/String;)V
 
-    .line 1165
+    .line 1203
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setFileSorter(Lcom/htc/app/FileSorter;)V
 
-    .line 1166
+    .line 1204
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setFileSorter(Lcom/htc/app/FileSorter;)V
 
-    .line 1170
+    .line 1208
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsShowPath:Z
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->groupByPath(Z)V
 
-    .line 1171
+    .line 1209
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mTypeDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setDataSetChangedListener(Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;)V
 
-    .line 1173
+    .line 1211
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mRecentDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setDataSetChangedListener(Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;)V
 
-    .line 1174
+    .line 1212
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFavoriteDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setDataSetChangedListener(Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;)V
 
-    .line 1178
+    .line 1216
     return-void
 .end method
 
@@ -6322,7 +6405,7 @@
     .locals 5
 
     .prologue
-    .line 1184
+    .line 1222
     new-instance v0, Lcom/htc/app/FileScanner;
 
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
@@ -6337,30 +6420,30 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/htc/app/FileScanner;-><init>(Landroid/content/Context;Lcom/htc/app/FilePickerListAdapter;[Ljava/lang/String;Lcom/htc/app/FilePickerDBHelper;)V
 
-    .line 1187
+    .line 1225
     .local v0, fileScanner:Lcom/htc/app/FileScanner;
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FileScanner;->setFilePickerUtil(Lcom/htc/app/FilePickerUtil;)V
 
-    .line 1192
+    .line 1230
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FileScanner;->setFilePickerCloudHelper(Lcom/htc/app/FilePickerCloudHelper;)V
 
-    .line 1194
+    .line 1232
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v1, v0}, Lcom/htc/app/FilePickerListAdapter;->setFileScanner(Lcom/htc/app/FileScanner;)V
 
-    .line 1196
+    .line 1234
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FileScanner;->setFileSorter(Lcom/htc/app/FileSorter;)V
 
-    .line 1199
+    .line 1237
     return-void
 .end method
 
@@ -6368,17 +6451,17 @@
     .locals 3
 
     .prologue
-    .line 2460
+    .line 2809
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->initStringDescription()V
 
-    .line 2462
+    .line 2811
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/htc/app/FilePickerCore;->mSelectedFiles:Ljava/util/ArrayList;
 
-    .line 2466
+    .line 2815
     :try_start_0
     new-instance v1, Lcom/htc/app/FilePickerDBHelper;
 
@@ -6392,15 +6475,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2481
+    .line 2830
     :goto_0
     return-void
 
-    .line 2467
+    .line 2816
     :catch_0
     move-exception v0
 
-    .line 2468
+    .line 2817
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "FilePickerWithDB"
 
@@ -6408,10 +6491,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2469
+    .line 2818
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2470
+    .line 2819
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
@@ -6555,64 +6638,64 @@
 
     const/4 v9, 0x0
 
-    .line 1308
+    .line 1346
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLoadingPage()V
 
-    .line 1309
+    .line 1347
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->unregisterSdcardReceiver()V
 
-    .line 1310
+    .line 1348
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v7}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
 
     move-result v3
 
-    .line 1311
+    .line 1349
     .local v3, dataSourceType:I
     const v7, 0x20200c3
 
     invoke-direct {p0, v7}, Lcom/htc/app/FilePickerCore;->removeAllChildView(I)V
 
-    .line 1313
+    .line 1351
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->checkActionBarContainerBackUpEnabled()V
 
-    .line 1314
+    .line 1352
     invoke-direct {p0, v9}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
 
-    .line 1316
+    .line 1354
     iget-boolean v7, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
 
     if-eqz v7, :cond_0
 
-    .line 1317
+    .line 1355
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    const v8, 0x20403d1
+    const v8, 0x20403d2
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1318
+    .line 1356
     .local v6, title:Ljava/lang/String;
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v7, v6}, Lcom/htc/app/FilePickerActionBarExtController;->setMainTitle(Ljava/lang/String;)V
 
-    .line 1319
+    .line 1357
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v7, v10}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 1320
+    .line 1358
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v7, v10}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
 
-    .line 1338
+    .line 1376
     .end local v6           #title:Ljava/lang/String;
     :goto_0
     const v7, 0x20200c4
@@ -6621,24 +6704,24 @@
 
     invoke-direct {p0, v7, v8}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1339
+    .line 1377
     const v7, 0x20200c2
 
     invoke-direct {p0, v7, v9}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1340
+    .line 1378
     const/4 v7, 0x7
 
     invoke-direct {p0, v7}, Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
 
-    .line 1341
+    .line 1379
     return-void
 
-    .line 1322
+    .line 1360
     :cond_0
     invoke-direct {p0, v3}, Lcom/htc/app/FilePickerCore;->setMainTitle(I)V
 
-    .line 1323
+    .line 1361
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v7
@@ -6647,11 +6730,11 @@
 
     move-result-object v1
 
-    .line 1324
+    .line 1362
     .local v1, accountIds:[Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 1325
+    .line 1363
     move-object v2, v1
 
     .local v2, arr$:[Ljava/lang/String;
@@ -6666,7 +6749,7 @@
 
     aget-object v0, v2, v4
 
-    .line 1326
+    .line 1364
     .local v0, accountId:Ljava/lang/String;
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
@@ -6678,12 +6761,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 1327
+    .line 1365
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v7, v0}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 1334
+    .line 1372
     .end local v0           #accountId:Ljava/lang/String;
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
@@ -6695,7 +6778,7 @@
 
     invoke-virtual {v7}, Lcom/htc/app/FilePickerAppDropDownAdapter;->refreshAppListItems()V
 
-    .line 1335
+    .line 1373
     iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-direct {p0, v9}, Lcom/htc/app/FilePickerCore;->getAppDropDownAdapter(Z)Lcom/htc/app/FilePickerAppDropDownAdapter;
@@ -6706,7 +6789,7 @@
 
     goto :goto_0
 
-    .line 1330
+    .line 1368
     .restart local v0       #accountId:Ljava/lang/String;
     .restart local v2       #arr$:[Ljava/lang/String;
     .restart local v4       #i$:I
@@ -6716,7 +6799,7 @@
 
     invoke-virtual {v7, v10}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 1325
+    .line 1363
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
@@ -6730,76 +6813,76 @@
 
     const/4 v10, 0x0
 
-    .line 1262
+    .line 1300
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLoadingPage()V
 
-    .line 1263
+    .line 1301
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->unregisterSdcardReceiver()V
 
-    .line 1264
+    .line 1302
     const v8, 0x20200c4
 
     const/16 v9, 0x8
 
     invoke-direct {p0, v8, v9}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1265
+    .line 1303
     const v8, 0x20200c2
 
     invoke-direct {p0, v8, v10}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1266
+    .line 1304
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v8}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
 
     move-result v3
 
-    .line 1267
+    .line 1305
     .local v3, dataSourceType:I
     const v8, 0x20200c3
 
     invoke-direct {p0, v8}, Lcom/htc/app/FilePickerCore;->removeAllChildView(I)V
 
-    .line 1269
+    .line 1307
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->checkActionBarContainerBackUpEnabled()V
 
-    .line 1270
+    .line 1308
     invoke-direct {p0, v10}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
 
-    .line 1272
+    .line 1310
     iget-boolean v8, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
 
     if-eqz v8, :cond_0
 
-    .line 1273
+    .line 1311
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    const v9, 0x20403d1
+    const v9, 0x20403d2
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1274
+    .line 1312
     .local v7, title:Ljava/lang/String;
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v8, v7}, Lcom/htc/app/FilePickerActionBarExtController;->setMainTitle(Ljava/lang/String;)V
 
-    .line 1275
+    .line 1313
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v8, v11}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 1276
+    .line 1314
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v8, v11}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
 
-    .line 1293
+    .line 1331
     .end local v7           #title:Ljava/lang/String;
     :goto_0
     new-instance v6, Lcom/htc/app/FilePickerCore$6;
@@ -6810,24 +6893,24 @@
 
     invoke-direct {v6, p0, v8}, Lcom/htc/app/FilePickerCore$6;-><init>(Lcom/htc/app/FilePickerCore;Ljava/lang/Runnable;)V
 
-    .line 1303
+    .line 1341
     .local v6, thread:Ljava/lang/Thread;
     const/4 v8, 0x1
 
     invoke-virtual {v6, v8}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 1304
+    .line 1342
     invoke-virtual {v6}, Ljava/lang/Thread;->start()V
 
-    .line 1305
+    .line 1343
     return-void
 
-    .line 1278
+    .line 1316
     .end local v6           #thread:Ljava/lang/Thread;
     :cond_0
     invoke-direct {p0, v3}, Lcom/htc/app/FilePickerCore;->setMainTitle(I)V
 
-    .line 1279
+    .line 1317
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v8
@@ -6836,11 +6919,11 @@
 
     move-result-object v1
 
-    .line 1280
+    .line 1318
     .local v1, accountIds:[Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 1281
+    .line 1319
     move-object v2, v1
 
     .local v2, arr$:[Ljava/lang/String;
@@ -6855,7 +6938,7 @@
 
     aget-object v0, v2, v4
 
-    .line 1282
+    .line 1320
     .local v0, accountId:Ljava/lang/String;
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
@@ -6867,12 +6950,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 1283
+    .line 1321
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v8, v0}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 1290
+    .line 1328
     .end local v0           #accountId:Ljava/lang/String;
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
@@ -6884,7 +6967,7 @@
 
     invoke-virtual {v8}, Lcom/htc/app/FilePickerAppDropDownAdapter;->refreshAppListItems()V
 
-    .line 1291
+    .line 1329
     iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-direct {p0, v10}, Lcom/htc/app/FilePickerCore;->getAppDropDownAdapter(Z)Lcom/htc/app/FilePickerAppDropDownAdapter;
@@ -6895,7 +6978,7 @@
 
     goto :goto_0
 
-    .line 1286
+    .line 1324
     .restart local v0       #accountId:Ljava/lang/String;
     .restart local v2       #arr$:[Ljava/lang/String;
     .restart local v4       #i$:I
@@ -6905,7 +6988,7 @@
 
     invoke-virtual {v8, v11}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 1281
+    .line 1319
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
@@ -6915,42 +6998,42 @@
     .locals 2
 
     .prologue
-    .line 1345
+    .line 1383
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLoadingPage()V
 
-    .line 1348
+    .line 1386
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->registerSdcardReceiver()V
 
-    .line 1351
+    .line 1389
     const v0, 0x20200c4
 
     const/16 v1, 0x8
 
     invoke-direct {p0, v0, v1}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1354
+    .line 1392
     const v0, 0x20200be
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1357
+    .line 1395
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialLocalPickerAdapter()V
 
-    .line 1360
+    .line 1398
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialLocalPickerScanner()V
 
-    .line 1363
+    .line 1401
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLocalFilePickerView()V
 
-    .line 1365
+    .line 1403
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->loadFiles()V
 
-    .line 1366
+    .line 1404
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 1367
+    .line 1405
     return-void
 .end method
 
@@ -6958,32 +7041,32 @@
     .locals 2
 
     .prologue
-    .line 1370
+    .line 1408
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLoadingPage()V
 
-    .line 1372
+    .line 1410
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->registerSdcardReceiver()V
 
-    .line 1373
+    .line 1411
     const v0, 0x20200c4
 
     const/16 v1, 0x8
 
     invoke-direct {p0, v0, v1}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1374
+    .line 1412
     const v0, 0x20200be
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1375
+    .line 1413
     const/4 v0, 0x6
 
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
 
-    .line 1376
+    .line 1414
     return-void
 .end method
 
@@ -6991,7 +7074,7 @@
     .locals 5
 
     .prologue
-    .line 933
+    .line 972
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -7004,7 +7087,7 @@
 
     move-result-object v1
 
-    .line 935
+    .line 974
     .local v1, sharedPreferences:Landroid/content/SharedPreferences;
     const-string v2, "pref_key_filepicker_carousel_default_tab"
 
@@ -7014,7 +7097,7 @@
 
     move-result-object v0
 
-    .line 936
+    .line 975
     .local v0, result:Ljava/lang/String;
     return-object v0
 .end method
@@ -7023,7 +7106,7 @@
     .locals 6
 
     .prologue
-    .line 940
+    .line 979
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -7036,7 +7119,7 @@
 
     move-result-object v2
 
-    .line 942
+    .line 981
     .local v2, sharedPreferences:Landroid/content/SharedPreferences;
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
@@ -7046,7 +7129,7 @@
 
     move-result v1
 
-    .line 943
+    .line 982
     .local v1, defaultCloudDateSourceType:I
     const-string v3, "pref_key_filepicker_cloud_files_scope_type"
 
@@ -7054,7 +7137,7 @@
 
     move-result v0
 
-    .line 946
+    .line 985
     .local v0, dataSourceType:I
     return v0
 .end method
@@ -7063,7 +7146,7 @@
     .locals 4
 
     .prologue
-    .line 896
+    .line 935
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -7076,7 +7159,7 @@
 
     move-result-object v0
 
-    .line 898
+    .line 937
     .local v0, sharedPreferences:Landroid/content/SharedPreferences;
     const-string v1, "CurrentAppAdapterIsLocalMode"
 
@@ -7099,18 +7182,18 @@
 
     const/16 v5, 0xf
 
-    .line 2865
+    .line 3212
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isInternalStorageAvailable()Z
 
     move-result v2
 
-    .line 2866
+    .line 3213
     .local v2, bInternalStorageAvailable:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageAvailable()Z
 
     move-result v0
 
-    .line 2868
+    .line 3215
     .local v0, bExternalStorageAvailable:Z
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -7120,99 +7203,99 @@
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 2900
+    .line 3247
     :goto_0
     return-void
 
-    .line 2870
+    .line 3217
     :sswitch_0
     if-eqz v2, :cond_0
 
-    .line 2871
+    .line 3218
     invoke-direct {p0, v5}, Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
 
     goto :goto_0
 
-    .line 2873
+    .line 3220
     :cond_0
     invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->showNoSdCard(I)V
 
     goto :goto_0
 
-    .line 2877
+    .line 3224
     :sswitch_1
     if-eqz v0, :cond_1
 
-    .line 2878
+    .line 3225
     invoke-direct {p0, v5}, Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
 
     goto :goto_0
 
-    .line 2880
+    .line 3227
     :cond_1
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageShared()Z
 
     move-result v1
 
-    .line 2881
+    .line 3228
     .local v1, bExternalStorageShared:Z
     if-eqz v1, :cond_2
 
-    .line 2882
+    .line 3229
     invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->showNoSdCard(I)V
 
     goto :goto_0
 
-    .line 2884
+    .line 3231
     :cond_2
     invoke-direct {p0, v7}, Lcom/htc/app/FilePickerCore;->showNoSdCard(I)V
 
     goto :goto_0
 
-    .line 2888
+    .line 3235
     .end local v1           #bExternalStorageShared:Z
     :sswitch_2
     if-nez v2, :cond_3
 
     if-eqz v0, :cond_4
 
-    .line 2889
+    .line 3236
     :cond_3
     invoke-direct {p0, v5}, Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
 
     goto :goto_0
 
-    .line 2891
+    .line 3238
     :cond_4
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageShared()Z
 
     move-result v1
 
-    .line 2892
+    .line 3239
     .restart local v1       #bExternalStorageShared:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isInternalStorageShared()Z
 
     move-result v3
 
-    .line 2893
+    .line 3240
     .local v3, bInternalStorageShared:Z
     if-nez v1, :cond_5
 
     if-eqz v3, :cond_6
 
-    .line 2894
+    .line 3241
     :cond_5
     invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->showNoSdCard(I)V
 
     goto :goto_0
 
-    .line 2896
+    .line 3243
     :cond_6
     invoke-direct {p0, v7}, Lcom/htc/app/FilePickerCore;->showNoSdCard(I)V
 
     goto :goto_0
 
-    .line 2868
+    .line 3215
     :sswitch_data_0
     .sparse-switch
         -0x9 -> :sswitch_2
@@ -7225,7 +7308,7 @@
     .locals 6
 
     .prologue
-    .line 909
+    .line 948
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -7238,13 +7321,13 @@
 
     move-result-object v2
 
-    .line 911
+    .line 950
     .local v2, sharedPreferences:Landroid/content/SharedPreferences;
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->getLocalDefaultDateSourceType()I
 
     move-result v1
 
-    .line 912
+    .line 951
     .local v1, defaultDateSourceType:I
     const-string v3, "pref_key_filepicker_local_files_scope_type"
 
@@ -7252,7 +7335,7 @@
 
     move-result v0
 
-    .line 915
+    .line 954
     .local v0, dateSourceType:I
     return v0
 .end method
@@ -7261,7 +7344,7 @@
     .locals 5
 
     .prologue
-    .line 965
+    .line 1004
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -7274,7 +7357,7 @@
 
     move-result-object v0
 
-    .line 967
+    .line 1006
     .local v0, sharedPreferences:Landroid/content/SharedPreferences;
     const-string v2, "sort_order"
 
@@ -7284,7 +7367,7 @@
 
     move-result v1
 
-    .line 968
+    .line 1007
     .local v1, sortOrder:I
     return v1
 .end method
@@ -7293,7 +7376,7 @@
     .locals 5
 
     .prologue
-    .line 958
+    .line 997
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -7306,7 +7389,7 @@
 
     move-result-object v0
 
-    .line 960
+    .line 999
     .local v0, sharedPreferences:Landroid/content/SharedPreferences;
     const-string v2, "sort_type"
 
@@ -7316,7 +7399,7 @@
 
     move-result v1
 
-    .line 961
+    .line 1000
     .local v1, sortType:I
     return v1
 .end method
@@ -7327,7 +7410,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3431
+    .line 3781
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -7340,7 +7423,7 @@
 
     check-cast v0, Lcom/htc/app/FilePickerListView;
 
-    .line 3433
+    .line 3783
     .local v0, typeListView:Lcom/htc/app/FilePickerListView;
     if-eqz v0, :cond_0
 
@@ -7348,7 +7431,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3434
+    .line 3784
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mEditor:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v1}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
@@ -7357,7 +7440,7 @@
 
     invoke-virtual {v0, v1, v3, v3, v3}, Lcom/htc/app/FilePickerListView;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 3436
+    .line 3786
     :cond_0
     return-void
 .end method
@@ -7369,7 +7452,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3439
+    .line 3789
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -7382,15 +7465,33 @@
 
     check-cast v0, Lcom/htc/app/FilePickerListView;
 
-    .line 3441
+    .line 3791
     .local v0, typeListView:Lcom/htc/app/FilePickerListView;
     if-eqz v0, :cond_0
 
-    .line 3442
+    .line 3792
     invoke-virtual {v0, p1, v3, v3, v3}, Lcom/htc/app/FilePickerListView;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    .line 3444
+    .line 3794
     :cond_0
+    return-void
+.end method
+
+.method private onResult(Landroid/os/Bundle;)V
+    .locals 1
+    .parameter "bundle"
+
+    .prologue
+    .line 3743
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/htc/app/FilePickerActivity;
+
+    invoke-virtual {v0, p1}, Lcom/htc/app/FilePickerActivity;->onResult(Landroid/os/Bundle;)V
+
+    .line 3744
     return-void
 .end method
 
@@ -7401,7 +7502,7 @@
     .parameter "sortOrder"
 
     .prologue
-    .line 3382
+    .line 3739
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -7410,7 +7511,7 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/app/FilePickerActivity;->onResult([Ljava/lang/String;II)V
 
-    .line 3383
+    .line 3740
     return-void
 .end method
 
@@ -7418,7 +7519,7 @@
     .locals 8
 
     .prologue
-    .line 2001
+    .line 2349
     const/4 v6, 0x3
 
     new-array v1, v6, [Lcom/htc/app/FilePickerListAdapter;
@@ -7441,7 +7542,7 @@
 
     aput-object v7, v1, v6
 
-    .line 2002
+    .line 2350
     .local v1, adapters:[Lcom/htc/app/FilePickerListAdapter;
     move-object v2, v1
 
@@ -7457,26 +7558,26 @@
 
     aget-object v0, v2, v3
 
-    .line 2003
+    .line 2351
     .local v0, adapter:Lcom/htc/app/FilePickerListAdapter;
     if-eqz v0, :cond_0
 
-    .line 2004
+    .line 2352
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->resetAllChecked()V
 
-    .line 2005
+    .line 2353
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
-    .line 2006
+    .line 2354
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->performActionModeFinish()V
 
-    .line 2002
+    .line 2350
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 2009
+    .line 2357
     .end local v0           #adapter:Lcom/htc/app/FilePickerListAdapter;
     :cond_1
     iget-object v6, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
@@ -7491,7 +7592,7 @@
 
     if-nez v6, :cond_3
 
-    .line 2010
+    .line 2358
     iget-object v6, p0, Lcom/htc/app/FilePickerCore;->MoreExpanedObjectList:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -7513,28 +7614,28 @@
 
     check-cast v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    .line 2011
+    .line 2359
     .local v5, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     invoke-virtual {v5}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getFolderAdapter()Lcom/htc/app/FilePickerFolderAdapter;
 
     move-result-object v0
 
-    .line 2012
+    .line 2360
     .local v0, adapter:Lcom/htc/app/FilePickerFolderAdapter;
     if-eqz v0, :cond_2
 
-    .line 2013
+    .line 2361
     invoke-virtual {v0}, Lcom/htc/app/FilePickerFolderAdapter;->resetAllChecked()V
 
-    .line 2014
+    .line 2362
     invoke-virtual {v0}, Lcom/htc/app/FilePickerFolderAdapter;->notifyDataSetChanged()V
 
-    .line 2015
+    .line 2363
     invoke-virtual {v0}, Lcom/htc/app/FilePickerFolderAdapter;->performActionModeFinish()V
 
     goto :goto_1
 
-    .line 2019
+    .line 2367
     .end local v0           #adapter:Lcom/htc/app/FilePickerFolderAdapter;
     .end local v3           #i$:Ljava/util/Iterator;
     .end local v5           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
@@ -7543,249 +7644,285 @@
 .end method
 
 .method private performDoneButtonOnClickListenerClick()V
-    .locals 7
+    .locals 8
 
     .prologue
-    .line 2927
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
+    .line 3276
+    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    if-eq v5, v6, :cond_0
+    if-eq v6, v7, :cond_0
 
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
-    invoke-virtual {v5}, Lcom/htc/app/FilePickerUtil;->isFolderPickerModeEnabled()Z
+    invoke-virtual {v6}, Lcom/htc/app/FilePickerUtil;->isFolderPickerModeEnabled()Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_4
+    if-eqz v6, :cond_4
 
-    .line 2929
+    .line 3278
     :cond_0
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .line 2930
-    .local v4, output:[Ljava/lang/String;
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
+    .line 3279
+    .local v5, output:[Ljava/lang/String;
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    if-eqz v5, :cond_1
+    if-eqz v6, :cond_1
 
-    .line 2931
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
+    .line 3280
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    invoke-virtual {v5}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
+    invoke-virtual {v6}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 2933
+    .line 3282
     :cond_1
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    if-eqz v5, :cond_2
+    if-eqz v6, :cond_2
 
-    .line 2934
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
+    .line 3283
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    invoke-virtual {v5}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
+    invoke-virtual {v6}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 2935
+    .line 3284
     :cond_2
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    if-eqz v5, :cond_3
+    if-eqz v6, :cond_3
 
-    .line 2936
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
+    .line 3285
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    invoke-virtual {v5}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
+    invoke-virtual {v6}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 2938
+    .line 3287
     :cond_3
-    const-string v5, "Tab_Recent"
+    const-string v6, "Tab_Recent"
 
-    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_5
+    if-eqz v6, :cond_5
 
-    .line 2939
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
+    .line 3288
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    invoke-direct {p0, v5}, Lcom/htc/app/FilePickerCore;->getListAdapterSelectOutput(Lcom/htc/app/FilePickerListAdapter;)[Ljava/lang/String;
+    invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->getListAdapterSelectBundle(Lcom/htc/app/FilePickerListAdapter;)Landroid/os/Bundle;
 
-    move-result-object v4
+    move-result-object v1
 
-    .line 2940
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+    .line 3289
+    .local v1, bundle:Landroid/os/Bundle;
+    const-string v6, "output"
 
-    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+    invoke-virtual {v1, v6}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
-    invoke-direct {p0, v4, v5, v6}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+    move-result-object v5
 
-    .line 2941
+    .line 3290
+    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+
+    iget v7, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+
+    invoke-direct {p0, v5, v6, v7}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+
+    .line 3291
+    invoke-direct {p0, v1}, Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
+
+    .line 3292
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
 
-    .line 2973
-    .end local v4           #output:[Ljava/lang/String;
+    .line 3328
+    .end local v1           #bundle:Landroid/os/Bundle;
+    .end local v5           #output:[Ljava/lang/String;
     :cond_4
     :goto_0
     return-void
 
-    .line 2942
-    .restart local v4       #output:[Ljava/lang/String;
+    .line 3293
+    .restart local v5       #output:[Ljava/lang/String;
     :cond_5
-    const-string v5, "Tab_Favorites"
+    const-string v6, "Tab_Favorites"
 
-    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_6
+    if-eqz v6, :cond_6
 
-    .line 2943
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
+    .line 3294
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    invoke-direct {p0, v5}, Lcom/htc/app/FilePickerCore;->getListAdapterSelectOutput(Lcom/htc/app/FilePickerListAdapter;)[Ljava/lang/String;
+    invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->getListAdapterSelectBundle(Lcom/htc/app/FilePickerListAdapter;)Landroid/os/Bundle;
 
-    move-result-object v4
+    move-result-object v1
 
-    .line 2944
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+    .line 3295
+    .restart local v1       #bundle:Landroid/os/Bundle;
+    const-string v6, "output"
 
-    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
-
-    invoke-direct {p0, v4, v5, v6}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
-
-    .line 2945
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
-
-    goto :goto_0
-
-    .line 2946
-    :cond_6
-    const-string v5, "Tab_Type"
-
-    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_7
-
-    .line 2947
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
-
-    invoke-direct {p0, v5}, Lcom/htc/app/FilePickerCore;->getListAdapterSelectOutput(Lcom/htc/app/FilePickerListAdapter;)[Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 2948
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
-
-    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
-
-    invoke-direct {p0, v4, v5, v6}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
-
-    .line 2949
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
-
-    goto :goto_0
-
-    .line 2952
-    :cond_7
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-
-    invoke-virtual {v5}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
-
-    move-result v1
-
-    .line 2953
-    .local v1, dataSourceType:I
-    const/4 v3, 0x0
-
-    .line 2954
-    .local v3, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
-
-    invoke-virtual {v5, v1}, Lcom/htc/app/FilePickerCloudHelper;->getAccountIds(I)[Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 2955
-    .local v0, accounts:[Ljava/lang/String;
-    if-eqz v0, :cond_a
-
-    array-length v5, v0
-
-    if-lez v5, :cond_a
-
-    .line 2956
-    const/4 v5, 0x0
-
-    aget-object v5, v0, v5
-
-    invoke-direct {p0, v1, v5}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    move-result-object v3
-
-    .line 2960
-    :goto_1
-    const/4 v2, 0x0
-
-    .line 2961
-    .local v2, moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    if-eqz v3, :cond_8
-
-    .line 2962
-    invoke-virtual {v3}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getFolderAdapter()Lcom/htc/app/FilePickerFolderAdapter;
-
-    move-result-object v2
-
-    .line 2964
-    :cond_8
-    invoke-virtual {v2}, Lcom/htc/app/FilePickerFolderAdapter;->getSelectItems()Ljava/util/ArrayList;
+    invoke-virtual {v1, v6}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+    .line 3296
+    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
 
-    .line 2965
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+    iget v7, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
 
-    if-nez v5, :cond_9
+    invoke-direct {p0, v5, v6, v7}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
 
-    .line 2966
-    new-instance v5, Ljava/util/ArrayList;
+    .line 3297
+    invoke-direct {p0, v1}, Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v5, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
-
-    .line 2968
-    :cond_9
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->performOnResultAndFinishTask()V
-
-    .line 2969
-    if-eqz v2, :cond_4
-
-    .line 2970
-    invoke-virtual {v2}, Lcom/htc/app/FilePickerFolderAdapter;->resetAllChecked()V
+    .line 3298
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
 
     goto :goto_0
 
-    .line 2958
-    .end local v2           #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    :cond_a
-    const/4 v5, 0x0
+    .line 3299
+    .end local v1           #bundle:Landroid/os/Bundle;
+    :cond_6
+    const-string v6, "Tab_Type"
 
-    invoke-direct {p0, v1, v5}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    .line 3300
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
+
+    invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->getListAdapterSelectBundle(Lcom/htc/app/FilePickerListAdapter;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    .line 3301
+    .restart local v1       #bundle:Landroid/os/Bundle;
+    const-string v6, "output"
+
+    invoke-virtual {v1, v6}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 3302
+    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+
+    iget v7, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+
+    invoke-direct {p0, v5, v6, v7}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+
+    .line 3303
+    invoke-direct {p0, v1}, Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
+
+    .line 3304
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
+
+    goto :goto_0
+
+    .line 3307
+    .end local v1           #bundle:Landroid/os/Bundle;
+    :cond_7
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+
+    invoke-virtual {v6}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
+
+    move-result v2
+
+    .line 3308
+    .local v2, dataSourceType:I
+    const/4 v4, 0x0
+
+    .line 3309
+    .local v4, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
+
+    invoke-virtual {v6, v2}, Lcom/htc/app/FilePickerCloudHelper;->getAccountIds(I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3310
+    .local v0, accounts:[Ljava/lang/String;
+    if-eqz v0, :cond_a
+
+    array-length v6, v0
+
+    if-lez v6, :cond_a
+
+    .line 3311
+    const/4 v6, 0x0
+
+    aget-object v6, v0, v6
+
+    invoke-direct {p0, v2, v6}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v4
+
+    .line 3315
+    :goto_1
+    const/4 v3, 0x0
+
+    .line 3316
+    .local v3, moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
+    if-eqz v4, :cond_8
+
+    .line 3317
+    invoke-virtual {v4}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getFolderAdapter()Lcom/htc/app/FilePickerFolderAdapter;
 
     move-result-object v3
+
+    .line 3319
+    :cond_8
+    invoke-virtual {v3}, Lcom/htc/app/FilePickerFolderAdapter;->getSelectItems()Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    iput-object v6, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+
+    .line 3320
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+
+    if-nez v6, :cond_9
+
+    .line 3321
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v6, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+
+    .line 3323
+    :cond_9
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->performOnResultAndFinishTask()V
+
+    .line 3324
+    if-eqz v3, :cond_4
+
+    .line 3325
+    invoke-virtual {v3}, Lcom/htc/app/FilePickerFolderAdapter;->resetAllChecked()V
+
+    goto/16 :goto_0
+
+    .line 3313
+    .end local v3           #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
+    :cond_a
+    const/4 v6, 0x0
+
+    invoke-direct {p0, v2, v6}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v4
 
     goto :goto_1
 .end method
@@ -7797,22 +7934,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 713
+    .line 725
     invoke-virtual {p1}, Lcom/htc/app/FilePickerAppDropDownAdapter$AppListItem;->getDataSourceType()I
 
     move-result v0
 
-    .line 715
+    .line 727
     .local v0, itemDataSourceType:I
     packed-switch v0, :pswitch_data_0
 
-    .line 762
+    .line 774
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 719
+    .line 731
     :pswitch_1
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -7822,7 +7959,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 721
+    .line 733
     const-string v1, "Tab_Type"
 
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
@@ -7833,10 +7970,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 722
+    .line 734
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialEmptyViewOfTypeView()V
 
-    .line 724
+    .line 736
     :cond_1
     const-string v1, "Tab_Favorites"
 
@@ -7848,10 +7985,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 725
+    .line 737
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialEmptyViewOfFavoritesView()V
 
-    .line 727
+    .line 739
     :cond_2
     const-string v1, "Tab_Recent"
 
@@ -7863,38 +8000,38 @@
 
     if-eqz v1, :cond_3
 
-    .line 728
+    .line 740
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialEmptyViewOfRecentView()V
 
-    .line 730
+    .line 742
     :cond_3
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v1, v0}, Lcom/htc/app/FilePickerUtil;->setDataSourceType(I)V
 
-    .line 731
+    .line 743
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->setMainTitle(I)V
 
-    .line 732
+    .line 744
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->saveLocalDataSourceTypePreferences(I)V
 
-    .line 733
+    .line 745
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchLocalPicker()V
 
     goto :goto_0
 
-    .line 738
+    .line 750
     :pswitch_2
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->setMainTitle(I)V
 
-    .line 739
+    .line 751
     invoke-virtual {p1}, Lcom/htc/app/FilePickerAppDropDownAdapter$AppListItem;->isSignIn()Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 741
+    .line 753
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
@@ -7903,7 +8040,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 744
+    .line 756
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v1
@@ -7918,7 +8055,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 746
+    .line 758
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {p1}, Lcom/htc/app/FilePickerAppDropDownAdapter$AppListItem;->getSubTextName()Ljava/lang/String;
@@ -7927,21 +8064,21 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 755
+    .line 767
     :goto_1
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v1, v0}, Lcom/htc/app/FilePickerUtil;->setDataSourceType(I)V
 
-    .line 756
+    .line 768
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->saveCloudDataSourceTypePreferences(I)V
 
-    .line 757
+    .line 769
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFilePicker()V
 
     goto :goto_0
 
-    .line 748
+    .line 760
     :cond_4
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
@@ -7949,20 +8086,20 @@
 
     goto :goto_1
 
-    .line 751
+    .line 763
     :cond_5
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v1, v3}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 752
+    .line 764
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/htc/app/FilePickerCloudHelper;->signIn(I)V
 
-    .line 753
+    .line 765
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getAppDropDownCloudAdapter()Lcom/htc/app/FilePickerAppDropDownAdapter;
 
     move-result-object v1
@@ -7971,7 +8108,7 @@
 
     goto :goto_1
 
-    .line 715
+    .line 727
     nop
 
     :pswitch_data_0
@@ -7991,228 +8128,339 @@
 .end method
 
 .method private performOnResultAndFinishTask()V
-    .locals 15
+    .locals 21
 
     .prologue
-    .line 851
-    const/4 v10, 0x0
+    .line 882
+    const/4 v15, 0x0
 
-    .line 852
-    .local v10, output:[Ljava/lang/String;
-    iget-object v13, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+    .line 883
+    .local v15, output:[Ljava/lang/String;
+    const/4 v4, 0x0
 
-    monitor-enter v13
+    .line 884
+    .local v4, accountIds:[Ljava/lang/String;
+    const/16 v16, 0x0
 
-    .line 853
+    .line 885
+    .local v16, serviceNames:[Ljava/lang/String;
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    monitor-enter v19
+
+    .line 886
     :try_start_0
-    iget-object v12, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+    move-object/from16 v0, p0
 
-    if-eqz v12, :cond_3
+    iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
 
-    iget-object v12, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+    move-object/from16 v18, v0
 
-    invoke-virtual {v12}, Ljava/util/ArrayList;->isEmpty()Z
+    if-eqz v18, :cond_3
 
-    move-result v12
+    move-object/from16 v0, p0
 
-    if-nez v12, :cond_3
+    iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
 
-    .line 854
-    const/4 v6, 0x0
+    move-object/from16 v18, v0
 
-    .line 855
-    .local v6, i:I
-    iget-object v12, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+    invoke-virtual/range {v18 .. v18}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-virtual {v12}, Ljava/util/ArrayList;->size()I
+    move-result v18
 
-    move-result v11
+    if-nez v18, :cond_3
 
-    .line 856
-    .local v11, size:I
-    iget-object v12, p0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
+    .line 887
+    const/4 v11, 0x0
 
-    const/4 v14, 0x0
+    .line 888
+    .local v11, i:I
+    move-object/from16 v0, p0
 
-    new-array v14, v14, [Lcom/htc/app/FolderItemInfo;
+    iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
 
-    invoke-virtual {v12, v14}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    move-object/from16 v18, v0
 
-    move-result-object v5
+    invoke-virtual/range {v18 .. v18}, Ljava/util/ArrayList;->size()I
 
-    check-cast v5, [Lcom/htc/app/FolderItemInfo;
+    move-result v17
 
-    .line 858
-    .local v5, folderItemInfos:[Lcom/htc/app/FolderItemInfo;
-    new-array v10, v11, [Ljava/lang/String;
+    .line 889
+    .local v17, size:I
+    move-object/from16 v0, p0
 
-    .line 859
-    if-eqz v5, :cond_3
+    iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
 
-    .line 860
-    move-object v1, v5
+    move-object/from16 v18, v0
 
-    .local v1, arr$:[Lcom/htc/app/FolderItemInfo;
-    array-length v9, v1
+    const/16 v20, 0x0
 
-    .local v9, len$:I
-    const/4 v7, 0x0
+    move/from16 v0, v20
 
-    .local v7, i$:I
+    new-array v0, v0, [Lcom/htc/app/FolderItemInfo;
+
+    move-object/from16 v20, v0
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v20
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, [Lcom/htc/app/FolderItemInfo;
+
+    .line 891
+    .local v10, folderItemInfos:[Lcom/htc/app/FolderItemInfo;
+    move/from16 v0, v17
+
+    new-array v15, v0, [Ljava/lang/String;
+
+    .line 892
+    move/from16 v0, v17
+
+    new-array v4, v0, [Ljava/lang/String;
+
+    .line 893
+    move/from16 v0, v17
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    move-object/from16 v16, v0
+
+    .line 894
+    if-eqz v10, :cond_3
+
+    .line 895
+    move-object v5, v10
+
+    .local v5, arr$:[Lcom/htc/app/FolderItemInfo;
+    array-length v14, v5
+
+    .local v14, len$:I
+    const/4 v12, 0x0
+
+    .local v12, i$:I
     :goto_0
-    if-ge v7, v9, :cond_3
+    if-ge v12, v14, :cond_3
 
-    aget-object v4, v1, v7
+    aget-object v9, v5, v12
 
-    .line 861
-    .local v4, folderItemInfo:Lcom/htc/app/FolderItemInfo;
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->isCloudItem()Z
+    .line 896
+    .local v9, folderItemInfo:Lcom/htc/app/FolderItemInfo;
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->isCloudItem()Z
 
-    move-result v8
+    move-result v13
 
-    .line 862
-    .local v8, isCloudItem:Z
-    iget-boolean v12, p0, Lcom/htc/app/FilePickerCore;->isReturnCloudShareLinkEnabled:Z
+    .line 897
+    .local v13, isCloudItem:Z
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getServiceName()Ljava/lang/String;
 
-    if-eqz v12, :cond_0
+    move-result-object v18
 
-    if-eqz v8, :cond_0
+    aput-object v18, v16, v11
 
-    .line 863
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getItemDataSourceType()I
+    .line 898
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getAccountId()Ljava/lang/String;
 
-    move-result v2
+    move-result-object v18
 
-    .line 864
-    .local v2, cloudDataSourceType:I
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getCloudPath()Ljava/lang/String;
+    aput-object v18, v4, v11
+
+    .line 899
+    move-object/from16 v0, p0
+
+    iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->isReturnCloudShareLinkEnabled:Z
+
+    move/from16 v18, v0
+
+    if-eqz v18, :cond_0
+
+    if-eqz v13, :cond_0
+
+    .line 900
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getItemDataSourceType()I
+
+    move-result v7
+
+    .line 901
+    .local v7, cloudDataSourceType:I
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getCloudPath()Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 902
+    .local v8, cloudPath:Ljava/lang/String;
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getAccountId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 865
-    .local v3, cloudPath:Ljava/lang/String;
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getAccountId()Ljava/lang/String;
+    .line 903
+    .local v3, accountId:Ljava/lang/String;
+    invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
-    move-result-object v0
+    move-result-object v18
 
-    .line 866
-    .local v0, accountId:Ljava/lang/String;
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
+    move-object/from16 v0, v18
 
-    move-result-object v12
+    invoke-virtual {v0, v7, v8, v3}, Lcom/htc/app/FilePickerCloudHelper;->getCloudShareLink(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v12, v2, v3, v0}, Lcom/htc/app/FilePickerCloudHelper;->getCloudShareLink(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v18
 
-    move-result-object v12
+    aput-object v18, v15, v11
 
-    aput-object v12, v10, v6
-
-    .line 879
-    .end local v0           #accountId:Ljava/lang/String;
-    .end local v2           #cloudDataSourceType:I
-    .end local v3           #cloudPath:Ljava/lang/String;
+    .line 916
+    .end local v3           #accountId:Ljava/lang/String;
+    .end local v7           #cloudDataSourceType:I
+    .end local v8           #cloudPath:Ljava/lang/String;
     :goto_1
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v11, v11, 0x1
 
-    .line 860
-    add-int/lit8 v7, v7, 0x1
+    .line 895
+    add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 869
+    .line 906
     :cond_0
-    iget-boolean v12, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
+    move-object/from16 v0, p0
 
-    if-eqz v12, :cond_1
+    iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
 
-    .line 870
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getCloudPath()Ljava/lang/String;
+    move/from16 v18, v0
 
-    move-result-object v12
+    if-eqz v18, :cond_1
 
-    aput-object v12, v10, v6
+    .line 907
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getCloudPath()Ljava/lang/String;
+
+    move-result-object v18
+
+    aput-object v18, v15, v11
 
     goto :goto_1
 
-    .line 883
-    .end local v1           #arr$:[Lcom/htc/app/FolderItemInfo;
-    .end local v4           #folderItemInfo:Lcom/htc/app/FolderItemInfo;
-    .end local v5           #folderItemInfos:[Lcom/htc/app/FolderItemInfo;
-    .end local v6           #i:I
-    .end local v7           #i$:I
-    .end local v8           #isCloudItem:Z
-    .end local v9           #len$:I
-    .end local v11           #size:I
+    .line 920
+    .end local v5           #arr$:[Lcom/htc/app/FolderItemInfo;
+    .end local v9           #folderItemInfo:Lcom/htc/app/FolderItemInfo;
+    .end local v10           #folderItemInfos:[Lcom/htc/app/FolderItemInfo;
+    .end local v11           #i:I
+    .end local v12           #i$:I
+    .end local v13           #isCloudItem:Z
+    .end local v14           #len$:I
+    .end local v17           #size:I
     :catchall_0
-    move-exception v12
+    move-exception v18
 
-    monitor-exit v13
+    monitor-exit v19
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v12
+    throw v18
 
-    .line 872
-    .restart local v1       #arr$:[Lcom/htc/app/FolderItemInfo;
-    .restart local v4       #folderItemInfo:Lcom/htc/app/FolderItemInfo;
-    .restart local v5       #folderItemInfos:[Lcom/htc/app/FolderItemInfo;
-    .restart local v6       #i:I
-    .restart local v7       #i$:I
-    .restart local v8       #isCloudItem:Z
-    .restart local v9       #len$:I
-    .restart local v11       #size:I
+    .line 909
+    .restart local v5       #arr$:[Lcom/htc/app/FolderItemInfo;
+    .restart local v9       #folderItemInfo:Lcom/htc/app/FolderItemInfo;
+    .restart local v10       #folderItemInfos:[Lcom/htc/app/FolderItemInfo;
+    .restart local v11       #i:I
+    .restart local v12       #i$:I
+    .restart local v13       #isCloudItem:Z
+    .restart local v14       #len$:I
+    .restart local v17       #size:I
     :cond_1
     :try_start_1
-    iget v12, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
+    move-object/from16 v0, p0
 
-    const/4 v14, 0x1
+    iget v0, v0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    if-ne v12, v14, :cond_2
+    move/from16 v18, v0
 
-    .line 873
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getAbsolutePath()Ljava/lang/String;
+    const/16 v20, 0x1
 
-    move-result-object v12
+    move/from16 v0, v18
 
-    aput-object v12, v10, v6
+    move/from16 v1, v20
+
+    if-ne v0, v1, :cond_2
+
+    .line 910
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v18
+
+    aput-object v18, v15, v11
 
     goto :goto_1
 
-    .line 875
+    .line 912
     :cond_2
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getLocalPath()Ljava/lang/String;
+    invoke-virtual {v9}, Lcom/htc/app/FolderItemInfo;->getLocalPath()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v18
 
-    aput-object v12, v10, v6
+    aput-object v18, v15, v11
 
     goto :goto_1
 
-    .line 883
-    .end local v1           #arr$:[Lcom/htc/app/FolderItemInfo;
-    .end local v4           #folderItemInfo:Lcom/htc/app/FolderItemInfo;
-    .end local v5           #folderItemInfos:[Lcom/htc/app/FolderItemInfo;
-    .end local v6           #i:I
-    .end local v7           #i$:I
-    .end local v8           #isCloudItem:Z
-    .end local v9           #len$:I
-    .end local v11           #size:I
+    .line 920
+    .end local v5           #arr$:[Lcom/htc/app/FolderItemInfo;
+    .end local v9           #folderItemInfo:Lcom/htc/app/FolderItemInfo;
+    .end local v10           #folderItemInfos:[Lcom/htc/app/FolderItemInfo;
+    .end local v11           #i:I
+    .end local v12           #i$:I
+    .end local v13           #isCloudItem:Z
+    .end local v14           #len$:I
+    .end local v17           #size:I
     :cond_3
-    monitor-exit v13
+    monitor-exit v19
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 884
-    iget v12, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+    .line 921
+    move-object/from16 v0, p0
 
-    iget v13, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+    iget v0, v0, Lcom/htc/app/FilePickerCore;->mSortType:I
 
-    invoke-direct {p0, v10, v12, v13}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+    move/from16 v18, v0
 
-    .line 885
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
+    move-object/from16 v0, p0
 
-    .line 886
+    iget v0, v0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+
+    move/from16 v19, v0
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v18
+
+    move/from16 v2, v19
+
+    invoke-direct {v0, v15, v1, v2}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+
+    .line 922
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v16
+
+    invoke-direct {v0, v15, v1, v4}, Lcom/htc/app/FilePickerCore;->getBundle([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v6
+
+    .line 923
+    .local v6, bundle:Landroid/os/Bundle;
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v6}, Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
+
+    .line 924
+    invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->finish()V
+
+    .line 925
     return-void
 .end method
 
@@ -8220,22 +8468,22 @@
     .locals 0
 
     .prologue
-    .line 1128
+    .line 1167
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->doStop()V
 
-    .line 1129
+    .line 1168
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->doDestroy()V
 
-    .line 1131
+    .line 1170
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->switchLayoutByPicker()V
 
-    .line 1132
+    .line 1171
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 1134
+    .line 1172
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->doStart()V
 
-    .line 1135
+    .line 1173
     return-void
 .end method
 
@@ -8243,85 +8491,85 @@
     .locals 3
 
     .prologue
-    .line 2425
+    .line 2774
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mSdcardListener:Lcom/htc/app/FilePickerCore$SdcardListener;
 
     if-nez v1, :cond_0
 
-    .line 2426
+    .line 2775
     new-instance v1, Lcom/htc/app/FilePickerCore$SdcardListener;
 
     invoke-direct {v1, p0}, Lcom/htc/app/FilePickerCore$SdcardListener;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v1, p0, Lcom/htc/app/FilePickerCore;->mSdcardListener:Lcom/htc/app/FilePickerCore$SdcardListener;
 
-    .line 2427
+    .line 2776
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 2428
+    .line 2777
     .local v0, sdFilter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.MEDIA_BAD_REMOVAL"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2429
+    .line 2778
     const-string v1, "android.intent.action.MEDIA_BUTTON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2430
+    .line 2779
     const-string v1, "android.intent.action.MEDIA_EJECT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2431
+    .line 2780
     const-string v1, "android.intent.action.MEDIA_MOUNTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2432
+    .line 2781
     const-string v1, "android.intent.action.MEDIA_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2433
+    .line 2782
     const-string v1, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2434
+    .line 2783
     const-string v1, "android.intent.action.MEDIA_SCANNER_SCAN_FILE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2435
+    .line 2784
     const-string v1, "android.intent.action.MEDIA_SCANNER_STARTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2436
+    .line 2785
     const-string v1, "android.intent.action.MEDIA_SHARED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2437
+    .line 2786
     const-string v1, "android.intent.action.MEDIA_UNMOUNTABLE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2438
+    .line 2787
     const-string v1, "android.intent.action.MEDIA_UNMOUNTED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 2439
+    .line 2788
     const-string v1, "file"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 2440
+    .line 2789
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -8330,7 +8578,7 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 2442
+    .line 2791
     .end local v0           #sdFilter:Landroid/content/IntentFilter;
     :cond_0
     return-void
@@ -8341,7 +8589,7 @@
     .parameter "parentResId"
 
     .prologue
-    .line 1960
+    .line 2308
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getMainView()Landroid/view/View;
 
     move-result-object v2
@@ -8352,20 +8600,20 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    .line 1961
+    .line 2309
     .local v1, layout:Landroid/widget/LinearLayout;
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
-    .line 1962
+    .line 2310
     .local v0, childCount:I
     if-lez v0, :cond_0
 
-    .line 1963
+    .line 2311
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 1965
+    .line 2313
     :cond_0
     return-void
 .end method
@@ -8375,24 +8623,24 @@
     .parameter "currentTab"
 
     .prologue
-    .line 926
+    .line 965
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v0, :cond_0
 
-    .line 927
+    .line 966
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "pref_key_filepicker_carousel_default_tab"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 928
+    .line 967
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 930
+    .line 969
     :cond_0
     return-void
 .end method
@@ -8402,24 +8650,24 @@
     .parameter "dataSourceType"
 
     .prologue
-    .line 919
+    .line 958
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v0, :cond_0
 
-    .line 920
+    .line 959
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "pref_key_filepicker_cloud_files_scope_type"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 921
+    .line 960
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 923
+    .line 962
     :cond_0
     return-void
 .end method
@@ -8429,24 +8677,24 @@
     .parameter "isLocal"
 
     .prologue
-    .line 902
+    .line 941
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v0, :cond_0
 
-    .line 903
+    .line 942
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "CurrentAppAdapterIsLocalMode"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 904
+    .line 943
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 906
+    .line 945
     :cond_0
     return-void
 .end method
@@ -8456,24 +8704,24 @@
     .parameter "showFilesScope"
 
     .prologue
-    .line 889
+    .line 928
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v0, :cond_0
 
-    .line 890
+    .line 929
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "pref_key_filepicker_local_files_scope_type"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 891
+    .line 930
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 893
+    .line 932
     :cond_0
     return-void
 .end method
@@ -8484,31 +8732,31 @@
     .parameter "sortOrder"
 
     .prologue
-    .line 950
+    .line 989
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v0, :cond_0
 
-    .line 951
+    .line 990
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "sort_type"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 952
+    .line 991
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "sort_order"
 
     invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 953
+    .line 992
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 955
+    .line 994
     :cond_0
     return-void
 .end method
@@ -8519,7 +8767,7 @@
     .parameter "text"
 
     .prologue
-    .line 3114
+    .line 3470
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -8530,18 +8778,18 @@
 
     check-cast v1, Lcom/htc/app/FilePickerListView;
 
-    .line 3115
+    .line 3471
     .local v1, listView:Lcom/htc/app/FilePickerListView;
     if-eqz v1, :cond_0
 
-    .line 3116
+    .line 3472
     invoke-virtual {v1}, Lcom/htc/app/FilePickerListView;->getHeaderViewsCount()I
 
     move-result v2
 
     if-lez v2, :cond_0
 
-    .line 3117
+    .line 3473
     const v2, 0x20200c6
 
     invoke-virtual {v1, v2}, Lcom/htc/app/FilePickerListView;->findViewById(I)Landroid/view/View;
@@ -8550,13 +8798,13 @@
 
     check-cast v0, Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 3119
+    .line 3475
     .local v0, htcListItemSeparator:Lcom/htc/widget/HtcListItemSeparator;
     const/4 v2, 0x2
 
     invoke-virtual {v0, v2, p2}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 3122
+    .line 3478
     .end local v0           #htcListItemSeparator:Lcom/htc/widget/HtcListItemSeparator;
     :cond_0
     return-void
@@ -8567,23 +8815,23 @@
     .parameter "dataSourceType"
 
     .prologue
-    .line 799
-    const v1, 0x20403c0
+    .line 830
+    const v1, 0x20403c1
 
-    .line 800
+    .line 831
     .local v1, titleId:I
     const/4 v2, 0x0
 
-    .line 802
+    .line 833
     .local v2, updated:Z
     packed-switch p1, :pswitch_data_0
 
-    .line 829
+    .line 860
     :goto_0
     :pswitch_0
     if-eqz v2, :cond_0
 
-    .line 830
+    .line 861
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -8592,82 +8840,82 @@
 
     move-result-object v0
 
-    .line 831
+    .line 862
     .local v0, title:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 832
+    .line 863
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v3, v0}, Lcom/htc/app/FilePickerActionBarExtController;->setMainTitle(Ljava/lang/String;)V
 
-    .line 835
+    .line 866
     .end local v0           #title:Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 804
+    .line 835
     :pswitch_1
-    const v1, 0x20403c4
+    const v1, 0x20403c5
 
-    .line 805
+    .line 836
     const/4 v2, 0x1
 
-    .line 806
+    .line 837
     goto :goto_0
 
-    .line 808
+    .line 839
     :pswitch_2
     sget-boolean v3, Lcom/htc/app/FilePickerUtil;->IsTabletDevice:Z
 
     if-eqz v3, :cond_1
 
-    .line 809
-    const v1, 0x20403d6
+    .line 840
+    const v1, 0x20403d7
 
-    .line 813
+    .line 844
     :goto_1
     const/4 v2, 0x1
 
-    .line 814
+    .line 845
     goto :goto_0
 
-    .line 811
+    .line 842
     :cond_1
-    const v1, 0x20403d7
+    const v1, 0x20403d8
 
     goto :goto_1
 
-    .line 816
+    .line 847
     :pswitch_3
-    const v1, 0x20403c1
-
-    .line 817
-    const/4 v2, 0x1
-
-    .line 818
-    goto :goto_0
-
-    .line 820
-    :pswitch_4
     const v1, 0x20403c2
 
-    .line 821
+    .line 848
     const/4 v2, 0x1
 
-    .line 822
+    .line 849
     goto :goto_0
 
-    .line 824
+    .line 851
+    :pswitch_4
+    const v1, 0x20403c3
+
+    .line 852
+    const/4 v2, 0x1
+
+    .line 853
+    goto :goto_0
+
+    .line 855
     :pswitch_5
-    const v1, 0x20403bf
+    const v1, 0x20403c0
 
-    .line 825
+    .line 856
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 802
+    .line 833
     :pswitch_data_0
     .packed-switch -0x9
         :pswitch_5
@@ -8690,15 +8938,15 @@
     .parameter "visibled"
 
     .prologue
-    .line 2712
+    .line 3059
     if-eqz p1, :cond_0
 
-    .line 2713
+    .line 3060
     invoke-interface {p1}, Landroid/view/Menu;->size()I
 
     move-result v0
 
-    .line 2714
+    .line 3061
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -8706,21 +8954,21 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2715
+    .line 3062
     invoke-interface {p1, v1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v2
 
-    .line 2716
+    .line 3063
     .local v2, menuItem:Landroid/view/MenuItem;
     invoke-interface {v2, p2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 2714
+    .line 3061
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2719
+    .line 3066
     .end local v0           #count:I
     .end local v1           #i:I
     .end local v2           #menuItem:Landroid/view/MenuItem;
@@ -8736,25 +8984,25 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1464
+    .line 1502
     invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
 
-    .line 1465
+    .line 1503
     .local v3, viewParent:Landroid/view/ViewParent;
     if-eqz v3, :cond_0
 
     move-object v2, v3
 
-    .line 1466
+    .line 1504
     check-cast v2, Landroid/view/ViewGroup;
 
-    .line 1467
+    .line 1505
     .local v2, viewGroup:Landroid/view/ViewGroup;
     invoke-virtual {v2}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 1470
+    .line 1508
     .end local v2           #viewGroup:Landroid/view/ViewGroup;
     :cond_0
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getMainView()Landroid/view/View;
@@ -8767,17 +9015,17 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    .line 1471
+    .line 1509
     .local v1, layout:Landroid/widget/LinearLayout;
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
-    .line 1472
+    .line 1510
     .local v0, childCount:I
     if-lez v0, :cond_3
 
-    .line 1473
+    .line 1511
     const/4 v4, 0x1
 
     if-ne v0, v4, :cond_1
@@ -8792,22 +9040,22 @@
 
     if-nez v4, :cond_2
 
-    .line 1474
+    .line 1512
     :cond_1
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 1475
+    .line 1513
     invoke-virtual {v1, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 1480
+    .line 1518
     :cond_2
     :goto_0
     invoke-direct {p0, p1, v5}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1481
+    .line 1519
     return-void
 
-    .line 1478
+    .line 1516
     :cond_3
     invoke-virtual {v1, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -8820,7 +9068,7 @@
     .parameter "visibility"
 
     .prologue
-    .line 3715
+    .line 4075
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -8829,314 +9077,292 @@
 
     move-result-object v0
 
-    .line 3716
+    .line 4076
     .local v0, view:Landroid/view/View;
     if-nez v0, :cond_1
 
-    .line 3724
+    .line 4084
     :cond_0
     :goto_0
     return-void
 
-    .line 3718
+    .line 4078
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v1
 
-    .line 3719
+    .line 4079
     .local v1, viewVisibility:I
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 3720
+    .line 4080
     .local v2, visibleTag:Ljava/lang/Integer;
     invoke-virtual {v0, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 3721
+    .line 4081
     if-eq v1, p2, :cond_0
 
-    .line 3722
+    .line 4082
     invoke-virtual {v0, p2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method
 
 .method private showCloudPickerView()V
-    .locals 13
+    .locals 12
 
     .prologue
-    .line 1877
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    const v11, 0x20200aa
 
-    invoke-virtual {v1}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
+    const/16 v10, 0x8
 
-    move-result v7
+    const/4 v9, 0x0
 
-    .line 1882
-    .local v7, dataSourceType:I
-    const/4 v11, 0x0
+    .line 2228
+    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
-    .line 1883
-    .local v11, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
-
-    invoke-virtual {v1, v7}, Lcom/htc/app/FilePickerCloudHelper;->getAccountIds(I)[Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 1884
-    .local v6, accounts:[Ljava/lang/String;
-    if-eqz v6, :cond_3
-
-    array-length v1, v6
-
-    if-lez v1, :cond_3
-
-    .line 1885
-    const/4 v1, 0x0
-
-    aget-object v1, v6, v1
-
-    invoke-direct {p0, v7, v1}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    move-result-object v11
-
-    .line 1889
-    :goto_0
-    const/4 v4, 0x0
-
-    .line 1890
-    .local v4, filePickerFolderView:Landroid/view/ViewGroup;
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getFolderViewInstance()Landroid/view/ViewGroup;
-
-    move-result-object v4
-
-    .line 1892
-    const v1, 0x20200b1
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v12
-
-    check-cast v12, Lcom/htc/widget/HtcIconButton;
-
-    .line 1894
-    .local v12, noLoginBtn:Lcom/htc/widget/HtcIconButton;
-    new-instance v1, Lcom/htc/app/FilePickerCore$8;
-
-    invoke-direct {v1, p0}, Lcom/htc/app/FilePickerCore$8;-><init>(Lcom/htc/app/FilePickerCore;)V
-
-    invoke-virtual {v12, v1}, Lcom/htc/widget/HtcIconButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 1902
-    packed-switch v7, :pswitch_data_0
-
-    .line 1911
-    :goto_1
-    const v1, 0x20200aa
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    check-cast v8, Landroid/widget/TextView;
-
-    .line 1912
-    .local v8, emptyView:Landroid/widget/TextView;
-    const/16 v1, 0x8
-
-    invoke-virtual {v8, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1913
-    new-instance v0, Lcom/htc/app/FilePickerFolderAdapter;
-
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mFilter:[Ljava/lang/String;
-
-    iget v3, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
-
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-
-    invoke-direct/range {v0 .. v5}, Lcom/htc/app/FilePickerFolderAdapter;-><init>(Landroid/content/Context;[Ljava/lang/String;ILandroid/view/View;Lcom/htc/app/FilePickerUtil;)V
-
-    .line 1916
-    .local v0, moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
-
-    invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFolderAdapter;->setFilePickerCloudHelper(Lcom/htc/app/FilePickerCloudHelper;)V
-
-    .line 1917
-    iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
-
-    invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFolderAdapter;->setSortOrder(I)V
-
-    .line 1918
-    iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
-
-    invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFolderAdapter;->setSortBy(I)V
-
-    .line 1920
-    const v1, 0x20200ae
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v9
-
-    check-cast v9, Lcom/htc/widget/MoreExpandableHtcListView;
-
-    .line 1923
-    .local v9, moreExListView:Lcom/htc/widget/MoreExpandableHtcListView;
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-virtual {v9, v1}, Lcom/htc/widget/MoreExpandableHtcListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
-
-    .line 1924
-    const v1, 0x20200ac
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v10
-
-    check-cast v10, Landroid/view/ViewGroup;
-
-    .line 1926
-    .local v10, moreExpandViewLayout:Landroid/view/ViewGroup;
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v10, v1}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
-
-    .line 1927
-    if-eqz v10, :cond_0
-
-    .line 1928
-    const/4 v1, 0x0
-
-    invoke-virtual {v10, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
-
-    .line 1929
-    const v1, 0x20200aa
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v8
-
-    .end local v8           #emptyView:Landroid/widget/TextView;
-    check-cast v8, Landroid/widget/TextView;
-
-    .line 1930
-    .restart local v8       #emptyView:Landroid/widget/TextView;
-    invoke-virtual {v9, v8}, Lcom/htc/widget/MoreExpandableHtcListView;->setEmptyView(Landroid/view/View;)V
-
-    .line 1931
-    const/16 v1, 0x8
-
-    invoke-virtual {v8, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 1934
-    :cond_0
-    invoke-virtual {p0, v0, v4, v7}, Lcom/htc/app/FilePickerCore;->getMoreExpanedObjectInstance(Lcom/htc/app/FilePickerFolderAdapter;Landroid/view/ViewGroup;I)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    move-result-object v11
-
-    .line 1936
-    invoke-direct {p0, v11}, Lcom/htc/app/FilePickerCore;->addMoreExpanedObjectToList(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
-
-    .line 1939
-    const v1, 0x20200c3
-
-    invoke-direct {p0, v1, v4}, Lcom/htc/app/FilePickerCore;->setViewToMainLayoutAndShow(ILandroid/view/View;)V
-
-    .line 1941
-    const/4 v1, 0x1
-
-    invoke-virtual {v11, v1}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->setNeedReLoad(Z)V
-
-    .line 1942
-    invoke-virtual {v11}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->updatePathOfFolderViewHeader()V
-
-    .line 1947
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v7}, Lcom/htc/app/FilePickerCloudHelper;->hasAnyAccountSignIn(I)Z
+    invoke-virtual {v8}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    .line 2233
+    .local v1, dataSourceType:I
+    const/4 v6, 0x0
 
-    .line 1948
+    .line 2234
+    .local v6, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
+
+    invoke-virtual {v8, v1}, Lcom/htc/app/FilePickerCloudHelper;->getAccountIds(I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2235
+    .local v0, accounts:[Ljava/lang/String;
+    if-eqz v0, :cond_3
+
+    array-length v8, v0
+
+    if-lez v8, :cond_3
+
+    .line 2236
+    aget-object v8, v0, v9
+
+    invoke-direct {p0, v1, v8}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v6
+
+    .line 2240
+    :goto_0
+    const/4 v3, 0x0
+
+    .line 2241
+    .local v3, filePickerFolderView:Landroid/view/ViewGroup;
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getFolderViewInstance()Landroid/view/ViewGroup;
+
+    move-result-object v3
+
+    .line 2243
+    const v8, 0x20200b1
+
+    invoke-virtual {v3, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/htc/widget/HtcIconButton;
+
+    .line 2245
+    .local v7, noLoginBtn:Lcom/htc/widget/HtcIconButton;
+    new-instance v8, Lcom/htc/app/FilePickerCore$8;
+
+    invoke-direct {v8, p0}, Lcom/htc/app/FilePickerCore$8;-><init>(Lcom/htc/app/FilePickerCore;)V
+
+    invoke-virtual {v7, v8}, Lcom/htc/widget/HtcIconButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 2253
+    packed-switch v1, :pswitch_data_0
+
+    .line 2262
+    :goto_1
+    invoke-virtual {v3, v11}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    .line 2263
+    .local v2, emptyView:Landroid/widget/TextView;
+    invoke-virtual {v2, v10}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 2265
+    const v8, 0x20200ae
+
+    invoke-virtual {v3, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/htc/widget/HtcListView;
+
+    .line 2267
+    .local v4, moreExListView:Lcom/htc/widget/HtcListView;
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v8}, Lcom/htc/widget/HtcListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
+
+    .line 2268
+    const v8, 0x20200ac
+
+    invoke-virtual {v3, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/view/ViewGroup;
+
+    .line 2270
+    .local v5, moreExpandViewLayout:Landroid/view/ViewGroup;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-virtual {v5, v8}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
+
+    .line 2271
+    if-eqz v5, :cond_0
+
+    .line 2272
+    invoke-virtual {v5, v9}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    .line 2273
+    invoke-virtual {v3, v11}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    .end local v2           #emptyView:Landroid/widget/TextView;
+    check-cast v2, Landroid/widget/TextView;
+
+    .line 2274
+    .restart local v2       #emptyView:Landroid/widget/TextView;
+    invoke-virtual {v4, v2}, Lcom/htc/widget/HtcListView;->setEmptyView(Landroid/view/View;)V
+
+    .line 2275
+    invoke-virtual {v2, v10}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 2279
+    :cond_0
+    if-nez v6, :cond_4
+
+    .line 2280
+    invoke-virtual {p0, v3, v1}, Lcom/htc/app/FilePickerCore;->getMoreExpanedObjectInstance(Landroid/view/ViewGroup;I)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v6
+
+    .line 2281
+    invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->addMoreExpanedObjectToList(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
+
+    .line 2287
+    :goto_2
+    const v8, 0x20200c3
+
+    invoke-direct {p0, v8, v3}, Lcom/htc/app/FilePickerCore;->setViewToMainLayoutAndShow(ILandroid/view/View;)V
+
+    .line 2289
+    const/4 v8, 0x1
+
+    invoke-virtual {v6, v8}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->setNeedReLoad(Z)V
+
+    .line 2290
+    invoke-virtual {v6}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->updatePathOfFolderViewHeader()V
+
+    .line 2295
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v1}, Lcom/htc/app/FilePickerCloudHelper;->hasAnyAccountSignIn(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    .line 2296
     #calls: Lcom/htc/app/FilePickerCore$MoreExpanedObject;->loadFolders()V
-    invoke-static {v11}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$1500(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
+    invoke-static {v6}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$1800(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
 
-    .line 1951
+    .line 2299
     :cond_1
-    const-string v1, "Tab_NoneCarousel"
+    const-string v8, "Tab_NoneCarousel"
 
-    invoke-direct {p0, v1}, Lcom/htc/app/FilePickerCore;->showViewByTab(Ljava/lang/String;)V
+    invoke-direct {p0, v8}, Lcom/htc/app/FilePickerCore;->showViewByTab(Ljava/lang/String;)V
 
-    .line 1952
-    invoke-direct {p0, v4}, Lcom/htc/app/FilePickerCore;->checkShowNoLoginView(Landroid/view/View;)V
+    .line 2300
+    invoke-direct {p0, v3}, Lcom/htc/app/FilePickerCore;->checkShowNoLoginView(Landroid/view/View;)V
 
-    .line 1953
-    iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
+    .line 2301
+    iget-boolean v8, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
 
-    if-nez v1, :cond_2
+    if-nez v8, :cond_2
 
-    .line 1954
-    invoke-direct {p0, v7}, Lcom/htc/app/FilePickerCore;->saveCloudDataSourceTypePreferences(I)V
+    .line 2302
+    invoke-direct {p0, v1}, Lcom/htc/app/FilePickerCore;->saveCloudDataSourceTypePreferences(I)V
 
-    .line 1956
+    .line 2304
     :cond_2
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 1957
+    .line 2305
     return-void
 
-    .line 1887
-    .end local v0           #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    .end local v4           #filePickerFolderView:Landroid/view/ViewGroup;
-    .end local v8           #emptyView:Landroid/widget/TextView;
-    .end local v9           #moreExListView:Lcom/htc/widget/MoreExpandableHtcListView;
-    .end local v10           #moreExpandViewLayout:Landroid/view/ViewGroup;
-    .end local v12           #noLoginBtn:Lcom/htc/widget/HtcIconButton;
+    .line 2238
+    .end local v2           #emptyView:Landroid/widget/TextView;
+    .end local v3           #filePickerFolderView:Landroid/view/ViewGroup;
+    .end local v4           #moreExListView:Lcom/htc/widget/HtcListView;
+    .end local v5           #moreExpandViewLayout:Landroid/view/ViewGroup;
+    .end local v7           #noLoginBtn:Lcom/htc/widget/HtcIconButton;
     :cond_3
-    const/4 v1, 0x0
+    const/4 v8, 0x0
 
-    invoke-direct {p0, v7, v1}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    invoke-direct {p0, v1, v8}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    move-result-object v11
+    move-result-object v6
 
     goto/16 :goto_0
 
-    .line 1904
-    .restart local v4       #filePickerFolderView:Landroid/view/ViewGroup;
-    .restart local v12       #noLoginBtn:Lcom/htc/widget/HtcIconButton;
+    .line 2255
+    .restart local v3       #filePickerFolderView:Landroid/view/ViewGroup;
+    .restart local v7       #noLoginBtn:Lcom/htc/widget/HtcIconButton;
     :pswitch_0
-    const v1, 0x20403cf
+    const v8, 0x20403d0
 
-    invoke-virtual {v12, v1}, Lcom/htc/widget/HtcIconButton;->setText(I)V
+    invoke-virtual {v7, v8}, Lcom/htc/widget/HtcIconButton;->setText(I)V
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 1907
+    .line 2258
     :pswitch_1
-    const v1, 0x20403d0
+    const v8, 0x20403d1
 
-    invoke-virtual {v12, v1}, Lcom/htc/widget/HtcIconButton;->setText(I)V
+    invoke-virtual {v7, v8}, Lcom/htc/widget/HtcIconButton;->setText(I)V
 
     goto/16 :goto_1
 
-    .line 1902
+    .line 2283
+    .restart local v2       #emptyView:Landroid/widget/TextView;
+    .restart local v4       #moreExListView:Lcom/htc/widget/HtcListView;
+    .restart local v5       #moreExpandViewLayout:Landroid/view/ViewGroup;
+    :cond_4
+    #calls: Lcom/htc/app/FilePickerCore$MoreExpanedObject;->reInit(Landroid/view/ViewGroup;I)V
+    invoke-static {v6, v3, v1}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$1700(Lcom/htc/app/FilePickerCore$MoreExpanedObject;Landroid/view/ViewGroup;I)V
+
+    goto :goto_2
+
+    .line 2253
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -9145,16 +9371,16 @@
 .end method
 
 .method private showLandingPage()V
-    .locals 36
+    .locals 35
 
     .prologue
-    .line 2173
+    .line 2521
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->showLoadingPage()V
 
-    .line 2174
+    .line 2522
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->unregisterSdcardReceiver()V
 
-    .line 2175
+    .line 2523
     const v6, 0x20200c4
 
     const/4 v7, 0x0
@@ -9163,7 +9389,7 @@
 
     invoke-direct {v0, v6, v7}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 2176
+    .line 2524
     const v6, 0x20200c2
 
     const/16 v7, 0x8
@@ -9172,7 +9398,7 @@
 
     invoke-direct {v0, v6, v7}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 2177
+    .line 2525
     const v6, 0x20200be
 
     const/16 v7, 0x8
@@ -9181,12 +9407,12 @@
 
     invoke-direct {v0, v6, v7}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 2178
+    .line 2526
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getLandingView()Landroid/view/View;
 
     move-result-object v19
 
-    .line 2180
+    .line 2528
     .local v19, filePickerLandingView:Landroid/view/View;
     move-object/from16 v0, p0
 
@@ -9194,18 +9420,18 @@
 
     if-eqz v6, :cond_4
 
-    .line 2181
+    .line 2529
     new-instance v24, Ljava/util/HashMap;
 
     invoke-direct/range {v24 .. v24}, Ljava/util/HashMap;-><init>()V
 
-    .line 2182
+    .line 2530
     .local v24, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     new-instance v22, Ljava/util/ArrayList;
 
     invoke-direct/range {v22 .. v22}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2183
+    .line 2531
     .local v22, lstImageItem:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;>;"
     const-string v6, "ItemImage"
 
@@ -9219,7 +9445,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2184
+    .line 2532
     const-string v6, "ItemText"
 
     move-object/from16 v0, p0
@@ -9230,7 +9456,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2185
+    .line 2533
     const-string v6, "ItemTabType"
 
     const-string v7, "Tab_Recent"
@@ -9239,20 +9465,20 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2186
+    .line 2534
     move-object/from16 v0, v22
 
     move-object/from16 v1, v24
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2187
+    .line 2535
     new-instance v24, Ljava/util/HashMap;
 
     .end local v24           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct/range {v24 .. v24}, Ljava/util/HashMap;-><init>()V
 
-    .line 2188
+    .line 2536
     .restart local v24       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v6, "ItemImage"
 
@@ -9266,7 +9492,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2189
+    .line 2537
     const-string v6, "ItemText"
 
     move-object/from16 v0, p0
@@ -9277,7 +9503,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2190
+    .line 2538
     const-string v6, "ItemTabType"
 
     const-string v7, "Tab_Type"
@@ -9286,20 +9512,20 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2191
+    .line 2539
     move-object/from16 v0, v22
 
     move-object/from16 v1, v24
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2192
+    .line 2540
     new-instance v24, Ljava/util/HashMap;
 
     .end local v24           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct/range {v24 .. v24}, Ljava/util/HashMap;-><init>()V
 
-    .line 2193
+    .line 2541
     .restart local v24       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v6, "ItemImage"
 
@@ -9313,7 +9539,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2194
+    .line 2542
     const-string v6, "ItemText"
 
     move-object/from16 v0, p0
@@ -9324,7 +9550,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2195
+    .line 2543
     const-string v6, "ItemTabType"
 
     const-string v7, "Tab_Favorites"
@@ -9333,14 +9559,14 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2196
+    .line 2544
     move-object/from16 v0, v22
 
     move-object/from16 v1, v24
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2198
+    .line 2546
     invoke-virtual/range {v22 .. v22}, Ljava/util/ArrayList;->size()I
 
     move-result v6
@@ -9351,7 +9577,7 @@
 
     iput-object v6, v0, Lcom/htc/app/FilePickerCore;->offlineStringArray:[Ljava/lang/String;
 
-    .line 2199
+    .line 2547
     const/16 v20, 0x0
 
     .local v20, i:I
@@ -9364,7 +9590,7 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 2200
+    .line 2548
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/htc/app/FilePickerCore;->offlineStringArray:[Ljava/lang/String;
@@ -9389,12 +9615,12 @@
 
     aput-object v6, v7, v20
 
-    .line 2199
+    .line 2547
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_0
 
-    .line 2203
+    .line 2551
     :cond_0
     invoke-virtual/range {v22 .. v22}, Ljava/util/ArrayList;->size()I
 
@@ -9402,7 +9628,7 @@
 
     new-array v9, v6, [Ljava/lang/Integer;
 
-    .line 2204
+    .line 2552
     .local v9, offlineIdArray:[Ljava/lang/Integer;
     const/16 v20, 0x0
 
@@ -9415,7 +9641,7 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 2205
+    .line 2553
     move-object/from16 v0, v22
 
     move/from16 v1, v20
@@ -9436,12 +9662,12 @@
 
     aput-object v6, v9, v20
 
-    .line 2204
+    .line 2552
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_1
 
-    .line 2208
+    .line 2556
     :cond_1
     invoke-virtual/range {v22 .. v22}, Ljava/util/ArrayList;->size()I
 
@@ -9453,7 +9679,7 @@
 
     iput-object v6, v0, Lcom/htc/app/FilePickerCore;->offlineTabStringArray:[Ljava/lang/String;
 
-    .line 2209
+    .line 2557
     const/16 v20, 0x0
 
     :goto_2
@@ -9465,7 +9691,7 @@
 
     if-ge v0, v6, :cond_2
 
-    .line 2210
+    .line 2558
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/htc/app/FilePickerCore;->offlineTabStringArray:[Ljava/lang/String;
@@ -9490,12 +9716,12 @@
 
     aput-object v6, v7, v20
 
-    .line 2209
+    .line 2557
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_2
 
-    .line 2212
+    .line 2560
     :cond_2
     new-instance v5, Lcom/htc/app/FilePickerCore$GridAdapter;
 
@@ -9515,7 +9741,7 @@
 
     invoke-direct/range {v5 .. v10}, Lcom/htc/app/FilePickerCore$GridAdapter;-><init>(Lcom/htc/app/FilePickerCore;Landroid/content/Context;[Ljava/lang/String;[Ljava/lang/Integer;[Ljava/lang/String;)V
 
-    .line 2215
+    .line 2563
     .local v5, offlineGridAdapter:Lcom/htc/app/FilePickerCore$GridAdapter;
     const v6, 0x20200b9
 
@@ -9527,13 +9753,13 @@
 
     check-cast v25, Lcom/htc/widget/HtcGridView;
 
-    .line 2218
+    .line 2566
     .local v25, offlineGridView:Lcom/htc/widget/HtcGridView;
     new-instance v18, Landroid/util/DisplayMetrics;
 
     invoke-direct/range {v18 .. v18}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 2219
+    .line 2567
     .local v18, displaymetrics:Landroid/util/DisplayMetrics;
     invoke-virtual/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -9551,38 +9777,38 @@
 
     invoke-virtual {v6, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 2220
+    .line 2568
     move-object/from16 v0, v18
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    move/from16 v35, v0
+    move/from16 v34, v0
 
-    .line 2221
-    .local v35, total_width:I
+    .line 2569
+    .local v34, total_width:I
     invoke-virtual/range {v25 .. v25}, Lcom/htc/widget/HtcGridView;->getPaddingLeft()I
 
     move-result v29
 
-    .line 2222
+    .line 2570
     .local v29, paddingLeft:I
     invoke-virtual/range {v25 .. v25}, Lcom/htc/widget/HtcGridView;->getPaddingRight()I
 
     move-result v30
 
-    .line 2223
+    .line 2571
     .local v30, paddingRight:I
     invoke-virtual/range {v25 .. v25}, Lcom/htc/widget/HtcGridView;->getPaddingTop()I
 
     move-result v31
 
-    .line 2224
+    .line 2572
     .local v31, paddingTop:I
     invoke-virtual/range {v25 .. v25}, Lcom/htc/widget/HtcGridView;->getPaddingBottom()I
 
     move-result v28
 
-    .line 2225
+    .line 2573
     .local v28, paddingBottom:I
     move-object/from16 v0, p0
 
@@ -9590,19 +9816,19 @@
 
     mul-int/lit8 v6, v6, 0x3
 
-    sub-int v21, v35, v6
+    sub-int v21, v34, v6
 
-    .line 2226
+    .line 2574
     .local v21, left_width:I
     if-lez v21, :cond_3
 
-    .line 2227
+    .line 2575
     div-int/lit8 v29, v21, 0x8
 
-    .line 2228
+    .line 2576
     div-int/lit8 v30, v21, 0x8
 
-    .line 2230
+    .line 2578
     :cond_3
     move-object/from16 v0, v25
 
@@ -9616,12 +9842,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/htc/widget/HtcGridView;->setPadding(IIII)V
 
-    .line 2232
+    .line 2580
     move-object/from16 v0, v25
 
     invoke-virtual {v0, v5}, Lcom/htc/widget/HtcGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 2233
+    .line 2581
     new-instance v6, Lcom/htc/app/FilePickerCore$OfflineItemClickListener;
 
     move-object/from16 v0, p0
@@ -9632,7 +9858,7 @@
 
     invoke-virtual {v0, v6}, Lcom/htc/widget/HtcGridView;->setOnItemClickListener(Lcom/htc/widget/HtcAdapterView$OnItemClickListener;)V
 
-    .line 2235
+    .line 2584
     .end local v5           #offlineGridAdapter:Lcom/htc/app/FilePickerCore$GridAdapter;
     .end local v9           #offlineIdArray:[Ljava/lang/Integer;
     .end local v18           #displaymetrics:Landroid/util/DisplayMetrics;
@@ -9645,18 +9871,8 @@
     .end local v29           #paddingLeft:I
     .end local v30           #paddingRight:I
     .end local v31           #paddingTop:I
-    .end local v35           #total_width:I
+    .end local v34           #total_width:I
     :cond_4
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v33
-
-    .line 2236
-    .local v33, time:Ljava/lang/Long;
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
@@ -9685,25 +9901,25 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2238
+    .line 2586
     move-object/from16 v0, p0
 
     iget-boolean v6, v0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
 
     if-eqz v6, :cond_b
 
-    .line 2239
+    .line 2587
     new-instance v24, Ljava/util/HashMap;
 
     invoke-direct/range {v24 .. v24}, Ljava/util/HashMap;-><init>()V
 
-    .line 2240
+    .line 2588
     .restart local v24       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     new-instance v23, Ljava/util/ArrayList;
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2243
+    .line 2591
     .local v23, lstImageItem2:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;>;"
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
@@ -9715,7 +9931,7 @@
 
     move-result v32
 
-    .line 2245
+    .line 2593
     .local v32, serviceEnabled:Z
     const/4 v6, 0x1
 
@@ -9723,13 +9939,13 @@
 
     if-ne v0, v6, :cond_5
 
-    .line 2246
+    .line 2594
     new-instance v24, Ljava/util/HashMap;
 
     .end local v24           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct/range {v24 .. v24}, Ljava/util/HashMap;-><init>()V
 
-    .line 2247
+    .line 2595
     .restart local v24       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v6, "ItemImage"
 
@@ -9743,7 +9959,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2248
+    .line 2596
     const-string v6, "ItemText"
 
     move-object/from16 v0, p0
@@ -9754,7 +9970,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2249
+    .line 2597
     const-string v6, "ItemTabType"
 
     const-string v7, "Tab_NoneCarousel"
@@ -9763,10 +9979,10 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2250
+    .line 2598
     invoke-virtual/range {v23 .. v24}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2252
+    .line 2600
     :cond_5
     const-string v6, "ServiceEnabledCheck"
 
@@ -9792,7 +10008,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2255
+    .line 2603
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v6
@@ -9803,20 +10019,20 @@
 
     move-result v32
 
-    .line 2257
+    .line 2605
     const/4 v6, 0x1
 
     move/from16 v0, v32
 
     if-ne v0, v6, :cond_6
 
-    .line 2258
+    .line 2606
     new-instance v24, Ljava/util/HashMap;
 
     .end local v24           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct/range {v24 .. v24}, Ljava/util/HashMap;-><init>()V
 
-    .line 2259
+    .line 2607
     .restart local v24       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v6, "ItemImage"
 
@@ -9830,7 +10046,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2260
+    .line 2608
     const-string v6, "ItemText"
 
     move-object/from16 v0, p0
@@ -9841,7 +10057,7 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2261
+    .line 2609
     const-string v6, "ItemTabType"
 
     const-string v7, "Tab_NoneCarousel"
@@ -9850,10 +10066,10 @@
 
     invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2262
+    .line 2610
     invoke-virtual/range {v23 .. v24}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2264
+    .line 2612
     :cond_6
     const-string v6, "ServiceEnabledCheck"
 
@@ -9879,14 +10095,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2265
+    .line 2613
     invoke-virtual/range {v24 .. v24}, Ljava/util/HashMap;->size()I
 
     move-result v6
 
     if-lez v6, :cond_b
 
-    .line 2267
+    .line 2615
     invoke-virtual/range {v23 .. v23}, Ljava/util/ArrayList;->size()I
 
     move-result v6
@@ -9897,7 +10113,7 @@
 
     iput-object v6, v0, Lcom/htc/app/FilePickerCore;->onlineStringArray:[Ljava/lang/String;
 
-    .line 2268
+    .line 2616
     const/16 v20, 0x0
 
     .restart local v20       #i:I
@@ -9910,7 +10126,7 @@
 
     if-ge v0, v6, :cond_7
 
-    .line 2269
+    .line 2617
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/htc/app/FilePickerCore;->onlineStringArray:[Ljava/lang/String;
@@ -9935,12 +10151,12 @@
 
     aput-object v6, v7, v20
 
-    .line 2268
+    .line 2616
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_3
 
-    .line 2272
+    .line 2620
     :cond_7
     invoke-virtual/range {v23 .. v23}, Ljava/util/ArrayList;->size()I
 
@@ -9948,7 +10164,7 @@
 
     new-array v14, v6, [Ljava/lang/Integer;
 
-    .line 2273
+    .line 2621
     .local v14, onlineIdArray:[Ljava/lang/Integer;
     const/16 v20, 0x0
 
@@ -9961,7 +10177,7 @@
 
     if-ge v0, v6, :cond_8
 
-    .line 2274
+    .line 2622
     move-object/from16 v0, v23
 
     move/from16 v1, v20
@@ -9982,12 +10198,12 @@
 
     aput-object v6, v14, v20
 
-    .line 2273
+    .line 2621
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_4
 
-    .line 2277
+    .line 2625
     :cond_8
     invoke-virtual/range {v23 .. v23}, Ljava/util/ArrayList;->size()I
 
@@ -9999,7 +10215,7 @@
 
     iput-object v6, v0, Lcom/htc/app/FilePickerCore;->onlineTabStringArray:[Ljava/lang/String;
 
-    .line 2278
+    .line 2626
     const/16 v20, 0x0
 
     :goto_5
@@ -10011,7 +10227,7 @@
 
     if-ge v0, v6, :cond_9
 
-    .line 2279
+    .line 2627
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/htc/app/FilePickerCore;->onlineTabStringArray:[Ljava/lang/String;
@@ -10036,12 +10252,12 @@
 
     aput-object v6, v7, v20
 
-    .line 2278
+    .line 2626
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_5
 
-    .line 2281
+    .line 2629
     :cond_9
     new-instance v10, Lcom/htc/app/FilePickerCore$GridAdapter;
 
@@ -10061,7 +10277,7 @@
 
     invoke-direct/range {v10 .. v15}, Lcom/htc/app/FilePickerCore$GridAdapter;-><init>(Lcom/htc/app/FilePickerCore;Landroid/content/Context;[Ljava/lang/String;[Ljava/lang/Integer;[Ljava/lang/String;)V
 
-    .line 2284
+    .line 2632
     .local v10, onlineGridAdapter:Lcom/htc/app/FilePickerCore$GridAdapter;
     const v6, 0x20200bc
 
@@ -10073,13 +10289,13 @@
 
     check-cast v26, Lcom/htc/widget/HtcGridView;
 
-    .line 2286
+    .line 2634
     .local v26, onlineGridView:Lcom/htc/widget/HtcGridView;
     new-instance v18, Landroid/util/DisplayMetrics;
 
     invoke-direct/range {v18 .. v18}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 2287
+    .line 2635
     .restart local v18       #displaymetrics:Landroid/util/DisplayMetrics;
     invoke-virtual/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -10097,38 +10313,38 @@
 
     invoke-virtual {v6, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 2288
+    .line 2636
     move-object/from16 v0, v18
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    move/from16 v35, v0
+    move/from16 v34, v0
 
-    .line 2289
-    .restart local v35       #total_width:I
+    .line 2637
+    .restart local v34       #total_width:I
     invoke-virtual/range {v26 .. v26}, Lcom/htc/widget/HtcGridView;->getPaddingLeft()I
 
     move-result v29
 
-    .line 2290
+    .line 2638
     .restart local v29       #paddingLeft:I
     invoke-virtual/range {v26 .. v26}, Lcom/htc/widget/HtcGridView;->getPaddingRight()I
 
     move-result v30
 
-    .line 2291
+    .line 2639
     .restart local v30       #paddingRight:I
     invoke-virtual/range {v26 .. v26}, Lcom/htc/widget/HtcGridView;->getPaddingTop()I
 
     move-result v31
 
-    .line 2292
+    .line 2640
     .restart local v31       #paddingTop:I
     invoke-virtual/range {v26 .. v26}, Lcom/htc/widget/HtcGridView;->getPaddingBottom()I
 
     move-result v28
 
-    .line 2293
+    .line 2641
     .restart local v28       #paddingBottom:I
     move-object/from16 v0, p0
 
@@ -10136,19 +10352,19 @@
 
     mul-int/lit8 v6, v6, 0x3
 
-    sub-int v21, v35, v6
+    sub-int v21, v34, v6
 
-    .line 2294
+    .line 2642
     .restart local v21       #left_width:I
     if-lez v21, :cond_a
 
-    .line 2295
+    .line 2643
     div-int/lit8 v29, v21, 0x8
 
-    .line 2296
+    .line 2644
     div-int/lit8 v30, v21, 0x8
 
-    .line 2298
+    .line 2646
     :cond_a
     move-object/from16 v0, v26
 
@@ -10162,12 +10378,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/htc/widget/HtcGridView;->setPadding(IIII)V
 
-    .line 2300
+    .line 2648
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v10}, Lcom/htc/widget/HtcGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 2301
+    .line 2649
     new-instance v6, Lcom/htc/app/FilePickerCore$OnlineItemClickListener;
 
     move-object/from16 v0, p0
@@ -10178,7 +10394,7 @@
 
     invoke-virtual {v0, v6}, Lcom/htc/widget/HtcGridView;->setOnItemClickListener(Lcom/htc/widget/HtcAdapterView$OnItemClickListener;)V
 
-    .line 2303
+    .line 2651
     const v6, 0x20200bb
 
     move-object/from16 v0, v19
@@ -10189,7 +10405,7 @@
 
     check-cast v16, Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 2305
+    .line 2653
     .local v16, cloudServicesSepararor:Lcom/htc/widget/HtcListItemSeparator;
     const/4 v6, 0x0
 
@@ -10197,18 +10413,18 @@
 
     invoke-virtual {v0, v6}, Lcom/htc/widget/HtcListItemSeparator;->setVisibility(I)V
 
-    .line 2306
+    .line 2654
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    const v7, 0x20403e1
+    const v7, 0x20403e2
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v17
 
-    .line 2308
+    .line 2656
     .local v17, cloudServicesStr:Ljava/lang/String;
     const/4 v6, 0x0
 
@@ -10218,14 +10434,14 @@
 
     invoke-virtual {v0, v6, v1}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 2309
+    .line 2657
     const/4 v6, 0x1
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v6}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundStyle(I)V
 
-    .line 2310
+    .line 2658
     const v6, 0x20200ba
 
     move-object/from16 v0, v19
@@ -10234,7 +10450,7 @@
 
     move-result-object v27
 
-    .line 2311
+    .line 2659
     .local v27, onlineLayout:Landroid/view/View;
     const/4 v6, 0x0
 
@@ -10242,7 +10458,7 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2314
+    .line 2662
     .end local v10           #onlineGridAdapter:Lcom/htc/app/FilePickerCore$GridAdapter;
     .end local v14           #onlineIdArray:[Ljava/lang/Integer;
     .end local v16           #cloudServicesSepararor:Lcom/htc/widget/HtcListItemSeparator;
@@ -10259,7 +10475,7 @@
     .end local v30           #paddingRight:I
     .end local v31           #paddingTop:I
     .end local v32           #serviceEnabled:Z
-    .end local v35           #total_width:I
+    .end local v34           #total_width:I
     :cond_b
     const v6, 0x20200c4
 
@@ -10269,7 +10485,7 @@
 
     invoke-direct {v0, v6, v1}, Lcom/htc/app/FilePickerCore;->setViewToMainLayoutAndShow(ILandroid/view/View;)V
 
-    .line 2321
+    .line 2669
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
@@ -10278,7 +10494,7 @@
 
     invoke-virtual {v6, v7}, Lcom/htc/app/FilePickerActionBarExtController;->setActionBarContainerBackUpEnabled(Z)V
 
-    .line 2322
+    .line 2670
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
@@ -10287,28 +10503,28 @@
 
     invoke-virtual {v6, v7}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
 
-    .line 2323
+    .line 2671
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    const v7, 0x20403d8
+    const v7, 0x20403d9
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v34
+    move-result-object v33
 
-    .line 2325
-    .local v34, title:Ljava/lang/String;
+    .line 2673
+    .local v33, title:Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
-    move-object/from16 v0, v34
+    move-object/from16 v0, v33
 
     invoke-virtual {v6, v0}, Lcom/htc/app/FilePickerActionBarExtController;->setMainTitle(Ljava/lang/String;)V
 
-    .line 2326
+    .line 2674
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
@@ -10317,31 +10533,31 @@
 
     invoke-virtual {v6, v7}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
 
-    .line 2327
+    .line 2675
     const/4 v6, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
 
-    .line 2329
+    .line 2677
     const/4 v6, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v6, v0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    .line 2330
+    .line 2678
     invoke-virtual/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
     invoke-virtual {v6}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    .line 2332
+    .line 2680
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 2333
+    .line 2681
     return-void
 .end method
 
@@ -10386,7 +10602,7 @@
 
     const/4 v12, 0x1
 
-    .line 1380
+    .line 1418
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-direct {p0, v12}, Lcom/htc/app/FilePickerCore;->getAppDropDownAdapter(Z)Lcom/htc/app/FilePickerAppDropDownAdapter;
@@ -10395,13 +10611,13 @@
 
     invoke-virtual {v10, v11}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
 
-    .line 1381
+    .line 1419
     invoke-direct {p0, v12}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
 
-    .line 1382
+    .line 1420
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->checkActionBarContainerBackUpEnabled()V
 
-    .line 1383
+    .line 1421
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v10}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
@@ -10410,10 +10626,10 @@
 
     invoke-direct {p0, v10}, Lcom/htc/app/FilePickerCore;->setMainTitle(I)V
 
-    .line 1385
+    .line 1423
     invoke-direct {p0, v14, v13}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 1387
+    .line 1425
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
@@ -10422,7 +10638,7 @@
 
     move-result-object v5
 
-    .line 1388
+    .line 1426
     .local v5, fm:Landroid/app/FragmentManager;
     invoke-virtual {v5, v14}, Landroid/app/FragmentManager;->findFragmentById(I)Landroid/app/Fragment;
 
@@ -10430,18 +10646,18 @@
 
     check-cast v3, Lcom/htc/app/FilePickerCarousel;
 
-    .line 1390
+    .line 1428
     .local v3, carousel:Lcom/htc/app/FilePickerCarousel;
     if-eqz v3, :cond_5
 
-    .line 1391
+    .line 1429
     new-instance v10, Lcom/htc/app/FilePickerCore$7;
 
     invoke-direct {v10, p0}, Lcom/htc/app/FilePickerCore$7;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     invoke-virtual {v3, v10}, Lcom/htc/app/FilePickerCarousel;->setOnTabChangedListener(Lcom/htc/fragment/widget/CarouselHost$OnTabChangeListener;)V
 
-    .line 1396
+    .line 1434
     invoke-virtual {v3}, Lcom/htc/app/FilePickerCarousel;->getCarouselHost()Lcom/htc/fragment/widget/CarouselHost;
 
     move-result-object v10
@@ -10450,7 +10666,7 @@
 
     invoke-virtual {v10, v11}, Lcom/htc/fragment/widget/CarouselHost;->setCurrentTabByTag(Ljava/lang/String;)V
 
-    .line 1397
+    .line 1435
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
@@ -10463,21 +10679,21 @@
 
     check-cast v9, Lcom/htc/app/FilePickerListView;
 
-    .line 1399
+    .line 1437
     .local v9, typeListView:Lcom/htc/app/FilePickerListView;
     if-eqz v9, :cond_0
 
-    .line 1400
+    .line 1438
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v10, :cond_0
 
-    .line 1401
+    .line 1439
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v9, v10}, Lcom/htc/app/FilePickerListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1405
+    .line 1443
     :cond_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -10491,24 +10707,24 @@
 
     check-cast v8, Lcom/htc/app/FilePickerListView;
 
-    .line 1407
+    .line 1445
     .local v8, recentListView:Lcom/htc/app/FilePickerListView;
     if-eqz v8, :cond_2
 
-    .line 1408
+    .line 1446
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v10, :cond_1
 
-    .line 1409
+    .line 1447
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v8, v10}, Lcom/htc/app/FilePickerListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1410
+    .line 1448
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialEmptyViewOfRecentView()V
 
-    .line 1413
+    .line 1451
     :cond_1
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getRecentFragment()Lcom/htc/app/FilePickerRecentFragment;
 
@@ -10516,7 +10732,7 @@
 
     if-eqz v10, :cond_2
 
-    .line 1414
+    .line 1452
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getRecentFragment()Lcom/htc/app/FilePickerRecentFragment;
 
     move-result-object v10
@@ -10525,7 +10741,7 @@
 
     invoke-virtual {v10, v11}, Lcom/htc/app/FilePickerRecentFragment;->NotifyToDoTask(I)V
 
-    .line 1415
+    .line 1453
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getRecentFragment()Lcom/htc/app/FilePickerRecentFragment;
 
     move-result-object v10
@@ -10534,7 +10750,7 @@
 
     invoke-virtual {v10, v11}, Lcom/htc/app/FilePickerRecentFragment;->NotifyToDoTask(I)V
 
-    .line 1419
+    .line 1457
     :cond_2
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -10548,24 +10764,24 @@
 
     check-cast v4, Lcom/htc/app/FilePickerListView;
 
-    .line 1421
+    .line 1459
     .local v4, favoritesListView:Lcom/htc/app/FilePickerListView;
     if-eqz v4, :cond_3
 
-    .line 1422
+    .line 1460
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v10, :cond_3
 
-    .line 1423
+    .line 1461
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v4, v10}, Lcom/htc/app/FilePickerListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1424
+    .line 1462
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialEmptyViewOfFavoritesView()V
 
-    .line 1428
+    .line 1466
     :cond_3
     const/4 v10, 0x3
 
@@ -10585,7 +10801,7 @@
 
     aput-object v11, v1, v10
 
-    .line 1429
+    .line 1467
     .local v1, adapters:[Lcom/htc/app/FilePickerListAdapter;
     move-object v2, v1
 
@@ -10601,20 +10817,20 @@
 
     aget-object v0, v2, v6
 
-    .line 1430
+    .line 1468
     .local v0, adapter:Lcom/htc/app/FilePickerListAdapter;
     if-eqz v0, :cond_4
 
-    .line 1431
+    .line 1469
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
-    .line 1429
+    .line 1467
     :cond_4
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 1436
+    .line 1474
     .end local v0           #adapter:Lcom/htc/app/FilePickerListAdapter;
     .end local v1           #adapters:[Lcom/htc/app/FilePickerListAdapter;
     .end local v2           #arr$:[Lcom/htc/app/FilePickerListAdapter;
@@ -10630,15 +10846,15 @@
 
     invoke-virtual {v10}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    .line 1437
+    .line 1475
     iget-object v10, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
     invoke-direct {p0, v10}, Lcom/htc/app/FilePickerCore;->showViewByTab(Ljava/lang/String;)V
 
-    .line 1438
+    .line 1476
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 1439
+    .line 1477
     return-void
 .end method
 
@@ -10651,37 +10867,37 @@
 
     const/16 v2, 0x8
 
-    .line 3727
+    .line 4087
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/app/Activity;->closeOptionsMenu()V
 
-    .line 3728
+    .line 4088
     const v1, 0x20200bf
 
     invoke-direct {p0, v1, v2}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 3729
+    .line 4089
     const v1, 0x20200c0
 
     invoke-direct {p0, v1, v2}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 3730
+    .line 4090
     const v1, 0x20200cc
 
     invoke-direct {p0, v1, v2}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 3731
+    .line 4091
     const/4 v1, 0x0
 
     invoke-direct {p0, v3, v1}, Lcom/htc/app/FilePickerCore;->setViewVisibilityAndTag(II)V
 
-    .line 3732
+    .line 4092
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->setNoFileViewEmptyTextOfTypeView()V
 
-    .line 3733
+    .line 4093
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -10692,21 +10908,21 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 3735
+    .line 4095
     .local v0, mSdcardWarningMessage:Landroid/widget/TextView;
     if-eqz v0, :cond_0
 
-    .line 3736
+    .line 4096
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 3741
+    .line 4101
     :goto_0
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 3742
+    .line 4102
     return-void
 
-    .line 3738
+    .line 4098
     :cond_0
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
 
@@ -10752,260 +10968,270 @@
     .locals 1
 
     .prologue
-    .line 3578
+    .line 3924
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
     if-eqz v0, :cond_0
 
-    .line 3579
+    .line 3925
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 3580
+    .line 3926
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mEditor:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->requestFocus()Z
 
-    .line 3581
+    .line 3927
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerActionBarExtController;->showSearchBarMode()V
 
-    .line 3585
+    .line 3930
     :cond_0
     return-void
 .end method
 
 .method private showUsbConnectionPickerView()V
-    .locals 14
+    .locals 13
 
     .prologue
-    const v13, 0x20200aa
+    const v12, 0x20200aa
 
-    const/16 v12, 0x8
-
-    const/4 v11, 0x0
+    const/16 v11, 0x8
 
     const/4 v10, 0x0
 
-    .line 1484
-    iget v8, p0, Lcom/htc/app/FilePickerCore;->mUsbConnetionViewMode:I
+    const/4 v9, 0x0
 
-    invoke-virtual {p0, v8}, Lcom/htc/app/FilePickerCore;->initialUsbConnection(I)V
+    .line 1522
+    iget v7, p0, Lcom/htc/app/FilePickerCore;->mUsbConnetionViewMode:I
 
-    .line 1486
-    const/4 v7, 0x0
+    invoke-virtual {p0, v7}, Lcom/htc/app/FilePickerCore;->initialUsbConnection(I)V
 
-    .line 1487
-    .local v7, title:Ljava/lang/String;
-    iget v8, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
+    .line 1524
+    const/4 v6, 0x0
 
-    if-nez v8, :cond_2
+    .line 1525
+    .local v6, title:Ljava/lang/String;
+    iget v7, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    .line 1488
-    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    if-nez v7, :cond_2
 
-    invoke-virtual {v8}, Lcom/htc/app/FilePickerUtil;->isFolderPickerModeEnabled()Z
+    .line 1526
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
-    move-result v8
+    invoke-virtual {v7}, Lcom/htc/app/FilePickerUtil;->isFolderPickerModeEnabled()Z
 
-    if-eqz v8, :cond_1
+    move-result v7
 
-    .line 1489
+    if-eqz v7, :cond_1
+
+    .line 1527
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    const v9, 0x20403d1
-
-    invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1497
-    :goto_0
-    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+    const v8, 0x20403d2
 
-    invoke-virtual {v8, v10}, Lcom/htc/app/FilePickerActionBarExtController;->setActionBarContainerBackUpEnabled(Z)V
-
-    .line 1498
-    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
-
-    invoke-virtual {v8, v11}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
-
-    .line 1499
-    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
-
-    invoke-virtual {v8, v7}, Lcom/htc/app/FilePickerActionBarExtController;->setMainTitle(Ljava/lang/String;)V
-
-    .line 1500
-    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
-
-    invoke-virtual {v8, v11}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
-
-    .line 1501
-    invoke-direct {p0, v10}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
-
-    .line 1503
-    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-
-    invoke-virtual {v8}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
-
-    move-result v0
-
-    .line 1504
-    .local v0, dataSourceType:I
-    invoke-direct {p0, v0, v11}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1506
-    .local v6, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .line 1535
+    :goto_0
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    invoke-virtual {v7, v9}, Lcom/htc/app/FilePickerActionBarExtController;->setActionBarContainerBackUpEnabled(Z)V
+
+    .line 1536
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    invoke-virtual {v7, v10}, Lcom/htc/app/FilePickerActionBarExtController;->setDropDownAdapter(Landroid/widget/BaseAdapter;)V
+
+    .line 1537
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    invoke-virtual {v7, v6}, Lcom/htc/app/FilePickerActionBarExtController;->setMainTitle(Ljava/lang/String;)V
+
+    .line 1538
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    invoke-virtual {v7, v10}, Lcom/htc/app/FilePickerActionBarExtController;->setSubTitle(Ljava/lang/String;)V
+
+    .line 1539
+    invoke-direct {p0, v9}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
+
+    .line 1541
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+
+    invoke-virtual {v7}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
+
+    move-result v0
+
+    .line 1542
+    .local v0, dataSourceType:I
+    invoke-direct {p0, v0, v10}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v5
+
+    .line 1544
+    .local v5, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     const/4 v2, 0x0
 
-    .line 1509
+    .line 1547
     .local v2, filePickerFolderView:Landroid/view/ViewGroup;
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getFolderViewInstance()Landroid/view/ViewGroup;
 
     move-result-object v2
 
-    .line 1510
-    invoke-virtual {v2, v13}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    .line 1548
+    invoke-virtual {v2, v12}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 1511
+    .line 1549
     .local v1, emptyView:Landroid/widget/TextView;
-    invoke-virtual {v1, v12}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v11}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1513
-    invoke-virtual {p0, v2}, Lcom/htc/app/FilePickerCore;->getFolderAdapterInstance(Landroid/view/ViewGroup;)Lcom/htc/app/FilePickerFolderAdapter;
+    .line 1551
+    const v7, 0x20200ae
+
+    invoke-virtual {v2, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 1515
-    .local v3, moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    const v8, 0x20200ae
+    check-cast v3, Lcom/htc/widget/HtcListView;
 
-    invoke-virtual {v2, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    .line 1553
+    .local v3, moreExListView:Lcom/htc/widget/HtcListView;
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v7}, Lcom/htc/widget/HtcListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
+
+    .line 1554
+    const v7, 0x20200ac
+
+    invoke-virtual {v2, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
-    check-cast v4, Lcom/htc/widget/MoreExpandableHtcListView;
+    check-cast v4, Landroid/view/ViewGroup;
 
-    .line 1518
-    .local v4, moreExListView:Lcom/htc/widget/MoreExpandableHtcListView;
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
+    .line 1556
+    .local v4, moreExpandViewLayout:Landroid/view/ViewGroup;
+    if-eqz v4, :cond_0
 
-    move-result-object v8
+    .line 1557
+    invoke-virtual {v4, v9}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    invoke-virtual {v4, v8}, Lcom/htc/widget/MoreExpandableHtcListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
-
-    .line 1519
-    const v8, 0x20200ac
-
-    invoke-virtual {v2, v8}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/view/ViewGroup;
-
-    .line 1521
-    .local v5, moreExpandViewLayout:Landroid/view/ViewGroup;
-    if-eqz v5, :cond_0
-
-    .line 1522
-    invoke-virtual {v5, v10}, Landroid/view/ViewGroup;->setVisibility(I)V
-
-    .line 1523
-    invoke-virtual {v2, v13}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    .line 1558
+    invoke-virtual {v2, v12}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     .end local v1           #emptyView:Landroid/widget/TextView;
     check-cast v1, Landroid/widget/TextView;
 
-    .line 1524
+    .line 1559
     .restart local v1       #emptyView:Landroid/widget/TextView;
-    invoke-virtual {v4, v1}, Lcom/htc/widget/MoreExpandableHtcListView;->setEmptyView(Landroid/view/View;)V
+    invoke-virtual {v3, v1}, Lcom/htc/widget/HtcListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 1525
-    invoke-virtual {v1, v12}, Landroid/widget/TextView;->setVisibility(I)V
+    .line 1560
+    invoke-virtual {v1, v11}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1528
+    .line 1563
     :cond_0
-    invoke-virtual {p0, v3, v2, v0}, Lcom/htc/app/FilePickerCore;->getMoreExpanedObjectInstance(Lcom/htc/app/FilePickerFolderAdapter;Landroid/view/ViewGroup;I)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    if-nez v5, :cond_3
 
-    move-result-object v6
+    .line 1564
+    invoke-virtual {p0, v2, v0}, Lcom/htc/app/FilePickerCore;->getMoreExpanedObjectInstance(Landroid/view/ViewGroup;I)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    .line 1530
-    invoke-direct {p0, v6}, Lcom/htc/app/FilePickerCore;->addMoreExpanedObjectToList(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
+    move-result-object v5
 
-    .line 1533
-    const v8, 0x20200c0
+    .line 1565
+    invoke-direct {p0, v5}, Lcom/htc/app/FilePickerCore;->addMoreExpanedObjectToList(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
 
-    invoke-direct {p0, v8, v2}, Lcom/htc/app/FilePickerCore;->setViewToMainLayoutAndShow(ILandroid/view/View;)V
+    .line 1571
+    :goto_1
+    const v7, 0x20200c0
 
-    .line 1534
-    const/4 v8, 0x1
+    invoke-direct {p0, v7, v2}, Lcom/htc/app/FilePickerCore;->setViewToMainLayoutAndShow(ILandroid/view/View;)V
 
-    invoke-virtual {v6, v8}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->setNeedReLoad(Z)V
+    .line 1572
+    const/4 v7, 0x1
 
-    .line 1535
-    invoke-virtual {v6}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->updatePathOfFolderViewHeader()V
+    invoke-virtual {v5, v7}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->setNeedReLoad(Z)V
 
-    .line 1536
+    .line 1573
+    invoke-virtual {v5}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->updatePathOfFolderViewHeader()V
+
+    .line 1574
     #calls: Lcom/htc/app/FilePickerCore$MoreExpanedObject;->loadFolders()V
-    invoke-static {v6}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$1500(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
+    invoke-static {v5}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$1800(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)V
 
-    .line 1538
-    const-string v8, "Tab_NoneCarousel"
+    .line 1576
+    const-string v7, "Tab_NoneCarousel"
 
-    invoke-direct {p0, v8}, Lcom/htc/app/FilePickerCore;->showViewByTab(Ljava/lang/String;)V
+    invoke-direct {p0, v7}, Lcom/htc/app/FilePickerCore;->showViewByTab(Ljava/lang/String;)V
 
-    .line 1539
+    .line 1577
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 1540
+    .line 1578
     return-void
 
-    .line 1491
+    .line 1529
     .end local v0           #dataSourceType:I
     .end local v1           #emptyView:Landroid/widget/TextView;
     .end local v2           #filePickerFolderView:Landroid/view/ViewGroup;
-    .end local v3           #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    .end local v4           #moreExListView:Lcom/htc/widget/MoreExpandableHtcListView;
-    .end local v5           #moreExpandViewLayout:Landroid/view/ViewGroup;
-    .end local v6           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .end local v3           #moreExListView:Lcom/htc/widget/HtcListView;
+    .end local v4           #moreExpandViewLayout:Landroid/view/ViewGroup;
+    .end local v5           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     :cond_1
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v8
-
-    const v9, 0x2040146
-
-    invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
     move-result-object v7
+
+    const v8, 0x2040146
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
 
     goto/16 :goto_0
 
-    .line 1494
+    .line 1532
     :cond_2
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v8
-
-    const v9, 0x2040147
-
-    invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
     move-result-object v7
 
+    const v8, 0x2040147
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
     goto/16 :goto_0
+
+    .line 1567
+    .restart local v0       #dataSourceType:I
+    .restart local v1       #emptyView:Landroid/widget/TextView;
+    .restart local v2       #filePickerFolderView:Landroid/view/ViewGroup;
+    .restart local v3       #moreExListView:Lcom/htc/widget/HtcListView;
+    .restart local v4       #moreExpandViewLayout:Landroid/view/ViewGroup;
+    .restart local v5       #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    :cond_3
+    #calls: Lcom/htc/app/FilePickerCore$MoreExpanedObject;->reInit(Landroid/view/ViewGroup;I)V
+    invoke-static {v5, v2, v0}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$1700(Lcom/htc/app/FilePickerCore$MoreExpanedObject;Landroid/view/ViewGroup;I)V
+
+    goto :goto_1
 .end method
 
 .method private showViewByTab(Ljava/lang/String;)V
@@ -11015,20 +11241,20 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 2022
+    .line 2370
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    .line 2023
+    .line 2371
     .local v3, oldTab:Ljava/lang/String;
     iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    .line 2024
+    .line 2372
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideSearchBar()V
 
-    .line 2025
+    .line 2373
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->performAllViewActionModeFinish()V
 
-    .line 2027
+    .line 2375
     const-string v5, "Tab_Recent"
 
     invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -11037,10 +11263,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 2028
+    .line 2376
     iput-boolean v9, p0, Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
 
-    .line 2076
+    .line 2424
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -11049,10 +11275,10 @@
 
     invoke-virtual {v5}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    .line 2077
+    .line 2425
     return-void
 
-    .line 2029
+    .line 2377
     :cond_1
     const-string v5, "Tab_Favorites"
 
@@ -11062,7 +11288,7 @@
 
     if-eqz v5, :cond_5
 
-    .line 2030
+    .line 2378
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
 
     if-eqz v5, :cond_4
@@ -11071,7 +11297,7 @@
 
     if-eq v3, v5, :cond_4
 
-    .line 2032
+    .line 2380
     :try_start_0
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
 
@@ -11081,14 +11307,14 @@
 
     if-eqz v5, :cond_3
 
-    .line 2033
+    .line 2381
     const-string v5, "FilePickerWithDB"
 
     const-string v6, "#### refresh fav data"
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2034
+    .line 2382
     new-instance v2, Lcom/htc/app/FileScanner;
 
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
@@ -11103,18 +11329,18 @@
 
     invoke-direct {v2, v5, v6, v7, v8}, Lcom/htc/app/FileScanner;-><init>(Landroid/content/Context;Lcom/htc/app/FilePickerListAdapter;[Ljava/lang/String;Lcom/htc/app/FilePickerDBHelper;)V
 
-    .line 2037
+    .line 2385
     .local v2, fileScanner:Lcom/htc/app/FileScanner;
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v2, v5}, Lcom/htc/app/FileScanner;->setFilePickerUtil(Lcom/htc/app/FilePickerUtil;)V
 
-    .line 2038
+    .line 2386
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v5}, Lcom/htc/app/FilePickerListAdapter;->clear()V
 
-    .line 2039
+    .line 2387
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v5, Lcom/htc/app/FilePickerCore$9;
@@ -11123,13 +11349,13 @@
 
     invoke-direct {v1, v5}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2053
+    .line 2401
     .local v1, favoriteThread:Ljava/lang/Thread;
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2065
+    .line 2413
     .end local v1           #favoriteThread:Ljava/lang/Thread;
     .end local v2           #fileScanner:Lcom/htc/app/FileScanner;
     :cond_2
@@ -11138,14 +11364,14 @@
 
     goto :goto_0
 
-    .line 2055
+    .line 2403
     :cond_3
     :try_start_1
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v5, :cond_2
 
-    .line 2056
+    .line 2404
     iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v5}, Lcom/htc/app/FilePickerListAdapter;->NotifyFileScanEnd()V
@@ -11154,11 +11380,11 @@
 
     goto :goto_1
 
-    .line 2058
+    .line 2406
     :catch_0
     move-exception v0
 
-    .line 2059
+    .line 2407
     .local v0, e:Ljava/lang/Exception;
     const-string v5, "FilePickerWithDB"
 
@@ -11166,12 +11392,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2060
+    .line 2408
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 2063
+    .line 2411
     .end local v0           #e:Ljava/lang/Exception;
     :cond_4
     const-string v5, "FilePickerWithDB"
@@ -11182,7 +11408,7 @@
 
     goto :goto_1
 
-    .line 2066
+    .line 2414
     :cond_5
     const-string v5, "Tab_Type"
 
@@ -11192,7 +11418,7 @@
 
     if-eqz v5, :cond_7
 
-    .line 2067
+    .line 2415
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
@@ -11203,14 +11429,14 @@
 
     move-result-object v4
 
-    .line 2068
+    .line 2416
     .local v4, typeLayout:Landroid/view/View;
     if-eqz v4, :cond_6
 
-    .line 2069
+    .line 2417
     invoke-virtual {p0, v4}, Lcom/htc/app/FilePickerCore;->checkToShowLocalStorageAvailableView(Landroid/view/View;)V
 
-    .line 2071
+    .line 2419
     :cond_6
     const/4 v5, 0x1
 
@@ -11218,7 +11444,7 @@
 
     goto/16 :goto_0
 
-    .line 2072
+    .line 2420
     .end local v4           #typeLayout:Landroid/view/View;
     :cond_7
     const-string v5, "Tab_NoneCarousel"
@@ -11229,7 +11455,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 2073
+    .line 2421
     iput-boolean v9, p0, Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
 
     goto/16 :goto_0
@@ -11240,39 +11466,39 @@
     .parameter "adapter"
 
     .prologue
-    .line 3562
+    .line 3908
     if-eqz p1, :cond_0
 
-    .line 3563
+    .line 3909
     invoke-virtual {p1}, Lcom/htc/app/FilePickerListAdapter;->getFileCount()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
-    .line 3564
+    .line 3910
     new-instance v0, Lcom/htc/app/FileSorter;
 
     invoke-direct {v0}, Lcom/htc/app/FileSorter;-><init>()V
 
-    .line 3565
+    .line 3911
     .local v0, fileSorter:Lcom/htc/app/FileSorter;
     iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FileSorter;->setSortBy(I)V
 
-    .line 3566
+    .line 3912
     iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FileSorter;->setSortOrder(I)V
 
-    .line 3567
+    .line 3913
     invoke-virtual {p1, v0}, Lcom/htc/app/FilePickerListAdapter;->setFileSorter(Lcom/htc/app/FileSorter;)V
 
-    .line 3568
+    .line 3914
     invoke-virtual {p1}, Lcom/htc/app/FilePickerListAdapter;->sortRecentAndFavorite()V
 
-    .line 3571
+    .line 3917
     .end local v0           #fileSorter:Lcom/htc/app/FileSorter;
     :cond_0
     return-void
@@ -11284,36 +11510,36 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1206
+    .line 1244
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 1207
+    .line 1245
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     const/16 v2, 0xc
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1208
+    .line 1246
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->notifyCloudLoginCheckRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1210
+    .line 1248
     :cond_0
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     if-nez v1, :cond_1
 
-    .line 1252
+    .line 1290
     :goto_0
     return-void
 
-    .line 1213
+    .line 1251
     :cond_1
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -11325,29 +11551,29 @@
 
     move-result v0
 
-    .line 1216
+    .line 1254
     .local v0, currentDataSourceIsLocal:Z
     iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsUsbConnectionMode:Z
 
     if-eqz v1, :cond_2
 
-    .line 1218
+    .line 1256
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchUsbConnectionPicker()V
 
     goto :goto_0
 
-    .line 1224
+    .line 1262
     :cond_2
     iget-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
 
     if-eqz v1, :cond_3
 
-    .line 1226
+    .line 1264
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFolderPicker()V
 
     goto :goto_0
 
-    .line 1232
+    .line 1270
     :cond_3
     if-nez v0, :cond_4
 
@@ -11368,13 +11594,13 @@
 
     if-ne v1, v3, :cond_6
 
-    .line 1235
+    .line 1273
     :cond_5
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFilePicker()V
 
     goto :goto_0
 
-    .line 1241
+    .line 1279
     :cond_6
     if-eqz v0, :cond_7
 
@@ -11395,28 +11621,28 @@
 
     if-nez v1, :cond_9
 
-    .line 1243
+    .line 1281
     :cond_8
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchLocalPicker()V
 
     goto :goto_0
 
-    .line 1248
+    .line 1286
     :cond_9
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
     if-nez v1, :cond_a
 
-    .line 1249
+    .line 1287
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLandingPage()V
 
     goto :goto_0
 
-    .line 1254
+    .line 1292
     :cond_a
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 1257
+    .line 1295
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "No found the kind settings of Picker!!!"
@@ -11430,12 +11656,12 @@
     .locals 2
 
     .prologue
-    .line 2445
+    .line 2794
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mSdcardListener:Lcom/htc/app/FilePickerCore$SdcardListener;
 
     if-eqz v0, :cond_0
 
-    .line 2446
+    .line 2795
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -11444,12 +11670,12 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 2447
+    .line 2796
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mSdcardListener:Lcom/htc/app/FilePickerCore$SdcardListener;
 
-    .line 2449
+    .line 2798
     :cond_0
     return-void
 .end method
@@ -11458,34 +11684,34 @@
     .locals 4
 
     .prologue
-    .line 3419
+    .line 3769
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfFavoriteListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     if-eqz v2, :cond_1
 
-    .line 3420
+    .line 3770
     const/4 v0, 0x0
 
-    .line 3421
+    .line 3771
     .local v0, fileCount:I
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v2, :cond_0
 
-    .line 3422
+    .line 3772
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerListAdapter;->getCurrentFileCount()I
 
     move-result v0
 
-    .line 3424
+    .line 3774
     :cond_0
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3425
+    .line 3775
     .local v1, text:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfFavoriteListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
@@ -11493,7 +11719,7 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 3428
+    .line 3778
     .end local v0           #fileCount:I
     .end local v1           #text:Ljava/lang/String;
     :cond_1
@@ -11504,34 +11730,34 @@
     .locals 4
 
     .prologue
-    .line 3397
+    .line 3747
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
     if-eqz v2, :cond_1
 
-    .line 3398
+    .line 3748
     const/4 v0, 0x0
 
-    .line 3399
+    .line 3749
     .local v0, fileCount:I
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v2, :cond_0
 
-    .line 3400
+    .line 3750
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerListAdapter;->getCurrentFileCount()I
 
     move-result v0
 
-    .line 3402
+    .line 3752
     :cond_0
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3403
+    .line 3753
     .local v1, text:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
@@ -11539,53 +11765,7 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 3406
-    .end local v0           #fileCount:I
-    .end local v1           #text:Ljava/lang/String;
-    :cond_1
-    return-void
-.end method
-
-.method private updateCountOfTypeListViewHeader()V
-    .locals 4
-
-    .prologue
-    .line 3386
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfTypeListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
-
-    if-eqz v2, :cond_1
-
-    .line 3387
-    const/4 v0, 0x0
-
-    .line 3388
-    .local v0, fileCount:I
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
-
-    if-eqz v2, :cond_0
-
-    .line 3389
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
-
-    invoke-virtual {v2}, Lcom/htc/app/FilePickerListAdapter;->getCurrentFileCount()I
-
-    move-result v0
-
-    .line 3391
-    :cond_0
-    invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 3392
-    .local v1, text:Ljava/lang/String;
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfTypeListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3, v1}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
-
-    .line 3394
+    .line 3756
     .end local v0           #fileCount:I
     .end local v1           #text:Ljava/lang/String;
     :cond_1
@@ -11598,7 +11778,7 @@
     .locals 12
 
     .prologue
-    .line 985
+    .line 1024
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
@@ -11611,16 +11791,16 @@
 
     check-cast v2, Lcom/htc/widget/HtcGridView;
 
-    .line 986
+    .line 1025
     .local v2, offlineGridView:Lcom/htc/widget/HtcGridView;
     if-eqz v2, :cond_1
 
-    .line 987
+    .line 1026
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 988
+    .line 1027
     .local v0, displaymetrics:Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -11636,34 +11816,34 @@
 
     invoke-virtual {v10, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 989
+    .line 1028
     iget v9, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 990
+    .line 1029
     .local v9, total_width:I
     invoke-virtual {v2}, Lcom/htc/widget/HtcGridView;->getPaddingLeft()I
 
     move-result v6
 
-    .line 991
+    .line 1030
     .local v6, paddingLeft:I
     invoke-virtual {v2}, Lcom/htc/widget/HtcGridView;->getPaddingRight()I
 
     move-result v7
 
-    .line 992
+    .line 1031
     .local v7, paddingRight:I
     invoke-virtual {v2}, Lcom/htc/widget/HtcGridView;->getPaddingTop()I
 
     move-result v8
 
-    .line 993
+    .line 1032
     .local v8, paddingTop:I
     invoke-virtual {v2}, Lcom/htc/widget/HtcGridView;->getPaddingBottom()I
 
     move-result v5
 
-    .line 994
+    .line 1033
     .local v5, paddingBottom:I
     iget v10, p0, Lcom/htc/app/FilePickerCore;->gridItemSize:I
 
@@ -11671,17 +11851,17 @@
 
     sub-int v1, v9, v10
 
-    .line 995
+    .line 1034
     .local v1, left_width:I
     if-lez v1, :cond_0
 
-    .line 996
+    .line 1035
     div-int/lit8 v6, v1, 0x8
 
-    .line 997
+    .line 1036
     div-int/lit8 v7, v1, 0x8
 
-    .line 1000
+    .line 1039
     :cond_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -11699,15 +11879,15 @@
 
     move-result v4
 
-    .line 1001
+    .line 1040
     .local v4, orientation:I
     packed-switch v4, :pswitch_data_0
 
-    .line 1020
+    .line 1059
     :goto_0
     invoke-virtual {v2, v6, v8, v7, v5}, Lcom/htc/widget/HtcGridView;->setPadding(IIII)V
 
-    .line 1022
+    .line 1061
     .end local v0           #displaymetrics:Landroid/util/DisplayMetrics;
     .end local v1           #left_width:I
     .end local v4           #orientation:I
@@ -11729,16 +11909,16 @@
 
     check-cast v3, Lcom/htc/widget/HtcGridView;
 
-    .line 1023
+    .line 1062
     .local v3, onlineGridView:Lcom/htc/widget/HtcGridView;
     if-eqz v3, :cond_3
 
-    .line 1024
+    .line 1063
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1025
+    .line 1064
     .restart local v0       #displaymetrics:Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -11754,34 +11934,34 @@
 
     invoke-virtual {v10, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1026
+    .line 1065
     iget v9, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 1027
+    .line 1066
     .restart local v9       #total_width:I
     invoke-virtual {v3}, Lcom/htc/widget/HtcGridView;->getPaddingLeft()I
 
     move-result v6
 
-    .line 1028
+    .line 1067
     .restart local v6       #paddingLeft:I
     invoke-virtual {v3}, Lcom/htc/widget/HtcGridView;->getPaddingRight()I
 
     move-result v7
 
-    .line 1029
+    .line 1068
     .restart local v7       #paddingRight:I
     invoke-virtual {v3}, Lcom/htc/widget/HtcGridView;->getPaddingTop()I
 
     move-result v8
 
-    .line 1030
+    .line 1069
     .restart local v8       #paddingTop:I
     invoke-virtual {v3}, Lcom/htc/widget/HtcGridView;->getPaddingBottom()I
 
     move-result v5
 
-    .line 1031
+    .line 1070
     .restart local v5       #paddingBottom:I
     iget v10, p0, Lcom/htc/app/FilePickerCore;->gridItemSize:I
 
@@ -11789,17 +11969,17 @@
 
     sub-int v1, v9, v10
 
-    .line 1032
+    .line 1071
     .restart local v1       #left_width:I
     if-lez v1, :cond_2
 
-    .line 1033
+    .line 1072
     div-int/lit8 v6, v1, 0x8
 
-    .line 1034
+    .line 1073
     div-int/lit8 v7, v1, 0x8
 
-    .line 1037
+    .line 1076
     :cond_2
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -11817,15 +11997,15 @@
 
     move-result v4
 
-    .line 1038
+    .line 1077
     .restart local v4       #orientation:I
     packed-switch v4, :pswitch_data_1
 
-    .line 1057
+    .line 1096
     :goto_1
     invoke-virtual {v3, v6, v8, v7, v5}, Lcom/htc/widget/HtcGridView;->setPadding(IIII)V
 
-    .line 1059
+    .line 1098
     .end local v0           #displaymetrics:Landroid/util/DisplayMetrics;
     .end local v1           #left_width:I
     .end local v4           #orientation:I
@@ -11837,7 +12017,7 @@
     :cond_3
     return-void
 
-    .line 1003
+    .line 1042
     .end local v3           #onlineGridView:Lcom/htc/widget/HtcGridView;
     .restart local v0       #displaymetrics:Landroid/util/DisplayMetrics;
     .restart local v1       #left_width:I
@@ -11848,84 +12028,84 @@
     .restart local v8       #paddingTop:I
     .restart local v9       #total_width:I
     :pswitch_0
-    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingTop:I
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Top:I
 
-    .line 1004
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingBottom:I
-
-    .line 1005
-    goto :goto_0
-
-    .line 1007
-    :pswitch_1
-    const/4 v8, 0x0
-
-    .line 1008
-    const/4 v5, 0x0
-
-    .line 1009
-    goto :goto_0
-
-    .line 1011
-    :pswitch_2
-    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingTop:I
-
-    .line 1012
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingBottom:I
-
-    .line 1013
-    goto :goto_0
-
-    .line 1015
-    :pswitch_3
-    const/4 v8, 0x0
-
-    .line 1016
-    const/4 v5, 0x0
-
-    goto :goto_0
-
-    .line 1040
-    .restart local v3       #onlineGridView:Lcom/htc/widget/HtcGridView;
-    :pswitch_4
-    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingTop:I
-
-    .line 1041
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingBottom:I
-
-    .line 1042
-    goto :goto_1
+    .line 1043
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Bottom:I
 
     .line 1044
-    :pswitch_5
-    const/4 v8, 0x0
-
-    .line 1045
-    const/4 v5, 0x0
+    goto :goto_0
 
     .line 1046
-    goto :goto_1
+    :pswitch_1
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Top:I
+
+    .line 1047
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Bottom:I
 
     .line 1048
-    :pswitch_6
-    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingTop:I
-
-    .line 1049
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingBottom:I
+    goto :goto_0
 
     .line 1050
-    goto :goto_1
+    :pswitch_2
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Top:I
+
+    .line 1051
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Bottom:I
 
     .line 1052
-    :pswitch_7
-    const/4 v8, 0x0
+    goto :goto_0
 
-    .line 1053
-    const/4 v5, 0x0
+    .line 1054
+    :pswitch_3
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Top:I
+
+    .line 1055
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Bottom:I
+
+    goto :goto_0
+
+    .line 1079
+    .restart local v3       #onlineGridView:Lcom/htc/widget/HtcGridView;
+    :pswitch_4
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Top:I
+
+    .line 1080
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Bottom:I
+
+    .line 1081
+    goto :goto_1
+
+    .line 1083
+    :pswitch_5
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Top:I
+
+    .line 1084
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Bottom:I
+
+    .line 1085
+    goto :goto_1
+
+    .line 1087
+    :pswitch_6
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Top:I
+
+    .line 1088
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Bottom:I
+
+    .line 1089
+    goto :goto_1
+
+    .line 1091
+    :pswitch_7
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Top:I
+
+    .line 1092
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Bottom:I
 
     goto :goto_1
 
-    .line 1001
+    .line 1040
     nop
 
     :pswitch_data_0
@@ -11936,7 +12116,7 @@
         :pswitch_3
     .end packed-switch
 
-    .line 1038
+    .line 1077
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_4
@@ -11957,7 +12137,7 @@
 
     const/16 v7, 0x8
 
-    .line 2080
+    .line 2428
     const v6, 0x20200cd
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -11966,7 +12146,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 2081
+    .line 2429
     .local v5, noStorageView:Landroid/widget/TextView;
     const v6, 0x20200aa
 
@@ -11976,19 +12156,19 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 2082
+    .line 2430
     .local v4, emptyView:Landroid/widget/TextView;
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isInternalStorageAvailable()Z
 
     move-result v2
 
-    .line 2083
+    .line 2431
     .local v2, bInternalStorageAvailable:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageAvailable()Z
 
     move-result v0
 
-    .line 2085
+    .line 2433
     .local v0, bExternalStorageAvailable:Z
     iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -11996,37 +12176,37 @@
 
     move-result v3
 
-    .line 2086
+    .line 2434
     .local v3, dataSourceType:I
     packed-switch v3, :pswitch_data_0
 
-    .line 2110
+    .line 2458
     :goto_0
     return-void
 
-    .line 2088
+    .line 2436
     :pswitch_0
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageShared()Z
 
     move-result v1
 
-    .line 2089
+    .line 2437
     .local v1, bExternalStorageShared:Z
     if-eqz v1, :cond_0
 
-    .line 2090
+    .line 2438
     invoke-virtual {v5, v9}, Landroid/widget/TextView;->setText(I)V
 
-    .line 2093
+    .line 2441
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 2094
+    .line 2442
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 2092
+    .line 2440
     :cond_0
     const v6, 0x20400a0
 
@@ -12034,38 +12214,38 @@
 
     goto :goto_1
 
-    .line 2096
+    .line 2444
     :cond_1
     invoke-virtual {v5, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2097
+    .line 2445
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 2101
+    .line 2449
     .end local v1           #bExternalStorageShared:Z
     :pswitch_1
     invoke-virtual {v5, v9}, Landroid/widget/TextView;->setText(I)V
 
-    .line 2102
+    .line 2450
     if-eqz v2, :cond_2
 
-    .line 2103
+    .line 2451
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 2105
+    .line 2453
     :cond_2
     invoke-virtual {v5, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2106
+    .line 2454
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 2086
+    .line 2434
     nop
 
     :pswitch_data_0
@@ -12076,58 +12256,68 @@
 .end method
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)V
-    .locals 5
+    .locals 6
     .parameter "event"
 
     .prologue
-    .line 3648
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+    .line 4007
+    iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
-    invoke-virtual {v2}, Lcom/htc/app/FilePickerActionBarExtController;->isSearchBarVisibled()Z
+    invoke-virtual {v3}, Lcom/htc/app/FilePickerActionBarExtController;->isSearchBarVisibled()Z
+
+    move-result v2
+
+    .line 4008
+    .local v2, isSearchBarVisibled:Z
+    iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    invoke-virtual {v3}, Lcom/htc/app/FilePickerActionBarExtController;->isActionBarContainerBackUpEnabled()Z
 
     move-result v1
 
-    .line 3649
-    .local v1, isSearchBarVisibled:Z
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+    .line 4011
+    .local v1, isActionBarContainerBackUpEnabled:Z
+    if-nez v2, :cond_0
 
-    invoke-virtual {v2}, Lcom/htc/app/FilePickerActionBarExtController;->isActionBarContainerBackUpEnabled()Z
-
-    move-result v0
-
-    .line 3652
-    .local v0, isActionBarContainerBackUpEnabled:Z
     if-nez v1, :cond_0
-
-    if-nez v0, :cond_0
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
-    move-result v2
+    move-result v3
 
-    const/4 v3, 0x4
+    const/4 v4, 0x4
 
-    if-ne v2, v3, :cond_0
+    if-ne v3, v4, :cond_0
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_0
+    if-nez v3, :cond_0
 
-    .line 3656
-    const/4 v2, 0x0
+    .line 4014
+    const/4 v3, 0x0
 
-    iget v3, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+    iget v4, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
 
-    iget v4, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
 
-    invoke-direct {p0, v2, v3, v4}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+    invoke-direct {p0, v3, v4, v5}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
 
-    .line 3657
+    .line 4015
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 4016
+    .local v0, bundle:Landroid/os/Bundle;
+    invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
+
+    .line 4017
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
 
-    .line 3659
+    .line 4019
+    .end local v0           #bundle:Landroid/os/Bundle;
     :cond_0
     return-void
 .end method
@@ -12137,7 +12327,7 @@
     .parameter "key"
 
     .prologue
-    .line 3694
+    .line 4054
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -12146,7 +12336,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerListAdapter;->setSearchString(Ljava/lang/String;)V
 
-    .line 3695
+    .line 4055
     return-void
 .end method
 
@@ -12154,7 +12344,7 @@
     .locals 3
 
     .prologue
-    .line 2743
+    .line 3090
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -12173,7 +12363,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2745
+    .line 3092
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -12182,11 +12372,11 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
-    .line 2748
+    .line 3095
     :goto_0
     return-void
 
-    .line 2747
+    .line 3094
     :cond_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -12203,7 +12393,7 @@
     .locals 0
 
     .prologue
-    .line 2751
+    .line 3098
     return-void
 .end method
 
@@ -12211,7 +12401,7 @@
     .locals 1
 
     .prologue
-    .line 4372
+    .line 4734
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     return-object v0
@@ -12221,7 +12411,7 @@
     .locals 1
 
     .prologue
-    .line 185
+    .line 183
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerAct:Landroid/app/Activity;
 
     return-object v0
@@ -12231,7 +12421,7 @@
     .locals 1
 
     .prologue
-    .line 166
+    .line 164
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     return-object v0
@@ -12241,7 +12431,7 @@
     .locals 1
 
     .prologue
-    .line 1449
+    .line 1487
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerFavoritesFragment:Lcom/htc/app/FilePickerFavoritesFragment;
 
     return-object v0
@@ -12251,51 +12441,45 @@
     .locals 1
 
     .prologue
-    .line 4368
+    .line 4730
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     return-object v0
 .end method
 
-.method getFolderAdapterInstance(Landroid/view/ViewGroup;)Lcom/htc/app/FilePickerFolderAdapter;
-    .locals 6
+.method getFolderAdapterInstance(Landroid/view/ViewGroup;Ljava/util/LinkedList;)Lcom/htc/app/FilePickerFolderAdapter;
+    .locals 4
     .parameter "filePickerFolderView"
+    .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/ViewGroup;",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/htc/app/FolderItemInfo;",
+            ">;)",
+            "Lcom/htc/app/FilePickerFolderAdapter;"
+        }
+    .end annotation
 
     .prologue
-    .line 1548
+    .line 1587
+    .local p2, resultItemList:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Lcom/htc/app/FolderItemInfo;>;"
     new-instance v0, Lcom/htc/app/FilePickerFolderAdapter;
 
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mFilter:[Ljava/lang/String;
+    iget v2, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    iget v3, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
+    iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    invoke-direct {v0, v1, v2, v3, p2}, Lcom/htc/app/FilePickerFolderAdapter;-><init>(Landroid/content/Context;ILcom/htc/app/FilePickerUtil;Ljava/util/LinkedList;)V
 
-    move-object v4, p1
-
-    invoke-direct/range {v0 .. v5}, Lcom/htc/app/FilePickerFolderAdapter;-><init>(Landroid/content/Context;[Ljava/lang/String;ILandroid/view/View;Lcom/htc/app/FilePickerUtil;)V
-
-    .line 1551
+    .line 1589
     .local v0, moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
-
-    invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFolderAdapter;->setFilePickerCloudHelper(Lcom/htc/app/FilePickerCloudHelper;)V
-
-    .line 1552
-    iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
-
-    invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFolderAdapter;->setSortOrder(I)V
-
-    .line 1553
-    iget v1, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
-
-    invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFolderAdapter;->setSortBy(I)V
-
-    .line 1554
     return-object v0
 .end method
 
@@ -12303,46 +12487,37 @@
     .locals 1
 
     .prologue
-    .line 3776
+    .line 4136
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 3777
+    .line 4137
     new-instance v0, Lcom/htc/app/FilePickerCore$23;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerCore$23;-><init>(Lcom/htc/app/FilePickerCore;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
-    .line 3784
+    .line 4144
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method getMoreExpanedObjectInstance(Lcom/htc/app/FilePickerFolderAdapter;Landroid/view/ViewGroup;I)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-    .locals 6
-    .parameter "filePickerFolderAdapter"
+.method getMoreExpanedObjectInstance(Landroid/view/ViewGroup;I)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .locals 2
     .parameter "moreExpandableLayout"
     .parameter "dataSourceType"
 
     .prologue
-    .line 1544
+    .line 1582
     new-instance v0, Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    const/4 v5, 0x0
+    const/4 v1, 0x0
 
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    invoke-direct/range {v0 .. v5}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;-><init>(Lcom/htc/app/FilePickerCore;Lcom/htc/app/FilePickerFolderAdapter;Landroid/view/ViewGroup;ILcom/htc/app/FilePickerCore$1;)V
+    invoke-direct {v0, p0, p1, p2, v1}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;-><init>(Lcom/htc/app/FilePickerCore;Landroid/view/ViewGroup;ILcom/htc/app/FilePickerCore$1;)V
 
     return-object v0
 .end method
@@ -12351,7 +12526,7 @@
     .locals 1
 
     .prologue
-    .line 160
+    .line 158
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     return-object v0
@@ -12361,7 +12536,7 @@
     .locals 1
 
     .prologue
-    .line 1460
+    .line 1498
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerRecentFragment:Lcom/htc/app/FilePickerRecentFragment;
 
     return-object v0
@@ -12371,7 +12546,7 @@
     .locals 1
 
     .prologue
-    .line 112
+    .line 110
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     return-object v0
@@ -12381,7 +12556,7 @@
     .locals 2
 
     .prologue
-    .line 972
+    .line 1011
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -12394,7 +12569,7 @@
 
     sput-object v0, Lcom/htc/app/FilePickerCore;->RECENT_USED:Ljava/lang/String;
 
-    .line 973
+    .line 1012
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -12407,7 +12582,7 @@
 
     sput-object v0, Lcom/htc/app/FilePickerCore;->EMPTY_FOLDER:Ljava/lang/String;
 
-    .line 974
+    .line 1013
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -12420,33 +12595,7 @@
 
     sput-object v0, Lcom/htc/app/FilePickerCore;->LOADING:Ljava/lang/String;
 
-    .line 975
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x20403dc
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeText:Ljava/lang/String;
-
-    .line 976
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x20403db
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentText:Ljava/lang/String;
-
-    .line 977
+    .line 1014
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -12457,22 +12606,35 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesText:Ljava/lang/String;
+    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeText:Ljava/lang/String;
 
-    .line 978
+    .line 1015
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x20403c1
+    const v1, 0x20403dc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mDropboxText:Ljava/lang/String;
+    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentText:Ljava/lang/String;
 
-    .line 979
+    .line 1016
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x20403de
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesText:Ljava/lang/String;
+
+    .line 1017
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -12483,14 +12645,27 @@
 
     move-result-object v0
 
+    iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mDropboxText:Ljava/lang/String;
+
+    .line 1018
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x20403c3
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mSkyDriveText:Ljava/lang/String;
 
-    .line 981
+    .line 1020
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/htc/app/FilePickerCore;->checkHTCLandscapeEnabled(Z)V
 
-    .line 982
+    .line 1021
     return-void
 .end method
 
@@ -12639,44 +12814,44 @@
 
     const/4 v1, 0x1
 
-    .line 1098
+    .line 1137
     packed-switch p1, :pswitch_data_0
 
-    .line 1110
+    .line 1149
     :goto_0
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsUsbConnectionMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 1111
+    .line 1150
     const-string v0, "Tab_NoneCarousel"
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    .line 1112
+    .line 1151
     iput-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsActionModeChoiceEnabled:Z
 
-    .line 1113
+    .line 1152
     iput-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsLocalDataSourceItemsEnabled:Z
 
-    .line 1114
+    .line 1153
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsCloudDataSourceItemsEnabled:Z
 
-    .line 1115
+    .line 1154
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
 
-    .line 1116
+    .line 1155
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsSortMenuItemVisabled:Z
 
-    .line 1117
+    .line 1156
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCore;->isReturnCloudShareLinkEnabled:Z
 
-    .line 1118
+    .line 1157
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerUtil;->setFolderPickerModeEnabled(Z)V
 
-    .line 1119
+    .line 1158
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->getLocalDefaultDateSourceType()I
@@ -12685,39 +12860,39 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerUtil;->setDataSourceType(I)V
 
-    .line 1122
+    .line 1161
     :cond_0
     return-void
 
-    .line 1100
+    .line 1139
     :pswitch_0
     iput-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsUsbConnectionMode:Z
 
-    .line 1101
+    .line 1140
     iput v1, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    .line 1102
+    .line 1141
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerUtil;->setFilePickerModeEnabled(Z)V
 
     goto :goto_0
 
-    .line 1105
+    .line 1144
     :pswitch_1
     iput-boolean v1, p0, Lcom/htc/app/FilePickerCore;->mIsUsbConnectionMode:Z
 
-    .line 1106
+    .line 1145
     iput v2, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    .line 1107
+    .line 1146
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v0, v2}, Lcom/htc/app/FilePickerUtil;->setFilePickerModeEnabled(Z)V
 
     goto :goto_0
 
-    .line 1098
+    .line 1137
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -12729,7 +12904,7 @@
     .locals 1
 
     .prologue
-    .line 3164
+    .line 3520
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsFavoriteStopScan:Z
 
     return v0
@@ -12739,7 +12914,7 @@
     .locals 1
 
     .prologue
-    .line 3160
+    .line 3516
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsRecentStopScan:Z
 
     return v0
@@ -12749,22 +12924,26 @@
     .locals 1
 
     .prologue
-    .line 3152
+    .line 3508
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
     return v0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 7
+    .locals 9
     .parameter "savedInstanceState"
 
     .prologue
+    const v8, 0x205000d
+
+    const/high16 v7, 0x205
+
     const/4 v6, 0x2
 
     const/4 v5, 0x0
 
-    .line 225
+    .line 223
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -12775,10 +12954,10 @@
 
     invoke-virtual {v3, v4}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
 
-    .line 227
+    .line 225
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->initialActionBarExtCtrl()V
 
-    .line 229
+    .line 227
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -12789,7 +12968,7 @@
 
     move-result-object v2
 
-    .line 231
+    .line 229
     .local v2, sharedPreferences:Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -12797,16 +12976,16 @@
 
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->mSharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
 
-    .line 233
+    .line 231
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 234
+    .line 232
     .local v1, resource:Landroid/content/res/Resources;
     new-array v0, v6, [Landroid/graphics/drawable/Drawable;
 
-    .line 235
+    .line 233
     .local v0, layers:[Landroid/graphics/drawable/Drawable;
     const v3, 0x20801b7
 
@@ -12816,7 +12995,7 @@
 
     aput-object v3, v0, v5
 
-    .line 236
+    .line 234
     const/4 v3, 0x1
 
     const v4, 0x20801b8
@@ -12827,7 +13006,7 @@
 
     aput-object v4, v0, v3
 
-    .line 237
+    .line 235
     aget-object v3, v0, v5
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -12836,30 +13015,40 @@
 
     iput v3, p0, Lcom/htc/app/FilePickerCore;->gridItemSize:I
 
-    .line 238
+    .line 236
     new-instance v3, Landroid/graphics/drawable/LayerDrawable;
 
     invoke-direct {v3, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
     iput-object v3, p0, Lcom/htc/app/FilePickerCore;->gridItemBkg:Landroid/graphics/drawable/LayerDrawable;
 
-    .line 239
-    const v3, 0x2050001
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    .line 237
+    invoke-virtual {v1, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
-    iput v3, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingTop:I
+    iput v3, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Top:I
+
+    .line 238
+    invoke-virtual {v1, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/htc/app/FilePickerCore;->Default_Landscape_Padding_Bottom:I
+
+    .line 239
+    invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Top:I
 
     .line 240
-    const/high16 v3, 0x205
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
-    iput v3, p0, Lcom/htc/app/FilePickerCore;->Default_PaddingBottom:I
+    iput v3, p0, Lcom/htc/app/FilePickerCore;->Default_Portrait_Padding_Bottom:I
 
     .line 241
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getHandler()Landroid/os/Handler;
@@ -12880,21 +13069,21 @@
     .parameter "dialogId"
 
     .prologue
-    const v0, 0x20403d5
+    const v0, 0x20403d6
 
     const v2, 0x104000a
 
-    .line 3662
+    .line 4022
     packed-switch p1, :pswitch_data_0
 
-    .line 3684
+    .line 4044
     :pswitch_0
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 3664
+    .line 4024
     :pswitch_1
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->createNetworkSettingDialog()Landroid/app/Dialog;
 
@@ -12902,7 +13091,7 @@
 
     goto :goto_0
 
-    .line 3666
+    .line 4026
     :pswitch_2
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->createSortDialog()Landroid/app/Dialog;
 
@@ -12910,7 +13099,7 @@
 
     goto :goto_0
 
-    .line 3668
+    .line 4028
     :pswitch_3
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->createFolderPathReturnDialog()Landroid/app/Dialog;
 
@@ -12918,7 +13107,7 @@
 
     goto :goto_0
 
-    .line 3670
+    .line 4030
     :pswitch_4
     const v0, 0x20400a2
 
@@ -12928,7 +13117,7 @@
 
     goto :goto_0
 
-    .line 3672
+    .line 4032
     :pswitch_5
     const v0, 0x20402cd
 
@@ -12938,11 +13127,11 @@
 
     goto :goto_0
 
-    .line 3674
+    .line 4034
     :pswitch_6
-    const v0, 0x20403c8
+    const v0, 0x20403c9
 
-    const v1, 0x20403c9
+    const v1, 0x20403ca
 
     invoke-direct {p0, v0, v1, v2}, Lcom/htc/app/FilePickerCore;->createMakeSureDialog(III)Landroid/app/Dialog;
 
@@ -12950,7 +13139,7 @@
 
     goto :goto_0
 
-    .line 3677
+    .line 4037
     :pswitch_7
     invoke-direct {p0, v0, v0, v2}, Lcom/htc/app/FilePickerCore;->createMakeSureDialog(III)Landroid/app/Dialog;
 
@@ -12958,7 +13147,7 @@
 
     goto :goto_0
 
-    .line 3680
+    .line 4040
     :pswitch_8
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->createDownloadDialog()Landroid/app/Dialog;
 
@@ -12966,7 +13155,7 @@
 
     goto :goto_0
 
-    .line 3682
+    .line 4042
     :pswitch_9
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->createDownloadFailDialog()Landroid/app/Dialog;
 
@@ -12974,7 +13163,7 @@
 
     goto :goto_0
 
-    .line 3662
+    .line 4022
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_2
@@ -13003,7 +13192,7 @@
 
     const/4 v2, 0x0
 
-    .line 2487
+    .line 2836
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -13026,7 +13215,7 @@
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 2491
+    .line 2840
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -13039,7 +13228,7 @@
 
     invoke-interface {p1, v4, v4, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 2493
+    .line 2842
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -13052,7 +13241,7 @@
 
     invoke-interface {p1, v3, v3, v2, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 2495
+    .line 2844
     return-void
 .end method
 
@@ -13062,29 +13251,29 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2499
+    .line 2848
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->doDestroy()V
 
-    .line 2500
+    .line 2849
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->unregisterSdcardReceiver()V
 
-    .line 2501
+    .line 2850
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissProcessingDialog()V
 
-    .line 2502
+    .line 2851
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->dismissLoadingDialog()V
 
-    .line 2503
+    .line 2852
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
     if-eqz v1, :cond_0
 
-    .line 2504
+    .line 2853
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerCloudHelper;->close()V
 
-    .line 2508
+    .line 2857
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mInitThread:Ljava/lang/Thread;
@@ -13095,7 +13284,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2513
+    .line 2862
     :goto_0
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mInitThread:Ljava/lang/Thread;
 
@@ -13105,141 +13294,141 @@
 
     if-nez v1, :cond_1
 
-    .line 2514
+    .line 2863
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mInitThread:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
-    .line 2518
+    .line 2867
     :cond_1
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_2
 
-    .line 2519
+    .line 2868
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->clearHandler()V
 
-    .line 2521
+    .line 2870
     :cond_2
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     if-eqz v1, :cond_3
 
-    .line 2522
+    .line 2871
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerUtil;->close()V
 
-    .line 2524
+    .line 2873
     :cond_3
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     if-eqz v1, :cond_4
 
-    .line 2525
+    .line 2874
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerActionBarExtController;->cleanContainerEnvironment()V
 
-    .line 2529
+    .line 2878
     :cond_4
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilter:[Ljava/lang/String;
 
-    .line 2530
+    .line 2879
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mFileSorter:Lcom/htc/app/FileSorter;
 
-    .line 2531
+    .line 2880
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
-    .line 2532
+    .line 2881
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
-    .line 2533
+    .line 2882
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownOnItemClickListener:Lcom/htc/widget/HtcAdapterView$OnItemClickListener;
 
-    .line 2534
+    .line 2883
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 2536
+    .line 2885
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mSdcardListener:Lcom/htc/app/FilePickerCore$SdcardListener;
 
-    .line 2537
+    .line 2886
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 2538
+    .line 2887
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
-    .line 2539
+    .line 2888
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownLocalAdapter:Lcom/htc/app/FilePickerAppDropDownAdapter;
 
     if-eqz v1, :cond_5
 
-    .line 2540
+    .line 2889
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownLocalAdapter:Lcom/htc/app/FilePickerAppDropDownAdapter;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerAppDropDownAdapter;->close()V
 
-    .line 2542
+    .line 2891
     :cond_5
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownLocalAdapter:Lcom/htc/app/FilePickerAppDropDownAdapter;
 
-    .line 2543
+    .line 2892
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownCloudAdapter:Lcom/htc/app/FilePickerAppDropDownAdapter;
 
     if-eqz v1, :cond_6
 
-    .line 2544
+    .line 2893
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownCloudAdapter:Lcom/htc/app/FilePickerAppDropDownAdapter;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerAppDropDownAdapter;->close()V
 
-    .line 2546
+    .line 2895
     :cond_6
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mAppDropDownCloudAdapter:Lcom/htc/app/FilePickerAppDropDownAdapter;
 
-    .line 2548
+    .line 2897
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfTypeListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 2549
+    .line 2898
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfRecentListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 2550
+    .line 2899
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mHeaderOfFavoriteListViewHeader:Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 2552
+    .line 2901
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->recent_view:Lcom/htc/app/FilePickerListView;
 
-    .line 2553
+    .line 2902
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->favorite_view:Lcom/htc/app/FilePickerListView;
 
-    .line 2554
+    .line 2903
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 2555
+    .line 2904
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 2556
+    .line 2905
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
 
     if-eqz v1, :cond_7
 
-    .line 2557
+    .line 2906
     iget-object v1, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerDBHelper;->close()V
 
-    .line 2558
+    .line 2907
     :cond_7
     iput-object v4, p0, Lcom/htc/app/FilePickerCore;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
 
-    .line 2560
+    .line 2909
     return-void
 
-    .line 2509
+    .line 2858
     :catch_0
     move-exception v0
 
-    .line 2511
+    .line 2860
     .local v0, e:Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
@@ -13247,65 +13436,131 @@
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 4
+    .locals 8
     .parameter "keyCode"
     .parameter "event"
 
     .prologue
-    .line 3620
-    const/4 v2, 0x0
+    .line 3965
+    const/4 v6, 0x0
 
-    .line 3623
-    .local v2, result:Z
-    const/4 v3, 0x4
+    .line 3968
+    .local v6, result:Z
+    const/4 v7, 0x4
 
-    if-ne p1, v3, :cond_0
+    if-ne p1, v7, :cond_0
 
-    .line 3625
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+    .line 3970
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
-    invoke-virtual {v3}, Lcom/htc/app/FilePickerActionBarExtController;->isSearchBarVisibled()Z
+    invoke-virtual {v7}, Lcom/htc/app/FilePickerActionBarExtController;->isSearchBarVisibled()Z
+
+    move-result v4
+
+    .line 3971
+    .local v4, isSearchBarVisibled:Z
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+
+    invoke-virtual {v7}, Lcom/htc/app/FilePickerActionBarExtController;->isActionBarContainerBackUpEnabled()Z
+
+    move-result v2
+
+    .line 3974
+    .local v2, isActionBarContainerBackUpEnabled:Z
+    if-eqz v4, :cond_1
+
+    .line 3975
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideSearchBar()V
+
+    .line 3976
+    const/4 v6, 0x1
+
+    .line 3998
+    .end local v2           #isActionBarContainerBackUpEnabled:Z
+    .end local v4           #isSearchBarVisibled:Z
+    :cond_0
+    :goto_0
+    return v6
+
+    .line 3978
+    .restart local v2       #isActionBarContainerBackUpEnabled:Z
+    .restart local v4       #isSearchBarVisibled:Z
+    :cond_1
+    if-eqz v2, :cond_0
+
+    .line 3979
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+
+    invoke-virtual {v7}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
 
     move-result v1
 
-    .line 3626
-    .local v1, isSearchBarVisibled:Z
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
+    .line 3980
+    .local v1, dataSourceType:I
+    const/4 v5, 0x0
 
-    invoke-virtual {v3}, Lcom/htc/app/FilePickerActionBarExtController;->isActionBarContainerBackUpEnabled()Z
+    .line 3981
+    .local v5, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    iget-object v7, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
-    move-result v0
+    invoke-virtual {v7, v1}, Lcom/htc/app/FilePickerCloudHelper;->getAccountIds(I)[Ljava/lang/String;
 
-    .line 3629
-    .local v0, isActionBarContainerBackUpEnabled:Z
-    if-eqz v1, :cond_1
+    move-result-object v0
 
-    .line 3630
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideSearchBar()V
+    .line 3982
+    .local v0, accounts:[Ljava/lang/String;
+    if-eqz v0, :cond_4
 
-    .line 3631
-    const/4 v2, 0x1
+    array-length v7, v0
 
-    .line 3639
-    .end local v0           #isActionBarContainerBackUpEnabled:Z
-    .end local v1           #isSearchBarVisibled:Z
-    :cond_0
-    :goto_0
-    return v2
+    if-lez v7, :cond_4
 
-    .line 3633
-    .restart local v0       #isActionBarContainerBackUpEnabled:Z
-    .restart local v1       #isSearchBarVisibled:Z
-    :cond_1
-    if-eqz v0, :cond_0
+    .line 3983
+    const/4 v7, 0x0
 
-    .line 3634
+    aget-object v7, v0, v7
+
+    invoke-direct {p0, v1, v7}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v5
+
+    .line 3988
+    :goto_1
+    const/4 v3, 0x0
+
+    .line 3989
+    .local v3, isLoadUpFolders:Z
+    if-eqz v5, :cond_2
+
+    .line 3990
+    #calls: Lcom/htc/app/FilePickerCore$MoreExpanedObject;->loadUpFolders()Z
+    invoke-static {v5}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$1000(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)Z
+
+    move-result v3
+
+    .line 3992
+    :cond_2
+    if-nez v3, :cond_3
+
+    .line 3993
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showLandingPage()V
 
-    .line 3635
-    const/4 v2, 0x1
+    .line 3994
+    :cond_3
+    const/4 v6, 0x1
 
     goto :goto_0
+
+    .line 3986
+    .end local v3           #isLoadUpFolders:Z
+    :cond_4
+    const/4 v7, 0x0
+
+    invoke-direct {p0, v1, v7}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+
+    move-result-object v5
+
+    goto :goto_1
 .end method
 
 .method public onKeyUp(ILandroid/view/KeyEvent;)V
@@ -13314,41 +13569,41 @@
     .parameter "event"
 
     .prologue
-    .line 3596
+    .line 3941
     const/16 v2, 0x54
 
     if-ne p1, v2, :cond_1
 
-    .line 3597
+    .line 3942
     const/4 v1, 0x0
 
-    .line 3598
+    .line 3943
     .local v1, isSearchBarVisibled:Z
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     if-eqz v2, :cond_0
 
-    .line 3599
+    .line 3944
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerActionBarExtController;->isSearchBarVisibled()Z
 
     move-result v1
 
-    .line 3601
+    .line 3946
     :cond_0
     if-eqz v1, :cond_2
 
-    .line 3602
+    .line 3947
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideSearchBar()V
 
-    .line 3617
+    .line 3962
     .end local v1           #isSearchBarVisibled:Z
     :cond_1
     :goto_0
     return-void
 
-    .line 3604
+    .line 3949
     .restart local v1       #isSearchBarVisibled:Z
     :cond_2
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -13363,7 +13618,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 3606
+    .line 3951
     const-string v2, "Tab_Type"
 
     iget-object v3, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
@@ -13374,23 +13629,23 @@
 
     if-eqz v2, :cond_1
 
-    .line 3607
+    .line 3952
     const/4 v0, 0x0
 
-    .line 3608
+    .line 3953
     .local v0, fileCount:I
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v2, :cond_3
 
-    .line 3609
+    .line 3954
     iget-object v2, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerListAdapter;->getFileCount()I
 
     move-result v0
 
-    .line 3610
+    .line 3955
     :cond_3
     iget-boolean v2, p0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
@@ -13398,7 +13653,7 @@
 
     if-lez v0, :cond_1
 
-    .line 3611
+    .line 3956
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showSearchBar()V
 
     goto :goto_0
@@ -13408,75 +13663,75 @@
     .locals 1
 
     .prologue
-    .line 2722
+    .line 3069
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 2723
+    .line 3070
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 2724
+    .line 3071
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 2725
+    .line 3072
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     if-eqz v0, :cond_1
 
-    .line 2726
+    .line 3073
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mTypeDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     invoke-interface {v0}, Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;->onFileScanEnd()V
 
-    .line 2728
+    .line 3075
     :cond_1
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v0, :cond_2
 
-    .line 2729
+    .line 3076
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 2730
+    .line 3077
     :cond_2
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoriteDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     if-eqz v0, :cond_3
 
-    .line 2731
+    .line 3078
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mFavoriteDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     invoke-interface {v0}, Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;->onFileScanEnd()V
 
-    .line 2733
+    .line 3080
     :cond_3
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     if-eqz v0, :cond_4
 
-    .line 2734
+    .line 3081
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentAdapter:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
-    .line 2735
+    .line 3082
     :cond_4
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     if-eqz v0, :cond_5
 
-    .line 2736
+    .line 3083
     iget-object v0, p0, Lcom/htc/app/FilePickerCore;->mRecentDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
     invoke-interface {v0}, Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;->onFileScanEnd()V
 
-    .line 2740
+    .line 3087
     :cond_5
     return-void
 .end method
@@ -13487,20 +13742,20 @@
     .parameter "item"
 
     .prologue
-    .line 2563
+    .line 2912
     invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
 
-    .line 2564
+    .line 2913
     .local v1, id:I
     packed-switch v1, :pswitch_data_0
 
-    .line 2605
+    .line 2954
     :goto_0
     return-void
 
-    .line 2566
+    .line 2915
     :pswitch_0
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -13508,7 +13763,7 @@
 
     move-result v0
 
-    .line 2567
+    .line 2916
     .local v0, dataSourceType:I
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -13522,17 +13777,17 @@
 
     if-eqz v4, :cond_0
 
-    .line 2568
+    .line 2917
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v4, v0}, Lcom/htc/app/FilePickerUtil;->setDataSourceType(I)V
 
-    .line 2569
+    .line 2918
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchLocalPicker()V
 
     goto :goto_0
 
-    .line 2571
+    .line 2920
     :cond_0
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
 
@@ -13542,23 +13797,23 @@
 
     invoke-virtual {v4, v0, v5}, Lcom/htc/app/FilePickerCloudHelper;->setServiceRefresh(IZ)V
 
-    .line 2572
+    .line 2921
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v4, v0}, Lcom/htc/app/FilePickerUtil;->setDataSourceType(I)V
 
-    .line 2574
+    .line 2923
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
     invoke-virtual {v4, v0}, Lcom/htc/app/FilePickerCloudHelper;->hasAnyAccountSignIn(I)Z
 
     move-result v3
 
-    .line 2575
+    .line 2924
     .local v3, isSingIn:Z
     if-eqz v3, :cond_1
 
-    .line 2576
+    .line 2925
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
@@ -13569,12 +13824,12 @@
 
     iput-boolean v4, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
 
-    .line 2578
+    .line 2927
     iget-boolean v4, p0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
 
     if-nez v4, :cond_1
 
-    .line 2579
+    .line 2928
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
@@ -13585,24 +13840,24 @@
 
     goto :goto_0
 
-    .line 2583
+    .line 2932
     :cond_1
     iget-boolean v4, p0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
 
     if-eqz v4, :cond_2
 
-    .line 2584
+    .line 2933
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFolderPicker()V
 
     goto :goto_0
 
-    .line 2586
+    .line 2935
     :cond_2
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->launchCloudFilePicker()V
 
     goto :goto_0
 
-    .line 2592
+    .line 2941
     .end local v0           #dataSourceType:I
     .end local v3           #isSingIn:Z
     :pswitch_1
@@ -13616,39 +13871,39 @@
 
     goto :goto_0
 
-    .line 2595
+    .line 2944
     :pswitch_2
     const/4 v2, 0x0
 
-    .line 2596
+    .line 2945
     .local v2, isSearchBarVisibled:Z
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     if-eqz v4, :cond_3
 
-    .line 2597
+    .line 2946
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
 
     invoke-virtual {v4}, Lcom/htc/app/FilePickerActionBarExtController;->isSearchBarVisibled()Z
 
     move-result v2
 
-    .line 2598
+    .line 2947
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 2599
+    .line 2948
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->hideSearchBar()V
 
     goto :goto_0
 
-    .line 2601
+    .line 2950
     :cond_4
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->showSearchBar()V
 
     goto :goto_0
 
-    .line 2564
+    .line 2913
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -13664,7 +13919,7 @@
     .prologue
     const/high16 v5, 0x100
 
-    .line 205
+    .line 203
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -13673,7 +13928,7 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
-    .line 206
+    .line 204
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -13682,7 +13937,7 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
-    .line 208
+    .line 206
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -13691,7 +13946,7 @@
 
     move-result-object v1
 
-    .line 209
+    .line 207
     .local v1, w:Landroid/view/Window;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
@@ -13705,11 +13960,11 @@
 
     move-result v0
 
-    .line 211
+    .line 209
     .local v0, bgId:I
     invoke-virtual {v1, v0}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
-    .line 213
+    .line 211
     sget-object v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Extra_Sense_Version:Ljava/lang/String;
 
     const-string v3, "4.0a"
@@ -13720,16 +13975,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 214
+    .line 212
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v5}, Landroid/view/Window;->setFlags(II)V
 
-    .line 220
+    .line 218
     :goto_0
     return-void
 
-    .line 216
+    .line 214
     :cond_0
     invoke-virtual {v1, v5, v5}, Landroid/view/Window;->setFlags(II)V
 
@@ -13740,741 +13995,747 @@
     .locals 0
 
     .prologue
-    .line 2608
+    .line 2957
     return-void
 .end method
 
 .method public onPrepareOptionsMenu(Landroid/view/Menu;)V
-    .locals 23
+    .locals 22
     .parameter "menu"
 
     .prologue
-    .line 2611
+    .line 2960
     const/4 v9, 0x0
 
-    .line 2612
+    .line 2961
     .local v9, enableSortOptionMenu:Z
     const/4 v8, 0x0
 
-    .line 2613
+    .line 2962
     .local v8, enableSearchOptionMenu:Z
     const/4 v7, 0x0
 
-    .line 2615
+    .line 2964
     .local v7, enableRefreshOptionMenu:Z
     const/4 v10, 0x0
 
-    .line 2616
+    .line 2965
     .local v10, fileCount:I
-    const/16 v17, 0x0
+    const/16 v16, 0x0
 
-    .line 2621
-    .local v17, listCount:I
-    const/4 v11, 0x0
-
-    .line 2623
-    .local v11, firstLevelFileCount:I
+    .line 2971
+    .local v16, listCount:I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    invoke-virtual/range {v21 .. v21}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
+    invoke-virtual/range {v20 .. v20}, Lcom/htc/app/FilePickerUtil;->getDataSourceType()I
 
     move-result v6
 
-    .line 2624
+    .line 2972
     .local v6, dataSourceType:I
     invoke-static {v6}, Lcom/htc/app/FilePickerUtil;->isCloudDataSourceType(I)Z
 
-    move-result v12
+    move-result v11
 
-    .line 2625
-    .local v12, isCloudDataSourceType:Z
+    .line 2973
+    .local v11, isCloudDataSourceType:Z
     invoke-virtual/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
-    move-result-object v21
+    move-result-object v20
 
-    const v22, 0x20200bf
+    const v21, 0x20200bf
 
-    invoke-virtual/range {v21 .. v22}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual/range {v20 .. v21}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v18
+    move-result-object v17
 
-    .line 2626
-    .local v18, local_carousel_view:Landroid/view/View;
-    invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getVisibility()I
+    .line 2974
+    .local v17, local_carousel_view:Landroid/view/View;
+    invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getVisibility()I
 
-    move-result v21
+    move-result v20
 
-    if-nez v21, :cond_1
+    if-nez v20, :cond_1
 
-    .line 2627
+    .line 2975
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    if-eqz v21, :cond_0
+    if-eqz v20, :cond_0
 
-    .line 2628
+    .line 2976
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    invoke-virtual/range {v21 .. v21}, Lcom/htc/app/FilePickerListAdapter;->getFileCount()I
+    invoke-virtual/range {v20 .. v20}, Lcom/htc/app/FilePickerListAdapter;->getFileCount()I
 
     move-result v10
 
-    .line 2629
+    .line 2977
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    invoke-virtual/range {v21 .. v21}, Lcom/htc/app/FilePickerListAdapter;->getCount()I
+    invoke-virtual/range {v20 .. v20}, Lcom/htc/app/FilePickerListAdapter;->getCount()I
 
-    move-result v17
+    move-result v16
 
-    .line 2631
+    .line 2979
     :cond_0
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-eqz v21, :cond_8
+    if-eqz v20, :cond_8
 
-    if-lez v17, :cond_8
+    if-lez v16, :cond_8
 
     const/4 v9, 0x1
 
-    .line 2632
+    .line 2980
     :goto_0
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-eqz v21, :cond_9
+    if-eqz v20, :cond_9
 
     if-lez v10, :cond_9
 
     const/4 v8, 0x1
 
-    .line 2633
+    .line 2981
     :goto_1
     move-object/from16 v0, p0
 
     iget-boolean v7, v0, Lcom/htc/app/FilePickerCore;->mIsTypeStopScan:Z
 
-    .line 2635
+    .line 2983
     :cond_1
-    const/16 v20, 0x0
+    const/16 v19, 0x0
 
-    .line 2636
-    .local v20, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-    if-eqz v12, :cond_b
+    .line 2984
+    .local v19, moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    if-eqz v11, :cond_b
 
-    .line 2637
+    .line 2985
     const/4 v3, 0x0
 
-    .line 2638
+    .line 2986
     .local v3, accounts:[Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    if-eqz v21, :cond_2
+    if-eqz v20, :cond_2
 
-    .line 2639
+    .line 2987
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    move-object/from16 v0, v21
+    move-object/from16 v0, v20
 
     invoke-virtual {v0, v6}, Lcom/htc/app/FilePickerCloudHelper;->getAccountIds(I)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2640
+    .line 2988
     :cond_2
     if-eqz v3, :cond_a
 
     array-length v0, v3
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-lez v21, :cond_a
+    if-lez v20, :cond_a
 
-    .line 2641
-    const/16 v21, 0x0
+    .line 2989
+    const/16 v20, 0x0
 
-    aget-object v21, v3, v21
+    aget-object v20, v3, v20
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v21
+    move-object/from16 v1, v20
 
     invoke-direct {v0, v6, v1}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    move-result-object v20
-
-    .line 2649
-    .end local v3           #accounts:[Ljava/lang/String;
-    :goto_2
-    if-eqz v20, :cond_3
-
-    .line 2650
-    invoke-virtual/range {v20 .. v20}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getFolderAdapter()Lcom/htc/app/FilePickerFolderAdapter;
-
     move-result-object v19
 
-    .line 2651
-    .local v19, moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
+    .line 2997
+    .end local v3           #accounts:[Ljava/lang/String;
+    :goto_2
     if-eqz v19, :cond_3
 
-    .line 2652
-    invoke-virtual/range {v19 .. v19}, Lcom/htc/app/FilePickerFolderAdapter;->getFirstLevelFileCount()I
+    .line 2998
+    invoke-virtual/range {v19 .. v19}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->getFolderAdapter()Lcom/htc/app/FilePickerFolderAdapter;
 
-    move-result v11
+    move-result-object v18
 
-    .line 2653
-    invoke-virtual/range {v19 .. v19}, Lcom/htc/app/FilePickerFolderAdapter;->isCanSort()Z
+    .line 2999
+    .local v18, moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
+    if-eqz v18, :cond_3
 
-    move-result v21
+    .line 3000
+    invoke-virtual/range {v18 .. v18}, Lcom/htc/app/FilePickerFolderAdapter;->isCanSort()Z
 
-    if-eqz v21, :cond_c
+    move-result v9
 
-    const/16 v21, 0x1
-
-    move/from16 v0, v21
-
-    if-le v11, v0, :cond_c
-
-    const/4 v9, 0x1
-
-    .line 2654
-    :goto_3
-    invoke-virtual/range {v19 .. v19}, Lcom/htc/app/FilePickerFolderAdapter;->isCanSort()Z
+    .line 3001
+    invoke-virtual/range {v18 .. v18}, Lcom/htc/app/FilePickerFolderAdapter;->isCanSort()Z
 
     move-result v7
 
-    .line 2658
-    .end local v19           #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
+    .line 3005
+    .end local v18           #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
     :cond_3
-    const/4 v14, 0x1
-
-    .line 2659
-    .local v14, isSearchMenuItemVisabled:Z
     const/4 v13, 0x1
 
-    .line 2660
-    .local v13, isRefreshMenuItemVisabled:Z
-    const/16 v16, 0x1
+    .line 3006
+    .local v13, isSearchMenuItemVisabled:Z
+    const/4 v12, 0x1
 
-    .line 2661
-    .local v16, isSortMenuItemVisabled:Z
+    .line 3007
+    .local v12, isRefreshMenuItemVisabled:Z
+    const/4 v15, 0x1
+
+    .line 3008
+    .local v15, isSortMenuItemVisabled:Z
     invoke-static {v6}, Lcom/htc/app/FilePickerUtil;->isCloudDataSourceType(I)Z
 
-    move-result v12
+    move-result v11
 
-    .line 2662
-    if-eqz v12, :cond_d
+    .line 3009
+    if-eqz v11, :cond_c
 
-    .line 2663
+    .line 3010
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mFilePickerCloudHelper:Lcom/htc/app/FilePickerCloudHelper;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    move-object/from16 v0, v21
+    move-object/from16 v0, v20
 
     invoke-virtual {v0, v6}, Lcom/htc/app/FilePickerCloudHelper;->hasAnyAccountSignIn(I)Z
 
-    move-result v15
+    move-result v14
 
-    .line 2664
-    .local v15, isSingIn:Z
+    .line 3011
+    .local v14, isSingIn:Z
     invoke-direct/range {p0 .. p0}, Lcom/htc/app/FilePickerCore;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v21
+    move-result-object v20
 
-    invoke-static/range {v21 .. v21}, Lcom/htc/app/FilePickerUtil;->checkNetworkConnected(Landroid/content/Context;)Z
+    invoke-static/range {v20 .. v20}, Lcom/htc/app/FilePickerUtil;->checkNetworkConnected(Landroid/content/Context;)Z
 
-    move-result v21
+    move-result v20
 
-    move/from16 v0, v21
+    move/from16 v0, v20
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
 
-    .line 2665
+    .line 3012
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->isNetworkConnected:Z
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-nez v21, :cond_4
+    if-nez v20, :cond_4
 
-    .line 2666
+    .line 3013
     const/4 v7, 0x1
 
-    .line 2667
+    .line 3014
     const/4 v8, 0x0
 
-    .line 2669
+    .line 3016
     :cond_4
-    if-nez v15, :cond_5
+    if-nez v14, :cond_5
 
-    .line 2670
+    .line 3017
     const/4 v7, 0x0
 
-    .line 2671
+    .line 3018
     const/4 v8, 0x0
 
-    .line 2672
-    const/4 v14, 0x0
-
-    .line 2673
+    .line 3019
     const/4 v13, 0x0
 
-    .line 2674
-    const/16 v16, 0x0
+    .line 3020
+    const/4 v12, 0x0
 
-    .line 2693
-    .end local v15           #isSingIn:Z
+    .line 3021
+    const/4 v15, 0x0
+
+    .line 3040
+    .end local v14           #isSingIn:Z
     :cond_5
-    :goto_4
+    :goto_3
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    move-object/from16 v21, v0
+    move-object/from16 v20, v0
 
-    if-eqz v21, :cond_6
+    if-eqz v20, :cond_6
 
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->mIsUsbConnectionMode:Z
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-eqz v21, :cond_10
+    if-eqz v20, :cond_f
 
-    .line 2694
+    .line 3041
     :cond_6
-    const/4 v14, 0x0
-
-    .line 2695
     const/4 v13, 0x0
 
-    .line 2696
-    const/16 v16, 0x0
+    .line 3042
+    const/4 v12, 0x0
 
-    .line 2702
+    .line 3043
+    const/4 v15, 0x0
+
+    .line 3049
     :cond_7
-    :goto_5
-    const/16 v21, 0x3
+    :goto_4
+    const/16 v20, 0x3
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v21
+    move/from16 v1, v20
 
     invoke-interface {v0, v1, v8}, Landroid/view/Menu;->setGroupEnabled(IZ)V
 
-    .line 2703
-    const/16 v21, 0x1
+    .line 3050
+    const/16 v20, 0x1
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v21
+    move/from16 v1, v20
 
     invoke-interface {v0, v1, v7}, Landroid/view/Menu;->setGroupEnabled(IZ)V
 
-    .line 2704
-    const/16 v21, 0x2
+    .line 3051
+    const/16 v20, 0x2
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v21
+    move/from16 v1, v20
 
     invoke-interface {v0, v1, v9}, Landroid/view/Menu;->setGroupEnabled(IZ)V
 
-    .line 2706
-    const/16 v22, 0x3
+    .line 3053
+    const/16 v21, 0x3
 
-    if-eqz v14, :cond_11
+    if-eqz v13, :cond_10
 
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->mIsSearchMenuItemVisabled:Z
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-eqz v21, :cond_11
+    if-eqz v20, :cond_10
 
-    const/16 v21, 0x1
+    const/16 v20, 0x1
 
-    :goto_6
-    move-object/from16 v0, p1
-
-    move/from16 v1, v22
-
-    move/from16 v2, v21
-
-    invoke-interface {v0, v1, v2}, Landroid/view/Menu;->setGroupVisible(IZ)V
-
-    .line 2707
-    const/16 v21, 0x1
-
+    :goto_5
     move-object/from16 v0, p1
 
     move/from16 v1, v21
 
-    invoke-interface {v0, v1, v13}, Landroid/view/Menu;->setGroupVisible(IZ)V
+    move/from16 v2, v20
 
-    .line 2708
-    const/16 v22, 0x2
+    invoke-interface {v0, v1, v2}, Landroid/view/Menu;->setGroupVisible(IZ)V
 
-    if-eqz v16, :cond_12
+    .line 3054
+    const/16 v20, 0x1
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v20
+
+    invoke-interface {v0, v1, v12}, Landroid/view/Menu;->setGroupVisible(IZ)V
+
+    .line 3055
+    const/16 v21, 0x2
+
+    if-eqz v15, :cond_11
 
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->mIsSortMenuItemVisabled:Z
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-eqz v21, :cond_12
+    if-eqz v20, :cond_11
 
-    const/16 v21, 0x1
+    const/16 v20, 0x1
 
-    :goto_7
+    :goto_6
     move-object/from16 v0, p1
 
-    move/from16 v1, v22
+    move/from16 v1, v21
 
-    move/from16 v2, v21
+    move/from16 v2, v20
 
     invoke-interface {v0, v1, v2}, Landroid/view/Menu;->setGroupVisible(IZ)V
 
-    .line 2709
+    .line 3056
     return-void
 
-    .line 2631
-    .end local v13           #isRefreshMenuItemVisabled:Z
-    .end local v14           #isSearchMenuItemVisabled:Z
-    .end local v16           #isSortMenuItemVisabled:Z
-    .end local v20           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .line 2979
+    .end local v12           #isRefreshMenuItemVisabled:Z
+    .end local v13           #isSearchMenuItemVisabled:Z
+    .end local v15           #isSortMenuItemVisabled:Z
+    .end local v19           #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     :cond_8
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 2632
+    .line 2980
     :cond_9
     const/4 v8, 0x0
 
     goto/16 :goto_1
 
-    .line 2643
+    .line 2991
     .restart local v3       #accounts:[Ljava/lang/String;
-    .restart local v20       #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .restart local v19       #moreExpanedObject:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
     :cond_a
-    const/16 v21, 0x0
+    const/16 v20, 0x0
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v21
+    move-object/from16 v1, v20
 
     invoke-direct {v0, v6, v1}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    move-result-object v20
+    move-result-object v19
 
     goto/16 :goto_2
 
-    .line 2646
+    .line 2994
     .end local v3           #accounts:[Ljava/lang/String;
     :cond_b
-    const/16 v21, 0x0
+    const/16 v20, 0x0
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v21
+    move-object/from16 v1, v20
 
     invoke-direct {v0, v6, v1}, Lcom/htc/app/FilePickerCore;->findMoreExpanedObjectInstance(ILjava/lang/String;)Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    move-result-object v20
+    move-result-object v19
 
     goto/16 :goto_2
 
-    .line 2653
-    .restart local v19       #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
+    .line 3024
+    .restart local v12       #isRefreshMenuItemVisabled:Z
+    .restart local v13       #isSearchMenuItemVisabled:Z
+    .restart local v15       #isSortMenuItemVisabled:Z
     :cond_c
-    const/4 v9, 0x0
-
-    goto/16 :goto_3
-
-    .line 2677
-    .end local v19           #moreExAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    .restart local v13       #isRefreshMenuItemVisabled:Z
-    .restart local v14       #isSearchMenuItemVisabled:Z
-    .restart local v16       #isSortMenuItemVisabled:Z
-    :cond_d
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isInternalStorageAvailable()Z
 
     move-result v5
 
-    .line 2678
+    .line 3025
     .local v5, bInternalStorageAvailable:Z
     invoke-static {}, Lcom/htc/app/FilePickerUtil;->isExternalStorageAvailable()Z
 
     move-result v4
 
-    .line 2679
+    .line 3026
     .local v4, bExternalStorageAvailable:Z
-    if-nez v5, :cond_e
+    if-nez v5, :cond_d
 
-    if-eqz v4, :cond_f
+    if-eqz v4, :cond_e
 
-    .line 2680
-    :cond_e
-    const/4 v14, 0x1
-
-    .line 2681
+    .line 3027
+    :cond_d
     const/4 v13, 0x1
 
-    .line 2682
-    const/16 v16, 0x1
+    .line 3028
+    const/4 v12, 0x1
 
-    .line 2683
-    const/16 v21, 0x1
+    .line 3029
+    const/4 v15, 0x1
+
+    .line 3030
+    const/16 v20, 0x1
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v21
+    move/from16 v2, v20
 
     invoke-direct {v0, v1, v2}, Lcom/htc/app/FilePickerCore;->setMenuItemVisibled(Landroid/view/Menu;Z)V
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
-    .line 2685
-    :cond_f
+    .line 3032
+    :cond_e
     const/4 v7, 0x0
 
-    .line 2686
-    const/4 v14, 0x0
-
-    .line 2687
+    .line 3033
     const/4 v13, 0x0
 
-    .line 2688
-    const/16 v16, 0x0
+    .line 3034
+    const/4 v12, 0x0
 
-    .line 2689
-    const/16 v21, 0x0
+    .line 3035
+    const/4 v15, 0x0
+
+    .line 3036
+    const/16 v20, 0x0
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v21
+    move/from16 v2, v20
 
     invoke-direct {v0, v1, v2}, Lcom/htc/app/FilePickerCore;->setMenuItemVisibled(Landroid/view/Menu;Z)V
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
-    .line 2697
+    .line 3044
     .end local v4           #bExternalStorageAvailable:Z
     .end local v5           #bInternalStorageAvailable:Z
-    :cond_10
+    :cond_f
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/app/FilePickerCore;->mIsCloudFolderPickerEnabled:Z
 
-    move/from16 v21, v0
+    move/from16 v20, v0
 
-    if-eqz v21, :cond_7
+    if-eqz v20, :cond_7
 
-    .line 2698
-    const/4 v14, 0x0
+    .line 3045
+    const/4 v13, 0x0
 
-    .line 2699
-    const/16 v16, 0x0
+    .line 3046
+    const/4 v15, 0x0
+
+    goto/16 :goto_4
+
+    .line 3053
+    :cond_10
+    const/16 v20, 0x0
 
     goto/16 :goto_5
 
-    .line 2706
+    .line 3055
     :cond_11
-    const/16 v21, 0x0
+    const/16 v20, 0x0
 
-    goto/16 :goto_6
-
-    .line 2708
-    :cond_12
-    const/16 v21, 0x0
-
-    goto :goto_7
+    goto :goto_6
 .end method
 
 .method performListViewOnItemClickListenerItemClick(ILandroid/view/View;Lcom/htc/app/FilePickerListAdapter;)V
-    .locals 6
+    .locals 9
     .parameter "position"
     .parameter "view"
     .parameter "adapter"
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v6, 0x1
 
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
-    .line 767
+    .line 779
     if-eqz p1, :cond_0
 
     invoke-virtual {p3}, Lcom/htc/app/FilePickerListAdapter;->getCount()I
 
-    move-result v5
+    move-result v8
 
-    if-le p1, v5, :cond_2
+    if-le p1, v8, :cond_2
 
-    .line 768
+    .line 780
     :cond_0
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
+    iget-object v6, p0, Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
 
-    const-string v4, "Click at out of index item"
+    const-string v7, "Click at out of index item"
 
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 796
+    .line 817
     :cond_1
     :goto_0
     return-void
 
-    .line 771
-    :cond_2
-    add-int/lit8 v5, p1, -0x1
-
-    invoke-virtual {p3, v5}, Lcom/htc/app/FilePickerListAdapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/app/ItemInfo;
-
-    .line 772
-    .local v2, selectedItem:Lcom/htc/app/ItemInfo;
-    invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->isFolder()Z
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    .line 775
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
-
-    if-nez v5, :cond_5
-
-    .line 776
-    new-array v1, v3, [Ljava/lang/String;
-
-    .line 777
-    .local v1, output:[Ljava/lang/String;
-    invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->getLocalPath()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v1, v4
-
     .line 783
-    const-string v3, "Tab_Type"
+    :cond_2
+    add-int/lit8 v8, p1, -0x1
 
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+    invoke-virtual {p3, v8}, Lcom/htc/app/FilePickerListAdapter;->getItem(I)Ljava/lang/Object;
 
-    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v4
 
-    move-result v3
+    check-cast v4, Lcom/htc/app/ItemInfo;
 
-    if-eqz v3, :cond_3
+    .line 785
+    .local v4, selectedItem:Lcom/htc/app/ItemInfo;
+    invoke-virtual {v4}, Lcom/htc/app/ItemInfo;->isFolder()Z
 
-    .line 784
-    invoke-virtual {p3}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
+    move-result v8
 
-    .line 786
-    :cond_3
-    iget v3, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+    if-nez v8, :cond_1
 
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+    .line 788
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    invoke-direct {p0, v1, v3, v5}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+    if-nez v8, :cond_5
 
-    .line 787
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
+    .line 789
+    new-array v3, v6, [Ljava/lang/String;
+
+    .line 790
+    .local v3, output:[Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/htc/app/ItemInfo;->getLocalPath()Ljava/lang/String;
+
+    move-result-object v8
+
+    aput-object v8, v3, v7
+
+    .line 792
+    new-array v0, v6, [Ljava/lang/String;
 
     .line 793
-    .end local v1           #output:[Ljava/lang/String;
+    .local v0, accountIds:[Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/htc/app/ItemInfo;->getAccountId()Ljava/lang/String;
+
+    move-result-object v8
+
+    aput-object v8, v0, v7
+
+    .line 795
+    new-array v5, v6, [Ljava/lang/String;
+
+    .line 796
+    .local v5, serviceNames:[Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/htc/app/ItemInfo;->getServiceName()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v5, v7
+
+    .line 802
+    const-string v6, "Tab_Type"
+
+    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+
+    invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    .line 803
+    invoke-virtual {p3}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
+
+    .line 805
+    :cond_3
+    iget v6, p0, Lcom/htc/app/FilePickerCore;->mSortType:I
+
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->mSortOrder:I
+
+    invoke-direct {p0, v3, v6, v8}, Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+
+    .line 806
+    invoke-direct {p0, v3, v5, v0}, Lcom/htc/app/FilePickerCore;->getBundle([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    .line 807
+    .local v1, bundle:Landroid/os/Bundle;
+    invoke-direct {p0, v1}, Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
+
+    .line 808
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->finish()V
+
+    .line 814
+    .end local v0           #accountIds:[Ljava/lang/String;
+    .end local v1           #bundle:Landroid/os/Bundle;
+    .end local v3           #output:[Ljava/lang/String;
+    .end local v5           #serviceNames:[Ljava/lang/String;
     :cond_4
     :goto_1
-    const-string v3, "Tab_Type"
+    const-string v6, "Tab_Type"
 
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
+    iget-object v8, p0, Lcom/htc/app/FilePickerCore;->mCurrentTab:Ljava/lang/String;
 
-    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v6
 
-    if-eqz v3, :cond_1
+    if-eqz v6, :cond_1
 
-    .line 794
-    invoke-virtual {p3, v4}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
+    .line 815
+    invoke-virtual {p3, v7}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
     goto :goto_0
 
-    .line 788
+    .line 809
     :cond_5
-    iget v5, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
+    iget v8, p0, Lcom/htc/app/FilePickerCore;->mSelectionType:I
 
-    if-ne v5, v3, :cond_4
+    if-ne v8, v6, :cond_4
 
-    .line 789
-    const v5, 0x20200b3
+    .line 810
+    const v8, 0x20200b3
 
-    invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p2, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Lcom/htc/widget/HtcCheckBox;
+    check-cast v2, Lcom/htc/widget/HtcCheckBox;
 
-    .line 790
-    .local v0, htcCheckBox:Lcom/htc/widget/HtcCheckBox;
-    invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->isChecked()Z
+    .line 811
+    .local v2, htcCheckBox:Lcom/htc/widget/HtcCheckBox;
+    invoke-virtual {v4}, Lcom/htc/app/ItemInfo;->isChecked()Z
 
-    move-result v5
+    move-result v8
 
-    if-nez v5, :cond_6
+    if-nez v8, :cond_6
 
     :goto_2
-    invoke-virtual {v0, v3}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
+    invoke-virtual {v2, v6}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     goto :goto_1
 
     :cond_6
-    move v3, v4
+    move v6, v7
 
     goto :goto_2
 .end method
@@ -14484,10 +14745,10 @@
     .parameter "fragement"
 
     .prologue
-    .line 1445
+    .line 1483
     iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerFavoritesFragment:Lcom/htc/app/FilePickerFavoritesFragment;
 
-    .line 1446
+    .line 1484
     return-void
 .end method
 
@@ -14499,7 +14760,7 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 3125
+    .line 3481
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
@@ -14510,11 +14771,11 @@
 
     check-cast v1, Lcom/htc/app/FilePickerListView;
 
-    .line 3126
+    .line 3482
     .local v1, listView:Lcom/htc/app/FilePickerListView;
     if-eqz v1, :cond_0
 
-    .line 3127
+    .line 3483
     new-instance v5, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
@@ -14527,20 +14788,20 @@
 
     invoke-direct {v5, v6}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 3128
+    .line 3484
     .local v5, rocketImage:Landroid/widget/ImageView;
     const v6, 0x20a0004
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 3129
+    .line 3485
     invoke-virtual {v5}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     check-cast v4, Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 3131
+    .line 3487
     .local v4, rocketAnimation:Landroid/graphics/drawable/AnimationDrawable;
     const v6, 0x20200c6
 
@@ -14550,11 +14811,11 @@
 
     check-cast v0, Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 3133
+    .line 3489
     .local v0, htcListItemSeparator:Lcom/htc/widget/HtcListItemSeparator;
     if-nez v0, :cond_1
 
-    .line 3147
+    .line 3503
     .end local v0           #htcListItemSeparator:Lcom/htc/widget/HtcListItemSeparator;
     .end local v4           #rocketAnimation:Landroid/graphics/drawable/AnimationDrawable;
     .end local v5           #rocketImage:Landroid/widget/ImageView;
@@ -14562,17 +14823,17 @@
     :goto_0
     return-void
 
-    .line 3135
+    .line 3491
     .restart local v0       #htcListItemSeparator:Lcom/htc/widget/HtcListItemSeparator;
     .restart local v4       #rocketAnimation:Landroid/graphics/drawable/AnimationDrawable;
     .restart local v5       #rocketImage:Landroid/widget/ImageView;
     :cond_1
     invoke-virtual {v0, v9, v4}, Lcom/htc/widget/HtcListItemSeparator;->setIcon(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 3136
+    .line 3492
     if-eqz p2, :cond_2
 
-    .line 3137
+    .line 3493
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -14583,16 +14844,16 @@
 
     move-result-object v2
 
-    .line 3139
+    .line 3495
     .local v2, loadingStr:Ljava/lang/String;
     invoke-virtual {v0, v9, v2}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 3140
+    .line 3496
     invoke-virtual {v4}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
     goto :goto_0
 
-    .line 3142
+    .line 3498
     .end local v2           #loadingStr:Ljava/lang/String;
     :cond_2
     iget-object v6, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -14605,11 +14866,11 @@
 
     move-result-object v3
 
-    .line 3143
+    .line 3499
     .local v3, refreshTime:Ljava/lang/String;
     invoke-virtual {v0, v9, v3}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 3144
+    .line 3500
     invoke-virtual {v4}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
     goto :goto_0
@@ -14623,7 +14884,7 @@
 
     const v6, 0x2040149
 
-    .line 3072
+    .line 3427
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
@@ -14634,16 +14895,16 @@
 
     move-result-object v3
 
-    .line 3073
+    .line 3428
     .local v3, typeViewLayout:Landroid/view/View;
     if-nez v3, :cond_1
 
-    .line 3100
+    .line 3456
     :cond_0
     :goto_0
     return-void
 
-    .line 3075
+    .line 3430
     :cond_1
     const v4, 0x20200aa
 
@@ -14653,11 +14914,11 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 3076
+    .line 3431
     .local v1, emptyView:Landroid/widget/TextView;
     const/4 v2, 0x0
 
-    .line 3077
+    .line 3432
     .local v2, noFileFoundText:Ljava/lang/String;
     iget-object v4, p0, Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -14665,11 +14926,11 @@
 
     move-result v0
 
-    .line 3079
+    .line 3434
     .local v0, dataSourceType:I
     sparse-switch v0, :sswitch_data_0
 
-    .line 3094
+    .line 3450
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -14678,16 +14939,16 @@
 
     move-result-object v2
 
-    .line 3097
+    .line 3453
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 3098
+    .line 3454
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 3081
+    .line 3436
     :sswitch_0
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
@@ -14697,10 +14958,10 @@
 
     move-result-object v2
 
-    .line 3082
+    .line 3437
     goto :goto_1
 
-    .line 3084
+    .line 3439
     :sswitch_1
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
@@ -14710,16 +14971,16 @@
 
     move-result-object v2
 
-    .line 3085
+    .line 3440
     goto :goto_1
 
-    .line 3087
+    .line 3442
     :sswitch_2
     sget-boolean v4, Lcom/htc/app/FilePickerUtil;->IsSupportInternalStorage:Z
 
     if-eqz v4, :cond_2
 
-    .line 3088
+    .line 3443
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -14730,7 +14991,7 @@
 
     goto :goto_1
 
-    .line 3090
+    .line 3445
     :cond_2
     invoke-direct {p0}, Lcom/htc/app/FilePickerCore;->getResources()Landroid/content/res/Resources;
 
@@ -14740,10 +15001,10 @@
 
     move-result-object v2
 
-    .line 3092
+    .line 3448
     goto :goto_1
 
-    .line 3079
+    .line 3434
     nop
 
     :sswitch_data_0
@@ -14758,7 +15019,7 @@
     .locals 4
 
     .prologue
-    .line 3103
+    .line 3459
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -14769,16 +15030,16 @@
 
     move-result-object v1
 
-    .line 3104
+    .line 3460
     .local v1, typeViewLayout:Landroid/view/View;
     if-nez v1, :cond_1
 
-    .line 3110
+    .line 3466
     :cond_0
     :goto_0
     return-void
 
-    .line 3106
+    .line 3462
     :cond_1
     const v2, 0x20200aa
 
@@ -14788,11 +15049,11 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 3107
+    .line 3463
     .local v0, emptyView:Landroid/widget/TextView;
     if-eqz v0, :cond_0
 
-    .line 3108
+    .line 3464
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -14805,10 +15066,10 @@
     .parameter "fragement"
 
     .prologue
-    .line 1456
+    .line 1494
     iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mFilePickerRecentFragment:Lcom/htc/app/FilePickerRecentFragment;
 
-    .line 1457
+    .line 1495
     return-void
 .end method
 
@@ -14817,9 +15078,9 @@
     .parameter "typeAdapter"
 
     .prologue
-    .line 116
+    .line 114
     iput-object p1, p0, Lcom/htc/app/FilePickerCore;->mTypeAdapter:Lcom/htc/app/FilePickerListAdapter;
 
-    .line 117
+    .line 115
     return-void
 .end method

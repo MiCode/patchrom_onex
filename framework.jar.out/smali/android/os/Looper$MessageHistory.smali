@@ -33,25 +33,25 @@
     .parameter "start"
 
     .prologue
-    .line 378
+    .line 392
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 375
+    .line 389
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/os/Looper$MessageHistory;->takenTime:J
 
-    .line 376
+    .line 390
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/os/Looper$MessageHistory;->startTime:J
 
-    .line 379
+    .line 393
     iget v0, p1, Landroid/os/Message;->what:I
 
     iput v0, p0, Landroid/os/Looper$MessageHistory;->msg_what:I
 
-    .line 380
+    .line 394
     iget-object v0, p1, Landroid/os/Message;->target:Landroid/os/Handler;
 
     if-nez v0, :cond_0
@@ -61,7 +61,7 @@
     :goto_0
     iput-object v0, p0, Landroid/os/Looper$MessageHistory;->msg_target:Ljava/lang/String;
 
-    .line 381
+    .line 395
     iget-object v0, p1, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     if-nez v0, :cond_1
@@ -71,13 +71,13 @@
     :goto_1
     iput-object v0, p0, Landroid/os/Looper$MessageHistory;->msg_callback:Ljava/lang/String;
 
-    .line 382
+    .line 396
     iput-wide p2, p0, Landroid/os/Looper$MessageHistory;->startTime:J
 
-    .line 383
+    .line 397
     return-void
 
-    .line 380
+    .line 394
     :cond_0
     iget-object v0, p1, Landroid/os/Message;->target:Landroid/os/Handler;
 
@@ -87,7 +87,7 @@
 
     goto :goto_0
 
-    .line 381
+    .line 395
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
@@ -106,12 +106,12 @@
     .parameter "start"
 
     .prologue
-    .line 386
+    .line 400
     iget v0, p1, Landroid/os/Message;->what:I
 
     iput v0, p0, Landroid/os/Looper$MessageHistory;->msg_what:I
 
-    .line 387
+    .line 401
     iget-object v0, p1, Landroid/os/Message;->target:Landroid/os/Handler;
 
     if-nez v0, :cond_0
@@ -121,7 +121,7 @@
     :goto_0
     iput-object v0, p0, Landroid/os/Looper$MessageHistory;->msg_target:Ljava/lang/String;
 
-    .line 388
+    .line 402
     iget-object v0, p1, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     if-nez v0, :cond_1
@@ -131,18 +131,18 @@
     :goto_1
     iput-object v0, p0, Landroid/os/Looper$MessageHistory;->msg_callback:Ljava/lang/String;
 
-    .line 389
+    .line 403
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/os/Looper$MessageHistory;->takenTime:J
 
-    .line 390
+    .line 404
     iput-wide p2, p0, Landroid/os/Looper$MessageHistory;->startTime:J
 
-    .line 391
+    .line 405
     return-void
 
-    .line 387
+    .line 401
     :cond_0
     iget-object v0, p1, Landroid/os/Message;->target:Landroid/os/Handler;
 
@@ -152,7 +152,7 @@
 
     goto :goto_0
 
-    .line 388
+    .line 402
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 

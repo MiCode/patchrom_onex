@@ -1,9 +1,6 @@
 .class Lcom/android/camera/component/NewMediaBroadcaster$4;
-.super Ljava/lang/Object;
+.super Lcom/android/camera/trigger/Trigger;
 .source "NewMediaBroadcaster.java"
-
-# interfaces
-.implements Lcom/android/camera/event/EventHandler;
 
 
 # annotations
@@ -16,63 +13,57 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/android/camera/event/EventHandler",
-        "<",
-        "Lcom/android/camera/event/EventArgs;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/component/NewMediaBroadcaster;)V
+.method constructor <init>(Lcom/android/camera/component/NewMediaBroadcaster;Lcom/android/camera/property/Property;Ljava/lang/Object;)V
     .locals 0
     .parameter
+    .parameter "x0"
+    .parameter "x1"
 
     .prologue
-    .line 121
+    .line 104
     iput-object p1, p0, Lcom/android/camera/component/NewMediaBroadcaster$4;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
-    .locals 1
-    .parameter
-    .parameter "sender"
-    .parameter "e"
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/camera/event/Event",
-            "<",
-            "Lcom/android/camera/event/EventArgs;",
-            ">;",
-            "Ljava/lang/Object;",
-            "Lcom/android/camera/event/EventArgs;",
-            ")V"
-        }
-    .end annotation
+.method protected onEnter()V
+    .locals 2
 
     .prologue
-    .line 126
-    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
+    .line 108
+    iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$4;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
+
+    invoke-virtual {v0}, Lcom/android/camera/component/NewMediaBroadcaster;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/camera/HTCCamera;->actionScreenCloseReason:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/android/camera/actionscreen/ActionScreenCloseReason;->DeleteMedia:Lcom/android/camera/actionscreen/ActionScreenCloseReason;
+
+    if-eq v0, v1, :cond_0
+
+    .line 110
     iget-object v0, p0, Lcom/android/camera/component/NewMediaBroadcaster$4;->this$0:Lcom/android/camera/component/NewMediaBroadcaster;
 
     #calls: Lcom/android/camera/component/NewMediaBroadcaster;->checkAndBroadcastIntent()V
     invoke-static {v0}, Lcom/android/camera/component/NewMediaBroadcaster;->access$100(Lcom/android/camera/component/NewMediaBroadcaster;)V
 
-    .line 127
+    .line 112
+    :cond_0
     return-void
 .end method

@@ -867,19 +867,17 @@
 .end method
 
 .method private setUpDefaultPadding(Landroid/content/Context;)V
-    .locals 8
+    .locals 7
     .parameter "context"
 
     .prologue
-    const/16 v7, 0x140
+    const/16 v6, 0x140
 
-    const/4 v6, 0x7
+    const/4 v5, 0x7
 
-    const/4 v5, 0x6
+    const/4 v4, 0x6
 
-    const/4 v4, 0x5
-
-    const/16 v3, 0xf0
+    const/4 v3, 0x5
 
     .line 321
     invoke-virtual {p0}, Lcom/htc/widget/HtcEditText;->getResources()Landroid/content/res/Resources;
@@ -912,10 +910,12 @@
     .local v0, dm:Landroid/util/DisplayMetrics;
     iget v1, v0, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    if-lt v1, v3, :cond_0
+    const/16 v2, 0xf0
+
+    if-lt v1, v2, :cond_0
 
     .line 327
-    iput v5, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_TOP:I
+    iput v4, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_TOP:I
 
     .line 328
     const/16 v1, 0x8
@@ -950,19 +950,11 @@
     :cond_0
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    if-le v1, v3, :cond_1
-
-    iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    if-le v1, v7, :cond_1
+    if-le v1, v6, :cond_1
 
     iget v1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    if-le v1, v3, :cond_1
-
-    iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    if-gt v1, v7, :cond_2
+    if-gt v1, v6, :cond_2
 
     .line 334
     :cond_1
@@ -971,22 +963,22 @@
     iput v1, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_TOP:I
 
     .line 335
-    iput v4, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_BOTTOM:I
+    iput v3, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_BOTTOM:I
 
     .line 336
-    iput v5, p0, Lcom/htc/widget/HtcEditText;->BRIGHT_PADDING_TOP:I
+    iput v4, p0, Lcom/htc/widget/HtcEditText;->BRIGHT_PADDING_TOP:I
 
     .line 337
-    iput v6, p0, Lcom/htc/widget/HtcEditText;->BRIGHT_PADDING_BOTTOM:I
+    iput v5, p0, Lcom/htc/widget/HtcEditText;->BRIGHT_PADDING_BOTTOM:I
 
     goto :goto_0
 
     .line 340
     :cond_2
-    iput v4, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_TOP:I
+    iput v3, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_TOP:I
 
     .line 341
-    iput v6, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_BOTTOM:I
+    iput v5, p0, Lcom/htc/widget/HtcEditText;->DARK_PADDING_BOTTOM:I
 
     .line 342
     const/16 v1, 0x9

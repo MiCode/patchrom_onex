@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 326
+    .line 331
     iput-object p1, p0, Lcom/android/camera/HTCCamera$1;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 329
+    .line 334
     iget-object v0, p0, Lcom/android/camera/HTCCamera$1;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->closeActionScreen()V
 
-    .line 330
+    .line 335
     return-void
 .end method

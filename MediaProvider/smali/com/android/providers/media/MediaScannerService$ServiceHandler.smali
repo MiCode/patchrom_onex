@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 907
+    .line 913
     iput-object p1, p0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 907
+    .line 913
     invoke-direct {p0, p1}, Lcom/android/providers/media/MediaScannerService$ServiceHandler;-><init>(Lcom/android/providers/media/MediaScannerService;)V
 
     return-void
@@ -47,62 +47,62 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 28
+    .locals 26
     .parameter "msg"
 
     .prologue
-    .line 912
+    .line 918
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Landroid/os/Bundle;
 
-    .line 913
+    .line 919
     .local v3, arguments:Landroid/os/Bundle;
-    const-string v25, "filepath"
+    const-string v23, "filepath"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 914
+    .line 920
     .local v10, filePath:Ljava/lang/String;
     const-string v20, "/.voicerecorder/voices"
 
-    .line 917
+    .line 923
     .local v20, voicerecordDonut:Ljava/lang/String;
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->getRemovableStorageDirectory()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 918
+    .line 924
     .local v8, extsd:Ljava/lang/String;
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->getVirtualRemovableStorageDirectory()Ljava/lang/String;
 
     move-result-object v18
 
-    .line 923
+    .line 929
     .local v18, virtual:Ljava/lang/String;
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->getUsbStorageDirectory()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 925
+    .line 931
     .local v9, extusb:Ljava/lang/String;
     const/16 v16, 0x0
 
-    .line 929
+    .line 935
     .local v16, sdcardmount:Z
     if-eqz v10, :cond_2
 
-    .line 930
+    .line 936
     :try_start_0
-    const-string v25, "listener"
+    const-string v23, "listener"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v3, v0}, Landroid/os/Bundle;->getIBinder(Ljava/lang/String;)Landroid/os/IBinder;
     :try_end_0
@@ -110,37 +110,37 @@
 
     move-result-object v5
 
-    .line 931
+    .line 937
     .local v5, binder:Landroid/os/IBinder;
     if-nez v5, :cond_1
 
     const/4 v13, 0x0
 
-    .line 935
+    .line 941
     .local v13, listener:Landroid/media/IMediaScannerListener;
     :goto_0
     const/16 v17, 0x0
 
-    .line 937
+    .line 943
     .local v17, uri:Landroid/net/Uri;
     :try_start_1
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    const-string v26, "mimetype"
+    const-string v24, "mimetype"
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v24
 
     invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v26
+    move-result-object v24
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v26
+    move-object/from16 v1, v24
 
     #calls: Lcom/android/providers/media/MediaScannerService;->scanFile(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     invoke-static {v0, v10, v1}, Lcom/android/providers/media/MediaScannerService;->access$100(Lcom/android/providers/media/MediaScannerService;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
@@ -149,11 +149,11 @@
 
     move-result-object v17
 
-    .line 942
+    .line 948
     :goto_1
     if-eqz v13, :cond_0
 
-    .line 943
+    .line 949
     :try_start_2
     move-object/from16 v0, v17
 
@@ -161,7 +161,7 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1186
+    .line 1189
     .end local v5           #binder:Landroid/os/IBinder;
     .end local v13           #listener:Landroid/media/IMediaScannerListener;
     .end local v17           #uri:Landroid/net/Uri;
@@ -171,20 +171,20 @@
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg1:I
 
-    move/from16 v26, v0
+    move/from16 v24, v0
 
-    invoke-virtual/range {v25 .. v26}, Lcom/android/providers/media/MediaScannerService;->stopSelf(I)V
+    invoke-virtual/range {v23 .. v24}, Lcom/android/providers/media/MediaScannerService;->stopSelf(I)V
 
-    .line 1187
+    .line 1190
     return-void
 
-    .line 931
+    .line 937
     .restart local v5       #binder:Landroid/os/IBinder;
     :cond_1
     :try_start_3
@@ -194,21 +194,21 @@
 
     goto :goto_0
 
-    .line 938
+    .line 944
     .restart local v13       #listener:Landroid/media/IMediaScannerListener;
     .restart local v17       #uri:Landroid/net/Uri;
     :catch_0
     move-exception v7
 
-    .line 939
+    .line 945
     .local v7, e:Ljava/lang/Exception;
-    const-string v25, "MediaScannerService"
+    const-string v23, "MediaScannerService"
 
-    const-string v26, "Exception scanning file"
+    const-string v24, "Exception scanning file"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v26
+    move-object/from16 v1, v24
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
@@ -216,7 +216,7 @@
 
     goto :goto_1
 
-    .line 1182
+    .line 1185
     .end local v5           #binder:Landroid/os/IBinder;
     .end local v7           #e:Ljava/lang/Exception;
     .end local v13           #listener:Landroid/media/IMediaScannerListener;
@@ -224,574 +224,574 @@
     :catch_1
     move-exception v7
 
-    .line 1183
+    .line 1186
     .restart local v7       #e:Ljava/lang/Exception;
-    const-string v25, "MediaScannerService"
+    const-string v23, "MediaScannerService"
 
-    const-string v26, "Exception in handleMessage"
+    const-string v24, "Exception in handleMessage"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v26
+    move-object/from16 v1, v24
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_2
 
-    .line 946
+    .line 952
     .end local v7           #e:Ljava/lang/Exception;
     :cond_2
     :try_start_4
-    const-string v25, "volume"
+    const-string v23, "volume"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v24
+    move-result-object v22
 
-    .line 947
-    .local v24, volume:Ljava/lang/String;
+    .line 953
+    .local v22, volume:Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 952
+    .line 958
     .local v6, directories:[Ljava/lang/String;
-    const-string v25, "internal"
+    const-string v23, "internal"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v22
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_5
+    if-eqz v23, :cond_5
 
-    .line 954
-    const/16 v25, 0x1
+    .line 960
+    const/16 v23, 0x1
 
-    move/from16 v0, v25
+    move/from16 v0, v23
 
     new-array v6, v0, [Ljava/lang/String;
 
     .end local v6           #directories:[Ljava/lang/String;
-    const/16 v25, 0x0
+    const/16 v23, 0x0
 
-    new-instance v26, Ljava/lang/StringBuilder;
+    new-instance v24, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v26 .. v26}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
 
-    move-result-object v27
+    move-result-object v25
 
-    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v26
+    move-result-object v24
 
-    const-string v27, "/media"
+    const-string v25, "/media"
 
-    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v26
+    move-result-object v24
 
-    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v24 .. v24}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v26
+    move-result-object v24
 
-    aput-object v26, v6, v25
+    aput-object v24, v6, v23
 
-    .line 1164
+    .line 1167
     .restart local v6       #directories:[Ljava/lang/String;
     :cond_3
     :goto_3
-    const/16 v25, 0x1
+    const/16 v23, 0x1
 
-    sput-boolean v25, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
-
-    .line 1166
-    if-eqz v6, :cond_4
+    sput-boolean v23, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
 
     .line 1169
+    if-eqz v6, :cond_4
+
+    .line 1172
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v22
 
     #calls: Lcom/android/providers/media/MediaScannerService;->scan([Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v6, v1}, Lcom/android/providers/media/MediaScannerService;->access$800(Lcom/android/providers/media/MediaScannerService;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1173
-    :cond_4
-    const/16 v25, 0x0
-
-    sput-boolean v25, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
-
     .line 1176
+    :cond_4
+    const/16 v23, 0x0
+
+    sput-boolean v23, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
+
+    .line 1179
     if-eqz v6, :cond_0
 
-    const/16 v25, 0x0
+    const/16 v23, 0x0
 
-    aget-object v25, v6, v25
+    aget-object v23, v6, v23
 
-    if-eqz v25, :cond_0
+    if-eqz v23, :cond_0
 
-    const/16 v25, 0x1
+    const/16 v23, 0x1
 
     move/from16 v0, v16
 
-    move/from16 v1, v25
+    move/from16 v1, v23
 
     if-ne v0, v1, :cond_0
 
-    .line 1177
+    .line 1180
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    const-wide/16 v26, 0x1
+    const-wide/16 v24, 0x1
 
     #calls: Lcom/android/providers/media/MediaScannerService;->NotifySDcardStatusForMTP(J)V
-    invoke-static/range {v25 .. v27}, Lcom/android/providers/media/MediaScannerService;->access$400(Lcom/android/providers/media/MediaScannerService;J)V
+    invoke-static/range {v23 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$400(Lcom/android/providers/media/MediaScannerService;J)V
 
     goto/16 :goto_2
 
-    .line 960
+    .line 966
     :cond_5
-    const-string v25, "customize"
+    const-string v23, "customize"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v22
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_6
+    if-eqz v23, :cond_6
 
-    .line 961
-    const-string v24, "internal"
+    .line 967
+    const-string v22, "internal"
 
-    .line 962
-    const/16 v25, 0x1
+    .line 968
+    const/16 v23, 0x1
 
-    move/from16 v0, v25
+    move/from16 v0, v23
 
     new-array v6, v0, [Ljava/lang/String;
 
     .end local v6           #directories:[Ljava/lang/String;
-    const/16 v25, 0x0
+    const/16 v23, 0x0
 
-    new-instance v26, Ljava/lang/StringBuilder;
+    new-instance v24, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v26 .. v26}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-static {}, Landroid/os/Environment;->getRootDirectory()Ljava/io/File;
 
-    move-result-object v27
+    move-result-object v25
 
-    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v26
+    move-result-object v24
 
-    const-string v27, "/customize/resource"
+    const-string v25, "/customize/resource"
 
-    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v26
+    move-result-object v24
 
-    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v24 .. v24}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v26
+    move-result-object v24
 
-    aput-object v26, v6, v25
+    aput-object v24, v6, v23
 
     .restart local v6       #directories:[Ljava/lang/String;
     goto :goto_3
 
-    .line 968
+    .line 974
     :cond_6
-    const-string v25, "exdsdcard"
+    const-string v23, "exdsdcard"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v22
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_8
+    if-eqz v23, :cond_8
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
-    move-result v25
+    move-result v23
 
-    if-lez v25, :cond_8
+    if-lez v23, :cond_8
 
-    .line 970
-    const-string v25, "action"
+    .line 976
+    const-string v23, "action"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 974
+    .line 980
     .local v2, action:Ljava/lang/String;
-    const-string v25, "android.intent.action.MEDIA_EJECT"
+    const-string v23, "android.intent.action.MEDIA_EJECT"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_7
+    if-eqz v23, :cond_7
 
-    .line 977
-    const/16 v25, 0x1
+    .line 983
+    const/16 v23, 0x1
 
-    sput-boolean v25, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
+    sput-boolean v23, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
 
-    .line 978
-    new-instance v25, Ljava/lang/StringBuilder;
+    .line 984
+    new-instance v23, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v25 .. v25}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v26, "file://"
+    const-string v24, "file://"
 
-    invoke-virtual/range {v25 .. v26}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v23 .. v24}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v25
+    move-result-object v23
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v25
+    move-result-object v23
 
-    invoke-virtual/range {v25 .. v25}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v23 .. v23}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v25
+    move-result-object v23
 
-    invoke-static/range {v25 .. v25}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static/range {v23 .. v23}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v17
 
-    .line 979
+    .line 985
     .restart local v17       #uri:Landroid/net/Uri;
     new-instance v11, Landroid/content/Intent;
 
-    const-string v25, "android.intent.action.MEDIA_SCANNER_STARTED"
+    const-string v23, "android.intent.action.MEDIA_SCANNER_STARTED"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     move-object/from16 v1, v17
 
     invoke-direct {v11, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 980
+    .line 986
     .local v11, i1:Landroid/content/Intent;
-    const-string v25, "action"
+    const-string v23, "action"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v11, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 981
+    .line 987
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v0, v11}, Lcom/android/providers/media/MediaScannerService;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 984
+    .line 990
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    const-string v26, "external"
+    const-string v24, "external"
 
     #calls: Lcom/android/providers/media/MediaScannerService;->openDatabase(Ljava/lang/String;)V
-    invoke-static/range {v25 .. v26}, Lcom/android/providers/media/MediaScannerService;->access$200(Lcom/android/providers/media/MediaScannerService;Ljava/lang/String;)V
+    invoke-static/range {v23 .. v24}, Lcom/android/providers/media/MediaScannerService;->access$200(Lcom/android/providers/media/MediaScannerService;Ljava/lang/String;)V
 
-    .line 986
+    .line 992
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
     #calls: Lcom/android/providers/media/MediaScannerService;->disAliveExtSdCardRows()V
-    invoke-static/range {v25 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$300(Lcom/android/providers/media/MediaScannerService;)V
+    invoke-static/range {v23 .. v23}, Lcom/android/providers/media/MediaScannerService;->access$300(Lcom/android/providers/media/MediaScannerService;)V
 
-    .line 990
-    const/16 v25, 0x0
+    .line 996
+    const/16 v23, 0x0
 
-    sput-boolean v25, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
+    sput-boolean v23, Lcom/android/providers/media/MediaProvider;->mbScanning:Z
 
-    .line 991
+    .line 997
     new-instance v12, Landroid/content/Intent;
 
-    const-string v25, "android.intent.action.MEDIA_SCANNER_FINISHED"
+    const-string v23, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     move-object/from16 v1, v17
 
     invoke-direct {v12, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 992
+    .line 998
     .local v12, i2:Landroid/content/Intent;
-    const-string v25, "action"
+    const-string v23, "action"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v12, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 993
+    .line 999
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v0, v12}, Lcom/android/providers/media/MediaScannerService;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 996
+    .line 1002
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    const-wide/16 v26, 0x0
+    const-wide/16 v24, 0x0
 
     #calls: Lcom/android/providers/media/MediaScannerService;->NotifySDcardStatusForMTP(J)V
-    invoke-static/range {v25 .. v27}, Lcom/android/providers/media/MediaScannerService;->access$400(Lcom/android/providers/media/MediaScannerService;J)V
+    invoke-static/range {v23 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$400(Lcom/android/providers/media/MediaScannerService;J)V
 
-    .line 998
+    .line 1004
     const/4 v6, 0x0
 
-    .line 999
+    .line 1005
     goto/16 :goto_3
 
-    .line 1000
+    .line 1006
     .end local v11           #i1:Landroid/content/Intent;
     .end local v12           #i2:Landroid/content/Intent;
     .end local v17           #uri:Landroid/net/Uri;
     :cond_7
-    const-string v25, "android.intent.action.MEDIA_MOUNTED"
+    const-string v23, "android.intent.action.MEDIA_MOUNTED"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_3
+    if-eqz v23, :cond_3
 
-    .line 1027
+    .line 1033
     const/16 v16, 0x1
 
-    .line 1029
+    .line 1035
     invoke-static {v8}, Landroid/os/FileUtils;->getFatVolumeId(Ljava/lang/String;)I
 
-    move-result v25
+    move-result v23
 
-    sput v25, Lcom/android/providers/media/MediaProvider;->mVolId:I
-
-    .line 1035
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
-
-    move-object/from16 v25, v0
-
-    const-string v26, "external"
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->openDatabase(Ljava/lang/String;)V
-    invoke-static/range {v25 .. v26}, Lcom/android/providers/media/MediaScannerService;->access$200(Lcom/android/providers/media/MediaScannerService;Ljava/lang/String;)V
-
-    .line 1037
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
-
-    move-object/from16 v25, v0
-
-    sget v26, Lcom/android/providers/media/MediaProvider;->mVolId:I
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->UpdateVolId(I)V
-    invoke-static/range {v25 .. v26}, Lcom/android/providers/media/MediaScannerService;->access$500(Lcom/android/providers/media/MediaScannerService;I)V
-
-    .line 1039
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
-
-    move-object/from16 v25, v0
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->disAliveExtSdCardRows()V
-    invoke-static/range {v25 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$300(Lcom/android/providers/media/MediaScannerService;)V
+    sput v23, Lcom/android/providers/media/MediaProvider;->mVolId:I
 
     .line 1041
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    sget v26, Lcom/android/providers/media/MediaProvider;->mVolId:I
+    const-string v24, "external"
 
-    const/16 v27, 0x1
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->AliveExtSdCardRows(II)V
-    invoke-static/range {v25 .. v27}, Lcom/android/providers/media/MediaScannerService;->access$600(Lcom/android/providers/media/MediaScannerService;II)V
+    #calls: Lcom/android/providers/media/MediaScannerService;->openDatabase(Ljava/lang/String;)V
+    invoke-static/range {v23 .. v24}, Lcom/android/providers/media/MediaScannerService;->access$200(Lcom/android/providers/media/MediaScannerService;Ljava/lang/String;)V
 
     .line 1043
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
 
-    move-object/from16 v25, v0
+    move-object/from16 v23, v0
 
-    #calls: Lcom/android/providers/media/MediaScannerService;->deleteNonUseAlbumArts()V
-    invoke-static/range {v25 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$700(Lcom/android/providers/media/MediaScannerService;)V
+    sget v24, Lcom/android/providers/media/MediaProvider;->mVolId:I
+
+    #calls: Lcom/android/providers/media/MediaScannerService;->UpdateVolId(I)V
+    invoke-static/range {v23 .. v24}, Lcom/android/providers/media/MediaScannerService;->access$500(Lcom/android/providers/media/MediaScannerService;I)V
 
     .line 1045
-    const-string v24, "external"
+    move-object/from16 v0, p0
 
-    .line 1048
+    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
+
+    move-object/from16 v23, v0
+
+    #calls: Lcom/android/providers/media/MediaScannerService;->disAliveExtSdCardRows()V
+    invoke-static/range {v23 .. v23}, Lcom/android/providers/media/MediaScannerService;->access$300(Lcom/android/providers/media/MediaScannerService;)V
+
+    .line 1047
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
+
+    move-object/from16 v23, v0
+
+    sget v24, Lcom/android/providers/media/MediaProvider;->mVolId:I
+
     const/16 v25, 0x1
 
-    move/from16 v0, v25
+    #calls: Lcom/android/providers/media/MediaScannerService;->AliveExtSdCardRows(II)V
+    invoke-static/range {v23 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$600(Lcom/android/providers/media/MediaScannerService;II)V
+
+    .line 1049
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
+
+    move-object/from16 v23, v0
+
+    #calls: Lcom/android/providers/media/MediaScannerService;->deleteNonUseAlbumArts()V
+    invoke-static/range {v23 .. v23}, Lcom/android/providers/media/MediaScannerService;->access$700(Lcom/android/providers/media/MediaScannerService;)V
+
+    .line 1051
+    const-string v22, "external"
+
+    .line 1054
+    const/16 v23, 0x1
+
+    move/from16 v0, v23
 
     new-array v6, v0, [Ljava/lang/String;
 
     .end local v6           #directories:[Ljava/lang/String;
-    const/16 v25, 0x0
+    const/16 v23, 0x0
 
-    aput-object v18, v6, v25
+    aput-object v18, v6, v23
 
     .restart local v6       #directories:[Ljava/lang/String;
     goto/16 :goto_3
 
-    .line 1061
+    .line 1067
     .end local v2           #action:Ljava/lang/String;
     :cond_8
-    const-string v25, "exdusb"
+    const-string v23, "exdusb"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v22
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_9
+    if-eqz v23, :cond_9
 
     invoke-virtual {v9}, Ljava/lang/String;->length()I
 
-    move-result v25
+    move-result v23
 
-    if-lez v25, :cond_9
+    if-lez v23, :cond_9
 
-    .line 1063
-    const-string v24, "external"
+    .line 1069
+    const-string v22, "external"
 
-    .line 1064
-    const/16 v25, 0x1
+    .line 1070
+    const/16 v23, 0x1
 
-    move/from16 v0, v25
+    move/from16 v0, v23
 
     new-array v6, v0, [Ljava/lang/String;
 
     .end local v6           #directories:[Ljava/lang/String;
-    const/16 v25, 0x0
+    const/16 v23, 0x0
 
-    aput-object v9, v6, v25
+    aput-object v9, v6, v23
 
     .restart local v6       #directories:[Ljava/lang/String;
     goto/16 :goto_3
 
-    .line 1068
+    .line 1074
     :cond_9
-    const-string v25, "external"
+    const-string v23, "external"
 
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v22
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_3
+    if-eqz v23, :cond_3
 
-    .line 1072
+    .line 1078
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
-    move-result-object v25
+    move-result-object v23
 
-    const-string v26, "mounted"
+    const-string v24, "mounted"
 
-    invoke-virtual/range {v25 .. v26}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual/range {v23 .. v24}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_e
+    if-eqz v23, :cond_d
 
-    .line 1077
-    new-instance v25, Ljava/lang/StringBuilder;
+    .line 1083
+    new-instance v23, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v25 .. v25}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
-    move-result-object v26
+    move-result-object v24
 
-    invoke-virtual/range {v26 .. v26}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-virtual/range {v24 .. v24}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    move-result-object v26
+    move-result-object v24
 
-    invoke-virtual/range {v25 .. v26}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v23 .. v24}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v25
+    move-result-object v23
 
-    const-string v26, "/.voicerecorder/voices"
+    const-string v24, "/.voicerecorder/voices"
 
-    invoke-virtual/range {v25 .. v26}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v23 .. v24}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v25
+    move-result-object v23
 
-    invoke-virtual/range {v25 .. v25}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v23 .. v23}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 1078
+    .line 1084
     .local v21, voicerecordDonutPath:Ljava/lang/String;
     new-instance v19, Ljava/io/File;
 
@@ -803,11 +803,11 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 1079
+    .line 1085
     .local v19, voicerecord:Ljava/io/File;
     const/4 v4, 0x0
 
-    .line 1081
+    .line 1087
     .local v4, bVoicerecordDonutPathExist:Z
     :try_start_5
     invoke-virtual/range {v19 .. v19}, Ljava/io/File;->isDirectory()Z
@@ -815,260 +815,279 @@
     .catch Ljava/lang/SecurityException; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_a
-
-    .line 1082
-    const/4 v4, 0x1
-
-    .line 1087
-    :cond_a
-    :goto_4
-    if-eqz v4, :cond_d
+    if-eqz v23, :cond_a
 
     .line 1088
-    const/16 v25, 0x2
+    const/4 v4, 0x1
+
+    .line 1093
+    :cond_a
+    :goto_4
+    if-eqz v4, :cond_b
+
+    .line 1094
+    const/16 v23, 0x2
 
     :try_start_6
-    move/from16 v0, v25
+    move/from16 v0, v23
 
     new-array v6, v0, [Ljava/lang/String;
 
     .end local v6           #directories:[Ljava/lang/String;
-    const/16 v25, 0x0
+    const/16 v23, 0x0
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
-    move-result-object v26
+    move-result-object v24
 
-    invoke-virtual/range {v26 .. v26}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-virtual/range {v24 .. v24}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    move-result-object v26
+    move-result-object v24
 
-    aput-object v26, v6, v25
+    aput-object v24, v6, v23
 
-    const/16 v25, 0x1
+    const/16 v23, 0x1
 
-    aput-object v21, v6, v25
+    aput-object v21, v6, v23
 
-    .line 1101
+    .line 1107
     .restart local v6       #directories:[Ljava/lang/String;
     :goto_5
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
-    move-result-object v25
+    move-result-object v23
 
-    invoke-virtual/range {v25 .. v25}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-virtual/range {v23 .. v23}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 1105
+    .line 1108
     .local v15, sd:Ljava/lang/String;
-    invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->getRemovableStorageState()Ljava/lang/String;
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 1111
+    .line 1114
     .local v14, removeStorageState:Ljava/lang/String;
-    const/16 v25, -0x1
+    const-string v23, "mounted"
 
-    sput v25, Lcom/android/providers/media/MediaProvider;->mVolId:I
-
-    .line 1112
-    const-string v25, "mounted"
-
-    move-object/from16 v0, v25
+    move-object/from16 v0, v23
 
     invoke-virtual {v0, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v25
+    move-result v23
 
-    if-eqz v25, :cond_b
+    if-eqz v23, :cond_c
+
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    move-result v23
+
+    if-lez v23, :cond_c
+
+    .line 1115
+    invoke-static {v8}, Landroid/os/FileUtils;->getFatVolumeId(Ljava/lang/String;)I
+
+    move-result v23
+
+    sput v23, Lcom/android/providers/media/MediaProvider;->mVolId:I
+
+    .line 1129
+    :goto_6
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
+
+    move-object/from16 v23, v0
+
+    const-string v24, "external"
+
+    #calls: Lcom/android/providers/media/MediaScannerService;->openDatabase(Ljava/lang/String;)V
+    invoke-static/range {v23 .. v24}, Lcom/android/providers/media/MediaScannerService;->access$200(Lcom/android/providers/media/MediaScannerService;Ljava/lang/String;)V
+
+    .line 1131
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
+
+    move-object/from16 v23, v0
+
+    #calls: Lcom/android/providers/media/MediaScannerService;->disAliveExtSdCardRows()V
+    invoke-static/range {v23 .. v23}, Lcom/android/providers/media/MediaScannerService;->access$300(Lcom/android/providers/media/MediaScannerService;)V
+
+    .line 1133
+    sget v23, Lcom/android/providers/media/MediaProvider;->mVolId:I
+
+    const/16 v24, -0x1
+
+    move/from16 v0, v23
+
+    move/from16 v1, v24
+
+    if-eq v0, v1, :cond_3
+
+    .line 1135
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
+
+    move-object/from16 v23, v0
+
+    sget v24, Lcom/android/providers/media/MediaProvider;->mVolId:I
+
+    #calls: Lcom/android/providers/media/MediaScannerService;->UpdateVolId(I)V
+    invoke-static/range {v23 .. v24}, Lcom/android/providers/media/MediaScannerService;->access$500(Lcom/android/providers/media/MediaScannerService;I)V
+
+    .line 1137
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
+
+    move-object/from16 v23, v0
+
+    sget v24, Lcom/android/providers/media/MediaProvider;->mVolId:I
+
+    const/16 v25, 0x1
+
+    #calls: Lcom/android/providers/media/MediaScannerService;->AliveExtSdCardRows(II)V
+    invoke-static/range {v23 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$600(Lcom/android/providers/media/MediaScannerService;II)V
+
+    goto/16 :goto_3
+
+    .line 1089
+    .end local v14           #removeStorageState:Ljava/lang/String;
+    .end local v15           #sd:Ljava/lang/String;
+    :catch_2
+    move-exception v7
+
+    .line 1090
+    .local v7, e:Ljava/lang/SecurityException;
+    const-string v23, "MediaScannerService"
+
+    const-string v24, "chk bVoicerecordDonutPathExist SecurityException: "
+
+    move-object/from16 v0, v23
+
+    move-object/from16 v1, v24
+
+    invoke-static {v0, v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_4
+
+    .line 1100
+    .end local v7           #e:Ljava/lang/SecurityException;
+    :cond_b
+    const/16 v23, 0x1
+
+    move/from16 v0, v23
+
+    new-array v6, v0, [Ljava/lang/String;
+
+    .end local v6           #directories:[Ljava/lang/String;
+    const/16 v23, 0x0
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v24
+
+    invoke-virtual/range {v24 .. v24}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v24
+
+    aput-object v24, v6, v23
+
+    .restart local v6       #directories:[Ljava/lang/String;
+    goto :goto_5
+
+    .line 1117
+    .restart local v14       #removeStorageState:Ljava/lang/String;
+    .restart local v15       #sd:Ljava/lang/String;
+    :cond_c
+    const-string v23, "MediaScannerService"
+
+    new-instance v24, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v25, "MediaProvider.mVolId = -1, removeStorageState:"
+
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v24
+
+    move-object/from16 v0, v24
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v24
+
+    const-string v25, " ,extsd.length():"
+
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v24
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
     move-result v25
 
-    if-lez v25, :cond_b
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1113
-    invoke-static {v8}, Landroid/os/FileUtils;->getFatVolumeId(Ljava/lang/String;)I
+    move-result-object v24
 
-    move-result v25
+    invoke-virtual/range {v24 .. v24}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sput v25, Lcom/android/providers/media/MediaProvider;->mVolId:I
+    move-result-object v24
 
-    .line 1116
-    :cond_b
-    invoke-static {v8}, Landroid/os/FileUtils;->getFatVolumeId(Ljava/lang/String;)I
+    invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v22
+    .line 1118
+    const/16 v23, -0x1
 
-    .line 1117
-    .local v22, volid1:I
-    invoke-static {v15}, Landroid/os/FileUtils;->getFatVolumeId(Ljava/lang/String;)I
+    sput v23, Lcom/android/providers/media/MediaProvider;->mVolId:I
 
-    move-result v23
+    goto/16 :goto_6
 
-    .line 1119
-    .local v23, volid2:I
-    move/from16 v0, v22
-
-    move/from16 v1, v23
-
-    if-ne v0, v1, :cond_c
-
-    .line 1120
-    const/16 v25, -0x1
-
-    sput v25, Lcom/android/providers/media/MediaProvider;->mVolId:I
-
-    .line 1124
-    :cond_c
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
-
-    move-object/from16 v25, v0
-
-    const-string v26, "external"
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->openDatabase(Ljava/lang/String;)V
-    invoke-static/range {v25 .. v26}, Lcom/android/providers/media/MediaScannerService;->access$200(Lcom/android/providers/media/MediaScannerService;Ljava/lang/String;)V
-
-    .line 1126
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
-
-    move-object/from16 v25, v0
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->disAliveExtSdCardRows()V
-    invoke-static/range {v25 .. v25}, Lcom/android/providers/media/MediaScannerService;->access$300(Lcom/android/providers/media/MediaScannerService;)V
-
-    .line 1128
-    sget v25, Lcom/android/providers/media/MediaProvider;->mVolId:I
-
-    const/16 v26, -0x1
-
-    move/from16 v0, v25
-
-    move/from16 v1, v26
-
-    if-eq v0, v1, :cond_3
-
-    .line 1130
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
-
-    move-object/from16 v25, v0
-
-    sget v26, Lcom/android/providers/media/MediaProvider;->mVolId:I
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->UpdateVolId(I)V
-    invoke-static/range {v25 .. v26}, Lcom/android/providers/media/MediaScannerService;->access$500(Lcom/android/providers/media/MediaScannerService;I)V
-
-    .line 1132
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->this$0:Lcom/android/providers/media/MediaScannerService;
-
-    move-object/from16 v25, v0
-
-    sget v26, Lcom/android/providers/media/MediaProvider;->mVolId:I
-
-    const/16 v27, 0x1
-
-    #calls: Lcom/android/providers/media/MediaScannerService;->AliveExtSdCardRows(II)V
-    invoke-static/range {v25 .. v27}, Lcom/android/providers/media/MediaScannerService;->access$600(Lcom/android/providers/media/MediaScannerService;II)V
-
-    goto/16 :goto_3
-
-    .line 1083
+    .line 1151
+    .end local v4           #bVoicerecordDonutPathExist:Z
     .end local v14           #removeStorageState:Ljava/lang/String;
     .end local v15           #sd:Ljava/lang/String;
-    .end local v22           #volid1:I
-    .end local v23           #volid2:I
-    :catch_2
-    move-exception v7
-
-    .line 1084
-    .local v7, e:Ljava/lang/SecurityException;
-    const-string v25, "MediaScannerService"
-
-    const-string v26, "chk bVoicerecordDonutPathExist SecurityException: "
-
-    move-object/from16 v0, v25
-
-    move-object/from16 v1, v26
-
-    invoke-static {v0, v1, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto/16 :goto_4
-
-    .line 1094
-    .end local v7           #e:Ljava/lang/SecurityException;
-    :cond_d
-    const/16 v25, 0x1
-
-    move/from16 v0, v25
-
-    new-array v6, v0, [Ljava/lang/String;
-
-    .end local v6           #directories:[Ljava/lang/String;
-    const/16 v25, 0x0
-
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v26
-
-    invoke-virtual/range {v26 .. v26}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v26
-
-    aput-object v26, v6, v25
-
-    .restart local v6       #directories:[Ljava/lang/String;
-    goto/16 :goto_5
-
-    .line 1148
-    .end local v4           #bVoicerecordDonutPathExist:Z
     .end local v19           #voicerecord:Ljava/io/File;
     .end local v21           #voicerecordDonutPath:Ljava/lang/String;
-    :cond_e
-    const-string v25, "MediaScannerService"
+    :cond_d
+    const-string v23, "MediaScannerService"
 
-    new-instance v26, Ljava/lang/StringBuilder;
+    new-instance v24, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v26 .. v26}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v27, "cancel scan because volume"
+    const-string v25, "cancel scan because volume"
 
-    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v26
+    move-result-object v24
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v24
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v22
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v26
+    move-result-object v24
 
-    const-string v27, " not mounted."
+    const-string v25, " not mounted."
 
-    invoke-virtual/range {v26 .. v27}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v26
+    move-result-object v24
 
-    invoke-virtual/range {v26 .. v26}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v24 .. v24}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v26
+    move-result-object v24
 
-    invoke-static/range {v25 .. v26}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static/range {v23 .. v24}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
 

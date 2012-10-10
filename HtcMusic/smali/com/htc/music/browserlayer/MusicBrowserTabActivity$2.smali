@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 400
+    .line 417
     iput-object p1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$2;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +42,15 @@
     .parameter "isVisible"
 
     .prologue
-    .line 403
+    .line 420
     if-eqz p1, :cond_0
 
-    .line 404
+    .line 421
     iget-object v0, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$2;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 406
+    .line 423
     :cond_0
     return-void
 .end method

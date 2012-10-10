@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1237
+    .line 1245
     iput-object p1, p0, Lcom/htc/music/HtcMusic$8;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,33 +44,33 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1239
+    .line 1247
     iget-object v0, p0, Lcom/htc/music/HtcMusic$8;->this$0:Lcom/htc/music/HtcMusic;
 
     #setter for: Lcom/htc/music/HtcMusic;->mEnalbeAutoPlay:Z
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$1302(Lcom/htc/music/HtcMusic;Z)Z
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$1402(Lcom/htc/music/HtcMusic;Z)Z
 
-    .line 1240
+    .line 1248
     iget-object v0, p0, Lcom/htc/music/HtcMusic$8;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
     if-eqz v0, :cond_0
 
-    .line 1241
+    .line 1249
     iget-object v0, p0, Lcom/htc/music/HtcMusic$8;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/presentation/SPresentation;->enabledLayoutAnimateIn(Z)V
 
-    .line 1243
+    .line 1251
     :cond_0
     iget-object v0, p0, Lcom/htc/music/HtcMusic$8;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->toggleShuffle()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$1400(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$1500(Lcom/htc/music/HtcMusic;)V
 
-    .line 1244
+    .line 1252
     return-void
 .end method

@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 2945
+    .line 3088
     iput-object p1, p0, Landroid/media/MediaPlayer$2;->this$0:Landroid/media/MediaPlayer;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 2947
+    .line 3090
     iget-object v0, p0, Landroid/media/MediaPlayer$2;->this$0:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->onHDMIStateChanged(Z)V
 
-    .line 2948
+    .line 3091
     return-void
 .end method
 
@@ -56,13 +56,13 @@
     .locals 2
 
     .prologue
-    .line 2951
+    .line 3094
     iget-object v0, p0, Landroid/media/MediaPlayer$2;->this$0:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->onHDMIStateChanged(Z)V
 
-    .line 2952
+    .line 3095
     return-void
 .end method

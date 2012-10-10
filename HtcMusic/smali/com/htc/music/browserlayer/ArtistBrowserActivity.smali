@@ -1454,7 +1454,7 @@
     if-nez v0, :cond_0
 
     .line 172
-    const v0, 0x7f0700a6
+    const v0, 0x7f0700a7
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/ArtistBrowserActivity;->setSearchHint(I)V
 

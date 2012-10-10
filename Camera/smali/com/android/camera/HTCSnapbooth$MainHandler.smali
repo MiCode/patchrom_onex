@@ -675,7 +675,7 @@
     .line 407
     iget-object v0, p0, Lcom/android/camera/HTCSnapbooth$MainHandler;->this$0:Lcom/android/camera/HTCSnapbooth;
 
-    const v1, 0x7f0a01ba
+    const v1, 0x7f0a01c3
 
     #calls: Lcom/android/camera/HTCSnapbooth;->showToast(ILjava/lang/String;)V
     invoke-static {v0, v1, v4}, Lcom/android/camera/HTCSnapbooth;->access$2000(Lcom/android/camera/HTCSnapbooth;ILjava/lang/String;)V

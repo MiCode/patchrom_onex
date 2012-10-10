@@ -98,7 +98,7 @@
 
     const-string v1, "Tab_Recent"
 
-    const v2, 0x20403db
+    const v2, 0x20403dc
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCarousel;->getActivity()Landroid/app/Activity;
 
@@ -146,7 +146,7 @@
 
     const-string v1, "Tab_Type"
 
-    const v2, 0x20403dc
+    const v2, 0x20403dd
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCarousel;->getActivity()Landroid/app/Activity;
 
@@ -188,7 +188,7 @@
 
     const-string v1, "Tab_Favorites"
 
-    const v2, 0x20403dd
+    const v2, 0x20403de
 
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCarousel;->getActivity()Landroid/app/Activity;
 

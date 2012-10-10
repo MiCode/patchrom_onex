@@ -49,7 +49,9 @@
 
 .field public static final IME_MASK_ACTION:I = 0xff
 
-.field public static final IME_NULL:I
+.field public static final IME_NULL:I = 0x0
+
+.field public static final IME_TRANSFORMATION_TYPE_PASSWORD:I = 0x1
 
 
 # instance fields
@@ -81,13 +83,15 @@
 
 .field public privateImeOptions:Ljava/lang/String;
 
+.field public transformationType:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 355
+    .line 356
     new-instance v0, Landroid/view/inputmethod/EditorInfo$1;
 
     invoke-direct {v0}, Landroid/view/inputmethod/EditorInfo$1;-><init>()V
@@ -134,6 +138,9 @@
     .line 230
     iput v0, p0, Landroid/view/inputmethod/EditorInfo;->initialCapsMode:I
 
+    .line 387
+    iput v0, p0, Landroid/view/inputmethod/EditorInfo;->transformationType:I
+
     return-void
 .end method
 
@@ -143,7 +150,7 @@
     .locals 1
 
     .prologue
-    .line 381
+    .line 383
     const/4 v0, 0x0
 
     return v0
@@ -164,7 +171,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "inputType=0x"
+    const-string v1, "inputType=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -262,7 +269,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "initialSelStart="
+    const-string v1, "initialSelStart="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -578,5 +585,10 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
     .line 350
+    iget v0, p0, Landroid/view/inputmethod/EditorInfo;->transformationType:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 351
     return-void
 .end method

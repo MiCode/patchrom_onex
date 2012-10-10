@@ -3,12 +3,12 @@
 .source "EditPlaylistActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/browserlayer/EditPlaylistActivity;->initButtonsPanel()V
+    value = Lcom/htc/music/browserlayer/EditPlaylistActivity;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1322
+    .line 473
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$3;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,16 +37,16 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public run()V
     .locals 1
-    .parameter "v"
 
     .prologue
-    .line 1325
+    .line 475
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$3;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->onSaveClick()V
+    #calls: Lcom/htc/music/browserlayer/EditPlaylistActivity;->setLandscapeIMEbutton()V
+    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$100(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
-    .line 1326
+    .line 476
     return-void
 .end method

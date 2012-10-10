@@ -28,13 +28,13 @@
     .parameter "adapter"
 
     .prologue
-    .line 563
+    .line 570
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 564
+    .line 571
     iput-object p1, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
-    .line 565
+    .line 572
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 610
+    .line 617
     const/4 v0, 0x1
 
     return v0
@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 568
+    .line 575
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez v0, :cond_0
@@ -81,7 +81,7 @@
     .parameter "parent"
 
     .prologue
-    .line 584
+    .line 591
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez v0, :cond_0
@@ -106,7 +106,7 @@
     .parameter "position"
 
     .prologue
-    .line 572
+    .line 579
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez v0, :cond_0
@@ -131,7 +131,7 @@
     .parameter "position"
 
     .prologue
-    .line 576
+    .line 583
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-nez v0, :cond_0
@@ -156,7 +156,7 @@
     .parameter "position"
 
     .prologue
-    .line 623
+    .line 630
     const/4 v0, 0x0
 
     return v0
@@ -169,7 +169,7 @@
     .parameter "parent"
 
     .prologue
-    .line 580
+    .line 587
     invoke-virtual {p0, p1, p2, p3}, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
@@ -181,7 +181,7 @@
     .locals 1
 
     .prologue
-    .line 627
+    .line 634
     const/4 v0, 0x1
 
     return v0
@@ -191,7 +191,7 @@
     .locals 1
 
     .prologue
-    .line 589
+    .line 596
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-eqz v0, :cond_0
@@ -219,7 +219,7 @@
     .locals 1
 
     .prologue
-    .line 631
+    .line 638
     invoke-virtual {p0}, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->getCount()I
 
     move-result v0
@@ -242,7 +242,7 @@
     .parameter "position"
 
     .prologue
-    .line 619
+    .line 626
     const/4 v0, 0x1
 
     return v0
@@ -253,17 +253,17 @@
     .parameter "observer"
 
     .prologue
-    .line 593
+    .line 600
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 594
+    .line 601
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/SpinnerAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 596
+    .line 603
     :cond_0
     return-void
 .end method
@@ -273,17 +273,17 @@
     .parameter "observer"
 
     .prologue
-    .line 599
+    .line 606
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 600
+    .line 607
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$DropDownAdapter;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/SpinnerAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 602
+    .line 609
     :cond_0
     return-void
 .end method

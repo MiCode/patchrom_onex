@@ -1001,7 +1001,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "isBehindAT()"
+    const-string v5, "isBehindAT()"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2443,7 +2443,7 @@
     .line 172
     const-string v3, "SipService"
 
-    const-string/jumbo v4, "incomingCallPendingIntent cannot be null; the profile is not opened"
+    const-string v4, "incomingCallPendingIntent cannot be null; the profile is not opened"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0

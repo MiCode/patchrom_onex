@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1666
+    .line 1673
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$ResultReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .parameter "resultExtras"
 
     .prologue
-    .line 1669
+    .line 1676
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$ResultReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mLock:Ljava/lang/Object;
@@ -56,7 +56,7 @@
 
     monitor-enter v4
 
-    .line 1670
+    .line 1677
     :try_start_0
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$ResultReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -65,28 +65,28 @@
 
     move-result-object v0
 
-    .line 1671
+    .line 1678
     .local v0, bs:Lcom/android/server/AlarmManagerService$BroadcastStats;
     if-eqz v0, :cond_1
 
-    .line 1672
+    .line 1679
     iget v3, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->nesting:I
 
     add-int/lit8 v3, v3, -0x1
 
     iput v3, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->nesting:I
 
-    .line 1673
+    .line 1680
     iget v3, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->nesting:I
 
     if-gtz v3, :cond_1
 
-    .line 1674
+    .line 1681
     const/4 v3, 0x0
 
     iput v3, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->nesting:I
 
-    .line 1675
+    .line 1682
     iget-wide v5, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->aggregateTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -101,12 +101,12 @@
 
     iput-wide v5, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->aggregateTime:J
 
-    .line 1677
+    .line 1684
     new-instance v1, Landroid/content/Intent$FilterComparison;
 
     invoke-direct {v1, p2}, Landroid/content/Intent$FilterComparison;-><init>(Landroid/content/Intent;)V
 
-    .line 1678
+    .line 1685
     .local v1, fc:Landroid/content/Intent$FilterComparison;
     iget-object v3, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->filterStats:Ljava/util/HashMap;
 
@@ -116,11 +116,11 @@
 
     check-cast v2, Lcom/android/server/AlarmManagerService$FilterStats;
 
-    .line 1679
+    .line 1686
     .local v2, fs:Lcom/android/server/AlarmManagerService$FilterStats;
     if-nez v2, :cond_0
 
-    .line 1680
+    .line 1687
     new-instance v2, Lcom/android/server/AlarmManagerService$FilterStats;
 
     .end local v2           #fs:Lcom/android/server/AlarmManagerService$FilterStats;
@@ -128,13 +128,13 @@
 
     invoke-direct {v2, v3}, Lcom/android/server/AlarmManagerService$FilterStats;-><init>(Lcom/android/server/AlarmManagerService$1;)V
 
-    .line 1681
+    .line 1688
     .restart local v2       #fs:Lcom/android/server/AlarmManagerService$FilterStats;
     iget-object v3, v0, Lcom/android/server/AlarmManagerService$BroadcastStats;->filterStats:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1683
+    .line 1690
     :cond_0
     iget v3, v2, Lcom/android/server/AlarmManagerService$FilterStats;->count:I
 
@@ -142,7 +142,7 @@
 
     iput v3, v2, Lcom/android/server/AlarmManagerService$FilterStats;->count:I
 
-    .line 1686
+    .line 1693
     .end local v1           #fc:Landroid/content/Intent$FilterComparison;
     .end local v2           #fs:Lcom/android/server/AlarmManagerService$FilterStats;
     :cond_1
@@ -150,7 +150,7 @@
 
     invoke-static {v3}, Lcom/android/server/AlarmManagerService;->access$1810(Lcom/android/server/AlarmManagerService;)I
 
-    .line 1687
+    .line 1694
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$ResultReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mBroadcastRefCount:I
@@ -160,7 +160,7 @@
 
     if-nez v3, :cond_2
 
-    .line 1688
+    .line 1695
     iget-object v3, p0, Lcom/android/server/AlarmManagerService$ResultReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -170,14 +170,14 @@
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1690
+    .line 1697
     :cond_2
     monitor-exit v4
 
-    .line 1691
+    .line 1698
     return-void
 
-    .line 1690
+    .line 1697
     .end local v0           #bs:Lcom/android/server/AlarmManagerService$BroadcastStats;
     :catchall_0
     move-exception v3

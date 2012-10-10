@@ -180,7 +180,7 @@
     :cond_0
     const-string v0, "BackupAgent"
 
-    const-string/jumbo v2, "lib and cache files are not backed up"
+    const-string v2, "lib and cache files are not backed up"
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

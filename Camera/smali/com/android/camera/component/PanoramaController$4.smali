@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 857
+    .line 855
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController$4;->this$0:Lcom/android/camera/component/PanoramaController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,11 +66,11 @@
     .end annotation
 
     .prologue
-    .line 860
+    .line 858
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/CloseCameraRequestEventArgs;>;"
     iget-object v0, p3, Lcom/android/camera/CloseCameraRequestEventArgs;->camera:Landroid/hardware/Camera;
 
-    .line 861
+    .line 859
     .local v0, camera:Landroid/hardware/Camera;
     iget-object v1, p0, Lcom/android/camera/component/PanoramaController$4;->this$0:Lcom/android/camera/component/PanoramaController;
 
@@ -94,7 +94,7 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 863
+    .line 861
     iget-object v1, p0, Lcom/android/camera/component/PanoramaController$4;->this$0:Lcom/android/camera/component/PanoramaController;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -106,7 +106,7 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 864
+    .line 862
     iget-object v1, p0, Lcom/android/camera/component/PanoramaController$4;->this$0:Lcom/android/camera/component/PanoramaController;
 
     #getter for: Lcom/android/camera/component/PanoramaController;->m_ScaladoCamera:Lcom/scalado/camera/FeatureCamera;
@@ -116,7 +116,7 @@
 
     invoke-interface {v1}, Lcom/scalado/camera/FeatureCamera;->release()V
 
-    .line 865
+    .line 863
     iget-object v1, p0, Lcom/android/camera/component/PanoramaController$4;->this$0:Lcom/android/camera/component/PanoramaController;
 
     const/4 v2, 0x0
@@ -124,10 +124,10 @@
     #setter for: Lcom/android/camera/component/PanoramaController;->m_ScaladoCamera:Lcom/scalado/camera/FeatureCamera;
     invoke-static {v1, v2}, Lcom/android/camera/component/PanoramaController;->access$3702(Lcom/android/camera/component/PanoramaController;Lcom/scalado/camera/FeatureCamera;)Lcom/scalado/camera/FeatureCamera;
 
-    .line 866
+    .line 864
     invoke-virtual {p3}, Lcom/android/camera/CloseCameraRequestEventArgs;->setHandled()V
 
-    .line 868
+    .line 866
     :cond_0
     return-void
 .end method
@@ -139,7 +139,7 @@
     .parameter "x2"
 
     .prologue
-    .line 857
+    .line 855
     check-cast p3, Lcom/android/camera/CloseCameraRequestEventArgs;
 
     .end local p3

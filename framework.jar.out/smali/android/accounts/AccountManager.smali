@@ -1751,7 +1751,7 @@
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "key is null"
+    const-string v2, "key is null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2015,7 +2015,7 @@
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "listener is null"
+    const-string v1, "listener is null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2210,7 +2210,7 @@
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "key is null"
+    const-string v2, "key is null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

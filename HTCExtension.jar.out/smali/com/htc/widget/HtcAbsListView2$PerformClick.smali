@@ -31,7 +31,7 @@
     .parameter
 
     .prologue
-    .line 2154
+    .line 2143
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView2$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
     const/4 v0, 0x0
@@ -47,19 +47,19 @@
     .locals 6
 
     .prologue
-    .line 2165
+    .line 2154
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcAdapterView2;->mDataChanged:Z
 
     if-eqz v0, :cond_1
 
-    .line 2172
+    .line 2161
     :cond_0
     :goto_0
     return-void
 
-    .line 2167
+    .line 2156
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
@@ -91,7 +91,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2169
+    .line 2158
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView2$PerformClick;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
     iget-object v2, p0, Lcom/htc/widget/HtcAbsListView2$PerformClick;->mChild:Landroid/view/View;

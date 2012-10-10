@@ -37,10 +37,10 @@
     .prologue
     const/16 v6, 0x7530
 
-    .line 765
+    .line 761
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 766
+    .line 762
     const-string v2, "ScreenTimeout"
 
     const-string v3, "powersaver_screen_timeout"
@@ -55,26 +55,26 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 757
+    .line 753
     const-string v0, "powersaver_screen_timeout_settings"
 
     iput-object v0, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->KEY_SCREEN_TIMEOUT_SETTINGS:Ljava/lang/String;
 
-    .line 758
+    .line 754
     iput v6, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->DEFAULT_SCREEN_TIMEOUT_VALUE:I
 
-    .line 760
+    .line 756
     const-string v0, "psaver_normal_screen_timeout"
 
     iput-object v0, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->KEY_N_SCREEN_TIMEOUT:Ljava/lang/String;
 
-    .line 761
+    .line 757
     iput v6, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->DEFAULT_N_SCREEN_TIMEOUT:I
 
-    .line 767
+    .line 763
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->mContext:Landroid/content/Context;
 
-    .line 768
+    .line 764
     return-void
 .end method
 
@@ -83,14 +83,14 @@
     .parameter "value"
 
     .prologue
-    .line 771
+    .line 767
     iget-object v1, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 772
+    .line 768
     .local v0, cr:Landroid/content/ContentResolver;
     const-string v1, "screen_off_timeout"
 
@@ -100,7 +100,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 773
+    .line 769
     const-string v1, "HtcPowerSaver"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -123,11 +123,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 777
+    .line 773
     :goto_0
     return-void
 
-    .line 775
+    .line 771
     :cond_0
     const-string v1, "HtcPowerSaver"
 
@@ -148,14 +148,14 @@
 
     const/4 v7, 0x0
 
-    .line 796
+    .line 792
     iget-object v4, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 797
+    .line 793
     .local v0, cr:Landroid/content/ContentResolver;
     iget-object v4, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->this$0:Lcom/android/server/HtcPowerSaver;
 
@@ -166,23 +166,23 @@
 
     move-result-object v2
 
-    .line 798
+    .line 794
     .local v2, sp:Landroid/content/SharedPreferences;
     if-nez v2, :cond_1
 
-    .line 799
+    .line 795
     const-string v4, "HtcPowerSaver"
 
     const-string v5, "applyPowerSaverSettings: Get SharedPreferences fail."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 811
+    .line 807
     :cond_0
     :goto_0
     return v7
 
-    .line 802
+    .line 798
     :cond_1
     const-string v4, "powersaver_screen_timeout_settings"
 
@@ -190,7 +190,7 @@
 
     move-result v1
 
-    .line 803
+    .line 799
     .local v1, pValue:I
     const-string v4, "screen_off_timeout"
 
@@ -198,7 +198,7 @@
 
     move-result v3
 
-    .line 805
+    .line 801
     .local v3, sysValue:I
     const-string v4, "HtcPowerSaver"
 
@@ -232,12 +232,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 809
+    .line 805
     if-ltz v3, :cond_2
 
     if-ge v1, v3, :cond_0
 
-    .line 810
+    .line 806
     :cond_2
     invoke-direct {p0, v1}, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->setSysSettings(I)V
 
@@ -250,7 +250,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 816
+    .line 812
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->this$0:Lcom/android/server/HtcPowerSaver;
 
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->mContext:Landroid/content/Context;
@@ -260,22 +260,22 @@
 
     move-result-object v1
 
-    .line 817
+    .line 813
     .local v1, sp:Landroid/content/SharedPreferences;
     if-nez v1, :cond_0
 
-    .line 818
+    .line 814
     const-string v2, "HtcPowerSaver"
 
     const-string v3, "restoreSystemSettings: Get SharedPreferences fail."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 823
+    .line 819
     :goto_0
     return v4
 
-    .line 821
+    .line 817
     :cond_0
     const-string v2, "psaver_normal_screen_timeout"
 
@@ -285,7 +285,7 @@
 
     move-result v0
 
-    .line 822
+    .line 818
     .local v0, normalValue:I
     invoke-direct {p0, v0}, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->setSysSettings(I)V
 
@@ -298,14 +298,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 781
+    .line 777
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 782
+    .line 778
     .local v0, cr:Landroid/content/ContentResolver;
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$ScreenTimeout;->this$0:Lcom/android/server/HtcPowerSaver;
 
@@ -316,22 +316,22 @@
 
     move-result-object v1
 
-    .line 783
+    .line 779
     .local v1, sp:Landroid/content/SharedPreferences;
     if-nez v1, :cond_0
 
-    .line 784
+    .line 780
     const-string v3, "HtcPowerSaver"
 
     const-string v4, "saveSystemSettings: Get SharedPreferences fail."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 791
+    .line 787
     :goto_0
     return v6
 
-    .line 787
+    .line 783
     :cond_0
     const-string v3, "screen_off_timeout"
 
@@ -341,7 +341,7 @@
 
     move-result v2
 
-    .line 789
+    .line 785
     .local v2, sysTimeout:I
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -355,7 +355,7 @@
 
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 790
+    .line 786
     const-string v3, "HtcPowerSaver"
 
     new-instance v4, Ljava/lang/StringBuilder;

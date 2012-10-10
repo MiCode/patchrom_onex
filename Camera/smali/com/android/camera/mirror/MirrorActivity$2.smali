@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 223
+    .line 234
     iput-object p1, p0, Lcom/android/camera/mirror/MirrorActivity$2;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +45,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 227
+    .line 238
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
 
     float-to-int v0, v2
 
-    .line 228
+    .line 239
     .local v0, x:I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -60,14 +60,14 @@
 
     float-to-int v1, v2
 
-    .line 229
+    .line 240
     .local v1, y:I
     if-ltz v0, :cond_0
 
     iget-object v2, p0, Lcom/android/camera/mirror/MirrorActivity$2;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     #getter for: Lcom/android/camera/mirror/MirrorActivity;->m_BrightnessButton:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$100(Lcom/android/camera/mirror/MirrorActivity;)Landroid/view/View;
+    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$200(Lcom/android/camera/mirror/MirrorActivity;)Landroid/view/View;
 
     move-result-object v2
 
@@ -82,7 +82,7 @@
     iget-object v2, p0, Lcom/android/camera/mirror/MirrorActivity$2;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     #getter for: Lcom/android/camera/mirror/MirrorActivity;->m_BrightnessButton:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$100(Lcom/android/camera/mirror/MirrorActivity;)Landroid/view/View;
+    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$200(Lcom/android/camera/mirror/MirrorActivity;)Landroid/view/View;
 
     move-result-object v2
 
@@ -92,12 +92,12 @@
 
     if-le v1, v2, :cond_1
 
-    .line 241
+    .line 252
     :cond_0
     :goto_0
     return v3
 
-    .line 233
+    .line 244
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -105,30 +105,30 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 235
+    .line 246
     iget-object v2, p0, Lcom/android/camera/mirror/MirrorActivity$2;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     #getter for: Lcom/android/camera/mirror/MirrorActivity;->m_IsMaxBrightness:Z
-    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$200(Lcom/android/camera/mirror/MirrorActivity;)Z
+    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$300(Lcom/android/camera/mirror/MirrorActivity;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 236
+    .line 247
     iget-object v2, p0, Lcom/android/camera/mirror/MirrorActivity$2;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     #calls: Lcom/android/camera/mirror/MirrorActivity;->setMinBrightness()V
-    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$300(Lcom/android/camera/mirror/MirrorActivity;)V
+    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$400(Lcom/android/camera/mirror/MirrorActivity;)V
 
     goto :goto_0
 
-    .line 238
+    .line 249
     :cond_2
     iget-object v2, p0, Lcom/android/camera/mirror/MirrorActivity$2;->this$0:Lcom/android/camera/mirror/MirrorActivity;
 
     #calls: Lcom/android/camera/mirror/MirrorActivity;->setMaxBrightness()V
-    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$400(Lcom/android/camera/mirror/MirrorActivity;)V
+    invoke-static {v2}, Lcom/android/camera/mirror/MirrorActivity;->access$500(Lcom/android/camera/mirror/MirrorActivity;)V
 
     goto :goto_0
 .end method

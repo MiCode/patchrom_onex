@@ -83,7 +83,7 @@
     .parameter "disablenowplayingindicator"
 
     .prologue
-    .line 3506
+    .line 3538
     move-object v0, p0
 
     move-object v1, p1
@@ -98,69 +98,69 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/htc/music/widget/HtcSimpleCursorAdapter;-><init>(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V
 
-    .line 3447
+    .line 3479
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mIsNowPlaying:Z
 
-    .line 3449
+    .line 3481
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDisableNowPlayingIndicator:Z
 
-    .line 3463
+    .line 3495
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 3465
+    .line 3497
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mUnknownArtist:Ljava/lang/String;
 
-    .line 3467
+    .line 3499
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mUnknownAlbum:Ljava/lang/String;
 
-    .line 3471
+    .line 3503
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
-    .line 3477
+    .line 3509
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mConstraint:Ljava/lang/String;
 
-    .line 3479
+    .line 3511
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mConstraintIsValid:Z
 
-    .line 3483
+    .line 3515
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mcurContent:I
 
-    .line 3485
+    .line 3517
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDlnaMode:I
 
-    .line 3487
+    .line 3519
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
-    .line 3829
+    .line 3867
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNotNotify:Z
 
-    .line 3881
+    .line 3919
     new-instance v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$MyDataSetObserver;
 
     const/4 v1, 0x0
@@ -169,16 +169,16 @@
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDataSetObserver:Landroid/database/DataSetObserver;
 
-    .line 3507
+    .line 3539
     iput-object p2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
-    .line 3508
+    .line 3540
     invoke-direct {p0, p4}, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->getColumnIndices(Landroid/database/Cursor;)V
 
-    .line 3509
+    .line 3541
     iput-boolean p7, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDisableNowPlayingIndicator:Z
 
-    .line 3510
+    .line 3542
     const v0, 0x7f07004d
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -187,7 +187,7 @@
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mUnknownArtist:Ljava/lang/String;
 
-    .line 3511
+    .line 3543
     const v0, 0x7f07004e
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -196,18 +196,18 @@
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mUnknownAlbum:Ljava/lang/String;
 
-    .line 3516
+    .line 3548
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020050
+    const v1, 0x7f020052
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v7
 
-    .line 3518
+    .line 3550
     .local v7, b:Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -215,21 +215,21 @@
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 3519
+    .line 3551
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/BitmapDrawable;->setFilterBitmap(Z)V
 
-    .line 3520
+    .line 3552
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/BitmapDrawable;->setDither(Z)V
 
-    .line 3523
+    .line 3555
     iget-object v0, p2, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->CheckDLNAStatus(Landroid/content/Context;)I
@@ -238,15 +238,15 @@
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDlnaMode:I
 
-    .line 3525
+    .line 3557
     if-eqz p4, :cond_0
 
-    .line 3526
+    .line 3558
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDataSetObserver:Landroid/database/DataSetObserver;
 
     invoke-interface {p4, v0}, Landroid/database/Cursor;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 3528
+    .line 3560
     :cond_0
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
@@ -254,7 +254,7 @@
 
     move-result v3
 
-    .line 3530
+    .line 3562
     .local v3, height:I
     new-instance v0, Lcom/htc/music/util/AsyncImageDecoder;
 
@@ -272,12 +272,12 @@
 
     iput-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
-    .line 3532
-    const v0, 0x7f020053
+    .line 3564
+    const v0, 0x7f020055
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDrmLockIconResId:I
 
-    .line 3533
+    .line 3565
     return-void
 .end method
 
@@ -287,7 +287,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3446
+    .line 3478
     iput p1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDlnaMode:I
 
     return p1
@@ -298,7 +298,7 @@
     .parameter "x0"
 
     .prologue
-    .line 3446
+    .line 3478
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     return-object v0
@@ -309,7 +309,7 @@
     .parameter "x0"
 
     .prologue
-    .line 3446
+    .line 3478
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
     return-object v0
@@ -320,15 +320,15 @@
     .parameter "cursor"
 
     .prologue
-    .line 3546
+    .line 3578
     if-nez p1, :cond_1
 
-    .line 3558
+    .line 3590
     :cond_0
     :goto_0
     return-void
 
-    .line 3548
+    .line 3580
     :cond_1
     const-string v0, "title"
 
@@ -338,7 +338,7 @@
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mTitleIdx:I
 
-    .line 3549
+    .line 3581
     const-string v0, "artist"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -347,7 +347,7 @@
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mArtistIdx:I
 
-    .line 3550
+    .line 3582
     const-string v0, "album"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -356,7 +356,7 @@
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mAlbumIdx:I
 
-    .line 3551
+    .line 3583
     const-string v0, "album_art"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -365,7 +365,7 @@
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mAlbumArtIndex:I
 
-    .line 3552
+    .line 3584
     const-string v0, "_id"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -374,7 +374,7 @@
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mAudioIdIdx:I
 
-    .line 3553
+    .line 3585
     const-string v0, "album_id"
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -383,12 +383,12 @@
 
     iput v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mAlbumIdIdx:I
 
-    .line 3555
+    .line 3587
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     if-eqz v0, :cond_0
 
-    .line 3556
+    .line 3588
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     invoke-virtual {v0, p1}, Landroid/widget/AlphabetIndexer;->setCursor(Landroid/database/Cursor;)V
@@ -405,14 +405,14 @@
     .parameter "cursor"
 
     .prologue
-    .line 3615
+    .line 3647
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v29
 
     check-cast v29, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;
 
-    .line 3617
+    .line 3649
     .local v29, vh:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;
     move-object/from16 v0, p0
 
@@ -426,7 +426,7 @@
 
     invoke-interface {v0, v2, v5}, Landroid/database/Cursor;->copyStringToBuffer(ILandroid/database/CharArrayBuffer;)V
 
-    .line 3618
+    .line 3650
     move-object/from16 v0, v29
 
     iget-object v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->buffer1:Landroid/database/CharArrayBuffer;
@@ -445,7 +445,7 @@
 
     move-result-object v20
 
-    .line 3619
+    .line 3651
     .local v20, line1:Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -455,7 +455,7 @@
 
     invoke-virtual {v2, v0}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 3622
+    .line 3654
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mBuilder:Ljava/lang/StringBuilder;
@@ -472,7 +472,7 @@
 
     invoke-virtual {v2, v5, v6}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 3624
+    .line 3656
     move-object/from16 v0, v29
 
     iget-object v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
@@ -483,7 +483,7 @@
 
     if-nez v2, :cond_3
 
-    .line 3625
+    .line 3657
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mAlbumIdx:I
@@ -494,7 +494,7 @@
 
     move-result-object v8
 
-    .line 3626
+    .line 3658
     .local v8, album:Ljava/lang/String;
     if-eqz v8, :cond_0
 
@@ -506,7 +506,7 @@
 
     if-eqz v2, :cond_a
 
-    .line 3627
+    .line 3659
     :cond_0
     move-object/from16 v0, p0
 
@@ -518,7 +518,7 @@
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3632
+    .line 3664
     :goto_0
     move-object/from16 v0, p0
 
@@ -528,7 +528,7 @@
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3634
+    .line 3666
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mArtistIdx:I
@@ -539,7 +539,7 @@
 
     move-result-object v23
 
-    .line 3635
+    .line 3667
     .local v23, name:Ljava/lang/String;
     if-eqz v23, :cond_1
 
@@ -553,7 +553,7 @@
 
     if-eqz v2, :cond_b
 
-    .line 3636
+    .line 3668
     :cond_1
     move-object/from16 v0, p0
 
@@ -565,7 +565,7 @@
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3640
+    .line 3672
     :goto_1
     move-object/from16 v0, p0
 
@@ -575,7 +575,7 @@
 
     move-result v19
 
-    .line 3641
+    .line 3673
     .local v19, len:I
     move-object/from16 v0, v29
 
@@ -587,7 +587,7 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 3642
+    .line 3674
     move/from16 v0, v19
 
     new-array v2, v0, [C
@@ -596,7 +596,7 @@
 
     iput-object v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->buffer2:[C
 
-    .line 3644
+    .line 3676
     :cond_2
     move-object/from16 v0, p0
 
@@ -614,7 +614,7 @@
 
     invoke-virtual {v2, v5, v0, v6, v7}, Ljava/lang/StringBuilder;->getChars(II[CI)V
 
-    .line 3645
+    .line 3677
     move-object/from16 v0, v29
 
     iget-object v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->buffer2:[C
@@ -627,7 +627,7 @@
 
     move-result-object v21
 
-    .line 3646
+    .line 3678
     .local v21, line2:Ljava/lang/String;
     move-object/from16 v0, v29
 
@@ -637,7 +637,7 @@
 
     invoke-virtual {v2, v0}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 3649
+    .line 3681
     .end local v8           #album:Ljava/lang/String;
     .end local v19           #len:I
     .end local v21           #line2:Ljava/lang/String;
@@ -649,20 +649,20 @@
 
     move-object/from16 v16, v0
 
-    .line 3650
+    .line 3682
     .local v16, indicator:Lcom/htc/widget/HtcListItemImageButton;
     if-eqz v16, :cond_5
 
-    .line 3651
+    .line 3683
     const/4 v15, -0x1
 
-    .line 3652
+    .line 3684
     .local v15, id:I
     sget-object v2, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v2, :cond_4
 
-    .line 3655
+    .line 3687
     :try_start_0
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->getCurrentShuffleMode()I
 
@@ -672,14 +672,14 @@
 
     if-ne v2, v5, :cond_c
 
-    .line 3656
+    .line 3688
     sget-object v2, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->getQueuePosition()I
 
     move-result v26
 
-    .line 3657
+    .line 3689
     .local v26, shufflePos:I
     sget-object v2, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -691,7 +691,7 @@
 
     move-result v15
 
-    .line 3686
+    .line 3718
     .end local v26           #shufflePos:I
     :cond_4
     :goto_2
@@ -701,28 +701,28 @@
 
     if-nez v2, :cond_e
 
-    .line 3687
+    .line 3719
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getPosition()I
 
     move-result v2
 
     if-ne v2, v15, :cond_d
 
-    .line 3689
+    .line 3721
     const v2, 0x2080089
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItemImageButton;->setImageResource(I)V
 
-    .line 3690
+    .line 3722
     const/4 v2, 0x0
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItemImageButton;->setVisibility(I)V
 
-    .line 3708
+    .line 3740
     .end local v15           #id:I
     :cond_5
     :goto_3
@@ -730,7 +730,7 @@
 
     iget-object v9, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 3709
+    .line 3741
     .local v9, albumArt:Lcom/htc/widget/HtcListItemTileImage;
     move-object/from16 v0, p0
 
@@ -742,7 +742,7 @@
 
     move-result-object v23
 
-    .line 3711
+    .line 3743
     .restart local v23       #name:Ljava/lang/String;
     const-string v2, "mime_type"
 
@@ -758,7 +758,7 @@
 
     move-result-object v22
 
-    .line 3713
+    .line 3745
     .local v22, minetype:Ljava/lang/String;
     if-eqz v23, :cond_6
 
@@ -775,7 +775,7 @@
     :cond_6
     const/16 v28, 0x1
 
-    .line 3714
+    .line 3746
     .local v28, unknown:Z
     :goto_4
     move-object/from16 v0, p0
@@ -788,7 +788,7 @@
 
     move-result-object v4
 
-    .line 3715
+    .line 3747
     .local v4, art:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -800,7 +800,7 @@
 
     move-result v3
 
-    .line 3716
+    .line 3748
     .local v3, artIndex:I
     new-instance v2, Ljava/lang/Integer;
 
@@ -808,7 +808,7 @@
 
     invoke-virtual {v9, v2}, Lcom/htc/widget/HtcListItemTileImage;->setTag(Ljava/lang/Object;)V
 
-    .line 3717
+    .line 3749
     if-nez v28, :cond_7
 
     if-eqz v4, :cond_7
@@ -819,7 +819,7 @@
 
     if-nez v2, :cond_11
 
-    .line 3719
+    .line 3751
     :cond_7
     move-object/from16 v0, p0
 
@@ -827,7 +827,7 @@
 
     invoke-virtual {v9, v2}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3735
+    .line 3767
     :goto_5
     const-string v2, "_data"
 
@@ -843,7 +843,7 @@
 
     move-result-object v24
 
-    .line 3736
+    .line 3768
     .local v24, path:Ljava/lang/String;
     if-eqz v24, :cond_16
 
@@ -857,14 +857,14 @@
 
     if-eqz v2, :cond_16
 
-    .line 3737
+    .line 3769
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDrmLockIconResId:I
 
     invoke-virtual {v9, v2}, Lcom/htc/widget/HtcListItemTileImage;->setIndicatorResource(I)V
 
-    .line 3738
+    .line 3770
     invoke-virtual {v9}, Lcom/htc/widget/HtcListItemTileImage;->getChildCount()I
 
     move-result v2
@@ -873,7 +873,7 @@
 
     if-le v2, v5, :cond_8
 
-    .line 3739
+    .line 3771
     invoke-virtual {v9}, Lcom/htc/widget/HtcListItemTileImage;->getChildCount()I
 
     move-result v2
@@ -884,7 +884,7 @@
 
     move-result-object v17
 
-    .line 3740
+    .line 3772
     .local v17, indicatorBubble:Landroid/view/View;
     move-object/from16 v0, v17
 
@@ -892,7 +892,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 3741
+    .line 3773
     check-cast v17, Landroid/widget/ImageView;
 
     .end local v17           #indicatorBubble:Landroid/view/View;
@@ -902,7 +902,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 3792
+    .line 3824
     :cond_8
     :goto_6
     move-object/from16 v0, v29
@@ -915,7 +915,7 @@
 
     if-nez v2, :cond_9
 
-    .line 3793
+    .line 3825
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mAudioIdIdx:I
@@ -926,39 +926,39 @@
 
     move-result v10
 
-    .line 3794
+    .line 3826
     .local v10, audioId:I
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getPosition()I
 
     move-result v25
 
-    .line 3796
+    .line 3828
     .local v25, position:I
     new-instance v12, Landroid/os/Bundle;
 
     invoke-direct {v12}, Landroid/os/Bundle;-><init>()V
 
-    .line 3797
+    .line 3829
     .local v12, data:Landroid/os/Bundle;
     const-string v2, "audioid"
 
     invoke-virtual {v12, v2, v10}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 3798
+    .line 3830
     const-string v2, "position"
 
     move/from16 v0, v25
 
     invoke-virtual {v12, v2, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 3799
+    .line 3831
     move-object/from16 v0, v29
 
     iget-object v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearButton:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v2, v12}, Lcom/htc/widget/HtcRimImageButton;->setTag(Ljava/lang/Object;)V
 
-    .line 3800
+    .line 3832
     new-instance v2, Landroid/view/TouchDelegate;
 
     new-instance v5, Landroid/graphics/Rect;
@@ -972,7 +972,21 @@
 
     move-result v6
 
-    add-int/lit8 v6, v6, -0x64
+    move-object/from16 v0, p0
+
+    iget-object v7, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
+
+    iget-object v7, v7, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
+
+    const v30, 0x7f0b009c
+
+    move/from16 v0, v30
+
+    invoke-static {v7, v0}, Lcom/htc/music/util/ProjectSettings;->getIntValue(Landroid/content/Context;I)I
+
+    move-result v7
+
+    sub-int/2addr v6, v7
 
     const/4 v7, 0x0
 
@@ -1014,14 +1028,14 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
 
-    .line 3803
+    .line 3841
     .end local v10           #audioId:I
     .end local v12           #data:Landroid/os/Bundle;
     .end local v25           #position:I
     :cond_9
     return-void
 
-    .line 3629
+    .line 3661
     .end local v3           #artIndex:I
     .end local v4           #art:Ljava/lang/String;
     .end local v9           #albumArt:Lcom/htc/widget/HtcListItemTileImage;
@@ -1040,7 +1054,7 @@
 
     goto/16 :goto_0
 
-    .line 3638
+    .line 3670
     .restart local v23       #name:Ljava/lang/String;
     :cond_b
     move-object/from16 v0, p0
@@ -1053,7 +1067,7 @@
 
     goto/16 :goto_1
 
-    .line 3659
+    .line 3691
     .end local v8           #album:Ljava/lang/String;
     .end local v23           #name:Ljava/lang/String;
     .restart local v15       #id:I
@@ -1070,17 +1084,17 @@
 
     goto/16 :goto_2
 
-    .line 3661
+    .line 3693
     :catch_0
     move-exception v14
 
-    .line 3662
+    .line 3694
     .local v14, ex:Landroid/os/RemoteException;
     invoke-virtual {v14}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 3692
+    .line 3724
     .end local v14           #ex:Landroid/os/RemoteException;
     :cond_d
     const/16 v2, 0x8
@@ -1091,7 +1105,7 @@
 
     goto/16 :goto_3
 
-    .line 3695
+    .line 3727
     :cond_e
     move-object/from16 v0, p0
 
@@ -1107,7 +1121,7 @@
 
     if-ltz v2, :cond_5
 
-    .line 3696
+    .line 3728
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mAudioIdIdx:I
@@ -1118,7 +1132,7 @@
 
     move-result v27
 
-    .line 3697
+    .line 3729
     .local v27, test:I
     move-object/from16 v0, p0
 
@@ -1128,14 +1142,14 @@
 
     if-ne v2, v0, :cond_f
 
-    .line 3699
+    .line 3731
     const v2, 0x2080089
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItemImageButton;->setImageResource(I)V
 
-    .line 3700
+    .line 3732
     const/4 v2, 0x0
 
     move-object/from16 v0, v16
@@ -1144,7 +1158,7 @@
 
     goto/16 :goto_3
 
-    .line 3702
+    .line 3734
     :cond_f
     const/16 v2, 0x8
 
@@ -1154,7 +1168,7 @@
 
     goto/16 :goto_3
 
-    .line 3713
+    .line 3745
     .end local v15           #id:I
     .end local v27           #test:I
     .restart local v9       #albumArt:Lcom/htc/widget/HtcListItemTileImage;
@@ -1165,7 +1179,7 @@
 
     goto/16 :goto_4
 
-    .line 3721
+    .line 3753
     .restart local v3       #artIndex:I
     .restart local v4       #art:Ljava/lang/String;
     .restart local v28       #unknown:Z
@@ -1176,20 +1190,20 @@
 
     move-result-object v18
 
-    .line 3722
+    .line 3754
     .local v18, item:Lcom/htc/music/util/MBitmap;
     if-nez v18, :cond_13
 
     const/4 v11, 0x0
 
-    .line 3723
+    .line 3755
     .local v11, bitmap:Landroid/graphics/Bitmap;
     :goto_7
     if-nez v18, :cond_14
 
     const/4 v13, 0x0
 
-    .line 3724
+    .line 3756
     .local v13, decodePath:Ljava/lang/String;
     :goto_8
     if-eqz v11, :cond_12
@@ -1206,7 +1220,7 @@
 
     if-nez v2, :cond_15
 
-    .line 3725
+    .line 3757
     :cond_12
     move-object/from16 v0, p0
 
@@ -1228,7 +1242,7 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/htc/music/util/AsyncImageDecoder;->add(ILjava/lang/String;II[Ljava/lang/Object;)V
 
-    .line 3727
+    .line 3759
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
@@ -1237,7 +1251,7 @@
 
     goto/16 :goto_5
 
-    .line 3722
+    .line 3754
     .end local v11           #bitmap:Landroid/graphics/Bitmap;
     .end local v13           #decodePath:Ljava/lang/String;
     :cond_13
@@ -1247,7 +1261,7 @@
 
     goto :goto_7
 
-    .line 3723
+    .line 3755
     .restart local v11       #bitmap:Landroid/graphics/Bitmap;
     :cond_14
     invoke-virtual/range {v18 .. v18}, Lcom/htc/music/util/MBitmap;->getPath()Ljava/lang/String;
@@ -1256,14 +1270,14 @@
 
     goto :goto_8
 
-    .line 3729
+    .line 3761
     .restart local v13       #decodePath:Ljava/lang/String;
     :cond_15
     invoke-virtual {v9, v11}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageBitmap(Landroid/graphics/Bitmap;)V
 
     goto/16 :goto_5
 
-    .line 3746
+    .line 3778
     .end local v11           #bitmap:Landroid/graphics/Bitmap;
     .end local v13           #decodePath:Ljava/lang/String;
     .end local v18           #item:Lcom/htc/music/util/MBitmap;
@@ -1287,14 +1301,14 @@
 
     if-eqz v2, :cond_17
 
-    .line 3747
+    .line 3779
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDrmLockIconResId:I
 
     invoke-virtual {v9, v2}, Lcom/htc/widget/HtcListItemTileImage;->setIndicatorResource(I)V
 
-    .line 3748
+    .line 3780
     invoke-virtual {v9}, Lcom/htc/widget/HtcListItemTileImage;->getChildCount()I
 
     move-result v2
@@ -1303,7 +1317,7 @@
 
     if-le v2, v5, :cond_8
 
-    .line 3749
+    .line 3781
     invoke-virtual {v9}, Lcom/htc/widget/HtcListItemTileImage;->getChildCount()I
 
     move-result v2
@@ -1314,7 +1328,7 @@
 
     move-result-object v17
 
-    .line 3750
+    .line 3782
     .restart local v17       #indicatorBubble:Landroid/view/View;
     move-object/from16 v0, v17
 
@@ -1322,7 +1336,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 3751
+    .line 3783
     check-cast v17, Landroid/widget/ImageView;
 
     .end local v17           #indicatorBubble:Landroid/view/View;
@@ -1334,7 +1348,7 @@
 
     goto/16 :goto_6
 
-    .line 3757
+    .line 3789
     :cond_17
     const/4 v2, 0x0
 
@@ -1348,7 +1362,7 @@
     .parameter "cursor"
 
     .prologue
-    .line 3812
+    .line 3850
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mTrackCursor:Landroid/database/Cursor;
@@ -1358,7 +1372,7 @@
 
     if-eq p1, v0, :cond_2
 
-    .line 3813
+    .line 3851
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mTrackCursor:Landroid/database/Cursor;
@@ -1368,7 +1382,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3814
+    .line 3852
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mTrackCursor:Landroid/database/Cursor;
@@ -1380,29 +1394,29 @@
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 3815
+    .line 3853
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 3816
+    .line 3854
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDataSetObserver:Landroid/database/DataSetObserver;
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 3821
+    .line 3859
     :cond_1
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
     #setter for: Lcom/htc/music/NowPlayingViewHelper;->mTrackCursor:Landroid/database/Cursor;
     invoke-static {v0, p1}, Lcom/htc/music/NowPlayingViewHelper;->access$702(Lcom/htc/music/NowPlayingViewHelper;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 3823
+    .line 3861
     invoke-super {p0, p1}, Lcom/htc/music/widget/HtcSimpleCursorAdapter;->changeCursor(Landroid/database/Cursor;)V
 
-    .line 3824
+    .line 3862
     invoke-direct {p0, p1}, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->getColumnIndices(Landroid/database/Cursor;)V
 
-    .line 3826
+    .line 3864
     :cond_2
     return-void
 .end method
@@ -1413,13 +1427,13 @@
     .parameter "notNotify"
 
     .prologue
-    .line 3806
+    .line 3844
     iput-boolean p2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNotNotify:Z
 
-    .line 3807
+    .line 3845
     invoke-virtual {p0, p1}, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->changeCursor(Landroid/database/Cursor;)V
 
-    .line 3808
+    .line 3846
     return-void
 .end method
 
@@ -1430,19 +1444,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3868
+    .line 3906
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     if-nez v2, :cond_1
 
     move v0, v1
 
-    .line 3874
+    .line 3912
     :cond_0
     :goto_0
     return v0
 
-    .line 3869
+    .line 3907
     :cond_1
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
@@ -1450,7 +1464,7 @@
 
     move-result v0
 
-    .line 3871
+    .line 3909
     .local v0, pos:I
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -1469,7 +1483,7 @@
 
     move v0, v1
 
-    .line 3874
+    .line 3912
     goto :goto_0
 .end method
 
@@ -1478,7 +1492,7 @@
     .parameter "position"
 
     .prologue
-    .line 3878
+    .line 3916
     const/4 v0, 0x0
 
     return v0
@@ -1488,7 +1502,7 @@
     .locals 2
 
     .prologue
-    .line 3859
+    .line 3897
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     if-eqz v0, :cond_0
@@ -1508,14 +1522,14 @@
 
     if-nez v0, :cond_0
 
-    .line 3861
+    .line 3899
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     invoke-virtual {v0}, Landroid/widget/AlphabetIndexer;->getSections()[Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 3863
+    .line 3901
     :goto_0
     return-object v0
 
@@ -1534,12 +1548,12 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 3562
+    .line 3594
     invoke-super {p0, p1, p2, p3}, Lcom/htc/music/widget/HtcSimpleCursorAdapter;->newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    .line 3563
+    .line 3595
     .local v1, v:Landroid/view/View;
     const v3, 0x7f080062
 
@@ -1549,13 +1563,13 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 3570
+    .line 3602
     .local v0, iv:Landroid/widget/ImageView;
     new-instance v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;
 
     invoke-direct {v2, p0}, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;-><init>(Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;)V
 
-    .line 3571
+    .line 3603
     .local v2, vh:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;
     const v3, 0x7f080024
 
@@ -1567,12 +1581,12 @@
 
     iput-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 3572
+    .line 3604
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     invoke-virtual {v3, v8}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 3574
+    .line 3606
     const v3, 0x7f080023
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1583,19 +1597,19 @@
 
     iput-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 3576
+    .line 3608
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
     if-eqz v3, :cond_0
 
-    .line 3577
+    .line 3609
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
     iget-object v4, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v3, v4}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3580
+    .line 3612
     :cond_0
     const v3, 0x7f080025
 
@@ -1607,7 +1621,7 @@
 
     iput-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearIcon:Lcom/htc/widget/HtcListItemImageButton;
 
-    .line 3581
+    .line 3613
     const v3, 0x7f080026
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1618,7 +1632,7 @@
 
     iput-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearButton:Lcom/htc/widget/HtcRimImageButton;
 
-    .line 3585
+    .line 3617
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearButton:Lcom/htc/widget/HtcRimImageButton;
 
     const-string v4, "common_circle_outer"
@@ -1647,24 +1661,24 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/htc/widget/HtcRimImageButton;->setButtonBackgroundResource(III)V
 
-    .line 3589
+    .line 3621
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearButton:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v3, v8}, Lcom/htc/widget/HtcRimImageButton;->setFocusable(Z)V
 
-    .line 3590
+    .line 3622
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearButton:Lcom/htc/widget/HtcRimImageButton;
 
     const v4, 0x7f020028
 
     invoke-virtual {v3, v4}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 
-    .line 3591
+    .line 3623
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearButton:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v3, v8}, Lcom/htc/widget/HtcRimImageButton;->setVisibility(I)V
 
-    .line 3592
+    .line 3624
     iget-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->listItemRearButton:Lcom/htc/widget/HtcRimImageButton;
 
     new-instance v4, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$1;
@@ -1673,7 +1687,7 @@
 
     invoke-virtual {v3, v4}, Lcom/htc/widget/HtcRimImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 3605
+    .line 3637
     new-instance v3, Landroid/database/CharArrayBuffer;
 
     const/16 v4, 0x64
@@ -1682,17 +1696,17 @@
 
     iput-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->buffer1:Landroid/database/CharArrayBuffer;
 
-    .line 3606
+    .line 3638
     const/16 v3, 0xc8
 
     new-array v3, v3, [C
 
     iput-object v3, v2, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$ViewHolder;->buffer2:[C
 
-    .line 3608
+    .line 3640
     invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 3609
+    .line 3641
     return-object v1
 .end method
 
@@ -1700,21 +1714,21 @@
     .locals 1
 
     .prologue
-    .line 3832
+    .line 3870
     iget-boolean v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNotNotify:Z
 
     if-eqz v0, :cond_0
 
-    .line 3833
+    .line 3871
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNotNotify:Z
 
-    .line 3837
+    .line 3875
     :goto_0
     return-void
 
-    .line 3836
+    .line 3874
     :cond_0
     invoke-super {p0}, Lcom/htc/music/widget/HtcSimpleCursorAdapter;->notifyDataSetChanged()V
 
@@ -1725,10 +1739,10 @@
     .locals 0
 
     .prologue
-    .line 3853
+    .line 3891
     invoke-super {p0}, Lcom/htc/music/widget/HtcSimpleCursorAdapter;->onContentChanged()V
 
-    .line 3854
+    .line 3892
     return-void
 .end method
 
@@ -1740,40 +1754,40 @@
     .parameter "varargs"
 
     .prologue
-    .line 3905
+    .line 3943
     if-nez p2, :cond_1
 
-    .line 3942
+    .line 3980
     :cond_0
     :goto_0
     return-void
 
-    .line 3906
+    .line 3944
     :cond_1
     iget-object v9, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v6, v9, Lcom/htc/music/NowPlayingViewHelper;->mListView:Lcom/htc/widget/HtcListView;
 
-    .line 3908
+    .line 3946
     .local v6, listView:Lcom/htc/widget/HtcListView;
     invoke-virtual {v6}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v3
 
-    .line 3909
+    .line 3947
     .local v3, childCount:I
     if-gtz v3, :cond_2
 
-    .line 3910
+    .line 3948
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0
 
-    .line 3914
+    .line 3952
     :cond_2
     const/4 v8, 0x0
 
-    .line 3915
+    .line 3953
     .local v8, path:Ljava/lang/String;
     if-eqz p5, :cond_3
 
@@ -1795,7 +1809,7 @@
 
     if-eqz v9, :cond_3
 
-    .line 3916
+    .line 3954
     const/4 v9, 0x0
 
     aget-object v8, p5, v9
@@ -1803,14 +1817,14 @@
     .end local v8           #path:Ljava/lang/String;
     check-cast v8, Ljava/lang/String;
 
-    .line 3918
+    .line 3956
     .restart local v8       #path:Ljava/lang/String;
     :cond_3
     new-instance v2, Lcom/htc/music/util/MBitmap;
 
     invoke-direct {v2, p2, v8}, Lcom/htc/music/util/MBitmap;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
-    .line 3919
+    .line 3957
     .local v2, b:Lcom/htc/music/util/MBitmap;
     sget-object v9, Lcom/htc/music/util/MusicUtils;->sLibraryMemCache:Lcom/htc/music/util/MemoryCacheMBitmapByTime;
 
@@ -1818,27 +1832,27 @@
 
     move-result v0
 
-    .line 3920
+    .line 3958
     .local v0, addToCache:Z
     if-eqz v0, :cond_0
 
-    .line 3924
+    .line 3962
     const/4 v4, 0x0
 
     .local v4, i:I
     :goto_1
     if-ge v4, v3, :cond_0
 
-    .line 3925
+    .line 3963
     invoke-virtual {v6, v4}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 3930
+    .line 3968
     .local v7, ll:Landroid/view/View;
     if-eqz v7, :cond_4
 
-    .line 3931
+    .line 3969
     const v9, 0x7f080023
 
     invoke-virtual {v7, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1847,18 +1861,18 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 3932
+    .line 3970
     .local v1, albumArt:Lcom/htc/widget/HtcListItemTileImage;
     if-eqz v1, :cond_4
 
-    .line 3933
+    .line 3971
     invoke-virtual {v1}, Lcom/htc/widget/HtcListItemTileImage;->getTag()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/Integer;
 
-    .line 3935
+    .line 3973
     .local v5, integer:Ljava/lang/Integer;
     if-eqz v5, :cond_4
 
@@ -1868,10 +1882,10 @@
 
     if-ne v9, p1, :cond_4
 
-    .line 3936
+    .line 3974
     invoke-virtual {v1, p2}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 3924
+    .line 3962
     .end local v1           #albumArt:Lcom/htc/widget/HtcListItemTileImage;
     .end local v5           #integer:Ljava/lang/Integer;
     :cond_4
@@ -1885,12 +1899,12 @@
     .parameter "constraint"
 
     .prologue
-    .line 3841
+    .line 3879
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3842
+    .line 3880
     .local v1, s:Ljava/lang/String;
     iget-boolean v2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mConstraintIsValid:Z
 
@@ -1913,17 +1927,17 @@
 
     if-eqz v2, :cond_2
 
-    .line 3844
+    .line 3882
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->getCursor()Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 3849
+    .line 3887
     :goto_0
     return-object v0
 
-    .line 3846
+    .line 3884
     :cond_2
     iget-object v2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -1932,11 +1946,11 @@
 
     move-result-object v0
 
-    .line 3847
+    .line 3885
     .local v0, c:Landroid/database/Cursor;
     iput-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mConstraint:Ljava/lang/String;
 
-    .line 3848
+    .line 3886
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mConstraintIsValid:Z
@@ -1949,9 +1963,9 @@
     .parameter "newactivity"
 
     .prologue
-    .line 3536
+    .line 3568
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
 
-    .line 3537
+    .line 3569
     return-void
 .end method

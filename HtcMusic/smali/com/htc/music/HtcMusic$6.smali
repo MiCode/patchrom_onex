@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 705
+    .line 712
     iput-object p1, p0, Lcom/htc/music/HtcMusic$6;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
     const/4 v2, 0x0
 
-    .line 709
+    .line 716
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v3
@@ -57,12 +57,12 @@
 
     move v1, v2
 
-    .line 734
+    .line 741
     :cond_0
     :goto_0
     return v1
 
-    .line 711
+    .line 718
     :pswitch_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -70,10 +70,10 @@
 
     if-nez v3, :cond_0
 
-    .line 712
+    .line 719
     const/4 v0, 0x0
 
-    .line 713
+    .line 720
     .local v0, iVolume:I
     iget-object v3, p0, Lcom/htc/music/HtcMusic$6;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -87,18 +87,18 @@
 
     move-result v0
 
-    .line 715
+    .line 722
     add-int/lit8 v0, v0, 0x7
 
-    .line 716
+    .line 723
     const/16 v3, 0x64
 
     if-le v0, v3, :cond_1
 
-    .line 717
+    .line 724
     const/16 v0, 0x64
 
-    .line 719
+    .line 726
     :cond_1
     iget-object v3, p0, Lcom/htc/music/HtcMusic$6;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -112,7 +112,7 @@
 
     goto :goto_0
 
-    .line 723
+    .line 730
     .end local v0           #iVolume:I
     :pswitch_1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
@@ -121,10 +121,10 @@
 
     if-nez v3, :cond_0
 
-    .line 724
+    .line 731
     const/4 v0, 0x0
 
-    .line 725
+    .line 732
     .restart local v0       #iVolume:I
     iget-object v3, p0, Lcom/htc/music/HtcMusic$6;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -138,16 +138,16 @@
 
     move-result v0
 
-    .line 726
+    .line 733
     add-int/lit8 v0, v0, -0x7
 
-    .line 727
+    .line 734
     if-gez v0, :cond_2
 
-    .line 728
+    .line 735
     const/4 v0, 0x0
 
-    .line 730
+    .line 737
     :cond_2
     iget-object v3, p0, Lcom/htc/music/HtcMusic$6;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -161,7 +161,7 @@
 
     goto :goto_0
 
-    .line 709
+    .line 716
     :pswitch_data_0
     .packed-switch 0x18
         :pswitch_0

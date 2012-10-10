@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 835
+    .line 850
     iput-object p1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 837
+    .line 852
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -57,7 +57,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 838
+    .line 853
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridItemClickedType:Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;
@@ -73,14 +73,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 839
+    .line 854
     const-string v1, "[ArtistBrowserActivityExpGrid]"
 
     const-string v2, "go delete : type 1"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 840
+    .line 855
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -97,11 +97,11 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->prepareDeleteAllChildView(I)V
 
-    .line 861
+    .line 876
     :goto_0
     return-void
 
-    .line 842
+    .line 857
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
@@ -112,14 +112,14 @@
 
     if-nez v1, :cond_1
 
-    .line 843
+    .line 858
     const-string v1, "[ArtistBrowserActivityExpGrid]"
 
     const-string v2, "go delete : type 2"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 844
+    .line 859
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     sget-object v2, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;->GRID_PARENT_TYPE:Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;
@@ -127,7 +127,7 @@
     #setter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridItemClickedType:Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;->access$3102(Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;)Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;
 
-    .line 845
+    .line 860
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
@@ -140,7 +140,7 @@
     #setter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;->access$3202(Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;I)I
 
-    .line 846
+    .line 861
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -159,7 +159,7 @@
 
     goto :goto_0
 
-    .line 848
+    .line 863
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
@@ -187,14 +187,14 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 849
+    .line 864
     const-string v1, "[ArtistBrowserActivityExpGrid]"
 
     const-string v2, "go delete : type 3"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 850
+    .line 865
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     sget-object v2, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;->GRID_PARENT_TYPE:Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;
@@ -202,7 +202,7 @@
     #setter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridItemClickedType:Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;->access$3802(Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;)Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$GridItemClickType;
 
-    .line 851
+    .line 866
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
@@ -215,7 +215,7 @@
     #setter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;->access$3902(Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;I)I
 
-    .line 852
+    .line 867
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -234,7 +234,7 @@
 
     goto :goto_0
 
-    .line 856
+    .line 871
     :cond_2
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
@@ -247,13 +247,13 @@
 
     move-result-object v0
 
-    .line 857
+    .line 872
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x4
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 858
+    .line 873
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
@@ -263,7 +263,7 @@
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 859
+    .line 874
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
@@ -273,7 +273,7 @@
 
     iput v1, v0, Landroid/os/Message;->arg2:I
 
-    .line 860
+    .line 875
     iget-object v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$7;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewHandler:Landroid/os/Handler;

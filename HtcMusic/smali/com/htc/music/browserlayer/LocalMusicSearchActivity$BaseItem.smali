@@ -31,24 +31,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 801
+    .line 818
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 802
+    .line 819
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mId:J
 
-    .line 803
+    .line 820
     iput-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
-    .line 804
+    .line 821
     iput-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
-    .line 805
+    .line 822
     iput-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
-    .line 806
+    .line 823
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .parameter "x0"
 
     .prologue
-    .line 794
+    .line 811
     invoke-direct {p0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getId()J
 
     move-result-wide v0
@@ -70,7 +70,7 @@
     .parameter "x0"
 
     .prologue
-    .line 794
+    .line 811
     invoke-direct {p0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getPrimaryText()Ljava/lang/String;
 
     move-result-object v0
@@ -83,7 +83,7 @@
     .parameter "x0"
 
     .prologue
-    .line 794
+    .line 811
     invoke-direct {p0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getSecondaryText()Ljava/lang/String;
 
     move-result-object v0
@@ -96,7 +96,7 @@
     .parameter "x0"
 
     .prologue
-    .line 794
+    .line 811
     invoke-direct {p0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getArtPath()Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 837
+    .line 854
     iget-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
     return-object v0
@@ -118,7 +118,7 @@
     .locals 2
 
     .prologue
-    .line 825
+    .line 842
     iget-wide v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mId:J
 
     return-wide v0
@@ -128,7 +128,7 @@
     .locals 1
 
     .prologue
-    .line 829
+    .line 846
     iget-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
     return-object v0
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 833
+    .line 850
     iget-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
     return-object v0
@@ -151,10 +151,10 @@
     .parameter "path"
 
     .prologue
-    .line 821
+    .line 838
     iput-object p1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
-    .line 822
+    .line 839
     return-void
 .end method
 
@@ -163,10 +163,10 @@
     .parameter "id"
 
     .prologue
-    .line 809
+    .line 826
     iput-wide p1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mId:J
 
-    .line 810
+    .line 827
     return-void
 .end method
 
@@ -175,10 +175,10 @@
     .parameter "text"
 
     .prologue
-    .line 813
+    .line 830
     iput-object p1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
-    .line 814
+    .line 831
     return-void
 .end method
 
@@ -187,9 +187,9 @@
     .parameter "text"
 
     .prologue
-    .line 817
+    .line 834
     iput-object p1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
-    .line 818
+    .line 835
     return-void
 .end method

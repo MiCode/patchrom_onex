@@ -65,7 +65,7 @@
     .parameter "name"
 
     .prologue
-    .line 34
+    .line 35
     new-instance v0, Landroid/database/CursorWindow;
 
     iget v1, p0, Landroid/database/sqlite/HtcSQLiteAdjustableCursor;->mCursorWindowSize:I

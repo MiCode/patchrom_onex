@@ -738,7 +738,7 @@
     .line 237
     cmp-long v4, v22, v26
 
-    if-lez v4, :cond_d
+    if-ltz v4, :cond_d
 
     .line 239
     move-object/from16 v32, v21
@@ -1572,17 +1572,17 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 734
+    .line 731
     invoke-virtual {p0}, Lcom/android/camera/HTCCamera;->isServiceMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 735
+    .line 732
     const/4 v0, 0x0
 
-    .line 736
+    .line 733
     :goto_0
     return v0
 
@@ -1596,10 +1596,10 @@
     .locals 2
 
     .prologue
-    .line 660
+    .line 657
     monitor-enter p0
 
-    .line 662
+    .line 659
     :try_start_0
     iget v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
@@ -1607,7 +1607,7 @@
 
     iput v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
-    .line 663
+    .line 660
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController;->m_ThumbnailUI:Lcom/android/camera/component/ThumbnailUI;
 
     if-eqz v0, :cond_0
@@ -1618,21 +1618,21 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 664
+    .line 661
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController;->m_ThumbnailUI:Lcom/android/camera/component/ThumbnailUI;
 
     const/16 v1, 0x2713
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/component/ThumbnailController;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 665
+    .line 662
     :cond_0
     monitor-exit p0
 
-    .line 666
+    .line 663
     return-void
 
-    .line 665
+    .line 662
     :catchall_0
     move-exception v0
 
@@ -1648,39 +1648,39 @@
     .parameter "e"
 
     .prologue
-    .line 712
+    .line 709
     if-eqz p1, :cond_0
 
     iget-boolean v0, p1, Lcom/android/camera/MediaEventArgs;->isLastMedia:Z
 
     if-eqz v0, :cond_1
 
-    .line 714
+    .line 711
     :cond_0
     monitor-enter p0
 
-    .line 716
+    .line 713
     :try_start_0
     iget v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
     if-nez v0, :cond_2
 
-    .line 718
+    .line 715
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "Capture media counter is 0"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 719
+    .line 716
     monitor-exit p0
 
-    .line 726
+    .line 723
     :cond_1
     :goto_0
     return-void
 
-    .line 721
+    .line 718
     :cond_2
     iget v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
@@ -1688,7 +1688,7 @@
 
     iput v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
-    .line 722
+    .line 719
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController;->m_ThumbnailUI:Lcom/android/camera/component/ThumbnailUI;
 
     if-eqz v0, :cond_3
@@ -1697,14 +1697,14 @@
 
     if-nez v0, :cond_3
 
-    .line 723
+    .line 720
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController;->m_ThumbnailUI:Lcom/android/camera/component/ThumbnailUI;
 
     const/16 v1, 0x2712
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/component/ThumbnailController;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 724
+    .line 721
     :cond_3
     monitor-exit p0
 
@@ -1729,34 +1729,34 @@
 
     const/4 v2, 0x0
 
-    .line 674
+    .line 671
     iget-boolean v0, p1, Lcom/android/camera/MediaEventArgs;->isLastMedia:Z
 
     if-eqz v0, :cond_0
 
-    .line 676
+    .line 673
     monitor-enter p0
 
-    .line 678
+    .line 675
     :try_start_0
     iget v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
     if-lez v0, :cond_1
 
-    .line 679
+    .line 676
     iget v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/camera/component/ThumbnailController;->m_CapturingMediaCount:I
 
-    .line 682
+    .line 679
     :goto_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 696
+    .line 693
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController;->m_DisableAutoUpdateHandles:Ljava/util/ArrayList;
 
@@ -1766,18 +1766,18 @@
 
     if-nez v0, :cond_2
 
-    .line 697
+    .line 694
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     invoke-virtual {p0, v3, v2, v2, v0}, Lcom/android/camera/component/ThumbnailController;->sendAsyncMessage(IIILjava/lang/Object;)Z
 
-    .line 704
+    .line 701
     :goto_1
     return-void
 
-    .line 681
+    .line 678
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -1788,7 +1788,7 @@
 
     goto :goto_0
 
-    .line 682
+    .line 679
     :catchall_0
     move-exception v0
 
@@ -1798,7 +1798,7 @@
 
     throw v0
 
-    .line 699
+    .line 696
     :cond_2
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -2205,13 +2205,6 @@
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
     .line 577
-    invoke-static {}, Lcom/android/camera/DisplayDevice;->isNvidiaPlatform()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 579
     iget-object v1, v0, Lcom/android/camera/CameraThread;->recordingFailedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/ThumbnailController$5;
@@ -2220,7 +2213,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 587
+    .line 585
     iget-object v1, v0, Lcom/android/camera/CameraThread;->takingPictureFailedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/ThumbnailController$6;
@@ -2229,8 +2222,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 596
-    :cond_0
+    .line 593
     iget-object v1, v0, Lcom/android/camera/CameraThread;->videoThumbnailCreatedEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/ThumbnailController$7;
@@ -2239,7 +2231,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 628
+    .line 625
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/ThumbnailController$8;
@@ -2254,7 +2246,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 636
+    .line 633
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/ThumbnailController$9;
@@ -2269,7 +2261,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 644
+    .line 641
     return-void
 .end method
 
@@ -2278,10 +2270,10 @@
     .parameter "ui"
 
     .prologue
-    .line 651
+    .line 648
     iput-object p1, p0, Lcom/android/camera/component/ThumbnailController;->m_ThumbnailUI:Lcom/android/camera/component/ThumbnailUI;
 
-    .line 652
+    .line 649
     return-void
 .end method
 
@@ -2295,29 +2287,29 @@
 
     const/4 v3, 0x0
 
-    .line 746
+    .line 743
     invoke-virtual {p0}, Lcom/android/camera/component/ThumbnailController;->threadAccessCheck()V
 
-    .line 747
+    .line 744
     invoke-virtual {p0}, Lcom/android/camera/component/ThumbnailController;->isRunning()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 749
+    .line 746
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "updateThumbnailImageDirectly() - Component is not running"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 782
+    .line 779
     :cond_0
     :goto_0
     return v3
 
-    .line 753
+    .line 750
     :cond_1
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -2325,32 +2317,32 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 757
+    .line 754
     if-eqz p1, :cond_2
 
     iget-object v0, p1, Lcom/android/camera/MediaInfo;->filePath:Lcom/android/camera/io/Path;
 
     if-nez v0, :cond_3
 
-    .line 759
+    .line 756
     :cond_2
     const/4 p2, 0x0
 
-    .line 760
+    .line 757
     const/4 v6, 0x0
 
-    .line 761
+    .line 758
     .local v6, filePath:Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 771
+    .line 768
     .local v7, mimeType:Ljava/lang/String;
     :goto_1
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController;->m_ThumbnailUI:Lcom/android/camera/component/ThumbnailUI;
 
     if-eqz v0, :cond_5
 
-    .line 772
+    .line 769
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController;->m_ThumbnailUI:Lcom/android/camera/component/ThumbnailUI;
 
     const/16 v2, 0x2711
@@ -2375,10 +2367,10 @@
 
     move v3, v8
 
-    .line 782
+    .line 779
     goto :goto_0
 
-    .line 765
+    .line 762
     .end local v6           #filePath:Ljava/lang/String;
     .end local v7           #mimeType:Ljava/lang/String;
     :cond_3
@@ -2388,20 +2380,20 @@
 
     move-result-object p2
 
-    .line 766
+    .line 763
     :goto_2
     invoke-virtual {p1}, Lcom/android/camera/MediaInfo;->getFullPath()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 767
+    .line 764
     .restart local v6       #filePath:Ljava/lang/String;
     iget-object v7, p1, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
 
     .restart local v7       #mimeType:Ljava/lang/String;
     goto :goto_1
 
-    .line 765
+    .line 762
     .end local v6           #filePath:Ljava/lang/String;
     .end local v7           #mimeType:Ljava/lang/String;
     :cond_4
@@ -2409,7 +2401,7 @@
 
     goto :goto_2
 
-    .line 775
+    .line 772
     .restart local v6       #filePath:Ljava/lang/String;
     .restart local v7       #mimeType:Ljava/lang/String;
     :cond_5
@@ -2419,10 +2411,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 776
+    .line 773
     if-eqz p2, :cond_0
 
-    .line 777
+    .line 774
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0

@@ -40,21 +40,21 @@
     .parameter "cols"
 
     .prologue
-    .line 3803
+    .line 3804
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/database/AbstractCursor;-><init>()V
 
-    .line 3804
+    .line 3805
     iput-object p3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCols:[Ljava/lang/String;
 
-    .line 3805
+    .line 3806
     iput-object p2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 3806
+    .line 3807
     invoke-direct {p0}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->makeNowPlayingCursor()V
 
-    .line 3807
+    .line 3808
     return-void
 .end method
 
@@ -62,10 +62,10 @@
     .locals 4
 
     .prologue
-    .line 3951
+    .line 3952
     const-string v1, "("
 
-    .line 3952
+    .line 3953
     .local v1, where:Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -75,7 +75,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 3953
+    .line 3954
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,14 +96,14 @@
 
     move-result-object v1
 
-    .line 3954
+    .line 3955
     iget v2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
     add-int/lit8 v2, v2, -0x1
 
     if-ge v0, v2, :cond_0
 
-    .line 3955
+    .line 3956
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,13 +122,13 @@
 
     move-result-object v1
 
-    .line 3952
+    .line 3953
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3958
+    .line 3959
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -148,12 +148,12 @@
 
     move-result-object v1
 
-    .line 3959
+    .line 3960
     const-string v2, "NowPlayingCursor: "
 
     invoke-static {v2, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3960
+    .line 3961
     return-void
 .end method
 
@@ -161,22 +161,22 @@
     .locals 15
 
     .prologue
-    .line 3810
+    .line 3811
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_0
 
-    .line 3811
+    .line 3812
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 3812
+    .line 3813
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    .line 3816
+    .line 3817
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -189,29 +189,29 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3820
+    .line 3821
     :goto_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     if-nez v0, :cond_2
 
-    .line 3821
+    .line 3822
     const-string v0, "[PluginNowPlayingListActivity]"
 
     const-string v1, "now playing list is null"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3895
+    .line 3896
     :cond_1
     :goto_1
     return-void
 
-    .line 3817
+    .line 3818
     :catch_0
     move-exception v9
 
-    .line 3818
+    .line 3819
     .local v9, ex:Landroid/os/RemoteException;
     const/4 v0, 0x0
 
@@ -221,7 +221,7 @@
 
     goto :goto_0
 
-    .line 3824
+    .line 3825
     .end local v9           #ex:Landroid/os/RemoteException;
     :cond_2
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
@@ -230,23 +230,23 @@
 
     iput v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
-    .line 3825
+    .line 3826
     iget v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
     if-eqz v0, :cond_1
 
-    .line 3829
+    .line 3830
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3830
+    .line 3831
     .local v14, where:Ljava/lang/StringBuilder;
     const-string v0, "_id IN ("
 
     invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3831
+    .line 3832
     const/4 v10, 0x0
 
     .local v10, i:I
@@ -255,38 +255,38 @@
 
     if-ge v10, v0, :cond_4
 
-    .line 3832
+    .line 3833
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     aget v0, v0, v10
 
     invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 3833
+    .line 3834
     iget v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
     add-int/lit8 v0, v0, -0x1
 
     if-ge v10, v0, :cond_3
 
-    .line 3834
+    .line 3835
     const-string v0, ","
 
     invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3831
+    .line 3832
     :cond_3
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
-    .line 3837
+    .line 3838
     :cond_4
     const-string v0, ")"
 
     invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3839
+    .line 3840
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
@@ -305,7 +305,7 @@
 
     move-result-object v6
 
-    .line 3842
+    .line 3843
     .local v6, c:Landroid/database/Cursor;
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -316,7 +316,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    .line 3843
+    .line 3844
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_5
@@ -338,7 +338,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 3844
+    .line 3845
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->getApplicationContext()Landroid/content/Context;
@@ -353,20 +353,20 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    .line 3846
+    .line 3847
     :cond_5
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     if-nez v0, :cond_6
 
-    .line 3847
+    .line 3848
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
     goto :goto_1
 
-    .line 3850
+    .line 3851
     :cond_6
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -374,18 +374,18 @@
 
     move-result v12
 
-    .line 3851
+    .line 3852
     .local v12, size:I
     new-array v0, v12, [I
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCursorIdxs:[I
 
-    .line 3852
+    .line 3853
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 3853
+    .line 3854
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     const-string v1, "_id"
@@ -394,14 +394,14 @@
 
     move-result v7
 
-    .line 3854
+    .line 3855
     .local v7, colidx:I
     const/4 v10, 0x0
 
     :goto_3
     if-ge v10, v12, :cond_7
 
-    .line 3855
+    .line 3856
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCursorIdxs:[I
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
@@ -412,44 +412,44 @@
 
     aput v1, v0, v10
 
-    .line 3856
+    .line 3857
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 3854
+    .line 3855
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
-    .line 3863
+    .line 3864
     :cond_7
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mPos:I
 
-    .line 3864
+    .line 3865
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mRowIdColumnIndex:I
 
-    .line 3865
+    .line 3866
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentRowID:Ljava/lang/Long;
 
-    .line 3866
+    .line 3867
     invoke-super {p0}, Landroid/database/AbstractCursor;->moveToFirst()Z
 
-    .line 3867
+    .line 3868
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurPos:I
 
-    .line 3874
+    .line 3875
     const/4 v11, 0x0
 
-    .line 3875
+    .line 3876
     .local v11, removed:I
     :try_start_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
@@ -461,12 +461,12 @@
     :goto_4
     if-ltz v10, :cond_9
 
-    .line 3876
+    .line 3877
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     aget v13, v0, v10
 
-    .line 3877
+    .line 3878
     .local v13, trackid:I
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCursorIdxs:[I
 
@@ -474,11 +474,11 @@
 
     move-result v8
 
-    .line 3878
+    .line 3879
     .local v8, crsridx:I
     if-gez v8, :cond_8
 
-    .line 3881
+    .line 3882
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v0, v13}, Lcom/htc/music/IMediaPlaybackService;->removeTrack(I)I
@@ -487,19 +487,19 @@
 
     add-int/2addr v11, v0
 
-    .line 3875
+    .line 3876
     :cond_8
     add-int/lit8 v10, v10, -0x1
 
     goto :goto_4
 
-    .line 3884
+    .line 3885
     .end local v8           #crsridx:I
     .end local v13           #trackid:I
     :cond_9
     if-lez v11, :cond_1
 
-    .line 3885
+    .line 3886
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v0}, Lcom/htc/music/IMediaPlaybackService;->getQueue()[I
@@ -508,19 +508,19 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
-    .line 3886
+    .line 3887
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     array-length v0, v0
 
     iput v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
-    .line 3887
+    .line 3888
     iget v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
     if-nez v0, :cond_1
 
-    .line 3888
+    .line 3889
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCursorIdxs:[I
@@ -529,11 +529,11 @@
 
     goto/16 :goto_1
 
-    .line 3892
+    .line 3893
     :catch_1
     move-exception v9
 
-    .line 3893
+    .line 3894
     .restart local v9       #ex:Landroid/os/RemoteException;
     const/4 v0, 0x0
 
@@ -550,35 +550,35 @@
     .parameter "index2"
 
     .prologue
-    .line 4066
+    .line 4067
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     array-length v0, v3
 
-    .line 4067
+    .line 4068
     .local v0, PlayListLen:I
     if-lt p1, v0, :cond_0
 
-    .line 4068
+    .line 4069
     add-int/lit8 p1, v0, -0x1
 
-    .line 4070
+    .line 4071
     :cond_0
     if-lt p2, v0, :cond_1
 
-    .line 4071
+    .line 4072
     add-int/lit8 p2, v0, -0x1
 
-    .line 4073
+    .line 4074
     :cond_1
     if-ge p1, p2, :cond_4
 
-    .line 4074
+    .line 4075
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     aget v2, v3, p1
 
-    .line 4075
+    .line 4076
     .local v2, tmp:I
     move v1, p1
 
@@ -586,7 +586,7 @@
     :goto_0
     if-ge v1, p2, :cond_2
 
-    .line 4076
+    .line 4077
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     iget-object v4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
@@ -597,34 +597,34 @@
 
     aput v4, v3, v1
 
-    .line 4075
+    .line 4076
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 4078
+    .line 4079
     :cond_2
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     aput v2, v3, p2
 
-    .line 4087
+    .line 4088
     .end local v1           #i:I
     .end local v2           #tmp:I
     :cond_3
     :goto_1
     return-void
 
-    .line 4079
+    .line 4080
     :cond_4
     if-ge p2, p1, :cond_3
 
-    .line 4080
+    .line 4081
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     aget v2, v3, p1
 
-    .line 4081
+    .line 4082
     .restart local v2       #tmp:I
     move v1, p1
 
@@ -632,7 +632,7 @@
     :goto_2
     if-le v1, p2, :cond_5
 
-    .line 4082
+    .line 4083
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     iget-object v4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
@@ -643,12 +643,12 @@
 
     aput v4, v3, v1
 
-    .line 4081
+    .line 4082
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_2
 
-    .line 4084
+    .line 4085
     :cond_5
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
@@ -663,17 +663,17 @@
     .locals 1
 
     .prologue
-    .line 4030
+    .line 4031
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_0
 
-    .line 4031
+    .line 4032
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 4032
+    .line 4033
     :cond_0
     return-void
 .end method
@@ -682,17 +682,17 @@
     .locals 1
 
     .prologue
-    .line 4024
+    .line 4025
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_0
 
-    .line 4025
+    .line 4026
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->deactivate()V
 
-    .line 4026
+    .line 4027
     :cond_0
     return-void
 .end method
@@ -701,7 +701,7 @@
     .locals 1
 
     .prologue
-    .line 4062
+    .line 4063
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getColumnCount()I
@@ -716,7 +716,7 @@
     .parameter "name"
 
     .prologue
-    .line 4053
+    .line 4054
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -726,21 +726,21 @@
 
     move-result v1
 
-    .line 4056
+    .line 4057
     :goto_0
     return v1
 
-    .line 4054
+    .line 4055
     :catch_0
     move-exception v0
 
-    .line 4055
+    .line 4056
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->onChange(Z)V
 
-    .line 4056
+    .line 4057
     const/4 v1, 0x0
 
     goto :goto_0
@@ -751,7 +751,7 @@
     .parameter "idx"
 
     .prologue
-    .line 4043
+    .line 4044
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -761,21 +761,21 @@
 
     move-result-object v1
 
-    .line 4046
+    .line 4047
     :goto_0
     return-object v1
 
-    .line 4044
+    .line 4045
     :catch_0
     move-exception v0
 
-    .line 4045
+    .line 4046
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->onChange(Z)V
 
-    .line 4046
+    .line 4047
     const-string v1, ""
 
     goto :goto_0
@@ -785,7 +785,7 @@
     .locals 1
 
     .prologue
-    .line 4019
+    .line 4020
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCols:[Ljava/lang/String;
 
     return-object v0
@@ -795,7 +795,7 @@
     .locals 1
 
     .prologue
-    .line 3899
+    .line 3900
     iget v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
     return v0
@@ -806,7 +806,7 @@
     .parameter "column"
 
     .prologue
-    .line 4009
+    .line 4010
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getDouble(I)D
@@ -821,7 +821,7 @@
     .parameter "column"
 
     .prologue
-    .line 4004
+    .line 4005
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getFloat(I)F
@@ -836,7 +836,7 @@
     .parameter "column"
 
     .prologue
-    .line 3985
+    .line 3986
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -846,21 +846,21 @@
 
     move-result v1
 
-    .line 3988
+    .line 3989
     :goto_0
     return v1
 
-    .line 3986
+    .line 3987
     :catch_0
     move-exception v0
 
-    .line 3987
+    .line 3988
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->onChange(Z)V
 
-    .line 3988
+    .line 3989
     const/4 v1, 0x0
 
     goto :goto_0
@@ -871,7 +871,7 @@
     .parameter "column"
 
     .prologue
-    .line 3995
+    .line 3996
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -881,21 +881,21 @@
 
     move-result-wide v1
 
-    .line 3998
+    .line 3999
     :goto_0
     return-wide v1
 
-    .line 3996
+    .line 3997
     :catch_0
     move-exception v0
 
-    .line 3997
+    .line 3998
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->onChange(Z)V
 
-    .line 3998
+    .line 3999
     const-wide/16 v1, 0x0
 
     goto :goto_0
@@ -905,7 +905,7 @@
     .locals 1
 
     .prologue
-    .line 4090
+    .line 4091
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     return-object v0
@@ -916,7 +916,7 @@
     .parameter "column"
 
     .prologue
-    .line 3975
+    .line 3976
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -926,21 +926,21 @@
 
     move-result v1
 
-    .line 3978
+    .line 3979
     :goto_0
     return v1
 
-    .line 3976
+    .line 3977
     :catch_0
     move-exception v0
 
-    .line 3977
+    .line 3978
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->onChange(Z)V
 
-    .line 3978
+    .line 3979
     const/4 v1, 0x0
 
     goto :goto_0
@@ -951,7 +951,7 @@
     .parameter "column"
 
     .prologue
-    .line 3965
+    .line 3966
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -961,21 +961,21 @@
 
     move-result-object v1
 
-    .line 3968
+    .line 3969
     :goto_0
     return-object v1
 
-    .line 3966
+    .line 3967
     :catch_0
     move-exception v0
 
-    .line 3967
+    .line 3968
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->onChange(Z)V
 
-    .line 3968
+    .line 3969
     const-string v1, ""
 
     goto :goto_0
@@ -986,7 +986,7 @@
     .parameter "column"
 
     .prologue
-    .line 4014
+    .line 4015
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->isNull(I)Z
@@ -1002,17 +1002,17 @@
     .parameter "to"
 
     .prologue
-    .line 3946
+    .line 3947
     invoke-direct {p0, p1, p2}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->moveQueueItem(II)V
 
-    .line 3947
+    .line 3948
     const/4 v0, -0x1
 
     iget v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurPos:I
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->onMove(II)Z
 
-    .line 3948
+    .line 3949
     return-void
 .end method
 
@@ -1024,14 +1024,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 3904
+    .line 3905
     if-ne p1, p2, :cond_0
 
-    .line 3920
+    .line 3921
     :goto_0
     return v2
 
-    .line 3907
+    .line 3908
     :cond_0
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
@@ -1041,19 +1041,19 @@
 
     if-nez v3, :cond_2
 
-    .line 3908
+    .line 3909
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 3915
+    .line 3916
     :cond_2
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     aget v1, v3, p2
 
-    .line 3916
+    .line 3917
     .local v1, newid:I
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCursorIdxs:[I
 
@@ -1061,13 +1061,13 @@
 
     move-result v0
 
-    .line 3917
+    .line 3918
     .local v0, crsridx:I
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v3, v0}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 3918
+    .line 3919
     iput p2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mCurPos:I
 
     goto :goto_0
@@ -1078,7 +1078,7 @@
     .parameter "which"
 
     .prologue
-    .line 3925
+    .line 3926
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -1088,18 +1088,18 @@
 
     if-nez v1, :cond_0
 
-    .line 3926
+    .line 3927
     const/4 v1, 0x0
 
-    .line 3937
+    .line 3938
     :goto_0
     return v1
 
-    .line 3928
+    .line 3929
     :cond_0
     move v0, p1
 
-    .line 3929
+    .line 3930
     .local v0, i:I
     iget v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
@@ -1107,13 +1107,13 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
-    .line 3930
+    .line 3931
     :goto_1
     iget v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mSize:I
 
     if-ge v0, v1, :cond_1
 
-    .line 3931
+    .line 3932
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->mNowPlaying:[I
@@ -1124,12 +1124,12 @@
 
     aput v2, v1, v0
 
-    .line 3932
+    .line 3933
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 3934
+    .line 3935
     :cond_1
     const/4 v1, -0x1
 
@@ -1139,14 +1139,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3937
+    .line 3938
     .end local v0           #i:I
     :goto_2
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 3935
+    .line 3936
     :catch_0
     move-exception v1
 
@@ -1157,10 +1157,10 @@
     .locals 1
 
     .prologue
-    .line 4036
+    .line 4037
     invoke-direct {p0}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingCursor;->makeNowPlayingCursor()V
 
-    .line 4037
+    .line 4038
     const/4 v0, 0x1
 
     return v0

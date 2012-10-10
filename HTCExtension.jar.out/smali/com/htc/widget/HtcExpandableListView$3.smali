@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1968
+    .line 1976
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$3;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "animation"
 
     .prologue
-    .line 1970
+    .line 1978
     check-cast p1, Landroid/animation/ObjectAnimator;
 
     .end local p1
@@ -49,7 +49,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1971
+    .line 1979
     .local v0, animatedView:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -61,6 +61,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setPivotY(F)V
 
-    .line 1972
+    .line 1980
     return-void
 .end method

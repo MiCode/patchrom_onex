@@ -3256,13 +3256,13 @@
 
     invoke-direct {v1, v0}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0700ce
+    const v2, 0x7f0700cf
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setTitle(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
     move-result-object v1
 
-    const v2, 0x7f0700cf
+    const v2, 0x7f0700d0
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3300,7 +3300,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700d1
+    const v2, 0x7f0700d2
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3349,7 +3349,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700d0
+    const v2, 0x7f0700d1
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3443,7 +3443,7 @@
     .line 494
     const/16 v0, 0xb
 
-    const v1, 0x7f0700c6
+    const v1, 0x7f0700c7
 
     invoke-interface {p1, v3, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -5616,7 +5616,7 @@
     invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;->showSpinner(Z)V
 
     .line 550
-    const v2, 0x7f0700c9
+    const v2, 0x7f0700ca
 
     move-object/from16 v0, p0
 
@@ -6768,7 +6768,7 @@
 
     .line 293
     :cond_0
-    const v1, 0x7f0700c9
+    const v1, 0x7f0700ca
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;->showEmptyView(I)V
 
@@ -7160,7 +7160,7 @@
     .line 1055
     if-eqz p2, :cond_5
 
-    const v3, 0x7f0700cd
+    const v3, 0x7f0700ce
 
     :goto_3
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
@@ -7175,7 +7175,7 @@
 
     .line 1055
     :cond_5
-    const v3, 0x7f0700cc
+    const v3, 0x7f0700cd
 
     goto :goto_3
 
@@ -7183,7 +7183,7 @@
     :cond_6
     if-eqz p2, :cond_7
 
-    const v3, 0x7f0700cb
+    const v3, 0x7f0700cc
 
     :goto_4
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
@@ -7191,7 +7191,7 @@
     goto :goto_1
 
     :cond_7
-    const v3, 0x7f0700ca
+    const v3, 0x7f0700cb
 
     goto :goto_4
 .end method
@@ -7232,7 +7232,7 @@
     invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;->setTitle()V
 
     .line 1128
-    const v0, 0x7f0700c9
+    const v0, 0x7f0700ca
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivity;->showEmptyView(I)V
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1680
+    .line 1903
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$1;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,37 +35,59 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 2
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 1683
+    .line 1906
     const-string v0, "WirelessDisplayService"
 
-    const-string v1, "Receive Wifi scan results available intent."
+    const-string v1, "Receive INTERT_SYSTEM_NOTIFY_TURNOFF_HOTSPOT_TIMEOUT"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1684
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 1909
+    iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$1;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v0}, Lcom/htc/server/WirelessDisplayService;->access$400(Lcom/htc/server/WirelessDisplayService;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getWifidisplayApEnabled()Z
 
-    move-result-object v1
+    move-result v0
 
-    const/16 v2, 0x9
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2, v3, v3}, Lcom/htc/server/WirelessDisplayService$H;->obtainMessage(III)Landroid/os/Message;
+    .line 1910
+    iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$1;->this$0:Lcom/htc/server/WirelessDisplayService;
 
-    move-result-object v1
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mTurnOffHotspotWakeLock:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v0}, Lcom/htc/server/WirelessDisplayService;->access$2100(Lcom/htc/server/WirelessDisplayService;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0, v1}, Lcom/htc/server/WirelessDisplayService$H;->sendMessage(Landroid/os/Message;)Z
+    move-result-object v0
 
-    .line 1685
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 1911
+    iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$1;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    iget-object v0, v0, Lcom/htc/server/WirelessDisplayService;->wl:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
+    .line 1912
+    new-instance v0, Lcom/htc/server/WirelessDisplayService$1$1;
+
+    invoke-direct {v0, p0}, Lcom/htc/server/WirelessDisplayService$1$1;-><init>(Lcom/htc/server/WirelessDisplayService$1;)V
+
+    invoke-virtual {v0}, Lcom/htc/server/WirelessDisplayService$1$1;->start()V
+
+    .line 1924
+    :cond_0
     return-void
 .end method

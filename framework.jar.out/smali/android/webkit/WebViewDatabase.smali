@@ -203,7 +203,7 @@
 
     const/4 v3, 0x4
 
-    const-string/jumbo v4, "httpauth"
+    const-string v4, "httpauth"
 
     aput-object v4, v0, v3
 
@@ -808,7 +808,7 @@
     .line 314
     sget-object v1, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
-    const-string/jumbo v2, "lastmodify"
+    const-string v2, "lastmodify"
 
     invoke-virtual {v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->getColumnIndex(Ljava/lang/String;)I
 
@@ -874,7 +874,7 @@
     .line 326
     sget-object v1, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
-    const-string/jumbo v2, "httpstatus"
+    const-string v2, "httpstatus"
 
     invoke-virtual {v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->getColumnIndex(Ljava/lang/String;)I
 
@@ -885,7 +885,7 @@
     .line 328
     sget-object v1, Landroid/webkit/WebViewDatabase;->mCacheInserter:Landroid/database/DatabaseUtils$InsertHelper;
 
-    const-string/jumbo v2, "location"
+    const-string v2, "location"
 
     invoke-virtual {v1, v2}, Landroid/database/DatabaseUtils$InsertHelper;->getColumnIndex(Ljava/lang/String;)I
 

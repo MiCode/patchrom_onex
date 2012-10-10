@@ -14,8 +14,8 @@
     <string name="delete_artist_desc_phone_storage">%s 的所有歌曲將從手機儲存空間中永久刪除</string>
     <string name="delete_album_desc">「%s」這整張專輯將從記憶卡中永久刪除。</string>
     <string name="delete_album_desc_phone_storage">「%s」這整張專輯將從手機儲存空間中永久刪除。</string>
-    <string name="delete_song_desc">\"「%s」將從記憶卡中永久刪除</string>
-    <string name="delete_song_desc_phone_storage">\"%s」將從手機儲存空間中永久刪除</string>
+    <string name="delete_song_desc">「%s」將從記憶卡中永久刪除</string>
+    <string name="delete_song_desc_phone_storage">「%s」將從手機儲存空間中永久刪除</string>
     <string name="htc_delete_composer_desc">%s 的所有歌曲將從記憶卡中永久刪除</string>
     <string name="htc_delete_genre_desc">%s 類型的所有歌曲將從記憶卡中永久刪除</string>
     <string name="htc_delete_genre_desc_phone_storage">%s 類型的所有歌曲將從手機儲存空間中永久刪除</string>
@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">新增播放清單</string>
     <string name="htc_delete_playlists">刪除播放清單</string>
     <string name="htc_delete_playlist">刪除播放清單</string>
+    <string name="htc_delete_all_playlists">刪除所有播放清單</string>
     <string name="htc_playlist_add_songs">新增歌曲</string>
     <string name="htc_playlist_del_songs">刪除歌曲</string>
     <string name="htc_playlist_remove_songs">移除歌曲</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">正在緩衝...</string>
     <string name="title_send_content">正在傳送內容...</string>
     <string name="no_downloaded_apps_found">找不到已下載的應用程式</string>
+    <string name="music_folder_picker_dialog_msg">要選取資料夾以新增歌曲到播放清單嗎？選取「否」以其他方式新增歌曲</string>
 </resources>

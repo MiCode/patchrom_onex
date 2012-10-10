@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5160
+    .line 5192
     iput-object p1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -49,23 +49,23 @@
 
     const/4 v2, 0x1
 
-    .line 5162
+    .line 5194
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 5164
+    .line 5196
     packed-switch p2, :pswitch_data_0
 
-    .line 5199
+    .line 5231
     :cond_0
     :goto_0
     return-void
 
-    .line 5166
+    .line 5198
     :pswitch_0
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
@@ -74,13 +74,13 @@
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
     if-ne v1, v4, :cond_2
 
-    .line 5168
+    .line 5200
     :cond_1
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -88,7 +88,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5170
+    .line 5202
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -101,29 +101,29 @@
     move-result v2
 
     #calls: Lcom/htc/music/HtcMusic;->startAlbumDetail(I)V
-    invoke-static {v1, v2}, Lcom/htc/music/HtcMusic;->access$7100(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v1, v2}, Lcom/htc/music/HtcMusic;->access$7200(Lcom/htc/music/HtcMusic;I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 5171
+    .line 5203
     :catch_0
     move-exception v0
 
-    .line 5172
+    .line 5204
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 5175
+    .line 5207
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_2
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
@@ -132,20 +132,20 @@
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
     if-ne v1, v3, :cond_0
 
-    .line 5177
+    .line 5209
     :cond_3
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mTrackName:Landroid/widget/TextView;
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$4000(Lcom/htc/music/HtcMusic;)Landroid/widget/TextView;
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$4100(Lcom/htc/music/HtcMusic;)Landroid/widget/TextView;
 
     move-result-object v2
 
@@ -160,28 +160,28 @@
     iget-object v3, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mAlbumName:Ljava/lang/String;
-    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$6700(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$6800(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mArtistName:Ljava/lang/String;
-    invoke-static {v4}, Lcom/htc/music/HtcMusic;->access$6800(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/htc/music/HtcMusic;->access$6900(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
 
     move-result-object v4
 
     #calls: Lcom/htc/music/HtcMusic;->shareMusicText(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    invoke-static {v1, v2, v3, v4}, Lcom/htc/music/HtcMusic;->access$6900(Lcom/htc/music/HtcMusic;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3, v4}, Lcom/htc/music/HtcMusic;->access$7000(Lcom/htc/music/HtcMusic;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 5182
+    .line 5214
     :pswitch_1
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
@@ -190,27 +190,27 @@
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
     if-ne v1, v4, :cond_5
 
-    .line 5184
+    .line 5216
     :cond_4
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->addtoPlaylist()V
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7200(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7300(Lcom/htc/music/HtcMusic;)V
 
     goto :goto_0
 
-    .line 5185
+    .line 5217
     :cond_5
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
@@ -219,49 +219,49 @@
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mDlnaMode:I
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4500(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$4700(Lcom/htc/music/HtcMusic;)I
 
     move-result v1
 
     if-ne v1, v3, :cond_0
 
-    .line 5187
+    .line 5219
     :cond_6
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->doSearch()V
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7300(Lcom/htc/music/HtcMusic;)V
-
-    goto/16 :goto_0
-
-    .line 5190
-    :pswitch_2
-    iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
-
-    #calls: Lcom/htc/music/HtcMusic;->chooseShareType()V
     invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7400(Lcom/htc/music/HtcMusic;)V
 
     goto/16 :goto_0
 
-    .line 5193
-    :pswitch_3
+    .line 5222
+    :pswitch_2
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
-    #calls: Lcom/htc/music/HtcMusic;->setRingtone()V
+    #calls: Lcom/htc/music/HtcMusic;->chooseShareType()V
     invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7500(Lcom/htc/music/HtcMusic;)V
 
     goto/16 :goto_0
 
-    .line 5196
+    .line 5225
+    :pswitch_3
+    iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
+
+    #calls: Lcom/htc/music/HtcMusic;->setRingtone()V
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7600(Lcom/htc/music/HtcMusic;)V
+
+    goto/16 :goto_0
+
+    .line 5228
     :pswitch_4
     iget-object v1, p0, Lcom/htc/music/HtcMusic$34;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->doSearch()V
-    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7300(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v1}, Lcom/htc/music/HtcMusic;->access$7400(Lcom/htc/music/HtcMusic;)V
 
     goto/16 :goto_0
 
-    .line 5164
+    .line 5196
     nop
 
     :pswitch_data_0

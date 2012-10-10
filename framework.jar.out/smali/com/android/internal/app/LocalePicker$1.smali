@@ -120,7 +120,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "list_primary_m_bold"
+    const-string v8, "list_primary_m_bold"
 
     const-string/jumbo v9, "style"
 

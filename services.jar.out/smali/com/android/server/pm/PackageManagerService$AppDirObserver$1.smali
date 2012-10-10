@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5348
+    .line 5361
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$AppDirObserver$1;->this$1:Lcom/android/server/pm/PackageManagerService$AppDirObserver;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 4
 
     .prologue
-    .line 5350
+    .line 5363
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$AppDirObserver$1;->this$1:Lcom/android/server/pm/PackageManagerService$AppDirObserver;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService$AppDirObserver;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -52,7 +52,7 @@
 
     move-result-object v0
 
-    .line 5352
+    .line 5365
     .local v0, cr:Landroid/content/ContentResolver;
     :try_start_0
     const-string v2, "htc_error_report_setting"
@@ -61,14 +61,14 @@
 
     invoke-static {v0, v2, v3}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5354
+    .line 5367
     const-string v2, "send_htc_error_report"
 
     const-string v3, "0"
 
     invoke-static {v0, v2, v3}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5356
+    .line 5369
     const-string v2, "send_htc_application_log"
 
     const-string v3, "0"
@@ -77,15 +77,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5361
+    .line 5374
     :goto_0
     return-void
 
-    .line 5358
+    .line 5371
     :catch_0
     move-exception v1
 
-    .line 5359
+    .line 5372
     .local v1, e:Ljava/lang/Exception;
     const-string v2, "PackageManager"
 

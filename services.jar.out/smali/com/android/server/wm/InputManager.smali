@@ -1162,10 +1162,10 @@
     .parameter "vkPolicy"
 
     .prologue
-    .line 842
+    .line 837
     invoke-static {p1}, Lcom/android/server/wm/InputManager;->nativeSetVirtualKeyPolicy(Lcom/android/server/wm/InputManager$VirtualKeyPolicy;)V
 
-    .line 843
+    .line 838
     return-void
 .end method
 

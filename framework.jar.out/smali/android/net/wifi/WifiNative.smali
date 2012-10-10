@@ -116,7 +116,7 @@
     .locals 1
 
     .prologue
-    .line 360
+    .line 364
     const-string v0, "P2P_CANCEL"
 
     invoke-static {v0}, Landroid/net/wifi/WifiNative;->doBooleanCommand(Ljava/lang/String;)Z
@@ -132,49 +132,49 @@
     .parameter "joinExistingGroup"
 
     .prologue
-    .line 315
+    .line 319
     if-nez p0, :cond_0
 
     const/4 v6, 0x0
 
-    .line 356
+    .line 360
     :goto_0
     return-object v6
 
-    .line 316
+    .line 320
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 317
+    .line 321
     .local v0, args:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     iget-object v5, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->wps:Landroid/net/wifi/WpsInfo;
 
-    .line 318
+    .line 322
     .local v5, wps:Landroid/net/wifi/WpsInfo;
     iget-object v6, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->deviceAddress:Ljava/lang/String;
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 320
+    .line 324
     iget v6, v5, Landroid/net/wifi/WpsInfo;->setup:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 345
+    .line 349
     :goto_1
     if-eqz p1, :cond_1
 
-    const-string/jumbo v6, "join"
+    const-string v6, "join"
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 347
+    .line 351
     :cond_1
     iget v2, p0, Landroid/net/wifi/p2p/WifiP2pConfig;->groupOwnerIntent:I
 
-    .line 348
+    .line 352
     .local v2, groupOwnerIntent:I
     if-ltz v2, :cond_2
 
@@ -182,11 +182,11 @@
 
     if-le v2, v6, :cond_3
 
-    .line 349
+    .line 353
     :cond_2
     const/4 v2, 0x3
 
-    .line 351
+    .line 355
     :cond_3
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -208,10 +208,10 @@
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 353
+    .line 357
     const-string v1, "P2P_CONNECT "
 
-    .line 354
+    .line 358
     .local v1, command:Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -256,7 +256,7 @@
 
     goto :goto_2
 
-    .line 322
+    .line 326
     .end local v1           #command:Ljava/lang/String;
     .end local v2           #groupOwnerIntent:I
     .end local v3           #i$:Ljava/util/Iterator;
@@ -268,46 +268,46 @@
 
     goto :goto_1
 
-    .line 326
+    .line 330
     :pswitch_1
     const-string/jumbo v6, "pin"
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 327
+    .line 331
     const-string v6, "display"
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 330
+    .line 334
     :pswitch_2
     iget-object v6, v5, Landroid/net/wifi/WpsInfo;->pin:Ljava/lang/String;
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 331
-    const-string/jumbo v6, "keypad"
+    .line 335
+    const-string v6, "keypad"
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 334
+    .line 338
     :pswitch_3
     iget-object v6, v5, Landroid/net/wifi/WpsInfo;->pin:Ljava/lang/String;
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 335
-    const-string/jumbo v6, "label"
+    .line 339
+    const-string v6, "label"
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 356
+    .line 360
     .restart local v1       #command:Ljava/lang/String;
     .restart local v2       #groupOwnerIntent:I
     .restart local v3       #i$:Ljava/util/Iterator;
@@ -318,9 +318,7 @@
 
     goto/16 :goto_0
 
-    .line 320
-    nop
-
+    .line 324
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -335,7 +333,7 @@
     .parameter "command"
 
     .prologue
-    .line 436
+    .line 440
     invoke-static {p0}, Landroid/net/wifi/WifiNative;->doStringCommand(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -347,7 +345,7 @@
     .locals 1
 
     .prologue
-    .line 287
+    .line 291
     const-string v0, "P2P_FIND"
 
     invoke-static {v0}, Landroid/net/wifi/WifiNative;->doBooleanCommand(Ljava/lang/String;)Z
@@ -362,15 +360,15 @@
     .parameter "timeout"
 
     .prologue
-    .line 291
+    .line 295
     if-gtz p0, :cond_0
 
-    .line 292
+    .line 296
     invoke-static {}, Landroid/net/wifi/WifiNative;->p2pFind()Z
 
     move-result v0
 
-    .line 294
+    .line 298
     :goto_0
     return v0
 
@@ -404,7 +402,7 @@
     .locals 1
 
     .prologue
-    .line 309
+    .line 313
     const-string v0, "P2P_FLUSH"
 
     invoke-static {v0}, Landroid/net/wifi/WifiNative;->doBooleanCommand(Ljava/lang/String;)Z
@@ -418,22 +416,22 @@
     .locals 9
 
     .prologue
-    .line 417
+    .line 421
     invoke-static {}, Landroid/net/wifi/WifiNative;->statusCommand()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 418
+    .line 422
     .local v4, status:Ljava/lang/String;
     if-nez v4, :cond_0
 
     const-string v7, ""
 
-    .line 428
+    .line 432
     :goto_0
     return-object v7
 
-    .line 420
+    .line 424
     :cond_0
     const-string v7, "\n"
 
@@ -441,7 +439,7 @@
 
     move-result-object v6
 
-    .line 421
+    .line 425
     .local v6, tokens:[Ljava/lang/String;
     move-object v0, v6
 
@@ -457,7 +455,7 @@
 
     aget-object v5, v0, v1
 
-    .line 422
+    .line 426
     .local v5, token:Ljava/lang/String;
     const-string/jumbo v7, "p2p_device_address="
 
@@ -467,14 +465,14 @@
 
     if-eqz v7, :cond_3
 
-    .line 423
+    .line 427
     const-string v7, "="
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 424
+    .line 428
     .local v3, nameValue:[Ljava/lang/String;
     array-length v7, v3
 
@@ -482,7 +480,7 @@
 
     if-eq v7, v8, :cond_2
 
-    .line 428
+    .line 432
     .end local v3           #nameValue:[Ljava/lang/String;
     .end local v5           #token:Ljava/lang/String;
     :cond_1
@@ -490,7 +488,7 @@
 
     goto :goto_0
 
-    .line 425
+    .line 429
     .restart local v3       #nameValue:[Ljava/lang/String;
     .restart local v5       #token:Ljava/lang/String;
     :cond_2
@@ -500,7 +498,7 @@
 
     goto :goto_0
 
-    .line 421
+    .line 425
     .end local v3           #nameValue:[Ljava/lang/String;
     :cond_3
     add-int/lit8 v1, v1, 0x1
@@ -515,32 +513,32 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 397
+    .line 401
     if-nez p0, :cond_1
 
-    .line 413
+    .line 417
     :cond_0
     :goto_0
     return-object v7
 
-    .line 401
+    .line 405
     :cond_1
     invoke-static {p0}, Landroid/net/wifi/WifiNative;->p2pPeer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 402
+    .line 406
     .local v4, peerInfo:Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 403
+    .line 407
     const-string v8, "\n"
 
     invoke-virtual {v4, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 405
+    .line 409
     .local v6, tokens:[Ljava/lang/String;
     move-object v0, v6
 
@@ -556,9 +554,9 @@
 
     aget-object v5, v0, v1
 
-    .line 407
+    .line 411
     .local v5, token:Ljava/lang/String;
-    const-string/jumbo v8, "intended_addr="
+    const-string v8, "intended_addr="
 
     invoke-virtual {v5, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -566,14 +564,14 @@
 
     if-eqz v8, :cond_2
 
-    .line 408
+    .line 412
     const-string v8, "="
 
     invoke-virtual {v5, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 409
+    .line 413
     .local v3, nameValue:[Ljava/lang/String;
     array-length v8, v3
 
@@ -581,14 +579,14 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 410
+    .line 414
     const/4 v7, 0x1
 
     aget-object v7, v3, v7
 
     goto :goto_0
 
-    .line 405
+    .line 409
     .end local v3           #nameValue:[Ljava/lang/String;
     :cond_2
     add-int/lit8 v1, v1, 0x1
@@ -600,7 +598,7 @@
     .locals 1
 
     .prologue
-    .line 364
+    .line 368
     const-string v0, "P2P_GROUP_ADD"
 
     invoke-static {v0}, Landroid/net/wifi/WifiNative;->doBooleanCommand(Ljava/lang/String;)Z
@@ -615,12 +613,12 @@
     .parameter "iface"
 
     .prologue
-    .line 368
+    .line 372
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 369
+    .line 373
     :goto_0
     return v0
 
@@ -656,20 +654,20 @@
     .parameter "deviceAddress"
 
     .prologue
-    .line 378
+    .line 382
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 383
+    .line 387
     :goto_0
     return v0
 
-    .line 380
+    .line 384
     :cond_0
     if-nez p0, :cond_1
 
-    .line 381
+    .line 385
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -694,7 +692,7 @@
 
     goto :goto_0
 
-    .line 383
+    .line 387
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -755,7 +753,7 @@
     .locals 1
 
     .prologue
-    .line 298
+    .line 302
     const-string v0, "P2P_LISTEN"
 
     invoke-static {v0}, Landroid/net/wifi/WifiNative;->doBooleanCommand(Ljava/lang/String;)Z
@@ -770,15 +768,15 @@
     .parameter "timeout"
 
     .prologue
-    .line 302
+    .line 306
     if-gtz p0, :cond_0
 
-    .line 303
+    .line 307
     invoke-static {}, Landroid/net/wifi/WifiNative;->p2pListen()Z
 
     move-result v0
 
-    .line 305
+    .line 309
     :goto_0
     return v0
 
@@ -813,7 +811,7 @@
     .parameter "deviceAddress"
 
     .prologue
-    .line 432
+    .line 436
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -845,7 +843,7 @@
     .parameter "deviceAddress"
 
     .prologue
-    .line 390
+    .line 394
     if-eqz p1, :cond_0
 
     if-gez p0, :cond_1
@@ -853,7 +851,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 392
+    .line 396
     :goto_0
     return v0
 
@@ -898,7 +896,7 @@
     .parameter "deviceAddress"
 
     .prologue
-    .line 373
+    .line 377
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -965,7 +963,7 @@
     .parameter "name"
 
     .prologue
-    .line 279
+    .line 283
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -996,7 +994,7 @@
     .parameter "type"
 
     .prologue
-    .line 283
+    .line 287
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1033,7 +1031,7 @@
     .parameter "value"
 
     .prologue
-    .line 269
+    .line 273
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1066,10 +1064,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 274
+    .line 278
     if-ne p0, v0, :cond_0
 
-    .line 275
+    .line 279
     .local v0, value:I
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1096,7 +1094,7 @@
 
     return v1
 
-    .line 274
+    .line 278
     .end local v0           #value:I
     :cond_0
     const/4 v0, 0x0
@@ -1147,7 +1145,7 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 261
     const-string v0, "SIGNAL_POLL"
 
     invoke-static {v0}, Landroid/net/wifi/WifiNative;->doStringCommand(Ljava/lang/String;)Ljava/lang/String;
@@ -1172,6 +1170,9 @@
 .method public static native startPacketFiltering_arp()Z
 .end method
 
+.method public static native startPacketFiltering_blist()Z
+.end method
+
 .method public static native startPacketFiltering_dhcpoffer()Z
 .end method
 
@@ -1188,6 +1189,9 @@
 .end method
 
 .method public static native startWpsPbcCommand(Ljava/lang/String;)Z
+.end method
+
+.method public static native startWpsWithPinFromAccessPoint2Command(Ljava/lang/String;Ljava/lang/String;)Z
 .end method
 
 .method public static native startWpsWithPinFromAccessPointCommand(Ljava/lang/String;Ljava/lang/String;)Z
@@ -1209,6 +1213,9 @@
 .end method
 
 .method public static native stopPacketFiltering_arp()Z
+.end method
+
+.method public static native stopPacketFiltering_blist()Z
 .end method
 
 .method public static native stopPacketFiltering_dhcpoffer()Z
@@ -1239,7 +1246,7 @@
     .locals 1
 
     .prologue
-    .line 261
+    .line 265
     const-string v0, "WPS_PBC"
 
     invoke-static {v0}, Landroid/net/wifi/WifiNative;->doBooleanCommand(Ljava/lang/String;)Z
@@ -1254,7 +1261,7 @@
     .parameter "pin"
 
     .prologue
-    .line 265
+    .line 269
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

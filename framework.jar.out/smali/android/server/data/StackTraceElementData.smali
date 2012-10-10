@@ -148,7 +148,7 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 83
     iget-object v0, p0, Landroid/server/data/StackTraceElementData;->className:Ljava/lang/String;
 
     return-object v0
@@ -158,7 +158,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 88
     iget-object v0, p0, Landroid/server/data/StackTraceElementData;->fileName:Ljava/lang/String;
 
     return-object v0
@@ -168,7 +168,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 98
     iget v0, p0, Landroid/server/data/StackTraceElementData;->lineNumber:I
 
     return v0
@@ -178,7 +178,7 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 93
     iget-object v0, p0, Landroid/server/data/StackTraceElementData;->methodName:Ljava/lang/String;
 
     return-object v0

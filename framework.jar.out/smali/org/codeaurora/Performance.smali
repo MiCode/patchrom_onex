@@ -8,6 +8,8 @@
 
 .field public static final CPUOPT_CPU0_PWRCLSP:I = 0x1
 
+.field public static final CPUOPT_CPU1_FREQMIN:I = 0x3
+
 .field private static final TAG:Ljava/lang/String; = "Perf"
 
 
@@ -52,7 +54,7 @@
     .parameter "reqValue"
 
     .prologue
-    .line 57
+    .line 58
     invoke-direct {p0, p1, p2}, Lorg/codeaurora/Performance;->native_cpu_setoptions(II)I
 
     move-result v0

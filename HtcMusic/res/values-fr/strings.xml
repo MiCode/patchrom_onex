@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Ajouter une playlist</string>
     <string name="htc_delete_playlists">Supprimer des playlists</string>
     <string name="htc_delete_playlist">Supprimer la playlist</string>
+    <string name="htc_delete_all_playlists">Supprimer toutes les playlists</string>
     <string name="htc_playlist_add_songs">Ajouter des chansons</string>
     <string name="htc_playlist_del_songs">Supprimer des chansons</string>
     <string name="htc_playlist_remove_songs">Supprimer les chansons</string>
@@ -378,7 +379,7 @@
     <string name="msg_download_queue_full">"Impossible d'ajouter tous les titres parce que votre liste de téléchargement est pleine. Pour télécharger les pistes restantes, veuillez aller à votre Liste d'achat pour choisir Télécharger plus tard."</string>
     <string name="msg_unknown_error">Oups ! Nous avons des problèmes avec notre service. Veuillez réessayer plus tard.</string>
     <string name="txt_query_switch_storage_title">"Définir l'emplacement de la mémoire"</string>
-    <string name="txt_query_switch_to_sdcard">Voulez-vous basculer à la carte mémoire ?</string>
+    <string name="txt_query_switch_to_sdcard">Voulez-vous utiliser la carte mémoire ?</string>
     <string name="search_online_music_store">Rechercher dans le Magasin musical</string>
     <string name="msg_track_being_downloaded">Votre piste est en cours de téléchargement.</string>
     <string name="msg_tracks_being_downloaded">Vos titres sont en cours de téléchargement.</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Mise en tampon…</string>
     <string name="title_send_content">Envoi du contenu…</string>
     <string name="no_downloaded_apps_found">Aucune appli téléchargée trouvée</string>
+    <string name="music_folder_picker_dialog_msg">"Ajouter les chansons aux playlists en sélectionnant le dossier ? Non pour ajouter les chansons de l'autre manière"</string>
 </resources>

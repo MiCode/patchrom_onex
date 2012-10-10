@@ -65,7 +65,7 @@
     .locals 3
 
     .prologue
-    .line 1025
+    .line 1152
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -90,13 +90,13 @@
 
     const/4 v1, 0x3
 
-    const-string/jumbo v2, "label"
+    const-string v2, "label"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x4
 
-    const-string/jumbo v2, "isprimary"
+    const-string v2, "isprimary"
 
     aput-object v2, v0, v1
 
@@ -109,7 +109,7 @@
     .locals 0
 
     .prologue
-    .line 1022
+    .line 1148
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -87,7 +87,7 @@
 
     .prologue
     .line 45
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
     iput-object p1, p0, Landroid/database/sqlite/SQLiteDirectCursorDriver;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
@@ -657,7 +657,7 @@
     .line 86
     if-eqz v1, :cond_1
 
-    throw v1
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteQuery;->close()V
 
     .line 87
     :cond_1

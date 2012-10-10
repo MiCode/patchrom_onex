@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1317
+    .line 1398
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +40,14 @@
     .parameter "intent"
 
     .prologue
-    .line 1320
+    .line 1401
     const-string v3, "name"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1321
+    .line 1402
     .local v2, name:Ljava/lang/String;
     const-string v3, "state"
 
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    .line 1322
+    .line 1403
     .local v0, a2dpOn:I
     const-string v3, "[MediaPlaybackService]"
 
@@ -91,7 +91,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1325
+    .line 1406
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mPlayer:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
@@ -104,7 +104,7 @@
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mFileToPlay:Ljava/lang/String;
-    invoke-static {v3}, Lcom/htc/music/MediaPlaybackService;->access$4200(Lcom/htc/music/MediaPlaybackService;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/MediaPlaybackService;->access$4400(Lcom/htc/music/MediaPlaybackService;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -113,7 +113,7 @@
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mFileToPlay:Ljava/lang/String;
-    invoke-static {v3}, Lcom/htc/music/MediaPlaybackService;->access$4200(Lcom/htc/music/MediaPlaybackService;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/MediaPlaybackService;->access$4400(Lcom/htc/music/MediaPlaybackService;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -123,10 +123,10 @@
 
     if-lez v3, :cond_0
 
-    .line 1326
+    .line 1407
     const/4 v1, 0x0
 
-    .line 1327
+    .line 1408
     .local v1, isPlaying:Z
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -141,7 +141,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 1328
+    .line 1409
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mPlayer:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
@@ -153,7 +153,7 @@
 
     move-result v1
 
-    .line 1329
+    .line 1410
     const-string v3, "[MediaPlaybackService]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -176,37 +176,37 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1333
+    .line 1414
     :goto_0
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->isPluginMode()Z
-    invoke-static {v3}, Lcom/htc/music/MediaPlaybackService;->access$4300(Lcom/htc/music/MediaPlaybackService;)Z
+    invoke-static {v3}, Lcom/htc/music/MediaPlaybackService;->access$4500(Lcom/htc/music/MediaPlaybackService;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 1334
+    .line 1415
     const/4 v3, 0x1
 
     if-ne v0, v3, :cond_2
 
-    .line 1335
+    .line 1416
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     const-string v4, "mA2DPReceiver.onReceive()"
 
     #calls: Lcom/htc/music/MediaPlaybackService;->resetPlayerForWirelessConnect(Ljava/lang/String;)V
-    invoke-static {v3, v4}, Lcom/htc/music/MediaPlaybackService;->access$4400(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/htc/music/MediaPlaybackService;->access$4600(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
 
-    .line 1346
+    .line 1427
     .end local v1           #isPlaying:Z
     :cond_0
     :goto_1
     return-void
 
-    .line 1331
+    .line 1412
     .restart local v1       #isPlaying:Z
     :cond_1
     const-string v3, "[MediaPlaybackService]"
@@ -217,11 +217,11 @@
 
     goto :goto_0
 
-    .line 1338
+    .line 1419
     :cond_2
     if-eqz v1, :cond_0
 
-    .line 1339
+    .line 1420
     const-string v3, "[MediaPlaybackService]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -250,7 +250,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1340
+    .line 1421
     iget-object v3, p0, Lcom/htc/music/MediaPlaybackService$5;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v3}, Lcom/htc/music/MediaPlaybackService;->pause()V

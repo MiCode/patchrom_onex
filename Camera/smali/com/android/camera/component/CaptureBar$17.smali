@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 921
+    .line 1016
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -42,21 +42,21 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 925
+    .line 1020
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_IsPopupOutsideTouched:Z
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3400(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3600(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 928
+    .line 1023
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_PopupOutsideTouchedView:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3500(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3700(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v0
 
@@ -69,13 +69,13 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 929
+    .line 1024
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->onCameraButtonPressed(I)V
     invoke-static {v0, v2}, Lcom/android/camera/component/CaptureBar;->access$800(Lcom/android/camera/component/CaptureBar;I)V
 
-    .line 934
+    .line 1029
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -86,37 +86,37 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/component/CaptureBar;->sendMessage(Lcom/android/camera/component/Component;I)Z
 
-    .line 937
+    .line 1032
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     const/4 v1, 0x0
 
     #setter for: Lcom/android/camera/component/CaptureBar;->m_IsPopupOutsideTouched:Z
-    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$3402(Lcom/android/camera/component/CaptureBar;Z)Z
+    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$3602(Lcom/android/camera/component/CaptureBar;Z)Z
 
-    .line 940
+    .line 1035
     :cond_1
     return-void
 
-    .line 930
+    .line 1025
     :cond_2
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_PopupOutsideTouchedView:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3500(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3700(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2500(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v1
 
     if-ne v0, v1, :cond_0
 
-    .line 931
+    .line 1026
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$17;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->onCamcorderButtonPressed(I)V

@@ -53,7 +53,7 @@
     .locals 2
 
     .prologue
-    .line 1625
+    .line 1778
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "frequency/update"
@@ -64,7 +64,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$Frequency;->UPDATE_URI:Landroid/net/Uri;
 
-    .line 1626
+    .line 1780
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "frequency/query"
@@ -82,7 +82,7 @@
     .locals 0
 
     .prologue
-    .line 1617
+    .line 1764
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -106,11 +106,11 @@
     .end annotation
 
     .prologue
-    .line 1680
+    .line 1848
     .local p2, contactIdList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const/4 v0, 0x0
 
-    .line 1681
+    .line 1849
     .local v0, builder:Landroid/content/ContentProviderOperation$Builder;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -136,17 +136,17 @@
 
     move-result-object v3
 
-    .line 1682
+    .line 1850
     .local v3, formatting:Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 1683
+    .line 1851
     .local v5, operation:Landroid/content/ContentProviderOperation;
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1684
+    .line 1852
     .local v6, operations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -170,7 +170,7 @@
 
     move-result-wide v1
 
-    .line 1685
+    .line 1853
     .local v1, cId:J
     const/4 v9, 0x2
 
@@ -196,29 +196,29 @@
 
     move-result-object v8
 
-    .line 1686
+    .line 1854
     .local v8, uriStr:Ljava/lang/String;
     invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v7
 
-    .line 1687
+    .line 1855
     .local v7, uri:Landroid/net/Uri;
     invoke-static {v7}, Landroid/content/ContentProviderOperation;->newDelete(Landroid/net/Uri;)Landroid/content/ContentProviderOperation$Builder;
 
     move-result-object v0
 
-    .line 1688
+    .line 1856
     invoke-virtual {v0}, Landroid/content/ContentProviderOperation$Builder;->build()Landroid/content/ContentProviderOperation;
 
     move-result-object v5
 
-    .line 1689
+    .line 1857
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1692
+    .line 1860
     .end local v1           #cId:J
     .end local v7           #uri:Landroid/net/Uri;
     .end local v8           #uriStr:Ljava/lang/String;
@@ -231,17 +231,17 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/content/OperationApplicationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1696
+    .line 1864
     :goto_1
     return-void
 
-    .line 1694
+    .line 1862
     :catch_0
     move-exception v9
 
     goto :goto_1
 
-    .line 1693
+    .line 1861
     :catch_1
     move-exception v9
 
@@ -256,7 +256,7 @@
     .parameter "rawContactId"
 
     .prologue
-    .line 1642
+    .line 1804
     if-nez p1, :cond_0
 
     const/4 v1, 0x1
@@ -269,13 +269,13 @@
 
     move-wide v4, p4
 
-    .line 1643
+    .line 1805
     invoke-static/range {v0 .. v5}, Landroid/provider/HtcContactsContract$Frequency;->markFrquency(Landroid/content/ContentResolver;IJJ)V
 
-    .line 1644
+    .line 1806
     return-void
 
-    .line 1642
+    .line 1804
     .end local v1           #type:I
     :cond_0
     const/4 v1, 0x2
@@ -291,7 +291,7 @@
     .parameter "rawContactId"
 
     .prologue
-    .line 1652
+    .line 1815
     if-nez p1, :cond_0
 
     const/4 v1, 0x5
@@ -304,13 +304,13 @@
 
     move-wide v4, p4
 
-    .line 1653
+    .line 1816
     invoke-static/range {v0 .. v5}, Landroid/provider/HtcContactsContract$Frequency;->markFrquency(Landroid/content/ContentResolver;IJJ)V
 
-    .line 1654
+    .line 1817
     return-void
 
-    .line 1652
+    .line 1815
     .end local v1           #type:I
     :cond_0
     const/4 v1, 0x6
@@ -326,7 +326,7 @@
     .parameter "rawContactId"
 
     .prologue
-    .line 1647
+    .line 1809
     if-nez p1, :cond_0
 
     const/4 v1, 0x3
@@ -339,13 +339,13 @@
 
     move-wide v4, p4
 
-    .line 1648
+    .line 1810
     invoke-static/range {v0 .. v5}, Landroid/provider/HtcContactsContract$Frequency;->markFrquency(Landroid/content/ContentResolver;IJJ)V
 
-    .line 1649
+    .line 1811
     return-void
 
-    .line 1647
+    .line 1809
     .end local v1           #type:I
     :cond_0
     const/4 v1, 0x4
@@ -363,12 +363,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1657
+    .line 1821
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1658
+    .line 1822
     .local v0, values:Landroid/content/ContentValues;
     const-string v1, "data_id"
 
@@ -378,7 +378,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1659
+    .line 1823
     const-string/jumbo v1, "type"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -387,7 +387,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1660
+    .line 1824
     const-string/jumbo v1, "raw_contact_id"
 
     invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -396,12 +396,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1661
+    .line 1825
     sget-object v1, Landroid/provider/HtcContactsContract$Frequency;->UPDATE_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v1, v0, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1662
+    .line 1826
     return-void
 .end method
 
@@ -423,21 +423,21 @@
     .end annotation
 
     .prologue
-    .line 1665
+    .line 1830
     .local p2, contactIdList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 1666
+    .line 1831
     .local v0, type:I
     :goto_0
     invoke-static {p0, v0, p2}, Landroid/provider/HtcContactsContract$Frequency;->applyBatchReset(Landroid/content/ContentResolver;ILjava/util/ArrayList;)V
 
-    .line 1667
+    .line 1832
     return-void
 
-    .line 1665
+    .line 1830
     .end local v0           #type:I
     :cond_0
     const/4 v0, 0x2
@@ -463,21 +463,21 @@
     .end annotation
 
     .prologue
-    .line 1675
+    .line 1842
     .local p2, contactIdList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     if-nez p1, :cond_0
 
     const/4 v0, 0x5
 
-    .line 1676
+    .line 1843
     .local v0, type:I
     :goto_0
     invoke-static {p0, v0, p2}, Landroid/provider/HtcContactsContract$Frequency;->applyBatchReset(Landroid/content/ContentResolver;ILjava/util/ArrayList;)V
 
-    .line 1677
+    .line 1844
     return-void
 
-    .line 1675
+    .line 1842
     .end local v0           #type:I
     :cond_0
     const/4 v0, 0x6
@@ -503,21 +503,21 @@
     .end annotation
 
     .prologue
-    .line 1670
+    .line 1836
     .local p2, contactIdList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     if-nez p1, :cond_0
 
     const/4 v0, 0x3
 
-    .line 1671
+    .line 1837
     .local v0, type:I
     :goto_0
     invoke-static {p0, v0, p2}, Landroid/provider/HtcContactsContract$Frequency;->applyBatchReset(Landroid/content/ContentResolver;ILjava/util/ArrayList;)V
 
-    .line 1672
+    .line 1838
     return-void
 
-    .line 1670
+    .line 1836
     .end local v0           #type:I
     :cond_0
     const/4 v0, 0x4

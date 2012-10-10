@@ -61,7 +61,7 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 71
     iget v0, p0, Landroid/database/sqlite/HtcAdjustableCursorFactory;->mCWSize:I
 
     return v0
@@ -75,7 +75,7 @@
     .parameter "query"
 
     .prologue
-    .line 77
+    .line 81
     new-instance v0, Landroid/database/sqlite/HtcSQLiteAdjustableCursor;
 
     iget v5, p0, Landroid/database/sqlite/HtcAdjustableCursorFactory;->mCWSize:I
@@ -100,13 +100,13 @@
     .prologue
     const/high16 v3, 0x10
 
-    .line 47
+    .line 48
     if-le p1, v3, :cond_1
 
-    .line 48
+    .line 49
     iput p1, p0, Landroid/database/sqlite/HtcAdjustableCursorFactory;->mCWSize:I
 
-    .line 49
+    .line 50
     iget-boolean v0, p0, Landroid/database/sqlite/HtcAdjustableCursorFactory;->isInitialized:Z
 
     if-eqz v0, :cond_0
@@ -149,16 +149,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
+    .line 56
     :cond_0
     :goto_0
     return-void
 
-    .line 51
+    .line 52
     :cond_1
     iput v3, p0, Landroid/database/sqlite/HtcAdjustableCursorFactory;->mCWSize:I
 
-    .line 52
+    .line 53
     const-string v0, "HtcAdjCursorFactory"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -214,11 +214,11 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 63
     sget v0, Landroid/database/CursorWindow;->DEFAULT_WINDOW_SIZE:I
 
     invoke-virtual {p0, v0}, Landroid/database/sqlite/HtcAdjustableCursorFactory;->setCursorWindowSize(I)V
 
-    .line 62
+    .line 64
     return-void
 .end method

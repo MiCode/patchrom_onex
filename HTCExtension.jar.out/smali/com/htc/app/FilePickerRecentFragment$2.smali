@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 198
+    .line 196
     iput-object p1, p0, Lcom/htc/app/FilePickerRecentFragment$2;->this$0:Lcom/htc/app/FilePickerRecentFragment;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .end annotation
 
     .prologue
-    .line 201
+    .line 199
     .local p1, arg0:Lcom/htc/widget/HtcAdapterView;,"Lcom/htc/widget/HtcAdapterView<*>;"
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment$2;->this$0:Lcom/htc/app/FilePickerRecentFragment;
 
@@ -65,7 +65,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 202
+    .line 200
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment$2;->this$0:Lcom/htc/app/FilePickerRecentFragment;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerRecentFragment$2;->this$0:Lcom/htc/app/FilePickerRecentFragment;
@@ -82,7 +82,7 @@
     #setter for: Lcom/htc/app/FilePickerRecentFragment;->recentAdapter:Lcom/htc/app/FilePickerListAdapter;
     invoke-static {v0, v1}, Lcom/htc/app/FilePickerRecentFragment;->access$902(Lcom/htc/app/FilePickerRecentFragment;Lcom/htc/app/FilePickerListAdapter;)Lcom/htc/app/FilePickerListAdapter;
 
-    .line 203
+    .line 201
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment$2;->this$0:Lcom/htc/app/FilePickerRecentFragment;
 
     #getter for: Lcom/htc/app/FilePickerRecentFragment;->mFilePickerCore:Lcom/htc/app/FilePickerCore;
@@ -99,7 +99,7 @@
 
     invoke-virtual {v0, p3, p2, v1}, Lcom/htc/app/FilePickerCore;->performListViewOnItemClickListenerItemClick(ILandroid/view/View;Lcom/htc/app/FilePickerListAdapter;)V
 
-    .line 206
+    .line 204
     :cond_0
     return-void
 .end method

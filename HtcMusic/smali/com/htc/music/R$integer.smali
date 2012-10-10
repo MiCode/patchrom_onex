@@ -195,7 +195,7 @@
 
 .field public static final expanded_indicator_offset:I = 0x7f0b004b
 
-.field public static final feature_list_item_spacing:I = 0x7f0b009c
+.field public static final feature_list_item_spacing:I = 0x7f0b009d
 
 .field public static final genre_child_viewItem_cover_height:I = 0x7f0b0042
 
@@ -329,13 +329,15 @@
 
 .field public static final psnt_track_list_item_width:I = 0x7f0b009a
 
+.field public static final track_options_delegate:I = 0x7f0b009c
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 1246
+    .line 1257
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

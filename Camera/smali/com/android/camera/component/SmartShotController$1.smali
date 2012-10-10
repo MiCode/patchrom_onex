@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 250
+    .line 252
     iput-object p1, p0, Lcom/android/camera/component/SmartShotController$1;->this$0:Lcom/android/camera/component/SmartShotController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 253
+    .line 255
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/RequestTakingPictureEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$1;->this$0:Lcom/android/camera/component/SmartShotController;
 
@@ -77,7 +77,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 255
+    .line 257
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$1;->this$0:Lcom/android/camera/component/SmartShotController;
 
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController$1;->this$0:Lcom/android/camera/component/SmartShotController;
@@ -91,10 +91,10 @@
     #calls: Lcom/android/camera/component/SmartShotController;->takePicture(Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
     invoke-static {v0, v1, v2}, Lcom/android/camera/component/SmartShotController;->access$100(Lcom/android/camera/component/SmartShotController;Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
 
-    .line 256
+    .line 258
     invoke-virtual {p3}, Lcom/android/camera/RequestTakingPictureEventArgs;->setHandled()V
 
-    .line 258
+    .line 260
     :cond_0
     return-void
 .end method
@@ -106,7 +106,7 @@
     .parameter "x2"
 
     .prologue
-    .line 250
+    .line 252
     check-cast p3, Lcom/android/camera/RequestTakingPictureEventArgs;
 
     .end local p3

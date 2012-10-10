@@ -50,116 +50,68 @@
 
 # virtual methods
 .method public toEncodedString()Ljava/lang/String;
-    .locals 9
+    .locals 4
 
     .prologue
     .line 23
-    iget-object v6, p0, Lcom/htc/text/tag/VideoTag;->uri:Ljava/lang/String;
+    iget-object v2, p0, Lcom/htc/text/tag/VideoTag;->uri:Ljava/lang/String;
 
-    const-string v7, "&"
-
-    const-string v8, "&amp;"
-
-    invoke-static {v6, v7, v8}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 24
-    .local v1, escapedAmpersandUri:Ljava/lang/String;
-    iget-object v6, p0, Lcom/htc/text/tag/VideoTag;->pv_uri:Ljava/lang/String;
+    .local v1, escapedUri:Ljava/lang/String;
+    iget-object v2, p0, Lcom/htc/text/tag/VideoTag;->pv_uri:Ljava/lang/String;
 
-    const-string v7, "&"
-
-    const-string v8, "&amp;"
-
-    invoke-static {v6, v7, v8}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 25
-    .local v0, escapedAmpersandPv:Ljava/lang/String;
-    const-string v6, "<"
+    .local v0, escapedPv:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v7, "&lt;"
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v1, v6, v7}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v3, "<vid uri=\""
 
-    move-result-object v5
-
-    .line 26
-    .local v5, escapedLessThanUri:Ljava/lang/String;
-    const-string v6, "<"
-
-    const-string v7, "&lt;"
-
-    invoke-static {v0, v6, v7}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 27
-    .local v4, escapedLessThanPv:Ljava/lang/String;
-    const-string v6, ">"
-
-    const-string v7, "&gt;"
-
-    invoke-static {v5, v6, v7}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 28
-    .local v3, escapedGreaterThanUri:Ljava/lang/String;
-    const-string v6, ">"
-
-    const-string v7, "&gt;"
-
-    invoke-static {v4, v6, v7}, Lcom/htc/text/tag/VideoTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 29
-    .local v2, escapedGreaterThanPv:Ljava/lang/String;
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v2
 
-    const-string v7, "<vid uri=\""
+    const-string v3, "\" pv=\""
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v2
 
-    const-string v7, "\" pv=\""
+    const-string v3, "\" />"
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v2
 
-    const-string v7, "\" />"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    return-object v6
+    return-object v2
 .end method
 
 .method public toTrimmedString()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 41
+    .line 37
     const-string v0, ""
 
     return-object v0

@@ -25,13 +25,13 @@
     .parameter "looper"
 
     .prologue
-    .line 5288
+    .line 5297
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
-    .line 5289
+    .line 5298
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 5290
+    .line 5299
     return-void
 .end method
 
@@ -42,17 +42,17 @@
     .parameter "msg"
 
     .prologue
-    .line 5297
+    .line 5306
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 5325
+    .line 5334
     :cond_0
     :goto_0
     return-void
 
-    .line 5299
+    .line 5308
     :pswitch_0
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -64,11 +64,11 @@
 
     move-result v3
 
-    .line 5300
+    .line 5309
     .local v3, position:I
     const/4 v0, 0x0
 
-    .line 5303
+    .line 5312
     .local v0, albumArtPath:Ljava/lang/String;
     :try_start_0
     sget-object v4, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    .line 5308
+    .line 5317
     :goto_1
     const-string v4, "[PluginNowPlayingListActivity]"
 
@@ -134,7 +134,7 @@
 
     invoke-static {v4, v5}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5311
+    .line 5320
     if-eqz v0, :cond_0
 
     iget-object v4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -165,7 +165,7 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 5313
+    .line 5322
     iget-object v4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mNowPlayingItemsArrayList:Ljava/util/ArrayList;
@@ -179,13 +179,13 @@
 
     check-cast v2, Landroid/content/ContentValues;
 
-    .line 5314
+    .line 5323
     .local v2, listItem:Landroid/content/ContentValues;
     const-string v4, "albumartpath"
 
     invoke-virtual {v2, v4, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5316
+    .line 5325
     iget-object v4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mRefreshListHandler:Landroid/os/Handler;
@@ -197,7 +197,7 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 5317
+    .line 5326
     iget-object v4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NonUIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mRefreshListHandler:Landroid/os/Handler;
@@ -218,18 +218,18 @@
 
     goto/16 :goto_0
 
-    .line 5304
+    .line 5313
     .end local v2           #listItem:Landroid/content/ContentValues;
     :catch_0
     move-exception v1
 
-    .line 5305
+    .line 5314
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 5297
+    .line 5306
     nop
 
     :pswitch_data_0

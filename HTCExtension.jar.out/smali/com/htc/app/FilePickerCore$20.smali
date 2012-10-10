@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3452
+    .line 3802
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$20;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,28 +43,28 @@
     .parameter "whichButton"
 
     .prologue
-    .line 3454
+    .line 3804
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.settings.WIRELESS_SETTINGS"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3456
+    .line 3806
     .local v1, i:Landroid/content/Intent;
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 3457
+    .line 3807
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$20;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 3458
+    .line 3808
     .local v0, activity:Landroid/app/Activity;
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 3459
+    .line 3809
     return-void
 .end method

@@ -146,7 +146,7 @@
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 141
-    const-string/jumbo v4, "layout_inflater"
+    const-string v4, "layout_inflater"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 781
+    .line 782
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$12;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "which"
 
     .prologue
-    .line 783
+    .line 784
     const/4 v0, 0x0
 
-    .line 785
+    .line 786
     .local v0, cur:Landroid/database/Cursor;
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$12;->this$0:Lcom/htc/music/DRMActionActivity;
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    .line 796
+    .line 797
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$12;->this$0:Lcom/htc/music/DRMActionActivity;
 
     const/4 v2, 0x0
@@ -85,32 +85,32 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 798
+    .line 799
     if-eqz v0, :cond_0
 
-    .line 799
+    .line 800
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 800
+    .line 801
     const/4 v0, 0x0
 
-    .line 803
+    .line 804
     :cond_0
     return-void
 
-    .line 798
+    .line 799
     :catchall_0
     move-exception v1
 
     if-eqz v0, :cond_1
 
-    .line 799
+    .line 800
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 800
+    .line 801
     const/4 v0, 0x0
 
-    .line 798
+    .line 799
     :cond_1
     throw v1
 .end method

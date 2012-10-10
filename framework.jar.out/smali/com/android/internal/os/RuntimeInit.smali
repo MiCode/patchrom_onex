@@ -226,7 +226,7 @@
 
     .line 148
     .local v2, userAgent:Ljava/lang/String;
-    const-string/jumbo v3, "http.agent"
+    const-string v3, "http.agent"
 
     invoke-static {v3, v2}, Ljava/lang/System;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -299,7 +299,7 @@
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 177
-    const-string/jumbo v4, "java.vm.version"
+    const-string v4, "java.vm.version"
 
     invoke-static {v4}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 

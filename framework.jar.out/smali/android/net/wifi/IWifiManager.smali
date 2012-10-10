@@ -151,6 +151,14 @@
     .end annotation
 .end method
 
+.method public abstract getAssociationManual()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getClientInfo()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -470,6 +478,14 @@
 .end method
 
 .method public abstract saveConfiguration()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setAssociationManual(I)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

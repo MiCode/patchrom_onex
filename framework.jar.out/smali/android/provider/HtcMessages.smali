@@ -20,6 +20,6 @@
     .line 5
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 52
     return-void
 .end method

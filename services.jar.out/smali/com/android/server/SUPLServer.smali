@@ -176,17 +176,17 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 298
+    .line 299
     const/4 v2, 0x0
 
-    .line 301
+    .line 302
     .local v2, out:Ljava/io/BufferedWriter;
     :try_start_0
     invoke-virtual {p0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v0
 
-    .line 302
+    .line 303
     .local v0, clientStream:Ljava/io/OutputStream;
     new-instance v3, Ljava/io/BufferedWriter;
 
@@ -201,31 +201,31 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 303
+    .line 304
     .end local v2           #out:Ljava/io/BufferedWriter;
     .local v3, out:Ljava/io/BufferedWriter;
     :try_start_1
     invoke-virtual {v3, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 304
+    .line 305
     const-string v6, "\n"
 
     invoke-virtual {v3, v6}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 305
+    .line 306
     invoke-virtual {v3}, Ljava/io/BufferedWriter;->flush()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 306
+    .line 307
     const/4 v4, 0x1
 
-    .line 310
+    .line 311
     .local v4, result:Z
     if-eqz v3, :cond_2
 
-    .line 312
+    .line 313
     :try_start_2
     invoke-virtual {v3}, Ljava/io/BufferedWriter;->close()V
     :try_end_2
@@ -236,7 +236,7 @@
     :goto_0
     move-object v2, v3
 
-    .line 318
+    .line 319
     .end local v0           #clientStream:Ljava/io/OutputStream;
     .end local v3           #out:Ljava/io/BufferedWriter;
     .restart local v2       #out:Ljava/io/BufferedWriter;
@@ -244,21 +244,21 @@
     :goto_1
     return v5
 
-    .line 307
+    .line 308
     .end local v4           #result:Z
     :catch_0
     move-exception v1
 
-    .line 308
+    .line 309
     .local v1, e:Ljava/lang/Exception;
     :goto_2
     const/4 v4, 0x0
 
-    .line 310
+    .line 311
     .restart local v4       #result:Z
     if-eqz v2, :cond_0
 
-    .line 312
+    .line 313
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
     :try_end_3
@@ -266,15 +266,15 @@
 
     goto :goto_1
 
-    .line 313
+    .line 314
     :catch_1
     move-exception v1
 
-    .line 314
+    .line 315
     .local v1, e:Ljava/io/IOException;
     goto :goto_1
 
-    .line 310
+    .line 311
     .end local v1           #e:Ljava/io/IOException;
     .end local v4           #result:Z
     :catchall_0
@@ -283,26 +283,26 @@
     :goto_3
     if-eqz v2, :cond_1
 
-    .line 312
+    .line 313
     :try_start_4
     invoke-virtual {v2}, Ljava/io/BufferedWriter;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 310
+    .line 311
     :cond_1
     :goto_4
     throw v5
 
-    .line 313
+    .line 314
     :catch_2
     move-exception v1
 
-    .line 314
+    .line 315
     .restart local v1       #e:Ljava/io/IOException;
     goto :goto_4
 
-    .line 313
+    .line 314
     .end local v1           #e:Ljava/io/IOException;
     .end local v2           #out:Ljava/io/BufferedWriter;
     .restart local v0       #clientStream:Ljava/io/OutputStream;
@@ -311,11 +311,11 @@
     :catch_3
     move-exception v1
 
-    .line 314
+    .line 315
     .restart local v1       #e:Ljava/io/IOException;
     goto :goto_0
 
-    .line 310
+    .line 311
     .end local v1           #e:Ljava/io/IOException;
     .end local v4           #result:Z
     :catchall_1
@@ -327,7 +327,7 @@
     .restart local v2       #out:Ljava/io/BufferedWriter;
     goto :goto_3
 
-    .line 307
+    .line 308
     .end local v2           #out:Ljava/io/BufferedWriter;
     .restart local v3       #out:Ljava/io/BufferedWriter;
     :catch_4
@@ -619,91 +619,98 @@
     .line 263
     sput-object v10, Landroid/supl/CNet;->slphost_port:Ljava/lang/String;
 
-    .line 266
+    .line 265
+    move-object/from16 v0, p0
+
+    iget-object v15, v0, Lcom/android/server/SUPLServer;->mContext:Landroid/content/Context;
+
+    invoke-static {v15}, Landroid/supl/CNet;->SetContext(Landroid/content/Context;)V
+
+    .line 267
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getAutoFqdnStorePath()Ljava/lang/String;
 
     move-result-object v15
 
     invoke-static {v15}, Landroid/supl/CNetSSLSocketProvider;->SetAutoFqdnStorePath(Ljava/lang/String;)V
 
-    .line 267
+    .line 268
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getStorePath()Ljava/lang/String;
 
     move-result-object v15
 
     invoke-static {v15}, Landroid/supl/CNetSSLSocketProvider;->SetFqdnPhoneStorePath(Ljava/lang/String;)V
 
-    .line 270
+    .line 271
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/SUPLServer;->mContext:Landroid/content/Context;
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->Init(Landroid/content/Context;)V
 
-    .line 273
+    .line 274
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getMcc()I
 
     move-result v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetMcc(I)V
 
-    .line 274
+    .line 275
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getMnc()I
 
     move-result v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetMnc(I)V
 
-    .line 275
+    .line 276
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getLac()I
 
     move-result v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetLac(I)V
 
-    .line 276
+    .line 277
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getCi()I
 
     move-result v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetCi(I)V
 
-    .line 277
+    .line 278
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getCellType()I
 
     move-result v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetCellType(I)V
 
-    .line 278
+    .line 279
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getMsisdn()Ljava/lang/String;
 
     move-result-object v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetMsisdn(Ljava/lang/String;)V
 
-    .line 279
+    .line 280
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getHmcc()I
 
     move-result v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetHMcc(I)V
 
-    .line 280
+    .line 281
     invoke-virtual {v8}, Landroid/supl/config/SuplConfig;->getHmnc()I
 
     move-result v15
 
     invoke-static {v15}, Landroid/supl/CSUPL_LP;->SetHMnc(I)V
 
-    .line 283
+    .line 284
     invoke-direct/range {p0 .. p0}, Lcom/android/server/SUPLServer;->nativeStartSocketServer()Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto/16 :goto_0
 
-    .line 284
+    .line 285
     .end local v1           #cid:Ljava/lang/String;
     .end local v3           #file:Ljava/io/File;
     .end local v5           #pathName:Ljava/lang/String;
@@ -725,11 +732,11 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 287
+    .line 288
     :catch_0
     move-exception v2
 
-    .line 288
+    .line 289
     .local v2, e:Ljava/lang/Exception;
     :try_start_5
     const-string v15, "SUPLServer"
@@ -744,7 +751,7 @@
 
     goto/16 :goto_0
 
-    .line 289
+    .line 290
     .end local v2           #e:Ljava/lang/Exception;
     :catchall_1
     move-exception v15
@@ -769,7 +776,7 @@
 
     goto/16 :goto_1
 
-    .line 294
+    .line 295
     .end local v1           #cid:Ljava/lang/String;
     .end local v2           #e:Ljava/lang/Exception;
     .end local v3           #file:Ljava/io/File;

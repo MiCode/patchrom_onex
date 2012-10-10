@@ -57,15 +57,15 @@
     .end annotation
 
     .prologue
-    .line 1186
+    .line 1185
     .local p3, messageClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/htc/protobuf/GeneratedMessage;>;"
     .local p4, builderClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/htc/protobuf/GeneratedMessage$Builder;>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1187
+    .line 1186
     iput-object p1, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->descriptor:Lcom/htc/protobuf/Descriptors$Descriptor;
 
-    .line 1188
+    .line 1187
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$Descriptor;->getFields()Ljava/util/List;
 
     move-result-object v2
@@ -78,7 +78,7 @@
 
     iput-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
-    .line 1190
+    .line 1189
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -89,7 +89,7 @@
 
     if-ge v1, v2, :cond_5
 
-    .line 1191
+    .line 1190
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$Descriptor;->getFields()Ljava/util/List;
 
     move-result-object v2
@@ -100,7 +100,7 @@
 
     check-cast v0, Lcom/htc/protobuf/Descriptors$FieldDescriptor;
 
-    .line 1192
+    .line 1191
     .local v0, field:Lcom/htc/protobuf/Descriptors$FieldDescriptor;
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
@@ -108,7 +108,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 1193
+    .line 1192
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     move-result-object v2
@@ -117,7 +117,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1194
+    .line 1193
     iget-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v3, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;
@@ -128,13 +128,13 @@
 
     aput-object v3, v2, v1
 
-    .line 1190
+    .line 1189
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1196
+    .line 1195
     :cond_0
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -144,7 +144,7 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 1197
+    .line 1196
     iget-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v3, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;
@@ -157,7 +157,7 @@
 
     goto :goto_1
 
-    .line 1200
+    .line 1199
     :cond_1
     iget-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
@@ -171,7 +171,7 @@
 
     goto :goto_1
 
-    .line 1204
+    .line 1203
     :cond_2
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -181,7 +181,7 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 1205
+    .line 1204
     iget-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v3, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularMessageFieldAccessor;
@@ -194,7 +194,7 @@
 
     goto :goto_1
 
-    .line 1207
+    .line 1206
     :cond_3
     invoke-virtual {v0}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -204,7 +204,7 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 1208
+    .line 1207
     iget-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v3, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;
@@ -217,7 +217,7 @@
 
     goto :goto_1
 
-    .line 1211
+    .line 1210
     :cond_4
     iget-object v2, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
@@ -231,7 +231,7 @@
 
     goto :goto_1
 
-    .line 1216
+    .line 1215
     .end local v0           #field:Lcom/htc/protobuf/Descriptors$FieldDescriptor;
     :cond_5
     return-void
@@ -242,7 +242,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1170
+    .line 1169
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->descriptor:Lcom/htc/protobuf/Descriptors$Descriptor;
 
     return-object v0
@@ -254,7 +254,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1170
+    .line 1169
     invoke-direct {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->getField(Lcom/htc/protobuf/Descriptors$FieldDescriptor;)Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     move-result-object v0
@@ -267,7 +267,7 @@
     .parameter "field"
 
     .prologue
-    .line 1223
+    .line 1222
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->getContainingType()Lcom/htc/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -276,7 +276,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1224
+    .line 1223
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "FieldDescriptor does not match message type."
@@ -285,7 +285,7 @@
 
     throw v0
 
-    .line 1226
+    .line 1225
     :cond_0
     invoke-virtual {p1}, Lcom/htc/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
@@ -293,7 +293,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1229
+    .line 1228
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "This type does not have extensions."
@@ -302,7 +302,7 @@
 
     throw v0
 
-    .line 1232
+    .line 1231
     :cond_1
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 

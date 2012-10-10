@@ -51,7 +51,7 @@
     .line 256
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$2;->this$0:Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;
 
-    const v1, 0x7f0700d4
+    const v1, 0x7f0700d5
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->showEmptyView(I)V
 

@@ -35,23 +35,23 @@
     .parameter "group"
 
     .prologue
-    .line 3348
+    .line 3943
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 3344
+    .line 3939
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->nethdPid:I
 
-    .line 3349
+    .line 3944
     iput-object p2, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->networkInterface:Ljava/lang/String;
 
-    .line 3350
+    .line 3945
     iput-object p3, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->groupNumber:Ljava/lang/String;
 
-    .line 3351
+    .line 3946
     return-void
 .end method
 
@@ -62,10 +62,10 @@
     .parameter "ifname"
 
     .prologue
-    .line 3410
+    .line 4057
     const/4 v1, -0x1
 
-    .line 3411
+    .line 4058
     .local v1, ret:I
     if-nez p1, :cond_0
 
@@ -77,18 +77,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 3412
+    .line 4059
     const-string v2, "WirelessDisplayService"
 
     const-string v3, "changeInterface: ifname is empty"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3418
+    .line 4065
     :goto_0
     return-void
 
-    .line 3414
+    .line 4061
     :cond_0
     const-string v2, "WirelessDisplayService"
 
@@ -112,7 +112,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3415
+    .line 4062
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,7 +131,7 @@
 
     move-result-object v0
 
-    .line 3416
+    .line 4063
     .local v0, inter:Ljava/lang/String;
     const-string v2, "INTERFACE"
 
@@ -146,10 +146,10 @@
     .locals 3
 
     .prologue
-    .line 3458
+    .line 4105
     const/4 v0, -0x1
 
-    .line 3459
+    .line 4106
     .local v0, ret:I
     const-string v1, "WirelessDisplayService"
 
@@ -157,7 +157,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3460
+    .line 4107
     const-string v1, "BSSID"
 
     const/4 v2, 0x0
@@ -166,7 +166,7 @@
 
     move-result v0
 
-    .line 3461
+    .line 4108
     return v0
 .end method
 
@@ -174,10 +174,10 @@
     .locals 3
 
     .prologue
-    .line 3480
+    .line 4127
     const/4 v0, -0x1
 
-    .line 3481
+    .line 4128
     .local v0, ret:I
     const-string v1, "WirelessDisplayService"
 
@@ -185,7 +185,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3482
+    .line 4129
     const-string v1, "DISCOVERY"
 
     const/4 v2, 0x0
@@ -194,7 +194,7 @@
 
     move-result v0
 
-    .line 3483
+    .line 4130
     return v0
 .end method
 
@@ -203,10 +203,10 @@
     .parameter "Bssid"
 
     .prologue
-    .line 3472
+    .line 4119
     const/4 v0, -0x1
 
-    .line 3473
+    .line 4120
     .local v0, ret:I
     const-string v2, "WirelessDisplayService"
 
@@ -214,7 +214,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3474
+    .line 4121
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,7 +233,7 @@
 
     move-result-object v1
 
-    .line 3475
+    .line 4122
     .local v1, val:Ljava/lang/String;
     const-string v2, "PEER_GET_INFO"
 
@@ -241,7 +241,7 @@
 
     move-result v0
 
-    .line 3476
+    .line 4123
     return v0
 .end method
 
@@ -249,14 +249,14 @@
     .locals 2
 
     .prologue
-    .line 3494
+    .line 4141
     const-string v0, "PID"
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/htc/server/WirelessDisplayService;->wivuIpcSend(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3495
+    .line 4142
     return-void
 .end method
 
@@ -264,10 +264,10 @@
     .locals 3
 
     .prologue
-    .line 3487
+    .line 4134
     const/4 v0, -0x1
 
-    .line 3488
+    .line 4135
     .local v0, ret:I
     const-string v1, "WirelessDisplayService"
 
@@ -275,7 +275,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3489
+    .line 4136
     const-string v1, "PLUGGED"
 
     const/4 v2, 0x0
@@ -284,7 +284,7 @@
 
     move-result v0
 
-    .line 3490
+    .line 4137
     return v0
 .end method
 
@@ -292,10 +292,10 @@
     .locals 3
 
     .prologue
-    .line 3465
+    .line 4112
     const/4 v0, -0x1
 
-    .line 3466
+    .line 4113
     .local v0, ret:I
     const-string v1, "WirelessDisplayService"
 
@@ -303,7 +303,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3467
+    .line 4114
     const-string v1, "SSID"
 
     const/4 v2, 0x0
@@ -312,7 +312,7 @@
 
     move-result v0
 
-    .line 3468
+    .line 4115
     return v0
 .end method
 
@@ -320,7 +320,7 @@
     .locals 1
 
     .prologue
-    .line 3399
+    .line 3995
     iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->networkInterface:Ljava/lang/String;
 
     return-object v0
@@ -330,7 +330,7 @@
     .locals 4
 
     .prologue
-    .line 3431
+    .line 4078
     const-string v0, "WirelessDisplayService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -361,7 +361,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3432
+    .line 4079
     const-string v0, "WirelessDisplayService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -392,7 +392,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3433
+    .line 4080
     return-void
 .end method
 
@@ -401,14 +401,14 @@
     .parameter "join"
 
     .prologue
-    .line 3448
+    .line 4095
     const/4 v0, -0x1
 
-    .line 3449
+    .line 4096
     .local v0, ret:I
     if-eqz p1, :cond_0
 
-    .line 3450
+    .line 4097
     const-string v1, "JOIN"
 
     const-string v2, "VALUE=1 "
@@ -417,7 +417,7 @@
 
     move-result v0
 
-    .line 3454
+    .line 4101
     :goto_0
     const-string v1, "WirelessDisplayService"
 
@@ -451,10 +451,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3455
+    .line 4102
     return v0
 
-    .line 3452
+    .line 4099
     :cond_0
     const-string v1, "JOIN"
 
@@ -472,14 +472,14 @@
     .parameter "plug"
 
     .prologue
-    .line 3436
+    .line 4083
     const/4 v0, -0x1
 
-    .line 3437
+    .line 4084
     .local v0, ret:I
     if-eqz p1, :cond_0
 
-    .line 3438
+    .line 4085
     const-string v1, "PLUGGED"
 
     const-string v2, "VALUE=1 "
@@ -488,7 +488,7 @@
 
     move-result v0
 
-    .line 3442
+    .line 4089
     :goto_0
     const-string v1, "WirelessDisplayService"
 
@@ -522,10 +522,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3443
+    .line 4090
     return v0
 
-    .line 3440
+    .line 4087
     :cond_0
     const-string v1, "PLUGGED"
 
@@ -538,11 +538,279 @@
     goto :goto_0
 .end method
 
+.method public requestSetMCastRoute(Ljava/lang/String;Z)I
+    .locals 10
+    .parameter "ifname"
+    .parameter "clearOldRoute"
+
+    .prologue
+    .line 4005
+    const/4 v5, -0x1
+
+    .line 4007
+    .local v5, ret:I
+    const-string v7, "WirelessDisplayService"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "requestSetMCastRoute, ifname = "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, ", value = "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4009
+    if-nez p1, :cond_0
+
+    const-string v7, ""
+
+    invoke-virtual {p1, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    .line 4010
+    const-string v7, "WirelessDisplayService"
+
+    const-string v8, "requestSetMCastRoute: ifname is empty"
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v6, v5
+
+    .line 4051
+    .end local v5           #ret:I
+    .local v6, ret:I
+    :goto_0
+    return v6
+
+    .line 4013
+    .end local v6           #ret:I
+    .restart local v5       #ret:I
+    :cond_0
+    const-string v7, "WirelessDisplayService"
+
+    const-string v8, "requestSetMCastRoute: ifname is NOT empty"
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4015
+    const/4 v2, 0x0
+
+    .line 4017
+    .local v2, destAddr:Landroid/net/LinkAddress;
+    const-string v7, "network_management"
+
+    invoke-static {v7}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    .line 4018
+    .local v0, b:Landroid/os/IBinder;
+    invoke-static {v0}, Landroid/os/INetworkManagementService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/INetworkManagementService;
+
+    move-result-object v4
+
+    .line 4020
+    .local v4, mNetd:Landroid/os/INetworkManagementService;
+    new-instance v2, Landroid/net/LinkAddress;
+
+    .end local v2           #destAddr:Landroid/net/LinkAddress;
+    const-string v7, "224.0.0.0"
+
+    invoke-static {v7}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
+
+    move-result-object v7
+
+    const/4 v8, 0x4
+
+    invoke-direct {v2, v7, v8}, Landroid/net/LinkAddress;-><init>(Ljava/net/InetAddress;I)V
+
+    .line 4021
+    .restart local v2       #destAddr:Landroid/net/LinkAddress;
+    new-instance v1, Landroid/net/RouteInfo;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v1, v2, v7}, Landroid/net/RouteInfo;-><init>(Landroid/net/LinkAddress;Ljava/net/InetAddress;)V
+
+    .line 4023
+    .local v1, dest:Landroid/net/RouteInfo;
+    if-eqz p2, :cond_1
+
+    .line 4024
+    const-string v7, "WirelessDisplayService"
+
+    const-string v8, "Remove all Multicast Route for netHD/WiVu"
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4026
+    iget-object v7, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mSoftapInterface:Ljava/lang/String;
+    invoke-static {v7}, Lcom/htc/server/WirelessDisplayService;->access$6300(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {p1, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    .line 4028
+    :try_start_0
+    iget-object v7, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mWiFiInterface:Ljava/lang/String;
+    invoke-static {v7}, Lcom/htc/server/WirelessDisplayService;->access$800(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v4, v7, v1}, Landroid/os/INetworkManagementService;->removeRoute(Ljava/lang/String;Landroid/net/RouteInfo;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 4041
+    :cond_1
+    :goto_1
+    const-string v7, "WirelessDisplayService"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Add Multicast Route for netHD/WiVu at Interface:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4044
+    :try_start_1
+    invoke-interface {v4, p1, v1}, Landroid/os/INetworkManagementService;->addRoute(Ljava/lang/String;Landroid/net/RouteInfo;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+
+    .line 4050
+    :goto_2
+    const/4 v5, 0x0
+
+    move v6, v5
+
+    .line 4051
+    .end local v5           #ret:I
+    .restart local v6       #ret:I
+    goto :goto_0
+
+    .line 4029
+    .end local v6           #ret:I
+    .restart local v5       #ret:I
+    :catch_0
+    move-exception v3
+
+    .line 4030
+    .local v3, e:Ljava/lang/Exception;
+    const-string v7, "WirelessDisplayService"
+
+    invoke-virtual {v3}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    .line 4034
+    .end local v3           #e:Ljava/lang/Exception;
+    :cond_2
+    :try_start_2
+    iget-object v7, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mSoftapInterface:Ljava/lang/String;
+    invoke-static {v7}, Lcom/htc/server/WirelessDisplayService;->access$6300(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v4, v7, v1}, Landroid/os/INetworkManagementService;->removeRoute(Ljava/lang/String;Landroid/net/RouteInfo;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    goto :goto_1
+
+    .line 4035
+    :catch_1
+    move-exception v3
+
+    .line 4036
+    .restart local v3       #e:Ljava/lang/Exception;
+    const-string v7, "WirelessDisplayService"
+
+    invoke-virtual {v3}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    .line 4045
+    .end local v3           #e:Ljava/lang/Exception;
+    :catch_2
+    move-exception v3
+
+    .line 4046
+    .restart local v3       #e:Ljava/lang/Exception;
+    const-string v7, "WirelessDisplayService"
+
+    invoke-virtual {v3}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+.end method
+
 .method public run()V
     .locals 3
 
     .prologue
-    .line 3357
+    .line 3952
     :try_start_0
     const-string v0, "/system/bin/netHDencode"
 
@@ -556,7 +824,7 @@
 
     iput v0, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->nethdPid:I
 
-    .line 3358
+    .line 3953
     const-string v0, "WirelessDisplayService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -583,11 +851,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3367
+    .line 3962
     :goto_0
     return-void
 
-    .line 3363
+    .line 3958
     :catch_0
     move-exception v0
 
@@ -599,7 +867,7 @@
     .parameter "bssid"
 
     .prologue
-    .line 3403
+    .line 3999
     const-string v1, "WirelessDisplayService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -622,7 +890,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3404
+    .line 4000
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -641,13 +909,13 @@
 
     move-result-object v0
 
-    .line 3405
+    .line 4001
     .local v0, value:Ljava/lang/String;
     const-string v1, "PEER_SELECT"
 
     invoke-static {v1, v0}, Lcom/htc/server/WirelessDisplayService;->wivuIpcSend(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3406
+    .line 4002
     return-void
 .end method
 
@@ -656,17 +924,17 @@
     .parameter "trans"
 
     .prologue
-    .line 3421
+    .line 4068
     if-eqz p1, :cond_0
 
-    .line 3422
+    .line 4069
     const-string v0, "LISTEN"
 
     const-string v1, "VALUE=1 "
 
     invoke-static {v0, v1}, Lcom/htc/server/WirelessDisplayService;->wivuIpcSend(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3426
+    .line 4073
     :goto_0
     const-string v0, "WirelessDisplayService"
 
@@ -690,10 +958,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3427
+    .line 4074
     return-void
 
-    .line 3424
+    .line 4071
     :cond_0
     const-string v0, "LISTEN"
 
@@ -708,27 +976,27 @@
     .locals 2
 
     .prologue
-    .line 3370
+    .line 3965
     const-string v0, "WirelessDisplayService"
 
     const-string v1, "stopThread()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3371
+    .line 3966
     iget v0, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->nethdPid:I
 
     if-lez v0, :cond_0
 
-    .line 3376
+    .line 3971
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->wivuIpcExit()I
 
-    .line 3377
+    .line 3972
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->nethdPid:I
 
-    .line 3380
+    .line 3975
     :cond_0
     return-void
 .end method
@@ -748,12 +1016,12 @@
 
     const/4 v9, -0x1
 
-    .line 3499
+    .line 4146
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 3501
+    .line 4148
     .local v1, b:Landroid/os/Bundle;
     if-eqz p1, :cond_8
 
@@ -765,10 +1033,10 @@
 
     if-eqz v6, :cond_8
 
-    .line 3502
+    .line 4149
     const/4 v0, -0x1
 
-    .line 3503
+    .line 4150
     .local v0, arg2:I
     const-string v6, "SUCCEED"
 
@@ -778,10 +1046,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 3504
+    .line 4151
     const/4 v0, 0x1
 
-    .line 3506
+    .line 4153
     :cond_0
     const-string v6, "PID"
 
@@ -791,14 +1059,14 @@
 
     if-eqz v6, :cond_1
 
-    .line 3507
+    .line 4154
     const-string v6, "="
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 3508
+    .line 4155
     .local v3, pids:[Ljava/lang/String;
     const-string v6, "WirelessDisplayService"
 
@@ -824,14 +1092,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3509
+    .line 4156
     array-length v6, v3
 
     const/4 v7, 0x3
 
     if-lt v6, v7, :cond_1
 
-    .line 3510
+    .line 4157
     const-string v6, "WirelessDisplayService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -856,7 +1124,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3511
+    .line 4158
     aget-object v6, v3, v13
 
     const-string v7, " "
@@ -867,7 +1135,7 @@
 
     move-result-object v4
 
-    .line 3512
+    .line 4159
     .local v4, res:Ljava/lang/String;
     const-string v6, "WirelessDisplayService"
 
@@ -891,14 +1159,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3513
+    .line 4160
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
 
     iput v6, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->nethdPid:I
 
-    .line 3514
+    .line 4161
     const-string v6, "WirelessDisplayService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -923,7 +1191,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3518
+    .line 4165
     .end local v3           #pids:[Ljava/lang/String;
     .end local v4           #res:Ljava/lang/String;
     :cond_1
@@ -931,7 +1199,7 @@
 
     invoke-virtual {v1, v6, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3519
+    .line 4166
     const-string v6, "DISCOVERY"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -940,8 +1208,8 @@
 
     if-eqz v6, :cond_3
 
-    .line 3520
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4167
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -951,22 +1219,22 @@
 
     move-result-object v2
 
-    .line 3533
+    .line 4180
     .local v2, m:Landroid/os/Message;
     :goto_0
     invoke-virtual {v2, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 3534
+    .line 4181
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3562
+    .line 4209
     .end local v0           #arg2:I
     .end local v2           #m:Landroid/os/Message;
     :cond_2
     :goto_1
     return-void
 
-    .line 3521
+    .line 4168
     .restart local v0       #arg2:I
     :cond_3
     const-string v6, "PLUGGED"
@@ -977,8 +1245,8 @@
 
     if-eqz v6, :cond_4
 
-    .line 3522
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4169
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -991,7 +1259,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_0
 
-    .line 3523
+    .line 4170
     .end local v2           #m:Landroid/os/Message;
     :cond_4
     const-string v6, "ROTATION"
@@ -1002,8 +1270,8 @@
 
     if-eqz v6, :cond_5
 
-    .line 3524
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4171
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1016,7 +1284,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_0
 
-    .line 3525
+    .line 4172
     .end local v2           #m:Landroid/os/Message;
     :cond_5
     const-string v6, "PEER_HRTBEAT"
@@ -1027,8 +1295,8 @@
 
     if-eqz v6, :cond_6
 
-    .line 3526
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4173
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1041,7 +1309,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_0
 
-    .line 3527
+    .line 4174
     .end local v2           #m:Landroid/os/Message;
     :cond_6
     const-string v6, "PEER_GET_INFO"
@@ -1052,8 +1320,8 @@
 
     if-eqz v6, :cond_7
 
-    .line 3528
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4175
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1066,7 +1334,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_0
 
-    .line 3530
+    .line 4177
     .end local v2           #m:Landroid/os/Message;
     :cond_7
     const-string v6, "WirelessDisplayService"
@@ -1091,8 +1359,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3531
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4178
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1103,18 +1371,18 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_0
 
-    .line 3535
+    .line 4182
     .end local v0           #arg2:I
     .end local v2           #m:Landroid/os/Message;
     :cond_8
     if-eqz p1, :cond_2
 
-    .line 3536
+    .line 4183
     const-string v6, "wivu_req"
 
     invoke-virtual {v1, v6, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3537
+    .line 4184
     const-string v6, "WIVUSTART"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1123,8 +1391,8 @@
 
     if-eqz v6, :cond_9
 
-    .line 3538
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4185
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1134,17 +1402,17 @@
 
     move-result-object v2
 
-    .line 3558
+    .line 4205
     .restart local v2       #m:Landroid/os/Message;
     :goto_2
     invoke-virtual {v2, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 3559
+    .line 4206
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
     goto/16 :goto_1
 
-    .line 3539
+    .line 4186
     .end local v2           #m:Landroid/os/Message;
     :cond_9
     const-string v6, "WIVUSTOP"
@@ -1155,8 +1423,8 @@
 
     if-eqz v6, :cond_a
 
-    .line 3540
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4187
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1169,7 +1437,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_2
 
-    .line 3541
+    .line 4188
     .end local v2           #m:Landroid/os/Message;
     :cond_a
     const-string v6, "PEER_LIST"
@@ -1180,8 +1448,8 @@
 
     if-eqz v6, :cond_b
 
-    .line 3542
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4189
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1194,7 +1462,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_2
 
-    .line 3543
+    .line 4190
     .end local v2           #m:Landroid/os/Message;
     :cond_b
     const-string v6, "SWUPGRADE"
@@ -1205,8 +1473,8 @@
 
     if-eqz v6, :cond_c
 
-    .line 3544
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 4191
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1219,7 +1487,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto :goto_2
 
-    .line 3546
+    .line 4193
     .end local v2           #m:Landroid/os/Message;
     :cond_c
     const-string v6, "WirelessDisplayService"
@@ -1244,7 +1512,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3547
+    .line 4194
     const-string v6, "BITRATE="
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1253,29 +1521,29 @@
 
     if-eqz v6, :cond_e
 
-    .line 3548
+    .line 4195
     const-string v6, "="
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 3549
+    .line 4196
     .local v5, values:[Ljava/lang/String;
     iget-object v6, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mRecorder:Landroid/media/MediaRecorder;
-    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$6800(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
+    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$7600(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
 
     move-result-object v6
 
     if-eqz v6, :cond_d
 
-    .line 3550
+    .line 4197
     iget-object v6, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mRecorder:Landroid/media/MediaRecorder;
-    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$6800(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
+    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$7600(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
 
     move-result-object v6
 
@@ -1291,11 +1559,11 @@
 
     invoke-virtual {v6, v7}, Landroid/media/MediaRecorder;->changeVideoBitRate(I)V
 
-    .line 3556
+    .line 4203
     .end local v5           #values:[Ljava/lang/String;
     :cond_d
     :goto_3
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v6
 
@@ -1306,7 +1574,7 @@
     .restart local v2       #m:Landroid/os/Message;
     goto/16 :goto_2
 
-    .line 3551
+    .line 4198
     .end local v2           #m:Landroid/os/Message;
     :cond_e
     const-string v6, "REQ_VIDEO_I_FRAME="
@@ -1317,29 +1585,29 @@
 
     if-eqz v6, :cond_d
 
-    .line 3552
+    .line 4199
     const-string v6, "="
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 3553
+    .line 4200
     .restart local v5       #values:[Ljava/lang/String;
     iget-object v6, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mRecorder:Landroid/media/MediaRecorder;
-    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$6800(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
+    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$7600(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
 
     move-result-object v6
 
     if-eqz v6, :cond_d
 
-    .line 3554
+    .line 4201
     iget-object v6, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mRecorder:Landroid/media/MediaRecorder;
-    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$6800(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
+    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$7600(Lcom/htc/server/WirelessDisplayService;)Landroid/media/MediaRecorder;
 
     move-result-object v6
 
@@ -1362,14 +1630,14 @@
     .locals 3
 
     .prologue
-    .line 3383
+    .line 3978
     const-string v0, "WirelessDisplayService"
 
     const-string v1, "wivuInit()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3386
+    .line 3982
     :try_start_0
     const-string v0, "/system/bin/netHDencode"
 
@@ -1383,7 +1651,7 @@
 
     iput v0, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->nethdPid:I
 
-    .line 3387
+    .line 3983
     const-string v0, "WirelessDisplayService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1410,13 +1678,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3395
+    .line 3991
     :goto_0
     iget v0, p0, Lcom/htc/server/WirelessDisplayService$WivuThread;->nethdPid:I
 
     return v0
 
-    .line 3392
+    .line 3988
     :catch_0
     move-exception v0
 

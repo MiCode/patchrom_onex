@@ -46,37 +46,37 @@
     .parameter "parentActivity"
 
     .prologue
-    .line 1640
+    .line 1715
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 1631
+    .line 1706
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->posMoreByArtistName:I
 
-    .line 1635
+    .line 1710
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->mCtx:Landroid/content/Context;
 
-    .line 1641
+    .line 1716
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v2, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->mParentActivity:Ljava/lang/ref/WeakReference;
 
-    .line 1643
+    .line 1718
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 1644
+    .line 1719
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->mCtx:Landroid/content/Context;
 
-    .line 1646
+    .line 1721
     iget-object v2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->mParentActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -85,11 +85,11 @@
 
     check-cast v1, Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    .line 1647
+    .line 1722
     .local v1, tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
     if-eqz v1, :cond_0
 
-    .line 1648
+    .line 1723
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    .line 1649
+    .line 1724
     .local v0, resources:Landroid/content/res/Resources;
     const v2, 0x7f02003e
 
@@ -109,7 +109,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mDefaultAlbumArt:Landroid/graphics/Bitmap;
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1802(Lcom/htc/music/browserlayer/AlbumDetailActivity;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 1651
+    .line 1726
     .end local v0           #resources:Landroid/content/res/Resources;
     :cond_0
     return-void
@@ -120,7 +120,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1623
+    .line 1698
     iget v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->posMoreByArtistName:I
 
     return v0
@@ -132,12 +132,12 @@
     .locals 1
 
     .prologue
-    .line 1937
+    .line 2016
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->posMoreByArtistName:I
 
-    .line 1938
+    .line 2017
     return-void
 .end method
 
@@ -147,7 +147,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1654
+    .line 1729
     iget-object v2, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->mParentActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -156,23 +156,23 @@
 
     check-cast v1, Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    .line 1655
+    .line 1730
     .local v1, tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
     if-nez v1, :cond_1
 
-    .line 1656
+    .line 1731
     const-string v2, "[AlbumDetailActivity]"
 
     const-string v3, "DetailListAdapter.getCount():tempActivity == null."
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1685
+    .line 1760
     :cond_0
     :goto_0
     return v0
 
-    .line 1660
+    .line 1735
     :cond_1
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mStopping:Z
     invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1000(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Z
@@ -181,7 +181,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 1661
+    .line 1736
     const-string v2, "[AlbumDetailActivity]"
 
     const-string v3, "DetailListAdapter.getCount():stopping."
@@ -190,7 +190,7 @@
 
     goto :goto_0
 
-    .line 1665
+    .line 1740
     :cond_2
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mShowError:Z
     invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Z
@@ -199,7 +199,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 1666
+    .line 1741
     const-string v2, "[AlbumDetailActivity]"
 
     const-string v3, "DetailListAdapter.getCount():mShowError."
@@ -208,7 +208,7 @@
 
     goto :goto_0
 
-    .line 1670
+    .line 1745
     :cond_3
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
     invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
@@ -228,7 +228,7 @@
 
     if-nez v2, :cond_5
 
-    .line 1671
+    .line 1746
     :cond_4
     const-string v2, "[AlbumDetailActivity]"
 
@@ -238,7 +238,7 @@
 
     goto :goto_0
 
-    .line 1675
+    .line 1750
     :cond_5
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
     invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
@@ -251,7 +251,7 @@
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 1678
+    .line 1753
     .local v0, retInt:I
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isSupportListenStore()Z
 
@@ -271,18 +271,17 @@
 
     move-result-object v2
 
-    const-string v3, "<unknown>"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    #calls: Lcom/htc/music/browserlayer/AlbumDetailActivity;->isUnknownArtist(Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2900(Lcom/htc/music/browserlayer/AlbumDetailActivity;Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 1680
+    .line 1755
     iput v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->posMoreByArtistName:I
 
-    .line 1681
+    .line 1756
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -293,7 +292,7 @@
     .parameter "position"
 
     .prologue
-    .line 1689
+    .line 1764
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -306,7 +305,7 @@
     .parameter "position"
 
     .prologue
-    .line 1693
+    .line 1768
     int-to-long v0, p1
 
     return-wide v0
@@ -317,28 +316,28 @@
     .parameter "position"
 
     .prologue
-    .line 1919
+    .line 1998
     if-nez p1, :cond_0
 
-    .line 1920
+    .line 1999
     const/4 v0, 0x0
 
-    .line 1928
+    .line 2007
     :goto_0
     return v0
 
-    .line 1925
+    .line 2004
     :cond_0
     iget v0, p0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->posMoreByArtistName:I
 
     if-ne p1, v0, :cond_1
 
-    .line 1926
+    .line 2005
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 1928
+    .line 2007
     :cond_1
     const/4 v0, 0x2
 
@@ -352,7 +351,7 @@
     .parameter "parent"
 
     .prologue
-    .line 1705
+    .line 1780
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter;->mParentActivity:Ljava/lang/ref/WeakReference;
@@ -365,11 +364,11 @@
 
     check-cast v20, Lcom/htc/music/browserlayer/AlbumDetailActivity;
 
-    .line 1706
+    .line 1781
     .local v20, tempActivity:Lcom/htc/music/browserlayer/AlbumDetailActivity;
     if-nez v20, :cond_0
 
-    .line 1707
+    .line 1782
     const-string v28, "[AlbumDetailActivity]"
 
     const-string v29, "DetailListAdapter.getView(int,View,ViewGroup):tempActivity == null."
@@ -378,11 +377,11 @@
 
     move-object/from16 v25, p2
 
-    .line 1914
+    .line 1993
     :goto_0
     return-object v25
 
-    .line 1711
+    .line 1786
     :cond_0
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mStopping:Z
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1000(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Z
@@ -391,7 +390,7 @@
 
     if-eqz v28, :cond_1
 
-    .line 1712
+    .line 1787
     const-string v28, "[AlbumDetailActivity]"
 
     const-string v29, "DetailListAdapter.getView(int,View,ViewGroup):stopping."
@@ -400,20 +399,20 @@
 
     move-object/from16 v25, p2
 
-    .line 1713
+    .line 1788
     goto :goto_0
 
-    .line 1716
+    .line 1791
     :cond_1
     if-nez p1, :cond_a
 
-    .line 1718
+    .line 1793
     if-eqz p2, :cond_3
 
-    .line 1719
+    .line 1794
     move-object/from16 v25, p2
 
-    .line 1750
+    .line 1825
     .local v25, v:Landroid/view/View;
     :goto_1
     const v28, 0x7f08005c
@@ -428,7 +427,7 @@
 
     check-cast v19, Lcom/htc/widget/HtcRimImageButton;
 
-    .line 1751
+    .line 1826
     .local v19, shareOn:Lcom/htc/widget/HtcRimImageButton;
     new-instance v28, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$1;
 
@@ -446,7 +445,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcRimImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1758
+    .line 1833
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
@@ -470,7 +469,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcRimImageButton;->setEnabled(Z)V
 
-    .line 1760
+    .line 1835
     const v28, 0x7f08005a
 
     move-object/from16 v0, v25
@@ -483,21 +482,21 @@
 
     check-cast v17, Landroid/widget/TextView;
 
-    .line 1761
+    .line 1836
     .local v17, releaseYearTV:Landroid/widget/TextView;
     const/16 v16, 0x0
 
-    .line 1762
+    .line 1837
     .local v16, releaseYear:Ljava/lang/String;
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mReleaseYear:Ljava/lang/String;
-    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2800(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3100(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
     move-result-object v28
 
     if-eqz v28, :cond_6
 
-    .line 1763
-    const v28, 0x7f0701c9
+    .line 1838
+    const v28, 0x7f0701ca
 
     move-object/from16 v0, v20
 
@@ -518,7 +517,7 @@
     const/16 v30, 0x0
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mReleaseYear:Ljava/lang/String;
-    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$2800(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3100(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
     move-result-object v31
 
@@ -528,7 +527,7 @@
 
     move-result-object v16
 
-    .line 1764
+    .line 1839
     const/16 v28, 0x0
 
     move-object/from16 v0, v17
@@ -537,14 +536,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1765
+    .line 1840
     move-object/from16 v0, v17
 
     move-object/from16 v1, v16
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1771
+    .line 1846
     :goto_3
     const v28, 0x7f08005b
 
@@ -558,25 +557,25 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    .line 1772
+    .line 1847
     .local v10, genreType:Landroid/widget/TextView;
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumGenre:Ljava/lang/String;
-    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3100(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
     move-result-object v28
 
     if-eqz v28, :cond_7
 
-    .line 1773
+    .line 1848
     const/16 v28, 0x0
 
     move/from16 v0, v28
 
     invoke-virtual {v10, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1774
+    .line 1849
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumGenre:Ljava/lang/String;
-    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3100(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
+    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Ljava/lang/String;
 
     move-result-object v28
 
@@ -584,7 +583,7 @@
 
     invoke-virtual {v10, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1780
+    .line 1855
     :goto_4
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mNumberOfTracks:I
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
@@ -593,7 +592,7 @@
 
     if-lez v28, :cond_2
 
-    .line 1781
+    .line 1856
     const v28, 0x7f080059
 
     move-object/from16 v0, v25
@@ -606,11 +605,11 @@
 
     check-cast v24, Landroid/widget/TextView;
 
-    .line 1782
+    .line 1857
     .local v24, trackNumberTV:Landroid/widget/TextView;
     const/4 v14, 0x0
 
-    .line 1783
+    .line 1858
     .local v14, numTracks:Ljava/lang/String;
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mNumberOfTracks:I
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
@@ -625,8 +624,8 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 1784
-    const v28, 0x7f0701c8
+    .line 1859
+    const v28, 0x7f0701c9
 
     move-object/from16 v0, v20
 
@@ -661,13 +660,13 @@
 
     move-result-object v14
 
-    .line 1788
+    .line 1863
     :goto_5
     move-object/from16 v0, v24
 
     invoke-virtual {v0, v14}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1791
+    .line 1866
     .end local v14           #numTracks:Ljava/lang/String;
     .end local v24           #trackNumberTV:Landroid/widget/TextView;
     :cond_2
@@ -683,7 +682,7 @@
 
     check-cast v4, Landroid/widget/ImageView;
 
-    .line 1792
+    .line 1867
     .local v4, albumArtIV:Landroid/widget/ImageView;
     const v28, 0x7f080058
 
@@ -697,7 +696,7 @@
 
     check-cast v26, Landroid/widget/ImageView;
 
-    .line 1793
+    .line 1868
     .local v26, view:Landroid/widget/ImageView;
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArt:Landroid/graphics/Bitmap;
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1700(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/graphics/Bitmap;
@@ -717,7 +716,7 @@
 
     if-nez v28, :cond_9
 
-    .line 1794
+    .line 1869
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mAlbumArt:Landroid/graphics/Bitmap;
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$1700(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/graphics/Bitmap;
 
@@ -727,14 +726,14 @@
 
     invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1795
+    .line 1870
     const/16 v28, 0x0
 
     move/from16 v0, v28
 
     invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1796
+    .line 1871
     const/16 v28, 0x0
 
     move-object/from16 v0, v26
@@ -745,7 +744,7 @@
 
     goto/16 :goto_0
 
-    .line 1721
+    .line 1796
     .end local v4           #albumArtIV:Landroid/widget/ImageView;
     .end local v10           #genreType:Landroid/widget/TextView;
     .end local v16           #releaseYear:Ljava/lang/String;
@@ -776,7 +775,7 @@
 
     move-result-object v25
 
-    .line 1723
+    .line 1798
     .restart local v25       #v:Landroid/view/View;
     const v28, 0x7f08005c
 
@@ -790,11 +789,11 @@
 
     check-cast v19, Lcom/htc/widget/HtcRimImageButton;
 
-    .line 1724
+    .line 1799
     .restart local v19       #shareOn:Lcom/htc/widget/HtcRimImageButton;
     if-eqz v19, :cond_4
 
-    .line 1725
+    .line 1800
     const-string v28, "common_b_circle_outer"
 
     const v29, 0x2080007
@@ -847,7 +846,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/widget/HtcRimImageButton;->setButtonBackgroundResource(III)V
 
-    .line 1729
+    .line 1804
     const v28, 0x7f020026
 
     move-object/from16 v0, v19
@@ -856,19 +855,19 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 
-    .line 1732
+    .line 1807
     :cond_4
     invoke-virtual/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v18
 
-    .line 1733
+    .line 1808
     .local v18, res:Landroid/content/res/Resources;
     new-instance v15, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v15}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1734
+    .line 1809
     .local v15, option:Landroid/graphics/BitmapFactory$Options;
     const/16 v28, 0x1
 
@@ -876,14 +875,14 @@
 
     iput v0, v15, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 1735
+    .line 1810
     const/16 v28, 0x1
 
     move/from16 v0, v28
 
     iput-boolean v0, v15, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1736
+    .line 1811
     const v28, 0x7f02003e
 
     move-object/from16 v0, v18
@@ -892,7 +891,7 @@
 
     invoke-static {v0, v1, v15}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 1738
+    .line 1813
     const v28, 0x7f080058
 
     move-object/from16 v0, v25
@@ -905,7 +904,7 @@
 
     check-cast v26, Landroid/widget/ImageView;
 
-    .line 1739
+    .line 1814
     .restart local v26       #view:Landroid/widget/ImageView;
     iget v0, v15, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
@@ -923,7 +922,7 @@
 
     add-int v27, v28, v29
 
-    .line 1740
+    .line 1815
     .local v27, width:I
     iget v0, v15, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
@@ -941,7 +940,7 @@
 
     add-int v11, v28, v29
 
-    .line 1741
+    .line 1816
     .local v11, height:I
     invoke-virtual/range {v26 .. v26}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -953,7 +952,7 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 1742
+    .line 1817
     invoke-virtual/range {v26 .. v26}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v28
@@ -962,7 +961,7 @@
 
     iput v11, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 1744
+    .line 1819
     new-instance v12, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
 
     const/16 v28, 0x0
@@ -971,7 +970,7 @@
 
     invoke-direct {v12, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;-><init>(I)V
 
-    .line 1745
+    .line 1820
     .local v12, holder:Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
     move-object/from16 v0, v25
 
@@ -979,7 +978,7 @@
 
     goto/16 :goto_1
 
-    .line 1758
+    .line 1833
     .end local v11           #height:I
     .end local v12           #holder:Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
     .end local v15           #option:Landroid/graphics/BitmapFactory$Options;
@@ -991,7 +990,7 @@
 
     goto/16 :goto_2
 
-    .line 1768
+    .line 1843
     .restart local v16       #releaseYear:Ljava/lang/String;
     .restart local v17       #releaseYearTV:Landroid/widget/TextView;
     :cond_6
@@ -1005,7 +1004,7 @@
 
     goto/16 :goto_3
 
-    .line 1776
+    .line 1851
     .restart local v10       #genreType:Landroid/widget/TextView;
     :cond_7
     const/16 v28, 0x8
@@ -1016,11 +1015,11 @@
 
     goto/16 :goto_4
 
-    .line 1786
+    .line 1861
     .restart local v14       #numTracks:Ljava/lang/String;
     .restart local v24       #trackNumberTV:Landroid/widget/TextView;
     :cond_8
-    const v28, 0x7f0701c7
+    const v28, 0x7f0701c8
 
     move-object/from16 v0, v20
 
@@ -1057,7 +1056,7 @@
 
     goto/16 :goto_5
 
-    .line 1802
+    .line 1877
     .end local v14           #numTracks:Ljava/lang/String;
     .end local v24           #trackNumberTV:Landroid/widget/TextView;
     .restart local v4       #albumArtIV:Landroid/widget/ImageView;
@@ -1071,7 +1070,7 @@
 
     goto/16 :goto_0
 
-    .line 1823
+    .line 1898
     .end local v4           #albumArtIV:Landroid/widget/ImageView;
     .end local v10           #genreType:Landroid/widget/TextView;
     .end local v16           #releaseYear:Ljava/lang/String;
@@ -1092,13 +1091,13 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 1825
+    .line 1900
     if-eqz p2, :cond_b
 
-    .line 1826
+    .line 1901
     move-object/from16 v25, p2
 
-    .line 1833
+    .line 1908
     .restart local v25       #v:Landroid/view/View;
     :goto_6
     const v28, 0x7f080054
@@ -1113,7 +1112,7 @@
 
     check-cast v21, Landroid/widget/TextView;
 
-    .line 1834
+    .line 1909
     .local v21, textContent:Landroid/widget/TextView;
     move-object/from16 v0, p0
 
@@ -1125,13 +1124,13 @@
 
     move-result-object v28
 
-    const v29, 0x7f070112
+    const v29, 0x7f070113
 
     invoke-virtual/range {v28 .. v29}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1835
+    .line 1910
     .local v5, artistPattern:Ljava/lang/String;
     const-string v28, "%s"
 
@@ -1143,7 +1142,7 @@
 
     if-eqz v28, :cond_c
 
-    .line 1836
+    .line 1911
     const-string v28, "%s"
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mArtistName:Ljava/lang/String;
@@ -1167,7 +1166,7 @@
 
     goto/16 :goto_0
 
-    .line 1828
+    .line 1903
     .end local v5           #artistPattern:Ljava/lang/String;
     .end local v21           #textContent:Landroid/widget/TextView;
     .end local v25           #v:Landroid/view/View;
@@ -1194,7 +1193,7 @@
 
     move-result-object v25
 
-    .line 1829
+    .line 1904
     .restart local v25       #v:Landroid/view/View;
     new-instance v12, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
 
@@ -1204,7 +1203,7 @@
 
     invoke-direct {v12, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;-><init>(I)V
 
-    .line 1830
+    .line 1905
     .restart local v12       #holder:Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
     move-object/from16 v0, v25
 
@@ -1212,7 +1211,7 @@
 
     goto :goto_6
 
-    .line 1838
+    .line 1913
     .end local v12           #holder:Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
     .restart local v5       #artistPattern:Ljava/lang/String;
     .restart local v21       #textContent:Landroid/widget/TextView;
@@ -1223,14 +1222,14 @@
 
     goto/16 :goto_0
 
-    .line 1844
+    .line 1919
     .end local v5           #artistPattern:Ljava/lang/String;
     .end local v21           #textContent:Landroid/widget/TextView;
     .end local v25           #v:Landroid/view/View;
     :cond_d
     add-int/lit8 p1, p1, -0x1
 
-    .line 1846
+    .line 1921
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
@@ -1242,7 +1241,7 @@
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 1847
+    .line 1922
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
 
@@ -1263,7 +1262,7 @@
 
     move-result-object v23
 
-    .line 1849
+    .line 1924
     .local v23, trackName:Ljava/lang/String;
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mTrackCursor:Landroid/database/Cursor;
     invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)Landroid/database/Cursor;
@@ -1285,14 +1284,14 @@
 
     move-result v6
 
-    .line 1854
+    .line 1929
     .local v6, audioId:I
     if-eqz p2, :cond_e
 
-    .line 1855
+    .line 1930
     move-object/from16 v25, p2
 
-    .line 1856
+    .line 1931
     .restart local v25       #v:Landroid/view/View;
     const v28, 0x7f080056
 
@@ -1306,7 +1305,7 @@
 
     check-cast v13, Lcom/htc/widget/HtcRimImageButton;
 
-    .line 1870
+    .line 1945
     .local v13, ib:Lcom/htc/widget/HtcRimImageButton;
     :goto_7
     const v28, 0x7f080037
@@ -1321,11 +1320,11 @@
 
     check-cast v22, Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 1872
+    .line 1947
     .local v22, textView:Lcom/htc/widget/HtcListItem2LineText;
     invoke-virtual/range {v22 .. v23}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1873
+    .line 1948
     const/16 v28, 0x8
 
     move-object/from16 v0, v22
@@ -1334,7 +1333,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 1878
+    .line 1953
     const v28, 0x7f080055
 
     move-object/from16 v0, v25
@@ -1347,7 +1346,7 @@
 
     check-cast v7, Lcom/htc/widget/HtcListItemImageButton;
 
-    .line 1880
+    .line 1955
     .local v7, badgeNowPlaying:Lcom/htc/widget/HtcListItemImageButton;
     :try_start_0
     sget-object v28, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
@@ -1364,14 +1363,14 @@
 
     if-ne v6, v0, :cond_f
 
-    .line 1881
+    .line 1956
     sget-object v28, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     move-object/from16 v0, v28
 
     invoke-virtual {v7, v0}, Lcom/htc/widget/HtcListItemImageButton;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 1882
+    .line 1957
     const/16 v28, 0x0
 
     move/from16 v0, v28
@@ -1380,7 +1379,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1895
+    .line 1970
     :goto_8
     invoke-virtual {v13}, Lcom/htc/widget/HtcRimImageButton;->getTag()Ljava/lang/Object;
 
@@ -1396,7 +1395,7 @@
 
     move-object/from16 v8, v28
 
-    .line 1896
+    .line 1971
     .local v8, data:Landroid/os/Bundle;
     :goto_9
     const-string v28, "audioid"
@@ -1405,7 +1404,7 @@
 
     invoke-virtual {v8, v0, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1897
+    .line 1972
     const-string v28, "position"
 
     move-object/from16 v0, v28
@@ -1414,7 +1413,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1898
+    .line 1973
     const-string v28, "trackname"
 
     move-object/from16 v0, v28
@@ -1423,10 +1422,10 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1899
+    .line 1974
     invoke-virtual {v13, v8}, Lcom/htc/widget/HtcRimImageButton;->setTag(Ljava/lang/Object;)V
 
-    .line 1900
+    .line 1975
     new-instance v28, Lcom/htc/music/browserlayer/AlbumDetailActivity$DetailListAdapter$2;
 
     move-object/from16 v0, v28
@@ -1441,27 +1440,37 @@
 
     invoke-virtual {v13, v0}, Lcom/htc/widget/HtcRimImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1910
+    .line 1985
     new-instance v28, Landroid/view/TouchDelegate;
 
     new-instance v29, Landroid/graphics/Rect;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mScreenWidth:I
-    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
+    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
 
     move-result v30
 
-    add-int/lit8 v30, v30, -0x64
+    const v31, 0x7f0b009c
+
+    move-object/from16 v0, v20
+
+    move/from16 v1, v31
+
+    invoke-static {v0, v1}, Lcom/htc/music/util/ProjectSettings;->getIntValue(Landroid/content/Context;I)I
+
+    move-result v31
+
+    sub-int v30, v30, v31
 
     const/16 v31, 0x0
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mScreenWidth:I
-    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3300(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
+    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3600(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
 
     move-result v32
 
     #getter for: Lcom/htc/music/browserlayer/AlbumDetailActivity;->mScreenHeight:I
-    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3400(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
+    invoke-static/range {v20 .. v20}, Lcom/htc/music/browserlayer/AlbumDetailActivity;->access$3700(Lcom/htc/music/browserlayer/AlbumDetailActivity;)I
 
     move-result v33
 
@@ -1481,7 +1490,7 @@
 
     goto/16 :goto_0
 
-    .line 1858
+    .line 1933
     .end local v7           #badgeNowPlaying:Lcom/htc/widget/HtcListItemImageButton;
     .end local v8           #data:Landroid/os/Bundle;
     .end local v13           #ib:Lcom/htc/widget/HtcRimImageButton;
@@ -1510,7 +1519,7 @@
 
     move-result-object v25
 
-    .line 1859
+    .line 1934
     .restart local v25       #v:Landroid/view/View;
     const v28, 0x7f080056
 
@@ -1524,7 +1533,7 @@
 
     check-cast v13, Lcom/htc/widget/HtcRimImageButton;
 
-    .line 1860
+    .line 1935
     .restart local v13       #ib:Lcom/htc/widget/HtcRimImageButton;
     const-string v28, "common_circle_outer"
 
@@ -1576,21 +1585,21 @@
 
     invoke-virtual {v13, v0, v1, v2}, Lcom/htc/widget/HtcRimImageButton;->setButtonBackgroundResource(III)V
 
-    .line 1864
+    .line 1939
     const v28, 0x7f020028
 
     move/from16 v0, v28
 
     invoke-virtual {v13, v0}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 
-    .line 1865
+    .line 1940
     const/16 v28, 0x0
 
     move/from16 v0, v28
 
     invoke-virtual {v13, v0}, Lcom/htc/widget/HtcRimImageButton;->setFocusable(Z)V
 
-    .line 1866
+    .line 1941
     new-instance v12, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
 
     const/16 v28, 0x2
@@ -1599,7 +1608,7 @@
 
     invoke-direct {v12, v0}, Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;-><init>(I)V
 
-    .line 1867
+    .line 1942
     .restart local v12       #holder:Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
     move-object/from16 v0, v25
 
@@ -1607,7 +1616,7 @@
 
     goto/16 :goto_7
 
-    .line 1884
+    .line 1959
     .end local v12           #holder:Lcom/htc/music/browserlayer/AlbumDetailActivity$ViewHolder;
     .restart local v7       #badgeNowPlaying:Lcom/htc/widget/HtcListItemImageButton;
     .restart local v22       #textView:Lcom/htc/widget/HtcListItem2LineText;
@@ -1623,17 +1632,17 @@
 
     goto/16 :goto_8
 
-    .line 1886
+    .line 1961
     :catch_0
     move-exception v9
 
-    .line 1887
+    .line 1962
     .local v9, e:Landroid/os/RemoteException;
     invoke-virtual {v9}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_8
 
-    .line 1895
+    .line 1970
     .end local v9           #e:Landroid/os/RemoteException;
     :cond_10
     new-instance v8, Landroid/os/Bundle;
@@ -1647,7 +1656,7 @@
     .locals 1
 
     .prologue
-    .line 1933
+    .line 2012
     const/4 v0, 0x4
 
     return v0
@@ -1660,13 +1669,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1698
+    .line 1773
     if-ge p1, v0, :cond_0
 
-    .line 1699
+    .line 1774
     const/4 v0, 0x0
 
-    .line 1701
+    .line 1776
     :cond_0
     return v0
 .end method

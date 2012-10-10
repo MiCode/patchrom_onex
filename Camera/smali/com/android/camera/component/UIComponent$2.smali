@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 333
+    .line 336
     iput-object p1, p0, Lcom/android/camera/component/UIComponent$2;->this$0:Lcom/android/camera/component/UIComponent;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +43,12 @@
     .parameter "rotation"
 
     .prologue
-    .line 336
+    .line 339
     check-cast p1, Lcom/android/camera/rotate/RotateRelativeLayout;
 
     .end local p1
     invoke-virtual {p1, p2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 337
+    .line 340
     return-void
 .end method

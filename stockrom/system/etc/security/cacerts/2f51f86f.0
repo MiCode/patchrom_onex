@@ -1,0 +1,54 @@
+-----BEGIN CERTIFICATE-----
+MIIDJTCCAo4CCQDLDgUmqmwZ9jANBgkqhkiG9w0BAQUFADCB1jELMAkGA1UEBhMC
+RlIxEzARBgNVBAgTClNvbWUtU3RhdGUxDjAMBgNVBAcTBVBhcmlzMSAwHgYDVQQK
+FBdHcm91cGUgRnJhbmNlIFTDqWzDqWNvbTEqMCgGA1UECxMhRGV2aWNlcyBBcHBs
+aWNhdGlvbnMgYW5kIFNlcnZpY2VzMSAwHgYDVQQDExd3d3cuZnRncm91cC1kZXZp
+Y2VzLmNvbTEyMDAGCSqGSIb3DQEJARYjZGFtaWVuLmNlcmJlbGF1ZEBvcmFuZ2Ut
+ZnRncm91cC5jb20wHhcNMDkxMDI2MTA0ODMzWhcNMTkxMDI2MTA0ODMzWjCB1jEL
+MAkGA1UEBhMCRlIxEzARBgNVBAgTClNvbWUtU3RhdGUxDjAMBgNVBAcTBVBhcmlz
+MSAwHgYDVQQKFBdHcm91cGUgRnJhbmNlIFTDqWzDqWNvbTEqMCgGA1UECxMhRGV2
+aWNlcyBBcHBsaWNhdGlvbnMgYW5kIFNlcnZpY2VzMSAwHgYDVQQDExd3d3cuZnRn
+cm91cC1kZXZpY2VzLmNvbTEyMDAGCSqGSIb3DQEJARYjZGFtaWVuLmNlcmJlbGF1
+ZEBvcmFuZ2UtZnRncm91cC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGB
+AM/HsnpDvUhGilf2cDVTY2p61+l/BU0gYLwM22Lu0YmiiQkKa/c+r8to687q6ewL
+Y9k9QSCthA/oBpXXMacAxyEezk5PP8+TgFmi44/emHT6dh7Uo8e6mFF2ytcJ6UNj
+i/HmWNn73+ShIr9OBnQGkdsRHiSKbwNFIgRiJ3kgFD7VAgMBAAEwDQYJKoZIhvcN
+AQEFBQADgYEAMKk2wo+5aBro8tZru2yxrq4BLQq6eHUVGu/hlsDRbxfDOVKm84sc
+Sd4mu8vCrGs7LU7fx8gYDNlQ0r4l2ewGAeUT4KL8uJcob22uCKRhjkDuFw5hZGmJ
+g2VqtFLOSDd37JTXhZutCfzDAfCpxLsUweSo9iW7ajQXmTG0KjLXcHI=
+-----END CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            cb:0e:05:26:aa:6c:19:f6
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=FR, ST=Some-State, L=Paris, O=Groupe France T\xC3\xA9l\xC3\xA9com, OU=Devices Applications and Services, CN=www.ftgroup-devices.com/emailAddress=damien.cerbelaud@orange-ftgroup.com
+        Validity
+            Not Before: Oct 26 10:48:33 2009 GMT
+            Not After : Oct 26 10:48:33 2019 GMT
+        Subject: C=FR, ST=Some-State, L=Paris, O=Groupe France T\xC3\xA9l\xC3\xA9com, OU=Devices Applications and Services, CN=www.ftgroup-devices.com/emailAddress=damien.cerbelaud@orange-ftgroup.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:cf:c7:b2:7a:43:bd:48:46:8a:57:f6:70:35:53:
+                    63:6a:7a:d7:e9:7f:05:4d:20:60:bc:0c:db:62:ee:
+                    d1:89:a2:89:09:0a:6b:f7:3e:af:cb:68:eb:ce:ea:
+                    e9:ec:0b:63:d9:3d:41:20:ad:84:0f:e8:06:95:d7:
+                    31:a7:00:c7:21:1e:ce:4e:4f:3f:cf:93:80:59:a2:
+                    e3:8f:de:98:74:fa:76:1e:d4:a3:c7:ba:98:51:76:
+                    ca:d7:09:e9:43:63:8b:f1:e6:58:d9:fb:df:e4:a1:
+                    22:bf:4e:06:74:06:91:db:11:1e:24:8a:6f:03:45:
+                    22:04:62:27:79:20:14:3e:d5
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+        30:a9:36:c2:8f:b9:68:1a:e8:f2:d6:6b:bb:6c:b1:ae:ae:01:
+        2d:0a:ba:78:75:15:1a:ef:e1:96:c0:d1:6f:17:c3:39:52:a6:
+        f3:8b:1c:49:de:26:bb:cb:c2:ac:6b:3b:2d:4e:df:c7:c8:18:
+        0c:d9:50:d2:be:25:d9:ec:06:01:e5:13:e0:a2:fc:b8:97:28:
+        6f:6d:ae:08:a4:61:8e:40:ee:17:0e:61:64:69:89:83:65:6a:
+        b4:52:ce:48:37:77:ec:94:d7:85:9b:ad:09:fc:c3:01:f0:a9:
+        c4:bb:14:c1:e4:a8:f6:25:bb:6a:34:17:99:31:b4:2a:32:d7:
+        70:72
+SHA1 Fingerprint=4D:43:4E:57:BA:FA:5A:A2:40:82:2E:11:97:01:6C:61:41:71:A9:BE

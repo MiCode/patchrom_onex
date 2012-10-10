@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1858
+    .line 1859
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$10;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1870
+    .line 1871
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$10;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mUiHandler:Lcom/htc/music/browserlayer/TrackBrowserActivity$UIHandler;
@@ -50,7 +50,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1871
+    .line 1872
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$10;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mUiHandler:Lcom/htc/music/browserlayer/TrackBrowserActivity$UIHandler;
@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$UIHandler;->sendEmptyMessage(I)Z
 
-    .line 1874
+    .line 1875
     :cond_0
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 784
+    .line 785
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "service"
 
     .prologue
-    .line 787
+    .line 788
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-static {p2}, Lcom/htc/dlnainterface/IDLNAPluginService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -53,7 +53,7 @@
     #setter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mDlnaService:Lcom/htc/dlnainterface/IDLNAPluginService;
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$102(Lcom/htc/music/browserlayer/TrackBrowserActivity;Lcom/htc/dlnainterface/IDLNAPluginService;)Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 789
+    .line 790
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mDlnaService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -63,19 +63,19 @@
 
     if-nez v1, :cond_1
 
-    .line 790
+    .line 791
     const-string v1, "[PluginNowPlayingListActivity]"
 
     const-string v2, "mConnection, mDlnaService is null!"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 804
+    .line 805
     :cond_0
     :goto_0
     return-void
 
-    .line 795
+    .line 796
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -96,7 +96,7 @@
 
     invoke-interface {v1, v2, v3}, Lcom/htc/dlnainterface/IDLNAPluginService;->registerCallback(ILcom/htc/dlnainterface/IDLNAPluginNotify;)V
 
-    .line 797
+    .line 798
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAdapter:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
@@ -106,7 +106,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 798
+    .line 799
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAdapter:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
@@ -141,11 +141,11 @@
 
     goto :goto_0
 
-    .line 800
+    .line 801
     :catch_0
     move-exception v0
 
-    .line 801
+    .line 802
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -157,7 +157,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 808
+    .line 809
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -179,15 +179,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 813
+    .line 814
     :goto_0
     return-void
 
-    .line 809
+    .line 810
     :catch_0
     move-exception v0
 
-    .line 810
+    .line 811
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

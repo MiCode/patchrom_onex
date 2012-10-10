@@ -42,12 +42,12 @@
     .end annotation
 
     .prologue
-    .line 1599
+    .line 1598
     .local p3, messageClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/htc/protobuf/GeneratedMessage;>;"
     .local p4, builderClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/htc/protobuf/GeneratedMessage$Builder;>;"
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularFieldAccessor;-><init>(Lcom/htc/protobuf/Descriptors$FieldDescriptor;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 1601
+    .line 1600
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularFieldAccessor;->type:Ljava/lang/Class;
 
     const-string v1, "newBuilder"
@@ -63,7 +63,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
-    .line 1602
+    .line 1601
     return-void
 .end method
 
@@ -72,7 +72,7 @@
     .parameter "value"
 
     .prologue
-    .line 1607
+    .line 1606
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularFieldAccessor;->type:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -81,7 +81,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1614
+    .line 1613
     .end local p1
     :goto_0
     return-object p1
@@ -123,7 +123,7 @@
     .locals 3
 
     .prologue
-    .line 1629
+    .line 1628
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -148,13 +148,13 @@
     .parameter "value"
 
     .prologue
-    .line 1625
+    .line 1624
     invoke-direct {p0, p2}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularMessageFieldAccessor;->coerceType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     invoke-super {p0, p1, v0}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$SingularFieldAccessor;->set(Lcom/htc/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
 
-    .line 1626
+    .line 1625
     return-void
 .end method

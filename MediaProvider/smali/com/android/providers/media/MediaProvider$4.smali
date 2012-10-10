@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 901
+    .line 912
     iput-object p1, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -40,14 +40,14 @@
     .parameter "msg"
 
     .prologue
-    .line 904
+    .line 915
     iget v5, p1, Landroid/os/Message;->what:I
 
     const/4 v6, 0x2
 
     if-ne v5, v6, :cond_3
 
-    .line 905
+    .line 916
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mMediaThumbQueue:Ljava/util/PriorityQueue;
@@ -57,7 +57,7 @@
 
     monitor-enter v6
 
-    .line 906
+    .line 917
     :try_start_0
     iget-object v7, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -77,12 +77,12 @@
     #setter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
     invoke-static {v7, v5}, Lcom/android/providers/media/MediaProvider;->access$1402(Lcom/android/providers/media/MediaProvider;Lcom/android/providers/media/MediaThumbRequest;)Lcom/android/providers/media/MediaThumbRequest;
 
-    .line 907
+    .line 918
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 908
+    .line 919
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -92,7 +92,7 @@
 
     if-nez v5, :cond_1
 
-    .line 909
+    .line 920
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
 
     move-result-object v5
@@ -101,12 +101,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
+    .line 983
     :cond_0
     :goto_0
     return-void
 
-    .line 907
+    .line 918
     :catchall_0
     move-exception v5
 
@@ -117,7 +117,7 @@
 
     throw v5
 
-    .line 913
+    .line 924
     :cond_1
     :try_start_2
     new-instance v4, Ljava/io/File;
@@ -133,7 +133,7 @@
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 914
+    .line 925
     .local v4, origFile:Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -151,7 +151,7 @@
 
     if-lez v5, :cond_2
 
-    .line 915
+    .line 926
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -166,7 +166,7 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 940
+    .line 951
     :goto_1
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -177,7 +177,7 @@
 
     monitor-enter v6
 
-    .line 941
+    .line 952
     :try_start_3
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -190,7 +190,7 @@
 
     iput-object v7, v5, Lcom/android/providers/media/MediaThumbRequest;->mState:Lcom/android/providers/media/MediaThumbRequest$State;
 
-    .line 942
+    .line 953
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -200,7 +200,7 @@
 
     invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
 
-    .line 943
+    .line 954
     monitor-exit v6
 
     goto :goto_0
@@ -214,7 +214,7 @@
 
     throw v5
 
-    .line 918
+    .line 929
     :cond_2
     :try_start_4
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
@@ -231,7 +231,7 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_4 .. :try_end_4} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 920
+    .line 931
     :try_start_5
     monitor-exit v6
 
@@ -252,12 +252,12 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_6 .. :try_end_6} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 922
+    .line 933
     .end local v4           #origFile:Ljava/io/File;
     :catch_0
     move-exception v3
 
-    .line 923
+    .line 934
     .local v3, ex:Ljava/io/IOException;
     :try_start_7
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
@@ -268,7 +268,7 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_6
 
-    .line 940
+    .line 951
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -278,7 +278,7 @@
 
     monitor-enter v6
 
-    .line 941
+    .line 952
     :try_start_8
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -291,7 +291,7 @@
 
     iput-object v7, v5, Lcom/android/providers/media/MediaThumbRequest;->mState:Lcom/android/providers/media/MediaThumbRequest$State;
 
-    .line 942
+    .line 953
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -301,7 +301,7 @@
 
     invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
 
-    .line 943
+    .line 954
     monitor-exit v6
 
     goto :goto_0
@@ -315,12 +315,12 @@
 
     throw v5
 
-    .line 924
+    .line 935
     .end local v3           #ex:Ljava/io/IOException;
     :catch_1
     move-exception v3
 
-    .line 927
+    .line 938
     .local v3, ex:Ljava/lang/UnsupportedOperationException;
     :try_start_9
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
@@ -331,7 +331,7 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_6
 
-    .line 940
+    .line 951
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -341,7 +341,7 @@
 
     monitor-enter v6
 
-    .line 941
+    .line 952
     :try_start_a
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -354,7 +354,7 @@
 
     iput-object v7, v5, Lcom/android/providers/media/MediaThumbRequest;->mState:Lcom/android/providers/media/MediaThumbRequest$State;
 
-    .line 942
+    .line 953
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -364,7 +364,7 @@
 
     invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
 
-    .line 943
+    .line 954
     monitor-exit v6
 
     goto/16 :goto_0
@@ -378,12 +378,12 @@
 
     throw v5
 
-    .line 928
+    .line 939
     .end local v3           #ex:Ljava/lang/UnsupportedOperationException;
     :catch_2
     move-exception v2
 
-    .line 938
+    .line 949
     .local v2, err:Ljava/lang/OutOfMemoryError;
     :try_start_b
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
@@ -394,7 +394,7 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_6
 
-    .line 940
+    .line 951
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -404,7 +404,7 @@
 
     monitor-enter v6
 
-    .line 941
+    .line 952
     :try_start_c
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -417,7 +417,7 @@
 
     iput-object v7, v5, Lcom/android/providers/media/MediaThumbRequest;->mState:Lcom/android/providers/media/MediaThumbRequest$State;
 
-    .line 942
+    .line 953
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -427,7 +427,7 @@
 
     invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
 
-    .line 943
+    .line 954
     monitor-exit v6
 
     goto/16 :goto_0
@@ -441,7 +441,7 @@
 
     throw v5
 
-    .line 940
+    .line 951
     .end local v2           #err:Ljava/lang/OutOfMemoryError;
     :catchall_6
     move-exception v5
@@ -455,7 +455,7 @@
 
     monitor-enter v6
 
-    .line 941
+    .line 952
     :try_start_d
     iget-object v7, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -468,7 +468,7 @@
 
     iput-object v8, v7, Lcom/android/providers/media/MediaThumbRequest;->mState:Lcom/android/providers/media/MediaThumbRequest$State;
 
-    .line 942
+    .line 953
     iget-object v7, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mCurrentThumbRequest:Lcom/android/providers/media/MediaThumbRequest;
@@ -478,7 +478,7 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 943
+    .line 954
     monitor-exit v6
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_7
@@ -495,7 +495,7 @@
 
     throw v5
 
-    .line 946
+    .line 957
     :cond_3
     iget v5, p1, Landroid/os/Message;->what:I
 
@@ -503,7 +503,7 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 948
+    .line 959
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mThumbRequestStack:Ljava/util/Stack;
@@ -513,7 +513,7 @@
 
     monitor-enter v6
 
-    .line 949
+    .line 960
     :try_start_f
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -528,19 +528,19 @@
 
     check-cast v0, Lcom/android/providers/media/MediaProvider$ThumbData;
 
-    .line 950
+    .line 961
     .local v0, d:Lcom/android/providers/media/MediaProvider$ThumbData;
     monitor-exit v6
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_9
 
-    .line 952
+    .line 963
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #calls: Lcom/android/providers/media/MediaProvider;->makeThumbInternal(Lcom/android/providers/media/MediaProvider$ThumbData;)Landroid/os/ParcelFileDescriptor;
     invoke-static {v5, v0}, Lcom/android/providers/media/MediaProvider;->access$1600(Lcom/android/providers/media/MediaProvider;Lcom/android/providers/media/MediaProvider$ThumbData;)Landroid/os/ParcelFileDescriptor;
 
-    .line 953
+    .line 964
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mPendingThumbs:Ljava/util/HashSet;
@@ -550,7 +550,7 @@
 
     monitor-enter v6
 
-    .line 954
+    .line 965
     :try_start_10
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -563,7 +563,7 @@
 
     invoke-virtual {v5, v7}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 955
+    .line 966
     monitor-exit v6
 
     goto/16 :goto_0
@@ -577,7 +577,7 @@
 
     throw v5
 
-    .line 950
+    .line 961
     .end local v0           #d:Lcom/android/providers/media/MediaProvider$ThumbData;
     :catchall_9
     move-exception v5
@@ -589,7 +589,7 @@
 
     throw v5
 
-    .line 959
+    .line 970
     :cond_4
     iget v5, p1, Landroid/os/Message;->what:I
 
@@ -597,7 +597,7 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 960
+    .line 971
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mWorkerLock:Ljava/lang/Object;
@@ -607,7 +607,7 @@
 
     monitor-enter v6
 
-    .line 962
+    .line 973
     :try_start_12
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
 
@@ -617,7 +617,7 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 963
+    .line 974
     iget-object v5, p0, Lcom/android/providers/media/MediaProvider$4;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mWorkerLock:Ljava/lang/Object;
@@ -629,7 +629,7 @@
 
     invoke-virtual {v5, v7, v8}, Ljava/lang/Object;->wait(J)V
 
-    .line 964
+    .line 975
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
 
     move-result-object v5
@@ -641,7 +641,7 @@
     .catchall {:try_start_12 .. :try_end_12} :catchall_a
     .catch Ljava/lang/InterruptedException; {:try_start_12 .. :try_end_12} :catch_3
 
-    .line 969
+    .line 980
     :goto_2
     :try_start_13
     monitor-exit v6
@@ -657,11 +657,11 @@
 
     throw v5
 
-    .line 966
+    .line 977
     :catch_3
     move-exception v1
 
-    .line 967
+    .line 978
     .local v1, e:Ljava/lang/InterruptedException;
     :try_start_14
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;

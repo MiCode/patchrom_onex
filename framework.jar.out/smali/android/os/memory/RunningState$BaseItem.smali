@@ -46,12 +46,12 @@
     .parameter "isProcess"
 
     .prologue
-    .line 231
+    .line 238
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 232
+    .line 239
     iput-boolean p1, p0, Landroid/os/memory/RunningState$BaseItem;->mIsProcess:Z
 
-    .line 233
+    .line 240
     return-void
 .end method

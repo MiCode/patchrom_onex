@@ -393,9 +393,6 @@
 
     if-nez v6, :cond_1
 
-    .line 311
-    invoke-direct {p0, v3}, Lcom/android/providers/media/MtpService;->addStorageLocked(Landroid/mtp/MtpStorage;)V
-
     .line 313
     if-eqz v0, :cond_0
 

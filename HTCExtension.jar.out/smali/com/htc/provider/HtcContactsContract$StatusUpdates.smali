@@ -33,7 +33,7 @@
     .locals 2
 
     .prologue
-    .line 3522
+    .line 3526
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "status_update_sn"
@@ -51,7 +51,7 @@
     .locals 0
 
     .prologue
-    .line 3433
+    .line 3437
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,7 +62,7 @@
     .parameter "status"
 
     .prologue
-    .line 3471
+    .line 3475
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "This method is deprecated on S4.0 because of CC res are no longer available!"
@@ -77,7 +77,7 @@
     .parameter "status"
 
     .prologue
-    .line 3515
+    .line 3519
     return p0
 .end method
 
@@ -91,10 +91,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3527
+    .line 3531
     const/4 v7, 0x0
 
-    .line 3528
+    .line 3532
     .local v7, needUpdate:Z
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -204,41 +204,41 @@
 
     move-result-object v6
 
-    .line 3535
+    .line 3539
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
-    .line 3536
+    .line 3540
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 3537
+    .line 3541
     const/4 v7, 0x1
 
-    .line 3538
+    .line 3542
     const-string v0, "DEBUG"
 
     const-string v1, "-----NEED UPDATE!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3540
+    .line 3544
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 3544
+    .line 3548
     :cond_1
     if-eqz v7, :cond_2
 
-    .line 3545
+    .line 3549
     new-instance v8, Landroid/content/ContentValues;
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 3546
+    .line 3550
     .local v8, values:Landroid/content/ContentValues;
     const-string v0, "status_label"
 
@@ -248,7 +248,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 3547
+    .line 3551
     const-string v0, "status_icon"
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -257,7 +257,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 3548
+    .line 3552
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -290,7 +290,7 @@
 
     invoke-virtual {v0, v1, v8, v2, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 3551
+    .line 3555
     .end local v8           #values:Landroid/content/ContentValues;
     :cond_2
     return-void

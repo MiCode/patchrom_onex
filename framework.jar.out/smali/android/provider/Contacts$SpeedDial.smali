@@ -75,7 +75,7 @@
 
     const/4 v1, 0x1
 
-    const-string/jumbo v2, "location"
+    const-string v2, "location"
 
     aput-object v2, v0, v1
 

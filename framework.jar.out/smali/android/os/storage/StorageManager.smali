@@ -499,6 +499,19 @@
     goto :goto_0
 .end method
 
+.method public getVolumeStateWithWrapper(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .parameter "mountPoint"
+
+    .prologue
+    .line 624
+    invoke-virtual {p0, p1}, Landroid/os/storage/StorageManager;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public isObbMounted(Ljava/lang/String;)Z
     .locals 3
     .parameter "filename"
@@ -621,6 +634,26 @@
     goto :goto_0
 .end method
 
+.method public mountISO(Ljava/lang/String;)I
+    .locals 1
+    .parameter "path"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 616
+    iget-object v0, p0, Landroid/os/storage/StorageManager;->mMountService:Landroid/os/storage/IMountService;
+
+    invoke-interface {v0, p1}, Landroid/os/storage/IMountService;->mountISO(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public mountObb(Ljava/lang/String;Ljava/lang/String;Landroid/os/storage/OnObbStateChangeListener;)Z
     .locals 4
     .parameter "filename"
@@ -647,7 +680,7 @@
     .line 435
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "listener cannot be null"
+    const-string v3, "listener cannot be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -800,6 +833,25 @@
     return-void
 .end method
 
+.method public unmountISO()I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 620
+    iget-object v0, p0, Landroid/os/storage/StorageManager;->mMountService:Landroid/os/storage/IMountService;
+
+    invoke-interface {v0}, Landroid/os/storage/IMountService;->unmountISO()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public unmountObb(Ljava/lang/String;ZLandroid/os/storage/OnObbStateChangeListener;)Z
     .locals 4
     .parameter "filename"
@@ -826,7 +878,7 @@
     .line 475
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "listener cannot be null"
+    const-string v3, "listener cannot be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

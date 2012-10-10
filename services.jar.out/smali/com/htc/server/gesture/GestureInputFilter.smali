@@ -42,28 +42,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 54
+    .line 57
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/server/wm/InputFilter;-><init>(Landroid/os/Looper;)V
 
-    .line 38
+    .line 40
     iput-boolean v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->startToRedirectEvent:Z
 
-    .line 39
+    .line 41
     iput-boolean v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->isInKeyguardWhenPointerDown:Z
 
-    .line 40
+    .line 42
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->gestureFingerCountThreshold:I
 
-    .line 55
+    .line 58
     iput-object p1, p0, Lcom/htc/server/gesture/GestureInputFilter;->mContext:Landroid/content/Context;
 
-    .line 57
+    .line 60
     const-string v0, "window"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -74,7 +74,7 @@
 
     iput-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 60
+    .line 63
     iget-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mContext:Landroid/content/Context;
 
     const-string v1, "keyguard"
@@ -87,14 +87,14 @@
 
     iput-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 62
+    .line 65
     iget-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x4060001
+    const v1, 0x409000e
 
     invoke-static {v0, v1}, Lcom/htc/server/gesture/GestureInputFilter;->getLongIntArray(Landroid/content/res/Resources;I)[J
 
@@ -104,7 +104,7 @@
 
     iput-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mGestureStartVibrationPattern:[J
 
-    .line 65
+    .line 68
     return-void
 .end method
 
@@ -115,14 +115,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 299
+    .line 303
     if-ne p1, v0, :cond_0
 
-    .line 312
+    .line 316
     :goto_0
     return v0
 
-    .line 302
+    .line 306
     :cond_0
     iget-object v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
 
@@ -134,7 +134,7 @@
 
     goto :goto_0
 
-    .line 304
+    .line 308
     :pswitch_0
     add-int/lit8 v0, p1, -0x1
 
@@ -146,7 +146,7 @@
 
     goto :goto_0
 
-    .line 306
+    .line 310
     :pswitch_1
     add-int/lit8 v0, p1, -0x1
 
@@ -158,7 +158,7 @@
 
     goto :goto_0
 
-    .line 308
+    .line 312
     :pswitch_2
     add-int/lit8 v0, p1, -0x1
 
@@ -170,7 +170,7 @@
 
     goto :goto_0
 
-    .line 310
+    .line 314
     :pswitch_3
     add-int/lit8 v0, p1, -0x1
 
@@ -182,7 +182,7 @@
 
     goto :goto_0
 
-    .line 302
+    .line 306
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -197,47 +197,47 @@
     .parameter "direction"
 
     .prologue
-    .line 282
+    .line 286
     packed-switch p1, :pswitch_data_0
 
-    .line 294
+    .line 298
     :pswitch_0
     const-string v0, "undefined"
 
     :goto_0
     return-object v0
 
-    .line 284
+    .line 288
     :pswitch_1
     const-string v0, "undeterminated"
 
     goto :goto_0
 
-    .line 286
+    .line 290
     :pswitch_2
     const-string v0, "up"
 
     goto :goto_0
 
-    .line 288
+    .line 292
     :pswitch_3
     const-string v0, "right"
 
     goto :goto_0
 
-    .line 290
+    .line 294
     :pswitch_4
     const-string v0, "down"
 
     goto :goto_0
 
-    .line 292
+    .line 296
     :pswitch_5
     const-string v0, "left"
 
     goto :goto_0
 
-    .line 282
+    .line 286
     nop
 
     :pswitch_data_0
@@ -257,29 +257,29 @@
     .parameter "resid"
 
     .prologue
-    .line 339
+    .line 343
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v0
 
-    .line 340
+    .line 344
     .local v0, ar:[I
     if-nez v0, :cond_1
 
-    .line 341
+    .line 345
     const/4 v2, 0x0
 
-    .line 347
+    .line 351
     :cond_0
     return-object v2
 
-    .line 343
+    .line 347
     :cond_1
     array-length v3, v0
 
     new-array v2, v3, [J
 
-    .line 344
+    .line 348
     .local v2, out:[J
     const/4 v1, 0x0
 
@@ -289,14 +289,14 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 345
+    .line 349
     aget v3, v0, v1
 
     int-to-long v3, v3
 
     aput-wide v3, v2, v1
 
-    .line 344
+    .line 348
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -308,21 +308,21 @@
     .parameter "repeat"
 
     .prologue
-    .line 319
+    .line 323
     if-nez p1, :cond_0
 
-    .line 336
+    .line 340
     :goto_0
     return-void
 
-    .line 323
+    .line 327
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->mVibrator:Landroid/os/Vibrator;
 
     if-nez v1, :cond_1
 
-    .line 324
+    .line 328
     iget-object v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->mContext:Landroid/content/Context;
 
     const-string v2, "vibrator"
@@ -335,13 +335,13 @@
 
     iput-object v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->mVibrator:Landroid/os/Vibrator;
 
-    .line 327
+    .line 331
     :cond_1
     iget-object v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->mVibrator:Landroid/os/Vibrator;
 
     if-nez v1, :cond_2
 
-    .line 328
+    .line 332
     const-string v1, "GestureInputFilter"
 
     const-string v2, "failed to get vibration service"
@@ -352,11 +352,11 @@
 
     goto :goto_0
 
-    .line 333
+    .line 337
     :catch_0
     move-exception v0
 
-    .line 334
+    .line 338
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "GestureInputFilter"
 
@@ -366,7 +366,7 @@
 
     goto :goto_0
 
-    .line 330
+    .line 334
     .end local v0           #e:Ljava/lang/Exception;
     :cond_2
     :try_start_1
@@ -386,7 +386,7 @@
     .parameter "direction"
 
     .prologue
-    .line 247
+    .line 251
     :try_start_0
     iget-object v3, p0, Lcom/htc/server/gesture/GestureInputFilter;->mGesturePerformedVibrationPattern:[J
 
@@ -394,12 +394,12 @@
 
     invoke-direct {p0, v3, v4}, Lcom/htc/server/gesture/GestureInputFilter;->performVibration([JI)V
 
-    .line 249
+    .line 253
     invoke-direct {p0, p1}, Lcom/htc/server/gesture/GestureInputFilter;->convertRelativeToAbsoluteDirection(I)I
 
     move-result v0
 
-    .line 251
+    .line 255
     .local v0, absoluteDirection:I
     const-string v3, "GestureInputFilter"
 
@@ -447,45 +447,45 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
+    .line 259
     packed-switch p1, :pswitch_data_0
 
-    .line 279
+    .line 283
     .end local v0           #absoluteDirection:I
     :goto_0
     return-void
 
-    .line 260
+    .line 264
     .restart local v0       #absoluteDirection:I
     :pswitch_0
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 261
+    .line 265
     .local v2, intent:Landroid/content/Intent;
     const-string v3, "com.htc.action.MULTIPLE_FINGER_SWIPE_EVENT"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 262
+    .line 266
     const-string v3, "FingerCount"
 
     const/4 v4, 0x3
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 263
+    .line 267
     const-string v3, "Direction"
 
     invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 264
+    .line 268
     const-string v3, "AbsoluteDirection"
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 265
+    .line 269
     iget-object v3, p0, Lcom/htc/server/gesture/GestureInputFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -494,13 +494,13 @@
 
     goto :goto_0
 
-    .line 276
+    .line 280
     .end local v0           #absoluteDirection:I
     .end local v2           #intent:Landroid/content/Intent;
     :catch_0
     move-exception v1
 
-    .line 277
+    .line 281
     .local v1, e:Ljava/lang/Exception;
     const-string v3, "GestureInputFilter"
 
@@ -536,7 +536,7 @@
 
     goto :goto_0
 
-    .line 255
+    .line 259
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -562,45 +562,45 @@
 
     const/4 v7, 0x0
 
-    .line 93
+    .line 96
     iget-object v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->mMultipleSwipeDetector:Lcom/htc/server/gesture/MultipleSwipeDetector;
 
     if-nez v2, :cond_1
 
-    .line 94
+    .line 97
     const-string v2, "GestureInputFilter"
 
     const-string v3, "mMultipleSwipeDetector should never be null!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
+    .line 98
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 177
+    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 99
+    .line 102
     :cond_1
     iget-object v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     if-nez v2, :cond_2
 
-    .line 100
+    .line 103
     const-string v2, "GestureInputFilter"
 
     const-string v3, "mKeyguardManager should never be null!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
+    .line 104
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
     goto :goto_0
 
-    .line 105
+    .line 108
     :cond_2
     invoke-virtual {p1}, Landroid/view/InputEvent;->getSource()I
 
@@ -610,61 +610,61 @@
 
     move-object v9, p1
 
-    .line 106
+    .line 109
     check-cast v9, Landroid/view/MotionEvent;
 
-    .line 107
+    .line 110
     .local v9, motionEvent:Landroid/view/MotionEvent;
     iget-boolean v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->startToRedirectEvent:Z
 
     if-eqz v2, :cond_3
 
-    .line 109
+    .line 112
     iget-object v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->mMultipleSwipeDetector:Lcom/htc/server/gesture/MultipleSwipeDetector;
 
     invoke-virtual {v2, v9}, Lcom/htc/server/gesture/MultipleSwipeDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 110
+    .line 113
     invoke-virtual {v9}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v2
 
     if-ne v2, v10, :cond_0
 
-    .line 111
+    .line 114
     iput-boolean v7, p0, Lcom/htc/server/gesture/GestureInputFilter;->startToRedirectEvent:Z
 
-    .line 112
+    .line 115
     iput-boolean v7, p0, Lcom/htc/server/gesture/GestureInputFilter;->isInKeyguardWhenPointerDown:Z
 
     goto :goto_0
 
-    .line 117
+    .line 120
     :cond_3
     iget-boolean v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->isInKeyguardWhenPointerDown:Z
 
     if-eqz v2, :cond_5
 
-    .line 118
+    .line 121
     invoke-virtual {v9}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v2
 
     if-ne v2, v10, :cond_4
 
-    .line 119
+    .line 122
     iput-boolean v7, p0, Lcom/htc/server/gesture/GestureInputFilter;->startToRedirectEvent:Z
 
-    .line 120
+    .line 123
     iput-boolean v7, p0, Lcom/htc/server/gesture/GestureInputFilter;->isInKeyguardWhenPointerDown:Z
 
-    .line 125
+    .line 128
     :cond_4
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
     goto :goto_0
 
-    .line 127
+    .line 130
     :cond_5
     invoke-virtual {v9}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -680,7 +680,7 @@
 
     if-lt v2, v4, :cond_7
 
-    .line 130
+    .line 133
     iget-object v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     invoke-virtual {v2}, Landroid/app/KeyguardManager;->inKeyguardRestrictedInputMode()Z
@@ -689,15 +689,15 @@
 
     if-eqz v2, :cond_6
 
-    .line 131
+    .line 134
     iput-boolean v10, p0, Lcom/htc/server/gesture/GestureInputFilter;->isInKeyguardWhenPointerDown:Z
 
-    .line 136
+    .line 139
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
     goto :goto_0
 
-    .line 138
+    .line 141
     :cond_6
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -708,32 +708,32 @@
 
     move v6, v5
 
-    .line 139
+    .line 142
     invoke-static/range {v0 .. v7}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object v8
 
-    .line 141
+    .line 144
     .local v8, cancelEvent:Landroid/view/MotionEvent;
     invoke-virtual {v8, v11}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 142
+    .line 145
     invoke-super {p0, v8, p2}, Lcom/android/server/wm/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 143
+    .line 146
     invoke-virtual {v8}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 146
+    .line 149
     iget-object v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->mMultipleSwipeDetector:Lcom/htc/server/gesture/MultipleSwipeDetector;
 
     invoke-virtual {v2, v9}, Lcom/htc/server/gesture/MultipleSwipeDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 147
+    .line 150
     iput-boolean v10, p0, Lcom/htc/server/gesture/GestureInputFilter;->startToRedirectEvent:Z
 
     goto :goto_0
 
-    .line 171
+    .line 174
     .end local v0           #now:J
     .end local v8           #cancelEvent:Landroid/view/MotionEvent;
     :cond_7
@@ -741,7 +741,7 @@
 
     goto :goto_0
 
-    .line 175
+    .line 178
     .end local v9           #motionEvent:Landroid/view/MotionEvent;
     :cond_8
     invoke-super {p0, p1, p2}, Lcom/android/server/wm/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
@@ -755,20 +755,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 69
+    .line 72
     const-string v0, "GestureInputFilter"
 
     const-string v1, "Gesture input filter installed."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
+    .line 73
     iput-boolean v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->startToRedirectEvent:Z
 
-    .line 71
+    .line 74
     iput-boolean v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->isInKeyguardWhenPointerDown:Z
 
-    .line 72
+    .line 75
     new-instance v0, Lcom/htc/server/gesture/MultipleSwipeDetector;
 
     iget-object v1, p0, Lcom/htc/server/gesture/GestureInputFilter;->mContext:Landroid/content/Context;
@@ -777,15 +777,15 @@
 
     iput-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mMultipleSwipeDetector:Lcom/htc/server/gesture/MultipleSwipeDetector;
 
-    .line 73
+    .line 76
     iget-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mMultipleSwipeDetector:Lcom/htc/server/gesture/MultipleSwipeDetector;
 
     invoke-virtual {v0, p0}, Lcom/htc/server/gesture/MultipleSwipeDetector;->setDirectionListener(Lcom/htc/server/gesture/MultipleSwipeDetector$OnGestureListener;)V
 
-    .line 74
+    .line 77
     invoke-super {p0}, Lcom/android/server/wm/InputFilter;->onInstalled()V
 
-    .line 75
+    .line 78
     return-void
 .end method
 
@@ -795,27 +795,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 79
+    .line 82
     const-string v0, "GestureInputFilter"
 
     const-string v1, "Gesture input filter uninstalled."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 83
     iput-boolean v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->startToRedirectEvent:Z
 
-    .line 81
+    .line 84
     iput-boolean v2, p0, Lcom/htc/server/gesture/GestureInputFilter;->isInKeyguardWhenPointerDown:Z
 
-    .line 82
+    .line 85
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/server/gesture/GestureInputFilter;->mMultipleSwipeDetector:Lcom/htc/server/gesture/MultipleSwipeDetector;
 
-    .line 83
+    .line 86
     invoke-super {p0}, Lcom/android/server/wm/InputFilter;->onUninstalled()V
 
-    .line 84
+    .line 87
     return-void
 .end method

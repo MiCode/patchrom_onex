@@ -34,22 +34,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1582
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 1587
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1577
+    .line 1582
     iput-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mRecycled:Z
 
-    .line 1578
+    .line 1583
     iput v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mBitmapSize:I
 
-    .line 1579
+    .line 1584
     iput-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
-    .line 1583
+    .line 1588
     iput p1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mNativeBitmap:I
 
-    .line 1584
+    .line 1589
     return-void
 .end method
 
@@ -61,21 +61,21 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1619
+    .line 1624
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1624
+    .line 1629
     invoke-static {}, Lcom/htc/profileflag/ProfileConfig;->getRecycleBitmap()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1625
+    .line 1630
     iget-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mRecycled:Z
 
     if-nez v0, :cond_0
@@ -84,13 +84,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 1626
+    .line 1631
     iget-object v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mStackTrace:Landroid/graphics/Bitmap$BitmapStackTrace;
 
     #calls: Landroid/graphics/Bitmap;->dumpStackTrace(Landroid/graphics/Bitmap$BitmapStackTrace;Z)V
     invoke-static {v0, v2}, Landroid/graphics/Bitmap;->access$100(Landroid/graphics/Bitmap$BitmapStackTrace;Z)V
 
-    .line 1630
+    .line 1635
     :cond_0
     invoke-static {}, Lcom/htc/profileflag/ProfileConfig;->getCheckHeap()Z
 
@@ -98,14 +98,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 1631
+    .line 1636
     invoke-static {}, Landroid/graphics/Bitmap;->access$200()Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1632
+    .line 1637
     :try_start_1
     iget-object v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mStackTrace:Landroid/graphics/Bitmap$BitmapStackTrace;
 
@@ -117,7 +117,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1633
+    .line 1638
     invoke-static {}, Landroid/graphics/Bitmap;->access$300()Ljava/util/Vector;
 
     move-result-object v0
@@ -126,13 +126,13 @@
 
     invoke-virtual {v0, v2}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
-    .line 1634
+    .line 1639
     :cond_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_5
 
-    .line 1636
+    .line 1641
     :cond_2
     invoke-static {}, Landroid/graphics/Bitmap;->access$200()Ljava/lang/Object;
 
@@ -140,39 +140,39 @@
 
     monitor-enter v1
 
-    .line 1637
+    .line 1642
     :try_start_2
     iget-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
     if-eqz v0, :cond_3
 
-    .line 1638
+    .line 1643
     iget v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mBitmapSize:I
 
     invoke-static {v0}, Landroid/graphics/Bitmap;->access$420(I)I
 
-    .line 1639
+    .line 1644
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
-    .line 1641
+    .line 1646
     :cond_3
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_6
 
-    .line 1643
+    .line 1648
     iget v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mNativeBitmap:I
 
     :goto_0
     #calls: Landroid/graphics/Bitmap;->nativeDestructor(I)V
     invoke-static {v0}, Landroid/graphics/Bitmap;->access$500(I)V
 
-    .line 1645
+    .line 1650
     return-void
 
-    .line 1624
+    .line 1629
     :catchall_0
     move-exception v0
 
@@ -182,7 +182,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 1625
+    .line 1630
     iget-boolean v1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mRecycled:Z
 
     if-nez v1, :cond_4
@@ -191,13 +191,13 @@
 
     if-eqz v1, :cond_4
 
-    .line 1626
+    .line 1631
     iget-object v1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mStackTrace:Landroid/graphics/Bitmap$BitmapStackTrace;
 
     #calls: Landroid/graphics/Bitmap;->dumpStackTrace(Landroid/graphics/Bitmap$BitmapStackTrace;Z)V
     invoke-static {v1, v2}, Landroid/graphics/Bitmap;->access$100(Landroid/graphics/Bitmap$BitmapStackTrace;Z)V
 
-    .line 1630
+    .line 1635
     :cond_4
     invoke-static {}, Lcom/htc/profileflag/ProfileConfig;->getCheckHeap()Z
 
@@ -205,14 +205,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 1631
+    .line 1636
     invoke-static {}, Landroid/graphics/Bitmap;->access$200()Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1632
+    .line 1637
     :try_start_3
     iget-object v2, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mStackTrace:Landroid/graphics/Bitmap$BitmapStackTrace;
 
@@ -224,7 +224,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 1633
+    .line 1638
     invoke-static {}, Landroid/graphics/Bitmap;->access$300()Ljava/util/Vector;
 
     move-result-object v2
@@ -233,13 +233,13 @@
 
     invoke-virtual {v2, v3}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
-    .line 1634
+    .line 1639
     :cond_5
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 1636
+    .line 1641
     :cond_6
     invoke-static {}, Landroid/graphics/Bitmap;->access$200()Ljava/lang/Object;
 
@@ -247,49 +247,49 @@
 
     monitor-enter v1
 
-    .line 1637
+    .line 1642
     :try_start_4
     iget-boolean v2, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
     if-eqz v2, :cond_7
 
-    .line 1638
+    .line 1643
     iget v2, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mBitmapSize:I
 
     invoke-static {v2}, Landroid/graphics/Bitmap;->access$420(I)I
 
-    .line 1639
+    .line 1644
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
-    .line 1641
+    .line 1646
     :cond_7
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    .line 1643
+    .line 1648
     iget v1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mNativeBitmap:I
 
     #calls: Landroid/graphics/Bitmap;->nativeDestructor(I)V
     invoke-static {v1}, Landroid/graphics/Bitmap;->access$500(I)V
 
-    .line 1624
+    .line 1629
     throw v0
 
-    .line 1620
+    .line 1625
     :catch_0
     move-exception v0
 
-    .line 1624
+    .line 1629
     invoke-static {}, Lcom/htc/profileflag/ProfileConfig;->getRecycleBitmap()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 1625
+    .line 1630
     iget-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mRecycled:Z
 
     if-nez v0, :cond_8
@@ -298,13 +298,13 @@
 
     if-eqz v0, :cond_8
 
-    .line 1626
+    .line 1631
     iget-object v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mStackTrace:Landroid/graphics/Bitmap$BitmapStackTrace;
 
     #calls: Landroid/graphics/Bitmap;->dumpStackTrace(Landroid/graphics/Bitmap$BitmapStackTrace;Z)V
     invoke-static {v0, v2}, Landroid/graphics/Bitmap;->access$100(Landroid/graphics/Bitmap$BitmapStackTrace;Z)V
 
-    .line 1630
+    .line 1635
     :cond_8
     invoke-static {}, Lcom/htc/profileflag/ProfileConfig;->getCheckHeap()Z
 
@@ -312,14 +312,14 @@
 
     if-eqz v0, :cond_a
 
-    .line 1631
+    .line 1636
     invoke-static {}, Landroid/graphics/Bitmap;->access$200()Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1632
+    .line 1637
     :try_start_5
     iget-object v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mStackTrace:Landroid/graphics/Bitmap$BitmapStackTrace;
 
@@ -331,7 +331,7 @@
 
     if-eqz v0, :cond_9
 
-    .line 1633
+    .line 1638
     invoke-static {}, Landroid/graphics/Bitmap;->access$300()Ljava/util/Vector;
 
     move-result-object v0
@@ -340,13 +340,13 @@
 
     invoke-virtual {v0, v2}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
-    .line 1634
+    .line 1639
     :cond_9
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1636
+    .line 1641
     :cond_a
     invoke-static {}, Landroid/graphics/Bitmap;->access$200()Ljava/lang/Object;
 
@@ -354,34 +354,34 @@
 
     monitor-enter v1
 
-    .line 1637
+    .line 1642
     :try_start_6
     iget-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
     if-eqz v0, :cond_b
 
-    .line 1638
+    .line 1643
     iget v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mBitmapSize:I
 
     invoke-static {v0}, Landroid/graphics/Bitmap;->access$420(I)I
 
-    .line 1639
+    .line 1644
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
-    .line 1641
+    .line 1646
     :cond_b
     monitor-exit v1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 1643
+    .line 1648
     iget v0, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mNativeBitmap:I
 
     goto/16 :goto_0
 
-    .line 1634
+    .line 1639
     :catchall_1
     move-exception v0
 
@@ -392,7 +392,7 @@
 
     throw v0
 
-    .line 1641
+    .line 1646
     :catchall_2
     move-exception v0
 
@@ -403,7 +403,7 @@
 
     throw v0
 
-    .line 1634
+    .line 1639
     :catchall_3
     move-exception v0
 
@@ -414,7 +414,7 @@
 
     throw v0
 
-    .line 1641
+    .line 1646
     :catchall_4
     move-exception v0
 
@@ -425,7 +425,7 @@
 
     throw v0
 
-    .line 1634
+    .line 1639
     :catchall_5
     move-exception v0
 
@@ -436,7 +436,7 @@
 
     throw v0
 
-    .line 1641
+    .line 1646
     :catchall_6
     move-exception v0
 
@@ -453,10 +453,10 @@
     .parameter "isPixelsAllocated"
 
     .prologue
-    .line 1612
+    .line 1617
     iput-boolean p1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mPixelsIsAllocated:Z
 
-    .line 1613
+    .line 1618
     return-void
 .end method
 
@@ -465,10 +465,10 @@
     .parameter "isRecycled"
 
     .prologue
-    .line 1597
+    .line 1602
     iput-boolean p1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mRecycled:Z
 
-    .line 1598
+    .line 1603
     return-void
 .end method
 
@@ -477,10 +477,10 @@
     .parameter "bitmapSize"
 
     .prologue
-    .line 1603
+    .line 1608
     iput p1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mBitmapSize:I
 
-    .line 1604
+    .line 1609
     return-void
 .end method
 
@@ -489,9 +489,9 @@
     .parameter "stackTrace"
 
     .prologue
-    .line 1591
+    .line 1596
     iput-object p1, p0, Landroid/graphics/Bitmap$BitmapFinalizer;->mStackTrace:Landroid/graphics/Bitmap$BitmapStackTrace;
 
-    .line 1592
+    .line 1597
     return-void
 .end method

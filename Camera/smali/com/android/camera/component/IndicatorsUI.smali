@@ -1115,7 +1115,7 @@
     if-eq v4, v5, :cond_6
 
     .line 625
-    const v4, 0x7f0b00bc
+    const v4, 0x7f0b00bd
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1124,7 +1124,7 @@
     iput v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     .line 626
-    const v4, 0x7f0b00bb
+    const v4, 0x7f0b00bc
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1168,7 +1168,7 @@
     .restart local v2       #layoutParams:Landroid/view/ViewGroup$MarginLayoutParams;
     .restart local v3       #res:Landroid/content/res/Resources;
     :cond_6
-    const v4, 0x7f0b00be
+    const v4, 0x7f0b00bf
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1177,7 +1177,7 @@
     iput v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     .line 631
-    const v4, 0x7f0b00bd
+    const v4, 0x7f0b00be
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

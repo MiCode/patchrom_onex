@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 2319
+    .line 2317
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .parameter "in"
 
     .prologue
-    .line 2321
+    .line 2319
     new-instance v0, Lcom/htc/preference/HtcPreference$BaseSavedState;
 
     invoke-direct {v0, p1}, Lcom/htc/preference/HtcPreference$BaseSavedState;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +58,7 @@
     .parameter "x0"
 
     .prologue
-    .line 2319
+    .line 2317
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcPreference$BaseSavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/htc/preference/HtcPreference$BaseSavedState;
 
     move-result-object v0
@@ -71,7 +71,7 @@
     .parameter "size"
 
     .prologue
-    .line 2325
+    .line 2323
     new-array v0, p1, [Lcom/htc/preference/HtcPreference$BaseSavedState;
 
     return-object v0
@@ -82,7 +82,7 @@
     .parameter "x0"
 
     .prologue
-    .line 2319
+    .line 2317
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcPreference$BaseSavedState$1;->newArray(I)[Lcom/htc/preference/HtcPreference$BaseSavedState;
 
     move-result-object v0

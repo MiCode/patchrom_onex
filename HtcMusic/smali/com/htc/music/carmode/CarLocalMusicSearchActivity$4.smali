@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 176
+    .line 174
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,900 +35,991 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 6
+    .locals 9
     .parameter "msg"
 
     .prologue
-    const/4 v5, 0x3
+    const v8, 0x7f07004d
 
-    .line 179
-    iget v3, p1, Landroid/os/Message;->what:I
+    const/4 v7, 0x3
 
-    packed-switch v3, :pswitch_data_0
+    .line 177
+    iget v5, p1, Landroid/os/Message;->what:I
 
-    .line 311
+    packed-switch v5, :pswitch_data_0
+
+    .line 319
     :cond_0
     :goto_0
     return-void
 
-    .line 181
+    .line 179
     :pswitch_0
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    iget-object v3, v3, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchAdapter:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;
+    iget-object v5, v5, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchAdapter:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;
 
-    if-eqz v3, :cond_0
+    if-eqz v5, :cond_0
 
-    .line 182
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 180
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    iget-object v3, v3, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchAdapter:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;
+    iget-object v5, v5, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchAdapter:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;
 
-    invoke-virtual {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
-    .line 187
+    .line 185
     :pswitch_1
-    iget v1, p1, Landroid/os/Message;->arg1:I
+    iget v3, p1, Landroid/os/Message;->arg1:I
+
+    .line 188
+    .local v3, queryType:I
+    const/4 v5, 0x1
+
+    if-ne v5, v3, :cond_6
 
     .line 190
-    .local v1, queryType:I
-    const/4 v3, 0x1
-
-    if-ne v3, v1, :cond_4
-
-    .line 192
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 194
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 192
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
+    if-eqz v5, :cond_1
 
-    move-result v3
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    if-gtz v3, :cond_3
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    .line 197
+    move-result-object v5
+
+    invoke-interface {v5}, Landroid/database/Cursor;->getCount()I
+
+    move-result v5
+
+    if-gtz v5, :cond_3
+
+    .line 195
     :cond_1
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$308(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$308(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
-    .line 257
+    .line 265
     :cond_2
     :goto_1
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 259
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 267
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mNoResultCount:I
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
-    move-result v3
+    move-result v5
 
-    if-lt v3, v5, :cond_a
+    if-lt v5, v7, :cond_10
 
-    .line 260
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 268
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    const v4, 0x7f070037
+    const v6, 0x7f070037
 
-    invoke-virtual {v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->showEmptyView(I)V
+    invoke-virtual {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->showEmptyView(I)V
 
     goto :goto_0
 
-    .line 199
+    .line 197
     :cond_3
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 199
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 200
+    :goto_2
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Landroid/database/Cursor;->isAfterLast()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
 
     .line 201
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 202
-    :goto_2
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Landroid/database/Cursor;->isAfterLast()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    .line 203
     new-instance v0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
     invoke-direct {v0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;-><init>()V
 
-    .line 204
+    .line 202
     .local v0, addItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursorIdIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
-    move-result v4
+    move-result v6
 
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v3
+    move-result-wide v5
 
-    invoke-virtual {v0, v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setId(J)V
+    invoke-virtual {v0, v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setId(J)V
 
-    .line 205
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 203
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursorArtistIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$600(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$600(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
-    move-result v4
+    move-result v6
 
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v0, v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
+    .line 204
+    .local v2, artist:Ljava/lang/String;
+    if-eqz v2, :cond_4
+
+    const-string v5, "<unknown>"
+
+    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    .line 205
+    :cond_4
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    invoke-virtual {v5, v8}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
 
     .line 207
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :cond_5
+    invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
 
     .line 208
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 209
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_2
 
-    .line 211
+    .line 212
     .end local v0           #addItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    :cond_4
-    const/4 v3, 0x2
+    .end local v2           #artist:Ljava/lang/String;
+    :cond_6
+    const/4 v5, 0x2
 
-    if-ne v3, v1, :cond_7
+    if-ne v5, v3, :cond_b
 
-    .line 213
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 214
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 215
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_5
-
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 216
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
+    if-eqz v5, :cond_7
 
-    move-result v3
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    if-gtz v3, :cond_6
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    .line 218
-    :cond_5
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    move-result-object v5
 
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$308(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    invoke-interface {v5}, Landroid/database/Cursor;->getCount()I
+
+    move-result v5
+
+    if-gtz v5, :cond_8
+
+    .line 219
+    :cond_7
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$308(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
     goto/16 :goto_1
 
-    .line 220
-    :cond_6
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 221
+    :cond_8
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 222
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 223
-    :goto_3
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->isAfterLast()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
+    invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
     .line 224
+    :goto_3
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Landroid/database/Cursor;->isAfterLast()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    .line 225
     new-instance v0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
     invoke-direct {v0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;-><init>()V
 
-    .line 225
+    .line 226
     .restart local v0       #addItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorIdIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
-    move-result v4
+    move-result v6
 
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v3
+    move-result-wide v5
 
-    invoke-virtual {v0, v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setId(J)V
-
-    .line 226
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorAlbumIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
-
-    move-result v4
-
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
+    invoke-virtual {v0, v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setId(J)V
 
     .line 227
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorArtIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorAlbumIndex:I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
-    move-result v4
+    move-result v6
 
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setArtPath(Ljava/lang/String;)V
+    move-result-object v1
 
     .line 228
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .local v1, album:Ljava/lang/String;
+    if-eqz v1, :cond_9
 
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    const-string v5, "<unknown>"
 
-    move-result-object v3
+    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v5
+
+    if-eqz v5, :cond_a
 
     .line 229
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    :cond_9
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    const v6, 0x7f07004e
+
+    invoke-virtual {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 231
+    :cond_a
+    invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
+
+    .line 232
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursorArtIndex:I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1200(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+
+    move-result v6
+
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setArtPath(Ljava/lang/String;)V
+
+    .line 233
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 234
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_3
 
-    .line 232
+    .line 237
     .end local v0           #addItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    :cond_7
-    if-ne v5, v1, :cond_2
-
-    .line 234
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
-
-    .line 236
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_8
-
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
-
-    move-result v3
-
-    if-gtz v3, :cond_9
+    .end local v1           #album:Ljava/lang/String;
+    :cond_b
+    if-ne v7, v3, :cond_2
 
     .line 239
-    :cond_8
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$308(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
+
+    .line 241
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_c
+
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Landroid/database/Cursor;->getCount()I
+
+    move-result v5
+
+    if-gtz v5, :cond_d
+
+    .line 244
+    :cond_c
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$308(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
     goto/16 :goto_1
 
-    .line 241
-    :cond_9
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 246
+    :cond_d
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 243
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 248
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 244
+    .line 249
     :goto_4
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->isAfterLast()Z
+    invoke-interface {v5}, Landroid/database/Cursor;->isAfterLast()Z
 
-    move-result v3
+    move-result v5
 
-    if-nez v3, :cond_2
+    if-nez v5, :cond_2
 
-    .line 245
+    .line 250
     new-instance v0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
     invoke-direct {v0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;-><init>()V
 
-    .line 246
+    .line 251
     .restart local v0       #addItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursorIdIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1600(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1600(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
 
-    move-result v4
+    move-result v6
 
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v3
+    move-result-wide v5
 
-    invoke-virtual {v0, v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setId(J)V
-
-    .line 247
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursorTitleIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
-
-    move-result v4
-
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
-
-    .line 248
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursorArtistIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
-
-    move-result v4
-
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setSecondaryText(Ljava/lang/String;)V
-
-    .line 250
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursorArtIndex:I
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
-
-    move-result v4
-
-    invoke-interface {v3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setArtPath(Ljava/lang/String;)V
-
-    .line 251
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setId(J)V
 
     .line 252
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursorTitleIndex:I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+
+    move-result v6
+
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
+
+    .line 253
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursorArtistIndex:I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1800(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+
+    move-result v6
+
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 254
+    .restart local v2       #artist:Ljava/lang/String;
+    if-eqz v2, :cond_e
+
+    const-string v5, "<unknown>"
+
+    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_f
+
+    .line 255
+    :cond_e
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    invoke-virtual {v5, v8}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 257
+    :cond_f
+    invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setSecondaryText(Ljava/lang/String;)V
+
+    .line 258
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursorArtIndex:I
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+
+    move-result v6
+
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;->setArtPath(Ljava/lang/String;)V
+
+    .line 259
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 260
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Landroid/database/Cursor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_4
 
-    .line 264
-    .end local v0           #addItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    :cond_a
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    invoke-virtual {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->hideEmptyErrorView()V
-
-    .line 267
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_b
-
-    .line 268
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
     .line 272
-    :cond_b
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .end local v0           #addItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    .end local v2           #artist:Ljava/lang/String;
+    :cond_10
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    invoke-virtual {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->hideEmptyErrorView()V
+
+    .line 275
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_11
+
+    .line 276
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    .line 280
+    :cond_11
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    if-eqz v3, :cond_c
+    if-eqz v5, :cond_12
 
-    .line 273
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 281
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v3
+    move-result-object v5
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 277
-    :cond_c
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_d
-
-    .line 278
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 282
-    :cond_d
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v4
-
-    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistSubTitleIndex:I
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2102(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
-
-    .line 283
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v4
-
-    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumSubTitleIndex:I
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2202(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
-
-    .line 284
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v4
-
-    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackSubTitleIndex:I
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2302(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     .line 285
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
+    :cond_12
     iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistNoResultItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v4
-
-    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistNoResultItemIndex:I
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2402(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+    if-eqz v5, :cond_13
 
     .line 286
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
     iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumNoResultItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    move-result v4
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1300(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumNoResultItemIndex:I
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2602(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+    move-result-object v6
 
-    .line 287
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
+    .line 290
+    :cond_13
     iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackNoResultItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
-    invoke-static {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    move-result-object v5
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+    move-result-object v6
 
-    move-result v4
+    iget-object v7, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackNoResultItemIndex:I
-    invoke-static {v3, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2802(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v7}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$400(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
-    .line 289
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    move-result-object v7
 
-    invoke-virtual {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->DumpQueryItemIndex()V
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v6
+
+    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistSubTitleIndex:I
+    invoke-static {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2102(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
 
     .line 291
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    iget-object v3, v3, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchAdapter:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    invoke-virtual {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;->notifyDataSetChanged()V
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
 
-    goto/16 :goto_0
+    move-result-object v6
 
-    .line 296
-    .end local v1           #queryType:I
-    :pswitch_2
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v7, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    invoke-virtual {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->clear()V
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v7}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
 
-    .line 298
-    iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    move-result-object v7
 
-    check-cast v2, Ljava/lang/String;
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v6
+
+    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumSubTitleIndex:I
+    invoke-static {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2202(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+
+    .line 292
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackSubTitleItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v7}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$1500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v6
+
+    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackSubTitleIndex:I
+    invoke-static {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2302(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+
+    .line 293
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistNoResultItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v7}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2500(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v6
+
+    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mArtistNoResultItemIndex:I
+    invoke-static {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2402(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+
+    .line 294
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumNoResultItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v7}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2700(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v6
+
+    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mAlbumNoResultItemIndex:I
+    invoke-static {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2602(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+
+    .line 295
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    iget-object v6, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackNoResultItem:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+    invoke-static {v7}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2900(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v6
+
+    #setter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mTrackNoResultItemIndex:I
+    invoke-static {v5, v6}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$2802(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;I)I
+
+    .line 297
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    invoke-virtual {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->DumpQueryItemIndex()V
 
     .line 299
-    .local v2, searchStr:Ljava/lang/String;
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    #calls: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->initOnlineSearch(Ljava/lang/String;)V
-    invoke-static {v3, v2}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$3000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;Ljava/lang/String;)V
+    iget-object v5, v5, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mSearchAdapter:Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;
+
+    invoke-virtual {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$SearchListAdapter;->notifyDataSetChanged()V
 
     goto/16 :goto_0
 
-    .line 303
-    .end local v2           #searchStr:Ljava/lang/String;
+    .line 304
+    .end local v3           #queryType:I
+    :pswitch_2
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    invoke-virtual {v5}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->clear()V
+
+    .line 306
+    iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/String;
+
+    .line 307
+    .local v4, searchStr:Ljava/lang/String;
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #calls: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->initOnlineSearch(Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$3000(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 311
+    .end local v4           #searchStr:Ljava/lang/String;
     :pswitch_3
-    const-string v3, "[CarLocalMusicSearchActivity]"
+    const-string v5, "[CarLocalMusicSearchActivity]"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "Message MSG_HANDLE_PROGRESS, mIsSearchingCount: "
+    const-string v7, "Message MSG_HANDLE_PROGRESS, mIsSearchingCount: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v6
 
+    iget-object v7, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+
+    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mIsSearchingCount:I
+    invoke-static {v7}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$3100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
+
+    move-result v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 312
     iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mIsSearchingCount:I
@@ -936,50 +1027,32 @@
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-lez v5, :cond_14
 
-    move-result-object v4
+    .line 313
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v5, v5, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;
 
-    move-result-object v4
+    const/4 v6, 0x0
 
-    invoke-static {v3, v4}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 304
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mIsSearchingCount:I
-    invoke-static {v3}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->access$3100(Lcom/htc/music/carmode/CarLocalMusicSearchActivity;)I
-
-    move-result v3
-
-    if-lez v3, :cond_e
-
-    .line 305
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
-
-    iget-object v3, v3, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Lcom/htc/widget/ActionBarSearch;->setProgressVisibility(I)V
+    invoke-virtual {v5, v6}, Lcom/htc/widget/ActionBarSearch;->setProgressVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 307
-    :cond_e
-    iget-object v3, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
+    .line 315
+    :cond_14
+    iget-object v5, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$4;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
-    iget-object v3, v3, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;
+    iget-object v5, v5, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;
 
-    const/16 v4, 0x8
+    const/16 v6, 0x8
 
-    invoke-virtual {v3, v4}, Lcom/htc/widget/ActionBarSearch;->setProgressVisibility(I)V
+    invoke-virtual {v5, v6}, Lcom/htc/widget/ActionBarSearch;->setProgressVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 179
+    .line 177
     nop
 
     :pswitch_data_0

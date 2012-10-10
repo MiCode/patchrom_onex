@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 12708
+    .line 12825
     iput-object p1, p0, Landroid/widget/TextView$SelectionModifierCursorController$1;->this$1:Landroid/widget/TextView$SelectionModifierCursorController;
 
     iget-object v0, p1, Landroid/widget/TextView$SelectionModifierCursorController;->this$0:Landroid/widget/TextView;
@@ -39,23 +39,23 @@
 
 # virtual methods
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
+    .locals 2
     .parameter "ev"
 
     .prologue
-    .line 12711
+    .line 12828
     invoke-super {p0, p1}, Landroid/widget/TextView$SelectionEndHandleView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 12712
+    .line 12829
     .local v0, b:Z
     if-nez v0, :cond_0
 
     iget-object v1, p0, Landroid/widget/TextView$SelectionModifierCursorController$1;->this$1:Landroid/widget/TextView$SelectionModifierCursorController;
 
     #getter for: Landroid/widget/TextView$SelectionModifierCursorController;->mStartHandle:Landroid/widget/TextView$SelectionStartHandleView;
-    invoke-static {v1}, Landroid/widget/TextView$SelectionModifierCursorController;->access$11300(Landroid/widget/TextView$SelectionModifierCursorController;)Landroid/widget/TextView$SelectionStartHandleView;
+    invoke-static {v1}, Landroid/widget/TextView$SelectionModifierCursorController;->access$11200(Landroid/widget/TextView$SelectionModifierCursorController;)Landroid/widget/TextView$SelectionStartHandleView;
 
     move-result-object v1
 
@@ -68,7 +68,7 @@
     iget-object v1, p0, Landroid/widget/TextView$SelectionModifierCursorController$1;->this$1:Landroid/widget/TextView$SelectionModifierCursorController;
 
     #getter for: Landroid/widget/TextView$SelectionModifierCursorController;->mEndHandle:Landroid/widget/TextView$SelectionEndHandleView;
-    invoke-static {v1}, Landroid/widget/TextView$SelectionModifierCursorController;->access$11400(Landroid/widget/TextView$SelectionModifierCursorController;)Landroid/widget/TextView$SelectionEndHandleView;
+    invoke-static {v1}, Landroid/widget/TextView$SelectionModifierCursorController;->access$11300(Landroid/widget/TextView$SelectionModifierCursorController;)Landroid/widget/TextView$SelectionEndHandleView;
 
     move-result-object v1
 
@@ -78,24 +78,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 12713
-    const-string v1, "HtcAnchorOverlap"
-
-    const-string v2, "DISPATCH TO LEFT ANCHOR"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 12714
+    .line 12830
     iget-object v1, p0, Landroid/widget/TextView$SelectionModifierCursorController$1;->this$1:Landroid/widget/TextView$SelectionModifierCursorController;
 
     #getter for: Landroid/widget/TextView$SelectionModifierCursorController;->mStartHandle:Landroid/widget/TextView$SelectionStartHandleView;
-    invoke-static {v1}, Landroid/widget/TextView$SelectionModifierCursorController;->access$11300(Landroid/widget/TextView$SelectionModifierCursorController;)Landroid/widget/TextView$SelectionStartHandleView;
+    invoke-static {v1}, Landroid/widget/TextView$SelectionModifierCursorController;->access$11200(Landroid/widget/TextView$SelectionModifierCursorController;)Landroid/widget/TextView$SelectionStartHandleView;
 
     move-result-object v1
 
     invoke-virtual {v1, p1}, Landroid/widget/TextView$SelectionStartHandleView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 12716
+    .line 12832
     :cond_0
     return v0
 .end method

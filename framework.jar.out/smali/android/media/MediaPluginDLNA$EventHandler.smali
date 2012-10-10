@@ -25,337 +25,284 @@
     .parameter "looper"
 
     .prologue
-    .line 243
+    .line 282
     iput-object p1, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
-    .line 244
+    .line 283
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 245
+    .line 284
     return-void
 .end method
 
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 5
+    .locals 6
     .parameter "msg"
 
     .prologue
-    .line 248
-    const-string v2, "[MediaPluginDLNA]"
+    .line 287
+    const-string v3, "[MediaPluginDLNA]"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Got message: "
+    const-string v5, "Got message: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    iget v4, p1, Landroid/os/Message;->what:I
+    iget v5, p1, Landroid/os/Message;->what:I
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
-    iget v2, p1, Landroid/os/Message;->what:I
+    .line 288
+    iget v3, p1, Landroid/os/Message;->what:I
 
-    sparse-switch v2, :sswitch_data_0
+    packed-switch v3, :pswitch_data_0
 
-    .line 295
+    .line 324
     :goto_0
     return-void
 
-    .line 251
-    :sswitch_0
-    const-string v2, "[MediaPluginDLNA]"
+    .line 290
+    :pswitch_0
+    const-string v3, "[MediaPluginDLNA]"
 
-    const-string v3, "[msg handler connect to DLNAMiddleLayer]"
+    const-string v4, "[msg handler connect to DLNAMiddleLayer]"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+    .line 291
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-    invoke-static {v2}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
+    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
-    move-result-object v2
+    move-result-object v3
 
-    if-nez v2, :cond_0
+    if-nez v3, :cond_0
 
-    .line 253
-    const-string v2, "[MediaPluginDLNA]"
+    .line 292
+    const-string v3, "[MediaPluginDLNA]"
 
-    const-string/jumbo v3, "mDLNAManager is null, can not start to play..."
+    const-string/jumbo v4, "mDLNAManager is null, can not start to play..."
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 256
+    .line 295
     :cond_0
-    monitor-enter p0
-
-    .line 257
     const/4 v1, 0x0
 
-    .line 258
+    .line 296
     .local v1, extra:I
-    :try_start_0
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-    invoke-static {v2}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
+    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->getMirrorRenderer()Lcom/htc/dlnainterface/DLNARendererData;
+    invoke-virtual {v3}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->getMirrorRenderer()Lcom/htc/dlnainterface/DLNARendererData;
 
     move-result-object v0
 
-    .line 259
+    .line 297
     .local v0, DMRData:Lcom/htc/dlnainterface/DLNARendererData;
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 260
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+    .line 298
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
-    iget-object v3, v0, Lcom/htc/dlnainterface/DLNARendererData;->rendererID:Ljava/lang/String;
+    iget-object v4, v0, Lcom/htc/dlnainterface/DLNARendererData;->rendererID:Ljava/lang/String;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mDmrID:Ljava/lang/String;
-    invoke-static {v2, v3}, Landroid/media/MediaPluginDLNA;->access$1002(Landroid/media/MediaPluginDLNA;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4}, Landroid/media/MediaPluginDLNA;->access$1602(Landroid/media/MediaPluginDLNA;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 261
-    const-string v2, "[MediaPluginDLNA]"
+    .line 299
+    const-string v3, "[MediaPluginDLNA]"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "prepare DMR id: "
+    const-string/jumbo v5, "prepare DMR id: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v5, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+
+    #getter for: Landroid/media/MediaPluginDLNA;->mDmrID:Ljava/lang/String;
+    invoke-static {v5}, Landroid/media/MediaPluginDLNA;->access$1600(Landroid/media/MediaPluginDLNA;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 300
+    new-instance v2, Lcom/htc/dlnainterface/DLNAStatusBarData;
+
+    invoke-direct {v2}, Lcom/htc/dlnainterface/DLNAStatusBarData;-><init>()V
+
+    .line 301
+    .local v2, statusBarData:Lcom/htc/dlnainterface/DLNAStatusBarData;
+    const/4 v3, 0x4
+
+    iput v3, v2, Lcom/htc/dlnainterface/DLNAStatusBarData;->nFilterType:I
+
+    .line 302
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+
+    #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
+    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     move-result-object v3
 
     iget-object v4, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mDmrID:Ljava/lang/String;
-    invoke-static {v4}, Landroid/media/MediaPluginDLNA;->access$1000(Landroid/media/MediaPluginDLNA;)Ljava/lang/String;
+    invoke-static {v4}, Landroid/media/MediaPluginDLNA;->access$1600(Landroid/media/MediaPluginDLNA;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4, v2}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setRenderer(Ljava/lang/String;Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
 
-    move-result-object v3
+    move-result v3
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v3, :cond_2
 
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 263
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
-
-    #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-    invoke-static {v2}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-
-    move-result-object v2
-
-    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
-
-    #getter for: Landroid/media/MediaPluginDLNA;->mDmrID:Ljava/lang/String;
-    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$1000(Landroid/media/MediaPluginDLNA;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v4}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setRenderer(Ljava/lang/String;Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 264
+    .line 303
     const/16 v1, 0x2081
 
-    .line 275
+    .line 314
+    .end local v2           #statusBarData:Lcom/htc/dlnainterface/DLNAStatusBarData;
     :goto_1
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
-
     iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
+    iget-object v4, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+
     #getter for: Landroid/media/MediaPluginDLNA;->mDataPath:Ljava/lang/String;
-    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$1100(Landroid/media/MediaPluginDLNA;)Ljava/lang/String;
+    invoke-static {v4}, Landroid/media/MediaPluginDLNA;->access$1700(Landroid/media/MediaPluginDLNA;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/media/MediaPluginDLNA;->handleSetDataSource(Ljava/lang/String;)V
+
+    .line 315
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+
+    #getter for: Landroid/media/MediaPluginDLNA;->mPreSeekSec:I
+    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$1800(Landroid/media/MediaPluginDLNA;)I
+
+    move-result v3
+
+    if-lez v3, :cond_1
+
+    .line 316
+    const-string v3, "[MediaPluginDLNA]"
+
+    const-string v4, "do seek before play!!!"
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 317
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+
+    #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
+    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/media/MediaPluginDLNA;->handleSetDataSource(Ljava/lang/String;)V
+    iget-object v4, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
-    .line 276
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+    #getter for: Landroid/media/MediaPluginDLNA;->mPreSeekSec:I
+    invoke-static {v4}, Landroid/media/MediaPluginDLNA;->access$1800(Landroid/media/MediaPluginDLNA;)I
+
+    move-result v4
+
+    int-to-long v4, v4
+
+    invoke-virtual {v3, v4, v5}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->seekTo(J)V
+
+    .line 319
+    :cond_1
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mOnEventListener:Landroid/media/MediaPlugin$OnEventListener;
-    invoke-static {v2}, Landroid/media/MediaPluginDLNA;->access$900(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPlugin$OnEventListener;
+    invoke-static {v3}, Landroid/media/MediaPluginDLNA;->access$1500(Landroid/media/MediaPluginDLNA;)Landroid/media/MediaPlugin$OnEventListener;
 
-    move-result-object v2
+    move-result-object v3
 
-    const/16 v3, 0x2080
+    const/16 v4, 0x2080
 
-    invoke-interface {v2, v3, v1}, Landroid/media/MediaPlugin$OnEventListener;->onResponse(II)V
+    invoke-interface {v3, v4, v1}, Landroid/media/MediaPlugin$OnEventListener;->onResponse(II)V
 
-    .line 277
-    monitor-exit p0
+    goto/16 :goto_0
 
-    goto :goto_0
-
-    .end local v0           #DMRData:Lcom/htc/dlnainterface/DLNARendererData;
-    :catchall_0
-    move-exception v2
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v2
-
-    .line 266
-    .restart local v0       #DMRData:Lcom/htc/dlnainterface/DLNARendererData;
-    :cond_1
-    :try_start_1
-    const-string v2, "[MediaPluginDLNA]"
-
-    const-string v3, "DLNAController prepare failed..."
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 267
-    const/16 v1, 0x2082
-
-    .line 268
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
-
-    const/16 v3, 0x1008
-
-    #setter for: Landroid/media/MediaPluginDLNA;->mState:I
-    invoke-static {v2, v3}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
-
-    goto :goto_1
-
-    .line 271
+    .line 305
+    .restart local v2       #statusBarData:Lcom/htc/dlnainterface/DLNAStatusBarData;
     :cond_2
-    const-string v2, "[MediaPluginDLNA]"
+    const-string v3, "[MediaPluginDLNA]"
 
-    const-string v3, "DLNAController get DMR id failed..."
+    const-string v4, "DLNAController prepare failed..."
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
+    .line 306
+    const/16 v1, 0x2082
+
+    .line 307
+    iget-object v3, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
+
+    const/16 v4, 0x1008
+
+    #calls: Landroid/media/MediaPluginDLNA;->setState(I)V
+    invoke-static {v3, v4}, Landroid/media/MediaPluginDLNA;->access$1000(Landroid/media/MediaPluginDLNA;I)V
+
+    goto :goto_1
+
+    .line 310
+    .end local v2           #statusBarData:Lcom/htc/dlnainterface/DLNAStatusBarData;
+    :cond_3
+    const-string v3, "[MediaPluginDLNA]"
+
+    const-string v4, "DLNAController get DMR id failed..."
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 311
     const/16 v1, 0x2082
 
     goto :goto_1
 
-    .line 280
-    .end local v0           #DMRData:Lcom/htc/dlnainterface/DLNARendererData;
-    .end local v1           #extra:I
-    :sswitch_1
-    const-string v2, "[MediaPluginDLNA]"
+    .line 288
+    nop
 
-    const-string v3, "[msg handler pause]"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 281
-    monitor-enter p0
-
-    .line 282
-    :try_start_2
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
-
-    #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-    invoke-static {v2}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
-
-    #getter for: Landroid/media/MediaPluginDLNA;->mSeeking:Z
-    invoke-static {v2}, Landroid/media/MediaPluginDLNA;->access$800(Landroid/media/MediaPluginDLNA;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    .line 283
-    iget-object v2, p0, Landroid/media/MediaPluginDLNA$EventHandler;->this$0:Landroid/media/MediaPluginDLNA;
-
-    #getter for: Landroid/media/MediaPluginDLNA;->mDLNAManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-    invoke-static {v2}, Landroid/media/MediaPluginDLNA;->access$000(Landroid/media/MediaPluginDLNA;)Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->requestPause()V
-
-    .line 287
-    :goto_2
-    monitor-exit p0
-
-    goto/16 :goto_0
-
-    :catchall_1
-    move-exception v2
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw v2
-
-    .line 285
-    :cond_3
-    :try_start_3
-    const-string v2, "[MediaPluginDLNA]"
-
-    const-string/jumbo v3, "seeking now, do not do pause"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_2
-
-    .line 290
-    :sswitch_2
-    const-string v2, "[MediaPluginDLNA]"
-
-    const-string v3, "[msg handler seekTo]"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
-
-    .line 249
-    :sswitch_data_0
-    .sparse-switch
-        0x1000 -> :sswitch_0
-        0x1020 -> :sswitch_1
-        0x1400 -> :sswitch_2
-    .end sparse-switch
+    :pswitch_data_0
+    .packed-switch 0x1000
+        :pswitch_0
+    .end packed-switch
 .end method

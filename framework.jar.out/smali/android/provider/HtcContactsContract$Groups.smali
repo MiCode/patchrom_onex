@@ -49,7 +49,7 @@
     .locals 2
 
     .prologue
-    .line 1152
+    .line 1241
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "groups_device"
@@ -60,7 +60,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$Groups;->DELETE_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1158
+    .line 1248
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "groups_member"
@@ -71,7 +71,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$Groups;->MEMBER_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1164
+    .line 1254
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "groups_name_summary"
@@ -82,7 +82,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$Groups;->CONTENT_NAME_SUMMARY_URI:Landroid/net/Uri;
 
-    .line 1170
+    .line 1260
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "groups_name_list"
@@ -100,10 +100,10 @@
     .locals 0
 
     .prologue
-    .line 1146
+    .line 1234
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1147
+    .line 1235
     return-void
 .end method
 
@@ -111,14 +111,14 @@
     .locals 2
 
     .prologue
-    .line 1208
+    .line 1306
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.contacts.action.LIST_STARRED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1209
+    .line 1307
     .local v0, intent:Landroid/content/Intent;
     return-object v0
 .end method
@@ -128,20 +128,20 @@
     .parameter "name"
 
     .prologue
-    .line 1219
+    .line 1318
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1220
+    .line 1319
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "GROUP_NAME"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1221
+    .line 1320
     return-object v0
 .end method
 
@@ -152,7 +152,7 @@
     .end annotation
 
     .prologue
-    .line 1196
+    .line 1293
     if-eqz p0, :cond_0
 
     const-string v0, "Favorite_8656150684447252476_6727701920173350445"
@@ -163,10 +163,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1197
+    .line 1294
     const-string p0, "Favorites"
 
-    .line 1199
+    .line 1296
     .end local p0
     :cond_0
     return-object p0

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 6131
+    .line 6238
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$MultiPlayer$2;->this$1:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "mp"
 
     .prologue
-    .line 6133
+    .line 6240
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$MultiPlayer$2;->this$1:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
 
     iget-object v0, v0, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -50,8 +50,8 @@
     const-string v1, "com.htc.music.asyncopencomplete"
 
     #calls: Lcom/htc/music/MediaPlaybackService;->notifyChange(Ljava/lang/String;)V
-    invoke-static {v0, v1}, Lcom/htc/music/MediaPlaybackService;->access$400(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/htc/music/MediaPlaybackService;->access$500(Lcom/htc/music/MediaPlaybackService;Ljava/lang/String;)V
 
-    .line 6134
+    .line 6241
     return-void
 .end method

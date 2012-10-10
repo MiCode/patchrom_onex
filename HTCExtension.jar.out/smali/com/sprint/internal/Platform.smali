@@ -314,118 +314,56 @@
 .end method
 
 .method public static getCdmaPrlVersion()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
     .prologue
-    const/4 v4, 0x4
-
     .line 219
-    sget-boolean v2, Lcom/sprint/internal/SystemProperties;->IS_NOT_SPC_PROJECT:Z
+    sget-boolean v1, Lcom/sprint/internal/SystemProperties;->IS_NOT_SPC_PROJECT:Z
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    .line 239
-    .local v0, iprl_prop:I
+    .line 241
+    .local v0, prl_prop:Ljava/lang/String;
     :goto_0
-    return-object v2
+    return-object v0
 
     .line 221
-    .end local v0           #iprl_prop:I
+    .end local v0           #prl_prop:Ljava/lang/String;
     :cond_0
-    const-string v2, "com.sprint.internal.permission.PLATFORM"
+    const-string v1, "com.sprint.internal.permission.PLATFORM"
 
-    invoke-static {v2}, Lcom/sprint/internal/SecurityManager;->checkPermission(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/sprint/internal/SecurityManager;->checkPermission(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_1
-
-    .line 229
-    const-string v2, "ro.cdma.prl"
-
-    const/4 v3, 0x0
-
-    invoke-static {v2, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    .line 230
-    .restart local v0       #iprl_prop:I
-    if-lez v0, :cond_3
-
-    .line 231
-    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 232
-    .local v1, prl_prop:Ljava/lang/String;
-    :goto_1
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-ge v2, v4, :cond_2
-
-    .line 233
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "0"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    .line 224
-    .end local v0           #iprl_prop:I
-    .end local v1           #prl_prop:Ljava/lang/String;
-    :cond_1
-    sget-object v2, Lcom/sprint/internal/Platform;->TAG:Ljava/lang/String;
-
-    const-string v3, "****** require PLATFORM permission!!****** "
-
-    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 225
-    const-string v2, ""
-
-    goto :goto_0
-
-    .line 235
-    .restart local v0       #iprl_prop:I
-    .restart local v1       #prl_prop:Ljava/lang/String;
-    :cond_2
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-ne v2, v4, :cond_3
-
-    .line 236
-    invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_0
+    if-eqz v1, :cond_1
 
     .line 239
-    .end local v1           #prl_prop:Ljava/lang/String;
-    :cond_3
+    const-string v1, "ro.cdma.prl"
+
     const-string v2, ""
+
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 241
+    .restart local v0       #prl_prop:Ljava/lang/String;
+    goto :goto_0
+
+    .line 224
+    .end local v0           #prl_prop:Ljava/lang/String;
+    :cond_1
+    sget-object v1, Lcom/sprint/internal/Platform;->TAG:Ljava/lang/String;
+
+    const-string v2, "****** require PLATFORM permission!!****** "
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 225
+    const-string v0, ""
 
     goto :goto_0
 .end method
@@ -434,24 +372,24 @@
     .locals 6
 
     .prologue
-    .line 243
+    .line 245
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    .line 244
+    .line 246
     .local v2, myLooper:Landroid/os/Looper;
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    .line 245
+    .line 247
     .local v1, mainLooper:Landroid/os/Looper;
     if-ne v2, v1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 246
+    .line 248
     .local v0, bIsMainLooper:Z
     :goto_0
     sget-object v3, Lcom/sprint/internal/Platform;->TAG:Ljava/lang/String;
@@ -476,10 +414,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
+    .line 249
     return v0
 
-    .line 245
+    .line 247
     .end local v0           #bIsMainLooper:Z
     :cond_0
     const/4 v0, 0x0

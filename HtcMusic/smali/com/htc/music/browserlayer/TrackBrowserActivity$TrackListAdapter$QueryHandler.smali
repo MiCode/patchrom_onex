@@ -25,10 +25,10 @@
     .parameter "res"
 
     .prologue
-    .line 4283
+    .line 4284
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$QueryHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
-    .line 4284
+    .line 4285
     const/4 v0, 0x1
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -43,7 +43,7 @@
 
     invoke-direct {p0, p2, v0, v1}, Lcom/htc/music/util/DlArtAsyncQueryHandler;-><init>(Landroid/content/ContentResolver;ZZ)V
 
-    .line 4285
+    .line 4286
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4292
+    .line 4293
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$QueryHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, p3}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->init(Landroid/database/Cursor;)V
 
-    .line 4293
+    .line 4294
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$QueryHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -78,7 +78,7 @@
 
     iput-boolean v1, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAsyncQuerying:Z
 
-    .line 4294
+    .line 4295
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$QueryHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -92,7 +92,7 @@
 
     if-nez v0, :cond_0
 
-    .line 4295
+    .line 4296
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$QueryHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->showSpinner(Z)V
 
-    .line 4298
+    .line 4299
     :cond_0
     return-void
 .end method

@@ -174,10 +174,10 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->Setting_DATA_ROAMING_GUARD_to_MODE:[I
 
-    .line 237
+    .line 373
     iput v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
-    .line 899
+    .line 1099
     const/4 v1, 0x4
 
     new-array v1, v1, [I
@@ -186,7 +186,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNotification:[I
 
-    .line 1176
+    .line 1392
     new-instance v1, Landroid/os/RegistrantList;
 
     invoke-direct {v1}, Landroid/os/RegistrantList;-><init>()V
@@ -279,7 +279,7 @@
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v1, v1, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v1, v1, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker;->getMobileDataSettingEnabled()Z
 
@@ -327,7 +327,7 @@
     .line 91
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v1, v1, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v1, v1, Lcom/android/internal/telephony/cdma/CDMAPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v2, 0x0
 
@@ -387,7 +387,7 @@
     .line 82
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v1, v1, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v1, v1, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker;->getDataOnRoamingEnabled()Z
 
@@ -412,7 +412,7 @@
 
     goto :goto_1
 
-    .line 899
+    .line 1099
     :array_0
     .array-data 0x4
         0xfft 0xfft 0xfft 0xfft
@@ -480,10 +480,10 @@
     .prologue
     const/high16 v3, 0xf00
 
-    .line 1029
+    .line 1241
     const/4 v0, 0x0
 
-    .line 1030
+    .line 1242
     .local v0, blocking:Z
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -491,7 +491,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1057
+    .line 1269
     iget v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/2addr v1, v3
@@ -508,15 +508,15 @@
 
     if-nez v1, :cond_0
 
-    .line 1058
+    .line 1270
     const-string v1, "Domestic roaming is not allowed"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1059
+    .line 1271
     const/4 v0, 0x1
 
-    .line 1062
+    .line 1274
     :cond_0
     iget v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -534,15 +534,15 @@
 
     if-nez v1, :cond_1
 
-    .line 1063
+    .line 1275
     const-string v1, "international roaming is not allowed"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1064
+    .line 1276
     const/4 v0, 0x1
 
-    .line 1067
+    .line 1279
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -564,7 +564,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1068
+    .line 1280
     return v0
 .end method
 
@@ -582,7 +582,7 @@
 
     const/4 v5, 0x0
 
-    .line 1470
+    .line 1694
     const/high16 v6, 0x60
 
     and-int/2addr v6, p1
@@ -593,12 +593,12 @@
 
     move v0, v4
 
-    .line 1472
+    .line 1696
     .local v0, disabledByCancel:Z
     :goto_0
     const/4 v2, 0x0
 
-    .line 1473
+    .line 1697
     .local v2, displayDialog:Z
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
@@ -606,14 +606,14 @@
 
     if-eqz v6, :cond_2
 
-    .line 1474
+    .line 1698
     and-int v6, p1, v8
 
     if-ne v6, v8, :cond_1
 
     move v2, v4
 
-    .line 1479
+    .line 1703
     :goto_1
     and-int v6, p1, v9
 
@@ -621,14 +621,14 @@
 
     move v1, v4
 
-    .line 1480
+    .line 1704
     .local v1, discDisplayed:Z
     :goto_2
     const/4 v6, 0x4
 
     new-array v3, v6, [I
 
-    .line 1481
+    .line 1705
     .local v3, notifications:[I
     if-eqz v0, :cond_5
 
@@ -637,7 +637,7 @@
     :goto_3
     aput v6, v3, v5
 
-    .line 1482
+    .line 1706
     if-eqz v2, :cond_6
 
     move v6, v4
@@ -645,7 +645,7 @@
     :goto_4
     aput v6, v3, v4
 
-    .line 1483
+    .line 1707
     const/4 v7, 0x2
 
     if-eqz v1, :cond_7
@@ -655,7 +655,7 @@
     :goto_5
     aput v6, v3, v7
 
-    .line 1484
+    .line 1708
     const/4 v6, 0x3
 
     if-eqz p2, :cond_8
@@ -663,7 +663,7 @@
     :goto_6
     aput v4, v3, v6
 
-    .line 1485
+    .line 1709
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -714,7 +714,7 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1486
+    .line 1710
     return-object v3
 
     .end local v0           #disabledByCancel:Z
@@ -724,7 +724,7 @@
     :cond_0
     move v0, v5
 
-    .line 1470
+    .line 1694
     goto :goto_0
 
     .restart local v0       #disabledByCancel:Z
@@ -732,10 +732,10 @@
     :cond_1
     move v2, v5
 
-    .line 1474
+    .line 1698
     goto :goto_1
 
-    .line 1476
+    .line 1700
     :cond_2
     and-int v6, p1, v8
 
@@ -760,7 +760,7 @@
     :cond_4
     move v1, v5
 
-    .line 1479
+    .line 1703
     goto :goto_2
 
     .restart local v1       #discDisplayed:Z
@@ -768,25 +768,25 @@
     :cond_5
     move v6, v5
 
-    .line 1481
+    .line 1705
     goto :goto_3
 
     :cond_6
     move v6, v5
 
-    .line 1482
+    .line 1706
     goto :goto_4
 
     :cond_7
     move v6, v5
 
-    .line 1483
+    .line 1707
     goto :goto_5
 
     :cond_8
     move v4, v5
 
-    .line 1484
+    .line 1708
     goto :goto_6
 .end method
 
@@ -795,14 +795,14 @@
     .parameter "index"
 
     .prologue
-    .line 1619
+    .line 1843
     const/4 v0, 0x0
 
-    .line 1620
+    .line 1844
     .local v0, result:Z
     packed-switch p1, :pswitch_data_0
 
-    .line 1646
+    .line 1870
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -823,11 +823,11 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->logE(Ljava/lang/String;)V
 
-    .line 1651
+    .line 1875
     :goto_0
     return v0
 
-    .line 1623
+    .line 1847
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -845,10 +845,10 @@
 
     move-result v0
 
-    .line 1626
+    .line 1850
     goto :goto_0
 
-    .line 1629
+    .line 1853
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -866,10 +866,10 @@
 
     move-result v0
 
-    .line 1632
+    .line 1856
     goto :goto_0
 
-    .line 1635
+    .line 1859
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -887,10 +887,10 @@
 
     move-result v0
 
-    .line 1638
+    .line 1862
     goto :goto_0
 
-    .line 1641
+    .line 1865
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -908,10 +908,10 @@
 
     move-result v0
 
-    .line 1644
+    .line 1868
     goto :goto_0
 
-    .line 1620
+    .line 1844
     nop
 
     :pswitch_data_0
@@ -939,28 +939,28 @@
 
     const v7, -0x100001
 
-    .line 810
+    .line 1010
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/lit8 v2, v5, 0x6
 
-    .line 811
+    .line 1011
     .local v2, prevAllow:I
     const/4 v0, 0x0
 
-    .line 812
+    .line 1012
     .local v0, currAllow:I
     if-eqz p1, :cond_0
 
     move v0, v4
 
-    .line 813
+    .line 1013
     :cond_0
     if-eqz p2, :cond_1
 
     or-int/lit8 v0, v0, 0x4
 
-    .line 814
+    .line 1014
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1000,14 +1000,14 @@
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 815
+    .line 1015
     if-ne v2, v0, :cond_2
 
-    .line 897
+    .line 1097
     :goto_0
     return-void
 
-    .line 820
+    .line 1020
     :cond_2
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -1015,7 +1015,7 @@
 
     or-int v1, v5, v0
 
-    .line 821
+    .line 1021
     .local v1, newMode:I
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -1023,21 +1023,21 @@
 
     if-eqz v5, :cond_4
 
-    .line 822
+    .line 1022
     const/4 v3, 0x0
 
-    .line 823
+    .line 1023
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     const v5, -0x600001
 
     and-int/2addr v1, v5
 
-    .line 824
+    .line 1024
     and-int/lit8 v5, v1, 0x6
 
     packed-switch v5, :pswitch_data_0
 
-    .line 891
+    .line 1091
     :cond_3
     :goto_1
     :pswitch_0
@@ -1047,7 +1047,7 @@
 
     invoke-direct {p0, v1, v3, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 894
+    .line 1094
     .end local v3           #requestConnectionStatus:Ljava/lang/Boolean;
     :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1110,12 +1110,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 896
+    .line 1096
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_0
 
-    .line 826
+    .line 1026
     .restart local v3       #requestConnectionStatus:Ljava/lang/Boolean;
     :pswitch_1
     const/high16 v5, 0xf00
@@ -1124,7 +1124,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 827
+    .line 1027
     and-int/lit8 v5, v1, 0x20
 
     const/16 v6, 0x20
@@ -1146,161 +1146,161 @@
 
     if-ne v4, v10, :cond_8
 
-    .line 829
+    .line 1029
     :cond_6
     and-int v4, v1, v8
 
     if-eq v4, v8, :cond_3
 
-    .line 830
+    .line 1030
     and-int/2addr v1, v7
 
-    .line 831
+    .line 1031
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_7
 
-    .line 832
+    .line 1032
     const/high16 v4, 0x10
 
     or-int/2addr v1, v4
 
-    .line 834
+    .line 1034
     :cond_7
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 838
+    .line 1038
     :cond_8
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 839
+    .line 1039
     and-int/2addr v1, v7
 
     goto :goto_1
 
-    .line 844
+    .line 1044
     :pswitch_2
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v5, v4, :cond_b
 
-    .line 845
+    .line 1045
     and-int/lit8 v4, v1, 0x20
 
     const/16 v5, 0x20
 
     if-ne v4, v5, :cond_a
 
-    .line 846
+    .line 1046
     and-int v4, v1, v8
 
     if-eq v4, v8, :cond_3
 
-    .line 847
+    .line 1047
     and-int/2addr v1, v7
 
-    .line 848
+    .line 1048
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_9
 
-    .line 849
+    .line 1049
     const/high16 v4, 0x10
 
     or-int/2addr v1, v4
 
-    .line 851
+    .line 1051
     :cond_9
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto/16 :goto_1
 
-    .line 855
+    .line 1055
     :cond_a
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 856
+    .line 1056
     and-int/2addr v1, v7
 
     goto/16 :goto_1
 
-    .line 858
+    .line 1058
     :cond_b
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v4, v10, :cond_3
 
-    .line 859
+    .line 1059
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 860
+    .line 1060
     and-int/2addr v1, v7
 
     goto/16 :goto_1
 
-    .line 864
+    .line 1064
     :pswitch_3
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v5, v10, :cond_e
 
-    .line 865
+    .line 1065
     and-int/lit8 v4, v1, 0x40
 
     const/16 v5, 0x40
 
     if-ne v4, v5, :cond_d
 
-    .line 866
+    .line 1066
     and-int v4, v1, v8
 
     if-eq v4, v8, :cond_3
 
-    .line 867
+    .line 1067
     and-int/2addr v1, v7
 
-    .line 868
+    .line 1068
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_c
 
-    .line 869
+    .line 1069
     const/high16 v4, 0x10
 
     or-int/2addr v1, v4
 
-    .line 871
+    .line 1071
     :cond_c
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto/16 :goto_1
 
-    .line 875
+    .line 1075
     :cond_d
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 876
+    .line 1076
     and-int/2addr v1, v7
 
     goto/16 :goto_1
 
-    .line 878
+    .line 1078
     :cond_e
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v5, v4, :cond_3
 
-    .line 879
+    .line 1079
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 880
+    .line 1080
     and-int/2addr v1, v7
 
     goto/16 :goto_1
 
-    .line 884
+    .line 1084
     :pswitch_4
     const/high16 v4, 0xf00
 
@@ -1308,15 +1308,15 @@
 
     if-eqz v4, :cond_3
 
-    .line 885
+    .line 1085
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 886
+    .line 1086
     and-int/2addr v1, v7
 
     goto/16 :goto_1
 
-    .line 824
+    .line 1024
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_4
@@ -1345,28 +1345,28 @@
 
     const v6, -0x100001
 
-    .line 553
+    .line 745
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/lit8 v2, v4, 0x60
 
-    .line 554
+    .line 746
     .local v2, prevGuard:I
     const/4 v0, 0x0
 
-    .line 555
+    .line 747
     .local v0, currGuard:I
     if-eqz p1, :cond_0
 
     const/16 v0, 0x20
 
-    .line 556
+    .line 748
     :cond_0
     if-eqz p2, :cond_1
 
     or-int/lit8 v0, v0, 0x40
 
-    .line 557
+    .line 749
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1406,14 +1406,14 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 558
+    .line 750
     if-ne v2, v0, :cond_2
 
-    .line 630
+    .line 822
     :goto_0
     return-void
 
-    .line 563
+    .line 755
     :cond_2
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -1421,11 +1421,11 @@
 
     or-int v1, v4, v0
 
-    .line 564
+    .line 756
     .local v1, newMode:I
     const/4 v3, 0x0
 
-    .line 565
+    .line 757
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -1433,10 +1433,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 566
+    .line 758
     sparse-switch v0, :sswitch_data_0
 
-    .line 623
+    .line 815
     :cond_3
     :goto_1
     const/4 v4, 0x1
@@ -1445,11 +1445,11 @@
 
     invoke-direct {p0, v1, v3, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 625
+    .line 817
     :cond_4
     invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateDataRoamingNotification(ILjava/lang/Boolean;)V
 
-    .line 627
+    .line 819
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1504,12 +1504,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 629
+    .line 821
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_0
 
-    .line 568
+    .line 760
     :sswitch_0
     const/high16 v4, 0xf00
 
@@ -1517,7 +1517,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 569
+    .line 761
     and-int/lit8 v4, v1, 0x2
 
     if-ne v4, v9, :cond_5
@@ -1539,74 +1539,74 @@
 
     if-ne v4, v5, :cond_7
 
-    .line 571
+    .line 763
     :cond_6
     and-int v4, v1, v7
 
     if-eq v4, v7, :cond_3
 
-    .line 572
+    .line 764
     and-int/2addr v1, v6
 
-    .line 573
+    .line 765
     and-int v4, v1, v8
 
     if-ne v4, v8, :cond_3
 
-    .line 574
+    .line 766
     or-int/2addr v1, v10
 
     goto :goto_1
 
-    .line 579
+    .line 771
     :cond_7
     and-int/2addr v1, v6
 
     goto :goto_1
 
-    .line 584
+    .line 776
     :sswitch_1
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v4, v9, :cond_9
 
-    .line 585
+    .line 777
     and-int/lit8 v4, v1, 0x2
 
     if-ne v4, v9, :cond_8
 
-    .line 586
+    .line 778
     and-int v4, v1, v7
 
     if-eq v4, v7, :cond_3
 
-    .line 587
+    .line 779
     and-int/2addr v1, v6
 
-    .line 588
+    .line 780
     and-int v4, v1, v8
 
     if-ne v4, v8, :cond_3
 
-    .line 589
+    .line 781
     or-int/2addr v1, v10
 
     goto :goto_1
 
-    .line 594
+    .line 786
     :cond_8
     and-int/2addr v1, v6
 
     goto :goto_1
 
-    .line 597
+    .line 789
     :cond_9
     and-int/2addr v1, v6
 
-    .line 599
+    .line 791
     goto :goto_1
 
-    .line 601
+    .line 793
     :sswitch_2
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
@@ -1614,56 +1614,56 @@
 
     if-ne v4, v5, :cond_b
 
-    .line 602
+    .line 794
     and-int/lit8 v4, v1, 0x4
 
     const/4 v5, 0x4
 
     if-ne v4, v5, :cond_a
 
-    .line 603
+    .line 795
     and-int v4, v1, v7
 
     if-eq v4, v7, :cond_3
 
-    .line 604
+    .line 796
     and-int/2addr v1, v6
 
-    .line 605
+    .line 797
     and-int v4, v1, v8
 
     if-ne v4, v8, :cond_3
 
-    .line 606
+    .line 798
     or-int/2addr v1, v10
 
     goto/16 :goto_1
 
-    .line 611
+    .line 803
     :cond_a
     and-int/2addr v1, v6
 
     goto/16 :goto_1
 
-    .line 614
+    .line 806
     :cond_b
     and-int/2addr v1, v6
 
-    .line 616
+    .line 808
     goto/16 :goto_1
 
-    .line 618
+    .line 810
     :sswitch_3
     and-int/2addr v1, v6
 
-    .line 619
+    .line 811
     const v4, -0x600001
 
     and-int/2addr v1, v4
 
     goto/16 :goto_1
 
-    .line 566
+    .line 758
     nop
 
     :sswitch_data_0
@@ -1692,10 +1692,10 @@
 
     const v6, -0x100001
 
-    .line 388
+    .line 576
     const/4 v2, 0x0
 
-    .line 389
+    .line 577
     .local v2, newNetworkArea:I
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -1707,7 +1707,7 @@
 
     iput v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
-    .line 390
+    .line 578
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1730,24 +1730,24 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 391
+    .line 579
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardSupported()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 392
+    .line 580
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     const/4 v5, 0x3
 
     if-ne v4, v5, :cond_2
 
-    .line 393
+    .line 581
     const/high16 v2, 0x800
 
-    .line 403
+    .line 591
     :cond_0
     :goto_0
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
@@ -1756,7 +1756,7 @@
 
     and-int v0, v4, v5
 
-    .line 404
+    .line 592
     .local v0, currNetworkArea:I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1796,17 +1796,17 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 405
+    .line 593
     if-ne v0, v2, :cond_4
 
-    .line 406
+    .line 594
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardSupported()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 407
+    .line 595
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1853,12 +1853,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 473
+    .line 661
     :cond_1
     :goto_1
     return-void
 
-    .line 394
+    .line 582
     .end local v0           #currNetworkArea:I
     :cond_2
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
@@ -1867,21 +1867,21 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 395
+    .line 583
     const/high16 v2, 0x400
 
     goto :goto_0
 
-    .line 398
+    .line 586
     :cond_3
     if-eqz p3, :cond_0
 
-    .line 399
+    .line 587
     const/high16 v2, 0x200
 
     goto :goto_0
 
-    .line 413
+    .line 601
     .restart local v0       #currNetworkArea:I
     :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1956,7 +1956,7 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 419
+    .line 607
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const v5, -0xf000001
@@ -1965,11 +1965,11 @@
 
     or-int v1, v4, v2
 
-    .line 421
+    .line 609
     .local v1, newMode:I
     const/4 v3, 0x0
 
-    .line 422
+    .line 610
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -1977,19 +1977,19 @@
 
     if-eqz v4, :cond_6
 
-    .line 423
+    .line 611
     sparse-switch v2, :sswitch_data_0
 
-    .line 465
+    .line 653
     :cond_5
     :goto_2
     invoke-direct {p0, v1, v3, v7, v7}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 467
+    .line 655
     :cond_6
     invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateDataRoamingNotification(ILjava/lang/Boolean;)V
 
-    .line 469
+    .line 657
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2040,25 +2040,25 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 471
+    .line 659
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto/16 :goto_1
 
-    .line 425
+    .line 613
     :sswitch_0
     and-int/2addr v1, v6
 
-    .line 426
+    .line 614
     and-int/2addr v1, v10
 
-    .line 427
+    .line 615
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 428
+    .line 616
     goto :goto_2
 
-    .line 430
+    .line 618
     :sswitch_1
     invoke-direct {p0, v7}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->getEnhancedRoamingSettings(I)Z
 
@@ -2066,24 +2066,24 @@
 
     if-eqz v4, :cond_8
 
-    .line 431
+    .line 619
     and-int v4, v1, v8
 
     if-eq v4, v8, :cond_7
 
-    .line 432
+    .line 620
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_7
 
-    .line 433
+    .line 621
     and-int v4, v1, v6
 
     const/high16 v5, 0x10
 
     or-int v1, v4, v5
 
-    .line 441
+    .line 629
     :cond_7
     :goto_3
     const/4 v4, 0x2
@@ -2094,31 +2094,31 @@
 
     if-nez v4, :cond_5
 
-    .line 442
+    .line 630
     const-string v4, "Domestic data roaming is not allowed"
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 443
+    .line 631
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_2
 
-    .line 437
+    .line 625
     :cond_8
     const-string v4, "Domestic data roaming guard is disabled"
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 438
+    .line 626
     and-int/2addr v1, v6
 
-    .line 439
+    .line 627
     and-int/2addr v1, v10
 
     goto :goto_3
 
-    .line 447
+    .line 635
     :sswitch_2
     const/4 v4, 0x1
 
@@ -2128,24 +2128,24 @@
 
     if-eqz v4, :cond_a
 
-    .line 448
+    .line 636
     and-int v4, v1, v8
 
     if-eq v4, v8, :cond_9
 
-    .line 449
+    .line 637
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_9
 
-    .line 450
+    .line 638
     and-int v4, v1, v6
 
     const/high16 v5, 0x10
 
     or-int v1, v4, v5
 
-    .line 458
+    .line 646
     :cond_9
     :goto_4
     const/4 v4, 0x3
@@ -2156,31 +2156,31 @@
 
     if-nez v4, :cond_5
 
-    .line 459
+    .line 647
     const-string v4, "international data roaming is not allowed"
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 460
+    .line 648
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto/16 :goto_2
 
-    .line 454
+    .line 642
     :cond_a
     const-string v4, "International data roaming guard is disabled"
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 455
+    .line 643
     and-int/2addr v1, v6
 
-    .line 456
+    .line 644
     and-int/2addr v1, v10
 
     goto :goto_4
 
-    .line 423
+    .line 611
     nop
 
     :sswitch_data_0
@@ -2206,23 +2206,23 @@
 
     const/high16 v7, 0x4
 
-    .line 694
+    .line 890
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int v2, v5, v3
 
-    .line 695
+    .line 891
     .local v2, prevAllow:I
     if-eqz p1, :cond_0
 
     move v0, v3
 
-    .line 696
+    .line 892
     .local v0, currAllow:I
     :goto_0
     if-ne v2, v0, :cond_1
 
-    .line 736
+    .line 932
     :goto_1
     return-void
 
@@ -2230,10 +2230,10 @@
     :cond_0
     move v0, v4
 
-    .line 695
+    .line 891
     goto :goto_0
 
-    .line 700
+    .line 896
     .restart local v0       #currAllow:I
     :cond_1
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
@@ -2244,7 +2244,7 @@
 
     or-int v1, v5, v0
 
-    .line 701
+    .line 897
     .local v1, newMode:I
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -2252,17 +2252,17 @@
 
     if-eqz v5, :cond_3
 
-    .line 702
+    .line 898
     if-ne v0, v3, :cond_4
 
-    .line 703
+    .line 899
     const/high16 v3, 0xf00
 
     and-int/2addr v3, v1
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 730
+    .line 926
     :cond_2
     :goto_2
     :sswitch_0
@@ -2272,7 +2272,7 @@
 
     invoke-direct {p0, v1, v3, v5, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 733
+    .line 929
     :cond_3
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2324,12 +2324,12 @@
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 735
+    .line 931
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_1
 
-    .line 707
+    .line 903
     :sswitch_1
     and-int/lit8 v3, v1, 0x20
 
@@ -2337,26 +2337,26 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 708
+    .line 904
     and-int v3, v1, v7
 
     if-eq v3, v7, :cond_2
 
-    .line 709
+    .line 905
     const/high16 v3, 0x60
 
     and-int/2addr v3, v1
 
     if-nez v3, :cond_2
 
-    .line 710
+    .line 906
     and-int v3, v1, v8
 
     or-int v1, v3, v9
 
     goto :goto_2
 
-    .line 716
+    .line 912
     :sswitch_2
     and-int/lit8 v3, v1, 0x40
 
@@ -2364,32 +2364,32 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 717
+    .line 913
     and-int v3, v1, v7
 
     if-eq v3, v7, :cond_2
 
-    .line 718
+    .line 914
     const/high16 v3, 0x60
 
     and-int/2addr v3, v1
 
     if-nez v3, :cond_2
 
-    .line 719
+    .line 915
     and-int v3, v1, v8
 
     or-int v1, v3, v9
 
     goto :goto_2
 
-    .line 727
+    .line 923
     :cond_4
     and-int/2addr v1, v8
 
     goto :goto_2
 
-    .line 703
+    .line 899
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -2403,26 +2403,26 @@
     .parameter "mode"
 
     .prologue
-    .line 1490
+    .line 1714
     const/4 v0, 0x0
 
-    .line 1491
+    .line 1715
     .local v0, isDataConnected:Z
     and-int/lit16 v1, p1, 0xf00
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 1498
+    .line 1722
     :goto_0
     return v0
 
-    .line 1495
+    .line 1719
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1491
+    .line 1715
     nop
 
     :sswitch_data_0
@@ -2439,10 +2439,10 @@
     .prologue
     const/high16 v2, -0x8000
 
-    .line 1360
+    .line 1584
     const/4 v0, 0x0
 
-    .line 1361
+    .line 1585
     .local v0, DRGSupport:Z
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardSupported()Z
 
@@ -2458,11 +2458,11 @@
 
     const/4 v0, 0x1
 
-    .line 1363
+    .line 1587
     :goto_0
     return v0
 
-    .line 1361
+    .line 1585
     :cond_0
     const/4 v0, 0x0
 
@@ -2473,7 +2473,7 @@
     .locals 4
 
     .prologue
-    .line 1345
+    .line 1569
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     iget-object v2, v2, Lcom/android/internal/telephony/cdma/CDMAPhone;->mHtcRadio:Lcom/android/internal/telephony/cdma/HtcRadio;
@@ -2482,36 +2482,36 @@
 
     move-result v0
 
-    .line 1346
+    .line 1570
     .local v0, eriCarrierId:I
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_0
 
-    .line 1347
+    .line 1571
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0x94
 
     if-ne v2, v3, :cond_0
 
-    .line 1348
+    .line 1572
     const/4 v0, 0x3
 
-    .line 1351
+    .line 1575
     :cond_0
     const/4 v1, 0x0
 
-    .line 1352
+    .line 1576
     .local v1, supported:Z
     const/4 v2, 0x3
 
     if-ne v0, v2, :cond_1
 
-    .line 1353
+    .line 1577
     const/4 v1, 0x1
 
-    .line 1355
+    .line 1579
     :cond_1
     return v1
 .end method
@@ -2521,14 +2521,14 @@
     .parameter "givenMode"
 
     .prologue
-    .line 1505
+    .line 1729
     const/4 v0, 0x0
 
-    .line 1506
+    .line 1730
     .local v0, dataRoam:Z
     and-int/lit16 v1, p1, 0xf00
 
-    .line 1507
+    .line 1731
     .local v1, dataStatus:I
     const/16 v2, 0x300
 
@@ -2538,7 +2538,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1508
+    .line 1732
     :cond_0
     const/high16 v2, 0xf00
 
@@ -2546,12 +2546,12 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 1528
+    .line 1752
     :cond_1
     :goto_0
     return v0
 
-    .line 1510
+    .line 1734
     :sswitch_0
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardSupported()Z
 
@@ -2559,39 +2559,39 @@
 
     if-eqz v2, :cond_2
 
-    .line 1511
+    .line 1735
     const/high16 v2, 0x3000
 
     and-int/2addr v2, p1
 
     if-eqz v2, :cond_1
 
-    .line 1512
+    .line 1736
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1516
+    .line 1740
     :cond_2
     const/4 v0, 0x1
 
-    .line 1518
+    .line 1742
     goto :goto_0
 
-    .line 1520
+    .line 1744
     :sswitch_1
     const/4 v0, 0x1
 
-    .line 1521
+    .line 1745
     goto :goto_0
 
-    .line 1524
+    .line 1748
     :sswitch_2
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1508
+    .line 1732
     nop
 
     :sswitch_data_0
@@ -2608,7 +2608,7 @@
     .parameter "logStr"
 
     .prologue
-    .line 1659
+    .line 1883
     const-string v0, "CDMA"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2631,7 +2631,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1662
+    .line 1886
     return-void
 .end method
 
@@ -2640,7 +2640,7 @@
     .parameter "logStr"
 
     .prologue
-    .line 1666
+    .line 1890
     const-string v0, "CDMA"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2663,7 +2663,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1669
+    .line 1893
     return-void
 .end method
 
@@ -2682,55 +2682,55 @@
 
     const/4 v4, 0x0
 
-    .line 1126
+    .line 1342
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 1127
+    .line 1343
     iget v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 1128
+    .line 1344
     .local v0, newMode:I
     if-eqz p1, :cond_3
 
-    .line 1129
+    .line 1345
     and-int v2, v0, v3
 
     const/high16 v3, 0x40
 
     if-ne v2, v3, :cond_1
 
-    .line 1130
+    .line 1346
     const v2, -0x600001
 
     and-int/2addr v0, v2
 
-    .line 1131
+    .line 1347
     and-int/lit8 v2, v0, 0x60
 
     if-eqz v2, :cond_0
 
-    .line 1132
+    .line 1348
     and-int/2addr v0, v6
 
-    .line 1133
+    .line 1349
     and-int v2, v0, v5
 
     if-ne v2, v5, :cond_0
 
-    .line 1134
+    .line 1350
     or-int/2addr v0, v7
 
-    .line 1137
+    .line 1353
     :cond_0
     const/4 v2, 0x0
 
     invoke-direct {p0, v0, v2, v4, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 1171
+    .line 1387
     :cond_1
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2773,25 +2773,25 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1172
+    .line 1388
     iput v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 1174
+    .line 1390
     .end local v0           #newMode:I
     :cond_2
     return-void
 
-    .line 1141
+    .line 1357
     .restart local v0       #newMode:I
     :cond_3
     and-int v2, v0, v3
 
     if-nez v2, :cond_1
 
-    .line 1142
+    .line 1358
     const/4 v1, 0x0
 
-    .line 1143
+    .line 1359
     .local v1, tryEnableDialog:Z
     const/high16 v2, 0xf00
 
@@ -2799,23 +2799,23 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 1162
+    .line 1378
     :cond_4
     :goto_1
     :sswitch_0
     if-eqz v1, :cond_5
 
-    .line 1163
+    .line 1379
     and-int v2, v0, v5
 
     if-ne v2, v5, :cond_5
 
-    .line 1164
+    .line 1380
     and-int v2, v0, v6
 
     or-int v0, v2, v7
 
-    .line 1167
+    .line 1383
     :cond_5
     const/4 v2, 0x0
 
@@ -2823,7 +2823,7 @@
 
     goto :goto_0
 
-    .line 1147
+    .line 1363
     :sswitch_1
     and-int/lit8 v2, v0, 0x20
 
@@ -2831,19 +2831,19 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 1148
+    .line 1364
     and-int/lit8 v2, v0, 0x2
 
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_4
 
-    .line 1149
+    .line 1365
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 1154
+    .line 1370
     :sswitch_2
     and-int/lit8 v2, v0, 0x40
 
@@ -2851,19 +2851,19 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 1155
+    .line 1371
     and-int/lit8 v2, v0, 0x4
 
     const/4 v3, 0x4
 
     if-ne v2, v3, :cond_4
 
-    .line 1156
+    .line 1372
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 1143
+    .line 1359
     nop
 
     :sswitch_data_0
@@ -2880,12 +2880,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1567
+    .line 1791
     const-string v0, "Initialize enhanced roaming."
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1568
+    .line 1792
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/cdma/CDMAPhone;->getContext()Landroid/content/Context;
@@ -2908,7 +2908,7 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1573
+    .line 1797
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/cdma/CDMAPhone;->getContext()Landroid/content/Context;
@@ -2931,7 +2931,7 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1577
+    .line 1801
     return-void
 .end method
 
@@ -2940,14 +2940,14 @@
     .parameter "setting"
 
     .prologue
-    .line 1367
+    .line 1591
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->Setting_DATA_ROAMING_GUARD_to_MODE:[I
 
     array-length v1, v1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 1368
+    .line 1592
     .local v0, index:I
     :goto_0
     if-ltz v0, :cond_0
@@ -2958,19 +2958,19 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 1369
+    .line 1593
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 1371
+    .line 1595
     :cond_0
     if-gez v0, :cond_1
 
-    .line 1372
+    .line 1596
     const/4 v0, 0x0
 
-    .line 1375
+    .line 1599
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
@@ -2986,7 +2986,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1377
+    .line 1601
     return-void
 .end method
 
@@ -3000,20 +3000,20 @@
 
     const/4 v5, 0x0
 
-    .line 1532
+    .line 1756
     iget v2, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoaming(I)Z
 
     move-result v0
 
-    .line 1533
+    .line 1757
     .local v0, origDataRoam:Z
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoaming(I)Z
 
     move-result v1
 
-    .line 1534
+    .line 1758
     .local v1, updateDataRoam:Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3059,10 +3059,10 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1535
+    .line 1759
     if-eqz p2, :cond_0
 
-    .line 1536
+    .line 1760
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3083,33 +3083,33 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1539
+    .line 1763
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 1540
+    .line 1764
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     if-ne p2, v2, :cond_1
 
-    .line 1541
+    .line 1765
     const/4 v1, 0x0
 
-    .line 1545
+    .line 1769
     :cond_1
     if-eq v0, v1, :cond_2
 
-    .line 1546
+    .line 1770
     if-eqz v1, :cond_3
 
-    .line 1548
+    .line 1772
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v2, v2, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v2, v2, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v3, v3, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v3, v3, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v4, 0x1
 
@@ -3119,20 +3119,20 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/DataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1562
+    .line 1786
     :cond_2
     :goto_0
     return-void
 
-    .line 1555
+    .line 1779
     :cond_3
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v2, v2, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v2, v2, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v3, v3, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v3, v3, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v3, v6, v5, v5}, Lcom/android/internal/telephony/DataConnectionTracker;->obtainMessage(III)Landroid/os/Message;
 
@@ -3158,27 +3158,27 @@
 
     const/high16 v6, 0x4000
 
-    .line 1193
+    .line 1417
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1194
+    .line 1418
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateSprintPreferSystem(I)V
 
-    .line 1249
+    .line 1473
     :goto_0
     return-void
 
-    .line 1197
+    .line 1421
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
     move-result v0
 
-    .line 1198
+    .line 1422
     .local v0, currIsEnabled:Z
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -3186,50 +3186,50 @@
 
     and-int v2, v4, v5
 
-    .line 1199
+    .line 1423
     .local v2, newMode:I
     if-eqz p1, :cond_1
 
     if-ne p1, v10, :cond_2
 
-    .line 1201
+    .line 1425
     :cond_1
     const/high16 v4, -0x8000
 
     or-int/2addr v2, v4
 
-    .line 1203
+    .line 1427
     :cond_2
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
     move-result v1
 
-    .line 1204
+    .line 1428
     .local v1, newIsEnabled:Z
     if-eq v0, v1, :cond_4
 
-    .line 1205
+    .line 1429
     const/4 v3, 0x0
 
-    .line 1207
+    .line 1431
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     if-eqz v1, :cond_7
 
-    .line 1208
+    .line 1432
     const/high16 v4, 0x3000
 
     and-int/2addr v4, v2
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 1243
+    .line 1467
     :cond_3
     :goto_1
     const/4 v4, 0x0
 
     invoke-direct {p0, v2, v3, v10, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 1246
+    .line 1470
     .end local v3           #requestConnectionStatus:Ljava/lang/Boolean;
     :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3282,12 +3282,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1248
+    .line 1472
     iput v2, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_0
 
-    .line 1210
+    .line 1434
     .restart local v3       #requestConnectionStatus:Ljava/lang/Boolean;
     :sswitch_0
     and-int v4, v2, v9
@@ -3296,89 +3296,89 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 1211
+    .line 1435
     and-int v4, v2, v6
 
     if-ne v4, v6, :cond_5
 
-    .line 1212
+    .line 1436
     and-int v4, v2, v7
 
     if-ne v4, v7, :cond_5
 
-    .line 1213
+    .line 1437
     and-int v4, v2, v8
 
     const/high16 v5, 0x10
 
     or-int v2, v4, v5
 
-    .line 1216
+    .line 1440
     :cond_5
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 1220
+    .line 1444
     :sswitch_1
     and-int v4, v2, v9
 
     if-eqz v4, :cond_3
 
-    .line 1221
+    .line 1445
     and-int v4, v2, v6
 
     if-ne v4, v6, :cond_6
 
-    .line 1222
+    .line 1446
     and-int v4, v2, v7
 
     if-ne v4, v7, :cond_6
 
-    .line 1223
+    .line 1447
     and-int v4, v2, v8
 
     const/high16 v5, 0x10
 
     or-int v2, v4, v5
 
-    .line 1226
+    .line 1450
     :cond_6
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 1230
+    .line 1454
     :sswitch_2
     and-int v4, v2, v9
 
     if-eqz v4, :cond_3
 
-    .line 1231
+    .line 1455
     and-int v4, v2, v6
 
     if-eq v4, v6, :cond_3
 
-    .line 1232
+    .line 1456
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 1239
+    .line 1463
     :cond_7
     const v4, -0x600001
 
     and-int/2addr v2, v4
 
-    .line 1240
+    .line 1464
     and-int/2addr v2, v8
 
-    .line 1241
+    .line 1465
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 1208
+    .line 1432
     nop
 
     :sswitch_data_0
@@ -3404,12 +3404,12 @@
 
     const v6, -0x100001
 
-    .line 1252
+    .line 1476
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
     move-result v0
 
-    .line 1253
+    .line 1477
     .local v0, currIsEnabled:Z
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -3417,7 +3417,7 @@
 
     and-int v2, v4, v5
 
-    .line 1254
+    .line 1478
     .local v2, newMode:I
     if-eqz p1, :cond_0
 
@@ -3425,19 +3425,19 @@
 
     if-ne p1, v4, :cond_1
 
-    .line 1256
+    .line 1480
     :cond_0
     const/high16 v4, -0x8000
 
     or-int/2addr v2, v4
 
-    .line 1258
+    .line 1482
     :cond_1
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
     move-result v1
 
-    .line 1259
+    .line 1483
     .local v1, newIsEnabled:Z
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3469,22 +3469,22 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1260
+    .line 1484
     if-eq v0, v1, :cond_3
 
-    .line 1261
+    .line 1485
     const/4 v3, 0x0
 
-    .line 1262
+    .line 1486
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     if-eqz v1, :cond_e
 
-    .line 1263
+    .line 1487
     and-int/lit8 v4, v2, 0x6
 
     packed-switch v4, :pswitch_data_0
 
-    .line 1335
+    .line 1559
     :cond_2
     :goto_0
     :pswitch_0
@@ -3494,7 +3494,7 @@
 
     invoke-direct {p0, v2, v3, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 1338
+    .line 1562
     .end local v3           #requestConnectionStatus:Ljava/lang/Boolean;
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3547,13 +3547,13 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1340
+    .line 1564
     iput v2, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 1341
+    .line 1565
     return-void
 
-    .line 1265
+    .line 1489
     .restart local v3       #requestConnectionStatus:Ljava/lang/Boolean;
     :pswitch_1
     const/high16 v4, 0xf00
@@ -3562,7 +3562,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 1266
+    .line 1490
     and-int/lit8 v4, v2, 0x20
 
     const/16 v5, 0x20
@@ -3584,161 +3584,161 @@
 
     if-ne v4, v10, :cond_7
 
-    .line 1268
+    .line 1492
     :cond_5
     and-int v4, v2, v7
 
     if-eq v4, v7, :cond_2
 
-    .line 1269
+    .line 1493
     and-int/2addr v2, v6
 
-    .line 1270
+    .line 1494
     and-int v4, v2, v8
 
     if-ne v4, v8, :cond_6
 
-    .line 1271
+    .line 1495
     const/high16 v4, 0x10
 
     or-int/2addr v2, v4
 
-    .line 1273
+    .line 1497
     :cond_6
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_0
 
-    .line 1277
+    .line 1501
     :cond_7
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 1278
+    .line 1502
     and-int/2addr v2, v6
 
     goto :goto_0
 
-    .line 1283
+    .line 1507
     :pswitch_2
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v4, v9, :cond_a
 
-    .line 1284
+    .line 1508
     and-int/lit8 v4, v2, 0x20
 
     const/16 v5, 0x20
 
     if-ne v4, v5, :cond_9
 
-    .line 1285
+    .line 1509
     and-int v4, v2, v7
 
     if-eq v4, v7, :cond_2
 
-    .line 1286
+    .line 1510
     and-int/2addr v2, v6
 
-    .line 1287
+    .line 1511
     and-int v4, v2, v8
 
     if-ne v4, v8, :cond_8
 
-    .line 1288
+    .line 1512
     const/high16 v4, 0x10
 
     or-int/2addr v2, v4
 
-    .line 1290
+    .line 1514
     :cond_8
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_0
 
-    .line 1294
+    .line 1518
     :cond_9
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 1295
+    .line 1519
     and-int/2addr v2, v6
 
     goto/16 :goto_0
 
-    .line 1297
+    .line 1521
     :cond_a
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v4, v10, :cond_2
 
-    .line 1298
+    .line 1522
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 1299
+    .line 1523
     and-int/2addr v2, v6
 
     goto/16 :goto_0
 
-    .line 1303
+    .line 1527
     :pswitch_3
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v4, v10, :cond_d
 
-    .line 1304
+    .line 1528
     and-int/lit8 v4, v2, 0x40
 
     const/16 v5, 0x40
 
     if-ne v4, v5, :cond_c
 
-    .line 1305
+    .line 1529
     and-int v4, v2, v7
 
     if-eq v4, v7, :cond_2
 
-    .line 1306
+    .line 1530
     and-int/2addr v2, v6
 
-    .line 1307
+    .line 1531
     and-int v4, v2, v8
 
     if-ne v4, v8, :cond_b
 
-    .line 1308
+    .line 1532
     const/high16 v4, 0x10
 
     or-int/2addr v2, v4
 
-    .line 1310
+    .line 1534
     :cond_b
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto/16 :goto_0
 
-    .line 1314
+    .line 1538
     :cond_c
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 1315
+    .line 1539
     and-int/2addr v2, v6
 
     goto/16 :goto_0
 
-    .line 1317
+    .line 1541
     :cond_d
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     if-ne v4, v9, :cond_2
 
-    .line 1318
+    .line 1542
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 1319
+    .line 1543
     and-int/2addr v2, v6
 
     goto/16 :goto_0
 
-    .line 1323
+    .line 1547
     :pswitch_4
     const/high16 v4, 0xf00
 
@@ -3746,29 +3746,29 @@
 
     if-eqz v4, :cond_2
 
-    .line 1324
+    .line 1548
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 1325
+    .line 1549
     and-int/2addr v2, v6
 
     goto/16 :goto_0
 
-    .line 1331
+    .line 1555
     :cond_e
     const v4, -0x600001
 
     and-int/2addr v2, v4
 
-    .line 1332
+    .line 1556
     and-int/2addr v2, v6
 
-    .line 1333
+    .line 1557
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto/16 :goto_0
 
-    .line 1263
+    .line 1487
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_4
@@ -3789,10 +3789,10 @@
     .parameter "turnRoamAllowOff"
 
     .prologue
-    .line 1380
+    .line 1604
     const/4 v3, 0x0
 
-    .line 1381
+    .line 1605
     .local v3, notify:Z
     const/high16 v5, 0x60
 
@@ -3820,10 +3820,10 @@
     :goto_1
     if-eq v5, v6, :cond_0
 
-    .line 1383
+    .line 1607
     const/4 v3, 0x1
 
-    .line 1385
+    .line 1609
     :cond_0
     const/high16 v5, 0x10
 
@@ -3837,10 +3837,10 @@
 
     if-eq v5, v6, :cond_1
 
-    .line 1386
+    .line 1610
     const/4 v3, 0x1
 
-    .line 1388
+    .line 1612
     :cond_1
     const/high16 v5, 0x8
 
@@ -3854,10 +3854,10 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 1389
+    .line 1613
     const/4 v3, 0x1
 
-    .line 1391
+    .line 1615
     :cond_2
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
@@ -3877,10 +3877,10 @@
 
     if-eq v5, v6, :cond_3
 
-    .line 1392
+    .line 1616
     const/4 v3, 0x1
 
-    .line 1396
+    .line 1620
     :cond_3
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
@@ -3896,7 +3896,7 @@
 
     if-eq v5, v6, :cond_5
 
-    .line 1397
+    .line 1621
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     const/4 v6, 0x2
@@ -3911,15 +3911,15 @@
 
     if-eq v5, v6, :cond_4
 
-    .line 1398
+    .line 1622
     const-string v5, "roaming allow change for Dom, notify it"
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1399
+    .line 1623
     const/4 v3, 0x1
 
-    .line 1402
+    .line 1626
     :cond_4
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
@@ -3935,15 +3935,15 @@
 
     if-eq v5, v6, :cond_5
 
-    .line 1403
+    .line 1627
     const-string v5, "roaming allow change for Int, notify it"
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1404
+    .line 1628
     const/4 v3, 0x1
 
-    .line 1408
+    .line 1632
     :cond_5
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
@@ -3959,7 +3959,7 @@
 
     if-eq v5, v6, :cond_7
 
-    .line 1409
+    .line 1633
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
     const/4 v6, 0x2
@@ -3974,15 +3974,15 @@
 
     if-eq v5, v6, :cond_6
 
-    .line 1410
+    .line 1634
     const-string v5, "roaming guard change for Dom, notify it"
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1411
+    .line 1635
     const/4 v3, 0x1
 
-    .line 1414
+    .line 1638
     :cond_6
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mRoamingType:I
 
@@ -3998,15 +3998,15 @@
 
     if-eq v5, v6, :cond_7
 
-    .line 1415
+    .line 1639
     const-string v5, "roaming guard change for Int, notify it"
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1416
+    .line 1640
     const/4 v3, 0x1
 
-    .line 1420
+    .line 1644
     :cond_7
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -4048,22 +4048,22 @@
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1421
+    .line 1645
     if-nez v3, :cond_8
 
     if-eqz p4, :cond_e
 
-    .line 1423
+    .line 1647
     :cond_8
     invoke-direct {p0, p1, p4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->createNotificationObject(IZ)[I
 
     move-result-object v2
 
-    .line 1424
+    .line 1648
     .local v2, notification:[I
     const/4 v0, 0x0
 
-    .line 1425
+    .line 1649
     .local v0, bNotify:Z
     const/4 v1, 0x0
 
@@ -4073,7 +4073,7 @@
 
     if-ge v1, v5, :cond_c
 
-    .line 1427
+    .line 1651
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNotification:[I
 
     aget v5, v5, v1
@@ -4082,23 +4082,23 @@
 
     if-eq v5, v6, :cond_9
 
-    .line 1428
+    .line 1652
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNotification:[I
 
     aget v6, v2, v1
 
     aput v6, v5, v1
 
-    .line 1429
+    .line 1653
     const/4 v0, 0x1
 
-    .line 1425
+    .line 1649
     :cond_9
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 1381
+    .line 1605
     .end local v0           #bNotify:Z
     .end local v1           #i:I
     .end local v2           #notification:[I
@@ -4112,7 +4112,7 @@
 
     goto/16 :goto_1
 
-    .line 1432
+    .line 1656
     .restart local v0       #bNotify:Z
     .restart local v1       #i:I
     .restart local v2       #notification:[I
@@ -4125,30 +4125,30 @@
 
     if-eqz v5, :cond_e
 
-    .line 1433
+    .line 1657
     :cond_d
     const-string v5, "updateStatusAndConnection.Notify DRG"
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1434
+    .line 1658
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNofiticationList:Landroid/os/RegistrantList;
 
     invoke-virtual {v5, v2}, Landroid/os/RegistrantList;->notifyResult(Ljava/lang/Object;)V
 
-    .line 1439
+    .line 1663
     .end local v0           #bNotify:Z
     .end local v1           #i:I
     .end local v2           #notification:[I
     :cond_e
     if-eqz p2, :cond_10
 
-    .line 1440
+    .line 1664
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v4
 
-    .line 1441
+    .line 1665
     .local v4, requestConnect:Z
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -4170,7 +4170,7 @@
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1442
+    .line 1666
     if-eqz v4, :cond_f
 
     const/high16 v5, 0x80
@@ -4181,23 +4181,23 @@
 
     if-ne v5, v6, :cond_10
 
-    .line 1445
+    .line 1669
     :cond_f
     sget-boolean v5, Lcom/android/internal/telephony/HtcBuildUtils;->QCT_MM_CONFIG:Z
 
     if-eqz v5, :cond_12
 
-    .line 1448
+    .line 1672
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
     move-result v5
 
     if-eqz v5, :cond_11
 
-    .line 1450
+    .line 1674
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v5, v5, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v5, v5, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     check-cast v5, Lcom/android/internal/telephony/MMDataConnectionTracker;
 
@@ -4207,13 +4207,13 @@
 
     invoke-virtual {v5, v6, p3}, Lcom/android/internal/telephony/MMDataConnectionTracker;->controlDataFromRoamGuard(ZZ)V
 
-    .line 1467
+    .line 1691
     .end local v4           #requestConnect:Z
     :cond_10
     :goto_3
     return-void
 
-    .line 1455
+    .line 1679
     .restart local v4       #requestConnect:Z
     :cond_11
     const-string v5, "updateStatusAndConnection: do nothing for VZW,..."
@@ -4222,11 +4222,11 @@
 
     goto :goto_3
 
-    .line 1462
+    .line 1686
     :cond_12
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v5, v5, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v5, v5, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     check-cast v5, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
@@ -4255,10 +4255,10 @@
 
     const/high16 v5, 0x4
 
-    .line 994
+    .line 1206
     const/4 v0, 0x0
 
-    .line 995
+    .line 1207
     .local v0, blocking:Z
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
@@ -4266,16 +4266,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 996
+    .line 1208
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->blockedBySprintDataRoamGuard()Z
 
     move-result v1
 
-    .line 1025
+    .line 1237
     :goto_0
     return v1
 
-    .line 998
+    .line 1210
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -4283,7 +4283,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 999
+    .line 1211
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const/high16 v4, 0x3000
@@ -4292,7 +4292,7 @@
 
     if-nez v3, :cond_4
 
-    .line 1000
+    .line 1212
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const/high16 v4, 0xf00
@@ -4303,21 +4303,21 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 1001
+    .line 1213
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/2addr v3, v5
 
     if-eq v3, v5, :cond_1
 
-    .line 1002
+    .line 1214
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/2addr v3, v6
 
     if-ne v3, v6, :cond_3
 
-    .line 1003
+    .line 1215
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const/high16 v4, 0x60
@@ -4328,7 +4328,7 @@
 
     move v0, v1
 
-    .line 1024
+    .line 1236
     :cond_1
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4353,22 +4353,22 @@
 
     move v1, v0
 
-    .line 1025
+    .line 1237
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 1003
+    .line 1215
     goto :goto_1
 
-    .line 1006
+    .line 1218
     :cond_3
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 1011
+    .line 1223
     :cond_4
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -4380,7 +4380,7 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 1012
+    .line 1224
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const/high16 v4, 0xf00
@@ -4389,21 +4389,21 @@
 
     if-eqz v3, :cond_1
 
-    .line 1013
+    .line 1225
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/2addr v3, v5
 
     if-eq v3, v5, :cond_1
 
-    .line 1014
+    .line 1226
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/2addr v3, v6
 
     if-ne v3, v6, :cond_6
 
-    .line 1015
+    .line 1227
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const/high16 v4, 0x60
@@ -4422,7 +4422,7 @@
 
     goto :goto_2
 
-    .line 1018
+    .line 1230
     :cond_6
     const/4 v0, 0x1
 
@@ -4433,34 +4433,34 @@
     .locals 1
 
     .prologue
-    .line 96
+    .line 100
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->removeMessages(I)V
 
-    .line 97
+    .line 101
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->removeMessages(I)V
 
-    .line 98
+    .line 102
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->removeMessages(I)V
 
-    .line 99
+    .line 103
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->removeMessages(I)V
 
-    .line 101
+    .line 105
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v0, v0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForOn(Landroid/os/Handler;)V
 
-    .line 102
+    .line 106
     return-void
 .end method
 
@@ -4468,14 +4468,14 @@
     .locals 2
 
     .prologue
-    .line 105
+    .line 113
     const-string v0, "CDMA"
 
     const-string v1, "HtcDatatRoamGuard finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
+    .line 114
     return-void
 .end method
 
@@ -4490,7 +4490,7 @@
 
     const/high16 v4, 0x5000
 
-    .line 115
+    .line 127
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->GENERIC_WPHONE_CONFIG()Z
 
     move-result v3
@@ -4501,7 +4501,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 116
+    .line 128
     const-string v3, "CDMA"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4526,18 +4526,18 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 169
     :cond_0
     :goto_0
     return-void
 
-    .line 120
+    .line 132
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 122
+    .line 134
     .local v0, ar:Landroid/os/AsyncResult;
     iget v3, p1, Landroid/os/Message;->what:I
 
@@ -4545,7 +4545,7 @@
 
     goto :goto_0
 
-    .line 124
+    .line 136
     :pswitch_0
     const/4 v3, 0x2
 
@@ -4555,7 +4555,7 @@
 
     goto :goto_0
 
-    .line 127
+    .line 139
     :pswitch_1
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -4563,7 +4563,7 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 128
+    .line 140
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/2addr v3, v5
@@ -4572,10 +4572,10 @@
 
     iput v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 129
+    .line 141
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v3, v3, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v3, v3, Lcom/android/internal/telephony/cdma/CDMAPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual {p0, v6}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->obtainMessage(I)Landroid/os/Message;
 
@@ -4585,13 +4585,13 @@
 
     goto :goto_0
 
-    .line 133
+    .line 145
     :pswitch_2
     iget-object v3, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v3, :cond_2
 
-    .line 134
+    .line 146
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int/2addr v3, v5
@@ -4600,7 +4600,7 @@
 
     goto :goto_0
 
-    .line 137
+    .line 149
     :cond_2
     iget-object v3, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -4612,23 +4612,23 @@
 
     aget v2, v3, v4
 
-    .line 138
+    .line 150
     .local v2, statusCdmaRoamingMode:I
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updatePreferSystem(I)V
 
     goto :goto_0
 
-    .line 143
+    .line 155
     .end local v2           #statusCdmaRoamingMode:I
     :pswitch_3
     iget-object v3, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v3, :cond_3
 
-    .line 144
+    .line 156
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v3, v3, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v3, v3, Lcom/android/internal/telephony/cdma/CDMAPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual {p0, v6}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->obtainMessage(I)Landroid/os/Message;
 
@@ -4636,29 +4636,29 @@
 
     invoke-interface {v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->queryCdmaRoamingPreference(Landroid/os/Message;)V
 
-    .line 150
+    .line 162
     :goto_1
     iget-object v1, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Message;
 
-    .line 151
+    .line 163
     .local v1, responseMsg:Landroid/os/Message;
     if-eqz v1, :cond_0
 
-    .line 152
+    .line 164
     iget-object v3, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     iget-object v4, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     invoke-static {v1, v3, v4}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 153
+    .line 165
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 147
+    .line 159
     .end local v1           #responseMsg:Landroid/os/Message;
     :cond_3
     iget v3, p1, Landroid/os/Message;->arg1:I
@@ -4667,7 +4667,7 @@
 
     goto :goto_1
 
-    .line 122
+    .line 134
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4686,14 +4686,14 @@
 
     const v7, -0x40001
 
-    .line 901
+    .line 1105
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 902
+    .line 1106
     .local v3, newMode:I
     and-int/lit16 v1, v3, 0xf00
 
-    .line 903
+    .line 1107
     .local v1, currDataReqState:I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -4729,20 +4729,20 @@
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 904
+    .line 1108
     sget-object v5, Lcom/android/internal/telephony/DataConnectionTracker$State;->CONNECTED:Lcom/android/internal/telephony/DataConnectionTracker$State;
 
     if-ne p1, v5, :cond_5
 
-    .line 905
+    .line 1109
     if-nez v1, :cond_3
 
-    .line 906
+    .line 1110
     and-int/lit16 v5, v3, -0xf01
 
     or-int/lit16 v3, v5, 0x300
 
-    .line 914
+    .line 1118
     :cond_0
     :goto_0
     const/high16 v5, 0x60
@@ -4753,19 +4753,19 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 915
+    .line 1119
     and-int v5, v3, v7
 
     const/high16 v6, 0x4
 
     or-int v3, v5, v6
 
-    .line 916
+    .line 1120
     const v5, -0x600001
 
     and-int/2addr v3, v5
 
-    .line 928
+    .line 1132
     :cond_1
     :goto_1
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
@@ -4784,18 +4784,18 @@
 
     if-nez v5, :cond_8
 
-    .line 931
+    .line 1135
     const/4 v5, 0x0
 
     invoke-direct {p0, v3, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->createNotificationObject(IZ)[I
 
     move-result-object v4
 
-    .line 932
+    .line 1136
     .local v4, notification:[I
     const/4 v0, 0x0
 
-    .line 933
+    .line 1137
     .local v0, bNotify:Z
     const/4 v2, 0x0
 
@@ -4805,7 +4805,7 @@
 
     if-ge v2, v5, :cond_7
 
-    .line 935
+    .line 1139
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNotification:[I
 
     aget v5, v5, v2
@@ -4814,23 +4814,23 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 936
+    .line 1140
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNotification:[I
 
     aget v6, v4, v2
 
     aput v6, v5, v2
 
-    .line 937
+    .line 1141
     const/4 v0, 0x1
 
-    .line 933
+    .line 1137
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 908
+    .line 1112
     .end local v0           #bNotify:Z
     .end local v2           #i:I
     .end local v4           #notification:[I
@@ -4839,33 +4839,33 @@
 
     if-ne v1, v5, :cond_4
 
-    .line 909
+    .line 1113
     and-int/lit16 v5, v3, -0xf01
 
     or-int/lit16 v3, v5, 0x300
 
     goto :goto_0
 
-    .line 911
+    .line 1115
     :cond_4
     const/16 v5, 0x200
 
     if-ne v1, v5, :cond_0
 
-    .line 912
+    .line 1116
     and-int/lit16 v5, v3, -0xf01
 
     or-int/lit16 v3, v5, 0x400
 
     goto :goto_0
 
-    .line 919
+    .line 1123
     :cond_5
     sget-object v5, Lcom/android/internal/telephony/DataConnectionTracker$State;->CONNECTING:Lcom/android/internal/telephony/DataConnectionTracker$State;
 
     if-eq p1, v5, :cond_1
 
-    .line 922
+    .line 1126
     sget-object v5, Lcom/android/internal/telephony/DataConnectionTracker$State;->FAILED:Lcom/android/internal/telephony/DataConnectionTracker$State;
 
     if-eq p1, v5, :cond_6
@@ -4874,33 +4874,33 @@
 
     if-ne p1, v5, :cond_1
 
-    .line 924
+    .line 1128
     :cond_6
     and-int/lit16 v3, v3, -0xf01
 
-    .line 925
+    .line 1129
     and-int/2addr v3, v7
 
     goto :goto_1
 
-    .line 941
+    .line 1145
     .restart local v0       #bNotify:Z
     .restart local v2       #i:I
     .restart local v4       #notification:[I
     :cond_7
     if-eqz v0, :cond_8
 
-    .line 942
+    .line 1146
     const-string v5, "dataState.Notify DRG"
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 943
+    .line 1147
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNofiticationList:Landroid/os/RegistrantList;
 
     invoke-virtual {v5, v4}, Landroid/os/RegistrantList;->notifyResult(Ljava/lang/Object;)V
 
-    .line 947
+    .line 1151
     .end local v0           #bNotify:Z
     .end local v2           #i:I
     .end local v4           #notification:[I
@@ -4909,7 +4909,7 @@
 
     invoke-direct {p0, v3, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateDataRoamingNotification(ILjava/lang/Boolean;)V
 
-    .line 949
+    .line 1153
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -4960,10 +4960,10 @@
 
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 951
+    .line 1155
     iput v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 952
+    .line 1156
     return-void
 .end method
 
@@ -4984,26 +4984,26 @@
 
     const v6, -0x100001
 
-    .line 298
+    .line 486
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 299
+    .line 487
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->haveSprintERIupdate(IIZ)V
 
-    .line 385
+    .line 573
     :cond_0
     :goto_0
     return-void
 
-    .line 302
+    .line 490
     :cond_1
     const/4 v2, 0x0
 
-    .line 303
+    .line 491
     .local v2, newNetworkArea:I
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardSupported()Z
 
@@ -5011,18 +5011,18 @@
 
     if-eqz v4, :cond_4
 
-    .line 304
+    .line 492
     const/4 v4, 0x1
 
     if-eq p1, v4, :cond_2
 
-    .line 305
+    .line 493
     if-eqz p2, :cond_3
 
-    .line 306
+    .line 494
     const/high16 v2, 0x200
 
-    .line 319
+    .line 507
     :cond_2
     :goto_1
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
@@ -5031,18 +5031,18 @@
 
     and-int v0, v4, v5
 
-    .line 320
+    .line 508
     .local v0, currNetworkArea:I
     if-ne v0, v2, :cond_5
 
-    .line 321
+    .line 509
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardSupported()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 322
+    .line 510
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -5091,23 +5091,23 @@
 
     goto :goto_0
 
-    .line 309
+    .line 497
     .end local v0           #currNetworkArea:I
     :cond_3
     const/high16 v2, 0x100
 
     goto :goto_1
 
-    .line 314
+    .line 502
     :cond_4
     if-eqz p3, :cond_2
 
-    .line 315
+    .line 503
     const/high16 v2, 0x200
 
     goto :goto_1
 
-    .line 329
+    .line 517
     .restart local v0       #currNetworkArea:I
     :cond_5
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
@@ -5118,11 +5118,11 @@
 
     or-int v1, v4, v2
 
-    .line 331
+    .line 519
     .local v1, newMode:I
     const/4 v3, 0x0
 
-    .line 332
+    .line 520
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -5130,10 +5130,10 @@
 
     if-eqz v4, :cond_7
 
-    .line 333
+    .line 521
     sparse-switch v2, :sswitch_data_0
 
-    .line 378
+    .line 566
     :cond_6
     :goto_2
     const/4 v4, 0x0
@@ -5142,11 +5142,11 @@
 
     invoke-direct {p0, v1, v3, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 380
+    .line 568
     :cond_7
     invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateDataRoamingNotification(ILjava/lang/Boolean;)V
 
-    .line 382
+    .line 570
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -5207,56 +5207,56 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 384
+    .line 572
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto/16 :goto_0
 
-    .line 335
+    .line 523
     :sswitch_0
     and-int/2addr v1, v6
 
-    .line 336
+    .line 524
     const v4, -0x600001
 
     and-int/2addr v1, v4
 
-    .line 337
+    .line 525
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 338
+    .line 526
     goto :goto_2
 
-    .line 340
+    .line 528
     :sswitch_1
     if-nez v0, :cond_8
 
-    .line 341
+    .line 529
     and-int v4, v1, v10
 
     const/high16 v5, 0x1000
 
     if-ne v4, v5, :cond_6
 
-    .line 342
+    .line 530
     and-int v4, v1, v7
 
     if-eq v4, v7, :cond_6
 
-    .line 343
+    .line 531
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 344
+    .line 532
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_6
 
-    .line 345
+    .line 533
     and-int v4, v1, v8
 
     if-ne v4, v8, :cond_6
 
-    .line 346
+    .line 534
     and-int v4, v1, v6
 
     const/high16 v5, 0x10
@@ -5265,44 +5265,44 @@
 
     goto :goto_2
 
-    .line 353
+    .line 541
     :cond_8
     and-int v4, v1, v10
 
     if-nez v4, :cond_6
 
-    .line 354
+    .line 542
     and-int/2addr v1, v6
 
-    .line 355
+    .line 543
     const v4, -0x600001
 
     and-int/2addr v1, v4
 
-    .line 356
+    .line 544
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_2
 
-    .line 361
+    .line 549
     :sswitch_2
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_a
 
-    .line 362
+    .line 550
     and-int v4, v1, v10
 
     const/high16 v5, 0x2000
 
     if-eq v4, v5, :cond_6
 
-    .line 363
+    .line 551
     and-int v4, v1, v7
 
     if-eq v4, v7, :cond_6
 
-    .line 364
+    .line 552
     const/high16 v4, 0x60
 
     and-int/2addr v4, v1
@@ -5313,26 +5313,26 @@
 
     if-ne v4, v8, :cond_9
 
-    .line 366
+    .line 554
     and-int v4, v1, v6
 
     const/high16 v5, 0x10
 
     or-int v1, v4, v5
 
-    .line 368
+    .line 556
     :cond_9
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto/16 :goto_2
 
-    .line 373
+    .line 561
     :cond_a
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto/16 :goto_2
 
-    .line 333
+    .line 521
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -5356,27 +5356,27 @@
 
     const/high16 v7, 0x4
 
-    .line 633
+    .line 829
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 634
+    .line 830
     const-string v3, "SPCS roaming enhancement enabled: haveMobileAllowStatusChange"
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 635
+    .line 831
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->haveSprintMobileAllowStatusChange(Z)V
 
-    .line 691
+    .line 887
     :cond_0
     :goto_0
     return-void
 
-    .line 639
+    .line 835
     :cond_1
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->VZW_GLOBAL_ROAMING_CONFIG()Z
 
@@ -5390,7 +5390,7 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 641
+    .line 837
     :cond_2
     const-string v3, "ignore haveMobileAllowStatusChange"
 
@@ -5398,24 +5398,24 @@
 
     goto :goto_0
 
-    .line 645
+    .line 841
     :cond_3
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int v2, v5, v3
 
-    .line 646
+    .line 842
     .local v2, prevAllow:I
     if-eqz p1, :cond_6
 
     move v0, v3
 
-    .line 647
+    .line 843
     .local v0, currAllow:I
     :goto_1
     if-eq v2, v0, :cond_0
 
-    .line 651
+    .line 847
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const v6, -0x800001
@@ -5424,7 +5424,7 @@
 
     or-int v1, v5, v0
 
-    .line 652
+    .line 848
     .local v1, newMode:I
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -5432,17 +5432,17 @@
 
     if-eqz v5, :cond_5
 
-    .line 653
+    .line 849
     if-ne v0, v3, :cond_7
 
-    .line 654
+    .line 850
     const/high16 v3, 0xf00
 
     and-int/2addr v3, v1
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 685
+    .line 881
     :cond_4
     :goto_2
     :sswitch_0
@@ -5452,7 +5452,7 @@
 
     invoke-direct {p0, v1, v3, v5, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 688
+    .line 884
     :cond_5
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5504,7 +5504,7 @@
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 690
+    .line 886
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_0
@@ -5514,10 +5514,10 @@
     :cond_6
     move v0, v4
 
-    .line 646
+    .line 842
     goto :goto_1
 
-    .line 658
+    .line 854
     .restart local v0       #currAllow:I
     .restart local v1       #newMode:I
     :sswitch_1
@@ -5529,24 +5529,24 @@
 
     if-ne v3, v5, :cond_4
 
-    .line 659
+    .line 855
     and-int v3, v1, v7
 
     if-eq v3, v7, :cond_4
 
-    .line 660
+    .line 856
     and-int v3, v1, v8
 
     if-ne v3, v8, :cond_4
 
-    .line 661
+    .line 857
     const/high16 v3, 0x60
 
     and-int/2addr v3, v1
 
     if-nez v3, :cond_4
 
-    .line 662
+    .line 858
     and-int v3, v1, v9
 
     const/high16 v5, 0x10
@@ -5555,13 +5555,13 @@
 
     goto :goto_2
 
-    .line 669
+    .line 865
     :sswitch_2
     and-int v3, v1, v8
 
     if-ne v3, v8, :cond_4
 
-    .line 670
+    .line 866
     const/high16 v3, 0x3000
 
     and-int/2addr v3, v1
@@ -5570,19 +5570,19 @@
 
     if-eq v3, v5, :cond_4
 
-    .line 671
+    .line 867
     and-int v3, v1, v7
 
     if-eq v3, v7, :cond_4
 
-    .line 672
+    .line 868
     const/high16 v3, 0x60
 
     and-int/2addr v3, v1
 
     if-nez v3, :cond_4
 
-    .line 673
+    .line 869
     and-int v3, v1, v9
 
     const/high16 v5, 0x10
@@ -5591,13 +5591,13 @@
 
     goto :goto_2
 
-    .line 682
+    .line 878
     :cond_7
     and-int/2addr v1, v9
 
     goto :goto_2
 
-    .line 654
+    .line 850
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -5621,41 +5621,41 @@
 
     const/high16 v4, 0x4000
 
-    .line 739
+    .line 939
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 740
+    .line 940
     const-string v4, "haveRoamAllowSettingChange: Sprint roaming enable, ignore it"
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 807
+    .line 1007
     :cond_0
     :goto_0
     return-void
 
-    .line 743
+    .line 943
     :cond_1
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     and-int v2, v5, v4
 
-    .line 744
+    .line 944
     .local v2, prevAllow:I
     if-eqz p1, :cond_4
 
     move v0, v4
 
-    .line 745
+    .line 945
     .local v0, currAllow:I
     :goto_1
     if-eq v2, v0, :cond_0
 
-    .line 750
+    .line 950
     iget v5, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const v6, -0x40000001
@@ -5664,7 +5664,7 @@
 
     or-int v1, v5, v0
 
-    .line 752
+    .line 952
     .local v1, newMode:I
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -5672,23 +5672,23 @@
 
     if-eqz v5, :cond_3
 
-    .line 753
+    .line 953
     const/4 v3, 0x0
 
-    .line 755
+    .line 955
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     const v5, -0x600001
 
     and-int/2addr v1, v5
 
-    .line 756
+    .line 956
     const/high16 v5, 0x3000
 
     and-int/2addr v5, v1
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 801
+    .line 1001
     :cond_2
     :goto_2
     const/4 v4, 0x1
@@ -5697,7 +5697,7 @@
 
     invoke-direct {p0, v1, v3, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 804
+    .line 1004
     .end local v3           #requestConnectionStatus:Ljava/lang/Boolean;
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5750,12 +5750,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 806
+    .line 1006
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_0
 
-    .line 744
+    .line 944
     .end local v0           #currAllow:I
     .end local v1           #newMode:I
     :cond_4
@@ -5763,7 +5763,7 @@
 
     goto :goto_1
 
-    .line 758
+    .line 958
     .restart local v0       #currAllow:I
     .restart local v1       #newMode:I
     .restart local v3       #requestConnectionStatus:Ljava/lang/Boolean;
@@ -5774,105 +5774,105 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 759
+    .line 959
     and-int v5, v1, v4
 
     if-ne v5, v4, :cond_6
 
-    .line 760
+    .line 960
     and-int v4, v1, v7
 
     if-eq v4, v7, :cond_2
 
-    .line 761
+    .line 961
     and-int/2addr v1, v10
 
-    .line 762
+    .line 962
     and-int v4, v1, v8
 
     if-ne v4, v8, :cond_5
 
-    .line 763
+    .line 963
     const/high16 v4, 0x10
 
     or-int/2addr v1, v4
 
-    .line 765
+    .line 965
     :cond_5
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_2
 
-    .line 769
+    .line 969
     :cond_6
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_2
 
-    .line 774
+    .line 974
     :sswitch_1
     and-int v5, v1, v9
 
     if-eqz v5, :cond_2
 
-    .line 775
+    .line 975
     and-int v5, v1, v4
 
     if-ne v5, v4, :cond_8
 
-    .line 776
+    .line 976
     and-int v4, v1, v7
 
     if-eq v4, v7, :cond_2
 
-    .line 777
+    .line 977
     and-int/2addr v1, v10
 
-    .line 778
+    .line 978
     and-int v4, v1, v8
 
     if-ne v4, v8, :cond_7
 
-    .line 779
+    .line 979
     const/high16 v4, 0x10
 
     or-int/2addr v1, v4
 
-    .line 781
+    .line 981
     :cond_7
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_2
 
-    .line 785
+    .line 985
     :cond_8
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_2
 
-    .line 790
+    .line 990
     :sswitch_2
     and-int v5, v1, v9
 
     if-eqz v5, :cond_2
 
-    .line 791
+    .line 991
     and-int v5, v1, v4
 
     if-ne v5, v4, :cond_9
 
-    .line 792
+    .line 992
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_2
 
-    .line 795
+    .line 995
     :cond_9
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto/16 :goto_2
 
-    .line 756
+    .line 956
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -5896,7 +5896,7 @@
 
     const/4 v4, 0x0
 
-    .line 1072
+    .line 1288
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -5917,22 +5917,22 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1073
+    .line 1289
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_ROAMING_ENHANCE_CONFIG()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1074
+    .line 1290
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->reEnableSprintGuardDialog(Z)V
 
-    .line 1122
+    .line 1338
     :cond_0
     :goto_0
     return-void
 
-    .line 1077
+    .line 1293
     :cond_1
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -5940,14 +5940,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 1078
+    .line 1294
     iget v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 1079
+    .line 1295
     .local v0, newMode:I
     if-eqz p1, :cond_4
 
-    .line 1080
+    .line 1296
     const/high16 v2, 0x60
 
     and-int/2addr v2, v0
@@ -5956,36 +5956,36 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 1081
+    .line 1297
     const v2, -0x600001
 
     and-int/2addr v0, v2
 
-    .line 1082
+    .line 1298
     and-int v2, v0, v6
 
     const/high16 v3, 0x2000
 
     if-eq v2, v3, :cond_2
 
-    .line 1083
+    .line 1299
     and-int/2addr v0, v7
 
-    .line 1084
+    .line 1300
     and-int v2, v0, v5
 
     if-ne v2, v5, :cond_2
 
-    .line 1085
+    .line 1301
     or-int/2addr v0, v8
 
-    .line 1088
+    .line 1304
     :cond_2
     const/4 v2, 0x0
 
     invoke-direct {p0, v0, v2, v4, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 1119
+    .line 1335
     :cond_3
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6028,12 +6028,12 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 1120
+    .line 1336
     iput v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_0
 
-    .line 1092
+    .line 1308
     :cond_4
     const/high16 v2, 0x60
 
@@ -6041,10 +6041,10 @@
 
     if-nez v2, :cond_3
 
-    .line 1093
+    .line 1309
     const/4 v1, 0x0
 
-    .line 1094
+    .line 1310
     .local v1, tryEnableDialog:Z
     const/high16 v2, 0xf00
 
@@ -6052,13 +6052,13 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 1109
+    .line 1325
     :cond_5
     :goto_2
     :sswitch_0
     if-eqz v1, :cond_6
 
-    .line 1110
+    .line 1326
     const/high16 v2, 0x4000
 
     and-int/2addr v2, v0
@@ -6071,12 +6071,12 @@
 
     if-ne v2, v5, :cond_6
 
-    .line 1112
+    .line 1328
     and-int v2, v0, v7
 
     or-int v0, v2, v8
 
-    .line 1115
+    .line 1331
     :cond_6
     const/4 v2, 0x0
 
@@ -6084,7 +6084,7 @@
 
     goto :goto_1
 
-    .line 1098
+    .line 1314
     :sswitch_1
     and-int v2, v0, v6
 
@@ -6092,12 +6092,12 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 1099
+    .line 1315
     const/4 v1, 0x1
 
     goto :goto_2
 
-    .line 1103
+    .line 1319
     :sswitch_2
     and-int v2, v0, v6
 
@@ -6105,12 +6105,12 @@
 
     if-eq v2, v3, :cond_5
 
-    .line 1104
+    .line 1320
     const/4 v1, 0x1
 
     goto :goto_2
 
-    .line 1094
+    .line 1310
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -6126,18 +6126,18 @@
     .parameter "obj"
 
     .prologue
-    .line 1179
+    .line 1399
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 1180
+    .line 1400
     .local v0, r:Landroid/os/Registrant;
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNofiticationList:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 1182
+    .line 1402
     iget v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const/4 v2, 0x0
@@ -6148,7 +6148,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Registrant;->notifyResult(Ljava/lang/Object;)V
 
-    .line 1183
+    .line 1403
     return-void
 .end method
 
@@ -6158,10 +6158,10 @@
     .parameter "response"
 
     .prologue
-    .line 160
+    .line 176
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v0, v0, Lcom/android/internal/telephony/cdma/CDMAPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v1, 0x4
 
@@ -6173,7 +6173,7 @@
 
     invoke-interface {v0, p1, v1}, Lcom/android/internal/telephony/CommandsInterface;->setCdmaRoamingPreference(ILandroid/os/Message;)V
 
-    .line 162
+    .line 178
     return-void
 .end method
 
@@ -6192,12 +6192,12 @@
 
     const/high16 v6, 0x4000
 
-    .line 478
+    .line 670
     const/high16 v4, 0x3000
 
     and-int v0, p1, v4
 
-    .line 479
+    .line 671
     .local v0, guardSetting:I
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
@@ -6205,19 +6205,19 @@
 
     and-int v2, v4, v5
 
-    .line 480
+    .line 672
     .local v2, prevSetting:I
     if-ne v0, v2, :cond_0
 
-    .line 550
+    .line 742
     :goto_0
     return-void
 
-    .line 483
+    .line 675
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->storeSetting(I)V
 
-    .line 486
+    .line 678
     iget v4, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     const v5, -0x30000001
@@ -6226,11 +6226,11 @@
 
     or-int v1, v4, v0
 
-    .line 488
+    .line 680
     .local v1, newMode:I
     const/4 v3, 0x0
 
-    .line 489
+    .line 681
     .local v3, requestConnectionStatus:Ljava/lang/Boolean;
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -6238,10 +6238,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 490
+    .line 682
     sparse-switch v0, :sswitch_data_0
 
-    .line 543
+    .line 735
     :cond_1
     :goto_1
     const/4 v4, 0x1
@@ -6250,11 +6250,11 @@
 
     invoke-direct {p0, v1, v3, v4, v5}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 545
+    .line 737
     :cond_2
     invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateDataRoamingNotification(ILjava/lang/Boolean;)V
 
-    .line 547
+    .line 739
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -6309,12 +6309,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 549
+    .line 741
     iput v1, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
     goto :goto_0
 
-    .line 492
+    .line 684
     :sswitch_0
     const/high16 v4, 0xf00
 
@@ -6324,55 +6324,55 @@
 
     if-ne v4, v5, :cond_5
 
-    .line 493
+    .line 685
     and-int v4, v1, v6
 
     if-ne v4, v6, :cond_4
 
-    .line 494
+    .line 686
     and-int v4, v1, v8
 
     if-eq v4, v8, :cond_1
 
-    .line 495
+    .line 687
     and-int/2addr v1, v7
 
-    .line 496
+    .line 688
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_3
 
-    .line 497
+    .line 689
     const/high16 v4, 0x10
 
     or-int/2addr v1, v4
 
-    .line 499
+    .line 691
     :cond_3
     and-int/2addr v1, v10
 
-    .line 500
+    .line 692
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 504
+    .line 696
     :cond_4
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 508
+    .line 700
     :cond_5
     and-int/2addr v1, v7
 
-    .line 509
+    .line 701
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 511
+    .line 703
     goto :goto_1
 
-    .line 513
+    .line 705
     :sswitch_1
     const/high16 v4, 0xf00
 
@@ -6380,75 +6380,75 @@
 
     if-eqz v4, :cond_1
 
-    .line 514
+    .line 706
     and-int v4, v1, v6
 
     if-ne v4, v6, :cond_7
 
-    .line 515
+    .line 707
     and-int v4, v1, v8
 
     if-eq v4, v8, :cond_1
 
-    .line 516
+    .line 708
     and-int/2addr v1, v7
 
-    .line 517
+    .line 709
     and-int v4, v1, v9
 
     if-ne v4, v9, :cond_6
 
-    .line 518
+    .line 710
     const/high16 v4, 0x10
 
     or-int/2addr v1, v4
 
-    .line 520
+    .line 712
     :cond_6
     and-int/2addr v1, v10
 
-    .line 521
+    .line 713
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 525
+    .line 717
     :cond_7
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_1
 
-    .line 530
+    .line 722
     :sswitch_2
     and-int/2addr v1, v7
 
-    .line 531
+    .line 723
     and-int/2addr v1, v10
 
-    .line 532
+    .line 724
     const/high16 v4, 0xf00
 
     and-int/2addr v4, v1
 
     if-eqz v4, :cond_1
 
-    .line 533
+    .line 725
     and-int v4, v1, v6
 
     if-ne v4, v6, :cond_8
 
-    .line 534
+    .line 726
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto/16 :goto_1
 
-    .line 537
+    .line 729
     :cond_8
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto/16 :goto_1
 
-    .line 490
+    .line 682
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -6471,10 +6471,10 @@
 
     const v4, -0x600001
 
-    .line 955
+    .line 1163
     iget v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 956
+    .line 1164
     .local v0, newMode:I
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->isDataRoamGuardFunctionEnabled()Z
 
@@ -6482,50 +6482,50 @@
 
     if-eqz v3, :cond_0
 
-    .line 957
+    .line 1165
     const/4 v1, 0x0
 
-    .line 958
+    .line 1166
     .local v1, requestConnectionStatus:Ljava/lang/Boolean;
     const/4 v2, 0x0
 
-    .line 960
+    .line 1168
     .local v2, turnAllowRoamOff:Z
     const v3, -0x100001
 
     and-int/2addr v0, v3
 
-    .line 961
+    .line 1169
     if-eqz p2, :cond_2
 
-    .line 962
+    .line 1170
     if-eqz p1, :cond_1
 
-    .line 963
+    .line 1171
     const v3, -0x30000001
 
     and-int/2addr v3, v0
 
     or-int v0, v3, v7
 
-    .line 964
+    .line 1172
     and-int v3, v0, v5
 
     or-int v0, v3, v6
 
-    .line 965
+    .line 1173
     invoke-direct {p0, v7}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->storeSetting(I)V
 
-    .line 966
+    .line 1174
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 985
+    .line 1193
     :goto_0
     const/4 v3, 0x1
 
     invoke-direct {p0, v0, v1, v3, v2}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->updateStatusAndConnection(ILjava/lang/Boolean;ZZ)V
 
-    .line 988
+    .line 1196
     .end local v1           #requestConnectionStatus:Ljava/lang/Boolean;
     .end local v2           #turnAllowRoamOff:Z
     :cond_0
@@ -6589,13 +6589,13 @@
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->log(Ljava/lang/String;)V
 
-    .line 990
+    .line 1198
     iput v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mMode:I
 
-    .line 991
+    .line 1199
     return-void
 
-    .line 969
+    .line 1177
     .restart local v1       #requestConnectionStatus:Ljava/lang/Boolean;
     .restart local v2       #turnAllowRoamOff:Z
     :cond_1
@@ -6603,42 +6603,42 @@
 
     and-int/2addr v0, v3
 
-    .line 970
+    .line 1178
     iget-object v3, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    iget-object v3, v3, Lcom/android/internal/telephony/PhoneBase;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
+    iget-object v3, v3, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDataConnectionTracker:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/DataConnectionTracker;->setDataOnRoamingEnabled(Z)V
 
-    .line 971
+    .line 1179
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 975
+    .line 1183
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 976
+    .line 1184
     and-int v3, v0, v4
 
     const/high16 v4, 0x20
 
     or-int v0, v3, v4
 
-    .line 977
+    .line 1185
     and-int v3, v0, v5
 
     or-int v0, v3, v6
 
-    .line 978
+    .line 1186
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_0
 
-    .line 981
+    .line 1189
     :cond_3
     and-int v3, v0, v4
 
@@ -6654,11 +6654,11 @@
     .parameter "h"
 
     .prologue
-    .line 1186
+    .line 1410
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/HtcDataRoamGuard;->mNofiticationList:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
 
-    .line 1187
+    .line 1411
     return-void
 .end method

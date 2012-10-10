@@ -368,7 +368,7 @@
     .line 187
     iget-object v2, p0, Lcom/android/internal/telephony/PhoneStateIntentReceiver;->mSignalStrength:Landroid/telephony/SignalStrength;
 
-    invoke-virtual {v2}, Landroid/telephony/SignalStrength;->getLteRsrp()I
+    invoke-virtual {v2}, Landroid/telephony/SignalStrength;->getHtcLteRsrp()I
 
     move-result v0
 
@@ -410,7 +410,7 @@
     .line 195
     iget-object v2, p0, Lcom/android/internal/telephony/PhoneStateIntentReceiver;->mSignalStrength:Landroid/telephony/SignalStrength;
 
-    invoke-virtual {v2}, Landroid/telephony/SignalStrength;->getLteRsrq()I
+    invoke-virtual {v2}, Landroid/telephony/SignalStrength;->getHtcLteRsrq()I
 
     move-result v0
 

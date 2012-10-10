@@ -3384,6 +3384,31 @@
     return-void
 .end method
 
+.method public bridge synthetic updateCurrentCarrierInProvider()Z
+    .locals 1
+
+    .prologue
+    .line 51
+    invoke-super {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->updateCurrentCarrierInProvider()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public bridge synthetic updateCurrentCarrierInProvider(Ljava/lang/String;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 51
+    invoke-super {p0, p1}, Lcom/android/internal/telephony/sip/SipPhoneBase;->updateCurrentCarrierInProvider(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public bridge synthetic updatePhoneState()V
     .locals 0
 

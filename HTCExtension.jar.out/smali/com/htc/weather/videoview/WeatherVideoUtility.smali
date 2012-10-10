@@ -25,7 +25,7 @@
 .end method
 
 .method private static getClass(Landroid/content/Context;)Ljava/lang/Class;
-    .locals 6
+    .locals 5
     .parameter "context"
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -39,77 +39,65 @@
 
     .prologue
     .line 34
-    const-string v3, "com.htc.weathervideo.base"
+    const-string v2, "com.htc.weathervideo.base"
 
-    invoke-static {p0, v3}, Lcom/htc/weather/videoview/WeatherVideoUtility;->getPackageContext(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
+    invoke-static {p0, v2}, Lcom/htc/weather/videoview/WeatherVideoUtility;->getPackageContext(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 41
+    .local v1, resourceContext:Landroid/content/Context;
+    :try_start_0
+    invoke-virtual {v1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v2
 
-    .line 36
-    .local v2, resourceContext:Landroid/content/Context;
-    new-instance v0, Ldalvik/system/PathClassLoader;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageCodePath()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v4
-
-    invoke-direct {v0, v3, v4}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 39
-    .local v0, classLoader:Ldalvik/system/PathClassLoader;
-    :try_start_0
     const-string v3, "com.htc.weathervideo.base.WeatherVideoBaseView"
 
-    const/4 v4, 0x1
-
-    invoke-static {v3, v4, v0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    invoke-virtual {v2, v3}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    move-result-object v2
+
+    .line 47
+    :goto_0
+    return-object v2
+
+    .line 42
+    :catch_0
+    move-exception v0
+
+    .line 43
+    .local v0, ex:Ljava/lang/ClassNotFoundException;
+    const-string v2, "WeatherVideo"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "[WeatherVideoUtility]: getWeatherVideoInstance() - class not found = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     move-result-object v3
 
-    .line 45
-    :goto_0
-    return-object v3
-
-    .line 40
-    :catch_0
-    move-exception v1
-
-    .line 41
-    .local v1, ex:Ljava/lang/ClassNotFoundException;
-    const-string v3, "WeatherVideo"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "[WeatherVideoUtility]: getWeatherVideoInstance() - class not found = "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v1}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    move-result-object v4
-
-    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 45
-    const/4 v3, 0x0
+    .line 47
+    const/4 v2, 0x0
 
     goto :goto_0
 .end method
@@ -181,12 +169,12 @@
     .parameter "context"
 
     .prologue
-    .line 49
+    .line 51
     invoke-static {p0}, Lcom/htc/weather/videoview/WeatherVideoUtility;->getClass(Landroid/content/Context;)Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 51
+    .line 53
     .local v4, videoClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v6, 0x1
 
@@ -199,7 +187,7 @@
 
     aput-object v7, v2, v6
 
-    .line 52
+    .line 54
     .local v2, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v2, [Ljava/lang/Class;
 
@@ -208,7 +196,7 @@
 
     move-result-object v0
 
-    .line 54
+    .line 56
     .local v0, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v6, 0x1
 
@@ -218,30 +206,30 @@
 
     aput-object p0, v3, v6
 
-    .line 55
+    .line 57
     .local v3, params:[Ljava/lang/Object;
     invoke-virtual {v0, v3}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 56
+    .line 58
     .local v5, videoview:Ljava/lang/Object;
     check-cast v5, Lcom/htc/weather/videoview/WeatherVideoView;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 62
+    .line 64
     .end local v0           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v3           #params:[Ljava/lang/Object;
     .end local v5           #videoview:Ljava/lang/Object;
     :goto_0
     return-object v5
 
-    .line 57
+    .line 59
     :catch_0
     move-exception v1
 
-    .line 58
+    .line 60
     .local v1, ex:Ljava/lang/Exception;
     const-string v6, "WeatherVideo"
 
@@ -269,7 +257,7 @@
 
     invoke-static {v6, v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 62
+    .line 64
     const/4 v5, 0x0
 
     goto :goto_0
@@ -281,12 +269,12 @@
     .parameter "attri"
 
     .prologue
-    .line 71
+    .line 73
     invoke-static {p0}, Lcom/htc/weather/videoview/WeatherVideoUtility;->getClass(Landroid/content/Context;)Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 73
+    .line 75
     .local v4, videoClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v6, 0x2
 
@@ -305,7 +293,7 @@
 
     aput-object v7, v2, v6
 
-    .line 75
+    .line 77
     .local v2, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v2, [Ljava/lang/Class;
 
@@ -314,7 +302,7 @@
 
     move-result-object v0
 
-    .line 77
+    .line 79
     .local v0, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v6, 0x1
 
@@ -324,7 +312,7 @@
 
     aput-object p0, v3, v6
 
-    .line 78
+    .line 80
     .local v3, params:[Ljava/lang/Object;
     const/4 v6, 0x2
 
@@ -342,24 +330,24 @@
 
     move-result-object v5
 
-    .line 79
+    .line 81
     .local v5, videoview:Ljava/lang/Object;
     check-cast v5, Lcom/htc/weather/videoview/WeatherVideoView;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 85
+    .line 87
     .end local v0           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v3           #params:[Ljava/lang/Object;
     .end local v5           #videoview:Ljava/lang/Object;
     :goto_0
     return-object v5
 
-    .line 80
+    .line 82
     :catch_0
     move-exception v1
 
-    .line 81
+    .line 83
     .local v1, ex:Ljava/lang/Exception;
     const-string v6, "WeatherVideo"
 
@@ -387,7 +375,7 @@
 
     invoke-static {v6, v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 85
+    .line 87
     const/4 v5, 0x0
 
     goto :goto_0

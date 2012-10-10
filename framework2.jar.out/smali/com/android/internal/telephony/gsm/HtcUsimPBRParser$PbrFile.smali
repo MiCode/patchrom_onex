@@ -104,46 +104,46 @@
     .local p2, records:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     const/4 v5, 0x0
 
-    .line 408
+    .line 441
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->this$0:Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 409
+    .line 442
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mFileIds:Ljava/util/HashMap;
 
-    .line 410
+    .line 443
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mSFIds:Ljava/util/HashMap;
 
-    .line 411
+    .line 444
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mADNOrder:Ljava/util/HashMap;
 
-    .line 412
+    .line 445
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mIAPOrder:Ljava/util/HashMap;
 
-    .line 413
+    .line 446
     iput v5, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mANRNums:I
 
-    .line 415
+    .line 448
     const/4 v1, 0x0
 
-    .line 416
+    .line 449
     .local v1, recNum:I
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -163,18 +163,18 @@
 
     check-cast v3, [B
 
-    .line 417
+    .line 450
     .local v3, record:[B
     const/4 v4, 0x4
 
     if-lt v1, v4, :cond_1
 
-    .line 424
+    .line 457
     .end local v3           #record:[B
     :cond_0
     return-void
 
-    .line 420
+    .line 453
     .restart local v3       #record:[B
     :cond_1
     new-instance v2, Lcom/android/internal/telephony/gsm/SimTlv;
@@ -183,11 +183,11 @@
 
     invoke-direct {v2, v3, v5, v4}, Lcom/android/internal/telephony/gsm/SimTlv;-><init>([BII)V
 
-    .line 421
+    .line 454
     .local v2, recTlv:Lcom/android/internal/telephony/gsm/SimTlv;
     invoke-virtual {p0, v2, v1}, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->parseTag(Lcom/android/internal/telephony/gsm/SimTlv;I)V
 
-    .line 422
+    .line 455
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -214,11 +214,11 @@
     .end annotation
 
     .prologue
-    .line 456
+    .line 489
     .local p2, val:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/4 v5, 0x1
 
-    .line 457
+    .line 490
     .local v5, tagNumberWithinParentTag:I
     const-string v6, "HtcUsimPBRParser"
 
@@ -242,7 +242,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
+    .line 491
     const-string v6, "HtcUsimPBRParser"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -265,19 +265,19 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
+    .line 493
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 462
+    .line 495
     .local v3, order:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     :cond_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getTag()I
 
     move-result v4
 
-    .line 464
+    .line 497
     .local v4, tag:I
     const-string v6, "HtcUsimPBRParser"
 
@@ -301,27 +301,27 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 465
+    .line 498
     packed-switch v4, :pswitch_data_0
 
-    .line 528
+    .line 561
     :cond_1
     :goto_0
     add-int/lit8 v5, v5, 0x1
 
-    .line 529
+    .line 562
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->nextObject()Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 531
+    .line 564
     const/16 v6, 0xa9
 
     if-ne p3, v6, :cond_2
 
-    .line 533
+    .line 566
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mIAPOrder:Ljava/util/HashMap;
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -330,7 +330,7 @@
 
     invoke-virtual {v6, v7, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 536
+    .line 569
     :cond_2
     iget v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mANRNums:I
 
@@ -338,12 +338,12 @@
 
     if-ge v6, v7, :cond_3
 
-    .line 537
+    .line 570
     iget v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->anrNums:I
 
     iput v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mANRNums:I
 
-    .line 540
+    .line 573
     :cond_3
     iget v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mEmailNums:I
 
@@ -351,22 +351,22 @@
 
     if-ge v6, v7, :cond_4
 
-    .line 541
+    .line 574
     iget v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->emailNums:I
 
     iput v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mEmailNums:I
 
-    .line 543
+    .line 576
     :cond_4
     return-void
 
-    .line 478
+    .line 511
     :pswitch_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getData()[B
 
     move-result-object v0
 
-    .line 479
+    .line 512
     .local v0, data:[B
     const/4 v6, 0x0
 
@@ -384,11 +384,11 @@
 
     or-int v1, v6, v7
 
-    .line 480
+    .line 513
     .local v1, efid:I
     const/4 v2, 0x0
 
-    .line 481
+    .line 514
     .local v2, efsfi:I
     iget v6, p1, Lcom/android/internal/telephony/gsm/SimTlv;->curDataLength:I
 
@@ -396,14 +396,14 @@
 
     if-ne v6, v7, :cond_6
 
-    .line 482
+    .line 515
     const/4 v6, 0x2
 
     aget-byte v6, v0, v6
 
     and-int/lit16 v2, v6, 0xff
 
-    .line 483
+    .line 516
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mSFIds:Ljava/util/HashMap;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -416,7 +416,7 @@
 
     if-nez v6, :cond_5
 
-    .line 484
+    .line 517
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mSFIds:Ljava/util/HashMap;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -429,7 +429,7 @@
 
     invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 486
+    .line 519
     :cond_5
     const-string v6, "HtcUsimPBRParser"
 
@@ -453,7 +453,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
+    .line 522
     :cond_6
     const-string v6, "HtcUsimPBRParser"
 
@@ -477,12 +477,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
+    .line 525
     const/16 v6, 0xc4
 
     if-ne v4, v6, :cond_b
 
-    .line 493
+    .line 526
     iget v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->anrNums:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -495,20 +495,20 @@
 
     invoke-interface {p2, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 494
+    .line 527
     iget v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->anrNums:I
 
     add-int/lit8 v6, v6, 0x1
 
     iput v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->anrNums:I
 
-    .line 504
+    .line 537
     :goto_1
     const/16 v6, 0xc0
 
     if-ne v4, v6, :cond_7
 
-    .line 505
+    .line 538
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mADNOrder:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -523,18 +523,18 @@
 
     invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 510
+    .line 543
     :cond_7
     const/16 v6, 0xa9
 
     if-ne p3, v6, :cond_a
 
-    .line 512
+    .line 545
     const/16 v6, 0xca
 
     if-ne v4, v6, :cond_8
 
-    .line 513
+    .line 546
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->this$0:Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;
 
     const/4 v7, 0x1
@@ -546,13 +546,13 @@
     #setter for: Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;->mEmailPresentInIAP:Ljava/lang/Boolean;
     invoke-static {v6, v7}, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;->access$002(Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 515
+    .line 548
     :cond_8
     const/16 v6, 0xc4
 
     if-ne v4, v6, :cond_9
 
-    .line 516
+    .line 549
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->this$0:Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;
 
     #getter for: Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;->mANRPresentInIAP:Ljava/util/ArrayList;
@@ -568,7 +568,7 @@
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 518
+    .line 551
     :cond_9
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -580,7 +580,7 @@
 
     invoke-interface {v3, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 520
+    .line 553
     const-string v6, "HtcUsimPBRParser"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -603,7 +603,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 523
+    .line 556
     :cond_a
     const/16 v6, 0xa8
 
@@ -613,7 +613,7 @@
 
     if-ne v4, v6, :cond_1
 
-    .line 524
+    .line 557
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->this$0:Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;
 
     #getter for: Lcom/android/internal/telephony/gsm/HtcUsimPBRParser;->mANRPresentInIAP:Ljava/util/ArrayList;
@@ -631,13 +631,13 @@
 
     goto/16 :goto_0
 
-    .line 495
+    .line 528
     :cond_b
     const/16 v6, 0xca
 
     if-ne v4, v6, :cond_d
 
-    .line 496
+    .line 529
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -648,7 +648,7 @@
 
     if-nez v6, :cond_c
 
-    .line 497
+    .line 530
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -659,7 +659,7 @@
 
     invoke-interface {p2, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 499
+    .line 532
     :cond_c
     iget v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->emailNums:I
 
@@ -669,7 +669,7 @@
 
     goto/16 :goto_1
 
-    .line 501
+    .line 534
     :cond_d
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -683,7 +683,7 @@
 
     goto/16 :goto_1
 
-    .line 465
+    .line 498
     :pswitch_data_0
     .packed-switch 0xc0
         :pswitch_0
@@ -709,35 +709,35 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 430
+    .line 463
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 431
+    .line 464
     .local v3, type_val:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;>;"
     iput v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->anrNums:I
 
-    .line 432
+    .line 465
     iput v6, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->emailNums:I
 
-    .line 434
+    .line 467
     :cond_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getTag()I
 
     move-result v1
 
-    .line 435
+    .line 468
     .local v1, tag:I
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 436
+    .line 469
     .local v4, val:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     packed-switch v1, :pswitch_data_0
 
-    .line 446
+    .line 479
     :goto_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->nextObject()Z
 
@@ -745,14 +745,14 @@
 
     if-nez v5, :cond_0
 
-    .line 448
+    .line 481
     invoke-interface {v3}, Ljava/util/Map;->size()I
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 449
+    .line 482
     iget-object v5, p0, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->mFileIds:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -761,17 +761,17 @@
 
     invoke-virtual {v5, v6, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 451
+    .line 484
     :cond_1
     return-void
 
-    .line 440
+    .line 473
     :pswitch_0
     invoke-virtual {p1}, Lcom/android/internal/telephony/gsm/SimTlv;->getData()[B
 
     move-result-object v0
 
-    .line 441
+    .line 474
     .local v0, data:[B
     new-instance v2, Lcom/android/internal/telephony/gsm/SimTlv;
 
@@ -779,11 +779,11 @@
 
     invoke-direct {v2, v0, v6, v5}, Lcom/android/internal/telephony/gsm/SimTlv;-><init>([BII)V
 
-    .line 442
+    .line 475
     .local v2, tlvEf:Lcom/android/internal/telephony/gsm/SimTlv;
     invoke-virtual {p0, v2, v4, v1, p2}, Lcom/android/internal/telephony/gsm/HtcUsimPBRParser$PbrFile;->parseEf(Lcom/android/internal/telephony/gsm/SimTlv;Ljava/util/Map;II)V
 
-    .line 443
+    .line 476
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -792,7 +792,7 @@
 
     goto :goto_0
 
-    .line 436
+    .line 469
     nop
 
     :pswitch_data_0

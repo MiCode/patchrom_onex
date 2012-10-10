@@ -128,7 +128,7 @@
 
     const/4 v14, 0x0
 
-    .line 134
+    .line 138
     :try_start_0
     move-object/from16 v0, p1
 
@@ -138,14 +138,14 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 233
+    .line 237
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
     if-eqz v2, :cond_1
 
-    .line 234
+    .line 238
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
     invoke-static {v2}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;)Landroid/os/AsyncResult;
@@ -156,20 +156,20 @@
 
     iput-object v3, v2, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
-    .line 235
+    .line 239
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 236
+    .line 240
     iput-object v14, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
-    .line 238
+    .line 242
     :cond_1
     :goto_1
     return-void
 
-    .line 139
+    .line 143
     :pswitch_0
     :try_start_1
     const-string v2, "UIDRecord"
@@ -178,7 +178,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 140
+    .line 144
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -191,7 +191,7 @@
 
     move-object v7, v0
 
-    .line 141
+    .line 145
     .local v7, ar:Landroid/os/AsyncResult;
     iget-object v2, v7, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -203,13 +203,13 @@
 
     move-object v13, v0
 
-    .line 143
+    .line 147
     .local v13, uid:Lcom/android/internal/telephony/UIDRecord;
     iget-object v2, v7, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_2
 
-    .line 144
+    .line 148
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "get EF record size failed"
@@ -222,19 +222,19 @@
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 222
+    .line 226
     .end local v7           #ar:Landroid/os/AsyncResult;
     .end local v13           #uid:Lcom/android/internal/telephony/UIDRecord;
     :catch_0
     move-exception v9
 
-    .line 223
+    .line 227
     .local v9, exc:Ljava/lang/RuntimeException;
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
     if-eqz v2, :cond_1
 
-    .line 224
+    .line 228
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
     invoke-static {v2}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;)Landroid/os/AsyncResult;
@@ -243,17 +243,17 @@
 
     iput-object v9, v2, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    .line 225
+    .line 229
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 228
+    .line 232
     iput-object v14, p0, Lcom/android/internal/telephony/UIDRecordLoader;->userResponse:Landroid/os/Message;
 
     goto :goto_1
 
-    .line 148
+    .line 152
     .end local v9           #exc:Ljava/lang/RuntimeException;
     .restart local v7       #ar:Landroid/os/AsyncResult;
     .restart local v13       #uid:Lcom/android/internal/telephony/UIDRecord;
@@ -269,7 +269,7 @@
 
     move-object v11, v0
 
-    .line 154
+    .line 158
     .local v11, recordSize:[I
     array-length v2, v11
 
@@ -283,7 +283,7 @@
 
     if-le v2, v3, :cond_4
 
-    .line 155
+    .line 159
     :cond_3
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -295,7 +295,7 @@
 
     throw v2
 
-    .line 159
+    .line 163
     :cond_4
     const/4 v2, 0x0
 
@@ -305,11 +305,11 @@
 
     move-result-object v4
 
-    .line 161
+    .line 165
     .local v4, data:[B
     if-nez v4, :cond_5
 
-    .line 162
+    .line 166
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "worong UID format"
@@ -320,22 +320,22 @@
 
     throw v2
 
-    .line 166
+    .line 170
     :cond_5
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     if-eqz v2, :cond_7
 
-    .line 172
+    .line 176
     invoke-direct {p0}, Lcom/android/internal/telephony/UIDRecordLoader;->getIccFileHandler()Lcom/android/internal/telephony/IccFileHandler;
 
     move-result-object v1
 
-    .line 173
+    .line 177
     .local v1, iccFileHander:Lcom/android/internal/telephony/IccFileHandler;
     if-eqz v1, :cond_6
 
-    .line 174
+    .line 178
     iget v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->ef:I
 
     iget v3, p0, Lcom/android/internal/telephony/UIDRecordLoader;->recordNumber:I
@@ -352,7 +352,7 @@
 
     goto/16 :goto_0
 
-    .line 178
+    .line 182
     :cond_6
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -364,7 +364,7 @@
 
     throw v2
 
-    .line 182
+    .line 186
     .end local v1           #iccFileHander:Lcom/android/internal/telephony/IccFileHandler;
     :cond_7
     new-instance v2, Ljava/lang/RuntimeException;
@@ -377,7 +377,7 @@
 
     throw v2
 
-    .line 188
+    .line 192
     .end local v4           #data:[B
     .end local v7           #ar:Landroid/os/AsyncResult;
     .end local v11           #recordSize:[I
@@ -389,7 +389,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
+    .line 193
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -402,13 +402,13 @@
 
     move-object v7, v0
 
-    .line 191
+    .line 195
     .restart local v7       #ar:Landroid/os/AsyncResult;
     iget-object v2, v7, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_8
 
-    .line 192
+    .line 196
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "update EF UID record failed"
@@ -419,7 +419,7 @@
 
     throw v2
 
-    .line 196
+    .line 200
     :cond_8
     const/4 v2, 0x0
 
@@ -427,7 +427,7 @@
 
     goto/16 :goto_0
 
-    .line 203
+    .line 207
     .end local v7           #ar:Landroid/os/AsyncResult;
     :pswitch_2
     const-string v2, "UIDRecord"
@@ -436,7 +436,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
+    .line 209
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -449,7 +449,7 @@
 
     move-object v7, v0
 
-    .line 206
+    .line 210
     .restart local v7       #ar:Landroid/os/AsyncResult;
     iget-object v2, v7, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -461,13 +461,13 @@
 
     move-object v8, v0
 
-    .line 208
+    .line 212
     .local v8, datas:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     iget-object v2, v7, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_9
 
-    .line 209
+    .line 213
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "load failed"
@@ -478,7 +478,7 @@
 
     throw v2
 
-    .line 212
+    .line 216
     :cond_9
     new-instance v2, Ljava/util/ArrayList;
 
@@ -490,12 +490,12 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->uidList:Ljava/util/ArrayList;
 
-    .line 213
+    .line 217
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->uidList:Ljava/util/ArrayList;
 
     iput-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->result:Ljava/lang/Object;
 
-    .line 215
+    .line 219
     const/4 v10, 0x0
 
     .local v10, i:I
@@ -507,7 +507,7 @@
     :goto_2
     if-ge v10, v12, :cond_0
 
-    .line 216
+    .line 220
     new-instance v13, Lcom/android/internal/telephony/UIDRecord;
 
     add-int/lit8 v3, v10, 0x1
@@ -520,7 +520,7 @@
 
     invoke-direct {v13, v3, v2}, Lcom/android/internal/telephony/UIDRecord;-><init>(I[B)V
 
-    .line 217
+    .line 221
     .restart local v13       #uid:Lcom/android/internal/telephony/UIDRecord;
     iget-object v2, p0, Lcom/android/internal/telephony/UIDRecordLoader;->uidList:Ljava/util/ArrayList;
 
@@ -528,12 +528,12 @@
     :try_end_2
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 215
+    .line 219
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
-    .line 134
+    .line 138
     nop
 
     :pswitch_data_0

@@ -29,15 +29,15 @@
     .locals 3
 
     .prologue
-    .line 645
+    .line 647
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 646
+    .line 648
     iget-object v0, p0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->mHThread:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
-    .line 647
+    .line 649
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "ThreadUtil"
@@ -48,18 +48,18 @@
 
     iput-object v0, p0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->mHThread:Landroid/os/HandlerThread;
 
-    .line 648
+    .line 650
     iget-object v0, p0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->mHThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 650
+    .line 652
     :cond_0
     iget-object v0, p0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_1
 
-    .line 651
+    .line 653
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->mHThread:Landroid/os/HandlerThread;
@@ -72,7 +72,7 @@
 
     iput-object v0, p0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->mHandler:Landroid/os/Handler;
 
-    .line 652
+    .line 654
     :cond_1
     return-void
 .end method
@@ -81,7 +81,7 @@
     .locals 2
 
     .prologue
-    .line 655
+    .line 657
     const-class v1, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;
 
     monitor-enter v1
@@ -91,14 +91,14 @@
 
     if-nez v0, :cond_0
 
-    .line 656
+    .line 658
     new-instance v0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;
 
     invoke-direct {v0}, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;-><init>()V
 
     sput-object v0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->sThreadHandlerUtiil:Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;
 
-    .line 657
+    .line 659
     :cond_0
     sget-object v0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->sThreadHandlerUtiil:Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;
     :try_end_0
@@ -108,7 +108,7 @@
 
     return-object v0
 
-    .line 655
+    .line 657
     :catchall_0
     move-exception v0
 
@@ -124,11 +124,11 @@
     .parameter "r"
 
     .prologue
-    .line 661
+    .line 663
     iget-object v0, p0, Lcom/htc/server/HtcDebugInfoOperator$ThreadUtil;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 662
+    .line 664
     return-void
 .end method

@@ -22,6 +22,8 @@
     .end annotation
 .end field
 
+.field protected folderPathNameListLock:Ljava/lang/Object;
+
 .field protected mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
 .field protected mColorIndex:I
@@ -131,7 +133,7 @@
     .parameter "colorindex"
 
     .prologue
-    .line 652
+    .line 654
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 51
@@ -209,109 +211,116 @@
 
     iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
-    .line 128
+    .line 125
+    new-instance v1, Ljava/lang/Object;
+
+    invoke-direct/range {v1 .. v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameListLock:Ljava/lang/Object;
+
+    .line 130
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
-    .line 133
+    .line 135
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->mFolderIdList:Ljava/util/ArrayList;
 
-    .line 138
+    .line 140
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->mLastFolderIdList:Ljava/util/ArrayList;
 
-    .line 143
+    .line 145
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->mNewFolderIdList:Ljava/util/ArrayList;
 
-    .line 148
+    .line 150
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->mDelFolderIdList:Ljava/util/ArrayList;
 
-    .line 153
+    .line 155
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/util/mail/MailAccount;->mIsFolderIdListFirstTimeQuery:Z
 
-    .line 155
+    .line 157
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/util/mail/MailAccount;->mIsSyncing:Z
 
-    .line 653
+    .line 655
     iput-object p1, p0, Lcom/htc/util/mail/MailAccount;->mContext:Landroid/content/Context;
 
-    .line 654
+    .line 656
     iput-wide p2, p0, Lcom/htc/util/mail/MailAccount;->mId:J
 
-    .line 655
+    .line 657
     if-nez p4, :cond_0
 
-    .line 656
+    .line 658
     const-string p4, ""
 
-    .line 657
+    .line 659
     :cond_0
     iput-object p4, p0, Lcom/htc/util/mail/MailAccount;->mName:Ljava/lang/String;
 
-    .line 658
+    .line 660
     if-nez p5, :cond_1
 
-    .line 659
+    .line 661
     const-string p5, ""
 
-    .line 660
+    .line 662
     :cond_1
     iput-object p5, p0, Lcom/htc/util/mail/MailAccount;->mTitle:Ljava/lang/String;
 
-    .line 661
+    .line 663
     if-nez p6, :cond_2
 
-    .line 662
+    .line 664
     const-string p6, ""
 
-    .line 663
+    .line 665
     :cond_2
     iput-object p6, p0, Lcom/htc/util/mail/MailAccount;->mEmailAddress:Ljava/lang/String;
 
-    .line 664
+    .line 666
     iput p7, p0, Lcom/htc/util/mail/MailAccount;->mProtocol:I
 
-    .line 665
+    .line 667
     iput p8, p0, Lcom/htc/util/mail/MailAccount;->mDefaultFolderId:I
 
-    .line 666
+    .line 668
     iput p9, p0, Lcom/htc/util/mail/MailAccount;->mTrashFolderId:I
 
-    .line 667
+    .line 669
     iput p10, p0, Lcom/htc/util/mail/MailAccount;->mSentFolderId:I
 
-    .line 668
+    .line 670
     iput p11, p0, Lcom/htc/util/mail/MailAccount;->mDraftFolderId:I
 
-    .line 669
+    .line 671
     iput p12, p0, Lcom/htc/util/mail/MailAccount;->mOutFolderId:I
 
-    .line 670
+    .line 672
     move/from16 v0, p13
 
     iput v0, p0, Lcom/htc/util/mail/MailAccount;->mDefaultAccount:I
 
-    .line 671
+    .line 673
     move/from16 v0, p14
 
     iput v0, p0, Lcom/htc/util/mail/MailAccount;->mColorIndex:I
 
-    .line 673
+    .line 675
     invoke-virtual {p0}, Lcom/htc/util/mail/MailAccount;->refreshFolderIdList()V
 
-    .line 674
+    .line 676
     return-void
 .end method
 
@@ -321,20 +330,11 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 521
+    .line 524
     iget-object v1, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 522
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v1, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
-
-    .line 524
-    :cond_0
     iget-object v1, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -344,6 +344,7 @@
     if-nez v1, :cond_1
 
     .line 527
+    :cond_0
     invoke-virtual {p0}, Lcom/htc/util/mail/MailAccount;->getFolderPathNameList()[Ljava/lang/String;
 
     move-result-object v1
@@ -370,17 +371,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 736
+    .line 738
     iget-object v4, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     if-nez v4, :cond_1
 
-    .line 750
+    .line 752
     :cond_0
     :goto_0
     return-object v2
 
-    .line 738
+    .line 740
     :cond_1
     iget-object v4, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
@@ -388,14 +389,14 @@
 
     move-result v3
 
-    .line 739
+    .line 741
     .local v3, size:I
     if-eqz v3, :cond_0
 
-    .line 741
+    .line 743
     new-array v2, v3, [Ljava/lang/String;
 
-    .line 744
+    .line 746
     .local v2, names:[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -403,7 +404,7 @@
     :goto_1
     if-ge v1, v3, :cond_0
 
-    .line 745
+    .line 747
     :try_start_0
     iget-object v4, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
@@ -421,16 +422,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 744
+    .line 746
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 746
+    .line 748
     :catch_0
     move-exception v0
 
-    .line 747
+    .line 749
     .local v0, e:Ljava/lang/Exception;
     const-string v4, "MailAccount"
 
@@ -452,47 +453,49 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 760
+    .line 763
+    iget-object v1, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameListLock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 764
+    :try_start_0
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 761
-    iget-object v1, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
-
-    monitor-enter v1
-
-    .line 762
-    :try_start_0
+    .line 765
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 763
+    .line 767
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
+
+    .line 768
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 765
-    :cond_0
-    iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
-
-    .line 767
+    .line 770
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
     if-eqz v0, :cond_1
 
-    .line 768
+    .line 771
     iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
-    .line 770
+    .line 773
     :cond_1
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 771
+    .line 774
     return-void
 
-    .line 763
+    .line 768
     :catchall_0
     move-exception v0
 
@@ -510,7 +513,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 686
+    .line 688
     invoke-virtual {p0}, Lcom/htc/util/mail/MailAccount;->isCombinedAccount()Z
 
     move-result v0
@@ -519,16 +522,16 @@
 
     const-wide/16 v7, 0x0
 
-    .line 695
+    .line 697
     :cond_0
     :goto_0
     return-wide v7
 
-    .line 688
+    .line 690
     :cond_1
     const-wide/16 v7, 0x0
 
-    .line 689
+    .line 691
     .local v7, time:J
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mContext:Landroid/content/Context;
 
@@ -574,7 +577,7 @@
 
     move-result-object v6
 
-    .line 690
+    .line 692
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_2
 
@@ -584,10 +587,10 @@
 
     if-lez v0, :cond_2
 
-    .line 691
+    .line 693
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 692
+    .line 694
     const-string v0, "_lastupdatetime"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -598,7 +601,7 @@
 
     move-result-wide v7
 
-    .line 694
+    .line 696
     :cond_2
     if-eqz v6, :cond_0
 
@@ -643,7 +646,7 @@
     .locals 1
 
     .prologue
-    .line 353
+    .line 356
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mColorIndex:I
 
     return v0
@@ -655,7 +658,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 331
+    .line 333
     invoke-direct {p0}, Lcom/htc/util/mail/MailAccount;->isFoldersExist()Z
 
     move-result v3
@@ -664,18 +667,23 @@
 
     move-object v0, v2
 
-    .line 339
+    .line 342
     :goto_0
     return-object v0
 
-    .line 333
+    .line 335
     :cond_0
-    iget-object v3, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameListLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 334
+    .line 336
     :try_start_0
+    iget-object v4, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
+
+    if-eqz v4, :cond_2
+
+    .line 337
     iget-object v4, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -696,7 +704,7 @@
 
     check-cast v0, Lcom/htc/util/mail/Folder;
 
-    .line 336
+    .line 338
     .local v0, f:Lcom/htc/util/mail/Folder;
     iget v4, p0, Lcom/htc/util/mail/MailAccount;->mDefaultFolderId:I
 
@@ -714,7 +722,7 @@
 
     goto :goto_0
 
-    .line 338
+    .line 341
     .end local v0           #f:Lcom/htc/util/mail/Folder;
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -726,7 +734,6 @@
 
     throw v2
 
-    .restart local v1       #i$:Ljava/util/Iterator;
     :cond_2
     :try_start_1
     monitor-exit v3
@@ -735,7 +742,7 @@
 
     move-object v0, v2
 
-    .line 339
+    .line 342
     goto :goto_0
 .end method
 
@@ -743,7 +750,7 @@
     .locals 1
 
     .prologue
-    .line 261
+    .line 263
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mDefaultFolderId:I
 
     return v0
@@ -765,7 +772,7 @@
     .locals 1
 
     .prologue
-    .line 298
+    .line 300
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mDraftFolderId:I
 
     return v0
@@ -775,7 +782,7 @@
     .locals 1
 
     .prologue
-    .line 216
+    .line 218
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mEmailAddress:Ljava/lang/String;
 
     return-object v0
@@ -788,7 +795,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 572
+    .line 573
     const-wide/16 v5, -0x1
 
     cmp-long v5, p1, v5
@@ -799,11 +806,11 @@
 
     move-result-object v2
 
-    .line 598
+    .line 600
     :goto_0
     return-object v2
 
-    .line 573
+    .line 574
     :cond_0
     invoke-direct {p0}, Lcom/htc/util/mail/MailAccount;->isFoldersExist()Z
 
@@ -815,14 +822,19 @@
 
     goto :goto_0
 
-    .line 575
+    .line 576
     :cond_1
-    iget-object v5, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameListLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 576
+    .line 577
     :try_start_0
+    iget-object v6, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
+
+    if-eqz v6, :cond_3
+
+    .line 578
     iget-object v6, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -843,7 +855,7 @@
 
     check-cast v2, Lcom/htc/util/mail/Folder;
 
-    .line 578
+    .line 579
     .local v2, f:Lcom/htc/util/mail/Folder;
     invoke-virtual {v2}, Lcom/htc/util/mail/Folder;->getFolderId()J
 
@@ -857,7 +869,7 @@
 
     goto :goto_0
 
-    .line 580
+    .line 582
     .end local v2           #f:Lcom/htc/util/mail/Folder;
     .end local v3           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -869,21 +881,20 @@
 
     throw v4
 
-    .restart local v3       #i$:Ljava/util/Iterator;
     :cond_3
     :try_start_1
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 582
+    .line 584
     invoke-virtual {p0}, Lcom/htc/util/mail/MailAccount;->isCombinedAccount()Z
 
     move-result v5
 
     if-eqz v5, :cond_a
 
-    .line 584
+    .line 586
     iget-object v5, p0, Lcom/htc/util/mail/MailAccount;->mContext:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/htc/util/mail/MailManager;->getInstance(Landroid/content/Context;)Lcom/htc/util/mail/MailManager;
@@ -894,12 +905,13 @@
 
     move-result-object v1
 
-    .line 585
+    .line 587
     .local v1, accs:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
+    .restart local v3       #i$:Ljava/util/Iterator;
     :cond_4
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -913,17 +925,17 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 586
+    .line 588
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {v0, p1, p2}, Lcom/htc/util/mail/MailAccount;->getFolder(J)Lcom/htc/util/mail/Folder;
 
     move-result-object v2
 
-    .line 587
+    .line 589
     .restart local v2       #f:Lcom/htc/util/mail/Folder;
     if-eqz v2, :cond_4
 
-    .line 588
+    .line 590
     invoke-virtual {v2}, Lcom/htc/util/mail/Folder;->isInBoxFolder()Z
 
     move-result v5
@@ -938,7 +950,7 @@
 
     goto :goto_0
 
-    .line 589
+    .line 591
     :cond_5
     invoke-virtual {v2}, Lcom/htc/util/mail/Folder;->isDraftFolder()Z
 
@@ -954,7 +966,7 @@
 
     goto :goto_0
 
-    .line 590
+    .line 592
     :cond_6
     invoke-virtual {v2}, Lcom/htc/util/mail/Folder;->isOutFolder()Z
 
@@ -970,7 +982,7 @@
 
     goto :goto_0
 
-    .line 591
+    .line 593
     :cond_7
     invoke-virtual {v2}, Lcom/htc/util/mail/Folder;->isSentFolder()Z
 
@@ -986,7 +998,7 @@
 
     goto/16 :goto_0
 
-    .line 592
+    .line 594
     :cond_8
     invoke-virtual {v2}, Lcom/htc/util/mail/Folder;->isTrashFolder()Z
 
@@ -1005,16 +1017,17 @@
     :cond_9
     move-object v2, v4
 
-    .line 593
+    .line 595
     goto/16 :goto_0
 
     .end local v0           #acc:Lcom/htc/util/mail/MailAccount;
     .end local v1           #accs:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
     .end local v2           #f:Lcom/htc/util/mail/Folder;
+    .end local v3           #i$:Ljava/util/Iterator;
     :cond_a
     move-object v2, v4
 
-    .line 598
+    .line 600
     goto/16 :goto_0
 .end method
 
@@ -1030,7 +1043,7 @@
 
     move-object v0, v2
 
-    .line 564
+    .line 565
     :goto_0
     return-object v0
 
@@ -1048,12 +1061,17 @@
 
     .line 558
     :cond_1
-    iget-object v3, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameListLock:Ljava/lang/Object;
 
     monitor-enter v3
 
     .line 559
     :try_start_0
+    iget-object v4, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
+
+    if-eqz v4, :cond_3
+
+    .line 560
     iget-object v4, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1090,7 +1108,7 @@
 
     goto :goto_0
 
-    .line 563
+    .line 564
     .end local v0           #f:Lcom/htc/util/mail/Folder;
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -1102,7 +1120,6 @@
 
     throw v2
 
-    .restart local v1       #i$:Ljava/util/Iterator;
     :cond_3
     :try_start_1
     monitor-exit v3
@@ -1111,7 +1128,7 @@
 
     move-object v0, v2
 
-    .line 564
+    .line 565
     goto :goto_0
 .end method
 
@@ -1120,18 +1137,18 @@
     .parameter "kind"
 
     .prologue
-    .line 315
+    .line 317
     const v0, 0x7fffffff
 
     if-ne v0, p1, :cond_0
 
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mDefaultFolderId:I
 
-    .line 321
+    .line 323
     :goto_0
     return v0
 
-    .line 316
+    .line 318
     :cond_0
     const v0, 0x7ffffffe
 
@@ -1141,7 +1158,7 @@
 
     goto :goto_0
 
-    .line 317
+    .line 319
     :cond_1
     const v0, 0x7ffffffd
 
@@ -1151,7 +1168,7 @@
 
     goto :goto_0
 
-    .line 318
+    .line 320
     :cond_2
     const v0, 0x7ffffffc
 
@@ -1161,7 +1178,7 @@
 
     goto :goto_0
 
-    .line 319
+    .line 321
     :cond_3
     const v0, 0x7ffffffb
 
@@ -1171,7 +1188,7 @@
 
     goto :goto_0
 
-    .line 321
+    .line 323
     :cond_4
     const/4 v0, -0x1
 
@@ -1188,7 +1205,7 @@
     .locals 2
 
     .prologue
-    .line 173
+    .line 175
     iget-wide v0, p0, Lcom/htc/util/mail/MailAccount;->mId:J
 
     return-wide v0
@@ -1198,7 +1215,7 @@
     .locals 1
 
     .prologue
-    .line 274
+    .line 276
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mDefaultFolderId:I
 
     return v0
@@ -1211,7 +1228,7 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 189
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mName:Ljava/lang/String;
 
     return-object v0
@@ -1233,7 +1250,7 @@
     .locals 1
 
     .prologue
-    .line 306
+    .line 308
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mOutFolderId:I
 
     return v0
@@ -1243,7 +1260,7 @@
     .locals 1
 
     .prologue
-    .line 232
+    .line 234
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mProtocol:I
 
     return v0
@@ -1255,12 +1272,12 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 798
+    .line 801
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
     if-nez v0, :cond_0
 
-    .line 799
+    .line 802
     new-instance v0, Lcom/htc/util/mail/Folder;
 
     iget-object v1, p0, Lcom/htc/util/mail/MailAccount;->mContext:Landroid/content/Context;
@@ -1283,7 +1300,7 @@
 
     iput-object v0, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
-    .line 812
+    .line 815
     :cond_0
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
@@ -1294,7 +1311,7 @@
     .locals 1
 
     .prologue
-    .line 290
+    .line 292
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mSentFolderId:I
 
     return v0
@@ -1304,7 +1321,7 @@
     .locals 1
 
     .prologue
-    .line 201
+    .line 203
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mTitle:Ljava/lang/String;
 
     return-object v0
@@ -1314,7 +1331,7 @@
     .locals 1
 
     .prologue
-    .line 282
+    .line 284
     iget v0, p0, Lcom/htc/util/mail/MailAccount;->mTrashFolderId:I
 
     return v0
@@ -1337,21 +1354,21 @@
     .end annotation
 
     .prologue
-    .line 872
+    .line 875
     .local p1, delFolders:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
     if-nez v0, :cond_1
 
-    .line 878
+    .line 881
     :cond_0
     return-void
 
-    .line 873
+    .line 876
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 875
+    .line 878
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -1370,7 +1387,7 @@
 
     check-cast v7, Ljava/lang/Long;
 
-    .line 876
+    .line 879
     .local v7, folderId:Ljava/lang/Long;
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
@@ -1401,21 +1418,21 @@
     .end annotation
 
     .prologue
-    .line 436
+    .line 439
     .local p1, delMessages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/Folder$BasicMessageInfo;>;"
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
     if-nez v0, :cond_1
 
-    .line 442
+    .line 445
     :cond_0
     return-void
 
-    .line 437
+    .line 440
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 439
+    .line 442
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -1434,7 +1451,7 @@
 
     check-cast v10, Lcom/htc/util/mail/Folder$BasicMessageInfo;
 
-    .line 440
+    .line 443
     .local v10, info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
@@ -1465,21 +1482,21 @@
     .end annotation
 
     .prologue
-    .line 859
+    .line 862
     .local p1, newFolders:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
     if-nez v0, :cond_1
 
-    .line 865
+    .line 868
     :cond_0
     return-void
 
-    .line 860
+    .line 863
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 862
+    .line 865
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -1498,7 +1515,7 @@
 
     check-cast v7, Ljava/lang/Long;
 
-    .line 863
+    .line 866
     .local v7, folderId:Ljava/lang/Long;
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
@@ -1529,7 +1546,7 @@
     .end annotation
 
     .prologue
-    .line 418
+    .line 421
     .local p1, newMessages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/Folder$BasicMessageInfo;>;"
     sget-boolean v0, Lcom/htc/util/mail/MailAccount;->DEBUG:Z
 
@@ -1541,28 +1558,28 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 420
+    .line 423
     :cond_0
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
     if-nez v0, :cond_2
 
-    .line 430
+    .line 433
     :cond_1
     return-void
 
-    .line 421
+    .line 424
     :cond_2
     if-eqz p1, :cond_1
 
-    .line 423
+    .line 426
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     if-lez v0, :cond_3
 
-    .line 424
+    .line 427
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
     iget-wide v1, p0, Lcom/htc/util/mail/MailAccount;->mId:J
@@ -1575,7 +1592,7 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/htc/util/mail/IAccountListener;->onNewMessages(JJ)V
 
-    .line 426
+    .line 429
     :cond_3
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1595,7 +1612,7 @@
 
     check-cast v10, Lcom/htc/util/mail/Folder$BasicMessageInfo;
 
-    .line 427
+    .line 430
     .local v10, info:Lcom/htc/util/mail/Folder$BasicMessageInfo;
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
@@ -1616,21 +1633,21 @@
     .locals 3
 
     .prologue
-    .line 894
+    .line 897
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/util/mail/MailAccount;->mIsSyncing:Z
 
-    .line 895
+    .line 898
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
     if-nez v0, :cond_0
 
-    .line 898
+    .line 901
     :goto_0
     return-void
 
-    .line 897
+    .line 900
     :cond_0
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
@@ -1645,21 +1662,21 @@
     .locals 3
 
     .prologue
-    .line 884
+    .line 887
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/util/mail/MailAccount;->mIsSyncing:Z
 
-    .line 885
+    .line 888
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
     if-nez v0, :cond_0
 
-    .line 888
+    .line 891
     :goto_0
     return-void
 
-    .line 887
+    .line 890
     :cond_0
     iget-object v0, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
@@ -1674,7 +1691,7 @@
     .locals 4
 
     .prologue
-    .line 245
+    .line 247
     iget-wide v0, p0, Lcom/htc/util/mail/MailAccount;->mId:J
 
     invoke-static {}, Lcom/htc/util/mail/MailManager;->getCombinedAccountId()J
@@ -1702,7 +1719,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 367
+    .line 370
     iget v1, p0, Lcom/htc/util/mail/MailAccount;->mDefaultAccount:I
 
     if-ne v1, v0, :cond_0
@@ -1720,7 +1737,7 @@
     .locals 1
 
     .prologue
-    .line 479
+    .line 482
     iget-boolean v0, p0, Lcom/htc/util/mail/MailAccount;->mIsSyncing:Z
 
     return v0
@@ -1733,18 +1750,26 @@
 .end method
 
 .method public declared-synchronized release()V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 820
+    .line 823
     monitor-enter p0
 
     :try_start_0
+    iget-object v3, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameListLock:Ljava/lang/Object;
+
+    monitor-enter v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 824
+    :try_start_1
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
 
-    .line 822
+    .line 825
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1765,55 +1790,72 @@
 
     check-cast v0, Lcom/htc/util/mail/Folder;
 
-    .line 823
+    .line 826
     .local v0, f:Lcom/htc/util/mail/Folder;
     invoke-virtual {v0}, Lcom/htc/util/mail/Folder;->release()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 820
+    .line 832
     .end local v0           #f:Lcom/htc/util/mail/Folder;
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
+    move-exception v2
+
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 823
+    :catchall_1
     move-exception v2
 
     monitor-exit p0
 
     throw v2
 
-    .line 826
+    .line 829
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_0
-    :try_start_1
+    :try_start_3
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 827
+    .line 830
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->folderPathNameList:Ljava/util/ArrayList;
 
-    .line 831
+    .line 832
     .end local v1           #i$:Ljava/util/Iterator;
     :cond_1
+    monitor-exit v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 834
+    :try_start_4
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
     if-eqz v2, :cond_2
 
-    .line 832
+    .line 835
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
     invoke-virtual {v2}, Lcom/htc/util/mail/Folder;->release()V
 
-    .line 833
+    .line 836
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->mRootFolder:Lcom/htc/util/mail/Folder;
 
-    .line 836
+    .line 839
     :cond_2
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->mFolderIdList:Ljava/util/ArrayList;
 
@@ -1823,13 +1865,13 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 837
+    .line 840
     :cond_3
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->mFolderIdList:Ljava/util/ArrayList;
 
-    .line 839
+    .line 842
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->mLastFolderIdList:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_4
@@ -1838,13 +1880,13 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 840
+    .line 843
     :cond_4
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->mLastFolderIdList:Ljava/util/ArrayList;
 
-    .line 842
+    .line 845
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->mNewFolderIdList:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_5
@@ -1853,13 +1895,13 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 843
+    .line 846
     :cond_5
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->mNewFolderIdList:Ljava/util/ArrayList;
 
-    .line 846
+    .line 849
     iget-object v2, p0, Lcom/htc/util/mail/MailAccount;->mDelFolderIdList:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_6
@@ -1868,20 +1910,20 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 847
+    .line 850
     :cond_6
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/util/mail/MailAccount;->mDelFolderIdList:Ljava/util/ArrayList;
 
-    .line 850
+    .line 853
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/htc/util/mail/MailAccount;->mIsFolderIdListFirstTimeQuery:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 852
+    .line 855
     monitor-exit p0
 
     return-void
@@ -1891,12 +1933,12 @@
     .locals 1
 
     .prologue
-    .line 395
+    .line 398
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/util/mail/MailAccount;->mDefaultAccount:I
 
-    .line 396
+    .line 399
     return-void
 .end method
 
@@ -1908,10 +1950,10 @@
     .parameter "listener"
 
     .prologue
-    .line 410
+    .line 413
     iput-object p1, p0, Lcom/htc/util/mail/MailAccount;->mAccountListener:Lcom/htc/util/mail/IAccountListener;
 
-    .line 411
+    .line 414
     return-void
 .end method
 
@@ -1919,12 +1961,12 @@
     .locals 1
 
     .prologue
-    .line 381
+    .line 384
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/htc/util/mail/MailAccount;->mDefaultAccount:I
 
-    .line 382
+    .line 385
     return-void
 .end method
 

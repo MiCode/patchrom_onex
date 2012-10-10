@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method private CheckAndUpdateAlbumArt(JLjava/lang/String;)V
+.method private checkAndUpdateAlbumArt(JLjava/lang/String;)V
     .locals 1
     .parameter "newIndex"
     .parameter "newPath"
@@ -63,14 +63,14 @@
     .line 1071
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     .line 1073
     :cond_0
     return-void
 .end method
 
-.method private SendErr(ILjava/lang/String;I)V
+.method private sendErr(ILjava/lang/String;I)V
     .locals 5
     .parameter "nToastee"
     .parameter "szArg"
@@ -123,7 +123,7 @@
     return-void
 .end method
 
-.method private SendRefresh(I)V
+.method private sendRefresh(I)V
     .locals 4
     .parameter "nRefreshee"
 
@@ -157,7 +157,7 @@
     return-void
 .end method
 
-.method private SendRefresh(ILjava/lang/String;)V
+.method private sendRefresh(ILjava/lang/String;)V
     .locals 5
     .parameter "nRefreshee"
     .parameter "szArg"
@@ -495,7 +495,7 @@
     :cond_0
     const/16 v0, 0x64
 
-    invoke-direct {p0, v0, p3, p2}, Lcom/htc/music/DMCServiceManager$2;->SendErr(ILjava/lang/String;I)V
+    invoke-direct {p0, v0, p3, p2}, Lcom/htc/music/DMCServiceManager$2;->sendErr(ILjava/lang/String;I)V
 
     goto :goto_0
 .end method
@@ -812,7 +812,7 @@
     .line 889
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     goto :goto_0
 .end method
@@ -905,12 +905,12 @@
     .line 922
     const/16 v2, 0x8
 
-    invoke-direct {p0, v2, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(ILjava/lang/String;)V
+    invoke-direct {p0, v2, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(ILjava/lang/String;)V
 
     .line 923
     const/16 v2, 0x9
 
-    invoke-direct {p0, v2}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v2}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     goto :goto_0
 .end method
@@ -1011,7 +1011,7 @@
 
     iget-object v2, v2, Lcom/htc/dlnainterface/DLNARendererData;->rendererName:Ljava/lang/String;
 
-    invoke-direct {p0, v1, v2}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(ILjava/lang/String;)V
+    invoke-direct {p0, v1, v2}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(ILjava/lang/String;)V
 
     goto :goto_0
 
@@ -1104,7 +1104,7 @@
     .line 957
     const/16 v0, 0x67
 
-    invoke-direct {p0, v0, p3, p2}, Lcom/htc/music/DMCServiceManager$2;->SendErr(ILjava/lang/String;I)V
+    invoke-direct {p0, v0, p3, p2}, Lcom/htc/music/DMCServiceManager$2;->sendErr(ILjava/lang/String;I)V
 
     goto :goto_0
 .end method
@@ -1230,7 +1230,7 @@
     .line 984
     const/16 v0, 0x9
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     goto :goto_0
 .end method
@@ -1341,7 +1341,7 @@
     .line 1007
     const/16 v0, 0x6a
 
-    invoke-direct {p0, v0, p3, p2}, Lcom/htc/music/DMCServiceManager$2;->SendErr(ILjava/lang/String;I)V
+    invoke-direct {p0, v0, p3, p2}, Lcom/htc/music/DMCServiceManager$2;->sendErr(ILjava/lang/String;I)V
 
     goto :goto_0
 .end method
@@ -1487,7 +1487,7 @@
 
     iget-object v2, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->thumbnailPath:Ljava/lang/String;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/htc/music/DMCServiceManager$2;->CheckAndUpdateAlbumArt(JLjava/lang/String;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/htc/music/DMCServiceManager$2;->checkAndUpdateAlbumArt(JLjava/lang/String;)V
 
     .line 1041
     :goto_1
@@ -1614,12 +1614,12 @@
     .line 1061
     const/4 v0, 0x3
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     .line 1062
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     .line 1064
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager$2;->this$0:Lcom/htc/music/DMCServiceManager;
@@ -1636,7 +1636,7 @@
     .line 1065
     const/4 v0, 0x4
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     goto/16 :goto_0
 
@@ -1646,7 +1646,7 @@
 
     iget-object v2, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->downloadStoreAlbumArtPath:Ljava/lang/String;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/htc/music/DMCServiceManager$2;->CheckAndUpdateAlbumArt(JLjava/lang/String;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/htc/music/DMCServiceManager$2;->checkAndUpdateAlbumArt(JLjava/lang/String;)V
 
     goto/16 :goto_1
 .end method
@@ -1705,7 +1705,7 @@
     .line 1085
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     goto :goto_0
 .end method
@@ -1803,7 +1803,7 @@
     .line 1102
     const/4 v0, 0x4
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     .line 1109
     :cond_1
@@ -1823,7 +1823,7 @@
     .line 1110
     const/4 v0, 0x5
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     .line 1111
     :cond_2
@@ -1843,7 +1843,7 @@
     .line 1112
     const/4 v0, 0x6
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     .line 1114
     :cond_3
@@ -1900,7 +1900,7 @@
     .line 1117
     const/4 v0, 0x7
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     .line 1120
     :cond_4
@@ -2008,7 +2008,7 @@
     .line 1223
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->SendRefresh(I)V
+    invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager$2;->sendRefresh(I)V
 
     goto :goto_0
 .end method

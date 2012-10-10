@@ -251,7 +251,7 @@
     sput-object v0, Lcom/htc/weather/WeatherVideo;->IMAGE_MAPPING_VIDEO:[Ljava/lang/String;
 
     .line 71
-    const/16 v0, 0x2c
+    const/16 v0, 0x36
 
     new-array v0, v0, [I
 
@@ -259,7 +259,7 @@
 
     sput-object v0, Lcom/htc/weather/WeatherVideo;->mWeatherVideoMapArray:[I
 
-    .line 87
+    .line 88
     sget-object v0, Lcom/htc/weather/WeatherVideo;->path:[Ljava/lang/String;
 
     aget-object v0, v0, v3
@@ -317,6 +317,16 @@
         0x3t 0x0t 0x0t 0x0t
         0xet 0x0t 0x0t 0x0t
         0xet 0x0t 0x0t 0x0t
+        0x0t 0x0t 0x0t 0x0t
+        0x0t 0x0t 0x0t 0x0t
+        0x0t 0x0t 0x0t 0x0t
+        0x0t 0x0t 0x0t 0x0t
+        0x0t 0x0t 0x0t 0x0t
+        0x0t 0x0t 0x0t 0x0t
+        0x3t 0x0t 0x0t 0x0t
+        0x6t 0x0t 0x0t 0x0t
+        0x6t 0x0t 0x0t 0x0t
+        0x3t 0x0t 0x0t 0x0t
     .end array-data
 .end method
 
@@ -335,10 +345,10 @@
     .parameter "order"
 
     .prologue
-    .line 143
+    .line 144
     const/4 v1, 0x1
 
-    .line 145
+    .line 146
     .local v1, id:I
     const/4 v0, 0x0
 
@@ -350,25 +360,25 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 146
+    .line 147
     sget-object v3, Lcom/htc/weather/WeatherVideo;->mWeatherVideoMapArray:[I
 
     aget v3, v3, v0
 
     if-ne p0, v3, :cond_0
 
-    .line 147
+    .line 148
     add-int/lit8 v1, v0, 0x1
 
     move v2, v1
 
-    .line 151
+    .line 152
     .end local v1           #id:I
     .local v2, id:I
     :goto_1
     return v2
 
-    .line 145
+    .line 146
     .end local v2           #id:I
     .restart local v1       #id:I
     :cond_0
@@ -379,7 +389,7 @@
     :cond_1
     move v2, v1
 
-    .line 151
+    .line 152
     .end local v1           #id:I
     .restart local v2       #id:I
     goto :goto_1
@@ -389,7 +399,7 @@
     .locals 1
 
     .prologue
-    .line 133
+    .line 134
     sget-object v0, Lcom/htc/weather/WeatherVideo;->path:[Ljava/lang/String;
 
     array-length v0, v0
@@ -402,10 +412,10 @@
     .parameter "id"
 
     .prologue
-    .line 159
+    .line 160
     const/4 v0, 0x0
 
-    .line 160
+    .line 161
     .local v0, in:I
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -413,10 +423,10 @@
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 161
+    .line 162
     const/4 v1, 0x0
 
-    .line 162
+    .line 163
     .local v1, index:I
     if-ltz v0, :cond_0
 
@@ -426,12 +436,12 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 163
+    .line 164
     sget-object v2, Lcom/htc/weather/WeatherVideo;->mWeatherVideoMapArray:[I
 
     aget v1, v2, v0
 
-    .line 165
+    .line 166
     :cond_0
     return v1
 .end method
@@ -441,7 +451,7 @@
     .parameter "order"
 
     .prologue
-    .line 137
+    .line 138
     if-ltz p0, :cond_0
 
     sget-object v0, Lcom/htc/weather/WeatherVideo;->path:[Ljava/lang/String;
@@ -452,11 +462,11 @@
 
     if-le p0, v0, :cond_1
 
-    .line 138
+    .line 139
     :cond_0
     const/4 v0, 0x0
 
-    .line 139
+    .line 140
     :goto_0
     return-object v0
 
@@ -491,7 +501,7 @@
     .parameter "iconId"
 
     .prologue
-    .line 107
+    .line 108
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -500,24 +510,24 @@
 
     if-gtz v3, :cond_2
 
-    .line 108
+    .line 109
     :cond_0
     const-string v2, ""
 
-    .line 118
+    .line 119
     :cond_1
     :goto_0
     return-object v2
 
-    .line 110
+    .line 111
     :cond_2
     const/4 v0, 0x0
 
-    .line 111
+    .line 112
     .local v0, in:I
     const-string v2, ""
 
-    .line 112
+    .line 113
     .local v2, video:Ljava/lang/String;
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -525,7 +535,7 @@
 
     add-int/lit8 v0, v3, -0x1
 
-    .line 114
+    .line 115
     if-ltz v0, :cond_1
 
     sget-object v3, Lcom/htc/weather/WeatherVideo;->mWeatherVideoMapArray:[I
@@ -534,12 +544,12 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 115
+    .line 116
     sget-object v3, Lcom/htc/weather/WeatherVideo;->mWeatherVideoMapArray:[I
 
     aget v1, v3, v0
 
-    .line 116
+    .line 117
     .local v1, path_number:I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -572,14 +582,14 @@
     .parameter "daylightflag"
 
     .prologue
-    .line 171
+    .line 172
     const/4 v1, 0x0
 
-    .line 172
+    .line 173
     .local v1, in:I
     const-string v3, ""
 
-    .line 175
+    .line 176
     .local v3, video:Ljava/lang/String;
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -590,7 +600,7 @@
 
     add-int/lit8 v1, v4, -0x1
 
-    .line 180
+    .line 181
     :goto_0
     if-ltz v1, :cond_0
 
@@ -600,18 +610,18 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 181
+    .line 182
     sget-object v4, Lcom/htc/weather/WeatherVideo;->mWeatherVideoMapArray:[I
 
     aget v2, v4, v1
 
-    .line 182
+    .line 183
     .local v2, path_number:I
     sget-object v4, Lcom/htc/weather/WeatherVideo;->path:[Ljava/lang/String;
 
     aget-object v3, v4, v2
 
-    .line 185
+    .line 186
     .end local v2           #path_number:I
     :cond_0
     const-string v4, "weather_cloudy_day.mp4"
@@ -622,21 +632,21 @@
 
     if-eqz v4, :cond_1
 
-    .line 186
+    .line 187
     if-nez p1, :cond_1
 
-    .line 187
+    .line 188
     const-string v4, "/system/media/weather/weather_cloudy_night.mp4"
 
-    .line 220
+    .line 221
     :goto_1
     return-object v4
 
-    .line 176
+    .line 177
     :catch_0
     move-exception v0
 
-    .line 177
+    .line 178
     .local v0, e:Ljava/lang/NumberFormatException;
     const-string v4, "WeatherVideo"
 
@@ -662,7 +672,7 @@
 
     goto :goto_0
 
-    .line 191
+    .line 192
     .end local v0           #e:Ljava/lang/NumberFormatException;
     :cond_1
     const-string v4, "weather_thunderstorm_day.mp4"
@@ -673,15 +683,15 @@
 
     if-eqz v4, :cond_2
 
-    .line 192
+    .line 193
     if-nez p1, :cond_2
 
-    .line 193
+    .line 194
     const-string v4, "/system/media/weather/weather_thunderstorm_night.mp4"
 
     goto :goto_1
 
-    .line 197
+    .line 198
     :cond_2
     const-string v4, "weather_fog_day.mp4"
 
@@ -691,15 +701,15 @@
 
     if-eqz v4, :cond_3
 
-    .line 198
+    .line 199
     if-nez p1, :cond_3
 
-    .line 199
+    .line 200
     const-string v4, "/system/media/weather/weather_fog_night.mp4"
 
     goto :goto_1
 
-    .line 203
+    .line 204
     :cond_3
     const-string v4, "weather_rain.mp4"
 
@@ -709,15 +719,15 @@
 
     if-eqz v4, :cond_4
 
-    .line 204
+    .line 205
     if-nez p1, :cond_4
 
-    .line 205
+    .line 206
     const-string v4, "/system/media/weather/weather_rain_night.mp4"
 
     goto :goto_1
 
-    .line 209
+    .line 210
     :cond_4
     const-string v4, "weather_snow_day.mp4"
 
@@ -727,15 +737,15 @@
 
     if-eqz v4, :cond_5
 
-    .line 210
+    .line 211
     if-nez p1, :cond_5
 
-    .line 211
+    .line 212
     const-string v4, "/system/media/weather/weather_snow_night.mp4"
 
     goto :goto_1
 
-    .line 215
+    .line 216
     :cond_5
     const-string v4, "weather_windy_day.mp4"
 
@@ -745,15 +755,15 @@
 
     if-eqz v4, :cond_6
 
-    .line 216
+    .line 217
     if-nez p1, :cond_6
 
-    .line 217
+    .line 218
     const-string v4, "/system/media/weather/weather_windy_night.mp4"
 
     goto :goto_1
 
-    .line 220
+    .line 221
     :cond_6
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -781,17 +791,17 @@
     .parameter "isDayTime"
 
     .prologue
-    .line 126
+    .line 127
     if-eqz p0, :cond_0
 
-    .line 127
+    .line 128
     sget-object v0, Lcom/htc/weather/WeatherVideo;->path:[Ljava/lang/String;
 
     const/16 v1, 0xf
 
     aget-object v0, v0, v1
 
-    .line 129
+    .line 130
     :goto_0
     return-object v0
 
@@ -810,17 +820,17 @@
     .parameter "order"
 
     .prologue
-    .line 95
+    .line 96
     sget-object v0, Lcom/htc/weather/WeatherVideo;->IMAGE_MAPPING_VIDEO:[Ljava/lang/String;
 
     array-length v0, v0
 
     if-lt p0, v0, :cond_0
 
-    .line 96
+    .line 97
     const-string v0, ""
 
-    .line 98
+    .line 99
     :goto_0
     return-object v0
 

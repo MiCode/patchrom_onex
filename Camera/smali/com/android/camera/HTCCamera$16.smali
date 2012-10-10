@@ -3,12 +3,12 @@
 .source "HTCCamera.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/HTCCamera;->deactivate()V
+    value = Lcom/android/camera/HTCCamera;->QueryToggleStorage()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4880
+    .line 5251
     iput-object p1, p0, Lcom/android/camera/HTCCamera$16;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,23 +37,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
-    .parameter "v"
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
+    .parameter "dialog"
+    .parameter "which"
 
     .prologue
-    .line 4882
-    const-string v0, "HTCCamera"
-
-    const-string v1, "onClick: activate "
-
-    invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4883
-    iget-object v0, p0, Lcom/android/camera/HTCCamera$16;->this$0:Lcom/android/camera/HTCCamera;
-
-    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->activate()V
-
-    .line 4884
+    .line 5254
     return-void
 .end method

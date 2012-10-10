@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 119
+    .line 137
     iput-object p1, p0, Lcom/android/camera/component/AutoBacklightIntentSender$4;->this$0:Lcom/android/camera/component/AutoBacklightIntentSender;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 141
     iget-object v0, p0, Lcom/android/camera/component/AutoBacklightIntentSender$4;->this$0:Lcom/android/camera/component/AutoBacklightIntentSender;
 
     #calls: Lcom/android/camera/component/AutoBacklightIntentSender;->enableAutoBacklight()V
     invoke-static {v0}, Lcom/android/camera/component/AutoBacklightIntentSender;->access$000(Lcom/android/camera/component/AutoBacklightIntentSender;)V
 
-    .line 124
+    .line 142
     return-void
 .end method

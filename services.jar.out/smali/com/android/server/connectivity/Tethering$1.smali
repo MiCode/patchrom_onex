@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 3622
+    .line 3717
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -40,18 +40,18 @@
     .parameter "msg"
 
     .prologue
-    .line 3625
+    .line 3720
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 3655
+    .line 3750
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 3627
+    .line 3722
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
@@ -67,11 +67,11 @@
     check-cast v1, Landroid/content/Intent;
 
     #calls: Lcom/android/server/connectivity/Tethering;->internal_htcConnectivityActionHandling(Landroid/content/Context;Landroid/content/Intent;)V
-    invoke-static {v2, v3, v1}, Lcom/android/server/connectivity/Tethering;->access$9900(Lcom/android/server/connectivity/Tethering;Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v2, v3, v1}, Lcom/android/server/connectivity/Tethering;->access$10000(Lcom/android/server/connectivity/Tethering;Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 3630
+    .line 3725
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
@@ -80,25 +80,25 @@
     check-cast v1, Landroid/net/NetworkInfo;
 
     #calls: Lcom/android/server/connectivity/Tethering;->internal_htcNetworkAvalibilityChangeHandling(Landroid/net/NetworkInfo;)V
-    invoke-static {v2, v1}, Lcom/android/server/connectivity/Tethering;->access$10000(Lcom/android/server/connectivity/Tethering;Landroid/net/NetworkInfo;)V
+    invoke-static {v2, v1}, Lcom/android/server/connectivity/Tethering;->access$10100(Lcom/android/server/connectivity/Tethering;Landroid/net/NetworkInfo;)V
 
     goto :goto_0
 
-    .line 3636
+    .line 3731
     :pswitch_3
     sget-boolean v1, Lcom/android/server/connectivity/Tethering;->TETHERING_GUARD_support:Z
 
     if-eqz v1, :cond_0
 
-    .line 3637
+    .line 3732
     iget-object v1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     const/4 v2, 0x0
 
     #setter for: Lcom/android/server/connectivity/Tethering;->prevCheckingPermissionMessage:Landroid/os/Message;
-    invoke-static {v1, v2}, Lcom/android/server/connectivity/Tethering;->access$10102(Lcom/android/server/connectivity/Tethering;Landroid/os/Message;)Landroid/os/Message;
+    invoke-static {v1, v2}, Lcom/android/server/connectivity/Tethering;->access$10202(Lcom/android/server/connectivity/Tethering;Landroid/os/Message;)Landroid/os/Message;
 
-    .line 3638
+    .line 3733
     iget-object v2, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -108,17 +108,17 @@
     check-cast v1, [I
 
     #calls: Lcom/android/server/connectivity/Tethering;->internal_htcRequestPermittedTether([I)V
-    invoke-static {v2, v1}, Lcom/android/server/connectivity/Tethering;->access$10200(Lcom/android/server/connectivity/Tethering;[I)V
+    invoke-static {v2, v1}, Lcom/android/server/connectivity/Tethering;->access$10300(Lcom/android/server/connectivity/Tethering;[I)V
 
     goto :goto_0
 
-    .line 3642
+    .line 3737
     :pswitch_4
     sget-boolean v1, Lcom/android/server/connectivity/Tethering;->TETHERING_GUARD_support:Z
 
     if-eqz v1, :cond_0
 
-    .line 3643
+    .line 3738
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, [Ljava/lang/String;
@@ -127,7 +127,7 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 3644
+    .line 3739
     .local v0, parms:[Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -137,7 +137,7 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 3645
+    .line 3740
     iget-object v1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     const/4 v2, 0x0
@@ -149,26 +149,26 @@
     aget-object v3, v0, v3
 
     #calls: Lcom/android/server/connectivity/Tethering;->internal_htcSetupPermittedTether(Ljava/lang/String;Ljava/lang/String;)V
-    invoke-static {v1, v2, v3}, Lcom/android/server/connectivity/Tethering;->access$10300(Lcom/android/server/connectivity/Tethering;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/server/connectivity/Tethering;->access$10400(Lcom/android/server/connectivity/Tethering;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 3650
+    .line 3745
     .end local v0           #parms:[Ljava/lang/String;
     :pswitch_5
     sget-boolean v1, Lcom/android/server/connectivity/Tethering;->TETHERING_GUARD_support:Z
 
     if-eqz v1, :cond_0
 
-    .line 3651
+    .line 3746
     iget-object v1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     #calls: Lcom/android/server/connectivity/Tethering;->internal_htcNotifyPermittedTetherChange()V
-    invoke-static {v1}, Lcom/android/server/connectivity/Tethering;->access$10400(Lcom/android/server/connectivity/Tethering;)V
+    invoke-static {v1}, Lcom/android/server/connectivity/Tethering;->access$10500(Lcom/android/server/connectivity/Tethering;)V
 
     goto :goto_0
 
-    .line 3625
+    .line 3720
     nop
 
     :pswitch_data_0

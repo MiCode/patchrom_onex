@@ -79,14 +79,21 @@
     <string name="panorama_stitching_error_images">Oops, please pan the camera smoothly and try again. Stitching current photos...</string>
     <string name="processing_image">@com.htc:string/st_processing</string>
     <string name="saving_photos">Saving photos...</string>
+    <string name="saving_video">Saving video...</string>
     <string name="optimal_3D_in_landscape">Please hold the phone horizontally for 3D capture to function properly.</string>
     <string name="image_queue_is_full">Saving photos, please take picture later.</string>
     <string name="how_to_start_group_portrait">Use the Group scene to capture that perfect shot with all smiles and no blinking</string>
     <string name="group_portrait_processing_images">Scanning faces to compose the best shot...</string>
     <string name="auto_upload_first_time_dialog">Would you like to auto backup your camera shots to Facebook?</string>
     <string name="auto_upload_confirm_dialog">You can change this setting anytime from Settings-->Auto Upload</string>
+    <string name="other_usage_camera">Unable to launch the camera because it is in use by another application.</string>
+    <string name="other_usage_camcorder">Unable to launch the camcorder because it is in use by another application.</string>
     <string name="not_recording_when_streaming_tv">Video recording does not work when streaming to TV</string>
     <string name="forbidden_camera">Camera access is forbidden by device administrator, please contact IT team for assistance.</string>
+    <string name="not_launch_camera_while_phonecall_and_lowpower">You cannot use the camera because a phone call is ongoing while the battery is low.</string>
+    <string name="close_camera_while_phonecall_and_lowpower">The camera is closed because a phone call is ongoing while the battery is low</string>
+    <string name="unable_launch_camera">Unable to start the camera.</string>
+    <string name="close_camera_while_error_happened">The camera needs to close.</string>
     <string name="on_screen_btn_effects">Effects</string>
     <string name="on_screen_btn_gallery">@com.htc:string/nn_gallery</string>
     <string name="on_screen_btn_enhance_photo">Enhance</string>
@@ -287,6 +294,7 @@
     <string name="resolution_QCIF">QCIF</string>
     <string name="resolution_QVGA">QVGA</string>
     <string name="resolution_HVGA">HVGA</string>
+    <string name="resolution_HVGA480">HVGA480</string>
     <string name="resolution_WVGA">WVGA</string>
     <string name="resolution_QHD">QHD</string>
     <string name="resolution_720p">720p</string>
@@ -342,6 +350,7 @@
     <string name="resolution_video_qhd_description_2">QHD (960 x 540)</string>
     <string name="resolution_video_wvga_description_2">Widescreen (800 x 480)</string>
     <string name="resolution_video_hvga_description_2">Widescreen (720 x 480)</string>
+    <string name="resolution_video_hvga_description_3">Widescreen (480 x 320)</string>
     <string name="resolution_video_vga_description_2">High (640 x 480)</string>
     <string name="resolution_video_QVGA_description_3">Low (320 x 240)</string>
     <string name="resolution_video_qcif_description_3">MMS (176 x 144)</string>

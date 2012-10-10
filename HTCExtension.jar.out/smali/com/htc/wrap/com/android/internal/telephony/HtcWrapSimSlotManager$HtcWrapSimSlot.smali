@@ -21,7 +21,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/htc/wrap/com/android/internal/telephony/HtcWrapSimSlotManager;I)V
+.method public constructor <init>(Lcom/htc/wrap/com/android/internal/telephony/HtcWrapSimSlotManager;I)V
     .locals 0
     .parameter
     .parameter "slotId"

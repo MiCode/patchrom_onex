@@ -15,6 +15,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$ErrorInfoReceiver;,
         Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$ExtraUsageReceiver;,
         Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$SettingContentObserver;,
         Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$MediaPlayReceiver;,
@@ -65,7 +66,7 @@
     .locals 12
 
     .prologue
-    .line 126
+    .line 127
     const-wide/16 v3, 0x0
 
     .local v3, flushInfoIntervalForTest:J
@@ -77,7 +78,7 @@
     .local v1, flushClientInfoInterval:J
     const-wide/16 v7, 0x0
 
-    .line 128
+    .line 129
     .local v7, updateInterval:J
     const-string v9, "user"
 
@@ -89,7 +90,7 @@
 
     if-nez v9, :cond_0
 
-    .line 130
+    .line 131
     :try_start_0
     const-string v9, "htcdeviceinfo.flush_info"
 
@@ -99,7 +100,7 @@
 
     move-result-wide v3
 
-    .line 131
+    .line 132
     const-string v9, "htcdeviceinfo.flush_usage_time"
 
     const-wide/16 v10, 0x0
@@ -108,7 +109,7 @@
 
     move-result-wide v5
 
-    .line 132
+    .line 133
     const-string v9, "htcdeviceinfo.flush_client_info"
 
     const-wide/16 v10, 0x0
@@ -117,7 +118,7 @@
 
     move-result-wide v1
 
-    .line 133
+    .line 134
     const-string v9, "htcdeviceinfo.update"
 
     const-wide/16 v10, 0x0
@@ -128,7 +129,7 @@
 
     move-result-wide v7
 
-    .line 139
+    .line 140
     :cond_0
     :goto_0
     const-wide/16 v9, 0x0
@@ -144,7 +145,7 @@
     :goto_1
     sput-wide v9, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_INFO_INTERVAL:J
 
-    .line 140
+    .line 141
     const-wide/16 v9, 0x0
 
     cmp-long v9, v5, v9
@@ -158,7 +159,7 @@
     :goto_2
     sput-wide v9, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_USAGE_TIME_INTERVAL:J
 
-    .line 141
+    .line 142
     const-wide/16 v9, 0x0
 
     cmp-long v9, v1, v9
@@ -172,7 +173,7 @@
     :goto_3
     sput-wide v9, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_CLIENT_INFO_INTERVAL:J
 
-    .line 142
+    .line 143
     const-wide/16 v9, 0x0
 
     cmp-long v9, v7, v9
@@ -186,7 +187,7 @@
     :goto_4
     sput-wide v9, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->UPDATE_INTERVAL:J
 
-    .line 163
+    .line 164
     const-string v9, "persist.deviceinfo.idletime"
 
     const-wide/32 v10, 0xafc8
@@ -197,18 +198,18 @@
 
     sput-wide v9, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->MAX_USER_ACTIVITY_DURATION:J
 
-    .line 172
+    .line 173
     const-wide/32 v9, 0x5265c00
 
     sput-wide v9, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->LOGINSTALLEDAPP_INTERVAL:J
 
     return-void
 
-    .line 134
+    .line 135
     :catch_0
     move-exception v0
 
-    .line 135
+    .line 136
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v9, "HtcDeviceInfoManager"
 
@@ -218,26 +219,26 @@
 
     goto :goto_0
 
-    .line 139
+    .line 140
     .end local v0           #e:Ljava/lang/IllegalArgumentException;
     :cond_1
     const-wide/32 v9, 0x1b7740
 
     goto :goto_1
 
-    .line 140
+    .line 141
     :cond_2
     const-wide/32 v9, 0x5265c00
 
     goto :goto_2
 
-    .line 141
+    .line 142
     :cond_3
     const-wide/32 v9, 0x240c8400
 
     goto :goto_3
 
-    .line 142
+    .line 143
     :cond_4
     const-wide/32 v9, 0xea60
 
@@ -248,10 +249,10 @@
     .locals 0
 
     .prologue
-    .line 118
+    .line 119
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 411
+    .line 445
     return-void
 .end method
 
@@ -259,7 +260,7 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 119
     sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_USAGE_TIME_INTERVAL:J
 
     return-wide v0
@@ -269,7 +270,7 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 119
     sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_CLIENT_INFO_INTERVAL:J
 
     return-wide v0
@@ -279,7 +280,7 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 119
     sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_INFO_INTERVAL:J
 
     return-wide v0
@@ -289,7 +290,7 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 119
     sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->MAX_USER_ACTIVITY_DURATION:J
 
     return-wide v0
@@ -299,7 +300,7 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 119
     sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->LOGINSTALLEDAPP_INTERVAL:J
 
     return-wide v0
@@ -309,198 +310,222 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 119
     sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->UPDATE_INTERVAL:J
 
     return-wide v0
 .end method
 
-.method private static getFlushClientInfoInterval()J
-    .locals 10
+.method private static getFirstFlushClientInfoInterval(J)J
+    .locals 3
+    .parameter "lastTimeOfClientStatLogOutput"
 
     .prologue
-    const-wide/16 v8, 0x0
+    .line 193
+    const-string v0, "getFirstFlushClientInfoInterval"
 
-    .line 188
-    const-wide/16 v0, 0x0
+    sget-wide v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_CLIENT_INFO_INTERVAL:J
 
-    .line 189
-    .local v0, flushClientInfoInterval:J
-    invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getInstance()Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;
+    invoke-static {v0, p0, p1, v1, v2}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->getFirstScheduleInterval(Ljava/lang/String;JJ)J
 
-    move-result-object v4
+    move-result-wide v0
 
-    invoke-virtual {v4}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getLastTimeOfClientStatLogOutput()J
-
-    move-result-wide v2
-
-    .line 191
-    .local v2, lastTimeOfClientStatLogOutput:J
-    cmp-long v4, v2, v8
-
-    if-lez v4, :cond_0
-
-    .line 192
-    sget-wide v4, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_CLIENT_INFO_INTERVAL:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    sub-long/2addr v6, v2
-
-    sub-long v0, v4, v6
-
-    .line 194
-    :cond_0
-    cmp-long v4, v0, v8
-
-    if-lez v4, :cond_1
-
-    sget-wide v4, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_CLIENT_INFO_INTERVAL:J
-
-    cmp-long v4, v0, v4
-
-    if-lez v4, :cond_2
-
-    .line 195
-    :cond_1
-    sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_CLIENT_INFO_INTERVAL:J
-
-    .line 198
-    :cond_2
     return-wide v0
 .end method
 
-.method private static getflushUsageTimeInterval()J
-    .locals 10
+.method private static getFirstFlushUsageTimeInterval(J)J
+    .locals 3
+    .parameter "lastTimeOfUseTimeLogOutput"
 
     .prologue
-    const-wide/16 v8, 0x0
+    .line 197
+    const-string v0, "getFirstFlushUsageTimeInterval"
+
+    sget-wide v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_USAGE_TIME_INTERVAL:J
+
+    invoke-static {v0, p0, p1, v1, v2}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->getFirstScheduleInterval(Ljava/lang/String;JJ)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method private static getFirstScheduleInterval(Ljava/lang/String;JJ)J
+    .locals 10
+    .parameter "subTag"
+    .parameter "lastScheduleTime"
+    .parameter "defaultInterval"
+
+    .prologue
+    .line 201
+    const-wide/16 v4, 0x0
 
     .line 202
-    const-wide/16 v0, 0x0
-
-    .line 203
-    .local v0, flushUsageTimeInterval:J
-    invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getInstance()Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getLastTimeOfUseTimeLogOutput()J
-
-    move-result-wide v2
-
-    .line 205
-    .local v2, lastTimeOfUseTimeLogOutput:J
-    cmp-long v4, v2, v8
-
-    if-lez v4, :cond_0
-
-    .line 206
-    sget-wide v4, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_USAGE_TIME_INTERVAL:J
-
+    .local v4, nextScheduleInterval:J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    sub-long/2addr v6, v2
+    .line 203
+    .local v6, now:J
+    const-wide/32 v0, 0x1d4c0
 
-    sub-long v0, v4, v6
+    .line 204
+    .local v0, delayWhenBootUp:J
+    sub-long v8, v6, p1
+
+    div-long v2, v8, p3
+
+    .line 206
+    .local v2, missingUploadCount:J
+    const-wide/16 v8, 0x0
+
+    cmp-long v8, p1, v8
+
+    if-lez v8, :cond_0
+
+    cmp-long v8, p1, v6
+
+    if-lez v8, :cond_1
+
+    .line 207
+    :cond_0
+    move-wide v4, p3
+
+    .line 216
+    :goto_0
+    return-wide v4
 
     .line 208
-    :cond_0
-    cmp-long v4, v0, v8
+    :cond_1
+    const-wide/16 v8, 0x0
 
-    if-lez v4, :cond_1
+    cmp-long v8, v2, v8
 
-    sget-wide v4, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_USAGE_TIME_INTERVAL:J
-
-    cmp-long v4, v0, v4
-
-    if-lez v4, :cond_2
+    if-lez v8, :cond_2
 
     .line 209
-    :cond_1
-    sget-wide v0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_USAGE_TIME_INTERVAL:J
+    const-wide/32 v4, 0x1d4c0
 
-    .line 212
+    goto :goto_0
+
+    .line 211
     :cond_2
-    return-wide v0
+    sub-long v8, v6, p1
+
+    rem-long/2addr v8, p3
+
+    sub-long v4, p3, v8
+
+    goto :goto_0
 .end method
 
 .method public static registerClientStatsReceiver(Landroid/content/Context;Landroid/os/Handler;)V
-    .locals 4
+    .locals 10
     .parameter "context"
     .parameter "handler"
 
     .prologue
-    .line 175
+    const-wide/16 v8, 0x0
+
+    .line 176
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 176
-    .local v0, filter:Landroid/content/IntentFilter;
-    const-string v1, "com.htc.USE_TIME_FLUSH"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
     .line 177
-    const-string v1, "com.htc.CLIENT_INFO_FLUSH"
+    .local v0, filter:Landroid/content/IntentFilter;
+    const-string v5, "com.htc.USE_TIME_FLUSH"
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v0, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 178
-    new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;
+    const-string v5, "com.htc.CLIENT_INFO_FLUSH"
 
-    invoke-direct {v1, p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+    invoke-virtual {v0, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    .line 179
+    new-instance v5, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;
 
-    invoke-virtual {p0, v1, v0, v2, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-direct {v5, p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 180
-    const-string v1, "com.htc.CLIENT_INFO_FLUSH"
+    const/4 v6, 0x0
 
-    invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->getFlushClientInfoInterval()J
-
-    move-result-wide v2
-
-    invoke-static {p0, v1, v2, v3}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->setupPendingIntent(Landroid/content/Context;Ljava/lang/String;J)V
+    invoke-virtual {p0, v5, v0, v6, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 181
     invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getInstance()Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;
 
-    move-result-object v1
+    move-result-object v5
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v5}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getLastTimeOfClientStatLogOutput()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v1, v2, v3}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->setLastTimeOfClientStatLogOutput(J)V
+    .line 182
+    .local v1, lastTimeOfClientStatLogOutput:J
+    const-string v5, "com.htc.CLIENT_INFO_FLUSH"
+
+    invoke-static {v1, v2}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->getFirstFlushClientInfoInterval(J)J
+
+    move-result-wide v6
+
+    invoke-static {p0, v5, v6, v7}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->setupPendingIntent(Landroid/content/Context;Ljava/lang/String;J)V
 
     .line 183
-    const-string v1, "com.htc.USE_TIME_FLUSH"
+    cmp-long v5, v1, v8
 
-    invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->getflushUsageTimeInterval()J
-
-    move-result-wide v2
-
-    invoke-static {p0, v1, v2, v3}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->setupPendingIntent(Landroid/content/Context;Ljava/lang/String;J)V
+    if-gtz v5, :cond_0
 
     .line 184
     invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getInstance()Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;
 
-    move-result-object v1
+    move-result-object v5
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v6
 
-    invoke-virtual {v1, v2, v3}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->setLastTimeOfUseTimeLogOutput(J)V
+    invoke-virtual {v5, v6, v7}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->setLastTimeOfClientStatLogOutput(J)V
 
-    .line 185
+    .line 186
+    :cond_0
+    invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getInstance()Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getLastTimeOfUseTimeLogOutput()J
+
+    move-result-wide v3
+
+    .line 187
+    .local v3, lastTimeOfUseTimeLogOutput:J
+    const-string v5, "com.htc.USE_TIME_FLUSH"
+
+    invoke-static {v3, v4}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->getFirstFlushUsageTimeInterval(J)J
+
+    move-result-wide v6
+
+    invoke-static {p0, v5, v6, v7}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->setupPendingIntent(Landroid/content/Context;Ljava/lang/String;J)V
+
+    .line 188
+    cmp-long v5, v3, v8
+
+    if-gtz v5, :cond_1
+
+    .line 189
+    invoke-static {}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->getInstance()Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;
+
+    move-result-object v5
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    invoke-virtual {v5, v6, v7}, Lcom/htc/server/HtcDeviceInfoManager$HtcDeviceInfoPreference;->setLastTimeOfUseTimeLogOutput(J)V
+
+    .line 190
+    :cond_1
     return-void
 .end method
 
@@ -511,18 +536,18 @@
     .parameter "infoOperators"
 
     .prologue
-    .line 254
+    .line 258
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 255
+    .line 259
     .local v2, cr:Landroid/content/ContentResolver;
     new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$SettingContentObserver;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$SettingContentObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;[Lcom/htc/server/HtcInfoOperator;)V
 
-    .line 256
+    .line 260
     .local v1, co:Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$SettingContentObserver;
     const-string v8, "screen_off_timeout"
 
@@ -534,7 +559,7 @@
 
     invoke-virtual {v2, v8, v9, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 259
+    .line 263
     const-string v8, "screen_off_timeout"
 
     sget-wide v9, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->MAX_USER_ACTIVITY_DURATION:J
@@ -543,7 +568,7 @@
 
     move-result-wide v3
 
-    .line 261
+    .line 265
     .local v3, duration:J
     move-object v0, p2
 
@@ -559,7 +584,7 @@
 
     aget-object v7, v0, v5
 
-    .line 262
+    .line 266
     .local v7, op:Lcom/htc/server/HtcInfoOperator;
     const-wide/16 v8, -0x1
 
@@ -567,16 +592,16 @@
 
     if-eqz v8, :cond_0
 
-    .line 263
+    .line 267
     invoke-virtual {v7, v3, v4}, Lcom/htc/server/HtcInfoOperator;->setScreenOffTimeout(J)V
 
-    .line 261
+    .line 265
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 265
+    .line 269
     :cond_0
     sget-wide v8, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->MAX_USER_ACTIVITY_DURATION:J
 
@@ -584,7 +609,7 @@
 
     goto :goto_1
 
-    .line 267
+    .line 271
     .end local v7           #op:Lcom/htc/server/HtcInfoOperator;
     :cond_1
     return-void
@@ -596,28 +621,28 @@
     .parameter "handler"
 
     .prologue
-    .line 216
+    .line 220
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 217
+    .line 221
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "com.htc.DEVICE_INFO_FLUSH"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 218
+    .line 222
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 219
+    .line 223
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 220
+    .line 224
     new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;
 
     invoke-direct {v1, p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
@@ -626,14 +651,44 @@
 
     invoke-virtual {p0, v1, v0, v2, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 223
+    .line 227
     const-string v1, "com.htc.DEVICE_INFO_FLUSH"
 
     sget-wide v2, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->FLUSH_INFO_INTERVAL:J
 
     invoke-static {p0, v1, v2, v3}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->setupPendingIntent(Landroid/content/Context;Ljava/lang/String;J)V
 
-    .line 224
+    .line 228
+    return-void
+.end method
+
+.method public static registerErrorInfoReceiver(Landroid/content/Context;Landroid/os/Handler;)V
+    .locals 3
+    .parameter "context"
+    .parameter "handler"
+
+    .prologue
+    .line 285
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    .line 286
+    .local v0, filter:Landroid/content/IntentFilter;
+    const-string v1, "com.htc.intent.action.BUGREPORT"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 287
+    new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$ErrorInfoReceiver;
+
+    invoke-direct {v1, p1}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$ErrorInfoReceiver;-><init>(Landroid/os/Handler;)V
+
+    const-string v2, "com.htc.permission.FEEDBACK_PROTECT"
+
+    invoke-virtual {p0, v1, v0, v2, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+
+    .line 288
     return-void
 .end method
 
@@ -643,33 +698,33 @@
     .parameter "handler"
 
     .prologue
-    .line 270
+    .line 274
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 271
+    .line 275
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "com.htc.DEVICE_INFO_LogInstalledApp"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 272
+    .line 276
     const-string v1, "com.htc.DEVICE_INFO_LogSWInfoTime"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 273
+    .line 277
     const-string v1, "com.htc.DEVICE_INFO_LogHWInfoTime"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 274
+    .line 278
     const-string v1, "com.htc.screen_capture_action"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 275
+    .line 279
     new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$ExtraUsageReceiver;
 
     invoke-direct {v1, p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$ExtraUsageReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
@@ -678,14 +733,14 @@
 
     invoke-virtual {p0, v1, v0, v2, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 277
+    .line 281
     const-string v1, "com.htc.DEVICE_INFO_LogInstalledApp"
 
     sget-wide v2, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->LOGINSTALLEDAPP_INTERVAL:J
 
     invoke-static {p0, v1, v2, v3}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper;->setupPendingIntent(Landroid/content/Context;Ljava/lang/String;J)V
 
-    .line 278
+    .line 282
     return-void
 .end method
 
@@ -696,18 +751,18 @@
     .parameter "infoOperators"
 
     .prologue
-    .line 242
+    .line 246
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 243
+    .line 247
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "com.htc.HtcDeviceInfoManager.MediaReceiver"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 244
+    .line 248
     new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$MediaPlayReceiver;
 
     invoke-direct {v1, p2}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$MediaPlayReceiver;-><init>([Lcom/htc/server/HtcInfoOperator;)V
@@ -716,7 +771,7 @@
 
     invoke-virtual {p0, v1, v0, v2, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 245
+    .line 249
     return-void
 .end method
 
@@ -726,7 +781,7 @@
     .parameter "handler"
 
     .prologue
-    .line 227
+    .line 231
     const-string v2, "phone"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -735,20 +790,20 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 229
+    .line 233
     .local v0, telephony:Landroid/telephony/TelephonyManager;
     if-eqz v0, :cond_0
 
-    .line 230
+    .line 234
     new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$1;
 
     invoke-direct {v1, v0, p1}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$1;-><init>(Landroid/telephony/TelephonyManager;Landroid/os/Handler;)V
 
-    .line 237
+    .line 241
     .local v1, thread:Ljava/lang/Thread;
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 239
+    .line 243
     .end local v1           #thread:Ljava/lang/Thread;
     :cond_0
     return-void
@@ -760,18 +815,18 @@
     .parameter "handler"
 
     .prologue
-    .line 248
+    .line 252
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 249
+    .line 253
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "com.android.updater.NOTIFY_SYSTEM_CRASH"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 250
+    .line 254
     new-instance v1, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;
 
     invoke-direct {v1, p0, p1}, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$FlushReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
@@ -780,7 +835,7 @@
 
     invoke-virtual {p0, v1, v0, v2, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 251
+    .line 255
     return-void
 .end method
 
@@ -793,7 +848,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 436
+    .line 457
     const-string v5, "alarm"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -802,19 +857,19 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 437
+    .line 458
     .local v0, alarm:Landroid/app/AlarmManager;
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 438
+    .line 459
     .local v1, broadcastIntent:Landroid/content/Intent;
     invoke-static {p0, v6, v1, v6}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v2
 
-    .line 439
+    .line 460
     .local v2, pendingIntent:Landroid/app/PendingIntent;
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -822,12 +877,12 @@
 
     add-long v3, p2, v5
 
-    .line 440
+    .line 461
     .local v3, triggerTime:J
     const/4 v5, 0x3
 
     invoke-virtual {v0, v5, v3, v4, v2}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 441
+    .line 462
     return-void
 .end method

@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 558
+    .line 568
     iput-object p1, p0, Landroid/nfc/NfcAdapter$2;->this$0:Landroid/nfc/NfcAdapter;
 
     iput-boolean p2, p0, Landroid/nfc/NfcAdapter$2;->val$on:Z
@@ -59,7 +59,7 @@
     .end annotation
 
     .prologue
-    .line 561
+    .line 571
     iget-boolean v0, p0, Landroid/nfc/NfcAdapter$2;->val$on:Z
 
     if-eqz v0, :cond_0
@@ -96,7 +96,7 @@
     .end annotation
 
     .prologue
-    .line 558
+    .line 568
     invoke-virtual {p0}, Landroid/nfc/NfcAdapter$2;->callMethod()Ljava/lang/Boolean;
 
     move-result-object v0

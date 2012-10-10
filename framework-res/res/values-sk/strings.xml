@@ -637,7 +637,7 @@
     <string name="phoneTypePager">Pager</string>
     <string name="phoneTypeOther">Iné</string>
     <string name="phoneTypeCallback">Spätné volanie</string>
-    <string name="phoneTypeCar">Automobil</string>
+    <string name="phoneTypeCar">Car</string>
     <string name="phoneTypeCompanyMain">Spoločnosť hlavné</string>
     <string name="phoneTypeIsdn">ISDN</string>
     <string name="phoneTypeMain">Hlavné</string>

@@ -30,13 +30,13 @@
     .parameter "infoOperators"
 
     .prologue
-    .line 361
+    .line 371
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 362
+    .line 372
     iput-object p1, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$MediaPlayReceiver;->mInfoOperators:[Lcom/htc/server/HtcInfoOperator;
 
-    .line 363
+    .line 373
     return-void
 .end method
 
@@ -50,21 +50,21 @@
     .prologue
     const/4 v9, -0x1
 
-    .line 366
+    .line 376
     const-string v7, "HtcDeviceInfoManager"
 
     const-string v8, "MediaReceiver.onReceive"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
+    .line 379
     const-string v7, "type"
 
     invoke-virtual {p2, v7, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    .line 370
+    .line 380
     .local v6, type:I
     const-string v7, "act"
 
@@ -72,7 +72,7 @@
 
     move-result v0
 
-    .line 371
+    .line 381
     .local v0, act:I
     const-string v7, "pid"
 
@@ -80,7 +80,7 @@
 
     move-result v5
 
-    .line 376
+    .line 386
     .local v5, pid:I
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$MediaPlayReceiver;->mInfoOperators:[Lcom/htc/server/HtcInfoOperator;
 
@@ -96,26 +96,26 @@
 
     aget-object v4, v1, v2
 
-    .line 377
+    .line 387
     .local v4, op:Lcom/htc/server/HtcInfoOperator;
     const/4 v7, 0x1
 
     if-ne v0, v7, :cond_0
 
-    .line 378
+    .line 388
     invoke-virtual {v4}, Lcom/htc/server/HtcInfoOperator;->getVoiceAppUsage()Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     move-result-object v7
 
     invoke-virtual {v7, v5, v6}, Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;->start(II)V
 
-    .line 376
+    .line 386
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 380
+    .line 390
     :cond_0
     invoke-virtual {v4}, Lcom/htc/server/HtcInfoOperator;->getVoiceAppUsage()Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
@@ -125,7 +125,7 @@
 
     goto :goto_1
 
-    .line 382
+    .line 392
     .end local v4           #op:Lcom/htc/server/HtcInfoOperator;
     :cond_1
     return-void

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 241
+    .line 242
     iput-object p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$1;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,19 +39,19 @@
     .parameter "msg"
 
     .prologue
-    .line 247
+    .line 248
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 261
+    .line 262
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 265
+    .line 266
     :goto_0
     return-void
 
-    .line 251
+    .line 252
     :pswitch_0
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$1;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
@@ -63,7 +63,7 @@
 
     goto :goto_0
 
-    .line 256
+    .line 257
     :pswitch_1
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$1;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
@@ -71,7 +71,7 @@
 
     goto :goto_0
 
-    .line 247
+    .line 248
     :pswitch_data_0
     .packed-switch 0x2711
         :pswitch_0

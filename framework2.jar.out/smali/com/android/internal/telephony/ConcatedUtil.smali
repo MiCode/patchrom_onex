@@ -40,7 +40,7 @@
     .locals 3
 
     .prologue
-    .line 45
+    .line 55
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -91,10 +91,10 @@
     .parameter "phone"
 
     .prologue
-    .line 55
+    .line 65
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
+    .line 36
     const-string v0, "content://htcmessageutil"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -109,17 +109,17 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/ConcatedUtil;->mRawUri:Landroid/net/Uri;
 
-    .line 56
+    .line 66
     iput-object p1, p0, Lcom/android/internal/telephony/ConcatedUtil;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 57
+    .line 67
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/ConcatedUtil;->mContext:Landroid/content/Context;
 
-    .line 58
+    .line 68
     iget-object v0, p0, Lcom/android/internal/telephony/ConcatedUtil;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -128,7 +128,7 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/ConcatedUtil;->mResolver:Landroid/content/ContentResolver;
 
-    .line 59
+    .line 69
     return-void
 .end method
 
@@ -146,38 +146,38 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 190
+    .line 205
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v4, "reference_number ="
 
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 191
+    .line 206
     .local v2, where:Ljava/lang/StringBuilder;
     invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 192
+    .line 207
     const-string v4, " AND address = ?"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 193
+    .line 208
     const-string v4, " AND count > ?"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 194
+    .line 209
     const-string v4, " AND status = ?"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 195
+    .line 210
     const-string v4, " AND date = ?"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
+    .line 211
     const/4 v4, 0x4
 
     new-array v3, v4, [Ljava/lang/String;
@@ -206,7 +206,7 @@
 
     aput-object v5, v3, v4
 
-    .line 198
+    .line 213
     .local v3, whereArgs:[Ljava/lang/String;
     iget-object v4, p0, Lcom/android/internal/telephony/ConcatedUtil;->mResolver:Landroid/content/ContentResolver;
 
@@ -218,11 +218,11 @@
 
 
 
-    .line 200
+    .line 215
     .local v0, ncount:I
     const/4 v1, 0x0
 
-    .line 201
+    .line 216
     .local v1, subaddr:Ljava/lang/String;
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -232,7 +232,7 @@
 
     if-le v4, v5, :cond_0
 
-    .line 202
+    .line 217
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -243,11 +243,11 @@
 
     move-result-object v1
 
-    .line 207
+    .line 222
     :goto_0
     return v7
 
-    .line 204
+    .line 219
     :cond_0
     move-object v1, p2
 
@@ -262,10 +262,10 @@
     .parameter "rawStatus"
 
     .prologue
-    .line 64
+    .line 75
     const/4 v0, 0x0
 
-    .line 65
+    .line 76
     .local v0, subaddr:Ljava/lang/String;
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -275,7 +275,7 @@
 
     if-le v4, v5, :cond_0
 
-    .line 66
+    .line 77
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -286,7 +286,7 @@
 
     move-result-object v0
 
-    .line 77
+    .line 88
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -294,23 +294,23 @@
 
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 78
+    .line 89
     .local v2, where:Ljava/lang/StringBuilder;
     iget v4, p3, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->refNumber:I
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 79
+    .line 90
     const-string v4, " AND address = ?"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
+    .line 91
     const-string v4, " AND count = ?"
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 81
+    .line 92
     const/4 v4, 0x2
 
     new-array v3, v4, [Ljava/lang/String;
@@ -329,13 +329,13 @@
 
     aput-object v5, v3, v4
 
-    .line 84
+    .line 95
     .local v3, whereArgs:[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 85
+    .line 96
     .local v1, values:Landroid/content/ContentValues;
     const-string v4, "date"
 
@@ -345,12 +345,12 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 86
+    .line 97
     const-string v4, "address"
 
     invoke-virtual {v1, v4, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
+    .line 98
     const-string v4, "reference_number"
 
     iget v5, p3, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->refNumber:I
@@ -361,7 +361,7 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 88
+    .line 99
     const-string v4, "count"
 
     iget v5, p3, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->msgCount:I
@@ -372,7 +372,7 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 89
+    .line 100
     const-string v4, "sequence"
 
     iget v5, p3, Lcom/android/internal/telephony/SmsHeader$ConcatRef;->seqNumber:I
@@ -383,7 +383,7 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 91
+    .line 102
     const-string v4, "status"
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -421,38 +421,38 @@
     .parameter "queryStatus2"
 
     .prologue
-    .line 165
+    .line 179
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v0, "reference_number ="
 
     invoke-direct {v8, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 166
+    .line 180
     .local v8, where:Ljava/lang/StringBuilder;
     invoke-virtual {v8, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 167
+    .line 181
     const-string v0, " AND address = ?"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 168
+    .line 182
     const-string v0, " AND count > ?"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 169
+    .line 183
     const-string v0, " AND date = ?"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 170
+    .line 184
     const-string v0, " AND (status = ? OR status = ?)"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 172
+    .line 186
     const/4 v0, 0x5
 
     new-array v4, v0, [Ljava/lang/String;
@@ -491,15 +491,15 @@
 
     aput-object v1, v4, v0
 
-    .line 176
+    .line 190
     .local v4, whereArgs:[Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 177
+    .line 191
     .local v6, cursor:Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 178
+    .line 192
     .local v7, ncount:I
     iget-object v0, p0, Lcom/android/internal/telephony/ConcatedUtil;->mResolver:Landroid/content/ContentResolver;
 
@@ -515,18 +515,18 @@
 
     return v7
 
-    .line 180
+    .line 194
     if-eqz v6, :cond_0
 
-    .line 181
+    .line 195
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v7
 
-    .line 182
+    .line 196
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 185
+    .line 199
     :cond_0
     return v7
 .end method
@@ -541,38 +541,38 @@
     .parameter "queryStatus"
 
     .prologue
-    .line 136
+    .line 149
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v0, "reference_number ="
 
     invoke-direct {v8, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 137
+    .line 150
     .local v8, where:Ljava/lang/StringBuilder;
     invoke-virtual {v8, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 138
+    .line 151
     const-string v0, " AND address = ?"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 139
+    .line 152
     const-string v0, " AND count > ?"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
+    .line 153
     const-string v0, " AND date = ?"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
+    .line 154
     const-string v0, " AND status = ?"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 142
+    .line 155
     const/4 v0, 0x4
 
     new-array v4, v0, [Ljava/lang/String;
@@ -603,15 +603,15 @@
 
     aput-object v1, v4, v0
 
-    .line 146
+    .line 159
     .local v4, whereArgs:[Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 147
+    .line 160
     .local v6, cursor:Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 148
+    .line 161
     .local v7, ncount:I
     iget-object v0, p0, Lcom/android/internal/telephony/ConcatedUtil;->mResolver:Landroid/content/ContentResolver;
 
@@ -627,18 +627,18 @@
 
     return v7
 
-    .line 150
+    .line 163
     if-eqz v6, :cond_0
 
-    .line 151
+    .line 164
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v7
 
-    .line 152
+    .line 165
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 155
+    .line 168
     :cond_0
     return v7
 .end method
@@ -647,21 +647,21 @@
     .locals 5
 
     .prologue
-    .line 212
+    .line 228
     const-string v1, "Concate"
 
     const-string v2, "resettable"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
+    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "count > 0"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 216
+    .line 232
     .local v0, where:Ljava/lang/StringBuilder;
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/ConcatedUtil;->mResolver:Landroid/content/ContentResolver;
@@ -678,19 +678,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 223
+    .line 239
     :goto_0
     const/4 v1, 0x1
 
     return v1
 
-    .line 219
+    .line 235
     :catchall_0
     move-exception v1
 
     throw v1
 
-    .line 217
+    .line 233
     :catch_0
     move-exception v1
 
@@ -709,10 +709,10 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 101
+    .line 113
     const/4 v1, 0x0
 
-    .line 102
+    .line 114
     .local v1, subaddr:Ljava/lang/String;
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -722,7 +722,7 @@
 
     if-le v5, v6, :cond_1
 
-    .line 103
+    .line 115
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -733,7 +733,7 @@
 
     move-result-object v1
 
-    .line 111
+    .line 123
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -741,31 +741,31 @@
 
     invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 112
+    .line 124
     .local v3, where:Ljava/lang/StringBuilder;
     invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 113
+    .line 125
     const-string v5, " AND count = ?"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 114
+    .line 126
     const-string v5, " AND sequence = ?"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 115
+    .line 127
     const-string v5, " AND address = ?"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 116
+    .line 128
     const-string v5, " AND date = ?"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 117
+    .line 129
     const/4 v5, 0x4
 
     new-array v4, v5, [Ljava/lang/String;
@@ -796,13 +796,13 @@
 
     aput-object v6, v4, v5
 
-    .line 119
+    .line 131
     .local v4, whereArgs:[Ljava/lang/String;
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 121
+    .line 133
     .local v2, values:Landroid/content/ContentValues;
     const-string v5, "status"
 
@@ -812,7 +812,7 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 123
+    .line 135
     iget-object v5, p0, Lcom/android/internal/telephony/ConcatedUtil;->mResolver:Landroid/content/ContentResolver;
 
     iget-object v6, p0, Lcom/android/internal/telephony/ConcatedUtil;->mRawUri:Landroid/net/Uri;
@@ -823,25 +823,25 @@
 
     const/4 v0, 0x0
 
-    .line 125
+    .line 137
     .local v0, ncount:I
     if-ge v0, v8, :cond_2
 
-    .line 126
+    .line 138
     const-string v5, "Concate"
 
     const-string v6, "Can not match Raw SMS in Raw table!"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
+    .line 142
     :cond_0
     :goto_1
     const/4 v5, -0x1
 
     return v5
 
-    .line 105
+    .line 117
     .end local v0           #ncount:I
     .end local v2           #values:Landroid/content/ContentValues;
     .end local v3           #where:Ljava/lang/StringBuilder;
@@ -851,7 +851,7 @@
 
     goto :goto_0
 
-    .line 127
+    .line 139
     .restart local v0       #ncount:I
     .restart local v2       #values:Landroid/content/ContentValues;
     .restart local v3       #where:Ljava/lang/StringBuilder;
@@ -859,7 +859,7 @@
     :cond_2
     if-le v0, v8, :cond_0
 
-    .line 128
+    .line 140
     const-string v5, "Concate"
 
     const-string v6, "Match duplicate Raw SMS in Raw table!"

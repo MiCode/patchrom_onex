@@ -22,7 +22,8 @@
 
 .field public static final CW_RTB:Ljava/lang/String; = "cw"
 
-.field public static final DEFAULT_NETWORK_PREFERENCE:I = 0x1
+#the value of this static final field might be set in the static constructor
+.field public static final DEFAULT_NETWORK_PREFERENCE:I = 0x0
 
 .field public static final EXTRA_ACTIVE_TETHER:Ljava/lang/String; = "activeArray"
 
@@ -201,6 +202,11 @@
     sget v0, Landroid/net/ConnectivityManager;->MAX_RADIO_TYPE:I
 
     sput v0, Lcom/htc/wrap/android/net/HtcWrapConnectivityManager;->MAX_RADIO_TYPE:I
+
+    .line 149
+    sget v0, Landroid/net/ConnectivityManager;->DEFAULT_NETWORK_PREFERENCE:I
+
+    sput v0, Lcom/htc/wrap/android/net/HtcWrapConnectivityManager;->DEFAULT_NETWORK_PREFERENCE:I
 
     return-void
 .end method

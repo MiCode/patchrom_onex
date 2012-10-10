@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 529
+    .line 534
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,12 +34,12 @@
     .locals 1
 
     .prologue
-    .line 542
+    .line 547
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/htc/app/HtcShutdownThread;->access$302(Z)Z
 
-    .line 544
+    .line 549
     return-void
 .end method
 
@@ -47,7 +47,7 @@
     .locals 2
 
     .prologue
-    .line 531
+    .line 536
     :goto_0
     invoke-static {}, Lcom/htc/app/HtcShutdownThread;->access$200()Z
 
@@ -57,7 +57,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 533
+    .line 538
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -69,13 +69,13 @@
 
     goto :goto_0
 
-    .line 535
+    .line 540
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 538
+    .line 543
     :cond_0
     return-void
 .end method

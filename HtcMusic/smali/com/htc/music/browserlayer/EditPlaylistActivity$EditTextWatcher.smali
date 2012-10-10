@@ -27,12 +27,12 @@
     .parameter
 
     .prologue
-    .line 1345
+    .line 1433
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$EditTextWatcher;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1346
+    .line 1434
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .parameter "s"
 
     .prologue
-    .line 1366
+    .line 1454
     return-void
 .end method
 
@@ -55,7 +55,7 @@
     .parameter "after"
 
     .prologue
-    .line 1349
+    .line 1437
     return-void
 .end method
 
@@ -71,12 +71,12 @@
 
     const/4 v5, 0x0
 
-    .line 1352
+    .line 1440
     if-nez p1, :cond_4
 
     const/4 v3, 0x0
 
-    .line 1353
+    .line 1441
     .local v3, name:Ljava/lang/String;
     :goto_0
     if-eqz v3, :cond_0
@@ -92,7 +92,7 @@
     :cond_0
     move v1, v6
 
-    .line 1354
+    .line 1442
     .local v1, empty:Z
     :goto_1
     iget-object v7, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$EditTextWatcher;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
@@ -105,25 +105,25 @@
 
     check-cast v0, Lcom/htc/widget/HtcFooterButton;
 
-    .line 1355
+    .line 1443
     .local v0, Save:Lcom/htc/widget/HtcFooterButton;
     iget-object v7, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$EditTextWatcher;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     #calls: Lcom/htc/music/browserlayer/EditPlaylistActivity;->getPlaylistId(Ljava/lang/String;)I
-    invoke-static {v7, v3}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$900(Lcom/htc/music/browserlayer/EditPlaylistActivity;Ljava/lang/String;)I
+    invoke-static {v7, v3}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$1000(Lcom/htc/music/browserlayer/EditPlaylistActivity;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 1356
+    .line 1444
     .local v2, id:I
     const/4 v4, 0x0
 
-    .line 1357
+    .line 1445
     .local v4, theSameName:Z
     iget-object v7, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$EditTextWatcher;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
-    invoke-static {v7}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$1000(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$1100(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -132,7 +132,7 @@
     iget-object v7, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$EditTextWatcher;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
-    invoke-static {v7}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$1000(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$1100(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -146,10 +146,10 @@
 
     if-ne v7, v2, :cond_1
 
-    .line 1359
+    .line 1447
     const/4 v4, 0x1
 
-    .line 1362
+    .line 1450
     :cond_1
     if-nez v1, :cond_2
 
@@ -162,10 +162,10 @@
     :goto_2
     invoke-virtual {v0, v6}, Lcom/htc/widget/HtcFooterButton;->setEnabled(Z)V
 
-    .line 1363
+    .line 1451
     return-void
 
-    .line 1352
+    .line 1440
     .end local v0           #Save:Lcom/htc/widget/HtcFooterButton;
     .end local v1           #empty:Z
     .end local v2           #id:I
@@ -186,7 +186,7 @@
     :cond_5
     move v1, v5
 
-    .line 1353
+    .line 1441
     goto :goto_1
 
     .restart local v0       #Save:Lcom/htc/widget/HtcFooterButton;
@@ -196,6 +196,6 @@
     :cond_6
     move v6, v5
 
-    .line 1362
+    .line 1450
     goto :goto_2
 .end method

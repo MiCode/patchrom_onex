@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 501
+    .line 511
     .local p0, this:Landroid/nfc/NfcAdapter$CallNfcMethod;,"Landroid/nfc/NfcAdapter$CallNfcMethod<TResult;>;"
     iput-object p1, p0, Landroid/nfc/NfcAdapter$CallNfcMethod;->this$0:Landroid/nfc/NfcAdapter;
 
@@ -48,7 +48,7 @@
     .parameter "x1"
 
     .prologue
-    .line 501
+    .line 511
     .local p0, this:Landroid/nfc/NfcAdapter$CallNfcMethod;,"Landroid/nfc/NfcAdapter$CallNfcMethod<TResult;>;"
     invoke-direct {p0, p1}, Landroid/nfc/NfcAdapter$CallNfcMethod;-><init>(Landroid/nfc/NfcAdapter;)V
 
@@ -67,7 +67,7 @@
     .end annotation
 
     .prologue
-    .line 505
+    .line 515
     .local p0, this:Landroid/nfc/NfcAdapter$CallNfcMethod;,"Landroid/nfc/NfcAdapter$CallNfcMethod<TResult;>;"
     .local p1, defVal:Ljava/lang/Object;,"TResult;"
     const/4 v1, 0x1
@@ -78,7 +78,7 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 507
+    .line 517
     :try_start_0
     invoke-virtual {p0}, Landroid/nfc/NfcAdapter$CallNfcMethod;->callMethod()Ljava/lang/Object;
     :try_end_0
@@ -86,23 +86,23 @@
 
     move-result-object p1
 
-    .line 514
+    .line 524
     .end local p1           #defVal:Ljava/lang/Object;,"TResult;"
     :goto_1
     return-object p1
 
-    .line 508
+    .line 518
     .restart local p1       #defVal:Ljava/lang/Object;,"TResult;"
     :catch_0
     move-exception v0
 
-    .line 509
+    .line 519
     .local v0, e:Landroid/os/RemoteException;
     iget-object v2, p0, Landroid/nfc/NfcAdapter$CallNfcMethod;->this$0:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v2, v0}, Landroid/nfc/NfcAdapter;->attemptDeadServiceRecovery(Ljava/lang/Exception;)V
 
-    .line 510
+    .line 520
     const-string v2, "NFC"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -125,12 +125,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
+    .line 515
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 513
+    .line 523
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const-string v2, "NFC"

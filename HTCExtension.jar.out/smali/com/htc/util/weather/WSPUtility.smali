@@ -144,10 +144,10 @@
     .parameter "req"
 
     .prologue
-    .line 327
+    .line 332
     const/4 v0, 0x0
 
-    .line 329
+    .line 334
     .local v0, added:Z
     invoke-virtual {p1}, Lcom/htc/util/weather/WSPRequest;->getType()I
 
@@ -165,13 +165,13 @@
 
     move-result-object v4
 
-    .line 331
+    .line 336
     .local v4, where:Ljava/lang/String;
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 332
+    .line 337
     .local v3, values:Landroid/content/ContentValues;
     sget-object v5, Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;->lastRequest:Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;
 
@@ -189,14 +189,14 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 334
+    .line 339
     invoke-static {p0, v4}, Lcom/htc/util/weather/WSPUtility;->_hasRequested(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 336
+    .line 341
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -209,24 +209,24 @@
 
     move-result v1
 
-    .line 337
+    .line 342
     .local v1, updated:I
     if-lez v1, :cond_0
 
-    .line 338
+    .line 343
     const/4 v0, 0x1
 
-    .line 353
+    .line 358
     .end local v1           #updated:I
     :cond_0
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 358
+    .line 363
     :goto_1
     return-void
 
-    .line 343
+    .line 348
     :cond_1
     sget-object v5, Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;->type:Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;
 
@@ -244,7 +244,7 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 344
+    .line 349
     sget-object v5, Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;->param1:Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;
 
     invoke-virtual {v5}, Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;->name()Ljava/lang/String;
@@ -257,7 +257,7 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 345
+    .line 350
     sget-object v5, Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;->param2:Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;
 
     invoke-virtual {v5}, Lcom/htc/util/weather/WSPUtility$TABLE_DATA_COLUMNS;->name()Ljava/lang/String;
@@ -270,7 +270,7 @@
 
     invoke-virtual {v3, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
+    .line 352
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -281,16 +281,16 @@
 
     move-result-object v2
 
-    .line 348
+    .line 353
     .local v2, uri:Landroid/net/Uri;
     if-eqz v2, :cond_0
 
-    .line 349
+    .line 354
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 356
+    .line 361
     .end local v2           #uri:Landroid/net/Uri;
     :cond_2
     const-string v5, "WSP"
@@ -329,10 +329,10 @@
     .parameter "sysCurLoc"
 
     .prologue
-    .line 361
+    .line 366
     const/4 v13, 0x0
 
-    .line 364
+    .line 369
     .local v13, cacheData:Lcom/htc/util/weather/WSPData;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -384,11 +384,11 @@
 
     move-result-object v3
 
-    .line 367
+    .line 372
     .local v3, where:Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 370
+    .line 375
     .local v14, cursor:Landroid/database/Cursor;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -409,16 +409,14 @@
 
     move-result-object v14
 
-    .line 377
+    .line 382
     if-eqz v14, :cond_0
 
     invoke-interface {v14}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
+    if-lez v0, :cond_0
 
     invoke-interface {v14}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -426,7 +424,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 378
+    .line 383
     new-instance v13, Lcom/htc/util/weather/WSPData;
 
     .end local v13           #cacheData:Lcom/htc/util/weather/WSPData;
@@ -434,15 +432,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 381
+    .line 386
     .restart local v13       #cacheData:Lcom/htc/util/weather/WSPData;
     :cond_0
     if-eqz v14, :cond_1
 
-    .line 382
+    .line 387
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 386
+    .line 391
     :cond_1
     const/4 v0, 0x1
 
@@ -452,7 +450,7 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 389
+    .line 394
     invoke-virtual/range {p2 .. p2}, Lcom/htc/util/weather/WeatherLocation;->getLatitude()Ljava/lang/String;
 
     move-result-object v0
@@ -461,7 +459,7 @@
 
     move-result-object v7
 
-    .line 390
+    .line 395
     .local v7, curLocLatTrim:Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Lcom/htc/util/weather/WeatherLocation;->getLongitude()Ljava/lang/String;
 
@@ -471,11 +469,11 @@
 
     move-result-object v8
 
-    .line 393
+    .line 398
     .local v8, curLocLngTrim:Ljava/lang/String;
     if-eqz v13, :cond_2
 
-    .line 429
+    .line 434
     :cond_2
     invoke-virtual/range {p2 .. p2}, Lcom/htc/util/weather/WeatherLocation;->getLatitude()Ljava/lang/String;
 
@@ -505,20 +503,20 @@
 
     invoke-virtual/range {v4 .. v13}, Lcom/htc/util/weather/WSPRequest;->setReqCurLoc(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/htc/util/weather/WSPData;)V
 
-    .line 435
+    .line 440
     .end local v7           #curLocLatTrim:Ljava/lang/String;
     .end local v8           #curLocLngTrim:Ljava/lang/String;
     :cond_3
     return-object v13
 
-    .line 381
+    .line 386
     .end local v13           #cacheData:Lcom/htc/util/weather/WSPData;
     :catchall_0
     move-exception v0
 
     if-eqz v14, :cond_4
 
-    .line 382
+    .line 387
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
     :cond_4
@@ -526,13 +524,11 @@
 .end method
 
 .method private static _getCurCacheData(Landroid/content/Context;Lcom/htc/util/weather/WSPRequest;)Lcom/htc/util/weather/WSPData;
-    .locals 9
+    .locals 8
     .parameter "context"
     .parameter "req"
 
     .prologue
-    const/4 v8, 0x1
-
     const/4 v6, 0x0
 
     .line 190
@@ -540,7 +536,9 @@
 
     move-result v0
 
-    if-eq v0, v8, :cond_1
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
 
     .line 217
     :cond_0
@@ -601,7 +599,7 @@
 
     move-result v0
 
-    if-ne v0, v8, :cond_2
+    if-lez v0, :cond_2
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -650,7 +648,7 @@
 
     const/4 v6, 0x1
 
-    .line 828
+    .line 833
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
@@ -661,7 +659,7 @@
 
     move-result-object v1
 
-    .line 829
+    .line 834
     .local v1, curLoc:[Lcom/htc/util/weather/WeatherLocation;
     if-eqz v1, :cond_0
 
@@ -672,18 +670,18 @@
     :cond_0
     move-object v0, v2
 
-    .line 846
+    .line 851
     :cond_1
     :goto_0
     return-object v0
 
-    .line 832
+    .line 837
     :cond_2
     array-length v3, v1
 
     if-le v3, v6, :cond_3
 
-    .line 833
+    .line 838
     const-string v3, "WSP"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -708,13 +706,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 836
+    .line 841
     :cond_3
     const/4 v3, 0x0
 
     aget-object v0, v1, v3
 
-    .line 837
+    .line 842
     .local v0, cl:Lcom/htc/util/weather/WeatherLocation;
     if-eqz v0, :cond_4
 
@@ -753,10 +751,10 @@
     :cond_4
     move-object v0, v2
 
-    .line 838
+    .line 843
     goto :goto_0
 
-    .line 841
+    .line 846
     :cond_5
     invoke-virtual {v0}, Lcom/htc/util/weather/WeatherLocation;->getName()Ljava/lang/String;
 
@@ -768,7 +766,7 @@
 
     invoke-virtual {v0, v2}, Lcom/htc/util/weather/WeatherLocation;->setName(Ljava/lang/String;)V
 
-    .line 842
+    .line 847
     :cond_6
     invoke-virtual {v0}, Lcom/htc/util/weather/WeatherLocation;->getState()Ljava/lang/String;
 
@@ -780,7 +778,7 @@
 
     invoke-virtual {v0, v2}, Lcom/htc/util/weather/WeatherLocation;->setState(Ljava/lang/String;)V
 
-    .line 843
+    .line 848
     :cond_7
     invoke-virtual {v0}, Lcom/htc/util/weather/WeatherLocation;->getCountry()Ljava/lang/String;
 
@@ -792,7 +790,7 @@
 
     invoke-virtual {v0, v2}, Lcom/htc/util/weather/WeatherLocation;->setCountry(Ljava/lang/String;)V
 
-    .line 844
+    .line 849
     :cond_8
     invoke-virtual {v0}, Lcom/htc/util/weather/WeatherLocation;->getTimezoneId()Ljava/lang/String;
 
@@ -813,14 +811,14 @@
     .parameter "where"
 
     .prologue
-    .line 470
+    .line 475
     const/4 v7, 0x0
 
-    .line 472
+    .line 477
     .local v7, ret:Z
     const/4 v6, 0x0
 
-    .line 475
+    .line 480
     .local v6, cursor:Landroid/database/Cursor;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -853,7 +851,7 @@
 
     move-result-object v6
 
-    .line 477
+    .line 482
     if-eqz v6, :cond_0
 
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -864,27 +862,27 @@
 
     if-lez v0, :cond_0
 
-    .line 478
+    .line 483
     const/4 v7, 0x1
 
-    .line 482
+    .line 487
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 483
+    .line 488
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 487
+    .line 492
     :cond_1
     return v7
 
-    .line 482
+    .line 487
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_2
 
-    .line 483
+    .line 488
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -896,7 +894,7 @@
     .parameter "context"
 
     .prologue
-    .line 920
+    .line 925
     const-string v1, "connectivity"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -905,7 +903,7 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 921
+    .line 926
     .local v0, cm:Landroid/net/ConnectivityManager;
     if-eqz v0, :cond_0
 
@@ -915,12 +913,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 922
+    .line 927
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->isSyncAutomatically(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 925
+    .line 930
     :goto_0
     return v1
 
@@ -936,27 +934,27 @@
     .parameter "data"
 
     .prologue
-    .line 850
+    .line 855
     if-nez p1, :cond_0
 
-    .line 851
+    .line 856
     const-string v2, "WSP"
 
     const-string v3, "[WSPUtility] can not broadcast data intent because of a null data object"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 861
+    .line 866
     :goto_0
     return-void
 
-    .line 855
+    .line 860
     :cond_0
     invoke-virtual {p1}, Lcom/htc/util/weather/WSPData;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 856
+    .line 861
     .local v0, categoryName:Ljava/lang/String;
     new-instance v1, Landroid/content/Intent;
 
@@ -964,17 +962,19 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 857
+    .line 862
     .local v1, intent:Landroid/content/Intent;
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 858
+    .line 863
     const-string v2, "data"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 859
-    invoke-virtual {p0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    .line 864
+    const-string v2, "htc.permission.weather.USE_DATA"
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -985,7 +985,7 @@
     .parameter "req"
 
     .prologue
-    .line 463
+    .line 468
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1018,7 +1018,7 @@
 
     move-result-object v1
 
-    .line 464
+    .line 469
     .local v1, where:Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1032,7 +1032,7 @@
 
     move-result v0
 
-    .line 467
+    .line 472
     .local v0, ret:I
     return-void
 .end method
@@ -1042,7 +1042,7 @@
     .parameter "context"
 
     .prologue
-    .line 865
+    .line 870
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1055,28 +1055,28 @@
 
     invoke-static {v1, v2, v3}, Lcom/htc/util/weather/WeatherUtility;->saveLocations(Landroid/content/ContentResolver;Ljava/lang/String;[Lcom/htc/util/weather/WeatherLocation;)V
 
-    .line 866
+    .line 871
     invoke-static {}, Lcom/htc/util/weather/WSPUtility;->generateWSPReqestForCurrentLocation()Lcom/htc/util/weather/WSPRequest;
 
     move-result-object v1
 
     invoke-static {p0, v1}, Lcom/htc/util/weather/WSPUtility;->cleanCurInCache(Landroid/content/Context;Lcom/htc/util/weather/WSPRequest;)V
 
-    .line 868
+    .line 873
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->turnOnWSPCurrentLocationFlag(Landroid/content/Context;)V
 
-    .line 869
+    .line 874
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.htclocationservice.currentlocation.updated"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 870
+    .line 875
     .local v0, notifyIntent:Landroid/content/Intent;
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 871
+    .line 876
     return-void
 .end method
 
@@ -1280,7 +1280,7 @@
     .parameter "param2"
 
     .prologue
-    .line 812
+    .line 817
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1309,13 +1309,13 @@
 
     move-result-object v0
 
-    .line 814
+    .line 819
     .local v0, where:Ljava/lang/String;
     const/4 v1, 0x3
 
     if-ne p0, v1, :cond_1
 
-    .line 815
+    .line 820
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1392,18 +1392,18 @@
 
     move-result-object v0
 
-    .line 820
+    .line 825
     :cond_0
     :goto_0
     return-object v0
 
-    .line 817
+    .line 822
     :cond_1
     const/4 v1, 0x2
 
     if-ne p0, v1, :cond_0
 
-    .line 818
+    .line 823
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1454,7 +1454,7 @@
     .parameter "context"
 
     .prologue
-    .line 616
+    .line 621
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1472,21 +1472,21 @@
 
     move-result-wide v1
 
-    .line 622
+    .line 627
     .local v1, ret:J
     :goto_0
     return-wide v1
 
-    .line 617
+    .line 622
     .end local v1           #ret:J
     :catch_0
     move-exception v0
 
-    .line 618
+    .line 623
     .local v0, e:Ljava/lang/NumberFormatException;
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->setDefaultAutoSyncFrequency(Landroid/content/Context;)V
 
-    .line 619
+    .line 624
     const-wide/32 v1, 0x36ee80
 
     .restart local v1       #ret:J
@@ -1498,7 +1498,7 @@
     .parameter "context"
 
     .prologue
-    .line 626
+    .line 631
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1509,7 +1509,7 @@
 
     move-result-object v0
 
-    .line 628
+    .line 633
     .local v0, unit:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -1519,14 +1519,14 @@
 
     if-nez v1, :cond_1
 
-    .line 629
+    .line 634
     :cond_0
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->setDefaultTemperatureUnit(Landroid/content/Context;)V
 
-    .line 630
+    .line 635
     const-string v0, "c"
 
-    .line 633
+    .line 638
     :cond_1
     return-object v0
 .end method
@@ -1538,7 +1538,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 655
+    .line 660
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1551,7 +1551,7 @@
 
     if-nez v1, :cond_0
 
-    .line 656
+    .line 661
     .local v0, flag:Z
     :goto_0
     const-string v1, "WSP"
@@ -1576,10 +1576,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
+    .line 662
     return v0
 
-    .line 655
+    .line 660
     .end local v0           #flag:Z
     :cond_0
     const/4 v0, 0x1
@@ -1592,7 +1592,7 @@
     .parameter "context"
 
     .prologue
-    .line 761
+    .line 766
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1603,7 +1603,7 @@
 
     move-result-object v0
 
-    .line 762
+    .line 767
     .local v0, address:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1611,17 +1611,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 763
+    .line 768
     const-string v1, "WSP"
 
     const-string v2, "[WSPUtility] get WCR FindCityName: empty, using default address"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 764
+    .line 769
     const-string v0, "http://htc2.accu-weather.com/widget/htc2/city-find.asp"
 
-    .line 766
+    .line 771
     :cond_0
     const-string v1, "WSP"
 
@@ -1645,7 +1645,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 767
+    .line 772
     return-object v0
 .end method
 
@@ -1654,7 +1654,7 @@
     .parameter "context"
 
     .prologue
-    .line 789
+    .line 794
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1665,7 +1665,7 @@
 
     move-result-object v0
 
-    .line 790
+    .line 795
     .local v0, address:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1673,17 +1673,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 791
+    .line 796
     const-string v1, "WSP"
 
     const-string v2, "[WSPUtility] get WCR GetBookmark: empty, using default address"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 792
+    .line 797
     const-string v0, "http://www.accuweather.com/?p=htcfav"
 
-    .line 794
+    .line 799
     :cond_0
     const-string v1, "WSP"
 
@@ -1707,7 +1707,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
+    .line 800
     return-object v0
 .end method
 
@@ -1716,7 +1716,7 @@
     .parameter "context"
 
     .prologue
-    .line 747
+    .line 752
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1727,7 +1727,7 @@
 
     move-result-object v0
 
-    .line 748
+    .line 753
     .local v0, address:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1735,17 +1735,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 749
+    .line 754
     const-string v1, "WSP"
 
     const-string v2, "[WSPUtility] get WCR GetMoreDetails: empty, using default address"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 750
+    .line 755
     const-string v0, "http://www.accuweather.com/m/details1.aspx"
 
-    .line 752
+    .line 757
     :cond_0
     const-string v1, "WSP"
 
@@ -1769,7 +1769,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 753
+    .line 758
     return-object v0
 .end method
 
@@ -1778,7 +1778,7 @@
     .parameter "context"
 
     .prologue
-    .line 775
+    .line 780
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1789,7 +1789,7 @@
 
     move-result-object v0
 
-    .line 776
+    .line 781
     .local v0, address:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1797,17 +1797,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 777
+    .line 782
     const-string v1, "WSP"
 
     const-string v2, "[WSPUtility] get WCR GetWTByGeo: empty, using default address"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
+    .line 783
     const-string v0, "http://htc2.accu-weather.com/widget/htc2/weather-data.asp"
 
-    .line 780
+    .line 785
     :cond_0
     const-string v1, "WSP"
 
@@ -1831,7 +1831,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
+    .line 786
     return-object v0
 .end method
 
@@ -1840,7 +1840,7 @@
     .parameter "context"
 
     .prologue
-    .line 719
+    .line 724
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1851,7 +1851,7 @@
 
     move-result-object v0
 
-    .line 720
+    .line 725
     .local v0, address:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1859,17 +1859,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 721
+    .line 726
     const-string v1, "WSP"
 
     const-string v2, "[WSPUtility] get WCR GetWeatherByCity: empty, using default address"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 722
+    .line 727
     const-string v0, "http://htc.accuweather.com/widget/htc/forecast-data_v3.asp"
 
-    .line 724
+    .line 729
     :cond_0
     const-string v1, "WSP"
 
@@ -1893,7 +1893,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 725
+    .line 730
     return-object v0
 .end method
 
@@ -1902,7 +1902,7 @@
     .parameter "context"
 
     .prologue
-    .line 733
+    .line 738
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1913,7 +1913,7 @@
 
     move-result-object v0
 
-    .line 734
+    .line 739
     .local v0, address:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1921,17 +1921,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 735
+    .line 740
     const-string v1, "WSP"
 
     const-string v2, "[WSPUtility] get WCR GetWeatherByGeo: empty, using default address"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 736
+    .line 741
     const-string v0, "http://htc.accuweather.com/widget/htc/lat-lon-search.asp"
 
-    .line 738
+    .line 743
     :cond_0
     const-string v1, "WSP"
 
@@ -1955,7 +1955,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 739
+    .line 744
     return-object v0
 .end method
 
@@ -1964,10 +1964,10 @@
     .parameter "context"
 
     .prologue
-    .line 588
+    .line 593
     const/4 v0, 0x0
 
-    .line 590
+    .line 595
     .local v0, acc:Landroid/accounts/Account;
     invoke-static {p0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
@@ -1979,7 +1979,7 @@
 
     move-result-object v1
 
-    .line 591
+    .line 596
     .local v1, accs:[Landroid/accounts/Account;
     if-eqz v1, :cond_0
 
@@ -1989,12 +1989,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 592
+    .line 597
     const/4 v2, 0x0
 
     aget-object v0, v1, v2
 
-    .line 595
+    .line 600
     :cond_0
     return-object v0
 .end method
@@ -2007,17 +2007,17 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 439
+    .line 444
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 459
+    .line 464
     :cond_0
     :goto_0
     return v2
 
-    .line 442
+    .line 447
     :cond_1
     invoke-virtual {p0}, Lcom/htc/util/weather/WSPData;->getCurLocName()Ljava/lang/String;
 
@@ -2079,7 +2079,7 @@
 
     if-lez v3, :cond_4
 
-    .line 445
+    .line 450
     :cond_2
     invoke-virtual {p1}, Lcom/htc/util/weather/WeatherLocation;->getName()Ljava/lang/String;
 
@@ -2123,13 +2123,13 @@
 
     if-eqz v3, :cond_0
 
-    .line 459
+    .line 464
     :cond_3
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 451
+    .line 456
     :cond_4
     invoke-virtual {p1}, Lcom/htc/util/weather/WeatherLocation;->getLatitude()Ljava/lang/String;
 
@@ -2139,7 +2139,7 @@
 
     move-result-object v0
 
-    .line 452
+    .line 457
     .local v0, curLocLatTrim:Ljava/lang/String;
     invoke-virtual {p1}, Lcom/htc/util/weather/WeatherLocation;->getLongitude()Ljava/lang/String;
 
@@ -2149,7 +2149,7 @@
 
     move-result-object v1
 
-    .line 454
+    .line 459
     .local v1, curLocLngTrim:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/htc/util/weather/WSPData;->getCurLocLatTrim()Ljava/lang/String;
 
@@ -2179,35 +2179,35 @@
     .parameter "context"
 
     .prologue
-    .line 575
+    .line 580
     invoke-static {}, Landroid/content/ContentResolver;->getMasterSyncAutomatically()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 577
+    .line 582
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->getWeatherSyncAccount(Landroid/content/Context;)Landroid/accounts/Account;
 
     move-result-object v0
 
-    .line 578
+    .line 583
     .local v0, acc:Landroid/accounts/Account;
     if-eqz v0, :cond_0
 
-    .line 579
+    .line 584
     const-string v1, "com.htc.sync.provider.weather"
 
     invoke-static {v0, v1}, Landroid/content/ContentResolver;->getSyncAutomatically(Landroid/accounts/Account;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 584
+    .line 589
     .end local v0           #acc:Landroid/accounts/Account;
     :goto_0
     return v1
 
-    .line 581
+    .line 586
     .restart local v0       #acc:Landroid/accounts/Account;
     :cond_0
     const-string v1, "WSP"
@@ -2216,7 +2216,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
+    .line 589
     .end local v0           #acc:Landroid/accounts/Account;
     :cond_1
     const/4 v1, 0x0
@@ -2229,7 +2229,7 @@
     .parameter "context"
 
     .prologue
-    .line 637
+    .line 642
     const-string v0, "c"
 
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->getTemperatureUnit(Landroid/content/Context;)Ljava/lang/String;
@@ -2248,7 +2248,7 @@
     .parameter "context"
 
     .prologue
-    .line 907
+    .line 912
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2261,14 +2261,14 @@
 
     move-result-object v0
 
-    .line 908
+    .line 913
     .local v0, flag:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 909
+    .line 914
     const-string v0, "off"
 
-    .line 911
+    .line 916
     :cond_0
     const-string v1, "on"
 
@@ -2339,7 +2339,7 @@
     .line 237
     const/16 v17, 0x0
 
-    .line 319
+    .line 324
     :cond_2
     :goto_1
     return-object v17
@@ -2462,25 +2462,18 @@
     .line 270
     invoke-static/range {p0 .. p0}, Lcom/htc/util/weather/WSPUtility;->turnOffWSPCurrentLocationFlag(Landroid/content/Context;)V
 
-    .line 271
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v17
-
-    invoke-static {v0, v1}, Lcom/htc/util/weather/WSPUtility;->broadcastDataIntent(Landroid/content/Context;Lcom/htc/util/weather/WSPData;)V
-
-    .line 287
+    .line 290
     :cond_7
     if-nez v14, :cond_8
 
     if-nez v20, :cond_8
 
-    .line 289
+    .line 292
     new-instance v3, Lcom/htc/util/weather/WSPData;
 
     invoke-direct {v3}, Lcom/htc/util/weather/WSPData;-><init>()V
 
-    .line 291
+    .line 294
     .local v3, d:Lcom/htc/util/weather/WSPData;
     invoke-virtual/range {v26 .. v26}, Lcom/htc/util/weather/WeatherLocation;->getLatitude()Ljava/lang/String;
 
@@ -2490,7 +2483,7 @@
 
     move-result-object v6
 
-    .line 292
+    .line 295
     .local v6, curLocLatTrim:Ljava/lang/String;
     invoke-virtual/range {v26 .. v26}, Lcom/htc/util/weather/WeatherLocation;->getLongitude()Ljava/lang/String;
 
@@ -2500,7 +2493,7 @@
 
     move-result-object v7
 
-    .line 294
+    .line 297
     .local v7, curLocLngTrim:Ljava/lang/String;
     invoke-virtual/range {v26 .. v26}, Lcom/htc/util/weather/WeatherLocation;->getLatitude()Ljava/lang/String;
 
@@ -2528,7 +2521,7 @@
 
     invoke-virtual/range {v3 .. v11}, Lcom/htc/util/weather/WSPData;->setTypeCurrentLocation(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 298
+    .line 301
     invoke-virtual/range {p1 .. p1}, Lcom/htc/util/weather/WSPRequest;->getType()I
 
     move-result v4
@@ -2545,7 +2538,7 @@
 
     move-result-object v28
 
-    .line 299
+    .line 302
     .local v28, where:Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2565,17 +2558,11 @@
 
     move-result v25
 
-    .line 300
+    .line 303
     .local v25, ret:I
-    if-lez v25, :cond_d
+    if-lez v25, :cond_8
 
-    .line 307
-    :goto_5
-    move-object/from16 v0, p0
-
-    invoke-static {v0, v3}, Lcom/htc/util/weather/WSPUtility;->broadcastDataIntent(Landroid/content/Context;Lcom/htc/util/weather/WSPData;)V
-
-    .line 311
+    .line 316
     .end local v3           #d:Lcom/htc/util/weather/WSPData;
     .end local v6           #curLocLatTrim:Ljava/lang/String;
     .end local v7           #curLocLngTrim:Ljava/lang/String;
@@ -2583,21 +2570,21 @@
     .end local v25           #ret:I
     .end local v28           #where:Ljava/lang/String;
     :cond_8
-    if-eqz v24, :cond_e
+    if-eqz v24, :cond_d
 
     if-eqz v20, :cond_9
 
-    if-eqz v21, :cond_e
+    if-eqz v21, :cond_d
 
     :cond_9
     const/16 v27, 0x1
 
-    .line 315
+    .line 320
     .local v27, triggerSyncService:Z
-    :goto_6
+    :goto_5
     if-eqz v27, :cond_2
 
-    .line 316
+    .line 321
     const/4 v4, 0x0
 
     const/4 v5, 0x1
@@ -2646,52 +2633,12 @@
 
     goto/16 :goto_4
 
-    .line 303
-    .restart local v3       #d:Lcom/htc/util/weather/WSPData;
-    .restart local v6       #curLocLatTrim:Ljava/lang/String;
-    .restart local v7       #curLocLngTrim:Ljava/lang/String;
-    .restart local v25       #ret:I
-    .restart local v28       #where:Ljava/lang/String;
-    :cond_d
-    const-string v4, "WSP"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "[WSPUtility] (auto-sync is disabled and no cur in cache) save new cur loc data to cache failed, "
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Lcom/htc/util/weather/WSPData;->toDebugInfo()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_5
-
-    .line 311
-    .end local v3           #d:Lcom/htc/util/weather/WSPData;
-    .end local v6           #curLocLatTrim:Ljava/lang/String;
-    .end local v7           #curLocLngTrim:Ljava/lang/String;
+    .line 316
     .end local v22           #isCurChanged:Z
-    .end local v25           #ret:I
-    .end local v28           #where:Ljava/lang/String;
-    :cond_e
+    :cond_d
     const/16 v27, 0x0
 
-    goto :goto_6
+    goto :goto_5
 .end method
 
 .method public static setDefaultAutoSyncFrequency(Landroid/content/Context;)V
@@ -2699,14 +2646,14 @@
     .parameter "context"
 
     .prologue
-    .line 603
+    .line 608
     const-string v0, "WSP"
 
     const-string v1, "[WSPUtility] no customization data - auto sync frequency, set default value"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
+    .line 609
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -2717,7 +2664,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 605
+    .line 610
     return-void
 .end method
 
@@ -2726,14 +2673,14 @@
     .parameter "context"
 
     .prologue
-    .line 608
+    .line 613
     const-string v0, "WSP"
 
     const-string v1, "[WSPUtility] no customization data - temperature unit, set default value"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 609
+    .line 614
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -2744,7 +2691,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 610
+    .line 615
     return-void
 .end method
 
@@ -2754,42 +2701,42 @@
     .parameter "isSyncAutomatically"
 
     .prologue
-    .line 559
+    .line 564
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->getWeatherSyncAccount(Landroid/content/Context;)Landroid/accounts/Account;
 
     move-result-object v0
 
-    .line 561
+    .line 566
     .local v0, acc:Landroid/accounts/Account;
     if-eqz v0, :cond_0
 
-    .line 562
+    .line 567
     const-string v2, "com.htc.sync.provider.weather"
 
     invoke-static {v0, v2, p1}, Landroid/content/ContentResolver;->setSyncAutomatically(Landroid/accounts/Account;Ljava/lang/String;Z)V
 
-    .line 565
+    .line 570
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.htc.util.weather.WSPUtility"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 566
+    .line 571
     .local v1, intent:Landroid/content/Intent;
     const-string v2, "com.htc.util.weather.WSPUtility.setSyncAutomatically"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 567
+    .line 572
     invoke-virtual {p0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 571
+    .line 576
     .end local v1           #intent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 569
+    .line 574
     :cond_0
     const-string v2, "WSP"
 
@@ -2808,7 +2755,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 646
+    .line 651
     const-string v1, "WSP"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2831,7 +2778,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 647
+    .line 652
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2859,7 +2806,7 @@
     .parameter "address"
 
     .prologue
-    .line 692
+    .line 697
     const-string v0, "WSP"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2882,7 +2829,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 693
+    .line 698
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -2902,7 +2849,7 @@
     .parameter "address"
 
     .prologue
-    .line 710
+    .line 715
     const-string v0, "WSP"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2925,7 +2872,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 711
+    .line 716
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -2945,7 +2892,7 @@
     .parameter "address"
 
     .prologue
-    .line 683
+    .line 688
     const-string v0, "WSP"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2968,7 +2915,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
+    .line 689
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -2988,7 +2935,7 @@
     .parameter "address"
 
     .prologue
-    .line 701
+    .line 706
     const-string v0, "WSP"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3011,7 +2958,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 702
+    .line 707
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -3031,7 +2978,7 @@
     .parameter "address"
 
     .prologue
-    .line 665
+    .line 670
     const-string v0, "WSP"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3054,7 +3001,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 666
+    .line 671
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -3074,7 +3021,7 @@
     .parameter "address"
 
     .prologue
-    .line 674
+    .line 679
     const-string v0, "WSP"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3097,7 +3044,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 675
+    .line 680
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -3120,7 +3067,7 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 495
+    .line 500
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -3129,7 +3076,7 @@
 
     if-ge v4, v6, :cond_0
 
-    .line 496
+    .line 501
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "length of category name must > 1"
@@ -3138,20 +3085,20 @@
 
     throw v4
 
-    .line 499
+    .line 504
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 502
+    .line 507
     .local v0, checkedRequests:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/weather/WSPRequest;>;"
     if-eqz p2, :cond_3
 
-    .line 503
+    .line 508
     array-length v3, p2
 
-    .line 504
+    .line 509
     .local v3, totalRequests:I
     const/4 v2, 0x0
 
@@ -3159,7 +3106,7 @@
     :goto_0
     if-ge v2, v3, :cond_3
 
-    .line 505
+    .line 510
     aget-object v4, p2, v2
 
     invoke-virtual {v4}, Lcom/htc/util/weather/WSPRequest;->getType()I
@@ -3168,37 +3115,37 @@
 
     if-ne v4, v6, :cond_2
 
-    .line 506
+    .line 511
     invoke-static {p0}, Lcom/htc/util/weather/WSPUtility;->generateWSPRequestForCurrentLocationWithCurCacheData(Landroid/content/Context;)Lcom/htc/util/weather/WSPRequest;
 
     move-result-object v1
 
-    .line 507
+    .line 512
     .local v1, curReq:Lcom/htc/util/weather/WSPRequest;
     if-nez v1, :cond_1
 
-    .line 508
+    .line 513
     const-string v4, "WSP"
 
     const-string v5, "[WSPUtility] Force update cur loc, but there is no cur loc in db. Maybe the cur loc in db was deleted because of a new cur loc."
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 504
+    .line 509
     .end local v1           #curReq:Lcom/htc/util/weather/WSPRequest;
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 511
+    .line 516
     .restart local v1       #curReq:Lcom/htc/util/weather/WSPRequest;
     :cond_1
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 513
+    .line 518
     .end local v1           #curReq:Lcom/htc/util/weather/WSPRequest;
     :cond_2
     aget-object v4, p2, v2
@@ -3207,7 +3154,7 @@
 
     goto :goto_1
 
-    .line 520
+    .line 525
     .end local v2           #i:I
     .end local v3           #totalRequests:I
     :cond_3
@@ -3225,7 +3172,7 @@
 
     invoke-static {p0, p1, v4, v5}, Lcom/htc/util/weather/WSPUtility;->triggerSyncService(Landroid/content/Context;Ljava/lang/String;[Lcom/htc/util/weather/WSPRequest;I)V
 
-    .line 522
+    .line 527
     return-void
 .end method
 
@@ -3239,7 +3186,7 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 526
+    .line 531
     if-ne v4, p3, :cond_2
 
     if-eqz p2, :cond_0
@@ -3250,28 +3197,28 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 551
+    .line 556
     :cond_0
     :goto_0
     if-ne v4, p3, :cond_1
 
-    .line 552
+    .line 557
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.htc.app.autosetting.location"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 553
+    .line 558
     .local v0, htcLocationServiceIntent:Landroid/content/Intent;
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 555
+    .line 560
     .end local v0           #htcLocationServiceIntent:Landroid/content/Intent;
     :cond_1
     return-void
 
-    .line 529
+    .line 534
     :cond_2
     new-instance v1, Landroid/content/Intent;
 
@@ -3279,31 +3226,31 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 531
+    .line 536
     .local v1, intent:Landroid/content/Intent;
     if-eqz p1, :cond_3
 
-    .line 532
+    .line 537
     const-string v2, "categoryName"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 535
+    .line 540
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 536
+    .line 541
     const-string v2, "requests"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 539
+    .line 544
     :cond_4
     const-string v2, "source"
 
     invoke-virtual {v1, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 541
+    .line 546
     invoke-virtual {p0, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0
@@ -3320,14 +3267,14 @@
 
     const/4 v3, 0x1
 
-    .line 801
+    .line 806
     const-string v1, "[.]"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 802
+    .line 807
     .local v0, tmp:[Ljava/lang/String;
     array-length v1, v0
 
@@ -3335,12 +3282,12 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 808
+    .line 813
     .end local p0
     :goto_0
     return-object p0
 
-    .line 805
+    .line 810
     .restart local p0
     :cond_0
     aget-object v1, v0, v3
@@ -3351,7 +3298,7 @@
 
     if-le v1, v5, :cond_1
 
-    .line 806
+    .line 811
     aget-object v1, v0, v3
 
     invoke-virtual {v1, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -3360,7 +3307,7 @@
 
     aput-object v1, v0, v3
 
-    .line 808
+    .line 813
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3396,7 +3343,7 @@
     .parameter "context"
 
     .prologue
-    .line 903
+    .line 908
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -3409,7 +3356,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/htc/util/weather/WeatherUtility;->insertOrUpdateSetting(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 904
+    .line 909
     return-void
 .end method
 
@@ -3418,7 +3365,7 @@
     .parameter "context"
 
     .prologue
-    .line 899
+    .line 904
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -3431,6 +3378,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/htc/util/weather/WeatherUtility;->insertOrUpdateSetting(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 900
+    .line 905
     return-void
 .end method

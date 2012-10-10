@@ -125,6 +125,9 @@
 .method public abstract addStartingWindow(Landroid/os/IBinder;Ljava/lang/String;ILandroid/content/res/CompatibilityInfo;Ljava/lang/CharSequence;III)Landroid/view/View;
 .end method
 
+.method public abstract addStartingWindow(Landroid/os/IBinder;Ljava/lang/String;ILandroid/content/res/CompatibilityInfo;Ljava/lang/CharSequence;IIILandroid/graphics/Bitmap;)Landroid/view/View;
+.end method
+
 .method public abstract adjustConfigurationLw(Landroid/content/res/Configuration;)V
 .end method
 
@@ -200,9 +203,6 @@
 .method public abstract focusChangedLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManagerPolicy$WindowState;)I
 .end method
 
-.method public abstract forcePasswordTimeout()V
-.end method
-
 .method public abstract getConfigDisplayHeight(III)I
 .end method
 
@@ -276,6 +276,9 @@
 .end method
 
 .method public abstract layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
+.end method
+
+.method public abstract lockNow()V
 .end method
 
 .method public abstract notifyLidSwitchChanged(JZ)V

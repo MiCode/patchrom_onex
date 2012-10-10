@@ -84,7 +84,7 @@
 
     aput-object v4, v2, v3
 
-    const-string/jumbo v3, "key=?"
+    const-string v3, "key=?"
 
     const/4 v4, 0x1
 
@@ -180,7 +180,7 @@
 
     .line 557
     .local v0, values:Landroid/content/ContentValues;
-    const-string/jumbo v1, "key"
+    const-string v1, "key"
 
     const-string/jumbo v2, "sync_enabled"
 

@@ -364,7 +364,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800f6
+    const v1, 0x7f0800f8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -377,7 +377,7 @@
     .line 248
     iget-object v0, p0, Lcom/android/camera/component/SmileCaptureUI;->m_ToastContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    const v1, 0x7f0800f7
+    const v1, 0x7f0800f9
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -390,7 +390,7 @@
     .line 249
     iget-object v0, p0, Lcom/android/camera/component/SmileCaptureUI;->m_Toast:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0800f9
+    const v1, 0x7f0800fb
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -640,9 +640,9 @@
     .parameter "rotation"
 
     .prologue
-    const v9, 0x7f0b0058
+    const v9, 0x7f0b0059
 
-    const v8, 0x7f0b0057
+    const v8, 0x7f0b0058
 
     const/16 v7, 0xc
 
@@ -714,7 +714,7 @@
     iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     .line 332
-    const v3, 0x7f0b005a
+    const v3, 0x7f0b005b
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -758,7 +758,7 @@
     if-nez v0, :cond_6
 
     .line 363
-    const v3, 0x7f0b005c
+    const v3, 0x7f0b005d
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -773,7 +773,7 @@
     :goto_4
     iget-object v3, p0, Lcom/android/camera/component/SmileCaptureUI;->m_ToastTextView:Landroid/widget/TextView;
 
-    const v4, 0x7f0b0188
+    const v4, 0x7f0b018b
 
     invoke-virtual {p0, v4}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -781,7 +781,7 @@
 
     sub-int v4, v2, v4
 
-    const v5, 0x7f0b005f
+    const v5, 0x7f0b0060
 
     invoke-virtual {p0, v5}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -825,7 +825,7 @@
     iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     .line 337
-    const v3, 0x7f0b005a
+    const v3, 0x7f0b005b
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -853,7 +853,7 @@
     iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     .line 345
-    const v3, 0x7f0b005b
+    const v3, 0x7f0b005c
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -872,7 +872,7 @@
     iput v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     .line 350
-    const v3, 0x7f0b005b
+    const v3, 0x7f0b005c
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -884,7 +884,7 @@
 
     .line 365
     :cond_6
-    const v3, 0x7f0b005d
+    const v3, 0x7f0b005e
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -896,7 +896,7 @@
     .line 369
     .end local v2           #maxWidth:I
     :pswitch_1
-    const v3, 0x7f0b005e
+    const v3, 0x7f0b005f
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -914,7 +914,7 @@
     if-nez v0, :cond_7
 
     .line 374
-    const v3, 0x7f0b005c
+    const v3, 0x7f0b005d
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -930,7 +930,7 @@
     .line 376
     .end local v2           #maxWidth:I
     :cond_7
-    const v3, 0x7f0b005d
+    const v3, 0x7f0b005e
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 
@@ -942,7 +942,7 @@
     .line 380
     .end local v2           #maxWidth:I
     :pswitch_3
-    const v3, 0x7f0b005e
+    const v3, 0x7f0b005f
 
     invoke-virtual {p0, v3}, Lcom/android/camera/component/SmileCaptureUI;->getDimension(I)I
 

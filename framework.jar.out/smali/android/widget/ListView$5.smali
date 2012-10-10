@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4710
+    .line 4712
     iput-object p1, p0, Landroid/widget/ListView$5;->this$0:Landroid/widget/ListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,21 +39,21 @@
     .parameter "animation"
 
     .prologue
-    .line 4717
+    .line 4719
     iget-object v0, p0, Landroid/widget/ListView$5;->this$0:Landroid/widget/ListView;
 
     iget-object v0, v0, Landroid/widget/ListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 4718
+    .line 4720
     iget-object v0, p0, Landroid/widget/ListView$5;->this$0:Landroid/widget/ListView;
 
     iget-object v0, v0, Landroid/widget/ListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 4719
+    .line 4721
     :cond_0
     return-void
 .end method
@@ -63,21 +63,21 @@
     .parameter "animation"
 
     .prologue
-    .line 4712
+    .line 4714
     iget-object v0, p0, Landroid/widget/ListView$5;->this$0:Landroid/widget/ListView;
 
     iget-object v0, v0, Landroid/widget/ListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 4713
+    .line 4715
     iget-object v0, p0, Landroid/widget/ListView$5;->this$0:Landroid/widget/ListView;
 
     iget-object v0, v0, Landroid/widget/ListView;->mReleaseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 4714
+    .line 4716
     :cond_0
     return-void
 .end method

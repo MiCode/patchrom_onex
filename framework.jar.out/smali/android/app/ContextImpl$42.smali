@@ -32,7 +32,7 @@
 
     .prologue
     .line 580
-    const-string/jumbo v1, "htctelephony"
+    const-string v1, "htctelephony"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 

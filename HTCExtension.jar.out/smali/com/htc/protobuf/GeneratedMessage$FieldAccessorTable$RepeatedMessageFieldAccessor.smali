@@ -42,12 +42,12 @@
     .end annotation
 
     .prologue
-    .line 1639
+    .line 1638
     .local p3, messageClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/htc/protobuf/GeneratedMessage;>;"
     .local p4, builderClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/htc/protobuf/GeneratedMessage$Builder;>;"
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;-><init>(Lcom/htc/protobuf/Descriptors$FieldDescriptor;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 1641
+    .line 1640
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->type:Ljava/lang/Class;
 
     const-string v1, "newBuilder"
@@ -63,7 +63,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
-    .line 1642
+    .line 1641
     return-void
 .end method
 
@@ -72,7 +72,7 @@
     .parameter "value"
 
     .prologue
-    .line 1647
+    .line 1646
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->type:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -81,7 +81,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1654
+    .line 1653
     .end local p1
     :goto_0
     return-object p1
@@ -125,14 +125,14 @@
     .parameter "value"
 
     .prologue
-    .line 1674
+    .line 1673
     invoke-direct {p0, p2}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->coerceType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     invoke-super {p0, p1, v0}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->addRepeated(Lcom/htc/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
 
-    .line 1675
+    .line 1674
     return-void
 .end method
 
@@ -140,7 +140,7 @@
     .locals 3
 
     .prologue
-    .line 1678
+    .line 1677
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -166,13 +166,13 @@
     .parameter "value"
 
     .prologue
-    .line 1666
+    .line 1665
     invoke-direct {p0, p3}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->coerceType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     invoke-super {p0, p1, p2, v0}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->setRepeated(Lcom/htc/protobuf/GeneratedMessage$Builder;ILjava/lang/Object;)V
 
-    .line 1667
+    .line 1666
     return-void
 .end method

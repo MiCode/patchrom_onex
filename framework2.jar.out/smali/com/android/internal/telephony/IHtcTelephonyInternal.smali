@@ -231,6 +231,14 @@
     .end annotation
 .end method
 
+.method public abstract gsmAuthentication([B)Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract hello_getDeviceId()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {

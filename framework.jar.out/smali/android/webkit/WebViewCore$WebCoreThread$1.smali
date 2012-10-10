@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 720
+    .line 751
     iput-object p1, p0, Landroid/webkit/WebViewCore$WebCoreThread$1;->this$0:Landroid/webkit/WebViewCore$WebCoreThread;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,126 +39,156 @@
     .parameter "msg"
 
     .prologue
-    const/16 v6, 0xe1
+    const/4 v6, 0x2
 
-    const/16 v2, 0x24
+    const/4 v5, 0x1
 
-    const/4 v5, 0x2
+    const/4 v4, 0x0
 
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    .line 723
+    .line 754
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 779
+    .line 806
     :goto_0
     return-void
 
-    .line 725
+    .line 756
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/webkit/WebViewCore;
 
-    .line 726
+    .line 757
     .local v0, core:Landroid/webkit/WebViewCore;
     #calls: Landroid/webkit/WebViewCore;->initialize()V
     invoke-static {v0}, Landroid/webkit/WebViewCore;->access$500(Landroid/webkit/WebViewCore;)V
 
     goto :goto_0
 
-    .line 731
+    .line 762
     .end local v0           #core:Landroid/webkit/WebViewCore;
     :sswitch_1
-    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    invoke-static {}, Landroid/webkit/WebViewCore;->access$600()Z
 
-    if-eq v1, v2, :cond_0
+    move-result v1
 
-    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    if-eqz v1, :cond_0
 
-    if-ne v1, v6, :cond_1
-
-    .line 734
-    :cond_0
+    .line 763
     const-string v1, "WebCore"
 
-    const-string v2, "Increasing values:: CPU Set options.. "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 735
-    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
+    const-string v3, "Increasing values:: CPU Set options.. "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Landroid/webkit/WebViewCore;->access$600()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 764
+    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$700()Lorg/codeaurora/Performance;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4, v3}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
+    invoke-virtual {v1, v5, v4}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 736
-    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
+    .line 765
+    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$700()Lorg/codeaurora/Performance;
 
     move-result-object v1
 
     const/16 v2, 0xa
 
-    invoke-virtual {v1, v5, v2}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
+    invoke-virtual {v1, v6, v2}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 738
-    :cond_1
+    .line 767
+    :cond_0
     const/4 v1, 0x3
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
     goto :goto_0
 
-    .line 744
+    .line 773
     :sswitch_2
-    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    invoke-static {}, Landroid/webkit/WebViewCore;->access$600()Z
 
-    if-eq v1, v2, :cond_2
+    move-result v1
 
-    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    if-eqz v1, :cond_1
 
-    if-ne v1, v6, :cond_3
-
-    .line 747
-    :cond_2
+    .line 774
     const-string v1, "WebCore"
 
-    const-string v2, "Resetting values:: CPU Set options.. "
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 748
-    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
+    const-string v3, "Increasing values:: CPU Set options.. flag is "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Landroid/webkit/WebViewCore;->access$600()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 775
+    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$700()Lorg/codeaurora/Performance;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4, v4}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
+    invoke-virtual {v1, v5, v5}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 749
-    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
+    .line 776
+    invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$700()Lorg/codeaurora/Performance;
 
     move-result-object v1
 
-    invoke-virtual {v1, v5, v3}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
+    invoke-virtual {v1, v6, v4}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 751
-    :cond_3
-    invoke-static {v3}, Landroid/os/Process;->setThreadPriority(I)V
+    .line 778
+    :cond_1
+    invoke-static {v4}, Landroid/os/Process;->setThreadPriority(I)V
 
     goto :goto_0
 
-    .line 756
+    .line 783
     :sswitch_3
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_2
 
-    .line 757
+    .line 784
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "No WebView has been created in this process!"
@@ -167,8 +197,8 @@
 
     throw v1
 
-    .line 760
-    :cond_4
+    .line 787
+    :cond_2
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -177,15 +207,15 @@
 
     invoke-virtual {v2, v1}, Landroid/webkit/JWebCoreJavaBridge;->addPackageName(Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 764
+    .line 791
     :sswitch_4
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_3
 
-    .line 765
+    .line 792
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "No WebView has been created in this process!"
@@ -194,8 +224,8 @@
 
     throw v1
 
-    .line 768
-    :cond_5
+    .line 795
+    :cond_3
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -204,15 +234,15 @@
 
     invoke-virtual {v2, v1}, Landroid/webkit/JWebCoreJavaBridge;->removePackageName(Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 772
+    .line 799
     :sswitch_5
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_4
 
-    .line 773
+    .line 800
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "No WebView has been created in this process!"
@@ -221,8 +251,8 @@
 
     throw v1
 
-    .line 776
-    :cond_6
+    .line 803
+    :cond_4
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -233,7 +263,7 @@
 
     goto/16 :goto_0
 
-    .line 723
+    .line 754
     nop
 
     :sswitch_data_0

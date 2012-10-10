@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 6210
+    .line 6243
     iput-object p1, p0, Lcom/htc/music/HtcMusic$39;->this$0:Lcom/htc/music/HtcMusic;
 
     iput p2, p0, Lcom/htc/music/HtcMusic$39;->val$nPosition:I
@@ -46,13 +46,13 @@
     .locals 2
 
     .prologue
-    .line 6212
+    .line 6245
     iget-object v0, p0, Lcom/htc/music/HtcMusic$39;->this$0:Lcom/htc/music/HtcMusic;
 
     iget v1, p0, Lcom/htc/music/HtcMusic$39;->val$nPosition:I
 
     invoke-virtual {v0, v1}, Lcom/htc/music/HtcMusic;->onSelectionChangeUI(I)V
 
-    .line 6213
+    .line 6246
     return-void
 .end method

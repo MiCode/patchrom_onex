@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 5867
+    .line 5876
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$UIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +39,17 @@
     .parameter "msg"
 
     .prologue
-    .line 5871
+    .line 5880
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 5884
+    .line 5893
     :cond_0
     :goto_0
     return-void
 
-    .line 5873
+    .line 5882
     :pswitch_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$UIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -57,16 +57,16 @@
 
     move-result-object v0
 
-    .line 5874
+    .line 5883
     .local v0, listview:Lcom/htc/widget/HtcListView;
     if-eqz v0, :cond_0
 
-    .line 5875
+    .line 5884
     invoke-virtual {v0}, Lcom/htc/widget/HtcListView;->invalidateViews()V
 
     goto :goto_0
 
-    .line 5879
+    .line 5888
     .end local v0           #listview:Lcom/htc/widget/HtcListView;
     :pswitch_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$UIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -78,7 +78,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5880
+    .line 5889
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$UIHandler;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mRingToneHelper:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackBrowserRingtoneHelper;
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 5871
+    .line 5880
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

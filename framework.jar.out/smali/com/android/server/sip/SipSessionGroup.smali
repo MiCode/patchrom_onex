@@ -2423,7 +2423,7 @@
 
     .line 162
     .local v3, properties:Ljava/util/Properties;
-    const-string/jumbo v7, "javax.sip.STACK_NAME"
+    const-string v7, "javax.sip.STACK_NAME"
 
     invoke-direct {p0}, Lcom/android/server/sip/SipSessionGroup;->getStackName()Ljava/lang/String;
 
@@ -2475,7 +2475,7 @@
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 168
-    const-string/jumbo v7, "javax.sip.OUTBOUND_PROXY"
+    const-string v7, "javax.sip.OUTBOUND_PROXY"
 
     new-instance v8, Ljava/lang/StringBuilder;
 

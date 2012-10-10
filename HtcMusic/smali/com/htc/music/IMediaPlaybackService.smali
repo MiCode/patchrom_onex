@@ -39,7 +39,23 @@
     .end annotation
 .end method
 
+.method public abstract addToQueueByDbTable(III)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract addToQueueForMultiConditions(III)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract addToQueueForMultiConditionsByDbTable(IIII)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -408,6 +424,14 @@
 .end method
 
 .method public abstract getRepeatMode()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getShortcutInfoList()[Landroid/content/ContentValues;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

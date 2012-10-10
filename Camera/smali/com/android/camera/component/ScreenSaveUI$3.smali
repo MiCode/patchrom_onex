@@ -37,9 +37,16 @@
 
 # virtual methods
 .method protected onEnter()V
-    .locals 0
+    .locals 2
 
     .prologue
     .line 95
+    iget-object v0, p0, Lcom/android/camera/component/ScreenSaveUI$3;->this$0:Lcom/android/camera/component/ScreenSaveUI;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/component/ScreenSaveUI;->removeMessages(I)V
+
+    .line 96
     return-void
 .end method

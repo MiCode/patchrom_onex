@@ -166,7 +166,7 @@
     const/4 v2, 0x0
 
     .line 1724
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 70
     iput-object v2, p0, Landroid/media/videoeditor/MediaArtistNativeHelper;->mClipProperties:Landroid/media/videoeditor/MediaArtistNativeHelper$PreviewClipProperties;
@@ -1546,7 +1546,7 @@
     .line 3929
     const-string v0, "MediaArtistNativeHelper"
 
-    const-string/jumbo v1, "lock: grabbing semaphore"
+    const-string v1, "lock: grabbing semaphore"
 
     new-instance v2, Ljava/lang/Throwable;
 
@@ -1572,7 +1572,7 @@
     .line 3933
     const-string v0, "MediaArtistNativeHelper"
 
-    const-string/jumbo v1, "lock: grabbed semaphore"
+    const-string v1, "lock: grabbed semaphore"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

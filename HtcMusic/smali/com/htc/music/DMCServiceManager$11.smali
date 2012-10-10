@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2953
+    .line 2965
     iput-object p1, p0, Lcom/htc/music/DMCServiceManager$11;->this$0:Lcom/htc/music/DMCServiceManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +43,13 @@
     .parameter "event"
 
     .prologue
-    .line 2955
+    .line 2967
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager$11;->this$0:Lcom/htc/music/DMCServiceManager;
 
     #calls: Lcom/htc/music/DMCServiceManager;->resetVolUITimeout()V
     invoke-static {v0}, Lcom/htc/music/DMCServiceManager;->access$4000(Lcom/htc/music/DMCServiceManager;)V
 
-    .line 2956
+    .line 2968
     const/4 v0, 0x1
 
     return v0

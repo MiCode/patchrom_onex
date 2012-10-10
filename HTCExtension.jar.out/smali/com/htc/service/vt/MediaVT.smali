@@ -655,7 +655,7 @@
     .parameter "obj"
 
     .prologue
-    .line 1113
+    .line 1147
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0
@@ -665,29 +665,29 @@
 
     check-cast v1, Lcom/htc/service/vt/MediaVT;
 
-    .line 1114
+    .line 1148
     .local v1, mv:Lcom/htc/service/vt/MediaVT;
     if-nez v1, :cond_1
 
-    .line 1122
+    .line 1156
     :cond_0
     :goto_0
     return-void
 
-    .line 1118
+    .line 1152
     :cond_1
     iget-object v2, v1, Lcom/htc/service/vt/MediaVT;->mEventHandler:Lcom/htc/service/vt/MediaVT$EventHandler;
 
     if-eqz v2, :cond_0
 
-    .line 1119
+    .line 1153
     iget-object v2, v1, Lcom/htc/service/vt/MediaVT;->mEventHandler:Lcom/htc/service/vt/MediaVT$EventHandler;
 
     invoke-virtual {v2, p1, p2, p3, p4}, Lcom/htc/service/vt/MediaVT$EventHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1120
+    .line 1154
     .local v0, m:Landroid/os/Message;
     iget-object v2, v1, Lcom/htc/service/vt/MediaVT;->mEventHandler:Lcom/htc/service/vt/MediaVT$EventHandler;
 
@@ -704,7 +704,7 @@
     .parameter "obj"
 
     .prologue
-    .line 1143
+    .line 1177
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
@@ -713,18 +713,18 @@
 
     if-nez v1, :cond_1
 
-    .line 1152
+    .line 1186
     :cond_0
     :goto_0
     return-void
 
-    .line 1147
+    .line 1181
     :cond_1
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTServiceHandler:Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;
 
     if-nez v1, :cond_2
 
-    .line 1148
+    .line 1182
     new-instance v1, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;
 
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTServiceHandlerThread:Landroid/os/HandlerThread;
@@ -737,7 +737,7 @@
 
     iput-object v1, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTServiceHandler:Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;
 
-    .line 1150
+    .line 1184
     :cond_2
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTServiceHandler:Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;
 
@@ -745,7 +745,7 @@
 
     move-result-object v0
 
-    .line 1151
+    .line 1185
     .local v0, m:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTServiceHandler:Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;
 
@@ -1115,7 +1115,7 @@
     .parameter "callDirection"
 
     .prologue
-    .line 563
+    .line 597
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1138,16 +1138,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
+    .line 598
     iget-boolean v0, p0, Lcom/htc/service/vt/MediaVT;->mVTSerivceExist:Z
 
     if-nez v0, :cond_0
 
-    .line 576
+    .line 610
     :goto_0
     return-void
 
-    .line 567
+    .line 601
     :cond_0
     iget v0, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTState:I
 
@@ -1155,7 +1155,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 568
+    .line 602
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1186,7 +1186,7 @@
 
     goto :goto_0
 
-    .line 572
+    .line 606
     :cond_1
     const-string v0, "MediaVT_Java"
 
@@ -1194,17 +1194,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 573
+    .line 607
     invoke-direct {p0, p1}, Lcom/htc/service/vt/MediaVT;->native_connect(I)V
 
-    .line 574
+    .line 608
     const-string v0, "MediaVT_Java"
 
     const-string v1, "native_connect out"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
+    .line 609
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1235,34 +1235,34 @@
     .parameter "loopback"
 
     .prologue
-    .line 549
+    .line 583
     const-string v0, "MediaVT_Java"
 
     const-string v1, "connect"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 550
+    .line 584
     iget-boolean v0, p0, Lcom/htc/service/vt/MediaVT;->mVTSerivceExist:Z
 
     if-nez v0, :cond_0
 
-    .line 560
+    .line 594
     :goto_0
     return-void
 
-    .line 552
+    .line 586
     :cond_0
     iput-boolean p1, p0, Lcom/htc/service/vt/MediaVT;->mLoopback:Z
 
-    .line 554
+    .line 588
     iget v0, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTState:I
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_1
 
-    .line 555
+    .line 589
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1293,7 +1293,7 @@
 
     goto :goto_0
 
-    .line 559
+    .line 593
     :cond_1
     iget-boolean v0, p0, Lcom/htc/service/vt/MediaVT;->mLoopback:Z
 
@@ -1357,38 +1357,38 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 585
+    .line 619
     const-string v0, "MediaVT_Java"
 
     const-string v1, "disconnect in"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
+    .line 621
     iget-boolean v0, p0, Lcom/htc/service/vt/MediaVT;->mIsDisconnectCalled:Z
 
     if-nez v0, :cond_0
 
-    .line 588
+    .line 622
     const-string v0, "MediaVT_Java"
 
     const-string v1, "Phone APP is calling MediaVT.disconenct()."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 589
+    .line 623
     iput-boolean v2, p0, Lcom/htc/service/vt/MediaVT;->mIsDisconnectCalled:Z
 
-    .line 595
+    .line 629
     iget-boolean v0, p0, Lcom/htc/service/vt/MediaVT;->mVTSerivceExist:Z
 
     if-nez v0, :cond_1
 
-    .line 615
+    .line 649
     :goto_0
     return-void
 
-    .line 591
+    .line 625
     :cond_0
     const-string v0, "MediaVT_Java"
 
@@ -1398,34 +1398,34 @@
 
     goto :goto_0
 
-    .line 601
+    .line 635
     :cond_1
     iget-boolean v0, p0, Lcom/htc/service/vt/MediaVT;->mIsDeInitializeCalled:Z
 
     if-ne v0, v2, :cond_2
 
-    .line 602
+    .line 636
     const-string v0, "MediaVT_Java"
 
     const-string v1, "Aricent VT stack is already deinitialized, dont call native_disconnect(), return and send VT_DISCONNECT_COMPLETE."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 603
+    .line 637
     const-string v0, "MediaVT_Java"
 
     const-string v1, "inform AP VT_DISCONNECT_COMPLETE directly."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
+    .line 638
     iget-object v0, p0, Lcom/htc/service/vt/MediaVT;->mEventHandler:Lcom/htc/service/vt/MediaVT$EventHandler;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Lcom/htc/service/vt/MediaVT$EventHandler;->sendEmptyMessage(I)Z
 
-    .line 605
+    .line 639
     const-string v0, "MediaVT_Java"
 
     const-string v1, "disconnect out"
@@ -1434,7 +1434,7 @@
 
     goto :goto_0
 
-    .line 610
+    .line 644
     :cond_2
     const-string v0, "MediaVT_Java"
 
@@ -1442,17 +1442,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 611
+    .line 645
     invoke-direct {p0}, Lcom/htc/service/vt/MediaVT;->native_disconnect()V
 
-    .line 612
+    .line 646
     const-string v0, "MediaVT_Java"
 
     const-string v1, "native_disconnect out"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 614
+    .line 648
     const-string v0, "MediaVT_Java"
 
     const-string v1, "disconnect out"
@@ -1468,7 +1468,7 @@
     .parameter "audio"
 
     .prologue
-    .line 723
+    .line 757
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1501,7 +1501,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 725
+    .line 759
     iget v0, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTState:I
 
     if-eqz v0, :cond_0
@@ -1512,7 +1512,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 726
+    .line 760
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1541,14 +1541,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 727
+    .line 761
     const/4 v0, 0x0
 
-    .line 737
+    .line 771
     :goto_0
     return v0
 
-    .line 731
+    .line 765
     :cond_0
     iget-boolean v0, p0, Lcom/htc/service/vt/MediaVT;->mEnableVideo:Z
 
@@ -1558,21 +1558,21 @@
 
     if-eq v0, p2, :cond_2
 
-    .line 732
+    .line 766
     :cond_1
     iput-boolean p1, p0, Lcom/htc/service/vt/MediaVT;->mEnableVideo:Z
 
-    .line 733
+    .line 767
     iput-boolean p2, p0, Lcom/htc/service/vt/MediaVT;->mEnableAudio:Z
 
-    .line 735
+    .line 769
     invoke-direct {p0, p1, p2}, Lcom/htc/service/vt/MediaVT;->native_enableoutput(ZZ)I
 
     move-result v0
 
     goto :goto_0
 
-    .line 737
+    .line 771
     :cond_2
     const/4 v0, 0x1
 
@@ -1583,7 +1583,7 @@
     .locals 0
 
     .prologue
-    .line 822
+    .line 856
     invoke-direct {p0}, Lcom/htc/service/vt/MediaVT;->native_finalize()V
 
     return-void
@@ -1594,10 +1594,10 @@
     .parameter "what"
 
     .prologue
-    .line 917
+    .line 951
     sparse-switch p1, :sswitch_data_0
 
-    .line 961
+    .line 995
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1625,7 +1625,7 @@
     :goto_0
     return-object v0
 
-    .line 919
+    .line 953
     :sswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1653,7 +1653,7 @@
 
     goto :goto_0
 
-    .line 921
+    .line 955
     :sswitch_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1681,7 +1681,7 @@
 
     goto :goto_0
 
-    .line 923
+    .line 957
     :sswitch_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1709,7 +1709,7 @@
 
     goto :goto_0
 
-    .line 925
+    .line 959
     :sswitch_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1737,7 +1737,7 @@
 
     goto :goto_0
 
-    .line 927
+    .line 961
     :sswitch_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1765,7 +1765,7 @@
 
     goto/16 :goto_0
 
-    .line 929
+    .line 963
     :sswitch_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1793,7 +1793,7 @@
 
     goto/16 :goto_0
 
-    .line 931
+    .line 965
     :sswitch_6
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1821,7 +1821,7 @@
 
     goto/16 :goto_0
 
-    .line 933
+    .line 967
     :sswitch_7
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1849,7 +1849,7 @@
 
     goto/16 :goto_0
 
-    .line 935
+    .line 969
     :sswitch_8
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1877,7 +1877,7 @@
 
     goto/16 :goto_0
 
-    .line 937
+    .line 971
     :sswitch_9
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1905,7 +1905,7 @@
 
     goto/16 :goto_0
 
-    .line 939
+    .line 973
     :sswitch_a
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1933,7 +1933,7 @@
 
     goto/16 :goto_0
 
-    .line 941
+    .line 975
     :sswitch_b
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1961,7 +1961,7 @@
 
     goto/16 :goto_0
 
-    .line 943
+    .line 977
     :sswitch_c
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1989,7 +1989,7 @@
 
     goto/16 :goto_0
 
-    .line 945
+    .line 979
     :sswitch_d
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2017,7 +2017,7 @@
 
     goto/16 :goto_0
 
-    .line 947
+    .line 981
     :sswitch_e
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2045,7 +2045,7 @@
 
     goto/16 :goto_0
 
-    .line 949
+    .line 983
     :sswitch_f
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2073,7 +2073,7 @@
 
     goto/16 :goto_0
 
-    .line 951
+    .line 985
     :sswitch_10
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2101,7 +2101,7 @@
 
     goto/16 :goto_0
 
-    .line 953
+    .line 987
     :sswitch_11
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2129,7 +2129,7 @@
 
     goto/16 :goto_0
 
-    .line 955
+    .line 989
     :sswitch_12
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2157,7 +2157,7 @@
 
     goto/16 :goto_0
 
-    .line 957
+    .line 991
     :sswitch_13
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2185,7 +2185,7 @@
 
     goto/16 :goto_0
 
-    .line 959
+    .line 993
     :sswitch_14
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2213,7 +2213,7 @@
 
     goto/16 :goto_0
 
-    .line 917
+    .line 951
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -2550,28 +2550,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 782
+    .line 816
     const-string v0, "MediaVT_Java"
 
     const-string v1, "hide"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
+    .line 817
     const-string v0, "MediaVT_Java"
 
     const-string v1, "send VT_MEDIAVTSERVICE_HIDE"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 784
+    .line 818
     const/16 v0, 0x130
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
 
-    .line 785
+    .line 819
     return-void
 .end method
 
@@ -2581,28 +2581,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 794
+    .line 828
     const-string v0, "MediaVT_Java"
 
     const-string v1, "hideFarend"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
+    .line 829
     const-string v0, "MediaVT_Java"
 
     const-string v1, "send VT_MEDIAVTSERVICE_HIDE_FAREND"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 796
+    .line 830
     const/16 v0, 0x132
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
 
-    .line 797
+    .line 831
     return-void
 .end method
 
@@ -2759,28 +2759,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 788
+    .line 822
     const-string v0, "MediaVT_Java"
 
     const-string v1, "hideNearend"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
+    .line 823
     const-string v0, "MediaVT_Java"
 
     const-string v1, "send VT_MEDIAVTSERVICE_HIDE_NEAREND"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 790
+    .line 824
     const/16 v0, 0x131
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
 
-    .line 791
+    .line 825
     return-void
 .end method
 
@@ -2866,8 +2866,6 @@
     .parameter "eventListener"
 
     .prologue
-    const/4 v3, 0x1
-
     .line 265
     const-string v1, "MediaVT_Java"
 
@@ -2969,19 +2967,9 @@
 
     .line 285
     :cond_2
-    invoke-direct {p0, v3}, Lcom/htc/service/vt/MediaVT;->setMediaVTState(I)Z
+    const/4 v1, 0x1
 
-    .line 291
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lcom/htc/service/vt/MediaVT;->mCameraSurface:Landroid/view/Surface;
-
-    invoke-virtual {p0, v1, v2}, Lcom/htc/service/vt/MediaVT;->setSurface(ILandroid/view/Surface;)V
-
-    .line 292
-    iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mVideoSurface:Landroid/view/Surface;
-
-    invoke-virtual {p0, v3, v1}, Lcom/htc/service/vt/MediaVT;->setSurface(ILandroid/view/Surface;)V
+    invoke-direct {p0, v1}, Lcom/htc/service/vt/MediaVT;->setMediaVTState(I)Z
 
     .line 295
     const-string v1, "MediaVT_Java"
@@ -3071,14 +3059,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 662
+    .line 696
     iget v2, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTState:I
 
     const/4 v3, 0x3
 
     if-eq v2, v3, :cond_1
 
-    .line 663
+    .line 697
     const-string v2, "MediaVT_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3107,12 +3095,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 712
+    .line 746
     :cond_0
     :goto_0
     return v1
 
-    .line 667
+    .line 701
     :cond_1
     const/4 v2, 0x7
 
@@ -3131,15 +3119,15 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 670
+    .line 704
     :cond_3
     const/4 v0, 0x0
 
-    .line 671
+    .line 705
     .local v0, dtmfCode:I
     packed-switch p1, :pswitch_data_0
 
-    .line 709
+    .line 743
     :goto_1
     invoke-direct {p0, v0}, Lcom/htc/service/vt/MediaVT;->native_sendkey(I)I
 
@@ -3147,90 +3135,90 @@
 
     goto :goto_0
 
-    .line 673
+    .line 707
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 674
+    .line 708
     goto :goto_1
 
-    .line 676
+    .line 710
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 677
+    .line 711
     goto :goto_1
 
-    .line 679
+    .line 713
     :pswitch_2
     const/4 v0, 0x2
 
-    .line 680
+    .line 714
     goto :goto_1
 
-    .line 682
+    .line 716
     :pswitch_3
     const/4 v0, 0x3
 
-    .line 683
+    .line 717
     goto :goto_1
 
-    .line 685
+    .line 719
     :pswitch_4
     const/4 v0, 0x4
 
-    .line 686
+    .line 720
     goto :goto_1
 
-    .line 688
+    .line 722
     :pswitch_5
     const/4 v0, 0x5
 
-    .line 689
+    .line 723
     goto :goto_1
 
-    .line 691
+    .line 725
     :pswitch_6
     const/4 v0, 0x6
 
-    .line 692
+    .line 726
     goto :goto_1
 
-    .line 694
+    .line 728
     :pswitch_7
     const/4 v0, 0x7
 
-    .line 695
+    .line 729
     goto :goto_1
 
-    .line 697
+    .line 731
     :pswitch_8
     const/16 v0, 0x8
 
-    .line 698
+    .line 732
     goto :goto_1
 
-    .line 700
+    .line 734
     :pswitch_9
     const/16 v0, 0x9
 
-    .line 701
+    .line 735
     goto :goto_1
 
-    .line 703
+    .line 737
     :pswitch_a
     const/16 v0, 0xa
 
-    .line 704
+    .line 738
     goto :goto_1
 
-    .line 706
+    .line 740
     :pswitch_b
     const/16 v0, 0xb
 
     goto :goto_1
 
-    .line 671
+    .line 705
     nop
 
     :pswitch_data_0
@@ -3260,32 +3248,32 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 814
+    .line 848
     const-string v1, "MediaVT_Java"
 
     const-string v2, "setFarendVideoPos"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 815
+    .line 849
     const-string v1, "MediaVT_Java"
 
     const-string v2, "send VT_MEDIAVTSERVICE_SET_FAREND_POS"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 817
+    .line 851
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 818
+    .line 852
     .local v0, rect:Landroid/graphics/Rect;
     const/16 v1, 0x135
 
     invoke-direct {p0, v1, v3, v3, v0}, Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
 
-    .line 819
+    .line 853
     return-void
 .end method
 
@@ -3405,32 +3393,32 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 806
+    .line 840
     const-string v1, "MediaVT_Java"
 
     const-string v2, "setNearendVideoPos"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 807
+    .line 841
     const-string v1, "MediaVT_Java"
 
     const-string v2, "send VT_MEDIAVTSERVICE_SET_NEAREND_POS"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 809
+    .line 843
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 810
+    .line 844
     .local v0, rect:Landroid/graphics/Rect;
     const/16 v1, 0x134
 
     invoke-direct {p0, v1, v3, v3, v0}, Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
 
-    .line 811
+    .line 845
     return-void
 .end method
 
@@ -3439,14 +3427,14 @@
     .parameter "option"
 
     .prologue
-    .line 747
+    .line 781
     const-string v0, "MediaVT_Java"
 
     const-string v1, "setOption"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 749
+    .line 783
     const-string v0, "null"
 
     invoke-direct {p0, p1, v0}, Lcom/htc/service/vt/MediaVT;->native_setoption(ILjava/lang/String;)I
@@ -3462,7 +3450,7 @@
     .parameter "value"
 
     .prologue
-    .line 765
+    .line 799
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3495,7 +3483,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 767
+    .line 801
     iget v0, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTState:I
 
     if-eqz v0, :cond_0
@@ -3506,7 +3494,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 768
+    .line 802
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3535,10 +3523,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 769
+    .line 803
     const/4 v0, 0x0
 
-    .line 772
+    .line 806
     :goto_0
     return v0
 
@@ -3551,122 +3539,222 @@
 .end method
 
 .method public setSurface(ILandroid/view/Surface;)V
-    .locals 2
+    .locals 3
     .parameter "whichSurface"
     .parameter "newSurface"
 
     .prologue
-    .line 510
-    const-string v0, "MediaVT_Java"
-
-    const-string v1, "setSurfaces ()"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 511
-    if-nez p1, :cond_1
-
-    .line 512
-    if-nez p2, :cond_0
-
     .line 513
-    const-string v0, "MediaVT_Java"
+    const-string v1, "MediaVT_Java"
 
-    const-string v1, "AP want to set null camera surface, but surface cannot be null, so return."
+    const-string v2, "setSurfaces ()"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
+    .line 515
+    if-nez p1, :cond_2
+
+    .line 517
+    if-nez p2, :cond_1
+
+    .line 519
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "AP want to set null camera surface"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 520
+    iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mIMediaVTService:Lcom/htc/service/vt/IMediaVTService;
+
+    if-nez v1, :cond_0
+
+    .line 522
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "null camera surface, ignore it"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 572
     :goto_0
     return-void
 
-    .line 516
+    .line 526
     :cond_0
-    const-string v0, "MediaVT_Java"
+    const-string v1, "MediaVT_Java"
 
-    const-string v1, "AP want to set camera surface."
+    const-string v2, "null camera surface, use service nearend surface"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 517
-    iput-object p2, p0, Lcom/htc/service/vt/MediaVT;->mCameraSurface:Landroid/view/Surface;
-
-    .line 519
-    const-string v0, "MediaVT_Java"
-
-    const-string v1, "native_setsurface SURFACE_CAMERA in"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 520
-    invoke-direct {p0, p1}, Lcom/htc/service/vt/MediaVT;->native_setsurface(I)V
-
-    .line 521
-    const-string v0, "MediaVT_Java"
-
-    const-string v1, "native_setsurface SURFACE_CAMERA out"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    .line 523
-    :cond_1
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_3
-
-    .line 524
-    if-nez p2, :cond_2
-
-    .line 525
-    const-string v0, "MediaVT_Java"
-
-    const-string v1, "AP want to set null video surface, but surface cannot be null, so return."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 528
-    :cond_2
-    const-string v0, "MediaVT_Java"
+    :try_start_0
+    iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mIMediaVTService:Lcom/htc/service/vt/IMediaVTService;
 
-    const-string v1, "AP want to set video surface."
+    invoke-interface {v1}, Lcom/htc/service/vt/IMediaVTService;->getNearendSurface()Landroid/view/Surface;
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v1
 
-    .line 529
-    iput-object p2, p0, Lcom/htc/service/vt/MediaVT;->mVideoSurface:Landroid/view/Surface;
+    iput-object v1, p0, Lcom/htc/service/vt/MediaVT;->mCameraSurface:Landroid/view/Surface;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 531
-    const-string v0, "MediaVT_Java"
+    .line 538
+    :goto_1
+    const-string v1, "MediaVT_Java"
 
-    const-string v1, "native_setsurface SURFACE_VIDEO in"
+    const-string v2, "native_setsurface SURFACE_CAMERA in"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
+    .line 539
     invoke-direct {p0, p1}, Lcom/htc/service/vt/MediaVT;->native_setsurface(I)V
 
-    .line 533
-    const-string v0, "MediaVT_Java"
+    .line 540
+    const-string v1, "MediaVT_Java"
 
-    const-string v1, "native_setsurface SURFACE_VIDEO out"
+    const-string v2, "native_setsurface SURFACE_CAMERA out"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
+
+    .line 529
+    :catch_0
+    move-exception v0
+
+    .line 530
+    .local v0, remoteException:Landroid/os/RemoteException;
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "get nearend surface cause Exception"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    .line 535
+    .end local v0           #remoteException:Landroid/os/RemoteException;
+    :cond_1
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "AP want to set camera surface."
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 536
-    :cond_3
-    const-string v0, "MediaVT_Java"
+    iput-object p2, p0, Lcom/htc/service/vt/MediaVT;->mCameraSurface:Landroid/view/Surface;
 
-    const-string v1, "AP want to set unknown surface."
+    goto :goto_1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .line 542
+    :cond_2
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_5
+
+    .line 544
+    if-nez p2, :cond_4
+
+    .line 546
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "AP want to set null video surface"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 547
+    iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mIMediaVTService:Lcom/htc/service/vt/IMediaVTService;
+
+    if-nez v1, :cond_3
+
+    .line 549
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "null video surface, ignore it"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
+
+    .line 553
+    :cond_3
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "null video surface, user service farend surface"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 555
+    :try_start_1
+    iget-object v1, p0, Lcom/htc/service/vt/MediaVT;->mIMediaVTService:Lcom/htc/service/vt/IMediaVTService;
+
+    invoke-interface {v1}, Lcom/htc/service/vt/IMediaVTService;->getFarendSurface()Landroid/view/Surface;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/htc/service/vt/MediaVT;->mVideoSurface:Landroid/view/Surface;
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 565
+    :goto_2
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "native_setsurface SURFACE_VIDEO in"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 566
+    invoke-direct {p0, p1}, Lcom/htc/service/vt/MediaVT;->native_setsurface(I)V
+
+    .line 567
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "native_setsurface SURFACE_VIDEO out"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 556
+    :catch_1
+    move-exception v0
+
+    .line 557
+    .restart local v0       #remoteException:Landroid/os/RemoteException;
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "get farend surface cause Exception"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    .line 562
+    .end local v0           #remoteException:Landroid/os/RemoteException;
+    :cond_4
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "AP want to set video surface."
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 563
+    iput-object p2, p0, Lcom/htc/service/vt/MediaVT;->mVideoSurface:Landroid/view/Surface;
+
+    goto :goto_2
+
+    .line 570
+    :cond_5
+    const-string v1, "MediaVT_Java"
+
+    const-string v2, "AP want to set unknown surface."
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_0
 .end method
 
 .method public setVideoInputSource(ILandroid/graphics/Bitmap;)I
@@ -3677,14 +3765,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 632
+    .line 666
     const-string v0, "MediaVT_Java"
 
     const-string v1, "setVideoInputSource"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
+    .line 667
     iget v0, p0, Lcom/htc/service/vt/MediaVT;->mMediaVTState:I
 
     const/4 v1, 0x3
@@ -3695,7 +3783,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 634
+    .line 668
     const-string v0, "MediaVT_Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3724,31 +3812,31 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
+    .line 669
     const/4 v0, 0x0
 
-    .line 650
+    .line 684
     :goto_0
     return v0
 
-    .line 638
+    .line 672
     :cond_0
     iput p1, p0, Lcom/htc/service/vt/MediaVT;->mVideosource:I
 
-    .line 639
+    .line 673
     iput-object v2, p0, Lcom/htc/service/vt/MediaVT;->mSrcImage:Landroid/graphics/Bitmap;
 
-    .line 641
+    .line 675
     iget v0, p0, Lcom/htc/service/vt/MediaVT;->mVideosource:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
-    .line 643
+    .line 677
     if-nez p2, :cond_1
 
-    .line 644
+    .line 678
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "null Bitmap"
@@ -3757,7 +3845,7 @@
 
     throw v0
 
-    .line 646
+    .line 680
     :cond_1
     const/16 v0, 0xb0
 
@@ -3771,7 +3859,7 @@
 
     iput-object v0, p0, Lcom/htc/service/vt/MediaVT;->mSrcImage:Landroid/graphics/Bitmap;
 
-    .line 647
+    .line 681
     iget-object v0, p0, Lcom/htc/service/vt/MediaVT;->mSrcImage:Landroid/graphics/Bitmap;
 
     invoke-direct {p0, p1, v0}, Lcom/htc/service/vt/MediaVT;->native_setvideosource(ILandroid/graphics/Bitmap;)I
@@ -3780,7 +3868,7 @@
 
     goto :goto_0
 
-    .line 650
+    .line 684
     :cond_2
     invoke-direct {p0, p1, v2}, Lcom/htc/service/vt/MediaVT;->native_setvideosource(ILandroid/graphics/Bitmap;)I
 
@@ -3795,28 +3883,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 776
+    .line 810
     const-string v0, "MediaVT_Java"
 
     const-string v1, "show"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 777
+    .line 811
     const-string v0, "MediaVT_Java"
 
     const-string v1, "send VT_MEDIAVTSERVICE_SHOW"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
+    .line 812
     const/16 v0, 0x12f
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
 
-    .line 779
+    .line 813
     return-void
 .end method
 
@@ -3924,28 +4012,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 800
+    .line 834
     const-string v0, "MediaVT_Java"
 
     const-string v1, "switchView"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 801
+    .line 835
     const-string v0, "MediaVT_Java"
 
     const-string v1, "send VT_MEDIAVTSERVICE_SWITCH_VIEW"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 802
+    .line 836
     const/16 v0, 0x133
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
 
-    .line 803
+    .line 837
     return-void
 .end method
 
@@ -4012,23 +4100,23 @@
     .locals 2
 
     .prologue
-    .line 618
+    .line 652
     const-string v0, "MediaVT_Java"
 
     const-string v1, "deInitialize() in"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 619
+    .line 653
     invoke-virtual {p0}, Lcom/htc/service/vt/MediaVT;->native_deInitialize()V
 
-    .line 620
+    .line 654
     const-string v0, "MediaVT_Java"
 
     const-string v1, "deInitialize() out"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 621
+    .line 655
     return-void
 .end method

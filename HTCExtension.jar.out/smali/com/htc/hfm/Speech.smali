@@ -46,6 +46,8 @@
 
 .field public static final SPEECH_TYPE_TEXT_RESOURCE:I = 0x2bf
 
+.field public static final SPEECH_TYPE_TEXT_WITH_DIGITS:I = 0x2c1
+
 .field private static final TAG:Ljava/lang/String;
 
 
@@ -70,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 59
     const-class v0, Lcom/htc/hfm/Speech;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -79,7 +81,7 @@
 
     sput-object v0, Lcom/htc/hfm/Speech;->TAG:Ljava/lang/String;
 
-    .line 88
+    .line 77
     new-instance v0, Lcom/htc/hfm/Speech$1;
 
     invoke-direct {v0}, Lcom/htc/hfm/Speech$1;-><init>()V
@@ -93,10 +95,10 @@
     .locals 0
 
     .prologue
-    .line 173
+    .line 170
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 174
+    .line 171
     return-void
 .end method
 
@@ -116,52 +118,52 @@
     .parameter "audioType"
 
     .prologue
-    .line 155
+    .line 152
     packed-switch p0, :pswitch_data_0
 
-    .line 169
+    .line 166
     const-string v0, "UNKNOWN_AUDIO_TYPE"
 
     :goto_0
     return-object v0
 
-    .line 157
+    .line 154
     :pswitch_0
     const-string v0, "AUDIO_TYPE_PCM_8K"
 
     goto :goto_0
 
-    .line 159
+    .line 156
     :pswitch_1
     const-string v0, "AUDIO_TYPE_PCM_16K"
 
     goto :goto_0
 
-    .line 161
+    .line 158
     :pswitch_2
     const-string v0, "AUDIO_TYPE_PCM_16K"
 
     goto :goto_0
 
-    .line 163
+    .line 160
     :pswitch_3
     const-string v0, "AUDIO_TYPE_SPEEX_8K"
 
     goto :goto_0
 
-    .line 165
+    .line 162
     :pswitch_4
     const-string v0, "AUDIO_TYPE_SPEEX_16K"
 
     goto :goto_0
 
-    .line 167
+    .line 164
     :pswitch_5
     const-string v0, "AUDIO_TYPE_SPEEX_32K"
 
     goto :goto_0
 
-    .line 155
+    .line 152
     :pswitch_data_0
     .packed-switch 0x321
         :pswitch_0
@@ -183,12 +185,12 @@
     .end annotation
 
     .prologue
-    .line 281
+    .line 289
     invoke-direct {p0, p1}, Lcom/htc/hfm/Speech;->getLanguage(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 282
+    .line 290
     .local v6, language:Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -220,7 +222,7 @@
 
     move-result-object v7
 
-    .line 283
+    .line 291
     .local v7, path1:Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -252,23 +254,23 @@
 
     move-result-object v8
 
-    .line 284
+    .line 292
     .local v8, path2:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 285
+    .line 293
     .local v1, f:Ljava/io/File;
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 286
+    .line 294
     .local v2, f1:Ljava/io/File;
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 287
+    .line 295
     .local v3, f2:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -276,10 +278,10 @@
 
     if-eqz v9, :cond_0
 
-    .line 288
+    .line 296
     move-object v1, v2
 
-    .line 297
+    .line 305
     :goto_0
     sget-object v9, Lcom/htc/hfm/Speech;->TAG:Ljava/lang/String;
 
@@ -307,22 +309,22 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
+    .line 306
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 299
+    .line 307
     .local v0, baos:Ljava/io/ByteArrayOutputStream;
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 300
+    .line 308
     .local v4, fis:Ljava/io/FileInputStream;
     const/4 v5, -0x1
 
-    .line 301
+    .line 309
     .local v5, i:I
     :goto_1
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
@@ -333,12 +335,12 @@
 
     if-eq v5, v9, :cond_2
 
-    .line 302
+    .line 310
     invoke-virtual {v0, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     goto :goto_1
 
-    .line 289
+    .line 297
     .end local v0           #baos:Ljava/io/ByteArrayOutputStream;
     .end local v4           #fis:Ljava/io/FileInputStream;
     .end local v5           #i:I
@@ -349,44 +351,44 @@
 
     if-eqz v9, :cond_1
 
-    .line 290
+    .line 298
     move-object v1, v3
 
     goto :goto_0
 
-    .line 292
+    .line 300
     :cond_1
     const/16 v9, 0x2bd
 
     iput v9, p0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
-    .line 293
+    .line 301
     const-string v9, ""
 
     iput-object v9, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
 
-    .line 294
+    .line 302
     sget-object v9, Lcom/htc/hfm/Speech;->TAG:Ljava/lang/String;
 
     const-string v10, "Both paths do not exist. Use empty string text."
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
+    .line 315
     :goto_2
     return-void
 
-    .line 304
+    .line 312
     .restart local v0       #baos:Ljava/io/ByteArrayOutputStream;
     .restart local v4       #fis:Ljava/io/FileInputStream;
     .restart local v5       #i:I
     :cond_2
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
 
-    .line 305
+    .line 313
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 306
+    .line 314
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v9
@@ -406,12 +408,12 @@
     .end annotation
 
     .prologue
-    .line 253
+    .line 261
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 254
+    .line 262
     .local v0, baos:Ljava/io/ByteArrayOutputStream;
     invoke-direct {p0, p1}, Lcom/htc/hfm/Speech;->getResources(Landroid/content/Context;)Landroid/content/res/Resources;
 
@@ -423,11 +425,11 @@
 
     move-result-object v2
 
-    .line 255
+    .line 263
     .local v2, is:Ljava/io/InputStream;
     const/4 v1, -0x1
 
-    .line 256
+    .line 264
     .local v1, i:I
     :goto_0
     invoke-virtual {v2}, Ljava/io/InputStream;->read()I
@@ -438,26 +440,26 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 257
+    .line 265
     invoke-virtual {v0, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     goto :goto_0
 
-    .line 259
+    .line 267
     :cond_0
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
-    .line 260
+    .line 268
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 261
+    .line 269
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/htc/hfm/Speech;->mAudio:[B
 
-    .line 262
+    .line 270
     return-void
 .end method
 
@@ -466,12 +468,12 @@
     .parameter "context"
 
     .prologue
-    .line 265
+    .line 273
     invoke-direct {p0, p1}, Lcom/htc/hfm/Speech;->getResources(Landroid/content/Context;)Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 266
+    .line 274
     .local v0, res:Landroid/content/res/Resources;
     iget v1, p0, Lcom/htc/hfm/Speech;->mTextResId:I
 
@@ -481,7 +483,7 @@
 
     iput-object v1, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
 
-    .line 267
+    .line 275
     return-void
 .end method
 
@@ -491,7 +493,7 @@
     .parameter "audioType"
 
     .prologue
-    .line 135
+    .line 121
     sget-object v1, Lcom/htc/hfm/Speech;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -528,28 +530,28 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
+    .line 122
     new-instance v0, Lcom/htc/hfm/Speech;
 
     invoke-direct {v0}, Lcom/htc/hfm/Speech;-><init>()V
 
-    .line 137
+    .line 123
     .local v0, s:Lcom/htc/hfm/Speech;
     const/16 v1, 0x2c0
 
     iput v1, v0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
-    .line 138
+    .line 124
     invoke-static {p0}, Lcom/htc/hfm/Speech;->removeExtension(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/htc/hfm/Speech;->file:Ljava/lang/String;
 
-    .line 139
+    .line 125
     iput p1, v0, Lcom/htc/hfm/Speech;->mAudioType:I
 
-    .line 140
+    .line 126
     return-object v0
 .end method
 
@@ -560,26 +562,26 @@
     .end annotation
 
     .prologue
-    .line 118
+    .line 104
     new-instance v0, Lcom/htc/hfm/Speech;
 
     invoke-direct {v0}, Lcom/htc/hfm/Speech;-><init>()V
 
-    .line 119
+    .line 105
     .local v0, s:Lcom/htc/hfm/Speech;
     const/16 v1, 0x2be
 
     iput v1, v0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
-    .line 120
+    .line 106
     iput p0, v0, Lcom/htc/hfm/Speech;->mAudioResId:I
 
-    .line 121
+    .line 107
     const/16 v1, 0x321
 
     iput v1, v0, Lcom/htc/hfm/Speech;->mAudioType:I
 
-    .line 122
+    .line 108
     return-object v0
 .end method
 
@@ -589,7 +591,7 @@
     .parameter "audioType"
 
     .prologue
-    .line 126
+    .line 112
     sget-object v1, Lcom/htc/hfm/Speech;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -616,47 +618,61 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
+    .line 113
     new-instance v0, Lcom/htc/hfm/Speech;
 
     invoke-direct {v0}, Lcom/htc/hfm/Speech;-><init>()V
 
-    .line 128
+    .line 114
     .local v0, s:Lcom/htc/hfm/Speech;
     const/16 v1, 0x2be
 
     iput v1, v0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
-    .line 129
+    .line 115
     iput p0, v0, Lcom/htc/hfm/Speech;->mAudioResId:I
 
-    .line 130
+    .line 116
     iput p1, v0, Lcom/htc/hfm/Speech;->mAudioType:I
 
-    .line 131
+    .line 117
     return-object v0
 .end method
 
 .method public static createSpeechFromText(Ljava/lang/String;)Lcom/htc/hfm/Speech;
-    .locals 2
+    .locals 1
     .parameter "text"
 
     .prologue
-    .line 103
+    .line 92
+    const/16 v0, 0x2bd
+
+    invoke-static {p0, v0}, Lcom/htc/hfm/Speech;->createSpeechFromText(Ljava/lang/String;I)Lcom/htc/hfm/Speech;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private static createSpeechFromText(Ljava/lang/String;I)Lcom/htc/hfm/Speech;
+    .locals 1
+    .parameter "text"
+    .parameter "speechType"
+
+    .prologue
+    .line 134
     new-instance v0, Lcom/htc/hfm/Speech;
 
     invoke-direct {v0}, Lcom/htc/hfm/Speech;-><init>()V
 
-    .line 104
+    .line 135
     .local v0, s:Lcom/htc/hfm/Speech;
-    const/16 v1, 0x2bd
+    iput p1, v0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
-    iput v1, v0, Lcom/htc/hfm/Speech;->mSpeechType:I
-
-    .line 105
+    .line 136
     iput-object p0, v0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
 
-    .line 106
+    .line 137
     return-object v0
 .end method
 
@@ -665,21 +681,36 @@
     .parameter "resourceId"
 
     .prologue
-    .line 110
+    .line 96
     new-instance v0, Lcom/htc/hfm/Speech;
 
     invoke-direct {v0}, Lcom/htc/hfm/Speech;-><init>()V
 
-    .line 111
+    .line 97
     .local v0, s:Lcom/htc/hfm/Speech;
     const/16 v1, 0x2bf
 
     iput v1, v0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
-    .line 112
+    .line 98
     iput p0, v0, Lcom/htc/hfm/Speech;->mTextResId:I
 
-    .line 113
+    .line 99
+    return-object v0
+.end method
+
+.method public static createSpeechFromTextWithDigits(Ljava/lang/String;)Lcom/htc/hfm/Speech;
+    .locals 1
+    .parameter "text"
+
+    .prologue
+    .line 130
+    const/16 v0, 0x2c1
+
+    invoke-static {p0, v0}, Lcom/htc/hfm/Speech;->createSpeechFromText(Ljava/lang/String;I)Lcom/htc/hfm/Speech;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
@@ -688,7 +719,7 @@
     .parameter "context"
 
     .prologue
-    .line 310
+    .line 318
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -699,11 +730,11 @@
 
     move-result-object v0
 
-    .line 311
+    .line 319
     .local v0, language:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 312
+    .line 320
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -714,14 +745,14 @@
 
     move-result-object v0
 
-    .line 314
+    .line 322
     :cond_0
     if-nez v0, :cond_1
 
-    .line 315
+    .line 323
     const-string v0, "en_US"
 
-    .line 317
+    .line 325
     :cond_1
     sget-object v1, Lcom/htc/hfm/Speech;->TAG:Ljava/lang/String;
 
@@ -745,7 +776,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
+    .line 326
     return-object v0
 .end method
 
@@ -754,36 +785,36 @@
     .parameter "context"
 
     .prologue
-    .line 270
+    .line 278
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 271
+    .line 279
     .local v4, res:Landroid/content/res/Resources;
     invoke-virtual {v4}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
-    .line 272
+    .line 280
     .local v0, am:Landroid/content/res/AssetManager;
     invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v2
 
-    .line 273
+    .line 281
     .local v2, dm:Landroid/util/DisplayMetrics;
     invoke-virtual {v4}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
 
-    .line 274
+    .line 282
     .local v1, config:Landroid/content/res/Configuration;
     invoke-direct {p0, p1}, Lcom/htc/hfm/Speech;->getLanguage(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 275
+    .line 283
     .local v3, language:Ljava/lang/String;
     invoke-direct {p0, v3}, Lcom/htc/hfm/Speech;->languageToLocale(Ljava/lang/String;)Ljava/util/Locale;
 
@@ -791,15 +822,89 @@
 
     iput-object v5, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 276
+    .line 284
     new-instance v4, Landroid/content/res/Resources;
 
     .end local v4           #res:Landroid/content/res/Resources;
     invoke-direct {v4, v0, v2, v1}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
 
-    .line 277
+    .line 285
     .restart local v4       #res:Landroid/content/res/Resources;
     return-object v4
+.end method
+
+.method private insertSpaceBetweenDigits()V
+    .locals 4
+
+    .prologue
+    .line 340
+    iget-object v3, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    .line 350
+    :goto_0
+    return-void
+
+    .line 341
+    :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 342
+    .local v2, sb:Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
+
+    .local v1, i:I
+    :goto_1
+    iget-object v3, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-ge v1, v3, :cond_2
+
+    .line 343
+    iget-object v3, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    .line 344
+    .local v0, c:C
+    invoke-static {v0}, Ljava/lang/Character;->isDigit(C)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    .line 345
+    const/16 v3, 0x20
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 347
+    :cond_1
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 342
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    .line 349
+    .end local v0           #c:C
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
+
+    goto :goto_0
 .end method
 
 .method private languageToLocale(Ljava/lang/String;)Ljava/util/Locale;
@@ -807,8 +912,8 @@
     .parameter "language"
 
     .prologue
-    .line 322
-    const-string v0, "zh_TW"
+    .line 330
+    const-string/jumbo v0, "zh_TW"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -816,16 +921,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 323
+    .line 331
     sget-object v0, Ljava/util/Locale;->TRADITIONAL_CHINESE:Ljava/util/Locale;
 
-    .line 327
+    .line 335
     :goto_0
     return-object v0
 
-    .line 324
+    .line 332
     :cond_0
-    const-string v0, "zh_CN"
+    const-string/jumbo v0, "zh_CN"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -833,12 +938,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 325
+    .line 333
     sget-object v0, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
     goto :goto_0
 
-    .line 327
+    .line 335
     :cond_1
     new-instance v0, Ljava/util/Locale;
 
@@ -852,16 +957,16 @@
     .parameter "filename"
 
     .prologue
-    .line 144
+    .line 141
     if-nez p0, :cond_1
 
-    .line 151
+    .line 148
     .end local p0
     :cond_0
     :goto_0
     return-object p0
 
-    .line 147
+    .line 144
     .restart local p0
     :cond_1
     const/16 v1, 0x2e
@@ -870,13 +975,13 @@
 
     move-result v0
 
-    .line 148
+    .line 145
     .local v0, index:I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 151
+    .line 148
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -898,39 +1003,46 @@
     .end annotation
 
     .prologue
-    .line 237
+    .line 242
     iget v0, p0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 250
+    .line 258
     :goto_0
     return-void
 
-    .line 239
+    .line 244
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/htc/hfm/Speech;->convertAudioResource(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 242
+    .line 247
     :pswitch_1
     invoke-direct {p0, p1}, Lcom/htc/hfm/Speech;->convertTextResource(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 245
+    .line 250
     :pswitch_2
     invoke-direct {p0, p1}, Lcom/htc/hfm/Speech;->convertAudioFile(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 237
+    .line 253
+    :pswitch_3
+    invoke-direct {p0}, Lcom/htc/hfm/Speech;->insertSpaceBetweenDigits()V
+
+    goto :goto_0
+
+    .line 242
     :pswitch_data_0
     .packed-switch 0x2be
         :pswitch_0
         :pswitch_1
         :pswitch_2
+        :pswitch_3
     .end packed-switch
 .end method
 
@@ -938,7 +1050,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 179
     const/4 v0, 0x0
 
     return v0
@@ -958,7 +1070,7 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 230
     iget v0, p0, Lcom/htc/hfm/Speech;->mAudioType:I
 
     return v0
@@ -968,7 +1080,7 @@
     .locals 1
 
     .prologue
-    .line 230
+    .line 234
     iget v0, p0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
     return v0
@@ -978,7 +1090,7 @@
     .locals 1
 
     .prologue
-    .line 216
+    .line 214
     iget-object v0, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
 
     return-object v0
@@ -989,49 +1101,49 @@
     .parameter "in"
 
     .prologue
-    .line 204
+    .line 201
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
-    .line 205
+    .line 202
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/hfm/Speech;->mAudioType:I
 
-    .line 206
+    .line 203
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
 
-    .line 207
+    .line 204
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/hfm/Speech;->mAudio:[B
 
-    .line 208
+    .line 205
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/hfm/Speech;->mTextResId:I
 
-    .line 209
+    .line 206
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/hfm/Speech;->mAudioResId:I
 
-    .line 210
+    .line 207
     return-void
 .end method
 
@@ -1041,36 +1153,36 @@
     .parameter "flags"
 
     .prologue
-    .line 191
+    .line 188
     iget v0, p0, Lcom/htc/hfm/Speech;->mSpeechType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 192
+    .line 189
     iget v0, p0, Lcom/htc/hfm/Speech;->mAudioType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 193
+    .line 190
     iget-object v0, p0, Lcom/htc/hfm/Speech;->mText:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 194
+    .line 191
     iget-object v0, p0, Lcom/htc/hfm/Speech;->mAudio:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 195
+    .line 192
     iget v0, p0, Lcom/htc/hfm/Speech;->mTextResId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 196
+    .line 193
     iget v0, p0, Lcom/htc/hfm/Speech;->mAudioResId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 197
+    .line 194
     return-void
 .end method

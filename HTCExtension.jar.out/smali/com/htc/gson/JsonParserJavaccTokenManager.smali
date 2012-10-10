@@ -207,13 +207,13 @@
 
     const/16 v1, 0x1b
 
-    const-string v2, "{"
+    const-string/jumbo v2, "{"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x1c
 
-    const-string v2, "}"
+    const-string/jumbo v2, "}"
 
     aput-object v2, v0, v1
 

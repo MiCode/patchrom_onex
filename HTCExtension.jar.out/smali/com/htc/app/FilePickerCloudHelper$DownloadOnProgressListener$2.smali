@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1838
+    .line 1870
     iput-object p1, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -36,310 +36,434 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 13
+    .locals 20
     .parameter "msg"
 
     .prologue
-    const/4 v11, 0x0
+    .line 1873
+    move-object/from16 v0, p1
 
-    const/4 v12, 0x1
+    iget v14, v0, Landroid/os/Message;->arg1:I
 
-    .line 1841
-    iget v7, p1, Landroid/os/Message;->arg1:I
+    .line 1874
+    .local v14, progress:I
+    move-object/from16 v0, p0
 
-    .line 1842
-    .local v7, progress:I
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
 
-    invoke-virtual {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->getCloudId()J
+    move-object/from16 v18, v0
 
-    move-result-wide v0
+    invoke-virtual/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->getCloudId()J
 
-    .line 1844
-    .local v0, cloudId:J
-    iget v10, p1, Landroid/os/Message;->what:I
+    move-result-wide v4
 
-    packed-switch v10, :pswitch_data_0
+    .line 1875
+    .local v4, cloudId:J
+    move-object/from16 v0, p0
 
-    .line 1908
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+
+    move-object/from16 v18, v0
+
+    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
+    invoke-static/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1900(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
+
+    move-result-object v9
+
+    .line 1876
+    .local v9, handler:Landroid/os/Handler;
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+
+    move-object/from16 v18, v0
+
+    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    invoke-static/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
+
+    move-result-object v8
+
+    .line 1877
+    .local v8, filePickerUtil:Lcom/htc/app/FilePickerUtil;
+    if-nez v8, :cond_1
+
+    .line 1968
     :cond_0
     :goto_0
     return-void
 
-    .line 1846
-    :pswitch_0
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    invoke-virtual {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->isCancelToDownload()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_1
-
-    .line 1847
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    invoke-virtual {v10, v12}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->cancelToDownload(Z)V
-
-    .line 1848
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1800(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v11}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 1849
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1800(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v12}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 1851
+    .line 1879
     :cond_1
-    const-wide/16 v10, 0x0
+    move-object/from16 v0, p1
 
-    cmp-long v10, v0, v10
+    iget v0, v0, Landroid/os/Message;->what:I
 
-    if-eqz v10, :cond_2
+    move/from16 v18, v0
 
-    .line 1852
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    invoke-virtual {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->getFileSize()J
-
-    move-result-wide v8
-
-    .line 1853
-    .local v8, size:J
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    iget-object v10, v10, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v8, v9, v7}, Lcom/htc/app/FilePickerUtil;->setProgressDialogMessage(JI)V
-
-    .line 1857
-    .end local v8           #size:J
-    :cond_2
-    const/16 v10, 0x64
-
-    if-ne v7, v10, :cond_0
-
-    .line 1858
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1800(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v12}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v6
-
-    .line 1861
-    .local v6, notifyChangedEndMsg:Landroid/os/Message;
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1800(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
-
-    move-result-object v10
-
-    const-wide/16 v11, 0x190
-
-    invoke-virtual {v10, v6, v11, v12}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    packed-switch v18, :pswitch_data_0
 
     goto :goto_0
 
-    .line 1865
-    .end local v6           #notifyChangedEndMsg:Landroid/os/Message;
-    :pswitch_1
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1800(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v11}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 1866
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1800(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v12}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 1868
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    invoke-virtual {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->isCancelToDownload()Z
-
-    move-result v10
-
-    if-nez v10, :cond_0
-
-    .line 1872
-    const/4 v4, 0x0
-
-    .line 1873
-    .local v4, isExists:Z
-    const/4 v5, 0x0
-
-    .line 1874
-    .local v5, localPath:Ljava/lang/String;
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    invoke-virtual {v10}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->getDownload()Lcom/htc/sdk/service/cloudstorage/HtcDownload;
-
-    move-result-object v2
-
-    .line 1876
-    .local v2, download:Lcom/htc/sdk/service/cloudstorage/HtcDownload;
-    if-eqz v2, :cond_3
-
-    .line 1877
-    invoke-virtual {v2}, Lcom/htc/sdk/service/cloudstorage/HtcDownload;->getLocalPath()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 1878
-    if-eqz v5, :cond_3
-
-    .line 1879
-    new-instance v3, Ljava/io/File;
-
-    invoke-direct {v3, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 1880
-    .local v3, file:Ljava/io/File;
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_3
-
-    .line 1881
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
-
-    iget-object v10, v10, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v5}, Lcom/htc/app/FilePickerUtil;->setSelectedDownloadedPath(Ljava/lang/String;)V
-
     .line 1882
-    const/4 v4, 0x1
+    :pswitch_0
+    move-object/from16 v0, p0
 
-    .line 1887
-    .end local v3           #file:Ljava/io/File;
-    :cond_3
-    if-nez v4, :cond_4
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
 
-    .line 1888
-    const-string v10, "FilePickerCloudHelper"
+    move-object/from16 v18, v0
 
-    const-string v11, "File does not exist!!!"
+    invoke-virtual/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->isCancelToDownload()Z
 
-    invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v18
+
+    if-eqz v18, :cond_2
+
+    .line 1883
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+
+    move-object/from16 v18, v0
+
+    const/16 v19, 0x1
+
+    invoke-virtual/range {v18 .. v19}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->cancelToDownload(Z)V
+
+    .line 1884
+    if-eqz v9, :cond_2
+
+    .line 1885
+    const/16 v18, 0x0
+
+    move/from16 v0, v18
+
+    invoke-virtual {v9, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 1886
+    const/16 v18, 0x1
+
+    move/from16 v0, v18
+
+    invoke-virtual {v9, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 1890
+    :cond_2
+    const/16 v18, -0xb
+
+    move/from16 v0, v18
+
+    if-ne v14, v0, :cond_3
 
     .line 1891
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+    const/16 v18, -0xb
 
-    iget-object v10, v10, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    move/from16 v0, v18
 
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
+    invoke-virtual {v8, v0}, Lcom/htc/app/FilePickerUtil;->setCloudExceptionType(I)V
 
-    move-result-object v10
+    .line 1892
+    const/16 v18, 0x9
 
-    iget-object v11, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+    move/from16 v0, v18
 
-    iget-object v11, v11, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v11}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
-
-    const/4 v11, -0x7
-
-    invoke-virtual {v10, v11}, Lcom/htc/app/FilePickerUtil;->setCloudExceptionType(I)V
+    invoke-virtual {v8, v0}, Lcom/htc/app/FilePickerUtil;->notifyToDoTaskEvent(I)V
 
     .line 1893
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+    invoke-virtual {v8, v4, v5}, Lcom/htc/app/FilePickerUtil;->removeDownloadCloudId(J)V
 
-    iget-object v10, v10, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    goto :goto_0
 
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
+    .line 1897
+    :cond_3
+    const-wide/16 v18, 0x0
 
-    move-result-object v10
+    cmp-long v18, v4, v18
 
-    const/16 v11, 0x9
+    if-eqz v18, :cond_4
 
-    invoke-virtual {v10, v11}, Lcom/htc/app/FilePickerUtil;->notifyToDoTaskEvent(I)V
+    .line 1898
+    move-object/from16 v0, p0
 
-    .line 1894
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
 
-    iget-object v10, v10, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    move-object/from16 v18, v0
 
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
+    invoke-virtual/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->getFileSize()J
 
-    move-result-object v10
-
-    invoke-virtual {v10, v0, v1}, Lcom/htc/app/FilePickerUtil;->removeDownloadCloudId(J)V
-
-    goto/16 :goto_0
+    move-result-wide v16
 
     .line 1899
+    .local v16, size:J
+    move-wide/from16 v0, v16
+
+    invoke-virtual {v8, v0, v1, v14}, Lcom/htc/app/FilePickerUtil;->setProgressDialogMessage(JI)V
+
+    .line 1903
+    .end local v16           #size:J
     :cond_4
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+    const/16 v18, 0x64
 
-    iget-object v10, v10, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    move/from16 v0, v18
 
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
+    if-ne v14, v0, :cond_0
 
-    move-result-object v10
+    .line 1904
+    move-object/from16 v0, p0
 
-    const/4 v11, 0x2
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
 
-    invoke-virtual {v10, v11}, Lcom/htc/app/FilePickerUtil;->notifyToDoTaskEvent(I)V
+    move-object/from16 v18, v0
 
-    .line 1901
-    iget-object v10, p0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mHandler:Landroid/os/Handler;
+    invoke-static/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$1900(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Landroid/os/Handler;
 
-    iget-object v10, v10, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    move-result-object v18
 
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v10}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
+    const/16 v19, 0x1
 
-    move-result-object v10
+    invoke-virtual/range {v18 .. v19}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    invoke-virtual {v10, v0, v1}, Lcom/htc/app/FilePickerUtil;->removeDownloadCloudId(J)V
+    move-result-object v12
+
+    .line 1906
+    .local v12, notifyChangedEndMsg:Landroid/os/Message;
+    if-eqz v9, :cond_0
+
+    .line 1907
+    const-wide/16 v18, 0x190
+
+    move-wide/from16 v0, v18
+
+    invoke-virtual {v9, v12, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    goto :goto_0
+
+    .line 1912
+    .end local v12           #notifyChangedEndMsg:Landroid/os/Message;
+    :pswitch_1
+    if-eqz v9, :cond_5
+
+    .line 1913
+    const/16 v18, 0x0
+
+    move/from16 v0, v18
+
+    invoke-virtual {v9, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 1914
+    const/16 v18, 0x1
+
+    move/from16 v0, v18
+
+    invoke-virtual {v9, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 1917
+    :cond_5
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+
+    move-object/from16 v18, v0
+
+    invoke-virtual/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->isCancelToDownload()Z
+
+    move-result v18
+
+    if-nez v18, :cond_0
+
+    .line 1921
+    const/4 v10, 0x0
+
+    .line 1922
+    .local v10, isExists:Z
+    const/4 v11, 0x0
+
+    .line 1923
+    .local v11, localPath:Ljava/lang/String;
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+
+    move-object/from16 v18, v0
+
+    invoke-virtual/range {v18 .. v18}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->getDownload()Lcom/htc/sdk/service/cloudstorage/HtcDownload;
+
+    move-result-object v6
+
+    .line 1925
+    .local v6, download:Lcom/htc/sdk/service/cloudstorage/HtcDownload;
+    if-eqz v6, :cond_6
+
+    .line 1926
+    invoke-virtual {v6}, Lcom/htc/sdk/service/cloudstorage/HtcDownload;->getLocalPath()Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 1927
+    if-eqz v11, :cond_6
+
+    .line 1928
+    new-instance v7, Ljava/io/File;
+
+    invoke-direct {v7, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 1929
+    .local v7, file:Ljava/io/File;
+    invoke-virtual {v7}, Ljava/io/File;->exists()Z
+
+    move-result v18
+
+    if-eqz v18, :cond_6
+
+    .line 1930
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    .line 1931
+    .local v3, bundle:Landroid/os/Bundle;
+    const/16 v18, 0x1
+
+    move/from16 v0, v18
+
+    new-array v13, v0, [Ljava/lang/String;
+
+    .line 1932
+    .local v13, output:[Ljava/lang/String;
+    const/16 v18, 0x0
+
+    aput-object v11, v13, v18
+
+    .line 1933
+    const-string v18, "output"
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v3, v0, v13}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 1934
+    const/16 v18, 0x1
+
+    move/from16 v0, v18
+
+    new-array v15, v0, [Ljava/lang/String;
+
+    .line 1935
+    .local v15, serviceNames:[Ljava/lang/String;
+    const/16 v18, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+
+    move-object/from16 v19, v0
+
+    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mServiceName:Ljava/lang/String;
+    invoke-static/range {v19 .. v19}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$2000(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v15, v18
+
+    .line 1936
+    const-string v18, "CloudServiceType"
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v3, v0, v15}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 1937
+    const/16 v18, 0x1
+
+    move/from16 v0, v18
+
+    new-array v2, v0, [Ljava/lang/String;
+
+    .line 1938
+    .local v2, accountIds:[Ljava/lang/String;
+    const/16 v18, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener$2;->this$1:Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;
+
+    move-object/from16 v19, v0
+
+    #getter for: Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->mAccountId:Ljava/lang/String;
+    invoke-static/range {v19 .. v19}, Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;->access$2100(Lcom/htc/app/FilePickerCloudHelper$DownloadOnProgressListener;)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v2, v18
+
+    .line 1939
+    const-string v18, "CloudServiceAccountName"
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v3, v0, v2}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
+
+    .line 1941
+    invoke-virtual {v8, v3}, Lcom/htc/app/FilePickerUtil;->setSelectedDownloadedBundle(Landroid/os/Bundle;)V
+
+    .line 1942
+    const/4 v10, 0x1
+
+    .line 1947
+    .end local v2           #accountIds:[Ljava/lang/String;
+    .end local v3           #bundle:Landroid/os/Bundle;
+    .end local v7           #file:Ljava/io/File;
+    .end local v13           #output:[Ljava/lang/String;
+    .end local v15           #serviceNames:[Ljava/lang/String;
+    :cond_6
+    if-nez v10, :cond_7
+
+    .line 1948
+    const-string v18, "FilePickerCloudHelper"
+
+    const-string v19, "File does not exist!!!"
+
+    invoke-static/range {v18 .. v19}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1951
+    const/16 v18, -0x7
+
+    move/from16 v0, v18
+
+    invoke-virtual {v8, v0}, Lcom/htc/app/FilePickerUtil;->setCloudExceptionType(I)V
+
+    .line 1953
+    const/16 v18, 0x9
+
+    move/from16 v0, v18
+
+    invoke-virtual {v8, v0}, Lcom/htc/app/FilePickerUtil;->notifyToDoTaskEvent(I)V
+
+    .line 1954
+    invoke-virtual {v8, v4, v5}, Lcom/htc/app/FilePickerUtil;->removeDownloadCloudId(J)V
 
     goto/16 :goto_0
 
-    .line 1844
+    .line 1959
+    :cond_7
+    const/16 v18, 0x2
+
+    move/from16 v0, v18
+
+    invoke-virtual {v8, v0}, Lcom/htc/app/FilePickerUtil;->notifyToDoTaskEvent(I)V
+
+    .line 1961
+    invoke-virtual {v8, v4, v5}, Lcom/htc/app/FilePickerUtil;->removeDownloadCloudId(J)V
+
+    goto/16 :goto_0
+
+    .line 1879
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

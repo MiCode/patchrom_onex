@@ -22,8 +22,8 @@
     .locals 0
 
     .prologue
-    .line 1089
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 1244
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -36,20 +36,20 @@
     .parameter "targetHeight"
 
     .prologue
-    .line 1332
+    .line 1488
     if-lt p0, p2, :cond_0
 
     if-ge p1, p3, :cond_1
 
-    .line 1333
+    .line 1489
     :cond_0
     const/4 v1, 0x0
 
-    .line 1337
+    .line 1493
     :goto_0
     return-object v1
 
-    .line 1335
+    .line 1491
     :cond_1
     int-to-float v1, p2
 
@@ -67,7 +67,7 @@
 
     move-result v0
 
-    .line 1337
+    .line 1493
     .local v0, ratio:F
     const/4 v1, 0x2
 
@@ -104,10 +104,10 @@
     .parameter "newHeight"
 
     .prologue
-    .line 1370
+    .line 1526
     const/4 v0, 0x1
 
-    .line 1372
+    .line 1528
     .local v0, sample:I
     :goto_0
     shr-int/lit8 v1, p0, 0x1
@@ -118,19 +118,19 @@
 
     if-le v1, p3, :cond_1
 
-    .line 1373
+    .line 1529
     :cond_0
     shl-int/lit8 v0, v0, 0x1
 
-    .line 1374
+    .line 1530
     shr-int/lit8 p0, p0, 0x1
 
-    .line 1375
+    .line 1531
     shr-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
-    .line 1378
+    .line 1534
     :cond_1
     return v0
 .end method
@@ -145,10 +145,10 @@
 
     const/4 v9, 0x0
 
-    .line 1193
+    .line 1349
     const/4 v3, 0x0
 
-    .line 1194
+    .line 1350
     .local v3, result:Landroid/graphics/Bitmap;
     if-eqz p0, :cond_4
 
@@ -156,12 +156,12 @@
 
     if-lez v5, :cond_4
 
-    .line 1195
+    .line 1351
     invoke-static {p0}, Landroid/provider/HtcUnionContact$Thumbnails;->getImageSize([B)[I
 
     move-result-object v2
 
-    .line 1197
+    .line 1353
     .local v2, originalSize:[I
     aget v5, v2, v9
 
@@ -171,16 +171,16 @@
 
     if-nez v5, :cond_1
 
-    .line 1199
+    .line 1355
     :cond_0
     const/4 v5, 0x0
 
-    .line 1219
+    .line 1375
     .end local v2           #originalSize:[I
     :goto_0
     return-object v5
 
-    .line 1202
+    .line 1358
     .restart local v2       #originalSize:[I
     :cond_1
     aget v5, v2, v9
@@ -191,20 +191,20 @@
 
     move-result-object v0
 
-    .line 1204
+    .line 1360
     .local v0, newSize:[I
     if-nez v0, :cond_2
 
-    .line 1205
+    .line 1361
     move-object v0, v2
 
-    .line 1208
+    .line 1364
     :cond_2
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1209
+    .line 1365
     .local v1, opts:Landroid/graphics/BitmapFactory$Options;
     aget v5, v2, v9
 
@@ -220,20 +220,20 @@
 
     iput v5, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 1211
+    .line 1367
     array-length v5, p0
 
     invoke-static {p0, v9, v5, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    .line 1212
+    .line 1368
     .local v4, scaledBitmap:Landroid/graphics/Bitmap;
     invoke-static {v4, v0}, Landroid/provider/HtcUnionContact$Thumbnails;->resizeAndCropCenterBitmap(Landroid/graphics/Bitmap;[I)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 1214
+    .line 1370
     if-eqz v4, :cond_3
 
     if-eq v4, v3, :cond_3
@@ -248,10 +248,10 @@
     :goto_1
     move-object v5, v3
 
-    .line 1219
+    .line 1375
     goto :goto_0
 
-    .line 1216
+    .line 1372
     :cond_4
     const-string v5, "HtcUnionContact"
 
@@ -285,37 +285,37 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1284
+    .line 1440
     if-nez p0, :cond_0
 
-    .line 1285
+    .line 1441
     const/4 v1, 0x0
 
-    .line 1298
+    .line 1454
     :goto_0
     return-object v1
 
-    .line 1287
+    .line 1443
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 1288
+    .line 1444
     .local v2, width:I
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    .line 1289
+    .line 1445
     .local v0, height:I
     const/4 v1, 0x0
 
-    .line 1290
+    .line 1446
     .local v1, newBitmap:Landroid/graphics/Bitmap;
     if-le v2, v0, :cond_1
 
-    .line 1291
+    .line 1447
     sub-int v3, v2, v0
 
     div-int/lit8 v3, v3, 0x2
@@ -326,7 +326,7 @@
 
     goto :goto_0
 
-    .line 1294
+    .line 1450
     :cond_1
     sub-int v3, v0, v2
 
@@ -348,28 +348,28 @@
 
     const/4 v3, 0x0
 
-    .line 1347
+    .line 1503
     const/4 v1, 0x0
 
-    .line 1349
+    .line 1505
     .local v1, result:[I
     if-eqz p0, :cond_0
 
-    .line 1350
+    .line 1506
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1351
+    .line 1507
     .local v0, options:Landroid/graphics/BitmapFactory$Options;
     iput-boolean v4, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1352
+    .line 1508
     array-length v2, p0
 
     invoke-static {p0, v3, v2, v0}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 1354
+    .line 1510
     const/4 v2, 0x2
 
     new-array v1, v2, [I
@@ -383,7 +383,7 @@
 
     aput v2, v1, v4
 
-    .line 1358
+    .line 1514
     .end local v0           #options:Landroid/graphics/BitmapFactory$Options;
     .restart local v1       #result:[I
     :cond_0
@@ -397,22 +397,22 @@
     .prologue
     const/4 v5, 0x2
 
-    .line 1268
+    .line 1424
     :try_start_0
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1269
+    .line 1425
     .local v1, option:Landroid/graphics/BitmapFactory$Options;
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1270
+    .line 1426
     invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 1271
+    .line 1427
     const/4 v2, 0x2
 
     new-array v2, v2, [I
@@ -431,16 +431,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1273
+    .line 1429
     .end local v1           #option:Landroid/graphics/BitmapFactory$Options;
     :goto_0
     return-object v2
 
-    .line 1272
+    .line 1428
     :catch_0
     move-exception v0
 
-    .line 1273
+    .line 1429
     .local v0, e:Ljava/lang/Exception;
     new-array v2, v5, [I
 
@@ -468,12 +468,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1313
+    .line 1469
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 1314
+    .line 1470
     .local v5, matrix:Landroid/graphics/Matrix;
     int-to-float v0, p3
 
@@ -489,7 +489,7 @@
 
     invoke-virtual {v5, v0, v2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 1315
+    .line 1471
     const/4 v6, 0x1
 
     move-object v0, p0
@@ -504,7 +504,7 @@
 
     move-result-object v7
 
-    .line 1316
+    .line 1472
     .local v7, result:Landroid/graphics/Bitmap;
     return-object v7
 .end method
@@ -519,12 +519,12 @@
 
     const/4 v7, 0x0
 
-    .line 1231
+    .line 1387
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_4
 
-    .line 1232
+    .line 1388
     :cond_0
     const-string v6, "HtcUnionContact"
 
@@ -532,10 +532,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1233
+    .line 1389
     if-eqz p0, :cond_1
 
-    .line 1234
+    .line 1390
     const-string v6, "HtcUnionContact"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -558,11 +558,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1236
+    .line 1392
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 1237
+    .line 1393
     const-string v6, "HtcUnionContact"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -585,36 +585,36 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1239
+    .line 1395
     :cond_2
     const/4 v4, 0x0
 
-    .line 1257
+    .line 1413
     :cond_3
     :goto_0
     return-object v4
 
-    .line 1242
+    .line 1398
     :cond_4
     const/4 v4, 0x0
 
-    .line 1244
+    .line 1400
     .local v4, result:Landroid/graphics/Bitmap;
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    .line 1245
+    .line 1401
     .local v1, afterSampleWidth:I
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    .line 1246
+    .line 1402
     .local v0, afterSampleHeight:I
     const/4 v3, 0x0
 
-    .line 1247
+    .line 1403
     .local v3, resizeBitmap:Landroid/graphics/Bitmap;
     aget v6, p1, v7
 
@@ -624,7 +624,7 @@
 
     if-eq v0, v6, :cond_6
 
-    .line 1248
+    .line 1404
     :cond_5
     aget v6, p1, v7
 
@@ -634,24 +634,24 @@
 
     move-result-object v3
 
-    .line 1252
+    .line 1408
     :cond_6
     if-nez v3, :cond_7
 
     move-object v5, p0
 
-    .line 1253
+    .line 1409
     .local v5, workingBitmap:Landroid/graphics/Bitmap;
     :goto_1
     invoke-static {v5}, Landroid/provider/HtcUnionContact$Thumbnails;->getCropCenterBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 1254
+    .line 1410
     .local v2, cropedBitmap:Landroid/graphics/Bitmap;
     move-object v4, v2
 
-    .line 1255
+    .line 1411
     if-eqz v3, :cond_3
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
@@ -663,6 +663,6 @@
     :cond_7
     move-object v5, v3
 
-    .line 1252
+    .line 1408
     goto :goto_1
 .end method

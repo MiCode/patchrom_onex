@@ -114,7 +114,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 359
+    .line 367
     const/4 v0, 0x0
 
     return-object v0

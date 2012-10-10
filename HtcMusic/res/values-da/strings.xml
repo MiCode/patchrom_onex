@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Tilføj en afspilningsliste</string>
     <string name="htc_delete_playlists">Slet afspilningslister</string>
     <string name="htc_delete_playlist">Slet afspilningsliste</string>
+    <string name="htc_delete_all_playlists">Slet alle afspilningslister</string>
     <string name="htc_playlist_add_songs">Tilføj numre</string>
     <string name="htc_playlist_del_songs">Slet numre</string>
     <string name="htc_playlist_remove_songs">Fjern sange</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Buffer...</string>
     <string name="title_send_content">Sender indhold...</string>
     <string name="no_downloaded_apps_found">Ingen hentede programmer fundet</string>
+    <string name="music_folder_picker_dialog_msg">Tilføje sange til afspilningslister ved at vælge mappen? Nej til at tilføje sange på den anden måde</string>
 </resources>

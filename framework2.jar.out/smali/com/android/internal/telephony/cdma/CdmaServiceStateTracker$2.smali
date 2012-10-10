@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 255
+    .line 263
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,12 +44,12 @@
 
     const/4 v7, 0x0
 
-    .line 259
+    .line 267
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 260
+    .line 268
     .local v0, action:Ljava/lang/String;
     const-string v4, "APP_REQUEST_REFRESH_PHONE_INFO"
 
@@ -59,17 +59,17 @@
 
     if-eqz v4, :cond_2
 
-    .line 262
+    .line 270
     const-string v4, "CDMA"
 
     const-string v5, "Received APP_REQUEST_REFRESH_PHONE_INFO intent,Reload MDN "
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
+    .line 271
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
-    #getter for: Lcom/android/internal/telephony/ServiceStateTracker;->cm:Lcom/android/internal/telephony/CommandsInterface;
+    #getter for: Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->cm:Lcom/android/internal/telephony/CommandsInterface;
     invoke-static {v4}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$100(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)Lcom/android/internal/telephony/CommandsInterface;
 
     move-result-object v4
@@ -84,10 +84,10 @@
 
     invoke-interface {v4, v5}, Lcom/android/internal/telephony/CommandsInterface;->getCDMASubscription(Landroid/os/Message;)V
 
-    .line 265
+    .line 273
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
-    #getter for: Lcom/android/internal/telephony/ServiceStateTracker;->cm:Lcom/android/internal/telephony/CommandsInterface;
+    #getter for: Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->cm:Lcom/android/internal/telephony/CommandsInterface;
     invoke-static {v4}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$200(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)Lcom/android/internal/telephony/CommandsInterface;
 
     move-result-object v4
@@ -102,46 +102,46 @@
 
     invoke-interface {v4, v5}, Lcom/android/internal/telephony/CommandsInterface;->requestGetRadioSysInfo(Landroid/os/Message;)V
 
-    .line 266
+    .line 274
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     const-string v5, "Receive EVENT_OTA_PROVISION_STATUS_CHANGE and Send Request EVENT_RIL_CDMA_RS_INFO."
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 269
+    .line 277
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     #calls: Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->requestMCC()V
     invoke-static {v4}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$300(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)V
 
-    .line 271
+    .line 279
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     #calls: Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->requestMNC()V
     invoke-static {v4}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$400(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)V
 
-    .line 274
+    .line 282
     sget-short v4, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v5, 0x40
 
     if-ne v4, v5, :cond_0
 
-    .line 275
+    .line 283
     new-instance v1, Landroid/content/Intent;
 
     const-string v4, "com.htc.omadm.phone.state"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 276
+    .line 284
     .local v1, intentOMA:Landroid/content/Intent;
     const-string v4, "OTASP"
 
     invoke-virtual {v1, v4, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 277
+    .line 285
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     iget-object v4, v4, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->phone:Lcom/android/internal/telephony/cdma/CDMAPhone;
@@ -152,28 +152,41 @@
 
     invoke-virtual {v4, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 278
+    .line 286
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     const-string v5, "Send intent:com.htc.omadm.phone.state"
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 282
+    .line 295
     .end local v1           #intentOMA:Landroid/content/Intent;
     :cond_0
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     iget-object v4, v4, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->phone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    invoke-virtual {v4}, Lcom/android/internal/telephony/cdma/CDMAPhone;->resetMDNvoiceMailNumber()V
+    iget-object v4, v4, Lcom/android/internal/telephony/cdma/CDMAPhone;->mHtcCdmaVoiceMail:Lcom/android/internal/telephony/cdma/HtcCdmaVoiceMail;
 
-    .line 306
+    if-eqz v4, :cond_1
+
+    .line 296
+    iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
+
+    iget-object v4, v4, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->phone:Lcom/android/internal/telephony/cdma/CDMAPhone;
+
+    iget-object v4, v4, Lcom/android/internal/telephony/cdma/CDMAPhone;->mHtcCdmaVoiceMail:Lcom/android/internal/telephony/cdma/HtcCdmaVoiceMail;
+
+    const/4 v5, 0x5
+
+    invoke-virtual {v4, v5}, Lcom/android/internal/telephony/cdma/HtcCdmaVoiceMail;->setNumberToDefault(I)V
+
+    .line 321
     :cond_1
     :goto_0
     return-void
 
-    .line 286
+    .line 301
     :cond_2
     const-string v4, "android.intent.action.LOCALE_CHANGED"
 
@@ -183,7 +196,7 @@
 
     if-nez v4, :cond_1
 
-    .line 289
+    .line 304
     const-string v4, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -192,7 +205,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 290
+    .line 305
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
@@ -207,7 +220,7 @@
 
     goto :goto_0
 
-    .line 293
+    .line 308
     :cond_3
     invoke-static {}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$500()Z
 
@@ -223,7 +236,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 294
+    .line 309
     const-string v4, "ICC_TYPE"
 
     const/4 v5, -0x1
@@ -232,7 +245,7 @@
 
     move-result v3
 
-    .line 295
+    .line 310
     .local v3, uiccType:I
     const-string v4, "POVISIONED"
 
@@ -240,7 +253,7 @@
 
     move-result v2
 
-    .line 296
+    .line 311
     .local v2, provision:Z
     iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
@@ -274,19 +287,19 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 297
+    .line 312
     const/4 v4, 0x2
 
     if-ne v3, v4, :cond_4
 
     if-nez v2, :cond_4
 
-    .line 298
+    .line 313
     invoke-static {v7}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$602(Z)Z
 
     goto :goto_0
 
-    .line 301
+    .line 316
     :cond_4
     invoke-static {v8}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$602(Z)Z
 

@@ -37,7 +37,7 @@
 
     const/4 v2, 0x0
 
-    .line 1388
+    .line 1545
     const-string v0, "content://contacts/groups"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -46,7 +46,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$Group;->QUERY_GROUPS_URI:Landroid/net/Uri;
 
-    .line 1390
+    .line 1548
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "group_id"
@@ -59,7 +59,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$Group;->GROUP_CONTAINS_PERSON_PROJECTION:[Ljava/lang/String;
 
-    .line 1395
+    .line 1554
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -79,7 +79,7 @@
     .locals 0
 
     .prologue
-    .line 1386
+    .line 1542
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

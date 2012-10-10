@@ -44,15 +44,15 @@
     .parameter "thread"
 
     .prologue
-    .line 1149
+    .line 1158
     iput-object p1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
 
-    .line 1150
+    .line 1159
     const-string v0, "EventDispatcher"
 
     invoke-direct {p0, p2, v0, p3}, Lcom/htc/sunny2/RenderThreadHandler;-><init>(Ljava/lang/Object;Ljava/lang/String;Lcom/htc/sunny2/RenderThread;)V
 
-    .line 1151
+    .line 1160
     return-void
 .end method
 
@@ -63,24 +63,24 @@
     .parameter "msg"
 
     .prologue
-    .line 1154
+    .line 1163
     iget v1, p1, Lcom/htc/sunny2/RenderThreadHandler$RenderThreadMessage;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1200
+    .line 1209
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1157
+    .line 1166
     :pswitch_1
     iget-object v0, p1, Lcom/htc/sunny2/RenderThreadHandler$RenderThreadMessage;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/MotionEvent;
 
-    .line 1158
+    .line 1167
     .local v0, event:Landroid/view/MotionEvent;
     iget-object v1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
 
@@ -88,19 +88,19 @@
 
     invoke-virtual {v1, v0}, Lcom/htc/sunny2/view/SSurfaceView$SViewRoot;->dispatchTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 1159
+    .line 1168
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
     goto :goto_0
 
-    .line 1165
+    .line 1174
     .end local v0           #event:Landroid/view/MotionEvent;
     :pswitch_2
     iget-object v0, p1, Lcom/htc/sunny2/RenderThreadHandler$RenderThreadMessage;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 1166
+    .line 1175
     .local v0, event:Landroid/view/KeyEvent;
     iget-object v1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
 
@@ -110,7 +110,7 @@
 
     goto :goto_0
 
-    .line 1172
+    .line 1181
     .end local v0           #event:Landroid/view/KeyEvent;
     :pswitch_3
     iget-object v1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
@@ -125,7 +125,7 @@
 
     goto :goto_0
 
-    .line 1178
+    .line 1187
     :pswitch_4
     iget-object v1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
 
@@ -139,7 +139,7 @@
 
     goto :goto_0
 
-    .line 1184
+    .line 1193
     :pswitch_5
     iget-object v1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
 
@@ -151,7 +151,7 @@
 
     goto :goto_0
 
-    .line 1189
+    .line 1198
     :pswitch_6
     iget-object v1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
 
@@ -169,7 +169,7 @@
 
     goto :goto_0
 
-    .line 1194
+    .line 1203
     :pswitch_7
     iget-object v1, p0, Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;->this$0:Lcom/htc/sunny2/view/SSurfaceView;
 
@@ -187,7 +187,7 @@
 
     goto :goto_0
 
-    .line 1154
+    .line 1163
     nop
 
     :pswitch_data_0

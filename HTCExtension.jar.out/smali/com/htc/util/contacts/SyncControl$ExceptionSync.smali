@@ -21,10 +21,10 @@
     .parameter "authority"
 
     .prologue
-    .line 260
+    .line 267
     invoke-direct {p0, p1, p2}, Lcom/htc/util/contacts/SyncControl$SyncUnit;-><init>(Landroid/accounts/Account;Ljava/lang/String;)V
 
-    .line 261
+    .line 268
     return-void
 .end method
 
@@ -35,13 +35,13 @@
     .parameter "account"
 
     .prologue
-    .line 281
+    .line 288
     if-nez p1, :cond_0
 
-    .line 282
+    .line 289
     const/4 v0, 0x0
 
-    .line 284
+    .line 291
     :goto_0
     return v0
 
@@ -60,13 +60,13 @@
     .parameter "accountType"
 
     .prologue
-    .line 291
+    .line 298
     if-nez p1, :cond_0
 
-    .line 292
+    .line 299
     const/4 v0, 0x0
 
-    .line 294
+    .line 301
     :goto_0
     return v0
 
@@ -87,13 +87,13 @@
     .parameter "authority"
 
     .prologue
-    .line 301
+    .line 308
     if-nez p1, :cond_0
 
-    .line 302
+    .line 309
     const/4 v0, 0x0
 
-    .line 304
+    .line 311
     :goto_0
     return v0
 
@@ -116,17 +116,17 @@
 
     const/4 v1, 0x0
 
-    .line 267
+    .line 274
     if-ne p1, p0, :cond_1
 
     move v1, v2
 
-    .line 271
+    .line 278
     :cond_0
     :goto_0
     return v1
 
-    .line 268
+    .line 275
     :cond_1
     instance-of v3, p1, Lcom/htc/util/contacts/SyncControl$SyncUnit;
 
@@ -134,10 +134,10 @@
 
     move-object v0, p1
 
-    .line 269
+    .line 276
     check-cast v0, Lcom/htc/util/contacts/SyncControl$SyncUnit;
 
-    .line 271
+    .line 278
     .local v0, other:Lcom/htc/util/contacts/SyncControl$SyncUnit;
     iget-object v3, p0, Lcom/htc/util/contacts/SyncControl$SyncUnit;->authority:Ljava/lang/String;
 
@@ -194,7 +194,7 @@
     .locals 2
 
     .prologue
-    .line 311
+    .line 318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

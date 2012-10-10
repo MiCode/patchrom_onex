@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3883
+    .line 3921
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3883
+    .line 3921
     invoke-direct {p0, p1}, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$MyDataSetObserver;-><init>(Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;)V
 
     return-void
@@ -50,7 +50,7 @@
     .locals 3
 
     .prologue
-    .line 3886
+    .line 3924
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
@@ -81,12 +81,12 @@
 
     move-result v0
 
-    .line 3890
+    .line 3928
     .local v0, count:I
     :goto_0
     if-lez v0, :cond_1
 
-    .line 3891
+    .line 3929
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;->mNowPlayingViewHelper:Lcom/htc/music/NowPlayingViewHelper;
@@ -96,18 +96,18 @@
 
     invoke-virtual {v1}, Lcom/htc/music/NowPlayingViewHelper;->hideEmptyErrorView()V
 
-    .line 3895
+    .line 3933
     :goto_1
     return-void
 
-    .line 3886
+    .line 3924
     .end local v0           #count:I
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 3893
+    .line 3931
     .restart local v0       #count:I
     :cond_1
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;
@@ -128,6 +128,6 @@
     .locals 0
 
     .prologue
-    .line 3901
+    .line 3939
     return-void
 .end method

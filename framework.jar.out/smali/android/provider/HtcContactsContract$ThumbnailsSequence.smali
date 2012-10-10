@@ -76,7 +76,7 @@
 
     const/4 v1, 0x0
 
-    .line 718
+    .line 780
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string/jumbo v6, "thumbnails_sequence"
@@ -87,7 +87,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 742
+    .line 809
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v6, 0x60
@@ -112,7 +112,7 @@
     :goto_0
     sput-boolean v0, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->IS_QVGA:Z
 
-    .line 747
+    .line 814
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v6, 0x19
@@ -285,7 +285,7 @@
     :goto_1
     sput-boolean v0, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->IS_WVGA:Z
 
-    .line 782
+    .line 849
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v6, 0x7b
@@ -340,7 +340,7 @@
     :goto_2
     sput-boolean v0, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->IS_QHD:Z
 
-    .line 794
+    .line 861
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v6, 0xad
@@ -350,7 +350,7 @@
     :goto_3
     sput-boolean v2, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->IS_HD:Z
 
-    .line 808
+    .line 877
     sget-boolean v0, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->IS_QVGA:Z
 
     if-eqz v0, :cond_7
@@ -365,28 +365,28 @@
     :cond_3
     move v0, v1
 
-    .line 742
+    .line 809
     goto/16 :goto_0
 
     :cond_4
     move v0, v1
 
-    .line 747
+    .line 814
     goto :goto_1
 
     :cond_5
     move v0, v1
 
-    .line 782
+    .line 849
     goto :goto_2
 
     :cond_6
     move v2, v1
 
-    .line 794
+    .line 861
     goto :goto_3
 
-    .line 808
+    .line 877
     :cond_7
     sget-boolean v0, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->IS_WVGA:Z
 
@@ -424,8 +424,8 @@
     .locals 0
 
     .prologue
-    .line 708
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 769
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -438,7 +438,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 895
+    .line 966
     const/4 v0, 0x1
 
     new-array v2, v0, [Ljava/lang/String;
@@ -449,7 +449,7 @@
 
     aput-object v4, v2, v0
 
-    .line 898
+    .line 969
     .local v2, PROJECTION:[Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -481,7 +481,7 @@
 
     move-result-object v7
 
-    .line 900
+    .line 971
     .local v7, uriPrefix:Landroid/net/Uri;
     invoke-static {v7, p0, p1}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
@@ -494,12 +494,12 @@
 
     move-object v5, v3
 
-    .line 901
+    .line 972
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 902
+    .line 973
     .local v6, matchCursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -509,28 +509,28 @@
     .parameter "_id"
 
     .prologue
-    .line 937
+    .line 1009
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x4b
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 938
+    .line 1010
     .local v0, fileName:Ljava/lang/StringBuilder;
     const-string v1, "/data/data/com.android.providers.contacts/files/thumbnail_photo_"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 939
+    .line 1011
     invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 940
+    .line 1012
     const-string v1, ".jpg"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 941
+    .line 1013
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -546,7 +546,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 906
+    .line 978
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -577,7 +577,7 @@
 
     move-result-object v7
 
-    .line 908
+    .line 980
     .local v7, uriPrefix:Landroid/net/Uri;
     invoke-static {v7, p0, p1}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
@@ -592,12 +592,12 @@
 
     move-object v5, v2
 
-    .line 909
+    .line 981
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 910
+    .line 982
     .local v6, matchCursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -607,28 +607,28 @@
     .parameter "_id"
 
     .prologue
-    .line 821
+    .line 891
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x4b
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 822
+    .line 892
     .local v0, fileName:Ljava/lang/StringBuilder;
     const-string v1, "/data/data/com.android.providers.contacts/files/thumbnail_photo_"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 823
+    .line 893
     invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 824
+    .line 894
     const-string v1, ".png"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 826
+    .line 896
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -640,7 +640,7 @@
     .locals 2
 
     .prologue
-    .line 964
+    .line 1036
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v1, 0x60
@@ -653,15 +653,15 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 966
+    .line 1038
     :cond_0
     const/16 v0, 0x28
 
-    .line 971
+    .line 1043
     :goto_0
     return v0
 
-    .line 967
+    .line 1039
     :cond_1
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -675,13 +675,13 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 969
+    .line 1041
     :cond_2
     const/16 v0, 0x46
 
     goto :goto_0
 
-    .line 971
+    .line 1043
     :cond_3
     const/16 v0, 0x32
 
@@ -695,38 +695,38 @@
     .parameter "cr"
 
     .prologue
-    .line 838
+    .line 908
     invoke-static {p0, p1, p3}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->getContactThumbnailCursor(JLandroid/content/ContentResolver;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 839
+    .line 909
     .local v0, matchCursor:Landroid/database/Cursor;
     const-wide/16 v1, 0x0
 
-    .line 840
+    .line 910
     .local v1, thumbnailId:J
     if-eqz v0, :cond_1
 
-    .line 841
+    .line 911
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 842
+    .line 912
     const/4 v3, 0x0
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
 
-    .line 845
+    .line 915
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 848
+    .line 918
     :cond_1
     const-wide/16 v3, 0x0
 
@@ -734,12 +734,12 @@
 
     if-lez v3, :cond_2
 
-    .line 849
+    .line 919
     invoke-static {v1, v2, p2}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->loadThumbnail(JLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 851
+    .line 921
     :goto_0
     return-object v3
 
@@ -755,10 +755,10 @@
     .parameter "opts"
 
     .prologue
-    .line 952
+    .line 1024
     const/4 v0, 0x0
 
-    .line 953
+    .line 1025
     .local v0, result:Landroid/graphics/Bitmap;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -766,11 +766,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 959
+    .line 1031
     :goto_0
     return-object v0
 
-    .line 956
+    .line 1028
     :cond_0
     invoke-static {p0, p1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -786,38 +786,38 @@
     .parameter "cr"
 
     .prologue
-    .line 856
+    .line 927
     invoke-static {p0, p1, p3}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->getRawcontactThumbnailCursor(JLandroid/content/ContentResolver;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 857
+    .line 928
     .local v0, matchCursor:Landroid/database/Cursor;
     const-wide/16 v1, 0x0
 
-    .line 858
+    .line 929
     .local v1, thumbnailId:J
     if-eqz v0, :cond_1
 
-    .line 859
+    .line 930
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 860
+    .line 931
     const/4 v3, 0x0
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
 
-    .line 863
+    .line 934
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 866
+    .line 937
     :cond_1
     const-wide/16 v3, 0x0
 
@@ -825,12 +825,12 @@
 
     if-lez v3, :cond_2
 
-    .line 867
+    .line 938
     invoke-static {v1, v2, p2}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->loadThumbnail(JLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 869
+    .line 940
     :goto_0
     return-object v3
 
@@ -846,38 +846,38 @@
     .parameter "cr"
 
     .prologue
-    .line 874
+    .line 945
     invoke-static {p0, p1, p2}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->getRawcontactThumbnailCursor(JLandroid/content/ContentResolver;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 875
+    .line 946
     .local v0, matchCursor:Landroid/database/Cursor;
     const-wide/16 v1, 0x0
 
-    .line 876
+    .line 947
     .local v1, thumbnailId:J
     if-eqz v0, :cond_1
 
-    .line 877
+    .line 948
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 878
+    .line 949
     const/4 v3, 0x0
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
 
-    .line 881
+    .line 952
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 884
+    .line 955
     :cond_1
     return-wide v1
 .end method
@@ -888,18 +888,18 @@
     .parameter "opts"
 
     .prologue
-    .line 921
+    .line 993
     invoke-static {p0, p1}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->getThumbnailName(J)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 922
+    .line 994
     .local v1, imagePath:Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 923
+    .line 995
     .local v0, file:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -907,16 +907,16 @@
 
     if-nez v2, :cond_0
 
-    .line 924
+    .line 996
     invoke-static {p0, p1}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->getJpgThumbnailName(J)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 926
+    .line 998
     :cond_0
     const/4 v0, 0x0
 
-    .line 927
+    .line 999
     invoke-static {v1, p2}, Landroid/provider/HtcContactsContract$ThumbnailsSequence;->loadImageFromFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v2

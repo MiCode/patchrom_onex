@@ -32,7 +32,7 @@
     .parameter
 
     .prologue
-    .line 5760
+    .line 6189
     iput-object p1, p0, Lcom/android/providers/media/MediaProvider$ThumbData;->this$0:Lcom/android/providers/media/MediaProvider;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .parameter "x1"
 
     .prologue
-    .line 5760
+    .line 6189
     invoke-direct {p0, p1}, Lcom/android/providers/media/MediaProvider$ThumbData;-><init>(Lcom/android/providers/media/MediaProvider;)V
 
     return-void

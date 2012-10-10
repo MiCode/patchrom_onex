@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 37
     invoke-static {}, Landroid/os/RecoverySystem;->handleAftermath()Ljava/lang/String;
 
     move-result-object v0
@@ -38,10 +38,10 @@
     .end annotation
 
     .prologue
-    .line 51
+    .line 45
     invoke-static {p0, p1}, Landroid/os/RecoverySystem;->installMultiplePackage(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 52
+    .line 46
     return-void
 .end method
 
@@ -55,9 +55,9 @@
     .end annotation
 
     .prologue
-    .line 28
+    .line 25
     invoke-static {p0}, Landroid/os/RecoverySystem;->rebootWipeDataVzwHpst(Landroid/content/Context;)V
 
-    .line 29
+    .line 26
     return-void
 .end method

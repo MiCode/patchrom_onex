@@ -1615,7 +1615,7 @@
 
     .line 338
     .local v0, accountManagerResult:Landroid/os/Bundle;
-    const-string/jumbo v4, "intent"
+    const-string v4, "intent"
 
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 

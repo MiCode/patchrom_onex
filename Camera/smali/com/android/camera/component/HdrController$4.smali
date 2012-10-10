@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 276
+    .line 278
     iput-object p1, p0, Lcom/android/camera/component/HdrController$4;->this$0:Lcom/android/camera/component/HdrController;
 
     iput-object p2, p0, Lcom/android/camera/component/HdrController$4;->val$cameraThread:Lcom/android/camera/CameraThread;
@@ -48,11 +48,11 @@
     .parameter "camera"
 
     .prologue
-    .line 279
+    .line 281
     iget-object v0, p0, Lcom/android/camera/component/HdrController$4;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/CameraThread;->handleCommonPostviewCallback([BLandroid/hardware/Camera;)V
 
-    .line 280
+    .line 282
     return-void
 .end method

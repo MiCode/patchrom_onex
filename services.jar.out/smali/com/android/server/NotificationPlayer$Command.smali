@@ -43,13 +43,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 56
+    .line 58
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
+    .line 69
     iput v0, p0, Lcom/android/server/NotificationPlayer$Command;->oriVolume:I
 
-    .line 68
+    .line 70
     iput v0, p0, Lcom/android/server/NotificationPlayer$Command;->newVolume:I
 
     return-void
@@ -60,7 +60,7 @@
     .parameter "x0"
 
     .prologue
-    .line 56
+    .line 58
     invoke-direct {p0}, Lcom/android/server/NotificationPlayer$Command;-><init>()V
 
     return-void
@@ -72,7 +72,7 @@
     .locals 2
 
     .prologue
-    .line 72
+    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 702
+    .line 704
     invoke-static {}, Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;->values()[Lcom/android/internal/telephony/cdma/CdmaSmsIdValue$AddrNumberType;
 
     move-result-object v0

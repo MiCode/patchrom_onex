@@ -26,12 +26,12 @@
     .parameter
 
     .prologue
-    .line 4581
+    .line 4590
     iput-object p1, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 4582
+    .line 4591
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->childIndex:I
@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 4587
+    .line 4596
     iget v0, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->childIndex:I
 
     return v0
@@ -56,7 +56,7 @@
     .parameter "animation"
 
     .prologue
-    .line 4595
+    .line 4604
     iget v0, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->childIndex:I
 
     iget-object v1, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->this$0:Lcom/htc/widget/HtcListView;
@@ -83,7 +83,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 4596
+    .line 4605
     :cond_0
     return-void
 .end method
@@ -93,7 +93,7 @@
     .parameter "animation"
 
     .prologue
-    .line 4591
+    .line 4600
     iget v0, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->childIndex:I
 
     iget-object v1, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->this$0:Lcom/htc/widget/HtcListView;
@@ -120,7 +120,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 4592
+    .line 4601
     :cond_0
     return-void
 .end method
@@ -130,9 +130,9 @@
     .parameter "index"
 
     .prologue
-    .line 4584
+    .line 4593
     iput p1, p0, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->childIndex:I
 
-    .line 4585
+    .line 4594
     return-void
 .end method

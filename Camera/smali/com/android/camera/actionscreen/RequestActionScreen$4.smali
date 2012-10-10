@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 245
+    .line 252
     iput-object p1, p0, Lcom/android/camera/actionscreen/RequestActionScreen$4;->this$0:Lcom/android/camera/actionscreen/RequestActionScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +45,14 @@
     .prologue
     const v3, 0x7f02002e
 
-    .line 249
+    .line 256
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
 
     float-to-int v0, v2
 
-    .line 250
+    .line 257
     .local v0, x:I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -60,7 +60,7 @@
 
     float-to-int v1, v2
 
-    .line 251
+    .line 258
     .local v1, y:I
     if-ltz v0, :cond_0
 
@@ -78,7 +78,7 @@
 
     if-le v1, v2, :cond_1
 
-    .line 253
+    .line 260
     :cond_0
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen$4;->this$0:Lcom/android/camera/actionscreen/RequestActionScreen;
 
@@ -91,14 +91,14 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 254
+    .line 261
     const/4 v2, 0x0
 
-    .line 266
+    .line 273
     :goto_0
     return v2
 
-    .line 256
+    .line 263
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -106,13 +106,13 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 266
+    .line 273
     :goto_1
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 259
+    .line 266
     :pswitch_0
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen$4;->this$0:Lcom/android/camera/actionscreen/RequestActionScreen;
 
@@ -138,7 +138,7 @@
 
     goto :goto_1
 
-    .line 262
+    .line 269
     :pswitch_1
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen$4;->this$0:Lcom/android/camera/actionscreen/RequestActionScreen;
 
@@ -151,7 +151,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 263
+    .line 270
     iget-object v2, p0, Lcom/android/camera/actionscreen/RequestActionScreen$4;->this$0:Lcom/android/camera/actionscreen/RequestActionScreen;
 
     #calls: Lcom/android/camera/actionscreen/RequestActionScreen;->onReCaptureClicked()V
@@ -159,7 +159,7 @@
 
     goto :goto_1
 
-    .line 256
+    .line 263
     nop
 
     :pswitch_data_0

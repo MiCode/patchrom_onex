@@ -587,7 +587,7 @@
     .line 392
     iget-object v9, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v10, "layout_inflater"
+    const-string v10, "layout_inflater"
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

@@ -71,18 +71,18 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 48
+    .line 92
     sput-object v4, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
-    .line 49
+    .line 93
     sput-object v4, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
-    .line 70
+    .line 131
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     if-nez v1, :cond_0
 
-    .line 74
+    .line 135
     :try_start_0
     new-instance v1, Ljava/util/HashMap;
 
@@ -90,21 +90,21 @@
 
     sput-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
-    .line 75
+    .line 136
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
-    .line 76
+    .line 137
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->SPRINT_LTE_CONFIG()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 78
+    .line 139
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "ota"
@@ -113,7 +113,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
+    .line 140
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "internet"
@@ -122,7 +122,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 80
+    .line 141
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "pam"
@@ -131,7 +131,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
+    .line 142
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_ADMIN:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -140,7 +140,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
+    .line 143
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_INTERNET:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -149,7 +149,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
+    .line 144
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_TETHERING:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -158,13 +158,13 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
+    .line 187
     .local v0, e:Ljava/lang/Exception;
     :cond_0
     :goto_0
     return-void
 
-    .line 85
+    .line 146
     .end local v0           #e:Ljava/lang/Exception;
     :cond_1
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->VERIZON_LTE_CONFIG()Z
@@ -173,7 +173,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 87
+    .line 148
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "1"
@@ -182,7 +182,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 88
+    .line 149
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "2"
@@ -191,7 +191,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
+    .line 150
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "3"
@@ -200,7 +200,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
+    .line 151
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "4"
@@ -209,7 +209,16 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
+    .line 152
+    sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
+
+    const-string v2, "5"
+
+    sget-object v3, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_CUSTOMIZE1:Lcom/android/internal/telephony/APNParam$ClassId;
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 153
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_IMS:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -218,7 +227,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
+    .line 154
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_ADMIN:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -227,7 +236,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 93
+    .line 155
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_INTERNET:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -236,7 +245,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
+    .line 156
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_APP:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -244,16 +253,25 @@
     const-string v3, "4"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 157
+    sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
+
+    sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_CUSTOMIZE1:Lcom/android/internal/telephony/APNParam$ClassId;
+
+    const-string v3, "5"
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 117
+    .line 180
     :catch_0
     move-exception v0
 
-    .line 119
+    .line 182
     .restart local v0       #e:Ljava/lang/Exception;
     const-string v1, "APNParam"
 
@@ -281,15 +299,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
+    .line 183
     sput-object v4, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
-    .line 121
+    .line 184
     sput-object v4, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 96
+    .line 159
     .end local v0           #e:Ljava/lang/Exception;
     :cond_2
     :try_start_1
@@ -299,7 +317,7 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 98
+    .line 161
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "1"
@@ -308,7 +326,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 99
+    .line 162
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "3"
@@ -317,7 +335,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
+    .line 163
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "4"
@@ -326,7 +344,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
+    .line 164
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_IMS:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -335,7 +353,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
+    .line 165
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_INTERNET:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -344,7 +362,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 103
+    .line 166
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_ADMIN:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -355,7 +373,7 @@
 
     goto/16 :goto_0
 
-    .line 106
+    .line 169
     :cond_3
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->KDDI_LTE_CONFIG()Z
 
@@ -363,7 +381,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 108
+    .line 171
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "ims"
@@ -372,16 +390,16 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
+    .line 172
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
-    const-string v2, "internet"
+    const-string v2, "internet_kddi"
 
     sget-object v3, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_INTERNET:Lcom/android/internal/telephony/APNParam$ClassId;
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
+    .line 173
     sget-object v1, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     const-string v2, "admin"
@@ -390,7 +408,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
+    .line 174
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_IMS:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -399,16 +417,16 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 112
+    .line 175
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_INTERNET:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    const-string v3, "internet"
+    const-string v3, "internet_kddi"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
+    .line 176
     sget-object v1, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_ADMIN:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -430,42 +448,42 @@
 
     const/4 v1, -0x1
 
-    .line 127
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 190
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
+    .line 191
     iput v1, p0, Lcom/android/internal/telephony/APNParam;->id:I
 
-    .line 129
+    .line 192
     iput-object v2, p0, Lcom/android/internal/telephony/APNParam;->pdn_label:Ljava/lang/String;
 
-    .line 130
+    .line 193
     iput-object v2, p0, Lcom/android/internal/telephony/APNParam;->name:Ljava/lang/String;
 
-    .line 131
+    .line 194
     iput v1, p0, Lcom/android/internal/telephony/APNParam;->type:I
 
-    .line 132
+    .line 195
     iput v1, p0, Lcom/android/internal/telephony/APNParam;->state:I
 
-    .line 133
+    .line 196
     iput v1, p0, Lcom/android/internal/telephony/APNParam;->timer:I
 
-    .line 134
+    .line 197
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/APNParam;->rat:I
 
-    .line 135
+    .line 198
     iput-object v2, p0, Lcom/android/internal/telephony/APNParam;->user:Ljava/lang/String;
 
-    .line 136
+    .line 199
     iput-object v2, p0, Lcom/android/internal/telephony/APNParam;->password:Ljava/lang/String;
 
-    .line 137
+    .line 200
     iput v1, p0, Lcom/android/internal/telephony/APNParam;->authType:I
 
-    .line 138
+    .line 201
     return-void
 .end method
 
@@ -479,17 +497,17 @@
     .parameter "n_timer"
 
     .prologue
-    .line 220
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 295
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 221
+    .line 296
     const-string v0, "APNParam"
 
     const-string v1, "[FIXME] Dummy APNParam ctor"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
+    .line 297
     return-void
 .end method
 
@@ -503,28 +521,28 @@
     .parameter "n_timer"
 
     .prologue
-    .line 151
+    .line 214
     invoke-direct {p0}, Lcom/android/internal/telephony/APNParam;-><init>()V
 
-    .line 152
+    .line 215
     iput p1, p0, Lcom/android/internal/telephony/APNParam;->id:I
 
-    .line 153
+    .line 216
     iput-object p2, p0, Lcom/android/internal/telephony/APNParam;->pdn_label:Ljava/lang/String;
 
-    .line 154
+    .line 217
     iput-object p3, p0, Lcom/android/internal/telephony/APNParam;->name:Ljava/lang/String;
 
-    .line 155
+    .line 218
     iput p4, p0, Lcom/android/internal/telephony/APNParam;->type:I
 
-    .line 156
+    .line 219
     iput p5, p0, Lcom/android/internal/telephony/APNParam;->state:I
 
-    .line 157
+    .line 220
     iput p6, p0, Lcom/android/internal/telephony/APNParam;->timer:I
 
-    .line 158
+    .line 221
     return-void
 .end method
 
@@ -542,22 +560,22 @@
     .parameter "n_auth_type"
 
     .prologue
-    .line 142
+    .line 205
     invoke-direct/range {p0 .. p6}, Lcom/android/internal/telephony/APNParam;-><init>(ILjava/lang/String;Ljava/lang/String;III)V
 
-    .line 143
+    .line 206
     iput p7, p0, Lcom/android/internal/telephony/APNParam;->rat:I
 
-    .line 144
+    .line 207
     iput-object p8, p0, Lcom/android/internal/telephony/APNParam;->user:Ljava/lang/String;
 
-    .line 145
+    .line 208
     iput-object p9, p0, Lcom/android/internal/telephony/APNParam;->password:Ljava/lang/String;
 
-    .line 146
+    .line 209
     iput p10, p0, Lcom/android/internal/telephony/APNParam;->authType:I
 
-    .line 147
+    .line 210
     return-void
 .end method
 
@@ -567,16 +585,16 @@
     .parameter "rat"
 
     .prologue
-    .line 163
+    .line 226
     invoke-direct {p0}, Lcom/android/internal/telephony/APNParam;-><init>()V
 
-    .line 164
+    .line 227
     iput-object p1, p0, Lcom/android/internal/telephony/APNParam;->pdn_label:Ljava/lang/String;
 
-    .line 165
+    .line 228
     iput p2, p0, Lcom/android/internal/telephony/APNParam;->rat:I
 
-    .line 166
+    .line 229
     return-void
 .end method
 
@@ -587,12 +605,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 187
+    .line 258
     sget-object v0, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
     if-nez v0, :cond_1
 
-    .line 189
+    .line 260
     const-string v2, "APNParam"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -634,17 +652,17 @@
 
     move-object v0, v1
 
-    .line 197
+    .line 268
     :goto_1
     return-object v0
 
-    .line 189
+    .line 260
     :cond_0
     const-string v0, ""
 
     goto :goto_0
 
-    .line 192
+    .line 263
     :cond_1
     sget-object v0, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
@@ -654,7 +672,7 @@
 
     if-nez v0, :cond_2
 
-    .line 194
+    .line 265
     const-string v0, "APNParam"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -679,10 +697,10 @@
 
     move-object v0, v1
 
-    .line 195
+    .line 266
     goto :goto_1
 
-    .line 197
+    .line 268
     :cond_2
     sget-object v0, Lcom/android/internal/telephony/APNParam;->classIdMapping:Ljava/util/HashMap;
 
@@ -701,7 +719,7 @@
     .locals 3
 
     .prologue
-    .line 171
+    .line 238
     sget-object v0, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
     if-eqz v0, :cond_0
@@ -710,7 +728,7 @@
 
     if-nez v0, :cond_2
 
-    .line 173
+    .line 240
     :cond_0
     const-string v1, "APNParam"
 
@@ -753,20 +771,20 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
+    .line 241
     sget-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_NONE:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    .line 181
+    .line 248
     :goto_1
     return-object v0
 
-    .line 173
+    .line 240
     :cond_1
     const-string v0, ""
 
     goto :goto_0
 
-    .line 176
+    .line 243
     :cond_2
     sget-object v0, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
@@ -778,7 +796,7 @@
 
     if-nez v0, :cond_3
 
-    .line 178
+    .line 245
     const-string v0, "APNParam"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -803,12 +821,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
+    .line 246
     sget-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_NONE:Lcom/android/internal/telephony/APNParam$ClassId;
 
     goto :goto_1
 
-    .line 181
+    .line 248
     :cond_3
     sget-object v0, Lcom/android/internal/telephony/APNParam;->pdnLabelMapping:Ljava/util/HashMap;
 
@@ -827,14 +845,14 @@
     .locals 2
 
     .prologue
-    .line 202
+    .line 277
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "{ "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 204
+    .line 279
     .local v0, sb:Ljava/lang/StringBuilder;
     iget v1, p0, Lcom/android/internal/telephony/APNParam;->id:I
 
@@ -844,7 +862,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 205
+    .line 280
     iget-object v1, p0, Lcom/android/internal/telephony/APNParam;->pdn_label:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -853,7 +871,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 206
+    .line 281
     iget-object v1, p0, Lcom/android/internal/telephony/APNParam;->name:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -862,7 +880,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 207
+    .line 282
     iget v1, p0, Lcom/android/internal/telephony/APNParam;->type:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -871,7 +889,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 208
+    .line 283
     iget v1, p0, Lcom/android/internal/telephony/APNParam;->state:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -880,7 +898,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 209
+    .line 284
     iget v1, p0, Lcom/android/internal/telephony/APNParam;->timer:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -889,7 +907,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 210
+    .line 285
     iget v1, p0, Lcom/android/internal/telephony/APNParam;->rat:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -898,7 +916,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 211
+    .line 286
     iget-object v1, p0, Lcom/android/internal/telephony/APNParam;->user:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -907,7 +925,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 212
+    .line 287
     iget-object v1, p0, Lcom/android/internal/telephony/APNParam;->password:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -916,7 +934,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 213
+    .line 288
     iget v1, p0, Lcom/android/internal/telephony/APNParam;->authType:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -925,7 +943,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 215
+    .line 290
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

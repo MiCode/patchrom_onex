@@ -50,30 +50,30 @@
 
     const/4 v2, 0x0
 
-    .line 5350
+    .line 5359
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 5345
+    .line 5354
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
-    .line 5352
+    .line 5361
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 5353
+    .line 5362
     iput p4, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mResID:I
 
-    .line 5354
+    .line 5363
     iput-object p3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
-    .line 5356
+    .line 5365
     const v0, 0x7f07004d
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -82,18 +82,18 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mUnknownArtist:Ljava/lang/String;
 
-    .line 5359
+    .line 5368
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020050
+    const v1, 0x7f020052
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v7
 
-    .line 5361
+    .line 5370
     .local v7, b:Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -101,17 +101,17 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 5362
+    .line 5371
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/BitmapDrawable;->setFilterBitmap(Z)V
 
-    .line 5363
+    .line 5372
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/BitmapDrawable;->setDither(Z)V
 
-    .line 5365
+    .line 5374
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAsyncImageDecoder:Lcom/htc/music/util/AsyncImageDecoder;
@@ -121,7 +121,7 @@
 
     if-nez v0, :cond_0
 
-    .line 5367
+    .line 5376
     iget-object v8, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     new-instance v0, Lcom/htc/music/util/AsyncImageDecoder;
@@ -159,11 +159,11 @@
     #setter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAsyncImageDecoder:Lcom/htc/music/util/AsyncImageDecoder;
     invoke-static {v8, v0}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$5602(Lcom/htc/music/browserlayer/TrackBrowserActivity;Lcom/htc/music/util/AsyncImageDecoder;)Lcom/htc/music/util/AsyncImageDecoder;
 
-    .line 5373
+    .line 5382
     :goto_0
     return-void
 
-    .line 5371
+    .line 5380
     :cond_0
     const-string v0, "[PluginNowPlayingListActivity]"
 
@@ -179,7 +179,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5341
+    .line 5350
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     return-object v0
@@ -191,10 +191,10 @@
     .locals 2
 
     .prologue
-    .line 5376
+    .line 5385
     const/4 v0, 0x0
 
-    .line 5377
+    .line 5386
     .local v0, count:I
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -202,7 +202,7 @@
 
     if-nez v1, :cond_0
 
-    .line 5378
+    .line 5387
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mNowPlayingItemsArrayList:Ljava/util/ArrayList;
@@ -214,11 +214,11 @@
 
     move-result v0
 
-    .line 5383
+    .line 5392
     :goto_0
     return v0
 
-    .line 5381
+    .line 5390
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
@@ -239,7 +239,7 @@
     .parameter "position"
 
     .prologue
-    .line 5387
+    .line 5396
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -252,7 +252,7 @@
     .parameter "position"
 
     .prologue
-    .line 5391
+    .line 5400
     int-to-long v0, p1
 
     return-wide v0
@@ -265,7 +265,7 @@
     .parameter "parent"
 
     .prologue
-    .line 5395
+    .line 5404
     const-string v13, "[PluginNowPlayingListActivity]"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -296,10 +296,10 @@
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5399
+    .line 5408
     if-nez p2, :cond_6
 
-    .line 5400
+    .line 5409
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mInflater:Landroid/view/LayoutInflater;
@@ -314,14 +314,14 @@
 
     move-result-object p2
 
-    .line 5402
+    .line 5411
     new-instance v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;
 
     move-object/from16 v0, p0
 
     invoke-direct {v5, v0}, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;-><init>(Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;)V
 
-    .line 5403
+    .line 5412
     .local v5, holder:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;
     const v13, 0x7f080024
 
@@ -335,7 +335,7 @@
 
     iput-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 5404
+    .line 5413
     const v13, 0x7f080025
 
     move-object/from16 v0, p2
@@ -348,14 +348,14 @@
 
     iput-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->play_indicator:Lcom/htc/widget/HtcListItemImageButton;
 
-    .line 5405
+    .line 5414
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->play_indicator:Lcom/htc/widget/HtcListItemImageButton;
 
     const/16 v14, 0x8
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcListItemImageButton;->setVisibility(I)V
 
-    .line 5406
+    .line 5415
     const v13, 0x7f080023
 
     move-object/from16 v0, p2
@@ -368,7 +368,7 @@
 
     iput-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 5407
+    .line 5416
     const v13, 0x7f080026
 
     move-object/from16 v0, p2
@@ -381,7 +381,7 @@
 
     iput-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
-    .line 5408
+    .line 5417
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
     move-object/from16 v0, p0
@@ -424,30 +424,30 @@
 
     invoke-virtual/range {v13 .. v16}, Lcom/htc/widget/HtcRimImageButton;->setButtonBackgroundResource(III)V
 
-    .line 5412
+    .line 5421
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
     const v14, 0x7f020028
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 
-    .line 5413
+    .line 5422
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 5422
+    .line 5431
     :goto_0
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
     if-eqz v13, :cond_0
 
-    .line 5423
+    .line 5432
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 5424
+    .line 5433
     .local v4, data:Landroid/os/Bundle;
     const-string v13, "position"
 
@@ -455,12 +455,12 @@
 
     invoke-virtual {v4, v13, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 5426
+    .line 5435
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v13, v4}, Lcom/htc/widget/HtcRimImageButton;->setTag(Ljava/lang/Object;)V
 
-    .line 5429
+    .line 5438
     .end local v4           #data:Landroid/os/Bundle;
     :cond_0
     move-object/from16 v0, p0
@@ -478,14 +478,14 @@
 
     if-nez v13, :cond_e
 
-    .line 5432
+    .line 5441
     const/4 v3, 0x0
 
-    .line 5434
+    .line 5443
     .local v3, curListItem:Landroid/content/ContentValues;
     move/from16 v11, p1
 
-    .line 5435
+    .line 5444
     .local v11, realPos:I
     move-object/from16 v0, p0
 
@@ -495,7 +495,7 @@
 
     if-eqz v13, :cond_1
 
-    .line 5437
+    .line 5446
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -515,16 +515,16 @@
 
     check-cast v10, Ljava/lang/Integer;
 
-    .line 5438
+    .line 5447
     .local v10, pos:Ljava/lang/Integer;
     if-eqz v10, :cond_1
 
-    .line 5439
+    .line 5448
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
 
     move-result v11
 
-    .line 5442
+    .line 5451
     .end local v10           #pos:Ljava/lang/Integer;
     :cond_1
     move-object/from16 v0, p0
@@ -543,11 +543,11 @@
     .end local v3           #curListItem:Landroid/content/ContentValues;
     check-cast v3, Landroid/content/ContentValues;
 
-    .line 5444
+    .line 5453
     .restart local v3       #curListItem:Landroid/content/ContentValues;
     const/4 v12, 0x0
 
-    .line 5447
+    .line 5456
     .local v12, tmpStr:Ljava/lang/String;
     const-string v13, "title"
 
@@ -555,10 +555,10 @@
 
     move-result-object v12
 
-    .line 5448
+    .line 5457
     if-eqz v12, :cond_2
 
-    .line 5449
+    .line 5458
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -567,12 +567,12 @@
 
     if-nez v13, :cond_7
 
-    .line 5451
+    .line 5460
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     invoke-virtual {v13, v12}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 5460
+    .line 5469
     :cond_2
     :goto_1
     const-string v13, "artist"
@@ -581,7 +581,7 @@
 
     move-result-object v12
 
-    .line 5461
+    .line 5470
     if-eqz v12, :cond_3
 
     const-string v13, "<unknown>"
@@ -592,7 +592,7 @@
 
     if-eqz v13, :cond_8
 
-    .line 5462
+    .line 5471
     :cond_3
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -602,7 +602,7 @@
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 5467
+    .line 5476
     :goto_2
     move-object/from16 v0, p0
 
@@ -623,7 +623,7 @@
 
     check-cast v2, Landroid/graphics/Bitmap;
 
-    .line 5470
+    .line 5479
     .local v2, cacheBmp:Landroid/graphics/Bitmap;
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
@@ -633,20 +633,20 @@
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcListItemTileImage;->setTag(Ljava/lang/Object;)V
 
-    .line 5472
+    .line 5481
     if-eqz v2, :cond_9
 
-    .line 5474
+    .line 5483
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
     if-eqz v13, :cond_4
 
-    .line 5475
+    .line 5484
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
     invoke-virtual {v13, v2}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 5526
+    .line 5535
     :cond_4
     :goto_3
     move-object/from16 v0, p0
@@ -660,21 +660,21 @@
 
     if-ne v13, v11, :cond_d
 
-    .line 5527
+    .line 5536
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->play_indicator:Lcom/htc/widget/HtcListItemImageButton;
 
     const v14, 0x2080089
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcListItemImageButton;->setImageResource(I)V
 
-    .line 5528
+    .line 5537
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->play_indicator:Lcom/htc/widget/HtcListItemImageButton;
 
     const/4 v14, 0x0
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcListItemImageButton;->setVisibility(I)V
 
-    .line 5529
+    .line 5538
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -682,20 +682,20 @@
     #setter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mCurrentPosition:I
     invoke-static {v13, v11}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$6002(Lcom/htc/music/browserlayer/TrackBrowserActivity;I)I
 
-    .line 5535
+    .line 5544
     :goto_4
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
     if-eqz v13, :cond_5
 
-    .line 5538
+    .line 5547
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
     const/4 v14, 0x0
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcRimImageButton;->setVisibility(I)V
 
-    .line 5539
+    .line 5548
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->track_option:Lcom/htc/widget/HtcRimImageButton;
 
     new-instance v14, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$1;
@@ -706,7 +706,7 @@
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcRimImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 5555
+    .line 5564
     .end local v2           #cacheBmp:Landroid/graphics/Bitmap;
     .end local v3           #curListItem:Landroid/content/ContentValues;
     .end local v11           #realPos:I
@@ -719,10 +719,10 @@
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5556
+    .line 5565
     return-object p2
 
-    .line 5418
+    .line 5427
     .end local v5           #holder:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;
     :cond_6
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -731,7 +731,7 @@
 
     check-cast v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;
 
-    .line 5419
+    .line 5428
     .restart local v5       #holder:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
@@ -741,7 +741,7 @@
 
     goto/16 :goto_0
 
-    .line 5454
+    .line 5463
     .restart local v3       #curListItem:Landroid/content/ContentValues;
     .restart local v11       #realPos:I
     .restart local v12       #tmpStr:Ljava/lang/String;
@@ -761,7 +761,7 @@
 
     move-result-object v7
 
-    .line 5455
+    .line 5464
     .local v7, markedString:Ljava/lang/CharSequence;
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -769,7 +769,7 @@
 
     goto/16 :goto_1
 
-    .line 5464
+    .line 5473
     .end local v7           #markedString:Ljava/lang/CharSequence;
     :cond_8
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
@@ -778,12 +778,12 @@
 
     goto/16 :goto_2
 
-    .line 5480
+    .line 5489
     .restart local v2       #cacheBmp:Landroid/graphics/Bitmap;
     :cond_9
     const/4 v6, 0x1
 
-    .line 5482
+    .line 5491
     .local v6, isNeedToQuery:Z
     const-string v13, "albumartpath"
 
@@ -793,20 +793,20 @@
 
     if-eqz v13, :cond_a
 
-    .line 5483
+    .line 5492
     const-string v13, "albumartpath"
 
     invoke-virtual {v3, v13}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 5484
+    .line 5493
     .local v9, path:Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5485
+    .line 5494
     .local v1, albumArtFile:Ljava/io/File;
     const-string v13, "[PluginNowPlayingListActivity]"
 
@@ -830,31 +830,31 @@
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5487
+    .line 5496
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v13
 
     if-eqz v13, :cond_b
 
-    .line 5488
+    .line 5497
     const/4 v6, 0x0
 
-    .line 5495
+    .line 5504
     .end local v1           #albumArtFile:Ljava/io/File;
     .end local v9           #path:Ljava/lang/String;
     :cond_a
     :goto_6
     if-nez v6, :cond_c
 
-    .line 5498
+    .line 5507
     const-string v13, "albumartpath"
 
     invoke-virtual {v3, v13}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 5500
+    .line 5509
     .restart local v9       #path:Ljava/lang/String;
     const-string v13, "[PluginNowPlayingListActivity]"
 
@@ -862,7 +862,7 @@
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5502
+    .line 5511
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -878,12 +878,12 @@
 
     invoke-virtual {v13, v11, v9, v11, v14}, Lcom/htc/music/util/AsyncImageDecoder;->add(ILjava/lang/String;I[Ljava/lang/Object;)V
 
-    .line 5504
+    .line 5513
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
     if-eqz v13, :cond_4
 
-    .line 5505
+    .line 5514
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
     move-object/from16 v0, p0
@@ -894,19 +894,19 @@
 
     goto/16 :goto_3
 
-    .line 5490
+    .line 5499
     .restart local v1       #albumArtFile:Ljava/io/File;
     :cond_b
     const/4 v6, 0x1
 
-    .line 5491
+    .line 5500
     const-string v13, "albumartpath"
 
     invoke-virtual {v3, v13}, Landroid/content/ContentValues;->remove(Ljava/lang/String;)V
 
     goto :goto_6
 
-    .line 5509
+    .line 5518
     .end local v1           #albumArtFile:Ljava/io/File;
     .end local v9           #path:Ljava/lang/String;
     :cond_c
@@ -916,7 +916,7 @@
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5511
+    .line 5520
     iget-object v13, v5, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$ViewHolder;->icon:Lcom/htc/widget/HtcListItemTileImage;
 
     move-object/from16 v0, p0
@@ -925,7 +925,7 @@
 
     invoke-virtual {v13, v14}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5513
+    .line 5522
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -937,7 +937,7 @@
 
     if-nez v13, :cond_4
 
-    .line 5516
+    .line 5525
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -953,22 +953,22 @@
 
     move-result-object v8
 
-    .line 5517
+    .line 5526
     .local v8, msg:Landroid/os/Message;
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 5518
+    .line 5527
     .restart local v4       #data:Landroid/os/Bundle;
     const-string v13, "position"
 
     invoke-virtual {v4, v13, v11}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 5519
+    .line 5528
     invoke-virtual {v8, v4}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 5520
+    .line 5529
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -982,7 +982,7 @@
 
     goto/16 :goto_3
 
-    .line 5531
+    .line 5540
     .end local v4           #data:Landroid/os/Bundle;
     .end local v6           #isNeedToQuery:Z
     .end local v8           #msg:Landroid/os/Message;
@@ -995,7 +995,7 @@
 
     goto/16 :goto_4
 
-    .line 5553
+    .line 5562
     .end local v2           #cacheBmp:Landroid/graphics/Bitmap;
     .end local v3           #curListItem:Landroid/content/ContentValues;
     .end local v11           #realPos:I
@@ -1018,21 +1018,21 @@
     .parameter "arg0"
 
     .prologue
-    .line 5571
+    .line 5580
     if-nez p2, :cond_1
 
-    .line 5572
+    .line 5581
     const-string v6, "[TrackBrowser]"
 
     const-string v7, "onImageDecoded: bitmap is null"
 
     invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5600
+    .line 5609
     :cond_0
     return-void
 
-    .line 5575
+    .line 5584
     :cond_1
     const-string v6, "[TrackBrowser]"
 
@@ -1056,7 +1056,7 @@
 
     invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5576
+    .line 5585
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mTrackList:Lcom/htc/widget/HtcListView;
@@ -1068,11 +1068,11 @@
 
     move-result v2
 
-    .line 5577
+    .line 5586
     .local v2, childCount:I
     if-lez v2, :cond_0
 
-    .line 5581
+    .line 5590
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
@@ -1084,18 +1084,18 @@
 
     move-result v0
 
-    .line 5582
+    .line 5591
     .local v0, addedToCache:Z
     if-eqz v0, :cond_0
 
-    .line 5583
+    .line 5592
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 5584
+    .line 5593
     iget-object v6, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mTrackList:Lcom/htc/widget/HtcListView;
@@ -1107,11 +1107,11 @@
 
     move-result-object v5
 
-    .line 5586
+    .line 5595
     .local v5, ll:Landroid/view/View;
     if-eqz v5, :cond_2
 
-    .line 5587
+    .line 5596
     const v6, 0x7f080023
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1120,18 +1120,18 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 5589
+    .line 5598
     .local v1, albumArt:Lcom/htc/widget/HtcListItemTileImage;
     if-eqz v1, :cond_2
 
-    .line 5590
+    .line 5599
     invoke-virtual {v1}, Lcom/htc/widget/HtcListItemTileImage;->getTag()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 5592
+    .line 5601
     .local v4, integer:Ljava/lang/Integer;
     if-eqz v4, :cond_2
 
@@ -1141,10 +1141,10 @@
 
     if-ne v6, p1, :cond_2
 
-    .line 5593
+    .line 5602
     invoke-virtual {v1, p2}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 5583
+    .line 5592
     .end local v1           #albumArt:Lcom/htc/widget/HtcListItemTileImage;
     .end local v4           #integer:Ljava/lang/Integer;
     :cond_2
@@ -1158,9 +1158,9 @@
     .parameter "newactivity"
 
     .prologue
-    .line 5560
+    .line 5569
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
-    .line 5561
+    .line 5570
     return-void
 .end method

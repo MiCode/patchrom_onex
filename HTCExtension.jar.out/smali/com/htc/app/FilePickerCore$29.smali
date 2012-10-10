@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3917
+    .line 4277
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$29;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 3919
+    .line 4279
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$29;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->reStartToScan()V
-    invoke-static {v0}, Lcom/htc/app/FilePickerCore;->access$6300(Lcom/htc/app/FilePickerCore;)V
+    invoke-static {v0}, Lcom/htc/app/FilePickerCore;->access$7700(Lcom/htc/app/FilePickerCore;)V
 
-    .line 3920
+    .line 4280
     return-void
 .end method

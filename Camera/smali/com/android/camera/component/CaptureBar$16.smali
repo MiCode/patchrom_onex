@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 910
+    .line 1005
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$16;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,17 +40,17 @@
     .locals 5
 
     .prologue
-    .line 914
+    .line 1009
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$16;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_IsFakeRotation:Z
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3300(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3500(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 915
+    .line 1010
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$16;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$16;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -61,7 +61,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/camera/component/CaptureBar;->sendMessage(Lcom/android/camera/component/Component;IJ)Z
 
-    .line 916
+    .line 1011
     :cond_0
     return-void
 .end method

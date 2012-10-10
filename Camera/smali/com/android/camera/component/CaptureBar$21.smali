@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1011
+    .line 1106
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +72,7 @@
 
     const/4 v2, 0x0
 
-    .line 1015
+    .line 1110
     sget-object v1, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$RecordingState:[I
 
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -87,18 +87,18 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1033
+    .line 1128
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->updateButtonEnableStates()V
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3700(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 1034
+    .line 1129
     return-void
 
-    .line 1018
+    .line 1113
     :pswitch_0
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -120,34 +120,34 @@
 
     if-eqz v0, :cond_0
 
-    .line 1019
+    .line 1114
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSelfTimerIndicator(ZZ)V
-    invoke-static {v0, v2, v3}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;ZZ)V
+    invoke-static {v0, v2, v3}, Lcom/android/camera/component/CaptureBar;->access$4100(Lcom/android/camera/component/CaptureBar;ZZ)V
 
     goto :goto_0
 
-    .line 1022
+    .line 1117
     :pswitch_1
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$3600(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$3800(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, v3, v2}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1023
+    .line 1118
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSelfTimerIndicator(ZZ)V
-    invoke-static {v0, v2, v2}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;ZZ)V
+    invoke-static {v0, v2, v2}, Lcom/android/camera/component/CaptureBar;->access$4100(Lcom/android/camera/component/CaptureBar;ZZ)V
 
-    .line 1024
+    .line 1119
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
@@ -163,20 +163,20 @@
 
     goto :goto_0
 
-    .line 1027
+    .line 1122
     :pswitch_2
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSlowMotionIcon(Z)V
-    invoke-static {v0, v2}, Lcom/android/camera/component/CaptureBar;->access$2600(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v0, v2}, Lcom/android/camera/component/CaptureBar;->access$2800(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 1028
+    .line 1123
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showRecordingTimer(Z)V
-    invoke-static {v0, v2}, Lcom/android/camera/component/CaptureBar;->access$2900(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v0, v2}, Lcom/android/camera/component/CaptureBar;->access$3100(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 1029
+    .line 1124
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
@@ -190,22 +190,22 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 1030
+    .line 1125
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$21;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->isSlowMotionMode()Z
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2100(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2300(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v1
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSlowMotionIndicator(Z)V
-    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$2400(Lcom/android/camera/component/CaptureBar;Z)V
 
     goto :goto_0
 
-    .line 1015
+    .line 1110
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 909
+    .line 995
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
     .prologue
     const-wide/16 v7, 0xd0
 
-    .line 923
+    .line 1009
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
     invoke-virtual {v3}, Lcom/htc/sunny2/widget/gridview/HtcFastScroller;->getState()I
@@ -64,20 +64,20 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 924
+    .line 1010
     const/16 v0, 0xd0
 
-    .line 933
+    .line 1019
     :goto_0
     return v0
 
-    .line 927
+    .line 1013
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 928
+    .line 1014
     .local v1, now:J
     iget-wide v3, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->mStartTime:J
 
@@ -89,13 +89,13 @@
 
     if-lez v3, :cond_1
 
-    .line 929
+    .line 1015
     const/4 v0, 0x0
 
     .local v0, alpha:I
     goto :goto_0
 
-    .line 931
+    .line 1017
     .end local v0           #alpha:I
     :cond_1
     iget-wide v3, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->mStartTime:J
@@ -120,7 +120,7 @@
     .locals 3
 
     .prologue
-    .line 937
+    .line 1023
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/HtcFastScroller;->getState()I
@@ -131,15 +131,15 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 938
+    .line 1024
     invoke-virtual {p0}, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->startFade()V
 
-    .line 946
+    .line 1032
     :cond_0
     :goto_0
     return-void
 
-    .line 942
+    .line 1028
     :cond_1
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
@@ -160,7 +160,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/sunny2/widget/gridview/HtcFastScroller;->drawIRT(ILcom/htc/sunny2/SceneNode;)V
 
-    .line 943
+    .line 1029
     invoke-virtual {p0}, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->getAlpha()I
 
     move-result v0
@@ -169,7 +169,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 944
+    .line 1030
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
     const/4 v1, 0x0
@@ -183,25 +183,25 @@
     .locals 2
 
     .prologue
-    .line 917
+    .line 1003
     const-wide/16 v0, 0xc8
 
     iput-wide v0, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->mFadeDuration:J
 
-    .line 918
+    .line 1004
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->mStartTime:J
 
-    .line 919
+    .line 1005
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$ScrollFade;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/gridview/HtcFastScroller;->setState(I)V
 
-    .line 920
+    .line 1006
     return-void
 .end method

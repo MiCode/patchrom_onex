@@ -25,13 +25,13 @@
     .parameter "context"
 
     .prologue
-    .line 1799
+    .line 1831
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
-    .line 1800
+    .line 1832
     invoke-direct {p0, p2}, Lcom/htc/music/util/RingtoneHelper;-><init>(Landroid/content/Context;)V
 
-    .line 1801
+    .line 1833
     return-void
 .end method
 
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 1809
+    .line 1841
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     const/16 v1, 0x9
 
     invoke-virtual {v0, v1}, Lcom/htc/music/NowPlayingViewHelper;->showDialog(I)V
 
-    .line 1810
+    .line 1842
     return-void
 .end method
 
@@ -56,14 +56,14 @@
     .locals 2
 
     .prologue
-    .line 1805
+    .line 1837
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/htc/music/NowPlayingViewHelper;->showDialog(I)V
 
-    .line 1806
+    .line 1838
     return-void
 .end method
 
@@ -73,13 +73,13 @@
     .parameter "contactResultCode"
 
     .prologue
-    .line 1813
+    .line 1845
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v0, v0, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
 
     invoke-super {p0, v0, p2}, Lcom/htc/music/util/RingtoneHelper;->startContactActivity(Landroid/app/Activity;I)V
 
-    .line 1814
+    .line 1846
     return-void
 .end method

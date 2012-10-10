@@ -171,7 +171,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "https"
+    const-string v0, "https"
 
     invoke-virtual {p1}, Lorg/apache/http/HttpHost;->getSchemeName()Ljava/lang/String;
 
@@ -370,7 +370,7 @@
 
     move-result v3
 
-    const-string/jumbo v4, "http"
+    const-string v4, "http"
 
     invoke-direct {v2, v0, v3, v4}, Lorg/apache/http/HttpHost;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 

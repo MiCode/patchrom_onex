@@ -68,7 +68,7 @@
     .locals 0
 
     .prologue
-    .line 576
+    .line 585
     return-object p0
 .end method
 
@@ -88,7 +88,7 @@
     .line 70
     packed-switch p1, :pswitch_data_0
 
-    .line 571
+    .line 580
     :pswitch_0
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
@@ -2627,8 +2627,33 @@
 
     goto/16 :goto_0
 
-    .line 349
+    .line 572
     .end local v98           #value:I
+    :pswitch_2f
+    const-string v5, "android.app.IApplicationThread"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 573
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v7
+
+    .line 574
+    .restart local v7       #b:Landroid/os/IBinder;
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v7}, Landroid/app/ApplicationThreadNative;->scheduleReportAppTransitionEnd(Landroid/os/IBinder;)V
+
+    .line 575
+    const/4 v5, 0x1
+
+    goto/16 :goto_0
+
+    .line 349
+    .end local v7           #b:Landroid/os/IBinder;
     .restart local v40       #args:[Ljava/lang/String;
     .restart local v75       #fd:Landroid/os/ParcelFileDescriptor;
     .restart local v92       #service:Landroid/os/IBinder;
@@ -2677,8 +2702,6 @@
     goto :goto_22
 
     .line 70
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -2784,5 +2807,6 @@
         :pswitch_2d
         :pswitch_2c
         :pswitch_2e
+        :pswitch_2f
     .end packed-switch
 .end method

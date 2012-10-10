@@ -48,7 +48,7 @@
 
     const/4 v2, 0x0
 
-    .line 91
+    .line 93
     new-instance v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
     const-string v1, "Unavailable"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;->Unavailable:Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
-    .line 92
+    .line 94
     new-instance v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
     const-string v1, "Ready"
@@ -66,7 +66,7 @@
 
     sput-object v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;->Ready:Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
-    .line 93
+    .line 95
     new-instance v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
     const-string v1, "Capturing"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;->Capturing:Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
-    .line 94
+    .line 96
     new-instance v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
     const-string v1, "Stopping"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;->Stopping:Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
-    .line 89
+    .line 91
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/camera/component/ContinuousBurstController$CaptureState;
@@ -121,7 +121,7 @@
     .end annotation
 
     .prologue
-    .line 89
+    .line 91
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,7 +132,7 @@
     .parameter "name"
 
     .prologue
-    .line 89
+    .line 91
     const-class v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -148,7 +148,7 @@
     .locals 1
 
     .prologue
-    .line 89
+    .line 91
     sget-object v0, Lcom/android/camera/component/ContinuousBurstController$CaptureState;->$VALUES:[Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
     invoke-virtual {v0}, [Lcom/android/camera/component/ContinuousBurstController$CaptureState;->clone()Ljava/lang/Object;

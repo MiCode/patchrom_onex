@@ -46,24 +46,24 @@
     .locals 1
 
     .prologue
-    .line 15
+    .line 16
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 38
+    .line 39
     new-instance v0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$IdlePhoneCallServiceWrapper;
 
     invoke-direct {v0, p0}, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$IdlePhoneCallServiceWrapper;-><init>(Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;)V
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;->mPublicBinder:Landroid/os/IBinder;
 
-    .line 39
+    .line 40
     new-instance v0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$1;
 
     invoke-direct {v0, p0}, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$1;-><init>(Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;)V
 
     iput-object v0, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;->mUIHandler:Landroid/os/Handler;
 
-    .line 96
+    .line 97
     return-void
 .end method
 
@@ -72,12 +72,12 @@
     .parameter "context"
 
     .prologue
-    .line 178
+    .line 150
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;->endPhoneUI(Landroid/content/Context;I)V
 
-    .line 179
+    .line 151
     return-void
 .end method
 
@@ -87,41 +87,41 @@
     .parameter "callId"
 
     .prologue
-    .line 186
+    .line 154
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.htc.lockscreen.phone.update_phoneState"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 187
+    .line 155
     .local v0, intent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 188
+    .line 156
     .local v1, packageName:Ljava/lang/String;
     const-string v2, "packageName"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 189
+    .line 157
     const-string v2, "call_id"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 190
+    .line 158
     const-string v2, "withPhoneState"
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 192
+    .line 160
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 193
+    .line 161
     return-void
 .end method
 
@@ -131,10 +131,10 @@
     .parameter "state"
 
     .prologue
-    .line 152
+    .line 132
     invoke-static {p0, p1}, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;->updatePhoneUI(Landroid/content/Context;Lcom/htc/lockscreen/telephony/PhoneState;)V
 
-    .line 153
+    .line 133
     return-void
 .end method
 
@@ -144,14 +144,14 @@
     .parameter "state"
 
     .prologue
-    .line 160
+    .line 136
     if-nez p1, :cond_0
 
-    .line 171
+    .line 147
     :goto_0
     return-void
 
-    .line 163
+    .line 139
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -159,19 +159,19 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 164
+    .line 140
     .local v0, intent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 165
+    .line 141
     .local v1, packageName:Ljava/lang/String;
     const-string v2, "packageName"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 166
+    .line 142
     const-string v2, "call_id"
 
     invoke-virtual {p1}, Lcom/htc/lockscreen/telephony/PhoneState;->getId()I
@@ -180,19 +180,19 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 167
+    .line 143
     const-string v2, "withPhoneState"
 
     const/4 v3, 0x1
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 169
+    .line 145
     const-string v2, "phoneState"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 170
+    .line 146
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_0
@@ -208,7 +208,7 @@
     .parameter "intent"
 
     .prologue
-    .line 135
+    .line 118
     iget-object v0, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;->mPublicBinder:Landroid/os/IBinder;
 
     return-object v0
@@ -219,7 +219,7 @@
     .parameter "intent"
 
     .prologue
-    .line 144
+    .line 127
     invoke-super {p0, p1}, Landroid/app/Service;->onUnbind(Landroid/content/Intent;)Z
 
     move-result v0
@@ -233,24 +233,24 @@
     .parameter "callId"
 
     .prologue
-    .line 66
+    .line 67
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 67
+    .line 68
     .local v0, msg:Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 68
+    .line 69
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 69
+    .line 70
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;->mUIHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 70
+    .line 71
     return-void
 .end method
 

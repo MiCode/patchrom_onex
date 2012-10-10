@@ -39,7 +39,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 20
+    .line 21
     const-string v1, "persist.deviceinfo.verbose"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -62,29 +62,29 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 36
+    .line 37
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
+    .line 29
     iput-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
-    .line 29
+    .line 30
     iput-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mLastFlushDeviceInfo:Landroid/app/HtcDeviceInfo;
 
-    .line 30
+    .line 31
     iput-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mStatisticsDeviceInfo:Landroid/app/HtcDeviceInfo;
 
-    .line 31
+    .line 32
     iput-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
-    .line 37
+    .line 38
     new-instance v0, Landroid/app/HtcDeviceInfo;
 
     invoke-direct {v0}, Landroid/app/HtcDeviceInfo;-><init>()V
 
     iput-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
-    .line 38
+    .line 39
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     const-string v1, "ro.build.changelist"
@@ -97,14 +97,14 @@
 
     iput-object v1, v0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/app/HtcDeviceInfo;->simState:I
 
-    .line 42
+    .line 43
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -113,14 +113,14 @@
 
     iput-wide v1, v0, Landroid/app/HtcDeviceInfo;->lastDeviceAliveUpdateTime:J
 
-    .line 45
+    .line 46
     new-instance v0, Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     invoke-direct {v0, p0}, Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;-><init>(Lcom/htc/server/HtcInfoOperator;)V
 
     iput-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
-    .line 46
+    .line 47
     return-void
 .end method
 
@@ -128,7 +128,7 @@
     .locals 1
 
     .prologue
-    .line 17
+    .line 18
     sget-boolean v0, Lcom/htc/server/HtcInfoOperator;->VERBOSE:Z
 
     return v0
@@ -141,7 +141,7 @@
     .parameter "x2"
 
     .prologue
-    .line 17
+    .line 18
     invoke-direct {p0, p1, p2, p3}, Lcom/htc/server/HtcInfoOperator;->addDeviceUseTime(JLjava/lang/String;)V
 
     return-void
@@ -153,12 +153,12 @@
     .parameter "reason"
 
     .prologue
-    .line 269
+    .line 271
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     if-eqz v0, :cond_0
 
-    .line 270
+    .line 272
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     iget-wide v1, v0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
@@ -167,12 +167,12 @@
 
     iput-wide v1, v0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
-    .line 271
+    .line 273
     sget-boolean v0, Lcom/htc/server/HtcInfoOperator;->VERBOSE:Z
 
     if-eqz v0, :cond_0
 
-    .line 272
+    .line 274
     const-string v0, "HtcDeviceInfoManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -227,7 +227,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
+    .line 280
     :cond_0
     return-void
 .end method
@@ -246,6 +246,9 @@
 .method abstract addRadioCrash()V
 .end method
 
+.method abstract addSentErrorCount(Landroid/content/Intent;)V
+.end method
+
 .method abstract addSystemCrash()V
 .end method
 
@@ -256,45 +259,45 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 313
+    .line 315
     sget-boolean v1, Lcom/htc/server/HtcInfoOperator;->VERBOSE:Z
 
     if-eqz v1, :cond_0
 
-    .line 314
+    .line 316
     const-string v1, "HtcDeviceInfoManager"
 
     const-string v2, "APP_DIED"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
+    .line 319
     :cond_0
     iget-object v1, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     if-nez v1, :cond_2
 
-    .line 327
+    .line 329
     :cond_1
     :goto_0
     return-void
 
-    .line 320
+    .line 322
     :cond_2
     if-eqz p1, :cond_1
 
-    .line 323
+    .line 325
     const-string v1, "pid"
 
     invoke-virtual {p1, v1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 324
+    .line 326
     .local v0, pid:I
     if-eq v0, v3, :cond_1
 
-    .line 325
+    .line 327
     iget-object v1, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     invoke-virtual {v1, v0, v3}, Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;->stop(II)V
@@ -307,10 +310,10 @@
     .parameter "file"
 
     .prologue
-    .line 49
+    .line 50
     const/4 v1, 0x0
 
-    .line 50
+    .line 51
     .local v1, tmp:Landroid/app/HtcDeviceInfo;
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -318,7 +321,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 51
+    .line 52
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
@@ -327,10 +330,10 @@
 
     move-result-object v1
 
-    .line 52
+    .line 53
     if-eqz v1, :cond_0
 
-    .line 53
+    .line 54
     iget-object v2, v1, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
@@ -343,25 +346,25 @@
 
     if-nez v2, :cond_0
 
-    .line 54
+    .line 55
     invoke-virtual {v1}, Landroid/app/HtcDeviceInfo;->reset()V
 
-    .line 56
+    .line 57
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
+    .line 64
     :cond_0
     :goto_0
     return-object v1
 
-    .line 57
+    .line 58
     :catch_0
     move-exception v0
 
-    .line 58
+    .line 59
     .local v0, ex:Ljava/lang/Exception;
     const-string v2, "HtcDeviceInfoManager"
 
@@ -414,7 +417,7 @@
     .locals 2
 
     .prologue
-    .line 104
+    .line 106
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     iget-wide v0, v0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
@@ -426,12 +429,12 @@
     .locals 2
 
     .prologue
-    .line 107
+    .line 109
     iget-object v1, p0, Lcom/htc/server/HtcInfoOperator;->mStatisticsDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     monitor-enter v1
 
-    .line 108
+    .line 110
     :try_start_0
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mStatisticsDeviceInfo:Landroid/app/HtcDeviceInfo;
 
@@ -443,7 +446,7 @@
 
     return-object v0
 
-    .line 109
+    .line 111
     :catchall_0
     move-exception v0
 
@@ -458,7 +461,7 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 34
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     return-object v0
@@ -495,7 +498,7 @@
     .locals 3
 
     .prologue
-    .line 113
+    .line 115
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     const-string v1, "ro.build.changelist"
@@ -508,14 +511,14 @@
 
     iput-object v1, v0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
-    .line 114
+    .line 116
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/app/HtcDeviceInfo;->simState:I
 
-    .line 115
+    .line 117
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -524,7 +527,7 @@
 
     iput-wide v1, v0, Landroid/app/HtcDeviceInfo;->lastDeviceAliveUpdateTime:J
 
-    .line 116
+    .line 118
     return-void
 .end method
 
@@ -539,10 +542,10 @@
     .parameter "timeout"
 
     .prologue
-    .line 67
+    .line 68
     sput-wide p1, Lcom/htc/server/HtcInfoOperator;->SETTING_SCREEN_OFF_TIMEOUT:J
 
-    .line 68
+    .line 69
     return-void
 .end method
 
@@ -553,16 +556,16 @@
     .locals 1
 
     .prologue
-    .line 330
+    .line 332
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     if-nez v0, :cond_0
 
-    .line 333
+    .line 335
     :goto_0
     return-void
 
-    .line 332
+    .line 334
     :cond_0
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
@@ -578,16 +581,16 @@
     .locals 1
 
     .prologue
-    .line 336
+    .line 338
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     if-nez v0, :cond_0
 
-    .line 339
+    .line 341
     :goto_0
     return-void
 
-    .line 338
+    .line 340
     :cond_0
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
@@ -601,17 +604,17 @@
     .parameter "processName"
 
     .prologue
-    .line 99
+    .line 101
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     if-eqz v0, :cond_0
 
-    .line 100
+    .line 102
     iget-object v0, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     invoke-virtual {v0}, Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;->updateTime()V
 
-    .line 102
+    .line 104
     :cond_0
     return-void
 .end method
@@ -623,21 +626,21 @@
     .prologue
     const-wide/16 v9, 0x0
 
-    .line 281
+    .line 283
     iget-object v6, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
     if-nez v6, :cond_1
 
-    .line 310
+    .line 312
     :cond_0
     :goto_0
     return-void
 
-    .line 284
+    .line 286
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 287
+    .line 289
     const-string v6, "time"
 
     const-wide/16 v7, -0x1
@@ -646,7 +649,7 @@
 
     move-result-wide v4
 
-    .line 288
+    .line 290
     .local v4, time:J
     iget-object v6, p0, Lcom/htc/server/HtcInfoOperator;->mVoiceAppUsage:Lcom/htc/server/HtcInfoOperator$VoiceAppUsage;
 
@@ -656,16 +659,16 @@
 
     if-nez v6, :cond_4
 
-    .line 289
+    .line 291
     iget-object v6, p0, Lcom/htc/server/HtcInfoOperator;->mCurrentDeviceInfo:Landroid/app/HtcDeviceInfo;
 
     iget-wide v2, v6, Landroid/app/HtcDeviceInfo;->lastDeviceUseUpdateTime:J
 
-    .line 290
+    .line 292
     .local v2, last_time:J
     const-wide/16 v0, 0x0
 
-    .line 291
+    .line 293
     .local v0, duration:J
     cmp-long v6, v4, v9
 
@@ -679,22 +682,22 @@
 
     if-gez v6, :cond_2
 
-    .line 292
+    .line 294
     sub-long v0, v4, v2
 
-    .line 293
+    .line 295
     sget-wide v6, Lcom/htc/server/HtcInfoOperator;->SETTING_SCREEN_OFF_TIMEOUT:J
 
     cmp-long v6, v0, v6
 
     if-gtz v6, :cond_3
 
-    .line 294
+    .line 296
     const-string v6, "user activity"
 
     invoke-direct {p0, v0, v1, v6}, Lcom/htc/server/HtcInfoOperator;->addDeviceUseTime(JLjava/lang/String;)V
 
-    .line 309
+    .line 311
     .end local v0           #duration:J
     .end local v2           #last_time:J
     :cond_2
@@ -705,7 +708,7 @@
 
     goto :goto_0
 
-    .line 297
+    .line 299
     .restart local v0       #duration:J
     .restart local v2       #last_time:J
     :cond_3
@@ -713,7 +716,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 298
+    .line 300
     const-string v6, "HtcDeviceInfoManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -744,7 +747,7 @@
 
     goto :goto_1
 
-    .line 305
+    .line 307
     .end local v0           #duration:J
     .end local v2           #last_time:J
     :cond_4
@@ -752,7 +755,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 306
+    .line 308
     const-string v6, "HtcDeviceInfoManager"
 
     const-string v7, "userActivity, voiceInUse!"

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3777
+    .line 4137
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$23;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 3780
+    .line 4140
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$23;->this$0:Lcom/htc/app/FilePickerCore;
 
     iget v1, p1, Landroid/os/Message;->what:I
@@ -47,6 +47,6 @@
     #calls: Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
     invoke-static {v0, v1}, Lcom/htc/app/FilePickerCore;->access$700(Lcom/htc/app/FilePickerCore;I)V
 
-    .line 3781
+    .line 4141
     return-void
 .end method

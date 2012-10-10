@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 523
+    .line 532
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,19 +50,19 @@
 
     const/4 v0, -0x1
 
-    .line 525
+    .line 535
     iget-boolean v2, p1, Landroid/os/memory/RunningState$ProcessItem;->mIsStarted:Z
 
     iget-boolean v3, p2, Landroid/os/memory/RunningState$ProcessItem;->mIsStarted:Z
 
     if-eq v2, v3, :cond_2
 
-    .line 527
+    .line 537
     iget-boolean v2, p1, Landroid/os/memory/RunningState$ProcessItem;->mIsStarted:Z
 
     if-eqz v2, :cond_1
 
-    .line 538
+    .line 548
     :cond_0
     :goto_0
     return v0
@@ -70,10 +70,10 @@
     :cond_1
     move v0, v1
 
-    .line 527
+    .line 537
     goto :goto_0
 
-    .line 529
+    .line 539
     :cond_2
     iget-boolean v2, p1, Landroid/os/memory/RunningState$ProcessItem;->mIsSystem:Z
 
@@ -81,7 +81,7 @@
 
     if-eq v2, v3, :cond_4
 
-    .line 531
+    .line 541
     iget-boolean v2, p1, Landroid/os/memory/RunningState$ProcessItem;->mIsSystem:Z
 
     if-eqz v2, :cond_3
@@ -96,7 +96,7 @@
 
     goto :goto_1
 
-    .line 533
+    .line 543
     :cond_4
     iget-wide v2, p1, Landroid/os/memory/RunningState$ProcessItem;->mActiveSince:J
 
@@ -106,7 +106,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 536
+    .line 546
     iget-wide v2, p1, Landroid/os/memory/RunningState$ProcessItem;->mActiveSince:J
 
     iget-wide v4, p2, Landroid/os/memory/RunningState$ProcessItem;->mActiveSince:J
@@ -119,7 +119,7 @@
 
     goto :goto_0
 
-    .line 538
+    .line 548
     :cond_5
     const/4 v0, 0x0
 
@@ -132,7 +132,7 @@
     .parameter "x1"
 
     .prologue
-    .line 523
+    .line 532
     check-cast p1, Landroid/os/memory/RunningState$ProcessItem;
 
     .end local p1

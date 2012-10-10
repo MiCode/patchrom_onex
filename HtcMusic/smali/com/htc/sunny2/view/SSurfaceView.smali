@@ -778,7 +778,7 @@
     .locals 1
 
     .prologue
-    .line 1223
+    .line 1232
     iget-object v0, p0, Lcom/htc/sunny2/view/SSurfaceView;->mEventDispatcher:Lcom/htc/sunny2/view/SSurfaceView$EventDispatcher;
 
     return-object v0
@@ -788,7 +788,7 @@
     .locals 1
 
     .prologue
-    .line 1209
+    .line 1218
     iget-object v0, p0, Lcom/htc/sunny2/view/SSurfaceView;->mRenderThread:Lcom/htc/sunny2/RenderThread;
 
     return-object v0
@@ -822,7 +822,7 @@
     .locals 1
 
     .prologue
-    .line 1216
+    .line 1225
     iget v0, p0, Lcom/htc/sunny2/view/SSurfaceView;->mSunnyWindow:I
 
     return v0

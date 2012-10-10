@@ -23,10 +23,10 @@
     .locals 2
 
     .prologue
-    .line 1382
+    .line 1503
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "lookup"
+    const-string v1, "lookup"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -41,7 +41,7 @@
     .locals 0
 
     .prologue
-    .line 1380
+    .line 1501
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

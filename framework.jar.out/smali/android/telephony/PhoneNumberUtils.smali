@@ -1937,7 +1937,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "invalid char for BCD "
+    const-string v2, "invalid char for BCD "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2024,7 +2024,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "invalid char for BCD "
+    const-string v2, "invalid char for BCD "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4779,7 +4779,7 @@
 
     .line 2222
     :cond_1
-    const-string/jumbo v2, "jp"
+    const-string v2, "jp"
 
     invoke-virtual {v2, p0}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
@@ -7000,7 +7000,7 @@
     .end local v0           #c:C
     .end local v1           #i:I
     :cond_2
-    const-string/jumbo v3, "isNanp: null dialStr passed in"
+    const-string v3, "isNanp: null dialStr passed in"
 
     invoke-static {v3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -7221,7 +7221,7 @@
 
     .line 2265
     :cond_1
-    const-string/jumbo v2, "isOneNanp: null dialStr passed in"
+    const-string v2, "isOneNanp: null dialStr passed in"
 
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

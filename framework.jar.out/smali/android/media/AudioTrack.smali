@@ -154,7 +154,7 @@
 
     .prologue
     .line 310
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 145
     sget-object v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
@@ -178,7 +178,7 @@
     .line 162
     new-instance v1, Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {v1 .. v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Landroid/media/AudioTrack;->mPlayStateLock:Ljava/lang/Object;
 
@@ -190,7 +190,7 @@
     .line 172
     new-instance v1, Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {v1 .. v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Landroid/media/AudioTrack;->mPositionListenerLock:Ljava/lang/Object;
 
@@ -878,7 +878,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1221
+    .line 1236
     const-string v0, "AudioTrack-Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -901,7 +901,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1222
+    .line 1237
     return-void
 .end method
 
@@ -910,7 +910,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1225
+    .line 1240
     const-string v0, "AudioTrack-Java"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -933,7 +933,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1226
+    .line 1241
     return-void
 .end method
 
@@ -1024,7 +1024,7 @@
     .parameter "obj"
 
     .prologue
-    .line 1147
+    .line 1162
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0
@@ -1034,22 +1034,22 @@
 
     check-cast v1, Landroid/media/AudioTrack;
 
-    .line 1148
+    .line 1163
     .local v1, track:Landroid/media/AudioTrack;
     if-nez v1, :cond_1
 
-    .line 1158
+    .line 1173
     :cond_0
     :goto_0
     return-void
 
-    .line 1152
+    .line 1167
     :cond_1
     iget-object v2, v1, Landroid/media/AudioTrack;->mEventHandlerDelegate:Landroid/media/AudioTrack$NativeEventHandlerDelegate;
 
     if-eqz v2, :cond_0
 
-    .line 1153
+    .line 1168
     iget-object v2, v1, Landroid/media/AudioTrack;->mEventHandlerDelegate:Landroid/media/AudioTrack$NativeEventHandlerDelegate;
 
     invoke-virtual {v2}, Landroid/media/AudioTrack$NativeEventHandlerDelegate;->getHandler()Landroid/os/Handler;
@@ -1060,7 +1060,7 @@
 
     move-result-object v0
 
-    .line 1155
+    .line 1170
     .local v0, m:Landroid/os/Message;
     iget-object v2, v1, Landroid/media/AudioTrack;->mEventHandlerDelegate:Landroid/media/AudioTrack$NativeEventHandlerDelegate;
 
@@ -1078,7 +1078,7 @@
     .parameter "on"
 
     .prologue
-    .line 1229
+    .line 1244
     const-string v2, "AudioTrack-Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1101,7 +1101,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1231
+    .line 1246
     :try_start_0
     const-string v2, "audio"
 
@@ -1113,11 +1113,11 @@
 
     move-result-object v1
 
-    .line 1232
+    .line 1247
     .local v1, service:Landroid/media/IAudioService;
     if-eqz v1, :cond_0
 
-    .line 1233
+    .line 1248
     const-string v2, "AudioTrack-Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1140,22 +1140,117 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1234
+    .line 1249
     invoke-interface {v1, p1}, Landroid/media/IAudioService;->triggerBeatsLogo(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1239
+    .line 1254
     .end local v1           #service:Landroid/media/IAudioService;
     :cond_0
     :goto_0
     return-void
 
-    .line 1236
+    .line 1251
     :catch_0
     move-exception v0
 
-    .line 1237
+    .line 1252
+    .local v0, e:Ljava/lang/Exception;
+    const-string v2, "AudioTrack-Java"
+
+    const-string v3, "Exception : get AudioService"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method private triggerBeatsLogo_audio(ZZZ)V
+    .locals 5
+    .parameter "on"
+    .parameter "audio_on"
+    .parameter "audio_flag"
+
+    .prologue
+    .line 1257
+    const-string v2, "AudioTrack-Java"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "beats_audio setting  "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1259
+    :try_start_0
+    const-string v2, "audio"
+
+    invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/media/IAudioService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/IAudioService;
+
+    move-result-object v1
+
+    .line 1260
+    .local v1, service:Landroid/media/IAudioService;
+    if-eqz v1, :cond_0
+
+    .line 1261
+    const-string v2, "AudioTrack-Java"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "triggerBeatsLogo_audio="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1262
+    invoke-interface {v1, p1, p2, p3}, Landroid/media/IAudioService;->triggerBeatsLogo_audio(ZZZ)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1267
+    .end local v1           #service:Landroid/media/IAudioService;
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 1264
+    :catch_0
+    move-exception v0
+
+    .line 1265
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "AudioTrack-Java"
 
@@ -1173,17 +1268,17 @@
     .parameter "effectId"
 
     .prologue
-    .line 1018
+    .line 1033
     iget v0, p0, Landroid/media/AudioTrack;->mState:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 1019
+    .line 1034
     const/4 v0, -0x3
 
-    .line 1021
+    .line 1036
     :goto_0
     return v0
 
@@ -1210,17 +1305,17 @@
     .locals 2
 
     .prologue
-    .line 903
+    .line 918
     iget v0, p0, Landroid/media/AudioTrack;->mState:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 905
+    .line 920
     invoke-direct {p0}, Landroid/media/AudioTrack;->native_flush()V
 
-    .line 908
+    .line 923
     :cond_0
     return-void
 .end method
@@ -1392,14 +1487,14 @@
     .end annotation
 
     .prologue
-    .line 877
+    .line 887
     iget v0, p0, Landroid/media/AudioTrack;->mState:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 878
+    .line 888
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "pause() called on uninitialized AudioTrack."
@@ -1408,17 +1503,17 @@
 
     throw v0
 
-    .line 883
+    .line 893
     :cond_0
     iget-object v1, p0, Landroid/media/AudioTrack;->mPlayStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 884
+    .line 894
     :try_start_0
     invoke-direct {p0}, Landroid/media/AudioTrack;->native_pause()V
 
-    .line 885
+    .line 895
     iget v0, p0, Landroid/media/AudioTrack;->SenseVersion:F
 
     float-to-double v2, v0
@@ -1435,31 +1530,51 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 886
+    .line 896
     const-string v0, "AudioTrack-Java"
 
-    const-string v2, "beats setting trigger in start"
+    const-string v2, "beats setting trigger in pause"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 887
+    .line 897
+    invoke-static {}, Landroid/media/AudioManager;->isSpecialCase()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 898
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/media/AudioTrack;->triggerBeatsLogo(Z)V
 
-    .line 889
+    .line 904
     :cond_1
+    :goto_0
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/media/AudioTrack;->mPlayState:I
 
-    .line 890
+    .line 905
     monitor-exit v1
 
-    .line 891
+    .line 906
     return-void
 
-    .line 890
+    .line 901
+    :cond_2
+    const/4 v0, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct {p0, v0, v2, v3}, Landroid/media/AudioTrack;->triggerBeatsLogo_audio(ZZZ)V
+
+    goto :goto_0
+
+    .line 905
     :catchall_0
     move-exception v0
 
@@ -1530,23 +1645,43 @@
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 840
+    invoke-static {}, Landroid/media/AudioManager;->isSpecialCase()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 841
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/media/AudioTrack;->triggerBeatsLogo(Z)V
 
-    .line 842
+    .line 847
     :cond_1
+    :goto_0
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/media/AudioTrack;->mPlayState:I
 
-    .line 843
+    .line 848
     monitor-exit v1
 
-    .line 844
+    .line 849
     return-void
 
-    .line 843
+    .line 844
+    :cond_2
+    const/4 v0, 0x1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x1
+
+    invoke-direct {p0, v0, v2, v3}, Landroid/media/AudioTrack;->triggerBeatsLogo_audio(ZZZ)V
+
+    goto :goto_0
+
+    .line 848
     :catchall_0
     move-exception v0
 
@@ -1590,17 +1725,17 @@
     .locals 2
 
     .prologue
-    .line 990
+    .line 1005
     iget v0, p0, Landroid/media/AudioTrack;->mDataLoadMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 991
+    .line 1006
     const/4 v0, -0x3
 
-    .line 993
+    .line 1008
     :goto_0
     return v0
 
@@ -1617,21 +1752,21 @@
     .parameter "level"
 
     .prologue
-    .line 1040
+    .line 1055
     iget v0, p0, Landroid/media/AudioTrack;->mState:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 1041
+    .line 1056
     const/4 v0, -0x3
 
-    .line 1051
+    .line 1066
     :goto_0
     return v0
 
-    .line 1044
+    .line 1059
     :cond_0
     invoke-static {}, Landroid/media/AudioTrack;->getMinVolume()F
 
@@ -1641,12 +1776,12 @@
 
     if-gez v0, :cond_1
 
-    .line 1045
+    .line 1060
     invoke-static {}, Landroid/media/AudioTrack;->getMinVolume()F
 
     move-result p1
 
-    .line 1047
+    .line 1062
     :cond_1
     invoke-static {}, Landroid/media/AudioTrack;->getMaxVolume()F
 
@@ -1656,16 +1791,16 @@
 
     if-lez v0, :cond_2
 
-    .line 1048
+    .line 1063
     invoke-static {}, Landroid/media/AudioTrack;->getMaxVolume()F
 
     move-result p1
 
-    .line 1050
+    .line 1065
     :cond_2
     invoke-direct {p0, p1}, Landroid/media/AudioTrack;->native_setAuxEffectSendLevel(F)V
 
-    .line 1051
+    .line 1066
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2018,12 +2153,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 853
+    .line 858
     iget v0, p0, Landroid/media/AudioTrack;->mState:I
 
     if-eq v0, v1, :cond_0
 
-    .line 854
+    .line 859
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "stop() called on uninitialized AudioTrack."
@@ -2032,17 +2167,17 @@
 
     throw v0
 
-    .line 858
+    .line 863
     :cond_0
     iget-object v1, p0, Landroid/media/AudioTrack;->mPlayStateLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 859
+    .line 864
     :try_start_0
     invoke-direct {p0}, Landroid/media/AudioTrack;->native_stop()V
 
-    .line 860
+    .line 865
     iget v0, p0, Landroid/media/AudioTrack;->SenseVersion:F
 
     float-to-double v2, v0
@@ -2059,31 +2194,51 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 861
+    .line 866
     const-string v0, "AudioTrack-Java"
 
-    const-string v2, "beats setting trigger in start"
+    const-string v2, "beats setting trigger in stop"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 862
+    .line 867
+    invoke-static {}, Landroid/media/AudioManager;->isSpecialCase()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 868
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/media/AudioTrack;->triggerBeatsLogo(Z)V
 
-    .line 864
+    .line 874
     :cond_1
+    :goto_0
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/media/AudioTrack;->mPlayState:I
 
-    .line 865
+    .line 875
     monitor-exit v1
 
-    .line 866
+    .line 876
     return-void
 
-    .line 865
+    .line 871
+    :cond_2
+    const/4 v0, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct {p0, v0, v2, v3}, Landroid/media/AudioTrack;->triggerBeatsLogo_audio(ZZZ)V
+
+    goto :goto_0
+
+    .line 875
     :catchall_0
     move-exception v0
 
@@ -2103,7 +2258,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 927
+    .line 942
     iget v0, p0, Landroid/media/AudioTrack;->mDataLoadMode:I
 
     if-nez v0, :cond_0
@@ -2116,23 +2271,23 @@
 
     if-lez p3, :cond_0
 
-    .line 930
+    .line 945
     iput v2, p0, Landroid/media/AudioTrack;->mState:I
 
-    .line 933
+    .line 948
     :cond_0
     iget v0, p0, Landroid/media/AudioTrack;->mState:I
 
     if-eq v0, v2, :cond_1
 
-    .line 934
+    .line 949
     const/4 v0, -0x3
 
-    .line 942
+    .line 957
     :goto_0
     return v0
 
-    .line 937
+    .line 952
     :cond_1
     if-eqz p1, :cond_2
 
@@ -2146,13 +2301,13 @@
 
     if-le v0, v1, :cond_3
 
-    .line 939
+    .line 954
     :cond_2
     const/4 v0, -0x2
 
     goto :goto_0
 
-    .line 942
+    .line 957
     :cond_3
     iget v0, p0, Landroid/media/AudioTrack;->mAudioFormat:I
 
@@ -2172,7 +2327,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 963
+    .line 978
     iget v0, p0, Landroid/media/AudioTrack;->mDataLoadMode:I
 
     if-nez v0, :cond_0
@@ -2185,23 +2340,23 @@
 
     if-lez p3, :cond_0
 
-    .line 966
+    .line 981
     iput v2, p0, Landroid/media/AudioTrack;->mState:I
 
-    .line 969
+    .line 984
     :cond_0
     iget v0, p0, Landroid/media/AudioTrack;->mState:I
 
     if-eq v0, v2, :cond_1
 
-    .line 970
+    .line 985
     const/4 v0, -0x3
 
-    .line 978
+    .line 993
     :goto_0
     return v0
 
-    .line 973
+    .line 988
     :cond_1
     if-eqz p1, :cond_2
 
@@ -2215,13 +2370,13 @@
 
     if-le v0, v1, :cond_3
 
-    .line 975
+    .line 990
     :cond_2
     const/4 v0, -0x2
 
     goto :goto_0
 
-    .line 978
+    .line 993
     :cond_3
     iget v0, p0, Landroid/media/AudioTrack;->mAudioFormat:I
 

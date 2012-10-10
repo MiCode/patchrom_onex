@@ -38,7 +38,7 @@
     .locals 1
 
     .prologue
-    .line 79
+    .line 81
     const/4 v0, 0x2
 
     return v0
@@ -49,7 +49,7 @@
     .parameter "position"
 
     .prologue
-    .line 85
+    .line 88
     const/4 v0, 0x0
 
     return-object v0
@@ -60,7 +60,7 @@
     .parameter "position"
 
     .prologue
-    .line 91
+    .line 95
     int-to-long v0, p1
 
     return-wide v0
@@ -73,17 +73,17 @@
     .parameter "viewGroup"
 
     .prologue
-    .line 44
+    .line 45
     if-nez p2, :cond_0
 
-    .line 45
+    .line 46
     iget-object v2, p0, Lcom/android/internal/telephony/RoamingGuideListAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 46
+    .line 47
     .local v0, factory:Landroid/view/LayoutInflater;
     const v2, 0x109000f
 
@@ -95,18 +95,18 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 49
+    .line 50
     .local v1, listItem:Landroid/widget/TextView;
     const/high16 v2, -0x100
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 57
+    .line 58
     .end local v0           #factory:Landroid/view/LayoutInflater;
     :goto_0
     packed-switch p1, :pswitch_data_0
 
-    .line 69
+    .line 70
     :goto_1
     return-object v1
 
@@ -114,13 +114,13 @@
     :cond_0
     move-object v1, p2
 
-    .line 51
+    .line 52
     check-cast v1, Landroid/widget/TextView;
 
     .restart local v1       #listItem:Landroid/widget/TextView;
     goto :goto_0
 
-    .line 59
+    .line 60
     :pswitch_0
     const v2, 0x1040546
 
@@ -128,7 +128,7 @@
 
     goto :goto_1
 
-    .line 62
+    .line 63
     :pswitch_1
     const v2, 0x1040547
 
@@ -136,7 +136,7 @@
 
     goto :goto_1
 
-    .line 57
+    .line 58
     nop
 
     :pswitch_data_0

@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 7452
+    .line 7485
     iput-object p1, p0, Lcom/htc/music/HtcMusic$50;->this$0:Lcom/htc/music/HtcMusic;
 
     iput-object p2, p0, Lcom/htc/music/HtcMusic$50;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
@@ -51,12 +51,12 @@
 
     const/4 v1, 0x0
 
-    .line 7456
+    .line 7489
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 7457
+    .line 7490
     iget-object v2, p0, Lcom/htc/music/HtcMusic$50;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
@@ -72,7 +72,7 @@
     :goto_0
     invoke-virtual {v2, v0}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
-    .line 7458
+    .line 7491
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
@@ -81,18 +81,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 7459
+    .line 7492
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->startAutoDownloadAlbum()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9000(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9100(Lcom/htc/music/HtcMusic;)V
 
-    .line 7460
+    .line 7493
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0, v3}, Lcom/htc/music/HtcMusic;->dismissDialog(I)V
 
-    .line 7467
+    .line 7500
     :cond_0
     :goto_1
     return-void
@@ -100,23 +100,23 @@
     :cond_1
     move v0, v1
 
-    .line 7457
+    .line 7490
     goto :goto_0
 
-    .line 7462
+    .line 7495
     :cond_2
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->autoUpdateAlbumArt(I)V
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$9100(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$9200(Lcom/htc/music/HtcMusic;I)V
 
-    .line 7463
+    .line 7496
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->stopDownloadAlbumArtService()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9200(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9300(Lcom/htc/music/HtcMusic;)V
 
-    .line 7464
+    .line 7497
     iget-object v0, p0, Lcom/htc/music/HtcMusic$50;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0, v3}, Lcom/htc/music/HtcMusic;->dismissDialog(I)V

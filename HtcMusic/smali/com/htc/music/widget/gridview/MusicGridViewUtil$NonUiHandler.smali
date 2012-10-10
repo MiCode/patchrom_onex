@@ -34,16 +34,16 @@
     .parameter "util"
 
     .prologue
-    .line 520
+    .line 531
     iput-object p1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
-    .line 521
+    .line 532
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 522
+    .line 533
     iput-object p3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;->mUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
-    .line 523
+    .line 534
     return-void
 .end method
 
@@ -54,17 +54,17 @@
     .parameter "msg"
 
     .prologue
-    .line 528
+    .line 539
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 552
+    .line 563
     :goto_0
     :pswitch_0
     return-void
 
-    .line 530
+    .line 541
     :pswitch_1
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;->mUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -79,7 +79,7 @@
 
     invoke-virtual {v1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaList;->updateMediaListData(Landroid/database/Cursor;)V
 
-    .line 531
+    .line 542
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;->mUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     iget-object v0, v0, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mMusicGridViewItemUpdater:Lcom/htc/music/widget/gridview/MusicGridViewUtil$MusicGridViewItemUpdater;
@@ -88,7 +88,7 @@
 
     goto :goto_0
 
-    .line 534
+    .line 545
     :pswitch_2
     iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
@@ -99,14 +99,14 @@
     #calls: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->updateAlbumartForGenreArtist(Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;)V
     invoke-static {v1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->access$300(Lcom/htc/music/widget/gridview/MusicGridViewUtil;Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;)V
 
-    .line 535
+    .line 546
     const/4 v0, 0x0
 
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 528
+    .line 539
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

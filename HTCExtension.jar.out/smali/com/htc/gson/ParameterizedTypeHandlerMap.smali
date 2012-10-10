@@ -679,7 +679,7 @@
     .local p0, this:Lcom/htc/gson/ParameterizedTypeHandlerMap;,"Lcom/htc/gson/ParameterizedTypeHandlerMap<TT;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "{"
+    const-string/jumbo v4, "{"
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

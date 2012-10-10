@@ -45,18 +45,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1049
+    .line 1034
     iput-object p1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1052
+    .line 1037
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMode:I
 
-    .line 1055
+    .line 1040
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mDistance:I
 
-    .line 1056
+    .line 1041
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -72,7 +72,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1049
+    .line 1034
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;-><init>(Lcom/htc/fragment/widget/AbsSpinner;)V
 
     return-void
@@ -83,7 +83,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1049
+    .line 1034
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->end()V
 
     return-void
@@ -94,14 +94,14 @@
     .parameter "step"
 
     .prologue
-    .line 1169
+    .line 1142
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-boolean v0, v0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v0, :cond_0
 
-    .line 1171
+    .line 1143
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -116,7 +116,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mExpandedWidth:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$802(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1172
+    .line 1144
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -131,16 +131,16 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mReducedWidth:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$702(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1179
+    .line 1149
     :goto_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/AbsSpinner;->requestLayout()V
 
-    .line 1180
+    .line 1150
     return-void
 
-    .line 1176
+    .line 1146
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -156,7 +156,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mExpandedHeight:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$1002(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1177
+    .line 1147
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -180,19 +180,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1184
+    .line 1153
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/AbsSpinner;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1186
+    .line 1155
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-boolean v0, v0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v0, :cond_0
 
-    .line 1188
+    .line 1156
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -208,7 +208,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mExpandedWidth:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$802(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1189
+    .line 1157
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -220,17 +220,17 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mReducedWidth:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$702(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1197
+    .line 1163
     :goto_0
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMode:I
 
-    .line 1198
+    .line 1164
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnableRunning:Z
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/AbsSpinner;->access$1102(Lcom/htc/fragment/widget/AbsSpinner;Z)Z
 
-    .line 1199
+    .line 1165
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #getter for: Lcom/htc/fragment/widget/AbsSpinner;->mLateShrinkedFlag:Z
@@ -240,30 +240,30 @@
 
     if-eqz v0, :cond_1
 
-    .line 1201
+    .line 1166
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mLateShrinkedFlag:Z
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/AbsSpinner;->access$1202(Lcom/htc/fragment/widget/AbsSpinner;Z)Z
 
-    .line 1202
+    .line 1167
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->setShrinkedPosition(I)V
 
-    .line 1203
+    .line 1168
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #calls: Lcom/htc/fragment/widget/AbsSpinner;->onAnimationEnd()V
     invoke-static {v0}, Lcom/htc/fragment/widget/AbsSpinner;->access$1300(Lcom/htc/fragment/widget/AbsSpinner;)V
 
-    .line 1207
+    .line 1171
     :goto_1
     return-void
 
-    .line 1193
+    .line 1159
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -280,7 +280,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mExpandedHeight:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$1002(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1194
+    .line 1160
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -294,7 +294,7 @@
 
     goto :goto_0
 
-    .line 1206
+    .line 1170
     :cond_1
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -309,16 +309,16 @@
     .prologue
     const-wide/16 v7, 0xc8
 
-    .line 1155
+    .line 1129
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 1156
+    .line 1130
     .local v0, now:J
     const/4 v2, 0x0
 
-    .line 1158
+    .line 1132
     .local v2, targetDistance:I
     iget-wide v3, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mStartTime:J
 
@@ -328,14 +328,14 @@
 
     if-ltz v3, :cond_0
 
-    .line 1159
+    .line 1133
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mDistance:I
 
-    .line 1163
+    .line 1137
     :goto_0
     return v2
 
-    .line 1161
+    .line 1135
     :cond_0
     iget-wide v3, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mStartTime:J
 
@@ -358,23 +358,23 @@
     .locals 2
 
     .prologue
-    .line 1125
+    .line 1099
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1126
+    .line 1100
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->end()V
 
-    .line 1127
+    .line 1101
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/AbsSpinner;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1128
+    .line 1102
     return-void
 .end method
 
@@ -384,49 +384,49 @@
     .locals 3
 
     .prologue
-    .line 1136
+    .line 1110
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMode:I
 
     if-nez v2, :cond_0
 
-    .line 1137
+    .line 1111
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->end()V
 
-    .line 1152
+    .line 1126
     :goto_0
     return-void
 
-    .line 1141
+    .line 1115
     :cond_0
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->getTargetDistance()I
 
     move-result v1
 
-    .line 1142
+    .line 1116
     .local v1, targetDistance:I
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mDistance:I
 
     if-ne v1, v2, :cond_1
 
-    .line 1143
+    .line 1117
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->end()V
 
     goto :goto_0
 
-    .line 1147
+    .line 1121
     :cond_1
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMovedDistance:I
 
     sub-int v0, v1, v2
 
-    .line 1148
+    .line 1122
     .local v0, step:I
     invoke-direct {p0, v0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->changeWidthHeight(I)V
 
-    .line 1149
+    .line 1123
     iput v1, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMovedDistance:I
 
-    .line 1150
+    .line 1124
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v2, p0}, Lcom/htc/fragment/widget/AbsSpinner;->post(Ljava/lang/Runnable;)Z
@@ -442,21 +442,21 @@
 
     const-wide/high16 v8, 0x3ff8
 
-    .line 1066
+    .line 1050
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     const/4 v5, -0x1
 
     iput v5, v4, Lcom/htc/fragment/widget/AbsSpinner;->mReducedPos:I
 
-    .line 1068
+    .line 1052
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-boolean v4, v4, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v4, :cond_2
 
-    .line 1070
+    .line 1053
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v5, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -468,7 +468,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mReducedWidth:I
     invoke-static {v4, v5}, Lcom/htc/fragment/widget/AbsSpinner;->access$702(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1071
+    .line 1054
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v5, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -480,7 +480,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mExpandedWidth:I
     invoke-static {v4, v5}, Lcom/htc/fragment/widget/AbsSpinner;->access$802(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1079
+    .line 1060
     :goto_0
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -488,7 +488,7 @@
 
     move-result v1
 
-    .line 1080
+    .line 1061
     .local v1, firstVisPos:I
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -496,7 +496,7 @@
 
     move-result v0
 
-    .line 1082
+    .line 1063
     .local v0, count:I
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -506,7 +506,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1083
+    .line 1064
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v4}, Lcom/htc/fragment/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
@@ -517,7 +517,7 @@
 
     move-result v0
 
-    .line 1085
+    .line 1066
     :cond_0
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -525,14 +525,14 @@
 
     if-eqz v4, :cond_4
 
-    .line 1087
+    .line 1067
     move v2, v1
 
     .local v2, i:I
     :goto_1
     if-gt v2, v0, :cond_1
 
-    .line 1089
+    .line 1068
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     sub-int v5, v2, v1
@@ -541,7 +541,7 @@
 
     move-result-object v3
 
-    .line 1090
+    .line 1069
     .local v3, view:Landroid/view/View;
     if-eqz v3, :cond_3
 
@@ -565,12 +565,12 @@
 
     if-lez v4, :cond_3
 
-    .line 1092
+    .line 1070
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iput v2, v4, Lcom/htc/fragment/widget/AbsSpinner;->mReducedPos:I
 
-    .line 1093
+    .line 1071
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v5, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -586,7 +586,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mReducedWidth:I
     invoke-static {v4, v5}, Lcom/htc/fragment/widget/AbsSpinner;->access$702(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1112
+    .line 1086
     .end local v3           #view:Landroid/view/View;
     :cond_1
     :goto_2
@@ -596,10 +596,10 @@
 
     iput-wide v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mStartTime:J
 
-    .line 1113
+    .line 1087
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->startCommon()V
 
-    .line 1115
+    .line 1089
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-boolean v4, v4, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
@@ -617,29 +617,29 @@
     :goto_3
     iput v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mDistance:I
 
-    .line 1117
+    .line 1091
     iput v10, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMode:I
 
-    .line 1118
+    .line 1092
     const/4 v4, 0x0
 
     iput v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->mMovedDistance:I
 
-    .line 1119
+    .line 1093
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnableRunning:Z
     invoke-static {v4, v10}, Lcom/htc/fragment/widget/AbsSpinner;->access$1102(Lcom/htc/fragment/widget/AbsSpinner;Z)Z
 
-    .line 1120
+    .line 1094
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v4, p0}, Lcom/htc/fragment/widget/AbsSpinner;->post(Ljava/lang/Runnable;)Z
 
-    .line 1121
+    .line 1095
     return-void
 
-    .line 1075
+    .line 1056
     .end local v0           #count:I
     .end local v1           #firstVisPos:I
     .end local v2           #i:I
@@ -655,7 +655,7 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mReducedHeight:I
     invoke-static {v4, v5}, Lcom/htc/fragment/widget/AbsSpinner;->access$902(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1076
+    .line 1057
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v5, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -669,7 +669,7 @@
 
     goto/16 :goto_0
 
-    .line 1087
+    .line 1067
     .restart local v0       #count:I
     .restart local v1       #firstVisPos:I
     .restart local v2       #i:I
@@ -679,7 +679,7 @@
 
     goto :goto_1
 
-    .line 1100
+    .line 1076
     .end local v2           #i:I
     .end local v3           #view:Landroid/view/View;
     :cond_4
@@ -689,7 +689,7 @@
     :goto_4
     if-gt v2, v0, :cond_1
 
-    .line 1102
+    .line 1077
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     sub-int v5, v2, v1
@@ -698,7 +698,7 @@
 
     move-result-object v3
 
-    .line 1103
+    .line 1078
     .restart local v3       #view:Landroid/view/View;
     if-eqz v3, :cond_5
 
@@ -722,12 +722,12 @@
 
     if-lez v4, :cond_5
 
-    .line 1105
+    .line 1079
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iput v2, v4, Lcom/htc/fragment/widget/AbsSpinner;->mReducedPos:I
 
-    .line 1106
+    .line 1080
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v5, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -745,13 +745,13 @@
 
     goto :goto_2
 
-    .line 1100
+    .line 1076
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 1115
+    .line 1089
     .end local v3           #view:Landroid/view/View;
     :cond_6
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;

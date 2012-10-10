@@ -581,7 +581,7 @@
 
     if-eq v0, v2, :cond_0
 
-    const-string/jumbo v2, "http"
+    const-string v2, "http"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -594,7 +594,7 @@
 
     if-eq v0, v2, :cond_2
 
-    const-string/jumbo v2, "https"
+    const-string v2, "https"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -639,7 +639,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "https"
+    const-string v1, "https"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

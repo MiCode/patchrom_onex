@@ -344,8 +344,8 @@
     <string name="permdesc_setDebugApp">Leidžia programai įjungti derinimą kitai programai. Kenkėjiškos programos gali tuo naudotis, kad panaikintų kitas programas.</string>
     <string name="permlab_changeConfiguration">pakeisti savo vartotojo sąsajos nustatymus</string>
     <string name="permdesc_changeConfiguration">Leidžia programai pakeisti dabartinę konfigūraciją, kaip antai lokalę arba bendrą šrifto dydį.</string>
-    <string name="permlab_enableCarMode">įjungti automobilio režimą</string>
-    <string name="permdesc_enableCarMode">Leidžia programai įjungti automobilio režimą.</string>
+    <string name="permlab_enableCarMode">įjungti Car režimą</string>
+    <string name="permdesc_enableCarMode">Leidžia programai įjungti Car režimą.</string>
     <string name="permlab_killBackgroundProcesses">panaikinti fono procesus</string>
     <string name="permdesc_killBackgroundProcesses">Leidžia programai panaikinti kitų programų fono procesus, net jei atminties netrūksta.</string>
     <string name="permlab_forceStopPackages">priverstinai sustabdyti kitas programas</string>
@@ -637,7 +637,7 @@
     <string name="phoneTypePager">Pranešimų gaviklis</string>
     <string name="phoneTypeOther">Kita</string>
     <string name="phoneTypeCallback">Atgalinis skambinimas</string>
-    <string name="phoneTypeCar">Automobilis</string>
+    <string name="phoneTypeCar">Car</string>
     <string name="phoneTypeCompanyMain">Įmonės pagrindinis</string>
     <string name="phoneTypeIsdn">ISDN</string>
     <string name="phoneTypeMain">Pagrindinis</string>
@@ -1078,8 +1078,8 @@ naudojant %s"</string>
     <string name="no_file_chosen">Nepasirinktas joks failas</string>
     <string name="reset">Nustatyti iš naujo</string>
     <string name="submit">Pateikti</string>
-    <string name="car_mode_disable_notification_title">Automobilio režimas įjungtas</string>
-    <string name="car_mode_disable_notification_message">Pažymėkite, jei norite išeiti iš automobilio režimo.</string>
+    <string name="car_mode_disable_notification_title">Car režimas įjungtas</string>
+    <string name="car_mode_disable_notification_message">Pažymėkite, jei norite išeiti iš Car režimo.</string>
     <string name="tethered_notification_title">Aktyvus modemo režimas arba interneto prieigos taškas</string>
     <string name="tethered_notification_message">Palieskite, kad sukonfigūruotumėte</string>
     <string name="back_button_label">Atgal</string>

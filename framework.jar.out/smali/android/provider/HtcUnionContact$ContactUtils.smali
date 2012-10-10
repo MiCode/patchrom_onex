@@ -59,7 +59,7 @@
 
     const/4 v2, 0x0
 
-    .line 1411
+    .line 1573
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -82,7 +82,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$ContactUtils;->CALL_LOG_PROJECTION:[Ljava/lang/String;
 
-    .line 1423
+    .line 1590
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -99,7 +99,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$ContactUtils;->EVENTS_PROJECTION:[Ljava/lang/String;
 
-    .line 1432
+    .line 1603
     new-array v0, v3, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -115,10 +115,10 @@
     .locals 0
 
     .prologue
-    .line 1440
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 1614
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1442
+    .line 1616
     return-void
 .end method
 
@@ -132,12 +132,12 @@
 
     const/4 v3, 0x1
 
-    .line 1891
+    .line 2079
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1, v3}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 1892
+    .line 2080
     .local v1, values:Landroid/content/ContentValues;
     const-string/jumbo v2, "starred"
 
@@ -147,14 +147,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1893
+    .line 2081
     sget-object v2, Landroid/provider/Contacts$People;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v2, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 1894
+    .line 2082
     .local v0, personUri:Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -162,7 +162,7 @@
 
     invoke-virtual {v2, v0, v1, v4, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1895
+    .line 2083
     return-void
 .end method
 
@@ -172,26 +172,26 @@
     .parameter "groupName"
 
     .prologue
-    .line 1775
+    .line 1959
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1776
+    .line 1960
     .local v2, values:Landroid/content/ContentValues;
     invoke-virtual {v2}, Landroid/content/ContentValues;->clear()V
 
-    .line 1777
+    .line 1961
     const-string/jumbo v3, "name"
 
     invoke-virtual {v2, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1779
+    .line 1963
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1781
+    .line 1965
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v3, "content://contacts/groups"
 
@@ -199,13 +199,13 @@
 
     move-result-object v1
 
-    .line 1784
+    .line 1968
     .local v1, uri:Landroid/net/Uri;
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 1786
+    .line 1970
     const-string v3, "HtcContactUtils"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -232,7 +232,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1788
+    .line 1972
     invoke-virtual {v1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v3
@@ -253,35 +253,35 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1820
+    .line 2006
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1822
+    .line 2008
     .local v0, mResolver:Landroid/content/ContentResolver;
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1823
+    .line 2009
     .local v8, uriString:Ljava/lang/StringBuilder;
     const-string v3, "content://contacts/people/"
 
     invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1824
+    .line 2010
     invoke-virtual {v8, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1825
+    .line 2011
     const-string v3, "/groupmembership/"
 
     invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1826
+    .line 2012
     invoke-virtual {v8, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1827
+    .line 2013
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -290,45 +290,45 @@
 
     move-result-object v1
 
-    .line 1829
+    .line 2015
     .local v1, uri:Landroid/net/Uri;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1830
+    .line 2016
     .local v7, selectionString:Ljava/lang/StringBuilder;
     const-string/jumbo v3, "person"
 
     invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1831
+    .line 2017
     const-string v3, "="
 
     invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1832
+    .line 2018
     invoke-virtual {v7, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1833
+    .line 2019
     const-string v3, " and "
 
     invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1834
+    .line 2020
     const-string v3, "group_id"
 
     invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1835
+    .line 2021
     const-string v3, "="
 
     invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1836
+    .line 2022
     invoke-virtual {v7, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1838
+    .line 2024
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -341,11 +341,11 @@
 
     move-result-object v6
 
-    .line 1839
+    .line 2025
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
-    .line 1841
+    .line 2027
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_0
@@ -355,26 +355,26 @@
 
     if-eqz v2, :cond_1
 
-    .line 1853
+    .line 2039
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 1856
+    .line 2042
     :cond_0
     return-void
 
-    .line 1844
+    .line 2030
     :cond_1
     :try_start_1
     new-instance v9, Landroid/content/ContentValues;
 
     invoke-direct {v9}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1845
+    .line 2031
     .local v9, values:Landroid/content/ContentValues;
     invoke-virtual {v9}, Landroid/content/ContentValues;->clear()V
 
-    .line 1846
+    .line 2032
     const-string/jumbo v2, "person"
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -383,7 +383,7 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1847
+    .line 2033
     const-string v2, "group_id"
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -392,14 +392,14 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1849
+    .line 2035
     invoke-virtual {v0, v1, v9}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 1853
+    .line 2039
     .end local v9           #values:Landroid/content/ContentValues;
     :catchall_0
     move-exception v2
@@ -417,12 +417,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1677
+    .line 1857
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1681
+    .line 1861
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "content://contacts/people"
 
@@ -430,20 +430,20 @@
 
     move-result-object v1
 
-    .line 1682
+    .line 1862
     .local v1, eventsUri:Landroid/net/Uri;
     invoke-static {v1, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 1683
+    .line 1863
     const-string v2, "events_map"
 
     invoke-static {v1, v2}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 1685
+    .line 1865
     sget-object v2, Landroid/provider/HtcUnionContact$ContactUtils;->EVENTS_PROJECTION:[Ljava/lang/String;
 
     move-object v4, v3
@@ -454,7 +454,7 @@
 
     move-result-object v7
 
-    .line 1687
+    .line 1867
     .local v7, eventsCursor:Landroid/database/Cursor;
     :goto_0
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -463,7 +463,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1689
+    .line 1869
     sget-object v2, Landroid/provider/CalendarContract$Events;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x2
@@ -476,41 +476,41 @@
 
     move-result-object v6
 
-    .line 1690
+    .line 1870
     .local v6, eventUri:Landroid/net/Uri;
     invoke-virtual {v0, v6, v3, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1694
+    .line 1874
     .end local v6           #eventUri:Landroid/net/Uri;
     :cond_0
     if-eqz v7, :cond_1
 
-    .line 1696
+    .line 1876
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 1701
+    .line 1881
     :cond_1
     invoke-virtual {v0, v1, v3, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1704
+    .line 1884
     const-string v2, "content://contacts/people"
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v8
 
-    .line 1705
+    .line 1885
     .local v8, uri:Landroid/net/Uri;
     invoke-static {v8, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v8
 
-    .line 1707
+    .line 1887
     invoke-virtual {v0, v8, v3, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1708
+    .line 1888
     return-void
 .end method
 
@@ -522,7 +522,7 @@
     .end annotation
 
     .prologue
-    .line 1911
+    .line 2099
     :try_start_0
     new-instance v1, Ljava/lang/Exception;
 
@@ -532,11 +532,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1912
+    .line 2100
     :catch_0
     move-exception v0
 
-    .line 1913
+    .line 2101
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "HtcUnionContact"
 
@@ -544,7 +544,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1915
+    .line 2103
     return-void
 .end method
 
@@ -556,12 +556,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1800
+    .line 1985
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1802
+    .line 1987
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "content://contacts/groups"
 
@@ -569,16 +569,16 @@
 
     move-result-object v1
 
-    .line 1803
+    .line 1988
     .local v1, uri:Landroid/net/Uri;
     invoke-static {v1, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 1804
+    .line 1989
     invoke-virtual {v0, v1, v3, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1805
+    .line 1990
     return-void
 .end method
 
@@ -591,35 +591,35 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1874
+    .line 2061
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1876
+    .line 2063
     .local v0, mResolver:Landroid/content/ContentResolver;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1877
+    .line 2064
     .local v2, uriString:Ljava/lang/StringBuilder;
     const-string v3, "content://contacts/people/"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1878
+    .line 2065
     invoke-virtual {v2, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1879
+    .line 2066
     const-string v3, "/groupmembership/"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1880
+    .line 2067
     invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1882
+    .line 2069
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -628,11 +628,11 @@
 
     move-result-object v1
 
-    .line 1885
+    .line 2072
     .local v1, uri:Landroid/net/Uri;
     invoke-virtual {v0, v1, v4, v4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1887
+    .line 2074
     return-void
 .end method
 
@@ -644,19 +644,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2328
+    .line 2525
     const-wide/16 v2, 0x0
 
     cmp-long v2, p1, v2
 
     if-lez v2, :cond_0
 
-    .line 2330
+    .line 2527
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2331
+    .line 2528
     .local v0, mResolver:Landroid/content/ContentResolver;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -680,19 +680,19 @@
 
     move-result-object v1
 
-    .line 2332
+    .line 2529
     .local v1, uri:Landroid/net/Uri;
     invoke-virtual {v0, v1, v4, v4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v2
 
-    .line 2337
+    .line 2534
     .end local v0           #mResolver:Landroid/content/ContentResolver;
     .end local v1           #uri:Landroid/net/Uri;
     :goto_0
     return v2
 
-    .line 2336
+    .line 2533
     :cond_0
     const-string v2, "HtcUnionContact"
 
@@ -720,7 +720,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2337
+    .line 2534
     const/4 v2, 0x0
 
     goto :goto_0
@@ -734,58 +734,58 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 2917
+    .line 3125
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 2927
+    .line 3135
     :cond_0
     :goto_0
     return-void
 
-    .line 2918
+    .line 3126
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
 
-    .line 2919
+    .line 3127
     .local v4, nSrcW:I
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    .line 2920
+    .line 3128
     .local v3, nSrcH:I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 2921
+    .line 3129
     .local v2, nOverlayW:I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    .line 2922
+    .line 3130
     .local v1, nOverlayH:I
     if-ge v2, v4, :cond_0
 
     if-ge v1, v3, :cond_0
 
-    .line 2923
+    .line 3131
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, p0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 2924
+    .line 3132
     .local v0, canvasSrc:Landroid/graphics/Canvas;
     new-instance v5, Landroid/graphics/Paint;
 
     invoke-direct {v5}, Landroid/graphics/Paint;-><init>()V
 
-    .line 2925
+    .line 3133
     .local v5, paintDefault:Landroid/graphics/Paint;
     new-instance v6, Landroid/graphics/Rect;
 
@@ -810,22 +810,22 @@
     .parameter "cropHeight"
 
     .prologue
-    .line 1462
+    .line 1636
     move/from16 v5, p2
 
-    .line 1463
+    .line 1637
     .local v5, mContactPhoteWidth:I
     move/from16 v4, p3
 
-    .line 1466
+    .line 1640
     .local v4, mContactPhoteHeight:I
     const/4 v0, 0x0
 
-    .line 1467
+    .line 1641
     .local v0, bitmap:Landroid/graphics/Bitmap;
     const/4 v7, 0x0
 
-    .line 1469
+    .line 1643
     .local v7, resultBitmap:Landroid/graphics/Bitmap;
     if-lez p2, :cond_0
 
@@ -835,74 +835,74 @@
 
     if-nez p1, :cond_1
 
-    .line 1470
+    .line 1644
     :cond_0
     const/4 v12, 0x0
 
-    .line 1522
+    .line 1696
     :goto_0
     return-object v12
 
-    .line 1475
+    .line 1649
     :cond_1
     :try_start_0
     invoke-virtual/range {p0 .. p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object v3
 
-    .line 1476
+    .line 1650
     .local v3, input:Ljava/io/InputStream;
     new-instance v6, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v6}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1478
+    .line 1652
     .local v6, opts:Landroid/graphics/BitmapFactory$Options;
     const/4 v12, 0x1
 
     iput-boolean v12, v6, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1479
+    .line 1653
     const/4 v12, 0x0
 
     invoke-static {v3, v12, v6}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 1480
+    .line 1654
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
 
-    .line 1481
+    .line 1655
     const/4 v3, 0x0
 
-    .line 1482
+    .line 1656
     iget v9, v6, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 1483
+    .line 1657
     .local v9, w:I
     iget v2, v6, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 1485
+    .line 1659
     .local v2, h:I
     const/4 v8, 0x1
 
-    .line 1487
+    .line 1661
     .local v8, value:I
     :goto_1
     if-le v9, v5, :cond_2
 
     if-le v2, v4, :cond_2
 
-    .line 1488
+    .line 1662
     shr-int/lit8 v9, v9, 0x1
 
-    .line 1489
+    .line 1663
     shr-int/lit8 v2, v2, 0x1
 
-    .line 1490
+    .line 1664
     shl-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 1492
+    .line 1666
     :cond_2
     shr-int/lit8 v12, v8, 0x1
 
@@ -912,86 +912,86 @@
 
     const/4 v8, 0x1
 
-    .line 1494
+    .line 1668
     :goto_2
     const/4 v12, 0x0
 
     iput-boolean v12, v6, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1495
+    .line 1669
     iput v8, v6, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 1497
+    .line 1671
     invoke-virtual/range {p0 .. p1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object v3
 
-    .line 1499
+    .line 1673
     const/4 v12, 0x0
 
     invoke-static {v3, v12, v6}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1500
+    .line 1674
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
 
-    .line 1501
+    .line 1675
     const/4 v3, 0x0
 
-    .line 1502
+    .line 1676
     if-nez v0, :cond_4
 
-    .line 1503
+    .line 1677
     const/4 v12, 0x0
 
     goto :goto_0
 
-    .line 1492
+    .line 1666
     :cond_3
     shr-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 1504
+    .line 1678
     :cond_4
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v9
 
-    .line 1505
+    .line 1679
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
-    .line 1506
+    .line 1680
     sub-int v12, v9, v5
 
     shr-int/lit8 v10, v12, 0x1
 
-    .line 1507
+    .line 1681
     .local v10, x:I
     sub-int v12, v2, v4
 
     shr-int/lit8 v11, v12, 0x1
 
-    .line 1509
+    .line 1683
     .local v11, y:I
     if-lt v9, v5, :cond_5
 
     if-lt v2, v4, :cond_5
 
-    .line 1510
+    .line 1684
     invoke-static {v0, v10, v11, v5, v4}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
     move-result-object v7
 
-    .line 1512
+    .line 1686
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1520
+    .line 1694
     .end local v2           #h:I
     .end local v3           #input:Ljava/io/InputStream;
     .end local v6           #opts:Landroid/graphics/BitmapFactory$Options;
@@ -1004,10 +1004,10 @@
 
     move-object v12, v7
 
-    .line 1522
+    .line 1696
     goto :goto_0
 
-    .line 1514
+    .line 1688
     .restart local v2       #h:I
     .restart local v3       #input:Ljava/io/InputStream;
     .restart local v6       #opts:Landroid/graphics/BitmapFactory$Options;
@@ -1020,7 +1020,7 @@
 
     goto :goto_3
 
-    .line 1516
+    .line 1690
     .end local v2           #h:I
     .end local v3           #input:Ljava/io/InputStream;
     .end local v6           #opts:Landroid/graphics/BitmapFactory$Options;
@@ -1031,7 +1031,7 @@
     :catch_0
     move-exception v1
 
-    .line 1517
+    .line 1691
     .local v1, e:Ljava/io/IOException;
     const-string v12, "HtcUnionContact"
 
@@ -1073,22 +1073,22 @@
 
     const/4 v10, 0x1
 
-    .line 1534
+    .line 1709
     move v3, p1
 
-    .line 1535
+    .line 1710
     .local v3, mContactPhoteWidth:I
     move v2, p2
 
-    .line 1537
+    .line 1712
     .local v2, mContactPhoteHeight:I
     const/4 v0, 0x0
 
-    .line 1538
+    .line 1713
     .local v0, bitmap:Landroid/graphics/Bitmap;
     const/4 v5, 0x0
 
-    .line 1540
+    .line 1715
     .local v5, resultBitmap:Landroid/graphics/Bitmap;
     if-lez p1, :cond_0
 
@@ -1099,53 +1099,53 @@
     :cond_0
     move-object v10, v11
 
-    .line 1583
+    .line 1758
     :goto_0
     return-object v10
 
-    .line 1544
+    .line 1719
     :cond_1
     new-instance v4, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v4}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1545
+    .line 1720
     .local v4, opts:Landroid/graphics/BitmapFactory$Options;
     iput-boolean v10, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1547
+    .line 1722
     invoke-static {p0, v4}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 1548
+    .line 1723
     iget v7, v4, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 1549
+    .line 1724
     .local v7, w:I
     iget v1, v4, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 1551
+    .line 1726
     .local v1, h:I
     const/4 v6, 0x1
 
-    .line 1553
+    .line 1728
     .local v6, value:I
     :goto_1
     if-le v7, v3, :cond_2
 
     if-le v1, v2, :cond_2
 
-    .line 1554
+    .line 1729
     shr-int/lit8 v7, v7, 0x1
 
-    .line 1555
+    .line 1730
     shr-int/lit8 v1, v1, 0x1
 
-    .line 1556
+    .line 1731
     shl-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 1558
+    .line 1733
     :cond_2
     shr-int/lit8 v12, v6, 0x1
 
@@ -1153,80 +1153,80 @@
 
     move v6, v10
 
-    .line 1560
+    .line 1735
     :goto_2
     const/4 v10, 0x0
 
     iput-boolean v10, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1561
+    .line 1736
     iput v6, v4, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 1563
+    .line 1738
     invoke-static {p0, v4}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1565
+    .line 1740
     if-nez v0, :cond_4
 
     move-object v10, v11
 
-    .line 1566
+    .line 1741
     goto :goto_0
 
-    .line 1558
+    .line 1733
     :cond_3
     shr-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 1568
+    .line 1743
     :cond_4
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
 
-    .line 1569
+    .line 1744
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    .line 1570
+    .line 1745
     sub-int v10, v7, v3
 
     shr-int/lit8 v8, v10, 0x1
 
-    .line 1571
+    .line 1746
     .local v8, x:I
     sub-int v10, v1, v2
 
     shr-int/lit8 v9, v10, 0x1
 
-    .line 1573
+    .line 1748
     .local v9, y:I
     if-lt v7, v3, :cond_5
 
     if-lt v1, v2, :cond_5
 
-    .line 1574
+    .line 1749
     invoke-static {v0, v8, v9, v3, v2}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
     move-result-object v5
 
-    .line 1576
+    .line 1751
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1581
+    .line 1756
     :goto_3
     const/4 v0, 0x0
 
     move-object v10, v5
 
-    .line 1583
+    .line 1758
     goto :goto_0
 
-    .line 1578
+    .line 1753
     :cond_5
     move-object v5, v0
 
@@ -1237,33 +1237,33 @@
     .locals 2
 
     .prologue
-    .line 3234
+    .line 3452
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 3235
+    .line 3453
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "android.intent.action.EDIT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3236
+    .line 3454
     sget-object v1, Landroid/provider/Contacts$MyContactCard;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 3237
+    .line 3455
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3238
+    .line 3456
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3239
+    .line 3457
     return-object v0
 .end method
 
@@ -1277,7 +1277,7 @@
 
     const/4 v3, 0x0
 
-    .line 2684
+    .line 2887
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_2
@@ -1285,18 +1285,18 @@
     :cond_0
     move-object v9, v3
 
-    .line 2704
+    .line 2907
     :cond_1
     :goto_0
     return-object v9
 
-    .line 2687
+    .line 2890
     :cond_2
     invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v7
 
-    .line 2688
+    .line 2891
     .local v7, dataId:J
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1304,11 +1304,11 @@
 
     move-result-object v1
 
-    .line 2689
+    .line 2892
     .local v1, uri:Landroid/net/Uri;
     const/4 v10, 0x0
 
-    .line 2690
+    .line 2893
     .local v10, sPhoneNumber:Ljava/lang/String;
     const/4 v0, 0x1
 
@@ -1328,41 +1328,41 @@
 
     move-result-object v6
 
-    .line 2691
+    .line 2894
     .local v6, cursor:Landroid/database/Cursor;
     const/4 v9, 0x0
 
-    .line 2692
+    .line 2895
     .local v9, sMailAddress:Ljava/lang/String;
     if-eqz v6, :cond_1
 
-    .line 2694
+    .line 2897
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 2696
+    .line 2899
     invoke-interface {v6, v11}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 2697
+    .line 2900
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 2698
+    .line 2901
     const/4 v9, 0x0
 
-    .line 2701
+    .line 2904
     :cond_3
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2702
+    .line 2905
     const/4 v6, 0x0
 
     goto :goto_0
@@ -1373,23 +1373,23 @@
     .parameter "resolver"
 
     .prologue
-    .line 3268
+    .line 3488
     if-nez p0, :cond_1
 
     const/4 v8, 0x0
 
-    .line 3296
+    .line 3516
     :cond_0
     :goto_0
     return-object v8
 
-    .line 3270
+    .line 3490
     :cond_1
     new-instance v8, Landroid/os/Bundle;
 
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
-    .line 3271
+    .line 3491
     .local v8, bundleIds:Landroid/os/Bundle;
     const/4 v0, 0x2
 
@@ -1407,27 +1407,27 @@
 
     aput-object v1, v2, v0
 
-    .line 3275
+    .line 3495
     .local v2, COLUMNS:[Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 3276
+    .line 3496
     .local v7, _ID:I
     const/4 v6, 0x1
 
-    .line 3277
+    .line 3497
     .local v6, CONTACT_ID:I
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3278
+    .line 3498
     .local v14, selection:Ljava/lang/StringBuilder;
     const-string v0, "account_name=? AND account_type=? AND sourceid=?"
 
     invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3281
+    .line 3501
     const/4 v0, 0x3
 
     new-array v4, v0, [Ljava/lang/String;
@@ -1450,7 +1450,7 @@
 
     aput-object v1, v4, v0
 
-    .line 3282
+    .line 3502
     .local v4, selectionArgs:[Ljava/lang/String;
     sget-object v1, Landroid/provider/ContactsContract$RawContacts;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1466,11 +1466,11 @@
 
     move-result-object v9
 
-    .line 3283
+    .line 3503
     .local v9, cursorRawContact:Landroid/database/Cursor;
     if-eqz v9, :cond_0
 
-    .line 3284
+    .line 3504
     const/4 v0, 0x1
 
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
@@ -1485,14 +1485,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 3285
+    .line 3505
     const/4 v0, 0x0
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v12
 
-    .line 3286
+    .line 3506
     .local v12, lMyRawContactId:J
     const/4 v0, 0x1
 
@@ -1500,7 +1500,7 @@
 
     move-result-wide v10
 
-    .line 3287
+    .line 3507
     .local v10, lMyContactId:J
     const-wide/16 v0, 0x0
 
@@ -1514,23 +1514,23 @@
 
     if-gez v0, :cond_2
 
-    .line 3288
+    .line 3508
     const-string v0, "_id"
 
     invoke-virtual {v8, v0, v12, v13}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 3289
+    .line 3509
     const-string v0, "contact_id"
 
     invoke-virtual {v8, v0, v10, v11}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 3292
+    .line 3512
     .end local v10           #lMyContactId:J
     .end local v12           #lMyRawContactId:J
     :cond_2
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 3293
+    .line 3513
     const/4 v9, 0x0
 
     goto :goto_0
@@ -1542,10 +1542,10 @@
     .parameter "opts"
 
     .prologue
-    .line 2213
+    .line 2406
     const/16 v20, 0x0
 
-    .line 2214
+    .line 2407
     .local v20, result:Landroid/graphics/Bitmap;
     const-string v1, "content://contacts/myContactCard"
 
@@ -1553,11 +1553,11 @@
 
     move-result-object v2
 
-    .line 2215
+    .line 2408
     .local v2, meContactUri:Landroid/net/Uri;
     const-string v7, "HTCContactUtils"
 
-    .line 2216
+    .line 2409
     .local v7, TAG:Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -1573,16 +1573,16 @@
 
     move-result-object v9
 
-    .line 2217
+    .line 2410
     .local v9, cursor:Landroid/database/Cursor;
     if-nez v9, :cond_0
 
-    .line 2218
+    .line 2411
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "invalid contact uri: "
+    const-string v3, "invalid contact uri: "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1598,14 +1598,14 @@
 
     invoke-static {v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2219
+    .line 2412
     const/4 v1, 0x0
 
-    .line 2287
+    .line 2480
     :goto_0
     return-object v1
 
-    .line 2225
+    .line 2418
     :cond_0
     :try_start_0
     const-string/jumbo v1, "type"
@@ -1614,7 +1614,7 @@
 
     move-result v15
 
-    .line 2226
+    .line 2419
     .local v15, idxType:I
     const-string/jumbo v1, "subtype"
 
@@ -1622,7 +1622,7 @@
 
     move-result v14
 
-    .line 2227
+    .line 2420
     .local v14, idxSubType:I
     const-string v1, "data2"
 
@@ -1630,7 +1630,7 @@
 
     move-result v13
 
-    .line 2228
+    .line 2421
     .local v13, idxData2:I
     const-string v1, "blobdata"
 
@@ -1640,27 +1640,27 @@
 
     move-result v12
 
-    .line 2235
+    .line 2428
     .local v12, idxBlobData:I
     const/16 v19, 0x0
 
-    .line 2236
+    .line 2429
     .local v19, photoBytes:[B
     const/4 v11, 0x0
 
-    .line 2239
+    .line 2432
     .local v11, facePhotoBytes:[B
     const/16 v17, 0x0
 
-    .line 2240
+    .line 2433
     .local v17, isGetData:Z
     const/16 v18, 0x0
 
-    .line 2241
+    .line 2434
     .local v18, isGetFBData:Z
     const/4 v8, -0x1
 
-    .line 2242
+    .line 2435
     .local v8, autoupdate:I
     :cond_1
     :goto_1
@@ -1670,40 +1670,40 @@
 
     if-eqz v1, :cond_5
 
-    .line 2243
+    .line 2436
     invoke-interface {v9, v15}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v24
 
-    .line 2244
+    .line 2437
     .local v24, type:I
     invoke-interface {v9, v14}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v22
 
-    .line 2245
+    .line 2438
     .local v22, subtype:I
     sparse-switch v24, :sswitch_data_0
 
     goto :goto_1
 
-    .line 2247
+    .line 2440
     :sswitch_0
     if-nez v17, :cond_2
 
-    .line 2248
+    .line 2441
     invoke-interface {v9, v12}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v19
 
-    .line 2250
+    .line 2443
     :cond_2
     const/16 v17, 0x1
 
-    .line 2251
+    .line 2444
     goto :goto_1
 
-    .line 2229
+    .line 2422
     .end local v8           #autoupdate:I
     .end local v11           #facePhotoBytes:[B
     .end local v12           #idxBlobData:I
@@ -1718,13 +1718,13 @@
     :catch_0
     move-exception v10
 
-    .line 2230
+    .line 2423
     .local v10, e:Ljava/lang/IllegalArgumentException;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "invalid column index: "
+    const-string v3, "invalid column index: "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1744,15 +1744,15 @@
 
     invoke-static {v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2231
+    .line 2424
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 2232
+    .line 2425
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2254
+    .line 2447
     .end local v10           #e:Ljava/lang/IllegalArgumentException;
     .restart local v8       #autoupdate:I
     .restart local v11       #facePhotoBytes:[B
@@ -1772,21 +1772,21 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 2255
+    .line 2448
     if-nez v18, :cond_3
 
-    .line 2256
+    .line 2449
     invoke-interface {v9, v12}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v11
 
-    .line 2258
+    .line 2451
     :cond_3
     const/16 v18, 0x1
 
     goto :goto_1
 
-    .line 2260
+    .line 2453
     :cond_4
     const v1, 0xff01
 
@@ -1794,12 +1794,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2261
+    .line 2454
     invoke-interface {v9, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v21
 
-    .line 2262
+    .line 2455
     .local v21, str:Ljava/lang/String;
     invoke-static/range {v21 .. v21}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1807,7 +1807,7 @@
 
     if-nez v1, :cond_1
 
-    .line 2264
+    .line 2457
     :try_start_1
     invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_1
@@ -1817,17 +1817,17 @@
 
     goto :goto_1
 
-    .line 2265
+    .line 2458
     :catch_1
     move-exception v10
 
-    .line 2266
+    .line 2459
     .local v10, e:Ljava/lang/Exception;
     const/4 v8, -0x1
 
     goto :goto_1
 
-    .line 2275
+    .line 2468
     .end local v10           #e:Ljava/lang/Exception;
     .end local v21           #str:Ljava/lang/String;
     .end local v22           #subtype:I
@@ -1835,14 +1835,14 @@
     :cond_5
     if-eqz v9, :cond_6
 
-    .line 2276
+    .line 2469
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 2279
+    .line 2472
     :cond_6
     const/16 v16, 0x0
 
-    .line 2281
+    .line 2474
     .local v16, isFaceBook:Z
     if-ltz v8, :cond_8
 
@@ -1852,18 +1852,18 @@
 
     const/16 v16, 0x1
 
-    .line 2283
+    .line 2476
     :goto_2
     if-eqz v16, :cond_9
 
     move-object/from16 v23, v11
 
-    .line 2284
+    .line 2477
     .local v23, target:[B
     :goto_3
     if-eqz v23, :cond_7
 
-    .line 2285
+    .line 2478
     const/4 v1, 0x0
 
     move-object/from16 v0, v23
@@ -1879,10 +1879,10 @@
     :cond_7
     move-object/from16 v1, v20
 
-    .line 2287
+    .line 2480
     goto/16 :goto_0
 
-    .line 2281
+    .line 2474
     .end local v23           #target:[B
     :cond_8
     const/16 v16, 0x0
@@ -1892,10 +1892,10 @@
     :cond_9
     move-object/from16 v23, v19
 
-    .line 2283
+    .line 2476
     goto :goto_3
 
-    .line 2245
+    .line 2438
     nop
 
     :sswitch_data_0
@@ -1911,7 +1911,7 @@
     .parameter "contactId"
 
     .prologue
-    .line 2493
+    .line 2692
     new-instance v6, Ljava/lang/StringBuilder;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1938,13 +1938,13 @@
 
     invoke-direct {v6, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 2494
+    .line 2693
     .local v6, where:Ljava/lang/StringBuilder;
     const-string v0, " AND type=3 AND new=1 "
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2495
+    .line 2694
     sget-object v1, Landroid/provider/CallLog$Calls;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v2, Landroid/provider/HtcUnionContact$ContactUtils;->CALL_LOG_PROJECTION:[Ljava/lang/String;
@@ -1976,7 +1976,7 @@
 
     const/4 v3, 0x0
 
-    .line 2716
+    .line 2919
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_2
@@ -1984,18 +1984,18 @@
     :cond_0
     move-object v9, v3
 
-    .line 2734
+    .line 2937
     :cond_1
     :goto_0
     return-object v9
 
-    .line 2718
+    .line 2921
     :cond_2
     invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v7
 
-    .line 2719
+    .line 2922
     .local v7, dataId:J
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
@@ -2003,11 +2003,11 @@
 
     move-result-object v1
 
-    .line 2720
+    .line 2923
     .local v1, uri:Landroid/net/Uri;
     const/4 v9, 0x0
 
-    .line 2721
+    .line 2924
     .local v9, sPhoneNumber:Ljava/lang/String;
     const/4 v0, 0x1
 
@@ -2027,37 +2027,37 @@
 
     move-result-object v6
 
-    .line 2722
+    .line 2925
     .local v6, cursor:Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
-    .line 2724
+    .line 2927
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 2726
+    .line 2929
     invoke-interface {v6, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 2727
+    .line 2930
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 2728
+    .line 2931
     const/4 v9, 0x0
 
-    .line 2731
+    .line 2934
     :cond_3
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2732
+    .line 2935
     const/4 v6, 0x0
 
     goto :goto_0
@@ -2069,10 +2069,10 @@
     .parameter "type"
 
     .prologue
-    .line 2357
+    .line 2555
     const/4 v1, 0x0
 
-    .line 2359
+    .line 2557
     .local v1, htcContext:Landroid/content/Context;
     :try_start_0
     const-string v4, "com.htc"
@@ -2085,41 +2085,41 @@
 
     move-result-object v1
 
-    .line 2363
+    .line 2561
     :goto_0
     if-nez v1, :cond_0
 
-    .line 2364
+    .line 2562
     const-string v2, ""
 
-    .line 2469
+    .line 2667
     :goto_1
     return-object v2
 
-    .line 2360
+    .line 2558
     :catch_0
     move-exception v0
 
-    .line 2361
+    .line 2559
     .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2366
+    .line 2564
     .end local v0           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_0
     const/4 v3, 0x0
 
-    .line 2367
+    .line 2565
     .local v3, stringId:I
     packed-switch p1, :pswitch_data_0
 
-    .line 2463
+    .line 2661
     :goto_2
     if-lez v3, :cond_1
 
-    .line 2464
+    .line 2662
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -2131,7 +2131,7 @@
     .local v2, result:Ljava/lang/String;
     goto :goto_1
 
-    .line 2371
+    .line 2569
     .end local v2           #result:Ljava/lang/String;
     :pswitch_0
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2148,10 +2148,10 @@
 
     move-result v3
 
-    .line 2372
+    .line 2570
     goto :goto_2
 
-    .line 2378
+    .line 2576
     :pswitch_1
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2167,10 +2167,10 @@
 
     move-result v3
 
-    .line 2379
+    .line 2577
     goto :goto_2
 
-    .line 2385
+    .line 2583
     :pswitch_2
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2186,10 +2186,10 @@
 
     move-result v3
 
-    .line 2386
+    .line 2584
     goto :goto_2
 
-    .line 2393
+    .line 2591
     :pswitch_3
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2205,10 +2205,10 @@
 
     move-result v3
 
-    .line 2394
+    .line 2592
     goto :goto_2
 
-    .line 2400
+    .line 2598
     :pswitch_4
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2224,10 +2224,10 @@
 
     move-result v3
 
-    .line 2401
+    .line 2599
     goto :goto_2
 
-    .line 2406
+    .line 2604
     :pswitch_5
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2243,10 +2243,10 @@
 
     move-result v3
 
-    .line 2407
+    .line 2605
     goto :goto_2
 
-    .line 2411
+    .line 2609
     :pswitch_6
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2262,10 +2262,10 @@
 
     move-result v3
 
-    .line 2412
+    .line 2610
     goto/16 :goto_2
 
-    .line 2416
+    .line 2614
     :pswitch_7
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2281,10 +2281,10 @@
 
     move-result v3
 
-    .line 2417
+    .line 2615
     goto/16 :goto_2
 
-    .line 2421
+    .line 2619
     :pswitch_8
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2300,10 +2300,10 @@
 
     move-result v3
 
-    .line 2422
+    .line 2620
     goto/16 :goto_2
 
-    .line 2426
+    .line 2624
     :pswitch_9
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2319,10 +2319,10 @@
 
     move-result v3
 
-    .line 2427
+    .line 2625
     goto/16 :goto_2
 
-    .line 2431
+    .line 2629
     :pswitch_a
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2338,10 +2338,10 @@
 
     move-result v3
 
-    .line 2432
+    .line 2630
     goto/16 :goto_2
 
-    .line 2436
+    .line 2634
     :pswitch_b
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2357,10 +2357,10 @@
 
     move-result v3
 
-    .line 2437
+    .line 2635
     goto/16 :goto_2
 
-    .line 2441
+    .line 2639
     :pswitch_c
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2376,10 +2376,10 @@
 
     move-result v3
 
-    .line 2442
+    .line 2640
     goto/16 :goto_2
 
-    .line 2446
+    .line 2644
     :pswitch_d
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2395,10 +2395,10 @@
 
     move-result v3
 
-    .line 2447
+    .line 2645
     goto/16 :goto_2
 
-    .line 2451
+    .line 2649
     :pswitch_e
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2414,10 +2414,10 @@
 
     move-result v3
 
-    .line 2452
+    .line 2650
     goto/16 :goto_2
 
-    .line 2457
+    .line 2655
     :pswitch_f
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2433,17 +2433,17 @@
 
     move-result v3
 
-    .line 2458
+    .line 2656
     goto/16 :goto_2
 
-    .line 2467
+    .line 2665
     :cond_1
     const-string v2, ""
 
     .restart local v2       #result:Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 2367
+    .line 2565
     nop
 
     :pswitch_data_0
@@ -2478,12 +2478,12 @@
     .parameter "type"
 
     .prologue
-    .line 2480
+    .line 2678
     invoke-static {p0, p1}, Landroid/provider/HtcUnionContact$ContactUtils;->getPhoneNumberTypeShortString(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2481
+    .line 2679
     .local v0, result:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2491,7 +2491,7 @@
 
     if-nez v1, :cond_0
 
-    .line 2482
+    .line 2680
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2510,7 +2510,7 @@
 
     move-result-object v0
 
-    .line 2484
+    .line 2682
     :cond_0
     return-object v0
 .end method
@@ -2523,19 +2523,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2342
+    .line 2540
     const/4 v0, 0x0
 
-    .line 2343
+    .line 2541
     .local v0, result:Ljava/lang/CharSequence;
     if-eqz p0, :cond_0
 
-    .line 2344
+    .line 2542
     invoke-static {p0, p1, v1}, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->getDisplayLabel(Landroid/content/Context;ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 2346
+    .line 2544
     :cond_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2543,7 +2543,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 2349
+    .line 2547
     :goto_0
     return-object v1
 
@@ -2563,16 +2563,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3140
+    .line 3356
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 3143
+    .line 3359
     .local v0, mResolver:Landroid/content/ContentResolver;
     const/4 v8, 0x0
 
-    .line 3144
+    .line 3360
     .local v8, resultUri:Landroid/net/Uri;
     const-string v3, "content://contacts/simAndContacts/numbers"
 
@@ -2587,16 +2587,16 @@
 
     move-object v5, v2
 
-    .line 3145
+    .line 3361
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 3146
+    .line 3362
     .local v6, c:Landroid/database/Cursor;
     const/4 v7, -0x1
 
-    .line 3147
+    .line 3363
     .local v7, id:I
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
@@ -2605,7 +2605,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 3148
+    .line 3364
     const-string/jumbo v2, "type"
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2616,11 +2616,11 @@
 
     move-result v9
 
-    .line 3149
+    .line 3365
     .local v9, type:I
     const/4 v10, 0x0
 
-    .line 3150
+    .line 3366
     .local v10, value:Ljava/lang/String;
     const-string/jumbo v2, "name"
 
@@ -2632,7 +2632,7 @@
 
     move-result-object v10
 
-    .line 3151
+    .line 3367
     if-eqz v10, :cond_0
 
     invoke-virtual {v10, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2641,12 +2641,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 3153
+    .line 3369
     const/16 v2, 0x14
 
     if-ne v9, v2, :cond_2
 
-    .line 3154
+    .line 3370
     const-string/jumbo v2, "recordNumber"
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2657,7 +2657,7 @@
 
     move-result v7
 
-    .line 3156
+    .line 3372
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2680,17 +2680,17 @@
 
     move-result-object v8
 
-    .line 3166
+    .line 3382
     .end local v9           #type:I
     .end local v10           #value:Ljava/lang/String;
     :cond_1
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 3167
+    .line 3383
     return-object v8
 
-    .line 3159
+    .line 3375
     .restart local v9       #type:I
     .restart local v10       #value:Ljava/lang/String;
     :cond_2
@@ -2704,7 +2704,7 @@
 
     move-result v7
 
-    .line 3160
+    .line 3376
     sget-object v2, Landroid/provider/Contacts$People;->CONTENT_URI:Landroid/net/Uri;
 
     int-to-long v3, v7
@@ -2713,7 +2713,7 @@
 
     move-result-object v8
 
-    .line 3162
+    .line 3378
     goto :goto_0
 .end method
 
@@ -2725,16 +2725,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3076
+    .line 3290
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 3079
+    .line 3293
     .local v0, mResolver:Landroid/content/ContentResolver;
     const/4 v9, 0x0
 
-    .line 3080
+    .line 3294
     .local v9, resultUri:Landroid/net/Uri;
     const-string v3, "content://contacts/simAndContacts/numbers"
 
@@ -2749,16 +2749,16 @@
 
     move-object v5, v2
 
-    .line 3081
+    .line 3295
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 3082
+    .line 3296
     .local v6, c:Landroid/database/Cursor;
     const/4 v7, -0x1
 
-    .line 3083
+    .line 3297
     .local v7, id:I
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
@@ -2767,7 +2767,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 3084
+    .line 3298
     const-string/jumbo v2, "type"
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2778,11 +2778,11 @@
 
     move-result v10
 
-    .line 3085
+    .line 3299
     .local v10, type:I
     const/4 v8, 0x0
 
-    .line 3086
+    .line 3300
     .local v8, phonenumber:Ljava/lang/String;
     const-string/jumbo v2, "number"
 
@@ -2794,7 +2794,7 @@
 
     move-result-object v8
 
-    .line 3087
+    .line 3301
     if-eqz v8, :cond_0
 
     invoke-virtual {v8, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2803,12 +2803,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 3088
+    .line 3302
     const/16 v2, 0x14
 
     if-ne v10, v2, :cond_2
 
-    .line 3089
+    .line 3303
     const-string/jumbo v2, "recordNumber"
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2819,7 +2819,7 @@
 
     move-result v7
 
-    .line 3091
+    .line 3305
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2842,17 +2842,17 @@
 
     move-result-object v9
 
-    .line 3101
+    .line 3315
     .end local v8           #phonenumber:Ljava/lang/String;
     .end local v10           #type:I
     :cond_1
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 3102
+    .line 3316
     return-object v9
 
-    .line 3094
+    .line 3308
     .restart local v8       #phonenumber:Ljava/lang/String;
     .restart local v10       #type:I
     :cond_2
@@ -2866,7 +2866,7 @@
 
     move-result v7
 
-    .line 3095
+    .line 3309
     sget-object v2, Landroid/provider/Contacts$People;->CONTENT_URI:Landroid/net/Uri;
 
     int-to-long v3, v7
@@ -2875,7 +2875,7 @@
 
     move-result-object v9
 
-    .line 3097
+    .line 3311
     goto :goto_0
 .end method
 
@@ -2889,40 +2889,40 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2778
+    .line 2983
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 2779
+    .line 2984
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 2780
+    .line 2985
     .local v1, options:Landroid/graphics/BitmapFactory$Options;
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 2781
+    .line 2986
     iput-object p3, v1, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
-    .line 2782
+    .line 2987
     invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 2783
+    .line 2988
     iput v3, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 2784
+    .line 2989
     iget v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 2786
+    .line 2991
     .local v0, nSampleSize:I
     :goto_0
     mul-int/lit8 v0, v0, 0x2
 
-    .line 2787
+    .line 2992
     iget v2, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     div-int/2addr v2, v0
@@ -2935,23 +2935,23 @@
 
     if-lt v2, p2, :cond_0
 
-    .line 2788
+    .line 2993
     iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     goto :goto_0
 
-    .line 2792
+    .line 2997
     :cond_0
     const/4 v2, 0x0
 
     iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 2793
+    .line 2998
     invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 2795
+    .line 3000
     .end local v0           #nSampleSize:I
     .end local v1           #options:Landroid/graphics/BitmapFactory$Options;
     :goto_1
@@ -2974,39 +2974,39 @@
 
     const/4 v3, 0x0
 
-    .line 2739
+    .line 2942
     if-eqz p0, :cond_1
 
     array-length v2, p0
 
     if-lez v2, :cond_1
 
-    .line 2740
+    .line 2943
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 2741
+    .line 2944
     .local v1, options:Landroid/graphics/BitmapFactory$Options;
     iput-boolean v4, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 2742
+    .line 2945
     array-length v2, p0
 
     invoke-static {p0, v3, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 2743
+    .line 2946
     iput v4, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 2744
+    .line 2947
     iget v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 2746
+    .line 2949
     .local v0, nSampleSize:I
     :goto_0
     mul-int/lit8 v0, v0, 0x2
 
-    .line 2747
+    .line 2950
     iget v2, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     div-int/2addr v2, v0
@@ -3019,23 +3019,23 @@
 
     if-lt v2, p2, :cond_0
 
-    .line 2748
+    .line 2951
     iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     goto :goto_0
 
-    .line 2752
+    .line 2955
     :cond_0
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 2753
+    .line 2956
     array-length v2, p0
 
     invoke-static {p0, v3, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 2755
+    .line 2958
     .end local v0           #nSampleSize:I
     .end local v1           #options:Landroid/graphics/BitmapFactory$Options;
     :goto_1
@@ -3059,42 +3059,42 @@
 
     const/4 v3, 0x0
 
-    .line 2758
+    .line 2962
     if-eqz p0, :cond_1
 
     array-length v2, p0
 
     if-lez v2, :cond_1
 
-    .line 2759
+    .line 2963
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 2760
+    .line 2964
     .local v1, options:Landroid/graphics/BitmapFactory$Options;
     iput-boolean v4, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 2761
+    .line 2965
     iput-object p3, v1, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
-    .line 2762
+    .line 2966
     array-length v2, p0
 
     invoke-static {p0, v3, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 2763
+    .line 2967
     iput v4, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 2764
+    .line 2968
     iget v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 2766
+    .line 2970
     .local v0, nSampleSize:I
     :goto_0
     mul-int/lit8 v0, v0, 0x2
 
-    .line 2767
+    .line 2971
     iget v2, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     div-int/2addr v2, v0
@@ -3107,23 +3107,23 @@
 
     if-lt v2, p2, :cond_0
 
-    .line 2768
+    .line 2972
     iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     goto :goto_0
 
-    .line 2772
+    .line 2976
     :cond_0
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 2773
+    .line 2977
     array-length v2, p0
 
     invoke-static {p0, v3, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 2775
+    .line 2979
     .end local v0           #nSampleSize:I
     .end local v1           #options:Landroid/graphics/BitmapFactory$Options;
     :goto_1
@@ -3142,28 +3142,28 @@
     .parameter "nTargetHeight"
 
     .prologue
-    .line 2887
+    .line 3094
     if-nez p0, :cond_0
 
     const/4 v5, 0x0
 
-    .line 2913
+    .line 3120
     :goto_0
     return-object v5
 
-    .line 2888
+    .line 3095
     :cond_0
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v12
 
-    .line 2889
+    .line 3096
     .local v12, nSrcW:I
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v11
 
-    .line 2891
+    .line 3098
     .local v11, nSrcH:I
     sget-object v16, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
@@ -3177,19 +3177,19 @@
 
     move-result-object v5
 
-    .line 2892
+    .line 3099
     .local v5, bmDst:Landroid/graphics/Bitmap;
     new-instance v6, Landroid/graphics/Canvas;
 
     invoke-direct {v6, v5}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 2893
+    .line 3100
     .local v6, canvasDst:Landroid/graphics/Canvas;
     new-instance v15, Landroid/graphics/Paint;
 
     invoke-direct {v15}, Landroid/graphics/Paint;-><init>()V
 
-    .line 2894
+    .line 3101
     .local v15, paintDefault:Landroid/graphics/Paint;
     int-to-float v0, v12
 
@@ -3203,7 +3203,7 @@
 
     div-float v7, v16, v17
 
-    .line 2895
+    .line 3102
     .local v7, fXratio:F
     int-to-float v0, v11
 
@@ -3217,16 +3217,16 @@
 
     div-float v8, v16, v17
 
-    .line 2896
+    .line 3103
     .local v8, fYratio:F
     cmpg-float v16, v7, v8
 
     if-gtz v16, :cond_1
 
-    .line 2897
+    .line 3104
     move v10, v12
 
-    .line 2898
+    .line 3105
     .local v10, nSrcDrawW:I
     move/from16 v0, p2
 
@@ -3240,13 +3240,13 @@
 
     float-to-int v9, v0
 
-    .line 2899
+    .line 3106
     .local v9, nSrcDrawH:I
     sub-int v16, v11, v9
 
     div-int/lit8 v14, v16, 0x2
 
-    .line 2900
+    .line 3107
     .local v14, nYoffset:I
     new-instance v16, Landroid/graphics/Rect;
 
@@ -3290,7 +3290,7 @@
 
     goto :goto_0
 
-    .line 2905
+    .line 3112
     .end local v9           #nSrcDrawH:I
     .end local v10           #nSrcDrawW:I
     .end local v14           #nYoffset:I
@@ -3307,17 +3307,17 @@
 
     float-to-int v10, v0
 
-    .line 2906
+    .line 3113
     .restart local v10       #nSrcDrawW:I
     move v9, v11
 
-    .line 2907
+    .line 3114
     .restart local v9       #nSrcDrawH:I
     sub-int v16, v12, v10
 
     div-int/lit8 v13, v16, 0x2
 
-    .line 2908
+    .line 3115
     .local v13, nXoffset:I
     new-instance v16, Landroid/graphics/Rect;
 
@@ -3369,17 +3369,17 @@
     .parameter "nTargetSize"
 
     .prologue
-    .line 2808
+    .line 3014
     if-nez p0, :cond_1
 
     const/4 v3, 0x0
 
-    .line 2838
+    .line 3044
     :cond_0
     :goto_0
     return-object v3
 
-    .line 2809
+    .line 3015
     :cond_1
     sget-object v12, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -3391,35 +3391,35 @@
 
     move-result-object v3
 
-    .line 2810
+    .line 3016
     .local v3, bmDst:Landroid/graphics/Bitmap;
     new-instance v4, Landroid/graphics/Canvas;
 
     invoke-direct {v4, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 2811
+    .line 3017
     .local v4, canvasDst:Landroid/graphics/Canvas;
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v8
 
-    .line 2812
+    .line 3018
     .local v8, nSrcW:I
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v7
 
-    .line 2813
+    .line 3019
     .local v7, nSrcH:I
     new-instance v11, Landroid/graphics/Paint;
 
     invoke-direct {v11}, Landroid/graphics/Paint;-><init>()V
 
-    .line 2814
+    .line 3020
     .local v11, paintDefault:Landroid/graphics/Paint;
     if-ne v8, v7, :cond_2
 
-    .line 2815
+    .line 3021
     new-instance v12, Landroid/graphics/Rect;
 
     const/4 v13, 0x0
@@ -3444,7 +3444,7 @@
 
     invoke-virtual {v4, v0, v12, v13, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 2826
+    .line 3032
     :goto_1
     if-eqz p1, :cond_0
 
@@ -3454,7 +3454,7 @@
 
     if-lez v12, :cond_0
 
-    .line 2829
+    .line 3035
     const/4 v12, 0x0
 
     move-object/from16 v0, p1
@@ -3467,19 +3467,19 @@
 
     move-result-object v10
 
-    .line 2830
+    .line 3036
     .local v10, overlayBitmap:Landroid/graphics/Bitmap;
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v9
 
-    .line 2831
+    .line 3037
     .local v9, nW:I
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v5
 
-    .line 2832
+    .line 3038
     .local v5, nH:I
     if-eqz v10, :cond_5
 
@@ -3491,7 +3491,7 @@
 
     if-ge v5, v0, :cond_5
 
-    .line 2833
+    .line 3039
     new-instance v12, Landroid/graphics/Rect;
 
     const/4 v13, 0x0
@@ -3512,12 +3512,12 @@
 
     invoke-virtual {v4, v10, v12, v13, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 2834
+    .line 3040
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0
 
-    .line 2817
+    .line 3023
     .end local v5           #nH:I
     .end local v9           #nW:I
     .end local v10           #overlayBitmap:Landroid/graphics/Bitmap;
@@ -3526,17 +3526,17 @@
 
     const/4 v2, 0x1
 
-    .line 2818
+    .line 3024
     .local v2, bSrcLandscape:Z
     :goto_2
     if-eqz v2, :cond_4
 
-    .line 2819
+    .line 3025
     sub-int v12, v8, v7
 
     div-int/lit8 v6, v12, 0x2
 
-    .line 2820
+    .line 3026
     .local v6, nOffset:I
     new-instance v12, Landroid/graphics/Rect;
 
@@ -3564,7 +3564,7 @@
 
     goto :goto_1
 
-    .line 2817
+    .line 3023
     .end local v2           #bSrcLandscape:Z
     .end local v6           #nOffset:I
     :cond_3
@@ -3572,14 +3572,14 @@
 
     goto :goto_2
 
-    .line 2822
+    .line 3028
     .restart local v2       #bSrcLandscape:Z
     :cond_4
     sub-int v12, v7, v8
 
     div-int/lit8 v6, v12, 0x2
 
-    .line 2823
+    .line 3029
     .restart local v6       #nOffset:I
     new-instance v12, Landroid/graphics/Rect;
 
@@ -3607,7 +3607,7 @@
 
     goto :goto_1
 
-    .line 2838
+    .line 3044
     .end local v2           #bSrcLandscape:Z
     .end local v6           #nOffset:I
     .restart local v5       #nH:I
@@ -3626,27 +3626,27 @@
     .parameter "nTargetHeight"
 
     .prologue
-    .line 2852
+    .line 3059
     const/4 v2, 0x0
 
     invoke-static {p0, p1, p2, v2}, Landroid/provider/HtcUnionContact$ContactUtils;->getScaledBitmap(Ljava/lang/String;II[B)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 2853
+    .line 3060
     .local v1, bmScaled:Landroid/graphics/Bitmap;
     invoke-static {v1, p1, p2}, Landroid/provider/HtcUnionContact$ContactUtils;->getScaledCenterCropBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2854
+    .line 3061
     .local v0, bmRet:Landroid/graphics/Bitmap;
     if-eqz v1, :cond_0
 
-    .line 2855
+    .line 3062
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 2857
+    .line 3064
     :cond_0
     return-object v0
 .end method
@@ -3658,25 +3658,25 @@
     .parameter "nTargetHeight"
 
     .prologue
-    .line 2844
+    .line 3050
     invoke-static {p0, p1, p2}, Landroid/provider/HtcUnionContact$ContactUtils;->getScaledBitmap([BII)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 2845
+    .line 3051
     .local v1, bmScaled:Landroid/graphics/Bitmap;
     invoke-static {v1, p1, p2}, Landroid/provider/HtcUnionContact$ContactUtils;->getScaledCenterCropBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2846
+    .line 3052
     .local v0, bmRet:Landroid/graphics/Bitmap;
     if-eqz v1, :cond_0
 
-    .line 2847
+    .line 3053
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 2849
+    .line 3055
     :cond_0
     return-object v0
 .end method
@@ -3689,20 +3689,20 @@
     .parameter "bmOverlay"
 
     .prologue
-    .line 2863
+    .line 3070
     invoke-static {p0, p1, p2}, Landroid/provider/HtcUnionContact$ContactUtils;->getScaledCenterCropBitmap([BII)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2864
+    .line 3071
     .local v0, bmCenterCrop:Landroid/graphics/Bitmap;
     if-nez p3, :cond_0
 
-    .line 2866
+    .line 3073
     :goto_0
     return-object v0
 
-    .line 2865
+    .line 3072
     :cond_0
     invoke-static {v0, p3}, Landroid/provider/HtcUnionContact$ContactUtils;->drawBottomLeftOverlay(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
@@ -3717,25 +3717,25 @@
     .parameter "overlay"
 
     .prologue
-    .line 2872
+    .line 3079
     if-eqz p3, :cond_0
 
     array-length v2, p3
 
     if-gtz v2, :cond_2
 
-    .line 2873
+    .line 3080
     :cond_0
     invoke-static {p0, p1, p2}, Landroid/provider/HtcUnionContact$ContactUtils;->getScaledCenterCropBitmap([BII)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 2880
+    .line 3087
     :cond_1
     :goto_0
     return-object v1
 
-    .line 2875
+    .line 3082
     :cond_2
     const/4 v2, 0x0
 
@@ -3745,17 +3745,17 @@
 
     move-result-object v0
 
-    .line 2876
+    .line 3083
     .local v0, bmOverlay:Landroid/graphics/Bitmap;
     invoke-static {p0, p1, p2, v0}, Landroid/provider/HtcUnionContact$ContactUtils;->getScaledCenterCropBitmap([BIILandroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 2877
+    .line 3084
     .local v1, bmRet:Landroid/graphics/Bitmap;
     if-eqz v0, :cond_1
 
-    .line 2878
+    .line 3085
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0
@@ -3769,16 +3769,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3107
+    .line 3322
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 3109
+    .line 3324
     .local v0, mResolver:Landroid/content/ContentResolver;
     const/4 v9, 0x0
 
-    .line 3110
+    .line 3325
     .local v9, resultUri:Landroid/net/Uri;
     const-string v3, "content://contacts/simAndContacts/numbers"
 
@@ -3793,20 +3793,20 @@
 
     move-object v5, v2
 
-    .line 3111
+    .line 3326
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 3112
+    .line 3327
     .local v6, c:Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 3113
+    .line 3328
     .local v7, name:Ljava/lang/String;
     if-eqz v6, :cond_1
 
-    .line 3114
+    .line 3329
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -3814,10 +3814,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 3115
+    .line 3330
     const/4 v8, 0x0
 
-    .line 3116
+    .line 3331
     .local v8, phonenumber:Ljava/lang/String;
     const-string/jumbo v2, "number"
 
@@ -3829,12 +3829,12 @@
 
     goto :goto_0
 
-    .line 3126
+    .line 3341
     .end local v8           #phonenumber:Ljava/lang/String;
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 3128
+    .line 3343
     :cond_1
     return-object v7
 .end method
@@ -3847,16 +3847,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2626
+    .line 2829
     new-instance v11, Ljava/lang/StringBuffer;
 
     invoke-direct {v11}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 2628
+    .line 2831
     .local v11, mailmatch:Ljava/lang/StringBuffer;
     const/4 v8, 0x0
 
-    .line 2629
+    .line 2832
     .local v8, mHasMailAddress:Z
     sget-object v1, Landroid/provider/Contacts$ContactMethods;->CONTENT_EMAIL_URI:Landroid/net/Uri;
 
@@ -3888,14 +3888,14 @@
 
     move-result-object v10
 
-    .line 2631
+    .line 2834
     .local v10, mailcursor:Landroid/database/Cursor;
     if-eqz v10, :cond_5
 
-    .line 2632
+    .line 2835
     const/4 v9, -0x1
 
-    .line 2633
+    .line 2836
     .local v9, mailIndex:I
     const-string v0, "data"
 
@@ -3903,19 +3903,19 @@
 
     move-result v9
 
-    .line 2634
+    .line 2837
     if-gez v9, :cond_1
 
-    .line 2636
+    .line 2839
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 2674
+    .line 2877
     .end local v9           #mailIndex:I
     :cond_0
     :goto_0
     return-object v2
 
-    .line 2640
+    .line 2843
     .restart local v9       #mailIndex:I
     :cond_1
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
@@ -3924,21 +3924,21 @@
 
     if-eqz v0, :cond_4
 
-    .line 2641
+    .line 2844
     const/4 v8, 0x1
 
-    .line 2642
+    .line 2845
     const-string v0, "   address in  (    "
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2645
+    .line 2848
     :cond_2
     invoke-interface {v10, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 2647
+    .line 2850
     .local v6, address:Ljava/lang/String;
     invoke-static {v6}, Landroid/database/DatabaseUtils;->sqlEscapeString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -3946,69 +3946,69 @@
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2650
+    .line 2853
     const/16 v0, 0x2c
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 2651
+    .line 2854
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 2653
+    .line 2856
     const-string v0, ","
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v7
 
-    .line 2654
+    .line 2857
     .local v7, garb:I
     if-ltz v7, :cond_3
 
-    .line 2655
+    .line 2858
     invoke-virtual {v11, v7}, Ljava/lang/StringBuffer;->deleteCharAt(I)Ljava/lang/StringBuffer;
 
     move-result-object v11
 
-    .line 2658
+    .line 2861
     :cond_3
     const-string v0, "  )  "
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2660
+    .line 2863
     const/4 v0, 0x0
 
     const-string v1, "  (  "
 
     invoke-virtual {v11, v0, v1}, Ljava/lang/StringBuffer;->insert(ILjava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2661
+    .line 2864
     const-string v0, "  ) "
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2664
+    .line 2867
     .end local v6           #address:Ljava/lang/String;
     .end local v7           #garb:I
     :cond_4
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 2666
+    .line 2869
     .end local v9           #mailIndex:I
     :cond_5
     if-eqz v8, :cond_0
 
-    .line 2668
+    .line 2871
     const-string v0, " AND read = 0 AND msg_type = 0 AND ( mms_type=130 OR mms_type=132 ) "
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2674
+    .line 2877
     invoke-virtual {v11}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -4021,27 +4021,27 @@
     .parameter "personId"
 
     .prologue
-    .line 3244
+    .line 3463
     const-wide/16 v1, 0x1
 
     cmp-long v1, p0, v1
 
     if-gez v1, :cond_0
 
-    .line 3245
+    .line 3464
     const/4 v0, 0x0
 
-    .line 3255
+    .line 3474
     :goto_0
     return-object v0
 
-    .line 3248
+    .line 3467
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 3249
+    .line 3468
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.android.htccontacts"
 
@@ -4049,22 +4049,22 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3251
+    .line 3470
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 3252
+    .line 3471
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3253
+    .line 3472
     const-string v1, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3254
+    .line 3473
     sget-object v1, Landroid/provider/Contacts$People;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v1, p0, p1}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
@@ -4080,12 +4080,12 @@
     .locals 3
 
     .prologue
-    .line 3184
+    .line 3401
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 3186
+    .line 3403
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.android.htccontacts"
 
@@ -4093,24 +4093,24 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3188
+    .line 3405
     const-string v1, "ACTION_ME"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3189
+    .line 3406
     const-string v1, "CONTACT_TYPE"
 
     const/4 v2, 0x3
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 3190
+    .line 3407
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3192
+    .line 3409
     return-object v0
 .end method
 
@@ -4123,14 +4123,14 @@
 
     const/4 v3, 0x0
 
-    .line 3204
+    .line 3421
     if-nez p0, :cond_0
 
-    .line 3230
+    .line 3447
     :goto_0
     return-object v3
 
-    .line 3208
+    .line 3425
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4154,13 +4154,13 @@
 
     move-result-object v6
 
-    .line 3211
+    .line 3428
     .local v6, cursor:Landroid/database/Cursor;
     new-instance v7, Landroid/content/Intent;
 
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 3212
+    .line 3429
     .local v7, intent:Landroid/content/Intent;
     if-eqz v6, :cond_1
 
@@ -4170,40 +4170,40 @@
 
     if-eqz v0, :cond_1
 
-    .line 3213
+    .line 3430
     const-string v0, "android.intent.action.VIEW"
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3214
+    .line 3431
     sget-object v0, Landroid/provider/Contacts$MyContactCard;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 3215
+    .line 3432
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 3227
+    .line 3444
     const/high16 v0, 0x2000
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3228
+    .line 3445
     invoke-virtual {v7, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-object v3, v7
 
-    .line 3230
+    .line 3447
     goto :goto_0
 
-    .line 3218
+    .line 3435
     :cond_1
     if-eqz v6, :cond_2
 
-    .line 3220
+    .line 3437
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 3223
+    .line 3440
     :cond_2
     invoke-static {}, Landroid/provider/HtcUnionContact$ContactUtils;->getEditMyContactCardIntent()Landroid/content/Intent;
 
@@ -4218,12 +4218,12 @@
     .parameter "values"
 
     .prologue
-    .line 2306
+    .line 2501
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2307
+    .line 2502
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "content://contacts/myContactCard"
 
@@ -4231,7 +4231,7 @@
 
     move-result-object v1
 
-    .line 2308
+    .line 2503
     .local v1, uri:Landroid/net/Uri;
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
@@ -4246,20 +4246,20 @@
     .parameter "eventUri"
 
     .prologue
-    .line 2959
+    .line 3169
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 2960
+    .line 3170
     :cond_0
     const/4 v10, 0x0
 
-    .line 2993
+    .line 3203
     :goto_0
     return v10
 
-    .line 2964
+    .line 3174
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4279,7 +4279,7 @@
 
     move-result-object v6
 
-    .line 2966
+    .line 3176
     .local v6, eventCursor:Landroid/database/Cursor;
     if-eqz v6, :cond_2
 
@@ -4289,20 +4289,20 @@
 
     if-nez v0, :cond_4
 
-    .line 2968
+    .line 3178
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 2970
+    .line 3180
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2974
+    .line 3184
     :cond_3
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 2978
+    .line 3188
     :cond_4
     const/4 v0, 0x0
 
@@ -4310,11 +4310,11 @@
 
     move-result-wide v7
 
-    .line 2979
+    .line 3189
     .local v7, eventId:J
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2981
+    .line 3191
     const-string v0, "%s = %s"
 
     const/4 v2, 0x2
@@ -4339,11 +4339,11 @@
 
     move-result-object v3
 
-    .line 2982
+    .line 3192
     .local v3, where:Ljava/lang/String;
     sget-object v1, Landroid/provider/Contacts$EventsMap;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2983
+    .line 3193
     .local v1, eventsMapUri:Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4359,11 +4359,11 @@
 
     move-result-object v9
 
-    .line 2985
+    .line 3195
     .local v9, eventsMapCursor:Landroid/database/Cursor;
     const/4 v10, 0x0
 
-    .line 2986
+    .line 3196
     .local v10, result:Z
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -4371,16 +4371,16 @@
 
     if-eqz v0, :cond_5
 
-    .line 2987
+    .line 3197
     const/4 v10, 0x1
 
-    .line 2991
+    .line 3201
     :goto_1
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 2989
+    .line 3199
     :cond_5
     const/4 v10, 0x0
 
@@ -4395,14 +4395,14 @@
     .end annotation
 
     .prologue
-    .line 1665
+    .line 1844
     const-string v0, "HtcUnionContact"
 
     const-string/jumbo v1, "queryContactEmailAddresses: you should never use this api."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1666
+    .line 1845
     const/4 v0, 0x0
 
     return-object v0
@@ -4416,12 +4416,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1633
+    .line 1811
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1635
+    .line 1813
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "contact_methods"
 
@@ -4429,7 +4429,7 @@
 
     move-result-object v1
 
-    .line 1637
+    .line 1815
     .local v1, methodsUri:Landroid/net/Uri;
     sget-object v2, Landroid/provider/HtcUnionContact$ContactMethodInfo;->PROJECTION:[Ljava/lang/String;
 
@@ -4441,11 +4441,11 @@
 
     move-result-object v6
 
-    .line 1639
+    .line 1817
     .local v6, methodsCursor:Landroid/database/Cursor;
     if-nez v6, :cond_0
 
-    .line 1641
+    .line 1819
     const-string v2, "HtcUnionContact"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4468,11 +4468,11 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1652
+    .line 1830
     :goto_0
     return-object v3
 
-    .line 1644
+    .line 1822
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -4480,7 +4480,7 @@
 
     if-nez v2, :cond_1
 
-    .line 1647
+    .line 1825
     const-string v2, "HtcUnionContact"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4506,7 +4506,7 @@
     :cond_1
     move-object v3, v6
 
-    .line 1652
+    .line 1830
     goto :goto_0
 .end method
 
@@ -4518,12 +4518,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3057
+    .line 3270
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 3059
+    .line 3272
     .local v0, mResolver:Landroid/content/ContentResolver;
     const/4 v4, 0x1
 
@@ -4535,7 +4535,7 @@
 
     aput-object v5, v2, v4
 
-    .line 3061
+    .line 3274
     .local v2, projection:[Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4564,12 +4564,12 @@
 
     move-object v5, v3
 
-    .line 3063
+    .line 3276
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 3065
+    .line 3278
     .local v6, cursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -4582,12 +4582,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3038
+    .line 3250
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 3040
+    .line 3252
     .local v0, mResolver:Landroid/content/ContentResolver;
     const/4 v4, 0x1
 
@@ -4599,7 +4599,7 @@
 
     aput-object v5, v2, v4
 
-    .line 3042
+    .line 3254
     .local v2, projection:[Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4628,12 +4628,12 @@
 
     move-object v5, v3
 
-    .line 3044
+    .line 3256
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 3046
+    .line 3258
     .local v6, cursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -4645,28 +4645,28 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1996
+    .line 2187
     if-nez p0, :cond_1
 
-    .line 1997
+    .line 2188
     const-wide/16 v7, 0x0
 
-    .line 2018
+    .line 2209
     :cond_0
     :goto_0
     return-wide v7
 
-    .line 1999
+    .line 2190
     :cond_1
     const-wide/16 v7, 0x0
 
-    .line 2002
+    .line 2193
     .local v7, result:J
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2004
+    .line 2195
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "content://contacts/groups/favorites"
 
@@ -4674,7 +4674,7 @@
 
     move-result-object v1
 
-    .line 2006
+    .line 2197
     .local v1, uri:Landroid/net/Uri;
     sget-object v2, Landroid/provider/HtcUnionContact$Group;->GROUP_NAME_PROJECTION:[Ljava/lang/String;
 
@@ -4686,25 +4686,25 @@
 
     move-result-object v6
 
-    .line 2008
+    .line 2199
     .local v6, cursor:Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
-    .line 2010
+    .line 2201
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 2011
+    .line 2202
     const/4 v2, 0x0
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v7
 
-    .line 2014
+    .line 2205
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
@@ -4719,12 +4719,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1738
+    .line 1920
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1740
+    .line 1922
     .local v0, contentResolver:Landroid/content/ContentResolver;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4754,7 +4754,7 @@
 
     move-result-object v1
 
-    .line 1742
+    .line 1924
     .local v1, uri:Landroid/net/Uri;
     sget-object v2, Landroid/provider/HtcUnionContact$Group;->GROUP_CONTAINS_PERSON_PROJECTION:[Ljava/lang/String;
 
@@ -4766,7 +4766,7 @@
 
     move-result-object v6
 
-    .line 1744
+    .line 1926
     .local v6, cursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -4779,12 +4779,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1720
+    .line 1901
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1722
+    .line 1903
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "content://contacts/contacts/group"
 
@@ -4792,13 +4792,13 @@
 
     move-result-object v1
 
-    .line 1723
+    .line 1904
     .local v1, uri:Landroid/net/Uri;
     invoke-static {v1, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 1725
+    .line 1906
     sget-object v2, Landroid/provider/HtcUnionContact$SmartDialing;->SMART_SEARCH_PROJECTION:[Ljava/lang/String;
 
     move-object v4, v3
@@ -4809,7 +4809,7 @@
 
     move-result-object v6
 
-    .line 1727
+    .line 1908
     .local v6, cursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -4822,18 +4822,18 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2504
+    .line 2704
     const-string v0, "content://contacts/calls/missed"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 2505
+    .line 2705
     .local v1, MISSCALL_URI:Landroid/net/Uri;
     const/4 v7, 0x0
 
-    .line 2506
+    .line 2706
     .local v7, nCount:I
     sget-object v2, Landroid/provider/HtcUnionContact;->idProjection:[Ljava/lang/String;
 
@@ -4869,22 +4869,22 @@
 
     move-result-object v6
 
-    .line 2507
+    .line 2707
     .local v6, cursor:Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
-    .line 2509
+    .line 2709
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v7
 
-    .line 2510
+    .line 2710
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2511
+    .line 2711
     const/4 v6, 0x0
 
-    .line 2513
+    .line 2713
     :cond_0
     invoke-static {}, Landroid/provider/HtcUnionContact;->access$000()Z
 
@@ -4924,7 +4924,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2514
+    .line 2714
     :cond_1
     return v7
 .end method
@@ -4936,12 +4936,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2297
+    .line 2491
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2298
+    .line 2492
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "content://contacts/myContactCard"
 
@@ -4949,7 +4949,7 @@
 
     move-result-object v1
 
-    .line 2299
+    .line 2493
     .local v1, uri:Landroid/net/Uri;
     sget-object v2, Landroid/provider/HtcUnionContact$MyContactCard;->MY_CONTACT_CARD_PROJECTION:[Ljava/lang/String;
 
@@ -4961,7 +4961,7 @@
 
     move-result-object v6
 
-    .line 2301
+    .line 2495
     .local v6, cursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -4974,12 +4974,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1755
+    .line 1938
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1757
+    .line 1940
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string v2, "content://contacts/contacts/exclude/group"
 
@@ -4987,13 +4987,13 @@
 
     move-result-object v1
 
-    .line 1758
+    .line 1941
     .local v1, uri:Landroid/net/Uri;
     invoke-static {v1, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 1760
+    .line 1943
     sget-object v2, Landroid/provider/HtcUnionContact$SmartDialing;->SMART_SEARCH_PROJECTION:[Ljava/lang/String;
 
     move-object v4, v3
@@ -5004,7 +5004,7 @@
 
     move-result-object v6
 
-    .line 1762
+    .line 1945
     .local v6, cursor:Landroid/database/Cursor;
     return-object v6
 .end method
@@ -5017,12 +5017,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1589
+    .line 1765
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1591
+    .line 1767
     .local v0, mResolver:Landroid/content/ContentResolver;
     sget-object v2, Landroid/provider/HtcUnionContact$PeopleInfo;->PROJECTION:[Ljava/lang/String;
 
@@ -5036,11 +5036,11 @@
 
     move-result-object v6
 
-    .line 1593
+    .line 1769
     .local v6, personCursor:Landroid/database/Cursor;
     if-nez v6, :cond_0
 
-    .line 1595
+    .line 1771
     const-string v1, "HtcUnionContact"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5063,11 +5063,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1605
+    .line 1781
     :goto_0
     return-object v3
 
-    .line 1598
+    .line 1774
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -5075,7 +5075,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1600
+    .line 1776
     const-string v1, "HtcUnionContact"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5098,7 +5098,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1601
+    .line 1777
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
@@ -5106,7 +5106,7 @@
     :cond_1
     move-object v3, v6
 
-    .line 1605
+    .line 1781
     goto :goto_0
 .end method
 
@@ -5118,12 +5118,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1610
+    .line 1787
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1612
+    .line 1789
     .local v0, mResolver:Landroid/content/ContentResolver;
     const-string/jumbo v2, "phones"
 
@@ -5131,7 +5131,7 @@
 
     move-result-object v1
 
-    .line 1613
+    .line 1790
     .local v1, phonesUri:Landroid/net/Uri;
     sget-object v2, Landroid/provider/HtcUnionContact$PhoneInfo;->PROJECTION:[Ljava/lang/String;
 
@@ -5143,11 +5143,11 @@
 
     move-result-object v6
 
-    .line 1615
+    .line 1792
     .local v6, phonesCursor:Landroid/database/Cursor;
     if-nez v6, :cond_0
 
-    .line 1617
+    .line 1794
     const-string v2, "HtcUnionContact"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5170,11 +5170,11 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1628
+    .line 1805
     :goto_0
     return-object v3
 
-    .line 1620
+    .line 1797
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -5182,7 +5182,7 @@
 
     if-nez v2, :cond_1
 
-    .line 1623
+    .line 1800
     const-string v2, "HtcUnionContact"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5208,7 +5208,7 @@
     :cond_1
     move-object v3, v6
 
-    .line 1628
+    .line 1805
     goto :goto_0
 .end method
 
@@ -5222,10 +5222,10 @@
 
     const/4 v4, 0x0
 
-    .line 2521
+    .line 2722
     const/4 v10, 0x0
 
-    .line 2522
+    .line 2723
     .local v10, nCount:I
     sget-object v1, Landroid/provider/Contacts$ContactMethods;->CONTENT_EMAIL_URI:Landroid/net/Uri;
 
@@ -5257,16 +5257,16 @@
 
     move-result-object v9
 
-    .line 2523
+    .line 2724
     .local v9, cursor:Landroid/database/Cursor;
     if-eqz v9, :cond_4
 
-    .line 2525
+    .line 2726
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2526
+    .line 2727
     .local v8, addr:Ljava/lang/StringBuilder;
     :goto_0
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
@@ -5275,7 +5275,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2528
+    .line 2729
     const-string v0, "data"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -5296,12 +5296,12 @@
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2529
+    .line 2730
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2531
+    .line 2732
     :cond_0
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
@@ -5309,7 +5309,7 @@
 
     if-lez v0, :cond_3
 
-    .line 2533
+    .line 2734
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -5322,7 +5322,7 @@
 
     if-ne v0, v6, :cond_1
 
-    .line 2535
+    .line 2736
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -5331,7 +5331,7 @@
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 2537
+    .line 2738
     :cond_1
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
@@ -5339,19 +5339,19 @@
 
     if-eqz v0, :cond_3
 
-    .line 2539
+    .line 2740
     const/4 v0, 0x0
 
     const-string v1, " _fromEmail in ("
 
     invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2540
+    .line 2741
     const/16 v0, 0x29
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2541
+    .line 2742
     invoke-static {}, Landroid/provider/HtcUnionContact;->access$000()Z
 
     move-result v0
@@ -5384,7 +5384,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2542
+    .line 2743
     :cond_2
     const-string v0, "content://mail/allmessagesCountUnread"
 
@@ -5392,7 +5392,7 @@
 
     move-result-object v3
 
-    .line 2543
+    .line 2744
     .local v3, UNREAD_EMAIL_URI:Landroid/net/Uri;
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -5408,18 +5408,18 @@
 
     move-result-object v11
 
-    .line 2544
+    .line 2745
     .local v11, subCursor:Landroid/database/Cursor;
     if-eqz v11, :cond_3
 
-    .line 2546
+    .line 2747
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 2547
+    .line 2748
     const-string v0, "count"
 
     invoke-interface {v11, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -5430,20 +5430,20 @@
 
     move-result v10
 
-    .line 2551
+    .line 2752
     :goto_1
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 2556
+    .line 2757
     .end local v3           #UNREAD_EMAIL_URI:Landroid/net/Uri;
     .end local v11           #subCursor:Landroid/database/Cursor;
     :cond_3
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 2557
+    .line 2758
     const/4 v9, 0x0
 
-    .line 2559
+    .line 2760
     .end local v8           #addr:Ljava/lang/StringBuilder;
     :cond_4
     invoke-static {}, Landroid/provider/HtcUnionContact;->access$000()Z
@@ -5484,11 +5484,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2560
+    .line 2761
     :cond_5
     return v10
 
-    .line 2549
+    .line 2750
     .restart local v3       #UNREAD_EMAIL_URI:Landroid/net/Uri;
     .restart local v8       #addr:Ljava/lang/StringBuilder;
     .restart local v11       #subCursor:Landroid/database/Cursor;
@@ -5504,10 +5504,10 @@
     .parameter "personId"
 
     .prologue
-    .line 2564
+    .line 2766
     const/16 v8, 0xf0
 
-    .line 2565
+    .line 2767
     .local v8, MAX_WHERE_OR_DEPTH:I
     const-string v2, "content://mms-sms/allmessages"
 
@@ -5515,27 +5515,27 @@
 
     move-result-object v9
 
-    .line 2566
+    .line 2768
     .local v9, UNREAD_MESSAGE_URI:Landroid/net/Uri;
     const/4 v10, 0x0
 
-    .line 2567
+    .line 2769
     .local v10, cursor:Landroid/database/Cursor;
     const/4 v12, 0x0
 
-    .line 2568
+    .line 2770
     .local v12, messageCount:I
     new-instance v16, Ljava/lang/StringBuffer;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 2569
+    .line 2771
     .local v16, phonematch:Ljava/lang/StringBuffer;
     new-instance v17, Ljava/util/HashSet;
 
     invoke-direct/range {v17 .. v17}, Ljava/util/HashSet;-><init>()V
 
-    .line 2570
+    .line 2772
     .local v17, set:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
     sget-object v3, Landroid/provider/Contacts$Phones;->CONTENT_URI:Landroid/net/Uri;
 
@@ -5571,14 +5571,14 @@
 
     move-result-object v15
 
-    .line 2571
+    .line 2773
     .local v15, phonecursor:Landroid/database/Cursor;
     if-eqz v15, :cond_1
 
-    .line 2573
+    .line 2775
     const/4 v14, -0x1
 
-    .line 2574
+    .line 2776
     .local v14, numberIndex:I
     const-string/jumbo v2, "pureNumber"
 
@@ -5586,10 +5586,10 @@
 
     move-result v14
 
-    .line 2575
+    .line 2777
     const/4 v13, 0x0
 
-    .line 2576
+    .line 2778
     .local v13, number:Ljava/lang/String;
     :goto_0
     invoke-interface {v15}, Landroid/database/Cursor;->moveToNext()Z
@@ -5598,23 +5598,23 @@
 
     if-eqz v2, :cond_0
 
-    .line 2577
+    .line 2779
     invoke-interface {v15, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 2578
+    .line 2780
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v13}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 2580
+    .line 2782
     :cond_0
     invoke-interface {v15}, Landroid/database/Cursor;->close()V
 
-    .line 2583
+    .line 2785
     .end local v13           #number:Ljava/lang/String;
     .end local v14           #numberIndex:I
     :cond_1
@@ -5624,16 +5624,16 @@
 
     if-lez v2, :cond_4
 
-    .line 2584
+    .line 2786
     invoke-virtual/range {v17 .. v17}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
 
-    .line 2585
+    .line 2787
     .local v11, itr:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     const/16 v18, 0x0
 
-    .line 2586
+    .line 2788
     .local v18, times:I
     :goto_1
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
@@ -5642,14 +5642,14 @@
 
     if-eqz v2, :cond_4
 
-    .line 2587
+    .line 2789
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v13
 
     check-cast v13, Ljava/lang/String;
 
-    .line 2588
+    .line 2790
     .restart local v13       #number:Ljava/lang/String;
     const-string v2, "PHONE_NUMBERS_EQUAL"
 
@@ -5657,43 +5657,43 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2589
+    .line 2791
     const-string v2, "(  address , "
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2590
+    .line 2792
     const-string v2, "\'"
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2591
+    .line 2793
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2592
+    .line 2794
     const-string v2, "\'"
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2593
+    .line 2795
     const-string v2, "  ) "
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2595
+    .line 2797
     add-int/lit8 v18, v18, 0x1
 
-    .line 2596
+    .line 2798
     const/16 v2, 0xf0
 
     move/from16 v0, v18
@@ -5706,11 +5706,11 @@
 
     if-nez v2, :cond_3
 
-    .line 2597
+    .line 2799
     :cond_2
     const/16 v18, 0x0
 
-    .line 2598
+    .line 2800
     const/4 v2, 0x0
 
     const-string v3, " ( "
@@ -5719,21 +5719,21 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuffer;->insert(ILjava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2599
+    .line 2801
     const-string v2, " ) AND read = 0 "
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2600
+    .line 2802
     const-string v2, " AND ( sms_type=1 OR mms_type=130 OR mms_type=132) "
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 2601
+    .line 2803
     sget-object v4, Landroid/provider/HtcUnionContact;->idProjection:[Ljava/lang/String;
 
     invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -5752,17 +5752,17 @@
 
     move-result-object v10
 
-    .line 2602
+    .line 2804
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
 
     add-int/2addr v12, v2
 
-    .line 2603
+    .line 2805
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 2605
+    .line 2807
     const/4 v2, 0x0
 
     invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuffer;->length()I
@@ -5775,7 +5775,7 @@
 
     goto :goto_1
 
-    .line 2607
+    .line 2809
     :cond_3
     const-string v2, "  OR "
 
@@ -5785,7 +5785,7 @@
 
     goto/16 :goto_1
 
-    .line 2613
+    .line 2815
     .end local v11           #itr:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v13           #number:Ljava/lang/String;
     .end local v18           #times:I
@@ -5794,11 +5794,11 @@
 
     move-result-object v5
 
-    .line 2614
+    .line 2816
     .local v5, mailaddressSelection:Ljava/lang/String;
     if-eqz v5, :cond_5
 
-    .line 2616
+    .line 2818
     sget-object v4, Landroid/provider/HtcUnionContact;->idProjection:[Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -5813,17 +5813,17 @@
 
     move-result-object v10
 
-    .line 2617
+    .line 2819
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
 
     add-int/2addr v12, v2
 
-    .line 2618
+    .line 2820
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 2621
+    .line 2823
     :cond_5
     invoke-static {}, Landroid/provider/HtcUnionContact;->access$000()Z
 
@@ -5865,7 +5865,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2622
+    .line 2824
     :cond_6
     return v12
 .end method
@@ -5879,12 +5879,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3005
+    .line 3216
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 3007
+    .line 3218
     .local v1, mResolver:Landroid/content/ContentResolver;
     if-eqz p3, :cond_0
 
@@ -5894,7 +5894,7 @@
 
     if-lez v5, :cond_0
 
-    .line 3011
+    .line 3222
     :try_start_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -5918,13 +5918,13 @@
 
     move-result-object v3
 
-    .line 3013
+    .line 3224
     .local v3, uri:Landroid/net/Uri;
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 3014
+    .line 3225
     .local v2, stream:Ljava/io/ByteArrayOutputStream;
     sget-object v5, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -5932,7 +5932,7 @@
 
     invoke-virtual {p3, v5, v6, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 3015
+    .line 3226
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v5
@@ -5941,21 +5941,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3017
+    .line 3228
     const/4 v4, 0x1
 
-    .line 3026
+    .line 3237
     .end local v2           #stream:Ljava/io/ByteArrayOutputStream;
     .end local v3           #uri:Landroid/net/Uri;
     :cond_0
     :goto_0
     return v4
 
-    .line 3019
+    .line 3230
     :catch_0
     move-exception v0
 
-    .line 3021
+    .line 3232
     .local v0, ex:Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -5969,25 +5969,25 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2940
+    .line 3149
     const-wide/16 v3, 0x0
 
     cmp-long v3, p1, v3
 
     if-lez v3, :cond_0
 
-    .line 2942
+    .line 3151
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2944
+    .line 3153
     .local v0, mResolver:Landroid/content/ContentResolver;
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2945
+    .line 3154
     .local v2, values:Landroid/content/ContentValues;
     const-string v3, "custom_ringtone"
 
@@ -5997,7 +5997,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2947
+    .line 3156
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -6020,18 +6020,18 @@
 
     move-result-object v1
 
-    .line 2949
+    .line 3158
     .local v1, uri:Landroid/net/Uri;
     invoke-virtual {v0, v1, v2, v5, v5}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 2955
+    .line 3164
     .end local v0           #mResolver:Landroid/content/ContentResolver;
     .end local v1           #uri:Landroid/net/Uri;
     .end local v2           #values:Landroid/content/ContentValues;
     :goto_0
     return-void
 
-    .line 2953
+    .line 3162
     :cond_0
     const-string v3, "HtcUnionContact"
 
@@ -6073,16 +6073,16 @@
 
     const/4 v3, 0x0
 
-    .line 2031
+    .line 2223
     if-nez p0, :cond_0
 
     move v2, v8
 
-    .line 2055
+    .line 2247
     :goto_0
     return v2
 
-    .line 2034
+    .line 2226
     :cond_0
     if-eqz p3, :cond_1
 
@@ -6095,10 +6095,10 @@
     :cond_1
     move v2, v8
 
-    .line 2035
+    .line 2227
     goto :goto_0
 
-    .line 2038
+    .line 2230
     :cond_2
     const-wide/16 v4, 0x0
 
@@ -6106,12 +6106,12 @@
 
     if-gtz v2, :cond_4
 
-    .line 2039
+    .line 2231
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2040
+    .line 2232
     .local v0, mResolver:Landroid/content/ContentResolver;
     sget-object v2, Landroid/provider/HtcUnionContact$Group;->QUERY_GROUPS_URI:Landroid/net/Uri;
 
@@ -6123,7 +6123,7 @@
 
     move-result-object v1
 
-    .line 2041
+    .line 2233
     .local v1, uri:Landroid/net/Uri;
     sget-object v2, Landroid/provider/HtcUnionContact$Group;->GROUP_NAME_PROJECTION:[Ljava/lang/String;
 
@@ -6135,11 +6135,11 @@
 
     move-result-object v6
 
-    .line 2042
+    .line 2234
     .local v6, cursor:Landroid/database/Cursor;
     if-eqz v6, :cond_4
 
-    .line 2044
+    .line 2236
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -6147,21 +6147,21 @@
 
     if-eqz v2, :cond_3
 
-    .line 2045
+    .line 2237
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2046
+    .line 2238
     .local v7, values:Landroid/content/ContentValues;
     invoke-virtual {v7}, Landroid/content/ContentValues;->clear()V
 
-    .line 2047
+    .line 2239
     const-string/jumbo v2, "name"
 
     invoke-virtual {v7, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2048
+    .line 2240
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -6172,7 +6172,7 @@
 
     move-result v2
 
-    .line 2051
+    .line 2243
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
@@ -6194,7 +6194,7 @@
     :cond_4
     move v2, v8
 
-    .line 2055
+    .line 2247
     goto :goto_0
 .end method
 
@@ -6206,17 +6206,17 @@
     .parameter "placeholderImageResource"
 
     .prologue
-    .line 1928
+    .line 2117
     if-nez p2, :cond_0
 
-    .line 1930
+    .line 2119
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1957
+    .line 2146
     :goto_0
     return-void
 
-    .line 1934
+    .line 2123
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -6226,11 +6226,11 @@
 
     move-result-object v1
 
-    .line 1937
+    .line 2126
     .local v1, inputStream:Ljava/io/InputStream;
     if-eqz v1, :cond_1
 
-    .line 1941
+    .line 2130
     :try_start_0
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -6247,11 +6247,11 @@
 
     goto :goto_0
 
-    .line 1944
+    .line 2133
     :catch_0
     move-exception v0
 
-    .line 1946
+    .line 2135
     .local v0, e:Ljava/lang/OutOfMemoryError;
     const-string v2, "HtcUnionContact"
 
@@ -6261,12 +6261,12 @@
 
     goto :goto_0
 
-    .line 1948
+    .line 2137
     .end local v0           #e:Ljava/lang/OutOfMemoryError;
     :catch_1
     move-exception v0
 
-    .line 1950
+    .line 2139
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "HtcUnionContact"
 
@@ -6276,7 +6276,7 @@
 
     goto :goto_0
 
-    .line 1955
+    .line 2144
     .end local v0           #e:Ljava/lang/Exception;
     :cond_1
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -6292,17 +6292,17 @@
     .parameter "placeholderImageResource"
 
     .prologue
-    .line 1970
+    .line 2160
     if-nez p2, :cond_0
 
-    .line 1972
+    .line 2162
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1988
+    .line 2178
     :goto_0
     return-void
 
-    .line 1976
+    .line 2166
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -6312,11 +6312,11 @@
 
     move-result-object v0
 
-    .line 1979
+    .line 2169
     .local v0, inputStream:Ljava/io/InputStream;
     if-eqz v0, :cond_1
 
-    .line 1981
+    .line 2171
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -6329,7 +6329,7 @@
 
     goto :goto_0
 
-    .line 1986
+    .line 2176
     :cond_1
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -6347,12 +6347,12 @@
 
     const/4 v2, 0x0
 
-    .line 2082
+    .line 2274
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2083
+    .line 2275
     .local v0, cr:Landroid/content/ContentResolver;
     const-string v3, "content://contacts/myContactCard"
 
@@ -6360,30 +6360,30 @@
 
     move-result-object v1
 
-    .line 2085
+    .line 2277
     .local v1, myContactUri:Landroid/net/Uri;
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2086
+    .line 2278
     .local v8, builder:Ljava/lang/StringBuilder;
     const-string/jumbo v3, "type"
 
     invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2087
+    .line 2279
     const-string v3, " = "
 
     invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2088
+    .line 2280
     invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2091
+    .line 2283
     const/4 v11, 0x0
 
-    .line 2092
+    .line 2284
     .local v11, idxBlobData:I
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -6397,18 +6397,18 @@
 
     move-result-object v9
 
-    .line 2094
+    .line 2286
     .local v9, cursor:Landroid/database/Cursor;
     if-nez v9, :cond_0
 
-    .line 2095
+    .line 2287
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 2116
+    .line 2308
     :goto_0
     return-void
 
-    .line 2099
+    .line 2291
     :cond_0
     :try_start_0
     const-string v2, "blobdata"
@@ -6417,23 +6417,23 @@
 
     move-result v11
 
-    .line 2100
+    .line 2292
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 2101
+    .line 2293
     invoke-interface {v9, v11}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v6
 
-    .line 2102
+    .line 2294
     .local v6, blobdata:[B
     if-eqz v6, :cond_2
 
-    .line 2103
+    .line 2295
     const/4 v2, 0x0
 
     array-length v3, v6
@@ -6442,14 +6442,14 @@
 
     move-result-object v7
 
-    .line 2105
+    .line 2297
     .local v7, bm:Landroid/graphics/Bitmap;
     invoke-virtual {p1, v7}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2114
+    .line 2306
     .end local v6           #blobdata:[B
     .end local v7           #bm:Landroid/graphics/Bitmap;
     :cond_1
@@ -6458,7 +6458,7 @@
 
     goto :goto_0
 
-    .line 2108
+    .line 2300
     .restart local v6       #blobdata:[B
     :cond_2
     :try_start_1
@@ -6469,12 +6469,12 @@
 
     goto :goto_1
 
-    .line 2111
+    .line 2303
     .end local v6           #blobdata:[B
     :catch_0
     move-exception v10
 
-    .line 2112
+    .line 2304
     .local v10, iae:Ljava/lang/IllegalArgumentException;
     :try_start_2
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -6483,7 +6483,7 @@
 
     goto :goto_1
 
-    .line 2114
+    .line 2306
     .end local v10           #iae:Ljava/lang/IllegalArgumentException;
     :catchall_0
     move-exception v2
@@ -6501,10 +6501,10 @@
     .parameter "opts"
 
     .prologue
-    .line 2128
+    .line 2321
     const/16 v21, 0x0
 
-    .line 2129
+    .line 2322
     .local v21, result:Landroid/graphics/Bitmap;
     const-string v2, "content://contacts/myContactCard"
 
@@ -6512,11 +6512,11 @@
 
     move-result-object v3
 
-    .line 2130
+    .line 2323
     .local v3, meContactUri:Landroid/net/Uri;
     const-string v8, "HTCContactUtils"
 
-    .line 2131
+    .line 2324
     .local v8, TAG:Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -6532,16 +6532,16 @@
 
     move-result-object v10
 
-    .line 2132
+    .line 2325
     .local v10, cursor:Landroid/database/Cursor;
     if-nez v10, :cond_0
 
-    .line 2133
+    .line 2326
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "invalid contact uri: "
+    const-string v4, "invalid contact uri: "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6557,11 +6557,11 @@
 
     invoke-static {v8, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2205
+    .line 2398
     :goto_0
     return-void
 
-    .line 2140
+    .line 2333
     :cond_0
     :try_start_0
     const-string/jumbo v2, "type"
@@ -6570,7 +6570,7 @@
 
     move-result v16
 
-    .line 2141
+    .line 2334
     .local v16, idxType:I
     const-string/jumbo v2, "subtype"
 
@@ -6578,7 +6578,7 @@
 
     move-result v15
 
-    .line 2142
+    .line 2335
     .local v15, idxSubType:I
     const-string v2, "data2"
 
@@ -6586,7 +6586,7 @@
 
     move-result v14
 
-    .line 2143
+    .line 2336
     .local v14, idxData2:I
     const-string v2, "blobdata"
 
@@ -6596,27 +6596,27 @@
 
     move-result v13
 
-    .line 2150
+    .line 2343
     .local v13, idxBlobData:I
     const/16 v20, 0x0
 
-    .line 2151
+    .line 2344
     .local v20, photoBytes:[B
     const/4 v12, 0x0
 
-    .line 2154
+    .line 2347
     .local v12, facePhotoBytes:[B
     const/16 v18, 0x0
 
-    .line 2155
+    .line 2348
     .local v18, isGetData:Z
     const/16 v19, 0x0
 
-    .line 2156
+    .line 2349
     .local v19, isGetFBData:Z
     const/4 v9, -0x1
 
-    .line 2157
+    .line 2350
     .local v9, autoupdate:I
     :cond_1
     :goto_1
@@ -6626,42 +6626,42 @@
 
     if-eqz v2, :cond_5
 
-    .line 2158
+    .line 2351
     move/from16 v0, v16
 
     invoke-interface {v10, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v25
 
-    .line 2159
+    .line 2352
     .local v25, type:I
     invoke-interface {v10, v15}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v23
 
-    .line 2160
+    .line 2353
     .local v23, subtype:I
     sparse-switch v25, :sswitch_data_0
 
     goto :goto_1
 
-    .line 2162
+    .line 2355
     :sswitch_0
     if-nez v18, :cond_2
 
-    .line 2163
+    .line 2356
     invoke-interface {v10, v13}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v20
 
-    .line 2165
+    .line 2358
     :cond_2
     const/16 v18, 0x1
 
-    .line 2166
+    .line 2359
     goto :goto_1
 
-    .line 2144
+    .line 2337
     .end local v9           #autoupdate:I
     .end local v12           #facePhotoBytes:[B
     .end local v13           #idxBlobData:I
@@ -6676,13 +6676,13 @@
     :catch_0
     move-exception v11
 
-    .line 2145
+    .line 2338
     .local v11, e:Ljava/lang/IllegalArgumentException;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "invalid column index: "
+    const-string v4, "invalid column index: "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6702,12 +6702,12 @@
 
     invoke-static {v8, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2146
+    .line 2339
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 2169
+    .line 2362
     .end local v11           #e:Ljava/lang/IllegalArgumentException;
     .restart local v9       #autoupdate:I
     .restart local v12       #facePhotoBytes:[B
@@ -6727,21 +6727,21 @@
 
     if-ne v0, v2, :cond_4
 
-    .line 2170
+    .line 2363
     if-nez v19, :cond_3
 
-    .line 2171
+    .line 2364
     invoke-interface {v10, v13}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v12
 
-    .line 2173
+    .line 2366
     :cond_3
     const/16 v19, 0x1
 
     goto :goto_1
 
-    .line 2175
+    .line 2368
     :cond_4
     const v2, 0xff01
 
@@ -6749,12 +6749,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 2176
+    .line 2369
     invoke-interface {v10, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v22
 
-    .line 2177
+    .line 2370
     .local v22, str:Ljava/lang/String;
     invoke-static/range {v22 .. v22}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -6762,7 +6762,7 @@
 
     if-nez v2, :cond_1
 
-    .line 2179
+    .line 2372
     :try_start_1
     invoke-static/range {v22 .. v22}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_1
@@ -6772,17 +6772,17 @@
 
     goto :goto_1
 
-    .line 2180
+    .line 2373
     :catch_1
     move-exception v11
 
-    .line 2181
+    .line 2374
     .local v11, e:Ljava/lang/Exception;
     const/4 v9, -0x1
 
     goto :goto_1
 
-    .line 2190
+    .line 2383
     .end local v11           #e:Ljava/lang/Exception;
     .end local v22           #str:Ljava/lang/String;
     .end local v23           #subtype:I
@@ -6790,14 +6790,14 @@
     :cond_5
     if-eqz v10, :cond_6
 
-    .line 2191
+    .line 2384
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 2194
+    .line 2387
     :cond_6
     const/16 v17, 0x0
 
-    .line 2196
+    .line 2389
     .local v17, isFaceBook:Z
     if-ltz v9, :cond_7
 
@@ -6807,18 +6807,18 @@
 
     const/16 v17, 0x1
 
-    .line 2198
+    .line 2391
     :goto_2
     if-eqz v17, :cond_8
 
     move-object/from16 v24, v12
 
-    .line 2199
+    .line 2392
     .local v24, target:[B
     :goto_3
     if-eqz v24, :cond_9
 
-    .line 2200
+    .line 2393
     const/4 v2, 0x0
 
     move-object/from16 v0, v24
@@ -6831,7 +6831,7 @@
 
     move-result-object v21
 
-    .line 2201
+    .line 2394
     move-object/from16 v0, p1
 
     move-object/from16 v1, v21
@@ -6840,7 +6840,7 @@
 
     goto/16 :goto_0
 
-    .line 2196
+    .line 2389
     .end local v24           #target:[B
     :cond_7
     const/16 v17, 0x0
@@ -6850,17 +6850,17 @@
     :cond_8
     move-object/from16 v24, v20
 
-    .line 2198
+    .line 2391
     goto :goto_3
 
-    .line 2203
+    .line 2396
     .restart local v24       #target:[B
     :cond_9
     invoke-virtual/range {p1 .. p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto/16 :goto_0
 
-    .line 2160
+    .line 2353
     nop
 
     :sswitch_data_0
@@ -6879,19 +6879,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2313
+    .line 2509
     const-wide/16 v2, 0x0
 
     cmp-long v2, p2, v2
 
     if-lez v2, :cond_0
 
-    .line 2315
+    .line 2511
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2316
+    .line 2512
     .local v0, mResolver:Landroid/content/ContentResolver;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -6915,19 +6915,19 @@
 
     move-result-object v1
 
-    .line 2317
+    .line 2513
     .local v1, uri:Landroid/net/Uri;
     invoke-virtual {v0, v1, p1, v4, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v2
 
-    .line 2322
+    .line 2518
     .end local v0           #mResolver:Landroid/content/ContentResolver;
     .end local v1           #uri:Landroid/net/Uri;
     :goto_0
     return v2
 
-    .line 2321
+    .line 2517
     :cond_0
     const-string v2, "HtcUnionContact"
 
@@ -6955,7 +6955,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2322
+    .line 2518
     const/4 v2, 0x0
 
     goto :goto_0

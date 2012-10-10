@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 63
+    .line 75
     iput p1, p0, Lcom/android/camera/io/FileUtility$1;->val$backupDirPrefixLength:I
 
     iput-object p2, p0, Lcom/android/camera/io/FileUtility$1;->val$backupDirPrefix:Ljava/lang/String;
@@ -52,7 +52,7 @@
 
     const/4 v5, 0x1
 
-    .line 67
+    .line 79
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -61,13 +61,13 @@
 
     if-gt v3, v4, :cond_1
 
-    .line 89
+    .line 101
     .end local p2
     :cond_0
     :goto_0
     return v5
 
-    .line 69
+    .line 81
     .restart local p2
     :cond_1
     iget v3, p0, Lcom/android/camera/io/FileUtility$1;->val$backupDirPrefixLength:I
@@ -84,7 +84,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 76
+    .line 88
     :try_start_0
     iget v3, p0, Lcom/android/camera/io/FileUtility$1;->val$backupDirPrefixLength:I
 
@@ -100,7 +100,7 @@
 
     move-result v1
 
-    .line 84
+    .line 96
     .local v1, index:I
     check-cast p2, [Ljava/lang/Object;
 
@@ -109,7 +109,7 @@
 
     check-cast v2, [Ljava/lang/Object;
 
-    .line 85
+    .line 97
     .local v2, params:[Ljava/lang/Object;
     aget-object v3, v2, v6
 
@@ -121,7 +121,7 @@
 
     if-le v1, v3, :cond_0
 
-    .line 86
+    .line 98
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -130,14 +130,14 @@
 
     goto :goto_0
 
-    .line 78
+    .line 90
     .end local v1           #index:I
     .end local v2           #params:[Ljava/lang/Object;
     .restart local p2
     :catch_0
     move-exception v0
 
-    .line 80
+    .line 92
     .local v0, ex:Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method

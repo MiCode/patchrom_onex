@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/HTCCamera;->onResume()V
+    value = Lcom/android/camera/HTCCamera;->onDestroy()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1897
+    .line 2349
     iput-object p1, p0, Lcom/android/camera/HTCCamera$10;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,12 @@
     .locals 1
 
     .prologue
-    .line 1901
+    .line 2352
     iget-object v0, p0, Lcom/android/camera/HTCCamera$10;->this$0:Lcom/android/camera/HTCCamera;
 
-    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->finish()V
+    #calls: Lcom/android/camera/HTCCamera;->doOnDestory()V
+    invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$3500(Lcom/android/camera/HTCCamera;)V
 
-    .line 1902
+    .line 2353
     return-void
 .end method

@@ -118,7 +118,7 @@
     if-eqz v4, :cond_0
 
     .line 100
-    const-string/jumbo v5, "infinite"
+    const-string v5, "infinite"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -322,7 +322,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "init error: "
+    const-string v7, "init error: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -467,7 +467,7 @@
     .line 159
     iget-object v0, p0, Landroid/net/NetworkConfig;->mNetType:Ljava/lang/String;
 
-    const-string/jumbo v1, "lan"
+    const-string v1, "lan"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

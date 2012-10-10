@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 442
+    .line 445
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$3;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +42,11 @@
     .parameter "v"
 
     .prologue
-    .line 444
+    .line 447
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$3;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->finish()V
 
-    .line 445
+    .line 448
     return-void
 .end method

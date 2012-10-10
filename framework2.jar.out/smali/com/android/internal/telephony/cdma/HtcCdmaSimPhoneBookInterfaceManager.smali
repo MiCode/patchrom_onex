@@ -57,10 +57,10 @@
     .locals 0
 
     .prologue
-    .line 82
+    .line 83
     invoke-super {p0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->dispose()V
 
-    .line 83
+    .line 84
     return-void
 .end method
 
@@ -68,14 +68,14 @@
     .locals 2
 
     .prologue
-    .line 86
+    .line 88
     const-string v0, "CDMA"
 
     const-string v1, "HtcCdma SimPhoneBookInterfaceManager finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
+    .line 89
     return-void
 .end method
 
@@ -84,7 +84,7 @@
     .parameter "efid"
 
     .prologue
-    .line 90
+    .line 93
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,23 +105,23 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/cdma/HtcCdmaSimPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 91
+    .line 94
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 92
+    .line 95
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/HtcCdmaSimPhoneBookInterfaceManager;->checkThread()V
 
-    .line 93
+    .line 96
     const/4 v2, 0x3
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->recordSize:[I
 
-    .line 96
+    .line 99
     iget-object v2, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mBaseHandler:Landroid/os/Handler;
 
     const/4 v4, 0x1
@@ -130,7 +130,7 @@
 
     move-result-object v1
 
-    .line 98
+    .line 101
     .local v1, response:Landroid/os/Message;
     iget-object v2, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->phone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -142,7 +142,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 100
+    .line 103
     :try_start_1
     iget-object v2, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mLock:Ljava/lang/Object;
 
@@ -151,23 +151,23 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 104
+    .line 107
     :goto_0
     :try_start_2
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 106
+    .line 109
     iget-object v2, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->recordSize:[I
 
     return-object v2
 
-    .line 101
+    .line 104
     :catch_0
     move-exception v0
 
-    .line 102
+    .line 105
     .local v0, e:Ljava/lang/InterruptedException;
     :try_start_3
     const-string v2, "interrupted while trying to load from the SIM"
@@ -176,7 +176,7 @@
 
     goto :goto_0
 
-    .line 104
+    .line 107
     .end local v0           #e:Ljava/lang/InterruptedException;
     .end local v1           #response:Landroid/os/Message;
     :catchall_0
@@ -190,38 +190,6 @@
 .end method
 
 .method protected logd(Ljava/lang/String;)V
-    .locals 3
-    .parameter "msg"
-
-    .prologue
-    .line 110
-    const-string v0, "CDMASimPhoneBook"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "[SimPbInterfaceManager] "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 111
-    return-void
-.end method
-
-.method protected loge(Ljava/lang/String;)V
     .locals 3
     .parameter "msg"
 
@@ -247,8 +215,40 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 115
+    return-void
+.end method
+
+.method protected loge(Ljava/lang/String;)V
+    .locals 3
+    .parameter "msg"
+
+    .prologue
+    .line 119
+    const-string v0, "CDMASimPhoneBook"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "[SimPbInterfaceManager] "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 120
     return-void
 .end method

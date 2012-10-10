@@ -37,7 +37,7 @@
     .line 261
     iput-object p1, p0, Landroid/app/LauncherActivity$IconResizer;->this$0:Landroid/app/LauncherActivity;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 255
     iput v1, p0, Landroid/app/LauncherActivity$IconResizer;->mIconWidth:I

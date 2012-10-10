@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 626
+    .line 634
     iput-object p1, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 626
+    .line 634
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$SettingsObserver;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -53,7 +53,7 @@
     .parameter "defValue"
 
     .prologue
-    .line 634
+    .line 642
     iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mSettings:Landroid/content/ContentQueryMap;
@@ -65,7 +65,7 @@
 
     move-result-object v1
 
-    .line 635
+    .line 643
     .local v1, values:Landroid/content/ContentValues;
     if-eqz v1, :cond_1
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    .line 636
+    .line 644
     .local v0, fVal:Ljava/lang/Float;
     :goto_0
     if-eqz v0, :cond_0
@@ -88,7 +88,7 @@
     :cond_0
     return p2
 
-    .line 635
+    .line 643
     .end local v0           #fVal:Ljava/lang/Float;
     .restart local p2
     :cond_1
@@ -103,7 +103,7 @@
     .parameter "defValue"
 
     .prologue
-    .line 628
+    .line 636
     iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mSettings:Landroid/content/ContentQueryMap;
@@ -115,7 +115,7 @@
 
     move-result-object v1
 
-    .line 629
+    .line 637
     .local v1, values:Landroid/content/ContentValues;
     if-eqz v1, :cond_1
 
@@ -125,7 +125,7 @@
 
     move-result-object v0
 
-    .line 630
+    .line 638
     .local v0, iVal:Ljava/lang/Integer;
     :goto_0
     if-eqz v0, :cond_0
@@ -138,7 +138,7 @@
     :cond_0
     return p2
 
-    .line 629
+    .line 637
     .end local v0           #iVal:Ljava/lang/Integer;
     .restart local p2
     :cond_1
@@ -150,232 +150,235 @@
 
 # virtual methods
 .method public update(Ljava/util/Observable;Ljava/lang/Object;)V
-    .locals 7
+    .locals 8
     .parameter "o"
     .parameter "arg"
 
     .prologue
-    const/high16 v6, 0x3f00
+    const/high16 v7, 0x3f00
 
-    .line 640
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+    .line 648
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
-    invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$800(Lcom/android/server/PowerManagerService;)Lcom/android/server/PowerManagerService$LockList;
+    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$800(Lcom/android/server/PowerManagerService;)Lcom/android/server/PowerManagerService$LockList;
 
-    move-result-object v3
+    move-result-object v4
 
-    monitor-enter v3
+    monitor-enter v4
 
-    .line 642
+    .line 650
     :try_start_0
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
-    const-string v4, "stay_on_while_plugged_in"
+    const-string v5, "stay_on_while_plugged_in"
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    invoke-direct {p0, v4, v5}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
+    invoke-direct {p0, v5, v6}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
 
-    move-result v4
+    move-result v5
 
     #setter for: Lcom/android/server/PowerManagerService;->mStayOnConditions:I
-    invoke-static {v2, v4}, Lcom/android/server/PowerManagerService;->access$2002(Lcom/android/server/PowerManagerService;I)I
-
-    .line 644
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    #calls: Lcom/android/server/PowerManagerService;->updateWakeLockLocked()V
-    invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$1100(Lcom/android/server/PowerManagerService;)V
-
-    .line 647
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    const-string v4, "screen_off_timeout"
-
-    const/16 v5, 0x3a98
-
-    invoke-direct {p0, v4, v5}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
-
-    move-result v4
-
-    #setter for: Lcom/android/server/PowerManagerService;->mScreenOffTimeoutSetting:I
-    invoke-static {v2, v4}, Lcom/android/server/PowerManagerService;->access$2102(Lcom/android/server/PowerManagerService;I)I
-
-    .line 651
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    const-string v4, "deskdock_dim_screen"
-
-    const/16 v5, 0xa
-
-    invoke-direct {p0, v4, v5}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
-
-    move-result v4
-
-    #setter for: Lcom/android/server/PowerManagerService;->mScreenOffDelayForDeskDock:I
-    invoke-static {v2, v4}, Lcom/android/server/PowerManagerService;->access$2202(Lcom/android/server/PowerManagerService;I)I
+    invoke-static {v3, v5}, Lcom/android/server/PowerManagerService;->access$2002(Lcom/android/server/PowerManagerService;I)I
 
     .line 652
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
-    #getter for: Lcom/android/server/PowerManagerService;->mScreenOffDelayForDeskDock:I
-    invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$2200(Lcom/android/server/PowerManagerService;)I
+    #calls: Lcom/android/server/PowerManagerService;->updateWakeLockLocked()V
+    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$1100(Lcom/android/server/PowerManagerService;)V
 
-    move-result v2
+    .line 655
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
-    const/4 v4, -0x1
+    const-string v5, "screen_off_timeout"
 
-    if-eq v2, v4, :cond_0
+    const/16 v6, 0x3a98
 
-    .line 654
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+    invoke-direct {p0, v5, v6}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
 
-    iget-object v4, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+    move-result v5
 
-    #getter for: Lcom/android/server/PowerManagerService;->mScreenOffDelayForDeskDock:I
-    invoke-static {v4}, Lcom/android/server/PowerManagerService;->access$2200(Lcom/android/server/PowerManagerService;)I
+    #setter for: Lcom/android/server/PowerManagerService;->mScreenOffTimeoutSetting:I
+    invoke-static {v3, v5}, Lcom/android/server/PowerManagerService;->access$2102(Lcom/android/server/PowerManagerService;I)I
 
-    move-result v4
+    .line 659
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
-    const v5, 0xea60
+    const-string v5, "deskdock_dim_screen"
 
-    mul-int/2addr v4, v5
+    const/16 v6, 0xa
+
+    invoke-direct {p0, v5, v6}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
+
+    move-result v5
 
     #setter for: Lcom/android/server/PowerManagerService;->mScreenOffDelayForDeskDock:I
-    invoke-static {v2, v4}, Lcom/android/server/PowerManagerService;->access$2202(Lcom/android/server/PowerManagerService;I)I
+    invoke-static {v3, v5}, Lcom/android/server/PowerManagerService;->access$2202(Lcom/android/server/PowerManagerService;I)I
 
-    .line 662
+    .line 660
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    #getter for: Lcom/android/server/PowerManagerService;->mScreenOffDelayForDeskDock:I
+    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$2200(Lcom/android/server/PowerManagerService;)I
+
+    move-result v3
+
+    const/4 v5, -0x1
+
+    if-eq v3, v5, :cond_0
+
+    .line 661
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    iget-object v5, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    #getter for: Lcom/android/server/PowerManagerService;->mScreenOffDelayForDeskDock:I
+    invoke-static {v5}, Lcom/android/server/PowerManagerService;->access$2200(Lcom/android/server/PowerManagerService;)I
+
+    move-result v5
+
+    const v6, 0xea60
+
+    mul-int/2addr v5, v6
+
+    #setter for: Lcom/android/server/PowerManagerService;->mScreenOffDelayForDeskDock:I
+    invoke-static {v3, v5}, Lcom/android/server/PowerManagerService;->access$2202(Lcom/android/server/PowerManagerService;I)I
+
+    .line 669
     :cond_0
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    const-string v4, "screen_brightness_mode"
+    const-string v3, "screen_brightness_mode"
 
     const/4 v5, 0x0
 
-    invoke-direct {p0, v4, v5}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
-
-    move-result v4
-
-    #calls: Lcom/android/server/PowerManagerService;->setScreenBrightnessMode(I)V
-    invoke-static {v2, v4}, Lcom/android/server/PowerManagerService;->access$2300(Lcom/android/server/PowerManagerService;I)V
-
-    .line 666
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    #calls: Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
-    invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$1500(Lcom/android/server/PowerManagerService;)V
-
-    .line 668
-    const-string v2, "window_animation_scale"
-
-    const/high16 v4, 0x3f80
-
-    invoke-direct {p0, v2, v4}, Lcom/android/server/PowerManagerService$SettingsObserver;->getFloat(Ljava/lang/String;F)F
-
-    move-result v1
-
-    .line 669
-    .local v1, windowScale:F
-    const-string v2, "transition_animation_scale"
-
-    const/high16 v4, 0x3f80
-
-    invoke-direct {p0, v2, v4}, Lcom/android/server/PowerManagerService$SettingsObserver;->getFloat(Ljava/lang/String;F)F
+    invoke-direct {p0, v3, v5}, Lcom/android/server/PowerManagerService$SettingsObserver;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     .line 670
-    .local v0, transitionScale:F
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+    .local v0, screen_mode:I
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
-    const/4 v4, 0x0
+    #calls: Lcom/android/server/PowerManagerService;->setScreenBrightnessMode(I)V
+    invoke-static {v3, v0}, Lcom/android/server/PowerManagerService;->access$2300(Lcom/android/server/PowerManagerService;I)V
+
+    .line 673
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    #calls: Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
+    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$1500(Lcom/android/server/PowerManagerService;)V
+
+    .line 675
+    const-string v3, "window_animation_scale"
+
+    const/high16 v5, 0x3f80
+
+    invoke-direct {p0, v3, v5}, Lcom/android/server/PowerManagerService$SettingsObserver;->getFloat(Ljava/lang/String;F)F
+
+    move-result v2
+
+    .line 676
+    .local v2, windowScale:F
+    const-string v3, "transition_animation_scale"
+
+    const/high16 v5, 0x3f80
+
+    invoke-direct {p0, v3, v5}, Lcom/android/server/PowerManagerService$SettingsObserver;->getFloat(Ljava/lang/String;F)F
+
+    move-result v1
+
+    .line 677
+    .local v1, transitionScale:F
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    const/4 v5, 0x0
 
     #setter for: Lcom/android/server/PowerManagerService;->mAnimationSetting:I
-    invoke-static {v2, v4}, Lcom/android/server/PowerManagerService;->access$2402(Lcom/android/server/PowerManagerService;I)I
-
-    .line 671
-    cmpl-float v2, v1, v6
-
-    if-lez v2, :cond_1
-
-    .line 672
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    const/16 v4, 0x10
-
-    invoke-static {v2, v4}, Lcom/android/server/PowerManagerService;->access$2476(Lcom/android/server/PowerManagerService;I)I
-
-    .line 674
-    :cond_1
-    cmpl-float v2, v0, v6
-
-    if-lez v2, :cond_2
+    invoke-static {v3, v5}, Lcom/android/server/PowerManagerService;->access$2402(Lcom/android/server/PowerManagerService;I)I
 
     .line 678
+    cmpl-float v3, v2, v7
+
+    if-lez v3, :cond_1
+
+    .line 679
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    const/16 v5, 0x10
+
+    invoke-static {v3, v5}, Lcom/android/server/PowerManagerService;->access$2476(Lcom/android/server/PowerManagerService;I)I
+
+    .line 681
+    :cond_1
+    cmpl-float v3, v1, v7
+
+    if-lez v3, :cond_2
+
+    .line 696
     :cond_2
-    monitor-exit v3
+    monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 680
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+    .line 698
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHtcPowerSaver:Lcom/android/server/HtcPowerSaver;
-    invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$400(Lcom/android/server/PowerManagerService;)Lcom/android/server/HtcPowerSaver;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    .line 682
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    #getter for: Lcom/android/server/PowerManagerService;->mPowerSaverHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$1700(Lcom/android/server/PowerManagerService;)Landroid/os/Handler;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    #getter for: Lcom/android/server/PowerManagerService;->runHtcPowerSaverCheck:Ljava/lang/Runnable;
-    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$1600(Lcom/android/server/PowerManagerService;)Ljava/lang/Runnable;
+    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$400(Lcom/android/server/PowerManagerService;)Lcom/android/server/HtcPowerSaver;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    if-eqz v3, :cond_3
 
-    .line 683
-    iget-object v2, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
-
-    #getter for: Lcom/android/server/PowerManagerService;->mPowerSaverHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/server/PowerManagerService;->access$1700(Lcom/android/server/PowerManagerService;)Landroid/os/Handler;
-
-    move-result-object v2
-
+    .line 699
     iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
-    #getter for: Lcom/android/server/PowerManagerService;->runHtcPowerSaverCheck:Ljava/lang/Runnable;
-    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$1600(Lcom/android/server/PowerManagerService;)Ljava/lang/Runnable;
+    #getter for: Lcom/android/server/PowerManagerService;->mPowerSaverHandler:Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$1700(Lcom/android/server/PowerManagerService;)Landroid/os/Handler;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iget-object v4, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
 
-    .line 686
+    #getter for: Lcom/android/server/PowerManagerService;->runHtcPowerSaverCheck:Ljava/lang/Runnable;
+    invoke-static {v4}, Lcom/android/server/PowerManagerService;->access$1600(Lcom/android/server/PowerManagerService;)Ljava/lang/Runnable;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 700
+    iget-object v3, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    #getter for: Lcom/android/server/PowerManagerService;->mPowerSaverHandler:Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/server/PowerManagerService;->access$1700(Lcom/android/server/PowerManagerService;)Landroid/os/Handler;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/android/server/PowerManagerService$SettingsObserver;->this$0:Lcom/android/server/PowerManagerService;
+
+    #getter for: Lcom/android/server/PowerManagerService;->runHtcPowerSaverCheck:Ljava/lang/Runnable;
+    invoke-static {v4}, Lcom/android/server/PowerManagerService;->access$1600(Lcom/android/server/PowerManagerService;)Ljava/lang/Runnable;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 703
     :cond_3
     return-void
 
-    .line 678
-    .end local v0           #transitionScale:F
-    .end local v1           #windowScale:F
+    .line 696
+    .end local v0           #screen_mode:I
+    .end local v1           #transitionScale:F
+    .end local v2           #windowScale:F
     :catchall_0
-    move-exception v2
+    move-exception v3
 
     :try_start_1
-    monitor-exit v3
+    monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v2
+    throw v3
 .end method

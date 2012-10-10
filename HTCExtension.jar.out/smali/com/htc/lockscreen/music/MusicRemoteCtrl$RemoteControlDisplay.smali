@@ -19,10 +19,10 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 34
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 36
     return-void
 .end method
 
@@ -35,7 +35,7 @@
     .parameter "bitmap"
 
     .prologue
-    .line 53
+    .line 56
     return-void
 .end method
 
@@ -45,7 +45,7 @@
     .parameter "bitmap"
 
     .prologue
-    .line 49
+    .line 52
     return-void
 .end method
 
@@ -61,7 +61,7 @@
     .end annotation
 
     .prologue
-    .line 58
+    .line 61
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .parameter "metadata"
 
     .prologue
-    .line 41
+    .line 44
     return-void
 .end method
 
@@ -82,7 +82,7 @@
     .parameter "stateChangeTimeMs"
 
     .prologue
-    .line 37
+    .line 40
     return-void
 .end method
 
@@ -92,6 +92,6 @@
     .parameter "flags"
 
     .prologue
-    .line 45
+    .line 48
     return-void
 .end method

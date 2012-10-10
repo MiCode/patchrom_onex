@@ -49,7 +49,7 @@
     .end annotation
 
     .prologue
-    .line 48
+    .line 52
     const/4 v0, 0x0
 
     return-object v0
@@ -59,7 +59,7 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 42
     const/4 v0, 0x0
 
     return-object v0

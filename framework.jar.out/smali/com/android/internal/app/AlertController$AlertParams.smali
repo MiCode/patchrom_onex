@@ -130,7 +130,7 @@
     iput-boolean v2, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCancelable:Z
 
     .line 849
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

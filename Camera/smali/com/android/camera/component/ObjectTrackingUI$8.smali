@@ -3,7 +3,7 @@
 .source "ObjectTrackingUI.java"
 
 # interfaces
-.implements Lcom/android/camera/property/PropertyChangedCallback;
+.implements Lcom/android/camera/event/EventHandler;
 
 
 # annotations
@@ -19,10 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/android/camera/property/PropertyChangedCallback",
+        "Lcom/android/camera/event/EventHandler",
         "<",
-        "Lcom/android/camera/imaging/Size;",
-        ">;"
+        "Lcom/android/camera/OneValueEventArgs",
+        "<",
+        "Lcom/android/camera/effect/EffectBase;",
+        ">;>;"
     }
 .end annotation
 
@@ -37,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 237
+    .line 239
     iput-object p1, p0, Lcom/android/camera/component/ObjectTrackingUI$8;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,33 +49,77 @@
 
 
 # virtual methods
-.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
+.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/OneValueEventArgs;)V
     .locals 1
     .parameter
+    .parameter "sender"
     .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/android/camera/property/Property",
+            "Lcom/android/camera/event/Event",
             "<",
-            "Lcom/android/camera/imaging/Size;",
-            ">;",
-            "Lcom/android/camera/property/PropertyChangedEventArgs",
+            "Lcom/android/camera/OneValueEventArgs",
             "<",
-            "Lcom/android/camera/imaging/Size;",
+            "Lcom/android/camera/effect/EffectBase;",
+            ">;>;",
+            "Ljava/lang/Object;",
+            "Lcom/android/camera/OneValueEventArgs",
+            "<",
+            "Lcom/android/camera/effect/EffectBase;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 241
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/imaging/Size;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/imaging/Size;>;"
+    .line 243
+    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/effect/EffectBase;>;>;"
+    .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/effect/EffectBase;>;"
+    iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
+
+    instance-of v0, v0, Lcom/android/camera/effect/PanoramaScene;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
+
+    instance-of v0, v0, Lcom/android/camera/effect/HdrScene;
+
+    if-eqz v0, :cond_1
+
+    .line 244
+    :cond_0
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$8;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
-    #calls: Lcom/android/camera/component/ObjectTrackingUI;->updateOtViewLayout()V
+    #calls: Lcom/android/camera/component/ObjectTrackingUI;->disableOT()V
+    invoke-static {v0}, Lcom/android/camera/component/ObjectTrackingUI;->access$500(Lcom/android/camera/component/ObjectTrackingUI;)V
+
+    .line 247
+    :goto_0
+    return-void
+
+    .line 246
+    :cond_1
+    iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$8;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
+
+    #calls: Lcom/android/camera/component/ObjectTrackingUI;->enableOT()V
     invoke-static {v0}, Lcom/android/camera/component/ObjectTrackingUI;->access$700(Lcom/android/camera/component/ObjectTrackingUI;)V
 
-    .line 242
+    goto :goto_0
+.end method
+
+.method public bridge synthetic onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
+
+    .prologue
+    .line 239
+    check-cast p3, Lcom/android/camera/OneValueEventArgs;
+
+    .end local p3
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/component/ObjectTrackingUI$8;->onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/OneValueEventArgs;)V
+
     return-void
 .end method

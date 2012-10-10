@@ -1,9 +1,6 @@
 .class Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source "FilePickerCore.java"
-
-# interfaces
-.implements Lcom/htc/widget/HtcAdapterView$OnItemLongClickListener;
 
 
 # annotations
@@ -27,181 +24,52 @@
     .parameter
 
     .prologue
-    .line 1683
+    .line 1659
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemLongClick(Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)Z
-    .locals 8
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/htc/widget/HtcAdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 2
+    .parameter "msg"
 
     .prologue
-    .local p1, parent:Lcom/htc/widget/HtcAdapterView;,"Lcom/htc/widget/HtcAdapterView<*>;"
-    const/4 v7, 0x1
+    .line 1661
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 1686
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    packed-switch v0, :pswitch_data_0
 
-    #getter for: Lcom/htc/app/FilePickerCore$MoreExpanedObject;->mFolderAdapter:Lcom/htc/app/FilePickerFolderAdapter;
-    invoke-static {v5}, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->access$2000(Lcom/htc/app/FilePickerCore$MoreExpanedObject;)Lcom/htc/app/FilePickerFolderAdapter;
-
-    move-result-object v5
-
-    invoke-virtual {v5, p3}, Lcom/htc/app/FilePickerFolderAdapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/htc/app/FolderItemInfo;
-
-    .line 1687
-    .local v4, selectedItem:Lcom/htc/app/FolderItemInfo;
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->isCloudItem()Z
-
-    move-result v1
-
-    .line 1688
-    .local v1, isCloudItem:Z
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->isFolder()Z
-
-    move-result v3
-
-    .line 1689
-    .local v3, isFolder:Z
-    if-eqz v3, :cond_2
-
-    .line 1690
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->isReturnCloudShareLinkEnabled:Z
-    invoke-static {v5}, Lcom/htc/app/FilePickerCore;->access$1900(Lcom/htc/app/FilePickerCore;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->isFolderItemSelectedEnabled:Z
-    invoke-static {v5}, Lcom/htc/app/FilePickerCore;->access$1800(Lcom/htc/app/FilePickerCore;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    .line 1692
-    :cond_1
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->mSelectionType:I
-    invoke-static {v5}, Lcom/htc/app/FilePickerCore;->access$2100(Lcom/htc/app/FilePickerCore;)I
-
-    move-result v5
-
-    if-nez v5, :cond_3
-
-    .line 1693
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
-
-    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
-
-    .line 1694
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore;->mSelectedFolderItemInfoLists:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1695
-    sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    .line 1697
-    .local v2, isCloudRoot:Z
-    if-nez v2, :cond_2
-
-    .line 1698
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
-
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
-
-    invoke-virtual {v5}, Lcom/htc/app/FilePickerCore;->getActivity()Landroid/app/Activity;
-
-    move-result-object v5
-
-    const/4 v6, 0x4
-
-    invoke-virtual {v5, v6}, Landroid/app/Activity;->showDialog(I)V
-
-    .line 1708
-    .end local v2           #isCloudRoot:Z
-    :cond_2
+    .line 1667
     :goto_0
-    return v7
+    return-void
 
-    .line 1700
-    :cond_3
-    iget-object v5, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
+    .line 1663
+    :pswitch_0
+    iget-object v0, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    iget-object v5, v5, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
+    iget-object v0, v0, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->this$0:Lcom/htc/app/FilePickerCore;
 
-    #getter for: Lcom/htc/app/FilePickerCore;->mSelectionType:I
-    invoke-static {v5}, Lcom/htc/app/FilePickerCore;->access$2100(Lcom/htc/app/FilePickerCore;)I
-
-    move-result v5
-
-    if-ne v5, v7, :cond_2
-
-    .line 1701
-    invoke-virtual {v4}, Lcom/htc/app/FolderItemInfo;->getCheckBox()Lcom/htc/widget/HtcCheckBox;
+    #getter for: Lcom/htc/app/FilePickerCore;->mActHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/htc/app/FilePickerCore;->access$3500(Lcom/htc/app/FilePickerCore;)Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 1702
-    .local v0, checkBox:Lcom/htc/widget/HtcCheckBox;
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lcom/htc/app/FilePickerCore$MoreExpanedObject$2;->this$1:Lcom/htc/app/FilePickerCore$MoreExpanedObject;
 
-    .line 1703
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->performClick()Z
+    iget-object v1, v1, Lcom/htc/app/FilePickerCore$MoreExpanedObject;->scanEndRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
+
+    .line 1661
+    :pswitch_data_0
+    .packed-switch 0xa6
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 988
+    .line 1083
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$19;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 992
+    .line 1087
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$19;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -80,8 +80,8 @@
     move-result v0
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSelfTimer(Z)V
-    invoke-static {v1, v0}, Lcom/android/camera/component/CaptureBar;->access$3800(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v1, v0}, Lcom/android/camera/component/CaptureBar;->access$4000(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 993
+    .line 1088
     return-void
 .end method

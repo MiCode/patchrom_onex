@@ -329,7 +329,7 @@
     .local v6, subText:Ljava/lang/String;
     new-instance v3, Ljava/util/StringTokenizer;
 
-    const-string v8, "|"
+    const-string/jumbo v8, "|"
 
     invoke-direct {v3, v6, v8}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

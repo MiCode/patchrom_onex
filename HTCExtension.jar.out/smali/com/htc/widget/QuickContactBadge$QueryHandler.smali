@@ -25,13 +25,13 @@
     .parameter "cr"
 
     .prologue
-    .line 885
+    .line 884
     iput-object p1, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
 
-    .line 886
+    .line 885
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 887
+    .line 886
     return-void
 .end method
 
@@ -44,65 +44,65 @@
     .parameter "cursor"
 
     .prologue
-    .line 895
+    .line 894
     const/4 v5, 0x0
 
-    .line 896
+    .line 895
     .local v5, lookupUri:Landroid/net/Uri;
     const/4 v2, 0x0
 
-    .line 897
+    .line 896
     .local v2, createUri:Landroid/net/Uri;
     const/4 v6, 0x0
 
-    .line 900
+    .line 899
     .local v6, trigger:Z
     packed-switch p1, :pswitch_data_0
 
-    .line 945
+    .line 944
     .end local p2
     :cond_0
     :goto_0
     if-eqz p3, :cond_1
 
-    .line 946
+    .line 945
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 950
+    .line 949
     :cond_1
     iget-object v7, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     #setter for: Lcom/htc/widget/QuickContactBadge;->mContactUri:Landroid/net/Uri;
     invoke-static {v7, v5}, Lcom/htc/widget/QuickContactBadge;->access$002(Lcom/htc/widget/QuickContactBadge;Landroid/net/Uri;)Landroid/net/Uri;
 
-    .line 951
+    .line 950
     iget-object v7, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     #calls: Lcom/htc/widget/QuickContactBadge;->onContactUriChanged()V
     invoke-static {v7}, Lcom/htc/widget/QuickContactBadge;->access$100(Lcom/htc/widget/QuickContactBadge;)V
 
-    .line 953
+    .line 952
     if-eqz v6, :cond_4
 
     if-eqz v5, :cond_4
 
-    .line 955
+    .line 954
     iget-object v7, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     #calls: Lcom/htc/widget/QuickContactBadge;->trigger(Landroid/net/Uri;)V
     invoke-static {v7, v5}, Lcom/htc/widget/QuickContactBadge;->access$200(Lcom/htc/widget/QuickContactBadge;Landroid/net/Uri;)V
 
-    .line 972
+    .line 971
     :cond_2
     :goto_1
     return-void
 
-    .line 902
+    .line 901
     .restart local p2
     :pswitch_0
     const/4 v6, 0x1
 
-    .line 903
+    .line 902
     :try_start_0
     const-string v7, "tel"
 
@@ -115,7 +115,7 @@
 
     move-result-object v2
 
-    .line 907
+    .line 906
     :pswitch_1
     if-eqz p3, :cond_0
 
@@ -125,14 +125,14 @@
 
     if-eqz v7, :cond_0
 
-    .line 908
+    .line 907
     const/4 v7, 0x0
 
     invoke-interface {p3, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
-    .line 909
+    .line 908
     .local v0, contactId:J
     const/4 v7, 0x1
 
@@ -140,23 +140,23 @@
 
     move-result-object v4
 
-    .line 911
+    .line 910
     .local v4, lookupKey:Ljava/lang/String;
     invoke-static {v0, v1, v4}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 912
+    .line 911
     goto :goto_0
 
-    .line 917
+    .line 916
     .end local v0           #contactId:J
     .end local v4           #lookupKey:Ljava/lang/String;
     .restart local p2
     :pswitch_2
     const/4 v6, 0x1
 
-    .line 918
+    .line 917
     const-string v7, "mailto"
 
     check-cast p2, Ljava/lang/String;
@@ -168,7 +168,7 @@
 
     move-result-object v2
 
-    .line 922
+    .line 921
     :pswitch_3
     if-eqz p3, :cond_0
 
@@ -178,14 +178,14 @@
 
     if-eqz v7, :cond_0
 
-    .line 923
+    .line 922
     const/4 v7, 0x0
 
     invoke-interface {p3, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
-    .line 924
+    .line 923
     .restart local v0       #contactId:J
     const/4 v7, 0x1
 
@@ -193,16 +193,16 @@
 
     move-result-object v4
 
-    .line 926
+    .line 925
     .restart local v4       #lookupKey:Ljava/lang/String;
     invoke-static {v0, v1, v4}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 927
+    .line 926
     goto :goto_0
 
-    .line 932
+    .line 931
     .end local v0           #contactId:J
     .end local v4           #lookupKey:Ljava/lang/String;
     .restart local p2
@@ -215,14 +215,14 @@
 
     if-eqz v7, :cond_0
 
-    .line 933
+    .line 932
     const/4 v7, 0x0
 
     invoke-interface {p3, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
-    .line 935
+    .line 934
     .restart local v0       #contactId:J
     const/4 v7, 0x1
 
@@ -230,7 +230,7 @@
 
     move-result-object v4
 
-    .line 937
+    .line 936
     .restart local v4       #lookupKey:Ljava/lang/String;
     invoke-static {v0, v1, v4}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
     :try_end_0
@@ -238,12 +238,12 @@
 
     move-result-object v5
 
-    .line 938
+    .line 937
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 945
+    .line 944
     .end local v0           #contactId:J
     .end local v4           #lookupKey:Ljava/lang/String;
     .end local p2
@@ -252,17 +252,17 @@
 
     if-eqz p3, :cond_3
 
-    .line 946
+    .line 945
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
     :cond_3
     throw v7
 
-    .line 956
+    .line 955
     :cond_4
     if-eqz v2, :cond_7
 
-    .line 959
+    .line 958
     sget-object v7, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
 
     const-string v8, "1.0"
@@ -293,7 +293,7 @@
 
     if-eqz v7, :cond_6
 
-    .line 962
+    .line 961
     :cond_5
     new-instance v3, Landroid/content/Intent;
 
@@ -301,7 +301,7 @@
 
     invoke-direct {v3, v7, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 964
+    .line 963
     .local v3, intent:Landroid/content/Intent;
     iget-object v7, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
 
@@ -313,7 +313,7 @@
 
     goto/16 :goto_1
 
-    .line 966
+    .line 965
     .end local v3           #intent:Landroid/content/Intent;
     :cond_6
     iget-object v7, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
@@ -337,7 +337,7 @@
 
     goto/16 :goto_1
 
-    .line 969
+    .line 968
     :cond_7
     iget-object v7, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
 
@@ -348,7 +348,7 @@
 
     if-eqz v7, :cond_2
 
-    .line 970
+    .line 969
     iget-object v7, p0, Lcom/htc/widget/QuickContactBadge$QueryHandler;->this$0:Lcom/htc/widget/QuickContactBadge;
 
     #getter for: Lcom/htc/widget/QuickContactBadge;->mCallback:Lcom/htc/widget/QuickContactBadge$QueryCallback;
@@ -360,7 +360,7 @@
 
     goto/16 :goto_1
 
-    .line 900
+    .line 899
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_3

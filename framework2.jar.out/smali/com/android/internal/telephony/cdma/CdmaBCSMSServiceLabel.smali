@@ -28,7 +28,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 50
     iget v0, p0, Lcom/android/internal/telephony/cdma/CdmaBCSMSServiceLabel;->index:I
 
     return v0
@@ -38,7 +38,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 82
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaBCSMSServiceLabel;->label:Ljava/lang/String;
 
     return-object v0
@@ -48,7 +48,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 66
     iget v0, p0, Lcom/android/internal/telephony/cdma/CdmaBCSMSServiceLabel;->label_encode:I
 
     return v0
@@ -59,10 +59,10 @@
     .parameter "index"
 
     .prologue
-    .line 52
+    .line 58
     iput p1, p0, Lcom/android/internal/telephony/cdma/CdmaBCSMSServiceLabel;->index:I
 
-    .line 53
+    .line 59
     return-void
 .end method
 
@@ -71,10 +71,10 @@
     .parameter "label"
 
     .prologue
-    .line 80
+    .line 90
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaBCSMSServiceLabel;->label:Ljava/lang/String;
 
-    .line 81
+    .line 91
     return-void
 .end method
 
@@ -83,10 +83,10 @@
     .parameter "label_encode"
 
     .prologue
-    .line 66
+    .line 74
     iput p1, p0, Lcom/android/internal/telephony/cdma/CdmaBCSMSServiceLabel;->label_encode:I
 
-    .line 67
+    .line 75
     return-void
 .end method
 
@@ -94,7 +94,7 @@
     .locals 2
 
     .prologue
-    .line 34
+    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

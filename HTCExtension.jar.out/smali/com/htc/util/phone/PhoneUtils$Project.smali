@@ -32,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 142
     invoke-static {}, Lcom/htc/util/phone/PhoneUtils$Project;->computeVersion()F
 
     move-result v0
@@ -46,7 +46,7 @@
     .locals 0
 
     .prologue
-    .line 116
+    .line 112
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,10 +56,10 @@
     .locals 4
 
     .prologue
-    .line 165
+    .line 161
     const/high16 v1, 0x4020
 
-    .line 167
+    .line 163
     .local v1, version:F
     const-string v2, "none"
 
@@ -71,7 +71,7 @@
 
     if-nez v2, :cond_0
 
-    .line 169
+    .line 165
     :try_start_0
     sget-object v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
 
@@ -81,7 +81,7 @@
 
     move-result v0
 
-    .line 170
+    .line 166
     .local v0, senseVersion:F
     const/high16 v2, 0x4000
 
@@ -89,16 +89,16 @@
 
     if-gtz v2, :cond_0
 
-    .line 171
+    .line 167
     const/high16 v1, 0x4080
 
-    .line 178
+    .line 174
     .end local v0           #senseVersion:F
     :cond_0
     :goto_0
     return v1
 
-    .line 173
+    .line 169
     :catch_0
     move-exception v2
 
@@ -109,7 +109,7 @@
     .locals 1
 
     .prologue
-    .line 160
+    .line 156
     sget v0, Lcom/htc/util/phone/PhoneUtils$Project;->mCurrentVersion:F
 
     return v0

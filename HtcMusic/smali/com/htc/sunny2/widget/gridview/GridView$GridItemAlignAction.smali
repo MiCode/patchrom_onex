@@ -29,15 +29,15 @@
     .parameter "host"
 
     .prologue
-    .line 3375
+    .line 3397
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridItemAlignAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
-    .line 3376
+    .line 3398
     const-string v0, "GridItemAlignAction"
 
     invoke-direct {p0, p2, v0}, Lcom/htc/sunny2/RenderThreadAction;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3377
+    .line 3399
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .parameter "cancelReason"
 
     .prologue
-    .line 3405
+    .line 3427
     return-void
 .end method
 
@@ -62,14 +62,14 @@
 
     const/4 v2, 0x0
 
-    .line 3382
+    .line 3404
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridItemAlignAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mGridViewScroller:Lcom/htc/sunny2/widget/gridview/GridViewScroller;
 
     invoke-virtual {v3}, Lcom/htc/sunny2/widget/gridview/GridViewScroller;->update()V
 
-    .line 3383
+    .line 3405
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridItemAlignAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mGridViewScroller:Lcom/htc/sunny2/widget/gridview/GridViewScroller;
@@ -78,30 +78,30 @@
 
     move-result v0
 
-    .line 3384
+    .line 3406
     .local v0, pos:I
     if-eqz v0, :cond_1
 
-    .line 3386
+    .line 3408
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridItemAlignAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mOrientation:I
 
     if-ne v3, v1, :cond_0
 
-    .line 3387
+    .line 3409
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridItemAlignAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-virtual {v3, v2, v0}, Lcom/htc/sunny2/widget/gridview/GridView;->onScrollMotionIRT(II)V
 
-    .line 3398
+    .line 3420
     :goto_0
     if-eqz v0, :cond_2
 
     :goto_1
     return v1
 
-    .line 3390
+    .line 3412
     :cond_0
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridItemAlignAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -109,7 +109,7 @@
 
     goto :goto_0
 
-    .line 3396
+    .line 3418
     :cond_1
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridItemAlignAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -120,6 +120,6 @@
     :cond_2
     move v1, v2
 
-    .line 3398
+    .line 3420
     goto :goto_1
 .end method

@@ -182,7 +182,7 @@
 
     .line 113
     .local v4, serverProtoVers:I
-    const-string/jumbo v8, "java.vm.name"
+    const-string v8, "java.vm.name"
 
     const-string v9, "?"
 
@@ -192,7 +192,7 @@
 
     .line 114
     .local v6, vmName:Ljava/lang/String;
-    const-string/jumbo v8, "java.vm.version"
+    const-string v8, "java.vm.version"
 
     const-string v9, "?"
 

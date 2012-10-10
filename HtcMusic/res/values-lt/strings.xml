@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Įtraukti grojaraštį</string>
     <string name="htc_delete_playlists">Ištrinti grojaraščius</string>
     <string name="htc_delete_playlist">Ištrinti grojaraštį</string>
+    <string name="htc_delete_all_playlists">Naikinti visus grojaraščius</string>
     <string name="htc_playlist_add_songs">Įtraukti dainas</string>
     <string name="htc_playlist_del_songs">Ištrinti dainas</string>
     <string name="htc_playlist_remove_songs">Pašalinti dainas</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Buferizacija...</string>
     <string name="title_send_content">Siunčiamas turinys...</string>
     <string name="no_downloaded_apps_found">Nerasta atsisiųstų programų</string>
+    <string name="music_folder_picker_dialog_msg">Pridėti dainas į grojaraštį pasirenkant aplanką? „Ne“, jei norite pridėti dainas kitu būdu</string>
 </resources>

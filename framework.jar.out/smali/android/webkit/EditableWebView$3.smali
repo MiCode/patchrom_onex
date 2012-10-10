@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 3046
+    .line 3341
     iput-object p1, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -43,12 +43,12 @@
     .parameter "event"
 
     .prologue
-    .line 3048
+    .line 3343
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 3049
+    .line 3344
     .local v0, action:I
     const/4 v9, 0x2
 
@@ -56,13 +56,13 @@
 
     fill-array-data v4, :array_0
 
-    .line 3050
+    .line 3345
     .local v4, offset:[I
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     invoke-virtual {v9, v4}, Landroid/webkit/EditableWebView;->getLocationInWindow([I)V
 
-    .line 3051
+    .line 3346
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getX()F
@@ -98,7 +98,7 @@
 
     move-result-object v5
 
-    .line 3052
+    .line 3347
     .local v5, p:Landroid/graphics/PointF;
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
@@ -108,8 +108,8 @@
 
     iget-object v11, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    #getter for: Landroid/view/View;->mScrollX:I
-    invoke-static {v11}, Landroid/webkit/EditableWebView;->access$4900(Landroid/webkit/EditableWebView;)I
+    #getter for: Landroid/webkit/EditableWebView;->mScrollX:I
+    invoke-static {v11}, Landroid/webkit/EditableWebView;->access$5800(Landroid/webkit/EditableWebView;)I
 
     move-result v11
 
@@ -119,7 +119,7 @@
 
     move-result v1
 
-    .line 3053
+    .line 3348
     .local v1, contentX:I
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
@@ -129,8 +129,8 @@
 
     iget-object v11, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    #getter for: Landroid/view/View;->mScrollY:I
-    invoke-static {v11}, Landroid/webkit/EditableWebView;->access$5000(Landroid/webkit/EditableWebView;)I
+    #getter for: Landroid/webkit/EditableWebView;->mScrollY:I
+    invoke-static {v11}, Landroid/webkit/EditableWebView;->access$5900(Landroid/webkit/EditableWebView;)I
 
     move-result v11
 
@@ -140,32 +140,32 @@
 
     move-result v2
 
-    .line 3054
+    .line 3349
     .local v2, contentY:I
     packed-switch v0, :pswitch_data_0
 
-    .line 3107
+    .line 3402
     :cond_0
     :goto_0
     const/4 v9, 0x1
 
     return v9
 
-    .line 3056
+    .line 3351
     :pswitch_0
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
 
     iget-object v10, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     invoke-virtual {v9, v10}, Landroid/webkit/WebView$AutoScrollerWrapper;->findScrollableView(Landroid/webkit/WebView;)V
 
-    .line 3060
+    .line 3355
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
@@ -179,7 +179,7 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 3061
+    .line 3356
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     const/4 v10, 0x0
@@ -187,7 +187,7 @@
     #setter for: Landroid/webkit/EditableWebView;->mTouchingAnchor:Lcom/htc/textselection/SelectionAnchor;
     invoke-static {v9, v10}, Landroid/webkit/EditableWebView;->access$1202(Landroid/webkit/EditableWebView;Lcom/htc/textselection/SelectionAnchor;)Lcom/htc/textselection/SelectionAnchor;
 
-    .line 3062
+    .line 3357
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -201,25 +201,25 @@
 
     invoke-virtual {v9, v1, v2, v10, v11}, Landroid/webkit/WebViewCore;->doSelection(IIZZ)V
 
-    .line 3063
+    .line 3358
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
 
     sget-object v10, Landroid/webkit/WebViewSelectionMethod$SelectionMode;->EXTENDABLE:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
 
     invoke-virtual {v9, v10}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
 
-    .line 3064
+    .line 3359
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     const/4 v10, 0x1
 
     invoke-virtual {v9, v10}, Landroid/webkit/WebView$QuickSelectAbs;->hideQuickActions(Z)V
 
-    .line 3065
+    .line 3360
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->editableQuickActions:Landroid/webkit/EditableWebView$EditableQuickActions;
@@ -229,7 +229,7 @@
 
     if-eqz v9, :cond_1
 
-    .line 3066
+    .line 3361
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->editableQuickActions:Landroid/webkit/EditableWebView$EditableQuickActions;
@@ -241,7 +241,7 @@
 
     iput-boolean v10, v9, Landroid/webkit/EditableWebView$EditableQuickActions;->highlightMode:Z
 
-    .line 3067
+    .line 3362
     :cond_1
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
@@ -249,11 +249,11 @@
 
     goto :goto_0
 
-    .line 3070
+    .line 3365
     :pswitch_1
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -265,11 +265,11 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/webkit/WebView$AutoScrollerWrapper;->doAutoSCroll(FF)Z
 
-    .line 3074
+    .line 3369
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
@@ -279,11 +279,11 @@
 
     if-nez v9, :cond_0
 
-    .line 3075
+    .line 3370
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
@@ -293,11 +293,11 @@
 
     if-nez v9, :cond_2
 
-    .line 3076
+    .line 3371
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
@@ -305,7 +305,7 @@
 
     if-ge v2, v9, :cond_3
 
-    .line 3077
+    .line 3372
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -317,18 +317,18 @@
 
     invoke-virtual {v9, v10}, Landroid/webkit/WebViewCore;->modifySelection(Z)V
 
-    .line 3084
+    .line 3379
     :goto_1
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 3086
+    .line 3381
     :cond_2
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
@@ -343,12 +343,12 @@
 
     goto/16 :goto_0
 
-    .line 3078
+    .line 3373
     :cond_3
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
@@ -356,7 +356,7 @@
 
     if-lt v2, v9, :cond_4
 
-    .line 3079
+    .line 3374
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -370,12 +370,12 @@
 
     goto :goto_1
 
-    .line 3080
+    .line 3375
     :cond_4
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
@@ -383,7 +383,7 @@
 
     if-ge v1, v9, :cond_5
 
-    .line 3081
+    .line 3376
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -397,7 +397,7 @@
 
     goto :goto_1
 
-    .line 3083
+    .line 3378
     :cond_5
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
@@ -412,30 +412,30 @@
 
     goto :goto_1
 
-    .line 3090
+    .line 3385
     :pswitch_2
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
 
     invoke-virtual {v9}, Landroid/webkit/WebView$AutoScrollerWrapper;->stopScroll()V
 
-    .line 3091
+    .line 3386
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mPenDownRect:Landroid/graphics/Rect;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5100(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6000(Landroid/webkit/EditableWebView;)Landroid/graphics/Rect;
 
     move-result-object v9
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 3092
+    .line 3387
     new-instance v6, Landroid/graphics/Rect;
 
     invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3093
+    .line 3388
     .local v6, r:Landroid/graphics/Rect;
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
@@ -443,13 +443,13 @@
 
     move-result v8
 
-    .line 3094
+    .line 3389
     .local v8, type:I
     const/4 v9, 0x1
 
     if-le v8, v9, :cond_0
 
-    .line 3095
+    .line 3390
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     const/16 v10, 0x73
@@ -458,7 +458,7 @@
 
     move-result-object v7
 
-    .line 3096
+    .line 3391
     .local v7, start:Landroid/graphics/Rect;
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
@@ -468,49 +468,49 @@
 
     move-result-object v3
 
-    .line 3097
+    .line 3392
     .local v3, end:Landroid/graphics/Rect;
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     const/4 v10, 0x0
 
     iput-boolean v10, v9, Landroid/webkit/WebView$QuickSelectAbs;->acrossFlag:Z
 
-    .line 3098
+    .line 3393
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     const/4 v10, 0x0
 
     invoke-virtual {v9, v6, v10}, Landroid/webkit/WebView$QuickSelectAbs;->showQuickActions(Landroid/graphics/Rect;I)V
 
-    .line 3099
+    .line 3394
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v9, v9, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
+    iget-object v9, v9, Landroid/webkit/EditableWebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     invoke-virtual {v9, v7, v3}, Landroid/webkit/WebView$QuickSelectAbs;->showAnchors(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 3101
+    .line 3396
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mSelectCallback:Landroid/webkit/WebView$WrapActions;
-    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$5200(Landroid/webkit/EditableWebView;)Landroid/webkit/WebView$WrapActions;
+    invoke-static {v9}, Landroid/webkit/EditableWebView;->access$6100(Landroid/webkit/EditableWebView;)Landroid/webkit/WebView$WrapActions;
 
     move-result-object v9
 
     if-eqz v9, :cond_0
 
-    .line 3102
+    .line 3397
     iget-object v9, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     iget-object v10, p0, Landroid/webkit/EditableWebView$3;->this$0:Landroid/webkit/EditableWebView;
 
     #getter for: Landroid/webkit/EditableWebView;->mSelectCallback:Landroid/webkit/WebView$WrapActions;
-    invoke-static {v10}, Landroid/webkit/EditableWebView;->access$5200(Landroid/webkit/EditableWebView;)Landroid/webkit/WebView$WrapActions;
+    invoke-static {v10}, Landroid/webkit/EditableWebView;->access$6100(Landroid/webkit/EditableWebView;)Landroid/webkit/WebView$WrapActions;
 
     move-result-object v10
 
@@ -518,7 +518,7 @@
 
     goto/16 :goto_0
 
-    .line 3049
+    .line 3344
     nop
 
     :array_0
@@ -527,7 +527,7 @@
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 3054
+    .line 3349
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

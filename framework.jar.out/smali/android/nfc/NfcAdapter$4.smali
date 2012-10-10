@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 1057
+    .line 1067
     iput-object p1, p0, Landroid/nfc/NfcAdapter$4;->this$0:Landroid/nfc/NfcAdapter;
 
     iput-object p2, p0, Landroid/nfc/NfcAdapter$4;->val$usage:Landroid/nfc/NfcAdapter$NdefHelper;
@@ -59,7 +59,7 @@
     .end annotation
 
     .prologue
-    .line 1060
+    .line 1070
     sget-object v0, Landroid/nfc/NfcAdapter$5;->$SwitchMap$android$nfc$NfcAdapter$NdefHelper:[I
 
     iget-object v1, p0, Landroid/nfc/NfcAdapter$4;->val$usage:Landroid/nfc/NfcAdapter$NdefHelper;
@@ -72,7 +72,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1067
+    .line 1077
     sget-object v0, Landroid/nfc/NfcAdapter;->sService:Landroid/nfc/INfcAdapter;
 
     invoke-interface {v0}, Landroid/nfc/INfcAdapter;->isNdefPushEnabled()Z
@@ -86,7 +86,7 @@
     :goto_0
     return-object v0
 
-    .line 1063
+    .line 1073
     :pswitch_0
     sget-object v0, Landroid/nfc/NfcAdapter;->sService:Landroid/nfc/INfcAdapter;
 
@@ -100,7 +100,7 @@
 
     goto :goto_0
 
-    .line 1065
+    .line 1075
     :pswitch_1
     sget-object v0, Landroid/nfc/NfcAdapter;->sService:Landroid/nfc/INfcAdapter;
 
@@ -114,7 +114,7 @@
 
     goto :goto_0
 
-    .line 1060
+    .line 1070
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -131,7 +131,7 @@
     .end annotation
 
     .prologue
-    .line 1057
+    .line 1067
     invoke-virtual {p0}, Landroid/nfc/NfcAdapter$4;->callMethod()Ljava/lang/Boolean;
 
     move-result-object v0

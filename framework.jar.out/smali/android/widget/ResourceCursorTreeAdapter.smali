@@ -101,7 +101,7 @@
     iput p6, p0, Landroid/widget/ResourceCursorTreeAdapter;->mLastChildLayout:I
 
     .line 60
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

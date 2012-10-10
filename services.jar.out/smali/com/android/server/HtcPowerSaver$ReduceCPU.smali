@@ -27,10 +27,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 1215
+    .line 1211
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$ReduceCPU;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 1216
+    .line 1212
     const-string v2, "ReduceCPU"
 
     const-string v3, "powersaver_reduce_CPU"
@@ -45,10 +45,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1217
+    .line 1213
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$ReduceCPU;->mContext:Landroid/content/Context;
 
-    .line 1218
+    .line 1214
     return-void
 .end method
 
@@ -58,14 +58,14 @@
     .locals 2
 
     .prologue
-    .line 1228
+    .line 1224
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "applyPowerSaverSettings"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1230
+    .line 1226
     iget-object v0, p0, Lcom/android/server/HtcPowerSaver$ReduceCPU;->this$0:Lcom/android/server/HtcPowerSaver;
 
     #getter for: Lcom/android/server/HtcPowerSaver;->mPMSInternalAPI:Lcom/android/server/PowerManagerService$PMSInternalAPI;
@@ -77,7 +77,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/PowerManagerService$PMSInternalAPI;->enableCpuApDvcs(Z)V
 
-    .line 1231
+    .line 1227
     const/4 v0, 0x0
 
     return v0
@@ -89,14 +89,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1236
+    .line 1232
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "restoreSystemSettings"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1238
+    .line 1234
     iget-object v0, p0, Lcom/android/server/HtcPowerSaver$ReduceCPU;->this$0:Lcom/android/server/HtcPowerSaver;
 
     #getter for: Lcom/android/server/HtcPowerSaver;->mPMSInternalAPI:Lcom/android/server/PowerManagerService$PMSInternalAPI;
@@ -106,7 +106,7 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/PowerManagerService$PMSInternalAPI;->enableCpuApDvcs(Z)V
 
-    .line 1239
+    .line 1235
     return v2
 .end method
 
@@ -114,14 +114,14 @@
     .locals 2
 
     .prologue
-    .line 1222
+    .line 1218
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "saveSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1223
+    .line 1219
     const/4 v0, 0x0
 
     return v0

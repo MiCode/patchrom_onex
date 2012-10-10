@@ -321,32 +321,32 @@
     .locals 6
 
     .prologue
-    .line 1045
+    .line 1044
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOnItemSelectedListener:Lcom/htc/fragment/widget/AdapterView$OnItemSelectedListener;
 
     if-nez v0, :cond_0
 
-    .line 1056
+    .line 1055
     :goto_0
     return-void
 
-    .line 1048
+    .line 1047
     :cond_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v3
 
-    .line 1049
+    .line 1048
     .local v3, selection:I
     if-ltz v3, :cond_1
 
-    .line 1050
+    .line 1049
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getSelectedView()Landroid/view/View;
 
     move-result-object v2
 
-    .line 1051
+    .line 1050
     .local v2, v:Landroid/view/View;
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOnItemSelectedListener:Lcom/htc/fragment/widget/AdapterView$OnItemSelectedListener;
 
@@ -364,7 +364,7 @@
 
     goto :goto_0
 
-    .line 1054
+    .line 1053
     .end local v2           #v:Landroid/view/View;
     :cond_1
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOnItemSelectedListener:Lcom/htc/fragment/widget/AdapterView$OnItemSelectedListener;
@@ -384,40 +384,40 @@
 
     const/4 v1, 0x0
 
-    .line 858
+    .line 857
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->isInFilterMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 859
+    .line 858
     const/4 p1, 0x0
 
-    .line 862
+    .line 861
     :cond_0
     if-eqz p1, :cond_3
 
-    .line 863
+    .line 862
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
-    .line 864
+    .line 863
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 865
+    .line 864
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/AdapterView;->setVisibility(I)V
 
-    .line 874
+    .line 873
     :goto_0
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AdapterView;->mDataChanged:Z
 
     if-eqz v0, :cond_1
 
-    .line 875
+    .line 874
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mLeft:I
 
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mTop:I
@@ -430,18 +430,18 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/fragment/widget/AdapterView;->onLayout(ZIIII)V
 
-    .line 881
+    .line 880
     :cond_1
     :goto_1
     return-void
 
-    .line 868
+    .line 867
     :cond_2
     invoke-virtual {p0, v1}, Lcom/htc/fragment/widget/AdapterView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 878
+    .line 877
     :cond_3
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
@@ -451,7 +451,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 879
+    .line 878
     :cond_4
     invoke-virtual {p0, v1}, Lcom/htc/fragment/widget/AdapterView;->setVisibility(I)V
 
@@ -465,7 +465,7 @@
     .parameter "child"
 
     .prologue
-    .line 506
+    .line 505
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -482,7 +482,7 @@
     .parameter "index"
 
     .prologue
-    .line 523
+    .line 522
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -500,7 +500,7 @@
     .parameter "params"
 
     .prologue
-    .line 559
+    .line 558
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -517,7 +517,7 @@
     .parameter "params"
 
     .prologue
-    .line 540
+    .line 539
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -532,7 +532,7 @@
     .locals 1
 
     .prologue
-    .line 1097
+    .line 1096
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     invoke-super {p0}, Landroid/view/ViewGroup;->canAnimate()Z
 
@@ -564,12 +564,12 @@
 
     const/4 v5, 0x0
 
-    .line 839
+    .line 838
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 840
+    .line 839
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -582,7 +582,7 @@
     :cond_0
     move v1, v4
 
-    .line 841
+    .line 840
     .local v1, empty:Z
     :goto_0
     if-eqz v1, :cond_1
@@ -596,7 +596,7 @@
     :cond_1
     move v2, v4
 
-    .line 845
+    .line 844
     .local v2, focusable:Z
     :goto_1
     if-eqz v2, :cond_7
@@ -610,7 +610,7 @@
     :goto_2
     invoke-super {p0, v3}, Landroid/view/ViewGroup;->setFocusableInTouchMode(Z)V
 
-    .line 846
+    .line 845
     if-eqz v2, :cond_8
 
     iget-boolean v3, p0, Lcom/htc/fragment/widget/AdapterView;->mDesiredFocusableState:Z
@@ -622,12 +622,12 @@
     :goto_3
     invoke-super {p0, v3}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
-    .line 847
+    .line 846
     iget-object v3, p0, Lcom/htc/fragment/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
     if-eqz v3, :cond_4
 
-    .line 848
+    .line 847
     if-eqz v0, :cond_2
 
     invoke-interface {v0}, Landroid/widget/Adapter;->isEmpty()Z
@@ -642,7 +642,7 @@
     :cond_3
     invoke-direct {p0, v5}, Lcom/htc/fragment/widget/AdapterView;->updateEmptyStatus(Z)V
 
-    .line 850
+    .line 849
     :cond_4
     return-void
 
@@ -651,27 +651,27 @@
     :cond_5
     move v1, v5
 
-    .line 840
+    .line 839
     goto :goto_0
 
     .restart local v1       #empty:Z
     :cond_6
     move v2, v5
 
-    .line 841
+    .line 840
     goto :goto_1
 
     .restart local v2       #focusable:Z
     :cond_7
     move v3, v5
 
-    .line 845
+    .line 844
     goto :goto_2
 
     :cond_8
     move v3, v5
 
-    .line 846
+    .line 845
     goto :goto_3
 .end method
 
@@ -679,7 +679,7 @@
     .locals 4
 
     .prologue
-    .line 1164
+    .line 1163
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
@@ -695,21 +695,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1165
+    .line 1164
     :cond_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->selectionChanged()V
 
-    .line 1166
+    .line 1165
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iput v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOldSelectedPosition:I
 
-    .line 1167
+    .line 1166
     iget-wide v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedRowId:J
 
     iput-wide v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOldSelectedRowId:J
 
-    .line 1169
+    .line 1168
     :cond_1
     return-void
 .end method
@@ -719,11 +719,11 @@
     .parameter "event"
 
     .prologue
-    .line 1064
+    .line 1063
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     const/4 v0, 0x0
 
-    .line 1069
+    .line 1068
     .local v0, populated:Z
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
 
@@ -733,41 +733,41 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1070
+    .line 1069
     const/4 v2, 0x4
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setEventType(I)V
 
-    .line 1075
+    .line 1074
     :cond_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getSelectedView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 1076
+    .line 1075
     .local v1, selectedView:Landroid/view/View;
     if-eqz v1, :cond_1
 
-    .line 1077
+    .line 1076
     invoke-virtual {v1, p1}, Landroid/view/View;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 
-    .line 1080
+    .line 1079
     :cond_1
     if-nez v0, :cond_3
 
-    .line 1081
+    .line 1080
     if-eqz v1, :cond_2
 
-    .line 1082
+    .line 1081
     invoke-virtual {v1}, Landroid/view/View;->isEnabled()Z
 
     move-result v2
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setEnabled(Z)V
 
-    .line 1084
+    .line 1083
     :cond_2
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getCount()I
 
@@ -775,14 +775,14 @@
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setItemCount(I)V
 
-    .line 1085
+    .line 1084
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v2
 
     invoke-virtual {p1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setCurrentItemIndex(I)V
 
-    .line 1088
+    .line 1087
     :cond_3
     return v0
 .end method
@@ -801,12 +801,12 @@
     .end annotation
 
     .prologue
-    .line 938
+    .line 937
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     .local p1, container:Landroid/util/SparseArray;,"Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/AdapterView;->dispatchThawSelfOnly(Landroid/util/SparseArray;)V
 
-    .line 939
+    .line 938
     return-void
 .end method
 
@@ -824,12 +824,12 @@
     .end annotation
 
     .prologue
-    .line 926
+    .line 925
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     .local p1, container:Landroid/util/SparseArray;,"Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/AdapterView;->dispatchFreezeSelfOnly(Landroid/util/SparseArray;)V
 
-    .line 927
+    .line 926
     return-void
 .end method
 
@@ -837,37 +837,37 @@
     .locals 19
 
     .prologue
-    .line 1180
+    .line 1179
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
-    .line 1182
+    .line 1181
     .local v2, count:I
     if-nez v2, :cond_1
 
-    .line 1183
+    .line 1182
     const/4 v14, -0x1
 
-    .line 1255
+    .line 1254
     :cond_0
     :goto_0
     return v14
 
-    .line 1186
+    .line 1185
     :cond_1
     move-object/from16 v0, p0
 
     iget-wide v8, v0, Lcom/htc/fragment/widget/AdapterView;->mSyncRowId:J
 
-    .line 1187
+    .line 1186
     .local v8, idToMatch:J
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/htc/fragment/widget/AdapterView;->mSyncPosition:I
 
-    .line 1190
+    .line 1189
     .local v14, seed:I
     const-wide/high16 v15, -0x8000
 
@@ -875,12 +875,12 @@
 
     if-nez v15, :cond_2
 
-    .line 1191
+    .line 1190
     const/4 v14, -0x1
 
     goto :goto_0
 
-    .line 1195
+    .line 1194
     :cond_2
     const/4 v15, 0x0
 
@@ -888,14 +888,14 @@
 
     move-result v14
 
-    .line 1196
+    .line 1195
     add-int/lit8 v15, v2, -0x1
 
     invoke-static {v15, v14}, Ljava/lang/Math;->min(II)I
 
     move-result v14
 
-    .line 1198
+    .line 1197
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v15
@@ -904,34 +904,34 @@
 
     add-long v3, v15, v17
 
-    .line 1203
+    .line 1202
     .local v3, endTime:J
     move v5, v14
 
-    .line 1206
+    .line 1205
     .local v5, first:I
     move v10, v14
 
-    .line 1209
+    .line 1208
     .local v10, last:I
     const/4 v11, 0x0
 
-    .line 1219
+    .line 1218
     .local v11, next:Z
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v1
 
-    .line 1220
+    .line 1219
     .local v1, adapter:Landroid/widget/Adapter;,"TT;"
     if-nez v1, :cond_5
 
-    .line 1221
+    .line 1220
     const/4 v14, -0x1
 
     goto :goto_0
 
-    .line 1239
+    .line 1238
     .local v6, hitFirst:Z
     .local v7, hitLast:Z
     .local v12, rowId:J
@@ -942,17 +942,17 @@
 
     if-nez v7, :cond_9
 
-    .line 1241
+    .line 1240
     :cond_4
     add-int/lit8 v10, v10, 0x1
 
-    .line 1242
+    .line 1241
     move v14, v10
 
-    .line 1244
+    .line 1243
     const/4 v11, 0x0
 
-    .line 1224
+    .line 1223
     .end local v6           #hitFirst:Z
     .end local v7           #hitLast:Z
     .end local v12           #rowId:J
@@ -966,39 +966,39 @@
 
     if-gtz v15, :cond_6
 
-    .line 1225
+    .line 1224
     invoke-interface {v1, v14}, Landroid/widget/Adapter;->getItemId(I)J
 
     move-result-wide v12
 
-    .line 1226
+    .line 1225
     .restart local v12       #rowId:J
     cmp-long v15, v12, v8
 
     if-eqz v15, :cond_0
 
-    .line 1231
+    .line 1230
     add-int/lit8 v15, v2, -0x1
 
     if-ne v10, v15, :cond_7
 
     const/4 v7, 0x1
 
-    .line 1232
+    .line 1231
     .restart local v7       #hitLast:Z
     :goto_2
     if-nez v5, :cond_8
 
     const/4 v6, 0x1
 
-    .line 1234
+    .line 1233
     .restart local v6       #hitFirst:Z
     :goto_3
     if-eqz v7, :cond_3
 
     if-eqz v6, :cond_3
 
-    .line 1255
+    .line 1254
     .end local v6           #hitFirst:Z
     .end local v7           #hitLast:Z
     .end local v12           #rowId:J
@@ -1007,21 +1007,21 @@
 
     goto :goto_0
 
-    .line 1231
+    .line 1230
     .restart local v12       #rowId:J
     :cond_7
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 1232
+    .line 1231
     .restart local v7       #hitLast:Z
     :cond_8
     const/4 v6, 0x0
 
     goto :goto_3
 
-    .line 1245
+    .line 1244
     .restart local v6       #hitFirst:Z
     :cond_9
     if-nez v7, :cond_a
@@ -1030,14 +1030,14 @@
 
     if-nez v6, :cond_5
 
-    .line 1247
+    .line 1246
     :cond_a
     add-int/lit8 v5, v5, -0x1
 
-    .line 1248
+    .line 1247
     move v14, v5
 
-    .line 1250
+    .line 1249
     const/4 v11, 0x1
 
     goto :goto_1
@@ -1057,7 +1057,7 @@
     .end annotation
 
     .prologue
-    .line 688
+    .line 687
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
@@ -1068,7 +1068,7 @@
     .locals 1
 
     .prologue
-    .line 791
+    .line 790
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
@@ -1079,7 +1079,7 @@
     .locals 1
 
     .prologue
-    .line 739
+    .line 738
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
@@ -1091,13 +1091,13 @@
     .parameter "position"
 
     .prologue
-    .line 894
+    .line 893
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 895
+    .line 894
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1122,13 +1122,13 @@
     .parameter "position"
 
     .prologue
-    .line 903
+    .line 902
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 904
+    .line 903
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1152,7 +1152,7 @@
     .locals 2
 
     .prologue
-    .line 753
+    .line 752
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
@@ -1208,10 +1208,10 @@
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     const/4 v5, -0x1
 
-    .line 705
+    .line 704
     move-object v3, p1
 
-    .line 708
+    .line 707
     .local v3, listItem:Landroid/view/View;
     :goto_0
     :try_start_0
@@ -1230,29 +1230,29 @@
 
     if-nez v6, :cond_1
 
-    .line 709
+    .line 708
     move-object v3, v4
 
     goto :goto_0
 
-    .line 711
+    .line 710
     .end local v4           #v:Landroid/view/View;
     :catch_0
     move-exception v1
 
-    .line 725
+    .line 724
     :cond_0
     :goto_1
     return v5
 
-    .line 717
+    .line 716
     .restart local v4       #v:Landroid/view/View;
     :cond_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getChildCount()I
 
     move-result v0
 
-    .line 718
+    .line 717
     .local v0, childCount:I
     const/4 v2, 0x0
 
@@ -1260,7 +1260,7 @@
     :goto_2
     if-ge v2, v0, :cond_0
 
-    .line 719
+    .line 718
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/AdapterView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
@@ -1271,14 +1271,14 @@
 
     if-eqz v6, :cond_2
 
-    .line 720
+    .line 719
     iget v5, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     add-int/2addr v5, v2
 
     goto :goto_1
 
-    .line 718
+    .line 717
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
@@ -1289,19 +1289,19 @@
     .locals 3
 
     .prologue
-    .line 668
+    .line 667
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 669
+    .line 668
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v1
 
-    .line 670
+    .line 669
     .local v1, selection:I
     if-eqz v0, :cond_0
 
@@ -1313,12 +1313,12 @@
 
     if-ltz v1, :cond_0
 
-    .line 671
+    .line 670
     invoke-interface {v0, v1}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 673
+    .line 672
     :goto_0
     return-object v2
 
@@ -1334,7 +1334,7 @@
     .end annotation
 
     .prologue
-    .line 646
+    .line 645
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget-wide v0, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedRowId:J
 
@@ -1347,7 +1347,7 @@
     .end annotation
 
     .prologue
-    .line 633
+    .line 632
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedPosition:I
 
@@ -1370,127 +1370,127 @@
 
     const/4 v5, 0x0
 
-    .line 1101
+    .line 1100
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
-    .line 1102
+    .line 1101
     .local v0, count:I
     const/4 v1, 0x0
 
-    .line 1104
+    .line 1103
     .local v1, found:Z
     if-lez v0, :cond_4
 
-    .line 1109
+    .line 1108
     iget-boolean v4, p0, Lcom/htc/fragment/widget/AdapterView;->mNeedSync:Z
 
     if-eqz v4, :cond_0
 
-    .line 1112
+    .line 1111
     iput-boolean v5, p0, Lcom/htc/fragment/widget/AdapterView;->mNeedSync:Z
 
-    .line 1116
+    .line 1115
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->findSyncPosition()I
 
     move-result v2
 
-    .line 1117
+    .line 1116
     .local v2, newPos:I
     if-ltz v2, :cond_0
 
-    .line 1119
+    .line 1118
     invoke-virtual {p0, v2, v7}, Lcom/htc/fragment/widget/AdapterView;->lookForSelectablePosition(IZ)I
 
     move-result v3
 
-    .line 1120
+    .line 1119
     .local v3, selectablePos:I
     if-ne v3, v2, :cond_0
 
-    .line 1122
+    .line 1121
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/AdapterView;->setNextSelectedPositionInt(I)V
 
-    .line 1123
+    .line 1122
     const/4 v1, 0x1
 
-    .line 1127
+    .line 1126
     .end local v2           #newPos:I
     .end local v3           #selectablePos:I
     :cond_0
     if-nez v1, :cond_4
 
-    .line 1129
+    .line 1128
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v2
 
-    .line 1132
+    .line 1131
     .restart local v2       #newPos:I
     if-lt v2, v0, :cond_1
 
-    .line 1133
+    .line 1132
     add-int/lit8 v2, v0, -0x1
 
-    .line 1135
+    .line 1134
     :cond_1
     if-gez v2, :cond_2
 
-    .line 1136
+    .line 1135
     const/4 v2, 0x0
 
-    .line 1140
+    .line 1139
     :cond_2
     invoke-virtual {p0, v2, v7}, Lcom/htc/fragment/widget/AdapterView;->lookForSelectablePosition(IZ)I
 
     move-result v3
 
-    .line 1141
+    .line 1140
     .restart local v3       #selectablePos:I
     if-gez v3, :cond_3
 
-    .line 1143
+    .line 1142
     invoke-virtual {p0, v2, v5}, Lcom/htc/fragment/widget/AdapterView;->lookForSelectablePosition(IZ)I
 
     move-result v3
 
-    .line 1145
+    .line 1144
     :cond_3
     if-ltz v3, :cond_4
 
-    .line 1146
+    .line 1145
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/AdapterView;->setNextSelectedPositionInt(I)V
 
-    .line 1147
+    .line 1146
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->checkSelectionChanged()V
 
-    .line 1148
+    .line 1147
     const/4 v1, 0x1
 
-    .line 1152
+    .line 1151
     .end local v2           #newPos:I
     .end local v3           #selectablePos:I
     :cond_4
     if-nez v1, :cond_5
 
-    .line 1154
+    .line 1153
     iput v6, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
-    .line 1155
+    .line 1154
     iput-wide v8, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedRowId:J
 
-    .line 1156
+    .line 1155
     iput v6, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedPosition:I
 
-    .line 1157
+    .line 1156
     iput-wide v8, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedRowId:J
 
-    .line 1158
+    .line 1157
     iput-boolean v5, p0, Lcom/htc/fragment/widget/AdapterView;->mNeedSync:Z
 
-    .line 1159
+    .line 1158
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->checkSelectionChanged()V
 
-    .line 1161
+    .line 1160
     :cond_5
     return-void
 .end method
@@ -1499,7 +1499,7 @@
     .locals 1
 
     .prologue
-    .line 801
+    .line 800
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     const/4 v0, 0x0
 
@@ -1512,7 +1512,7 @@
     .parameter "lookDown"
 
     .prologue
-    .line 1267
+    .line 1266
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     return p1
 .end method
@@ -1526,7 +1526,7 @@
     .parameter "bottom"
 
     .prologue
-    .line 617
+    .line 616
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getHeight()I
 
@@ -1534,14 +1534,14 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/AdapterView;->mLayoutHeight:I
 
-    .line 618
+    .line 617
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/fragment/widget/AdapterView;->mLayoutWidth:I
 
-    .line 619
+    .line 618
     return-void
 .end method
 
@@ -1593,36 +1593,36 @@
 
     const/4 v4, 0x0
 
-    .line 1299
+    .line 1298
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getChildCount()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
-    .line 1300
+    .line 1299
     iput-boolean v5, p0, Lcom/htc/fragment/widget/AdapterView;->mNeedSync:Z
 
-    .line 1303
+    .line 1302
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mLayoutHeight:I
 
     int-to-long v2, v2
 
     iput-wide v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncHeight:J
 
-    .line 1304
+    .line 1303
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mLayoutWidth:I
 
     int-to-long v2, v2
 
     iput-wide v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncWidth:J
 
-    .line 1306
+    .line 1305
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     if-ltz v2, :cond_2
 
-    .line 1308
+    .line 1307
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -1633,57 +1633,57 @@
 
     move-result-object v1
 
-    .line 1309
+    .line 1308
     .local v1, v:Landroid/view/View;
     iget-wide v2, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedRowId:J
 
     iput-wide v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncRowId:J
 
-    .line 1310
+    .line 1309
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedPosition:I
 
     iput v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncPosition:I
 
-    .line 1313
+    .line 1312
     if-eqz v1, :cond_0
 
-    .line 1315
+    .line 1314
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v2
 
     iput v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSpecificTop:I
 
-    .line 1316
+    .line 1315
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v2
 
     iput v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSpecificLeft:I
 
-    .line 1319
+    .line 1318
     :cond_0
     iput v4, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncMode:I
 
-    .line 1341
+    .line 1340
     .end local v1           #v:Landroid/view/View;
     :cond_1
     :goto_0
     return-void
 
-    .line 1322
+    .line 1321
     :cond_2
     invoke-virtual {p0, v4}, Lcom/htc/fragment/widget/AdapterView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1323
+    .line 1322
     .restart local v1       #v:Landroid/view/View;
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 1324
+    .line 1323
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
@@ -1697,7 +1697,7 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 1325
+    .line 1324
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     invoke-interface {v0, v2}, Landroid/widget/Adapter;->getItemId(I)J
@@ -1706,36 +1706,36 @@
 
     iput-wide v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncRowId:J
 
-    .line 1329
+    .line 1328
     :goto_1
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     iput v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncPosition:I
 
-    .line 1332
+    .line 1331
     if-eqz v1, :cond_3
 
-    .line 1334
+    .line 1333
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v2
 
     iput v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSpecificTop:I
 
-    .line 1335
+    .line 1334
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v2
 
     iput v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSpecificLeft:I
 
-    .line 1338
+    .line 1337
     :cond_3
     iput v5, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncMode:I
 
     goto :goto_0
 
-    .line 1327
+    .line 1326
     :cond_4
     const-wide/16 v2, -0x1
 
@@ -1748,7 +1748,7 @@
     .locals 2
 
     .prologue
-    .line 606
+    .line 605
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -1764,7 +1764,7 @@
     .parameter "child"
 
     .prologue
-    .line 576
+    .line 575
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -1780,7 +1780,7 @@
     .parameter "index"
 
     .prologue
-    .line 592
+    .line 591
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -1795,13 +1795,13 @@
     .locals 2
 
     .prologue
-    .line 1023
+    .line 1022
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOnItemSelectedListener:Lcom/htc/fragment/widget/AdapterView$OnItemSelectedListener;
 
     if-eqz v0, :cond_2
 
-    .line 1024
+    .line 1023
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AdapterView;->mInLayout:Z
 
     if-nez v0, :cond_0
@@ -1810,13 +1810,13 @@
 
     if-eqz v0, :cond_4
 
-    .line 1029
+    .line 1028
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectionNotifier:Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;
 
     if-nez v0, :cond_1
 
-    .line 1030
+    .line 1029
     new-instance v0, Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;
 
     const/4 v1, 0x0
@@ -1825,7 +1825,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectionNotifier:Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;
 
-    .line 1032
+    .line 1031
     :cond_1
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectionNotifier:Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;
 
@@ -1833,7 +1833,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;->post(Ljava/lang/Runnable;)Z
 
-    .line 1039
+    .line 1038
     :cond_2
     :goto_0
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
@@ -1854,16 +1854,16 @@
 
     if-nez v0, :cond_3
 
-    .line 1040
+    .line 1039
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/AdapterView;->sendAccessibilityEvent(I)V
 
-    .line 1042
+    .line 1041
     :cond_3
     return-void
 
-    .line 1034
+    .line 1033
     :cond_4
     invoke-direct {p0}, Lcom/htc/fragment/widget/AdapterView;->fireOnSelected()V
 
@@ -1883,16 +1883,16 @@
     .parameter "emptyView"
 
     .prologue
-    .line 772
+    .line 771
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iput-object p1, p0, Lcom/htc/fragment/widget/AdapterView;->mEmptyView:Landroid/view/View;
 
-    .line 774
+    .line 773
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 775
+    .line 774
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1905,15 +1905,15 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 776
+    .line 775
     .local v1, empty:Z
     :goto_0
     invoke-direct {p0, v1}, Lcom/htc/fragment/widget/AdapterView;->updateEmptyStatus(Z)V
 
-    .line 777
+    .line 776
     return-void
 
-    .line 775
+    .line 774
     .end local v1           #empty:Z
     :cond_1
     const/4 v1, 0x0
@@ -1931,12 +1931,12 @@
 
     const/4 v2, 0x0
 
-    .line 810
+    .line 809
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 811
+    .line 810
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -1949,18 +1949,18 @@
     :cond_0
     move v1, v3
 
-    .line 813
+    .line 812
     .local v1, empty:Z
     :goto_0
     iput-boolean p1, p0, Lcom/htc/fragment/widget/AdapterView;->mDesiredFocusableState:Z
 
-    .line 814
+    .line 813
     if-nez p1, :cond_1
 
-    .line 815
+    .line 814
     iput-boolean v2, p0, Lcom/htc/fragment/widget/AdapterView;->mDesiredFocusableInTouchModeState:Z
 
-    .line 818
+    .line 817
     :cond_1
     if-eqz p1, :cond_4
 
@@ -1976,21 +1976,21 @@
     :goto_1
     invoke-super {p0, v3}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
-    .line 819
+    .line 818
     return-void
 
     .end local v1           #empty:Z
     :cond_3
     move v1, v2
 
-    .line 811
+    .line 810
     goto :goto_0
 
     .restart local v1       #empty:Z
     :cond_4
     move v3, v2
 
-    .line 818
+    .line 817
     goto :goto_1
 .end method
 
@@ -2004,12 +2004,12 @@
 
     const/4 v3, 0x1
 
-    .line 827
+    .line 826
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 828
+    .line 827
     .local v0, adapter:Landroid/widget/Adapter;,"TT;"
     if-eqz v0, :cond_0
 
@@ -2022,18 +2022,18 @@
     :cond_0
     move v1, v3
 
-    .line 830
+    .line 829
     .local v1, empty:Z
     :goto_0
     iput-boolean p1, p0, Lcom/htc/fragment/widget/AdapterView;->mDesiredFocusableInTouchModeState:Z
 
-    .line 831
+    .line 830
     if-eqz p1, :cond_1
 
-    .line 832
+    .line 831
     iput-boolean v3, p0, Lcom/htc/fragment/widget/AdapterView;->mDesiredFocusableState:Z
 
-    .line 835
+    .line 834
     :cond_1
     if-eqz p1, :cond_4
 
@@ -2049,21 +2049,21 @@
     :goto_1
     invoke-super {p0, v3}, Landroid/view/ViewGroup;->setFocusableInTouchMode(Z)V
 
-    .line 836
+    .line 835
     return-void
 
     .end local v1           #empty:Z
     :cond_3
     move v1, v2
 
-    .line 828
+    .line 827
     goto :goto_0
 
     .restart local v1       #empty:Z
     :cond_4
     move v3, v2
 
-    .line 835
+    .line 834
     goto :goto_1
 .end method
 
@@ -2072,18 +2072,18 @@
     .parameter "position"
 
     .prologue
-    .line 1285
+    .line 1284
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iput p1, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedPosition:I
 
-    .line 1286
+    .line 1285
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/AdapterView;->getItemIdAtPosition(I)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedRowId:J
 
-    .line 1288
+    .line 1287
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AdapterView;->mNeedSync:Z
 
     if-eqz v0, :cond_0
@@ -2094,15 +2094,15 @@
 
     if-ltz p1, :cond_0
 
-    .line 1289
+    .line 1288
     iput p1, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncPosition:I
 
-    .line 1290
+    .line 1289
     iget-wide v0, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedRowId:J
 
     iput-wide v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncRowId:J
 
-    .line 1292
+    .line 1291
     :cond_0
     return-void
 .end method
@@ -2112,7 +2112,7 @@
     .parameter "l"
 
     .prologue
-    .line 913
+    .line 912
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2180,18 +2180,18 @@
     .parameter "position"
 
     .prologue
-    .line 1275
+    .line 1274
     .local p0, this:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<TT;>;"
     iput p1, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
-    .line 1276
+    .line 1275
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/AdapterView;->getItemIdAtPosition(I)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedRowId:J
 
-    .line 1277
+    .line 1276
     return-void
 .end method
 

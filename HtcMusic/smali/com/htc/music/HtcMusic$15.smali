@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1378
+    .line 1387
     iput-object p1, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +42,19 @@
     .parameter "v"
 
     .prologue
-    .line 1380
+    .line 1389
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, v2, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v2, :cond_1
 
-    .line 1405
+    .line 1414
     :cond_0
     :goto_0
     return-void
 
-    .line 1383
+    .line 1392
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
@@ -67,7 +67,7 @@
 
     if-nez v2, :cond_0
 
-    .line 1384
+    .line 1393
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, v2, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -98,33 +98,33 @@
 
     const/4 v1, 0x1
 
-    .line 1388
+    .line 1397
     .local v1, isMirrorPlayOnTV:Z
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 1389
+    .line 1398
     const-string v2, "[HtcMusic]"
 
     const-string v3, "mPrevListener TV is on"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1390
+    .line 1399
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, v2, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->pause()V
 
-    .line 1391
+    .line 1400
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, v2, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->prev()V
 
-    .line 1392
+    .line 1401
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->handleTVReadyToPlay()V
@@ -134,25 +134,25 @@
 
     goto :goto_0
 
-    .line 1402
+    .line 1411
     .end local v1           #isMirrorPlayOnTV:Z
     :catch_0
     move-exception v0
 
-    .line 1403
+    .line 1412
     .local v0, ex:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1384
+    .line 1393
     .end local v0           #ex:Landroid/os/RemoteException;
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 1395
+    .line 1404
     .restart local v1       #isMirrorPlayOnTV:Z
     :cond_3
     :try_start_1
@@ -162,18 +162,18 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1396
+    .line 1405
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, v2, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->prev()V
 
-    .line 1398
+    .line 1407
     iget-object v2, p0, Lcom/htc/music/HtcMusic$15;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->refreshNow()J
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$1200(Lcom/htc/music/HtcMusic;)J
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$1300(Lcom/htc/music/HtcMusic;)J
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 

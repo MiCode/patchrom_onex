@@ -30,13 +30,13 @@
     .parameter "szName"
 
     .prologue
-    .line 3334
+    .line 3356
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridFlingingAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
-    .line 3335
+    .line 3357
     invoke-direct {p0, p2, p3}, Lcom/htc/sunny2/RenderThreadAction;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3336
+    .line 3358
     return-void
 .end method
 
@@ -47,7 +47,7 @@
     .parameter "cancelReason"
 
     .prologue
-    .line 3367
+    .line 3389
     return-void
 .end method
 
@@ -61,14 +61,14 @@
 
     const/4 v2, 0x0
 
-    .line 3341
+    .line 3363
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridFlingingAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mGridViewScroller:Lcom/htc/sunny2/widget/gridview/GridViewScroller;
 
     invoke-virtual {v3}, Lcom/htc/sunny2/widget/gridview/GridViewScroller;->update()V
 
-    .line 3342
+    .line 3364
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridFlingingAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mGridViewScroller:Lcom/htc/sunny2/widget/gridview/GridViewScroller;
@@ -77,30 +77,30 @@
 
     move-result v0
 
-    .line 3344
+    .line 3366
     .local v0, pos:I
     if-eqz v0, :cond_1
 
-    .line 3346
+    .line 3368
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridFlingingAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mOrientation:I
 
     if-ne v3, v1, :cond_0
 
-    .line 3347
+    .line 3369
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridFlingingAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-virtual {v3, v2, v0}, Lcom/htc/sunny2/widget/gridview/GridView;->onScrollMotionIRT(II)V
 
-    .line 3360
+    .line 3382
     :goto_0
     if-eqz v0, :cond_2
 
     :goto_1
     return v1
 
-    .line 3350
+    .line 3372
     :cond_0
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridFlingingAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -110,7 +110,7 @@
 
     goto :goto_0
 
-    .line 3357
+    .line 3379
     :cond_1
     const-string v3, "GridFlingingAction"
 
@@ -118,7 +118,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/sunny2/frameworks/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3358
+    .line 3380
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridFlingingAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-virtual {v3, v2}, Lcom/htc/sunny2/widget/gridview/GridView;->reportScrollStateChange(I)V
@@ -128,6 +128,6 @@
     :cond_2
     move v1, v2
 
-    .line 3360
+    .line 3382
     goto :goto_1
 .end method

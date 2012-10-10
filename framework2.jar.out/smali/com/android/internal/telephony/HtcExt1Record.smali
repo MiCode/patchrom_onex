@@ -32,15 +32,15 @@
     .locals 1
 
     .prologue
-    .line 272
+    .line 276
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 273
+    .line 277
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecId:I
 
-    .line 274
+    .line 278
     return-void
 .end method
 
@@ -50,39 +50,39 @@
     .parameter "data"
 
     .prologue
-    .line 281
+    .line 286
     invoke-direct {p0}, Lcom/android/internal/telephony/HtcExt1Record;-><init>()V
 
-    .line 283
+    .line 288
     array-length v1, p2
 
-    .line 286
+    .line 291
     .local v1, recordSize:I
     const/16 v2, 0xd
 
     if-eq v1, v2, :cond_0
 
-    .line 297
+    .line 302
     :goto_0
     return-void
 
-    .line 290
+    .line 295
     :cond_0
     :try_start_0
     iput p1, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecId:I
 
-    .line 291
+    .line 296
     iput-object p2, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 294
+    .line 299
     :catch_0
     move-exception v0
 
-    .line 295
+    .line 300
     .local v0, ex:Ljava/lang/RuntimeException;
     const-string v2, "HtcExt1Record"
 
@@ -99,7 +99,7 @@
     .parameter "data"
 
     .prologue
-    .line 243
+    .line 245
     new-instance v0, Lcom/android/internal/telephony/HtcExt1Record;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/telephony/HtcExt1Record;-><init>(I[B)V
@@ -116,7 +116,7 @@
     .prologue
     const/16 v7, 0xd
 
-    .line 301
+    .line 307
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
@@ -124,19 +124,19 @@
 
     if-ge v3, v7, :cond_1
 
-    .line 302
+    .line 308
     const-string v3, "HtcExt1Record"
 
     const-string v4, "Incorrect EXT1 length!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
+    .line 346
     :cond_0
     :goto_0
     return-void
 
-    .line 305
+    .line 311
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -146,7 +146,7 @@
 
     if-le v3, v4, :cond_2
 
-    .line 306
+    .line 312
     const-string v3, "HtcExt1Record"
 
     const-string v4, "The ext1 additional number is too long!"
@@ -157,11 +157,11 @@
 
     goto :goto_0
 
-    .line 336
+    .line 342
     :catch_0
     move-exception v1
 
-    .line 337
+    .line 343
     .local v1, ex:Ljava/lang/RuntimeException;
     const-string v3, "HtcExt1Record"
 
@@ -171,7 +171,7 @@
 
     goto :goto_0
 
-    .line 309
+    .line 315
     .end local v1           #ex:Ljava/lang/RuntimeException;
     :cond_2
     :try_start_1
@@ -183,7 +183,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 310
+    .line 316
     const-string v3, "HtcExt1Record"
 
     const-string v4, "TON & NPI shall not be existed in EXT1!"
@@ -192,7 +192,7 @@
 
     goto :goto_0
 
-    .line 315
+    .line 321
     :cond_3
     iget-object v3, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
@@ -202,7 +202,7 @@
 
     aput-byte v5, v3, v4
 
-    .line 316
+    .line 322
     const/4 v2, 0x1
 
     .local v2, i:I
@@ -213,19 +213,19 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 317
+    .line 323
     iget-object v3, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
     const/4 v4, -0x1
 
     aput-byte v4, v3, v2
 
-    .line 316
+    .line 322
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 321
+    .line 327
     :cond_4
     iget-object v3, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
@@ -235,12 +235,12 @@
 
     aput-byte v5, v3, v4
 
-    .line 324
+    .line 330
     invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->numberToCalledPartyBCD_withoutTOA(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 327
+    .line 333
     .local v0, bcdNumber:[B
     iget-object v3, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
@@ -252,7 +252,7 @@
 
     aput-byte v5, v3, v4
 
-    .line 330
+    .line 336
     const/4 v3, 0x0
 
     iget-object v4, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
@@ -263,7 +263,7 @@
 
     invoke-static {v0, v3, v4, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 333
+    .line 339
     array-length v3, v0
 
     add-int/lit8 v2, v3, 0x2
@@ -271,7 +271,7 @@
     :goto_2
     if-ge v2, v7, :cond_0
 
-    .line 334
+    .line 340
     iget-object v3, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
     const/4 v4, -0x1
@@ -280,7 +280,7 @@
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 333
+    .line 339
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
@@ -290,7 +290,7 @@
     .locals 5
 
     .prologue
-    .line 263
+    .line 267
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
@@ -300,7 +300,7 @@
 
     aput-byte v4, v2, v3
 
-    .line 264
+    .line 268
     const/4 v1, 0x1
 
     .local v1, i:I
@@ -311,7 +311,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 265
+    .line 269
     iget-object v2, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
     const/4 v3, -0x1
@@ -320,17 +320,17 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
+    .line 268
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 267
+    .line 271
     .end local v1           #i:I
     :catch_0
     move-exception v0
 
-    .line 268
+    .line 272
     .local v0, ex:Ljava/lang/RuntimeException;
     const-string v2, "HtcExt1Record"
 
@@ -338,7 +338,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 270
+    .line 274
     .end local v0           #ex:Ljava/lang/RuntimeException;
     :cond_0
     return-void
@@ -348,7 +348,7 @@
     .locals 1
 
     .prologue
-    .line 277
+    .line 282
     iget-object v0, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
     return-object v0
@@ -360,7 +360,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 248
+    .line 251
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/HtcExt1Record;->mRecordData:[B
 
@@ -384,20 +384,20 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 250
+    .line 253
     :cond_0
     const/4 v1, 0x1
 
-    .line 257
+    .line 260
     :cond_1
     :goto_0
     return v1
 
-    .line 255
+    .line 258
     :catch_0
     move-exception v0
 
-    .line 256
+    .line 259
     .local v0, ex:Ljava/lang/RuntimeException;
     const-string v2, "HtcExt1Record"
 

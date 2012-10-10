@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 663
+    .line 670
     iput-object p1, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 668
+    .line 675
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -56,11 +56,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 672
+    .line 679
     :goto_0
     if-nez p2, :cond_1
 
-    .line 673
+    .line 680
     iget-object v2, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v2}, Lcom/htc/music/HtcMusic;->getResources()Landroid/content/res/Resources;
@@ -77,39 +77,39 @@
 
     move-result-object v0
 
-    .line 675
+    .line 682
     .local v0, drawable:Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 676
+    .line 683
     iget-object v2, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, v2, Lcom/htc/music/HtcMusic;->mVolumeDialog:Lcom/htc/widget/HtcMultiSeekBarDialog;
 
     invoke-virtual {v2, v5, v0}, Lcom/htc/widget/HtcMultiSeekBarDialog;->setImageViewDrawable(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 689
+    .line 696
     :goto_1
     iget-object v2, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->resetTimeout()V
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$600(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$700(Lcom/htc/music/HtcMusic;)V
 
-    .line 690
+    .line 697
     return-void
 
-    .line 669
+    .line 676
     .end local v0           #drawable:Landroid/graphics/drawable/Drawable;
     :catch_0
     move-exception v1
 
-    .line 670
+    .line 677
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 678
+    .line 685
     .end local v1           #e:Landroid/os/RemoteException;
     .restart local v0       #drawable:Landroid/graphics/drawable/Drawable;
     :cond_0
@@ -137,7 +137,7 @@
 
     goto :goto_1
 
-    .line 681
+    .line 688
     .end local v0           #drawable:Landroid/graphics/drawable/Drawable;
     :cond_1
     iget-object v2, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
@@ -156,11 +156,11 @@
 
     move-result-object v0
 
-    .line 683
+    .line 690
     .restart local v0       #drawable:Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_2
 
-    .line 684
+    .line 691
     iget-object v2, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, v2, Lcom/htc/music/HtcMusic;->mVolumeDialog:Lcom/htc/widget/HtcMultiSeekBarDialog;
@@ -169,7 +169,7 @@
 
     goto :goto_1
 
-    .line 686
+    .line 693
     :cond_2
     iget-object v2, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -201,7 +201,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 694
+    .line 701
     return-void
 .end method
 
@@ -210,12 +210,12 @@
     .parameter "brightness"
 
     .prologue
-    .line 698
+    .line 705
     iget-object v0, p0, Lcom/htc/music/HtcMusic$5;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->resetTimeout()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$600(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$700(Lcom/htc/music/HtcMusic;)V
 
-    .line 699
+    .line 706
     return-void
 .end method

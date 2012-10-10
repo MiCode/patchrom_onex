@@ -46,14 +46,14 @@
     .locals 6
 
     .prologue
-    .line 1245
+    .line 1246
     iget-object v2, p0, Lcom/android/camera/component/PanoramaController$8$1;->this$1:Lcom/android/camera/component/PanoramaController$8;
 
     iget-object v2, v2, Lcom/android/camera/component/PanoramaController$8;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v2}, Lcom/android/camera/CameraThread;->enablePreviewCallback()V
 
-    .line 1248
+    .line 1249
     iget-object v2, p0, Lcom/android/camera/component/PanoramaController$8$1;->this$1:Lcom/android/camera/component/PanoramaController$8;
 
     iget-object v2, v2, Lcom/android/camera/component/PanoramaController$8;->this$0:Lcom/android/camera/component/PanoramaController;
@@ -62,21 +62,21 @@
 
     move-result-object v0
 
-    .line 1249
+    .line 1250
     .local v0, cameraController:Lcom/android/camera/CameraController;
     if-eqz v0, :cond_0
 
-    .line 1251
+    .line 1252
     const-string v2, "panorama-mode"
 
     const-string v3, "not-in-progress"
 
     invoke-virtual {v0, v2, v3}, Lcom/android/camera/CameraController;->setCameraParameter(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1252
+    .line 1253
     invoke-virtual {v0}, Lcom/android/camera/CameraController;->doSetCameraParameters()V
 
-    .line 1258
+    .line 1259
     :goto_0
     new-instance v1, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;
 
@@ -101,7 +101,7 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;-><init>(Lcom/android/camera/component/PanoramaController;[BLjava/util/Hashtable;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1259
+    .line 1260
     .local v1, saveTask:Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;
     iget-object v2, p0, Lcom/android/camera/component/PanoramaController$8$1;->this$1:Lcom/android/camera/component/PanoramaController$8;
 
@@ -113,7 +113,7 @@
 
     iput-wide v2, v1, Lcom/android/camera/imaging/SaveImageTask;->captureID:J
 
-    .line 1260
+    .line 1261
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isDoubleShot()Z
 
     move-result v2
@@ -127,21 +127,21 @@
     :goto_1
     iput-object v2, v1, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
-    .line 1261
+    .line 1262
     iget-object v2, p0, Lcom/android/camera/component/PanoramaController$8$1;->this$1:Lcom/android/camera/component/PanoramaController$8;
 
     iget-object v2, v2, Lcom/android/camera/component/PanoramaController$8;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/CameraThread;->saveImage(Lcom/android/camera/imaging/SaveImageTask;)V
 
-    .line 1262
+    .line 1263
     iget-object v2, p0, Lcom/android/camera/component/PanoramaController$8$1;->this$1:Lcom/android/camera/component/PanoramaController$8;
 
     iget-object v2, v2, Lcom/android/camera/component/PanoramaController$8;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v2}, Lcom/android/camera/CameraThread;->endTakePicture()V
 
-    .line 1265
+    .line 1266
     iget-object v2, p0, Lcom/android/camera/component/PanoramaController$8$1;->this$1:Lcom/android/camera/component/PanoramaController$8;
 
     iget-object v2, v2, Lcom/android/camera/component/PanoramaController$8;->this$0:Lcom/android/camera/component/PanoramaController;
@@ -151,10 +151,10 @@
     #setter for: Lcom/android/camera/component/PanoramaController;->m_ExifTags:Ljava/util/Hashtable;
     invoke-static {v2, v3}, Lcom/android/camera/component/PanoramaController;->access$1802(Lcom/android/camera/component/PanoramaController;Ljava/util/Hashtable;)Ljava/util/Hashtable;
 
-    .line 1266
+    .line 1267
     return-void
 
-    .line 1255
+    .line 1256
     .end local v1           #saveTask:Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;
     :cond_0
     iget-object v2, p0, Lcom/android/camera/component/PanoramaController$8$1;->this$1:Lcom/android/camera/component/PanoramaController$8;
@@ -172,7 +172,7 @@
 
     goto :goto_0
 
-    .line 1260
+    .line 1261
     .restart local v1       #saveTask:Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;
     :cond_1
     sget-object v2, Lcom/android/camera/io/DCFInfo;->DEFAULT:Lcom/android/camera/io/DCFInfo;

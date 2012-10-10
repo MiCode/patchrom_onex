@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 122
+    .line 124
     iput-object p1, p0, Lcom/android/camera/component/AudioManager$2;->this$0:Lcom/android/camera/component/AudioManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 126
+    .line 128
     const-string v0, "AudioManager(Camera)"
 
     const-string v1, "onLoadComplete(soundId="
@@ -65,21 +65,21 @@
 
     invoke-static/range {v0 .. v5}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 129
+    .line 131
     if-nez p3, :cond_3
 
-    .line 130
+    .line 132
     .local v10, successful:Z
     :goto_0
     const/4 v8, 0x0
 
-    .line 131
+    .line 133
     .local v8, soundHandle:Lcom/android/camera/component/AudioManager$SoundHandle;
     iget-object v1, p0, Lcom/android/camera/component/AudioManager$2;->this$0:Lcom/android/camera/component/AudioManager;
 
     monitor-enter v1
 
-    .line 133
+    .line 135
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/component/AudioManager$2;->this$0:Lcom/android/camera/component/AudioManager;
 
@@ -106,34 +106,34 @@
 
     check-cast v6, Lcom/android/camera/component/AudioManager$SoundHandle;
 
-    .line 135
+    .line 137
     .local v6, candHandle:Lcom/android/camera/component/AudioManager$SoundHandle;
     iget v0, v6, Lcom/android/camera/component/AudioManager$SoundHandle;->soundId:I
 
     if-ne v0, p2, :cond_0
 
-    .line 137
+    .line 139
     const/4 v0, 0x1
 
     iput-boolean v0, v6, Lcom/android/camera/component/AudioManager$SoundHandle;->isLoaded:Z
 
-    .line 138
+    .line 140
     move-object v8, v6
 
-    .line 142
+    .line 144
     .end local v6           #candHandle:Lcom/android/camera/component/AudioManager$SoundHandle;
     :cond_1
     monitor-exit v1
 
-    .line 143
+    .line 145
     if-nez v8, :cond_4
 
-    .line 156
+    .line 158
     :cond_2
     :goto_1
     return-void
 
-    .line 129
+    .line 131
     .end local v7           #i$:Ljava/util/Iterator;
     .end local v8           #soundHandle:Lcom/android/camera/component/AudioManager$SoundHandle;
     .end local v10           #successful:Z
@@ -142,7 +142,7 @@
 
     goto :goto_0
 
-    .line 142
+    .line 144
     .restart local v8       #soundHandle:Lcom/android/camera/component/AudioManager$SoundHandle;
     .restart local v10       #successful:Z
     :catchall_0
@@ -154,12 +154,12 @@
 
     throw v0
 
-    .line 147
+    .line 149
     .restart local v7       #i$:Ljava/util/Iterator;
     :cond_4
     if-eqz v10, :cond_2
 
-    .line 149
+    .line 151
     iget-object v0, v8, Lcom/android/camera/component/AudioManager$SoundHandle;->pendingStreams:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -179,7 +179,7 @@
 
     check-cast v9, Lcom/android/camera/component/AudioManager$StreamHandle;
 
-    .line 151
+    .line 153
     .local v9, streamHandle:Lcom/android/camera/component/AudioManager$StreamHandle;
     const-string v0, "AudioManager(Camera)"
 
@@ -201,7 +201,7 @@
 
     invoke-static/range {v0 .. v5}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 152
+    .line 154
     iget-object v0, p0, Lcom/android/camera/component/AudioManager$2;->this$0:Lcom/android/camera/component/AudioManager;
 
     #calls: Lcom/android/camera/component/AudioManager;->playInMemorySound(Lcom/android/camera/component/AudioManager$StreamHandle;)V
@@ -209,7 +209,7 @@
 
     goto :goto_2
 
-    .line 154
+    .line 156
     .end local v9           #streamHandle:Lcom/android/camera/component/AudioManager$StreamHandle;
     :cond_5
     iget-object v0, v8, Lcom/android/camera/component/AudioManager$SoundHandle;->pendingStreams:Ljava/util/ArrayList;

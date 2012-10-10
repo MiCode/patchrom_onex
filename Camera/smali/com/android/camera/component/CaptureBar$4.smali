@@ -3,7 +3,7 @@
 .source "CaptureBar.java"
 
 # interfaces
-.implements Lcom/android/camera/property/PropertyChangedCallback;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -16,29 +16,24 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/android/camera/property/PropertyChangedCallback",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/component/CaptureBar;
 
+.field final synthetic val$cameraThread:Lcom/android/camera/CameraThread;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/component/CaptureBar;)V
+.method constructor <init>(Lcom/android/camera/component/CaptureBar;Lcom/android/camera/CameraThread;)V
     .locals 0
+    .parameter
     .parameter
 
     .prologue
-    .line 374
+    .line 390
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$4;->this$0:Lcom/android/camera/component/CaptureBar;
+
+    iput-object p2, p0, Lcom/android/camera/component/CaptureBar$4;->val$cameraThread:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,52 +42,21 @@
 
 
 # virtual methods
-.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
+.method public run()V
     .locals 2
-    .parameter
-    .parameter
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/camera/property/Property",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;",
-            "Lcom/android/camera/property/PropertyChangedEventArgs",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 377
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
-    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
+    .line 394
+    iget-object v0, p0, Lcom/android/camera/component/CaptureBar$4;->val$cameraThread:Lcom/android/camera/CameraThread;
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 379
-    iget-object v0, p0, Lcom/android/camera/component/CaptureBar$4;->this$0:Lcom/android/camera/component/CaptureBar;
-
-    invoke-virtual {v0}, Lcom/android/camera/component/CaptureBar;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->isTakingPicture:Lcom/android/camera/property/Property;
 
     new-instance v1, Lcom/android/camera/component/CaptureBar$4$1;
 
     invoke-direct {v1, p0}, Lcom/android/camera/component/CaptureBar$4$1;-><init>(Lcom/android/camera/component/CaptureBar$4;)V
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 387
-    :cond_0
+    .line 411
     return-void
 .end method

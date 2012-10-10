@@ -34,12 +34,12 @@
     .locals 1
 
     .prologue
-    .line 3504
+    .line 3744
     const/4 v0, 0x0
 
     sput-object v0, Landroid/provider/HtcUnionContact$SpeedDial;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 3505
+    .line 3745
     return-void
 .end method
 
@@ -47,10 +47,10 @@
     .locals 2
 
     .prologue
-    .line 3486
+    .line 3721
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3487
+    .line 3722
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Stub!"

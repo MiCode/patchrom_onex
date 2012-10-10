@@ -14,28 +14,29 @@
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;)V
+.method private constructor <init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)V
     .locals 1
     .parameter "phone"
     .parameter "name"
     .parameter "id"
     .parameter "rm"
+    .parameter "dct"
 
     .prologue
-    .line 45
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/DataConnection;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;)V
+    .line 47
+    invoke-direct/range {p0 .. p5}, Lcom/android/internal/telephony/DataConnection;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)V
 
-    .line 41
+    .line 42
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mProfileId:I
 
-    .line 42
+    .line 43
     const-string v0, "default"
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mActiveApnType:Ljava/lang/String;
 
-    .line 46
+    .line 48
     return-void
 .end method
 
@@ -43,31 +44,31 @@
     .locals 2
 
     .prologue
-    .line 68
+    .line 71
     const-string v0, "GSM"
 
     const-string v1, "mCount_gsm is been initial to 0 "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
+    .line 72
     sget-object v1, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCountLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 70
+    .line 73
     const/4 v0, 0x0
 
     :try_start_0
     sput v0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCount_gsm:I
 
-    .line 71
+    .line 74
     monitor-exit v1
 
-    .line 72
+    .line 75
     return-void
 
-    .line 71
+    .line 74
     :catchall_0
     move-exception v0
 
@@ -83,12 +84,12 @@
     .parameter "address"
 
     .prologue
-    .line 187
+    .line 196
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 189
+    .line 198
     :goto_0
     return v0
 
@@ -106,19 +107,20 @@
     goto :goto_0
 .end method
 
-.method static makeDataConnection(Lcom/android/internal/telephony/PhoneBase;ILcom/android/internal/telephony/RetryManager;)Lcom/android/internal/telephony/gsm/GsmDataConnection;
-    .locals 5
+.method static makeDataConnection(Lcom/android/internal/telephony/PhoneBase;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)Lcom/android/internal/telephony/gsm/GsmDataConnection;
+    .locals 6
     .parameter "phone"
     .parameter "id"
     .parameter "rm"
+    .parameter "dct"
 
     .prologue
-    .line 57
+    .line 60
     sget-object v2, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCountLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 58
+    .line 61
     :try_start_0
     sget v1, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCount_gsm:I
 
@@ -126,7 +128,7 @@
 
     sput v1, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mCount_gsm:I
 
-    .line 59
+    .line 62
     const-string v1, "GSM"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -151,12 +153,12 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
+    .line 63
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
+    .line 64
     new-instance v0, Lcom/android/internal/telephony/gsm/GsmDataConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -177,15 +179,23 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, p0, v1, p1, p2}, Lcom/android/internal/telephony/gsm/GsmDataConnection;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;)V
+    move-object v1, p0
 
-    .line 62
+    move v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/gsm/GsmDataConnection;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)V
+
+    .line 65
     .local v0, gsmDc:Lcom/android/internal/telephony/gsm/GsmDataConnection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->start()V
 
-    .line 63
+    .line 66
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -210,10 +220,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->log(Ljava/lang/String;)V
 
-    .line 64
+    .line 67
     return-object v0
 
-    .line 60
+    .line 63
     .end local v0           #gsmDc:Lcom/android/internal/telephony/gsm/GsmDataConnection;
     :catchall_0
     move-exception v1
@@ -232,8 +242,8 @@
     .locals 2
 
     .prologue
-    .line 133
-    iget-wide v0, p0, Lcom/android/internal/telephony/DataConnection;->createTime:J
+    .line 136
+    iget-wide v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->createTime:J
 
     return-wide v0
 .end method
@@ -242,7 +252,7 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 127
     iget v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mProfileId:I
 
     return v0
@@ -253,21 +263,11 @@
     .parameter "domainNameServers"
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    .line 146
-    const-string v2, "0.0.0.0"
-
-    aget-object v3, p1, v0
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
+    .line 149
     const-string v2, "0.0.0.0"
 
     aget-object v3, p1, v1
@@ -276,31 +276,66 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
+    const-string v2, "0.0.0.0"
+
+    aget-object v3, p1, v0
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/PhoneBase;->isDnsCheckDisabled()Z
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    .line 166
+    .line 157
+    sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/16 v3, 0xa9
+
+    if-ne v2, v3, :cond_1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+
+    iget-object v2, v2, Lcom/android/internal/telephony/ApnSetting;->apn:Ljava/lang/String;
+
+    const-string v3, "pruebaedge"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 187
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 175
+    :cond_1
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0x17
 
-    if-eq v2, v3, :cond_2
+    if-eq v2, v3, :cond_0
 
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
 
     const/4 v3, 0x2
 
-    if-eq v2, v3, :cond_2
+    if-eq v2, v3, :cond_0
 
-    .line 170
-    iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    .line 179
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     const-string v3, "mms"
 
@@ -308,9 +343,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v2, v2, Lcom/android/internal/telephony/ApnSetting;->mmsProxy:Ljava/lang/String;
 
@@ -318,10 +353,10 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    :cond_0
-    iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    :cond_2
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     const-string v3, "httpproxy"
 
@@ -329,9 +364,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v2, v2, Lcom/android/internal/telephony/ApnSetting;->proxy:Ljava/lang/String;
 
@@ -339,16 +374,12 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    .line 178
-    :cond_1
-    :goto_0
-    return v0
-
-    :cond_2
+    :cond_3
     move v0, v1
 
+    .line 181
     goto :goto_0
 .end method
 
@@ -357,7 +388,7 @@
     .parameter "s"
 
     .prologue
-    .line 183
+    .line 192
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -394,7 +425,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
+    .line 193
     return-void
 .end method
 
@@ -405,12 +436,12 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 84
+    .line 87
     iget-object v0, p1, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->apn:Lcom/android/internal/telephony/ApnSetting;
 
-    iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iput-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
-    .line 86
+    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -421,7 +452,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v1, v1, Lcom/android/internal/telephony/ApnSetting;->carrier:Ljava/lang/String;
 
@@ -435,7 +466,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v1, v1, Lcom/android/internal/telephony/ApnSetting;->apn:Ljava/lang/String;
 
@@ -449,7 +480,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v1, v1, Lcom/android/internal/telephony/ApnSetting;->proxy:Ljava/lang/String;
 
@@ -463,7 +494,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v1, v1, Lcom/android/internal/telephony/ApnSetting;->port:Ljava/lang/String;
 
@@ -477,41 +508,41 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->log(Ljava/lang/String;)V
 
-    .line 90
-    iput-wide v2, p0, Lcom/android/internal/telephony/DataConnection;->createTime:J
+    .line 93
+    iput-wide v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->createTime:J
 
-    .line 91
-    iput-wide v2, p0, Lcom/android/internal/telephony/DataConnection;->lastFailTime:J
-
-    .line 92
-    sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->NONE:Lcom/android/internal/telephony/DataConnection$FailCause;
-
-    iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->lastFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
+    .line 94
+    iput-wide v2, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->lastFailTime:J
 
     .line 95
+    sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->NONE:Lcom/android/internal/telephony/DataConnection$FailCause;
+
+    iput-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->lastFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
+
+    .line 98
     const v0, 0x40001
 
     invoke-virtual {p0, v0, p1}, Lcom/android/internal/telephony/gsm/GsmDataConnection;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v8
 
-    .line 96
+    .line 99
     .local v8, msg:Landroid/os/Message;
     iput-object p1, v8, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 98
-    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    .line 101
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget v9, v0, Lcom/android/internal/telephony/ApnSetting;->authType:I
 
-    .line 99
+    .line 102
     .local v9, authType:I
     const/4 v0, -0x1
 
     if-ne v9, v0, :cond_0
 
-    .line 100
-    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    .line 103
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v0, v0, Lcom/android/internal/telephony/ApnSetting;->user:Ljava/lang/String;
 
@@ -519,10 +550,10 @@
 
     const/4 v9, 0x3
 
-    .line 105
+    .line 108
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneBase;->getServiceState()Landroid/telephony/ServiceState;
 
@@ -534,15 +565,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 106
-    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    .line 109
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v7, v0, Lcom/android/internal/telephony/ApnSetting;->roamingProtocol:Ljava/lang/String;
 
-    .line 111
+    .line 114
     .local v7, protocol:Ljava/lang/String;
     :goto_1
-    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -562,15 +593,15 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v3, v3, Lcom/android/internal/telephony/ApnSetting;->apn:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v4, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v4, v4, Lcom/android/internal/telephony/ApnSetting;->user:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v5, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v5, v5, Lcom/android/internal/telephony/ApnSetting;->password:Ljava/lang/String;
 
@@ -580,19 +611,19 @@
 
     invoke-interface/range {v0 .. v8}, Lcom/android/internal/telephony/CommandsInterface;->setupDataCall(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 117
+    .line 120
     return-void
 
-    .line 100
+    .line 103
     .end local v7           #protocol:Ljava/lang/String;
     :cond_1
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 108
+    .line 111
     :cond_2
-    iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v7, v0, Lcom/android/internal/telephony/ApnSetting;->protocol:Ljava/lang/String;
 
@@ -605,10 +636,10 @@
     .parameter "apnType"
 
     .prologue
-    .line 128
+    .line 131
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mActiveApnType:Ljava/lang/String;
 
-    .line 129
+    .line 132
     return-void
 .end method
 
@@ -617,10 +648,10 @@
     .parameter "profileId"
 
     .prologue
-    .line 120
+    .line 123
     iput p1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mProfileId:I
 
-    .line 121
+    .line 124
     return-void
 .end method
 
@@ -628,7 +659,7 @@
     .locals 3
 
     .prologue
-    .line 139
+    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -657,7 +688,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -669,7 +700,7 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/android/internal/telephony/DataConnection;->createTime:J
+    iget-wide v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->createTime:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -681,7 +712,7 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/android/internal/telephony/DataConnection;->lastFailTime:J
+    iget-wide v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->lastFailTime:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -693,7 +724,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/internal/telephony/DataConnection;->lastFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnection;->lastFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

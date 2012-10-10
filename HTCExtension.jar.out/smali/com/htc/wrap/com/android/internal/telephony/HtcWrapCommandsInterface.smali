@@ -13,7 +13,7 @@
 
 
 # static fields
-.field public static final APP_INIT:I = 0x3
+.field public static final APP_INIT:I = 0x65
 
 .field public static final CF_ACTION_DISABLE:I = 0x0
 

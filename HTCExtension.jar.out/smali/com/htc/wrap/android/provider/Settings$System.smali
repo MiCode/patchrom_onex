@@ -227,6 +227,8 @@
 
 .field public static final RADIO_WIFI:Ljava/lang/String; = "wifi"
 
+.field public static final RADIO_WIMAX:Ljava/lang/String; = "wimax"
+
 .field public static final RINGTONE:Ljava/lang/String; = "ringtone"
 
 .field public static final SCREEN_BRIGHTNESS:Ljava/lang/String; = "screen_brightness"
@@ -357,11 +359,6 @@
     .end annotation
 .end field
 
-.field public static final WIFI_SECURE_NETWORKS_AVAILABLE_NOTIFICATION_ON:Ljava/lang/String; = "wifi_secure_networks_available_notification_on"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
 .field public static final WIFI_SLEEP_POLICY:Ljava/lang/String; = "wifi_sleep_policy"
 
 .field public static final WIFI_SLEEP_POLICY_DEFAULT:I = 0x0
@@ -459,12 +456,12 @@
 
     const/4 v3, 0x0
 
-    .line 979
+    .line 971
     const/4 v0, 0x0
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->sNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
-    .line 983
+    .line 975
     new-instance v0, Ljava/util/HashSet;
 
     const/16 v1, 0x1e
@@ -473,245 +470,238 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
-    .line 984
+    .line 976
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "adb_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 985
+    .line 977
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "android_id"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 986
+    .line 978
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "bluetooth_on"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 987
+    .line 979
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "data_roaming"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 988
+    .line 980
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "device_provisioned"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 989
+    .line 981
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "http_proxy"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 990
+    .line 982
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "install_non_market_apps"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 991
+    .line 983
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "location_providers_allowed"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 992
+    .line 984
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "lock_pattern_autolock"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 993
+    .line 985
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "lock_pattern_visible_pattern"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 994
+    .line 986
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "lock_pattern_tactile_feedback_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 995
+    .line 987
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "logging_id"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 996
+    .line 988
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "parental_control_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 997
+    .line 989
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "parental_control_last_update"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 998
+    .line 990
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "parental_control_redirect_url"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 999
+    .line 991
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "settings_classname"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1000
+    .line 992
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "usb_mass_storage_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1001
+    .line 993
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "use_google_mail"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1002
+    .line 994
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_networks_available_notification_on"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1003
-    sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
-
-    const-string v1, "wifi_secure_networks_available_notification_on"
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    .line 1004
+    .line 995
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_networks_available_repeat_delay"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1005
+    .line 996
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_num_open_networks_kept"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1006
+    .line 997
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_on"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1007
+    .line 998
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_acceptable_packet_loss_percentage"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1008
+    .line 999
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_ap_count"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1009
+    .line 1000
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_background_check_delay_ms"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1010
+    .line 1001
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_background_check_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1011
+    .line 1002
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_background_check_timeout_ms"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1012
+    .line 1003
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_initial_ignored_ping_count"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1013
+    .line 1004
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_max_ap_checks"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1014
+    .line 1005
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_on"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1015
+    .line 1006
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_ping_count"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1016
+    .line 1007
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_ping_delay_ms"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1017
+    .line 1008
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "wifi_watchdog_ping_timeout_ms"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1390
+    .line 1381
     const-string v0, "content://settings/system"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -720,7 +710,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1966
+    .line 1961
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -759,7 +749,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->VOLUME_SETTINGS:[Ljava/lang/String;
 
-    .line 2009
+    .line 2004
     const-string v0, "ringtone"
 
     invoke-static {v0}, Lcom/htc/wrap/android/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -768,7 +758,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->DEFAULT_RINGTONE_URI:Landroid/net/Uri;
 
-    .line 2033
+    .line 2028
     const-string v0, "notification_sound"
 
     invoke-static {v0}, Lcom/htc/wrap/android/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -777,7 +767,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
 
-    .line 2057
+    .line 2052
     const-string v0, "alarm_alert"
 
     invoke-static {v0}, Lcom/htc/wrap/android/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -786,7 +776,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->DEFAULT_ALARM_ALERT_URI:Landroid/net/Uri;
 
-    .line 2517
+    .line 2508
     const/16 v0, 0x3a
 
     new-array v0, v0, [Ljava/lang/String;
@@ -1138,7 +1128,7 @@
     .locals 0
 
     .prologue
-    .line 965
+    .line 957
     invoke-direct {p0}, Lcom/htc/wrap/android/provider/Settings$NameValueTable;-><init>()V
 
     return-void
@@ -1149,12 +1139,12 @@
     .parameter "inoutConfig"
 
     .prologue
-    .line 1343
+    .line 1334
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 1344
+    .line 1335
     return-void
 .end method
 
@@ -1164,7 +1154,7 @@
     .parameter "outConfig"
 
     .prologue
-    .line 1327
+    .line 1318
     const-string v0, "font_scale"
 
     iget v1, p1, Landroid/content/res/Configuration;->fontScale:F
@@ -1175,7 +1165,7 @@
 
     iput v0, p1, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 1329
+    .line 1320
     iget v0, p1, Landroid/content/res/Configuration;->fontScale:F
 
     const/4 v1, 0x0
@@ -1184,12 +1174,12 @@
 
     if-gez v0, :cond_0
 
-    .line 1330
+    .line 1321
     const/high16 v0, 0x3f80
 
     iput v0, p1, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 1332
+    .line 1323
     :cond_0
     return-void
 .end method
@@ -1205,23 +1195,23 @@
     .end annotation
 
     .prologue
-    .line 1282
+    .line 1273
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1283
+    .line 1274
     .local v1, v:Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 1284
+    .line 1275
     new-instance v2, Landroid/provider/Settings$SettingNotFoundException;
 
     invoke-direct {v2, p1}, Landroid/provider/Settings$SettingNotFoundException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 1287
+    .line 1278
     :cond_0
     :try_start_0
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -1232,11 +1222,11 @@
 
     return v2
 
-    .line 1288
+    .line 1279
     :catch_0
     move-exception v0
 
-    .line 1289
+    .line 1280
     .local v0, e:Ljava/lang/NumberFormatException;
     new-instance v2, Landroid/provider/Settings$SettingNotFoundException;
 
@@ -1252,12 +1242,12 @@
     .parameter "def"
 
     .prologue
-    .line 1250
+    .line 1241
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1252
+    .line 1243
     .local v1, v:Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -1268,18 +1258,18 @@
 
     move-result p2
 
-    .line 1254
+    .line 1245
     .end local p2
     :cond_0
     :goto_0
     return p2
 
-    .line 1253
+    .line 1244
     .restart local p2
     :catch_0
     move-exception v0
 
-    .line 1254
+    .line 1245
     .local v0, e:Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -1295,12 +1285,12 @@
     .end annotation
 
     .prologue
-    .line 1125
+    .line 1116
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1127
+    .line 1118
     .local v1, v:Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1311,11 +1301,11 @@
 
     return v2
 
-    .line 1128
+    .line 1119
     :catch_0
     move-exception v0
 
-    .line 1129
+    .line 1120
     .local v0, e:Ljava/lang/NumberFormatException;
     new-instance v2, Landroid/provider/Settings$SettingNotFoundException;
 
@@ -1331,12 +1321,12 @@
     .parameter "def"
 
     .prologue
-    .line 1097
+    .line 1088
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1099
+    .line 1090
     .local v1, v:Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -1347,18 +1337,18 @@
 
     move-result p2
 
-    .line 1101
+    .line 1092
     .end local p2
     :cond_0
     :goto_0
     return p2
 
-    .line 1100
+    .line 1091
     .restart local p2
     :catch_0
     move-exception v0
 
-    .line 1101
+    .line 1092
     .local v0, e:Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -1374,12 +1364,12 @@
     .end annotation
 
     .prologue
-    .line 1202
+    .line 1193
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1204
+    .line 1195
     .local v1, valString:Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -1390,11 +1380,11 @@
 
     return-wide v2
 
-    .line 1205
+    .line 1196
     :catch_0
     move-exception v0
 
-    .line 1206
+    .line 1197
     .local v0, e:Ljava/lang/NumberFormatException;
     new-instance v2, Landroid/provider/Settings$SettingNotFoundException;
 
@@ -1410,12 +1400,12 @@
     .parameter "def"
 
     .prologue
-    .line 1169
+    .line 1160
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1172
+    .line 1163
     .local v1, valString:Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -1426,7 +1416,7 @@
 
     move-result-wide v2
 
-    .line 1176
+    .line 1167
     .local v2, value:J
     :goto_0
     return-wide v2
@@ -1435,14 +1425,14 @@
     :cond_0
     move-wide v2, p2
 
-    .line 1172
+    .line 1163
     goto :goto_0
 
-    .line 1173
+    .line 1164
     :catch_0
     move-exception v0
 
-    .line 1174
+    .line 1165
     .local v0, e:Ljava/lang/NumberFormatException;
     move-wide v2, p2
 
@@ -1457,7 +1447,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1376
+    .line 1367
     const-string v1, "SHOW_GTALK_SERVICE_STATUS"
 
     invoke-static {p0, v1, v0}, Lcom/htc/wrap/android/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
@@ -1478,7 +1468,7 @@
     .parameter "name"
 
     .prologue
-    .line 1031
+    .line 1022
     const-class v1, Lcom/htc/wrap/android/provider/Settings$System;
 
     monitor-enter v1
@@ -1492,7 +1482,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1032
+    .line 1023
     const-string v0, "Settings"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1527,27 +1517,27 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1034
+    .line 1025
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 1040
+    .line 1031
     :goto_0
     monitor-exit v1
 
     return-object v0
 
-    .line 1036
+    .line 1027
     :cond_0
     :try_start_1
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->sNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
     if-nez v0, :cond_1
 
-    .line 1037
+    .line 1028
     new-instance v0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
     const-string v2, "sys.settings_system_version"
@@ -1560,7 +1550,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/Settings$System;->sNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
-    .line 1040
+    .line 1031
     :cond_1
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->sNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
@@ -1572,7 +1562,7 @@
 
     goto :goto_0
 
-    .line 1031
+    .line 1022
     :catchall_0
     move-exception v0
 
@@ -1586,7 +1576,7 @@
     .parameter "name"
 
     .prologue
-    .line 1074
+    .line 1065
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     invoke-virtual {v0, p0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -1595,7 +1585,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1075
+    .line 1066
     const-string v0, "Settings"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1630,14 +1620,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1077
+    .line 1068
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$Secure;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v0, p0}, Lcom/htc/wrap/android/provider/Settings$Secure;->getUriFor(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 1079
+    .line 1070
     :goto_0
     return-object v0
 
@@ -1656,7 +1646,7 @@
     .parameter "changes"
 
     .prologue
-    .line 1368
+    .line 1359
     const/high16 v0, 0x4000
 
     and-int/2addr v0, p0
@@ -1680,7 +1670,7 @@
     .parameter "config"
 
     .prologue
-    .line 1359
+    .line 1350
     const-string v0, "font_scale"
 
     iget v1, p1, Landroid/content/res/Configuration;->fontScale:F
@@ -1699,7 +1689,7 @@
     .parameter "value"
 
     .prologue
-    .line 1311
+    .line 1302
     invoke-static {p2}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object v0
@@ -1718,7 +1708,7 @@
     .parameter "value"
 
     .prologue
-    .line 1147
+    .line 1138
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1737,7 +1727,7 @@
     .parameter "value"
 
     .prologue
-    .line 1228
+    .line 1219
     invoke-static {p2, p3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1756,7 +1746,7 @@
     .parameter "value"
 
     .prologue
-    .line 1055
+    .line 1046
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->MOVED_TO_SECURE:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -1765,7 +1755,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1056
+    .line 1047
     const-string v0, "Settings"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1800,10 +1790,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1058
+    .line 1049
     const/4 v0, 0x0
 
-    .line 1060
+    .line 1051
     :goto_0
     return v0
 
@@ -1823,7 +1813,7 @@
     .parameter "flag"
 
     .prologue
-    .line 1384
+    .line 1375
     const-string v1, "SHOW_GTALK_SERVICE_STATUS"
 
     if-eqz p1, :cond_0
@@ -1833,10 +1823,10 @@
     :goto_0
     invoke-static {p0, v1, v0}, Lcom/htc/wrap/android/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1385
+    .line 1376
     return-void
 
-    .line 1384
+    .line 1375
     :cond_0
     const/4 v0, 0x0
 

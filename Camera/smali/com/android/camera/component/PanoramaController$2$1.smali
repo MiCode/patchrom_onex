@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 761
+    .line 759
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController$2$1;->this$1:Lcom/android/camera/component/PanoramaController$2;
 
     iput-object p2, p0, Lcom/android/camera/component/PanoramaController$2$1;->val$eventArgs:Lcom/android/camera/MediaEventArgs;
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 764
+    .line 762
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController$2$1;->this$1:Lcom/android/camera/component/PanoramaController$2;
 
     iget-object v0, v0, Lcom/android/camera/component/PanoramaController$2;->this$0:Lcom/android/camera/component/PanoramaController;
@@ -65,6 +65,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    .line 765
+    .line 763
     return-void
 .end method

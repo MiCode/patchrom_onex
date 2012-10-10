@@ -27,17 +27,17 @@
     .locals 1
 
     .prologue
-    .line 2408
+    .line 2411
     const-string v0, "0"
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Groups$Thumbnail;->EMPTY:Ljava/lang/String;
 
-    .line 2409
+    .line 2412
     const-string v0, "/data/data/com.android.providers.contacts/files/thumbnail_photo_group_"
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Groups$Thumbnail;->PREFIX_ABSOLUTE_FILE_PATH:Ljava/lang/String;
 
-    .line 2411
+    .line 2414
     const-string v0, ".jpg"
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Groups$Thumbnail;->EXTENSTION:Ljava/lang/String;
@@ -49,7 +49,7 @@
     .locals 0
 
     .prologue
-    .line 2407
+    .line 2410
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,18 +60,18 @@
     .parameter "title"
 
     .prologue
-    .line 2437
+    .line 2440
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    .line 2438
+    .line 2441
     .local v0, hashcode:I
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    .line 2439
+    .line 2442
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,22 +105,22 @@
     .parameter "title"
 
     .prologue
-    .line 2419
+    .line 2422
     invoke-static {p1}, Lcom/htc/provider/HtcContactsContract$Groups$Thumbnail;->getGroupThumbnailPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2420
+    .line 2423
     .local v1, path:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 2421
+    .line 2424
     .local v0, bitmap:Landroid/graphics/Bitmap;
     invoke-static {v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2422
+    .line 2425
     return-object v0
 .end method
 
@@ -131,21 +131,21 @@
     .parameter "opts"
 
     .prologue
-    .line 2430
+    .line 2433
     invoke-static {p1}, Lcom/htc/provider/HtcContactsContract$Groups$Thumbnail;->getGroupThumbnailPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2431
+    .line 2434
     .local v1, path:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 2432
+    .line 2435
     .local v0, bitmap:Landroid/graphics/Bitmap;
     invoke-static {v1, p2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2433
+    .line 2436
     return-object v0
 .end method

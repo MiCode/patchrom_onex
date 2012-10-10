@@ -27,10 +27,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 1351
+    .line 1347
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$GPS;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 1352
+    .line 1348
     const-string v2, "GPS"
 
     const-string v3, "powersaver_GPS"
@@ -45,10 +45,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1353
+    .line 1349
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$GPS;->mContext:Landroid/content/Context;
 
-    .line 1354
+    .line 1350
     return-void
 .end method
 
@@ -58,14 +58,14 @@
     .locals 2
 
     .prologue
-    .line 1364
+    .line 1360
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "applyPowerSaverSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1365
+    .line 1361
     const/4 v0, 0x0
 
     return v0
@@ -75,14 +75,14 @@
     .locals 2
 
     .prologue
-    .line 1370
+    .line 1366
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "restoreSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1371
+    .line 1367
     const/4 v0, 0x0
 
     return v0
@@ -92,14 +92,14 @@
     .locals 2
 
     .prologue
-    .line 1358
+    .line 1354
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "saveSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1359
+    .line 1355
     const/4 v0, 0x0
 
     return v0

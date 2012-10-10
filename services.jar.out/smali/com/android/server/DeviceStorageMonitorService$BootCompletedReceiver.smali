@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 776
+    .line 788
     iput-object p1, p0, Lcom/android/server/DeviceStorageMonitorService$BootCompletedReceiver;->this$0:Lcom/android/server/DeviceStorageMonitorService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 776
+    .line 788
     invoke-direct {p0, p1}, Lcom/android/server/DeviceStorageMonitorService$BootCompletedReceiver;-><init>(Lcom/android/server/DeviceStorageMonitorService;)V
 
     return-void
@@ -52,7 +52,7 @@
     .parameter "intent"
 
     .prologue
-    .line 779
+    .line 791
     iget-object v0, p0, Lcom/android/server/DeviceStorageMonitorService$BootCompletedReceiver;->this$0:Lcom/android/server/DeviceStorageMonitorService;
 
     const/4 v1, 0x1
@@ -62,7 +62,7 @@
     #calls: Lcom/android/server/DeviceStorageMonitorService;->postCheckMemoryMsg(ZJ)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/DeviceStorageMonitorService;->access$300(Lcom/android/server/DeviceStorageMonitorService;ZJ)V
 
-    .line 780
+    .line 792
     iget-object v0, p0, Lcom/android/server/DeviceStorageMonitorService$BootCompletedReceiver;->this$0:Lcom/android/server/DeviceStorageMonitorService;
 
     #getter for: Lcom/android/server/DeviceStorageMonitorService;->mContext:Landroid/content/Context;
@@ -72,6 +72,6 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 781
+    .line 793
     return-void
 .end method

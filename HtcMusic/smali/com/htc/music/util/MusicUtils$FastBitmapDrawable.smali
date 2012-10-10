@@ -24,13 +24,13 @@
     .parameter "b"
 
     .prologue
-    .line 1972
+    .line 2099
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 1973
+    .line 2100
     iput-object p1, p0, Lcom/htc/music/util/MusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 1974
+    .line 2101
     return-void
 .end method
 
@@ -43,12 +43,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1979
+    .line 2106
     iget-object v0, p0, Lcom/htc/music/util/MusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 1981
+    .line 2108
     iget-object v0, p0, Lcom/htc/music/util/MusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -57,14 +57,14 @@
 
     if-nez v0, :cond_0
 
-    .line 1982
+    .line 2109
     iget-object v0, p0, Lcom/htc/music/util/MusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1985
+    .line 2112
     :cond_0
     return-void
 .end method
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 1989
+    .line 2116
     const/4 v0, -0x1
 
     return v0
@@ -83,7 +83,7 @@
     .locals 1
 
     .prologue
-    .line 2001
+    .line 2128
     iget-object v0, p0, Lcom/htc/music/util/MusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -96,17 +96,17 @@
 
     if-nez v0, :cond_0
 
-    .line 2002
+    .line 2129
     iget-object v0, p0, Lcom/htc/music/util/MusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 2003
+    .line 2130
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/util/MusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 2005
+    .line 2132
     :cond_0
     return-void
 .end method
@@ -116,7 +116,7 @@
     .parameter "alpha"
 
     .prologue
-    .line 1994
+    .line 2121
     return-void
 .end method
 
@@ -125,6 +125,6 @@
     .parameter "cf"
 
     .prologue
-    .line 1998
+    .line 2125
     return-void
 .end method

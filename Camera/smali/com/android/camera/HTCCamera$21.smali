@@ -3,7 +3,7 @@
 .source "HTCCamera.java"
 
 # interfaces
-.implements Lcom/android/camera/property/PropertyChangedCallback;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -20,20 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/HTCCamera;
 
-.field final synthetic val$uiHandler:Landroid/os/Handler;
+.field final synthetic val$previewSize:Lcom/android/camera/imaging/Size;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/HTCCamera;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/camera/HTCCamera;Lcom/android/camera/imaging/Size;)V
     .locals 0
     .parameter
     .parameter
 
     .prologue
-    .line 6000
+    .line 6161
     iput-object p1, p0, Lcom/android/camera/HTCCamera$21;->this$0:Lcom/android/camera/HTCCamera;
 
-    iput-object p2, p0, Lcom/android/camera/HTCCamera$21;->val$uiHandler:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/android/camera/HTCCamera$21;->val$previewSize:Lcom/android/camera/imaging/Size;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,21 +42,18 @@
 
 
 # virtual methods
-.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
+.method public run()V
     .locals 2
-    .parameter "property"
-    .parameter "e"
 
     .prologue
-    .line 6003
-    iget-object v0, p0, Lcom/android/camera/HTCCamera$21;->val$uiHandler:Landroid/os/Handler;
+    .line 6165
+    iget-object v0, p0, Lcom/android/camera/HTCCamera$21;->this$0:Lcom/android/camera/HTCCamera;
 
-    new-instance v1, Lcom/android/camera/HTCCamera$21$1;
+    iget-object v1, p0, Lcom/android/camera/HTCCamera$21;->val$previewSize:Lcom/android/camera/imaging/Size;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/android/camera/HTCCamera$21$1;-><init>(Lcom/android/camera/HTCCamera$21;Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
+    #calls: Lcom/android/camera/HTCCamera;->onPreviewSizeChanged(Lcom/android/camera/imaging/Size;)V
+    invoke-static {v0, v1}, Lcom/android/camera/HTCCamera;->access$4300(Lcom/android/camera/HTCCamera;Lcom/android/camera/imaging/Size;)V
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 6010
+    .line 6166
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 6191
+    .line 6253
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcAdapterView$AdapterDataSetObserver;-><init>(Lcom/htc/widget/HtcAdapterView;)V
@@ -38,24 +38,24 @@
     .locals 1
 
     .prologue
-    .line 6198
+    .line 6260
     invoke-super {p0}, Lcom/htc/widget/HtcAdapterView$AdapterDataSetObserver;->onChanged()V
 
-    .line 6199
+    .line 6261
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mFastScroller:Lcom/htc/widget/HtcFastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 6200
+    .line 6262
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mFastScroller:Lcom/htc/widget/HtcFastScroller;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcFastScroller;->onSectionsChanged()V
 
-    .line 6202
+    .line 6264
     :cond_0
     return-void
 .end method
@@ -64,24 +64,24 @@
     .locals 1
 
     .prologue
-    .line 6210
+    .line 6272
     invoke-super {p0}, Lcom/htc/widget/HtcAdapterView$AdapterDataSetObserver;->onInvalidated()V
 
-    .line 6211
+    .line 6273
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mFastScroller:Lcom/htc/widget/HtcFastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 6212
+    .line 6274
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mFastScroller:Lcom/htc/widget/HtcFastScroller;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcFastScroller;->onSectionsChanged()V
 
-    .line 6214
+    .line 6276
     :cond_0
     return-void
 .end method

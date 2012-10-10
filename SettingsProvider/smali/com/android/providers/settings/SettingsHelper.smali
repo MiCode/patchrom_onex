@@ -12,8 +12,6 @@
 # instance fields
 .field private mAudioManager:Landroid/media/AudioManager;
 
-.field private mBluetoothOn:Z
-
 .field private mContentService:Landroid/content/IContentService;
 
 .field private mContext:Landroid/content/Context;
@@ -30,7 +28,7 @@
     .locals 3
 
     .prologue
-    .line 65
+    .line 64
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -57,13 +55,13 @@
     .parameter "context"
 
     .prologue
-    .line 72
+    .line 71
     invoke-direct {p0}, Lcom/android/providers/settings/abs/HtcAbsSettingsHelper;-><init>()V
 
-    .line 73
+    .line 72
     iput-object p1, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
-    .line 74
+    .line 73
     const-string v0, "audio"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -74,14 +72,14 @@
 
     iput-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 76
+    .line 75
     invoke-static {}, Landroid/content/ContentResolver;->getContentService()Landroid/content/IContentService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mContentService:Landroid/content/IContentService;
 
-    .line 77
+    .line 76
     const-string v0, "power"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -94,7 +92,7 @@
 
     iput-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mPowerManager:Landroid/os/IPowerManager;
 
-    .line 79
+    .line 78
     return-void
 .end method
 
@@ -104,14 +102,14 @@
     .parameter "RingtoneType"
 
     .prologue
-    .line 431
+    .line 442
     new-instance v8, Landroid/content/ContentValues;
 
     const/4 v0, 0x1
 
     invoke-direct {v8, v0}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 435
+    .line 446
     .local v8, cv:Landroid/content/ContentValues;
     :try_start_0
     iget-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
@@ -144,26 +142,26 @@
 
     move-result-object v7
 
-    .line 439
+    .line 450
     .local v7, cursor:Landroid/database/Cursor;
     if-nez v7, :cond_6
 
-    .line 440
+    .line 451
     const-string v0, "SettingsHelper"
 
     const-string v1, "getRingtoneUriByPath get  INTERNAL_CONTENT_URI = null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
+    .line 471
     :cond_0
     :goto_0
     if-eqz v7, :cond_1
 
-    .line 461
+    .line 472
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 464
+    .line 475
     :cond_1
     iget-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
@@ -195,25 +193,25 @@
 
     move-result-object v7
 
-    .line 468
+    .line 479
     if-nez v7, :cond_9
 
-    .line 469
+    .line 480
     const-string v0, "SettingsHelper"
 
     const-string v1, "getRingtoneUriByPath get  EXTERNAL_CONTENT_URI = null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 506
+    .line 517
     :cond_2
     :goto_1
     if-eqz v7, :cond_3
 
-    .line 507
+    .line 518
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 510
+    .line 521
     :cond_3
     iget-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
@@ -249,25 +247,25 @@
 
     move-result-object v7
 
-    .line 518
+    .line 529
     if-nez v7, :cond_c
 
-    .line 519
+    .line 530
     const-string v0, "SettingsHelper"
 
     const-string v1, "getRingtoneUriByPath get  PHONE_CONTENT_URI = null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 562
+    .line 573
     :cond_4
     :goto_2
     if-eqz v7, :cond_5
 
-    .line 563
+    .line 574
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 568
+    .line 579
     .end local v7           #cursor:Landroid/database/Cursor;
     :cond_5
     :goto_3
@@ -276,7 +274,7 @@
     :goto_4
     return-object v6
 
-    .line 443
+    .line 454
     .restart local v7       #cursor:Landroid/database/Cursor;
     :cond_6
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -285,7 +283,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 447
+    .line 458
     :cond_7
     const/4 v0, 0x0
 
@@ -293,7 +291,7 @@
 
     move-result-wide v10
 
-    .line 449
+    .line 460
     .local v10, ringtonID:J
     const-wide/16 v0, 0x0
 
@@ -301,10 +299,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 450
+    .line 461
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 451
+    .line 462
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,7 +337,7 @@
 
     goto :goto_4
 
-    .line 457
+    .line 468
     :cond_8
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -349,7 +347,7 @@
 
     goto/16 :goto_0
 
-    .line 472
+    .line 483
     .end local v10           #ringtonID:J
     :cond_9
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -358,7 +356,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 476
+    .line 487
     :cond_a
     const/4 v0, 0x0
 
@@ -366,7 +364,7 @@
 
     move-result-wide v10
 
-    .line 478
+    .line 489
     .restart local v10       #ringtonID:J
     const-wide/16 v0, -0x1
 
@@ -374,7 +372,7 @@
 
     if-eqz v0, :cond_b
 
-    .line 479
+    .line 490
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,14 +405,14 @@
 
     move-result-object v6
 
-    .line 484
+    .line 495
     .local v6, RingtoneUri:Landroid/net/Uri;
     invoke-virtual {v8}, Landroid/content/ContentValues;->clear()V
 
-    .line 485
+    .line 496
     packed-switch p2, :pswitch_data_0
 
-    .line 497
+    .line 508
     :goto_5
     :pswitch_0
     iget-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
@@ -429,21 +427,21 @@
 
     invoke-virtual {v0, v6, v8, v1, v2}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 499
+    .line 510
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto/16 :goto_4
 
-    .line 565
+    .line 576
     .end local v6           #RingtoneUri:Landroid/net/Uri;
     .end local v7           #cursor:Landroid/database/Cursor;
     .end local v10           #ringtonID:J
     :catch_0
     move-exception v9
 
-    .line 566
+    .line 577
     .local v9, e:Ljava/lang/Exception;
     const-string v0, "SettingsHelper"
 
@@ -473,7 +471,7 @@
 
     goto/16 :goto_3
 
-    .line 487
+    .line 498
     .end local v9           #e:Ljava/lang/Exception;
     .restart local v6       #RingtoneUri:Landroid/net/Uri;
     .restart local v7       #cursor:Landroid/database/Cursor;
@@ -492,7 +490,7 @@
 
     goto :goto_5
 
-    .line 490
+    .line 501
     :pswitch_2
     const-string v0, "is_notification"
 
@@ -506,7 +504,7 @@
 
     goto :goto_5
 
-    .line 493
+    .line 504
     :pswitch_3
     const-string v0, "is_alarm"
 
@@ -520,7 +518,7 @@
 
     goto :goto_5
 
-    .line 503
+    .line 514
     .end local v6           #RingtoneUri:Landroid/net/Uri;
     :cond_b
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -531,7 +529,7 @@
 
     goto/16 :goto_1
 
-    .line 522
+    .line 533
     .end local v10           #ringtonID:J
     :cond_c
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -540,7 +538,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 526
+    .line 537
     :cond_d
     const/4 v0, 0x0
 
@@ -548,7 +546,7 @@
 
     move-result-wide v10
 
-    .line 528
+    .line 539
     .restart local v10       #ringtonID:J
     const-wide/16 v0, -0x1
 
@@ -556,7 +554,7 @@
 
     if-eqz v0, :cond_e
 
-    .line 529
+    .line 540
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -589,14 +587,14 @@
 
     move-result-object v6
 
-    .line 538
+    .line 549
     .restart local v6       #RingtoneUri:Landroid/net/Uri;
     invoke-virtual {v8}, Landroid/content/ContentValues;->clear()V
 
-    .line 539
+    .line 550
     packed-switch p2, :pswitch_data_1
 
-    .line 551
+    .line 562
     :goto_6
     :pswitch_4
     iget-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
@@ -611,12 +609,12 @@
 
     invoke-virtual {v0, v6, v8, v1, v2}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 553
+    .line 564
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_4
 
-    .line 541
+    .line 552
     :pswitch_5
     const-string v0, "is_ringtone"
 
@@ -630,7 +628,7 @@
 
     goto :goto_6
 
-    .line 544
+    .line 555
     :pswitch_6
     const-string v0, "is_notification"
 
@@ -644,7 +642,7 @@
 
     goto :goto_6
 
-    .line 547
+    .line 558
     :pswitch_7
     const-string v0, "is_alarm"
 
@@ -658,7 +656,7 @@
 
     goto :goto_6
 
-    .line 558
+    .line 569
     .end local v6           #RingtoneUri:Landroid/net/Uri;
     :cond_e
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -671,7 +669,7 @@
 
     goto/16 :goto_2
 
-    .line 485
+    .line 496
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -680,7 +678,7 @@
         :pswitch_3
     .end packed-switch
 
-    .line 539
+    .line 550
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_5
@@ -697,7 +695,7 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 412
+    .line 423
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -709,19 +707,19 @@
     .local v0, RingtoneUri:Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    .line 414
+    .line 425
     iget-object v1, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v2, v0}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 416
+    .line 427
     const/4 v1, 0x0
 
-    .line 422
+    .line 433
     :goto_0
     return v1
 
-    .line 419
+    .line 430
     :cond_0
     iget-object v1, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
@@ -733,7 +731,7 @@
 
     invoke-static {v1, v2, p1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 422
+    .line 433
     const/4 v1, 0x1
 
     goto :goto_0
@@ -744,7 +742,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 273
+    .line 284
     :try_start_0
     const-string v1, "backup"
 
@@ -756,22 +754,22 @@
 
     move-result-object v0
 
-    .line 275
+    .line 286
     .local v0, bm:Landroid/app/backup/IBackupManager;
     if-eqz v0, :cond_0
 
-    .line 276
+    .line 287
     invoke-interface {v0, p1}, Landroid/app/backup/IBackupManager;->setAutoRestore(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 279
+    .line 290
     .end local v0           #bm:Landroid/app/backup/IBackupManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 278
+    .line 289
     :catch_0
     move-exception v1
 
@@ -785,7 +783,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 318
+    .line 329
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -802,31 +800,31 @@
 
     const/4 v0, 0x1
 
-    .line 323
+    .line 334
     .local v0, enabled:Z
     :cond_0
     if-eqz v0, :cond_2
 
-    .line 324
+    .line 335
     const-string v2, "SettingsHelper"
 
     const-string v3, "[Restore Settings] The screen auto-backlight is enabled."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
+    .line 336
     const-string v2, "SettingsHelper"
 
     const-string v3, "[Restore Settings] The underlying brightness does not need to be updated."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
+    .line 352
     :cond_1
     :goto_0
     return-void
 
-    .line 328
+    .line 339
     :cond_2
     const-string v2, "SettingsHelper"
 
@@ -834,7 +832,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
+    .line 344
     :try_start_0
     const-string v2, "power"
 
@@ -846,18 +844,18 @@
 
     move-result-object v1
 
-    .line 335
+    .line 346
     .local v1, power:Landroid/os/IPowerManager;
     if-eqz v1, :cond_1
 
-    .line 336
+    .line 347
     invoke-interface {v1, p1}, Landroid/os/IPowerManager;->setBacklightBrightness(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 338
+    .line 349
     .end local v1           #power:Landroid/os/IPowerManager;
     :catch_0
     move-exception v2
@@ -870,10 +868,10 @@
     .parameter "value"
 
     .prologue
-    .line 294
+    .line 305
     const-string v0, "gps"
 
-    .line 295
+    .line 306
     .local v0, GPS:Ljava/lang/String;
     const-string v2, "gps"
 
@@ -910,7 +908,7 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 300
+    .line 311
     .local v1, enabled:Z
     :goto_0
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
@@ -923,10 +921,10 @@
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 302
+    .line 313
     return-void
 
-    .line 295
+    .line 306
     .end local v1           #enabled:Z
     :cond_1
     const/4 v1, 0x0
@@ -939,10 +937,10 @@
     .parameter "value"
 
     .prologue
-    .line 282
+    .line 293
     const-string v0, "network"
 
-    .line 283
+    .line 294
     .local v0, NETWORK:Ljava/lang/String;
     const-string v2, "network"
 
@@ -979,7 +977,7 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 288
+    .line 299
     .local v1, enabled:Z
     :goto_0
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
@@ -992,10 +990,10 @@
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 290
+    .line 301
     return-void
 
-    .line 283
+    .line 294
     .end local v1           #enabled:Z
     :cond_1
     const/4 v1, 0x0
@@ -1010,7 +1008,7 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 394
+    .line 405
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -1022,19 +1020,19 @@
     .local v0, RingtoneUri:Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    .line 396
+    .line 407
     iget-object v1, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v2, v0}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 398
+    .line 409
     const/4 v1, 0x0
 
-    .line 406
+    .line 417
     :goto_0
     return v1
 
-    .line 402
+    .line 413
     :cond_0
     iget-object v1, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
@@ -1046,7 +1044,7 @@
 
     invoke-static {v1, v2, p1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 406
+    .line 417
     const/4 v1, 0x1
 
     goto :goto_0
@@ -1060,12 +1058,12 @@
 
     const/4 v1, 0x0
 
-    .line 344
+    .line 355
     iget-boolean v2, p0, Lcom/android/providers/settings/SettingsHelper;->mSilent:Z
 
     if-eqz v2, :cond_1
 
-    .line 345
+    .line 356
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mAudioManager:Landroid/media/AudioManager;
 
     iget-boolean v3, p0, Lcom/android/providers/settings/SettingsHelper;->mVibrate:Z
@@ -1075,17 +1073,17 @@
     :goto_0
     invoke-virtual {v2, v0}, Landroid/media/AudioManager;->setRingerMode(I)V
 
-    .line 353
+    .line 364
     :goto_1
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 345
+    .line 356
     goto :goto_0
 
-    .line 348
+    .line 359
     :cond_1
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mAudioManager:Landroid/media/AudioManager;
 
@@ -1093,7 +1091,7 @@
 
     invoke-virtual {v2, v3}, Landroid/media/AudioManager;->setRingerMode(I)V
 
-    .line 349
+    .line 360
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mAudioManager:Landroid/media/AudioManager;
 
     iget-boolean v3, p0, Lcom/android/providers/settings/SettingsHelper;->mVibrate:Z
@@ -1118,7 +1116,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 378
+    .line 389
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
@@ -1130,19 +1128,19 @@
     .local v0, RingtoneUri:Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    .line 380
+    .line 391
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v1, v0}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 382
+    .line 393
     const/4 v1, 0x0
 
-    .line 388
+    .line 399
     :goto_0
     return v1
 
-    .line 385
+    .line 396
     :cond_0
     iget-object v2, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
@@ -1167,14 +1165,14 @@
 
     const/4 v4, 0x0
 
-    .line 173
+    .line 184
     const-string v0, "ConnectivityManager.ROAMING_PROVIDER_DOMESTIC"
 
-    .line 174
+    .line 185
     .local v0, DOMESTIC:Ljava/lang/String;
     const-string v1, "ConnectivityManager.ROAMING_PROVIDER_INTERNATIONAL"
 
-    .line 176
+    .line 187
     .local v1, INTERNATIONAL:Ljava/lang/String;
     const-string v6, "ConnectivityManager.ROAMING_PROVIDER_DOMESTIC"
 
@@ -1211,7 +1209,7 @@
     :cond_0
     move v2, v5
 
-    .line 182
+    .line 193
     .local v2, enableDomestic:Z
     :goto_0
     const-string v6, "ConnectivityManager.ROAMING_PROVIDER_INTERNATIONAL"
@@ -1249,7 +1247,7 @@
     :cond_1
     move v3, v5
 
-    .line 188
+    .line 199
     .local v3, enableInternational:Z
     :goto_1
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
@@ -1268,7 +1266,7 @@
 
     if-eqz v4, :cond_5
 
-    .line 192
+    .line 203
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1279,7 +1277,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setDataRoamingAllowed(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 194
+    .line 205
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1290,7 +1288,7 @@
 
     invoke-static {v4, v5, v3}, Landroid/provider/Settings$Secure;->setDataRoamingAllowed(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 268
+    .line 279
     :cond_2
     :goto_2
     return-void
@@ -1300,17 +1298,17 @@
     :cond_3
     move v2, v4
 
-    .line 176
+    .line 187
     goto :goto_0
 
     .restart local v2       #enableDomestic:Z
     :cond_4
     move v3, v4
 
-    .line 182
+    .line 193
     goto :goto_1
 
-    .line 197
+    .line 208
     .restart local v3       #enableInternational:Z
     :cond_5
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
@@ -1329,7 +1327,7 @@
 
     if-eqz v4, :cond_6
 
-    .line 201
+    .line 212
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1340,7 +1338,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setVoiceRoamingAllowed(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 203
+    .line 214
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1353,7 +1351,7 @@
 
     goto :goto_2
 
-    .line 206
+    .line 217
     :cond_6
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
@@ -1371,7 +1369,7 @@
 
     if-eqz v4, :cond_7
 
-    .line 210
+    .line 221
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1382,7 +1380,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setDataRoamingGuardAllowed(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 212
+    .line 223
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1395,7 +1393,7 @@
 
     goto :goto_2
 
-    .line 215
+    .line 226
     :cond_7
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
@@ -1413,7 +1411,7 @@
 
     if-eqz v4, :cond_8
 
-    .line 219
+    .line 230
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1424,7 +1422,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setVoiceRoamingGuardAllowed(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 221
+    .line 232
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1437,7 +1435,7 @@
 
     goto :goto_2
 
-    .line 224
+    .line 235
     :cond_8
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
@@ -1455,7 +1453,7 @@
 
     if-eqz v4, :cond_9
 
-    .line 228
+    .line 239
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1466,7 +1464,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setSmsRoamingGuardAllowed(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 230
+    .line 241
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1479,7 +1477,7 @@
 
     goto/16 :goto_2
 
-    .line 234
+    .line 245
     :cond_9
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
@@ -1497,7 +1495,7 @@
 
     if-eqz v4, :cond_a
 
-    .line 238
+    .line 249
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1508,7 +1506,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setDataRoamingBlocked(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 240
+    .line 251
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1521,7 +1519,7 @@
 
     goto/16 :goto_2
 
-    .line 242
+    .line 253
     :cond_a
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
@@ -1539,7 +1537,7 @@
 
     if-eqz v4, :cond_b
 
-    .line 246
+    .line 257
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1550,7 +1548,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setVoiceRoamingBlocked(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 248
+    .line 259
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1563,7 +1561,7 @@
 
     goto/16 :goto_2
 
-    .line 250
+    .line 261
     :cond_b
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
@@ -1581,7 +1579,7 @@
 
     if-eqz v4, :cond_c
 
-    .line 254
+    .line 265
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1592,7 +1590,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setDataRoamingGuardBlocked(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 256
+    .line 267
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1605,7 +1603,7 @@
 
     goto/16 :goto_2
 
-    .line 258
+    .line 269
     :cond_c
     sget-object v4, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
@@ -1623,7 +1621,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 262
+    .line 273
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1634,7 +1632,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->setVoiceRoamingGuardBlocked(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 264
+    .line 275
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1653,7 +1651,7 @@
     .parameter "value"
 
     .prologue
-    .line 370
+    .line 381
     const/4 v0, 0x1
 
     return v0
@@ -1664,19 +1662,19 @@
     .parameter "enable"
 
     .prologue
-    .line 305
+    .line 316
     if-eqz p1, :cond_0
 
-    .line 306
+    .line 317
     iget-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->loadSoundEffects()V
 
-    .line 310
+    .line 321
     :goto_0
     return-void
 
-    .line 308
+    .line 319
     :cond_0
     iget-object v0, p0, Lcom/android/providers/settings/SettingsHelper;->mAudioManager:Landroid/media/AudioManager;
 
@@ -1691,18 +1689,18 @@
     .locals 2
 
     .prologue
-    .line 632
+    .line 643
     new-instance v0, Landroid/media/AudioManager;
 
     iget-object v1, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/media/AudioManager;-><init>(Landroid/content/Context;)V
 
-    .line 633
+    .line 644
     .local v0, am:Landroid/media/AudioManager;
     invoke-virtual {v0}, Landroid/media/AudioManager;->reloadAudioSettings()V
 
-    .line 634
+    .line 645
     return-void
 .end method
 
@@ -1711,7 +1709,7 @@
     .parameter "key"
 
     .prologue
-    .line 663
+    .line 674
     const-string v0, "accelerometer_rotation"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1808,11 +1806,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 677
+    .line 688
     :cond_0
     const/4 v0, 0x0
 
-    .line 679
+    .line 690
     :goto_0
     return v0
 
@@ -1826,7 +1824,7 @@
     .locals 6
 
     .prologue
-    .line 574
+    .line 585
     iget-object v4, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1837,23 +1835,23 @@
 
     move-result-object v0
 
-    .line 575
+    .line 586
     .local v0, conf:Landroid/content/res/Configuration;
     iget-object v2, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 576
+    .line 587
     .local v2, loc:Ljava/util/Locale;
     invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 577
+    .line 588
     .local v3, localeString:Ljava/lang/String;
     invoke-virtual {v2}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 578
+    .line 589
     .local v1, country:Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1861,7 +1859,7 @@
 
     if-nez v4, :cond_0
 
-    .line 579
+    .line 590
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1884,7 +1882,7 @@
 
     move-result-object v3
 
-    .line 581
+    .line 592
     :cond_0
     invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
 
@@ -1894,422 +1892,465 @@
 .end method
 
 .method public restoreValue(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 5
+    .locals 6
     .parameter "name"
     .parameter "value"
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v2, 0x1
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
+
+    .line 91
+    const-string v3, "screen_brightness"
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
 
     .line 92
-    const-string v2, "screen_brightness"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 93
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v0
+    move-result v1
 
-    invoke-direct {p0, v0}, Lcom/android/providers/settings/SettingsHelper;->setBrightness(I)V
+    invoke-direct {p0, v1}, Lcom/android/providers/settings/SettingsHelper;->setBrightness(I)V
 
     :cond_0
     :goto_0
-    move v0, v1
+    move v1, v2
 
-    .line 165
+    .line 176
     :goto_1
-    return v0
+    return v1
+
+    .line 93
+    :cond_1
+    const-string v3, "sound_effects_enabled"
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
 
     .line 94
-    :cond_1
-    const-string v2, "sound_effects_enabled"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    .line 95
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    if-ne v2, v1, :cond_2
+    if-ne v3, v2, :cond_2
 
-    move v0, v1
+    move v1, v2
 
     :cond_2
-    invoke-direct {p0, v0}, Lcom/android/providers/settings/SettingsHelper;->setSoundEffects(Z)V
+    invoke-direct {p0, v1}, Lcom/android/providers/settings/SettingsHelper;->setSoundEffects(Z)V
 
     goto :goto_0
 
-    .line 96
+    .line 95
     :cond_3
-    const-string v2, "location_providers_allowed"
+    const-string v3, "location_providers_allowed"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_4
+    if-eqz v3, :cond_4
 
-    .line 97
+    .line 96
     invoke-direct {p0, p2}, Lcom/android/providers/settings/SettingsHelper;->setNetworkLocation(Ljava/lang/String;)V
 
-    .line 98
+    .line 97
     invoke-direct {p0, p2}, Lcom/android/providers/settings/SettingsHelper;->setGpsLocation(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 101
+    .line 100
     :cond_4
-    const-string v2, "ringtone"
+    const-string v3, "ringtone"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_5
+    if-eqz v3, :cond_5
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_5
+    if-nez v3, :cond_5
 
-    .line 102
+    .line 101
     invoke-direct {p0, p2}, Lcom/android/providers/settings/SettingsHelper;->setRingtone(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
     goto :goto_1
+
+    .line 102
+    :cond_5
+    const-string v3, "notification_sound"
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
 
     .line 103
-    :cond_5
-    const-string v2, "notification_sound"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    .line 104
     invoke-direct {p0, p2}, Lcom/android/providers/settings/SettingsHelper;->setNotification_Sound(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
     goto :goto_1
+
+    .line 104
+    :cond_6
+    const-string v3, "alarm_alert"
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_7
 
     .line 105
-    :cond_6
-    const-string v2, "alarm_alert"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_7
-
-    .line 106
     invoke-direct {p0, p2}, Lcom/android/providers/settings/SettingsHelper;->setAlarm_Alert(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
     goto :goto_1
 
-    .line 110
+    .line 109
     :cond_7
-    sget-object v2, Lcom/android/providers/settings/util/HtcDatabaseTable;->SYSTEM:Lcom/android/providers/settings/util/HtcDatabaseTable;
+    sget-object v3, Lcom/android/providers/settings/util/HtcDatabaseTable;->SYSTEM:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
-    const-string v3, "SETTING_SD_CARD_NOTIFICATIONS"
+    const-string v4, "SETTING_SD_CARD_NOTIFICATIONS"
 
-    const-string v4, "sd_card_notifications"
+    const-string v5, "sd_card_notifications"
 
-    invoke-static {v2, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4, v5}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_8
+    if-eqz v3, :cond_8
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_8
+    if-nez v3, :cond_8
 
-    .line 115
+    .line 114
     invoke-direct {p0, p2}, Lcom/android/providers/settings/SettingsHelper;->setSDcardNotification(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v1
 
     goto :goto_1
 
-    .line 117
+    .line 116
     :cond_8
-    const-string v2, "backup_auto_restore"
+    const-string v3, "backup_auto_restore"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_a
+    if-eqz v3, :cond_a
 
-    .line 118
+    .line 117
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    if-ne v2, v1, :cond_9
+    if-ne v3, v2, :cond_9
 
-    move v0, v1
+    move v1, v2
 
     :cond_9
-    invoke-direct {p0, v0}, Lcom/android/providers/settings/SettingsHelper;->setAutoRestore(Z)V
+    invoke-direct {p0, v1}, Lcom/android/providers/settings/SettingsHelper;->setAutoRestore(Z)V
 
     goto/16 :goto_0
+
+    .line 118
+    :cond_a
+    const-string v3, "bluetooth_on"
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_b
+
+    const-string v3, "1"
+
+    invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_b
 
     .line 119
-    :cond_a
-    const-string v2, "bluetooth_on"
+    const-string v3, "SettingsHelper"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v4, "backup&restore to enable bt"
 
-    move-result v2
-
-    if-eqz v2, :cond_b
-
-    const-string v2, "1"
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_b
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 120
-    const-string v2, "SettingsHelper"
-
-    const-string v3, "turn on bt later!!"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 121
-    iput-boolean v1, p0, Lcom/android/providers/settings/SettingsHelper;->mBluetoothOn:Z
-
-    goto/16 :goto_1
-
-    .line 126
-    :cond_b
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "DATA_ROAMING_ALLOWED"
-
-    const-string v3, "data_roaming_allowed"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "DATA_ROAMING_BLOCKED"
-
-    const-string v3, "data_roaming_blocked"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "VOICE_ROAMING_ALLOWED"
-
-    const-string v3, "voice_roaming_allowed"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "VOICE_ROAMING_BLOCKED"
-
-    const-string v3, "voice_roaming_blocked"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "DATA_ROAMING_GUARD_ALLOWED"
-
-    const-string v3, "data_roaming_guard_allowed"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "DATA_ROAMING_GUARD_BLOCKED"
-
-    const-string v3, "data_roaming_guard_blocked"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "VOICE_ROAMING_GUARD_ALLOWED"
-
-    const-string v3, "voice_roaming_guard_allowed"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "VOICE_ROAMING_GUARD_BLOCKED"
-
-    const-string v3, "voice_roaming_guard_blocked"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
-
-    const-string v2, "SMS_ROAMING_GUARD_ALLOWED"
-
-    const-string v3, "sms_roaming_guard_allowed"
-
-    invoke-static {v0, v2, v3}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 162
-    :cond_c
-    invoke-direct {p0, p1, p2}, Lcom/android/providers/settings/SettingsHelper;->setRoamingOptions(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-.end method
-
-.method public restorebluetooth()V
-    .locals 3
-
-    .prologue
-    .line 685
-    iget-boolean v1, p0, Lcom/android/providers/settings/SettingsHelper;->mBluetoothOn:Z
-
-    if-eqz v1, :cond_0
-
-    .line 686
-    const-string v1, "SettingsHelper"
-
-    const-string v2, "backup&restore to enable bt"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 687
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 688
+    .line 121
     .local v0, adapter:Landroid/bluetooth/BluetoothAdapter;
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->enable()Z
 
-    .line 689
-    const/4 v1, 0x0
+    move-result v3
 
-    iput-boolean v1, p0, Lcom/android/providers/settings/SettingsHelper;->mBluetoothOn:Z
+    if-eqz v3, :cond_0
 
-    .line 691
+    goto/16 :goto_1
+
+    .line 122
     .end local v0           #adapter:Landroid/bluetooth/BluetoothAdapter;
-    :cond_0
-    return-void
+    :cond_b
+    sget-object v3, Lcom/android/providers/settings/util/HtcDatabaseTable;->SYSTEM:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v4, "BLUETOOTH_NAME"
+
+    const-string v5, "bluetooth_name"
+
+    invoke-static {v3, v4, v5}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_d
+
+    .line 126
+    const-string v2, "SettingsHelper"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "backup&restore bt name: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 127
+    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
+
+    move-result-object v0
+
+    .line 128
+    .restart local v0       #adapter:Landroid/bluetooth/BluetoothAdapter;
+    invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_c
+
+    .line 129
+    invoke-virtual {v0, p2}, Landroid/bluetooth/BluetoothAdapter;->setName(Ljava/lang/String;)Z
+
+    goto/16 :goto_1
+
+    .line 131
+    :cond_c
+    const-string v2, "service.brcm.bt.local_name"
+
+    invoke-static {v2, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    .line 137
+    .end local v0           #adapter:Landroid/bluetooth/BluetoothAdapter;
+    :cond_d
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "DATA_ROAMING_ALLOWED"
+
+    const-string v4, "data_roaming_allowed"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "DATA_ROAMING_BLOCKED"
+
+    const-string v4, "data_roaming_blocked"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "VOICE_ROAMING_ALLOWED"
+
+    const-string v4, "voice_roaming_allowed"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "VOICE_ROAMING_BLOCKED"
+
+    const-string v4, "voice_roaming_blocked"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "DATA_ROAMING_GUARD_ALLOWED"
+
+    const-string v4, "data_roaming_guard_allowed"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "DATA_ROAMING_GUARD_BLOCKED"
+
+    const-string v4, "data_roaming_guard_blocked"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "VOICE_ROAMING_GUARD_ALLOWED"
+
+    const-string v4, "voice_roaming_guard_allowed"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "VOICE_ROAMING_GUARD_BLOCKED"
+
+    const-string v4, "voice_roaming_guard_blocked"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    sget-object v1, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
+
+    const-string v3, "SMS_ROAMING_GUARD_ALLOWED"
+
+    const-string v4, "sms_roaming_guard_allowed"
+
+    invoke-static {v1, v3, v4}, Lcom/android/providers/settings/util/HtcRefWrapSettings;->getDatabaseKeyName(Lcom/android/providers/settings/util/HtcDatabaseTable;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 173
+    :cond_e
+    invoke-direct {p0, p1, p2}, Lcom/android/providers/settings/SettingsHelper;->setRoamingOptions(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
 .end method
 
 .method setLocaleData([BI)V
@@ -2322,7 +2363,7 @@
 
     const/4 v10, 0x0
 
-    .line 591
+    .line 602
     iget-object v9, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2333,11 +2374,11 @@
 
     move-result-object v2
 
-    .line 592
+    .line 603
     .local v2, conf:Landroid/content/res/Configuration;
     iget-object v7, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 598
+    .line 609
     .local v7, loc:Ljava/util/Locale;
     sget-boolean v9, Lcom/htc/htcjavaflag/HtcBuildFlag;->HtcBACKUPFlag:Z
 
@@ -2347,12 +2388,12 @@
 
     if-eqz v9, :cond_1
 
-    .line 625
+    .line 636
     :cond_0
     :goto_0
     return-void
 
-    .line 601
+    .line 612
     :cond_1
     iget-object v9, p0, Lcom/android/providers/settings/SettingsHelper;->mContext:Landroid/content/Context;
 
@@ -2364,19 +2405,19 @@
 
     move-result-object v1
 
-    .line 602
+    .line 613
     .local v1, availableLocales:[Ljava/lang/String;
     new-instance v8, Ljava/lang/String;
 
     invoke-direct {v8, p1, v10, p2}, Ljava/lang/String;-><init>([BII)V
 
-    .line 603
+    .line 614
     .local v8, localeCode:Ljava/lang/String;
     new-instance v6, Ljava/lang/String;
 
     invoke-direct {v6, p1, v10, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 604
+    .line 615
     .local v6, language:Ljava/lang/String;
     const/4 v9, 0x4
 
@@ -2388,12 +2429,12 @@
 
     invoke-direct {v4, p1, v9, v11}, Ljava/lang/String;-><init>([BII)V
 
-    .line 605
+    .line 616
     .local v4, country:Ljava/lang/String;
     :goto_1
     const/4 v7, 0x0
 
-    .line 606
+    .line 617
     const/4 v5, 0x0
 
     .local v5, i:I
@@ -2402,7 +2443,7 @@
 
     if-ge v5, v9, :cond_2
 
-    .line 607
+    .line 618
     aget-object v9, v1, v5
 
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2411,46 +2452,46 @@
 
     if-eqz v9, :cond_4
 
-    .line 608
+    .line 619
     new-instance v7, Ljava/util/Locale;
 
     .end local v7           #loc:Ljava/util/Locale;
     invoke-direct {v7, v6, v4}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 612
+    .line 623
     .restart local v7       #loc:Ljava/util/Locale;
     :cond_2
     if-eqz v7, :cond_0
 
-    .line 615
+    .line 626
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 616
+    .line 627
     .local v0, am:Landroid/app/IActivityManager;
     invoke-interface {v0}, Landroid/app/IActivityManager;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v3
 
-    .line 617
+    .line 628
     .local v3, config:Landroid/content/res/Configuration;
     iput-object v7, v3, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 619
+    .line 630
     const/4 v9, 0x1
 
     iput-boolean v9, v3, Landroid/content/res/Configuration;->userSetLocale:Z
 
-    .line 621
+    .line 632
     invoke-interface {v0, v3}, Landroid/app/IActivityManager;->updateConfiguration(Landroid/content/res/Configuration;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 622
+    .line 633
     .end local v0           #am:Landroid/app/IActivityManager;
     .end local v3           #config:Landroid/content/res/Configuration;
     :catch_0
@@ -2458,7 +2499,7 @@
 
     goto :goto_0
 
-    .line 604
+    .line 615
     .end local v4           #country:Ljava/lang/String;
     .end local v5           #i:I
     :cond_3
@@ -2466,7 +2507,7 @@
 
     goto :goto_1
 
-    .line 606
+    .line 617
     .restart local v4       #country:Ljava/lang/String;
     .restart local v5       #i:I
     :cond_4

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 756
+    .line 837
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$9;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,13 +66,13 @@
     .end annotation
 
     .prologue
-    .line 760
+    .line 841
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$9;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showFakeUIRotation()V
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$1600(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$1800(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 761
+    .line 842
     return-void
 .end method

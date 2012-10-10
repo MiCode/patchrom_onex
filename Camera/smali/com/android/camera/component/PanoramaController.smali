@@ -109,7 +109,7 @@
     .locals 5
 
     .prologue
-    .line 99
+    .line 100
     new-instance v0, Lcom/android/camera/io/DCFInfo;
 
     const-string v1, "PANOR"
@@ -124,12 +124,12 @@
 
     sput-object v0, Lcom/android/camera/component/PanoramaController;->m_PanoramaDCFInfo:Lcom/android/camera/io/DCFInfo;
 
-    .line 555
+    .line 556
     sget-object v0, Lcom/android/camera/component/PanoramaController;->m_PanoramaDCFInfo:Lcom/android/camera/io/DCFInfo;
 
     invoke-static {v0}, Lcom/android/camera/io/DCFUtility;->registerDCFInfo(Lcom/android/camera/io/DCFInfo;)V
 
-    .line 556
+    .line 557
     return-void
 .end method
 
@@ -142,32 +142,32 @@
 
     const/4 v0, 0x1
 
-    .line 563
+    .line 564
     const-string v2, "Panorama Controller"
 
     invoke-direct {p0, v2, v0, p1}, Lcom/android/camera/component/AsyncCameraThreadComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/CameraThread;)V
 
-    .line 92
+    .line 93
     const/4 v2, 0x5
 
     iput v2, p0, Lcom/android/camera/component/PanoramaController;->m_CaptureCount:I
 
-    .line 93
+    .line 94
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/android/camera/component/PanoramaController;->m_CaptureTimerStartTime:J
 
-    .line 97
+    .line 98
     iput v1, p0, Lcom/android/camera/component/PanoramaController;->m_Direction:I
 
-    .line 272
+    .line 273
     new-instance v2, Lcom/android/camera/component/PanoramaController$1;
 
     invoke-direct {v2, p0}, Lcom/android/camera/component/PanoramaController$1;-><init>(Lcom/android/camera/component/PanoramaController;)V
 
     iput-object v2, p0, Lcom/android/camera/component/PanoramaController;->m_AutoramaListener:Lcom/scalado/camera/autorama/Autorama$AutoramaListener;
 
-    .line 564
+    .line 565
     invoke-static {}, Lcom/android/camera/component/PanoramaController;->getPanoramaType()I
 
     move-result v2
@@ -177,13 +177,13 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/camera/component/PanoramaController;->m_IsSweepPanorama:Z
 
-    .line 565
+    .line 566
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 564
+    .line 565
     goto :goto_0
 .end method
 
@@ -193,7 +193,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController;->m_LatestContentUri:Landroid/net/Uri;
 
     return-object p1
@@ -205,7 +205,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0, p1}, Lcom/android/camera/component/PanoramaController;->createJpegDecoder(Lcom/scalado/stream/Stream;)Lcom/scalado/caps/codec/decoder/JpegDecoder;
 
     move-result-object v0
@@ -218,7 +218,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaController;->m_IsCapturingFrame:Z
 
     return v0
@@ -230,7 +230,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-boolean p1, p0, Lcom/android/camera/component/PanoramaController;->m_IsCapturingFrame:Z
 
     return p1
@@ -241,7 +241,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-wide v0, p0, Lcom/android/camera/component/PanoramaController;->m_CaptureTimerStartTime:J
 
     return-wide v0
@@ -253,7 +253,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-wide p1, p0, Lcom/android/camera/component/PanoramaController;->m_CaptureTimerStartTime:J
 
     return-wide p1
@@ -264,7 +264,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget v0, p0, Lcom/android/camera/component/PanoramaController;->m_CurrentCaptureIndex:I
 
     return v0
@@ -275,7 +275,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget v0, p0, Lcom/android/camera/component/PanoramaController;->m_CurrentCaptureIndex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -290,7 +290,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -301,7 +301,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -312,7 +312,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -323,7 +323,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -334,7 +334,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -345,7 +345,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_ExifTags:Ljava/util/Hashtable;
 
     return-object v0
@@ -357,7 +357,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController;->m_ExifTags:Ljava/util/Hashtable;
 
     return-object p1
@@ -368,7 +368,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -381,7 +381,7 @@
     .parameter "x2"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0, p1, p2}, Lcom/android/camera/component/PanoramaController;->createReviewImage(Ljava/lang/String;Lcom/android/camera/rotate/UIRotation;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -395,7 +395,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0, p1}, Lcom/android/camera/component/PanoramaController;->createJpegDecoder(Lcom/scalado/base/Buffer;)Lcom/scalado/caps/codec/decoder/JpegDecoder;
 
     move-result-object v0
@@ -408,7 +408,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -419,7 +419,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -430,7 +430,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaController;->m_IsLastFrame:Z
 
     return v0
@@ -442,7 +442,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-boolean p1, p0, Lcom/android/camera/component/PanoramaController;->m_IsLastFrame:Z
 
     return p1
@@ -453,7 +453,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget v0, p0, Lcom/android/camera/component/PanoramaController;->m_CaptureCount:I
 
     return v0
@@ -464,7 +464,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaController;->m_IsCanceling:Z
 
     return v0
@@ -476,7 +476,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-boolean p1, p0, Lcom/android/camera/component/PanoramaController;->m_IsCanceling:Z
 
     return p1
@@ -487,7 +487,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaController;->m_IsStitching:Z
 
     return v0
@@ -499,7 +499,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-boolean p1, p0, Lcom/android/camera/component/PanoramaController;->m_IsStitching:Z
 
     return p1
@@ -510,7 +510,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaController;->stopPreview()V
 
     return-void
@@ -521,7 +521,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -532,7 +532,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -543,7 +543,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_PanoramaUI:Lcom/android/camera/component/PanoramaUI;
 
     return-object v0
@@ -554,7 +554,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -565,7 +565,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -576,7 +576,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -587,7 +587,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -598,7 +598,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -609,7 +609,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaController;->m_IsEntered:Z
 
     return v0
@@ -620,7 +620,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaController;->deleteCapturedImage()V
 
     return-void
@@ -631,7 +631,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_ScaladoCamera:Lcom/scalado/camera/FeatureCamera;
 
     return-object v0
@@ -643,7 +643,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController;->m_ScaladoCamera:Lcom/scalado/camera/FeatureCamera;
 
     return-object p1
@@ -654,7 +654,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -667,7 +667,7 @@
     .parameter "x2"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0, p1, p2}, Lcom/android/camera/component/PanoramaController;->takePicture(Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
 
     return-void
@@ -678,7 +678,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -689,7 +689,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -700,7 +700,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -711,7 +711,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -722,7 +722,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaController;->clearScaladoResources()V
 
     return-void
@@ -733,7 +733,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -743,7 +743,7 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 63
     sget-object v0, Lcom/android/camera/component/PanoramaController;->m_PanoramaDCFInfo:Lcom/android/camera/io/DCFInfo;
 
     return-object v0
@@ -754,7 +754,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_Autorama:Lcom/scalado/camera/autorama/Autorama;
 
     return-object v0
@@ -765,7 +765,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget-boolean v0, p0, Lcom/android/camera/component/PanoramaController;->m_IsSweepPanorama:Z
 
     return v0
@@ -779,7 +779,7 @@
     .parameter "x3"
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/component/PanoramaController;->stopAutorama(ZZZ)V
 
     return-void
@@ -790,7 +790,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget v0, p0, Lcom/android/camera/component/PanoramaController;->m_PreviousDeltaX:F
 
     return v0
@@ -802,7 +802,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput p1, p0, Lcom/android/camera/component/PanoramaController;->m_PreviousDeltaX:F
 
     return p1
@@ -813,7 +813,7 @@
     .parameter "x0"
 
     .prologue
-    .line 62
+    .line 63
     iget v0, p0, Lcom/android/camera/component/PanoramaController;->m_Direction:I
 
     return v0
@@ -825,7 +825,7 @@
     .parameter "x1"
 
     .prologue
-    .line 62
+    .line 63
     iput p1, p0, Lcom/android/camera/component/PanoramaController;->m_Direction:I
 
     return p1
@@ -837,22 +837,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 572
+    .line 573
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "clearScaladoResources()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 574
+    .line 575
     iput-object v2, p0, Lcom/android/camera/component/PanoramaController;->m_Autorama:Lcom/scalado/camera/autorama/Autorama;
 
-    .line 575
+    .line 576
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_ScaladoCamera:Lcom/scalado/camera/FeatureCamera;
 
     invoke-interface {v0, v2}, Lcom/scalado/camera/FeatureCamera;->setFeature(Lcom/scalado/camera/Feature;)V
 
-    .line 576
+    .line 577
     return-void
 .end method
 
@@ -861,7 +861,7 @@
     .parameter "buffer"
 
     .prologue
-    .line 585
+    .line 586
     :try_start_0
     new-instance v1, Lcom/scalado/stream/BufferStream;
 
@@ -877,15 +877,15 @@
 
     move-result-object v1
 
-    .line 590
+    .line 591
     :goto_0
     return-object v1
 
-    .line 587
+    .line 588
     :catch_0
     move-exception v0
 
-    .line 589
+    .line 590
     .local v0, ex:Ljava/lang/Throwable;
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -893,7 +893,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 590
+    .line 591
     const/4 v1, 0x0
 
     goto :goto_0
@@ -904,19 +904,19 @@
     .parameter "stream"
 
     .prologue
-    .line 597
+    .line 598
     :try_start_0
     invoke-static {p1}, Lcom/scalado/caps/codec/decoder/JpegDecoder;->create(Lcom/scalado/stream/Stream;)Lcom/scalado/base/Iterator;
 
     move-result-object v1
 
-    .line 598
+    .line 599
     .local v1, iter:Lcom/scalado/base/Iterator;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/scalado/base/Iterator;->step(I)F
 
-    .line 599
+    .line 600
     invoke-virtual {v1}, Lcom/scalado/base/Iterator;->getObject()Ljava/lang/Object;
 
     move-result-object v2
@@ -925,16 +925,16 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 604
+    .line 605
     .end local v1           #iter:Lcom/scalado/base/Iterator;
     :goto_0
     return-object v2
 
-    .line 601
+    .line 602
     :catch_0
     move-exception v0
 
-    .line 603
+    .line 604
     .local v0, ex:Ljava/lang/Throwable;
     iget-object v2, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -942,7 +942,7 @@
 
     invoke-static {v2, v3, v0}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 604
+    .line 605
     const/4 v2, 0x0
 
     goto :goto_0
@@ -956,10 +956,10 @@
 
     const-wide/high16 v4, 0x3ff8
 
-    .line 614
+    .line 615
     iget-object v11, p0, Lcom/android/camera/component/PanoramaController;->m_PanoramaUI:Lcom/android/camera/component/PanoramaUI;
 
-    .line 615
+    .line 616
     .local v11, ui:Lcom/android/camera/component/PanoramaUI;
     if-eqz v11, :cond_0
 
@@ -975,18 +975,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 659
+    .line 660
     :cond_0
     :goto_0
     return-void
 
-    .line 619
+    .line 620
     :cond_1
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_PreviewThumbnailImage:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_2
 
-    .line 624
+    .line 625
     :try_start_0
     invoke-virtual {v11}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -996,23 +996,23 @@
 
     move-result-object v7
 
-    .line 625
+    .line 626
     .local v7, res:Landroid/content/res/Resources;
-    const v0, 0x7f0b008d
+    const v0, 0x7f0b008e
 
     invoke-virtual {v7, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v10
 
-    .line 626
+    .line 627
     .local v10, thumbWidth:I
-    const v0, 0x7f0b008e
+    const v0, 0x7f0b008f
 
     invoke-virtual {v7, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v9
 
-    .line 629
+    .line 630
     .local v9, thumbHeight:I
     iget v0, p0, Lcom/android/camera/component/PanoramaController;->m_CaptureCount:I
 
@@ -1040,7 +1040,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 639
+    .line 640
     .end local v7           #res:Landroid/content/res/Resources;
     .end local v9           #thumbHeight:I
     .end local v10           #thumbWidth:I
@@ -1049,7 +1049,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 643
+    .line 644
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_Autorama:Lcom/scalado/camera/autorama/Autorama;
 
@@ -1059,7 +1059,7 @@
 
     move-result-object v8
 
-    .line 644
+    .line 645
     .local v8, session:Lcom/scalado/caps/Session;
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_PreviewThumbnailImage:Landroid/graphics/Bitmap;
 
@@ -1069,7 +1069,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 658
+    .line 659
     .end local v8           #session:Lcom/scalado/caps/Session;
     :goto_1
     const/4 v2, 0x6
@@ -1086,11 +1086,11 @@
 
     goto :goto_0
 
-    .line 631
+    .line 632
     :catch_0
     move-exception v6
 
-    .line 633
+    .line 634
     .local v6, ex:Ljava/lang/Exception;
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -1100,12 +1100,12 @@
 
     goto :goto_0
 
-    .line 646
+    .line 647
     .end local v6           #ex:Ljava/lang/Exception;
     :catch_1
     move-exception v6
 
-    .line 648
+    .line 649
     .restart local v6       #ex:Ljava/lang/Exception;
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -1115,7 +1115,7 @@
 
     goto :goto_1
 
-    .line 653
+    .line 654
     .end local v6           #ex:Ljava/lang/Exception;
     :cond_3
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -1133,10 +1133,10 @@
     .parameter "rotation"
 
     .prologue
-    .line 666
+    .line 667
     const/4 v3, 0x0
 
-    .line 671
+    .line 672
     .local v3, inputStream:Lcom/scalado/stream/FileStream;
     :try_start_0
     new-instance v4, Lcom/scalado/stream/FileStream;
@@ -1148,7 +1148,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 672
+    .line 673
     .end local v3           #inputStream:Lcom/scalado/stream/FileStream;
     .local v4, inputStream:Lcom/scalado/stream/FileStream;
     :try_start_1
@@ -1156,13 +1156,13 @@
 
     move-result-object v1
 
-    .line 673
+    .line 674
     .local v1, decoder:Lcom/scalado/caps/codec/decoder/JpegDecoder;
     new-instance v7, Lcom/scalado/caps/Session;
 
     invoke-direct {v7, v1}, Lcom/scalado/caps/Session;-><init>(Lcom/scalado/caps/Decoder;)V
 
-    .line 677
+    .line 678
     .local v7, session:Lcom/scalado/caps/Session;
     invoke-virtual {p2}, Lcom/android/camera/rotate/UIRotation;->isLandscape()Z
 
@@ -1170,14 +1170,14 @@
 
     if-eqz v8, :cond_2
 
-    .line 679
+    .line 680
     sget v6, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
 
-    .line 680
+    .line 681
     .local v6, reviewWidth:I
     sget v5, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
 
-    .line 687
+    .line 688
     .local v5, reviewHeight:I
     :goto_0
     sget-object v8, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
@@ -1186,7 +1186,7 @@
 
     move-result-object v0
 
-    .line 690
+    .line 691
     .local v0, bitmap:Landroid/graphics/Bitmap;
     const/4 v8, 0x0
 
@@ -1197,10 +1197,10 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 700
+    .line 701
     if-eqz v4, :cond_0
 
-    .line 704
+    .line 705
     :try_start_2
     invoke-virtual {v4}, Lcom/scalado/stream/FileStream;->close()V
     :try_end_2
@@ -1210,7 +1210,7 @@
     :goto_1
     move-object v3, v4
 
-    .line 707
+    .line 708
     .end local v0           #bitmap:Landroid/graphics/Bitmap;
     .end local v1           #decoder:Lcom/scalado/caps/codec/decoder/JpegDecoder;
     .end local v4           #inputStream:Lcom/scalado/stream/FileStream;
@@ -1222,7 +1222,7 @@
     :goto_2
     return-object v0
 
-    .line 684
+    .line 685
     .end local v3           #inputStream:Lcom/scalado/stream/FileStream;
     .restart local v1       #decoder:Lcom/scalado/caps/codec/decoder/JpegDecoder;
     .restart local v4       #inputStream:Lcom/scalado/stream/FileStream;
@@ -1231,7 +1231,7 @@
     :try_start_3
     sget v6, Lcom/android/camera/DisplayDevice;->SCREEN_HEIGHT:I
 
-    .line 685
+    .line 686
     .restart local v6       #reviewWidth:I
     sget v5, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
     :try_end_3
@@ -1241,7 +1241,7 @@
     .restart local v5       #reviewHeight:I
     goto :goto_0
 
-    .line 693
+    .line 694
     .end local v1           #decoder:Lcom/scalado/caps/codec/decoder/JpegDecoder;
     .end local v4           #inputStream:Lcom/scalado/stream/FileStream;
     .end local v5           #reviewHeight:I
@@ -1251,7 +1251,7 @@
     :catch_0
     move-exception v2
 
-    .line 695
+    .line 696
     .local v2, ex:Ljava/lang/Throwable;
     :goto_3
     :try_start_4
@@ -1263,13 +1263,13 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 696
+    .line 697
     const/4 v0, 0x0
 
-    .line 700
+    .line 701
     if-eqz v3, :cond_1
 
-    .line 704
+    .line 705
     :try_start_5
     invoke-virtual {v3}, Lcom/scalado/stream/FileStream;->close()V
     :try_end_5
@@ -1277,13 +1277,13 @@
 
     goto :goto_2
 
-    .line 706
+    .line 707
     :catch_1
     move-exception v8
 
     goto :goto_2
 
-    .line 700
+    .line 701
     .end local v2           #ex:Ljava/lang/Throwable;
     :catchall_0
     move-exception v8
@@ -1291,18 +1291,18 @@
     :goto_4
     if-eqz v3, :cond_3
 
-    .line 704
+    .line 705
     :try_start_6
     invoke-virtual {v3}, Lcom/scalado/stream/FileStream;->close()V
     :try_end_6
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 707
+    .line 708
     :cond_3
     :goto_5
     throw v8
 
-    .line 706
+    .line 707
     .end local v3           #inputStream:Lcom/scalado/stream/FileStream;
     .restart local v0       #bitmap:Landroid/graphics/Bitmap;
     .restart local v1       #decoder:Lcom/scalado/caps/codec/decoder/JpegDecoder;
@@ -1327,7 +1327,7 @@
 
     goto :goto_5
 
-    .line 700
+    .line 701
     .end local v3           #inputStream:Lcom/scalado/stream/FileStream;
     .restart local v4       #inputStream:Lcom/scalado/stream/FileStream;
     :catchall_1
@@ -1339,7 +1339,7 @@
     .restart local v3       #inputStream:Lcom/scalado/stream/FileStream;
     goto :goto_4
 
-    .line 693
+    .line 694
     .end local v3           #inputStream:Lcom/scalado/stream/FileStream;
     .restart local v4       #inputStream:Lcom/scalado/stream/FileStream;
     :catch_4
@@ -1356,48 +1356,48 @@
     .locals 5
 
     .prologue
-    .line 727
+    .line 728
     iget-object v3, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v4, "Delete media by PanoramaController"
 
     invoke-static {v3, v4}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 729
+    .line 730
     iget-object v3, p0, Lcom/android/camera/component/PanoramaController;->m_PanoramaUI:Lcom/android/camera/component/PanoramaUI;
 
     if-nez v3, :cond_1
 
-    .line 731
+    .line 732
     iget-object v3, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v4, "No UI to delete content"
 
     invoke-static {v3, v4}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 775
+    .line 773
     :cond_0
     :goto_0
     return-void
 
-    .line 735
+    .line 736
     :cond_1
     iget-object v3, p0, Lcom/android/camera/component/PanoramaController;->m_LatestContentUri:Landroid/net/Uri;
 
     if-eqz v3, :cond_0
 
-    .line 738
+    .line 739
     iget-object v3, p0, Lcom/android/camera/component/PanoramaController;->m_PanoramaUI:Lcom/android/camera/component/PanoramaUI;
 
     invoke-virtual {v3}, Lcom/android/camera/component/PanoramaUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 739
+    .line 740
     .local v0, activity:Lcom/android/camera/HTCCamera;
     iget-object v1, p0, Lcom/android/camera/component/PanoramaController;->m_LatestContentUri:Landroid/net/Uri;
 
-    .line 740
+    .line 741
     .local v1, contentUri:Landroid/net/Uri;
     new-instance v2, Ljava/lang/Thread;
 
@@ -1407,11 +1407,11 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 769
+    .line 767
     .local v2, thread:Ljava/lang/Thread;
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 772
+    .line 770
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaController;->getSettings()Lcom/android/camera/CameraSettings;
 
     move-result-object v3
@@ -1420,7 +1420,7 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/io/DCFUtility;->restoreFileCounter(Lcom/android/camera/Settings;Lcom/android/camera/io/DCFInfo;)V
 
-    .line 773
+    .line 771
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/camera/component/PanoramaController;->m_LatestContentUri:Landroid/net/Uri;
@@ -1432,7 +1432,7 @@
     .locals 1
 
     .prologue
-    .line 782
+    .line 780
     const/4 v0, 0x0
 
     return v0
@@ -1442,7 +1442,7 @@
     .locals 1
 
     .prologue
-    .line 888
+    .line 886
     const/4 v0, 0x1
 
     return v0
@@ -1455,7 +1455,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 896
+    .line 894
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/android/camera/HTCCamera;->isServiceMode()Z
@@ -1464,12 +1464,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 902
+    .line 900
     :cond_0
     :goto_0
     return v0
 
-    .line 899
+    .line 897
     :cond_1
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isTablet()Z
 
@@ -1477,7 +1477,7 @@
 
     if-nez v1, :cond_0
 
-    .line 902
+    .line 900
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v2, 0x50
@@ -1534,7 +1534,19 @@
 
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
+    const/16 v2, 0xe5
+
+    if-eq v1, v2, :cond_0
+
+    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
     const/16 v2, 0x31
+
+    if-eq v1, v2, :cond_0
+
+    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v2, 0x32
 
     if-eq v1, v2, :cond_0
 
@@ -2373,14 +2385,14 @@
 
     invoke-interface {v4, v5, v6, v7}, Lcom/scalado/camera/FeatureCamera;->takePicture(Lcom/scalado/camera/Camera$ShutterCallback;Lcom/scalado/camera/Camera$PictureCallback;Lcom/scalado/camera/Camera$PictureCallback;)V
 
-    .line 1270
+    .line 1271
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/camera/component/PanoramaController;->m_IsCapturing:Z
 
-    .line 1272
+    .line 1273
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -2389,7 +2401,7 @@
 
     invoke-static {v4, v5}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1273
+    .line 1274
     return-void
 
     .line 1173
@@ -2435,15 +2447,15 @@
     .locals 1
 
     .prologue
-    .line 718
+    .line 719
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_PanoramaUI:Lcom/android/camera/component/PanoramaUI;
 
-    .line 719
+    .line 720
     invoke-super {p0}, Lcom/android/camera/component/AsyncCameraThreadComponent;->deinitializeOverride()V
 
-    .line 720
+    .line 721
     return-void
 .end method
 
@@ -2452,25 +2464,25 @@
     .parameter "msg"
 
     .prologue
-    .line 791
+    .line 789
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 798
+    .line 796
     invoke-super {p0, p1}, Lcom/android/camera/component/AsyncCameraThreadComponent;->handleAsyncMessage(Landroid/os/Message;)V
 
-    .line 801
+    .line 799
     :goto_0
     return-void
 
-    .line 794
+    .line 792
     :pswitch_0
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaController;->createPreview()V
 
     goto :goto_0
 
-    .line 791
+    .line 789
     nop
 
     :pswitch_data_0
@@ -2486,39 +2498,39 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 809
+    .line 807
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 829
+    .line 827
     :pswitch_0
     invoke-super {p0, p1}, Lcom/android/camera/component/AsyncCameraThreadComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 832
+    .line 830
     :cond_0
     :goto_0
     return-void
 
-    .line 812
+    .line 810
     :pswitch_1
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaController;->onCancelCapture()V
 
     goto :goto_0
 
-    .line 816
+    .line 814
     :pswitch_2
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaController;->onEnterPanoramaMode()V
 
     goto :goto_0
 
-    .line 820
+    .line 818
     :pswitch_3
     invoke-direct {p0}, Lcom/android/camera/component/PanoramaController;->onExitPanoramaMode()V
 
     goto :goto_0
 
-    .line 824
+    .line 822
     :pswitch_4
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController;->m_PanoramaUI:Lcom/android/camera/component/PanoramaUI;
 
@@ -2536,7 +2548,7 @@
 
     if-nez v0, :cond_0
 
-    .line 825
+    .line 823
     iget-object v1, p0, Lcom/android/camera/component/PanoramaController;->m_PanoramaUI:Lcom/android/camera/component/PanoramaUI;
 
     const/16 v2, 0x8
@@ -2551,7 +2563,7 @@
 
     goto :goto_0
 
-    .line 809
+    .line 807
     nop
 
     :pswitch_data_0
@@ -2569,15 +2581,15 @@
     .locals 3
 
     .prologue
-    .line 841
+    .line 839
     invoke-super {p0}, Lcom/android/camera/component/AsyncCameraThreadComponent;->initializeOverride()V
 
-    .line 844
+    .line 842
     invoke-virtual {p0}, Lcom/android/camera/component/PanoramaController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    .line 845
+    .line 843
     .local v0, cameraThread:Lcom/android/camera/CameraThread;
     iget-object v1, v0, Lcom/android/camera/CameraThread;->requestDeleteLatestMediaEvent:Lcom/android/camera/event/Event;
 
@@ -2587,7 +2599,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 856
+    .line 854
     iget-object v1, v0, Lcom/android/camera/CameraThread;->requestCloseCameraEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/PanoramaController$4;
@@ -2596,7 +2608,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 870
+    .line 868
     iget-object v1, v0, Lcom/android/camera/CameraThread;->requestTakingPictureEvent:Lcom/android/camera/event/Event;
 
     new-instance v2, Lcom/android/camera/component/PanoramaController$5;
@@ -2605,7 +2617,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 881
+    .line 879
     return-void
 .end method
 

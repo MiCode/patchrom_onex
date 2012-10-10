@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 294
+    .line 303
     iput-object p1, p0, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 294
+    .line 303
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;-><init>(Lcom/htc/app/FilePickerTypeFragment;)V
 
     return-void
@@ -53,10 +53,10 @@
     .locals 5
 
     .prologue
-    .line 296
+    .line 305
     const/4 v0, 0x0
 
-    .line 297
+    .line 306
     .local v0, isTypeViewStopScan:Z
     iget-object v1, p0, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
@@ -67,7 +67,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 298
+    .line 307
     iget-object v1, p0, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
     #getter for: Lcom/htc/app/FilePickerTypeFragment;->mFilePickerCore:Lcom/htc/app/FilePickerCore;
@@ -79,11 +79,11 @@
 
     move-result v0
 
-    .line 300
+    .line 309
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 301
+    .line 310
     iget-object v1, p0, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
     const/4 v2, 0x0
@@ -91,17 +91,17 @@
     #calls: Lcom/htc/app/FilePickerTypeFragment;->showRefreshAnimationOnTypeViewHeader(Z)V
     invoke-static {v1, v2}, Lcom/htc/app/FilePickerTypeFragment;->access$800(Lcom/htc/app/FilePickerTypeFragment;Z)V
 
-    .line 302
+    .line 311
     iget-object v1, p0, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
     #calls: Lcom/htc/app/FilePickerTypeFragment;->updateCountOfTypeListViewHeader()V
     invoke-static {v1}, Lcom/htc/app/FilePickerTypeFragment;->access$100(Lcom/htc/app/FilePickerTypeFragment;)V
 
-    .line 308
+    .line 317
     :goto_0
     return-void
 
-    .line 304
+    .line 313
     :cond_1
     iget-object v1, p0, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
@@ -110,7 +110,7 @@
     #calls: Lcom/htc/app/FilePickerTypeFragment;->showRefreshAnimationOnTypeViewHeader(Z)V
     invoke-static {v1, v2}, Lcom/htc/app/FilePickerTypeFragment;->access$800(Lcom/htc/app/FilePickerTypeFragment;Z)V
 
-    .line 305
+    .line 314
     iget-object v1, p0, Lcom/htc/app/FilePickerTypeFragment$UpdateUiRunnable;->this$0:Lcom/htc/app/FilePickerTypeFragment;
 
     #getter for: Lcom/htc/app/FilePickerTypeFragment;->mHandler:Landroid/os/Handler;

@@ -60,46 +60,46 @@
 
     const/4 v1, -0x1
 
-    .line 1426
+    .line 1432
     iput-object p1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1430
+    .line 1436
     const/16 v0, 0x32
 
     iput v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->scaleDuration:I
 
-    .line 1432
+    .line 1438
     const v0, 0x3f666666
 
     iput v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->scaleRatio:F
 
-    .line 1434
+    .line 1440
     iput v1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->posRecord:I
 
-    .line 1435
+    .line 1441
     iput v1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->scrollXRecord:I
 
-    .line 1436
+    .line 1442
     iput v1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->scrollYRecord:I
 
-    .line 1437
+    .line 1443
     iput v1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->alignmentRecord:I
 
-    .line 1439
+    .line 1445
     iput v1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->endRecord:I
 
-    .line 1440
+    .line 1446
     iput v1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->startRecord:I
 
-    .line 1442
+    .line 1448
     iput-object v2, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
-    .line 1445
+    .line 1451
     iput-object v2, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
 
-    .line 1486
+    .line 1492
     return-void
 .end method
 
@@ -109,7 +109,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1426
+    .line 1432
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/FastScroller$CheckForTap;-><init>(Lcom/htc/fragment/widget/FastScroller;)V
 
     return-void
@@ -120,7 +120,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1426
+    .line 1432
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->mClickAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     return-object v0
@@ -132,7 +132,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1426
+    .line 1432
     iput-object p1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->mClickAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     return-object p1
@@ -143,7 +143,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1426
+    .line 1432
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
 
     return-object v0
@@ -154,7 +154,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1426
+    .line 1432
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
     return-object v0
@@ -166,7 +166,7 @@
     .locals 29
 
     .prologue
-    .line 1533
+    .line 1539
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -178,12 +178,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 1776
+    .line 1782
     :cond_0
     :goto_0
     return-void
 
-    .line 1536
+    .line 1542
     :cond_1
     move-object/from16 v0, p0
 
@@ -196,7 +196,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1537
+    .line 1543
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -212,7 +212,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 1538
+    .line 1544
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -226,7 +226,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/FastScroller$FlingRunnable;->stop(Z)V
 
-    .line 1540
+    .line 1546
     :cond_2
     move-object/from16 v0, p0
 
@@ -245,7 +245,7 @@
 
     move/from16 v26, v0
 
-    .line 1541
+    .line 1547
     .local v26, x:I
     move-object/from16 v0, p0
 
@@ -264,7 +264,7 @@
 
     move/from16 v27, v0
 
-    .line 1542
+    .line 1548
     .local v27, y:I
     move-object/from16 v0, p0
 
@@ -283,7 +283,7 @@
 
     move-result v19
 
-    .line 1548
+    .line 1554
     .local v19, pos:I
     const/4 v2, -0x1
 
@@ -291,7 +291,7 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 1550
+    .line 1556
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -305,7 +305,7 @@
 
     if-eqz v2, :cond_d
 
-    .line 1551
+    .line 1557
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -315,7 +315,7 @@
 
     move-result v18
 
-    .line 1552
+    .line 1558
     .local v18, itemWidth:I
     move-object/from16 v0, p0
 
@@ -326,7 +326,7 @@
 
     move-result v15
 
-    .line 1554
+    .line 1560
     .local v15, galleryWidth:I
     move-object/from16 v0, p0
 
@@ -345,7 +345,7 @@
 
     move-result v24
 
-    .line 1555
+    .line 1561
     .local v24, totalItemCount:I
     move-object/from16 v0, p0
 
@@ -369,7 +369,7 @@
 
     sub-int v23, v2, v3
 
-    .line 1556
+    .line 1562
     .local v23, thumbArea:I
     move-object/from16 v0, p0
 
@@ -406,7 +406,7 @@
 
     sub-int v12, v2, v3
 
-    .line 1558
+    .line 1564
     .local v12, dataArea:I
     move/from16 v0, v19
 
@@ -433,7 +433,7 @@
 
     mul-float v11, v2, v3
 
-    .line 1559
+    .line 1565
     .local v11, alignment:F
     move-object/from16 v0, p0
 
@@ -455,13 +455,13 @@
 
     sub-int v9, v2, v3
 
-    .line 1560
+    .line 1566
     .local v9, aX:I
     int-to-float v2, v9
 
     sub-float v21, v11, v2
 
-    .line 1562
+    .line 1568
     .local v21, scrollX:F
     move-object/from16 v0, p0
 
@@ -476,16 +476,16 @@
 
     if-gez v2, :cond_3
 
-    .line 1563
+    .line 1569
     const/16 v21, 0x0
 
-    .line 1564
+    .line 1570
     const/4 v11, 0x0
 
-    .line 1565
+    .line 1571
     const/16 v19, -0x1
 
-    .line 1568
+    .line 1574
     :cond_3
     mul-int v2, v24, v18
 
@@ -493,7 +493,7 @@
 
     if-lez v2, :cond_8
 
-    .line 1571
+    .line 1577
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -520,7 +520,7 @@
 
     if-nez v2, :cond_4
 
-    .line 1572
+    .line 1578
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -532,7 +532,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1574
+    .line 1580
     :cond_4
     move-object/from16 v0, p0
 
@@ -560,7 +560,7 @@
 
     if-nez v2, :cond_5
 
-    .line 1575
+    .line 1581
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -572,7 +572,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1578
+    .line 1584
     :cond_5
     move-object/from16 v0, p0
 
@@ -580,7 +580,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 1579
+    .line 1585
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -589,7 +589,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/CarouselTextView;->enableClickMultiply(Z)V
 
-    .line 1581
+    .line 1587
     :cond_6
     move/from16 v0, v19
 
@@ -597,7 +597,7 @@
 
     iput v0, v1, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->posRecord:I
 
-    .line 1582
+    .line 1588
     move/from16 v0, v21
 
     float-to-int v2, v0
@@ -606,14 +606,14 @@
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->scrollXRecord:I
 
-    .line 1583
+    .line 1589
     float-to-int v2, v11
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->alignmentRecord:I
 
-    .line 1584
+    .line 1590
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -646,14 +646,14 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
-    .line 1586
+    .line 1592
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
     if-eqz v2, :cond_7
 
-    .line 1588
+    .line 1594
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -670,7 +670,7 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
 
-    .line 1589
+    .line 1595
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -681,7 +681,7 @@
 
     div-int/lit8 v25, v2, 0x2
 
-    .line 1590
+    .line 1596
     .local v25, width:I
     move-object/from16 v0, p0
 
@@ -693,7 +693,7 @@
 
     div-int/lit8 v16, v2, 0x2
 
-    .line 1592
+    .line 1598
     .local v16, height:I
     move-object/from16 v0, p0
 
@@ -726,7 +726,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1593
+    .line 1599
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -767,7 +767,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1594
+    .line 1600
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -783,7 +783,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1595
+    .line 1601
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -797,7 +797,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1597
+    .line 1603
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -829,7 +829,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1598
+    .line 1604
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -849,7 +849,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1599
+    .line 1605
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -865,7 +865,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1600
+    .line 1606
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -879,7 +879,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1602
+    .line 1608
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -897,7 +897,7 @@
 
     goto/16 :goto_0
 
-    .line 1604
+    .line 1610
     .end local v16           #height:I
     .end local v25           #width:I
     :cond_7
@@ -910,7 +910,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1605
+    .line 1611
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -920,7 +920,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1607
+    .line 1613
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -930,7 +930,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->isScaleAnimation:Z
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1402(Lcom/htc/fragment/widget/FastScroller;Z)Z
 
-    .line 1608
+    .line 1614
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -939,7 +939,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->setState(I)V
 
-    .line 1609
+    .line 1615
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -972,7 +972,7 @@
 
     goto/16 :goto_0
 
-    .line 1615
+    .line 1621
     :cond_8
     move-object/from16 v0, p0
 
@@ -1000,7 +1000,7 @@
 
     if-nez v2, :cond_9
 
-    .line 1616
+    .line 1622
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1012,7 +1012,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1618
+    .line 1624
     :cond_9
     move-object/from16 v0, p0
 
@@ -1040,7 +1040,7 @@
 
     if-nez v2, :cond_a
 
-    .line 1619
+    .line 1625
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1052,7 +1052,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1622
+    .line 1628
     :cond_a
     move-object/from16 v0, p0
 
@@ -1060,7 +1060,7 @@
 
     if-eqz v2, :cond_b
 
-    .line 1623
+    .line 1629
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -1069,7 +1069,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/CarouselTextView;->enableClickMultiply(Z)V
 
-    .line 1625
+    .line 1631
     :cond_b
     move/from16 v0, v19
 
@@ -1077,7 +1077,7 @@
 
     iput v0, v1, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->posRecord:I
 
-    .line 1626
+    .line 1632
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1091,7 +1091,7 @@
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->startRecord:I
 
-    .line 1627
+    .line 1633
     mul-int v2, v19, v18
 
     move-object/from16 v0, p0
@@ -1109,7 +1109,7 @@
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->endRecord:I
 
-    .line 1628
+    .line 1634
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1142,14 +1142,14 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
-    .line 1630
+    .line 1636
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
     if-eqz v2, :cond_c
 
-    .line 1632
+    .line 1638
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -1166,7 +1166,7 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
 
-    .line 1633
+    .line 1639
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -1177,7 +1177,7 @@
 
     div-int/lit8 v25, v2, 0x2
 
-    .line 1634
+    .line 1640
     .restart local v25       #width:I
     move-object/from16 v0, p0
 
@@ -1189,7 +1189,7 @@
 
     div-int/lit8 v16, v2, 0x2
 
-    .line 1636
+    .line 1642
     .restart local v16       #height:I
     move-object/from16 v0, p0
 
@@ -1222,7 +1222,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1637
+    .line 1643
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1258,7 +1258,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1639
+    .line 1645
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1274,7 +1274,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1640
+    .line 1646
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1288,7 +1288,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1642
+    .line 1648
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1320,7 +1320,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1643
+    .line 1649
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1340,7 +1340,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1645
+    .line 1651
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1356,7 +1356,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1646
+    .line 1652
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1370,7 +1370,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1648
+    .line 1654
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -1388,7 +1388,7 @@
 
     goto/16 :goto_0
 
-    .line 1650
+    .line 1656
     .end local v16           #height:I
     .end local v25           #width:I
     :cond_c
@@ -1401,7 +1401,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1651
+    .line 1657
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1411,7 +1411,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1653
+    .line 1659
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1421,7 +1421,7 @@
 
     move-result v20
 
-    .line 1654
+    .line 1660
     .local v20, previous:I
     mul-int v2, v19, v18
 
@@ -1436,7 +1436,7 @@
 
     add-int v13, v2, v3
 
-    .line 1656
+    .line 1662
     .local v13, end:I
     move-object/from16 v0, p0
 
@@ -1447,7 +1447,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->isScaleAnimation:Z
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1402(Lcom/htc/fragment/widget/FastScroller;Z)Z
 
-    .line 1657
+    .line 1663
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1456,7 +1456,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->setState(I)V
 
-    .line 1658
+    .line 1664
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1474,7 +1474,7 @@
 
     goto/16 :goto_0
 
-    .line 1663
+    .line 1669
     .end local v9           #aX:I
     .end local v11           #alignment:F
     .end local v12           #dataArea:I
@@ -1495,7 +1495,7 @@
 
     move-result v17
 
-    .line 1664
+    .line 1670
     .local v17, itemHeight:I
     move-object/from16 v0, p0
 
@@ -1506,7 +1506,7 @@
 
     move-result v14
 
-    .line 1666
+    .line 1672
     .local v14, galleryHeight:I
     move-object/from16 v0, p0
 
@@ -1525,7 +1525,7 @@
 
     move-result v24
 
-    .line 1667
+    .line 1673
     .restart local v24       #totalItemCount:I
     move-object/from16 v0, p0
 
@@ -1549,7 +1549,7 @@
 
     sub-int v23, v2, v3
 
-    .line 1668
+    .line 1674
     .restart local v23       #thumbArea:I
     move-object/from16 v0, p0
 
@@ -1586,7 +1586,7 @@
 
     sub-int v12, v2, v3
 
-    .line 1670
+    .line 1676
     .restart local v12       #dataArea:I
     move/from16 v0, v19
 
@@ -1613,7 +1613,7 @@
 
     mul-float v11, v2, v3
 
-    .line 1671
+    .line 1677
     .restart local v11       #alignment:F
     move-object/from16 v0, p0
 
@@ -1635,13 +1635,13 @@
 
     sub-int v10, v2, v3
 
-    .line 1672
+    .line 1678
     .local v10, aY:I
     int-to-float v2, v10
 
     sub-float v22, v11, v2
 
-    .line 1674
+    .line 1680
     .local v22, scrollY:F
     move-object/from16 v0, p0
 
@@ -1656,16 +1656,16 @@
 
     if-gez v2, :cond_e
 
-    .line 1675
+    .line 1681
     const/16 v22, 0x0
 
-    .line 1676
+    .line 1682
     const/4 v11, 0x0
 
-    .line 1677
+    .line 1683
     const/16 v19, -0x1
 
-    .line 1680
+    .line 1686
     :cond_e
     mul-int v2, v24, v17
 
@@ -1673,7 +1673,7 @@
 
     if-lez v2, :cond_13
 
-    .line 1683
+    .line 1689
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1700,7 +1700,7 @@
 
     if-nez v2, :cond_f
 
-    .line 1684
+    .line 1690
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1712,7 +1712,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1686
+    .line 1692
     :cond_f
     move-object/from16 v0, p0
 
@@ -1740,7 +1740,7 @@
 
     if-nez v2, :cond_10
 
-    .line 1687
+    .line 1693
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1752,7 +1752,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1690
+    .line 1696
     :cond_10
     move-object/from16 v0, p0
 
@@ -1760,7 +1760,7 @@
 
     if-eqz v2, :cond_11
 
-    .line 1691
+    .line 1697
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -1769,7 +1769,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/CarouselTextView;->enableClickMultiply(Z)V
 
-    .line 1693
+    .line 1699
     :cond_11
     move/from16 v0, v19
 
@@ -1777,7 +1777,7 @@
 
     iput v0, v1, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->posRecord:I
 
-    .line 1694
+    .line 1700
     move/from16 v0, v22
 
     float-to-int v2, v0
@@ -1786,14 +1786,14 @@
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->scrollYRecord:I
 
-    .line 1695
+    .line 1701
     float-to-int v2, v11
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->alignmentRecord:I
 
-    .line 1696
+    .line 1702
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1826,14 +1826,14 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
-    .line 1698
+    .line 1704
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
     if-eqz v2, :cond_12
 
-    .line 1700
+    .line 1706
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -1850,7 +1850,7 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
 
-    .line 1701
+    .line 1707
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -1861,7 +1861,7 @@
 
     div-int/lit8 v25, v2, 0x2
 
-    .line 1702
+    .line 1708
     .restart local v25       #width:I
     move-object/from16 v0, p0
 
@@ -1873,7 +1873,7 @@
 
     div-int/lit8 v16, v2, 0x2
 
-    .line 1704
+    .line 1710
     .restart local v16       #height:I
     move-object/from16 v0, p0
 
@@ -1906,7 +1906,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1705
+    .line 1711
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1947,7 +1947,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1706
+    .line 1712
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1963,7 +1963,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1707
+    .line 1713
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -1977,7 +1977,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1709
+    .line 1715
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2009,7 +2009,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1710
+    .line 1716
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2029,7 +2029,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1711
+    .line 1717
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2045,7 +2045,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1712
+    .line 1718
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2059,7 +2059,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1714
+    .line 1720
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -2077,7 +2077,7 @@
 
     goto/16 :goto_0
 
-    .line 1716
+    .line 1722
     .end local v16           #height:I
     .end local v25           #width:I
     :cond_12
@@ -2090,7 +2090,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1717
+    .line 1723
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2100,7 +2100,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1719
+    .line 1725
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2110,7 +2110,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->isScaleAnimation:Z
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1402(Lcom/htc/fragment/widget/FastScroller;Z)Z
 
-    .line 1720
+    .line 1726
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2119,7 +2119,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->setState(I)V
 
-    .line 1721
+    .line 1727
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2152,7 +2152,7 @@
 
     goto/16 :goto_0
 
-    .line 1727
+    .line 1733
     :cond_13
     move-object/from16 v0, p0
 
@@ -2180,7 +2180,7 @@
 
     if-nez v2, :cond_14
 
-    .line 1728
+    .line 1734
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2192,7 +2192,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1730
+    .line 1736
     :cond_14
     move-object/from16 v0, p0
 
@@ -2220,7 +2220,7 @@
 
     if-nez v2, :cond_15
 
-    .line 1731
+    .line 1737
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2232,7 +2232,7 @@
 
     invoke-virtual {v2}, Landroid/view/animation/ScaleAnimation;->cancel()V
 
-    .line 1734
+    .line 1740
     :cond_15
     move-object/from16 v0, p0
 
@@ -2240,7 +2240,7 @@
 
     if-eqz v2, :cond_16
 
-    .line 1735
+    .line 1741
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -2249,7 +2249,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/CarouselTextView;->enableClickMultiply(Z)V
 
-    .line 1737
+    .line 1743
     :cond_16
     move/from16 v0, v19
 
@@ -2257,7 +2257,7 @@
 
     iput v0, v1, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->posRecord:I
 
-    .line 1738
+    .line 1744
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2271,7 +2271,7 @@
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->startRecord:I
 
-    .line 1739
+    .line 1745
     mul-int v2, v19, v17
 
     move-object/from16 v0, p0
@@ -2289,7 +2289,7 @@
 
     iput v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->endRecord:I
 
-    .line 1740
+    .line 1746
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2322,14 +2322,14 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
-    .line 1742
+    .line 1748
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
 
     if-eqz v2, :cond_17
 
-    .line 1744
+    .line 1750
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -2346,7 +2346,7 @@
 
     iput-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
 
-    .line 1745
+    .line 1751
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -2357,7 +2357,7 @@
 
     div-int/lit8 v25, v2, 0x2
 
-    .line 1746
+    .line 1752
     .restart local v25       #width:I
     move-object/from16 v0, p0
 
@@ -2369,7 +2369,7 @@
 
     div-int/lit8 v16, v2, 0x2
 
-    .line 1748
+    .line 1754
     .restart local v16       #height:I
     move-object/from16 v0, p0
 
@@ -2402,7 +2402,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1749
+    .line 1755
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2438,7 +2438,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1750
+    .line 1756
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2454,7 +2454,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1751
+    .line 1757
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2468,7 +2468,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1753
+    .line 1759
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2500,7 +2500,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1754
+    .line 1760
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2520,7 +2520,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1755
+    .line 1761
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2536,7 +2536,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1756
+    .line 1762
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2550,7 +2550,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1758
+    .line 1764
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -2568,7 +2568,7 @@
 
     goto/16 :goto_0
 
-    .line 1760
+    .line 1766
     .end local v16           #height:I
     .end local v25           #width:I
     :cond_17
@@ -2581,7 +2581,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleInAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$2302(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1761
+    .line 1767
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2591,7 +2591,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->scaleOutAnimation:Landroid/view/animation/ScaleAnimation;
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1502(Lcom/htc/fragment/widget/FastScroller;Landroid/view/animation/ScaleAnimation;)Landroid/view/animation/ScaleAnimation;
 
-    .line 1763
+    .line 1769
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2601,7 +2601,7 @@
 
     move-result v20
 
-    .line 1764
+    .line 1770
     .restart local v20       #previous:I
     mul-int v2, v19, v17
 
@@ -2616,7 +2616,7 @@
 
     add-int v13, v2, v3
 
-    .line 1766
+    .line 1772
     .restart local v13       #end:I
     move-object/from16 v0, p0
 
@@ -2627,7 +2627,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->isScaleAnimation:Z
     invoke-static {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->access$1402(Lcom/htc/fragment/widget/FastScroller;Z)Z
 
-    .line 1767
+    .line 1773
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -2636,7 +2636,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/FastScroller;->setState(I)V
 
-    .line 1768
+    .line 1774
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;

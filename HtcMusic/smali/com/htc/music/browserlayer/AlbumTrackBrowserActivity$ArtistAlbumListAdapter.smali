@@ -69,7 +69,7 @@
     .parameter "cto"
 
     .prologue
-    .line 829
+    .line 840
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     move-object v1, p0
@@ -90,77 +90,77 @@
 
     move-object/from16 v9, p9
 
-    .line 830
+    .line 841
     invoke-direct/range {v1 .. v9}, Landroid/widget/SimpleCursorTreeAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;I[Ljava/lang/String;[II[Ljava/lang/String;[I)V
 
-    .line 794
+    .line 805
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mBuffer:Ljava/lang/StringBuilder;
 
-    .line 796
+    .line 807
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mFormatArgs:[Ljava/lang/Object;
 
-    .line 798
+    .line 809
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 803
+    .line 814
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mGroupLayoutResId:I
 
-    .line 805
+    .line 816
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mChildLayoutResId:I
 
-    .line 807
+    .line 818
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mScreenWidth:I
 
-    .line 808
+    .line 819
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mScreenHeight:I
 
-    .line 1088
+    .line 1109
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mNotNotify:Z
 
-    .line 832
+    .line 843
     move/from16 v0, p4
 
     iput v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mGroupLayoutResId:I
 
-    .line 833
+    .line 844
     move/from16 v0, p7
 
     iput v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mChildLayoutResId:I
 
-    .line 835
+    .line 846
     invoke-virtual {p1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
 
-    .line 836
+    .line 847
     .local v12, res:Landroid/content/res/Resources;
     new-instance v10, Landroid/util/DisplayMetrics;
 
     invoke-direct {v10}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 837
+    .line 848
     .local v10, metrics:Landroid/util/DisplayMetrics;
     invoke-virtual {p1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->getWindowManager()Landroid/view/WindowManager;
 
@@ -172,22 +172,22 @@
 
     invoke-virtual {v1, v10}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 838
+    .line 849
     iget v1, v10, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mScreenWidth:I
 
-    .line 839
+    .line 850
     iget v1, v10, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mScreenHeight:I
 
-    .line 841
+    .line 852
     invoke-virtual {p1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
 
-    .line 842
+    .line 853
     .local v11, r:Landroid/content/res/Resources;
     const v1, 0x2080089
 
@@ -197,8 +197,8 @@
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mNowPlayingOverlay:Landroid/graphics/drawable/Drawable;
 
-    .line 843
-    const v1, 0x7f020050
+    .line 854
+    const v1, 0x7f020052
 
     invoke-virtual {v11, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -208,14 +208,14 @@
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 846
+    .line 857
     iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/BitmapDrawable;->setFilterBitmap(Z)V
 
-    .line 847
+    .line 858
     iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     const/4 v2, 0x0
@@ -224,20 +224,20 @@
 
     move-object v1, p2
 
-    .line 863
+    .line 874
     check-cast v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mActivity:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
-    .line 864
+    .line 875
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mResources:Landroid/content/res/Resources;
 
-    .line 865
-    const v1, 0x7f07023c
+    .line 876
+    const v1, 0x7f0701dc
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -245,7 +245,7 @@
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mAlbumSongSeparator:Ljava/lang/String;
 
-    .line 866
+    .line 877
     const v1, 0x7f07004e
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -254,7 +254,7 @@
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mUnknownAlbum:Ljava/lang/String;
 
-    .line 867
+    .line 878
     const v1, 0x7f07004d
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -263,7 +263,7 @@
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mUnknownArtist:Ljava/lang/String;
 
-    .line 874
+    .line 885
     return-void
 .end method
 
@@ -272,7 +272,7 @@
     .parameter "x0"
 
     .prologue
-    .line 778
+    .line 789
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mActivity:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     return-object v0
@@ -292,7 +292,7 @@
 
     const/4 v8, 0x0
 
-    .line 1267
+    .line 1288
     iget v7, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mChildLayoutResId:I
 
     invoke-virtual {p1, v7}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -301,7 +301,7 @@
 
     check-cast v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
 
-    .line 1271
+    .line 1292
     .local v6, vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     const-string v7, "title"
 
@@ -313,18 +313,18 @@
 
     move-result-object v0
 
-    .line 1272
+    .line 1293
     .local v0, TrackName:Ljava/lang/String;
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     invoke-virtual {v7, v0}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1274
+    .line 1295
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     invoke-virtual {v7, v9}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 1276
+    .line 1297
     iget-object v7, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->IsPickerMode()Z
@@ -334,12 +334,12 @@
 
     if-nez v7, :cond_1
 
-    .line 1277
+    .line 1298
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->getCurrentAudioId()I
 
     move-result v5
 
-    .line 1278
+    .line 1299
     .local v5, playingId:I
     const-string v7, "_id"
 
@@ -351,20 +351,20 @@
 
     move-result v2
 
-    .line 1279
+    .line 1300
     .local v2, currentId:I
     if-ne v5, v2, :cond_2
 
-    .line 1280
+    .line 1301
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemIndicator:Lcom/htc/widget/HtcListItemImageButton;
 
     invoke-virtual {v7, v8}, Lcom/htc/widget/HtcListItemImageButton;->setVisibility(I)V
 
-    .line 1285
+    .line 1306
     :goto_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 1286
+    .line 1307
     .local v1, builder:Ljava/lang/StringBuilder;
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
@@ -372,7 +372,7 @@
 
     invoke-virtual {v1, v8, v7}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 1288
+    .line 1309
     const-string v7, "artist"
 
     invoke-interface {p3, v7}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -383,7 +383,7 @@
 
     move-result-object v4
 
-    .line 1289
+    .line 1310
     .local v4, name:Ljava/lang/String;
     if-eqz v4, :cond_0
 
@@ -395,25 +395,25 @@
 
     if-eqz v7, :cond_3
 
-    .line 1290
+    .line 1311
     :cond_0
     iget-object v7, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mUnknownArtist:Ljava/lang/String;
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1295
+    .line 1316
     :goto_1
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 1296
+    .line 1317
     .local v3, data:Landroid/os/Bundle;
     const-string v7, "AudioId"
 
     invoke-virtual {v3, v7, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1297
+    .line 1318
     const-string v7, "ArtistName"
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -422,12 +422,12 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1298
+    .line 1319
     const-string v7, "TrackName"
 
     invoke-virtual {v3, v7, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1299
+    .line 1320
     const-string v7, "AlbumName"
 
     const-string v8, "album"
@@ -442,7 +442,7 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1300
+    .line 1321
     const-string v7, "filePath"
 
     const-string v8, "_data"
@@ -457,14 +457,14 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1302
+    .line 1323
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     iget v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mChildLayoutResId:I
 
     invoke-virtual {v7, v8, v3}, Lcom/htc/widget/HtcRimImageButton;->setTag(ILjava/lang/Object;)V
 
-    .line 1305
+    .line 1326
     .end local v1           #builder:Ljava/lang/StringBuilder;
     .end local v2           #currentId:I
     .end local v3           #data:Landroid/os/Bundle;
@@ -473,7 +473,7 @@
     :cond_1
     return-void
 
-    .line 1282
+    .line 1303
     .restart local v2       #currentId:I
     .restart local v5       #playingId:I
     :cond_2
@@ -483,7 +483,7 @@
 
     goto :goto_0
 
-    .line 1292
+    .line 1313
     .restart local v1       #builder:Ljava/lang/StringBuilder;
     .restart local v4       #name:Ljava/lang/String;
     :cond_3
@@ -500,7 +500,7 @@
     .parameter "isexpanded"
 
     .prologue
-    .line 1144
+    .line 1165
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mGroupLayoutResId:I
@@ -517,7 +517,7 @@
 
     check-cast v19, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
 
-    .line 1145
+    .line 1166
     .local v19, vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     move-object/from16 v0, p0
 
@@ -556,9 +556,9 @@
 
     move-result-object v20
 
-    if-eqz v20, :cond_12
+    if-eqz v20, :cond_11
 
-    .line 1147
+    .line 1168
     :cond_0
     const-string v20, "album"
 
@@ -578,11 +578,11 @@
 
     move-result-object v17
 
-    .line 1149
+    .line 1170
     .local v17, name:Ljava/lang/String;
     move-object/from16 v12, v17
 
-    .line 1150
+    .line 1171
     .local v12, displayname:Ljava/lang/String;
     const-string v20, "<unknown>"
 
@@ -596,12 +596,12 @@
 
     if-eqz v20, :cond_1
 
-    .line 1151
+    .line 1172
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mUnknownAlbum:Ljava/lang/String;
 
-    .line 1153
+    .line 1174
     :cond_1
     move-object/from16 v0, v19
 
@@ -613,12 +613,12 @@
 
     invoke-virtual {v0, v12}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1155
+    .line 1176
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 1156
+    .line 1177
     .local v8, builder:Ljava/lang/StringBuilder;
     const/16 v20, 0x0
 
@@ -632,7 +632,7 @@
 
     invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 1158
+    .line 1179
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -646,7 +646,7 @@
 
     if-eqz v20, :cond_3
 
-    .line 1159
+    .line 1180
     const-string v20, "artist"
 
     move-object/from16 v0, p3
@@ -665,7 +665,7 @@
 
     move-result-object v17
 
-    .line 1160
+    .line 1181
     if-eqz v17, :cond_2
 
     const-string v20, "<unknown>"
@@ -680,7 +680,7 @@
 
     if-eqz v20, :cond_8
 
-    .line 1161
+    .line 1182
     :cond_2
     move-object/from16 v0, p0
 
@@ -692,7 +692,7 @@
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1165
+    .line 1186
     :goto_0
     move-object/from16 v0, v19
 
@@ -706,7 +706,7 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 1168
+    .line 1189
     :cond_3
     move-object/from16 v0, p0
 
@@ -734,7 +734,7 @@
 
     if-eqz v20, :cond_5
 
-    .line 1169
+    .line 1190
     :cond_4
     const-string v20, "_id"
 
@@ -754,13 +754,13 @@
 
     move-result v3
 
-    .line 1170
+    .line 1191
     .local v3, AlbumId:I
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 1171
+    .line 1192
     .local v10, data:Landroid/os/Bundle;
     const-string v20, "AlbumId"
 
@@ -768,14 +768,14 @@
 
     invoke-virtual {v10, v0, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1172
+    .line 1193
     const-string v20, "AlbumName"
 
     move-object/from16 v0, v20
 
     invoke-virtual {v10, v0, v12}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1173
+    .line 1194
     const-string v20, "ArtistName"
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -788,7 +788,7 @@
 
     invoke-virtual {v10, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1174
+    .line 1195
     move-object/from16 v0, v19
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
@@ -807,7 +807,7 @@
 
     invoke-virtual {v0, v1, v10}, Lcom/htc/widget/HtcRimImageButton;->setTag(ILjava/lang/Object;)V
 
-    .line 1177
+    .line 1198
     .end local v3           #AlbumId:I
     .end local v10           #data:Landroid/os/Bundle;
     :cond_5
@@ -815,7 +815,7 @@
 
     iget-object v14, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 1181
+    .line 1202
     .local v14, iv:Lcom/htc/widget/HtcListItemTileImage;
     if-eqz v17, :cond_6
 
@@ -834,7 +834,7 @@
     :cond_6
     const/16 v18, 0x1
 
-    .line 1182
+    .line 1203
     .local v18, unknown:Z
     :goto_1
     const/16 v20, 0x0
@@ -847,7 +847,7 @@
 
     move-result v5
 
-    .line 1183
+    .line 1204
     .local v5, artIndex:I
     const-string v20, "album_art"
 
@@ -867,7 +867,7 @@
 
     move-result-object v4
 
-    .line 1185
+    .line 1206
     .local v4, art:Ljava/lang/String;
     if-nez v18, :cond_7
 
@@ -879,7 +879,7 @@
 
     if-nez v20, :cond_a
 
-    .line 1187
+    .line 1208
     :cond_7
     move-object/from16 v0, p0
 
@@ -891,14 +891,14 @@
 
     invoke-virtual {v14, v0}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1263
+    .line 1284
     .end local v4           #art:Ljava/lang/String;
     .end local v12           #displayname:Ljava/lang/String;
     .end local v18           #unknown:Z
     :goto_2
     return-void
 
-    .line 1163
+    .line 1184
     .end local v5           #artIndex:I
     .end local v14           #iv:Lcom/htc/widget/HtcListItemTileImage;
     .restart local v12       #displayname:Ljava/lang/String;
@@ -909,14 +909,14 @@
 
     goto/16 :goto_0
 
-    .line 1181
+    .line 1202
     .restart local v14       #iv:Lcom/htc/widget/HtcListItemTileImage;
     :cond_9
     const/16 v18, 0x0
 
     goto :goto_1
 
-    .line 1189
+    .line 1210
     .restart local v4       #art:Ljava/lang/String;
     .restart local v5       #artIndex:I
     .restart local v18       #unknown:Z
@@ -938,20 +938,20 @@
 
     move-result-object v13
 
-    .line 1190
+    .line 1211
     .local v13, item:Lcom/htc/music/util/MBitmap;
-    if-nez v13, :cond_e
+    if-nez v13, :cond_d
 
     const/4 v7, 0x0
 
-    .line 1191
+    .line 1212
     .local v7, bitmap:Landroid/graphics/Bitmap;
     :goto_3
-    if-nez v13, :cond_f
+    if-nez v13, :cond_e
 
     const/4 v11, 0x0
 
-    .line 1192
+    .line 1213
     .local v11, decodePath:Ljava/lang/String;
     :goto_4
     if-eqz v7, :cond_b
@@ -966,17 +966,17 @@
 
     move-result v20
 
-    if-nez v20, :cond_11
+    if-nez v20, :cond_10
 
-    .line 1194
+    .line 1215
     :cond_b
     const/4 v6, 0x0
 
-    .line 1195
+    .line 1216
     .local v6, b:Landroid/graphics/Bitmap;
     if-eqz v4, :cond_c
 
-    .line 1196
+    .line 1217
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
@@ -1005,11 +1005,10 @@
 
     move-result-object v6
 
-    .line 1198
-    :cond_c
-    if-nez v6, :cond_d
+    .line 1218
+    if-nez v6, :cond_c
 
-    .line 1199
+    .line 1219
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
@@ -1040,18 +1039,18 @@
 
     move-result-object v6
 
-    .line 1201
-    :cond_d
-    if-eqz v6, :cond_10
+    .line 1222
+    :cond_c
+    if-eqz v6, :cond_f
 
-    .line 1202
+    .line 1223
     new-instance v16, Lcom/htc/music/util/MBitmap;
 
     move-object/from16 v0, v16
 
     invoke-direct {v0, v6, v4}, Lcom/htc/music/util/MBitmap;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
-    .line 1203
+    .line 1224
     .local v16, mb:Lcom/htc/music/util/MBitmap;
     move-object/from16 v0, p0
 
@@ -1070,36 +1069,36 @@
 
     invoke-virtual {v0, v5, v1}, Lcom/htc/music/util/MemoryCacheMBitmapByTime;->push(ILcom/htc/music/util/MBitmap;)Z
 
-    .line 1205
+    .line 1226
     invoke-virtual {v14, v6}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageBitmap(Landroid/graphics/Bitmap;)V
 
     goto/16 :goto_2
 
-    .line 1190
+    .line 1211
     .end local v6           #b:Landroid/graphics/Bitmap;
     .end local v7           #bitmap:Landroid/graphics/Bitmap;
     .end local v11           #decodePath:Ljava/lang/String;
     .end local v16           #mb:Lcom/htc/music/util/MBitmap;
-    :cond_e
+    :cond_d
     invoke-virtual {v13}, Lcom/htc/music/util/MBitmap;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v7
 
     goto :goto_3
 
-    .line 1191
+    .line 1212
     .restart local v7       #bitmap:Landroid/graphics/Bitmap;
-    :cond_f
+    :cond_e
     invoke-virtual {v13}, Lcom/htc/music/util/MBitmap;->getPath()Ljava/lang/String;
 
     move-result-object v11
 
     goto :goto_4
 
-    .line 1208
+    .line 1229
     .restart local v6       #b:Landroid/graphics/Bitmap;
     .restart local v11       #decodePath:Ljava/lang/String;
-    :cond_10
+    :cond_f
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
@@ -1112,14 +1111,14 @@
 
     goto/16 :goto_2
 
-    .line 1212
+    .line 1233
     .end local v6           #b:Landroid/graphics/Bitmap;
-    :cond_11
+    :cond_10
     invoke-virtual {v14, v7}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageBitmap(Landroid/graphics/Bitmap;)V
 
     goto/16 :goto_2
 
-    .line 1217
+    .line 1238
     .end local v4           #art:Ljava/lang/String;
     .end local v5           #artIndex:I
     .end local v7           #bitmap:Landroid/graphics/Bitmap;
@@ -1130,7 +1129,7 @@
     .end local v14           #iv:Lcom/htc/widget/HtcListItemTileImage;
     .end local v17           #name:Ljava/lang/String;
     .end local v18           #unknown:Z
-    :cond_12
+    :cond_11
     const-string v20, "title"
 
     move-object/from16 v0, p3
@@ -1155,7 +1154,7 @@
 
     invoke-interface {v0, v1, v2}, Landroid/database/Cursor;->copyStringToBuffer(ILandroid/database/CharArrayBuffer;)V
 
-    .line 1219
+    .line 1240
     move-object/from16 v0, v19
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
@@ -1194,12 +1193,12 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1221
+    .line 1242
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 1222
+    .line 1243
     .restart local v8       #builder:Ljava/lang/StringBuilder;
     const/16 v20, 0x0
 
@@ -1213,7 +1212,7 @@
 
     invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 1232
+    .line 1253
     const-string v20, "artist"
 
     move-object/from16 v0, p3
@@ -1232,9 +1231,9 @@
 
     move-result-object v17
 
-    .line 1234
+    .line 1255
     .restart local v17       #name:Ljava/lang/String;
-    if-eqz v17, :cond_13
+    if-eqz v17, :cond_12
 
     const-string v20, "<unknown>"
 
@@ -1246,10 +1245,10 @@
 
     move-result v20
 
-    if-eqz v20, :cond_15
+    if-eqz v20, :cond_14
 
-    .line 1235
-    :cond_13
+    .line 1256
+    :cond_12
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mUnknownArtist:Ljava/lang/String;
@@ -1260,13 +1259,13 @@
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1239
+    .line 1260
     :goto_5
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
     move-result v15
 
-    .line 1240
+    .line 1261
     .local v15, len:I
     move-object/from16 v0, v19
 
@@ -1282,9 +1281,9 @@
 
     move/from16 v0, v20
 
-    if-ge v0, v15, :cond_14
+    if-ge v0, v15, :cond_13
 
-    .line 1241
+    .line 1262
     new-array v0, v15, [C
 
     move-object/from16 v20, v0
@@ -1295,8 +1294,8 @@
 
     iput-object v0, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->buffer2:[C
 
-    .line 1243
-    :cond_14
+    .line 1264
+    :cond_13
     const/16 v20, 0x0
 
     move-object/from16 v0, v19
@@ -1315,7 +1314,7 @@
 
     invoke-virtual {v8, v0, v15, v1, v2}, Ljava/lang/StringBuilder;->getChars(II[CI)V
 
-    .line 1244
+    .line 1265
     move-object/from16 v0, v19
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
@@ -1340,12 +1339,12 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 1246
+    .line 1267
     move-object/from16 v0, v19
 
     iget-object v14, v0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 1255
+    .line 1276
     .restart local v14       #iv:Lcom/htc/widget/HtcListItemTileImage;
     const-string v20, "album_id"
 
@@ -1365,7 +1364,7 @@
 
     move-result v5
 
-    .line 1257
+    .line 1278
     .restart local v5       #artIndex:I
     move-object/from16 v0, p0
 
@@ -1381,18 +1380,18 @@
 
     move-result-object v9
 
-    .line 1259
+    .line 1280
     .local v9, d:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v14, v9}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto/16 :goto_2
 
-    .line 1237
+    .line 1258
     .end local v5           #artIndex:I
     .end local v9           #d:Landroid/graphics/drawable/Drawable;
     .end local v14           #iv:Lcom/htc/widget/HtcListItemTileImage;
     .end local v15           #len:I
-    :cond_15
+    :cond_14
     move-object/from16 v0, v17
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1405,16 +1404,16 @@
     .parameter "cursor"
 
     .prologue
-    .line 1365
+    .line 1393
     invoke-super {p0, p1}, Landroid/widget/SimpleCursorTreeAdapter;->changeCursor(Landroid/database/Cursor;)V
 
-    .line 1366
+    .line 1394
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v0, p1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$1902(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-static {v0, p1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2002(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 1367
+    .line 1395
     return-void
 .end method
 
@@ -1427,10 +1426,10 @@
     .parameter "parent"
 
     .prologue
-    .line 1007
+    .line 1023
     const/4 v5, 0x0
 
-    .line 1009
+    .line 1025
     .local v5, v:Landroid/view/View;
     :try_start_0
     invoke-super/range {p0 .. p5}, Landroid/widget/SimpleCursorTreeAdapter;->getChildView(IIZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
@@ -1439,13 +1438,13 @@
 
     move-result-object v5
 
-    .line 1013
+    .line 1029
     :goto_0
     if-nez v5, :cond_0
 
     move-object/from16 v5, p4
 
-    .line 1014
+    .line 1030
     :cond_0
     iget v7, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mChildLayoutResId:I
 
@@ -1455,20 +1454,20 @@
 
     check-cast v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
 
-    .line 1016
+    .line 1032
     .local v6, vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     if-eqz v7, :cond_1
 
-    .line 1017
+    .line 1033
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     const/4 v8, 0x0
 
     invoke-virtual {v7, v8}, Lcom/htc/widget/HtcCheckBox;->setPartialSelection(Z)V
 
-    .line 1018
+    .line 1034
     if-eqz p3, :cond_4
 
     new-instance v7, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$HtcListItemRoundSeparable;
@@ -1481,7 +1480,7 @@
 
     invoke-virtual {v5, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1021
+    .line 1037
     :goto_1
     iget-object v7, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mActivity:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
@@ -1493,11 +1492,11 @@
 
     move-result v4
 
-    .line 1022
+    .line 1038
     .local v4, state:I
     packed-switch v4, :pswitch_data_0
 
-    .line 1031
+    .line 1047
     .end local v4           #state:I
     :cond_1
     :goto_2
@@ -1505,23 +1504,23 @@
 
     if-eqz v7, :cond_3
 
-    .line 1032
+    .line 1048
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1033
+    .line 1049
     .local v0, data:Landroid/os/Bundle;
     const-string v7, "groupPos"
 
     invoke-virtual {v0, v7, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1034
+    .line 1050
     const-string v7, "childPos"
 
     invoke-virtual {v0, v7, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1035
+    .line 1051
     const-string v7, "name"
 
     iget-object v8, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
@@ -1532,36 +1531,36 @@
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1038
+    .line 1054
     invoke-virtual {v5}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    .line 1039
+    .line 1055
     .local v2, group:Landroid/view/ViewGroup;
     if-eqz v2, :cond_2
 
-    .line 1040
+    .line 1056
     invoke-virtual {v2, v5}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
     move-result v3
 
-    .line 1041
+    .line 1057
     .local v3, index:I
     const-string v7, "index"
 
     invoke-virtual {v0, v7, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1044
+    .line 1060
     .end local v3           #index:I
     :cond_2
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v7, v0}, Lcom/htc/widget/HtcRimImageButton;->setTag(Ljava/lang/Object;)V
 
-    .line 1046
+    .line 1062
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     new-instance v8, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$2;
@@ -1570,14 +1569,22 @@
 
     invoke-virtual {v7, v8}, Lcom/htc/widget/HtcRimImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1082
+    .line 1097
     new-instance v7, Landroid/view/TouchDelegate;
 
     new-instance v8, Landroid/graphics/Rect;
 
     iget v9, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mScreenWidth:I
 
-    add-int/lit8 v9, v9, -0x64
+    iget-object v10, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
+
+    const v11, 0x7f0b009c
+
+    invoke-static {v10, v11}, Lcom/htc/music/util/ProjectSettings;->getIntValue(Landroid/content/Context;I)I
+
+    move-result v10
+
+    sub-int/2addr v9, v10
 
     const/4 v10, 0x0
 
@@ -1593,24 +1600,24 @@
 
     invoke-virtual {v5, v7}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
 
-    .line 1085
+    .line 1106
     .end local v0           #data:Landroid/os/Bundle;
     .end local v2           #group:Landroid/view/ViewGroup;
     :cond_3
     return-object v5
 
-    .line 1010
+    .line 1026
     .end local v6           #vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     :catch_0
     move-exception v1
 
-    .line 1011
+    .line 1027
     .local v1, ex:Ljava/lang/Exception;
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 1019
+    .line 1035
     .end local v1           #ex:Ljava/lang/Exception;
     .restart local v6       #vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     :cond_4
@@ -1626,7 +1633,7 @@
 
     goto :goto_1
 
-    .line 1024
+    .line 1040
     .restart local v4       #state:I
     :pswitch_0
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
@@ -1637,7 +1644,7 @@
 
     goto :goto_2
 
-    .line 1027
+    .line 1043
     :pswitch_1
     iget-object v7, v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
@@ -1647,7 +1654,7 @@
 
     goto :goto_2
 
-    .line 1022
+    .line 1038
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1660,10 +1667,10 @@
     .parameter "groupCursor"
 
     .prologue
-    .line 1309
+    .line 1330
     const/4 v10, 0x0
 
-    .line 1310
+    .line 1331
     .local v10, ret:Landroid/database/Cursor;
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
@@ -1676,13 +1683,13 @@
 
     move-object v11, v10
 
-    .line 1360
+    .line 1388
     .end local v10           #ret:Landroid/database/Cursor;
     .local v11, ret:Landroid/database/Cursor;
     :goto_0
     return-object v11
 
-    .line 1312
+    .line 1333
     .end local v11           #ret:Landroid/database/Cursor;
     .restart local v10       #ret:Landroid/database/Cursor;
     :cond_0
@@ -1696,7 +1703,7 @@
 
     move-result v9
 
-    .line 1315
+    .line 1336
     .local v9, id:I
     const/16 v0, 0x9
 
@@ -1756,11 +1763,11 @@
 
     aput-object v1, v2, v0
 
-    .line 1322
+    .line 1343
     .local v2, cols:[Ljava/lang/String;
     const-string v5, "title COLLATE NOCASE ASC"
 
-    .line 1323
+    .line 1344
     .local v5, mSortOrder:Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1780,18 +1787,18 @@
 
     move-result-object v5
 
-    .line 1324
+    .line 1345
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1325
+    .line 1346
     .local v13, where:Ljava/lang/StringBuilder;
     const-string v0, "title != \'\'"
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1326
+    .line 1347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1818,7 +1825,12 @@
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1328
+    .line 1348
+    const-string v0, " AND is_music>=1"
+
+    invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1350
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mGenreId:Ljava/lang/String;
@@ -1828,7 +1840,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1329
+    .line 1351
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mGenreId:Ljava/lang/String;
@@ -1846,7 +1858,7 @@
 
     int-to-long v7, v0
 
-    .line 1330
+    .line 1352
     .local v7, genreId:J
     const-wide/16 v0, -0x1
 
@@ -1854,12 +1866,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1331
+    .line 1353
     const-string v0, " AND _id NOT IN (SELECT audio_id FROM audio_genres_map)"
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1333
+    .line 1355
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
@@ -1878,12 +1890,12 @@
     :goto_1
     move-object v11, v10
 
-    .line 1360
+    .line 1388
     .end local v10           #ret:Landroid/database/Cursor;
     .restart local v11       #ret:Landroid/database/Cursor;
     goto/16 :goto_0
 
-    .line 1337
+    .line 1359
     .end local v11           #ret:Landroid/database/Cursor;
     .restart local v7       #genreId:J
     .restart local v10       #ret:Landroid/database/Cursor;
@@ -1925,7 +1937,7 @@
 
     goto :goto_1
 
-    .line 1342
+    .line 1364
     .end local v7           #genreId:J
     :cond_2
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
@@ -1937,7 +1949,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 1343
+    .line 1365
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1975,7 +1987,7 @@
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1345
+    .line 1367
     :cond_3
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
@@ -1986,7 +1998,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 1346
+    .line 1368
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mComposer:Ljava/lang/String;
@@ -1994,32 +2006,44 @@
 
     move-result-object v6
 
-    .line 1347
+    .line 1369
     .local v6, composer:Ljava/lang/String;
     invoke-static {v6}, Lcom/htc/music/util/MusicUtils;->isUnknownComposer(Ljava/lang/String;)Z
 
     move-result v12
 
-    .line 1348
+    .line 1370
     .local v12, unknown:Z
     if-eqz v12, :cond_5
 
-    .line 1349
+    .line 1371
     const-string v0, " AND "
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1350
+    .line 1372
     invoke-static {v13}, Lcom/htc/music/util/MusicUtils;->appendUnknownComposerFilter(Ljava/lang/StringBuilder;)V
 
-    .line 1355
+    .line 1377
     .end local v6           #composer:Ljava/lang/String;
     .end local v12           #unknown:Z
     :cond_4
     :goto_2
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
-    sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mDbTable:I
+    invoke-static {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$1900(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_6
+
+    .line 1378
+    iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
+
+    sget-object v1, Lcom/htc/music/util/MusicUtils$Media2;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2031,9 +2055,9 @@
 
     move-result-object v10
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 1352
+    .line 1374
     .restart local v6       #composer:Ljava/lang/String;
     .restart local v12       #unknown:Z
     :cond_5
@@ -2064,6 +2088,26 @@
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
+
+    .line 1382
+    .end local v6           #composer:Ljava/lang/String;
+    .end local v12           #unknown:Z
+    :cond_6
+    iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
+
+    sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v5}, Lcom/htc/music/util/MusicUtils;->query(Landroid/content/Context;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v10
+
+    goto/16 :goto_1
 .end method
 
 .method public getGroupView(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
@@ -2078,10 +2122,10 @@
 
     const/4 v10, 0x0
 
-    .line 904
+    .line 915
     const/4 v3, 0x0
 
-    .line 906
+    .line 917
     .local v3, v:Landroid/view/View;
     :try_start_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/SimpleCursorTreeAdapter;->getGroupView(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
@@ -2090,13 +2134,13 @@
 
     move-result-object v3
 
-    .line 910
+    .line 921
     :goto_0
     if-nez v3, :cond_0
 
     move-object v3, p3
 
-    .line 911
+    .line 922
     :cond_0
     iget v5, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mGroupLayoutResId:I
 
@@ -2106,7 +2150,7 @@
 
     check-cast v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
 
-    .line 913
+    .line 924
     .local v4, vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     new-instance v5, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$HtcListItemRoundSeparable;
 
@@ -2114,7 +2158,7 @@
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 915
+    .line 926
     iget-object v5, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->IsPickerMode()Z
@@ -2124,7 +2168,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 916
+    .line 927
     iget-object v5, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mActivity:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-virtual {v5}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->getGroupListView()Lcom/htc/music/widget/GroupListView;
@@ -2135,27 +2179,27 @@
 
     move-result v2
 
-    .line 917
+    .line 928
     .local v2, state:I
     packed-switch v2, :pswitch_data_0
 
-    .line 959
+    .line 975
     .end local v2           #state:I
     :goto_1
     return-object v3
 
-    .line 907
+    .line 918
     .end local v4           #vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     :catch_0
     move-exception v1
 
-    .line 908
+    .line 919
     .local v1, e:Ljava/lang/Exception;
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 919
+    .line 930
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v2       #state:I
     .restart local v4       #vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
@@ -2164,60 +2208,60 @@
 
     invoke-virtual {v5, v10}, Lcom/htc/widget/HtcCheckBox;->setPartialSelection(Z)V
 
-    .line 920
+    .line 931
     iget-object v5, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     goto :goto_1
 
-    .line 923
+    .line 934
     :pswitch_1
     iget-object v5, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v5, v10}, Lcom/htc/widget/HtcCheckBox;->setPartialSelection(Z)V
 
-    .line 924
+    .line 935
     iget-object v5, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v5, v10}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     goto :goto_1
 
-    .line 928
+    .line 939
     :pswitch_2
     iget-object v5, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/HtcCheckBox;->setPartialSelection(Z)V
 
-    .line 929
+    .line 940
     iget-object v5, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     goto :goto_1
 
-    .line 933
+    .line 944
     .end local v2           #state:I
     :cond_1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 934
+    .line 945
     .local v0, data:Landroid/os/Bundle;
     const-string v5, "groupPos"
 
     invoke-virtual {v0, v5, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 935
+    .line 946
     const-string v5, "childPos"
 
     const/4 v6, -0x1
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 936
+    .line 947
     const-string v5, "name"
 
     iget-object v6, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
@@ -2228,12 +2272,12 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 937
+    .line 948
     iget-object v5, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v5, v0}, Lcom/htc/widget/HtcRimImageButton;->setTag(Ljava/lang/Object;)V
 
-    .line 939
+    .line 950
     iget-object v5, v4, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     new-instance v6, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$1;
@@ -2242,14 +2286,22 @@
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/HtcRimImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 954
+    .line 964
     new-instance v5, Landroid/view/TouchDelegate;
 
     new-instance v6, Landroid/graphics/Rect;
 
     iget v7, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mScreenWidth:I
 
-    add-int/lit8 v7, v7, -0x64
+    iget-object v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
+
+    const v9, 0x7f0b009c
+
+    invoke-static {v8, v9}, Lcom/htc/music/util/ProjectSettings;->getIntValue(Landroid/content/Context;I)I
+
+    move-result v8
+
+    sub-int/2addr v7, v8
 
     iget v8, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mScreenWidth:I
 
@@ -2265,7 +2317,7 @@
 
     goto :goto_1
 
-    .line 917
+    .line 928
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -2284,18 +2336,18 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1100
+    .line 1121
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/SimpleCursorTreeAdapter;->newChildView(Landroid/content/Context;Landroid/database/Cursor;ZLandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1101
+    .line 1122
     .local v0, v:Landroid/view/View;
     new-instance v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
 
     invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;-><init>(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;)V
 
-    .line 1102
+    .line 1123
     .local v1, vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     const v2, 0x7f080023
 
@@ -2307,21 +2359,21 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 1103
+    .line 1124
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1104
+    .line 1125
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItemTileImage;->setVisibility(I)V
 
-    .line 1105
+    .line 1126
     const v2, 0x7f080024
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2332,7 +2384,7 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 1107
+    .line 1128
     iget-object v2, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->IsPickerMode()Z
@@ -2342,7 +2394,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 1108
+    .line 1129
     const v2, 0x7f080027
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2353,37 +2405,37 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 1109
+    .line 1130
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     if-eqz v2, :cond_0
 
-    .line 1110
+    .line 1131
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setFocusable(Z)V
 
-    .line 1111
+    .line 1132
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setClickable(Z)V
 
-    .line 1112
+    .line 1133
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setPartialSelection(Z)V
 
-    .line 1113
+    .line 1134
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
-    .line 1114
+    .line 1135
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setVisibility(I)V
 
-    .line 1135
+    .line 1156
     :cond_0
     :goto_0
     new-instance v2, Landroid/database/CharArrayBuffer;
@@ -2394,22 +2446,22 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->buffer1:Landroid/database/CharArrayBuffer;
 
-    .line 1136
+    .line 1157
     const/16 v2, 0xc8
 
     new-array v2, v2, [C
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->buffer2:[C
 
-    .line 1138
+    .line 1159
     iget v2, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mChildLayoutResId:I
 
     invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 1139
+    .line 1160
     return-object v0
 
-    .line 1117
+    .line 1138
     :cond_1
     const v2, 0x7f080026
 
@@ -2421,7 +2473,7 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
-    .line 1118
+    .line 1139
     const v2, 0x7f080025
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2432,12 +2484,12 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemIndicator:Lcom/htc/widget/HtcListItemImageButton;
 
-    .line 1119
+    .line 1140
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     if-eqz v2, :cond_2
 
-    .line 1120
+    .line 1141
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     const-string v3, "common_circle_outer"
@@ -2466,35 +2518,35 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/htc/widget/HtcRimImageButton;->setButtonBackgroundResource(III)V
 
-    .line 1124
+    .line 1145
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     const v3, 0x7f020028
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 
-    .line 1125
+    .line 1146
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcRimImageButton;->setClickable(Z)V
 
-    .line 1126
+    .line 1147
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcRimImageButton;->setFocusable(Z)V
 
-    .line 1127
+    .line 1148
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcRimImageButton;->setVisibility(I)V
 
-    .line 1130
+    .line 1151
     :cond_2
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemIndicator:Lcom/htc/widget/HtcListItemImageButton;
 
     if-eqz v2, :cond_0
 
-    .line 1131
+    .line 1152
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemIndicator:Lcom/htc/widget/HtcListItemImageButton;
 
     const v3, 0x2080089
@@ -2514,18 +2566,18 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 964
+    .line 980
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/SimpleCursorTreeAdapter;->newGroupView(Landroid/content/Context;Landroid/database/Cursor;ZLandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 965
+    .line 981
     .local v0, v:Landroid/view/View;
     new-instance v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
 
     invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;-><init>(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;)V
 
-    .line 967
+    .line 983
     .local v1, vh:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;
     const v2, 0x7f080023
 
@@ -2537,7 +2589,7 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 968
+    .line 984
     const v2, 0x7f080024
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2548,7 +2600,7 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 972
+    .line 988
     const v2, 0x7f080026
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2559,7 +2611,7 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
-    .line 973
+    .line 989
     const v2, 0x7f080027
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -2570,7 +2622,7 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 974
+    .line 990
     iget-object v2, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->IsPickerMode()Z
@@ -2580,37 +2632,37 @@
 
     if-eqz v2, :cond_1
 
-    .line 975
+    .line 991
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     if-eqz v2, :cond_0
 
-    .line 976
+    .line 992
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setFocusable(Z)V
 
-    .line 977
+    .line 993
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setClickable(Z)V
 
-    .line 978
+    .line 994
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setPartialSelection(Z)V
 
-    .line 979
+    .line 995
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
-    .line 980
+    .line 996
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcCheckBox;->setVisibility(I)V
 
-    .line 995
+    .line 1011
     :cond_0
     :goto_0
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
@@ -2619,14 +2671,14 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 996
+    .line 1012
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 998
+    .line 1014
     new-instance v2, Landroid/database/CharArrayBuffer;
 
     const/16 v3, 0x64
@@ -2635,28 +2687,28 @@
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->buffer1:Landroid/database/CharArrayBuffer;
 
-    .line 999
+    .line 1015
     const/16 v2, 0xc8
 
     new-array v2, v2, [C
 
     iput-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->buffer2:[C
 
-    .line 1000
+    .line 1016
     iget v2, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mGroupLayoutResId:I
 
     invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 1001
+    .line 1017
     return-object v0
 
-    .line 983
+    .line 999
     :cond_1
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     if-eqz v2, :cond_0
 
-    .line 984
+    .line 1000
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     const-string v3, "common_circle_outer"
@@ -2685,24 +2737,24 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/htc/widget/HtcRimImageButton;->setButtonBackgroundResource(III)V
 
-    .line 988
+    .line 1004
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     const v3, 0x7f020028
 
     invoke-virtual {v2, v3}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 
-    .line 989
+    .line 1005
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcRimImageButton;->setClickable(Z)V
 
-    .line 990
+    .line 1006
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcRimImageButton;->setFocusable(Z)V
 
-    .line 991
+    .line 1007
     iget-object v2, v1, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$ViewHolder;->listItemOptions:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v2, v7}, Lcom/htc/widget/HtcRimImageButton;->setVisibility(I)V
@@ -2714,16 +2766,16 @@
     .locals 1
 
     .prologue
-    .line 1091
+    .line 1112
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->mNotNotify:Z
 
     if-eqz v0, :cond_0
 
-    .line 1096
+    .line 1117
     :goto_0
     return-void
 
-    .line 1095
+    .line 1116
     :cond_0
     invoke-super {p0}, Landroid/widget/SimpleCursorTreeAdapter;->notifyDataSetChanged()V
 
@@ -2735,7 +2787,7 @@
     .parameter "constraint"
 
     .prologue
-    .line 1371
+    .line 1399
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -2743,7 +2795,7 @@
     move-result-object v1
 
     #calls: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->getTrackCursor(Ljava/lang/String;)Landroid/database/Cursor;
-    invoke-static {v0, v1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2000(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-static {v0, v1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$2100(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 

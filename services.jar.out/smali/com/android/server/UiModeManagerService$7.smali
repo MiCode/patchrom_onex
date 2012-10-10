@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 363
+    .line 366
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,20 +44,20 @@
 
     const/4 v3, 0x0
 
-    .line 394
+    .line 397
     if-nez p1, :cond_1
 
-    .line 417
+    .line 420
     :cond_0
     :goto_0
     return v3
 
-    .line 397
+    .line 400
     :cond_1
     iget-object v4, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mLocation:Landroid/location/Location;
-    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
+    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
 
     move-result-object v4
 
@@ -65,10 +65,10 @@
 
     move v3, v2
 
-    .line 398
+    .line 401
     goto :goto_0
 
-    .line 404
+    .line 407
     :cond_2
     invoke-virtual {p1}, Landroid/location/Location;->getTime()J
 
@@ -77,7 +77,7 @@
     iget-object v6, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mLocation:Landroid/location/Location;
-    invoke-static {v6}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
+    invoke-static {v6}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
 
     move-result-object v6
 
@@ -89,11 +89,11 @@
 
     if-ltz v4, :cond_0
 
-    .line 409
+    .line 412
     iget-object v4, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mLocation:Landroid/location/Location;
-    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
+    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
 
     move-result-object v4
 
@@ -101,12 +101,12 @@
 
     move-result v0
 
-    .line 412
+    .line 415
     .local v0, distance:F
     iget-object v4, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mLocation:Landroid/location/Location;
-    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
+    invoke-static {v4}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
 
     move-result-object v4
 
@@ -120,7 +120,7 @@
 
     add-float v1, v4, v5
 
-    .line 417
+    .line 420
     .local v1, totalAccuracy:F
     cmpl-float v4, v0, v1
 
@@ -146,17 +146,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 366
+    .line 369
     invoke-direct {p0, p1}, Lcom/android/server/UiModeManagerService$7;->hasMoved(Landroid/location/Location;)Z
 
     move-result v1
 
-    .line 367
+    .line 370
     .local v1, hasMoved:Z
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mLocation:Landroid/location/Location;
-    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
+    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
 
     move-result-object v2
 
@@ -169,7 +169,7 @@
     iget-object v3, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mLocation:Landroid/location/Location;
-    invoke-static {v3}, Lcom/android/server/UiModeManagerService;->access$1300(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
+    invoke-static {v3}, Lcom/android/server/UiModeManagerService;->access$1400(Lcom/android/server/UiModeManagerService;)Landroid/location/Location;
 
     move-result-object v3
 
@@ -184,14 +184,14 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 369
+    .line 372
     .local v0, hasBetterAccuracy:Z
     :cond_1
     if-nez v1, :cond_2
 
     if-eqz v0, :cond_4
 
-    .line 370
+    .line 373
     :cond_2
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -199,14 +199,14 @@
 
     monitor-enter v3
 
-    .line 371
+    .line 374
     :try_start_0
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #setter for: Lcom/android/server/UiModeManagerService;->mLocation:Landroid/location/Location;
-    invoke-static {v2, p1}, Lcom/android/server/UiModeManagerService;->access$1302(Lcom/android/server/UiModeManagerService;Landroid/location/Location;)Landroid/location/Location;
+    invoke-static {v2, p1}, Lcom/android/server/UiModeManagerService;->access$1402(Lcom/android/server/UiModeManagerService;Landroid/location/Location;)Landroid/location/Location;
 
-    .line 372
+    .line 375
     if-eqz v1, :cond_3
 
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
@@ -220,17 +220,17 @@
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mNightMode:I
-    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$900(Lcom/android/server/UiModeManagerService;)I
+    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1000(Lcom/android/server/UiModeManagerService;)I
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 374
+    .line 377
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$7;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1000(Lcom/android/server/UiModeManagerService;)Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$1100(Lcom/android/server/UiModeManagerService;)Landroid/os/Handler;
 
     move-result-object v2
 
@@ -238,15 +238,15 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 376
+    .line 379
     :cond_3
     monitor-exit v3
 
-    .line 378
+    .line 381
     :cond_4
     return-void
 
-    .line 376
+    .line 379
     :catchall_0
     move-exception v2
 
@@ -262,7 +262,7 @@
     .parameter "provider"
 
     .prologue
-    .line 381
+    .line 384
     return-void
 .end method
 
@@ -271,7 +271,7 @@
     .parameter "provider"
 
     .prologue
-    .line 384
+    .line 387
     return-void
 .end method
 
@@ -282,6 +282,6 @@
     .parameter "extras"
 
     .prologue
-    .line 387
+    .line 390
     return-void
 .end method

@@ -45,7 +45,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "list_selector_background"
+    const-string v2, "list_selector_background"
 
     const/4 v3, 0x0
 
@@ -477,30 +477,25 @@
     :cond_3
     new-array v11, v6, [Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
-    .line 175
     .local v11, localeInfos:[Lcom/android/internal/app/LocalePicker$LocaleInfo;
     const/4 v7, 0x0
 
     :goto_3
     if-ge v7, v6, :cond_4
 
-    .line 176
     aget-object v19, v14, v7
 
     aput-object v19, v11, v7
 
-    .line 175
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    .line 178
     :cond_4
     invoke-static {v11}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
     invoke-static {v11}, Lmiui/util/ExtraLocalePicker;->adjustLocaleOrder([Lcom/android/internal/app/LocalePicker$LocaleInfo;)V
 
-    .line 181
     move-object/from16 v0, p0
 
     move/from16 v1, p1

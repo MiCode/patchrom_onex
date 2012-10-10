@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 709
+    .line 712
     invoke-static {}, Lcom/android/camera/component/ContinuousBurstController$CaptureState;->values()[Lcom/android/camera/component/ContinuousBurstController$CaptureState;
 
     move-result-object v0

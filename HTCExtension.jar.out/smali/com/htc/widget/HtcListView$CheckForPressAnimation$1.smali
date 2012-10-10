@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4229
+    .line 4231
     iput-object p1, p0, Lcom/htc/widget/HtcListView$CheckForPressAnimation$1;->this$1:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "animation"
 
     .prologue
-    .line 4232
+    .line 4234
     iget-object v0, p0, Lcom/htc/widget/HtcListView$CheckForPressAnimation$1;->this$1:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView$CheckForPressAnimation;->this$0:Lcom/htc/widget/HtcListView;
@@ -48,7 +48,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 4233
+    .line 4235
     iget-object v0, p0, Lcom/htc/widget/HtcListView$CheckForPressAnimation$1;->this$1:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView$CheckForPressAnimation;->this$0:Lcom/htc/widget/HtcListView;
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 4234
+    .line 4236
     :cond_0
     return-void
 .end method

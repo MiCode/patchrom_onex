@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4310
+    .line 4312
     iput-object p1, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -43,7 +43,7 @@
 
     const/high16 v4, 0x3f80
 
-    .line 4322
+    .line 4324
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -56,14 +56,14 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 4323
+    .line 4325
     iget-object v3, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 4324
+    .line 4326
     .local v1, child:Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -75,7 +75,7 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setPivotY(F)V
 
-    .line 4325
+    .line 4327
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v3
@@ -84,22 +84,22 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setY(F)V
 
-    .line 4326
+    .line 4328
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setRotationX(F)V
 
-    .line 4327
+    .line 4329
     const/4 v3, 0x0
 
     invoke-virtual {v1, v5, v3}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 4322
+    .line 4324
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 4329
+    .line 4331
     .end local v1           #child:Landroid/view/View;
     :cond_0
     const/4 v2, 0x0
@@ -118,7 +118,7 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 4330
+    .line 4332
     iget-object v3, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
 
     #getter for: Landroid/widget/ListView;->mIntroAnimatedViews:Ljava/util/ArrayList;
@@ -132,7 +132,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 4331
+    .line 4333
     .local v0, animatedView:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getScaleY()F
 
@@ -144,13 +144,13 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setScaleY(F)V
 
-    .line 4329
+    .line 4331
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 4333
+    .line 4335
     .end local v0           #animatedView:Landroid/view/View;
     :cond_2
     iget-object v3, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
@@ -162,12 +162,12 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 4334
+    .line 4336
     iget-object v3, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
 
     iput-boolean v5, v3, Landroid/widget/AbsListView;->mAnimationRunning:Z
 
-    .line 4335
+    .line 4337
     iget-object v3, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
 
     iget-object v3, v3, Landroid/widget/AbsListView;->mIntroAnimationListener:Landroid/widget/AbsListView$IntroAnimationListener;
@@ -180,7 +180,7 @@
 
     invoke-interface {v3}, Landroid/widget/AbsListView$IntroAnimationListener;->onAnimationEnd()V
 
-    .line 4336
+    .line 4338
     :cond_3
     return-void
 .end method
@@ -190,14 +190,14 @@
     .parameter "animation"
 
     .prologue
-    .line 4313
+    .line 4315
     iget-object v0, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/widget/ListView;->shouldHideIntroAnimatedViews:Z
 
-    .line 4314
+    .line 4316
     iget-object v0, p0, Landroid/widget/ListView$3;->this$0:Landroid/widget/ListView;
 
     iget-object v0, v0, Landroid/widget/AbsListView;->mIntroAnimationListener:Landroid/widget/AbsListView$IntroAnimationListener;
@@ -210,7 +210,7 @@
 
     invoke-interface {v0}, Landroid/widget/AbsListView$IntroAnimationListener;->onAnimationStart()V
 
-    .line 4315
+    .line 4317
     :cond_0
     return-void
 .end method

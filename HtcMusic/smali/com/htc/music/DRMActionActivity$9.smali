@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 755
+    .line 756
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$9;->this$0:Lcom/htc/music/DRMActionActivity;
 
     iput-object p2, p0, Lcom/htc/music/DRMActionActivity$9;->val$list:[I
@@ -48,18 +48,18 @@
     .parameter "which"
 
     .prologue
-    .line 757
+    .line 758
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$9;->this$0:Lcom/htc/music/DRMActionActivity;
 
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$9;->val$list:[I
 
     invoke-static {v0, v1}, Lcom/htc/music/util/MusicUtils;->deleteTracks(Landroid/content/Context;[I)V
 
-    .line 758
+    .line 759
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$9;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/DRMActionActivity;->finish()V
 
-    .line 759
+    .line 760
     return-void
 .end method

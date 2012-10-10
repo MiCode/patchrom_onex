@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Adăugare o listă de redare</string>
     <string name="htc_delete_playlists">Ştergere liste de redare</string>
     <string name="htc_delete_playlist">Ştergere listă de redare</string>
+    <string name="htc_delete_all_playlists">Ştergere toate listele de redare</string>
     <string name="htc_playlist_add_songs">Adăugare melodii</string>
     <string name="htc_playlist_del_songs">Ştergere melodii</string>
     <string name="htc_playlist_remove_songs">Eliminare melodii</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Se colectează...</string>
     <string name="title_send_content">Se trimite conţinutul...</string>
     <string name="no_downloaded_apps_found">Nicio aplicaţie descărcată găsită</string>
+    <string name="music_folder_picker_dialog_msg">Adăugaţi melodii la liste de redare selectând folderul? Nu pentru a adăuga melodii în alt fel</string>
 </resources>

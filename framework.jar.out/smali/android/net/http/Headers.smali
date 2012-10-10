@@ -228,7 +228,7 @@
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "location"
+    const-string v2, "location"
 
     aput-object v2, v0, v1
 
@@ -276,7 +276,7 @@
 
     const/16 v1, 0xd
 
-    const-string/jumbo v2, "last-modified"
+    const-string v2, "last-modified"
 
     aput-object v2, v0, v1
 
@@ -855,7 +855,7 @@
 
     .line 186
     .local v1, len:I
-    const-string/jumbo v5, "identity"
+    const-string v5, "identity"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1000,7 +1000,7 @@
 
     .line 227
     :sswitch_5
-    const-string/jumbo v5, "location"
+    const-string v5, "location"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1202,7 +1202,7 @@
 
     .line 275
     :sswitch_d
-    const-string/jumbo v5, "last-modified"
+    const-string v5, "last-modified"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1320,8 +1320,6 @@
     goto/16 :goto_0
 
     .line 176
-    nop
-
     :sswitch_data_0
     .sparse-switch
         -0x5034229e -> :sswitch_12

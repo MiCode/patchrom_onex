@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 7176
+    .line 7209
     iput-object p1, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +43,17 @@
     .parameter "which"
 
     .prologue
-    .line 7178
+    .line 7211
     const-string v2, "SoundEffectDialog"
 
     const-string v3, "PositiveButton onClick +++"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7179
+    .line 7212
     const/4 v1, 0x0
 
-    .line 7180
+    .line 7213
     .local v1, item:Lcom/htc/music/util/SoundEffectItem;
     const/4 v0, 0x0
 
@@ -62,7 +62,7 @@
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mSoundEffectList:Ljava/util/ArrayList;
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$8500(Lcom/htc/music/HtcMusic;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$8600(Lcom/htc/music/HtcMusic;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -72,11 +72,11 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 7181
+    .line 7214
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mSoundEffectList:Ljava/util/ArrayList;
-    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$8500(Lcom/htc/music/HtcMusic;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/htc/music/HtcMusic;->access$8600(Lcom/htc/music/HtcMusic;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -87,13 +87,13 @@
     .end local v1           #item:Lcom/htc/music/util/SoundEffectItem;
     check-cast v1, Lcom/htc/music/util/SoundEffectItem;
 
-    .line 7182
+    .line 7215
     .restart local v1       #item:Lcom/htc/music/util/SoundEffectItem;
     iget-boolean v2, v1, Lcom/htc/music/util/SoundEffectItem;->mIsSelected:Z
 
     if-eqz v2, :cond_3
 
-    .line 7184
+    .line 7217
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v2}, Lcom/htc/music/HtcMusic;->getApplicationContext()Landroid/content/Context;
@@ -106,7 +106,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 7186
+    .line 7219
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v3, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
@@ -120,15 +120,15 @@
     move-result-object v3
 
     #setter for: Lcom/htc/music/HtcMusic;->nowHWAudioSetting:Ljava/lang/String;
-    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3702(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3802(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 7189
+    .line 7222
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     #setter for: Lcom/htc/music/HtcMusic;->mCurrentSoundEffectIndicatorType:I
-    invoke-static {v2, v0}, Lcom/htc/music/HtcMusic;->access$3602(Lcom/htc/music/HtcMusic;I)I
+    invoke-static {v2, v0}, Lcom/htc/music/HtcMusic;->access$3702(Lcom/htc/music/HtcMusic;I)I
 
-    .line 7228
+    .line 7261
     :cond_0
     :goto_1
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
@@ -136,32 +136,32 @@
     iget-object v3, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->nowHWAudioSetting:Ljava/lang/String;
-    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$3700(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$3800(Lcom/htc/music/HtcMusic;)Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v4, 0x2
 
     #calls: Lcom/htc/music/HtcMusic;->setSoundEffect(Ljava/lang/String;I)V
-    invoke-static {v2, v3, v4}, Lcom/htc/music/HtcMusic;->access$8700(Lcom/htc/music/HtcMusic;Ljava/lang/String;I)V
+    invoke-static {v2, v3, v4}, Lcom/htc/music/HtcMusic;->access$8800(Lcom/htc/music/HtcMusic;Ljava/lang/String;I)V
 
-    .line 7233
+    .line 7266
     const-string v2, "SoundEffectDialog"
 
     const-string v3, "PositiveButton onClick ---"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7234
+    .line 7267
     return-void
 
-    .line 7191
+    .line 7224
     :cond_1
     sget v2, Lcom/htc/music/util/SoundEffectHelper;->Equalizer:I
 
     if-ne v2, v0, :cond_2
 
-    .line 7192
+    .line 7225
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     sget-object v3, Lcom/htc/music/util/SoundEffectHelper;->EqualizerStyle:[Ljava/lang/String;
@@ -173,19 +173,19 @@
     aget-object v3, v3, v4
 
     #setter for: Lcom/htc/music/HtcMusic;->nowHWAudioSetting:Ljava/lang/String;
-    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3702(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3802(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 7196
+    .line 7229
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     sget v3, Lcom/htc/music/util/SoundEffectHelper;->Equalizer:I
 
     #setter for: Lcom/htc/music/HtcMusic;->mCurrentSoundEffectIndicatorType:I
-    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3602(Lcom/htc/music/HtcMusic;I)I
+    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3702(Lcom/htc/music/HtcMusic;I)I
 
     goto :goto_1
 
-    .line 7198
+    .line 7231
     :cond_2
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -200,17 +200,17 @@
     move-result-object v3
 
     #setter for: Lcom/htc/music/HtcMusic;->nowHWAudioSetting:Ljava/lang/String;
-    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3702(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/htc/music/HtcMusic;->access$3802(Lcom/htc/music/HtcMusic;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 7204
+    .line 7237
     iget-object v2, p0, Lcom/htc/music/HtcMusic$44;->this$0:Lcom/htc/music/HtcMusic;
 
     #setter for: Lcom/htc/music/HtcMusic;->mCurrentSoundEffectIndicatorType:I
-    invoke-static {v2, v0}, Lcom/htc/music/HtcMusic;->access$3602(Lcom/htc/music/HtcMusic;I)I
+    invoke-static {v2, v0}, Lcom/htc/music/HtcMusic;->access$3702(Lcom/htc/music/HtcMusic;I)I
 
     goto :goto_1
 
-    .line 7180
+    .line 7213
     :cond_3
     add-int/lit8 v0, v0, 0x1
 

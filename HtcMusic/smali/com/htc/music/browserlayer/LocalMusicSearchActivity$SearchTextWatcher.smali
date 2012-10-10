@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 422
+    .line 438
     iput-object p1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "s"
 
     .prologue
-    .line 444
+    .line 460
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .parameter "after"
 
     .prologue
-    .line 426
+    .line 442
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .prologue
     const-wide/16 v3, 0x12c
 
-    .line 430
+    .line 446
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    .line 432
+    .line 448
     .local v0, text:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -89,7 +89,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 433
+    .line 449
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
@@ -98,7 +98,7 @@
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->doLocalSearch(Ljava/lang/String;J)V
     invoke-static {v1, v2, v3, v4}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$3400(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;Ljava/lang/String;J)V
 
-    .line 434
+    .line 450
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     iget-object v1, v1, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;
@@ -107,18 +107,18 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/ActionBarSearch;->setClearIconVisibility(I)V
 
-    .line 440
+    .line 456
     :goto_0
     return-void
 
-    .line 437
+    .line 453
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->doLocalSearch(Ljava/lang/String;J)V
     invoke-static {v1, v0, v3, v4}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$3400(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;Ljava/lang/String;J)V
 
-    .line 438
+    .line 454
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchTextWatcher;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     iget-object v1, v1, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mInputBox:Lcom/htc/widget/ActionBarSearch;

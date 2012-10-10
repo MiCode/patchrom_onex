@@ -57,7 +57,7 @@
     .locals 3
 
     .prologue
-    .line 521
+    .line 600
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -88,7 +88,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$SimContacts;->PROJECTION:[Ljava/lang/String;
 
-    .line 534
+    .line 618
     const-string v0, "content://icc/phonebook"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -97,7 +97,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$SimContacts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 541
+    .line 625
     const-string v0, "AdnFull"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -106,7 +106,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$SimContacts;->ADN_FULL_URI:Landroid/net/Uri;
 
-    .line 548
+    .line 633
     const-string v0, "MemoryFull"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -115,7 +115,7 @@
 
     sput-object v0, Landroid/provider/HtcUnionContact$SimContacts;->EMAIL_ANR_FULL_URI:Landroid/net/Uri;
 
-    .line 555
+    .line 640
     const-string v0, "Error"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -131,7 +131,7 @@
     .locals 0
 
     .prologue
-    .line 501
+    .line 570
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

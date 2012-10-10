@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 98
+    .line 100
     iput-object p1, p0, Lcom/android/camera/component/AudioManager$1;->this$0:Lcom/android/camera/component/AudioManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +42,10 @@
     .parameter "focusChange"
 
     .prologue
-    .line 103
+    .line 105
     packed-switch p1, :pswitch_data_0
 
-    .line 117
+    .line 119
     :pswitch_0
     const-string v0, "AudioManager(Camera)"
 
@@ -53,11 +53,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 119
+    .line 121
     :goto_0
     return-void
 
-    .line 105
+    .line 107
     :pswitch_1
     const-string v0, "AudioManager(Camera)"
 
@@ -67,7 +67,7 @@
 
     goto :goto_0
 
-    .line 108
+    .line 110
     :pswitch_2
     const-string v0, "AudioManager(Camera)"
 
@@ -77,7 +77,7 @@
 
     goto :goto_0
 
-    .line 111
+    .line 113
     :pswitch_3
     const-string v0, "AudioManager(Camera)"
 
@@ -87,7 +87,7 @@
 
     goto :goto_0
 
-    .line 114
+    .line 116
     :pswitch_4
     const-string v0, "AudioManager(Camera)"
 
@@ -97,7 +97,7 @@
 
     goto :goto_0
 
-    .line 103
+    .line 105
     nop
 
     :pswitch_data_0

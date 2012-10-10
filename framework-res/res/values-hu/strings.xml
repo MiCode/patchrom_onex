@@ -851,7 +851,7 @@ Válassza az OK gombot a folytatáshoz, vagy a Mégse gombot, ha szeretne az akt
     <string name="save_password_never">Soha</string>
     <string name="open_permission_deny">Nincs engedélye az oldal megnyitásához.</string>
     <string name="text_copied">A szöveg a vágólapra másolva.</string>
-    <string name="more_item_label">Egyéb</string>
+    <string name="more_item_label">Tovább</string>
     <string name="prepend_shortcut_label">Menü+</string>
     <string name="menu_space_shortcut_label">szóköz</string>
     <string name="menu_enter_shortcut_label">bevitel</string>

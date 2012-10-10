@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1217
+    .line 1213
     iput-object p1, p0, Lcom/android/server/PowerManagerService$DumpLockRecordTask;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1217
+    .line 1213
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$DumpLockRecordTask;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -53,7 +53,7 @@
     .locals 3
 
     .prologue
-    .line 1222
+    .line 1216
     iget-object v0, p0, Lcom/android/server/PowerManagerService$DumpLockRecordTask;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLockRecordList:Lcom/android/server/PowerManagerService$LockRecordList;
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService$LockRecordList;->dump()V
 
-    .line 1224
+    .line 1218
     iget-object v0, p0, Lcom/android/server/PowerManagerService$DumpLockRecordTask;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mDumpLockRecordHandler:Landroid/os/Handler;
@@ -75,6 +75,6 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1225
+    .line 1219
     return-void
 .end method

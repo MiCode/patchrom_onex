@@ -161,7 +161,7 @@
     :cond_0
     const-string v1, ""
 
-    const v2, 0x7f0700b1
+    const v2, 0x7f0700b2
 
     invoke-virtual {p0, v2}, Lcom/htc/music/widget/fragment/MusicBaseFragment;->getString(I)Ljava/lang/String;
 
@@ -494,7 +494,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070247
+    const v2, 0x7f0701e7
 
     invoke-static {v1, v2}, Lcom/htc/music/util/ProjectSettings;->getIntValue(Landroid/content/Context;I)I
 

@@ -528,7 +528,11 @@
     .line 323
     new-instance v4, Lcom/htc/view/animation/QuickTipsAnimationView;
 
-    invoke-direct {v4, p1}, Lcom/htc/view/animation/QuickTipsAnimationView;-><init>(Landroid/content/Context;)V
+    invoke-virtual {p1}, Landroid/app/Activity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Lcom/htc/view/animation/QuickTipsAnimationView;-><init>(Landroid/content/Context;)V
 
     sput-object v4, Lcom/htc/widget/QuickTips;->tipsDrawingView:Lcom/htc/view/animation/QuickTipsAnimationView;
 

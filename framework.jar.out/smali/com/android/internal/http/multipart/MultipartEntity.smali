@@ -366,7 +366,7 @@
     .line 164
     iget-object v1, p0, Lcom/android/internal/http/multipart/MultipartEntity;->params:Lorg/apache/http/params/HttpParams;
 
-    const-string/jumbo v2, "http.method.multipart.boundary"
+    const-string v2, "http.method.multipart.boundary"
 
     invoke-interface {v1, v2}, Lorg/apache/http/params/HttpParams;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 

@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 672
+    .line 673
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,16 +40,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 823
+    .line 824
     const-wide/16 v10, 0x0
 
-    .line 824
+    .line 825
     .local v10, myContactId:J
     invoke-static {p0}, Lcom/htc/provider/HtcContactsContract$Contacts$MyContactCard;->getMyContactIds(Landroid/content/ContentResolver;)Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 825
+    .line 826
     .local v6, bundleId:Landroid/os/Bundle;
     if-eqz v6, :cond_1
 
@@ -61,14 +61,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 826
+    .line 827
     const-string v0, "_id"
 
     invoke-virtual {v6, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v8
 
-    .line 827
+    .line 828
     .local v8, lMyRawContactId:J
     const-wide/16 v0, 0x0
 
@@ -76,7 +76,7 @@
 
     if-gez v0, :cond_1
 
-    .line 828
+    .line 829
     sget-object v1, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v0, 0x1
@@ -115,43 +115,43 @@
 
     move-result-object v7
 
-    .line 833
+    .line 834
     .local v7, cursorData:Landroid/database/Cursor;
     if-eqz v7, :cond_1
 
-    .line 834
+    .line 835
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 835
+    .line 836
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 836
+    .line 837
     const-string v0, "contact_id"
 
     invoke-virtual {v6, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v10
 
-    .line 841
+    .line 842
     :cond_0
     :goto_0
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 846
+    .line 847
     .end local v7           #cursorData:Landroid/database/Cursor;
     .end local v8           #lMyRawContactId:J
     :cond_1
     return-wide v10
 
-    .line 839
+    .line 840
     .restart local v7       #cursorData:Landroid/database/Cursor;
     .restart local v8       #lMyRawContactId:J
     :cond_2
@@ -169,23 +169,23 @@
     .parameter "resolver"
 
     .prologue
-    .line 718
+    .line 719
     if-nez p0, :cond_1
 
     const/4 v8, 0x0
 
-    .line 746
+    .line 747
     :cond_0
     :goto_0
     return-object v8
 
-    .line 720
+    .line 721
     :cond_1
     new-instance v8, Landroid/os/Bundle;
 
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
-    .line 721
+    .line 722
     .local v8, bundleIds:Landroid/os/Bundle;
     const/4 v0, 0x2
 
@@ -203,27 +203,27 @@
 
     aput-object v1, v2, v0
 
-    .line 725
+    .line 726
     .local v2, COLUMNS:[Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 726
+    .line 727
     .local v7, _ID:I
     const/4 v6, 0x1
 
-    .line 727
+    .line 728
     .local v6, CONTACT_ID:I
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 728
+    .line 729
     .local v14, selection:Ljava/lang/StringBuilder;
     const-string v0, "account_name=? AND account_type=? AND sourceid=?"
 
     invoke-virtual {v14, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 731
+    .line 732
     const/4 v0, 0x3
 
     new-array v4, v0, [Ljava/lang/String;
@@ -246,7 +246,7 @@
 
     aput-object v1, v4, v0
 
-    .line 732
+    .line 733
     .local v4, selectionArgs:[Ljava/lang/String;
     sget-object v1, Landroid/provider/ContactsContract$RawContacts;->CONTENT_URI:Landroid/net/Uri;
 
@@ -262,11 +262,11 @@
 
     move-result-object v9
 
-    .line 733
+    .line 734
     .local v9, cursorRawContact:Landroid/database/Cursor;
     if-eqz v9, :cond_0
 
-    .line 734
+    .line 735
     const/4 v0, 0x1
 
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
@@ -281,14 +281,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 735
+    .line 736
     const/4 v0, 0x0
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v12
 
-    .line 736
+    .line 737
     .local v12, lMyRawContactId:J
     const/4 v0, 0x1
 
@@ -296,7 +296,7 @@
 
     move-result-wide v10
 
-    .line 737
+    .line 738
     .local v10, lMyContactId:J
     const-wide/16 v0, 0x0
 
@@ -310,23 +310,23 @@
 
     if-gez v0, :cond_2
 
-    .line 738
+    .line 739
     const-string v0, "_id"
 
     invoke-virtual {v8, v0, v12, v13}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 739
+    .line 740
     const-string v0, "contact_id"
 
     invoke-virtual {v8, v0, v10, v11}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 742
+    .line 743
     .end local v10           #lMyContactId:J
     .end local v12           #lMyRawContactId:J
     :cond_2
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 743
+    .line 744
     const/4 v9, 0x0
 
     goto :goto_0
@@ -338,7 +338,7 @@
     .end annotation
 
     .prologue
-    .line 701
+    .line 702
     const/4 v0, 0x0
 
     return-object v0
@@ -353,16 +353,16 @@
 
     const/4 v4, 0x0
 
-    .line 757
+    .line 758
     const-wide/16 v10, 0x0
 
-    .line 759
+    .line 760
     .local v10, photoId:J
     invoke-static {p0}, Lcom/htc/provider/HtcContactsContract$Contacts$MyContactCard;->getMyContactIds(Landroid/content/ContentResolver;)Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 760
+    .line 761
     .local v6, bundleMyContactIds:Landroid/os/Bundle;
     if-eqz v6, :cond_1
 
@@ -374,20 +374,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 761
+    .line 762
     const-string v0, "contact_id"
 
     invoke-virtual {v6, v0, v12, v13}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v8
 
-    .line 762
+    .line 763
     .local v8, lMyContactId:J
     cmp-long v0, v12, v8
 
     if-gez v0, :cond_1
 
-    .line 763
+    .line 764
     sget-object v1, Lcom/htc/provider/HtcContactsContract$Contacts;->SIMPLE_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v0, 0x1
@@ -426,11 +426,11 @@
 
     move-result-object v7
 
-    .line 769
+    .line 770
     .local v7, c:Landroid/database/Cursor;
     if-eqz v7, :cond_1
 
-    .line 771
+    .line 772
     :try_start_0
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -438,7 +438,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 772
+    .line 773
     const-string v0, "photo_id"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -451,11 +451,11 @@
 
     move-result-wide v10
 
-    .line 777
+    .line 778
     :cond_0
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 783
+    .line 784
     .end local v7           #c:Landroid/database/Cursor;
     .end local v8           #lMyContactId:J
     :cond_1
@@ -463,16 +463,16 @@
 
     if-gez v0, :cond_2
 
-    .line 784
+    .line 785
     invoke-static {v10, v11, v4}, Lcom/htc/provider/HtcContactsContract$ThumbnailsSequence;->loadThumbnail(JLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    .line 788
+    .line 789
     :cond_2
     return-object v4
 
-    .line 777
+    .line 778
     .restart local v7       #c:Landroid/database/Cursor;
     .restart local v8       #lMyContactId:J
     :catchall_0
@@ -487,14 +487,14 @@
     .locals 3
 
     .prologue
-    .line 684
+    .line 685
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 685
+    .line 686
     .local v0, viewIntent:Landroid/content/Intent;
     const-string v1, "com.android.htccontacts"
 
@@ -502,7 +502,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 687
+    .line 688
     return-object v0
 .end method
 
@@ -511,16 +511,16 @@
     .parameter "resolver"
 
     .prologue
-    .line 803
+    .line 804
     invoke-static {p0}, Lcom/htc/provider/HtcContactsContract$Contacts$MyContactCard;->getIdIfHasData(Landroid/content/ContentResolver;)J
 
     move-result-wide v1
 
-    .line 804
+    .line 805
     .local v1, id:J
     const/4 v3, 0x0
 
-    .line 805
+    .line 806
     .local v3, resultIntent:Landroid/content/Intent;
     const-wide/16 v4, 0x0
 
@@ -528,14 +528,14 @@
 
     if-gez v4, :cond_0
 
-    .line 806
+    .line 807
     sget-object v4, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v4, v1, v2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 808
+    .line 809
     .local v0, editUri:Landroid/net/Uri;
     new-instance v3, Landroid/content/Intent;
 
@@ -544,13 +544,13 @@
 
     invoke-direct {v3, v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 812
+    .line 813
     .end local v0           #editUri:Landroid/net/Uri;
     .restart local v3       #resultIntent:Landroid/content/Intent;
     :goto_0
     return-object v3
 
-    .line 810
+    .line 811
     :cond_0
     invoke-static {}, Lcom/htc/provider/HtcContactsContract$Contacts$MyContactCard;->getViewIntent()Landroid/content/Intent;
 

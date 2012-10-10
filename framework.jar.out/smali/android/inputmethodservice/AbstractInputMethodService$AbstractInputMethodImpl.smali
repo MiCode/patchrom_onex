@@ -43,6 +43,9 @@
 
     .prologue
     .line 63
+    if-eqz p1, :cond_0
+
+    .line 64
     iget-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;->this$0:Landroid/inputmethodservice/AbstractInputMethodService;
 
     invoke-virtual {v0}, Landroid/inputmethodservice/AbstractInputMethodService;->onCreateInputMethodSessionInterface()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
@@ -51,37 +54,50 @@
 
     invoke-interface {p1, v0}, Landroid/view/inputmethod/InputMethod$SessionCallback;->sessionCreated(Landroid/view/inputmethod/InputMethodSession;)V
 
-    .line 64
+    .line 65
+    :cond_0
     return-void
 .end method
 
 .method public revokeSession(Landroid/view/inputmethod/InputMethodSession;)V
-    .locals 0
+    .locals 1
     .parameter "session"
 
     .prologue
-    .line 81
+    .line 83
+    instance-of v0, p1, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
+
+    if-eqz v0, :cond_0
+
+    .line 84
     check-cast p1, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
 
     .end local p1
     invoke-virtual {p1}, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;->revokeSelf()V
 
-    .line 82
+    .line 85
+    :cond_0
     return-void
 .end method
 
 .method public setSessionEnabled(Landroid/view/inputmethod/InputMethodSession;Z)V
-    .locals 0
+    .locals 1
     .parameter "session"
     .parameter "enabled"
 
     .prologue
-    .line 72
+    .line 73
+    instance-of v0, p1, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
+
+    if-eqz v0, :cond_0
+
+    .line 74
     check-cast p1, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
 
     .end local p1
     invoke-virtual {p1, p2}, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;->setEnabled(Z)V
 
-    .line 73
+    .line 75
+    :cond_0
     return-void
 .end method

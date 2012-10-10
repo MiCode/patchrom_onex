@@ -32,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 714
+    .line 745
     new-instance v0, Lorg/codeaurora/Performance;
 
     invoke-direct {v0}, Lorg/codeaurora/Performance;-><init>()V
@@ -46,7 +46,7 @@
     .locals 0
 
     .prologue
-    .line 709
+    .line 740
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,17 +57,17 @@
     .parameter "x0"
 
     .prologue
-    .line 709
+    .line 740
     invoke-direct {p0}, Landroid/webkit/WebViewCore$WebCoreThread;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$600()Lorg/codeaurora/Performance;
+.method static synthetic access$700()Lorg/codeaurora/Performance;
     .locals 1
 
     .prologue
-    .line 709
+    .line 740
     sget-object v0, Landroid/webkit/WebViewCore$WebCoreThread;->mPerf:Lorg/codeaurora/Performance;
 
     return-object v0
@@ -79,22 +79,22 @@
     .locals 2
 
     .prologue
-    .line 717
+    .line 748
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 718
+    .line 749
     invoke-static {}, Landroid/webkit/WebViewCore;->access$400()Landroid/os/Handler;
 
     move-result-object v0
 
     invoke-static {v0}, Ljunit/framework/Assert;->assertNull(Ljava/lang/Object;)V
 
-    .line 719
+    .line 750
     const-class v1, Landroid/webkit/WebViewCore;
 
     monitor-enter v1
 
-    .line 720
+    .line 751
     :try_start_0
     new-instance v0, Landroid/webkit/WebViewCore$WebCoreThread$1;
 
@@ -102,23 +102,23 @@
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->access$402(Landroid/os/Handler;)Landroid/os/Handler;
 
-    .line 781
+    .line 808
     const-class v0, Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 782
+    .line 809
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 783
+    .line 810
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 784
+    .line 811
     return-void
 
-    .line 782
+    .line 809
     :catchall_0
     move-exception v0
 

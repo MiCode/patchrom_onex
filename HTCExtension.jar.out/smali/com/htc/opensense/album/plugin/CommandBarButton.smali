@@ -3,6 +3,10 @@
 .source "CommandBarButton.java"
 
 
+# static fields
+.field public static final PLUGIN_CONTROL_BUTTON_ID_SHARE:I = 0x60a00000
+
+
 # instance fields
 .field private mBitmap:Landroid/graphics/Bitmap;
 

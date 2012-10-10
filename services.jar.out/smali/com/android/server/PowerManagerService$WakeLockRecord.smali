@@ -63,39 +63,39 @@
     .parameter "wl"
 
     .prologue
-    .line 1028
+    .line 1049
     iput-object p1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1022
+    .line 1044
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
-    .line 1023
+    .line 1045
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_aquired:I
 
-    .line 1025
+    .line 1047
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_time:J
 
-    .line 1029
+    .line 1050
     iget v0, p2, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
     iput v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->flags:I
 
-    .line 1030
+    .line 1051
     iget-object v0, p2, Lcom/android/server/PowerManagerService$WakeLock;->tag:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->tag:Ljava/lang/String;
 
-    .line 1031
+    .line 1052
     iget v0, p2, Lcom/android/server/PowerManagerService$WakeLock;->uid:I
 
     #getter for: Lcom/android/server/PowerManagerService;->MY_UID:I
@@ -110,29 +110,29 @@
     :goto_0
     iput v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->uid:I
 
-    .line 1032
+    .line 1053
     iget v0, p2, Lcom/android/server/PowerManagerService$WakeLock;->pid:I
 
     iput v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->pid:I
 
-    .line 1033
+    .line 1054
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->update_time:J
 
-    .line 1034
+    .line 1055
     iget-object v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     iget-object v1, p2, Lcom/android/server/PowerManagerService$WakeLock;->binder:Landroid/os/IBinder;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1035
+    .line 1056
     return-void
 
-    .line 1031
+    .line 1052
     :cond_0
     iget v0, p2, Lcom/android/server/PowerManagerService$WakeLock;->uid:I
 
@@ -143,7 +143,7 @@
     .locals 1
 
     .prologue
-    .line 1043
+    .line 1064
     iget-object v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -170,7 +170,7 @@
     .parameter "another"
 
     .prologue
-    .line 1039
+    .line 1060
     iget-wide v0, p1, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_time:J
 
     iget-wide v2, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_time:J
@@ -187,7 +187,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1016
+    .line 1039
     check-cast p1, Lcom/android/server/PowerManagerService$WakeLockRecord;
 
     .end local p1
@@ -202,20 +202,20 @@
     .locals 5
 
     .prologue
-    .line 1086
+    .line 1102
     new-instance v0, Ljava/lang/StringBuffer;
 
     iget-object v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->tag:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 1087
+    .line 1103
     .local v0, sb:Ljava/lang/StringBuffer;
     const-string v1, ", lock type: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1088
+    .line 1104
     iget v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->flags:I
 
     #calls: Lcom/android/server/PowerManagerService;->lockType(I)Ljava/lang/String;
@@ -229,7 +229,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1089
+    .line 1105
     iget v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->flags:I
 
     #calls: Lcom/android/server/PowerManagerService;->lockType(I)Ljava/lang/String;
@@ -249,12 +249,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1091
+    .line 1106
     const-string v1, "(0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1092
+    .line 1107
     const-string v1, "%08x"
 
     const/4 v2, 0x1
@@ -277,18 +277,18 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1093
+    .line 1108
     const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1095
+    .line 1110
     :cond_0
     const-string v1, ", acq_count: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1096
+    .line 1111
     iget-object v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -297,42 +297,42 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 1097
+    .line 1112
     const-string v1, ", totaltime: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1098
+    .line 1113
     iget-wide v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_time:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
 
-    .line 1099
+    .line 1114
     const-string v1, "ms (uid: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1100
+    .line 1115
     iget v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->uid:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 1101
+    .line 1116
     const-string v1, " pid: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1102
+    .line 1117
     iget v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->pid:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 1103
+    .line 1118
     const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1104
+    .line 1119
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -347,7 +347,7 @@
     .prologue
     const/16 v3, 0x32
 
-    .line 1056
+    .line 1076
     iget-object v2, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -356,14 +356,14 @@
 
     if-le v2, v3, :cond_1
 
-    .line 1058
+    .line 1077
     new-instance v1, Ljava/lang/StringBuffer;
 
     const-string v2, "[embedded] Lock:"
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 1059
+    .line 1078
     .local v1, sb:Ljava/lang/StringBuffer;
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$WakeLockRecord;->info()Ljava/lang/String;
 
@@ -371,20 +371,20 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1060
+    .line 1079
     const-string v2, " acquired, but unrelease locks over "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1061
+    .line 1080
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 1062
+    .line 1081
     const-string v2, ". Skip recording."
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1063
+    .line 1082
     const-string v2, "PowerManagerService"
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -393,33 +393,33 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1073
+    .line 1091
     .end local v1           #sb:Ljava/lang/StringBuffer;
     :cond_0
     :goto_0
     return-void
 
-    .line 1066
+    .line 1085
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$WakeLockRecord;->update()V
 
-    .line 1067
+    .line 1086
     iget-object v2, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 1068
+    .line 1087
     .local v0, i:I
     if-gez v0, :cond_0
 
-    .line 1070
+    .line 1088
     iget-object v2, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1071
+    .line 1089
     iget v2, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_aquired:I
 
     add-int/lit8 v2, v2, 0x1
@@ -434,26 +434,26 @@
     .parameter "b"
 
     .prologue
-    .line 1077
+    .line 1094
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$WakeLockRecord;->update()V
 
-    .line 1078
+    .line 1095
     iget-object v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 1079
+    .line 1096
     .local v0, i:I
     if-ltz v0, :cond_0
 
-    .line 1081
+    .line 1097
     iget-object v1, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->binderList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1083
+    .line 1099
     :cond_0
     return-void
 .end method
@@ -462,12 +462,12 @@
     .locals 6
 
     .prologue
-    .line 1047
+    .line 1068
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 1048
+    .line 1069
     .local v0, now:J
     invoke-direct {p0}, Lcom/android/server/PowerManagerService$WakeLockRecord;->isStart()Z
 
@@ -475,7 +475,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1050
+    .line 1070
     iget-wide v2, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_time:J
 
     iget-wide v4, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->update_time:J
@@ -486,10 +486,10 @@
 
     iput-wide v2, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->total_time:J
 
-    .line 1052
+    .line 1072
     :cond_0
     iput-wide v0, p0, Lcom/android/server/PowerManagerService$WakeLockRecord;->update_time:J
 
-    .line 1053
+    .line 1073
     return-void
 .end method

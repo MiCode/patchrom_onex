@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 129
+    .line 130
     new-instance v0, Landroid/net/HtcNetworkConnectivityHelper$State;
 
     const-string v1, "CONNECTED"
@@ -49,7 +49,7 @@
 
     sput-object v0, Landroid/net/HtcNetworkConnectivityHelper$State;->CONNECTED:Landroid/net/HtcNetworkConnectivityHelper$State;
 
-    .line 139
+    .line 140
     new-instance v0, Landroid/net/HtcNetworkConnectivityHelper$State;
 
     const-string v1, "NOT_CONNECTED"
@@ -58,7 +58,7 @@
 
     sput-object v0, Landroid/net/HtcNetworkConnectivityHelper$State;->NOT_CONNECTED:Landroid/net/HtcNetworkConnectivityHelper$State;
 
-    .line 127
+    .line 128
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/net/HtcNetworkConnectivityHelper$State;
@@ -87,7 +87,7 @@
     .end annotation
 
     .prologue
-    .line 127
+    .line 128
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -98,7 +98,7 @@
     .parameter "name"
 
     .prologue
-    .line 127
+    .line 128
     const-class v0, Landroid/net/HtcNetworkConnectivityHelper$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -114,7 +114,7 @@
     .locals 1
 
     .prologue
-    .line 127
+    .line 128
     sget-object v0, Landroid/net/HtcNetworkConnectivityHelper$State;->$VALUES:[Landroid/net/HtcNetworkConnectivityHelper$State;
 
     invoke-virtual {v0}, [Landroid/net/HtcNetworkConnectivityHelper$State;->clone()Ljava/lang/Object;

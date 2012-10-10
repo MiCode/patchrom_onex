@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Wiedergabeliste hinzufügen</string>
     <string name="htc_delete_playlists">Wiedergabelisten löschen</string>
     <string name="htc_delete_playlist">Wiedergabeliste löschen</string>
+    <string name="htc_delete_all_playlists">Alle Wiedergabelisten löschen</string>
     <string name="htc_playlist_add_songs">Titel hinzufügen</string>
     <string name="htc_playlist_del_songs">Titel löschen</string>
     <string name="htc_playlist_remove_songs">Musiktitel entfernen</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Puffert...</string>
     <string name="title_send_content">Sendet Inhalte...</string>
     <string name="no_downloaded_apps_found">Keine heruntergeladenen Apps gefunden</string>
+    <string name="music_folder_picker_dialog_msg">Durch Auswahl von Ordner Musiktitel zu Wiedergabelisten hinzufügen? Nein, um Musiktitel auf andere Weise hinzuzufügen</string>
 </resources>

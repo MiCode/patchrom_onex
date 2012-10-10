@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2015
+    .line 2067
     iput-object p1, p0, Lcom/android/camera/CameraThread$7;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 2019
+    .line 2071
     const-string v0, "CameraThread"
 
     const-string v1, "[NV] forceStopVideoRecording()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2020
+    .line 2072
     iget-object v0, p0, Lcom/android/camera/CameraThread$7;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v0, v0, Lcom/android/camera/CameraThread;->isRecording:Lcom/android/camera/property/Property;
@@ -65,20 +65,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 2022
+    .line 2074
     const-string v0, "CameraThread"
 
     const-string v1, "[NV] forceStopVideoRecording() - Stop recording directly"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2023
+    .line 2075
     iget-object v0, p0, Lcom/android/camera/CameraThread$7;->this$0:Lcom/android/camera/CameraThread;
 
     #calls: Lcom/android/camera/CameraThread;->stopVideoRecording()V
-    invoke-static {v0}, Lcom/android/camera/CameraThread;->access$2800(Lcom/android/camera/CameraThread;)V
+    invoke-static {v0}, Lcom/android/camera/CameraThread;->access$2900(Lcom/android/camera/CameraThread;)V
 
-    .line 2025
+    .line 2077
     :cond_0
     return-void
 .end method

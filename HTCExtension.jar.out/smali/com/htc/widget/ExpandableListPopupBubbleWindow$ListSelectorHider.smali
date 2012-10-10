@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1812
+    .line 1782
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$ListSelectorHider;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1812
+    .line 1782
     invoke-direct {p0, p1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$ListSelectorHider;-><init>(Lcom/htc/widget/ExpandableListPopupBubbleWindow;)V
 
     return-void
@@ -53,11 +53,11 @@
     .locals 1
 
     .prologue
-    .line 1818
+    .line 1788
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$ListSelectorHider;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-virtual {v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow;->clearListSelection()V
 
-    .line 1819
+    .line 1789
     return-void
 .end method

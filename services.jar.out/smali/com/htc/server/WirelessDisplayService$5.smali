@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1749
+    .line 1986
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$5;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,27 +35,40 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+    .locals 3
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 1752
+    .line 1989
     const-string v0, "WirelessDisplayService"
 
-    const-string v1, "Receive Configuration Tool notify WIFI DFS"
+    const-string v1, "Receive Configuration Tool notifies User started Dongle FW upgrade"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1753
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6100()Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 1992
+    iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$5;->this$0:Lcom/htc/server/WirelessDisplayService;
 
-    move-result-object v0
+    #calls: Lcom/htc/server/WirelessDisplayService;->cancelTurnOffConcurrentHotspot()V
+    invoke-static {v0}, Lcom/htc/server/WirelessDisplayService;->access$6200(Lcom/htc/server/WirelessDisplayService;)V
 
-    const/4 v1, 0x1
+    .line 1993
+    iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$5;->this$0:Lcom/htc/server/WirelessDisplayService;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    const-wide/32 v1, 0x124f80
 
-    .line 1754
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    #calls: Lcom/htc/server/WirelessDisplayService;->turnOffConcurrentHotspot(J)V
+    invoke-static {v0, v1, v2}, Lcom/htc/server/WirelessDisplayService;->access$6700(Lcom/htc/server/WirelessDisplayService;J)V
+
+    .line 1994
     return-void
 .end method

@@ -119,6 +119,30 @@
     .end annotation
 .end method
 
+.method public abstract enableRegistrationState_wifi_call_ext(ZI)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract generalGetter(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract generalSetter(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getActiveCallConnectTime()J
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -239,6 +263,14 @@
     .end annotation
 .end method
 
+.method public abstract getDetailIccStatusExt(I)[I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getEsn()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -256,6 +288,14 @@
 .end method
 
 .method public abstract getGprsState()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getGprsStateExt(I)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

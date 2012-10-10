@@ -2062,7 +2062,7 @@
     invoke-virtual {v5, v2}, Lcom/htc/widget/HtcListView;->setFastScrollEnabled(Z)V
 
     .line 577
-    const v2, 0x7f080092
+    const v2, 0x7f080093
 
     move-object/from16 v0, p0
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 580
+    .line 586
     iput-object p1, p0, Lcom/android/camera/CameraThread$3;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,11 +43,11 @@
     .parameter "camera"
 
     .prologue
-    .line 583
+    .line 589
     iget-object v0, p0, Lcom/android/camera/CameraThread$3;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/CameraThread;->handleCommonRawCallback([BLandroid/hardware/Camera;)V
 
-    .line 584
+    .line 590
     return-void
 .end method

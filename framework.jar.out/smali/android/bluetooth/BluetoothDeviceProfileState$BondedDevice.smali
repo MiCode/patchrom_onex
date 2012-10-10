@@ -113,11 +113,11 @@
     .parameter "message"
 
     .prologue
+    const/4 v7, 0x3
+
     const/4 v0, 0x0
 
-    const/16 v7, 0x3e8
-
-    const/4 v6, 0x3
+    const/16 v6, 0x3e8
 
     const/4 v1, 0x1
 
@@ -449,7 +449,7 @@
 
     move-result v0
 
-    if-ne v0, v7, :cond_5
+    if-ne v0, v6, :cond_5
 
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$BondedDevice;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
@@ -458,7 +458,7 @@
 
     move-result-object v0
 
-    new-array v2, v6, [I
+    new-array v2, v7, [I
 
     fill-array-data v2, :array_0
 
@@ -509,7 +509,7 @@
 
     move-result v0
 
-    if-ne v0, v7, :cond_0
+    if-ne v0, v6, :cond_0
 
     .line 401
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$BondedDevice;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
@@ -550,28 +550,7 @@
 
     move-result v0
 
-    if-ne v0, v7, :cond_4
-
-    iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$BondedDevice;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
-
-    #getter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mHeadsetService:Landroid/bluetooth/BluetoothHeadset;
-    invoke-static {v0}, Landroid/bluetooth/BluetoothDeviceProfileState;->access$1500(Landroid/bluetooth/BluetoothDeviceProfileState;)Landroid/bluetooth/BluetoothHeadset;
-
-    move-result-object v0
-
-    new-array v2, v6, [I
-
-    fill-array-data v2, :array_1
-
-    invoke-virtual {v0, v2}, Landroid/bluetooth/BluetoothHeadset;->getDevicesMatchingConnectionStates([I)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_4
+    if-ne v0, v6, :cond_4
 
     .line 388
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$BondedDevice;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
@@ -613,7 +592,7 @@
     .line 409
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    if-ne v0, v6, :cond_7
+    if-ne v0, v7, :cond_7
 
     .line 410
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$BondedDevice;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
@@ -857,6 +836,8 @@
     goto/16 :goto_0
 
     .line 328
+    nop
+
     :sswitch_data_0
     .sparse-switch
         -0x1 -> :sswitch_c
@@ -881,14 +862,6 @@
 
     .line 390
     :array_0
-    .array-data 0x4
-        0x2t 0x0t 0x0t 0x0t
-        0x1t 0x0t 0x0t 0x0t
-        0x3t 0x0t 0x0t 0x0t
-    .end array-data
-
-    .line 382
-    :array_1
     .array-data 0x4
         0x2t 0x0t 0x0t 0x0t
         0x1t 0x0t 0x0t 0x0t

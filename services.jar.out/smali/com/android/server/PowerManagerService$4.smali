@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 960
+    .line 982
     iput-object p1, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,12 +40,12 @@
     .parameter "selfChange"
 
     .prologue
-    .line 962
+    .line 984
     iget-object v0, p0, Lcom/android/server/PowerManagerService$4;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->updateSettingsValues()V
     invoke-static {v0}, Lcom/android/server/PowerManagerService;->access$3200(Lcom/android/server/PowerManagerService;)V
 
-    .line 963
+    .line 985
     return-void
 .end method

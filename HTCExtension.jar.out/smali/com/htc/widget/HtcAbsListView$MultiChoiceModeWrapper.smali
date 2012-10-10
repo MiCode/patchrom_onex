@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 6241
+    .line 6303
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .parameter "item"
 
     .prologue
-    .line 6278
+    .line 6340
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->mWrapped:Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;
 
     invoke-interface {v0, p1, p2}, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
@@ -63,7 +63,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6257
+    .line 6319
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->mWrapped:Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;
 
     invoke-interface {v1, p1, p2}, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -72,15 +72,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 6259
+    .line 6321
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v1, v0}, Lcom/htc/widget/HtcAbsListView;->setLongClickable(Z)V
 
-    .line 6260
+    .line 6322
     const/4 v0, 0x1
 
-    .line 6262
+    .line 6324
     :cond_0
     return v0
 .end method
@@ -92,44 +92,44 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 6286
+    .line 6348
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->mWrapped:Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;
 
     invoke-interface {v0, p1}, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
-    .line 6287
+    .line 6349
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/htc/widget/HtcAbsListView;->mChoiceActionMode:Landroid/view/ActionMode;
 
-    .line 6290
+    .line 6352
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAbsListView;->clearChoices()V
 
-    .line 6292
+    .line 6354
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iput-boolean v2, v0, Lcom/htc/widget/HtcAdapterView;->mDataChanged:Z
 
-    .line 6293
+    .line 6355
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAbsListView;->rememberSyncState()V
 
-    .line 6294
+    .line 6356
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAbsListView;->requestLayout()V
 
-    .line 6296
+    .line 6358
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcAbsListView;->setLongClickable(Z)V
 
-    .line 6297
+    .line 6359
     return-void
 .end method
 
@@ -141,7 +141,7 @@
     .parameter "checked"
 
     .prologue
-    .line 6305
+    .line 6367
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->mWrapped:Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;
 
     move-object v1, p1
@@ -154,7 +154,7 @@
 
     invoke-interface/range {v0 .. v5}, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;->onItemCheckedStateChanged(Landroid/view/ActionMode;IJZ)V
 
-    .line 6308
+    .line 6370
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAbsListView;->getCheckedItemCount()I
@@ -163,10 +163,10 @@
 
     if-nez v0, :cond_0
 
-    .line 6309
+    .line 6371
     invoke-virtual {p1}, Landroid/view/ActionMode;->finish()V
 
-    .line 6311
+    .line 6373
     :cond_0
     return-void
 .end method
@@ -177,7 +177,7 @@
     .parameter "menu"
 
     .prologue
-    .line 6270
+    .line 6332
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->mWrapped:Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;
 
     invoke-interface {v0, p1, p2}, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -192,9 +192,9 @@
     .parameter "wrapped"
 
     .prologue
-    .line 6249
+    .line 6311
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$MultiChoiceModeWrapper;->mWrapped:Lcom/htc/widget/HtcAbsListView$MultiChoiceModeListener;
 
-    .line 6250
+    .line 6312
     return-void
 .end method

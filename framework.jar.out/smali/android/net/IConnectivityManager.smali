@@ -167,6 +167,14 @@
     .end annotation
 .end method
 
+.method public abstract getPolicyEnable(II)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getProxy()Landroid/net/ProxyProperties;
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -360,6 +368,14 @@
 .end method
 
 .method public abstract setPolicyDataEnable(IZ)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setPolicyEnable(IZI)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

@@ -42,6 +42,8 @@
 
 .field static final TRANSACTION_makeFnState:I = 0x6
 
+.field static final TRANSACTION_setCameraMode:I = 0x12
+
 .field static final TRANSACTION_setCapsLedState:I = 0x3
 
 .field static final TRANSACTION_setDualLedState:I = 0x1
@@ -57,6 +59,8 @@
 .field static final TRANSACTION_setIMSITstmp:I = 0x10
 
 .field static final TRANSACTION_setJogBallMode:I = 0x2
+
+.field static final TRANSACTION_setNaviMode:I = 0x11
 
 
 # direct methods
@@ -152,7 +156,7 @@
     .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 204
+    .line 224
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v8
@@ -632,6 +636,62 @@
 
     goto/16 :goto_0
 
+    .line 205
+    .end local v1           #_arg0:Ljava/lang/String;
+    .end local v6           #_result:Z
+    :sswitch_11
+    const-string v0, "android.os.IHtcHardwareService"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 207
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 208
+    .local v1, _arg0:I
+    invoke-virtual {p0, v1}, Landroid/os/IHtcHardwareService$Stub;->setNaviMode(I)I
+
+    move-result v6
+
+    .line 209
+    .local v6, _result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 210
+    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    .line 215
+    .end local v1           #_arg0:I
+    .end local v6           #_result:I
+    :sswitch_12
+    const-string v0, "android.os.IHtcHardwareService"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 217
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 218
+    .restart local v1       #_arg0:I
+    invoke-virtual {p0, v1}, Landroid/os/IHtcHardwareService$Stub;->setCameraMode(I)I
+
+    move-result v6
+
+    .line 219
+    .restart local v6       #_result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 220
+    invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
     .line 39
     :sswitch_data_0
     .sparse-switch
@@ -651,6 +711,8 @@
         0xe -> :sswitch_e
         0xf -> :sswitch_f
         0x10 -> :sswitch_10
+        0x11 -> :sswitch_11
+        0x12 -> :sswitch_12
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

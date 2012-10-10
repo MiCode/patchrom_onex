@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 7929
+    .line 7962
     iput-object p1, p0, Lcom/htc/music/HtcMusic$EventReceiver;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 7929
+    .line 7962
     invoke-direct {p0, p1}, Lcom/htc/music/HtcMusic$EventReceiver;-><init>(Lcom/htc/music/HtcMusic;)V
 
     return-void
@@ -52,12 +52,12 @@
     .parameter "intent"
 
     .prologue
-    .line 7932
+    .line 7965
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7933
+    .line 7966
     .local v0, action:Ljava/lang/String;
     const-string v1, "[HtcMusic]"
 
@@ -81,7 +81,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7941
+    .line 7974
     iget-object v1, p0, Lcom/htc/music/HtcMusic$EventReceiver;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v1}, Lcom/htc/music/HtcMusic;->getApplicationContext()Landroid/content/Context;
@@ -94,16 +94,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 7942
+    .line 7975
     iget-object v1, p0, Lcom/htc/music/HtcMusic$EventReceiver;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-static {v1}, Lcom/htc/music/util/MusicUtils;->disableKeyguard(Landroid/app/Activity;)V
 
-    .line 7946
+    .line 7979
     :goto_0
     return-void
 
-    .line 7944
+    .line 7977
     :cond_0
     iget-object v1, p0, Lcom/htc/music/HtcMusic$EventReceiver;->this$0:Lcom/htc/music/HtcMusic;
 

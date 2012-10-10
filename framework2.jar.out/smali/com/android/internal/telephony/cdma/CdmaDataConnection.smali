@@ -16,28 +16,29 @@
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/internal/telephony/cdma/CDMAPhone;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;)V
+.method private constructor <init>(Lcom/android/internal/telephony/cdma/CDMAPhone;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)V
     .locals 2
     .parameter "phone"
     .parameter "name"
     .parameter "id"
     .parameter "rm"
+    .parameter "dct"
 
     .prologue
     const/4 v0, 0x0
 
-    .line 48
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/DataConnection;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;)V
-
-    .line 40
-    iput v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mProfileId:I
+    .line 50
+    invoke-direct/range {p0 .. p5}, Lcom/android/internal/telephony/DataConnection;-><init>(Lcom/android/internal/telephony/PhoneBase;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)V
 
     .line 41
+    iput v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mProfileId:I
+
+    .line 42
     const-string v1, "default"
 
     iput-object v1, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mActiveApnType:Ljava/lang/String;
 
-    .line 49
+    .line 51
     const-string v1, "persist.radio.enableruim"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
@@ -58,7 +59,7 @@
     :cond_1
     iput-boolean v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mUseRuimCard:Z
 
-    .line 50
+    .line 52
     return-void
 .end method
 
@@ -66,31 +67,31 @@
     .locals 2
 
     .prologue
-    .line 72
+    .line 76
     const-string v0, "CDMA"
 
     const-string v1, "mCount_cdma is been initial to 0 "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
+    .line 77
     sget-object v1, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mCountLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 74
+    .line 78
     const/4 v0, 0x0
 
     :try_start_0
     sput v0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mCount_cdma:I
 
-    .line 75
+    .line 79
     monitor-exit v1
 
-    .line 76
+    .line 80
     return-void
 
-    .line 75
+    .line 79
     :catchall_0
     move-exception v0
 
@@ -101,19 +102,20 @@
     throw v0
 .end method
 
-.method static makeDataConnection(Lcom/android/internal/telephony/cdma/CDMAPhone;ILcom/android/internal/telephony/RetryManager;)Lcom/android/internal/telephony/cdma/CdmaDataConnection;
-    .locals 3
+.method static makeDataConnection(Lcom/android/internal/telephony/cdma/CDMAPhone;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)Lcom/android/internal/telephony/cdma/CdmaDataConnection;
+    .locals 6
     .parameter "phone"
     .parameter "id"
     .parameter "rm"
+    .parameter "dct"
 
     .prologue
-    .line 61
+    .line 64
     sget-object v2, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mCountLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 62
+    .line 65
     :try_start_0
     sget v1, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mCount_cdma:I
 
@@ -121,12 +123,12 @@
 
     sput v1, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mCount_cdma:I
 
-    .line 63
+    .line 66
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
+    .line 67
     new-instance v0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -147,15 +149,23 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v0, p0, v1, p1, p2}, Lcom/android/internal/telephony/cdma/CdmaDataConnection;-><init>(Lcom/android/internal/telephony/cdma/CDMAPhone;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;)V
+    move-object v1, p0
 
-    .line 66
+    move v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/cdma/CdmaDataConnection;-><init>(Lcom/android/internal/telephony/cdma/CDMAPhone;Ljava/lang/String;ILcom/android/internal/telephony/RetryManager;Lcom/android/internal/telephony/DataConnectionTracker;)V
+
+    .line 70
     .local v0, cdmaDc:Lcom/android/internal/telephony/cdma/CdmaDataConnection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->start()V
 
-    .line 67
+    .line 71
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,10 +190,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->log(Ljava/lang/String;)V
 
-    .line 68
+    .line 72
     return-object v0
 
-    .line 63
+    .line 66
     .end local v0           #cdmaDc:Lcom/android/internal/telephony/cdma/CdmaDataConnection;
     :catchall_0
     move-exception v1
@@ -202,7 +212,7 @@
     .locals 2
 
     .prologue
-    .line 85
+    .line 89
     iget-wide v0, p0, Lcom/android/internal/telephony/DataConnection;->createTime:J
 
     return-wide v0
@@ -217,7 +227,7 @@
 
     const/4 v0, 0x0
 
-    .line 153
+    .line 157
     const-string v2, "0.0.0.0"
 
     aget-object v3, p1, v0
@@ -246,7 +256,7 @@
 
     if-nez v2, :cond_0
 
-    .line 158
+    .line 162
     :goto_0
     return v0
 
@@ -261,7 +271,7 @@
     .parameter "s"
 
     .prologue
-    .line 164
+    .line 168
     const-string v0, "CDMA"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -298,7 +308,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
+    .line 169
     return-void
 .end method
 
@@ -309,66 +319,66 @@
     .prologue
     const-wide/16 v1, -0x1
 
-    .line 99
+    .line 103
     const-string v0, "CdmaDataConnection Connecting..."
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->log(Ljava/lang/String;)V
 
-    .line 101
+    .line 105
     iget-object v0, p1, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->apn:Lcom/android/internal/telephony/ApnSetting;
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
-    .line 102
+    .line 106
     iput-wide v1, p0, Lcom/android/internal/telephony/DataConnection;->createTime:J
 
-    .line 103
+    .line 107
     iput-wide v1, p0, Lcom/android/internal/telephony/DataConnection;->lastFailTime:J
 
-    .line 104
+    .line 108
     sget-object v0, Lcom/android/internal/telephony/DataConnection$FailCause;->NONE:Lcom/android/internal/telephony/DataConnection$FailCause;
 
     iput-object v0, p0, Lcom/android/internal/telephony/DataConnection;->lastFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
-    .line 117
+    .line 121
     iget-object v0, p1, Lcom/android/internal/telephony/DataConnection$ConnectionParams;->apn:Lcom/android/internal/telephony/ApnSetting;
 
     iget v9, v0, Lcom/android/internal/telephony/ApnSetting;->id:I
 
-    .line 120
+    .line 124
     .local v9, dataProfile:I
     const/4 v3, 0x0
 
-    .line 121
+    .line 125
     .local v3, apn:Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 122
+    .line 126
     .local v4, user:Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 123
+    .line 127
     .local v5, pwd:Ljava/lang/String;
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mUseRuimCard:Z
 
     if-eqz v0, :cond_0
 
-    .line 125
+    .line 129
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v3, v0, Lcom/android/internal/telephony/ApnSetting;->apn:Ljava/lang/String;
 
-    .line 126
+    .line 130
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v4, v0, Lcom/android/internal/telephony/ApnSetting;->user:Ljava/lang/String;
 
-    .line 127
+    .line 131
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     iget-object v5, v0, Lcom/android/internal/telephony/ApnSetting;->password:Ljava/lang/String;
 
-    .line 131
+    .line 135
     :cond_0
     const v0, 0x40001
 
@@ -376,11 +386,11 @@
 
     move-result-object v8
 
-    .line 132
+    .line 136
     .local v8, msg:Landroid/os/Message;
     iput-object p1, v8, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 133
+    .line 137
     iget-object v0, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -409,7 +419,7 @@
 
     invoke-interface/range {v0 .. v8}, Lcom/android/internal/telephony/CommandsInterface;->setupDataCall(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 139
+    .line 143
     return-void
 .end method
 
@@ -418,10 +428,10 @@
     .parameter "apnType"
 
     .prologue
-    .line 81
+    .line 85
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mActiveApnType:Ljava/lang/String;
 
-    .line 82
+    .line 86
     return-void
 .end method
 
@@ -430,10 +440,10 @@
     .parameter "profileId"
 
     .prologue
-    .line 142
+    .line 146
     iput p1, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnection;->mProfileId:I
 
-    .line 143
+    .line 147
     return-void
 .end method
 
@@ -441,7 +451,7 @@
     .locals 3
 
     .prologue
-    .line 147
+    .line 151
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

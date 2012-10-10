@@ -321,12 +321,12 @@
 
     const/4 v5, 0x0
 
-    .line 1079
+    .line 1087
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/htc/widget/HtcFastScroller;->mDownCancel:Z
 
-    .line 1080
+    .line 1088
     const/4 v4, 0x3
 
     move-wide v2, v0
@@ -337,19 +337,19 @@
 
     move-result-object v8
 
-    .line 1081
+    .line 1089
     .local v8, cancelFling:Landroid/view/MotionEvent;
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0, v8}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 1082
+    .line 1090
     iput-boolean v7, p0, Lcom/htc/widget/HtcFastScroller;->mDownCancel:Z
 
-    .line 1083
+    .line 1091
     invoke-virtual {v8}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 1084
+    .line 1092
     return-void
 .end method
 
@@ -358,7 +358,7 @@
     .parameter "useBigDrawable"
 
     .prologue
-    .line 1132
+    .line 1140
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mRes:Landroid/content/res/Resources;
 
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mContext:Landroid/content/Context;
@@ -377,7 +377,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/htc/widget/HtcFastScroller;->useOverlayDrawable(Landroid/graphics/drawable/Drawable;Z)V
 
-    .line 1135
+    .line 1143
     return-void
 .end method
 
@@ -388,7 +388,7 @@
     .parameter "totalItemCount"
 
     .prologue
-    .line 1035
+    .line 1043
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/HtcFastScroller;->mSectionIndexer:Landroid/widget/SectionIndexer;
@@ -401,11 +401,11 @@
 
     if-nez v13, :cond_1
 
-    .line 1036
+    .line 1044
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcFastScroller;->getSectionsFromIndexer()V
 
-    .line 1039
+    .line 1047
     :cond_1
     move-object/from16 v0, p0
 
@@ -419,7 +419,7 @@
 
     if-nez v13, :cond_4
 
-    .line 1040
+    .line 1048
     :cond_2
     move-object/from16 v0, p0
 
@@ -441,12 +441,12 @@
 
     div-int v8, v13, v14
 
-    .line 1074
+    .line 1082
     :cond_3
     :goto_0
     return v8
 
-    .line 1044
+    .line 1052
     :cond_4
     move-object/from16 v0, p0
 
@@ -454,15 +454,15 @@
 
     sub-int p1, p1, v13
 
-    .line 1045
+    .line 1053
     if-gez p1, :cond_5
 
-    .line 1046
+    .line 1054
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 1048
+    .line 1056
     :cond_5
     move-object/from16 v0, p0
 
@@ -470,7 +470,7 @@
 
     sub-int p3, p3, v13
 
-    .line 1050
+    .line 1058
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
@@ -485,7 +485,7 @@
 
     sub-int v12, v13, v14
 
-    .line 1052
+    .line 1060
     .local v12, trackHeight:I
     move-object/from16 v0, p0
 
@@ -497,7 +497,7 @@
 
     move-result v9
 
-    .line 1053
+    .line 1061
     .local v9, section:I
     move-object/from16 v0, p0
 
@@ -507,7 +507,7 @@
 
     move-result v11
 
-    .line 1054
+    .line 1062
     .local v11, sectionPos:I
     move-object/from16 v0, p0
 
@@ -519,7 +519,7 @@
 
     move-result v5
 
-    .line 1055
+    .line 1063
     .local v5, nextSectionPos:I
     move-object/from16 v0, p0
 
@@ -527,11 +527,11 @@
 
     array-length v10, v13
 
-    .line 1056
+    .line 1064
     .local v10, sectionCount:I
     sub-int v7, v5, v11
 
-    .line 1058
+    .line 1066
     .local v7, positionsInSection:I
     move-object/from16 v0, p0
 
@@ -543,13 +543,13 @@
 
     move-result-object v1
 
-    .line 1059
+    .line 1067
     .local v1, child:Landroid/view/View;
     if-nez v1, :cond_6
 
     const/4 v2, 0x0
 
-    .line 1061
+    .line 1069
     .local v2, incrementalPos:F
     :goto_1
     int-to-float v13, v11
@@ -560,7 +560,7 @@
 
     div-float v6, v13, v14
 
-    .line 1062
+    .line 1070
     .local v6, posWithinSection:F
     int-to-float v13, v9
 
@@ -576,7 +576,7 @@
 
     float-to-int v8, v13
 
-    .line 1067
+    .line 1075
     .local v8, result:I
     if-lez p1, :cond_3
 
@@ -586,7 +586,7 @@
 
     if-ne v13, v0, :cond_3
 
-    .line 1068
+    .line 1076
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
@@ -597,7 +597,7 @@
 
     move-result-object v3
 
-    .line 1069
+    .line 1077
     .local v3, lastChild:Landroid/view/View;
     move-object/from16 v0, p0
 
@@ -633,7 +633,7 @@
 
     div-float v4, v13, v14
 
-    .line 1071
+    .line 1079
     .local v4, lastItemVisible:F
     int-to-float v13, v8
 
@@ -649,7 +649,7 @@
 
     goto/16 :goto_0
 
-    .line 1059
+    .line 1067
     .end local v2           #incrementalPos:F
     .end local v3           #lastChild:Landroid/view/View;
     .end local v4           #lastItemVisible:F
@@ -1543,12 +1543,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1097
+    .line 1105
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
-    .line 1098
+    .line 1106
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mListAdapter:Landroid/widget/BaseAdapter;
 
     if-nez v0, :cond_0
@@ -1562,31 +1562,31 @@
 
     if-eqz v0, :cond_2
 
-    .line 1099
+    .line 1107
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->getSectionsFromIndexer()V
 
-    .line 1101
+    .line 1109
     :cond_2
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     if-eqz v0, :cond_3
 
-    .line 1102
+    .line 1110
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAbsListView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1103
+    .line 1111
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAbsListView;->reportScrollStateChange(I)V
 
-    .line 1106
+    .line 1114
     :cond_3
     invoke-direct {p0}, Lcom/htc/widget/HtcFastScroller;->cancelFling()V
 
-    .line 1107
+    .line 1115
     return-void
 .end method
 
@@ -1594,19 +1594,19 @@
     .locals 2
 
     .prologue
-    .line 1087
+    .line 1095
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mDeferStartDrag:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAbsListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1088
+    .line 1096
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mPendingDrag:Z
 
-    .line 1089
+    .line 1097
     return-void
 .end method
 
@@ -3192,7 +3192,7 @@
     .locals 1
 
     .prologue
-    .line 849
+    .line 857
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mSectionIndexer:Landroid/widget/SectionIndexer;
 
     return-object v0
@@ -3202,7 +3202,7 @@
     .locals 1
 
     .prologue
-    .line 853
+    .line 861
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mListAdapter:Landroid/widget/BaseAdapter;
 
     if-nez v0, :cond_0
@@ -3211,10 +3211,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 854
+    .line 862
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->getSectionsFromIndexer()V
 
-    .line 856
+    .line 864
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mSections:[Ljava/lang/Object;
 
@@ -3229,27 +3229,27 @@
 
     const/4 v4, 0x0
 
-    .line 860
+    .line 868
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcAbsListView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
-    .line 861
+    .line 869
     .local v0, adapter:Landroid/widget/Adapter;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mSectionIndexer:Landroid/widget/SectionIndexer;
 
-    .line 862
+    .line 870
     instance-of v1, v0, Lcom/htc/widget/HtcHeaderViewListAdapter;
 
     if-eqz v1, :cond_0
 
     move-object v1, v0
 
-    .line 863
+    .line 871
     check-cast v1, Lcom/htc/widget/HtcHeaderViewListAdapter;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcHeaderViewListAdapter;->getHeadersCount()I
@@ -3258,7 +3258,7 @@
 
     iput v1, p0, Lcom/htc/widget/HtcFastScroller;->mListOffset:I
 
-    .line 864
+    .line 872
     check-cast v0, Lcom/htc/widget/HtcHeaderViewListAdapter;
 
     .end local v0           #adapter:Landroid/widget/Adapter;
@@ -3266,7 +3266,7 @@
 
     move-result-object v0
 
-    .line 875
+    .line 883
     .restart local v0       #adapter:Landroid/widget/Adapter;
     :cond_0
     instance-of v1, v0, Landroid/widget/SectionIndexer;
@@ -3275,18 +3275,18 @@
 
     move-object v1, v0
 
-    .line 876
+    .line 884
     check-cast v1, Landroid/widget/BaseAdapter;
 
     iput-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mListAdapter:Landroid/widget/BaseAdapter;
 
-    .line 877
+    .line 885
     check-cast v0, Landroid/widget/SectionIndexer;
 
     .end local v0           #adapter:Landroid/widget/Adapter;
     iput-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mSectionIndexer:Landroid/widget/SectionIndexer;
 
-    .line 878
+    .line 886
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mSectionIndexer:Landroid/widget/SectionIndexer;
 
     invoke-interface {v1}, Landroid/widget/SectionIndexer;->getSections()[Ljava/lang/Object;
@@ -3295,12 +3295,12 @@
 
     iput-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mSections:[Ljava/lang/Object;
 
-    .line 883
+    .line 891
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mSections:[Ljava/lang/Object;
 
     if-nez v1, :cond_2
 
-    .line 884
+    .line 892
     new-array v1, v5, [Ljava/lang/String;
 
     const-string v2, " "
@@ -3309,15 +3309,15 @@
 
     iput-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mSections:[Ljava/lang/Object;
 
-    .line 901
+    .line 909
     :cond_1
     :goto_0
     iput-boolean v4, p0, Lcom/htc/widget/HtcFastScroller;->mSectionsDirty:Z
 
-    .line 903
+    .line 911
     return-void
 
-    .line 886
+    .line 894
     :cond_2
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mSections:[Ljava/lang/Object;
 
@@ -3329,7 +3329,7 @@
 
     if-nez v1, :cond_1
 
-    .line 887
+    .line 895
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mSections:[Ljava/lang/Object;
 
     aget-object v1, v1, v4
@@ -3344,7 +3344,7 @@
 
     if-ne v1, v5, :cond_3
 
-    .line 888
+    .line 896
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/htc/widget/HtcFastScroller;->mRes:Landroid/content/res/Resources;
@@ -3357,13 +3357,13 @@
 
     invoke-direct {p0, v1, v2}, Lcom/htc/widget/HtcFastScroller;->useThumbDrawable(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)V
 
-    .line 892
+    .line 900
     :goto_1
     iput-boolean v5, p0, Lcom/htc/widget/HtcFastScroller;->isCorrectThumbDrawable:Z
 
     goto :goto_0
 
-    .line 890
+    .line 898
     :cond_3
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mContext:Landroid/content/Context;
 
@@ -3379,7 +3379,7 @@
 
     goto :goto_1
 
-    .line 898
+    .line 906
     .restart local v0       #adapter:Landroid/widget/Adapter;
     :cond_4
     check-cast v0, Landroid/widget/BaseAdapter;
@@ -3387,7 +3387,7 @@
     .end local v0           #adapter:Landroid/widget/Adapter;
     iput-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mListAdapter:Landroid/widget/BaseAdapter;
 
-    .line 899
+    .line 907
     new-array v1, v5, [Ljava/lang/String;
 
     const-string v2, " "
@@ -3439,21 +3439,21 @@
 
     const/4 v2, 0x0
 
-    .line 1267
+    .line 1275
     iget-boolean v3, p0, Lcom/htc/widget/HtcFastScroller;->isGoogleStyle:Z
 
     if-eqz v3, :cond_4
 
-    .line 1269
+    .line 1277
     const/4 v0, 0x0
 
-    .line 1270
+    .line 1278
     .local v0, inTrack:Z
     iget v3, p0, Lcom/htc/widget/HtcFastScroller;->mPosition:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 1274
+    .line 1282
     iget-object v3, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcAbsListView;->getWidth()I
@@ -3472,7 +3472,7 @@
 
     move v0, v1
 
-    .line 1281
+    .line 1289
     :goto_0
     if-eqz v0, :cond_3
 
@@ -3500,7 +3500,7 @@
 
     if-gtz v3, :cond_3
 
-    .line 1283
+    .line 1291
     .end local v0           #inTrack:Z
     :cond_0
     :goto_1
@@ -3510,10 +3510,10 @@
     :cond_1
     move v0, v2
 
-    .line 1274
+    .line 1282
     goto :goto_0
 
-    .line 1277
+    .line 1285
     :pswitch_0
     iget v3, p0, Lcom/htc/widget/HtcFastScroller;->mThumbW:I
 
@@ -3536,10 +3536,10 @@
     :cond_3
     move v1, v2
 
-    .line 1281
+    .line 1289
     goto :goto_1
 
-    .line 1283
+    .line 1291
     .end local v0           #inTrack:Z
     :cond_4
     iget-object v3, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
@@ -3593,7 +3593,7 @@
 
     goto :goto_1
 
-    .line 1270
+    .line 1278
     nop
 
     :pswitch_data_0
@@ -3627,14 +3627,14 @@
     .parameter "ev"
 
     .prologue
-    .line 1110
+    .line 1118
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1126
+    .line 1134
     :cond_0
     :goto_0
     :pswitch_0
@@ -3643,7 +3643,7 @@
     :goto_1
     return v0
 
-    .line 1112
+    .line 1120
     :pswitch_1
     iget v0, p0, Lcom/htc/widget/HtcFastScroller;->mState:I
 
@@ -3663,7 +3663,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1113
+    .line 1121
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAbsListView;->isInScrollingContainer()Z
@@ -3672,15 +3672,15 @@
 
     if-nez v0, :cond_1
 
-    .line 1114
+    .line 1122
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->beginDrag()V
 
-    .line 1115
+    .line 1123
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 1117
+    .line 1125
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -3688,18 +3688,18 @@
 
     iput v0, p0, Lcom/htc/widget/HtcFastScroller;->mInitialTouchY:F
 
-    .line 1118
+    .line 1126
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->startPendingDrag()V
 
     goto :goto_0
 
-    .line 1123
+    .line 1131
     :pswitch_2
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->cancelPendingDrag()V
 
     goto :goto_0
 
-    .line 1110
+    .line 1118
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -3744,22 +3744,22 @@
 
     const/4 v2, 0x0
 
-    .line 802
+    .line 810
     iget-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->isGoogleStyle:Z
 
     if-eqz v0, :cond_4
 
-    .line 804
+    .line 812
     iget v0, p0, Lcom/htc/widget/HtcFastScroller;->mItemCount:I
 
     if-eq v0, p4, :cond_0
 
     if-lez p3, :cond_0
 
-    .line 805
+    .line 813
     iput p4, p0, Lcom/htc/widget/HtcFastScroller;->mItemCount:I
 
-    .line 806
+    .line 814
     iget v0, p0, Lcom/htc/widget/HtcFastScroller;->mItemCount:I
 
     div-int/2addr v0, p3
@@ -3773,30 +3773,30 @@
     :goto_0
     iput-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mLongList:Z
 
-    .line 808
+    .line 816
     :cond_0
     iget-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mAlwaysShow:Z
 
     if-eqz v0, :cond_1
 
-    .line 809
+    .line 817
     iput-boolean v1, p0, Lcom/htc/widget/HtcFastScroller;->mLongList:Z
 
-    .line 811
+    .line 819
     :cond_1
     iget-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mLongList:Z
 
     if-nez v0, :cond_4
 
-    .line 812
+    .line 820
     iget v0, p0, Lcom/htc/widget/HtcFastScroller;->mState:I
 
     if-eqz v0, :cond_2
 
-    .line 813
+    .line 821
     invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
-    .line 837
+    .line 845
     :cond_2
     :goto_1
     return-void
@@ -3804,10 +3804,10 @@
     :cond_3
     move v0, v2
 
-    .line 806
+    .line 814
     goto :goto_0
 
-    .line 818
+    .line 826
     :cond_4
     sub-int v0, p4, p3
 
@@ -3817,52 +3817,52 @@
 
     if-eq v0, v4, :cond_5
 
-    .line 819
+    .line 827
     invoke-direct {p0, p2, p3, p4}, Lcom/htc/widget/HtcFastScroller;->getThumbPositionForListPosition(III)I
 
     move-result v0
 
     iput v0, p0, Lcom/htc/widget/HtcFastScroller;->mThumbY:I
 
-    .line 821
+    .line 829
     iget-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mChangedBounds:Z
 
     if-eqz v0, :cond_5
 
-    .line 822
+    .line 830
     invoke-direct {p0}, Lcom/htc/widget/HtcFastScroller;->resetThumbPos()V
 
-    .line 823
+    .line 831
     iput-boolean v2, p0, Lcom/htc/widget/HtcFastScroller;->mChangedBounds:Z
 
-    .line 826
+    .line 834
     :cond_5
     iput-boolean v1, p0, Lcom/htc/widget/HtcFastScroller;->mScrollCompleted:Z
 
-    .line 827
+    .line 835
     iget v0, p0, Lcom/htc/widget/HtcFastScroller;->mVisibleItem:I
 
     if-eq p2, v0, :cond_2
 
-    .line 830
+    .line 838
     iput p2, p0, Lcom/htc/widget/HtcFastScroller;->mVisibleItem:I
 
-    .line 831
+    .line 839
     iget v0, p0, Lcom/htc/widget/HtcFastScroller;->mState:I
 
     if-eq v0, v4, :cond_2
 
-    .line 832
+    .line 840
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
-    .line 833
+    .line 841
     iget-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mAlwaysShow:Z
 
     if-nez v0, :cond_2
 
-    .line 834
+    .line 842
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mScrollFade:Lcom/htc/widget/HtcFastScroller$ScrollFade;
@@ -3878,12 +3878,12 @@
     .locals 1
 
     .prologue
-    .line 910
+    .line 918
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mListAdapter:Landroid/widget/BaseAdapter;
 
-    .line 911
+    .line 919
     return-void
 .end method
 
@@ -4063,7 +4063,7 @@
     .parameter "me"
 
     .prologue
-    .line 1140
+    .line 1148
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v8
@@ -4074,7 +4074,7 @@
 
     const/4 v4, 0x1
 
-    .line 1142
+    .line 1150
     .local v4, is2Point:Z
     :goto_0
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mState:I
@@ -4083,28 +4083,28 @@
 
     if-nez v4, :cond_1
 
-    .line 1143
+    .line 1151
     const/4 v8, 0x0
 
-    .line 1263
+    .line 1271
     :goto_1
     return v8
 
-    .line 1140
+    .line 1148
     .end local v4           #is2Point:Z
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1146
+    .line 1154
     .restart local v4       #is2Point:Z
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
 
-    .line 1149
+    .line 1157
     .local v2, action:I
     if-eqz v4, :cond_5
 
@@ -4126,7 +4126,7 @@
 
     div-float v0, v8, v9
 
-    .line 1150
+    .line 1158
     .local v0, X:F
     :goto_2
     if-eqz v4, :cond_6
@@ -4149,7 +4149,7 @@
 
     div-float v1, v8, v9
 
-    .line 1152
+    .line 1160
     .local v1, Y:F
     :goto_3
     if-eqz v2, :cond_2
@@ -4158,7 +4158,7 @@
 
     if-ne v2, v8, :cond_9
 
-    .line 1153
+    .line 1161
     :cond_2
     if-nez v4, :cond_3
 
@@ -4168,7 +4168,7 @@
 
     if-eqz v8, :cond_8
 
-    .line 1155
+    .line 1163
     :cond_3
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
@@ -4178,26 +4178,26 @@
 
     if-nez v8, :cond_7
 
-    .line 1156
+    .line 1164
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mState:I
 
     if-nez v8, :cond_4
 
-    .line 1157
+    .line 1165
     const/4 v8, 0x2
 
     invoke-virtual {p0, v8}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
-    .line 1158
+    .line 1166
     :cond_4
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->beginDrag()V
 
-    .line 1159
+    .line 1167
     const/4 v8, 0x1
 
     goto :goto_1
 
-    .line 1149
+    .line 1157
     .end local v0           #X:F
     .end local v1           #Y:F
     :cond_5
@@ -4207,7 +4207,7 @@
 
     goto :goto_2
 
-    .line 1150
+    .line 1158
     .restart local v0       #X:F
     :cond_6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
@@ -4216,42 +4216,42 @@
 
     goto :goto_3
 
-    .line 1161
+    .line 1169
     .restart local v1       #Y:F
     :cond_7
     iput v1, p0, Lcom/htc/widget/HtcFastScroller;->mInitialTouchY:F
 
-    .line 1162
+    .line 1170
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->startPendingDrag()V
 
-    .line 1263
+    .line 1271
     :cond_8
     const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 1164
+    .line 1172
     :cond_9
     const/4 v8, 0x1
 
     if-ne v2, v8, :cond_f
 
-    .line 1165
+    .line 1173
     iget-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mPendingDrag:Z
 
     if-eqz v8, :cond_b
 
-    .line 1167
+    .line 1175
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->beginDrag()V
 
-    .line 1169
+    .line 1177
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v8}, Lcom/htc/widget/HtcAbsListView;->getHeight()I
 
     move-result v6
 
-    .line 1171
+    .line 1179
     .local v6, viewHeight:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -4265,19 +4265,19 @@
 
     add-int/lit8 v5, v8, 0xa
 
-    .line 1172
+    .line 1180
     .local v5, newThumbY:I
     if-gez v5, :cond_e
 
-    .line 1173
+    .line 1181
     const/4 v5, 0x0
 
-    .line 1177
+    .line 1185
     :cond_a
     :goto_4
     iput v5, p0, Lcom/htc/widget/HtcFastScroller;->mThumbY:I
 
-    .line 1178
+    .line 1186
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mThumbY:I
 
     int-to-float v8, v8
@@ -4292,10 +4292,10 @@
 
     invoke-virtual {p0, v8}, Lcom/htc/widget/HtcFastScroller;->scrollTo(F)V
 
-    .line 1180
+    .line 1188
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->cancelPendingDrag()V
 
-    .line 1183
+    .line 1191
     .end local v5           #newThumbY:I
     .end local v6           #viewHeight:I
     :cond_b
@@ -4305,69 +4305,69 @@
 
     if-ne v8, v9, :cond_8
 
-    .line 1184
+    .line 1192
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     if-eqz v8, :cond_c
 
-    .line 1188
+    .line 1196
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v9, 0x0
 
     invoke-virtual {v8, v9}, Lcom/htc/widget/HtcAbsListView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1189
+    .line 1197
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v9, 0x0
 
     invoke-virtual {v8, v9}, Lcom/htc/widget/HtcAbsListView;->reportScrollStateChange(I)V
 
-    .line 1191
+    .line 1199
     :cond_c
     const/4 v8, 0x1
 
     iput-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mOverlayFading:Z
 
-    .line 1192
+    .line 1200
     const/4 v8, 0x2
 
     invoke-virtual {p0, v8}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
-    .line 1193
+    .line 1201
     iget-object v3, p0, Lcom/htc/widget/HtcFastScroller;->mHandler:Landroid/os/Handler;
 
-    .line 1194
+    .line 1202
     .local v3, handler:Landroid/os/Handler;
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mScrollFade:Lcom/htc/widget/HtcFastScroller$ScrollFade;
 
     invoke-virtual {v3, v8}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1195
+    .line 1203
     iget-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mAlwaysShow:Z
 
     if-nez v8, :cond_d
 
-    .line 1196
+    .line 1204
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mScrollFade:Lcom/htc/widget/HtcFastScroller$ScrollFade;
 
     const-wide/16 v9, 0x3e8
 
     invoke-virtual {v3, v8, v9, v10}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1199
+    .line 1207
     :cond_d
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v8}, Lcom/htc/widget/HtcAbsListView;->invalidate()V
 
-    .line 1200
+    .line 1208
     const/4 v8, 0x1
 
     goto/16 :goto_1
 
-    .line 1174
+    .line 1182
     .end local v3           #handler:Landroid/os/Handler;
     .restart local v5       #newThumbY:I
     .restart local v6       #viewHeight:I
@@ -4378,14 +4378,14 @@
 
     if-le v8, v6, :cond_a
 
-    .line 1175
+    .line 1183
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mThumbH:I
 
     sub-int v5, v6, v8
 
     goto :goto_4
 
-    .line 1202
+    .line 1210
     .end local v5           #newThumbY:I
     .end local v6           #viewHeight:I
     :cond_f
@@ -4393,17 +4393,17 @@
 
     if-ne v2, v8, :cond_17
 
-    .line 1203
+    .line 1211
     iget-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mPendingDrag:Z
 
     if-eqz v8, :cond_12
 
-    .line 1204
+    .line 1212
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v7
 
-    .line 1205
+    .line 1213
     .local v7, y:F
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mInitialTouchY:F
 
@@ -4421,12 +4421,12 @@
 
     if-lez v8, :cond_12
 
-    .line 1206
+    .line 1214
     const/4 v8, 0x3
 
     invoke-virtual {p0, v8}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
-    .line 1207
+    .line 1215
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mListAdapter:Landroid/widget/BaseAdapter;
 
     if-nez v8, :cond_10
@@ -4435,37 +4435,37 @@
 
     if-eqz v8, :cond_10
 
-    .line 1208
+    .line 1216
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->getSectionsFromIndexer()V
 
-    .line 1210
+    .line 1218
     :cond_10
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     if-eqz v8, :cond_11
 
-    .line 1211
+    .line 1219
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v9, 0x1
 
     invoke-virtual {v8, v9}, Lcom/htc/widget/HtcAbsListView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1212
+    .line 1220
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v9, 0x1
 
     invoke-virtual {v8, v9}, Lcom/htc/widget/HtcAbsListView;->reportScrollStateChange(I)V
 
-    .line 1215
+    .line 1223
     :cond_11
     invoke-direct {p0}, Lcom/htc/widget/HtcFastScroller;->cancelFling()V
 
-    .line 1216
+    .line 1224
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->cancelPendingDrag()V
 
-    .line 1220
+    .line 1228
     .end local v7           #y:F
     :cond_12
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mState:I
@@ -4474,14 +4474,14 @@
 
     if-ne v8, v9, :cond_8
 
-    .line 1221
+    .line 1229
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v8}, Lcom/htc/widget/HtcAbsListView;->getHeight()I
 
     move-result v6
 
-    .line 1223
+    .line 1231
     .restart local v6       #viewHeight:I
     float-to-int v8, v1
 
@@ -4491,14 +4491,14 @@
 
     add-int/lit8 v5, v8, 0xa
 
-    .line 1224
+    .line 1232
     .restart local v5       #newThumbY:I
     if-gez v5, :cond_14
 
-    .line 1225
+    .line 1233
     const/4 v5, 0x0
 
-    .line 1229
+    .line 1237
     :cond_13
     :goto_5
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mThumbY:I
@@ -4513,12 +4513,12 @@
 
     if-ge v8, v9, :cond_15
 
-    .line 1230
+    .line 1238
     const/4 v8, 0x1
 
     goto/16 :goto_1
 
-    .line 1226
+    .line 1234
     :cond_14
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mThumbH:I
 
@@ -4526,23 +4526,23 @@
 
     if-le v8, v6, :cond_13
 
-    .line 1227
+    .line 1235
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mThumbH:I
 
     sub-int v5, v6, v8
 
     goto :goto_5
 
-    .line 1232
+    .line 1240
     :cond_15
     iput v5, p0, Lcom/htc/widget/HtcFastScroller;->mThumbY:I
 
-    .line 1234
+    .line 1242
     iget-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mScrollCompleted:Z
 
     if-eqz v8, :cond_16
 
-    .line 1235
+    .line 1243
     iget v8, p0, Lcom/htc/widget/HtcFastScroller;->mThumbY:I
 
     int-to-float v8, v8
@@ -4557,13 +4557,13 @@
 
     invoke-virtual {p0, v8}, Lcom/htc/widget/HtcFastScroller;->scrollTo(F)V
 
-    .line 1237
+    .line 1245
     :cond_16
     const/4 v8, 0x1
 
     goto/16 :goto_1
 
-    .line 1239
+    .line 1247
     .end local v5           #newThumbY:I
     .end local v6           #viewHeight:I
     :cond_17
@@ -4571,10 +4571,10 @@
 
     if-ne v2, v8, :cond_8
 
-    .line 1240
+    .line 1248
     invoke-virtual {p0}, Lcom/htc/widget/HtcFastScroller;->cancelPendingDrag()V
 
-    .line 1243
+    .line 1251
     iget-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mDownCancel:Z
 
     if-nez v8, :cond_8
@@ -4585,64 +4585,64 @@
 
     if-ne v8, v9, :cond_8
 
-    .line 1244
+    .line 1252
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     if-eqz v8, :cond_18
 
-    .line 1248
+    .line 1256
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v9, 0x0
 
     invoke-virtual {v8, v9}, Lcom/htc/widget/HtcAbsListView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1249
+    .line 1257
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v9, 0x0
 
     invoke-virtual {v8, v9}, Lcom/htc/widget/HtcAbsListView;->reportScrollStateChange(I)V
 
-    .line 1251
+    .line 1259
     :cond_18
     const/4 v8, 0x1
 
     iput-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mOverlayFading:Z
 
-    .line 1252
+    .line 1260
     const/4 v8, 0x2
 
     invoke-virtual {p0, v8}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
-    .line 1253
+    .line 1261
     iget-object v3, p0, Lcom/htc/widget/HtcFastScroller;->mHandler:Landroid/os/Handler;
 
-    .line 1254
+    .line 1262
     .restart local v3       #handler:Landroid/os/Handler;
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mScrollFade:Lcom/htc/widget/HtcFastScroller$ScrollFade;
 
     invoke-virtual {v3, v8}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1255
+    .line 1263
     iget-boolean v8, p0, Lcom/htc/widget/HtcFastScroller;->mAlwaysShow:Z
 
     if-nez v8, :cond_19
 
-    .line 1256
+    .line 1264
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mScrollFade:Lcom/htc/widget/HtcFastScroller$ScrollFade;
 
     const-wide/16 v9, 0x3e8
 
     invoke-virtual {v3, v8, v9, v10}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1259
+    .line 1267
     :cond_19
     iget-object v8, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v8}, Lcom/htc/widget/HtcAbsListView;->invalidate()V
 
-    .line 1260
+    .line 1268
     const/4 v8, 0x1
 
     goto/16 :goto_1
@@ -4653,7 +4653,7 @@
     .parameter "position"
 
     .prologue
-    .line 914
+    .line 922
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
@@ -4664,7 +4664,7 @@
 
     move-result v2
 
-    .line 915
+    .line 923
     .local v2, count:I
     const/16 v19, 0x0
 
@@ -4674,7 +4674,7 @@
 
     iput-boolean v0, v1, Lcom/htc/widget/HtcFastScroller;->mScrollCompleted:Z
 
-    .line 916
+    .line 924
     const/high16 v19, 0x3f80
 
     int-to-float v0, v2
@@ -4687,7 +4687,7 @@
 
     div-float v7, v19, v20
 
-    .line 917
+    .line 925
     .local v7, fThreshold:F
     move-object/from16 v0, p0
 
@@ -4695,7 +4695,7 @@
 
     move-object/from16 v17, v0
 
-    .line 919
+    .line 927
     .local v17, sections:[Ljava/lang/Object;
     if-eqz v17, :cond_d
 
@@ -4713,12 +4713,12 @@
 
     if-le v0, v1, :cond_d
 
-    .line 920
+    .line 928
     move-object/from16 v0, v17
 
     array-length v9, v0
 
-    .line 921
+    .line 929
     .local v9, nSections:I
     int-to-float v0, v9
 
@@ -4730,22 +4730,22 @@
 
     float-to-int v15, v0
 
-    .line 922
+    .line 930
     .local v15, section:I
     if-lt v15, v9, :cond_0
 
-    .line 923
+    .line 931
     add-int/lit8 v15, v9, -0x1
 
-    .line 925
+    .line 933
     :cond_0
     move v3, v15
 
-    .line 926
+    .line 934
     .local v3, exactSection:I
     move/from16 v16, v15
 
-    .line 927
+    .line 935
     .local v16, sectionIndex:I
     move-object/from16 v0, p0
 
@@ -4759,23 +4759,23 @@
 
     move-result v8
 
-    .line 934
+    .line 942
     .local v8, index:I
     move v10, v2
 
-    .line 935
+    .line 943
     .local v10, nextIndex:I
     move v13, v8
 
-    .line 936
+    .line 944
     .local v13, prevIndex:I
     move v14, v15
 
-    .line 937
+    .line 945
     .local v14, prevSection:I
     add-int/lit8 v12, v15, 0x1
 
-    .line 939
+    .line 947
     .local v12, nextSection:I
     add-int/lit8 v19, v9, -0x1
 
@@ -4783,7 +4783,7 @@
 
     if-ge v15, v0, :cond_1
 
-    .line 940
+    .line 948
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcFastScroller;->mSectionIndexer:Landroid/widget/SectionIndexer;
@@ -4796,18 +4796,18 @@
 
     move-result v10
 
-    .line 944
+    .line 952
     :cond_1
     if-ne v10, v8, :cond_3
 
-    .line 946
+    .line 954
     :cond_2
     if-lez v15, :cond_3
 
-    .line 947
+    .line 955
     add-int/lit8 v15, v15, -0x1
 
-    .line 948
+    .line 956
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcFastScroller;->mSectionIndexer:Landroid/widget/SectionIndexer;
@@ -4820,21 +4820,21 @@
 
     move-result v13
 
-    .line 949
+    .line 957
     if-eq v13, v8, :cond_4
 
-    .line 950
+    .line 958
     move v14, v15
 
-    .line 951
+    .line 959
     move/from16 v16, v15
 
-    .line 966
+    .line 974
     :cond_3
     :goto_0
     add-int/lit8 v11, v12, 0x1
 
-    .line 968
+    .line 976
     .local v11, nextNextSection:I
     :goto_1
     if-ge v11, v9, :cond_5
@@ -4855,26 +4855,26 @@
 
     if-ne v0, v10, :cond_5
 
-    .line 969
+    .line 977
     add-int/lit8 v11, v11, 0x1
 
-    .line 970
+    .line 978
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 953
+    .line 961
     .end local v11           #nextNextSection:I
     :cond_4
     if-nez v15, :cond_2
 
-    .line 956
+    .line 964
     const/16 v16, 0x0
 
-    .line 957
+    .line 965
     goto :goto_0
 
-    .line 975
+    .line 983
     .restart local v11       #nextNextSection:I
     :cond_5
     int-to-float v0, v14
@@ -4887,7 +4887,7 @@
 
     div-float v6, v19, v20
 
-    .line 976
+    .line 984
     .local v6, fPrev:F
     int-to-float v0, v12
 
@@ -4899,7 +4899,7 @@
 
     div-float v5, v19, v20
 
-    .line 977
+    .line 985
     .local v5, fNext:F
     if-ne v14, v3, :cond_9
 
@@ -4909,10 +4909,10 @@
 
     if-gez v19, :cond_9
 
-    .line 978
+    .line 986
     move v8, v13
 
-    .line 993
+    .line 1001
     :cond_6
     :goto_2
     add-int/lit8 v19, v2, -0x1
@@ -4923,7 +4923,7 @@
 
     add-int/lit8 v8, v2, -0x1
 
-    .line 995
+    .line 1003
     :cond_7
     move-object/from16 v0, p0
 
@@ -4939,14 +4939,14 @@
 
     if-eqz v19, :cond_b
 
-    .line 996
+    .line 1004
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     check-cast v4, Lcom/htc/widget/HtcExpandableListView;
 
-    .line 999
+    .line 1007
     .local v4, expList:Lcom/htc/widget/HtcExpandableListView;
     invoke-static {v8}, Lcom/htc/widget/HtcExpandableListView;->getPackedPositionForGroup(I)J
 
@@ -4966,7 +4966,7 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/htc/widget/HtcExpandableListView;->setSelectionFromTop(II)V
 
-    .line 1024
+    .line 1032
     .end local v3           #exactSection:I
     .end local v4           #expList:Lcom/htc/widget/HtcExpandableListView;
     .end local v5           #fNext:F
@@ -4981,7 +4981,7 @@
     :goto_3
     if-ltz v16, :cond_12
 
-    .line 1025
+    .line 1033
     aget-object v19, v17, v16
 
     invoke-virtual/range {v19 .. v19}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -4994,7 +4994,7 @@
 
     iput-object v0, v1, Lcom/htc/widget/HtcFastScroller;->mSectionText:Ljava/lang/String;
 
-    .line 1026
+    .line 1034
     .local v18, text:Ljava/lang/String;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/String;->length()I
 
@@ -5044,12 +5044,12 @@
 
     iput-boolean v0, v1, Lcom/htc/widget/HtcFastScroller;->mDrawOverlay:Z
 
-    .line 1031
+    .line 1039
     .end local v18           #text:Ljava/lang/String;
     :goto_5
     return-void
 
-    .line 980
+    .line 988
     .restart local v3       #exactSection:I
     .restart local v5       #fNext:F
     .restart local v6       #fPrev:F
@@ -5069,7 +5069,7 @@
 
     if-eqz v19, :cond_a
 
-    .line 981
+    .line 989
     sub-int v19, v10, v13
 
     move/from16 v0, v19
@@ -5096,19 +5096,19 @@
 
     goto/16 :goto_2
 
-    .line 986
+    .line 994
     :cond_a
     move v8, v13
 
-    .line 987
+    .line 995
     if-gez v8, :cond_6
 
-    .line 988
+    .line 996
     const/4 v8, 0x0
 
     goto/16 :goto_2
 
-    .line 1002
+    .line 1010
     :cond_b
     move-object/from16 v0, p0
 
@@ -5124,7 +5124,7 @@
 
     if-eqz v19, :cond_c
 
-    .line 1003
+    .line 1011
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
@@ -5147,7 +5147,7 @@
 
     goto/16 :goto_3
 
-    .line 1005
+    .line 1013
     :cond_c
     move-object/from16 v0, p0
 
@@ -5167,7 +5167,7 @@
 
     goto/16 :goto_3
 
-    .line 1008
+    .line 1016
     .end local v3           #exactSection:I
     .end local v5           #fNext:F
     .end local v6           #fPrev:F
@@ -5191,7 +5191,7 @@
 
     float-to-int v8, v0
 
-    .line 1010
+    .line 1018
     .restart local v8       #index:I
     add-int/lit8 v19, v2, -0x1
 
@@ -5201,7 +5201,7 @@
 
     add-int/lit8 v8, v2, -0x1
 
-    .line 1012
+    .line 1020
     :cond_e
     move-object/from16 v0, p0
 
@@ -5217,14 +5217,14 @@
 
     if-eqz v19, :cond_f
 
-    .line 1013
+    .line 1021
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     check-cast v4, Lcom/htc/widget/HtcExpandableListView;
 
-    .line 1014
+    .line 1022
     .restart local v4       #expList:Lcom/htc/widget/HtcExpandableListView;
     move-object/from16 v0, p0
 
@@ -5252,7 +5252,7 @@
 
     invoke-virtual {v4, v0, v1}, Lcom/htc/widget/HtcExpandableListView;->setSelectionFromTop(II)V
 
-    .line 1021
+    .line 1029
     .end local v4           #expList:Lcom/htc/widget/HtcExpandableListView;
     :goto_6
     const/16 v16, -0x1
@@ -5260,7 +5260,7 @@
     .restart local v16       #sectionIndex:I
     goto/16 :goto_3
 
-    .line 1016
+    .line 1024
     .end local v16           #sectionIndex:I
     :cond_f
     move-object/from16 v0, p0
@@ -5277,7 +5277,7 @@
 
     if-eqz v19, :cond_10
 
-    .line 1017
+    .line 1025
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
@@ -5300,7 +5300,7 @@
 
     goto :goto_6
 
-    .line 1019
+    .line 1027
     :cond_10
     move-object/from16 v0, p0
 
@@ -5320,7 +5320,7 @@
 
     goto :goto_6
 
-    .line 1026
+    .line 1034
     .restart local v16       #sectionIndex:I
     .restart local v18       #text:Ljava/lang/String;
     :cond_11
@@ -5328,7 +5328,7 @@
 
     goto/16 :goto_4
 
-    .line 1029
+    .line 1037
     .end local v18           #text:Ljava/lang/String;
     :cond_12
     const/16 v19, 0x0
@@ -5429,12 +5429,12 @@
     .locals 1
 
     .prologue
-    .line 845
+    .line 853
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mSectionsDirty:Z
 
-    .line 846
+    .line 854
     return-void
 .end method
 
@@ -5564,12 +5564,12 @@
     .locals 4
 
     .prologue
-    .line 1092
+    .line 1100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcFastScroller;->mPendingDrag:Z
 
-    .line 1093
+    .line 1101
     iget-object v0, p0, Lcom/htc/widget/HtcFastScroller;->mList:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v1, p0, Lcom/htc/widget/HtcFastScroller;->mDeferStartDrag:Ljava/lang/Runnable;
@@ -5578,7 +5578,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/widget/HtcAbsListView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1094
+    .line 1102
     return-void
 .end method
 
@@ -5592,5 +5592,17 @@
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcFastScroller;->setState(I)V
 
     .line 526
+    return-void
+.end method
+
+.method updateFirstVisibleItemPosition(I)V
+    .locals 0
+    .parameter "position"
+
+    .prologue
+    .line 805
+    iput p1, p0, Lcom/htc/widget/HtcFastScroller;->mVisibleItem:I
+
+    .line 806
     return-void
 .end method

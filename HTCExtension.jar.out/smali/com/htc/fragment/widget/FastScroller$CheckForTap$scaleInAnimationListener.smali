@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1452
+    .line 1458
     iput-object p1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1452
+    .line 1458
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;-><init>(Lcom/htc/fragment/widget/FastScroller$CheckForTap;)V
 
     return-void
@@ -54,7 +54,7 @@
     .parameter "anim"
 
     .prologue
-    .line 1482
+    .line 1488
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->animateView:Landroid/view/View;
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1483
+    .line 1489
     return-void
 .end method
 
@@ -82,7 +82,7 @@
     .parameter "anim"
 
     .prologue
-    .line 1478
+    .line 1484
     return-void
 .end method
 
@@ -93,7 +93,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1460
+    .line 1466
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->mClickAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
@@ -112,7 +112,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1461
+    .line 1467
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
@@ -133,7 +133,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->mClickAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->access$1102(Lcom/htc/fragment/widget/FastScroller$CheckForTap;Lcom/htc/utils/perf/FramerateMonitor;)Lcom/htc/utils/perf/FramerateMonitor;
 
-    .line 1462
+    .line 1468
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
@@ -144,7 +144,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1463
+    .line 1469
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->mClickAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
@@ -154,7 +154,7 @@
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 1465
+    .line 1471
     :cond_1
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
@@ -165,7 +165,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->isSkipAnimation:Z
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/FastScroller;->access$1302(Lcom/htc/fragment/widget/FastScroller;Z)Z
 
-    .line 1466
+    .line 1472
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     iget-object v0, v0, Lcom/htc/fragment/widget/FastScroller$CheckForTap;->this$0:Lcom/htc/fragment/widget/FastScroller;
@@ -173,7 +173,7 @@
     #setter for: Lcom/htc/fragment/widget/FastScroller;->isScaleAnimation:Z
     invoke-static {v0, v4}, Lcom/htc/fragment/widget/FastScroller;->access$1402(Lcom/htc/fragment/widget/FastScroller;Z)Z
 
-    .line 1469
+    .line 1475
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -183,7 +183,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1470
+    .line 1476
     iget-object v0, p0, Lcom/htc/fragment/widget/FastScroller$CheckForTap$scaleInAnimationListener;->this$1:Lcom/htc/fragment/widget/FastScroller$CheckForTap;
 
     #getter for: Lcom/htc/fragment/widget/FastScroller$CheckForTap;->carouselView:Lcom/htc/fragment/widget/CarouselTextView;
@@ -193,7 +193,7 @@
 
     invoke-virtual {v0, v4}, Lcom/htc/fragment/widget/CarouselTextView;->enableClickMultiply(Z)V
 
-    .line 1471
+    .line 1477
     :cond_2
     return-void
 .end method

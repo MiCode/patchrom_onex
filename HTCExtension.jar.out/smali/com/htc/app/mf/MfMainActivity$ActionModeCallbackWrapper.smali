@@ -30,15 +30,15 @@
     .parameter "wrapped"
 
     .prologue
-    .line 247
+    .line 249
     iput-object p1, p0, Lcom/htc/app/mf/MfMainActivity$ActionModeCallbackWrapper;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 248
+    .line 250
     iput-object p2, p0, Lcom/htc/app/mf/MfMainActivity$ActionModeCallbackWrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
-    .line 249
+    .line 251
     return-void
 .end method
 
@@ -50,7 +50,7 @@
     .parameter "item"
 
     .prologue
-    .line 272
+    .line 274
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$ActionModeCallbackWrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
@@ -66,7 +66,7 @@
     .parameter "menu"
 
     .prologue
-    .line 256
+    .line 258
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$ActionModeCallbackWrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -81,12 +81,12 @@
     .parameter "mode"
 
     .prologue
-    .line 280
+    .line 282
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$ActionModeCallbackWrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1}, Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
-    .line 281
+    .line 283
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$ActionModeCallbackWrapper;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     const/4 v1, 0x1
@@ -94,7 +94,7 @@
     #setter for: Lcom/htc/app/mf/MfMainActivity;->mIsDestroyMyActionMode:Z
     invoke-static {v0, v1}, Lcom/htc/app/mf/MfMainActivity;->access$002(Lcom/htc/app/mf/MfMainActivity;Z)Z
 
-    .line 282
+    .line 284
     return-void
 .end method
 
@@ -104,7 +104,7 @@
     .parameter "menu"
 
     .prologue
-    .line 264
+    .line 266
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$ActionModeCallbackWrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z

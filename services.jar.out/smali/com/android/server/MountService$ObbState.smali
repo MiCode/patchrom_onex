@@ -44,24 +44,24 @@
     .end annotation
 
     .prologue
-    .line 258
+    .line 264
     iput-object p1, p0, Lcom/android/server/MountService$ObbState;->this$0:Lcom/android/server/MountService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 259
+    .line 265
     iput-object p2, p0, Lcom/android/server/MountService$ObbState;->filename:Ljava/lang/String;
 
-    .line 260
+    .line 266
     iput p3, p0, Lcom/android/server/MountService$ObbState;->callerUid:I
 
-    .line 261
+    .line 267
     iput-object p4, p0, Lcom/android/server/MountService$ObbState;->token:Landroid/os/storage/IObbActionListener;
 
-    .line 262
+    .line 268
     iput p5, p0, Lcom/android/server/MountService$ObbState;->nonce:I
 
-    .line 263
+    .line 269
     return-void
 .end method
 
@@ -73,14 +73,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 283
+    .line 289
     new-instance v0, Lcom/android/server/MountService$UnmountObbAction;
 
     iget-object v1, p0, Lcom/android/server/MountService$ObbState;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {v0, v1, p0, v3}, Lcom/android/server/MountService$UnmountObbAction;-><init>(Lcom/android/server/MountService;Lcom/android/server/MountService$ObbState;Z)V
 
-    .line 284
+    .line 290
     .local v0, action:Lcom/android/server/MountService$ObbAction;
     iget-object v1, p0, Lcom/android/server/MountService$ObbState;->this$0:Lcom/android/server/MountService;
 
@@ -102,7 +102,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/MountService$ObbActionHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 285
+    .line 291
     return-void
 .end method
 
@@ -110,7 +110,7 @@
     .locals 1
 
     .prologue
-    .line 278
+    .line 284
     iget-object v0, p0, Lcom/android/server/MountService$ObbState;->token:Landroid/os/storage/IObbActionListener;
 
     invoke-interface {v0}, Landroid/os/storage/IObbActionListener;->asBinder()Landroid/os/IBinder;
@@ -129,7 +129,7 @@
     .end annotation
 
     .prologue
-    .line 288
+    .line 294
     invoke-virtual {p0}, Lcom/android/server/MountService$ObbState;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -138,7 +138,7 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 289
+    .line 295
     return-void
 .end method
 
@@ -146,30 +146,30 @@
     .locals 2
 
     .prologue
-    .line 297
+    .line 303
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ObbState{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 298
+    .line 304
     .local v0, sb:Ljava/lang/StringBuilder;
     const-string v1, "filename="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 299
+    .line 305
     iget-object v1, p0, Lcom/android/server/MountService$ObbState;->filename:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 300
+    .line 306
     const-string v1, ",token="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 301
+    .line 307
     iget-object v1, p0, Lcom/android/server/MountService$ObbState;->token:Landroid/os/storage/IObbActionListener;
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -178,22 +178,22 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 302
+    .line 308
     const-string v1, ",callerUid="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 303
+    .line 309
     iget v1, p0, Lcom/android/server/MountService$ObbState;->callerUid:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 304
+    .line 310
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 305
+    .line 311
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -205,7 +205,7 @@
     .locals 2
 
     .prologue
-    .line 292
+    .line 298
     invoke-virtual {p0}, Lcom/android/server/MountService$ObbState;->getBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -214,6 +214,6 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 293
+    .line 299
     return-void
 .end method

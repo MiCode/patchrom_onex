@@ -24,25 +24,25 @@
     .parameter "isEnter"
 
     .prologue
-    .line 1155
+    .line 1269
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
-    .line 1156
+    .line 1270
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/HtcGlAnimManager$FadeOutAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 1157
+    .line 1271
     const-wide/16 v0, 0x1f4
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/HtcGlAnimManager$FadeOutAnimation;->setDuration(J)V
 
-    .line 1158
+    .line 1272
     iput-boolean p1, p0, Lcom/android/server/wm/HtcGlAnimManager$FadeOutAnimation;->mIsEnter:Z
 
-    .line 1159
+    .line 1273
     return-void
 .end method
 
@@ -54,16 +54,16 @@
     .parameter "t"
 
     .prologue
-    .line 1178
+    .line 1292
     move v0, p1
 
-    .line 1179
+    .line 1293
     .local v0, x:F
     iget-boolean v1, p0, Lcom/android/server/wm/HtcGlAnimManager$FadeOutAnimation;->mIsEnter:Z
 
     if-nez v1, :cond_0
 
-    .line 1180
+    .line 1294
     const/high16 v1, 0x3f80
 
     const/high16 v2, 0x4000
@@ -72,10 +72,10 @@
 
     sub-float v0, v1, v2
 
-    .line 1181
+    .line 1295
     invoke-virtual {p2, v0}, Landroid/view/animation/Transformation;->setAlpha(F)V
 
-    .line 1186
+    .line 1300
     :cond_0
     return-void
 .end method
@@ -84,15 +84,15 @@
     .locals 1
 
     .prologue
-    .line 1190
+    .line 1304
     iget-boolean v0, p0, Lcom/android/server/wm/HtcGlAnimManager$FadeOutAnimation;->mIsEnter:Z
 
     if-nez v0, :cond_0
 
-    .line 1191
+    .line 1305
     const/4 v0, 0x1
 
-    .line 1193
+    .line 1307
     :goto_0
     return v0
 
@@ -107,17 +107,17 @@
     .parameter "scale"
 
     .prologue
-    .line 1171
+    .line 1285
     const/4 v0, 0x0
 
     cmpl-float v0, p1, v0
 
     if-lez v0, :cond_0
 
-    .line 1172
+    .line 1286
     invoke-super {p0, p1}, Landroid/view/animation/Animation;->scaleCurrentDuration(F)V
 
-    .line 1174
+    .line 1288
     :cond_0
     return-void
 .end method

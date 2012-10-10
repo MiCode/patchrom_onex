@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Műsorfüzet hozzáadása</string>
     <string name="htc_delete_playlists">Műsorfüzet törlése</string>
     <string name="htc_delete_playlist">Műsorfüzet törlése</string>
+    <string name="htc_delete_all_playlists">Összes lejátszási lista törlése</string>
     <string name="htc_playlist_add_songs">Zeneszámok hozzáadása</string>
     <string name="htc_playlist_del_songs">Zeneszámok törlése</string>
     <string name="htc_playlist_remove_songs">Zeneszámok eltávolítása</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Pufferelés...</string>
     <string name="title_send_content">Tartalom küldése...</string>
     <string name="no_downloaded_apps_found">Nincs letöltött alkalmazás</string>
+    <string name="music_folder_picker_dialog_msg">Zeneszámok hozzáadása a műsorfüzethez a mappa kiválasztásával? Nem - zeneszámok hozzáadása másképp</string>
 </resources>

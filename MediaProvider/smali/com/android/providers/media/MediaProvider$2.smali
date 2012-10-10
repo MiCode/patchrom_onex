@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 393
+    .line 397
     iput-object p1, p0, Lcom/android/providers/media/MediaProvider$2;->this$0:Lcom/android/providers/media/MediaProvider;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .parameter "args"
 
     .prologue
-    .line 401
+    .line 405
     iget-object v2, p0, Lcom/android/providers/media/MediaProvider$2;->this$0:Lcom/android/providers/media/MediaProvider;
 
     iget-object v2, v2, Lcom/android/providers/media/MediaProvider;->mDirectoryCache:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 404
+    .line 408
     iget-object v2, p0, Lcom/android/providers/media/MediaProvider$2;->this$0:Lcom/android/providers/media/MediaProvider;
 
     #getter for: Lcom/android/providers/media/MediaProvider;->mDisableMtpObjectCallbacks:Z
@@ -59,12 +59,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 420
+    .line 424
     :cond_0
     :goto_0
     return-void
 
-    .line 407
+    .line 411
     :cond_1
     iget-object v2, p0, Lcom/android/providers/media/MediaProvider$2;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -73,11 +73,11 @@
 
     move-result-object v1
 
-    .line 408
+    .line 412
     .local v1, mtpService:Lcom/android/providers/media/IMtpService;
     if-eqz v1, :cond_0
 
-    .line 413
+    .line 417
     :try_start_0
     iget-object v2, p0, Lcom/android/providers/media/MediaProvider$2;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -98,11 +98,11 @@
 
     goto :goto_0
 
-    .line 414
+    .line 418
     :catch_0
     move-exception v0
 
-    .line 415
+    .line 419
     .local v0, e:Ljava/lang/NumberFormatException;
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
 

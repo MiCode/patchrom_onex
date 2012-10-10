@@ -33,18 +33,18 @@
     .parameter "audioFocus"
 
     .prologue
-    .line 87
+    .line 89
     invoke-direct {p0, p1}, Lcom/android/camera/Handle;-><init>(Ljava/lang/String;)V
 
-    .line 88
+    .line 90
     iput-object p2, p0, Lcom/android/camera/component/AudioManager$StreamHandle;->sound:Lcom/android/camera/component/AudioManager$SoundHandle;
 
-    .line 89
+    .line 91
     iput p3, p0, Lcom/android/camera/component/AudioManager$StreamHandle;->loopCount:I
 
-    .line 90
+    .line 92
     iput-boolean p4, p0, Lcom/android/camera/component/AudioManager$StreamHandle;->audioFocus:Z
 
-    .line 91
+    .line 93
     return-void
 .end method

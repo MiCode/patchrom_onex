@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1101
+    .line 1100
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$15;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1105
+    .line 1104
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$15;->this$0:Lcom/android/camera/component/ViewFinder;
 
@@ -79,7 +79,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceView;->setVisibility(I)V
 
-    .line 1106
+    .line 1105
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$15;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -91,6 +91,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1107
+    .line 1106
     return-void
 .end method

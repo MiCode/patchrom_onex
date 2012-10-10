@@ -44,9 +44,15 @@
 
 .field public static final PREF_BI_ACTIONBURST_PHOTO_TAKEN:Ljava/lang/String; = "pref_bi_actionburst_pohto_taken"
 
+.field public static final PREF_BI_CONTINUOUSBURST_HISTORY:Ljava/lang/String; = "pref_bi_continuousburst_history"
+
+.field public static final PREF_BI_PHOTO_MODE_SETTING_SNAP_HISTORY:Ljava/lang/String; = "pref_bi_photo_mode_setting_snap_history"
+
 .field public static final PREF_BI_PHOTO_TAKEN:Ljava/lang/String; = "pref_bi_photo_taken"
 
 .field public static final PREF_BI_SNAPBOOTH_TAKEN:Ljava/lang/String; = "pref_bi_snapbooth_taken"
+
+.field public static final PREF_BI_VIDEO_MODE_SETTING_RECORDING_HISTORY:Ljava/lang/String; = "pref_bi_video_setting_recording_history"
 
 .field public static final PREF_BI_VIDEO_TAKEN:Ljava/lang/String; = "pref_bi_video_taken"
 
@@ -380,9 +386,9 @@
     .locals 0
 
     .prologue
-    .line 322
+    .line 328
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 324
+    .line 330
     return-void
 .end method

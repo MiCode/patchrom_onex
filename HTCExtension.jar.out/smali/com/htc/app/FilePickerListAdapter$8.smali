@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1306
+    .line 1305
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter$8;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 1308
+    .line 1307
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$8;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidated()V
 
-    .line 1309
+    .line 1308
     return-void
 .end method

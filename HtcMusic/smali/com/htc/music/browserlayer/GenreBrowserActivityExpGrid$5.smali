@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 536
+    .line 547
     iput-object p1, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 539
+    .line 550
     iget-object v0, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
 
     new-instance v1, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5$1;
@@ -50,6 +50,6 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 554
+    .line 565
     return-void
 .end method

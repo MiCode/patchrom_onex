@@ -26,12 +26,12 @@
     .parameter
 
     .prologue
-    .line 852
+    .line 897
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 853
+    .line 898
     const/high16 v0, 0x3f80
 
     iput v0, p0, Lcom/htc/music/MediaPlaybackService$1;->mCurrentVolume:F
@@ -56,7 +56,7 @@
 
     const/4 v4, 0x1
 
-    .line 857
+    .line 902
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mPlayer:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
@@ -66,19 +66,19 @@
 
     if-nez v1, :cond_1
 
-    .line 858
+    .line 903
     const-string v1, "[MediaPlaybackService]"
 
     const-string v2, "handleMessage: mPlayer==null"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 963
+    .line 1008
     :cond_0
     :goto_0
     return-void
 
-    .line 861
+    .line 906
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -86,7 +86,7 @@
 
     goto :goto_0
 
-    .line 897
+    .line 942
     :pswitch_0
     const-string v1, "[MediaPlaybackService]"
 
@@ -134,13 +134,13 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 898
+    .line 943
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #setter for: Lcom/htc/music/MediaPlaybackService;->mDrmConsumed:Z
     invoke-static {v1, v5}, Lcom/htc/music/MediaPlaybackService;->access$2002(Lcom/htc/music/MediaPlaybackService;Z)Z
 
-    .line 899
+    .line 944
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mRepeatMode:I
@@ -150,7 +150,7 @@
 
     if-ne v1, v4, :cond_6
 
-    .line 900
+    .line 945
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mPlayOnNextPrev:Z
@@ -160,20 +160,20 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 909
+    .line 954
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->openCurrent()V
     invoke-static {v1}, Lcom/htc/music/MediaPlaybackService;->access$1700(Lcom/htc/music/MediaPlaybackService;)V
 
-    .line 910
+    .line 955
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v1}, Lcom/htc/music/MediaPlaybackService;->play()V
 
     goto :goto_0
 
-    .line 863
+    .line 908
     :pswitch_1
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -183,7 +183,7 @@
 
     if-nez v1, :cond_3
 
-    .line 864
+    .line 909
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mPlayer:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
@@ -199,19 +199,19 @@
 
     if-nez v1, :cond_2
 
-    .line 865
+    .line 910
     const-string v1, "[MediaPlaybackService]"
 
     const-string v2, "handleMessage: FADEIN - isPlaying() : false and volume == 1.0f, call play()"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 866
+    .line 911
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/music/MediaPlaybackService$1;->mCurrentVolume:F
 
-    .line 867
+    .line 912
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mPlayer:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
@@ -223,12 +223,12 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->setVolume(F)V
 
-    .line 868
+    .line 913
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v1}, Lcom/htc/music/MediaPlaybackService;->play()V
 
-    .line 869
+    .line 914
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mMediaplayerHandler:Landroid/os/Handler;
@@ -242,7 +242,7 @@
 
     goto/16 :goto_0
 
-    .line 871
+    .line 916
     :cond_2
     const-string v1, "[MediaPlaybackService]"
 
@@ -250,10 +250,10 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 872
+    .line 917
     iput v3, p0, Lcom/htc/music/MediaPlaybackService$1;->mCurrentVolume:F
 
-    .line 873
+    .line 918
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mPlayer:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
@@ -267,7 +267,7 @@
 
     goto/16 :goto_0
 
-    .line 876
+    .line 921
     :cond_3
     iget v1, p0, Lcom/htc/music/MediaPlaybackService$1;->mCurrentVolume:F
 
@@ -277,14 +277,14 @@
 
     iput v1, p0, Lcom/htc/music/MediaPlaybackService$1;->mCurrentVolume:F
 
-    .line 877
+    .line 922
     iget v1, p0, Lcom/htc/music/MediaPlaybackService$1;->mCurrentVolume:F
 
     cmpg-float v1, v1, v3
 
     if-gez v1, :cond_4
 
-    .line 878
+    .line 923
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mMediaplayerHandler:Landroid/os/Handler;
@@ -296,7 +296,7 @@
 
     invoke-virtual {v1, v6, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 882
+    .line 927
     :goto_1
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -311,13 +311,13 @@
 
     goto/16 :goto_0
 
-    .line 880
+    .line 925
     :cond_4
     iput v3, p0, Lcom/htc/music/MediaPlaybackService$1;->mCurrentVolume:F
 
     goto :goto_1
 
-    .line 886
+    .line 931
     :pswitch_2
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -328,14 +328,14 @@
 
     if-eqz v1, :cond_5
 
-    .line 887
+    .line 932
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v1, v4}, Lcom/htc/music/MediaPlaybackService;->next(Z)V
 
     goto/16 :goto_0
 
-    .line 893
+    .line 938
     :cond_5
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -344,7 +344,7 @@
 
     goto/16 :goto_0
 
-    .line 913
+    .line 958
     :cond_6
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -352,7 +352,7 @@
 
     goto/16 :goto_0
 
-    .line 917
+    .line 962
     :pswitch_3
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -363,30 +363,30 @@
 
     if-eqz v1, :cond_0
 
-    .line 918
+    .line 963
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mIsWaitAnimation:Z
-    invoke-static {v1}, Lcom/htc/music/MediaPlaybackService;->access$500(Lcom/htc/music/MediaPlaybackService;)Z
+    invoke-static {v1}, Lcom/htc/music/MediaPlaybackService;->access$400(Lcom/htc/music/MediaPlaybackService;)Z
 
     move-result v1
 
     if-nez v1, :cond_7
 
-    .line 919
+    .line 964
     const-string v1, "[MediaPlaybackService]"
 
     const-string v2, "release wake lock"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 920
+    .line 965
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #setter for: Lcom/htc/music/MediaPlaybackService;->mWakeLockAcquired:Z
     invoke-static {v1, v5}, Lcom/htc/music/MediaPlaybackService;->access$2102(Lcom/htc/music/MediaPlaybackService;Z)Z
 
-    .line 921
+    .line 966
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -398,7 +398,7 @@
 
     goto/16 :goto_0
 
-    .line 923
+    .line 968
     :cond_7
     const-string v1, "[MediaPlaybackService]"
 
@@ -408,7 +408,7 @@
 
     goto/16 :goto_0
 
-    .line 930
+    .line 975
     :pswitch_4
     const-string v1, "[MediaPlaybackService]"
 
@@ -416,7 +416,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 931
+    .line 976
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mRepeatMode:I
@@ -426,20 +426,20 @@
 
     if-ne v1, v4, :cond_8
 
-    .line 933
+    .line 978
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #calls: Lcom/htc/music/MediaPlaybackService;->openCurrent()V
     invoke-static {v1}, Lcom/htc/music/MediaPlaybackService;->access$1700(Lcom/htc/music/MediaPlaybackService;)V
 
-    .line 934
+    .line 979
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v1}, Lcom/htc/music/MediaPlaybackService;->play()V
 
     goto/16 :goto_0
 
-    .line 936
+    .line 981
     :cond_8
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -447,7 +447,7 @@
 
     goto/16 :goto_0
 
-    .line 943
+    .line 988
     :pswitch_5
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -458,7 +458,7 @@
 
     if-nez v1, :cond_9
 
-    .line 944
+    .line 989
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -468,7 +468,7 @@
     #setter for: Lcom/htc/music/MediaPlaybackService;->mLastRepeatTime:J
     invoke-static {v1, v2, v3}, Lcom/htc/music/MediaPlaybackService;->access$2402(Lcom/htc/music/MediaPlaybackService;J)J
 
-    .line 946
+    .line 991
     :cond_9
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -479,7 +479,7 @@
 
     if-ne v1, v4, :cond_b
 
-    .line 947
+    .line 992
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mMediaplayerHandler:Landroid/os/Handler;
@@ -489,7 +489,7 @@
 
     invoke-virtual {v1, v7}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 948
+    .line 993
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     iget-object v2, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -515,7 +515,7 @@
     #calls: Lcom/htc/music/MediaPlaybackService;->scanForward(IJ)V
     invoke-static {v1, v2, v3, v4}, Lcom/htc/music/MediaPlaybackService;->access$2600(Lcom/htc/music/MediaPlaybackService;IJ)V
 
-    .line 949
+    .line 994
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mMediaplayerHandler:Landroid/os/Handler;
@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    .line 950
+    .line 995
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -540,7 +540,7 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 957
+    .line 1002
     .end local v0           #message:Landroid/os/Message;
     :cond_a
     :goto_2
@@ -550,7 +550,7 @@
 
     goto/16 :goto_0
 
-    .line 951
+    .line 996
     :cond_b
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -563,7 +563,7 @@
 
     if-ne v1, v2, :cond_a
 
-    .line 952
+    .line 997
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mMediaplayerHandler:Landroid/os/Handler;
@@ -573,7 +573,7 @@
 
     invoke-virtual {v1, v7}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 953
+    .line 998
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     iget-object v2, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -599,7 +599,7 @@
     #calls: Lcom/htc/music/MediaPlaybackService;->scanBackward(IJ)V
     invoke-static {v1, v2, v3, v4}, Lcom/htc/music/MediaPlaybackService;->access$2700(Lcom/htc/music/MediaPlaybackService;IJ)V
 
-    .line 954
+    .line 999
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     #getter for: Lcom/htc/music/MediaPlaybackService;->mMediaplayerHandler:Landroid/os/Handler;
@@ -611,7 +611,7 @@
 
     move-result-object v0
 
-    .line 955
+    .line 1000
     .restart local v0       #message:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$1;->this$0:Lcom/htc/music/MediaPlaybackService;
 
@@ -626,7 +626,7 @@
 
     goto :goto_2
 
-    .line 861
+    .line 906
     nop
 
     :pswitch_data_0

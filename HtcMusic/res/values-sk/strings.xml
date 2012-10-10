@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Pridať do zoznamu skladieb</string>
     <string name="htc_delete_playlists">Odstrániť zoznamy skladieb</string>
     <string name="htc_delete_playlist">Odstrániť zoznam skladieb</string>
+    <string name="htc_delete_all_playlists">Odstrániť všetky zoznamy skladieb</string>
     <string name="htc_playlist_add_songs">Pridať skladby</string>
     <string name="htc_playlist_del_songs">Odstrániť skladby</string>
     <string name="htc_playlist_remove_songs">Odstrániť skladby</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Do medzipamäte...</string>
     <string name="title_send_content">Odosiela sa obsah...</string>
     <string name="no_downloaded_apps_found">Nenašli sa žiadne prevzaté aplikácie</string>
+    <string name="music_folder_picker_dialog_msg">Pridať skladby do zoznamov skladieb voľbou priečinka? „Nie“, ak chcete pridať skladby inak</string>
 </resources>

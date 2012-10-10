@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 383
+    .line 393
     iput-object p1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$SeekBarVolumizerBroadcastReceiver;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 383
+    .line 393
     invoke-direct {p0, p1}, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$SeekBarVolumizerBroadcastReceiver;-><init>(Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;)V
 
     return-void
@@ -54,12 +54,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 390
+    .line 400
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 395
+    .line 405
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.HEADSET_PLUG"
 
@@ -69,14 +69,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 396
+    .line 406
     const-string v2, "state"
 
     invoke-virtual {p2, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 402
+    .line 412
     .local v1, state:I
     iget-object v2, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$SeekBarVolumizerBroadcastReceiver;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v2, v5, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 405
+    .line 415
     .end local v1           #state:I
     :cond_0
     return-void

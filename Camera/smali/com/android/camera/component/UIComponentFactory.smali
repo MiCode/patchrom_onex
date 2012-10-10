@@ -20,8 +20,8 @@
     .locals 3
 
     .prologue
-    .line 12
-    const/16 v0, 0x23
+    .line 15
+    const/16 v0, 0x27
 
     new-array v0, v0, [Lcom/android/camera/component/IComponentBuilder;
 
@@ -267,13 +267,37 @@
 
     const/16 v1, 0x1e
 
+    new-instance v2, Lcom/android/camera/bi/PhotoModeSnapStatisticControllerBuilder;
+
+    invoke-direct {v2}, Lcom/android/camera/bi/PhotoModeSnapStatisticControllerBuilder;-><init>()V
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1f
+
+    new-instance v2, Lcom/android/camera/bi/VideoModeRecordStatisticControllerBuilder;
+
+    invoke-direct {v2}, Lcom/android/camera/bi/VideoModeRecordStatisticControllerBuilder;-><init>()V
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x20
+
+    new-instance v2, Lcom/android/camera/bi/ContinuousBurstStatisticControllerBuilder;
+
+    invoke-direct {v2}, Lcom/android/camera/bi/ContinuousBurstStatisticControllerBuilder;-><init>()V
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x21
+
     new-instance v2, Lcom/android/camera/component/ObjectTrackingUIBuilder;
 
     invoke-direct {v2}, Lcom/android/camera/component/ObjectTrackingUIBuilder;-><init>()V
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x1f
+    const/16 v1, 0x22
 
     new-instance v2, Lcom/android/camera/component/HeadsetButtonControllerBuilder;
 
@@ -281,7 +305,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x20
+    const/16 v1, 0x23
 
     new-instance v2, Lcom/android/camera/component/AutoBacklightIntentSenderBuilder;
 
@@ -289,7 +313,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x21
+    const/16 v1, 0x24
 
     new-instance v2, Lcom/android/camera/component/ExternalCommandServerBuilder;
 
@@ -297,11 +321,19 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x22
+    const/16 v1, 0x25
 
     new-instance v2, Lcom/android/camera/component/SmileCaptureUIBuilder;
 
     invoke-direct {v2}, Lcom/android/camera/component/SmileCaptureUIBuilder;-><init>()V
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x26
+
+    new-instance v2, Lcom/android/camera/component/SavingRecordingUIBuilder;
+
+    invoke-direct {v2}, Lcom/android/camera/component/SavingRecordingUIBuilder;-><init>()V
 
     aput-object v2, v0, v1
 
@@ -315,10 +347,10 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 60
+    .line 67
     invoke-direct {p0, p1}, Lcom/android/camera/component/ComponentFactory;-><init>(Lcom/android/camera/component/IComponentOwner;)V
 
-    .line 61
+    .line 68
     return-void
 .end method
 
@@ -329,7 +361,7 @@
     .parameter "category"
 
     .prologue
-    .line 68
+    .line 75
     const/4 v1, 0x1
 
     new-array v0, v1, [Ljava/lang/Object;
@@ -340,7 +372,7 @@
 
     aput-object v2, v0, v1
 
-    .line 69
+    .line 76
     .local v0, args:[Ljava/lang/Object;
     invoke-virtual {p0, p1, v0, v0}, Lcom/android/camera/component/UIComponentFactory;->createComponents(Lcom/android/camera/component/ComponentCategory;[Ljava/lang/Object;[Ljava/lang/Object;)I
 
@@ -360,7 +392,7 @@
     .end annotation
 
     .prologue
-    .line 78
+    .line 85
     sget-object v0, Lcom/android/camera/component/UIComponentFactory;->m_Builders:[Lcom/android/camera/component/IComponentBuilder;
 
     return-object v0

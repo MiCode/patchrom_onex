@@ -31,6 +31,8 @@
 
 .field public static final FILE_FORMAT_3D:Ljava/lang/String; = "3d-file-format"
 
+.field public static final FOCUS_MODE:Ljava/lang/String; = "caf-focus-mode"
+
 .field public static final FRONT_CAMERA_MODE:Ljava/lang/String; = "front-camera-mode"
 
 .field public static final IMBOOST:Ljava/lang/String; = "postproc-enable-imboost"
@@ -63,7 +65,7 @@
     .locals 0
 
     .prologue
-    .line 626
+    .line 654
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

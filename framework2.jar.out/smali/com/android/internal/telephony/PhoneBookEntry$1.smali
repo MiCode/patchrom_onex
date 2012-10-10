@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 71
+    .line 87
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,54 +45,54 @@
     .parameter "source"
 
     .prologue
-    .line 74
+    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 75
+    .line 91
     .local v1, text:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 76
+    .line 92
     .local v2, number:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 77
+    .line 93
     .local v3, adnumber1:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 78
+    .line 94
     .local v4, adnumber2:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 79
+    .line 95
     .local v5, email:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 80
+    .line 96
     .local v6, type:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 81
+    .line 97
     .local v7, adType:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 82
+    .line 98
     .local v8, hidden:I
     new-instance v0, Lcom/android/internal/telephony/PhoneBookEntry;
 
@@ -106,7 +106,7 @@
     .parameter "x0"
 
     .prologue
-    .line 71
+    .line 87
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/PhoneBookEntry$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/PhoneBookEntry;
 
     move-result-object v0
@@ -119,7 +119,7 @@
     .parameter "size"
 
     .prologue
-    .line 87
+    .line 103
     new-array v0, p1, [Lcom/android/internal/telephony/PhoneBookEntry;
 
     return-object v0
@@ -130,7 +130,7 @@
     .parameter "x0"
 
     .prologue
-    .line 71
+    .line 87
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/PhoneBookEntry$1;->newArray(I)[Lcom/android/internal/telephony/PhoneBookEntry;
 
     move-result-object v0

@@ -23,7 +23,7 @@
     .locals 1
 
     .prologue
-    .line 1979
+    .line 1982
     const-string v0, "data9"
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$Email;->IS_DEFAULT_ACTION:Ljava/lang/String;
@@ -35,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 1974
+    .line 1977
     invoke-direct {p0}, Lcom/htc/provider/HtcContactsContract$DefaultActionHelper;-><init>()V
 
     return-void

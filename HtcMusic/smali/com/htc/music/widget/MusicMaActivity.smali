@@ -132,46 +132,35 @@
     .line 108
     iput-boolean v2, p0, Lcom/htc/music/widget/MusicMaActivity;->mActivityResumed:Z
 
-    .line 110
-    const/high16 v0, -0x8000
-
-    iput v0, p0, Lcom/htc/music/widget/MusicMaActivity;->activeDialog:I
-
-    .line 224
+    .line 222
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableRightBtn:I
 
-    .line 513
+    .line 511
     iput-boolean v2, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableSearch:Z
 
-    .line 584
+    .line 582
     iput-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mbufferdialog:Landroid/app/ProgressDialog;
 
-    .line 597
+    .line 595
     new-instance v0, Lcom/htc/music/widget/MusicMaActivity$2;
 
     invoke-direct {v0, p0}, Lcom/htc/music/widget/MusicMaActivity$2;-><init>(Lcom/htc/music/widget/MusicMaActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity;->messageHandler:Landroid/os/Handler;
 
-    .line 819
+    .line 633
+    const/high16 v0, -0x8000
+
+    iput v0, p0, Lcom/htc/music/widget/MusicMaActivity;->activeDialog:I
+
+    .line 827
     new-instance v0, Lcom/htc/music/widget/MusicMaActivity$3;
 
     invoke-direct {v0, p0}, Lcom/htc/music/widget/MusicMaActivity$3;-><init>(Lcom/htc/music/widget/MusicMaActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNABroadcastListener:Landroid/content/BroadcastReceiver;
-
-    return-void
-.end method
-
-.method static synthetic access$1000(Lcom/htc/music/widget/MusicMaActivity;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 45
-    invoke-direct {p0}, Lcom/htc/music/widget/MusicMaActivity;->closeDMC()V
 
     return-void
 .end method
@@ -266,288 +255,71 @@
     return p1
 .end method
 
-.method private closeDMC()V
-    .locals 3
+.method private handleTVReadyToPlay()V
+    .locals 1
 
     .prologue
-    .line 851
-    const-string v1, "[MusicMaActivity]"
+    .line 852
+    const/4 v0, 0x0
 
-    const-string v2, "DMC power off"
-
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/htc/music/widget/MusicMaActivity;->handleTVReadyToPlay(Z)V
 
     .line 853
-    :try_start_0
-    sget-object v1, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
-
-    if-eqz v1, :cond_1
-
-    .line 854
-    sget-object v1, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
-
-    invoke-interface {v1}, Lcom/htc/music/IMediaPlaybackService;->isDmcOrPushMode()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 855
-    sget-object v1, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
-
-    invoke-interface {v1}, Lcom/htc/music/IMediaPlaybackService;->stopActivePlugin()V
-
-    .line 867
-    :goto_0
     return-void
-
-    .line 857
-    :cond_0
-    const-string v1, "[MusicMaActivity]"
-
-    const-string v2, "Current mode is not dmc or push mode, cancel close dmc"
-
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 864
-    :catch_0
-    move-exception v0
-
-    .line 865
-    .local v0, e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_0
-
-    .line 860
-    .end local v0           #e:Landroid/os/RemoteException;
-    :cond_1
-    :try_start_1
-    const-string v1, "[MusicMaActivity]"
-
-    const-string v2, "service is null"
-
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_0
-.end method
-
-.method private handleTVReadyToPlay()V
-    .locals 10
-
-    .prologue
-    const/4 v9, 0x1
-
-    const/4 v8, 0x0
-
-    .line 879
-    sget-object v5, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
-
-    if-nez v5, :cond_0
-
-    .line 915
-    :goto_0
-    return-void
-
-    .line 883
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 884
-    .local v1, isDMCOrPush:Z
-    const/4 v2, 0x0
-
-    .line 886
-    .local v2, isQueueEmpty:Z
-    :try_start_0
-    sget-object v5, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
-
-    invoke-interface {v5}, Lcom/htc/music/IMediaPlaybackService;->isDmcOrPushMode()Z
-
-    move-result v1
-
-    .line 887
-    sget-object v5, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
-
-    invoke-interface {v5}, Lcom/htc/music/IMediaPlaybackService;->getQueueSize()I
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v4
-
-    .line 888
-    .local v4, queueLength:I
-    if-gtz v4, :cond_1
-
-    .line 889
-    const/4 v2, 0x1
-
-    .line 895
-    .end local v4           #queueLength:I
-    :cond_1
-    :goto_1
-    const-string v5, "[MusicMaActivity]"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "handleTVReadyToPlay, isDMCOrPush: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, ", isQueueEmpty: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 897
-    if-nez v1, :cond_3
-
-    if-nez v2, :cond_3
-
-    .line 898
-    iget-boolean v5, p0, Lcom/htc/music/widget/MusicMaActivity;->mIsDLNAManagerConnected:Z
-
-    if-nez v5, :cond_2
-
-    .line 899
-    iput-boolean v9, p0, Lcom/htc/music/widget/MusicMaActivity;->mNeedSetRendererAsDongle:Z
-
-    .line 900
-    iget-object v5, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
-
-    iget-object v6, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAServiceStatusListener:Lcom/htc/music/widget/MusicMaActivity$DLNAMusicServiceStatusListener;
-
-    invoke-virtual {v5, v6}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->connect(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;)Z
-
-    goto :goto_0
-
-    .line 891
-    :catch_0
-    move-exception v0
-
-    .line 892
-    .local v0, e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_1
-
-    .line 902
-    .end local v0           #e:Landroid/os/RemoteException;
-    :cond_2
-    new-instance v3, Lcom/htc/dlnainterface/DLNAStatusBarData;
-
-    invoke-direct {v3}, Lcom/htc/dlnainterface/DLNAStatusBarData;-><init>()V
-
-    .line 903
-    .local v3, notification:Lcom/htc/dlnainterface/DLNAStatusBarData;
-    iput v9, v3, Lcom/htc/dlnainterface/DLNAStatusBarData;->nFilterType:I
-
-    .line 904
-    const-string v5, "com.htc.music.PLAYBACK_VIEWER"
-
-    iput-object v5, v3, Lcom/htc/dlnainterface/DLNAStatusBarData;->szActionLaunch:Ljava/lang/String;
-
-    .line 905
-    invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    const v6, 0x7f0701d1
-
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v3, Lcom/htc/dlnainterface/DLNAStatusBarData;->szControllerName:Ljava/lang/String;
-
-    .line 906
-    const-string v5, "HtcMusic"
-
-    iput-object v5, v3, Lcom/htc/dlnainterface/DLNAStatusBarData;->szAppName:Ljava/lang/String;
-
-    .line 908
-    iget-object v5, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
-
-    invoke-virtual {v5, v3}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setRendererAsReadyDongle(Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
-
-    .line 910
-    iput-boolean v8, p0, Lcom/htc/music/widget/MusicMaActivity;->mNeedSetRendererAsDongle:Z
-
-    goto :goto_0
-
-    .line 913
-    .end local v3           #notification:Lcom/htc/dlnainterface/DLNAStatusBarData;
-    :cond_3
-    iput-boolean v8, p0, Lcom/htc/music/widget/MusicMaActivity;->mNeedSetRendererAsDongle:Z
-
-    goto :goto_0
 .end method
 
 .method private launchPlayer()V
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v3, 0x1
-
-    .line 870
+    .line 842
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "launchPlayer"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 871
+    .line 843
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.PLAYBACK_VIEWER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 872
+    .line 844
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 873
+    .line 845
     const-string v1, "showEmptyQueue"
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    const/4 v2, 0x1
 
-    .line 874
-    const-string v1, "inner-transition"
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    .line 846
+    const-string v1, "from-lockscreen"
 
-    .line 875
+    invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v2
+
+    const-string v3, "from-lockscreen"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 848
     invoke-virtual {p0, v0}, Lcom/htc/music/widget/MusicMaActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 876
+    .line 849
     return-void
 .end method
 
@@ -555,12 +327,12 @@
     .locals 3
 
     .prologue
-    .line 736
+    .line 737
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mTVHelper:Lcom/htc/dlnasharedmodule/HtcTVDisplayHelper;
 
     if-nez v1, :cond_0
 
-    .line 737
+    .line 738
     new-instance v1, Lcom/htc/dlnasharedmodule/HtcTVDisplayHelper;
 
     iget-object v2, p0, Lcom/htc/music/widget/MusicMaActivity;->mHtcTVDisplayListener:Lcom/htc/dlnasharedmodule/HtcTVDisplayHelper$HtcTVDisplayListener;
@@ -569,19 +341,14 @@
 
     iput-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mTVHelper:Lcom/htc/dlnasharedmodule/HtcTVDisplayHelper;
 
-    .line 743
+    .line 744
     :goto_0
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 744
-    .local v0, fDLNA:Landroid/content/IntentFilter;
-    const-string v1, "com.htc.dlnamiddlelayer.action.dmc_destroy_notify"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
     .line 745
+    .local v0, fDLNA:Landroid/content/IntentFilter;
     const-string v1, "com.htc.music.triggerplayinlibrary"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -594,7 +361,7 @@
     .line 747
     return-void
 
-    .line 740
+    .line 741
     .end local v0           #fDLNA:Landroid/content/IntentFilter;
     :cond_0
     const-string v1, "[MusicMaActivity]"
@@ -687,7 +454,7 @@
     .locals 1
 
     .prologue
-    .line 221
+    .line 219
     const/4 v0, 0x0
 
     return v0
@@ -703,7 +470,7 @@
     .parameter "sortOrder"
 
     .prologue
-    .line 587
+    .line 585
     move-object v1, p1
 
     check-cast v1, Landroid/app/Activity;
@@ -712,7 +479,7 @@
 
     move-result-object v7
 
-    .line 588
+    .line 586
     .local v7, deleteContent:Landroid/app/Activity;
     if-nez v7, :cond_0
 
@@ -720,11 +487,11 @@
 
     check-cast v7, Landroid/app/Activity;
 
-    .line 590
+    .line 588
     :cond_0
     const-string v1, ""
 
-    const v2, 0x7f0700b1
+    const v2, 0x7f0700b2
 
     invoke-virtual {p0, v2}, Lcom/htc/music/widget/MusicMaActivity;->getString(I)Ljava/lang/String;
 
@@ -740,7 +507,7 @@
 
     iput-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mbufferdialog:Landroid/app/ProgressDialog;
 
-    .line 591
+    .line 589
     new-instance v0, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;
 
     const/4 v1, 0x0
@@ -760,19 +527,19 @@
 
     move-object v6, p6
 
-    .line 592
+    .line 590
     invoke-virtual/range {v0 .. v6}, Lcom/htc/music/widget/MusicMaActivity$DeleteCursorRunnable;->Init(Landroid/content/Context;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 593
+    .line 591
     new-instance v8, Ljava/lang/Thread;
 
     invoke-direct {v8, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 594
+    .line 592
     .local v8, deletethread:Ljava/lang/Thread;
     invoke-virtual {v8}, Ljava/lang/Thread;->start()V
 
-    .line 595
+    .line 593
     return-void
 .end method
 
@@ -780,32 +547,32 @@
     .locals 3
 
     .prologue
-    .line 499
+    .line 497
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 500
+    .line 498
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 508
+    .line 506
     :cond_0
     :goto_0
     return-void
 
-    .line 504
+    .line 502
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 505
+    .line 503
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -813,7 +580,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 506
+    .line 504
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -826,12 +593,12 @@
     .locals 1
 
     .prologue
-    .line 516
+    .line 514
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableSearch:Z
 
-    .line 517
+    .line 515
     return-void
 .end method
 
@@ -841,16 +608,16 @@
     .prologue
     const/high16 v3, -0x8000
 
-    .line 721
+    .line 722
     iget v1, p0, Lcom/htc/music/widget/MusicMaActivity;->activeDialog:I
 
     if-ne v1, v3, :cond_0
 
-    .line 732
+    .line 733
     :goto_0
     return-void
 
-    .line 726
+    .line 727
     :cond_0
     :try_start_0
     iget v1, p0, Lcom/htc/music/widget/MusicMaActivity;->activeDialog:I
@@ -860,16 +627,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 730
+    .line 731
     iput v3, p0, Lcom/htc/music/widget/MusicMaActivity;->activeDialog:I
 
     goto :goto_0
 
-    .line 727
+    .line 728
     :catch_0
     move-exception v0
 
-    .line 728
+    .line 729
     .local v0, ex:Ljava/lang/IllegalArgumentException;
     :try_start_1
     const-string v1, "[MusicMaActivity]"
@@ -880,7 +647,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 730
+    .line 731
     iput v3, p0, Lcom/htc/music/widget/MusicMaActivity;->activeDialog:I
 
     goto :goto_0
@@ -901,7 +668,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 526
+    .line 524
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -912,14 +679,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 527
+    .line 525
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 534
+    .line 532
     :cond_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -931,14 +698,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 535
+    .line 533
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_1
 
-    .line 541
+    .line 539
     :cond_1
     invoke-super {p0, p1}, Landroid/app/Activity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
@@ -948,19 +715,19 @@
     :pswitch_0
     return v0
 
-    .line 529
+    .line 527
     :pswitch_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->onSearchRequested()Z
 
     goto :goto_0
 
-    .line 527
+    .line 525
     :pswitch_data_0
     .packed-switch 0x54
         :pswitch_1
     .end packed-switch
 
-    .line 535
+    .line 533
     :pswitch_data_1
     .packed-switch 0x54
         :pswitch_0
@@ -971,12 +738,12 @@
     .locals 1
 
     .prologue
-    .line 520
+    .line 518
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableSearch:Z
 
-    .line 521
+    .line 519
     return-void
 .end method
 
@@ -984,36 +751,36 @@
     .locals 2
 
     .prologue
-    .line 257
+    .line 255
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 258
+    .line 256
     .local v0, rootParent:Landroid/app/Activity;
     if-nez v0, :cond_0
 
-    .line 266
+    .line 264
     .end local p0
     :goto_0
     return-object p0
 
-    .line 260
+    .line 258
     .restart local p0
     :cond_0
     invoke-virtual {v0}, Landroid/app/Activity;->getParent()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 261
+    .line 259
     .local v1, temp:Landroid/app/Activity;
     :goto_1
     if-eqz v1, :cond_1
 
-    .line 262
+    .line 260
     move-object v0, v1
 
-    .line 263
+    .line 261
     invoke-virtual {v0}, Landroid/app/Activity;->getParent()Landroid/app/Activity;
 
     move-result-object v1
@@ -1023,15 +790,231 @@
     :cond_1
     move-object p0, v0
 
-    .line 266
+    .line 264
     goto :goto_0
+.end method
+
+.method protected handleTVReadyToPlay(Z)V
+    .locals 11
+    .parameter "playDMS"
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    .line 856
+    sget-object v8, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+
+    if-nez v8, :cond_0
+
+    .line 857
+    const-string v6, "[MusicMaActivity]"
+
+    const-string v7, "handleTVReadyToPlay, sService is null!"
+
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 900
+    :goto_0
+    return-void
+
+    .line 861
+    :cond_0
+    const/4 v2, 0x0
+
+    .line 862
+    .local v2, isDMCOrPush:Z
+    const/4 v3, 0x0
+
+    .line 864
+    .local v3, isQueueEmpty:Z
+    if-nez p1, :cond_1
+
+    .line 867
+    :try_start_0
+    sget-object v8, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+
+    invoke-interface {v8}, Lcom/htc/music/IMediaPlaybackService;->isDmcOrPushMode()Z
+
+    move-result v2
+
+    .line 868
+    sget-object v8, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+
+    invoke-interface {v8}, Lcom/htc/music/IMediaPlaybackService;->getQueueSize()I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v5
+
+    .line 869
+    .local v5, queueLength:I
+    if-gtz v5, :cond_1
+
+    .line 870
+    const/4 v3, 0x1
+
+    .line 877
+    .end local v5           #queueLength:I
+    :cond_1
+    :goto_1
+    const-string v8, "[MusicMaActivity]"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "handleTVReadyToPlay, playDMS: "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, ", isDMCOrPush: "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    const-string v10, ", isQueueEmpty: "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 879
+    if-nez p1, :cond_2
+
+    if-nez v2, :cond_3
+
+    if-nez v3, :cond_3
+
+    :cond_2
+    move v0, v7
+
+    .line 881
+    .local v0, connectDMR:Z
+    :goto_2
+    if-eqz v0, :cond_5
+
+    .line 882
+    iget-boolean v8, p0, Lcom/htc/music/widget/MusicMaActivity;->mIsDLNAManagerConnected:Z
+
+    if-nez v8, :cond_4
+
+    .line 883
+    iput-boolean v7, p0, Lcom/htc/music/widget/MusicMaActivity;->mNeedSetRendererAsDongle:Z
+
+    .line 884
+    iget-object v6, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
+
+    iget-object v7, p0, Lcom/htc/music/widget/MusicMaActivity;->mControllerListener:Lcom/htc/music/widget/MusicMaActivity$ControllerListener;
+
+    invoke-virtual {v6, v7}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setControllerStatusListener(Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;)V
+
+    .line 885
+    iget-object v6, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
+
+    iget-object v7, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAServiceStatusListener:Lcom/htc/music/widget/MusicMaActivity$DLNAMusicServiceStatusListener;
+
+    invoke-virtual {v6, v7}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->connect(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;)Z
+
+    goto :goto_0
+
+    .line 872
+    .end local v0           #connectDMR:Z
+    :catch_0
+    move-exception v1
+
+    .line 873
+    .local v1, e:Landroid/os/RemoteException;
+    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
+
+    goto :goto_1
+
+    .end local v1           #e:Landroid/os/RemoteException;
+    :cond_3
+    move v0, v6
+
+    .line 879
+    goto :goto_2
+
+    .line 887
+    .restart local v0       #connectDMR:Z
+    :cond_4
+    new-instance v4, Lcom/htc/dlnainterface/DLNAStatusBarData;
+
+    invoke-direct {v4}, Lcom/htc/dlnainterface/DLNAStatusBarData;-><init>()V
+
+    .line 888
+    .local v4, notification:Lcom/htc/dlnainterface/DLNAStatusBarData;
+    iput v7, v4, Lcom/htc/dlnainterface/DLNAStatusBarData;->nFilterType:I
+
+    .line 889
+    const-string v7, "com.htc.music.PLAYBACK_VIEWER"
+
+    iput-object v7, v4, Lcom/htc/dlnainterface/DLNAStatusBarData;->szActionLaunch:Ljava/lang/String;
+
+    .line 890
+    invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    const v8, 0x7f0701d2
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    iput-object v7, v4, Lcom/htc/dlnainterface/DLNAStatusBarData;->szControllerName:Ljava/lang/String;
+
+    .line 891
+    const-string v7, "HtcMusic"
+
+    iput-object v7, v4, Lcom/htc/dlnainterface/DLNAStatusBarData;->szAppName:Ljava/lang/String;
+
+    .line 893
+    iget-object v7, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
+
+    invoke-virtual {v7, v4}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setRendererAsReadyDongle(Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
+
+    .line 895
+    iput-boolean v6, p0, Lcom/htc/music/widget/MusicMaActivity;->mNeedSetRendererAsDongle:Z
+
+    goto/16 :goto_0
+
+    .line 898
+    .end local v4           #notification:Lcom/htc/dlnainterface/DLNAStatusBarData;
+    :cond_5
+    iput-boolean v6, p0, Lcom/htc/music/widget/MusicMaActivity;->mNeedSetRendererAsDongle:Z
+
+    goto/16 :goto_0
 .end method
 
 .method protected isActivityResumed()Z
     .locals 1
 
     .prologue
-    .line 685
+    .line 686
     iget-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mActivityResumed:Z
 
     return v0
@@ -1041,7 +1024,7 @@
     .locals 1
 
     .prologue
-    .line 714
+    .line 715
     const/4 v0, 0x1
 
     return v0
@@ -1054,10 +1037,10 @@
     .parameter "data"
 
     .prologue
-    .line 335
+    .line 333
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 336
+    .line 334
     return-void
 .end method
 
@@ -1065,23 +1048,23 @@
     .locals 1
 
     .prologue
-    .line 277
+    .line 275
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 278
+    .line 276
     .local v0, rootParent:Landroid/app/Activity;
     if-eq p0, v0, :cond_0
 
-    .line 279
+    .line 277
     invoke-virtual {v0}, Landroid/app/Activity;->onBackPressed()V
 
-    .line 283
+    .line 281
     :goto_0
     return-void
 
-    .line 281
+    .line 279
     :cond_0
     invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
 
@@ -1093,7 +1076,7 @@
     .parameter "newConfig"
 
     .prologue
-    .line 161
+    .line 159
     const-string v0, "[MusicMaActivity]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1118,25 +1101,25 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
+    .line 160
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 164
+    .line 162
     iget v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mOrientation:I
 
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
     if-ne v0, v1, :cond_0
 
-    .line 171
+    .line 169
     :goto_0
     return-void
 
-    .line 168
+    .line 166
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->resetBackground()V
 
-    .line 170
+    .line 168
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
     iput v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mOrientation:I
@@ -1151,19 +1134,19 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 130
+    .line 128
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 131
+    .line 129
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 132
+    .line 130
     .local v0, res:Landroid/content/res/Resources;
     if-eqz v0, :cond_0
 
-    .line 133
+    .line 131
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
@@ -1172,7 +1155,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mOrientation:I
 
-    .line 136
+    .line 134
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -1184,18 +1167,18 @@
 
     iput-boolean v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
 
-    .line 137
+    .line 135
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mRes:Landroid/content/res/Resources;
 
-    .line 139
+    .line 137
     const/4 v1, -0x1
 
     sget v2, Lcom/htc/music/widget/MusicMaActivity;->mEnableLandscapeHorizontalSDError:I
 
     if-ne v1, v2, :cond_1
 
-    .line 140
-    const v1, 0x7f070247
+    .line 138
+    const v1, 0x7f0701e7
 
     invoke-static {p0, v1}, Lcom/htc/music/util/ProjectSettings;->getIntValue(Landroid/content/Context;I)I
 
@@ -1203,7 +1186,7 @@
 
     sput v1, Lcom/htc/music/widget/MusicMaActivity;->mEnableLandscapeHorizontalSDError:I
 
-    .line 143
+    .line 141
     :cond_1
     new-instance v1, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
@@ -1211,14 +1194,14 @@
 
     iput-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
-    .line 144
+    .line 142
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, p0, Lcom/htc/music/widget/MusicMaActivity;->mControllerListener:Lcom/htc/music/widget/MusicMaActivity$ControllerListener;
 
     invoke-virtual {v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setControllerStatusListener(Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;)V
 
-    .line 145
+    .line 143
     return-void
 .end method
 
@@ -1226,14 +1209,14 @@
     .locals 2
 
     .prologue
-    .line 637
+    .line 636
     const-string v0, "[MusicMaActivity]"
 
     const-string v1, "call parent Empty onDeletionCompleted()"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 638
+    .line 637
     return-void
 .end method
 
@@ -1241,15 +1224,15 @@
     .locals 1
 
     .prologue
-    .line 149
+    .line 147
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
-    .line 150
+    .line 148
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 151
+    .line 149
     return-void
 .end method
 
@@ -1257,7 +1240,7 @@
     .locals 1
 
     .prologue
-    .line 272
+    .line 270
     const/4 v0, 0x0
 
     return v0
@@ -1269,32 +1252,32 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 199
+    .line 197
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->closeOptionsMenu()V
 
-    .line 200
+    .line 198
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 202
+    .line 200
     iput-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mActivityResumed:Z
 
-    .line 204
+    .line 202
     invoke-direct {p0}, Lcom/htc/music/widget/MusicMaActivity;->releaseTVDisplayHelper()V
 
-    .line 205
+    .line 203
     invoke-direct {p0, v0}, Lcom/htc/music/widget/MusicMaActivity;->setDLNAPreloadEnable(Z)V
 
-    .line 206
+    .line 204
     iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     if-eqz v0, :cond_0
 
-    .line 207
+    .line 205
     iget-object v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-virtual {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->disconnect()V
 
-    .line 209
+    .line 207
     :cond_0
     return-void
 .end method
@@ -1306,13 +1289,13 @@
     .parameter "args"
 
     .prologue
-    .line 705
+    .line 706
     iput p1, p0, Lcom/htc/music/widget/MusicMaActivity;->activeDialog:I
 
-    .line 706
+    .line 707
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onPrepareDialog(ILandroid/app/Dialog;Landroid/os/Bundle;)V
 
-    .line 707
+    .line 708
     return-void
 .end method
 
@@ -1322,34 +1305,34 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 175
+    .line 173
     iput-boolean v2, p0, Lcom/htc/music/widget/MusicMaActivity;->mActivityResumed:Z
 
-    .line 177
+    .line 175
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 179
+    .line 177
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mRes:Landroid/content/res/Resources;
 
     if-eqz v1, :cond_0
 
-    .line 180
+    .line 178
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
 
-    .line 181
+    .line 179
     .local v0, newConfig:Landroid/content/res/Configuration;
     invoke-virtual {p0, v0}, Lcom/htc/music/widget/MusicMaActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 184
+    .line 182
     .end local v0           #newConfig:Landroid/content/res/Configuration;
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->resetBackground()V
 
-    .line 187
+    .line 185
     const/4 v1, -0x1
 
     iget v3, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableRightBtn:I
@@ -1361,16 +1344,16 @@
     :goto_0
     invoke-virtual {p0, v1}, Lcom/htc/music/widget/MusicMaActivity;->setCategoryRightBtn(Z)V
 
-    .line 192
+    .line 190
     invoke-direct {p0}, Lcom/htc/music/widget/MusicMaActivity;->registerTVDisplayHelper()V
 
-    .line 193
+    .line 191
     invoke-direct {p0, v2}, Lcom/htc/music/widget/MusicMaActivity;->setDLNAPreloadEnable(Z)V
 
-    .line 194
+    .line 192
     return-void
 
-    .line 187
+    .line 185
     :cond_1
     iget v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableRightBtn:I
 
@@ -1390,13 +1373,13 @@
     .locals 0
 
     .prologue
-    .line 155
+    .line 153
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 156
+    .line 154
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->dismissActiveDialog()V
 
-    .line 157
+    .line 155
     return-void
 .end method
 
@@ -1404,10 +1387,10 @@
     .locals 2
 
     .prologue
-    .line 213
+    .line 211
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 214
+    .line 212
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -1416,7 +1399,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 215
+    .line 213
     return-void
 .end method
 
@@ -1424,19 +1407,19 @@
     .locals 5
 
     .prologue
-    .line 113
+    .line 111
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getParent()Landroid/app/Activity;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 114
+    .line 112
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mRes:Landroid/content/res/Resources;
 
     if-eqz v1, :cond_0
 
-    .line 116
+    .line 114
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity;->mRes:Landroid/content/res/Resources;
 
     const-string v2, "common_app_bkg"
@@ -1449,7 +1432,7 @@
 
     move-result v0
 
-    .line 117
+    .line 115
     .local v0, resId:I
     const-string v1, "common_app_bkg"
 
@@ -1457,17 +1440,17 @@
 
     move-result v0
 
-    .line 119
+    .line 117
     if-lez v0, :cond_0
 
-    .line 120
+    .line 118
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
-    .line 124
+    .line 122
     .end local v0           #resId:I
     :cond_0
     return-void
@@ -1478,32 +1461,32 @@
     .parameter "setVisible"
 
     .prologue
-    .line 484
+    .line 482
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 485
+    .line 483
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
+    .line 491
     :cond_0
     :goto_0
     return-void
 
-    .line 489
+    .line 487
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 490
+    .line 488
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1511,7 +1494,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 491
+    .line 489
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1525,32 +1508,32 @@
     .parameter "setVisible"
 
     .prologue
-    .line 378
+    .line 376
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 379
+    .line 377
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 387
+    .line 385
     :cond_0
     :goto_0
     return-void
 
-    .line 383
+    .line 381
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 384
+    .line 382
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1558,7 +1541,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 385
+    .line 383
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1572,45 +1555,45 @@
     .parameter "setEnable"
 
     .prologue
-    .line 226
+    .line 224
     const/4 v3, 0x0
 
-    .line 227
+    .line 225
     .local v3, setEnableInt:I
     if-eqz p1, :cond_0
 
     const/4 v3, 0x1
 
-    .line 229
+    .line 227
     :cond_0
     iput v3, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableRightBtn:I
 
-    .line 231
+    .line 229
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    .line 232
+    .line 230
     const-string v5, "[MusicMaActivity]"
 
     const-string v6, "activity is paused, do not set category right button status"
 
     invoke-static {v5, v6}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
+    .line 250
     :cond_1
     :goto_0
     return-void
 
-    .line 236
+    .line 234
     :cond_2
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v2
 
-    .line 237
+    .line 235
     .local v2, parent:Landroid/app/Activity;
     instance-of v5, v2, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
@@ -1618,24 +1601,24 @@
 
     move-object v1, v2
 
-    .line 238
+    .line 236
     check-cast v1, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
-    .line 240
+    .line 238
     .local v1, multiParent:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
     const/4 v4, 0x6
 
-    .line 241
+    .line 239
     .local v4, type:I
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 242
+    .line 240
     .local v0, intent:Landroid/content/Intent;
     if-eqz v0, :cond_3
 
-    .line 243
+    .line 241
     const-string v5, "InnerActivityType"
 
     const/4 v6, 0x6
@@ -1644,18 +1627,18 @@
 
     move-result v4
 
-    .line 246
+    .line 244
     :cond_3
     const/16 v5, 0x8
 
     if-eq v4, v5, :cond_4
 
-    .line 247
+    .line 245
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setStoreRightBtn()V
 
     goto :goto_0
 
-    .line 249
+    .line 247
     :cond_4
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setOnlineSearchRightBtn()V
 
@@ -1667,32 +1650,32 @@
     .parameter "enabled"
 
     .prologue
-    .line 456
+    .line 454
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 457
+    .line 455
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 465
+    .line 463
     :cond_0
     :goto_0
     return-void
 
-    .line 461
+    .line 459
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 462
+    .line 460
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1700,7 +1683,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 463
+    .line 461
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1715,32 +1698,32 @@
     .parameter "label"
 
     .prologue
-    .line 444
+    .line 442
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 445
+    .line 443
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 453
+    .line 451
     :cond_0
     :goto_0
     return-void
 
-    .line 449
+    .line 447
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 450
+    .line 448
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1748,7 +1731,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 451
+    .line 449
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1762,32 +1745,32 @@
     .parameter "clickListener"
 
     .prologue
-    .line 468
+    .line 466
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 469
+    .line 467
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 477
+    .line 475
     :cond_0
     :goto_0
     return-void
 
-    .line 473
+    .line 471
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 474
+    .line 472
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1795,7 +1778,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 475
+    .line 473
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1809,32 +1792,32 @@
     .parameter "setVisibile"
 
     .prologue
-    .line 432
+    .line 430
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 433
+    .line 431
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 441
+    .line 439
     :cond_0
     :goto_0
     return-void
 
-    .line 437
+    .line 435
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 438
+    .line 436
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1842,7 +1825,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 439
+    .line 437
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1856,32 +1839,32 @@
     .parameter "enabled"
 
     .prologue
-    .line 405
+    .line 403
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 406
+    .line 404
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 414
+    .line 412
     :cond_0
     :goto_0
     return-void
 
-    .line 410
+    .line 408
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 411
+    .line 409
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1889,7 +1872,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 412
+    .line 410
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1904,32 +1887,32 @@
     .parameter "label"
 
     .prologue
-    .line 393
+    .line 391
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 394
+    .line 392
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 402
+    .line 400
     :cond_0
     :goto_0
     return-void
 
-    .line 398
+    .line 396
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 399
+    .line 397
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1937,7 +1920,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 400
+    .line 398
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1951,32 +1934,32 @@
     .parameter "clickListener"
 
     .prologue
-    .line 417
+    .line 415
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 418
+    .line 416
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 426
+    .line 424
     :cond_0
     :goto_0
     return-void
 
-    .line 422
+    .line 420
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 423
+    .line 421
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -1984,7 +1967,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 424
+    .line 422
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -1998,32 +1981,32 @@
     .parameter "title"
 
     .prologue
-    .line 354
+    .line 352
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 355
+    .line 353
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 363
+    .line 361
     :cond_0
     :goto_0
     return-void
 
-    .line 359
+    .line 357
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 360
+    .line 358
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -2031,7 +2014,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 361
+    .line 359
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -2045,32 +2028,32 @@
     .parameter "setVisible"
 
     .prologue
-    .line 366
+    .line 364
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 367
+    .line 365
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
+    .line 373
     :cond_0
     :goto_0
     return-void
 
-    .line 371
+    .line 369
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 372
+    .line 370
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -2078,7 +2061,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 373
+    .line 371
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -2092,32 +2075,32 @@
     .parameter "title"
 
     .prologue
-    .line 342
+    .line 340
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->isActivityResumed()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 343
+    .line 341
     const-string v1, "[MusicMaActivity]"
 
     const-string v2, "activity is paused, do not set category status"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 351
+    .line 349
     :cond_0
     :goto_0
     return-void
 
-    .line 347
+    .line 345
     :cond_1
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 348
+    .line 346
     .local v0, root:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
@@ -2125,7 +2108,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 349
+    .line 347
     check-cast v0, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
     .end local v0           #root:Landroid/app/Activity;
@@ -2139,12 +2122,12 @@
     .parameter "id"
 
     .prologue
-    .line 695
+    .line 696
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/music/widget/MusicMaActivity;->showNewDialog(ILandroid/os/Bundle;)V
 
-    .line 696
+    .line 697
     return-void
 .end method
 
@@ -2154,13 +2137,13 @@
     .parameter "args"
 
     .prologue
-    .line 699
+    .line 700
     invoke-virtual {p0, p1}, Lcom/htc/music/widget/MusicMaActivity;->removeDialog(I)V
 
-    .line 700
+    .line 701
     invoke-virtual {p0, p1, p2}, Lcom/htc/music/widget/MusicMaActivity;->showDialog(ILandroid/os/Bundle;)Z
 
-    .line 701
+    .line 702
     return-void
 .end method
 
@@ -2174,31 +2157,31 @@
 
     const/4 v5, -0x1
 
-    .line 299
+    .line 297
     const-string v3, "StartNewActivity"
 
     invoke-virtual {p1, v3, v6}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 300
+    .line 298
     .local v0, forceStartNewActivity:Z
     if-eqz v0, :cond_0
 
-    .line 301
+    .line 299
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 331
+    .line 329
     :goto_0
     return-void
 
-    .line 306
+    .line 304
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 308
+    .line 306
     .local v1, rootParent:Landroid/app/Activity;
     instance-of v3, v1, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
@@ -2206,25 +2189,25 @@
 
     move-object v2, v1
 
-    .line 310
+    .line 308
     check-cast v2, Lcom/htc/music/widget/IMusicTabActivityInterface;
 
-    .line 312
+    .line 310
     .local v2, tabActivity:Lcom/htc/music/widget/IMusicTabActivityInterface;
     const/4 v3, -0x2
 
     if-ne v3, p2, :cond_1
 
-    .line 313
+    .line 311
     invoke-super {p0, p1, v5}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    .line 314
+    .line 312
     :cond_1
     if-ne v5, p2, :cond_3
 
-    .line 315
+    .line 313
     const-string v3, "com.htc.music.PLAYBACK_VIEWER"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -2237,18 +2220,18 @@
 
     if-eqz v3, :cond_2
 
-    .line 316
+    .line 314
     invoke-super {p0, p1, v5}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    .line 318
+    .line 316
     :cond_2
     const-string v3, "ShowActivityTitle"
 
     invoke-virtual {p1, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 319
+    .line 317
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -2261,13 +2244,13 @@
 
     goto :goto_0
 
-    .line 325
+    .line 323
     :cond_3
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
-    .line 329
+    .line 327
     .end local v2           #tabActivity:Lcom/htc/music/widget/IMusicTabActivityInterface;
     :cond_4
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
@@ -2279,25 +2262,25 @@
     .locals 2
 
     .prologue
-    .line 571
+    .line 569
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.intent.action.LOCALSEARCH"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 572
+    .line 570
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 573
+    .line 571
     const/4 v1, -0x2
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/music/widget/MusicMaActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 574
+    .line 572
     return-void
 .end method
 
@@ -2305,25 +2288,25 @@
     .locals 2
 
     .prologue
-    .line 577
+    .line 575
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.intent.action.ONLINESEARCH"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 578
+    .line 576
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 579
+    .line 577
     const/4 v1, -0x2
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/music/widget/MusicMaActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 580
+    .line 578
     return-void
 .end method
 
@@ -2337,47 +2320,47 @@
     .prologue
     const/4 v4, 0x6
 
-    .line 549
+    .line 547
     const-string v2, "[MusicMaActivity]"
 
     const-string v3, "musicMaActivity startSearch...."
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 550
+    .line 548
     iget-boolean v2, p0, Lcom/htc/music/widget/MusicMaActivity;->mEnableSearch:Z
 
     if-nez v2, :cond_0
 
-    .line 568
+    .line 566
     :goto_0
     return-void
 
-    .line 552
+    .line 550
     :cond_0
     const/4 v1, 0x0
 
-    .line 553
+    .line 551
     .local v1, type:I
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 554
+    .line 552
     .local v0, intent:Landroid/content/Intent;
     if-eqz v0, :cond_1
 
-    .line 555
+    .line 553
     const-string v2, "InnerActivityType"
 
     invoke-virtual {v0, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 556
+    .line 554
     and-int/lit16 v1, v1, 0xfe
 
-    .line 559
+    .line 557
     :cond_1
     if-eq v4, v1, :cond_2
 
@@ -2385,18 +2368,18 @@
 
     if-ne v2, v1, :cond_4
 
-    .line 561
+    .line 559
     :cond_2
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->startLocalSearch()V
 
-    .line 567
+    .line 565
     :cond_3
     :goto_1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/app/Activity;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
 
     goto :goto_0
 
-    .line 562
+    .line 560
     :cond_4
     const/16 v2, 0xa
 
@@ -2406,7 +2389,7 @@
 
     if-ne v2, v1, :cond_3
 
-    .line 564
+    .line 562
     :cond_5
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicMaActivity;->startOnlineSearchPage()V
 

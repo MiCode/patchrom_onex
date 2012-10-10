@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1997
+    .line 2037
     iput-object p1, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -40,18 +40,18 @@
     .parameter "msg"
 
     .prologue
-    .line 1999
+    .line 2039
     const/4 v0, 0x0
 
-    .line 2000
+    .line 2040
     .local v0, bErr:Z
     const/4 v3, -0x1
 
-    .line 2001
+    .line 2041
     .local v3, error:I
     const/4 v1, 0x0
 
-    .line 2002
+    .line 2042
     .local v1, checkResult:I
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
@@ -59,7 +59,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 2003
+    .line 2043
     const-string v8, "KddiPacketSMSManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -90,13 +90,13 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2006
+    .line 2046
     :cond_0
     iget v8, p1, Landroid/os/Message;->what:I
 
     packed-switch v8, :pswitch_data_0
 
-    .line 2419
+    .line 2459
     :cond_1
     :goto_0
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
@@ -105,19 +105,19 @@
 
     if-eqz v8, :cond_2
 
-    .line 2420
+    .line 2460
     const-string v8, "KddiPacketSMSManager"
 
     const-string v9, "handleMessage End"
 
     invoke-static {v8, v9}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2422
+    .line 2462
     :cond_2
     :goto_1
     return-void
 
-    .line 2009
+    .line 2049
     :pswitch_0
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -127,7 +127,7 @@
 
     monitor-enter v9
 
-    .line 2010
+    .line 2050
     const/4 v8, 0x1
 
     :try_start_0
@@ -141,12 +141,12 @@
 
     if-ne v8, v10, :cond_19
 
-    .line 2012
+    .line 2052
     sget-object v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     if-nez v8, :cond_3
 
-    .line 2014
+    .line 2054
     sget-object v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mContext:Landroid/content/Context;
 
     sget-object v10, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mContext:Landroid/content/Context;
@@ -161,7 +161,7 @@
 
     sput-object v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 2018
+    .line 2058
     :cond_3
     const/4 v8, 0x1
 
@@ -175,21 +175,21 @@
 
     if-ne v8, v10, :cond_7
 
-    .line 2019
+    .line 2059
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
-    .line 2020
+    .line 2060
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "ON Calling"
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2023
+    .line 2063
     :cond_4
     const/4 v8, 0x1
 
@@ -197,12 +197,12 @@
 
     if-ne v8, v10, :cond_5
 
-    .line 2024
+    .line 2064
     const/16 v8, 0x16
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2030
+    .line 2070
     :goto_2
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -210,12 +210,12 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2031
+    .line 2071
     monitor-exit v9
 
     goto :goto_1
 
-    .line 2165
+    .line 2205
     :catchall_0
     move-exception v8
 
@@ -225,7 +225,7 @@
 
     throw v8
 
-    .line 2025
+    .line 2065
     :cond_5
     const/4 v8, 0x2
 
@@ -234,14 +234,14 @@
 
     if-ne v8, v10, :cond_6
 
-    .line 2026
+    .line 2066
     const/16 v8, 0x2a
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_2
 
-    .line 2028
+    .line 2068
     :cond_6
     const/4 v8, 0x1
 
@@ -249,7 +249,7 @@
 
     goto :goto_2
 
-    .line 2035
+    .line 2075
     :cond_7
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -257,7 +257,7 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiSetIntentFilter()V
 
-    .line 2038
+    .line 2078
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
@@ -266,14 +266,14 @@
 
     move-result v3
 
-    .line 2040
+    .line 2080
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_8
 
-    .line 2041
+    .line 2081
     const-string v8, "KddiPacketSMSManager"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -302,13 +302,13 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2046
+    .line 2086
     :cond_8
     const/4 v8, 0x2
 
     if-ne v8, v3, :cond_c
 
-    .line 2048
+    .line 2088
     const/4 v8, 0x0
 
     invoke-virtual {p0, v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->obtainMessage(I)Landroid/os/Message;
@@ -321,22 +321,22 @@
 
     move-result v0
 
-    .line 2051
+    .line 2091
     if-nez v0, :cond_9
 
-    .line 2053
+    .line 2093
     const/4 v8, 0x1
 
     sget v10, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v8, v10, :cond_a
 
-    .line 2054
+    .line 2094
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2060
+    .line 2100
     :goto_3
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -344,13 +344,13 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2062
+    .line 2102
     :cond_9
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2055
+    .line 2095
     :cond_a
     const/4 v8, 0x2
 
@@ -358,14 +358,14 @@
 
     if-ne v8, v10, :cond_b
 
-    .line 2056
+    .line 2096
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_3
 
-    .line 2058
+    .line 2098
     :cond_b
     const/4 v8, 0x1
 
@@ -373,7 +373,7 @@
 
     goto :goto_3
 
-    .line 2066
+    .line 2106
     :cond_c
     const/4 v8, 0x1
 
@@ -381,19 +381,19 @@
 
     if-eqz v3, :cond_f
 
-    .line 2069
+    .line 2109
     const/4 v8, 0x1
 
     sget v10, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v8, v10, :cond_d
 
-    .line 2070
+    .line 2110
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2076
+    .line 2116
     :goto_4
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -401,12 +401,12 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2077
+    .line 2117
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2071
+    .line 2111
     :cond_d
     const/4 v8, 0x2
 
@@ -414,14 +414,14 @@
 
     if-ne v8, v10, :cond_e
 
-    .line 2072
+    .line 2112
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_4
 
-    .line 2074
+    .line 2114
     :cond_e
     const/4 v8, 0x1
 
@@ -429,7 +429,7 @@
 
     goto :goto_4
 
-    .line 2081
+    .line 2121
     :cond_f
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -441,24 +441,24 @@
 
     iput v10, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiSendState;->mSendState:I
 
-    .line 2085
+    .line 2125
     if-nez v3, :cond_14
 
-    .line 2086
+    .line 2126
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_10
 
-    .line 2087
+    .line 2127
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "return = PROFILE_ALREADY_ACTIVE"
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2088
+    .line 2128
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
@@ -474,7 +474,7 @@
 
     move-result-object v5
 
-    .line 2090
+    .line 2130
     .local v5, nInfo:Landroid/net/NetworkInfo;
     const-string v8, "KddiPacketSMSManager"
 
@@ -498,7 +498,7 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2103
+    .line 2143
     .end local v5           #nInfo:Landroid/net/NetworkInfo;
     :cond_10
     const/4 v8, 0x5
@@ -511,23 +511,23 @@
 
     move-result v6
 
-    .line 2104
+    .line 2144
     .local v6, regErr:Z
     if-nez v6, :cond_11
 
-    .line 2106
+    .line 2146
     const/4 v8, 0x1
 
     sget v10, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v8, v10, :cond_12
 
-    .line 2107
+    .line 2147
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2113
+    .line 2153
     :goto_5
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -535,13 +535,13 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2115
+    .line 2155
     :cond_11
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2108
+    .line 2148
     :cond_12
     const/4 v8, 0x2
 
@@ -549,14 +549,14 @@
 
     if-ne v8, v10, :cond_13
 
-    .line 2109
+    .line 2149
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_5
 
-    .line 2111
+    .line 2151
     :cond_13
     const/4 v8, 0x1
 
@@ -564,28 +564,28 @@
 
     goto :goto_5
 
-    .line 2119
+    .line 2159
     .end local v6           #regErr:Z
     :cond_14
     const/4 v8, 0x1
 
     if-ne v8, v3, :cond_19
 
-    .line 2120
+    .line 2160
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_15
 
-    .line 2121
+    .line 2161
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "return = KDDI_PROFILE_REQUEST_STARTED"
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2124
+    .line 2164
     :cond_15
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -600,10 +600,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2125
+    .line 2165
     const/4 v6, 0x1
 
-    .line 2128
+    .line 2168
     .restart local v6       #regErr:Z
     :try_start_2
     const-string v8, "KddiPacketSMSManager"
@@ -612,7 +612,7 @@
 
     invoke-static {v8, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2129
+    .line 2169
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
@@ -626,14 +626,14 @@
 
     invoke-virtual {v8, v11, v12}, Ljava/lang/Object;->wait(J)V
 
-    .line 2130
+    .line 2170
     const-string v8, "KddiPacketSMSManager"
 
     const-string v11, "leave wait KDDI_PROFILE_REQUEST_STARTED "
 
     invoke-static {v8, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2132
+    .line 2172
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
@@ -649,7 +649,7 @@
 
     move-result-object v5
 
-    .line 2134
+    .line 2174
     .restart local v5       #nInfo:Landroid/net/NetworkInfo;
     const-string v8, "KddiPacketSMSManager"
 
@@ -673,7 +673,7 @@
 
     invoke-static {v8, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2136
+    .line 2176
     if-eqz v5, :cond_17
 
     invoke-virtual {v5}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -682,7 +682,7 @@
 
     if-eqz v8, :cond_17
 
-    .line 2138
+    .line 2178
     const/4 v8, 0x5
 
     invoke-virtual {p0, v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->obtainMessage(I)Landroid/os/Message;
@@ -696,7 +696,7 @@
 
     move-result v6
 
-    .line 2147
+    .line 2187
     :goto_6
     :try_start_3
     const-string v8, "KddiPacketSMSManager"
@@ -721,22 +721,22 @@
 
     invoke-static {v8, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2148
+    .line 2188
     if-nez v6, :cond_16
 
-    .line 2150
+    .line 2190
     const/4 v8, 0x1
 
     sget v11, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v8, v11, :cond_43
 
-    .line 2151
+    .line 2191
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2157
+    .line 2197
     :goto_7
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -744,7 +744,7 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2160
+    .line 2200
     .end local v5           #nInfo:Landroid/net/NetworkInfo;
     :cond_16
     :goto_8
@@ -752,7 +752,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 2161
+    .line 2201
     :try_start_4
     monitor-exit v9
     :try_end_4
@@ -760,19 +760,19 @@
 
     goto/16 :goto_1
 
-    .line 2141
+    .line 2181
     .restart local v5       #nInfo:Landroid/net/NetworkInfo;
     :cond_17
     const/4 v6, 0x0
 
     goto :goto_6
 
-    .line 2143
+    .line 2183
     .end local v5           #nInfo:Landroid/net/NetworkInfo;
     :catch_0
     move-exception v2
 
-    .line 2144
+    .line 2184
     .local v2, e:Ljava/lang/InterruptedException;
     :try_start_5
     const-string v8, "KddiPacketSMSManager"
@@ -783,10 +783,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 2145
+    .line 2185
     const/4 v6, 0x0
 
-    .line 2147
+    .line 2187
     :try_start_6
     const-string v8, "KddiPacketSMSManager"
 
@@ -810,22 +810,22 @@
 
     invoke-static {v8, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2148
+    .line 2188
     if-nez v6, :cond_16
 
-    .line 2150
+    .line 2190
     const/4 v8, 0x1
 
     sget v11, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v8, v11, :cond_41
 
-    .line 2151
+    .line 2191
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2157
+    .line 2197
     :goto_9
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -835,7 +835,7 @@
 
     goto :goto_8
 
-    .line 2160
+    .line 2200
     .end local v2           #e:Ljava/lang/InterruptedException;
     :catchall_1
     move-exception v8
@@ -849,7 +849,7 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 2147
+    .line 2187
     :catchall_2
     move-exception v8
 
@@ -876,22 +876,22 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2148
+    .line 2188
     if-nez v6, :cond_18
 
-    .line 2150
+    .line 2190
     const/4 v11, 0x1
 
     sget v12, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v11, v12, :cond_3f
 
-    .line 2151
+    .line 2191
     const/16 v11, 0x17
 
     sput v11, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2157
+    .line 2197
     :goto_a
     iget-object v11, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -899,13 +899,13 @@
 
     invoke-virtual {v11}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2147
+    .line 2187
     :cond_18
     throw v8
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 2165
+    .line 2205
     .end local v6           #regErr:Z
     :cond_19
     :try_start_9
@@ -915,7 +915,7 @@
 
     goto/16 :goto_0
 
-    .line 2169
+    .line 2209
     :pswitch_1
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -925,7 +925,7 @@
 
     monitor-enter v9
 
-    .line 2170
+    .line 2210
     const/4 v8, 0x5
 
     :try_start_a
@@ -939,7 +939,7 @@
 
     if-eq v8, v10, :cond_2b
 
-    .line 2171
+    .line 2211
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
@@ -948,16 +948,16 @@
 
     move-result v1
 
-    .line 2172
+    .line 2212
     packed-switch v1, :pswitch_data_1
 
-    .line 2207
+    .line 2247
     :pswitch_2
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2274
+    .line 2314
     :catchall_3
     move-exception v8
 
@@ -967,7 +967,7 @@
 
     throw v8
 
-    .line 2178
+    .line 2218
     :pswitch_3
     const/4 v8, 0x1
 
@@ -976,12 +976,12 @@
 
     if-ne v8, v10, :cond_1a
 
-    .line 2179
+    .line 2219
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2186
+    .line 2226
     :goto_b
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -989,12 +989,12 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2187
+    .line 2227
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2180
+    .line 2220
     :cond_1a
     const/4 v8, 0x2
 
@@ -1002,14 +1002,14 @@
 
     if-ne v8, v10, :cond_1b
 
-    .line 2181
+    .line 2221
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_b
 
-    .line 2183
+    .line 2223
     :cond_1b
     const/4 v8, 0x1
 
@@ -1017,7 +1017,7 @@
 
     goto :goto_b
 
-    .line 2190
+    .line 2230
     :pswitch_4
     const/4 v8, 0x3
 
@@ -1043,7 +1043,7 @@
 
     if-ne v8, v10, :cond_1d
 
-    .line 2193
+    .line 2233
     :cond_1c
     const/4 v8, 0x1
 
@@ -1051,12 +1051,12 @@
 
     if-ne v8, v10, :cond_1e
 
-    .line 2194
+    .line 2234
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2201
+    .line 2241
     :goto_c
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1064,13 +1064,13 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2203
+    .line 2243
     :cond_1d
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2195
+    .line 2235
     :cond_1e
     const/4 v8, 0x2
 
@@ -1078,14 +1078,14 @@
 
     if-ne v8, v10, :cond_1f
 
-    .line 2196
+    .line 2236
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_c
 
-    .line 2198
+    .line 2238
     :cond_1f
     const/4 v8, 0x1
 
@@ -1093,7 +1093,7 @@
 
     goto :goto_c
 
-    .line 2210
+    .line 2250
     :pswitch_5
     const/4 v8, 0x2
 
@@ -1107,7 +1107,7 @@
 
     if-ne v8, v10, :cond_2a
 
-    .line 2223
+    .line 2263
     const/4 v8, 0x4
 
     invoke-virtual {p0, v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->obtainMessage(I)Landroid/os/Message;
@@ -1120,24 +1120,24 @@
 
     move-result v0
 
-    .line 2224
+    .line 2264
     if-nez v0, :cond_23
 
-    .line 2225
+    .line 2265
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_20
 
-    .line 2226
+    .line 2266
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "sendMessageDelayed failed"
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2229
+    .line 2269
     :cond_20
     const/4 v8, 0x1
 
@@ -1145,12 +1145,12 @@
 
     if-ne v8, v10, :cond_21
 
-    .line 2230
+    .line 2270
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2236
+    .line 2276
     :goto_d
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1158,12 +1158,12 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2237
+    .line 2277
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2231
+    .line 2271
     :cond_21
     const/4 v8, 0x2
 
@@ -1171,14 +1171,14 @@
 
     if-ne v8, v10, :cond_22
 
-    .line 2232
+    .line 2272
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_d
 
-    .line 2234
+    .line 2274
     :cond_22
     const/4 v8, 0x1
 
@@ -1186,7 +1186,7 @@
 
     goto :goto_d
 
-    .line 2241
+    .line 2281
     :cond_23
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1196,24 +1196,24 @@
 
     move-result v0
 
-    .line 2242
+    .line 2282
     if-nez v0, :cond_29
 
-    .line 2243
+    .line 2283
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_24
 
-    .line 2244
+    .line 2284
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "changeNwDevice Error"
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2247
+    .line 2287
     :cond_24
     const/4 v8, 0x5
 
@@ -1227,24 +1227,24 @@
 
     move-result v0
 
-    .line 2248
+    .line 2288
     if-nez v0, :cond_26
 
-    .line 2249
+    .line 2289
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$600()Z
 
     move-result v8
 
     if-eqz v8, :cond_25
 
-    .line 2250
+    .line 2290
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "sendMessageDelayed(KDDI_EVENT_SEND) Error"
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2253
+    .line 2293
     :cond_25
     const/4 v8, 0x1
 
@@ -1252,12 +1252,12 @@
 
     if-ne v8, v10, :cond_27
 
-    .line 2254
+    .line 2294
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2261
+    .line 2301
     :goto_e
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1265,13 +1265,13 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2263
+    .line 2303
     :cond_26
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2255
+    .line 2295
     :cond_27
     const/4 v8, 0x2
 
@@ -1279,14 +1279,14 @@
 
     if-ne v8, v10, :cond_28
 
-    .line 2256
+    .line 2296
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_e
 
-    .line 2258
+    .line 2298
     :cond_28
     const/4 v8, 0x1
 
@@ -1294,7 +1294,7 @@
 
     goto :goto_e
 
-    .line 2267
+    .line 2307
     :cond_29
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1302,14 +1302,14 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiWriteSocket()V
 
-    .line 2274
+    .line 2314
     :cond_2a
     :goto_f
     monitor-exit v9
 
     goto/16 :goto_0
 
-    .line 2270
+    .line 2310
     :cond_2b
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
@@ -1317,7 +1317,7 @@
 
     if-eqz v8, :cond_2a
 
-    .line 2271
+    .line 2311
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "Send State is CANCEL"
@@ -1328,7 +1328,7 @@
 
     goto :goto_f
 
-    .line 2280
+    .line 2320
     :pswitch_6
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1338,7 +1338,7 @@
 
     monitor-enter v9
 
-    .line 2281
+    .line 2321
     const/4 v8, 0x5
 
     :try_start_c
@@ -1352,19 +1352,19 @@
 
     if-eq v8, v10, :cond_2c
 
-    .line 2282
+    .line 2322
     const/4 v8, 0x1
 
     sget v10, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v8, v10, :cond_2d
 
-    .line 2284
+    .line 2324
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2293
+    .line 2333
     :goto_10
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1372,7 +1372,7 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2295
+    .line 2335
     :cond_2c
     monitor-exit v9
 
@@ -1387,7 +1387,7 @@
 
     throw v8
 
-    .line 2285
+    .line 2325
     :cond_2d
     const/4 v8, 0x2
 
@@ -1396,14 +1396,14 @@
 
     if-ne v8, v10, :cond_2e
 
-    .line 2287
+    .line 2327
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_10
 
-    .line 2290
+    .line 2330
     :cond_2e
     const/4 v8, 0x1
 
@@ -1413,7 +1413,7 @@
 
     goto :goto_10
 
-    .line 2299
+    .line 2339
     :pswitch_7
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1423,7 +1423,7 @@
 
     monitor-enter v9
 
-    .line 2300
+    .line 2340
     :try_start_e
     const-string v8, "KddiPacketSMSManager"
 
@@ -1461,7 +1461,7 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2301
+    .line 2341
     const/4 v8, 0x2
 
     iget-object v10, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
@@ -1498,7 +1498,7 @@
 
     if-ne v8, v10, :cond_31
 
-    .line 2304
+    .line 2344
     :cond_2f
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1508,12 +1508,12 @@
 
     move-result v1
 
-    .line 2305
+    .line 2345
     const/4 v8, 0x7
 
     if-ne v8, v1, :cond_31
 
-    .line 2306
+    .line 2346
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
@@ -1522,14 +1522,14 @@
 
     move-result v3
 
-    .line 2307
+    .line 2347
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_30
 
-    .line 2308
+    .line 2348
     const-string v8, "KddiPacketSMSManager"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1558,11 +1558,11 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2312
+    .line 2352
     :cond_30
     if-nez v3, :cond_34
 
-    .line 2313
+    .line 2353
     const/4 v8, 0x4
 
     invoke-virtual {p0, v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->obtainMessage(I)Landroid/os/Message;
@@ -1575,22 +1575,22 @@
 
     move-result v0
 
-    .line 2314
+    .line 2354
     if-nez v0, :cond_31
 
-    .line 2315
+    .line 2355
     const/4 v8, 0x1
 
     sget v10, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mPsmsSendMode:I
 
     if-ne v8, v10, :cond_32
 
-    .line 2317
+    .line 2357
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2326
+    .line 2366
     :goto_11
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1598,7 +1598,7 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2347
+    .line 2387
     :cond_31
     :goto_12
     monitor-exit v9
@@ -1614,7 +1614,7 @@
 
     throw v8
 
-    .line 2318
+    .line 2358
     :cond_32
     const/4 v8, 0x2
 
@@ -1623,14 +1623,14 @@
 
     if-ne v8, v10, :cond_33
 
-    .line 2320
+    .line 2360
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_11
 
-    .line 2323
+    .line 2363
     :cond_33
     const/4 v8, 0x1
 
@@ -1638,7 +1638,7 @@
 
     goto :goto_11
 
-    .line 2331
+    .line 2371
     :cond_34
     const/4 v8, 0x1
 
@@ -1646,12 +1646,12 @@
 
     if-ne v8, v10, :cond_35
 
-    .line 2333
+    .line 2373
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2342
+    .line 2382
     :goto_13
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1661,7 +1661,7 @@
 
     goto :goto_12
 
-    .line 2334
+    .line 2374
     :cond_35
     const/4 v8, 0x2
 
@@ -1669,14 +1669,14 @@
 
     if-ne v8, v10, :cond_36
 
-    .line 2336
+    .line 2376
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_13
 
-    .line 2339
+    .line 2379
     :cond_36
     const/4 v8, 0x1
 
@@ -1686,7 +1686,7 @@
 
     goto :goto_13
 
-    .line 2352
+    .line 2392
     :pswitch_8
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1696,7 +1696,7 @@
 
     monitor-enter v9
 
-    .line 2353
+    .line 2393
     const/4 v8, 0x2
 
     :try_start_10
@@ -1710,7 +1710,7 @@
 
     if-ne v8, v10, :cond_3b
 
-    .line 2355
+    .line 2395
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
@@ -1719,24 +1719,24 @@
 
     move-result v0
 
-    .line 2356
+    .line 2396
     if-nez v0, :cond_3a
 
-    .line 2357
+    .line 2397
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$600()Z
 
     move-result v8
 
     if-eqz v8, :cond_37
 
-    .line 2358
+    .line 2398
     const-string v8, "KddiPacketSMSManager"
 
     const-string v10, "changeNwDevice Error"
 
     invoke-static {v8, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2361
+    .line 2401
     :cond_37
     const/4 v8, 0x1
 
@@ -1744,12 +1744,12 @@
 
     if-ne v8, v10, :cond_38
 
-    .line 2362
+    .line 2402
     const/16 v8, 0x17
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
-    .line 2369
+    .line 2409
     :goto_14
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1757,12 +1757,12 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2370
+    .line 2410
     monitor-exit v9
 
     goto/16 :goto_1
 
-    .line 2375
+    .line 2415
     :catchall_6
     move-exception v8
 
@@ -1772,7 +1772,7 @@
 
     throw v8
 
-    .line 2363
+    .line 2403
     :cond_38
     const/4 v8, 0x2
 
@@ -1781,14 +1781,14 @@
 
     if-ne v8, v10, :cond_39
 
-    .line 2364
+    .line 2404
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto :goto_14
 
-    .line 2366
+    .line 2406
     :cond_39
     const/4 v8, 0x1
 
@@ -1796,7 +1796,7 @@
 
     goto :goto_14
 
-    .line 2373
+    .line 2413
     :cond_3a
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1804,7 +1804,7 @@
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiWriteSocket()V
 
-    .line 2375
+    .line 2415
     :cond_3b
     monitor-exit v9
     :try_end_11
@@ -1812,7 +1812,7 @@
 
     goto/16 :goto_0
 
-    .line 2379
+    .line 2419
     :pswitch_9
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
@@ -1822,7 +1822,7 @@
 
     monitor-enter v9
 
-    .line 2381
+    .line 2421
     const/4 v8, 0x5
 
     :try_start_12
@@ -1836,14 +1836,14 @@
 
     if-ne v8, v10, :cond_3c
 
-    .line 2383
+    .line 2423
     iget-object v8, p0, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender$1;->this$1:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;
 
     iget-object v8, v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager$KddiPacketSMSSender;->this$0:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
 
     invoke-virtual {v8}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiRelease()V
 
-    .line 2385
+    .line 2425
     :cond_3c
     monitor-exit v9
 
@@ -1858,20 +1858,20 @@
 
     throw v8
 
-    .line 2391
+    .line 2431
     :pswitch_a
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Landroid/app/PendingIntent;
 
-    .line 2392
+    .line 2432
     .local v4, intent:Landroid/app/PendingIntent;
     if-eqz v4, :cond_1
 
-    .line 2394
+    .line 2434
     const/4 v7, 0x0
 
-    .line 2395
+    .line 2435
     .local v7, result:I
     const/4 v8, 0x1
 
@@ -1880,21 +1880,21 @@
 
     if-ne v8, v9, :cond_3d
 
-    .line 2396
+    .line 2436
     const/16 v7, 0x17
 
-    .line 2403
+    .line 2443
     :goto_15
     invoke-virtual {v4, v7}, Landroid/app/PendingIntent;->send(I)V
 
-    .line 2404
+    .line 2444
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 2405
+    .line 2445
     const-string v8, "KddiPacketSMSManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1927,22 +1927,22 @@
 
     goto/16 :goto_0
 
-    .line 2407
+    .line 2447
     :catch_1
     move-exception v2
 
-    .line 2408
+    .line 2448
     .local v2, e:Landroid/app/PendingIntent$CanceledException;
     invoke-virtual {v2}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
 
-    .line 2409
+    .line 2449
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->access$600()Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 2410
+    .line 2450
     const-string v8, "KddiPacketSMSManager"
 
     invoke-virtual {v2}, Landroid/app/PendingIntent$CanceledException;->toString()Ljava/lang/String;
@@ -1953,7 +1953,7 @@
 
     goto/16 :goto_0
 
-    .line 2397
+    .line 2437
     .end local v2           #e:Landroid/app/PendingIntent$CanceledException;
     :cond_3d
     const/4 v8, 0x2
@@ -1965,18 +1965,18 @@
 
     if-ne v8, v9, :cond_3e
 
-    .line 2398
+    .line 2438
     const/16 v7, 0x2b
 
     goto :goto_15
 
-    .line 2401
+    .line 2441
     :cond_3e
     const/4 v7, 0x1
 
     goto :goto_15
 
-    .line 2152
+    .line 2192
     .end local v4           #intent:Landroid/app/PendingIntent;
     .end local v7           #result:I
     .restart local v6       #regErr:Z
@@ -1988,14 +1988,14 @@
 
     if-ne v11, v12, :cond_40
 
-    .line 2153
+    .line 2193
     const/16 v11, 0x2b
 
     sput v11, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto/16 :goto_a
 
-    .line 2155
+    .line 2195
     :cond_40
     const/4 v11, 0x1
 
@@ -2003,7 +2003,7 @@
 
     goto/16 :goto_a
 
-    .line 2152
+    .line 2192
     .local v2, e:Ljava/lang/InterruptedException;
     :cond_41
     const/4 v8, 0x2
@@ -2012,14 +2012,14 @@
 
     if-ne v8, v11, :cond_42
 
-    .line 2153
+    .line 2193
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto/16 :goto_9
 
-    .line 2155
+    .line 2195
     :cond_42
     const/4 v8, 0x1
 
@@ -2027,7 +2027,7 @@
 
     goto/16 :goto_9
 
-    .line 2152
+    .line 2192
     .end local v2           #e:Ljava/lang/InterruptedException;
     .restart local v5       #nInfo:Landroid/net/NetworkInfo;
     :cond_43
@@ -2037,14 +2037,14 @@
 
     if-ne v8, v11, :cond_44
 
-    .line 2153
+    .line 2193
     const/16 v8, 0x2b
 
     sput v8, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->mReturnSendResult:I
 
     goto/16 :goto_7
 
-    .line 2155
+    .line 2195
     :cond_44
     const/4 v8, 0x1
 
@@ -2054,7 +2054,7 @@
 
     goto/16 :goto_7
 
-    .line 2006
+    .line 2046
     nop
 
     :pswitch_data_0
@@ -2070,7 +2070,7 @@
         :pswitch_6
     .end packed-switch
 
-    .line 2172
+    .line 2212
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_4

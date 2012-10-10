@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 510
+    .line 517
     iput-object p1, p0, Lcom/htc/widget/HtcSpinner$3;->this$0:Lcom/htc/widget/HtcSpinner;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,6 @@
     .parameter "whichButton"
 
     .prologue
-    .line 513
+    .line 520
     return-void
 .end method

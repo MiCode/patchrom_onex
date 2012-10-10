@@ -26,6 +26,8 @@
 
 .field public numCrashes:I
 
+.field public numSentToServer:I
+
 .field public pid:I
 
 .field public processName:Ljava/lang/String;
@@ -38,15 +40,15 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    const/4 v2, -0x1
+    const/4 v2, 0x0
 
     .line 34
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 36
-    iput v2, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->pid:I
+    iput v3, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->pid:I
 
     .line 37
     const-wide/16 v0, 0x0
@@ -59,13 +61,16 @@
     iput-wide v0, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->lastCPUUpdateTime:J
 
     .line 39
-    iput v3, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
+    iput v2, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
     .line 40
-    iput v3, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
+    iput v2, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
     .line 41
-    iput v2, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
+    iput v3, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
+
+    .line 42
+    iput v2, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
 
     return-void
 .end method
@@ -76,48 +81,53 @@
     .locals 3
 
     .prologue
-    .line 44
+    .line 45
     new-instance v0, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
     invoke-direct {v0}, Landroid/app/HtcDeviceInfo$ProcessInfo;-><init>()V
 
-    .line 45
+    .line 46
     .local v0, newInfo:Landroid/app/HtcDeviceInfo$ProcessInfo;
     iget-object v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
 
-    .line 46
+    .line 47
     iget-wide v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
     iput-wide v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
-    .line 47
+    .line 48
     iget-wide v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->lastCPUUpdateTime:J
 
     iput-wide v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->lastCPUUpdateTime:J
 
-    .line 48
+    .line 49
     iget v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
     iput v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
-    .line 49
+    .line 50
     iget v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
     iput v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
-    .line 50
+    .line 51
     iget v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->pid:I
 
     iput v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->pid:I
 
-    .line 51
+    .line 52
     iget v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
 
     iput v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
 
-    .line 52
+    .line 53
+    iget v1, p0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    iput v1, v0, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    .line 54
     return-object v0
 .end method
 

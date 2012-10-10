@@ -1724,7 +1724,7 @@
 
     move-result-object v20
 
-    const-string/jumbo v21, "loading view instead"
+    const-string v21, "loading view instead"
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

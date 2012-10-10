@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 112
+    .line 114
     iput-object p1, p0, Lcom/android/camera/component/ObjectTrackingUI$1;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 116
+    .line 118
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$1;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     #getter for: Lcom/android/camera/component/ObjectTrackingUI;->m_IsStarted:Z
@@ -55,12 +55,12 @@
 
     if-nez v0, :cond_1
 
-    .line 124
+    .line 126
     :cond_0
     :goto_0
     return v2
 
-    .line 119
+    .line 121
     :cond_1
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$1;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
@@ -77,7 +77,7 @@
 
     if-nez v0, :cond_0
 
-    .line 120
+    .line 122
     :cond_2
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$1;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 

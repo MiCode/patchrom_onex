@@ -25,13 +25,13 @@
     .parameter "res"
 
     .prologue
-    .line 985
+    .line 1073
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter$QueryHandler;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    .line 986
+    .line 1074
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 987
+    .line 1075
     return-void
 .end method
 
@@ -44,16 +44,16 @@
     .parameter "cursor"
 
     .prologue
-    .line 994
+    .line 1082
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter$QueryHandler;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$500(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
+    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$600(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     move-result-object v0
 
     invoke-virtual {v0, p3}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->init(Landroid/database/Cursor;)V
 
-    .line 995
+    .line 1083
     return-void
 .end method

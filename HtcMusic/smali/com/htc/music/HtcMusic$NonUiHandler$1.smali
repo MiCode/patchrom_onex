@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5943
+    .line 5975
     iput-object p1, p0, Lcom/htc/music/HtcMusic$NonUiHandler$1;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,33 +41,41 @@
     .locals 2
 
     .prologue
-    .line 5945
+    .line 5977
     iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$1;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->showHideOneShotMode()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8100(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8200(Lcom/htc/music/HtcMusic;)V
 
-    .line 5947
+    .line 5979
     iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$1;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->m2DControl:Landroid/view/View;
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8200(Lcom/htc/music/HtcMusic;)Landroid/view/View;
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8300(Lcom/htc/music/HtcMusic;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 5948
+    iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$1;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
+
+    if-eqz v0, :cond_0
+
+    .line 5980
     iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$1;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->m2DControl:Landroid/view/View;
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8200(Lcom/htc/music/HtcMusic;)Landroid/view/View;
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$8300(Lcom/htc/music/HtcMusic;)Landroid/view/View;
 
     move-result-object v0
 
@@ -75,7 +83,18 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 5950
+    .line 5981
+    iget-object v0, p0, Lcom/htc/music/HtcMusic$NonUiHandler$1;->this$1:Lcom/htc/music/HtcMusic$NonUiHandler;
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic$NonUiHandler;->this$0:Lcom/htc/music/HtcMusic;
+
+    iget-object v0, v0, Lcom/htc/music/HtcMusic;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
+
+    const v1, 0x2080001
+
+    invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/presentation/SPresentation;->setGlobalBackgroundResource(I)V
+
+    .line 5983
     :cond_0
     return-void
 .end method

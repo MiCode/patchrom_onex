@@ -507,7 +507,7 @@
 
     .line 536
     .local v2, content:Ljava/lang/String;
-    const-string v8, "{}"
+    const-string/jumbo v8, "{}"
 
     invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -524,7 +524,7 @@
 
     .line 538
     :cond_3
-    const-string v8, "{"
+    const-string/jumbo v8, "{"
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -532,7 +532,7 @@
 
     if-eqz v8, :cond_4
 
-    const-string v8, "}"
+    const-string/jumbo v8, "}"
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 

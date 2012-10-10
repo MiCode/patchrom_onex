@@ -79,7 +79,7 @@
 
     .prologue
     .line 1668
-    const-string/jumbo v0, "isActive "
+    const-string v0, "isActive "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

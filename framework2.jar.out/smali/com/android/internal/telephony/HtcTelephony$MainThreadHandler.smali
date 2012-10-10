@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 225
+    .line 228
     iput-object p1, p0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 225
+    .line 228
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;-><init>(Lcom/android/internal/telephony/HtcTelephony;)V
 
     return-void
@@ -51,19 +51,19 @@
     .parameter "msg"
 
     .prologue
-    .line 232
+    .line 236
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 926
+    .line 930
     :goto_0
     :pswitch_0
     return-void
 
-    .line 234
+    .line 238
     :pswitch_1
     const-string v2, "HtcTelephony"
 
@@ -71,7 +71,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 239
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -80,7 +80,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 236
+    .line 240
     .local v28, request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -111,7 +111,7 @@
 
     goto :goto_0
 
-    .line 240
+    .line 244
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_2
     const-string v2, "HtcTelephony"
@@ -120,14 +120,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
+    .line 245
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 242
+    .line 246
     .local v11, ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -135,7 +135,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 243
+    .line 247
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -143,12 +143,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 244
+    .line 248
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_0
 
-    .line 245
+    .line 249
     const/4 v2, 0x0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -159,15 +159,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 250
+    .line 254
     :goto_1
     monitor-enter v28
 
-    .line 251
+    .line 255
     :try_start_0
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 252
+    .line 256
     monitor-exit v28
 
     goto :goto_0
@@ -181,7 +181,7 @@
 
     throw v2
 
-    .line 247
+    .line 251
     :cond_0
     const/4 v2, 0x2
 
@@ -193,7 +193,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 248
+    .line 252
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -224,7 +224,7 @@
 
     goto :goto_1
 
-    .line 255
+    .line 259
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_3
@@ -234,7 +234,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
+    .line 260
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -243,7 +243,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 257
+    .line 261
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -253,7 +253,7 @@
 
     check-cast v26, Ljava/lang/String;
 
-    .line 258
+    .line 262
     .local v26, randu:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -286,7 +286,7 @@
 
     goto/16 :goto_0
 
-    .line 263
+    .line 267
     .end local v26           #randu:Ljava/lang/String;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_4
@@ -296,14 +296,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
+    .line 268
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 265
+    .line 269
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -311,7 +311,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 266
+    .line 270
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -319,12 +319,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 267
+    .line 271
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_2
 
-    .line 268
+    .line 272
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [Ljava/lang/String;
@@ -333,7 +333,7 @@
 
     check-cast v30, [Ljava/lang/String;
 
-    .line 269
+    .line 273
     .local v30, strArr:[Ljava/lang/String;
     const-string v2, "HtcTelephony"
 
@@ -361,7 +361,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
+    .line 274
     const/16 v18, 0x0
 
     .local v18, i:I
@@ -374,7 +374,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 271
+    .line 275
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -411,12 +411,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
+    .line 274
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_2
 
-    .line 274
+    .line 278
     :cond_1
     const/4 v2, 0x0
 
@@ -426,7 +426,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 276
+    .line 280
     .end local v18           #i:I
     .end local v30           #strArr:[Ljava/lang/String;
     :cond_2
@@ -436,7 +436,7 @@
 
     if-nez v2, :cond_3
 
-    .line 277
+    .line 281
     new-instance v2, Ljava/lang/String;
 
     const-string v3, ""
@@ -447,15 +447,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 280
+    .line 284
     :cond_3
     monitor-enter v28
 
-    .line 281
+    .line 285
     :try_start_1
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 282
+    .line 286
     monitor-exit v28
 
     goto/16 :goto_0
@@ -469,7 +469,7 @@
 
     throw v2
 
-    .line 286
+    .line 290
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_5
@@ -479,7 +479,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
+    .line 291
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -488,7 +488,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 288
+    .line 292
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -519,7 +519,7 @@
 
     goto/16 :goto_0
 
-    .line 292
+    .line 296
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_6
     const-string v2, "HtcTelephony"
@@ -528,14 +528,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
+    .line 297
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 294
+    .line 298
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -543,7 +543,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 295
+    .line 299
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -551,12 +551,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 296
+    .line 300
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_4
 
-    .line 297
+    .line 301
     const/4 v2, 0x0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -567,15 +567,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 302
+    .line 306
     :goto_3
     monitor-enter v28
 
-    .line 303
+    .line 307
     :try_start_2
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 304
+    .line 308
     monitor-exit v28
 
     goto/16 :goto_0
@@ -589,7 +589,7 @@
 
     throw v2
 
-    .line 299
+    .line 303
     :cond_4
     const/4 v2, 0x2
 
@@ -601,7 +601,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 300
+    .line 304
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -632,7 +632,7 @@
 
     goto :goto_3
 
-    .line 307
+    .line 311
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_7
@@ -642,7 +642,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
+    .line 312
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -651,7 +651,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 309
+    .line 313
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -665,7 +665,7 @@
 
     aget-object v17, v2, v3
 
-    .line 310
+    .line 314
     .local v17, chapid:Ljava/lang/String;
     move-object/from16 v0, v28
 
@@ -679,7 +679,7 @@
 
     aget-object v16, v2, v3
 
-    .line 311
+    .line 315
     .local v16, chapchallengelength:Ljava/lang/String;
     move-object/from16 v0, v28
 
@@ -693,7 +693,7 @@
 
     aget-object v15, v2, v3
 
-    .line 312
+    .line 316
     .local v15, chapchallenge:Ljava/lang/String;
     const-string v2, "HtcTelephony"
 
@@ -741,7 +741,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
+    .line 317
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -775,7 +775,7 @@
 
     goto/16 :goto_0
 
-    .line 317
+    .line 321
     .end local v15           #chapchallenge:Ljava/lang/String;
     .end local v16           #chapchallengelength:Ljava/lang/String;
     .end local v17           #chapid:Ljava/lang/String;
@@ -787,14 +787,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
+    .line 322
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 319
+    .line 323
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -802,7 +802,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 320
+    .line 324
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -810,12 +810,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 321
+    .line 325
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_7
 
-    .line 322
+    .line 326
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [Ljava/lang/String;
@@ -824,7 +824,7 @@
 
     check-cast v30, [Ljava/lang/String;
 
-    .line 323
+    .line 327
     .restart local v30       #strArr:[Ljava/lang/String;
     const-string v2, "HtcTelephony"
 
@@ -852,7 +852,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
+    .line 328
     const/16 v18, 0x0
 
     .restart local v18       #i:I
@@ -865,7 +865,7 @@
 
     if-ge v0, v2, :cond_5
 
-    .line 325
+    .line 329
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -902,12 +902,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
+    .line 328
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_4
 
-    .line 327
+    .line 331
     :cond_5
     const/4 v2, 0x0
 
@@ -917,7 +917,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 331
+    .line 335
     .end local v18           #i:I
     .end local v30           #strArr:[Ljava/lang/String;
     :goto_5
@@ -927,7 +927,7 @@
 
     if-nez v2, :cond_6
 
-    .line 332
+    .line 336
     new-instance v2, Ljava/lang/String;
 
     const-string v3, ""
@@ -938,15 +938,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 335
+    .line 339
     :cond_6
     monitor-enter v28
 
-    .line 336
+    .line 340
     :try_start_3
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 337
+    .line 341
     monitor-exit v28
 
     goto/16 :goto_0
@@ -960,7 +960,7 @@
 
     throw v2
 
-    .line 329
+    .line 333
     :cond_7
     const-string v2, "HtcTelephony"
 
@@ -992,7 +992,7 @@
 
     goto :goto_5
 
-    .line 341
+    .line 345
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_9
@@ -1002,7 +1002,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
+    .line 346
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1011,7 +1011,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 343
+    .line 347
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -1042,7 +1042,7 @@
 
     goto/16 :goto_0
 
-    .line 347
+    .line 351
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_a
     const-string v2, "HtcTelephony"
@@ -1051,14 +1051,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
+    .line 352
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 349
+    .line 353
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -1066,7 +1066,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 350
+    .line 354
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -1074,12 +1074,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 351
+    .line 355
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_8
 
-    .line 352
+    .line 356
     const/4 v2, 0x0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1090,15 +1090,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 358
+    .line 362
     :goto_6
     monitor-enter v28
 
-    .line 359
+    .line 363
     :try_start_4
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 360
+    .line 364
     monitor-exit v28
 
     goto/16 :goto_0
@@ -1112,7 +1112,7 @@
 
     throw v2
 
-    .line 354
+    .line 358
     :cond_8
     const/4 v2, 0x2
 
@@ -1124,7 +1124,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 355
+    .line 359
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1155,7 +1155,7 @@
 
     goto :goto_6
 
-    .line 363
+    .line 367
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_b
@@ -1165,7 +1165,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
+    .line 368
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1174,7 +1174,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 365
+    .line 369
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -1205,7 +1205,7 @@
 
     goto/16 :goto_0
 
-    .line 369
+    .line 373
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_c
     const-string v2, "HtcTelephony"
@@ -1214,14 +1214,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
+    .line 374
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 371
+    .line 375
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -1229,7 +1229,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 372
+    .line 376
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -1237,12 +1237,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 373
+    .line 377
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_a
 
-    .line 374
+    .line 378
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [Ljava/lang/String;
@@ -1251,7 +1251,7 @@
 
     check-cast v30, [Ljava/lang/String;
 
-    .line 375
+    .line 379
     .restart local v30       #strArr:[Ljava/lang/String;
     const-string v2, "HtcTelephony"
 
@@ -1279,7 +1279,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
+    .line 380
     const/16 v18, 0x0
 
     .restart local v18       #i:I
@@ -1292,7 +1292,7 @@
 
     if-ge v0, v2, :cond_9
 
-    .line 377
+    .line 381
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1329,12 +1329,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
+    .line 380
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_7
 
-    .line 380
+    .line 384
     :cond_9
     const/4 v2, 0x0
 
@@ -1344,7 +1344,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 382
+    .line 386
     .end local v18           #i:I
     .end local v30           #strArr:[Ljava/lang/String;
     :cond_a
@@ -1354,7 +1354,7 @@
 
     if-nez v2, :cond_b
 
-    .line 383
+    .line 387
     new-instance v2, Ljava/lang/String;
 
     const-string v3, ""
@@ -1365,15 +1365,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 386
+    .line 390
     :cond_b
     monitor-enter v28
 
-    .line 387
+    .line 391
     :try_start_5
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 388
+    .line 392
     monitor-exit v28
 
     goto/16 :goto_0
@@ -1387,7 +1387,7 @@
 
     throw v2
 
-    .line 392
+    .line 396
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_d
@@ -1397,7 +1397,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
+    .line 397
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1406,7 +1406,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 394
+    .line 398
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -1416,7 +1416,7 @@
 
     check-cast v25, Ljava/lang/String;
 
-    .line 395
+    .line 399
     .local v25, randssd:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1449,7 +1449,7 @@
 
     goto/16 :goto_0
 
-    .line 399
+    .line 403
     .end local v25           #randssd:Ljava/lang/String;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_e
@@ -1459,14 +1459,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
+    .line 404
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 401
+    .line 405
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -1474,7 +1474,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 402
+    .line 406
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -1482,12 +1482,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 403
+    .line 407
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_d
 
-    .line 404
+    .line 408
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [Ljava/lang/String;
@@ -1496,7 +1496,7 @@
 
     check-cast v30, [Ljava/lang/String;
 
-    .line 405
+    .line 409
     .restart local v30       #strArr:[Ljava/lang/String;
     const-string v2, "HtcTelephony"
 
@@ -1524,7 +1524,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
+    .line 410
     const/16 v18, 0x0
 
     .restart local v18       #i:I
@@ -1537,7 +1537,7 @@
 
     if-ge v0, v2, :cond_c
 
-    .line 407
+    .line 411
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1574,12 +1574,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
+    .line 410
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_8
 
-    .line 409
+    .line 413
     :cond_c
     const/4 v2, 0x0
 
@@ -1589,7 +1589,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 411
+    .line 415
     .end local v18           #i:I
     .end local v30           #strArr:[Ljava/lang/String;
     :cond_d
@@ -1599,7 +1599,7 @@
 
     if-nez v2, :cond_e
 
-    .line 412
+    .line 416
     new-instance v2, Ljava/lang/String;
 
     const-string v3, ""
@@ -1610,15 +1610,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 415
+    .line 419
     :cond_e
     monitor-enter v28
 
-    .line 416
+    .line 420
     :try_start_6
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 417
+    .line 421
     monitor-exit v28
 
     goto/16 :goto_0
@@ -1632,7 +1632,7 @@
 
     throw v2
 
-    .line 420
+    .line 424
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_f
@@ -1642,7 +1642,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
+    .line 425
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1651,7 +1651,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 422
+    .line 426
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -1682,7 +1682,7 @@
 
     goto/16 :goto_0
 
-    .line 426
+    .line 430
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_10
     const-string v2, "HtcTelephony"
@@ -1691,14 +1691,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
+    .line 431
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 428
+    .line 432
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -1706,7 +1706,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 429
+    .line 433
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -1714,12 +1714,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 430
+    .line 434
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_f
 
-    .line 431
+    .line 435
     const/4 v2, 0x0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1730,15 +1730,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 437
+    .line 441
     :goto_9
     monitor-enter v28
 
-    .line 438
+    .line 442
     :try_start_7
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 439
+    .line 443
     monitor-exit v28
 
     goto/16 :goto_0
@@ -1752,7 +1752,7 @@
 
     throw v2
 
-    .line 433
+    .line 437
     :cond_f
     const/4 v2, 0x2
 
@@ -1764,7 +1764,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 434
+    .line 438
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1795,7 +1795,7 @@
 
     goto :goto_9
 
-    .line 442
+    .line 446
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_11
@@ -1805,7 +1805,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
+    .line 447
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1814,7 +1814,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 444
+    .line 448
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -1822,7 +1822,7 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 445
+    .line 449
     .local v13, authbs:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1853,7 +1853,7 @@
 
     goto/16 :goto_0
 
-    .line 454
+    .line 458
     .end local v13           #authbs:Ljava/lang/String;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_12
@@ -1863,7 +1863,7 @@
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 455
+    .line 459
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -1871,7 +1871,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 456
+    .line 460
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -1879,19 +1879,19 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 457
+    .line 461
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_10
 
-    .line 458
+    .line 462
     const-string v2, "HtcTelephony"
 
     const-string v3, "get cw request SSD UPDATE CONFIRM result: success"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
+    .line 463
     new-instance v2, Ljava/lang/String;
 
     const-string v3, "1"
@@ -1902,15 +1902,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 465
+    .line 469
     :goto_a
     monitor-enter v28
 
-    .line 466
+    .line 470
     :try_start_8
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 467
+    .line 471
     monitor-exit v28
 
     goto/16 :goto_0
@@ -1924,7 +1924,7 @@
 
     throw v2
 
-    .line 461
+    .line 465
     :cond_10
     const-string v2, "HtcTelephony"
 
@@ -1950,7 +1950,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
+    .line 466
     new-instance v2, Ljava/lang/String;
 
     const-string v3, "0"
@@ -1963,7 +1963,7 @@
 
     goto :goto_a
 
-    .line 471
+    .line 475
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_13
@@ -1973,7 +1973,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 472
+    .line 476
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1982,7 +1982,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 473
+    .line 477
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -2013,7 +2013,7 @@
 
     goto/16 :goto_0
 
-    .line 478
+    .line 482
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_14
     const-string v2, "HtcTelephony"
@@ -2022,14 +2022,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
+    .line 483
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 480
+    .line 484
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -2037,7 +2037,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 481
+    .line 485
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -2045,16 +2045,16 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 482
+    .line 486
     const/4 v14, 0x0
 
-    .line 484
+    .line 488
     .local v14, authenSupported:I
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_15
 
-    .line 485
+    .line 489
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [Ljava/lang/String;
@@ -2063,11 +2063,11 @@
 
     check-cast v32, [Ljava/lang/String;
 
-    .line 486
+    .line 490
     .local v32, uimauth:[Ljava/lang/String;
     const-string v33, ""
 
-    .line 487
+    .line 491
     .local v33, uimauthList:Ljava/lang/String;
     const-string v2, "HtcTelephony"
 
@@ -2095,7 +2095,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
+    .line 492
     const/16 v18, 0x0
 
     .restart local v18       #i:I
@@ -2108,7 +2108,7 @@
 
     if-ge v0, v2, :cond_14
 
-    .line 489
+    .line 493
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2135,7 +2135,7 @@
 
     move-result-object v33
 
-    .line 490
+    .line 494
     aget-object v2, v32, v18
 
     invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
@@ -2150,17 +2150,17 @@
 
     if-eqz v2, :cond_12
 
-    .line 491
+    .line 495
     add-int/lit8 v14, v14, 0x1
 
-    .line 488
+    .line 492
     :cond_11
     :goto_c
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_b
 
-    .line 492
+    .line 496
     :cond_12
     aget-object v2, v32, v18
 
@@ -2176,12 +2176,12 @@
 
     if-eqz v2, :cond_13
 
-    .line 493
+    .line 497
     add-int/lit8 v14, v14, 0x2
 
     goto :goto_c
 
-    .line 494
+    .line 498
     :cond_13
     aget-object v2, v32, v18
 
@@ -2197,12 +2197,12 @@
 
     if-eqz v2, :cond_11
 
-    .line 495
+    .line 499
     add-int/lit8 v14, v14, 0x4
 
     goto :goto_c
 
-    .line 498
+    .line 502
     :cond_14
     const-string v2, "HtcTelephony"
 
@@ -2228,7 +2228,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 502
+    .line 506
     .end local v18           #i:I
     .end local v32           #uimauth:[Ljava/lang/String;
     .end local v33           #uimauthList:Ljava/lang/String;
@@ -2241,14 +2241,14 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 504
+    .line 508
     monitor-enter v28
 
-    .line 505
+    .line 509
     :try_start_9
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 506
+    .line 510
     monitor-exit v28
 
     goto/16 :goto_0
@@ -2262,7 +2262,7 @@
 
     throw v2
 
-    .line 500
+    .line 504
     :cond_15
     const-string v2, "HtcTelephony"
 
@@ -2294,7 +2294,7 @@
 
     goto :goto_d
 
-    .line 511
+    .line 515
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v14           #authenSupported:I
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
@@ -2305,7 +2305,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 512
+    .line 516
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -2314,7 +2314,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 513
+    .line 517
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -2345,7 +2345,7 @@
 
     goto/16 :goto_0
 
-    .line 517
+    .line 521
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_16
     const-string v2, "HtcTelephony"
@@ -2354,14 +2354,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 518
+    .line 522
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 519
+    .line 523
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -2369,7 +2369,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 520
+    .line 524
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -2377,12 +2377,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 521
+    .line 525
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_16
 
-    .line 522
+    .line 526
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [I
@@ -2391,7 +2391,7 @@
 
     check-cast v27, [I
 
-    .line 523
+    .line 527
     .local v27, registration:[I
     const/4 v2, 0x0
 
@@ -2405,16 +2405,16 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 530
+    .line 534
     .end local v27           #registration:[I
     :goto_e
     monitor-enter v28
 
-    .line 531
+    .line 535
     :try_start_a
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 532
+    .line 536
     monitor-exit v28
 
     goto/16 :goto_0
@@ -2428,7 +2428,7 @@
 
     throw v2
 
-    .line 525
+    .line 529
     :cond_16
     const/4 v2, -0x1
 
@@ -2440,7 +2440,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 526
+    .line 530
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2471,7 +2471,7 @@
 
     goto :goto_e
 
-    .line 535
+    .line 539
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_17
@@ -2481,7 +2481,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
+    .line 540
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -2490,7 +2490,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 537
+    .line 541
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -2500,7 +2500,7 @@
 
     check-cast v20, Ljava/lang/String;
 
-    .line 538
+    .line 542
     .local v20, ifcname:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2533,7 +2533,7 @@
 
     goto/16 :goto_0
 
-    .line 542
+    .line 546
     .end local v20           #ifcname:Ljava/lang/String;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_18
@@ -2543,14 +2543,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 543
+    .line 547
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 544
+    .line 548
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -2558,7 +2558,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 545
+    .line 549
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -2566,12 +2566,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 546
+    .line 550
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_19
 
-    .line 547
+    .line 551
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [Ljava/lang/String;
@@ -2580,7 +2580,7 @@
 
     check-cast v30, [Ljava/lang/String;
 
-    .line 548
+    .line 552
     .restart local v30       #strArr:[Ljava/lang/String;
     const-string v2, "HtcTelephony"
 
@@ -2608,7 +2608,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
+    .line 553
     const/16 v18, 0x0
 
     .restart local v18       #i:I
@@ -2621,7 +2621,7 @@
 
     if-ge v0, v2, :cond_17
 
-    .line 550
+    .line 554
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2658,12 +2658,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
+    .line 553
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_f
 
-    .line 552
+    .line 556
     :cond_17
     move-object/from16 v0, v30
 
@@ -2671,7 +2671,7 @@
 
     iput-object v0, v1, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 556
+    .line 560
     .end local v18           #i:I
     .end local v30           #strArr:[Ljava/lang/String;
     :goto_10
@@ -2681,7 +2681,7 @@
 
     if-nez v2, :cond_18
 
-    .line 557
+    .line 561
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2}, Ljava/lang/RuntimeException;-><init>()V
@@ -2690,15 +2690,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 560
+    .line 564
     :cond_18
     monitor-enter v28
 
-    .line 561
+    .line 565
     :try_start_b
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 562
+    .line 566
     monitor-exit v28
 
     goto/16 :goto_0
@@ -2712,7 +2712,7 @@
 
     throw v2
 
-    .line 554
+    .line 558
     :cond_19
     const-string v2, "HtcTelephony"
 
@@ -2744,7 +2744,7 @@
 
     goto :goto_10
 
-    .line 567
+    .line 571
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_19
@@ -2756,7 +2756,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 568
+    .line 572
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -2764,7 +2764,7 @@
 
     check-cast v12, Lcom/android/internal/telephony/HtcTelephony$IccAPDUArgument;
 
-    .line 570
+    .line 574
     .local v12, argument:Lcom/android/internal/telephony/HtcTelephony$IccAPDUArgument;
     const/16 v2, 0x7e
 
@@ -2776,7 +2776,7 @@
 
     move-result-object v10
 
-    .line 572
+    .line 576
     .local v10, onCompleted:Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -2809,7 +2809,7 @@
 
     goto/16 :goto_0
 
-    .line 578
+    .line 582
     .end local v10           #onCompleted:Landroid/os/Message;
     .end local v12           #argument:Lcom/android/internal/telephony/HtcTelephony$IccAPDUArgument;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
@@ -2820,7 +2820,7 @@
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 579
+    .line 583
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -2828,7 +2828,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 580
+    .line 584
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -2838,22 +2838,22 @@
 
     if-eqz v2, :cond_1a
 
-    .line 581
+    .line 585
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     move-object/from16 v0, v28
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 585
+    .line 589
     :goto_11
     monitor-enter v28
 
-    .line 586
+    .line 590
     :try_start_c
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 587
+    .line 591
     monitor-exit v28
 
     goto/16 :goto_0
@@ -2867,7 +2867,7 @@
 
     throw v2
 
-    .line 583
+    .line 587
     :cond_1a
     new-instance v3, Lcom/android/internal/telephony/IccIoResult;
 
@@ -2887,7 +2887,7 @@
 
     goto :goto_11
 
-    .line 590
+    .line 594
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_1b
@@ -2899,7 +2899,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 591
+    .line 595
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/16 v2, 0x80
 
@@ -2911,7 +2911,7 @@
 
     move-result-object v10
 
-    .line 592
+    .line 596
     .restart local v10       #onCompleted:Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -2936,7 +2936,7 @@
 
     goto/16 :goto_0
 
-    .line 596
+    .line 600
     .end local v10           #onCompleted:Landroid/os/Message;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_1c
@@ -2946,7 +2946,7 @@
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 597
+    .line 601
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -2954,7 +2954,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 598
+    .line 602
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -2964,7 +2964,7 @@
 
     if-eqz v2, :cond_1b
 
-    .line 599
+    .line 603
     new-instance v3, Ljava/lang/Integer;
 
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -2983,15 +2983,15 @@
 
     iput-object v3, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 604
+    .line 608
     :goto_12
     monitor-enter v28
 
-    .line 605
+    .line 609
     :try_start_d
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 606
+    .line 610
     monitor-exit v28
 
     goto/16 :goto_0
@@ -3005,7 +3005,7 @@
 
     throw v2
 
-    .line 601
+    .line 605
     :cond_1b
     new-instance v2, Ljava/lang/Integer;
 
@@ -3017,7 +3017,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 602
+    .line 606
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -3037,7 +3037,7 @@
 
     goto :goto_12
 
-    .line 609
+    .line 613
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_1d
@@ -3049,7 +3049,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 610
+    .line 614
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/16 v2, 0x82
 
@@ -3061,7 +3061,7 @@
 
     move-result-object v10
 
-    .line 612
+    .line 616
     .restart local v10       #onCompleted:Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -3090,7 +3090,7 @@
 
     goto/16 :goto_0
 
-    .line 617
+    .line 621
     .end local v10           #onCompleted:Landroid/os/Message;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_1e
@@ -3100,7 +3100,7 @@
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 618
+    .line 622
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -3108,13 +3108,13 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 619
+    .line 623
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_1c
 
-    .line 620
+    .line 624
     new-instance v2, Ljava/lang/Integer;
 
     const/4 v3, 0x0
@@ -3125,15 +3125,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 624
+    .line 628
     :goto_13
     monitor-enter v28
 
-    .line 625
+    .line 629
     :try_start_e
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 626
+    .line 630
     monitor-exit v28
 
     goto/16 :goto_0
@@ -3147,7 +3147,7 @@
 
     throw v2
 
-    .line 622
+    .line 626
     :cond_1c
     new-instance v2, Ljava/lang/Integer;
 
@@ -3161,7 +3161,7 @@
 
     goto :goto_13
 
-    .line 632
+    .line 636
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_1f
@@ -3171,7 +3171,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
+    .line 637
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -3180,7 +3180,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 634
+    .line 638
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -3188,7 +3188,7 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 635
+    .line 639
     .local v6, uiccAuthParam:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3225,7 +3225,7 @@
 
     goto/16 :goto_0
 
-    .line 644
+    .line 648
     .end local v6           #uiccAuthParam:Ljava/lang/String;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_20
@@ -3235,14 +3235,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
+    .line 649
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 646
+    .line 650
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -3250,7 +3250,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 647
+    .line 651
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     iget-object v0, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -3258,7 +3258,7 @@
 
     check-cast v19, Lcom/android/internal/telephony/IccIoResult;
 
-    .line 648
+    .line 652
     .local v19, iccIoResult:Lcom/android/internal/telephony/IccIoResult;
     const/4 v2, 0x0
 
@@ -3266,17 +3266,17 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 649
+    .line 653
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_1e
 
-    .line 650
+    .line 654
     new-instance v29, Landroid/os/Bundle;
 
     invoke-direct/range {v29 .. v29}, Landroid/os/Bundle;-><init>()V
 
-    .line 651
+    .line 655
     .local v29, result:Landroid/os/Bundle;
     const-string v2, "sw1"
 
@@ -3288,7 +3288,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 652
+    .line 656
     const-string v2, "sw2"
 
     move-object/from16 v0, v19
@@ -3299,7 +3299,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 653
+    .line 657
     const-string v2, "payload"
 
     move-object/from16 v0, v19
@@ -3310,14 +3310,14 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 654
+    .line 658
     move-object/from16 v0, v29
 
     move-object/from16 v1, v28
 
     iput-object v0, v1, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 659
+    .line 663
     .end local v29           #result:Landroid/os/Bundle;
     :goto_14
     move-object/from16 v0, v28
@@ -3326,14 +3326,14 @@
 
     if-nez v2, :cond_1d
 
-    .line 660
+    .line 664
     const-string v2, "HtcTelephony"
 
     const-string v3, "result is null!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 661
+    .line 665
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2}, Ljava/lang/RuntimeException;-><init>()V
@@ -3342,15 +3342,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 664
+    .line 668
     :cond_1d
     monitor-enter v28
 
-    .line 665
+    .line 669
     :try_start_f
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 666
+    .line 670
     monitor-exit v28
 
     goto/16 :goto_0
@@ -3364,7 +3364,7 @@
 
     throw v2
 
-    .line 656
+    .line 660
     :cond_1e
     const-string v2, "HtcTelephony"
 
@@ -3396,7 +3396,7 @@
 
     goto :goto_14
 
-    .line 670
+    .line 674
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v19           #iccIoResult:Lcom/android/internal/telephony/IccIoResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
@@ -3407,7 +3407,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 671
+    .line 675
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -3416,7 +3416,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 672
+    .line 676
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -3457,7 +3457,7 @@
 
     goto/16 :goto_0
 
-    .line 676
+    .line 680
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_22
     const-string v2, "HtcTelephony"
@@ -3466,14 +3466,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 677
+    .line 681
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 678
+    .line 682
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -3481,7 +3481,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 679
+    .line 683
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -3489,19 +3489,19 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 680
+    .line 684
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_20
 
-    .line 681
+    .line 685
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     move-object/from16 v0, v28
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 686
+    .line 690
     :goto_15
     move-object/from16 v0, v28
 
@@ -3509,14 +3509,14 @@
 
     if-nez v2, :cond_1f
 
-    .line 687
+    .line 691
     const-string v2, "HtcTelephony"
 
     const-string v3, "result is null!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 688
+    .line 692
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2}, Ljava/lang/RuntimeException;-><init>()V
@@ -3525,15 +3525,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 691
+    .line 695
     :cond_1f
     monitor-enter v28
 
-    .line 692
+    .line 696
     :try_start_10
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 693
+    .line 697
     monitor-exit v28
 
     goto/16 :goto_0
@@ -3547,7 +3547,7 @@
 
     throw v2
 
-    .line 683
+    .line 687
     :cond_20
     const-string v2, "HtcTelephony"
 
@@ -3579,7 +3579,7 @@
 
     goto :goto_15
 
-    .line 698
+    .line 702
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_23
@@ -3589,14 +3589,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 700
+    .line 704
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 702
+    .line 706
     .restart local v11       #ar:Landroid/os/AsyncResult;
     move-object/from16 v0, p0
 
@@ -3609,7 +3609,7 @@
 
     monitor-enter v3
 
-    .line 703
+    .line 707
     if-eqz v11, :cond_21
 
     :try_start_11
@@ -3617,7 +3617,7 @@
 
     if-nez v2, :cond_21
 
-    .line 704
+    .line 708
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -3631,7 +3631,7 @@
     #setter for: Lcom/android/internal/telephony/HtcTelephony;->mCSIMResult:Landroid/os/Bundle;
     invoke-static {v4, v2}, Lcom/android/internal/telephony/HtcTelephony;->access$402(Lcom/android/internal/telephony/HtcTelephony;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 707
+    .line 711
     :cond_21
     move-object/from16 v0, p0
 
@@ -3644,7 +3644,7 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
 
-    .line 708
+    .line 712
     monitor-exit v3
 
     goto/16 :goto_0
@@ -3658,7 +3658,7 @@
 
     throw v2
 
-    .line 714
+    .line 718
     .end local v11           #ar:Landroid/os/AsyncResult;
     :pswitch_24
     const-string v2, "HtcTelephony"
@@ -3667,7 +3667,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 715
+    .line 719
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -3701,7 +3701,7 @@
 
     goto/16 :goto_0
 
-    .line 718
+    .line 722
     :pswitch_25
     const-string v2, "HtcTelephony"
 
@@ -3709,14 +3709,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
+    .line 723
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 720
+    .line 724
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -3724,7 +3724,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 721
+    .line 725
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -3732,7 +3732,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 722
+    .line 726
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -3742,12 +3742,12 @@
     #setter for: Lcom/android/internal/telephony/HtcTelephony;->mOldNV_10:Ljava/lang/String;
     invoke-static {v2, v3}, Lcom/android/internal/telephony/HtcTelephony;->access$502(Lcom/android/internal/telephony/HtcTelephony;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 723
+    .line 727
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_23
 
-    .line 724
+    .line 728
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -3759,7 +3759,7 @@
     #setter for: Lcom/android/internal/telephony/HtcTelephony;->mOldNV_10:Ljava/lang/String;
     invoke-static {v3, v2}, Lcom/android/internal/telephony/HtcTelephony;->access$502(Lcom/android/internal/telephony/HtcTelephony;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 725
+    .line 729
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3791,7 +3791,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 731
+    .line 735
     :goto_16
     move-object/from16 v0, p0
 
@@ -3821,7 +3821,7 @@
 
     if-ge v2, v3, :cond_24
 
-    .line 732
+    .line 736
     :cond_22
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -3833,14 +3833,14 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 733
+    .line 737
     monitor-enter v28
 
-    .line 734
+    .line 738
     :try_start_12
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 735
+    .line 739
     monitor-exit v28
 
     goto/16 :goto_0
@@ -3854,7 +3854,7 @@
 
     throw v2
 
-    .line 727
+    .line 731
     :cond_23
     const-string v2, "HtcTelephony"
 
@@ -3886,7 +3886,7 @@
 
     goto :goto_16
 
-    .line 738
+    .line 742
     :cond_24
     const-string v2, "HtcTelephony"
 
@@ -3894,7 +3894,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 739
+    .line 743
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -3924,7 +3924,7 @@
 
     goto/16 :goto_0
 
-    .line 743
+    .line 747
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_26
@@ -3934,14 +3934,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 744
+    .line 748
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 745
+    .line 749
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -3949,7 +3949,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 746
+    .line 750
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -3957,12 +3957,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 747
+    .line 751
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_25
 
-    .line 748
+    .line 752
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4002,7 +4002,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 750
+    .line 754
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -4067,7 +4067,7 @@
 
     goto/16 :goto_0
 
-    .line 752
+    .line 756
     :cond_25
     const-string v2, "HtcTelephony"
 
@@ -4097,7 +4097,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 753
+    .line 757
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "Failed to set PreferNetwork to CDMA/EvDo!"
@@ -4108,14 +4108,14 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 754
+    .line 758
     monitor-enter v28
 
-    .line 755
+    .line 759
     :try_start_13
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 756
+    .line 760
     monitor-exit v28
 
     goto/16 :goto_0
@@ -4129,7 +4129,7 @@
 
     throw v2
 
-    .line 760
+    .line 764
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_27
@@ -4139,14 +4139,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 761
+    .line 765
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 762
+    .line 766
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -4154,13 +4154,13 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 763
+    .line 767
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_26
 
-    .line 764
+    .line 768
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4189,7 +4189,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 766
+    .line 770
     :cond_26
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -4202,14 +4202,14 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 767
+    .line 771
     monitor-enter v28
 
-    .line 768
+    .line 772
     :try_start_14
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 769
+    .line 773
     monitor-exit v28
 
     goto/16 :goto_0
@@ -4223,13 +4223,13 @@
 
     throw v2
 
-    .line 766
+    .line 770
     :cond_27
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_17
 
-    .line 774
+    .line 778
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_28
@@ -4239,7 +4239,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 775
+    .line 779
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -4248,7 +4248,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 776
+    .line 780
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -4258,7 +4258,7 @@
 
     check-cast v21, Lcom/android/internal/telephony/HtcTelephony$AuthRequest;
 
-    .line 777
+    .line 781
     .local v21, mAuth1:Lcom/android/internal/telephony/HtcTelephony$AuthRequest;
     move-object/from16 v0, p0
 
@@ -4301,7 +4301,7 @@
 
     goto/16 :goto_0
 
-    .line 781
+    .line 785
     .end local v21           #mAuth1:Lcom/android/internal/telephony/HtcTelephony$AuthRequest;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_29
@@ -4311,7 +4311,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 782
+    .line 786
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -4320,7 +4320,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 783
+    .line 787
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -4330,7 +4330,7 @@
 
     check-cast v22, Lcom/android/internal/telephony/HtcTelephony$AuthRequest;
 
-    .line 784
+    .line 788
     .local v22, mAuth2:Lcom/android/internal/telephony/HtcTelephony$AuthRequest;
     move-object/from16 v0, p0
 
@@ -4373,7 +4373,7 @@
 
     goto/16 :goto_0
 
-    .line 788
+    .line 792
     .end local v22           #mAuth2:Lcom/android/internal/telephony/HtcTelephony$AuthRequest;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_2a
@@ -4383,7 +4383,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
+    .line 793
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -4392,7 +4392,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 790
+    .line 794
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -4404,7 +4404,7 @@
 
     check-cast v24, [B
 
-    .line 791
+    .line 795
     .local v24, nafid:[B
     move-object/from16 v0, p0
 
@@ -4441,7 +4441,7 @@
 
     goto/16 :goto_0
 
-    .line 795
+    .line 799
     .end local v24           #nafid:[B
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_2b
@@ -4451,7 +4451,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 796
+    .line 800
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -4460,7 +4460,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 797
+    .line 801
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -4470,7 +4470,7 @@
 
     check-cast v23, Lcom/android/internal/telephony/HtcTelephony$GbaBootStrapParam;
 
-    .line 798
+    .line 802
     .local v23, mParam:Lcom/android/internal/telephony/HtcTelephony$GbaBootStrapParam;
     move-object/from16 v0, p0
 
@@ -4517,7 +4517,7 @@
 
     goto/16 :goto_0
 
-    .line 808
+    .line 812
     .end local v23           #mParam:Lcom/android/internal/telephony/HtcTelephony$GbaBootStrapParam;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_2c
@@ -4527,7 +4527,7 @@
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 809
+    .line 813
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -4535,7 +4535,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 810
+    .line 814
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -4543,12 +4543,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 811
+    .line 815
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_29
 
-    .line 812
+    .line 816
     const-string v2, "HtcTelephony"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4573,7 +4573,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 817
+    .line 821
     :goto_18
     move-object/from16 v0, v28
 
@@ -4581,14 +4581,14 @@
 
     if-nez v2, :cond_28
 
-    .line 818
+    .line 822
     const-string v2, "HtcTelephony"
 
     const-string v3, "result is null!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 819
+    .line 823
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2}, Ljava/lang/RuntimeException;-><init>()V
@@ -4597,15 +4597,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 822
+    .line 826
     :cond_28
     monitor-enter v28
 
-    .line 823
+    .line 827
     :try_start_15
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 824
+    .line 828
     monitor-exit v28
 
     goto/16 :goto_0
@@ -4619,7 +4619,7 @@
 
     throw v2
 
-    .line 814
+    .line 818
     :cond_29
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -4629,7 +4629,7 @@
 
     goto :goto_18
 
-    .line 830
+    .line 834
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_2d
@@ -4641,7 +4641,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 831
+    .line 835
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, v28
 
@@ -4651,7 +4651,7 @@
 
     check-cast v31, Ljava/lang/Integer;
 
-    .line 832
+    .line 836
     .local v31, type:Ljava/lang/Integer;
     const-string v2, "HtcTelephony"
 
@@ -4677,7 +4677,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 833
+    .line 837
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadHandler;->this$0:Lcom/android/internal/telephony/HtcTelephony;
@@ -4711,7 +4711,7 @@
 
     goto/16 :goto_0
 
-    .line 837
+    .line 841
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     .end local v31           #type:Ljava/lang/Integer;
     :pswitch_2e
@@ -4721,14 +4721,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 838
+    .line 842
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 839
+    .line 843
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -4736,7 +4736,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 840
+    .line 844
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -4744,12 +4744,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 841
+    .line 845
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_2a
 
-    .line 842
+    .line 846
     const/4 v2, 0x0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4760,7 +4760,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 847
+    .line 851
     :goto_19
     const-string v2, "HtcTelephony"
 
@@ -4788,14 +4788,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 849
+    .line 853
     monitor-enter v28
 
-    .line 850
+    .line 854
     :try_start_16
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 851
+    .line 855
     monitor-exit v28
 
     goto/16 :goto_0
@@ -4809,7 +4809,7 @@
 
     throw v2
 
-    .line 844
+    .line 848
     :cond_2a
     const/4 v2, 0x1
 
@@ -4823,7 +4823,7 @@
 
     goto :goto_19
 
-    .line 856
+    .line 860
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_2f
@@ -4842,7 +4842,7 @@
 
     goto/16 :goto_0
 
-    .line 859
+    .line 863
     :pswitch_30
     move-object/from16 v0, p0
 
@@ -4863,7 +4863,7 @@
 
     goto/16 :goto_0
 
-    .line 862
+    .line 866
     :pswitch_31
     move-object/from16 v0, p0
 
@@ -4884,7 +4884,7 @@
 
     goto/16 :goto_0
 
-    .line 865
+    .line 869
     :pswitch_32
     move-object/from16 v0, p0
 
@@ -4901,7 +4901,7 @@
 
     goto/16 :goto_0
 
-    .line 868
+    .line 872
     :pswitch_33
     move-object/from16 v0, p0
 
@@ -4926,7 +4926,7 @@
 
     goto/16 :goto_0
 
-    .line 871
+    .line 875
     :pswitch_34
     move-object/from16 v0, p0
 
@@ -4937,7 +4937,7 @@
 
     goto/16 :goto_0
 
-    .line 876
+    .line 880
     :pswitch_35
     const-string v2, "HtcTelephony"
 
@@ -4945,7 +4945,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 877
+    .line 881
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -4954,7 +4954,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 878
+    .line 882
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -4985,7 +4985,7 @@
 
     goto/16 :goto_0
 
-    .line 881
+    .line 885
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_36
     const-string v2, "HtcTelephony"
@@ -4994,14 +4994,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
+    .line 886
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 883
+    .line 887
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -5009,7 +5009,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 884
+    .line 888
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -5017,12 +5017,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 885
+    .line 889
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_2c
 
-    .line 886
+    .line 890
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [I
@@ -5033,7 +5033,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 891
+    .line 895
     :goto_1a
     move-object/from16 v0, v28
 
@@ -5041,7 +5041,7 @@
 
     if-nez v2, :cond_2b
 
-    .line 892
+    .line 896
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2}, Ljava/lang/RuntimeException;-><init>()V
@@ -5050,15 +5050,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 895
+    .line 899
     :cond_2b
     monitor-enter v28
 
-    .line 896
+    .line 900
     :try_start_17
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 897
+    .line 901
     monitor-exit v28
 
     goto/16 :goto_0
@@ -5072,7 +5072,7 @@
 
     throw v2
 
-    .line 888
+    .line 892
     :cond_2c
     const-string v2, "HtcTelephony"
 
@@ -5104,7 +5104,7 @@
 
     goto :goto_1a
 
-    .line 901
+    .line 905
     .end local v11           #ar:Landroid/os/AsyncResult;
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_37
@@ -5114,7 +5114,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
+    .line 906
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -5123,7 +5123,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 903
+    .line 907
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     move-object/from16 v0, p0
 
@@ -5154,7 +5154,7 @@
 
     goto/16 :goto_0
 
-    .line 906
+    .line 910
     .end local v28           #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     :pswitch_38
     const-string v2, "HtcTelephony"
@@ -5163,14 +5163,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 907
+    .line 911
     move-object/from16 v0, p1
 
     iget-object v11, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v11, Landroid/os/AsyncResult;
 
-    .line 908
+    .line 912
     .restart local v11       #ar:Landroid/os/AsyncResult;
     iget-object v0, v11, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
@@ -5178,7 +5178,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
 
-    .line 909
+    .line 913
     .restart local v28       #request:Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;
     const/4 v2, 0x0
 
@@ -5186,12 +5186,12 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 910
+    .line 914
     iget-object v2, v11, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v2, :cond_2e
 
-    .line 911
+    .line 915
     iget-object v2, v11, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [I
@@ -5202,7 +5202,7 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 916
+    .line 920
     :goto_1b
     move-object/from16 v0, v28
 
@@ -5210,7 +5210,7 @@
 
     if-nez v2, :cond_2d
 
-    .line 917
+    .line 921
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2}, Ljava/lang/RuntimeException;-><init>()V
@@ -5219,15 +5219,15 @@
 
     iput-object v2, v0, Lcom/android/internal/telephony/HtcTelephony$MainThreadRequest;->result:Ljava/lang/Object;
 
-    .line 920
+    .line 924
     :cond_2d
     monitor-enter v28
 
-    .line 921
+    .line 925
     :try_start_18
     invoke-virtual/range {v28 .. v28}, Ljava/lang/Object;->notifyAll()V
 
-    .line 922
+    .line 926
     monitor-exit v28
 
     goto/16 :goto_0
@@ -5241,7 +5241,7 @@
 
     throw v2
 
-    .line 913
+    .line 917
     :cond_2e
     const-string v2, "HtcTelephony"
 
@@ -5273,7 +5273,7 @@
 
     goto :goto_1b
 
-    .line 232
+    .line 236
     nop
 
     :pswitch_data_0

@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 224
+    .line 230
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +45,12 @@
     .parameter "in"
 
     .prologue
-    .line 226
+    .line 232
     new-instance v0, Landroid/app/HtcDeviceInfo;
 
     invoke-direct {v0}, Landroid/app/HtcDeviceInfo;-><init>()V
 
-    .line 227
+    .line 233
     .local v0, deviceInfo:Landroid/app/HtcDeviceInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -58,47 +58,47 @@
 
     iput-object v4, v0, Landroid/app/HtcDeviceInfo;->changeListNo:Ljava/lang/String;
 
-    .line 228
+    .line 234
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     iput v4, v0, Landroid/app/HtcDeviceInfo;->simState:I
 
-    .line 229
+    .line 235
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->totalDeviceAliveTime:J
 
-    .line 230
+    .line 236
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->deviceAwakeTime:J
 
-    .line 231
+    .line 237
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->deviceScreenOnTime:J
 
-    .line 232
+    .line 238
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, v0, Landroid/app/HtcDeviceInfo;->deviceUseTime:J
 
-    .line 234
+    .line 240
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 235
+    .line 241
     .local v3, numProcesses:I
     const/4 v1, 0x0
 
@@ -106,12 +106,12 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 236
+    .line 242
     new-instance v2, Landroid/app/HtcDeviceInfo$ProcessInfo;
 
     invoke-direct {v2}, Landroid/app/HtcDeviceInfo$ProcessInfo;-><init>()V
 
-    .line 237
+    .line 243
     .local v2, info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -119,61 +119,68 @@
 
     iput-object v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
 
-    .line 238
+    .line 244
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->totalCPUTime:J
 
-    .line 239
+    .line 245
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->lastCPUUpdateTime:J
 
-    .line 240
+    .line 246
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     iput v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numCrashes:I
 
-    .line 241
+    .line 247
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     iput v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numANRs:I
 
-    .line 242
+    .line 248
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     iput v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->pid:I
 
-    .line 243
+    .line 249
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     iput v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->group:I
 
-    .line 244
+    .line 250
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    iput v4, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->numSentToServer:I
+
+    .line 251
     iget-object v4, v0, Landroid/app/HtcDeviceInfo;->processInfoMap:Ljava/util/HashMap;
 
     iget-object v5, v2, Landroid/app/HtcDeviceInfo$ProcessInfo;->processName:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
+    .line 241
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 247
+    .line 254
     .end local v2           #info:Landroid/app/HtcDeviceInfo$ProcessInfo;
     :cond_0
     return-object v0
@@ -184,7 +191,7 @@
     .parameter "x0"
 
     .prologue
-    .line 224
+    .line 230
     invoke-virtual {p0, p1}, Landroid/app/HtcDeviceInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/app/HtcDeviceInfo;
 
     move-result-object v0
@@ -197,7 +204,7 @@
     .parameter "size"
 
     .prologue
-    .line 251
+    .line 258
     new-array v0, p1, [Landroid/app/HtcDeviceInfo;
 
     return-object v0
@@ -208,7 +215,7 @@
     .parameter "x0"
 
     .prologue
-    .line 224
+    .line 230
     invoke-virtual {p0, p1}, Landroid/app/HtcDeviceInfo$1;->newArray(I)[Landroid/app/HtcDeviceInfo;
 
     move-result-object v0

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 315
+    .line 340
     iput-object p1, p0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 318
+    .line 343
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 319
+    .line 344
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.android.server.htcpowersaver.action.ON"
 
@@ -63,7 +63,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 321
+    .line 345
     :cond_0
     invoke-static {}, Lcom/android/server/BatteryService;->access$000()Ljava/lang/String;
 
@@ -89,7 +89,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
+    .line 347
     :cond_1
     return-void
 .end method

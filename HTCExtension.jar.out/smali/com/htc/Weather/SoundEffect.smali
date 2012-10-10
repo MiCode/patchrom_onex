@@ -64,7 +64,7 @@
 
     sput-object v0, Lcom/htc/Weather/SoundEffect;->pathRaw:[I
 
-    .line 28
+    .line 37
     const/16 v0, 0x37
 
     new-array v0, v0, [I
@@ -73,7 +73,7 @@
 
     sput-object v0, Lcom/htc/Weather/SoundEffect;->mMapToWeatherSound:[I
 
-    .line 33
+    .line 45
     const-string v0, "com.htc.Weather.SoundsMap"
 
     sput-object v0, Lcom/htc/Weather/SoundEffect;->SETTING_KEY_SYNC_SOUND:Ljava/lang/String;
@@ -93,11 +93,11 @@
         0x28t 0x0t 0xct 0x2t
         0x2at 0x0t 0xct 0x2t
         0x2bt 0x0t 0xct 0x2t
-        0x26t 0x0t 0xct 0x2t
+        0x29t 0x0t 0xct 0x2t
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 28
+    .line 37
     :array_1
     .array-data 0x4
         0x9t 0x0t 0x0t 0x0t
@@ -151,10 +151,10 @@
         0x9t 0x0t 0x0t 0x0t
         0x9t 0x0t 0x0t 0x0t
         0x9t 0x0t 0x0t 0x0t
-        0x9t 0x0t 0x0t 0x0t
-        0x9t 0x0t 0x0t 0x0t
-        0x9t 0x0t 0x0t 0x0t
-        0x9t 0x0t 0x0t 0x0t
+        0x6t 0x0t 0x0t 0x0t
+        0x2t 0x0t 0x0t 0x0t
+        0x2t 0x0t 0x0t 0x0t
+        0x6t 0x0t 0x0t 0x0t
     .end array-data
 .end method
 
@@ -165,7 +165,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 48
+    .line 60
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
@@ -173,28 +173,28 @@
 
     iput-boolean v0, p0, Lcom/htc/Weather/SoundEffect;->mbSoundOn:Z
 
-    .line 44
+    .line 56
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
-    .line 45
+    .line 57
     iput-boolean v1, p0, Lcom/htc/Weather/SoundEffect;->isNeedStart:Z
 
-    .line 46
+    .line 58
     iput v1, p0, Lcom/htc/Weather/SoundEffect;->conditionId:I
 
-    .line 161
+    .line 168
     new-instance v0, Lcom/htc/Weather/SoundEffect$1;
 
     invoke-direct {v0, p0}, Lcom/htc/Weather/SoundEffect$1;-><init>(Lcom/htc/Weather/SoundEffect;)V
 
     iput-object v0, p0, Lcom/htc/Weather/SoundEffect;->mHandler:Landroid/os/Handler;
 
-    .line 49
+    .line 61
     iput-object p1, p0, Lcom/htc/Weather/SoundEffect;->mContext:Landroid/content/Context;
 
-    .line 50
+    .line 62
     return-void
 .end method
 
@@ -283,20 +283,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 214
+    .line 221
     iget-boolean v0, p0, Lcom/htc/Weather/SoundEffect;->isNeedStart:Z
 
     if-eqz v0, :cond_0
 
-    .line 216
+    .line 223
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 217
+    .line 224
     iput-boolean v1, p0, Lcom/htc/Weather/SoundEffect;->isNeedStart:Z
 
-    .line 219
+    .line 226
     :cond_0
     return-void
 .end method
@@ -307,17 +307,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 251
+    .line 258
     const/16 v1, 0xd
 
     iput v1, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
-    .line 252
+    .line 259
     iget-object v1, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v1, :cond_0
 
-    .line 254
+    .line 261
     :try_start_0
     iget-object v1, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -326,29 +326,29 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 260
+    .line 267
     iget-object v1, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 261
+    .line 268
     iget-object v1, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->release()V
 
-    .line 262
+    .line 269
     iput-object v4, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 265
+    .line 272
     :cond_0
     :goto_0
     return-void
 
-    .line 256
+    .line 263
     :catch_0
     move-exception v0
 
-    .line 257
+    .line 264
     .local v0, e:Ljava/lang/Exception;
     :try_start_1
     const-string v1, "WeatherSound"
@@ -379,22 +379,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 260
+    .line 267
     iget-object v1, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 261
+    .line 268
     iget-object v1, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->release()V
 
-    .line 262
+    .line 269
     iput-object v4, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     goto :goto_0
 
-    .line 260
+    .line 267
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -403,12 +403,12 @@
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 261
+    .line 268
     iget-object v2, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->release()V
 
-    .line 262
+    .line 269
     iput-object v4, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     throw v1
@@ -419,17 +419,17 @@
     .parameter "vol"
 
     .prologue
-    .line 208
+    .line 215
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 209
+    .line 216
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p1, p1}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
-    .line 210
+    .line 217
     :cond_0
     return-void
 .end method
@@ -440,31 +440,31 @@
     .prologue
     const/16 v6, 0xd
 
-    .line 75
+    .line 87
     iget-boolean v3, p0, Lcom/htc/Weather/SoundEffect;->mbSoundOn:Z
 
     if-nez v3, :cond_0
 
-    .line 76
+    .line 88
     iput v6, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
-    .line 128
+    .line 135
     :goto_0
     return-void
 
-    .line 80
+    .line 92
     :cond_0
     iget v3, p0, Lcom/htc/Weather/SoundEffect;->conditionId:I
 
     const/16 v4, 0x37
 
-    if-ge v3, v4, :cond_5
+    if-ge v3, v4, :cond_4
 
     iget v3, p0, Lcom/htc/Weather/SoundEffect;->conditionId:I
 
-    if-lez v3, :cond_5
+    if-lez v3, :cond_4
 
-    .line 82
+    .line 94
     iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/htc/Weather/SoundEffect;->mContext:Landroid/content/Context;
@@ -479,7 +479,7 @@
 
     iput-object v3, p0, Lcom/htc/Weather/SoundEffect;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 85
+    .line 97
     iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v3}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
@@ -488,12 +488,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 87
+    .line 99
     iput v6, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
     goto :goto_0
 
-    .line 91
+    .line 103
     :cond_1
     iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mAudioManager:Landroid/media/AudioManager;
 
@@ -503,12 +503,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 93
+    .line 105
     iput v6, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
     goto :goto_0
 
-    .line 97
+    .line 109
     :cond_2
     sget-object v3, Lcom/htc/Weather/SoundEffect;->mMapToWeatherSound:[I
 
@@ -516,24 +516,24 @@
 
     aget v1, v3, v4
 
-    .line 98
+    .line 110
     .local v1, map:I
     const/16 v3, 0x9
 
     if-ne v1, v3, :cond_3
 
-    .line 100
+    .line 112
     iput v6, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
     goto :goto_0
 
-    .line 104
+    .line 116
     :cond_3
     sget-object v3, Lcom/htc/Weather/SoundEffect;->pathRaw:[I
 
     aget v2, v3, v1
 
-    .line 106
+    .line 118
     .local v2, rawPath:I
     new-instance v3, Landroid/media/MediaPlayer;
 
@@ -541,32 +541,24 @@
 
     iput-object v3, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 107
-    sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v4, 0x28
-
-    if-ne v3, v4, :cond_4
-
-    .line 108
+    .line 119
     iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     const/4 v4, 0x3
 
     invoke-virtual {v3, v4}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    .line 113
-    :goto_1
+    .line 120
     iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v3, v2}, Lcom/htc/Weather/SoundEffect;->createPlayerbyRes(Landroid/content/Context;I)V
 
-    .line 114
+    .line 121
     iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v3, p0}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 117
+    .line 124
     :try_start_0
     iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -576,11 +568,11 @@
 
     goto :goto_0
 
-    .line 118
+    .line 125
     :catch_0
     move-exception v0
 
-    .line 119
+    .line 126
     .local v0, e:Ljava/lang/IllegalStateException;
     const-string v3, "WeatherSound"
 
@@ -608,29 +600,19 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
+    .line 127
     iput v6, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
-    .line 121
+    .line 128
     invoke-direct {p0}, Lcom/htc/Weather/SoundEffect;->forceReleaseMediaPlayer()V
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 110
+    .line 131
     .end local v0           #e:Ljava/lang/IllegalStateException;
-    :cond_4
-    iget-object v3, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    const/16 v4, 0x8
-
-    invoke-virtual {v3, v4}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
-
-    goto :goto_1
-
-    .line 124
     .end local v1           #map:I
     .end local v2           #rawPath:I
-    :cond_5
+    :cond_4
     iput v6, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
     goto/16 :goto_0
@@ -644,7 +626,7 @@
     .parameter "resid"
 
     .prologue
-    .line 137
+    .line 144
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -654,16 +636,16 @@
 
     move-result-object v6
 
-    .line 138
+    .line 145
     .local v6, afd:Landroid/content/res/AssetFileDescriptor;
     if-nez v6, :cond_0
 
-    .line 159
+    .line 166
     .end local v6           #afd:Landroid/content/res/AssetFileDescriptor;
     :goto_0
     return-void
 
-    .line 141
+    .line 148
     .restart local v6       #afd:Landroid/content/res/AssetFileDescriptor;
     :cond_0
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
@@ -682,10 +664,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;JJ)V
 
-    .line 142
+    .line 149
     invoke-virtual {v6}, Landroid/content/res/AssetFileDescriptor;->close()V
 
-    .line 143
+    .line 150
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepare()V
@@ -697,26 +679,26 @@
 
     goto :goto_0
 
-    .line 144
+    .line 151
     .end local v6           #afd:Landroid/content/res/AssetFileDescriptor;
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 153
+    .line 160
     :catch_1
     move-exception v0
 
     goto :goto_0
 
-    .line 150
+    .line 157
     :catch_2
     move-exception v0
 
     goto :goto_0
 
-    .line 147
+    .line 154
     :catch_3
     move-exception v0
 
@@ -728,30 +710,30 @@
     .parameter "mp"
 
     .prologue
-    .line 239
+    .line 246
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
-    .line 240
+    .line 247
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 242
+    .line 249
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 243
+    .line 250
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 244
+    .line 251
     invoke-direct {p0}, Lcom/htc/Weather/SoundEffect;->checkNeedRestart()V
 
-    .line 246
+    .line 253
     :cond_0
     return-void
 .end method
@@ -760,23 +742,23 @@
     .locals 2
 
     .prologue
-    .line 223
+    .line 230
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 225
+    .line 232
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 231
+    .line 238
     :goto_0
     return-void
 
-    .line 229
+    .line 236
     :cond_0
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mHandler:Landroid/os/Handler;
 
@@ -792,10 +774,10 @@
     .parameter "sound"
 
     .prologue
-    .line 53
+    .line 65
     iput-boolean p1, p0, Lcom/htc/Weather/SoundEffect;->mbSoundOn:Z
 
-    .line 54
+    .line 66
     return-void
 .end method
 
@@ -804,10 +786,10 @@
     .parameter "id"
 
     .prologue
-    .line 58
+    .line 70
     iput p1, p0, Lcom/htc/Weather/SoundEffect;->conditionId:I
 
-    .line 61
+    .line 73
     iget v0, p0, Lcom/htc/Weather/SoundEffect;->state:I
 
     const/16 v1, 0xc
@@ -820,17 +802,17 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 62
+    .line 74
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/Weather/SoundEffect;->isNeedStart:Z
 
-    .line 68
+    .line 80
     :goto_0
     return-void
 
-    .line 66
+    .line 78
     :cond_1
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect;->mHandler:Landroid/os/Handler;
 

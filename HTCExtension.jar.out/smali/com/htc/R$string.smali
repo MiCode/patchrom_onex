@@ -583,103 +583,103 @@
 
 .field public static final htc_filepicker_appDropDownListItem_show_skydrive_files:I = 0x204013c
 
-.field public static final htc_filepicker_bad_network_connection_on_dropbox:I = 0x20403cc
+.field public static final htc_filepicker_bad_network_connection_on_dropbox:I = 0x20403cd
 
-.field public static final htc_filepicker_bad_network_connection_on_skydrive:I = 0x20403cb
+.field public static final htc_filepicker_bad_network_connection_on_skydrive:I = 0x20403cc
 
-.field public static final htc_filepicker_cloud_exception_DiskFull:I = 0x20403e9
+.field public static final htc_filepicker_cloud_exception_DiskFull:I = 0x20403ea
 
-.field public static final htc_filepicker_cloud_exception_FileNotFound:I = 0x20403e8
+.field public static final htc_filepicker_cloud_exception_FileNotFound:I = 0x20403e9
 
-.field public static final htc_filepicker_cloud_exception_MediaUnMounted:I = 0x20403ea
+.field public static final htc_filepicker_cloud_exception_MediaUnMounted:I = 0x20403eb
 
-.field public static final htc_filepicker_cloud_exception_NoNetwork:I = 0x20403ec
+.field public static final htc_filepicker_cloud_exception_NoNetwork:I = 0x20403ed
 
-.field public static final htc_filepicker_cloud_exception_NoSDCardForCacheData:I = 0x20403ed
+.field public static final htc_filepicker_cloud_exception_NoSDCardForCacheData:I = 0x20403ee
 
-.field public static final htc_filepicker_cloud_exception_OutOfMemory:I = 0x20403eb
+.field public static final htc_filepicker_cloud_exception_OutOfMemory:I = 0x20403ec
 
-.field public static final htc_filepicker_cloud_exception_RequestFailed:I = 0x20403e7
+.field public static final htc_filepicker_cloud_exception_RequestFailed:I = 0x20403e8
 
-.field public static final htc_filepicker_cloud_exception_UnLink:I = 0x20403e6
+.field public static final htc_filepicker_cloud_exception_UnLink:I = 0x20403e7
 
-.field public static final htc_filepicker_dialog_message_download_limitation:I = 0x20403c9
+.field public static final htc_filepicker_dialog_message_download_limitation:I = 0x20403ca
 
-.field public static final htc_filepicker_dialog_message_share_link:I = 0x20403c6
+.field public static final htc_filepicker_dialog_message_share_link:I = 0x20403c7
 
-.field public static final htc_filepicker_dialog_title_download_limitation:I = 0x20403c8
+.field public static final htc_filepicker_dialog_title_download_limitation:I = 0x20403c9
 
-.field public static final htc_filepicker_dialog_title_downloading:I = 0x20403c7
+.field public static final htc_filepicker_dialog_title_downloading:I = 0x20403c8
 
-.field public static final htc_filepicker_dialog_title_share_link:I = 0x20403c5
+.field public static final htc_filepicker_dialog_title_share_link:I = 0x20403c6
 
-.field public static final htc_filepicker_fail_download_on_dropbox:I = 0x20403e4
+.field public static final htc_filepicker_fail_download_on_dropbox:I = 0x20403e5
 
-.field public static final htc_filepicker_fail_download_on_skydrive:I = 0x20403e5
+.field public static final htc_filepicker_fail_download_on_skydrive:I = 0x20403e6
 
-.field public static final htc_filepicker_favorite:I = 0x20403dd
+.field public static final htc_filepicker_favorite:I = 0x20403de
 
-.field public static final htc_filepicker_file:I = 0x20403da
+.field public static final htc_filepicker_file:I = 0x20403db
 
-.field public static final htc_filepicker_file_not_found:I = 0x20403d5
+.field public static final htc_filepicker_file_not_found:I = 0x20403d6
 
-.field public static final htc_filepicker_filecount_selected:I = 0x20403e0
+.field public static final htc_filepicker_filecount_selected:I = 0x20403e1
 
-.field public static final htc_filepicker_files:I = 0x20403d9
+.field public static final htc_filepicker_files:I = 0x20403da
 
 .field public static final htc_filepicker_folder_empty_description:I = 0x2040237
 
 .field public static final htc_filepicker_folder_loading_description:I = 0x2040238
 
-.field public static final htc_filepicker_header_main_title_htc_files:I = 0x20403d8
+.field public static final htc_filepicker_header_main_title_htc_files:I = 0x20403d9
 
-.field public static final htc_filepicker_internal_storage_phone:I = 0x20403d7
+.field public static final htc_filepicker_internal_storage_phone:I = 0x20403d8
 
-.field public static final htc_filepicker_internal_storage_tablet:I = 0x20403d6
+.field public static final htc_filepicker_internal_storage_tablet:I = 0x20403d7
 
-.field public static final htc_filepicker_item_type_text_all:I = 0x20403bf
+.field public static final htc_filepicker_item_type_text_all:I = 0x20403c0
 
-.field public static final htc_filepicker_item_type_text_dropbox:I = 0x20403c1
+.field public static final htc_filepicker_item_type_text_dropbox:I = 0x20403c2
 
-.field public static final htc_filepicker_item_type_text_ext_sdcard:I = 0x20403c4
+.field public static final htc_filepicker_item_type_text_ext_sdcard:I = 0x20403c5
 
-.field public static final htc_filepicker_item_type_text_local:I = 0x20403c0
+.field public static final htc_filepicker_item_type_text_local:I = 0x20403c1
 
-.field public static final htc_filepicker_item_type_text_skydrive:I = 0x20403c2
+.field public static final htc_filepicker_item_type_text_skydrive:I = 0x20403c3
 
-.field public static final htc_filepicker_item_type_text_usb:I = 0x20403c3
+.field public static final htc_filepicker_item_type_text_usb:I = 0x20403c4
 
-.field public static final htc_filepicker_login_button_text_of_dropbox:I = 0x20403cf
+.field public static final htc_filepicker_login_button_text_of_dropbox:I = 0x20403d0
 
-.field public static final htc_filepicker_login_button_text_of_skydrive:I = 0x20403d0
+.field public static final htc_filepicker_login_button_text_of_skydrive:I = 0x20403d1
 
 .field public static final htc_filepicker_menu_folder_file_switch:I = 0x2040236
 
-.field public static final htc_filepicker_message_download_filename:I = 0x20403d3
+.field public static final htc_filepicker_message_download_filename:I = 0x20403d4
 
-.field public static final htc_filepicker_message_download_size:I = 0x20403d4
+.field public static final htc_filepicker_message_download_size:I = 0x20403d5
 
-.field public static final htc_filepicker_message_loading:I = 0x20403d2
+.field public static final htc_filepicker_message_loading:I = 0x20403d3
 
-.field public static final htc_filepicker_message_share_link:I = 0x20403e2
+.field public static final htc_filepicker_message_share_link:I = 0x20403e3
 
-.field public static final htc_filepicker_message_share_link_for_a_folder:I = 0x20403e3
+.field public static final htc_filepicker_message_share_link_for_a_folder:I = 0x20403e4
 
-.field public static final htc_filepicker_no_favorite_files:I = 0x20403df
+.field public static final htc_filepicker_no_favorite_files:I = 0x20403e0
 
-.field public static final htc_filepicker_no_files_found_on_dropbox:I = 0x20403ca
+.field public static final htc_filepicker_no_files_found_on_dropbox:I = 0x20403cb
 
-.field public static final htc_filepicker_no_files_found_on_skydrive:I = 0x20403cd
+.field public static final htc_filepicker_no_files_found_on_skydrive:I = 0x20403ce
 
-.field public static final htc_filepicker_no_recent_files:I = 0x20403de
+.field public static final htc_filepicker_no_recent_files:I = 0x20403df
 
-.field public static final htc_filepicker_not_login_yet:I = 0x20403ce
+.field public static final htc_filepicker_not_login_yet:I = 0x20403cf
 
-.field public static final htc_filepicker_recent:I = 0x20403db
+.field public static final htc_filepicker_recent:I = 0x20403dc
 
-.field public static final htc_filepicker_select_a_folder:I = 0x20403d1
+.field public static final htc_filepicker_select_a_folder:I = 0x20403d2
 
-.field public static final htc_filepicker_separator_text_cloud_services:I = 0x20403e1
+.field public static final htc_filepicker_separator_text_cloud_services:I = 0x20403e2
 
 .field public static final htc_filepicker_subTitle_all_files:I = 0x204013d
 
@@ -689,7 +689,7 @@
 
 .field public static final htc_filepicker_subTitle_skydrive_files:I = 0x2040140
 
-.field public static final htc_filepicker_type:I = 0x20403dc
+.field public static final htc_filepicker_type:I = 0x20403dd
 
 .field public static final htc_permdesc_fotaUpdate:I = 0x2040162
 
@@ -710,6 +710,8 @@
 .field public static final htc_policydesc_wipeData:I = 0x20400a8
 
 .field public static final htc_policylab_device_limit_function:I = 0x20400a9
+
+.field public static final htc_private_app:I = 0x20403bf
 
 .field public static final htctethered_notification_title:I = 0x20400ab
 
@@ -2027,7 +2029,7 @@
 
 .field public static final you_input_the_incorrect:I = 0x204016f
 
-.field public static final zero_dummy_string:I = 0x20403ee
+.field public static final zero_dummy_string:I = 0x20403ef
 
 
 # direct methods
@@ -2035,7 +2037,7 @@
     .locals 0
 
     .prologue
-    .line 6421
+    .line 6459
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

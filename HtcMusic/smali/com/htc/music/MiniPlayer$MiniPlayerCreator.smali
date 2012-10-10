@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 51
+    .line 52
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
     .parameter "context"
 
     .prologue
-    .line 54
+    .line 55
     new-instance v0, Lcom/htc/music/MiniPlayer;
 
     invoke-direct {v0, p0}, Lcom/htc/music/MiniPlayer;-><init>(Landroid/app/Activity;)V

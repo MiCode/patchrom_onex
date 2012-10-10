@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final APP_INIT:I = 0x3
+.field public static final APP_INIT:I = 0x65
 
 .field public static final CB_FACILITY_BAIC:Ljava/lang/String; = "AI"
 
@@ -115,11 +115,17 @@
 
 .field public static final SERVICE_CLASS_VOICE:I = 0x1
 
+.field public static final SIM_APP_RESET:I = 0x66
+
 .field public static final SIM_REFRESH_FILE_UPDATED:I = 0x0
 
 .field public static final SIM_REFRESH_INIT:I = 0x1
 
 .field public static final SIM_REFRESH_RESET:I = 0x2
+
+.field public static final SIM_REFRESH_RESULT_OEM_BASE:I = 0x64
+
+.field public static final SIM_SESSION_RESET:I = 0x67
 
 .field public static final USSD_MODE_NOTIFY:I = 0x0
 
@@ -133,6 +139,12 @@
 .end method
 
 .method public abstract CWUWRegistration(Landroid/os/Message;)V
+.end method
+
+.method public abstract GetSmartNetworkStatus(Landroid/os/Message;)V
+.end method
+
+.method public abstract SetCdmaSmartNetwork(ZLandroid/os/Message;)V
 .end method
 
 .method public abstract acceptCall(Landroid/os/Message;)V
@@ -163,6 +175,9 @@
 .end method
 
 .method public abstract changeIccPinForApp(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
+.end method
+
+.method public abstract clearCdmaSysRecordContent(Landroid/os/Message;)V
 .end method
 
 .method public abstract conference(Landroid/os/Message;)V
@@ -204,6 +219,9 @@
 .method public abstract getATCSCB(Landroid/os/Message;)V
 .end method
 
+.method public abstract getAtrInfo(Landroid/os/Message;)V
+.end method
+
 .method public abstract getAvailableNetworks(Landroid/os/Message;)V
 .end method
 
@@ -226,6 +244,12 @@
 .end method
 
 .method public abstract getCdmaSubscriptionSource(Landroid/os/Message;)V
+.end method
+
+.method public abstract getCdmaSysRecordContent(IILandroid/os/Message;)V
+.end method
+
+.method public abstract getCdmaSysRecordSize(Landroid/os/Message;)V
 .end method
 
 .method public abstract getCurrentCalls(Landroid/os/Message;)V
@@ -376,6 +400,9 @@
 .method public abstract hangupWaitingOrBackground(Landroid/os/Message;)V
 .end method
 
+.method public abstract htcSequentialRadioControl(ZLjava/lang/Object;)Ljava/lang/Object;
+.end method
+
 .method public abstract iccCloseChannel(ILandroid/os/Message;)V
 .end method
 
@@ -493,6 +520,9 @@
 .method public abstract registerForCdmaSubscriptionSourceChanged(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
+.method public abstract registerForCustomizeSimInfoNotify(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
 .method public abstract registerForDataNetworkStateChanged(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
@@ -556,7 +586,13 @@
 .method public abstract registerForManualState(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
+.method public abstract registerForMdmRstSIMHotSwap(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
 .method public abstract registerForModemLinkStatus(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
+.method public abstract registerForModemResetNotify(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
 .method public abstract registerForMsgWaitIndicator(Landroid/os/Handler;ILjava/lang/Object;)V
@@ -838,6 +874,9 @@
 .method public abstract requestPhoneClassChangeDone(Landroid/os/Message;)V
 .end method
 
+.method public abstract requestPhoneClassChangeDone(ZILandroid/os/Message;)V
+.end method
+
 .method public abstract requestQueryISIMSupported(Landroid/os/Message;)V
 .end method
 
@@ -883,10 +922,16 @@
 .method public abstract requestSetEmergencyCallCategory(ILandroid/os/Message;)V
 .end method
 
+.method public abstract requestSetEncryptionState(ILandroid/os/Message;)V
+.end method
+
 .method public abstract requestSetFastDormancy(IILandroid/os/Message;)V
 .end method
 
 .method public abstract requestSetGPSOneMode(ILandroid/os/Message;)V
+.end method
+
+.method public abstract requestSetHighPriorityNetwork([Ljava/lang/String;[ILandroid/os/Message;)V
 .end method
 
 .method public abstract requestSetHybridMode(ILandroid/os/Message;)V
@@ -992,6 +1037,9 @@
 .end method
 
 .method public abstract sendUSSD(Ljava/lang/String;Landroid/os/Message;)V
+.end method
+
+.method public abstract sendUserTrialFeedback(Landroid/os/Message;)V
 .end method
 
 .method public abstract separateConnection(ILandroid/os/Message;)V
@@ -1366,6 +1414,9 @@
 .method public abstract unregisterForCdmaSubscriptionSourceChanged(Landroid/os/Handler;)V
 .end method
 
+.method public abstract unregisterForCustomizeSimInfoNotify(Landroid/os/Handler;)V
+.end method
+
 .method public abstract unregisterForDataNetworkStateChanged(Landroid/os/Handler;)V
 .end method
 
@@ -1429,7 +1480,13 @@
 .method public abstract unregisterForManualState(Landroid/os/Handler;)V
 .end method
 
+.method public abstract unregisterForMdmRstSIMHotSwap(Landroid/os/Handler;)V
+.end method
+
 .method public abstract unregisterForModemLinkStatus(Landroid/os/Handler;)V
+.end method
+
+.method public abstract unregisterForModemResetNotify(Landroid/os/Handler;)V
 .end method
 
 .method public abstract unregisterForMsgWaitIndicator(Landroid/os/Handler;)V

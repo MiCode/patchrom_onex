@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800e4
+    const v1, 0x7f0800e6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -113,7 +113,7 @@
     .line 112
     iget-object v0, p0, Lcom/android/camera/component/SelfTimerUI;->m_TimerBackground:Landroid/view/View;
 
-    const v1, 0x7f0800e5
+    const v1, 0x7f0800e7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
     .line 113
     iget-object v0, p0, Lcom/android/camera/component/SelfTimerUI;->m_TimerContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    const v1, 0x7f0800e6
+    const v1, 0x7f0800e8
 
     invoke-virtual {v0, v1}, Lcom/android/camera/rotate/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 

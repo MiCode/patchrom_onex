@@ -155,7 +155,7 @@
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 130
-    const-string/jumbo v4, "locale"
+    const-string v4, "locale"
 
     invoke-virtual {v3, v4, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 

@@ -109,7 +109,7 @@
 
     .line 335
     .local v7, obj:Lcom/htc/gson/JsonObject;
-    const-string v0, "year"
+    const-string/jumbo v0, "year"
 
     invoke-virtual {v7, v0}, Lcom/htc/gson/JsonObject;->get(Ljava/lang/String;)Lcom/htc/gson/JsonElement;
 
@@ -220,7 +220,7 @@
 
     .line 319
     .local v0, obj:Lcom/htc/gson/JsonObject;
-    const-string v1, "year"
+    const-string/jumbo v1, "year"
 
     const/4 v2, 0x1
 

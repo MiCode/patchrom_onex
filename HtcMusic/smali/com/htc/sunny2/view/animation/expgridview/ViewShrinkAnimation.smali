@@ -126,15 +126,15 @@
 .end method
 
 .method private move()V
-    .locals 8
+    .locals 9
 
     .prologue
-    .line 158
+    .line 165
     new-instance v3, Lcom/htc/sunny2/view/Vector3F;
 
     invoke-direct {v3}, Lcom/htc/sunny2/view/Vector3F;-><init>()V
 
-    .line 160
+    .line 167
     .local v3, newPos:Lcom/htc/sunny2/view/Vector3F;
     iget v6, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mShrinkItemsCount:I
 
@@ -152,27 +152,27 @@
 
     iget v2, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mMoveItemsCount:I
 
-    .line 161
+    .line 168
     .local v2, moveItemsCount:I
     :goto_0
     const/4 v5, 0x0
 
-    .line 163
+    .line 170
     .local v5, tempSView:Lcom/htc/sunny2/view/SView;
     iget v6, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mMoveDirection:I
 
     const/4 v7, 0x1
 
-    if-ne v6, v7, :cond_1
+    if-ne v6, v7, :cond_2
 
-    .line 164
+    .line 171
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_1
-    if-ge v0, v2, :cond_2
+    if-ge v0, v2, :cond_4
 
-    .line 165
+    .line 172
     iget-object v6, p0, Lcom/htc/sunny2/view/animation/expgridview/MultiViewAnimationSet;->mSViewList:Ljava/util/List;
 
     iget v7, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mShrinkItemsCount:I
@@ -186,19 +186,22 @@
     .end local v5           #tempSView:Lcom/htc/sunny2/view/SView;
     check-cast v5, Lcom/htc/sunny2/view/SView;
 
-    .line 166
+    .line 173
     .restart local v5       #tempSView:Lcom/htc/sunny2/view/SView;
+    if-eqz v5, :cond_1
+
+    .line 174
     invoke-virtual {v5}, Lcom/htc/sunny2/view/SView;->getPosition()Lcom/htc/sunny2/view/Vector3F;
 
     move-result-object v4
 
-    .line 167
+    .line 175
     .local v4, originalPos:Lcom/htc/sunny2/view/Vector3F;
     iget v6, v4, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     iput v6, v3, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
-    .line 168
+    .line 176
     iget v6, v4, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
     iget v7, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mDistance:F
@@ -207,30 +210,31 @@
 
     iput v6, v3, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
-    .line 169
+    .line 177
     iget v6, v4, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
     iput v6, v3, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
-    .line 171
+    .line 179
     invoke-direct {p0, v4, v3}, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->moveViewAnimationController(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)Lcom/htc/sunny2/view/animation/SAnimationController;
 
     move-result-object v1
 
-    .line 172
+    .line 180
     .local v1, moveController:Lcom/htc/sunny2/view/animation/SAnimationController;
     invoke-virtual {v5, v1}, Lcom/htc/sunny2/view/SView;->startAnimation(Lcom/htc/sunny2/view/animation/SAnimationController;)V
 
-    .line 164
+    .line 171
+    .end local v1           #moveController:Lcom/htc/sunny2/view/animation/SAnimationController;
+    .end local v4           #originalPos:Lcom/htc/sunny2/view/Vector3F;
+    :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 160
+    .line 167
     .end local v0           #i:I
-    .end local v1           #moveController:Lcom/htc/sunny2/view/animation/SAnimationController;
     .end local v2           #moveItemsCount:I
-    .end local v4           #originalPos:Lcom/htc/sunny2/view/Vector3F;
     .end local v5           #tempSView:Lcom/htc/sunny2/view/SView;
     :cond_0
     iget-object v6, p0, Lcom/htc/sunny2/view/animation/expgridview/MultiViewAnimationSet;->mSViewList:Ljava/util/List;
@@ -245,17 +249,45 @@
 
     goto :goto_0
 
-    .line 176
+    .line 183
+    .restart local v0       #i:I
     .restart local v2       #moveItemsCount:I
     .restart local v5       #tempSView:Lcom/htc/sunny2/view/SView;
     :cond_1
+    sget-object v6, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->TAG:Ljava/lang/String;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "tempSView is null!, Y, i: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    .line 188
+    .end local v0           #i:I
+    :cond_2
     const/4 v0, 0x0
 
     .restart local v0       #i:I
-    :goto_2
-    if-ge v0, v2, :cond_2
+    :goto_3
+    if-ge v0, v2, :cond_4
 
-    .line 177
+    .line 189
     iget-object v6, p0, Lcom/htc/sunny2/view/animation/expgridview/MultiViewAnimationSet;->mSViewList:Ljava/util/List;
 
     iget v7, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mShrinkItemsCount:I
@@ -269,13 +301,16 @@
     .end local v5           #tempSView:Lcom/htc/sunny2/view/SView;
     check-cast v5, Lcom/htc/sunny2/view/SView;
 
-    .line 178
+    .line 190
     .restart local v5       #tempSView:Lcom/htc/sunny2/view/SView;
+    if-eqz v5, :cond_3
+
+    .line 191
     invoke-virtual {v5}, Lcom/htc/sunny2/view/SView;->getPosition()Lcom/htc/sunny2/view/Vector3F;
 
     move-result-object v4
 
-    .line 179
+    .line 192
     .restart local v4       #originalPos:Lcom/htc/sunny2/view/Vector3F;
     iget v6, v4, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
@@ -285,34 +320,61 @@
 
     iput v6, v3, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
-    .line 180
+    .line 193
     iget v6, v4, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
     iput v6, v3, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
-    .line 181
+    .line 194
     iget v6, v4, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
     iput v6, v3, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
-    .line 183
+    .line 196
     invoke-direct {p0, v4, v3}, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->moveViewAnimationController(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)Lcom/htc/sunny2/view/animation/SAnimationController;
 
     move-result-object v1
 
-    .line 184
+    .line 197
     .restart local v1       #moveController:Lcom/htc/sunny2/view/animation/SAnimationController;
     invoke-virtual {v5, v1}, Lcom/htc/sunny2/view/SView;->startAnimation(Lcom/htc/sunny2/view/animation/SAnimationController;)V
 
-    .line 176
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    .line 187
+    .line 188
     .end local v1           #moveController:Lcom/htc/sunny2/view/animation/SAnimationController;
     .end local v4           #originalPos:Lcom/htc/sunny2/view/Vector3F;
-    :cond_2
+    :goto_4
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_3
+
+    .line 200
+    :cond_3
+    sget-object v6, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->TAG:Ljava/lang/String;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "tempSView is null!, X, i: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_4
+
+    .line 204
+    :cond_4
     return-void
 .end method
 
@@ -322,124 +384,144 @@
     .parameter "endPos"
 
     .prologue
-    .line 191
+    .line 208
     new-instance v0, Lcom/htc/sunny2/view/animation/SAnimationController;
 
     invoke-direct {v0}, Lcom/htc/sunny2/view/animation/SAnimationController;-><init>()V
 
-    .line 193
+    .line 210
     .local v0, controller:Lcom/htc/sunny2/view/animation/SAnimationController;
     invoke-virtual {v0, p1, p2}, Lcom/htc/sunny2/view/animation/SAnimationController;->setPositionAnimation(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)V
 
-    .line 194
+    .line 211
     const-wide/16 v1, 0x12c
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/sunny2/view/animation/SAnimationController;->setDuration(J)V
 
-    .line 195
+    .line 212
     sget-object v1, Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;->EASEOUT_QUARTIC:Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/view/animation/SAnimationController;->setInterpolator(Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;)V
 
-    .line 196
+    .line 213
     invoke-virtual {v0, p0}, Lcom/htc/sunny2/view/animation/SAnimationController;->setAnimationListener(Lcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;)V
 
-    .line 198
+    .line 215
     return-object v0
 .end method
 
 .method private prepareMove()V
-    .locals 6
+    .locals 7
 
     .prologue
-    const/4 v4, -0x1
+    const/4 v5, -0x1
 
     .line 141
-    iget-object v3, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mExpGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    iget-object v4, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mExpGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
-    invoke-virtual {v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->getLastVisiblePosition()I
+    invoke-virtual {v4}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->getLastVisiblePosition()I
 
     move-result v2
 
     .line 142
     .local v2, lastParent:I
-    iget-object v3, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mExpGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    iget-object v4, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mExpGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
-    invoke-virtual {v3}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->getChildLastVisiblePosition()I
+    invoke-virtual {v4}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->getChildLastVisiblePosition()I
 
     move-result v1
 
     .line 144
     .local v1, lastChild:I
-    if-eq v1, v4, :cond_0
+    if-eq v1, v5, :cond_1
 
-    if-eq v2, v4, :cond_0
+    if-eq v2, v5, :cond_1
 
     .line 145
+    const/4 v3, 0x0
+
+    .line 146
+    .local v3, tempSView:Lcom/htc/sunny2/view/SView;
     add-int/lit8 v0, v1, 0x1
 
     .local v0, i:I
     :goto_0
-    if-gt v0, v2, :cond_1
+    if-gt v0, v2, :cond_2
 
-    .line 146
-    iget-object v3, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mExpGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
+    .line 147
+    iget-object v4, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mExpGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
-    invoke-virtual {v3, v0}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->getGridViewItem(I)Lcom/htc/sunny2/widget/gridview/GridViewItem;
+    invoke-virtual {v4, v0}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->getGridViewItem(I)Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     move-result-object v3
 
+    .line 148
+    if-eqz v3, :cond_0
+
+    .line 149
     invoke-virtual {p0, v3}, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->addSView(Lcom/htc/sunny2/view/SView;)V
 
-    .line 147
-    iget v3, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mMoveItemsCount:I
+    .line 150
+    iget v4, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mMoveItemsCount:I
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    iput v3, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mMoveItemsCount:I
+    iput v4, p0, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->mMoveItemsCount:I
 
-    .line 145
+    .line 146
+    :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 151
-    .end local v0           #i:I
-    :cond_0
-    sget-object v3, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "prepareMove, no mvoe items, lastChild: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ", lastParent: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 153
+    :cond_0
+    sget-object v4, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->TAG:Ljava/lang/String;
+
+    const-string v5, "prepareMove, tempSView is null!"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    .line 158
+    .end local v0           #i:I
+    .end local v3           #tempSView:Lcom/htc/sunny2/view/SView;
     :cond_1
+    sget-object v4, Lcom/htc/sunny2/view/animation/expgridview/ViewShrinkAnimation;->TAG:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "prepareMove, no mvoe items, lastChild: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, ", lastParent: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 160
+    :cond_2
     return-void
 .end method
 

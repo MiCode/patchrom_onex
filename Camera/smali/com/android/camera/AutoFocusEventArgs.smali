@@ -17,6 +17,8 @@
 
 .field private m_IsHandled:Z
 
+.field public final meteringAreas:[Landroid/graphics/RectF;
+
 
 # direct methods
 .method public constructor <init>([Landroid/graphics/PointF;Lcom/android/camera/AutoFocusMode;)V
@@ -25,12 +27,12 @@
     .parameter "focusMode"
 
     .prologue
-    .line 25
+    .line 26
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/AutoFocusEventArgs;-><init>([Landroid/graphics/PointF;Lcom/android/camera/AutoFocusMode;J)V
 
-    .line 26
+    .line 27
     return-void
 .end method
 
@@ -41,7 +43,7 @@
     .parameter "focusID"
 
     .prologue
-    .line 33
+    .line 38
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -54,7 +56,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/AutoFocusEventArgs;-><init>([Landroid/graphics/PointF;Lcom/android/camera/AutoFocusMode;JZ)V
 
-    .line 34
+    .line 39
     return-void
 .end method
 
@@ -70,10 +72,10 @@
 
     const/high16 v7, 0x3e00
 
-    .line 40
+    .line 49
     invoke-direct {p0}, Lcom/android/camera/event/EventArgs;-><init>()V
 
-    .line 41
+    .line 50
     if-eqz p1, :cond_0
 
     array-length v3, p1
@@ -83,16 +85,21 @@
     :goto_0
     iput-object v3, p0, Lcom/android/camera/AutoFocusEventArgs;->focusAreas:[Landroid/graphics/RectF;
 
-    .line 42
+    .line 51
+    iget-object v3, p0, Lcom/android/camera/AutoFocusEventArgs;->focusAreas:[Landroid/graphics/RectF;
+
+    iput-object v3, p0, Lcom/android/camera/AutoFocusEventArgs;->meteringAreas:[Landroid/graphics/RectF;
+
+    .line 52
     iput-object p2, p0, Lcom/android/camera/AutoFocusEventArgs;->focusMode:Lcom/android/camera/AutoFocusMode;
 
-    .line 43
+    .line 53
     iput-wide p3, p0, Lcom/android/camera/AutoFocusEventArgs;->focusID:J
 
-    .line 44
+    .line 54
     iput-boolean p5, p0, Lcom/android/camera/AutoFocusEventArgs;->isSuccessful:Z
 
-    .line 46
+    .line 56
     array-length v3, p1
 
     add-int/lit8 v0, v3, -0x1
@@ -101,14 +108,14 @@
     :goto_1
     if-ltz v0, :cond_1
 
-    .line 48
+    .line 58
     aget-object v3, p1, v0
 
     iget v3, v3, Landroid/graphics/PointF;->x:F
 
     sub-float v1, v3, v7
 
-    .line 49
+    .line 59
     .local v1, left:F
     aget-object v3, p1, v0
 
@@ -116,7 +123,7 @@
 
     sub-float v2, v3, v7
 
-    .line 50
+    .line 60
     .local v2, top:F
     iget-object v3, p0, Lcom/android/camera/AutoFocusEventArgs;->focusAreas:[Landroid/graphics/RectF;
 
@@ -130,12 +137,12 @@
 
     aput-object v4, v3, v0
 
-    .line 46
+    .line 56
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 41
+    .line 50
     .end local v0           #i:I
     .end local v1           #left:F
     .end local v2           #top:F
@@ -144,7 +151,7 @@
 
     goto :goto_0
 
-    .line 52
+    .line 62
     .restart local v0       #i:I
     :cond_1
     return-void
@@ -156,12 +163,12 @@
     .parameter "focusMode"
 
     .prologue
-    .line 29
+    .line 30
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/AutoFocusEventArgs;-><init>([Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;J)V
 
-    .line 30
+    .line 31
     return-void
 .end method
 
@@ -172,7 +179,7 @@
     .parameter "focusID"
 
     .prologue
-    .line 37
+    .line 42
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -185,22 +192,103 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/AutoFocusEventArgs;-><init>([Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;JZ)V
 
-    .line 38
+    .line 43
     return-void
 .end method
 
 .method public constructor <init>([Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;JZ)V
-    .locals 1
+    .locals 7
     .parameter "focusAreas"
     .parameter "focusMode"
     .parameter "focusID"
     .parameter "isSuccessful"
 
     .prologue
-    .line 54
+    .line 71
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-wide v4, p3
+
+    move v6, p5
+
+    invoke-direct/range {v0 .. v6}, Lcom/android/camera/AutoFocusEventArgs;-><init>([Landroid/graphics/RectF;[Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;JZ)V
+
+    .line 72
+    return-void
+.end method
+
+.method public constructor <init>([Landroid/graphics/RectF;[Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;)V
+    .locals 6
+    .parameter "focusAreas"
+    .parameter "meteringAreas"
+    .parameter "focusMode"
+
+    .prologue
+    .line 34
+    const-wide/16 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/camera/AutoFocusEventArgs;-><init>([Landroid/graphics/RectF;[Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;J)V
+
+    .line 35
+    return-void
+.end method
+
+.method public constructor <init>([Landroid/graphics/RectF;[Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;J)V
+    .locals 7
+    .parameter "focusAreas"
+    .parameter "meteringAreas"
+    .parameter "focusMode"
+    .parameter "focusID"
+
+    .prologue
+    .line 46
+    const/4 v6, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-wide v4, p4
+
+    invoke-direct/range {v0 .. v6}, Lcom/android/camera/AutoFocusEventArgs;-><init>([Landroid/graphics/RectF;[Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;JZ)V
+
+    .line 47
+    return-void
+.end method
+
+.method public constructor <init>([Landroid/graphics/RectF;[Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;JZ)V
+    .locals 2
+    .parameter "focusAreas"
+    .parameter "meteringAreas"
+    .parameter "focusMode"
+    .parameter "focusID"
+    .parameter "isSuccessful"
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 74
     invoke-direct {p0}, Lcom/android/camera/event/EventArgs;-><init>()V
 
-    .line 55
+    .line 75
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, [Landroid/graphics/RectF;->clone()Ljava/lang/Object;
@@ -214,23 +302,43 @@
     :goto_0
     iput-object v0, p0, Lcom/android/camera/AutoFocusEventArgs;->focusAreas:[Landroid/graphics/RectF;
 
-    .line 56
-    iput-object p2, p0, Lcom/android/camera/AutoFocusEventArgs;->focusMode:Lcom/android/camera/AutoFocusMode;
+    .line 76
+    if-eqz p2, :cond_1
 
-    .line 57
-    iput-wide p3, p0, Lcom/android/camera/AutoFocusEventArgs;->focusID:J
+    invoke-virtual {p2}, [Landroid/graphics/RectF;->clone()Ljava/lang/Object;
 
-    .line 58
-    iput-boolean p5, p0, Lcom/android/camera/AutoFocusEventArgs;->isSuccessful:Z
+    move-result-object v0
 
-    .line 59
+    check-cast v0, [Landroid/graphics/RectF;
+
+    check-cast v0, [Landroid/graphics/RectF;
+
+    :goto_1
+    iput-object v0, p0, Lcom/android/camera/AutoFocusEventArgs;->meteringAreas:[Landroid/graphics/RectF;
+
+    .line 77
+    iput-object p3, p0, Lcom/android/camera/AutoFocusEventArgs;->focusMode:Lcom/android/camera/AutoFocusMode;
+
+    .line 78
+    iput-wide p4, p0, Lcom/android/camera/AutoFocusEventArgs;->focusID:J
+
+    .line 79
+    iput-boolean p6, p0, Lcom/android/camera/AutoFocusEventArgs;->isSuccessful:Z
+
+    .line 80
     return-void
 
-    .line 55
     :cond_0
-    const/4 v0, 0x0
+    move-object v0, v1
 
+    .line 75
     goto :goto_0
+
+    :cond_1
+    move-object v0, v1
+
+    .line 76
+    goto :goto_1
 .end method
 
 
@@ -239,7 +347,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 88
     iget-boolean v0, p0, Lcom/android/camera/AutoFocusEventArgs;->m_IsHandled:Z
 
     return v0
@@ -249,11 +357,11 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 96
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/AutoFocusEventArgs;->m_IsHandled:Z
 
-    .line 76
+    .line 97
     return-void
 .end method

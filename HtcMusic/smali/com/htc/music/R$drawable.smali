@@ -77,9 +77,9 @@
 
 .field public static final automotive_music_playing_div:I = 0x7f02001e
 
-.field public static final blue:I = 0x7f020064
+.field public static final blue:I = 0x7f020066
 
-.field public static final green:I = 0x7f020065
+.field public static final green:I = 0x7f020067
 
 .field public static final icon_btn_albums_dark:I = 0x7f02001f
 
@@ -165,67 +165,71 @@
 
 .field public static final music_landing_kkbox:I = 0x7f020048
 
-.field public static final music_landing_soundhound:I = 0x7f020049
+.field public static final music_landing_kkbox_alc:I = 0x7f020049
 
-.field public static final music_landing_soundhound_paid:I = 0x7f02004a
+.field public static final music_landing_soundhound:I = 0x7f02004a
 
-.field public static final music_landing_tunein:I = 0x7f02004b
+.field public static final music_landing_soundhound_paid:I = 0x7f02004b
 
-.field public static final music_landing_tunein_pro:I = 0x7f02004c
+.field public static final music_landing_sprint:I = 0x7f02004c
 
-.field public static final music_landing_vodafone:I = 0x7f02004d
+.field public static final music_landing_tunein:I = 0x7f02004d
 
-.field public static final music_landing_vzw_backup:I = 0x7f02004e
+.field public static final music_landing_tunein_pro:I = 0x7f02004e
 
-.field public static final music_list_cover_bg:I = 0x7f02004f
+.field public static final music_landing_vodafone:I = 0x7f02004f
 
-.field public static final music_list_nocover:I = 0x7f020050
+.field public static final music_landing_vzw_backup:I = 0x7f020050
 
-.field public static final music_minplay_cover_bg:I = 0x7f020051
+.field public static final music_list_cover_bg:I = 0x7f020051
 
-.field public static final music_minplay_nocover:I = 0x7f020052
+.field public static final music_list_nocover:I = 0x7f020052
 
-.field public static final music_mp_drm_list:I = 0x7f020053
+.field public static final music_minplay_cover_bg:I = 0x7f020053
 
-.field public static final music_notification_pause:I = 0x7f020054
+.field public static final music_minplay_nocover:I = 0x7f020054
 
-.field public static final music_notification_pause_btn:I = 0x7f020055
+.field public static final music_mp_drm_list:I = 0x7f020055
 
-.field public static final music_notification_pause_pressed:I = 0x7f020056
+.field public static final music_notification_pause:I = 0x7f020056
 
-.field public static final music_shortcut_bg:I = 0x7f020057
+.field public static final music_notification_pause_btn:I = 0x7f020057
 
-.field public static final music_translucent_background:I = 0x7f020062
+.field public static final music_notification_pause_pressed:I = 0x7f020058
 
-.field public static final notification_b_transport_middle:I = 0x7f020058
+.field public static final music_shortcut_bg:I = 0x7f020059
 
-.field public static final notification_b_transport_middle_pressed:I = 0x7f020059
+.field public static final music_translucent_background:I = 0x7f020064
 
-.field public static final notification_b_transport_middle_rest:I = 0x7f02005a
+.field public static final notification_b_transport_middle:I = 0x7f02005a
 
-.field public static final red:I = 0x7f020063
+.field public static final notification_b_transport_middle_pressed:I = 0x7f02005b
 
-.field public static final screen_background_black:I = 0x7f020067
+.field public static final notification_b_transport_middle_rest:I = 0x7f02005c
 
-.field public static final stat_notify_musicplayer:I = 0x7f02005b
+.field public static final red:I = 0x7f020065
 
-.field public static final stat_sys_download_anim0:I = 0x7f02005c
+.field public static final screen_background_black:I = 0x7f020069
 
-.field public static final stat_sys_download_anim1:I = 0x7f02005d
+.field public static final stat_notify_musicplayer:I = 0x7f02005d
 
-.field public static final stat_sys_download_anim2:I = 0x7f02005e
+.field public static final stat_sys_download_anim0:I = 0x7f02005e
 
-.field public static final stat_sys_download_anim3:I = 0x7f02005f
+.field public static final stat_sys_download_anim1:I = 0x7f02005f
 
-.field public static final stat_sys_download_anim4:I = 0x7f020060
+.field public static final stat_sys_download_anim2:I = 0x7f020060
 
-.field public static final stat_sys_download_anim5:I = 0x7f020061
+.field public static final stat_sys_download_anim3:I = 0x7f020061
 
-.field public static final translucent_background:I = 0x7f020068
+.field public static final stat_sys_download_anim4:I = 0x7f020062
 
-.field public static final transparent_background:I = 0x7f020069
+.field public static final stat_sys_download_anim5:I = 0x7f020063
 
-.field public static final yellow:I = 0x7f020066
+.field public static final translucent_background:I = 0x7f02006a
+
+.field public static final transparent_background:I = 0x7f02006b
+
+.field public static final yellow:I = 0x7f020068
 
 
 # direct methods
@@ -233,7 +237,7 @@
     .locals 0
 
     .prologue
-    .line 942
+    .line 950
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

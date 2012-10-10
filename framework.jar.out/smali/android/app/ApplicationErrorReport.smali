@@ -93,7 +93,7 @@
 
     .prologue
     .line 160
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 161
     return-void
@@ -105,7 +105,7 @@
 
     .prologue
     .line 167
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 168
     invoke-virtual {p0, p1}, Landroid/app/ApplicationErrorReport;->readFromParcel(Landroid/os/Parcel;)V
@@ -411,7 +411,7 @@
 
     iget-object v3, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v3, v3, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
+    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     invoke-direct {v2, p2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -499,7 +499,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "installerPackageName: "
+    const-string v1, "installerPackageName: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -641,6 +641,8 @@
     goto :goto_0
 
     .line 723
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

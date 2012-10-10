@@ -210,7 +210,7 @@
     .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 425
+    .line 427
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -1209,19 +1209,39 @@
     .line 419
     .end local v2           #_result:Z
     :sswitch_2d
-    const-string v4, "com.htc.music.IMusicPluginService"
+    const-string v6, "com.htc.music.IMusicPluginService"
 
-    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 420
-    invoke-virtual {p0}, Lcom/htc/music/IMusicPluginService$Stub;->close()V
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 421
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    move v0, v5
+
+    .line 422
+    .local v0, _arg0:Z
+    :goto_4
+    invoke-virtual {p0, v0}, Lcom/htc/music/IMusicPluginService$Stub;->close(Z)V
+
+    .line 423
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
+    .end local v0           #_arg0:Z
+    :cond_7
+    move v0, v4
+
+    .line 421
+    goto :goto_4
+
     .line 38
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

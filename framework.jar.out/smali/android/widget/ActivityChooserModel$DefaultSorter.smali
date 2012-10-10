@@ -43,12 +43,12 @@
     .parameter
 
     .prologue
-    .line 1019
+    .line 1021
     iput-object p1, p0, Landroid/widget/ActivityChooserModel$DefaultSorter;->this$0:Landroid/widget/ActivityChooserModel;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1023
+    .line 1025
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -64,7 +64,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1019
+    .line 1021
     invoke-direct {p0, p1}, Landroid/widget/ActivityChooserModel$DefaultSorter;-><init>(Landroid/widget/ActivityChooserModel;)V
 
     return-void
@@ -93,21 +93,21 @@
     .end annotation
 
     .prologue
-    .line 1028
+    .line 1030
     .local p2, activities:Ljava/util/List;,"Ljava/util/List<Landroid/widget/ActivityChooserModel$ActivityResolveInfo;>;"
     .local p3, historicalRecords:Ljava/util/List;,"Ljava/util/List<Landroid/widget/ActivityChooserModel$HistoricalRecord;>;"
     iget-object v7, p0, Landroid/widget/ActivityChooserModel$DefaultSorter;->mPackageNameToActivityMap:Ljava/util/Map;
 
-    .line 1030
+    .line 1032
     .local v7, packageNameToActivityMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Landroid/widget/ActivityChooserModel$ActivityResolveInfo;>;"
     invoke-interface {v7}, Ljava/util/Map;->clear()V
 
-    .line 1032
+    .line 1034
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 1034
+    .line 1036
     .local v1, activityCount:I
     iget-object v8, p0, Landroid/widget/ActivityChooserModel$DefaultSorter;->this$0:Landroid/widget/ActivityChooserModel;
 
@@ -124,7 +124,7 @@
 
     if-nez v8, :cond_0
 
-    .line 1035
+    .line 1037
     iget-object v8, p0, Landroid/widget/ActivityChooserModel$DefaultSorter;->this$0:Landroid/widget/ActivityChooserModel;
 
     const/4 v9, 0x0
@@ -132,13 +132,13 @@
     #setter for: Landroid/widget/ActivityChooserModel;->mIsDefaultOrder:Z
     invoke-static {v8, v9}, Landroid/widget/ActivityChooserModel;->access$502(Landroid/widget/ActivityChooserModel;Z)Z
 
-    .line 1036
+    .line 1038
     iget-object v8, p0, Landroid/widget/ActivityChooserModel$DefaultSorter;->this$0:Landroid/widget/ActivityChooserModel;
 
     #calls: Landroid/widget/ActivityChooserModel;->setDefaultWeight(ILjava/util/List;)V
     invoke-static {v8, v1, p2}, Landroid/widget/ActivityChooserModel;->access$600(Landroid/widget/ActivityChooserModel;ILjava/util/List;)V
 
-    .line 1039
+    .line 1041
     :cond_0
     const/4 v3, 0x0
 
@@ -146,20 +146,20 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 1040
+    .line 1042
     invoke-interface {p2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;
 
-    .line 1041
+    .line 1043
     .local v0, activity:Landroid/widget/ActivityChooserModel$ActivityResolveInfo;
     const/4 v8, 0x0
 
     iput v8, v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
-    .line 1043
+    .line 1045
     iget-object v8, v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     iget-object v9, p0, Landroid/widget/ActivityChooserModel$DefaultSorter;->this$0:Landroid/widget/ActivityChooserModel;
@@ -179,23 +179,23 @@
 
     iput-object v8, v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;->lable:Ljava/lang/CharSequence;
 
-    .line 1045
+    .line 1047
     iget-object v8, v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     iget-object v8, v8, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v6, v8, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
-    .line 1046
+    .line 1048
     .local v6, packageName:Ljava/lang/String;
     invoke-interface {v7, v6, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1039
+    .line 1041
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1049
+    .line 1051
     .end local v0           #activity:Landroid/widget/ActivityChooserModel$ActivityResolveInfo;
     .end local v6           #packageName:Ljava/lang/String;
     :cond_1
@@ -205,25 +205,25 @@
 
     add-int/lit8 v4, v8, -0x1
 
-    .line 1050
+    .line 1052
     .local v4, lastShareIndex:I
     const/high16 v5, 0x3f80
 
-    .line 1051
+    .line 1053
     .local v5, nextRecordWeight:F
     move v3, v4
 
     :goto_1
     if-ltz v3, :cond_3
 
-    .line 1052
+    .line 1054
     invoke-interface {p3, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/ActivityChooserModel$HistoricalRecord;
 
-    .line 1053
+    .line 1055
     .local v2, historicalRecord:Landroid/widget/ActivityChooserModel$HistoricalRecord;
     iget-object v8, v2, Landroid/widget/ActivityChooserModel$HistoricalRecord;->activity:Landroid/content/ComponentName;
 
@@ -231,7 +231,7 @@
 
     move-result-object v6
 
-    .line 1054
+    .line 1056
     .restart local v6       #packageName:Ljava/lang/String;
     invoke-interface {v7, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -239,11 +239,11 @@
 
     check-cast v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;
 
-    .line 1055
+    .line 1057
     .restart local v0       #activity:Landroid/widget/ActivityChooserModel$ActivityResolveInfo;
     if-eqz v0, :cond_2
 
-    .line 1056
+    .line 1058
     iget v8, v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
     iget v9, v2, Landroid/widget/ActivityChooserModel$HistoricalRecord;->weight:F
@@ -254,24 +254,24 @@
 
     iput v8, v0, Landroid/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
-    .line 1057
+    .line 1059
     const/high16 v8, 0x3f80
 
     mul-float/2addr v5, v8
 
-    .line 1051
+    .line 1053
     :cond_2
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_1
 
-    .line 1061
+    .line 1063
     .end local v0           #activity:Landroid/widget/ActivityChooserModel$ActivityResolveInfo;
     .end local v2           #historicalRecord:Landroid/widget/ActivityChooserModel$HistoricalRecord;
     .end local v6           #packageName:Ljava/lang/String;
     :cond_3
     invoke-static {p2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 1068
+    .line 1070
     return-void
 .end method

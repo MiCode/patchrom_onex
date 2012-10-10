@@ -61,11 +61,11 @@
     .parameter "ci"
 
     .prologue
-    .line 29
+    .line 30
     sget-object v0, Lcom/android/internal/telephony/gsm/HtcOrangeSimApiUtils;->mController:Lcom/android/internal/telephony/gsm/HtcOrangeSimApiControllerInterface;
 
     invoke-interface {v0, p0, p1}, Lcom/android/internal/telephony/gsm/HtcOrangeSimApiControllerInterface;->init(Landroid/content/Context;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 30
+    .line 31
     return-void
 .end method

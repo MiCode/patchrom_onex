@@ -1176,7 +1176,7 @@
     invoke-interface {p1, v3}, Landroid/view/Menu;->removeItem(I)V
 
     .line 262
-    const v1, 0x7f07011b
+    const v1, 0x7f07011c
 
     invoke-interface {p1, v4, v3, v4, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -1426,7 +1426,7 @@
     if-eqz v2, :cond_0
 
     .line 1395
-    const v2, 0x7f080091
+    const v2, 0x7f080092
 
     invoke-virtual {p0, v2}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 
@@ -1736,7 +1736,7 @@
     .line 350
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mHeaderText:Lcom/htc/widget/ActionBarText;
 
-    const v1, 0x7f0700ec
+    const v1, 0x7f0700ed
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarText;->setPrimaryText(I)V
 
@@ -1830,7 +1830,7 @@
 
     .prologue
     .line 1146
-    const v1, 0x7f080095
+    const v1, 0x7f080096
 
     invoke-virtual {p0, v1}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 
@@ -2107,7 +2107,7 @@
     .line 363
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mHeaderText:Lcom/htc/widget/ActionBarText;
 
-    const v1, 0x7f0700fe
+    const v1, 0x7f0700ff
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarText;->setPrimaryText(I)V
 
@@ -2409,7 +2409,7 @@
     invoke-virtual {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->resetSDErrorLayout()V
 
     .line 1310
-    const v5, 0x7f0800a9
+    const v5, 0x7f0800aa
 
     invoke-virtual {p0, v5}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 
@@ -2479,7 +2479,7 @@
     .line 1370
     :cond_6
     :goto_0
-    const v5, 0x7f080091
+    const v5, 0x7f080092
 
     invoke-virtual {p0, v5}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 
@@ -2719,7 +2719,7 @@
     invoke-virtual {v3, v4}, Landroid/view/ViewStub;->setVisibility(I)V
 
     .line 1218
-    const v3, 0x7f080095
+    const v3, 0x7f080096
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 
@@ -2741,7 +2741,7 @@
     invoke-virtual {p0, v4}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->setCategoryRightBtn(Z)V
 
     .line 1224
-    const v3, 0x7f080096
+    const v3, 0x7f080097
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 
@@ -2871,7 +2871,7 @@
     invoke-virtual {v3, v4}, Landroid/view/ViewStub;->setVisibility(I)V
 
     .line 1182
-    const v3, 0x7f080095
+    const v3, 0x7f080096
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 
@@ -2891,7 +2891,7 @@
     invoke-virtual {p0, v4}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->setCategoryRightBtn(Z)V
 
     .line 1188
-    const v3, 0x7f080096
+    const v3, 0x7f080097
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->findViewById(I)Landroid/view/View;
 

@@ -3125,7 +3125,7 @@
     if-eqz v7, :cond_a
 
     .line 1247
-    const-string/jumbo v7, "literal"
+    const-string v7, "literal"
 
     invoke-interface {p1, v10, v7}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -3796,7 +3796,7 @@
 
     .line 1191
     :pswitch_0
-    const-string/jumbo v5, "literal"
+    const-string v5, "literal"
 
     invoke-virtual {v3}, Landroid/os/PatternMatcher;->getPath()Ljava/lang/String;
 
@@ -3836,6 +3836,8 @@
     return-void
 
     .line 1189
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

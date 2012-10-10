@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 593
+    .line 664
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid$6;->this$0:Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,59 +38,11 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 0
     .parameter "dialog"
     .parameter "which"
 
     .prologue
-    .line 598
-    iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid$6;->this$0:Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;->access$1000(Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
-
-    move-result-object v0
-
-    .line 599
-    .local v0, msg:Landroid/os/Message;
-    const/4 v1, 0x4
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    .line 600
-    iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid$6;->this$0:Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;->access$1100(Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;)I
-
-    move-result v1
-
-    iput v1, v0, Landroid/os/Message;->arg1:I
-
-    .line 601
-    iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid$6;->this$0:Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;->access$1200(Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;)I
-
-    move-result v1
-
-    iput v1, v0, Landroid/os/Message;->arg2:I
-
-    .line 602
-    iget-object v1, p0, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid$6;->this$0:Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;->access$1300(Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    .line 603
+    .line 666
     return-void
 .end method

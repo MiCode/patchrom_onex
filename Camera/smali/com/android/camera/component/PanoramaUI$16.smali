@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1676
+    .line 1681
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$16;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 1680
+    .line 1685
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$16;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_CancelButton:Landroid/widget/ImageView;
@@ -53,6 +53,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 1681
+    .line 1686
     return-void
 .end method

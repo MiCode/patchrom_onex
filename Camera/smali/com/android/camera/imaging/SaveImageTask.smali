@@ -43,20 +43,20 @@
     .parameter "cameraThread"
 
     .prologue
-    .line 52
+    .line 53
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 34
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/camera/imaging/SaveImageTask;->captureID:J
 
-    .line 38
+    .line 39
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/imaging/SaveImageTask;->isLastImage:Z
 
-    .line 53
+    .line 54
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -67,10 +67,10 @@
 
     iput-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
-    .line 54
+    .line 55
     iput-object p1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_CameraThread:Lcom/android/camera/CameraThread;
 
-    .line 55
+    .line 56
     return-void
 .end method
 
@@ -80,13 +80,13 @@
     .parameter "jpegRawData"
 
     .prologue
-    .line 58
+    .line 59
     invoke-direct {p0, p1}, Lcom/android/camera/imaging/SaveImageTask;-><init>(Lcom/android/camera/CameraThread;)V
 
-    .line 59
+    .line 60
     invoke-virtual {p0, p2}, Lcom/android/camera/imaging/SaveImageTask;->setJpegRawData([B)Z
 
-    .line 60
+    .line 61
     return-void
 .end method
 
@@ -97,7 +97,7 @@
     .parameter "extension"
 
     .prologue
-    .line 67
+    .line 68
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,17 +120,17 @@
 
     move-result-object v2
 
-    .line 68
+    .line 69
     .local v2, path:Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 69
+    .line 70
     .local v0, f:Ljava/io/File;
     const/4 v1, 0x0
 
-    .line 71
+    .line 72
     .local v1, index:I
     if-eqz v0, :cond_1
 
@@ -140,24 +140,24 @@
 
     if-eqz v3, :cond_1
 
-    .line 73
+    .line 74
     const-string v3, "."
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 74
+    .line 75
     if-ltz v1, :cond_0
 
-    .line 75
+    .line 76
     const/4 v3, 0x0
 
     invoke-virtual {p2, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 76
+    .line 77
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -197,7 +197,7 @@
 
     move-result-object p2
 
-    .line 78
+    .line 79
     :cond_1
     return-object p2
 .end method
@@ -209,10 +209,10 @@
     .parameter "value"
 
     .prologue
-    .line 425
+    .line 429
     if-eqz p2, :cond_0
 
-    .line 426
+    .line 430
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera/HTCCamera;->getSettings()Lcom/android/camera/CameraSettings;
 
@@ -226,16 +226,16 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 432
+    .line 436
     :cond_0
     :goto_0
     return-void
 
-    .line 428
+    .line 432
     :catch_0
     move-exception v0
 
-    .line 430
+    .line 434
     .local v0, ex:Ljava/lang/NumberFormatException;
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
@@ -275,29 +275,29 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 87
+    .line 88
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->m_CameraThread:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v6
 
-    .line 88
+    .line 89
     .local v6, cameraActivity:Lcom/android/camera/HTCCamera;
     if-nez v6, :cond_0
 
-    .line 90
+    .line 91
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "getAvailableFileName() - No camera activity"
 
     invoke-static {v0, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
+    .line 128
     :goto_0
     return-object v9
 
-    .line 95
+    .line 96
     :cond_0
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->storageSlot:Lcom/android/camera/io/StorageSlot;
 
@@ -305,19 +305,19 @@
 
     move-result-object v1
 
-    .line 96
+    .line 97
     .local v1, dcimPath:Ljava/lang/String;
     new-instance v4, Lcom/android/camera/Reference;
 
     invoke-direct {v4}, Lcom/android/camera/Reference;-><init>()V
 
-    .line 97
+    .line 98
     .local v4, dirCounter:Lcom/android/camera/Reference;,"Lcom/android/camera/Reference<Ljava/lang/Integer;>;"
     new-instance v5, Lcom/android/camera/Reference;
 
     invoke-direct {v5}, Lcom/android/camera/Reference;-><init>()V
 
-    .line 98
+    .line 99
     .local v5, fileCounter:Lcom/android/camera/Reference;,"Lcom/android/camera/Reference<Ljava/lang/Integer;>;"
     invoke-virtual {v6}, Lcom/android/camera/HTCCamera;->getSettings()Lcom/android/camera/CameraSettings;
 
@@ -333,7 +333,7 @@
 
     if-nez v0, :cond_1
 
-    .line 106
+    .line 107
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "getAvailableFileName() - Cannot get directory or file counter"
@@ -342,7 +342,7 @@
 
     goto :goto_0
 
-    .line 111
+    .line 112
     :cond_1
     iget-object v2, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
@@ -366,7 +366,7 @@
 
     move-result-object v7
 
-    .line 112
+    .line 113
     .local v7, dirPath:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
@@ -388,7 +388,7 @@
 
     move-result-object v8
 
-    .line 113
+    .line 114
     .local v8, fileName:Ljava/lang/String;
     new-instance v9, Lcom/android/camera/io/DCFPath;
 
@@ -418,7 +418,7 @@
 
     invoke-direct {v9, v7, v8, v2, v3}, Lcom/android/camera/io/DCFPath;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/camera/io/FileCounter;Lcom/android/camera/io/FileCounter;)V
 
-    .line 116
+    .line 117
     .local v9, path:Lcom/android/camera/io/DCFPath;
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->fileFormat:Lcom/android/camera/io/FileFormat;
 
@@ -428,7 +428,7 @@
 
     move-result-object v8
 
-    .line 117
+    .line 118
     iget-object v0, v9, Lcom/android/camera/io/Path;->fileName:Ljava/lang/String;
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -437,7 +437,7 @@
 
     if-nez v0, :cond_2
 
-    .line 119
+    .line 120
     new-instance v10, Lcom/android/camera/io/DCFPath;
 
     iget-object v0, v9, Lcom/android/camera/io/Path;->directoryPath:Ljava/lang/String;
@@ -452,7 +452,7 @@
     .local v10, path:Lcom/android/camera/io/DCFPath;
     move-object v9, v10
 
-    .line 126
+    .line 127
     .end local v10           #path:Lcom/android/camera/io/DCFPath;
     .restart local v9       #path:Lcom/android/camera/io/DCFPath;
     :cond_2
@@ -499,7 +499,7 @@
     .locals 1
 
     .prologue
-    .line 135
+    .line 136
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->m_ContentUri:Landroid/net/Uri;
 
     return-object v0
@@ -509,7 +509,7 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 140
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->m_FilePath:Lcom/android/camera/io/Path;
 
     return-object v0
@@ -522,7 +522,7 @@
     .prologue
     const-wide/16 v5, 0x0
 
-    .line 151
+    .line 152
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -557,44 +557,44 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
+    .line 154
     iget-wide v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
     cmp-long v1, v1, v5
 
     if-eqz v1, :cond_2
 
-    .line 155
+    .line 156
     iget-wide v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
     invoke-static {v1, v2, p1}, Lcom/android/camera/io/NativeBuffer;->get(JZ)[B
 
     move-result-object v0
 
-    .line 156
+    .line 157
     .local v0, jpegRawData:[B
     if-eqz p1, :cond_0
 
-    .line 158
+    .line 159
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_JpegRawDataSize:I
 
-    .line 159
+    .line 160
     iput-wide v5, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
-    .line 161
+    .line 162
     :cond_0
     if-nez v0, :cond_1
 
-    .line 162
+    .line 163
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "Cannot get JPEG raw data from native buffer"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
+    .line 166
     .end local v0           #jpegRawData:[B
     :cond_1
     :goto_0
@@ -610,7 +610,7 @@
     .locals 1
 
     .prologue
-    .line 169
+    .line 170
     iget v0, p0, Lcom/android/camera/imaging/SaveImageTask;->m_JpegRawDataSize:I
 
     return v0
@@ -620,7 +620,7 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 144
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->m_MimeType:Ljava/lang/String;
 
     return-object v0
@@ -630,35 +630,35 @@
     .locals 13
 
     .prologue
-    .line 177
+    .line 178
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "insertIntoMediaStore() - Start"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 181
+    .line 182
     :try_start_0
     iget-object v10, p0, Lcom/android/camera/imaging/SaveImageTask;->m_CameraThread:Lcom/android/camera/CameraThread;
 
-    .line 182
+    .line 183
     .local v10, cameraThread:Lcom/android/camera/CameraThread;
     invoke-virtual {v10}, Lcom/android/camera/CameraThread;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 183
+    .line 184
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     if-nez v0, :cond_0
 
-    .line 185
+    .line 186
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "insertIntoMediaStore() - No camera activity"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 186
+    .line 187
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -667,16 +667,16 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/camera/imaging/SaveImageTask;->onMediaStoreDataInserted(ZLandroid/net/Uri;Lcom/android/camera/io/Path;)V
 
-    .line 187
+    .line 188
     const/4 v1, 0x0
 
-    .line 238
+    .line 239
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     .end local v10           #cameraThread:Lcom/android/camera/CameraThread;
     :goto_0
     return v1
 
-    .line 189
+    .line 190
     .restart local v0       #cameraActivity:Lcom/android/camera/HTCCamera;
     .restart local v10       #cameraThread:Lcom/android/camera/CameraThread;
     :cond_0
@@ -684,14 +684,14 @@
 
     if-nez v1, :cond_1
 
-    .line 191
+    .line 192
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "insertIntoMediaStore() - No storage slot"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
+    .line 193
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -700,25 +700,25 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/camera/imaging/SaveImageTask;->onMediaStoreDataInserted(ZLandroid/net/Uri;Lcom/android/camera/io/Path;)V
 
-    .line 193
+    .line 194
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 195
+    .line 196
     :cond_1
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_FilePath:Lcom/android/camera/io/Path;
 
     if-nez v1, :cond_2
 
-    .line 197
+    .line 198
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "insertIntoMediaStore() - No file path"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
+    .line 199
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -727,12 +727,12 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/camera/imaging/SaveImageTask;->onMediaStoreDataInserted(ZLandroid/net/Uri;Lcom/android/camera/io/Path;)V
 
-    .line 199
+    .line 200
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 203
+    .line 204
     :cond_2
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->storageSlot:Lcom/android/camera/io/StorageSlot;
 
@@ -762,18 +762,18 @@
 
     move-result-object v11
 
-    .line 216
+    .line 217
     .local v11, contentUri:Landroid/net/Uri;
     if-nez v11, :cond_3
 
-    .line 218
+    .line 219
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "Save image - Content URI = null"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 219
+    .line 220
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -802,30 +802,30 @@
 
     move-result-object v11
 
-    .line 225
+    .line 226
     :goto_1
     iput-object v11, p0, Lcom/android/camera/imaging/SaveImageTask;->m_ContentUri:Landroid/net/Uri;
 
-    .line 228
+    .line 229
     const/4 v1, 0x1
 
     iget-object v2, p0, Lcom/android/camera/imaging/SaveImageTask;->m_FilePath:Lcom/android/camera/io/Path;
 
     invoke-virtual {p0, v1, v11, v2}, Lcom/android/camera/imaging/SaveImageTask;->onMediaStoreDataInserted(ZLandroid/net/Uri;Lcom/android/camera/io/Path;)V
 
-    .line 231
+    .line 232
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "insertIntoMediaStore() - End"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
+    .line 233
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 222
+    .line 223
     :cond_3
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
@@ -853,14 +853,14 @@
 
     goto :goto_1
 
-    .line 234
+    .line 235
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     .end local v10           #cameraThread:Lcom/android/camera/CameraThread;
     .end local v11           #contentUri:Landroid/net/Uri;
     :catch_0
     move-exception v12
 
-    .line 236
+    .line 237
     .local v12, ex:Ljava/lang/Throwable;
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
@@ -868,7 +868,7 @@
 
     invoke-static {v1, v2, v12}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 237
+    .line 238
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -877,7 +877,7 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/camera/imaging/SaveImageTask;->onMediaStoreDataInserted(ZLandroid/net/Uri;Lcom/android/camera/io/Path;)V
 
-    .line 238
+    .line 239
     const/4 v1, 0x0
 
     goto/16 :goto_0
@@ -889,7 +889,7 @@
     .parameter "ex"
 
     .prologue
-    .line 252
+    .line 253
     return-void
 .end method
 
@@ -898,7 +898,7 @@
     .parameter "filePath"
 
     .prologue
-    .line 246
+    .line 247
     return-void
 .end method
 
@@ -909,7 +909,7 @@
     .parameter "filePath"
 
     .prologue
-    .line 258
+    .line 259
     return-void
 .end method
 
@@ -923,10 +923,10 @@
     .end annotation
 
     .prologue
-    .line 265
+    .line 266
     const/4 v2, 0x0
 
-    .line 269
+    .line 270
     .local v2, stream:Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
@@ -941,7 +941,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 272
+    .line 273
     .end local v2           #stream:Ljava/io/FileOutputStream;
     .local v3, stream:Ljava/io/FileOutputStream;
     :try_start_1
@@ -953,42 +953,42 @@
 
     if-eqz v4, :cond_3
 
-    .line 274
+    .line 275
     const/4 v4, 0x1
 
     invoke-virtual {p0, v4}, Lcom/android/camera/imaging/SaveImageTask;->getJpegRawData(Z)[B
 
     move-result-object v1
 
-    .line 275
+    .line 276
     .local v1, jpegRawData:[B
     if-eqz v1, :cond_1
 
-    .line 276
+    .line 277
     invoke-virtual {v3, v1}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 295
+    .line 296
     .end local v1           #jpegRawData:[B
     :goto_0
     if-eqz v3, :cond_5
 
-    .line 296
+    .line 297
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
 
     move-object v2, v3
 
-    .line 298
+    .line 299
     .end local v3           #stream:Ljava/io/FileOutputStream;
     .restart local v2       #stream:Ljava/io/FileOutputStream;
     :cond_0
     :goto_1
     return-void
 
-    .line 278
+    .line 279
     .end local v2           #stream:Ljava/io/FileOutputStream;
     .restart local v1       #jpegRawData:[B
     .restart local v3       #stream:Ljava/io/FileOutputStream;
@@ -1006,14 +1006,14 @@
 
     goto :goto_0
 
-    .line 285
+    .line 286
     .end local v1           #jpegRawData:[B
     :catch_0
     move-exception v0
 
     move-object v2, v3
 
-    .line 287
+    .line 288
     .end local v3           #stream:Ljava/io/FileOutputStream;
     .local v0, ex:Ljava/io/IOException;
     .restart local v2       #stream:Ljava/io/FileOutputStream;
@@ -1023,7 +1023,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 295
+    .line 296
     .end local v0           #ex:Ljava/io/IOException;
     :catchall_0
     move-exception v4
@@ -1031,13 +1031,13 @@
     :goto_3
     if-eqz v2, :cond_2
 
-    .line 296
+    .line 297
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
     :cond_2
     throw v4
 
-    .line 280
+    .line 281
     .end local v2           #stream:Ljava/io/FileOutputStream;
     .restart local v3       #stream:Ljava/io/FileOutputStream;
     :cond_3
@@ -1046,7 +1046,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 281
+    .line 282
     iget-object v4, p0, Lcom/android/camera/imaging/SaveImageTask;->bitmap:Landroid/graphics/Bitmap;
 
     sget-object v5, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
@@ -1061,13 +1061,13 @@
 
     goto :goto_0
 
-    .line 289
+    .line 290
     :catch_1
     move-exception v0
 
     move-object v2, v3
 
-    .line 291
+    .line 292
     .end local v3           #stream:Ljava/io/FileOutputStream;
     .local v0, ex:Ljava/lang/Throwable;
     .restart local v2       #stream:Ljava/io/FileOutputStream;
@@ -1081,15 +1081,15 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 295
+    .line 296
     if-eqz v2, :cond_0
 
-    .line 296
+    .line 297
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
     goto :goto_1
 
-    .line 283
+    .line 284
     .end local v0           #ex:Ljava/lang/Throwable;
     .end local v2           #stream:Ljava/io/FileOutputStream;
     .restart local v3       #stream:Ljava/io/FileOutputStream;
@@ -1107,7 +1107,7 @@
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_1
 
-    .line 295
+    .line 296
     :catchall_1
     move-exception v4
 
@@ -1117,13 +1117,13 @@
     .restart local v2       #stream:Ljava/io/FileOutputStream;
     goto :goto_3
 
-    .line 289
+    .line 290
     :catch_2
     move-exception v0
 
     goto :goto_4
 
-    .line 285
+    .line 286
     :catch_3
     move-exception v0
 
@@ -1144,61 +1144,63 @@
     .parameter "filePath"
 
     .prologue
-    .line 305
+    .line 306
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
 .method public saveImage()Z
-    .locals 10
+    .locals 11
 
     .prologue
+    const/4 v7, 0x1
+
     const/4 v6, 0x0
 
-    .line 313
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
+    .line 314
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
-    const-string v8, "saveImage() - start"
+    const-string v9, "saveImage() - start"
 
-    invoke-static {v7, v8}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 317
+    .line 318
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_CameraThread:Lcom/android/camera/CameraThread;
 
-    .line 318
+    .line 319
     .local v1, cameraThread:Lcom/android/camera/CameraThread;
     invoke-virtual {v1}, Lcom/android/camera/CameraThread;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 319
+    .line 320
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     if-nez v0, :cond_0
 
-    .line 321
+    .line 322
     iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v8, "Save image - No camera activity"
 
     invoke-static {v7, v8}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 384
+    .line 388
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     .end local v1           #cameraThread:Lcom/android/camera/CameraThread;
     :goto_0
     return v6
 
-    .line 324
+    .line 325
     .restart local v0       #cameraActivity:Lcom/android/camera/HTCCamera;
     .restart local v1       #cameraThread:Lcom/android/camera/CameraThread;
     :cond_0
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->storageSlot:Lcom/android/camera/io/StorageSlot;
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->storageSlot:Lcom/android/camera/io/StorageSlot;
 
-    if-nez v7, :cond_1
+    if-nez v8, :cond_1
 
-    .line 326
+    .line 327
     iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v8, "Save image - No storage slot"
@@ -1210,13 +1212,13 @@
 
     goto :goto_0
 
-    .line 369
+    .line 373
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     .end local v1           #cameraThread:Lcom/android/camera/CameraThread;
     :catch_0
     move-exception v3
 
-    .line 371
+    .line 375
     .local v3, ex:Ljava/io/IOException;
     iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
@@ -1224,50 +1226,50 @@
 
     invoke-static {v7, v8, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 372
+    .line 376
     iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->m_FilePath:Lcom/android/camera/io/Path;
 
     invoke-virtual {p0, v7, v3}, Lcom/android/camera/imaging/SaveImageTask;->onImageSaveFailed(Lcom/android/camera/io/Path;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 331
+    .line 332
     .end local v3           #ex:Ljava/io/IOException;
     .restart local v0       #cameraActivity:Lcom/android/camera/HTCCamera;
     .restart local v1       #cameraThread:Lcom/android/camera/CameraThread;
     :cond_1
     :try_start_1
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
-    if-nez v7, :cond_2
+    if-nez v8, :cond_2
 
-    .line 332
-    sget-object v7, Lcom/android/camera/io/DCFInfo;->DEFAULT:Lcom/android/camera/io/DCFInfo;
+    .line 333
+    sget-object v8, Lcom/android/camera/io/DCFInfo;->DEFAULT:Lcom/android/camera/io/DCFInfo;
 
-    iput-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
-
-    .line 335
-    :cond_2
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->fileFormat:Lcom/android/camera/io/FileFormat;
-
-    if-nez v7, :cond_3
+    iput-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
     .line 336
-    sget-object v7, Lcom/android/camera/io/FileFormat;->Jpeg:Lcom/android/camera/io/FileFormat;
+    :cond_2
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->fileFormat:Lcom/android/camera/io/FileFormat;
 
-    iput-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->fileFormat:Lcom/android/camera/io/FileFormat;
+    if-nez v8, :cond_3
 
-    .line 339
+    .line 337
+    sget-object v8, Lcom/android/camera/io/FileFormat;->Jpeg:Lcom/android/camera/io/FileFormat;
+
+    iput-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->fileFormat:Lcom/android/camera/io/FileFormat;
+
+    .line 340
     :cond_3
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->storageSlot:Lcom/android/camera/io/StorageSlot;
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->storageSlot:Lcom/android/camera/io/StorageSlot;
 
-    invoke-virtual {v7}, Lcom/android/camera/io/StorageSlot;->isSupported()Z
+    invoke-virtual {v8}, Lcom/android/camera/io/StorageSlot;->isSupported()Z
 
-    move-result v7
+    move-result v8
 
-    if-nez v7, :cond_4
+    if-nez v8, :cond_4
 
-    .line 341
+    .line 342
     iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1303,13 +1305,13 @@
 
     goto :goto_0
 
-    .line 375
+    .line 379
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     .end local v1           #cameraThread:Lcom/android/camera/CameraThread;
     :catch_1
     move-exception v3
 
-    .line 377
+    .line 381
     .local v3, ex:Ljava/lang/Exception;
     iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
@@ -1317,14 +1319,14 @@
 
     invoke-static {v7, v8, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 378
+    .line 382
     iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->m_FilePath:Lcom/android/camera/io/Path;
 
     invoke-virtual {p0, v7, v3}, Lcom/android/camera/imaging/SaveImageTask;->onImageSaveFailed(Lcom/android/camera/io/Path;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 346
+    .line 347
     .end local v3           #ex:Ljava/lang/Exception;
     .restart local v0       #cameraActivity:Lcom/android/camera/HTCCamera;
     .restart local v1       #cameraThread:Lcom/android/camera/CameraThread;
@@ -1334,125 +1336,130 @@
 
     move-result-object v5
 
-    .line 347
+    .line 348
     .local v5, path:Lcom/android/camera/io/DCFPath;
     iget-object v4, v5, Lcom/android/camera/io/Path;->fileName:Ljava/lang/String;
 
-    .line 348
+    .line 349
     .local v4, fileName:Ljava/lang/String;
     iget-object v2, v5, Lcom/android/camera/io/Path;->directoryPath:Ljava/lang/String;
 
-    .line 349
+    .line 350
     .local v2, directoryName:Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "Save image - directory name = "
+    const-string v10, "Save image - directory name = "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    const-string v9, ", file name = "
+    const-string v10, ", file name = "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v7, v8}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 352
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
-
-    const-string v8, "onSaveImageToFile() - start"
-
-    invoke-static {v7, v8}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 353
-    invoke-virtual {p0, v5}, Lcom/android/camera/imaging/SaveImageTask;->onSaveImageToFile(Lcom/android/camera/io/Path;)V
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
+
+    const-string v9, "onSaveImageToFile() - start"
+
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 354
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/camera/imaging/SaveImageTask;->onSaveImageToFile(Lcom/android/camera/io/Path;)V
 
-    const-string v8, "onSaveImageToFile() - end"
+    .line 355
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
-    invoke-static {v7, v8}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v9, "onSaveImageToFile() - end"
 
-    .line 357
-    iget-object v7, v5, Lcom/android/camera/io/DCFPath;->fileNumber:Lcom/android/camera/io/FileCounter;
-
-    if-eqz v7, :cond_5
+    invoke-static {v8, v9}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 358
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
-
-    iget-object v7, v7, Lcom/android/camera/io/DCFInfo;->fileCounterPrefKey:Ljava/lang/String;
-
     iget-object v8, v5, Lcom/android/camera/io/DCFPath;->fileNumber:Lcom/android/camera/io/FileCounter;
 
-    iget v8, v8, Lcom/android/camera/io/FileCounter;->mainCounter:I
-
-    invoke-direct {p0, v0, v7, v8}, Lcom/android/camera/imaging/SaveImageTask;->updateFileCounter(Lcom/android/camera/HTCCamera;Ljava/lang/String;I)V
+    if-eqz v8, :cond_5
 
     .line 359
-    :cond_5
-    iget-object v7, v5, Lcom/android/camera/io/DCFPath;->directoryNumber:Lcom/android/camera/io/FileCounter;
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
-    if-eqz v7, :cond_6
+    iget-object v8, v8, Lcom/android/camera/io/DCFInfo;->fileCounterPrefKey:Ljava/lang/String;
+
+    iget-object v9, v5, Lcom/android/camera/io/DCFPath;->fileNumber:Lcom/android/camera/io/FileCounter;
+
+    iget v9, v9, Lcom/android/camera/io/FileCounter;->mainCounter:I
+
+    invoke-direct {p0, v0, v8, v9}, Lcom/android/camera/imaging/SaveImageTask;->updateFileCounter(Lcom/android/camera/HTCCamera;Ljava/lang/String;I)V
 
     .line 360
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
-
-    iget-object v7, v7, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
-
+    :cond_5
     iget-object v8, v5, Lcom/android/camera/io/DCFPath;->directoryNumber:Lcom/android/camera/io/FileCounter;
 
-    iget v8, v8, Lcom/android/camera/io/FileCounter;->mainCounter:I
+    if-eqz v8, :cond_6
 
-    invoke-direct {p0, v0, v7, v8}, Lcom/android/camera/imaging/SaveImageTask;->updateFileCounter(Lcom/android/camera/HTCCamera;Ljava/lang/String;I)V
+    .line 361
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
-    .line 363
+    iget-object v8, v8, Lcom/android/camera/io/DCFInfo;->dirCounterPrefKey:Ljava/lang/String;
+
+    iget-object v9, v5, Lcom/android/camera/io/DCFPath;->directoryNumber:Lcom/android/camera/io/FileCounter;
+
+    iget v9, v9, Lcom/android/camera/io/FileCounter;->mainCounter:I
+
+    invoke-direct {p0, v0, v8, v9}, Lcom/android/camera/imaging/SaveImageTask;->updateFileCounter(Lcom/android/camera/HTCCamera;Ljava/lang/String;I)V
+
+    .line 364
     :cond_6
     iput-object v5, p0, Lcom/android/camera/imaging/SaveImageTask;->m_FilePath:Lcom/android/camera/io/Path;
 
-    .line 364
-    iget-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->fileFormat:Lcom/android/camera/io/FileFormat;
+    .line 365
+    iget-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->fileFormat:Lcom/android/camera/io/FileFormat;
 
-    iget-object v7, v7, Lcom/android/camera/io/FileFormat;->mimeType:Ljava/lang/String;
+    iget-object v8, v8, Lcom/android/camera/io/FileFormat;->mimeType:Ljava/lang/String;
 
-    iput-object v7, p0, Lcom/android/camera/imaging/SaveImageTask;->m_MimeType:Ljava/lang/String;
+    iput-object v8, p0, Lcom/android/camera/imaging/SaveImageTask;->m_MimeType:Ljava/lang/String;
 
-    .line 367
+    .line 368
+    const/4 v8, 0x1
+
+    invoke-static {v2, v8}, Lcom/android/camera/io/FileUtility;->updateCachedFileCount(Ljava/lang/String;I)V
+
+    .line 371
     invoke-virtual {p0, v5}, Lcom/android/camera/imaging/SaveImageTask;->onImageSaved(Lcom/android/camera/io/Path;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 383
+    .line 387
     iget-object v6, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
-    const-string v7, "saveImage() - end"
+    const-string v8, "saveImage() - end"
 
-    invoke-static {v6, v7}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 384
-    const/4 v6, 0x1
+    move v6, v7
 
+    .line 388
     goto/16 :goto_0
 .end method
 
@@ -1465,25 +1472,25 @@
 
     const-wide/16 v3, 0x0
 
-    .line 393
+    .line 397
     iget-wide v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
     cmp-long v1, v1, v3
 
     if-eqz v1, :cond_0
 
-    .line 395
+    .line 399
     iget-wide v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
     invoke-static {v1, v2}, Lcom/android/camera/io/NativeBuffer;->remove(J)V
 
-    .line 396
+    .line 400
     iput-wide v3, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
-    .line 397
+    .line 401
     iput v0, p0, Lcom/android/camera/imaging/SaveImageTask;->m_JpegRawDataSize:I
 
-    .line 401
+    .line 405
     :cond_0
     if-eqz p1, :cond_2
 
@@ -1491,32 +1498,32 @@
 
     if-lez v1, :cond_2
 
-    .line 403
+    .line 407
     invoke-static {p1}, Lcom/android/camera/io/NativeBuffer;->add([B)J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
-    .line 404
+    .line 408
     iget-wide v1, p0, Lcom/android/camera/imaging/SaveImageTask;->m_NativeJpegRawData:J
 
     cmp-long v1, v1, v3
 
     if-nez v1, :cond_1
 
-    .line 406
+    .line 410
     iget-object v1, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v2, "Cannot save JPEG raw data to native buffer"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 415
+    .line 419
     :goto_0
     return v0
 
-    .line 411
+    .line 415
     :cond_1
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
@@ -1542,12 +1549,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 412
+    .line 416
     array-length v0, p1
 
     iput v0, p0, Lcom/android/camera/imaging/SaveImageTask;->m_JpegRawDataSize:I
 
-    .line 415
+    .line 419
     :cond_2
     const/4 v0, 0x1
 

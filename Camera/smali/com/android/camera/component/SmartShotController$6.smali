@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 677
+    .line 691
     iput-object p1, p0, Lcom/android/camera/component/SmartShotController$6;->this$0:Lcom/android/camera/component/SmartShotController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 680
+    .line 694
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$6;->this$0:Lcom/android/camera/component/SmartShotController;
 
     invoke-virtual {v0}, Lcom/android/camera/component/SmartShotController;->handleCommonShutterCallback()V
 
-    .line 681
+    .line 695
     return-void
 .end method

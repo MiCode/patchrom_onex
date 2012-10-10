@@ -27,16 +27,16 @@
     .parameter "authority"
 
     .prologue
-    .line 220
+    .line 227
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 221
+    .line 228
     iput-object p1, p0, Lcom/htc/util/contacts/SyncControl$SyncUnit;->account:Landroid/accounts/Account;
 
-    .line 222
+    .line 229
     iput-object p2, p0, Lcom/htc/util/contacts/SyncControl$SyncUnit;->authority:Ljava/lang/String;
 
-    .line 223
+    .line 230
     return-void
 .end method
 
@@ -51,15 +51,15 @@
 
     const/4 v2, 0x0
 
-    .line 230
+    .line 237
     if-ne p1, p0, :cond_1
 
-    .line 233
+    .line 240
     :cond_0
     :goto_0
     return v1
 
-    .line 231
+    .line 238
     :cond_1
     instance-of v3, p1, Lcom/htc/util/contacts/SyncControl$SyncUnit;
 
@@ -72,10 +72,10 @@
     :cond_2
     move-object v0, p1
 
-    .line 232
+    .line 239
     check-cast v0, Lcom/htc/util/contacts/SyncControl$SyncUnit;
 
-    .line 233
+    .line 240
     .local v0, other:Lcom/htc/util/contacts/SyncControl$SyncUnit;
     iget-object v3, p0, Lcom/htc/util/contacts/SyncControl$SyncUnit;->authority:Ljava/lang/String;
 

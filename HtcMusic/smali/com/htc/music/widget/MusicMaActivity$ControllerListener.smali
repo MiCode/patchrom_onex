@@ -46,6 +46,63 @@
 
 
 # virtual methods
+.method public onError(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 3
+    .parameter "rendererID"
+    .parameter "responseID"
+    .parameter "responseReason"
+
+    .prologue
+    .line 785
+    const-string v0, "[MusicMaActivity]"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onError: rendererID: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", responseID: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", responseReason: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 786
+    invoke-super {p0, p1, p2, p3}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onError(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 787
+    return-void
+.end method
+
 .method public onResponse(Ljava/lang/String;ILjava/lang/String;)V
     .locals 4
     .parameter "rendererID"
@@ -97,6 +154,11 @@
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 775
+    const/16 v1, 0x4e20
+
+    if-ne p2, v1, :cond_0
+
+    .line 776
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity$ControllerListener;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->messageHandler:Landroid/os/Handler;
@@ -106,7 +168,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 776
+    .line 777
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity$ControllerListener;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->messageHandler:Landroid/os/Handler;
@@ -120,7 +182,7 @@
 
     move-result-object v0
 
-    .line 777
+    .line 778
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/music/widget/MusicMaActivity$ControllerListener;->this$0:Lcom/htc/music/widget/MusicMaActivity;
 
@@ -131,7 +193,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 779
+    .line 781
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return-void

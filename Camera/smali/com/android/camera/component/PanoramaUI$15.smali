@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1616
+    .line 1621
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,14 +66,14 @@
     .end annotation
 
     .prologue
-    .line 1621
+    .line 1626
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/rotate/UIRotation;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/rotate/UIRotation;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/rotate/UIRotation;
 
-    .line 1624
+    .line 1629
     .local v0, rotation:Lcom/android/camera/rotate/UIRotation;
     invoke-static {}, Lcom/android/camera/component/PanoramaController;->isNonLandscapeSupported()Z
 
@@ -90,7 +90,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1626
+    .line 1631
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_InitToast:Landroid/view/View;
@@ -104,7 +104,7 @@
 
     if-nez v1, :cond_2
 
-    .line 1628
+    .line 1633
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -120,7 +120,7 @@
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/android/camera/component/PanoramaUI;->showAlphaRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/component/UIComponent$AlphaRotateAnimationCallback;)V
 
-    .line 1642
+    .line 1647
     :cond_0
     :goto_0
     invoke-static {}, Lcom/android/camera/component/PanoramaController;->isNonLandscapeSupported()Z
@@ -138,7 +138,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1644
+    .line 1649
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_Indicator:Lcom/android/camera/rotate/RotateImageView;
@@ -152,7 +152,7 @@
 
     if-nez v1, :cond_3
 
-    .line 1646
+    .line 1651
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     iget-object v2, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -168,12 +168,12 @@
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/android/camera/component/PanoramaUI;->showAlphaRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/component/UIComponent$AlphaRotateAnimationCallback;)V
 
-    .line 1657
+    .line 1662
     :cond_1
     :goto_1
     return-void
 
-    .line 1638
+    .line 1643
     :cond_2
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -182,7 +182,7 @@
 
     goto :goto_0
 
-    .line 1655
+    .line 1660
     :cond_3
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$15;->this$0:Lcom/android/camera/component/PanoramaUI;
 

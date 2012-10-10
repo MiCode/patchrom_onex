@@ -62,7 +62,7 @@
     const/4 v1, 0x0
 
     .line 116
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 119
     sget-object v0, Landroid/util/StateSet;->WILD_CARD:[I
@@ -377,7 +377,7 @@
     .line 826
     .end local v0           #drawable:Landroid/graphics/drawable/Drawable;
     :cond_1
-    const-string/jumbo v2, "level-list"
+    const-string v2, "level-list"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -396,7 +396,7 @@
     .line 832
     .end local v0           #drawable:Landroid/graphics/drawable/Drawable;
     :cond_2
-    const-string/jumbo v2, "layer-list"
+    const-string v2, "layer-list"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -567,7 +567,7 @@
     .line 850
     .end local v0           #drawable:Landroid/graphics/drawable/Drawable;
     :cond_b
-    const-string/jumbo v2, "inset"
+    const-string v2, "inset"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

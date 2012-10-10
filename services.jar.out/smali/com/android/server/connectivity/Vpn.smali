@@ -205,9 +205,9 @@
     .prologue
     const v10, 0x10805d7
 
-    const/4 v9, 0x0
+    const/4 v9, 0x1
 
-    const/4 v8, 0x1
+    const/4 v8, 0x0
 
     .line 309
     iget-object v4, p0, Lcom/android/server/connectivity/Vpn;->mContext:Landroid/content/Context;
@@ -292,13 +292,11 @@
 
     move-result-object v4
 
-    const/4 v5, -0x1
-
-    invoke-virtual {v4, v5}, Landroid/app/Notification$Builder;->setDefaults(I)Landroid/app/Notification$Builder;
+    invoke-virtual {v4, v8}, Landroid/app/Notification$Builder;->setDefaults(I)Landroid/app/Notification$Builder;
 
     move-result-object v4
 
-    invoke-virtual {v4, v8}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
+    invoke-virtual {v4, v9}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
     move-result-object v4
 
@@ -323,9 +321,9 @@
 
     const v5, 0x1040459
 
-    new-array v6, v8, [Ljava/lang/Object;
+    new-array v6, v9, [Ljava/lang/Object;
 
-    aput-object p2, v6, v9
+    aput-object p2, v6, v8
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -340,11 +338,11 @@
 
     const v5, 0x104045b
 
-    new-array v6, v8, [Ljava/lang/Object;
+    new-array v6, v9, [Ljava/lang/Object;
 
     iget-object v7, p1, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
-    aput-object v7, v6, v9
+    aput-object v7, v6, v8
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

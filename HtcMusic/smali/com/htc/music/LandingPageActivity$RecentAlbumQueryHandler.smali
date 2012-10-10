@@ -25,10 +25,10 @@
     .parameter "res"
 
     .prologue
-    .line 1216
+    .line 1037
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
 
-    .line 1217
+    .line 1038
     const/4 v0, 0x0
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
@@ -38,788 +38,957 @@
 
     invoke-direct {p0, p2, v0, v1}, Lcom/htc/music/util/DlArtAsyncQueryHandler;-><init>(Landroid/content/ContentResolver;ZZ)V
 
-    .line 1218
+    .line 1039
     return-void
 .end method
 
 
 # virtual methods
 .method protected onQueryComplete(ILjava/lang/Object;Landroid/database/Cursor;)V
-    .locals 17
+    .locals 19
     .parameter "token"
     .parameter "cookie"
     .parameter "cursor"
 
     .prologue
-    .line 1222
-    const-string v14, "[LandingPage]"
+    .line 1043
+    const-string v16, "[LandingPage]"
 
-    new-instance v15, Ljava/lang/StringBuilder;
+    new-instance v17, Ljava/lang/StringBuilder;
 
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v16, "RecentAlbumQueryHandler, onQueryComplete(), token: "
+    const-string v18, "RecentAlbumQueryHandler, onQueryComplete(), token: "
 
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v15
+    move-result-object v17
 
-    move/from16 v0, p1
+    move-object/from16 v0, v17
 
-    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move/from16 v1, p1
 
-    move-result-object v15
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v17
 
-    move-result-object v15
+    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v14, v15}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v17
 
-    .line 1224
+    invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1045
     if-eqz p3, :cond_0
 
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getCount()I
 
-    move-result v14
+    move-result v16
 
-    if-gtz v14, :cond_4
+    if-gtz v16, :cond_4
 
-    .line 1225
+    .line 1046
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #calls: Lcom/htc/music/LandingPageActivity;->hideRecentlyAlbumDialogs()V
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1100(Lcom/htc/music/LandingPageActivity;)V
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1100(Lcom/htc/music/LandingPageActivity;)V
 
-    .line 1226
+    .line 1047
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->clear()V
 
-    .line 1227
-    new-instance v1, Lcom/htc/music/LandingPageActivity$BaseItem;
+    .line 1048
+    new-instance v2, Lcom/htc/music/LandingPageActivity$BaseItem;
 
-    invoke-direct {v1}, Lcom/htc/music/LandingPageActivity$BaseItem;-><init>()V
+    invoke-direct {v2}, Lcom/htc/music/LandingPageActivity$BaseItem;-><init>()V
 
-    .line 1228
-    .local v1, addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
-    const/4 v14, -0x2
+    .line 1049
+    .local v2, addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
+    const/16 v16, -0x2
 
-    invoke-virtual {v1, v14}, Lcom/htc/music/LandingPageActivity$BaseItem;->setId(I)V
+    move/from16 v0, v16
 
-    .line 1229
+    invoke-virtual {v2, v0}, Lcom/htc/music/LandingPageActivity$BaseItem;->setId(I)V
+
+    .line 1050
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-object/from16 v0, v16
 
-    .line 1257
-    .end local v1           #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1086
+    .end local v2           #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
     :cond_1
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3900(Lcom/htc/music/LandingPageActivity;)Landroid/database/Cursor;
-
-    move-result-object v14
-
-    if-eqz v14, :cond_2
-
-    .line 1259
-    :try_start_0
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3900(Lcom/htc/music/LandingPageActivity;)Landroid/database/Cursor;
-
-    move-result-object v14
-
-    move-object/from16 v0, p0
-
-    iget-object v15, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mContentObserver:Landroid/database/ContentObserver;
-    invoke-static {v15}, Lcom/htc/music/LandingPageActivity;->access$4000(Lcom/htc/music/LandingPageActivity;)Landroid/database/ContentObserver;
-
-    move-result-object v15
-
-    invoke-interface {v14, v15}, Landroid/database/Cursor;->unregisterContentObserver(Landroid/database/ContentObserver;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 1263
     :goto_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3900(Lcom/htc/music/LandingPageActivity;)Landroid/database/Cursor;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3900(Lcom/htc/music/LandingPageActivity;)Landroid/database/Cursor;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-interface {v14}, Landroid/database/Cursor;->close()V
+    if-eqz v16, :cond_2
 
-    .line 1264
+    .line 1088
+    :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
 
-    const/4 v15, 0x0
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mAlbumCursor:Landroid/database/Cursor;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3900(Lcom/htc/music/LandingPageActivity;)Landroid/database/Cursor;
+
+    move-result-object v16
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v17, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mContentObserver:Landroid/database/ContentObserver;
+    invoke-static/range {v17 .. v17}, Lcom/htc/music/LandingPageActivity;->access$4000(Lcom/htc/music/LandingPageActivity;)Landroid/database/ContentObserver;
+
+    move-result-object v17
+
+    invoke-interface/range {v16 .. v17}, Landroid/database/Cursor;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 1092
+    :goto_1
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mAlbumCursor:Landroid/database/Cursor;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3900(Lcom/htc/music/LandingPageActivity;)Landroid/database/Cursor;
+
+    move-result-object v16
+
+    invoke-interface/range {v16 .. v16}, Landroid/database/Cursor;->close()V
+
+    .line 1093
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    const/16 v17, 0x0
 
     #setter for: Lcom/htc/music/LandingPageActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v14, v15}, Lcom/htc/music/LandingPageActivity;->access$3902(Lcom/htc/music/LandingPageActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-static/range {v16 .. v17}, Lcom/htc/music/LandingPageActivity;->access$3902(Lcom/htc/music/LandingPageActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 1267
+    .line 1096
     :cond_2
     if-eqz p3, :cond_3
 
-    .line 1268
+    .line 1097
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mContentObserver:Landroid/database/ContentObserver;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$4000(Lcom/htc/music/LandingPageActivity;)Landroid/database/ContentObserver;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$4000(Lcom/htc/music/LandingPageActivity;)Landroid/database/ContentObserver;
 
-    move-result-object v14
+    move-result-object v16
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
+    move-object/from16 v1, v16
 
-    .line 1271
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
+
+    .line 1100
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
 
-    move-object/from16 v0, p3
+    move-object/from16 v16, v0
+
+    move-object/from16 v0, v16
+
+    move-object/from16 v1, p3
 
     #setter for: Lcom/htc/music/LandingPageActivity;->mAlbumCursor:Landroid/database/Cursor;
-    invoke-static {v14, v0}, Lcom/htc/music/LandingPageActivity;->access$3902(Lcom/htc/music/LandingPageActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-static {v0, v1}, Lcom/htc/music/LandingPageActivity;->access$3902(Lcom/htc/music/LandingPageActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 1272
+    .line 1101
     if-eqz p3, :cond_c
 
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getCount()I
 
-    move-result v14
+    move-result v16
 
-    if-lez v14, :cond_c
+    if-lez v16, :cond_c
 
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToFirst()Z
 
-    move-result v14
+    move-result v16
 
-    if-eqz v14, :cond_c
+    if-eqz v16, :cond_c
 
-    .line 1274
+    .line 1103
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
-
-    move-result v14
-
-    new-array v7, v14, [Z
-
-    .line 1275
-    .local v7, existArray:[Z
-    const/4 v8, 0x0
-
-    .local v8, i:I
-    :goto_1
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
-
-    move-result v14
-
-    if-ge v8, v14, :cond_6
-
-    .line 1276
-    const/4 v14, 0x0
-
-    aput-boolean v14, v7, v8
-
-    .line 1275
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_1
-
-    .line 1230
-    .end local v7           #existArray:[Z
-    .end local v8           #i:I
-    :cond_4
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
-
-    move-result-object v14
-
-    if-eqz v14, :cond_5
-
-    .line 1231
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
-
-    .line 1232
-    const/4 v8, 0x0
-
-    .restart local v8       #i:I
-    :goto_2
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
-
-    move-result-object v14
-
-    array-length v14, v14
-
-    if-ge v8, v14, :cond_1
-
-    .line 1233
-    new-instance v1, Lcom/htc/music/LandingPageActivity$BaseItem;
-
-    invoke-direct {v1}, Lcom/htc/music/LandingPageActivity$BaseItem;-><init>()V
-
-    .line 1234
-    .restart local v1       #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
-
-    move-result-object v14
-
-    aget v14, v14, v8
-
-    invoke-virtual {v1, v14}, Lcom/htc/music/LandingPageActivity$BaseItem;->setId(I)V
-
-    .line 1235
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
-
-    move-result-object v14
-
-    invoke-virtual {v14, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1232
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_2
-
-    .line 1238
-    .end local v1           #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
-    .end local v8           #i:I
-    :cond_5
-    const-string v14, "_id"
-
-    move-object/from16 v0, p3
-
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v11
-
-    .line 1239
-    .local v11, ididx:I
-    invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getCount()I
-
-    move-result v5
-
-    .line 1240
-    .local v5, count:I
-    invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 1241
-    const-string v14, "[LandingPage]"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "count="
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v14, v15}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1243
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
-
-    move-result-object v14
-
-    invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
-
-    .line 1244
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    new-array v15, v5, [I
-
-    #setter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
-    invoke-static {v14, v15}, Lcom/htc/music/LandingPageActivity;->access$3802(Lcom/htc/music/LandingPageActivity;[I)[I
-
-    .line 1245
-    const/4 v8, 0x0
-
-    .restart local v8       #i:I
-    :goto_3
-    if-ge v8, v5, :cond_1
-
-    .line 1246
-    move-object/from16 v0, p3
-
-    invoke-interface {v0, v11}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v9
-
-    .line 1247
-    .local v9, id:I
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
-
-    move-result-object v14
-
-    aput v9, v14, v8
-
-    .line 1249
-    new-instance v1, Lcom/htc/music/LandingPageActivity$BaseItem;
-
-    invoke-direct {v1}, Lcom/htc/music/LandingPageActivity$BaseItem;-><init>()V
-
-    .line 1250
-    .restart local v1       #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
-
-    move-result-object v14
-
-    aget v14, v14, v8
-
-    invoke-virtual {v1, v14}, Lcom/htc/music/LandingPageActivity$BaseItem;->setId(I)V
-
-    .line 1251
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
-
-    move-result-object v14
-
-    invoke-virtual {v14, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1253
-    invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToNext()Z
-
-    .line 1245
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_3
-
-    .line 1260
-    .end local v1           #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
-    .end local v5           #count:I
-    .end local v8           #i:I
-    .end local v9           #id:I
-    .end local v11           #ididx:I
-    :catch_0
-    move-exception v6
-
-    .line 1261
-    .local v6, e:Ljava/lang/Exception;
-    const-string v14, "[LandingPage]"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "mAlbumCursor error : "
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v6}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
     move-result-object v16
 
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->size()I
 
-    move-result-object v15
+    move-result v16
 
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move/from16 v0, v16
 
-    move-result-object v15
+    new-array v9, v0, [Z
 
-    invoke-static {v14, v15}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1104
+    .local v9, existArray:[Z
+    const/4 v10, 0x0
+
+    .local v10, i:I
+    :goto_2
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+
+    move-result-object v16
+
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->size()I
+
+    move-result v16
+
+    move/from16 v0, v16
+
+    if-ge v10, v0, :cond_6
+
+    .line 1105
+    const/16 v16, 0x0
+
+    aput-boolean v16, v9, v10
+
+    .line 1104
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_2
+
+    .line 1051
+    .end local v9           #existArray:[Z
+    .end local v10           #i:I
+    :cond_4
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
+
+    move-result-object v16
+
+    if-eqz v16, :cond_5
+
+    .line 1052
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+
+    move-result-object v16
+
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->clear()V
+
+    .line 1053
+    const/4 v10, 0x0
+
+    .restart local v10       #i:I
+    :goto_3
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
+
+    move-result-object v16
+
+    move-object/from16 v0, v16
+
+    array-length v0, v0
+
+    move/from16 v16, v0
+
+    move/from16 v0, v16
+
+    if-ge v10, v0, :cond_1
+
+    .line 1054
+    new-instance v2, Lcom/htc/music/LandingPageActivity$BaseItem;
+
+    invoke-direct {v2}, Lcom/htc/music/LandingPageActivity$BaseItem;-><init>()V
+
+    .line 1058
+    .restart local v2       #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
+    :try_start_1
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
+
+    move-result-object v16
+
+    aget v16, v16, v10
+
+    move/from16 v0, v16
+
+    invoke-virtual {v2, v0}, Lcom/htc/music/LandingPageActivity$BaseItem;->setId(I)V
+    :try_end_1
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 1064
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+
+    move-result-object v16
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1053
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_3
+
+    .line 1060
+    :catch_0
+    move-exception v8
+
+    .line 1061
+    .local v8, ex:Ljava/lang/ArrayIndexOutOfBoundsException;
+    const-string v16, "[LandingPage]"
+
+    new-instance v17, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v18, "onQueryComplete, ArrayIndexOutOfBoundsException, ex: "
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    invoke-virtual {v8}, Ljava/lang/ArrayIndexOutOfBoundsException;->toString()Ljava/lang/String;
+
+    move-result-object v18
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v17
+
+    invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1279
-    .end local v6           #e:Ljava/lang/Exception;
-    .restart local v7       #existArray:[Z
-    .restart local v8       #i:I
+    .line 1067
+    .end local v2           #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
+    .end local v8           #ex:Ljava/lang/ArrayIndexOutOfBoundsException;
+    .end local v10           #i:I
+    :cond_5
+    const-string v16, "_id"
+
+    move-object/from16 v0, p3
+
+    move-object/from16 v1, v16
+
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v13
+
+    .line 1068
+    .local v13, ididx:I
+    invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getCount()I
+
+    move-result v6
+
+    .line 1069
+    .local v6, count:I
+    invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 1070
+    const-string v16, "[LandingPage]"
+
+    new-instance v17, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v18, "count="
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v17
+
+    invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1072
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+
+    move-result-object v16
+
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->clear()V
+
+    .line 1073
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    new-array v0, v6, [I
+
+    move-object/from16 v17, v0
+
+    #setter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
+    invoke-static/range {v16 .. v17}, Lcom/htc/music/LandingPageActivity;->access$3802(Lcom/htc/music/LandingPageActivity;[I)[I
+
+    .line 1074
+    const/4 v10, 0x0
+
+    .restart local v10       #i:I
+    :goto_4
+    if-ge v10, v6, :cond_1
+
+    .line 1075
+    move-object/from16 v0, p3
+
+    invoke-interface {v0, v13}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v11
+
+    .line 1076
+    .local v11, id:I
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
+
+    move-result-object v16
+
+    aput v11, v16, v10
+
+    .line 1078
+    new-instance v2, Lcom/htc/music/LandingPageActivity$BaseItem;
+
+    invoke-direct {v2}, Lcom/htc/music/LandingPageActivity$BaseItem;-><init>()V
+
+    .line 1079
+    .restart local v2       #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumIds:[I
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$3800(Lcom/htc/music/LandingPageActivity;)[I
+
+    move-result-object v16
+
+    aget v16, v16, v10
+
+    move/from16 v0, v16
+
+    invoke-virtual {v2, v0}, Lcom/htc/music/LandingPageActivity$BaseItem;->setId(I)V
+
+    .line 1080
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+
+    move-result-object v16
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1082
+    invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToNext()Z
+
+    .line 1074
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_4
+
+    .line 1089
+    .end local v2           #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
+    .end local v6           #count:I
+    .end local v10           #i:I
+    .end local v11           #id:I
+    .end local v13           #ididx:I
+    :catch_1
+    move-exception v7
+
+    .line 1090
+    .local v7, e:Ljava/lang/Exception;
+    const-string v16, "[LandingPage]"
+
+    new-instance v17, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v18, "mAlbumCursor error : "
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    invoke-virtual {v7}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v18
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v17
+
+    invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    .line 1108
+    .end local v7           #e:Ljava/lang/Exception;
+    .restart local v9       #existArray:[Z
+    .restart local v10       #i:I
     :cond_6
-    const-string v14, "_id"
+    const-string v16, "_id"
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    move-object/from16 v1, v16
 
-    move-result v10
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    .line 1280
-    .local v10, idIdx:I
-    const-string v14, "album"
+    move-result v12
 
-    move-object/from16 v0, p3
-
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v3
-
-    .line 1281
-    .local v3, albumIdx:I
-    const-string v14, "artist"
+    .line 1109
+    .local v12, idIdx:I
+    const-string v16, "album"
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    move-object/from16 v1, v16
+
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 1282
-    .local v4, artistIdx:I
-    const-string v14, "album_art"
+    .line 1110
+    .local v4, albumIdx:I
+    const-string v16, "artist"
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    move-object/from16 v1, v16
 
-    move-result v2
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    .line 1283
-    .local v2, albumArtIdx:I
-    const/4 v8, 0x0
+    move-result v5
 
-    :goto_4
+    .line 1111
+    .local v5, artistIdx:I
+    const-string v16, "album_art"
+
+    move-object/from16 v0, p3
+
+    move-object/from16 v1, v16
+
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    .line 1112
+    .local v3, albumArtIdx:I
+    const/4 v10, 0x0
+
+    :goto_5
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getCount()I
 
-    move-result v14
+    move-result v16
 
-    if-ge v8, v14, :cond_9
+    move/from16 v0, v16
 
-    .line 1284
-    const/4 v13, 0x0
+    if-ge v10, v0, :cond_9
 
-    .local v13, j:I
-    :goto_5
+    .line 1113
+    const/4 v15, 0x0
+
+    .local v15, j:I
+    :goto_6
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->size()I
 
-    move-result v14
+    move-result v16
 
-    if-ge v13, v14, :cond_7
+    move/from16 v0, v16
 
-    .line 1285
+    if-ge v15, v0, :cond_7
+
+    .line 1114
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-object/from16 v0, v16
 
-    move-result-object v14
+    invoke-virtual {v0, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    check-cast v14, Lcom/htc/music/LandingPageActivity$BaseItem;
+    move-result-object v16
+
+    check-cast v16, Lcom/htc/music/LandingPageActivity$BaseItem;
 
     #calls: Lcom/htc/music/LandingPageActivity$BaseItem;->getId()I
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity$BaseItem;->access$4100(Lcom/htc/music/LandingPageActivity$BaseItem;)I
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity$BaseItem;->access$4100(Lcom/htc/music/LandingPageActivity$BaseItem;)I
 
-    move-result v14
-
-    move-object/from16 v0, p3
-
-    invoke-interface {v0, v10}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v15
-
-    if-ne v14, v15, :cond_8
-
-    .line 1286
-    const/4 v14, 0x1
-
-    aput-boolean v14, v7, v13
-
-    .line 1287
-    move-object/from16 v0, p0
-
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
-
-    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
-
-    move-result-object v14
-
-    invoke-virtual {v14, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v14
-
-    check-cast v14, Lcom/htc/music/LandingPageActivity$BaseItem;
+    move-result v16
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v0, v12}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-object v15
+    move-result v17
 
-    invoke-virtual {v14, v15}, Lcom/htc/music/LandingPageActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
+    move/from16 v0, v16
 
-    .line 1288
+    move/from16 v1, v17
+
+    if-ne v0, v1, :cond_8
+
+    .line 1115
+    const/16 v16, 0x1
+
+    aput-boolean v16, v9, v15
+
+    .line 1116
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-object/from16 v0, v16
 
-    move-result-object v14
+    invoke-virtual {v0, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    check-cast v14, Lcom/htc/music/LandingPageActivity$BaseItem;
+    move-result-object v16
+
+    check-cast v16, Lcom/htc/music/LandingPageActivity$BaseItem;
 
     move-object/from16 v0, p3
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v17
 
-    invoke-virtual {v14, v15}, Lcom/htc/music/LandingPageActivity$BaseItem;->setSecondaryText(Ljava/lang/String;)V
+    invoke-virtual/range {v16 .. v17}, Lcom/htc/music/LandingPageActivity$BaseItem;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1289
+    .line 1117
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-object/from16 v0, v16
 
-    move-result-object v14
+    invoke-virtual {v0, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    check-cast v14, Lcom/htc/music/LandingPageActivity$BaseItem;
+    move-result-object v16
+
+    check-cast v16, Lcom/htc/music/LandingPageActivity$BaseItem;
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v17
 
-    invoke-virtual {v14, v15}, Lcom/htc/music/LandingPageActivity$BaseItem;->setArtPath(Ljava/lang/String;)V
+    invoke-virtual/range {v16 .. v17}, Lcom/htc/music/LandingPageActivity$BaseItem;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 1293
+    .line 1118
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+
+    move-result-object v16
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v0, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v16
+
+    check-cast v16, Lcom/htc/music/LandingPageActivity$BaseItem;
+
+    move-object/from16 v0, p3
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v17
+
+    invoke-virtual/range {v16 .. v17}, Lcom/htc/music/LandingPageActivity$BaseItem;->setArtPath(Ljava/lang/String;)V
+
+    .line 1122
     :cond_7
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1283
-    add-int/lit8 v8, v8, 0x1
+    .line 1112
+    add-int/lit8 v10, v10, 0x1
 
-    goto :goto_4
+    goto/16 :goto_5
 
-    .line 1284
+    .line 1113
     :cond_8
-    add-int/lit8 v13, v13, 0x1
+    add-int/lit8 v15, v15, 0x1
 
-    goto :goto_5
+    goto/16 :goto_6
 
-    .line 1296
-    .end local v13           #j:I
+    .line 1125
+    .end local v15           #j:I
     :cond_9
-    new-instance v12, Ljava/util/ArrayList;
+    new-instance v14, Ljava/util/ArrayList;
 
-    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1297
-    .local v12, inValidList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/LandingPageActivity$BaseItem;>;"
-    const/4 v8, 0x0
+    .line 1126
+    .local v14, inValidList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/LandingPageActivity$BaseItem;>;"
+    const/4 v10, 0x0
 
-    :goto_6
-    array-length v14, v7
+    :goto_7
+    array-length v0, v9
 
-    if-ge v8, v14, :cond_b
+    move/from16 v16, v0
 
-    .line 1298
-    aget-boolean v14, v7, v8
+    move/from16 v0, v16
 
-    if-nez v14, :cond_a
+    if-ge v10, v0, :cond_b
 
-    .line 1299
+    .line 1127
+    aget-boolean v16, v9, v10
+
+    if-nez v16, :cond_a
+
+    .line 1128
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-object/from16 v0, v16
 
-    move-result-object v14
+    invoke-virtual {v0, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v12, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v16
 
-    .line 1297
+    move-object/from16 v0, v16
+
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1126
     :cond_a
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v10, v10, 0x1
 
-    goto :goto_6
+    goto :goto_7
 
-    .line 1302
+    .line 1131
     :cond_b
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1200(Lcom/htc/music/LandingPageActivity;)Ljava/util/ArrayList;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14, v12}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
+    move-object/from16 v0, v16
 
-    .line 1309
-    .end local v2           #albumArtIdx:I
-    .end local v3           #albumIdx:I
-    .end local v4           #artistIdx:I
-    .end local v7           #existArray:[Z
-    .end local v8           #i:I
-    .end local v10           #idIdx:I
-    .end local v12           #inValidList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/LandingPageActivity$BaseItem;>;"
+    invoke-virtual {v0, v14}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
+
+    .line 1138
+    .end local v3           #albumArtIdx:I
+    .end local v4           #albumIdx:I
+    .end local v5           #artistIdx:I
+    .end local v9           #existArray:[Z
+    .end local v10           #i:I
+    .end local v12           #idIdx:I
+    .end local v14           #inValidList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/music/LandingPageActivity$BaseItem;>;"
     :cond_c
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mAdapter:Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1000(Lcom/htc/music/LandingPageActivity;)Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1000(Lcom/htc/music/LandingPageActivity;)Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
 
-    move-result-object v14
+    move-result-object v16
 
-    if-eqz v14, :cond_d
+    if-eqz v16, :cond_d
 
-    .line 1310
+    .line 1139
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+    iget-object v0, v0, Lcom/htc/music/LandingPageActivity$RecentAlbumQueryHandler;->this$0:Lcom/htc/music/LandingPageActivity;
+
+    move-object/from16 v16, v0
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mAdapter:Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
-    invoke-static {v14}, Lcom/htc/music/LandingPageActivity;->access$1000(Lcom/htc/music/LandingPageActivity;)Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity;->access$1000(Lcom/htc/music/LandingPageActivity;)Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
 
-    move-result-object v14
+    move-result-object v16
 
-    invoke-virtual {v14}, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;->notifyDataSetChanged()V
+    invoke-virtual/range {v16 .. v16}, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;->notifyDataSetChanged()V
 
-    .line 1312
+    .line 1141
     :cond_d
     return-void
 .end method

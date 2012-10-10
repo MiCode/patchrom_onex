@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 200
+    .line 205
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,11 +36,11 @@
     .parameter "which"
 
     .prologue
-    .line 202
+    .line 207
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/htc/app/HtcShutdownThread;->access$002(Z)Z
 
-    .line 203
+    .line 208
     return-void
 .end method

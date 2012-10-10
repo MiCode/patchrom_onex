@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 2039
+    .line 2387
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$9;->this$0:Lcom/htc/app/FilePickerCore;
 
     iput-object p2, p0, Lcom/htc/app/FilePickerCore$9;->val$fileScanner:Lcom/htc/app/FileScanner;
@@ -46,14 +46,14 @@
     .locals 2
 
     .prologue
-    .line 2042
+    .line 2390
     const-string v0, "FilePickerWithDB"
 
     const-string v1, "#### scanFilesByFavorite"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2044
+    .line 2392
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$9;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerCore;->getFavoritesFragment()Lcom/htc/app/FilePickerFavoritesFragment;
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2045
+    .line 2393
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$9;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerCore;->getFavoritesFragment()Lcom/htc/app/FilePickerFavoritesFragment;
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFavoritesFragment;->NotifyToDoTask(I)V
 
-    .line 2047
+    .line 2395
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$9;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerCore;->getFavoritesFragment()Lcom/htc/app/FilePickerFavoritesFragment;
@@ -84,12 +84,12 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/FilePickerFavoritesFragment;->NotifyToDoTask(I)V
 
-    .line 2050
+    .line 2398
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$9;->val$fileScanner:Lcom/htc/app/FileScanner;
 
     invoke-virtual {v0}, Lcom/htc/app/FileScanner;->scanFilesByFavorite()V
 
-    .line 2051
+    .line 2399
     return-void
 .end method

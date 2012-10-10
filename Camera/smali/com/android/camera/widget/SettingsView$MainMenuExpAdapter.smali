@@ -256,7 +256,7 @@
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 393
-    const v3, 0x7f0800a8
+    const v3, 0x7f0800aa
 
     invoke-virtual {p4, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -675,7 +675,7 @@
     invoke-virtual {v11, v12}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 480
-    const v12, 0x7f0800a7
+    const v12, 0x7f0800a9
 
     move-object/from16 v0, p3
 
@@ -789,7 +789,7 @@
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     .line 498
-    const v12, 0x7f0800a7
+    const v12, 0x7f0800a9
 
     move-object/from16 v0, p3
 
@@ -899,7 +899,7 @@
     invoke-virtual {v11, v12}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 514
-    const v12, 0x7f0800a7
+    const v12, 0x7f0800a9
 
     move-object/from16 v0, p3
 
@@ -1485,7 +1485,7 @@
     invoke-virtual {v3, v0}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     .line 595
-    const v3, 0x7f0800a7
+    const v3, 0x7f0800a9
 
     invoke-virtual {p2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

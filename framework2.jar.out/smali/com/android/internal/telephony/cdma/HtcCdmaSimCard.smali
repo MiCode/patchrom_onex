@@ -69,7 +69,7 @@
     .locals 2
 
     .prologue
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -78,7 +78,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForSIMLockedOrAbsent(Landroid/os/Handler;)V
 
-    .line 47
+    .line 48
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -87,7 +87,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForOffOrNotAvailable(Landroid/os/Handler;)V
 
-    .line 48
+    .line 49
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
@@ -96,7 +96,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->unregisterForSIMReady(Landroid/os/Handler;)V
 
-    .line 49
+    .line 50
     return-void
 .end method
 
@@ -104,14 +104,14 @@
     .locals 2
 
     .prologue
-    .line 51
+    .line 53
     const-string v0, "CDMA"
 
     const-string v1, "HtcCdmaSimCard finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
+    .line 54
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 66
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mIccStatusInfo:[I
 
     return-object v0
@@ -129,7 +129,7 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 60
     iget-object v0, p0, Lcom/android/internal/telephony/IccCard;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
     check-cast v0, Lcom/android/internal/telephony/cdma/CDMAPhone;

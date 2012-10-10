@@ -46,24 +46,24 @@
 
     const/4 v1, 0x0
 
-    .line 1112
+    .line 1126
     iput-object p1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     invoke-direct {p0}, Lcom/htc/music/widget/gridview/MusicGridViewMediaData;-><init>()V
 
-    .line 1105
+    .line 1119
     iput-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mPath:Ljava/lang/String;
 
-    .line 1107
+    .line 1121
     iput-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mFirstChildId:Ljava/lang/String;
 
-    .line 1108
+    .line 1122
     iput v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mNumberOfChilds:I
 
-    .line 1110
+    .line 1124
     iput-boolean v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->needToGetPath:Z
 
-    .line 1113
+    .line 1127
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mParentNameField:I
     invoke-static {p1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->access$1300(Lcom/htc/music/widget/gridview/MusicGridViewUtil;)I
 
@@ -75,7 +75,7 @@
 
     iput-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mName:Ljava/lang/String;
 
-    .line 1114
+    .line 1128
     iget-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mName:Ljava/lang/String;
 
     if-eqz v3, :cond_0
@@ -93,12 +93,12 @@
     :cond_0
     move v0, v2
 
-    .line 1115
+    .line 1129
     .local v0, unknown:Z
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 1116
+    .line 1130
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mParentUnknowName:Ljava/lang/String;
     invoke-static {p1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->access$1600(Lcom/htc/music/widget/gridview/MusicGridViewUtil;)Ljava/lang/String;
 
@@ -106,7 +106,7 @@
 
     iput-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mName:Ljava/lang/String;
 
-    .line 1118
+    .line 1132
     :cond_1
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mParentIdField:I
     invoke-static {p1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->access$1200(Lcom/htc/music/widget/gridview/MusicGridViewUtil;)I
@@ -119,10 +119,10 @@
 
     iput-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mId:Ljava/lang/String;
 
-    .line 1119
+    .line 1133
     iput p2, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mIndex:I
 
-    .line 1120
+    .line 1134
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mParentImagePathField:I
     invoke-static {p1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->access$1400(Lcom/htc/music/widget/gridview/MusicGridViewUtil;)I
 
@@ -132,7 +132,7 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 1121
+    .line 1135
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mParentImagePathField:I
     invoke-static {p1}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->access$1400(Lcom/htc/music/widget/gridview/MusicGridViewUtil;)I
 
@@ -144,13 +144,13 @@
 
     iput-object v3, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mPath:Ljava/lang/String;
 
-    .line 1122
+    .line 1136
     iput-boolean v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->needToGetPath:Z
 
-    .line 1123
+    .line 1137
     iput-boolean v2, p0, Lcom/htc/music/widget/gridview/MusicGridViewMediaData;->mIsDataReady:Z
 
-    .line 1129
+    .line 1143
     :cond_2
     return-void
 
@@ -158,7 +158,7 @@
     :cond_3
     move v0, v1
 
-    .line 1114
+    .line 1128
     goto :goto_0
 .end method
 
@@ -167,7 +167,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1102
+    .line 1116
     iget-boolean v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->needToGetPath:Z
 
     return v0
@@ -179,7 +179,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1102
+    .line 1116
     iput-boolean p1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->needToGetPath:Z
 
     return p1
@@ -191,16 +191,16 @@
     .locals 2
 
     .prologue
-    .line 1137
+    .line 1151
     monitor-enter p0
 
-    .line 1138
+    .line 1152
     :try_start_0
     iget-boolean v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->needToGetPath:Z
 
     if-eqz v1, :cond_0
 
-    .line 1139
+    .line 1153
     iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mNonUiHandler:Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;
@@ -210,7 +210,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1140
+    .line 1154
     iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mNonUiHandler:Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;
@@ -222,16 +222,16 @@
 
     move-result-object v0
 
-    .line 1141
+    .line 1155
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 1142
+    .line 1156
     iput-object p0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1143
+    .line 1157
     iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->this$0:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
 
     #getter for: Lcom/htc/music/widget/gridview/MusicGridViewUtil;->mNonUiHandler:Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;
@@ -241,7 +241,7 @@
 
     invoke-virtual {v1, v0}, Lcom/htc/music/widget/gridview/MusicGridViewUtil$NonUiHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1146
+    .line 1160
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     iget-object v1, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mPath:Ljava/lang/String;
@@ -250,7 +250,7 @@
 
     return-object v1
 
-    .line 1147
+    .line 1161
     :catchall_0
     move-exception v1
 
@@ -265,10 +265,10 @@
     .locals 1
 
     .prologue
-    .line 1151
+    .line 1165
     monitor-enter p0
 
-    .line 1152
+    .line 1166
     :try_start_0
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mPath:Ljava/lang/String;
 
@@ -276,7 +276,7 @@
 
     return-object v0
 
-    .line 1153
+    .line 1167
     :catchall_0
     move-exception v0
 
@@ -291,7 +291,7 @@
     .locals 1
 
     .prologue
-    .line 1163
+    .line 1177
     const/4 v0, 0x0
 
     return v0
@@ -301,14 +301,14 @@
     .locals 1
 
     .prologue
-    .line 1132
+    .line 1146
     iget-object v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewUtil$ParentMediaData;->mName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     const-string v0, "unknown"
 
-    .line 1133
+    .line 1147
     :goto_0
     return-object v0
 
@@ -322,10 +322,10 @@
     .locals 1
 
     .prologue
-    .line 1157
+    .line 1171
     monitor-enter p0
 
-    .line 1158
+    .line 1172
     :try_start_0
     iget-boolean v0, p0, Lcom/htc/music/widget/gridview/MusicGridViewMediaData;->mIsDataReady:Z
 
@@ -333,7 +333,7 @@
 
     return v0
 
-    .line 1159
+    .line 1173
     :catchall_0
     move-exception v0
 

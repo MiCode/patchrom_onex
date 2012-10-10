@@ -24,6 +24,10 @@
 
 .field private mBmpWidth:I
 
+.field private mCloned:Z
+
+.field private mNeedRecycle:Z
+
 
 # direct methods
 .method private constructor <init>(Landroid/graphics/Bitmap;I)V
@@ -44,6 +48,12 @@
     iput v0, p0, Lcom/htc/sunny2/SBitmap;->mBmpWidth:I
 
     iput v0, p0, Lcom/htc/sunny2/SBitmap;->mBmpHeight:I
+
+    .line 327
+    iput-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mCloned:Z
+
+    .line 328
+    iput-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mNeedRecycle:Z
 
     .line 45
     iput p2, p0, Lcom/htc/sunny2/SBitmap;->mBmpId:I
@@ -83,6 +93,12 @@
     iput v0, p0, Lcom/htc/sunny2/SBitmap;->mBmpWidth:I
 
     iput v0, p0, Lcom/htc/sunny2/SBitmap;->mBmpHeight:I
+
+    .line 327
+    iput-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mCloned:Z
+
+    .line 328
+    iput-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mNeedRecycle:Z
 
     .line 51
     iget v0, p1, Lcom/htc/sunny2/SBitmap;->mBmpId:I
@@ -558,6 +574,36 @@
 
 
 # virtual methods
+.method cloneSBitmap()Lcom/htc/sunny2/SBitmap;
+    .locals 1
+
+    .prologue
+    .line 335
+    monitor-enter p0
+
+    .line 336
+    const/4 v0, 0x1
+
+    :try_start_0
+    iput-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mCloned:Z
+
+    .line 337
+    monitor-exit p0
+
+    .line 338
+    return-object p0
+
+    .line 337
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
 .method public final getBmpId()I
     .locals 1
 
@@ -592,7 +638,11 @@
     .locals 1
 
     .prologue
-    .line 304
+    .line 311
+    monitor-enter p0
+
+    .line 312
+    :try_start_0
     iget v0, p0, Lcom/htc/sunny2/SBitmap;->mBmpId:I
 
     if-nez v0, :cond_0
@@ -600,43 +650,132 @@
     const/4 v0, 0x1
 
     :goto_0
+    monitor-exit p0
+
     return v0
 
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
+
+    .line 313
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method
 
 .method public recycle()V
     .locals 2
 
     .prologue
+    const/4 v1, 0x1
+
     .line 275
+    monitor-enter p0
+
+    .line 276
+    :try_start_0
+    iget-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mCloned:Z
+
+    if-eqz v0, :cond_0
+
+    .line 277
     const/4 v0, 0x1
 
-    invoke-virtual {p0}, Lcom/htc/sunny2/SBitmap;->isRecycled()Z
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
+    iput-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mNeedRecycle:Z
 
     .line 278
+    monitor-exit p0
+
+    .line 285
     :goto_0
     return-void
 
-    .line 276
+    .line 281
     :cond_0
+    invoke-virtual {p0}, Lcom/htc/sunny2/SBitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-ne v1, v0, :cond_1
+
+    monitor-exit p0
+
+    goto :goto_0
+
+    .line 284
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    .line 282
+    :cond_1
+    :try_start_1
     iget v0, p0, Lcom/htc/sunny2/SBitmap;->mBmpId:I
 
     invoke-static {v0}, Lcom/htc/sunny2/Sunny2;->DestroyBitmap(I)V
 
-    .line 277
+    .line 283
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/sunny2/SBitmap;->mBmpId:I
 
+    .line 284
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     goto :goto_0
+.end method
+
+.method releaseClone()V
+    .locals 1
+
+    .prologue
+    .line 342
+    monitor-enter p0
+
+    .line 343
+    const/4 v0, 0x0
+
+    :try_start_0
+    iput-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mCloned:Z
+
+    .line 345
+    iget-boolean v0, p0, Lcom/htc/sunny2/SBitmap;->mNeedRecycle:Z
+
+    if-eqz v0, :cond_0
+
+    .line 346
+    invoke-virtual {p0}, Lcom/htc/sunny2/SBitmap;->recycle()V
+
+    .line 348
+    :cond_0
+    monitor-exit p0
+
+    .line 349
+    return-void
+
+    .line 348
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method
 
 .method public substitute()Lcom/htc/sunny2/SBitmap;
@@ -645,7 +784,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 287
+    .line 294
     const/4 v1, 0x1
 
     invoke-virtual {p0}, Lcom/htc/sunny2/SBitmap;->isRecycled()Z
@@ -654,7 +793,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 288
+    .line 295
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Substitute a recycled SBitmap"
@@ -663,23 +802,23 @@
 
     throw v1
 
-    .line 291
+    .line 298
     :cond_0
     new-instance v0, Lcom/htc/sunny2/SBitmap;
 
     invoke-direct {v0, p0}, Lcom/htc/sunny2/SBitmap;-><init>(Lcom/htc/sunny2/SBitmap;)V
 
-    .line 292
+    .line 299
     .local v0, newBitmap:Lcom/htc/sunny2/SBitmap;
     iput v3, p0, Lcom/htc/sunny2/SBitmap;->mBmpId:I
 
-    .line 293
+    .line 300
     iput v3, p0, Lcom/htc/sunny2/SBitmap;->mBmpWidth:I
 
-    .line 294
+    .line 301
     iput v3, p0, Lcom/htc/sunny2/SBitmap;->mBmpHeight:I
 
-    .line 295
+    .line 302
     return-object v0
 .end method
 
@@ -687,14 +826,14 @@
     .locals 3
 
     .prologue
-    .line 308
+    .line 317
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x20
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 309
+    .line 318
     .local v0, sb:Ljava/lang/StringBuilder;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -718,7 +857,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 310
+    .line 319
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -741,7 +880,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 311
+    .line 320
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -764,7 +903,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 312
+    .line 321
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -789,12 +928,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 313
+    .line 322
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 314
+    .line 323
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

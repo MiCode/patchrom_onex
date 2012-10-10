@@ -3,7 +3,7 @@
 .source "AutoFocusController.java"
 
 # interfaces
-.implements Lcom/android/camera/property/PropertyChangedCallback;
+.implements Lcom/android/camera/event/EventHandler;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/android/camera/property/PropertyChangedCallback",
+        "Lcom/android/camera/event/EventHandler",
         "<",
-        "Ljava/lang/Boolean;",
+        "Lcom/android/camera/event/EventArgs;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 474
+    .line 569
     iput-object p1, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,33 +47,70 @@
 
 
 # virtual methods
-.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
-    .locals 6
+.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+    .locals 3
     .parameter
-    .parameter
+    .parameter "sender"
+    .parameter "e"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/android/camera/property/Property",
+            "Lcom/android/camera/event/Event",
             "<",
-            "Ljava/lang/Boolean;",
+            "Lcom/android/camera/event/EventArgs;",
             ">;",
-            "Lcom/android/camera/property/PropertyChangedEventArgs",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;)V"
+            "Ljava/lang/Object;",
+            "Lcom/android/camera/event/EventArgs;",
+            ")V"
         }
     .end annotation
 
     .prologue
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
-    const/high16 v5, 0x3f20
+    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
+    const/4 v2, 0x0
 
-    const/high16 v4, 0x3ec0
+    .line 573
+    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
 
-    .line 478
-    iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
+    #setter for: Lcom/android/camera/component/AutoFocusController;->m_IsFocusing:Z
+    invoke-static {v0, v2}, Lcom/android/camera/component/AutoFocusController;->access$402(Lcom/android/camera/component/AutoFocusController;Z)Z
+
+    .line 574
+    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
+
+    #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$500(Lcom/android/camera/component/AutoFocusController;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Reset ModeAssigned"
+
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 575
+    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
+
+    #setter for: Lcom/android/camera/component/AutoFocusController;->m_ModeAssigned:Z
+    invoke-static {v0, v2}, Lcom/android/camera/component/AutoFocusController;->access$602(Lcom/android/camera/component/AutoFocusController;Z)Z
+
+    .line 576
+    invoke-static {}, Lcom/android/camera/DisplayDevice;->supportCAF()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
+
+    invoke-virtual {v0}, Lcom/android/camera/component/AutoFocusController;->getCameraThread()Lcom/android/camera/CameraThread;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->isAutoFocusLocked:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
 
     check-cast v0, Ljava/lang/Boolean;
 
@@ -81,59 +118,48 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    .line 480
-    invoke-static {}, Lcom/android/camera/DisplayDevice;->supportCAF()Z
+    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
+
+    #getter for: Lcom/android/camera/component/AutoFocusController;->m_IsFocusLocked:Z
+    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$700(Lcom/android/camera/component/AutoFocusController;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 481
+    .line 580
     iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
-    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$700(Lcom/android/camera/component/AutoFocusController;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$800(Lcom/android/camera/component/AutoFocusController;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "Trigger focus before recording"
+    const-string v1, "Unlock auto-focus"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 482
+    .line 581
     iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
 
-    const/4 v1, 0x1
+    #setter for: Lcom/android/camera/component/AutoFocusController;->m_IsFocusLocked:Z
+    invoke-static {v0, v2}, Lcom/android/camera/component/AutoFocusController;->access$702(Lcom/android/camera/component/AutoFocusController;Z)Z
 
-    new-array v1, v1, [Landroid/graphics/RectF;
+    .line 582
+    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
 
-    const/4 v2, 0x0
+    #setter for: Lcom/android/camera/component/AutoFocusController;->m_IsFocusLocking:Z
+    invoke-static {v0, v2}, Lcom/android/camera/component/AutoFocusController;->access$902(Lcom/android/camera/component/AutoFocusController;Z)Z
 
-    new-instance v3, Landroid/graphics/RectF;
+    .line 583
+    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
 
-    invoke-direct {v3, v4, v4, v5, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
+    #calls: Lcom/android/camera/component/AutoFocusController;->cancelAutoFocusDirectly()V
+    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$1000(Lcom/android/camera/component/AutoFocusController;)V
 
-    aput-object v3, v1, v2
-
-    sget-object v2, Lcom/android/camera/AutoFocusMode;->Touch:Lcom/android/camera/AutoFocusMode;
-
-    #calls: Lcom/android/camera/component/AutoFocusController;->autoFocus([Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;)Z
-    invoke-static {v0, v1, v2}, Lcom/android/camera/component/AutoFocusController;->access$000(Lcom/android/camera/component/AutoFocusController;[Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;)Z
-
-    .line 490
+    .line 585
     :cond_0
-    :goto_0
     return-void
-
-    .line 487
-    :cond_1
-    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$5;->this$0:Lcom/android/camera/component/AutoFocusController;
-
-    const/16 v1, 0x2712
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/component/AutoFocusController;->removeMessages(I)V
-
-    goto :goto_0
 .end method

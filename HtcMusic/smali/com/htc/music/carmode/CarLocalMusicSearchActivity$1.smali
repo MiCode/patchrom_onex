@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 126
+    .line 124
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$1;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,21 +45,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 129
+    .line 127
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 130
+    .line 128
     const-string v1, "[CarLocalMusicSearchActivity]"
 
     const-string v2, "mListViewTouchListener onTouch: ACTION_DOWN"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 131
+    .line 129
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$1;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     const-string v2, "input_method"
@@ -70,11 +70,11 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 132
+    .line 130
     .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_1
 
-    .line 133
+    .line 131
     iget-object v1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$1;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-virtual {v1}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->getWindow()Landroid/view/Window;
@@ -91,13 +91,13 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 138
+    .line 136
     .end local v0           #imm:Landroid/view/inputmethod/InputMethodManager;
     :cond_0
     :goto_0
     return v3
 
-    .line 135
+    .line 133
     .restart local v0       #imm:Landroid/view/inputmethod/InputMethodManager;
     :cond_1
     const-string v1, "[CarLocalMusicSearchActivity]"

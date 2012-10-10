@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 270
+    .line 275
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$Engine$4;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     invoke-direct {p0}, Lcom/android/internal/view/BaseInputHandler;-><init>()V
@@ -40,23 +40,23 @@
     .parameter "finishedCallback"
 
     .prologue
-    .line 274
+    .line 279
     const/4 v0, 0x0
 
-    .line 276
+    .line 281
     .local v0, handled:Z
     :try_start_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
 
     move-result v1
 
-    .line 277
+    .line 282
     .local v1, source:I
     and-int/lit8 v2, v1, 0x2
 
     if-eqz v2, :cond_0
 
-    .line 278
+    .line 283
     iget-object v2, p0, Landroid/service/wallpaper/WallpaperService$Engine$4;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     #calls: Landroid/service/wallpaper/WallpaperService$Engine;->dispatchPointer(Landroid/view/MotionEvent;)V
@@ -64,17 +64,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 279
+    .line 284
     const/4 v0, 0x1
 
-    .line 282
+    .line 287
     :cond_0
     invoke-virtual {p2, v0}, Landroid/view/InputQueue$FinishedCallback;->finished(Z)V
 
-    .line 284
+    .line 289
     return-void
 
-    .line 282
+    .line 287
     .end local v1           #source:I
     :catchall_0
     move-exception v2

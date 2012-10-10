@@ -108,7 +108,7 @@
 
     const/4 v2, 0x0
 
-    .line 2855
+    .line 2858
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0x70
@@ -120,7 +120,7 @@
     :goto_0
     sput-boolean v0, Landroid/provider/Telephony$Carriers;->FLAG_APN_DISPATCH_MODE:Z
 
-    .line 2864
+    .line 2867
     const-string v0, "content://telephony/carriers"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -129,7 +129,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2868
+    .line 2871
     const-string v0, "content://telephony/carriers/current"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -138,7 +138,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI_CURRENT:Landroid/net/Uri;
 
-    .line 2871
+    .line 2874
     const-string v0, "content://telephony/carriers/current_gsm"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -147,7 +147,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI_CURRENT_GSM:Landroid/net/Uri;
 
-    .line 2874
+    .line 2877
     const-string v0, "content://telephony/carriers/current_cdma"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -156,7 +156,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI_CURRENT_CDMA:Landroid/net/Uri;
 
-    .line 2877
+    .line 2880
     const-string v0, "content://telephony/carriers-preferapn"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -165,7 +165,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI_PREFERAPN:Landroid/net/Uri;
 
-    .line 2880
+    .line 2883
     const-string v0, "content://telephony/carriers-preferapn-gsm"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -174,7 +174,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI_PREFERAPN_GSM:Landroid/net/Uri;
 
-    .line 2883
+    .line 2886
     const-string v0, "content://telephony/carriers-preferapn-cdma"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -183,7 +183,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI_PREFERAPN_CDMA:Landroid/net/Uri;
 
-    .line 2893
+    .line 2896
     const-string v0, "content://cdmaapn/carriers/"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -192,7 +192,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers;->CDMA_CONTENT_URI:Landroid/net/Uri;
 
-    .line 2978
+    .line 2981
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0xd2
@@ -213,13 +213,13 @@
     :cond_0
     move v0, v2
 
-    .line 2855
+    .line 2858
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 2978
+    .line 2981
     goto :goto_1
 .end method
 
@@ -227,8 +227,8 @@
     .locals 0
 
     .prologue
-    .line 2853
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2856
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -238,16 +238,16 @@
     .parameter "context"
 
     .prologue
-    .line 2985
+    .line 2988
     const-string v0, ""
 
-    .line 2986
+    .line 2989
     .local v0, result:Ljava/lang/String;
     sget-boolean v2, Landroid/provider/Telephony$Carriers;->FEATURE_APN_ROAMING:Z
 
     if-eqz v2, :cond_0
 
-    .line 2987
+    .line 2990
     const-string/jumbo v2, "phone"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -256,7 +256,7 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    .line 2988
+    .line 2991
     .local v1, telephonyManager:Landroid/telephony/TelephonyManager;
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->isNetworkRoaming()Z
 
@@ -264,16 +264,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 2989
+    .line 2992
     const-string v0, " AND area = \'roaming\'"
 
-    .line 2994
+    .line 2997
     .end local v1           #telephonyManager:Landroid/telephony/TelephonyManager;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 2991
+    .line 2994
     .restart local v1       #telephonyManager:Landroid/telephony/TelephonyManager;
     :cond_1
     const-string v0, " AND area = \'domestic\'"

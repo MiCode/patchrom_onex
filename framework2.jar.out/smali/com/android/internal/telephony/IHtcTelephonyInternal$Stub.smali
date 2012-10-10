@@ -80,6 +80,8 @@
 
 .field static final TRANSACTION_getSectorId:I = 0x1d
 
+.field static final TRANSACTION_gsmAuthentication:I = 0x54
+
 .field static final TRANSACTION_hello_getDeviceId:I = 0x1
 
 .field static final TRANSACTION_isCatServiceReady:I = 0x45
@@ -286,7 +288,7 @@
     .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 939
+    .line 955
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v9
@@ -2884,7 +2886,48 @@
 
     goto/16 :goto_0
 
+    .line 940
+    .end local v8           #_result:[I
+    :sswitch_54
+    const-string v0, "com.android.internal.telephony.IHtcTelephonyInternal"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 942
+    invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object v1
+
+    .line 943
+    .local v1, _arg0:[B
+    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/IHtcTelephonyInternal$Stub;->gsmAuthentication([B)Landroid/os/Bundle;
+
+    move-result-object v8
+
+    .line 944
+    .local v8, _result:Landroid/os/Bundle;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 945
+    if-eqz v8, :cond_1f
+
+    .line 946
+    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 947
+    invoke-virtual {v8, p3, v9}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+
+    goto/16 :goto_0
+
+    .line 950
+    :cond_1f
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
     .line 42
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -2970,6 +3013,7 @@
         0x51 -> :sswitch_51
         0x52 -> :sswitch_52
         0x53 -> :sswitch_53
+        0x54 -> :sswitch_54
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

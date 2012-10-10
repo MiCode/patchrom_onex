@@ -47,7 +47,7 @@
 
     const/4 v3, 0x0
 
-    .line 1516
+    .line 1640
     const-string v0, "content://com.android.calendar/events"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -56,7 +56,7 @@
 
     sput-object v0, Landroid/provider/HtcCalendarContract$Events;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1524
+    .line 1649
     const-string v0, "content://com.android.calendar/exception"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -65,7 +65,7 @@
 
     sput-object v0, Landroid/provider/HtcCalendarContract$Events;->CONTENT_EXCEPTION_URI:Landroid/net/Uri;
 
-    .line 1544
+    .line 1670
     const/16 v0, 0x18
 
     new-array v0, v0, [Ljava/lang/String;
@@ -206,7 +206,7 @@
 
     sput-object v0, Landroid/provider/HtcCalendarContract$Events;->PROVIDER_WRITABLE_COLUMNS:[Ljava/lang/String;
 
-    .line 1578
+    .line 1704
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
@@ -282,7 +282,7 @@
     .locals 0
 
     .prologue
-    .line 1530
+    .line 1656
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -118,7 +118,7 @@
     iput-object v0, p0, Landroid/webkit/FindActionModeCallback;->mMatches:Landroid/widget/TextView;
 
     .line 64
-    const-string/jumbo v0, "input_method"
+    const-string v0, "input_method"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

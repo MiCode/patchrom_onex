@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1087
+    .line 1094
     iput-object p1, p0, Lcom/htc/music/MiniPlayer$5;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "v"
 
     .prologue
-    .line 1089
+    .line 1096
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$5;->this$0:Lcom/htc/music/MiniPlayer;
 
     #calls: Lcom/htc/music/MiniPlayer;->doPauseResume()V
     invoke-static {v0}, Lcom/htc/music/MiniPlayer;->access$400(Lcom/htc/music/MiniPlayer;)V
 
-    .line 1090
+    .line 1097
     return-void
 .end method

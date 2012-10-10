@@ -27,13 +27,13 @@
     .parameter "dialog"
 
     .prologue
-    .line 5267
+    .line 5299
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5268
+    .line 5300
     iput-object p1, p0, Lcom/htc/music/HtcMusic$EditTextWatcher;->mDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    .line 5269
+    .line 5301
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 5273
+    .line 5305
     return-void
 .end method
 
@@ -56,7 +56,7 @@
     .parameter "arg3"
 
     .prologue
-    .line 5278
+    .line 5310
     return-void
 .end method
 
@@ -72,12 +72,12 @@
 
     const/4 v3, 0x0
 
-    .line 5282
+    .line 5314
     if-nez p1, :cond_1
 
     const/4 v1, 0x0
 
-    .line 5283
+    .line 5315
     .local v1, name:Ljava/lang/String;
     :goto_0
     if-eqz v1, :cond_0
@@ -93,7 +93,7 @@
     :cond_0
     move v0, v4
 
-    .line 5284
+    .line 5316
     .local v0, empty:Z
     :goto_1
     iget-object v5, p0, Lcom/htc/music/HtcMusic$EditTextWatcher;->mDialog:Lcom/htc/widget/HtcAlertDialog;
@@ -104,17 +104,17 @@
 
     move-result-object v2
 
-    .line 5285
+    .line 5317
     .local v2, save:Landroid/widget/Button;
     if-nez v0, :cond_3
 
     :goto_2
     invoke-virtual {v2, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 5286
+    .line 5318
     return-void
 
-    .line 5282
+    .line 5314
     .end local v0           #empty:Z
     .end local v1           #name:Ljava/lang/String;
     .end local v2           #save:Landroid/widget/Button;
@@ -133,7 +133,7 @@
     :cond_2
     move v0, v3
 
-    .line 5283
+    .line 5315
     goto :goto_1
 
     .restart local v0       #empty:Z
@@ -141,6 +141,6 @@
     :cond_3
     move v4, v3
 
-    .line 5285
+    .line 5317
     goto :goto_2
 .end method

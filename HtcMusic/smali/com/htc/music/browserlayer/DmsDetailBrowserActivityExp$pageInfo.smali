@@ -32,33 +32,33 @@
     .prologue
     const-wide/16 v1, -0x1
 
-    .line 2201
+    .line 1984
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2202
+    .line 1985
     new-instance v0, Ljava/lang/Long;
 
     invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->startIndex:Ljava/lang/Long;
 
-    .line 2203
+    .line 1986
     new-instance v0, Ljava/lang/Long;
 
     invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->endIndex:Ljava/lang/Long;
 
-    .line 2204
+    .line 1987
     new-instance v0, Ljava/lang/Long;
 
     invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->middleIndex:Ljava/lang/Long;
 
-    .line 2205
+    .line 1988
     return-void
 .end method
 
@@ -70,12 +70,12 @@
     .parameter "end"
 
     .prologue
-    .line 2207
+    .line 1990
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2208
+    .line 1991
     new-instance v0, Ljava/lang/Long;
 
     int-to-long v1, p2
@@ -84,7 +84,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->startIndex:Ljava/lang/Long;
 
-    .line 2209
+    .line 1992
     new-instance v0, Ljava/lang/Long;
 
     int-to-long v1, p3
@@ -93,7 +93,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->endIndex:Ljava/lang/Long;
 
-    .line 2210
+    .line 1993
     new-instance v0, Ljava/lang/Long;
 
     int-to-long v1, p4
@@ -102,7 +102,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->middleIndex:Ljava/lang/Long;
 
-    .line 2211
+    .line 1994
     return-void
 .end method
 
@@ -112,7 +112,7 @@
     .locals 2
 
     .prologue
-    .line 2226
+    .line 2009
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->endIndex:Ljava/lang/Long;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -126,7 +126,7 @@
     .locals 2
 
     .prologue
-    .line 2234
+    .line 2017
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->middleIndex:Ljava/lang/Long;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -140,7 +140,7 @@
     .locals 2
 
     .prologue
-    .line 2218
+    .line 2001
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->startIndex:Ljava/lang/Long;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -155,14 +155,14 @@
     .parameter "index"
 
     .prologue
-    .line 2222
+    .line 2005
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->endIndex:Ljava/lang/Long;
 
-    .line 2223
+    .line 2006
     return-void
 .end method
 
@@ -171,14 +171,14 @@
     .parameter "index"
 
     .prologue
-    .line 2230
+    .line 2013
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->middleIndex:Ljava/lang/Long;
 
-    .line 2231
+    .line 2014
     return-void
 .end method
 
@@ -187,13 +187,13 @@
     .parameter "index"
 
     .prologue
-    .line 2214
+    .line 1997
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->startIndex:Ljava/lang/Long;
 
-    .line 2215
+    .line 1998
     return-void
 .end method

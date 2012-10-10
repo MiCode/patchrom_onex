@@ -107,7 +107,7 @@
     .line 33
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 432
+    .line 433
     return-void
 .end method
 
@@ -334,7 +334,7 @@
     .locals 0
 
     .prologue
-    .line 283
+    .line 284
     return-void
 .end method
 
@@ -743,7 +743,24 @@
     return v0
 .end method
 
-.method public abstract onResult([Ljava/lang/String;II)V
+.method public onResult(Landroid/os/Bundle;)V
+    .locals 0
+    .parameter "bundle"
+
+    .prologue
+    .line 278
+    return-void
+.end method
+
+.method public onResult([Ljava/lang/String;II)V
+    .locals 0
+    .parameter "output"
+    .parameter "sortType"
+    .parameter "sortOrder"
+
+    .prologue
+    .line 277
+    return-void
 .end method
 
 .method protected onStart()V

@@ -491,7 +491,7 @@
 
     .line 270
     .local v1, content:Ljava/lang/String;
-    const-string v6, "{"
+    const-string/jumbo v6, "{"
 
     invoke-virtual {v1, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 

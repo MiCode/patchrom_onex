@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 155
+    .line 157
     iput-object p1, p0, Lcom/android/camera/component/ObjectTrackingUI$2;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 158
+    .line 160
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -79,17 +79,17 @@
 
     if-nez v0, :cond_0
 
-    .line 159
+    .line 161
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$2;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     #calls: Lcom/android/camera/component/ObjectTrackingUI;->stopFaceDetection()V
     invoke-static {v0}, Lcom/android/camera/component/ObjectTrackingUI;->access$300(Lcom/android/camera/component/ObjectTrackingUI;)V
 
-    .line 162
+    .line 164
     :goto_0
     return-void
 
-    .line 161
+    .line 163
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$2;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 

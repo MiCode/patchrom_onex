@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3939
+    .line 4299
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,42 +38,10 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 5
 
     .prologue
-    .line 3942
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$300(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerUtil;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 3943
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$300(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerUtil;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/htc/app/FilePickerUtil;->getSelectedDownloadedPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 3944
-    const/4 v1, 0x1
-
-    new-array v0, v1, [Ljava/lang/String;
-
-    .line 3945
-    .local v0, output:[Ljava/lang/String;
-    const/4 v1, 0x0
-
+    .line 4302
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -81,53 +49,80 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/htc/app/FilePickerUtil;->getSelectedDownloadedPath()Ljava/lang/String;
+    if-eqz v2, :cond_1
+
+    .line 4303
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$300(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerUtil;
 
     move-result-object v2
 
-    aput-object v2, v0, v1
+    invoke-virtual {v2}, Lcom/htc/app/FilePickerUtil;->getSelectedDownloadedBundle()Landroid/os/Bundle;
 
-    .line 3946
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
+    .line 4304
+    .local v0, bundle:Landroid/os/Bundle;
+    if-eqz v0, :cond_0
 
-    #getter for: Lcom/htc/app/FilePickerCore;->mSortType:I
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5000(Lcom/htc/app/FilePickerCore;)I
+    .line 4305
+    const-string v2, "output"
 
-    move-result v2
-
-    iget-object v3, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->mSortOrder:I
-    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$5100(Lcom/htc/app/FilePickerCore;)I
-
-    move-result v3
-
-    #calls: Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
-    invoke-static {v1, v0, v2, v3}, Lcom/htc/app/FilePickerCore;->access$6500(Lcom/htc/app/FilePickerCore;[Ljava/lang/String;II)V
-
-    .line 3947
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #calls: Lcom/htc/app/FilePickerCore;->finish()V
-    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$6600(Lcom/htc/app/FilePickerCore;)V
-
-    .line 3949
-    .end local v0           #output:[Ljava/lang/String;
-    :cond_0
-    iget-object v1, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
-
-    #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$300(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerUtil;
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    .line 4306
+    .local v1, output:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
 
-    invoke-virtual {v1, v2}, Lcom/htc/app/FilePickerUtil;->setSelectedDownloadedPath(Ljava/lang/String;)V
+    iget-object v3, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
 
-    .line 3951
+    #getter for: Lcom/htc/app/FilePickerCore;->mSortType:I
+    invoke-static {v3}, Lcom/htc/app/FilePickerCore;->access$3700(Lcom/htc/app/FilePickerCore;)I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #getter for: Lcom/htc/app/FilePickerCore;->mSortOrder:I
+    invoke-static {v4}, Lcom/htc/app/FilePickerCore;->access$3600(Lcom/htc/app/FilePickerCore;)I
+
+    move-result v4
+
+    #calls: Lcom/htc/app/FilePickerCore;->onResult([Ljava/lang/String;II)V
+    invoke-static {v2, v1, v3, v4}, Lcom/htc/app/FilePickerCore;->access$7900(Lcom/htc/app/FilePickerCore;[Ljava/lang/String;II)V
+
+    .line 4307
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #calls: Lcom/htc/app/FilePickerCore;->onResult(Landroid/os/Bundle;)V
+    invoke-static {v2, v0}, Lcom/htc/app/FilePickerCore;->access$8000(Lcom/htc/app/FilePickerCore;Landroid/os/Bundle;)V
+
+    .line 4308
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #calls: Lcom/htc/app/FilePickerCore;->finish()V
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$8100(Lcom/htc/app/FilePickerCore;)V
+
+    .line 4310
+    .end local v1           #output:[Ljava/lang/String;
+    :cond_0
+    iget-object v2, p0, Lcom/htc/app/FilePickerCore$31;->this$0:Lcom/htc/app/FilePickerCore;
+
+    #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$300(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerUtil;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Lcom/htc/app/FilePickerUtil;->setSelectedDownloadedBundle(Landroid/os/Bundle;)V
+
+    .line 4312
+    .end local v0           #bundle:Landroid/os/Bundle;
     :cond_1
     return-void
 .end method

@@ -24,13 +24,13 @@
     .parameter "b"
 
     .prologue
-    .line 1975
+    .line 1989
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 1976
+    .line 1990
     iput-object p1, p0, Lcom/htc/music/carmode/util/CarMusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 1977
+    .line 1991
     return-void
 .end method
 
@@ -43,12 +43,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1982
+    .line 1996
     iget-object v0, p0, Lcom/htc/music/carmode/util/CarMusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 1984
+    .line 1998
     iget-object v0, p0, Lcom/htc/music/carmode/util/CarMusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -57,14 +57,14 @@
 
     if-nez v0, :cond_0
 
-    .line 1985
+    .line 1999
     iget-object v0, p0, Lcom/htc/music/carmode/util/CarMusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1988
+    .line 2002
     :cond_0
     return-void
 .end method
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 1992
+    .line 2006
     const/4 v0, -0x1
 
     return v0
@@ -83,7 +83,7 @@
     .locals 1
 
     .prologue
-    .line 2004
+    .line 2018
     iget-object v0, p0, Lcom/htc/music/carmode/util/CarMusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -96,17 +96,17 @@
 
     if-nez v0, :cond_0
 
-    .line 2005
+    .line 2019
     iget-object v0, p0, Lcom/htc/music/carmode/util/CarMusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 2006
+    .line 2020
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/carmode/util/CarMusicUtils$FastBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 2008
+    .line 2022
     :cond_0
     return-void
 .end method
@@ -116,7 +116,7 @@
     .parameter "alpha"
 
     .prologue
-    .line 1997
+    .line 2011
     return-void
 .end method
 
@@ -125,6 +125,6 @@
     .parameter "cf"
 
     .prologue
-    .line 2001
+    .line 2015
     return-void
 .end method

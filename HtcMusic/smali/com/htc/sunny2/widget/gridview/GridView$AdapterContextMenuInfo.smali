@@ -30,15 +30,15 @@
     .parameter "id"
 
     .prologue
-    .line 3257
+    .line 3279
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3258
+    .line 3280
     iput p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$AdapterContextMenuInfo;->position:I
 
-    .line 3259
+    .line 3281
     iput-wide p2, p0, Lcom/htc/sunny2/widget/gridview/GridView$AdapterContextMenuInfo;->id:J
 
-    .line 3260
+    .line 3282
     return-void
 .end method

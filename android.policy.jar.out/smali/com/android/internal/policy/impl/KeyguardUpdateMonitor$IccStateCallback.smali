@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "KeyguardUpdateMonitor.java"
 
+# interfaces
+.implements Lcom/android/internal/policy/impl/HtcIfIccStateCallback;
+
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;

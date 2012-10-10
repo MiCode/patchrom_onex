@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1203
+    .line 1197
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$19;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,20 +66,20 @@
     .end annotation
 
     .prologue
-    .line 1207
+    .line 1201
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/imaging/Size;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/imaging/Size;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 1208
+    .line 1202
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$19;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #calls: Lcom/android/camera/component/ViewFinder;->updateViewFinderSize()V
-    invoke-static {v0}, Lcom/android/camera/component/ViewFinder;->access$2100(Lcom/android/camera/component/ViewFinder;)V
+    invoke-static {v0}, Lcom/android/camera/component/ViewFinder;->access$2000(Lcom/android/camera/component/ViewFinder;)V
 
-    .line 1209
+    .line 1203
     :cond_0
     return-void
 .end method

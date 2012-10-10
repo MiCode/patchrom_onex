@@ -36,25 +36,25 @@
     .parameter "manifestDigest"
 
     .prologue
-    .line 6290
+    .line 6310
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6291
+    .line 6311
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->packageURI:Landroid/net/Uri;
 
-    .line 6292
+    .line 6312
     iput p3, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->flags:I
 
-    .line 6293
+    .line 6313
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->observer:Landroid/content/pm/IPackageInstallObserver;
 
-    .line 6294
+    .line 6314
     iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->installerPackageName:Ljava/lang/String;
 
-    .line 6295
+    .line 6315
     iput-object p5, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->manifestDigest:Landroid/content/pm/ManifestDigest;
 
-    .line 6296
+    .line 6316
     return-void
 .end method
 

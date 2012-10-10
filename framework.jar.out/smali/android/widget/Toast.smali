@@ -149,7 +149,7 @@
 
     .line 235
     .local v1, result:Landroid/widget/Toast;
-    const-string/jumbo v4, "layout_inflater"
+    const-string v4, "layout_inflater"
 
     invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

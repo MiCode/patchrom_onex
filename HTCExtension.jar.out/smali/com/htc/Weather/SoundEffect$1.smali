@@ -26,12 +26,12 @@
     .parameter
 
     .prologue
-    .line 161
+    .line 168
     iput-object p1, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 163
+    .line 170
     const/high16 v0, 0x3f80
 
     iput v0, p0, Lcom/htc/Weather/SoundEffect$1;->mCurrentVolume:F
@@ -48,16 +48,16 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 166
+    .line 173
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 202
+    .line 209
     :goto_0
     return-void
 
-    .line 169
+    .line 176
     :pswitch_0
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
@@ -66,7 +66,7 @@
     #setter for: Lcom/htc/Weather/SoundEffect;->state:I
     invoke-static {v0, v1}, Lcom/htc/Weather/SoundEffect;->access$002(Lcom/htc/Weather/SoundEffect;I)I
 
-    .line 171
+    .line 178
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     #calls: Lcom/htc/Weather/SoundEffect;->start()V
@@ -74,7 +74,7 @@
 
     goto :goto_0
 
-    .line 177
+    .line 184
     :pswitch_1
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
@@ -85,7 +85,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 178
+    .line 185
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     const/16 v1, 0xc
@@ -93,7 +93,7 @@
     #setter for: Lcom/htc/Weather/SoundEffect;->state:I
     invoke-static {v0, v1}, Lcom/htc/Weather/SoundEffect;->access$002(Lcom/htc/Weather/SoundEffect;I)I
 
-    .line 179
+    .line 186
     iget v0, p0, Lcom/htc/Weather/SoundEffect$1;->mCurrentVolume:F
 
     const/4 v1, 0x0
@@ -102,7 +102,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 180
+    .line 187
     iget v0, p0, Lcom/htc/Weather/SoundEffect$1;->mCurrentVolume:F
 
     const v1, 0x3dcccccd
@@ -111,7 +111,7 @@
 
     iput v0, p0, Lcom/htc/Weather/SoundEffect$1;->mCurrentVolume:F
 
-    .line 181
+    .line 188
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     iget v1, p0, Lcom/htc/Weather/SoundEffect$1;->mCurrentVolume:F
@@ -119,7 +119,7 @@
     #calls: Lcom/htc/Weather/SoundEffect;->setVolume(F)V
     invoke-static {v0, v1}, Lcom/htc/Weather/SoundEffect;->access$300(Lcom/htc/Weather/SoundEffect;F)V
 
-    .line 182
+    .line 189
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     #getter for: Lcom/htc/Weather/SoundEffect;->mHandler:Landroid/os/Handler;
@@ -133,7 +133,7 @@
 
     goto :goto_0
 
-    .line 185
+    .line 192
     :cond_0
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 186
+    .line 193
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     #getter for: Lcom/htc/Weather/SoundEffect;->mHandler:Landroid/os/Handler;
@@ -156,14 +156,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 187
+    .line 194
     const/high16 v0, 0x3f80
 
     iput v0, p0, Lcom/htc/Weather/SoundEffect$1;->mCurrentVolume:F
 
     goto :goto_0
 
-    .line 191
+    .line 198
     :cond_1
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
@@ -174,7 +174,7 @@
 
     goto :goto_0
 
-    .line 197
+    .line 204
     :pswitch_2
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
@@ -185,13 +185,13 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 198
+    .line 205
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     #calls: Lcom/htc/Weather/SoundEffect;->forceReleaseMediaPlayer()V
     invoke-static {v0}, Lcom/htc/Weather/SoundEffect;->access$500(Lcom/htc/Weather/SoundEffect;)V
 
-    .line 199
+    .line 206
     iget-object v0, p0, Lcom/htc/Weather/SoundEffect$1;->this$0:Lcom/htc/Weather/SoundEffect;
 
     #calls: Lcom/htc/Weather/SoundEffect;->checkNeedRestart()V
@@ -199,7 +199,7 @@
 
     goto :goto_0
 
-    .line 166
+    .line 173
     nop
 
     :pswitch_data_0

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 953
+    .line 958
     iput-object p1, p0, Lcom/htc/music/MiniPlayer$3;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,18 +39,18 @@
     .parameter "msg"
 
     .prologue
-    .line 956
+    .line 961
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 957
+    .line 962
     .local v0, albumArtPath:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 958
+    .line 963
     .local v2, bundle:Landroid/os/Bundle;
     const-string v3, "DECODED_BITMAP"
 
@@ -60,20 +60,20 @@
 
     check-cast v1, Landroid/graphics/Bitmap;
 
-    .line 960
+    .line 965
     .local v1, bitmap:Landroid/graphics/Bitmap;
     if-nez v1, :cond_0
 
-    .line 961
+    .line 966
     iget-object v3, p0, Lcom/htc/music/MiniPlayer$3;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v3}, Lcom/htc/music/MiniPlayer;->setDefaultThumb()V
 
-    .line 966
+    .line 971
     :goto_0
     return-void
 
-    .line 965
+    .line 970
     :cond_0
     iget-object v3, p0, Lcom/htc/music/MiniPlayer$3;->this$0:Lcom/htc/music/MiniPlayer;
 

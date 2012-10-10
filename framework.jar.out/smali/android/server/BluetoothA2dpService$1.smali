@@ -44,7 +44,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 121
+    .line 126
     :goto_0
     return-void
 
@@ -99,11 +99,31 @@
 
     goto :goto_0
 
+    .line 121
+    :pswitch_3
+    const-string v0, "BluetoothA2dpService"
+
+    const-string/jumbo v1, "setAvrcpPassThrough RESUME_PHONE_STATE - enable AVRCP"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 122
+    iget-object v0, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/server/BluetoothA2dpService;->setAvrcpPassThrough(Z)V
+
+    goto :goto_0
+
     .line 108
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
         :pswitch_1
         :pswitch_2
+        :pswitch_3
     .end packed-switch
 .end method

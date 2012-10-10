@@ -25,15 +25,15 @@
     .parameter "height"
 
     .prologue
-    .line 162
+    .line 170
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 135
+    .line 143
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/preference/HtcPreferenceFrameLayout$LayoutParams;->removeBorders:Z
 
-    .line 163
+    .line 171
     return-void
 .end method
 
@@ -45,20 +45,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 144
+    .line 152
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 135
+    .line 143
     iput-boolean v2, p0, Lcom/htc/preference/HtcPreferenceFrameLayout$LayoutParams;->removeBorders:Z
 
-    .line 146
+    .line 154
     sget-object v1, Lcom/android/internal/R$styleable;->PreferenceFrameLayout_Layout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 148
+    .line 156
     .local v0, a:Landroid/content/res/TypedArray;
     invoke-virtual {v0, v2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -66,9 +66,9 @@
 
     iput-boolean v1, p0, Lcom/htc/preference/HtcPreferenceFrameLayout$LayoutParams;->removeBorders:Z
 
-    .line 151
+    .line 159
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 152
+    .line 160
     return-void
 .end method

@@ -13,13 +13,13 @@
     .parameter "regstates"
 
     .prologue
-    .line 44
+    .line 46
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
+    .line 47
     iput-object p1, p0, Lcom/android/internal/telephony/RegStateResponse;->mRegStates:[[Ljava/lang/String;
 
-    .line 46
+    .line 48
     return-void
 .end method
 
@@ -29,17 +29,17 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 33
     iget-object v0, p0, Lcom/android/internal/telephony/RegStateResponse;->mRegStates:[[Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 33
+    .line 34
     iget-object v0, p0, Lcom/android/internal/telephony/RegStateResponse;->mRegStates:[[Ljava/lang/String;
 
     array-length v0, v0
 
-    .line 34
+    .line 35
     :goto_0
     return v0
 
@@ -54,17 +54,17 @@
     .parameter "index"
 
     .prologue
-    .line 38
+    .line 40
     invoke-virtual {p0}, Lcom/android/internal/telephony/RegStateResponse;->getNumRecords()I
 
     move-result v0
 
     if-lt p1, v0, :cond_0
 
-    .line 39
+    .line 41
     const/4 v0, 0x0
 
-    .line 41
+    .line 43
     :goto_0
     return-object v0
 
@@ -80,20 +80,20 @@
     .locals 7
 
     .prologue
-    .line 49
+    .line 52
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v5, "{ "
 
     invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 50
+    .line 53
     .local v3, sb:Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Lcom/android/internal/telephony/RegStateResponse;->getNumRecords()I
 
     move-result v1
 
-    .line 51
+    .line 54
     .local v1, numRecs:I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -121,28 +121,28 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 53
+    .line 56
     const/4 v2, 0x0
 
     .local v2, rec:I
     :goto_0
     if-ge v2, v1, :cond_5
 
-    .line 54
+    .line 57
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/RegStateResponse;->getRecord(I)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 55
+    .line 58
     .local v4, strings:[Ljava/lang/String;
     const-string v5, "{"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
+    .line 59
     if-eqz v4, :cond_2
 
-    .line 57
+    .line 60
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -151,17 +151,17 @@
 
     if-ge v0, v5, :cond_3
 
-    .line 58
+    .line 61
     aget-object v5, v4, v0
 
     if-eqz v5, :cond_1
 
-    .line 59
+    .line 62
     aget-object v5, v4, v0
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
+    .line 66
     :goto_2
     array-length v5, v4
 
@@ -169,18 +169,18 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 64
+    .line 67
     const-string v5, ","
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 57
+    .line 60
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 61
+    .line 64
     :cond_1
     const-string v5, "null"
 
@@ -188,43 +188,43 @@
 
     goto :goto_2
 
-    .line 68
+    .line 71
     .end local v0           #i:I
     :cond_2
     const-string v5, "null"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 70
+    .line 73
     :cond_3
     const-string v5, "}"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 71
+    .line 74
     add-int/lit8 v5, v1, -0x1
 
     if-ge v2, v5, :cond_4
 
-    .line 72
+    .line 75
     const-string v5, ","
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 53
+    .line 56
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 75
+    .line 78
     .end local v4           #strings:[Ljava/lang/String;
     :cond_5
     const-string v5, " }"
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
+    .line 79
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5

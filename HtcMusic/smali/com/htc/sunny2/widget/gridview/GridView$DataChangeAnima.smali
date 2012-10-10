@@ -33,21 +33,21 @@
     .parameter "scontroller"
 
     .prologue
-    .line 3102
+    .line 3124
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$DataChangeAnima;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3103
+    .line 3125
     iput p2, p0, Lcom/htc/sunny2/widget/gridview/GridView$DataChangeAnima;->id:I
 
-    .line 3104
+    .line 3126
     iput-object p3, p0, Lcom/htc/sunny2/widget/gridview/GridView$DataChangeAnima;->view:Lcom/htc/sunny2/view/SView;
 
-    .line 3105
+    .line 3127
     iput-object p4, p0, Lcom/htc/sunny2/widget/gridview/GridView$DataChangeAnima;->controller:Lcom/htc/sunny2/view/animation/SAnimationController;
 
-    .line 3106
+    .line 3128
     return-void
 .end method
 
@@ -59,17 +59,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3108
+    .line 3130
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$DataChangeAnima;->id:I
 
-    .line 3109
+    .line 3131
     iput-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$DataChangeAnima;->view:Lcom/htc/sunny2/view/SView;
 
-    .line 3110
+    .line 3132
     iput-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$DataChangeAnima;->controller:Lcom/htc/sunny2/view/animation/SAnimationController;
 
-    .line 3111
+    .line 3133
     return-void
 .end method

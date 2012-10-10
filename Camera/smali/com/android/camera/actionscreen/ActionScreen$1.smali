@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 162
+    .line 160
     iput-object p1, p0, Lcom/android/camera/actionscreen/ActionScreen$1;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .parameter "x2"
 
     .prologue
-    .line 162
+    .line 160
     check-cast p3, Lcom/android/camera/input/KeyEventArgs;
 
     .end local p3
@@ -82,7 +82,7 @@
     .end annotation
 
     .prologue
-    .line 165
+    .line 163
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/input/KeyEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/actionscreen/ActionScreen$1;->this$0:Lcom/android/camera/actionscreen/ActionScreen;
 
@@ -106,10 +106,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 166
+    .line 164
     invoke-virtual {p3}, Lcom/android/camera/input/KeyEventArgs;->setHandled()V
 
-    .line 167
+    .line 165
     :cond_0
     return-void
 .end method

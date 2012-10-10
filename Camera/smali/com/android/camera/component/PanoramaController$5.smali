@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 871
+    .line 869
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController$5;->this$0:Lcom/android/camera/component/PanoramaController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 874
+    .line 872
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/RequestTakingPictureEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController$5;->this$0:Lcom/android/camera/component/PanoramaController;
 
@@ -77,7 +77,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 876
+    .line 874
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController$5;->this$0:Lcom/android/camera/component/PanoramaController;
 
     iget-object v1, p0, Lcom/android/camera/component/PanoramaController$5;->this$0:Lcom/android/camera/component/PanoramaController;
@@ -91,10 +91,10 @@
     #calls: Lcom/android/camera/component/PanoramaController;->takePicture(Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
     invoke-static {v0, v1, v2}, Lcom/android/camera/component/PanoramaController;->access$3900(Lcom/android/camera/component/PanoramaController;Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
 
-    .line 877
+    .line 875
     invoke-virtual {p3}, Lcom/android/camera/RequestTakingPictureEventArgs;->setHandled()V
 
-    .line 879
+    .line 877
     :cond_0
     return-void
 .end method
@@ -106,7 +106,7 @@
     .parameter "x2"
 
     .prologue
-    .line 871
+    .line 869
     check-cast p3, Lcom/android/camera/RequestTakingPictureEventArgs;
 
     .end local p3

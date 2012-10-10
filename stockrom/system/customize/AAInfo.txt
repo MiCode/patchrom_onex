@@ -1,0 +1,6 @@
+TaskID : 278245
+Project : ENDEAVOR_U_ICS_40_S
+SKU : hTC Asia WWE[707]
+ROM Ver : 2.17.707.3
+Customization Id : 411813
+RCMS Id : 628

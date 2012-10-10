@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Aggiungi una playlist</string>
     <string name="htc_delete_playlists">Elimina playlist</string>
     <string name="htc_delete_playlist">Elimina playlist</string>
+    <string name="htc_delete_all_playlists">Elimina tutte le playlist</string>
     <string name="htc_playlist_add_songs">Aggiungi brani</string>
     <string name="htc_playlist_del_songs">Elimina brani</string>
     <string name="htc_playlist_remove_songs">Rimuovi brani</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Buffer in corso...</string>
     <string name="title_send_content">Invio contenuti in corso...</string>
     <string name="no_downloaded_apps_found">Nessuna applicazione scaricata trovata</string>
+    <string name="music_folder_picker_dialog_msg">Aggiungere i brani alla playlist selezionando la cartella? No per aggiungere i brani in un altro modo</string>
 </resources>

@@ -445,7 +445,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "label_off_m"
+    const-string v2, "label_off_m"
 
     const-string/jumbo v3, "style"
 
@@ -477,7 +477,7 @@
     :cond_1
     const-string v1, "HTCActionBar"
 
-    const-string/jumbo v2, "label_off_m not found"
+    const-string v2, "label_off_m not found"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

@@ -70,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 267
+    .line 268
     iget-object v0, p0, Landroid/media/MediaInfo$FileCacheEntry;->mPath:Ljava/lang/String;
 
     return-object v0

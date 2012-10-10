@@ -1564,7 +1564,7 @@
 
     .line 110
     :cond_7
-    const-string/jumbo v7, "i"
+    const-string v7, "i"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1708,7 +1708,7 @@
 
     .line 126
     :cond_f
-    const-string/jumbo v7, "li"
+    const-string v7, "li"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

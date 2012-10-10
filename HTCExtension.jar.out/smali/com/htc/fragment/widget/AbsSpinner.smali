@@ -31,7 +31,9 @@
 
 .field private static final P_PORT_FACTOR:F = 0.22f
 
-.field private static final T_LAND_FACTOR:F = 0.11f
+.field private static final P_PORT_FACTOR_S:F = 0.285f
+
+.field private static final T_LAND_FACTOR:F = 0.105f
 
 .field private static final T_PORT_FACTOR:F = 0.08f
 
@@ -39,7 +41,7 @@
 # instance fields
 .field private ITEM_SIZE:I
 
-.field private MAX_AVERAGE_COUNT:I
+.field private MAX_CAPACITY:I
 
 .field private display:Landroid/view/Display;
 
@@ -123,7 +125,7 @@
     .locals 1
 
     .prologue
-    .line 805
+    .line 796
     const/16 v0, 0x64
 
     sput v0, Lcom/htc/fragment/widget/AbsSpinner;->MIN_WIDTH:I
@@ -179,13 +181,13 @@
     .line 93
     iput-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
-    .line 777
+    .line 771
     iput v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAnimationWidthHeight:I
 
-    .line 779
+    .line 773
     iput-boolean v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightAnimation:Z
 
-    .line 781
+    .line 775
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getLayoutParamsHeight()I
 
     move-result v0
@@ -196,18 +198,18 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedHeight:I
 
-    .line 782
+    .line 776
     iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedHeight:I
 
-    .line 795
-    const/16 v0, 0x3c
+    .line 785
+    const/16 v0, 0xa0
 
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
-    .line 796
-    iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    .line 786
+    iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
-    .line 846
+    .line 837
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getLayoutParamsWidth()I
 
     move-result v0
@@ -218,42 +220,42 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedWidth:I
 
-    .line 847
+    .line 838
     iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedWidth:I
 
-    .line 850
+    .line 841
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedPos:I
 
-    .line 851
+    .line 842
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedPos:I
 
-    .line 852
+    .line 843
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mReducedPos:I
 
-    .line 854
+    .line 845
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mIndicatorIndex:I
 
-    .line 855
+    .line 846
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mLastIndicatorIndex:I
 
-    .line 927
+    .line 916
     new-instance v0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;
 
     invoke-direct {v0, p0, v4}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;-><init>(Lcom/htc/fragment/widget/AbsSpinner;Lcom/htc/fragment/widget/AbsSpinner$1;)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightRunnable:Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;
 
-    .line 1045
+    .line 1030
     iput-boolean v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnableRunning:Z
 
-    .line 1047
+    .line 1032
     new-instance v0, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;
 
     invoke-direct {v0, p0, v4}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;-><init>(Lcom/htc/fragment/widget/AbsSpinner;Lcom/htc/fragment/widget/AbsSpinner$1;)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnable:Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;
 
-    .line 1279
+    .line 1240
     iput-boolean v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mLateShrinkedFlag:Z
 
     .line 110
@@ -331,13 +333,13 @@
     .line 93
     iput-object v7, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
-    .line 777
+    .line 771
     iput v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAnimationWidthHeight:I
 
-    .line 779
+    .line 773
     iput-boolean v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightAnimation:Z
 
-    .line 781
+    .line 775
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getLayoutParamsHeight()I
 
     move-result v3
@@ -348,18 +350,18 @@
 
     iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedHeight:I
 
-    .line 782
+    .line 776
     iput v6, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedHeight:I
 
-    .line 795
-    const/16 v3, 0x3c
+    .line 785
+    const/16 v3, 0xa0
 
     iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
-    .line 796
-    iput v6, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    .line 786
+    iput v6, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
-    .line 846
+    .line 837
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getLayoutParamsWidth()I
 
     move-result v3
@@ -370,42 +372,42 @@
 
     iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedWidth:I
 
-    .line 847
+    .line 838
     iput v6, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedWidth:I
 
-    .line 850
+    .line 841
     iput v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedPos:I
 
-    .line 851
+    .line 842
     iput v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedPos:I
 
-    .line 852
+    .line 843
     iput v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->mReducedPos:I
 
-    .line 854
+    .line 845
     iput v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->mIndicatorIndex:I
 
-    .line 855
+    .line 846
     iput v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->mLastIndicatorIndex:I
 
-    .line 927
+    .line 916
     new-instance v3, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;
 
     invoke-direct {v3, p0, v7}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;-><init>(Lcom/htc/fragment/widget/AbsSpinner;Lcom/htc/fragment/widget/AbsSpinner$1;)V
 
     iput-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightRunnable:Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;
 
-    .line 1045
+    .line 1030
     iput-boolean v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnableRunning:Z
 
-    .line 1047
+    .line 1032
     new-instance v3, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;
 
     invoke-direct {v3, p0, v7}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;-><init>(Lcom/htc/fragment/widget/AbsSpinner;Lcom/htc/fragment/widget/AbsSpinner$1;)V
 
     iput-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnable:Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;
 
-    .line 1279
+    .line 1240
     iput-boolean v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mLateShrinkedFlag:Z
 
     .line 121
@@ -681,7 +683,7 @@
 
     const v5, 0x3da3d70a
 
-    .line 1216
+    .line 1180
     iget-boolean v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v3, :cond_4
@@ -690,14 +692,14 @@
 
     move-result v2
 
-    .line 1217
+    .line 1181
     .local v2, size:I
     :goto_0
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
     if-nez v3, :cond_0
 
-    .line 1218
+    .line 1182
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mContext:Landroid/content/Context;
 
     const-string v4, "window"
@@ -714,25 +716,25 @@
 
     iput-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
-    .line 1219
+    .line 1183
     :cond_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getMeasuredWidth()I
 
     move-result v3
 
-    if-lez v3, :cond_b
+    if-lez v3, :cond_c
 
-    .line 1227
+    .line 1185
     sget-boolean v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->HtcTabletDevice:Z
 
     if-eqz v3, :cond_7
 
-    .line 1228
+    .line 1186
     iget-boolean v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v3, :cond_6
 
-    .line 1229
+    .line 1187
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
     invoke-virtual {v3}, Landroid/view/Display;->getRotation()I
@@ -749,7 +751,7 @@
 
     if-ne v3, v7, :cond_5
 
-    .line 1230
+    .line 1188
     :cond_1
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
@@ -765,15 +767,15 @@
 
     sput v3, Lcom/htc/fragment/widget/AbsSpinner;->MIN_WIDTH:I
 
-    .line 1246
+    .line 1207
     :goto_1
     sget v3, Lcom/htc/fragment/widget/AbsSpinner;->MIN_WIDTH:I
 
     div-int v3, v2, v3
 
-    iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
-    .line 1250
+    .line 1211
     :goto_2
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -783,10 +785,10 @@
 
     if-lez v2, :cond_3
 
-    .line 1252
+    .line 1213
     iget v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
-    .line 1254
+    .line 1215
     .local v1, oldValue:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -796,7 +798,7 @@
 
     move-result v0
 
-    .line 1255
+    .line 1216
     .local v0, count:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getDragBinGridView()Z
 
@@ -804,29 +806,29 @@
 
     if-eqz v3, :cond_2
 
-    .line 1256
+    .line 1217
     add-int/lit8 v0, v0, 0x1
 
-    .line 1258
+    .line 1219
     :cond_2
-    if-lez v0, :cond_c
+    if-lez v0, :cond_d
 
-    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
-    if-gt v0, v3, :cond_c
+    if-gt v0, v3, :cond_d
 
-    .line 1259
+    .line 1220
     div-int v3, v2, v0
 
     iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
-    .line 1265
+    .line 1226
     :goto_3
     iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
     if-eq v3, v1, :cond_3
 
-    .line 1266
+    .line 1227
     const-string v3, "CarouselWidget"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -849,7 +851,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1267
+    .line 1228
     const-string v3, "CarouselWidget"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -882,7 +884,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -894,7 +896,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1268
+    .line 1229
     const-string v3, "CarouselWidget"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -923,7 +925,7 @@
 
     move-result-object v4
 
-    const-string v5, "}"
+    const-string/jumbo v5, "}"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -935,13 +937,13 @@
 
     invoke-static {v3, v4}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1271
+    .line 1232
     .end local v0           #count:I
     .end local v1           #oldValue:I
     :cond_3
     return-void
 
-    .line 1216
+    .line 1180
     .end local v2           #size:I
     :cond_4
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getMeasuredHeight()I
@@ -950,10 +952,10 @@
 
     goto/16 :goto_0
 
-    .line 1232
+    .line 1190
     .restart local v2       #size:I
     :cond_5
-    const v3, 0x3de147ae
+    const v3, 0x3dd70a3d
 
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
@@ -971,7 +973,7 @@
 
     goto/16 :goto_1
 
-    .line 1234
+    .line 1192
     :cond_6
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
@@ -989,13 +991,13 @@
 
     goto/16 :goto_1
 
-    .line 1237
+    .line 1195
     :cond_7
     iget-boolean v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v3, :cond_a
 
-    .line 1238
+    .line 1196
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
     invoke-virtual {v3}, Landroid/view/Display;->getRotation()I
@@ -1012,7 +1014,7 @@
 
     if-ne v3, v7, :cond_9
 
-    .line 1239
+    .line 1197
     :cond_8
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
@@ -1030,7 +1032,7 @@
 
     goto/16 :goto_1
 
-    .line 1241
+    .line 1199
     :cond_9
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
@@ -1048,8 +1050,39 @@
 
     goto/16 :goto_1
 
-    .line 1243
+    .line 1201
     :cond_a
+    sget-object v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Extra_Sense_Version:Ljava/lang/String;
+
+    const-string v4, "4.0a"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_b
+
+    .line 1202
+    const v3, 0x3e91eb85
+
+    iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
+
+    invoke-virtual {v4}, Landroid/view/Display;->getHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v3, v4
+
+    float-to-int v3, v3
+
+    sput v3, Lcom/htc/fragment/widget/AbsSpinner;->MIN_WIDTH:I
+
+    goto/16 :goto_1
+
+    .line 1204
+    :cond_b
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
     invoke-virtual {v3}, Landroid/view/Display;->getHeight()I
@@ -1066,24 +1099,24 @@
 
     goto/16 :goto_1
 
-    .line 1248
-    :cond_b
+    .line 1209
+    :cond_c
     const/4 v3, 0x1
 
-    iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iput v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     goto/16 :goto_2
 
-    .line 1260
+    .line 1221
     .restart local v0       #count:I
     .restart local v1       #oldValue:I
-    :cond_c
-    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    :cond_d
+    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
-    if-le v0, v3, :cond_d
+    if-le v0, v3, :cond_e
 
-    .line 1261
-    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    .line 1222
+    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     mul-int/lit8 v3, v3, 0x2
 
@@ -1097,8 +1130,8 @@
 
     goto/16 :goto_3
 
-    .line 1263
-    :cond_d
+    .line 1224
+    :cond_e
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
     goto/16 :goto_3
@@ -1110,19 +1143,19 @@
     .locals 1
 
     .prologue
-    .line 1275
+    .line 1236
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnable:Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;
 
     #calls: Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->end()V
     invoke-static {v0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->access$1400(Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;)V
 
-    .line 1276
+    .line 1237
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightRunnable:Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;
 
     #calls: Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->end()V
     invoke-static {v0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->access$1500(Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;)V
 
-    .line 1277
+    .line 1238
     return-void
 .end method
 
@@ -1131,10 +1164,10 @@
     .parameter "canvas"
 
     .prologue
-    .line 654
+    .line 653
     invoke-super {p0, p1}, Lcom/htc/fragment/widget/AdapterView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 655
+    .line 654
     return-void
 .end method
 
@@ -1154,7 +1187,7 @@
     .locals 1
 
     .prologue
-    .line 422
+    .line 421
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAdapter:Landroid/widget/SpinnerAdapter;
 
     return-object v0
@@ -1190,7 +1223,7 @@
     .locals 1
 
     .prologue
-    .line 431
+    .line 430
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     return v0
@@ -1200,7 +1233,7 @@
     .locals 1
 
     .prologue
-    .line 812
+    .line 803
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mIsDragBinGridView:Z
 
     return v0
@@ -1210,7 +1243,7 @@
     .locals 1
 
     .prologue
-    .line 764
+    .line 760
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedHeight:I
 
     return v0
@@ -1220,7 +1253,7 @@
     .locals 1
 
     .prologue
-    .line 871
+    .line 860
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedPos:I
 
     return v0
@@ -1230,7 +1263,7 @@
     .locals 1
 
     .prologue
-    .line 899
+    .line 888
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedWidth:I
 
     return v0
@@ -1240,7 +1273,7 @@
     .locals 1
 
     .prologue
-    .line 915
+    .line 904
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mIndicatorIndex:I
 
     return v0
@@ -1250,7 +1283,7 @@
     .locals 1
 
     .prologue
-    .line 923
+    .line 912
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mLastIndicatorIndex:I
 
     return v0
@@ -1260,15 +1293,15 @@
     .locals 1
 
     .prologue
-    .line 733
+    .line 730
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightAnimation:Z
 
     if-eqz v0, :cond_0
 
-    .line 734
+    .line 731
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAnimationWidthHeight:I
 
-    .line 736
+    .line 733
     :goto_0
     return v0
 
@@ -1284,10 +1317,10 @@
     .locals 6
 
     .prologue
-    .line 740
+    .line 737
     const/4 v0, -0x1
 
-    .line 741
+    .line 738
     .local v0, count:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -1305,7 +1338,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 743
+    .line 740
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v3
@@ -1314,39 +1347,39 @@
 
     move-result v0
 
-    .line 744
+    .line 741
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getDragBinGridView()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 745
+    .line 742
     add-int/lit8 v0, v0, 0x1
 
-    .line 747
+    .line 744
     :cond_0
-    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     if-gt v0, v3, :cond_2
 
-    .line 748
+    .line 745
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getMeasuredHeight()I
 
     move-result v3
 
     div-int v1, v3, v0
 
-    .line 754
+    .line 751
     .local v1, result:I
     :goto_0
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
-    .line 755
+    .line 752
     .local v2, size:I
     if-eq v1, v2, :cond_1
 
-    .line 756
+    .line 753
     const-string v3, "CarouselWidget"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1379,7 +1412,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/fragment/widget/CarouselLog;->dw(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 757
+    .line 754
     const-string v3, "CarouselWidget"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1416,7 +1449,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1428,11 +1461,11 @@
 
     invoke-static {v3, v4}, Lcom/htc/fragment/widget/CarouselLog;->dw(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 759
+    .line 756
     :cond_1
     return v1
 
-    .line 750
+    .line 747
     .end local v1           #result:I
     .end local v2           #size:I
     :cond_2
@@ -1440,7 +1473,7 @@
 
     move-result v3
 
-    iget v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     mul-int/lit8 v4, v4, 0x2
 
@@ -1453,7 +1486,7 @@
     .restart local v1       #result:I
     goto :goto_0
 
-    .line 753
+    .line 750
     .end local v1           #result:I
     :cond_3
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getMeasuredHeight()I
@@ -1468,15 +1501,15 @@
     .locals 1
 
     .prologue
-    .line 816
+    .line 807
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightAnimation:Z
 
     if-eqz v0, :cond_0
 
-    .line 817
+    .line 808
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAnimationWidthHeight:I
 
-    .line 820
+    .line 811
     :goto_0
     return v0
 
@@ -1492,10 +1525,10 @@
     .locals 6
 
     .prologue
-    .line 824
+    .line 815
     const/4 v0, -0x1
 
-    .line 825
+    .line 816
     .local v0, count:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -1513,7 +1546,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 826
+    .line 817
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v3
@@ -1522,39 +1555,39 @@
 
     move-result v0
 
-    .line 827
+    .line 818
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getDragBinGridView()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 828
+    .line 819
     add-int/lit8 v0, v0, 0x1
 
-    .line 831
+    .line 822
     :cond_0
-    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     if-gt v0, v3, :cond_2
 
-    .line 832
+    .line 823
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getMeasuredWidth()I
 
     move-result v3
 
     div-int v1, v3, v0
 
-    .line 838
+    .line 829
     .local v1, result:I
     :goto_0
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->ITEM_SIZE:I
 
-    .line 839
+    .line 830
     .local v2, size:I
     if-eq v1, v2, :cond_1
 
-    .line 840
+    .line 831
     const-string v3, "CarouselWidget"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1587,7 +1620,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/fragment/widget/CarouselLog;->dw(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 841
+    .line 832
     const-string v3, "CarouselWidget"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1624,7 +1657,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v5, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1636,11 +1669,11 @@
 
     invoke-static {v3, v4}, Lcom/htc/fragment/widget/CarouselLog;->dw(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 843
+    .line 834
     :cond_1
     return v1
 
-    .line 834
+    .line 825
     .end local v1           #result:I
     .end local v2           #size:I
     :cond_2
@@ -1648,7 +1681,7 @@
 
     move-result v3
 
-    iget v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    iget v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     mul-int/lit8 v4, v4, 0x2
 
@@ -1661,7 +1694,7 @@
     .restart local v1       #result:I
     goto :goto_0
 
-    .line 836
+    .line 827
     .end local v1           #result:I
     :cond_3
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getMeasuredWidth()I
@@ -1676,8 +1709,8 @@
     .locals 1
 
     .prologue
-    .line 1286
-    iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_AVERAGE_COUNT:I
+    .line 1247
+    iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->MAX_CAPACITY:I
 
     return v0
 .end method
@@ -1686,7 +1719,7 @@
     .locals 1
 
     .prologue
-    .line 774
+    .line 768
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mReducedHeight:I
 
     return v0
@@ -1696,7 +1729,7 @@
     .locals 1
 
     .prologue
-    .line 895
+    .line 884
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mReducedPos:I
 
     return v0
@@ -1706,7 +1739,7 @@
     .locals 1
 
     .prologue
-    .line 907
+    .line 896
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mReducedWidth:I
 
     return v0
@@ -1716,7 +1749,7 @@
     .locals 2
 
     .prologue
-    .line 392
+    .line 391
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     if-lez v0, :cond_0
@@ -1725,7 +1758,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 393
+    .line 392
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -1736,7 +1769,7 @@
 
     move-result-object v0
 
-    .line 395
+    .line 394
     :goto_0
     return-object v0
 
@@ -1750,7 +1783,7 @@
     .locals 1
 
     .prologue
-    .line 769
+    .line 764
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedHeight:I
 
     return v0
@@ -1760,7 +1793,7 @@
     .locals 1
 
     .prologue
-    .line 891
+    .line 880
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedPos:I
 
     return v0
@@ -1770,7 +1803,7 @@
     .locals 1
 
     .prologue
-    .line 903
+    .line 892
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedWidth:I
 
     return v0
@@ -1780,12 +1813,12 @@
     .locals 4
 
     .prologue
-    .line 677
+    .line 676
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 678
+    .line 677
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -1798,7 +1831,7 @@
 
     invoke-virtual {v0, p0, v1, v2, v3}, Lcom/htc/fragment/widget/FastScroller;->onScroll(Lcom/htc/fragment/widget/AbsSpinner;III)V
 
-    .line 680
+    .line 679
     :cond_0
     return-void
 .end method
@@ -1809,7 +1842,7 @@
     .end annotation
 
     .prologue
-    .line 632
+    .line 631
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScrollEnabled:Z
 
     return v0
@@ -1819,7 +1852,7 @@
     .locals 1
 
     .prologue
-    .line 1042
+    .line 1027
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnableRunning:Z
 
     return v0
@@ -1832,20 +1865,20 @@
     .locals 1
 
     .prologue
-    .line 688
+    .line 687
     invoke-super {p0}, Lcom/htc/fragment/widget/AdapterView;->onAttachedToWindow()V
 
-    .line 689
+    .line 688
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 690
+    .line 689
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/FastScroller;->onAttachedToWindow()V
 
-    .line 692
+    .line 691
     :cond_0
     return-void
 .end method
@@ -1855,23 +1888,23 @@
     .parameter "newConfig"
 
     .prologue
-    .line 715
+    .line 713
     invoke-super {p0, p1}, Lcom/htc/fragment/widget/AdapterView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 717
+    .line 715
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->setOrientation()V
 
-    .line 720
+    .line 718
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 721
+    .line 719
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0, p1}, Lcom/htc/fragment/widget/FastScroller;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 722
+    .line 720
     :cond_0
     return-void
 .end method
@@ -1880,21 +1913,21 @@
     .locals 1
 
     .prologue
-    .line 701
+    .line 700
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 702
+    .line 701
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/FastScroller;->onDetachedFromWindow()V
 
-    .line 704
+    .line 703
     :cond_0
     invoke-super {p0}, Lcom/htc/fragment/widget/AdapterView;->onDetachedFromWindow()V
 
-    .line 705
+    .line 704
     return-void
 .end method
 
@@ -1903,26 +1936,26 @@
     .parameter "ev"
 
     .prologue
-    .line 663
+    .line 662
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v1, :cond_0
 
-    .line 664
+    .line 663
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v1, p1}, Lcom/htc/fragment/widget/FastScroller;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 665
+    .line 664
     .local v0, intercepted:Z
     if-eqz v0, :cond_0
 
-    .line 666
+    .line 665
     const/4 v1, 0x1
 
-    .line 670
+    .line 669
     .end local v0           #intercepted:Z
     :goto_0
     return v1
@@ -1936,12 +1969,14 @@
 .end method
 
 .method protected onMeasure(II)V
-    .locals 12
+    .locals 13
     .parameter "widthMeasureSpec"
     .parameter "heightMeasureSpec"
 
     .prologue
     const/high16 v9, 0x4000
+
+    const/4 v12, 0x0
 
     .line 231
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
@@ -2038,18 +2073,18 @@
 
     .line 250
     :cond_2
-    const/4 v2, 0x1
-
-    .line 251
-    .local v2, needsMeasuring:Z
     const/4 v3, 0x0
 
-    .line 252
+    .line 251
     .local v3, preferredHeight:I
     const/4 v4, 0x0
 
-    .line 254
+    .line 252
     .local v4, preferredWidth:I
+    const/4 v2, 0x1
+
+    .line 254
+    .local v2, needsMeasuring:Z
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getSelectedItemPosition()I
 
     move-result v5
@@ -2248,13 +2283,13 @@
     move-result v4
 
     .line 312
-    invoke-static {v3, p2}, Lcom/htc/fragment/widget/AbsSpinner;->resolveSize(II)I
+    invoke-static {v3, p2, v12}, Lcom/htc/fragment/widget/AbsSpinner;->resolveSizeAndState(III)I
 
     move-result v1
 
     .line 313
     .local v1, heightSize:I
-    invoke-static {v4, p1}, Lcom/htc/fragment/widget/AbsSpinner;->resolveSize(II)I
+    invoke-static {v4, p1, v12}, Lcom/htc/fragment/widget/AbsSpinner;->resolveSizeAndState(III)I
 
     move-result v8
 
@@ -2364,12 +2399,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 548
+    .line 547
     move-object v0, p1
 
     check-cast v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;
 
-    .line 550
+    .line 549
     .local v0, ss:Lcom/htc/fragment/widget/AbsSpinner$SavedState;
     invoke-virtual {v0}, Lcom/htc/fragment/widget/AbsSpinner$SavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -2377,7 +2412,7 @@
 
     invoke-super {p0, v1}, Lcom/htc/fragment/widget/AdapterView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 552
+    .line 551
     iget-wide v1, v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;->selectedId:J
 
     const-wide/16 v3, 0x0
@@ -2386,31 +2421,31 @@
 
     if-ltz v1, :cond_0
 
-    .line 553
+    .line 552
     iput-boolean v5, p0, Lcom/htc/fragment/widget/AdapterView;->mDataChanged:Z
 
-    .line 554
+    .line 553
     iput-boolean v5, p0, Lcom/htc/fragment/widget/AdapterView;->mNeedSync:Z
 
-    .line 555
+    .line 554
     iget-wide v1, v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;->selectedId:J
 
     iput-wide v1, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncRowId:J
 
-    .line 556
+    .line 555
     iget v1, v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;->position:I
 
     iput v1, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncPosition:I
 
-    .line 557
+    .line 556
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/fragment/widget/AdapterView;->mSyncMode:I
 
-    .line 558
+    .line 557
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->requestLayout()V
 
-    .line 560
+    .line 559
     :cond_0
     return-void
 .end method
@@ -2419,18 +2454,18 @@
     .locals 6
 
     .prologue
-    .line 531
+    .line 530
     invoke-super {p0}, Lcom/htc/fragment/widget/AdapterView;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 532
+    .line 531
     .local v1, superState:Landroid/os/Parcelable;
     new-instance v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;
 
     invoke-direct {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 533
+    .line 532
     .local v0, ss:Lcom/htc/fragment/widget/AbsSpinner$SavedState;
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getSelectedItemId()J
 
@@ -2438,7 +2473,7 @@
 
     iput-wide v2, v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;->selectedId:J
 
-    .line 534
+    .line 533
     iget-wide v2, v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;->selectedId:J
 
     const-wide/16 v4, 0x0
@@ -2447,18 +2482,18 @@
 
     if-ltz v2, :cond_0
 
-    .line 535
+    .line 534
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getSelectedItemPosition()I
 
     move-result v2
 
     iput v2, v0, Lcom/htc/fragment/widget/AbsSpinner$SavedState;->position:I
 
-    .line 539
+    .line 538
     :goto_0
     return-object v0
 
-    .line 537
+    .line 536
     :cond_0
     const/4 v2, -0x1
 
@@ -2475,17 +2510,17 @@
     .parameter "oldh"
 
     .prologue
-    .line 641
+    .line 640
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 642
+    .line 641
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/htc/fragment/widget/FastScroller;->onSizeChanged(IIII)V
 
-    .line 645
+    .line 644
     :cond_0
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWidthMeasureSpec:I
 
@@ -2493,7 +2528,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->onMeasure(II)V
 
-    .line 646
+    .line 645
     return-void
 .end method
 
@@ -2503,30 +2538,30 @@
     .parameter "y"
 
     .prologue
-    .line 447
+    .line 446
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mTouchFrame:Landroid/graphics/Rect;
 
-    .line 448
+    .line 447
     .local v2, frame:Landroid/graphics/Rect;
     if-nez v2, :cond_0
 
-    .line 449
+    .line 448
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mTouchFrame:Landroid/graphics/Rect;
 
-    .line 450
+    .line 449
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mTouchFrame:Landroid/graphics/Rect;
 
-    .line 453
+    .line 452
     :cond_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getChildCount()I
 
     move-result v1
 
-    .line 454
+    .line 453
     .local v1, count:I
     add-int/lit8 v3, v1, -0x1
 
@@ -2534,12 +2569,12 @@
     :goto_0
     if-ltz v3, :cond_2
 
-    .line 455
+    .line 454
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/AbsSpinner;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 456
+    .line 455
     .local v0, child:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -2547,34 +2582,34 @@
 
     if-nez v4, :cond_1
 
-    .line 457
+    .line 456
     invoke-virtual {v0, v2}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 458
+    .line 457
     invoke-virtual {v2, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 459
+    .line 458
     iget v4, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     add-int/2addr v4, v3
 
-    .line 463
+    .line 462
     .end local v0           #child:Landroid/view/View;
     :goto_1
     return v4
 
-    .line 454
+    .line 453
     .restart local v0       #child:Landroid/view/View;
     :cond_1
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_0
 
-    .line 463
+    .line 462
     .end local v0           #child:Landroid/view/View;
     :cond_2
     const/4 v4, -0x1
@@ -2636,15 +2671,15 @@
     .locals 1
 
     .prologue
-    .line 411
+    .line 410
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mBlockLayoutRequests:Z
 
     if-nez v0, :cond_0
 
-    .line 412
+    .line 411
     invoke-super {p0}, Lcom/htc/fragment/widget/AdapterView;->requestLayout()V
 
-    .line 414
+    .line 413
     :cond_0
     return-void
 .end method
@@ -2832,12 +2867,12 @@
     .parameter "gallery"
 
     .prologue
-    .line 727
+    .line 725
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0, p1}, Lcom/htc/fragment/widget/FastScroller;->setContentGallery(Lcom/htc/fragment/widget/CarouselContentGallery;)V
 
-    .line 728
+    .line 726
     return-void
 .end method
 
@@ -2846,10 +2881,10 @@
     .parameter "b"
 
     .prologue
-    .line 808
+    .line 799
     iput-boolean p1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mIsDragBinGridView:Z
 
-    .line 809
+    .line 800
     return-void
 .end method
 
@@ -2858,19 +2893,19 @@
     .parameter "expos"
 
     .prologue
-    .line 860
+    .line 850
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedPos:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 862
+    .line 851
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v0, :cond_1
 
-    .line 863
+    .line 852
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getLayoutParamsWidth()I
 
     move-result v0
@@ -2881,15 +2916,15 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedWidth:I
 
-    .line 867
+    .line 856
     :cond_0
     :goto_0
     iput p1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mExpandedPos:I
 
-    .line 868
+    .line 857
     return-void
 
-    .line 865
+    .line 854
     :cond_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getLayoutParamsHeight()I
 
@@ -2909,18 +2944,18 @@
     .parameter "enabled"
 
     .prologue
-    .line 608
+    .line 607
     iput-boolean p1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScrollEnabled:Z
 
-    .line 609
+    .line 608
     if-eqz p1, :cond_1
 
-    .line 610
+    .line 609
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-nez v0, :cond_0
 
-    .line 611
+    .line 610
     new-instance v0, Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->getContext()Landroid/content/Context;
@@ -2931,23 +2966,23 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
-    .line 619
+    .line 618
     :cond_0
     :goto_0
     return-void
 
-    .line 614
+    .line 613
     :cond_1
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 615
+    .line 614
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/FastScroller;->stop()V
 
-    .line 616
+    .line 615
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
@@ -2960,10 +2995,10 @@
     .parameter "in"
 
     .prologue
-    .line 911
+    .line 900
     iput p1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mIndicatorIndex:I
 
-    .line 912
+    .line 901
     return-void
 .end method
 
@@ -2972,10 +3007,10 @@
     .parameter "lastin"
 
     .prologue
-    .line 919
+    .line 908
     iput p1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mLastIndicatorIndex:I
 
-    .line 920
+    .line 909
     return-void
 .end method
 
@@ -2983,77 +3018,73 @@
     .locals 1
 
     .prologue
-    .line 1281
+    .line 1242
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mLateShrinkedFlag:Z
 
-    .line 1282
+    .line 1243
     return-void
 .end method
 
 .method protected setOrientation()V
-    .locals 2
+    .locals 3
 
     .prologue
+    .line 99
+    iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
+
+    if-nez v1, :cond_0
+
     .line 100
-    iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
+    iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mContext:Landroid/content/Context;
 
-    if-nez v0, :cond_0
+    const-string v2, "window"
 
-    .line 101
-    iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mContext:Landroid/content/Context;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    const-string v1, "window"
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    check-cast v1, Landroid/view/WindowManager;
 
-    move-result-object v0
+    invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    check-cast v0, Landroid/view/WindowManager;
+    move-result-object v1
 
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    iput-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
-    move-result-object v0
+    .line 102
+    :cond_0
+    iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
 
-    iput-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
+    invoke-virtual {v1}, Landroid/view/Display;->getRotation()I
+
+    move-result v0
 
     .line 103
-    :cond_0
-    sget-boolean v0, Lcom/htc/fragment/widget/CarouselFragment;->disableLandscape:Z
+    .local v0, orientation:I
+    sget-boolean v1, Lcom/htc/fragment/widget/CarouselFragment;->disableLandscape:Z
 
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
-
-    invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
-
-    move-result v0
+    if-nez v1, :cond_1
 
     if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->display:Landroid/view/Display;
-
-    invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
-
-    move-result v0
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
     :cond_1
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
+    iput-boolean v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     .line 104
     return-void
 
     .line 103
     :cond_2
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     goto :goto_0
 .end method
@@ -3125,34 +3156,34 @@
     .parameter "animate"
 
     .prologue
-    .line 375
+    .line 374
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mOldSelectedPosition:I
 
     if-eq p1, v1, :cond_0
 
-    .line 376
+    .line 375
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mBlockLayoutRequests:Z
 
-    .line 377
+    .line 376
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     sub-int v0, p1, v1
 
-    .line 378
+    .line 377
     .local v0, delta:I
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/AbsSpinner;->setNextSelectedPositionInt(I)V
 
-    .line 379
+    .line 378
     invoke-virtual {p0, v0, p2}, Lcom/htc/fragment/widget/AbsSpinner;->layout(IZ)V
 
-    .line 380
+    .line 379
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mBlockLayoutRequests:Z
 
-    .line 382
+    .line 381
     .end local v0           #delta:I
     :cond_0
     return-void
@@ -3165,27 +3196,27 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 882
+    .line 871
     iput p1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mShrinkedPos:I
 
-    .line 883
+    .line 872
     if-eq p1, v1, :cond_0
 
-    .line 884
+    .line 873
     add-int/lit8 v0, p1, 0x1
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/AbsSpinner;->setIndicatorIndex(I)V
 
-    .line 885
+    .line 874
     add-int/lit8 v0, p1, 0x1
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/AbsSpinner;->setLastIndicatorIndex(I)V
 
-    .line 887
+    .line 876
     :cond_0
     iput v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mReducedPos:I
 
-    .line 888
+    .line 877
     return-void
 .end method
 
@@ -3195,16 +3226,16 @@
     .parameter "isRequestLayout"
 
     .prologue
-    .line 875
+    .line 864
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/AbsSpinner;->setShrinkedPosition(I)V
 
-    .line 876
+    .line 865
     if-eqz p2, :cond_0
 
-    .line 877
+    .line 866
     invoke-virtual {p0}, Lcom/htc/fragment/widget/AbsSpinner;->requestLayout()V
 
-    .line 879
+    .line 868
     :cond_0
     return-void
 .end method
@@ -3213,12 +3244,12 @@
     .locals 1
 
     .prologue
-    .line 1038
+    .line 1023
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWaveRunnable:Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/AbsSpinner$WaveRunnable;->start()V
 
-    .line 1039
+    .line 1024
     return-void
 .end method
 
@@ -3228,11 +3259,11 @@
     .parameter "targetWidthHeight"
 
     .prologue
-    .line 930
+    .line 918
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightRunnable:Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->start(II)V
 
-    .line 931
+    .line 919
     return-void
 .end method

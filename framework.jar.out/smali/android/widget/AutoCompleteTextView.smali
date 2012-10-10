@@ -469,7 +469,7 @@
 
     invoke-direct {v11, v5, v6, v4, v12}, Landroid/view/inputmethod/CompletionInfo;-><init>(JILjava/lang/CharSequence;)V
 
-    aput-object v11, v1, v4
+    aput-object v11, v1, v9
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 

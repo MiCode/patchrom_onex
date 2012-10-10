@@ -30,6 +30,8 @@
 
 .field public static final enum CLASS_APP:Lcom/android/internal/telephony/APNParam$ClassId;
 
+.field public static final enum CLASS_CUSTOMIZE1:Lcom/android/internal/telephony/APNParam$ClassId;
+
 .field public static final enum CLASS_IMS:Lcom/android/internal/telephony/APNParam$ClassId;
 
 .field public static final enum CLASS_INTERNET:Lcom/android/internal/telephony/APNParam$ClassId;
@@ -54,7 +56,7 @@
 
     const/4 v3, 0x0
 
-    .line 61
+    .line 121
     new-instance v0, Lcom/android/internal/telephony/APNParam$ClassId;
 
     const-string v1, "CLASS_NONE"
@@ -63,7 +65,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_NONE:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    .line 62
+    .line 122
     new-instance v0, Lcom/android/internal/telephony/APNParam$ClassId;
 
     const-string v1, "CLASS_IMS"
@@ -72,7 +74,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_IMS:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    .line 63
+    .line 123
     new-instance v0, Lcom/android/internal/telephony/APNParam$ClassId;
 
     const-string v1, "CLASS_ADMIN"
@@ -81,7 +83,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_ADMIN:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    .line 64
+    .line 124
     new-instance v0, Lcom/android/internal/telephony/APNParam$ClassId;
 
     const-string v1, "CLASS_INTERNET"
@@ -90,7 +92,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_INTERNET:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    .line 65
+    .line 125
     new-instance v0, Lcom/android/internal/telephony/APNParam$ClassId;
 
     const-string v1, "CLASS_APP"
@@ -99,7 +101,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_APP:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    .line 66
+    .line 126
     new-instance v0, Lcom/android/internal/telephony/APNParam$ClassId;
 
     const-string v1, "CLASS_TETHERING"
@@ -110,8 +112,19 @@
 
     sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_TETHERING:Lcom/android/internal/telephony/APNParam$ClassId;
 
-    .line 60
-    const/4 v0, 0x6
+    .line 127
+    new-instance v0, Lcom/android/internal/telephony/APNParam$ClassId;
+
+    const-string v1, "CLASS_CUSTOMIZE1"
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/APNParam$ClassId;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_CUSTOMIZE1:Lcom/android/internal/telephony/APNParam$ClassId;
+
+    .line 120
+    const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/internal/telephony/APNParam$ClassId;
 
@@ -141,6 +154,12 @@
 
     aput-object v2, v0, v1
 
+    const/4 v1, 0x6
+
+    sget-object v2, Lcom/android/internal/telephony/APNParam$ClassId;->CLASS_CUSTOMIZE1:Lcom/android/internal/telephony/APNParam$ClassId;
+
+    aput-object v2, v0, v1
+
     sput-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->$VALUES:[Lcom/android/internal/telephony/APNParam$ClassId;
 
     return-void
@@ -157,7 +176,7 @@
     .end annotation
 
     .prologue
-    .line 60
+    .line 120
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -168,7 +187,7 @@
     .parameter "name"
 
     .prologue
-    .line 60
+    .line 120
     const-class v0, Lcom/android/internal/telephony/APNParam$ClassId;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -184,7 +203,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 120
     sget-object v0, Lcom/android/internal/telephony/APNParam$ClassId;->$VALUES:[Lcom/android/internal/telephony/APNParam$ClassId;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/APNParam$ClassId;->clone()Ljava/lang/Object;

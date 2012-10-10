@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 756
+    .line 760
     invoke-direct {p0}, Lcom/android/calendarcommon/EventRecurrence$PartParser;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
     .parameter "x0"
 
     .prologue
-    .line 756
+    .line 760
     invoke-direct {p0}, Lcom/android/calendarcommon/EventRecurrence$ParseInterval;-><init>()V
 
     return-void
@@ -39,25 +39,59 @@
 
 # virtual methods
 .method public parsePart(Ljava/lang/String;Lcom/android/calendarcommon/EventRecurrence;)I
-    .locals 3
+    .locals 4
     .parameter "value"
     .parameter "er"
 
     .prologue
-    .line 758
-    const/4 v0, 0x1
+    const/4 v3, 0x1
+
+    .line 762
+    const/high16 v0, -0x8000
 
     const v1, 0x7fffffff
 
-    const/4 v2, 0x0
-
-    invoke-static {p1, v0, v1, v2}, Lcom/android/calendarcommon/EventRecurrence$ParseInterval;->parseIntRange(Ljava/lang/String;IIZ)I
+    invoke-static {p1, v0, v1, v3}, Lcom/android/calendarcommon/EventRecurrence$ParseInterval;->parseIntRange(Ljava/lang/String;IIZ)I
 
     move-result v0
 
     iput v0, p2, Lcom/android/calendarcommon/EventRecurrence;->interval:I
 
-    .line 759
+    .line 763
+    iget v0, p2, Lcom/android/calendarcommon/EventRecurrence;->interval:I
+
+    if-ge v0, v3, :cond_0
+
+    .line 764
+    invoke-static {}, Lcom/android/calendarcommon/EventRecurrence;->access$1500()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Invalid Interval. Forcing INTERVAL to 1 from "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 765
+    iput v3, p2, Lcom/android/calendarcommon/EventRecurrence;->interval:I
+
+    .line 767
+    :cond_0
     const/16 v0, 0x8
 
     return v0

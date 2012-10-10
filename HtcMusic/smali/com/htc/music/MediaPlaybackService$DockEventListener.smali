@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1350
+    .line 1431
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$DockEventListener;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1353
+    .line 1434
     const-string v1, "android.intent.extra.DOCK_STATE"
 
     const/4 v2, -0x1
@@ -49,7 +49,7 @@
 
     move-result v0
 
-    .line 1354
+    .line 1435
     .local v0, state:I
     const-string v1, "[MediaPlaybackService]"
 
@@ -73,14 +73,14 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1355
+    .line 1436
     packed-switch v0, :pswitch_data_0
 
-    .line 1365
+    .line 1446
     :goto_0
     return-void
 
-    .line 1357
+    .line 1438
     :pswitch_0
     const-string v1, "[MediaPlaybackService]"
 
@@ -88,7 +88,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1358
+    .line 1439
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$DockEventListener;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v1}, Lcom/htc/music/MediaPlaybackService;->isPlaying()Z
@@ -97,12 +97,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1359
+    .line 1440
     iget-object v1, p0, Lcom/htc/music/MediaPlaybackService$DockEventListener;->this$0:Lcom/htc/music/MediaPlaybackService;
 
     invoke-virtual {v1}, Lcom/htc/music/MediaPlaybackService;->pause()V
 
-    .line 1361
+    .line 1442
     :cond_0
     const-string v1, "[MediaPlaybackService]"
 
@@ -112,7 +112,7 @@
 
     goto :goto_0
 
-    .line 1355
+    .line 1436
     nop
 
     :pswitch_data_0

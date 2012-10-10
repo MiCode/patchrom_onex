@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 7772
+    .line 7805
     iput-object p1, p0, Lcom/htc/music/HtcMusic$ResetCurrentAlbumClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +42,19 @@
     .parameter "v"
 
     .prologue
-    .line 7774
+    .line 7807
     iget-object v0, p0, Lcom/htc/music/HtcMusic$ResetCurrentAlbumClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->resetCurrentAlbumArt()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9500(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9600(Lcom/htc/music/HtcMusic;)V
 
-    .line 7775
+    .line 7808
     iget-object v0, p0, Lcom/htc/music/HtcMusic$ResetCurrentAlbumClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Lcom/htc/music/HtcMusic;->dismissDialog(I)V
 
-    .line 7776
+    .line 7809
     return-void
 .end method

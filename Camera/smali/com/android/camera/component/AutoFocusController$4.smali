@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera/event/EventHandler",
         "<",
-        "Lcom/android/camera/event/EventArgs;",
+        "Lcom/android/camera/event/SingleHandlerEventArgs;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 462
+    .line 549
     iput-object p1, p0, Lcom/android/camera/component/AutoFocusController$4;->this$0:Lcom/android/camera/component/AutoFocusController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,8 +47,24 @@
 
 
 # virtual methods
-.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
-    .locals 1
+.method public bridge synthetic onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+    .parameter "x2"
+
+    .prologue
+    .line 549
+    check-cast p3, Lcom/android/camera/event/SingleHandlerEventArgs;
+
+    .end local p3
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/component/AutoFocusController$4;->onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/SingleHandlerEventArgs;)V
+
+    return-void
+.end method
+
+.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/SingleHandlerEventArgs;)V
+    .locals 3
     .parameter
     .parameter "sender"
     .parameter "e"
@@ -57,43 +73,40 @@
             "(",
             "Lcom/android/camera/event/Event",
             "<",
-            "Lcom/android/camera/event/EventArgs;",
+            "Lcom/android/camera/event/SingleHandlerEventArgs;",
             ">;",
             "Ljava/lang/Object;",
-            "Lcom/android/camera/event/EventArgs;",
+            "Lcom/android/camera/event/SingleHandlerEventArgs;",
             ")V"
         }
     .end annotation
 
     .prologue
-    .line 466
-    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
+    .line 553
+    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/SingleHandlerEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$4;->this$0:Lcom/android/camera/component/AutoFocusController;
 
     #calls: Lcom/android/camera/component/AutoFocusController;->cancelAutoFocus()V
-    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$100(Lcom/android/camera/component/AutoFocusController;)V
+    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$200(Lcom/android/camera/component/AutoFocusController;)V
 
-    .line 467
+    .line 554
     iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$4;->this$0:Lcom/android/camera/component/AutoFocusController;
 
-    #getter for: Lcom/android/camera/component/AutoFocusController;->m_FocusQueue:Ljava/util/ArrayList;
-    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$600(Lcom/android/camera/component/AutoFocusController;)Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/android/camera/component/AutoFocusController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->autoFocusCanceledEvent:Lcom/android/camera/event/Event;
 
-    .line 468
-    iget-object v0, p0, Lcom/android/camera/component/AutoFocusController$4;->this$0:Lcom/android/camera/component/AutoFocusController;
+    iget-object v1, p0, Lcom/android/camera/component/AutoFocusController$4;->this$0:Lcom/android/camera/component/AutoFocusController;
 
-    #getter for: Lcom/android/camera/component/AutoFocusController;->m_FocusQueue:Ljava/util/ArrayList;
-    invoke-static {v0}, Lcom/android/camera/component/AutoFocusController;->access$600(Lcom/android/camera/component/AutoFocusController;)Ljava/util/ArrayList;
+    sget-object v2, Lcom/android/camera/event/EventArgs;->empty:Lcom/android/camera/event/EventArgs;
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    .line 555
+    invoke-virtual {p3}, Lcom/android/camera/event/SingleHandlerEventArgs;->setHandled()V
 
-    .line 469
-    :cond_0
+    .line 556
     return-void
 .end method

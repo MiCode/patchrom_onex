@@ -19,6 +19,8 @@
 
 .field mContentWidth:I
 
+.field mFocusNode:I
+
 .field mHeight:I
 
 .field mLeft:I
@@ -35,15 +37,13 @@
 
 .field mYPercentInView:F
 
-.field mhasFocusNode:Z
-
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 3159
+    .line 3347
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

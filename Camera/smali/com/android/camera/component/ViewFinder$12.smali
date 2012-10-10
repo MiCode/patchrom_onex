@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 1062
+    .line 1061
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$12;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,14 +72,14 @@
     .end annotation
 
     .prologue
-    .line 1065
+    .line 1064
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/QueryEventArgs<Landroid/graphics/Rect;>;>;"
     .local p3, e:Lcom/android/camera/QueryEventArgs;,"Lcom/android/camera/QueryEventArgs<Landroid/graphics/Rect;>;"
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1066
+    .line 1065
     .local v0, rect:Landroid/graphics/Rect;
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder$12;->this$0:Lcom/android/camera/component/ViewFinder;
 
@@ -90,10 +90,10 @@
 
     invoke-virtual {v1, v0}, Landroid/view/SurfaceView;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 1067
+    .line 1066
     invoke-virtual {p3, v0}, Lcom/android/camera/QueryEventArgs;->setResult(Ljava/lang/Object;)V
 
-    .line 1068
+    .line 1067
     return-void
 .end method
 
@@ -104,7 +104,7 @@
     .parameter "x2"
 
     .prologue
-    .line 1062
+    .line 1061
     check-cast p3, Lcom/android/camera/QueryEventArgs;
 
     .end local p3

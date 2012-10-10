@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 755
+    .line 754
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$3;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .parameter "arg3"
 
     .prologue
-    .line 765
+    .line 764
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .parameter "holder"
 
     .prologue
-    .line 762
+    .line 761
     return-void
 .end method
 
@@ -63,6 +63,6 @@
     .parameter "holder"
 
     .prologue
-    .line 757
+    .line 756
     return-void
 .end method

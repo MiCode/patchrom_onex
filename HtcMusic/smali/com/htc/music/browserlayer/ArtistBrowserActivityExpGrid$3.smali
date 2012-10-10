@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 457
+    .line 469
     iput-object p1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$3;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "xxxid"
 
     .prologue
-    .line 498
+    .line 510
     iget-object v0, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$3;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     const/4 v1, 0x0
@@ -60,10 +60,10 @@
     .parameter "xxxid"
 
     .prologue
-    .line 461
+    .line 473
     const/4 v1, 0x0
 
-    .line 462
+    .line 474
     .local v1, path:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$3;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    .line 463
+    .line 475
     .local v0, cur:Landroid/database/Cursor;
     if-eqz v0, :cond_0
 
@@ -84,10 +84,10 @@
 
     if-lez v2, :cond_0
 
-    .line 464
+    .line 476
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 466
+    .line 478
     const-string v2, "album_art"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -98,13 +98,13 @@
 
     move-result-object v1
 
-    .line 467
+    .line 479
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 468
+    .line 480
     const/4 v0, 0x0
 
-    .line 470
+    .line 482
     :cond_0
     return-object v1
 .end method
@@ -113,7 +113,7 @@
     .locals 2
 
     .prologue
-    .line 483
+    .line 495
     iget-object v0, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$3;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -127,7 +127,7 @@
 
     if-nez v0, :cond_0
 
-    .line 484
+    .line 496
     iget-object v0, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$3;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -148,11 +148,11 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->setMediaList(Lcom/htc/sunny2/IMediaList;)V
 
-    .line 488
+    .line 500
     :goto_0
     return-void
 
-    .line 486
+    .line 498
     :cond_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$3;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
@@ -171,7 +171,7 @@
     .parameter "index"
 
     .prologue
-    .line 492
+    .line 504
     iget-object v0, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$3;->this$0:Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid;
 
     #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -181,6 +181,6 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyPreparatorMediaDataChange(I)V
 
-    .line 493
+    .line 505
     return-void
 .end method

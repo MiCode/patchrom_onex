@@ -37,23 +37,23 @@
     .parameter "cols"
 
     .prologue
-    .line 673
+    .line 758
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-direct {p0}, Landroid/database/AbstractCursor;-><init>()V
 
-    .line 870
+    .line 958
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
-    .line 674
+    .line 759
     iput-object p2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCols:[Ljava/lang/String;
 
-    .line 675
+    .line 760
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->makeNowPlayingCursor()V
 
-    .line 676
+    .line 761
     return-void
 .end method
 
@@ -61,10 +61,10 @@
     .locals 4
 
     .prologue
-    .line 763
+    .line 851
     const-string v1, "("
 
-    .line 764
+    .line 852
     .local v1, where:Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -74,7 +74,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 765
+    .line 853
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,14 +95,14 @@
 
     move-result-object v1
 
-    .line 766
+    .line 854
     iget v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
     add-int/lit8 v2, v2, -0x1
 
     if-ge v0, v2, :cond_0
 
-    .line 767
+    .line 855
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,13 +121,13 @@
 
     move-result-object v1
 
-    .line 764
+    .line 852
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 770
+    .line 858
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -147,12 +147,12 @@
 
     move-result-object v1
 
-    .line 771
+    .line 859
     const-string v2, "NowPlayingCursor: "
 
     invoke-static {v2, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 772
+    .line 860
     return-void
 .end method
 
@@ -164,10 +164,21 @@
 
     const/4 v12, -0x1
 
-    .line 679
+    .line 764
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    .line 765
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    .line 767
+    :cond_0
     iput-object v4, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    .line 681
+    .line 769
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
@@ -176,20 +187,20 @@
 
     move-result v9
 
-    .line 682
+    .line 770
     .local v9, playlistSize:I
     new-array v0, v9, [I
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mNowPlaying:[I
 
-    .line 683
+    .line 771
     const/4 v8, 0x0
 
     .local v8, i:I
     :goto_0
-    if-ge v8, v9, :cond_0
+    if-ge v8, v9, :cond_1
 
-    .line 684
+    .line 772
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mNowPlaying:[I
 
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
@@ -206,89 +217,89 @@
 
     aput v0, v1, v8
 
-    .line 683
+    .line 771
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 687
-    :cond_0
+    .line 775
+    :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mNowPlaying:[I
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    .line 688
+    .line 776
     iput v12, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
-    .line 734
-    :cond_1
+    .line 822
+    :cond_2
     :goto_1
     return-void
 
-    .line 692
-    :cond_2
+    .line 780
+    :cond_3
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mNowPlaying:[I
 
     array-length v0, v0
 
     iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
-    .line 693
+    .line 781
     iget v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 697
+    .line 785
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 698
+    .line 786
     .local v11, where:Ljava/lang/StringBuilder;
     const-string v0, "_id IN ("
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 699
+    .line 787
     const/4 v8, 0x0
 
     :goto_2
     iget v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
-    if-ge v8, v0, :cond_4
+    if-ge v8, v0, :cond_5
 
-    .line 700
+    .line 788
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mNowPlaying:[I
 
     aget v0, v0, v8
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 701
+    .line 789
     iget v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
     add-int/lit8 v0, v0, -0x1
 
-    if-ge v8, v0, :cond_3
+    if-ge v8, v0, :cond_4
 
-    .line 702
+    .line 790
     const-string v0, ","
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 699
-    :cond_3
+    .line 787
+    :cond_4
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 705
-    :cond_4
+    .line 793
+    :cond_5
     const-string v0, ")"
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 707
+    .line 795
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
@@ -305,21 +316,21 @@
 
     move-result-object v6
 
-    .line 710
+    .line 798
     .local v6, c:Landroid/database/Cursor;
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     #calls: Lcom/htc/music/browserlayer/EditPlaylistActivity;->joinAlbumArt(Landroid/database/Cursor;)Landroid/database/Cursor;
-    invoke-static {v0, v6}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$200(Lcom/htc/music/browserlayer/EditPlaylistActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-static {v0, v6}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$300(Lcom/htc/music/browserlayer/EditPlaylistActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    .line 711
+    .line 799
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -327,18 +338,18 @@
 
     move-result v0
 
-    if-lez v0, :cond_5
+    if-lez v0, :cond_6
 
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
-    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$300(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Z
+    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$400(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    .line 712
+    .line 800
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getApplicationContext()Landroid/content/Context;
@@ -353,39 +364,39 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    .line 714
-    :cond_5
+    .line 802
+    :cond_6
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
-    .line 715
+    .line 803
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
     goto :goto_1
 
-    .line 718
-    :cond_6
+    .line 806
+    :cond_7
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v10
 
-    .line 719
+    .line 807
     .local v10, size:I
     new-array v0, v10, [I
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCursorIdxs:[I
 
-    .line 720
+    .line 808
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 721
+    .line 809
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     const-string v1, "_id"
@@ -394,14 +405,14 @@
 
     move-result v7
 
-    .line 722
+    .line 810
     .local v7, colidx:I
     const/4 v8, 0x0
 
     :goto_3
-    if-ge v8, v10, :cond_7
+    if-ge v8, v10, :cond_8
 
-    .line 723
+    .line 811
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCursorIdxs:[I
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
@@ -412,23 +423,23 @@
 
     aput v1, v0, v8
 
-    .line 724
+    .line 812
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 722
+    .line 810
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 726
-    :cond_7
+    .line 814
+    :cond_8
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 727
+    .line 815
     iput v12, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurPos:I
 
     goto/16 :goto_1
@@ -440,25 +451,25 @@
     .locals 1
 
     .prologue
-    .line 859
+    .line 947
     invoke-super {p0}, Landroid/database/AbstractCursor;->close()V
 
-    .line 860
+    .line 948
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_0
 
-    .line 861
+    .line 949
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 862
+    .line 950
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
-    .line 864
+    .line 952
     :cond_0
     return-void
 .end method
@@ -467,17 +478,17 @@
     .locals 1
 
     .prologue
-    .line 831
+    .line 919
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     if-eqz v0, :cond_0
 
-    .line 832
+    .line 920
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->deactivate()V
 
-    .line 833
+    .line 921
     :cond_0
     return-void
 .end method
@@ -486,11 +497,11 @@
     .locals 1
 
     .prologue
-    .line 853
+    .line 941
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity;->mCursorCols:[Ljava/lang/String;
-    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$400(Lcom/htc/music/browserlayer/EditPlaylistActivity;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$500(Lcom/htc/music/browserlayer/EditPlaylistActivity;)[Ljava/lang/String;
 
     move-result-object v0
 
@@ -504,7 +515,7 @@
     .parameter "name"
 
     .prologue
-    .line 848
+    .line 936
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -519,7 +530,7 @@
     .parameter "idx"
 
     .prologue
-    .line 843
+    .line 931
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnName(I)Ljava/lang/String;
@@ -533,7 +544,7 @@
     .locals 1
 
     .prologue
-    .line 826
+    .line 914
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCols:[Ljava/lang/String;
 
     return-object v0
@@ -543,7 +554,7 @@
     .locals 1
 
     .prologue
-    .line 738
+    .line 826
     iget v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mSize:I
 
     return v0
@@ -554,7 +565,7 @@
     .parameter "column"
 
     .prologue
-    .line 816
+    .line 904
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getDouble(I)D
@@ -569,7 +580,7 @@
     .parameter "column"
 
     .prologue
-    .line 811
+    .line 899
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getFloat(I)F
@@ -584,7 +595,7 @@
     .parameter "column"
 
     .prologue
-    .line 792
+    .line 880
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -594,21 +605,21 @@
 
     move-result v1
 
-    .line 795
+    .line 883
     :goto_0
     return v1
 
-    .line 793
+    .line 881
     :catch_0
     move-exception v0
 
-    .line 794
+    .line 882
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->onChange(Z)V
 
-    .line 795
+    .line 883
     const/4 v1, 0x0
 
     goto :goto_0
@@ -619,7 +630,7 @@
     .parameter "column"
 
     .prologue
-    .line 802
+    .line 890
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -629,21 +640,21 @@
 
     move-result-wide v1
 
-    .line 805
+    .line 893
     :goto_0
     return-wide v1
 
-    .line 803
+    .line 891
     :catch_0
     move-exception v0
 
-    .line 804
+    .line 892
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->onChange(Z)V
 
-    .line 805
+    .line 893
     const-wide/16 v1, 0x0
 
     goto :goto_0
@@ -654,7 +665,7 @@
     .parameter "column"
 
     .prologue
-    .line 786
+    .line 874
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getShort(I)S
@@ -669,7 +680,7 @@
     .parameter "column"
 
     .prologue
-    .line 777
+    .line 865
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
@@ -679,21 +690,21 @@
 
     move-result-object v1
 
-    .line 780
+    .line 868
     :goto_0
     return-object v1
 
-    .line 778
+    .line 866
     :catch_0
     move-exception v0
 
-    .line 779
+    .line 867
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->onChange(Z)V
 
-    .line 780
+    .line 868
     const-string v1, ""
 
     goto :goto_0
@@ -704,7 +715,7 @@
     .parameter "column"
 
     .prologue
-    .line 821
+    .line 909
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v0, p1}, Landroid/database/Cursor;->isNull(I)Z
@@ -722,14 +733,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 743
+    .line 831
     if-ne p1, p2, :cond_0
 
-    .line 759
+    .line 847
     :goto_0
     return v2
 
-    .line 746
+    .line 834
     :cond_0
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mNowPlaying:[I
 
@@ -739,19 +750,19 @@
 
     if-nez v3, :cond_2
 
-    .line 747
+    .line 835
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 754
+    .line 842
     :cond_2
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mNowPlaying:[I
 
     aget v1, v3, p2
 
-    .line 755
+    .line 843
     .local v1, newid:I
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCursorIdxs:[I
 
@@ -759,13 +770,13 @@
 
     move-result v0
 
-    .line 756
+    .line 844
     .local v0, crsridx:I
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurrentPlaylistCursor:Landroid/database/Cursor;
 
     invoke-interface {v3, v0}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 757
+    .line 845
     iput p2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->mCurPos:I
 
     goto :goto_0
@@ -775,10 +786,10 @@
     .locals 1
 
     .prologue
-    .line 837
+    .line 925
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;->makeNowPlayingCursor()V
 
-    .line 838
+    .line 926
     const/4 v0, 0x1
 
     return v0

@@ -33,17 +33,17 @@
     .parameter "activity"
 
     .prologue
-    .line 227
+    .line 239
     invoke-direct {p0}, Landroid/view/IApplicationToken$Stub;-><init>()V
 
-    .line 228
+    .line 240
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
-    .line 229
+    .line 241
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .end annotation
 
     .prologue
-    .line 271
+    .line 289
     iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,16 +67,16 @@
 
     check-cast v0, Lcom/android/server/am/ActivityRecord;
 
-    .line 272
+    .line 290
     .local v0, activity:Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
-    .line 273
+    .line 291
     invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->getKeyDispatchingTimeout()J
 
     move-result-wide v1
 
-    .line 275
+    .line 293
     :goto_0
     return-wide v1
 
@@ -95,7 +95,7 @@
     .end annotation
 
     .prologue
-    .line 263
+    .line 281
     iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -104,16 +104,16 @@
 
     check-cast v0, Lcom/android/server/am/ActivityRecord;
 
-    .line 264
+    .line 282
     .local v0, activity:Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
-    .line 265
+    .line 283
     invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->keyDispatchingTimedOut()Z
 
     move-result v1
 
-    .line 267
+    .line 285
     :goto_0
     return v1
 
@@ -123,24 +123,54 @@
     goto :goto_0
 .end method
 
+.method public reportAppTransitionEnd()V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 297
+    iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/ActivityRecord;
+
+    .line 298
+    .local v0, activity:Lcom/android/server/am/ActivityRecord;
+    if-eqz v0, :cond_0
+
+    .line 299
+    invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->reportAppTransitionEnd()V
+
+    .line 301
+    :cond_0
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 279
+    .line 305
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 280
+    .line 306
     .local v0, sb:Ljava/lang/StringBuilder;
     const-string v1, "Token{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 281
+    .line 307
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -151,12 +181,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 282
+    .line 308
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 283
+    .line 309
     iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -165,12 +195,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 284
+    .line 310
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 285
+    .line 311
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -178,9 +208,8 @@
     return-object v1
 .end method
 
-.method public windowsDrawn(Z)V
+.method public windowsDrawn()V
     .locals 2
-    .parameter "collapseScrollbar"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -188,7 +217,7 @@
     .end annotation
 
     .prologue
-    .line 241
+    .line 245
     iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -197,14 +226,48 @@
 
     check-cast v0, Lcom/android/server/am/ActivityRecord;
 
-    .line 242
+    .line 246
     .local v0, activity:Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
-    .line 243
-    invoke-virtual {v0, p1}, Lcom/android/server/am/ActivityRecord;->windowsDrawn(Z)V
+    .line 247
+    const/4 v1, 0x0
 
-    .line 245
+    invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityRecord;->windowsDrawn(Z)V
+
+    .line 249
+    :cond_0
+    return-void
+.end method
+
+.method public windowsDrawn2()V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 259
+    iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/ActivityRecord;
+
+    .line 260
+    .local v0, activity:Lcom/android/server/am/ActivityRecord;
+    if-eqz v0, :cond_0
+
+    .line 261
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityRecord;->windowsDrawn(Z)V
+
+    .line 263
     :cond_0
     return-void
 .end method
@@ -218,7 +281,7 @@
     .end annotation
 
     .prologue
-    .line 256
+    .line 274
     iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -227,14 +290,14 @@
 
     check-cast v0, Lcom/android/server/am/ActivityRecord;
 
-    .line 257
+    .line 275
     .local v0, activity:Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
-    .line 258
+    .line 276
     invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->windowsGone()V
 
-    .line 260
+    .line 278
     :cond_0
     return-void
 .end method
@@ -248,7 +311,7 @@
     .end annotation
 
     .prologue
-    .line 249
+    .line 267
     iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -257,14 +320,14 @@
 
     check-cast v0, Lcom/android/server/am/ActivityRecord;
 
-    .line 250
+    .line 268
     .local v0, activity:Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
-    .line 251
+    .line 269
     invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->windowsVisible()V
 
-    .line 253
+    .line 271
     :cond_0
     return-void
 .end method

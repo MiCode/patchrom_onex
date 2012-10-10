@@ -28,14 +28,21 @@
     <string name="panorama_stitching_error_images">Панорамуйте камерою без різких рухів. Спробуйте ще раз. Зшивання поточних фотографій...</string>
     <string name="processing_image">@com.htc:string/st_processing</string>
     <string name="saving_photos">Збереження фотографій...</string>
+    <string name="saving_video">Збереження відеозапису...</string>
     <string name="optimal_3D_in_landscape">Тримайте телефон горизонтально для правильного функціонування 3D-зйомки</string>
     <string name="image_queue_is_full">Зберігається фотографія, зробіть знімок пізніше.</string>
     <string name="how_to_start_group_portrait">Використовуйте сюжет Група для отримання чудового знімка з усіма посмішками і без моргань</string>
     <string name="group_portrait_processing_images">Сканування облич для формування найкращого знімка...</string>
     <string name="auto_upload_first_time_dialog">Увімкнути автоматичне резервне копіювання знімків вашої камери у Facebook?</string>
     <string name="auto_upload_confirm_dialog">Цей параметр можна змінити в будь-який момент, увійшовши в Налаштування-->Автозавантаження</string>
+    <string name="other_usage_camera">Не вдалося запустити камеру, оскільки вона використовується іншою програмою.</string>
+    <string name="other_usage_camcorder">Не вдалося запустити відеокамеру, оскільки вона використовується іншою програмою.</string>
     <string name="not_recording_when_streaming_tv">Під час потокового передавання на телевізор запис відео не працює</string>
     <string name="forbidden_camera">"Доступ до камери заборонено адміністратором. Для отримання допомоги зв'яжіться з працівниками відділу ІТ."</string>
+    <string name="not_launch_camera_while_phonecall_and_lowpower">Камеру використовувати не можна, оскільки виконується телефонний виклик, а заряд батареї низький.</string>
+    <string name="close_camera_while_phonecall_and_lowpower">Камеру закрито, оскільки виконується телефонний виклик, а заряд батареї низький</string>
+    <string name="unable_launch_camera">Не вдалося запустити камеру.</string>
+    <string name="close_camera_while_error_happened">Камеру необхідно закрити.</string>
     <string name="on_screen_btn_effects">Ефекти</string>
     <string name="on_screen_btn_enhance_photo">Покращити</string>
     <string name="on_screen_btn_trim_video">Обрізати</string>
@@ -60,7 +67,7 @@
     <string name="resolution_5_3">Роздільна здатність – 5:3</string>
     <string name="resolution_16_9">Роздільна здатність – 16:9</string>
     <string name="resolution_Tablet_16_9">Роздільна здатність – 16:9</string>
-    <string name="resolution_Tablet_16_10">Resolution - 16:10</string>
+    <string name="resolution_Tablet_16_10">Роздільна здатність - 16:10</string>
     <string name="resolution_3_2">Роздільна здатність – 3:2</string>
     <string name="resolution_4_3">Роздільна здатність – 4:3</string>
     <string name="wb_incandescent">Освітлення від лампи розжарювання</string>
@@ -85,7 +92,7 @@
     <string name="image_ratio">Широкоекранний</string>
     <string name="image_ratio_wideon_5_3">Роздільна здатність – 5:3 (широкоекранний)</string>
     <string name="image_ratio_wideon_16_9">Роздільна здатність – 16:9 (широкоекранний)</string>
-    <string name="image_ratio_wideon_16_10">Resolution - 16:10 (Widescreen)</string>
+    <string name="image_ratio_wideon_16_10">Роздільність - 16:10 (Широкоекранний)</string>
     <string name="image_ratio_wideon_3_2">Роздільна здатність – 3:2 (широкоекранний)</string>
     <string name="image_ratio_wideoff">Роздільна здатність – 4:3 (стандартний розмір фото)</string>
     <string name="record_with_audio">Записати зі звуком</string>
@@ -208,6 +215,7 @@
     <string name="resolution_video_qhd_description_2">QHD (960 x 540)</string>
     <string name="resolution_video_wvga_description_2">Широкоекранний (800 x 480)</string>
     <string name="resolution_video_hvga_description_2">Широкоекранний (720 x 480)</string>
+    <string name="resolution_video_hvga_description_3">Широкоекранний (480 x 320)</string>
     <string name="resolution_video_vga_description_2">Високий (640 x 480)</string>
     <string name="resolution_video_QVGA_description_3">Низький (320 x 240)</string>
     <string name="resolution_video_qcif_description_3">MMS (176 x 144)</string>
@@ -238,7 +246,7 @@
     <string name="hint_drag_effect_bar">Перетягніть смужку для регулювання ефекту.</string>
     <string name="hint_auto_capture_no_face">Для запуску таймера натисніть кнопку захоплення.</string>
     <string name="hint_auto_capture_one_face">Для зйомки фото розмістіть обличчя в рамці.</string>
-    <string name="hint_auto_capture_smile_face">Frame a smiling face to capture a photo automatically</string>
+    <string name="hint_auto_capture_smile_face">Щоб автоматично зробити знімок, встановіть рамку на усміхнене обличчя</string>
     <string name="hint_auto_capture_two_face">Для зйомки фото розмістіть два обличчя в рамці.</string>
     <string name="text_title_location_disable">Джерела координатних даних вимкнено</string>
     <string name="text_message_location_disable">Для роботи цієї програми потрібен доступ до розташування. Для отримання поточного розташування увімкніть бездротову мережу або супутник GPS у налаштуваннях.</string>

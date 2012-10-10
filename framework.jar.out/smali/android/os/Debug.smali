@@ -112,12 +112,12 @@
 
     sput-object v0, Landroid/os/Debug;->DEFAULT_TRACE_FILE_PATH:Ljava/lang/String;
 
-    .line 1114
+    .line 1122
     const/4 v0, 0x0
 
     sput-object v0, Landroid/os/Debug;->debugProperties:Lcom/android/internal/util/TypedProperties;
 
-    .line 1116
+    .line 1124
     return-void
 .end method
 
@@ -136,7 +136,7 @@
     .parameter "classAndMethodDesc"
 
     .prologue
-    .line 975
+    .line 983
     invoke-static {p0}, Ldalvik/system/VMDebug;->cacheRegisterMap(Ljava/lang/String;)Z
 
     move-result v0
@@ -223,10 +223,10 @@
     .locals 0
 
     .prologue
-    .line 985
+    .line 993
     invoke-static {}, Ldalvik/system/VMDebug;->dumpReferenceTables()V
 
-    .line 986
+    .line 994
     return-void
 .end method
 
@@ -239,16 +239,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1313
+    .line 1321
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 1314
+    .line 1322
     .local v1, service:Landroid/os/IBinder;
     if-nez v1, :cond_0
 
-    .line 1315
+    .line 1323
     const-string v3, "Debug"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -271,27 +271,27 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1324
+    .line 1332
     :goto_0
     return v2
 
-    .line 1320
+    .line 1328
     :cond_0
     :try_start_0
     invoke-interface {v1, p1, p2}, Landroid/os/IBinder;->dump(Ljava/io/FileDescriptor;[Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1321
+    .line 1329
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 1322
+    .line 1330
     :catch_0
     move-exception v0
 
-    .line 1323
+    .line 1331
     .local v0, e:Landroid/os/RemoteException;
     const-string v3, "Debug"
 
@@ -348,22 +348,22 @@
 
     const/4 v5, 0x0
 
-    .line 1126
+    .line 1134
     invoke-virtual {p0}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 1127
+    .line 1135
     .local v1, fieldClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     if-ne v1, p1, :cond_0
 
     move v5, v4
 
-    .line 1143
+    .line 1151
     :goto_0
     return v5
 
-    .line 1136
+    .line 1144
     :cond_0
     :try_start_0
     const-string v3, "TYPE"
@@ -374,7 +374,7 @@
 
     move-result-object v2
 
-    .line 1141
+    .line 1149
     .local v2, primitiveTypeField:Ljava/lang/reflect/Field;
     const/4 v3, 0x0
 
@@ -396,12 +396,12 @@
 
     goto :goto_0
 
-    .line 1137
+    .line 1145
     .end local v2           #primitiveTypeField:Ljava/lang/reflect/Field;
     :catch_0
     move-exception v0
 
-    .line 1138
+    .line 1146
     .local v0, ex:Ljava/lang/NoSuchFieldException;
     goto :goto_0
 
@@ -410,14 +410,14 @@
     :cond_1
     move v3, v5
 
-    .line 1141
+    .line 1149
     goto :goto_1
 
-    .line 1142
+    .line 1150
     :catch_1
     move-exception v0
 
-    .line 1143
+    .line 1151
     .local v0, ex:Ljava/lang/IllegalAccessException;
     goto :goto_0
 .end method
@@ -725,7 +725,7 @@
     .parameter "propertyName"
 
     .prologue
-    .line 1154
+    .line 1162
     invoke-virtual {p0}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v3
@@ -734,16 +734,16 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 1155
+    .line 1163
     invoke-virtual {p1, p2}, Lcom/android/internal/util/TypedProperties;->getStringInfo(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1156
+    .line 1164
     .local v1, stringInfo:I
     packed-switch v1, :pswitch_data_0
 
-    .line 1175
+    .line 1183
     new-instance v3, Ljava/lang/IllegalStateException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -778,7 +778,7 @@
 
     throw v3
 
-    .line 1162
+    .line 1170
     :pswitch_0
     const/4 v3, 0x0
 
@@ -789,19 +789,19 @@
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1194
+    .line 1202
     .end local v1           #stringInfo:I
     :cond_0
     :goto_0
     :pswitch_1
     return-void
 
-    .line 1163
+    .line 1171
     .restart local v1       #stringInfo:I
     :catch_0
     move-exception v0
 
-    .line 1164
+    .line 1172
     .local v0, ex:Ljava/lang/IllegalAccessException;
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -827,7 +827,7 @@
 
     throw v3
 
-    .line 1171
+    .line 1179
     .end local v0           #ex:Ljava/lang/IllegalAccessException;
     :pswitch_2
     new-instance v3, Ljava/lang/IllegalArgumentException;
@@ -880,7 +880,7 @@
 
     throw v3
 
-    .line 1180
+    .line 1188
     .end local v1           #stringInfo:I
     :cond_1
     :pswitch_3
@@ -888,11 +888,11 @@
 
     move-result-object v2
 
-    .line 1181
+    .line 1189
     .local v2, value:Ljava/lang/Object;
     if-eqz v2, :cond_0
 
-    .line 1182
+    .line 1190
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -903,7 +903,7 @@
 
     if-nez v3, :cond_2
 
-    .line 1183
+    .line 1191
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -968,7 +968,7 @@
 
     throw v3
 
-    .line 1188
+    .line 1196
     :cond_2
     const/4 v3, 0x0
 
@@ -979,11 +979,11 @@
 
     goto/16 :goto_0
 
-    .line 1189
+    .line 1197
     :catch_1
     move-exception v0
 
-    .line 1190
+    .line 1198
     .restart local v0       #ex:Ljava/lang/IllegalAccessException;
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -1009,7 +1009,7 @@
 
     throw v3
 
-    .line 1156
+    .line 1164
     :pswitch_data_0
     .packed-switch -0x2
         :pswitch_2
@@ -1017,6 +1017,9 @@
         :pswitch_0
         :pswitch_3
     .end packed-switch
+.end method
+
+.method public static native native_IsM10Process(I)Z
 .end method
 
 .method public static printLoadedClasses(I)V
@@ -1259,13 +1262,13 @@
     .end annotation
 
     .prologue
-    .line 1205
+    .line 1213
     .local p0, cl:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Landroid/os/Debug;->setFieldsOn(Ljava/lang/Class;Z)V
 
-    .line 1206
+    .line 1214
     return-void
 .end method
 
@@ -1282,7 +1285,7 @@
     .end annotation
 
     .prologue
-    .line 1284
+    .line 1292
     .local p0, cl:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const-string v1, "Debug"
 
@@ -1317,10 +1320,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1288
+    .line 1296
     return-void
 
-    .line 1284
+    .line 1292
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

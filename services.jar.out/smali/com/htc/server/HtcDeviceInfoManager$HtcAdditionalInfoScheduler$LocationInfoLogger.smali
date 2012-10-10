@@ -30,18 +30,18 @@
     .parameter "infoOperators"
 
     .prologue
-    .line 831
+    .line 868
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 832
+    .line 869
     iput-object p1, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;->mInfoOperators:[Lcom/htc/server/HtcInfoOperator;
 
-    .line 833
+    .line 870
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;->mLastTimeOfLogging:J
 
-    .line 834
+    .line 871
     return-void
 .end method
 
@@ -51,12 +51,12 @@
     .locals 10
 
     .prologue
-    .line 836
+    .line 873
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 838
+    .line 875
     .local v1, currentElapsedTime:J
     iget-wide v6, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;->mLastTimeOfLogging:J
 
@@ -68,7 +68,7 @@
 
     if-lez v6, :cond_0
 
-    .line 839
+    .line 876
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$HtcAdditionalInfoScheduler$LocationInfoLogger;->mInfoOperators:[Lcom/htc/server/HtcInfoOperator;
 
     .local v0, arr$:[Lcom/htc/server/HtcInfoOperator;
@@ -83,28 +83,28 @@
 
     aget-object v5, v0, v3
 
-    .line 840
+    .line 877
     .local v5, op:Lcom/htc/server/HtcInfoOperator;
     invoke-virtual {v5}, Lcom/htc/server/HtcInfoOperator;->logLocationInfo()V
 
-    .line 841
+    .line 878
     invoke-virtual {v5}, Lcom/htc/server/HtcInfoOperator;->logInstalledApp()V
 
-    .line 842
+    .line 879
     invoke-virtual {v5}, Lcom/htc/server/HtcInfoOperator;->logStatusbarInfo()V
 
-    .line 843
+    .line 880
     invoke-virtual {v5}, Lcom/htc/server/HtcInfoOperator;->logWallpaperInfo()V
 
-    .line 844
+    .line 881
     invoke-virtual {v5}, Lcom/htc/server/HtcInfoOperator;->logLockscreenShortcutInfo()V
 
-    .line 839
+    .line 876
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 847
+    .line 884
     .end local v0           #arr$:[Lcom/htc/server/HtcInfoOperator;
     .end local v3           #i$:I
     .end local v4           #len$:I

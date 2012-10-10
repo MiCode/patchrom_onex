@@ -254,7 +254,7 @@
     invoke-virtual {v0, v14}, Landroid/accounts/GrantCredentialsPermissionActivity;->setTitle(I)V
 
     .line 58
-    const-string/jumbo v14, "layout_inflater"
+    const-string v14, "layout_inflater"
 
     move-object/from16 v0, p0
 

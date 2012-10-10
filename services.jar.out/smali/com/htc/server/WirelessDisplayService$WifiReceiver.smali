@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1385
+    .line 1590
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1385
+    .line 1590
     invoke-direct {p0, p1}, Lcom/htc/server/WirelessDisplayService$WifiReceiver;-><init>(Lcom/htc/server/WirelessDisplayService;)V
 
     return-void
@@ -58,12 +58,12 @@
 
     const/4 v8, 0x1
 
-    .line 1388
+    .line 1593
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1389
+    .line 1594
     .local v0, action:Ljava/lang/String;
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
@@ -76,7 +76,7 @@
 
     move-result v1
 
-    .line 1390
+    .line 1595
     .local v1, curMirrState:I
     const-string v5, "WirelessDisplayService"
 
@@ -110,7 +110,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1391
+    .line 1596
     const-string v5, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -119,14 +119,14 @@
 
     if-eqz v5, :cond_2
 
-    .line 1392
+    .line 1597
     const-string v5, "wifi_state"
 
     invoke-virtual {p2, v5, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 1393
+    .line 1598
     .local v2, curWifiState:I
     const-string v5, "previous_wifi_state"
 
@@ -134,31 +134,31 @@
 
     move-result v3
 
-    .line 1396
+    .line 1601
     .local v3, preWifiState:I
     if-nez v3, :cond_0
 
     if-ne v2, v8, :cond_0
 
-    .line 1397
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$600()Lcom/htc/server/WirelessDisplayService$WivuThread;
+    .line 1602
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$700()Lcom/htc/server/WirelessDisplayService$WivuThread;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 1398
+    .line 1603
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mCurNetworkInterface:Ljava/lang/String;
-    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$800(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$1000(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
 
     move-result-object v5
 
     iget-object v6, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mWiFiInterface:Ljava/lang/String;
-    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$700(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$800(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -168,15 +168,15 @@
 
     if-eqz v5, :cond_0
 
-    .line 1399
+    .line 1604
     const-string v5, "WirelessDisplayService"
 
     const-string v6, "WIFI Trun OFF"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1401
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+    .line 1606
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$900()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v5
 
@@ -184,29 +184,29 @@
 
     invoke-virtual {v5, v6}, Lcom/htc/server/WirelessDisplayService$H;->removeMessages(I)V
 
-    .line 1402
+    .line 1607
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-virtual {v5}, Lcom/htc/server/WirelessDisplayService;->stopWivuDiscovery()V
 
-    .line 1406
+    .line 1611
     :cond_0
     if-ne v2, v8, :cond_1
 
-    .line 1407
+    .line 1612
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #calls: Lcom/htc/server/WirelessDisplayService;->updateNotification()V
-    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$2300(Lcom/htc/server/WirelessDisplayService;)V
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$2800(Lcom/htc/server/WirelessDisplayService;)V
 
-    .line 1423
+    .line 1633
     .end local v2           #curWifiState:I
     .end local v3           #preWifiState:I
     :cond_1
     :goto_0
     return-void
 
-    .line 1408
+    .line 1613
     :cond_2
     const-string v5, "android.net.wifi.WIFIDISPLAY_AP_STATE_CHANGED"
 
@@ -216,14 +216,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 1409
+    .line 1614
     const-string v5, "wifi_state"
 
     invoke-virtual {p2, v5, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1411
+    .line 1616
     .local v4, state:I
     const-string v5, "WirelessDisplayService"
 
@@ -247,28 +247,68 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1413
+    .line 1618
     if-ne v4, v10, :cond_1
 
-    .line 1414
-    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$600()Lcom/htc/server/WirelessDisplayService$WivuThread;
+    .line 1620
+    iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #calls: Lcom/htc/server/WirelessDisplayService;->cancelTurnOffConcurrentHotspot()V
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$6200(Lcom/htc/server/WirelessDisplayService;)V
+
+    .line 1621
+    iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mTurnOffHotspotWakeLock:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$2100(Lcom/htc/server/WirelessDisplayService;)Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    .line 1622
+    iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    #getter for: Lcom/htc/server/WirelessDisplayService;->mTurnOffHotspotWakeLock:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$2100(Lcom/htc/server/WirelessDisplayService;)Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v5, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 1623
+    iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
+
+    iget-object v5, v5, Lcom/htc/server/WirelessDisplayService;->wl:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    .line 1625
+    :cond_3
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$700()Lcom/htc/server/WirelessDisplayService$WivuThread;
 
     move-result-object v5
 
     if-eqz v5, :cond_1
 
-    .line 1415
+    .line 1626
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mCurNetworkInterface:Ljava/lang/String;
-    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$800(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/htc/server/WirelessDisplayService;->access$1000(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
 
     move-result-object v5
 
     iget-object v6, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mSoftapInterface:Ljava/lang/String;
-    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$5700(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/htc/server/WirelessDisplayService;->access$6300(Lcom/htc/server/WirelessDisplayService;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -278,14 +318,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 1416
+    .line 1627
     const-string v5, "WirelessDisplayService"
 
     const-string v6, "WIFI AP Trun OFF"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1418
+    .line 1628
     iget-object v5, p0, Lcom/htc/server/WirelessDisplayService$WifiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-virtual {v5}, Lcom/htc/server/WirelessDisplayService;->stopWivuDiscovery()V

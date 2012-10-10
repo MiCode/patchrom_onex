@@ -49,7 +49,7 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 297
+    .line 300
     :goto_0
     return-void
 
@@ -145,21 +145,21 @@
     #setter for: Lcom/android/server/UiModeManagerService;->mHoldingConfiguration:Z
     invoke-static {v1, v2}, Lcom/android/server/UiModeManagerService;->access$102(Lcom/android/server/UiModeManagerService;Z)Z
 
-    .line 264
+    .line 267
     :cond_1
     :goto_1
     if-eqz v13, :cond_3
 
-    .line 267
+    .line 270
     invoke-static {v13}, Lcom/android/server/UiModeManagerService;->buildHomeIntent(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v3
 
-    .line 276
+    .line 279
     .local v3, homeIntent:Landroid/content/Intent;
     const/4 v12, 0x0
 
-    .line 277
+    .line 280
     .local v12, newConfig:Landroid/content/res/Configuration;
     move-object/from16 v0, p0
 
@@ -172,7 +172,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 278
+    .line 281
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
@@ -182,7 +182,7 @@
     #setter for: Lcom/android/server/UiModeManagerService;->mHoldingConfiguration:Z
     invoke-static {v1, v2}, Lcom/android/server/UiModeManagerService;->access$102(Lcom/android/server/UiModeManagerService;Z)Z
 
-    .line 279
+    .line 282
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
@@ -191,19 +191,19 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/UiModeManagerService;->updateConfigurationLocked(Z)V
 
-    .line 280
+    .line 283
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mConfiguration:Landroid/content/res/Configuration;
-    invoke-static {v1}, Lcom/android/server/UiModeManagerService;->access$800(Lcom/android/server/UiModeManagerService;)Landroid/content/res/Configuration;
+    invoke-static {v1}, Lcom/android/server/UiModeManagerService;->access$900(Lcom/android/server/UiModeManagerService;)Landroid/content/res/Configuration;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v12
 
-    .line 283
+    .line 286
     :cond_2
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -230,7 +230,7 @@
 
     invoke-interface/range {v1 .. v12}, Landroid/app/IActivityManager;->startActivityWithConfig(Landroid/app/IApplicationThread;Landroid/content/Intent;Ljava/lang/String;[Landroid/net/Uri;ILandroid/os/IBinder;Ljava/lang/String;IZZLandroid/content/res/Configuration;)I
 
-    .line 286
+    .line 289
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
@@ -243,7 +243,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 292
+    .line 295
     .end local v3           #homeIntent:Landroid/content/Intent;
     .end local v12           #newConfig:Landroid/content/res/Configuration;
     :cond_3
@@ -260,7 +260,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 293
+    .line 296
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
@@ -270,7 +270,7 @@
     #setter for: Lcom/android/server/UiModeManagerService;->mHoldingConfiguration:Z
     invoke-static {v1, v2}, Lcom/android/server/UiModeManagerService;->access$102(Lcom/android/server/UiModeManagerService;Z)Z
 
-    .line 294
+    .line 297
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
@@ -279,7 +279,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/UiModeManagerService;->updateConfigurationLocked(Z)V
 
-    .line 296
+    .line 299
     :cond_4
     monitor-exit v17
 
@@ -406,8 +406,19 @@
     .line 241
     const-string v13, "android.intent.category.HOME"
 
-    .line 245
+    .line 247
     :cond_a
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
+
+    #getter for: Lcom/android/server/UiModeManagerService;->mbIsGoogleCarPanelAppExisting:Z
+    invoke-static {v1}, Lcom/android/server/UiModeManagerService;->access$400(Lcom/android/server/UiModeManagerService;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_b
+
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
@@ -417,12 +428,12 @@
     iget-object v2, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
     #getter for: Lcom/android/server/UiModeManagerService;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$400(Lcom/android/server/UiModeManagerService;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/server/UiModeManagerService;->access$500(Lcom/android/server/UiModeManagerService;)Landroid/content/Context;
 
     move-result-object v2
 
     #calls: Lcom/android/server/UiModeManagerService;->isHtcLocationExisting(Landroid/content/Context;)Z
-    invoke-static {v1, v2}, Lcom/android/server/UiModeManagerService;->access$500(Lcom/android/server/UiModeManagerService;Landroid/content/Context;)Z
+    invoke-static {v1, v2}, Lcom/android/server/UiModeManagerService;->access$600(Lcom/android/server/UiModeManagerService;Landroid/content/Context;)Z
 
     move-result v1
 
@@ -440,8 +451,8 @@
 
     if-eqz v1, :cond_b
 
-    .line 247
-    invoke-static {}, Lcom/android/server/UiModeManagerService;->access$600()Ljava/lang/String;
+    .line 250
+    invoke-static {}, Lcom/android/server/UiModeManagerService;->access$700()Ljava/lang/String;
 
     move-result-object v1
 
@@ -449,15 +460,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
+    .line 251
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
     #calls: Lcom/android/server/UiModeManagerService;->exitHtcLocations()V
-    invoke-static {v1}, Lcom/android/server/UiModeManagerService;->access$700(Lcom/android/server/UiModeManagerService;)V
+    invoke-static {v1}, Lcom/android/server/UiModeManagerService;->access$800(Lcom/android/server/UiModeManagerService;)V
 
-    .line 252
+    .line 255
     :cond_b
     move-object/from16 v0, p0
 
@@ -482,7 +493,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 253
+    .line 256
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
@@ -494,15 +505,15 @@
 
     goto/16 :goto_1
 
-    .line 287
+    .line 290
     .restart local v3       #homeIntent:Landroid/content/Intent;
     .restart local v12       #newConfig:Landroid/content/res/Configuration;
     :catch_0
     move-exception v15
 
-    .line 288
+    .line 291
     .local v15, e:Landroid/os/RemoteException;
-    invoke-static {}, Lcom/android/server/UiModeManagerService;->access$600()Ljava/lang/String;
+    invoke-static {}, Lcom/android/server/UiModeManagerService;->access$700()Ljava/lang/String;
 
     move-result-object v1
 

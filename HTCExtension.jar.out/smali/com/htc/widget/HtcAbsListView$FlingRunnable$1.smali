@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4082
+    .line 4144
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 7
 
     .prologue
-    .line 4084
+    .line 4146
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
     iget-object v4, v4, Lcom/htc/widget/HtcAbsListView$FlingRunnable;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -51,7 +51,7 @@
 
     move-result v0
 
-    .line 4085
+    .line 4147
     .local v0, activeId:I
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
@@ -62,7 +62,7 @@
 
     move-result-object v2
 
-    .line 4086
+    .line 4148
     .local v2, vt:Landroid/view/VelocityTracker;
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
@@ -71,7 +71,7 @@
 
     move-result-object v1
 
-    .line 4087
+    .line 4149
     .local v1, scroller:Landroid/widget/OverScroller;
     if-eqz v2, :cond_0
 
@@ -79,12 +79,12 @@
 
     if-ne v0, v4, :cond_1
 
-    .line 4103
+    .line 4165
     :cond_0
     :goto_0
     return-void
 
-    .line 4091
+    .line 4153
     :cond_1
     const/16 v4, 0x3e8
 
@@ -101,14 +101,14 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 4092
+    .line 4154
     invoke-virtual {v2, v0}, Landroid/view/VelocityTracker;->getYVelocity(I)F
 
     move-result v4
 
     neg-float v3, v4
 
-    .line 4094
+    .line 4156
     .local v3, yvel:F
     invoke-static {v3}, Ljava/lang/Math;->abs(F)F
 
@@ -137,7 +137,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 4097
+    .line 4159
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
     iget-object v4, v4, Lcom/htc/widget/HtcAbsListView$FlingRunnable;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -148,13 +148,13 @@
 
     goto :goto_0
 
-    .line 4099
+    .line 4161
     :cond_2
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
     invoke-virtual {v4}, Lcom/htc/widget/HtcAbsListView$FlingRunnable;->endFling()V
 
-    .line 4100
+    .line 4162
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
     iget-object v4, v4, Lcom/htc/widget/HtcAbsListView$FlingRunnable;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -163,7 +163,7 @@
 
     iput v5, v4, Lcom/htc/widget/HtcAbsListView;->mTouchMode:I
 
-    .line 4101
+    .line 4163
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$FlingRunnable$1;->this$1:Lcom/htc/widget/HtcAbsListView$FlingRunnable;
 
     iget-object v4, v4, Lcom/htc/widget/HtcAbsListView$FlingRunnable;->this$0:Lcom/htc/widget/HtcAbsListView;

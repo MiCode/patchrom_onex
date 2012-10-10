@@ -29,10 +29,10 @@
     .locals 0
 
     .prologue
-    .line 55
+    .line 60
     invoke-direct {p0}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 56
+    .line 61
     return-void
 .end method
 
@@ -41,60 +41,60 @@
     .parameter "memInfo"
 
     .prologue
-    .line 61
+    .line 66
     invoke-direct {p0}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 62
+    .line 67
     iget-wide v0, p1, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
     iput-wide v0, p0, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
-    .line 63
+    .line 68
     iget-wide v0, p1, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->cacheMem:J
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->cacheMem:J
 
-    .line 64
+    .line 69
     iget-wide v0, p1, Landroid/app/ActivityManager$MemoryInfo;->foregroundAppThreshold:J
 
     iput-wide v0, p0, Landroid/app/ActivityManager$MemoryInfo;->foregroundAppThreshold:J
 
-    .line 65
+    .line 70
     iget-wide v0, p1, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->freeMem:J
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->freeMem:J
 
-    .line 66
+    .line 71
     iget-wide v0, p1, Landroid/app/ActivityManager$MemoryInfo;->hiddenAppThreshold:J
 
     iput-wide v0, p0, Landroid/app/ActivityManager$MemoryInfo;->hiddenAppThreshold:J
 
-    .line 67
+    .line 72
     iget-wide v0, p1, Landroid/app/ActivityManager$MemoryInfo;->secondaryServerThreshold:J
 
     iput-wide v0, p0, Landroid/app/ActivityManager$MemoryInfo;->secondaryServerThreshold:J
 
-    .line 68
+    .line 73
     iget-wide v0, p1, Landroid/app/ActivityManager$MemoryInfo;->threshold:J
 
     iput-wide v0, p0, Landroid/app/ActivityManager$MemoryInfo;->threshold:J
 
-    .line 69
+    .line 74
     iget-wide v0, p1, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->totalMem:J
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->totalMem:J
 
-    .line 70
+    .line 75
     iget-wide v0, p1, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->usedMem:J
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->usedMem:J
 
-    .line 71
+    .line 76
     iget-wide v0, p1, Landroid/app/ActivityManager$MemoryInfo;->visibleAppThreshold:J
 
     iput-wide v0, p0, Landroid/app/ActivityManager$MemoryInfo;->visibleAppThreshold:J
 
-    .line 72
+    .line 77
     return-void
 .end method
 
@@ -109,7 +109,7 @@
     .end annotation
 
     .prologue
-    .line 94
+    .line 102
     new-instance v0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;
 
     invoke-direct {v0, p0}, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;-><init>(Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;)V
@@ -122,38 +122,38 @@
     .parameter "source"
 
     .prologue
-    .line 85
+    .line 92
     invoke-super {p0, p1}, Landroid/app/ActivityManager$MemoryInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 86
+    .line 93
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->totalMem:J
 
-    .line 87
+    .line 94
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->cacheMem:J
 
-    .line 88
+    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->freeMem:J
 
-    .line 89
+    .line 96
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->usedMem:J
 
-    .line 90
+    .line 97
     return-void
 .end method
 
@@ -161,12 +161,12 @@
     .locals 4
 
     .prologue
-    .line 99
+    .line 108
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 101
+    .line 110
     .local v0, sb:Ljava/lang/StringBuffer;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -196,7 +196,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 102
+    .line 111
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -225,7 +225,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 103
+    .line 112
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -254,7 +254,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 104
+    .line 113
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -283,7 +283,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 105
+    .line 114
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -312,7 +312,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 106
+    .line 115
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,7 +341,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 107
+    .line 116
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -370,7 +370,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 109
+    .line 118
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -383,12 +383,12 @@
     .parameter "context"
 
     .prologue
-    .line 113
+    .line 122
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 115
+    .line 124
     .local v0, sb:Ljava/lang/StringBuffer;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -418,7 +418,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 116
+    .line 125
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -451,7 +451,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 118
+    .line 127
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -484,7 +484,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 120
+    .line 129
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -517,7 +517,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 122
+    .line 131
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -550,7 +550,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 124
+    .line 133
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -583,7 +583,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 126
+    .line 135
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -616,7 +616,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 129
+    .line 138
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -630,29 +630,29 @@
     .parameter "flags"
 
     .prologue
-    .line 76
+    .line 82
     invoke-super {p0, p1, p2}, Landroid/app/ActivityManager$MemoryInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 77
+    .line 83
     iget-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->totalMem:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 78
+    .line 84
     iget-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->cacheMem:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 79
+    .line 85
     iget-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->freeMem:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 80
+    .line 86
     iget-wide v0, p0, Landroid/os/memory/HtcMemoryMeasurer$MemoryInfo;->usedMem:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 81
+    .line 87
     return-void
 .end method

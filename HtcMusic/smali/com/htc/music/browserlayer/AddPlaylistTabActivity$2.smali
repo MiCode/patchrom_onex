@@ -1,11 +1,14 @@
 .class Lcom/htc/music/browserlayer/AddPlaylistTabActivity$2;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
 .source "AddPlaylistTabActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->initTitle()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,96 +27,35 @@
     .parameter
 
     .prologue
-    .line 285
+    .line 159
     iput-object p1, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$2;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 5
-    .parameter "msg"
+.method public onClick(Landroid/view/View;)V
+    .locals 1
+    .parameter "view"
 
     .prologue
-    .line 288
-    iget v2, p1, Landroid/os/Message;->what:I
+    .line 162
+    if-eqz p1, :cond_0
 
-    packed-switch v2, :pswitch_data_0
+    instance-of v0, p1, Lcom/htc/widget/ActionBarDropDown;
 
-    .line 303
+    if-eqz v0, :cond_0
+
+    .line 163
+    check-cast p1, Lcom/htc/widget/ActionBarDropDown;
+
+    .end local p1
+    invoke-virtual {p1}, Lcom/htc/widget/ActionBarDropDown;->show()V
+
+    .line 165
     :cond_0
-    :goto_0
     return-void
-
-    .line 290
-    :pswitch_0
-    iget-object v2, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$2;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->initTitle()V
-
-    .line 292
-    iget-object v2, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$2;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->access$100(Lcom/htc/music/browserlayer/AddPlaylistTabActivity;)Lcom/htc/music/widget/CategorySwitcherAdapter;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 293
-    iget-object v2, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$2;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
-
-    #getter for: Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->mCategorySwitcherAdapter:Lcom/htc/music/widget/CategorySwitcherAdapter;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->access$100(Lcom/htc/music/browserlayer/AddPlaylistTabActivity;)Lcom/htc/music/widget/CategorySwitcherAdapter;
-
-    move-result-object v2
-
-    const-string v3, "ArtistBrowserTabPlugin"
-
-    invoke-virtual {v2, v3}, Lcom/htc/music/widget/CategorySwitcherAdapter;->getSource(Ljava/lang/String;)Lcom/htc/music/util/SourceItem;
-
-    move-result-object v0
-
-    .line 294
-    .local v0, defaultSourec:Lcom/htc/music/util/SourceItem;
-    iget-object v2, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$2;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
-
-    iget-object v3, v0, Lcom/htc/music/util/SourceItem;->mSourceTag:Ljava/lang/String;
-
-    iget-object v4, v0, Lcom/htc/music/util/SourceItem;->mLaunchIntent:Landroid/content/Intent;
-
-    invoke-virtual {v2, v3, v4}, Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->startMaActivity(Ljava/lang/String;Landroid/content/Intent;)V
-
-    .line 296
-    iget-object v2, p0, Lcom/htc/music/browserlayer/AddPlaylistTabActivity$2;->this$0:Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
-
-    const v3, 0x7f080006
-
-    invoke-virtual {v2, v3}, Lcom/htc/music/browserlayer/AddPlaylistTabActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/htc/sunny2/view/SSurfaceView;
-
-    .line 297
-    .local v1, view:Lcom/htc/sunny2/view/SSurfaceView;
-    if-eqz v1, :cond_0
-
-    .line 298
-    invoke-virtual {v1}, Lcom/htc/sunny2/view/SSurfaceView;->onPause()V
-
-    goto :goto_0
-
-    .line 288
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0xc351
-        :pswitch_0
-    .end packed-switch
 .end method

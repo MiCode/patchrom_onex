@@ -40,26 +40,26 @@
     .parameter
 
     .prologue
-    .line 642
+    .line 645
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->this$0:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;
 
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/IHtcSimCardAuthenticator$Stub;-><init>()V
 
-    .line 643
+    .line 646
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mLock:Ljava/lang/Object;
 
-    .line 651
+    .line 654
     new-instance v0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service$1;-><init>(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mHandler:Landroid/os/Handler;
 
-    .line 695
+    .line 698
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -74,7 +74,7 @@
     .parameter "x0"
 
     .prologue
-    .line 642
+    .line 645
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -86,7 +86,7 @@
     .parameter "x1"
 
     .prologue
-    .line 642
+    .line 645
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->gsmResult:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
 
     return-object p1
@@ -98,7 +98,7 @@
     .parameter "x1"
 
     .prologue
-    .line 642
+    .line 645
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->akaResult:Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;
 
     return-object p1
@@ -109,7 +109,7 @@
     .parameter "message"
 
     .prologue
-    .line 703
+    .line 706
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->this$0:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;
 
     #getter for: Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mContext:Landroid/content/Context;
@@ -121,7 +121,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 704
+    .line 707
     return-void
 .end method
 
@@ -131,19 +131,19 @@
     .locals 2
 
     .prologue
-    .line 707
+    .line 711
     const-string v0, "getSimCardType"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->enforcePermission(Ljava/lang/String;)V
 
-    .line 708
+    .line 712
     const-string v0, "HtcSimCardAuthenticator"
 
     const-string v1, "getSimCardType..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 709
+    .line 713
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getIccType()I
@@ -159,30 +159,30 @@
     .parameter "autn"
 
     .prologue
-    .line 733
+    .line 739
     const-string v2, "HtcAkaAuthenticationResult"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->enforcePermission(Ljava/lang/String;)V
 
-    .line 734
+    .line 740
     const-string v2, "HtcSimCardAuthenticator"
 
     const-string v3, "requestAkaAuthentication..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 735
+    .line 741
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 736
+    .line 742
     const/4 v2, 0x0
 
     :try_start_0
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->akaResult:Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;
 
-    .line 737
+    .line 743
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mHandler:Landroid/os/Handler;
 
     const/16 v4, 0xb
@@ -193,15 +193,22 @@
 
     move-result-object v1
 
-    .line 742
+    .line 745
     .local v1, onComplete:Landroid/os/Message;
     :try_start_1
+    invoke-static {}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->access$400()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 746
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->this$0:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;
 
-    #calls: Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestAkaAuthenticationOverUiccAuth([B[BLandroid/os/Message;)V
-    invoke-static {v2, p1, p2, v1}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->access$500(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[B[BLandroid/os/Message;)V
+    invoke-virtual {v2, p1, p2, v1}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestAkaAuthentication([B[BLandroid/os/Message;)V
 
-    .line 744
+    .line 750
+    :goto_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/lang/Object;->wait()V
@@ -209,38 +216,54 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 748
-    :goto_0
+    .line 754
+    :goto_1
     :try_start_2
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->akaResult:Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;
 
     monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     return-object v2
 
-    .line 745
+    .line 748
+    :cond_0
+    :try_start_3
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->this$0:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;
+
+    #calls: Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestAkaAuthenticationOverUiccAuth([B[BLandroid/os/Message;)V
+    invoke-static {v2, p1, p2, v1}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->access$600(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[B[BLandroid/os/Message;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
+
+    goto :goto_0
+
+    .line 751
     :catch_0
     move-exception v0
 
-    .line 746
+    .line 752
     .local v0, e:Ljava/lang/InterruptedException;
+    :try_start_4
     const-string v2, "HtcSimCardAuthenticator"
 
     const-string v4, "interrupted while requesting AKA Authentication!"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 749
+    .line 755
     .end local v0           #e:Ljava/lang/InterruptedException;
     .end local v1           #onComplete:Landroid/os/Message;
     :catchall_0
     move-exception v2
 
     monitor-exit v3
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     throw v2
 .end method
@@ -250,30 +273,30 @@
     .parameter "rand"
 
     .prologue
-    .line 713
+    .line 718
     const-string v2, "HtcGsmAuthenticationResult"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->enforcePermission(Ljava/lang/String;)V
 
-    .line 714
+    .line 719
     const-string v2, "HtcSimCardAuthenticator"
 
     const-string v3, "requestGsmAuthentication..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 715
+    .line 720
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 716
+    .line 721
     const/4 v2, 0x0
 
     :try_start_0
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->gsmResult:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
 
-    .line 717
+    .line 722
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mHandler:Landroid/os/Handler;
 
     const/16 v4, 0xa
@@ -284,15 +307,22 @@
 
     move-result-object v1
 
-    .line 722
+    .line 724
     .local v1, onComplete:Landroid/os/Message;
     :try_start_1
+    invoke-static {}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->access$400()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 725
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->this$0:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;
 
-    #calls: Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestGsmAuthenticationOverUiccAuth([BLandroid/os/Message;)V
-    invoke-static {v2, p1, v1}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->access$400(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[BLandroid/os/Message;)V
+    invoke-virtual {v2, p1, v1}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestGsmAuthentication([BLandroid/os/Message;)V
 
-    .line 724
+    .line 729
+    :goto_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/lang/Object;->wait()V
@@ -300,38 +330,54 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 728
-    :goto_0
+    .line 733
+    :goto_1
     :try_start_2
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->gsmResult:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
 
     monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     return-object v2
 
-    .line 725
+    .line 727
+    :cond_0
+    :try_start_3
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;->this$0:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;
+
+    #calls: Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestGsmAuthenticationOverUiccAuth([BLandroid/os/Message;)V
+    invoke-static {v2, p1, v1}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->access$500(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[BLandroid/os/Message;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
+
+    goto :goto_0
+
+    .line 730
     :catch_0
     move-exception v0
 
-    .line 726
+    .line 731
     .local v0, e:Ljava/lang/InterruptedException;
+    :try_start_4
     const-string v2, "HtcSimCardAuthenticator"
 
     const-string v4, "interrupted while requesting GSM Authentication!"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 729
+    .line 734
     .end local v0           #e:Ljava/lang/InterruptedException;
     .end local v1           #onComplete:Landroid/os/Message;
     :catchall_0
     move-exception v2
 
     monitor-exit v3
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     throw v2
 .end method

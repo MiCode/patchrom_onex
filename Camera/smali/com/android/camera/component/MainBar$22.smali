@@ -3,12 +3,12 @@
 .source "MainBar.java"
 
 # interfaces
-.implements Lcom/android/camera/widget/PopupBubble$OnOutsideTouchListener;
+.implements Lcom/android/camera/menu/MenuListView$OnMenuItemClickedListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/component/MainBar;->showPopup(Landroid/view/View;Landroid/view/View;)V
+    value = Lcom/android/camera/component/MainBar;->initializeSettingsPanel()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 770
+    .line 469
     iput-object p1, p0, Lcom/android/camera/component/MainBar$22;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,34 +37,20 @@
 
 
 # virtual methods
-.method public onOutsideTouch(Landroid/view/View;Landroid/view/MotionEvent;)V
-    .locals 2
-    .parameter "bubble"
-    .parameter "event"
+.method public onItemClicked(Lcom/android/camera/menu/MenuListView;Lcom/android/camera/menu/MenuItem;II)V
+    .locals 1
+    .parameter "menu"
+    .parameter "item"
+    .parameter "index"
+    .parameter "id"
 
     .prologue
-    .line 774
+    .line 473
     iget-object v0, p0, Lcom/android/camera/component/MainBar$22;->this$0:Lcom/android/camera/component/MainBar;
 
-    const/16 v1, 0x2711
+    #calls: Lcom/android/camera/component/MainBar;->onSettingsMenuItemClicked(Lcom/android/camera/menu/MenuItem;I)V
+    invoke-static {v0, p2, p4}, Lcom/android/camera/component/MainBar;->access$1900(Lcom/android/camera/component/MainBar;Lcom/android/camera/menu/MenuItem;I)V
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/component/MainBar;->removeMessages(I)V
-
-    .line 775
-    iget-object v0, p0, Lcom/android/camera/component/MainBar$22;->this$0:Lcom/android/camera/component/MainBar;
-
-    invoke-virtual {v0}, Lcom/android/camera/component/MainBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/android/camera/HTCCamera;->popupOutsideTouchEvent:Lcom/android/camera/event/Event;
-
-    new-instance v1, Lcom/android/camera/input/MotionEventArgs;
-
-    invoke-direct {v1, p2}, Lcom/android/camera/input/MotionEventArgs;-><init>(Landroid/view/MotionEvent;)V
-
-    invoke-virtual {v0, p0, v1}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
-
-    .line 776
+    .line 474
     return-void
 .end method

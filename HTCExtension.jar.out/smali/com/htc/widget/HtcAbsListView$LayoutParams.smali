@@ -53,10 +53,10 @@
     .parameter "h"
 
     .prologue
-    .line 6360
+    .line 6422
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 6361
+    .line 6423
     return-void
 .end method
 
@@ -67,13 +67,13 @@
     .parameter "viewType"
 
     .prologue
-    .line 6364
+    .line 6426
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 6365
+    .line 6427
     iput p3, p0, Lcom/htc/widget/HtcAbsListView$LayoutParams;->viewType:I
 
-    .line 6366
+    .line 6428
     return-void
 .end method
 
@@ -83,10 +83,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 6356
+    .line 6418
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 6357
+    .line 6419
     return-void
 .end method
 
@@ -95,9 +95,9 @@
     .parameter "source"
 
     .prologue
-    .line 6369
+    .line 6431
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 6370
+    .line 6432
     return-void
 .end method

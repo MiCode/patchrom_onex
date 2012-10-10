@@ -28,12 +28,12 @@
     .parameter
 
     .prologue
-    .line 3416
+    .line 3422
     iput-object p1, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->this$1:Lcom/android/server/BackupManagerService$PerformFullRestoreTask;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
 
-    .line 3417
+    .line 3423
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
@@ -56,34 +56,34 @@
     .end annotation
 
     .prologue
-    .line 3438
+    .line 3444
     iget-object v1, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     monitor-enter v1
 
-    .line 3439
+    .line 3445
     :try_start_0
     iput p2, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mResult:I
 
-    .line 3440
+    .line 3446
     iget-object v0, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 3441
+    .line 3447
     iget-object v0, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 3442
+    .line 3448
     monitor-exit v1
 
-    .line 3443
+    .line 3449
     return-void
 
-    .line 3442
+    .line 3448
     :catchall_0
     move-exception v0
 
@@ -98,12 +98,12 @@
     .locals 3
 
     .prologue
-    .line 3421
+    .line 3427
     iget-object v1, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     monitor-enter v1
 
-    .line 3422
+    .line 3428
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -111,13 +111,13 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 3423
+    .line 3429
     monitor-exit v1
 
-    .line 3424
+    .line 3430
     return-void
 
-    .line 3423
+    .line 3429
     :catchall_0
     move-exception v0
 
@@ -132,12 +132,12 @@
     .locals 2
 
     .prologue
-    .line 3427
+    .line 3433
     iget-object v1, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     monitor-enter v1
 
-    .line 3428
+    .line 3434
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -150,7 +150,7 @@
 
     if-nez v0, :cond_0
 
-    .line 3430
+    .line 3436
     :try_start_1
     iget-object v0, p0, Lcom/android/server/BackupManagerService$PerformFullRestoreTask$RestoreDeleteObserver;->mDone:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -161,21 +161,21 @@
 
     goto :goto_0
 
-    .line 3431
+    .line 3437
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 3433
+    .line 3439
     :cond_0
     :try_start_2
     monitor-exit v1
 
-    .line 3434
+    .line 3440
     return-void
 
-    .line 3433
+    .line 3439
     :catchall_0
     move-exception v0
 

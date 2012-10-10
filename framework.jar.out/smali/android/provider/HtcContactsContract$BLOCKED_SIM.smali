@@ -29,7 +29,7 @@
     .locals 2
 
     .prologue
-    .line 1437
+    .line 1562
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "blocked_sim_contacts"
@@ -47,7 +47,7 @@
     .locals 0
 
     .prologue
-    .line 1432
+    .line 1556
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

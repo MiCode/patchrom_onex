@@ -40,15 +40,15 @@
     .parameter
 
     .prologue
-    .line 412
+    .line 438
     iput-object p1, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->this$0:Lcom/htc/music/PluginPropertyListActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 413
+    .line 439
     invoke-virtual {p0}, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->reset()V
 
-    .line 414
+    .line 440
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 455
+    .line 481
     iget-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mFileName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -71,10 +71,10 @@
 
     if-lez v0, :cond_0
 
-    .line 456
+    .line 482
     const/4 v0, 0x1
 
-    .line 458
+    .line 484
     :goto_0
     return v0
 
@@ -88,10 +88,10 @@
     .locals 2
 
     .prologue
-    .line 444
+    .line 470
     const/4 v0, 0x0
 
-    .line 448
+    .line 474
     .local v0, retval:Z
     iget-object v1, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mTrackName:Ljava/lang/String;
 
@@ -105,10 +105,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 449
+    .line 475
     const/4 v0, 0x1
 
-    .line 451
+    .line 477
     :cond_0
     return v0
 .end method
@@ -119,33 +119,33 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 417
+    .line 443
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mDuration:J
 
-    .line 418
+    .line 444
     iput-object v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mFileName:Ljava/lang/String;
 
-    .line 419
+    .line 445
     iput-object v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mTrackName:Ljava/lang/String;
 
-    .line 420
+    .line 446
     iput-object v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mArtistName:Ljava/lang/String;
 
-    .line 421
+    .line 447
     iput-object v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mAlbumName:Ljava/lang/String;
 
-    .line 422
+    .line 448
     iput-object v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mGenre:Ljava/lang/String;
 
-    .line 423
+    .line 449
     iput-object v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mComposer:Ljava/lang/String;
 
-    .line 424
+    .line 450
     iput-object v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mLocation:Ljava/lang/String;
 
-    .line 425
+    .line 451
     return-void
 .end method
 
@@ -156,7 +156,7 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 429
+    .line 455
     const-string v0, "duration"
 
     invoke-virtual {p1, v0, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
@@ -165,17 +165,17 @@
 
     iput-wide v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mDuration:J
 
-    .line 431
+    .line 457
     iget-wide v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mDuration:J
 
     cmp-long v0, v0, v2
 
     if-gez v0, :cond_0
 
-    .line 432
+    .line 458
     iput-wide v2, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mDuration:J
 
-    .line 434
+    .line 460
     :cond_0
     const-string v0, "filename"
 
@@ -185,7 +185,7 @@
 
     iput-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mFileName:Ljava/lang/String;
 
-    .line 435
+    .line 461
     const-string v0, "trackname"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -194,7 +194,7 @@
 
     iput-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mTrackName:Ljava/lang/String;
 
-    .line 436
+    .line 462
     const-string v0, "artistname"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -203,7 +203,7 @@
 
     iput-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mArtistName:Ljava/lang/String;
 
-    .line 437
+    .line 463
     const-string v0, "albumname"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -212,7 +212,7 @@
 
     iput-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mAlbumName:Ljava/lang/String;
 
-    .line 438
+    .line 464
     const-string v0, "genre"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -221,7 +221,7 @@
 
     iput-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mGenre:Ljava/lang/String;
 
-    .line 439
+    .line 465
     const-string v0, "composer"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -230,7 +230,7 @@
 
     iput-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mComposer:Ljava/lang/String;
 
-    .line 440
+    .line 466
     const-string v0, "location"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -239,6 +239,6 @@
 
     iput-object v0, p0, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->mLocation:Ljava/lang/String;
 
-    .line 441
+    .line 467
     return-void
 .end method

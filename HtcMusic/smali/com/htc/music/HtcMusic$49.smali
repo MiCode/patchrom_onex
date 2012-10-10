@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 7348
+    .line 7381
     iput-object p1, p0, Lcom/htc/music/HtcMusic$49;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "dialog"
 
     .prologue
-    .line 7351
+    .line 7384
     iget-object v0, p0, Lcom/htc/music/HtcMusic$49;->this$0:Lcom/htc/music/HtcMusic;
 
     sget-object v1, Lcom/htc/music/util/SoundEffectHelper;->EqualizerStyle:[Ljava/lang/String;
@@ -56,8 +56,8 @@
     const/4 v2, 0x0
 
     #calls: Lcom/htc/music/HtcMusic;->setSoundEffect(Ljava/lang/String;I)V
-    invoke-static {v0, v1, v2}, Lcom/htc/music/HtcMusic;->access$8700(Lcom/htc/music/HtcMusic;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v2}, Lcom/htc/music/HtcMusic;->access$8800(Lcom/htc/music/HtcMusic;Ljava/lang/String;I)V
 
-    .line 7354
+    .line 7387
     return-void
 .end method

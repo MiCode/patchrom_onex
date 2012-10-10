@@ -43,7 +43,7 @@
     .locals 3
 
     .prologue
-    .line 2636
+    .line 2640
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -93,26 +93,26 @@
     .locals 0
 
     .prologue
-    .line 2634
+    .line 2638
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static final getEmailCursorAndLocateAtPrimary(Landroid/content/ContentResolver;J)Landroid/database/Cursor;
-    .locals 8
+    .locals 9
     .parameter "resolver"
     .parameter "contactId"
 
     .prologue
     const/4 v4, 0x0
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    .line 2725
+    .line 2729
     const/4 v6, 0x0
 
-    .line 2726
+    .line 2730
     .local v6, primaryCursor:Landroid/database/Cursor;
     if-eqz p0, :cond_0
 
@@ -122,24 +122,26 @@
 
     if-lez v0, :cond_0
 
-    .line 2727
-    const-string v0, "contact_id=%d AND is_primary<>0"
+    .line 2731
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-array v1, v7, [Ljava/lang/Object;
+    const-string v1, "contact_id=%d AND is_primary<>0"
 
-    const/4 v2, 0x0
+    new-array v2, v8, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v7
 
-    aput-object v5, v1, v2
+    aput-object v7, v2, v5
 
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2729
+    .line 2733
     .local v3, selection:Ljava/lang/String;
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
@@ -153,10 +155,10 @@
 
     move-result-object v6
 
-    .line 2734
+    .line 2738
     if-eqz v6, :cond_0
 
-    .line 2735
+    .line 2739
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -164,21 +166,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 2736
+    .line 2740
     const/4 v0, 0x5
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    if-ne v7, v0, :cond_1
+    if-ne v8, v0, :cond_1
 
-    .line 2746
+    .line 2750
     .end local v3           #selection:Ljava/lang/String;
     :cond_0
     return-object v6
 
-    .line 2741
+    .line 2745
     .restart local v3       #selection:Ljava/lang/String;
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -187,17 +189,17 @@
 .end method
 
 .method public static queryContactEmailAddresses(Landroid/content/ContentResolver;J)Landroid/database/Cursor;
-    .locals 7
+    .locals 8
     .parameter "resolver"
     .parameter "contactId"
 
     .prologue
     const/4 v4, 0x0
 
-    .line 2697
+    .line 2701
     const/4 v6, 0x0
 
-    .line 2698
+    .line 2702
     .local v6, mailCursor:Landroid/database/Cursor;
     if-eqz p0, :cond_0
 
@@ -207,26 +209,28 @@
 
     if-lez v0, :cond_0
 
-    .line 2699
-    const-string v0, "contact_id=%d"
+    .line 2703
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const/4 v1, 0x1
+    const-string v1, "contact_id=%d"
 
-    new-array v1, v1, [Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    const/4 v2, 0x0
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v7
 
-    aput-object v5, v1, v2
+    aput-object v7, v2, v5
 
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2701
+    .line 2705
     .local v3, selection:Ljava/lang/String;
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
@@ -240,7 +244,7 @@
 
     move-result-object v6
 
-    .line 2707
+    .line 2711
     .end local v3           #selection:Ljava/lang/String;
     :cond_0
     return-object v6

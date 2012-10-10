@@ -73,18 +73,18 @@
 
 # virtual methods
 .method init()V
-    .locals 7
+    .locals 6
 
     .prologue
-    const v1, 0x208001f
+    const v4, 0x2080162
 
-    const v2, 0x2080008
+    const v5, 0x2080161
 
-    const v6, 0x2080007
+    const v3, 0x2080021
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
     .line 31
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
@@ -92,19 +92,15 @@
     if-nez v0, :cond_0
 
     .line 32
-    iput-boolean v3, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
+    iput-boolean v1, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
 
     .line 33
-    iput-boolean v4, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
+    iput-boolean v2, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
 
     .line 34
+    const v1, 0x208001f
+
     const v2, 0x2080020
-
-    const v3, 0x2080021
-
-    const v4, 0x2080162
-
-    const v5, 0x2080161
 
     move-object v0, p0
 
@@ -118,24 +114,20 @@
     :cond_0
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
 
-    if-ne v0, v4, :cond_1
+    if-ne v0, v2, :cond_1
 
     .line 37
-    iput-boolean v3, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
+    iput-boolean v1, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
 
     .line 38
-    iput-boolean v4, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
+    iput-boolean v2, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
 
     .line 39
-    const v3, 0x2080021
+    const v1, 0x2080007
 
-    const v4, 0x2080162
-
-    const v5, 0x2080161
+    const v2, 0x2080008
 
     move-object v0, p0
-
-    move v1, v6
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcDeleteButton;->setButtonDrawableResources(IIIII)V
 
@@ -145,17 +137,21 @@
     :cond_1
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
 
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v1, :cond_2
 
     .line 42
-    iput-boolean v4, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
+    iput-boolean v2, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
 
     .line 43
-    iput-boolean v4, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
+    iput-boolean v2, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
 
     .line 44
+    const v1, 0x208012e
+
+    const v2, 0x208012f
+
     const v3, 0x2080136
 
     const v4, 0x2080131
@@ -164,21 +160,21 @@
 
     move-object v0, p0
 
-    move v1, v6
-
     invoke-virtual/range {v0 .. v5}, Lcom/htc/widget/HtcDeleteButton;->setButtonDrawableResources(IIIII)V
 
     goto :goto_0
 
     .line 47
     :cond_2
-    iput-boolean v4, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
+    iput-boolean v2, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
 
     .line 48
-    iput-boolean v4, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
+    iput-boolean v2, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
 
     .line 49
-    const v2, 0x2080020
+    const v1, 0x2080139
+
+    const v2, 0x208013a
 
     const v3, 0x2080141
 

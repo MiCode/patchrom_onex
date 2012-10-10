@@ -1625,7 +1625,7 @@
     const/4 v8, 0x0
 
     :try_start_0
-    const-string/jumbo v11, "id"
+    const-string v11, "id"
 
     invoke-interface {p1, v8, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -1942,7 +1942,7 @@
     .line 1694
     .local v5, value2:Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v6, "long"
+    const-string v6, "long"
 
     invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1964,7 +1964,7 @@
 
     .line 1696
     :cond_1
-    const-string/jumbo v6, "integer"
+    const-string v6, "integer"
 
     invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2281,7 +2281,7 @@
     .line 1498
     const/4 v14, 0x0
 
-    const-string/jumbo v15, "listen-for-tickles"
+    const-string v15, "listen-for-tickles"
 
     invoke-interface {v9, v14, v15}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -2958,45 +2958,45 @@
     invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1849
-    const-string/jumbo v3, "lastSuccessSource"
+    const-string v3, "lastSuccessSource"
 
-    const-string/jumbo v4, "lastSuccessSource"
+    const-string v4, "lastSuccessSource"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1850
-    const-string/jumbo v3, "lastSuccessTime"
+    const-string v3, "lastSuccessTime"
 
-    const-string/jumbo v4, "lastSuccessTime"
+    const-string v4, "lastSuccessTime"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1851
-    const-string/jumbo v3, "lastFailureSource"
+    const-string v3, "lastFailureSource"
 
-    const-string/jumbo v4, "lastFailureSource"
+    const-string v4, "lastFailureSource"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1852
-    const-string/jumbo v3, "lastFailureTime"
+    const-string v3, "lastFailureTime"
 
-    const-string/jumbo v4, "lastFailureTime"
+    const-string v4, "lastFailureTime"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1853
-    const-string/jumbo v3, "lastFailureMesg"
+    const-string v3, "lastFailureMesg"
 
-    const-string/jumbo v4, "lastFailureMesg"
+    const-string v4, "lastFailureMesg"
 
     move-object/from16 v0, v18
 
@@ -3266,7 +3266,7 @@
     iput v3, v0, Landroid/content/SyncStatusInfo;->numSourcePeriodic:I
 
     .line 1892
-    const-string/jumbo v3, "lastSuccessSource"
+    const-string v3, "lastSuccessSource"
 
     invoke-static {v13, v3}, Landroid/content/SyncStorageEngine;->getIntColumn(Landroid/database/Cursor;Ljava/lang/String;)I
 
@@ -3277,7 +3277,7 @@
     iput v3, v0, Landroid/content/SyncStatusInfo;->lastSuccessSource:I
 
     .line 1893
-    const-string/jumbo v3, "lastSuccessTime"
+    const-string v3, "lastSuccessTime"
 
     invoke-static {v13, v3}, Landroid/content/SyncStorageEngine;->getLongColumn(Landroid/database/Cursor;Ljava/lang/String;)J
 
@@ -3288,7 +3288,7 @@
     iput-wide v3, v0, Landroid/content/SyncStatusInfo;->lastSuccessTime:J
 
     .line 1894
-    const-string/jumbo v3, "lastFailureSource"
+    const-string v3, "lastFailureSource"
 
     invoke-static {v13, v3}, Landroid/content/SyncStorageEngine;->getIntColumn(Landroid/database/Cursor;Ljava/lang/String;)I
 
@@ -3299,7 +3299,7 @@
     iput v3, v0, Landroid/content/SyncStatusInfo;->lastFailureSource:I
 
     .line 1895
-    const-string/jumbo v3, "lastFailureTime"
+    const-string v3, "lastFailureTime"
 
     invoke-static {v13, v3}, Landroid/content/SyncStorageEngine;->getLongColumn(Landroid/database/Cursor;Ljava/lang/String;)J
 
@@ -3310,7 +3310,7 @@
     iput-wide v3, v0, Landroid/content/SyncStatusInfo;->lastFailureTime:J
 
     .line 1896
-    const-string/jumbo v3, "lastFailureMesg"
+    const-string v3, "lastFailureMesg"
 
     invoke-interface {v13, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -3459,7 +3459,7 @@
     if-eqz v19, :cond_c
 
     .line 1911
-    const-string/jumbo v3, "listen_for_tickles"
+    const-string v3, "listen_for_tickles"
 
     move-object/from16 v0, v19
 
@@ -5022,7 +5022,7 @@
     invoke-interface {v10, v13, v14}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 1728
-    const-string/jumbo v13, "http://xmlpull.org/v1/doc/features.html#indent-output"
+    const-string v13, "http://xmlpull.org/v1/doc/features.html#indent-output"
 
     const/4 v14, 0x1
 
@@ -5073,7 +5073,7 @@
     .line 1734
     const/4 v13, 0x0
 
-    const-string/jumbo v14, "listen-for-tickles"
+    const-string v14, "listen-for-tickles"
 
     const-string v15, "false"
 
@@ -5119,7 +5119,7 @@
     .line 1741
     const/4 v13, 0x0
 
-    const-string/jumbo v14, "id"
+    const-string v14, "id"
 
     iget v15, v2, Landroid/content/SyncStorageEngine$AuthorityInfo;->ident:I
 
@@ -5295,7 +5295,7 @@
 
     const-string/jumbo v14, "type"
 
-    const-string/jumbo v15, "long"
+    const-string v15, "long"
 
     invoke-interface {v10, v13, v14, v15}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -5407,7 +5407,7 @@
 
     const-string/jumbo v14, "type"
 
-    const-string/jumbo v15, "integer"
+    const-string v15, "integer"
 
     invoke-interface {v10, v13, v14, v15}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
@@ -8688,7 +8688,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "insertIntoPending: account="
+    const-string v6, "insertIntoPending: account="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8887,7 +8887,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "insertStartSyncEvent: account="
+    const-string v7, "insertStartSyncEvent: account="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8925,7 +8925,7 @@
 
     .line 1032
     :cond_0
-    const-string/jumbo v4, "insertStartSyncEvent"
+    const-string v4, "insertStartSyncEvent"
 
     invoke-direct {p0, p1, p2, v4}, Landroid/content/SyncStorageEngine;->getAuthorityLocked(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)Landroid/content/SyncStorageEngine$AuthorityInfo;
 

@@ -80,7 +80,7 @@
     .prologue
     .line 1736
     :try_start_0
-    const-string/jumbo v1, "iSendCmail"
+    const-string v1, "iSendCmail"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -125,7 +125,7 @@
     .line 750
     .local v2, success:Z
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -386,7 +386,7 @@
 
     .line 895
     :try_start_0
-    const-string/jumbo v4, "isms"
+    const-string v4, "isms"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -460,7 +460,7 @@
     .line 1033
     .local v2, records:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/telephony/SmsRawData;>;"
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -540,7 +540,7 @@
     .line 810
     .local v2, index:I
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -605,7 +605,7 @@
     .prologue
     .line 665
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -666,7 +666,7 @@
     .prologue
     .line 684
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -728,7 +728,7 @@
     .prologue
     .line 697
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -791,7 +791,7 @@
     .line 1662
     .local v1, success:Z
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -839,7 +839,7 @@
     .line 773
     .local v1, success:Z
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -920,7 +920,7 @@
     .line 1438
     .local v1, index:I
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -968,7 +968,7 @@
     .line 833
     .local v2, index:I
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1137,7 +1137,7 @@
 
     .line 922
     :try_start_0
-    const-string/jumbo v5, "isms"
+    const-string v5, "isms"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1237,7 +1237,7 @@
 
     .line 1467
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1329,7 +1329,7 @@
     .line 1098
     .local v1, success:Z
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1375,7 +1375,7 @@
     .line 1160
     .local v1, success:Z
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1471,7 +1471,7 @@
     .line 1068
     .local v1, success:Z
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1517,7 +1517,7 @@
     .line 1129
     .local v1, success:Z
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1571,7 +1571,7 @@
     .line 1521
     .local v1, records:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/telephony/SmsRawData;>;"
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1619,7 +1619,7 @@
     .line 1937
     .local v0, response:Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1663,7 +1663,7 @@
     .line 1585
     .local v1, phoneType:I
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1703,7 +1703,7 @@
     .prologue
     .line 1570
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1747,7 +1747,7 @@
     .prologue
     .line 1553
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1795,7 +1795,7 @@
     .line 1182
     .local v1, record:[B
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1860,7 +1860,7 @@
     .line 2007
     .local v0, record:[B
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1906,7 +1906,7 @@
     .line 1204
     .local v0, record:[B
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1950,7 +1950,7 @@
     .line 1754
     .local v0, result:Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1995,7 +1995,7 @@
     .line 1980
     .local v0, result:Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2039,7 +2039,7 @@
     .line 1965
     .local v0, response:[I
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2098,7 +2098,7 @@
     .prologue
     .line 1712
     :try_start_0
-    const-string/jumbo v1, "iSendCmail"
+    const-string v1, "iSendCmail"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2177,7 +2177,7 @@
     .line 1892
     .local v0, response:[I
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2223,7 +2223,7 @@
     .line 1879
     .local v0, response:Landroid/os/Bundle;
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2267,7 +2267,7 @@
     .line 1866
     .local v0, response:I
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2330,7 +2330,7 @@
     .line 148
     :cond_0
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2421,7 +2421,7 @@
     .line 603
     :cond_2
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2515,7 +2515,7 @@
     .line 1410
     :cond_2
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -2638,7 +2638,7 @@
     .line 627
     :cond_2
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -3006,7 +3006,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 443
-    const-string/jumbo v4, "isms"
+    const-string v4, "isms"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -3506,7 +3506,7 @@
 
     .line 1333
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4063,7 +4063,7 @@
     .line 1258
     :cond_0
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4121,7 +4121,7 @@
     .line 1922
     .local v0, response:I
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4162,7 +4162,7 @@
     .prologue
     .line 1537
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4201,7 +4201,7 @@
     .prologue
     .line 1786
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4241,7 +4241,7 @@
     .prologue
     .line 1993
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4285,7 +4285,7 @@
     .line 1952
     .local v0, response:I
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4518,7 +4518,7 @@
     aput v14, v8, v3
 
     .line 1837
-    const-string/jumbo v14, "label_encode"
+    const-string v14, "label_encode"
 
     invoke-virtual {v13, v14}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -4527,7 +4527,7 @@
     aput v14, v6, v3
 
     .line 1838
-    const-string/jumbo v14, "label"
+    const-string v14, "label"
 
     invoke-virtual {v13, v14}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4554,7 +4554,7 @@
     invoke-virtual {v2, v14, v10}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
     .line 1853
-    const-string/jumbo v14, "language"
+    const-string v14, "language"
 
     invoke-virtual {v2, v14, v7}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
@@ -4574,12 +4574,12 @@
     invoke-virtual {v2, v14, v8}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
     .line 1857
-    const-string/jumbo v14, "label_encode"
+    const-string v14, "label_encode"
 
     invoke-virtual {v2, v14, v6}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
     .line 1858
-    const-string/jumbo v14, "label"
+    const-string v14, "label"
 
     invoke-virtual {v2, v14, v5}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
@@ -4631,7 +4631,7 @@
     .line 1002
     .local v2, success:Z
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4719,7 +4719,7 @@
     .line 981
     .local v2, success:Z
     :try_start_0
-    const-string/jumbo v3, "isms"
+    const-string v3, "isms"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4786,7 +4786,7 @@
     .line 1497
     .local v1, success:Z
     :try_start_0
-    const-string/jumbo v2, "isms"
+    const-string v2, "isms"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -4873,7 +4873,7 @@
     .prologue
     .line 1769
     :try_start_0
-    const-string/jumbo v1, "isms"
+    const-string v1, "isms"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 846
+    .line 844
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController$3;->this$0:Lcom/android/camera/component/PanoramaController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .parameter "x2"
 
     .prologue
-    .line 846
+    .line 844
     check-cast p3, Lcom/android/camera/event/SingleHandlerEventArgs;
 
     .end local p3
@@ -82,7 +82,7 @@
     .end annotation
 
     .prologue
-    .line 849
+    .line 847
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/SingleHandlerEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController$3;->this$0:Lcom/android/camera/component/PanoramaController;
 
@@ -93,16 +93,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 851
+    .line 849
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController$3;->this$0:Lcom/android/camera/component/PanoramaController;
 
     #calls: Lcom/android/camera/component/PanoramaController;->deleteCapturedImage()V
     invoke-static {v0}, Lcom/android/camera/component/PanoramaController;->access$3600(Lcom/android/camera/component/PanoramaController;)V
 
-    .line 852
+    .line 850
     invoke-virtual {p3}, Lcom/android/camera/event/SingleHandlerEventArgs;->setHandled()V
 
-    .line 854
+    .line 852
     :cond_0
     return-void
 .end method

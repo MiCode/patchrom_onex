@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 69
+    .line 66
     iput-object p1, p0, Landroid/widget/IMECursorAdapter$1;->this$0:Landroid/widget/IMECursorAdapter;
 
     invoke-direct {p0, p2}, Landroid/widget/CursorFilter;-><init>(Landroid/widget/CursorFilter$CursorFilterClient;)V
@@ -40,14 +40,14 @@
     .parameter "constraint"
 
     .prologue
-    .line 72
+    .line 69
     iget-object v3, p0, Landroid/widget/IMECursorAdapter$1;->mClient:Landroid/widget/CursorFilter$CursorFilterClient;
 
     invoke-interface {v3, p1}, Landroid/widget/CursorFilter$CursorFilterClient;->runQueryOnBackgroundThread(Ljava/lang/CharSequence;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 73
+    .line 70
     .local v0, cursor:Landroid/database/Cursor;
     if-eqz p1, :cond_2
 
@@ -59,7 +59,7 @@
 
     if-nez v3, :cond_2
 
-    .line 74
+    .line 71
     :cond_0
     if-eqz v0, :cond_1
 
@@ -71,7 +71,7 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 80
+    .line 77
     :cond_1
     iget-object v3, p0, Landroid/widget/IMECursorAdapter$1;->this$0:Landroid/widget/IMECursorAdapter;
 
@@ -83,7 +83,7 @@
 
     move-result-object v2
 
-    .line 81
+    .line 78
     .local v2, ret:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v3, p0, Landroid/widget/IMECursorAdapter$1;->this$0:Landroid/widget/IMECursorAdapter;
 
@@ -91,38 +91,38 @@
 
     move-result-object v0
 
-    .line 85
+    .line 82
     .end local v2           #ret:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_2
     new-instance v1, Landroid/widget/Filter$FilterResults;
 
     invoke-direct {v1}, Landroid/widget/Filter$FilterResults;-><init>()V
 
-    .line 86
+    .line 83
     .local v1, results:Landroid/widget/Filter$FilterResults;
     if-eqz v0, :cond_3
 
-    .line 87
+    .line 84
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v3
 
     iput v3, v1, Landroid/widget/Filter$FilterResults;->count:I
 
-    .line 88
+    .line 85
     iput-object v0, v1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
-    .line 93
+    .line 90
     :goto_0
     return-object v1
 
-    .line 90
+    .line 87
     :cond_3
     const/4 v3, 0x0
 
     iput v3, v1, Landroid/widget/Filter$FilterResults;->count:I
 
-    .line 91
+    .line 88
     const/4 v3, 0x0
 
     iput-object v3, v1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;

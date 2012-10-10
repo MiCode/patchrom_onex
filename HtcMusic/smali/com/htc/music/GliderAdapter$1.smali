@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 513
+    .line 539
     iput-object p1, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 516
+    .line 542
     monitor-enter p0
 
     :try_start_0
@@ -60,7 +60,7 @@
 
     if-ne v7, p1, :cond_0
 
-    .line 517
+    .line 543
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
     const/4 v8, 0x1
@@ -68,7 +68,7 @@
     #setter for: Lcom/htc/music/GliderAdapter;->mCanUpdateSelectedItem:Z
     invoke-static {v7, v8}, Lcom/htc/music/GliderAdapter;->access$102(Lcom/htc/music/GliderAdapter;Z)Z
 
-    .line 520
+    .line 546
     :cond_0
     if-eqz p2, :cond_1
 
@@ -112,7 +112,7 @@
 
     if-nez v7, :cond_5
 
-    .line 523
+    .line 549
     :cond_1
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
@@ -141,7 +141,7 @@
 
     if-eqz v7, :cond_2
 
-    .line 524
+    .line 550
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
     #getter for: Lcom/htc/music/GliderAdapter;->mMusicContext:Lcom/htc/music/HtcMusic;
@@ -155,31 +155,31 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 527
+    .line 553
     :cond_2
     if-nez p2, :cond_4
 
-    .line 588
+    .line 614
     :cond_3
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 531
+    .line 557
     :cond_4
     if-eqz p2, :cond_3
 
-    .line 532
+    .line 558
     :try_start_1
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 533
+    .line 559
     const/4 p2, 0x0
 
     goto :goto_0
 
-    .line 538
+    .line 564
     :cond_5
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
@@ -198,11 +198,11 @@
 
     check-cast v1, Lcom/htc/sunny2/SBitmap;
 
-    .line 539
+    .line 565
     .local v1, bmp3D:Lcom/htc/sunny2/SBitmap;
     const/4 v0, 0x1
 
-    .line 541
+    .line 567
     .local v0, bAddToCache:Z
     if-eqz p5, :cond_8
 
@@ -216,23 +216,23 @@
 
     if-eqz v7, :cond_8
 
-    .line 542
+    .line 568
     const/4 v0, 0x0
 
-    .line 575
+    .line 601
     :cond_6
     :goto_1
     if-ne v9, v0, :cond_7
 
-    .line 576
+    .line 602
     invoke-static {p2}, Lcom/htc/sunny2/SBitmap;->createBitmap(Landroid/graphics/Bitmap;)Lcom/htc/sunny2/SBitmap;
 
     move-result-object v1
 
-    .line 577
+    .line 603
     if-eqz v1, :cond_7
 
-    .line 578
+    .line 604
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
     #getter for: Lcom/htc/music/GliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
@@ -246,7 +246,7 @@
 
     invoke-virtual {v7, v8, v1}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->push(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 579
+    .line 605
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
     iget-object v7, v7, Lcom/htc/music/GliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
@@ -272,7 +272,7 @@
 
     invoke-virtual {v7, v8, v9}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 580
+    .line 606
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
     #getter for: Lcom/htc/music/GliderAdapter;->mMusicContext:Lcom/htc/music/HtcMusic;
@@ -284,19 +284,19 @@
 
     invoke-virtual {v7, p1}, Lcom/htc/sunny2/widget/presentation/SPresentation;->notifyUpdateItem(I)V
 
-    .line 584
+    .line 610
     :cond_7
     if-eqz p2, :cond_3
 
-    .line 585
+    .line 611
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 586
+    .line 612
     const/4 p2, 0x0
 
     goto :goto_0
 
-    .line 545
+    .line 571
     :cond_8
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
@@ -307,7 +307,7 @@
 
     if-nez v7, :cond_a
 
-    .line 546
+    .line 572
     if-eqz p5, :cond_9
 
     const/4 v7, 0x0
@@ -324,7 +324,7 @@
 
     if-eqz v7, :cond_9
 
-    .line 547
+    .line 573
     const/4 v7, 0x0
 
     aget-object v7, p5, v7
@@ -335,7 +335,7 @@
 
     move-result v3
 
-    .line 548
+    .line 574
     .local v3, nRequestAlbumId:I
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
@@ -350,19 +350,19 @@
 
     if-eq v3, v7, :cond_6
 
-    .line 549
+    .line 575
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 552
+    .line 578
     .end local v3           #nRequestAlbumId:I
     :cond_9
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 555
+    .line 581
     :cond_a
     iget-object v7, p0, Lcom/htc/music/GliderAdapter$1;->this$0:Lcom/htc/music/GliderAdapter;
 
@@ -375,15 +375,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 556
+    .line 582
     .local v4, service:Lcom/htc/music/IMediaPlaybackService;
     const/4 v6, 0x0
 
-    .line 558
+    .line 584
     .local v6, szRequestAlbumPath:Ljava/lang/String;
     if-eqz v4, :cond_b
 
-    .line 559
+    .line 585
     :try_start_2
     invoke-interface {v4}, Lcom/htc/music/IMediaPlaybackService;->getAlbumArtPath()Ljava/lang/String;
     :try_end_2
@@ -392,7 +392,7 @@
 
     move-result-object v6
 
-    .line 563
+    .line 589
     :cond_b
     :goto_2
     if-eqz p5, :cond_c
@@ -412,14 +412,14 @@
 
     if-eqz v7, :cond_c
 
-    .line 564
+    .line 590
     const/4 v7, 0x0
 
     aget-object v5, p5, v7
 
     check-cast v5, Ljava/lang/String;
 
-    .line 565
+    .line 591
     .local v5, szDecodedAlbumArtPath:Ljava/lang/String;
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -427,17 +427,17 @@
 
     if-nez v7, :cond_6
 
-    .line 566
+    .line 592
     const/4 v0, 0x0
 
     goto/16 :goto_1
 
-    .line 560
+    .line 586
     .end local v5           #szDecodedAlbumArtPath:Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 561
+    .line 587
     .local v2, e:Landroid/os/RemoteException;
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
     :try_end_3
@@ -445,7 +445,7 @@
 
     goto :goto_2
 
-    .line 516
+    .line 542
     .end local v0           #bAddToCache:Z
     .end local v1           #bmp3D:Lcom/htc/sunny2/SBitmap;
     .end local v2           #e:Landroid/os/RemoteException;
@@ -458,7 +458,7 @@
 
     throw v7
 
-    .line 569
+    .line 595
     .restart local v0       #bAddToCache:Z
     .restart local v1       #bmp3D:Lcom/htc/sunny2/SBitmap;
     .restart local v4       #service:Lcom/htc/music/IMediaPlaybackService;

@@ -131,7 +131,7 @@
     invoke-virtual {v1, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 87
-    const v3, 0x7f070103
+    const v3, 0x7f070104
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 377
+    .line 379
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/KeyguardViewManager$1;->val$showListener:Lcom/android/internal/policy/impl/KeyguardViewManager$ShowListener;
@@ -46,7 +46,7 @@
     .locals 2
 
     .prologue
-    .line 379
+    .line 381
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardViewManager;->mKeyguardHost:Landroid/widget/FrameLayout;
@@ -60,7 +60,7 @@
 
     if-nez v0, :cond_0
 
-    .line 380
+    .line 382
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewManager$1;->val$showListener:Lcom/android/internal/policy/impl/KeyguardViewManager$ShowListener;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardViewManager;
@@ -76,11 +76,11 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/policy/impl/KeyguardViewManager$ShowListener;->onShown(Landroid/os/IBinder;)V
 
-    .line 384
+    .line 386
     :goto_0
     return-void
 
-    .line 382
+    .line 384
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewManager$1;->val$showListener:Lcom/android/internal/policy/impl/KeyguardViewManager$ShowListener;
 

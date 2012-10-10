@@ -25,13 +25,13 @@
     .parameter "context"
 
     .prologue
-    .line 5842
+    .line 5851
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackBrowserRingtoneHelper;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
-    .line 5843
+    .line 5852
     invoke-direct {p0, p2}, Lcom/htc/music/util/RingtoneHelper;-><init>(Landroid/content/Context;)V
 
-    .line 5844
+    .line 5853
     return-void
 .end method
 
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 5852
+    .line 5861
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackBrowserRingtoneHelper;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     const/16 v1, 0x28
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->showDialog(I)V
 
-    .line 5853
+    .line 5862
     return-void
 .end method
 
@@ -56,14 +56,14 @@
     .locals 2
 
     .prologue
-    .line 5848
+    .line 5857
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackBrowserRingtoneHelper;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     const/16 v1, 0x27
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->showDialog(I)V
 
-    .line 5849
+    .line 5858
     return-void
 .end method
 
@@ -73,11 +73,11 @@
     .parameter "contactResultCode"
 
     .prologue
-    .line 5856
+    .line 5865
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackBrowserRingtoneHelper;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-super {p0, v0, p2}, Lcom/htc/music/util/RingtoneHelper;->startContactActivity(Landroid/app/Activity;I)V
 
-    .line 5857
+    .line 5866
     return-void
 .end method

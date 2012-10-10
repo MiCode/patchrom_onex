@@ -457,14 +457,14 @@
 
     iput-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
-    .line 2174
+    .line 2175
     new-instance v0, Lcom/htc/music/carmode/CarNowPlayingActivity$19;
 
     invoke-direct {v0, p0}, Lcom/htc/music/carmode/CarNowPlayingActivity$19;-><init>(Lcom/htc/music/carmode/CarNowPlayingActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mScanReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 2196
+    .line 2197
     new-instance v0, Lcom/htc/music/carmode/CarNowPlayingActivity$20;
 
     invoke-direct {v0, p0}, Lcom/htc/music/carmode/CarNowPlayingActivity$20;-><init>(Lcom/htc/music/carmode/CarNowPlayingActivity;)V
@@ -1086,7 +1086,7 @@
     .locals 5
 
     .prologue
-    .line 1907
+    .line 1908
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -1100,7 +1100,7 @@
 
     if-nez v2, :cond_1
 
-    .line 1908
+    .line 1909
     :cond_0
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
@@ -1110,7 +1110,7 @@
 
     move-result-object v1
 
-    .line 1909
+    .line 1910
     .local v1, msg:Landroid/os/Message;
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
@@ -1118,19 +1118,19 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1910
+    .line 1911
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     const-wide/16 v3, 0x64
 
     invoke-virtual {v2, v1, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1919
+    .line 1920
     .end local v1           #msg:Landroid/os/Message;
     :goto_0
     return-void
 
-    .line 1913
+    .line 1914
     :cond_1
     const-string v2, "[CarNowPlayingActivity]"
 
@@ -1138,24 +1138,24 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1914
+    .line 1915
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->activityWakeup()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1918
+    .line 1919
     :goto_1
     invoke-direct {p0}, Lcom/htc/music/carmode/CarNowPlayingActivity;->updateGlider()V
 
     goto :goto_0
 
-    .line 1915
+    .line 1916
     :catch_0
     move-exception v0
 
-    .line 1916
+    .line 1917
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1168,19 +1168,19 @@
     .prologue
     const/16 v2, 0xe
 
-    .line 1897
+    .line 1898
     const-string v0, "[CarNowPlayingActivity]"
 
     const-string v1, "animationRefresh()"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1898
+    .line 1899
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v0, :cond_1
 
-    .line 1899
+    .line 1900
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->hasMessages(I)Z
@@ -1189,18 +1189,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 1900
+    .line 1901
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->removeMessages(I)V
 
-    .line 1901
+    .line 1902
     :cond_0
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 1903
+    .line 1904
     :cond_1
     return-void
 .end method
@@ -1209,12 +1209,12 @@
     .locals 4
 
     .prologue
-    .line 2145
+    .line 2146
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2146
+    .line 2147
     .local v0, status:Ljava/lang/String;
     const-string v1, "mounted"
 
@@ -1232,15 +1232,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 2148
+    .line 2149
     :cond_0
     const/4 v1, 0x1
 
-    .line 2169
+    .line 2170
     :goto_0
     return v1
 
-    .line 2152
+    .line 2153
     :cond_1
     const-string v1, "shared"
 
@@ -1250,27 +1250,27 @@
 
     if-eqz v1, :cond_3
 
-    .line 2153
+    .line 2154
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->IsInternalStorage()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 2154
+    .line 2155
     iget-object v1, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mErrorText:Landroid/widget/TextView;
 
     const v2, 0x7f070049
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 2169
+    .line 2170
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2156
+    .line 2157
     :cond_2
     iget-object v1, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mErrorText:Landroid/widget/TextView;
 
@@ -1280,7 +1280,7 @@
 
     goto :goto_1
 
-    .line 2159
+    .line 2160
     :cond_3
     const-string v1, "removed"
 
@@ -1298,7 +1298,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 2161
+    .line 2162
     :cond_4
     iget-object v1, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mErrorText:Landroid/widget/TextView;
 
@@ -1308,7 +1308,7 @@
 
     goto :goto_1
 
-    .line 2163
+    .line 2164
     :cond_5
     const-string v1, "unmounted"
 
@@ -1318,7 +1318,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 2164
+    .line 2165
     iget-object v1, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mErrorText:Landroid/widget/TextView;
 
     const v2, 0x20401fa
@@ -1327,7 +1327,7 @@
 
     goto :goto_1
 
-    .line 2166
+    .line 2167
     :cond_6
     const-string v1, "[CarNowPlayingActivity]"
 
@@ -1720,12 +1720,12 @@
     .locals 6
 
     .prologue
-    .line 1843
+    .line 1844
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v2, :cond_2
 
-    .line 1846
+    .line 1847
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -1735,23 +1735,23 @@
 
     iput-wide v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mElapsedTime:J
 
-    .line 1847
+    .line 1848
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->isPlaying()Z
 
     move-result v1
 
-    .line 1848
+    .line 1849
     .local v1, isPlaying:Z
     if-eqz v1, :cond_0
 
-    .line 1849
+    .line 1850
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v2, :cond_0
 
-    .line 1850
+    .line 1851
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     const/16 v3, 0x8
@@ -1760,13 +1760,13 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1853
+    .line 1854
     :cond_0
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v2, :cond_2
 
-    .line 1854
+    .line 1855
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     const/4 v3, 0x5
@@ -1777,14 +1777,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 1855
+    .line 1856
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     const/4 v3, 0x5
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1857
+    .line 1858
     :cond_1
     iget-object v2, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
@@ -1792,21 +1792,21 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1864
+    .line 1865
     .end local v1           #isPlaying:Z
     :cond_2
     :goto_0
     return-void
 
-    .line 1859
+    .line 1860
     :catch_0
     move-exception v0
 
-    .line 1860
-    .local v0, e:Landroid/os/RemoteException;
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    .line 1861
+    .local v0, e:Ljava/lang/Exception;
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -2631,7 +2631,7 @@
     .parameter "context"
 
     .prologue
-    .line 2214
+    .line 2215
     const-string v3, "audio"
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2640,37 +2640,37 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 2215
+    .line 2216
     .local v0, audioManager:Landroid/media/AudioManager;
     if-nez v0, :cond_0
 
-    .line 2216
+    .line 2217
     const-string v3, "[CarNowPlayingActivity]"
 
     const-string v4, "isBeatsEffectOn - audioManager = null"
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2217
+    .line 2218
     const/4 v2, 0x0
 
-    .line 2223
+    .line 2224
     :goto_0
     return v2
 
     :cond_0
     move-object v1, v0
 
-    .line 2220
+    .line 2221
     check-cast v1, Landroid/media/HtcIfAudioManager;
 
-    .line 2221
+    .line 2222
     .local v1, ifam:Landroid/media/HtcIfAudioManager;
     invoke-interface {v1}, Landroid/media/HtcIfAudioManager;->getBeatsState()Z
 
     move-result v2
 
-    .line 2222
+    .line 2223
     .local v2, isBeatsOn:Z
     const-string v3, "[CarNowPlayingActivity]"
 
@@ -2701,13 +2701,13 @@
     .locals 4
 
     .prologue
-    .line 2240
+    .line 2241
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2241
+    .line 2242
     .local v1, soundEffectIntent:Landroid/content/Intent;
     const-string v2, "com.htc.AutoMotive"
 
@@ -2715,26 +2715,26 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2244
+    .line 2245
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 2245
+    .line 2246
     invoke-virtual {p0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2249
+    .line 2250
     .end local v1           #soundEffectIntent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 2246
+    .line 2247
     :catch_0
     move-exception v0
 
-    .line 2247
+    .line 2248
     .local v0, ex:Landroid/content/ActivityNotFoundException;
     const-string v2, "[CarNowPlayingActivity]"
 
@@ -2749,7 +2749,7 @@
     .locals 21
 
     .prologue
-    .line 1998
+    .line 1999
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2757,7 +2757,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1999
+    .line 2000
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2770,7 +2770,7 @@
 
     iput v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mQueueSize:I
 
-    .line 2000
+    .line 2001
     const-string v2, "[CarNowPlayingActivity]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2797,7 +2797,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2001
+    .line 2002
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2806,7 +2806,7 @@
 
     move-result-object v16
 
-    .line 2002
+    .line 2003
     .local v16, path:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2814,7 +2814,7 @@
 
     if-nez v2, :cond_1
 
-    .line 2003
+    .line 2004
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
@@ -2823,13 +2823,13 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2141
+    .line 2142
     .end local v16           #path:Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 2007
+    .line 2008
     .restart local v16       #path:Ljava/lang/String;
     :cond_1
     new-instance v20, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;
@@ -2842,11 +2842,11 @@
 
     invoke-direct {v0, v1, v2}, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;-><init>(Lcom/htc/music/carmode/CarNowPlayingActivity;Lcom/htc/music/carmode/CarNowPlayingActivity$1;)V
 
-    .line 2008
+    .line 2009
     .local v20, trackInfo:Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;
     if-eqz v16, :cond_e
 
-    .line 2009
+    .line 2010
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2859,7 +2859,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mTrackName:Ljava/lang/String;
 
-    .line 2010
+    .line 2011
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2872,7 +2872,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mArtistName:Ljava/lang/String;
 
-    .line 2011
+    .line 2012
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2885,7 +2885,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mAlbumName:Ljava/lang/String;
 
-    .line 2012
+    .line 2013
     const-string v2, "<unknown>"
 
     move-object/from16 v0, v20
@@ -2898,7 +2898,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 2013
+    .line 2014
     const v2, 0x7f07004d
 
     move-object/from16 v0, p0
@@ -2911,7 +2911,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mArtistName:Ljava/lang/String;
 
-    .line 2016
+    .line 2017
     :cond_2
     const-string v2, "<unknown>"
 
@@ -2925,7 +2925,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 2017
+    .line 2018
     const v2, 0x7f07004d
 
     move-object/from16 v0, p0
@@ -2938,7 +2938,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mAlbumName:Ljava/lang/String;
 
-    .line 2020
+    .line 2021
     :cond_3
     move-object/from16 v0, v20
 
@@ -2958,14 +2958,14 @@
 
     if-nez v2, :cond_d
 
-    .line 2022
+    .line 2023
     const-string v2, "[CarNowPlayingActivity]"
 
     const-string v3, "updateTrackInfoP - get metadata from MediaMetadataRetriever"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2024
+    .line 2025
     new-instance v13, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v13}, Landroid/media/MediaMetadataRetriever;-><init>()V
@@ -2973,17 +2973,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2026
+    .line 2027
     .local v13, mmr:Landroid/media/MediaMetadataRetriever;
     if-eqz v13, :cond_4
 
-    .line 2028
+    .line 2029
     :try_start_1
     move-object/from16 v0, v16
 
     invoke-virtual {v13, v0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
-    .line 2030
+    .line 2031
     const/4 v2, 0x2
 
     invoke-virtual {v13, v2}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
@@ -2994,7 +2994,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mArtistName:Ljava/lang/String;
 
-    .line 2033
+    .line 2034
     const/4 v2, 0x1
 
     invoke-virtual {v13, v2}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
@@ -3005,7 +3005,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mAlbumName:Ljava/lang/String;
 
-    .line 2035
+    .line 2036
     const/4 v2, 0x7
 
     invoke-virtual {v13, v2}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
@@ -3020,15 +3020,15 @@
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 2042
+    .line 2043
     :goto_1
     :try_start_2
     invoke-virtual {v13}, Landroid/media/MediaMetadataRetriever;->release()V
 
-    .line 2043
+    .line 2044
     const/4 v13, 0x0
 
-    .line 2048
+    .line 2049
     :cond_4
     move-object/from16 v0, v20
 
@@ -3036,7 +3036,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 2049
+    .line 2050
     move-object/from16 v0, v20
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mArtistName:Ljava/lang/String;
@@ -3049,7 +3049,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mArtistName:Ljava/lang/String;
 
-    .line 2051
+    .line 2052
     :cond_5
     move-object/from16 v0, v20
 
@@ -3069,7 +3069,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 2052
+    .line 2053
     :cond_6
     const v2, 0x7f07004d
 
@@ -3083,7 +3083,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mArtistName:Ljava/lang/String;
 
-    .line 2054
+    .line 2055
     :cond_7
     move-object/from16 v0, v20
 
@@ -3091,7 +3091,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 2055
+    .line 2056
     move-object/from16 v0, v20
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mAlbumName:Ljava/lang/String;
@@ -3104,7 +3104,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mAlbumName:Ljava/lang/String;
 
-    .line 2057
+    .line 2058
     :cond_8
     move-object/from16 v0, v20
 
@@ -3124,7 +3124,7 @@
 
     if-eqz v2, :cond_a
 
-    .line 2058
+    .line 2059
     :cond_9
     const v2, 0x7f07004e
 
@@ -3138,7 +3138,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mAlbumName:Ljava/lang/String;
 
-    .line 2060
+    .line 2061
     :cond_a
     move-object/from16 v0, v20
 
@@ -3146,7 +3146,7 @@
 
     if-eqz v2, :cond_b
 
-    .line 2061
+    .line 2062
     move-object/from16 v0, v20
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mTrackName:Ljava/lang/String;
@@ -3159,7 +3159,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mTrackName:Ljava/lang/String;
 
-    .line 2063
+    .line 2064
     :cond_b
     move-object/from16 v0, v20
 
@@ -3179,7 +3179,7 @@
 
     if-eqz v2, :cond_d
 
-    .line 2065
+    .line 2066
     :cond_c
     const-string v2, "/"
 
@@ -3191,13 +3191,13 @@
 
     if-eqz v2, :cond_d
 
-    .line 2066
+    .line 2067
     const/4 v14, -0x1
 
     .local v14, nBegin:I
     const/4 v15, -0x1
 
-    .line 2068
+    .line 2069
     .local v15, nEnd:I
     const-string v2, "/"
 
@@ -3207,7 +3207,7 @@
 
     move-result v14
 
-    .line 2069
+    .line 2070
     const-string v2, "."
 
     move-object/from16 v0, v16
@@ -3216,12 +3216,12 @@
 
     move-result v15
 
-    .line 2071
+    .line 2072
     if-ltz v14, :cond_d
 
     if-le v15, v14, :cond_d
 
-    .line 2072
+    .line 2073
     add-int/lit8 v2, v14, 0x1
 
     move-object/from16 v0, v16
@@ -3234,7 +3234,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mTrackName:Ljava/lang/String;
 
-    .line 2129
+    .line 2130
     .end local v13           #mmr:Landroid/media/MediaMetadataRetriever;
     .end local v14           #nBegin:I
     .end local v15           #nEnd:I
@@ -3254,7 +3254,7 @@
 
     iput v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mQueuePos:I
 
-    .line 2130
+    .line 2131
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -3267,7 +3267,7 @@
 
     iput v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mQueueSize:I
 
-    .line 2131
+    .line 2132
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -3280,7 +3280,7 @@
 
     iput-wide v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mTotalTime:J
 
-    .line 2132
+    .line 2133
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
@@ -3291,7 +3291,7 @@
 
     move-result-object v19
 
-    .line 2133
+    .line 2134
     .local v19, refreshMsg:Landroid/os/Message;
     move-object/from16 v0, v20
 
@@ -3299,7 +3299,7 @@
 
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 2134
+    .line 2135
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
@@ -3313,14 +3313,14 @@
 
     goto/16 :goto_0
 
-    .line 2136
+    .line 2137
     .end local v16           #path:Ljava/lang/String;
     .end local v19           #refreshMsg:Landroid/os/Message;
     .end local v20           #trackInfo:Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;
     :catch_0
     move-exception v11
 
-    .line 2137
+    .line 2138
     .local v11, ex:Landroid/os/RemoteException;
     :try_start_3
     invoke-virtual {v11}, Landroid/os/RemoteException;->printStackTrace()V
@@ -3329,21 +3329,21 @@
 
     goto/16 :goto_0
 
-    .line 2138
+    .line 2139
     .end local v11           #ex:Landroid/os/RemoteException;
     :catchall_0
     move-exception v2
 
     throw v2
 
-    .line 2037
+    .line 2038
     .restart local v13       #mmr:Landroid/media/MediaMetadataRetriever;
     .restart local v16       #path:Ljava/lang/String;
     .restart local v20       #trackInfo:Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;
     :catch_1
     move-exception v11
 
-    .line 2038
+    .line 2039
     .local v11, ex:Ljava/lang/RuntimeException;
     :try_start_4
     const-string v2, "[CarNowPlayingActivity]"
@@ -3374,7 +3374,7 @@
 
     goto/16 :goto_1
 
-    .line 2080
+    .line 2081
     .end local v11           #ex:Ljava/lang/RuntimeException;
     .end local v13           #mmr:Landroid/media/MediaMetadataRetriever;
     :cond_e
@@ -3386,7 +3386,7 @@
 
     move-result-object v18
 
-    .line 2081
+    .line 2082
     .local v18, queue:[I
     move-object/from16 v0, p0
 
@@ -3396,7 +3396,7 @@
 
     move-result v17
 
-    .line 2082
+    .line 2083
     .local v17, position:I
     if-eqz v18, :cond_0
 
@@ -3416,7 +3416,7 @@
 
     if-le v2, v0, :cond_0
 
-    .line 2088
+    .line 2089
     const/4 v2, 0x5
 
     new-array v4, v2, [Ljava/lang/String;
@@ -3451,7 +3451,7 @@
 
     aput-object v3, v4, v2
 
-    .line 2096
+    .line 2097
     .local v4, cursorCols:[Ljava/lang/String;
     aget v2, v18, v17
 
@@ -3459,7 +3459,7 @@
 
     move-result-object v12
 
-    .line 2097
+    .line 2098
     .local v12, id:Ljava/lang/String;
     sget-object v3, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -3503,7 +3503,7 @@
 
     move-result-object v10
 
-    .line 2101
+    .line 2102
     .local v10, cursor:Landroid/database/Cursor;
     if-eqz v10, :cond_f
 
@@ -3513,7 +3513,7 @@
 
     if-nez v2, :cond_10
 
-    .line 2102
+    .line 2103
     :cond_f
     const-string v2, "[CarNowPlayingActivity]"
 
@@ -3523,11 +3523,11 @@
 
     goto/16 :goto_0
 
-    .line 2105
+    .line 2106
     :cond_10
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 2106
+    .line 2107
     const-string v2, "artist"
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -3538,7 +3538,7 @@
 
     move-result-object v9
 
-    .line 2108
+    .line 2109
     .local v9, artistName:Ljava/lang/String;
     if-eqz v9, :cond_11
 
@@ -3550,7 +3550,7 @@
 
     if-eqz v2, :cond_12
 
-    .line 2109
+    .line 2110
     :cond_11
     const v2, 0x7f07004d
 
@@ -3560,7 +3560,7 @@
 
     move-result-object v9
 
-    .line 2111
+    .line 2112
     :cond_12
     const-string v2, "[CarNowPlayingActivity]"
 
@@ -3584,12 +3584,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2112
+    .line 2113
     move-object/from16 v0, v20
 
     iput-object v9, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mArtistName:Ljava/lang/String;
 
-    .line 2113
+    .line 2114
     const-string v2, "album"
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -3600,7 +3600,7 @@
 
     move-result-object v8
 
-    .line 2115
+    .line 2116
     .local v8, albumName:Ljava/lang/String;
     if-eqz v8, :cond_13
 
@@ -3612,7 +3612,7 @@
 
     if-eqz v2, :cond_14
 
-    .line 2116
+    .line 2117
     :cond_13
     const v2, 0x7f07004e
 
@@ -3622,13 +3622,13 @@
 
     move-result-object v8
 
-    .line 2118
+    .line 2119
     :cond_14
     move-object/from16 v0, v20
 
     iput-object v8, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mAlbumName:Ljava/lang/String;
 
-    .line 2119
+    .line 2120
     const-string v2, "title"
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -3643,7 +3643,7 @@
 
     iput-object v2, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$TrackInfo;->mTrackName:Ljava/lang/String;
 
-    .line 2122
+    .line 2123
     const-string v2, "[CarNowPlayingActivity]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3670,10 +3670,10 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2124
+    .line 2125
     if-eqz v10, :cond_d
 
-    .line 2125
+    .line 2126
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -3750,12 +3750,12 @@
     .prologue
     const/16 v1, 0x15
 
-    .line 2205
+    .line 2206
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v0, :cond_1
 
-    .line 2206
+    .line 2207
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->hasMessages(I)Z
@@ -3764,18 +3764,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 2207
+    .line 2208
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->removeMessages(I)V
 
-    .line 2208
+    .line 2209
     :cond_0
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 2210
+    .line 2211
     :cond_1
     return-void
 .end method
@@ -4145,14 +4145,14 @@
     .prologue
     const-wide/16 v7, 0x3e8
 
-    .line 1867
+    .line 1868
     const/4 v0, 0x0
 
-    .line 1868
+    .line 1869
     .local v0, elapsedTime:Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 1869
+    .line 1870
     .local v2, totalTime:Ljava/lang/String;
     iget-wide v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mTotalTime:J
 
@@ -4162,31 +4162,31 @@
 
     if-gtz v3, :cond_0
 
-    .line 1870
+    .line 1871
     const-string v0, "--.--"
 
-    .line 1871
+    .line 1872
     const-string v2, "--.--"
 
-    .line 1876
+    .line 1877
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1877
+    .line 1878
     .local v1, time:Ljava/lang/StringBuilder;
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1878
+    .line 1879
     const-string v3, "/"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1879
+    .line 1880
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1880
+    .line 1881
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mTrackTimeInfo:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -4195,10 +4195,10 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1883
+    .line 1884
     return-void
 
-    .line 1873
+    .line 1874
     .end local v1           #time:Ljava/lang/StringBuilder;
     :cond_0
     iget-wide v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mElapsedTime:J
@@ -4209,7 +4209,7 @@
 
     move-result-object v0
 
-    .line 1874
+    .line 1875
     iget-wide v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mTotalTime:J
 
     div-long/2addr v3, v7
@@ -4462,12 +4462,12 @@
     .parameter "resid"
 
     .prologue
-    .line 1886
+    .line 1887
     iget-object v1, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 1887
+    .line 1888
     iget-object v1, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     const/4 v2, 0x6
@@ -4476,16 +4476,16 @@
 
     move-result-object v0
 
-    .line 1888
+    .line 1889
     .local v0, msg:Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1889
+    .line 1890
     iget-object v1, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1893
+    .line 1894
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return-void
@@ -4497,12 +4497,12 @@
     .prologue
     const/16 v2, 0xf
 
-    .line 1947
+    .line 1948
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v0, :cond_1
 
-    .line 1948
+    .line 1949
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->hasMessages(I)Z
@@ -4511,25 +4511,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 1949
+    .line 1950
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->removeMessages(I)V
 
-    .line 1950
+    .line 1951
     const-string v0, "[CarNowPlayingActivity]"
 
     const-string v1, "remove NONUI_SKIP_ANIMATION"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1952
+    .line 1953
     :cond_0
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     invoke-virtual {v0, v2}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 1954
+    .line 1955
     :cond_1
     return-void
 .end method
@@ -4538,23 +4538,23 @@
     .locals 3
 
     .prologue
-    .line 2278
+    .line 2279
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 2279
+    .line 2280
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.htc.music.carmode.BROWSE_VIEWER"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2280
+    .line 2281
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2281
+    .line 2282
     const-string v1, "caller"
 
     const-class v2, Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -4565,13 +4565,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2282
+    .line 2283
     invoke-virtual {p0, v0}, Lcom/htc/music/carmode/CarNowPlayingActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 2283
+    .line 2284
     invoke-virtual {p0}, Lcom/htc/music/carmode/CarNowPlayingActivity;->finish()V
 
-    .line 2284
+    .line 2285
     return-void
 .end method
 
@@ -4579,36 +4579,36 @@
     .locals 5
 
     .prologue
-    .line 1957
+    .line 1958
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mServiceLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1958
+    .line 1959
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v3, :cond_0
 
-    .line 1960
+    .line 1961
     :try_start_0
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v3}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 1961
+    .line 1962
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v3}, Lcom/htc/music/IMediaPlaybackService;->getAlbumQueuePosition()I
 
     move-result v2
 
-    .line 1962
+    .line 1963
     .local v2, pos:I
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v3, :cond_0
 
-    .line 1963
+    .line 1964
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     const/16 v4, 0x9
@@ -4617,7 +4617,7 @@
 
     move-result-object v0
 
-    .line 1964
+    .line 1965
     .local v0, animMsg:Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -4627,14 +4627,14 @@
 
     invoke-virtual {v3, v4, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1965
+    .line 1966
     iget-object v3, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     invoke-virtual {v3, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1971
+    .line 1972
     .end local v0           #animMsg:Landroid/os/Message;
     .end local v2           #pos:I
     :cond_0
@@ -4643,14 +4643,14 @@
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 1972
+    .line 1973
     return-void
 
-    .line 1967
+    .line 1968
     :catch_0
     move-exception v1
 
-    .line 1968
+    .line 1969
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -4661,30 +4661,30 @@
     .locals 6
 
     .prologue
-    .line 1975
+    .line 1976
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mServiceLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1976
+    .line 1977
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-eqz v4, :cond_0
 
-    .line 1978
+    .line 1979
     :try_start_0
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v4}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 1979
+    .line 1980
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v4}, Lcom/htc/music/IMediaPlaybackService;->getAlbumQueuePosition()I
 
     move-result v2
 
-    .line 1980
+    .line 1981
     .local v2, pos:I
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -4692,13 +4692,13 @@
 
     move-result v3
 
-    .line 1981
+    .line 1982
     .local v3, queueSize:I
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v4, :cond_0
 
-    .line 1982
+    .line 1983
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     const/16 v5, 0xa
@@ -4707,7 +4707,7 @@
 
     move-result-object v0
 
-    .line 1983
+    .line 1984
     .local v0, animMsg:Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -4717,7 +4717,7 @@
 
     invoke-virtual {v4, v5, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1984
+    .line 1985
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v4
@@ -4726,14 +4726,14 @@
 
     invoke-virtual {v4, v5, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1985
+    .line 1986
     iget-object v4, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mUiHandler:Landroid/os/Handler;
 
     invoke-virtual {v4, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1992
+    .line 1993
     .end local v0           #animMsg:Landroid/os/Message;
     .end local v2           #pos:I
     .end local v3           #queueSize:I
@@ -4743,14 +4743,14 @@
 
     invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 1993
+    .line 1994
     return-void
 
-    .line 1988
+    .line 1989
     :catch_0
     move-exception v1
 
-    .line 1989
+    .line 1990
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -4923,23 +4923,23 @@
     .locals 2
 
     .prologue
-    .line 1922
+    .line 1923
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v0, :cond_0
 
-    .line 1923
+    .line 1924
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     const/16 v1, 0x9
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 1925
+    .line 1926
     :cond_0
     invoke-direct {p0}, Lcom/htc/music/carmode/CarNowPlayingActivity;->refreshBeatsState()V
 
-    .line 1926
+    .line 1927
     return-void
 .end method
 
@@ -4947,19 +4947,19 @@
     .locals 2
 
     .prologue
-    .line 1941
+    .line 1942
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v0, :cond_0
 
-    .line 1942
+    .line 1943
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     const/16 v1, 0xb
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 1944
+    .line 1945
     :cond_0
     return-void
 .end method
@@ -4968,19 +4968,19 @@
     .locals 2
 
     .prologue
-    .line 1935
+    .line 1936
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v0, :cond_0
 
-    .line 1936
+    .line 1937
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 1938
+    .line 1939
     :cond_0
     return-void
 .end method
@@ -5025,19 +5025,19 @@
     .locals 2
 
     .prologue
-    .line 1929
+    .line 1930
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     if-eqz v0, :cond_0
 
-    .line 1930
+    .line 1931
     iget-object v0, p0, Lcom/htc/music/carmode/CarNowPlayingActivity;->mNonUiHandler:Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->sendEmptyMessage(I)Z
 
-    .line 1932
+    .line 1933
     :cond_0
     return-void
 .end method
@@ -5049,7 +5049,7 @@
     .parameter "newStatus"
 
     .prologue
-    .line 2264
+    .line 2265
     return-void
 .end method
 
@@ -5058,10 +5058,10 @@
     .parameter "newStatus"
 
     .prologue
-    .line 2268
+    .line 2269
     invoke-direct {p0}, Lcom/htc/music/carmode/CarNowPlayingActivity;->refreshBeatsState()V
 
-    .line 2269
+    .line 2270
     return-void
 .end method
 
@@ -5081,10 +5081,10 @@
     .parameter "isBeatsHeadset"
 
     .prologue
-    .line 2253
+    .line 2254
     invoke-direct {p0}, Lcom/htc/music/carmode/CarNowPlayingActivity;->refreshBeatsState()V
 
-    .line 2254
+    .line 2255
     return-void
 .end method
 
@@ -5092,10 +5092,10 @@
     .locals 0
 
     .prologue
-    .line 2273
+    .line 2274
     invoke-direct {p0}, Lcom/htc/music/carmode/CarNowPlayingActivity;->startLibraryActivity()V
 
-    .line 2275
+    .line 2276
     return-void
 .end method
 
@@ -6099,6 +6099,6 @@
     .parameter "newStatus"
 
     .prologue
-    .line 2259
+    .line 2260
     return-void
 .end method

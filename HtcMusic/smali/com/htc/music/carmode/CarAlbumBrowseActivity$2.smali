@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 316
+    .line 333
     iput-object p1, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$2;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .parameter "bkgTextureId"
 
     .prologue
-    .line 320
+    .line 337
     iget-object v0, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$2;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridViewPreparator:Lcom/htc/music/widget/gridview/MusicGridViewPreparator;
@@ -64,7 +64,7 @@
     .locals 1
 
     .prologue
-    .line 339
+    .line 356
     iget-object v0, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$2;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     iget-boolean v0, v0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridViewInitFinish:Z
@@ -79,7 +79,7 @@
     .parameter "bkgTextureId"
 
     .prologue
-    .line 333
+    .line 350
     const/4 v0, 0x0
 
     return v0
@@ -92,7 +92,7 @@
     .parameter "bkgTextureId"
 
     .prologue
-    .line 326
+    .line 343
     const/4 v0, 0x0
 
     return v0

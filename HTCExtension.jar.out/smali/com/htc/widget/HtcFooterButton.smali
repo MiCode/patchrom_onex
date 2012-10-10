@@ -328,31 +328,31 @@
 
     const/high16 v7, 0x3f00
 
-    .line 400
+    .line 403
     iget-object v6, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
     if-nez v6, :cond_0
 
-    .line 414
+    .line 417
     :goto_0
     return-void
 
-    .line 403
+    .line 406
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 404
+    .line 407
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getWidth()I
 
     move-result v3
 
-    .line 405
+    .line 408
     .local v3, vWidth:I
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getHeight()I
 
     move-result v2
 
-    .line 406
+    .line 409
     .local v2, vHeight:I
     iget-object v6, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
@@ -360,7 +360,7 @@
 
     move-result v1
 
-    .line 407
+    .line 410
     .local v1, dWidth:I
     iget-object v6, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
@@ -368,7 +368,7 @@
 
     move-result v0
 
-    .line 408
+    .line 411
     .local v0, dHeight:I
     sub-int v6, v3, v1
 
@@ -376,7 +376,7 @@
 
     mul-float v4, v6, v7
 
-    .line 409
+    .line 412
     .local v4, xOffset:F
     sub-int v6, v2, v0
 
@@ -384,21 +384,21 @@
 
     mul-float v5, v6, v7
 
-    .line 410
+    .line 413
     .local v5, yOffset:F
     iget-object v6, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6, v8, v8, v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 411
+    .line 414
     invoke-virtual {p1, v4, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 412
+    .line 415
     iget-object v6, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 413
+    .line 416
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
@@ -408,12 +408,12 @@
     .locals 2
 
     .prologue
-    .line 466
+    .line 469
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mPopupWrapper:Lcom/htc/widget/HtcPopupWindowWrapper;
 
     if-nez v0, :cond_0
 
-    .line 467
+    .line 470
     new-instance v0, Lcom/htc/widget/HtcPopupWindowWrapper;
 
     const/4 v1, 0x0
@@ -422,12 +422,12 @@
 
     iput-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mPopupWrapper:Lcom/htc/widget/HtcPopupWindowWrapper;
 
-    .line 468
+    .line 471
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mPopupWrapper:Lcom/htc/widget/HtcPopupWindowWrapper;
 
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcFooterButton;->setPopupDirection(Lcom/htc/widget/HtcPopupWindowWrapper;)V
 
-    .line 470
+    .line 473
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mPopupWrapper:Lcom/htc/widget/HtcPopupWindowWrapper;
 
@@ -438,12 +438,12 @@
     .locals 2
 
     .prologue
-    .line 381
+    .line 384
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mDisplay:Landroid/view/Display;
 
     if-nez v0, :cond_0
 
-    .line 382
+    .line 385
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mContext:Landroid/content/Context;
 
     const-string v1, "window"
@@ -460,7 +460,7 @@
 
     iput-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mDisplay:Landroid/view/Display;
 
-    .line 385
+    .line 388
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mDisplay:Landroid/view/Display;
 
@@ -480,17 +480,17 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 386
+    .line 389
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcFooterButton;->mHorizontal:Z
 
-    .line 390
+    .line 393
     :goto_0
     return-void
 
-    .line 388
+    .line 391
     :cond_2
     const/4 v0, 0x1
 
@@ -541,24 +541,24 @@
     .locals 8
 
     .prologue
-    const/4 v7, 0x0
+    const v7, 0x203005c
 
-    const v6, 0x203005c
-
-    const v5, 0x2030051
-
-    const/4 v4, 0x1
+    const v6, 0x2030051
 
     const/4 v3, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v5, 0x0
 
     .line 233
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getViewOrientation()V
 
     .line 234
-    iput-object v3, p0, Lcom/htc/widget/HtcFooterButton;->mCountry:Ljava/lang/String;
+    iput-object v5, p0, Lcom/htc/widget/HtcFooterButton;->mCountry:Ljava/lang/String;
 
     .line 235
-    iput-object v3, p0, Lcom/htc/widget/HtcFooterButton;->mLanguage:Ljava/lang/String;
+    iput-object v5, p0, Lcom/htc/widget/HtcFooterButton;->mLanguage:Ljava/lang/String;
 
     .line 236
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
@@ -605,19 +605,9 @@
     .line 238
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mLanguage:Ljava/lang/String;
 
-    sget-object v2, Lcom/htc/widget/HtcFooterButton;->Chinese:Ljava/lang/String;
+    sget-object v4, Lcom/htc/widget/HtcFooterButton;->Chinese:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mLanguage:Ljava/lang/String;
-
-    sget-object v2, Lcom/htc/widget/HtcFooterButton;->Japanese:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -625,9 +615,19 @@
 
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mLanguage:Ljava/lang/String;
 
-    sget-object v2, Lcom/htc/widget/HtcFooterButton;->Korean:Ljava/lang/String;
+    sget-object v4, Lcom/htc/widget/HtcFooterButton;->Japanese:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mLanguage:Ljava/lang/String;
+
+    sget-object v4, Lcom/htc/widget/HtcFooterButton;->Korean:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -635,9 +635,9 @@
 
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mCountry:Ljava/lang/String;
 
-    const-string v2, "TH"
+    const-string v4, "TH"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -665,19 +665,19 @@
 
     move-result-object v1
 
-    const-string v2, ".*\\s.*"
+    const-string v4, ".*\\s.*"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 243
-    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
+    invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
 
     .line 244
-    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcFooterButton;->setMaxLines(I)V
+    invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFooterButton;->setMaxLines(I)V
 
     .line 245
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->MARQUEE:Landroid/text/TextUtils$TruncateAt;
@@ -685,7 +685,7 @@
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcFooterButton;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
     .line 246
-    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcFooterButton;->setHorizontalFadingEdgeEnabled(Z)V
+    invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFooterButton;->setHorizontalFadingEdgeEnabled(Z)V
 
     .line 265
     .end local v0           #temp:Ljava/lang/CharSequence;
@@ -708,7 +708,7 @@
 
     move-result v1
 
-    if-eq v4, v1, :cond_7
+    if-eq v2, v1, :cond_7
 
     :cond_1
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
@@ -722,36 +722,58 @@
     .line 286
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0, v3, v1, v3, v3}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v5, v1, v5, v5}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     .line 290
     :goto_1
     iget-boolean v1, p0, Lcom/htc/widget/HtcFooterButton;->mHorizontal:Z
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_a
 
     .line 291
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
+    invoke-virtual {p0, v1, v7}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 292
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
+    invoke-direct {p0, v1, v7}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
 
-    .line 300
+    .line 294
+    invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->isEnabled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    move v1, v2
+
     :goto_2
+    invoke-virtual {p0, v1}, Lcom/htc/widget/HtcFooterButton;->setEnabled(Z)V
+
+    .line 295
+    invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->isEnabled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    :goto_3
+    invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFooterButton;->setEnabled(Z)V
+
+    .line 303
+    :goto_4
     return-void
 
     .line 248
     .restart local v0       #temp:Ljava/lang/CharSequence;
     :cond_2
-    invoke-virtual {p0, v7}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
+    invoke-virtual {p0, v3}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
 
     .line 249
     const/4 v1, 0x2
@@ -785,19 +807,19 @@
     .line 253
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mTextRes:Ljava/lang/String;
 
-    const-string v2, ".*\\s.*"
+    const-string v4, ".*\\s.*"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
     .line 254
-    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
+    invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
 
     .line 255
-    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcFooterButton;->setMaxLines(I)V
+    invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFooterButton;->setMaxLines(I)V
 
     .line 256
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->MARQUEE:Landroid/text/TextUtils$TruncateAt;
@@ -805,13 +827,13 @@
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcFooterButton;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
     .line 257
-    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcFooterButton;->setHorizontalFadingEdgeEnabled(Z)V
+    invoke-virtual {p0, v2}, Lcom/htc/widget/HtcFooterButton;->setHorizontalFadingEdgeEnabled(Z)V
 
     goto :goto_0
 
     .line 259
     :cond_4
-    invoke-virtual {p0, v7}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
+    invoke-virtual {p0, v3}, Lcom/htc/widget/HtcFooterButton;->setSingleLine(Z)V
 
     .line 260
     const/4 v1, 0x2
@@ -823,7 +845,7 @@
 
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcFooterButton;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 267
     :pswitch_0
@@ -831,19 +853,19 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1, v5}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
+    invoke-virtual {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 268
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {p0, v1, v5}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
+    invoke-direct {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
 
     .line 269
-    invoke-virtual {p0, v3, v3, v3, v3}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v5, v5, v5, v5}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_2
+    goto :goto_4
 
     .line 273
     :pswitch_1
@@ -851,14 +873,14 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
+    invoke-virtual {p0, v1, v7}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 274
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
+    invoke-direct {p0, v1, v7}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
 
     .line 275
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mTextRes:Ljava/lang/String;
@@ -873,7 +895,7 @@
 
     move-result v1
 
-    if-eq v4, v1, :cond_6
+    if-eq v2, v1, :cond_6
 
     :cond_5
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
@@ -883,38 +905,50 @@
     .line 277
     iget-object v1, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0, v3, v1, v3, v3}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v5, v1, v5, v5}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_2
+    goto :goto_4
 
     .line 279
     :cond_6
-    invoke-virtual {p0, v3, v3, v3, v3}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v5, v5, v5, v5}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_2
+    goto :goto_4
 
     .line 288
     :cond_7
-    invoke-virtual {p0, v3, v3, v3, v3}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v5, v5, v5, v5}, Lcom/htc/widget/HtcFooterButton;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     goto/16 :goto_1
 
-    .line 294
     :cond_8
-    invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
+    move v1, v3
 
-    move-result-object v1
+    .line 294
+    goto/16 :goto_2
 
-    invoke-virtual {p0, v1, v5}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
+    :cond_9
+    move v2, v3
 
     .line 295
+    goto/16 :goto_3
+
+    .line 297
+    :cond_a
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {p0, v1, v5}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
+    invoke-virtual {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setTextAppearance(Landroid/content/Context;I)V
 
-    goto/16 :goto_2
+    .line 298
+    invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1, v6}, Lcom/htc/widget/HtcFooterButton;->setShadow(Landroid/content/Context;I)V
+
+    goto/16 :goto_4
 
     .line 265
     nop
@@ -935,45 +969,45 @@
 
     const/4 v1, 0x1
 
-    .line 514
+    .line 517
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getViewOrientation()V
 
-    .line 515
+    .line 518
     iget v0, p0, Lcom/htc/widget/HtcFooterButton;->mDisplayMode:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 525
+    .line 528
     iget-boolean v0, p0, Lcom/htc/widget/HtcFooterButton;->mHorizontal:Z
 
     if-eqz v0, :cond_0
 
-    .line 526
+    .line 529
     invoke-virtual {p1, v2}, Lcom/htc/widget/HtcPopupWindowWrapper;->setExpandDirection(I)V
 
-    .line 533
+    .line 536
     :goto_0
     return-void
 
-    .line 517
+    .line 520
     :pswitch_0
     invoke-virtual {p1, v1}, Lcom/htc/widget/HtcPopupWindowWrapper;->setExpandDirection(I)V
 
     goto :goto_0
 
-    .line 521
+    .line 524
     :pswitch_1
     invoke-virtual {p1, v2}, Lcom/htc/widget/HtcPopupWindowWrapper;->setExpandDirection(I)V
 
     goto :goto_0
 
-    .line 528
+    .line 531
     :cond_0
     invoke-virtual {p1, v1}, Lcom/htc/widget/HtcPopupWindowWrapper;->setExpandDirection(I)V
 
     goto :goto_0
 
-    .line 515
+    .line 518
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -1064,13 +1098,13 @@
     .parameter "displayMode"
 
     .prologue
-    .line 457
+    .line 460
     iput p1, p0, Lcom/htc/widget/HtcFooterButton;->mDisplayMode:I
 
-    .line 458
+    .line 461
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->initFooterButton()V
 
-    .line 459
+    .line 462
     return-void
 .end method
 
@@ -1078,13 +1112,13 @@
     .locals 2
 
     .prologue
-    .line 426
+    .line 429
     invoke-super {p0}, Lcom/htc/widget/HtcIconButton;->drawableStateChanged()V
 
-    .line 427
+    .line 430
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
-    .line 428
+    .line 431
     .local v0, d:Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
@@ -1094,14 +1128,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 429
+    .line 432
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getDrawableState()[I
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 431
+    .line 434
     :cond_0
     return-void
 .end method
@@ -1110,7 +1144,7 @@
     .locals 1
 
     .prologue
-    .line 323
+    .line 326
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1129,7 +1163,7 @@
     .end annotation
 
     .prologue
-    .line 542
+    .line 545
     return-void
 .end method
 
@@ -1146,7 +1180,7 @@
     .end annotation
 
     .prologue
-    .line 552
+    .line 555
     return-void
 .end method
 
@@ -1155,10 +1189,10 @@
     .parameter "newConfig"
 
     .prologue
-    .line 440
+    .line 443
     invoke-super {p0, p1}, Lcom/htc/widget/HtcIconButton;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 443
+    .line 446
     return-void
 .end method
 
@@ -1167,10 +1201,10 @@
     .parameter "canvas"
 
     .prologue
-    .line 366
+    .line 369
     invoke-super {p0, p1}, Lcom/htc/widget/HtcIconButton;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 367
+    .line 370
     iget-object v0, p0, Lcom/htc/widget/HtcFooterButton;->mTextRes:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -1185,10 +1219,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 368
+    .line 371
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcFooterButton;->drawIconImage(Landroid/graphics/Canvas;)V
 
-    .line 371
+    .line 374
     :cond_0
     return-void
 .end method
@@ -1217,13 +1251,13 @@
     .parameter "oldh"
 
     .prologue
-    .line 447
+    .line 450
     invoke-super {p0, p1, p2, p3, p4}, Lcom/htc/widget/HtcIconButton;->onSizeChanged(IIII)V
 
-    .line 449
+    .line 452
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->initFooterButton()V
 
-    .line 450
+    .line 453
     return-void
 .end method
 
@@ -1234,21 +1268,21 @@
     .end annotation
 
     .prologue
-    .line 494
+    .line 497
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getPopupWrapper()Lcom/htc/widget/HtcPopupWindowWrapper;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 495
+    .line 498
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getPopupWrapper()Lcom/htc/widget/HtcPopupWindowWrapper;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcPopupWindowWrapper;->setAdapter(Landroid/widget/ExpandableListAdapter;)V
 
-    .line 497
+    .line 500
     :cond_0
     return-void
 .end method
@@ -1260,21 +1294,21 @@
     .end annotation
 
     .prologue
-    .line 481
+    .line 484
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getPopupWrapper()Lcom/htc/widget/HtcPopupWindowWrapper;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 482
+    .line 485
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getPopupWrapper()Lcom/htc/widget/HtcPopupWindowWrapper;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcPopupWindowWrapper;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 484
+    .line 487
     :cond_0
     return-void
 .end method
@@ -1368,7 +1402,7 @@
     .end annotation
 
     .prologue
-    .line 356
+    .line 359
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getContext()Landroid/content/Context;
@@ -1383,7 +1417,7 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcFooterButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 357
+    .line 360
     return-void
 .end method
 
@@ -1392,16 +1426,16 @@
     .parameter "mImage"
 
     .prologue
-    .line 330
+    .line 333
     iput-object p1, p0, Lcom/htc/widget/HtcFooterButton;->mImage:Landroid/graphics/drawable/Drawable;
 
-    .line 331
+    .line 334
     if-eqz p1, :cond_0
 
-    .line 332
+    .line 335
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->setFooterButtonAppearance()V
 
-    .line 334
+    .line 337
     :cond_0
     return-void
 .end method
@@ -1411,25 +1445,25 @@
     .parameter "resource"
 
     .prologue
-    .line 340
+    .line 343
     invoke-virtual {p0}, Lcom/htc/widget/HtcFooterButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 341
+    .line 344
     .local v1, rsrc:Landroid/content/res/Resources;
     if-eqz p1, :cond_0
 
-    .line 342
+    .line 345
     invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 343
+    .line 346
     .local v0, d:Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcFooterButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 345
+    .line 348
     .end local v0           #d:Landroid/graphics/drawable/Drawable;
     :cond_0
     return-void
@@ -1441,14 +1475,14 @@
     .end annotation
 
     .prologue
-    .line 501
+    .line 504
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getPopupWrapper()Lcom/htc/widget/HtcPopupWindowWrapper;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 503
+    .line 506
     :try_start_0
     invoke-direct {p0}, Lcom/htc/widget/HtcFooterButton;->getPopupWrapper()Lcom/htc/widget/HtcPopupWindowWrapper;
 
@@ -1458,12 +1492,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 507
+    .line 510
     :cond_0
     :goto_0
     return-void
 
-    .line 504
+    .line 507
     :catch_0
     move-exception v0
 

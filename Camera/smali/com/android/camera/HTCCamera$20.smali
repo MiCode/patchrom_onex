@@ -3,7 +3,7 @@
 .source "HTCCamera.java"
 
 # interfaces
-.implements Lcom/android/camera/event/EventHandler;
+.implements Lcom/android/camera/property/PropertyChangedCallback;
 
 
 # annotations
@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 5975
+    .line 6137
     iput-object p1, p0, Lcom/android/camera/HTCCamera$20;->this$0:Lcom/android/camera/HTCCamera;
 
     iput-object p2, p0, Lcom/android/camera/HTCCamera$20;->val$uiHandler:Landroid/os/Handler;
@@ -42,22 +42,21 @@
 
 
 # virtual methods
-.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
     .locals 2
-    .parameter "event"
-    .parameter "sender"
+    .parameter "property"
     .parameter "e"
 
     .prologue
-    .line 5978
+    .line 6140
     iget-object v0, p0, Lcom/android/camera/HTCCamera$20;->val$uiHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/camera/HTCCamera$20$1;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/android/camera/HTCCamera$20$1;-><init>(Lcom/android/camera/HTCCamera$20;Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/android/camera/HTCCamera$20$1;-><init>(Lcom/android/camera/HTCCamera$20;Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 5985
+    .line 6147
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1961
+    .line 1986
     iput-object p1, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,21 +44,21 @@
 
     const/4 v8, 0x0
 
-    .line 1964
+    .line 1989
     if-nez p2, :cond_1
 
-    .line 2002
+    .line 2027
     :cond_0
     :goto_0
     return-void
 
-    .line 1966
+    .line 1991
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1967
+    .line 1992
     .local v0, action:Ljava/lang/String;
     const-string v5, "android.intent.action.BOOT_COMPLETED"
 
@@ -76,7 +76,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 1970
+    .line 1995
     :cond_2
     const-string v5, "BluetoothService"
 
@@ -84,7 +84,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1971
+    .line 1996
     iget-object v5, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mHandler:Landroid/os/Handler;
@@ -111,7 +111,7 @@
 
     goto :goto_0
 
-    .line 1972
+    .line 1997
     :cond_3
     const-string v5, "android.intent.action.AIRPLANE_MODE"
 
@@ -121,12 +121,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 1973
+    .line 1998
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    .line 1976
+    .line 2001
     .local v3, resolver:Landroid/content/ContentResolver;
     iget-object v5, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
@@ -137,7 +137,7 @@
 
     if-eqz v5, :cond_4
 
-    .line 1977
+    .line 2002
     iget-object v5, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBluetoothState:Landroid/server/BluetoothAdapterStateMachine;
@@ -151,7 +151,7 @@
 
     goto :goto_0
 
-    .line 1979
+    .line 2004
     :cond_4
     iget-object v5, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
@@ -166,7 +166,7 @@
 
     goto :goto_0
 
-    .line 1981
+    .line 2006
     .end local v3           #resolver:Landroid/content/ContentResolver;
     :cond_5
     const-string v5, "android.intent.action.DOCK_EVENT"
@@ -177,14 +177,14 @@
 
     if-eqz v5, :cond_7
 
-    .line 1982
+    .line 2007
     const-string v5, "android.intent.extra.DOCK_STATE"
 
     invoke-virtual {p2, v5, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1984
+    .line 2009
     .local v4, state:I
     const-string v5, "BluetoothService"
 
@@ -208,13 +208,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1985
+    .line 2010
     if-nez v4, :cond_6
 
-    .line 1986
+    .line 2011
     invoke-static {v9}, Landroid/server/BluetoothService;->access$802(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1987
+    .line 2012
     iget-object v5, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #setter for: Landroid/server/BluetoothService;->mDockPin:Ljava/lang/String;
@@ -222,7 +222,7 @@
 
     goto/16 :goto_0
 
-    .line 1989
+    .line 2014
     :cond_6
     iget-object v5, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
@@ -246,7 +246,7 @@
 
     move-result-object v2
 
-    .line 1992
+    .line 2017
     .local v2, editor:Landroid/content/SharedPreferences$Editor;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -274,12 +274,12 @@
 
     invoke-interface {v2, v5, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 1993
+    .line 2018
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     goto/16 :goto_0
 
-    .line 1995
+    .line 2020
     .end local v2           #editor:Landroid/content/SharedPreferences$Editor;
     .end local v4           #state:I
     :cond_7
@@ -291,7 +291,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 1996
+    .line 2021
     const-string v5, "android.bluetooth.device.extra.DEVICE"
 
     invoke-virtual {p2, v5}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -300,7 +300,7 @@
 
     check-cast v1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 1997
+    .line 2022
     .local v1, device:Landroid/bluetooth/BluetoothDevice;
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothDevice;->toString()Ljava/lang/String;
 
@@ -325,7 +325,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 1998
+    .line 2023
     const-string v5, "BluetoothService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -352,7 +352,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1999
+    .line 2024
     iget-object v5, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mLocalLinkTrustedDevices:Ljava/util/ArrayList;

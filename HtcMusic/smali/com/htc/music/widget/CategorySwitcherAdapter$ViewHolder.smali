@@ -26,12 +26,12 @@
     .parameter
 
     .prologue
-    .line 44
+    .line 45
     iput-object p1, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;->this$0:Lcom/htc/music/widget/CategorySwitcherAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 47
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;->text:Lcom/htc/widget/HtcListItem2LineText;
@@ -45,7 +45,7 @@
     .parameter "x1"
 
     .prologue
-    .line 44
+    .line 45
     invoke-direct {p0, p1}, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;-><init>(Lcom/htc/music/widget/CategorySwitcherAdapter;)V
 
     return-void

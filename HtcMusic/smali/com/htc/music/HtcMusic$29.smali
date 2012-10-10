@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4958
+    .line 4990
     iput-object p1, p0, Lcom/htc/music/HtcMusic$29;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,50 +43,50 @@
     .parameter "which"
 
     .prologue
-    .line 4961
+    .line 4993
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 4962
+    .line 4994
     packed-switch p2, :pswitch_data_0
 
-    .line 4973
+    .line 5005
     :goto_0
     return-void
 
-    .line 4964
+    .line 4996
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/HtcMusic$29;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x2
 
     #calls: Lcom/htc/music/HtcMusic;->setRepeatMode(I)V
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6500(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6600(Lcom/htc/music/HtcMusic;I)V
 
     goto :goto_0
 
-    .line 4967
+    .line 4999
     :pswitch_1
     iget-object v0, p0, Lcom/htc/music/HtcMusic$29;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x1
 
     #calls: Lcom/htc/music/HtcMusic;->setRepeatMode(I)V
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6500(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6600(Lcom/htc/music/HtcMusic;I)V
 
     goto :goto_0
 
-    .line 4970
+    .line 5002
     :pswitch_2
     iget-object v0, p0, Lcom/htc/music/HtcMusic$29;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x0
 
     #calls: Lcom/htc/music/HtcMusic;->setRepeatMode(I)V
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6500(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$6600(Lcom/htc/music/HtcMusic;I)V
 
     goto :goto_0
 
-    .line 4962
+    .line 4994
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

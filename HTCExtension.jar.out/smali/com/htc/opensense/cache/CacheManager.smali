@@ -69,8 +69,9 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/Integer;",
-            "Ljava/util/List",
+            "Ljava/util/HashMap",
             "<",
+            "Ljava/lang/Integer;",
             "Lcom/htc/opensense/cache/DownloadCallback;",
             ">;>;"
         }
@@ -123,12 +124,12 @@
     .locals 2
 
     .prologue
-    .line 67
+    .line 68
     const-string v0, "CacheManager"
 
     sput-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
-    .line 69
+    .line 70
     const-string v0, ".+\\.[0-9a-zA-Z]+\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -137,14 +138,14 @@
 
     sput-object v0, Lcom/htc/opensense/cache/CacheManager;->sPlacePattern:Ljava/util/regex/Pattern;
 
-    .line 144
+    .line 146
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     sput-object v0, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
-    .line 147
+    .line 149
     new-instance v0, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     const/4 v1, 0x1
@@ -153,7 +154,7 @@
 
     sput-object v0, Lcom/htc/opensense/cache/CacheManager;->sFileLock:Ljava/util/concurrent/locks/ReadWriteLock;
 
-    .line 153
+    .line 155
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->sFileLock:Ljava/util/concurrent/locks/ReadWriteLock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/ReadWriteLock;->readLock()Ljava/util/concurrent/locks/Lock;
@@ -162,7 +163,7 @@
 
     sput-object v0, Lcom/htc/opensense/cache/CacheManager;->sFileReadLock:Ljava/util/concurrent/locks/Lock;
 
-    .line 158
+    .line 160
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->sFileLock:Ljava/util/concurrent/locks/ReadWriteLock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/ReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
@@ -182,60 +183,60 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 220
+    .line 222
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
+    .line 80
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->sPoolUrls:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 81
+    .line 82
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->taskPools:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 100
+    .line 101
     const v0, 0x4c4b40
 
     iput v0, p0, Lcom/htc/opensense/cache/CacheManager;->maxSizeAllocated:I
 
-    .line 122
+    .line 123
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 143
+    .line 144
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->callbackMap:Ljava/util/HashMap;
 
-    .line 175
+    .line 177
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->minId:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 388
+    .line 390
     new-instance v0, Lcom/htc/opensense/cache/CacheManager$1;
 
     invoke-direct {v0, p0}, Lcom/htc/opensense/cache/CacheManager$1;-><init>(Lcom/htc/opensense/cache/CacheManager;)V
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->stoper:Lcom/htc/opensense/cache/ThreadExecutorHelper$TaskStopExecutor;
 
-    .line 221
+    .line 223
     iput-object p1, p0, Lcom/htc/opensense/cache/CacheManager;->cacheDir:Ljava/lang/String;
 
-    .line 222
+    .line 224
     const-string v0, "cache_to_provider"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -244,7 +245,7 @@
 
     if-nez v0, :cond_1
 
-    .line 223
+    .line 225
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -255,7 +256,7 @@
 
     if-nez v0, :cond_0
 
-    .line 224
+    .line 226
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Directory not found"
@@ -264,7 +265,7 @@
 
     throw v0
 
-    .line 226
+    .line 228
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -276,7 +277,7 @@
 
     if-nez v0, :cond_1
 
-    .line 227
+    .line 229
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Directory isnn\'t writable"
@@ -285,7 +286,7 @@
 
     throw v0
 
-    .line 230
+    .line 232
     :cond_1
     new-instance v0, Lcom/htc/opensense/cache/ThreadExecutorHelper;
 
@@ -293,7 +294,7 @@
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->mExecutorHelper:Lcom/htc/opensense/cache/ThreadExecutorHelper;
 
-    .line 231
+    .line 233
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -306,7 +307,7 @@
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
-    .line 233
+    .line 235
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -315,7 +316,7 @@
 
     iput-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->needRelease:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 234
+    .line 236
     return-void
 .end method
 
@@ -323,21 +324,22 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 67
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/htc/opensense/cache/CacheManager;ILcom/htc/opensense/cache/DownloadCallback;)V
+.method static synthetic access$100(Lcom/htc/opensense/cache/CacheManager;IILcom/htc/opensense/cache/DownloadCallback;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
     .parameter "x2"
+    .parameter "x3"
 
     .prologue
-    .line 66
-    invoke-direct {p0, p1, p2}, Lcom/htc/opensense/cache/CacheManager;->addCallBack(ILcom/htc/opensense/cache/DownloadCallback;)V
+    .line 67
+    invoke-direct {p0, p1, p2, p3}, Lcom/htc/opensense/cache/CacheManager;->addCallBack(IILcom/htc/opensense/cache/DownloadCallback;)V
 
     return-void
 .end method
@@ -347,7 +349,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->taskPools:Ljava/util/concurrent/ConcurrentMap;
 
     return-object v0
@@ -359,7 +361,7 @@
     .parameter "x1"
 
     .prologue
-    .line 66
+    .line 67
     invoke-direct {p0, p1}, Lcom/htc/opensense/cache/CacheManager;->getInfo(I)Lcom/htc/opensense/cache/CacheManager$Info;
 
     move-result-object v0
@@ -367,54 +369,68 @@
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/htc/opensense/cache/CacheManager;I)Ljava/util/List;
+.method static synthetic access$400(Lcom/htc/opensense/cache/CacheManager;I)Ljava/util/HashMap;
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 66
-    invoke-direct {p0, p1}, Lcom/htc/opensense/cache/CacheManager;->removeCallbackListWithLock(I)Ljava/util/List;
+    .line 67
+    invoke-direct {p0, p1}, Lcom/htc/opensense/cache/CacheManager;->removeCallbackListWithLock(I)Ljava/util/HashMap;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/htc/opensense/cache/CacheManager;)Ljava/util/concurrent/ConcurrentMap;
+.method static synthetic access$500(Lcom/htc/opensense/cache/CacheManager;I)Ljava/util/HashMap;
+    .locals 1
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 67
+    invoke-direct {p0, p1}, Lcom/htc/opensense/cache/CacheManager;->getCallbackListWithLock(I)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$600(Lcom/htc/opensense/cache/CacheManager;)Ljava/util/concurrent/ConcurrentMap;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->sPoolUrls:Ljava/util/concurrent/ConcurrentMap;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/htc/opensense/cache/CacheManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
+.method static synthetic access$700(Lcom/htc/opensense/cache/CacheManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->needRelease:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/htc/opensense/cache/CacheManager;)Landroid/content/ContentProviderClient;
+.method static synthetic access$800(Lcom/htc/opensense/cache/CacheManager;)Landroid/content/ContentProviderClient;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/htc/opensense/cache/CacheManager;Ljava/lang/String;Ljava/lang/String;Z)Lcom/htc/opensense/cache/CacheManager$FileInfo;
+.method static synthetic access$900(Lcom/htc/opensense/cache/CacheManager;Ljava/lang/String;Ljava/lang/String;Z)Lcom/htc/opensense/cache/CacheManager$FileInfo;
     .locals 1
     .parameter "x0"
     .parameter "x1"
@@ -429,7 +445,7 @@
     .end annotation
 
     .prologue
-    .line 66
+    .line 67
     invoke-direct {p0, p1, p2, p3}, Lcom/htc/opensense/cache/CacheManager;->getRemoteFile(Ljava/lang/String;Ljava/lang/String;Z)Lcom/htc/opensense/cache/CacheManager$FileInfo;
 
     move-result-object v0
@@ -437,22 +453,23 @@
     return-object v0
 .end method
 
-.method private addCallBack(ILcom/htc/opensense/cache/DownloadCallback;)V
+.method private addCallBack(IILcom/htc/opensense/cache/DownloadCallback;)V
     .locals 4
+    .parameter "taskid"
     .parameter "id"
     .parameter "callback"
 
     .prologue
-    .line 869
+    .line 871
     iget-object v2, p0, Lcom/htc/opensense/cache/CacheManager;->callbackMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 870
+    .line 872
     :try_start_0
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->callbackMap:Ljava/util/HashMap;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -460,38 +477,44 @@
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
-
-    .line 871
-    .local v0, callbackList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/opensense/cache/DownloadCallback;>;"
-    if-nez v0, :cond_0
-
-    .line 872
-    invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
-
-    move-result-object v0
+    check-cast v0, Ljava/util/HashMap;
 
     .line 873
+    .local v0, callbackList:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Integer;Lcom/htc/opensense/cache/DownloadCallback;>;"
+    if-nez v0, :cond_0
+
+    .line 874
+    new-instance v0, Ljava/util/HashMap;
+
+    .end local v0           #callbackList:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Integer;Lcom/htc/opensense/cache/DownloadCallback;>;"
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 875
+    .restart local v0       #callbackList:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Integer;Lcom/htc/opensense/cache/DownloadCallback;>;"
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->callbackMap:Ljava/util/HashMap;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 875
+    .line 877
     :cond_0
-    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 876
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 878
     monitor-exit v2
 
-    .line 877
+    .line 879
     return-void
 
-    .line 876
-    .end local v0           #callbackList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/opensense/cache/DownloadCallback;>;"
+    .line 878
+    .end local v0           #callbackList:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Integer;Lcom/htc/opensense/cache/DownloadCallback;>;"
     :catchall_0
     move-exception v1
 
@@ -512,7 +535,7 @@
     .end annotation
 
     .prologue
-    .line 428
+    .line 430
     monitor-enter p0
 
     :try_start_0
@@ -526,7 +549,7 @@
 
     sub-int v7, v0, v1
 
-    .line 430
+    .line 432
     .local v7, remainSize:I
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
@@ -552,19 +575,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 431
+    .line 433
     const v0, 0x61a80
 
     if-le v7, v0, :cond_1
 
-    .line 449
+    .line 451
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 434
+    .line 436
     :cond_1
     :try_start_1
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
@@ -573,7 +596,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
+    .line 437
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
     sget-object v1, Lcom/htc/opensense/cache/Download;->DOWNLOAD_CONTENT_URI:Landroid/net/Uri;
@@ -634,7 +657,7 @@
 
     move-result-object v6
 
-    .line 443
+    .line 445
     .local v6, c:Landroid/database/Cursor;
     :try_start_2
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
@@ -645,10 +668,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 446
+    .line 448
     if-eqz v6, :cond_0
 
-    .line 447
+    .line 449
     :try_start_3
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -656,7 +679,7 @@
 
     goto :goto_0
 
-    .line 428
+    .line 430
     .end local v6           #c:Landroid/database/Cursor;
     .end local v7           #remainSize:I
     :catchall_0
@@ -666,7 +689,7 @@
 
     throw v0
 
-    .line 446
+    .line 448
     .restart local v6       #c:Landroid/database/Cursor;
     .restart local v7       #remainSize:I
     :catchall_1
@@ -674,11 +697,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 447
+    .line 449
     :try_start_4
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 446
     :cond_2
     throw v0
     :try_end_4
@@ -690,25 +712,25 @@
     .parameter "stream"
 
     .prologue
-    .line 670
+    .line 672
     if-eqz p0, :cond_0
 
-    .line 672
+    .line 674
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 677
+    .line 679
     :cond_0
     :goto_0
     return-void
 
-    .line 673
+    .line 675
     :catch_0
     move-exception v0
 
-    .line 674
+    .line 676
     .local v0, e:Ljava/io/IOException;
     sget-object v1, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
@@ -734,20 +756,20 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 287
+    .line 289
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 288
+    .line 290
     .local v5, uriStr:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 289
+    .line 291
     .local v0, bitmap:Landroid/graphics/Bitmap;
     const/4 v1, 0x0
 
-    .line 290
+    .line 292
     .local v1, bufferedInput:Ljava/io/BufferedInputStream;
     const-string v7, "content"
 
@@ -757,7 +779,7 @@
 
     if-eqz v7, :cond_0
 
-    .line 291
+    .line 293
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
@@ -768,7 +790,7 @@
 
     move-result-object v4
 
-    .line 293
+    .line 295
     .local v4, f:Landroid/os/ParcelFileDescriptor;
     invoke-virtual {v4}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -778,16 +800,16 @@
 
     move-result-object v7
 
-    .line 309
+    .line 311
     .end local v4           #f:Landroid/os/ParcelFileDescriptor;
     :goto_0
     return-object v7
 
-    .line 296
+    .line 298
     :cond_0
     const/4 v3, 0x0
 
-    .line 297
+    .line 299
     .local v3, contentInput:Ljava/io/InputStream;
     new-instance v7, Ljava/net/URI;
 
@@ -797,7 +819,7 @@
 
     move-result-object v6
 
-    .line 298
+    .line 300
     .local v6, url:Ljava/net/URL;
     sget-object v7, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
@@ -821,24 +843,24 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 299
+    .line 301
     invoke-virtual {v6}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v2
 
-    .line 300
+    .line 302
     .local v2, conn:Ljava/net/URLConnection;
     invoke-virtual {v2}, Ljava/net/URLConnection;->connect()V
 
-    .line 301
+    .line 303
     invoke-virtual {v2}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v3
 
-    .line 302
+    .line 304
     if-eqz v3, :cond_1
 
-    .line 303
+    .line 305
     new-instance v1, Ljava/io/BufferedInputStream;
 
     .end local v1           #bufferedInput:Ljava/io/BufferedInputStream;
@@ -846,25 +868,25 @@
 
     invoke-direct {v1, v3, v7}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 306
+    .line 308
     .restart local v1       #bufferedInput:Ljava/io/BufferedInputStream;
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 307
+    .line 309
     invoke-static {v1, v10, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 308
+    .line 310
     invoke-virtual {v1}, Ljava/io/BufferedInputStream;->close()V
 
     move-object v7, v0
 
-    .line 309
+    .line 311
     goto :goto_0
 
-    .line 311
+    .line 313
     :cond_2
     new-instance v7, Ljava/io/FileNotFoundException;
 
@@ -886,26 +908,26 @@
     .end annotation
 
     .prologue
-    .line 453
+    .line 455
     if-eqz p0, :cond_4
 
-    .line 455
+    .line 457
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 456
+    .line 458
     .local v0, deleteStr:Ljava/lang/StringBuilder;
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 458
+    .line 460
     .local v3, operations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
     const/4 v2, 0x1
 
-    .line 459
+    .line 461
     .local v2, first:Z
     sget-object v6, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
@@ -933,7 +955,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
+    .line 462
     :cond_0
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
@@ -942,7 +964,7 @@
 
     if-eqz v6, :cond_7
 
-    .line 461
+    .line 463
     const-string v6, "file_size"
 
     invoke-interface {p0, v6}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -953,7 +975,7 @@
 
     move-result v4
 
-    .line 463
+    .line 465
     .local v4, size:I
     const-string v6, "content_uri"
 
@@ -969,7 +991,7 @@
 
     move-result-object v5
 
-    .line 465
+    .line 467
     .local v5, uri:Landroid/net/Uri;
     invoke-virtual {v5}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -989,7 +1011,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 468
+    .line 470
     :cond_1
     invoke-virtual {v5}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -1003,7 +1025,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 470
+    .line 472
     invoke-static {v5}, Landroid/content/ContentProviderOperation;->newDelete(Landroid/net/Uri;)Landroid/content/ContentProviderOperation$Builder;
 
     move-result-object v6
@@ -1014,7 +1036,7 @@
 
     invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 473
+    .line 475
     :cond_2
     if-ltz p3, :cond_3
 
@@ -1022,27 +1044,27 @@
 
     if-ge p2, p3, :cond_6
 
-    .line 475
+    .line 477
     :cond_3
     if-nez v2, :cond_5
 
-    .line 476
+    .line 478
     const-string v6, " OR "
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 480
+    .line 482
     :goto_1
     const-string v6, "_id"
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 481
+    .line 483
     const-string v6, "="
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 482
+    .line 484
     const-string v6, "_id"
 
     invoke-interface {p0, v6}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1055,7 +1077,7 @@
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 488
+    .line 490
     sget-object v6, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1082,7 +1104,7 @@
 
     goto/16 :goto_0
 
-    .line 497
+    .line 499
     .end local v0           #deleteStr:Ljava/lang/StringBuilder;
     .end local v2           #first:Z
     .end local v3           #operations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
@@ -1091,17 +1113,17 @@
     :catch_0
     move-exception v1
 
-    .line 499
+    .line 501
     .local v1, e:Landroid/content/OperationApplicationException;
     invoke-virtual {v1}, Landroid/content/OperationApplicationException;->printStackTrace()V
 
-    .line 502
+    .line 504
     .end local v1           #e:Landroid/content/OperationApplicationException;
     :cond_4
     :goto_2
     return-void
 
-    .line 478
+    .line 480
     .restart local v0       #deleteStr:Ljava/lang/StringBuilder;
     .restart local v2       #first:Z
     .restart local v3       #operations:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
@@ -1112,7 +1134,7 @@
 
     goto :goto_1
 
-    .line 485
+    .line 487
     :cond_6
     :try_start_1
     sget-object v6, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
@@ -1143,7 +1165,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 490
+    .line 492
     .end local v4           #size:I
     .end local v5           #uri:Landroid/net/Uri;
     :cond_7
@@ -1173,17 +1195,17 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
+    .line 493
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
     if-lez v6, :cond_8
 
-    .line 492
+    .line 494
     invoke-virtual {p1, v3}, Landroid/content/ContentProviderClient;->applyBatch(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;
 
-    .line 494
+    .line 496
     :cond_8
     sget-object v6, Lcom/htc/opensense/cache/Download;->DOWNLOAD_CONTENT_URI:Landroid/net/Uri;
 
@@ -1206,7 +1228,7 @@
     .parameter "uri"
 
     .prologue
-    .line 539
+    .line 541
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
@@ -1215,7 +1237,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 540
+    .line 542
     .local v0, file:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1223,7 +1245,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 541
+    .line 543
     sget-object v1, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1250,12 +1272,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
+    .line 544
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v1
 
-    .line 544
+    .line 546
     :goto_0
     return v1
 
@@ -1270,14 +1292,14 @@
     .parameter "url"
 
     .prologue
-    .line 319
+    .line 321
     sget-object v1, Lcom/htc/opensense/cache/CacheManager;->sPlacePattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 320
+    .line 322
     .local v0, matches:Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -1285,7 +1307,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 321
+    .line 323
     const/16 v1, 0x2e
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->lastIndexOf(I)I
@@ -1298,7 +1320,7 @@
 
     move-result-object v1
 
-    .line 323
+    .line 325
     :goto_0
     return-object v1
 
@@ -1306,6 +1328,37 @@
     const-string v1, "jpg"
 
     goto :goto_0
+.end method
+
+.method private getCallbackListWithLock(I)Ljava/util/HashMap;
+    .locals 2
+    .parameter "id"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lcom/htc/opensense/cache/DownloadCallback;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 886
+    iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->callbackMap:Ljava/util/HashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/HashMap;
+
+    return-object v0
 .end method
 
 .method private getInfo(I)Lcom/htc/opensense/cache/CacheManager$Info;
@@ -1317,21 +1370,21 @@
 
     const/4 v0, 0x2
 
-    .line 818
+    .line 820
     new-instance v8, Lcom/htc/opensense/cache/CacheManager$Info;
 
     invoke-direct {v8}, Lcom/htc/opensense/cache/CacheManager$Info;-><init>()V
 
-    .line 819
+    .line 821
     .local v8, info:Lcom/htc/opensense/cache/CacheManager$Info;
     iput v0, v8, Lcom/htc/opensense/cache/CacheManager$Info;->status:I
 
-    .line 820
+    .line 822
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 821
+    .line 823
     .local v9, query:Ljava/lang/StringBuilder;
     const-string v0, "url_hash"
 
@@ -1377,7 +1430,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 824
+    .line 826
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->cacheDir:Ljava/lang/String;
 
     const-string v1, "cache_to_provider"
@@ -1388,7 +1441,7 @@
 
     if-nez v0, :cond_4
 
-    .line 825
+    .line 827
     const-string v0, " OR "
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1417,11 +1470,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 831
+    .line 833
     :goto_0
     const/4 v6, 0x0
 
-    .line 833
+    .line 835
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
@@ -1462,17 +1515,17 @@
 
     move-result-object v6
 
-    .line 836
+    .line 838
     if-eqz v6, :cond_1
 
-    .line 838
+    .line 840
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 839
+    .line 841
     const-string v0, "status"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1485,7 +1538,7 @@
 
     iput v0, v8, Lcom/htc/opensense/cache/CacheManager$Info;->status:I
 
-    .line 842
+    .line 844
     const-string v0, "content_uri"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1496,7 +1549,7 @@
 
     move-result-object v10
 
-    .line 844
+    .line 846
     .local v10, uri:Ljava/lang/String;
     invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1504,14 +1557,14 @@
 
     if-nez v0, :cond_0
 
-    .line 845
+    .line 847
     invoke-static {v10}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, v8, Lcom/htc/opensense/cache/CacheManager$Info;->uri:Landroid/net/Uri;
 
-    .line 846
+    .line 848
     :cond_0
     const-string v0, "_id"
 
@@ -1525,14 +1578,14 @@
 
     iput-object v0, v8, Lcom/htc/opensense/cache/CacheManager$Info;->id:Ljava/lang/String;
 
-    .line 851
+    .line 853
     .end local v10           #uri:Ljava/lang/String;
     :cond_1
     iget v0, v8, Lcom/htc/opensense/cache/CacheManager$Info;->status:I
 
     if-ne v0, v11, :cond_2
 
-    .line 852
+    .line 854
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
     iget-object v1, v8, Lcom/htc/opensense/cache/CacheManager$Info;->uri:Landroid/net/Uri;
@@ -1543,12 +1596,12 @@
 
     if-nez v0, :cond_2
 
-    .line 853
+    .line 855
     iget-object v0, v8, Lcom/htc/opensense/cache/CacheManager$Info;->id:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/htc/opensense/cache/CacheManager;->deleteFromDb(Ljava/lang/String;)V
 
-    .line 854
+    .line 856
     const/4 v0, 0x2
 
     iput v0, v8, Lcom/htc/opensense/cache/CacheManager$Info;->status:I
@@ -1556,19 +1609,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 861
+    .line 863
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 862
-    :goto_1
+    .line 864
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 865
+    .line 867
     :cond_3
+    :goto_1
     return-object v8
 
-    .line 828
+    .line 830
     .end local v6           #c:Landroid/database/Cursor;
     :cond_4
     const-string v0, ")"
@@ -1577,33 +1630,36 @@
 
     goto :goto_0
 
-    .line 857
+    .line 859
     .restart local v6       #c:Landroid/database/Cursor;
     :catch_0
     move-exception v7
 
-    .line 859
+    .line 861
     .local v7, e:Landroid/os/RemoteException;
     :try_start_1
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 861
+    .line 863
     if-eqz v6, :cond_3
+
+    .line 864
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
+    .line 863
     .end local v7           #e:Landroid/os/RemoteException;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_5
 
-    .line 862
+    .line 864
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 861
     :cond_5
     throw v0
 .end method
@@ -1622,12 +1678,12 @@
     .end annotation
 
     .prologue
-    .line 590
+    .line 592
     iget-object v7, p0, Lcom/htc/opensense/cache/CacheManager;->cacheDir:Ljava/lang/String;
 
     invoke-direct {p0, v7}, Lcom/htc/opensense/cache/CacheManager;->checkShouldDeleteData(Ljava/lang/String;)V
 
-    .line 591
+    .line 593
     sget-object v7, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1660,7 +1716,7 @@
 
     invoke-static {v7, v8}, Lcom/htc/opensense/widget/SNLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 592
+    .line 594
     new-instance v7, Ljava/net/URI;
 
     invoke-direct {v7, p2}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
@@ -1669,11 +1725,11 @@
 
     move-result-object v3
 
-    .line 593
+    .line 595
     .local v3, imageUrl:Ljava/net/URL;
     const/4 v2, 0x0
 
-    .line 596
+    .line 598
     .local v2, fail_count:I
     :cond_0
     :try_start_0
@@ -1681,7 +1737,7 @@
 
     move-result-object v0
 
-    .line 598
+    .line 600
     .local v0, conn:Ljava/net/URLConnection;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1689,12 +1745,12 @@
 
     if-nez v7, :cond_1
 
-    .line 599
+    .line 601
     const-string v7, "Authorization"
 
     invoke-virtual {v0, v7, p1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 600
+    .line 602
     sget-object v7, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1717,37 +1773,37 @@
 
     invoke-static {v7, v8}, Lcom/htc/opensense/widget/SNLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 603
+    .line 605
     :cond_1
     const v7, 0xea60
 
     invoke-virtual {v0, v7}, Ljava/net/URLConnection;->setConnectTimeout(I)V
 
-    .line 605
+    .line 607
     const v7, 0xea60
 
     invoke-virtual {v0, v7}, Ljava/net/URLConnection;->setReadTimeout(I)V
 
-    .line 607
+    .line 609
     const/4 v7, 0x1
 
     invoke-virtual {v0, v7}, Ljava/net/URLConnection;->setUseCaches(Z)V
 
-    .line 609
+    .line 611
     invoke-virtual {v0}, Ljava/net/URLConnection;->connect()V
 
-    .line 610
+    .line 612
     invoke-virtual {v0}, Ljava/net/URLConnection;->getContentLength()I
 
     move-result v5
 
-    .line 611
+    .line 613
     .local v5, photoSize:I
     invoke-virtual {v0}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v4
 
-    .line 612
+    .line 614
     .local v4, is:Ljava/io/InputStream;
     if-eqz p3, :cond_2
 
@@ -1755,7 +1811,7 @@
 
     move-result-object v6
 
-    .line 614
+    .line 616
     .local v6, saveTo:Landroid/net/Uri;
     :goto_0
     new-instance v7, Lcom/htc/opensense/cache/CacheManager$FileInfo;
@@ -1764,7 +1820,7 @@
 
     return-object v7
 
-    .line 612
+    .line 614
     .end local v6           #saveTo:Landroid/net/Uri;
     :cond_2
     invoke-virtual {p0, v4, p2}, Lcom/htc/opensense/cache/CacheManager;->saveToRemote(Ljava/io/InputStream;Ljava/lang/String;)Landroid/net/Uri;
@@ -1776,31 +1832,31 @@
 
     goto :goto_0
 
-    .line 615
+    .line 617
     .end local v0           #conn:Ljava/net/URLConnection;
     .end local v4           #is:Ljava/io/InputStream;
     .end local v5           #photoSize:I
     :catch_0
     move-exception v1
 
-    .line 616
+    .line 618
     .local v1, e:Ljava/io/IOException;
     add-int/lit8 v2, v2, 0x1
 
-    .line 617
+    .line 619
     const/4 v7, 0x3
 
     if-le v2, v7, :cond_0
 
-    .line 618
+    .line 620
     throw v1
 
-    .line 620
+    .line 622
     .end local v1           #e:Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 621
+    .line 623
     .local v1, e:Landroid/os/RemoteException;
     throw v1
 .end method
@@ -1813,7 +1869,7 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 249
+    .line 251
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1842,10 +1898,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
+    .line 254
     const/4 v6, 0x0
 
-    .line 254
+    .line 256
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Lcom/htc/opensense/cache/Download;->RAWQUERY_URI:Landroid/net/Uri;
@@ -1886,16 +1942,16 @@
 
     move-result-object v6
 
-    .line 258
-    if-eqz v6, :cond_3
+    .line 260
+    if-eqz v6, :cond_1
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_1
 
-    .line 259
+    .line 261
     const/4 v0, 0x0
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1905,59 +1961,62 @@
 
     move-result v0
 
-    .line 264
+    .line 266
     if-eqz v6, :cond_0
 
-    .line 265
+    .line 267
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 268
+    .line 270
     :cond_0
     :goto_0
     return v0
 
-    .line 260
+    .line 266
+    :cond_1
+    if-eqz v6, :cond_2
+
+    .line 267
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    :goto_1
+    move v0, v8
+
+    .line 270
+    goto :goto_0
+
+    .line 262
     :catch_0
     move-exception v7
 
-    .line 262
+    .line 264
     .local v7, e:Landroid/os/RemoteException;
     :try_start_1
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 264
-    if-eqz v6, :cond_1
+    .line 266
+    if-eqz v6, :cond_2
 
-    .line 265
-    .end local v7           #e:Landroid/os/RemoteException;
-    :goto_1
+    .line 267
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    :cond_1
-    move v0, v8
+    goto :goto_1
 
-    .line 268
-    goto :goto_0
-
-    .line 264
+    .line 266
+    .end local v7           #e:Landroid/os/RemoteException;
     :catchall_0
     move-exception v0
 
-    if-eqz v6, :cond_2
+    if-eqz v6, :cond_3
 
-    .line 265
+    .line 267
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 264
-    :cond_2
-    throw v0
-
     :cond_3
-    if-eqz v6, :cond_1
-
-    goto :goto_1
+    throw v0
 .end method
 
 .method private static geteFileNameFromUrl(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1966,7 +2025,7 @@
     .parameter "url"
 
     .prologue
-    .line 315
+    .line 317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2016,12 +2075,12 @@
     .parameter "dir"
 
     .prologue
-    .line 188
+    .line 190
     sget-object v2, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 189
+    .line 191
     :try_start_0
     sget-object v1, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
@@ -2031,29 +2090,29 @@
 
     check-cast v0, Lcom/htc/opensense/cache/CacheManager;
 
-    .line 190
+    .line 192
     .local v0, manager:Lcom/htc/opensense/cache/CacheManager;
     if-nez v0, :cond_0
 
-    .line 191
+    .line 193
     new-instance v0, Lcom/htc/opensense/cache/CacheManager;
 
     .end local v0           #manager:Lcom/htc/opensense/cache/CacheManager;
     invoke-direct {v0, p1, p0}, Lcom/htc/opensense/cache/CacheManager;-><init>(Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 192
+    .line 194
     .restart local v0       #manager:Lcom/htc/opensense/cache/CacheManager;
     sget-object v1, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
+    .line 196
     :cond_0
     monitor-exit v2
 
     return-object v0
 
-    .line 195
+    .line 197
     .end local v0           #manager:Lcom/htc/opensense/cache/CacheManager;
     :catchall_0
     move-exception v1
@@ -2080,12 +2139,12 @@
 
     const/4 v2, 0x0
 
-    .line 563
+    .line 565
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 564
+    .line 566
     .local v8, uriStr:Ljava/lang/String;
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
@@ -2113,14 +2172,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 565
+    .line 567
     const-string v0, "content"
 
     invoke-virtual {v8, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     move-object v0, p0
 
@@ -2132,24 +2191,24 @@
 
     move-object v5, v2
 
-    .line 566
+    .line 568
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentProviderClient;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 567
-    .local v6, c:Landroid/database/Cursor;
-    if-eqz v6, :cond_2
-
     .line 569
+    .local v6, c:Landroid/database/Cursor;
+    if-eqz v6, :cond_1
+
+    .line 571
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 570
+    .line 572
     const/4 v0, 0x0
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2162,9 +2221,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 571
+    .line 573
     const/4 v0, 0x1
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2177,16 +2236,26 @@
 
     move-result v0
 
-    .line 575
+    .line 577
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 583
+    .line 585
     .end local v6           #c:Landroid/database/Cursor;
     :goto_0
     return v0
 
-    .line 575
+    .line 577
     .restart local v6       #c:Landroid/database/Cursor;
+    :cond_0
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_1
+    move v0, v9
+
+    .line 585
+    goto :goto_0
+
+    .line 577
     :catchall_0
     move-exception v0
 
@@ -2194,9 +2263,9 @@
 
     throw v0
 
-    .line 580
+    .line 582
     .end local v6           #c:Landroid/database/Cursor;
-    :cond_0
+    :cond_2
     new-instance v7, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
@@ -2205,24 +2274,12 @@
 
     invoke-direct {v7, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 581
+    .line 583
     .local v7, file:Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->exists()Z
 
     move-result v0
 
-    goto :goto_0
-
-    .line 575
-    .end local v7           #file:Ljava/io/File;
-    .restart local v6       #c:Landroid/database/Cursor;
-    :cond_1
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    move v0, v9
-
-    .line 583
     goto :goto_0
 .end method
 
@@ -2230,12 +2287,12 @@
     .locals 5
 
     .prologue
-    .line 1104
+    .line 1130
     sget-object v3, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 1105
+    .line 1131
     :try_start_0
     sget-object v2, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
@@ -2247,7 +2304,7 @@
 
     move-result-object v0
 
-    .line 1106
+    .line 1132
     .local v0, itrs:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -2256,7 +2313,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1107
+    .line 1133
     sget-object v2, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -2269,16 +2326,16 @@
 
     check-cast v1, Lcom/htc/opensense/cache/CacheManager;
 
-    .line 1108
+    .line 1134
     .local v1, manager:Lcom/htc/opensense/cache/CacheManager;
     invoke-static {v1}, Lcom/htc/opensense/cache/CacheManager;->releaseWithLock(Lcom/htc/opensense/cache/CacheManager;)V
 
-    .line 1109
+    .line 1135
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 1111
+    .line 1137
     .end local v1           #manager:Lcom/htc/opensense/cache/CacheManager;
     :catchall_0
     move-exception v2
@@ -2295,7 +2352,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1113
+    .line 1139
     return-void
 .end method
 
@@ -2304,12 +2361,12 @@
     .parameter "manager"
 
     .prologue
-    .line 1078
+    .line 1104
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->sPoolUrls:Ljava/util/concurrent/ConcurrentMap;
 
     monitor-enter v1
 
-    .line 1079
+    .line 1105
     :try_start_0
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->needRelease:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -2317,7 +2374,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 1080
+    .line 1106
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->sPoolUrls:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v0}, Ljava/util/concurrent/ConcurrentMap;->size()I
@@ -2326,40 +2383,40 @@
 
     if-nez v0, :cond_0
 
-    .line 1081
+    .line 1107
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
-    .line 1082
+    .line 1108
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->needRelease:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 1084
+    .line 1110
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1086
+    .line 1112
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->callbackMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 1087
+    .line 1113
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->mExecutorHelper:Lcom/htc/opensense/cache/ThreadExecutorHelper;
 
     invoke-virtual {v0}, Lcom/htc/opensense/cache/ThreadExecutorHelper;->shutDown()V
 
-    .line 1089
+    .line 1115
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
-    .line 1091
+    .line 1117
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2384,10 +2441,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1092
+    .line 1118
     return-void
 
-    .line 1084
+    .line 1110
     :catchall_0
     move-exception v0
 
@@ -2399,21 +2456,22 @@
     throw v0
 .end method
 
-.method private removeCallbackListWithLock(I)Ljava/util/List;
+.method private removeCallbackListWithLock(I)Ljava/util/HashMap;
     .locals 2
     .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Ljava/util/List",
+            "Ljava/util/HashMap",
             "<",
+            "Ljava/lang/Integer;",
             "Lcom/htc/opensense/cache/DownloadCallback;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 880
+    .line 882
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->callbackMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2424,7 +2482,7 @@
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    check-cast v0, Ljava/util/HashMap;
 
     return-object v0
 .end method
@@ -2440,20 +2498,20 @@
     .end annotation
 
     .prologue
-    .line 702
+    .line 704
     iget-object v6, p0, Lcom/htc/opensense/cache/CacheManager;->cacheDir:Ljava/lang/String;
 
     invoke-static {v6, p2}, Lcom/htc/opensense/cache/CacheManager;->geteFileNameFromUrl(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 703
+    .line 705
     .local v3, fileName:Ljava/lang/String;
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 704
+    .line 706
     .local v2, file:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -2461,14 +2519,14 @@
 
     if-nez v6, :cond_0
 
-    .line 705
+    .line 707
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 706
+    .line 708
     new-instance v6, Ljava/io/IOException;
 
     const-string v7, "Cannot create file"
@@ -2477,7 +2535,7 @@
 
     throw v6
 
-    .line 711
+    .line 713
     :cond_0
     :try_start_0
     new-instance v0, Ljava/io/BufferedInputStream;
@@ -2486,7 +2544,7 @@
 
     invoke-direct {v0, p1, v6}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 712
+    .line 714
     .local v0, bis:Ljava/io/BufferedInputStream;
     new-instance v4, Ljava/io/BufferedOutputStream;
 
@@ -2496,17 +2554,17 @@
 
     invoke-direct {v4, v6}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 715
+    .line 717
     .local v4, out:Ljava/io/BufferedOutputStream;
     const/16 v6, 0x800
 
     new-array v1, v6, [B
 
-    .line 717
+    .line 719
     .local v1, buf:[B
     const/4 v5, -0x1
 
-    .line 719
+    .line 721
     .local v5, read_size:I
     :goto_0
     invoke-virtual {v0, v1}, Ljava/io/BufferedInputStream;->read([B)I
@@ -2515,7 +2573,7 @@
 
     if-ltz v5, :cond_2
 
-    .line 720
+    .line 722
     const/4 v6, 0x0
 
     invoke-virtual {v4, v1, v6, v5}, Ljava/io/BufferedOutputStream;->write([BII)V
@@ -2524,7 +2582,7 @@
 
     goto :goto_0
 
-    .line 728
+    .line 730
     .end local v0           #bis:Ljava/io/BufferedInputStream;
     .end local v1           #buf:[B
     .end local v4           #out:Ljava/io/BufferedOutputStream;
@@ -2534,14 +2592,13 @@
 
     if-eqz p1, :cond_1
 
-    .line 729
+    .line 731
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
-    .line 728
     :cond_1
     throw v6
 
-    .line 723
+    .line 725
     .restart local v0       #bis:Ljava/io/BufferedInputStream;
     .restart local v1       #buf:[B
     .restart local v4       #out:Ljava/io/BufferedOutputStream;
@@ -2550,26 +2607,25 @@
     :try_start_1
     invoke-virtual {v4}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 724
+    .line 726
     invoke-virtual {v4}, Ljava/io/BufferedOutputStream;->close()V
 
-    .line 725
+    .line 727
     invoke-virtual {v0}, Ljava/io/BufferedInputStream;->close()V
 
-    .line 726
+    .line 728
     invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v6
 
-    .line 728
+    .line 730
     if-eqz p1, :cond_3
 
-    .line 729
+    .line 731
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
-    .line 726
     :cond_3
     return-object v6
 .end method
@@ -2594,7 +2650,7 @@
 
     const/4 v7, 0x1
 
-    .line 509
+    .line 511
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
     sget-object v1, Lcom/htc/opensense/cache/Download;->DOWNLOAD_CONTENT_URI:Landroid/net/Uri;
@@ -2645,7 +2701,7 @@
 
     move-result-object v6
 
-    .line 517
+    .line 519
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
@@ -2658,26 +2714,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 519
+    .line 521
     if-eqz v6, :cond_0
 
-    .line 520
+    .line 522
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 522
+    .line 524
     :cond_0
     return-void
 
-    .line 519
+    .line 521
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_1
 
-    .line 520
+    .line 522
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 519
     :cond_1
     throw v0
 .end method
@@ -2687,14 +2742,14 @@
     .parameter "id"
 
     .prologue
-    .line 776
+    .line 778
     sget-object v2, Lcom/htc/opensense/cache/Download;->DOWNLOAD_CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v2, p1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 779
+    .line 781
     .local v0, downloadUri:Landroid/net/Uri;
     :try_start_0
     iget-object v2, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
@@ -2707,15 +2762,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 784
+    .line 786
     :goto_0
     return-void
 
-    .line 780
+    .line 782
     :catch_0
     move-exception v1
 
-    .line 782
+    .line 784
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2729,7 +2784,7 @@
     .parameter "data"
 
     .prologue
-    .line 349
+    .line 351
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/htc/opensense/cache/CacheManager;->downloadPhotoByUrl(Ljava/lang/String;Ljava/lang/String;Lcom/htc/opensense/cache/DownloadCallback;Landroid/os/Bundle;)I
@@ -2747,23 +2802,23 @@
     .parameter "data"
 
     .prologue
-    .line 361
+    .line 363
     if-nez p4, :cond_0
 
-    .line 362
+    .line 364
     new-instance p4, Landroid/os/Bundle;
 
     .end local p4
     invoke-direct {p4}, Landroid/os/Bundle;-><init>()V
 
-    .line 364
+    .line 366
     .restart local p4
     :cond_0
     iget-object v8, p0, Lcom/htc/opensense/cache/CacheManager;->mExecutorHelper:Lcom/htc/opensense/cache/ThreadExecutorHelper;
 
     monitor-enter v8
 
-    .line 365
+    .line 367
     :try_start_0
     const-string v1, "expedited"
 
@@ -2779,19 +2834,19 @@
 
     move-result v7
 
-    .line 368
+    .line 370
     .local v7, expedited:Z
     :goto_0
     if-eqz v7, :cond_2
 
-    .line 369
+    .line 371
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->minId:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndDecrement()I
 
     move-result v2
 
-    .line 373
+    .line 375
     .local v2, taskId:I
     :goto_1
     new-instance v0, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
@@ -2808,7 +2863,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;-><init>(Lcom/htc/opensense/cache/CacheManager;ILjava/lang/String;Ljava/lang/String;Lcom/htc/opensense/cache/DownloadCallback;Landroid/os/Bundle;)V
 
-    .line 375
+    .line 377
     .local v0, fTask:Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->mExecutorHelper:Lcom/htc/opensense/cache/ThreadExecutorHelper;
 
@@ -2818,12 +2873,12 @@
 
     if-nez v1, :cond_3
 
-    .line 376
+    .line 378
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->mExecutorHelper:Lcom/htc/opensense/cache/ThreadExecutorHelper;
 
     invoke-virtual {v1, v0}, Lcom/htc/opensense/cache/ThreadExecutorHelper;->execute(Ljava/lang/Runnable;)V
 
-    .line 381
+    .line 383
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->taskPools:Ljava/util/concurrent/ConcurrentMap;
 
     iget v3, v0, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;->taskId:I
@@ -2834,14 +2889,14 @@
 
     invoke-interface {v1, v3, v0}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 383
+    .line 385
     iget v1, v0, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;->taskId:I
 
     monitor-exit v8
 
     return v1
 
-    .line 365
+    .line 367
     .end local v0           #fTask:Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
     .end local v2           #taskId:I
     .end local v7           #expedited:Z
@@ -2850,7 +2905,7 @@
 
     goto :goto_0
 
-    .line 371
+    .line 373
     .restart local v7       #expedited:Z
     :cond_2
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -2862,7 +2917,7 @@
     .restart local v2       #taskId:I
     goto :goto_1
 
-    .line 378
+    .line 380
     .restart local v0       #fTask:Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
     :cond_3
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -2873,7 +2928,7 @@
 
     throw v1
 
-    .line 384
+    .line 386
     .end local v0           #fTask:Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
     .end local v2           #taskId:I
     .end local v7           #expedited:Z
@@ -2892,7 +2947,7 @@
     .parameter "url"
 
     .prologue
-    .line 337
+    .line 339
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -2908,7 +2963,7 @@
     .locals 1
 
     .prologue
-    .line 203
+    .line 205
     iget v0, p0, Lcom/htc/opensense/cache/CacheManager;->maxSizeAllocated:I
 
     return v0
@@ -2925,12 +2980,12 @@
     .end annotation
 
     .prologue
-    .line 761
+    .line 763
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 762
+    .line 764
     .local v1, values:Landroid/content/ContentValues;
     const-string v2, "url_hash"
 
@@ -2940,12 +2995,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 763
+    .line 765
     const-string v2, "url"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 764
+    .line 766
     const-string v2, "status"
 
     const/4 v3, 0x0
@@ -2956,14 +3011,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 765
+    .line 767
     const-string v2, "store_folder"
 
     iget-object v3, p0, Lcom/htc/opensense/cache/CacheManager;->cacheDir:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 766
+    .line 768
     iget-object v2, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
     sget-object v3, Lcom/htc/opensense/cache/Download;->DOWNLOAD_CONTENT_URI:Landroid/net/Uri;
@@ -2972,7 +3027,7 @@
 
     move-result-object v0
 
-    .line 768
+    .line 770
     .local v0, result:Landroid/net/Uri;
     invoke-virtual {v0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
@@ -2985,29 +3040,29 @@
     .locals 3
 
     .prologue
-    .line 1071
+    .line 1097
     sget-object v1, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 1072
+    .line 1098
     :try_start_0
     invoke-static {p0}, Lcom/htc/opensense/cache/CacheManager;->releaseWithLock(Lcom/htc/opensense/cache/CacheManager;)V
 
-    .line 1073
+    .line 1099
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->cacheManagerMap:Ljava/util/HashMap;
 
     iget-object v2, p0, Lcom/htc/opensense/cache/CacheManager;->cacheDir:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1074
+    .line 1100
     monitor-exit v1
 
-    .line 1075
+    .line 1101
     return-void
 
-    .line 1074
+    .line 1100
     :catchall_0
     move-exception v0
 
@@ -3030,10 +3085,10 @@
     .end annotation
 
     .prologue
-    .line 641
+    .line 643
     const/4 v4, 0x0
 
-    .line 642
+    .line 644
     .local v4, out:Ljava/io/BufferedOutputStream;
     sget-object v7, Lcom/htc/opensense/cache/Download;->CACHE_IMG_URI:Landroid/net/Uri;
 
@@ -3071,7 +3126,7 @@
 
     move-result-object v3
 
-    .line 644
+    .line 646
     .local v3, newUri:Landroid/net/Uri;
     sget-object v7, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
@@ -3095,7 +3150,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
+    .line 648
     :try_start_0
     iget-object v7, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
 
@@ -3105,7 +3160,7 @@
 
     move-result-object v2
 
-    .line 647
+    .line 649
     .local v2, f:Landroid/os/ParcelFileDescriptor;
     new-instance v5, Ljava/io/BufferedOutputStream;
 
@@ -3121,7 +3176,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 649
+    .line 651
     .end local v4           #out:Ljava/io/BufferedOutputStream;
     .local v5, out:Ljava/io/BufferedOutputStream;
     :try_start_1
@@ -3131,17 +3186,17 @@
 
     invoke-direct {v0, p1, v7}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 650
+    .line 652
     .local v0, bis:Ljava/io/BufferedInputStream;
     const/16 v7, 0x800
 
     new-array v1, v7, [B
 
-    .line 652
+    .line 654
     .local v1, buf:[B
     const/4 v6, -0x1
 
-    .line 654
+    .line 656
     .local v6, read_size:I
     :goto_0
     invoke-virtual {v0, v1}, Ljava/io/BufferedInputStream;->read([B)I
@@ -3150,7 +3205,7 @@
 
     if-ltz v6, :cond_0
 
-    .line 655
+    .line 657
     sget-object v7, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3173,7 +3228,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 656
+    .line 658
     const/4 v7, 0x0
 
     invoke-virtual {v5, v1, v7, v6}, Ljava/io/BufferedOutputStream;->write([BII)V
@@ -3182,7 +3237,7 @@
 
     goto :goto_0
 
-    .line 664
+    .line 666
     .end local v0           #bis:Ljava/io/BufferedInputStream;
     .end local v1           #buf:[B
     .end local v6           #read_size:I
@@ -3199,7 +3254,7 @@
 
     throw v7
 
-    .line 659
+    .line 661
     .end local v4           #out:Ljava/io/BufferedOutputStream;
     .restart local v0       #bis:Ljava/io/BufferedInputStream;
     .restart local v1       #buf:[B
@@ -3210,21 +3265,19 @@
     :try_start_2
     invoke-virtual {v5}, Ljava/io/BufferedOutputStream;->flush()V
 
-    .line 660
+    .line 662
     invoke-virtual {v5}, Ljava/io/BufferedOutputStream;->close()V
 
-    .line 661
+    .line 663
     invoke-virtual {v0}, Ljava/io/BufferedInputStream;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 664
+    .line 666
     invoke-static {v5}, Lcom/htc/opensense/cache/CacheManager;->closeStream(Ljava/io/Closeable;)V
 
-    .line 662
     return-object v3
 
-    .line 664
     .end local v0           #bis:Ljava/io/BufferedInputStream;
     .end local v1           #buf:[B
     .end local v2           #f:Landroid/os/ParcelFileDescriptor;
@@ -3242,24 +3295,24 @@
     .parameter "maxSize"
 
     .prologue
-    .line 213
+    .line 215
     iput p1, p0, Lcom/htc/opensense/cache/CacheManager;->maxSizeAllocated:I
 
-    .line 214
+    .line 216
     iget v0, p0, Lcom/htc/opensense/cache/CacheManager;->maxSizeAllocated:I
 
     const v1, 0x1e8480
 
     if-gt v0, v1, :cond_0
 
-    .line 215
+    .line 217
     sget-object v0, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     const-string v1, "The max allocated size is less than 2000000, cache mechanism may not work"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
+    .line 220
     :cond_0
     return-void
 .end method
@@ -3269,7 +3322,7 @@
     .parameter "taskId"
 
     .prologue
-    .line 410
+    .line 412
     iget-object v1, p0, Lcom/htc/opensense/cache/CacheManager;->taskPools:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3282,16 +3335,16 @@
 
     check-cast v0, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
 
-    .line 411
+    .line 413
     .local v0, task:Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
     if-eqz v0, :cond_0
 
-    .line 412
+    .line 414
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;->cancel(Z)Z
 
-    .line 414
+    .line 416
     :cond_0
     return-void
 .end method
@@ -3302,22 +3355,22 @@
     .parameter "update"
 
     .prologue
-    .line 791
+    .line 793
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 792
+    .line 794
     .local v4, values:Landroid/content/ContentValues;
     array-length v3, p2
 
-    .line 793
+    .line 795
     .local v3, size:I
     rem-int/lit8 v5, v3, 0x2
 
     if-eqz v5, :cond_0
 
-    .line 794
+    .line 796
     sget-object v5, Lcom/htc/opensense/cache/CacheManager;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -3340,14 +3393,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
+    .line 797
     new-instance v5, Ljava/lang/RuntimeException;
 
     invoke-direct {v5}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v5
 
-    .line 797
+    .line 799
     :cond_0
     const/4 v2, 0x0
 
@@ -3355,7 +3408,7 @@
     :goto_0
     if-ge v2, v3, :cond_1
 
-    .line 798
+    .line 800
     aget-object v5, p2, v2
 
     add-int/lit8 v6, v2, 0x1
@@ -3364,12 +3417,12 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 797
+    .line 799
     add-int/lit8 v2, v2, 0x2
 
     goto :goto_0
 
-    .line 800
+    .line 802
     :cond_1
     sget-object v5, Lcom/htc/opensense/cache/Download;->DOWNLOAD_CONTENT_URI:Landroid/net/Uri;
 
@@ -3377,7 +3430,7 @@
 
     move-result-object v0
 
-    .line 803
+    .line 805
     .local v0, downloadUri:Landroid/net/Uri;
     :try_start_0
     iget-object v5, p0, Lcom/htc/opensense/cache/CacheManager;->providerClient:Landroid/content/ContentProviderClient;
@@ -3390,15 +3443,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 808
+    .line 810
     :goto_1
     return-void
 
-    .line 804
+    .line 806
     :catch_0
     move-exception v1
 
-    .line 806
+    .line 808
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 

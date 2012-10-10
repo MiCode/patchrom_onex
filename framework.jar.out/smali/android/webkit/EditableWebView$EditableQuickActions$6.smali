@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontsize(Landroid/content/Context;)V
+    value = Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontStyle(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,10 +27,10 @@
     .parameter
 
     .prologue
-    .line 2201
+    .line 2385
     iput-object p1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -38,124 +38,86 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+    .locals 2
     .parameter "dialog"
     .parameter "which"
 
     .prologue
-    const/4 v2, 0x1
+    .line 2388
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 2204
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    .line 2389
+    packed-switch p2, :pswitch_data_0
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style_fontsize:Lcom/htc/dialog/HtcAlertDialog;
+    .line 2405
+    :goto_0
+    return-void
 
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->dismiss()V
-
-    .line 2205
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
-
-    iput-boolean v2, v0, Landroid/webkit/EditableWebView;->m_bRemoveSelectRangeDuringUpdateContent:Z
-
-    .line 2207
+    .line 2391
+    :pswitch_0
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v1, v1, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
+    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4300(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/webkit/EditableWebView;->getFontSize()I
+    move-result-object v1
 
-    move-result v1
-
-    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getFontSizeIdx(I)I
-    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4100(Landroid/webkit/EditableWebView$EditableQuickActions;I)I
-
-    move-result v0
-
-    if-ne p2, v0, :cond_0
-
-    .line 2208
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
-
-    invoke-virtual {v0}, Landroid/webkit/EditableWebView;->getSelectionMethod()Landroid/webkit/WebViewSelectionMethod;
-
-    move-result-object v0
-
-    sget-object v1, Landroid/webkit/WebViewSelectionMethod$SelectionMode;->EXTENDABLE:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
-
-    .line 2209
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
-
-    invoke-virtual {v0, v2}, Landroid/webkit/EditableWebView;->onEndSelect(Z)V
-
-    .line 2233
-    :goto_0
-    return-void
-
-    .line 2212
-    :cond_0
-    packed-switch p2, :pswitch_data_0
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontsize(Landroid/content/Context;)V
+    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4600(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 2214
-    :pswitch_0
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
-
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
-
-    const/4 v1, 0x6
-
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
-
-    goto :goto_0
-
-    .line 2217
+    .line 2394
     :pswitch_1
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    const/4 v1, 0x5
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
+    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4300(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
+    move-result-object v1
+
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogFontcolor(Landroid/content/Context;)V
+    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4700(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 2220
+    .line 2397
     :pswitch_2
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    const/4 v1, 0x4
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
+    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4300(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
+    move-result-object v1
+
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogSettings(Landroid/content/Context;)V
+    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4800(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 2223
+    .line 2400
     :pswitch_3
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    iget-object v1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$6;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    const/4 v1, 0x3
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->getDialogFontStyleContext()Landroid/content/Context;
+    invoke-static {v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4300(Landroid/webkit/EditableWebView$EditableQuickActions;)Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Landroid/webkit/EditableWebView;->SetFontSize(I)V
+    move-result-object v1
+
+    #calls: Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogAlignment(Landroid/content/Context;)V
+    invoke-static {v0, v1}, Landroid/webkit/EditableWebView$EditableQuickActions;->access$4900(Landroid/webkit/EditableWebView$EditableQuickActions;Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 2212
+    .line 2389
     nop
 
     :pswitch_data_0

@@ -34,6 +34,27 @@
 
 
 # virtual methods
+.method public fetchCurrentBrightnessValue()I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 28
+    invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapIPowerManager;->getIPowerManagerService()Landroid/os/IPowerManager;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/os/IPowerManager;->fetchCurrentBrightnessValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public setBacklightBrightness(I)V
     .locals 1
     .parameter "brightness"

@@ -24,13 +24,13 @@
     .parameter "display"
 
     .prologue
-    .line 68
+    .line 71
     invoke-direct {p0}, Landroid/media/IRemoteControlDisplay$Stub;-><init>()V
 
-    .line 69
+    .line 72
     iput-object p1, p0, Lcom/htc/lockscreen/music/MusicRemoteCtrl$MyRemoteControlDisplay;->mWrapper:Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;
 
-    .line 70
+    .line 73
     return-void
 .end method
 
@@ -43,12 +43,12 @@
     .parameter "bitmap"
 
     .prologue
-    .line 108
+    .line 111
     iget-object v0, p0, Lcom/htc/lockscreen/music/MusicRemoteCtrl$MyRemoteControlDisplay;->mWrapper:Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;->setAllMetadata(ILandroid/os/Bundle;Landroid/graphics/Bitmap;)V
 
-    .line 109
+    .line 112
     return-void
 .end method
 
@@ -58,12 +58,12 @@
     .parameter "bitmap"
 
     .prologue
-    .line 100
+    .line 103
     iget-object v0, p0, Lcom/htc/lockscreen/music/MusicRemoteCtrl$MyRemoteControlDisplay;->mWrapper:Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;->setArtwork(ILandroid/graphics/Bitmap;)V
 
-    .line 101
+    .line 104
     return-void
 .end method
 
@@ -79,12 +79,12 @@
     .end annotation
 
     .prologue
-    .line 117
+    .line 120
     iget-object v0, p0, Lcom/htc/lockscreen/music/MusicRemoteCtrl$MyRemoteControlDisplay;->mWrapper:Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;->setCurrentClientId(ILandroid/app/PendingIntent;Z)V
 
-    .line 118
+    .line 121
     return-void
 .end method
 
@@ -94,12 +94,12 @@
     .parameter "metadata"
 
     .prologue
-    .line 84
+    .line 87
     iget-object v0, p0, Lcom/htc/lockscreen/music/MusicRemoteCtrl$MyRemoteControlDisplay;->mWrapper:Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;->setMetadata(ILandroid/os/Bundle;)V
 
-    .line 85
+    .line 88
     return-void
 .end method
 
@@ -110,12 +110,12 @@
     .parameter "stateChangeTimeMs"
 
     .prologue
-    .line 76
+    .line 79
     iget-object v0, p0, Lcom/htc/lockscreen/music/MusicRemoteCtrl$MyRemoteControlDisplay;->mWrapper:Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;->setPlaybackState(IIJ)V
 
-    .line 77
+    .line 80
     return-void
 .end method
 
@@ -125,11 +125,11 @@
     .parameter "flags"
 
     .prologue
-    .line 92
+    .line 95
     iget-object v0, p0, Lcom/htc/lockscreen/music/MusicRemoteCtrl$MyRemoteControlDisplay;->mWrapper:Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/lockscreen/music/MusicRemoteCtrl$RemoteControlDisplay;->setTransportControlFlags(II)V
 
-    .line 93
+    .line 96
     return-void
 .end method

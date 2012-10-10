@@ -281,20 +281,20 @@
 
     iput v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mUnknownAlbumId:I
 
-    .line 491
+    .line 493
     new-instance v0, Lcom/htc/music/carmode/CarGliderAdapter$1;
 
     invoke-direct {v0, p0}, Lcom/htc/music/carmode/CarGliderAdapter$1;-><init>(Lcom/htc/music/carmode/CarGliderAdapter;)V
 
     iput-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mImgDecodeListener:Lcom/htc/music/util/AsyncImageDecoder$IImageDecodeListener;
 
-    .line 571
+    .line 573
     iput v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mCurrentAlbumId:I
 
-    .line 595
+    .line 597
     iput v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mCurrentAlbumArtId:I
 
-    .line 754
+    .line 756
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mNormalScale:Z
@@ -478,19 +478,19 @@
 
     const/4 v3, 0x1
 
-    .line 380
+    .line 382
     monitor-enter p0
 
     const/4 v10, 0x0
 
-    .line 381
+    .line 383
     .local v10, bmp:Lcom/htc/sunny2/SBitmap;
     const/4 v7, 0x0
 
     .local v7, addToDecoder:Z
     const/4 v8, 0x0
 
-    .line 382
+    .line 384
     .local v8, bHasCached:Z
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
@@ -501,7 +501,7 @@
 
     move v9, v8
 
-    .line 424
+    .line 426
     .end local v8           #bHasCached:Z
     .local v9, bHasCached:I
     :goto_0
@@ -509,7 +509,7 @@
 
     return v9
 
-    .line 384
+    .line 386
     .end local v9           #bHasCached:I
     .restart local v8       #bHasCached:Z
     :cond_0
@@ -529,11 +529,11 @@
     :cond_1
     move v9, v8
 
-    .line 385
+    .line 387
     .restart local v9       #bHasCached:I
     goto :goto_0
 
-    .line 388
+    .line 390
     .end local v9           #bHasCached:I
     :cond_2
     iget-object v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
@@ -552,7 +552,7 @@
 
     move-object v10, v0
 
-    .line 390
+    .line 392
     if-eqz v10, :cond_3
 
     invoke-virtual {v10}, Lcom/htc/sunny2/SBitmap;->isRecycled()Z
@@ -564,11 +564,11 @@
     :cond_3
     move v7, v3
 
-    .line 391
+    .line 393
     :goto_1
     if-nez v7, :cond_4
 
-    .line 393
+    .line 395
     iget-object v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -581,36 +581,36 @@
 
     check-cast v12, Ljava/lang/Integer;
 
-    .line 394
+    .line 396
     .local v12, oldAlbumId:Ljava/lang/Integer;
     if-nez v12, :cond_7
 
-    .line 395
+    .line 397
     const/4 v7, 0x1
 
-    .line 403
+    .line 405
     .end local v12           #oldAlbumId:Ljava/lang/Integer;
     :cond_4
     :goto_2
     if-eqz v7, :cond_9
 
-    .line 404
+    .line 406
     iget-boolean v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mIsPluginMode:Z
 
     if-ne v1, v3, :cond_8
 
-    .line 405
+    .line 407
     iget-object v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMusicContext:Lcom/htc/music/carmode/CarNowPlayingActivity;
 
     iget-object v13, v1, Lcom/htc/music/carmode/CarNowPlayingActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 406
+    .line 408
     .local v13, service:Lcom/htc/music/IMediaPlaybackService;
     if-eqz v13, :cond_5
 
-    .line 408
+    .line 410
     :try_start_2
     iget-object v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
@@ -646,7 +646,7 @@
     :goto_3
     move v9, v8
 
-    .line 424
+    .line 426
     .restart local v9       #bHasCached:I
     goto :goto_0
 
@@ -654,10 +654,10 @@
     :cond_6
     move v7, v2
 
-    .line 390
+    .line 392
     goto :goto_1
 
-    .line 396
+    .line 398
     .restart local v12       #oldAlbumId:Ljava/lang/Integer;
     :cond_7
     :try_start_3
@@ -673,13 +673,13 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 397
+    .line 399
     invoke-virtual {v10}, Lcom/htc/sunny2/SBitmap;->recycle()V
 
-    .line 398
+    .line 400
     const/4 v7, 0x1
 
-    .line 399
+    .line 401
     iget-object v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -692,7 +692,7 @@
 
     goto :goto_2
 
-    .line 380
+    .line 382
     .end local v12           #oldAlbumId:Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -701,19 +701,19 @@
 
     throw v1
 
-    .line 409
+    .line 411
     .restart local v13       #service:Lcom/htc/music/IMediaPlaybackService;
     :catch_0
     move-exception v11
 
-    .line 410
+    .line 412
     .local v11, e:Landroid/os/RemoteException;
     :try_start_4
     invoke-virtual {v11}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 414
+    .line 416
     .end local v11           #e:Landroid/os/RemoteException;
     .end local v13           #service:Lcom/htc/music/IMediaPlaybackService;
     :cond_8
@@ -721,7 +721,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 415
+    .line 417
     iget v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mUnknownAlbumId:I
 
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -732,7 +732,7 @@
 
     if-eq v1, v2, :cond_5
 
-    .line 416
+    .line 418
     iget-object v1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -775,7 +775,7 @@
 
     goto :goto_3
 
-    .line 421
+    .line 423
     :cond_9
     const/4 v8, 0x1
 
@@ -786,7 +786,7 @@
     .locals 5
 
     .prologue
-    .line 428
+    .line 430
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mTransparentBitmap:Lcom/htc/sunny2/SBitmap;
 
     if-eqz v2, :cond_0
@@ -803,7 +803,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 429
+    .line 431
     :cond_0
     const/4 v2, 0x0
 
@@ -817,7 +817,7 @@
 
     iput-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mTransparentBitmap:Lcom/htc/sunny2/SBitmap;
 
-    .line 432
+    .line 434
     :cond_1
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
 
@@ -831,29 +831,29 @@
 
     if-nez v2, :cond_3
 
-    .line 448
+    .line 450
     :cond_2
     :goto_0
     return-void
 
-    .line 436
+    .line 438
     :cond_3
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 437
+    .line 439
     .local v0, bmpOptions:Landroid/graphics/BitmapFactory$Options;
     sget-object v2, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     iput-object v2, v0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 438
+    .line 440
     const/4 v2, 0x1
 
     iput-boolean v2, v0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 439
+    .line 441
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMusicContext:Lcom/htc/music/carmode/CarNowPlayingActivity;
 
     invoke-virtual {v2}, Lcom/htc/music/carmode/CarNowPlayingActivity;->getResources()Landroid/content/res/Resources;
@@ -866,11 +866,11 @@
 
     move-result-object v1
 
-    .line 441
+    .line 443
     .local v1, defaultBmp:Landroid/graphics/Bitmap;
     if-eqz v1, :cond_2
 
-    .line 442
+    .line 444
     iget v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mImageWidth:I
 
     iget v3, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mImageHeight:I
@@ -881,10 +881,10 @@
 
     iput-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
 
-    .line 443
+    .line 445
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 444
+    .line 446
     const/4 v1, 0x0
 
     goto :goto_0
@@ -912,12 +912,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 746
+    .line 748
     cmpl-float v1, v0, p4
 
     if-nez v1, :cond_0
 
-    .line 748
+    .line 750
     :goto_0
     return v0
 
@@ -935,7 +935,7 @@
     .locals 0
 
     .prologue
-    .line 607
+    .line 609
     return-void
 .end method
 
@@ -946,41 +946,41 @@
     .parameter "normalScale"
 
     .prologue
-    .line 758
+    .line 760
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
     if-nez v7, :cond_1
 
-    .line 837
+    .line 839
     :cond_0
     return-void
 
-    .line 760
+    .line 762
     :cond_1
     iput-boolean p1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mNormalScale:Z
 
-    .line 761
+    .line 763
     iget v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     new-array v5, v7, [F
 
-    .line 762
+    .line 764
     .local v5, targetTranslationX:[F
     iget v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     new-array v6, v7, [F
 
-    .line 763
+    .line 765
     .local v6, targetTranslationY:[F
     iget v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     new-array v4, v7, [F
 
-    .line 766
+    .line 768
     .local v4, targetScale:[F
     const/4 v3, 0x1
 
-    .line 768
+    .line 770
     .local v3, nUIPos:I
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
@@ -992,7 +992,7 @@
 
     aput v7, v5, v3
 
-    .line 769
+    .line 771
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v7, v7, v3
@@ -1003,7 +1003,7 @@
 
     aput v7, v6, v3
 
-    .line 770
+    .line 772
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v7, v7, v3
@@ -1014,12 +1014,12 @@
 
     aput v7, v4, v3
 
-    .line 772
+    .line 774
     new-instance v0, Lcom/htc/sunny2/view/animation/SAnimationController;
 
     invoke-direct {v0}, Lcom/htc/sunny2/view/animation/SAnimationController;-><init>()V
 
-    .line 773
+    .line 775
     .local v0, animationController:Lcom/htc/sunny2/view/animation/SAnimationController;
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
@@ -1039,7 +1039,7 @@
 
     invoke-virtual {v0, v7, v8}, Lcom/htc/sunny2/view/animation/SAnimationController;->setPositionAnimation(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)V
 
-    .line 774
+    .line 776
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v7, v7, v3
@@ -1058,27 +1058,27 @@
 
     invoke-virtual {v0, v7, v8}, Lcom/htc/sunny2/view/animation/SAnimationController;->setScaleAnimation(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)V
 
-    .line 775
+    .line 777
     const-wide/16 v7, 0x96
 
     invoke-virtual {v0, v7, v8}, Lcom/htc/sunny2/view/animation/SAnimationController;->setDuration(J)V
 
-    .line 777
+    .line 779
     sget-object v7, Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;->EASEINOUT_CUBIC:Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;
 
     invoke-virtual {v0, v7}, Lcom/htc/sunny2/view/animation/SAnimationController;->setInterpolator(Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;)V
 
-    .line 778
+    .line 780
     if-eqz p1, :cond_2
 
-    .line 779
+    .line 781
     new-instance v7, Lcom/htc/music/carmode/CarGliderAdapter$2;
 
     invoke-direct {v7, p0}, Lcom/htc/music/carmode/CarGliderAdapter$2;-><init>(Lcom/htc/music/carmode/CarGliderAdapter;)V
 
     invoke-virtual {v0, v7}, Lcom/htc/sunny2/view/animation/SAnimationController;->setAnimationListener(Lcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;)V
 
-    .line 816
+    .line 818
     :goto_0
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
@@ -1088,7 +1088,7 @@
 
     invoke-virtual {v7, v0}, Lcom/htc/sunny2/view/SView;->startAnimation(Lcom/htc/sunny2/view/animation/SAnimationController;)V
 
-    .line 819
+    .line 821
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -1097,18 +1097,18 @@
 
     if-ge v2, v7, :cond_0
 
-    .line 820
+    .line 822
     const/4 v7, 0x1
 
     if-ne v7, v2, :cond_3
 
-    .line 819
+    .line 821
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 796
+    .line 798
     .end local v2           #i:I
     :cond_2
     new-instance v7, Lcom/htc/music/carmode/CarGliderAdapter$3;
@@ -1119,7 +1119,7 @@
 
     goto :goto_0
 
-    .line 822
+    .line 824
     .restart local v2       #i:I
     :cond_3
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
@@ -1132,7 +1132,7 @@
 
     aput v7, v5, v2
 
-    .line 823
+    .line 825
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v7, v7, v2
@@ -1143,7 +1143,7 @@
 
     aput v7, v6, v2
 
-    .line 824
+    .line 826
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v7, v7, v2
@@ -1154,12 +1154,12 @@
 
     aput v7, v4, v2
 
-    .line 826
+    .line 828
     new-instance v1, Lcom/htc/sunny2/view/animation/SAnimationController;
 
     invoke-direct {v1}, Lcom/htc/sunny2/view/animation/SAnimationController;-><init>()V
 
-    .line 827
+    .line 829
     .local v1, animationController2:Lcom/htc/sunny2/view/animation/SAnimationController;
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
@@ -1179,7 +1179,7 @@
 
     invoke-virtual {v1, v7, v8}, Lcom/htc/sunny2/view/animation/SAnimationController;->setPositionAnimation(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)V
 
-    .line 828
+    .line 830
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v7, v7, v2
@@ -1198,17 +1198,17 @@
 
     invoke-virtual {v1, v7, v8}, Lcom/htc/sunny2/view/animation/SAnimationController;->setScaleAnimation(Lcom/htc/sunny2/view/Vector3F;Lcom/htc/sunny2/view/Vector3F;)V
 
-    .line 829
+    .line 831
     const-wide/16 v7, 0x96
 
     invoke-virtual {v1, v7, v8}, Lcom/htc/sunny2/view/animation/SAnimationController;->setDuration(J)V
 
-    .line 831
+    .line 833
     sget-object v7, Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;->EASEINOUT_CUBIC:Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;
 
     invoke-virtual {v1, v7}, Lcom/htc/sunny2/view/animation/SAnimationController;->setInterpolator(Lcom/htc/sunny2/view/animation/SAnimationController$INTERPOLATOR;)V
 
-    .line 833
+    .line 835
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
     invoke-virtual {v7, v2}, Lcom/htc/sunny2/widget/presentation/SPresentation;->getContainerView(I)Lcom/htc/sunny2/view/SView;
@@ -1225,34 +1225,34 @@
     .parameter "normalScale"
 
     .prologue
-    .line 841
+    .line 843
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
     if-nez v4, :cond_0
 
-    .line 859
+    .line 861
     :goto_0
     return-void
 
-    .line 842
+    .line 844
     :cond_0
     iget v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     new-array v2, v4, [F
 
-    .line 843
+    .line 845
     .local v2, targetTranslationX:[F
     iget v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     new-array v3, v4, [F
 
-    .line 844
+    .line 846
     .local v3, targetTranslationY:[F
     iget v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     new-array v1, v4, [F
 
-    .line 846
+    .line 848
     .local v1, targetScale:[F
     const/4 v0, 0x0
 
@@ -1262,7 +1262,7 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 848
+    .line 850
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v4, v4, v0
@@ -1273,7 +1273,7 @@
 
     aput v4, v2, v0
 
-    .line 849
+    .line 851
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v4, v4, v0
@@ -1284,7 +1284,7 @@
 
     aput v4, v3, v0
 
-    .line 850
+    .line 852
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v4, v4, v0
@@ -1295,7 +1295,7 @@
 
     aput v4, v1, v0
 
-    .line 852
+    .line 854
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v4, v4, v0
@@ -1306,7 +1306,7 @@
 
     iput v5, v4, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
-    .line 853
+    .line 855
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v4, v4, v0
@@ -1317,7 +1317,7 @@
 
     iput v5, v4, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
-    .line 855
+    .line 857
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v4, v4, v0
@@ -1328,7 +1328,7 @@
 
     iput v5, v4, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
-    .line 856
+    .line 858
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     aget-object v4, v4, v0
@@ -1339,12 +1339,12 @@
 
     iput v5, v4, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
-    .line 846
+    .line 848
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 858
+    .line 860
     :cond_1
     iget-object v4, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
@@ -1357,7 +1357,7 @@
     .locals 1
 
     .prologue
-    .line 463
+    .line 465
     monitor-enter p0
 
     :try_start_0
@@ -1365,23 +1365,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 464
+    .line 466
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->clear()V
 
-    .line 466
+    .line 468
     :cond_0
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     if-eqz v0, :cond_1
 
-    .line 467
+    .line 469
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     invoke-virtual {v0}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->clear()V
 
-    .line 470
+    .line 472
     :cond_1
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1389,12 +1389,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 471
+    .line 473
     monitor-exit p0
 
     return-void
 
-    .line 463
+    .line 465
     :catchall_0
     move-exception v0
 
@@ -1407,7 +1407,7 @@
     .locals 1
 
     .prologue
-    .line 474
+    .line 476
     monitor-enter p0
 
     :try_start_0
@@ -1415,65 +1415,65 @@
 
     if-eqz v0, :cond_0
 
-    .line 475
+    .line 477
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->quit()V
 
-    .line 476
+    .line 478
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
-    .line 478
+    .line 480
     :cond_0
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
 
     if-eqz v0, :cond_1
 
-    .line 479
+    .line 481
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
 
     invoke-virtual {v0}, Lcom/htc/sunny2/SBitmap;->recycle()V
 
-    .line 480
+    .line 482
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
 
-    .line 482
+    .line 484
     :cond_1
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mTransparentBitmap:Lcom/htc/sunny2/SBitmap;
 
     if-eqz v0, :cond_2
 
-    .line 483
+    .line 485
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mTransparentBitmap:Lcom/htc/sunny2/SBitmap;
 
     invoke-virtual {v0}, Lcom/htc/sunny2/SBitmap;->recycle()V
 
-    .line 484
+    .line 486
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mTransparentBitmap:Lcom/htc/sunny2/SBitmap;
 
-    .line 487
+    .line 489
     :cond_2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mPresentation:Lcom/htc/sunny2/widget/presentation/SPresentation;
 
-    .line 488
+    .line 490
     invoke-virtual {p0}, Lcom/htc/music/carmode/CarGliderAdapter;->clearAllCache()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 489
+    .line 491
     monitor-exit p0
 
     return-void
 
-    .line 474
+    .line 476
     :catchall_0
     move-exception v0
 
@@ -1487,7 +1487,7 @@
     .parameter "nPos"
 
     .prologue
-    .line 305
+    .line 307
     monitor-enter p0
 
     :try_start_0
@@ -1503,14 +1503,14 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 306
+    .line 308
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     aget-object v0, v0, p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 309
+    .line 311
     :goto_0
     monitor-exit p0
 
@@ -1521,7 +1521,7 @@
 
     goto :goto_0
 
-    .line 305
+    .line 307
     :catchall_0
     move-exception v0
 
@@ -1534,7 +1534,7 @@
     .locals 1
 
     .prologue
-    .line 326
+    .line 328
     iget v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     return v0
@@ -1545,7 +1545,7 @@
     .parameter "nUIPos"
 
     .prologue
-    .line 330
+    .line 332
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mLayouts:[Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
 
     if-eqz v0, :cond_0
@@ -1556,11 +1556,11 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 331
+    .line 333
     :cond_0
     const/4 v0, 0x0
 
-    .line 334
+    .line 336
     :goto_0
     return-object v0
 
@@ -1579,7 +1579,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 341
+    .line 343
     monitor-enter p0
 
     :try_start_0
@@ -1589,78 +1589,63 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 342
+    .line 344
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mCanUpdateSelectedItem:Z
 
-    .line 345
+    .line 349
     :cond_0
-    iget-boolean v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mCanUpdateSelectedItem:Z
+    iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMusicContext:Lcom/htc/music/carmode/CarNowPlayingActivity;
 
-    if-nez v2, :cond_2
+    instance-of v2, v2, Lcom/htc/music/carmode/CarNowPlayingActivity;
 
-    iget v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mSelectedPos:I
+    if-eqz v2, :cond_1
 
-    if-ne p1, v2, :cond_2
+    iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
-    .line 346
-    iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mTransparentBitmap:Lcom/htc/sunny2/SBitmap;
+    if-nez v2, :cond_3
+
+    .line 350
+    :cond_1
+    iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 369
-    :cond_1
+    .line 371
+    :cond_2
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 350
-    :cond_2
-    :try_start_1
-    iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMusicContext:Lcom/htc/music/carmode/CarNowPlayingActivity;
-
-    instance-of v2, v2, Lcom/htc/music/carmode/CarNowPlayingActivity;
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
-
-    if-nez v2, :cond_4
-
-    .line 351
+    .line 353
     :cond_3
-    iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
-
-    goto :goto_0
-
-    .line 354
-    :cond_4
     const/4 v0, 0x0
 
-    .line 355
+    .line 354
     .local v0, bmp:Lcom/htc/sunny2/SBitmap;
+    :try_start_1
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
 
-    if-ltz p1, :cond_5
+    if-ltz p1, :cond_4
 
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     array-length v2, v2
 
-    if-lt p1, v2, :cond_6
+    if-lt p1, v2, :cond_5
 
-    .line 356
-    :cond_5
+    .line 355
+    :cond_4
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
 
     goto :goto_0
 
-    .line 359
-    :cond_6
+    .line 358
+    :cond_5
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1674,7 +1659,7 @@
     .end local v0           #bmp:Lcom/htc/sunny2/SBitmap;
     check-cast v0, Lcom/htc/sunny2/SBitmap;
 
-    .line 360
+    .line 359
     .restart local v0       #bmp:Lcom/htc/sunny2/SBitmap;
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1688,9 +1673,9 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 361
+    .line 360
     .local v1, oldAlbumId:Ljava/lang/Integer;
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     invoke-virtual {v0}, Lcom/htc/sunny2/SBitmap;->isRecycled()Z
 
@@ -1698,13 +1683,31 @@
 
     if-ne v4, v2, :cond_8
 
-    .line 362
-    :cond_7
+    .line 361
+    :cond_6
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
+
+    .line 368
+    :cond_7
+    :goto_1
+    iget-boolean v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mCanUpdateSelectedItem:Z
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mSelectedPos:I
+
+    if-ne p1, v2, :cond_2
+
+    iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
+
+    if-ne v2, v0, :cond_2
+
+    .line 369
+    iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mTransparentBitmap:Lcom/htc/sunny2/SBitmap;
 
     goto :goto_0
 
-    .line 363
+    .line 362
     :cond_8
     if-eqz v1, :cond_9
 
@@ -1718,13 +1721,13 @@
 
     iget v3, v3, Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;->mAlbumId:I
 
-    if-eq v2, v3, :cond_1
+    if-eq v2, v3, :cond_7
 
-    .line 364
+    .line 363
     :cond_9
     invoke-virtual {v0}, Lcom/htc/sunny2/SBitmap;->recycle()V
 
-    .line 365
+    .line 364
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1733,14 +1736,14 @@
 
     invoke-virtual {v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 366
+    .line 365
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDefaultAlbumBitmap:Lcom/htc/sunny2/SBitmap;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 341
+    .line 343
     .end local v0           #bmp:Lcom/htc/sunny2/SBitmap;
     .end local v1           #oldAlbumId:Ljava/lang/Integer;
     :catchall_0
@@ -1757,7 +1760,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 313
+    .line 315
     monitor-enter p0
 
     :try_start_0
@@ -1767,20 +1770,20 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 321
+    .line 323
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 316
+    .line 318
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     if-eqz v0, :cond_1
 
-    .line 317
+    .line 319
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     array-length v0, v0
@@ -1789,13 +1792,13 @@
 
     goto :goto_0
 
-    .line 321
+    .line 323
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 313
+    .line 315
     :catchall_0
     move-exception v0
 
@@ -1809,16 +1812,16 @@
     .parameter "nSelectedPos"
 
     .prologue
-    .line 574
+    .line 576
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 575
+    .line 577
     .local v1, nStart:I
     const/4 v0, 0x0
 
-    .line 576
+    .line 578
     .local v0, nEnd:I
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
@@ -1829,7 +1832,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 577
+    .line 579
     iget v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     add-int/lit8 v2, v2, -0x1
@@ -1838,7 +1841,7 @@
 
     sub-int v1, p1, v2
 
-    .line 578
+    .line 580
     iget v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mComponentCount:I
 
     add-int/lit8 v2, v2, -0x1
@@ -1847,13 +1850,13 @@
 
     add-int v0, p1, v2
 
-    .line 579
+    .line 581
     if-gez v1, :cond_0
 
-    .line 580
+    .line 582
     const/4 v1, 0x0
 
-    .line 581
+    .line 583
     :cond_0
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
@@ -1861,20 +1864,20 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 582
+    .line 584
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     array-length v2, v2
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 584
+    .line 586
     :cond_1
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     invoke-virtual {v2, v1, v0}, Lcom/htc/music/util/AsyncImageDecoder;->setVisibleRange(II)V
 
-    .line 585
+    .line 587
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     iget-object v3, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -1883,26 +1886,26 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->setQueueLength(I)V
 
-    .line 586
+    .line 588
     iget-object v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     invoke-virtual {v2, p1}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->setPosition(I)V
 
-    .line 588
+    .line 590
     invoke-virtual {p0, p1}, Lcom/htc/music/carmode/CarGliderAdapter;->requestAllBitmap(I)V
 
-    .line 590
+    .line 592
     :cond_2
     iput p1, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mSelectedPos:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 591
+    .line 593
     monitor-exit p0
 
     return-void
 
-    .line 574
+    .line 576
     :catchall_0
     move-exception v2
 
@@ -1915,17 +1918,17 @@
     .locals 1
 
     .prologue
-    .line 451
+    .line 453
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     if-eqz v0, :cond_0
 
-    .line 452
+    .line 454
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->pauseDecode()V
 
-    .line 454
+    .line 456
     :cond_0
     return-void
 .end method
@@ -2411,7 +2414,7 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 610
+    .line 612
     monitor-enter p0
 
     :try_start_0
@@ -2425,17 +2428,17 @@
 
     if-nez v10, :cond_1
 
-    .line 684
+    .line 686
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 614
+    .line 616
     :cond_1
     const/4 v2, 0x1
 
-    .line 615
+    .line 617
     .local v2, nCacheSize:I
     :try_start_1
     iget v10, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMemCacheSize:I
@@ -2444,75 +2447,75 @@
 
     rsub-int/lit8 v3, v10, 0x0
 
-    .line 616
+    .line 618
     .local v3, nLowBound:I
     const/4 v7, 0x1
 
-    .line 617
+    .line 619
     .local v7, nUpBound:I
     const/4 v6, 0x0
 
-    .line 618
+    .line 620
     .local v6, nScannedCount:I
     iget-object v10, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     array-length v8, v10
 
-    .line 620
+    .line 622
     .local v8, queueLen:I
     iget v2, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMemCacheSize:I
 
-    .line 621
+    .line 623
     iget-boolean v10, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mIsPluginMode:Z
 
     if-ne v10, v11, :cond_3
 
-    .line 622
+    .line 624
     const/4 v7, 0x1
 
-    .line 628
+    .line 630
     :goto_0
     iget-object v10, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     invoke-virtual {v10}, Lcom/htc/music/util/AsyncImageDecoder;->clear()V
 
-    .line 631
+    .line 633
     if-lt p1, v3, :cond_0
 
     if-gt p1, v7, :cond_0
 
-    .line 635
+    .line 637
     invoke-direct {p0, p1}, Lcom/htc/music/carmode/CarGliderAdapter;->addBitmapToCache(I)Z
 
-    .line 636
+    .line 638
     add-int/lit8 v6, v6, 0x1
 
-    .line 638
+    .line 640
     const/4 v9, -0x1
 
-    .line 639
+    .line 641
     .local v9, sign:I
     const/4 v4, 0x1
 
-    .line 640
+    .line 642
     .local v4, nOffset:I
     const/4 v5, 0x0
 
-    .line 641
+    .line 643
     .local v5, nPos:I
     const/4 v1, 0x0
 
     .local v1, bUpBound:Z
     const/4 v0, 0x0
 
-    .line 642
+    .line 644
     .local v0, bLowBound:Z
     :goto_1
     if-eqz v1, :cond_2
 
     if-nez v0, :cond_0
 
-    .line 643
+    .line 645
     :cond_2
     const/4 v10, -0x1
 
@@ -2520,21 +2523,21 @@
 
     if-nez v0, :cond_9
 
-    .line 644
+    .line 646
     mul-int v10, v4, v9
 
     add-int v5, p1, v10
 
-    .line 645
+    .line 647
     if-ge v5, v3, :cond_4
 
-    .line 646
+    .line 648
     const/4 v0, 0x1
 
-    .line 647
+    .line 649
     goto :goto_1
 
-    .line 624
+    .line 626
     .end local v0           #bLowBound:Z
     .end local v1           #bUpBound:Z
     .end local v4           #nOffset:I
@@ -2545,7 +2548,7 @@
 
     if-eqz v10, :cond_0
 
-    .line 625
+    .line 627
     iget v10, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMemCacheSize:I
 
     div-int/lit8 v10, v10, 0x2
@@ -2556,7 +2559,7 @@
 
     goto :goto_0
 
-    .line 648
+    .line 650
     .restart local v0       #bLowBound:Z
     .restart local v1       #bUpBound:Z
     .restart local v4       #nOffset:I
@@ -2565,86 +2568,86 @@
     :cond_4
     if-ne v5, v3, :cond_5
 
-    .line 649
+    .line 651
     const/4 v0, 0x1
 
-    .line 652
+    .line 654
     :cond_5
     if-gez v5, :cond_6
 
-    .line 653
+    .line 655
     add-int/2addr v5, v8
 
-    .line 656
+    .line 658
     :cond_6
     invoke-direct {p0, v5}, Lcom/htc/music/carmode/CarGliderAdapter;->addBitmapToCache(I)Z
 
-    .line 657
+    .line 659
     add-int/lit8 v6, v6, 0x1
 
-    .line 676
+    .line 678
     :cond_7
     :goto_2
     if-ne v11, v9, :cond_8
 
-    .line 677
+    .line 679
     add-int/lit8 v4, v4, 0x1
 
-    .line 679
+    .line 681
     if-le v2, v6, :cond_0
 
-    .line 682
+    .line 684
     :cond_8
     mul-int/lit8 v9, v9, -0x1
 
     goto :goto_1
 
-    .line 659
+    .line 661
     :cond_9
     if-ne v11, v9, :cond_7
 
     if-nez v1, :cond_7
 
-    .line 660
+    .line 662
     mul-int v10, v4, v9
 
     add-int v5, p1, v10
 
-    .line 661
+    .line 663
     if-le v5, v7, :cond_a
 
-    .line 662
+    .line 664
     const/4 v1, 0x1
 
-    .line 663
+    .line 665
     goto :goto_1
 
-    .line 664
+    .line 666
     :cond_a
     if-ne v5, v7, :cond_b
 
-    .line 665
+    .line 667
     const/4 v1, 0x1
 
-    .line 668
+    .line 670
     :cond_b
     if-lt v5, v8, :cond_c
 
-    .line 669
+    .line 671
     sub-int/2addr v5, v8
 
-    .line 672
+    .line 674
     :cond_c
     invoke-direct {p0, v5}, Lcom/htc/music/carmode/CarGliderAdapter;->addBitmapToCache(I)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 673
+    .line 675
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 610
+    .line 612
     .end local v0           #bLowBound:Z
     .end local v1           #bUpBound:Z
     .end local v2           #nCacheSize:I
@@ -2667,17 +2670,17 @@
     .locals 1
 
     .prologue
-    .line 457
+    .line 459
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     if-eqz v0, :cond_0
 
-    .line 458
+    .line 460
     iget-object v0, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->resumeDecode()V
 
-    .line 460
+    .line 462
     :cond_0
     return-void
 .end method
@@ -2720,21 +2723,28 @@
 
     iput v0, v1, Lcom/htc/music/carmode/CarGliderAdapter;->mPreSelectedPos:I
 
-    .line 184
+    .line 183
+    const/4 v2, 0x0
+
+    move-object/from16 v0, p0
+
+    iput-boolean v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mCanUpdateSelectedItem:Z
+
+    .line 185
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mIsEnhancerExist:Z
 
     if-eqz v2, :cond_3
 
-    .line 185
+    .line 186
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mIsDownloadInfoQueried:Z
 
-    .line 186
+    .line 187
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -2749,12 +2759,12 @@
 
     if-lez v2, :cond_3
 
-    .line 187
+    .line 188
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 188
+    .line 189
     .local v16, selection:Ljava/lang/StringBuilder;
     move-object/from16 v0, p0
 
@@ -2762,21 +2772,21 @@
 
     invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
 
-    .line 189
+    .line 190
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdPosMap:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 190
+    .line 191
     const-string v2, "_id IN ("
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
+    .line 193
     const/4 v11, 0x0
 
     .local v11, i:I
@@ -2789,7 +2799,7 @@
 
     if-ge v11, v2, :cond_2
 
-    .line 193
+    .line 194
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdSet:Ljava/util/HashSet;
@@ -2812,7 +2822,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 194
+    .line 195
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -2825,19 +2835,19 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 195
+    .line 196
     const-string v2, ","
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 198
+    .line 199
     new-instance v15, Ljava/util/HashSet;
 
     invoke-direct {v15}, Ljava/util/HashSet;-><init>()V
 
-    .line 199
+    .line 200
     .local v15, posSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2845,7 +2855,7 @@
 
     invoke-virtual {v15, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 200
+    .line 201
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdPosMap:Ljava/util/HashMap;
@@ -2864,13 +2874,13 @@
 
     invoke-virtual {v2, v3, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 192
+    .line 193
     :goto_1
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 203
+    .line 204
     .end local v15           #posSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :cond_0
     move-object/from16 v0, p0
@@ -2895,11 +2905,11 @@
 
     check-cast v15, Ljava/util/HashSet;
 
-    .line 204
+    .line 205
     .restart local v15       #posSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/Integer;>;"
     if-eqz v15, :cond_1
 
-    .line 205
+    .line 206
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -2921,7 +2931,7 @@
 
     throw v2
 
-    .line 207
+    .line 208
     .restart local v11       #i:I
     .restart local v15       #posSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .restart local v16       #selection:Ljava/lang/StringBuilder;
@@ -2935,7 +2945,7 @@
 
     goto :goto_1
 
-    .line 211
+    .line 212
     .end local v15           #posSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :cond_2
     invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuilder;->length()I
@@ -2948,14 +2958,14 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 212
+    .line 213
     const-string v2, ")"
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 213
+    .line 214
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -2964,14 +2974,14 @@
 
     iput-wide v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mCookie:J
 
-    .line 214
+    .line 215
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mUnknownAlbumId:I
 
-    .line 215
+    .line 216
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAsyncQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
@@ -3000,7 +3010,7 @@
 
     invoke-virtual/range {v2 .. v9}, Lcom/htc/music/util/DlArtAsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 221
+    .line 222
     .end local v11           #i:I
     .end local v16           #selection:Ljava/lang/StringBuilder;
     :cond_3
@@ -3026,9 +3036,9 @@
 
     move/from16 v0, p3
 
-    if-lt v2, v0, :cond_4
+    if-le v2, v0, :cond_4
 
-    .line 222
+    .line 223
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
@@ -3047,7 +3057,7 @@
 
     check-cast v14, Ljava/lang/Integer;
 
-    .line 223
+    .line 224
     .local v14, oldAlbumId:Ljava/lang/Integer;
     move-object/from16 v0, p0
 
@@ -3057,7 +3067,7 @@
 
     iget v12, v2, Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;->mAlbumId:I
 
-    .line 224
+    .line 225
     .local v12, newAlbumId:I
     if-eqz v14, :cond_4
 
@@ -3067,7 +3077,7 @@
 
     if-ne v2, v12, :cond_4
 
-    .line 225
+    .line 226
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
@@ -3086,7 +3096,7 @@
 
     check-cast v10, Lcom/htc/sunny2/SBitmap;
 
-    .line 226
+    .line 227
     .local v10, bmp:Lcom/htc/sunny2/SBitmap;
     if-eqz v10, :cond_4
 
@@ -3096,12 +3106,12 @@
 
     if-nez v2, :cond_4
 
-    .line 227
+    .line 228
     invoke-virtual {v10}, Lcom/htc/sunny2/SBitmap;->substitute()Lcom/htc/sunny2/SBitmap;
 
     move-result-object v13
 
-    .line 228
+    .line 229
     .local v13, newBmp:Lcom/htc/sunny2/SBitmap;
     move-object/from16 v0, p0
 
@@ -3111,7 +3121,7 @@
 
     invoke-virtual {v2, v0}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->setPosition(I)V
 
-    .line 229
+    .line 230
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
@@ -3124,7 +3134,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->setQueueLength(I)V
 
-    .line 230
+    .line 231
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
@@ -3135,7 +3145,7 @@
 
     invoke-virtual {v2, v3, v13}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->push(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 231
+    .line 232
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdMemCache:Ljava/util/concurrent/ConcurrentHashMap;
@@ -3149,15 +3159,22 @@
     move-result-object v4
 
     invoke-virtual {v2, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 236
+    .line 237
     .end local v10           #bmp:Lcom/htc/sunny2/SBitmap;
     .end local v12           #newAlbumId:I
     .end local v13           #newBmp:Lcom/htc/sunny2/SBitmap;
     .end local v14           #oldAlbumId:Ljava/lang/Integer;
     :cond_4
+    move/from16 v0, p3
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Lcom/htc/music/carmode/CarGliderAdapter;->mSelectedPos:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 238
     monitor-exit p0
 
     return-void
@@ -3169,12 +3186,12 @@
     .parameter "dlArtPath"
 
     .prologue
-    .line 239
+    .line 241
     monitor-enter p0
 
     if-gez p1, :cond_1
 
-    .line 240
+    .line 242
     :try_start_0
     const-string v7, "[CarGliderAdapter]"
 
@@ -3184,14 +3201,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 302
+    .line 304
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 244
+    .line 246
     :cond_1
     :try_start_1
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -3204,7 +3221,7 @@
 
     if-gtz v7, :cond_3
 
-    .line 245
+    .line 247
     :cond_2
     const-string v7, "[CarGliderAdapter]"
 
@@ -3216,7 +3233,7 @@
 
     goto :goto_0
 
-    .line 239
+    .line 241
     :catchall_0
     move-exception v7
 
@@ -3224,7 +3241,7 @@
 
     throw v7
 
-    .line 249
+    .line 251
     :cond_3
     :try_start_2
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdPosMap:Ljava/util/HashMap;
@@ -3239,7 +3256,7 @@
 
     if-gtz v7, :cond_5
 
-    .line 250
+    .line 252
     :cond_4
     const-string v7, "[CarGliderAdapter]"
 
@@ -3249,7 +3266,7 @@
 
     goto :goto_0
 
-    .line 254
+    .line 256
     :cond_5
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumIdPosMap:Ljava/util/HashMap;
 
@@ -3263,7 +3280,7 @@
 
     check-cast v4, Ljava/util/HashSet;
 
-    .line 255
+    .line 257
     .local v4, posSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/Integer;>;"
     if-eqz v4, :cond_0
 
@@ -3273,16 +3290,16 @@
 
     if-lez v7, :cond_0
 
-    .line 260
+    .line 262
     const/4 v3, -0x1
 
-    .line 261
+    .line 263
     .local v3, pos:I
     invoke-virtual {v4}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 262
+    .line 264
     .local v1, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_6
     :goto_1
@@ -3292,7 +3309,7 @@
 
     if-eqz v7, :cond_0
 
-    .line 263
+    .line 265
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
@@ -3303,7 +3320,7 @@
 
     move-result v3
 
-    .line 265
+    .line 267
     if-ltz v3, :cond_c
 
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -3312,7 +3329,7 @@
 
     if-ge v3, v7, :cond_c
 
-    .line 266
+    .line 268
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     aget-object v7, v7, v3
@@ -3321,7 +3338,7 @@
 
     if-ne v7, p1, :cond_6
 
-    .line 267
+    .line 269
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     aget-object v7, v7, v3
@@ -3334,45 +3351,45 @@
 
     if-nez v7, :cond_6
 
-    .line 271
+    .line 273
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     aget-object v7, v7, v3
 
     iput-object p2, v7, Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;->mDlArtPath:Ljava/lang/String;
 
-    .line 273
+    .line 275
     iget v6, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mSelectedPos:I
 
-    .line 274
+    .line 276
     .local v6, validPos:I
     iget v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMemCacheSizeHalf:I
 
     if-ge v6, v7, :cond_a
 
-    .line 275
+    .line 277
     iget v6, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMemCacheSizeHalf:I
 
-    .line 279
+    .line 281
     :cond_7
     :goto_2
     iget v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMemCacheSizeHalf:I
 
     sub-int v2, v6, v7
 
-    .line 280
+    .line 282
     .local v2, lowerBound:I
     iget v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mMemCacheSizeHalf:I
 
     add-int v5, v6, v7
 
-    .line 284
+    .line 286
     .local v5, upperBound:I
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     if-eqz v7, :cond_6
 
-    .line 285
+    .line 287
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3385,7 +3402,7 @@
 
     check-cast v0, Lcom/htc/sunny2/SBitmap;
 
-    .line 286
+    .line 288
     .local v0, bmp:Lcom/htc/sunny2/SBitmap;
     if-gt v2, v3, :cond_8
 
@@ -3394,7 +3411,7 @@
     :cond_8
     if-eqz v0, :cond_6
 
-    .line 287
+    .line 289
     :cond_9
     const-string v7, "[CarGliderAdapter]"
 
@@ -3418,7 +3435,7 @@
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 288
+    .line 290
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mBmpMemCache:Lcom/htc/music/util/MemoryCache3DBitmapByPosition;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3427,22 +3444,22 @@
 
     invoke-virtual {v7, v8}, Lcom/htc/music/util/MemoryCache3DBitmapByPosition;->remove(Ljava/lang/Object;)V
 
-    .line 289
+    .line 291
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_b
 
-    .line 290
+    .line 292
     invoke-virtual {p0, v3}, Lcom/htc/music/carmode/CarGliderAdapter;->notifyUpdateItem(I)V
 
-    .line 291
+    .line 293
     invoke-direct {p0, v3}, Lcom/htc/music/carmode/CarGliderAdapter;->addBitmapToCache(I)Z
 
     goto/16 :goto_1
 
-    .line 276
+    .line 278
     .end local v0           #bmp:Lcom/htc/sunny2/SBitmap;
     .end local v2           #lowerBound:I
     .end local v5           #upperBound:I
@@ -3459,7 +3476,7 @@
 
     if-le v6, v7, :cond_7
 
-    .line 277
+    .line 279
     iget-object v7, p0, Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
 
     array-length v7, v7
@@ -3472,7 +3489,7 @@
 
     goto :goto_2
 
-    .line 293
+    .line 295
     .restart local v0       #bmp:Lcom/htc/sunny2/SBitmap;
     .restart local v2       #lowerBound:I
     .restart local v5       #upperBound:I
@@ -3481,7 +3498,7 @@
 
     goto/16 :goto_1
 
-    .line 299
+    .line 301
     .end local v0           #bmp:Lcom/htc/sunny2/SBitmap;
     .end local v2           #lowerBound:I
     .end local v5           #upperBound:I
@@ -3508,47 +3525,47 @@
     .parameter "isBouncing"
 
     .prologue
-    .line 691
+    .line 693
     const/4 v12, 0x0
 
     .local v12, nStartX:F
     const/4 v7, 0x0
 
-    .line 692
+    .line 694
     .local v7, nEndX:F
     const/4 v14, 0x0
 
     .local v14, nStartY:F
     const/4 v9, 0x0
 
-    .line 693
+    .line 695
     .local v9, nEndY:F
     const/16 v16, 0x0
 
     .local v16, nStartZ:F
     const/4 v11, 0x0
 
-    .line 695
+    .line 697
     .local v11, nEndZ:F
     const/4 v13, 0x0
 
     .local v13, nStartXF:F
     const/4 v8, 0x0
 
-    .line 696
+    .line 698
     .local v8, nEndXF:F
     const/4 v15, 0x0
 
     .local v15, nStartYF:F
     const/4 v10, 0x0
 
-    .line 698
+    .line 700
     .local v10, nEndYF:F
     invoke-static/range {p1 .. p1}, Ljava/lang/Math;->abs(I)I
 
     move-result v6
 
-    .line 700
+    .line 702
     .local v6, nAbsTimeSlot:I
     move-object/from16 v0, p0
 
@@ -3558,16 +3575,16 @@
 
     move-result-object v5
 
-    .line 701
+    .line 703
     .local v5, currentLayout:Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
     if-nez v5, :cond_1
 
-    .line 743
+    .line 745
     :cond_0
     :goto_0
     return-void
 
-    .line 702
+    .line 704
     :cond_1
     move-object/from16 v0, p0
 
@@ -3577,29 +3594,9 @@
 
     move-result-object v17
 
-    .line 703
+    .line 705
     .local v17, nextLayout:Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;
     if-eqz v17, :cond_0
-
-    .line 705
-    iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v0, v18
-
-    iget v12, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
-
-    .line 706
-    move-object/from16 v0, v17
-
-    iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v0, v18
-
-    iget v7, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     .line 707
     iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
@@ -3608,7 +3605,7 @@
 
     move-object/from16 v0, v18
 
-    iget v14, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+    iget v12, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     .line 708
     move-object/from16 v0, v17
@@ -3619,9 +3616,29 @@
 
     move-object/from16 v0, v18
 
-    iget v9, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+    iget v7, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     .line 709
+    iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget v14, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+
+    .line 710
+    move-object/from16 v0, v17
+
+    iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget v9, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+
+    .line 711
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
@@ -3658,7 +3675,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
-    .line 710
+    .line 712
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
@@ -3695,7 +3712,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
-    .line 711
+    .line 713
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mTranslation:Lcom/htc/sunny2/view/Vector3F;
@@ -3710,26 +3727,6 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
-    .line 714
-    iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v0, v18
-
-    iget v13, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
-
-    .line 715
-    move-object/from16 v0, v17
-
-    iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v0, v18
-
-    iget v8, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
-
     .line 716
     iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
 
@@ -3737,7 +3734,7 @@
 
     move-object/from16 v0, v18
 
-    iget v15, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+    iget v13, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     .line 717
     move-object/from16 v0, v17
@@ -3748,9 +3745,29 @@
 
     move-object/from16 v0, v18
 
-    iget v10, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+    iget v8, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     .line 718
+    iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget v15, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+
+    .line 719
+    move-object/from16 v0, v17
+
+    iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget v10, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+
+    .line 720
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
@@ -3787,7 +3804,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
-    .line 719
+    .line 721
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
@@ -3824,7 +3841,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
-    .line 720
+    .line 722
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mScale:Lcom/htc/sunny2/view/Vector3F;
@@ -3839,26 +3856,6 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
-    .line 722
-    iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v0, v18
-
-    iget v12, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
-
-    .line 723
-    move-object/from16 v0, v17
-
-    iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v0, v18
-
-    iget v7, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
-
     .line 724
     iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
 
@@ -3866,9 +3863,7 @@
 
     move-object/from16 v0, v18
 
-    iget v0, v0, Lcom/htc/sunny2/view/Vector3F;->mZ:F
-
-    move/from16 v16, v0
+    iget v12, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     .line 725
     move-object/from16 v0, v17
@@ -3879,7 +3874,7 @@
 
     move-object/from16 v0, v18
 
-    iget v11, v0, Lcom/htc/sunny2/view/Vector3F;->mZ:F
+    iget v7, v0, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
     .line 726
     iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
@@ -3888,7 +3883,9 @@
 
     move-object/from16 v0, v18
 
-    iget v14, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+    iget v0, v0, Lcom/htc/sunny2/view/Vector3F;->mZ:F
+
+    move/from16 v16, v0
 
     .line 727
     move-object/from16 v0, v17
@@ -3899,9 +3896,29 @@
 
     move-object/from16 v0, v18
 
-    iget v9, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+    iget v11, v0, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
     .line 728
+    iget-object v0, v5, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget v14, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+
+    .line 729
+    move-object/from16 v0, v17
+
+    iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget v9, v0, Lcom/htc/sunny2/view/Vector3F;->mY:F
+
+    .line 730
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
@@ -3938,7 +3955,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mX:F
 
-    .line 729
+    .line 731
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
@@ -3975,7 +3992,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mY:F
 
-    .line 730
+    .line 732
     move-object/from16 v0, p5
 
     iget-object v0, v0, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mRotation:Lcom/htc/sunny2/view/Vector3F;
@@ -4014,7 +4031,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/view/Vector3F;->mZ:F
 
-    .line 733
+    .line 735
     int-to-float v0, v6
 
     move/from16 v18, v0
@@ -4079,7 +4096,7 @@
 
     iput v0, v1, Lcom/htc/sunny2/widget/presentation/SPresentationContainerLayout;->mAlpha:I
 
-    .line 736
+    .line 738
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/music/carmode/CarGliderAdapter;->mNormalScale:Z
@@ -4088,7 +4105,7 @@
 
     if-nez v18, :cond_0
 
-    .line 737
+    .line 739
     if-nez v6, :cond_0
 
     goto/16 :goto_0

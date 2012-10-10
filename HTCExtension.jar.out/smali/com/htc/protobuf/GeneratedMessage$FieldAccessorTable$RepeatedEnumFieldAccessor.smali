@@ -48,10 +48,10 @@
     .local p4, builderClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/htc/protobuf/GeneratedMessage$Builder;>;"
     const/4 v4, 0x0
 
-    .line 1537
+    .line 1536
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;-><init>(Lcom/htc/protobuf/Descriptors$FieldDescriptor;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 1539
+    .line 1538
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->type:Ljava/lang/Class;
 
     const-string v1, "valueOf"
@@ -71,7 +71,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;->valueOfMethod:Ljava/lang/reflect/Method;
 
-    .line 1541
+    .line 1540
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->type:Ljava/lang/Class;
 
     const-string v1, "getValueDescriptor"
@@ -85,7 +85,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;->getValueDescriptorMethod:Ljava/lang/reflect/Method;
 
-    .line 1543
+    .line 1542
     return-void
 .end method
 
@@ -97,7 +97,7 @@
     .parameter "value"
 
     .prologue
-    .line 1587
+    .line 1586
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;->valueOfMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -117,7 +117,7 @@
 
     invoke-super {p0, p1, v0}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->addRepeated(Lcom/htc/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
 
-    .line 1588
+    .line 1587
     return-void
 .end method
 
@@ -126,12 +126,12 @@
     .parameter "message"
 
     .prologue
-    .line 1555
+    .line 1554
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1556
+    .line 1555
     .local v2, newList:Ljava/util/List;
     invoke-super {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->get(Lcom/htc/protobuf/GeneratedMessage;)Ljava/lang/Object;
 
@@ -155,7 +155,7 @@
 
     move-result-object v0
 
-    .line 1557
+    .line 1556
     .local v0, element:Ljava/lang/Object;
     iget-object v3, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;->getValueDescriptorMethod:Ljava/lang/reflect/Method;
 
@@ -172,7 +172,7 @@
 
     goto :goto_0
 
-    .line 1559
+    .line 1558
     .end local v0           #element:Ljava/lang/Object;
     :cond_0
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -188,7 +188,7 @@
     .parameter "index"
 
     .prologue
-    .line 1568
+    .line 1567
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;->getValueDescriptorMethod:Ljava/lang/reflect/Method;
 
     invoke-super {p0, p1, p2}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getRepeated(Lcom/htc/protobuf/GeneratedMessage;I)Ljava/lang/Object;
@@ -214,7 +214,7 @@
     .parameter "value"
 
     .prologue
-    .line 1578
+    .line 1577
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;->valueOfMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -234,6 +234,6 @@
 
     invoke-super {p0, p1, p2, v0}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->setRepeated(Lcom/htc/protobuf/GeneratedMessage$Builder;ILjava/lang/Object;)V
 
-    .line 1580
+    .line 1579
     return-void
 .end method

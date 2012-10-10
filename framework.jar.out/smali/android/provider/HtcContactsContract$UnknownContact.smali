@@ -25,7 +25,7 @@
     .locals 2
 
     .prologue
-    .line 1325
+    .line 1443
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "unknown"
@@ -43,9 +43,9 @@
     .locals 0
 
     .prologue
-    .line 1318
+    .line 1436
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1320
+    .line 1438
     return-void
 .end method

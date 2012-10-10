@@ -2353,7 +2353,7 @@
 
     const-string/jumbo v1, "wifi_watchdog_walled_garden_url"
 
-    const-string/jumbo v2, "http://clients3.google.com/generate_204"
+    const-string v2, "http://clients3.google.com/generate_204"
 
     invoke-static {v0, v1, v2}, Landroid/net/wifi/WifiWatchdogStateMachine;->getSettingsStr(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -2615,7 +2615,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "lastSingleCheck: "
+    const-string v1, "lastSingleCheck: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

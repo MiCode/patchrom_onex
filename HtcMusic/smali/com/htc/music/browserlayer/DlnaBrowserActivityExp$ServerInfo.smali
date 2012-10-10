@@ -57,48 +57,48 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1624
+    .line 1626
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->this$0:Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;
 
-    .line 1625
+    .line 1627
     invoke-direct {p0, p5, p6, p7}, Lcom/htc/widget/MoreExpandableItemInfo;-><init>(JZ)V
 
-    .line 1617
+    .line 1619
     iput v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mLevel:I
 
-    .line 1618
+    .line 1620
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mExpand:Z
 
-    .line 1619
+    .line 1621
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mStartIdx:J
 
-    .line 1621
+    .line 1623
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mIsCancelled:Z
 
-    .line 1627
+    .line 1629
     iput-object p2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mId:Ljava/lang/String;
 
-    .line 1628
+    .line 1630
     iput-object p3, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mName:Ljava/lang/String;
 
-    .line 1629
+    .line 1631
     iput-object p4, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImgPath:Ljava/lang/String;
 
-    .line 1630
+    .line 1632
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImg:Landroid/graphics/Bitmap;
 
-    .line 1631
+    .line 1633
     const-string v0, "0"
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerID:Ljava/lang/String;
 
-    .line 1632
+    .line 1634
     return-void
 .end method
 
@@ -117,47 +117,47 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1648
+    .line 1650
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->this$0:Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;
 
-    .line 1649
+    .line 1651
     invoke-direct {p0, p9, p10, p11}, Lcom/htc/widget/MoreExpandableItemInfo;-><init>(JZ)V
 
-    .line 1617
+    .line 1619
     iput v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mLevel:I
 
-    .line 1618
+    .line 1620
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mExpand:Z
 
-    .line 1619
+    .line 1621
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mStartIdx:J
 
-    .line 1621
+    .line 1623
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mIsCancelled:Z
 
-    .line 1651
+    .line 1653
     iput-object p2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mId:Ljava/lang/String;
 
-    .line 1652
+    .line 1654
     iput-object p3, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mParentID:Ljava/lang/String;
 
-    .line 1653
+    .line 1655
     iput-object p4, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerName:Ljava/lang/String;
 
-    .line 1654
+    .line 1656
     iput-object p5, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImgPath:Ljava/lang/String;
 
-    .line 1655
+    .line 1657
     iput-object p6, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mFileType:Ljava/lang/String;
 
-    .line 1656
+    .line 1658
     iput-wide p7, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mStartIdx:J
 
-    .line 1657
+    .line 1659
     return-void
 .end method
 
@@ -176,47 +176,47 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1635
+    .line 1637
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->this$0:Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;
 
-    .line 1636
+    .line 1638
     invoke-direct {p0, p8, p9, p10}, Lcom/htc/widget/MoreExpandableItemInfo;-><init>(JZ)V
 
-    .line 1617
+    .line 1619
     iput v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mLevel:I
 
-    .line 1618
+    .line 1620
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mExpand:Z
 
-    .line 1619
+    .line 1621
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mStartIdx:J
 
-    .line 1621
+    .line 1623
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mIsCancelled:Z
 
-    .line 1637
+    .line 1639
     iput-object p2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mId:Ljava/lang/String;
 
-    .line 1638
+    .line 1640
     iput-object p4, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerID:Ljava/lang/String;
 
-    .line 1639
+    .line 1641
     iput-object p5, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerName:Ljava/lang/String;
 
-    .line 1641
+    .line 1643
     iput-object p3, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mParentID:Ljava/lang/String;
 
-    .line 1643
+    .line 1645
     iput-object p6, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImgPath:Ljava/lang/String;
 
-    .line 1644
+    .line 1646
     iput-object p7, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mFileType:Ljava/lang/String;
 
-    .line 1645
+    .line 1647
     return-void
 .end method
 
@@ -226,7 +226,7 @@
     .locals 1
 
     .prologue
-    .line 1661
+    .line 1663
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerID:Ljava/lang/String;
 
     return-object v0
@@ -236,7 +236,7 @@
     .locals 1
 
     .prologue
-    .line 1663
+    .line 1665
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerName:Ljava/lang/String;
 
     return-object v0
@@ -246,7 +246,7 @@
     .locals 1
 
     .prologue
-    .line 1692
+    .line 1694
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mExpand:Z
 
     return v0
@@ -256,15 +256,15 @@
     .locals 1
 
     .prologue
-    .line 1674
+    .line 1676
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mFileType:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 1675
+    .line 1677
     const/4 v0, -0x1
 
-    .line 1676
+    .line 1678
     :goto_0
     return v0
 
@@ -282,7 +282,7 @@
     .locals 1
 
     .prologue
-    .line 1669
+    .line 1671
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mId:Ljava/lang/String;
 
     return-object v0
@@ -292,7 +292,7 @@
     .locals 1
 
     .prologue
-    .line 1667
+    .line 1669
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImg:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -302,7 +302,7 @@
     .locals 1
 
     .prologue
-    .line 1665
+    .line 1667
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImgPath:Ljava/lang/String;
 
     return-object v0
@@ -312,7 +312,7 @@
     .locals 1
 
     .prologue
-    .line 1690
+    .line 1692
     iget v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mLevel:I
 
     return v0
@@ -322,7 +322,7 @@
     .locals 1
 
     .prologue
-    .line 1668
+    .line 1670
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mName:Ljava/lang/String;
 
     return-object v0
@@ -332,7 +332,7 @@
     .locals 1
 
     .prologue
-    .line 1694
+    .line 1696
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mParentID:Ljava/lang/String;
 
     return-object v0
@@ -342,7 +342,7 @@
     .locals 2
 
     .prologue
-    .line 1659
+    .line 1661
     iget-wide v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mPos:J
 
     return-wide v0
@@ -352,7 +352,7 @@
     .locals 2
 
     .prologue
-    .line 1693
+    .line 1695
     iget-wide v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mStartIdx:J
 
     return-wide v0
@@ -364,17 +364,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1680
+    .line 1682
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mFileType:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 1686
+    .line 1688
     :cond_0
     :goto_0
     return v0
 
-    .line 1683
+    .line 1685
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mFileType:Ljava/lang/String;
 
@@ -384,7 +384,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1684
+    .line 1686
     const/4 v0, 0x1
 
     goto :goto_0
@@ -395,7 +395,7 @@
     .parameter "ID"
 
     .prologue
-    .line 1660
+    .line 1662
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerID:Ljava/lang/String;
 
     return-void
@@ -406,7 +406,7 @@
     .parameter "Name"
 
     .prologue
-    .line 1662
+    .line 1664
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mContainerName:Ljava/lang/String;
 
     return-void
@@ -417,7 +417,7 @@
     .parameter "expand"
 
     .prologue
-    .line 1691
+    .line 1693
     iput-boolean p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mExpand:Z
 
     return-void
@@ -428,7 +428,7 @@
     .parameter "type"
 
     .prologue
-    .line 1671
+    .line 1673
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -443,7 +443,7 @@
     .parameter "type"
 
     .prologue
-    .line 1670
+    .line 1672
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mFileType:Ljava/lang/String;
 
     return-void
@@ -454,7 +454,7 @@
     .parameter "img"
 
     .prologue
-    .line 1666
+    .line 1668
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImg:Landroid/graphics/Bitmap;
 
     return-void
@@ -465,7 +465,7 @@
     .parameter "path"
 
     .prologue
-    .line 1664
+    .line 1666
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mImgPath:Ljava/lang/String;
 
     return-void
@@ -476,7 +476,7 @@
     .parameter "level"
 
     .prologue
-    .line 1689
+    .line 1691
     iput p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mLevel:I
 
     return-void
@@ -487,7 +487,7 @@
     .parameter "ID"
 
     .prologue
-    .line 1695
+    .line 1697
     iput-object p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mParentID:Ljava/lang/String;
 
     return-void
@@ -497,7 +497,7 @@
     .locals 1
 
     .prologue
-    .line 1701
+    .line 1703
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mIsCancelled:Z
 
     return v0
@@ -508,9 +508,9 @@
     .parameter "flag"
 
     .prologue
-    .line 1698
+    .line 1700
     iput-boolean p1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->mIsCancelled:Z
 
-    .line 1699
+    .line 1701
     return-void
 .end method

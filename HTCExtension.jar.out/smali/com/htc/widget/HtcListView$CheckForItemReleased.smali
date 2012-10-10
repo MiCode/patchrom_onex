@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 5637
+    .line 5650
     iput-object p1, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
     .parameter "x1"
 
     .prologue
-    .line 5637
+    .line 5650
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcListView$CheckForItemReleased;-><init>(Lcom/htc/widget/HtcListView;)V
 
     return-void
@@ -61,7 +61,7 @@
     .prologue
     const/high16 v1, 0x3f80
 
-    .line 5648
+    .line 5661
     iget-object v0, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getScaleX()F
@@ -82,24 +82,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 5649
+    .line 5662
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v0, p0}, Lcom/htc/widget/HtcListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 5656
+    .line 5669
     :cond_1
     :goto_0
     return-void
 
-    .line 5652
+    .line 5665
     :cond_2
     iget-object v0, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 5653
+    .line 5666
     iget-object v0, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v1, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->mView:Landroid/view/View;
@@ -121,20 +121,20 @@
     .parameter "id"
 
     .prologue
-    .line 5642
+    .line 5655
     iput-object p1, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->mView:Landroid/view/View;
 
-    .line 5643
+    .line 5656
     iput p2, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->mPosition:I
 
-    .line 5644
+    .line 5657
     iput-wide p3, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->mId:J
 
-    .line 5645
+    .line 5658
     iget-object v0, p0, Lcom/htc/widget/HtcListView$CheckForItemReleased;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v0, p0}, Lcom/htc/widget/HtcListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 5646
+    .line 5659
     return-void
 .end method

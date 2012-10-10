@@ -151,7 +151,7 @@
 
     const/4 v3, 0x0
 
-    .line 207
+    .line 209
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -168,14 +168,14 @@
 
     sput-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->REMINDERS_PROJECTION:[Ljava/lang/String;
 
-    .line 230
+    .line 232
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
-    .line 232
+    .line 234
     sget-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
     const-string v1, "SU"
@@ -186,7 +186,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 233
+    .line 235
     sget-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
     const-string v1, "MO"
@@ -197,7 +197,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
+    .line 236
     sget-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
     const-string v1, "TU"
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
+    .line 237
     sget-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
     const-string v1, "WE"
@@ -219,7 +219,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
+    .line 238
     sget-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
     const-string v1, "TH"
@@ -230,7 +230,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
+    .line 239
     sget-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
     const-string v1, "FR"
@@ -243,7 +243,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
+    .line 240
     sget-object v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
 
     const-string v1, "SA"
@@ -256,7 +256,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
+    .line 243
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -302,48 +302,48 @@
     .locals 1
 
     .prologue
-    .line 249
+    .line 251
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
+    .line 188
     const-string v0, "SU"
 
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->WKST:Ljava/lang/String;
 
-    .line 217
+    .line 219
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->DEBUG:Z
-
-    .line 243
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
-
-    .line 244
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDo_ContentValue:Ljava/util/ArrayList;
 
     .line 245
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
 
     .line 246
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDo_ContentValue:Ljava/util/ArrayList;
+
+    .line 247
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
+
+    .line 248
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDoAlarm_ContentValue:Ljava/util/ArrayList;
 
-    .line 252
+    .line 254
     return-void
 .end method
 
@@ -353,48 +353,48 @@
     .parameter "uniEventUri"
 
     .prologue
-    .line 264
+    .line 266
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
+    .line 188
     const-string v0, "SU"
 
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->WKST:Ljava/lang/String;
 
-    .line 217
+    .line 219
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->DEBUG:Z
-
-    .line 243
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
-
-    .line 244
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDo_ContentValue:Ljava/util/ArrayList;
 
     .line 245
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
 
     .line 246
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDo_ContentValue:Ljava/util/ArrayList;
+
+    .line 247
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
+
+    .line 248
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDoAlarm_ContentValue:Ljava/util/ArrayList;
 
-    .line 266
+    .line 268
     return-void
 .end method
 
@@ -404,51 +404,51 @@
     .parameter "c"
 
     .prologue
-    .line 259
+    .line 261
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
+    .line 188
     const-string v0, "SU"
 
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->WKST:Ljava/lang/String;
 
-    .line 217
+    .line 219
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->DEBUG:Z
-
-    .line 243
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
-
-    .line 244
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDo_ContentValue:Ljava/util/ArrayList;
 
     .line 245
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
 
     .line 246
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDo_ContentValue:Ljava/util/ArrayList;
+
+    .line 247
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
+
+    .line 248
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDoAlarm_ContentValue:Ljava/util/ArrayList;
 
-    .line 260
+    .line 262
     invoke-direct {p0, p1, p2}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->init(Landroid/database/Cursor;Landroid/content/Context;)V
 
-    .line 261
+    .line 263
     return-void
 .end method
 
@@ -461,22 +461,22 @@
     .prologue
     const/4 v6, 0x4
 
-    .line 1786
+    .line 1799
     invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1787
+    .line 1800
     .local v1, nDay:I
     invoke-virtual {p2, v6}, Landroid/text/format/Time;->getActualMaximum(I)I
 
     move-result v0
 
-    .line 1788
+    .line 1801
     .local v0, MAX_DAY:I
     add-int v2, v1, p1
 
-    .line 1790
+    .line 1803
     .local v2, tempDay:I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -498,7 +498,7 @@
 
     invoke-direct {p0, v3}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1791
+    .line 1804
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -519,7 +519,7 @@
 
     invoke-direct {p0, v3}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1792
+    .line 1805
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -540,7 +540,7 @@
 
     invoke-direct {p0, v3}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1793
+    .line 1806
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -561,19 +561,19 @@
 
     invoke-direct {p0, v3}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1794
+    .line 1807
     sub-int v3, v2, v0
 
     if-lez v3, :cond_1
 
-    .line 1796
+    .line 1809
     sub-int v3, v2, v0
 
     add-int/lit8 v3, v3, -0x1
 
     add-int/lit8 v1, v3, 0x1
 
-    .line 1812
+    .line 1825
     :cond_0
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -596,23 +596,23 @@
 
     invoke-direct {p0, v3}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1813
+    .line 1826
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
     return-object v3
 
-    .line 1797
+    .line 1810
     :cond_1
     if-nez v2, :cond_3
 
-    .line 1799
+    .line 1812
     iget v3, p2, Landroid/text/format/Time;->month:I
 
     if-nez v3, :cond_2
 
-    .line 1800
+    .line 1813
     iget v3, p2, Landroid/text/format/Time;->monthDay:I
 
     const/16 v4, 0xb
@@ -625,20 +625,20 @@
 
     invoke-virtual {p2, v3, v4, v5}, Landroid/text/format/Time;->set(III)V
 
-    .line 1804
+    .line 1817
     :goto_1
     const/4 v3, 0x0
 
     invoke-virtual {p2, v3}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1805
+    .line 1818
     invoke-virtual {p2, v6}, Landroid/text/format/Time;->getActualMaximum(I)I
 
     move-result v1
 
     goto :goto_0
 
-    .line 1802
+    .line 1815
     :cond_2
     iget v3, p2, Landroid/text/format/Time;->monthDay:I
 
@@ -654,7 +654,7 @@
 
     goto :goto_1
 
-    .line 1806
+    .line 1819
     :cond_3
     iget v3, p2, Landroid/text/format/Time;->monthDay:I
 
@@ -662,7 +662,7 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 1810
+    .line 1823
     move v1, v2
 
     goto :goto_0
@@ -676,18 +676,18 @@
     .parameter "monthDay"
 
     .prologue
-    .line 1817
+    .line 1830
     invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 1818
+    .line 1831
     .local v2, nMonth:I
     invoke-static {p4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 1820
+    .line 1833
     .local v1, nDay:I
     const/4 v4, 0x4
 
@@ -695,11 +695,11 @@
 
     move-result v0
 
-    .line 1821
+    .line 1834
     .local v0, MAX_DAY:I
     add-int v3, v1, p1
 
-    .line 1823
+    .line 1836
     .local v3, tempDay:I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -731,7 +731,7 @@
 
     invoke-direct {p0, v4}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1824
+    .line 1837
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -752,7 +752,7 @@
 
     invoke-direct {p0, v4}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1825
+    .line 1838
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -773,30 +773,30 @@
 
     invoke-direct {p0, v4}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1827
+    .line 1840
     sub-int v4, v3, v0
 
     if-lez v4, :cond_1
 
-    .line 1829
+    .line 1842
     sub-int v4, v3, v0
 
     add-int/lit8 v4, v4, -0x1
 
     add-int/lit8 v1, v4, 0x1
 
-    .line 1830
+    .line 1843
     add-int/lit8 v2, v2, 0x1
 
-    .line 1832
+    .line 1845
     const/16 v4, 0xc
 
     if-le v2, v4, :cond_0
 
-    .line 1833
+    .line 1846
     const/4 v2, 0x1
 
-    .line 1843
+    .line 1856
     :cond_0
     :goto_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -819,24 +819,24 @@
 
     invoke-direct {p0, v4}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1844
+    .line 1857
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
 
     return-object v4
 
-    .line 1835
+    .line 1848
     :cond_1
     if-gtz v3, :cond_0
 
-    .line 1837
+    .line 1850
     add-int/lit8 v2, v2, -0x1
 
-    .line 1839
+    .line 1852
     if-gtz v2, :cond_0
 
-    .line 1840
+    .line 1853
     const/16 v2, 0xc
 
     goto :goto_0
@@ -853,7 +853,7 @@
 
     const/4 v3, 0x0
 
-    .line 1848
+    .line 1861
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -874,33 +874,33 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1850
+    .line 1863
     const/4 v0, 0x0
 
-    .line 1851
+    .line 1864
     .local v0, bHaveZ:Z
     const/4 v1, 0x1
 
-    .line 1853
+    .line 1866
     .local v1, bInUTC:Z
     new-instance v2, Landroid/text/format/Time;
 
     invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
-    .line 1854
+    .line 1867
     .local v2, t:Landroid/text/format/Time;
     invoke-virtual {v2, p1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 1856
+    .line 1869
     const-string v5, "Z"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    .line 1858
+    .line 1871
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -931,12 +931,12 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1859
+    .line 1872
     if-nez v1, :cond_0
 
     if-nez v0, :cond_a
 
-    .line 1860
+    .line 1873
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -960,7 +960,7 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1862
+    .line 1875
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -983,7 +983,7 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1864
+    .line 1877
     iget v5, v2, Landroid/text/format/Time;->month:I
 
     if-ltz v5, :cond_1
@@ -994,7 +994,7 @@
 
     if-le v5, v6, :cond_2
 
-    .line 1865
+    .line 1878
     :cond_1
     const-string v4, "VCalendarUtils"
 
@@ -1026,11 +1026,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1900
+    .line 1913
     :goto_0
     return v3
 
-    .line 1869
+    .line 1882
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1054,7 +1054,7 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1871
+    .line 1884
     iget v5, v2, Landroid/text/format/Time;->monthDay:I
 
     if-lt v5, v4, :cond_3
@@ -1065,7 +1065,7 @@
 
     if-le v5, v6, :cond_4
 
-    .line 1872
+    .line 1885
     :cond_3
     const-string v4, "VCalendarUtils"
 
@@ -1099,7 +1099,7 @@
 
     goto :goto_0
 
-    .line 1876
+    .line 1889
     :cond_4
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1123,7 +1123,7 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1878
+    .line 1891
     iget v5, v2, Landroid/text/format/Time;->hour:I
 
     if-ltz v5, :cond_5
@@ -1134,7 +1134,7 @@
 
     if-le v5, v6, :cond_6
 
-    .line 1879
+    .line 1892
     :cond_5
     const-string v4, "VCalendarUtils"
 
@@ -1168,7 +1168,7 @@
 
     goto/16 :goto_0
 
-    .line 1883
+    .line 1896
     :cond_6
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1192,7 +1192,7 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1885
+    .line 1898
     iget v5, v2, Landroid/text/format/Time;->minute:I
 
     if-ltz v5, :cond_7
@@ -1201,7 +1201,7 @@
 
     if-le v5, v7, :cond_8
 
-    .line 1886
+    .line 1899
     :cond_7
     const-string v4, "VCalendarUtils"
 
@@ -1235,7 +1235,7 @@
 
     goto/16 :goto_0
 
-    .line 1890
+    .line 1903
     :cond_8
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1259,7 +1259,7 @@
 
     invoke-direct {p0, v5}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 1892
+    .line 1905
     iget v5, v2, Landroid/text/format/Time;->second:I
 
     if-ltz v5, :cond_9
@@ -1268,7 +1268,7 @@
 
     if-le v5, v7, :cond_b
 
-    .line 1893
+    .line 1906
     :cond_9
     const-string v4, "VCalendarUtils"
 
@@ -1302,7 +1302,7 @@
 
     goto/16 :goto_0
 
-    .line 1897
+    .line 1910
     :cond_a
     const-string v4, "VCalendarUtils"
 
@@ -1337,7 +1337,7 @@
     :cond_b
     move v3, v4
 
-    .line 1900
+    .line 1913
     goto/16 :goto_0
 .end method
 
@@ -1347,7 +1347,7 @@
     .parameter "eventTime"
 
     .prologue
-    .line 1923
+    .line 1936
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1356,12 +1356,12 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 1924
+    .line 1937
     const/4 v0, 0x0
 
     iput-boolean v0, p2, Landroid/text/format/Time;->allDay:Z
 
-    .line 1926
+    .line 1939
     :cond_0
     return-void
 .end method
@@ -1371,7 +1371,7 @@
     .parameter "strTime"
 
     .prologue
-    .line 2016
+    .line 2029
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1392,10 +1392,10 @@
 
     invoke-direct {p0, v1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 2017
+    .line 2030
     const/4 v0, 0x0
 
-    .line 2018
+    .line 2031
     .local v0, bHaveZ:Z
     const-string v1, "Z"
 
@@ -1403,7 +1403,7 @@
 
     move-result v0
 
-    .line 2019
+    .line 2032
     return v0
 .end method
 
@@ -1413,10 +1413,10 @@
     .parameter "weekDay"
 
     .prologue
-    .line 1767
+    .line 1780
     const/4 v1, 0x0
 
-    .line 1769
+    .line 1782
     .local v1, nIdx:I
     :try_start_0
     sget-object v2, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDayAry:Ljava/util/HashMap;
@@ -1447,7 +1447,7 @@
 
     move-result v1
 
-    .line 1773
+    .line 1786
     :goto_0
     const-string v2, "VCalendarUtils"
 
@@ -1491,16 +1491,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1774
+    .line 1787
     add-int/2addr v1, p1
 
-    .line 1776
+    .line 1789
     if-gez v1, :cond_1
 
-    .line 1777
+    .line 1790
     const/4 v1, 0x6
 
-    .line 1781
+    .line 1794
     :cond_0
     :goto_1
     const-string v2, "VCalendarUtils"
@@ -1525,18 +1525,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1782
+    .line 1795
     sget-object v2, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->weekDays:[Ljava/lang/String;
 
     aget-object v2, v2, v1
 
     return-object v2
 
-    .line 1770
+    .line 1783
     :catch_0
     move-exception v0
 
-    .line 1771
+    .line 1784
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "VCalendarUtils"
 
@@ -1562,14 +1562,14 @@
 
     goto :goto_0
 
-    .line 1778
+    .line 1791
     .end local v0           #e:Ljava/lang/Exception;
     :cond_1
     const/4 v2, 0x6
 
     if-le v1, v2, :cond_0
 
-    .line 1779
+    .line 1792
     const/4 v1, 0x0
 
     goto :goto_1
@@ -1583,55 +1583,55 @@
 
     const/4 v0, 0x0
 
-    .line 699
+    .line 701
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->uid:Ljava/lang/String;
 
-    .line 700
+    .line 702
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
 
-    .line 701
+    .line 703
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
-    .line 702
+    .line 704
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTEnd:Ljava/lang/String;
 
-    .line 703
+    .line 705
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
-    .line 704
+    .line 706
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strAlarm:Ljava/lang/String;
 
-    .line 705
+    .line 707
     iput-boolean v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->hasAlarm:Z
 
-    .line 706
+    .line 708
     iput-boolean v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
-    .line 707
+    .line 709
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->duration:Ljava/lang/String;
 
-    .line 708
+    .line 710
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
 
-    .line 709
+    .line 711
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
-    .line 710
+    .line 712
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 711
+    .line 713
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
 
-    .line 712
+    .line 714
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rDate:Ljava/lang/String;
 
-    .line 713
+    .line 715
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exRule:Ljava/lang/String;
 
-    .line 714
+    .line 716
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
-    .line 715
+    .line 717
     return-void
 .end method
 
@@ -1640,7 +1640,7 @@
     .parameter "time"
 
     .prologue
-    .line 1607
+    .line 1616
     const-string v0, "%Y%m%dT%H%M00Z"
 
     invoke-virtual {p0, v0}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
@@ -1655,7 +1655,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1907
+    .line 1920
     return-void
 .end method
 
@@ -1664,33 +1664,33 @@
     .parameter "unescaped"
 
     .prologue
-    .line 1959
+    .line 1972
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1960
+    .line 1973
     const-string v4, ""
 
-    .line 2004
+    .line 2017
     :goto_0
     return-object v4
 
-    .line 1963
+    .line 1976
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1964
+    .line 1977
     .local v3, tmpBuilder:Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 1965
+    .line 1978
     .local v2, length:I
     const/4 v1, 0x0
 
@@ -1698,47 +1698,47 @@
     :goto_1
     if-ge v1, v2, :cond_2
 
-    .line 1966
+    .line 1979
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 1967
+    .line 1980
     .local v0, ch:C
     const v4, 0xff0d
 
     if-ne v0, v4, :cond_1
 
-    .line 1968
+    .line 1981
     const/16 v0, 0x2d
 
-    .line 1971
+    .line 1984
     :cond_1
     sparse-switch v0, :sswitch_data_0
 
-    .line 1999
+    .line 2012
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1965
+    .line 1978
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1973
+    .line 1986
     :sswitch_0
     const/16 v4, 0x5c
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1974
+    .line 1987
     const/16 v4, 0x3b
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 1995
+    .line 2008
     :sswitch_1
     const-string v4, "\\\\"
 
@@ -1746,7 +1746,7 @@
 
     goto :goto_2
 
-    .line 2004
+    .line 2017
     .end local v0           #ch:C
     :cond_2
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1755,7 +1755,7 @@
 
     goto :goto_0
 
-    .line 1971
+    .line 1984
     nop
 
     :sswitch_data_0
@@ -1770,17 +1770,17 @@
     .parameter "recurrence"
 
     .prologue
-    .line 405
+    .line 407
     if-nez p0, :cond_0
 
-    .line 406
+    .line 408
     const/4 v1, 0x0
 
-    .line 412
+    .line 414
     :goto_0
     return-object v1
 
-    .line 408
+    .line 410
     :cond_0
     const-string v1, "TZID"
 
@@ -1788,11 +1788,11 @@
 
     move-result-object v0
 
-    .line 409
+    .line 411
     .local v0, tzidParam:Lcom/android/calendarcommon/ICalendar$Parameter;
     if-eqz v0, :cond_1
 
-    .line 410
+    .line 412
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1823,7 +1823,7 @@
 
     goto :goto_0
 
-    .line 412
+    .line 414
     :cond_1
     invoke-virtual {p0}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -1837,7 +1837,7 @@
     .parameter "t"
 
     .prologue
-    .line 515
+    .line 517
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/text/format/Time;->toMillis(Z)J
@@ -1862,17 +1862,17 @@
     .prologue
     const/4 v9, -0x1
 
-    .line 464
+    .line 466
     const/4 v4, 0x0
 
     .local v4, pos1:I
     const/4 v5, 0x0
 
-    .line 465
+    .line 467
     .local v5, pos2:I
     const/4 v3, 0x0
 
-    .line 466
+    .line 468
     .local v3, negative:Z
     const/4 v0, 0x0
 
@@ -1888,7 +1888,7 @@
     .local v6, second:I
     const/4 v7, 0x0
 
-    .line 469
+    .line 471
     .local v7, week:I
     const/16 v8, 0x2d
 
@@ -1898,10 +1898,10 @@
 
     if-eq v8, v9, :cond_0
 
-    .line 470
+    .line 472
     const/4 v3, 0x1
 
-    .line 471
+    .line 473
     :cond_0
     const/16 v8, 0x50
 
@@ -1909,10 +1909,10 @@
 
     move-result v4
 
-    .line 472
+    .line 474
     if-ne v4, v9, :cond_2
 
-    .line 511
+    .line 513
     :cond_1
     :goto_0
     mul-int/lit8 v8, v1, 0x3c
@@ -1929,21 +1929,21 @@
 
     return-wide v8
 
-    .line 476
+    .line 478
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
-    .line 478
+    .line 480
     const/16 v8, 0x44
 
     invoke-virtual {p0, v8, v4}, Ljava/lang/String;->indexOf(II)I
 
     move-result v5
 
-    .line 479
+    .line 481
     if-eq v5, v9, :cond_3
 
-    .line 480
+    .line 482
     invoke-virtual {p0, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v8
@@ -1952,7 +1952,7 @@
 
     move-result v0
 
-    .line 483
+    .line 485
     :cond_3
     const/16 v8, 0x54
 
@@ -1960,23 +1960,23 @@
 
     move-result v5
 
-    .line 484
+    .line 486
     if-eq v5, v9, :cond_6
 
-    .line 485
+    .line 487
     add-int/lit8 v4, v5, 0x1
 
-    .line 486
+    .line 488
     const/16 v8, 0x48
 
     invoke-virtual {p0, v8, v4}, Ljava/lang/String;->indexOf(II)I
 
     move-result v5
 
-    .line 487
+    .line 489
     if-eq v5, v9, :cond_4
 
-    .line 488
+    .line 490
     invoke-virtual {p0, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v8
@@ -1985,10 +1985,10 @@
 
     move-result v1
 
-    .line 489
+    .line 491
     add-int/lit8 v4, v5, 0x1
 
-    .line 491
+    .line 493
     :cond_4
     const/16 v8, 0x4d
 
@@ -1996,10 +1996,10 @@
 
     move-result v5
 
-    .line 492
+    .line 494
     if-eq v5, v9, :cond_5
 
-    .line 493
+    .line 495
     invoke-virtual {p0, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v8
@@ -2008,10 +2008,10 @@
 
     move-result v2
 
-    .line 494
+    .line 496
     add-int/lit8 v4, v5, 0x1
 
-    .line 496
+    .line 498
     :cond_5
     const/16 v8, 0x53
 
@@ -2019,10 +2019,10 @@
 
     move-result v5
 
-    .line 497
+    .line 499
     if-eq v5, v9, :cond_6
 
-    .line 498
+    .line 500
     invoke-virtual {p0, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v8
@@ -2031,10 +2031,10 @@
 
     move-result v6
 
-    .line 499
+    .line 501
     add-int/lit8 v4, v5, 0x1
 
-    .line 503
+    .line 505
     :cond_6
     const/16 v8, 0x57
 
@@ -2042,10 +2042,10 @@
 
     move-result v5
 
-    .line 504
+    .line 506
     if-eq v5, v9, :cond_1
 
-    .line 505
+    .line 507
     invoke-virtual {p0, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v8
@@ -2054,7 +2054,7 @@
 
     move-result v7
 
-    .line 506
+    .line 508
     mul-int/lit8 v0, v7, 0x7
 
     goto :goto_0
@@ -2066,23 +2066,23 @@
     .parameter "propertyName"
 
     .prologue
-    .line 417
+    .line 419
     invoke-static {p0, p1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->extractString_Impl(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 419
+    .line 421
     .local v0, val:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 420
+    .line 422
     const/4 v1, 0x0
 
-    .line 428
+    .line 430
     :goto_0
     return-object v1
 
-    .line 422
+    .line 424
     :cond_0
     const-string v1, "\r\n"
 
@@ -2092,14 +2092,14 @@
 
     move-result-object v0
 
-    .line 424
+    .line 426
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isSBM()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 425
+    .line 427
     const-string v1, "\\\\"
 
     const-string v2, "\\"
@@ -2108,7 +2108,7 @@
 
     move-result-object v0
 
-    .line 426
+    .line 428
     const-string v1, "\\;"
 
     const-string v2, ";"
@@ -2120,7 +2120,7 @@
     :cond_1
     move-object v1, v0
 
-    .line 428
+    .line 430
     goto :goto_0
 .end method
 
@@ -2132,23 +2132,23 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 433
+    .line 435
     invoke-virtual {p0, p1}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
 
     move-result-object v3
 
-    .line 434
+    .line 436
     .local v3, property:Lcom/android/calendarcommon/ICalendar$Property;
     if-eqz v3, :cond_0
 
-    .line 436
+    .line 438
     const-string v6, "ENCODING"
 
     invoke-virtual {v3, v6}, Lcom/android/calendarcommon/ICalendar$Property;->getFirstParameter(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Parameter;
 
     move-result-object v2
 
-    .line 437
+    .line 439
     .local v2, enc:Lcom/android/calendarcommon/ICalendar$Parameter;
     const-string v6, "CHARSET"
 
@@ -2156,23 +2156,23 @@
 
     move-result-object v0
 
-    .line 440
+    .line 442
     .local v0, charSet:Lcom/android/calendarcommon/ICalendar$Parameter;
     if-nez v2, :cond_1
 
-    .line 441
+    .line 443
     invoke-virtual {v3}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 460
+    .line 462
     .end local v0           #charSet:Lcom/android/calendarcommon/ICalendar$Parameter;
     .end local v2           #enc:Lcom/android/calendarcommon/ICalendar$Parameter;
     :cond_0
     :goto_0
     return-object v5
 
-    .line 443
+    .line 445
     .restart local v0       #charSet:Lcom/android/calendarcommon/ICalendar$Parameter;
     .restart local v2       #enc:Lcom/android/calendarcommon/ICalendar$Parameter;
     :cond_1
@@ -2186,16 +2186,16 @@
 
     if-eqz v6, :cond_3
 
-    .line 444
+    .line 446
     new-instance v4, Lorg/apache/commons/codec/net/QuotedPrintableCodec;
 
     invoke-direct {v4}, Lorg/apache/commons/codec/net/QuotedPrintableCodec;-><init>()V
 
-    .line 446
+    .line 448
     .local v4, qpdec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
     if-nez v0, :cond_2
 
-    .line 447
+    .line 449
     :try_start_0
     invoke-virtual {v3}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -2211,7 +2211,7 @@
 
     goto :goto_0
 
-    .line 449
+    .line 451
     :cond_2
     invoke-virtual {v3}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -2227,15 +2227,15 @@
 
     goto :goto_0
 
-    .line 451
+    .line 453
     :catch_0
     move-exception v1
 
-    .line 452
+    .line 454
     .local v1, e:Ljava/lang/Exception;
     goto :goto_0
 
-    .line 455
+    .line 457
     .end local v1           #e:Ljava/lang/Exception;
     .end local v4           #qpdec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
     :cond_3
@@ -2249,7 +2249,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 456
+    .line 458
     new-instance v5, Ljava/lang/String;
 
     invoke-virtual {v3}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
@@ -2275,21 +2275,21 @@
     .parameter "propertyName"
 
     .prologue
-    .line 370
+    .line 372
     invoke-virtual {p0, p1}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
 
     move-result-object v0
 
-    .line 371
+    .line 373
     .local v0, property:Lcom/android/calendarcommon/ICalendar$Property;
     if-eqz v0, :cond_0
 
-    .line 372
+    .line 374
     invoke-virtual {v0}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 374
+    .line 376
     :goto_0
     return-object v1
 
@@ -2305,12 +2305,12 @@
     .parameter "name"
 
     .prologue
-    .line 379
+    .line 381
     invoke-virtual {p0, p1}, Lcom/android/calendarcommon/ICalendar$Component;->getProperties(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 380
+    .line 382
     .local v2, properties:Ljava/util/List;,"Ljava/util/List<Lcom/android/calendarcommon/ICalendar$Property;>;"
     if-eqz v2, :cond_0
 
@@ -2320,15 +2320,15 @@
 
     if-eqz v5, :cond_1
 
-    .line 381
+    .line 383
     :cond_0
     const/4 v5, 0x0
 
-    .line 401
+    .line 403
     :goto_0
     return-object v5
 
-    .line 384
+    .line 386
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -2338,7 +2338,7 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 385
+    .line 387
     const/4 v5, 0x0
 
     invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2353,17 +2353,17 @@
 
     goto :goto_0
 
-    .line 388
+    .line 390
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 390
+    .line 392
     .local v4, sb:Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 391
+    .line 393
     .local v0, first:Z
     invoke-virtual {p0, p1}, Lcom/android/calendarcommon/ICalendar$Component;->getProperties(Ljava/lang/String;)Ljava/util/List;
 
@@ -2387,14 +2387,14 @@
 
     check-cast v3, Lcom/android/calendarcommon/ICalendar$Property;
 
-    .line 392
+    .line 394
     .local v3, property:Lcom/android/calendarcommon/ICalendar$Property;
     if-eqz v0, :cond_3
 
-    .line 393
+    .line 395
     const/4 v0, 0x0
 
-    .line 399
+    .line 401
     :goto_2
     invoke-virtual {v3}, Lcom/android/calendarcommon/ICalendar$Property;->getValue()Ljava/lang/String;
 
@@ -2404,7 +2404,7 @@
 
     goto :goto_1
 
-    .line 397
+    .line 399
     :cond_3
     const-string v5, "\n"
 
@@ -2412,7 +2412,7 @@
 
     goto :goto_2
 
-    .line 401
+    .line 403
     .end local v3           #property:Lcom/android/calendarcommon/ICalendar$Property;
     :cond_4
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2426,21 +2426,48 @@
     .locals 1
 
     .prologue
-    .line 1756
+    .line 1765
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isSBM()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1757
+    .line 1766
     const-string v0, "Shift_JIS"
 
-    .line 1759
+    .line 1772
     :goto_0
     return-object v0
 
+    .line 1767
     :cond_0
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isBig5()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1768
+    const-string v0, "BIG5"
+
+    goto :goto_0
+
+    .line 1769
+    :cond_1
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isGB2312()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 1770
+    const-string v0, "GB2312"
+
+    goto :goto_0
+
+    .line 1772
+    :cond_2
     const-string v0, "UTF-8"
 
     goto :goto_0
@@ -2452,7 +2479,7 @@
     .parameter "t2"
 
     .prologue
-    .line 1910
+    .line 1923
     const-string v0, "VCalendarUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2475,7 +2502,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1911
+    .line 1924
     const-string v0, "VCalendarUtils"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2498,21 +2525,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1913
+    .line 1926
     iget v0, p1, Landroid/text/format/Time;->year:I
 
     iget v1, p2, Landroid/text/format/Time;->year:I
 
     if-le v0, v1, :cond_0
 
-    .line 1914
+    .line 1927
     const/4 v0, 0x1
 
-    .line 1918
+    .line 1931
     :goto_0
     return v0
 
-    .line 1915
+    .line 1928
     :cond_0
     iget v0, p1, Landroid/text/format/Time;->year:I
 
@@ -2520,12 +2547,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1916
+    .line 1929
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 1918
+    .line 1931
     :cond_1
     iget v0, p1, Landroid/text/format/Time;->yearDay:I
 
@@ -2541,45 +2568,45 @@
     .parameter "p"
 
     .prologue
-    .line 735
+    .line 737
     packed-switch p1, :pswitch_data_0
 
-    .line 752
+    .line 754
     const-string v0, "undefined priority"
 
-    .line 754
+    .line 756
     .local v0, result:Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 740
+    .line 742
     .end local v0           #result:Ljava/lang/String;
     :pswitch_0
     const-string v0, "HIGH"
 
-    .line 741
+    .line 743
     .restart local v0       #result:Ljava/lang/String;
     goto :goto_0
 
-    .line 743
+    .line 745
     .end local v0           #result:Ljava/lang/String;
     :pswitch_1
     const-string v0, "MEDIUM"
 
-    .line 744
+    .line 746
     .restart local v0       #result:Ljava/lang/String;
     goto :goto_0
 
-    .line 749
+    .line 751
     .end local v0           #result:Ljava/lang/String;
     :pswitch_2
     const-string v0, "LOW"
 
-    .line 750
+    .line 752
     .restart local v0       #result:Ljava/lang/String;
     goto :goto_0
 
-    .line 735
+    .line 737
     nop
 
     :pswitch_data_0
@@ -2604,10 +2631,10 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1929
+    .line 1942
     iget v5, p1, Landroid/text/format/Time;->year:I
 
-    .line 1930
+    .line 1943
     .local v5, year:I
     const-string v6, "VCalendarUtils"
 
@@ -2641,18 +2668,18 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1931
+    .line 1944
     const/4 v3, 0x0
 
-    .line 1932
+    .line 1945
     .local v3, inWhichMonth:I
     const/4 v2, 0x0
 
-    .line 1933
+    .line 1946
     .local v2, inWhichDay:I
     const/4 v0, 0x0
 
-    .line 1935
+    .line 1948
     .local v0, dayCount:I
     const/4 v1, 0x0
 
@@ -2662,37 +2689,37 @@
 
     if-ge v1, v6, :cond_0
 
-    .line 1936
+    .line 1949
     move v3, v1
 
-    .line 1937
+    .line 1950
     const/4 v6, 0x1
 
     invoke-virtual {p1, v6, v1, v5}, Landroid/text/format/Time;->set(III)V
 
-    .line 1938
+    .line 1951
     invoke-virtual {p1, v9}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1939
+    .line 1952
     const/4 v6, 0x4
 
     invoke-virtual {p1, v6}, Landroid/text/format/Time;->getActualMaximum(I)I
 
     move-result v4
 
-    .line 1940
+    .line 1953
     .local v4, num:I
     add-int/2addr v0, v4
 
-    .line 1941
+    .line 1954
     if-le v0, p2, :cond_1
 
-    .line 1942
+    .line 1955
     sub-int v6, v0, v4
 
     sub-int v2, p2, v6
 
-    .line 1952
+    .line 1965
     .end local v4           #num:I
     :cond_0
     :goto_1
@@ -2730,27 +2757,27 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1953
+    .line 1966
     invoke-virtual {p1, v2, v3, v5}, Landroid/text/format/Time;->set(III)V
 
-    .line 1954
+    .line 1967
     invoke-virtual {p1, v9}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1955
+    .line 1968
     return-object p1
 
-    .line 1944
+    .line 1957
     .restart local v4       #num:I
     :cond_1
     if-ne v0, p2, :cond_2
 
-    .line 1945
+    .line 1958
     move v2, v4
 
-    .line 1946
+    .line 1959
     goto :goto_1
 
-    .line 1935
+    .line 1948
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -2758,15 +2785,15 @@
 .end method
 
 .method private init(Landroid/database/Cursor;Landroid/content/Context;)V
-    .locals 29
+    .locals 30
     .parameter "cur"
     .parameter "c"
 
     .prologue
-    .line 1165
+    .line 1167
     const-wide/16 v11, 0x0
 
-    .line 1168
+    .line 1170
     .local v11, alldayStart:J
     const-string v3, "_id"
 
@@ -2776,7 +2803,7 @@
 
     move-result v14
 
-    .line 1169
+    .line 1171
     .local v14, colID:I
     move-object/from16 v0, p1
 
@@ -2784,7 +2811,7 @@
 
     move-result-wide v20
 
-    .line 1170
+    .line 1172
     .local v20, id:J
     invoke-static/range {v20 .. v21}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -2794,7 +2821,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->_id:Ljava/lang/String;
 
-    .line 1173
+    .line 1175
     const-string v3, "iCalGUID"
 
     move-object/from16 v0, p1
@@ -2803,7 +2830,7 @@
 
     move-result v14
 
-    .line 1174
+    .line 1176
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2814,7 +2841,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->uid:Ljava/lang/String;
 
-    .line 1177
+    .line 1179
     const-string v3, "calendar_id"
 
     move-object/from16 v0, p1
@@ -2823,7 +2850,7 @@
 
     move-result v14
 
-    .line 1178
+    .line 1180
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getInt(I)I
@@ -2834,7 +2861,7 @@
 
     move-result-object v13
 
-    .line 1181
+    .line 1183
     .local v13, calID:Ljava/lang/String;
     const-string v3, "title"
 
@@ -2844,7 +2871,7 @@
 
     move-result v14
 
-    .line 1182
+    .line 1184
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -2855,14 +2882,14 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
-    .line 1183
+    .line 1185
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
-    .line 1184
+    .line 1186
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
@@ -2887,7 +2914,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
-    .line 1185
+    .line 1187
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
@@ -2900,7 +2927,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
-    .line 1189
+    .line 1191
     :cond_0
     const-string v3, "allDay"
 
@@ -2910,14 +2937,14 @@
 
     move-result v14
 
-    .line 1190
+    .line 1192
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
-    if-eqz v3, :cond_c
+    if-eqz v3, :cond_d
 
     const/4 v3, 0x1
 
@@ -2926,7 +2953,7 @@
 
     iput-boolean v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
-    .line 1193
+    .line 1195
     const-string v3, "dtstart"
 
     move-object/from16 v0, p1
@@ -2935,15 +2962,15 @@
 
     move-result v14
 
-    .line 1194
+    .line 1196
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v23
+    move-result-wide v24
 
-    .line 1195
-    .local v23, start:J
+    .line 1197
+    .local v24, start:J
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v3
@@ -2952,37 +2979,37 @@
 
     move-result-object v9
 
-    .line 1196
+    .line 1198
     .local v9, __timezone:Ljava/util/TimeZone;
-    new-instance v26, Landroid/text/format/Time;
+    new-instance v27, Landroid/text/format/Time;
 
-    invoke-direct/range {v26 .. v26}, Landroid/text/format/Time;-><init>()V
+    invoke-direct/range {v27 .. v27}, Landroid/text/format/Time;-><init>()V
 
-    .line 1197
-    .local v26, t:Landroid/text/format/Time;
-    move-object/from16 v0, v26
+    .line 1199
+    .local v27, t:Landroid/text/format/Time;
+    move-object/from16 v0, v27
 
-    move-wide/from16 v1, v23
+    move-wide/from16 v1, v24
 
     invoke-virtual {v0, v1, v2}, Landroid/text/format/Time;->set(J)V
 
-    .line 1198
+    .line 1200
     const-string v3, "UTC"
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 1199
+    .line 1201
     const/4 v15, 0x0
 
-    .line 1200
+    .line 1202
     .local v15, daylightOffset:I
     new-instance v16, Ljava/util/Date;
 
     const/4 v3, 0x0
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->toMillis(Z)J
 
@@ -2992,7 +3019,7 @@
 
     invoke-direct {v0, v7, v8}, Ljava/util/Date;-><init>(J)V
 
-    .line 1201
+    .line 1203
     .local v16, dt:Ljava/util/Date;
     move-object/from16 v0, v16
 
@@ -3002,12 +3029,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 1202
+    .line 1204
     invoke-virtual {v9}, Ljava/util/TimeZone;->getDSTSavings()I
 
     move-result v15
 
-    .line 1204
+    .line 1206
     :cond_1
     move-object/from16 v0, p0
 
@@ -3015,10 +3042,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 1205
+    .line 1207
     const/4 v3, 0x0
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->toMillis(Z)J
 
@@ -3030,21 +3057,21 @@
 
     int-to-long v0, v3
 
-    move-wide/from16 v27, v0
+    move-wide/from16 v28, v0
 
-    sub-long v7, v7, v27
+    sub-long v7, v7, v28
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v7, v8}, Landroid/text/format/Time;->set(J)V
 
-    .line 1206
+    .line 1208
     if-eqz v15, :cond_2
 
-    .line 1207
+    .line 1209
     const/4 v3, 0x0
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->toMillis(Z)J
 
@@ -3052,27 +3079,27 @@
 
     int-to-long v0, v15
 
-    move-wide/from16 v27, v0
+    move-wide/from16 v28, v0
 
-    sub-long v7, v7, v27
+    sub-long v7, v7, v28
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v7, v8}, Landroid/text/format/Time;->set(J)V
 
-    .line 1208
+    .line 1210
     :cond_2
     const/4 v3, 0x0
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->toMillis(Z)J
 
     move-result-wide v11
 
-    .line 1210
+    .line 1212
     :cond_3
-    invoke-static/range {v26 .. v26}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->convertLongToRFC2445DateTime(Landroid/text/format/Time;)Ljava/lang/String;
+    invoke-static/range {v27 .. v27}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->convertLongToRFC2445DateTime(Landroid/text/format/Time;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3080,7 +3107,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
 
-    .line 1222
+    .line 1224
     const-string v3, "dtend"
 
     move-object/from16 v0, p1
@@ -3089,14 +3116,14 @@
 
     move-result v14
 
-    .line 1223
+    .line 1225
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v18
 
-    .line 1224
+    .line 1226
     .local v18, end:J
     const-wide/16 v7, 0x0
 
@@ -3104,7 +3131,7 @@
 
     if-nez v3, :cond_4
 
-    .line 1225
+    .line 1227
     const-string v3, "duration"
 
     move-object/from16 v0, p1
@@ -3113,7 +3140,7 @@
 
     move-result v14
 
-    .line 1226
+    .line 1228
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -3124,7 +3151,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->duration:Ljava/lang/String;
 
-    .line 1228
+    .line 1230
     :try_start_0
     move-object/from16 v0, p0
 
@@ -3144,13 +3171,13 @@
 
     invoke-virtual {v3, v5, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v25
+    move-result-object v26
 
-    .line 1229
-    .local v25, subDur:Ljava/lang/String;
+    .line 1231
+    .local v26, subDur:Ljava/lang/String;
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v25
+    move-object/from16 v1, v26
 
     invoke-direct {v0, v1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isInteger(Ljava/lang/String;)Z
 
@@ -3158,47 +3185,47 @@
 
     if-eqz v3, :cond_4
 
-    .line 1230
-    invoke-static/range {v25 .. v25}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    .line 1232
+    invoke-static/range {v26 .. v26}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-wide v7
 
-    const-wide/16 v27, 0x3e8
+    const-wide/16 v28, 0x3e8
 
-    mul-long v7, v7, v27
+    mul-long v7, v7, v28
 
-    add-long v18, v23, v7
+    add-long v18, v24, v7
 
-    .line 1235
-    .end local v25           #subDur:Ljava/lang/String;
+    .line 1237
+    .end local v26           #subDur:Ljava/lang/String;
     :cond_4
     :goto_1
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     move-wide/from16 v1, v18
 
     invoke-virtual {v0, v1, v2}, Landroid/text/format/Time;->set(J)V
 
-    .line 1236
+    .line 1238
     const-string v3, "UTC"
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 1237
+    .line 1239
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
     if-eqz v3, :cond_5
 
-    .line 1238
+    .line 1240
     const/4 v3, 0x0
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->toMillis(Z)J
 
@@ -3210,21 +3237,21 @@
 
     int-to-long v0, v3
 
-    move-wide/from16 v27, v0
+    move-wide/from16 v28, v0
 
-    sub-long v7, v7, v27
+    sub-long v7, v7, v28
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v7, v8}, Landroid/text/format/Time;->set(J)V
 
-    .line 1239
+    .line 1241
     if-eqz v15, :cond_5
 
-    .line 1240
+    .line 1242
     const/4 v3, 0x0
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v3}, Landroid/text/format/Time;->toMillis(Z)J
 
@@ -3232,17 +3259,17 @@
 
     int-to-long v0, v15
 
-    move-wide/from16 v27, v0
+    move-wide/from16 v28, v0
 
-    sub-long v7, v7, v27
+    sub-long v7, v7, v28
 
-    move-object/from16 v0, v26
+    move-object/from16 v0, v27
 
     invoke-virtual {v0, v7, v8}, Landroid/text/format/Time;->set(J)V
 
-    .line 1242
+    .line 1244
     :cond_5
-    invoke-static/range {v26 .. v26}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->convertLongToRFC2445DateTime(Landroid/text/format/Time;)Ljava/lang/String;
+    invoke-static/range {v27 .. v27}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->convertLongToRFC2445DateTime(Landroid/text/format/Time;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3250,7 +3277,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTEnd:Ljava/lang/String;
 
-    .line 1259
+    .line 1261
     const-string v3, "hasAlarm"
 
     move-object/from16 v0, p1
@@ -3259,14 +3286,14 @@
 
     move-result v14
 
-    .line 1260
+    .line 1262
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_e
 
     const/4 v3, 0x1
 
@@ -3275,17 +3302,17 @@
 
     iput-boolean v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->hasAlarm:Z
 
-    .line 1261
+    .line 1263
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->hasAlarm:Z
 
     if-eqz v3, :cond_8
 
-    .line 1262
+    .line 1264
     sget-object v4, Landroid/provider/CalendarContract$Reminders;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1263
+    .line 1265
     .local v4, uri:Landroid/net/Uri;
     const-string v3, "event_id=%d AND (method=1 OR method=0)"
 
@@ -3313,12 +3340,12 @@
 
     move-result-object v6
 
-    .line 1264
-    .local v6, where:Ljava/lang/String;
-    const/16 v22, 0x0
-
     .line 1266
-    .local v22, reminderCursor:Landroid/database/Cursor;
+    .local v6, where:Ljava/lang/String;
+    const/16 v23, 0x0
+
+    .line 1268
+    .local v23, reminderCursor:Landroid/database/Cursor;
     :try_start_1
     invoke-virtual/range {p2 .. p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3332,33 +3359,33 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object v22
+    move-result-object v23
 
-    .line 1267
-    invoke-interface/range {v22 .. v22}, Landroid/database/Cursor;->moveToFirst()Z
+    .line 1269
+    invoke-interface/range {v23 .. v23}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 1268
+    .line 1270
     const-string v3, "minutes"
 
-    move-object/from16 v0, v22
+    move-object/from16 v0, v23
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v14
 
-    .line 1269
+    .line 1271
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_f
 
-    .line 1270
-    move-object/from16 v0, v22
+    .line 1272
+    move-object/from16 v0, v23
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getInt(I)I
 
@@ -3376,13 +3403,13 @@
 
     iput-wide v7, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->alarm:J
 
-    .line 1273
+    .line 1275
     :goto_3
     new-instance v10, Landroid/text/format/Time;
 
     invoke-direct {v10}, Landroid/text/format/Time;-><init>()V
 
-    .line 1274
+    .line 1276
     .local v10, alarmTime:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -3390,12 +3417,12 @@
 
     invoke-virtual {v10, v7, v8}, Landroid/text/format/Time;->set(J)V
 
-    .line 1275
+    .line 1277
     const-string v3, "UTC"
 
     invoke-virtual {v10, v3}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 1276
+    .line 1278
     invoke-static {v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->convertLongToRFC2445DateTime(Landroid/text/format/Time;)Ljava/lang/String;
 
     move-result-object v3
@@ -3406,29 +3433,29 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1279
+    .line 1281
     .end local v10           #alarmTime:Landroid/text/format/Time;
     :cond_6
-    if-eqz v22, :cond_8
+    if-eqz v23, :cond_8
 
-    .line 1280
-    invoke-interface/range {v22 .. v22}, Landroid/database/Cursor;->isClosed()Z
+    .line 1282
+    invoke-interface/range {v23 .. v23}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v3
 
     if-nez v3, :cond_7
 
-    .line 1281
-    invoke-interface/range {v22 .. v22}, Landroid/database/Cursor;->close()V
-
     .line 1283
-    :cond_7
-    const/16 v22, 0x0
+    invoke-interface/range {v23 .. v23}, Landroid/database/Cursor;->close()V
 
-    .line 1289
+    .line 1285
+    :cond_7
+    const/16 v23, 0x0
+
+    .line 1291
     .end local v4           #uri:Landroid/net/Uri;
     .end local v6           #where:Ljava/lang/String;
-    .end local v22           #reminderCursor:Landroid/database/Cursor;
+    .end local v23           #reminderCursor:Landroid/database/Cursor;
     :cond_8
     const-string v3, "description"
 
@@ -3438,42 +3465,10 @@
 
     move-result v14
 
-    .line 1290
+    .line 1292
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
-
-    .line 1291
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
-
-    if-eqz v3, :cond_9
-
-    .line 1292
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
-
-    const-string v5, "\r"
-
-    const-string v7, "\r\n"
-
-    invoke-virtual {v3, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v5, "\n"
-
-    const-string v7, "\r\n"
-
-    invoke-virtual {v3, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3482,6 +3477,90 @@
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
     .line 1293
+    const-string v3, "VCalendarUtils"
+
+    const-string v5, "isHTML:"
+
+    invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1295
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
+
+    if-eqz v3, :cond_a
+
+    .line 1296
+    const-string v3, "desc_mime_type"
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v14
+
+    .line 1297
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v14}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    const/4 v5, 0x1
+
+    if-ne v3, v5, :cond_12
+
+    const/16 v22, 0x1
+
+    .line 1298
+    .local v22, isHTML:Z
+    :goto_4
+    if-eqz v22, :cond_9
+
+    .line 1299
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
+
+    invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/htc/util/mail/MailUtils;->convertHTMLtoPlainText(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
+
+    .line 1301
+    :cond_9
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
+
+    const-string v5, "\r"
+
+    const-string v7, "\r\n"
+
+    invoke-virtual {v3, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v5, "\n"
+
+    const-string v7, "\r\n"
+
+    invoke-virtual {v3, v5, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
+
+    .line 1302
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
@@ -3494,8 +3573,9 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 1297
-    :cond_9
+    .line 1306
+    .end local v22           #isHTML:Z
+    :cond_a
     const-string v3, "eventLocation"
 
     move-object/from16 v0, p1
@@ -3504,7 +3584,7 @@
 
     move-result v14
 
-    .line 1298
+    .line 1307
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -3515,14 +3595,14 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
 
-    .line 1299
+    .line 1308
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
-    .line 1300
+    .line 1309
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
@@ -3547,7 +3627,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
 
-    .line 1301
+    .line 1310
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
@@ -3560,64 +3640,9 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
 
-    .line 1305
-    :cond_a
-    const-string v3, "eventTimezone"
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v14
-
-    .line 1306
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
-
-    .line 1309
-    const-string v3, "rrule"
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v14
-
-    .line 1310
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
-
-    .line 1311
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v3}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->RRule_ICalToVCal(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
-
     .line 1314
-    const-string v3, "rdate"
+    :cond_b
+    const-string v3, "eventTimezone"
 
     move-object/from16 v0, p1
 
@@ -3634,10 +3659,10 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rDate:Ljava/lang/String;
+    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
 
     .line 1318
-    const-string v3, "exrule"
+    const-string v3, "rrule"
 
     move-object/from16 v0, p1
 
@@ -3654,9 +3679,64 @@
 
     move-object/from16 v0, p0
 
+    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
+
+    .line 1320
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v3}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->RRule_ICalToVCal(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
+
+    .line 1323
+    const-string v3, "rdate"
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v14
+
+    .line 1324
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rDate:Ljava/lang/String;
+
+    .line 1327
+    const-string v3, "exrule"
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v14
+
+    .line 1328
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exRule:Ljava/lang/String;
 
-    .line 1322
+    .line 1331
     const-string v3, "exdate"
 
     move-object/from16 v0, p1
@@ -3665,7 +3745,7 @@
 
     move-result v14
 
-    .line 1323
+    .line 1332
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -3676,7 +3756,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
-    .line 1326
+    .line 1335
     const-string v3, "last_update_time"
 
     move-object/from16 v0, p1
@@ -3685,7 +3765,7 @@
 
     move-result v14
 
-    .line 1327
+    .line 1336
     move-object/from16 v0, p1
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -3696,7 +3776,7 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->last_update_time:Ljava/lang/String;
 
-    .line 1328
+    .line 1337
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->last_update_time:Ljava/lang/String;
@@ -3705,9 +3785,9 @@
 
     move-result v3
 
-    if-nez v3, :cond_b
+    if-nez v3, :cond_c
 
-    .line 1329
+    .line 1338
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->last_update_time:Ljava/lang/String;
@@ -3718,7 +3798,7 @@
 
     move-result v3
 
-    if-gez v3, :cond_b
+    if-gez v3, :cond_c
 
     move-object/from16 v0, p0
 
@@ -3730,9 +3810,9 @@
 
     move-result v3
 
-    if-gez v3, :cond_b
+    if-gez v3, :cond_c
 
-    .line 1330
+    .line 1339
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3783,52 +3863,52 @@
 
     iput-object v3, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->last_update_time:Ljava/lang/String;
 
-    .line 1333
-    :cond_b
+    .line 1342
+    :cond_c
     return-void
 
-    .line 1190
+    .line 1192
     .end local v9           #__timezone:Ljava/util/TimeZone;
     .end local v15           #daylightOffset:I
     .end local v16           #dt:Ljava/util/Date;
     .end local v18           #end:J
-    .end local v23           #start:J
-    .end local v26           #t:Landroid/text/format/Time;
-    :cond_c
+    .end local v24           #start:J
+    .end local v27           #t:Landroid/text/format/Time;
+    :cond_d
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 1231
+    .line 1233
     .restart local v9       #__timezone:Ljava/util/TimeZone;
     .restart local v15       #daylightOffset:I
     .restart local v16       #dt:Ljava/util/Date;
     .restart local v18       #end:J
-    .restart local v23       #start:J
-    .restart local v26       #t:Landroid/text/format/Time;
+    .restart local v24       #start:J
+    .restart local v27       #t:Landroid/text/format/Time;
     :catch_0
     move-exception v17
 
-    .line 1232
+    .line 1234
     .local v17, e:Ljava/lang/Exception;
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 1260
+    .line 1262
     .end local v17           #e:Ljava/lang/Exception;
-    :cond_d
+    :cond_e
     const/4 v3, 0x0
 
     goto/16 :goto_2
 
-    .line 1272
+    .line 1274
     .restart local v4       #uri:Landroid/net/Uri;
     .restart local v6       #where:Ljava/lang/String;
-    .restart local v22       #reminderCursor:Landroid/database/Cursor;
-    :cond_e
+    .restart local v23       #reminderCursor:Landroid/database/Cursor;
+    :cond_f
     :try_start_2
-    move-object/from16 v0, v22
+    move-object/from16 v0, v23
 
     invoke-interface {v0, v14}, Landroid/database/Cursor;->getInt(I)I
 
@@ -3840,7 +3920,7 @@
 
     int-to-long v7, v3
 
-    sub-long v7, v23, v7
+    sub-long v7, v24, v7
 
     move-object/from16 v0, p0
 
@@ -3850,28 +3930,37 @@
 
     goto/16 :goto_3
 
-    .line 1279
+    .line 1281
     :catchall_0
     move-exception v3
 
-    if-eqz v22, :cond_10
+    if-eqz v23, :cond_11
 
-    .line 1280
-    invoke-interface/range {v22 .. v22}, Landroid/database/Cursor;->isClosed()Z
+    .line 1282
+    invoke-interface/range {v23 .. v23}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v5
 
-    if-nez v5, :cond_f
-
-    .line 1281
-    invoke-interface/range {v22 .. v22}, Landroid/database/Cursor;->close()V
+    if-nez v5, :cond_10
 
     .line 1283
-    :cond_f
+    invoke-interface/range {v23 .. v23}, Landroid/database/Cursor;->close()V
+
+    .line 1285
+    :cond_10
+    const/16 v23, 0x0
+
+    :cond_11
+    throw v3
+
+    .line 1297
+    .end local v4           #uri:Landroid/net/Uri;
+    .end local v6           #where:Ljava/lang/String;
+    .end local v23           #reminderCursor:Landroid/database/Cursor;
+    :cond_12
     const/16 v22, 0x0
 
-    :cond_10
-    throw v3
+    goto/16 :goto_4
 .end method
 
 .method private init(Ljava/lang/String;)Z
@@ -3881,20 +3970,20 @@
     .prologue
     const/4 v12, -0x1
 
-    .line 315
+    .line 317
     move-object v6, p1
 
-    .line 316
+    .line 318
     .local v6, rawData:Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 317
+    .line 319
     .local v4, nestCount:I
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 319
+    .line 321
     .local v9, vCalList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :goto_0
     const-string v10, "BEGIN:VCALENDAR"
@@ -3903,7 +3992,7 @@
 
     move-result v2
 
-    .line 320
+    .line 322
     .local v2, nBegin:I
     const-string v10, "END:VCALENDAR"
 
@@ -3911,17 +4000,17 @@
 
     move-result v3
 
-    .line 321
+    .line 323
     .local v3, nEnd:I
     if-eq v12, v2, :cond_0
 
     if-ne v12, v3, :cond_1
 
-    .line 335
+    .line 337
     :cond_0
     const/4 v7, 0x0
 
-    .line 336
+    .line 338
     .local v7, results:Z
     invoke-virtual {v9}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3941,13 +4030,13 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 337
+    .line 339
     .local v8, s:Ljava/lang/String;
     invoke-direct {p0, v8}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->initLocked(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 338
+    .line 340
     .local v5, oneResult:Z
     const-string v10, "VCalendarUtils"
 
@@ -3973,7 +4062,7 @@
 
     goto :goto_1
 
-    .line 324
+    .line 326
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v5           #oneResult:Z
     .end local v7           #results:Z
@@ -3997,7 +4086,7 @@
 
     move-result-object v0
 
-    .line 325
+    .line 327
     .local v0, body:Ljava/lang/String;
     const-string v10, "END:VCALENDAR"
 
@@ -4011,16 +4100,16 @@
 
     move-result-object v6
 
-    .line 331
+    .line 333
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 332
+    .line 334
     add-int/lit8 v4, v4, 0x1
 
-    .line 333
+    .line 335
     goto :goto_0
 
-    .line 341
+    .line 343
     .end local v0           #body:Ljava/lang/String;
     .restart local v1       #i$:Ljava/util/Iterator;
     .restart local v7       #results:Z
@@ -4039,14 +4128,14 @@
 
     const/4 v4, 0x0
 
-    .line 346
+    .line 348
     const-string v5, "BEGIN:VCALENDAR"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 347
+    .line 349
     .local v2, nBegin:I
     const-string v5, "END:VCALENDAR"
 
@@ -4054,18 +4143,18 @@
 
     move-result v3
 
-    .line 348
+    .line 350
     .local v3, nEnd:I
     if-eq v6, v2, :cond_0
 
     if-ne v6, v3, :cond_1
 
-    .line 365
+    .line 367
     :cond_0
     :goto_0
     return v4
 
-    .line 351
+    .line 353
     :cond_1
     const-string v5, "END:VCALENDAR"
 
@@ -4081,7 +4170,7 @@
 
     iput-object v5, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->vCalendar:Ljava/lang/String;
 
-    .line 356
+    .line 358
     :try_start_0
     iget-object v5, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->vCalendar:Ljava/lang/String;
 
@@ -4091,7 +4180,7 @@
 
     move-result-object v0
 
-    .line 361
+    .line 363
     .local v0, cal:Lcom/android/calendarcommon/ICalendar$Component;
     invoke-virtual {v0}, Lcom/android/calendarcommon/ICalendar$Component;->getComponents()Ljava/util/List;
 
@@ -4099,20 +4188,124 @@
 
     if-eqz v5, :cond_0
 
-    .line 365
+    .line 367
     invoke-direct {p0, v0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->setEventValues(Lcom/android/calendarcommon/ICalendar$Component;)Z
 
     move-result v4
 
     goto :goto_0
 
-    .line 357
+    .line 359
     .end local v0           #cal:Lcom/android/calendarcommon/ICalendar$Component;
     :catch_0
     move-exception v1
 
-    .line 358
+    .line 360
     .local v1, fe:Lcom/android/calendarcommon/ICalendar$FormatException;
+    goto :goto_0
+.end method
+
+.method public static isBig5()Z
+    .locals 4
+
+    .prologue
+    .line 2036
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v2
+
+    .line 2037
+    .local v2, locale:Ljava/util/Locale;
+    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 2038
+    .local v1, language:Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2040
+    .local v0, country:Ljava/lang/String;
+    const-string/jumbo v3, "zh"
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "TW"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 2041
+    const/4 v3, 0x1
+
+    .line 2043
+    :goto_0
+    return v3
+
+    :cond_0
+    const/4 v3, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static isGB2312()Z
+    .locals 4
+
+    .prologue
+    .line 2048
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v2
+
+    .line 2049
+    .local v2, locale:Ljava/util/Locale;
+    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 2050
+    .local v1, language:Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2052
+    .local v0, country:Ljava/lang/String;
+    const-string/jumbo v3, "zh"
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "CN"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 2053
+    const/4 v3, 0x1
+
+    .line 2056
+    :goto_0
+    return v3
+
+    :cond_0
+    const/4 v3, 0x0
+
     goto :goto_0
 .end method
 
@@ -4121,7 +4314,7 @@
     .parameter "s"
 
     .prologue
-    .line 1152
+    .line 1154
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -4132,12 +4325,12 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 1153
+    .line 1155
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 1155
+    .line 1157
     .local v0, ch:C
     const/16 v2, 0x30
 
@@ -4147,23 +4340,23 @@
 
     if-le v0, v2, :cond_1
 
-    .line 1156
+    .line 1158
     :cond_0
     const/4 v2, 0x0
 
-    .line 1160
+    .line 1162
     .end local v0           #ch:C
     :goto_1
     return v2
 
-    .line 1152
+    .line 1154
     .restart local v0       #ch:C
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1160
+    .line 1162
     .end local v0           #ch:C
     :cond_2
     const/4 v2, 0x1
@@ -4178,24 +4371,24 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 299
+    .line 301
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 300
+    .line 302
     .local v0, nullCv:Landroid/content/ContentValues;
     invoke-virtual {v0}, Landroid/content/ContentValues;->clear()V
 
-    .line 302
+    .line 304
     if-nez p1, :cond_1
 
-    .line 308
+    .line 310
     :cond_0
     :goto_0
     return v1
 
-    .line 304
+    .line 306
     :cond_1
     invoke-virtual {v0, p1}, Landroid/content/ContentValues;->equals(Ljava/lang/Object;)Z
 
@@ -4203,7 +4396,7 @@
 
     if-nez v2, :cond_0
 
-    .line 308
+    .line 310
     const/4 v1, 0x0
 
     goto :goto_0
@@ -4213,7 +4406,7 @@
     .locals 2
 
     .prologue
-    .line 2012
+    .line 2025
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v1, 0xd1
@@ -4236,10 +4429,10 @@
     .parameter "str"
 
     .prologue
-    .line 1734
+    .line 1743
     const/4 v2, 0x0
 
-    .line 1736
+    .line 1745
     .local v2, result:Ljava/lang/String;
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isSBM()Z
 
@@ -4247,12 +4440,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 1737
+    .line 1746
     invoke-static {p0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->escapeCharacters(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1741
+    .line 1750
     :cond_0
     new-instance v1, Lorg/apache/commons/codec/net/QuotedPrintableCodec;
 
@@ -4262,7 +4455,7 @@
 
     invoke-direct {v1, v3}, Lorg/apache/commons/codec/net/QuotedPrintableCodec;-><init>(Ljava/lang/String;)V
 
-    .line 1743
+    .line 1752
     .local v1, qpcodec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
     :try_start_0
     invoke-virtual {v1, p0}, Lorg/apache/commons/codec/net/QuotedPrintableCodec;->encode(Ljava/lang/String;)Ljava/lang/String;
@@ -4271,15 +4464,15 @@
 
     move-result-object v2
 
-    .line 1748
+    .line 1757
     :goto_0
     return-object v2
 
-    .line 1744
+    .line 1753
     :catch_0
     move-exception v0
 
-    .line 1745
+    .line 1754
     .local v0, e:Lorg/apache/commons/codec/EncoderException;
     invoke-virtual {v0}, Lorg/apache/commons/codec/EncoderException;->printStackTrace()V
 
@@ -4291,17 +4484,17 @@
     .parameter "val"
 
     .prologue
-    .line 519
+    .line 521
     iput-object p1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
 
-    .line 520
+    .line 522
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
 
     iput-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
-    .line 522
+    .line 524
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeObj(Ljava/lang/String;)Z
@@ -4310,20 +4503,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 523
+    .line 525
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 529
+    .line 531
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 525
+    .line 527
     :cond_0
     const-string v0, "VCalendarUtils"
 
@@ -4355,7 +4548,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
+    .line 528
     const/4 v0, 0x0
 
     goto :goto_0
@@ -4366,10 +4559,10 @@
     .parameter "cal"
 
     .prologue
-    .line 535
+    .line 537
     const/4 v5, 0x0
 
-    .line 537
+    .line 539
     .local v5, isEvent:Z
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Lcom/android/calendarcommon/ICalendar$Component;->getComponents()Ljava/util/List;
@@ -4395,11 +4588,11 @@
 
     check-cast v1, Lcom/android/calendarcommon/ICalendar$Component;
 
-    .line 538
+    .line 540
     .local v1, component:Lcom/android/calendarcommon/ICalendar$Component;
     invoke-direct {p0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->clear()V
 
-    .line 539
+    .line 541
     const-string v10, "VEVENT"
 
     invoke-virtual {v1}, Lcom/android/calendarcommon/ICalendar$Component;->getName()Ljava/lang/String;
@@ -4424,7 +4617,7 @@
 
     if-eqz v10, :cond_0
 
-    .line 541
+    .line 543
     :cond_1
     const-string v10, "VEVENT"
 
@@ -4436,7 +4629,7 @@
 
     move-result v5
 
-    .line 543
+    .line 545
     const-string v10, "UID"
 
     invoke-static {v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->extractString(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
@@ -4445,14 +4638,14 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->uid:Ljava/lang/String;
 
-    .line 544
+    .line 546
     const-string v10, "DTSTART"
 
     invoke-static {v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->extractValue(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 546
+    .line 548
     .local v8, val:Ljava/lang/String;
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -4460,14 +4653,14 @@
 
     if-nez v10, :cond_8
 
-    .line 548
+    .line 550
     invoke-direct {p0, v8}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->setDtStart(Ljava/lang/String;)Z
 
     move-result v10
 
     if-eqz v10, :cond_0
 
-    .line 561
+    .line 563
     :cond_2
     const-string v10, "DTEND"
 
@@ -4475,24 +4668,24 @@
 
     move-result-object v8
 
-    .line 563
+    .line 565
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_a
 
-    .line 564
+    .line 566
     iput-object v8, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTEnd:Ljava/lang/String;
 
-    .line 565
+    .line 567
     new-instance v10, Landroid/text/format/Time;
 
     invoke-direct {v10}, Landroid/text/format/Time;-><init>()V
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
-    .line 567
+    .line 569
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTEnd:Ljava/lang/String;
 
     invoke-direct {p0, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeObj(Ljava/lang/String;)Z
@@ -4501,14 +4694,14 @@
 
     if-eqz v10, :cond_9
 
-    .line 568
+    .line 570
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
     iget-object v11, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTEnd:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 583
+    .line 585
     :cond_3
     :goto_1
     const-string v10, "AALARM"
@@ -4517,14 +4710,14 @@
 
     move-result-object v8
 
-    .line 584
+    .line 586
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_c
 
-    .line 585
+    .line 587
     const-string v10, ";"
 
     const-string v11, ""
@@ -4533,15 +4726,15 @@
 
     move-result-object v8
 
-    .line 586
+    .line 588
     iput-object v8, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strAlarm:Ljava/lang/String;
 
-    .line 587
+    .line 589
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
 
-    .line 589
+    .line 591
     .local v0, alarmTime:Landroid/text/format/Time;
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strAlarm:Ljava/lang/String;
 
@@ -4549,7 +4742,7 @@
 
     move-result v9
 
-    .line 590
+    .line 592
     .local v9, validAlarmTime:Z
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -4571,12 +4764,12 @@
 
     invoke-direct {p0, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->debug(Ljava/lang/String;)V
 
-    .line 591
+    .line 593
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strAlarm:Ljava/lang/String;
 
     invoke-virtual {v0, v10}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 593
+    .line 595
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
     const/4 v11, 0x0
@@ -4599,7 +4792,7 @@
 
     iput-wide v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->alarm:J
 
-    .line 595
+    .line 597
     iget-wide v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->alarm:J
 
     const-wide/16 v12, 0x0
@@ -4610,12 +4803,12 @@
 
     if-eqz v9, :cond_b
 
-    .line 596
+    .line 598
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->hasAlarm:Z
 
-    .line 605
+    .line 607
     .end local v0           #alarmTime:Landroid/text/format/Time;
     .end local v9           #validAlarmTime:Z
     :goto_2
@@ -4643,18 +4836,18 @@
 
     if-nez v10, :cond_d
 
-    .line 606
+    .line 608
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
-    .line 620
+    .line 622
     :goto_3
     iget-boolean v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
     if-eqz v10, :cond_11
 
-    .line 622
+    .line 624
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
     iget v10, v10, Landroid/text/format/Time;->hour:I
@@ -4663,7 +4856,7 @@
 
     if-le v10, v11, :cond_10
 
-    .line 623
+    .line 625
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
     iget-object v11, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
@@ -4692,7 +4885,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/text/format/Time;->set(J)V
 
-    .line 624
+    .line 626
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
     iget-object v11, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
@@ -4721,7 +4914,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/text/format/Time;->set(J)V
 
-    .line 629
+    .line 631
     :goto_4
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
@@ -4729,19 +4922,19 @@
 
     iput-object v11, v10, Landroid/text/format/Time;->timezone:Ljava/lang/String;
 
-    .line 630
+    .line 632
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
     const-string v11, "UTC"
 
     iput-object v11, v10, Landroid/text/format/Time;->timezone:Ljava/lang/String;
 
-    .line 631
+    .line 633
     const-string v10, "UTC"
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
 
-    .line 636
+    .line 638
     :goto_5
     const-string v10, "DURATION"
 
@@ -4749,17 +4942,17 @@
 
     move-result-object v8
 
-    .line 637
+    .line 639
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_12
 
-    .line 638
+    .line 640
     iput-object v8, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->duration:Ljava/lang/String;
 
-    .line 646
+    .line 648
     :goto_6
     const-string v10, "LOCATION"
 
@@ -4769,7 +4962,7 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
 
-    .line 647
+    .line 649
     const-string v10, "SUMMARY"
 
     invoke-static {v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->extractString(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
@@ -4778,7 +4971,7 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
-    .line 648
+    .line 650
     const-string v10, "DESCRIPTION"
 
     invoke-static {v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->extractString(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
@@ -4787,24 +4980,24 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 650
+    .line 652
     const-string v10, "CATEGORIES"
 
     invoke-static {v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->extractValue(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 651
+    .line 653
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_4
 
-    .line 652
+    .line 654
     iput-object v8, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->categories:Ljava/lang/String;
 
-    .line 654
+    .line 656
     :cond_4
     const-string v10, "CLASS"
 
@@ -4812,17 +5005,17 @@
 
     move-result-object v8
 
-    .line 655
+    .line 657
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_5
 
-    .line 656
+    .line 658
     iput-object v8, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->type:Ljava/lang/String;
 
-    .line 658
+    .line 660
     :cond_5
     const-string v10, "STATUS"
 
@@ -4830,17 +5023,17 @@
 
     move-result-object v8
 
-    .line 659
+    .line 661
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_6
 
-    .line 660
+    .line 662
     iput-object v8, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->status:Ljava/lang/String;
 
-    .line 661
+    .line 663
     :cond_6
     const-string v10, "PRIORITY"
 
@@ -4848,14 +5041,14 @@
 
     move-result-object v8
 
-    .line 662
+    .line 664
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_7
 
-    .line 663
+    .line 665
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v10
@@ -4870,7 +5063,7 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->priority:Ljava/lang/String;
 
-    .line 665
+    .line 667
     :cond_7
     const-string v10, "RRULE"
 
@@ -4880,7 +5073,7 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
 
-    .line 666
+    .line 668
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
 
     invoke-virtual {p0, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->RRule_VCalToICal(Ljava/lang/String;)Ljava/lang/String;
@@ -4889,7 +5082,7 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
 
-    .line 668
+    .line 670
     const-string v10, "RDATE"
 
     invoke-virtual {v1, v10}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
@@ -4902,7 +5095,7 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rDate:Ljava/lang/String;
 
-    .line 669
+    .line 671
     const-string v10, "EXRULE"
 
     invoke-static {v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->flattenProperties(Lcom/android/calendarcommon/ICalendar$Component;Ljava/lang/String;)Ljava/lang/String;
@@ -4911,7 +5104,7 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exRule:Ljava/lang/String;
 
-    .line 670
+    .line 672
     const-string v10, "EXDATE"
 
     invoke-virtual {v1, v10}, Lcom/android/calendarcommon/ICalendar$Component;->getFirstProperty(Ljava/lang/String;)Lcom/android/calendarcommon/ICalendar$Property;
@@ -4924,12 +5117,12 @@
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
-    .line 674
+    .line 676
     invoke-virtual {p0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getEventCV()Landroid/content/ContentValues;
 
     move-result-object v2
 
-    .line 676
+    .line 678
     .local v2, cv:Landroid/content/ContentValues;
     invoke-direct {p0, v2}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isNullContentValues(Landroid/content/ContentValues;)Z
 
@@ -4937,20 +5130,20 @@
 
     if-nez v10, :cond_0
 
-    .line 677
+    .line 679
     if-eqz v5, :cond_13
 
-    .line 678
+    .line 680
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 679
+    .line 681
     invoke-virtual {p0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getAlarmCV()Landroid/content/ContentValues;
 
     move-result-object v2
 
-    .line 680
+    .line 682
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -4959,7 +5152,7 @@
 
     goto/16 :goto_0
 
-    .line 692
+    .line 694
     .end local v1           #component:Lcom/android/calendarcommon/ICalendar$Component;
     .end local v2           #cv:Landroid/content/ContentValues;
     .end local v4           #i$:Ljava/util/Iterator;
@@ -4967,7 +5160,7 @@
     :catch_0
     move-exception v3
 
-    .line 693
+    .line 695
     .local v3, e:Ljava/lang/Exception;
     const-string v10, "VCalendarUtils"
 
@@ -4975,22 +5168,22 @@
 
     invoke-static {v10, v11, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 694
+    .line 696
     const/4 v10, 0x0
 
-    .line 696
+    .line 698
     .end local v3           #e:Ljava/lang/Exception;
     :goto_7
     return v10
 
-    .line 552
+    .line 554
     .restart local v1       #component:Lcom/android/calendarcommon/ICalendar$Component;
     .restart local v4       #i$:Ljava/util/Iterator;
     .restart local v8       #val:Ljava/lang/String;
     :cond_8
     if-nez v5, :cond_2
 
-    .line 553
+    .line 555
     :try_start_1
     const-string v10, "DUE"
 
@@ -4998,14 +5191,14 @@
 
     move-result-object v8
 
-    .line 554
+    .line 556
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_0
 
-    .line 556
+    .line 558
     invoke-direct {p0, v8}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->setDtStart(Ljava/lang/String;)Z
 
     move-result v10
@@ -5014,7 +5207,7 @@
 
     goto/16 :goto_0
 
-    .line 570
+    .line 572
     :cond_9
     const-string v10, "VCalendarUtils"
 
@@ -5048,18 +5241,18 @@
 
     goto/16 :goto_0
 
-    .line 577
+    .line 579
     :cond_a
     if-nez v5, :cond_3
 
-    .line 578
+    .line 580
     new-instance v10, Landroid/text/format/Time;
 
     invoke-direct {v10}, Landroid/text/format/Time;-><init>()V
 
     iput-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
-    .line 579
+    .line 581
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
     iget-object v11, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
@@ -5074,7 +5267,7 @@
 
     goto/16 :goto_1
 
-    .line 598
+    .line 600
     .restart local v0       #alarmTime:Landroid/text/format/Time;
     .restart local v9       #validAlarmTime:Z
     :cond_b
@@ -5084,7 +5277,7 @@
 
     goto/16 :goto_2
 
-    .line 601
+    .line 603
     .end local v0           #alarmTime:Landroid/text/format/Time;
     .end local v9           #validAlarmTime:Z
     :cond_c
@@ -5094,7 +5287,7 @@
 
     goto/16 :goto_2
 
-    .line 607
+    .line 609
     :cond_d
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
@@ -5140,14 +5333,14 @@
 
     if-nez v10, :cond_e
 
-    .line 612
+    .line 614
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
     goto/16 :goto_3
 
-    .line 613
+    .line 615
     :cond_e
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
@@ -5177,14 +5370,14 @@
 
     if-eqz v5, :cond_f
 
-    .line 615
+    .line 617
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
     goto/16 :goto_3
 
-    .line 617
+    .line 619
     :cond_f
     const/4 v10, 0x0
 
@@ -5192,7 +5385,7 @@
 
     goto/16 :goto_3
 
-    .line 626
+    .line 628
     :cond_10
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
 
@@ -5220,7 +5413,7 @@
 
     invoke-virtual {v10, v11, v12}, Landroid/text/format/Time;->set(J)V
 
-    .line 627
+    .line 629
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
     iget-object v11, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
@@ -5249,7 +5442,7 @@
 
     goto/16 :goto_4
 
-    .line 633
+    .line 635
     :cond_11
     invoke-static {}, Landroid/text/format/Time;->getCurrentTimezone()Ljava/lang/String;
 
@@ -5259,7 +5452,7 @@
 
     goto/16 :goto_5
 
-    .line 640
+    .line 642
     :cond_12
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
@@ -5283,7 +5476,7 @@
 
     div-long v6, v10, v12
 
-    .line 642
+    .line 644
     .local v6, mDur:J
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -5317,7 +5510,7 @@
 
     goto/16 :goto_6
 
-    .line 682
+    .line 684
     .end local v6           #mDur:J
     .restart local v2       #cv:Landroid/content/ContentValues;
     :cond_13
@@ -5325,12 +5518,12 @@
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 683
+    .line 685
     invoke-virtual {p0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getAlarmCV()Landroid/content/ContentValues;
 
     move-result-object v2
 
-    .line 684
+    .line 686
     iget-object v10, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDoAlarm_ContentValue:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -5339,7 +5532,7 @@
 
     goto/16 :goto_0
 
-    .line 696
+    .line 698
     .end local v1           #component:Lcom/android/calendarcommon/ICalendar$Component;
     .end local v2           #cv:Landroid/content/ContentValues;
     .end local v8           #val:Ljava/lang/String;
@@ -5360,7 +5553,7 @@
 
     const/4 v2, 0x0
 
-    .line 1066
+    .line 1068
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -5386,24 +5579,24 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 1071
+    .line 1073
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 1069
+    .line 1071
     goto :goto_0
 
-    .line 1070
+    .line 1072
     :catch_0
     move-exception v0
 
     .local v0, e:Ljava/lang/Exception;
     move v1, v2
 
-    .line 1071
+    .line 1073
     goto :goto_0
 .end method
 
@@ -5416,7 +5609,7 @@
 
     const/4 v2, 0x0
 
-    .line 1055
+    .line 1057
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -5442,24 +5635,24 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 1060
+    .line 1062
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 1058
+    .line 1060
     goto :goto_0
 
-    .line 1059
+    .line 1061
     :catch_0
     move-exception v0
 
     .local v0, e:Ljava/lang/Exception;
     move v1, v2
 
-    .line 1060
+    .line 1062
     goto :goto_0
 .end method
 
@@ -5470,7 +5663,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1035
+    .line 1037
     const-string v1, "MO"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -5479,12 +5672,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1050
+    .line 1052
     :cond_0
     :goto_0
     return v0
 
-    .line 1037
+    .line 1039
     :cond_1
     const-string v1, "TU"
 
@@ -5494,7 +5687,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1039
+    .line 1041
     const-string v1, "WE"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -5503,7 +5696,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1041
+    .line 1043
     const-string v1, "TH"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -5512,7 +5705,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1043
+    .line 1045
     const-string v1, "FR"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -5521,7 +5714,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1045
+    .line 1047
     const-string v1, "SA"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -5530,7 +5723,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1047
+    .line 1049
     const-string v1, "SU"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -5539,7 +5732,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1050
+    .line 1052
     const/4 v0, 0x0
 
     goto :goto_0
@@ -5554,7 +5747,7 @@
 
     const/4 v2, 0x0
 
-    .line 1077
+    .line 1079
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -5580,24 +5773,24 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 1082
+    .line 1084
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 1080
+    .line 1082
     goto :goto_0
 
-    .line 1081
+    .line 1083
     :catch_0
     move-exception v0
 
     .local v0, e:Ljava/lang/Exception;
     move v1, v2
 
-    .line 1082
+    .line 1084
     goto :goto_0
 .end method
 
@@ -5606,17 +5799,17 @@
     .parameter "rrule"
 
     .prologue
-    .line 1336
+    .line 1345
     if-nez p1, :cond_0
 
-    .line 1337
+    .line 1346
     const/16 v26, 0x0
 
-    .line 1603
+    .line 1612
     :goto_0
     return-object v26
 
-    .line 1339
+    .line 1348
     :cond_0
     const-string v33, "VCalendarUtils"
 
@@ -5644,12 +5837,12 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1340
+    .line 1349
     new-instance v25, Ljava/lang/StringBuffer;
 
     invoke-direct/range {v25 .. v25}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 1341
+    .line 1350
     .local v25, result:Ljava/lang/StringBuffer;
     const/16 v33, 0x0
 
@@ -5657,11 +5850,11 @@
 
     new-array v5, v0, [Ljava/lang/String;
 
-    .line 1342
+    .line 1351
     .local v5, array:[Ljava/lang/String;
     const/16 v31, 0x0
 
-    .line 1343
+    .line 1352
     .local v31, tempstr:Ljava/lang/String;
     const/16 v33, 0x0
 
@@ -5671,47 +5864,47 @@
 
     move-object/from16 v30, v0
 
-    .line 1344
+    .line 1353
     .local v30, temparr:[Ljava/lang/String;
     const/16 v17, 0x0
 
-    .line 1345
+    .line 1354
     .local v17, freq:Ljava/lang/String;
     const/16 v20, 0x0
 
-    .line 1346
+    .line 1355
     .local v20, interval:Ljava/lang/String;
     const/16 v32, 0x0
 
-    .line 1347
+    .line 1356
     .local v32, until:Ljava/lang/String;
     const/4 v13, 0x0
 
-    .line 1348
+    .line 1357
     .local v13, count:Ljava/lang/String;
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1349
+    .line 1358
     .local v8, byday:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1350
+    .line 1359
     .local v10, bymonthday:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1351
+    .line 1360
     .local v9, bymonth:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1353
+    .line 1362
     .local v11, bysetpos:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v33, "FREQ"
 
@@ -5725,12 +5918,12 @@
 
     if-gez v33, :cond_1
 
-    .line 1354
+    .line 1363
     const/16 v26, 0x0
 
     goto :goto_0
 
-    .line 1356
+    .line 1365
     :cond_1
     const-string v33, ";"
 
@@ -5746,10 +5939,10 @@
 
     move-result-object v5
 
-    .line 1358
+    .line 1367
     const/4 v7, 0x0
 
-    .line 1360
+    .line 1369
     .local v7, bYDMode:Z
     const/16 v18, 0x0
 
@@ -5765,7 +5958,7 @@
 
     if-ge v0, v1, :cond_1a
 
-    .line 1362
+    .line 1371
     aget-object v33, v5, v18
 
     const-string v34, "FREQ"
@@ -5776,7 +5969,7 @@
 
     if-ltz v33, :cond_8
 
-    .line 1363
+    .line 1372
     aget-object v33, v5, v18
 
     aget-object v34, v5, v18
@@ -5799,7 +5992,7 @@
 
     move-result-object v17
 
-    .line 1366
+    .line 1375
     const-string v33, "YEARLY"
 
     move-object/from16 v0, v17
@@ -5836,20 +6029,20 @@
 
     if-eqz v33, :cond_3
 
-    .line 1368
+    .line 1377
     const-string v17, "YD"
 
-    .line 1369
+    .line 1378
     const/4 v7, 0x1
 
-    .line 1360
+    .line 1369
     :cond_2
     :goto_2
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_1
 
-    .line 1371
+    .line 1380
     :cond_3
     const-string v33, "YEARLY"
 
@@ -5863,12 +6056,12 @@
 
     if-eqz v33, :cond_4
 
-    .line 1372
+    .line 1381
     const-string v17, "YM"
 
     goto :goto_2
 
-    .line 1374
+    .line 1383
     :cond_4
     const-string v33, "MONTHLY"
 
@@ -5882,7 +6075,7 @@
 
     if-eqz v33, :cond_6
 
-    .line 1375
+    .line 1384
     const-string v33, "BYDAY"
 
     move-object/from16 v0, p1
@@ -5895,12 +6088,12 @@
 
     if-ltz v33, :cond_5
 
-    .line 1376
+    .line 1385
     const-string v17, "MP"
 
     goto :goto_2
 
-    .line 1378
+    .line 1387
     :cond_5
     const-string v33, "BYMONTHDAY"
 
@@ -5914,12 +6107,12 @@
 
     if-ltz v33, :cond_2
 
-    .line 1379
+    .line 1388
     const-string v17, "MD"
 
     goto :goto_2
 
-    .line 1382
+    .line 1391
     :cond_6
     const-string v33, "WEEKLY"
 
@@ -5933,12 +6126,12 @@
 
     if-eqz v33, :cond_7
 
-    .line 1383
+    .line 1392
     const-string v17, "W"
 
     goto :goto_2
 
-    .line 1385
+    .line 1394
     :cond_7
     const-string v33, "DAILY"
 
@@ -5952,12 +6145,12 @@
 
     if-eqz v33, :cond_2
 
-    .line 1386
+    .line 1395
     const-string v17, "D"
 
     goto :goto_2
 
-    .line 1389
+    .line 1398
     :cond_8
     aget-object v33, v5, v18
 
@@ -5969,7 +6162,7 @@
 
     if-ltz v33, :cond_9
 
-    .line 1390
+    .line 1399
     aget-object v33, v5, v18
 
     aget-object v34, v5, v18
@@ -5994,7 +6187,7 @@
 
     goto :goto_2
 
-    .line 1392
+    .line 1401
     :cond_9
     aget-object v33, v5, v18
 
@@ -6006,7 +6199,7 @@
 
     if-ltz v33, :cond_a
 
-    .line 1393
+    .line 1402
     aget-object v33, v5, v18
 
     aget-object v34, v5, v18
@@ -6031,7 +6224,7 @@
 
     goto/16 :goto_2
 
-    .line 1395
+    .line 1404
     :cond_a
     aget-object v33, v5, v18
 
@@ -6043,7 +6236,7 @@
 
     if-ltz v33, :cond_b
 
-    .line 1396
+    .line 1405
     aget-object v33, v5, v18
 
     aget-object v34, v5, v18
@@ -6068,7 +6261,7 @@
 
     goto/16 :goto_2
 
-    .line 1398
+    .line 1407
     :cond_b
     aget-object v33, v5, v18
 
@@ -6080,7 +6273,7 @@
 
     if-ltz v33, :cond_11
 
-    .line 1399
+    .line 1408
     aget-object v33, v5, v18
 
     aget-object v34, v5, v18
@@ -6103,7 +6296,7 @@
 
     move-result-object v31
 
-    .line 1402
+    .line 1411
     new-instance v15, Landroid/text/format/Time;
 
     const-string v33, "UTC"
@@ -6112,7 +6305,7 @@
 
     invoke-direct {v15, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 1403
+    .line 1412
     .local v15, eventTimeDB:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -6124,7 +6317,7 @@
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 1404
+    .line 1413
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -6137,7 +6330,7 @@
 
     invoke-direct {v0, v1, v15}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 1405
+    .line 1414
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
@@ -6148,14 +6341,14 @@
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 1406
+    .line 1415
     const/16 v33, 0x0
 
     move/from16 v0, v33
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1409
+    .line 1418
     new-instance v16, Landroid/text/format/Time;
 
     const-string v33, "UTC"
@@ -6166,7 +6359,7 @@
 
     invoke-direct {v0, v1}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 1410
+    .line 1419
     .local v16, eventTimeUTC:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -6180,7 +6373,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 1411
+    .line 1420
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -6195,7 +6388,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 1412
+    .line 1421
     const/16 v33, 0x0
 
     move-object/from16 v0, v16
@@ -6204,7 +6397,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1413
+    .line 1422
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
@@ -6213,7 +6406,7 @@
 
     move-result v14
 
-    .line 1414
+    .line 1423
     .local v14, dayOffset:I
     const-string v33, "VCalendarUtils"
 
@@ -6239,14 +6432,14 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1416
+    .line 1425
     const/4 v12, 0x0
 
-    .line 1417
+    .line 1426
     .local v12, ch:C
     const-string v27, ""
 
-    .line 1418
+    .line 1427
     .local v27, setpostemp:Ljava/lang/String;
     const/16 v21, 0x0
 
@@ -6262,7 +6455,7 @@
 
     if-ge v0, v1, :cond_e
 
-    .line 1419
+    .line 1428
     move-object/from16 v0, v31
 
     move/from16 v1, v21
@@ -6271,7 +6464,7 @@
 
     move-result v12
 
-    .line 1420
+    .line 1429
     const-string v33, "VCalendarUtils"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -6296,7 +6489,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1421
+    .line 1430
     const/16 v33, 0x30
 
     move/from16 v0, v33
@@ -6316,7 +6509,7 @@
 
     if-ne v12, v0, :cond_e
 
-    .line 1423
+    .line 1432
     :cond_d
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -6340,12 +6533,12 @@
 
     move-result-object v27
 
-    .line 1418
+    .line 1427
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_3
 
-    .line 1428
+    .line 1437
     :cond_e
     invoke-virtual/range {v27 .. v27}, Ljava/lang/String;->length()I
 
@@ -6353,7 +6546,7 @@
 
     if-lez v33, :cond_10
 
-    .line 1429
+    .line 1438
     const-string v33, "VCalendarUtils"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -6380,12 +6573,12 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1430
+    .line 1439
     move-object/from16 v0, v27
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1431
+    .line 1440
     invoke-virtual/range {v27 .. v27}, Ljava/lang/String;->length()I
 
     move-result v33
@@ -6402,17 +6595,17 @@
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1443
+    .line 1452
     :cond_f
     const/16 v31, 0x0
 
-    .line 1444
+    .line 1453
     const/16 v30, 0x0
 
-    .line 1446
+    .line 1455
     goto/16 :goto_2
 
-    .line 1434
+    .line 1443
     :cond_10
     const-string v33, "VCalendarUtils"
 
@@ -6440,7 +6633,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1435
+    .line 1444
     const-string v33, ","
 
     const/16 v34, -0x1
@@ -6455,10 +6648,10 @@
 
     move-result-object v30
 
-    .line 1436
+    .line 1445
     const-string v4, ""
 
-    .line 1437
+    .line 1446
     .local v4, alreadyFixOffset:Ljava/lang/String;
     const/16 v21, 0x0
 
@@ -6475,7 +6668,7 @@
 
     if-ge v0, v1, :cond_f
 
-    .line 1438
+    .line 1447
     aget-object v33, v30, v21
 
     move-object/from16 v0, p0
@@ -6486,15 +6679,15 @@
 
     move-result-object v4
 
-    .line 1440
+    .line 1449
     invoke-virtual {v8, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1437
+    .line 1446
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_4
 
-    .line 1446
+    .line 1455
     .end local v4           #alreadyFixOffset:Ljava/lang/String;
     .end local v12           #ch:C
     .end local v14           #dayOffset:I
@@ -6513,7 +6706,7 @@
 
     if-ltz v33, :cond_13
 
-    .line 1447
+    .line 1456
     aget-object v33, v5, v18
 
     aget-object v34, v5, v18
@@ -6536,7 +6729,7 @@
 
     move-result-object v31
 
-    .line 1450
+    .line 1459
     new-instance v15, Landroid/text/format/Time;
 
     const-string v33, "UTC"
@@ -6545,7 +6738,7 @@
 
     invoke-direct {v15, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 1451
+    .line 1460
     .restart local v15       #eventTimeDB:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -6557,7 +6750,7 @@
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 1452
+    .line 1461
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -6570,7 +6763,7 @@
 
     invoke-direct {v0, v1, v15}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 1453
+    .line 1462
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
@@ -6581,14 +6774,14 @@
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 1454
+    .line 1463
     const/16 v33, 0x0
 
     move/from16 v0, v33
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1457
+    .line 1466
     new-instance v16, Landroid/text/format/Time;
 
     const-string v33, "UTC"
@@ -6599,7 +6792,7 @@
 
     invoke-direct {v0, v1}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 1458
+    .line 1467
     .restart local v16       #eventTimeUTC:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -6613,7 +6806,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 1459
+    .line 1468
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -6628,7 +6821,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 1460
+    .line 1469
     const/16 v33, 0x0
 
     move-object/from16 v0, v16
@@ -6637,7 +6830,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1462
+    .line 1471
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
@@ -6646,7 +6839,7 @@
 
     move-result v14
 
-    .line 1463
+    .line 1472
     .restart local v14       #dayOffset:I
     const-string v33, "VCalendarUtils"
 
@@ -6672,7 +6865,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1465
+    .line 1474
     const-string v33, ","
 
     const/16 v34, -0x1
@@ -6687,10 +6880,10 @@
 
     move-result-object v30
 
-    .line 1466
+    .line 1475
     const-string v3, ""
 
-    .line 1467
+    .line 1476
     .local v3, alreadyFixMonthDay:Ljava/lang/String;
     const/16 v21, 0x0
 
@@ -6708,7 +6901,7 @@
 
     if-ge v0, v1, :cond_12
 
-    .line 1468
+    .line 1477
     aget-object v33, v30, v21
 
     move-object/from16 v0, p0
@@ -6719,22 +6912,22 @@
 
     move-result-object v3
 
-    .line 1470
+    .line 1479
     invoke-virtual {v10, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1467
+    .line 1476
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_5
 
-    .line 1472
+    .line 1481
     :cond_12
     const/16 v31, 0x0
 
-    .line 1473
+    .line 1482
     const/16 v30, 0x0
 
-    .line 1475
+    .line 1484
     goto/16 :goto_2
 
     .end local v3           #alreadyFixMonthDay:Ljava/lang/String;
@@ -6753,7 +6946,7 @@
 
     if-ltz v33, :cond_18
 
-    .line 1478
+    .line 1487
     new-instance v15, Landroid/text/format/Time;
 
     const-string v33, "UTC"
@@ -6762,7 +6955,7 @@
 
     invoke-direct {v15, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 1479
+    .line 1488
     .restart local v15       #eventTimeDB:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -6774,7 +6967,7 @@
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 1480
+    .line 1489
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -6787,7 +6980,7 @@
 
     invoke-direct {v0, v1, v15}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 1481
+    .line 1490
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
@@ -6798,14 +6991,14 @@
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 1482
+    .line 1491
     const/16 v33, 0x0
 
     move/from16 v0, v33
 
     invoke-virtual {v15, v0}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1485
+    .line 1494
     new-instance v16, Landroid/text/format/Time;
 
     const-string v33, "UTC"
@@ -6816,7 +7009,7 @@
 
     invoke-direct {v0, v1}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 1486
+    .line 1495
     .restart local v16       #eventTimeUTC:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -6830,7 +7023,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 1487
+    .line 1496
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -6845,7 +7038,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 1488
+    .line 1497
     const/16 v33, 0x0
 
     move-object/from16 v0, v16
@@ -6854,7 +7047,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1489
+    .line 1498
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
@@ -6863,7 +7056,7 @@
 
     move-result v14
 
-    .line 1490
+    .line 1499
     .restart local v14       #dayOffset:I
     const-string v33, "VCalendarUtils"
 
@@ -6889,14 +7082,14 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1492
+    .line 1501
     const/4 v6, 0x0
 
-    .line 1493
+    .line 1502
     .local v6, bFindByMonthDay:Z
     const/16 v28, 0x0
 
-    .line 1494
+    .line 1503
     .local v28, tempByMonthDay:Ljava/lang/String;
     const/16 v33, 0x0
 
@@ -6906,7 +7099,7 @@
 
     move-object/from16 v29, v0
 
-    .line 1495
+    .line 1504
     .local v29, tempByMonthDayAry:[Ljava/lang/String;
     const/16 v19, 0x0
 
@@ -6922,7 +7115,7 @@
 
     if-ge v0, v1, :cond_14
 
-    .line 1496
+    .line 1505
     aget-object v33, v5, v19
 
     const-string v34, "BYMONTHDAY"
@@ -6933,7 +7126,7 @@
 
     if-ltz v33, :cond_15
 
-    .line 1497
+    .line 1506
     aget-object v33, v5, v19
 
     aget-object v34, v5, v19
@@ -6956,7 +7149,7 @@
 
     move-result-object v28
 
-    .line 1498
+    .line 1507
     const-string v33, ","
 
     const/16 v34, -0x1
@@ -6971,10 +7164,10 @@
 
     move-result-object v29
 
-    .line 1499
+    .line 1508
     const/4 v6, 0x1
 
-    .line 1504
+    .line 1513
     :cond_14
     aget-object v33, v5, v18
 
@@ -6998,7 +7191,7 @@
 
     move-result-object v31
 
-    .line 1505
+    .line 1514
     const-string v33, ","
 
     const/16 v34, -0x1
@@ -7013,10 +7206,10 @@
 
     move-result-object v30
 
-    .line 1506
+    .line 1515
     const-string v4, ""
 
-    .line 1507
+    .line 1516
     .restart local v4       #alreadyFixOffset:Ljava/lang/String;
     const/16 v21, 0x0
 
@@ -7034,10 +7227,10 @@
 
     if-ge v0, v1, :cond_17
 
-    .line 1508
+    .line 1517
     if-eqz v6, :cond_16
 
-    .line 1509
+    .line 1518
     aget-object v33, v30, v21
 
     aget-object v34, v29, v21
@@ -7052,16 +7245,16 @@
 
     move-result-object v4
 
-    .line 1510
+    .line 1519
     invoke-virtual {v9, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1507
+    .line 1516
     :goto_8
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_7
 
-    .line 1495
+    .line 1504
     .end local v4           #alreadyFixOffset:Ljava/lang/String;
     .end local v21           #j:I
     :cond_15
@@ -7069,7 +7262,7 @@
 
     goto/16 :goto_6
 
-    .line 1512
+    .line 1521
     .restart local v4       #alreadyFixOffset:Ljava/lang/String;
     .restart local v21       #j:I
     :cond_16
@@ -7081,14 +7274,14 @@
 
     goto :goto_8
 
-    .line 1515
+    .line 1524
     :cond_17
     const/16 v31, 0x0
 
-    .line 1516
+    .line 1525
     const/16 v30, 0x0
 
-    .line 1518
+    .line 1527
     goto/16 :goto_2
 
     .end local v4           #alreadyFixOffset:Ljava/lang/String;
@@ -7111,7 +7304,7 @@
 
     if-ltz v33, :cond_2
 
-    .line 1519
+    .line 1528
     aget-object v33, v5, v18
 
     aget-object v34, v5, v18
@@ -7134,7 +7327,7 @@
 
     move-result-object v31
 
-    .line 1520
+    .line 1529
     const-string v33, ","
 
     const/16 v34, -0x1
@@ -7149,7 +7342,7 @@
 
     move-result-object v30
 
-    .line 1521
+    .line 1530
     const/16 v21, 0x0
 
     .restart local v21       #j:I
@@ -7166,36 +7359,36 @@
 
     if-ge v0, v1, :cond_19
 
-    .line 1522
+    .line 1531
     aget-object v33, v30, v21
 
     move-object/from16 v0, v33
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1521
+    .line 1530
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_9
 
-    .line 1523
+    .line 1532
     :cond_19
     const/16 v31, 0x0
 
-    .line 1524
+    .line 1533
     const/16 v30, 0x0
 
     goto/16 :goto_2
 
-    .line 1529
+    .line 1538
     .end local v21           #j:I
     :cond_1a
     if-nez v20, :cond_1b
 
-    .line 1530
+    .line 1539
     const-string v20, "1"
 
-    .line 1532
+    .line 1541
     :cond_1b
     move-object/from16 v0, v25
 
@@ -7217,14 +7410,14 @@
 
     invoke-virtual/range {v33 .. v34}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1534
+    .line 1543
     invoke-virtual {v11}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v33
 
     if-nez v33, :cond_1e
 
-    .line 1535
+    .line 1544
     const/16 v21, 0x0
 
     .restart local v21       #j:I
@@ -7239,7 +7432,7 @@
 
     if-ge v0, v1, :cond_1d
 
-    .line 1537
+    .line 1546
     :try_start_0
     move/from16 v0, v21
 
@@ -7259,7 +7452,7 @@
 
     if-ltz v33, :cond_1c
 
-    .line 1538
+    .line 1547
     move/from16 v0, v21
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7286,13 +7479,13 @@
 
     invoke-virtual/range {v33 .. v34}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1535
+    .line 1544
     :goto_b
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_a
 
-    .line 1540
+    .line 1549
     :cond_1c
     move/from16 v0, v21
 
@@ -7330,17 +7523,17 @@
 
     goto :goto_b
 
-    .line 1541
+    .line 1550
     :catch_0
     move-exception v33
 
     goto :goto_b
 
-    .line 1545
+    .line 1554
     :cond_1d
     invoke-virtual {v11}, Ljava/util/ArrayList;->clear()V
 
-    .line 1547
+    .line 1556
     .end local v21           #j:I
     :cond_1e
     const-string v33, "VCalendarUtils"
@@ -7367,17 +7560,17 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1549
+    .line 1558
     if-eqz v7, :cond_23
 
-    .line 1550
+    .line 1559
     const/16 v22, 0x1
 
-    .line 1551
+    .line 1560
     .local v22, month:I
     const/16 v23, 0x1
 
-    .line 1553
+    .line 1562
     .local v23, monthDay:I
     invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -7385,7 +7578,7 @@
 
     if-nez v33, :cond_1f
 
-    .line 1554
+    .line 1563
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -7400,10 +7593,10 @@
 
     move-result v22
 
-    .line 1555
+    .line 1564
     invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
 
-    .line 1558
+    .line 1567
     :cond_1f
     invoke-virtual {v10}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -7411,7 +7604,7 @@
 
     if-nez v33, :cond_20
 
-    .line 1559
+    .line 1568
     const/16 v33, 0x0
 
     move/from16 v0, v33
@@ -7426,14 +7619,14 @@
 
     move-result v23
 
-    .line 1560
+    .line 1569
     invoke-virtual {v10}, Ljava/util/ArrayList;->clear()V
 
-    .line 1562
+    .line 1571
     :cond_20
     add-int/lit8 v22, v22, -0x1
 
-    .line 1564
+    .line 1573
     const-string v33, "VCalendarUtils"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -7462,7 +7655,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1566
+    .line 1575
     new-instance v24, Landroid/text/format/Time;
 
     const-string v33, "UTC"
@@ -7473,7 +7666,7 @@
 
     invoke-direct {v0, v1}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 1567
+    .line 1576
     .local v24, origTime:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -7487,14 +7680,14 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 1568
+    .line 1577
     move/from16 v0, v22
 
     move-object/from16 v1, v24
 
     iput v0, v1, Landroid/text/format/Time;->month:I
 
-    .line 1569
+    .line 1578
     invoke-static {}, Landroid/text/format/Time;->getCurrentTimezone()Ljava/lang/String;
 
     move-result-object v33
@@ -7505,14 +7698,14 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 1570
+    .line 1579
     move/from16 v0, v23
 
     move-object/from16 v1, v24
 
     iput v0, v1, Landroid/text/format/Time;->monthDay:I
 
-    .line 1571
+    .line 1580
     const/16 v33, 0x0
 
     move-object/from16 v0, v24
@@ -7521,7 +7714,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 1573
+    .line 1582
     const-string v33, "VCalendarUtils"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -7548,7 +7741,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1574
+    .line 1583
     move-object/from16 v0, v24
 
     iget v0, v0, Landroid/text/format/Time;->yearDay:I
@@ -7575,7 +7768,7 @@
 
     invoke-virtual/range {v33 .. v34}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1595
+    .line 1604
     .end local v22           #month:I
     .end local v23           #monthDay:I
     .end local v24           #origTime:Landroid/text/format/Time;
@@ -7585,21 +7778,21 @@
 
     if-nez v13, :cond_29
 
-    .line 1596
+    .line 1605
     move-object/from16 v0, v25
 
     move-object/from16 v1, v32
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1601
+    .line 1610
     :cond_22
     :goto_d
     invoke-virtual/range {v25 .. v25}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v26
 
-    .line 1602
+    .line 1611
     .local v26, sOut:Ljava/lang/String;
     const-string v33, "VCalendarUtils"
 
@@ -7629,7 +7822,7 @@
 
     goto/16 :goto_0
 
-    .line 1576
+    .line 1585
     .end local v26           #sOut:Ljava/lang/String;
     :cond_23
     invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
@@ -7638,7 +7831,7 @@
 
     if-nez v33, :cond_25
 
-    .line 1577
+    .line 1586
     const/16 v21, 0x0
 
     .restart local v21       #j:I
@@ -7653,7 +7846,7 @@
 
     if-ge v0, v1, :cond_24
 
-    .line 1578
+    .line 1587
     move/from16 v0, v21
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7674,16 +7867,16 @@
 
     invoke-virtual/range {v33 .. v34}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1577
+    .line 1586
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_e
 
-    .line 1579
+    .line 1588
     :cond_24
     invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
 
-    .line 1582
+    .line 1591
     .end local v21           #j:I
     :cond_25
     invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
@@ -7692,7 +7885,7 @@
 
     if-nez v33, :cond_27
 
-    .line 1583
+    .line 1592
     const/16 v21, 0x0
 
     .restart local v21       #j:I
@@ -7707,7 +7900,7 @@
 
     if-ge v0, v1, :cond_26
 
-    .line 1584
+    .line 1593
     move/from16 v0, v21
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7728,16 +7921,16 @@
 
     invoke-virtual/range {v33 .. v34}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1583
+    .line 1592
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_f
 
-    .line 1585
+    .line 1594
     :cond_26
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 1588
+    .line 1597
     .end local v21           #j:I
     :cond_27
     invoke-virtual {v10}, Ljava/util/ArrayList;->isEmpty()Z
@@ -7746,7 +7939,7 @@
 
     if-nez v33, :cond_21
 
-    .line 1589
+    .line 1598
     const/16 v21, 0x0
 
     .restart local v21       #j:I
@@ -7761,7 +7954,7 @@
 
     if-ge v0, v1, :cond_28
 
-    .line 1590
+    .line 1599
     move/from16 v0, v21
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7782,25 +7975,25 @@
 
     invoke-virtual/range {v33 .. v34}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1589
+    .line 1598
     add-int/lit8 v21, v21, 0x1
 
     goto :goto_10
 
-    .line 1591
+    .line 1600
     :cond_28
     invoke-virtual {v10}, Ljava/util/ArrayList;->clear()V
 
     goto/16 :goto_c
 
-    .line 1597
+    .line 1606
     .end local v21           #j:I
     :cond_29
     if-nez v32, :cond_2a
 
     if-eqz v13, :cond_2a
 
-    .line 1598
+    .line 1607
     const-string v33, "#"
 
     move-object/from16 v0, v25
@@ -7817,13 +8010,13 @@
 
     goto/16 :goto_d
 
-    .line 1599
+    .line 1608
     :cond_2a
     if-nez v32, :cond_22
 
     if-nez v13, :cond_22
 
-    .line 1600
+    .line 1609
     const-string v33, "#0"
 
     move-object/from16 v0, v25
@@ -7840,19 +8033,19 @@
     .parameter "rrule"
 
     .prologue
-    .line 760
+    .line 762
     if-nez p1, :cond_1
 
-    .line 761
+    .line 763
     const/16 p1, 0x0
 
-    .line 1031
+    .line 1033
     .end local p1
     :cond_0
     :goto_0
     return-object p1
 
-    .line 763
+    .line 765
     .restart local p1
     :cond_1
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -7867,7 +8060,7 @@
 
     if-gez v24, :cond_0
 
-    .line 768
+    .line 770
     const-string v24, "VCalendarUtils"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -7894,14 +8087,14 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 770
+    .line 772
     const/16 v24, 0x0
 
     move/from16 v0, v24
 
     new-array v5, v0, [Ljava/lang/String;
 
-    .line 771
+    .line 773
     .local v5, array:[Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuffer;
 
@@ -7913,43 +8106,43 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 772
+    .line 774
     .local v17, result:Ljava/lang/StringBuffer;
     const/4 v12, 0x0
 
-    .line 773
+    .line 775
     .local v12, interval:Ljava/lang/String;
     const/16 v21, 0x0
 
-    .line 774
+    .line 776
     .local v21, until:Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 776
+    .line 778
     .local v7, count:Ljava/lang/String;
     new-instance v22, Ljava/util/ArrayList;
 
     invoke-direct/range {v22 .. v22}, Ljava/util/ArrayList;-><init>()V
 
-    .line 777
+    .line 779
     .local v22, weekday:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 778
+    .line 780
     .local v15, monthday:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 779
+    .line 781
     .local v14, month:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v18, Ljava/util/ArrayList;
 
     invoke-direct/range {v18 .. v18}, Ljava/util/ArrayList;-><init>()V
 
-    .line 781
+    .line 783
     .local v18, setpos:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v24, " "
 
@@ -7965,7 +8158,7 @@
 
     move-result-object v5
 
-    .line 783
+    .line 785
     const/16 v24, 0x0
 
     aget-object v24, v5, v24
@@ -7978,7 +8171,7 @@
 
     if-ltz v24, :cond_9
 
-    .line 784
+    .line 786
     const/16 v24, 0x0
 
     aget-object v24, v5, v24
@@ -7997,7 +8190,7 @@
 
     move-result-object v12
 
-    .line 785
+    .line 787
     const-string v24, "YEARLY;"
 
     move-object/from16 v0, v17
@@ -8024,7 +8217,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 786
+    .line 788
     const-string v24, "WKST="
 
     move-object/from16 v0, v17
@@ -8045,7 +8238,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 788
+    .line 790
     const/4 v11, 0x1
 
     .local v11, i:I
@@ -8058,7 +8251,7 @@
 
     if-ge v11, v0, :cond_5
 
-    .line 789
+    .line 791
     aget-object v24, v5, v11
 
     move-object/from16 v0, p0
@@ -8071,14 +8264,14 @@
 
     if-eqz v24, :cond_2
 
-    .line 790
+    .line 792
     aget-object v24, v5, v11
 
     move-object/from16 v0, v24
 
     invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 792
+    .line 794
     :cond_2
     aget-object v24, v5, v11
 
@@ -8090,7 +8283,7 @@
 
     if-ltz v24, :cond_3
 
-    .line 793
+    .line 795
     aget-object v24, v5, v11
 
     const/16 v25, 0x1
@@ -8105,7 +8298,7 @@
 
     move-result-object v7
 
-    .line 794
+    .line 796
     const-string v24, "0"
 
     move-object/from16 v0, v24
@@ -8116,7 +8309,7 @@
 
     if-nez v24, :cond_3
 
-    .line 795
+    .line 797
     const-string v24, "COUNT="
 
     move-object/from16 v0, v17
@@ -8137,7 +8330,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 798
+    .line 800
     :cond_3
     aget-object v24, v5, v11
 
@@ -8159,10 +8352,10 @@
 
     if-ltz v24, :cond_4
 
-    .line 799
+    .line 801
     aget-object v21, v5, v11
 
-    .line 800
+    .line 802
     const-string v24, "UNTIL="
 
     move-object/from16 v0, v17
@@ -8185,13 +8378,13 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 788
+    .line 790
     :cond_4
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 804
+    .line 806
     :cond_5
     invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
 
@@ -8199,7 +8392,7 @@
 
     if-lez v24, :cond_7
 
-    .line 805
+    .line 807
     const-string v24, "BYMONTH="
 
     move-object/from16 v0, v17
@@ -8208,7 +8401,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 806
+    .line 808
     const/4 v11, 0x0
 
     :goto_2
@@ -8220,7 +8413,7 @@
 
     if-ge v11, v0, :cond_6
 
-    .line 807
+    .line 809
     invoke-virtual {v14, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v24
@@ -8239,12 +8432,12 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 806
+    .line 808
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_2
 
-    .line 809
+    .line 811
     :cond_6
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuffer;->length()I
 
@@ -8262,10 +8455,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->setCharAt(IC)V
 
-    .line 810
+    .line 812
     invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
 
-    .line 1027
+    .line 1029
     .end local v11           #i:I
     :cond_7
     :goto_3
@@ -8275,7 +8468,7 @@
 
     if-lez v24, :cond_8
 
-    .line 1028
+    .line 1030
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuffer;->length()I
 
     move-result v24
@@ -8288,7 +8481,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->deleteCharAt(I)Ljava/lang/StringBuffer;
 
-    .line 1030
+    .line 1032
     :cond_8
     const-string v24, "VCalendarUtils"
 
@@ -8316,14 +8509,14 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1031
+    .line 1033
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     goto/16 :goto_0
 
-    .line 813
+    .line 815
     :cond_9
     const/16 v24, 0x0
 
@@ -8337,7 +8530,7 @@
 
     if-ltz v24, :cond_10
 
-    .line 814
+    .line 816
     const/16 v24, 0x0
 
     aget-object v24, v5, v24
@@ -8356,7 +8549,7 @@
 
     move-result-object v12
 
-    .line 815
+    .line 817
     const-string v24, "YEARLY;"
 
     move-object/from16 v0, v17
@@ -8383,7 +8576,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 816
+    .line 818
     const-string v24, "WKST="
 
     move-object/from16 v0, v17
@@ -8404,7 +8597,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 818
+    .line 820
     const/4 v11, 0x1
 
     .restart local v11       #i:I
@@ -8417,7 +8610,7 @@
 
     if-ge v11, v0, :cond_d
 
-    .line 820
+    .line 822
     aget-object v24, v5, v11
 
     move-object/from16 v0, p0
@@ -8430,14 +8623,14 @@
 
     if-eqz v24, :cond_a
 
-    .line 821
+    .line 823
     aget-object v24, v5, v11
 
     move-object/from16 v0, v24
 
     invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 824
+    .line 826
     :cond_a
     aget-object v24, v5, v11
 
@@ -8449,7 +8642,7 @@
 
     if-ltz v24, :cond_b
 
-    .line 825
+    .line 827
     aget-object v24, v5, v11
 
     const/16 v25, 0x1
@@ -8464,7 +8657,7 @@
 
     move-result-object v7
 
-    .line 826
+    .line 828
     const-string v24, "0"
 
     move-object/from16 v0, v24
@@ -8475,7 +8668,7 @@
 
     if-nez v24, :cond_b
 
-    .line 827
+    .line 829
     const-string v24, "COUNT="
 
     move-object/from16 v0, v17
@@ -8496,7 +8689,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 830
+    .line 832
     :cond_b
     aget-object v24, v5, v11
 
@@ -8518,10 +8711,10 @@
 
     if-ltz v24, :cond_c
 
-    .line 831
+    .line 833
     aget-object v21, v5, v11
 
-    .line 832
+    .line 834
     const-string v24, "UNTIL="
 
     move-object/from16 v0, v17
@@ -8544,19 +8737,19 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 818
+    .line 820
     :cond_c
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_4
 
-    .line 836
+    .line 838
     :cond_d
     new-instance v19, Landroid/text/format/Time;
 
     invoke-direct/range {v19 .. v19}, Landroid/text/format/Time;-><init>()V
 
-    .line 837
+    .line 839
     .local v19, t:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -8570,7 +8763,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 838
+    .line 840
     invoke-static {}, Landroid/text/format/Time;->getCurrentTimezone()Ljava/lang/String;
 
     move-result-object v24
@@ -8581,7 +8774,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 839
+    .line 841
     const/16 v24, 0x0
 
     move-object/from16 v0, v19
@@ -8590,7 +8783,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 840
+    .line 842
     const-string v24, "VCalendarUtils"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -8617,7 +8810,7 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 841
+    .line 843
     const-string v24, "VCalendarUtils"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -8646,7 +8839,7 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 843
+    .line 845
     new-instance v20, Landroid/text/format/Time;
 
     const-string v24, "UTC"
@@ -8657,7 +8850,7 @@
 
     invoke-direct {v0, v1}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 844
+    .line 846
     .local v20, tUTC:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -8671,7 +8864,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 845
+    .line 847
     const/16 v24, 0x0
 
     move-object/from16 v0, v20
@@ -8680,7 +8873,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 846
+    .line 848
     const-string v24, "VCalendarUtils"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -8707,7 +8900,7 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
+    .line 849
     move-object/from16 v0, v19
 
     iget v0, v0, Landroid/text/format/Time;->yearDay:I
@@ -8722,7 +8915,7 @@
 
     sub-int v8, v24, v25
 
-    .line 848
+    .line 850
     .local v8, dayOffset:I
     const/16 v24, 0x8
 
@@ -8734,7 +8927,7 @@
 
     move-result v13
 
-    .line 850
+    .line 852
     .local v13, maxYearDay:I
     invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
 
@@ -8742,7 +8935,7 @@
 
     if-lez v24, :cond_7
 
-    .line 851
+    .line 853
     const/4 v11, 0x0
 
     :goto_5
@@ -8754,14 +8947,14 @@
 
     if-ge v11, v0, :cond_7
 
-    .line 852
+    .line 854
     invoke-virtual {v14, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v23
 
     check-cast v23, Ljava/lang/String;
 
-    .line 853
+    .line 855
     .local v23, ydYearDay:Ljava/lang/String;
     const-string v24, "VCalendarUtils"
 
@@ -8769,7 +8962,7 @@
 
     invoke-direct/range {v25 .. v25}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v26, "ydYearDay:"
+    const-string/jumbo v26, "ydYearDay:"
 
     invoke-virtual/range {v25 .. v26}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8813,12 +9006,12 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 854
+    .line 856
     invoke-static/range {v23 .. v23}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v16
 
-    .line 855
+    .line 857
     .local v16, nYearDay:I
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isSBM()Z
 
@@ -8826,7 +9019,7 @@
 
     if-eqz v24, :cond_e
 
-    .line 857
+    .line 859
     move-object/from16 v0, v19
 
     iget v0, v0, Landroid/text/format/Time;->yearDay:I
@@ -8835,7 +9028,7 @@
 
     add-int/lit8 v16, v24, 0x1
 
-    .line 860
+    .line 862
     :cond_e
     add-int/lit8 v24, v16, -0x1
 
@@ -8843,12 +9036,12 @@
 
     if-le v0, v13, :cond_f
 
-    .line 862
+    .line 864
     const-string p1, ""
 
     goto/16 :goto_0
 
-    .line 865
+    .line 867
     :cond_f
     move-object/from16 v0, p0
 
@@ -8860,7 +9053,7 @@
 
     move-result-object v6
 
-    .line 866
+    .line 868
     .local v6, correctTime:Landroid/text/format/Time;
     const-string v24, "VCalendarUtils"
 
@@ -8900,7 +9093,7 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 868
+    .line 870
     const-string v24, "BYMONTH="
 
     move-object/from16 v0, v17
@@ -8909,7 +9102,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 869
+    .line 871
     iget v0, v6, Landroid/text/format/Time;->month:I
 
     move/from16 v24, v0
@@ -8926,7 +9119,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 870
+    .line 872
     const-string v24, ";"
 
     move-object/from16 v0, v17
@@ -8935,7 +9128,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 871
+    .line 873
     const-string v24, "BYMONTHDAY="
 
     move-object/from16 v0, v17
@@ -8944,7 +9137,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 872
+    .line 874
     iget v0, v6, Landroid/text/format/Time;->monthDay:I
 
     move/from16 v24, v0
@@ -8955,7 +9148,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 873
+    .line 875
     const-string v24, ";"
 
     move-object/from16 v0, v17
@@ -8964,12 +9157,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 851
+    .line 853
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_5
 
-    .line 878
+    .line 880
     .end local v6           #correctTime:Landroid/text/format/Time;
     .end local v8           #dayOffset:I
     .end local v11           #i:I
@@ -9003,7 +9196,7 @@
 
     if-ltz v24, :cond_1e
 
-    .line 879
+    .line 881
     :cond_11
     const/16 v24, 0x0
 
@@ -9023,7 +9216,7 @@
 
     move-result-object v12
 
-    .line 880
+    .line 882
     const-string v24, "MONTHLY;"
 
     move-object/from16 v0, v17
@@ -9050,7 +9243,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 881
+    .line 883
     const-string v24, "WKST="
 
     move-object/from16 v0, v17
@@ -9071,7 +9264,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 884
+    .line 886
     new-instance v9, Landroid/text/format/Time;
 
     const-string v24, "UTC"
@@ -9080,7 +9273,7 @@
 
     invoke-direct {v9, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 885
+    .line 887
     .local v9, eventTimeLocal:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -9092,7 +9285,7 @@
 
     invoke-virtual {v9, v0}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 886
+    .line 888
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -9105,7 +9298,7 @@
 
     invoke-direct {v0, v1, v9}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 887
+    .line 889
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -9122,7 +9315,7 @@
 
     if-eqz v24, :cond_12
 
-    .line 888
+    .line 890
     invoke-static {}, Landroid/text/format/Time;->getCurrentTimezone()Ljava/lang/String;
 
     move-result-object v24
@@ -9131,7 +9324,7 @@
 
     invoke-virtual {v9, v0}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 890
+    .line 892
     :cond_12
     const/16 v24, 0x0
 
@@ -9139,7 +9332,7 @@
 
     invoke-virtual {v9, v0}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 893
+    .line 895
     new-instance v10, Landroid/text/format/Time;
 
     const-string v24, "UTC"
@@ -9148,7 +9341,7 @@
 
     invoke-direct {v10, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 894
+    .line 896
     .local v10, eventTimeUTC:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -9160,7 +9353,7 @@
 
     invoke-virtual {v10, v0}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 895
+    .line 897
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -9173,14 +9366,14 @@
 
     invoke-direct {v0, v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 896
+    .line 898
     const/16 v24, 0x0
 
     move/from16 v0, v24
 
     invoke-virtual {v10, v0}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 897
+    .line 899
     iget v0, v9, Landroid/text/format/Time;->yearDay:I
 
     move/from16 v24, v0
@@ -9191,7 +9384,7 @@
 
     sub-int v8, v24, v25
 
-    .line 898
+    .line 900
     .restart local v8       #dayOffset:I
     const-string v24, "VCalendarUtils"
 
@@ -9217,7 +9410,7 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 900
+    .line 902
     const/4 v11, 0x1
 
     .restart local v11       #i:I
@@ -9230,7 +9423,7 @@
 
     if-ge v11, v0, :cond_19
 
-    .line 901
+    .line 903
     aget-object v24, v5, v11
 
     const-string v25, "+"
@@ -9241,7 +9434,7 @@
 
     if-ltz v24, :cond_14
 
-    .line 902
+    .line 904
     aget-object v24, v5, v11
 
     const/16 v25, 0x0
@@ -9264,14 +9457,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 900
+    .line 902
     :cond_13
     :goto_7
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_6
 
-    .line 904
+    .line 906
     :cond_14
     aget-object v24, v5, v11
 
@@ -9283,7 +9476,7 @@
 
     if-ltz v24, :cond_15
 
-    .line 905
+    .line 907
     new-instance v24, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
@@ -9326,7 +9519,7 @@
 
     goto :goto_7
 
-    .line 907
+    .line 909
     :cond_15
     aget-object v24, v5, v11
 
@@ -9348,10 +9541,10 @@
 
     if-ltz v24, :cond_16
 
-    .line 908
+    .line 910
     aget-object v21, v5, v11
 
-    .line 909
+    .line 911
     const-string v24, "UNTIL="
 
     move-object/from16 v0, v17
@@ -9376,7 +9569,7 @@
 
     goto :goto_7
 
-    .line 911
+    .line 913
     :cond_16
     aget-object v24, v5, v11
 
@@ -9388,7 +9581,7 @@
 
     if-ltz v24, :cond_17
 
-    .line 912
+    .line 914
     aget-object v24, v5, v11
 
     const/16 v25, 0x1
@@ -9403,7 +9596,7 @@
 
     move-result-object v7
 
-    .line 913
+    .line 915
     const-string v24, "0"
 
     move-object/from16 v0, v24
@@ -9414,7 +9607,7 @@
 
     if-nez v24, :cond_13
 
-    .line 914
+    .line 916
     const-string v24, "COUNT="
 
     move-object/from16 v0, v17
@@ -9437,7 +9630,7 @@
 
     goto/16 :goto_7
 
-    .line 916
+    .line 918
     :cond_17
     aget-object v24, v5, v11
 
@@ -9451,7 +9644,7 @@
 
     if-eqz v24, :cond_18
 
-    .line 917
+    .line 919
     aget-object v24, v5, v11
 
     move-object/from16 v0, v22
@@ -9462,7 +9655,7 @@
 
     goto/16 :goto_7
 
-    .line 919
+    .line 921
     :cond_18
     aget-object v24, v5, v11
 
@@ -9476,7 +9669,7 @@
 
     if-eqz v24, :cond_13
 
-    .line 920
+    .line 922
     aget-object v24, v5, v11
 
     move-object/from16 v0, v24
@@ -9485,7 +9678,7 @@
 
     goto/16 :goto_7
 
-    .line 933
+    .line 935
     :cond_19
     invoke-virtual/range {v22 .. v22}, Ljava/util/ArrayList;->size()I
 
@@ -9493,7 +9686,7 @@
 
     if-lez v24, :cond_1c
 
-    .line 934
+    .line 936
     const-string v24, "BYDAY="
 
     move-object/from16 v0, v17
@@ -9502,14 +9695,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 935
+    .line 937
     invoke-virtual/range {v18 .. v18}, Ljava/util/ArrayList;->size()I
 
     move-result v24
 
     if-lez v24, :cond_1a
 
-    .line 936
+    .line 938
     const/16 v24, 0x0
 
     move-object/from16 v0, v18
@@ -9528,7 +9721,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 938
+    .line 940
     :cond_1a
     const/4 v11, 0x0
 
@@ -9541,7 +9734,7 @@
 
     if-ge v11, v0, :cond_1b
 
-    .line 939
+    .line 941
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -9562,12 +9755,12 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 938
+    .line 940
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_8
 
-    .line 941
+    .line 943
     :cond_1b
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuffer;->length()I
 
@@ -9585,14 +9778,14 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->setCharAt(IC)V
 
-    .line 942
+    .line 944
     invoke-virtual/range {v22 .. v22}, Ljava/util/ArrayList;->clear()V
 
-    .line 945
+    .line 947
     :cond_1c
     const-string v4, ""
 
-    .line 946
+    .line 948
     .local v4, alreadyFixMonthDayOffset:Ljava/lang/String;
     invoke-virtual {v15}, Ljava/util/ArrayList;->size()I
 
@@ -9600,7 +9793,7 @@
 
     if-lez v24, :cond_7
 
-    .line 947
+    .line 949
     const-string v24, "BYMONTHDAY="
 
     move-object/from16 v0, v17
@@ -9609,7 +9802,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 948
+    .line 950
     const/4 v11, 0x0
 
     :goto_9
@@ -9621,7 +9814,7 @@
 
     if-ge v11, v0, :cond_1d
 
-    .line 949
+    .line 951
     invoke-virtual {v15, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v24
@@ -9636,7 +9829,7 @@
 
     move-result-object v4
 
-    .line 951
+    .line 953
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -9647,12 +9840,12 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 948
+    .line 950
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_9
 
-    .line 954
+    .line 956
     :cond_1d
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuffer;->length()I
 
@@ -9670,12 +9863,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->setCharAt(IC)V
 
-    .line 955
+    .line 957
     invoke-virtual {v15}, Ljava/util/ArrayList;->clear()V
 
     goto/16 :goto_3
 
-    .line 958
+    .line 960
     .end local v4           #alreadyFixMonthDayOffset:Ljava/lang/String;
     .end local v8           #dayOffset:I
     .end local v9           #eventTimeLocal:Landroid/text/format/Time;
@@ -9694,7 +9887,7 @@
 
     if-ltz v24, :cond_25
 
-    .line 959
+    .line 961
     const/16 v24, 0x0
 
     aget-object v24, v5, v24
@@ -9713,7 +9906,7 @@
 
     move-result-object v12
 
-    .line 960
+    .line 962
     const-string v24, "WEEKLY;"
 
     move-object/from16 v0, v17
@@ -9740,7 +9933,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 961
+    .line 963
     const-string v24, "WKST="
 
     move-object/from16 v0, v17
@@ -9761,7 +9954,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 964
+    .line 966
     new-instance v9, Landroid/text/format/Time;
 
     const-string v24, "UTC"
@@ -9770,7 +9963,7 @@
 
     invoke-direct {v9, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 965
+    .line 967
     .restart local v9       #eventTimeLocal:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -9782,7 +9975,7 @@
 
     invoke-virtual {v9, v0}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 966
+    .line 968
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -9795,7 +9988,7 @@
 
     invoke-direct {v0, v1, v9}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 967
+    .line 969
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -9812,7 +10005,7 @@
 
     if-eqz v24, :cond_1f
 
-    .line 968
+    .line 970
     invoke-static {}, Landroid/text/format/Time;->getCurrentTimezone()Ljava/lang/String;
 
     move-result-object v24
@@ -9821,7 +10014,7 @@
 
     invoke-virtual {v9, v0}, Landroid/text/format/Time;->switchTimezone(Ljava/lang/String;)V
 
-    .line 970
+    .line 972
     :cond_1f
     const/16 v24, 0x0
 
@@ -9829,7 +10022,7 @@
 
     invoke-virtual {v9, v0}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 973
+    .line 975
     new-instance v10, Landroid/text/format/Time;
 
     const-string v24, "UTC"
@@ -9838,7 +10031,7 @@
 
     invoke-direct {v10, v0}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 974
+    .line 976
     .restart local v10       #eventTimeUTC:Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -9850,7 +10043,7 @@
 
     invoke-virtual {v10, v0}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 975
+    .line 977
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
@@ -9863,14 +10056,14 @@
 
     invoke-direct {v0, v1, v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->checkTimeStringInAllDay(Ljava/lang/String;Landroid/text/format/Time;)V
 
-    .line 976
+    .line 978
     const/16 v24, 0x0
 
     move/from16 v0, v24
 
     invoke-virtual {v10, v0}, Landroid/text/format/Time;->normalize(Z)J
 
-    .line 977
+    .line 979
     iget v0, v9, Landroid/text/format/Time;->yearDay:I
 
     move/from16 v24, v0
@@ -9881,7 +10074,7 @@
 
     sub-int v8, v24, v25
 
-    .line 978
+    .line 980
     .restart local v8       #dayOffset:I
     const-string v24, "VCalendarUtils"
 
@@ -9907,10 +10100,10 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 980
+    .line 982
     const-string v3, ""
 
-    .line 981
+    .line 983
     .local v3, alreadyFixDayOffset:Ljava/lang/String;
     const/4 v11, 0x1
 
@@ -9924,7 +10117,7 @@
 
     if-ge v11, v0, :cond_23
 
-    .line 982
+    .line 984
     aget-object v24, v5, v11
 
     move-object/from16 v0, p0
@@ -9937,7 +10130,7 @@
 
     if-eqz v24, :cond_20
 
-    .line 983
+    .line 985
     aget-object v24, v5, v11
 
     move-object/from16 v0, p0
@@ -9948,12 +10141,12 @@
 
     move-result-object v3
 
-    .line 984
+    .line 986
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 987
+    .line 989
     :cond_20
     aget-object v24, v5, v11
 
@@ -9965,7 +10158,7 @@
 
     if-ltz v24, :cond_21
 
-    .line 988
+    .line 990
     aget-object v24, v5, v11
 
     const/16 v25, 0x1
@@ -9980,7 +10173,7 @@
 
     move-result-object v7
 
-    .line 989
+    .line 991
     const-string v24, "0"
 
     move-object/from16 v0, v24
@@ -9991,7 +10184,7 @@
 
     if-nez v24, :cond_21
 
-    .line 990
+    .line 992
     const-string v24, "COUNT="
 
     move-object/from16 v0, v17
@@ -10012,7 +10205,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 993
+    .line 995
     :cond_21
     aget-object v24, v5, v11
 
@@ -10034,10 +10227,10 @@
 
     if-ltz v24, :cond_22
 
-    .line 994
+    .line 996
     aget-object v21, v5, v11
 
-    .line 995
+    .line 997
     const-string v24, "UNTIL="
 
     move-object/from16 v0, v17
@@ -10060,13 +10253,13 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 981
+    .line 983
     :cond_22
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_a
 
-    .line 999
+    .line 1001
     :cond_23
     invoke-virtual/range {v22 .. v22}, Ljava/util/ArrayList;->size()I
 
@@ -10074,7 +10267,7 @@
 
     if-lez v24, :cond_7
 
-    .line 1000
+    .line 1002
     const-string v24, "BYDAY="
 
     move-object/from16 v0, v17
@@ -10083,7 +10276,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1001
+    .line 1003
     const/4 v11, 0x0
 
     :goto_b
@@ -10095,7 +10288,7 @@
 
     if-ge v11, v0, :cond_24
 
-    .line 1002
+    .line 1004
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -10116,12 +10309,12 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1001
+    .line 1003
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_b
 
-    .line 1004
+    .line 1006
     :cond_24
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuffer;->length()I
 
@@ -10139,12 +10332,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->setCharAt(IC)V
 
-    .line 1005
+    .line 1007
     invoke-virtual/range {v22 .. v22}, Ljava/util/ArrayList;->clear()V
 
     goto/16 :goto_3
 
-    .line 1008
+    .line 1010
     .end local v3           #alreadyFixDayOffset:Ljava/lang/String;
     .end local v8           #dayOffset:I
     .end local v9           #eventTimeLocal:Landroid/text/format/Time;
@@ -10163,7 +10356,7 @@
 
     if-ltz v24, :cond_7
 
-    .line 1009
+    .line 1011
     const/16 v24, 0x0
 
     aget-object v24, v5, v24
@@ -10182,7 +10375,7 @@
 
     move-result-object v12
 
-    .line 1010
+    .line 1012
     const-string v24, "DAILY;"
 
     move-object/from16 v0, v17
@@ -10209,7 +10402,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1011
+    .line 1013
     const-string v24, "WKST="
 
     move-object/from16 v0, v17
@@ -10230,7 +10423,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1013
+    .line 1015
     const/4 v11, 0x0
 
     .restart local v11       #i:I
@@ -10243,7 +10436,7 @@
 
     if-ge v11, v0, :cond_7
 
-    .line 1014
+    .line 1016
     aget-object v24, v5, v11
 
     const-string v25, "#"
@@ -10254,7 +10447,7 @@
 
     if-ltz v24, :cond_26
 
-    .line 1015
+    .line 1017
     aget-object v24, v5, v11
 
     const/16 v25, 0x1
@@ -10269,7 +10462,7 @@
 
     move-result-object v7
 
-    .line 1016
+    .line 1018
     const-string v24, "0"
 
     move-object/from16 v0, v24
@@ -10280,7 +10473,7 @@
 
     if-nez v24, :cond_26
 
-    .line 1017
+    .line 1019
     const-string v24, "COUNT="
 
     move-object/from16 v0, v17
@@ -10301,7 +10494,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1020
+    .line 1022
     :cond_26
     aget-object v24, v5, v11
 
@@ -10323,10 +10516,10 @@
 
     if-ltz v24, :cond_27
 
-    .line 1021
+    .line 1023
     aget-object v21, v5, v11
 
-    .line 1022
+    .line 1024
     const-string v24, "UNTIL="
 
     move-object/from16 v0, v17
@@ -10349,7 +10542,7 @@
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1013
+    .line 1015
     :cond_27
     add-int/lit8 v11, v11, 0x1
 
@@ -10360,7 +10553,7 @@
     .locals 2
 
     .prologue
-    .line 1715
+    .line 1724
     const-wide/16 v0, -0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getAlarmCV(J)Landroid/content/ContentValues;
@@ -10375,12 +10568,12 @@
     .parameter "eventId"
 
     .prologue
-    .line 1719
+    .line 1728
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1720
+    .line 1729
     .local v0, cv:Landroid/content/ContentValues;
     const-wide/16 v1, 0x0
 
@@ -10388,7 +10581,7 @@
 
     if-lez v1, :cond_0
 
-    .line 1721
+    .line 1730
     const-string v1, "event_id"
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -10397,7 +10590,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1723
+    .line 1732
     :cond_0
     const-string v1, "method"
 
@@ -10409,7 +10602,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1724
+    .line 1733
     const-string v1, "minutes"
 
     iget-wide v2, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->alarm:J
@@ -10420,7 +10613,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1726
+    .line 1735
     return-object v0
 .end method
 
@@ -10428,108 +10621,108 @@
     .locals 5
 
     .prologue
-    .line 1095
+    .line 1097
     new-instance v0, Lcom/htc/util/calendar/vcalendar/CalendarStruct;
 
     invoke-direct {v0}, Lcom/htc/util/calendar/vcalendar/CalendarStruct;-><init>()V
 
-    .line 1097
+    .line 1099
     .local v0, calStruct:Lcom/htc/util/calendar/vcalendar/CalendarStruct;
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
 
     iput-object v4, v0, Lcom/htc/util/calendar/vcalendar/CalendarStruct;->timezone:Ljava/lang/String;
 
-    .line 1099
+    .line 1101
     new-instance v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;
 
     invoke-direct {v3}, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;-><init>()V
 
-    .line 1101
+    .line 1103
     .local v3, evtStruct:Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->uid:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->uid:Ljava/lang/String;
 
-    .line 1102
+    .line 1104
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->title:Ljava/lang/String;
 
-    .line 1103
+    .line 1105
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->description:Ljava/lang/String;
 
-    .line 1104
+    .line 1106
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTStart:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->dtstart:Ljava/lang/String;
 
-    .line 1105
+    .line 1107
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strDTEnd:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->dtend:Ljava/lang/String;
 
-    .line 1106
+    .line 1108
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->duration:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->duration:Ljava/lang/String;
 
-    .line 1107
+    .line 1109
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->location:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->event_location:Ljava/lang/String;
 
-    .line 1108
+    .line 1110
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->rrule:Ljava/lang/String;
 
-    .line 1109
+    .line 1111
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rDate:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->rdate:Ljava/lang/String;
 
-    .line 1110
+    .line 1112
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exRule:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->exrule:Ljava/lang/String;
 
-    .line 1111
+    .line 1113
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->exdate:Ljava/lang/String;
 
-    .line 1112
+    .line 1114
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->status:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->status:Ljava/lang/String;
 
-    .line 1113
+    .line 1115
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->strAlarm:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->alarm:Ljava/lang/String;
 
-    .line 1114
+    .line 1116
     iget-boolean v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
 
     iput-boolean v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->isAllday:Z
 
-    .line 1115
+    .line 1117
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->last_update_time:Ljava/lang/String;
 
     iput-object v4, v3, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->last_update_time:Ljava/lang/String;
 
-    .line 1117
+    .line 1119
     invoke-virtual {v0, v3}, Lcom/htc/util/calendar/vcalendar/CalendarStruct;->addEventList(Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;)V
 
-    .line 1120
+    .line 1122
     :try_start_0
     new-instance v1, Lcom/htc/util/calendar/vcalendar/VCalComposer;
 
     invoke-direct {v1}, Lcom/htc/util/calendar/vcalendar/VCalComposer;-><init>()V
 
-    .line 1122
+    .line 1124
     .local v1, composer:Lcom/htc/util/calendar/vcalendar/VCalComposer;
     const/4 v4, 0x1
 
@@ -10539,16 +10732,16 @@
 
     move-result-object v4
 
-    .line 1126
+    .line 1128
     .end local v1           #composer:Lcom/htc/util/calendar/vcalendar/VCalComposer;
     :goto_0
     return-object v4
 
-    .line 1125
+    .line 1127
     :catch_0
     move-exception v2
 
-    .line 1126
+    .line 1128
     .local v2, e:Ljava/lang/Exception;
     const/4 v4, 0x0
 
@@ -10563,12 +10756,12 @@
 
     const/4 v3, 0x0
 
-    .line 1626
+    .line 1635
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1632
+    .line 1641
     .local v0, cv:Landroid/content/ContentValues;
     const-string v1, "iCalGUID"
 
@@ -10576,14 +10769,14 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1635
+    .line 1644
     const-string v1, "title"
 
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1637
+    .line 1646
     const-string v1, "dtstart"
 
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtStart:Landroid/text/format/Time;
@@ -10598,12 +10791,12 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1638
+    .line 1647
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
 
     if-eqz v1, :cond_0
 
-    .line 1639
+    .line 1648
     const-string v1, "dtend"
 
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->dtEnd:Landroid/text/format/Time;
@@ -10618,20 +10811,20 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1642
+    .line 1651
     :cond_0
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->duration:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 1643
+    .line 1652
     const-string v1, "duration"
 
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->duration:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1646
+    .line 1655
     :cond_1
     const-string v1, "eventLocation"
 
@@ -10639,23 +10832,23 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1648
+    .line 1657
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
     if-nez v1, :cond_2
 
-    .line 1649
+    .line 1658
     const-string v1, ""
 
     iput-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 1651
+    .line 1660
     :cond_2
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->categories:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
-    .line 1652
+    .line 1661
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10684,13 +10877,13 @@
 
     iput-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 1654
+    .line 1663
     :cond_3
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->priority:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    .line 1655
+    .line 1664
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10719,13 +10912,13 @@
 
     iput-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 1657
+    .line 1666
     :cond_4
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->status:Ljava/lang/String;
 
     if-eqz v1, :cond_5
 
-    .line 1658
+    .line 1667
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10754,7 +10947,7 @@
 
     iput-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 1660
+    .line 1669
     :cond_5
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
@@ -10762,12 +10955,12 @@
 
     if-ne v1, v4, :cond_6
 
-    .line 1661
+    .line 1670
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->description:Ljava/lang/String;
 
-    .line 1663
+    .line 1672
     :cond_6
     const-string v1, "description"
 
@@ -10775,7 +10968,7 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1665
+    .line 1674
     const-string v4, "allDay"
 
     iget-boolean v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isAllDay:Z
@@ -10791,25 +10984,25 @@
 
     invoke-virtual {v0, v4, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1667
+    .line 1676
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
 
     if-eqz v1, :cond_7
 
-    .line 1668
+    .line 1677
     const-string v1, "eventTimezone"
 
     iget-object v4, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->timezone:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1671
+    .line 1680
     :cond_7
     iget-boolean v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->hasAlarm:Z
 
     if-eqz v1, :cond_d
 
-    .line 1672
+    .line 1681
     const-string v1, "hasAlarm"
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10818,52 +11011,52 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1677
+    .line 1686
     :goto_1
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
 
     if-eqz v1, :cond_8
 
-    .line 1678
+    .line 1687
     const-string v1, "rrule"
 
     iget-object v2, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rRule:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1680
+    .line 1689
     :cond_8
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rDate:Ljava/lang/String;
 
     if-eqz v1, :cond_9
 
-    .line 1681
+    .line 1690
     const-string v1, "rdate"
 
     iget-object v2, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->rDate:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1683
+    .line 1692
     :cond_9
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exRule:Ljava/lang/String;
 
     if-eqz v1, :cond_a
 
-    .line 1684
+    .line 1693
     const-string v1, "exrule"
 
     iget-object v2, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exRule:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1686
+    .line 1695
     :cond_a
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
     if-eqz v1, :cond_b
 
-    .line 1687
+    .line 1696
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
     const-string v2, ";"
@@ -10876,24 +11069,24 @@
 
     iput-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
-    .line 1688
+    .line 1697
     const-string v1, "exdate"
 
     iget-object v2, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->exDate:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1691
+    .line 1700
     :cond_b
     return-object v0
 
     :cond_c
     move v1, v3
 
-    .line 1665
+    .line 1674
     goto :goto_0
 
-    .line 1674
+    .line 1683
     :cond_d
     const-string v1, "hasAlarm"
 
@@ -10910,25 +11103,25 @@
     .locals 3
 
     .prologue
-    .line 1139
+    .line 1141
     invoke-virtual {p0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getContent()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->vCalendar:Ljava/lang/String;
 
-    .line 1141
+    .line 1143
     new-instance v0, Ljava/util/zip/CRC32;
 
     invoke-direct {v0}, Ljava/util/zip/CRC32;-><init>()V
 
-    .line 1143
+    .line 1145
     .local v0, crc:Ljava/util/zip/CRC32;
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->vCalendar:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 1144
+    .line 1146
     iget-object v1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->vCalendar:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
@@ -10937,7 +11130,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/zip/CRC32;->update([B)V
 
-    .line 1147
+    .line 1149
     :cond_0
     invoke-virtual {v0}, Ljava/util/zip/CRC32;->getValue()J
 
@@ -10950,7 +11143,7 @@
     .locals 1
 
     .prologue
-    .line 287
+    .line 289
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->_id:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -10973,7 +11166,7 @@
     .end annotation
 
     .prologue
-    .line 1699
+    .line 1708
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_EventAlarm_ContentValue:Ljava/util/ArrayList;
 
     return-object v0
@@ -10992,7 +11185,7 @@
     .end annotation
 
     .prologue
-    .line 1615
+    .line 1624
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_Event_ContentValue:Ljava/util/ArrayList;
 
     return-object v0
@@ -11011,7 +11204,7 @@
     .end annotation
 
     .prologue
-    .line 1707
+    .line 1716
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDoAlarm_ContentValue:Ljava/util/ArrayList;
 
     return-object v0
@@ -11030,7 +11223,7 @@
     .end annotation
 
     .prologue
-    .line 1622
+    .line 1631
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->mMultiVCal_ToDo_ContentValue:Ljava/util/ArrayList;
 
     return-object v0
@@ -11040,7 +11233,7 @@
     .locals 1
 
     .prologue
-    .line 295
+    .line 297
     iget-boolean v0, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->hasAlarm:Z
 
     return v0
@@ -11051,7 +11244,7 @@
     .parameter "vcalendar"
 
     .prologue
-    .line 255
+    .line 257
     invoke-direct {p0, p1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->init(Ljava/lang/String;)Z
 
     move-result v0
@@ -11064,9 +11257,9 @@
     .parameter "id"
 
     .prologue
-    .line 276
+    .line 278
     iput-object p1, p0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->_id:Ljava/lang/String;
 
-    .line 277
+    .line 279
     return-void
 .end method

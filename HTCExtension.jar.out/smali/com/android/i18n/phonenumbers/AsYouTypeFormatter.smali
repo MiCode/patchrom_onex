@@ -176,7 +176,7 @@
     iput-object v0, p0, Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;->phoneUtil:Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
 
     .line 85
-    const-string v0, "\u2008"
+    const-string/jumbo v0, "\u2008"
 
     iput-object v0, p0, Lcom/android/i18n/phonenumbers/AsYouTypeFormatter;->digitPlaceholder:Ljava/lang/String;
 

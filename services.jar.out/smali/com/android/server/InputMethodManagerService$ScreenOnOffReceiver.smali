@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 380
+    .line 384
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 383
+    .line 387
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -53,20 +53,27 @@
 
     if-eqz v1, :cond_1
 
-    .line 384
+    .line 388
+    const-string v1, "InputManagerService"
+
+    const-string v2, "Receive : Intent.ACTION_SCREEN_ON"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 389
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
 
-    .line 385
+    .line 390
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     #calls: Lcom/android/server/InputMethodManagerService;->refreshImeWindowVisibilityLocked()V
-    invoke-static {v1}, Lcom/android/server/InputMethodManagerService;->access$000(Lcom/android/server/InputMethodManagerService;)V
+    invoke-static {v1}, Lcom/android/server/InputMethodManagerService;->access$100(Lcom/android/server/InputMethodManagerService;)V
 
-    .line 398
+    .line 404
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -83,7 +90,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 399
+    .line 405
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v1, v1, Lcom/android/server/InputMethodManagerService;->mCurClient:Lcom/android/server/InputMethodManagerService$ClientState;
@@ -95,15 +102,47 @@
     iget-boolean v2, v2, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
 
     invoke-interface {v1, v2}, Lcom/android/internal/view/IInputMethodClient;->setActive(Z)V
+
+    .line 406
+    const-string v2, "InputManagerService"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
+
+    iget-boolean v1, v1, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "Enable"
+
+    :goto_1
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, " input method client."
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 405
+    .line 412
     :cond_0
-    :goto_1
+    :goto_2
     return-void
 
-    .line 386
+    .line 391
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -117,22 +156,29 @@
 
     if-eqz v1, :cond_2
 
-    .line 387
+    .line 392
+    const-string v1, "InputManagerService"
+
+    const-string v2, "Receive : Intent.ACTION_SCREEN_OFF"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 393
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const/4 v2, 0x0
 
     iput-boolean v2, v1, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
 
-    .line 388
+    .line 394
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     #calls: Lcom/android/server/InputMethodManagerService;->setImeWindowVisibilityStatusHiddenLocked()V
-    invoke-static {v1}, Lcom/android/server/InputMethodManagerService;->access$100(Lcom/android/server/InputMethodManagerService;)V
+    invoke-static {v1}, Lcom/android/server/InputMethodManagerService;->access$200(Lcom/android/server/InputMethodManagerService;)V
 
     goto :goto_0
 
-    .line 389
+    .line 395
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -146,14 +192,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 390
+    .line 396
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ScreenOnOffReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/InputMethodManagerService;->hideInputMethodMenu()V
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 393
+    .line 399
     :cond_3
     const-string v1, "InputManagerService"
 
@@ -177,13 +223,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 401
+    .line 406
+    :cond_4
+    :try_start_1
+    const-string v1, "Disable"
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
+
+    .line 408
     :catch_0
     move-exception v0
 
-    .line 402
+    .line 409
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "InputManagerService"
 
@@ -229,5 +284,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    goto :goto_2
 .end method

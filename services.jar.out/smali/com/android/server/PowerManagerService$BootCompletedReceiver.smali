@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 563
+    .line 572
     iput-object p1, p0, Lcom/android/server/PowerManagerService$BootCompletedReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 563
+    .line 572
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$BootCompletedReceiver;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -52,12 +52,12 @@
     .parameter "intent"
 
     .prologue
-    .line 566
+    .line 575
     iget-object v0, p0, Lcom/android/server/PowerManagerService$BootCompletedReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService;->bootCompleted()V
 
-    .line 568
+    .line 577
     iget-object v0, p0, Lcom/android/server/PowerManagerService$BootCompletedReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHtcPowerSaver:Lcom/android/server/HtcPowerSaver;
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 570
+    .line 578
     iget-object v0, p0, Lcom/android/server/PowerManagerService$BootCompletedReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mHtcPowerSaver:Lcom/android/server/HtcPowerSaver;
@@ -77,7 +77,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/HtcPowerSaver;->bootCompletedNotify()V
 
-    .line 574
+    .line 582
     :cond_0
     return-void
 .end method

@@ -62,14 +62,14 @@
     .line 21
     invoke-direct {p0}, Lcom/android/internal/telephony/DefaultPhoneNotifier;-><init>()V
 
-    .line 160
+    .line 172
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mPendingNotification:Ljava/util/ArrayList;
 
-    .line 162
+    .line 174
     new-instance v0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$1;-><init>(Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;)V
@@ -119,68 +119,68 @@
     .parameter "state"
 
     .prologue
-    .line 113
+    .line 125
     packed-switch p1, :pswitch_data_0
 
-    .line 142
+    .line 154
     :goto_0
     return-void
 
-    .line 115
+    .line 127
     :pswitch_0
     invoke-super {p0, p2}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyPhoneState(Lcom/android/internal/telephony/Phone;)V
 
     goto :goto_0
 
-    .line 118
+    .line 130
     :pswitch_1
     invoke-super {p0, p2}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyServiceState(Lcom/android/internal/telephony/Phone;)V
 
     goto :goto_0
 
-    .line 121
+    .line 133
     :pswitch_2
     invoke-super {p0, p2}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifySignalStrength(Lcom/android/internal/telephony/Phone;)V
 
     goto :goto_0
 
-    .line 124
+    .line 136
     :pswitch_3
     invoke-super {p0, p2}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyMessageWaitingChanged(Lcom/android/internal/telephony/Phone;)V
 
     goto :goto_0
 
-    .line 127
+    .line 139
     :pswitch_4
     invoke-super {p0, p2}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyCallForwardingChanged(Lcom/android/internal/telephony/Phone;)V
 
     goto :goto_0
 
-    .line 130
+    .line 142
     :pswitch_5
     invoke-super {p0, p2}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyDataActivity(Lcom/android/internal/telephony/Phone;)V
 
     goto :goto_0
 
-    .line 133
+    .line 145
     :pswitch_6
     invoke-super {p0, p2, p3, p4, p5}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyDataConnection(Lcom/android/internal/telephony/Phone;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/Phone$DataState;)V
 
     goto :goto_0
 
-    .line 136
+    .line 148
     :pswitch_7
     invoke-super {p0, p2, p3, p4}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyDataConnectionFailed(Lcom/android/internal/telephony/Phone;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 139
+    .line 151
     :pswitch_8
     invoke-super {p0, p2}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyCellLocation(Lcom/android/internal/telephony/Phone;)V
 
     goto :goto_0
 
-    .line 113
+    .line 125
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -208,38 +208,38 @@
 
     const/4 v1, 0x0
 
-    .line 79
+    .line 91
     const/4 v7, 0x0
 
-    .line 80
+    .line 92
     .local v7, enqeue:Z
     const/4 v8, -0x1
 
-    .line 81
+    .line 93
     .local v8, timeoutValue:I
     packed-switch p1, :pswitch_data_0
 
-    .line 100
+    .line 112
     :cond_0
     :goto_0
     if-eqz v7, :cond_2
 
-    .line 101
+    .line 113
     if-ltz v8, :cond_1
 
-    .line 103
+    .line 115
     iget-object v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 105
+    .line 117
     iget-object v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mHandler:Landroid/os/Handler;
 
     int-to-long v2, v8
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 107
+    .line 119
     :cond_1
     iget-object v9, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mPendingNotification:Ljava/util/ArrayList;
 
@@ -261,11 +261,11 @@
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 109
+    .line 121
     :cond_2
     return v7
 
-    .line 83
+    .line 95
     :pswitch_0
     iget-object v2, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mPendingNotification:Ljava/util/ArrayList;
 
@@ -277,13 +277,13 @@
 
     move v7, v0
 
-    .line 84
+    .line 96
     :goto_1
     if-nez v7, :cond_0
 
     if-eqz p3, :cond_0
 
-    .line 85
+    .line 97
     const-string v0, "2GVoiceCallStarted"
 
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -292,10 +292,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 86
+    .line 98
     const/4 v7, 0x1
 
-    .line 87
+    .line 99
     iget v8, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mTimeoutCallStart:I
 
     goto :goto_0
@@ -303,10 +303,10 @@
     :cond_3
     move v7, v1
 
-    .line 83
+    .line 95
     goto :goto_1
 
-    .line 89
+    .line 101
     :cond_4
     const-string v0, "2GVoiceCallEnded"
 
@@ -316,15 +316,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 90
+    .line 102
     const/4 v7, 0x1
 
-    .line 91
+    .line 103
     iget v8, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mTimeoutCallEnd:I
 
     goto :goto_0
 
-    .line 97
+    .line 109
     :pswitch_1
     iget-object v2, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mPendingNotification:Ljava/util/ArrayList;
 
@@ -344,7 +344,7 @@
 
     goto :goto_2
 
-    .line 81
+    .line 93
     :pswitch_data_0
     .packed-switch 0x6
         :pswitch_1
@@ -357,17 +357,17 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 70
     const/16 v0, 0xbb8
 
     iput v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mTimeoutCallStart:I
 
-    .line 59
+    .line 71
     const/16 v0, 0x7d0
 
     iput v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mTimeoutCallEnd:I
 
-    .line 66
+    .line 78
     return-void
 .end method
 
@@ -380,7 +380,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 27
+    .line 31
     const/4 v1, 0x6
 
     move-object v0, p0
@@ -397,11 +397,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 31
+    .line 35
     :goto_0
     return-void
 
-    .line 30
+    .line 34
     :cond_0
     invoke-super {p0, p1}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyDataActivity(Lcom/android/internal/telephony/Phone;)V
 
@@ -416,7 +416,7 @@
     .parameter "state"
 
     .prologue
-    .line 35
+    .line 43
     const/4 v1, 0x7
 
     move-object v0, p0
@@ -435,11 +435,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 39
+    .line 47
     :goto_0
     return-void
 
-    .line 38
+    .line 46
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyDataConnection(Lcom/android/internal/telephony/Phone;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/Phone$DataState;)V
 
@@ -453,7 +453,7 @@
     .parameter "apnType"
 
     .prologue
-    .line 43
+    .line 55
     const/16 v1, 0x8
 
     const/4 v5, 0x0
@@ -472,11 +472,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 47
+    .line 59
     :goto_0
     return-void
 
-    .line 46
+    .line 58
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/telephony/DefaultPhoneNotifier;->notifyDataConnectionFailed(Lcom/android/internal/telephony/Phone;Ljava/lang/String;Ljava/lang/String;)V
 

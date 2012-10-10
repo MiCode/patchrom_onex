@@ -27,10 +27,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 1184
+    .line 1180
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$Switch2GCall;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 1185
+    .line 1181
     const-string v2, "Switch2GCall"
 
     const-string v3, "powersaver_switch_2G_call"
@@ -45,10 +45,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1186
+    .line 1182
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$Switch2GCall;->mContext:Landroid/content/Context;
 
-    .line 1187
+    .line 1183
     return-void
 .end method
 
@@ -58,14 +58,14 @@
     .locals 2
 
     .prologue
-    .line 1197
+    .line 1193
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "applyPowerSaverSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1198
+    .line 1194
     const/4 v0, 0x0
 
     return v0
@@ -75,14 +75,14 @@
     .locals 2
 
     .prologue
-    .line 1203
+    .line 1199
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "restoreSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1204
+    .line 1200
     const/4 v0, 0x0
 
     return v0
@@ -92,14 +92,14 @@
     .locals 2
 
     .prologue
-    .line 1191
+    .line 1187
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "saveSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1192
+    .line 1188
     const/4 v0, 0x0
 
     return v0

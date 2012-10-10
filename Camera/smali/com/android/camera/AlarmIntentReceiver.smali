@@ -33,7 +33,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 9
+    .locals 8
     .parameter "context"
     .parameter "intent"
 
@@ -48,256 +48,204 @@
 
     .line 30
     .local v0, action:Ljava/lang/String;
-    const-string v6, "android.intent.action.camera.ulog.MEDIACOUNT"
+    const-string v5, "android.intent.action.camera.ulog.MEDIACOUNT"
 
-    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v5
 
-    if-eqz v6, :cond_5
+    if-eqz v5, :cond_4
 
-    .line 32
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+    .line 67
+    iget-object v5, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
 
-    const-string v7, "pref_bi_photo_taken"
+    const-string v6, "pref_bi_photo_mode_setting_snap_history"
 
-    invoke-static {v6, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v6}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 33
-    .local v2, photo_taken:Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+    .line 68
+    .local v2, photo_settings:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
 
-    const-string v7, "pref_bi_video_taken"
+    const-string v6, "pref_bi_video_setting_recording_history"
 
-    invoke-static {v6, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 34
-    .local v5, video_taken:Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
-
-    const-string v7, "pref_bi_actionburst_pohto_taken"
-
-    invoke-static {v6, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 35
-    .local v1, actionburst_taken:Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
-
-    const-string v7, "pref_bi_snapbooth_taken"
-
-    invoke-static {v6, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 37
-    .local v3, snapbooth_taken:Ljava/lang/String;
-    const-string v6, "null"
-
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_0
-
-    const-string v6, "0"
-
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    :cond_0
-    const-string v6, "null"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    const-string v6, "0"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    :cond_1
-    const-string v6, "null"
-
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    const-string v6, "0"
-
-    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    :cond_2
-    const-string v6, "null"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
-
-    const-string v6, "0"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    .line 41
-    :cond_3
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->TAG:Ljava/lang/String;
-
-    const-string v7, "No picture, just return"
-
-    invoke-static {v6, v7}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 71
-    .end local v1           #actionburst_taken:Ljava/lang/String;
-    .end local v2           #photo_taken:Ljava/lang/String;
-    .end local v3           #snapbooth_taken:Ljava/lang/String;
-    .end local v5           #video_taken:Ljava/lang/String;
-    :goto_0
-    return-void
-
-    .line 47
-    .restart local v1       #actionburst_taken:Ljava/lang/String;
-    .restart local v2       #photo_taken:Ljava/lang/String;
-    .restart local v3       #snapbooth_taken:Ljava/lang/String;
-    .restart local v5       #video_taken:Ljava/lang/String;
-    :cond_4
-    invoke-static {}, Lcom/htc/utils/ulog/ReusableULogData;->obtain()Lcom/htc/utils/ulog/ReusableULogData;
+    invoke-static {v5, v6}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 50
-    .local v4, uLogData:Lcom/htc/utils/ulog/ReusableULogData;
-    const-string v6, "com.android.camera"
+    .line 69
+    .local v4, video_settings:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v4, v6}, Lcom/htc/utils/ulog/ReusableULogData;->setAppId(Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+    const-string v6, "pref_bi_continuousburst_history"
 
-    move-result-object v6
+    invoke-static {v5, v6}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v7, "photo_video_taken"
+    move-result-object v1
 
-    invoke-interface {v6, v7}, Lcom/htc/utils/ulog/ULogDataWritable;->setCategory(Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+    .line 71
+    .local v1, continuousburst_count:Ljava/lang/String;
+    const-string v5, "null"
 
-    move-result-object v6
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v7, "photo"
+    move-result v5
 
-    invoke-interface {v6, v7, v2}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+    if-nez v5, :cond_0
 
-    move-result-object v6
+    const-string v5, ""
 
-    const-string v7, "video"
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {v6, v7, v5}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+    move-result v5
 
-    move-result-object v6
+    if-eqz v5, :cond_3
 
-    const-string v7, "snapbooth_photo"
+    :cond_0
+    const-string v5, "null"
 
-    invoke-interface {v6, v7, v3}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v6
+    move-result v5
 
-    const-string v7, "burst_photo"
+    if-nez v5, :cond_1
 
-    invoke-interface {v6, v7, v1}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+    const-string v5, ""
 
-    .line 56
-    invoke-static {v4}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogData;)V
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 57
-    invoke-virtual {v4}, Lcom/htc/utils/ulog/ReusableULogData;->recycle()V
+    move-result v5
 
-    .line 60
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+    if-eqz v5, :cond_3
 
-    const-string v7, "pref_bi_photo_taken"
+    :cond_1
+    const-string v5, "null"
 
-    const-string v8, "0"
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v6, v7, v8}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
+    move-result v5
 
-    .line 61
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+    if-nez v5, :cond_2
 
-    const-string v7, "pref_bi_video_taken"
+    const-string v5, ""
 
-    const-string v8, "0"
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v6, v7, v8}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
+    move-result v5
 
-    .line 62
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+    if-eqz v5, :cond_3
 
-    const-string v7, "pref_bi_actionburst_pohto_taken"
+    .line 104
+    .end local v1           #continuousburst_count:Ljava/lang/String;
+    .end local v2           #photo_settings:Ljava/lang/String;
+    .end local v4           #video_settings:Ljava/lang/String;
+    :cond_2
+    :goto_0
+    return-void
 
-    const-string v8, "0"
+    .line 81
+    .restart local v1       #continuousburst_count:Ljava/lang/String;
+    .restart local v2       #photo_settings:Ljava/lang/String;
+    .restart local v4       #video_settings:Ljava/lang/String;
+    :cond_3
+    invoke-static {}, Lcom/htc/utils/ulog/ReusableULogData;->obtain()Lcom/htc/utils/ulog/ReusableULogData;
 
-    invoke-static {v6, v7, v8}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
+    move-result-object v3
 
-    .line 63
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+    .line 84
+    .local v3, uLogData:Lcom/htc/utils/ulog/ReusableULogData;
+    const-string v5, "com.android.camera"
 
-    const-string v7, "pref_bi_snapbooth_taken"
+    invoke-virtual {v3, v5}, Lcom/htc/utils/ulog/ReusableULogData;->setAppId(Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
 
-    const-string v8, "0"
+    move-result-object v5
 
-    invoke-static {v6, v7, v8}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
+    const-string v6, "Camera_settings"
+
+    invoke-interface {v5, v6}, Lcom/htc/utils/ulog/ULogDataWritable;->setCategory(Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+
+    move-result-object v5
+
+    const-string v6, "photo_settings"
+
+    invoke-interface {v5, v6, v2}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+
+    move-result-object v5
+
+    const-string v6, "video_settings"
+
+    invoke-interface {v5, v6, v4}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+
+    move-result-object v5
+
+    const-string v6, "continuousburst_count"
+
+    invoke-interface {v5, v6, v1}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
+
+    .line 90
+    invoke-static {v3}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogData;)V
+
+    .line 91
+    invoke-virtual {v3}, Lcom/htc/utils/ulog/ReusableULogData;->recycle()V
+
+    .line 94
+    iget-object v5, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+
+    const-string v6, "pref_bi_photo_mode_setting_snap_history"
+
+    const-string v7, ""
+
+    invoke-static {v5, v6, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
+
+    .line 95
+    iget-object v5, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+
+    const-string v6, "pref_bi_video_setting_recording_history"
+
+    const-string v7, ""
+
+    invoke-static {v5, v6, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
+
+    .line 96
+    iget-object v5, p0, Lcom/android/camera/AlarmIntentReceiver;->mContext:Landroid/content/Context;
+
+    const-string v6, "pref_bi_continuousburst_history"
+
+    const-string v7, ""
+
+    invoke-static {v5, v6, v7}, Lcom/android/camera/HTCCameraAdvanceSetting;->writePreference(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 68
-    .end local v1           #actionburst_taken:Ljava/lang/String;
-    .end local v2           #photo_taken:Ljava/lang/String;
-    .end local v3           #snapbooth_taken:Ljava/lang/String;
-    .end local v4           #uLogData:Lcom/htc/utils/ulog/ReusableULogData;
-    .end local v5           #video_taken:Ljava/lang/String;
-    :cond_5
-    iget-object v6, p0, Lcom/android/camera/AlarmIntentReceiver;->TAG:Ljava/lang/String;
+    .line 101
+    .end local v1           #continuousburst_count:Ljava/lang/String;
+    .end local v2           #photo_settings:Ljava/lang/String;
+    .end local v3           #uLogData:Lcom/htc/utils/ulog/ReusableULogData;
+    .end local v4           #video_settings:Ljava/lang/String;
+    :cond_4
+    iget-object v5, p0, Lcom/android/camera/AlarmIntentReceiver;->TAG:Ljava/lang/String;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "Unexpected intent : "
+    const-string v7, "Unexpected intent : "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-static {v6, v7}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

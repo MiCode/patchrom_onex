@@ -90,6 +90,8 @@
 
 .field public static final EF_IMSI_M:I = 0x6f22
 
+.field public static final EF_IMSI_T:I = 0x6f23
+
 .field public static final EF_INFO_CPHS:I = 0x6f16
 
 .field public static final EF_IST:I = 0x6f07

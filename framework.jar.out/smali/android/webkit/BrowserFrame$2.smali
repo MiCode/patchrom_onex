@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 1212
+    .line 1224
     iput-object p1, p0, Landroid/webkit/BrowserFrame$2;->this$0:Landroid/webkit/BrowserFrame;
 
     iput-object p2, p0, Landroid/webkit/BrowserFrame$2;->val$sslError:Landroid/net/http/SslError;
@@ -50,20 +50,17 @@
 
 # virtual methods
 .method public cancel()V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 1220
-    iget-object v0, p0, Landroid/webkit/BrowserFrame$2;->this$0:Landroid/webkit/BrowserFrame;
+    .line 1236
+    new-instance v0, Landroid/webkit/BrowserFrame$2$2;
 
-    iget v1, p0, Landroid/webkit/BrowserFrame$2;->val$handle:I
+    invoke-direct {v0, p0}, Landroid/webkit/BrowserFrame$2$2;-><init>(Landroid/webkit/BrowserFrame$2;)V
 
-    iget v2, p0, Landroid/webkit/BrowserFrame$2;->val$certError:I
+    invoke-virtual {p0, v0}, Landroid/webkit/BrowserFrame$2;->post(Ljava/lang/Runnable;)Z
 
-    #calls: Landroid/webkit/BrowserFrame;->nativeSslCertErrorCancel(II)V
-    invoke-static {v0, v1, v2}, Landroid/webkit/BrowserFrame;->access$300(Landroid/webkit/BrowserFrame;II)V
-
-    .line 1221
+    .line 1241
     return-void
 .end method
 
@@ -71,7 +68,7 @@
     .locals 2
 
     .prologue
-    .line 1215
+    .line 1227
     invoke-static {}, Landroid/webkit/SslCertLookupTable;->getInstance()Landroid/webkit/SslCertLookupTable;
 
     move-result-object v0
@@ -80,14 +77,13 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/SslCertLookupTable;->setIsAllowed(Landroid/net/http/SslError;)V
 
-    .line 1216
-    iget-object v0, p0, Landroid/webkit/BrowserFrame$2;->this$0:Landroid/webkit/BrowserFrame;
+    .line 1228
+    new-instance v0, Landroid/webkit/BrowserFrame$2$1;
 
-    iget v1, p0, Landroid/webkit/BrowserFrame$2;->val$handle:I
+    invoke-direct {v0, p0}, Landroid/webkit/BrowserFrame$2$1;-><init>(Landroid/webkit/BrowserFrame$2;)V
 
-    #calls: Landroid/webkit/BrowserFrame;->nativeSslCertErrorProceed(I)V
-    invoke-static {v0, v1}, Landroid/webkit/BrowserFrame;->access$200(Landroid/webkit/BrowserFrame;I)V
+    invoke-virtual {p0, v0}, Landroid/webkit/BrowserFrame$2;->post(Ljava/lang/Runnable;)Z
 
-    .line 1217
+    .line 1233
     return-void
 .end method

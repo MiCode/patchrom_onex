@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 236
+    .line 241
     invoke-static {}, Lcom/android/camera/CameraType;->values()[Lcom/android/camera/CameraType;
 
     move-result-object v0

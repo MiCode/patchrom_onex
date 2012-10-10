@@ -1,6 +1,9 @@
 .class Lcom/android/camera/component/MainBar$9;
-.super Lcom/android/camera/trigger/Trigger;
+.super Ljava/lang/Object;
 .source "MainBar.java"
+
+# interfaces
+.implements Lcom/android/camera/property/PropertyChangedCallback;
 
 
 # annotations
@@ -19,33 +22,33 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/component/MainBar;Lcom/android/camera/property/Property;Ljava/lang/Object;)V
+.method constructor <init>(Lcom/android/camera/component/MainBar;)V
     .locals 0
     .parameter
-    .parameter "x0"
-    .parameter "x1"
 
     .prologue
-    .line 271
+    .line 296
     iput-object p1, p0, Lcom/android/camera/component/MainBar$9;->this$0:Lcom/android/camera/component/MainBar;
 
-    invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected onEnter()V
+.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
     .locals 1
+    .parameter "property"
+    .parameter "e"
 
     .prologue
-    .line 275
+    .line 300
     iget-object v0, p0, Lcom/android/camera/component/MainBar$9;->this$0:Lcom/android/camera/component/MainBar;
 
-    #calls: Lcom/android/camera/component/MainBar;->closePopup()V
+    #calls: Lcom/android/camera/component/MainBar;->updateFlashIcon()V
     invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$1200(Lcom/android/camera/component/MainBar;)V
 
-    .line 276
+    .line 301
     return-void
 .end method

@@ -28,7 +28,7 @@
     .parameter
 
     .prologue
-    .line 1436
+    .line 1446
     iput p2, p0, Landroid/os/StrictMode$4;->val$violationMaskSubset:I
 
     iput-object p3, p0, Landroid/os/StrictMode$4;->val$info:Landroid/os/StrictMode$ViolationInfo;
@@ -44,22 +44,22 @@
     .locals 6
 
     .prologue
-    .line 1438
+    .line 1448
     const/16 v3, 0xa
 
     invoke-static {v3}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 1440
+    .line 1450
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 1441
+    .line 1451
     .local v0, am:Landroid/app/IActivityManager;
     if-nez v0, :cond_1
 
-    .line 1442
+    .line 1452
     const-string v3, "StrictMode"
 
     const-string v4, "No activity manager; failed to Dropbox violation."
@@ -68,10 +68,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1452
+    .line 1462
     .end local v0           #am:Landroid/app/IActivityManager;
     :goto_0
-    invoke-static {}, Landroid/os/StrictMode;->access$1400()Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {}, Landroid/os/StrictMode;->access$1500()Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object v3
 
@@ -79,9 +79,9 @@
 
     move-result v2
 
-    .line 1453
+    .line 1463
     .local v2, outstanding:I
-    invoke-static {}, Landroid/os/StrictMode;->access$800()Z
+    invoke-static {}, Landroid/os/StrictMode;->access$900()Z
 
     move-result v3
 
@@ -109,11 +109,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1454
+    .line 1464
     :cond_0
     return-void
 
-    .line 1444
+    .line 1454
     .end local v2           #outstanding:I
     .restart local v0       #am:Landroid/app/IActivityManager;
     :cond_1
@@ -132,12 +132,12 @@
 
     goto :goto_0
 
-    .line 1449
+    .line 1459
     .end local v0           #am:Landroid/app/IActivityManager;
     :catch_0
     move-exception v1
 
-    .line 1450
+    .line 1460
     .local v1, e:Landroid/os/RemoteException;
     const-string v3, "StrictMode"
 

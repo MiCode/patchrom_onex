@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 150
+    .line 148
     iput-object p1, p0, Lcom/htc/app/FilePickerRecentFragment$1;->this$0:Lcom/htc/app/FilePickerRecentFragment;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 152
+    .line 150
     iget-object v0, p0, Lcom/htc/app/FilePickerRecentFragment$1;->this$0:Lcom/htc/app/FilePickerRecentFragment;
 
     #calls: Lcom/htc/app/FilePickerRecentFragment;->updateCountOfRecentListViewHeader()V
     invoke-static {v0}, Lcom/htc/app/FilePickerRecentFragment;->access$300(Lcom/htc/app/FilePickerRecentFragment;)V
 
-    .line 153
+    .line 151
     return-void
 .end method

@@ -49,15 +49,15 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     invoke-super {p0}, Lcom/android/internal/telephony/IccFileHandler;->dispose()V
 
-    .line 52
+    .line 53
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/ims/ISIMFileHandler;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 53
+    .line 54
     return-void
 .end method
 
@@ -65,14 +65,14 @@
     .locals 2
 
     .prologue
-    .line 56
+    .line 58
     const-string v0, "ISIM"
 
     const-string v1, "ISIMFileHandler finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
+    .line 59
     return-void
 .end method
 
@@ -81,25 +81,25 @@
     .parameter "efid"
 
     .prologue
-    .line 60
+    .line 63
     sparse-switch p1, :sswitch_data_0
 
-    .line 69
+    .line 72
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/ims/ISIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 70
+    .line 73
     :goto_0
     return-object v0
 
-    .line 67
+    .line 70
     :sswitch_0
     const-string v0, "3F007FFF"
 
     goto :goto_0
 
-    .line 60
+    .line 63
     nop
 
     :sswitch_data_0
@@ -114,38 +114,6 @@
 .end method
 
 .method protected logd(Ljava/lang/String;)V
-    .locals 3
-    .parameter "msg"
-
-    .prologue
-    .line 74
-    const-string v0, "ISIM"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "[ISIMFileHandler] "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 75
-    return-void
-.end method
-
-.method protected loge(Ljava/lang/String;)V
     .locals 3
     .parameter "msg"
 
@@ -171,8 +139,40 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 79
+    return-void
+.end method
+
+.method protected loge(Ljava/lang/String;)V
+    .locals 3
+    .parameter "msg"
+
+    .prologue
+    .line 83
+    const-string v0, "ISIM"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "[ISIMFileHandler] "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 84
     return-void
 .end method

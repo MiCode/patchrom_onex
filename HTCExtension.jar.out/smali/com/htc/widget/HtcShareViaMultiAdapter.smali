@@ -193,12 +193,12 @@
     .parameter "activityInfo"
 
     .prologue
-    .line 210
+    .line 213
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mData:Landroid/widget/ActivityChooserModel;
 
     if-nez v0, :cond_0
 
-    .line 211
+    .line 214
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/htc/widget/IHtcShareViaAdapter;->FILE_NAME:Ljava/lang/String;
@@ -209,7 +209,7 @@
 
     iput-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mData:Landroid/widget/ActivityChooserModel;
 
-    .line 213
+    .line 216
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mData:Landroid/widget/ActivityChooserModel;
 
@@ -453,7 +453,7 @@
 
     if-nez v3, :cond_0
 
-    .line 205
+    .line 208
     :goto_0
     return-object v2
 
@@ -481,44 +481,46 @@
 
     invoke-direct {v0, v3}, Lcom/htc/widget/HtcListItem;-><init>(Landroid/content/Context;)V
 
-    .line 182
+    .line 183
     .local v0, item:Lcom/htc/widget/HtcListItem;
-    new-instance v1, Lcom/htc/widget/HtcListItem1LineCenteredText;
+    new-instance v1, Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->context:Landroid/content/Context;
 
-    invoke-direct {v1, v3}, Lcom/htc/widget/HtcListItem1LineCenteredText;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 183
-    .local v1, text:Lcom/htc/widget/HtcListItem1LineCenteredText;
+    .line 184
+    .local v1, text:Landroid/widget/TextView;
     iget v3, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mBgFlag:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 191
+    .line 192
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItem;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 194
+    .line 197
     :goto_1
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    iget v3, p0, Lcom/htc/widget/IHtcShareViaAdapter;->WP:I
+    const/4 v3, -0x1
 
     iget v4, p0, Lcom/htc/widget/IHtcShareViaAdapter;->WP:I
 
     invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem1LineCenteredText;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 195
-    iget v2, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mTextResId:I
+    .line 198
+    iget-object v2, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->context:Landroid/content/Context;
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem1LineCenteredText;->setTextStyle(I)V
+    iget v3, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mTextResId:I
 
-    .line 196
+    invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
+
+    .line 199
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem;->addView(Landroid/view/View;)V
 
-    .line 197
+    .line 200
     iget-object v2, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->context:Landroid/content/Context;
 
     iget v3, p0, Lcom/htc/widget/IHtcShareViaAdapter;->VIEW_SEE_ALL:I
@@ -527,22 +529,22 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem1LineCenteredText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 198
+    .line 201
     iput-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mReturnView:Landroid/view/View;
 
-    .line 200
+    .line 203
     .end local v0           #item:Lcom/htc/widget/HtcListItem;
-    .end local v1           #text:Lcom/htc/widget/HtcListItem1LineCenteredText;
+    .end local v1           #text:Landroid/widget/TextView;
     :cond_1
     iget-object v2, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mReturnView:Landroid/view/View;
 
     goto :goto_0
 
-    .line 185
+    .line 186
     .restart local v0       #item:Lcom/htc/widget/HtcListItem;
-    .restart local v1       #text:Lcom/htc/widget/HtcListItem1LineCenteredText;
+    .restart local v1       #text:Landroid/widget/TextView;
     :pswitch_0
     iget-object v2, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mListBgDraw:Landroid/graphics/drawable/Drawable;
 
@@ -550,7 +552,7 @@
 
     goto :goto_1
 
-    .line 188
+    .line 189
     :pswitch_1
     iget v2, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mResId:I
 
@@ -558,15 +560,15 @@
 
     goto :goto_1
 
-    .line 202
+    .line 205
     .end local v0           #item:Lcom/htc/widget/HtcListItem;
-    .end local v1           #text:Lcom/htc/widget/HtcListItem1LineCenteredText;
+    .end local v1           #text:Landroid/widget/TextView;
     :cond_2
     iget-object v3, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mReturnView:Landroid/view/View;
 
     if-ne v3, p2, :cond_3
 
-    .line 203
+    .line 206
     iget-object v3, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v3, p1, v2, p3}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
@@ -575,7 +577,7 @@
 
     goto :goto_0
 
-    .line 205
+    .line 208
     :cond_3
     iget-object v2, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
@@ -585,7 +587,9 @@
 
     goto :goto_0
 
-    .line 183
+    .line 184
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -708,15 +712,15 @@
     .parameter "d"
 
     .prologue
-    .line 221
+    .line 224
     iput-object p1, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mListBgDraw:Landroid/graphics/drawable/Drawable;
 
-    .line 222
+    .line 225
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mBgFlag:I
 
-    .line 223
+    .line 226
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
@@ -727,14 +731,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 224
+    .line 227
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
     check-cast v0, Lcom/htc/widget/HtcShareViaAdapter;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcShareViaAdapter;->setListItemBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 225
+    .line 228
     :cond_0
     return-void
 .end method
@@ -744,15 +748,15 @@
     .parameter "resId"
 
     .prologue
-    .line 232
+    .line 235
     iput p1, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mResId:I
 
-    .line 233
+    .line 236
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mBgFlag:I
 
-    .line 234
+    .line 237
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
@@ -763,14 +767,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 235
+    .line 238
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
     check-cast v0, Lcom/htc/widget/HtcShareViaAdapter;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcShareViaAdapter;->setListItemBackgroundResource(I)V
 
-    .line 236
+    .line 239
     :cond_0
     return-void
 .end method
@@ -780,15 +784,15 @@
     .parameter "resId"
 
     .prologue
-    .line 239
+    .line 242
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mIsSetTextResId:Z
 
-    .line 240
+    .line 243
     iput p1, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mTextResId:I
 
-    .line 241
+    .line 244
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
@@ -799,14 +803,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 242
+    .line 245
     iget-object v0, p0, Lcom/htc/widget/HtcShareViaMultiAdapter;->mAdapter:Landroid/widget/ListAdapter;
 
     check-cast v0, Lcom/htc/widget/HtcShareViaAdapter;
 
     invoke-virtual {v0, p1}, Lcom/htc/widget/HtcShareViaAdapter;->setListItemTextAppearance(I)V
 
-    .line 243
+    .line 246
     :cond_0
     return-void
 .end method

@@ -23,7 +23,7 @@
 
     .prologue
     .line 37
-    const/16 v0, 0x14
+    const/16 v0, 0x15
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -147,6 +147,12 @@
 
     aput-object v2, v0, v1
 
+    const/16 v1, 0x14
+
+    const-string v2, "desc_mime_type"
+
+    aput-object v2, v0, v1
+
     sput-object v0, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->EVENT_PROJECTION:[Ljava/lang/String;
 
     return-void
@@ -192,27 +198,27 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 73
+    .line 74
     invoke-static {p1, p2}, Lcom/htc/util/calendar/tools/UriTools;->getEventsUri(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 74
+    .line 75
     .local v1, uri:Landroid/net/Uri;
     if-nez v1, :cond_1
 
-    .line 97
+    .line 98
     :cond_0
     :goto_0
     return-object v3
 
-    .line 76
+    .line 77
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 77
+    .line 78
     .local v0, cr:Landroid/content/ContentResolver;
     sget-object v2, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->EVENT_PROJECTION:[Ljava/lang/String;
 
@@ -224,7 +230,7 @@
 
     move-result-object v6
 
-    .line 78
+    .line 79
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -234,12 +240,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 79
+    .line 80
     new-instance v8, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
 
     invoke-direct {v8, v6, p1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;-><init>(Landroid/database/Cursor;Landroid/content/Context;)V
 
-    .line 80
+    .line 81
     .local v8, myCal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     invoke-virtual {v8}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getContent()Ljava/lang/String;
 
@@ -247,7 +253,7 @@
 
     iput-object v2, p0, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->mVCalString:Ljava/lang/String;
 
-    .line 82
+    .line 83
     new-instance v9, Lorg/apache/commons/codec/net/QuotedPrintableCodec;
 
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getDefaultCharSet()Ljava/lang/String;
@@ -256,7 +262,7 @@
 
     invoke-direct {v9, v2}, Lorg/apache/commons/codec/net/QuotedPrintableCodec;-><init>(Ljava/lang/String;)V
 
-    .line 84
+    .line 85
     .local v9, quotedPrintableCodec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
     :try_start_0
     iget-object v2, v8, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
@@ -269,7 +275,7 @@
     :try_end_0
     .catch Lorg/apache/commons/codec/DecoderException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
+    .line 89
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -293,7 +299,7 @@
 
     invoke-static {v2}, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->Debug(Ljava/lang/String;)V
 
-    .line 89
+    .line 90
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,7 +322,7 @@
 
     invoke-static {v2}, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->Debug(Ljava/lang/String;)V
 
-    .line 90
+    .line 91
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,27 +345,27 @@
 
     invoke-static {v2}, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->Debug(Ljava/lang/String;)V
 
-    .line 92
+    .line 93
     invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 93
+    .line 94
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_2
     move-object v3, p0
 
-    .line 95
+    .line 96
     goto/16 :goto_0
 
-    .line 85
+    .line 86
     :catch_0
     move-exception v7
 
-    .line 86
+    .line 87
     .local v7, e:Lorg/apache/commons/codec/DecoderException;
     invoke-virtual {v7}, Lorg/apache/commons/codec/DecoderException;->printStackTrace()V
 
@@ -372,15 +378,15 @@
     .parameter "c"
 
     .prologue
-    .line 102
+    .line 103
     if-eqz p2, :cond_0
 
-    .line 103
+    .line 104
     new-instance v1, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
 
     invoke-direct {v1, p2, p1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;-><init>(Landroid/database/Cursor;Landroid/content/Context;)V
 
-    .line 104
+    .line 105
     .local v1, myCal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     invoke-virtual {v1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getContent()Ljava/lang/String;
 
@@ -388,7 +394,7 @@
 
     iput-object v3, p0, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->mVCalString:Ljava/lang/String;
 
-    .line 106
+    .line 107
     new-instance v2, Lorg/apache/commons/codec/net/QuotedPrintableCodec;
 
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getDefaultCharSet()Ljava/lang/String;
@@ -397,7 +403,7 @@
 
     invoke-direct {v2, v3}, Lorg/apache/commons/codec/net/QuotedPrintableCodec;-><init>(Ljava/lang/String;)V
 
-    .line 108
+    .line 109
     .local v2, quotedPrintableCodec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
     :try_start_0
     iget-object v3, v1, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->summary:Ljava/lang/String;
@@ -410,7 +416,7 @@
     :try_end_0
     .catch Lorg/apache/commons/codec/DecoderException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 112
+    .line 113
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -434,7 +440,7 @@
 
     invoke-static {v3}, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->Debug(Ljava/lang/String;)V
 
-    .line 113
+    .line 114
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -457,7 +463,7 @@
 
     invoke-static {v3}, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->Debug(Ljava/lang/String;)V
 
-    .line 114
+    .line 115
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -480,27 +486,27 @@
 
     invoke-static {v3}, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->Debug(Ljava/lang/String;)V
 
-    .line 118
+    .line 119
     .end local v1           #myCal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     .end local v2           #quotedPrintableCodec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
     .end local p0
     :goto_1
     return-object p0
 
-    .line 109
+    .line 110
     .restart local v1       #myCal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     .restart local v2       #quotedPrintableCodec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
     .restart local p0
     :catch_0
     move-exception v0
 
-    .line 110
+    .line 111
     .local v0, e:Lorg/apache/commons/codec/DecoderException;
     invoke-virtual {v0}, Lorg/apache/commons/codec/DecoderException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 118
+    .line 119
     .end local v0           #e:Lorg/apache/commons/codec/DecoderException;
     .end local v1           #myCal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     .end local v2           #quotedPrintableCodec:Lorg/apache/commons/codec/net/QuotedPrintableCodec;
@@ -514,7 +520,7 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->mVCalString:Ljava/lang/String;
 
     return-object v0
@@ -524,7 +530,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 62
     iget-object v0, p0, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;->mTitle:Ljava/lang/String;
 
     return-object v0

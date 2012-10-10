@@ -30,6 +30,8 @@
 
 .field public static final COLUMN_NAME:Ljava/lang/String; = "_name"
 
+.field public static final COLUMN_NOTESTORE:Ljava/lang/String; = "notestore"
+
 .field public static final COLUMN_PASSWORD:Ljava/lang/String; = "_password"
 
 .field public static final COLUMN_PREMIUM_EXPIRED_TIME:Ljava/lang/String; = "premium_expired_time"
@@ -42,13 +44,15 @@
 
 .field public static final COLUMN_UPLOAD_LIMIT_NEXT_MONTH:Ljava/lang/String; = "upload_limit_next_month"
 
+.field public static final COLUMN_USERSTORE:Ljava/lang/String; = "userstore"
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 424
+    .line 428
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 568
+    .line 573
     iput-object p1, p0, Lcom/htc/app/HtcShutdownThread$5;->this$0:Lcom/htc/app/HtcShutdownThread;
 
     iput-object p2, p0, Lcom/htc/app/HtcShutdownThread$5;->val$dialog:Landroid/app/Dialog;
@@ -46,22 +46,22 @@
     .locals 1
 
     .prologue
-    .line 570
+    .line 575
     iget-object v0, p0, Lcom/htc/app/HtcShutdownThread$5;->val$dialog:Landroid/app/Dialog;
 
     if-eqz v0, :cond_0
 
-    .line 573
+    .line 578
     iget-object v0, p0, Lcom/htc/app/HtcShutdownThread$5;->val$dialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 575
+    .line 580
     :cond_0
     iget-object v0, p0, Lcom/htc/app/HtcShutdownThread$5;->this$0:Lcom/htc/app/HtcShutdownThread;
 
     invoke-virtual {v0}, Lcom/htc/app/HtcShutdownThread;->actionDone()V
 
-    .line 576
+    .line 581
     return-void
 .end method

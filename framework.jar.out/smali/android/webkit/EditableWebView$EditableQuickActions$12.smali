@@ -3,12 +3,12 @@
 .source "EditableWebView.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogAlignment(Landroid/content/Context;)V
+    value = Landroid/webkit/EditableWebView$EditableQuickActions;->onCreateDialogSettings(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,76 +27,104 @@
     .parameter
 
     .prologue
-    .line 2364
+    .line 2578
     iput-object p1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;IZ)V
+    .locals 4
     .parameter "dialog"
     .parameter "which"
+    .parameter "isChecked"
 
     .prologue
-    .line 2368
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->dialog_font_style_alignment:Lcom/htc/dialog/HtcAlertDialog;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->dismiss()V
+    .line 2582
+    iget-object v2, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    .line 2369
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    iget-object v2, v2, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    iput-boolean v1, v2, Landroid/webkit/EditableWebView;->m_bRemoveSelectRangeDuringUpdateContent:Z
 
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroid/webkit/EditableWebView;->m_bRemoveSelectRangeDuringUpdateContent:Z
-
-    .line 2371
+    .line 2584
     packed-switch p2, :pswitch_data_0
 
-    .line 2384
+    .line 2600
     :goto_0
     return-void
 
-    .line 2373
+    .line 2587
     :pswitch_0
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    iget-object v2, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    iget-object v3, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-virtual {v0}, Landroid/webkit/EditableWebView;->alignLeft()V
+    iget-boolean v3, v3, Landroid/webkit/EditableWebView$EditableQuickActions;->bFontUnderline:Z
+
+    if-nez v3, :cond_0
+
+    :goto_1
+    iput-boolean v0, v2, Landroid/webkit/EditableWebView$EditableQuickActions;->bFontUnderline:Z
 
     goto :goto_0
 
-    .line 2376
+    :cond_0
+    move v0, v1
+
+    goto :goto_1
+
+    .line 2591
     :pswitch_1
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    iget-object v2, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    iget-object v3, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-virtual {v0}, Landroid/webkit/EditableWebView;->alignJustified()V
+    iget-boolean v3, v3, Landroid/webkit/EditableWebView$EditableQuickActions;->bFontBold:Z
+
+    if-nez v3, :cond_1
+
+    :goto_2
+    iput-boolean v0, v2, Landroid/webkit/EditableWebView$EditableQuickActions;->bFontBold:Z
 
     goto :goto_0
 
-    .line 2379
+    :cond_1
+    move v0, v1
+
+    goto :goto_2
+
+    .line 2595
     :pswitch_2
-    iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
+    iget-object v2, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
+    iget-object v3, p0, Landroid/webkit/EditableWebView$EditableQuickActions$12;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-virtual {v0}, Landroid/webkit/EditableWebView;->alignRight()V
+    iget-boolean v3, v3, Landroid/webkit/EditableWebView$EditableQuickActions;->bFontItalic:Z
+
+    if-nez v3, :cond_2
+
+    :goto_3
+    iput-boolean v0, v2, Landroid/webkit/EditableWebView$EditableQuickActions;->bFontItalic:Z
 
     goto :goto_0
 
-    .line 2371
+    :cond_2
+    move v0, v1
+
+    goto :goto_3
+
+    .line 2584
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -626,7 +626,7 @@
     if-eqz p2, :cond_0
 
     .line 1365
-    const v4, 0x7f0700ae
+    const v4, 0x7f0700af
 
     invoke-direct {p0, v4}, Lcom/htc/music/AudioPreview;->showToast(I)V
 
@@ -732,7 +732,7 @@
     if-eqz p2, :cond_6
 
     .line 1399
-    const v3, 0x7f0700af
+    const v3, 0x7f0700b0
 
     invoke-direct {p0, v3}, Lcom/htc/music/AudioPreview;->showToast(I)V
 
@@ -4103,7 +4103,7 @@
     .parameter "id"
 
     .prologue
-    const v9, 0x7f0700b4
+    const v9, 0x7f0700b5
 
     const v8, 0x1040013
 
@@ -4246,7 +4246,7 @@
 
     aput-object v4, v2, v6
 
-    const v4, 0x7f0700b5
+    const v4, 0x7f0700b6
 
     invoke-virtual {p0, v4}, Lcom/htc/music/AudioPreview;->getString(I)Ljava/lang/String;
 
@@ -4254,7 +4254,7 @@
 
     aput-object v4, v2, v7
 
-    const v4, 0x7f0700b6
+    const v4, 0x7f0700b7
 
     invoke-virtual {p0, v4}, Lcom/htc/music/AudioPreview;->getString(I)Ljava/lang/String;
 
@@ -4305,7 +4305,7 @@
 
     aput-object v4, v2, v6
 
-    const v4, 0x7f0700b5
+    const v4, 0x7f0700b6
 
     invoke-virtual {p0, v4}, Lcom/htc/music/AudioPreview;->getString(I)Ljava/lang/String;
 

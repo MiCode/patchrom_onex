@@ -182,16 +182,16 @@
     .line 455
     iput-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mPaint:Landroid/graphics/Paint;
 
-    .line 736
+    .line 738
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->skipAnimationEnd:Z
 
-    .line 1303
+    .line 1306
     iput-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
-    .line 1574
+    .line 1577
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode3layout:Z
 
-    .line 1575
+    .line 1578
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCancelAnimation:Z
 
     .line 295
@@ -287,16 +287,16 @@
     .line 455
     iput-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mPaint:Landroid/graphics/Paint;
 
-    .line 736
+    .line 738
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->skipAnimationEnd:Z
 
-    .line 1303
+    .line 1306
     iput-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
-    .line 1574
+    .line 1577
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode3layout:Z
 
-    .line 1575
+    .line 1578
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCancelAnimation:Z
 
     .line 301
@@ -310,12 +310,12 @@
     .locals 1
 
     .prologue
-    .line 1122
+    .line 1125
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselWidget;->mShowIndicator:Z
 
-    .line 1123
+    .line 1126
     return-void
 .end method
 
@@ -1223,36 +1223,36 @@
     .parameter "yOffset"
 
     .prologue
-    .line 873
+    .line 876
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->isWaveRunnableRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 874
+    .line 877
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getIndicatorIndex()I
 
     move-result v0
 
-    .line 879
+    .line 882
     :goto_0
     return v0
 
-    .line 876
+    .line 879
     :cond_0
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v0, :cond_1
 
-    .line 877
+    .line 880
     invoke-direct/range {p0 .. p5}, Lcom/htc/fragment/widget/CarouselWidget;->findPortraitInsertedPosition(Landroid/view/ViewGroup;IIII)I
 
     move-result v0
 
     goto :goto_0
 
-    .line 879
+    .line 882
     :cond_1
     invoke-direct/range {p0 .. p5}, Lcom/htc/fragment/widget/CarouselWidget;->findLandscapeInsertedPosition(Landroid/view/ViewGroup;IIII)I
 
@@ -1270,12 +1270,12 @@
     .parameter "yOffset"
 
     .prologue
-    .line 1003
+    .line 1006
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
-    .line 1004
+    .line 1007
     .local v2, count:I
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getScrollY()I
 
@@ -1283,50 +1283,50 @@
 
     add-int v12, p3, v14
 
-    .line 1006
+    .line 1009
     .local v12, scrolledY:I
     if-gtz v2, :cond_1
 
-    .line 1008
+    .line 1011
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectTop:I
 
-    .line 1009
+    .line 1012
     const/4 v7, 0x1
 
-    .line 1117
+    .line 1120
     :cond_0
     :goto_0
     return v7
 
-    .line 1012
+    .line 1015
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getShrinkedPosition()I
 
     move-result v13
 
-    .line 1013
+    .line 1016
     .local v13, shrinkedPos:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getExpandedPosition()I
 
     move-result v4
 
-    .line 1014
+    .line 1017
     .local v4, expandedPos:I
     const/4 v3, 0x0
 
-    .line 1016
+    .line 1019
     .local v3, dataCount:I
     const/4 v8, 0x0
 
-    .line 1017
+    .line 1020
     .local v8, isAdd:Z
     const/4 v9, 0x0
 
-    .line 1019
+    .line 1022
     .local v9, isLast:Z
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -1334,7 +1334,7 @@
 
     if-eqz v14, :cond_2
 
-    .line 1021
+    .line 1024
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v14
@@ -1343,17 +1343,17 @@
 
     move-result v3
 
-    .line 1022
+    .line 1025
     if-le v13, v3, :cond_3
 
     const/4 v8, 0x1
 
-    .line 1025
+    .line 1028
     :cond_2
     :goto_1
     add-int/lit8 v11, v2, -0x1
 
-    .line 1026
+    .line 1029
     .local v11, last_pos:I
     move-object/from16 v0, p1
 
@@ -1367,14 +1367,14 @@
 
     if-lt v12, v14, :cond_6
 
-    .line 1028
+    .line 1031
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1030
+    .line 1033
     .local v1, child:Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getBottom()I
 
@@ -1384,10 +1384,10 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectTop:I
 
-    .line 1032
+    .line 1035
     if-eqz v8, :cond_4
 
-    .line 1033
+    .line 1036
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -1400,7 +1400,7 @@
 
     goto :goto_0
 
-    .line 1022
+    .line 1025
     .end local v1           #child:Landroid/view/View;
     .end local v11           #last_pos:I
     :cond_3
@@ -1408,13 +1408,13 @@
 
     goto :goto_1
 
-    .line 1034
+    .line 1037
     .restart local v1       #child:Landroid/view/View;
     .restart local v11       #last_pos:I
     :cond_4
     if-eqz v9, :cond_5
 
-    .line 1035
+    .line 1038
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -1427,7 +1427,7 @@
 
     goto :goto_0
 
-    .line 1037
+    .line 1040
     :cond_5
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -1439,20 +1439,20 @@
 
     goto :goto_0
 
-    .line 1040
+    .line 1043
     .end local v1           #child:Landroid/view/View;
     :cond_6
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getFirstVisiblePosition()I
 
     move-result v5
 
-    .line 1041
+    .line 1044
     .local v5, firstVisPos:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLastVisiblePosition()I
 
     move-result v10
 
-    .line 1043
+    .line 1046
     .local v10, lastVisPos:I
     move v6, v5
 
@@ -1460,7 +1460,7 @@
     :goto_2
     if-gt v6, v10, :cond_f
 
-    .line 1045
+    .line 1048
     sub-int v14, v6, v5
 
     move-object/from16 v0, p1
@@ -1469,7 +1469,7 @@
 
     move-result-object v1
 
-    .line 1047
+    .line 1050
     .restart local v1       #child:Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
@@ -1479,14 +1479,14 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectTop:I
 
-    .line 1049
+    .line 1052
     invoke-virtual {v1}, Landroid/view/View;->getBottom()I
 
     move-result v14
 
     if-gt v12, v14, :cond_e
 
-    .line 1051
+    .line 1054
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -1495,19 +1495,19 @@
 
     iget v7, v14, Lcom/htc/fragment/widget/TaskInfo;->taskOrder:I
 
-    .line 1052
+    .line 1055
     .local v7, index:I
     const/4 v14, -0x1
 
     if-eq v13, v14, :cond_0
 
-    .line 1054
+    .line 1057
     if-eqz v8, :cond_8
 
-    .line 1056
+    .line 1059
     if-ne v6, v4, :cond_7
 
-    .line 1058
+    .line 1061
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v14
@@ -1522,7 +1522,7 @@
 
     if-le v12, v14, :cond_0
 
-    .line 1062
+    .line 1065
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectTop:I
@@ -1537,27 +1537,27 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectTop:I
 
-    .line 1063
+    .line 1066
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 1066
+    .line 1069
     :cond_7
     if-le v6, v4, :cond_0
 
-    .line 1067
+    .line 1070
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 1073
+    .line 1076
     :cond_8
     if-ne v6, v4, :cond_9
 
     if-ge v4, v13, :cond_9
 
-    .line 1075
+    .line 1078
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v14
@@ -1572,7 +1572,7 @@
 
     if-le v12, v14, :cond_0
 
-    .line 1079
+    .line 1082
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectTop:I
@@ -1587,16 +1587,16 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectTop:I
 
-    .line 1080
+    .line 1083
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 1083
+    .line 1086
     :cond_9
     if-ne v6, v4, :cond_a
 
-    .line 1085
+    .line 1088
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v14
@@ -1611,61 +1611,61 @@
 
     if-gt v12, v14, :cond_0
 
-    .line 1086
+    .line 1089
     add-int/lit8 v7, v7, -0x1
 
     goto/16 :goto_0
 
-    .line 1090
+    .line 1093
     :cond_a
     if-ge v6, v4, :cond_b
 
     if-le v6, v13, :cond_b
 
-    .line 1092
+    .line 1095
     const/4 v14, 0x1
 
     if-le v7, v14, :cond_0
 
-    .line 1093
+    .line 1096
     add-int/lit8 v7, v7, -0x1
 
     goto/16 :goto_0
 
-    .line 1097
+    .line 1100
     :cond_b
     if-ge v6, v4, :cond_c
 
     if-lt v6, v13, :cond_0
 
-    .line 1099
+    .line 1102
     :cond_c
     if-le v6, v4, :cond_d
 
     if-gt v6, v13, :cond_0
 
-    .line 1101
+    .line 1104
     :cond_d
     if-le v6, v4, :cond_0
 
     if-ge v6, v13, :cond_0
 
-    .line 1103
+    .line 1106
     if-ge v7, v3, :cond_0
 
-    .line 1104
+    .line 1107
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 1043
+    .line 1046
     .end local v7           #index:I
     :cond_e
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_2
 
-    .line 1113
+    .line 1116
     .end local v1           #child:Landroid/view/View;
     :cond_f
     move-object/from16 v0, p1
@@ -1674,11 +1674,11 @@
 
     move-result-object v1
 
-    .line 1114
+    .line 1117
     .restart local v1       #child:Landroid/view/View;
     if-eqz v8, :cond_10
 
-    .line 1115
+    .line 1118
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -1691,7 +1691,7 @@
 
     goto/16 :goto_0
 
-    .line 1117
+    .line 1120
     :cond_10
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -1713,12 +1713,12 @@
     .parameter "yOffset"
 
     .prologue
-    .line 884
+    .line 887
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
 
-    .line 885
+    .line 888
     .local v2, count:I
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getScrollX()I
 
@@ -1726,50 +1726,50 @@
 
     add-int v12, p2, v14
 
-    .line 887
+    .line 890
     .local v12, scrolledX:I
     if-gtz v2, :cond_1
 
-    .line 889
+    .line 892
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectLeft:I
 
-    .line 890
+    .line 893
     const/4 v7, 0x1
 
-    .line 998
+    .line 1001
     :cond_0
     :goto_0
     return v7
 
-    .line 893
+    .line 896
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getShrinkedPosition()I
 
     move-result v13
 
-    .line 894
+    .line 897
     .local v13, shrinkedPos:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getExpandedPosition()I
 
     move-result v4
 
-    .line 895
+    .line 898
     .local v4, expandedPos:I
     const/4 v3, 0x0
 
-    .line 897
+    .line 900
     .local v3, dataCount:I
     const/4 v8, 0x0
 
-    .line 898
+    .line 901
     .local v8, isAdd:Z
     const/4 v9, 0x0
 
-    .line 900
+    .line 903
     .local v9, isLast:Z
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -1777,7 +1777,7 @@
 
     if-eqz v14, :cond_2
 
-    .line 902
+    .line 905
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v14
@@ -1786,17 +1786,17 @@
 
     move-result v3
 
-    .line 903
+    .line 906
     if-le v13, v3, :cond_3
 
     const/4 v8, 0x1
 
-    .line 906
+    .line 909
     :cond_2
     :goto_1
     add-int/lit8 v11, v2, -0x1
 
-    .line 907
+    .line 910
     .local v11, last_pos:I
     move-object/from16 v0, p1
 
@@ -1810,14 +1810,14 @@
 
     if-lt v12, v14, :cond_6
 
-    .line 909
+    .line 912
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 911
+    .line 914
     .local v1, child:Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getRight()I
 
@@ -1827,10 +1827,10 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectLeft:I
 
-    .line 913
+    .line 916
     if-eqz v8, :cond_4
 
-    .line 914
+    .line 917
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -1843,7 +1843,7 @@
 
     goto :goto_0
 
-    .line 903
+    .line 906
     .end local v1           #child:Landroid/view/View;
     .end local v11           #last_pos:I
     :cond_3
@@ -1851,13 +1851,13 @@
 
     goto :goto_1
 
-    .line 915
+    .line 918
     .restart local v1       #child:Landroid/view/View;
     .restart local v11       #last_pos:I
     :cond_4
     if-eqz v9, :cond_5
 
-    .line 916
+    .line 919
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -1870,7 +1870,7 @@
 
     goto :goto_0
 
-    .line 918
+    .line 921
     :cond_5
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -1882,20 +1882,20 @@
 
     goto :goto_0
 
-    .line 921
+    .line 924
     .end local v1           #child:Landroid/view/View;
     :cond_6
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getFirstVisiblePosition()I
 
     move-result v5
 
-    .line 922
+    .line 925
     .local v5, firstVisPos:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLastVisiblePosition()I
 
     move-result v10
 
-    .line 924
+    .line 927
     .local v10, lastVisPos:I
     move v6, v5
 
@@ -1903,7 +1903,7 @@
     :goto_2
     if-gt v6, v10, :cond_f
 
-    .line 926
+    .line 929
     sub-int v14, v6, v5
 
     move-object/from16 v0, p1
@@ -1912,7 +1912,7 @@
 
     move-result-object v1
 
-    .line 928
+    .line 931
     .restart local v1       #child:Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
@@ -1922,14 +1922,14 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectLeft:I
 
-    .line 930
+    .line 933
     invoke-virtual {v1}, Landroid/view/View;->getRight()I
 
     move-result v14
 
     if-gt v12, v14, :cond_e
 
-    .line 932
+    .line 935
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -1938,19 +1938,19 @@
 
     iget v7, v14, Lcom/htc/fragment/widget/TaskInfo;->taskOrder:I
 
-    .line 933
+    .line 936
     .local v7, index:I
     const/4 v14, -0x1
 
     if-eq v13, v14, :cond_0
 
-    .line 935
+    .line 938
     if-eqz v8, :cond_8
 
-    .line 937
+    .line 940
     if-ne v6, v4, :cond_7
 
-    .line 939
+    .line 942
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v14
@@ -1965,7 +1965,7 @@
 
     if-le v12, v14, :cond_0
 
-    .line 943
+    .line 946
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectLeft:I
@@ -1980,27 +1980,27 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectLeft:I
 
-    .line 944
+    .line 947
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 947
+    .line 950
     :cond_7
     if-le v6, v4, :cond_0
 
-    .line 948
+    .line 951
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 954
+    .line 957
     :cond_8
     if-ne v6, v4, :cond_9
 
     if-ge v4, v13, :cond_9
 
-    .line 956
+    .line 959
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v14
@@ -2015,7 +2015,7 @@
 
     if-le v12, v14, :cond_0
 
-    .line 960
+    .line 963
     move-object/from16 v0, p0
 
     iget v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectLeft:I
@@ -2030,16 +2030,16 @@
 
     iput v14, v0, Lcom/htc/fragment/widget/CarouselWidget;->mRectLeft:I
 
-    .line 961
+    .line 964
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 964
+    .line 967
     :cond_9
     if-ne v6, v4, :cond_a
 
-    .line 966
+    .line 969
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v14
@@ -2054,61 +2054,61 @@
 
     if-gt v12, v14, :cond_0
 
-    .line 967
+    .line 970
     add-int/lit8 v7, v7, -0x1
 
     goto/16 :goto_0
 
-    .line 971
+    .line 974
     :cond_a
     if-ge v6, v4, :cond_b
 
     if-le v6, v13, :cond_b
 
-    .line 973
+    .line 976
     const/4 v14, 0x1
 
     if-le v7, v14, :cond_0
 
-    .line 974
+    .line 977
     add-int/lit8 v7, v7, -0x1
 
     goto/16 :goto_0
 
-    .line 978
+    .line 981
     :cond_b
     if-ge v6, v4, :cond_c
 
     if-lt v6, v13, :cond_0
 
-    .line 980
+    .line 983
     :cond_c
     if-le v6, v4, :cond_d
 
     if-gt v6, v13, :cond_0
 
-    .line 982
+    .line 985
     :cond_d
     if-le v6, v4, :cond_0
 
     if-ge v6, v13, :cond_0
 
-    .line 984
+    .line 987
     if-ge v7, v3, :cond_0
 
-    .line 985
+    .line 988
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_0
 
-    .line 924
+    .line 927
     .end local v7           #index:I
     :cond_e
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_2
 
-    .line 994
+    .line 997
     .end local v1           #child:Landroid/view/View;
     :cond_f
     move-object/from16 v0, p1
@@ -2117,11 +2117,11 @@
 
     move-result-object v1
 
-    .line 995
+    .line 998
     .restart local v1       #child:Landroid/view/View;
     if-eqz v8, :cond_10
 
-    .line 996
+    .line 999
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
@@ -2134,7 +2134,7 @@
 
     goto/16 :goto_0
 
-    .line 998
+    .line 1001
     :cond_10
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -2290,19 +2290,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 794
+    .line 797
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/CarouselWidget;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 796
+    .line 799
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v0, :cond_0
 
-    .line 797
+    .line 800
     aget v0, p2, v3
 
     add-int/lit8 v1, p1, -0x1
@@ -2323,11 +2323,11 @@
 
     aput v0, p2, v3
 
-    .line 800
+    .line 803
     :goto_0
     return-void
 
-    .line 799
+    .line 802
     :cond_0
     const/4 v0, 0x1
 
@@ -2534,7 +2534,7 @@
     .parameter "overlap_pos"
 
     .prologue
-    .line 1140
+    .line 1143
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getFirstVisiblePosition()I
 
     move-result v2
@@ -2547,11 +2547,11 @@
 
     move-result-object v0
 
-    .line 1142
+    .line 1145
     .local v0, child:Landroid/view/View;
     if-eqz v0, :cond_2
 
-    .line 1144
+    .line 1147
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getIndicatorIndex()I
 
     move-result v2
@@ -2564,58 +2564,58 @@
 
     if-nez v2, :cond_0
 
-    .line 1146
+    .line 1149
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getShrinkedPosition()I
 
     move-result v1
 
-    .line 1147
+    .line 1150
     .local v1, shrinkedPos:I
     if-gt p2, v1, :cond_1
 
-    .line 1149
+    .line 1152
     add-int/lit8 v2, p2, -0x1
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setExpandedPosition(I)V
 
-    .line 1150
+    .line 1153
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getIndicatorIndex()I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setLastIndicatorIndex(I)V
 
-    .line 1151
+    .line 1154
     invoke-virtual {p0, p2}, Lcom/htc/fragment/widget/CarouselWidget;->setIndicatorIndex(I)V
 
-    .line 1159
+    .line 1162
     :goto_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->startWaveRunnable()V
 
-    .line 1186
+    .line 1189
     .end local v1           #shrinkedPos:I
     :cond_0
     :goto_1
     return-void
 
-    .line 1155
+    .line 1158
     .restart local v1       #shrinkedPos:I
     :cond_1
     invoke-virtual {p0, p2}, Lcom/htc/fragment/widget/CarouselWidget;->setExpandedPosition(I)V
 
-    .line 1156
+    .line 1159
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getIndicatorIndex()I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setLastIndicatorIndex(I)V
 
-    .line 1157
+    .line 1160
     invoke-virtual {p0, p2}, Lcom/htc/fragment/widget/CarouselWidget;->setIndicatorIndex(I)V
 
     goto :goto_0
 
-    .line 1162
+    .line 1165
     .end local v1           #shrinkedPos:I
     :cond_2
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
@@ -2636,7 +2636,7 @@
 
     if-ne p2, v2, :cond_0
 
-    .line 1164
+    .line 1167
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getFirstVisiblePosition()I
 
     move-result v2
@@ -2649,10 +2649,10 @@
 
     move-result-object v0
 
-    .line 1165
+    .line 1168
     if-eqz v0, :cond_0
 
-    .line 1167
+    .line 1170
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getIndicatorIndex()I
 
     move-result v2
@@ -2665,50 +2665,50 @@
 
     if-nez v2, :cond_0
 
-    .line 1169
+    .line 1172
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getShrinkedPosition()I
 
     move-result v1
 
-    .line 1170
+    .line 1173
     .restart local v1       #shrinkedPos:I
     if-gt p2, v1, :cond_3
 
-    .line 1172
+    .line 1175
     add-int/lit8 v2, p2, -0x1
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setExpandedPosition(I)V
 
-    .line 1173
+    .line 1176
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getIndicatorIndex()I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setLastIndicatorIndex(I)V
 
-    .line 1174
+    .line 1177
     invoke-virtual {p0, p2}, Lcom/htc/fragment/widget/CarouselWidget;->setIndicatorIndex(I)V
 
-    .line 1182
+    .line 1185
     :goto_2
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->startWaveRunnable()V
 
     goto :goto_1
 
-    .line 1178
+    .line 1181
     :cond_3
     add-int/lit8 v2, p2, -0x1
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setExpandedPosition(I)V
 
-    .line 1179
+    .line 1182
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getIndicatorIndex()I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setLastIndicatorIndex(I)V
 
-    .line 1180
+    .line 1183
     invoke-virtual {p0, p2}, Lcom/htc/fragment/widget/CarouselWidget;->setIndicatorIndex(I)V
 
     goto :goto_2
@@ -2718,12 +2718,12 @@
     .locals 1
 
     .prologue
-    .line 1241
+    .line 1244
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselWidget;->mShowIndicator:Z
 
-    .line 1242
+    .line 1245
     return-void
 .end method
 
@@ -2731,12 +2731,12 @@
     .locals 3
 
     .prologue
-    .line 1579
+    .line 1582
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setDragBinGridView(Z)V
 
-    .line 1580
+    .line 1583
     iget-boolean v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v2, :cond_0
@@ -2745,14 +2745,14 @@
 
     move-result v0
 
-    .line 1582
+    .line 1585
     .local v0, orgWidthHeight:I
     :goto_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setDragBinGridView(Z)V
 
-    .line 1583
+    .line 1586
     iget-boolean v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v2, :cond_1
@@ -2761,15 +2761,15 @@
 
     move-result v1
 
-    .line 1585
+    .line 1588
     .local v1, targetWidthHeight:I
     :goto_1
     invoke-virtual {p0, v0, v1}, Lcom/htc/fragment/widget/CarouselWidget;->startWidthHeightAnimation(II)V
 
-    .line 1586
+    .line 1589
     return-void
 
-    .line 1580
+    .line 1583
     .end local v0           #orgWidthHeight:I
     .end local v1           #targetWidthHeight:I
     :cond_0
@@ -2779,7 +2779,7 @@
 
     goto :goto_0
 
-    .line 1583
+    .line 1586
     .restart local v0       #orgWidthHeight:I
     :cond_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLayoutParamsHeightWithNoAnimation()I
@@ -2801,7 +2801,7 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 1260
+    .line 1263
     const/4 v0, 0x1
 
     return v0
@@ -2813,21 +2813,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1591
+    .line 1594
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCancelAnimation:Z
 
-    .line 1592
+    .line 1595
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode3layout:Z
 
-    .line 1593
+    .line 1596
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mShowIndicator:Z
 
-    .line 1594
+    .line 1597
     invoke-super {p0}, Lcom/htc/fragment/widget/Gallery;->cancelAnimation()V
 
-    .line 1595
+    .line 1598
     return-void
 .end method
 
@@ -2904,7 +2904,7 @@
     .parameter "event"
 
     .prologue
-    .line 1403
+    .line 1406
     invoke-virtual {p1, p0}, Landroid/view/KeyEvent;->dispatch(Landroid/view/KeyEvent$Callback;)Z
 
     move-result v0
@@ -2928,12 +2928,12 @@
     .parameter "target"
 
     .prologue
-    .line 721
+    .line 723
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
-    .line 722
+    .line 724
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v0
@@ -2942,13 +2942,13 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselWidget;->mAdapter:Lcom/htc/fragment/widget/BinAdapter;
 
-    .line 723
+    .line 725
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mTarget:Lcom/htc/fragment/widget/DropTarget;
 
-    .line 729
+    .line 731
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->startWaveRunnable()V
 
-    .line 731
+    .line 733
     return-void
 .end method
 
@@ -3145,7 +3145,7 @@
     .parameter "enable"
 
     .prologue
-    .line 1601
+    .line 1604
     return-void
 .end method
 
@@ -3177,7 +3177,7 @@
     .parameter "index"
 
     .prologue
-    .line 1636
+    .line 1639
     invoke-super {p0, p1}, Lcom/htc/fragment/widget/Gallery;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -3189,7 +3189,7 @@
     .locals 1
 
     .prologue
-    .line 1624
+    .line 1627
     invoke-super {p0}, Lcom/htc/fragment/widget/Gallery;->getChildCount()I
 
     move-result v0
@@ -3201,7 +3201,7 @@
     .locals 1
 
     .prologue
-    .line 1607
+    .line 1610
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     return v0
@@ -3221,7 +3221,7 @@
     .locals 1
 
     .prologue
-    .line 1511
+    .line 1514
     iget v0, p0, Lcom/htc/fragment/widget/Gallery;->mState:I
 
     return v0
@@ -3444,23 +3444,49 @@
     goto :goto_3
 .end method
 
-.method isDragging()Z
+.method isBusy()Z
     .locals 1
 
     .prologue
-    .line 1517
+    .line 1647
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 1518
+    .line 1648
+    iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
+
+    invoke-virtual {v0}, Lcom/htc/fragment/widget/FastScroller;->isBusy()Z
+
+    move-result v0
+
+    .line 1650
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method isDragging()Z
+    .locals 1
+
+    .prologue
+    .line 1520
+    iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
+
+    if-eqz v0, :cond_0
+
+    .line 1521
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/FastScroller;->isDragging()Z
 
     move-result v0
 
-    .line 1520
+    .line 1523
     :goto_0
     return v0
 
@@ -3534,26 +3560,26 @@
 
     const/4 v14, 0x1
 
-    .line 742
+    .line 744
     iget-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->skipAnimationEnd:Z
 
     if-eqz v1, :cond_0
 
-    .line 744
+    .line 746
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->skipAnimationEnd:Z
 
-    .line 745
+    .line 747
     const-string v1, "enable skipAnimationEnd"
 
     invoke-static {v1}, Lcom/htc/fragment/widget/CarouselLog;->i(Ljava/lang/String;)V
 
-    .line 789
+    .line 792
     :goto_0
     return-void
 
-    .line 752
+    .line 754
     :cond_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -3561,27 +3587,27 @@
 
     check-cast v13, Lcom/htc/fragment/widget/BinAdapter;
 
-    .line 754
+    .line 756
     .local v13, adapter:Lcom/htc/fragment/widget/BinAdapter;
     invoke-virtual {v13}, Lcom/htc/fragment/widget/BinAdapter;->getHandler()Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;
 
     move-result-object v0
 
-    .line 755
+    .line 757
     .local v0, handle:Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;
     iget v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
     if-ne v1, v14, :cond_3
 
-    .line 756
+    .line 758
     if-eqz v0, :cond_2
 
-    .line 757
+    .line 759
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 758
+    .line 760
     .local v4, values:Landroid/content/ContentValues;
     const-string v1, "is_host"
 
@@ -3591,7 +3617,7 @@
 
     invoke-virtual {v4, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 759
+    .line 761
     const/16 v1, 0x3e8
 
     iget v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mToPos:I
@@ -3606,23 +3632,23 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;->startUpdate(ILjava/lang/Object;Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 763
+    .line 765
     iput-boolean v14, p0, Lcom/htc/fragment/widget/CarouselWidget;->mIsDrop:Z
 
-    .line 786
+    .line 789
     .end local v4           #values:Landroid/content/ContentValues;
     :cond_1
     :goto_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->realign()V
 
-    .line 788
+    .line 791
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
     goto :goto_0
 
-    .line 761
+    .line 763
     :cond_2
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3632,7 +3658,7 @@
 
     throw v1
 
-    .line 764
+    .line 766
     :cond_3
     iget v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
@@ -3640,12 +3666,12 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 765
+    .line 767
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 766
+    .line 768
     .restart local v4       #values:Landroid/content/ContentValues;
     const-string v1, "is_host"
 
@@ -3655,7 +3681,7 @@
 
     invoke-virtual {v4, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 767
+    .line 769
     const-string v1, "task_order"
 
     iget v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mToPos:I
@@ -3666,10 +3692,10 @@
 
     invoke-virtual {v4, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 768
+    .line 770
     if-eqz v0, :cond_4
 
-    .line 769
+    .line 771
     const/16 v7, 0x3ea
 
     iget v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mToPos:I
@@ -3708,12 +3734,12 @@
 
     invoke-virtual/range {v6 .. v12}, Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;->startUpdate(ILjava/lang/Object;Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 773
+    .line 775
     iput-boolean v14, p0, Lcom/htc/fragment/widget/CarouselWidget;->mIsDrop:Z
 
     goto :goto_1
 
-    .line 771
+    .line 773
     :cond_4
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3723,7 +3749,7 @@
 
     throw v1
 
-    .line 774
+    .line 776
     .end local v4           #values:Landroid/content/ContentValues;
     :cond_5
     iget v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
@@ -3732,36 +3758,50 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 775
+    .line 777
     iget-object v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mTarget:Lcom/htc/fragment/widget/DropTarget;
 
     instance-of v1, v1, Lcom/htc/fragment/widget/BinGridView;
 
     if-eqz v1, :cond_1
 
-    .line 777
+    .line 779
+    iget v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragItemPos:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
+
+    invoke-virtual {v2}, Lcom/htc/fragment/widget/CarouselHost;->getCurrentTab()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_6
+
+    .line 780
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery;->mDragger:Lcom/htc/fragment/widget/DragController;
 
     check-cast v1, Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v1}, Lcom/htc/fragment/widget/CarouselHost;->setNextTab()V
 
-    .line 778
+    .line 781
+    :cond_6
     iget-object v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mTarget:Lcom/htc/fragment/widget/DropTarget;
 
     check-cast v1, Lcom/htc/fragment/widget/BinGridView;
 
     invoke-virtual {v1}, Lcom/htc/fragment/widget/BinGridView;->addtoDB()V
 
-    .line 780
+    .line 783
     iget-boolean v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCancelAnimation:Z
 
     if-nez v1, :cond_1
 
-    .line 781
+    .line 784
     iput-boolean v14, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode3layout:Z
 
-    goto :goto_1
+    goto/16 :goto_1
 .end method
 
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -4071,13 +4111,13 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 1132
+    .line 1135
     invoke-direct {p0}, Lcom/htc/fragment/widget/CarouselWidget;->initMember()V
 
-    .line 1134
+    .line 1137
     invoke-direct {p0}, Lcom/htc/fragment/widget/CarouselWidget;->createGreenIndicator()V
 
-    .line 1135
+    .line 1138
     return-void
 .end method
 
@@ -4091,10 +4131,10 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 1251
+    .line 1254
     invoke-direct {p0}, Lcom/htc/fragment/widget/CarouselWidget;->removeIndicator()V
 
-    .line 1252
+    .line 1255
     return-void
 .end method
 
@@ -4108,7 +4148,7 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 1194
+    .line 1197
     move-object v0, p0
 
     move-object v1, p0
@@ -4125,13 +4165,13 @@
 
     move-result v10
 
-    .line 1196
+    .line 1199
     .local v10, pos:I
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v0, :cond_3
 
-    .line 1198
+    .line 1201
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getScrollX()I
 
     move-result v0
@@ -4140,7 +4180,7 @@
 
     invoke-direct {p0, v0, v10}, Lcom/htc/fragment/widget/CarouselWidget;->moveIndicator(II)V
 
-    .line 1200
+    .line 1203
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLeft()I
 
     move-result v0
@@ -4169,15 +4209,15 @@
 
     if-le v0, v1, :cond_1
 
-    .line 1201
+    .line 1204
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->scrollRight()V
 
-    .line 1238
+    .line 1241
     :cond_0
     :goto_0
     return-void
 
-    .line 1202
+    .line 1205
     :cond_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getRight()I
 
@@ -4207,12 +4247,12 @@
 
     if-le v0, v1, :cond_0
 
-    .line 1204
+    .line 1207
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getFirstVisiblePosition()I
 
     move-result v7
 
-    .line 1205
+    .line 1208
     .local v7, firstVisPos:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -4224,7 +4264,7 @@
 
     add-int/lit8 v8, v0, -0x1
 
-    .line 1207
+    .line 1210
     .local v8, lastPos:I
     sub-int v0, v8, v7
 
@@ -4232,16 +4272,16 @@
 
     move-result-object v9
 
-    .line 1208
+    .line 1211
     .local v9, lastVisView:Landroid/view/View;
     if-eqz v9, :cond_2
 
-    .line 1210
+    .line 1213
     invoke-virtual {v9}, Landroid/view/View;->getLeft()I
 
     move-result v6
 
-    .line 1211
+    .line 1214
     .local v6, anchor:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getWidth()I
 
@@ -4257,14 +4297,14 @@
 
     if-le v6, v0, :cond_0
 
-    .line 1214
+    .line 1217
     .end local v6           #anchor:I
     :cond_2
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->scrollLeft()V
 
     goto :goto_0
 
-    .line 1219
+    .line 1222
     .end local v7           #firstVisPos:I
     .end local v8           #lastPos:I
     .end local v9           #lastVisView:Landroid/view/View;
@@ -4277,7 +4317,7 @@
 
     invoke-direct {p0, v0, v10}, Lcom/htc/fragment/widget/CarouselWidget;->moveIndicator(II)V
 
-    .line 1221
+    .line 1224
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getTop()I
 
     move-result v0
@@ -4306,12 +4346,12 @@
 
     if-le v0, v1, :cond_4
 
-    .line 1222
+    .line 1225
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->scrollBottom()V
 
     goto :goto_0
 
-    .line 1223
+    .line 1226
     :cond_4
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getBottom()I
 
@@ -4341,12 +4381,12 @@
 
     if-le v0, v1, :cond_0
 
-    .line 1225
+    .line 1228
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getFirstVisiblePosition()I
 
     move-result v7
 
-    .line 1226
+    .line 1229
     .restart local v7       #firstVisPos:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -4358,7 +4398,7 @@
 
     add-int/lit8 v8, v0, -0x1
 
-    .line 1228
+    .line 1231
     .restart local v8       #lastPos:I
     sub-int v0, v8, v7
 
@@ -4366,16 +4406,16 @@
 
     move-result-object v9
 
-    .line 1229
+    .line 1232
     .restart local v9       #lastVisView:Landroid/view/View;
     if-eqz v9, :cond_5
 
-    .line 1231
+    .line 1234
     invoke-virtual {v9}, Landroid/view/View;->getTop()I
 
     move-result v6
 
-    .line 1232
+    .line 1235
     .restart local v6       #anchor:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getHeight()I
 
@@ -4391,7 +4431,7 @@
 
     if-le v6, v0, :cond_0
 
-    .line 1235
+    .line 1238
     .end local v6           #anchor:I
     :cond_5
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->scrollTop()V
@@ -4409,7 +4449,7 @@
     .parameter "dragInfo"
 
     .prologue
-    .line 809
+    .line 812
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->initFlags()V
 
     move-object v0, p0
@@ -4424,7 +4464,7 @@
 
     move/from16 v5, p5
 
-    .line 810
+    .line 813
     invoke-direct/range {v0 .. v5}, Lcom/htc/fragment/widget/CarouselWidget;->findInsertedPosition(Landroid/view/ViewGroup;IIII)I
 
     move-result v10
@@ -4432,10 +4472,10 @@
     .local v10, pos:I
     move-object/from16 v8, p6
 
-    .line 811
+    .line 814
     check-cast v8, Lcom/htc/fragment/widget/TaskInfo;
 
-    .line 812
+    .line 815
     .local v8, info:Lcom/htc/fragment/widget/TaskInfo;
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -4443,54 +4483,54 @@
 
     check-cast v7, Lcom/htc/fragment/widget/BinAdapter;
 
-    .line 813
+    .line 816
     .local v7, adapter:Lcom/htc/fragment/widget/BinAdapter;
     invoke-virtual {v7}, Lcom/htc/fragment/widget/BinAdapter;->getHandler()Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;
 
     move-result-object v0
 
-    .line 814
+    .line 817
     .local v0, handle:Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;
     invoke-virtual {v7}, Lcom/htc/fragment/widget/BinAdapter;->getUri()Landroid/net/Uri;
 
     move-result-object v11
 
-    .line 815
+    .line 818
     .local v11, uri:Landroid/net/Uri;
     iput-object v7, p0, Lcom/htc/fragment/widget/CarouselWidget;->mAdapter:Lcom/htc/fragment/widget/BinAdapter;
 
-    .line 816
+    .line 819
     const/4 v1, 0x2
 
     new-array v9, v1, [I
 
-    .line 818
+    .line 821
     .local v9, loc:[I
     check-cast p1, Lcom/htc/fragment/widget/DropTarget;
 
     .end local p1
     if-eq p0, p1, :cond_1
 
-    .line 819
+    .line 822
     iput-object v11, p0, Lcom/htc/fragment/widget/CarouselWidget;->mReorderUri:Landroid/net/Uri;
 
-    .line 820
+    .line 823
     iput v10, p0, Lcom/htc/fragment/widget/CarouselWidget;->mToPos:I
 
-    .line 821
+    .line 824
     iget-wide v1, v8, Lcom/htc/fragment/widget/TaskInfo;->_id:J
 
     iput-wide v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragId:J
 
-    .line 822
+    .line 825
     const/4 v1, 0x2
 
     iput v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
-    .line 824
+    .line 827
     invoke-direct {p0, v10, v9}, Lcom/htc/fragment/widget/CarouselWidget;->getLocationFromPos(I[I)V
 
-    .line 825
+    .line 828
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery;->mDragger:Lcom/htc/fragment/widget/DragController;
 
     check-cast v1, Lcom/htc/fragment/widget/CarouselHost;
@@ -4509,15 +4549,15 @@
 
     invoke-virtual {v1, v2, v5}, Lcom/htc/fragment/widget/CarouselHost;->doAnimationForDragIcon(FF)V
 
-    .line 828
+    .line 831
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->onAnimationEnd()V
 
-    .line 868
+    .line 871
     :cond_0
     :goto_0
     return-void
 
-    .line 836
+    .line 839
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4545,7 +4585,7 @@
 
     move-result-object v3
 
-    .line 837
+    .line 840
     .local v3, reorderUri:Landroid/net/Uri;
     const-string v1, "reorder_task"
 
@@ -4553,7 +4593,7 @@
 
     move-result-object v3
 
-    .line 839
+    .line 842
     invoke-virtual {v3}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v1
@@ -4622,26 +4662,26 @@
 
     move-result-object v3
 
-    .line 845
+    .line 848
     iput-object v3, p0, Lcom/htc/fragment/widget/CarouselWidget;->mReorderUri:Landroid/net/Uri;
 
-    .line 846
+    .line 849
     iput v10, p0, Lcom/htc/fragment/widget/CarouselWidget;->mToPos:I
 
-    .line 847
+    .line 850
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
-    .line 849
+    .line 852
     iget v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragItemPos:I
 
     if-eq v1, v10, :cond_2
 
-    .line 850
+    .line 853
     invoke-direct {p0, v10, v9}, Lcom/htc/fragment/widget/CarouselWidget;->getLocationFromPos(I[I)V
 
-    .line 851
+    .line 854
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery;->mDragger:Lcom/htc/fragment/widget/DragController;
 
     check-cast v1, Lcom/htc/fragment/widget/CarouselHost;
@@ -4660,24 +4700,24 @@
 
     invoke-virtual {v1, v2, v5}, Lcom/htc/fragment/widget/CarouselHost;->doAnimationForDragIcon(FF)V
 
-    .line 854
+    .line 857
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->onAnimationEnd()V
 
-    .line 857
+    .line 860
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 858
+    .line 861
     iget v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragItemPos:I
 
     if-ne v1, v10, :cond_0
 
-    .line 859
+    .line 862
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 860
+    .line 863
     .local v4, values:Landroid/content/ContentValues;
     const-string v1, "is_host"
 
@@ -4689,7 +4729,7 @@
 
     invoke-virtual {v4, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 861
+    .line 864
     const/16 v1, 0x3e8
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4702,7 +4742,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/htc/fragment/content/NotifyingAsyncQueryHandler;->startUpdate(ILjava/lang/Object;Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 862
+    .line 865
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery;->mDragger:Lcom/htc/fragment/widget/DragController;
 
     check-cast v1, Lcom/htc/fragment/widget/CarouselHost;
@@ -4711,7 +4751,7 @@
 
     goto/16 :goto_0
 
-    .line 865
+    .line 868
     .end local v4           #values:Landroid/content/ContentValues;
     :cond_3
     new-instance v1, Ljava/lang/RuntimeException;
@@ -4775,7 +4815,7 @@
     iput-boolean p2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mIsSuccessful:Z
 
     .line 705
-    if-nez p2, :cond_1
+    if-nez p2, :cond_2
 
     .line 706
     const/4 v1, 0x2
@@ -4786,9 +4826,14 @@
     .local v0, loc:[I
     iget-object v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragItemView:Landroid/view/View;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->getLocationInWindow([I)V
+    if-eqz v1, :cond_0
 
     .line 708
+    iget-object v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragItemView:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->getLocationInWindow([I)V
+
+    .line 709
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery;->mDragger:Lcom/htc/fragment/widget/DragController;
 
     check-cast v1, Lcom/htc/fragment/widget/CarouselHost;
@@ -4805,10 +4850,11 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/htc/fragment/widget/CarouselHost;->doAnimationForDragIcon(FF)V
 
-    .line 710
-    if-eqz p1, :cond_0
+    .line 712
+    :cond_0
+    if-eqz p1, :cond_1
 
-    .line 711
+    .line 713
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -4821,23 +4867,23 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 717
+    .line 719
     .end local v0           #loc:[I
     .end local p1
-    :cond_0
+    :cond_1
     :goto_0
     return-void
 
-    .line 714
+    .line 716
     .restart local p1
-    :cond_1
+    :cond_2
     check-cast p1, Lcom/htc/fragment/widget/DragSource;
 
     .end local p1
-    if-eq p1, p0, :cond_2
+    if-eq p1, p0, :cond_3
 
-    .line 715
-    :cond_2
+    .line 717
+    :cond_3
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragItemView:Landroid/view/View;
@@ -4892,17 +4938,17 @@
     .end annotation
 
     .prologue
-    .line 1332
+    .line 1335
     .local p1, parent:Lcom/htc/fragment/widget/AdapterView;,"Lcom/htc/fragment/widget/AdapterView<*>;"
     iget v2, p0, Lcom/htc/fragment/widget/Gallery;->mState:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1348
+    .line 1351
     :goto_0
     return-void
 
-    .line 1334
+    .line 1337
     :pswitch_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -4910,7 +4956,7 @@
 
     check-cast v0, Lcom/htc/fragment/widget/TaskInfo;
 
-    .line 1335
+    .line 1338
     .local v0, info:Lcom/htc/fragment/widget/TaskInfo;
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
@@ -4918,12 +4964,12 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/fragment/widget/CarouselHost;->setCurrentTabByTag(Ljava/lang/String;)V
 
-    .line 1338
+    .line 1341
     invoke-static {}, Lcom/htc/utils/ulog/ReusableULogData;->obtain()Lcom/htc/utils/ulog/ReusableULogData;
 
     move-result-object v1
 
-    .line 1339
+    .line 1342
     .local v1, uLogData:Lcom/htc/utils/ulog/ReusableULogData;
     const-string v2, "system_server"
 
@@ -4959,15 +5005,15 @@
 
     invoke-interface {v2, v3, v4}, Lcom/htc/utils/ulog/ULogDataWritable;->addData(Ljava/lang/String;Ljava/lang/String;)Lcom/htc/utils/ulog/ULogDataWritable;
 
-    .line 1342
+    .line 1345
     invoke-static {v1}, Lcom/htc/utils/ulog/ULog;->log(Lcom/htc/utils/ulog/ULogData;)V
 
-    .line 1343
+    .line 1346
     invoke-virtual {v1}, Lcom/htc/utils/ulog/ReusableULogData;->recycle()V
 
     goto :goto_0
 
-    .line 1332
+    .line 1335
     :pswitch_data_0
     .packed-switch 0x3e9
         :pswitch_0
@@ -5130,42 +5176,42 @@
 
     const/4 v1, 0x1
 
-    .line 1415
+    .line 1418
     iget-boolean v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v2, :cond_3
 
-    .line 1417
+    .line 1420
     sparse-switch p1, :sswitch_data_0
 
-    .line 1447
+    .line 1450
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
     if-eqz v2, :cond_6
 
-    .line 1449
+    .line 1452
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v2}, Lcom/htc/fragment/widget/CarouselHost;->getTabContentView()Landroid/widget/FrameLayout;
 
     move-result-object v0
 
-    .line 1451
+    .line 1454
     .local v0, content:Landroid/view/View;
     if-eqz v0, :cond_6
 
-    .line 1453
+    .line 1456
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->requestFocus(I)Z
 
     move-result v1
 
-    .line 1454
+    .line 1457
     .local v1, handle:Z
     invoke-virtual {v0, p2}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v1
 
-    .line 1505
+    .line 1508
     .end local v0           #content:Landroid/view/View;
     .end local v1           #handle:Z
     :cond_0
@@ -5173,23 +5219,23 @@
     :sswitch_0
     return v1
 
-    .line 1420
+    .line 1423
     :sswitch_1
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
     if-eqz v2, :cond_0
 
-    .line 1422
+    .line 1425
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v2, :cond_1
 
-    .line 1423
+    .line 1426
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v2}, Lcom/htc/fragment/widget/FastScroller;->movePrevious()Z
 
-    .line 1425
+    .line 1428
     :cond_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->hasFocus()Z
 
@@ -5197,28 +5243,28 @@
 
     if-nez v2, :cond_0
 
-    .line 1426
+    .line 1429
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->requestFocus()Z
 
     goto :goto_0
 
-    .line 1431
+    .line 1434
     :sswitch_2
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
     if-eqz v2, :cond_0
 
-    .line 1433
+    .line 1436
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v2, :cond_2
 
-    .line 1434
+    .line 1437
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v2}, Lcom/htc/fragment/widget/FastScroller;->moveNext()Z
 
-    .line 1436
+    .line 1439
     :cond_2
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->hasFocus()Z
 
@@ -5226,46 +5272,46 @@
 
     if-nez v2, :cond_0
 
-    .line 1437
+    .line 1440
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->requestFocus()Z
 
     goto :goto_0
 
-    .line 1462
+    .line 1465
     :cond_3
     sparse-switch p1, :sswitch_data_1
 
-    .line 1492
+    .line 1495
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
     if-eqz v2, :cond_6
 
-    .line 1494
+    .line 1497
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v2}, Lcom/htc/fragment/widget/CarouselHost;->getTabContentView()Landroid/widget/FrameLayout;
 
     move-result-object v0
 
-    .line 1496
+    .line 1499
     .restart local v0       #content:Landroid/view/View;
     if-eqz v0, :cond_6
 
-    .line 1498
+    .line 1501
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->requestFocus(I)Z
 
     move-result v1
 
-    .line 1499
+    .line 1502
     .restart local v1       #handle:Z
     invoke-virtual {v0, p2}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v1
 
-    .line 1500
+    .line 1503
     goto :goto_0
 
-    .line 1465
+    .line 1468
     .end local v0           #content:Landroid/view/View;
     .end local v1           #handle:Z
     :sswitch_3
@@ -5273,17 +5319,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 1467
+    .line 1470
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v2, :cond_4
 
-    .line 1468
+    .line 1471
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v2}, Lcom/htc/fragment/widget/FastScroller;->movePrevious()Z
 
-    .line 1470
+    .line 1473
     :cond_4
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->hasFocus()Z
 
@@ -5291,28 +5337,28 @@
 
     if-nez v2, :cond_0
 
-    .line 1471
+    .line 1474
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->requestFocus()Z
 
     goto :goto_0
 
-    .line 1476
+    .line 1479
     :sswitch_4
     iget-object v2, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
     if-eqz v2, :cond_0
 
-    .line 1478
+    .line 1481
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v2, :cond_5
 
-    .line 1479
+    .line 1482
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v2}, Lcom/htc/fragment/widget/FastScroller;->moveNext()Z
 
-    .line 1481
+    .line 1484
     :cond_5
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->hasFocus()Z
 
@@ -5320,12 +5366,12 @@
 
     if-nez v2, :cond_0
 
-    .line 1482
+    .line 1485
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->requestFocus()Z
 
     goto :goto_0
 
-    .line 1505
+    .line 1508
     :cond_6
     invoke-super {p0, p1, p2}, Lcom/htc/fragment/widget/Gallery;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -5333,7 +5379,7 @@
 
     goto :goto_0
 
-    .line 1417
+    .line 1420
     nop
 
     :sswitch_data_0
@@ -5345,7 +5391,7 @@
         0x42 -> :sswitch_0
     .end sparse-switch
 
-    .line 1462
+    .line 1465
     :sswitch_data_1
     .sparse-switch
         0x13 -> :sswitch_3
@@ -5499,19 +5545,19 @@
 
     const/4 v5, -0x1
 
-    .line 1526
+    .line 1529
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v3
 
     if-nez v3, :cond_1
 
-    .line 1572
+    .line 1575
     :cond_0
     :goto_0
     return-void
 
-    .line 1529
+    .line 1532
     :cond_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -5527,20 +5573,20 @@
 
     if-le v3, v4, :cond_0
 
-    .line 1532
+    .line 1535
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getFirstVisiblePosition()I
 
     move-result v0
 
-    .line 1533
+    .line 1536
     .local v0, firstVisPos:I
     const/4 v1, -0x1
 
-    .line 1535
+    .line 1538
     .local v1, lastPos:I
     const/4 v2, 0x0
 
-    .line 1536
+    .line 1539
     .local v2, lastView:Landroid/view/View;
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
@@ -5552,7 +5598,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 1538
+    .line 1541
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v3
@@ -5563,20 +5609,20 @@
 
     add-int/lit8 v1, v3, -0x1
 
-    .line 1539
+    .line 1542
     sub-int v3, v1, v0
 
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/CarouselWidget;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1542
+    .line 1545
     :cond_2
     iget-boolean v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->isPortrait:Z
 
     if-eqz v3, :cond_7
 
-    .line 1544
+    .line 1547
     if-eqz v2, :cond_5
 
     invoke-virtual {v2}, Landroid/view/View;->getRight()I
@@ -5589,19 +5635,19 @@
 
     if-ge v3, v4, :cond_5
 
-    .line 1546
+    .line 1549
     iget v3, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
     if-ne v3, v8, :cond_3
 
-    .line 1548
+    .line 1551
     iget v3, p0, Lcom/htc/fragment/widget/CarouselWidget;->mToPos:I
 
     add-int/lit8 v4, v1, 0x2
 
     if-ne v3, v4, :cond_0
 
-    .line 1549
+    .line 1552
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getWidth()I
 
     move-result v3
@@ -5622,7 +5668,7 @@
 
     goto :goto_0
 
-    .line 1551
+    .line 1554
     :cond_3
     iget v3, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
@@ -5636,7 +5682,7 @@
 
     if-ne v3, v7, :cond_0
 
-    .line 1552
+    .line 1555
     :cond_4
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getWidth()I
 
@@ -5652,7 +5698,7 @@
 
     goto :goto_0
 
-    .line 1554
+    .line 1557
     :cond_5
     if-eqz v2, :cond_0
 
@@ -5674,7 +5720,7 @@
 
     if-ne v3, v5, :cond_0
 
-    .line 1555
+    .line 1558
     :cond_6
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getWidth()I
 
@@ -5696,7 +5742,7 @@
 
     goto/16 :goto_0
 
-    .line 1559
+    .line 1562
     :cond_7
     if-eqz v2, :cond_a
 
@@ -5710,19 +5756,19 @@
 
     if-ge v3, v4, :cond_a
 
-    .line 1561
+    .line 1564
     iget v3, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
     if-ne v3, v8, :cond_8
 
-    .line 1563
+    .line 1566
     iget v3, p0, Lcom/htc/fragment/widget/CarouselWidget;->mToPos:I
 
     add-int/lit8 v4, v1, 0x2
 
     if-ne v3, v4, :cond_0
 
-    .line 1564
+    .line 1567
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getHeight()I
 
     move-result v3
@@ -5743,7 +5789,7 @@
 
     goto/16 :goto_0
 
-    .line 1566
+    .line 1569
     :cond_8
     iget v3, p0, Lcom/htc/fragment/widget/CarouselWidget;->mDragMode:I
 
@@ -5757,7 +5803,7 @@
 
     if-ne v3, v7, :cond_0
 
-    .line 1567
+    .line 1570
     :cond_9
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getHeight()I
 
@@ -5773,7 +5819,7 @@
 
     goto/16 :goto_0
 
-    .line 1569
+    .line 1572
     :cond_a
     if-eqz v2, :cond_0
 
@@ -5795,7 +5841,7 @@
 
     if-ne v3, v5, :cond_0
 
-    .line 1570
+    .line 1573
     :cond_b
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getHeight()I
 
@@ -5822,7 +5868,7 @@
     .locals 2
 
     .prologue
-    .line 1297
+    .line 1300
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLayoutParamsHeight()I
 
     move-result v0
@@ -5837,7 +5883,7 @@
 
     invoke-super {p0, v0}, Lcom/htc/fragment/widget/Gallery;->scrollBy(I)V
 
-    .line 1298
+    .line 1301
     return-void
 .end method
 
@@ -5856,7 +5902,7 @@
     .locals 2
 
     .prologue
-    .line 1270
+    .line 1273
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLayoutParamsWidth()I
 
     move-result v0
@@ -5873,7 +5919,7 @@
 
     invoke-super {p0, v0}, Lcom/htc/fragment/widget/Gallery;->scrollBy(I)V
 
-    .line 1271
+    .line 1274
     return-void
 .end method
 
@@ -5881,7 +5927,7 @@
     .locals 2
 
     .prologue
-    .line 1279
+    .line 1282
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLayoutParamsWidth()I
 
     move-result v0
@@ -5896,7 +5942,7 @@
 
     invoke-super {p0, v0}, Lcom/htc/fragment/widget/Gallery;->scrollBy(I)V
 
-    .line 1280
+    .line 1283
     return-void
 .end method
 
@@ -5904,7 +5950,7 @@
     .locals 2
 
     .prologue
-    .line 1288
+    .line 1291
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getLayoutParamsHeight()I
 
     move-result v0
@@ -5921,7 +5967,7 @@
 
     invoke-super {p0, v0}, Lcom/htc/fragment/widget/Gallery;->scrollBy(I)V
 
-    .line 1289
+    .line 1292
     return-void
 .end method
 
@@ -5963,10 +6009,10 @@
     .parameter "host"
 
     .prologue
-    .line 1324
+    .line 1327
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselWidget;->mCarouselHost:Lcom/htc/fragment/widget/CarouselHost;
 
-    .line 1325
+    .line 1328
     return-void
 .end method
 
@@ -5976,7 +6022,7 @@
     .parameter "text"
 
     .prologue
-    .line 1360
+    .line 1363
     if-ltz p1, :cond_1
 
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getChildCount()I
@@ -5985,14 +6031,14 @@
 
     if-ge p1, v2, :cond_1
 
-    .line 1361
+    .line 1364
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselWidget;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 1362
+    .line 1365
     .local v0, child:Landroid/widget/FrameLayout;
     const v2, 0x2020062
 
@@ -6002,7 +6048,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 1364
+    .line 1367
     .local v1, count:Landroid/widget/TextView;
     if-eqz p2, :cond_0
 
@@ -6014,20 +6060,20 @@
 
     if-eqz v2, :cond_2
 
-    .line 1365
+    .line 1368
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, p1, v2}, Lcom/htc/fragment/widget/CarouselWidget;->setCountTextVisibility(II)V
 
-    .line 1370
+    .line 1373
     .end local v0           #child:Landroid/widget/FrameLayout;
     .end local v1           #count:Landroid/widget/TextView;
     :cond_1
     :goto_0
     return-void
 
-    .line 1367
+    .line 1370
     .restart local v0       #child:Landroid/widget/FrameLayout;
     .restart local v1       #count:Landroid/widget/TextView;
     :cond_2
@@ -6042,7 +6088,7 @@
     .parameter "visibility"
 
     .prologue
-    .line 1374
+    .line 1377
     if-ltz p1, :cond_1
 
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getChildCount()I
@@ -6051,14 +6097,14 @@
 
     if-ge p1, v2, :cond_1
 
-    .line 1375
+    .line 1378
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselWidget;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 1376
+    .line 1379
     .local v0, child:Landroid/widget/FrameLayout;
     const v2, 0x2020062
 
@@ -6068,7 +6114,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 1378
+    .line 1381
     .local v1, count:Landroid/widget/TextView;
     if-eqz p2, :cond_0
 
@@ -6090,20 +6136,20 @@
 
     if-eqz v2, :cond_2
 
-    .line 1379
+    .line 1382
     :cond_0
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1384
+    .line 1387
     .end local v0           #child:Landroid/widget/FrameLayout;
     .end local v1           #count:Landroid/widget/TextView;
     :cond_1
     :goto_0
     return-void
 
-    .line 1381
+    .line 1384
     .restart local v0       #child:Landroid/widget/FrameLayout;
     .restart local v1       #count:Landroid/widget/TextView;
     :cond_2
@@ -6119,21 +6165,21 @@
     .parameter "index"
 
     .prologue
-    .line 1307
+    .line 1310
     if-gez p1, :cond_0
 
-    .line 1320
+    .line 1323
     :goto_0
     return-void
 
-    .line 1313
+    .line 1316
     :cond_0
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselWidget;->setNextSelectedPositionInt(I)V
 
-    .line 1315
+    .line 1318
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselWidget;->calibrateThumb(I)V
 
-    .line 1318
+    .line 1321
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->requestLayout()V
 
     goto :goto_0
@@ -6168,17 +6214,17 @@
     .parameter "enable"
 
     .prologue
-    .line 1388
+    .line 1391
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 1389
+    .line 1392
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0, p1}, Lcom/htc/fragment/widget/FastScroller;->setEditorMode(Z)V
 
-    .line 1392
+    .line 1395
     :cond_0
     return-void
 .end method
@@ -6234,21 +6280,21 @@
     .parameter "state"
 
     .prologue
-    .line 1352
+    .line 1355
     iput p1, p0, Lcom/htc/fragment/widget/Gallery;->mState:I
 
-    .line 1353
+    .line 1356
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselWidget;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v0
 
     check-cast v0, Lcom/htc/fragment/widget/BinAdapter;
 
-    .line 1354
+    .line 1357
     .local v0, adapter:Lcom/htc/fragment/widget/BinAdapter;
     invoke-virtual {v0, p1}, Lcom/htc/fragment/widget/BinAdapter;->setStateMode(I)V
 
-    .line 1355
+    .line 1358
     return-void
 .end method
 

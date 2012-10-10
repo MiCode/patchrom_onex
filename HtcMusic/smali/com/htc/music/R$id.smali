@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final LL_property:I = 0x7f0800a5
+.field public static final LL_property:I = 0x7f0800a6
 
-.field public static final ListView_sound_item:I = 0x7f0800ae
+.field public static final ListView_sound_item:I = 0x7f0800af
 
-.field public static final MyHtcListItem2LineText1:I = 0x7f08009e
+.field public static final MyHtcListItem2LineText1:I = 0x7f08009f
 
 .field public static final albumCover:I = 0x7f080058
 
@@ -39,13 +39,13 @@
 
 .field public static final app_name:I = 0x7f080005
 
-.field public static final appendix_icon:I = 0x7f080096
+.field public static final appendix_icon:I = 0x7f080097
 
-.field public static final artist_summary_bio:I = 0x7f08009c
+.field public static final artist_summary_bio:I = 0x7f08009d
 
-.field public static final artist_summary_bio_more:I = 0x7f08009d
+.field public static final artist_summary_bio_more:I = 0x7f08009e
 
-.field public static final artistalbum:I = 0x7f0800b1
+.field public static final artistalbum:I = 0x7f0800b2
 
 .field public static final audio_preview:I = 0x7f080009
 
@@ -53,7 +53,7 @@
 
 .field public static final badge_now_playing:I = 0x7f080055
 
-.field public static final bannerGallery:I = 0x7f0800b2
+.field public static final bannerGallery:I = 0x7f0800b3
 
 .field public static final brower_footer_button_stub_import:I = 0x7f08004d
 
@@ -63,7 +63,7 @@
 
 .field public static final browser_title:I = 0x7f08001e
 
-.field public static final btn1:I = 0x7f0800ad
+.field public static final btn1:I = 0x7f0800ae
 
 .field public static final buttonPanel:I = 0x7f080017
 
@@ -91,15 +91,15 @@
 
 .field public static final edit_text:I = 0x7f080066
 
-.field public static final emptyLayout:I = 0x7f080094
+.field public static final emptyLayout:I = 0x7f080095
 
-.field public static final emptyText:I = 0x7f080095
+.field public static final emptyText:I = 0x7f080096
 
 .field public static final error_text:I = 0x7f080045
 
 .field public static final exp_gridview_title_text:I = 0x7f080067
 
-.field public static final featuredMusic:I = 0x7f0800b3
+.field public static final featuredMusic:I = 0x7f0800b4
 
 .field public static final folder_name_text:I = 0x7f080046
 
@@ -143,9 +143,9 @@
 
 .field public static final hit_layout_stub_import:I = 0x7f08006f
 
-.field public static final htc_list_view:I = 0x7f0800b8
+.field public static final htc_list_view:I = 0x7f0800b9
 
-.field public static final htc_logo:I = 0x7f0800c1
+.field public static final htc_logo:I = 0x7f0800c2
 
 .field public static final htc_tabcontent:I = 0x7f08001a
 
@@ -153,17 +153,19 @@
 
 .field public static final icon:I = 0x7f080062
 
-.field public static final imgButton:I = 0x7f08009a
+.field public static final imgButton:I = 0x7f08009b
 
-.field public static final img_1x1:I = 0x7f080097
+.field public static final img_1x1:I = 0x7f080098
 
-.field public static final img_1x1_progressbar:I = 0x7f080098
+.field public static final img_1x1_progressbar:I = 0x7f080099
 
 .field public static final information_seperator:I = 0x7f08006b
 
 .field public static final input_text:I = 0x7f080053
 
-.field public static final itemText2LineText:I = 0x7f0800b6
+.field public static final itemText2LineText:I = 0x7f0800b7
+
+.field public static final landing_page_average_view:I = 0x7f080089
 
 .field public static final landing_page_image_layout:I = 0x7f08007c
 
@@ -175,7 +177,7 @@
 
 .field public static final landing_page_shortcut_4:I = 0x7f080086
 
-.field public static final landing_page_shortcut_5:I = 0x7f080089
+.field public static final landing_page_shortcut_5:I = 0x7f08008a
 
 .field public static final landing_page_shortcuts_layout:I = 0x7f08007a
 
@@ -185,7 +187,7 @@
 
 .field public static final line2:I = 0x7f080012
 
-.field public static final listItem_h:I = 0x7f08009b
+.field public static final listItem_h:I = 0x7f08009c
 
 .field public static final list_item_albumart:I = 0x7f080023
 
@@ -201,7 +203,7 @@
 
 .field public static final list_item_imgButton:I = 0x7f080028
 
-.field public static final list_item_radio:I = 0x7f080093
+.field public static final list_item_radio:I = 0x7f080094
 
 .field public static final list_item_rear_button:I = 0x7f080026
 
@@ -211,7 +213,7 @@
 
 .field public static final list_item_text:I = 0x7f080024
 
-.field public static final listen_description:I = 0x7f08008c
+.field public static final listen_description:I = 0x7f08008d
 
 .field public static final listview_content_layout:I = 0x7f080048
 
@@ -219,23 +221,23 @@
 
 .field public static final main_layout:I = 0x7f080068
 
-.field public static final message:I = 0x7f0800a8
+.field public static final message:I = 0x7f0800a9
 
-.field public static final message_inflate:I = 0x7f0800b5
+.field public static final message_inflate:I = 0x7f0800b6
 
-.field public static final message_stub_import:I = 0x7f0800b4
+.field public static final message_stub_import:I = 0x7f0800b5
 
-.field public static final mini_player_description:I = 0x7f08008f
+.field public static final mini_player_description:I = 0x7f080090
 
-.field public static final mini_player_launcher_btn:I = 0x7f08008d
+.field public static final mini_player_launcher_btn:I = 0x7f08008f
 
-.field public static final mini_player_play_btn:I = 0x7f080090
+.field public static final mini_player_play_btn:I = 0x7f080091
 
 .field public static final mini_player_thumb:I = 0x7f08008e
 
-.field public static final music_station_logo:I = 0x7f0800bf
+.field public static final music_station_logo:I = 0x7f0800c0
 
-.field public static final music_station_string:I = 0x7f0800c0
+.field public static final music_station_string:I = 0x7f0800c1
 
 .field public static final next:I = 0x7f08003c
 
@@ -261,7 +263,7 @@
 
 .field public static final pbar_1x1:I = 0x7f080021
 
-.field public static final picker:I = 0x7f080092
+.field public static final picker:I = 0x7f080093
 
 .field public static final play:I = 0x7f08003a
 
@@ -269,21 +271,21 @@
 
 .field public static final playback_view:I = 0x7f080036
 
-.field public static final player_header_library:I = 0x7f0800a0
+.field public static final player_header_library:I = 0x7f0800a1
 
-.field public static final player_header_output:I = 0x7f0800a3
+.field public static final player_header_output:I = 0x7f0800a4
 
-.field public static final player_header_queue:I = 0x7f0800a2
+.field public static final player_header_queue:I = 0x7f0800a3
 
-.field public static final player_header_store:I = 0x7f0800a4
+.field public static final player_header_store:I = 0x7f0800a5
 
-.field public static final player_header_title:I = 0x7f0800a1
+.field public static final player_header_title:I = 0x7f0800a2
 
-.field public static final player_title:I = 0x7f08009f
+.field public static final player_title:I = 0x7f0800a0
 
 .field public static final playpause:I = 0x7f080018
 
-.field public static final playpausebtn:I = 0x7f0800af
+.field public static final playpausebtn:I = 0x7f0800b0
 
 .field public static final prev:I = 0x7f08003b
 
@@ -291,19 +293,19 @@
 
 .field public static final progress_layout:I = 0x7f08006c
 
-.field public static final promotionBuy:I = 0x7f0800bd
+.field public static final promotionBuy:I = 0x7f0800be
 
-.field public static final promotionFee:I = 0x7f0800bc
+.field public static final promotionFee:I = 0x7f0800bd
 
-.field public static final promotionImage:I = 0x7f0800ba
+.field public static final promotionImage:I = 0x7f0800bb
 
-.field public static final promotionInfo:I = 0x7f0800bb
+.field public static final promotionInfo:I = 0x7f0800bc
 
-.field public static final promotionItemLayout:I = 0x7f0800b9
+.field public static final promotionItemLayout:I = 0x7f0800ba
 
 .field public static final prompt:I = 0x7f080050
 
-.field public static final queue_layout:I = 0x7f0800a6
+.field public static final queue_layout:I = 0x7f0800a7
 
 .field public static final qvga:I = 0x7f080001
 
@@ -315,13 +317,13 @@
 
 .field public static final repeat_container:I = 0x7f080042
 
-.field public static final sd_error:I = 0x7f0800a9
+.field public static final sd_error:I = 0x7f0800aa
 
-.field public static final sd_message:I = 0x7f080091
+.field public static final sd_message:I = 0x7f080092
 
 .field public static final seek:I = 0x7f08006d
 
-.field public static final seekbar_popup_txt:I = 0x7f0800aa
+.field public static final seekbar_popup_txt:I = 0x7f0800ab
 
 .field public static final separator:I = 0x7f080077
 
@@ -337,7 +339,7 @@
 
 .field public static final shortcut_icon_4:I = 0x7f080087
 
-.field public static final shortcut_icon_5:I = 0x7f08008a
+.field public static final shortcut_icon_5:I = 0x7f08008b
 
 .field public static final shortcut_name_1:I = 0x7f08007f
 
@@ -347,7 +349,7 @@
 
 .field public static final shortcut_name_4:I = 0x7f080088
 
-.field public static final shortcut_name_5:I = 0x7f08008b
+.field public static final shortcut_name_5:I = 0x7f08008c
 
 .field public static final shuffle:I = 0x7f080041
 
@@ -357,15 +359,15 @@
 
 .field public static final song_panel:I = 0x7f08006a
 
-.field public static final sound_effect_icon:I = 0x7f0800ab
+.field public static final sound_effect_icon:I = 0x7f0800ac
 
-.field public static final spinner:I = 0x7f0800a7
+.field public static final spinner:I = 0x7f0800a8
 
-.field public static final stamp:I = 0x7f080099
+.field public static final stamp:I = 0x7f08009a
 
-.field public static final storeFrontLayout:I = 0x7f0800b7
+.field public static final storeFrontLayout:I = 0x7f0800b8
 
-.field public static final store_front_splash_screen_layout:I = 0x7f0800be
+.field public static final store_front_splash_screen_layout:I = 0x7f0800bf
 
 .field public static final switch_message:I = 0x7f08004f
 
@@ -375,7 +377,7 @@
 
 .field public static final text:I = 0x7f080063
 
-.field public static final text1:I = 0x7f0800ac
+.field public static final text1:I = 0x7f0800ad
 
 .field public static final text_content:I = 0x7f080054
 
@@ -391,7 +393,7 @@
 
 .field public static final track_option:I = 0x7f080056
 
-.field public static final trackname:I = 0x7f0800b0
+.field public static final trackname:I = 0x7f0800b1
 
 .field public static final txt_1x1:I = 0x7f080022
 
@@ -409,7 +411,7 @@
     .locals 0
 
     .prologue
-    .line 1050
+    .line 1060
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

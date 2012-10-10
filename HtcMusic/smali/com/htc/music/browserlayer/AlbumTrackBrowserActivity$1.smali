@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 331
+    .line 334
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +43,14 @@
     .parameter "obj"
 
     .prologue
-    .line 333
+    .line 336
     const-string v0, "[AlbumTrackBrowserActivity]"
 
     const-string v1, "MediaPlaybackService: onServiceConnected..."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 334
+    .line 337
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mNeedBindSerive:Z
@@ -60,14 +60,14 @@
 
     if-nez v0, :cond_1
 
-    .line 335
+    .line 338
     const-string v0, "[AlbumTrackBrowserActivity]"
 
     const-string v1, "osc, mNeedBindSerive is false!!"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 336
+    .line 339
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->getApplicationContext()Landroid/content/Context;
@@ -82,12 +82,12 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/MusicUtils;->unbindFromService(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 345
+    .line 348
     :cond_0
     :goto_0
     return-void
 
-    .line 339
+    .line 342
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
@@ -96,7 +96,7 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mIsSeriveBinded:Z
     invoke-static {v0, v1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$102(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Z)Z
 
-    .line 341
+    .line 344
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-static {p2}, Lcom/htc/music/IMediaPlaybackService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/music/IMediaPlaybackService;
@@ -106,12 +106,12 @@
     #setter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
     invoke-static {v0, v1}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->access$202(Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;Lcom/htc/music/IMediaPlaybackService;)Lcom/htc/music/IMediaPlaybackService;
 
-    .line 342
+    .line 345
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v0, :cond_0
 
-    .line 343
+    .line 346
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$1;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -129,13 +129,13 @@
     .parameter "classname"
 
     .prologue
-    .line 348
+    .line 351
     const-string v0, "[AlbumTrackBrowserActivity]"
 
     const-string v1, "onServiceDisconnected"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 349
+    .line 352
     return-void
 .end method

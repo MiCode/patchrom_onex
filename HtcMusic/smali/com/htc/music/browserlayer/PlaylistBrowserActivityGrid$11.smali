@@ -3,12 +3,12 @@
 .source "PlaylistBrowserActivityGrid.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finishactivity()V
+    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setCategoryRightBtn(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1061
+    .line 946
     iput-object p1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$11;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,15 +37,17 @@
 
 
 # virtual methods
-.method public run()V
+.method public onClick(Landroid/view/View;)V
     .locals 1
+    .parameter "arg0"
 
     .prologue
-    .line 1063
+    .line 948
     iget-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$11;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
+    #calls: Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->createNewPlaylist()V
+    invoke-static {v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$1600(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)V
 
-    .line 1064
+    .line 949
     return-void
 .end method

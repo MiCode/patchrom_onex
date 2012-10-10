@@ -41,28 +41,28 @@
     .parameter "processingStartTime"
 
     .prologue
-    .line 67
+    .line 69
     invoke-direct {p0, p1}, Lorg/apache/http/entity/HttpEntityWrapper;-><init>(Lorg/apache/http/HttpEntity;)V
 
-    .line 68
+    .line 70
     iput-object p2, p0, Lcom/google/android/net/NetworkStatsEntity;->mUa:Ljava/lang/String;
 
-    .line 69
+    .line 71
     iput p3, p0, Lcom/google/android/net/NetworkStatsEntity;->mUid:I
 
-    .line 70
+    .line 72
     iput-wide p4, p0, Lcom/google/android/net/NetworkStatsEntity;->mStartTx:J
 
-    .line 71
+    .line 73
     iput-wide p6, p0, Lcom/google/android/net/NetworkStatsEntity;->mStartRx:J
 
-    .line 72
+    .line 74
     iput-wide p8, p0, Lcom/google/android/net/NetworkStatsEntity;->mResponseLatency:J
 
-    .line 73
+    .line 75
     iput-wide p10, p0, Lcom/google/android/net/NetworkStatsEntity;->mProcessingStartTime:J
 
-    .line 74
+    .line 76
     return-void
 .end method
 
@@ -136,7 +136,7 @@
     .locals 2
 
     .prologue
-    .line 77
+    .line 80
     const-string v0, "1"
 
     const-string v1, "googlehttpclient.logstats"
@@ -163,12 +163,12 @@
     .end annotation
 
     .prologue
-    .line 82
+    .line 86
     invoke-super {p0}, Lorg/apache/http/entity/HttpEntityWrapper;->getContent()Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 83
+    .line 87
     .local v0, orig:Ljava/io/InputStream;
     new-instance v1, Lcom/google/android/net/NetworkStatsEntity$NetworkStatsInputStream;
 

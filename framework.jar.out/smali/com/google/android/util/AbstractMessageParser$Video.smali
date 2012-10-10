@@ -67,7 +67,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://video.google.com/videofeed?type=docid&output=rss&sourceid=gtalk&docid="
+    const-string v1, "http://video.google.com/videofeed?type=docid&output=rss&sourceid=gtalk&docid="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -118,7 +118,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://video.google.com/videoplay?"
+    const-string v1, "http://video.google.com/videoplay?"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 2587
+    .line 2589
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$2;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iput p2, p0, Lcom/htc/sunny2/widget/gridview/GridView$2;->val$index:I
@@ -51,7 +51,7 @@
     .locals 4
 
     .prologue
-    .line 2589
+    .line 2591
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$2;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -61,7 +61,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2590
+    .line 2592
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$2;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -77,7 +77,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/sunny2/widget/gridview/GridViewPreparator;->notifyDataItemChanged(III)V
 
-    .line 2592
+    .line 2594
     :cond_0
     return-void
 .end method

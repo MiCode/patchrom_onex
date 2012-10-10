@@ -24,17 +24,17 @@
     .parameter
 
     .prologue
-    .line 2051
+    .line 1889
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$MyContentObserver;->this$0:Lcom/htc/music/LandingPageActivity;
 
-    .line 2052
+    .line 1890
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 2053
+    .line 1891
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 2057
+    .line 1895
     const/4 v0, 0x1
 
     return v0
@@ -55,12 +55,12 @@
     .parameter "selfChange"
 
     .prologue
-    .line 2062
+    .line 1900
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$MyContentObserver;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #calls: Lcom/htc/music/LandingPageActivity;->reloadRecentAlbumAsync()V
     invoke-static {v0}, Lcom/htc/music/LandingPageActivity;->access$3600(Lcom/htc/music/LandingPageActivity;)V
 
-    .line 2063
+    .line 1901
     return-void
 .end method

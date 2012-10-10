@@ -63,10 +63,10 @@
 
     const/4 v3, 0x0
 
-    .line 1368
+    .line 1367
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1369
+    .line 1368
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,7 +100,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getMethod:Ljava/lang/reflect/Method;
 
-    .line 1372
+    .line 1371
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +132,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getRepeatedMethod:Ljava/lang/reflect/Method;
 
-    .line 1374
+    .line 1373
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getRepeatedMethod:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
@@ -141,7 +141,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->type:Ljava/lang/Class;
 
-    .line 1375
+    .line 1374
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,7 +179,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->setRepeatedMethod:Ljava/lang/reflect/Method;
 
-    .line 1378
+    .line 1377
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,7 +211,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->addRepeatedMethod:Ljava/lang/reflect/Method;
 
-    .line 1380
+    .line 1379
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +245,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getCountMethod:Ljava/lang/reflect/Method;
 
-    .line 1383
+    .line 1382
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -273,7 +273,7 @@
 
     iput-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->clearMethod:Ljava/lang/reflect/Method;
 
-    .line 1384
+    .line 1383
     return-void
 .end method
 
@@ -285,7 +285,7 @@
     .parameter "value"
 
     .prologue
-    .line 1464
+    .line 1463
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->addRepeatedMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -299,7 +299,7 @@
     #calls: Lcom/htc/protobuf/GeneratedMessage;->invokeOrDie(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     invoke-static {v0, p1, v1}, Lcom/htc/protobuf/GeneratedMessage;->access$1400(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1465
+    .line 1464
     return-void
 .end method
 
@@ -308,7 +308,7 @@
     .parameter "builder"
 
     .prologue
-    .line 1486
+    .line 1485
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->clearMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -318,7 +318,7 @@
     #calls: Lcom/htc/protobuf/GeneratedMessage;->invokeOrDie(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     invoke-static {v0, p1, v1}, Lcom/htc/protobuf/GeneratedMessage;->access$1400(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1487
+    .line 1486
     return-void
 .end method
 
@@ -327,7 +327,7 @@
     .parameter "message"
 
     .prologue
-    .line 1427
+    .line 1426
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -348,7 +348,7 @@
     .parameter "index"
 
     .prologue
-    .line 1449
+    .line 1448
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getRepeatedMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -376,7 +376,7 @@
     .parameter "message"
 
     .prologue
-    .line 1479
+    .line 1478
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->getCountMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -402,7 +402,7 @@
     .parameter "message"
 
     .prologue
-    .line 1471
+    .line 1470
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "hasField() called on a singular field."
@@ -416,7 +416,7 @@
     .locals 2
 
     .prologue
-    .line 1489
+    .line 1488
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "newBuilderForField() called on a non-Message type."
@@ -432,10 +432,10 @@
     .parameter "value"
 
     .prologue
-    .line 1438
+    .line 1437
     invoke-virtual {p0, p1}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->clear(Lcom/htc/protobuf/GeneratedMessage$Builder;)V
 
-    .line 1439
+    .line 1438
     check-cast p2, Ljava/util/List;
 
     .end local p2
@@ -455,13 +455,13 @@
 
     move-result-object v0
 
-    .line 1440
+    .line 1439
     .local v0, element:Ljava/lang/Object;
     invoke-virtual {p0, p1, v0}, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->addRepeated(Lcom/htc/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 1442
+    .line 1441
     .end local v0           #element:Ljava/lang/Object;
     :cond_0
     return-void
@@ -474,7 +474,7 @@
     .parameter "value"
 
     .prologue
-    .line 1457
+    .line 1456
     iget-object v0, p0, Lcom/htc/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;->setRepeatedMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x2
@@ -496,6 +496,6 @@
     #calls: Lcom/htc/protobuf/GeneratedMessage;->invokeOrDie(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     invoke-static {v0, p1, v1}, Lcom/htc/protobuf/GeneratedMessage;->access$1400(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1458
+    .line 1457
     return-void
 .end method

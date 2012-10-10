@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 270
+    .line 284
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,22 +43,22 @@
     .parameter "mv"
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    .line 274
+    .line 288
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    .line 275
+    .line 289
     .local v1, viewWidth:I
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
-    .line 278
+    .line 292
     .local v0, viewHeight:I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -66,7 +66,7 @@
 
     float-to-int v2, v4
 
-    .line 279
+    .line 293
     .local v2, x:I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -74,7 +74,7 @@
 
     float-to-int v3, v4
 
-    .line 280
+    .line 294
     .local v3, y:I
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -85,18 +85,26 @@
 
     const/4 v7, 0x2
 
-    if-eq v4, v7, :cond_0
+    if-ne v4, v7, :cond_0
 
-    if-ltz v2, :cond_0
+    move v4, v5
 
-    if-gt v2, v1, :cond_0
+    .line 333
+    :goto_0
+    return v4
 
-    if-ltz v3, :cond_0
-
-    if-le v3, v0, :cond_3
-
-    .line 282
+    .line 296
     :cond_0
+    if-ltz v2, :cond_1
+
+    if-gt v2, v1, :cond_1
+
+    if-ltz v3, :cond_1
+
+    if-le v3, v0, :cond_4
+
+    .line 298
+    :cond_1
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->isPhotoButtonPressed:Lcom/android/camera/property/Property;
@@ -114,7 +122,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_2
 
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -133,16 +141,16 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
-    .line 284
-    :cond_1
+    .line 300
+    :cond_2
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->resetCaptureButton(Landroid/view/View;Z)V
-    invoke-static {v4, p1, v5}, Lcom/android/camera/component/CaptureBar;->access$400(Lcom/android/camera/component/CaptureBar;Landroid/view/View;Z)V
+    invoke-static {v4, p1, v6}, Lcom/android/camera/component/CaptureBar;->access$400(Lcom/android/camera/component/CaptureBar;Landroid/view/View;Z)V
 
-    .line 285
+    .line 301
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->isVideoButtonClicked:Lcom/android/camera/property/Property;
@@ -150,21 +158,20 @@
 
     move-result-object v4
 
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-virtual {v4, v5}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v6}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    :cond_2
-    move v4, v6
-
-    .line 317
-    :goto_0
-    return v4
-
-    .line 291
     :cond_3
+    move v4, v5
+
+    .line 303
+    goto :goto_0
+
+    .line 307
+    :cond_4
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v4
@@ -173,12 +180,12 @@
 
     :goto_1
     :pswitch_0
-    move v4, v5
+    move v4, v6
 
-    .line 317
+    .line 333
     goto :goto_0
 
-    .line 296
+    .line 312
     :pswitch_1
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -187,7 +194,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_5
 
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -199,43 +206,15 @@
 
     move-result v4
 
-    if-nez v4, :cond_4
+    if-nez v4, :cond_5
 
-    move v4, v5
+    move v4, v6
 
-    .line 297
+    .line 313
     goto :goto_0
 
-    .line 300
-    :cond_4
-    iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
-
-    #getter for: Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
-    invoke-static {v4}, Lcom/android/camera/component/CaptureBar;->access$700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
-
-    move-result-object v4
-
-    if-ne p1, v4, :cond_5
-
-    .line 301
-    iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
-
-    #calls: Lcom/android/camera/component/CaptureBar;->onCameraButtonPressed(I)V
-    invoke-static {v4, v5}, Lcom/android/camera/component/CaptureBar;->access$800(Lcom/android/camera/component/CaptureBar;I)V
-
-    goto :goto_1
-
-    .line 303
+    .line 316
     :cond_5
-    iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
-
-    #calls: Lcom/android/camera/component/CaptureBar;->onCamcorderButtonPressed(I)V
-    invoke-static {v4, v5}, Lcom/android/camera/component/CaptureBar;->access$900(Lcom/android/camera/component/CaptureBar;I)V
-
-    goto :goto_1
-
-    .line 311
-    :pswitch_2
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
@@ -245,24 +224,52 @@
 
     if-ne p1, v4, :cond_6
 
-    .line 312
+    .line 317
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
-    #calls: Lcom/android/camera/component/CaptureBar;->onCameraButtonReleased(I)V
-    invoke-static {v4, v5}, Lcom/android/camera/component/CaptureBar;->access$1000(Lcom/android/camera/component/CaptureBar;I)V
+    #calls: Lcom/android/camera/component/CaptureBar;->onCameraButtonPressed(I)V
+    invoke-static {v4, v6}, Lcom/android/camera/component/CaptureBar;->access$800(Lcom/android/camera/component/CaptureBar;I)V
 
     goto :goto_1
 
-    .line 314
+    .line 319
     :cond_6
     iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
 
-    #calls: Lcom/android/camera/component/CaptureBar;->onCamcorderButtonReleased(I)V
-    invoke-static {v4, v5}, Lcom/android/camera/component/CaptureBar;->access$1100(Lcom/android/camera/component/CaptureBar;I)V
+    #calls: Lcom/android/camera/component/CaptureBar;->onCamcorderButtonPressed(I)V
+    invoke-static {v4, v6}, Lcom/android/camera/component/CaptureBar;->access$900(Lcom/android/camera/component/CaptureBar;I)V
 
     goto :goto_1
 
-    .line 291
+    .line 327
+    :pswitch_2
+    iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
+
+    #getter for: Lcom/android/camera/component/CaptureBar;->m_PhotoCaptureButton:Landroid/widget/ImageView;
+    invoke-static {v4}, Lcom/android/camera/component/CaptureBar;->access$700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+
+    move-result-object v4
+
+    if-ne p1, v4, :cond_7
+
+    .line 328
+    iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
+
+    #calls: Lcom/android/camera/component/CaptureBar;->onCameraButtonReleased(I)V
+    invoke-static {v4, v6}, Lcom/android/camera/component/CaptureBar;->access$1000(Lcom/android/camera/component/CaptureBar;I)V
+
+    goto :goto_1
+
+    .line 330
+    :cond_7
+    iget-object v4, p0, Lcom/android/camera/component/CaptureBar$3;->this$0:Lcom/android/camera/component/CaptureBar;
+
+    #calls: Lcom/android/camera/component/CaptureBar;->onCamcorderButtonReleased(I)V
+    invoke-static {v4, v6}, Lcom/android/camera/component/CaptureBar;->access$1100(Lcom/android/camera/component/CaptureBar;I)V
+
+    goto :goto_1
+
+    .line 307
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

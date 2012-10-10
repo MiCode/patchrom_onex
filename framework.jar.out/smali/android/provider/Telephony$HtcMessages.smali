@@ -30,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 3114
+    .line 3117
     const-string v0, "content://htcmsgs/"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -39,7 +39,7 @@
 
     sput-object v0, Landroid/provider/Telephony$HtcMessages;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 3119
+    .line 3122
     const-string v0, "date DESC"
 
     sput-object v0, Landroid/provider/Telephony$HtcMessages;->DEFAULT_SORT_ORDER:Ljava/lang/String;
@@ -51,7 +51,7 @@
     .locals 0
 
     .prologue
-    .line 3110
+    .line 3113
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

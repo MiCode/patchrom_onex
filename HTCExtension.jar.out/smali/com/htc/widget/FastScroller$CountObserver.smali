@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 331
+    .line 332
     iput-object p1, p0, Lcom/htc/widget/FastScroller$CountObserver;->this$0:Lcom/htc/widget/FastScroller;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 331
+    .line 332
     invoke-direct {p0, p1}, Lcom/htc/widget/FastScroller$CountObserver;-><init>(Lcom/htc/widget/FastScroller;)V
 
     return-void
@@ -50,7 +50,7 @@
     .locals 3
 
     .prologue
-    .line 340
+    .line 341
     iget-object v0, p0, Lcom/htc/widget/FastScroller$CountObserver;->this$0:Lcom/htc/widget/FastScroller;
 
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CountObserver;->this$0:Lcom/htc/widget/FastScroller;
@@ -67,7 +67,7 @@
     #calls: Lcom/htc/widget/FastScroller;->useThumbDrawable(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)V
     invoke-static {v0, v1, v2}, Lcom/htc/widget/FastScroller;->access$200(Lcom/htc/widget/FastScroller;Landroid/content/Context;Landroid/graphics/drawable/Drawable;)V
 
-    .line 341
+    .line 342
     return-void
 .end method
 
@@ -75,6 +75,6 @@
     .locals 0
 
     .prologue
-    .line 348
+    .line 349
     return-void
 .end method

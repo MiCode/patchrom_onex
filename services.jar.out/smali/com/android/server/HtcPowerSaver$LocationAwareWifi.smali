@@ -27,10 +27,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 1382
+    .line 1378
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$LocationAwareWifi;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 1383
+    .line 1379
     const-string v2, "LocationAwareWifi"
 
     const-string v3, "powersaver_location_aware_wifi"
@@ -45,10 +45,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1384
+    .line 1380
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$LocationAwareWifi;->mContext:Landroid/content/Context;
 
-    .line 1385
+    .line 1381
     return-void
 .end method
 
@@ -58,14 +58,14 @@
     .locals 2
 
     .prologue
-    .line 1395
+    .line 1391
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "applyPowerSaverSettings: send intent to HtcLocationAwareWifi."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1401
+    .line 1397
     const/4 v0, 0x0
 
     return v0
@@ -75,14 +75,14 @@
     .locals 2
 
     .prologue
-    .line 1406
+    .line 1402
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "restoreSystemSettings: send intent to HtcLocationAwareWifi."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1412
+    .line 1408
     const/4 v0, 0x0
 
     return v0
@@ -92,14 +92,14 @@
     .locals 2
 
     .prologue
-    .line 1389
+    .line 1385
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "saveSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1390
+    .line 1386
     const/4 v0, 0x0
 
     return v0

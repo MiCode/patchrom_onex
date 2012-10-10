@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1195
+    .line 1194
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter$3;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 1197
+    .line 1196
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$3;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
-    .line 1198
+    .line 1197
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$3;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
@@ -56,7 +56,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1199
+    .line 1198
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter$3;->this$0:Lcom/htc/app/FilePickerListAdapter;
 
     #getter for: Lcom/htc/app/FilePickerListAdapter;->mDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
@@ -66,7 +66,7 @@
 
     invoke-interface {v0}, Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;->onDataSetChanged()V
 
-    .line 1200
+    .line 1199
     :cond_0
     return-void
 .end method

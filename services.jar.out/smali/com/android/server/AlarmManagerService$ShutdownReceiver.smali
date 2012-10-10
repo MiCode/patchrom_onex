@@ -24,23 +24,23 @@
     .parameter
 
     .prologue
-    .line 1639
+    .line 1646
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$ShutdownReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1640
+    .line 1647
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1641
+    .line 1648
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1642
+    .line 1649
     #getter for: Lcom/android/server/AlarmManagerService;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/server/AlarmManagerService;->access$500(Lcom/android/server/AlarmManagerService;)Landroid/content/Context;
 
@@ -48,7 +48,7 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1643
+    .line 1650
     return-void
 .end method
 
@@ -60,7 +60,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1647
+    .line 1654
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$ShutdownReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mLock:Ljava/lang/Object;
@@ -70,7 +70,7 @@
 
     monitor-enter v1
 
-    .line 1648
+    .line 1655
     :try_start_0
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$ShutdownReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -81,7 +81,7 @@
 
     if-lez v0, :cond_0
 
-    .line 1649
+    .line 1656
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$ShutdownReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1650
+    .line 1657
     :cond_0
     iget-object v0, p0, Lcom/android/server/AlarmManagerService$ShutdownReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -100,13 +100,13 @@
     #setter for: Lcom/android/server/AlarmManagerService;->mBroadcastRefCount:I
     invoke-static {v0, v2}, Lcom/android/server/AlarmManagerService;->access$1802(Lcom/android/server/AlarmManagerService;I)I
 
-    .line 1651
+    .line 1658
     monitor-exit v1
 
-    .line 1652
+    .line 1659
     return-void
 
-    .line 1651
+    .line 1658
     :catchall_0
     move-exception v0
 

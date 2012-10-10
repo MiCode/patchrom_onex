@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 147
+    .line 160
     iput-object p1, p0, Lcom/android/camera/component/ImageFileWriter$3;->this$0:Lcom/android/camera/component/ImageFileWriter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +72,7 @@
     .end annotation
 
     .prologue
-    .line 150
+    .line 163
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/QueryEventArgs<Ljava/lang/Long;>;>;"
     .local p3, e:Lcom/android/camera/QueryEventArgs;,"Lcom/android/camera/QueryEventArgs<Ljava/lang/Long;>;"
     invoke-virtual {p3}, Lcom/android/camera/QueryEventArgs;->hasResult()Z
@@ -81,7 +81,7 @@
 
     if-nez v0, :cond_0
 
-    .line 152
+    .line 165
     invoke-static {}, Lcom/android/camera/io/NativeBuffer;->getSize()J
 
     move-result-wide v0
@@ -92,7 +92,7 @@
 
     invoke-virtual {p3, v0}, Lcom/android/camera/QueryEventArgs;->setResult(Ljava/lang/Object;)V
 
-    .line 154
+    .line 167
     :cond_0
     return-void
 .end method
@@ -104,7 +104,7 @@
     .parameter "x2"
 
     .prologue
-    .line 147
+    .line 160
     check-cast p3, Lcom/android/camera/QueryEventArgs;
 
     .end local p3

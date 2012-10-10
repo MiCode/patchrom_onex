@@ -21,17 +21,326 @@
     .parameter "context"
 
     .prologue
-    .line 304
+    .line 430
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 305
+    .line 431
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    .line 306
+    .line 432
+    return-void
+.end method
+
+.method public static getIccDetailStatus(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)[I
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 400
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getIccDetailStatus()[I
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getIccDetailStatusExt(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;I)[I
+    .locals 1
+    .parameter "updateMonitor"
+    .parameter "phoneType"
+
+    .prologue
+    .line 377
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getIccDetailStatusExt(I)[I
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getKeyboardFly(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Z
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 425
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getKeyboardFly()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static getNetowrkServiceStatus(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)I
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 396
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getNetowrkServiceStatus()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static getNetworkLockType(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)I
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 409
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getNetworkLockType()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static getSimState(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;I)Lcom/android/internal/telephony/IccCard$State;
+    .locals 1
+    .parameter "updateMonitor"
+    .parameter "phoneType"
+
+    .prologue
+    .line 387
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState(I)Lcom/android/internal/telephony/IccCard$State;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getSubNetowrkServiceStatus(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)I
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 333
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSubNetowrkServiceStatus()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static getSubTelephonyPlmn(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Ljava/lang/CharSequence;
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 338
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSubTelephonyPlmn()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getSubTelephonySpn(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Ljava/lang/CharSequence;
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 343
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSubTelephonySpn()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getUimState(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Lcom/android/internal/telephony/IccCard$State;
+    .locals 1
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 328
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getUimState()Lcom/android/internal/telephony/IccCard$State;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static registerHtcIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 347
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;)V
+
+    .line 348
+    return-void
+.end method
+
+.method public static registerHtcInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 351
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;)V
+
+    .line 352
+    return-void
+.end method
+
+.method public static registerIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/HtcIfIccStateCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 355
+    check-cast p1, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;
+
+    .end local p1
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;)V
+
+    .line 356
+    return-void
+.end method
+
+.method public static registerInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/HtcIfInfoPlusCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 359
+    check-cast p1, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;
+
+    .end local p1
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;)V
+
+    .line 360
+    return-void
+.end method
+
+.method public static registerNewIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/HtcIfNewIccStateCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 363
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerHtcIccStateCallback(Lcom/android/internal/policy/impl/HtcIfNewIccStateCallback;)V
+
+    .line 364
+    return-void
+.end method
+
+.method public static registerNewInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/HtcIfNewInfoPlusCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 367
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerHtcInfoPlusCallback(Lcom/android/internal/policy/impl/HtcIfNewInfoPlusCallback;)V
+
+    .line 368
+    return-void
+.end method
+
+.method public static registerSimExtraStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/HtcIfSimExtraStateCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 421
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerSimExtraStateCallback(Lcom/android/internal/policy/impl/HtcIfSimExtraStateCallback;)V
+
+    .line 422
+    return-void
+.end method
+
+.method public static registerSubSimExtraStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/HtcIfSubSimExtraStateCallback;)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "callback"
+
+    .prologue
+    .line 417
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerSubSimExtraStateCallback(Lcom/android/internal/policy/impl/HtcIfSubSimExtraStateCallback;)V
+
+    .line 418
+    return-void
+.end method
+
+.method public static reportPinUnlocked(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;I)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "phoneType"
+
+    .prologue
+    .line 392
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportPinUnlocked(I)V
+
+    .line 393
+    return-void
+.end method
+
+.method public static reportUimPinUnlocked(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)V
+    .locals 0
+    .parameter "updateMonitor"
+
+    .prologue
+    .line 382
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportUimPinUnlocked()V
+
+    .line 383
+    return-void
+.end method
+
+.method public static updateIccDetailStatus(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;III)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "phoneType"
+    .parameter "pin1RetryCount"
+    .parameter "puk1RetryCount"
+
+    .prologue
+    .line 372
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->updateIccDetailStatus(III)V
+
+    .line 373
+    return-void
+.end method
+
+.method public static updateNetworkLockType(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;I)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "type"
+
+    .prologue
+    .line 413
+    invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->updateNetworkLockType(I)V
+
+    .line 414
+    return-void
+.end method
+
+.method public static updateSimDetailStatus(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;II)V
+    .locals 0
+    .parameter "updateMonitor"
+    .parameter "pin1RetryCount"
+    .parameter "puk1RetryCount"
+
+    .prologue
+    .line 405
+    invoke-virtual {p0, p1, p2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->updateSimDetailStatus(II)V
+
+    .line 406
     return-void
 .end method
 
@@ -41,7 +350,7 @@
     .locals 2
 
     .prologue
-    .line 88
+    .line 91
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getAvailableTimeStamp()J
@@ -55,7 +364,7 @@
     .locals 1
 
     .prologue
-    .line 121
+    .line 124
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getDeviceLock()Z
@@ -69,7 +378,7 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 134
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getDeviceLockType()I
@@ -83,7 +392,7 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 61
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getIccDetailStatus()[I
@@ -98,7 +407,7 @@
     .parameter "phoneType"
 
     .prologue
-    .line 294
+    .line 305
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getIccDetailStatusExt(I)[I
@@ -112,7 +421,7 @@
     .locals 1
 
     .prologue
-    .line 198
+    .line 201
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getKeyboardFly()Z
@@ -126,7 +435,7 @@
     .locals 1
 
     .prologue
-    .line 216
+    .line 219
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getKeyboardFlyHeight()I
@@ -140,7 +449,7 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 83
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getNetowrkServiceStatus()I
@@ -154,7 +463,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 70
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getNetworkLockType()I
@@ -168,7 +477,7 @@
     .locals 1
 
     .prologue
-    .line 159
+    .line 162
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getPasswordTimeout()Z
@@ -182,7 +491,7 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 143
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getPinEnable()Z
@@ -196,7 +505,7 @@
     .locals 1
 
     .prologue
-    .line 110
+    .line 113
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getShowing()Z
@@ -206,14 +515,31 @@
     return v0
 .end method
 
+.method public getSimState(I)Lcom/android/internal/telephony/IccCard$State;
+    .locals 1
+    .parameter "phoneType"
+
+    .prologue
+    .line 313
+    iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState(I)Lcom/android/internal/telephony/IccCard$State;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getSubNetowrkServiceStatus()I
     .locals 1
 
     .prologue
-    .line 270
+    .line 273
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    iget v0, v0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mSubServiceStatus:I
+    invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSubNetowrkServiceStatus()I
+
+    move-result v0
 
     return v0
 .end method
@@ -222,10 +548,12 @@
     .locals 1
 
     .prologue
-    .line 274
+    .line 277
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    iget-object v0, v0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mSubTelephonyPlmn:Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSubTelephonyPlmn()Ljava/lang/CharSequence;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -234,10 +562,12 @@
     .locals 1
 
     .prologue
-    .line 278
+    .line 281
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    iget-object v0, v0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mSubTelephonySpn:Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSubTelephonySpn()Ljava/lang/CharSequence;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -246,7 +576,7 @@
     .locals 1
 
     .prologue
-    .line 258
+    .line 261
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getUimState()Lcom/android/internal/telephony/IccCard$State;
@@ -260,7 +590,7 @@
     .locals 1
 
     .prologue
-    .line 234
+    .line 237
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getUnlockType()I
@@ -274,7 +604,7 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 174
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isShowCallDeclinedAnimation()Z
@@ -288,7 +618,7 @@
     .locals 1
 
     .prologue
-    .line 252
+    .line 255
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isWaitFirstFrame()Z
@@ -298,17 +628,48 @@
     return v0
 .end method
 
+.method public registerHtcIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;)V
+    .locals 1
+    .parameter "callback"
+
+    .prologue
+    .line 285
+    iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;)V
+
+    .line 286
+    return-void
+.end method
+
+.method public registerHtcInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;)V
+    .locals 1
+    .parameter "callback"
+
+    .prologue
+    .line 289
+    iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;)V
+
+    .line 290
+    return-void
+.end method
+
 .method public registerIccStateCallback(Lcom/android/internal/policy/impl/HtcIfIccStateCallback;)V
     .locals 1
     .parameter "callback"
 
     .prologue
-    .line 282
+    .line 293
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
+    check-cast p1, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;
+
+    .end local p1
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerIccStateCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$IccStateCallback;)V
 
-    .line 283
+    .line 294
     return-void
 .end method
 
@@ -317,12 +678,15 @@
     .parameter "callback"
 
     .prologue
-    .line 286
+    .line 297
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
+    check-cast p1, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;
+
+    .end local p1
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerInfoPlusCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoPlusCallback;)V
 
-    .line 287
+    .line 298
     return-void
 .end method
 
@@ -331,7 +695,7 @@
     .parameter "callback"
 
     .prologue
-    .line 54
+    .line 57
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     check-cast p1, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$SimExtraStateCallback;
@@ -339,7 +703,21 @@
     .end local p1
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerSimExtraStateCallback(Lcom/android/internal/policy/impl/HtcIfSimExtraStateCallback;)V
 
-    .line 55
+    .line 58
+    return-void
+.end method
+
+.method public removeCallback(Ljava/lang/Object;)V
+    .locals 1
+    .parameter "observer"
+
+    .prologue
+    .line 321
+    iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->removeCallback(Ljava/lang/Object;)V
+
+    .line 322
     return-void
 .end method
 
@@ -348,12 +726,26 @@
     .parameter "timeStamp"
 
     .prologue
-    .line 84
+    .line 87
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportAvailableTimeStamp(J)V
 
-    .line 85
+    .line 88
+    return-void
+.end method
+
+.method public reportPinUnlocked(I)V
+    .locals 1
+    .parameter "phoneType"
+
+    .prologue
+    .line 317
+    iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportPinUnlocked(I)V
+
+    .line 318
     return-void
 .end method
 
@@ -361,12 +753,12 @@
     .locals 1
 
     .prologue
-    .line 266
+    .line 269
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportSimUnlocked()V
 
-    .line 267
+    .line 270
     return-void
 .end method
 
@@ -374,12 +766,12 @@
     .locals 1
 
     .prologue
-    .line 298
+    .line 309
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportUimPinUnlocked()V
 
-    .line 299
+    .line 310
     return-void
 .end method
 
@@ -388,12 +780,12 @@
     .parameter "height"
 
     .prologue
-    .line 207
+    .line 210
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->setKeyboardFly(I)V
 
-    .line 208
+    .line 211
     return-void
 .end method
 
@@ -402,12 +794,12 @@
     .parameter "bFly"
 
     .prologue
-    .line 189
+    .line 192
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->setKeyboardFly(Z)V
 
-    .line 190
+    .line 193
     return-void
 .end method
 
@@ -416,12 +808,12 @@
     .parameter "timeout"
 
     .prologue
-    .line 150
+    .line 153
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->setPasswordTimeout(Z)V
 
-    .line 151
+    .line 154
     return-void
 .end method
 
@@ -430,12 +822,12 @@
     .parameter "bShow"
 
     .prologue
-    .line 180
+    .line 183
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->setShowCallDeclinedAnimation(Z)V
 
-    .line 181
+    .line 184
     return-void
 .end method
 
@@ -444,12 +836,12 @@
     .parameter "show"
 
     .prologue
-    .line 100
+    .line 103
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->setShowing(Z)V
 
-    .line 101
+    .line 104
     return-void
 .end method
 
@@ -458,12 +850,12 @@
     .parameter "type"
 
     .prologue
-    .line 226
+    .line 229
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->setUnlockType(I)V
 
-    .line 227
+    .line 230
     return-void
 .end method
 
@@ -472,12 +864,12 @@
     .parameter "wait"
 
     .prologue
-    .line 243
+    .line 246
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->setWaitFirstFrame(Z)V
 
-    .line 244
+    .line 247
     return-void
 .end method
 
@@ -488,12 +880,12 @@
     .parameter "puk1RetryCount"
 
     .prologue
-    .line 290
+    .line 301
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->updateIccDetailStatus(III)V
 
-    .line 291
+    .line 302
     return-void
 .end method
 
@@ -502,12 +894,12 @@
     .parameter "type"
 
     .prologue
-    .line 71
+    .line 74
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->updateNetworkLockType(I)V
 
-    .line 72
+    .line 75
     return-void
 .end method
 
@@ -517,11 +909,11 @@
     .parameter "puk1RetryCount"
 
     .prologue
-    .line 63
+    .line 66
     iget-object v0, p0, Lcom/htc/wrap/com/android/internal/policy/impl/HtcWrapKeyguardUpdateMonitor;->mKeyguardUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->updateSimDetailStatus(II)V
 
-    .line 64
+    .line 67
     return-void
 .end method

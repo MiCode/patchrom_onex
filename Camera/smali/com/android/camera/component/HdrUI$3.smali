@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera/property/PropertyChangedCallback",
         "<",
-        "Lcom/android/camera/TakingPictureState;",
+        "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 259
+    .line 265
     iput-object p1, p0, Lcom/android/camera/component/HdrUI$3;->this$0:Lcom/android/camera/component/HdrUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
 # virtual methods
 .method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
-    .locals 2
+    .locals 1
     .parameter
     .parameter
     .annotation system Ldalvik/annotation/Signature;
@@ -56,51 +56,24 @@
             "(",
             "Lcom/android/camera/property/Property",
             "<",
-            "Lcom/android/camera/TakingPictureState;",
+            "Ljava/lang/Boolean;",
             ">;",
             "Lcom/android/camera/property/PropertyChangedEventArgs",
             "<",
-            "Lcom/android/camera/TakingPictureState;",
+            "Ljava/lang/Boolean;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 263
-    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/TakingPictureState;>;"
-    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/TakingPictureState;>;"
-    sget-object v1, Lcom/android/camera/component/HdrUI$4;->$SwitchMap$com$android$camera$TakingPictureState:[I
-
+    .line 268
+    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
+    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/camera/TakingPictureState;
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Lcom/android/camera/TakingPictureState;->ordinal()I
-
-    move-result v0
-
-    aget v0, v1, v0
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 284
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 267
-    :pswitch_0
-    iget-object v0, p0, Lcom/android/camera/component/HdrUI$3;->this$0:Lcom/android/camera/component/HdrUI;
-
-    invoke-virtual {v0}, Lcom/android/camera/component/HdrUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/android/camera/HTCCamera;->autoDetectedScene:Lcom/android/camera/property/Property;
-
-    sget-object v1, Lcom/android/camera/AutoDetectedScene;->Hdr:Lcom/android/camera/AutoDetectedScene;
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->isValueEquals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
@@ -109,49 +82,19 @@
     .line 269
     iget-object v0, p0, Lcom/android/camera/component/HdrUI$3;->this$0:Lcom/android/camera/component/HdrUI;
 
-    const/4 v1, 0x1
+    #calls: Lcom/android/camera/component/HdrUI;->openCaptureUI()V
+    invoke-static {v0}, Lcom/android/camera/component/HdrUI;->access$100(Lcom/android/camera/component/HdrUI;)V
 
-    #setter for: Lcom/android/camera/component/HdrUI;->m_IsEnteredFromAutoScene:Z
-    invoke-static {v0, v1}, Lcom/android/camera/component/HdrUI;->access$302(Lcom/android/camera/component/HdrUI;Z)Z
+    .line 272
+    :goto_0
+    return-void
 
-    .line 270
+    .line 271
+    :cond_0
     iget-object v0, p0, Lcom/android/camera/component/HdrUI$3;->this$0:Lcom/android/camera/component/HdrUI;
 
-    invoke-virtual {v0}, Lcom/android/camera/component/HdrUI;->enterHdrMode()V
+    #calls: Lcom/android/camera/component/HdrUI;->closeCaptureUI()V
+    invoke-static {v0}, Lcom/android/camera/component/HdrUI;->access$300(Lcom/android/camera/component/HdrUI;)V
 
     goto :goto_0
-
-    .line 277
-    :pswitch_1
-    iget-object v0, p0, Lcom/android/camera/component/HdrUI$3;->this$0:Lcom/android/camera/component/HdrUI;
-
-    #getter for: Lcom/android/camera/component/HdrUI;->m_IsEnteredFromAutoScene:Z
-    invoke-static {v0}, Lcom/android/camera/component/HdrUI;->access$300(Lcom/android/camera/component/HdrUI;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 279
-    iget-object v0, p0, Lcom/android/camera/component/HdrUI$3;->this$0:Lcom/android/camera/component/HdrUI;
-
-    const/4 v1, 0x0
-
-    #setter for: Lcom/android/camera/component/HdrUI;->m_IsEnteredFromAutoScene:Z
-    invoke-static {v0, v1}, Lcom/android/camera/component/HdrUI;->access$302(Lcom/android/camera/component/HdrUI;Z)Z
-
-    .line 280
-    iget-object v0, p0, Lcom/android/camera/component/HdrUI$3;->this$0:Lcom/android/camera/component/HdrUI;
-
-    invoke-virtual {v0}, Lcom/android/camera/component/HdrUI;->exitHdrMode()V
-
-    goto :goto_0
-
-    .line 263
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
 .end method

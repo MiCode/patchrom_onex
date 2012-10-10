@@ -27,10 +27,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 1149
+    .line 1145
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$DataConn;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 1150
+    .line 1146
     const-string v2, "DataConn"
 
     const-string v3, "powersaver_dataconnection"
@@ -45,10 +45,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1151
+    .line 1147
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$DataConn;->mContext:Landroid/content/Context;
 
-    .line 1152
+    .line 1148
     return-void
 .end method
 
@@ -58,27 +58,27 @@
     .locals 3
 
     .prologue
-    .line 1162
+    .line 1158
     const-string v1, "HtcPowerSaver"
 
     const-string v2, "applyPowerSaverSettings: SMARTSYNC_SERVICE_BROADCAST_SERVICE_RUNNING"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1163
+    .line 1159
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "SMARTSYNC_SERVICE_BROADCAST_SERVICE_RUNNING"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1164
+    .line 1160
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/HtcPowerSaver$DataConn;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1165
+    .line 1161
     const/4 v1, 0x0
 
     return v1
@@ -88,27 +88,27 @@
     .locals 3
 
     .prologue
-    .line 1170
+    .line 1166
     const-string v1, "HtcPowerSaver"
 
     const-string v2, "restoreSystemSettings: SMARTSYNC_SERVICE_BROADCAST_SERVICE_STOPING"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1171
+    .line 1167
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "SMARTSYNC_SERVICE_BROADCAST_SERVICE_STOPING"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1172
+    .line 1168
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/HtcPowerSaver$DataConn;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1173
+    .line 1169
     const/4 v1, 0x0
 
     return v1
@@ -118,14 +118,14 @@
     .locals 2
 
     .prologue
-    .line 1156
+    .line 1152
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "saveSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1157
+    .line 1153
     const/4 v0, 0x0
 
     return v0

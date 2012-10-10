@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 4499
+    .line 4583
     iput-object p1, p0, Lcom/android/camera/CameraThread$9$1;->this$1:Lcom/android/camera/CameraThread$9;
 
     iput-object p2, p0, Lcom/android/camera/CameraThread$9$1;->val$eventArgs:Lcom/android/camera/MediaEventArgs;
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 4502
+    .line 4586
     iget-object v0, p0, Lcom/android/camera/CameraThread$9$1;->this$1:Lcom/android/camera/CameraThread$9;
 
     iget-object v0, v0, Lcom/android/camera/CameraThread$9;->this$0:Lcom/android/camera/CameraThread;
@@ -61,6 +61,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    .line 4503
+    .line 4587
     return-void
 .end method

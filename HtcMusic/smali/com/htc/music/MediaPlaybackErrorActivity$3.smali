@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 459
+    .line 457
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,69 +35,127 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+    .locals 6
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .line 462
+    .line 460
+    iget-object v2, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
+
+    #getter for: Lcom/htc/music/MediaPlaybackErrorActivity;->mReScanHandler:Landroid/os/Handler;
+    invoke-static {v2}, Lcom/htc/music/MediaPlaybackErrorActivity;->access$100(Lcom/htc/music/MediaPlaybackErrorActivity;)Landroid/os/Handler;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v5}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    .line 461
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 463
+    .line 462
     .local v0, action:Ljava/lang/String;
-    const-string v1, "[MediaPlaybackErrorActivity]"
+    const-string v2, "[MediaPlaybackErrorActivity]"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onReceive action= "
+    const-string v4, "onReceive action= "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 464
-    const-string v1, "com.htc.music.finisherroractivity"
+    const-string v2, "android.intent.action.MEDIA_UNMOUNTED"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
     .line 465
-    const-string v1, "[MediaPlaybackErrorActivity]"
+    iget-object v2, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
 
-    const-string v2, "finish MediaPlaybackErrorActivity...."
+    invoke-virtual {v2, v5}, Lcom/htc/music/MediaPlaybackErrorActivity;->init(Landroid/database/Cursor;)V
 
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 480
+    :goto_0
+    return-void
 
-    .line 466
-    iget-object v1, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
+    .line 468
+    :cond_0
+    const-string v2, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
-    invoke-virtual {v1}, Lcom/htc/music/MediaPlaybackErrorActivity;->finish()V
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 467
-    iget-object v1, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
+    move-result v2
 
-    invoke-virtual {v1, v4, v4}, Lcom/htc/music/MediaPlaybackErrorActivity;->overridePendingTransition(II)V
+    if-eqz v2, :cond_1
+
+    .line 469
+    const-string v2, "[MediaPlaybackErrorActivity]"
+
+    const-string v3, "ACTION_MEDIA_SCANNER_FINISHED"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 470
-    :cond_0
-    return-void
+    iget-object v2, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
+
+    iget-object v2, v2, Lcom/htc/music/MediaPlaybackErrorActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
+
+    if-eqz v2, :cond_1
+
+    .line 472
+    :try_start_0
+    iget-object v2, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
+
+    iget-object v2, v2, Lcom/htc/music/MediaPlaybackErrorActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
+
+    invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->reloadQueue()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 479
+    :cond_1
+    :goto_1
+    iget-object v2, p0, Lcom/htc/music/MediaPlaybackErrorActivity$3;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
+
+    #getter for: Lcom/htc/music/MediaPlaybackErrorActivity;->mReScanHandler:Landroid/os/Handler;
+    invoke-static {v2}, Lcom/htc/music/MediaPlaybackErrorActivity;->access$100(Lcom/htc/music/MediaPlaybackErrorActivity;)Landroid/os/Handler;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    goto :goto_0
+
+    .line 473
+    :catch_0
+    move-exception v1
+
+    .line 475
+    .local v1, e:Landroid/os/RemoteException;
+    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
+
+    goto :goto_1
 .end method

@@ -329,7 +329,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 151
     iget-object v0, p0, Landroid/server/data/CrashData;->activity:Ljava/lang/String;
 
     return-object v0
@@ -339,7 +339,7 @@
     .locals 1
 
     .prologue
-    .line 134
+    .line 136
     iget-object v0, p0, Landroid/server/data/CrashData;->buildData:Landroid/server/data/BuildData;
 
     return-object v0
@@ -349,7 +349,7 @@
     .locals 1
 
     .prologue
-    .line 142
+    .line 146
     iget-object v0, p0, Landroid/server/data/CrashData;->id:Ljava/lang/String;
 
     return-object v0
@@ -359,7 +359,7 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 161
     iget-object v0, p0, Landroid/server/data/CrashData;->state:[B
 
     return-object v0
@@ -369,7 +369,7 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 141
     iget-object v0, p0, Landroid/server/data/CrashData;->throwableData:Landroid/server/data/ThrowableData;
 
     return-object v0
@@ -379,7 +379,7 @@
     .locals 2
 
     .prologue
-    .line 150
+    .line 156
     iget-wide v0, p0, Landroid/server/data/CrashData;->time:J
 
     return-wide v0
@@ -389,7 +389,7 @@
     .locals 3
 
     .prologue
-    .line 165
+    .line 173
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -487,53 +487,53 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 116
+    .line 117
     iget-object v0, p0, Landroid/server/data/CrashData;->state:[B
 
     if-nez v0, :cond_1
 
-    .line 117
+    .line 118
     invoke-interface {p1, v2}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 122
+    .line 123
     :goto_0
     iget-object v0, p0, Landroid/server/data/CrashData;->id:Ljava/lang/String;
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
 
-    .line 123
+    .line 124
     iget-object v0, p0, Landroid/server/data/CrashData;->activity:Ljava/lang/String;
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
 
-    .line 124
+    .line 125
     iget-wide v0, p0, Landroid/server/data/CrashData;->time:J
 
     invoke-interface {p1, v0, v1}, Ljava/io/DataOutput;->writeLong(J)V
 
-    .line 125
+    .line 126
     iget-object v0, p0, Landroid/server/data/CrashData;->buildData:Landroid/server/data/BuildData;
 
     invoke-virtual {v0, p1}, Landroid/server/data/BuildData;->write(Ljava/io/DataOutput;)V
 
-    .line 126
+    .line 127
     iget-object v0, p0, Landroid/server/data/CrashData;->throwableData:Landroid/server/data/ThrowableData;
 
     invoke-virtual {v0, p1}, Landroid/server/data/ThrowableData;->write(Ljava/io/DataOutput;)V
 
-    .line 127
+    .line 128
     iget-object v0, p0, Landroid/server/data/CrashData;->state:[B
 
     if-eqz v0, :cond_0
 
-    .line 128
+    .line 129
     iget-object v0, p0, Landroid/server/data/CrashData;->state:[B
 
     array-length v0, v0
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 129
+    .line 130
     iget-object v0, p0, Landroid/server/data/CrashData;->state:[B
 
     iget-object v1, p0, Landroid/server/data/CrashData;->state:[B
@@ -542,11 +542,11 @@
 
     invoke-interface {p1, v0, v2, v1}, Ljava/io/DataOutput;->write([BII)V
 
-    .line 131
+    .line 132
     :cond_0
     return-void
 
-    .line 119
+    .line 120
     :cond_1
     const/4 v0, 0x1
 

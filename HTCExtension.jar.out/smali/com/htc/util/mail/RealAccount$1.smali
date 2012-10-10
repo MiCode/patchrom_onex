@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 282
+    .line 290
     iput-object p1, p0, Lcom/htc/util/mail/RealAccount$1;->this$0:Lcom/htc/util/mail/RealAccount;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 285
+    .line 293
     iget-object v0, p0, Lcom/htc/util/mail/RealAccount$1;->this$0:Lcom/htc/util/mail/RealAccount;
 
     #calls: Lcom/htc/util/mail/RealAccount;->doRefreshFolderIdList()V
     invoke-static {v0}, Lcom/htc/util/mail/RealAccount;->access$000(Lcom/htc/util/mail/RealAccount;)V
 
-    .line 286
+    .line 294
     return-void
 .end method

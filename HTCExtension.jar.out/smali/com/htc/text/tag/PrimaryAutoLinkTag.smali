@@ -30,74 +30,50 @@
 
 # virtual methods
 .method public toEncodedString()Ljava/lang/String;
-    .locals 6
+    .locals 3
 
     .prologue
     .line 20
-    iget-object v3, p0, Lcom/htc/text/tag/PrimaryAutoLinkTag;->text:Ljava/lang/String;
+    iget-object v1, p0, Lcom/htc/text/tag/PrimaryAutoLinkTag;->text:Ljava/lang/String;
 
-    const-string v4, "&"
-
-    const-string v5, "&amp;"
-
-    invoke-static {v3, v4, v5}, Lcom/htc/text/tag/PrimaryAutoLinkTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/htc/text/tag/PrimaryAutoLinkTag;->escapeXML(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 21
-    .local v0, escapedAmpersand:Ljava/lang/String;
-    const-string v3, "<"
+    .local v0, escapedText:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v4, "&lt;"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v3, v4}, Lcom/htc/text/tag/PrimaryAutoLinkTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v2, "<ak1>"
 
-    move-result-object v2
-
-    .line 22
-    .local v2, escapedLessThan:Ljava/lang/String;
-    const-string v3, ">"
-
-    const-string v4, "&gt;"
-
-    invoke-static {v2, v3, v4}, Lcom/htc/text/tag/PrimaryAutoLinkTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 23
-    .local v1, escapedGreaterThan:Ljava/lang/String;
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v1
 
-    const-string v4, "<ak1>"
+    const-string v2, "</ak1>"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    const-string v4, "</ak1>"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    return-object v3
+    return-object v1
 .end method
 
 .method public toTrimmedString()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 35
+    .line 33
     iget-object v0, p0, Lcom/htc/text/tag/PrimaryAutoLinkTag;->text:Ljava/lang/String;
 
     return-object v0

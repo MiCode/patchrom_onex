@@ -8,6 +8,10 @@
 
 .field public static final ACTION_DEVICE_STORAGE_CRITICAL_LEAVE:Ljava/lang/String; = "android.intent.action.DEVICE_STORAGE_CRITICAL_LEAVE"
 
+.field public static final ACTION_PHONE_STORAGE_LOW:Ljava/lang/String; = "android.intent.action.DEVICE_PHONE_STORAGE_LOW"
+
+.field public static final ACTION_PHONE_STORAGE_OK:Ljava/lang/String; = "android.intent.action.DEVICE_PHONE_STORAGE_OK"
+
 .field public static final EXTRA_FIELD_NAME:Ljava/lang/String; = "android.intent.extra.FIELD_NAME"
 
 .field public static final EXTRA_METHOD_NAME:Ljava/lang/String; = "android.intent.extra.METHOD_NAME"

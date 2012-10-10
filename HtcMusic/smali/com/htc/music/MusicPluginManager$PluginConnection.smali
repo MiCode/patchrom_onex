@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1476
+    .line 1506
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1476
+    .line 1506
     invoke-direct {p0, p1}, Lcom/htc/music/MusicPluginManager$PluginConnection;-><init>(Lcom/htc/music/MusicPluginManager;)V
 
     return-void
@@ -55,7 +55,7 @@
     .parameter "service"
 
     .prologue
-    .line 1479
+    .line 1509
     const-string v2, "[MusicPluginManager]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -88,12 +88,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1480
+    .line 1510
     iget-object v3, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     monitor-enter v3
 
-    .line 1481
+    .line 1511
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
@@ -102,7 +102,7 @@
     #setter for: Lcom/htc/music/MusicPluginManager;->mIsBinding:Z
     invoke-static {v2, v4}, Lcom/htc/music/MusicPluginManager;->access$902(Lcom/htc/music/MusicPluginManager;Z)Z
 
-    .line 1482
+    .line 1512
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     const/4 v4, 0x0
@@ -110,7 +110,7 @@
     #setter for: Lcom/htc/music/MusicPluginManager;->mBindingClass:Ljava/lang/String;
     invoke-static {v2, v4}, Lcom/htc/music/MusicPluginManager;->access$1002(Lcom/htc/music/MusicPluginManager;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1484
+    .line 1514
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -124,7 +124,7 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 1485
+    .line 1515
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     #getter for: Lcom/htc/music/MusicPluginManager;->mPluginList:[Lcom/htc/music/MusicPluginManager$MusicPlugin;
@@ -148,7 +148,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 1486
+    .line 1516
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     #getter for: Lcom/htc/music/MusicPluginManager;->mPluginList:[Lcom/htc/music/MusicPluginManager$MusicPlugin;
@@ -164,7 +164,7 @@
 
     invoke-virtual {v2, v4}, Lcom/htc/music/MusicPluginManager$MusicPlugin;->setService(Lcom/htc/music/IMusicPluginService;)V
 
-    .line 1487
+    .line 1517
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     iget-object v4, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
@@ -181,7 +181,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1489
+    .line 1519
     :try_start_1
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
@@ -200,7 +200,7 @@
 
     invoke-interface {v2, v4}, Lcom/htc/music/IMusicPluginService;->registerCallback(Lcom/htc/music/IPluginIPCNotify;)V
 
-    .line 1490
+    .line 1520
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     #getter for: Lcom/htc/music/MusicPluginManager;->mPluginList:[Lcom/htc/music/MusicPluginManager$MusicPlugin;
@@ -216,7 +216,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1491
+    .line 1521
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     #getter for: Lcom/htc/music/MusicPluginManager;->mPluginList:[Lcom/htc/music/MusicPluginManager$MusicPlugin;
@@ -232,7 +232,7 @@
 
     invoke-interface {v2}, Lcom/htc/music/IMusicPluginService;->startPluginActivity()V
 
-    .line 1493
+    .line 1523
     :cond_0
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
@@ -249,7 +249,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 1494
+    .line 1524
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     #getter for: Lcom/htc/music/MusicPluginManager;->mPluginList:[Lcom/htc/music/MusicPluginManager$MusicPlugin;
@@ -265,7 +265,7 @@
 
     invoke-interface {v2}, Lcom/htc/music/IMusicPluginService;->play()V
 
-    .line 1496
+    .line 1526
     :cond_1
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
@@ -288,7 +288,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1504
+    .line 1534
     :cond_2
     :goto_1
     :try_start_2
@@ -301,12 +301,14 @@
 
     if-eqz v2, :cond_3
 
-    .line 1505
+    .line 1535
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
-    invoke-virtual {v2}, Lcom/htc/music/MusicPluginManager;->stopActivePlugin()V
+    const/4 v4, 0x1
 
-    .line 1506
+    invoke-virtual {v2, v4}, Lcom/htc/music/MusicPluginManager;->stopActivePlugin(Z)V
+
+    .line 1536
     iget-object v2, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     const/4 v4, 0x0
@@ -314,24 +316,24 @@
     #setter for: Lcom/htc/music/MusicPluginManager;->mStopActivePluginWhenBinding:Z
     invoke-static {v2, v4}, Lcom/htc/music/MusicPluginManager;->access$1402(Lcom/htc/music/MusicPluginManager;Z)Z
 
-    .line 1509
+    .line 1539
     :cond_3
     monitor-exit v3
 
-    .line 1510
+    .line 1540
     return-void
 
-    .line 1497
+    .line 1527
     :catch_0
     move-exception v0
 
-    .line 1498
+    .line 1528
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1509
+    .line 1539
     .end local v0           #e:Landroid/os/RemoteException;
     .end local v1           #i:I
     :catchall_0
@@ -343,7 +345,7 @@
 
     throw v2
 
-    .line 1484
+    .line 1514
     .restart local v1       #i:I
     :cond_4
     add-int/lit8 v1, v1, 0x1
@@ -356,7 +358,7 @@
     .parameter "name"
 
     .prologue
-    .line 1513
+    .line 1543
     const-string v0, "[MusicPluginManager]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -389,10 +391,10 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1514
+    .line 1544
     monitor-enter p0
 
-    .line 1515
+    .line 1545
     :try_start_0
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
@@ -415,7 +417,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MediaPlaybackService;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1516
+    .line 1546
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     #getter for: Lcom/htc/music/MusicPluginManager;->mCurrentPlugin:Lcom/htc/music/MusicPluginManager$MusicPlugin;
@@ -428,7 +430,7 @@
     #setter for: Lcom/htc/music/MusicPluginManager$MusicPlugin;->mConnection:Landroid/content/ServiceConnection;
     invoke-static {v0, v1}, Lcom/htc/music/MusicPluginManager$MusicPlugin;->access$802(Lcom/htc/music/MusicPluginManager$MusicPlugin;Landroid/content/ServiceConnection;)Landroid/content/ServiceConnection;
 
-    .line 1517
+    .line 1547
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     #getter for: Lcom/htc/music/MusicPluginManager;->mCurrentPlugin:Lcom/htc/music/MusicPluginManager$MusicPlugin;
@@ -441,7 +443,7 @@
     #setter for: Lcom/htc/music/MusicPluginManager$MusicPlugin;->mService:Lcom/htc/music/IMusicPluginService;
     invoke-static {v0, v1}, Lcom/htc/music/MusicPluginManager$MusicPlugin;->access$202(Lcom/htc/music/MusicPluginManager$MusicPlugin;Lcom/htc/music/IMusicPluginService;)Lcom/htc/music/IMusicPluginService;
 
-    .line 1518
+    .line 1548
     iget-object v0, p0, Lcom/htc/music/MusicPluginManager$PluginConnection;->this$0:Lcom/htc/music/MusicPluginManager;
 
     const/4 v1, 0x0
@@ -449,13 +451,13 @@
     #setter for: Lcom/htc/music/MusicPluginManager;->mCurrentPlugin:Lcom/htc/music/MusicPluginManager$MusicPlugin;
     invoke-static {v0, v1}, Lcom/htc/music/MusicPluginManager;->access$1302(Lcom/htc/music/MusicPluginManager;Lcom/htc/music/MusicPluginManager$MusicPlugin;)Lcom/htc/music/MusicPluginManager$MusicPlugin;
 
-    .line 1519
+    .line 1549
     monitor-exit p0
 
-    .line 1520
+    .line 1550
     return-void
 
-    .line 1519
+    .line 1549
     :catchall_0
     move-exception v0
 

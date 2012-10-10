@@ -47,18 +47,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 934
+    .line 922
     iput-object p1, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 937
+    .line 925
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMode:I
 
-    .line 940
+    .line 928
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mDistance:I
 
-    .line 941
+    .line 929
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -74,7 +74,7 @@
     .parameter "x1"
 
     .prologue
-    .line 934
+    .line 922
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;-><init>(Lcom/htc/fragment/widget/AbsSpinner;)V
 
     return-void
@@ -85,7 +85,7 @@
     .parameter "x0"
 
     .prologue
-    .line 934
+    .line 922
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->end()V
 
     return-void
@@ -96,7 +96,7 @@
     .parameter "step"
 
     .prologue
-    .line 1017
+    .line 1002
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -111,12 +111,12 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mAnimationWidthHeight:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$402(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1018
+    .line 1003
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/AbsSpinner;->requestLayout()V
 
-    .line 1019
+    .line 1004
     return-void
 .end method
 
@@ -128,21 +128,21 @@
 
     const/4 v1, -0x1
 
-    .line 1022
+    .line 1007
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/AbsSpinner;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1023
+    .line 1008
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightAnimation:Z
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/AbsSpinner;->access$302(Lcom/htc/fragment/widget/AbsSpinner;Z)Z
 
-    .line 1024
+    .line 1009
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMode:I
 
-    .line 1025
+    .line 1010
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #getter for: Lcom/htc/fragment/widget/AbsSpinner;->mIsDragBinGridView:Z
@@ -152,7 +152,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1026
+    .line 1011
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -169,7 +169,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->setShrinkedPosition(I)V
 
-    .line 1027
+    .line 1012
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
@@ -186,7 +186,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->setExpandedPosition(I)V
 
-    .line 1032
+    .line 1017
     :goto_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
@@ -195,21 +195,21 @@
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mAnimationWidthHeight:I
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->access$402(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 1033
+    .line 1018
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/AbsSpinner;->requestLayout()V
 
-    .line 1034
+    .line 1019
     return-void
 
-    .line 1029
+    .line 1014
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->setShrinkedPosition(I)V
 
-    .line 1030
+    .line 1015
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/AbsSpinner;->setExpandedPosition(I)V
@@ -223,16 +223,16 @@
     .prologue
     const-wide/16 v7, 0xc8
 
-    .line 1003
+    .line 989
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 1004
+    .line 990
     .local v0, now:J
     const/4 v2, 0x0
 
-    .line 1006
+    .line 992
     .local v2, targetDistance:I
     iget-wide v3, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mStartTime:J
 
@@ -242,14 +242,14 @@
 
     if-ltz v3, :cond_0
 
-    .line 1007
+    .line 993
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mDistance:I
 
-    .line 1011
+    .line 997
     :goto_0
     return v2
 
-    .line 1009
+    .line 995
     :cond_0
     iget-wide v3, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mStartTime:J
 
@@ -272,23 +272,23 @@
     .locals 2
 
     .prologue
-    .line 973
+    .line 959
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 974
+    .line 960
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->end()V
 
-    .line 975
+    .line 961
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/AbsSpinner;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 976
+    .line 962
     return-void
 .end method
 
@@ -298,49 +298,49 @@
     .locals 3
 
     .prologue
-    .line 984
+    .line 970
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMode:I
 
     if-nez v2, :cond_0
 
-    .line 985
+    .line 971
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->end()V
 
-    .line 1000
+    .line 986
     :goto_0
     return-void
 
-    .line 989
+    .line 975
     :cond_0
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->getTargetDistance()I
 
     move-result v1
 
-    .line 990
+    .line 976
     .local v1, targetDistance:I
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mDistance:I
 
     if-ne v1, v2, :cond_1
 
-    .line 991
+    .line 977
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->end()V
 
     goto :goto_0
 
-    .line 995
+    .line 981
     :cond_1
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMovedDistance:I
 
     sub-int v0, v1, v2
 
-    .line 996
+    .line 982
     .local v0, step:I
     invoke-direct {p0, v0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->changeWidthHeight(I)V
 
-    .line 997
+    .line 983
     iput v1, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMovedDistance:I
 
-    .line 998
+    .line 984
     iget-object v2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v2, p0}, Lcom/htc/fragment/widget/AbsSpinner;->post(Ljava/lang/Runnable;)Z
@@ -356,20 +356,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 952
+    .line 939
     iput p2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mTargetWidthHeight:I
 
-    .line 953
+    .line 940
     if-ne p1, p2, :cond_0
 
-    .line 955
+    .line 941
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->end()V
 
-    .line 969
+    .line 955
     :goto_0
     return-void
 
-    .line 958
+    .line 944
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -377,35 +377,35 @@
 
     iput-wide v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mStartTime:J
 
-    .line 960
+    .line 946
     invoke-direct {p0}, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->startCommon()V
 
-    .line 962
+    .line 948
     iput v2, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMode:I
 
-    .line 963
+    .line 949
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mMovedDistance:I
 
-    .line 964
+    .line 950
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mChangeWidthHeightAnimation:Z
     invoke-static {v0, v2}, Lcom/htc/fragment/widget/AbsSpinner;->access$302(Lcom/htc/fragment/widget/AbsSpinner;Z)Z
 
-    .line 965
+    .line 951
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     #setter for: Lcom/htc/fragment/widget/AbsSpinner;->mAnimationWidthHeight:I
     invoke-static {v0, p1}, Lcom/htc/fragment/widget/AbsSpinner;->access$402(Lcom/htc/fragment/widget/AbsSpinner;I)I
 
-    .line 966
+    .line 952
     sub-int v0, p2, p1
 
     iput v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->mDistance:I
 
-    .line 968
+    .line 954
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner$ChangeWidthHeightRunnable;->this$0:Lcom/htc/fragment/widget/AbsSpinner;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/AbsSpinner;->post(Ljava/lang/Runnable;)Z

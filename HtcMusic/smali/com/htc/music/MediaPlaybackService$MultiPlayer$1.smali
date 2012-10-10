@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 6116
+    .line 6223
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$MultiPlayer$1;->this$1:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +44,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 6123
+    .line 6230
     const-string v0, "[MediaPlaybackService]"
 
     const-string v1, "acquire wake lock"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6124
+    .line 6231
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$MultiPlayer$1;->this$1:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
 
     iget-object v0, v0, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 6125
+    .line 6232
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$MultiPlayer$1;->this$1:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
 
     iget-object v0, v0, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -73,21 +73,21 @@
     #setter for: Lcom/htc/music/MediaPlaybackService;->mWakeLockAcquired:Z
     invoke-static {v0, v3}, Lcom/htc/music/MediaPlaybackService;->access$2102(Lcom/htc/music/MediaPlaybackService;Z)Z
 
-    .line 6126
+    .line 6233
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$MultiPlayer$1;->this$1:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
 
     #getter for: Lcom/htc/music/MediaPlaybackService$MultiPlayer;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->access$6700(Lcom/htc/music/MediaPlaybackService$MultiPlayer;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->access$7200(Lcom/htc/music/MediaPlaybackService$MultiPlayer;)Landroid/os/Handler;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 6127
+    .line 6234
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackService$MultiPlayer$1;->this$1:Lcom/htc/music/MediaPlaybackService$MultiPlayer;
 
     #getter for: Lcom/htc/music/MediaPlaybackService$MultiPlayer;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->access$6700(Lcom/htc/music/MediaPlaybackService$MultiPlayer;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/htc/music/MediaPlaybackService$MultiPlayer;->access$7200(Lcom/htc/music/MediaPlaybackService$MultiPlayer;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -95,6 +95,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 6128
+    .line 6235
     return-void
 .end method

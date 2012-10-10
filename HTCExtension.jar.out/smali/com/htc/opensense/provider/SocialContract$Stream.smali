@@ -87,7 +87,7 @@
     .end annotation
 
     .prologue
-    .line 181
+    .line 169
     .local p0, TypeNameList:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     const/4 v0, 0x1
 
@@ -118,7 +118,7 @@
     .end annotation
 
     .prologue
-    .line 186
+    .line 174
     .local p0, TypeNameList:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     sget-object v3, Lcom/htc/opensense/provider/SocialContract$Stream;->CONTENT_URI:Landroid/net/Uri;
 
@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    .line 188
+    .line 176
     .local v0, builder:Landroid/net/Uri$Builder;
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -146,7 +146,7 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 189
+    .line 177
     .local v2, typename:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "account_type"
 
@@ -156,7 +156,7 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 190
+    .line 178
     const-string v4, "account_name"
 
     iget-object v3, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -167,7 +167,7 @@
 
     goto :goto_0
 
-    .line 193
+    .line 181
     .end local v2           #typename:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     const-string v3, "stream_type"
@@ -178,7 +178,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 194
+    .line 182
     const-string v3, "latest"
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
@@ -187,7 +187,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 196
+    .line 184
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v3
@@ -204,7 +204,7 @@
     .parameter "syncStreamType"
 
     .prologue
-    .line 148
+    .line 140
     sget-object v0, Lcom/htc/opensense/provider/SocialContract$Stream;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -278,7 +278,7 @@
     .end annotation
 
     .prologue
-    .line 162
+    .line 150
     .local p0, TypeNameList:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     const/4 v0, 0x1
 
@@ -308,7 +308,7 @@
     .end annotation
 
     .prologue
-    .line 167
+    .line 155
     .local p0, TypeNameList:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     sget-object v3, Lcom/htc/opensense/provider/SocialContract$Stream;->CONTENT_URI:Landroid/net/Uri;
 
@@ -316,7 +316,7 @@
 
     move-result-object v0
 
-    .line 169
+    .line 157
     .local v0, builder:Landroid/net/Uri$Builder;
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -336,7 +336,7 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 170
+    .line 158
     .local v2, typename:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "account_type"
 
@@ -346,7 +346,7 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 171
+    .line 159
     const-string v4, "account_name"
 
     iget-object v3, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -357,7 +357,7 @@
 
     goto :goto_0
 
-    .line 174
+    .line 162
     .end local v2           #typename:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     const-string v3, "latest"
@@ -368,7 +368,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 176
+    .line 164
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v3
@@ -395,7 +395,7 @@
     .end annotation
 
     .prologue
-    .line 130
+    .line 126
     .local p0, PosterTypeList:Ljava/util/List;,"Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     sget-object v3, Lcom/htc/opensense/provider/SocialContract$Stream;->CONTENT_URI:Landroid/net/Uri;
 
@@ -403,7 +403,7 @@
 
     move-result-object v0
 
-    .line 132
+    .line 128
     .local v0, builder:Landroid/net/Uri$Builder;
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -423,7 +423,7 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 133
+    .line 129
     .local v2, postertype:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "poster"
 
@@ -433,7 +433,7 @@
 
     invoke-virtual {v0, v4, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 134
+    .line 130
     const-string v4, "account_type"
 
     iget-object v3, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -444,7 +444,7 @@
 
     goto :goto_0
 
-    .line 137
+    .line 133
     .end local v2           #postertype:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     const-string v3, "latest"
@@ -455,7 +455,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 138
+    .line 134
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v3

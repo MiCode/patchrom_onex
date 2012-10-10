@@ -21,11 +21,15 @@
 
 .field static final MESSAGE_SC_RETRY:I = 0x2
 
+.field static final MESSAGE_SC_TIMEOUT_CLOSE:I = 0x4
+
 .field private static final SC_INIT_DELAY:I = 0x3e8
 
 .field private static final SC_RETRY_DELAY:I = 0x1f4
 
 .field private static final SC_RETRY_TIMES:I = 0x2
+
+.field private static final SC_TIMEOUT_DURATION:I = 0x3a98
 
 
 # instance fields
@@ -40,12 +44,12 @@
     .parameter
 
     .prologue
-    .line 14018
+    .line 14133
     iput-object p1, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 14028
+    .line 14145
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/TextView$SCATDHandler;->mRetry:I
@@ -59,7 +63,7 @@
     .parameter "x1"
 
     .prologue
-    .line 14018
+    .line 14133
     invoke-direct {p0, p1}, Landroid/widget/TextView$SCATDHandler;-><init>(Landroid/widget/TextView;)V
 
     return-void
@@ -74,20 +78,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 14031
+    .line 14148
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 14052
+    .line 14179
+    :cond_0
     :goto_0
     return-void
 
-    .line 14034
+    .line 14151
     :pswitch_0
     iput v2, p0, Landroid/widget/TextView$SCATDHandler;->mRetry:I
 
-    .line 14035
+    .line 14152
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -96,7 +101,7 @@
 
     goto :goto_0
 
-    .line 14038
+    .line 14155
     :pswitch_1
     iget v0, p0, Landroid/widget/TextView$SCATDHandler;->mRetry:I
 
@@ -106,9 +111,9 @@
 
     const/4 v1, 0x2
 
-    if-gt v0, v1, :cond_0
+    if-gt v0, v1, :cond_1
 
-    .line 14039
+    .line 14156
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -117,8 +122,8 @@
 
     goto :goto_0
 
-    .line 14042
-    :cond_0
+    .line 14159
+    :cond_1
     iget-object v0, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
 
     iget-object v1, v0, Landroid/widget/TextView;->mSCATDQueue:Ljava/util/ArrayList;
@@ -129,17 +134,17 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 14043
-    invoke-static {v2}, Landroid/widget/TextView;->access$12502(Z)Z
+    .line 14160
+    invoke-static {v2}, Landroid/widget/TextView;->access$12402(Z)Z
 
-    .line 14044
+    .line 14161
     iget-object v0, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->SCATDProcessQueue()V
 
     goto :goto_0
 
-    .line 14049
+    .line 14166
     :pswitch_2
     iget-object v1, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
 
@@ -148,16 +153,56 @@
     check-cast v0, Ljava/lang/String;
 
     #calls: Landroid/widget/TextView;->SCATDRescanWord(Ljava/lang/String;)V
-    invoke-static {v1, v0}, Landroid/widget/TextView;->access$12600(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Landroid/widget/TextView;->access$12500(Landroid/widget/TextView;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 14031
+    .line 14171
+    :pswitch_3
+    iget-object v0, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
+
+    #getter for: Landroid/widget/TextView;->mSpellChecker:Landroid/widget/SpellChecker;
+    invoke-static {v0}, Landroid/widget/TextView;->access$12600(Landroid/widget/TextView;)Landroid/widget/SpellChecker;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 14172
+    iget-object v0, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
+
+    #getter for: Landroid/widget/TextView;->mSpellChecker:Landroid/widget/SpellChecker;
+    invoke-static {v0}, Landroid/widget/TextView;->access$12600(Landroid/widget/TextView;)Landroid/widget/SpellChecker;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/SpellChecker;->closeSession()V
+
+    .line 14173
+    iget-object v0, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
+
+    const/4 v1, 0x0
+
+    #setter for: Landroid/widget/TextView;->mSpellChecker:Landroid/widget/SpellChecker;
+    invoke-static {v0, v1}, Landroid/widget/TextView;->access$12602(Landroid/widget/TextView;Landroid/widget/SpellChecker;)Landroid/widget/SpellChecker;
+
+    .line 14174
+    iget-object v0, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
+
+    const/4 v1, 0x1
+
+    #setter for: Landroid/widget/TextView;->mIsSCTimeoutclosed:Z
+    invoke-static {v0, v1}, Landroid/widget/TextView;->access$12702(Landroid/widget/TextView;Z)Z
+
+    goto :goto_0
+
+    .line 14148
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
         :pswitch_1
         :pswitch_2
+        :pswitch_3
     .end packed-switch
 .end method
 
@@ -166,27 +211,27 @@
     .parameter "word"
 
     .prologue
-    .line 14055
+    .line 14182
     iget-object v1, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
 
     #getter for: Landroid/widget/TextView;->mSpellChecker:Landroid/widget/SpellChecker;
-    invoke-static {v1}, Landroid/widget/TextView;->access$12700(Landroid/widget/TextView;)Landroid/widget/SpellChecker;
+    invoke-static {v1}, Landroid/widget/TextView;->access$12600(Landroid/widget/TextView;)Landroid/widget/SpellChecker;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 14056
+    .line 14183
     iget-object v1, p0, Landroid/widget/TextView$SCATDHandler;->this$0:Landroid/widget/TextView;
 
     #getter for: Landroid/widget/TextView;->mSpellChecker:Landroid/widget/SpellChecker;
-    invoke-static {v1}, Landroid/widget/TextView;->access$12700(Landroid/widget/TextView;)Landroid/widget/SpellChecker;
+    invoke-static {v1}, Landroid/widget/TextView;->access$12600(Landroid/widget/TextView;)Landroid/widget/SpellChecker;
 
     move-result-object v1
 
     invoke-virtual {v1, p1}, Landroid/widget/SpellChecker;->spellCheck(Ljava/lang/String;)V
 
-    .line 14058
+    .line 14185
     :cond_0
     const/4 v1, 0x2
 
@@ -198,12 +243,12 @@
 
     move-result-object v0
 
-    .line 14059
+    .line 14186
     .local v0, m:Landroid/os/Message;
     const-wide/16 v1, 0x1f4
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/widget/TextView$SCATDHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 14060
+    .line 14187
     return-void
 .end method

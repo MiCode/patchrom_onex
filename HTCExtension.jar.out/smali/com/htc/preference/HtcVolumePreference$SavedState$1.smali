@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 260
+    .line 262
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .parameter "in"
 
     .prologue
-    .line 262
+    .line 264
     new-instance v0, Lcom/htc/preference/HtcVolumePreference$SavedState;
 
     invoke-direct {v0, p1}, Lcom/htc/preference/HtcVolumePreference$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +58,7 @@
     .parameter "x0"
 
     .prologue
-    .line 260
+    .line 262
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcVolumePreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/htc/preference/HtcVolumePreference$SavedState;
 
     move-result-object v0
@@ -71,7 +71,7 @@
     .parameter "size"
 
     .prologue
-    .line 266
+    .line 268
     new-array v0, p1, [Lcom/htc/preference/HtcVolumePreference$SavedState;
 
     return-object v0
@@ -82,7 +82,7 @@
     .parameter "x0"
 
     .prologue
-    .line 260
+    .line 262
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcVolumePreference$SavedState$1;->newArray(I)[Lcom/htc/preference/HtcVolumePreference$SavedState;
 
     move-result-object v0

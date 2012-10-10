@@ -134,7 +134,7 @@
     .line 84
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7930
+    .line 7968
     return-void
 .end method
 
@@ -143,12 +143,12 @@
     .parameter "message"
 
     .prologue
-    .line 8262
+    .line 8300
     const-string v0, "Settings"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8263
+    .line 8301
     return-void
 .end method
 
@@ -168,18 +168,18 @@
     .parameter "command"
 
     .prologue
-    .line 8215
+    .line 8253
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 8216
+    .line 8254
     .local v1, content:Ljava/lang/StringBuffer;
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 8220
+    .line 8258
     .local v3, error:Ljava/lang/StringBuffer;
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -190,7 +190,7 @@
 
     move-result-object v5
 
-    .line 8223
+    .line 8261
     .local v5, process:Ljava/lang/Process;
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -204,7 +204,7 @@
 
     invoke-direct {v0, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 8225
+    .line 8263
     .local v0, br:Ljava/io/BufferedReader;
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -214,10 +214,10 @@
     .local v4, line:Ljava/lang/String;
     if-eqz v4, :cond_1
 
-    .line 8226
+    .line 8264
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 8227
+    .line 8265
     const-string v6, "\n"
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -227,25 +227,25 @@
 
     goto :goto_0
 
-    .line 8245
+    .line 8283
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v4           #line:Ljava/lang/String;
     .end local v5           #process:Ljava/lang/Process;
     :catch_0
     move-exception v2
 
-    .line 8246
+    .line 8284
     .local v2, e:Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 8247
+    .line 8285
     const-string v6, "Settings"
 
     const-string v7, "getCommandResults() got an IOException!"
 
     invoke-static {v6, v7, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 8253
+    .line 8291
     .end local v2           #e:Ljava/io/IOException;
     :cond_0
     :goto_1
@@ -255,7 +255,7 @@
 
     return-object v6
 
-    .line 8229
+    .line 8267
     .restart local v0       #br:Ljava/io/BufferedReader;
     .restart local v4       #line:Ljava/lang/String;
     .restart local v5       #process:Ljava/lang/Process;
@@ -263,7 +263,7 @@
     :try_start_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
 
-    .line 8232
+    .line 8270
     new-instance v0, Ljava/io/BufferedReader;
 
     .end local v0           #br:Ljava/io/BufferedReader;
@@ -277,7 +277,7 @@
 
     invoke-direct {v0, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 8234
+    .line 8272
     .restart local v0       #br:Ljava/io/BufferedReader;
     :goto_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -286,10 +286,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 8235
+    .line 8273
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 8236
+    .line 8274
     const-string v6, "\n"
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -299,18 +299,18 @@
 
     goto :goto_2
 
-    .line 8248
+    .line 8286
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v4           #line:Ljava/lang/String;
     .end local v5           #process:Ljava/lang/Process;
     :catch_1
     move-exception v2
 
-    .line 8249
+    .line 8287
     .local v2, e:Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 8250
+    .line 8288
     const-string v6, "Settings"
 
     const-string v7, "getCommandResults() got an Exception!"
@@ -319,7 +319,7 @@
 
     goto :goto_1
 
-    .line 8238
+    .line 8276
     .end local v2           #e:Ljava/lang/Exception;
     .restart local v0       #br:Ljava/io/BufferedReader;
     .restart local v4       #line:Ljava/lang/String;
@@ -328,14 +328,14 @@
     :try_start_2
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
 
-    .line 8241
+    .line 8279
     invoke-virtual {v3}, Ljava/lang/StringBuffer;->length()I
 
     move-result v6
 
     if-lez v6, :cond_0
 
-    .line 8242
+    .line 8280
     const-string v6, "Settings"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -358,7 +358,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8243
+    .line 8281
     const-string v6, "Settings"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -392,7 +392,7 @@
     .parameter "androidId"
 
     .prologue
-    .line 8279
+    .line 8317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -422,6 +422,6 @@
     .locals 0
 
     .prologue
-    .line 8134
+    .line 8172
     return-void
 .end method

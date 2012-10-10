@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 2101
+    .line 2277
     const-string v0, "content://com.android.calendar/calendar_alerts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -52,7 +52,7 @@
 
     sput-object v0, Landroid/provider/HtcCalendarContract$CalendarAlerts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2127
+    .line 2305
     const-string v0, "content://com.android.calendar/calendar_alerts/by_instance"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -68,7 +68,7 @@
     .locals 0
 
     .prologue
-    .line 2107
+    .line 2284
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,14 +86,14 @@
 
     const/4 v5, 0x0
 
-    .line 2296
+    .line 2474
     new-array v2, v8, [Ljava/lang/String;
 
     const-string v0, "alarmTime"
 
     aput-object v0, v2, v5
 
-    .line 2297
+    .line 2475
     .local v2, projection:[Ljava/lang/String;
     sget-object v1, Landroid/provider/HtcCalendarContract$CalendarAlerts;->CONTENT_URI:Landroid/net/Uri;
 
@@ -131,11 +131,11 @@
 
     move-result-object v6
 
-    .line 2301
+    .line 2479
     .local v6, cursor:Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 2303
+    .line 2481
     .local v7, found:Z
     if-eqz v6, :cond_0
 
@@ -148,30 +148,30 @@
 
     if-lez v0, :cond_0
 
-    .line 2304
+    .line 2482
     const/4 v7, 0x1
 
-    .line 2307
+    .line 2485
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 2308
+    .line 2486
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2311
+    .line 2489
     :cond_1
     return v7
 
-    .line 2307
+    .line 2485
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_2
 
-    .line 2308
+    .line 2486
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2307
+    .line 2485
     :cond_2
     throw v0
 .end method
@@ -186,7 +186,7 @@
 
     const/4 v5, 0x0
 
-    .line 2167
+    .line 2345
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,7 +205,7 @@
 
     move-result-object v9
 
-    .line 2170
+    .line 2348
     .local v9, selection:Ljava/lang/String;
     new-array v2, v4, [Ljava/lang/String;
 
@@ -213,7 +213,7 @@
 
     aput-object v0, v2, v5
 
-    .line 2171
+    .line 2349
     .local v2, projection:[Ljava/lang/String;
     sget-object v1, Landroid/provider/HtcCalendarContract$CalendarAlerts;->CONTENT_URI:Landroid/net/Uri;
 
@@ -235,11 +235,11 @@
 
     move-result-object v8
 
-    .line 2175
+    .line 2353
     .local v8, cursor:Landroid/database/Cursor;
     const-wide/16 v6, -0x1
 
-    .line 2177
+    .line 2355
     .local v6, alarmTime:J
     if-eqz v8, :cond_0
 
@@ -250,7 +250,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2178
+    .line 2356
     const/4 v0, 0x0
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getLong(I)J
@@ -259,27 +259,27 @@
 
     move-result-wide v6
 
-    .line 2181
+    .line 2359
     :cond_0
     if-eqz v8, :cond_1
 
-    .line 2182
+    .line 2360
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 2185
+    .line 2363
     :cond_1
     return-wide v6
 
-    .line 2181
+    .line 2359
     :catchall_0
     move-exception v0
 
     if-eqz v8, :cond_2
 
-    .line 2182
+    .line 2360
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 2181
+    .line 2359
     :cond_2
     throw v0
 .end method
@@ -296,12 +296,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2140
+    .line 2318
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2141
+    .line 2319
     .local v2, values:Landroid/content/ContentValues;
     const-string v3, "event_id"
 
@@ -311,7 +311,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2142
+    .line 2320
     const-string v3, "begin"
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -320,7 +320,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2143
+    .line 2321
     const-string v3, "end"
 
     invoke-static {p5, p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -329,7 +329,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2144
+    .line 2322
     const-string v3, "alarmTime"
 
     invoke-static {p7, p8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -338,12 +338,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2145
+    .line 2323
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2146
+    .line 2324
     .local v0, currentTime:J
     const-string v3, "creationTime"
 
@@ -353,7 +353,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 2147
+    .line 2325
     const-string/jumbo v3, "receivedTime"
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -362,7 +362,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2148
+    .line 2326
     const-string/jumbo v3, "notifyTime"
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -371,7 +371,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2149
+    .line 2327
     const-string/jumbo v3, "state"
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -380,7 +380,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2150
+    .line 2328
     const-string/jumbo v3, "minutes"
 
     invoke-static {p9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -389,7 +389,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2151
+    .line 2329
     sget-object v3, Landroid/provider/HtcCalendarContract$CalendarAlerts;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, v3, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
@@ -406,18 +406,18 @@
     .parameter "manager"
 
     .prologue
-    .line 2203
+    .line 2381
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v15
 
-    .line 2204
+    .line 2382
     .local v15, now:J
     const-wide/32 v2, 0x5265c00
 
     sub-long v10, v15, v2
 
-    .line 2205
+    .line 2383
     .local v10, ancient:J
     const/4 v2, 0x1
 
@@ -429,7 +429,7 @@
 
     aput-object v3, v4, v2
 
-    .line 2211
+    .line 2389
     .local v4, projection:[Ljava/lang/String;
     sget-object v3, Landroid/provider/HtcCalendarContract$CalendarAlerts;->CONTENT_URI:Landroid/net/Uri;
 
@@ -471,19 +471,19 @@
 
     move-result-object v12
 
-    .line 2215
+    .line 2393
     .local v12, cursor:Landroid/database/Cursor;
     if-nez v12, :cond_0
 
-    .line 2239
+    .line 2417
     :goto_0
     return-void
 
-    .line 2224
+    .line 2402
     :cond_0
     const-wide/16 v8, -0x1
 
-    .line 2226
+    .line 2404
     .local v8, alarmTime:J
     :cond_1
     :goto_1
@@ -494,20 +494,20 @@
 
     if-eqz v2, :cond_2
 
-    .line 2227
+    .line 2405
     const/4 v2, 0x0
 
     invoke-interface {v12, v2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v13
 
-    .line 2228
+    .line 2406
     .local v13, newAlarmTime:J
     cmp-long v2, v8, v13
 
     if-eqz v2, :cond_1
 
-    .line 2232
+    .line 2410
     move-object/from16 v0, p1
 
     move-object/from16 v1, p2
@@ -516,12 +516,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2233
+    .line 2411
     move-wide v8, v13
 
     goto :goto_1
 
-    .line 2237
+    .line 2415
     .end local v13           #newAlarmTime:J
     :catchall_0
     move-exception v2
@@ -545,10 +545,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 2263
+    .line 2441
     if-nez p1, :cond_0
 
-    .line 2264
+    .line 2442
     const-string v3, "alarm"
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -558,7 +558,7 @@
     .end local p1
     check-cast p1, Landroid/app/AlarmManager;
 
-    .line 2267
+    .line 2445
     .restart local p1
     :cond_0
     new-instance v0, Landroid/content/Intent;
@@ -567,7 +567,7 @@
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2270
+    .line 2448
     .local v0, intent:Landroid/content/Intent;
     sget-object v3, Landroid/provider/CalendarContract;->CONTENT_URI:Landroid/net/Uri;
 
@@ -599,24 +599,24 @@
 
     move-result-object v2
 
-    .line 2271
+    .line 2449
     .local v2, uri:Landroid/net/Uri;
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 2273
+    .line 2451
     const-string v3, "alarmTime"
 
     invoke-virtual {v0, v3, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 2274
+    .line 2452
     invoke-static {p0, v6, v0, v6}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v1
 
-    .line 2275
+    .line 2453
     .local v1, pi:Landroid/app/PendingIntent;
     invoke-virtual {p1, v6, p2, p3, v1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 2276
+    .line 2454
     return-void
 .end method

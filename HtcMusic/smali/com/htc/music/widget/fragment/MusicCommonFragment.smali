@@ -382,7 +382,7 @@
     if-eqz v2, :cond_0
 
     .line 390
-    const v2, 0x7f080091
+    const v2, 0x7f080092
 
     invoke-virtual {p0, v2}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 
@@ -523,7 +523,7 @@
 
     .prologue
     .line 243
-    const v1, 0x7f080095
+    const v1, 0x7f080096
 
     invoke-virtual {p0, v1}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 
@@ -772,7 +772,7 @@
     invoke-virtual {p0}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->resetSDErrorLayout()V
 
     .line 351
-    const v4, 0x7f0800a9
+    const v4, 0x7f0800aa
 
     invoke-virtual {p0, v4}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 
@@ -826,7 +826,7 @@
     .line 381
     :cond_5
     :goto_0
-    const v4, 0x7f080091
+    const v4, 0x7f080092
 
     invoke-virtual {p0, v4}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 
@@ -953,7 +953,7 @@
     invoke-virtual {v3, v4}, Landroid/view/ViewStub;->setVisibility(I)V
 
     .line 299
-    const v3, 0x7f080095
+    const v3, 0x7f080096
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 
@@ -972,7 +972,7 @@
 
     .line 304
     :cond_3
-    const v3, 0x7f080096
+    const v3, 0x7f080097
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 
@@ -1065,7 +1065,7 @@
     invoke-virtual {v3, v4}, Landroid/view/ViewStub;->setVisibility(I)V
 
     .line 268
-    const v3, 0x7f080095
+    const v3, 0x7f080096
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 
@@ -1082,7 +1082,7 @@
 
     .line 273
     :cond_3
-    const v3, 0x7f080096
+    const v3, 0x7f080097
 
     invoke-virtual {p0, v3}, Lcom/htc/music/widget/fragment/MusicCommonFragment;->findViewById(I)Landroid/view/View;
 

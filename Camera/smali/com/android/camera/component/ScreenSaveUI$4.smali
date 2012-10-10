@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 98
+    .line 99
     iput-object p1, p0, Lcom/android/camera/component/ScreenSaveUI$4;->this$0:Lcom/android/camera/component/ScreenSaveUI;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 102
+    .line 103
     return-void
 .end method

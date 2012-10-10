@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 963
+    .line 1018
     iput-object p1, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iput-object p2, p0, Lcom/android/server/MountService$3;->val$path:Ljava/lang/String;
@@ -43,14 +43,14 @@
     .locals 8
 
     .prologue
-    .line 968
+    .line 1023
     :try_start_0
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iget-object v4, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     #getter for: Lcom/android/server/MountService;->mExternalStoragePath:Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/server/MountService;->access$1900(Lcom/android/server/MountService;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/server/MountService;->access$2200(Lcom/android/server/MountService;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -66,7 +66,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 970
+    .line 1025
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iget-object v4, p0, Lcom/android/server/MountService$3;->val$path:Ljava/lang/String;
@@ -78,66 +78,66 @@
     #calls: Lcom/android/server/MountService;->doShareUnshareVolume(Ljava/lang/String;Ljava/lang/String;Z)V
     invoke-static {v3, v4, v5, v6}, Lcom/android/server/MountService;->access$200(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 976
+    .line 1031
     :cond_0
     :goto_0
-    invoke-static {}, Lcom/android/server/MountService;->access$1400()Z
+    invoke-static {}, Lcom/android/server/MountService;->access$1700()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 981
+    .line 1036
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.settings.MEMORY_CARD_SETTINGS"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 982
+    .line 1037
     .local v1, in:Landroid/content/Intent;
     const/high16 v3, 0x1000
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 983
+    .line 1038
     const-string v3, "SD_POLICY"
 
     const/4 v4, 0x0
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 984
+    .line 1039
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     #getter for: Lcom/android/server/MountService;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/server/MountService;->access$1500(Lcom/android/server/MountService;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/server/MountService;->access$1800(Lcom/android/server/MountService;)Landroid/content/Context;
 
     move-result-object v3
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 989
+    .line 1044
     .end local v1           #in:Landroid/content/Intent;
     :cond_1
     :goto_1
     return-void
 
-    .line 971
+    .line 1026
     :cond_2
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iget-object v4, p0, Lcom/android/server/MountService$3;->val$path:Ljava/lang/String;
 
     #calls: Lcom/android/server/MountService;->doMountVolume(Ljava/lang/String;)I
-    invoke-static {v3, v4}, Lcom/android/server/MountService;->access$900(Lcom/android/server/MountService;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/android/server/MountService;->access$1200(Lcom/android/server/MountService;Ljava/lang/String;)I
 
     move-result v2
 
     .local v2, rc:I
     if-eqz v2, :cond_0
 
-    .line 972
+    .line 1027
     const-string v3, "MountService"
 
     const-string v4, "Insertion mount failed (%d)"
@@ -164,12 +164,12 @@
 
     goto :goto_0
 
-    .line 986
+    .line 1041
     .end local v2           #rc:I
     :catch_0
     move-exception v0
 
-    .line 987
+    .line 1042
     .local v0, ex:Ljava/lang/Exception;
     const-string v3, "MountService"
 

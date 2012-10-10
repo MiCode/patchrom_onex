@@ -25,10 +25,10 @@
     .parameter "cr"
 
     .prologue
-    .line 872
+    .line 874
     iput-object p1, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
-    .line 873
+    .line 875
     const/4 v0, 0x0
 
     #getter for: Lcom/htc/music/carmode/CarGliderAdapter;->mIsEnhancerExist:Z
@@ -38,7 +38,7 @@
 
     invoke-direct {p0, p2, v0, v1}, Lcom/htc/music/util/DlArtAsyncQueryHandler;-><init>(Landroid/content/ContentResolver;ZZ)V
 
-    .line 874
+    .line 876
     return-void
 .end method
 
@@ -51,10 +51,10 @@
     .parameter "cursor"
 
     .prologue
-    .line 878
+    .line 880
     monitor-enter p0
 
-    .line 880
+    .line 882
     :try_start_0
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
@@ -74,7 +74,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 881
+    .line 883
     const-string v5, "[CarGliderAdapter]"
 
     const-string v6, "cookie not match"
@@ -83,24 +83,24 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 924
+    .line 926
     if-eqz p3, :cond_0
 
-    .line 925
+    .line 927
     :try_start_1
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 882
+    .line 884
     :cond_0
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 929
+    .line 931
     :goto_0
     return-void
 
-    .line 884
+    .line 886
     :cond_1
     :try_start_2
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
@@ -114,7 +114,7 @@
 
     if-nez p3, :cond_4
 
-    .line 885
+    .line 887
     :cond_2
     const-string v5, "[CarGliderAdapter]"
 
@@ -124,20 +124,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 924
+    .line 926
     if-eqz p3, :cond_3
 
-    .line 925
+    .line 927
     :try_start_3
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 886
+    .line 888
     :cond_3
     monitor-exit p0
 
     goto :goto_0
 
-    .line 928
+    .line 930
     :catchall_0
     move-exception v5
 
@@ -147,7 +147,7 @@
 
     throw v5
 
-    .line 889
+    .line 891
     :cond_4
     :try_start_4
     const-string v5, "album"
@@ -156,7 +156,7 @@
 
     move-result v0
 
-    .line 890
+    .line 892
     .local v0, albumColumnIndex:I
     const-string v5, "_id"
 
@@ -164,7 +164,7 @@
 
     move-result v4
 
-    .line 891
+    .line 893
     .local v4, idColumnIndex:I
     const-string v5, "album_art"
 
@@ -172,7 +172,7 @@
 
     move-result v2
 
-    .line 892
+    .line 894
     .local v2, artColumnIndex:I
     if-ltz v4, :cond_5
 
@@ -180,7 +180,7 @@
 
     if-gez v0, :cond_7
 
-    .line 893
+    .line 895
     :cond_5
     const-string v5, "[CarGliderAdapter]"
 
@@ -190,14 +190,14 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 924
+    .line 926
     if-eqz p3, :cond_6
 
-    .line 925
+    .line 927
     :try_start_5
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 894
+    .line 896
     :cond_6
     monitor-exit p0
     :try_end_5
@@ -205,11 +205,11 @@
 
     goto :goto_0
 
-    .line 897
+    .line 899
     :cond_7
     const/4 v1, 0x0
 
-    .line 898
+    .line 900
     .local v1, albumName:Ljava/lang/String;
     :try_start_6
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
@@ -221,14 +221,14 @@
 
     invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
 
-    .line 899
+    .line 901
     invoke-interface {p3}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v5
 
     if-eqz v5, :cond_b
 
-    .line 903
+    .line 905
     :cond_8
     const/4 v5, -0x1
 
@@ -241,12 +241,12 @@
 
     if-ne v5, v6, :cond_a
 
-    .line 904
+    .line 906
     invoke-interface {p3, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 905
+    .line 907
     if-eqz v1, :cond_9
 
     const-string v5, "<unknown>"
@@ -263,7 +263,7 @@
 
     if-eqz v5, :cond_a
 
-    .line 906
+    .line 908
     :cond_9
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
@@ -274,7 +274,7 @@
     #setter for: Lcom/htc/music/carmode/CarGliderAdapter;->mUnknownAlbumId:I
     invoke-static {v5, v6}, Lcom/htc/music/carmode/CarGliderAdapter;->access$1002(Lcom/htc/music/carmode/CarGliderAdapter;I)I
 
-    .line 910
+    .line 912
     :cond_a
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
@@ -297,14 +297,14 @@
 
     invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 913
+    .line 915
     invoke-interface {p3}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v5
 
     if-nez v5, :cond_8
 
-    .line 915
+    .line 917
     :cond_b
     const/4 v3, 0x0
 
@@ -321,7 +321,7 @@
 
     if-ge v3, v5, :cond_c
 
-    .line 916
+    .line 918
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     #getter for: Lcom/htc/music/carmode/CarGliderAdapter;->mAlbumInfoArray:[Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;
@@ -361,12 +361,12 @@
 
     iput-object v5, v6, Lcom/htc/music/carmode/CarGliderAdapter$AlbumInfo;->mDlArtPath:Ljava/lang/String;
 
-    .line 915
+    .line 917
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 920
+    .line 922
     :cond_c
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
@@ -375,7 +375,7 @@
     #setter for: Lcom/htc/music/carmode/CarGliderAdapter;->mIsDownloadInfoQueried:Z
     invoke-static {v5, v6}, Lcom/htc/music/carmode/CarGliderAdapter;->access$1102(Lcom/htc/music/carmode/CarGliderAdapter;Z)Z
 
-    .line 922
+    .line 924
     iget-object v5, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
 
     iget-object v6, p0, Lcom/htc/music/carmode/CarGliderAdapter$QueryHandler;->this$0:Lcom/htc/music/carmode/CarGliderAdapter;
@@ -389,20 +389,20 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 924
+    .line 926
     if-eqz p3, :cond_d
 
-    .line 925
+    .line 927
     :try_start_7
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 928
+    .line 930
     :cond_d
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 924
+    .line 926
     .end local v0           #albumColumnIndex:I
     .end local v1           #albumName:Ljava/lang/String;
     .end local v2           #artColumnIndex:I
@@ -413,10 +413,10 @@
 
     if-eqz p3, :cond_e
 
-    .line 925
+    .line 927
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 924
+    .line 926
     :cond_e
     throw v5
     :try_end_7

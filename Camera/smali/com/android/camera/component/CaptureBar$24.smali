@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1095
+    .line 1190
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,14 +72,14 @@
 
     const/4 v3, 0x0
 
-    .line 1099
+    .line 1194
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-virtual {v1}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 1100
+    .line 1195
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     sget-object v2, Lcom/android/camera/component/CaptureBar$26;->$SwitchMap$com$android$camera$TakingPictureState:[I
 
@@ -95,18 +95,18 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1133
+    .line 1228
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->updateButtonEnableStates()V
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$3700(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 1134
+    .line 1229
     return-void
 
-    .line 1103
+    .line 1198
     :pswitch_0
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -132,47 +132,47 @@
 
     if-eqz v1, :cond_1
 
-    .line 1104
+    .line 1199
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSelfTimerIndicator(ZZ)V
-    invoke-static {v1, v3, v4}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;ZZ)V
+    invoke-static {v1, v3, v4}, Lcom/android/camera/component/CaptureBar;->access$4100(Lcom/android/camera/component/CaptureBar;ZZ)V
 
-    .line 1105
+    .line 1200
     :cond_1
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->isSlowMotionMode()Z
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2100(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2300(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1106
+    .line 1201
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSlowMotionIndicator(Z)V
-    invoke-static {v1, v4}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v1, v4}, Lcom/android/camera/component/CaptureBar;->access$2400(Lcom/android/camera/component/CaptureBar;Z)V
 
     goto :goto_0
 
-    .line 1109
+    .line 1204
     :pswitch_1
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSelfTimerIndicator(ZZ)V
-    invoke-static {v1, v3, v3}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;ZZ)V
+    invoke-static {v1, v3, v3}, Lcom/android/camera/component/CaptureBar;->access$4100(Lcom/android/camera/component/CaptureBar;ZZ)V
 
-    .line 1110
+    .line 1205
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSlowMotionIndicator(Z)V
-    invoke-static {v1, v3}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v1, v3}, Lcom/android/camera/component/CaptureBar;->access$2400(Lcom/android/camera/component/CaptureBar;Z)V
 
     goto :goto_0
 
-    .line 1114
+    .line 1209
     :pswitch_2
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -184,7 +184,7 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 1116
+    .line 1211
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-virtual {v1}, Lcom/android/camera/component/CaptureBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -207,19 +207,19 @@
 
     if-eqz v1, :cond_3
 
-    .line 1117
+    .line 1212
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$3600(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$3800(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v1, v2, v4, v3}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
-    .line 1123
+    .line 1218
     :cond_2
     :goto_1
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -229,7 +229,7 @@
 
     goto :goto_0
 
-    .line 1118
+    .line 1213
     :cond_3
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->isCaptureUIOpen:Lcom/android/camera/property/Property;
 
@@ -245,22 +245,22 @@
 
     if-nez v1, :cond_2
 
-    .line 1119
+    .line 1214
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->hideCaptureBar()V
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2000(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;)V
 
     goto :goto_1
 
-    .line 1122
+    .line 1217
     :cond_4
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$3600(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$3800(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v2
 
@@ -268,7 +268,7 @@
 
     goto :goto_1
 
-    .line 1128
+    .line 1223
     :pswitch_3
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -294,13 +294,13 @@
 
     if-nez v1, :cond_5
 
-    .line 1129
+    .line 1224
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->hideCaptureBar()V
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2000(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 1130
+    .line 1225
     :cond_5
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$24;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -309,7 +309,7 @@
 
     goto/16 :goto_0
 
-    .line 1100
+    .line 1195
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0

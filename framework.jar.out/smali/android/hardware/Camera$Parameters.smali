@@ -344,7 +344,7 @@
 
     .line 2422
     :sswitch_5
-    const-string/jumbo v0, "jpeg"
+    const-string v0, "jpeg"
 
     goto :goto_0
 
@@ -355,6 +355,8 @@
     goto :goto_0
 
     .line 2416
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x4 -> :sswitch_4
@@ -533,7 +535,7 @@
 
     .line 2447
     :cond_6
-    const-string/jumbo v1, "jpeg"
+    const-string v1, "jpeg"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1987,7 +1989,7 @@
 
     .prologue
     .line 2180
-    const-string/jumbo v0, "jpeg-quality"
+    const-string v0, "jpeg-quality"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
 
@@ -2001,7 +2003,7 @@
 
     .prologue
     .line 2161
-    const-string/jumbo v0, "jpeg-thumbnail-quality"
+    const-string v0, "jpeg-thumbnail-quality"
 
     invoke-virtual {p0, v0}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
 
@@ -2019,13 +2021,13 @@
 
     iget-object v1, p0, Landroid/hardware/Camera$Parameters;->this$0:Landroid/hardware/Camera;
 
-    const-string/jumbo v2, "jpeg-thumbnail-width"
+    const-string v2, "jpeg-thumbnail-width"
 
     invoke-virtual {p0, v2}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
 
     move-result v2
 
-    const-string/jumbo v3, "jpeg-thumbnail-height"
+    const-string v3, "jpeg-thumbnail-height"
 
     invoke-virtual {p0, v3}, Landroid/hardware/Camera$Parameters;->getInt(Ljava/lang/String;)I
 
@@ -2453,7 +2455,7 @@
 
     .prologue
     .line 2141
-    const-string/jumbo v1, "jpeg-thumbnail-size-values"
+    const-string v1, "jpeg-thumbnail-size-values"
 
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -3471,7 +3473,7 @@
 
     .prologue
     .line 2171
-    const-string/jumbo v0, "jpeg-quality"
+    const-string v0, "jpeg-quality"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
@@ -3485,7 +3487,7 @@
 
     .prologue
     .line 2152
-    const-string/jumbo v0, "jpeg-thumbnail-quality"
+    const-string v0, "jpeg-thumbnail-quality"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
@@ -3500,12 +3502,12 @@
 
     .prologue
     .line 2118
-    const-string/jumbo v0, "jpeg-thumbnail-width"
+    const-string v0, "jpeg-thumbnail-width"
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 
     .line 2119
-    const-string/jumbo v0, "jpeg-thumbnail-height"
+    const-string v0, "jpeg-thumbnail-height"
 
     invoke-virtual {p0, v0, p2}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;I)V
 

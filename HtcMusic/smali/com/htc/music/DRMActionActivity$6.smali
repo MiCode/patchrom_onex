@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 673
+    .line 674
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$6;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 676
+    .line 677
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$6;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -50,18 +50,18 @@
 
     if-nez v1, :cond_1
 
-    .line 683
+    .line 684
     :cond_0
     :goto_0
     return-void
 
-    .line 678
+    .line 679
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 679
+    .line 680
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.htc.music.metachanged"
 
@@ -71,7 +71,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 681
+    .line 682
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$6;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #calls: Lcom/htc/music/DRMActionActivity;->showPoperty()V

@@ -1723,7 +1723,7 @@
 
     const/4 v8, 0x1
 
-    const v9, 0x7f0a018f
+    const v9, 0x7f0a0198
 
     invoke-virtual {p1, v9}, Lcom/android/camera/HTCCamera;->getString(I)Ljava/lang/String;
 
@@ -1742,7 +1742,7 @@
 
     const/16 v7, 0x25
 
-    const v8, 0x7f0a0190
+    const v8, 0x7f0a0199
 
     const/4 v9, 0x0
 
@@ -1932,7 +1932,7 @@
 
     const/4 v8, 0x1
 
-    const v9, 0x7f0a018f
+    const v9, 0x7f0a0198
 
     invoke-virtual {p1, v9}, Lcom/android/camera/HTCCamera;->getString(I)Ljava/lang/String;
 
@@ -1951,7 +1951,7 @@
 
     const/16 v7, 0x25
 
-    const v8, 0x7f0a0190
+    const v8, 0x7f0a0199
 
     const/4 v9, 0x0
 

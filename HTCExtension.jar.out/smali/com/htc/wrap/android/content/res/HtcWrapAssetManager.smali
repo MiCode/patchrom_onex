@@ -20,7 +20,7 @@
     .parameter "path"
 
     .prologue
-    .line 14
+    .line 10
     invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
 
     move-result v0
@@ -32,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 20
     invoke-static {}, Landroid/content/res/AssetManager;->getSystem()Landroid/content/res/AssetManager;
 
     move-result-object v0

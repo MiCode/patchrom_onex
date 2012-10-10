@@ -60,28 +60,28 @@
     .parameter "oem"
 
     .prologue
-    .line 159
+    .line 163
     invoke-direct {p0}, Landroid/os/IOemExtendedApi3LM$Stub;-><init>()V
 
-    .line 55
+    .line 59
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mFelica:Lcom/android/server/felica/FelicaProxy;
 
-    .line 160
+    .line 164
     iput-object p1, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
-    .line 161
+    .line 165
     iput-object p2, p0, Lcom/android/server/OemExtendedApi3LMService;->mOem:Landroid/os/IDeviceManagerRestrictable3LM;
 
-    .line 162
+    .line 166
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 163
+    .line 167
     const-string v0, "DeviceManager3LM"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -92,14 +92,14 @@
 
     iput-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mDeviceManager:Landroid/os/IDeviceManager3LM;
 
-    .line 165
+    .line 169
     new-instance v0, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;
 
     invoke-direct {v0, p1}, Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mPublicKey3LM:Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;
 
-    .line 167
+    .line 171
     const/4 v0, 0x1
 
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
@@ -110,7 +110,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 168
+    .line 172
     new-instance v0, Lcom/android/server/felica/FelicaProxy;
 
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
@@ -119,11 +119,11 @@
 
     iput-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mFelica:Lcom/android/server/felica/FelicaProxy;
 
-    .line 173
+    .line 177
     :goto_0
     return-void
 
-    .line 170
+    .line 174
     :cond_0
     const-string v0, "OemExtendedApi3LM"
 
@@ -140,28 +140,28 @@
     .parameter "result"
 
     .prologue
-    .line 332
+    .line 340
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 333
+    .line 341
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.htc.3lm.intent.extra.POLICY_STATUS"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 334
+    .line 342
     const/high16 v1, 0x4000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 335
+    .line 343
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 336
+    .line 344
     return-void
 .end method
 
@@ -171,12 +171,12 @@
     .prologue
     const/4 v12, 0x1
 
-    .line 177
+    .line 181
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 178
+    .line 182
     .local v2, callerUid:I
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -184,12 +184,12 @@
 
     if-ne v2, v13, :cond_1
 
-    .line 204
+    .line 208
     :cond_0
     :goto_0
     return v12
 
-    .line 183
+    .line 187
     :cond_1
     :try_start_0
     iget-object v13, p0, Lcom/android/server/OemExtendedApi3LMService;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -198,7 +198,7 @@
 
     move-result-object v9
 
-    .line 185
+    .line 189
     .local v9, packages:[Ljava/lang/String;
     move-object v0, v9
 
@@ -220,7 +220,7 @@
 
     aget-object v10, v0, v5
 
-    .line 187
+    .line 191
     .local v10, pkg:Ljava/lang/String;
     iget-object v13, p0, Lcom/android/server/OemExtendedApi3LMService;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -230,7 +230,7 @@
 
     move-result-object v8
 
-    .line 191
+    .line 195
     .local v8, packageInfo:Landroid/content/pm/PackageInfo;
     iget-object v1, v8, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -247,7 +247,7 @@
 
     aget-object v11, v1, v4
 
-    .line 192
+    .line 196
     .local v11, pkgSignature:Landroid/content/pm/Signature;
     iget-object v13, p0, Lcom/android/server/OemExtendedApi3LMService;->mPublicKey3LM:Lcom/android/server/OemExtendedApi3LMService$PublicKey3LM;
 
@@ -263,12 +263,12 @@
 
     if-nez v13, :cond_0
 
-    .line 191
+    .line 195
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 185
+    .line 189
     .end local v11           #pkgSignature:Landroid/content/pm/Signature;
     :cond_2
     add-int/lit8 v4, v5, 0x1
@@ -279,7 +279,7 @@
     .restart local v5       #i$:I
     goto :goto_1
 
-    .line 200
+    .line 204
     .end local v1           #arr$:[Landroid/content/pm/Signature;
     .end local v5           #i$:I
     .end local v7           #len$:I
@@ -289,7 +289,7 @@
     :catch_0
     move-exception v3
 
-    .line 201
+    .line 205
     .local v3, e:Ljava/lang/Exception;
     const-string v12, "OemExtendedApi3LM"
 
@@ -313,7 +313,7 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
+    .line 207
     .end local v3           #e:Ljava/lang/Exception;
     :cond_3
     const-string v12, "OemExtendedApi3LM"
@@ -338,7 +338,7 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
+    .line 208
     const/4 v12, 0x0
 
     goto :goto_0
@@ -352,28 +352,28 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 215
+    .line 219
     invoke-direct {p0}, Lcom/android/server/OemExtendedApi3LMService;->isAccessPermitted()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 227
+    .line 231
     :goto_0
     return-void
 
-    .line 217
+    .line 221
     :cond_0
     invoke-virtual {p0, v1}, Lcom/android/server/OemExtendedApi3LMService;->setFelicaState(I)V
 
-    .line 218
+    .line 222
     invoke-virtual {p0, v1}, Lcom/android/server/OemExtendedApi3LMService;->setOneSegState(I)V
 
-    .line 219
+    .line 223
     invoke-virtual {p0, v1}, Lcom/android/server/OemExtendedApi3LMService;->setInfraredState(I)V
 
-    .line 222
+    .line 226
     :try_start_0
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mDeviceManager:Landroid/os/IDeviceManager3LM;
 
@@ -381,7 +381,7 @@
 
     invoke-interface {v0, v1}, Landroid/os/IDeviceManager3LM;->setNfcState(I)V
 
-    .line 223
+    .line 227
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mDeviceManager:Landroid/os/IDeviceManager3LM;
 
     const/4 v1, 0x1
@@ -392,7 +392,7 @@
 
     goto :goto_0
 
-    .line 224
+    .line 228
     :catch_0
     move-exception v0
 
@@ -403,19 +403,19 @@
     .locals 4
 
     .prologue
-    .line 242
+    .line 246
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mFelica:Lcom/android/server/felica/FelicaProxy;
 
     if-eqz v1, :cond_0
 
-    .line 243
+    .line 247
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mFelica:Lcom/android/server/felica/FelicaProxy;
 
     invoke-virtual {v1}, Lcom/android/server/felica/FelicaProxy;->getLockState()I
 
     move-result v0
 
-    .line 244
+    .line 248
     .local v0, state:I
     const-string v1, "OemExtendedApi3LM"
 
@@ -439,7 +439,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
+    .line 252
     .end local v0           #state:I
     :goto_0
     return v0
@@ -454,7 +454,7 @@
     .locals 4
 
     .prologue
-    .line 307
+    .line 313
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -469,7 +469,7 @@
 
     move-result v0
 
-    .line 309
+    .line 315
     .local v0, state:I
     return v0
 .end method
@@ -478,7 +478,7 @@
     .locals 4
 
     .prologue
-    .line 278
+    .line 282
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -493,7 +493,7 @@
 
     move-result v0
 
-    .line 280
+    .line 284
     .local v0, state:I
     return v0
 .end method
@@ -502,7 +502,7 @@
     .locals 1
 
     .prologue
-    .line 208
+    .line 212
     const/4 v0, 0x1
 
     return v0
@@ -519,25 +519,42 @@
 
     const/4 v2, 0x1
 
-    .line 354
+    .line 362
     invoke-direct {p0}, Lcom/android/server/OemExtendedApi3LMService;->isAccessPermitted()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 390
+    .line 413
     :goto_0
     return v3
 
-    .line 356
+    .line 364
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    .line 358
+    .line 367
     if-eqz p1, :cond_2
 
-    .line 360
+    .line 368
+    iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    const-string v5, "emergency_lock"
+
+    const/4 v6, 0x0
+
+    invoke-static {v4, v5, v6}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 381
+    :goto_1
+    if-eqz p1, :cond_4
+
+    .line 383
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -550,7 +567,7 @@
 
     invoke-static {v4, v5, v6}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 362
+    .line 385
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -563,31 +580,31 @@
 
     invoke-static {v4, v5, v6}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 380
+    .line 403
     :cond_1
-    :goto_1
-    if-eqz p1, :cond_3
+    :goto_2
+    if-eqz p1, :cond_5
 
     move v1, v2
 
-    .line 381
+    .line 404
     .local v1, newState:I
-    :goto_2
+    :goto_3
     invoke-virtual {p0, v1}, Lcom/android/server/OemExtendedApi3LMService;->setFelicaState(I)V
 
-    .line 382
+    .line 405
     invoke-virtual {p0, v1}, Lcom/android/server/OemExtendedApi3LMService;->setOneSegState(I)V
 
-    .line 383
+    .line 406
     invoke-virtual {p0, v1}, Lcom/android/server/OemExtendedApi3LMService;->setInfraredState(I)V
 
-    .line 385
+    .line 408
     :try_start_0
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mDeviceManager:Landroid/os/IDeviceManager3LM;
 
     invoke-interface {v4, v1}, Landroid/os/IDeviceManager3LM;->setNfcState(I)V
 
-    .line 386
+    .line 409
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mDeviceManager:Landroid/os/IDeviceManager3LM;
 
     invoke-interface {v4, v1}, Landroid/os/IDeviceManager3LM;->setWifiState(I)V
@@ -596,12 +613,51 @@
 
     move v3, v2
 
-    .line 390
+    .line 413
     goto :goto_0
 
-    .line 366
+    .line 371
     .end local v1           #newState:I
     :cond_2
+    if-eqz p2, :cond_3
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    if-lez v4, :cond_3
+
+    .line 372
+    iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    const-string v5, "emergency_lock"
+
+    invoke-static {v4, v5, p2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_1
+
+    .line 375
+    :cond_3
+    iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    const-string v5, "emergency_lock"
+
+    const-string v6, " "
+
+    invoke-static {v4, v5, v6}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_1
+
+    .line 389
+    :cond_4
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -616,7 +672,7 @@
 
     iput v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mOwnerInfoEnabled:I
 
-    .line 368
+    .line 391
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -631,14 +687,14 @@
 
     iput-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mOwnerInfo:Ljava/lang/String;
 
-    .line 371
+    .line 394
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v4
 
     if-lez v4, :cond_1
 
-    .line 373
+    .line 396
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -649,7 +705,7 @@
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 375
+    .line 398
     iget-object v4, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -660,22 +716,22 @@
 
     invoke-static {v4, v5, p2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    goto :goto_1
-
-    :cond_3
-    move v1, v3
-
-    .line 380
     goto :goto_2
 
-    .line 387
+    :cond_5
+    move v1, v3
+
+    .line 403
+    goto :goto_3
+
+    .line 410
     .restart local v1       #newState:I
     :catch_0
     move-exception v0
 
-    .line 388
+    .line 411
     .local v0, e:Landroid/os/RemoteException;
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method public setFelicaState(I)V
@@ -683,35 +739,35 @@
     .parameter "state"
 
     .prologue
-    .line 257
+    .line 261
     invoke-direct {p0}, Lcom/android/server/OemExtendedApi3LMService;->isAccessPermitted()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 270
+    .line 274
     :cond_0
     :goto_0
     return-void
 
-    .line 260
+    .line 264
     :cond_1
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mFelica:Lcom/android/server/felica/FelicaProxy;
 
     if-eqz v1, :cond_0
 
-    .line 261
+    .line 265
     if-nez p1, :cond_2
 
-    .line 262
+    .line 266
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mFelica:Lcom/android/server/felica/FelicaProxy;
 
     invoke-virtual {v1}, Lcom/android/server/felica/FelicaProxy;->lock()Z
 
     move-result v0
 
-    .line 263
+    .line 267
     .local v0, bRet:Z
     const-string v1, "OemExtendedApi3LM"
 
@@ -737,21 +793,21 @@
 
     goto :goto_0
 
-    .line 264
+    .line 268
     .end local v0           #bRet:Z
     :cond_2
     const/4 v1, 0x1
 
     if-ne v1, p1, :cond_0
 
-    .line 265
+    .line 269
     iget-object v1, p0, Lcom/android/server/OemExtendedApi3LMService;->mFelica:Lcom/android/server/felica/FelicaProxy;
 
     invoke-virtual {v1}, Lcom/android/server/felica/FelicaProxy;->unlock()Z
 
     move-result v0
 
-    .line 266
+    .line 270
     .restart local v0       #bRet:Z
     const-string v1, "OemExtendedApi3LM"
 
@@ -783,19 +839,19 @@
     .parameter "state"
 
     .prologue
-    .line 319
+    .line 325
     invoke-direct {p0}, Lcom/android/server/OemExtendedApi3LMService;->isAccessPermitted()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 328
+    .line 336
     :cond_0
     :goto_0
     return-void
 
-    .line 322
+    .line 328
     :cond_1
     const/4 v0, 0x1
 
@@ -803,8 +859,11 @@
 
     if-nez p1, :cond_0
 
-    .line 323
+    .line 329
     :cond_2
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    .line 331
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -815,7 +874,7 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 325
+    .line 333
     const-string v0, "com.htc.3lm.intent.INFRARED_POLICY_STATUS_CHANGE"
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/OemExtendedApi3LMService;->broadcastIntent(Ljava/lang/String;I)V
@@ -828,19 +887,19 @@
     .parameter "state"
 
     .prologue
-    .line 290
+    .line 294
     invoke-direct {p0}, Lcom/android/server/OemExtendedApi3LMService;->isAccessPermitted()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 299
+    .line 305
     :cond_0
     :goto_0
     return-void
 
-    .line 293
+    .line 297
     :cond_1
     const/4 v0, 0x1
 
@@ -848,8 +907,11 @@
 
     if-nez p1, :cond_0
 
-    .line 294
+    .line 298
     :cond_2
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    .line 300
     iget-object v0, p0, Lcom/android/server/OemExtendedApi3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -860,7 +922,7 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 296
+    .line 302
     const-string v0, "com.htc.3lm.intent.ONESEG_POLICY_STATUS_CHANGE"
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/OemExtendedApi3LMService;->broadcastIntent(Ljava/lang/String;I)V

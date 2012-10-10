@@ -72,6 +72,10 @@
 
 .field public static final STREAM_BLUETOOTH_SCO:I = 0x6
 
+.field public static final STREAM_NOTIFICATION:I = 0x5
+
+.field public static final STREAM_RING:I = 0x2
+
 .field public static final STUDIO_BEATS_HEADSET:I = 0x3ea
 
 .field public static final UR_BEATS_HEADSET:I = 0x3e8
@@ -91,10 +95,28 @@
 .method public abstract getGlobalEffect()I
 .end method
 
+.method public abstract getHeadsetProfile()[I
+.end method
+
+.method public abstract getLastAudibleStreamVolume(I)I
+.end method
+
+.method public abstract getSpeakerProfile()[I
+.end method
+
+.method public abstract isBTConnected()Z
+.end method
+
 .method public abstract isBeatsHeadset()Z
 .end method
 
 .method public abstract isBeatsHeadsetBT()Z
+.end method
+
+.method public abstract isHeadsetPlugged()Z
+.end method
+
+.method public abstract isStreamMute(I)Z
 .end method
 
 .method public abstract queryGlobalEffectList()[I
@@ -115,7 +137,13 @@
 .method public abstract setGlobalEffect(ILjava/lang/String;)V
 .end method
 
+.method public abstract setHeadsetProfile([I)V
+.end method
+
 .method public abstract setIgnoreNotificationMuteSetting(Z)I
+.end method
+
+.method public abstract setSpeakerProfile([I)V
 .end method
 
 .method public abstract setVolumePanelOrientation(I)V

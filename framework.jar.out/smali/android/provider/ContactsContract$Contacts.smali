@@ -78,7 +78,7 @@
     .line 1464
     sget-object v0, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "lookup"
+    const-string v1, "lookup"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -236,7 +236,7 @@
 
     new-array v2, v0, [Ljava/lang/String;
 
-    const-string/jumbo v0, "lookup"
+    const-string v0, "lookup"
 
     aput-object v0, v2, v1
 
@@ -419,7 +419,7 @@
 
     .line 1595
     .local v1, values:Landroid/content/ContentValues;
-    const-string/jumbo v2, "last_time_contacted"
+    const-string v2, "last_time_contacted"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

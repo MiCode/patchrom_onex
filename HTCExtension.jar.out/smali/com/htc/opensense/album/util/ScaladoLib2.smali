@@ -81,6 +81,8 @@
 
 .field public static final CERR_UNSUPPORTED_IMAGE:I = 0x14
 
+.field private static final LOCK:Ljava/lang/Object; = null
+
 .field public static final SCALADOLIB_ALLOC_FAIL:I = -0x5
 
 .field public static final SCALADOLIB_DECODE_FINISH:I = 0x1
@@ -138,7 +140,13 @@
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 44
+    .line 387
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/htc/opensense/album/util/ScaladoLib2;->LOCK:Ljava/lang/Object;
+
     return-void
 .end method
 
@@ -157,26 +165,48 @@
 .end method
 
 .method public static sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 391
+    .line 393
+    sget-object v1, Lcom/htc/opensense/album/util/ScaladoLib2;->LOCK:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 394
+    :try_start_0
     sget-object v0, Lcom/htc/opensense/album/util/ScaladoLib2;->sScaladoLib:Lcom/htc/opensense/album/util/ScaladoLib2;
 
     if-nez v0, :cond_0
 
-    .line 392
+    .line 395
     new-instance v0, Lcom/htc/opensense/album/util/ScaladoLib2;
 
     invoke-direct {v0}, Lcom/htc/opensense/album/util/ScaladoLib2;-><init>()V
 
     sput-object v0, Lcom/htc/opensense/album/util/ScaladoLib2;->sScaladoLib:Lcom/htc/opensense/album/util/ScaladoLib2;
 
-    .line 394
+    .line 397
     :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 398
     sget-object v0, Lcom/htc/opensense/album/util/ScaladoLib2;->sScaladoLib:Lcom/htc/opensense/album/util/ScaladoLib2;
 
     return-object v0
+
+    .line 397
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method
 
 
@@ -236,15 +266,15 @@
     .locals 1
 
     .prologue
-    .line 405
+    .line 409
     invoke-virtual {p0}, Lcom/htc/opensense/album/util/ScaladoLib2;->nativeRelease()V
 
-    .line 406
+    .line 410
     const/4 v0, 0x0
 
     sput-object v0, Lcom/htc/opensense/album/util/ScaladoLib2;->sScaladoLib:Lcom/htc/opensense/album/util/ScaladoLib2;
 
-    .line 407
+    .line 411
     return-void
 .end method
 
@@ -268,12 +298,12 @@
     .parameter "scaleType"
 
     .prologue
-    .line 881
+    .line 885
     if-nez p4, :cond_0
 
     const/4 v0, 0x0
 
-    .line 889
+    .line 893
     :goto_0
     return v0
 
@@ -292,12 +322,12 @@
 
     move v6, p7
 
-    .line 883
+    .line 887
     invoke-virtual/range {v0 .. v6}, Lcom/htc/opensense/album/util/ScaladoLib2;->convert3DTo2DBitmap(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;III)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 884
+    .line 888
     .local v1, bmp:Landroid/graphics/Bitmap;
     if-nez v1, :cond_1
 
@@ -305,7 +335,7 @@
 
     goto :goto_0
 
-    .line 886
+    .line 890
     :cond_1
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
@@ -327,7 +357,7 @@
 
     move-result v7
 
-    .line 887
+    .line 891
     .local v7, handle:I
     :cond_2
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
@@ -342,7 +372,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 889
+    .line 893
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v0
@@ -373,7 +403,7 @@
     .parameter "scaleType"
 
     .prologue
-    .line 807
+    .line 811
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -383,12 +413,12 @@
     :cond_0
     const/4 v9, 0x0
 
-    .line 868
+    .line 872
     :cond_1
     :goto_0
     return-object v9
 
-    .line 808
+    .line 812
     :cond_2
     const-string v10, "image/mpo"
 
@@ -414,7 +444,7 @@
 
     goto :goto_0
 
-    .line 810
+    .line 814
     :cond_3
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
@@ -424,7 +454,7 @@
 
     move-result v8
 
-    .line 811
+    .line 815
     .local v8, handle:I
     if-nez v8, :cond_4
 
@@ -432,7 +462,7 @@
 
     goto :goto_0
 
-    .line 813
+    .line 817
     :cond_4
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
@@ -444,7 +474,7 @@
 
     invoke-virtual {v10, v8, v0, v1}, Lcom/htc/opensense/album/util/ScaladoLib2;->setPreferSize(III)I
 
-    .line 814
+    .line 818
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v10
@@ -453,7 +483,7 @@
 
     invoke-virtual {v10, v8, v0}, Lcom/htc/opensense/album/util/ScaladoLib2;->setScaleType(II)I
 
-    .line 816
+    .line 820
     const-string v10, "image/jps"
 
     move-object/from16 v0, p3
@@ -464,7 +494,7 @@
 
     if-eqz v10, :cond_5
 
-    .line 817
+    .line 821
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v10
@@ -473,31 +503,31 @@
 
     invoke-virtual {v10, v8, v11}, Lcom/htc/opensense/album/util/ScaladoLib2;->setJPSDecodePart(II)I
 
-    .line 819
+    .line 823
     :cond_5
     const/4 v2, 0x0
 
-    .line 820
+    .line 824
     .local v2, aFD:Landroid/content/res/AssetFileDescriptor;
     const/4 v6, 0x0
 
-    .line 824
+    .line 828
     .local v6, fd:Ljava/io/FileDescriptor;
     :try_start_0
     invoke-virtual {p2}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 825
+    .line 829
     .local v3, authority:Ljava/lang/String;
     if-nez v3, :cond_9
 
-    .line 827
+    .line 831
     invoke-virtual {p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 828
+    .line 832
     .local v7, filePath:Ljava/lang/String;
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
@@ -505,7 +535,7 @@
 
     invoke-virtual {v10, v8, v7}, Lcom/htc/opensense/album/util/ScaladoLib2;->loadFromFilePath(ILjava/lang/String;)I
 
-    .line 842
+    .line 846
     .end local v7           #filePath:Ljava/lang/String;
     :cond_6
     :goto_1
@@ -519,7 +549,7 @@
 
     if-eqz v10, :cond_7
 
-    .line 843
+    .line 847
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v10
@@ -528,7 +558,7 @@
 
     invoke-virtual {v10, v8, v11}, Lcom/htc/opensense/album/util/ScaladoLib2;->setMPOMonoIndex(II)I
 
-    .line 845
+    .line 849
     :cond_7
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
@@ -542,7 +572,7 @@
 
     if-eqz v10, :cond_7
 
-    .line 847
+    .line 851
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v10
@@ -554,11 +584,11 @@
 
     move-result-object v9
 
-    .line 849
+    .line 853
     .local v9, outBmp:Landroid/graphics/Bitmap;
     const/4 v8, 0x0
 
-    .line 861
+    .line 865
     if-eqz v2, :cond_8
 
     :try_start_1
@@ -566,12 +596,12 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 867
+    .line 871
     :cond_8
     :goto_2
     if-eqz v8, :cond_1
 
-    .line 868
+    .line 872
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v10
@@ -580,7 +610,7 @@
 
     goto/16 :goto_0
 
-    .line 832
+    .line 836
     .end local v9           #outBmp:Landroid/graphics/Bitmap;
     :cond_9
     :try_start_2
@@ -592,29 +622,29 @@
 
     move-result-object v4
 
-    .line 833
+    .line 837
     .local v4, cpClient:Landroid/content/ContentProviderClient;
     if-eqz v4, :cond_6
 
-    .line 835
+    .line 839
     const-string v10, "r"
 
     invoke-virtual {v4, p2, v10}, Landroid/content/ContentProviderClient;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v2
 
-    .line 836
+    .line 840
     if-eqz v2, :cond_a
 
     invoke-virtual {v2}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v6
 
-    .line 837
+    .line 841
     :cond_a
     if-eqz v6, :cond_6
 
-    .line 838
+    .line 842
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v10
@@ -628,17 +658,17 @@
 
     goto :goto_1
 
-    .line 853
+    .line 857
     .end local v3           #authority:Ljava/lang/String;
     .end local v4           #cpClient:Landroid/content/ContentProviderClient;
     :catch_0
     move-exception v5
 
-    .line 855
+    .line 859
     .local v5, e:Ljava/lang/Exception;
     const/4 v9, 0x0
 
-    .line 861
+    .line 865
     if-eqz v2, :cond_b
 
     :try_start_3
@@ -646,12 +676,12 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 867
+    .line 871
     :cond_b
     :goto_3
     if-eqz v8, :cond_1
 
-    .line 868
+    .line 872
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v10
@@ -660,12 +690,12 @@
 
     goto/16 :goto_0
 
-    .line 859
+    .line 863
     .end local v5           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v10
 
-    .line 861
+    .line 865
     if-eqz v2, :cond_c
 
     :try_start_4
@@ -673,12 +703,12 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 867
+    .line 871
     :cond_c
     :goto_4
     if-eqz v8, :cond_d
 
-    .line 868
+    .line 872
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v11
@@ -688,7 +718,7 @@
     :cond_d
     throw v10
 
-    .line 863
+    .line 867
     .restart local v3       #authority:Ljava/lang/String;
     .restart local v9       #outBmp:Landroid/graphics/Bitmap;
     :catch_1
@@ -726,7 +756,7 @@
     .parameter "type"
 
     .prologue
-    .line 788
+    .line 792
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v1
@@ -735,17 +765,17 @@
 
     move-result v0
 
-    .line 789
+    .line 793
     .local v0, handle:I
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 799
+    .line 803
     :goto_0
     return-object v1
 
-    .line 791
+    .line 795
     :cond_0
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
@@ -753,7 +783,7 @@
 
     invoke-virtual {v1, v0, p2}, Lcom/htc/opensense/album/util/ScaladoLib2;->setDegree(II)I
 
-    .line 792
+    .line 796
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v1
@@ -762,28 +792,28 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/htc/opensense/album/util/ScaladoLib2;->setLoadFromExifFirst(IZ)I
 
-    .line 793
+    .line 797
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v1
 
     invoke-virtual {v1, v0, p3, p4}, Lcom/htc/opensense/album/util/ScaladoLib2;->setPreferSize(III)I
 
-    .line 794
+    .line 798
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v1
 
     invoke-virtual {v1, v0, p5}, Lcom/htc/opensense/album/util/ScaladoLib2;->setScaleType(II)I
 
-    .line 795
+    .line 799
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v1
 
     invoke-virtual {v1, v0, p1}, Lcom/htc/opensense/album/util/ScaladoLib2;->loadFromFilePath(ILjava/lang/String;)I
 
-    .line 797
+    .line 801
     :cond_1
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
@@ -797,7 +827,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 799
+    .line 803
     invoke-static {}, Lcom/htc/opensense/album/util/ScaladoLib2;->sInstance()Lcom/htc/opensense/album/util/ScaladoLib2;
 
     move-result-object v1

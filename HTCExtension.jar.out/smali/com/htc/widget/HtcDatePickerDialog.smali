@@ -1300,7 +1300,7 @@
     invoke-super {p0, p1}, Lcom/htc/widget/HtcAlertDialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
     .line 426
-    const-string v3, "year"
+    const-string/jumbo v3, "year"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -1343,7 +1343,7 @@
 
     .line 417
     .local v0, state:Landroid/os/Bundle;
-    const-string v1, "year"
+    const-string/jumbo v1, "year"
 
     iget-object v2, p0, Lcom/htc/widget/HtcDatePickerDialog;->mDatePicker:Lcom/htc/widget/HtcDatePicker;
 

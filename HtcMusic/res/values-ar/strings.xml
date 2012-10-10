@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">إضافة قائمة تشغيل</string>
     <string name="htc_delete_playlists">حذف قوائم التشغيل</string>
     <string name="htc_delete_playlist">حذف قائمة التشغيل</string>
+    <string name="htc_delete_all_playlists">حذف كل قوائم التشغيل</string>
     <string name="htc_playlist_add_songs">إضافة أغاني</string>
     <string name="htc_playlist_del_songs">حذف الأغاني.</string>
     <string name="htc_playlist_remove_songs">إزالة الأغاني</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">التخزين المؤقت…</string>
     <string name="title_send_content">إرسال المحتوى…</string>
     <string name="no_downloaded_apps_found">تعذر العثور على تطبيقات تم تنزيلها</string>
+    <string name="music_folder_picker_dialog_msg">Add songs to playlists by selecting the folder? “No” to add songs the other way</string>
 </resources>

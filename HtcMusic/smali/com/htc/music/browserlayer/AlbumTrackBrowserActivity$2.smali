@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 362
+    .line 365
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$2;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 367
+    .line 370
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -53,23 +53,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 369
+    .line 372
     invoke-static {p2}, Lcom/htc/music/util/MusicUtils;->isExternalStorageUnMount(Landroid/content/Intent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 374
+    .line 377
     :cond_0
     :goto_0
     return-void
 
-    .line 371
+    .line 374
     :cond_1
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->clearAlbumArtCache()V
 
-    .line 372
+    .line 375
     iget-object v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$2;->this$0:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity;->finish()V

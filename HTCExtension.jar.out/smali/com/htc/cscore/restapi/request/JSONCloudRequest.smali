@@ -369,7 +369,7 @@
     invoke-virtual {v2, v8, v9}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 290
-    const-string v8, "x-request"
+    const-string/jumbo v8, "x-request"
 
     const-string v9, "JSON"
 

@@ -508,7 +508,7 @@
     if-ge v1, v2, :cond_0
 
     .line 187
-    const-string/jumbo v2, "item_background"
+    const-string v2, "item_background"
 
     const v3, 0x1080361
 
@@ -528,7 +528,7 @@
     .line 190
     .restart local v1       #targetVersion:I
     :cond_0
-    const-string/jumbo v2, "item_background_holo_dark"
+    const-string v2, "item_background_holo_dark"
 
     const v3, 0x1080362
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 5143
+    .line 5156
     iput-object p1, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -43,7 +43,7 @@
 
     const/high16 v4, 0x3f80
 
-    .line 5147
+    .line 5160
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
@@ -55,11 +55,11 @@
 
     move-result v2
 
-    .line 5148
+    .line 5161
     .local v2, size:I
     const/4 v0, 0x0
 
-    .line 5149
+    .line 5162
     .local v0, child:Landroid/view/View;
     const/4 v1, 0x0
 
@@ -67,7 +67,7 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 5150
+    .line 5163
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
@@ -82,22 +82,22 @@
     .end local v0           #child:Landroid/view/View;
     check-cast v0, Landroid/view/View;
 
-    .line 5151
+    .line 5164
     .restart local v0       #child:Landroid/view/View;
     invoke-virtual {v0, v4}, Landroid/view/View;->setScaleX(F)V
 
-    .line 5152
+    .line 5165
     invoke-virtual {v0, v4}, Landroid/view/View;->setScaleY(F)V
 
-    .line 5153
+    .line 5166
     invoke-virtual {v0, v4}, Landroid/view/View;->setAlpha(F)V
 
-    .line 5149
+    .line 5162
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 5155
+    .line 5168
     :cond_0
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -105,14 +105,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 5156
+    .line 5169
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v3, v3, Lcom/htc/widget/HtcListView;->mDeleteMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v3}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 5157
+    .line 5170
     :cond_1
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -122,17 +122,17 @@
 
     if-ne v3, v2, :cond_4
 
-    .line 5158
+    .line 5171
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     iput-boolean v5, v3, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 5159
+    .line 5172
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     iput-boolean v5, v3, Lcom/htc/widget/HtcListView;->mInDeleteAnimation:Z
 
-    .line 5160
+    .line 5173
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mDelPosList:Ljava/util/ArrayList;
@@ -142,7 +142,7 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 5161
+    .line 5174
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -152,7 +152,7 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 5162
+    .line 5175
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
@@ -162,7 +162,7 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 5166
+    .line 5179
     :goto_1
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -179,7 +179,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 5167
+    .line 5180
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
@@ -191,7 +191,7 @@
 
     if-eqz v3, :cond_5
 
-    .line 5168
+    .line 5181
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
@@ -209,7 +209,7 @@
 
     invoke-virtual {v3}, Landroid/widget/BaseExpandableListAdapter;->notifyDataSetChanged()V
 
-    .line 5176
+    .line 5189
     :cond_2
     :goto_2
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
@@ -226,18 +226,18 @@
 
     if-eqz v3, :cond_3
 
-    .line 5177
+    .line 5190
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v3, v3, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     invoke-interface {v3}, Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;->onAnimationEnd()V
 
-    .line 5179
+    .line 5192
     :cond_3
     return-void
 
-    .line 5164
+    .line 5177
     :cond_4
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -247,7 +247,7 @@
 
     goto :goto_1
 
-    .line 5169
+    .line 5182
     :cond_5
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -260,7 +260,7 @@
 
     if-eqz v3, :cond_6
 
-    .line 5170
+    .line 5183
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
@@ -274,7 +274,7 @@
 
     goto :goto_2
 
-    .line 5171
+    .line 5184
     :cond_6
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -282,7 +282,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 5172
+    .line 5185
     iget-object v3, p0, Lcom/htc/widget/HtcListView$7;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v3, v3, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;

@@ -29,7 +29,7 @@
     .locals 2
 
     .prologue
-    .line 1299
+    .line 1414
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "aggregation_exceptions_manual"
@@ -47,7 +47,7 @@
     .locals 0
 
     .prologue
-    .line 1298
+    .line 1413
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

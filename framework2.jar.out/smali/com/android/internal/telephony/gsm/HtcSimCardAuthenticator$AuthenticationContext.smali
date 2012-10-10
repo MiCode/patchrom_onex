@@ -27,15 +27,15 @@
     .parameter "onComplete"
 
     .prologue
-    .line 112
+    .line 113
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 113
+    .line 114
     iput-boolean p1, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->is3gSim:Z
 
-    .line 114
+    .line 115
     iput-object p2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
-    .line 115
+    .line 116
     return-void
 .end method

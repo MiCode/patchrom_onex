@@ -53,24 +53,24 @@
     .end annotation
 
     .prologue
-    .line 138
+    .line 139
     .local p3, exifTags:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;->this$0:Lcom/android/camera/component/PanoramaController;
 
-    .line 139
+    .line 140
     invoke-virtual {p1}, Lcom/android/camera/component/PanoramaController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
     invoke-direct {p0, v0, p2}, Lcom/android/camera/imaging/SaveImageTask;-><init>(Lcom/android/camera/CameraThread;[B)V
 
-    .line 140
+    .line 141
     iput-object p3, p0, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;->exifTags:Ljava/util/Hashtable;
 
-    .line 141
+    .line 142
     iput-object p4, p0, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;->uiRotation:Lcom/android/camera/rotate/UIRotation;
 
-    .line 142
+    .line 143
     return-void
 .end method
 
@@ -83,13 +83,13 @@
     .parameter "filePath"
 
     .prologue
-    .line 150
+    .line 151
     iget-object v0, p0, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;->this$0:Lcom/android/camera/component/PanoramaController;
 
     #setter for: Lcom/android/camera/component/PanoramaController;->m_LatestContentUri:Landroid/net/Uri;
     invoke-static {v0, p2}, Lcom/android/camera/component/PanoramaController;->access$002(Lcom/android/camera/component/PanoramaController;Landroid/net/Uri;)Landroid/net/Uri;
 
-    .line 151
+    .line 152
     return-void
 .end method
 
@@ -103,7 +103,7 @@
     .end annotation
 
     .prologue
-    .line 161
+    .line 162
     sget-object v2, Lcom/android/camera/component/PanoramaController$9;->$SwitchMap$com$android$camera$rotate$UIRotation:[I
 
     move-object/from16 v0, p0
@@ -118,10 +118,10 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 176
+    .line 177
     sget-object v22, Lcom/scalado/caps/Rotation;->TO_0:Lcom/scalado/caps/Rotation;
 
-    .line 177
+    .line 178
     .local v22, rotation:Lcom/scalado/caps/Rotation;
     move-object/from16 v0, p0
 
@@ -131,7 +131,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
+    .line 183
     :goto_0
     const/4 v2, 0x1
 
@@ -141,11 +141,11 @@
 
     move-result-object v18
 
-    .line 183
+    .line 184
     .local v18, jpegRawData:[B
     if-nez v18, :cond_0
 
-    .line 185
+    .line 186
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
@@ -154,17 +154,17 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 266
+    .line 267
     :goto_1
     return-void
 
-    .line 164
+    .line 165
     .end local v18           #jpegRawData:[B
     .end local v22           #rotation:Lcom/scalado/caps/Rotation;
     :pswitch_0
     sget-object v22, Lcom/scalado/caps/Rotation;->TO_90:Lcom/scalado/caps/Rotation;
 
-    .line 165
+    .line 166
     .restart local v22       #rotation:Lcom/scalado/caps/Rotation;
     move-object/from16 v0, p0
 
@@ -176,12 +176,12 @@
 
     goto :goto_0
 
-    .line 168
+    .line 169
     .end local v22           #rotation:Lcom/scalado/caps/Rotation;
     :pswitch_1
     sget-object v22, Lcom/scalado/caps/Rotation;->TO_270:Lcom/scalado/caps/Rotation;
 
-    .line 169
+    .line 170
     .restart local v22       #rotation:Lcom/scalado/caps/Rotation;
     move-object/from16 v0, p0
 
@@ -193,12 +193,12 @@
 
     goto :goto_0
 
-    .line 172
+    .line 173
     .end local v22           #rotation:Lcom/scalado/caps/Rotation;
     :pswitch_2
     sget-object v22, Lcom/scalado/caps/Rotation;->TO_180:Lcom/scalado/caps/Rotation;
 
-    .line 173
+    .line 174
     .restart local v22       #rotation:Lcom/scalado/caps/Rotation;
     move-object/from16 v0, p0
 
@@ -210,7 +210,7 @@
 
     goto :goto_0
 
-    .line 190
+    .line 191
     .restart local v18       #jpegRawData:[B
     :cond_0
     sget-object v2, Lcom/scalado/caps/Rotation;->TO_0:Lcom/scalado/caps/Rotation;
@@ -219,10 +219,10 @@
 
     if-ne v0, v2, :cond_4
 
-    .line 192
+    .line 193
     const/16 v24, 0x0
 
-    .line 195
+    .line 196
     .local v24, stream:Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v25, Ljava/io/FileOutputStream;
@@ -237,7 +237,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 196
+    .line 197
     .end local v24           #stream:Ljava/io/FileOutputStream;
     .local v25, stream:Ljava/io/FileOutputStream;
     :try_start_1
@@ -249,13 +249,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 200
+    .line 201
     if-eqz v25, :cond_1
 
-    .line 201
+    .line 202
     invoke-virtual/range {v25 .. v25}, Ljava/io/FileOutputStream;->close()V
 
-    .line 242
+    .line 243
     .end local v25           #stream:Ljava/io/FileOutputStream;
     :cond_1
     :goto_2
@@ -268,7 +268,7 @@
 
     invoke-direct {v12, v2}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    .line 243
+    .line 244
     .local v12, exif:Landroid/media/ExifInterface;
     move-object/from16 v0, p0
 
@@ -296,7 +296,7 @@
 
     check-cast v10, Ljava/util/Map$Entry;
 
-    .line 244
+    .line 245
     .local v10, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v10}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -316,14 +316,14 @@
 
     goto :goto_3
 
-    .line 247
+    .line 248
     .end local v10           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v12           #exif:Landroid/media/ExifInterface;
     .end local v13           #i$:Ljava/util/Iterator;
     :catch_0
     move-exception v2
 
-    .line 251
+    .line 252
     :goto_4
     move-object/from16 v0, p0
 
@@ -342,7 +342,7 @@
 
     move-result-object v7
 
-    .line 252
+    .line 253
     .local v7, reviewImage:Landroid/graphics/Bitmap;
     move-object/from16 v0, p0
 
@@ -355,7 +355,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 253
+    .line 254
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;->this$0:Lcom/android/camera/component/PanoramaController;
@@ -377,7 +377,7 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/camera/component/PanoramaController;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;)Z
 
-    .line 262
+    .line 263
     :cond_2
     :goto_5
     move-object/from16 v0, p0
@@ -391,7 +391,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 263
+    .line 264
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/camera/component/PanoramaController$SavePanoramaImageTask;->this$0:Lcom/android/camera/component/PanoramaController;
@@ -411,7 +411,7 @@
 
     goto/16 :goto_1
 
-    .line 200
+    .line 201
     .end local v7           #reviewImage:Landroid/graphics/Bitmap;
     .restart local v24       #stream:Ljava/io/FileOutputStream;
     :catchall_0
@@ -420,18 +420,18 @@
     :goto_6
     if-eqz v24, :cond_3
 
-    .line 201
+    .line 202
     invoke-virtual/range {v24 .. v24}, Ljava/io/FileOutputStream;->close()V
 
     :cond_3
     throw v2
 
-    .line 206
+    .line 207
     .end local v24           #stream:Ljava/io/FileOutputStream;
     :cond_4
     const/16 v19, 0x0
 
-    .line 209
+    .line 210
     .local v19, outputStream:Lcom/scalado/stream/FileStream;
     :try_start_3
     new-instance v20, Lcom/scalado/stream/FileStream;
@@ -449,7 +449,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 211
+    .line 212
     .end local v19           #outputStream:Lcom/scalado/stream/FileStream;
     .local v20, outputStream:Lcom/scalado/stream/FileStream;
     :try_start_4
@@ -461,7 +461,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 212
+    .line 213
     new-instance v16, Lcom/scalado/stream/BufferStream;
 
     new-instance v2, Lcom/scalado/base/Buffer;
@@ -478,7 +478,7 @@
 
     invoke-direct {v0, v2, v3}, Lcom/scalado/stream/BufferStream;-><init>(Lcom/scalado/base/Buffer;I)V
 
-    .line 213
+    .line 214
     .local v16, inputStream:Lcom/scalado/stream/BufferStream;
     move-object/from16 v0, p0
 
@@ -491,13 +491,13 @@
 
     move-result-object v8
 
-    .line 214
+    .line 215
     .local v8, decoder:Lcom/scalado/caps/codec/decoder/JpegDecoder;
     invoke-virtual {v8}, Lcom/scalado/caps/codec/decoder/JpegDecoder;->getDimensions()Lcom/scalado/base/Size;
 
     move-result-object v14
 
-    .line 215
+    .line 216
     .local v14, imageSize:Lcom/scalado/base/Size;
     new-instance v23, Lcom/scalado/caps/Session;
 
@@ -505,7 +505,7 @@
 
     invoke-direct {v0, v8}, Lcom/scalado/caps/Session;-><init>(Lcom/scalado/caps/Decoder;)V
 
-    .line 216
+    .line 217
     .local v23, session:Lcom/scalado/caps/Session;
     new-instance v21, Lcom/scalado/caps/filter/Rotate;
 
@@ -515,11 +515,11 @@
 
     invoke-direct {v0, v1}, Lcom/scalado/caps/filter/Rotate;-><init>(Lcom/scalado/caps/Session;)V
 
-    .line 217
+    .line 218
     .local v21, rotate:Lcom/scalado/caps/filter/Rotate;
     invoke-virtual/range {v21 .. v22}, Lcom/scalado/caps/filter/Rotate;->set(Lcom/scalado/caps/Rotation;)V
 
-    .line 219
+    .line 220
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
@@ -528,7 +528,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 220
+    .line 221
     sget-object v2, Lcom/scalado/caps/Rotation;->TO_180:Lcom/scalado/caps/Rotation;
 
     move-object/from16 v0, v22
@@ -541,7 +541,7 @@
 
     if-eq v0, v2, :cond_5
 
-    .line 221
+    .line 222
     new-instance v15, Lcom/scalado/base/Size;
 
     invoke-virtual {v14}, Lcom/scalado/base/Size;->getHeight()I
@@ -558,7 +558,7 @@
     .local v15, imageSize:Lcom/scalado/base/Size;
     move-object v14, v15
 
-    .line 222
+    .line 223
     .end local v15           #imageSize:Lcom/scalado/base/Size;
     .restart local v14       #imageSize:Lcom/scalado/base/Size;
     :cond_5
@@ -568,20 +568,20 @@
 
     invoke-direct {v9, v0, v14}, Lcom/scalado/caps/codec/encoder/JpegEncoder;-><init>(Lcom/scalado/stream/Stream;Lcom/scalado/base/Size;)V
 
-    .line 223
+    .line 224
     .local v9, encoder:Lcom/scalado/caps/codec/encoder/JpegEncoder;
     const/high16 v2, 0x3f80
 
     invoke-virtual {v9, v2}, Lcom/scalado/caps/codec/encoder/JpegEncoder;->setJpegQuality(F)V
 
-    .line 224
+    .line 225
     move-object/from16 v0, v23
 
     invoke-virtual {v0, v9}, Lcom/scalado/caps/Session;->render(Lcom/scalado/caps/Encoder;)Lcom/scalado/base/Iterator;
 
     move-result-object v17
 
-    .line 225
+    .line 226
     .local v17, iterator:Lcom/scalado/base/Iterator;
     const/4 v2, 0x0
 
@@ -589,21 +589,21 @@
 
     invoke-virtual {v0, v2}, Lcom/scalado/base/Iterator;->step(I)F
 
-    .line 226
+    .line 227
     invoke-virtual/range {v17 .. v17}, Lcom/scalado/base/Iterator;->done()Z
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 234
+    .line 235
     if-eqz v20, :cond_1
 
-    .line 235
+    .line 236
     invoke-virtual/range {v20 .. v20}, Lcom/scalado/stream/FileStream;->close()V
 
     goto/16 :goto_2
 
-    .line 228
+    .line 229
     .end local v8           #decoder:Lcom/scalado/caps/codec/decoder/JpegDecoder;
     .end local v9           #encoder:Lcom/scalado/caps/codec/encoder/JpegEncoder;
     .end local v14           #imageSize:Lcom/scalado/base/Size;
@@ -616,7 +616,7 @@
     :catch_1
     move-exception v11
 
-    .line 230
+    .line 231
     .local v11, ex:Ljava/lang/Throwable;
     :goto_7
     :try_start_5
@@ -630,15 +630,15 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 234
+    .line 235
     if-eqz v19, :cond_1
 
-    .line 235
+    .line 236
     invoke-virtual/range {v19 .. v19}, Lcom/scalado/stream/FileStream;->close()V
 
     goto/16 :goto_2
 
-    .line 234
+    .line 235
     .end local v11           #ex:Ljava/lang/Throwable;
     :catchall_1
     move-exception v2
@@ -646,13 +646,13 @@
     :goto_8
     if-eqz v19, :cond_6
 
-    .line 235
+    .line 236
     invoke-virtual/range {v19 .. v19}, Lcom/scalado/stream/FileStream;->close()V
 
     :cond_6
     throw v2
 
-    .line 245
+    .line 246
     .end local v19           #outputStream:Lcom/scalado/stream/FileStream;
     .restart local v12       #exif:Landroid/media/ExifInterface;
     .restart local v13       #i$:Ljava/util/Iterator;
@@ -664,7 +664,7 @@
 
     goto/16 :goto_4
 
-    .line 256
+    .line 257
     .end local v12           #exif:Landroid/media/ExifInterface;
     .end local v13           #i$:Ljava/util/Iterator;
     .restart local v7       #reviewImage:Landroid/graphics/Bitmap;
@@ -677,15 +677,15 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 257
+    .line 258
     if-eqz v7, :cond_2
 
-    .line 258
+    .line 259
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->recycle()V
 
     goto/16 :goto_5
 
-    .line 265
+    .line 266
     :cond_9
     move-object/from16 v0, p0
 
@@ -697,7 +697,7 @@
 
     goto/16 :goto_1
 
-    .line 234
+    .line 235
     .end local v7           #reviewImage:Landroid/graphics/Bitmap;
     .restart local v20       #outputStream:Lcom/scalado/stream/FileStream;
     :catchall_2
@@ -709,7 +709,7 @@
     .restart local v19       #outputStream:Lcom/scalado/stream/FileStream;
     goto :goto_8
 
-    .line 228
+    .line 229
     .end local v19           #outputStream:Lcom/scalado/stream/FileStream;
     .restart local v20       #outputStream:Lcom/scalado/stream/FileStream;
     :catch_2
@@ -721,7 +721,7 @@
     .restart local v19       #outputStream:Lcom/scalado/stream/FileStream;
     goto :goto_7
 
-    .line 200
+    .line 201
     .end local v19           #outputStream:Lcom/scalado/stream/FileStream;
     .restart local v25       #stream:Ljava/io/FileOutputStream;
     :catchall_3
@@ -733,7 +733,7 @@
     .restart local v24       #stream:Ljava/io/FileOutputStream;
     goto/16 :goto_6
 
-    .line 161
+    .line 162
     nop
 
     :pswitch_data_0

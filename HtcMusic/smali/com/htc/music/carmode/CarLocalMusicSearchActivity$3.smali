@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 157
+    .line 155
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$3;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,11 +40,11 @@
     .parameter "intent"
 
     .prologue
-    .line 161
+    .line 159
     iget-object v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$3;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-virtual {v0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->finish()V
 
-    .line 162
+    .line 160
     return-void
 .end method

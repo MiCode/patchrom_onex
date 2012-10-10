@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1330
+    .line 1332
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$9;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 1333
+    .line 1335
     :try_start_0
     sget-object v5, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -51,11 +51,11 @@
 
     move-result v4
 
-    .line 1334
+    .line 1336
     .local v4, queueSize:I
     new-array v3, v4, [I
 
-    .line 1335
+    .line 1337
     .local v3, list:[I
     const/4 v1, 0x0
 
@@ -63,26 +63,31 @@
     :goto_0
     if-ge v1, v4, :cond_0
 
-    .line 1336
+    .line 1338
     aput v1, v3, v1
 
-    .line 1335
+    .line 1337
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1338
+    .line 1341
     :cond_0
+    sget-object v5, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
+
+    invoke-interface {v5}, Lcom/htc/music/IMediaPlaybackService;->pause()V
+
+    .line 1342
     sget-object v5, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v5, v3}, Lcom/htc/music/IMediaPlaybackService;->removeQueueTracks([I)I
 
-    .line 1340
+    .line 1344
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 1341
+    .line 1345
     .local v2, intent:Landroid/content/Intent;
     iget-object v5, p0, Lcom/htc/music/NowPlayingViewHelper$9;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -92,33 +97,33 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 1342
+    .line 1346
     const/high16 v5, 0x2400
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1343
+    .line 1347
     const-string v5, "KeepHistory"
 
     const/4 v6, 0x1
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1344
+    .line 1348
     const-string v5, "RemoveStoreHistory"
 
     const/4 v6, 0x1
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1345
+    .line 1349
     iget-object v5, p0, Lcom/htc/music/NowPlayingViewHelper$9;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v5, v5, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
 
     invoke-virtual {v5, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1347
+    .line 1351
     iget-object v5, p0, Lcom/htc/music/NowPlayingViewHelper$9;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v5, v5, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;
@@ -143,7 +148,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1353
+    .line 1357
     .end local v1           #i:I
     .end local v2           #intent:Landroid/content/Intent;
     .end local v3           #list:[I
@@ -151,11 +156,11 @@
     :goto_1
     return-void
 
-    .line 1350
+    .line 1354
     :catch_0
     move-exception v0
 
-    .line 1351
+    .line 1355
     .local v0, e:Landroid/os/RemoteException;
     const-string v5, "[NowPlayingViewHelper]"
 

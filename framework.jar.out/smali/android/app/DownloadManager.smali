@@ -188,7 +188,7 @@
 
     const/16 v1, 0xb
 
-    const-string/jumbo v2, "lastmod AS last_modified_timestamp"
+    const-string v2, "lastmod AS last_modified_timestamp"
 
     aput-object v2, v0, v1
 
@@ -924,7 +924,7 @@
 
     .line 1010
     :cond_3
-    const-string/jumbo v6, "local_filename"
+    const-string v6, "local_filename"
 
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
@@ -993,7 +993,7 @@
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "input param \'ids\' can\'t be null"
+    const-string v2, "input param \'ids\' can\'t be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -1188,7 +1188,7 @@
 
     .line 1076
     .local v3, status:I
-    const-string/jumbo v5, "local_filename"
+    const-string v5, "local_filename"
 
     invoke-interface {v2, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 

@@ -21,8 +21,10 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera/event/EventHandler",
         "<",
-        "Lcom/android/camera/ExternalCommandEventArgs;",
-        ">;"
+        "Lcom/android/camera/OneValueEventArgs",
+        "<",
+        "Landroid/view/SurfaceHolder;",
+        ">;>;"
     }
 .end annotation
 
@@ -37,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 6207
+    .line 6353
     iput-object p1, p0, Lcom/android/camera/HTCCamera$23;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,34 +49,59 @@
 
 
 # virtual methods
-.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/ExternalCommandEventArgs;)V
-    .locals 1
+.method public onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/OneValueEventArgs;)V
+    .locals 2
     .parameter
     .parameter "sender"
-    .parameter "e"
+    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/android/camera/event/Event",
             "<",
-            "Lcom/android/camera/ExternalCommandEventArgs;",
-            ">;",
+            "Lcom/android/camera/OneValueEventArgs",
+            "<",
+            "Landroid/view/SurfaceHolder;",
+            ">;>;",
             "Ljava/lang/Object;",
-            "Lcom/android/camera/ExternalCommandEventArgs;",
-            ")V"
+            "Lcom/android/camera/OneValueEventArgs",
+            "<",
+            "Landroid/view/SurfaceHolder;",
+            ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 6211
-    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/ExternalCommandEventArgs;>;"
-    iget-object v0, p0, Lcom/android/camera/HTCCamera$23;->this$0:Lcom/android/camera/HTCCamera;
+    .line 6357
+    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;>;"
+    .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;"
+    iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
 
-    #calls: Lcom/android/camera/HTCCamera;->onExternalCommandReceived(Lcom/android/camera/ExternalCommandEventArgs;)V
-    invoke-static {v0, p3}, Lcom/android/camera/HTCCamera;->access$4400(Lcom/android/camera/HTCCamera;Lcom/android/camera/ExternalCommandEventArgs;)V
+    if-eqz v0, :cond_0
 
-    .line 6212
+    .line 6358
+    iget-object v1, p0, Lcom/android/camera/HTCCamera$23;->this$0:Lcom/android/camera/HTCCamera;
+
+    iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/SurfaceHolder;
+
+    #calls: Lcom/android/camera/HTCCamera;->onPreviewSurfaceCreated(Landroid/view/SurfaceHolder;)V
+    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4500(Lcom/android/camera/HTCCamera;Landroid/view/SurfaceHolder;)V
+
+    .line 6361
+    :goto_0
     return-void
+
+    .line 6360
+    :cond_0
+    const-string v0, "HTCCamera"
+
+    const-string v1, "No SurfaceHolder brought by event"
+
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 .method public bridge synthetic onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
@@ -84,11 +111,11 @@
     .parameter "x2"
 
     .prologue
-    .line 6207
-    check-cast p3, Lcom/android/camera/ExternalCommandEventArgs;
+    .line 6353
+    check-cast p3, Lcom/android/camera/OneValueEventArgs;
 
     .end local p3
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/HTCCamera$23;->onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/ExternalCommandEventArgs;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/HTCCamera$23;->onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/OneValueEventArgs;)V
 
     return-void
 .end method

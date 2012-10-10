@@ -25,7 +25,7 @@
     .locals 3
 
     .prologue
-    .line 1893
+    .line 1900
     invoke-static {}, Lcom/android/camera/rotate/UIRotation;->values()[Lcom/android/camera/rotate/UIRotation;
 
     move-result-object v0
@@ -99,7 +99,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 1493
+    .line 1498
     :goto_3
     invoke-static {}, Lcom/android/camera/UIState;->values()[Lcom/android/camera/UIState;
 
@@ -155,7 +155,7 @@
 
     goto :goto_4
 
-    .line 1893
+    .line 1900
     :catch_2
     move-exception v0
 

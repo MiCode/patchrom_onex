@@ -25,13 +25,13 @@
     .parameter "res"
 
     .prologue
-    .line 770
+    .line 815
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackService$QueryHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
 
-    .line 771
+    .line 816
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 772
+    .line 817
     return-void
 .end method
 
@@ -44,32 +44,32 @@
     .parameter "cursor"
 
     .prologue
-    .line 776
+    .line 821
     if-nez p2, :cond_1
 
-    .line 777
+    .line 822
     const-string v13, "[MediaPlaybackService]"
 
     const-string v14, "onQueryComplete, cookie is null! Do nothing"
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 778
+    .line 823
     if-eqz p3, :cond_0
 
-    .line 779
+    .line 824
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
 
-    .line 849
+    .line 894
     :cond_0
     :goto_0
     return-void
 
-    .line 783
+    .line 828
     :cond_1
     if-nez p3, :cond_2
 
-    .line 784
+    .line 829
     const-string v13, "[MediaPlaybackService]"
 
     const-string v14, "onQueryComplete, cursor is null! Do nothing"
@@ -81,10 +81,10 @@
     :cond_2
     move-object/from16 v3, p2
 
-    .line 787
+    .line 832
     check-cast v3, Landroid/os/Bundle;
 
-    .line 788
+    .line 833
     .local v3, bundle:Landroid/os/Bundle;
     const-string v13, "command"
 
@@ -92,7 +92,7 @@
 
     move-result-object v11
 
-    .line 789
+    .line 834
     .local v11, szCommand:Ljava/lang/String;
     const-string v13, "id"
 
@@ -100,7 +100,7 @@
 
     move-result v8
 
-    .line 790
+    .line 835
     .local v8, iID:I
     const-string v13, "[MediaPlaybackService]"
 
@@ -134,25 +134,25 @@
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 792
+    .line 837
     if-nez v11, :cond_3
 
-    .line 793
+    .line 838
     const-string v13, "[MediaPlaybackService]"
 
     const-string v14, "onQueryComplete, szCommand is null! Do nothing"
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 794
+    .line 839
     if-eqz p3, :cond_0
 
-    .line 795
+    .line 840
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 799
+    .line 844
     :cond_3
     const-string v13, "play_artist"
 
@@ -186,44 +186,44 @@
 
     if-eqz v13, :cond_8
 
-    .line 803
+    .line 848
     :cond_4
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->getCount()I
 
     move-result v9
 
-    .line 804
+    .line 849
     .local v9, len:I
     if-gtz v9, :cond_5
 
-    .line 805
+    .line 850
     const-string v13, "[MediaPlaybackService]"
 
     const-string v14, "onQueryComplete, attempt to play empty song list"
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 806
+    .line 851
     if-eqz p3, :cond_0
 
-    .line 807
+    .line 852
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 811
+    .line 856
     :cond_5
     new-array v2, v9, [I
 
-    .line 812
+    .line 857
     .local v2, audioIDList:[I
     new-array v1, v9, [I
 
-    .line 813
+    .line 858
     .local v1, albumIDList:[I
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 814
+    .line 859
     const-string v13, "audio_id"
 
     move-object/from16 v0, p3
@@ -232,11 +232,11 @@
 
     move-result v6
 
-    .line 815
+    .line 860
     .local v6, iAudioIDColidx:I
     if-gez v6, :cond_6
 
-    .line 816
+    .line 861
     const-string v13, "_id"
 
     move-object/from16 v0, p3
@@ -245,7 +245,7 @@
 
     move-result v6
 
-    .line 818
+    .line 863
     :cond_6
     const-string v13, "album_id"
 
@@ -255,7 +255,7 @@
 
     move-result v5
 
-    .line 819
+    .line 864
     .local v5, iAlbumIDColidx:I
     const/4 v4, 0x0
 
@@ -263,7 +263,7 @@
     :goto_1
     if-ge v4, v9, :cond_7
 
-    .line 820
+    .line 865
     move-object/from16 v0, p3
 
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getInt(I)I
@@ -272,7 +272,7 @@
 
     aput v13, v2, v4
 
-    .line 821
+    .line 866
     move-object/from16 v0, p3
 
     invoke-interface {v0, v5}, Landroid/database/Cursor;->getInt(I)I
@@ -281,15 +281,15 @@
 
     aput v13, v1, v4
 
-    .line 822
+    .line 867
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 819
+    .line 864
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 827
+    .line 872
     :cond_7
     move-object/from16 v0, p0
 
@@ -297,7 +297,7 @@
 
     invoke-virtual {v13, v1}, Lcom/htc/music/MediaPlaybackService;->setAlbumQueue([I)V
 
-    .line 828
+    .line 873
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/MediaPlaybackService$QueryHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -311,7 +311,7 @@
 
     move-result-object v10
 
-    .line 829
+    .line 874
     .local v10, service:Lcom/htc/music/IMediaPlaybackService;
     move-object/from16 v0, p0
 
@@ -325,20 +325,20 @@
 
     check-cast v12, Landroid/app/UiModeManager;
 
-    .line 830
+    .line 875
     .local v12, uiModeMgr:Landroid/app/UiModeManager;
     const/4 v7, 0x1
 
-    .line 831
+    .line 876
     .local v7, iCurrModeType:I
     if-eqz v12, :cond_9
 
-    .line 832
+    .line 877
     invoke-virtual {v12}, Landroid/app/UiModeManager;->getCurrentModeType()I
 
     move-result v7
 
-    .line 833
+    .line 878
     const-string v13, "[MediaPlaybackService]"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -361,13 +361,13 @@
 
     invoke-static {v13, v14}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 838
+    .line 883
     :goto_2
     const/4 v13, 0x3
 
     if-eq v7, v13, :cond_a
 
-    .line 839
+    .line 884
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/music/MediaPlaybackService$QueryHandler;->this$0:Lcom/htc/music/MediaPlaybackService;
@@ -378,7 +378,7 @@
 
     invoke-static {v10, v13, v2, v14, v15}, Lcom/htc/music/util/MusicUtils;->playAll(Lcom/htc/music/IMediaPlaybackService;Landroid/content/Context;[IILcom/htc/music/NpCategory;)V
 
-    .line 846
+    .line 891
     .end local v1           #albumIDList:[I
     .end local v2           #audioIDList:[I
     .end local v4           #i:I
@@ -392,12 +392,12 @@
     :goto_3
     if-eqz p3, :cond_0
 
-    .line 847
+    .line 892
     invoke-interface/range {p3 .. p3}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
 
-    .line 836
+    .line 881
     .restart local v1       #albumIDList:[I
     .restart local v2       #audioIDList:[I
     .restart local v4       #i:I
@@ -416,7 +416,7 @@
 
     goto :goto_2
 
-    .line 842
+    .line 887
     :cond_a
     move-object/from16 v0, p0
 

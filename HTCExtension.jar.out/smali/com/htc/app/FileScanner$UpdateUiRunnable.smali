@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 952
+    .line 957
     iput-object p1, p0, Lcom/htc/app/FileScanner$UpdateUiRunnable;->this$0:Lcom/htc/app/FileScanner;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 952
+    .line 957
     invoke-direct {p0, p1}, Lcom/htc/app/FileScanner$UpdateUiRunnable;-><init>(Lcom/htc/app/FileScanner;)V
 
     return-void
@@ -53,7 +53,7 @@
     .locals 4
 
     .prologue
-    .line 962
+    .line 967
     iget-object v0, p0, Lcom/htc/app/FileScanner$UpdateUiRunnable;->this$0:Lcom/htc/app/FileScanner;
 
     #getter for: Lcom/htc/app/FileScanner;->isStop:Z
@@ -72,7 +72,7 @@
 
     if-nez v0, :cond_0
 
-    .line 963
+    .line 968
     iget-object v0, p0, Lcom/htc/app/FileScanner$UpdateUiRunnable;->this$0:Lcom/htc/app/FileScanner;
 
     #getter for: Lcom/htc/app/FileScanner;->mHandler:Landroid/os/Handler;
@@ -82,7 +82,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 964
+    .line 969
     iget-object v0, p0, Lcom/htc/app/FileScanner$UpdateUiRunnable;->this$0:Lcom/htc/app/FileScanner;
 
     #getter for: Lcom/htc/app/FileScanner;->mHandler:Landroid/os/Handler;
@@ -105,7 +105,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 965
+    .line 970
     iget-object v0, p0, Lcom/htc/app/FileScanner$UpdateUiRunnable;->this$0:Lcom/htc/app/FileScanner;
 
     new-instance v1, Lcom/htc/app/FileScanner$UpdateUiRunnable;
@@ -117,7 +117,7 @@
     #setter for: Lcom/htc/app/FileScanner;->updateUiRunnable:Lcom/htc/app/FileScanner$UpdateUiRunnable;
     invoke-static {v0, v1}, Lcom/htc/app/FileScanner;->access$402(Lcom/htc/app/FileScanner;Lcom/htc/app/FileScanner$UpdateUiRunnable;)Lcom/htc/app/FileScanner$UpdateUiRunnable;
 
-    .line 966
+    .line 971
     iget-object v0, p0, Lcom/htc/app/FileScanner$UpdateUiRunnable;->this$0:Lcom/htc/app/FileScanner;
 
     #getter for: Lcom/htc/app/FileScanner;->mHandler:Landroid/os/Handler;
@@ -136,7 +136,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 970
+    .line 974
     :cond_0
     return-void
 .end method

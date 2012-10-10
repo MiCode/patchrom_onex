@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1269
+    .line 1280
     iput-object p1, p0, Lcom/android/camera/HTCCamera$8;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1273
+    .line 1284
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/rotate/UIRotation;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/rotate/UIRotation;>;"
     iget-object v1, p0, Lcom/android/camera/HTCCamera$8;->this$0:Lcom/android/camera/HTCCamera;
@@ -76,8 +76,8 @@
     check-cast v0, Lcom/android/camera/rotate/UIRotation;
 
     #calls: Lcom/android/camera/HTCCamera;->onRotationChanged(Lcom/android/camera/rotate/UIRotation;)V
-    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$3300(Lcom/android/camera/HTCCamera;Lcom/android/camera/rotate/UIRotation;)V
+    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$3400(Lcom/android/camera/HTCCamera;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1274
+    .line 1285
     return-void
 .end method

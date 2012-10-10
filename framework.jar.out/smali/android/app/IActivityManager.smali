@@ -195,6 +195,8 @@
 
 .field public static final NOTE_WAKEUP_ALARM_TRANSACTION:I = 0x44
 
+.field public static final ON_NAVIGATION_BAR_CHANGED_TRANSACTION:I = 0xd5
+
 .field public static final OPEN_CONTENT_URI_TRANSACTION:I = 0x5
 
 .field public static final OVERRIDE_PENDING_TRANSITION_TRANSACTION:I = 0x65
@@ -1047,6 +1049,14 @@
 .end method
 
 .method public abstract noteWakeupAlarm(Landroid/content/IIntentSender;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract onNavigationBarChanged()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

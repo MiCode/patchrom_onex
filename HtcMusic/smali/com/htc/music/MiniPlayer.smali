@@ -69,7 +69,7 @@
 
 .field private mThumbPath:Ljava/lang/String;
 
-.field protected mTrackDetail:Lcom/htc/widget/HeaderBarText;
+.field protected mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
 .field private mUIHandler:Landroid/os/Handler;
 
@@ -88,148 +88,148 @@
 
     const/4 v3, 0x0
 
-    .line 109
+    .line 110
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
+    .line 70
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
-    .line 71
+    .line 72
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 74
+    .line 75
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mDMCSvcMan:Lcom/htc/music/DMCServiceManager;
 
-    .line 76
+    .line 77
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
 
-    .line 77
+    .line 78
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
-    .line 78
-    iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 79
+    iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 80
+    .line 81
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
-    .line 137
+    .line 138
     iput-boolean v5, p0, Lcom/htc/music/MiniPlayer;->mInternalEnough:Z
 
-    .line 138
+    .line 139
     iput-boolean v4, p0, Lcom/htc/music/MiniPlayer;->isMonitoring:Z
 
-    .line 164
+    .line 165
     iput-boolean v4, p0, Lcom/htc/music/MiniPlayer;->isReleased:Z
 
-    .line 201
+    .line 202
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
 
-    .line 273
+    .line 278
     new-instance v2, Lcom/htc/music/MiniPlayer$1;
 
     invoke-direct {v2, p0}, Lcom/htc/music/MiniPlayer$1;-><init>(Lcom/htc/music/MiniPlayer;)V
 
     iput-object v2, p0, Lcom/htc/music/MiniPlayer;->mStatusListener:Landroid/content/BroadcastReceiver;
 
-    .line 373
+    .line 378
     iput-boolean v4, p0, Lcom/htc/music/MiniPlayer;->mIsServiceBinded:Z
 
-    .line 375
+    .line 380
     new-instance v2, Lcom/htc/music/MiniPlayer$2;
 
     invoke-direct {v2, p0}, Lcom/htc/music/MiniPlayer$2;-><init>(Lcom/htc/music/MiniPlayer;)V
 
     iput-object v2, p0, Lcom/htc/music/MiniPlayer;->osc:Landroid/content/ServiceConnection;
 
-    .line 482
+    .line 487
     iput-boolean v4, p0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 483
+    .line 488
     iput-boolean v4, p0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 725
+    .line 730
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
-    .line 726
+    .line 731
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mThumbPath:Ljava/lang/String;
 
-    .line 727
+    .line 732
     iput-boolean v4, p0, Lcom/htc/music/MiniPlayer;->mHasSet:Z
 
-    .line 941
+    .line 946
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 942
+    .line 947
     iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
 
-    .line 953
+    .line 958
     new-instance v2, Lcom/htc/music/MiniPlayer$3;
 
     invoke-direct {v2, p0}, Lcom/htc/music/MiniPlayer$3;-><init>(Lcom/htc/music/MiniPlayer;)V
 
     iput-object v2, p0, Lcom/htc/music/MiniPlayer;->mUIHandler:Landroid/os/Handler;
 
-    .line 1071
+    .line 1076
     new-instance v2, Lcom/htc/music/MiniPlayer$4;
 
     invoke-direct {v2, p0}, Lcom/htc/music/MiniPlayer$4;-><init>(Lcom/htc/music/MiniPlayer;)V
 
     iput-object v2, p0, Lcom/htc/music/MiniPlayer;->mLauncherListener:Landroid/view/View$OnClickListener;
 
-    .line 1087
+    .line 1094
     new-instance v2, Lcom/htc/music/MiniPlayer$5;
 
     invoke-direct {v2, p0}, Lcom/htc/music/MiniPlayer$5;-><init>(Lcom/htc/music/MiniPlayer;)V
 
     iput-object v2, p0, Lcom/htc/music/MiniPlayer;->mPauseListener:Landroid/view/View$OnClickListener;
 
-    .line 110
+    .line 111
     iput-object p1, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
-    .line 111
+    .line 112
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 113
+    .line 114
     .local v1, res:Landroid/content/res/Resources;
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 114
+    .line 115
     .local v0, bitmapOptions:Landroid/graphics/BitmapFactory$Options;
     sget-object v2, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     iput-object v2, v0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 115
+    .line 116
     iput-boolean v4, v0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 116
+    .line 117
     iput v5, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 117
+    .line 118
     iput-boolean v5, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 118
-    const v2, 0x7f020052
+    .line 119
+    const v2, 0x7f020054
 
     invoke-static {v1, v2, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 119
+    .line 120
     iget v2, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     iput v2, p0, Lcom/htc/music/MiniPlayer;->mMaxNotifyAlbumArtSideLen:I
 
-    .line 123
+    .line 124
     new-instance v2, Lcom/htc/widget/HtcFooter;
 
     invoke-direct {v2, p1}, Lcom/htc/widget/HtcFooter;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
 
-    .line 124
+    .line 125
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
 
     new-instance v3, Landroid/view/ViewGroup$LayoutParams;
@@ -242,7 +242,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 128
+    .line 129
     new-instance v2, Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;
 
     invoke-virtual {p1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
@@ -253,7 +253,7 @@
 
     iput-object v2, p0, Lcom/htc/music/MiniPlayer;->mAsyncQueryHandler:Lcom/htc/music/MiniPlayer$MPAsyncQueryHandler;
 
-    .line 129
+    .line 130
     return-void
 .end method
 
@@ -262,7 +262,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 50
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->mIsServiceBinded:Z
 
     return v0
@@ -274,7 +274,7 @@
     .parameter "x1"
 
     .prologue
-    .line 49
+    .line 50
     iput-boolean p1, p0, Lcom/htc/music/MiniPlayer;->mIsServiceBinded:Z
 
     return p1
@@ -285,7 +285,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 50
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->isReleased:Z
 
     return v0
@@ -296,7 +296,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 50
     iget v0, p0, Lcom/htc/music/MiniPlayer;->mMaxNotifyAlbumArtSideLen:I
 
     return v0
@@ -307,7 +307,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 50
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mUIHandler:Landroid/os/Handler;
 
     return-object v0
@@ -318,7 +318,7 @@
     .parameter "x0"
 
     .prologue
-    .line 49
+    .line 50
     invoke-direct {p0}, Lcom/htc/music/MiniPlayer;->doPauseResume()V
 
     return-void
@@ -328,16 +328,16 @@
     .locals 1
 
     .prologue
-    .line 432
+    .line 437
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v0, :cond_0
 
-    .line 444
+    .line 449
     :goto_0
     return-void
 
-    .line 435
+    .line 440
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -348,24 +348,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 436
+    .line 441
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     invoke-interface {v0}, Lcom/htc/music/IMediaPlaybackService;->pause()V
 
-    .line 440
+    .line 445
     :goto_1
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->updatePlayPauseBtn()V
 
     goto :goto_0
 
-    .line 442
+    .line 447
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 438
+    .line 443
     :cond_1
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -380,16 +380,16 @@
     .locals 2
 
     .prologue
-    .line 946
+    .line 951
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
 
     if-eqz v0, :cond_0
 
-    .line 951
+    .line 956
     :goto_0
     return-void
 
-    .line 948
+    .line 953
     :cond_0
     new-instance v0, Landroid/os/HandlerThread;
 
@@ -399,12 +399,12 @@
 
     iput-object v0, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 949
+    .line 954
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 950
+    .line 955
     new-instance v0, Lcom/htc/music/MiniPlayer$NonUIHandler;
 
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
@@ -427,10 +427,10 @@
     .parameter "listener"
 
     .prologue
-    .line 203
+    .line 204
     iput-object p1, p0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
 
-    .line 204
+    .line 205
     return-void
 .end method
 
@@ -438,7 +438,7 @@
     .locals 3
 
     .prologue
-    .line 406
+    .line 411
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->mIsServiceBinded:Z
 
     if-nez v0, :cond_0
@@ -447,7 +447,7 @@
 
     if-nez v0, :cond_0
 
-    .line 407
+    .line 412
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -458,11 +458,11 @@
 
     invoke-static {v0, v1, v2}, Lcom/htc/music/util/MusicUtils;->bindToService(Landroid/content/Context;Ljava/lang/String;Landroid/content/ServiceConnection;)Z
 
-    .line 413
+    .line 418
     :goto_0
     return-void
 
-    .line 409
+    .line 414
     :cond_0
     const-string v0, "[MiniPlayer]"
 
@@ -470,7 +470,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
+    .line 415
     const-string v0, "[MiniPlayer]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -495,7 +495,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
+    .line 416
     const-string v0, "[MiniPlayer]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -528,7 +528,7 @@
     .parameter "event"
 
     .prologue
-    .line 1098
+    .line 1105
     const/4 v0, 0x0
 
     return v0
@@ -538,7 +538,7 @@
     .locals 1
 
     .prologue
-    .line 426
+    .line 431
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
 
     return-object v0
@@ -548,15 +548,15 @@
     .locals 1
 
     .prologue
-    .line 133
+    .line 134
     invoke-direct {p0}, Lcom/htc/music/MiniPlayer;->initNonUiHandler()V
 
-    .line 134
+    .line 135
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
     invoke-virtual {p0, v0}, Lcom/htc/music/MiniPlayer;->initializeView(Landroid/app/Activity;)V
 
-    .line 135
+    .line 136
     return-void
 .end method
 
@@ -564,32 +564,32 @@
     .locals 2
 
     .prologue
-    .line 250
+    .line 255
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 251
+    .line 256
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mLauncherListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 253
+    .line 258
     :cond_0
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v0, :cond_1
 
-    .line 254
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 259
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mLauncherListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HeaderBarText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem2LineText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 257
+    .line 262
     :cond_1
     return-void
 .end method
@@ -598,12 +598,12 @@
     .locals 6
 
     .prologue
-    .line 261
+    .line 266
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
     if-eqz v0, :cond_0
 
-    .line 262
+    .line 267
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
@@ -638,161 +638,177 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/widget/HtcRimImageButton;->setButtonBackgroundResource(III)V
 
-    .line 266
+    .line 271
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mPauseListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcRimImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 268
+    .line 273
     :cond_0
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->updatePlayPauseBtn()V
 
-    .line 269
+    .line 274
     return-void
 .end method
 
 .method protected initializeView(Landroid/app/Activity;)V
-    .locals 8
+    .locals 9
     .parameter "context"
 
     .prologue
-    const v7, 0x2050001
+    const/4 v8, 0x0
+
+    const v6, 0x2050001
 
     const/4 v5, -0x1
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    .line 214
-    iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
+    .line 215
+    iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
-    if-eqz v3, :cond_0
+    if-eqz v4, :cond_0
 
-    .line 247
+    .line 252
     :goto_0
     return-void
 
-    .line 216
+    .line 217
     :cond_0
-    const-string v3, "layout_inflater"
+    const-string v4, "layout_inflater"
 
-    invoke-virtual {p1, v3}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, v4}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 217
+    .line 218
     .local v0, layoutInflator:Landroid/view/LayoutInflater;
-    const v3, 0x7f03003a
+    const v4, 0x7f03003a
 
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 219
-    .local v1, playerLayout:Landroid/view/View;
-    const v3, 0x7f08008e
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/ImageView;
-
-    iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
-
-    .line 220
-    const v3, 0x7f08008f
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/htc/widget/HeaderBarText;
-
-    iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
-
-    .line 221
-    const v3, 0x7f080090
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/htc/widget/HtcRimImageButton;
-
-    iput-object v3, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
-
-    .line 223
-    iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
-
-    if-eqz v3, :cond_1
-
-    .line 224
-    iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
-
-    invoke-virtual {v3, v6}, Lcom/htc/widget/HeaderBarText;->setPrimaryVisibility(I)V
-
-    .line 225
-    iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
-
-    invoke-virtual {v3, v6}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
-
-    .line 228
-    :cond_1
-    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v3, v5, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 230
-    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v4, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 231
-    .local v2, res:Landroid/content/res/Resources;
-    iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
+    .line 220
+    .local v2, playerLayout:Landroid/view/View;
+    const v4, 0x7f08008e
 
-    invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result v4
+    move-result-object v4
 
-    invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    check-cast v4, Landroid/widget/ImageView;
+
+    iput-object v4, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
+
+    .line 221
+    const v4, 0x7f080090
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/htc/widget/HtcListItem2LineText;
+
+    iput-object v4, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
+
+    .line 222
+    const v4, 0x7f080091
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/htc/widget/HtcRimImageButton;
+
+    iput-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
+
+    .line 224
+    iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
+
+    if-eqz v4, :cond_1
+
+    .line 225
+    iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
+
+    invoke-virtual {v4, v7}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryTextVisibility(I)V
+
+    .line 226
+    iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
+
+    invoke-virtual {v4, v7}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
+
+    .line 229
+    :cond_1
+    new-instance v4, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v4, v5, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 232
+    const v4, 0x7f08008f
+
+    invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/htc/widget/HtcListItem;
+
+    .line 233
+    .local v1, listItem:Lcom/htc/widget/HtcListItem;
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1, v8}, Lcom/htc/widget/HtcListItem;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 235
+    :cond_2
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    .line 236
+    .local v3, res:Landroid/content/res/Resources;
+    iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
+
+    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    invoke-virtual {v3, v4, v6, v5, v6}, Landroid/view/ViewGroup;->setPadding(IIII)V
+    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 235
-    iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
+    move-result v6
 
-    invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v4, v5, v7, v6, v7}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 236
-    const/4 v3, 0x0
+    .line 240
+    iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
 
-    const/high16 v4, 0x3f80
+    invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    const/16 v5, 0x12c
+    .line 241
+    const/4 v4, 0x0
 
-    invoke-static {v1, v3, v4, v6, v5}, Lcom/htc/music/util/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)V
+    const/high16 v5, 0x3f80
 
-    .line 242
+    const/16 v6, 0x12c
+
+    invoke-static {v2, v4, v5, v7, v6}, Lcom/htc/music/util/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)V
+
+    .line 247
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->initGlancelauncher()V
 
-    .line 243
+    .line 248
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->initPlayPauseBtn()V
 
-    .line 245
+    .line 250
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->updateTrackInfo()V
 
-    .line 246
+    .line 251
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->updateThumb()V
 
     goto :goto_0
@@ -802,7 +818,7 @@
     .locals 1
 
     .prologue
-    .line 192
+    .line 193
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
     if-nez v0, :cond_0
@@ -822,16 +838,16 @@
     .locals 0
 
     .prologue
-    .line 718
+    .line 723
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->updateTrackInfo()V
 
-    .line 719
+    .line 724
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->updatePlayPauseBtn()V
 
-    .line 720
+    .line 725
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->updateThumb()V
 
-    .line 721
+    .line 726
     return-void
 .end method
 
@@ -839,58 +855,58 @@
     .locals 3
 
     .prologue
-    .line 314
+    .line 319
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->refreshInfo()V
 
-    .line 316
+    .line 321
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 331
+    .line 336
     .local v0, f:Landroid/content/IntentFilter;
     const-string v1, "com.htc.music.queuechanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 332
+    .line 337
     const-string v1, "com.htc.music.playstatechanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 333
+    .line 338
     const-string v1, "com.htc.music.metachanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 334
+    .line 339
     const-string v1, "com.htc.music.playbackcomplete"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 337
+    .line 342
     const-string v1, "com.htc.music.onerror"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 340
+    .line 345
     const-string v1, "com.htc.music.dmcsvcman.playstatechanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 341
+    .line 346
     const-string v1, "com.htc.music.dmcsvcman.metachanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 349
+    .line 354
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mStatusListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 354
+    .line 359
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0           #f:Landroid/content/IntentFilter;
@@ -898,27 +914,27 @@
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 355
+    .line 360
     .restart local v0       #f:Landroid/content/IntentFilter;
     const-string v1, "file"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 356
+    .line 361
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mStatusListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 358
+    .line 363
     const-string v1, "[MiniPlayer]"
 
     const-string v2, "registerEventReceiver"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 359
+    .line 364
     return-void
 .end method
 
@@ -928,37 +944,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 166
+    .line 167
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/MiniPlayer;->isReleased:Z
 
-    .line 169
+    .line 170
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->stopMonitor()V
 
-    .line 170
+    .line 171
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->removeLoadSuccessListener()V
-
-    .line 172
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
-
-    if-eqz v0, :cond_0
 
     .line 173
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
 
-    invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer$NonUIHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
     .line 174
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
+
+    invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer$NonUIHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    .line 175
     iput-object v1, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
 
-    .line 177
+    .line 178
     :cond_0
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
 
     if-eqz v0, :cond_1
 
-    .line 178
+    .line 179
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -967,27 +983,27 @@
 
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
-    .line 179
+    .line 180
     iput-object v1, p0, Lcom/htc/music/MiniPlayer;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 182
+    .line 183
     :cond_1
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
-    .line 183
+    .line 184
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 184
+    .line 185
     iput-object v1, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
-    .line 186
+    .line 187
     iput-object v1, p0, Lcom/htc/music/MiniPlayer;->mThumbPath:Ljava/lang/String;
 
-    .line 188
+    .line 189
     :cond_2
     return-void
 .end method
@@ -996,12 +1012,12 @@
     .locals 1
 
     .prologue
-    .line 207
+    .line 208
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
 
-    .line 208
+    .line 209
     return-void
 .end method
 
@@ -1010,12 +1026,12 @@
     .parameter "artist"
 
     .prologue
-    .line 873
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 878
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v0, :cond_0
 
-    .line 874
+    .line 879
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -1024,23 +1040,23 @@
 
     if-nez v0, :cond_1
 
-    .line 875
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 880
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
-    invoke-virtual {v0, p1}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftText(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 882
+    .line 887
     :cond_0
     :goto_0
     return-void
 
-    .line 878
+    .line 883
     :cond_1
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const-string v1, ""
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftText(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1051,10 +1067,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 730
+    .line 735
     invoke-virtual {p0, v0, v0}, Lcom/htc/music/MiniPlayer;->setThumb(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
-    .line 731
+    .line 736
     return-void
 .end method
 
@@ -1064,71 +1080,71 @@
     .parameter "thumbPath"
 
     .prologue
-    .line 734
+    .line 739
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 735
+    .line 740
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 736
+    .line 741
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
-    .line 739
+    .line 744
     :cond_0
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->isReleased:Z
 
     if-eqz v0, :cond_2
 
-    .line 740
+    .line 745
     if-eqz p1, :cond_1
 
-    .line 741
+    .line 746
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 758
+    .line 763
     :cond_1
     :goto_0
     return-void
 
-    .line 746
+    .line 751
     :cond_2
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
 
-    .line 747
+    .line 752
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/MiniPlayer;->mHasSet:Z
 
-    .line 748
+    .line 753
     if-eqz p1, :cond_3
 
-    .line 749
+    .line 754
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 754
+    .line 759
     :goto_1
     iput-object p2, p0, Lcom/htc/music/MiniPlayer;->mThumbPath:Ljava/lang/String;
 
-    .line 755
+    .line 760
     iput-object p1, p0, Lcom/htc/music/MiniPlayer;->mThumbBitmap:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 751
+    .line 756
     :cond_3
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
-    const v1, 0x7f020052
+    const v1, 0x7f020054
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1140,12 +1156,12 @@
     .parameter "trackName"
 
     .prologue
-    .line 856
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 861
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v0, :cond_2
 
-    .line 857
+    .line 862
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -1154,23 +1170,23 @@
 
     if-nez v0, :cond_0
 
-    .line 858
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 863
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
-    invoke-virtual {v0, p1}, Lcom/htc/widget/HeaderBarText;->setPrimaryText(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 870
+    .line 875
     :goto_0
     return-void
 
-    .line 860
+    .line 865
     :cond_0
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
     if-eqz v0, :cond_1
 
-    .line 861
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 866
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
@@ -1180,21 +1196,21 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HeaderBarText;->setPrimaryText(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 863
-    :cond_1
-    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
-
-    const-string v1, "-- --"
-
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HeaderBarText;->setPrimaryText(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 868
+    :cond_1
+    iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
+
+    const-string v1, "-- --"
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 873
     :cond_2
     const-string v0, "[MiniPlayer]"
 
@@ -1209,22 +1225,22 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 141
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->isMonitoring:Z
 
     if-eqz v0, :cond_0
 
-    .line 152
+    .line 153
     :goto_0
     return-void
 
-    .line 142
+    .line 143
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/MiniPlayer;->isMonitoring:Z
 
-    .line 144
+    .line 145
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
     invoke-static {v0}, Lcom/htc/music/util/MusicUtils;->isInternalStorageEnough(Landroid/content/Context;)Z
@@ -1233,10 +1249,10 @@
 
     iput-boolean v0, p0, Lcom/htc/music/MiniPlayer;->mInternalEnough:Z
 
-    .line 148
+    .line 149
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->bindMediaPlayer()V
 
-    .line 151
+    .line 152
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->registerEventReceiver()V
 
     goto :goto_0
@@ -1246,25 +1262,25 @@
     .locals 1
 
     .prologue
-    .line 155
+    .line 156
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->isMonitoring:Z
 
     if-nez v0, :cond_0
 
-    .line 162
+    .line 163
     :goto_0
     return-void
 
-    .line 157
+    .line 158
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/MiniPlayer;->isMonitoring:Z
 
-    .line 158
+    .line 159
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->unRegisterEventReceiver()V
 
-    .line 160
+    .line 161
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->unBindMediaPlayer()V
 
     goto :goto_0
@@ -1274,12 +1290,12 @@
     .locals 2
 
     .prologue
-    .line 416
+    .line 421
     iget-boolean v0, p0, Lcom/htc/music/MiniPlayer;->mIsServiceBinded:Z
 
     if-eqz v0, :cond_0
 
-    .line 417
+    .line 422
     iget-object v0, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1288,18 +1304,18 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/MusicUtils;->unbindFromService(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 418
+    .line 423
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/MiniPlayer;->mIsServiceBinded:Z
 
-    .line 420
+    .line 425
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 421
+    .line 426
     return-void
 .end method
 
@@ -1307,7 +1323,7 @@
     .locals 3
 
     .prologue
-    .line 363
+    .line 368
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
@@ -1317,15 +1333,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 369
+    .line 374
     :goto_0
     return-void
 
-    .line 364
+    .line 369
     :catch_0
     move-exception v0
 
-    .line 365
+    .line 370
     .local v0, ex:Ljava/lang/Exception;
     const-string v1, "[MiniPlayer]"
 
@@ -1333,7 +1349,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 366
+    .line 371
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -1347,14 +1363,14 @@
 
     const/4 v5, 0x0
 
-    .line 449
+    .line 454
     const/4 v0, 0x0
 
-    .line 450
+    .line 455
     .local v0, artistName:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 454
+    .line 459
     .local v1, trackName:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mDMCSvcMan:Lcom/htc/music/DMCServiceManager;
 
@@ -1362,14 +1378,14 @@
 
     move-result-object v0
 
-    .line 455
+    .line 460
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mDMCSvcMan:Lcom/htc/music/DMCServiceManager;
 
     invoke-virtual {v2}, Lcom/htc/music/DMCServiceManager;->getTrackName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 458
+    .line 463
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1392,10 +1408,10 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 459
+    .line 464
     invoke-virtual {p0, v0}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 461
+    .line 466
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1418,17 +1434,17 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 462
-    iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 467
+    iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v2, :cond_0
 
-    .line 463
-    iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    .line 468
+    iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
-    invoke-virtual {v2, v5}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v2, v5}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 465
+    .line 470
     :cond_0
     if-eqz v1, :cond_2
 
@@ -1438,10 +1454,10 @@
 
     if-nez v2, :cond_2
 
-    .line 466
+    .line 471
     invoke-virtual {p0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 467
+    .line 472
     iget-boolean v2, p0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
     if-ne v6, v2, :cond_1
@@ -1450,23 +1466,23 @@
 
     if-eqz v2, :cond_1
 
-    .line 468
+    .line 473
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
 
     invoke-interface {v2, v6}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 470
+    .line 475
     :cond_1
     iput-boolean v5, p0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 471
+    .line 476
     iput-boolean v5, p0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 480
+    .line 485
     :goto_0
     return-void
 
-    .line 473
+    .line 478
     :cond_2
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
@@ -1478,7 +1494,7 @@
 
     invoke-virtual {p0, v2}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 474
+    .line 479
     iget-boolean v2, p0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
     if-nez v2, :cond_3
@@ -1487,16 +1503,16 @@
 
     if-eqz v2, :cond_3
 
-    .line 475
+    .line 480
     iget-object v2, p0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
 
     invoke-interface {v2, v5}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 477
+    .line 482
     :cond_3
     iput-boolean v6, p0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 478
+    .line 483
     iput-boolean v6, p0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
     goto :goto_0
@@ -1506,25 +1522,25 @@
     .locals 7
 
     .prologue
-    .line 761
+    .line 766
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
     if-nez v4, :cond_1
 
-    .line 813
+    .line 818
     :cond_0
     :goto_0
     return-void
 
-    .line 771
+    .line 776
     :cond_1
     const/4 v1, 0x0
 
-    .line 772
+    .line 777
     .local v1, bitmap:Landroid/graphics/Bitmap;
     const/4 v0, 0x0
 
-    .line 774
+    .line 779
     .local v0, albumArtPath:Ljava/lang/String;
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
 
@@ -1536,7 +1552,7 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 776
+    .line 781
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mDMCSvcMan:Lcom/htc/music/DMCServiceManager;
 
     const/16 v5, 0x80
@@ -1545,7 +1561,7 @@
 
     move-result-object v1
 
-    .line 777
+    .line 782
     const-string v4, "[MiniPlayer]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1568,17 +1584,17 @@
 
     invoke-static {v4, v5}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 792
+    .line 797
     :cond_2
     :goto_1
     if-nez v1, :cond_4
 
-    .line 794
+    .line 799
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->setDefaultThumb()V
 
     goto :goto_0
 
-    .line 782
+    .line 787
     :cond_3
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mDMCSvcMan:Lcom/htc/music/DMCServiceManager;
 
@@ -1586,10 +1602,10 @@
 
     move-result-object v0
 
-    .line 783
+    .line 788
     if-eqz v0, :cond_2
 
-    .line 784
+    .line 789
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mThumbPath:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1598,18 +1614,18 @@
 
     if-nez v4, :cond_0
 
-    .line 787
+    .line 792
     invoke-static {v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     goto :goto_1
 
-    .line 798
+    .line 803
     :cond_4
     iget v2, p0, Lcom/htc/music/MiniPlayer;->mMaxNotifyAlbumArtSideLen:I
 
-    .line 799
+    .line 804
     .local v2, maxSideLen:I
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -1623,7 +1639,7 @@
 
     if-le v4, v2, :cond_6
 
-    .line 800
+    .line 805
     :cond_5
     const/4 v4, 0x0
 
@@ -1631,19 +1647,19 @@
 
     move-result-object v3
 
-    .line 801
+    .line 806
     .local v3, resizeBitmap:Landroid/graphics/Bitmap;
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 802
+    .line 807
     const/4 v1, 0x0
 
-    .line 804
+    .line 809
     invoke-virtual {p0, v3, v0}, Lcom/htc/music/MiniPlayer;->setThumb(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 806
+    .line 811
     .end local v3           #resizeBitmap:Landroid/graphics/Bitmap;
     :cond_6
     invoke-virtual {p0, v1, v0}, Lcom/htc/music/MiniPlayer;->setThumb(Landroid/graphics/Bitmap;Ljava/lang/String;)V
@@ -1657,20 +1673,20 @@
     .prologue
     const v6, 0x20800bb
 
-    .line 885
+    .line 890
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
     if-nez v4, :cond_0
 
-    .line 929
+    .line 934
     :goto_0
     return-void
 
-    .line 887
+    .line 892
     :cond_0
     const/4 v1, 0x0
 
-    .line 889
+    .line 894
     .local v1, isPlaying:Z
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayerContainer:Landroid/view/ViewGroup;
 
@@ -1682,11 +1698,11 @@
 
     move-result-object v3
 
-    .line 891
+    .line 896
     .local v3, playIcon:Landroid/graphics/drawable/Drawable;
     const/4 v2, 0x0
 
-    .line 893
+    .line 898
     .local v2, isPluginMode:Z
     :try_start_0
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -1703,10 +1719,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 894
+    .line 899
     const/4 v2, 0x1
 
-    .line 898
+    .line 903
     :cond_1
     :goto_1
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -1723,7 +1739,7 @@
 
     if-nez v2, :cond_3
 
-    .line 900
+    .line 905
     :cond_2
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
@@ -1731,19 +1747,19 @@
 
     invoke-virtual {v4, v5}, Lcom/htc/widget/HtcRimImageButton;->setEnabled(Z)V
 
-    .line 902
+    .line 907
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v4, v3}, Lcom/htc/widget/HtcRimImageButton;->setIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 907
+    .line 912
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
     invoke-virtual {v4}, Lcom/htc/widget/HtcRimImageButton;->invalidate()V
 
     goto :goto_0
 
-    .line 911
+    .line 916
     :cond_3
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
@@ -1751,7 +1767,7 @@
 
     invoke-virtual {v4, v5}, Lcom/htc/widget/HtcRimImageButton;->setEnabled(Z)V
 
-    .line 914
+    .line 919
     :try_start_1
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
@@ -1761,18 +1777,18 @@
 
     move-result v1
 
-    .line 920
+    .line 925
     :goto_2
     if-eqz v1, :cond_4
 
-    .line 921
+    .line 926
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
     const v5, 0x20800b6
 
     invoke-virtual {v4, v5}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 
-    .line 927
+    .line 932
     :goto_3
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
 
@@ -1780,17 +1796,17 @@
 
     goto :goto_0
 
-    .line 915
+    .line 920
     :catch_0
     move-exception v0
 
-    .line 916
+    .line 921
     .local v0, ex:Ljava/lang/Exception;
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 923
+    .line 928
     .end local v0           #ex:Ljava/lang/Exception;
     :cond_4
     iget-object v4, p0, Lcom/htc/music/MiniPlayer;->mPlayPause:Lcom/htc/widget/HtcRimImageButton;
@@ -1799,7 +1815,7 @@
 
     goto :goto_3
 
-    .line 896
+    .line 901
     :catch_1
     move-exception v4
 
@@ -1810,32 +1826,32 @@
     .locals 5
 
     .prologue
-    .line 816
+    .line 821
     iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mThumb:Landroid/widget/ImageView;
 
     if-nez v3, :cond_1
 
-    .line 853
+    .line 858
     :cond_0
     :goto_0
     return-void
 
-    .line 820
+    .line 825
     :cond_1
     iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v3, :cond_2
 
-    .line 822
+    .line 827
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->setDefaultThumb()V
 
     goto :goto_0
 
-    .line 826
+    .line 831
     :cond_2
     const/4 v0, 0x0
 
-    .line 829
+    .line 834
     .local v0, albumArtPath:Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -1846,11 +1862,11 @@
 
     move-result-object v0
 
-    .line 834
+    .line 839
     :goto_1
     if-eqz v0, :cond_4
 
-    .line 835
+    .line 840
     iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mThumbPath:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1859,21 +1875,21 @@
 
     if-nez v3, :cond_0
 
-    .line 839
+    .line 844
     iget-boolean v3, p0, Lcom/htc/music/MiniPlayer;->mHasSet:Z
 
     if-nez v3, :cond_3
 
-    .line 840
+    .line 845
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->setDefaultThumb()V
 
-    .line 842
+    .line 847
     :cond_3
     iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
 
     if-eqz v3, :cond_0
 
-    .line 843
+    .line 848
     iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
 
     const/16 v4, 0x2714
@@ -1882,29 +1898,29 @@
 
     move-result-object v2
 
-    .line 844
+    .line 849
     .local v2, msg:Landroid/os/Message;
     iput-object v0, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 845
+    .line 850
     iget-object v3, p0, Lcom/htc/music/MiniPlayer;->mNonUiHandler:Lcom/htc/music/MiniPlayer$NonUIHandler;
 
     invoke-virtual {v3, v2}, Lcom/htc/music/MiniPlayer$NonUIHandler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 
-    .line 830
+    .line 835
     .end local v2           #msg:Landroid/os/Message;
     :catch_0
     move-exception v1
 
-    .line 831
+    .line 836
     .local v1, ex:Ljava/lang/Exception;
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 850
+    .line 855
     .end local v1           #ex:Ljava/lang/Exception;
     :cond_4
     invoke-virtual {p0}, Lcom/htc/music/MiniPlayer;->setDefaultThumb()V
@@ -1916,18 +1932,18 @@
     .locals 22
 
     .prologue
-    .line 486
+    .line 491
     const/4 v8, 0x0
 
-    .line 487
+    .line 492
     .local v8, artistName:Ljava/lang/String;
     const/16 v21, 0x0
 
-    .line 489
+    .line 494
     .local v21, trackName:Ljava/lang/String;
     const/16 v16, 0x0
 
-    .line 492
+    .line 497
     .local v16, path:Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p0
@@ -1936,7 +1952,7 @@
 
     if-nez v2, :cond_3
 
-    .line 493
+    .line 498
     const-string v2, "[MiniPlayer]"
 
     const-string v3, "Service is null!!"
@@ -1946,7 +1962,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 604
+    .line 609
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1964,7 +1980,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 605
+    .line 610
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -1975,17 +1991,17 @@
 
     move-result v17
 
-    .line 606
+    .line 611
     .local v17, pluginReady:Z
     if-nez v17, :cond_0
 
-    .line 607
+    .line 612
     const/4 v8, 0x0
 
-    .line 608
+    .line 613
     const/16 v21, 0x0
 
-    .line 616
+    .line 621
     .end local v17           #pluginReady:Z
     :cond_0
     :goto_0
@@ -2011,12 +2027,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
+    .line 622
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 619
+    .line 624
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2041,7 +2057,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 625
     if-eqz v21, :cond_2e
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->isEmpty()Z
@@ -2050,30 +2066,30 @@
 
     if-nez v2, :cond_2e
 
-    .line 621
+    .line 626
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 622
+    .line 627
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v2, :cond_1
 
-    .line 623
+    .line 628
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 625
+    .line 630
     :cond_1
     const/4 v2, 0x1
 
@@ -2089,7 +2105,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 626
+    .line 631
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -2098,7 +2114,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 628
+    .line 633
     :cond_2
     const/4 v2, 0x0
 
@@ -2106,7 +2122,7 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 629
+    .line 634
     :goto_1
     const/4 v2, 0x0
 
@@ -2114,11 +2130,11 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 649
+    .line 654
     :goto_2
     return-void
 
-    .line 497
+    .line 502
     :cond_3
     :try_start_2
     move-object/from16 v0, p0
@@ -2129,7 +2145,7 @@
 
     move-result-object v16
 
-    .line 499
+    .line 504
     if-nez v16, :cond_7
 
     move-object/from16 v0, p0
@@ -2145,7 +2161,7 @@
 
     if-nez v2, :cond_7
 
-    .line 604
+    .line 609
     :try_start_3
     move-object/from16 v0, p0
 
@@ -2163,7 +2179,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 605
+    .line 610
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2174,17 +2190,17 @@
 
     move-result v17
 
-    .line 606
+    .line 611
     .restart local v17       #pluginReady:Z
     if-nez v17, :cond_4
 
-    .line 607
+    .line 612
     const/4 v8, 0x0
 
-    .line 608
+    .line 613
     const/16 v21, 0x0
 
-    .line 616
+    .line 621
     .end local v17           #pluginReady:Z
     :cond_4
     :goto_3
@@ -2210,12 +2226,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
+    .line 622
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 619
+    .line 624
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2240,7 +2256,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 625
     if-eqz v21, :cond_32
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->isEmpty()Z
@@ -2249,30 +2265,30 @@
 
     if-nez v2, :cond_32
 
-    .line 621
+    .line 626
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 622
+    .line 627
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v2, :cond_5
 
-    .line 623
+    .line 628
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 625
+    .line 630
     :cond_5
     const/4 v2, 0x1
 
@@ -2288,7 +2304,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 626
+    .line 631
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -2297,7 +2313,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 628
+    .line 633
     :cond_6
     const/4 v2, 0x0
 
@@ -2307,11 +2323,11 @@
 
     goto/16 :goto_1
 
-    .line 503
+    .line 508
     :cond_7
     if-eqz v16, :cond_16
 
-    .line 504
+    .line 509
     :try_start_4
     move-object/from16 v0, p0
 
@@ -2321,7 +2337,7 @@
 
     move-result-object v8
 
-    .line 505
+    .line 510
     const-string v2, "<unknown>"
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2330,7 +2346,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 506
+    .line 511
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mContext:Landroid/app/Activity;
@@ -2341,7 +2357,7 @@
 
     move-result-object v8
 
-    .line 509
+    .line 514
     :cond_8
     move-object/from16 v0, p0
 
@@ -2351,19 +2367,19 @@
 
     move-result-object v21
 
-    .line 511
+    .line 516
     if-nez v8, :cond_f
 
     if-nez v21, :cond_f
 
-    .line 512
+    .line 517
     const-string v2, "[MiniPlayer]"
 
     const-string v3, "updateTrackInfoP - get metadata from MediaMetadataRetriever"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
+    .line 518
     new-instance v13, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v13}, Landroid/media/MediaMetadataRetriever;-><init>()V
@@ -2371,24 +2387,24 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 515
+    .line 520
     .local v13, mmr:Landroid/media/MediaMetadataRetriever;
     if-eqz v13, :cond_9
 
-    .line 517
+    .line 522
     :try_start_5
     move-object/from16 v0, v16
 
     invoke-virtual {v13, v0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
-    .line 519
+    .line 524
     const/4 v2, 0x2
 
     invoke-virtual {v13, v2}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 520
+    .line 525
     const/4 v2, 0x7
 
     invoke-virtual {v13, v2}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
@@ -2399,24 +2415,24 @@
 
     move-result-object v21
 
-    .line 526
+    .line 531
     :goto_4
     :try_start_6
     invoke-virtual {v13}, Landroid/media/MediaMetadataRetriever;->release()V
 
-    .line 527
+    .line 532
     const/4 v13, 0x0
 
-    .line 531
+    .line 536
     :cond_9
     if-eqz v8, :cond_a
 
-    .line 532
+    .line 537
     invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 534
+    .line 539
     :cond_a
     if-eqz v8, :cond_b
 
@@ -2428,7 +2444,7 @@
 
     if-eqz v2, :cond_c
 
-    .line 535
+    .line 540
     :cond_b
     move-object/from16 v0, p0
 
@@ -2440,16 +2456,16 @@
 
     move-result-object v8
 
-    .line 537
+    .line 542
     :cond_c
     if-eqz v21, :cond_d
 
-    .line 538
+    .line 543
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 540
+    .line 545
     :cond_d
     if-eqz v21, :cond_e
 
@@ -2463,7 +2479,7 @@
 
     if-eqz v2, :cond_f
 
-    .line 542
+    .line 547
     :cond_e
     const-string v2, "/"
 
@@ -2475,13 +2491,13 @@
 
     if-eqz v2, :cond_f
 
-    .line 543
+    .line 548
     const/4 v14, -0x1
 
     .local v14, nBegin:I
     const/4 v15, -0x1
 
-    .line 545
+    .line 550
     .local v15, nEnd:I
     const-string v2, "/"
 
@@ -2491,7 +2507,7 @@
 
     move-result v14
 
-    .line 546
+    .line 551
     const-string v2, "."
 
     move-object/from16 v0, v16
@@ -2500,12 +2516,12 @@
 
     move-result v15
 
-    .line 548
+    .line 553
     if-ltz v14, :cond_f
 
     if-le v15, v14, :cond_f
 
-    .line 549
+    .line 554
     add-int/lit8 v2, v14, 0x1
 
     move-object/from16 v0, v16
@@ -2517,7 +2533,7 @@
 
     move-result-object v21
 
-    .line 604
+    .line 609
     .end local v13           #mmr:Landroid/media/MediaMetadataRetriever;
     .end local v14           #nBegin:I
     .end local v15           #nEnd:I
@@ -2540,7 +2556,7 @@
 
     if-eqz v2, :cond_10
 
-    .line 605
+    .line 610
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2551,17 +2567,17 @@
 
     move-result v17
 
-    .line 606
+    .line 611
     .restart local v17       #pluginReady:Z
     if-nez v17, :cond_10
 
-    .line 607
+    .line 612
     const/4 v8, 0x0
 
-    .line 608
+    .line 613
     const/16 v21, 0x0
 
-    .line 616
+    .line 621
     .end local v17           #pluginReady:Z
     :cond_10
     :goto_6
@@ -2587,12 +2603,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
+    .line 622
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 619
+    .line 624
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2617,7 +2633,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 625
     if-eqz v21, :cond_36
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->isEmpty()Z
@@ -2626,30 +2642,30 @@
 
     if-nez v2, :cond_36
 
-    .line 621
+    .line 626
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 622
+    .line 627
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v2, :cond_11
 
-    .line 623
+    .line 628
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 625
+    .line 630
     :cond_11
     const/4 v2, 0x1
 
@@ -2665,7 +2681,7 @@
 
     if-eqz v2, :cond_12
 
-    .line 626
+    .line 631
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -2674,7 +2690,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 628
+    .line 633
     :cond_12
     const/4 v2, 0x0
 
@@ -2684,12 +2700,12 @@
 
     goto/16 :goto_1
 
-    .line 522
+    .line 527
     .restart local v13       #mmr:Landroid/media/MediaMetadataRetriever;
     :catch_0
     move-exception v11
 
-    .line 523
+    .line 528
     .local v11, ex:Ljava/lang/RuntimeException;
     :try_start_8
     const-string v2, "[MiniPlayer]"
@@ -2723,20 +2739,20 @@
 
     goto/16 :goto_4
 
-    .line 598
+    .line 603
     .end local v11           #ex:Ljava/lang/RuntimeException;
     .end local v13           #mmr:Landroid/media/MediaMetadataRetriever;
     :catch_1
     move-exception v10
 
-    .line 599
+    .line 604
     .local v10, e:Landroid/os/RemoteException;
     :try_start_9
     invoke-virtual {v10}, Landroid/os/RemoteException;->printStackTrace()V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 604
+    .line 609
     :try_start_a
     move-object/from16 v0, p0
 
@@ -2754,7 +2770,7 @@
 
     if-eqz v2, :cond_13
 
-    .line 605
+    .line 610
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2765,17 +2781,17 @@
 
     move-result v17
 
-    .line 606
+    .line 611
     .restart local v17       #pluginReady:Z
     if-nez v17, :cond_13
 
-    .line 607
+    .line 612
     const/4 v8, 0x0
 
-    .line 608
+    .line 613
     const/16 v21, 0x0
 
-    .line 616
+    .line 621
     .end local v17           #pluginReady:Z
     :cond_13
     :goto_7
@@ -2801,12 +2817,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
+    .line 622
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 619
+    .line 624
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2831,7 +2847,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 625
     if-eqz v21, :cond_2a
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->isEmpty()Z
@@ -2840,30 +2856,30 @@
 
     if-nez v2, :cond_2a
 
-    .line 621
+    .line 626
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 622
+    .line 627
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v2, :cond_14
 
-    .line 623
+    .line 628
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 625
+    .line 630
     :cond_14
     const/4 v2, 0x1
 
@@ -2879,7 +2895,7 @@
 
     if-eqz v2, :cond_15
 
-    .line 626
+    .line 631
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -2888,7 +2904,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 628
+    .line 633
     :cond_15
     const/4 v2, 0x0
 
@@ -2898,7 +2914,7 @@
 
     goto/16 :goto_1
 
-    .line 555
+    .line 560
     .end local v10           #e:Landroid/os/RemoteException;
     :cond_16
     :try_start_b
@@ -2910,7 +2926,7 @@
 
     move-result-object v19
 
-    .line 556
+    .line 561
     .local v19, queue:[I
     move-object/from16 v0, p0
 
@@ -2920,7 +2936,7 @@
 
     move-result v18
 
-    .line 557
+    .line 562
     .local v18, position:I
     if-eqz v19, :cond_17
 
@@ -2943,7 +2959,7 @@
 
     if-gt v2, v0, :cond_1b
 
-    .line 604
+    .line 609
     :cond_17
     :try_start_c
     move-object/from16 v0, p0
@@ -2962,7 +2978,7 @@
 
     if-eqz v2, :cond_18
 
-    .line 605
+    .line 610
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -2973,17 +2989,17 @@
 
     move-result v17
 
-    .line 606
+    .line 611
     .restart local v17       #pluginReady:Z
     if-nez v17, :cond_18
 
-    .line 607
+    .line 612
     const/4 v8, 0x0
 
-    .line 608
+    .line 613
     const/16 v21, 0x0
 
-    .line 616
+    .line 621
     .end local v17           #pluginReady:Z
     :cond_18
     :goto_8
@@ -3009,12 +3025,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
+    .line 622
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 619
+    .line 624
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3039,7 +3055,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 625
     if-eqz v21, :cond_3a
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->isEmpty()Z
@@ -3048,30 +3064,30 @@
 
     if-nez v2, :cond_3a
 
-    .line 621
+    .line 626
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 622
+    .line 627
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v2, :cond_19
 
-    .line 623
+    .line 628
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 625
+    .line 630
     :cond_19
     const/4 v2, 0x1
 
@@ -3087,7 +3103,7 @@
 
     if-eqz v2, :cond_1a
 
-    .line 626
+    .line 631
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -3096,7 +3112,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 628
+    .line 633
     :cond_1a
     const/4 v2, 0x0
 
@@ -3106,7 +3122,7 @@
 
     goto/16 :goto_1
 
-    .line 562
+    .line 567
     :cond_1b
     const/16 v2, 0xb
 
@@ -3179,7 +3195,7 @@
 
     aput-object v3, v4, v2
 
-    .line 576
+    .line 581
     .local v4, mCursorCols:[Ljava/lang/String;
     aget v2, v19, v18
 
@@ -3187,7 +3203,7 @@
 
     move-result-object v12
 
-    .line 577
+    .line 582
     .local v12, id:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3233,7 +3249,7 @@
 
     move-result-object v9
 
-    .line 579
+    .line 584
     .local v9, cursor:Landroid/database/Cursor;
     if-eqz v9, :cond_1c
 
@@ -3246,7 +3262,7 @@
 
     if-nez v2, :cond_20
 
-    .line 604
+    .line 609
     :cond_1c
     :try_start_e
     move-object/from16 v0, p0
@@ -3265,7 +3281,7 @@
 
     if-eqz v2, :cond_1d
 
-    .line 605
+    .line 610
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -3276,17 +3292,17 @@
 
     move-result v17
 
-    .line 606
+    .line 611
     .restart local v17       #pluginReady:Z
     if-nez v17, :cond_1d
 
-    .line 607
+    .line 612
     const/4 v8, 0x0
 
-    .line 608
+    .line 613
     const/16 v21, 0x0
 
-    .line 616
+    .line 621
     .end local v17           #pluginReady:Z
     :cond_1d
     :goto_9
@@ -3312,12 +3328,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
+    .line 622
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 619
+    .line 624
     const-string v2, "[MiniPlayer]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3342,7 +3358,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 625
     if-eqz v21, :cond_3e
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->isEmpty()Z
@@ -3351,30 +3367,30 @@
 
     if-nez v2, :cond_3e
 
-    .line 621
+    .line 626
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 622
+    .line 627
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v2, :cond_1e
 
-    .line 623
+    .line 628
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 625
+    .line 630
     :cond_1e
     const/4 v2, 0x1
 
@@ -3390,7 +3406,7 @@
 
     if-eqz v2, :cond_1f
 
-    .line 626
+    .line 631
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -3399,7 +3415,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 628
+    .line 633
     :cond_1f
     const/4 v2, 0x0
 
@@ -3409,12 +3425,12 @@
 
     goto/16 :goto_1
 
-    .line 583
+    .line 588
     :cond_20
     :try_start_f
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 584
+    .line 589
     const-string v2, "artist"
 
     invoke-interface {v9, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -3425,7 +3441,7 @@
 
     move-result-object v8
 
-    .line 585
+    .line 590
     if-eqz v8, :cond_21
 
     const-string v2, "<unknown>"
@@ -3436,7 +3452,7 @@
 
     if-eqz v2, :cond_22
 
-    .line 586
+    .line 591
     :cond_21
     move-object/from16 v0, p0
 
@@ -3448,7 +3464,7 @@
 
     move-result-object v8
 
-    .line 589
+    .line 594
     :cond_22
     const-string v2, "title"
 
@@ -3460,10 +3476,10 @@
 
     move-result-object v21
 
-    .line 591
+    .line 596
     if-eqz v9, :cond_f
 
-    .line 592
+    .line 597
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_0
@@ -3471,7 +3487,7 @@
 
     goto/16 :goto_5
 
-    .line 603
+    .line 608
     .end local v4           #mCursorCols:[Ljava/lang/String;
     .end local v9           #cursor:Landroid/database/Cursor;
     .end local v12           #id:Ljava/lang/String;
@@ -3480,7 +3496,7 @@
     :catchall_0
     move-exception v2
 
-    .line 604
+    .line 609
     :try_start_10
     move-object/from16 v0, p0
 
@@ -3498,7 +3514,7 @@
 
     if-eqz v3, :cond_23
 
-    .line 605
+    .line 610
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -3509,17 +3525,17 @@
 
     move-result v17
 
-    .line 606
+    .line 611
     .restart local v17       #pluginReady:Z
     if-nez v17, :cond_23
 
-    .line 607
+    .line 612
     const/4 v8, 0x0
 
-    .line 608
+    .line 613
     const/16 v21, 0x0
 
-    .line 616
+    .line 621
     .end local v17           #pluginReady:Z
     :cond_23
     :goto_a
@@ -3545,12 +3561,12 @@
 
     invoke-static {v3, v5}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 617
+    .line 622
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/music/MiniPlayer;->setArtistName(Ljava/lang/String;)V
 
-    .line 619
+    .line 624
     const-string v3, "[MiniPlayer]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3575,7 +3591,7 @@
 
     invoke-static {v3, v5}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 625
     if-eqz v21, :cond_26
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->isEmpty()Z
@@ -3584,30 +3600,30 @@
 
     if-nez v3, :cond_26
 
-    .line 621
+    .line 626
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21
 
     invoke-virtual {v0, v1}, Lcom/htc/music/MiniPlayer;->setTrackName(Ljava/lang/String;)V
 
-    .line 622
+    .line 627
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v3, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     if-eqz v3, :cond_24
 
-    .line 623
+    .line 628
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HeaderBarText;
+    iget-object v3, v0, Lcom/htc/music/MiniPlayer;->mTrackDetail:Lcom/htc/widget/HtcListItem2LineText;
 
     const/4 v5, 0x0
 
-    invoke-virtual {v3, v5}, Lcom/htc/widget/HeaderBarText;->setSecondaryLeftVisibility(I)V
+    invoke-virtual {v3, v5}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 625
+    .line 630
     :cond_24
     const/4 v3, 0x1
 
@@ -3623,7 +3639,7 @@
 
     if-eqz v3, :cond_25
 
-    .line 626
+    .line 631
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -3632,7 +3648,7 @@
 
     invoke-interface {v3, v5}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 628
+    .line 633
     :cond_25
     const/4 v3, 0x0
 
@@ -3640,31 +3656,31 @@
 
     iput-boolean v3, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 629
+    .line 634
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 603
+    .line 608
     :goto_b
     throw v2
 
-    .line 611
+    .line 616
     :catch_2
     move-exception v11
 
-    .line 612
+    .line 617
     .local v11, ex:Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 613
+    .line 618
     const/16 v21, 0x0
 
     goto :goto_a
 
-    .line 631
+    .line 636
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_26
     move-object/from16 v0, p0
@@ -3679,7 +3695,7 @@
 
     if-eqz v3, :cond_27
 
-    .line 632
+    .line 637
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -3688,7 +3704,7 @@
 
     invoke-interface {v3, v5}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 634
+    .line 639
     :cond_27
     const/4 v3, 0x0
 
@@ -3696,19 +3712,19 @@
 
     iput-boolean v3, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 635
+    .line 640
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 637
+    .line 642
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 638
+    .line 643
     .local v20, status:Ljava/lang/String;
     const-string v3, "[MiniPlayer]"
 
@@ -3734,7 +3750,7 @@
 
     invoke-static {v3, v5}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 644
     const-string v3, "mounted"
 
     move-object/from16 v0, v20
@@ -3755,7 +3771,7 @@
 
     if-eqz v3, :cond_29
 
-    .line 642
+    .line 647
     :cond_28
     move-object/from16 v0, p0
 
@@ -3765,7 +3781,7 @@
 
     goto :goto_b
 
-    .line 644
+    .line 649
     :cond_29
     move-object/from16 v0, p0
 
@@ -3783,22 +3799,22 @@
 
     goto :goto_b
 
-    .line 611
+    .line 616
     .end local v20           #status:Ljava/lang/String;
     .restart local v10       #e:Landroid/os/RemoteException;
     :catch_3
     move-exception v11
 
-    .line 612
+    .line 617
     .restart local v11       #ex:Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 613
+    .line 618
     const/16 v21, 0x0
 
     goto/16 :goto_7
 
-    .line 631
+    .line 636
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_2a
     move-object/from16 v0, p0
@@ -3813,7 +3829,7 @@
 
     if-eqz v2, :cond_2b
 
-    .line 632
+    .line 637
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -3822,7 +3838,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 634
+    .line 639
     :cond_2b
     const/4 v2, 0x0
 
@@ -3830,19 +3846,19 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 635
+    .line 640
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 637
+    .line 642
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 638
+    .line 643
     .restart local v20       #status:Ljava/lang/String;
     const-string v2, "[MiniPlayer]"
 
@@ -3868,7 +3884,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 644
     const-string v2, "mounted"
 
     move-object/from16 v0, v20
@@ -3889,7 +3905,7 @@
 
     if-eqz v2, :cond_2d
 
-    .line 642
+    .line 647
     :cond_2c
     move-object/from16 v0, p0
 
@@ -3901,7 +3917,7 @@
 
     goto/16 :goto_2
 
-    .line 644
+    .line 649
     .restart local v10       #e:Landroid/os/RemoteException;
     :cond_2d
     move-object/from16 v0, p0
@@ -3922,21 +3938,21 @@
 
     goto/16 :goto_2
 
-    .line 611
+    .line 616
     .end local v20           #status:Ljava/lang/String;
     :catch_4
     move-exception v11
 
-    .line 612
+    .line 617
     .restart local v11       #ex:Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 613
+    .line 618
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 631
+    .line 636
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_2e
     move-object/from16 v0, p0
@@ -3951,7 +3967,7 @@
 
     if-eqz v2, :cond_2f
 
-    .line 632
+    .line 637
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -3960,7 +3976,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 634
+    .line 639
     :cond_2f
     const/4 v2, 0x0
 
@@ -3968,19 +3984,19 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 635
+    .line 640
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 637
+    .line 642
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 638
+    .line 643
     .restart local v20       #status:Ljava/lang/String;
     const-string v2, "[MiniPlayer]"
 
@@ -4006,7 +4022,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 644
     const-string v2, "mounted"
 
     move-object/from16 v0, v20
@@ -4027,7 +4043,7 @@
 
     if-eqz v2, :cond_31
 
-    .line 642
+    .line 647
     :cond_30
     move-object/from16 v0, p0
 
@@ -4035,7 +4051,7 @@
 
     goto :goto_c
 
-    .line 644
+    .line 649
     :cond_31
     move-object/from16 v0, p0
 
@@ -4049,21 +4065,21 @@
 
     goto :goto_d
 
-    .line 611
+    .line 616
     .end local v20           #status:Ljava/lang/String;
     :catch_5
     move-exception v11
 
-    .line 612
+    .line 617
     .restart local v11       #ex:Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 613
+    .line 618
     const/16 v21, 0x0
 
     goto/16 :goto_3
 
-    .line 631
+    .line 636
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_32
     move-object/from16 v0, p0
@@ -4078,7 +4094,7 @@
 
     if-eqz v2, :cond_33
 
-    .line 632
+    .line 637
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -4087,7 +4103,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 634
+    .line 639
     :cond_33
     const/4 v2, 0x0
 
@@ -4095,19 +4111,19 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 635
+    .line 640
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 637
+    .line 642
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 638
+    .line 643
     .restart local v20       #status:Ljava/lang/String;
     const-string v2, "[MiniPlayer]"
 
@@ -4133,7 +4149,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 644
     const-string v2, "mounted"
 
     move-object/from16 v0, v20
@@ -4154,7 +4170,7 @@
 
     if-eqz v2, :cond_35
 
-    .line 642
+    .line 647
     :cond_34
     move-object/from16 v0, p0
 
@@ -4162,7 +4178,7 @@
 
     goto/16 :goto_c
 
-    .line 644
+    .line 649
     :cond_35
     move-object/from16 v0, p0
 
@@ -4176,21 +4192,21 @@
 
     goto/16 :goto_d
 
-    .line 611
+    .line 616
     .end local v20           #status:Ljava/lang/String;
     :catch_6
     move-exception v11
 
-    .line 612
+    .line 617
     .restart local v11       #ex:Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 613
+    .line 618
     const/16 v21, 0x0
 
     goto/16 :goto_6
 
-    .line 631
+    .line 636
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_36
     move-object/from16 v0, p0
@@ -4205,7 +4221,7 @@
 
     if-eqz v2, :cond_37
 
-    .line 632
+    .line 637
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -4214,7 +4230,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 634
+    .line 639
     :cond_37
     const/4 v2, 0x0
 
@@ -4222,19 +4238,19 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 635
+    .line 640
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 637
+    .line 642
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 638
+    .line 643
     .restart local v20       #status:Ljava/lang/String;
     const-string v2, "[MiniPlayer]"
 
@@ -4260,7 +4276,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 644
     const-string v2, "mounted"
 
     move-object/from16 v0, v20
@@ -4281,7 +4297,7 @@
 
     if-eqz v2, :cond_39
 
-    .line 642
+    .line 647
     :cond_38
     move-object/from16 v0, p0
 
@@ -4289,7 +4305,7 @@
 
     goto/16 :goto_c
 
-    .line 644
+    .line 649
     :cond_39
     move-object/from16 v0, p0
 
@@ -4303,23 +4319,23 @@
 
     goto/16 :goto_d
 
-    .line 611
+    .line 616
     .end local v20           #status:Ljava/lang/String;
     .restart local v18       #position:I
     .restart local v19       #queue:[I
     :catch_7
     move-exception v11
 
-    .line 612
+    .line 617
     .restart local v11       #ex:Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 613
+    .line 618
     const/16 v21, 0x0
 
     goto/16 :goto_8
 
-    .line 631
+    .line 636
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_3a
     move-object/from16 v0, p0
@@ -4334,7 +4350,7 @@
 
     if-eqz v2, :cond_3b
 
-    .line 632
+    .line 637
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -4343,7 +4359,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 634
+    .line 639
     :cond_3b
     const/4 v2, 0x0
 
@@ -4351,19 +4367,19 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 635
+    .line 640
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 637
+    .line 642
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 638
+    .line 643
     .restart local v20       #status:Ljava/lang/String;
     const-string v2, "[MiniPlayer]"
 
@@ -4389,7 +4405,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 644
     const-string v2, "mounted"
 
     move-object/from16 v0, v20
@@ -4410,7 +4426,7 @@
 
     if-eqz v2, :cond_3d
 
-    .line 642
+    .line 647
     :cond_3c
     move-object/from16 v0, p0
 
@@ -4418,7 +4434,7 @@
 
     goto/16 :goto_c
 
-    .line 644
+    .line 649
     :cond_3d
     move-object/from16 v0, p0
 
@@ -4432,7 +4448,7 @@
 
     goto/16 :goto_d
 
-    .line 611
+    .line 616
     .end local v20           #status:Ljava/lang/String;
     .restart local v4       #mCursorCols:[Ljava/lang/String;
     .restart local v9       #cursor:Landroid/database/Cursor;
@@ -4440,16 +4456,16 @@
     :catch_8
     move-exception v11
 
-    .line 612
+    .line 617
     .restart local v11       #ex:Ljava/lang/Exception;
     const/4 v8, 0x0
 
-    .line 613
+    .line 618
     const/16 v21, 0x0
 
     goto/16 :goto_9
 
-    .line 631
+    .line 636
     .end local v11           #ex:Ljava/lang/Exception;
     :cond_3e
     move-object/from16 v0, p0
@@ -4464,7 +4480,7 @@
 
     if-eqz v2, :cond_3f
 
-    .line 632
+    .line 637
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/MiniPlayer;->mLoadSuccessListener:Lcom/htc/music/MiniPlayer$ILoadSuccessListener;
@@ -4473,7 +4489,7 @@
 
     invoke-interface {v2, v3}, Lcom/htc/music/MiniPlayer$ILoadSuccessListener;->loadSuccessChange(Z)V
 
-    .line 634
+    .line 639
     :cond_3f
     const/4 v2, 0x0
 
@@ -4481,19 +4497,19 @@
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadQueueFail:Z
 
-    .line 635
+    .line 640
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/MiniPlayer;->loadTrackFail:Z
 
-    .line 637
+    .line 642
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 638
+    .line 643
     .restart local v20       #status:Ljava/lang/String;
     const-string v2, "[MiniPlayer]"
 
@@ -4519,7 +4535,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 639
+    .line 644
     const-string v2, "mounted"
 
     move-object/from16 v0, v20
@@ -4540,7 +4556,7 @@
 
     if-eqz v2, :cond_41
 
-    .line 642
+    .line 647
     :cond_40
     move-object/from16 v0, p0
 
@@ -4548,7 +4564,7 @@
 
     goto/16 :goto_c
 
-    .line 644
+    .line 649
     :cond_41
     move-object/from16 v0, p0
 

@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 496
+    .line 498
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$1;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iput-object p2, p0, Lcom/htc/music/NowPlayingViewHelper$1;->val$resultIntent:Landroid/content/Intent;
@@ -46,7 +46,7 @@
     .locals 5
 
     .prologue
-    .line 498
+    .line 500
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$1;->val$resultIntent:Landroid/content/Intent;
 
     const-string v2, "SELECTED_ID"
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    .line 499
+    .line 501
     .local v0, contactList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$1;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -66,7 +66,7 @@
 
     if-nez v1, :cond_0
 
-    .line 500
+    .line 502
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$1;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     new-instance v2, Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;
@@ -82,14 +82,14 @@
     #setter for: Lcom/htc/music/NowPlayingViewHelper;->mRingtoneHelper:Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;
     invoke-static {v1, v2}, Lcom/htc/music/NowPlayingViewHelper;->access$002(Lcom/htc/music/NowPlayingViewHelper;Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;)Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;
 
-    .line 501
+    .line 503
     const-string v1, "[NowPlayingViewHelper]"
 
     const-string v2, "Ringtonehelper is null!! this should never happen!!"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 504
+    .line 506
     :cond_0
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$1;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
@@ -100,7 +100,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 505
+    .line 507
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$1;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mRingtoneHelper:Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;
@@ -112,13 +112,13 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/htc/music/NowPlayingViewHelper$NowPlayingRingtoneHelper;->hadnleContactRingtoneResult(Ljava/util/ArrayList;Z)V
 
-    .line 508
+    .line 510
     :cond_1
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$1;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #calls: Lcom/htc/music/NowPlayingViewHelper;->showSetContactRingtoneToast()V
     invoke-static {v1}, Lcom/htc/music/NowPlayingViewHelper;->access$100(Lcom/htc/music/NowPlayingViewHelper;)V
 
-    .line 509
+    .line 511
     return-void
 .end method

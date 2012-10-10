@@ -45,30 +45,30 @@
     .parameter "stackUp"
 
     .prologue
-    .line 401
+    .line 403
     iput-object p1, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 402
+    .line 404
     iput-object p2, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->mC:Landroid/content/Context;
 
-    .line 403
+    .line 405
     iput-object p3, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->mFName:Ljava/lang/String;
 
-    .line 404
+    .line 406
     iput-object p4, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->mArgs:Landroid/os/Bundle;
 
-    .line 405
+    .line 407
     iput p5, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->mPos:I
 
-    .line 406
+    .line 408
     iput-object p6, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->mReuseId:Ljava/lang/String;
 
-    .line 407
+    .line 409
     iput-boolean p7, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->mStackUp:Z
 
-    .line 408
+    .line 410
     return-void
 .end method
 
@@ -78,7 +78,7 @@
     .locals 7
 
     .prologue
-    .line 415
+    .line 417
     iget-object v0, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->this$0:Lcom/htc/app/mf/MfMainActivity;
 
     iget-object v1, p0, Lcom/htc/app/mf/MfMainActivity$ExecStartFragmentRunner;->mC:Landroid/content/Context;
@@ -96,6 +96,6 @@
     #calls: Lcom/htc/app/mf/MfMainActivity;->execStartFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/String;Z)V
     invoke-static/range {v0 .. v6}, Lcom/htc/app/mf/MfMainActivity;->access$300(Lcom/htc/app/mf/MfMainActivity;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/String;Z)V
 
-    .line 416
+    .line 418
     return-void
 .end method

@@ -47,18 +47,6 @@
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/camera/component/HeadsetButtonController;I)I
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 16
-    iput p1, p0, Lcom/android/camera/component/HeadsetButtonController;->m_ActionScreenDisableCounter:I
-
-    return p1
-.end method
-
 .method static synthetic access$006(Lcom/android/camera/component/HeadsetButtonController;)I
     .locals 1
     .parameter "x0"
@@ -106,7 +94,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 55
+    .line 56
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/HeadsetButtonController$2;
@@ -119,7 +107,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 67
+    .line 68
     return-void
 .end method
 
@@ -129,7 +117,7 @@
     .parameter "intent"
 
     .prologue
-    .line 76
+    .line 77
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -138,43 +126,43 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 78
+    .line 79
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Trigger taking picture by phone button"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
+    .line 80
     invoke-virtual {p0}, Lcom/android/camera/component/HeadsetButtonController;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v8
 
-    .line 80
+    .line 81
     .local v8, cameraActivity:Lcom/android/camera/HTCCamera;
     invoke-virtual {v8}, Lcom/android/camera/HTCCamera;->disableActionScreen()V
 
-    .line 81
+    .line 82
     invoke-virtual {v8}, Lcom/android/camera/HTCCamera;->takePicture()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 82
+    .line 83
     iget v1, p0, Lcom/android/camera/component/HeadsetButtonController;->m_ActionScreenDisableCounter:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/camera/component/HeadsetButtonController;->m_ActionScreenDisableCounter:I
 
-    .line 137
+    .line 138
     .end local v8           #cameraActivity:Lcom/android/camera/HTCCamera;
     :cond_0
     :goto_0
     return-void
 
-    .line 85
+    .line 86
     .restart local v8       #cameraActivity:Lcom/android/camera/HTCCamera;
     :cond_1
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -183,12 +171,12 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 86
+    .line 87
     invoke-virtual {v8}, Lcom/android/camera/HTCCamera;->enableActionScreen()V
 
     goto :goto_0
 
-    .line 92
+    .line 93
     .end local v8           #cameraActivity:Lcom/android/camera/HTCCamera;
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -199,7 +187,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 94
+    .line 95
     const-string v1, "android.intent.extra.KEY_EVENT"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -208,11 +196,11 @@
 
     check-cast v11, Landroid/view/KeyEvent;
 
-    .line 95
+    .line 96
     .local v11, keyEvent:Landroid/view/KeyEvent;
     if-nez v11, :cond_3
 
-    .line 97
+    .line 98
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onIntentReceived() - No key event"
@@ -221,7 +209,7 @@
 
     goto :goto_0
 
-    .line 100
+    .line 101
     :cond_3
     invoke-virtual {v11}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -231,7 +219,7 @@
 
     goto :goto_0
 
-    .line 107
+    .line 108
     :sswitch_0
     invoke-virtual {v11}, Landroid/view/KeyEvent;->getAction()I
 
@@ -241,11 +229,11 @@
 
     goto :goto_0
 
-    .line 110
+    .line 111
     :pswitch_0
     const/4 v10, 0x1
 
-    .line 120
+    .line 121
     .local v10, isKeyDown:Z
     :goto_1
     new-instance v0, Landroid/view/KeyEvent;
@@ -270,18 +258,18 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
-    .line 126
+    .line 127
     .end local v11           #keyEvent:Landroid/view/KeyEvent;
     .local v0, keyEvent:Landroid/view/KeyEvent;
     new-instance v9, Lcom/android/camera/input/KeyEventArgs;
 
     invoke-direct {v9, v0}, Lcom/android/camera/input/KeyEventArgs;-><init>(Landroid/view/KeyEvent;)V
 
-    .line 129
+    .line 130
     .local v9, e:Lcom/android/camera/input/KeyEventArgs;
     if-eqz v10, :cond_4
 
-    .line 130
+    .line 131
     invoke-virtual {p0}, Lcom/android/camera/component/HeadsetButtonController;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
@@ -292,7 +280,7 @@
 
     goto :goto_0
 
-    .line 113
+    .line 114
     .end local v0           #keyEvent:Landroid/view/KeyEvent;
     .end local v9           #e:Lcom/android/camera/input/KeyEventArgs;
     .end local v10           #isKeyDown:Z
@@ -300,11 +288,11 @@
     :pswitch_1
     const/4 v10, 0x0
 
-    .line 114
+    .line 115
     .restart local v10       #isKeyDown:Z
     goto :goto_1
 
-    .line 132
+    .line 133
     .end local v11           #keyEvent:Landroid/view/KeyEvent;
     .restart local v0       #keyEvent:Landroid/view/KeyEvent;
     .restart local v9       #e:Lcom/android/camera/input/KeyEventArgs;
@@ -319,7 +307,7 @@
 
     goto :goto_0
 
-    .line 100
+    .line 101
     nop
 
     :sswitch_data_0
@@ -328,7 +316,7 @@
         0x55 -> :sswitch_0
     .end sparse-switch
 
-    .line 107
+    .line 108
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -340,18 +328,18 @@
     .locals 5
 
     .prologue
-    .line 146
+    .line 147
     invoke-virtual {p0}, Lcom/android/camera/component/HeadsetButtonController;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
 
-    .line 147
+    .line 148
     .local v1, cameraActivity:Lcom/android/camera/HTCCamera;
     new-instance v0, Lcom/htc/wrap/android/media/HtcWrapAudioManager;
 
     invoke-direct {v0, v1}, Lcom/htc/wrap/android/media/HtcWrapAudioManager;-><init>(Landroid/content/Context;)V
 
-    .line 148
+    .line 149
     .local v0, audioManager:Lcom/htc/wrap/android/media/HtcWrapAudioManager;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -375,10 +363,10 @@
 
     invoke-virtual {v0, v2}, Lcom/htc/wrap/android/media/HtcWrapAudioManager;->registerMediaButtonEventReceiver(Landroid/content/ComponentName;)V
 
-    .line 151
+    .line 152
     invoke-super {p0}, Lcom/android/camera/component/IntentReceiver;->onReceiverRegistered()V
 
-    .line 152
+    .line 153
     return-void
 .end method
 
@@ -386,18 +374,18 @@
     .locals 5
 
     .prologue
-    .line 161
+    .line 162
     invoke-virtual {p0}, Lcom/android/camera/component/HeadsetButtonController;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
 
-    .line 162
+    .line 163
     .local v1, cameraActivity:Lcom/android/camera/HTCCamera;
     new-instance v0, Lcom/htc/wrap/android/media/HtcWrapAudioManager;
 
     invoke-direct {v0, v1}, Lcom/htc/wrap/android/media/HtcWrapAudioManager;-><init>(Landroid/content/Context;)V
 
-    .line 163
+    .line 164
     .local v0, audioManager:Lcom/htc/wrap/android/media/HtcWrapAudioManager;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -421,10 +409,10 @@
 
     invoke-virtual {v0, v2}, Lcom/htc/wrap/android/media/HtcWrapAudioManager;->unregisterMediaButtonEventReceiver(Landroid/content/ComponentName;)V
 
-    .line 166
+    .line 167
     invoke-super {p0}, Lcom/android/camera/component/IntentReceiver;->onReceiverUnregistered()V
 
-    .line 167
+    .line 168
     return-void
 .end method
 
@@ -433,16 +421,16 @@
     .parameter "filter"
 
     .prologue
-    .line 175
+    .line 176
     const-string v0, "android.intent.action.CAMERA_BUTTON"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 177
+    .line 178
     const/16 v0, 0x3e9
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 178
+    .line 179
     return-void
 .end method

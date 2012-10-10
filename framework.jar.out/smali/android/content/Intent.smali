@@ -194,6 +194,8 @@
 
 .field public static final ACTION_NEW_OUTGOING_CALL:Ljava/lang/String; = "android.intent.action.NEW_OUTGOING_CALL"
 
+.field public static final ACTION_NOTIFY_ENTER_HOME:Ljava/lang/String; = "android.intent.action.NOTIFY_ENTER_HOME"
+
 .field public static final ACTION_OMA_DM_STORAGE_OK:Ljava/lang/String; = "android.intent.action.OMA_DM_STORAGE_OK"
 
 .field public static final ACTION_PACKAGE_ADDED:Ljava/lang/String; = "android.intent.action.PACKAGE_ADDED"
@@ -638,7 +640,7 @@
     .locals 1
 
     .prologue
-    .line 6490
+    .line 6500
     new-instance v0, Landroid/content/Intent$1;
 
     invoke-direct {v0}, Landroid/content/Intent$1;-><init>()V
@@ -652,10 +654,10 @@
     .locals 0
 
     .prologue
-    .line 3372
+    .line 3376
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3373
+    .line 3377
     return-void
 .end method
 
@@ -673,18 +675,18 @@
     .end annotation
 
     .prologue
-    .line 3484
+    .line 3488
     .local p2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3485
+    .line 3489
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p1, p2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     iput-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 3486
+    .line 3490
     return-void
 .end method
 
@@ -693,50 +695,50 @@
     .parameter "o"
 
     .prologue
-    .line 3378
+    .line 3382
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3379
+    .line 3383
     iget-object v0, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
-    .line 3380
+    .line 3384
     iget-object v0, p1, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     iput-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 3381
+    .line 3385
     iget-object v0, p1, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 3382
+    .line 3386
     iget-object v0, p1, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
-    .line 3383
+    .line 3387
     iget-object v0, p1, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     iput-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 3384
+    .line 3388
     iget v0, p1, Landroid/content/Intent;->mFlags:I
 
     iput v0, p0, Landroid/content/Intent;->mFlags:I
 
-    .line 3388
+    .line 3392
     iget v0, p1, Landroid/content/Intent;->mHtcFlags:I
 
     iput v0, p0, Landroid/content/Intent;->mHtcFlags:I
 
-    .line 3391
+    .line 3395
     iget-object v0, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v0, :cond_0
 
-    .line 3392
+    .line 3396
     new-instance v0, Ljava/util/HashSet;
 
     iget-object v1, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
@@ -745,13 +747,13 @@
 
     iput-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    .line 3394
+    .line 3398
     :cond_0
     iget-object v0, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_1
 
-    .line 3395
+    .line 3399
     new-instance v0, Landroid/os/Bundle;
 
     iget-object v1, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
@@ -760,13 +762,13 @@
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 3397
+    .line 3401
     :cond_1
     iget-object v0, p1, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_2
 
-    .line 3398
+    .line 3402
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p1, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
@@ -775,13 +777,13 @@
 
     iput-object v0, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
-    .line 3400
+    .line 3404
     :cond_2
     iget-object v0, p1, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     if-eqz v0, :cond_3
 
-    .line 3401
+    .line 3405
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p1, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
@@ -790,7 +792,7 @@
 
     iput-object v0, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
-    .line 3403
+    .line 3407
     :cond_3
     return-void
 .end method
@@ -801,50 +803,50 @@
     .parameter "all"
 
     .prologue
-    .line 3410
+    .line 3414
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3411
+    .line 3415
     iget-object v0, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
-    .line 3412
+    .line 3416
     iget-object v0, p1, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     iput-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 3413
+    .line 3417
     iget-object v0, p1, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 3414
+    .line 3418
     iget-object v0, p1, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
-    .line 3415
+    .line 3419
     iget-object v0, p1, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     iput-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 3416
+    .line 3420
     iget v0, p1, Landroid/content/Intent;->mFlags:I
 
     iput v0, p0, Landroid/content/Intent;->mFlags:I
 
-    .line 3418
+    .line 3422
     iget v0, p1, Landroid/content/Intent;->mHtcFlags:I
 
     iput v0, p0, Landroid/content/Intent;->mHtcFlags:I
 
-    .line 3420
+    .line 3424
     iget-object v0, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v0, :cond_0
 
-    .line 3421
+    .line 3425
     new-instance v0, Ljava/util/HashSet;
 
     iget-object v1, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
@@ -853,7 +855,7 @@
 
     iput-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    .line 3423
+    .line 3427
     :cond_0
     return-void
 .end method
@@ -863,13 +865,13 @@
     .parameter "in"
 
     .prologue
-    .line 6501
+    .line 6511
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6502
+    .line 6512
     invoke-virtual {p0, p1}, Landroid/content/Intent;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 6503
+    .line 6513
     return-void
 .end method
 
@@ -878,13 +880,13 @@
     .parameter "action"
 
     .prologue
-    .line 3443
+    .line 3447
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3444
+    .line 3448
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3445
+    .line 3449
     return-void
 .end method
 
@@ -894,16 +896,16 @@
     .parameter "uri"
 
     .prologue
-    .line 3463
+    .line 3467
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3464
+    .line 3468
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3465
+    .line 3469
     iput-object p2, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 3466
+    .line 3470
     return-void
 .end method
 
@@ -925,24 +927,24 @@
     .end annotation
 
     .prologue
-    .line 3512
+    .line 3516
     .local p4, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3513
+    .line 3517
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3514
+    .line 3518
     iput-object p2, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 3515
+    .line 3519
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p3, p4}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     iput-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 3516
+    .line 3520
     return-void
 .end method
 
@@ -991,7 +993,7 @@
     .end annotation
 
     .prologue
-    .line 3605
+    .line 3609
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
@@ -1011,7 +1013,7 @@
     .end annotation
 
     .prologue
-    .line 3769
+    .line 3773
     const/16 v19, 0x23
 
     move-object/from16 v0, p0
@@ -1022,26 +1024,26 @@
 
     move-result v9
 
-    .line 3770
+    .line 3774
     .local v9, i:I
     if-ltz v9, :cond_15
 
-    .line 3771
+    .line 3775
     const/4 v4, 0x0
 
-    .line 3772
+    .line 3776
     .local v4, action:Ljava/lang/String;
     move v11, v9
 
-    .line 3773
+    .line 3777
     .local v11, intentFragmentStart:I
     const/4 v12, 0x0
 
-    .line 3775
+    .line 3779
     .local v12, isIntentFragment:Z
     add-int/lit8 v9, v9, 0x1
 
-    .line 3777
+    .line 3781
     const-string v19, "action("
 
     const/16 v20, 0x0
@@ -1062,13 +1064,13 @@
 
     if-eqz v19, :cond_0
 
-    .line 3778
+    .line 3782
     const/4 v12, 0x1
 
-    .line 3779
+    .line 3783
     add-int/lit8 v9, v9, 0x7
 
-    .line 3780
+    .line 3784
     const/16 v19, 0x29
 
     move-object/from16 v0, p0
@@ -1079,7 +1081,7 @@
 
     move-result v13
 
-    .line 3781
+    .line 3785
     .local v13, j:I
     move-object/from16 v0, p0
 
@@ -1087,17 +1089,17 @@
 
     move-result-object v4
 
-    .line 3782
+    .line 3786
     add-int/lit8 v9, v13, 0x1
 
-    .line 3785
+    .line 3789
     .end local v13           #j:I
     :cond_0
     new-instance v10, Landroid/content/Intent;
 
     invoke-direct {v10, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3787
+    .line 3791
     .local v10, intent:Landroid/content/Intent;
     const-string v19, "categories("
 
@@ -1119,13 +1121,13 @@
 
     if-eqz v19, :cond_4
 
-    .line 3788
+    .line 3792
     const/4 v12, 0x1
 
-    .line 3789
+    .line 3793
     add-int/lit8 v9, v9, 0xb
 
-    .line 3790
+    .line 3794
     const/16 v19, 0x29
 
     move-object/from16 v0, p0
@@ -1136,12 +1138,12 @@
 
     move-result v13
 
-    .line 3791
+    .line 3795
     .restart local v13       #j:I
     :goto_0
     if-ge v9, v13, :cond_3
 
-    .line 3792
+    .line 3796
     const/16 v19, 0x21
 
     move-object/from16 v0, p0
@@ -1152,19 +1154,19 @@
 
     move-result v16
 
-    .line 3793
+    .line 3797
     .local v16, sep:I
     if-gez v16, :cond_1
 
     move/from16 v16, v13
 
-    .line 3794
+    .line 3798
     :cond_1
     move/from16 v0, v16
 
     if-ge v9, v0, :cond_2
 
-    .line 3795
+    .line 3799
     move-object/from16 v0, p0
 
     move/from16 v1, v16
@@ -1177,19 +1179,19 @@
 
     invoke-virtual {v10, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3797
+    .line 3801
     :cond_2
     add-int/lit8 v9, v16, 0x1
 
-    .line 3798
+    .line 3802
     goto :goto_0
 
-    .line 3799
+    .line 3803
     .end local v16           #sep:I
     :cond_3
     add-int/lit8 v9, v13, 0x1
 
-    .line 3802
+    .line 3806
     .end local v13           #j:I
     :cond_4
     const-string/jumbo v19, "type("
@@ -1212,13 +1214,13 @@
 
     if-eqz v19, :cond_5
 
-    .line 3803
+    .line 3807
     const/4 v12, 0x1
 
-    .line 3804
+    .line 3808
     add-int/lit8 v9, v9, 0x5
 
-    .line 3805
+    .line 3809
     const/16 v19, 0x29
 
     move-object/from16 v0, p0
@@ -1229,7 +1231,7 @@
 
     move-result v13
 
-    .line 3806
+    .line 3810
     .restart local v13       #j:I
     move-object/from16 v0, p0
 
@@ -1241,13 +1243,13 @@
 
     iput-object v0, v10, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 3807
+    .line 3811
     add-int/lit8 v9, v13, 0x1
 
-    .line 3810
+    .line 3814
     .end local v13           #j:I
     :cond_5
-    const-string/jumbo v19, "launchFlags("
+    const-string v19, "launchFlags("
 
     const/16 v20, 0x0
 
@@ -1267,13 +1269,13 @@
 
     if-eqz v19, :cond_6
 
-    .line 3811
+    .line 3815
     const/4 v12, 0x1
 
-    .line 3812
+    .line 3816
     add-int/lit8 v9, v9, 0xc
 
-    .line 3813
+    .line 3817
     const/16 v19, 0x29
 
     move-object/from16 v0, p0
@@ -1284,7 +1286,7 @@
 
     move-result v13
 
-    .line 3814
+    .line 3818
     .restart local v13       #j:I
     move-object/from16 v0, p0
 
@@ -1304,10 +1306,10 @@
 
     iput v0, v10, Landroid/content/Intent;->mFlags:I
 
-    .line 3815
+    .line 3819
     add-int/lit8 v9, v13, 0x1
 
-    .line 3818
+    .line 3822
     .end local v13           #j:I
     :cond_6
     const-string v19, "component("
@@ -1330,13 +1332,13 @@
 
     if-eqz v19, :cond_8
 
-    .line 3819
+    .line 3823
     const/4 v12, 0x1
 
-    .line 3820
+    .line 3824
     add-int/lit8 v9, v9, 0xa
 
-    .line 3821
+    .line 3825
     const/16 v19, 0x29
 
     move-object/from16 v0, p0
@@ -1347,7 +1349,7 @@
 
     move-result v13
 
-    .line 3822
+    .line 3826
     .restart local v13       #j:I
     const/16 v19, 0x21
 
@@ -1359,7 +1361,7 @@
 
     move-result v16
 
-    .line 3823
+    .line 3827
     .restart local v16       #sep:I
     if-ltz v16, :cond_7
 
@@ -1367,7 +1369,7 @@
 
     if-ge v0, v13, :cond_7
 
-    .line 3824
+    .line 3828
     move-object/from16 v0, p0
 
     move/from16 v1, v16
@@ -1376,7 +1378,7 @@
 
     move-result-object v15
 
-    .line 3825
+    .line 3829
     .local v15, pkg:Ljava/lang/String;
     add-int/lit8 v19, v16, 0x1
 
@@ -1388,7 +1390,7 @@
 
     move-result-object v7
 
-    .line 3826
+    .line 3830
     .local v7, cls:Ljava/lang/String;
     new-instance v19, Landroid/content/ComponentName;
 
@@ -1400,13 +1402,13 @@
 
     iput-object v0, v10, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 3828
+    .line 3832
     .end local v7           #cls:Ljava/lang/String;
     .end local v15           #pkg:Ljava/lang/String;
     :cond_7
     add-int/lit8 v9, v13, 0x1
 
-    .line 3831
+    .line 3835
     .end local v13           #j:I
     .end local v16           #sep:I
     :cond_8
@@ -1430,13 +1432,13 @@
 
     if-eqz v19, :cond_11
 
-    .line 3832
+    .line 3836
     const/4 v12, 0x1
 
-    .line 3833
+    .line 3837
     add-int/lit8 v9, v9, 0x7
 
-    .line 3835
+    .line 3839
     const/16 v19, 0x29
 
     move-object/from16 v0, p0
@@ -1447,7 +1449,7 @@
 
     move-result v6
 
-    .line 3836
+    .line 3840
     .local v6, closeParen:I
     const/16 v19, -0x1
 
@@ -1469,7 +1471,7 @@
 
     throw v19
 
-    .line 3900
+    .line 3904
     .local v5, ch:C
     .restart local v13       #j:I
     .local v14, key:Ljava/lang/String;
@@ -1478,7 +1480,7 @@
     :cond_9
     add-int/lit8 v9, v9, 0x1
 
-    .line 3839
+    .line 3843
     .end local v5           #ch:C
     .end local v13           #j:I
     .end local v14           #key:Ljava/lang/String;
@@ -1487,7 +1489,7 @@
     :cond_a
     if-ge v9, v6, :cond_11
 
-    .line 3841
+    .line 3845
     const/16 v19, 0x3d
 
     move-object/from16 v0, p0
@@ -1498,7 +1500,7 @@
 
     move-result v13
 
-    .line 3842
+    .line 3846
     .restart local v13       #j:I
     add-int/lit8 v19, v9, 0x1
 
@@ -1508,7 +1510,7 @@
 
     if-lt v9, v6, :cond_c
 
-    .line 3843
+    .line 3847
     :cond_b
     new-instance v19, Ljava/net/URISyntaxException;
 
@@ -1524,7 +1526,7 @@
 
     throw v19
 
-    .line 3845
+    .line 3849
     :cond_c
     move-object/from16 v0, p0
 
@@ -1532,22 +1534,22 @@
 
     move-result v17
 
-    .line 3846
+    .line 3850
     .restart local v17       #type:C
     add-int/lit8 v9, v9, 0x1
 
-    .line 3847
+    .line 3851
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v9, v13}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 3848
+    .line 3852
     .restart local v14       #key:Ljava/lang/String;
     add-int/lit8 v9, v13, 0x1
 
-    .line 3851
+    .line 3855
     const/16 v19, 0x21
 
     move-object/from16 v0, p0
@@ -1558,7 +1560,7 @@
 
     move-result v13
 
-    .line 3852
+    .line 3856
     const/16 v19, -0x1
 
     move/from16 v0, v19
@@ -1570,7 +1572,7 @@
     :cond_d
     move v13, v6
 
-    .line 3853
+    .line 3857
     :cond_e
     if-lt v9, v13, :cond_f
 
@@ -1588,7 +1590,7 @@
 
     throw v19
 
-    .line 3854
+    .line 3858
     :cond_f
     move-object/from16 v0, p0
 
@@ -1596,11 +1598,11 @@
 
     move-result-object v18
 
-    .line 3855
+    .line 3859
     .restart local v18       #value:Ljava/lang/String;
     move v9, v13
 
-    .line 3858
+    .line 3862
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     move-object/from16 v19, v0
@@ -1615,11 +1617,11 @@
 
     iput-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 3862
+    .line 3866
     :cond_10
     sparse-switch v17, :sswitch_data_0
 
-    .line 3891
+    .line 3895
     :try_start_0
     new-instance v19, Ljava/net/URISyntaxException;
 
@@ -1637,11 +1639,11 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3893
+    .line 3897
     :catch_0
     move-exception v8
 
-    .line 3894
+    .line 3898
     .local v8, e:Ljava/lang/NumberFormatException;
     new-instance v19, Ljava/net/URISyntaxException;
 
@@ -1657,7 +1659,7 @@
 
     throw v19
 
-    .line 3864
+    .line 3868
     .end local v8           #e:Ljava/lang/NumberFormatException;
     :sswitch_0
     :try_start_1
@@ -1677,7 +1679,7 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 3897
+    .line 3901
     :goto_1
     move-object/from16 v0, p0
 
@@ -1685,7 +1687,7 @@
 
     move-result v5
 
-    .line 3898
+    .line 3902
     .restart local v5       #ch:C
     const/16 v19, 0x29
 
@@ -1693,7 +1695,7 @@
 
     if-ne v5, v0, :cond_13
 
-    .line 3904
+    .line 3908
     .end local v5           #ch:C
     .end local v6           #closeParen:I
     .end local v13           #j:I
@@ -1703,7 +1705,7 @@
     :cond_11
     if-eqz v12, :cond_14
 
-    .line 3905
+    .line 3909
     const/16 v19, 0x0
 
     move-object/from16 v0, p0
@@ -1722,7 +1724,7 @@
 
     iput-object v0, v10, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 3910
+    .line 3914
     :goto_2
     iget-object v0, v10, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
@@ -1730,14 +1732,14 @@
 
     if-nez v19, :cond_12
 
-    .line 3912
+    .line 3916
     const-string v19, "android.intent.action.VIEW"
 
     move-object/from16 v0, v19
 
     iput-object v0, v10, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
-    .line 3919
+    .line 3923
     .end local v4           #action:Ljava/lang/String;
     .end local v11           #intentFragmentStart:I
     .end local v12           #isIntentFragment:Z
@@ -1745,7 +1747,7 @@
     :goto_3
     return-object v10
 
-    .line 3867
+    .line 3871
     .restart local v4       #action:Ljava/lang/String;
     .restart local v6       #closeParen:I
     .restart local v11       #intentFragmentStart:I
@@ -1772,7 +1774,7 @@
 
     goto :goto_1
 
-    .line 3870
+    .line 3874
     :sswitch_2
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -1790,7 +1792,7 @@
 
     goto :goto_1
 
-    .line 3873
+    .line 3877
     :sswitch_3
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -1814,7 +1816,7 @@
 
     goto :goto_1
 
-    .line 3876
+    .line 3880
     :sswitch_4
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -1832,7 +1834,7 @@
 
     goto :goto_1
 
-    .line 3879
+    .line 3883
     :sswitch_5
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -1850,7 +1852,7 @@
 
     goto/16 :goto_1
 
-    .line 3882
+    .line 3886
     :sswitch_6
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -1868,7 +1870,7 @@
 
     goto/16 :goto_1
 
-    .line 3885
+    .line 3889
     :sswitch_7
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -1886,7 +1888,7 @@
 
     goto/16 :goto_1
 
-    .line 3888
+    .line 3892
     :sswitch_8
     iget-object v0, v10, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -1906,7 +1908,7 @@
 
     goto/16 :goto_1
 
-    .line 3899
+    .line 3903
     .restart local v5       #ch:C
     :cond_13
     const/16 v19, 0x21
@@ -1929,7 +1931,7 @@
 
     throw v19
 
-    .line 3907
+    .line 3911
     .end local v5           #ch:C
     .end local v6           #closeParen:I
     .end local v13           #j:I
@@ -1947,7 +1949,7 @@
 
     goto/16 :goto_2
 
-    .line 3916
+    .line 3920
     .end local v4           #action:Ljava/lang/String;
     .end local v10           #intent:Landroid/content/Intent;
     .end local v11           #intentFragmentStart:I
@@ -1970,9 +1972,7 @@
     .restart local v10       #intent:Landroid/content/Intent;
     goto/16 :goto_3
 
-    .line 3862
-    nop
-
+    .line 3866
     :sswitch_data_0
     .sparse-switch
         0x42 -> :sswitch_1
@@ -1992,23 +1992,23 @@
     .parameter "mainActivity"
 
     .prologue
-    .line 3540
+    .line 3544
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3541
+    .line 3545
     .local v0, intent:Landroid/content/Intent;
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 3542
+    .line 3546
     const-string v1, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3543
+    .line 3547
     return-object v0
 .end method
 
@@ -2018,35 +2018,35 @@
     .parameter "selectorCategory"
 
     .prologue
-    .line 3570
+    .line 3574
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3571
+    .line 3575
     .local v0, intent:Landroid/content/Intent;
     const-string v2, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3572
+    .line 3576
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 3573
+    .line 3577
     .local v1, selector:Landroid/content/Intent;
     invoke-virtual {v1, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3574
+    .line 3578
     invoke-virtual {v1, p1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3575
+    .line 3579
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setSelector(Landroid/content/Intent;)V
 
-    .line 3576
+    .line 3580
     return-object v0
 .end method
 
@@ -2055,18 +2055,18 @@
     .parameter "mainActivity"
 
     .prologue
-    .line 3593
+    .line 3597
     invoke-static {p0}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 3594
+    .line 3598
     .local v0, intent:Landroid/content/Intent;
     const v1, 0x10008000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3596
+    .line 3600
     return-object v0
 .end method
 
@@ -2083,12 +2083,12 @@
     .end annotation
 
     .prologue
-    .line 6556
+    .line 6566
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 6558
+    .line 6568
     .local v3, intent:Landroid/content/Intent;
     sget-object v10, Lcom/android/internal/R$styleable;->Intent:[I
 
@@ -2096,7 +2096,7 @@
 
     move-result-object v8
 
-    .line 6561
+    .line 6571
     .local v8, sa:Landroid/content/res/TypedArray;
     const/4 v10, 0x2
 
@@ -2106,14 +2106,14 @@
 
     invoke-virtual {v3, v10}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6563
+    .line 6573
     const/4 v10, 0x3
 
     invoke-virtual {v8, v10}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 6564
+    .line 6574
     .local v2, data:Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -2121,7 +2121,7 @@
 
     move-result-object v4
 
-    .line 6565
+    .line 6575
     .local v4, mimeType:Ljava/lang/String;
     if-eqz v2, :cond_4
 
@@ -2132,14 +2132,14 @@
     :goto_0
     invoke-virtual {v3, v10, v4}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6567
+    .line 6577
     const/4 v10, 0x0
 
     invoke-virtual {v8, v10}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 6568
+    .line 6578
     .local v7, packageName:Ljava/lang/String;
     const/4 v10, 0x4
 
@@ -2147,29 +2147,29 @@
 
     move-result-object v1
 
-    .line 6569
+    .line 6579
     .local v1, className:Ljava/lang/String;
     if-eqz v7, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 6570
+    .line 6580
     new-instance v10, Landroid/content/ComponentName;
 
     invoke-direct {v10, v7, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v3, v10}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 6573
+    .line 6583
     :cond_0
     invoke-virtual {v8}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 6575
+    .line 6585
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v6
 
-    .line 6578
+    .line 6588
     .local v6, outerDepth:I
     :cond_1
     :goto_1
@@ -2192,7 +2192,7 @@
 
     if-le v10, v6, :cond_8
 
-    .line 6579
+    .line 6589
     :cond_2
     const/4 v10, 0x3
 
@@ -2202,12 +2202,12 @@
 
     if-eq v9, v10, :cond_1
 
-    .line 6583
+    .line 6593
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 6584
+    .line 6594
     .local v5, nodeName:Ljava/lang/String;
     const-string v10, "category"
 
@@ -2217,37 +2217,37 @@
 
     if-eqz v10, :cond_5
 
-    .line 6585
+    .line 6595
     sget-object v10, Lcom/android/internal/R$styleable;->IntentCategory:[I
 
     invoke-virtual {p0, p2, v10}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v8
 
-    .line 6587
+    .line 6597
     const/4 v10, 0x0
 
     invoke-virtual {v8, v10}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6588
+    .line 6598
     .local v0, cat:Ljava/lang/String;
     invoke-virtual {v8}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 6590
+    .line 6600
     if-eqz v0, :cond_3
 
-    .line 6591
+    .line 6601
     invoke-virtual {v3, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6593
+    .line 6603
     :cond_3
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
 
-    .line 6565
+    .line 6575
     .end local v0           #cat:Ljava/lang/String;
     .end local v1           #className:Ljava/lang/String;
     .end local v5           #nodeName:Ljava/lang/String;
@@ -2259,7 +2259,7 @@
 
     goto :goto_0
 
-    .line 6595
+    .line 6605
     .restart local v1       #className:Ljava/lang/String;
     .restart local v5       #nodeName:Ljava/lang/String;
     .restart local v6       #outerDepth:I
@@ -2274,19 +2274,19 @@
 
     if-eqz v10, :cond_7
 
-    .line 6596
+    .line 6606
     iget-object v10, v3, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v10, :cond_6
 
-    .line 6597
+    .line 6607
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
     iput-object v10, v3, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 6599
+    .line 6609
     :cond_6
     const-string v10, "extra"
 
@@ -2294,18 +2294,18 @@
 
     invoke-virtual {p0, v10, p2, v11}, Landroid/content/res/Resources;->parseBundleExtra(Ljava/lang/String;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
 
-    .line 6600
+    .line 6610
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
 
-    .line 6603
+    .line 6613
     :cond_7
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
 
-    .line 6607
+    .line 6617
     .end local v5           #nodeName:Ljava/lang/String;
     :cond_8
     return-object v3
@@ -2322,18 +2322,18 @@
     .end annotation
 
     .prologue
-    .line 3630
+    .line 3634
     const/4 v5, 0x0
 
-    .line 3633
+    .line 3637
     .local v5, i:I
     and-int/lit8 v11, p1, 0x1
 
     if-eqz v11, :cond_1
 
-    .line 3634
+    .line 3638
     :try_start_0
-    const-string/jumbo v11, "intent:"
+    const-string v11, "intent:"
 
     invoke-virtual {p0, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -2341,7 +2341,7 @@
 
     if-nez v11, :cond_1
 
-    .line 3635
+    .line 3639
     new-instance v6, Landroid/content/Intent;
 
     const-string v11, "android.intent.action.VIEW"
@@ -2350,7 +2350,7 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3637
+    .line 3641
     .local v6, intent:Landroid/content/Intent;
     :try_start_1
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -2362,18 +2362,18 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3759
+    .line 3763
     .end local v6           #intent:Landroid/content/Intent;
     :cond_0
     :goto_0
     return-object v6
 
-    .line 3638
+    .line 3642
     .restart local v6       #intent:Landroid/content/Intent;
     :catch_0
     move-exception v3
 
-    .line 3639
+    .line 3643
     .local v3, e:Ljava/lang/IllegalArgumentException;
     :try_start_2
     new-instance v11, Ljava/net/URISyntaxException;
@@ -2388,23 +2388,23 @@
     :try_end_2
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 3761
+    .line 3765
     .end local v3           #e:Ljava/lang/IllegalArgumentException;
     .end local v6           #intent:Landroid/content/Intent;
     :catch_1
     move-exception v3
 
-    .line 3762
+    .line 3766
     .local v3, e:Ljava/lang/IndexOutOfBoundsException;
     new-instance v11, Ljava/net/URISyntaxException;
 
-    const-string/jumbo v12, "illegal Intent URI format"
+    const-string v12, "illegal Intent URI format"
 
     invoke-direct {v11, p0, v12, v5}, Ljava/net/URISyntaxException;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     throw v11
 
-    .line 3646
+    .line 3650
     .end local v3           #e:Ljava/lang/IndexOutOfBoundsException;
     :cond_1
     :try_start_3
@@ -2414,7 +2414,7 @@
 
     move-result v5
 
-    .line 3647
+    .line 3651
     const/4 v11, -0x1
 
     if-ne v5, v11, :cond_2
@@ -2431,7 +2431,7 @@
 
     goto :goto_0
 
-    .line 3650
+    .line 3654
     :cond_2
     const-string v11, "#Intent;"
 
@@ -2447,7 +2447,7 @@
 
     goto :goto_0
 
-    .line 3653
+    .line 3657
     :cond_3
     new-instance v6, Landroid/content/Intent;
 
@@ -2455,11 +2455,11 @@
 
     invoke-direct {v6, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3654
+    .line 3658
     .restart local v6       #intent:Landroid/content/Intent;
     move-object v1, v6
 
-    .line 3657
+    .line 3661
     .local v1, baseIntent:Landroid/content/Intent;
     if-ltz v5, :cond_5
 
@@ -2469,12 +2469,12 @@
 
     move-result-object v2
 
-    .line 3658
+    .line 3662
     .local v2, data:Ljava/lang/String;
     :goto_1
     const/4 v8, 0x0
 
-    .line 3659
+    .line 3663
     .local v8, scheme:Ljava/lang/String;
     const-string v11, "#Intent;"
 
@@ -2484,7 +2484,7 @@
 
     add-int/2addr v5, v11
 
-    .line 3662
+    .line 3666
     :goto_2
     const-string v11, "end"
 
@@ -2494,20 +2494,20 @@
 
     if-nez v11, :cond_1a
 
-    .line 3663
+    .line 3667
     const/16 v11, 0x3d
 
     invoke-virtual {p0, v11, v5}, Ljava/lang/String;->indexOf(II)I
 
     move-result v4
 
-    .line 3664
+    .line 3668
     .local v4, eq:I
     if-gez v4, :cond_4
 
     add-int/lit8 v4, v5, -0x1
 
-    .line 3665
+    .line 3669
     :cond_4
     const/16 v11, 0x3b
 
@@ -2515,7 +2515,7 @@
 
     move-result v9
 
-    .line 3666
+    .line 3670
     .local v9, semi:I
     if-ge v4, v9, :cond_6
 
@@ -2529,7 +2529,7 @@
 
     move-result-object v10
 
-    .line 3669
+    .line 3673
     .local v10, value:Ljava/lang/String;
     :goto_3
     const-string v11, "action="
@@ -2540,17 +2540,17 @@
 
     if-eqz v11, :cond_7
 
-    .line 3670
+    .line 3674
     invoke-virtual {v6, v10}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3733
+    .line 3737
     :goto_4
     add-int/lit8 v5, v9, 0x1
 
-    .line 3734
+    .line 3738
     goto :goto_2
 
-    .line 3657
+    .line 3661
     .end local v2           #data:Ljava/lang/String;
     .end local v4           #eq:I
     .end local v8           #scheme:Ljava/lang/String;
@@ -2561,7 +2561,7 @@
 
     goto :goto_1
 
-    .line 3666
+    .line 3670
     .restart local v2       #data:Ljava/lang/String;
     .restart local v4       #eq:I
     .restart local v8       #scheme:Ljava/lang/String;
@@ -2571,7 +2571,7 @@
 
     goto :goto_3
 
-    .line 3674
+    .line 3678
     .restart local v10       #value:Ljava/lang/String;
     :cond_7
     const-string v11, "category="
@@ -2582,12 +2582,12 @@
 
     if-eqz v11, :cond_8
 
-    .line 3675
+    .line 3679
     invoke-virtual {v6, v10}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_4
 
-    .line 3679
+    .line 3683
     :cond_8
     const-string/jumbo v11, "type="
 
@@ -2597,14 +2597,14 @@
 
     if-eqz v11, :cond_9
 
-    .line 3680
+    .line 3684
     iput-object v10, v6, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     goto :goto_4
 
-    .line 3684
+    .line 3688
     :cond_9
-    const-string/jumbo v11, "launchFlags="
+    const-string v11, "launchFlags="
 
     invoke-virtual {p0, v11, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
@@ -2612,7 +2612,7 @@
 
     if-eqz v11, :cond_a
 
-    .line 3685
+    .line 3689
     invoke-static {v10}, Ljava/lang/Integer;->decode(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v11
@@ -2625,7 +2625,7 @@
 
     goto :goto_4
 
-    .line 3689
+    .line 3693
     :cond_a
     const-string/jumbo v11, "package="
 
@@ -2635,12 +2635,12 @@
 
     if-eqz v11, :cond_b
 
-    .line 3690
+    .line 3694
     iput-object v10, v6, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     goto :goto_4
 
-    .line 3694
+    .line 3698
     :cond_b
     const-string v11, "component="
 
@@ -2650,7 +2650,7 @@
 
     if-eqz v11, :cond_c
 
-    .line 3695
+    .line 3699
     invoke-static {v10}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v11
@@ -2659,7 +2659,7 @@
 
     goto :goto_4
 
-    .line 3699
+    .line 3703
     :cond_c
     const-string/jumbo v11, "scheme="
 
@@ -2669,12 +2669,12 @@
 
     if-eqz v11, :cond_d
 
-    .line 3700
+    .line 3704
     move-object v8, v10
 
     goto :goto_4
 
-    .line 3704
+    .line 3708
     :cond_d
     const-string/jumbo v11, "sourceBounds="
 
@@ -2684,7 +2684,7 @@
 
     if-eqz v11, :cond_e
 
-    .line 3705
+    .line 3709
     invoke-static {v10}, Landroid/graphics/Rect;->unflattenFromString(Ljava/lang/String;)Landroid/graphics/Rect;
 
     move-result-object v11
@@ -2693,7 +2693,7 @@
 
     goto :goto_4
 
-    .line 3709
+    .line 3713
     :cond_e
     add-int/lit8 v11, v5, 0x3
 
@@ -2707,7 +2707,7 @@
 
     if-eqz v11, :cond_f
 
-    .line 3710
+    .line 3714
     new-instance v6, Landroid/content/Intent;
 
     .end local v6           #intent:Landroid/content/Intent;
@@ -2716,7 +2716,7 @@
     .restart local v6       #intent:Landroid/content/Intent;
     goto :goto_4
 
-    .line 3715
+    .line 3719
     :cond_f
     add-int/lit8 v11, v5, 0x2
 
@@ -2728,7 +2728,7 @@
 
     move-result-object v7
 
-    .line 3717
+    .line 3721
     .local v7, key:Ljava/lang/String;
     iget-object v11, v6, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -2740,11 +2740,11 @@
 
     iput-object v11, v6, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 3718
+    .line 3722
     :cond_10
     iget-object v0, v6, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 3720
+    .line 3724
     .local v0, b:Landroid/os/Bundle;
     const-string v11, "S."
 
@@ -2758,7 +2758,7 @@
 
     goto/16 :goto_4
 
-    .line 3721
+    .line 3725
     :cond_11
     const-string v11, "B."
 
@@ -2776,7 +2776,7 @@
 
     goto/16 :goto_4
 
-    .line 3722
+    .line 3726
     :cond_12
     const-string v11, "b."
 
@@ -2794,7 +2794,7 @@
 
     goto/16 :goto_4
 
-    .line 3723
+    .line 3727
     :cond_13
     const-string v11, "c."
 
@@ -2814,7 +2814,7 @@
 
     goto/16 :goto_4
 
-    .line 3724
+    .line 3728
     :cond_14
     const-string v11, "d."
 
@@ -2832,7 +2832,7 @@
 
     goto/16 :goto_4
 
-    .line 3725
+    .line 3729
     :cond_15
     const-string v11, "f."
 
@@ -2850,9 +2850,9 @@
 
     goto/16 :goto_4
 
-    .line 3726
+    .line 3730
     :cond_16
-    const-string/jumbo v11, "i."
+    const-string v11, "i."
 
     invoke-virtual {p0, v11, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
@@ -2868,9 +2868,9 @@
 
     goto/16 :goto_4
 
-    .line 3727
+    .line 3731
     :cond_17
-    const-string/jumbo v11, "l."
+    const-string v11, "l."
 
     invoke-virtual {p0, v11, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
@@ -2886,7 +2886,7 @@
 
     goto/16 :goto_4
 
-    .line 3728
+    .line 3732
     :cond_18
     const-string/jumbo v11, "s."
 
@@ -2904,7 +2904,7 @@
 
     goto/16 :goto_4
 
-    .line 3729
+    .line 3733
     :cond_19
     new-instance v11, Ljava/net/URISyntaxException;
 
@@ -2914,7 +2914,7 @@
 
     throw v11
 
-    .line 3736
+    .line 3740
     .end local v0           #b:Landroid/os/Bundle;
     .end local v4           #eq:I
     .end local v7           #key:Ljava/lang/String;
@@ -2923,18 +2923,18 @@
     :cond_1a
     if-eq v6, v1, :cond_1b
 
-    .line 3738
+    .line 3742
     invoke-virtual {v1, v6}, Landroid/content/Intent;->setSelector(Landroid/content/Intent;)V
 
-    .line 3739
+    .line 3743
     move-object v6, v1
 
-    .line 3742
+    .line 3746
     :cond_1b
     if-eqz v2, :cond_0
 
-    .line 3743
-    const-string/jumbo v11, "intent:"
+    .line 3747
+    const-string v11, "intent:"
 
     invoke-virtual {v2, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -2942,17 +2942,17 @@
 
     if-eqz v11, :cond_1c
 
-    .line 3744
+    .line 3748
     const/4 v11, 0x7
 
     invoke-virtual {v2, v11}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 3745
+    .line 3749
     if-eqz v8, :cond_1c
 
-    .line 3746
+    .line 3750
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -2975,7 +2975,7 @@
 
     move-result-object v2
 
-    .line 3750
+    .line 3754
     :cond_1c
     invoke-virtual {v2}, Ljava/lang/String;->length()I
     :try_end_3
@@ -2985,7 +2985,7 @@
 
     if-lez v11, :cond_0
 
-    .line 3752
+    .line 3756
     :try_start_4
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -2998,11 +2998,11 @@
 
     goto/16 :goto_0
 
-    .line 3753
+    .line 3757
     :catch_2
     move-exception v3
 
-    .line 3754
+    .line 3758
     .local v3, e:Ljava/lang/IllegalArgumentException;
     :try_start_5
     new-instance v11, Ljava/net/URISyntaxException;
@@ -3027,10 +3027,10 @@
     .prologue
     const/16 v8, 0x3b
 
-    .line 6395
+    .line 6405
     if-eqz p2, :cond_0
 
-    .line 6396
+    .line 6406
     const-string/jumbo v5, "scheme="
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3043,13 +3043,13 @@
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6398
+    .line 6408
     :cond_0
     iget-object v5, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     if-eqz v5, :cond_1
 
-    .line 6399
+    .line 6409
     const-string v5, "action="
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3068,13 +3068,13 @@
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6401
+    .line 6411
     :cond_1
     iget-object v5, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v5, :cond_2
 
-    .line 6402
+    .line 6412
     iget-object v5, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {v5}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -3095,7 +3095,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 6403
+    .line 6413
     .local v0, category:Ljava/lang/String;
     const-string v5, "category="
 
@@ -3115,7 +3115,7 @@
 
     goto :goto_0
 
-    .line 6406
+    .line 6416
     .end local v0           #category:Ljava/lang/String;
     .end local v2           #i$:Ljava/util/Iterator;
     :cond_2
@@ -3123,7 +3123,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 6407
+    .line 6417
     const-string/jumbo v5, "type="
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3144,14 +3144,14 @@
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6409
+    .line 6419
     :cond_3
     iget v5, p0, Landroid/content/Intent;->mFlags:I
 
     if-eqz v5, :cond_4
 
-    .line 6410
-    const-string/jumbo v5, "launchFlags=0x"
+    .line 6420
+    const-string v5, "launchFlags=0x"
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3169,13 +3169,13 @@
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6412
+    .line 6422
     :cond_4
     iget-object v5, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     if-eqz v5, :cond_5
 
-    .line 6413
+    .line 6423
     const-string/jumbo v5, "package="
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3194,13 +3194,13 @@
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6415
+    .line 6425
     :cond_5
     iget-object v5, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     if-eqz v5, :cond_6
 
-    .line 6416
+    .line 6426
     const-string v5, "component="
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3225,13 +3225,13 @@
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6419
+    .line 6429
     :cond_6
     iget-object v5, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
     if-eqz v5, :cond_7
 
-    .line 6420
+    .line 6430
     const-string/jumbo v5, "sourceBounds="
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3254,13 +3254,13 @@
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6424
+    .line 6434
     :cond_7
     iget-object v5, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v5, :cond_12
 
-    .line 6425
+    .line 6435
     iget-object v5, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v5}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
@@ -3286,7 +3286,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 6426
+    .line 6436
     .local v3, key:Ljava/lang/String;
     iget-object v5, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -3294,7 +3294,7 @@
 
     move-result-object v4
 
-    .line 6427
+    .line 6437
     .local v4, value:Ljava/lang/Object;
     instance-of v5, v4, Ljava/lang/String;
 
@@ -3302,32 +3302,32 @@
 
     const/16 v1, 0x53
 
-    .line 6439
+    .line 6449
     .local v1, entryType:C
     :goto_2
     if-eqz v1, :cond_8
 
-    .line 6440
+    .line 6450
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6441
+    .line 6451
     const/16 v5, 0x2e
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6442
+    .line 6452
     invoke-static {v3}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6443
+    .line 6453
     const/16 v5, 0x3d
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6444
+    .line 6454
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -3338,12 +3338,12 @@
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6445
+    .line 6455
     invoke-virtual {p1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 6427
+    .line 6437
     .end local v1           #entryType:C
     :cond_9
     instance-of v5, v4, Ljava/lang/Boolean;
@@ -3422,7 +3422,7 @@
 
     goto :goto_2
 
-    .line 6449
+    .line 6459
     .end local v2           #i$:Ljava/util/Iterator;
     .end local v3           #key:Ljava/lang/String;
     .end local v4           #value:Ljava/lang/Object;
@@ -3437,19 +3437,19 @@
     .parameter "category"
 
     .prologue
-    .line 4881
+    .line 4885
     iget-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-nez v0, :cond_0
 
-    .line 4882
+    .line 4886
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    .line 4884
+    .line 4888
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
@@ -3459,7 +3459,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 4885
+    .line 4889
     return-object p0
 .end method
 
@@ -3468,14 +3468,14 @@
     .parameter "flags"
 
     .prologue
-    .line 5753
+    .line 5757
     iget v0, p0, Landroid/content/Intent;->mFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/Intent;->mFlags:I
 
-    .line 5754
+    .line 5758
     return-object p0
 .end method
 
@@ -3484,14 +3484,14 @@
     .parameter "flags"
 
     .prologue
-    .line 6621
+    .line 6631
     iget v0, p0, Landroid/content/Intent;->mHtcFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/Intent;->mHtcFlags:I
 
-    .line 6622
+    .line 6632
     return-object p0
 .end method
 
@@ -3499,7 +3499,7 @@
     .locals 1
 
     .prologue
-    .line 3407
+    .line 3411
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -3511,7 +3511,7 @@
     .locals 2
 
     .prologue
-    .line 3430
+    .line 3434
     new-instance v0, Landroid/content/Intent;
 
     const/4 v1, 0x0
@@ -3525,7 +3525,7 @@
     .locals 1
 
     .prologue
-    .line 6452
+    .line 6462
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -3551,10 +3551,10 @@
     .parameter "flags"
 
     .prologue
-    .line 5970
+    .line 5974
     const/4 v0, 0x0
 
-    .line 5971
+    .line 5975
     .local v0, changes:I
     iget-object v3, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
@@ -3568,16 +3568,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 5973
+    .line 5977
     :cond_0
     iget-object v3, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     iput-object v3, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
-    .line 5974
+    .line 5978
     or-int/lit8 v0, v0, 0x1
 
-    .line 5976
+    .line 5980
     :cond_1
     iget-object v3, p1, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
@@ -3601,21 +3601,21 @@
 
     if-eqz v3, :cond_5
 
-    .line 5979
+    .line 5983
     :cond_4
     iget-object v3, p1, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     iput-object v3, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 5980
+    .line 5984
     iget-object v3, p1, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     iput-object v3, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 5981
+    .line 5985
     or-int/lit8 v0, v0, 0x2
 
-    .line 5983
+    .line 5987
     :cond_5
     iget-object v3, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
@@ -3629,13 +3629,13 @@
 
     if-eqz v3, :cond_8
 
-    .line 5985
+    .line 5989
     :cond_6
     iget-object v3, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v3, :cond_7
 
-    .line 5986
+    .line 5990
     new-instance v3, Ljava/util/HashSet;
 
     iget-object v4, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
@@ -3644,11 +3644,11 @@
 
     iput-object v3, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    .line 5988
+    .line 5992
     :cond_7
     or-int/lit8 v0, v0, 0x4
 
-    .line 5990
+    .line 5994
     :cond_8
     iget-object v3, p1, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
@@ -3662,21 +3662,21 @@
 
     if-eqz v3, :cond_a
 
-    .line 5993
+    .line 5997
     :cond_9
     iget-object v3, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     if-nez v3, :cond_a
 
-    .line 5994
+    .line 5998
     iget-object v3, p1, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     iput-object v3, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
-    .line 5995
+    .line 5999
     or-int/lit8 v0, v0, 0x10
 
-    .line 6000
+    .line 6004
     :cond_a
     iget-object v3, p1, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
@@ -3686,12 +3686,12 @@
 
     if-eqz v3, :cond_b
 
-    .line 6001
+    .line 6005
     iget-object v3, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     if-nez v3, :cond_b
 
-    .line 6002
+    .line 6006
     new-instance v3, Landroid/content/Intent;
 
     iget-object v4, p1, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
@@ -3700,15 +3700,15 @@
 
     iput-object v3, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
-    .line 6003
+    .line 6007
     const/4 v3, 0x0
 
     iput-object v3, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
-    .line 6004
+    .line 6008
     or-int/lit8 v0, v0, 0x40
 
-    .line 6010
+    .line 6014
     :cond_b
     iget-object v3, p1, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
@@ -3718,15 +3718,15 @@
 
     if-eqz v3, :cond_c
 
-    .line 6011
+    .line 6015
     iget-object v3, p1, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     iput-object v3, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 6012
+    .line 6016
     or-int/lit8 v0, v0, 0x8
 
-    .line 6014
+    .line 6018
     :cond_c
     iget v3, p0, Landroid/content/Intent;->mFlags:I
 
@@ -3736,7 +3736,7 @@
 
     iput v3, p0, Landroid/content/Intent;->mFlags:I
 
-    .line 6016
+    .line 6020
     iget v3, p0, Landroid/content/Intent;->mHtcFlags:I
 
     iget v4, p1, Landroid/content/Intent;->mHtcFlags:I
@@ -3745,7 +3745,7 @@
 
     iput v3, p0, Landroid/content/Intent;->mHtcFlags:I
 
-    .line 6018
+    .line 6022
     iget-object v3, p1, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
     if-eqz v3, :cond_e
@@ -3758,7 +3758,7 @@
 
     if-eqz v3, :cond_e
 
-    .line 6020
+    .line 6024
     :cond_d
     new-instance v3, Landroid/graphics/Rect;
 
@@ -3768,21 +3768,21 @@
 
     iput-object v3, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
-    .line 6021
+    .line 6025
     or-int/lit8 v0, v0, 0x20
 
-    .line 6023
+    .line 6027
     :cond_e
     iget-object v3, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v3, :cond_10
 
-    .line 6024
+    .line 6028
     iget-object v3, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v3, :cond_f
 
-    .line 6025
+    .line 6029
     new-instance v3, Landroid/os/Bundle;
 
     iget-object v4, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
@@ -3791,18 +3791,18 @@
 
     iput-object v3, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 6041
+    .line 6045
     :cond_f
     :goto_0
     return v0
 
-    .line 6027
+    .line 6031
     :cond_10
     iget-object v3, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v3, :cond_f
 
-    .line 6029
+    .line 6033
     :try_start_0
     new-instance v2, Landroid/os/Bundle;
 
@@ -3810,25 +3810,25 @@
 
     invoke-direct {v2, v3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    .line 6030
+    .line 6034
     .local v2, newb:Landroid/os/Bundle;
     iget-object v3, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v2, v3}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 6031
+    .line 6035
     iput-object v2, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 6032
+    .line 6036
     .end local v2           #newb:Landroid/os/Bundle;
     :catch_0
     move-exception v1
 
-    .line 6038
+    .line 6042
     .local v1, e:Ljava/lang/RuntimeException;
     const-string v3, "Intent"
 
@@ -3846,15 +3846,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6097
+    .line 6101
     if-nez p1, :cond_1
 
-    .line 6167
+    .line 6171
     :cond_0
     :goto_0
     return v0
 
-    .line 6100
+    .line 6104
     :cond_1
     iget-object v1, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
@@ -3862,12 +3862,12 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 6101
+    .line 6105
     iget-object v1, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     if-eqz v1, :cond_8
 
-    .line 6102
+    .line 6106
     iget-object v1, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     iget-object v2, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
@@ -3878,7 +3878,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 6111
+    .line 6115
     :cond_2
     iget-object v1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
@@ -3886,12 +3886,12 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 6112
+    .line 6116
     iget-object v1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     if-eqz v1, :cond_9
 
-    .line 6113
+    .line 6117
     iget-object v1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     iget-object v2, p1, Landroid/content/Intent;->mData:Landroid/net/Uri;
@@ -3902,7 +3902,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 6122
+    .line 6126
     :cond_3
     iget-object v1, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
@@ -3910,12 +3910,12 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 6123
+    .line 6127
     iget-object v1, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     if-eqz v1, :cond_a
 
-    .line 6124
+    .line 6128
     iget-object v1, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     iget-object v2, p1, Landroid/content/Intent;->mType:Ljava/lang/String;
@@ -3926,7 +3926,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 6133
+    .line 6137
     :cond_4
     iget-object v1, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
@@ -3934,12 +3934,12 @@
 
     if-eq v1, v2, :cond_5
 
-    .line 6134
+    .line 6138
     iget-object v1, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     if-eqz v1, :cond_b
 
-    .line 6135
+    .line 6139
     iget-object v1, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     iget-object v2, p1, Landroid/content/Intent;->mPackage:Ljava/lang/String;
@@ -3950,7 +3950,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 6144
+    .line 6148
     :cond_5
     iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
@@ -3958,12 +3958,12 @@
 
     if-eq v1, v2, :cond_6
 
-    .line 6145
+    .line 6149
     iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     if-eqz v1, :cond_c
 
-    .line 6146
+    .line 6150
     iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     iget-object v2, p1, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
@@ -3974,7 +3974,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 6155
+    .line 6159
     :cond_6
     iget-object v1, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
@@ -3982,12 +3982,12 @@
 
     if-eq v1, v2, :cond_7
 
-    .line 6156
+    .line 6160
     iget-object v1, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v1, :cond_d
 
-    .line 6157
+    .line 6161
     iget-object v1, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     iget-object v2, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
@@ -3998,13 +3998,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 6167
+    .line 6171
     :cond_7
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 6106
+    .line 6110
     :cond_8
     iget-object v1, p1, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
@@ -4018,7 +4018,7 @@
 
     goto/16 :goto_0
 
-    .line 6117
+    .line 6121
     :cond_9
     iget-object v1, p1, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
@@ -4032,7 +4032,7 @@
 
     goto/16 :goto_0
 
-    .line 6128
+    .line 6132
     :cond_a
     iget-object v1, p1, Landroid/content/Intent;->mType:Ljava/lang/String;
 
@@ -4046,7 +4046,7 @@
 
     goto/16 :goto_0
 
-    .line 6139
+    .line 6143
     :cond_b
     iget-object v1, p1, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
@@ -4060,7 +4060,7 @@
 
     goto/16 :goto_0
 
-    .line 6150
+    .line 6154
     :cond_c
     iget-object v1, p1, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
@@ -4074,7 +4074,7 @@
 
     goto/16 :goto_0
 
-    .line 6161
+    .line 6165
     :cond_d
     iget-object v1, p1, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
@@ -4093,16 +4093,16 @@
     .locals 2
 
     .prologue
-    .line 6179
+    .line 6183
     const/4 v0, 0x0
 
-    .line 6180
+    .line 6184
     .local v0, code:I
     iget-object v1, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 6181
+    .line 6185
     iget-object v1, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -4111,13 +4111,13 @@
 
     add-int/2addr v0, v1
 
-    .line 6183
+    .line 6187
     :cond_0
     iget-object v1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     if-eqz v1, :cond_1
 
-    .line 6184
+    .line 6188
     iget-object v1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
@@ -4126,13 +4126,13 @@
 
     add-int/2addr v0, v1
 
-    .line 6186
+    .line 6190
     :cond_1
     iget-object v1, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    .line 6187
+    .line 6191
     iget-object v1, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -4141,13 +4141,13 @@
 
     add-int/2addr v0, v1
 
-    .line 6189
+    .line 6193
     :cond_2
     iget-object v1, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
-    .line 6190
+    .line 6194
     iget-object v1, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -4156,13 +4156,13 @@
 
     add-int/2addr v0, v1
 
-    .line 6192
+    .line 6196
     :cond_3
     iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     if-eqz v1, :cond_4
 
-    .line 6193
+    .line 6197
     iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->hashCode()I
@@ -4171,13 +4171,13 @@
 
     add-int/2addr v0, v1
 
-    .line 6195
+    .line 6199
     :cond_4
     iget-object v1, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v1, :cond_5
 
-    .line 6196
+    .line 6200
     iget-object v1, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Ljava/util/HashSet;->hashCode()I
@@ -4186,7 +4186,7 @@
 
     add-int/2addr v0, v1
 
-    .line 6198
+    .line 6202
     :cond_5
     return v0
 .end method
@@ -4195,7 +4195,7 @@
     .locals 1
 
     .prologue
-    .line 3933
+    .line 3937
     iget-object v0, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     return-object v0
@@ -4206,7 +4206,7 @@
     .parameter "name"
 
     .prologue
-    .line 4412
+    .line 4416
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4232,7 +4232,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4152
+    .line 4156
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4257,7 +4257,7 @@
     .parameter "name"
 
     .prologue
-    .line 4552
+    .line 4556
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4282,7 +4282,7 @@
     .parameter "name"
 
     .prologue
-    .line 4426
+    .line 4430
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4308,7 +4308,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4169
+    .line 4173
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4345,7 +4345,7 @@
     .end annotation
 
     .prologue
-    .line 4073
+    .line 4077
     iget-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     return-object v0
@@ -4356,7 +4356,7 @@
     .parameter "name"
 
     .prologue
-    .line 4454
+    .line 4458
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4382,7 +4382,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4203
+    .line 4207
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4407,7 +4407,7 @@
     .parameter "name"
 
     .prologue
-    .line 4538
+    .line 4542
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4443,7 +4443,7 @@
     .end annotation
 
     .prologue
-    .line 4398
+    .line 4402
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4468,7 +4468,7 @@
     .parameter "name"
 
     .prologue
-    .line 4300
+    .line 4304
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4492,7 +4492,7 @@
     .locals 1
 
     .prologue
-    .line 4658
+    .line 4662
     iget-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     return-object v0
@@ -4502,7 +4502,7 @@
     .locals 1
 
     .prologue
-    .line 3948
+    .line 3952
     iget-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     return-object v0
@@ -4512,7 +4512,7 @@
     .locals 1
 
     .prologue
-    .line 3956
+    .line 3960
     iget-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
@@ -4537,7 +4537,7 @@
     .parameter "name"
 
     .prologue
-    .line 4510
+    .line 4514
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4563,7 +4563,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4271
+    .line 4275
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4590,7 +4590,7 @@
     .end annotation
 
     .prologue
-    .line 4136
+    .line 4140
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/content/Intent;->getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -4608,30 +4608,30 @@
     .end annotation
 
     .prologue
-    .line 4590
+    .line 4594
     move-object v0, p2
 
-    .line 4591
+    .line 4595
     .local v0, result:Ljava/lang/Object;
     iget-object v2, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v2, :cond_0
 
-    .line 4592
+    .line 4596
     iget-object v2, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v2, p1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 4593
+    .line 4597
     .local v1, result2:Ljava/lang/Object;
     if-eqz v1, :cond_0
 
-    .line 4594
+    .line 4598
     move-object v0, v1
 
-    .line 4598
+    .line 4602
     .end local v1           #result2:Ljava/lang/Object;
     :cond_0
     return-object v0
@@ -4641,7 +4641,7 @@
     .locals 2
 
     .prologue
-    .line 4608
+    .line 4612
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -4665,7 +4665,7 @@
     .locals 1
 
     .prologue
-    .line 4623
+    .line 4627
     iget v0, p0, Landroid/content/Intent;->mFlags:I
 
     return v0
@@ -4676,7 +4676,7 @@
     .parameter "name"
 
     .prologue
-    .line 4496
+    .line 4500
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4702,7 +4702,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4254
+    .line 4258
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4726,7 +4726,7 @@
     .locals 3
 
     .prologue
-    .line 6626
+    .line 6636
     const-string v0, "Intent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4765,7 +4765,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6627
+    .line 6637
     iget v0, p0, Landroid/content/Intent;->mHtcFlags:I
 
     return v0
@@ -4778,7 +4778,7 @@
     .end annotation
 
     .prologue
-    .line 4570
+    .line 4574
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4803,7 +4803,7 @@
     .parameter "name"
 
     .prologue
-    .line 4468
+    .line 4472
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4829,7 +4829,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4220
+    .line 4224
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4865,7 +4865,7 @@
     .end annotation
 
     .prologue
-    .line 4370
+    .line 4374
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4890,7 +4890,7 @@
     .parameter "name"
 
     .prologue
-    .line 4482
+    .line 4486
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4916,7 +4916,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4237
+    .line 4241
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4940,7 +4940,7 @@
     .locals 1
 
     .prologue
-    .line 4643
+    .line 4647
     iget-object v0, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     return-object v0
@@ -4951,7 +4951,7 @@
     .parameter "name"
 
     .prologue
-    .line 4328
+    .line 4332
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -4987,7 +4987,7 @@
     .end annotation
 
     .prologue
-    .line 4342
+    .line 4346
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5021,7 +5021,7 @@
     .end annotation
 
     .prologue
-    .line 4314
+    .line 4318
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5045,7 +5045,7 @@
     .locals 1
 
     .prologue
-    .line 3972
+    .line 3976
     iget-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
@@ -5069,7 +5069,7 @@
     .locals 1
 
     .prologue
-    .line 4083
+    .line 4087
     iget-object v0, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     return-object v0
@@ -5080,7 +5080,7 @@
     .parameter "name"
 
     .prologue
-    .line 4356
+    .line 4360
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5105,7 +5105,7 @@
     .parameter "name"
 
     .prologue
-    .line 4440
+    .line 4444
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5131,7 +5131,7 @@
     .parameter "defaultValue"
 
     .prologue
-    .line 4186
+    .line 4190
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5155,7 +5155,7 @@
     .locals 1
 
     .prologue
-    .line 4667
+    .line 4671
     iget-object v0, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
     return-object v0
@@ -5166,7 +5166,7 @@
     .parameter "name"
 
     .prologue
-    .line 4524
+    .line 4528
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5202,7 +5202,7 @@
     .end annotation
 
     .prologue
-    .line 4384
+    .line 4388
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5227,7 +5227,7 @@
     .parameter "name"
 
     .prologue
-    .line 4286
+    .line 4290
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -5251,7 +5251,7 @@
     .locals 1
 
     .prologue
-    .line 3986
+    .line 3990
     iget-object v0, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     return-object v0
@@ -5262,7 +5262,7 @@
     .parameter "category"
 
     .prologue
-    .line 4060
+    .line 4064
     iget-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v0, :cond_0
@@ -5291,7 +5291,7 @@
     .parameter "name"
 
     .prologue
-    .line 4105
+    .line 4109
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -5319,7 +5319,7 @@
     .locals 1
 
     .prologue
-    .line 4113
+    .line 4117
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -5347,7 +5347,7 @@
     .locals 2
 
     .prologue
-    .line 4628
+    .line 4632
     iget v0, p0, Landroid/content/Intent;->mFlags:I
 
     and-int/lit8 v0, v0, 0x30
@@ -5384,26 +5384,26 @@
     .end annotation
 
     .prologue
-    .line 5308
+    .line 5312
     .local p2, value:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5309
+    .line 5313
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5311
+    .line 5315
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequenceArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 5312
+    .line 5316
     return-object p0
 .end method
 
@@ -5413,25 +5413,25 @@
     .parameter "value"
 
     .prologue
-    .line 4986
+    .line 4990
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 4987
+    .line 4991
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 4989
+    .line 4993
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putByte(Ljava/lang/String;B)V
 
-    .line 4990
+    .line 4994
     return-object p0
 .end method
 
@@ -5441,25 +5441,25 @@
     .parameter "value"
 
     .prologue
-    .line 5009
+    .line 5013
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5010
+    .line 5014
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5012
+    .line 5016
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putChar(Ljava/lang/String;C)V
 
-    .line 5013
+    .line 5017
     return-object p0
 .end method
 
@@ -5469,25 +5469,25 @@
     .parameter "value"
 
     .prologue
-    .line 5124
+    .line 5128
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5125
+    .line 5129
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5127
+    .line 5131
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
 
-    .line 5128
+    .line 5132
     return-object p0
 .end method
 
@@ -5497,25 +5497,25 @@
     .parameter "value"
 
     .prologue
-    .line 5101
+    .line 5105
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5102
+    .line 5106
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5104
+    .line 5108
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 5105
+    .line 5109
     return-object p0
 .end method
 
@@ -5525,25 +5525,25 @@
     .parameter "value"
 
     .prologue
-    .line 5055
+    .line 5059
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5056
+    .line 5060
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5058
+    .line 5062
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 5059
+    .line 5063
     return-object p0
 .end method
 
@@ -5553,25 +5553,25 @@
     .parameter "value"
 
     .prologue
-    .line 5078
+    .line 5082
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5079
+    .line 5083
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5081
+    .line 5085
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 5082
+    .line 5086
     return-object p0
 .end method
 
@@ -5581,25 +5581,25 @@
     .parameter "value"
 
     .prologue
-    .line 5584
+    .line 5588
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5585
+    .line 5589
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5587
+    .line 5591
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 5588
+    .line 5592
     return-object p0
 .end method
 
@@ -5611,25 +5611,25 @@
     .end annotation
 
     .prologue
-    .line 5611
+    .line 5615
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5612
+    .line 5616
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5614
+    .line 5618
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putIBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 5615
+    .line 5619
     return-object p0
 .end method
 
@@ -5639,25 +5639,25 @@
     .parameter "value"
 
     .prologue
-    .line 5193
+    .line 5197
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5194
+    .line 5198
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5196
+    .line 5200
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 5197
+    .line 5201
     return-object p0
 .end method
 
@@ -5667,25 +5667,25 @@
     .parameter "value"
 
     .prologue
-    .line 5331
+    .line 5335
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5332
+    .line 5336
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5334
+    .line 5338
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 5335
+    .line 5339
     return-object p0
 .end method
 
@@ -5695,25 +5695,25 @@
     .parameter "value"
 
     .prologue
-    .line 5170
+    .line 5174
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5171
+    .line 5175
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5173
+    .line 5177
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    .line 5174
+    .line 5178
     return-object p0
 .end method
 
@@ -5723,25 +5723,25 @@
     .parameter "value"
 
     .prologue
-    .line 5147
+    .line 5151
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5148
+    .line 5152
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5150
+    .line 5154
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5151
+    .line 5155
     return-object p0
 .end method
 
@@ -5751,25 +5751,25 @@
     .parameter "value"
 
     .prologue
-    .line 5032
+    .line 5036
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5033
+    .line 5037
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5035
+    .line 5039
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putShort(Ljava/lang/String;S)V
 
-    .line 5036
+    .line 5040
     return-object p0
 .end method
 
@@ -5779,25 +5779,25 @@
     .parameter "value"
 
     .prologue
-    .line 4963
+    .line 4967
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 4964
+    .line 4968
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 4966
+    .line 4970
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 4967
+    .line 4971
     return-object p0
 .end method
 
@@ -5807,25 +5807,25 @@
     .parameter "value"
 
     .prologue
-    .line 5377
+    .line 5381
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5378
+    .line 5382
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5380
+    .line 5384
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 5381
+    .line 5385
     return-object p0
 .end method
 
@@ -5835,25 +5835,25 @@
     .parameter "value"
 
     .prologue
-    .line 5423
+    .line 5427
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5424
+    .line 5428
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5426
+    .line 5430
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharArray(Ljava/lang/String;[C)V
 
-    .line 5427
+    .line 5431
     return-object p0
 .end method
 
@@ -5863,25 +5863,25 @@
     .parameter "value"
 
     .prologue
-    .line 5515
+    .line 5519
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5516
+    .line 5520
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5518
+    .line 5522
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putDoubleArray(Ljava/lang/String;[D)V
 
-    .line 5519
+    .line 5523
     return-object p0
 .end method
 
@@ -5891,25 +5891,25 @@
     .parameter "value"
 
     .prologue
-    .line 5492
+    .line 5496
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5493
+    .line 5497
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5495
+    .line 5499
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putFloatArray(Ljava/lang/String;[F)V
 
-    .line 5496
+    .line 5500
     return-object p0
 .end method
 
@@ -5919,25 +5919,25 @@
     .parameter "value"
 
     .prologue
-    .line 5446
+    .line 5450
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5447
+    .line 5451
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5449
+    .line 5453
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
-    .line 5450
+    .line 5454
     return-object p0
 .end method
 
@@ -5947,25 +5947,25 @@
     .parameter "value"
 
     .prologue
-    .line 5469
+    .line 5473
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5470
+    .line 5474
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5472
+    .line 5476
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putLongArray(Ljava/lang/String;[J)V
 
-    .line 5473
+    .line 5477
     return-object p0
 .end method
 
@@ -5975,25 +5975,25 @@
     .parameter "value"
 
     .prologue
-    .line 5216
+    .line 5220
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5217
+    .line 5221
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5219
+    .line 5223
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
 
-    .line 5220
+    .line 5224
     return-object p0
 .end method
 
@@ -6003,25 +6003,25 @@
     .parameter "value"
 
     .prologue
-    .line 5561
+    .line 5565
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5562
+    .line 5566
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5564
+    .line 5568
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
-    .line 5565
+    .line 5569
     return-object p0
 .end method
 
@@ -6031,25 +6031,25 @@
     .parameter "value"
 
     .prologue
-    .line 5538
+    .line 5542
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5539
+    .line 5543
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5541
+    .line 5545
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 5542
+    .line 5546
     return-object p0
 .end method
 
@@ -6059,25 +6059,25 @@
     .parameter "value"
 
     .prologue
-    .line 5400
+    .line 5404
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5401
+    .line 5405
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5403
+    .line 5407
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putShortArray(Ljava/lang/String;[S)V
 
-    .line 5404
+    .line 5408
     return-object p0
 .end method
 
@@ -6087,25 +6087,25 @@
     .parameter "value"
 
     .prologue
-    .line 5354
+    .line 5358
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5355
+    .line 5359
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5357
+    .line 5361
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBooleanArray(Ljava/lang/String;[Z)V
 
-    .line 5358
+    .line 5362
     return-object p0
 .end method
 
@@ -6114,17 +6114,17 @@
     .parameter "src"
 
     .prologue
-    .line 5626
+    .line 5630
     iget-object v0, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 5627
+    .line 5631
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_1
 
-    .line 5628
+    .line 5632
     new-instance v0, Landroid/os/Bundle;
 
     iget-object v1, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
@@ -6133,12 +6133,12 @@
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5633
+    .line 5637
     :cond_0
     :goto_0
     return-object p0
 
-    .line 5630
+    .line 5634
     :cond_1
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
@@ -6154,25 +6154,25 @@
     .parameter "extras"
 
     .prologue
-    .line 5647
+    .line 5651
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5648
+    .line 5652
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5650
+    .line 5654
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 5651
+    .line 5655
     return-object p0
 .end method
 
@@ -6193,26 +6193,26 @@
     .end annotation
 
     .prologue
-    .line 5262
+    .line 5266
     .local p2, value:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5263
+    .line 5267
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5265
+    .line 5269
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 5266
+    .line 5270
     return-object p0
 .end method
 
@@ -6233,26 +6233,26 @@
     .end annotation
 
     .prologue
-    .line 5239
+    .line 5243
     .local p2, value:Ljava/util/ArrayList;,"Ljava/util/ArrayList<+Landroid/os/Parcelable;>;"
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5240
+    .line 5244
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5242
+    .line 5246
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 5243
+    .line 5247
     return-object p0
 .end method
 
@@ -6273,26 +6273,26 @@
     .end annotation
 
     .prologue
-    .line 5285
+    .line 5289
     .local p2, value:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 5286
+    .line 5290
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5288
+    .line 5292
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 5289
+    .line 5293
     return-object p0
 .end method
 
@@ -6301,14 +6301,14 @@
     .parameter "in"
 
     .prologue
-    .line 6506
+    .line 6516
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6507
+    .line 6517
     sget-object v2, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -6319,42 +6319,42 @@
 
     iput-object v2, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 6508
+    .line 6518
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 6509
+    .line 6519
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/content/Intent;->mFlags:I
 
-    .line 6510
+    .line 6520
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
-    .line 6511
+    .line 6521
     invoke-static {p1}, Landroid/content/ComponentName;->readFromParcel(Landroid/os/Parcel;)Landroid/content/ComponentName;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 6513
+    .line 6523
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 6514
+    .line 6524
     sget-object v2, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v2, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -6365,31 +6365,31 @@
 
     iput-object v2, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
-    .line 6517
+    .line 6527
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 6518
+    .line 6528
     .local v0, N:I
     if-lez v0, :cond_1
 
-    .line 6519
+    .line 6529
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     iput-object v2, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    .line 6521
+    .line 6531
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 6522
+    .line 6532
     iget-object v2, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -6402,19 +6402,19 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 6521
+    .line 6531
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 6525
+    .line 6535
     .end local v1           #i:I
     :cond_1
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    .line 6528
+    .line 6538
     :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -6422,14 +6422,14 @@
 
     if-eqz v2, :cond_3
 
-    .line 6529
+    .line 6539
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, p1}, Landroid/content/Intent;-><init>(Landroid/os/Parcel;)V
 
     iput-object v2, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
-    .line 6532
+    .line 6542
     :cond_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
@@ -6437,14 +6437,14 @@
 
     iput-object v2, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 6533
+    .line 6543
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/content/Intent;->mHtcFlags:I
 
-    .line 6534
+    .line 6544
     return-void
 .end method
 
@@ -6453,17 +6453,17 @@
     .parameter "category"
 
     .prologue
-    .line 4896
+    .line 4900
     iget-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v0, :cond_0
 
-    .line 4897
+    .line 4901
     iget-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 4898
+    .line 4902
     iget-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
@@ -6472,12 +6472,12 @@
 
     if-nez v0, :cond_0
 
-    .line 4899
+    .line 4903
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
-    .line 4902
+    .line 4906
     :cond_0
     return-void
 .end method
@@ -6487,17 +6487,17 @@
     .parameter "name"
 
     .prologue
-    .line 5684
+    .line 5688
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 5685
+    .line 5689
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    .line 5686
+    .line 5690
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0}, Landroid/os/Bundle;->size()I
@@ -6506,12 +6506,12 @@
 
     if-nez v0, :cond_0
 
-    .line 5687
+    .line 5691
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5690
+    .line 5694
     :cond_0
     return-void
 .end method
@@ -6521,7 +6521,7 @@
     .parameter "src"
 
     .prologue
-    .line 5662
+    .line 5666
     iget-object v0, p1, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -6535,10 +6535,10 @@
     :goto_0
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5663
+    .line 5667
     return-object p0
 
-    .line 5662
+    .line 5666
     :cond_0
     const/4 v0, 0x0
 
@@ -6550,7 +6550,7 @@
     .parameter "extras"
 
     .prologue
-    .line 5674
+    .line 5678
     if-eqz p1, :cond_0
 
     new-instance v0, Landroid/os/Bundle;
@@ -6560,10 +6560,10 @@
     :goto_0
     iput-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
-    .line 5675
+    .line 5679
     return-object p0
 
-    .line 5674
+    .line 5678
     :cond_0
     const/4 v0, 0x0
 
@@ -6575,19 +6575,19 @@
     .parameter "pm"
 
     .prologue
-    .line 4718
+    .line 4722
     iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     if-eqz v1, :cond_0
 
-    .line 4719
+    .line 4723
     iget-object v1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 4730
+    .line 4734
     :goto_0
     return-object v1
 
-    .line 4722
+    .line 4726
     :cond_0
     const/high16 v1, 0x1
 
@@ -6595,11 +6595,11 @@
 
     move-result-object v0
 
-    .line 4724
+    .line 4728
     .local v0, info:Landroid/content/pm/ResolveInfo;
     if-eqz v0, :cond_1
 
-    .line 4725
+    .line 4729
     new-instance v1, Landroid/content/ComponentName;
 
     iget-object v2, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -6616,7 +6616,7 @@
 
     goto :goto_0
 
-    .line 4730
+    .line 4734
     :cond_1
     const/4 v1, 0x0
 
@@ -6629,16 +6629,16 @@
     .parameter "flags"
 
     .prologue
-    .line 4750
+    .line 4754
     const/4 v0, 0x0
 
-    .line 4751
+    .line 4755
     .local v0, ai:Landroid/content/pm/ActivityInfo;
     iget-object v2, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     if-eqz v2, :cond_1
 
-    .line 4753
+    .line 4757
     :try_start_0
     iget-object v2, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
@@ -6648,12 +6648,12 @@
 
     move-result-object v0
 
-    .line 4765
+    .line 4769
     :cond_0
     :goto_0
     return-object v0
 
-    .line 4758
+    .line 4762
     :cond_1
     const/high16 v2, 0x1
 
@@ -6663,16 +6663,16 @@
 
     move-result-object v1
 
-    .line 4760
+    .line 4764
     .local v1, info:Landroid/content/pm/ResolveInfo;
     if-eqz v1, :cond_0
 
-    .line 4761
+    .line 4765
     iget-object v0, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     goto :goto_0
 
-    .line 4754
+    .line 4758
     .end local v1           #info:Landroid/content/pm/ResolveInfo;
     :catch_0
     move-exception v2
@@ -6685,25 +6685,25 @@
     .parameter "resolver"
 
     .prologue
-    .line 4019
+    .line 4023
     iget-object v0, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 4020
+    .line 4024
     iget-object v0, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 4027
+    .line 4031
     :goto_0
     return-object v0
 
-    .line 4022
+    .line 4026
     :cond_0
     iget-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     if-eqz v0, :cond_1
 
-    .line 4023
+    .line 4027
     const-string v0, "content"
 
     iget-object v1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
@@ -6718,7 +6718,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 4024
+    .line 4028
     iget-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     invoke-virtual {p1, v0}, Landroid/content/ContentResolver;->getType(Landroid/net/Uri;)Ljava/lang/String;
@@ -6727,7 +6727,7 @@
 
     goto :goto_0
 
-    .line 4027
+    .line 4031
     :cond_1
     const/4 v0, 0x0
 
@@ -6739,7 +6739,7 @@
     .parameter "context"
 
     .prologue
-    .line 4001
+    .line 4005
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -6756,15 +6756,15 @@
     .parameter "resolver"
 
     .prologue
-    .line 4043
+    .line 4047
     iget-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
-    .line 4044
+    .line 4048
     iget-object v0, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 4046
+    .line 4050
     :goto_0
     return-object v0
 
@@ -6781,7 +6781,7 @@
     .parameter "action"
 
     .prologue
-    .line 4780
+    .line 4784
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->intern()Ljava/lang/String;
@@ -6791,10 +6791,10 @@
     :goto_0
     iput-object v0, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
-    .line 4781
+    .line 4785
     return-object p0
 
-    .line 4780
+    .line 4784
     :cond_0
     const/4 v0, 0x0
 
@@ -6806,17 +6806,17 @@
     .parameter "allowFds"
 
     .prologue
-    .line 4118
+    .line 4122
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 4119
+    .line 4123
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->setAllowFds(Z)Z
 
-    .line 4121
+    .line 4125
     :cond_0
     return-void
 .end method
@@ -6836,7 +6836,7 @@
     .end annotation
 
     .prologue
-    .line 5865
+    .line 5869
     .local p2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     new-instance v0, Landroid/content/ComponentName;
 
@@ -6844,7 +6844,7 @@
 
     iput-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 5866
+    .line 5870
     return-object p0
 .end method
 
@@ -6854,14 +6854,14 @@
     .parameter "className"
 
     .prologue
-    .line 5826
+    .line 5830
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p1, p2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 5827
+    .line 5831
     return-object p0
 .end method
 
@@ -6871,14 +6871,14 @@
     .parameter "className"
 
     .prologue
-    .line 5846
+    .line 5850
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p1, p2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 5847
+    .line 5851
     return-object p0
 .end method
 
@@ -6887,10 +6887,10 @@
     .parameter "component"
 
     .prologue
-    .line 5806
+    .line 5810
     iput-object p1, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
-    .line 5807
+    .line 5811
     return-object p0
 .end method
 
@@ -6899,15 +6899,15 @@
     .parameter "data"
 
     .prologue
-    .line 4804
+    .line 4808
     iput-object p1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 4805
+    .line 4809
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 4806
+    .line 4810
     return-object p0
 .end method
 
@@ -6917,13 +6917,13 @@
     .parameter "type"
 
     .prologue
-    .line 4859
+    .line 4863
     iput-object p1, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 4860
+    .line 4864
     iput-object p2, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 4861
+    .line 4865
     return-object p0
 .end method
 
@@ -6932,17 +6932,17 @@
     .parameter "loader"
 
     .prologue
-    .line 4094
+    .line 4098
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 4095
+    .line 4099
     iget-object v0, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 4097
+    .line 4101
     :cond_0
     return-void
 .end method
@@ -6952,10 +6952,10 @@
     .parameter "flags"
 
     .prologue
-    .line 5737
+    .line 5741
     iput p1, p0, Landroid/content/Intent;->mFlags:I
 
-    .line 5738
+    .line 5742
     return-object p0
 .end method
 
@@ -6964,10 +6964,10 @@
     .parameter "flags"
 
     .prologue
-    .line 6615
+    .line 6625
     iput p1, p0, Landroid/content/Intent;->mHtcFlags:I
 
-    .line 6616
+    .line 6626
     const-string v0, "Intent"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7006,7 +7006,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6617
+    .line 6627
     return-object p0
 .end method
 
@@ -7015,14 +7015,14 @@
     .parameter "packageName"
 
     .prologue
-    .line 5774
+    .line 5778
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
-    .line 5775
+    .line 5779
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can\'t set package name when selector is already set"
@@ -7031,11 +7031,11 @@
 
     throw v0
 
-    .line 5778
+    .line 5782
     :cond_0
     iput-object p1, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
-    .line 5779
+    .line 5783
     return-object p0
 .end method
 
@@ -7044,10 +7044,10 @@
     .parameter "selector"
 
     .prologue
-    .line 4936
+    .line 4940
     if-ne p1, p0, :cond_0
 
-    .line 4937
+    .line 4941
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Intent being set as a selector of itself"
@@ -7056,7 +7056,7 @@
 
     throw v0
 
-    .line 4940
+    .line 4944
     :cond_0
     if-eqz p1, :cond_1
 
@@ -7064,7 +7064,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 4941
+    .line 4945
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can\'t set selector when package name is already set"
@@ -7073,11 +7073,11 @@
 
     throw v0
 
-    .line 4944
+    .line 4948
     :cond_1
     iput-object p1, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
-    .line 4945
+    .line 4949
     return-void
 .end method
 
@@ -7086,21 +7086,21 @@
     .parameter "r"
 
     .prologue
-    .line 5875
+    .line 5879
     if-eqz p1, :cond_0
 
-    .line 5876
+    .line 5880
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     iput-object v0, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
-    .line 5880
+    .line 5884
     :goto_0
     return-void
 
-    .line 5878
+    .line 5882
     :cond_0
     const/4 v0, 0x0
 
@@ -7114,15 +7114,15 @@
     .parameter "type"
 
     .prologue
-    .line 4831
+    .line 4835
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    .line 4832
+    .line 4836
     iput-object p1, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
-    .line 4833
+    .line 4837
     return-object p0
 .end method
 
@@ -7132,30 +7132,30 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 6214
+    .line 6218
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 6216
+    .line 6220
     .local v0, b:Ljava/lang/StringBuilder;
     const-string v1, "Intent { "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6217
+    .line 6221
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1, v2, v2}, Landroid/content/Intent;->toShortString(Ljava/lang/StringBuilder;ZZZ)V
 
-    .line 6218
+    .line 6222
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6220
+    .line 6224
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -7170,18 +7170,18 @@
     .parameter "extras"
 
     .prologue
-    .line 6225
+    .line 6229
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 6226
+    .line 6230
     .local v0, b:Ljava/lang/StringBuilder;
     invoke-virtual {p0, v0, p1, p2, p3}, Landroid/content/Intent;->toShortString(Ljava/lang/StringBuilder;ZZZ)V
 
-    .line 6227
+    .line 6231
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -7199,16 +7199,16 @@
     .prologue
     const/16 v5, 0x20
 
-    .line 6232
+    .line 6236
     const/4 v1, 0x1
 
-    .line 6233
+    .line 6237
     .local v1, first:Z
     iget-object v3, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
-    .line 6234
+    .line 6238
     const-string v3, "act="
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -7219,42 +7219,42 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6235
+    .line 6239
     const/4 v1, 0x0
 
-    .line 6237
+    .line 6241
     :cond_0
     iget-object v3, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v3, :cond_4
 
-    .line 6238
+    .line 6242
     if-nez v1, :cond_1
 
-    .line 6239
+    .line 6243
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6241
+    .line 6245
     :cond_1
     const/4 v1, 0x0
 
-    .line 6242
+    .line 6246
     const-string v3, "cat=["
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6243
+    .line 6247
     iget-object v3, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 6244
+    .line 6248
     .local v2, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 6245
+    .line 6249
     .local v0, didone:Z
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -7263,18 +7263,18 @@
 
     if-eqz v3, :cond_3
 
-    .line 6246
+    .line 6250
     if-eqz v0, :cond_2
 
     const-string v3, ","
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6247
+    .line 6251
     :cond_2
     const/4 v0, 0x1
 
-    .line 6248
+    .line 6252
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -7285,13 +7285,13 @@
 
     goto :goto_0
 
-    .line 6250
+    .line 6254
     :cond_3
     const-string v3, "]"
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6252
+    .line 6256
     .end local v0           #didone:Z
     .end local v2           #i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_4
@@ -7299,51 +7299,51 @@
 
     if-eqz v3, :cond_6
 
-    .line 6253
+    .line 6257
     if-nez v1, :cond_5
 
-    .line 6254
+    .line 6258
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6256
+    .line 6260
     :cond_5
     const/4 v1, 0x0
 
-    .line 6257
+    .line 6261
     const-string v3, "dat="
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6258
+    .line 6262
     if-eqz p2, :cond_16
 
-    .line 6259
+    .line 6267
     iget-object v3, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
-    invoke-virtual {v3}, Landroid/net/Uri;->toSafeString()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6264
+    .line 6274
     :cond_6
     :goto_1
     iget-object v3, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     if-eqz v3, :cond_8
 
-    .line 6265
+    .line 6275
     if-nez v1, :cond_7
 
-    .line 6266
+    .line 6276
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6268
+    .line 6278
     :cond_7
     const/4 v1, 0x0
 
-    .line 6269
+    .line 6279
     const-string/jumbo v3, "typ="
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -7354,23 +7354,23 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6271
+    .line 6281
     :cond_8
     iget v3, p0, Landroid/content/Intent;->mFlags:I
 
     if-eqz v3, :cond_a
 
-    .line 6272
+    .line 6282
     if-nez v1, :cond_9
 
-    .line 6273
+    .line 6283
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6275
+    .line 6285
     :cond_9
     const/4 v1, 0x0
 
-    .line 6276
+    .line 6286
     const-string v3, "flg=0x"
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -7385,23 +7385,23 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6279
+    .line 6289
     :cond_a
     iget v3, p0, Landroid/content/Intent;->mHtcFlags:I
 
     if-eqz v3, :cond_c
 
-    .line 6280
+    .line 6290
     if-nez v1, :cond_b
 
-    .line 6281
+    .line 6291
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6283
+    .line 6293
     :cond_b
     const/4 v1, 0x0
 
-    .line 6284
+    .line 6294
     const-string v3, "Htcflg=0x"
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -7416,23 +7416,23 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6287
+    .line 6297
     :cond_c
     iget-object v3, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     if-eqz v3, :cond_e
 
-    .line 6288
+    .line 6298
     if-nez v1, :cond_d
 
-    .line 6289
+    .line 6299
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6291
+    .line 6301
     :cond_d
     const/4 v1, 0x0
 
-    .line 6292
+    .line 6302
     const-string/jumbo v3, "pkg="
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -7443,7 +7443,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6294
+    .line 6304
     :cond_e
     if-eqz p3, :cond_10
 
@@ -7451,17 +7451,17 @@
 
     if-eqz v3, :cond_10
 
-    .line 6295
+    .line 6305
     if-nez v1, :cond_f
 
-    .line 6296
+    .line 6306
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6298
+    .line 6308
     :cond_f
     const/4 v1, 0x0
 
-    .line 6299
+    .line 6309
     const-string v3, "cmp="
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -7476,23 +7476,23 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6301
+    .line 6311
     :cond_10
     iget-object v3, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
     if-eqz v3, :cond_12
 
-    .line 6302
+    .line 6312
     if-nez v1, :cond_11
 
-    .line 6303
+    .line 6313
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6305
+    .line 6315
     :cond_11
     const/4 v1, 0x0
 
-    .line 6306
+    .line 6316
     const-string v3, "bnds="
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -7507,7 +7507,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6308
+    .line 6318
     :cond_12
     if-eqz p4, :cond_14
 
@@ -7515,47 +7515,47 @@
 
     if-eqz v3, :cond_14
 
-    .line 6309
+    .line 6319
     if-nez v1, :cond_13
 
-    .line 6310
+    .line 6320
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6312
+    .line 6322
     :cond_13
     const/4 v1, 0x0
 
-    .line 6313
+    .line 6323
     const-string v3, "(has extras)"
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6315
+    .line 6325
     :cond_14
     iget-object v3, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     if-eqz v3, :cond_15
 
-    .line 6316
+    .line 6326
     const-string v3, " sel={"
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6317
+    .line 6327
     iget-object v3, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     invoke-virtual {v3, p1, p2, p3, p4}, Landroid/content/Intent;->toShortString(Ljava/lang/StringBuilder;ZZZ)V
 
-    .line 6318
+    .line 6328
     const-string/jumbo v3, "}"
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6320
+    .line 6330
     :cond_15
     return-void
 
-    .line 6261
+    .line 6271
     :cond_16
     iget-object v3, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
@@ -7570,28 +7570,28 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 6203
+    .line 6207
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 6205
+    .line 6209
     .local v0, b:Ljava/lang/StringBuilder;
     const-string v1, "Intent { "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6206
+    .line 6210
     invoke-virtual {p0, v0, v2, v2, v2}, Landroid/content/Intent;->toShortString(Ljava/lang/StringBuilder;ZZZ)V
 
-    .line 6207
+    .line 6211
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6209
+    .line 6213
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -7605,7 +7605,7 @@
     .end annotation
 
     .prologue
-    .line 6328
+    .line 6338
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
@@ -7620,42 +7620,42 @@
     .parameter "flags"
 
     .prologue
-    .line 6348
+    .line 6358
     new-instance v5, Ljava/lang/StringBuilder;
 
     const/16 v6, 0x80
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 6349
+    .line 6359
     .local v5, uri:Ljava/lang/StringBuilder;
     const/4 v4, 0x0
 
-    .line 6350
+    .line 6360
     .local v4, scheme:Ljava/lang/String;
     iget-object v6, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     if-eqz v6, :cond_7
 
-    .line 6351
+    .line 6361
     iget-object v6, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     invoke-virtual {v6}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 6352
+    .line 6362
     .local v2, data:Ljava/lang/String;
     and-int/lit8 v6, p1, 0x1
 
     if-eqz v6, :cond_4
 
-    .line 6353
+    .line 6363
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 6354
+    .line 6364
     .local v0, N:I
     const/4 v3, 0x0
 
@@ -7663,12 +7663,12 @@
     :goto_0
     if-ge v3, v0, :cond_4
 
-    .line 6355
+    .line 6365
     invoke-virtual {v2, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 6356
+    .line 6366
     .local v1, c:C
     const/16 v6, 0x61
 
@@ -7696,13 +7696,13 @@
 
     if-ne v1, v6, :cond_3
 
-    .line 6354
+    .line 6364
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 6360
+    .line 6370
     :cond_3
     const/16 v6, 0x3a
 
@@ -7710,33 +7710,33 @@
 
     if-lez v3, :cond_4
 
-    .line 6362
+    .line 6372
     const/4 v6, 0x0
 
     invoke-virtual {v2, v6, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 6363
-    const-string/jumbo v6, "intent:"
+    .line 6373
+    const-string v6, "intent:"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6364
+    .line 6374
     add-int/lit8 v6, v3, 0x1
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 6372
+    .line 6382
     .end local v0           #N:I
     .end local v1           #c:C
     .end local v3           #i:I
     :cond_4
     invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6378
+    .line 6388
     .end local v2           #data:Ljava/lang/String;
     :cond_5
     :goto_1
@@ -7744,47 +7744,47 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6380
+    .line 6390
     invoke-direct {p0, v5, v4, p1}, Landroid/content/Intent;->toUriInner(Ljava/lang/StringBuilder;Ljava/lang/String;I)V
 
-    .line 6381
+    .line 6391
     iget-object v6, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     if-eqz v6, :cond_6
 
-    .line 6382
+    .line 6392
     const-string v6, "SEL;"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6386
+    .line 6396
     iget-object v6, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     const/4 v7, 0x0
 
     invoke-direct {v6, v5, v7, p1}, Landroid/content/Intent;->toUriInner(Ljava/lang/StringBuilder;Ljava/lang/String;I)V
 
-    .line 6389
+    .line 6399
     :cond_6
     const-string v6, "end"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6391
+    .line 6401
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
     return-object v6
 
-    .line 6374
+    .line 6384
     :cond_7
     and-int/lit8 v6, p1, 0x1
 
     if-eqz v6, :cond_5
 
-    .line 6375
-    const-string/jumbo v6, "intent:"
+    .line 6385
+    const-string v6, "intent:"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7801,56 +7801,56 @@
 
     const/4 v3, 0x0
 
-    .line 6456
+    .line 6466
     iget-object v2, p0, Landroid/content/Intent;->mAction:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 6457
+    .line 6467
     iget-object v2, p0, Landroid/content/Intent;->mData:Landroid/net/Uri;
 
     invoke-static {p1, v2}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;Landroid/net/Uri;)V
 
-    .line 6458
+    .line 6468
     iget-object v2, p0, Landroid/content/Intent;->mType:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 6459
+    .line 6469
     iget v2, p0, Landroid/content/Intent;->mFlags:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6460
+    .line 6470
     iget-object v2, p0, Landroid/content/Intent;->mPackage:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 6461
+    .line 6471
     iget-object v2, p0, Landroid/content/Intent;->mComponent:Landroid/content/ComponentName;
 
     invoke-static {v2, p1}, Landroid/content/ComponentName;->writeToParcel(Landroid/content/ComponentName;Landroid/os/Parcel;)V
 
-    .line 6463
+    .line 6473
     iget-object v2, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
     if-eqz v2, :cond_0
 
-    .line 6464
+    .line 6474
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6465
+    .line 6475
     iget-object v2, p0, Landroid/content/Intent;->mSourceBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v2, p1, p2}, Landroid/graphics/Rect;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 6470
+    .line 6480
     :goto_0
     iget-object v2, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     if-eqz v2, :cond_1
 
-    .line 6471
+    .line 6481
     iget-object v2, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->size()I
@@ -7859,7 +7859,7 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6472
+    .line 6482
     iget-object v2, p0, Landroid/content/Intent;->mCategories:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -7880,13 +7880,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 6473
+    .line 6483
     .local v0, category:Ljava/lang/String;
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 6467
+    .line 6477
     .end local v0           #category:Ljava/lang/String;
     .end local v1           #i$:Ljava/util/Iterator;
     :cond_0
@@ -7894,39 +7894,39 @@
 
     goto :goto_0
 
-    .line 6476
+    .line 6486
     :cond_1
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6479
+    .line 6489
     :cond_2
     iget-object v2, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     if-eqz v2, :cond_3
 
-    .line 6480
+    .line 6490
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6481
+    .line 6491
     iget-object v2, p0, Landroid/content/Intent;->mSelector:Landroid/content/Intent;
 
     invoke-virtual {v2, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 6486
+    .line 6496
     :goto_2
     iget-object v2, p0, Landroid/content/Intent;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 6487
+    .line 6497
     iget v2, p0, Landroid/content/Intent;->mHtcFlags:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6488
+    .line 6498
     return-void
 
-    .line 6483
+    .line 6493
     :cond_3
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 

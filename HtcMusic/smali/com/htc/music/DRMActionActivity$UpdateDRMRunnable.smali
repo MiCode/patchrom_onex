@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 135
+    .line 136
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 135
+    .line 136
     invoke-direct {p0, p1}, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;-><init>(Lcom/htc/music/DRMActionActivity;)V
 
     return-void
@@ -53,7 +53,7 @@
     .locals 5
 
     .prologue
-    .line 138
+    .line 139
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->mLooper:Landroid/os/Looper;
@@ -61,7 +61,7 @@
 
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 139
+    .line 140
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -70,14 +70,14 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 140
+    .line 141
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-virtual {v1}, Lcom/htc/music/DRMActionActivity;->init()I
 
     move-result v0
 
-    .line 141
+    .line 142
     .local v0, status:I
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -87,7 +87,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
+    .line 144
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;->this$0:Lcom/htc/music/DRMActionActivity;
 
     iget-object v1, v1, Lcom/htc/music/DRMActionActivity;->mHandler:Landroid/os/Handler;
@@ -106,7 +106,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 144
+    .line 145
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$UpdateDRMRunnable;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->mLooper:Landroid/os/Looper;
@@ -114,6 +114,6 @@
 
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 145
+    .line 146
     return-void
 .end method

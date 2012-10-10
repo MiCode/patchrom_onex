@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3060
+    .line 3076
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,19 +45,19 @@
 
     const/4 v7, 0x1
 
-    .line 3066
+    .line 3082
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget v4, v4, Lcom/htc/widget/HtcAbsListView;->mTouchMode:I
 
     if-nez v4, :cond_2
 
-    .line 3067
+    .line 3083
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iput v7, v4, Lcom/htc/widget/HtcAbsListView;->mTouchMode:I
 
-    .line 3068
+    .line 3084
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v5, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    .line 3069
+    .line 3085
     .local v0, child:Landroid/view/View;
     if-eqz v0, :cond_2
 
@@ -84,34 +84,34 @@
 
     if-nez v4, :cond_2
 
-    .line 3070
+    .line 3086
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     const/4 v5, 0x0
 
     iput v5, v4, Lcom/htc/widget/HtcAbsListView;->mLayoutMode:I
 
-    .line 3072
+    .line 3088
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-boolean v4, v4, Lcom/htc/widget/HtcAdapterView;->mDataChanged:Z
 
     if-nez v4, :cond_5
 
-    .line 3074
+    .line 3090
     invoke-virtual {v0, v7}, Landroid/view/View;->setPressed(Z)V
 
-    .line 3075
+    .line 3091
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v4, v7}, Lcom/htc/widget/HtcAbsListView;->setPressed(Z)V
 
-    .line 3076
+    .line 3092
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v4}, Lcom/htc/widget/HtcAbsListView;->layoutChildren()V
 
-    .line 3077
+    .line 3093
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v5, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -120,17 +120,17 @@
 
     invoke-virtual {v4, v5, v0}, Lcom/htc/widget/HtcAbsListView;->positionSelector(ILandroid/view/View;)V
 
-    .line 3078
+    .line 3094
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v4}, Lcom/htc/widget/HtcAbsListView;->refreshDrawableState()V
 
-    .line 3080
+    .line 3096
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v3
 
-    .line 3081
+    .line 3097
     .local v3, longPressTimeout:I
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -138,7 +138,7 @@
 
     move-result v2
 
-    .line 3083
+    .line 3099
     .local v2, longClickable:Z
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -146,7 +146,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 3084
+    .line 3100
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v4, v4, Lcom/htc/widget/HtcAbsListView;->mSelector:Landroid/graphics/drawable/Drawable;
@@ -155,7 +155,7 @@
 
     move-result-object v1
 
-    .line 3085
+    .line 3101
     .local v1, d:Landroid/graphics/drawable/Drawable;
     if-eqz v1, :cond_0
 
@@ -163,21 +163,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 3086
+    .line 3102
     if-eqz v2, :cond_3
 
-    .line 3087
+    .line 3103
     check-cast v1, Landroid/graphics/drawable/TransitionDrawable;
 
     .end local v1           #d:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/TransitionDrawable;->startTransition(I)V
 
-    .line 3094
+    .line 3110
     :cond_0
     :goto_0
     if-eqz v2, :cond_4
 
-    .line 3095
+    .line 3111
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     #getter for: Lcom/htc/widget/HtcAbsListView;->mPendingCheckForLongPress:Lcom/htc/widget/HtcAbsListView$CheckForLongPress;
@@ -187,7 +187,7 @@
 
     if-nez v4, :cond_1
 
-    .line 3096
+    .line 3112
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     new-instance v5, Lcom/htc/widget/HtcAbsListView$CheckForLongPress;
@@ -201,7 +201,7 @@
     #setter for: Lcom/htc/widget/HtcAbsListView;->mPendingCheckForLongPress:Lcom/htc/widget/HtcAbsListView$CheckForLongPress;
     invoke-static {v4, v5}, Lcom/htc/widget/HtcAbsListView;->access$502(Lcom/htc/widget/HtcAbsListView;Lcom/htc/widget/HtcAbsListView$CheckForLongPress;)Lcom/htc/widget/HtcAbsListView$CheckForLongPress;
 
-    .line 3098
+    .line 3114
     :cond_1
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -212,7 +212,7 @@
 
     invoke-virtual {v4}, Lcom/htc/widget/HtcAbsListView$CheckForLongPress;->rememberWindowAttachCount()V
 
-    .line 3099
+    .line 3115
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget-object v5, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -226,7 +226,7 @@
 
     invoke-virtual {v4, v5, v6, v7}, Lcom/htc/widget/HtcAbsListView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 3108
+    .line 3124
     .end local v0           #child:Landroid/view/View;
     .end local v2           #longClickable:Z
     .end local v3           #longPressTimeout:I
@@ -234,7 +234,7 @@
     :goto_1
     return-void
 
-    .line 3089
+    .line 3105
     .restart local v0       #child:Landroid/view/View;
     .restart local v1       #d:Landroid/graphics/drawable/Drawable;
     .restart local v2       #longClickable:Z
@@ -247,7 +247,7 @@
 
     goto :goto_0
 
-    .line 3101
+    .line 3117
     :cond_4
     iget-object v4, p0, Lcom/htc/widget/HtcAbsListView$CheckForTap;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -255,7 +255,7 @@
 
     goto :goto_1
 
-    .line 3104
+    .line 3120
     .end local v2           #longClickable:Z
     .end local v3           #longPressTimeout:I
     :cond_5

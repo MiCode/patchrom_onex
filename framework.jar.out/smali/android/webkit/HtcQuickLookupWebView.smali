@@ -47,7 +47,7 @@
     .line 38
     invoke-direct {p0, p1, p2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 99
+    .line 108
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/HtcQuickLookupWebView;->mLayoutChangedClient:Landroid/webkit/HtcQuickLookupWebView$WebViewLayoutChangedClient;
@@ -91,22 +91,22 @@
     .locals 2
 
     .prologue
-    .line 111
+    .line 123
     invoke-super {p0}, Landroid/webkit/WebView;->emulateShiftHeld()V
 
-    .line 113
+    .line 125
     iget-object v0, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     if-eqz v0, :cond_0
 
-    .line 114
+    .line 126
     iget-object v0, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView$QuickSelectAbs;->setQuickSelectionButtonFlag(I)V
 
-    .line 115
+    .line 127
     :cond_0
     return-void
 .end method
@@ -115,7 +115,7 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 54
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     return-object v0
@@ -123,27 +123,6 @@
 
 .method public getHeaderRect()Landroid/graphics/Rect;
     .locals 2
-
-    .prologue
-    .line 80
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    .line 81
-    .local v0, r:Landroid/graphics/Rect;
-    invoke-virtual {p0}, Landroid/webkit/HtcQuickLookupWebView;->getHTCWebCore()Landroid/webkit/HTCWebCore;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/webkit/HTCWebCore;->nativeGetHeaderRect(Landroid/graphics/Rect;)I
-
-    .line 82
-    return-object v0
-.end method
-
-.method public getTableRect()Landroid/graphics/Rect;
-    .locals 3
 
     .prologue
     .line 87
@@ -157,9 +136,30 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/webkit/HTCWebCore;->nativeGetGDInputBoxRect(Landroid/graphics/Rect;)I
+    invoke-virtual {v1, v0}, Landroid/webkit/HTCWebCore;->nativeGetHeaderRect(Landroid/graphics/Rect;)I
 
     .line 89
+    return-object v0
+.end method
+
+.method public getTableRect()Landroid/graphics/Rect;
+    .locals 3
+
+    .prologue
+    .line 95
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    .line 96
+    .local v0, r:Landroid/graphics/Rect;
+    invoke-virtual {p0}, Landroid/webkit/HtcQuickLookupWebView;->getHTCWebCore()Landroid/webkit/HTCWebCore;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/webkit/HTCWebCore;->nativeGetGDInputBoxRect(Landroid/graphics/Rect;)I
+
+    .line 97
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v1
@@ -172,14 +172,14 @@
 
     if-le v1, v2, :cond_0
 
-    .line 90
+    .line 98
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
     add-int/lit8 v1, v1, -0x3
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 91
+    .line 99
     :cond_0
     return-object v0
 .end method
@@ -188,7 +188,7 @@
     .locals 2
 
     .prologue
-    .line 58
+    .line 60
     iget v0, p0, Landroid/webkit/HtcQuickLookupWebView;->mVerticalOffset:I
 
     invoke-super {p0}, Landroid/webkit/WebView;->getTitleHeight()I
@@ -204,7 +204,7 @@
     .locals 2
 
     .prologue
-    .line 63
+    .line 66
     invoke-super {p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v0
@@ -228,17 +228,17 @@
     .parameter "h"
 
     .prologue
-    .line 104
+    .line 115
     iget-object v0, p0, Landroid/webkit/HtcQuickLookupWebView;->mLayoutChangedClient:Landroid/webkit/HtcQuickLookupWebView$WebViewLayoutChangedClient;
 
     if-eqz v0, :cond_0
 
-    .line 105
+    .line 116
     iget-object v0, p0, Landroid/webkit/HtcQuickLookupWebView;->mLayoutChangedClient:Landroid/webkit/HtcQuickLookupWebView$WebViewLayoutChangedClient;
 
     invoke-interface {v0, p1, p2}, Landroid/webkit/HtcQuickLookupWebView$WebViewLayoutChangedClient;->onWebViewLayoutChanged(II)V
 
-    .line 106
+    .line 117
     :cond_0
     return-void
 .end method
@@ -248,10 +248,10 @@
     .parameter "offset"
 
     .prologue
-    .line 71
+    .line 76
     iput p1, p0, Landroid/webkit/HtcQuickLookupWebView;->mHorizontalOffset:I
 
-    .line 72
+    .line 77
     return-void
 .end method
 
@@ -260,14 +260,14 @@
     .parameter "prop"
 
     .prologue
-    .line 75
+    .line 81
     invoke-virtual {p0}, Landroid/webkit/HtcQuickLookupWebView;->getWebViewCore()Landroid/webkit/WebViewCore;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebViewCore;->setTextwrapWithProp(F)V
 
-    .line 76
+    .line 82
     return-void
 .end method
 
@@ -276,7 +276,7 @@
     .parameter "offset"
 
     .prologue
-    .line 67
+    .line 71
     int-to-float v0, p1
 
     invoke-virtual {p0}, Landroid/webkit/HtcQuickLookupWebView;->getScale()F
@@ -293,7 +293,7 @@
 
     iput v0, p0, Landroid/webkit/HtcQuickLookupWebView;->mVerticalOffset:I
 
-    .line 68
+    .line 72
     return-void
 .end method
 
@@ -302,9 +302,9 @@
     .parameter "changedClient"
 
     .prologue
-    .line 101
+    .line 111
     iput-object p1, p0, Landroid/webkit/HtcQuickLookupWebView;->mLayoutChangedClient:Landroid/webkit/HtcQuickLookupWebView$WebViewLayoutChangedClient;
 
-    .line 102
+    .line 112
     return-void
 .end method

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1007
+    .line 1006
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$9;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,14 +66,14 @@
     .end annotation
 
     .prologue
-    .line 1011
+    .line 1010
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/imaging/Size;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/imaging/Size;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/imaging/Size;
 
-    .line 1012
+    .line 1011
     .local v0, previewSize:Lcom/android/camera/imaging/Size;
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder$9;->this$0:Lcom/android/camera/component/ViewFinder;
 
@@ -84,14 +84,14 @@
 
     monitor-enter v2
 
-    .line 1014
+    .line 1013
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder$9;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #setter for: Lcom/android/camera/component/ViewFinder;->m_PreviewFrameSize:Lcom/android/camera/imaging/Size;
     invoke-static {v1, v0}, Lcom/android/camera/component/ViewFinder;->access$702(Lcom/android/camera/component/ViewFinder;Lcom/android/camera/imaging/Size;)Lcom/android/camera/imaging/Size;
 
-    .line 1015
+    .line 1014
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder$9;->this$0:Lcom/android/camera/component/ViewFinder;
 
     const/4 v3, 0x0
@@ -99,7 +99,7 @@
     #setter for: Lcom/android/camera/component/ViewFinder;->m_PreviewYuvBuffer:Ljava/nio/ByteBuffer;
     invoke-static {v1, v3}, Lcom/android/camera/component/ViewFinder;->access$802(Lcom/android/camera/component/ViewFinder;Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    .line 1024
+    .line 1023
     iget-object v1, p0, Lcom/android/camera/component/ViewFinder$9;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -156,19 +156,19 @@
 
     invoke-static {v3, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1025
+    .line 1024
     monitor-exit v2
 
-    .line 1030
+    .line 1029
     return-void
 
-    .line 1024
+    .line 1023
     :cond_0
     const-string v1, "null"
 
     goto :goto_0
 
-    .line 1025
+    .line 1024
     :catchall_0
     move-exception v1
 

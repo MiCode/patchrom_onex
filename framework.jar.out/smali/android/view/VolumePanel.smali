@@ -188,7 +188,7 @@
     iput-object p2, p0, Landroid/view/VolumePanel;->mAudioService:Landroid/media/AudioService;
 
     .line 198
-    const-string/jumbo v4, "layout_inflater"
+    const-string v4, "layout_inflater"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -630,7 +630,7 @@
     .line 281
     iget-object v7, p0, Landroid/view/VolumePanel;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v8, "layout_inflater"
+    const-string v8, "layout_inflater"
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

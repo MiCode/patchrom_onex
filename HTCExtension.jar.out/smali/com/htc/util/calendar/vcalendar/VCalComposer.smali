@@ -212,7 +212,7 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 145
+    .line 150
     :cond_2
     :goto_1
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->dtend:Ljava/lang/String;
@@ -223,19 +223,19 @@
 
     if-nez v8, :cond_3
 
-    .line 146
+    .line 151
     iget-boolean v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->isAllday:Z
 
-    if-eqz v8, :cond_11
+    if-eqz v8, :cond_13
 
-    .line 147
+    .line 152
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->dtend:Ljava/lang/String;
 
     invoke-direct {p0, v8}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->convertLongToRFC2445DateTime(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 148
+    .line 153
     .local v1, end:Ljava/lang/String;
     const-string v8, "DTEND;VALUE=DATE:"
 
@@ -251,7 +251,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 154
+    .line 159
     .end local v1           #end:Ljava/lang/String;
     :cond_3
     :goto_2
@@ -263,19 +263,19 @@
 
     if-nez v8, :cond_4
 
-    .line 155
+    .line 160
     iget-boolean v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->isAllday:Z
 
-    if-eqz v8, :cond_12
+    if-eqz v8, :cond_14
 
-    .line 156
+    .line 161
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->dtstart:Ljava/lang/String;
 
     invoke-direct {p0, v8}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->convertLongToRFC2445DateTime(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 157
+    .line 162
     .local v5, start:Ljava/lang/String;
     const-string v8, "DTSTART;VALUE=DATE:"
 
@@ -291,7 +291,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 163
+    .line 168
     .end local v5           #start:Ljava/lang/String;
     :cond_4
     :goto_3
@@ -303,7 +303,7 @@
 
     if-nez v8, :cond_5
 
-    .line 164
+    .line 169
     const-string v8, "DALARM:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -320,7 +320,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
+    .line 170
     const-string v8, "AALARM:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -337,7 +337,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 168
+    .line 173
     :cond_5
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->duration:Ljava/lang/String;
 
@@ -347,7 +347,7 @@
 
     if-nez v8, :cond_6
 
-    .line 169
+    .line 174
     const-string v8, "DURATION:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -364,7 +364,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 171
+    .line 176
     :cond_6
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->event_location:Ljava/lang/String;
 
@@ -374,14 +374,14 @@
 
     if-nez v8, :cond_7
 
-    .line 172
+    .line 177
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isSBM()Z
 
     move-result v8
 
-    if-eqz v8, :cond_13
+    if-eqz v8, :cond_15
 
-    .line 173
+    .line 178
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -426,7 +426,7 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 180
+    .line 190
     :cond_7
     :goto_4
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->last_date:Ljava/lang/String;
@@ -437,7 +437,7 @@
 
     if-nez v8, :cond_8
 
-    .line 181
+    .line 191
     const-string v8, "COMPLETED:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -454,7 +454,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 183
+    .line 193
     :cond_8
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->rrule:Ljava/lang/String;
 
@@ -464,7 +464,7 @@
 
     if-nez v8, :cond_9
 
-    .line 184
+    .line 194
     const-string v8, "RRULE:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -481,7 +481,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 186
+    .line 196
     :cond_9
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->rdate:Ljava/lang/String;
 
@@ -491,7 +491,7 @@
 
     if-nez v8, :cond_a
 
-    .line 187
+    .line 197
     const-string v8, "RDATE:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -508,7 +508,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 189
+    .line 199
     :cond_a
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->exrule:Ljava/lang/String;
 
@@ -518,7 +518,7 @@
 
     if-nez v8, :cond_b
 
-    .line 190
+    .line 200
     const-string v8, "EXRULE:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -535,7 +535,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
+    .line 202
     :cond_b
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->exdate:Ljava/lang/String;
 
@@ -545,7 +545,7 @@
 
     if-nez v8, :cond_c
 
-    .line 193
+    .line 203
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->exdate:Ljava/lang/String;
 
     const-string v9, ","
@@ -558,7 +558,7 @@
 
     iput-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->exdate:Ljava/lang/String;
 
-    .line 194
+    .line 204
     const-string v8, "EXDATE:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -575,7 +575,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 197
+    .line 207
     :cond_c
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->title:Ljava/lang/String;
 
@@ -585,14 +585,14 @@
 
     if-nez v8, :cond_d
 
-    .line 198
+    .line 208
     invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isSBM()Z
 
     move-result v8
 
-    if-eqz v8, :cond_14
+    if-eqz v8, :cond_18
 
-    .line 199
+    .line 209
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -637,7 +637,7 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 206
+    .line 221
     :cond_d
     :goto_5
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->status:Ljava/lang/String;
@@ -648,10 +648,10 @@
 
     if-nez v8, :cond_e
 
-    .line 207
+    .line 222
     const-string v6, "TENTATIVE"
 
-    .line 208
+    .line 223
     .local v6, stat:Ljava/lang/String;
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->status:Ljava/lang/String;
 
@@ -661,7 +661,7 @@
 
     packed-switch v8, :pswitch_data_0
 
-    .line 219
+    .line 234
     :goto_6
     const-string v8, "STATUS:"
 
@@ -677,16 +677,16 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 222
+    .line 237
     .end local v6           #stat:Ljava/lang/String;
     :cond_e
     iget-boolean v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->has_alarm:Z
 
-    if-eqz v8, :cond_16
+    if-eqz v8, :cond_1c
 
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->reminderList:Ljava/util/ArrayList;
 
-    if-eqz v8, :cond_16
+    if-eqz v8, :cond_1c
 
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->reminderList:Ljava/util/ArrayList;
 
@@ -694,9 +694,9 @@
 
     move-result v8
 
-    if-lez v8, :cond_16
+    if-lez v8, :cond_1c
 
-    .line 225
+    .line 240
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -707,9 +707,9 @@
 
     move-result v8
 
-    if-ge v2, v8, :cond_16
+    if-ge v2, v8, :cond_1c
 
-    .line 226
+    .line 241
     iget-object v8, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->reminderList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -718,7 +718,7 @@
 
     check-cast v4, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct$reminderInfo;
 
-    .line 227
+    .line 242
     .local v4, r:Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct$reminderInfo;
     iget-object v8, p0, Lcom/htc/util/calendar/vcalendar/VCalComposer;->mVersion:Ljava/lang/String;
 
@@ -728,21 +728,21 @@
 
     move-result v8
 
-    if-eqz v8, :cond_15
+    if-eqz v8, :cond_1b
 
-    .line 228
+    .line 243
     const-string v3, ""
 
-    .line 229
+    .line 244
     .local v3, prefix:Ljava/lang/String;
     iget v8, v4, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct$reminderInfo;->method:I
 
     packed-switch v8, :pswitch_data_1
 
-    .line 241
+    .line 256
     const-string v8, "DALARM"
 
-    .line 225
+    .line 240
     .end local v3           #prefix:Ljava/lang/String;
     :goto_8
     add-int/lit8 v2, v2, 0x1
@@ -767,15 +767,15 @@
 
     goto/16 :goto_0
 
-    .line 258
+    .line 273
     :catch_0
     move-exception v0
 
-    .line 259
+    .line 274
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 262
+    .line 277
     .end local v0           #e:Ljava/lang/Exception;
     :goto_9
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -784,9 +784,119 @@
 
     return-object v8
 
-    .line 140
+    .line 139
     :cond_10
     :try_start_1
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isBig5()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_11
+
+    .line 140
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "DESCRIPTION;CHARSET=BIG5;ENCODING=QUOTED-PRINTABLE:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    iget-object v10, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->description:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-direct {p0, v9}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->foldingString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/util/calendar/vcalendar/VCalComposer;->mNewLine:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_1
+
+    .line 141
+    :cond_11
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isGB2312()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_12
+
+    .line 142
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "DESCRIPTION;CHARSET=GB2312;ENCODING=QUOTED-PRINTABLE:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    iget-object v10, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->description:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-direct {p0, v9}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->foldingString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/util/calendar/vcalendar/VCalComposer;->mNewLine:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_1
+
+    .line 145
+    :cond_12
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -833,8 +943,8 @@
 
     goto/16 :goto_1
 
-    .line 150
-    :cond_11
+    .line 155
+    :cond_13
     const-string v8, "DTEND:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -853,8 +963,8 @@
 
     goto/16 :goto_2
 
-    .line 159
-    :cond_12
+    .line 164
+    :cond_14
     const-string v8, "DTSTART:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -873,8 +983,118 @@
 
     goto/16 :goto_3
 
-    .line 175
-    :cond_13
+    .line 179
+    :cond_15
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isBig5()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_16
+
+    .line 180
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "LOCATION;CHARSET=BIG5;ENCODING=QUOTED-PRINTABLE:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    iget-object v10, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->event_location:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-direct {p0, v9}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->foldingString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/util/calendar/vcalendar/VCalComposer;->mNewLine:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_4
+
+    .line 181
+    :cond_16
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isGB2312()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_17
+
+    .line 182
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "LOCATION;CHARSET=GB2312;ENCODING=QUOTED-PRINTABLE:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    iget-object v10, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->event_location:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-direct {p0, v9}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->foldingString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/util/calendar/vcalendar/VCalComposer;->mNewLine:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_4
+
+    .line 185
+    :cond_17
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -921,8 +1141,118 @@
 
     goto/16 :goto_4
 
-    .line 201
-    :cond_14
+    .line 210
+    :cond_18
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isBig5()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_19
+
+    .line 211
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "SUMMARY;CHARSET=BIG5;ENCODING=QUOTED-PRINTABLE:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    iget-object v10, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->title:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-direct {p0, v9}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->foldingString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/util/calendar/vcalendar/VCalComposer;->mNewLine:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_5
+
+    .line 212
+    :cond_19
+    invoke-static {}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->isGB2312()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1a
+
+    .line 213
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "SUMMARY;CHARSET=GB2312;ENCODING=QUOTED-PRINTABLE:"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    iget-object v10, p1, Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct;->title:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-direct {p0, v9}, Lcom/htc/util/calendar/vcalendar/VCalComposer;->foldingString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/util/calendar/vcalendar/VCalComposer;->mNewLine:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_5
+
+    .line 216
+    :cond_1a
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -969,28 +1299,28 @@
 
     goto/16 :goto_5
 
-    .line 210
+    .line 225
     .restart local v6       #stat:Ljava/lang/String;
     :pswitch_0
     const-string v6, "TENTATIVE"
 
-    .line 211
+    .line 226
     goto/16 :goto_6
 
-    .line 213
+    .line 228
     :pswitch_1
     const-string v6, "CONFIRMED"
 
-    .line 214
+    .line 229
     goto/16 :goto_6
 
-    .line 216
+    .line 231
     :pswitch_2
     const-string v6, "CANCELLED"
 
     goto/16 :goto_6
 
-    .line 231
+    .line 246
     .end local v6           #stat:Ljava/lang/String;
     .restart local v2       #i:I
     .restart local v3       #prefix:Ljava/lang/String;
@@ -998,26 +1328,26 @@
     :pswitch_3
     const-string v3, "DALARM"
 
-    .line 232
+    .line 247
     goto/16 :goto_8
 
-    .line 234
+    .line 249
     :pswitch_4
     const-string v3, "AALARM"
 
-    .line 235
+    .line 250
     goto/16 :goto_8
 
-    .line 237
+    .line 252
     :pswitch_5
     const-string v3, "MALARM"
 
-    .line 238
+    .line 253
     goto/16 :goto_8
 
-    .line 248
+    .line 263
     .end local v3           #prefix:Ljava/lang/String;
-    :cond_15
+    :cond_1b
     const-string v8, "BEGIN:VALARM"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1090,10 +1420,10 @@
 
     goto/16 :goto_8
 
-    .line 257
+    .line 272
     .end local v2           #i:I
     .end local v4           #r:Lcom/htc/util/calendar/vcalendar/CalendarStruct$EventStruct$reminderInfo;
-    :cond_16
+    :cond_1c
     const-string v8, "END:VEVENT"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1108,7 +1438,7 @@
 
     goto/16 :goto_9
 
-    .line 208
+    .line 223
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1116,7 +1446,7 @@
         :pswitch_2
     .end packed-switch
 
-    .line 229
+    .line 244
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_3
@@ -1134,25 +1464,25 @@
 
     const/4 v6, 0x0
 
-    .line 302
+    .line 317
     new-instance v1, Landroid/text/format/Time;
 
     invoke-direct {v1}, Landroid/text/format/Time;-><init>()V
 
-    .line 303
+    .line 318
     .local v1, t:Landroid/text/format/Time;
     invoke-virtual {v1, p1}, Landroid/text/format/Time;->parse(Ljava/lang/String;)Z
 
-    .line 305
+    .line 320
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
 
-    .line 306
+    .line 321
     .local v0, curr:Landroid/text/format/Time;
     invoke-virtual {v0}, Landroid/text/format/Time;->setToNow()V
 
-    .line 307
+    .line 322
     const-string v2, "ddd"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1193,7 +1523,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 309
+    .line 324
     invoke-virtual {v1, v6}, Landroid/text/format/Time;->toMillis(Z)J
 
     move-result-wide v2
@@ -1206,7 +1536,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/text/format/Time;->set(J)V
 
-    .line 310
+    .line 325
     const-string v2, "%Y%m%d"
 
     invoke-virtual {v1, v2}, Landroid/text/format/Time;->format(Ljava/lang/String;)Ljava/lang/String;
@@ -1221,7 +1551,7 @@
     .parameter "str"
 
     .prologue
-    .line 267
+    .line 282
     return-object p1
 .end method
 
@@ -1230,7 +1560,7 @@
     .parameter "str"
 
     .prologue
-    .line 296
+    .line 311
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -1253,11 +1583,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 297
+    .line 312
     :cond_0
     const/4 v0, 0x1
 
-    .line 298
+    .line 313
     :goto_0
     return v0
 

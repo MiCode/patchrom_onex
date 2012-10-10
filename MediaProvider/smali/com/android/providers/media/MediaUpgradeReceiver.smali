@@ -51,7 +51,7 @@
 
     .line 53
     .local v11, prefVersion:I
-    const/16 v2, 0x198
+    const/16 v2, 0x199
 
     if-ne v11, v2, :cond_1
 
@@ -68,7 +68,7 @@
 
     const-string v4, "db_version"
 
-    const/16 v5, 0x198
+    const/16 v5, 0x199
 
     invoke-interface {v2, v4, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 

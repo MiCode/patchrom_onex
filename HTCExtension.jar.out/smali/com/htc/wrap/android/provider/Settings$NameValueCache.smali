@@ -49,7 +49,7 @@
     .locals 3
 
     .prologue
-    .line 855
+    .line 847
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -72,36 +72,36 @@
     .parameter "callCommand"
 
     .prologue
-    .line 874
+    .line 866
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 860
+    .line 852
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
-    .line 861
+    .line 853
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValuesVersion:J
 
-    .line 864
+    .line 856
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mContentProvider:Landroid/content/IContentProvider;
 
-    .line 875
+    .line 867
     iput-object p1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mVersionSystemProperty:Ljava/lang/String;
 
-    .line 876
+    .line 868
     iput-object p2, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mUri:Landroid/net/Uri;
 
-    .line 877
+    .line 869
     iput-object p3, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mCallCommand:Ljava/lang/String;
 
-    .line 878
+    .line 870
     return-void
 .end method
 
@@ -113,7 +113,7 @@
     .parameter "name"
 
     .prologue
-    .line 885
+    .line 877
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mVersionSystemProperty:Ljava/lang/String;
 
     const-wide/16 v2, 0x0
@@ -122,11 +122,11 @@
 
     move-result-wide v10
 
-    .line 887
+    .line 879
     .local v10, newValuesVersion:J
     monitor-enter p0
 
-    .line 888
+    .line 880
     :try_start_0
     iget-wide v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValuesVersion:J
 
@@ -134,15 +134,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 894
+    .line 886
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 895
+    .line 887
     iput-wide v10, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValuesVersion:J
 
-    .line 898
+    .line 890
     :cond_0
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
@@ -152,7 +152,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 899
+    .line 891
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -165,32 +165,32 @@
 
     move-object v12, v1
 
-    .line 953
+    .line 945
     :cond_1
     :goto_0
     return-object v12
 
-    .line 901
+    .line 893
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 903
+    .line 895
     const/4 v0, 0x0
 
-    .line 904
+    .line 896
     .local v0, cp:Landroid/content/IContentProvider;
     monitor-enter p0
 
-    .line 905
+    .line 897
     :try_start_1
     iget-object v0, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mContentProvider:Landroid/content/IContentProvider;
 
-    .line 906
+    .line 898
     if-nez v0, :cond_3
 
-    .line 907
+    .line 899
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
@@ -207,7 +207,7 @@
     .local v8, cp:Landroid/content/IContentProvider;
     move-object v0, v8
 
-    .line 909
+    .line 901
     .end local v8           #cp:Landroid/content/IContentProvider;
     .restart local v0       #cp:Landroid/content/IContentProvider;
     :cond_3
@@ -215,12 +215,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 915
+    .line 907
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mCallCommand:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    .line 917
+    .line 909
     :try_start_2
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mCallCommand:Ljava/lang/String;
 
@@ -230,28 +230,28 @@
 
     move-result-object v6
 
-    .line 918
+    .line 910
     .local v6, b:Landroid/os/Bundle;
     if-eqz v6, :cond_4
 
-    .line 919
+    .line 911
     invoke-virtual {v6}, Landroid/os/Bundle;->getPairValue()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 920
+    .line 912
     .local v12, value:Ljava/lang/String;
     monitor-enter p0
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 921
+    .line 913
     :try_start_3
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 922
+    .line 914
     monitor-exit p0
 
     goto :goto_0
@@ -268,17 +268,17 @@
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 927
+    .line 919
     .end local v6           #b:Landroid/os/Bundle;
     .end local v12           #value:Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 933
+    .line 925
     :cond_4
     const/4 v7, 0x0
 
-    .line 935
+    .line 927
     .local v7, c:Landroid/database/Cursor;
     :try_start_5
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mUri:Landroid/net/Uri;
@@ -301,10 +301,10 @@
 
     move-result-object v7
 
-    .line 937
+    .line 929
     if-nez v7, :cond_5
 
-    .line 938
+    .line 930
     const-string v1, "Settings"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -342,10 +342,10 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 939
+    .line 931
     const/4 v12, 0x0
 
-    .line 955
+    .line 947
     if-eqz v7, :cond_1
 
     :goto_1
@@ -353,7 +353,7 @@
 
     goto :goto_0
 
-    .line 901
+    .line 893
     .end local v0           #cp:Landroid/content/IContentProvider;
     .end local v7           #c:Landroid/database/Cursor;
     :catchall_1
@@ -366,7 +366,7 @@
 
     throw v1
 
-    .line 909
+    .line 901
     .restart local v0       #cp:Landroid/content/IContentProvider;
     :catchall_2
     move-exception v1
@@ -378,7 +378,7 @@
 
     throw v1
 
-    .line 942
+    .line 934
     .restart local v7       #c:Landroid/database/Cursor;
     :cond_5
     :try_start_8
@@ -394,7 +394,7 @@
 
     move-result-object v12
 
-    .line 943
+    .line 935
     .restart local v12       #value:Ljava/lang/String;
     :goto_2
     monitor-enter p0
@@ -402,28 +402,28 @@
     .catchall {:try_start_8 .. :try_end_8} :catchall_4
     .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 944
+    .line 936
     :try_start_9
     iget-object v1, p0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 945
+    .line 937
     monitor-exit p0
 
-    .line 955
+    .line 947
     if-eqz v7, :cond_1
 
     goto :goto_1
 
-    .line 942
+    .line 934
     .end local v12           #value:Ljava/lang/String;
     :cond_6
     const/4 v12, 0x0
 
     goto :goto_2
 
-    .line 945
+    .line 937
     .restart local v12       #value:Ljava/lang/String;
     :catchall_3
     move-exception v1
@@ -438,12 +438,12 @@
     .catchall {:try_start_a .. :try_end_a} :catchall_4
     .catch Landroid/os/RemoteException; {:try_start_a .. :try_end_a} :catch_1
 
-    .line 951
+    .line 943
     .end local v12           #value:Ljava/lang/String;
     :catch_1
     move-exception v9
 
-    .line 952
+    .line 944
     .local v9, e:Landroid/os/RemoteException;
     :try_start_b
     const-string v1, "Settings"
@@ -482,10 +482,10 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_4
 
-    .line 953
+    .line 945
     const/4 v12, 0x0
 
-    .line 955
+    .line 947
     if-eqz v7, :cond_1
 
     goto :goto_1

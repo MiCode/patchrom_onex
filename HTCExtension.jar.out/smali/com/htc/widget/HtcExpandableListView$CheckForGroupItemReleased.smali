@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 1861
+    .line 1869
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +49,7 @@
     .prologue
     const/high16 v1, 0x3f80
 
-    .line 1880
+    .line 1888
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getScaleX()F
@@ -70,24 +70,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 1881
+    .line 1889
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-virtual {v0, p0}, Lcom/htc/widget/HtcExpandableListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 1888
+    .line 1896
     :cond_1
     :goto_0
     return-void
 
-    .line 1884
+    .line 1892
     :cond_2
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 1885
+    .line 1893
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->mView:Landroid/view/View;
@@ -108,20 +108,20 @@
     .parameter "id"
 
     .prologue
-    .line 1870
+    .line 1878
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->mView:Landroid/view/View;
 
-    .line 1871
+    .line 1879
     iput p2, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->mPosition:I
 
-    .line 1872
+    .line 1880
     iput-wide p3, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->mId:J
 
-    .line 1873
+    .line 1881
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$CheckForGroupItemReleased;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-virtual {v0, p0}, Lcom/htc/widget/HtcExpandableListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 1874
+    .line 1882
     return-void
 .end method

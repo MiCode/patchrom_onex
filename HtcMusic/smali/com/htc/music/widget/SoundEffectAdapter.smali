@@ -616,7 +616,7 @@
 
     .line 98
     .local v1, holder:Lcom/htc/music/widget/SoundEffectAdapter$ViewHolder;
-    const v5, 0x7f0800ab
+    const v5, 0x7f0800ac
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -627,7 +627,7 @@
     iput-object v5, v1, Lcom/htc/music/widget/SoundEffectAdapter$ViewHolder;->effectIcon:Landroid/widget/ImageView;
 
     .line 99
-    const v5, 0x7f0800ac
+    const v5, 0x7f0800ad
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -638,7 +638,7 @@
     iput-object v5, v1, Lcom/htc/music/widget/SoundEffectAdapter$ViewHolder;->checked:Landroid/widget/CheckedTextView;
 
     .line 100
-    const v5, 0x7f0800ad
+    const v5, 0x7f0800ae
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

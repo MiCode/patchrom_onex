@@ -25,12 +25,12 @@
     .parameter "s"
 
     .prologue
-    .line 1803
+    .line 1820
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaSmsEncoder$CodingException;->this$0:Lcom/android/internal/telephony/cdma/CdmaSmsEncoder;
 
-    .line 1804
+    .line 1821
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 1805
+    .line 1822
     return-void
 .end method

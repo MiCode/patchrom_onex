@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 5222
+    .line 5254
     iput-object p1, p0, Lcom/htc/music/HtcMusic$35;->this$0:Lcom/htc/music/HtcMusic;
 
     iput-object p2, p0, Lcom/htc/music/HtcMusic$35;->val$textview:Landroid/widget/AutoCompleteTextView;
@@ -48,7 +48,7 @@
     .parameter "which"
 
     .prologue
-    .line 5224
+    .line 5256
     iget-object v1, p0, Lcom/htc/music/HtcMusic$35;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v2, p0, Lcom/htc/music/HtcMusic$35;->val$textview:Landroid/widget/AutoCompleteTextView;
@@ -65,7 +65,7 @@
 
     move-result v0
 
-    .line 5225
+    .line 5257
     .local v0, id:I
     iget-object v1, p0, Lcom/htc/music/HtcMusic$35;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -78,7 +78,7 @@
     iget-object v4, p0, Lcom/htc/music/HtcMusic$35;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mCurrentAudioId:I
-    invoke-static {v4}, Lcom/htc/music/HtcMusic;->access$7600(Lcom/htc/music/HtcMusic;)I
+    invoke-static {v4}, Lcom/htc/music/HtcMusic;->access$7700(Lcom/htc/music/HtcMusic;)I
 
     move-result v4
 
@@ -88,6 +88,6 @@
 
     invoke-static {v1, v2, v3, v4}, Lcom/htc/music/util/MusicUtils;->addToPlaylist(Landroid/content/Context;[IJ)V
 
-    .line 5226
+    .line 5258
     return-void
 .end method

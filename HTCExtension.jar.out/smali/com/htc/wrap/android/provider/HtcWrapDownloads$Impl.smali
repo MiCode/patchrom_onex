@@ -186,12 +186,12 @@
     .locals 1
 
     .prologue
-    .line 720
+    .line 708
     sget-object v0, Landroid/provider/Downloads$Impl;->ALL_DOWNLOADS_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapDownloads$Impl;->ALL_DOWNLOADS_CONTENT_URI:Landroid/net/Uri;
 
-    .line 747
+    .line 735
     sget-object v0, Landroid/provider/Downloads$Impl;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapDownloads$Impl;->CONTENT_URI:Landroid/net/Uri;
@@ -203,7 +203,7 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 116
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -214,7 +214,7 @@
     .parameter "status"
 
     .prologue
-    .line 870
+    .line 854
     invoke-static {p0}, Landroid/provider/Downloads$Impl;->isStatusCompleted(I)Z
 
     move-result v0
@@ -227,7 +227,7 @@
     .parameter "status"
 
     .prologue
-    .line 884
+    .line 868
     invoke-static {p0}, Landroid/provider/Downloads$Impl;->isStatusError(I)Z
 
     move-result v0
@@ -240,7 +240,7 @@
     .parameter "status"
 
     .prologue
-    .line 891
+    .line 875
     invoke-static {p0}, Landroid/provider/Downloads$Impl;->isStatusInformational(I)Z
 
     move-result v0
@@ -253,7 +253,7 @@
     .parameter "status"
 
     .prologue
-    .line 877
+    .line 861
     invoke-static {p0}, Landroid/provider/Downloads$Impl;->isStatusSuccess(I)Z
 
     move-result v0
@@ -266,7 +266,7 @@
     .parameter "status"
 
     .prologue
-    .line 503
+    .line 491
     invoke-static {p0}, Landroid/provider/Downloads$Impl;->isStatusSuspended(I)Z
 
     move-result v0

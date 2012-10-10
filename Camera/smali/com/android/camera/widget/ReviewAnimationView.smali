@@ -40,13 +40,13 @@
     .local v0, res:Landroid/content/res/Resources;
     new-instance v1, Landroid/graphics/Point;
 
-    const v2, 0x7f0b0084
+    const v2, 0x7f0b0085
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v2
 
-    const v3, 0x7f0b0085
+    const v3, 0x7f0b0086
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

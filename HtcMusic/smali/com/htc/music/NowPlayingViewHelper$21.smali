@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3949
+    .line 3987
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$21;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 3952
+    .line 3990
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3953
+    .line 3991
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.htc.music.playstatechanged"
 
@@ -55,19 +55,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 3954
+    .line 3992
     const-string v1, "[NowPlayingViewHelper]"
 
     const-string v2, "set play/pause Buttun because change."
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3964
+    .line 4002
     :cond_0
     :goto_0
     return-void
 
-    .line 3956
+    .line 3994
     :cond_1
     const-string v1, "com.htc.music.playbackcomplete"
 
@@ -77,7 +77,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 3957
+    .line 3995
     const-string v1, "[NowPlayingViewHelper]"
 
     const-string v2, "set play/pause Buttun because playback complete."
@@ -86,7 +86,7 @@
 
     goto :goto_0
 
-    .line 3960
+    .line 3998
     :cond_2
     const-string v1, "com.htc.music.onerror"
 
@@ -96,7 +96,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3962
+    .line 4000
     iget-object v1, p0, Lcom/htc/music/NowPlayingViewHelper$21;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-object v1, v1, Lcom/htc/music/NowPlayingViewHelper;->mContext:Landroid/app/Activity;

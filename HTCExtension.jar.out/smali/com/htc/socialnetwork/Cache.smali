@@ -1575,7 +1575,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/htc/socialnetwork/Cache;->increaseCurrentSize(J)V
 
-    .line 142
     :cond_4
     throw v17
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1067
+    .line 1065
     iput-object p1, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -49,16 +49,16 @@
 
     const/4 v3, 0x0
 
-    .line 1070
+    .line 1068
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1187
+    .line 1185
     :goto_0
     return-void
 
-    .line 1072
+    .line 1070
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -69,7 +69,7 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 1073
+    .line 1071
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "call play STATE_PLAYING_TRANSITIONING discard "
@@ -78,7 +78,7 @@
 
     goto :goto_0
 
-    .line 1077
+    .line 1075
     :cond_0
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -89,7 +89,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 1078
+    .line 1076
     const-string v0, "[DMCMusicPlaybackService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -119,19 +119,19 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1079
+    .line 1077
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
     invoke-static {v0, v4}, Lcom/htc/music/DMCMusicPlaybackService;->access$1802(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1080
+    .line 1078
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
     invoke-static {v0, v3}, Lcom/htc/music/DMCMusicPlaybackService;->access$1902(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1081
+    .line 1079
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 1083
+    .line 1081
     :cond_1
     const-string v0, "[DMCMusicPlaybackService]"
 
@@ -151,7 +151,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1084
+    .line 1082
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
@@ -163,20 +163,20 @@
 
     if-le v0, v1, :cond_2
 
-    .line 1085
+    .line 1083
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "transition timeout discard it"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1086
+    .line 1084
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
     invoke-static {v0, v3}, Lcom/htc/music/DMCMusicPlaybackService;->access$1902(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1087
+    .line 1085
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
@@ -184,7 +184,7 @@
 
     goto :goto_0
 
-    .line 1090
+    .line 1088
     :cond_2
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -195,7 +195,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 1091
+    .line 1089
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlaybackHandler:Landroid/os/Handler;
@@ -205,7 +205,7 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1092
+    .line 1090
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlaybackHandler:Landroid/os/Handler;
@@ -217,7 +217,7 @@
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1094
+    .line 1092
     :cond_3
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -225,7 +225,7 @@
 
     goto/16 :goto_0
 
-    .line 1100
+    .line 1098
     :pswitch_1
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -236,7 +236,7 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 1101
+    .line 1099
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "call pause STATE_PLAYING_TRANSITIONING discard "
@@ -245,7 +245,7 @@
 
     goto/16 :goto_0
 
-    .line 1105
+    .line 1103
     :cond_4
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -256,20 +256,20 @@
 
     if-nez v0, :cond_5
 
-    .line 1106
+    .line 1104
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
     invoke-static {v0, v1}, Lcom/htc/music/DMCMusicPlaybackService;->access$1802(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1107
+    .line 1105
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "call pause"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1108
+    .line 1106
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mDLNAManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
@@ -279,7 +279,7 @@
 
     invoke-virtual {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->requestPause()V
 
-    .line 1109
+    .line 1107
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
@@ -287,7 +287,7 @@
 
     goto/16 :goto_0
 
-    .line 1110
+    .line 1108
     :cond_5
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -298,14 +298,14 @@
 
     if-ne v0, v4, :cond_8
 
-    .line 1111
+    .line 1109
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "STATE_PLAYING_TRANSITIONING"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1112
+    .line 1110
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
@@ -317,20 +317,20 @@
 
     if-le v0, v1, :cond_6
 
-    .line 1113
+    .line 1111
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "transition timeout discard it"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1114
+    .line 1112
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
     invoke-static {v0, v3}, Lcom/htc/music/DMCMusicPlaybackService;->access$1902(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1115
+    .line 1113
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
@@ -338,7 +338,7 @@
 
     goto/16 :goto_0
 
-    .line 1118
+    .line 1116
     :cond_6
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -349,7 +349,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 1119
+    .line 1117
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlaybackHandler:Landroid/os/Handler;
@@ -359,7 +359,7 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1120
+    .line 1118
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlaybackHandler:Landroid/os/Handler;
@@ -371,7 +371,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1122
+    .line 1120
     :cond_7
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -379,7 +379,7 @@
 
     goto/16 :goto_0
 
-    .line 1124
+    .line 1122
     :cond_8
     const-string v0, "[DMCMusicPlaybackService]"
 
@@ -410,14 +410,14 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1125
+    .line 1123
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "discard pause "
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1126
+    .line 1124
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
@@ -425,7 +425,7 @@
 
     goto/16 :goto_0
 
-    .line 1132
+    .line 1130
     :pswitch_2
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -436,7 +436,7 @@
 
     if-eq v0, v1, :cond_b
 
-    .line 1133
+    .line 1131
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
@@ -446,13 +446,13 @@
 
     if-ne v0, v2, :cond_a
 
-    .line 1134
+    .line 1132
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
     invoke-static {v0, v1}, Lcom/htc/music/DMCMusicPlaybackService;->access$1802(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1138
+    .line 1136
     :cond_9
     :goto_1
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
@@ -464,14 +464,14 @@
 
     invoke-virtual {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->playNext()V
 
-    .line 1139
+    .line 1137
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "call next"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1140
+    .line 1138
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
@@ -479,7 +479,7 @@
 
     goto/16 :goto_0
 
-    .line 1135
+    .line 1133
     :cond_a
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -490,7 +490,7 @@
 
     if-nez v0, :cond_9
 
-    .line 1136
+    .line 1134
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
@@ -498,7 +498,7 @@
 
     goto :goto_1
 
-    .line 1153
+    .line 1151
     :cond_b
     const-string v0, "[DMCMusicPlaybackService]"
 
@@ -508,7 +508,7 @@
 
     goto/16 :goto_0
 
-    .line 1160
+    .line 1158
     :pswitch_3
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -519,7 +519,7 @@
 
     if-eq v0, v1, :cond_e
 
-    .line 1161
+    .line 1159
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
@@ -529,13 +529,13 @@
 
     if-ne v0, v2, :cond_d
 
-    .line 1162
+    .line 1160
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
     invoke-static {v0, v1}, Lcom/htc/music/DMCMusicPlaybackService;->access$1802(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1167
+    .line 1165
     :cond_c
     :goto_2
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
@@ -547,13 +547,13 @@
 
     invoke-virtual {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->playPrevious()V
 
-    .line 1168
+    .line 1166
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mTransitionCount:I
     invoke-static {v0, v3}, Lcom/htc/music/DMCMusicPlaybackService;->access$1902(Lcom/htc/music/DMCMusicPlaybackService;I)I
 
-    .line 1169
+    .line 1167
     const-string v0, "[DMCMusicPlaybackService]"
 
     const-string v1, "call previous"
@@ -562,7 +562,7 @@
 
     goto/16 :goto_0
 
-    .line 1164
+    .line 1162
     :cond_d
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -573,7 +573,7 @@
 
     if-nez v0, :cond_c
 
-    .line 1165
+    .line 1163
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$3;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #setter for: Lcom/htc/music/DMCMusicPlaybackService;->mPlayState:I
@@ -581,7 +581,7 @@
 
     goto :goto_2
 
-    .line 1182
+    .line 1180
     :cond_e
     const-string v0, "[DMCMusicPlaybackService]"
 
@@ -591,7 +591,7 @@
 
     goto/16 :goto_0
 
-    .line 1070
+    .line 1068
     nop
 
     :pswitch_data_0

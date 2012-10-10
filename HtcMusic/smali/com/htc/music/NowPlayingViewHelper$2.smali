@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 919
+    .line 921
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$2;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +45,14 @@
     .parameter "id"
 
     .prologue
-    .line 922
+    .line 924
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$2;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     iget-boolean v0, v0, Lcom/htc/music/NowPlayingViewHelper;->mIsPluginModeNowPlaying:Z
 
     if-eqz v0, :cond_0
 
-    .line 923
+    .line 925
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$2;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     move-object v1, p1
@@ -66,11 +66,11 @@
     #calls: Lcom/htc/music/NowPlayingViewHelper;->onListItemClick_Plugin(Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)V
     invoke-static/range {v0 .. v5}, Lcom/htc/music/NowPlayingViewHelper;->access$400(Lcom/htc/music/NowPlayingViewHelper;Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)V
 
-    .line 927
+    .line 929
     :goto_0
     return-void
 
-    .line 925
+    .line 927
     :cond_0
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$2;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 

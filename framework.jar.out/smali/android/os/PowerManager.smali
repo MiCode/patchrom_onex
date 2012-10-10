@@ -67,10 +67,10 @@
     .locals 0
 
     .prologue
-    .line 702
+    .line 719
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 703
+    .line 720
     return-void
 .end method
 
@@ -80,21 +80,78 @@
     .parameter "handler"
 
     .prologue
-    .line 709
+    .line 726
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 710
+    .line 727
     iput-object p1, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
 
-    .line 711
+    .line 728
     iput-object p2, p0, Landroid/os/PowerManager;->mHandler:Landroid/os/Handler;
 
-    .line 712
+    .line 729
     return-void
 .end method
 
 
 # virtual methods
+.method public fetchCurrentBrightnessValue()I
+    .locals 5
+
+    .prologue
+    .line 703
+    const/4 v1, -0x1
+
+    .line 707
+    .local v1, ret:I
+    :try_start_0
+    iget-object v2, p0, Landroid/os/PowerManager;->mService:Landroid/os/IPowerManager;
+
+    invoke-interface {v2}, Landroid/os/IPowerManager;->fetchCurrentBrightnessValue()I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    .line 714
+    :goto_0
+    return v1
+
+    .line 709
+    :catch_0
+    move-exception v0
+
+    .line 711
+    .local v0, e:Ljava/lang/Exception;
+    const-string v2, "PowerManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "fetchCurrentBrightnessValue [Exception]: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
 .method public getProximitySensorActive()Z
     .locals 4
 

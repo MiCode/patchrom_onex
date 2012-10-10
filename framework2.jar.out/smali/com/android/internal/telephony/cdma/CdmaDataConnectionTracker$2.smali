@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4747
+    .line 5614
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "service"
 
     .prologue
-    .line 4751
+    .line 5618
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     invoke-static {p2}, Lcom/htc/cw/ICWService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/cw/ICWService;
@@ -51,32 +51,32 @@
     move-result-object v1
 
     #setter for: Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mRemoteService:Lcom/htc/cw/ICWService;
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$4002(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Lcom/htc/cw/ICWService;)Lcom/htc/cw/ICWService;
+    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$1202(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Lcom/htc/cw/ICWService;)Lcom/htc/cw/ICWService;
 
-    .line 4752
+    .line 5619
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     const-string v1, "[HTCCW]CWService is connected"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 4753
+    .line 5620
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->mSipInviteOK:Z
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$4102(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Z)Z
+    #setter for: Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mSipInviteOK:Z
+    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$1302(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Z)Z
 
-    .line 4754
+    .line 5621
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     const/16 v1, 0x66
 
-    #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->mCwRegState:I
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$4202(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;I)I
+    #setter for: Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mCwRegState:I
+    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$1402(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;I)I
 
-    .line 4755
+    .line 5622
     return-void
 .end method
 
@@ -85,37 +85,37 @@
     .parameter "name"
 
     .prologue
-    .line 4759
+    .line 5626
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     const/4 v1, 0x0
 
     #setter for: Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mRemoteService:Lcom/htc/cw/ICWService;
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$4002(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Lcom/htc/cw/ICWService;)Lcom/htc/cw/ICWService;
+    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$1202(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Lcom/htc/cw/ICWService;)Lcom/htc/cw/ICWService;
 
-    .line 4760
+    .line 5627
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     const-string v1, "[HTCCW]CWService is disconnected"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 4761
+    .line 5628
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->mSipInviteOK:Z
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$4302(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Z)Z
+    #setter for: Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mSipInviteOK:Z
+    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$1502(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;Z)Z
 
-    .line 4762
+    .line 5629
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;
 
     const/16 v1, 0x66
 
-    #setter for: Lcom/android/internal/telephony/DataConnectionTracker;->mCwRegState:I
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$4402(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;I)I
+    #setter for: Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mCwRegState:I
+    invoke-static {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->access$1602(Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;I)I
 
-    .line 4763
+    .line 5630
     return-void
 .end method

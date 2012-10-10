@@ -29,17 +29,17 @@
     .parameter
 
     .prologue
-    .line 731
+    .line 745
     iput-object p1, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->this$0:Lcom/android/camera/component/SmartShotController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 728
+    .line 742
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
-    .line 732
+    .line 746
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
     invoke-static {p1}, Lcom/android/camera/component/SmartShotController;->access$1300(Lcom/android/camera/component/SmartShotController;)Ljava/lang/String;
 
@@ -49,23 +49,23 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 733
+    .line 747
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     if-nez v0, :cond_0
 
-    .line 734
+    .line 748
     new-instance v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     invoke-direct {v0}, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
-    .line 735
+    .line 749
     :cond_0
     invoke-static {}, Lcom/olaworks/jni/OlaFaceDetectExternJNI;->create()I
 
-    .line 736
+    .line 750
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
     invoke-static {p1}, Lcom/android/camera/component/SmartShotController;->access$1400(Lcom/android/camera/component/SmartShotController;)Ljava/lang/String;
 
@@ -75,10 +75,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 737
+    .line 751
     invoke-static {}, Lcom/olaworks/jni/OlaFaceDetectExternJNI;->initialize()I
 
-    .line 738
+    .line 752
     return-void
 .end method
 
@@ -88,7 +88,7 @@
     .parameter "dst"
 
     .prologue
-    .line 865
+    .line 879
     return-void
 .end method
 
@@ -98,7 +98,7 @@
     .locals 2
 
     .prologue
-    .line 741
+    .line 755
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->this$0:Lcom/android/camera/component/SmartShotController;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -110,15 +110,15 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 742
+    .line 756
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
-    .line 743
+    .line 757
     invoke-static {}, Lcom/olaworks/jni/OlaFaceDetectExternJNI;->destroy()I
 
-    .line 744
+    .line 758
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->this$0:Lcom/android/camera/component/SmartShotController;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -130,7 +130,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 745
+    .line 759
     return-void
 .end method
 
@@ -139,7 +139,7 @@
     .parameter "face_index"
 
     .prologue
-    .line 807
+    .line 821
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->leftBlink:[I
@@ -154,14 +154,14 @@
 
     if-le v0, v1, :cond_0
 
-    .line 808
+    .line 822
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->leftBlink:[I
 
     aget v0, v0, p1
 
-    .line 810
+    .line 824
     :goto_0
     return v0
 
@@ -180,10 +180,10 @@
     .parameter "face_index"
 
     .prologue
-    .line 815
+    .line 829
     const/4 v0, 0x0
 
-    .line 816
+    .line 830
     .local v0, smileValue:I
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
@@ -199,14 +199,14 @@
 
     if-le v1, v2, :cond_0
 
-    .line 818
+    .line 832
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v1, v1, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->leftBlink:[I
 
     aget v0, v1, p1
 
-    .line 824
+    .line 838
     :goto_0
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->this$0:Lcom/android/camera/component/SmartShotController;
 
@@ -293,7 +293,7 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 825
+    .line 839
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v1, v1, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->faceId:[I
@@ -302,7 +302,7 @@
 
     return v1
 
-    .line 822
+    .line 836
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
@@ -317,7 +317,7 @@
     .locals 1
 
     .prologue
-    .line 763
+    .line 777
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectorInfo;->numDetectedFaces:I
@@ -330,7 +330,7 @@
     .parameter "face_index"
 
     .prologue
-    .line 767
+    .line 781
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectorInfo;->detectedFaces:[Landroid/graphics/Rect;
@@ -345,7 +345,7 @@
     .parameter "face_index"
 
     .prologue
-    .line 789
+    .line 803
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->isSmile:[I
@@ -360,7 +360,7 @@
     .parameter "face_index"
 
     .prologue
-    .line 798
+    .line 812
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->leftBlink:[I
@@ -375,7 +375,7 @@
     .parameter "face_index"
 
     .prologue
-    .line 771
+    .line 785
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->leftEye:[Landroid/graphics/Point;
@@ -390,10 +390,10 @@
     .parameter "face_index"
 
     .prologue
-    .line 838
+    .line 852
     const/4 v0, 0x0
 
-    .line 840
+    .line 854
     .local v0, left:Landroid/graphics/Rect;
     invoke-virtual {p0, p1}, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->getLeftEyePoint(I)Landroid/graphics/Point;
 
@@ -401,13 +401,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 841
+    .line 855
     new-instance v0, Landroid/graphics/Rect;
 
     .end local v0           #left:Landroid/graphics/Rect;
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 842
+    .line 856
     .restart local v0       #left:Landroid/graphics/Rect;
     invoke-virtual {p0, p1}, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->getLeftEyePoint(I)Landroid/graphics/Point;
 
@@ -415,7 +415,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->pointToRect(Landroid/graphics/Point;Landroid/graphics/Rect;)V
 
-    .line 844
+    .line 858
     :cond_0
     return-object v0
 .end method
@@ -427,12 +427,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 779
+    .line 793
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 780
+    .line 794
     .local v0, rect:Landroid/graphics/Rect;
     return-object v0
 .end method
@@ -444,12 +444,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 784
+    .line 798
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 785
+    .line 799
     .local v0, rect:Landroid/graphics/Rect;
     return-object v0
 .end method
@@ -459,7 +459,7 @@
     .parameter "face_index"
 
     .prologue
-    .line 802
+    .line 816
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->rightBlink:[I
@@ -474,7 +474,7 @@
     .parameter "face_index"
 
     .prologue
-    .line 775
+    .line 789
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->rightEye:[Landroid/graphics/Point;
@@ -489,10 +489,10 @@
     .parameter "face_index"
 
     .prologue
-    .line 849
+    .line 863
     const/4 v0, 0x0
 
-    .line 851
+    .line 865
     .local v0, right:Landroid/graphics/Rect;
     invoke-virtual {p0, p1}, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->getRightEyePoint(I)Landroid/graphics/Point;
 
@@ -500,13 +500,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 852
+    .line 866
     new-instance v0, Landroid/graphics/Rect;
 
     .end local v0           #right:Landroid/graphics/Rect;
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 853
+    .line 867
     .restart local v0       #right:Landroid/graphics/Rect;
     invoke-virtual {p0, p1}, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->getRightEyePoint(I)Landroid/graphics/Point;
 
@@ -514,7 +514,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->pointToRect(Landroid/graphics/Point;Landroid/graphics/Rect;)V
 
-    .line 855
+    .line 869
     :cond_0
     return-object v0
 .end method
@@ -524,17 +524,17 @@
     .parameter "face_index"
 
     .prologue
-    .line 792
+    .line 806
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     iget-object v0, v0, Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;->score:[I
 
     if-nez v0, :cond_0
 
-    .line 793
+    .line 807
     const/4 v0, 0x0
 
-    .line 794
+    .line 808
     :goto_0
     return v0
 
@@ -554,7 +554,7 @@
     .parameter "dst"
 
     .prologue
-    .line 830
+    .line 844
     iget v0, p1, Landroid/graphics/Point;->x:I
 
     iget v1, p1, Landroid/graphics/Point;->y:I
@@ -565,7 +565,7 @@
 
     invoke-virtual {p2, v0, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 834
+    .line 848
     return-void
 .end method
 
@@ -575,7 +575,7 @@
     .parameter "dst"
 
     .prologue
-    .line 863
+    .line 877
     return-void
 .end method
 
@@ -584,7 +584,7 @@
     .parameter "r"
 
     .prologue
-    .line 859
+    .line 873
     const-string v0, ""
 
     return-object v0
@@ -594,7 +594,7 @@
     .locals 0
 
     .prologue
-    .line 868
+    .line 882
     return-void
 .end method
 
@@ -603,7 +603,7 @@
     .parameter "mBitmap"
 
     .prologue
-    .line 752
+    .line 766
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->this$0:Lcom/android/camera/component/SmartShotController;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -649,12 +649,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 753
+    .line 767
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/olaworks/jni/OlaFaceDetectExternJNI;->processImageBitmap(Landroid/graphics/Bitmap;I)I
 
-    .line 754
+    .line 768
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->this$0:Lcom/android/camera/component/SmartShotController;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -666,21 +666,21 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 755
+    .line 769
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     if-eqz v0, :cond_0
 
-    .line 756
+    .line 770
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->mFDExternInfo:Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;
 
     invoke-static {v0}, Lcom/olaworks/jni/OlaFaceDetectExternJNI;->getProcessInfo(Lcom/olaworks/datastruct/Ola_FaceDetectExternInfo;)I
 
-    .line 759
+    .line 773
     :goto_0
     return-void
 
-    .line 758
+    .line 772
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;->this$0:Lcom/android/camera/component/SmartShotController;
 
@@ -701,6 +701,6 @@
     .parameter "image"
 
     .prologue
-    .line 749
+    .line 763
     return-void
 .end method

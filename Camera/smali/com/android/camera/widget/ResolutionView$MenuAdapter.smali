@@ -426,7 +426,7 @@
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     .line 307
-    const v9, 0x7f0800a7
+    const v9, 0x7f0800a9
 
     invoke-virtual {p2, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -568,7 +568,7 @@
 
     .line 329
     .local v7, textView:Landroid/widget/TextView;
-    const v9, 0x7f0800a8
+    const v9, 0x7f0800aa
 
     invoke-virtual {p2, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -856,7 +856,7 @@
     invoke-virtual {v3, v0}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
     .line 480
-    const v3, 0x7f0800a7
+    const v3, 0x7f0800a9
 
     invoke-virtual {p2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

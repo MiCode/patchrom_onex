@@ -349,169 +349,22 @@
 
 
 # virtual methods
-.method public kddiIsOptionsServices()Z
-    .locals 3
-
-    .prologue
-    .line 198
-    iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeIdSet:Z
-
-    if-eqz v0, :cond_0
-
-    .line 199
-    const-string v0, "CDMA"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Is options Services?> 0x"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    invoke-static {v2}, Lcom/android/internal/util/HexDump;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 201
-    iget v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    const v1, 0xef40
-
-    if-lt v0, v1, :cond_0
-
-    iget v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    const v1, 0xef7e
-
-    if-gt v0, v1, :cond_0
-
-    .line 202
-    const/4 v0, 0x1
-
-    .line 205
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public kddiIsOtherServices()Z
-    .locals 3
-
-    .prologue
-    .line 209
-    iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeIdSet:Z
-
-    if-eqz v0, :cond_0
-
-    .line 210
-    const-string v0, "CDMA"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Is other services?> 0x"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    invoke-static {v2}, Lcom/android/internal/util/HexDump;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 212
-    iget v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    const/16 v1, 0x101
-
-    if-eq v0, v1, :cond_0
-
-    iget v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    const/16 v1, 0x102
-
-    if-eq v0, v1, :cond_0
-
-    iget v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    const/16 v1, 0x201
-
-    if-eq v0, v1, :cond_0
-
-    .line 215
-    iget v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    const/4 v1, 0x2
-
-    if-lt v0, v1, :cond_0
-
-    iget v0, p0, Lcom/android/internal/telephony/cdma/sms/UserData;->kddiSmsTypeId:I
-
-    const/16 v1, 0x2ff
-
-    if-gt v0, v1, :cond_0
-
-    .line 216
-    const/4 v0, 0x1
-
-    .line 220
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public toString()Ljava/lang/String;
     .locals 3
 
     .prologue
-    .line 226
+    .line 200
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 227
+    .line 201
     .local v0, builder:Ljava/lang/StringBuilder;
     const-string v1, "UserData "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 228
+    .line 202
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -543,7 +396,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 229
+    .line 203
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -566,7 +419,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 230
+    .line 204
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -589,7 +442,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 231
+    .line 205
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -612,7 +465,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 232
+    .line 206
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -635,7 +488,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 233
+    .line 207
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -668,7 +521,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 234
+    .line 208
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -697,19 +550,19 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 235
+    .line 209
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 236
+    .line 210
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 228
+    .line 202
     :cond_0
     const-string v1, "unset"
 

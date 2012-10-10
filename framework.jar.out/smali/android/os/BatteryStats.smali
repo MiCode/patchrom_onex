@@ -179,7 +179,7 @@
 
     aput-object v1, v0, v8
 
-    const-string/jumbo v1, "l"
+    const-string v1, "l"
 
     aput-object v1, v0, v9
 
@@ -210,7 +210,7 @@
 
     aput-object v1, v0, v10
 
-    const-string/jumbo v1, "light"
+    const-string v1, "light"
 
     aput-object v1, v0, v11
 
@@ -283,7 +283,7 @@
 
     const/16 v1, 0xb
 
-    const-string/jumbo v2, "iden"
+    const-string v2, "iden"
 
     aput-object v2, v0, v1
 
@@ -295,7 +295,7 @@
 
     const/16 v1, 0xd
 
-    const-string/jumbo v2, "lte"
+    const-string v2, "lte"
 
     aput-object v2, v0, v1
 
@@ -528,7 +528,7 @@
 
     new-array v6, v6, [Ljava/lang/String;
 
-    const-string/jumbo v7, "in"
+    const-string v7, "in"
 
     aput-object v7, v6, v8
 
@@ -574,7 +574,7 @@
 
     .prologue
     .line 42
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 151
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1098,7 +1098,7 @@
     invoke-virtual {p0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 1050
-    const-string/jumbo v8, "m "
+    const-string v8, "m "
 
     invoke-virtual {p0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1892,7 +1892,7 @@
     :cond_4
     const/4 v5, 0x0
 
-    const-string/jumbo v8, "m"
+    const-string v8, "m"
 
     const/16 v9, 0xa
 
@@ -2306,7 +2306,7 @@
     .line 1294
     const/4 v5, 0x0
 
-    const-string/jumbo v8, "lv"
+    const-string v8, "lv"
 
     const/4 v9, 0x2
 
@@ -2489,7 +2489,7 @@
     .line 1316
     const/4 v5, 0x0
 
-    const-string/jumbo v8, "kwl"
+    const-string v8, "kwl"
 
     const/4 v9, 0x2
 
@@ -3684,7 +3684,7 @@
 
     .line 2192
     :cond_2
-    iget-object v0, v6, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
+    iget-object v0, v6, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     move-object/from16 v19, v0
 
@@ -3785,7 +3785,7 @@
     .line 2204
     const/16 v20, 0x0
 
-    const-string/jumbo v21, "i"
+    const-string v21, "i"
 
     const-string/jumbo v22, "uid"
 
@@ -7191,7 +7191,7 @@
 
     invoke-static {v5, v0, v1}, Landroid/os/BatteryStats;->formatTime(Ljava/lang/StringBuilder;J)V
 
-    const-string/jumbo v6, "krn"
+    const-string v6, "krn"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

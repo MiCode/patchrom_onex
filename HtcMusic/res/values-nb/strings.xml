@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Spill av en spilleliste</string>
     <string name="htc_delete_playlists">Slett spillelister</string>
     <string name="htc_delete_playlist">Slett spilleliste</string>
+    <string name="htc_delete_all_playlists">Slett alle spillelister</string>
     <string name="htc_playlist_add_songs">Legg til sanger</string>
     <string name="htc_playlist_del_songs">Slett sanger</string>
     <string name="htc_playlist_remove_songs">Fjern sanger</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Bufring...</string>
     <string name="title_send_content">Sender innhold...</string>
     <string name="no_downloaded_apps_found">Ingen nedlastede applikasjoner funnet</string>
+    <string name="music_folder_picker_dialog_msg">Legge til sanger på spillelister ved å velge mappen? Nei for å legge til sanger på den andre måten</string>
 </resources>

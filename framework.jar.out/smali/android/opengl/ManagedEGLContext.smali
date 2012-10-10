@@ -121,7 +121,7 @@
     .line 108
     monitor-exit v5
 
-    .line 135
+    .line 136
     .local v1, display:Ljavax/microedition/khronos/egl/EGLDisplay;
     .local v2, egl:Ljavax/microedition/khronos/egl/EGL10;
     :goto_0
@@ -258,6 +258,13 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 131
+    const-string v4, "ManagedEGLContext"
+
+    const-string v5, "doTerminate() is called due to trimMemory"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 132
     const/4 v3, 0x0
 
     .local v3, i:I
@@ -268,7 +275,7 @@
 
     if-ge v3, v4, :cond_4
 
-    .line 132
+    .line 133
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -277,12 +284,12 @@
 
     invoke-virtual {v4}, Landroid/opengl/ManagedEGLContext;->execTerminate()V
 
-    .line 131
+    .line 132
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 135
+    .line 136
     :cond_4
     const/4 v4, 0x1
 

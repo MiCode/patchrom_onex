@@ -26,7 +26,7 @@
     .parameter
 
     .prologue
-    .line 2784
+    .line 2800
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$WindowRunnnable;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2784
+    .line 2800
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcAbsListView$WindowRunnnable;-><init>(Lcom/htc/widget/HtcAbsListView;)V
 
     return-void
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 2792
+    .line 2808
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$WindowRunnnable;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     #calls: Lcom/htc/widget/HtcAbsListView;->getWindowAttachCount()I
@@ -62,7 +62,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView$WindowRunnnable;->mOriginalAttachCount:I
 
-    .line 2793
+    .line 2809
     return-void
 .end method
 
@@ -70,7 +70,7 @@
     .locals 2
 
     .prologue
-    .line 2800
+    .line 2816
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$WindowRunnnable;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAbsListView;->hasWindowFocus()Z

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1139
+    .line 1234
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$25;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,14 +66,14 @@
     .end annotation
 
     .prologue
-    .line 1143
+    .line 1238
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$25;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->updateButtonEnableStates()V
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3700(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 1144
+    .line 1239
     return-void
 .end method

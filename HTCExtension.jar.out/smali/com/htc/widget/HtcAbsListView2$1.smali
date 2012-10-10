@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 2748
+    .line 2738
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView2$1;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
     iput-object p2, p0, Lcom/htc/widget/HtcAbsListView2$1;->val$child:Landroid/view/View;
@@ -53,31 +53,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2750
+    .line 2740
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$1;->val$child:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setPressed(Z)V
 
-    .line 2751
+    .line 2741
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$1;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAbsListView2;->setPressed(Z)V
 
-    .line 2752
+    .line 2742
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$1;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcAdapterView2;->mDataChanged:Z
 
     if-nez v0, :cond_0
 
-    .line 2753
+    .line 2743
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$1;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView2$1;->val$performClick:Lcom/htc/widget/HtcAbsListView2$PerformClick;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAbsListView2;->post(Ljava/lang/Runnable;)Z
 
-    .line 2755
+    .line 2745
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView2$1;->this$0:Lcom/htc/widget/HtcAbsListView2;
 
@@ -85,6 +85,6 @@
 
     iput v1, v0, Lcom/htc/widget/HtcAbsListView2;->mTouchMode:I
 
-    .line 2756
+    .line 2746
     return-void
 .end method

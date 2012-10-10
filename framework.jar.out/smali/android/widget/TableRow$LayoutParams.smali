@@ -269,7 +269,7 @@
     if-eqz v0, :cond_0
 
     .line 493
-    const-string/jumbo v0, "layout_width"
+    const-string v0, "layout_width"
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
 
@@ -286,7 +286,7 @@
     if-eqz v0, :cond_1
 
     .line 500
-    const-string/jumbo v0, "layout_height"
+    const-string v0, "layout_height"
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
 

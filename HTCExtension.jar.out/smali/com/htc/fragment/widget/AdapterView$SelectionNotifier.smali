@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1005
+    .line 1004
     .local p0, this:Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;,"Lcom/htc/fragment/widget/AdapterView<TT;>.SelectionNotifier;"
     iput-object p1, p0, Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;->this$0:Lcom/htc/fragment/widget/AdapterView;
 
@@ -42,7 +42,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1005
+    .line 1004
     .local p0, this:Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;,"Lcom/htc/fragment/widget/AdapterView<TT;>.SelectionNotifier;"
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;-><init>(Lcom/htc/fragment/widget/AdapterView;)V
 
@@ -55,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 1011
+    .line 1010
     .local p0, this:Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;,"Lcom/htc/fragment/widget/AdapterView<TT;>.SelectionNotifier;"
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;->this$0:Lcom/htc/fragment/widget/AdapterView;
 
@@ -63,14 +63,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1015
+    .line 1014
     invoke-virtual {p0, p0}, Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;->post(Ljava/lang/Runnable;)Z
 
-    .line 1019
+    .line 1018
     :goto_0
     return-void
 
-    .line 1017
+    .line 1016
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView$SelectionNotifier;->this$0:Lcom/htc/fragment/widget/AdapterView;
 

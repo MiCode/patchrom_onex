@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 222
+    .line 246
     iput-object p1, p0, Lcom/android/camera/component/MainBar$5;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "view"
 
     .prologue
-    .line 226
+    .line 250
     iget-object v0, p0, Lcom/android/camera/component/MainBar$5;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-virtual {v0}, Lcom/android/camera/component/MainBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -57,12 +57,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    .line 227
+    .line 251
     iget-object v0, p0, Lcom/android/camera/component/MainBar$5;->this$0:Lcom/android/camera/component/MainBar;
 
     #calls: Lcom/android/camera/component/MainBar;->switchFlashMode()V
     invoke-static {v0}, Lcom/android/camera/component/MainBar;->access$600(Lcom/android/camera/component/MainBar;)V
 
-    .line 228
+    .line 252
     return-void
 .end method

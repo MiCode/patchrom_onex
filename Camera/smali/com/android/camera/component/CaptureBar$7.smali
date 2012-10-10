@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 738
+    .line 819
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$7;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .parameter "x2"
 
     .prologue
-    .line 738
+    .line 819
     check-cast p3, Lcom/android/camera/input/KeyEventArgs;
 
     .end local p3
@@ -82,23 +82,23 @@
     .end annotation
 
     .prologue
-    .line 742
+    .line 823
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/input/KeyEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$7;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p3, Lcom/android/camera/input/KeyEventArgs;->keyEvent:Landroid/view/KeyEvent;
 
     #calls: Lcom/android/camera/component/CaptureBar;->onKeyUp(Landroid/view/KeyEvent;)Z
-    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$1400(Lcom/android/camera/component/CaptureBar;Landroid/view/KeyEvent;)Z
+    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$1600(Lcom/android/camera/component/CaptureBar;Landroid/view/KeyEvent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 743
+    .line 824
     invoke-virtual {p3}, Lcom/android/camera/input/KeyEventArgs;->setHandled()V
 
-    .line 744
+    .line 825
     :cond_0
     return-void
 .end method

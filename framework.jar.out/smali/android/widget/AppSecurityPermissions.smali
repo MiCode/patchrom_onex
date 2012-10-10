@@ -117,7 +117,7 @@
 
     .prologue
     .line 118
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 66
     const/4 v7, 0x0
@@ -287,7 +287,7 @@
 
     .prologue
     .line 97
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 66
     const/4 v5, 0x0
@@ -440,7 +440,7 @@
     .prologue
     .line 91
     .local p2, permList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/PermissionInfo;>;"
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 66
     const/4 v0, 0x0
@@ -1296,7 +1296,7 @@
 
     .prologue
     .line 155
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1590,7 +1590,7 @@
 
     move-result-object v10
 
-    iget-object v11, v6, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+    iget-object v11, v6, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1627,7 +1627,7 @@
 
     move-result-object v10
 
-    iget-object v11, v6, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+    iget-object v11, v6, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1685,7 +1685,7 @@
 
     move-result-object v10
 
-    iget-object v11, v6, Landroid/content/pm/PermissionInfo;->name:Ljava/lang/String;
+    iget-object v11, v6, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1770,7 +1770,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "idx="
+    const-string v11, "idx="
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2065,7 +2065,7 @@
     .line 209
     iget-object v0, p0, Landroid/widget/AppSecurityPermissions;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "layout_inflater"
+    const-string v1, "layout_inflater"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

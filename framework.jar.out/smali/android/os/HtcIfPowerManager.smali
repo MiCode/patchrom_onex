@@ -8,6 +8,9 @@
 
 
 # virtual methods
+.method public abstract fetchCurrentBrightnessValue()I
+.end method
+
 .method public abstract getProximitySensorActive()Z
 .end method
 

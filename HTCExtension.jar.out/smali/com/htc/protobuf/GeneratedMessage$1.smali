@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 993
+    .line 992
     invoke-static {}, Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;->values()[Lcom/htc/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     move-result-object v0

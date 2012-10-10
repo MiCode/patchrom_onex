@@ -28,14 +28,21 @@
     <string name="panorama_stitching_error_images">Ώπα, μετακινήστε την κάμερα ομαλά και προσπαθήστε ξανά. Συρραφή τρεχουσών φωτογραφιών...</string>
     <string name="processing_image">Επεξεργασία...</string>
     <string name="saving_photos">Αποθήκευση φωτογραφιών...</string>
+    <string name="saving_video">Αποθήκευση βίντεο...</string>
     <string name="optimal_3D_in_landscape">Κρατήστε το τηλέφωνο οριζόντια για να λειτουργήσει σωστά η καταγραφή 3D.</string>
     <string name="image_queue_is_full">Αποθήκευση φωτογραφιών, τραβήξτε φωτογραφία αργότερα.</string>
     <string name="how_to_start_group_portrait">Χρησιμοποιήστε τη σκηνή Ομάδα για τέλεια λήψη με όλα τα χαμόγελα και χωρίς βλεφαρίσματα</string>
     <string name="group_portrait_processing_images">Σάρωση προσώπων για σύνθεση της καλύτερης λήψης...</string>
     <string name="auto_upload_first_time_dialog">Θέλετε να δημιουργείται αυτόματα αντίγραφο ασφαλείας με τις λήψεις της κάμεράς σας στο Facebook;</string>
     <string name="auto_upload_confirm_dialog">Μπορείτε να αλλάξετε τη ρύθμιση αυτή ανά πάσα στιγμή από το Ρυθμίσεις-->Αυτόματη αποστολή</string>
+    <string name="other_usage_camera">Αδύνατη η έναρξη της φωτογραφικής μηχανής επειδή χρησιμοποιείται από άλλη εφαρμογή.</string>
+    <string name="other_usage_camcorder">Αδύνατη η έναρξη της βιντεοκάμερας επειδή χρησιμοποιείται από άλλη εφαρμογή.</string>
     <string name="not_recording_when_streaming_tv">Η εγγραφή βίντεο δεν λειτουργεί κατά το το streaming στη TV</string>
     <string name="forbidden_camera">Η πρόσβαση της κάμερας απαγορεύεται από το διαχειριστή της συσκευής, επικοινωνήστε με την ομάδα IT για βοήθεια.</string>
+    <string name="not_launch_camera_while_phonecall_and_lowpower">Δεν μπορείτε να χρησιμοποιήσετε την κάμερα επειδή μια τηλεφωνική κλήση είναι σε εξέλιξη, ενώ η στάθμη της μπαταρίας είναι χαμηλή.</string>
+    <string name="close_camera_while_phonecall_and_lowpower">Η κάμερα είναι κλειστή επειδή μια τηλεφωνική κλήση είναι σε εξέλιξη, ενώ η στάθμη της μπαταρίας είναι χαμηλή</string>
+    <string name="unable_launch_camera">Αδύνατη η έναρξη της κάμερας.</string>
+    <string name="close_camera_while_error_happened">Η κάμερα πρέπει να κλείσει.</string>
     <string name="on_screen_btn_effects">Εφέ</string>
     <string name="on_screen_btn_enhance_photo">Βελτίωση</string>
     <string name="on_screen_btn_trim_video">Περικοπή</string>
@@ -120,7 +127,7 @@
     <string name="settings_camera_scenes">Σκηνές κάμερας</string>
     <string name="settings_camera_effects">Εφέ κάμερας</string>
     <string name="settings_camera_type">Κάμερα</string>
-    <string name="settings_camera_type_main">Κύριος</string>
+    <string name="settings_camera_type_main">Κύρια</string>
     <string name="settings_camera_type_front">Εμπρός</string>
     <string name="settings_image_adjustments">Προσαρμογές εικόνας</string>
     <string name="settings_white_balance">Ισορ. λευκού</string>
@@ -208,6 +215,7 @@
     <string name="resolution_video_qhd_description_2">QHD (960 x 540)</string>
     <string name="resolution_video_wvga_description_2">Ευρεία οθόνη (800 x 480)</string>
     <string name="resolution_video_hvga_description_2">Ευρεία οθόνη (720 x 480)</string>
+    <string name="resolution_video_hvga_description_3">Ευρεία οθόνη (480 x 320)</string>
     <string name="resolution_video_vga_description_2">Υψηλή (640 x 480)</string>
     <string name="resolution_video_QVGA_description_3">Χαμηλή (320 x 240)</string>
     <string name="resolution_video_qcif_description_3">MMS (176 x 144)</string>
@@ -339,7 +347,7 @@
     <string name="main_bar_switch_description">Λειτ.</string>
     <string name="main_bar_quality_description">Ποιότητα</string>
     <string name="camera_front_description">Εμπρός</string>
-    <string name="camera_back_description">Κύριος</string>
+    <string name="camera_back_description">Κύρια</string>
     <string name="mode_camera_description">Φωτογραφία</string>
     <string name="main_bar_flash_on">Ενεργοποίηση</string>
 </resources>

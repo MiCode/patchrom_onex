@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4986
+    .line 5018
     iput-object p1, p0, Lcom/htc/music/HtcMusic$30;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,11 +43,11 @@
     .parameter "which"
 
     .prologue
-    .line 4989
+    .line 5021
     iget-object v0, p0, Lcom/htc/music/HtcMusic$30;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0}, Lcom/htc/music/HtcMusic;->finish()V
 
-    .line 4990
+    .line 5022
     return-void
 .end method

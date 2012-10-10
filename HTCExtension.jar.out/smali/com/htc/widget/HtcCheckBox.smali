@@ -78,21 +78,21 @@
     .parameter "context"
 
     .prologue
+    const v3, 0x2080021
+
+    const v4, 0x208001e
+
     const v5, 0x208001d
 
-    const v2, 0x2080008
-
-    const v1, 0x2080007
-
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     const/4 v7, 0x0
 
     .line 47
-    iput-boolean v3, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
+    iput-boolean v1, p0, Lcom/htc/widget/HtcCompoundButton;->mIsContentMultiplyRequired:Z
 
     .line 48
-    iput-boolean v3, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
+    iput-boolean v1, p0, Lcom/htc/widget/HtcCompoundButton;->mHasOnState:Z
 
     .line 49
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
@@ -103,10 +103,6 @@
     const v1, 0x208001f
 
     const v2, 0x2080020
-
-    const v3, 0x2080021
-
-    const v4, 0x208001e
 
     const v6, 0x208015c
 
@@ -125,12 +121,12 @@
     :cond_0
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
 
-    if-ne v0, v3, :cond_1
+    if-ne v0, v1, :cond_1
 
     .line 53
-    const v3, 0x2080021
+    const v1, 0x2080007
 
-    const v4, 0x208001e
+    const v2, 0x2080008
 
     const v6, 0x208015c
 
@@ -144,11 +140,15 @@
     :cond_1
     iget v0, p0, Lcom/htc/widget/HtcCompoundButton;->mBackgroundMode:I
 
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v1, :cond_2
 
     .line 56
+    const v1, 0x208012e
+
+    const v2, 0x208012f
+
     const v3, 0x2080141
 
     const v4, 0x2080138
@@ -165,9 +165,9 @@
 
     .line 59
     :cond_2
-    const v1, 0x208001f
+    const v1, 0x2080139
 
-    const v2, 0x2080020
+    const v2, 0x208013a
 
     const v3, 0x2080141
 

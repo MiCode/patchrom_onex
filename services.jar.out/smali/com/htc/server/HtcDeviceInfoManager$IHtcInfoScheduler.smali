@@ -23,6 +23,8 @@
 
 .field public static final ADD_RADIO_CRASH:I = 0x15
 
+.field public static final ADD_SENT_ERROR:I = 0x1a
+
 .field public static final ADD_SYSTEM_CRASH:I = 0x13
 
 .field public static final APP_DIED:I = 0x10

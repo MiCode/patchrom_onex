@@ -46,15 +46,15 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 67
     invoke-direct {p0}, Lcom/android/internal/telephony/CmasMessage;-><init>()V
 
-    .line 51
+    .line 68
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasFormat:I
 
-    .line 52
+    .line 69
     return-void
 .end method
 
@@ -63,22 +63,22 @@
     .parameter "msgId"
 
     .prologue
-    .line 198
+    .line 216
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 199
+    .line 217
     .local v0, r:Landroid/content/res/Resources;
     packed-switch p0, :pswitch_data_0
 
-    .line 211
+    .line 229
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 204
+    .line 222
     :pswitch_0
     const v1, 0x104053a
 
@@ -88,7 +88,7 @@
 
     goto :goto_0
 
-    .line 209
+    .line 227
     :pswitch_1
     const v1, 0x104053b
 
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 199
+    .line 217
     nop
 
     :pswitch_data_0
@@ -119,22 +119,22 @@
     .parameter "msgId"
 
     .prologue
-    .line 152
+    .line 170
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 153
+    .line 171
     .local v0, r:Landroid/content/res/Resources;
     packed-switch p0, :pswitch_data_0
 
-    .line 165
+    .line 183
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 158
+    .line 176
     :pswitch_0
     const v1, 0x1040536
 
@@ -144,7 +144,7 @@
 
     goto :goto_0
 
-    .line 163
+    .line 181
     :pswitch_1
     const v1, 0x1040537
 
@@ -154,7 +154,7 @@
 
     goto :goto_0
 
-    .line 153
+    .line 171
     nop
 
     :pswitch_data_0
@@ -175,22 +175,22 @@
     .parameter "msgId"
 
     .prologue
-    .line 175
+    .line 193
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 176
+    .line 194
     .local v0, r:Landroid/content/res/Resources;
     packed-switch p0, :pswitch_data_0
 
-    .line 188
+    .line 206
     const/4 v1, 0x0
 
     :goto_0
     return-object v1
 
-    .line 181
+    .line 199
     :pswitch_0
     const v1, 0x1040538
 
@@ -200,7 +200,7 @@
 
     goto :goto_0
 
-    .line 186
+    .line 204
     :pswitch_1
     const v1, 0x1040539
 
@@ -210,7 +210,7 @@
 
     goto :goto_0
 
-    .line 176
+    .line 194
     nop
 
     :pswitch_data_0
@@ -239,140 +239,140 @@
 
     const/4 v0, 0x1
 
-    .line 80
+    .line 98
     packed-switch p1, :pswitch_data_0
 
-    .line 143
+    .line 161
     :goto_0
     return-void
 
-    .line 82
+    .line 100
     :pswitch_0
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
 
     goto :goto_0
 
-    .line 85
-    :pswitch_1
-    iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
-
-    .line 86
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
-
-    .line 87
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
-
-    .line 88
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
-
-    goto :goto_0
-
-    .line 91
-    :pswitch_2
-    iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
-
-    .line 92
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
-
-    .line 93
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
-
-    .line 94
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
-
-    goto :goto_0
-
-    .line 97
-    :pswitch_3
-    iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
-
-    .line 98
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
-
-    .line 99
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
-
-    .line 100
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
-
-    goto :goto_0
-
     .line 103
-    :pswitch_4
+    :pswitch_1
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
 
     .line 104
     iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
 
     .line 105
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
 
     .line 106
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
 
     goto :goto_0
 
     .line 109
-    :pswitch_5
-    iput v3, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
+    :pswitch_2
+    iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
 
     .line 110
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
 
     .line 111
     iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
 
     .line 112
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
-
-    goto :goto_0
-
-    .line 115
-    :pswitch_6
-    iput v3, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
-
-    .line 116
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
-
-    .line 117
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
-
-    .line 118
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
 
     goto :goto_0
 
+    .line 115
+    :pswitch_3
+    iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
+
+    .line 116
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
+
+    .line 117
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
+
+    .line 118
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
+
+    goto :goto_0
+
     .line 121
-    :pswitch_7
-    iput v3, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
+    :pswitch_4
+    iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
 
     .line 122
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
 
     .line 123
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
 
     .line 124
-    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
 
     goto :goto_0
 
     .line 127
-    :pswitch_8
+    :pswitch_5
     iput v3, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
 
     .line 128
     iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
 
     .line 129
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
 
     .line 130
-    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
 
     goto :goto_0
 
     .line 133
+    :pswitch_6
+    iput v3, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
+
+    .line 134
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
+
+    .line 135
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
+
+    .line 136
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
+
+    goto :goto_0
+
+    .line 139
+    :pswitch_7
+    iput v3, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
+
+    .line 140
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
+
+    .line 141
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
+
+    .line 142
+    iput v1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
+
+    goto :goto_0
+
+    .line 145
+    :pswitch_8
+    iput v3, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasType:I
+
+    .line 146
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->severity:I
+
+    .line 147
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->urgency:I
+
+    .line 148
+    iput v0, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->certainty:I
+
+    goto :goto_0
+
+    .line 151
     :pswitch_9
     const/4 v0, 0x4
 
@@ -380,7 +380,7 @@
 
     goto :goto_0
 
-    .line 136
+    .line 154
     :pswitch_a
     const/4 v0, 0x5
 
@@ -388,7 +388,7 @@
 
     goto :goto_0
 
-    .line 80
+    .line 98
     nop
 
     :pswitch_data_0
@@ -414,7 +414,7 @@
     .parameter "pdu"
 
     .prologue
-    .line 57
+    .line 75
     :try_start_0
     const-string v2, "GSM"
 
@@ -438,96 +438,96 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
+    .line 76
     new-instance v0, Lcom/android/internal/telephony/gsm/CBMessage;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/CBMessage;-><init>()V
 
-    .line 59
+    .line 77
     .local v0, cb:Lcom/android/internal/telephony/gsm/CBMessage;
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/gsm/CBMessage;->parseCBPdu([B)V
 
-    .line 60
+    .line 78
     const/4 v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->cmasFormat:I
 
-    .line 61
+    .line 79
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->mPdu:[B
 
-    .line 62
+    .line 80
     iget v2, v0, Lcom/android/internal/telephony/gsm/CBMessage;->sn:I
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->sn:I
 
-    .line 63
+    .line 81
     iget v2, v0, Lcom/android/internal/telephony/gsm/CBMessage;->gs:I
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->gs:I
 
-    .line 64
+    .line 82
     iget v2, v0, Lcom/android/internal/telephony/gsm/CBMessage;->msg_id:I
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->msgId:I
 
-    .line 65
+    .line 83
     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/CBMessage;->getMessageClass()Landroid/telephony/SmsMessage$MessageClass;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->messageClass:Landroid/telephony/SmsMessage$MessageClass;
 
-    .line 66
+    .line 84
     iget v2, v0, Lcom/android/internal/telephony/gsm/CBMessage;->page:I
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->pageSeg:I
 
-    .line 67
+    .line 85
     iget v2, v0, Lcom/android/internal/telephony/gsm/CBMessage;->pages:I
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->pageCount:I
 
-    .line 68
+    .line 86
     iget v2, v0, Lcom/android/internal/telephony/gsm/CBMessage;->mEncodingType:I
 
     iput v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->charSetEncoding:I
 
-    .line 69
+    .line 87
     iget-boolean v2, v0, Lcom/android/internal/telephony/gsm/CBMessage;->mEncodingTypeSet:Z
 
     iput-boolean v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->charSetEncodingSet:Z
 
-    .line 70
+    .line 88
     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/CBMessage;->getUserData()[B
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->alertText:[B
 
-    .line 71
+    .line 89
     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/CBMessage;->getMessageBody()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->alertTextStr:Ljava/lang/String;
 
-    .line 72
+    .line 90
     iget v2, p0, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->msgId:I
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/gsm/GsmCmasMessage;->setCmasType(I)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 77
+    .line 95
     .end local v0           #cb:Lcom/android/internal/telephony/gsm/CBMessage;
     :goto_0
     return-void
 
-    .line 74
+    .line 92
     :catch_0
     move-exception v1
 
-    .line 75
+    .line 93
     .local v1, ex:Ljava/lang/Throwable;
     const-string v2, "GSM"
 

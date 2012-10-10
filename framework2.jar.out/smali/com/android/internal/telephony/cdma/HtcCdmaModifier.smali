@@ -12,6 +12,18 @@
 
 .field private static final mCallEndNumberOverwritten_SprintLen3:[Ljava/lang/String; = null
 
+.field private static final mCallerNumberOverwritten_BSTlen1:[Ljava/lang/String; = null
+
+.field private static final mCallerNumberOverwritten_BSTlen11:[Ljava/lang/String; = null
+
+.field private static final mCallerNumberOverwritten_BSTlen2:[Ljava/lang/String; = null
+
+.field private static final mCallerNumberOverwritten_BSTlen3:[Ljava/lang/String; = null
+
+.field private static final mCallerNumberOverwritten_BSTlen4:[Ljava/lang/String; = null
+
+.field private static final mCallerNumberOverwritten_BSTlenVari:[[Ljava/lang/String; = null
+
 .field private static final mCallerNumberOverwritten_Sprintlen1:[Ljava/lang/String; = null
 
 .field private static final mCallerNumberOverwritten_Sprintlen2:[Ljava/lang/String; = null
@@ -26,6 +38,8 @@
 
 .field private static final mCallerNumberOverwritten_VMlen1:[Ljava/lang/String; = null
 
+.field private static final mCallerNumberOverwritten_VMlen11:[Ljava/lang/String; = null
+
 .field private static final mCallerNumberOverwritten_VMlen2:[Ljava/lang/String; = null
 
 .field private static final mCallerNumberOverwritten_VMlen3:[Ljava/lang/String; = null
@@ -38,9 +52,21 @@
 
 .field private static final sBillPay:Ljava/lang/String; = "Bill Pay"
 
+.field private static final sBoostCare:Ljava/lang/String; = "Boost Care"
+
+.field private static final sBoostCare_num:Ljava/lang/String; = "18882667848"
+
+.field private static final sCallBalance:Ljava/lang/String; = "Call Balance"
+
 .field private static final sCallBeforeYouDig:Ljava/lang/String; = "Call Before You Dig"
 
+.field private static final sCallCare:Ljava/lang/String; = "Call Care"
+
+.field private static final sCallReboost:Ljava/lang/String; = "Call Reboost"
+
 .field private static sCallerNumberOverwritten_lenVari:[[Ljava/lang/String; = null
+
+.field private static final sCareService:Ljava/lang/String; = "Care Services"
 
 .field private static final sCarrierServiceRepair:Ljava/lang/String; = "Carrier Service Repair"
 
@@ -66,6 +92,10 @@
 
 .field private static final sTrafficInformation:Ljava/lang/String; = "Traffic Information"
 
+.field private static final sVMCare:Ljava/lang/String; = "Virgin Mobile Care"
+
+.field private static final sVMCare_num:Ljava/lang/String; = "18883221122"
+
 .field private static final sVoiceMail:Ljava/lang/String; = "Voicemail"
 
 .field private static final sWirelessAccountInformation:Ljava/lang/String; = "Wireless Account Information"
@@ -86,7 +116,7 @@
 
     const/4 v1, 0x0
 
-    .line 73
+    .line 86
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -109,7 +139,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_Sprintlen1:[Ljava/lang/String;
 
-    .line 86
+    .line 99
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/String;
@@ -124,7 +154,9 @@
 
     aput-object v2, v0, v6
 
-    aput-object v1, v0, v7
+    const-string v2, "Customer Service"
+
+    aput-object v2, v0, v7
 
     const/4 v2, 0x4
 
@@ -152,7 +184,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_Sprintlen2:[Ljava/lang/String;
 
-    .line 94
+    .line 107
     const/16 v0, 0x16
 
     new-array v0, v0, [Ljava/lang/String;
@@ -277,7 +309,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_Sprintlen3:[Ljava/lang/String;
 
-    .line 109
+    .line 122
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
@@ -330,7 +362,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_Sprintlen4:[Ljava/lang/String;
 
-    .line 118
+    .line 131
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -349,7 +381,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_Sprintlen5:[Ljava/lang/String;
 
-    .line 124
+    .line 137
     const/4 v0, 0x6
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -382,7 +414,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_SprintlenVari:[[Ljava/lang/String;
 
-    .line 133
+    .line 152
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -391,9 +423,7 @@
 
     aput-object v2, v0, v4
 
-    const-string v2, "Operator"
-
-    aput-object v2, v0, v5
+    aput-object v1, v0, v5
 
     const-string v2, "1"
 
@@ -405,7 +435,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlen1:[Ljava/lang/String;
 
-    .line 139
+    .line 158
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -414,22 +444,18 @@
 
     aput-object v2, v0, v4
 
-    const-string v2, "Customer Service"
-
-    aput-object v2, v0, v5
+    aput-object v1, v0, v5
 
     const-string v2, "*4"
 
     aput-object v2, v0, v6
 
-    const-string v2, "Wireless Account Information"
-
-    aput-object v2, v0, v7
+    aput-object v1, v0, v7
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlen2:[Ljava/lang/String;
 
-    .line 145
-    const/16 v0, 0x10
+    .line 164
+    const/16 v0, 0x12
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -481,7 +507,7 @@
 
     const/16 v2, 0x9
 
-    const-string v3, "Carrier Service Repair"
+    const-string v3, "Care Services"
 
     aput-object v3, v0, v2
 
@@ -521,10 +547,22 @@
 
     aput-object v3, v0, v2
 
+    const/16 v2, 0x10
+
+    const-string v3, "*86"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x11
+
+    const-string v3, "Call Care"
+
+    aput-object v3, v0, v2
+
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlen3:[Ljava/lang/String;
 
-    .line 157
-    const/4 v0, 0x4
+    .line 177
+    const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -544,10 +582,71 @@
 
     aput-object v2, v0, v7
 
+    const/4 v2, 0x4
+
+    const-string v3, "*611"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x5
+
+    const-string v3, "Care Services"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x6
+
+    const-string v3, "#611"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x7
+
+    const-string v3, "Care Services"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x8
+
+    const-string v3, "*411"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x9
+
+    const-string v3, "Directory Assistance"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xa
+
+    const-string v3, "#411"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xb
+
+    const-string v3, "Directory Assistance"
+
+    aput-object v3, v0, v2
+
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlen4:[Ljava/lang/String;
 
-    .line 163
-    const/4 v0, 0x5
+    .line 187
+    new-array v0, v6, [Ljava/lang/String;
+
+    const-string v2, "18883221122"
+
+    aput-object v2, v0, v4
+
+    const-string v2, "Virgin Mobile Care"
+
+    aput-object v2, v0, v5
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlen11:[Ljava/lang/String;
+
+    .line 192
+    const/16 v0, 0xc
 
     new-array v0, v0, [[Ljava/lang/String;
 
@@ -571,21 +670,399 @@
 
     aput-object v3, v0, v2
 
+    const/4 v2, 0x5
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x6
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x7
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0x8
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0x9
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0xa
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0xb
+
+    sget-object v3, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlen11:[Ljava/lang/String;
+
+    aput-object v3, v0, v2
+
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlenVari:[[Ljava/lang/String;
 
-    .line 174
+    .line 215
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const-string v2, "0"
+
+    aput-object v2, v0, v4
+
+    aput-object v1, v0, v5
+
+    const-string v2, "1"
+
+    aput-object v2, v0, v6
+
+    const-string v2, "Voicemail"
+
+    aput-object v2, v0, v7
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen1:[Ljava/lang/String;
+
+    .line 221
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const-string v2, "*2"
+
+    aput-object v2, v0, v4
+
+    aput-object v1, v0, v5
+
+    const-string v2, "*4"
+
+    aput-object v2, v0, v6
+
+    aput-object v1, v0, v7
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen2:[Ljava/lang/String;
+
+    .line 227
+    const/16 v0, 0x14
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const-string v2, "211"
+
+    aput-object v2, v0, v4
+
+    const-string v2, "Community Information"
+
+    aput-object v2, v0, v5
+
+    const-string v2, "225"
+
+    aput-object v2, v0, v6
+
+    const-string v2, "Call Balance"
+
+    aput-object v2, v0, v7
+
+    const/4 v2, 0x4
+
+    const-string v3, "233"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x5
+
+    const-string v3, "Call Reboost"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x6
+
+    const-string v3, "311"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x7
+
+    const-string v3, "Non-Emergency Services"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x8
+
+    const-string v3, "411"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x9
+
+    const-string v3, "Directory Assistance"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xa
+
+    const-string v3, "511"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xb
+
+    const-string v3, "Traffic Information"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xc
+
+    const-string v3, "611"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xd
+
+    const-string v3, "Care Services"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xe
+
+    const-string v3, "711"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xf
+
+    const-string v3, "TRS Relay for TTY"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x10
+
+    const-string v3, "811"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x11
+
+    const-string v3, "Call Before You Dig"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x12
+
+    const-string v3, "911"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x13
+
+    const-string v3, "9-1-1 Emergency"
+
+    aput-object v3, v0, v2
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen3:[Ljava/lang/String;
+
+    .line 241
+    const/16 v0, 0x14
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const-string v2, "#911"
+
+    aput-object v2, v0, v4
+
+    const-string v2, "9-1-1 Emergency"
+
+    aput-object v2, v0, v5
+
+    const-string v2, "*911"
+
+    aput-object v2, v0, v6
+
+    const-string v2, "9-1-1 Emergency"
+
+    aput-object v2, v0, v7
+
+    const/4 v2, 0x4
+
+    const-string v3, "*611"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x5
+
+    const-string v3, "Care Services"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x6
+
+    const-string v3, "#611"
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x7
+
+    const-string v3, "Care Services"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x8
+
+    const-string v3, "*225"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x9
+
+    const-string v3, "Call Balance"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xa
+
+    const-string v3, "#225"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xb
+
+    const-string v3, "Call Balance"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xc
+
+    const-string v3, "*233"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xd
+
+    const-string v3, "Call Reboost"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xe
+
+    const-string v3, "#233"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0xf
+
+    const-string v3, "Call Reboost"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x10
+
+    const-string v3, "*411"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x11
+
+    const-string v3, "Directory Assistance"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x12
+
+    const-string v3, "#411"
+
+    aput-object v3, v0, v2
+
+    const/16 v2, 0x13
+
+    const-string v3, "Directory Assistance"
+
+    aput-object v3, v0, v2
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen4:[Ljava/lang/String;
+
+    .line 256
+    new-array v0, v6, [Ljava/lang/String;
+
+    const-string v2, "18882667848"
+
+    aput-object v2, v0, v4
+
+    const-string v2, "Boost Care"
+
+    aput-object v2, v0, v5
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen11:[Ljava/lang/String;
+
+    .line 261
+    const/16 v0, 0xc
+
+    new-array v0, v0, [[Ljava/lang/String;
+
+    aput-object v1, v0, v4
+
+    sget-object v2, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen1:[Ljava/lang/String;
+
+    aput-object v2, v0, v5
+
+    sget-object v2, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen2:[Ljava/lang/String;
+
+    aput-object v2, v0, v6
+
+    sget-object v2, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen3:[Ljava/lang/String;
+
+    aput-object v2, v0, v7
+
+    const/4 v2, 0x4
+
+    sget-object v3, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen4:[Ljava/lang/String;
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x5
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x6
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x7
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0x8
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0x9
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0xa
+
+    aput-object v1, v0, v2
+
+    const/16 v2, 0xb
+
+    sget-object v3, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlen11:[Ljava/lang/String;
+
+    aput-object v3, v0, v2
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlenVari:[[Ljava/lang/String;
+
+    .line 282
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v2, 0x94
 
     if-ne v0, v2, :cond_0
 
-    .line 175
+    .line 283
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_SprintlenVari:[[Ljava/lang/String;
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
 
-    .line 190
+    .line 301
     :goto_0
     const/4 v0, 0x4
 
@@ -607,7 +1084,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallEndNumberOverwritten_SprintLen2:[Ljava/lang/String;
 
-    .line 195
+    .line 306
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
@@ -680,7 +1157,7 @@
 
     return-void
 
-    .line 176
+    .line 284
     :cond_0
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -688,17 +1165,32 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 177
+    .line 285
     sget-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_VMlenVari:[[Ljava/lang/String;
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
 
     goto :goto_0
 
+    .line 286
     :cond_1
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/16 v2, 0xc
+
+    if-ne v0, v2, :cond_2
+
+    .line 287
+    sget-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallerNumberOverwritten_BSTlenVari:[[Ljava/lang/String;
+
+    sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
     move-object v0, v1
 
-    .line 179
+    .line 289
     check-cast v0, [[Ljava/lang/String;
 
     sput-object v0, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
@@ -711,7 +1203,7 @@
 
     .prologue
     .line 36
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -723,27 +1215,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 398
+    .line 517
     if-nez p0, :cond_1
 
-    .line 440
+    .line 559
     :cond_0
     :goto_0
     return-object v1
 
-    .line 403
+    .line 522
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 404
+    .line 523
     .local v0, lenNumber:I
     const/4 v2, 0x3
 
     if-ne v0, v2, :cond_3
 
-    .line 406
+    .line 525
     const-string v2, "611"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -752,12 +1244,12 @@
 
     if-nez v2, :cond_2
 
-    .line 408
+    .line 527
     const-string v1, "Customer Service"
 
     goto :goto_0
 
-    .line 410
+    .line 529
     :cond_2
     const-string v2, "411"
 
@@ -767,18 +1259,18 @@
 
     if-nez v2, :cond_0
 
-    .line 412
+    .line 531
     const-string v1, "Directory Service"
 
     goto :goto_0
 
-    .line 415
+    .line 534
     :cond_3
     const/4 v2, 0x4
 
     if-ne v0, v2, :cond_5
 
-    .line 417
+    .line 536
     const-string v2, "#646"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -787,12 +1279,12 @@
 
     if-nez v2, :cond_4
 
-    .line 419
+    .line 538
     const-string v1, "Minute Usage"
 
     goto :goto_0
 
-    .line 421
+    .line 540
     :cond_4
     const-string v2, "#729"
 
@@ -802,18 +1294,18 @@
 
     if-nez v2, :cond_0
 
-    .line 423
+    .line 542
     const-string v1, "Bill Payment"
 
     goto :goto_0
 
-    .line 426
+    .line 545
     :cond_5
     const/4 v2, 0x5
 
     if-ne v0, v2, :cond_6
 
-    .line 428
+    .line 547
     const-string v2, "#2455"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -822,18 +1314,18 @@
 
     if-nez v2, :cond_0
 
-    .line 430
+    .line 549
     const-string v1, "Account Balance"
 
     goto :goto_0
 
-    .line 433
+    .line 552
     :cond_6
     const/4 v2, 0x6
 
     if-ne v0, v2, :cond_0
 
-    .line 435
+    .line 554
     const-string v2, "#78676"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -842,7 +1334,7 @@
 
     if-nez v2, :cond_0
 
-    .line 437
+    .line 556
     const-string v1, "Emergency Weather"
 
     goto :goto_0
@@ -855,27 +1347,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 348
+    .line 467
     if-nez p0, :cond_1
 
-    .line 390
+    .line 509
     :cond_0
     :goto_0
     return-object v1
 
-    .line 353
+    .line 472
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 354
+    .line 473
     .local v0, lenNumber:I
     const/4 v2, 0x3
 
     if-ne v0, v2, :cond_3
 
-    .line 356
+    .line 475
     const-string v2, "611"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -884,12 +1376,12 @@
 
     if-nez v2, :cond_2
 
-    .line 358
+    .line 477
     const-string v1, "Cellular South Customer Service"
 
     goto :goto_0
 
-    .line 360
+    .line 479
     :cond_2
     const-string v2, "411"
 
@@ -899,18 +1391,18 @@
 
     if-nez v2, :cond_0
 
-    .line 362
+    .line 481
     const-string v1, "Directory Service"
 
     goto :goto_0
 
-    .line 365
+    .line 484
     :cond_3
     const/4 v2, 0x4
 
     if-ne v0, v2, :cond_5
 
-    .line 367
+    .line 486
     const-string v2, "#646"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -919,12 +1411,12 @@
 
     if-nez v2, :cond_4
 
-    .line 369
+    .line 488
     const-string v1, "Cellular South Minute Usage"
 
     goto :goto_0
 
-    .line 371
+    .line 490
     :cond_4
     const-string v2, "#729"
 
@@ -934,18 +1426,18 @@
 
     if-nez v2, :cond_0
 
-    .line 373
+    .line 492
     const-string v1, "Cellular South Bill Payment"
 
     goto :goto_0
 
-    .line 376
+    .line 495
     :cond_5
     const/4 v2, 0x5
 
     if-ne v0, v2, :cond_6
 
-    .line 378
+    .line 497
     const-string v2, "#2455"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -954,18 +1446,18 @@
 
     if-nez v2, :cond_0
 
-    .line 380
+    .line 499
     const-string v1, "Cellular South Account Balance"
 
     goto :goto_0
 
-    .line 383
+    .line 502
     :cond_6
     const/4 v2, 0x6
 
     if-ne v0, v2, :cond_0
 
-    .line 385
+    .line 504
     const-string v2, "#78676"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -974,7 +1466,7 @@
 
     if-nez v2, :cond_0
 
-    .line 387
+    .line 506
     const-string v1, "Cellular South Emergency Weather"
 
     goto :goto_0
@@ -986,174 +1478,174 @@
     .parameter "nvValue"
 
     .prologue
-    .line 593
+    .line 720
     const/4 v0, 0x0
 
-    .line 595
+    .line 722
     .local v0, givenMcc:Ljava/lang/String;
     sparse-switch p1, :sswitch_data_0
 
-    .line 643
+    .line 770
     :goto_0
     return-object v0
 
-    .line 597
+    .line 724
     :sswitch_0
     const-string v0, "302"
 
     goto :goto_0
 
-    .line 599
+    .line 726
     :sswitch_1
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 601
+    .line 728
     :sswitch_2
     const-string v0, "302"
 
     goto :goto_0
 
-    .line 603
+    .line 730
     :sswitch_3
     const-string v0, "734"
 
     goto :goto_0
 
-    .line 608
+    .line 735
     :sswitch_4
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 609
+    .line 736
     :sswitch_5
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 611
+    .line 738
     :sswitch_6
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 612
+    .line 739
     :sswitch_7
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 613
+    .line 740
     :sswitch_8
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 614
+    .line 741
     :sswitch_9
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 615
+    .line 742
     :sswitch_a
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 617
+    .line 744
     :sswitch_b
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 620
+    .line 747
     :sswitch_c
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 622
+    .line 749
     :sswitch_d
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 624
+    .line 751
     :sswitch_e
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 626
+    .line 753
     :sswitch_f
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 627
+    .line 754
     :sswitch_10
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 628
+    .line 755
     :sswitch_11
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 629
+    .line 756
     :sswitch_12
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 630
+    .line 757
     :sswitch_13
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 632
+    .line 759
     :sswitch_14
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 633
+    .line 760
     :sswitch_15
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 634
+    .line 761
     :sswitch_16
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 635
+    .line 762
     :sswitch_17
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 636
+    .line 763
     :sswitch_18
     const-string v0, "311"
 
     goto :goto_0
 
-    .line 641
+    .line 768
     :sswitch_19
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 595
+    .line 722
     nop
 
     :sswitch_data_0
@@ -1208,34 +1700,34 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 571
+    .line 698
     if-eqz p0, :cond_0
 
-    .line 573
+    .line 700
     const/4 v3, 0x0
 
     invoke-static {v3, p0}, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->getMccByNVvalue(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 574
+    .line 701
     .local v0, mcc:Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 587
+    .line 714
     .end local v0           #mcc:Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v2
 
-    .line 580
+    .line 707
     .restart local v0       #mcc:Ljava/lang/String;
     :cond_1
     invoke-static {v0, p0}, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->getMncByNVvalue(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 582
+    .line 709
     .local v1, mnc:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1262,25 +1754,25 @@
     .parameter "nvValue"
 
     .prologue
-    .line 648
+    .line 779
     const/4 v0, 0x0
 
-    .line 650
+    .line 781
     .local v0, mnc:Ljava/lang/String;
     sparse-switch p1, :sswitch_data_0
 
-    .line 734
+    .line 865
     :goto_0
     if-nez v0, :cond_0
 
-    .line 735
+    .line 866
     const-string v0, "00"
 
-    .line 738
+    .line 869
     :cond_0
     return-object v0
 
-    .line 652
+    .line 783
     :sswitch_0
     const-string v1, "310"
 
@@ -1290,295 +1782,295 @@
 
     if-eqz v1, :cond_1
 
-    .line 653
+    .line 784
     const-string v0, "012"
 
     goto :goto_0
 
-    .line 656
+    .line 787
     :cond_1
     const-string v0, "280"
 
-    .line 658
+    .line 789
     goto :goto_0
 
-    .line 660
+    .line 791
     :sswitch_1
     const-string v0, "120"
 
     goto :goto_0
 
-    .line 662
+    .line 793
     :sswitch_2
     const-string v0, "86"
 
     goto :goto_0
 
-    .line 664
+    .line 795
     :sswitch_3
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 666
+    .line 797
     :sswitch_4
     const-string v0, "270"
 
     goto :goto_0
 
-    .line 668
+    .line 799
     :sswitch_5
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 670
+    .line 801
     :sswitch_6
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 672
+    .line 803
     :sswitch_7
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 674
+    .line 805
     :sswitch_8
     const-string v0, "470"
 
     goto :goto_0
 
-    .line 676
+    .line 807
     :sswitch_9
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 678
+    .line 809
     :sswitch_a
     const-string v0, "68"
 
     goto :goto_0
 
-    .line 680
+    .line 811
     :sswitch_b
     const-string v0, "280"
 
     goto :goto_0
 
-    .line 682
+    .line 813
     :sswitch_c
     const-string v0, "06"
 
     goto :goto_0
 
-    .line 684
+    .line 815
     :sswitch_d
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 686
+    .line 817
     :sswitch_e
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 688
+    .line 819
     :sswitch_f
     const-string v0, "600"
 
     goto :goto_0
 
-    .line 690
+    .line 821
     :sswitch_10
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 692
+    .line 823
     :sswitch_11
     const-string v0, "130"
 
     goto :goto_0
 
-    .line 694
+    .line 825
     :sswitch_12
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 696
+    .line 827
     :sswitch_13
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 699
+    .line 830
     :sswitch_14
     const-string v0, "050"
 
     goto :goto_0
 
-    .line 700
+    .line 831
     :sswitch_15
     const-string v0, "430"
 
     goto :goto_0
 
-    .line 701
+    .line 832
     :sswitch_16
     const-string v0, "750"
 
     goto :goto_0
 
-    .line 702
+    .line 833
     :sswitch_17
     const-string v0, "440"
 
     goto :goto_0
 
-    .line 703
+    .line 834
     :sswitch_18
     const-string v0, "600"
 
     goto :goto_0
 
-    .line 705
+    .line 836
     :sswitch_19
     const-string v0, "430"
 
     goto :goto_0
 
-    .line 707
+    .line 838
     :sswitch_1a
     const-string v0, "230"
 
     goto :goto_0
 
-    .line 708
+    .line 839
     :sswitch_1b
     const-string v0, "280"
 
     goto :goto_0
 
-    .line 709
+    .line 840
     :sswitch_1c
     const-string v0, "590"
 
     goto :goto_0
 
-    .line 710
+    .line 841
     :sswitch_1d
     const-string v0, "340"
 
     goto :goto_0
 
-    .line 711
+    .line 842
     :sswitch_1e
     const-string v0, "580"
 
     goto :goto_0
 
-    .line 713
+    .line 844
     :sswitch_1f
     const-string v0, "92"
 
     goto :goto_0
 
-    .line 714
+    .line 845
     :sswitch_20
     const-string v0, "310"
 
     goto :goto_0
 
-    .line 715
+    .line 846
     :sswitch_21
     const-string v0, "410"
 
     goto :goto_0
 
-    .line 717
+    .line 848
     :sswitch_22
     const-string v0, "010"
 
     goto :goto_0
 
-    .line 718
+    .line 849
     :sswitch_23
     const-string v0, "100"
 
     goto :goto_0
 
-    .line 719
+    .line 850
     :sswitch_24
     const-string v0, "420"
 
     goto :goto_0
 
-    .line 721
+    .line 852
     :sswitch_25
     const-string v0, "450"
 
     goto :goto_0
 
-    .line 722
+    .line 853
     :sswitch_26
     const-string v0, "360"
 
     goto :goto_0
 
-    .line 723
+    .line 854
     :sswitch_27
     const-string v0, "350"
 
     goto :goto_0
 
-    .line 724
+    .line 855
     :sswitch_28
     const-string v0, "960"
 
     goto :goto_0
 
-    .line 725
+    .line 856
     :sswitch_29
     const-string v0, "960"
 
     goto/16 :goto_0
 
-    .line 726
+    .line 857
     :sswitch_2a
     const-string v0, "610"
 
     goto/16 :goto_0
 
-    .line 727
+    .line 858
     :sswitch_2b
     const-string v0, "960"
 
     goto/16 :goto_0
 
-    .line 728
+    .line 859
     :sswitch_2c
     const-string v0, "050"
 
     goto/16 :goto_0
 
-    .line 730
+    .line 861
     :sswitch_2d
     const-string v0, "440"
 
     goto/16 :goto_0
 
-    .line 732
+    .line 863
     :sswitch_2e
     const-string v0, "930"
 
     goto/16 :goto_0
 
-    .line 650
+    .line 781
     nop
 
     :sswitch_data_0
@@ -1638,348 +2130,348 @@
     .parameter "nvValue"
 
     .prologue
-    .line 743
+    .line 878
     if-nez p0, :cond_0
 
-    .line 745
+    .line 880
     const/4 v0, 0x0
 
-    .line 835
+    .line 970
     :goto_0
     return-object v0
 
-    .line 748
+    .line 883
     :cond_0
     const/4 v0, 0x0
 
-    .line 750
+    .line 885
     .local v0, name:Ljava/lang/String;
     sparse-switch p0, :sswitch_data_0
 
     goto :goto_0
 
-    .line 776
+    .line 911
     :sswitch_0
     const-string v0, "China Telecom"
 
-    .line 777
+    .line 912
     goto :goto_0
 
-    .line 752
+    .line 887
     :sswitch_1
     const-string v0, "Verizon"
 
-    .line 753
+    .line 888
     goto :goto_0
 
-    .line 755
+    .line 890
     :sswitch_2
     const-string v0, "sprint"
 
-    .line 756
+    .line 891
     goto :goto_0
 
-    .line 758
+    .line 893
     :sswitch_3
     const-string v0, "Telus"
 
-    .line 759
+    .line 894
     goto :goto_0
 
-    .line 761
+    .line 896
     :sswitch_4
     const-string v0, "Bill Mobility"
 
-    .line 762
+    .line 897
     goto :goto_0
 
-    .line 764
+    .line 899
     :sswitch_5
     const-string v0, "AllTel"
 
-    .line 765
+    .line 900
     goto :goto_0
 
-    .line 767
+    .line 902
     :sswitch_6
     const-string v0, "Reliance"
 
-    .line 768
+    .line 903
     goto :goto_0
 
-    .line 770
+    .line 905
     :sswitch_7
     const-string v0, "USC"
 
-    .line 771
+    .line 906
     goto :goto_0
 
-    .line 773
+    .line 908
     :sswitch_8
     const-string v0, "MTS"
 
-    .line 774
+    .line 909
     goto :goto_0
 
-    .line 779
+    .line 914
     :sswitch_9
     const-string v0, "PantherC Sask"
 
-    .line 780
+    .line 915
     goto :goto_0
 
-    .line 782
+    .line 917
     :sswitch_a
     const-string v0, "PantherC Centennial"
 
-    .line 783
+    .line 918
     goto :goto_0
 
-    .line 785
+    .line 920
     :sswitch_b
     const-string v0, "Movilnet"
 
-    .line 786
+    .line 921
     goto :goto_0
 
-    .line 788
+    .line 923
     :sswitch_c
     const-string v0, "PantherC MTS"
 
-    .line 789
+    .line 924
     goto :goto_0
 
-    .line 791
+    .line 926
     :sswitch_d
     const-string v0, "APBW"
 
-    .line 792
+    .line 927
     goto :goto_0
 
-    .line 794
+    .line 929
     :sswitch_e
     const-string v0, "PLS"
 
-    .line 795
+    .line 930
     goto :goto_0
 
-    .line 798
+    .line 933
     :sswitch_f
     const-string v0, "ACS"
 
     goto :goto_0
 
-    .line 799
+    .line 934
     :sswitch_10
     const-string v0, "Alaska Digital"
 
     goto :goto_0
 
-    .line 800
+    .line 935
     :sswitch_11
     const-string v0, "Appalachian"
 
     goto :goto_0
 
-    .line 801
+    .line 936
     :sswitch_12
     const-string v0, "Bluegrass"
 
     goto :goto_0
 
-    .line 802
+    .line 937
     :sswitch_13
     const-string v0, "Cellcom"
 
     goto :goto_0
 
-    .line 803
+    .line 938
     :sswitch_14
     const-string v0, "Carolina West"
 
     goto :goto_0
 
-    .line 804
+    .line 939
     :sswitch_15
     const-string v0, "Cellular 29"
 
     goto :goto_0
 
-    .line 805
+    .line 940
     :sswitch_16
     const-string v0, "Cellular One Nepa"
 
     goto :goto_0
 
-    .line 806
+    .line 941
     :sswitch_17
     const-string v0, "Cellular South"
 
     goto :goto_0
 
-    .line 807
+    .line 942
     :sswitch_18
     const-string v0, "Centennial PR"
 
     goto :goto_0
 
-    .line 808
+    .line 943
     :sswitch_19
     const-string v0, "Golden State"
 
     goto :goto_0
 
-    .line 809
+    .line 944
     :sswitch_1a
     const-string v0, "Illionois Valley"
 
     goto :goto_0
 
-    .line 810
+    .line 945
     :sswitch_1b
     const-string v0, "Inland"
 
     goto :goto_0
 
-    .line 811
+    .line 946
     :sswitch_1c
     const-string v0, "Iusacell"
 
     goto :goto_0
 
-    .line 812
+    .line 947
     :sswitch_1d
     const-string v0, "James Valley"
 
     goto :goto_0
 
-    .line 813
+    .line 948
     :sswitch_1e
     const-string v0, "Leaco"
 
     goto :goto_0
 
-    .line 814
+    .line 949
     :sswitch_1f
     const-string v0, "Lyrix (now Chat Mobility)"
 
     goto :goto_0
 
-    .line 815
+    .line 950
     :sswitch_20
     const-string v0, "Midrivers"
 
     goto :goto_0
 
-    .line 816
+    .line 951
     :sswitch_21
     const-string v0, "MTA"
 
     goto :goto_0
 
-    .line 817
+    .line 952
     :sswitch_22
     const-string v0, "Nex-Tech"
 
     goto :goto_0
 
-    .line 818
+    .line 953
     :sswitch_23
     const-string v0, "Northwest MO"
 
     goto :goto_0
 
-    .line 819
+    .line 954
     :sswitch_24
     const-string v0, "nTelos"
 
     goto :goto_0
 
-    .line 820
+    .line 955
     :sswitch_25
     const-string v0, "Panhandle"
 
     goto :goto_0
 
-    .line 821
+    .line 956
     :sswitch_26
     const-string v0, "Pioneer"
 
     goto :goto_0
 
-    .line 822
+    .line 957
     :sswitch_27
     const-string v0, "Sagebrush"
 
     goto :goto_0
 
-    .line 823
+    .line 958
     :sswitch_28
     const-string v0, "Silverstar"
 
     goto :goto_0
 
-    .line 824
+    .line 959
     :sswitch_29
     const-string v0, "South Central"
 
     goto/16 :goto_0
 
-    .line 825
+    .line 960
     :sswitch_2a
     const-string v0, "SRT Communications"
 
     goto/16 :goto_0
 
-    .line 826
+    .line 961
     :sswitch_2b
     const-string v0, "Syringa"
 
     goto/16 :goto_0
 
-    .line 827
+    .line 962
     :sswitch_2c
     const-string v0, "Thumb"
 
     goto/16 :goto_0
 
-    .line 828
+    .line 963
     :sswitch_2d
     const-string v0, "Unicel"
 
     goto/16 :goto_0
 
-    .line 829
+    .line 964
     :sswitch_2e
     const-string v0, "United"
 
     goto/16 :goto_0
 
-    .line 830
+    .line 965
     :sswitch_2f
     const-string v0, "Open Mobile"
 
     goto/16 :goto_0
 
-    .line 831
+    .line 966
     :sswitch_30
     const-string v0, "Cooper valley"
 
     goto/16 :goto_0
 
-    .line 832
+    .line 967
     :sswitch_31
     const-string v0, "Mobi PCS"
 
     goto/16 :goto_0
 
-    .line 833
+    .line 968
     :sswitch_32
     const-string v0, "COX"
 
     goto/16 :goto_0
 
-    .line 750
+    .line 885
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -2051,34 +2543,34 @@
 
     const/4 v4, 0x0
 
-    .line 238
+    .line 353
     if-nez p0, :cond_1
 
-    .line 289
+    .line 404
     :cond_0
     :goto_0
     return-object v4
 
-    .line 243
+    .line 358
     :cond_1
     const/4 v3, 0x0
 
-    .line 245
+    .line 360
     .local v3, matchingTable:[Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 246
+    .line 361
     .local v2, lenNumber:I
     if-ne v2, v9, :cond_3
 
-    .line 248
+    .line 363
     invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 249
+    .line 364
     .local v0, firstDigit:C
     const/16 v5, 0x32
 
@@ -2104,20 +2596,20 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 253
+    .line 368
     sget-object v3, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallEndNumberOverwritten_SprintLen3:[Ljava/lang/String;
 
-    .line 254
+    .line 369
     const/4 v1, 0x0
 
-    .line 255
+    .line 370
     .local v1, i:I
     :goto_1
     array-length v5, v3
 
     if-ge v1, v5, :cond_0
 
-    .line 257
+    .line 372
     aget-object v5, v3, v1
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -2126,26 +2618,26 @@
 
     if-nez v5, :cond_2
 
-    .line 259
+    .line 374
     add-int/lit8 v4, v1, 0x1
 
     aget-object v4, v3, v4
 
     goto :goto_0
 
-    .line 261
+    .line 376
     :cond_2
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_1
 
-    .line 264
+    .line 379
     .end local v0           #firstDigit:C
     .end local v1           #i:I
     :cond_3
     if-ne v2, v8, :cond_0
 
-    .line 266
+    .line 381
     invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -2154,7 +2646,7 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 270
+    .line 385
     invoke-virtual {p0, v7}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -2163,14 +2655,14 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 272
+    .line 387
     sget-object v4, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallEndNumberOverwritten_SprintLen2:[Ljava/lang/String;
 
     aget-object v4, v4, v7
 
     goto :goto_0
 
-    .line 274
+    .line 389
     :cond_4
     invoke-virtual {p0, v7}, Ljava/lang/String;->charAt(I)C
 
@@ -2180,7 +2672,7 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 276
+    .line 391
     sget-object v4, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->mCallEndNumberOverwritten_SprintLen2:[Ljava/lang/String;
 
     aget-object v4, v4, v9
@@ -2193,10 +2685,10 @@
     .parameter "number"
 
     .prologue
-    .line 300
+    .line 419
     if-eqz p0, :cond_1
 
-    .line 302
+    .line 421
     const-string v0, "911"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -2229,11 +2721,11 @@
 
     if-nez v0, :cond_1
 
-    .line 307
+    .line 426
     :cond_0
     const-string v0, "Roaming"
 
-    .line 310
+    .line 429
     :goto_0
     return-object v0
 
@@ -2250,27 +2742,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 446
+    .line 565
     if-nez p0, :cond_1
 
-    .line 481
+    .line 600
     :cond_0
     :goto_0
     return-object v1
 
-    .line 451
+    .line 570
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 452
+    .line 571
     .local v0, lenNumber:I
     const/4 v2, 0x2
 
     if-ne v0, v2, :cond_4
 
-    .line 454
+    .line 573
     const-string v2, "*9"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -2279,12 +2771,12 @@
 
     if-nez v2, :cond_2
 
-    .line 456
+    .line 575
     const-string v1, "Correo de voz"
 
     goto :goto_0
 
-    .line 458
+    .line 577
     :cond_2
     const-string v2, "*5"
 
@@ -2294,12 +2786,12 @@
 
     if-nez v2, :cond_3
 
-    .line 460
+    .line 579
     const-string v1, "Consulta de Saldo"
 
     goto :goto_0
 
-    .line 462
+    .line 581
     :cond_3
     const-string v2, "*1"
 
@@ -2309,18 +2801,18 @@
 
     if-nez v2, :cond_0
 
-    .line 464
+    .line 583
     const-string v1, "Emergencia"
 
     goto :goto_0
 
-    .line 467
+    .line 586
     :cond_4
     const/4 v2, 0x3
 
     if-ne v0, v2, :cond_5
 
-    .line 469
+    .line 588
     const-string v2, "*21"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -2329,18 +2821,18 @@
 
     if-nez v2, :cond_0
 
-    .line 471
+    .line 590
     const-string v1, "Recarga Prepago"
 
     goto :goto_0
 
-    .line 474
+    .line 593
     :cond_5
     const/4 v2, 0x4
 
     if-ne v0, v2, :cond_0
 
-    .line 476
+    .line 595
     const-string v2, "*611"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -2349,7 +2841,7 @@
 
     if-nez v2, :cond_0
 
-    .line 478
+    .line 597
     const-string v1, "Atenci\u00f3n al Cliente"
 
     goto :goto_0
@@ -2361,10 +2853,10 @@
     .parameter "mdn"
 
     .prologue
-    .line 487
+    .line 610
     const/4 v0, 0x0
 
-    .line 489
+    .line 612
     .local v0, voiceNumber:Ljava/lang/String;
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -2372,151 +2864,166 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 491
-    const-string v1, "1417"
+    .line 614
+    const-string v0, "1417"
 
-    .line 566
+    .line 689
     :goto_0
-    return-object v1
+    return-object v0
 
-    .line 494
+    .line 616
     :cond_0
-    sget-boolean v1, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDetectVMbyCarrierIdFromNV:Z
-
-    if-eqz v1, :cond_1
-
-    .line 496
-    sparse-switch p0, :sswitch_data_0
-
-    .line 554
-    move-object v0, p1
-
-    :goto_1
-    move-object v1, v0
-
-    .line 566
-    goto :goto_0
-
-    .line 498
-    :sswitch_0
-    const-string v0, "0000000000"
-
-    .line 499
-    goto :goto_1
-
-    .line 502
-    :sswitch_1
-    const-string v0, "*86"
-
-    .line 503
-    goto :goto_1
-
-    .line 506
-    :sswitch_2
-    const-string v0, "*89"
-
-    .line 507
-    goto :goto_1
-
-    .line 510
-    :sswitch_3
-    const-string v0, "6057256245"
-
-    .line 511
-    goto :goto_1
-
-    .line 514
-    :sswitch_4
-    const-string v0, "4064850808"
-
-    .line 515
-    goto :goto_1
-
-    .line 518
-    :sswitch_5
-    const-string v0, "*95"
-
-    .line 519
-    goto :goto_1
-
-    .line 522
-    :sswitch_6
-    const-string v0, "7018529600"
-
-    .line 523
-    goto :goto_1
-
-    .line 526
-    :sswitch_7
-    const-string v0, "*86"
-
-    .line 527
-    goto :goto_1
-
-    .line 530
-    :sswitch_8
-    const-string v0, "123"
-
-    .line 531
-    goto :goto_1
-
-    .line 534
-    :sswitch_9
-    const-string v0, "9078226245"
-
-    .line 535
-    goto :goto_1
-
-    .line 538
-    :sswitch_a
-    const-string v0, "8154886245"
-
-    .line 539
-    goto :goto_1
-
-    .line 542
-    :sswitch_b
-    const-string v0, "9077457900"
-
-    .line 543
-    goto :goto_1
-
-    .line 546
-    :sswitch_c
-    const-string v0, "#9"
-
-    .line 547
-    goto :goto_1
-
-    .line 550
-    :sswitch_d
-    const-string v0, "*9"
-
-    .line 551
-    goto :goto_1
-
-    .line 558
-    :cond_1
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v2, 0xa8
 
-    if-ne v1, v2, :cond_2
+    if-ne v1, v2, :cond_1
 
-    .line 560
+    .line 618
     const-string v0, "*86"
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 564
+    .line 619
+    :cond_1
+    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/16 v2, 0x10e
+
+    if-ne v1, v2, :cond_2
+
+    .line 620
+    const-string v0, "*99"
+
+    goto :goto_0
+
+    .line 622
     :cond_2
+    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_3
+
+    sget-boolean v1, Lcom/android/internal/telephony/cdma/CDMAPhone;->mDetectVMbyCarrierIdFromNV:Z
+
+    if-eqz v1, :cond_4
+
+    .line 624
+    :cond_3
+    sparse-switch p0, :sswitch_data_0
+
+    .line 682
     move-object v0, p1
 
-    goto :goto_1
+    .line 683
+    goto :goto_0
 
-    .line 496
-    nop
+    .line 626
+    :sswitch_0
+    const-string v0, "0000000000"
 
+    .line 627
+    goto :goto_0
+
+    .line 630
+    :sswitch_1
+    const-string v0, "*86"
+
+    .line 631
+    goto :goto_0
+
+    .line 634
+    :sswitch_2
+    const-string v0, "*89"
+
+    .line 635
+    goto :goto_0
+
+    .line 638
+    :sswitch_3
+    const-string v0, "6057256245"
+
+    .line 639
+    goto :goto_0
+
+    .line 642
+    :sswitch_4
+    const-string v0, "4064850808"
+
+    .line 643
+    goto :goto_0
+
+    .line 646
+    :sswitch_5
+    const-string v0, "*95"
+
+    .line 647
+    goto :goto_0
+
+    .line 650
+    :sswitch_6
+    const-string v0, "7018529600"
+
+    .line 651
+    goto :goto_0
+
+    .line 654
+    :sswitch_7
+    const-string v0, "*86"
+
+    .line 655
+    goto :goto_0
+
+    .line 658
+    :sswitch_8
+    const-string v0, "123"
+
+    .line 659
+    goto :goto_0
+
+    .line 662
+    :sswitch_9
+    const-string v0, "9078226245"
+
+    .line 663
+    goto :goto_0
+
+    .line 666
+    :sswitch_a
+    const-string v0, "8154886245"
+
+    .line 667
+    goto :goto_0
+
+    .line 670
+    :sswitch_b
+    const-string v0, "9077457900"
+
+    .line 671
+    goto :goto_0
+
+    .line 674
+    :sswitch_c
+    const-string v0, "#9"
+
+    .line 675
+    goto :goto_0
+
+    .line 678
+    :sswitch_d
+    const-string v0, "*9"
+
+    .line 679
+    goto :goto_0
+
+    .line 687
+    :cond_4
+    move-object v0, p1
+
+    goto :goto_0
+
+    .line 624
     :sswitch_data_0
     .sparse-switch
         0xf -> :sswitch_d
@@ -2541,10 +3048,10 @@
     .parameter "number"
 
     .prologue
-    .line 314
+    .line 433
     const/4 v1, 0x0
 
-    .line 316
+    .line 435
     .local v1, isN11Number:Z
     if-eqz p0, :cond_0
 
@@ -2555,25 +3062,25 @@
     :cond_0
     move v2, v1
 
-    .line 340
+    .line 459
     .end local v1           #isN11Number:Z
     .local v2, isN11Number:I
     :goto_0
     return v2
 
-    .line 320
+    .line 439
     .end local v2           #isN11Number:I
     .restart local v1       #isN11Number:Z
     :cond_1
     const/4 v4, 0x0
 
-    .line 322
+    .line 441
     .local v4, matchingTable:[Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    .line 323
+    .line 442
     .local v3, lenNumber:I
     sget-object v5, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
 
@@ -2581,16 +3088,16 @@
 
     if-ge v3, v5, :cond_2
 
-    .line 324
+    .line 443
     sget-object v5, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
 
     aget-object v4, v5, v3
 
-    .line 327
+    .line 446
     :cond_2
     if-eqz v4, :cond_4
 
-    .line 328
+    .line 447
     const-string v5, "HtcCdmaModifier"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2613,10 +3120,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
+    .line 448
     const/4 v0, 0x0
 
-    .line 331
+    .line 450
     .local v0, i:I
     :goto_1
     array-length v5, v4
@@ -2631,32 +3138,32 @@
 
     if-eqz v5, :cond_3
 
-    .line 332
+    .line 451
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_1
 
-    .line 334
+    .line 453
     :cond_3
     array-length v5, v4
 
     if-ge v0, v5, :cond_4
 
-    .line 335
+    .line 454
     add-int/lit8 v5, v0, 0x1
 
     aget-object v5, v4, v5
 
     if-eqz v5, :cond_4
 
-    .line 336
+    .line 455
     const/4 v1, 0x1
 
     .end local v0           #i:I
     :cond_4
     move v2, v1
 
-    .line 340
+    .line 459
     .restart local v2       #isN11Number:I
     goto :goto_0
 .end method
@@ -2666,37 +3173,37 @@
     .parameter "number"
 
     .prologue
-    .line 208
+    .line 319
     if-eqz p0, :cond_0
 
     sget-object v4, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
 
     if-nez v4, :cond_2
 
-    .line 209
+    .line 320
     :cond_0
     const/4 v2, 0x0
 
-    .line 231
+    .line 342
     :cond_1
     :goto_0
     return-object v2
 
-    .line 211
+    .line 322
     :cond_2
     const/4 v2, 0x0
 
-    .line 212
+    .line 323
     .local v2, matchedName:Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 214
+    .line 325
     .local v3, matchingTable:[Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 216
+    .line 327
     .local v1, lenNumber:I
     sget-object v4, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
 
@@ -2704,19 +3211,19 @@
 
     if-ge v1, v4, :cond_3
 
-    .line 217
+    .line 328
     sget-object v4, Lcom/android/internal/telephony/cdma/HtcCdmaModifier;->sCallerNumberOverwritten_lenVari:[[Ljava/lang/String;
 
     aget-object v3, v4, v1
 
-    .line 220
+    .line 331
     :cond_3
     if-eqz v3, :cond_1
 
-    .line 222
+    .line 333
     const/4 v0, 0x0
 
-    .line 224
+    .line 335
     .local v0, i:I
     :goto_1
     array-length v4, v3
@@ -2731,18 +3238,18 @@
 
     if-eqz v4, :cond_4
 
-    .line 225
+    .line 336
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_1
 
-    .line 227
+    .line 338
     :cond_4
     array-length v4, v3
 
     if-ge v0, v4, :cond_1
 
-    .line 228
+    .line 339
     add-int/lit8 v4, v0, 0x1
 
     aget-object v2, v3, v4

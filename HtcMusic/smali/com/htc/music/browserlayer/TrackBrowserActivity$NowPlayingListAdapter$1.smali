@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5539
+    .line 5548
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$1;->this$1:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .parameter "clickedView"
 
     .prologue
-    .line 5543
+    .line 5552
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 5544
+    .line 5553
     .local v0, data:Landroid/os/Bundle;
     const-string v2, "position"
 
@@ -57,7 +57,7 @@
 
     move-result v1
 
-    .line 5545
+    .line 5554
     .local v1, position:I
     const-string v2, "[TrackBrowser]"
 
@@ -81,7 +81,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5546
+    .line 5555
     iget-object v2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$1;->this$1:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -91,7 +91,7 @@
 
     invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 5547
+    .line 5556
     iget-object v2, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter$1;->this$1:Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$NowPlayingListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -104,6 +104,6 @@
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->showTrackOptions_plugin(IJ)Z
     invoke-static {v2, v1, v3, v4}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$6200(Lcom/htc/music/browserlayer/TrackBrowserActivity;IJ)Z
 
-    .line 5548
+    .line 5557
     return-void
 .end method

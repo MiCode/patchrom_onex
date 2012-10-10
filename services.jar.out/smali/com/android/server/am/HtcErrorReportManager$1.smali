@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 69
+    .line 82
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,18 +34,18 @@
     .locals 2
 
     .prologue
-    .line 71
+    .line 84
     const/16 v1, 0x20
 
     new-array v0, v1, [B
 
     fill-array-data v0, :array_0
 
-    .line 76
+    .line 89
     .local v0, SEED:[B
     return-object v0
 
-    .line 71
+    .line 84
     :array_0
     .array-data 0x1
         0x0t

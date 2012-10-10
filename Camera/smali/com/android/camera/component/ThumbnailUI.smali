@@ -1467,7 +1467,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080160
+    const v1, 0x7f080162
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1478,7 +1478,7 @@
     .line 265
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailUI;->m_ThumbnailButtonContainer:Landroid/view/View;
 
-    const v1, 0x7f080161
+    const v1, 0x7f080163
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1489,7 +1489,7 @@
     .line 266
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailUI;->m_ThumbnailButtonContainer:Landroid/view/View;
 
-    const v1, 0x7f080162
+    const v1, 0x7f080164
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1551,7 +1551,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b00c8
+    const v1, 0x7f0b00c9
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/res/Resources;->getFraction(III)F
 
@@ -1564,7 +1564,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b00c7
+    const v1, 0x7f0b00c8
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/res/Resources;->getFraction(III)F
 

@@ -371,19 +371,19 @@
     .locals 1
 
     .prologue
-    .line 6733
+    .line 6771
     const/4 v0, 0x0
 
     sput-object v0, Landroid/provider/Settings$Gservices;->mNameValueCache:Landroid/provider/Settings$NameValueCache;
 
-    .line 6734
+    .line 6772
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/provider/Settings$Gservices;->mNameValueCacheLock:Ljava/lang/Object;
 
-    .line 6808
+    .line 6846
     const-string v0, "content://settings/gservices"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -399,10 +399,10 @@
     .locals 0
 
     .prologue
-    .line 6715
+    .line 6753
     invoke-direct {p0}, Landroid/provider/Settings$NameValueTable;-><init>()V
 
-    .line 7894
+    .line 7932
     return-void
 .end method
 
@@ -413,12 +413,12 @@
     .parameter "defValue"
 
     .prologue
-    .line 6769
+    .line 6807
     invoke-static {p0, p1}, Landroid/provider/Settings$Gservices;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6772
+    .line 6810
     .local v1, valString:Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -429,7 +429,7 @@
 
     move-result v2
 
-    .line 6776
+    .line 6814
     .local v2, value:I
     :goto_0
     return v2
@@ -438,14 +438,14 @@
     :cond_0
     move v2, p2
 
-    .line 6772
+    .line 6810
     goto :goto_0
 
-    .line 6773
+    .line 6811
     :catch_0
     move-exception v0
 
-    .line 6774
+    .line 6812
     .local v0, e:Ljava/lang/NumberFormatException;
     move v2, p2
 
@@ -460,12 +460,12 @@
     .parameter "defValue"
 
     .prologue
-    .line 6785
+    .line 6823
     invoke-static {p0, p1}, Landroid/provider/Settings$Gservices;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6788
+    .line 6826
     .local v1, valString:Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -476,7 +476,7 @@
 
     move-result-wide v2
 
-    .line 6792
+    .line 6830
     .local v2, value:J
     :goto_0
     return-wide v2
@@ -485,14 +485,14 @@
     :cond_0
     move-wide v2, p2
 
-    .line 6788
+    .line 6826
     goto :goto_0
 
-    .line 6789
+    .line 6827
     :catch_0
     move-exception v0
 
-    .line 6790
+    .line 6828
     .local v0, e:Ljava/lang/NumberFormatException;
     move-wide v2, p2
 
@@ -506,18 +506,18 @@
     .parameter "name"
 
     .prologue
-    .line 6743
+    .line 6781
     sget-object v1, Landroid/provider/Settings$Gservices;->mNameValueCacheLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 6744
+    .line 6782
     :try_start_0
     sget-object v0, Landroid/provider/Settings$Gservices;->mNameValueCache:Landroid/provider/Settings$NameValueCache;
 
     if-nez v0, :cond_0
 
-    .line 6745
+    .line 6783
     new-instance v0, Landroid/provider/Settings$NameValueCache;
 
     const-string/jumbo v2, "sys.settings_gservices_version"
@@ -530,7 +530,7 @@
 
     sput-object v0, Landroid/provider/Settings$Gservices;->mNameValueCache:Landroid/provider/Settings$NameValueCache;
 
-    .line 6747
+    .line 6785
     :cond_0
     sget-object v0, Landroid/provider/Settings$Gservices;->mNameValueCache:Landroid/provider/Settings$NameValueCache;
 
@@ -542,7 +542,7 @@
 
     return-object v0
 
-    .line 6748
+    .line 6786
     :catchall_0
     move-exception v0
 
@@ -558,7 +558,7 @@
     .parameter "name"
 
     .prologue
-    .line 6802
+    .line 6840
     sget-object v0, Landroid/provider/Settings$Gservices;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v0, p0}, Landroid/provider/Settings$Gservices;->getUriFor(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
@@ -575,7 +575,7 @@
     .parameter "value"
 
     .prologue
-    .line 6760
+    .line 6798
     sget-object v0, Landroid/provider/Settings$Gservices;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1, p2}, Landroid/provider/Settings$Gservices;->putString(Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Z

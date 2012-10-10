@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 10976
+    .line 11277
     iput-object p1, p0, Landroid/webkit/WebView$InvokeListBox$4;->this$1:Landroid/webkit/WebView$InvokeListBox;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,18 @@
     .parameter "dialog"
 
     .prologue
-    .line 10978
+    .line 11280
+    iget-object v0, p0, Landroid/webkit/WebView$InvokeListBox$4;->this$1:Landroid/webkit/WebView$InvokeListBox;
+
+    iget-object v0, v0, Landroid/webkit/WebView$InvokeListBox;->this$0:Landroid/webkit/WebView;
+
+    invoke-virtual {v0}, Landroid/webkit/WebView;->isWebCoreReady()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 11281
     iget-object v0, p0, Landroid/webkit/WebView$InvokeListBox$4;->this$1:Landroid/webkit/WebView$InvokeListBox;
 
     iget-object v0, v0, Landroid/webkit/WebView$InvokeListBox;->this$0:Landroid/webkit/WebView;
@@ -60,7 +71,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 10980
+    .line 11284
+    :cond_0
     iget-object v0, p0, Landroid/webkit/WebView$InvokeListBox$4;->this$1:Landroid/webkit/WebView$InvokeListBox;
 
     iget-object v0, v0, Landroid/webkit/WebView$InvokeListBox;->this$0:Landroid/webkit/WebView;
@@ -68,8 +80,8 @@
     const/4 v1, 0x0
 
     #setter for: Landroid/webkit/WebView;->mListBoxDialog:Lcom/htc/dialog/HtcAlertDialog;
-    invoke-static {v0, v1}, Landroid/webkit/WebView;->access$12202(Landroid/webkit/WebView;Lcom/htc/dialog/HtcAlertDialog;)Lcom/htc/dialog/HtcAlertDialog;
+    invoke-static {v0, v1}, Landroid/webkit/WebView;->access$13002(Landroid/webkit/WebView;Lcom/htc/dialog/HtcAlertDialog;)Lcom/htc/dialog/HtcAlertDialog;
 
-    .line 10981
+    .line 11285
     return-void
 .end method

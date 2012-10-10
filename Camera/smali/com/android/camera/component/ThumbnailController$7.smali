@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 597
+    .line 594
     iput-object p1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .parameter "x2"
 
     .prologue
-    .line 597
+    .line 594
     check-cast p3, Lcom/android/camera/imaging/ThumbnailEventArgs;
 
     .end local p3
@@ -82,13 +82,13 @@
     .end annotation
 
     .prologue
-    .line 601
+    .line 598
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/imaging/ThumbnailEventArgs;>;"
     iget-object v2, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     monitor-enter v2
 
-    .line 603
+    .line 600
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
@@ -123,7 +123,7 @@
 
     invoke-static {v1, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 606
+    .line 603
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     #getter for: Lcom/android/camera/component/ThumbnailController;->m_LatestRecordedVideoThumb:Landroid/graphics/Bitmap;
@@ -133,7 +133,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 607
+    .line 604
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     #getter for: Lcom/android/camera/component/ThumbnailController;->m_LatestRecordedVideoThumb:Landroid/graphics/Bitmap;
@@ -143,7 +143,7 @@
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 610
+    .line 607
     :cond_0
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
@@ -154,13 +154,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 613
+    .line 610
     :try_start_1
     iget-object v1, p3, Lcom/android/camera/imaging/ThumbnailEventArgs;->thumbnailImage:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_1
 
-    .line 614
+    .line 611
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     iget-object v3, p3, Lcom/android/camera/imaging/ThumbnailEventArgs;->thumbnailImage:Landroid/graphics/Bitmap;
@@ -175,17 +175,17 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 623
+    .line 620
     :goto_0
     :try_start_2
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 624
+    .line 621
     return-void
 
-    .line 616
+    .line 613
     :cond_1
     :try_start_3
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
@@ -200,11 +200,11 @@
 
     goto :goto_0
 
-    .line 618
+    .line 615
     :catch_0
     move-exception v0
 
-    .line 620
+    .line 617
     .local v0, ex:Ljava/lang/Throwable;
     :try_start_4
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
@@ -214,7 +214,7 @@
     #setter for: Lcom/android/camera/component/ThumbnailController;->m_LatestRecordedVideoThumb:Landroid/graphics/Bitmap;
     invoke-static {v1, v3}, Lcom/android/camera/component/ThumbnailController;->access$1002(Lcom/android/camera/component/ThumbnailController;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 621
+    .line 618
     iget-object v1, p0, Lcom/android/camera/component/ThumbnailController$7;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -228,7 +228,7 @@
 
     goto :goto_0
 
-    .line 623
+    .line 620
     .end local v0           #ex:Ljava/lang/Throwable;
     :catchall_0
     move-exception v1

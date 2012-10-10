@@ -529,10 +529,10 @@
 
     iput-object v1, p0, Lcom/htc/music/DMCServiceManager;->mBtnVolUpListener:Landroid/view/View$OnClickListener;
 
-    .line 2897
+    .line 2909
     iput-boolean v4, p0, Lcom/htc/music/DMCServiceManager;->mVolSetBlocked:Z
 
-    .line 3006
+    .line 3018
     new-instance v1, Lcom/htc/music/DMCServiceManager$13;
 
     invoke-direct {v1, p0}, Lcom/htc/music/DMCServiceManager$13;-><init>(Lcom/htc/music/DMCServiceManager;)V
@@ -3108,18 +3108,18 @@
     .parameter "what"
 
     .prologue
-    .line 3077
+    .line 3089
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3078
+    .line 3090
     .local v0, i:Landroid/content/Intent;
     sget-object v1, Lcom/htc/music/DMCServiceManager;->mContext:Landroid/app/Activity;
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 3079
+    .line 3091
     return-void
 .end method
 
@@ -3132,7 +3132,7 @@
 
     const/4 v12, 0x0
 
-    .line 2911
+    .line 2923
     const-string v7, "layout_inflater"
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3141,7 +3141,7 @@
 
     check-cast v2, Landroid/view/LayoutInflater;
 
-    .line 2912
+    .line 2924
     .local v2, inflater:Landroid/view/LayoutInflater;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -3163,7 +3163,7 @@
 
     iput-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeView:Landroid/view/View;
 
-    .line 2916
+    .line 2928
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeView:Landroid/view/View;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
@@ -3184,7 +3184,7 @@
 
     move-result-object v0
 
-    .line 2917
+    .line 2929
     .local v0, expBtn:Landroid/view/View;
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeView:Landroid/view/View;
 
@@ -3206,19 +3206,19 @@
 
     move-result-object v1
 
-    .line 2918
+    .line 2930
     .local v1, expBtnDiv:Landroid/view/View;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0, v13}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2919
+    .line 2931
     :cond_0
     if-eqz v1, :cond_1
 
     invoke-virtual {v1, v13}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2921
+    .line 2933
     :cond_1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -3238,7 +3238,7 @@
 
     move-result-object v5
 
-    .line 2922
+    .line 2934
     .local v5, sliderView:Landroid/view/View;
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeView:Landroid/view/View;
 
@@ -3262,16 +3262,16 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    .line 2923
+    .line 2935
     .local v4, sliderLayout:Landroid/widget/LinearLayout;
     if-eqz v4, :cond_2
 
     if-eqz v5, :cond_2
 
-    .line 2924
+    .line 2936
     invoke-virtual {v4, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 2940
+    .line 2952
     :cond_2
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -3295,7 +3295,7 @@
 
     iput-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeIcon:Landroid/widget/ImageView;
 
-    .line 2941
+    .line 2953
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v7
@@ -3318,28 +3318,28 @@
 
     iput-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeLevel:Landroid/widget/SeekBar;
 
-    .line 2942
+    .line 2954
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeLevel:Landroid/widget/SeekBar;
 
     iget-object v8, p0, Lcom/htc/music/DMCServiceManager;->mVolListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     invoke-virtual {v7, v8}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 2943
+    .line 2955
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeLevel:Landroid/widget/SeekBar;
 
     const/16 v8, 0x64
 
     invoke-virtual {v7, v8}, Landroid/widget/SeekBar;->setMax(I)V
 
-    .line 2944
+    .line 2956
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeLevel:Landroid/widget/SeekBar;
 
     const/4 v8, 0x1
 
     invoke-virtual {v7, v8}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
-    .line 2949
+    .line 2961
     new-instance v7, Landroid/app/Dialog;
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
@@ -3360,21 +3360,21 @@
 
     iput-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeDialog:Landroid/app/Dialog;
 
-    .line 2950
+    .line 2962
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeDialog:Landroid/app/Dialog;
 
     const-string v8, "Volume control"
 
     invoke-virtual {v7, v8}, Landroid/app/Dialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 2951
+    .line 2963
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeDialog:Landroid/app/Dialog;
 
     iget-object v8, p0, Lcom/htc/music/DMCServiceManager;->mVolumeView:Landroid/view/View;
 
     invoke-virtual {v7, v8}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    .line 2953
+    .line 2965
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeView:Landroid/view/View;
 
     new-instance v8, Lcom/htc/music/DMCServiceManager$11;
@@ -3383,7 +3383,7 @@
 
     invoke-virtual {v7, v8}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 2960
+    .line 2972
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeDialog:Landroid/app/Dialog;
 
     new-instance v8, Lcom/htc/music/DMCServiceManager$12;
@@ -3392,42 +3392,42 @@
 
     invoke-virtual {v7, v8}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
-    .line 2982
+    .line 2994
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeDialog:Landroid/app/Dialog;
 
     invoke-virtual {v7}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v6
 
-    .line 2983
+    .line 2995
     .local v6, window:Landroid/view/Window;
     const/16 v7, 0x30
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->setGravity(I)V
 
-    .line 2984
+    .line 2996
     invoke-virtual {v6}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v3
 
-    .line 2985
+    .line 2997
     .local v3, lp:Landroid/view/WindowManager$LayoutParams;
     iput-object v12, v3, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 2986
+    .line 2998
     const/16 v7, 0x7d3
 
     iput v7, v3, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 2987
+    .line 2999
     invoke-virtual {v6, v3}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 2988
+    .line 3000
     const/high16 v7, 0x2
 
     invoke-virtual {v6, v7}, Landroid/view/Window;->addFlags(I)V
 
-    .line 2991
+    .line 3003
     iget-object v7, p0, Lcom/htc/music/DMCServiceManager;->mVolumeIcon:Landroid/widget/ImageView;
 
     if-eqz v7, :cond_3
@@ -3450,7 +3450,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 3004
+    .line 3016
     :cond_3
     return-void
 .end method
@@ -3461,17 +3461,17 @@
     .prologue
     const/16 v2, 0xca
 
-    .line 2903
+    .line 2915
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/DMCServiceManager;->mVolSetBlocked:Z
 
-    .line 2904
+    .line 2916
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2905
+    .line 2917
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager;->mHandler:Landroid/os/Handler;
@@ -3484,7 +3484,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 2906
+    .line 2918
     return-void
 .end method
 
@@ -3494,12 +3494,12 @@
     .prologue
     const/16 v2, 0xc9
 
-    .line 2899
+    .line 2911
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2900
+    .line 2912
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager;->mHandler:Landroid/os/Handler;
@@ -3512,7 +3512,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 2901
+    .line 2913
     return-void
 .end method
 
@@ -3532,14 +3532,19 @@
     .prologue
     .line 2863
     .local p2, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<*>;"
-    if-nez p2, :cond_0
+    if-nez p2, :cond_1
 
-    .line 2876
+    .line 2882
+    :cond_0
     :goto_0
     return-void
 
-    .line 2867
-    :cond_0
+    .line 2866
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 2868
+    .local v2, outStream:Ljava/io/FileOutputStream;
     :try_start_0
     sget-object v3, Lcom/htc/music/DMCServiceManager;->mContext:Landroid/app/Activity;
 
@@ -3551,42 +3556,87 @@
 
     move-result-object v2
 
-    .line 2868
-    .local v2, outStream:Ljava/io/FileOutputStream;
+    .line 2869
     new-instance v1, Ljava/io/ObjectOutputStream;
 
     invoke-direct {v1, v2}, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 2869
+    .line 2870
     .local v1, objOutStream:Ljava/io/ObjectOutputStream;
     invoke-virtual {v1, p2}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
-
-    .line 2870
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+
+    .line 2876
+    if-eqz v2, :cond_0
+
+    .line 2878
+    :try_start_1
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+
+    goto :goto_0
+
+    .line 2879
+    .end local v1           #objOutStream:Ljava/io/ObjectOutputStream;
+    :catch_0
+    move-exception v3
 
     goto :goto_0
 
     .line 2871
-    .end local v1           #objOutStream:Ljava/io/ObjectOutputStream;
-    .end local v2           #outStream:Ljava/io/FileOutputStream;
-    :catch_0
+    :catch_1
     move-exception v0
 
-    .line 2872
+    .line 2876
     .local v0, e:Ljava/io/FileNotFoundException;
+    if-eqz v2, :cond_0
+
+    .line 2878
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+
     goto :goto_0
 
     .line 2873
     .end local v0           #e:Ljava/io/FileNotFoundException;
-    :catch_1
+    :catch_2
     move-exception v0
 
-    .line 2874
+    .line 2876
     .local v0, e:Ljava/io/IOException;
+    if-eqz v2, :cond_0
+
+    .line 2878
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
     goto :goto_0
+
+    .line 2876
+    .end local v0           #e:Ljava/io/IOException;
+    :catchall_0
+    move-exception v3
+
+    if-eqz v2, :cond_2
+
+    .line 2878
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+
+    .line 2876
+    :cond_2
+    :goto_1
+    throw v3
+
+    .line 2879
+    :catch_3
+    move-exception v4
+
+    goto :goto_1
 .end method
 
 .method private setDMCLine(I)V
@@ -3742,7 +3792,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2880
+    .line 2885
+    const/4 v2, 0x0
+
+    .line 2887
+    .local v2, inStream:Ljava/io/FileInputStream;
     :try_start_0
     sget-object v5, Lcom/htc/music/DMCServiceManager;->mContext:Landroid/app/Activity;
 
@@ -3750,72 +3804,165 @@
 
     move-result-object v2
 
-    .line 2881
-    .local v2, inStream:Ljava/io/FileInputStream;
+    .line 2888
     new-instance v3, Ljava/io/ObjectInputStream;
 
     invoke-direct {v3, v2}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 2882
+    .line 2889
     .local v3, objInStream:Ljava/io/ObjectInputStream;
     invoke-virtual {v3}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/ArrayList;
-
-    .line 2883
-    .local v0, alObj:Ljava/util/ArrayList;,"Ljava/util/ArrayList<*>;"
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 2891
+    .line 2899
+    .local v0, alObj:Ljava/util/ArrayList;,"Ljava/util/ArrayList<*>;"
+    if-eqz v2, :cond_0
+
+    .line 2901
+    :try_start_1
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
+
+    .line 2897
     .end local v0           #alObj:Ljava/util/ArrayList;,"Ljava/util/ArrayList<*>;"
-    .end local v2           #inStream:Ljava/io/FileInputStream;
     .end local v3           #objInStream:Ljava/io/ObjectInputStream;
+    :cond_0
     :goto_0
     return-object v0
 
-    .line 2885
+    .line 2891
     :catch_0
     move-exception v1
 
+    .line 2899
     .local v1, e:Ljava/io/FileNotFoundException;
+    if-eqz v2, :cond_1
+
+    .line 2901
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+
+    :cond_1
+    :goto_1
     move-object v0, v4
 
-    .line 2886
+    .line 2892
     goto :goto_0
 
-    .line 2887
+    .line 2893
     .end local v1           #e:Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v1
 
+    .line 2899
     .local v1, e:Ljava/io/IOException;
+    if-eqz v2, :cond_2
+
+    .line 2901
+    :try_start_3
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
+
+    :cond_2
+    :goto_2
     move-object v0, v4
 
-    .line 2888
+    .line 2894
     goto :goto_0
 
-    .line 2889
+    .line 2895
     .end local v1           #e:Ljava/io/IOException;
     :catch_2
     move-exception v1
 
-    .line 2890
+    .line 2896
     .local v1, e:Ljava/lang/ClassNotFoundException;
+    :try_start_4
     const-string v5, "[DMCServiceManager]"
 
     const-string v6, "can not unserialize arraylist"
 
     invoke-static {v5, v6}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 2899
+    if-eqz v2, :cond_3
+
+    .line 2901
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_6
+
+    :cond_3
+    :goto_3
     move-object v0, v4
 
-    .line 2891
+    .line 2897
+    goto :goto_0
+
+    .line 2899
+    .end local v1           #e:Ljava/lang/ClassNotFoundException;
+    :catchall_0
+    move-exception v4
+
+    if-eqz v2, :cond_4
+
+    .line 2901
+    :try_start_6
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_5
+
+    .line 2899
+    :cond_4
+    :goto_4
+    throw v4
+
+    .line 2902
+    .local v1, e:Ljava/io/FileNotFoundException;
+    :catch_3
+    move-exception v5
+
+    goto :goto_1
+
+    .local v1, e:Ljava/io/IOException;
+    :catch_4
+    move-exception v5
+
+    goto :goto_2
+
+    .end local v1           #e:Ljava/io/IOException;
+    :catch_5
+    move-exception v5
+
+    goto :goto_4
+
+    .local v1, e:Ljava/lang/ClassNotFoundException;
+    :catch_6
+    move-exception v5
+
+    goto :goto_3
+
+    .end local v1           #e:Ljava/lang/ClassNotFoundException;
+    .restart local v0       #alObj:Ljava/util/ArrayList;,"Ljava/util/ArrayList<*>;"
+    .restart local v3       #objInStream:Ljava/io/ObjectInputStream;
+    :catch_7
+    move-exception v4
+
     goto :goto_0
 .end method
 
@@ -5064,7 +5211,7 @@
     .locals 1
 
     .prologue
-    .line 3106
+    .line 3118
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mDMCItemInfo:Lcom/htc/music/DMCServiceManager$DMCItemInfo;
 
     iget-object v0, v0, Lcom/htc/music/DMCServiceManager$DMCItemInfo;->szArtist:Ljava/lang/String;
@@ -5138,7 +5285,7 @@
     .parameter "nWantSize"
 
     .prologue
-    .line 3120
+    .line 3132
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mDMCItemInfo:Lcom/htc/music/DMCServiceManager$DMCItemInfo;
 
     iget-object v1, p0, Lcom/htc/music/DMCServiceManager;->mDMCItemInfo:Lcom/htc/music/DMCServiceManager$DMCItemInfo;
@@ -5156,7 +5303,7 @@
     .locals 1
 
     .prologue
-    .line 3125
+    .line 3137
     const/4 v0, 0x0
 
     return-object v0
@@ -5166,7 +5313,7 @@
     .locals 1
 
     .prologue
-    .line 3116
+    .line 3128
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mDMCItemInfo:Lcom/htc/music/DMCServiceManager$DMCItemInfo;
 
     iget-object v0, v0, Lcom/htc/music/DMCServiceManager$DMCItemInfo;->szThumbPath:Ljava/lang/String;
@@ -5178,7 +5325,7 @@
     .locals 1
 
     .prologue
-    .line 3111
+    .line 3123
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mDMCItemInfo:Lcom/htc/music/DMCServiceManager$DMCItemInfo;
 
     iget-object v0, v0, Lcom/htc/music/DMCServiceManager$DMCItemInfo;->szTitle:Ljava/lang/String;
@@ -5190,7 +5337,7 @@
     .locals 1
 
     .prologue
-    .line 3101
+    .line 3113
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mDMCStatus:Lcom/htc/music/DMCServiceManager$DMCStatus;
 
     #calls: Lcom/htc/music/DMCServiceManager$DMCStatus;->isPlaying()Z
@@ -5267,19 +5414,19 @@
     .locals 2
 
     .prologue
-    .line 3096
+    .line 3108
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mBtnNextListener:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 3097
+    .line 3109
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mBtnNextListener:Landroid/view/View$OnClickListener;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 3098
+    .line 3110
     :cond_0
     return-void
 .end method
@@ -5288,12 +5435,12 @@
     .locals 1
 
     .prologue
-    .line 3087
+    .line 3099
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/htc/music/DMCServiceManager;->DMCDoPP(Z)V
 
-    .line 3088
+    .line 3100
     return-void
 .end method
 
@@ -5301,19 +5448,19 @@
     .locals 2
 
     .prologue
-    .line 3091
+    .line 3103
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mBtnPrevListener:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 3092
+    .line 3104
     iget-object v0, p0, Lcom/htc/music/DMCServiceManager;->mBtnPrevListener:Landroid/view/View$OnClickListener;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 3093
+    .line 3105
     :cond_0
     return-void
 .end method

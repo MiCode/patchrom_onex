@@ -57,7 +57,7 @@
     .locals 2
 
     .prologue
-    .line 176
+    .line 187
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "contacts"
@@ -68,7 +68,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 177
+    .line 188
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "contacts/simple/list"
@@ -79,7 +79,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract$Contacts;->SIMPLE_CONTENT_URI:Landroid/net/Uri;
 
-    .line 202
+    .line 216
     sget-object v0, Landroid/provider/HtcContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "group_with_favorite"
@@ -97,7 +97,7 @@
     .locals 0
 
     .prologue
-    .line 107
+    .line 111
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -108,10 +108,10 @@
     .parameter "whereClause"
 
     .prologue
-    .line 257
+    .line 274
     const-string v0, ""
 
-    .line 258
+    .line 275
     .local v0, newClause:Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -119,14 +119,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 259
+    .line 276
     const-string v0, "has_phone_number=1"
 
-    .line 264
+    .line 281
     :goto_0
     return-object v0
 
-    .line 262
+    .line 279
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -166,10 +166,10 @@
     .parameter "whereClause"
 
     .prologue
-    .line 240
+    .line 256
     const-string v0, ""
 
-    .line 241
+    .line 257
     .local v0, newClause:Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -177,14 +177,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 242
-    const-string/jumbo v0, "in_visible_group=1"
+    .line 258
+    const-string v0, "in_visible_group=1"
 
-    .line 247
+    .line 263
     :goto_0
     return-object v0
 
-    .line 245
+    .line 261
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -206,7 +206,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "in_visible_group=1"
+    const-string v2, "in_visible_group=1"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -226,14 +226,14 @@
     .parameter "isSIM"
 
     .prologue
-    .line 283
+    .line 301
     const-wide/16 v2, 0x0
 
     cmp-long v2, v2, p1
 
     if-gez v2, :cond_1
 
-    .line 284
+    .line 302
     sget-object v2, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v2, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
@@ -244,22 +244,22 @@
 
     move-result-object v1
 
-    .line 289
+    .line 307
     .local v1, uriLookup:Landroid/net/Uri;
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 290
+    .line 308
     .local v0, intent:Landroid/content/Intent;
     const-string v2, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 292
+    .line 310
     if-eqz p3, :cond_0
 
-    .line 293
+    .line 311
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,11 +300,11 @@
 
     move-result-object v1
 
-    .line 297
+    .line 315
     :cond_0
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 300
+    .line 318
     .end local v0           #intent:Landroid/content/Intent;
     .end local v1           #uriLookup:Landroid/net/Uri;
     :goto_0
@@ -321,10 +321,10 @@
     .parameter "whereClause"
 
     .prologue
-    .line 220
+    .line 235
     const-string v1, ""
 
-    .line 221
+    .line 236
     .local v1, newClause:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -356,7 +356,7 @@
 
     move-result-object v0
 
-    .line 224
+    .line 239
     .local v0, CLAUSE_INCLUDE:Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -364,14 +364,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 225
+    .line 240
     move-object v1, v0
 
-    .line 230
+    .line 245
     :goto_0
     return-object v1
 
-    .line 228
+    .line 243
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -415,12 +415,12 @@
 
     const/4 v4, 0x1
 
-    .line 268
+    .line 286
     invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v0
 
-    .line 269
+    .line 287
     .local v0, id:J
     sget-object v5, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
@@ -428,19 +428,19 @@
 
     move-result-object v2
 
-    .line 270
+    .line 288
     .local v2, uri:Landroid/net/Uri;
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 271
+    .line 289
     .local v3, value:Landroid/content/ContentValues;
     const-string v5, "custom_ringtone"
 
     invoke-virtual {v3, v5, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 272
+    .line 290
     invoke-virtual {p0, v2, v3, v6, v6}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v5

@@ -27,8 +27,6 @@
 
 .field private mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-.field private mCloudStorageFunctionEnabled:Z
-
 .field private mIsRefresh:Z
 
 .field private mIsStorageInitialized:Z
@@ -55,12 +53,12 @@
 
     const/4 v2, 0x0
 
-    .line 496
+    .line 504
     iput-object p1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 389
+    .line 393
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -71,18 +69,13 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
-    .line 390
+    .line 394
     iput-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-    .line 391
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorageFunctionEnabled:Z
-
-    .line 394
+    .line 398
     iput-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
 
-    .line 396
+    .line 400
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,22 +102,22 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->CLOUD_FILE_PICKER_TIME_PREFERENCE:Ljava/lang/String;
 
-    .line 506
+    .line 514
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsStorageInitialized:Z
 
-    .line 819
+    .line 837
     iput-boolean v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsRefresh:Z
 
-    .line 497
+    .line 505
     iput-object p4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-    .line 498
+    .line 506
     iput p2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mStorageDataSourceType:I
 
-    .line 499
+    .line 507
     iput-object p3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
 
-    .line 500
+    .line 508
     return-void
 .end method
 
@@ -133,53 +126,64 @@
     .parameter "x0"
 
     .prologue
-    .line 388
+    .line 392
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;)V
+.method static synthetic access$1100(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;)Ljava/lang/String;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 392
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mServiceName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 388
+    .line 392
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->clearCloudFileListTimePreferences(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+.method static synthetic access$1300(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 388
+    .line 392
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;)Ljava/lang/String;
+.method static synthetic access$1400(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;)Ljava/lang/String;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 388
+    .line 392
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;)J
+.method static synthetic access$1600(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;)J
     .locals 2
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 388
+    .line 392
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->loadCloudFileListTimePreferences(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -187,13 +191,13 @@
     return-wide v0
 .end method
 
-.method static synthetic access$1600(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;)Ljava/util/List;
+.method static synthetic access$1700(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;)Ljava/util/List;
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 388
+    .line 392
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->listFiles(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
@@ -201,14 +205,14 @@
     return-object v0
 .end method
 
-.method static synthetic access$1700(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+.method static synthetic access$1800(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
     .locals 1
     .parameter "x0"
     .parameter "x1"
     .parameter "x2"
 
     .prologue
-    .line 388
+    .line 392
     invoke-direct {p0, p1, p2}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->findFiles(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
@@ -220,49 +224,44 @@
     .locals 5
 
     .prologue
-    .line 426
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    .line 432
+    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
 
-    move-result-object v2
-
-    if-nez v2, :cond_0
+    move-result-object v0
 
     .line 433
+    .local v0, context:Landroid/content/Context;
+    if-nez v0, :cond_0
+
+    .line 440
     :goto_0
     return-void
 
-    .line 428
+    .line 435
     :cond_0
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
-
-    move-result-object v2
-
     iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->CLOUD_FILE_PICKER_TIME_PREFERENCE:Ljava/lang/String;
 
     const/4 v4, 0x2
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 430
-    .local v0, sharedPreferences:Landroid/content/SharedPreferences;
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 431
-    .local v1, sharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+    .line 437
+    .local v1, sharedPreferences:Landroid/content/SharedPreferences;
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    .line 432
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    move-result-object v2
+
+    .line 438
+    .local v2, sharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+
+    .line 439
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     goto :goto_0
 .end method
@@ -272,57 +271,52 @@
     .parameter "cloudPath"
 
     .prologue
-    .line 415
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    .line 420
+    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v0
 
-    if-nez v2, :cond_0
+    .line 421
+    .local v0, context:Landroid/content/Context;
+    if-nez v0, :cond_0
 
-    .line 423
+    .line 429
     :goto_0
     return-void
 
-    .line 417
+    .line 423
     :cond_0
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
-
-    move-result-object v2
-
     iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->CLOUD_FILE_PICKER_TIME_PREFERENCE:Ljava/lang/String;
 
     const/4 v4, 0x2
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 419
-    .local v0, sharedPreferences:Landroid/content/SharedPreferences;
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 420
-    .local v1, sharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
-    const-wide/16 v2, -0x1
+    .line 425
+    .local v1, sharedPreferences:Landroid/content/SharedPreferences;
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-interface {v1, p1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    move-result-object v2
 
-    .line 421
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    .line 426
+    .local v2, sharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
+    const-wide/16 v3, -0x1
+
+    invoke-interface {v2, p1, v3, v4}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    .line 427
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     goto :goto_0
 .end method
 
 .method private findFiles(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
-    .locals 7
+    .locals 8
     .parameter "cloudFolderPath"
     .parameter "searchWord"
     .annotation system Ldalvik/annotation/Signature;
@@ -339,97 +333,442 @@
     .end annotation
 
     .prologue
-    .line 779
+    .line 795
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    .line 796
+    .local v4, resultItems:Ljava/util/List;,"Ljava/util/List<Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;>;"
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isNeedRefreshTodayCloudFileList(Ljava/lang/String;)Z
+
+    move-result v3
+
+    .line 797
+    .local v3, isNeedRefresh:Z
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isStorageInitialized()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    .line 798
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->init()V
+
+    .line 800
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+
+    .line 801
+    .local v0, cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    if-eqz v0, :cond_2
+
+    .line 802
+    const/4 v2, 0x0
+
+    .line 806
+    .local v2, extensionFilter:Ljava/lang/String;
+    invoke-virtual {v0, p1, v2, p2, v3}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->findFiles(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/List;
+
+    move-result-object v4
+
+    .line 808
+    if-nez v3, :cond_1
+
+    if-nez v4, :cond_1
+
+    .line 809
+    const/4 v3, 0x1
+
+    .line 810
+    invoke-virtual {v0, p1, v2, p2, v3}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->findFiles(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/List;
+
+    move-result-object v4
+
+    .line 813
+    :cond_1
+    if-eqz v3, :cond_2
+
+    .line 814
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->saveCloudFileListTimePreferences(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lcom/htc/sdk/service/cloudstorage/HtcCloudException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 834
+    .end local v0           #cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    .end local v2           #extensionFilter:Ljava/lang/String;
+    :cond_2
+    :goto_0
+    return-object v4
+
+    .line 825
+    :catch_0
+    move-exception v1
+
+    .line 826
+    .local v1, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
+    iget-object v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+
+    const/4 v6, 0x1
+
+    #calls: Lcom/htc/app/FilePickerCloudHelper;->errorHandle(Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
+    invoke-static {v5, v1, v6}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
+
+    .line 827
+    iget-object v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "cloudStorage.findFiles()->ServiceName:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceName()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 830
+    iget-object v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "isRefresh:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 831
+    iget-object v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "e.getErrorCode():"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 832
+    iget-object v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "e.getMessage():"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
+.method private isNeedRefreshCloudFileListAtDuring(Ljava/lang/String;)Z
+    .locals 10
+    .parameter "cloudFolderPath"
+
+    .prologue
+    const-wide/16 v8, -0x1
+
+    .line 470
+    const/4 v5, 0x1
+
+    .line 471
+    .local v5, result:Z
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->loadCloudFileListTimePreferences(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    .line 472
+    .local v0, cloudFolderListTime:J
+    cmp-long v6, v0, v8
+
+    if-nez v6, :cond_0
+
+    .line 473
+    const/4 v5, 0x1
+
+    .line 491
+    :goto_0
+    return v5
+
+    .line 475
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long v2, v6, v0
+
+    .line 476
+    .local v2, during:J
+    const-wide/16 v6, 0x0
+
+    cmp-long v6, v2, v6
+
+    if-gez v6, :cond_1
+
+    .line 477
+    mul-long/2addr v2, v8
+
+    .line 479
+    :cond_1
+    const-wide/32 v6, 0x668a0
+
+    cmp-long v6, v2, v6
+
+    if-gtz v6, :cond_2
+
+    .line 480
+    const/4 v5, 0x0
+
+    goto :goto_0
+
+    .line 485
+    :cond_2
+    iget-object v6, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+
+    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
+    invoke-static {v6}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-static {v6}, Lcom/htc/app/FilePickerUtil;->checkNetworkConnected(Landroid/content/Context;)Z
+
+    move-result v4
+
+    .line 486
+    .local v4, isNetworkConnected:Z
+    move v5, v4
+
+    goto :goto_0
+.end method
+
+.method private isNeedRefreshTodayCloudFileList(Ljava/lang/String;)Z
+    .locals 7
+    .parameter "cloudFolderPath"
+
+    .prologue
+    .line 453
+    iget-boolean v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsRefresh:Z
+
+    .line 454
+    .local v4, result:Z
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->loadCloudFileListTimePreferences(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    .line 455
+    .local v0, cloudFolderListTime:J
+    const-wide/16 v5, -0x1
+
+    cmp-long v5, v0, v5
+
+    if-nez v5, :cond_0
+
+    .line 456
+    const/4 v4, 0x1
+
+    .line 466
+    :goto_0
+    return v4
+
+    .line 458
+    :cond_0
+    new-instance v2, Ljava/util/Date;
+
+    invoke-direct {v2, v0, v1}, Ljava/util/Date;-><init>(J)V
+
+    .line 459
+    .local v2, date:Ljava/util/Date;
+    invoke-static {v2}, Lcom/htc/app/FilePickerUtil;->isToday(Ljava/util/Date;)Z
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    .line 460
+    .local v3, isToday:Ljava/lang/Boolean;
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    .line 461
+    const/4 v4, 0x0
+
+    goto :goto_0
+
+    .line 463
+    :cond_1
+    const/4 v4, 0x1
+
+    goto :goto_0
+.end method
+
+.method private listFiles(Ljava/lang/String;)Ljava/util/List;
+    .locals 7
+    .parameter "cloudFolderPath"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 750
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 780
+    .line 751
     .local v3, resultItems:Ljava/util/List;,"Ljava/util/List<Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;>;"
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isNeedRefreshTodayCloudFileList(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 782
+    .line 752
     .local v2, isNeedRefresh:Z
-    :try_start_0
-    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    if-eqz v4, :cond_2
-
-    .line 783
-    const/4 v1, 0x0
-
-    .line 786
-    .local v1, extensionFilter:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isStorageInitialized()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 787
+    .line 753
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->init()V
 
-    .line 788
+    .line 755
     :cond_0
-    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    :try_start_0
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-    invoke-virtual {v4, p1, v1, p2, v2}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->findFiles(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/List;
+    .line 756
+    .local v0, cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    if-eqz v0, :cond_2
+
+    .line 760
+    invoke-virtual {v0, p1, v2}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->listFiles(Ljava/lang/String;Z)Ljava/util/List;
 
     move-result-object v3
 
-    .line 790
+    .line 761
     if-nez v2, :cond_1
 
     if-nez v3, :cond_1
 
-    .line 791
+    .line 762
     const/4 v2, 0x1
 
-    .line 792
-    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    invoke-virtual {v4, p1, v1, p2, v2}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->findFiles(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/util/List;
+    .line 763
+    invoke-virtual {v0, p1, v2}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->listFiles(Ljava/lang/String;Z)Ljava/util/List;
 
     move-result-object v3
 
-    .line 795
+    .line 765
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 796
+    .line 766
     invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->saveCloudFileListTimePreferences(Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/htc/sdk/service/cloudstorage/HtcCloudException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 816
-    .end local v1           #extensionFilter:Ljava/lang/String;
+    .line 791
+    .end local v0           #cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
     :cond_2
     :goto_0
     return-object v3
 
-    .line 807
+    .line 779
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    .line 808
-    .local v0, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
+    .line 780
+    .local v1, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
     iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     const/4 v5, 0x1
 
     #calls: Lcom/htc/app/FilePickerCloudHelper;->errorHandle(Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
-    invoke-static {v4, v0, v5}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
+    invoke-static {v4, v1, v5}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
 
-    .line 809
+    .line 782
     iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "cloudStorage.findFiles()->ServiceName:"
+    const-string v6, "cloudStorage.listFiles()->ServiceName:"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -449,7 +788,32 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 812
+    .line 785
+    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "DataSourceType="
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    iget v6, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mStorageDataSourceType:I
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 786
     iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -472,7 +836,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 813
+    .line 787
     iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -485,7 +849,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
 
     move-result-object v6
 
@@ -499,7 +863,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
+    .line 788
     iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -512,7 +876,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
 
     move-result-object v6
 
@@ -526,378 +890,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
-.end method
-
-.method private isNeedRefreshCloudFileListAtDuring(Ljava/lang/String;)Z
-    .locals 10
-    .parameter "cloudFolderPath"
-
-    .prologue
-    const-wide/16 v8, -0x1
-
-    .line 462
-    const/4 v5, 0x1
-
-    .line 463
-    .local v5, result:Z
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->loadCloudFileListTimePreferences(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    .line 464
-    .local v0, cloudFolderListTime:J
-    cmp-long v6, v0, v8
-
-    if-nez v6, :cond_0
-
-    .line 465
-    const/4 v5, 0x1
-
-    .line 483
-    :goto_0
-    return v5
-
-    .line 467
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    sub-long v2, v6, v0
-
-    .line 468
-    .local v2, during:J
-    const-wide/16 v6, 0x0
-
-    cmp-long v6, v2, v6
-
-    if-gez v6, :cond_1
-
-    .line 469
-    mul-long/2addr v2, v8
-
-    .line 471
-    :cond_1
-    const-wide/32 v6, 0x668a0
-
-    cmp-long v6, v2, v6
-
-    if-gtz v6, :cond_2
-
-    .line 472
-    const/4 v5, 0x0
-
-    goto :goto_0
-
-    .line 477
-    :cond_2
-    iget-object v6, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v6}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-static {v6}, Lcom/htc/app/FilePickerUtil;->checkNetworkConnected(Landroid/content/Context;)Z
-
-    move-result v4
-
-    .line 478
-    .local v4, isNetworkConnected:Z
-    move v5, v4
-
-    goto :goto_0
-.end method
-
-.method private isNeedRefreshTodayCloudFileList(Ljava/lang/String;)Z
-    .locals 7
-    .parameter "cloudFolderPath"
-
-    .prologue
-    .line 445
-    iget-boolean v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsRefresh:Z
-
-    .line 446
-    .local v4, result:Z
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->loadCloudFileListTimePreferences(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    .line 447
-    .local v0, cloudFolderListTime:J
-    const-wide/16 v5, -0x1
-
-    cmp-long v5, v0, v5
-
-    if-nez v5, :cond_0
-
-    .line 448
-    const/4 v4, 0x1
-
-    .line 458
-    :goto_0
-    return v4
-
-    .line 450
-    :cond_0
-    new-instance v2, Ljava/util/Date;
-
-    invoke-direct {v2, v0, v1}, Ljava/util/Date;-><init>(J)V
-
-    .line 451
-    .local v2, date:Ljava/util/Date;
-    invoke-static {v2}, Lcom/htc/app/FilePickerUtil;->isToday(Ljava/util/Date;)Z
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    .line 452
-    .local v3, isToday:Ljava/lang/Boolean;
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    .line 453
-    const/4 v4, 0x0
-
-    goto :goto_0
-
-    .line 455
-    :cond_1
-    const/4 v4, 0x1
-
-    goto :goto_0
-.end method
-
-.method private listFiles(Ljava/lang/String;)Ljava/util/List;
-    .locals 6
-    .parameter "cloudFolderPath"
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 736
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 737
-    .local v2, resultItems:Ljava/util/List;,"Ljava/util/List<Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;>;"
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isNeedRefreshTodayCloudFileList(Ljava/lang/String;)Z
-
-    move-result v1
-
-    .line 739
-    .local v1, isNeedRefresh:Z
-    :try_start_0
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    if-eqz v3, :cond_2
-
-    .line 742
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isStorageInitialized()Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    .line 743
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->init()V
-
-    .line 744
-    :cond_0
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    invoke-virtual {v3, p1, v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->listFiles(Ljava/lang/String;Z)Ljava/util/List;
-
-    move-result-object v2
-
-    .line 745
-    if-nez v1, :cond_1
-
-    if-nez v2, :cond_1
-
-    .line 746
-    const/4 v1, 0x1
-
-    .line 747
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    invoke-virtual {v3, p1, v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->listFiles(Ljava/lang/String;Z)Ljava/util/List;
-
-    move-result-object v2
-
-    .line 749
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 750
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->saveCloudFileListTimePreferences(Ljava/lang/String;)V
-    :try_end_0
-    .catch Lcom/htc/sdk/service/cloudstorage/HtcCloudException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 775
-    :cond_2
-    :goto_0
-    return-object v2
-
-    .line 763
-    :catch_0
-    move-exception v0
-
-    .line 764
-    .local v0, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    const/4 v4, 0x1
-
-    #calls: Lcom/htc/app/FilePickerCloudHelper;->errorHandle(Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
-    invoke-static {v3, v0, v4}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
-
-    .line 766
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "cloudStorage.listFiles()->ServiceName:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 769
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "DataSourceType="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mStorageDataSourceType:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 770
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "isRefresh:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 771
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "e.getErrorCode():"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 772
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "e.getMessage():"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     goto/16 :goto_0
 .end method
 
@@ -908,44 +900,39 @@
     .prologue
     const-wide/16 v0, -0x1
 
-    .line 436
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    .line 443
+    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
+    invoke-static {v4}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    if-nez v3, :cond_0
+    .line 444
+    .local v2, context:Landroid/content/Context;
+    if-nez v2, :cond_0
 
-    .line 441
+    .line 449
     :goto_0
     return-wide v0
 
-    .line 438
+    .line 446
     :cond_0
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
-
-    move-result-object v3
-
     iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->CLOUD_FILE_PICKER_TIME_PREFERENCE:Ljava/lang/String;
 
     const/4 v5, 0x2
 
-    invoke-virtual {v3, v4, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v2, v4, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    move-result-object v2
+    move-result-object v3
 
-    .line 440
-    .local v2, sharedPreferences:Landroid/content/SharedPreferences;
-    invoke-interface {v2, p1, v0, v1}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+    .line 448
+    .local v3, sharedPreferences:Landroid/content/SharedPreferences;
+    invoke-interface {v3, p1, v0, v1}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    .line 441
+    .line 449
     .local v0, cloudFolderListTime:J
     goto :goto_0
 .end method
@@ -955,78 +942,73 @@
     .parameter "cloudPath"
 
     .prologue
-    .line 400
-    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    .line 404
+    iget-object v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
+    invoke-static {v5}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
 
-    move-result-object v4
+    move-result-object v0
 
-    if-nez v4, :cond_0
+    .line 405
+    .local v0, context:Landroid/content/Context;
+    if-nez v0, :cond_0
 
-    .line 412
+    .line 417
     :goto_0
     return-void
 
-    .line 402
+    .line 407
     :cond_0
-    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
-
-    move-result-object v4
-
     iget-object v5, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->CLOUD_FILE_PICKER_TIME_PREFERENCE:Ljava/lang/String;
 
     const/4 v6, 0x2
 
-    invoke-virtual {v4, v5, v6}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v2
-
-    .line 404
-    .local v2, sharedPreferences:Landroid/content/SharedPreferences;
-    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, v5, v6}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
-    .line 405
-    .local v3, sharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    .line 409
+    .local v3, sharedPreferences:Landroid/content/SharedPreferences;
+    invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    .line 406
-    .local v0, currentTime:Ljava/lang/Long;
-    sget-object v4, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    .line 407
-    .local v1, isRoot:Z
-    if-eqz v1, :cond_1
-
-    .line 408
-    invoke-direct {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->clearAllCloudFileListTimePreferences()V
+    move-result-object v4
 
     .line 410
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    .local v4, sharedPreferencesEditor:Landroid/content/SharedPreferences$Editor;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v5
 
-    invoke-interface {v3, p1, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
 
     .line 411
-    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->apply()V
+    .local v1, currentTime:Ljava/lang/Long;
+    sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    .line 412
+    .local v2, isRoot:Z
+    if-eqz v2, :cond_1
+
+    .line 413
+    invoke-direct {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->clearAllCloudFileListTimePreferences()V
+
+    .line 415
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-interface {v4, p1, v5, v6}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    .line 416
+    invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     goto :goto_0
 .end method
@@ -1038,12 +1020,12 @@
     .parameter "path"
 
     .prologue
-    .line 627
+    .line 638
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getItemTextPath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 628
+    .line 639
     .local v2, prefixString:Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -1055,7 +1037,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 629
+    .line 640
     :cond_0
     iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
@@ -1064,12 +1046,12 @@
 
     move-result-object p1
 
-    .line 640
+    .line 651
     :cond_1
     :goto_0
     return-object p1
 
-    .line 631
+    .line 642
     :cond_2
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1077,21 +1059,21 @@
 
     if-eqz v3, :cond_1
 
-    .line 632
+    .line 643
     invoke-virtual {p1, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 633
+    .line 644
     .local v0, indexOf:I
     if-ltz v0, :cond_1
 
-    .line 634
+    .line 645
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 635
+    .line 646
     .local v1, len:I
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -1108,7 +1090,7 @@
     .locals 1
 
     .prologue
-    .line 574
+    .line 585
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountFolderName:Ljava/lang/String;
 
     return-object v0
@@ -1118,258 +1100,79 @@
     .locals 1
 
     .prologue
-    .line 487
+    .line 495
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public getCloudShareLink(Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
+    .locals 6
     .parameter "cloudPath"
 
     .prologue
-    .line 848
-    move-object v1, p1
-
-    .line 849
-    .local v1, result:Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isStorageInitialized()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 850
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->init()V
-
-    .line 851
-    :cond_0
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    if-eqz v2, :cond_1
-
-    .line 853
-    :try_start_0
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    invoke-virtual {v2, p1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->publishURI(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Lcom/htc/sdk/service/cloudstorage/HtcCloudException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v1
-
-    .line 865
-    :cond_1
-    :goto_0
-    return-object v1
-
-    .line 854
-    :catch_0
-    move-exception v0
-
-    .line 856
-    .local v0, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    const/4 v3, 0x1
-
-    #calls: Lcom/htc/app/FilePickerCloudHelper;->errorHandle(Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
-    invoke-static {v2, v0, v3}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
-
-    .line 858
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "cloudStorage.publishURI()->ServiceName:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceTextName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 861
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "e.getErrorCode():"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 862
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "e.getMessage():"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-.end method
-
-.method public getCloudStorage()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-    .locals 1
-
-    .prologue
-    .line 592
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    return-object v0
-.end method
-
-.method public getCloudStorageFileItem(Ljava/lang/String;)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
-    .locals 6
-    .parameter "cloudFolderPath"
-
-    .prologue
-    .line 692
-    const/4 v2, 0x0
-
-    .line 693
-    .local v2, resultItem:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isNeedRefreshTodayCloudFileList(Ljava/lang/String;)Z
-
-    move-result v1
-
-    .line 695
-    .local v1, isNeedRefresh:Z
-    :try_start_0
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    if-eqz v3, :cond_3
-
-    .line 698
+    .line 866
+    move-object v2, p1
+
+    .line 867
+    .local v2, result:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isStorageInitialized()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 699
+    .line 868
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->init()V
 
-    .line 700
+    .line 869
     :cond_0
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-    invoke-virtual {v3, p1, v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->getAbsoluteFile(Ljava/lang/String;Z)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
+    .line 870
+    .local v0, cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    if-eqz v0, :cond_1
 
-    move-result-object v2
-
-    .line 701
-    if-nez v1, :cond_1
-
-    if-nez v2, :cond_1
-
-    .line 702
-    const/4 v1, 0x1
-
-    .line 703
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    invoke-virtual {v3, p1, v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->getAbsoluteFile(Ljava/lang/String;Z)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
-
-    move-result-object v2
-
-    .line 705
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 706
-    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->saveCloudFileListTimePreferences(Ljava/lang/String;)V
+    .line 872
+    :try_start_0
+    invoke-virtual {v0, p1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->publishURI(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Lcom/htc/sdk/service/cloudstorage/HtcCloudException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 708
-    :cond_2
-    if-nez v2, :cond_3
+    move-result-object v2
 
-    .line 732
-    :cond_3
+    .line 884
+    :cond_1
     :goto_0
     return-object v2
 
-    .line 720
+    .line 873
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    .line 722
-    .local v0, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
+    .line 875
+    .local v1, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
     iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     const/4 v4, 0x1
 
     #calls: Lcom/htc/app/FilePickerCloudHelper;->errorHandle(Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
-    invoke-static {v3, v0, v4}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
+    invoke-static {v3, v1, v4}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
 
-    .line 724
+    .line 877
     iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "mCloudStorage.getAbsoluteFile()->ServiceName:"
+    const-string v5, "cloudStorage.publishURI()->ServiceName:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceTextName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1383,30 +1186,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 727
-    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "isRefresh:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 728
+    .line 880
     iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1419,7 +1199,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
 
     move-result-object v5
 
@@ -1433,7 +1213,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 729
+    .line 881
     iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1446,7 +1226,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1463,11 +1243,212 @@
     goto :goto_0
 .end method
 
+.method public getCloudStorage()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    .locals 1
+
+    .prologue
+    .line 603
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+
+    return-object v0
+.end method
+
+.method public getCloudStorageFileItem(Ljava/lang/String;)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
+    .locals 7
+    .parameter "cloudFolderPath"
+
+    .prologue
+    .line 705
+    const/4 v3, 0x0
+
+    .line 706
+    .local v3, resultItem:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isNeedRefreshTodayCloudFileList(Ljava/lang/String;)Z
+
+    move-result v2
+
+    .line 708
+    .local v2, isNeedRefresh:Z
+    :try_start_0
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+
+    .line 709
+    .local v0, cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    if-eqz v0, :cond_3
+
+    .line 712
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->isStorageInitialized()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    .line 713
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->init()V
+
+    .line 714
+    :cond_0
+    invoke-virtual {v0, p1, v2}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->getAbsoluteFile(Ljava/lang/String;Z)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
+
+    move-result-object v3
+
+    .line 715
+    if-nez v2, :cond_1
+
+    if-nez v3, :cond_1
+
+    .line 716
+    const/4 v2, 0x1
+
+    .line 717
+    invoke-virtual {v0, p1, v2}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->getAbsoluteFile(Ljava/lang/String;Z)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
+
+    move-result-object v3
+
+    .line 719
+    :cond_1
+    if-eqz v2, :cond_2
+
+    .line 720
+    invoke-direct {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->saveCloudFileListTimePreferences(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lcom/htc/sdk/service/cloudstorage/HtcCloudException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 722
+    :cond_2
+    if-nez v3, :cond_3
+
+    .line 746
+    .end local v0           #cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    :cond_3
+    :goto_0
+    return-object v3
+
+    .line 734
+    :catch_0
+    move-exception v1
+
+    .line 736
+    .local v1, e:Lcom/htc/sdk/service/cloudstorage/HtcCloudException;
+    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+
+    const/4 v5, 0x1
+
+    #calls: Lcom/htc/app/FilePickerCloudHelper;->errorHandle(Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
+    invoke-static {v4, v1, v5}, Lcom/htc/app/FilePickerCloudHelper;->access$100(Lcom/htc/app/FilePickerCloudHelper;Lcom/htc/sdk/service/cloudstorage/HtcCloudException;I)V
+
+    .line 738
+    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "mCloudStorage.getAbsoluteFile()->ServiceName:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 741
+    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "isRefresh:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 742
+    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "e.getErrorCode():"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getErrorCode()Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageErrorCode;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 743
+    iget-object v4, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->TAG:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "e.getMessage():"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudException;->getMessage()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
 .method public getDataSourceType()I
     .locals 1
 
     .prologue
-    .line 503
+    .line 511
     iget v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mStorageDataSourceType:I
 
     return v0
@@ -1478,12 +1459,12 @@
     .parameter "path"
 
     .prologue
-    .line 662
+    .line 673
     invoke-virtual {p0, p1}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getCloudStorageFileItem(Ljava/lang/String;)Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
 
     move-result-object v1
 
-    .line 663
+    .line 674
     .local v1, cloudStorageFileItem:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorageFileItem;
     iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
@@ -1494,7 +1475,7 @@
 
     move-result-object v0
 
-    .line 667
+    .line 678
     .local v0, cloudItemInfo:Lcom/htc/app/ItemInfo;
     return-object v0
 .end method
@@ -1503,10 +1484,10 @@
     .locals 3
 
     .prologue
-    .line 557
+    .line 568
     const-string v0, ""
 
-    .line 558
+    .line 569
     .local v0, result:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceTextName()Ljava/lang/String;
 
@@ -1526,7 +1507,7 @@
 
     if-nez v1, :cond_1
 
-    .line 559
+    .line 570
     iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountFolderName:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -1541,18 +1522,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 560
+    .line 571
     :cond_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceTextName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 565
+    .line 576
     :cond_1
     :goto_0
     return-object v0
 
-    .line 562
+    .line 573
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1589,7 +1570,7 @@
     .locals 1
 
     .prologue
-    .line 536
+    .line 547
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mServiceName:Ljava/lang/String;
 
     return-object v0
@@ -1599,12 +1580,12 @@
     .locals 2
 
     .prologue
-    .line 545
+    .line 556
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mServiceTextName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 546
+    .line 557
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
@@ -1624,7 +1605,7 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mServiceTextName:Ljava/lang/String;
 
-    .line 548
+    .line 559
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mServiceTextName:Ljava/lang/String;
 
@@ -1635,12 +1616,12 @@
     .locals 9
 
     .prologue
-    .line 676
+    .line 687
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getServiceTextName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 677
+    .line 688
     .local v2, itemName:Ljava/lang/String;
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
 
@@ -1656,7 +1637,7 @@
 
     if-nez v0, :cond_0
 
-    .line 678
+    .line 689
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1687,7 +1668,7 @@
 
     move-result-object v2
 
-    .line 679
+    .line 690
     :cond_0
     const-wide/16 v0, -0x1
 
@@ -1710,55 +1691,62 @@
 
     move-result-object v8
 
-    .line 682
+    .line 692
     .local v8, cloudFolderItemInfo:Lcom/htc/app/FolderItemInfo;
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
+
+    invoke-virtual {v8, v0}, Lcom/htc/app/FolderItemInfo;->setAccountId(Ljava/lang/String;)V
+
+    .line 693
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mServiceName:Ljava/lang/String;
+
+    invoke-virtual {v8, v0}, Lcom/htc/app/FolderItemInfo;->setServiceName(Ljava/lang/String;)V
+
+    .line 695
     return-object v8
 .end method
 
 .method init()V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 516
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    .line 524
+    iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-    if-eqz v0, :cond_0
+    .line 525
+    .local v1, cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    if-eqz v1, :cond_0
 
-    .line 517
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
-
-    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 518
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    .line 519
-    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
-    iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    .line 526
+    iget-object v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
     #getter for: Lcom/htc/app/FilePickerCloudHelper;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/htc/app/FilePickerCloudHelper;->access$000(Lcom/htc/app/FilePickerCloudHelper;)Landroid/content/Context;
 
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->init(Landroid/content/Context;Ljava/lang/String;)Z
+    move-result-object v2
 
     .line 527
-    const/4 v0, 0x1
+    .local v2, context:Landroid/content/Context;
+    if-eqz v2, :cond_0
 
-    iput-boolean v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsStorageInitialized:Z
+    .line 528
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountId:Ljava/lang/String;
 
-    .line 531
+    .line 529
+    .local v0, accountId:Ljava/lang/String;
+    if-eqz v0, :cond_0
+
+    .line 530
+    invoke-virtual {v1, v2, v0}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->init(Landroid/content/Context;Ljava/lang/String;)Z
+
+    .line 538
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsStorageInitialized:Z
+
+    .line 542
+    .end local v0           #accountId:Ljava/lang/String;
+    .end local v2           #context:Landroid/content/Context;
     :cond_0
     return-void
 .end method
@@ -1768,16 +1756,16 @@
     .parameter "path"
 
     .prologue
-    .line 605
+    .line 616
     const/4 v1, 0x0
 
-    .line 606
+    .line 617
     .local v1, isCloudPath:Z
     invoke-virtual {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->getItemTextPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 607
+    .line 618
     .local v0, folderPath:Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -1789,17 +1777,17 @@
 
     if-nez v2, :cond_0
 
-    .line 608
+    .line 619
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 609
+    .line 620
     const/4 v1, 0x1
 
-    .line 612
+    .line 623
     :cond_0
     return v1
 .end method
@@ -1809,10 +1797,10 @@
     .parameter "path"
 
     .prologue
-    .line 616
+    .line 627
     const/4 v1, 0x0
 
-    .line 617
+    .line 628
     .local v1, isRoot:Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1841,7 +1829,7 @@
 
     move-result-object v0
 
-    .line 618
+    .line 629
     .local v0, folderPath:Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -1853,17 +1841,17 @@
 
     if-nez v2, :cond_0
 
-    .line 619
+    .line 630
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 620
+    .line 631
     const/4 v1, 0x1
 
-    .line 623
+    .line 634
     :cond_0
     return v1
 .end method
@@ -1872,7 +1860,7 @@
     .locals 1
 
     .prologue
-    .line 827
+    .line 845
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsRefresh:Z
 
     return v0
@@ -1882,46 +1870,46 @@
     .locals 1
 
     .prologue
-    .line 512
+    .line 520
     iget-boolean v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsStorageInitialized:Z
 
     return v0
 .end method
 
 .method release()V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 945
+    .line 969
     iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
+    .line 970
+    .local v1, cloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
     if-eqz v1, :cond_0
 
-    .line 946
-    iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+    .line 971
+    iget-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
 
-    iget v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mStorageDataSourceType:I
+    iget v3, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mStorageDataSourceType:I
 
     #calls: Lcom/htc/app/FilePickerCloudHelper;->getCloudServiceWrapper(I)Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
-    invoke-static {v1, v2}, Lcom/htc/app/FilePickerCloudHelper;->access$1400(Lcom/htc/app/FilePickerCloudHelper;I)Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
+    invoke-static {v2, v3}, Lcom/htc/app/FilePickerCloudHelper;->access$1500(Lcom/htc/app/FilePickerCloudHelper;I)Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
 
     move-result-object v0
 
-    .line 947
+    .line 972
     .local v0, cloudServiceWrapper:Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
     invoke-virtual {v0, p0}, Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;->removeCloudStorageWrapper(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;)V
 
-    .line 948
-    iget-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
-
+    .line 973
     invoke-virtual {v1}, Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;->release()V
 
-    .line 949
-    const/4 v1, 0x0
+    .line 974
+    const/4 v2, 0x0
 
-    iput-object v1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
+    iput-object v2, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-    .line 952
+    .line 977
     .end local v0           #cloudServiceWrapper:Lcom/htc/app/FilePickerCloudHelper$CloudServiceWrapper;
     :cond_0
     return-void
@@ -1932,27 +1920,40 @@
     .parameter "handler"
 
     .prologue
-    .line 942
+    .line 966
     return-void
 .end method
 
 .method requestDownloadFile(IJLjava/lang/String;J)V
-    .locals 9
+    .locals 10
     .parameter "dataSourceType"
     .parameter "cloudId"
     .parameter "cloudFilePath"
     .parameter "fileSize"
 
     .prologue
-    .line 872
-    if-nez p4, :cond_0
+    .line 891
+    if-nez p4, :cond_1
 
-    .line 933
+    .line 957
+    :cond_0
     :goto_0
     return-void
 
-    .line 874
-    :cond_0
+    .line 893
+    :cond_1
+    iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->this$0:Lcom/htc/app/FilePickerCloudHelper;
+
+    #getter for: Lcom/htc/app/FilePickerCloudHelper;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
+    invoke-static {v0}, Lcom/htc/app/FilePickerCloudHelper;->access$700(Lcom/htc/app/FilePickerCloudHelper;)Lcom/htc/app/FilePickerUtil;
+
+    move-result-object v6
+
+    .line 894
+    .local v6, filePickerUtil:Lcom/htc/app/FilePickerUtil;
+    if-eqz v6, :cond_0
+
+    .line 896
     new-instance v0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper$1;
 
     move-object v1, p0
@@ -1963,27 +1964,27 @@
 
     move v5, p1
 
-    move-wide v6, p5
+    move-wide v7, p5
 
-    invoke-direct/range {v0 .. v7}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper$1;-><init>(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;JLjava/lang/String;IJ)V
+    invoke-direct/range {v0 .. v8}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper$1;-><init>(Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;JLjava/lang/String;ILcom/htc/app/FilePickerUtil;J)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->currentRunable:Ljava/lang/Runnable;
 
-    .line 930
-    new-instance v8, Ljava/lang/Thread;
+    .line 954
+    new-instance v9, Ljava/lang/Thread;
 
     iget-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->currentRunable:Ljava/lang/Runnable;
 
-    invoke-direct {v8, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v9, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 931
-    .local v8, getFileThread:Ljava/lang/Thread;
+    .line 955
+    .local v9, getFileThread:Ljava/lang/Thread;
     const/4 v0, 0x1
 
-    invoke-virtual {v8, v0}, Ljava/lang/Thread;->setDaemon(Z)V
+    invoke-virtual {v9, v0}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 932
-    invoke-virtual {v8}, Ljava/lang/Thread;->start()V
+    .line 956
+    invoke-virtual {v9}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 .end method
@@ -1993,10 +1994,10 @@
     .parameter "accountFolderName"
 
     .prologue
-    .line 583
+    .line 594
     iput-object p1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mAccountFolderName:Ljava/lang/String;
 
-    .line 584
+    .line 595
     return-void
 .end method
 
@@ -2005,10 +2006,10 @@
     .parameter "cloudStorage"
 
     .prologue
-    .line 601
+    .line 612
     iput-object p1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mCloudStorage:Lcom/htc/sdk/service/cloudstorage/HtcCloudStorage;
 
-    .line 602
+    .line 613
     return-void
 .end method
 
@@ -2017,16 +2018,16 @@
     .parameter "isRefresh"
 
     .prologue
-    .line 836
+    .line 854
     iput-boolean p1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mIsRefresh:Z
 
-    .line 837
+    .line 855
     if-eqz p1, :cond_0
 
-    .line 838
+    .line 856
     invoke-direct {p0}, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->clearAllCloudFileListTimePreferences()V
 
-    .line 840
+    .line 858
     :cond_0
     return-void
 .end method
@@ -2036,10 +2037,10 @@
     .parameter "serviceName"
 
     .prologue
-    .line 540
+    .line 551
     iput-object p1, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->mServiceName:Ljava/lang/String;
 
-    .line 541
+    .line 552
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2066,6 +2067,6 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerCloudHelper$CloudStorageWrapper;->CLOUD_FILE_PICKER_TIME_PREFERENCE:Ljava/lang/String;
 
-    .line 542
+    .line 553
     return-void
 .end method

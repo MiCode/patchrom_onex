@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 132
+    .line 133
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 
     const/4 v9, 0x1
 
-    .line 137
+    .line 138
     check-cast p2, [Ljava/lang/Object;
 
     .end local p2
@@ -48,13 +48,13 @@
 
     check-cast v7, [Ljava/lang/Object;
 
-    .line 138
+    .line 139
     .local v7, params:[Ljava/lang/Object;
     aget-object v2, v7, v10
 
     check-cast v2, Lcom/android/camera/io/DCFInfo;
 
-    .line 139
+    .line 140
     .local v2, dcfInfo:Lcom/android/camera/io/DCFInfo;
     aget-object v8, v7, v9
 
@@ -64,26 +64,26 @@
 
     check-cast v6, [I
 
-    .line 140
+    .line 141
     .local v6, maxDirCounter:[I
     iget-object v3, v2, Lcom/android/camera/io/DCFInfo;->dirFreeChar:Ljava/lang/String;
 
-    .line 141
+    .line 142
     .local v3, dirFreeChar:Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 145
+    .line 146
     .local v5, fileNameLength:I
     const/4 v1, 0x0
 
-    .line 146
+    .line 147
     .local v1, counterEndIndex:I
     :goto_0
     if-ge v1, v5, :cond_0
 
-    .line 148
+    .line 149
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -94,23 +94,23 @@
 
     if-nez v8, :cond_1
 
-    .line 152
+    .line 153
     :cond_0
     if-nez v1, :cond_2
 
     move v8, v9
 
-    .line 175
+    .line 176
     :goto_1
     return v8
 
-    .line 150
+    .line 151
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 156
+    .line 157
     :cond_2
     const/4 v8, 0x0
 
@@ -125,7 +125,7 @@
 
     move-result v0
 
-    .line 162
+    .line 163
     .local v0, counter:I
     aget v8, v6, v10
 
@@ -138,10 +138,10 @@
     :cond_3
     move v8, v9
 
-    .line 163
+    .line 164
     goto :goto_1
 
-    .line 158
+    .line 159
     .end local v0           #counter:I
     :catch_0
     move-exception v4
@@ -149,10 +149,10 @@
     .local v4, ex:Ljava/lang/NumberFormatException;
     move v8, v9
 
-    .line 160
+    .line 161
     goto :goto_1
 
-    .line 166
+    .line 167
     .end local v4           #ex:Ljava/lang/NumberFormatException;
     .restart local v0       #counter:I
     :cond_4
@@ -168,26 +168,26 @@
 
     move v8, v9
 
-    .line 167
+    .line 168
     goto :goto_1
 
-    .line 170
+    .line 171
     :cond_5
     aput v0, v6, v10
 
-    .line 171
+    .line 172
     iget v8, v2, Lcom/android/camera/io/DCFInfo;->maxDirectoryCounter:I
 
     if-ne v0, v8, :cond_6
 
     move v8, v10
 
-    .line 172
+    .line 173
     goto :goto_1
 
     :cond_6
     move v8, v9
 
-    .line 175
+    .line 176
     goto :goto_1
 .end method

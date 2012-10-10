@@ -814,7 +814,7 @@
     const/4 v2, 0x0
 
     .line 441
-    const-string/jumbo v3, "k"
+    const-string v3, "k"
 
     const/16 v4, 0x3d
 
@@ -861,7 +861,7 @@
 
     .prologue
     .line 429
-    const-string/jumbo v2, "k"
+    const-string v2, "k"
 
     const/16 v3, 0x3d
 
@@ -1046,7 +1046,7 @@
 
     .prologue
     .line 454
-    const-string/jumbo v0, "k"
+    const-string v0, "k"
 
     const/16 v1, 0x3d
 

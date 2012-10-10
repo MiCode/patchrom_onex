@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 1383
+    .line 1212
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter$ViewHolder;->this$0:Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

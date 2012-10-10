@@ -32,13 +32,13 @@
     .parameter "delegateView"
 
     .prologue
-    .line 90
+    .line 94
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
+    .line 95
     iput-object p1, p0, Landroid/view/PenDelegate;->mBounds:Landroid/graphics/Rect;
 
-    .line 93
+    .line 97
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -53,14 +53,14 @@
 
     iput v0, p0, Landroid/view/PenDelegate;->mSlop:I
 
-    .line 94
+    .line 98
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
     iput-object v0, p0, Landroid/view/PenDelegate;->mSlopBounds:Landroid/graphics/Rect;
 
-    .line 95
+    .line 99
     iget-object v0, p0, Landroid/view/PenDelegate;->mSlopBounds:Landroid/graphics/Rect;
 
     iget v1, p0, Landroid/view/PenDelegate;->mSlop:I
@@ -73,10 +73,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 96
+    .line 100
     iput-object p2, p0, Landroid/view/PenDelegate;->mDelegateView:Landroid/view/View;
 
-    .line 97
+    .line 101
     return-void
 .end method
 
@@ -87,14 +87,14 @@
     .parameter "event"
 
     .prologue
-    .line 107
+    .line 112
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v9
 
     float-to-int v7, v9
 
-    .line 108
+    .line 113
     .local v7, x:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -102,19 +102,19 @@
 
     float-to-int v8, v9
 
-    .line 109
+    .line 114
     .local v8, y:I
     const/4 v4, 0x0
 
-    .line 110
+    .line 115
     .local v4, sendToDelegate:Z
     const/4 v3, 0x1
 
-    .line 111
+    .line 116
     .local v3, hit:Z
     const/4 v2, 0x0
 
-    .line 113
+    .line 118
     .local v2, handled:Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -122,19 +122,19 @@
 
     packed-switch v9, :pswitch_data_0
 
-    .line 137
+    .line 142
     :cond_0
     :goto_0
     if-eqz v4, :cond_1
 
-    .line 138
+    .line 143
     iget-object v1, p0, Landroid/view/PenDelegate;->mDelegateView:Landroid/view/View;
 
-    .line 140
+    .line 145
     .local v1, delegateView:Landroid/view/View;
     if-eqz v3, :cond_2
 
-    .line 142
+    .line 147
     invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
     move-result v9
@@ -153,17 +153,17 @@
 
     invoke-virtual {p1, v9, v10}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    .line 153
+    .line 158
     .end local v1           #delegateView:Landroid/view/View;
     :cond_1
     :goto_1
     return v2
 
-    .line 115
+    .line 120
     :pswitch_0
     iget-object v0, p0, Landroid/view/PenDelegate;->mBounds:Landroid/graphics/Rect;
 
-    .line 117
+    .line 122
     .local v0, bounds:Landroid/graphics/Rect;
     invoke-virtual {v0, v7, v8}, Landroid/graphics/Rect;->contains(II)Z
 
@@ -171,28 +171,28 @@
 
     if-eqz v9, :cond_0
 
-    .line 118
+    .line 123
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Landroid/view/PenDelegate;->mDelegateTargeted:Z
 
-    .line 119
+    .line 124
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 124
+    .line 129
     .end local v0           #bounds:Landroid/graphics/Rect;
     :pswitch_1
     iget-boolean v4, p0, Landroid/view/PenDelegate;->mDelegateTargeted:Z
 
-    .line 125
+    .line 130
     if-eqz v4, :cond_0
 
-    .line 126
+    .line 131
     iget-object v6, p0, Landroid/view/PenDelegate;->mSlopBounds:Landroid/graphics/Rect;
 
-    .line 127
+    .line 132
     .local v6, slopBounds:Landroid/graphics/Rect;
     invoke-virtual {v6, v7, v8}, Landroid/graphics/Rect;->contains(II)Z
 
@@ -200,29 +200,29 @@
 
     if-nez v9, :cond_0
 
-    .line 128
+    .line 133
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 133
+    .line 138
     .end local v6           #slopBounds:Landroid/graphics/Rect;
     :pswitch_2
     iget-boolean v4, p0, Landroid/view/PenDelegate;->mDelegateTargeted:Z
 
-    .line 134
+    .line 139
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Landroid/view/PenDelegate;->mDelegateTargeted:Z
 
     goto :goto_0
 
-    .line 146
+    .line 151
     .restart local v1       #delegateView:Landroid/view/View;
     :cond_2
     iget v5, p0, Landroid/view/PenDelegate;->mSlop:I
 
-    .line 147
+    .line 152
     .local v5, slop:I
     mul-int/lit8 v9, v5, 0x2
 
@@ -240,7 +240,7 @@
 
     goto :goto_1
 
-    .line 113
+    .line 118
     nop
 
     :pswitch_data_0

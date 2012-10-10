@@ -25,13 +25,13 @@
     .parameter "looper"
 
     .prologue
-    .line 1156
+    .line 1190
     iput-object p1, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
-    .line 1157
+    .line 1191
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1158
+    .line 1192
     return-void
 .end method
 
@@ -42,12 +42,12 @@
     .parameter "msg"
 
     .prologue
-    .line 1162
+    .line 1196
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1213
+    .line 1247
     const-string v2, "MediaVT_Java"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -72,12 +72,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1214
+    .line 1248
     :cond_0
     :goto_0
     return-void
 
-    .line 1164
+    .line 1198
     :pswitch_0
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 1167
+    .line 1201
     :pswitch_1
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -100,13 +100,13 @@
 
     goto :goto_0
 
-    .line 1170
+    .line 1204
     :pswitch_2
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     invoke-virtual {v2}, Lcom/htc/service/vt/MediaVT;->getMediaVTSeriveSurface()V
 
-    .line 1171
+    .line 1205
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #getter for: Lcom/htc/service/vt/MediaVT;->mMediaVTServiceReady:Z
@@ -116,14 +116,14 @@
 
     if-nez v2, :cond_0
 
-    .line 1172
+    .line 1206
     const-string v2, "MediaVT_Java"
 
     const-string v3, "inform AP MediaVTService ready."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1173
+    .line 1207
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #getter for: Lcom/htc/service/vt/MediaVT;->mEventHandler:Lcom/htc/service/vt/MediaVT$EventHandler;
@@ -135,7 +135,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/service/vt/MediaVT$EventHandler;->sendEmptyMessage(I)Z
 
-    .line 1174
+    .line 1208
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/4 v3, 0x1
@@ -145,7 +145,7 @@
 
     goto :goto_0
 
-    .line 1178
+    .line 1212
     :pswitch_3
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -153,7 +153,7 @@
 
     goto :goto_0
 
-    .line 1181
+    .line 1215
     :pswitch_4
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -161,7 +161,7 @@
 
     goto :goto_0
 
-    .line 1184
+    .line 1218
     :pswitch_5
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -169,7 +169,7 @@
 
     goto :goto_0
 
-    .line 1187
+    .line 1221
     :pswitch_6
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -177,7 +177,7 @@
 
     goto :goto_0
 
-    .line 1190
+    .line 1224
     :pswitch_7
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -185,13 +185,13 @@
 
     goto :goto_0
 
-    .line 1193
+    .line 1227
     :pswitch_8
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 1194
+    .line 1228
     .local v1, rectNearend:Landroid/graphics/Rect;
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -207,14 +207,14 @@
 
     goto :goto_0
 
-    .line 1197
+    .line 1231
     .end local v1           #rectNearend:Landroid/graphics/Rect;
     :pswitch_9
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/Rect;
 
-    .line 1198
+    .line 1232
     .local v0, rectFarend:Landroid/graphics/Rect;
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -230,7 +230,7 @@
 
     goto :goto_0
 
-    .line 1201
+    .line 1235
     .end local v0           #rectFarend:Landroid/graphics/Rect;
     :pswitch_a
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
@@ -239,7 +239,7 @@
 
     goto :goto_0
 
-    .line 1204
+    .line 1238
     :pswitch_b
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -247,7 +247,7 @@
 
     goto/16 :goto_0
 
-    .line 1207
+    .line 1241
     :pswitch_c
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -258,7 +258,7 @@
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 1208
+    .line 1242
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #getter for: Lcom/htc/service/vt/MediaVT;->mEventHandler:Lcom/htc/service/vt/MediaVT$EventHandler;
@@ -270,7 +270,7 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/service/vt/MediaVT$EventHandler;->sendEmptyMessage(I)Z
 
-    .line 1209
+    .line 1243
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/4 v3, 0x0
@@ -278,7 +278,7 @@
     #setter for: Lcom/htc/service/vt/MediaVT;->mMediaVTServiceReady:Z
     invoke-static {v2, v3}, Lcom/htc/service/vt/MediaVT;->access$602(Lcom/htc/service/vt/MediaVT;Z)Z
 
-    .line 1210
+    .line 1244
     iget-object v2, p0, Lcom/htc/service/vt/MediaVT$MediaVTServiceHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/4 v3, 0x0
@@ -288,7 +288,7 @@
 
     goto/16 :goto_0
 
-    .line 1162
+    .line 1196
     nop
 
     :pswitch_data_0

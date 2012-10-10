@@ -1,255 +1,70 @@
-.class synthetic Lcom/android/camera/component/MainBar$23;
+.class Lcom/android/camera/component/MainBar$23;
 .super Ljava/lang/Object;
 .source "MainBar.java"
 
+# interfaces
+.implements Lcom/android/camera/widget/PopupBubble$OnOutsideTouchListener;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/camera/component/MainBar;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/camera/component/MainBar;->showPopup(Landroid/view/View;Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$android$camera$CameraMode:[I
-
-.field static final synthetic $SwitchMap$com$android$camera$FlashMode:[I
-
-.field static final synthetic $SwitchMap$com$android$camera$RecordingState:[I
+# instance fields
+.field final synthetic this$0:Lcom/android/camera/component/MainBar;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/android/camera/component/MainBar;)V
+    .locals 0
+    .parameter
 
     .prologue
-    .line 877
-    invoke-static {}, Lcom/android/camera/CameraMode;->values()[Lcom/android/camera/CameraMode;
+    .line 804
+    iput-object p1, p0, Lcom/android/camera/component/MainBar$23;->this$0:Lcom/android/camera/component/MainBar;
 
-    move-result-object v0
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$CameraMode:[I
-
-    :try_start_0
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$CameraMode:[I
-
-    sget-object v1, Lcom/android/camera/CameraMode;->Photo:Lcom/android/camera/CameraMode;
-
-    invoke-virtual {v1}, Lcom/android/camera/CameraMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_8
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$CameraMode:[I
-
-    sget-object v1, Lcom/android/camera/CameraMode;->Video:Lcom/android/camera/CameraMode;
-
-    invoke-virtual {v1}, Lcom/android/camera/CameraMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_7
-
-    .line 881
-    :goto_1
-    invoke-static {}, Lcom/android/camera/FlashMode;->values()[Lcom/android/camera/FlashMode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$FlashMode:[I
-
-    :try_start_2
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$FlashMode:[I
-
-    sget-object v1, Lcom/android/camera/FlashMode;->Auto:Lcom/android/camera/FlashMode;
-
-    invoke-virtual {v1}, Lcom/android/camera/FlashMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_6
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$FlashMode:[I
-
-    sget-object v1, Lcom/android/camera/FlashMode;->On:Lcom/android/camera/FlashMode;
-
-    invoke-virtual {v1}, Lcom/android/camera/FlashMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_5
-
-    .line 309
-    :goto_3
-    invoke-static {}, Lcom/android/camera/RecordingState;->values()[Lcom/android/camera/RecordingState;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$RecordingState:[I
-
-    :try_start_4
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$RecordingState:[I
-
-    sget-object v1, Lcom/android/camera/RecordingState;->Started:Lcom/android/camera/RecordingState;
-
-    invoke-virtual {v1}, Lcom/android/camera/RecordingState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$RecordingState:[I
-
-    sget-object v1, Lcom/android/camera/RecordingState;->Starting:Lcom/android/camera/RecordingState;
-
-    invoke-virtual {v1}, Lcom/android/camera/RecordingState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_3
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$RecordingState:[I
-
-    sget-object v1, Lcom/android/camera/RecordingState;->Stopping:Lcom/android/camera/RecordingState;
-
-    invoke-virtual {v1}, Lcom/android/camera/RecordingState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_2
-
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$RecordingState:[I
-
-    sget-object v1, Lcom/android/camera/RecordingState;->Reviewing:Lcom/android/camera/RecordingState;
-
-    invoke-virtual {v1}, Lcom/android/camera/RecordingState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_1
-
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/android/camera/component/MainBar$23;->$SwitchMap$com$android$camera$RecordingState:[I
-
-    sget-object v1, Lcom/android/camera/RecordingState;->Ready:Lcom/android/camera/RecordingState;
-
-    invoke-virtual {v1}, Lcom/android/camera/RecordingState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_0
-
-    :goto_8
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_8
+# virtual methods
+.method public onOutsideTouch(Landroid/view/View;Landroid/view/MotionEvent;)V
+    .locals 2
+    .parameter "bubble"
+    .parameter "event"
 
-    :catch_1
-    move-exception v0
+    .prologue
+    .line 808
+    iget-object v0, p0, Lcom/android/camera/component/MainBar$23;->this$0:Lcom/android/camera/component/MainBar;
 
-    goto :goto_7
+    const/16 v1, 0x2711
 
-    :catch_2
-    move-exception v0
+    invoke-virtual {v0, v1}, Lcom/android/camera/component/MainBar;->removeMessages(I)V
 
-    goto :goto_6
+    .line 809
+    iget-object v0, p0, Lcom/android/camera/component/MainBar$23;->this$0:Lcom/android/camera/component/MainBar;
 
-    :catch_3
-    move-exception v0
+    invoke-virtual {v0}, Lcom/android/camera/component/MainBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
-    goto :goto_5
+    move-result-object v0
 
-    :catch_4
-    move-exception v0
+    iget-object v0, v0, Lcom/android/camera/HTCCamera;->popupOutsideTouchEvent:Lcom/android/camera/event/Event;
 
-    goto :goto_4
+    new-instance v1, Lcom/android/camera/input/MotionEventArgs;
 
-    .line 881
-    :catch_5
-    move-exception v0
+    invoke-direct {v1, p2}, Lcom/android/camera/input/MotionEventArgs;-><init>(Landroid/view/MotionEvent;)V
 
-    goto :goto_3
+    invoke-virtual {v0, p0, v1}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    :catch_6
-    move-exception v0
-
-    goto :goto_2
-
-    .line 877
-    :catch_7
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_8
-    move-exception v0
-
-    goto :goto_0
+    .line 810
+    return-void
 .end method

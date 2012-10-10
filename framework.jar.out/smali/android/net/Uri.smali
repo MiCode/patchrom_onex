@@ -1132,7 +1132,7 @@
     .line 1659
     new-instance v7, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v8, "key"
+    const-string v8, "key"
 
     invoke-direct {v7, v8}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -1446,7 +1446,7 @@
     .line 1599
     new-instance v8, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v9, "key"
+    const-string v9, "key"
 
     invoke-direct {v8, v9}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 

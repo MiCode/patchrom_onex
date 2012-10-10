@@ -354,7 +354,7 @@
     .local v0, e:Ljavax/sip/SipException;
     const-string v1, "SipSession"
 
-    const-string/jumbo v2, "keepalive cannot be enabled; ignored"
+    const-string v2, "keepalive cannot be enabled; ignored"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -1059,7 +1059,7 @@
     :cond_3
     const/4 v3, -0x8
 
-    const-string/jumbo v4, "incorrect username or password"
+    const-string v4, "incorrect username or password"
 
     invoke-direct {p0, v3, v4}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->onError(ILjava/lang/String;)V
 

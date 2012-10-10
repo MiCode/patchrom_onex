@@ -40,12 +40,12 @@
     .parameter "context"
 
     .prologue
-    .line 75
+    .line 76
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/app/HtcFragmentBreadCrumbs;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 76
+    .line 77
     return-void
 .end method
 
@@ -55,12 +55,12 @@
     .parameter "attrs"
 
     .prologue
-    .line 79
+    .line 80
     const v0, 0x1030089
 
     invoke-direct {p0, p1, p2, v0}, Landroid/app/HtcFragmentBreadCrumbs;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 80
+    .line 81
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .parameter "defStyle"
 
     .prologue
-    .line 83
+    .line 84
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 45
@@ -79,14 +79,14 @@
 
     iput v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mMaxVisible:I
 
-    .line 300
+    .line 309
     new-instance v0, Landroid/app/HtcFragmentBreadCrumbs$1;
 
     invoke-direct {v0, p0}, Landroid/app/HtcFragmentBreadCrumbs$1;-><init>(Landroid/app/HtcFragmentBreadCrumbs;)V
 
     iput-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 84
+    .line 85
     return-void
 .end method
 
@@ -118,16 +118,16 @@
     .parameter "shortTitle"
 
     .prologue
-    .line 144
+    .line 149
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 150
+    .line 155
     :goto_0
     return-object v0
 
-    .line 146
+    .line 151
     :cond_0
     new-instance v0, Landroid/app/BackStackRecord;
 
@@ -141,11 +141,11 @@
 
     invoke-direct {v0, v1}, Landroid/app/BackStackRecord;-><init>(Landroid/app/FragmentManagerImpl;)V
 
-    .line 148
+    .line 153
     .local v0, entry:Landroid/app/BackStackRecord;
     invoke-virtual {v0, p1}, Landroid/app/BackStackRecord;->setBreadCrumbTitle(Ljava/lang/CharSequence;)Landroid/app/FragmentTransaction;
 
-    .line 149
+    .line 154
     invoke-virtual {v0, p2}, Landroid/app/BackStackRecord;->setBreadCrumbShortTitle(Ljava/lang/CharSequence;)Landroid/app/FragmentTransaction;
 
     goto :goto_0
@@ -156,27 +156,27 @@
     .parameter "index"
 
     .prologue
-    .line 231
+    .line 240
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mParentEntry:Landroid/app/BackStackRecord;
 
     if-eqz v0, :cond_1
 
-    .line 232
+    .line 241
     if-nez p1, :cond_0
 
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mParentEntry:Landroid/app/BackStackRecord;
 
-    .line 234
+    .line 243
     :goto_0
     return-object v0
 
-    .line 232
+    .line 241
     :cond_0
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mTopEntry:Landroid/app/BackStackRecord;
 
     goto :goto_0
 
-    .line 234
+    .line 243
     :cond_1
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mTopEntry:Landroid/app/BackStackRecord;
 
@@ -191,7 +191,7 @@
 
     const/4 v2, 0x0
 
-    .line 220
+    .line 229
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mTopEntry:Landroid/app/BackStackRecord;
 
     if-eqz v0, :cond_0
@@ -225,10 +225,10 @@
     .locals 0
 
     .prologue
-    .line 212
+    .line 221
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->updateCrumbs()V
 
-    .line 213
+    .line 222
     return-void
 .end method
 
@@ -241,12 +241,12 @@
     .parameter "b"
 
     .prologue
-    .line 167
+    .line 174
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->getChildCount()I
 
     move-result v2
 
-    .line 168
+    .line 175
     .local v2, childCount:I
     const/4 v4, 0x0
 
@@ -254,12 +254,12 @@
     :goto_0
     if-ge v4, v2, :cond_0
 
-    .line 169
+    .line 176
     invoke-virtual {p0, v4}, Landroid/app/HtcFragmentBreadCrumbs;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 171
+    .line 178
     .local v0, child:Landroid/view/View;
     iget v5, p0, Landroid/view/View;->mPaddingLeft:I
 
@@ -273,7 +273,7 @@
 
     sub-int v3, v5, v6
 
-    .line 172
+    .line 179
     .local v3, childRight:I
     iget v5, p0, Landroid/view/View;->mPaddingTop:I
 
@@ -287,7 +287,7 @@
 
     sub-int v1, v5, v6
 
-    .line 173
+    .line 180
     .local v1, childBottom:I
     iget v5, p0, Landroid/view/View;->mPaddingLeft:I
 
@@ -295,12 +295,12 @@
 
     invoke-virtual {v0, v5, v6, v3, v1}, Landroid/view/View;->layout(IIII)V
 
-    .line 168
+    .line 175
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 175
+    .line 182
     .end local v0           #child:Landroid/view/View;
     .end local v1           #childBottom:I
     .end local v3           #childRight:I
@@ -314,24 +314,24 @@
     .parameter "heightMeasureSpec"
 
     .prologue
-    .line 179
+    .line 187
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->getChildCount()I
 
     move-result v1
 
-    .line 181
+    .line 189
     .local v1, count:I
     const/4 v3, 0x0
 
-    .line 182
+    .line 190
     .local v3, maxHeight:I
     const/4 v4, 0x0
 
-    .line 183
+    .line 191
     .local v4, maxWidth:I
     const/4 v5, 0x0
 
-    .line 186
+    .line 194
     .local v5, measuredChildState:I
     const/4 v2, 0x0
 
@@ -339,12 +339,12 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 187
+    .line 195
     invoke-virtual {p0, v2}, Landroid/app/HtcFragmentBreadCrumbs;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 188
+    .line 196
     .local v0, child:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -354,10 +354,10 @@
 
     if-eq v6, v7, :cond_0
 
-    .line 189
+    .line 197
     invoke-virtual {p0, v0, p1, p2}, Landroid/app/HtcFragmentBreadCrumbs;->measureChild(Landroid/view/View;II)V
 
-    .line 190
+    .line 198
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v6
@@ -366,7 +366,7 @@
 
     move-result v4
 
-    .line 191
+    .line 199
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6
@@ -375,7 +375,7 @@
 
     move-result v3
 
-    .line 192
+    .line 200
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredState()I
 
     move-result v6
@@ -384,13 +384,13 @@
 
     move-result v5
 
-    .line 186
+    .line 194
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 198
+    .line 206
     .end local v0           #child:Landroid/view/View;
     :cond_1
     iget v6, p0, Landroid/view/View;->mPaddingLeft:I
@@ -401,7 +401,7 @@
 
     add-int/2addr v4, v6
 
-    .line 199
+    .line 207
     iget v6, p0, Landroid/view/View;->mPaddingTop:I
 
     iget v7, p0, Landroid/view/View;->mPaddingBottom:I
@@ -410,7 +410,7 @@
 
     add-int/2addr v3, v6
 
-    .line 202
+    .line 210
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->getSuggestedMinimumHeight()I
 
     move-result v6
@@ -419,7 +419,7 @@
 
     move-result v3
 
-    .line 203
+    .line 211
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->getSuggestedMinimumWidth()I
 
     move-result v6
@@ -428,7 +428,7 @@
 
     move-result v4
 
-    .line 205
+    .line 213
     invoke-static {v4, p1, v5}, Landroid/app/HtcFragmentBreadCrumbs;->resolveSizeAndState(III)I
 
     move-result v6
@@ -441,7 +441,7 @@
 
     invoke-virtual {p0, v6, v7}, Landroid/app/HtcFragmentBreadCrumbs;->setMeasuredDimension(II)V
 
-    .line 208
+    .line 216
     return-void
 .end method
 
@@ -450,11 +450,11 @@
     .parameter "a"
 
     .prologue
-    .line 91
+    .line 93
     iput-object p1, p0, Landroid/app/HtcFragmentBreadCrumbs;->mActivity:Landroid/app/Activity;
 
-    .line 92
-    const-string/jumbo v0, "layout_inflater"
+    .line 94
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -464,7 +464,7 @@
 
     iput-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 93
+    .line 95
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mInflater:Landroid/view/LayoutInflater;
 
     const v1, 0x10900bb
@@ -479,36 +479,36 @@
 
     iput-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
 
-    .line 97
+    .line 99
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
 
     const v1, 0x2080099
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
-    .line 98
+    .line 100
     iget-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v0}, Landroid/app/HtcFragmentBreadCrumbs;->addView(Landroid/view/View;)V
 
-    .line 99
+    .line 101
     invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/app/FragmentManager;->addOnBackStackChangedListener(Landroid/app/FragmentManager$OnBackStackChangedListener;)V
 
-    .line 100
+    .line 102
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->updateCrumbs()V
 
-    .line 101
+    .line 103
     new-instance v0, Landroid/animation/LayoutTransition;
 
     invoke-direct {v0}, Landroid/animation/LayoutTransition;-><init>()V
 
     invoke-virtual {p0, v0}, Landroid/app/HtcFragmentBreadCrumbs;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
 
-    .line 102
+    .line 104
     return-void
 .end method
 
@@ -517,12 +517,12 @@
     .parameter "visibleCrumbs"
 
     .prologue
-    .line 109
+    .line 112
     const/4 v0, 0x1
 
     if-ge p1, v0, :cond_0
 
-    .line 110
+    .line 113
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "visibleCrumbs must be greater than zero"
@@ -531,11 +531,11 @@
 
     throw v0
 
-    .line 112
+    .line 115
     :cond_0
     iput p1, p0, Landroid/app/HtcFragmentBreadCrumbs;->mMaxVisible:I
 
-    .line 113
+    .line 116
     return-void
 .end method
 
@@ -544,10 +544,10 @@
     .parameter "listener"
 
     .prologue
-    .line 140
+    .line 145
     iput-object p1, p0, Landroid/app/HtcFragmentBreadCrumbs;->mOnBreadCrumbClickListener:Landroid/app/HtcFragmentBreadCrumbs$OnBreadCrumbClickListener;
 
-    .line 141
+    .line 146
     return-void
 .end method
 
@@ -558,20 +558,20 @@
     .parameter "listener"
 
     .prologue
-    .line 128
+    .line 132
     invoke-direct {p0, p1, p2}, Landroid/app/HtcFragmentBreadCrumbs;->createBackStackEntry(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/app/BackStackRecord;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mParentEntry:Landroid/app/BackStackRecord;
 
-    .line 129
+    .line 133
     iput-object p3, p0, Landroid/app/HtcFragmentBreadCrumbs;->mParentClickListener:Landroid/view/View$OnClickListener;
 
-    .line 130
+    .line 134
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->updateCrumbs()V
 
-    .line 131
+    .line 135
     return-void
 .end method
 
@@ -581,17 +581,17 @@
     .parameter "shortTitle"
 
     .prologue
-    .line 159
+    .line 165
     invoke-direct {p0, p1, p2}, Landroid/app/HtcFragmentBreadCrumbs;->createBackStackEntry(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/app/BackStackRecord;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/HtcFragmentBreadCrumbs;->mTopEntry:Landroid/app/BackStackRecord;
 
-    .line 160
+    .line 166
     invoke-virtual {p0}, Landroid/app/HtcFragmentBreadCrumbs;->updateCrumbs()V
 
-    .line 161
+    .line 167
     return-void
 .end method
 
@@ -599,7 +599,7 @@
     .locals 22
 
     .prologue
-    .line 239
+    .line 248
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mActivity:Landroid/app/Activity;
@@ -610,19 +610,19 @@
 
     move-result-object v6
 
-    .line 240
+    .line 249
     .local v6, fm:Landroid/app/FragmentManager;
     invoke-virtual {v6}, Landroid/app/FragmentManager;->getBackStackEntryCount()I
 
     move-result v11
 
-    .line 241
+    .line 250
     .local v11, numEntries:I
     invoke-direct/range {p0 .. p0}, Landroid/app/HtcFragmentBreadCrumbs;->getPreEntryCount()I
 
     move-result v12
 
-    .line 242
+    .line 251
     .local v12, numPreEntries:I
     move-object/from16 v0, p0
 
@@ -634,7 +634,7 @@
 
     move-result v13
 
-    .line 243
+    .line 252
     .local v13, numViews:I
     const/4 v7, 0x0
 
@@ -646,7 +646,7 @@
 
     if-ge v7, v0, :cond_5
 
-    .line 244
+    .line 253
     if-ge v7, v12, :cond_0
 
     move-object/from16 v0, p0
@@ -655,12 +655,12 @@
 
     move-result-object v4
 
-    .line 247
+    .line 256
     .local v4, bse:Landroid/app/FragmentManager$BackStackEntry;
     :goto_1
     if-ge v7, v13, :cond_2
 
-    .line 248
+    .line 257
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
@@ -673,24 +673,24 @@
 
     move-result-object v16
 
-    .line 249
+    .line 258
     .local v16, v:Landroid/view/View;
     invoke-virtual/range {v16 .. v16}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v14
 
-    .line 250
+    .line 259
     .local v14, tag:Ljava/lang/Object;
     if-eq v14, v4, :cond_2
 
-    .line 251
+    .line 260
     move v9, v7
 
     .local v9, j:I
     :goto_2
     if-ge v9, v13, :cond_1
 
-    .line 252
+    .line 261
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
@@ -701,12 +701,12 @@
 
     invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->removeViewAt(I)V
 
-    .line 251
+    .line 260
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 244
+    .line 253
     .end local v4           #bse:Landroid/app/FragmentManager$BackStackEntry;
     .end local v9           #j:I
     .end local v14           #tag:Ljava/lang/Object;
@@ -722,7 +722,7 @@
 
     goto :goto_1
 
-    .line 254
+    .line 263
     .restart local v4       #bse:Landroid/app/FragmentManager$BackStackEntry;
     .restart local v9       #j:I
     .restart local v14       #tag:Ljava/lang/Object;
@@ -730,14 +730,14 @@
     :cond_1
     move v13, v7
 
-    .line 257
+    .line 266
     .end local v9           #j:I
     .end local v14           #tag:Ljava/lang/Object;
     .end local v16           #v:Landroid/view/View;
     :cond_2
     if-lt v7, v13, :cond_4
 
-    .line 258
+    .line 267
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mInflater:Landroid/view/LayoutInflater;
@@ -760,7 +760,7 @@
 
     move-result-object v8
 
-    .line 261
+    .line 270
     .local v8, item:Landroid/view/View;
     const v18, 0x1020016
 
@@ -772,7 +772,7 @@
 
     check-cast v15, Landroid/widget/TextView;
 
-    .line 262
+    .line 271
     .local v15, text:Landroid/widget/TextView;
     invoke-interface {v4}, Landroid/app/FragmentManager$BackStackEntry;->getBreadCrumbTitle()Ljava/lang/CharSequence;
 
@@ -782,7 +782,7 @@
 
     invoke-virtual {v15, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 263
+    .line 272
     invoke-virtual/range {p0 .. p0}, Landroid/app/HtcFragmentBreadCrumbs;->getContext()Landroid/content/Context;
 
     move-result-object v18
@@ -801,10 +801,10 @@
 
     invoke-virtual {v15, v0}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 265
+    .line 274
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 268
+    .line 277
     const/16 v18, 0x8
 
     const/16 v19, 0x0
@@ -823,7 +823,7 @@
 
     invoke-virtual {v15, v0, v1, v2, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 269
+    .line 278
     const v18, 0x102021d
 
     move/from16 v0, v18
@@ -838,10 +838,10 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 271
+    .line 280
     if-nez v7, :cond_3
 
-    .line 272
+    .line 281
     const v18, 0x102021d
 
     move/from16 v0, v18
@@ -854,7 +854,7 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/view/View;->setVisibility(I)V
 
-    .line 274
+    .line 283
     :cond_3
     move-object/from16 v0, p0
 
@@ -866,7 +866,7 @@
 
     invoke-virtual {v0, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 275
+    .line 284
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mOnClickListener:Landroid/view/View$OnClickListener;
@@ -877,7 +877,7 @@
 
     invoke-virtual {v15, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 243
+    .line 252
     .end local v8           #item:Landroid/view/View;
     .end local v15           #text:Landroid/widget/TextView;
     :cond_4
@@ -885,12 +885,12 @@
 
     goto/16 :goto_0
 
-    .line 278
+    .line 287
     .end local v4           #bse:Landroid/app/FragmentManager$BackStackEntry;
     :cond_5
     add-int v17, v11, v12
 
-    .line 279
+    .line 288
     .local v17, viewI:I
     move-object/from16 v0, p0
 
@@ -902,13 +902,13 @@
 
     move-result v13
 
-    .line 280
+    .line 289
     :goto_3
     move/from16 v0, v17
 
     if-le v13, v0, :cond_6
 
-    .line 281
+    .line 290
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
@@ -919,19 +919,19 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/widget/LinearLayout;->removeViewAt(I)V
 
-    .line 282
+    .line 291
     add-int/lit8 v13, v13, -0x1
 
     goto :goto_3
 
-    .line 285
+    .line 294
     :cond_6
     const/4 v7, 0x0
 
     :goto_4
     if-ge v7, v13, :cond_b
 
-    .line 286
+    .line 295
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mContainer:Landroid/widget/LinearLayout;
@@ -944,7 +944,7 @@
 
     move-result-object v5
 
-    .line 288
+    .line 297
     .local v5, child:Landroid/view/View;
     const v18, 0x1020016
 
@@ -969,7 +969,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 289
+    .line 298
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mMaxVisible:I
@@ -978,7 +978,7 @@
 
     if-lez v18, :cond_7
 
-    .line 291
+    .line 300
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/app/HtcFragmentBreadCrumbs;->mMaxVisible:I
@@ -998,7 +998,7 @@
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 292
+    .line 301
     const v18, 0x102021d
 
     move/from16 v0, v18
@@ -1007,7 +1007,7 @@
 
     move-result-object v10
 
-    .line 294
+    .line 303
     .local v10, leftIcon:Landroid/view/View;
     move-object/from16 v0, p0
 
@@ -1030,33 +1030,33 @@
 
     invoke-virtual {v10, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 285
+    .line 294
     .end local v10           #leftIcon:Landroid/view/View;
     :cond_7
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_4
 
-    .line 288
+    .line 297
     :cond_8
     const/16 v18, 0x0
 
     goto :goto_5
 
-    .line 291
+    .line 300
     :cond_9
     const/16 v18, 0x0
 
     goto :goto_6
 
-    .line 294
+    .line 303
     .restart local v10       #leftIcon:Landroid/view/View;
     :cond_a
     const/16 v18, 0x8
 
     goto :goto_7
 
-    .line 298
+    .line 307
     .end local v5           #child:Landroid/view/View;
     .end local v10           #leftIcon:Landroid/view/View;
     :cond_b

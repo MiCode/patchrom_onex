@@ -60,19 +60,19 @@
     .prologue
     const v3, 0x205000e
 
-    .line 121
+    .line 122
     invoke-direct {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;-><init>()V
 
-    .line 122
+    .line 123
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 123
+    .line 124
     .local v0, res:Landroid/content/res/Resources;
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 125
     const v1, 0x7f0b0022
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -81,7 +81,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_width:I
 
-    .line 125
+    .line 126
     const v1, 0x7f0b0023
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -90,7 +90,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_height:I
 
-    .line 126
+    .line 127
     const v1, 0x7f0b0024
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -99,7 +99,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_marginLeft:I
 
-    .line 127
+    .line 128
     const v1, 0x7f0b0025
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -108,7 +108,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_marginTop:I
 
-    .line 128
+    .line 129
     const v1, 0x7f0b0026
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -117,7 +117,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->thumb_marginLeft:I
 
-    .line 129
+    .line 130
     const v1, 0x7f0b0027
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -126,7 +126,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->thumb_marginTop:I
 
-    .line 130
+    .line 131
     iget v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_width:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -139,7 +139,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_width:I
 
-    .line 131
+    .line 132
     iget v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_width:I
 
     invoke-direct {p0, v1, p1}, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->getGridViewTextViewLayoutHeight(ILandroid/app/Activity;)I
@@ -148,7 +148,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_height:I
 
-    .line 132
+    .line 133
     const v1, 0x7f0b0028
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -157,12 +157,12 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_marginLeft:I
 
-    .line 133
+    .line 134
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_marginTop:I
 
-    .line 134
+    .line 135
     iget v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_width:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
@@ -175,7 +175,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->width:I
 
-    .line 135
+    .line 136
     iget v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->cover_height:I
 
     iget v2, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->textView_height:I
@@ -188,7 +188,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->height:I
 
-    .line 136
+    .line 137
     const v1, 0x7f0b002a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -197,7 +197,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->verticalSpacing:I
 
-    .line 137
+    .line 138
     const v1, 0x7f0b002b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -206,7 +206,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->verticalSpacing_landscape:I
 
-    .line 138
+    .line 139
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v1
@@ -215,7 +215,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->horizontalSpacing:I
 
-    .line 140
+    .line 141
     const v1, 0x7f0b002d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -224,7 +224,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->cover_width_child:I
 
-    .line 141
+    .line 142
     const v1, 0x7f0b002e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -233,7 +233,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->cover_height_child:I
 
-    .line 142
+    .line 143
     const v1, 0x7f0b002f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -242,7 +242,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->cover_marginLeft_child:I
 
-    .line 143
+    .line 144
     const v1, 0x7f0b0030
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -251,7 +251,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->cover_marginTop_child:I
 
-    .line 144
+    .line 145
     const v1, 0x7f0b0031
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -260,7 +260,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->thumb_marginLeft_child:I
 
-    .line 145
+    .line 146
     const v1, 0x7f0b0013
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -269,12 +269,12 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->thumb_marginTop_child:I
 
-    .line 146
+    .line 147
     iget v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->cover_width_child:I
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->textView_width_child:I
 
-    .line 147
+    .line 148
     iget v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->textView_width_child:I
 
     invoke-direct {p0, v1, p1}, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->getGridViewChidlTextViewLayoutHeight(ILandroid/app/Activity;)I
@@ -283,7 +283,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->textView_height_child:I
 
-    .line 148
+    .line 149
     const v1, 0x7f0b0033
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -292,7 +292,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->textView_marginLeft_child:I
 
-    .line 149
+    .line 150
     const v1, 0x7f0b0015
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -301,12 +301,12 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->textView_marginTop_child:I
 
-    .line 150
+    .line 151
     iget v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->cover_width_child:I
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->width_child:I
 
-    .line 151
+    .line 152
     const v1, 0x7f0b002c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -315,7 +315,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->child_view_offsetY:I
 
-    .line 153
+    .line 154
     iget v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->cover_height_child:I
 
     iget v2, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->textView_height_child:I
@@ -328,7 +328,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->height_child:I
 
-    .line 154
+    .line 155
     const v1, 0x7f0b0035
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -337,7 +337,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->verticalSpacing_child:I
 
-    .line 155
+    .line 156
     const v1, 0x7f0b0036
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -346,7 +346,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->verticalSpacing_landscape_child:I
 
-    .line 156
+    .line 157
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v1
@@ -355,7 +355,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->horizontalSpacing_child:I
 
-    .line 157
+    .line 158
     const v1, 0x7f0b004b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -364,7 +364,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->indicator_offset:I
 
-    .line 158
+    .line 159
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v1
@@ -373,7 +373,7 @@
 
     iput v1, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivityExpGrid$ArtistViewItemLayoutParams;->bottom_padding_child:I
 
-    .line 160
+    .line 161
     const/high16 v1, 0x205
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -386,7 +386,7 @@
 
     iput v1, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity$MusicViewItemLayoutParams;->padding_top:I
 
-    .line 162
+    .line 163
     :cond_0
     return-void
 .end method
@@ -399,12 +399,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 182
+    .line 183
     invoke-virtual {p2}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 183
+    .line 184
     .local v1, inflator:Landroid/view/LayoutInflater;
     const v5, 0x7f030029
 
@@ -414,7 +414,7 @@
 
     move-result-object v0
 
-    .line 184
+    .line 185
     .local v0, container:Landroid/view/View;
     const v5, 0x7f080046
 
@@ -424,46 +424,46 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 185
+    .line 186
     .local v4, textView:Landroid/widget/TextView;
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 186
+    .line 187
     const/4 v5, 0x2
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 187
+    .line 188
     const/4 v5, 0x1
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 188
+    .line 189
     invoke-virtual {v0, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 189
+    .line 190
     const-string v5, ""
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 190
+    .line 191
     const/high16 v5, 0x4000
 
     invoke-static {p1, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v3
 
-    .line 191
+    .line 192
     .local v3, measureW:I
     invoke-static {v7, v7}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
 
-    .line 192
+    .line 193
     .local v2, measureH:I
     invoke-virtual {v0, v3, v2}, Landroid/view/View;->measure(II)V
 
-    .line 193
+    .line 194
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v5
@@ -483,12 +483,12 @@
 
     const/4 v8, 0x0
 
-    .line 165
+    .line 166
     invoke-virtual {p2}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
-    .line 166
+    .line 167
     .local v2, inflator:Landroid/view/LayoutInflater;
     const v6, 0x7f030029
 
@@ -498,7 +498,7 @@
 
     move-result-object v0
 
-    .line 168
+    .line 169
     .local v0, container:Landroid/view/View;
     invoke-virtual {v0, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -506,52 +506,52 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 169
+    .line 170
     .local v1, folderNameTextView:Landroid/widget/TextView;
     invoke-virtual {v0, v9, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 170
+    .line 171
     invoke-virtual {v0, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 171
+    .line 172
     .local v3, itemNumberTextView:Landroid/widget/TextView;
     invoke-virtual {v0, v10, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 172
+    .line 173
     const-string v6, ""
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 173
+    .line 174
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 174
+    .line 175
     const-string v6, ""
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 175
+    .line 176
     const/high16 v6, 0x4000
 
     invoke-static {p1, v6}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v5
 
-    .line 176
+    .line 177
     .local v5, measureW:I
     invoke-static {v8, v8}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v4
 
-    .line 177
+    .line 178
     .local v4, measureH:I
     invoke-virtual {v0, v5, v4}, Landroid/view/View;->measure(II)V
 
-    .line 178
+    .line 179
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6

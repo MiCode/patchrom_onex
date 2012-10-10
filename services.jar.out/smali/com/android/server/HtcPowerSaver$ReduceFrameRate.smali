@@ -27,10 +27,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 1250
+    .line 1246
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$ReduceFrameRate;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 1251
+    .line 1247
     const-string v2, "ReduceFrameRate"
 
     const-string v3, "powersaver_reduce_frame_rate"
@@ -45,10 +45,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1252
+    .line 1248
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$ReduceFrameRate;->mContext:Landroid/content/Context;
 
-    .line 1253
+    .line 1249
     return-void
 .end method
 
@@ -58,14 +58,14 @@
     .locals 2
 
     .prologue
-    .line 1263
+    .line 1259
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "applyPowerSaverSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1264
+    .line 1260
     const/4 v0, 0x0
 
     return v0
@@ -75,14 +75,14 @@
     .locals 2
 
     .prologue
-    .line 1269
+    .line 1265
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "restoreSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1270
+    .line 1266
     const/4 v0, 0x0
 
     return v0
@@ -92,14 +92,14 @@
     .locals 2
 
     .prologue
-    .line 1257
+    .line 1253
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "saveSystemSettings: do nothing"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1258
+    .line 1254
     const/4 v0, 0x0
 
     return v0

@@ -133,7 +133,7 @@
     .line 81
     sput-boolean v3, Landroid/provider/DrmStore;->SWITCH_TO_CID:Z
 
-    .line 8183
+    .line 8185
     new-array v0, v7, [Landroid/net/Uri;
 
     sget-object v1, Landroid/provider/DrmStore$Images;->CONTENT_URI:Landroid/net/Uri;
@@ -154,7 +154,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->DrmUriCollection:[Landroid/net/Uri;
 
-    .line 8230
+    .line 8232
     new-array v0, v7, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -175,7 +175,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->TITLE_PROJECTION:[Ljava/lang/String;
 
-    .line 8237
+    .line 8239
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -188,7 +188,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->FILEPATH_PROJECTION:[Ljava/lang/String;
 
-    .line 8242
+    .line 8244
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -201,7 +201,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->CONSTRAINT_PROJECTION:[Ljava/lang/String;
 
-    .line 8247
+    .line 8249
     const/16 v0, 0x9
 
     new-array v0, v0, [Ljava/lang/String;
@@ -252,7 +252,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->DELIVERY_TYPE_PROJECTION:[Ljava/lang/String;
 
-    .line 8260
+    .line 8262
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -269,7 +269,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->DCFLIST_PROJECTION:[Ljava/lang/String;
 
-    .line 8267
+    .line 8269
     new-array v0, v7, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -290,7 +290,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->METADATA_PROJECTION:[Ljava/lang/String;
 
-    .line 8274
+    .line 8276
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -303,7 +303,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->MIDLET_PROJECTION:[Ljava/lang/String;
 
-    .line 8279
+    .line 8281
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "album_id"
@@ -320,7 +320,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->ALBUMS_PROJECTION:[Ljava/lang/String;
 
-    .line 8285
+    .line 8287
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "artist_id"
@@ -337,7 +337,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->ARTISTS_PROJECTION:[Ljava/lang/String;
 
-    .line 8291
+    .line 8293
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -370,7 +370,7 @@
 
     sput-object v0, Landroid/provider/DrmStore;->STAMP_PROJECTION:[Ljava/lang/String;
 
-    .line 8325
+    .line 8327
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "chmod"
@@ -395,9 +395,9 @@
 
     .prologue
     .line 70
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8330
+    .line 8332
     return-void
 .end method
 
@@ -406,7 +406,7 @@
     .parameter "mimeType"
 
     .prologue
-    .line 8175
+    .line 8177
     const-string v0, "application/java-archive"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -421,10 +421,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 8176
+    .line 8178
     const/4 v0, 0x1
 
-    .line 8178
+    .line 8180
     :goto_0
     return v0
 
@@ -471,6 +471,12 @@
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
+    const/16 v1, 0xaf
+
+    if-eq v0, v1, :cond_0
+
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
     const/16 v1, 0x50
 
     if-eq v0, v1, :cond_0
@@ -481,11 +487,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 8046
+    .line 8048
     :cond_0
     const/4 v0, 0x1
 
-    .line 8048
+    .line 8050
     :goto_0
     return v0
 
@@ -662,7 +668,7 @@
     .local v12, fis:Ljava/io/InputStream;
     new-instance v9, Landroid/drm/mobile1/DrmRawContent;
 
-    invoke-virtual {v12}, Ljava/io/InputStream;->available()I
+    invoke-virtual {v12}, Ljava/io/FileInputStream;->available()I
 
     move-result v2
 
@@ -686,7 +692,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6818
-    invoke-virtual {v12}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
     .line 6819
     const/4 v2, 0x0
@@ -709,7 +715,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6824
-    invoke-virtual {v12}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
     .line 6825
     const/4 v2, 0x0
@@ -806,7 +812,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 6845
-    const-string/jumbo v2, "is_visible_in_downloads_ui"
+    const-string v2, "is_visible_in_downloads_ui"
 
     const/4 v3, 0x0
 
@@ -886,7 +892,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6885
-    invoke-virtual {v12}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -1397,7 +1403,7 @@
     .restart local v16       #stream:Ljava/io/InputStream;
     :cond_2
     :try_start_3
-    const-string/jumbo v19, "image/"
+    const-string v19, "image/"
 
     move-object/from16 v0, v19
 
@@ -2373,7 +2379,7 @@
     .restart local v37       #mimeType:Ljava/lang/String;
     :cond_7
     :try_start_5
-    const-string/jumbo v7, "image/"
+    const-string v7, "image/"
 
     move-object/from16 v0, v37
 
@@ -5311,12 +5317,6 @@
     if-eq v3, v5, :cond_1a
 
     :cond_19
-    sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
-
-    const/16 v5, 0xa1
-
-    if-eq v3, v5, :cond_1a
-
     sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v5, 0x63
@@ -6563,7 +6563,7 @@
     .restart local v71       #intent:Landroid/content/Intent;
     :cond_33
     :try_start_1f
-    const-string/jumbo v3, "image/"
+    const-string v3, "image/"
 
     invoke-virtual {v6, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -9664,7 +9664,7 @@
     if-eqz v18, :cond_6e
 
     .line 2381
-    const-string/jumbo v3, "is_ringtone"
+    const-string v3, "is_ringtone"
 
     const-string v5, "1"
 
@@ -9757,7 +9757,7 @@
     if-gez v3, :cond_6c
 
     .line 2384
-    const-string/jumbo v3, "is_ringtone"
+    const-string v3, "is_ringtone"
 
     const-string v5, "1"
 
@@ -10206,6 +10206,8 @@
     goto/16 :goto_b
 
     .line 1205
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -12228,7 +12230,7 @@
     .restart local v53       #intent:Landroid/content/Intent;
     :cond_26
     :try_start_1d
-    const-string/jumbo v4, "image/"
+    const-string v4, "image/"
 
     move-object/from16 v0, v60
 
@@ -15008,7 +15010,7 @@
     if-gez v4, :cond_5b
 
     .line 4330
-    const-string/jumbo v4, "is_ringtone"
+    const-string v4, "is_ringtone"
 
     const-string v8, "1"
 
@@ -15591,7 +15593,7 @@
 
     const/4 v3, 0x0
 
-    .line 8145
+    .line 8147
     if-eqz p0, :cond_0
 
     const-string v4, ""
@@ -15605,18 +15607,18 @@
     :cond_0
     move v2, v3
 
-    .line 8167
+    .line 8169
     :cond_1
     :goto_0
     return v2
 
-    .line 8149
+    .line 8151
     :cond_2
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8152
+    .line 8154
     .local v0, checkF:Ljava/io/File;
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -15625,28 +15627,28 @@
 
     if-nez v4, :cond_3
 
-    .line 8153
+    .line 8155
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 8156
+    .line 8158
     :cond_3
     if-eqz p1, :cond_1
 
-    .line 8157
+    .line 8159
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
     invoke-virtual {v0, v4, v5}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 8158
+    .line 8160
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
     invoke-virtual {v0, v4, v5}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 8159
+    .line 8161
     const/4 v4, 0x1
 
     const/4 v5, 0x0
@@ -15657,11 +15659,11 @@
 
     goto :goto_0
 
-    .line 8163
+    .line 8165
     :catch_0
     move-exception v1
 
-    .line 8164
+    .line 8166
     .local v1, e:Ljava/lang/Exception;
     const-string v2, "DrmStore"
 
@@ -15671,12 +15673,12 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8165
+    .line 8167
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move v2, v3
 
-    .line 8167
+    .line 8169
     goto :goto_0
 .end method
 
@@ -16275,7 +16277,7 @@
 
     .line 584
     :cond_11
-    const-string/jumbo v23, "image/"
+    const-string v23, "image/"
 
     move-object/from16 v0, v23
 
@@ -17971,7 +17973,7 @@
     .local v24, fis:Ljava/io/InputStream;
     new-instance v11, Landroid/drm/mobile1/DrmRawContent;
 
-    invoke-virtual/range {v24 .. v24}, Ljava/io/InputStream;->available()I
+    invoke-virtual/range {v24 .. v24}, Ljava/io/FileInputStream;->available()I
 
     move-result v3
 
@@ -18703,12 +18705,12 @@
     .locals 1
 
     .prologue
-    .line 8061
+    .line 8063
     sget-boolean v0, Landroid/provider/DrmStore;->SWITCH_TO_CID:Z
 
     if-eqz v0, :cond_1
 
-    .line 8062
+    .line 8064
     sget-boolean v0, Landroid/provider/DrmStore;->DISABLE_FORWORD_LOCK:Z
 
     if-nez v0, :cond_0
@@ -18721,20 +18723,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 8064
+    .line 8066
     const/4 v0, 0x1
 
-    .line 8071
+    .line 8073
     :goto_0
     return v0
 
-    .line 8067
+    .line 8069
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 8071
+    .line 8073
     :cond_1
     invoke-static {}, Landroid/provider/DrmStore;->SupportForwardLockOnly()Z
 
@@ -18749,12 +18751,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 8083
+    .line 8085
     sget-boolean v1, Landroid/provider/DrmStore;->SWITCH_TO_CID:Z
 
     if-eqz v1, :cond_0
 
-    .line 8085
+    .line 8087
     sget-boolean v1, Landroid/provider/DrmStore;->DISABLE_FORWORD_LOCK:Z
 
     if-nez v1, :cond_0
@@ -18767,10 +18769,10 @@
 
     if-nez v1, :cond_0
 
-    .line 8087
+    .line 8089
     const/4 v0, 0x1
 
-    .line 8097
+    .line 8099
     :cond_0
     return v0
 .end method
@@ -18783,12 +18785,12 @@
 
     const/4 v1, 0x0
 
-    .line 8107
+    .line 8109
     sget-boolean v2, Landroid/provider/DrmStore;->SWITCH_TO_CID:Z
 
     if-eqz v2, :cond_2
 
-    .line 8108
+    .line 8110
     sget-boolean v2, Landroid/provider/DrmStore;->DISABLE_FORWORD_LOCK:Z
 
     if-nez v2, :cond_1
@@ -18801,7 +18803,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 8136
+    .line 8138
     :cond_0
     :goto_0
     return v0
@@ -18809,10 +18811,10 @@
     :cond_1
     move v0, v1
 
-    .line 8113
+    .line 8115
     goto :goto_0
 
-    .line 8117
+    .line 8119
     :cond_2
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -18828,7 +18830,7 @@
 
     move v0, v1
 
-    .line 8136
+    .line 8138
     goto :goto_0
 .end method
 
@@ -19645,7 +19647,7 @@
     .restart local v27       #res:Landroid/provider/DrmStore$DrmConstraint;
     :goto_2
     :try_start_3
-    invoke-virtual/range {v22 .. v22}, Ljava/io/InputStream;->close()V
+    invoke-virtual/range {v22 .. v22}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
@@ -20371,7 +20373,7 @@
     .end local v32           #rc:Landroid/content/res/Resources;
     .end local v35           #tv:Landroid/widget/TextView;
     :cond_6
-    invoke-virtual/range {v24 .. v24}, Ljava/io/InputStream;->close()V
+    invoke-virtual/range {v24 .. v24}, Ljava/io/FileInputStream;->close()V
 
     .line 5946
     if-eqz v33, :cond_9
@@ -21272,7 +21274,7 @@
     .line 6140
     .end local v31           #rightsIssuer:Ljava/lang/String;
     :cond_5
-    invoke-virtual/range {v23 .. v23}, Ljava/io/InputStream;->close()V
+    invoke-virtual/range {v23 .. v23}, Ljava/io/FileInputStream;->close()V
 
     .line 6142
     if-eqz v30, :cond_14
@@ -24458,7 +24460,7 @@
     :cond_0
     const-string v8, "DrmStore"
 
-    const-string/jumbo v9, "installRightsObject Input error."
+    const-string v9, "installRightsObject Input error."
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -27014,7 +27016,7 @@
     .local v11, fis:Ljava/io/InputStream;
     new-instance v8, Landroid/drm/mobile1/DrmRawContent;
 
-    invoke-virtual {v11}, Ljava/io/InputStream;->available()I
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->available()I
 
     move-result v1
 
@@ -27028,7 +27030,7 @@
 
     .line 6742
     .local v13, issuer:Ljava/lang/String;
-    invoke-virtual {v11}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
     .line 6743
     if-nez v13, :cond_5
@@ -27041,7 +27043,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6747
-    invoke-virtual {v11}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
     .line 6748
     const/4 v1, -0x7
@@ -27333,7 +27335,7 @@
     .local v11, fis:Ljava/io/InputStream;
     new-instance v8, Landroid/drm/mobile1/DrmRawContent;
 
-    invoke-virtual {v11}, Ljava/io/InputStream;->available()I
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->available()I
 
     move-result v1
 
@@ -27357,7 +27359,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6952
-    invoke-virtual {v11}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
     .line 6953
     const/16 v1, -0x9
@@ -27380,7 +27382,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6958
-    invoke-virtual {v11}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
     .line 6959
     const/16 v1, -0x9
@@ -27462,7 +27464,7 @@
     invoke-virtual {v15, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 6976
-    const-string/jumbo v1, "is_visible_in_downloads_ui"
+    const-string v1, "is_visible_in_downloads_ui"
 
     const/4 v2, 0x0
 
@@ -27534,7 +27536,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 7017
-    invoke-virtual {v11}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 

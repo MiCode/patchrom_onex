@@ -88,19 +88,19 @@
     .parameter "wifiManager"
 
     .prologue
-    .line 336
+    .line 352
     const/4 v0, 0x0
 
-    .line 338
+    .line 354
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 340
+    .line 356
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->NotifyWifiPhoneCallComeIn()Z
 
     move-result v0
 
-    .line 342
+    .line 358
     :cond_0
     return v0
 .end method
@@ -110,19 +110,19 @@
     .parameter "wifiManager"
 
     .prologue
-    .line 346
+    .line 362
     const/4 v0, 0x0
 
-    .line 348
+    .line 364
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 350
+    .line 366
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->NotifyWifiPhoneCallEnd()Z
 
     move-result v0
 
-    .line 352
+    .line 368
     :cond_0
     return v0
 .end method
@@ -134,13 +134,13 @@
     .parameter "srcHandler"
 
     .prologue
-    .line 363
+    .line 379
     if-eqz p0, :cond_0
 
-    .line 365
+    .line 381
     invoke-virtual {p0, p1, p2}, Landroid/net/wifi/WifiManager;->asyncConnect(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 367
+    .line 383
     :cond_0
     return-void
 .end method
@@ -254,6 +254,28 @@
     return-object v0
 .end method
 
+.method public static getAssociationManual(Landroid/net/wifi/WifiManager;)I
+    .locals 1
+    .parameter "wifiManager"
+
+    .prologue
+    .line 316
+    const/4 v0, 0x0
+
+    .line 317
+    .local v0, result:I
+    if-eqz p0, :cond_0
+
+    .line 318
+    invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->getAssociationManual()I
+
+    move-result v0
+
+    .line 320
+    :cond_0
+    return v0
+.end method
+
 .method public static getClientInfo(Landroid/net/wifi/WifiManager;)Ljava/lang/String;
     .locals 1
     .parameter "wifiManager"
@@ -298,19 +320,19 @@
     .parameter "wifiManager"
 
     .prologue
-    .line 326
+    .line 342
     const/4 v0, 0x0
 
-    .line 328
+    .line 344
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 330
+    .line 346
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->getDockWifiAutoEnabled()Z
 
     move-result v0
 
-    .line 332
+    .line 348
     :cond_0
     return v0
 .end method
@@ -496,6 +518,29 @@
     return-void
 .end method
 
+.method public static setAssociationManual(Landroid/net/wifi/WifiManager;I)Z
+    .locals 1
+    .parameter "wifiManager"
+    .parameter "isManual"
+
+    .prologue
+    .line 308
+    const/4 v0, 0x0
+
+    .line 309
+    .local v0, result:Z
+    if-eqz p0, :cond_0
+
+    .line 310
+    invoke-virtual {p0, p1}, Landroid/net/wifi/WifiManager;->setAssociationManual(I)Z
+
+    move-result v0
+
+    .line 312
+    :cond_0
+    return v0
+.end method
+
 .method public static setConnectionPolicyEnabled(Landroid/net/wifi/WifiManager;Z)Z
     .locals 1
     .parameter "wifiManager"
@@ -530,19 +575,19 @@
     .parameter "enabled"
 
     .prologue
-    .line 316
+    .line 332
     const/4 v0, 0x0
 
-    .line 318
+    .line 334
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 320
+    .line 336
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiManager;->setDockWifiAutoEnabled(Z)Z
 
     move-result v0
 
-    .line 322
+    .line 338
     :cond_0
     return v0
 .end method
@@ -654,19 +699,19 @@
     .parameter "BSSID"
 
     .prologue
-    .line 423
+    .line 439
     const/4 v0, 0x0
 
-    .line 424
+    .line 440
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 426
+    .line 442
     invoke-virtual {p0, p1, p2}, Landroid/net/wifi/WifiManager;->setWifiDisplayConfigure(ILjava/lang/String;)Z
 
     move-result v0
 
-    .line 428
+    .line 444
     :cond_0
     return v0
 .end method
@@ -677,19 +722,19 @@
     .parameter "disabled"
 
     .prologue
-    .line 441
+    .line 457
     const/4 v0, 0x0
 
-    .line 443
+    .line 459
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 445
+    .line 461
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiManager;->setWifiDisplayUnscan(Z)Z
 
     move-result v0
 
-    .line 448
+    .line 464
     :cond_0
     return v0
 .end method
@@ -801,19 +846,19 @@
     .parameter "wifiManager"
 
     .prologue
-    .line 403
+    .line 419
     const/4 v0, 0x0
 
-    .line 404
+    .line 420
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 406
+    .line 422
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->startDongleScan()Z
 
     move-result v0
 
-    .line 408
+    .line 424
     :cond_0
     return v0
 .end method
@@ -824,19 +869,19 @@
     .parameter "channel"
 
     .prologue
-    .line 392
+    .line 408
     const/4 v0, 0x0
 
-    .line 393
+    .line 409
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 395
+    .line 411
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiManager;->startDongleSingleCscan(I)Z
 
     move-result v0
 
-    .line 397
+    .line 413
     :cond_0
     return v0
 .end method
@@ -846,19 +891,19 @@
     .parameter "wifiManager"
 
     .prologue
-    .line 382
+    .line 398
     const/4 v0, 0x0
 
-    .line 383
+    .line 399
     .local v0, result:Z
     if-eqz p0, :cond_0
 
-    .line 385
+    .line 401
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->startScanActive()Z
 
     move-result v0
 
-    .line 387
+    .line 403
     :cond_0
     return v0
 .end method
@@ -869,10 +914,10 @@
     .parameter "wpsConfig"
 
     .prologue
-    .line 308
+    .line 324
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiManager;->startWpsRegistrar(Landroid/net/wifi/WpsInfo;)V
 
-    .line 309
+    .line 325
     return-void
 .end method
 
@@ -893,9 +938,9 @@
     .parameter "wifiManager"
 
     .prologue
-    .line 312
+    .line 328
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->stopWpsRegistrar()V
 
-    .line 313
+    .line 329
     return-void
 .end method

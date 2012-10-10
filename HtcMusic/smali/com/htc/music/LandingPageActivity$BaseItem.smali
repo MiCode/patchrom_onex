@@ -31,24 +31,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1622
+    .line 1458
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1623
+    .line 1459
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mId:I
 
-    .line 1624
+    .line 1460
     iput-object v1, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
-    .line 1625
+    .line 1461
     iput-object v1, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
-    .line 1626
+    .line 1462
     iput-object v1, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
-    .line 1627
+    .line 1463
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1615
+    .line 1451
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$BaseItem;->getId()I
 
     move-result v0
@@ -70,7 +70,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1615
+    .line 1451
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$BaseItem;->getPrimaryText()Ljava/lang/String;
 
     move-result-object v0
@@ -83,7 +83,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1615
+    .line 1451
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$BaseItem;->getSecondaryText()Ljava/lang/String;
 
     move-result-object v0
@@ -91,12 +91,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$5200(Lcom/htc/music/LandingPageActivity$BaseItem;)Ljava/lang/String;
+.method static synthetic access$5000(Lcom/htc/music/LandingPageActivity$BaseItem;)Ljava/lang/String;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 1615
+    .line 1451
     invoke-direct {p0}, Lcom/htc/music/LandingPageActivity$BaseItem;->getArtPath()Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 1658
+    .line 1494
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
     return-object v0
@@ -118,7 +118,7 @@
     .locals 1
 
     .prologue
-    .line 1646
+    .line 1482
     iget v0, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mId:I
 
     return v0
@@ -128,7 +128,7 @@
     .locals 1
 
     .prologue
-    .line 1650
+    .line 1486
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
     return-object v0
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 1654
+    .line 1490
     iget-object v0, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
     return-object v0
@@ -151,10 +151,10 @@
     .parameter "path"
 
     .prologue
-    .line 1642
+    .line 1478
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mArtPath:Ljava/lang/String;
 
-    .line 1643
+    .line 1479
     return-void
 .end method
 
@@ -163,10 +163,10 @@
     .parameter "id"
 
     .prologue
-    .line 1630
+    .line 1466
     iput p1, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mId:I
 
-    .line 1631
+    .line 1467
     return-void
 .end method
 
@@ -175,10 +175,10 @@
     .parameter "text"
 
     .prologue
-    .line 1634
+    .line 1470
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mPrimaryText:Ljava/lang/String;
 
-    .line 1635
+    .line 1471
     return-void
 .end method
 
@@ -187,9 +187,9 @@
     .parameter "text"
 
     .prologue
-    .line 1638
+    .line 1474
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$BaseItem;->mSecondaryText:Ljava/lang/String;
 
-    .line 1639
+    .line 1475
     return-void
 .end method

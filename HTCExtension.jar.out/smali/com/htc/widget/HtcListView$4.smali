@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4549
+    .line 4558
     iput-object p1, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,7 +41,7 @@
     .prologue
     const/high16 v4, 0x3f80
 
-    .line 4563
+    .line 4572
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -54,14 +54,14 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 4564
+    .line 4573
     iget-object v3, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v3, v2}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 4565
+    .line 4574
     .local v1, child:Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setPivotY(F)V
 
-    .line 4566
+    .line 4575
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v3
@@ -82,17 +82,17 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setY(F)V
 
-    .line 4567
+    .line 4576
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setRotationX(F)V
 
-    .line 4563
+    .line 4572
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 4569
+    .line 4578
     .end local v1           #child:Landroid/view/View;
     :cond_0
     const/4 v2, 0x0
@@ -111,7 +111,7 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 4570
+    .line 4579
     iget-object v3, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     #getter for: Lcom/htc/widget/HtcListView;->mIntroAnimatedViews:Ljava/util/ArrayList;
@@ -125,7 +125,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 4571
+    .line 4580
     .local v0, animatedView:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getScaleY()F
 
@@ -137,13 +137,13 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setScaleY(F)V
 
-    .line 4569
+    .line 4578
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 4573
+    .line 4582
     .end local v0           #animatedView:Landroid/view/View;
     :cond_2
     iget-object v3, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
@@ -155,28 +155,28 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 4574
+    .line 4583
     iget-object v3, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     const/4 v4, 0x0
 
     iput-boolean v4, v3, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 4575
+    .line 4584
     iget-object v3, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v3, v3, Lcom/htc/widget/HtcListView;->mIntroMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v3, :cond_3
 
-    .line 4576
+    .line 4585
     iget-object v3, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v3, v3, Lcom/htc/widget/HtcListView;->mIntroMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v3}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 4577
+    .line 4586
     :cond_3
     iget-object v3, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -190,7 +190,7 @@
 
     invoke-interface {v3}, Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;->onAnimationEnd()V
 
-    .line 4578
+    .line 4587
     :cond_4
     return-void
 .end method
@@ -200,21 +200,21 @@
     .parameter "animation"
 
     .prologue
-    .line 4552
+    .line 4561
     iget-object v0, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mIntroMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_0
 
-    .line 4553
+    .line 4562
     iget-object v0, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mIntroMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 4554
+    .line 4563
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
@@ -222,7 +222,7 @@
 
     iput-boolean v1, v0, Lcom/htc/widget/HtcListView;->shouldHideIntroAnimatedViews:Z
 
-    .line 4555
+    .line 4564
     iget-object v0, p0, Lcom/htc/widget/HtcListView$4;->this$0:Lcom/htc/widget/HtcListView;
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mIntroAnimationListener:Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;
@@ -235,7 +235,7 @@
 
     invoke-interface {v0}, Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;->onAnimationStart()V
 
-    .line 4556
+    .line 4565
     :cond_1
     return-void
 .end method

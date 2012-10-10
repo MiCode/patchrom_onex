@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 351
+    .line 353
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$3;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +42,13 @@
     .parameter "arg0"
 
     .prologue
-    .line 353
+    .line 355
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$3;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setResult(I)V
 
-    .line 356
+    .line 358
     return-void
 .end method

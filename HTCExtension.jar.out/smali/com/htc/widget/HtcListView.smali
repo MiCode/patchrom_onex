@@ -805,39 +805,39 @@
 
     iput-boolean v7, p0, Lcom/htc/widget/HtcListView;->isIgnoreFooterViewInBouncing:Z
 
-    .line 4209
+    .line 4211
     const/4 v7, 0x0
 
     iput-object v7, p0, Lcom/htc/widget/HtcListView;->mPressedView:Landroid/view/View;
 
-    .line 4210
+    .line 4212
     const/16 v7, 0x3c
 
     iput v7, p0, Lcom/htc/widget/HtcListView;->mReleaseAnimationDuration:I
 
-    .line 4211
+    .line 4213
     const-wide/16 v7, 0x64
 
     iput-wide v7, p0, Lcom/htc/widget/HtcListView;->mCheckForPressAnimationDelay:J
 
-    .line 4380
+    .line 4389
     const/high16 v7, -0x8000
 
     iput v7, p0, Lcom/htc/widget/HtcListView;->mEmptyHeight:I
 
-    .line 4507
+    .line 4516
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Lcom/htc/widget/HtcListView;->shouldHideIntroAnimatedViews:Z
 
-    .line 4526
+    .line 4535
     new-instance v7, Lcom/htc/widget/HtcListView$3;
 
     invoke-direct {v7, p0}, Lcom/htc/widget/HtcListView$3;-><init>(Lcom/htc/widget/HtcListView;)V
 
     iput-object v7, p0, Lcom/htc/widget/HtcListView;->mIntroAnimationRunnable:Ljava/lang/Runnable;
 
-    .line 4549
+    .line 4558
     new-instance v7, Lcom/htc/widget/HtcListView$4;
 
     invoke-direct {v7, p0}, Lcom/htc/widget/HtcListView$4;-><init>(Lcom/htc/widget/HtcListView;)V
@@ -3848,12 +3848,12 @@
     .parameter "canvas"
 
     .prologue
-    .line 5730
+    .line 5747
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v6
 
-    .line 5731
+    .line 5748
     .local v6, childCount:I
     const/4 v8, 0x0
 
@@ -3867,7 +3867,7 @@
 
     if-eqz v13, :cond_0
 
-    .line 5732
+    .line 5749
     move-object/from16 v0, p0
 
     iget-boolean v13, v0, Lcom/htc/widget/HtcListView;->isIgnoreFooterViewInBouncing:Z
@@ -3888,11 +3888,11 @@
 
     if-eq v13, v14, :cond_1
 
-    .line 5755
+    .line 5772
     :cond_0
     return-void
 
-    .line 5735
+    .line 5752
     :cond_1
     move-object/from16 v0, p0
 
@@ -3900,19 +3900,19 @@
 
     move-result-object v3
 
-    .line 5736
+    .line 5753
     .local v3, animatedView:Landroid/view/View;
     invoke-virtual {v3}, Landroid/view/View;->getScaleX()F
 
     move-result v9
 
-    .line 5737
+    .line 5754
     .local v9, scaleX:F
     invoke-virtual {v3}, Landroid/view/View;->getScaleY()F
 
     move-result v10
 
-    .line 5738
+    .line 5755
     .local v10, scaleY:F
     invoke-virtual {v3}, Landroid/view/View;->getWidth()I
 
@@ -3920,7 +3920,7 @@
 
     int-to-float v12, v13
 
-    .line 5739
+    .line 5756
     .local v12, width:F
     invoke-virtual {v3}, Landroid/view/View;->getHeight()I
 
@@ -3928,7 +3928,7 @@
 
     int-to-float v7, v13
 
-    .line 5740
+    .line 5757
     .local v7, height:F
     move-object/from16 v0, p0
 
@@ -3938,7 +3938,7 @@
 
     div-float v1, v13, v12
 
-    .line 5741
+    .line 5758
     .local v1, animScaleX:F
     move-object/from16 v0, p0
 
@@ -3948,7 +3948,7 @@
 
     div-float v2, v13, v7
 
-    .line 5742
+    .line 5759
     .local v2, animScaleY:F
     const/high16 v13, 0x3f80
 
@@ -3962,7 +3962,7 @@
 
     sub-float v4, v13, v14
 
-    .line 5743
+    .line 5760
     .local v4, boundX:F
     const/high16 v13, 0x3f80
 
@@ -3976,7 +3976,7 @@
 
     sub-float v5, v13, v14
 
-    .line 5744
+    .line 5761
     .local v5, boundY:F
     cmpg-float v13, v9, v4
 
@@ -3986,13 +3986,13 @@
 
     if-gez v13, :cond_3
 
-    .line 5745
+    .line 5762
     :cond_2
     new-instance v11, Landroid/graphics/Rect;
 
     invoke-direct {v11}, Landroid/graphics/Rect;-><init>()V
 
-    .line 5746
+    .line 5763
     .local v11, shadowBounds:Landroid/graphics/Rect;
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
@@ -4000,35 +4000,35 @@
 
     iput v13, v11, Landroid/graphics/Rect;->top:I
 
-    .line 5747
+    .line 5764
     invoke-virtual {v3}, Landroid/view/View;->getBottom()I
 
     move-result v13
 
     iput v13, v11, Landroid/graphics/Rect;->bottom:I
 
-    .line 5748
+    .line 5765
     invoke-virtual {v3}, Landroid/view/View;->getLeft()I
 
     move-result v13
 
     iput v13, v11, Landroid/graphics/Rect;->left:I
 
-    .line 5749
+    .line 5766
     invoke-virtual {v3}, Landroid/view/View;->getRight()I
 
     move-result v13
 
     iput v13, v11, Landroid/graphics/Rect;->right:I
 
-    .line 5751
+    .line 5768
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/HtcListView;->mPressShadowTopBottom:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v13, v11}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 5752
+    .line 5769
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/HtcListView;->mPressShadowTopBottom:Landroid/graphics/drawable/Drawable;
@@ -4037,7 +4037,7 @@
 
     invoke-virtual {v13, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 5731
+    .line 5748
     .end local v11           #shadowBounds:Landroid/graphics/Rect;
     :cond_3
     add-int/lit8 v8, v8, 0x1
@@ -4804,7 +4804,7 @@
 
     const/4 v9, 0x0
 
-    .line 5517
+    .line 5530
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
@@ -4815,7 +4815,7 @@
 
     invoke-virtual {p1, v7}, Landroid/view/View;->setPivotX(F)V
 
-    .line 5518
+    .line 5531
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v7
@@ -4826,14 +4826,14 @@
 
     invoke-virtual {p1, v7}, Landroid/view/View;->setPivotY(F)V
 
-    .line 5519
+    .line 5532
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v7
 
     int-to-float v6, v7
 
-    .line 5520
+    .line 5533
     .local v6, width:F
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
@@ -4841,7 +4841,7 @@
 
     int-to-float v0, v7
 
-    .line 5522
+    .line 5535
     .local v0, height:F
     iget v7, p0, Lcom/htc/widget/HtcListView;->mScaleYDifference:F
 
@@ -4849,7 +4849,7 @@
 
     div-float v5, v7, v0
 
-    .line 5523
+    .line 5536
     .local v5, scaleY:F
     iget v7, p0, Lcom/htc/widget/HtcListView;->mScaleXDifference:F
 
@@ -4857,7 +4857,7 @@
 
     div-float v4, v7, v6
 
-    .line 5526
+    .line 5539
     .local v4, scaleX:F
     const-string v7, "scaleX"
 
@@ -4871,7 +4871,7 @@
 
     move-result-object v2
 
-    .line 5527
+    .line 5540
     .local v2, pvhScaleX:Landroid/animation/PropertyValuesHolder;
     const-string v7, "scaleY"
 
@@ -4885,7 +4885,7 @@
 
     move-result-object v3
 
-    .line 5528
+    .line 5541
     .local v3, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     new-array v7, v11, [Landroid/animation/PropertyValuesHolder;
 
@@ -4897,20 +4897,20 @@
 
     move-result-object v1
 
-    .line 5529
+    .line 5542
     .local v1, pressAnim:Landroid/animation/ObjectAnimator;
     const-wide/16 v7, 0x64
 
     invoke-virtual {v1, v7, v8}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 5530
+    .line 5543
     new-instance v7, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v7}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     invoke-virtual {v1, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 5531
+    .line 5544
     return-object v1
 .end method
 
@@ -4920,14 +4920,14 @@
     .parameter "onlyRelease"
 
     .prologue
-    .line 5541
+    .line 5554
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v8
 
     int-to-float v7, v8
 
-    .line 5542
+    .line 5555
     .local v7, width:F
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
@@ -4935,7 +4935,7 @@
 
     int-to-float v1, v8
 
-    .line 5544
+    .line 5557
     .local v1, height:F
     iget v8, p0, Lcom/htc/widget/HtcListView;->mScaleYDifference:F
 
@@ -4943,7 +4943,7 @@
 
     div-float v6, v8, v1
 
-    .line 5545
+    .line 5558
     .local v6, scaleY:F
     iget v8, p0, Lcom/htc/widget/HtcListView;->mScaleXDifference:F
 
@@ -4951,25 +4951,25 @@
 
     div-float v5, v8, v7
 
-    .line 5547
+    .line 5560
     .local v5, scaleX:F
     const/4 v2, 0x0
 
-    .line 5548
+    .line 5561
     .local v2, pvhScaleX:Landroid/animation/PropertyValuesHolder;
     const/4 v3, 0x0
 
-    .line 5549
+    .line 5562
     .local v3, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     iget v8, p0, Lcom/htc/widget/HtcListView;->mReleaseAnimationDuration:I
 
     add-int/lit8 v0, v8, 0x64
 
-    .line 5550
+    .line 5563
     .local v0, duration:I
     if-eqz p2, :cond_0
 
-    .line 5551
+    .line 5564
     const-string v8, "scaleX"
 
     const/4 v9, 0x2
@@ -4990,7 +4990,7 @@
 
     move-result-object v2
 
-    .line 5552
+    .line 5565
     const-string v8, "scaleY"
 
     const/4 v9, 0x2
@@ -5011,10 +5011,10 @@
 
     move-result-object v3
 
-    .line 5553
+    .line 5566
     iget v0, p0, Lcom/htc/widget/HtcListView;->mReleaseAnimationDuration:I
 
-    .line 5558
+    .line 5571
     :goto_0
     const/4 v8, 0x2
 
@@ -5032,23 +5032,23 @@
 
     move-result-object v4
 
-    .line 5559
+    .line 5572
     .local v4, releaseAnimation:Landroid/animation/ObjectAnimator;
     int-to-long v8, v0
 
     invoke-virtual {v4, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 5560
+    .line 5573
     new-instance v8, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v8}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     invoke-virtual {v4, v8}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 5561
+    .line 5574
     return-object v4
 
-    .line 5555
+    .line 5568
     .end local v4           #releaseAnimation:Landroid/animation/ObjectAnimator;
     :cond_0
     const-string v8, "scaleX"
@@ -5077,7 +5077,7 @@
 
     move-result-object v2
 
-    .line 5556
+    .line 5569
     const-string v8, "scaleY"
 
     const/4 v9, 0x3
@@ -5120,10 +5120,10 @@
 
     const/4 v6, 0x0
 
-    .line 4761
+    .line 4770
     const/4 v0, 0x0
 
-    .line 4762
+    .line 4771
     .local v0, animator:Landroid/animation/ObjectAnimator;
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->animatorList:Ljava/util/ArrayList;
 
@@ -5133,8 +5133,8 @@
 
     if-lt p1, v3, :cond_0
 
-    .line 4763
-    const-string v3, "y"
+    .line 4772
+    const-string/jumbo v3, "y"
 
     new-array v4, v4, [F
 
@@ -5152,7 +5152,7 @@
 
     move-result-object v2
 
-    .line 4764
+    .line 4773
     .local v2, y:Landroid/animation/PropertyValuesHolder;
     new-array v3, v7, [Landroid/animation/PropertyValuesHolder;
 
@@ -5162,16 +5162,16 @@
 
     move-result-object v0
 
-    .line 4765
+    .line 4774
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->animatorList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4774
+    .line 4783
     :goto_0
     return-object v0
 
-    .line 4767
+    .line 4776
     .end local v2           #y:Landroid/animation/PropertyValuesHolder;
     :cond_0
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->animatorList:Ljava/util/ArrayList;
@@ -5183,17 +5183,17 @@
     .end local v0           #animator:Landroid/animation/ObjectAnimator;
     check-cast v0, Landroid/animation/ObjectAnimator;
 
-    .line 4768
+    .line 4777
     .restart local v0       #animator:Landroid/animation/ObjectAnimator;
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->getValues()[Landroid/animation/PropertyValuesHolder;
 
     move-result-object v1
 
-    .line 4769
+    .line 4778
     .local v1, pvhArray:[Landroid/animation/PropertyValuesHolder;
     aget-object v2, v1, v6
 
-    .line 4770
+    .line 4779
     .restart local v2       #y:Landroid/animation/PropertyValuesHolder;
     new-array v3, v4, [F
 
@@ -5209,7 +5209,7 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/PropertyValuesHolder;->setFloatValues([F)V
 
-    .line 4771
+    .line 4780
     invoke-virtual {v0, p2}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -5264,10 +5264,10 @@
     .parameter "index"
 
     .prologue
-    .line 4601
+    .line 4610
     const/4 v0, 0x0
 
-    .line 4602
+    .line 4611
     .local v0, listener:Landroid/animation/AnimatorListenerAdapter;
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorListenerPool:Ljava/util/ArrayList;
 
@@ -5277,7 +5277,7 @@
 
     if-ge p1, v1, :cond_0
 
-    .line 4603
+    .line 4612
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorListenerPool:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5287,7 +5287,7 @@
     .end local v0           #listener:Landroid/animation/AnimatorListenerAdapter;
     check-cast v0, Landroid/animation/AnimatorListenerAdapter;
 
-    .line 4604
+    .line 4613
     .restart local v0       #listener:Landroid/animation/AnimatorListenerAdapter;
     :cond_0
     return-object v0
@@ -5627,7 +5627,7 @@
     .parameter "isCacheView"
 
     .prologue
-    .line 4509
+    .line 4518
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -5638,12 +5638,12 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 4510
+    .line 4519
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 4511
+    .line 4520
     .local v0, animatedView:Landroid/view/View;
     if-eqz p1, :cond_0
 
@@ -5651,18 +5651,18 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4512
+    .line 4521
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setScaleY(F)V
 
-    .line 4509
+    .line 4518
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 4514
+    .line 4523
     .end local v0           #animatedView:Landroid/view/View;
     :cond_1
     return-void
@@ -6780,12 +6780,12 @@
     .locals 20
 
     .prologue
-    .line 4608
+    .line 4617
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v3
 
-    .line 4609
+    .line 4618
     .local v3, childCount:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isIntroAnimationEnabled()Z
 
@@ -6793,7 +6793,7 @@
 
     if-eqz v16, :cond_4
 
-    .line 4611
+    .line 4620
     new-instance v16, Landroid/animation/AnimatorSet;
 
     invoke-direct/range {v16 .. v16}, Landroid/animation/AnimatorSet;-><init>()V
@@ -6804,7 +6804,7 @@
 
     iput-object v0, v1, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 4612
+    .line 4621
     const-string v16, "scaleX"
 
     const/16 v17, 0x2
@@ -6821,7 +6821,7 @@
 
     move-result-object v11
 
-    .line 4613
+    .line 4622
     .local v11, pvhScaleX:Landroid/animation/PropertyValuesHolder;
     const-string v16, "scaleY"
 
@@ -6839,7 +6839,7 @@
 
     move-result-object v12
 
-    .line 4614
+    .line 4623
     .local v12, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     sget-object v16, Lcom/htc/widget/HtcListView;->INTRO_ANIMATION_DURATIONS:[I
 
@@ -6847,23 +6847,23 @@
 
     aget v7, v16, v17
 
-    .line 4615
+    .line 4624
     .local v7, initialDuration:I
     const/4 v4, 0x0
 
-    .line 4616
+    .line 4625
     .local v4, delay:I
     const/16 v5, 0x32
 
-    .line 4617
+    .line 4626
     .local v5, delayDelta:I
     const/4 v10, 0x0
 
-    .line 4618
+    .line 4627
     .local v10, originY:F
     const/high16 v14, -0x3d4c
 
-    .line 4619
+    .line 4628
     .local v14, x:F
     const/4 v6, 0x0
 
@@ -6871,14 +6871,14 @@
     :goto_0
     if-ge v6, v3, :cond_3
 
-    .line 4620
+    .line 4629
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v6}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 4621
+    .line 4630
     .local v2, child:Landroid/view/View;
     const/16 v16, 0x0
 
@@ -6886,7 +6886,7 @@
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setPivotY(F)V
 
-    .line 4622
+    .line 4631
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v16
@@ -6903,7 +6903,7 @@
 
     if-le v0, v1, :cond_2
 
-    .line 4623
+    .line 4632
     const/high16 v16, -0x3d4c
 
     cmpl-float v16, v14, v16
@@ -6912,13 +6912,13 @@
 
     const/high16 v14, -0x3d10
 
-    .line 4624
+    .line 4633
     :cond_0
     const/high16 v16, 0x4170
 
     add-float v14, v14, v16
 
-    .line 4625
+    .line 4634
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v16
@@ -6935,7 +6935,7 @@
 
     int-to-float v10, v0
 
-    .line 4628
+    .line 4637
     :goto_1
     const-string v16, "rotationX"
 
@@ -6961,9 +6961,9 @@
 
     move-result-object v13
 
-    .line 4629
+    .line 4638
     .local v13, rotateX:Landroid/animation/PropertyValuesHolder;
-    const-string v16, "y"
+    const-string/jumbo v16, "y"
 
     const/16 v17, 0x2
 
@@ -6995,7 +6995,7 @@
 
     move-result-object v15
 
-    .line 4630
+    .line 4639
     .local v15, y:Landroid/animation/PropertyValuesHolder;
     const/16 v16, 0x4
 
@@ -7027,7 +7027,7 @@
 
     move-result-object v8
 
-    .line 4631
+    .line 4640
     .local v8, introAnimation:Landroid/animation/ObjectAnimator;
     int-to-long v0, v7
 
@@ -7037,7 +7037,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4632
+    .line 4641
     int-to-long v0, v4
 
     move-wide/from16 v16, v0
@@ -7046,7 +7046,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 4633
+    .line 4642
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDefaultIntroAnimationInterpolator:Landroid/view/animation/DecelerateInterpolator;
@@ -7057,7 +7057,7 @@
 
     invoke-virtual {v8, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4634
+    .line 4643
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/htc/widget/HtcListView;->getIntroAnimatorListener(I)Landroid/animation/AnimatorListenerAdapter;
@@ -7066,11 +7066,11 @@
 
     check-cast v9, Lcom/htc/widget/HtcListView$IntroAnimatorListener;
 
-    .line 4635
+    .line 4644
     .local v9, listener:Lcom/htc/widget/HtcListView$IntroAnimatorListener;
     if-nez v9, :cond_1
 
-    .line 4636
+    .line 4645
     new-instance v9, Lcom/htc/widget/HtcListView$IntroAnimatorListener;
 
     .end local v9           #listener:Lcom/htc/widget/HtcListView$IntroAnimatorListener;
@@ -7078,7 +7078,7 @@
 
     invoke-direct {v9, v0}, Lcom/htc/widget/HtcListView$IntroAnimatorListener;-><init>(Lcom/htc/widget/HtcListView;)V
 
-    .line 4637
+    .line 4646
     .restart local v9       #listener:Lcom/htc/widget/HtcListView$IntroAnimatorListener;
     move-object/from16 v0, p0
 
@@ -7090,14 +7090,14 @@
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4639
+    .line 4648
     :cond_1
     invoke-virtual {v9, v6}, Lcom/htc/widget/HtcListView$IntroAnimatorListener;->setChildIndex(I)V
 
-    .line 4640
+    .line 4649
     invoke-virtual {v8, v9}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4641
+    .line 4650
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
@@ -7118,17 +7118,17 @@
 
     invoke-virtual/range {v16 .. v17}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4642
+    .line 4651
     add-int/lit8 v16, v6, 0x1
 
     mul-int v4, v5, v16
 
-    .line 4619
+    .line 4628
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_0
 
-    .line 4626
+    .line 4635
     .end local v8           #introAnimation:Landroid/animation/ObjectAnimator;
     .end local v9           #listener:Lcom/htc/widget/HtcListView$IntroAnimatorListener;
     .end local v13           #rotateX:Landroid/animation/PropertyValuesHolder;
@@ -7146,7 +7146,7 @@
 
     goto/16 :goto_1
 
-    .line 4644
+    .line 4653
     .end local v2           #child:Landroid/view/View;
     :cond_3
     move-object/from16 v0, p0
@@ -7163,7 +7163,7 @@
 
     invoke-virtual/range {v16 .. v17}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4645
+    .line 4654
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
@@ -7172,7 +7172,7 @@
 
     if-eqz v16, :cond_4
 
-    .line 4646
+    .line 4655
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
@@ -7181,7 +7181,7 @@
 
     invoke-virtual/range {v16 .. v16}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 4649
+    .line 4658
     .end local v4           #delay:I
     .end local v5           #delayDelta:I
     .end local v6           #i:I
@@ -7193,16 +7193,14 @@
     :cond_4
     return-void
 
-    .line 4612
-    nop
-
+    .line 4621
     :array_0
     .array-data 0x4
         0xcdt 0xcct 0xcct 0x3et
         0x0t 0x0t 0x80t 0x3ft
     .end array-data
 
-    .line 4613
+    .line 4622
     :array_1
     .array-data 0x4
         0x9at 0x99t 0x99t 0x3et
@@ -7214,21 +7212,21 @@
     .locals 15
 
     .prologue
-    .line 4652
+    .line 4661
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v1
 
-    .line 4653
+    .line 4662
     .local v1, childCount:I
     if-gtz v1, :cond_1
 
-    .line 4677
+    .line 4686
     :cond_0
     :goto_0
     return-void
 
-    .line 4654
+    .line 4663
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->isIntroAnimationEnabled()Z
 
@@ -7236,29 +7234,29 @@
 
     if-eqz v11, :cond_0
 
-    .line 4656
+    .line 4665
     new-instance v11, Landroid/animation/AnimatorSet;
 
     invoke-direct {v11}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v11, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 4657
+    .line 4666
     sget-object v11, Lcom/htc/widget/HtcListView;->INTRO_ANIMATION_DURATIONS:[I
 
     const/4 v12, 0x1
 
     aget v5, v11, v12
 
-    .line 4658
+    .line 4667
     .local v5, initialDuration:I
     const/4 v3, 0x0
 
-    .line 4659
+    .line 4668
     .local v3, deltaTop:I
     move v9, v5
 
-    .line 4661
+    .line 4670
     .local v9, time:I
     const-string v11, "scaleY"
 
@@ -7272,7 +7270,7 @@
 
     move-result-object v8
 
-    .line 4662
+    .line 4671
     .local v8, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     const/4 v7, 0x0
 
@@ -7281,7 +7279,7 @@
 
     int-to-float v2, v11
 
-    .line 4663
+    .line 4672
     .local v2, count:F
     add-int/lit8 v4, v1, -0x1
 
@@ -7289,14 +7287,14 @@
     :goto_1
     if-ltz v4, :cond_2
 
-    .line 4664
+    .line 4673
     invoke-virtual {p0, v4}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 4665
+    .line 4674
     .local v0, child:Landroid/view/View;
-    const-string v11, "y"
+    const-string/jumbo v11, "y"
 
     const/4 v12, 0x2
 
@@ -7322,7 +7320,7 @@
 
     move-result-object v10
 
-    .line 4666
+    .line 4675
     .local v10, y:Landroid/animation/PropertyValuesHolder;
     const/4 v11, 0x2
 
@@ -7340,21 +7338,21 @@
 
     move-result-object v6
 
-    .line 4667
+    .line 4676
     .local v6, introAnimation:Landroid/animation/ObjectAnimator;
     iget-object v11, p0, Lcom/htc/widget/HtcListView;->mDirectionIntroInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v6, v11}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4668
+    .line 4677
     int-to-long v11, v9
 
     invoke-virtual {v6, v11, v12}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4669
+    .line 4678
     int-to-float v7, v4
 
-    .line 4670
+    .line 4679
     int-to-float v11, v9
 
     iget-object v12, p0, Lcom/htc/widget/HtcListView;->mDirectionIntroInterpolator:Landroid/view/animation/DecelerateInterpolator;
@@ -7373,7 +7371,7 @@
 
     add-int v9, v5, v11
 
-    .line 4671
+    .line 4680
     iget-object v11, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
     const/4 v12, 0x1
@@ -7386,19 +7384,19 @@
 
     invoke-virtual {v11, v12}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4672
+    .line 4681
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v11
 
     sub-int/2addr v3, v11
 
-    .line 4663
+    .line 4672
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_1
 
-    .line 4674
+    .line 4683
     .end local v0           #child:Landroid/view/View;
     .end local v6           #introAnimation:Landroid/animation/ObjectAnimator;
     .end local v10           #y:Landroid/animation/PropertyValuesHolder;
@@ -7409,7 +7407,7 @@
 
     invoke-virtual {v11, v12}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4675
+    .line 4684
     iget-object v11, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v11, :cond_0
@@ -7420,7 +7418,9 @@
 
     goto/16 :goto_0
 
-    .line 4661
+    .line 4670
+    nop
+
     :array_0
     .array-data 0x4
         0x66t 0x66t 0x66t 0x3ft
@@ -7432,21 +7432,21 @@
     .locals 15
 
     .prologue
-    .line 4733
+    .line 4742
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v1
 
-    .line 4734
+    .line 4743
     .local v1, childCount:I
     if-gtz v1, :cond_1
 
-    .line 4755
+    .line 4764
     :cond_0
     :goto_0
     return-void
 
-    .line 4735
+    .line 4744
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->isIntroAnimationEnabled()Z
 
@@ -7454,25 +7454,25 @@
 
     if-eqz v10, :cond_0
 
-    .line 4737
+    .line 4746
     new-instance v10, Landroid/animation/AnimatorSet;
 
     invoke-direct {v10}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v10, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 4738
+    .line 4747
     sget-object v10, Lcom/htc/widget/HtcListView;->INTRO_ANIMATION_DURATIONS:[I
 
     const/4 v11, 0x4
 
     aget v4, v10, v11
 
-    .line 4739
+    .line 4748
     .local v4, initialDuration:I
     move v8, v4
 
-    .line 4740
+    .line 4749
     .local v8, time:I
     const-string v10, "scaleY"
 
@@ -7486,7 +7486,7 @@
 
     move-result-object v7
 
-    .line 4741
+    .line 4750
     .local v7, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     const/4 v6, 0x0
 
@@ -7495,7 +7495,7 @@
 
     int-to-float v2, v10
 
-    .line 4742
+    .line 4751
     .local v2, count:F
     const/4 v3, 0x0
 
@@ -7503,14 +7503,14 @@
     :goto_1
     if-ge v3, v1, :cond_2
 
-    .line 4743
+    .line 4752
     invoke-virtual {p0, v3}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 4744
+    .line 4753
     .local v0, child:Landroid/view/View;
-    const-string v10, "x"
+    const-string/jumbo v10, "x"
 
     const/4 v11, 0x2
 
@@ -7546,7 +7546,7 @@
 
     move-result-object v9
 
-    .line 4745
+    .line 4754
     .local v9, x:Landroid/animation/PropertyValuesHolder;
     const/4 v10, 0x2
 
@@ -7564,21 +7564,21 @@
 
     move-result-object v5
 
-    .line 4746
+    .line 4755
     .local v5, introAnimation:Landroid/animation/ObjectAnimator;
     iget-object v10, p0, Lcom/htc/widget/HtcListView;->mDirectionIntroInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v5, v10}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4747
+    .line 4756
     int-to-long v10, v8
 
     invoke-virtual {v5, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4748
+    .line 4757
     int-to-float v6, v3
 
-    .line 4749
+    .line 4758
     int-to-float v10, v8
 
     iget-object v11, p0, Lcom/htc/widget/HtcListView;->mDirectionIntroInterpolator:Landroid/view/animation/DecelerateInterpolator;
@@ -7595,7 +7595,7 @@
 
     add-int v8, v4, v10
 
-    .line 4750
+    .line 4759
     iget-object v10, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
     const/4 v11, 0x1
@@ -7608,12 +7608,12 @@
 
     invoke-virtual {v10, v11}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4742
+    .line 4751
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 4752
+    .line 4761
     .end local v0           #child:Landroid/view/View;
     .end local v5           #introAnimation:Landroid/animation/ObjectAnimator;
     .end local v9           #x:Landroid/animation/PropertyValuesHolder;
@@ -7624,7 +7624,7 @@
 
     invoke-virtual {v10, v11}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4753
+    .line 4762
     iget-object v10, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v10, :cond_0
@@ -7635,9 +7635,7 @@
 
     goto/16 :goto_0
 
-    .line 4740
-    nop
-
+    .line 4749
     :array_0
     .array-data 0x4
         0x66t 0x66t 0x66t 0x3ft
@@ -7649,21 +7647,21 @@
     .locals 15
 
     .prologue
-    .line 4708
+    .line 4717
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v1
 
-    .line 4709
+    .line 4718
     .local v1, childCount:I
     if-gtz v1, :cond_1
 
-    .line 4730
+    .line 4739
     :cond_0
     :goto_0
     return-void
 
-    .line 4710
+    .line 4719
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->isIntroAnimationEnabled()Z
 
@@ -7671,25 +7669,25 @@
 
     if-eqz v10, :cond_0
 
-    .line 4712
+    .line 4721
     new-instance v10, Landroid/animation/AnimatorSet;
 
     invoke-direct {v10}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v10, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 4713
+    .line 4722
     sget-object v10, Lcom/htc/widget/HtcListView;->INTRO_ANIMATION_DURATIONS:[I
 
     const/4 v11, 0x3
 
     aget v4, v10, v11
 
-    .line 4714
+    .line 4723
     .local v4, initialDuration:I
     move v8, v4
 
-    .line 4715
+    .line 4724
     .local v8, time:I
     const-string v10, "scaleY"
 
@@ -7703,7 +7701,7 @@
 
     move-result-object v7
 
-    .line 4716
+    .line 4725
     .local v7, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     const/4 v6, 0x0
 
@@ -7712,7 +7710,7 @@
 
     int-to-float v2, v10
 
-    .line 4717
+    .line 4726
     .local v2, count:F
     const/4 v3, 0x0
 
@@ -7720,14 +7718,14 @@
     :goto_1
     if-ge v3, v1, :cond_2
 
-    .line 4718
+    .line 4727
     invoke-virtual {p0, v3}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 4719
+    .line 4728
     .local v0, child:Landroid/view/View;
-    const-string v10, "x"
+    const-string/jumbo v10, "x"
 
     const/4 v11, 0x2
 
@@ -7763,7 +7761,7 @@
 
     move-result-object v9
 
-    .line 4720
+    .line 4729
     .local v9, x:Landroid/animation/PropertyValuesHolder;
     const/4 v10, 0x2
 
@@ -7781,21 +7779,21 @@
 
     move-result-object v5
 
-    .line 4721
+    .line 4730
     .local v5, introAnimation:Landroid/animation/ObjectAnimator;
     iget-object v10, p0, Lcom/htc/widget/HtcListView;->mDirectionIntroInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v5, v10}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4722
+    .line 4731
     int-to-long v10, v8
 
     invoke-virtual {v5, v10, v11}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4723
+    .line 4732
     int-to-float v6, v3
 
-    .line 4724
+    .line 4733
     int-to-float v10, v8
 
     iget-object v11, p0, Lcom/htc/widget/HtcListView;->mDirectionIntroInterpolator:Landroid/view/animation/DecelerateInterpolator;
@@ -7812,7 +7810,7 @@
 
     add-int v8, v4, v10
 
-    .line 4725
+    .line 4734
     iget-object v10, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
     const/4 v11, 0x1
@@ -7825,12 +7823,12 @@
 
     invoke-virtual {v10, v11}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4717
+    .line 4726
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 4727
+    .line 4736
     .end local v0           #child:Landroid/view/View;
     .end local v5           #introAnimation:Landroid/animation/ObjectAnimator;
     .end local v9           #x:Landroid/animation/PropertyValuesHolder;
@@ -7841,7 +7839,7 @@
 
     invoke-virtual {v10, v11}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4728
+    .line 4737
     iget-object v10, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v10, :cond_0
@@ -7852,9 +7850,7 @@
 
     goto/16 :goto_0
 
-    .line 4715
-    nop
-
+    .line 4724
     :array_0
     .array-data 0x4
         0x66t 0x66t 0x66t 0x3ft
@@ -7866,21 +7862,21 @@
     .locals 17
 
     .prologue
-    .line 4680
+    .line 4689
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v3
 
-    .line 4681
+    .line 4690
     .local v3, childCount:I
     if-gtz v3, :cond_1
 
-    .line 4705
+    .line 4714
     :cond_0
     :goto_0
     return-void
 
-    .line 4682
+    .line 4691
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isIntroAnimationEnabled()Z
 
@@ -7888,7 +7884,7 @@
 
     if-eqz v13, :cond_0
 
-    .line 4684
+    .line 4693
     new-instance v13, Landroid/animation/AnimatorSet;
 
     invoke-direct {v13}, Landroid/animation/AnimatorSet;-><init>()V
@@ -7897,22 +7893,22 @@
 
     iput-object v13, v0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 4685
+    .line 4694
     sget-object v13, Lcom/htc/widget/HtcListView;->INTRO_ANIMATION_DURATIONS:[I
 
     const/4 v14, 0x2
 
     aget v7, v13, v14
 
-    .line 4686
+    .line 4695
     .local v7, initialDuration:I
     const/4 v5, 0x0
 
-    .line 4687
+    .line 4696
     .local v5, deltaTop:I
     move v11, v7
 
-    .line 4688
+    .line 4697
     .local v11, time:I
     const-string v13, "scaleY"
 
@@ -7926,7 +7922,7 @@
 
     move-result-object v10
 
-    .line 4689
+    .line 4698
     .local v10, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     const/4 v9, 0x0
 
@@ -7935,7 +7931,7 @@
 
     int-to-float v4, v13
 
-    .line 4690
+    .line 4699
     .local v4, count:F
     add-int/lit8 v13, v3, -0x1
 
@@ -7949,7 +7945,7 @@
 
     move-result v1
 
-    .line 4691
+    .line 4700
     .local v1, bottom:I
     const/4 v6, 0x0
 
@@ -7957,16 +7953,16 @@
     :goto_1
     if-ge v6, v3, :cond_2
 
-    .line 4692
+    .line 4701
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v6}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 4693
+    .line 4702
     .local v2, child:Landroid/view/View;
-    const-string v13, "y"
+    const-string/jumbo v13, "y"
 
     const/4 v14, 0x2
 
@@ -8002,7 +7998,7 @@
 
     move-result-object v12
 
-    .line 4694
+    .line 4703
     .local v12, y:Landroid/animation/PropertyValuesHolder;
     const/4 v13, 0x2
 
@@ -8020,7 +8016,7 @@
 
     move-result-object v8
 
-    .line 4695
+    .line 4704
     .local v8, introAnimation:Landroid/animation/ObjectAnimator;
     move-object/from16 v0, p0
 
@@ -8028,15 +8024,15 @@
 
     invoke-virtual {v8, v13}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4696
+    .line 4705
     int-to-long v13, v11
 
     invoke-virtual {v8, v13, v14}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4697
+    .line 4706
     int-to-float v9, v6
 
-    .line 4698
+    .line 4707
     int-to-float v13, v11
 
     move-object/from16 v0, p0
@@ -8055,7 +8051,7 @@
 
     add-int v11, v7, v13
 
-    .line 4699
+    .line 4708
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
@@ -8070,19 +8066,19 @@
 
     invoke-virtual {v13, v14}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4700
+    .line 4709
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v13
 
     add-int/2addr v5, v13
 
-    .line 4691
+    .line 4700
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 4702
+    .line 4711
     .end local v2           #child:Landroid/view/View;
     .end local v8           #introAnimation:Landroid/animation/ObjectAnimator;
     .end local v12           #y:Landroid/animation/PropertyValuesHolder;
@@ -8097,7 +8093,7 @@
 
     invoke-virtual {v13, v14}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4703
+    .line 4712
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
@@ -8112,7 +8108,9 @@
 
     goto/16 :goto_0
 
-    .line 4688
+    .line 4697
+    nop
+
     :array_0
     .array-data 0x4
         0x66t 0x66t 0x66t 0x3ft
@@ -8575,12 +8573,12 @@
     .locals 22
 
     .prologue
-    .line 5239
+    .line 5252
     move-object/from16 v0, p0
 
     iget v12, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    .line 5240
+    .line 5253
     .local v12, nowFirstPosition:I
     move-object/from16 v0, p0
 
@@ -8594,17 +8592,17 @@
 
     move-result v14
 
-    .line 5241
+    .line 5254
     .local v14, positionDiff:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v10
 
-    .line 5242
+    .line 5255
     .local v10, nowCurChildCount:I
     const/4 v13, 0x0
 
-    .line 5243
+    .line 5256
     .local v13, nowLastPage:Z
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getLastVisiblePosition()I
 
@@ -8626,47 +8624,47 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 5244
+    .line 5257
     const/4 v13, 0x1
 
-    .line 5246
+    .line 5259
     :cond_0
     const/4 v11, 0x0
 
-    .line 5247
+    .line 5260
     .local v11, nowFirstPage:Z
     if-nez v12, :cond_1
 
-    .line 5248
+    .line 5261
     const/4 v11, 0x1
 
-    .line 5250
+    .line 5263
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getTop()I
 
     move-result v18
 
-    .line 5251
+    .line 5264
     .local v18, top:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getBottom()I
 
     move-result v2
 
-    .line 5253
+    .line 5266
     .local v2, bottom:I
     const/4 v3, 0x0
 
-    .line 5254
+    .line 5267
     .local v3, child:Landroid/view/View;
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v4
 
-    .line 5255
+    .line 5268
     .local v4, childCount:I
     const/16 v7, 0x64
 
-    .line 5257
+    .line 5270
     .local v7, height:I
     move-object/from16 v0, p0
 
@@ -8676,7 +8674,7 @@
 
     if-nez v19, :cond_2
 
-    .line 5258
+    .line 5271
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v19
@@ -8687,7 +8685,7 @@
 
     iput-object v0, v1, Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
 
-    .line 5262
+    .line 5275
     :goto_0
     const/4 v8, 0x0
 
@@ -8695,14 +8693,14 @@
     :goto_1
     if-ge v8, v4, :cond_3
 
-    .line 5263
+    .line 5276
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 5264
+    .line 5277
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
@@ -8713,12 +8711,12 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5262
+    .line 5275
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 5260
+    .line 5273
     .end local v8           #i:I
     :cond_2
     move-object/from16 v0, p0
@@ -8731,12 +8729,12 @@
 
     goto :goto_0
 
-    .line 5267
+    .line 5280
     .restart local v8       #i:I
     :cond_3
     const/4 v5, 0x1
 
-    .line 5268
+    .line 5281
     .local v5, childIndex:I
     move-object/from16 v0, p0
 
@@ -8746,7 +8744,7 @@
 
     if-nez v19, :cond_16
 
-    .line 5269
+    .line 5282
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
@@ -8755,10 +8753,10 @@
 
     if-nez v19, :cond_b
 
-    .line 5270
+    .line 5283
     if-nez v13, :cond_5
 
-    .line 5436
+    .line 5449
     :cond_4
     :goto_2
     move-object/from16 v0, p0
@@ -8783,14 +8781,14 @@
 
     sub-int v6, v19, v20
 
-    .line 5437
+    .line 5450
     .local v6, diff:I
     const/4 v8, 0x0
 
     :goto_3
     if-ge v8, v6, :cond_1d
 
-    .line 5438
+    .line 5451
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -8809,17 +8807,17 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5437
+    .line 5450
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 5273
+    .line 5286
     .end local v6           #diff:I
     :cond_5
     if-nez v11, :cond_7
 
-    .line 5275
+    .line 5288
     const/4 v8, 0x0
 
     :goto_4
@@ -8832,121 +8830,6 @@
     move/from16 v0, v19
 
     if-ge v8, v0, :cond_6
-
-    .line 5276
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    add-int/lit8 v20, v8, 0x1
-
-    mul-int v20, v20, v7
-
-    add-int v20, v20, v2
-
-    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v20
-
-    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 5275
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_4
-
-    .line 5279
-    :cond_6
-    const/4 v5, 0x1
-
-    .line 5280
-    :goto_5
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
-
-    move-result v19
-
-    move/from16 v0, v19
-
-    if-le v10, v0, :cond_4
-
-    .line 5281
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    const/16 v20, 0x0
-
-    neg-int v0, v7
-
-    move/from16 v21, v0
-
-    mul-int v21, v21, v5
-
-    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v21
-
-    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    .line 5282
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_5
-
-    .line 5286
-    :cond_7
-    if-nez v11, :cond_4
-
-    .line 5287
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
-
-    move/from16 v19, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriCurLeftCount:I
-
-    move/from16 v20, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
-
-    move/from16 v21, v0
-
-    add-int v20, v20, v21
-
-    move/from16 v0, v19
-
-    move/from16 v1, v20
-
-    if-lt v0, v1, :cond_9
-
-    .line 5288
-    const/4 v8, 0x0
-
-    :goto_6
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
-
-    move/from16 v19, v0
-
-    move/from16 v0, v19
-
-    if-ge v8, v0, :cond_8
 
     .line 5289
     move-object/from16 v0, p0
@@ -8970,14 +8853,14 @@
     .line 5288
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_6
+    goto :goto_4
 
     .line 5292
-    :cond_8
+    :cond_6
     const/4 v5, 0x1
 
     .line 5293
-    :goto_7
+    :goto_5
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9016,13 +8899,43 @@
     .line 5295
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_7
+    goto :goto_5
 
-    .line 5298
-    :cond_9
+    .line 5299
+    :cond_7
+    if-nez v11, :cond_4
+
+    .line 5300
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
+
+    move/from16 v19, v0
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriCurLeftCount:I
+
+    move/from16 v20, v0
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
+
+    move/from16 v21, v0
+
+    add-int v20, v20, v21
+
+    move/from16 v0, v19
+
+    move/from16 v1, v20
+
+    if-lt v0, v1, :cond_9
+
+    .line 5301
     const/4 v8, 0x0
 
-    :goto_8
+    :goto_6
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
@@ -9031,9 +8944,9 @@
 
     move/from16 v0, v19
 
-    if-ge v8, v0, :cond_a
+    if-ge v8, v0, :cond_8
 
-    .line 5299
+    .line 5302
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9052,17 +8965,17 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5298
+    .line 5301
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_8
+    goto :goto_6
 
-    .line 5302
-    :cond_a
+    .line 5305
+    :cond_8
     const/4 v5, 0x1
 
-    .line 5303
-    :goto_9
+    .line 5306
+    :goto_7
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9077,7 +8990,7 @@
 
     if-le v10, v0, :cond_4
 
-    .line 5304
+    .line 5307
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9098,16 +9011,101 @@
 
     invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 5305
+    .line 5308
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_7
+
+    .line 5311
+    :cond_9
+    const/4 v8, 0x0
+
+    :goto_8
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
+
+    move/from16 v19, v0
+
+    move/from16 v0, v19
+
+    if-ge v8, v0, :cond_a
+
+    .line 5312
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    add-int/lit8 v20, v8, 0x1
+
+    mul-int v20, v20, v7
+
+    add-int v20, v20, v2
+
+    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v20
+
+    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 5311
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_8
+
+    .line 5315
+    :cond_a
+    const/4 v5, 0x1
+
+    .line 5316
+    :goto_9
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
+
+    move-result v19
+
+    move/from16 v0, v19
+
+    if-le v10, v0, :cond_4
+
+    .line 5317
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    const/16 v20, 0x0
+
+    neg-int v0, v7
+
+    move/from16 v21, v0
+
+    mul-int v21, v21, v5
+
+    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v21
+
+    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    .line 5318
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_9
 
-    .line 5312
+    .line 5325
     :cond_b
     if-nez v13, :cond_d
 
-    .line 5313
+    .line 5326
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
@@ -9126,7 +9124,7 @@
 
     if-lt v0, v1, :cond_c
 
-    .line 5314
+    .line 5327
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9137,7 +9135,7 @@
 
     goto/16 :goto_2
 
-    .line 5316
+    .line 5329
     :cond_c
     const/4 v8, 0x0
 
@@ -9152,7 +9150,7 @@
 
     if-ge v8, v0, :cond_4
 
-    .line 5317
+    .line 5330
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9163,16 +9161,16 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 5316
+    .line 5329
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_a
 
-    .line 5321
+    .line 5334
     :cond_d
     if-nez v11, :cond_12
 
-    .line 5322
+    .line 5335
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriCurDeleteCount:I
@@ -9181,7 +9179,7 @@
 
     if-nez v19, :cond_4
 
-    .line 5323
+    .line 5336
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
@@ -9200,7 +9198,7 @@
 
     if-lt v0, v1, :cond_f
 
-    .line 5324
+    .line 5337
     const/4 v8, 0x0
 
     :goto_b
@@ -9214,132 +9212,16 @@
 
     if-ge v8, v0, :cond_e
 
-    .line 5325
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    const/16 v20, 0x0
-
-    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    .line 5326
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    add-int/lit8 v20, v8, 0x1
-
-    mul-int v20, v20, v7
-
-    add-int v20, v20, v2
-
-    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v20
-
-    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 5324
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_b
-
-    .line 5329
-    :cond_e
-    const/4 v5, 0x1
-
-    .line 5330
-    :goto_c
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
-
-    move-result v19
-
-    move/from16 v0, v19
-
-    if-le v10, v0, :cond_4
-
-    .line 5331
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    const/16 v20, 0x0
-
-    neg-int v0, v7
-
-    move/from16 v21, v0
-
-    mul-int v21, v21, v5
-
-    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v21
-
-    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    .line 5332
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_c
-
-    .line 5335
-    :cond_f
-    const/4 v8, 0x0
-
-    :goto_d
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
-
-    move/from16 v19, v0
-
-    move/from16 v0, v19
-
-    if-ge v8, v0, :cond_10
-
-    .line 5336
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    const/16 v20, 0x0
-
-    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    .line 5335
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_d
-
     .line 5338
-    :cond_10
-    const/4 v8, 0x0
-
-    :goto_e
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
 
-    move/from16 v19, v0
+    move-object/from16 v19, v0
 
-    move/from16 v0, v19
+    const/16 v20, 0x0
 
-    if-ge v8, v0, :cond_11
+    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     .line 5339
     move-object/from16 v0, p0
@@ -9360,17 +9242,17 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5338
+    .line 5337
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_e
+    goto :goto_b
 
     .line 5342
-    :cond_11
+    :cond_e
     const/4 v5, 0x1
 
     .line 5343
-    :goto_f
+    :goto_c
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9409,9 +9291,125 @@
     .line 5345
     add-int/lit8 v5, v5, 0x1
 
+    goto :goto_c
+
+    .line 5348
+    :cond_f
+    const/4 v8, 0x0
+
+    :goto_d
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
+
+    move/from16 v19, v0
+
+    move/from16 v0, v19
+
+    if-ge v8, v0, :cond_10
+
+    .line 5349
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    const/16 v20, 0x0
+
+    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    .line 5348
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_d
+
+    .line 5351
+    :cond_10
+    const/4 v8, 0x0
+
+    :goto_e
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
+
+    move/from16 v19, v0
+
+    move/from16 v0, v19
+
+    if-ge v8, v0, :cond_11
+
+    .line 5352
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    add-int/lit8 v20, v8, 0x1
+
+    mul-int v20, v20, v7
+
+    add-int v20, v20, v2
+
+    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v20
+
+    invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 5351
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_e
+
+    .line 5355
+    :cond_11
+    const/4 v5, 0x1
+
+    .line 5356
+    :goto_f
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
+
+    move-result v19
+
+    move/from16 v0, v19
+
+    if-le v10, v0, :cond_4
+
+    .line 5357
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    const/16 v20, 0x0
+
+    neg-int v0, v7
+
+    move/from16 v21, v0
+
+    mul-int v21, v21, v5
+
+    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v21
+
+    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    .line 5358
+    add-int/lit8 v5, v5, 0x1
+
     goto :goto_f
 
-    .line 5350
+    .line 5363
     :cond_12
     move-object/from16 v0, p0
 
@@ -9421,7 +9419,7 @@
 
     if-eqz v19, :cond_4
 
-    .line 5352
+    .line 5365
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
@@ -9440,7 +9438,7 @@
 
     if-lt v0, v1, :cond_14
 
-    .line 5353
+    .line 5366
     const/4 v8, 0x0
 
     :goto_10
@@ -9454,7 +9452,7 @@
 
     if-ge v8, v0, :cond_13
 
-    .line 5354
+    .line 5367
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9473,16 +9471,16 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5353
+    .line 5366
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_10
 
-    .line 5357
+    .line 5370
     :cond_13
     const/4 v5, 0x1
 
-    .line 5358
+    .line 5371
     :goto_11
     move-object/from16 v0, p0
 
@@ -9498,7 +9496,7 @@
 
     if-le v10, v0, :cond_4
 
-    .line 5359
+    .line 5372
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9519,12 +9517,12 @@
 
     invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 5360
+    .line 5373
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_11
 
-    .line 5363
+    .line 5376
     :cond_14
     const/4 v8, 0x0
 
@@ -9539,7 +9537,7 @@
 
     if-ge v8, v0, :cond_15
 
-    .line 5364
+    .line 5377
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9558,16 +9556,16 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5363
+    .line 5376
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_12
 
-    .line 5367
+    .line 5380
     :cond_15
     const/4 v5, 0x1
 
-    .line 5368
+    .line 5381
     :goto_13
     move-object/from16 v0, p0
 
@@ -9583,7 +9581,7 @@
 
     if-le v10, v0, :cond_4
 
-    .line 5369
+    .line 5382
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9604,12 +9602,12 @@
 
     invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 5370
+    .line 5383
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_13
 
-    .line 5378
+    .line 5391
     :cond_16
     move-object/from16 v0, p0
 
@@ -9619,7 +9617,7 @@
 
     if-nez v19, :cond_17
 
-    .line 5379
+    .line 5392
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriCurDeleteCount:I
@@ -9628,13 +9626,13 @@
 
     if-eqz v19, :cond_4
 
-    .line 5382
+    .line 5395
     if-eqz v14, :cond_4
 
-    .line 5383
+    .line 5396
     const/4 v5, 0x1
 
-    .line 5384
+    .line 5397
     :goto_14
     move-object/from16 v0, p0
 
@@ -9650,7 +9648,7 @@
 
     if-le v10, v0, :cond_4
 
-    .line 5385
+    .line 5398
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9671,12 +9669,12 @@
 
     invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 5386
+    .line 5399
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_14
 
-    .line 5391
+    .line 5404
     :cond_17
     move-object/from16 v0, p0
 
@@ -9686,7 +9684,7 @@
 
     if-nez v19, :cond_1a
 
-    .line 5392
+    .line 5405
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
@@ -9705,7 +9703,7 @@
 
     if-lt v0, v1, :cond_18
 
-    .line 5393
+    .line 5406
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9714,10 +9712,10 @@
 
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->clear()V
 
-    .line 5394
+    .line 5407
     const/4 v5, 0x1
 
-    .line 5395
+    .line 5408
     :goto_15
     move-object/from16 v0, p0
 
@@ -9733,7 +9731,7 @@
 
     if-le v10, v0, :cond_4
 
-    .line 5396
+    .line 5409
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9754,12 +9752,12 @@
 
     invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 5397
+    .line 5410
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_15
 
-    .line 5400
+    .line 5413
     :cond_18
     const/4 v8, 0x0
 
@@ -9774,7 +9772,7 @@
 
     if-ge v8, v0, :cond_19
 
-    .line 5401
+    .line 5414
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9785,16 +9783,16 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 5400
+    .line 5413
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_16
 
-    .line 5403
+    .line 5416
     :cond_19
     const/4 v5, 0x1
 
-    .line 5404
+    .line 5417
     :goto_17
     move-object/from16 v0, p0
 
@@ -9810,7 +9808,7 @@
 
     if-le v10, v0, :cond_4
 
-    .line 5405
+    .line 5418
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9831,16 +9829,16 @@
 
     invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 5406
+    .line 5419
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_17
 
-    .line 5410
+    .line 5423
     :cond_1a
     if-nez v11, :cond_1c
 
-    .line 5411
+    .line 5424
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
@@ -9859,103 +9857,11 @@
 
     if-lt v0, v1, :cond_1b
 
-    .line 5412
-    const/4 v5, 0x1
-
-    .line 5413
-    :goto_18
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
-
-    move-result v19
-
-    move/from16 v0, v19
-
-    if-le v10, v0, :cond_4
-
-    .line 5414
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    const/16 v20, 0x0
-
-    neg-int v0, v7
-
-    move/from16 v21, v0
-
-    mul-int v21, v21, v5
-
-    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v21
-
-    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    .line 5415
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_18
-
-    .line 5418
-    :cond_1b
-    const/4 v5, 0x1
-
-    .line 5419
-    :goto_19
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
-
-    move-result v19
-
-    move/from16 v0, v19
-
-    if-le v10, v0, :cond_4
-
-    .line 5420
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    move-object/from16 v19, v0
-
-    const/16 v20, 0x0
-
-    neg-int v0, v7
-
-    move/from16 v21, v0
-
-    mul-int v21, v21, v5
-
-    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v21
-
-    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    .line 5421
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_19
-
     .line 5425
-    :cond_1c
     const/4 v5, 0x1
 
     .line 5426
-    :goto_1a
+    :goto_18
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -9994,21 +9900,113 @@
     .line 5428
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_1a
+    goto :goto_18
+
+    .line 5431
+    :cond_1b
+    const/4 v5, 0x1
+
+    .line 5432
+    :goto_19
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
+
+    move-result v19
+
+    move/from16 v0, v19
+
+    if-le v10, v0, :cond_4
+
+    .line 5433
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    const/16 v20, 0x0
+
+    neg-int v0, v7
+
+    move/from16 v21, v0
+
+    mul-int v21, v21, v5
+
+    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v21
+
+    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    .line 5434
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_19
+
+    .line 5438
+    :cond_1c
+    const/4 v5, 0x1
+
+    .line 5439
+    :goto_1a
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->size()I
+
+    move-result v19
+
+    move/from16 v0, v19
+
+    if-le v10, v0, :cond_4
+
+    .line 5440
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    move-object/from16 v19, v0
+
+    const/16 v20, 0x0
+
+    neg-int v0, v7
+
+    move/from16 v21, v0
+
+    mul-int v21, v21, v5
+
+    invoke-static/range {v21 .. v21}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v21
+
+    invoke-virtual/range {v19 .. v21}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     .line 5441
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1a
+
+    .line 5454
     .restart local v6       #diff:I
     :cond_1d
     const/4 v9, 0x0
 
-    .line 5442
+    .line 5455
     .local v9, invertCount:I
     add-int/lit8 v8, v4, -0x1
 
     :goto_1b
     if-ltz v8, :cond_20
 
-    .line 5443
+    .line 5456
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
@@ -10051,7 +10049,7 @@
 
     if-ne v0, v1, :cond_1f
 
-    .line 5444
+    .line 5457
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
@@ -10062,7 +10060,7 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 5445
+    .line 5458
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -10073,14 +10071,14 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 5442
+    .line 5455
     :cond_1e
     :goto_1c
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_1b
 
-    .line 5446
+    .line 5459
     :cond_1f
     move-object/from16 v0, p0
 
@@ -10124,12 +10122,12 @@
 
     if-ge v0, v1, :cond_1e
 
-    .line 5447
+    .line 5460
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1c
 
-    .line 5451
+    .line 5464
     :cond_20
     const/16 v19, 0x1
 
@@ -10137,7 +10135,7 @@
 
     if-le v9, v0, :cond_22
 
-    .line 5452
+    .line 5465
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
@@ -10150,7 +10148,7 @@
 
     check-cast v17, Ljava/util/ArrayList;
 
-    .line 5453
+    .line 5466
     .local v17, tmpViewList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
     move-object/from16 v0, p0
 
@@ -10164,7 +10162,7 @@
 
     check-cast v15, Ljava/util/ArrayList;
 
-    .line 5454
+    .line 5467
     .local v15, tmpOriTopList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     move-object/from16 v0, p0
 
@@ -10174,7 +10172,7 @@
 
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->clear()V
 
-    .line 5455
+    .line 5468
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -10183,10 +10181,10 @@
 
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->clear()V
 
-    .line 5456
+    .line 5469
     const/16 v16, 0x0
 
-    .line 5457
+    .line 5470
     .local v16, tmpPos:I
     const/4 v8, 0x0
 
@@ -10199,15 +10197,15 @@
 
     if-ge v8, v0, :cond_22
 
-    .line 5458
+    .line 5471
     if-ge v8, v9, :cond_21
 
-    .line 5459
+    .line 5472
     sub-int v19, v9, v8
 
     add-int/lit8 v16, v19, -0x1
 
-    .line 5463
+    .line 5476
     :goto_1e
     move-object/from16 v0, p0
 
@@ -10225,7 +10223,7 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5464
+    .line 5477
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
@@ -10238,18 +10236,18 @@
 
     invoke-virtual/range {v19 .. v20}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5457
+    .line 5470
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1d
 
-    .line 5461
+    .line 5474
     :cond_21
     move/from16 v16, v8
 
     goto :goto_1e
 
-    .line 5467
+    .line 5480
     .end local v15           #tmpOriTopList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v16           #tmpPos:I
     .end local v17           #tmpViewList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/View;>;"
@@ -10262,7 +10260,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 4493
+    .line 4502
     if-eqz p1, :cond_0
 
     iget v0, p0, Lcom/htc/widget/HtcAbsListView;->mEnabledAnimationType:I
@@ -10271,11 +10269,11 @@
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView;->mEnabledAnimationType:I
 
-    .line 4495
+    .line 4504
     :goto_0
     return-void
 
-    .line 4494
+    .line 4503
     :cond_0
     iget v0, p0, Lcom/htc/widget/HtcAbsListView;->mEnabledAnimationType:I
 
@@ -10930,12 +10928,12 @@
     .locals 3
 
     .prologue
-    .line 4520
+    .line 4529
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mDividerChangedList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 4521
+    .line 4530
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -10946,7 +10944,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 4522
+    .line 4531
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mDividerChangedList:Ljava/util/ArrayList;
 
     const/4 v2, 0x1
@@ -10957,12 +10955,12 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4521
+    .line 4530
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 4524
+    .line 4533
     :cond_0
     return-void
 .end method
@@ -11080,54 +11078,54 @@
 
     const/4 v12, 0x0
 
-    .line 4931
+    .line 4940
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddedViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
-    .line 4933
+    .line 4942
     .local v6, size:I
     if-nez v6, :cond_0
 
-    .line 4934
+    .line 4943
     iput-boolean v12, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 4935
+    .line 4944
     iput-boolean v12, p0, Lcom/htc/widget/HtcListView;->mInAddAnimation:Z
 
-    .line 4979
+    .line 4988
     :goto_0
     return-void
 
-    .line 4939
+    .line 4948
     :cond_0
     iput-boolean v13, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 4943
+    .line 4952
     new-instance v9, Landroid/animation/AnimatorSet;
 
     invoke-direct {v9}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v9, p0, Lcom/htc/widget/HtcListView;->mAddAniSet:Landroid/animation/AnimatorSet;
 
-    .line 4945
+    .line 4954
     const/16 v4, 0x64
 
-    .line 4946
+    .line 4955
     .local v4, minDuration:I
     const/16 v7, 0x64
 
-    .line 4947
+    .line 4956
     .local v7, time:I
     const/4 v8, 0x0
 
-    .line 4949
+    .line 4958
     .local v8, top:I
     const/4 v1, 0x0
 
-    .line 4951
+    .line 4960
     .local v1, child:Landroid/view/View;
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddOtherViewList:Ljava/util/ArrayList;
 
@@ -11135,14 +11133,14 @@
 
     move-result v6
 
-    .line 4952
+    .line 4961
     add-int/lit8 v3, v6, -0x1
 
     .local v3, i:I
     :goto_1
     if-ltz v3, :cond_1
 
-    .line 4954
+    .line 4963
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddOtherViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -11152,7 +11150,7 @@
     .end local v1           #child:Landroid/view/View;
     check-cast v1, Landroid/view/View;
 
-    .line 4955
+    .line 4964
     .restart local v1       #child:Landroid/view/View;
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddOriViewTopList:Ljava/util/ArrayList;
 
@@ -11166,7 +11164,7 @@
 
     move-result v8
 
-    .line 4958
+    .line 4967
     int-to-float v5, v3
 
     .local v5, pos:F
@@ -11174,7 +11172,7 @@
 
     int-to-float v2, v9
 
-    .line 4959
+    .line 4968
     .local v2, count:F
     int-to-float v9, v7
 
@@ -11194,7 +11192,7 @@
 
     add-int/lit8 v7, v9, 0x64
 
-    .line 4961
+    .line 4970
     add-int/lit8 v9, v6, -0x1
 
     sub-int/2addr v9, v3
@@ -11205,18 +11203,18 @@
 
     move-result-object v0
 
-    .line 4962
+    .line 4971
     .local v0, anim:Landroid/animation/ObjectAnimator;
     int-to-long v9, v7
 
     invoke-virtual {v0, v9, v10}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4963
+    .line 4972
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDecelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v0, v9}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4965
+    .line 4974
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddAniSet:Landroid/animation/AnimatorSet;
 
     new-array v10, v13, [Landroid/animation/Animator;
@@ -11225,12 +11223,12 @@
 
     invoke-virtual {v9, v10}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4952
+    .line 4961
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_1
 
-    .line 4968
+    .line 4977
     .end local v0           #anim:Landroid/animation/ObjectAnimator;
     .end local v2           #count:F
     .end local v5           #pos:F
@@ -11243,17 +11241,17 @@
 
     invoke-virtual {v9, v10}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4976
+    .line 4985
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v9, :cond_2
 
-    .line 4977
+    .line 4986
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v9}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 4978
+    .line 4987
     :cond_2
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mAddAniSet:Landroid/animation/AnimatorSet;
 
@@ -11272,31 +11270,31 @@
 
     const/4 v10, 0x0
 
-    .line 4879
+    .line 4888
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mAddedViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
-    .line 4880
+    .line 4889
     .local v6, size:I
     if-nez v6, :cond_0
 
-    .line 4881
+    .line 4890
     iput-boolean v10, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 4882
+    .line 4891
     iput-boolean v10, p0, Lcom/htc/widget/HtcListView;->mAddAnimationFlag:Z
 
-    .line 4883
+    .line 4892
     iput-boolean v10, p0, Lcom/htc/widget/HtcListView;->mInAddAnimation:Z
 
-    .line 4928
+    .line 4937
     :goto_0
     return-void
 
-    .line 4888
+    .line 4897
     :cond_0
     new-instance v8, Landroid/animation/AnimatorSet;
 
@@ -11304,10 +11302,10 @@
 
     iput-object v8, p0, Lcom/htc/widget/HtcListView;->mAddAniSet:Landroid/animation/AnimatorSet;
 
-    .line 4890
+    .line 4899
     const/16 v7, 0x12c
 
-    .line 4893
+    .line 4902
     .local v7, time:I
     const-string v8, "alpha"
 
@@ -11319,7 +11317,7 @@
 
     move-result-object v3
 
-    .line 4894
+    .line 4903
     .local v3, pvhAlpha:Landroid/animation/PropertyValuesHolder;
     const-string v8, "scaleX"
 
@@ -11331,7 +11329,7 @@
 
     move-result-object v4
 
-    .line 4895
+    .line 4904
     .local v4, pvhScaleX:Landroid/animation/PropertyValuesHolder;
     const-string v8, "scaleY"
 
@@ -11343,7 +11341,7 @@
 
     move-result-object v5
 
-    .line 4897
+    .line 4906
     .local v5, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     const/4 v2, 0x0
 
@@ -11351,7 +11349,7 @@
     :goto_1
     if-ge v2, v6, :cond_1
 
-    .line 4898
+    .line 4907
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mAddedViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -11360,7 +11358,7 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 4899
+    .line 4908
     .local v1, child:Landroid/view/View;
     const/4 v8, 0x3
 
@@ -11376,18 +11374,18 @@
 
     move-result-object v0
 
-    .line 4900
+    .line 4909
     .local v0, anim:Landroid/animation/ObjectAnimator;
     int-to-long v8, v7
 
     invoke-virtual {v0, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4901
+    .line 4910
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDecelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v0, v8}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4902
+    .line 4911
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mAddAniSet:Landroid/animation/AnimatorSet;
 
     new-array v9, v12, [Landroid/animation/Animator;
@@ -11396,12 +11394,12 @@
 
     invoke-virtual {v8, v9}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4897
+    .line 4906
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 4905
+    .line 4914
     .end local v0           #anim:Landroid/animation/ObjectAnimator;
     .end local v1           #child:Landroid/view/View;
     :cond_1
@@ -11413,17 +11411,17 @@
 
     invoke-virtual {v8, v9}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4925
+    .line 4934
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mAddMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v8, :cond_2
 
-    .line 4926
+    .line 4935
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mAddMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v8}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 4927
+    .line 4936
     :cond_2
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mAddAniSet:Landroid/animation/AnimatorSet;
 
@@ -11431,21 +11429,21 @@
 
     goto :goto_0
 
-    .line 4893
+    .line 4902
     :array_0
     .array-data 0x4
         0x0t 0x0t 0x0t 0x0t
         0x0t 0x0t 0x80t 0x3ft
     .end array-data
 
-    .line 4894
+    .line 4903
     :array_1
     .array-data 0x4
         0x0t 0x0t 0x0t 0x3ft
         0x0t 0x0t 0x80t 0x3ft
     .end array-data
 
-    .line 4895
+    .line 4904
     :array_2
     .array-data 0x4
         0x0t 0x0t 0x0t 0x3ft
@@ -11457,28 +11455,28 @@
     .locals 10
 
     .prologue
-    .line 5191
+    .line 5204
     new-instance v7, Landroid/animation/AnimatorSet;
 
     invoke-direct {v7}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v7, p0, Lcom/htc/widget/HtcListView;->mDelAniSet:Landroid/animation/AnimatorSet;
 
-    .line 5193
+    .line 5206
     invoke-direct {p0}, Lcom/htc/widget/HtcListView;->setDelViewLocation()V
 
-    .line 5195
+    .line 5208
     const/16 v4, 0x96
 
-    .line 5196
+    .line 5209
     .local v4, minDuration:I
     const/16 v6, 0x96
 
-    .line 5197
+    .line 5210
     .local v6, time:I
     const/4 v1, 0x0
 
-    .line 5199
+    .line 5212
     .local v1, child:Landroid/view/View;
     const/4 v3, 0x0
 
@@ -11492,7 +11490,7 @@
 
     if-ge v3, v7, :cond_0
 
-    .line 5201
+    .line 5214
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -11502,11 +11500,11 @@
     .end local v1           #child:Landroid/view/View;
     check-cast v1, Landroid/view/View;
 
-    .line 5203
+    .line 5216
     .restart local v1       #child:Landroid/view/View;
     int-to-float v5, v3
 
-    .line 5204
+    .line 5217
     .local v5, pos:F
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mNowViewList:Ljava/util/ArrayList;
 
@@ -11518,7 +11516,7 @@
 
     int-to-float v2, v7
 
-    .line 5205
+    .line 5218
     .local v2, count:F
     int-to-float v7, v6
 
@@ -11536,7 +11534,7 @@
 
     add-int/lit16 v6, v7, 0x96
 
-    .line 5206
+    .line 5219
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -11555,18 +11553,18 @@
 
     move-result-object v0
 
-    .line 5207
+    .line 5220
     .local v0, anim:Landroid/animation/ObjectAnimator;
     int-to-long v7, v6
 
     invoke-virtual {v0, v7, v8}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 5209
+    .line 5222
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mDecelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v0, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 5210
+    .line 5223
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mDelAniSet:Landroid/animation/AnimatorSet;
 
     const/4 v8, 0x1
@@ -11579,12 +11577,12 @@
 
     invoke-virtual {v7, v8}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 5199
+    .line 5212
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 5213
+    .line 5226
     .end local v0           #anim:Landroid/animation/ObjectAnimator;
     .end local v2           #count:F
     .end local v5           #pos:F
@@ -11597,23 +11595,23 @@
 
     invoke-virtual {v7, v8}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 5232
+    .line 5245
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mDeleteMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v7, :cond_1
 
-    .line 5233
+    .line 5246
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mDeleteMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v7}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 5234
+    .line 5247
     :cond_1
     iget-object v7, p0, Lcom/htc/widget/HtcListView;->mDelAniSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v7}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 5235
+    .line 5248
     return-void
 .end method
 
@@ -11627,24 +11625,24 @@
 
     const/4 v10, 0x1
 
-    .line 5108
+    .line 5121
     iput-boolean v10, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 5110
+    .line 5123
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
-    .line 5111
+    .line 5124
     .local v6, size:I
     if-nez v6, :cond_3
 
-    .line 5112
+    .line 5125
     iput-boolean v10, p0, Lcom/htc/widget/HtcListView;->mDelAnimationFlag:Z
 
-    .line 5113
+    .line 5126
     iget-object v8, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v8, :cond_0
@@ -11653,14 +11651,14 @@
 
     if-eqz v8, :cond_0
 
-    .line 5114
+    .line 5127
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     instance-of v8, v8, Lcom/htc/widget/HtcExpandableListConnector;
 
     if-eqz v8, :cond_1
 
-    .line 5115
+    .line 5128
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v8, Lcom/htc/widget/HtcExpandableListConnector;
@@ -11673,12 +11671,12 @@
 
     invoke-virtual {v8}, Landroid/widget/BaseExpandableListAdapter;->notifyDataSetChanged()V
 
-    .line 5185
+    .line 5198
     :cond_0
     :goto_0
     return-void
 
-    .line 5116
+    .line 5129
     :cond_1
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
@@ -11686,7 +11684,7 @@
 
     if-eqz v8, :cond_2
 
-    .line 5117
+    .line 5130
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v8, Landroid/widget/BaseAdapter;
@@ -11695,20 +11693,20 @@
 
     goto :goto_0
 
-    .line 5118
+    .line 5131
     :cond_2
     iget-object v8, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     if-eqz v8, :cond_0
 
-    .line 5119
+    .line 5132
     iget-object v8, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     invoke-virtual {v8}, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->onChanged()V
 
     goto :goto_0
 
-    .line 5126
+    .line 5139
     :cond_3
     new-instance v8, Landroid/animation/AnimatorSet;
 
@@ -11716,10 +11714,10 @@
 
     iput-object v8, p0, Lcom/htc/widget/HtcListView;->mDelAniSet:Landroid/animation/AnimatorSet;
 
-    .line 5127
+    .line 5140
     const/16 v7, 0x12c
 
-    .line 5131
+    .line 5144
     .local v7, time:I
     const-string v8, "alpha"
 
@@ -11731,7 +11729,7 @@
 
     move-result-object v3
 
-    .line 5132
+    .line 5145
     .local v3, pvhAlpha:Landroid/animation/PropertyValuesHolder;
     const-string v8, "scaleX"
 
@@ -11743,7 +11741,7 @@
 
     move-result-object v4
 
-    .line 5133
+    .line 5146
     .local v4, pvhScaleX:Landroid/animation/PropertyValuesHolder;
     const-string v8, "scaleY"
 
@@ -11755,7 +11753,7 @@
 
     move-result-object v5
 
-    .line 5135
+    .line 5148
     .local v5, pvhScaleY:Landroid/animation/PropertyValuesHolder;
     const/4 v2, 0x0
 
@@ -11763,7 +11761,7 @@
     :goto_1
     if-ge v2, v6, :cond_4
 
-    .line 5136
+    .line 5149
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -11772,7 +11770,7 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 5137
+    .line 5150
     .local v1, child:Landroid/view/View;
     const/4 v8, 0x3
 
@@ -11788,18 +11786,18 @@
 
     move-result-object v0
 
-    .line 5138
+    .line 5151
     .local v0, anim:Landroid/animation/ObjectAnimator;
     int-to-long v8, v7
 
     invoke-virtual {v0, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 5139
+    .line 5152
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDecelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v0, v8}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 5140
+    .line 5153
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDelAniSet:Landroid/animation/AnimatorSet;
 
     new-array v9, v10, [Landroid/animation/Animator;
@@ -11808,12 +11806,12 @@
 
     invoke-virtual {v8, v9}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 5135
+    .line 5148
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 5143
+    .line 5156
     .end local v0           #anim:Landroid/animation/ObjectAnimator;
     .end local v1           #child:Landroid/view/View;
     :cond_4
@@ -11825,17 +11823,17 @@
 
     invoke-virtual {v8, v9}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 5182
+    .line 5195
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDeleteMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v8, :cond_5
 
-    .line 5183
+    .line 5196
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDeleteMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v8}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 5184
+    .line 5197
     :cond_5
     iget-object v8, p0, Lcom/htc/widget/HtcListView;->mDelAniSet:Landroid/animation/AnimatorSet;
 
@@ -11843,21 +11841,21 @@
 
     goto/16 :goto_0
 
-    .line 5131
+    .line 5144
     :array_0
     .array-data 0x4
         0x0t 0x0t 0x80t 0x3ft
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 5132
+    .line 5145
     :array_1
     .array-data 0x4
         0x0t 0x0t 0x80t 0x3ft
         0x0t 0x0t 0x0t 0x3ft
     .end array-data
 
-    .line 5133
+    .line 5146
     :array_2
     .array-data 0x4
         0x0t 0x0t 0x80t 0x3ft
@@ -11869,22 +11867,22 @@
     .locals 1
 
     .prologue
-    .line 4498
+    .line 4507
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView;->mIntroAnimationListener:Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;
 
     if-eqz v0, :cond_0
 
-    .line 4499
+    .line 4508
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView;->mIntroAnimationListener:Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;
 
     invoke-interface {v0}, Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;->onAnimationStart()V
 
-    .line 4500
+    .line 4509
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView;->mIntroAnimationListener:Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;
 
     invoke-interface {v0}, Lcom/htc/widget/HtcAbsListView$IntroAnimationListener;->onAnimationEnd()V
 
-    .line 4502
+    .line 4511
     :cond_0
     return-void
 .end method
@@ -11898,10 +11896,10 @@
     .parameter "isSelectable"
 
     .prologue
-    .line 4401
+    .line 4410
     invoke-virtual {p0, p1, p2, p3}, Lcom/htc/widget/HtcListView;->addFooterView(Landroid/view/View;Ljava/lang/Object;Z)V
 
-    .line 4402
+    .line 4411
     return-void
 .end method
 
@@ -12128,17 +12126,17 @@
     .prologue
     const/high16 v4, 0x3f80
 
-    .line 5568
+    .line 5581
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
     if-eqz v3, :cond_0
 
-    .line 5569
+    .line 5582
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
     invoke-virtual {p0, v3}, Lcom/htc/widget/HtcListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 5571
+    .line 5584
     :cond_0
     const/4 v1, 0x0
 
@@ -12152,7 +12150,7 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 5572
+    .line 5585
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->mPressedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -12161,7 +12159,7 @@
 
     check-cast v2, Landroid/view/View;
 
-    .line 5573
+    .line 5586
     .local v2, v:Landroid/view/View;
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->mPressAnimators:Ljava/util/Map;
 
@@ -12171,31 +12169,31 @@
 
     check-cast v0, Landroid/animation/ObjectAnimator;
 
-    .line 5574
+    .line 5587
     .local v0, anim:Landroid/animation/ObjectAnimator;
     if-eqz v0, :cond_1
 
-    .line 5575
+    .line 5588
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->end()V
 
-    .line 5576
+    .line 5589
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->mPressAnimators:Ljava/util/Map;
 
     invoke-interface {v3, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5578
+    .line 5591
     :cond_1
     invoke-virtual {v2, v4}, Landroid/view/View;->setScaleX(F)V
 
-    .line 5579
+    .line 5592
     invoke-virtual {v2, v4}, Landroid/view/View;->setScaleY(F)V
 
-    .line 5571
+    .line 5584
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 5581
+    .line 5594
     .end local v0           #anim:Landroid/animation/ObjectAnimator;
     .end local v2           #v:Landroid/view/View;
     :cond_2
@@ -12203,17 +12201,17 @@
 
     iput-object v3, p0, Lcom/htc/widget/HtcListView;->mPressedView:Landroid/view/View;
 
-    .line 5582
+    .line 5595
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->mPressedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 5583
+    .line 5596
     iget-object v3, p0, Lcom/htc/widget/HtcListView;->mPressAnimators:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->clear()V
 
-    .line 5584
+    .line 5597
     return-void
 .end method
 
@@ -13872,6 +13870,14 @@
 
     if-nez v42, :cond_29
 
+    move-object/from16 v0, p0
+
+    iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mInDeleteAnimation:Z
+
+    move/from16 v42, v0
+
+    if-nez v42, :cond_29
+
     .line 3606
     move-object/from16 v0, p0
 
@@ -13947,17 +13953,11 @@
 
     move-object/from16 v42, v0
 
-    move-object/from16 v0, p0
+    const/16 v43, 0x0
 
-    iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mLeft:I
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getWidth()I
 
-    move/from16 v43, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mRight:I
-
-    move/from16 v44, v0
+    move-result v44
 
     move-object/from16 v0, p0
 
@@ -14010,6 +14010,14 @@
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isInBouncing()Z
 
     move-result v42
+
+    if-nez v42, :cond_28
+
+    move-object/from16 v0, p0
+
+    iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mInDeleteAnimation:Z
+
+    move/from16 v42, v0
 
     if-nez v42, :cond_28
 
@@ -14080,17 +14088,11 @@
 
     move-object/from16 v42, v0
 
-    move-object/from16 v0, p0
+    const/16 v43, 0x0
 
-    iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mLeft:I
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getWidth()I
 
-    move/from16 v43, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mRight:I
-
-    move/from16 v44, v0
+    move-result v44
 
     move-object/from16 v0, p0
 
@@ -14183,7 +14185,7 @@
 
     const/4 v1, 0x1
 
-    .line 5705
+    .line 5722
     iget-object v2, p0, Lcom/htc/widget/HtcAbsListView;->mFastScroller:Lcom/htc/widget/HtcFastScroller;
 
     if-eqz v2, :cond_5
@@ -14196,13 +14198,13 @@
 
     if-ne v2, v4, :cond_5
 
-    .line 5706
+    .line 5723
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
-    .line 5707
+    .line 5724
     iput-boolean v1, p0, Lcom/htc/widget/HtcListView;->mPreventOverScroll:Z
 
-    .line 5711
+    .line 5728
     :cond_0
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
@@ -14213,7 +14215,7 @@
 
     move v0, v1
 
-    .line 5712
+    .line 5729
     .local v0, is2Point:Z
     :cond_1
     if-eqz v0, :cond_2
@@ -14222,16 +14224,16 @@
 
     if-eqz v2, :cond_2
 
-    .line 5713
+    .line 5730
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
-    .line 5716
+    .line 5733
     :cond_2
     iget-boolean v2, p0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
     if-eqz v2, :cond_4
 
-    .line 5717
+    .line 5734
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
@@ -14251,10 +14253,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 5719
+    .line 5736
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
-    .line 5726
+    .line 5743
     :cond_4
     :goto_1
     invoke-super {p0, p1}, Lcom/htc/widget/HtcAbsListView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -14263,7 +14265,7 @@
 
     return v1
 
-    .line 5708
+    .line 5725
     .end local v0           #is2Point:Z
     :cond_5
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->isOverScrollAnimationEnabled()Z
@@ -14272,12 +14274,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 5709
+    .line 5726
     iput-boolean v0, p0, Lcom/htc/widget/HtcListView;->mPreventOverScroll:Z
 
     goto :goto_0
 
-    .line 5720
+    .line 5737
     .restart local v0       #is2Point:Z
     :cond_6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -14290,12 +14292,12 @@
 
     if-ne v1, v4, :cond_7
 
-    .line 5721
+    .line 5738
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
     goto :goto_1
 
-    .line 5722
+    .line 5739
     :cond_7
     iget v1, p0, Lcom/htc/widget/HtcAbsListView;->mTouchMode:I
 
@@ -14303,7 +14305,7 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 5723
+    .line 5740
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
     goto :goto_1
@@ -14313,34 +14315,45 @@
     .locals 4
 
     .prologue
-    .line 4244
+    .line 4247
+    iget-boolean v2, p0, Lcom/htc/widget/HtcListView;->mInBouncing:Z
+
+    if-nez v2, :cond_1
+
+    .line 4261
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 4249
+    :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v0
 
-    .line 4245
+    .line 4250
     .local v0, childCount:I
     const/4 v1, 0x0
 
     .local v1, i:I
-    :goto_0
-    if-ge v1, v0, :cond_1
+    :goto_1
+    if-ge v1, v0, :cond_3
 
-    .line 4246
+    .line 4251
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    if-nez v2, :cond_0
+    if-nez v2, :cond_2
 
-    .line 4245
-    :goto_1
+    .line 4250
+    :goto_2
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 4248
-    :cond_0
+    .line 4253
+    :cond_2
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -14349,19 +14362,33 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setTranslationY(F)V
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 4250
-    :cond_1
+    .line 4255
+    :cond_3
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/htc/widget/HtcListView;->mInBouncing:Z
 
-    .line 4251
+    .line 4256
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->invalidate()V
 
-    .line 4252
-    return-void
+    .line 4257
+    iget-object v2, p0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+
+    if-eqz v2, :cond_0
+
+    .line 4258
+    iget-object v2, p0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v2}, Landroid/animation/AnimatorSet;->removeAllListeners()V
+
+    .line 4259
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+
+    goto :goto_0
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
@@ -14369,13 +14396,13 @@
     .parameter "canvas"
 
     .prologue
-    .line 4456
+    .line 4465
     invoke-direct {p0}, Lcom/htc/widget/HtcListView;->triggerIntroAniamtion()V
 
-    .line 4457
+    .line 4466
     invoke-super {p0, p1}, Lcom/htc/widget/HtcAbsListView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 4458
+    .line 4467
     return-void
 .end method
 
@@ -14459,7 +14486,7 @@
     .end annotation
 
     .prologue
-    .line 4347
+    .line 4356
     return-void
 .end method
 
@@ -14575,7 +14602,7 @@
     .end annotation
 
     .prologue
-    .line 4342
+    .line 4351
     return-void
 .end method
 
@@ -14585,18 +14612,18 @@
     .parameter "enable"
 
     .prologue
-    .line 5795
+    .line 5812
     invoke-super {p0, p1, p2}, Lcom/htc/widget/HtcAbsListView;->enableAnimation(IZ)V
 
-    .line 5796
+    .line 5813
     and-int/lit8 v0, p1, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 5797
+    .line 5814
     iput-boolean p2, p0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
-    .line 5799
+    .line 5816
     :cond_0
     return-void
 .end method
@@ -15459,7 +15486,7 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 4270
+    .line 4279
     iget-object v8, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v8, :cond_1
@@ -15472,17 +15499,17 @@
 
     if-eqz v8, :cond_1
 
-    .line 4271
+    .line 4280
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getCheckedItemIds()[J
 
     move-result-object v5
 
-    .line 4300
+    .line 4309
     :cond_0
     :goto_0
     return-object v5
 
-    .line 4276
+    .line 4285
     :cond_1
     iget v8, p0, Lcom/htc/widget/HtcAbsListView;->mChoiceMode:I
 
@@ -15496,28 +15523,28 @@
 
     if-eqz v8, :cond_3
 
-    .line 4277
+    .line 4286
     iget-object v7, p0, Lcom/htc/widget/HtcAbsListView;->mCheckStates:Landroid/util/SparseBooleanArray;
 
-    .line 4278
+    .line 4287
     .local v7, states:Landroid/util/SparseBooleanArray;
     invoke-virtual {v7}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v3
 
-    .line 4279
+    .line 4288
     .local v3, count:I
     new-array v5, v3, [J
 
-    .line 4280
+    .line 4289
     .local v5, ids:[J
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 4282
+    .line 4291
     .local v0, adapter:Landroid/widget/ListAdapter;
     const/4 v1, 0x0
 
-    .line 4283
+    .line 4292
     .local v1, checkedCount:I
     const/4 v4, 0x0
 
@@ -15529,14 +15556,14 @@
     :goto_1
     if-ge v4, v3, :cond_2
 
-    .line 4284
+    .line 4293
     invoke-virtual {v7, v4}, Landroid/util/SparseBooleanArray;->valueAt(I)Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
-    .line 4285
+    .line 4294
     add-int/lit8 v1, v2, 0x1
 
     .end local v2           #checkedCount:I
@@ -15551,7 +15578,7 @@
 
     aput-wide v8, v5, v2
 
-    .line 4283
+    .line 4292
     :goto_2
     add-int/lit8 v4, v4, 0x1
 
@@ -15561,23 +15588,23 @@
     .restart local v2       #checkedCount:I
     goto :goto_1
 
-    .line 4291
+    .line 4300
     :cond_2
     if-eq v2, v3, :cond_0
 
-    .line 4294
+    .line 4303
     new-array v6, v2, [J
 
-    .line 4295
+    .line 4304
     .local v6, result:[J
     invoke-static {v5, v10, v6, v10, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object v5, v6
 
-    .line 4297
+    .line 4306
     goto :goto_0
 
-    .line 4300
+    .line 4309
     .end local v0           #adapter:Landroid/widget/ListAdapter;
     .end local v2           #checkedCount:I
     .end local v3           #count:I
@@ -15610,7 +15637,7 @@
     .parameter "i"
 
     .prologue
-    .line 4451
+    .line 4460
     sub-int v0, p1, p2
 
     add-int/lit8 v0, v0, -0x1
@@ -15682,7 +15709,7 @@
     .end annotation
 
     .prologue
-    .line 4377
+    .line 4386
     const/4 v0, 0x0
 
     return-object v0
@@ -15748,7 +15775,7 @@
     .end annotation
 
     .prologue
-    .line 4364
+    .line 4373
     const/4 v0, 0x0
 
     return v0
@@ -15758,7 +15785,7 @@
     .locals 1
 
     .prologue
-    .line 4255
+    .line 4264
     iget-boolean v0, p0, Lcom/htc/widget/HtcListView;->mInBouncing:Z
 
     return v0
@@ -15916,7 +15943,7 @@
     .end annotation
 
     .prologue
-    .line 4351
+    .line 4360
     const/4 v0, 0x0
 
     return v0
@@ -17530,10 +17557,10 @@
     .parameter "newConfig"
 
     .prologue
-    .line 4462
+    .line 4471
     invoke-super {p0, p1}, Lcom/htc/widget/HtcAbsListView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 4463
+    .line 4472
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mIntroAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
@@ -17550,7 +17577,7 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 4464
+    .line 4473
     :cond_0
     return-void
 .end method
@@ -17559,43 +17586,59 @@
     .locals 1
 
     .prologue
-    .line 5687
+    .line 5700
     invoke-super {p0}, Lcom/htc/widget/HtcAbsListView;->onDetachedFromWindow()V
 
-    .line 5689
+    .line 5702
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mCheckForItemReleased:Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
     if-eqz v0, :cond_0
 
-    .line 5690
+    .line 5703
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mCheckForItemReleased:Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 5692
+    .line 5705
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mPressedViews:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 5693
+    .line 5706
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mPressedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5695
+    .line 5708
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mPressAnimators:Ljava/util/Map;
 
     if-eqz v0, :cond_2
 
-    .line 5696
+    .line 5709
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mPressAnimators:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 5698
+    .line 5711
     :cond_2
+    iget-object v0, p0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+
+    if-eqz v0, :cond_3
+
+    .line 5712
+    iget-object v0, p0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
+
+    .line 5713
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+
+    .line 5715
+    :cond_3
     return-void
 .end method
 
@@ -17604,7 +17647,7 @@
     .parameter "e"
 
     .prologue
-    .line 5473
+    .line 5486
     const/4 v0, 0x0
 
     return v0
@@ -17663,7 +17706,7 @@
     .parameter "velocityY"
 
     .prologue
-    .line 5498
+    .line 5511
     const/4 v0, 0x0
 
     return v0
@@ -17923,7 +17966,7 @@
     .parameter "e"
 
     .prologue
-    .line 5494
+    .line 5507
     return-void
 .end method
 
@@ -18159,7 +18202,7 @@
     .parameter "totalItemCount"
 
     .prologue
-    .line 4430
+    .line 4439
     return-void
 .end method
 
@@ -18171,15 +18214,15 @@
     .parameter "distanceY"
 
     .prologue
-    .line 5488
+    .line 5501
     iget-boolean v0, p0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 5489
+    .line 5502
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
-    .line 5490
+    .line 5503
     :cond_0
     const/4 v0, 0x0
 
@@ -18192,7 +18235,7 @@
     .parameter "scrollState"
 
     .prologue
-    .line 4445
+    .line 4454
     return-void
 .end method
 
@@ -18201,7 +18244,7 @@
     .parameter "e"
 
     .prologue
-    .line 5478
+    .line 5491
     return-void
 .end method
 
@@ -18210,7 +18253,7 @@
     .parameter "e"
 
     .prologue
-    .line 5482
+    .line 5495
     const/4 v0, 0x0
 
     return v0
@@ -18316,7 +18359,7 @@
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 21
+    .locals 22
     .parameter "ev"
 
     .prologue
@@ -18325,9 +18368,9 @@
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mGestureDetector:Landroid/view/GestureDetector;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     move-object/from16 v1, p1
 
@@ -18336,13 +18379,13 @@
     .line 4020
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    const/16 v18, 0x3
+    const/16 v19, 0x3
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_0
 
@@ -18350,9 +18393,9 @@
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_0
+    if-eqz v18, :cond_0
 
     .line 4021
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
@@ -18361,25 +18404,25 @@
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    const/16 v18, 0x1
+    const/16 v19, 0x1
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-eq v0, v1, :cond_1
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    const/16 v18, 0x3
+    const/16 v19, 0x3
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_c
 
@@ -18387,13 +18430,13 @@
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    const/16 v18, 0x1
+    const/16 v19, 0x1
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_3
 
@@ -18401,27 +18444,27 @@
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_3
+    if-eqz v18, :cond_3
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isInBouncing()Z
 
-    move-result v17
+    move-result v18
 
-    if-nez v17, :cond_3
+    if-nez v18, :cond_3
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAbsListView;->mTouchMode:I
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    const/16 v18, 0x4
+    const/16 v19, 0x4
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-eq v0, v1, :cond_3
 
@@ -18430,20 +18473,20 @@
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    if-eqz v17, :cond_2
+    if-eqz v18, :cond_2
 
     .line 4026
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v17
+    move-object/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
@@ -18451,89 +18494,91 @@
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     float-to-int v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v17
+    move/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->findMotionRow(I)I
 
-    move-result v17
+    move-result v18
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-int v15, v17, v18
+    sub-int v16, v18, v19
 
     .line 4029
-    .local v15, pressedPos:I
+    .local v16, pressedPos:I
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v15}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    move/from16 v1, v16
 
-    move-result-object v4
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v5
 
     .line 4030
-    .local v4, animatedChild:Landroid/view/View;
+    .local v5, animatedChild:Landroid/view/View;
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/htc/widget/HtcListView;->releaseItem(Landroid/view/View;)V
+    invoke-virtual {v0, v5}, Lcom/htc/widget/HtcListView;->releaseItem(Landroid/view/View;)V
 
     .line 4032
-    .end local v4           #animatedChild:Landroid/view/View;
-    .end local v15           #pressedPos:I
+    .end local v5           #animatedChild:Landroid/view/View;
+    .end local v16           #pressedPos:I
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isOverScrollAnimationEnabled()Z
 
-    move-result v17
+    move-result v18
 
-    if-eqz v17, :cond_9
+    if-eqz v18, :cond_9
 
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mPreventOverScroll:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-nez v17, :cond_9
+    if-nez v18, :cond_9
 
     .line 4033
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mSame:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_4
+    if-eqz v18, :cond_4
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result v17
+    move-result v18
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    cmpl-float v17, v17, v18
+    cmpl-float v18, v18, v19
 
-    if-eqz v17, :cond_4
+    if-eqz v18, :cond_4
 
     .line 4034
-    const/16 v17, 0x0
+    const/16 v18, 0x0
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
@@ -18545,68 +18590,57 @@
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mInBouncing:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_8
+    if-eqz v18, :cond_8
 
     .line 4036
-    new-instance v17, Landroid/animation/AnimatorSet;
+    new-instance v4, Landroid/animation/AnimatorSet;
 
-    invoke-direct/range {v17 .. v17}, Landroid/animation/AnimatorSet;-><init>()V
-
-    move-object/from16 v0, v17
-
-    move-object/from16 v1, p0
-
-    iput-object v0, v1, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+    invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
 
     .line 4037
+    .local v4, animSet:Landroid/animation/AnimatorSet;
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    cmpl-float v17, v17, v18
+    cmpl-float v18, v18, v19
 
-    if-lez v17, :cond_7
+    if-lez v18, :cond_7
 
     .line 4038
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
-    .local v9, i:I
+    .local v10, i:I
     :goto_0
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    if-ge v9, v0, :cond_5
+    if-ge v10, v0, :cond_5
 
     .line 4039
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    if-nez v17, :cond_6
+    if-nez v18, :cond_6
 
     .line 4056
     :cond_5
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
-
-    move-object/from16 v17, v0
-
     new-instance v18, Lcom/htc/widget/HtcListView$2;
 
     move-object/from16 v0, v18
@@ -18615,89 +18649,86 @@
 
     invoke-direct {v0, v1}, Lcom/htc/widget/HtcListView$2;-><init>(Lcom/htc/widget/HtcListView;)V
 
-    invoke-virtual/range {v17 .. v18}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    move-object/from16 v0, v18
+
+    invoke-virtual {v4, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 4079
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
-
-    move-object/from16 v17, v0
-
-    invoke-virtual/range {v17 .. v17}, Landroid/animation/AnimatorSet;->start()V
+    invoke-virtual {v4}, Landroid/animation/AnimatorSet;->start()V
 
     .line 4080
+    move-object/from16 v0, p0
+
+    iput-object v4, v0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
+
+    .line 4081
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
-    .line 4202
-    .end local v9           #i:I
+    .line 4204
+    .end local v4           #animSet:Landroid/animation/AnimatorSet;
+    .end local v10           #i:I
     :goto_1
-    return v8
+    return v9
 
     .line 4041
-    .restart local v9       #i:I
+    .restart local v4       #animSet:Landroid/animation/AnimatorSet;
+    .restart local v10       #i:I
     :cond_6
-    const-string v17, "translationY"
+    const-string v18, "translationY"
 
-    const/16 v18, 0x1
+    const/16 v19, 0x1
 
-    move/from16 v0, v18
+    move/from16 v0, v19
 
     new-array v0, v0, [F
 
-    move-object/from16 v18, v0
-
-    const/16 v19, 0x0
+    move-object/from16 v19, v0
 
     const/16 v20, 0x0
 
-    aput v20, v18, v19
+    const/16 v21, 0x0
 
-    invoke-static/range {v17 .. v18}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
+    aput v21, v19, v20
 
-    move-result-object v16
-
-    .line 4042
-    .local v16, pvhTranslationY:Landroid/animation/PropertyValuesHolder;
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-static/range {v18 .. v19}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v17
 
-    const/16 v18, 0x1
+    .line 4042
+    .local v17, pvhTranslationY:Landroid/animation/PropertyValuesHolder;
+    move-object/from16 v0, p0
 
-    move/from16 v0, v18
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v18
+
+    const/16 v19, 0x1
+
+    move/from16 v0, v19
 
     new-array v0, v0, [Landroid/animation/PropertyValuesHolder;
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    const/16 v19, 0x0
+    const/16 v20, 0x0
 
-    aput-object v16, v18, v19
+    aput-object v17, v19, v20
 
-    invoke-static/range {v17 .. v18}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v18 .. v19}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
-    move-result-object v5
+    move-result-object v6
 
     .line 4043
-    .local v5, childScaleTransAnim:Landroid/animation/ObjectAnimator;
-    const-wide/16 v17, 0x82
+    .local v6, childScaleTransAnim:Landroid/animation/ObjectAnimator;
+    const-wide/16 v18, 0x82
 
-    move-wide/from16 v0, v17
+    move-wide/from16 v0, v18
 
-    invoke-virtual {v5, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     .line 4044
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
-
-    move-object/from16 v17, v0
-
     const/16 v18, 0x1
 
     move/from16 v0, v18
@@ -18708,103 +18739,99 @@
 
     const/16 v19, 0x0
 
-    aput-object v5, v18, v19
+    aput-object v6, v18, v19
 
-    invoke-virtual/range {v17 .. v18}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    move-object/from16 v0, v18
+
+    invoke-virtual {v4, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     .line 4038
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
     .line 4047
-    .end local v5           #childScaleTransAnim:Landroid/animation/ObjectAnimator;
-    .end local v9           #i:I
-    .end local v16           #pvhTranslationY:Landroid/animation/PropertyValuesHolder;
+    .end local v6           #childScaleTransAnim:Landroid/animation/ObjectAnimator;
+    .end local v10           #i:I
+    .end local v17           #pvhTranslationY:Landroid/animation/PropertyValuesHolder;
     :cond_7
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-result v17
+    move-result v18
 
-    add-int/lit8 v9, v17, -0x2
+    add-int/lit8 v10, v18, -0x2
 
-    .restart local v9       #i:I
+    .restart local v10       #i:I
     :goto_2
-    const/16 v17, -0x1
+    const/16 v18, -0x1
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    if-le v9, v0, :cond_5
+    if-le v10, v0, :cond_5
 
     .line 4048
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    if-eqz v17, :cond_5
+    if-eqz v18, :cond_5
 
     .line 4050
-    const-string v17, "translationY"
+    const-string v18, "translationY"
 
-    const/16 v18, 0x1
+    const/16 v19, 0x1
 
-    move/from16 v0, v18
+    move/from16 v0, v19
 
     new-array v0, v0, [F
 
-    move-object/from16 v18, v0
-
-    const/16 v19, 0x0
+    move-object/from16 v19, v0
 
     const/16 v20, 0x0
 
-    aput v20, v18, v19
+    const/16 v21, 0x0
 
-    invoke-static/range {v17 .. v18}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
+    aput v21, v19, v20
 
-    move-result-object v16
-
-    .line 4051
-    .restart local v16       #pvhTranslationY:Landroid/animation/PropertyValuesHolder;
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-static/range {v18 .. v19}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v17
 
-    const/16 v18, 0x1
+    .line 4051
+    .restart local v17       #pvhTranslationY:Landroid/animation/PropertyValuesHolder;
+    move-object/from16 v0, p0
 
-    move/from16 v0, v18
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v18
+
+    const/16 v19, 0x1
+
+    move/from16 v0, v19
 
     new-array v0, v0, [Landroid/animation/PropertyValuesHolder;
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    const/16 v19, 0x0
+    const/16 v20, 0x0
 
-    aput-object v16, v18, v19
+    aput-object v17, v19, v20
 
-    invoke-static/range {v17 .. v18}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
+    invoke-static/range {v18 .. v19}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
-    move-result-object v5
+    move-result-object v6
 
     .line 4052
-    .restart local v5       #childScaleTransAnim:Landroid/animation/ObjectAnimator;
-    const-wide/16 v17, 0x82
+    .restart local v6       #childScaleTransAnim:Landroid/animation/ObjectAnimator;
+    const-wide/16 v18, 0x82
 
-    move-wide/from16 v0, v17
+    move-wide/from16 v0, v18
 
-    invoke-virtual {v5, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v6, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     .line 4053
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/htc/widget/HtcListView;->mBoucingAnimatorSet:Landroid/animation/AnimatorSet;
-
-    move-object/from16 v17, v0
-
     const/16 v18, 0x1
 
     move/from16 v0, v18
@@ -18815,770 +18842,723 @@
 
     const/16 v19, 0x0
 
-    aput-object v5, v18, v19
+    aput-object v6, v18, v19
 
-    invoke-virtual/range {v17 .. v18}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    move-object/from16 v0, v18
+
+    invoke-virtual {v4, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     .line 4047
-    add-int/lit8 v9, v9, -0x1
+    add-int/lit8 v10, v10, -0x1
 
     goto :goto_2
 
-    .line 4082
-    .end local v5           #childScaleTransAnim:Landroid/animation/ObjectAnimator;
-    .end local v9           #i:I
-    .end local v16           #pvhTranslationY:Landroid/animation/PropertyValuesHolder;
+    .line 4083
+    .end local v4           #animSet:Landroid/animation/AnimatorSet;
+    .end local v6           #childScaleTransAnim:Landroid/animation/ObjectAnimator;
+    .end local v10           #i:I
+    .end local v17           #pvhTranslationY:Landroid/animation/PropertyValuesHolder;
     :cond_8
-    const/high16 v17, -0x3cb8
+    const/high16 v18, -0x3cb8
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/htc/widget/HtcListView;->mPre:F
 
-    .line 4184
+    .line 4186
     :cond_9
     :goto_3
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_b
+    if-eqz v18, :cond_b
 
-    .line 4185
+    .line 4187
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     float-to-int v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v17
+    move/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->findMotionRow(I)I
 
-    move-result v17
+    move-result v18
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-int v15, v17, v18
-
-    .line 4186
-    .restart local v15       #pressedPos:I
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v15}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
-
-    .line 4187
-    .restart local v4       #animatedChild:Landroid/view/View;
-    if-eqz v4, :cond_b
+    sub-int v16, v18, v19
 
     .line 4188
+    .restart local v16       #pressedPos:I
+    move-object/from16 v0, p0
+
+    move/from16 v1, v16
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v5
+
+    .line 4189
+    .restart local v5       #animatedChild:Landroid/view/View;
+    if-eqz v5, :cond_b
+
+    .line 4190
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcAdapterView;->mDataChanged:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-nez v17, :cond_26
+    if-nez v18, :cond_26
 
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_26
+    if-eqz v18, :cond_26
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    if-nez v17, :cond_26
+    if-nez v18, :cond_26
 
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    add-int v18, v18, v15
+    add-int v19, v19, v16
 
-    invoke-interface/range {v17 .. v18}, Landroid/widget/ListAdapter;->isEnabled(I)Z
+    invoke-interface/range {v18 .. v19}, Landroid/widget/ListAdapter;->isEnabled(I)Z
 
-    move-result v17
+    move-result v18
 
-    if-eqz v17, :cond_26
+    if-eqz v18, :cond_26
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isInBouncing()Z
 
-    move-result v17
+    move-result v18
 
-    if-nez v17, :cond_26
+    if-nez v18, :cond_26
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAbsListView;->mTouchMode:I
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    const/16 v18, 0x4
+    const/16 v19, 0x4
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-eq v0, v1, :cond_26
 
-    .line 4189
+    .line 4191
     move-object/from16 v0, p0
 
-    iput-object v4, v0, Lcom/htc/widget/HtcListView;->mPressedView:Landroid/view/View;
+    iput-object v5, v0, Lcom/htc/widget/HtcListView;->mPressedView:Landroid/view/View;
 
-    .line 4190
+    .line 4192
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    if-nez v17, :cond_a
+    if-nez v18, :cond_a
 
-    .line 4191
-    new-instance v17, Lcom/htc/widget/HtcListView$CheckForPressAnimation;
+    .line 4193
+    new-instance v18, Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     move-object/from16 v1, p0
 
     invoke-direct {v0, v1}, Lcom/htc/widget/HtcListView$CheckForPressAnimation;-><init>(Lcom/htc/widget/HtcListView;)V
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
-    .line 4193
+    .line 4195
     :cond_a
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    invoke-virtual {v0, v4}, Lcom/htc/widget/HtcListView$CheckForPressAnimation;->setAnimatedView(Landroid/view/View;)V
+    invoke-virtual {v0, v5}, Lcom/htc/widget/HtcListView$CheckForPressAnimation;->setAnimatedView(Landroid/view/View;)V
 
-    .line 4194
+    .line 4196
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcListView;->mPendingCheckForPressAnimation:Lcom/htc/widget/HtcListView$CheckForPressAnimation;
 
-    move-object/from16 v17, v0
+    move-object/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/htc/widget/HtcListView;->mCheckForPressAnimationDelay:J
 
-    move-wide/from16 v18, v0
+    move-wide/from16 v19, v0
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v17
+    move-object/from16 v1, v18
 
-    move-wide/from16 v2, v18
+    move-wide/from16 v2, v19
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/widget/HtcListView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 4201
-    .end local v4           #animatedChild:Landroid/view/View;
-    .end local v15           #pressedPos:I
+    .line 4203
+    .end local v5           #animatedChild:Landroid/view/View;
+    .end local v16           #pressedPos:I
     :cond_b
     :goto_4
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
-    .line 4202
-    .local v8, handled:Z
+    .line 4204
+    .local v9, handled:Z
     goto/16 :goto_1
 
-    .line 4084
-    .end local v8           #handled:Z
+    .line 4085
+    .end local v9           #handled:Z
     :cond_c
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    const/16 v18, 0x2
+    const/16 v19, 0x2
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_25
 
-    .line 4085
+    .line 4086
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_d
+    if-eqz v18, :cond_d
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isInBouncing()Z
 
-    move-result v17
+    move-result v18
 
-    if-eqz v17, :cond_d
+    if-eqz v18, :cond_d
 
-    .line 4086
+    .line 4087
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
-    .line 4088
+    .line 4089
     :cond_d
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->isOverScrollAnimationEnabled()Z
 
-    move-result v17
+    move-result v18
 
-    if-eqz v17, :cond_9
+    if-eqz v18, :cond_9
 
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mPreventOverScroll:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-nez v17, :cond_9
+    if-nez v18, :cond_9
 
-    .line 4089
+    .line 4090
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    .line 4090
+    .line 4091
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mSame:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_e
+    if-eqz v18, :cond_e
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    cmpl-float v17, v17, v18
+    cmpl-float v18, v18, v19
 
-    if-eqz v17, :cond_e
+    if-eqz v18, :cond_e
 
-    .line 4091
-    const/16 v17, 0x0
+    .line 4092
+    const/16 v18, 0x0
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lcom/htc/widget/HtcListView;->mSame:Z
 
-    .line 4093
+    .line 4094
     :cond_e
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    cmpl-float v17, v17, v18
+    cmpl-float v18, v18, v19
 
-    if-lez v17, :cond_18
-
-    .line 4094
-    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getFirstVisiblePosition()I
-
-    move-result v17
-
-    if-nez v17, :cond_10
+    if-lez v18, :cond_18
 
     .line 4095
-    const/16 v17, 0x0
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, v17
-
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v17
-
-    if-eqz v17, :cond_f
-
-    const/16 v17, 0x0
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, v17
-
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v17
-
-    invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getTop()I
-
-    move-result v17
-
-    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getPaddingTop()I
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getFirstVisiblePosition()I
 
     move-result v18
 
-    move/from16 v0, v17
+    if-nez v18, :cond_10
+
+    .line 4096
+    const/16 v18, 0x0
+
+    move-object/from16 v0, p0
 
     move/from16 v1, v18
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v18
+
+    if-eqz v18, :cond_f
+
+    const/16 v18, 0x0
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v18
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getTop()I
+
+    move-result v18
+
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getPaddingTop()I
+
+    move-result v19
+
+    move/from16 v0, v18
+
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_f
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     float-to-int v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v17
+    move/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->findMotionRow(I)I
 
-    move-result v17
+    move-result v18
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getFirstVisiblePosition()I
 
-    move-result v18
+    move-result v19
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_11
 
-    .line 4097
+    .line 4098
     :cond_f
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->doAnimFinalize()V
 
-    .line 4098
+    .line 4099
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4101
+    .line 4102
     :cond_10
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->doAnimFinalize()V
 
-    .line 4102
+    .line 4103
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4105
+    .line 4106
     :cond_11
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-float v17, v17, v18
+    sub-float v18, v18, v19
 
-    const/high16 v18, 0x4170
+    const/high16 v19, 0x4170
 
-    cmpl-float v17, v17, v18
+    cmpl-float v18, v18, v19
 
-    if-lez v17, :cond_14
+    if-lez v18, :cond_14
 
-    .line 4106
-    const/16 v17, 0x1
+    .line 4107
+    const/16 v18, 0x1
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lcom/htc/widget/HtcListView;->mInBouncing:Z
-
-    .line 4111
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
-
-    move/from16 v17, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mPre:F
-
-    move/from16 v18, v0
-
-    cmpl-float v17, v17, v18
-
-    if-lez v17, :cond_15
 
     .line 4112
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mPre:F
+
+    move/from16 v19, v0
+
+    cmpl-float v18, v18, v19
+
+    if-lez v18, :cond_15
+
+    .line 4113
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
+
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-float v17, v17, v18
+    sub-float v18, v18, v19
 
-    const/high16 v18, 0x4120
+    const/high16 v19, 0x4120
 
-    div-float v6, v17, v18
+    div-float v7, v18, v19
 
-    .line 4116
-    .local v6, dist:F
+    .line 4117
+    .local v7, dist:F
     :goto_5
-    sget v17, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
+    sget v18, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     int-to-float v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    cmpl-float v17, v6, v17
+    cmpl-float v18, v7, v18
 
-    if-lez v17, :cond_12
-
-    .line 4117
-    sget v17, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
-
-    move/from16 v0, v17
-
-    int-to-float v6, v0
+    if-lez v18, :cond_12
 
     .line 4118
-    :cond_12
-    const/4 v13, 0x0
+    sget v18, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
+
+    move/from16 v0, v18
+
+    int-to-float v7, v0
 
     .line 4119
-    .local v13, mPreSpace:I
-    const/4 v9, 0x1
+    :cond_12
+    const/4 v14, 0x0
 
-    .restart local v9       #i:I
+    .line 4120
+    .local v14, mPreSpace:I
+    const/4 v10, 0x1
+
+    .restart local v10       #i:I
     :goto_6
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    if-ge v9, v0, :cond_13
+    if-ge v10, v0, :cond_13
 
-    .line 4120
+    .line 4121
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    if-nez v17, :cond_16
+    if-nez v18, :cond_16
 
-    .line 4125
+    .line 4126
     :cond_13
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4108
-    .end local v6           #dist:F
-    .end local v9           #i:I
-    .end local v13           #mPreSpace:I
+    .line 4109
+    .end local v7           #dist:F
+    .end local v10           #i:I
+    .end local v14           #mPreSpace:I
     :cond_14
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4114
+    .line 4115
     :cond_15
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mPre:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-float v17, v17, v18
+    sub-float v18, v18, v19
 
-    const/high16 v18, 0x4120
+    const/high16 v19, 0x4120
 
-    div-float v6, v17, v18
+    div-float v7, v18, v19
 
-    .restart local v6       #dist:F
+    .restart local v7       #dist:F
     goto :goto_5
 
-    .line 4121
-    .restart local v9       #i:I
-    .restart local v13       #mPreSpace:I
+    .line 4122
+    .restart local v10       #i:I
+    .restart local v14       #mPreSpace:I
     :cond_16
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    int-to-float v0, v13
+    int-to-float v0, v14
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    add-float v18, v18, v6
+    add-float v19, v19, v7
 
-    invoke-virtual/range {v17 .. v18}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual/range {v18 .. v19}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 4122
+    .line 4123
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getBottom()I
+    invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getBottom()I
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     int-to-float v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
+    move/from16 v19, v0
+
+    cmpg-float v18, v18, v19
+
+    if-gez v18, :cond_17
+
+    .line 4124
+    int-to-float v0, v14
+
     move/from16 v18, v0
 
-    cmpg-float v17, v17, v18
+    add-float v18, v18, v7
 
-    if-gez v17, :cond_17
+    move/from16 v0, v18
 
-    .line 4123
-    int-to-float v0, v13
+    float-to-int v14, v0
 
-    move/from16 v17, v0
-
-    add-float v17, v17, v6
-
-    move/from16 v0, v17
-
-    float-to-int v13, v0
-
-    .line 4119
+    .line 4120
     :cond_17
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v10, v10, 0x1
 
     goto :goto_6
 
-    .line 4126
-    .end local v6           #dist:F
-    .end local v9           #i:I
-    .end local v13           #mPreSpace:I
+    .line 4127
+    .end local v7           #dist:F
+    .end local v10           #i:I
+    .end local v14           #mPreSpace:I
     :cond_18
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    cmpg-float v17, v17, v18
+    cmpg-float v18, v18, v19
 
-    if-gez v17, :cond_24
-
-    .line 4127
-    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getLastVisiblePosition()I
-
-    move-result v14
+    if-gez v18, :cond_24
 
     .line 4128
-    .local v14, p:I
-    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getLastVisiblePosition()I
 
-    move-result v17
-
-    add-int/lit8 v17, v17, -0x1
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, v17
-
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v12
+    move-result v15
 
     .line 4129
-    .local v12, m:Landroid/view/View;
-    move-object/from16 v0, p0
-
-    iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->isIgnoreFooterViewInBouncing:Z
-
-    move/from16 v17, v0
-
-    if-eqz v17, :cond_19
-
-    .line 4130
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
-
-    move/from16 v17, v0
-
+    .local v15, p:I
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v18
 
-    add-int v17, v17, v18
+    add-int/lit8 v18, v18, -0x1
 
-    add-int/lit8 v11, v17, -0x1
+    move-object/from16 v0, p0
+
+    move/from16 v1, v18
+
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v13
+
+    .line 4130
+    .local v13, m:Landroid/view/View;
+    move-object/from16 v0, p0
+
+    iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->isIgnoreFooterViewInBouncing:Z
+
+    move/from16 v18, v0
+
+    if-eqz v18, :cond_19
 
     .line 4131
-    .local v11, lastPosition:I
-    if-ltz v11, :cond_19
-
-    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getCount()I
-
-    move-result v17
-
-    add-int/lit8 v17, v17, -0x1
-
-    move/from16 v0, v17
-
-    if-ne v11, v0, :cond_19
-
-    .line 4132
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    sub-int v17, v11, v17
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-object/from16 v0, p0
+    move-result v19
 
-    move/from16 v1, v17
+    add-int v18, v18, v19
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    add-int/lit8 v12, v18, -0x1
 
-    move-result-object v7
-
-    .line 4133
-    .local v7, footerView:Landroid/view/View;
-    if-eqz v7, :cond_19
-
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v17
-
-    if-lez v17, :cond_19
-
-    .line 4134
-    invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v8
-
-    goto/16 :goto_1
-
-    .line 4138
-    .end local v7           #footerView:Landroid/view/View;
-    .end local v11           #lastPosition:I
-    :cond_19
-    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getLastVisiblePosition()I
-
-    move-result v17
+    .line 4132
+    .local v12, lastPosition:I
+    if-ltz v12, :cond_19
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getCount()I
 
@@ -19586,393 +19566,448 @@
 
     add-int/lit8 v18, v18, -0x1
 
-    move/from16 v0, v17
+    move/from16 v0, v18
+
+    if-ne v12, v0, :cond_19
+
+    .line 4133
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
+
+    move/from16 v18, v0
+
+    sub-int v18, v12, v18
+
+    move-object/from16 v0, p0
 
     move/from16 v1, v18
 
-    if-ne v0, v1, :cond_1b
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v8
+
+    .line 4134
+    .local v8, footerView:Landroid/view/View;
+    if-eqz v8, :cond_19
+
+    invoke-virtual {v8}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v18
+
+    if-lez v18, :cond_19
+
+    .line 4135
+    invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v9
+
+    goto/16 :goto_1
 
     .line 4139
+    .end local v8           #footerView:Landroid/view/View;
+    .end local v12           #lastPosition:I
+    :cond_19
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getLastVisiblePosition()I
+
+    move-result v18
+
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getCount()I
+
+    move-result v19
+
+    add-int/lit8 v19, v19, -0x1
+
+    move/from16 v0, v18
+
+    move/from16 v1, v19
+
+    if-ne v0, v1, :cond_1b
+
+    .line 4140
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-result v17
+    move-result v18
 
-    add-int/lit8 v17, v17, -0x1
+    add-int/lit8 v18, v18, -0x1
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v17
+    move/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    if-eqz v17, :cond_1a
+    if-eqz v18, :cond_1a
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-result v17
+    move-result v18
 
-    add-int/lit8 v17, v17, -0x1
+    add-int/lit8 v18, v18, -0x1
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v17
+    move/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getBottom()I
+    invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getBottom()I
 
-    move-result v17
+    move-result v18
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getHeight()I
 
-    move-result v18
+    move-result v19
 
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView;->mListPadding:Landroid/graphics/Rect;
 
-    move-object/from16 v19, v0
+    move-object/from16 v20, v0
 
-    move-object/from16 v0, v19
+    move-object/from16 v0, v20
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    move/from16 v19, v0
+    move/from16 v20, v0
 
-    sub-int v18, v18, v19
+    sub-int v19, v19, v20
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_1a
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     float-to-int v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v17
+    move/from16 v1, v18
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->findMotionRow(I)I
 
-    move-result v17
+    move-result v18
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getLastVisiblePosition()I
 
-    move-result v18
+    move-result v19
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_1c
 
-    .line 4142
+    .line 4143
     :cond_1a
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->doAnimFinalize()V
 
-    .line 4143
+    .line 4144
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4146
+    .line 4147
     :cond_1b
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->doAnimFinalize()V
 
-    .line 4147
+    .line 4148
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4149
+    .line 4150
     :cond_1c
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-float v17, v17, v18
+    sub-float v18, v18, v19
 
-    const/high16 v18, 0x4170
+    const/high16 v19, 0x4170
 
-    cmpl-float v17, v17, v18
+    cmpl-float v18, v18, v19
 
-    if-lez v17, :cond_1f
+    if-lez v18, :cond_1f
 
-    .line 4150
-    const/16 v17, 0x1
+    .line 4151
+    const/16 v18, 0x1
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lcom/htc/widget/HtcListView;->mInBouncing:Z
-
-    .line 4155
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
-
-    move/from16 v17, v0
-
-    move-object/from16 v0, p0
-
-    iget v0, v0, Lcom/htc/widget/HtcListView;->mPre:F
-
-    move/from16 v18, v0
-
-    cmpg-float v17, v17, v18
-
-    if-gez v17, :cond_20
 
     .line 4156
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mPre:F
+
+    move/from16 v19, v0
+
+    cmpg-float v18, v18, v19
+
+    if-gez v18, :cond_20
+
+    .line 4157
+    move-object/from16 v0, p0
+
+    iget v0, v0, Lcom/htc/widget/HtcListView;->mCurrent:F
+
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-float v17, v17, v18
+    sub-float v18, v18, v19
 
-    const/high16 v18, 0x4120
+    const/high16 v19, 0x4120
 
-    div-float v6, v17, v18
+    div-float v7, v18, v19
 
-    .line 4160
-    .restart local v6       #dist:F
+    .line 4161
+    .restart local v7       #dist:F
     :goto_7
-    sget v17, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
+    sget v18, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     neg-int v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     int-to-float v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    cmpg-float v17, v6, v17
+    cmpg-float v18, v7, v18
 
-    if-gez v17, :cond_1d
+    if-gez v18, :cond_1d
 
-    .line 4161
-    sget v17, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
+    .line 4162
+    sget v18, Lcom/htc/widget/HtcListView;->MAX_DIFF:I
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     neg-int v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    int-to-float v6, v0
+    int-to-float v7, v0
 
-    .line 4162
+    .line 4163
     :cond_1d
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    .line 4164
-    .restart local v13       #mPreSpace:I
+    .line 4165
+    .restart local v14       #mPreSpace:I
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->isIgnoreFooterViewInBouncing:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_21
+    if-eqz v18, :cond_21
 
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-result v17
+    move-result v18
 
-    add-int/lit8 v10, v17, -0x3
-
-    .line 4165
-    .local v10, index:I
-    :goto_8
-    move v9, v10
-
-    .restart local v9       #i:I
-    :goto_9
-    const/16 v17, -0x1
-
-    move/from16 v0, v17
-
-    if-le v9, v0, :cond_1e
+    add-int/lit8 v11, v18, -0x3
 
     .line 4166
+    .local v11, index:I
+    :goto_8
+    move v10, v11
+
+    .restart local v10       #i:I
+    :goto_9
+    const/16 v18, -0x1
+
+    move/from16 v0, v18
+
+    if-le v10, v0, :cond_1e
+
+    .line 4167
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    if-nez v17, :cond_22
+    if-nez v18, :cond_22
 
-    .line 4171
+    .line 4172
     :cond_1e
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->invalidate()V
+
+    .line 4173
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4152
-    .end local v6           #dist:F
-    .end local v9           #i:I
-    .end local v10           #index:I
-    .end local v13           #mPreSpace:I
+    .line 4153
+    .end local v7           #dist:F
+    .end local v10           #i:I
+    .end local v11           #index:I
+    .end local v14           #mPreSpace:I
     :cond_1f
     invoke-super/range {p0 .. p1}, Lcom/htc/widget/HtcAbsListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v8
+    move-result v9
 
     goto/16 :goto_1
 
-    .line 4158
+    .line 4159
     :cond_20
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mPre:F
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    sub-float v17, v17, v18
+    sub-float v18, v18, v19
 
-    const/high16 v18, 0x4120
+    const/high16 v19, 0x4120
 
-    div-float v6, v17, v18
+    div-float v7, v18, v19
 
-    .restart local v6       #dist:F
+    .restart local v7       #dist:F
     goto :goto_7
 
-    .line 4164
-    .restart local v13       #mPreSpace:I
+    .line 4165
+    .restart local v14       #mPreSpace:I
     :cond_21
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
-    move-result v17
+    move-result v18
 
-    add-int/lit8 v10, v17, -0x2
+    add-int/lit8 v11, v18, -0x2
 
     goto :goto_8
 
-    .line 4167
-    .restart local v9       #i:I
-    .restart local v10       #index:I
+    .line 4168
+    .restart local v10       #i:I
+    .restart local v11       #index:I
     :cond_22
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    int-to-float v0, v13
+    int-to-float v0, v14
 
-    move/from16 v18, v0
+    move/from16 v19, v0
 
-    add-float v18, v18, v6
+    add-float v19, v19, v7
 
-    invoke-virtual/range {v17 .. v18}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual/range {v18 .. v19}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 4168
+    .line 4169
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v9}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v10}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v17
+    move-result-object v18
 
-    invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getTop()I
+    invoke-virtual/range {v18 .. v18}, Landroid/view/View;->getTop()I
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     int-to-float v0, v0
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcListView;->mStart:F
 
+    move/from16 v19, v0
+
+    cmpl-float v18, v18, v19
+
+    if-lez v18, :cond_23
+
+    .line 4170
+    int-to-float v0, v14
+
     move/from16 v18, v0
 
-    cmpl-float v17, v17, v18
+    add-float v18, v18, v7
 
-    if-lez v17, :cond_23
+    move/from16 v0, v18
 
-    .line 4169
-    int-to-float v0, v13
+    float-to-int v14, v0
 
-    move/from16 v17, v0
-
-    add-float v17, v17, v6
-
-    move/from16 v0, v17
-
-    float-to-int v13, v0
-
-    .line 4165
+    .line 4166
     :cond_23
-    add-int/lit8 v9, v9, -0x1
+    add-int/lit8 v10, v10, -0x1
 
     goto :goto_9
 
-    .line 4173
-    .end local v6           #dist:F
-    .end local v9           #i:I
-    .end local v10           #index:I
-    .end local v12           #m:Landroid/view/View;
-    .end local v13           #mPreSpace:I
-    .end local v14           #p:I
+    .line 4175
+    .end local v7           #dist:F
+    .end local v10           #i:I
+    .end local v11           #index:I
+    .end local v13           #m:Landroid/view/View;
+    .end local v14           #mPreSpace:I
+    .end local v15           #p:I
     :cond_24
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result v17
+    move-result v18
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
     move-object/from16 v1, p0
 
@@ -19980,47 +20015,47 @@
 
     goto/16 :goto_3
 
-    .line 4175
+    .line 4177
     :cond_25
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    if-nez v17, :cond_9
+    if-nez v18, :cond_9
 
-    .line 4177
+    .line 4179
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/widget/HtcListView;->mItemsCanFocus:Z
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    if-eqz v17, :cond_9
+    if-eqz v18, :cond_9
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
 
-    move-result v17
+    move-result v18
 
-    if-eqz v17, :cond_9
+    if-eqz v18, :cond_9
 
-    .line 4180
-    const/4 v8, 0x0
+    .line 4182
+    const/4 v9, 0x0
 
     goto/16 :goto_1
 
-    .line 4195
-    .restart local v4       #animatedChild:Landroid/view/View;
-    .restart local v15       #pressedPos:I
+    .line 4197
+    .restart local v5       #animatedChild:Landroid/view/View;
+    .restart local v16       #pressedPos:I
     :cond_26
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v17
+    move-result v18
 
-    const/16 v18, 0x2
+    const/16 v19, 0x2
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_b
 
@@ -20028,17 +20063,17 @@
 
     iget v0, v0, Lcom/htc/widget/HtcAbsListView;->mTouchMode:I
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    const/16 v18, 0x3
+    const/16 v19, 0x3
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    move/from16 v1, v18
+    move/from16 v1, v19
 
     if-ne v0, v1, :cond_b
 
-    .line 4196
+    .line 4198
     invoke-virtual/range {p0 .. p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
     goto/16 :goto_4
@@ -20049,23 +20084,23 @@
     .parameter "hasWindowFocus"
 
     .prologue
-    .line 5673
+    .line 5686
     invoke-super {p0, p1}, Lcom/htc/widget/HtcAbsListView;->onWindowFocusChanged(Z)V
 
-    .line 5674
+    .line 5687
     if-nez p1, :cond_1
 
-    .line 5675
+    .line 5688
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mCheckForItemReleased:Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
     if-eqz v0, :cond_0
 
-    .line 5676
+    .line 5689
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mCheckForItemReleased:Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 5681
+    .line 5694
     :cond_0
     iget-boolean v0, p0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
@@ -20073,7 +20108,7 @@
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->cancelPressAnimation()V
 
-    .line 5683
+    .line 5696
     :cond_1
     return-void
 .end method
@@ -20245,7 +20280,7 @@
     .prologue
     const/high16 v1, 0x3f80
 
-    .line 5661
+    .line 5674
     invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
 
     move-result v0
@@ -20262,13 +20297,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 5662
+    .line 5675
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mCheckForItemReleased:Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
     if-nez v0, :cond_1
 
-    .line 5663
+    .line 5676
     new-instance v0, Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
     const/4 v1, 0x0
@@ -20277,16 +20312,16 @@
 
     iput-object v0, p0, Lcom/htc/widget/HtcListView;->mCheckForItemReleased:Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
-    .line 5665
+    .line 5678
     :cond_1
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mCheckForItemReleased:Lcom/htc/widget/HtcListView$CheckForItemReleased;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/htc/widget/HtcListView$CheckForItemReleased;->start(Landroid/view/View;IJ)V
 
-    .line 5666
+    .line 5679
     const/4 v0, 0x1
 
-    .line 5668
+    .line 5681
     :goto_0
     return v0
 
@@ -20343,7 +20378,7 @@
     .locals 0
 
     .prologue
-    .line 5586
+    .line 5599
     return-void
 .end method
 
@@ -20354,7 +20389,7 @@
     .prologue
     const/high16 v6, 0x3f80
 
-    .line 5593
+    .line 5606
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -20367,7 +20402,7 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 5594
+    .line 5607
     iget-object v4, p0, Lcom/htc/widget/HtcListView;->mPressedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -20376,11 +20411,11 @@
 
     check-cast v3, Landroid/view/View;
 
-    .line 5595
+    .line 5608
     .local v3, v:Landroid/view/View;
     if-eqz v3, :cond_0
 
-    .line 5596
+    .line 5609
     iget-object v4, p0, Lcom/htc/widget/HtcListView;->mPressAnimators:Ljava/util/Map;
 
     invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -20389,7 +20424,7 @@
 
     check-cast v0, Landroid/animation/Animator;
 
-    .line 5597
+    .line 5610
     .local v0, animator:Landroid/animation/Animator;
     const/4 v4, 0x1
 
@@ -20397,23 +20432,23 @@
 
     move-result-object v2
 
-    .line 5598
+    .line 5611
     .local v2, releaseAnim:Landroid/animation/ObjectAnimator;
     const-wide/16 v4, 0x32
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 5599
+    .line 5612
     new-instance v4, Lcom/htc/widget/HtcListView$9;
 
     invoke-direct {v4, p0, v0}, Lcom/htc/widget/HtcListView$9;-><init>(Lcom/htc/widget/HtcListView;Landroid/animation/Animator;)V
 
     invoke-virtual {v2, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 5613
+    .line 5626
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 5593
+    .line 5606
     .end local v0           #animator:Landroid/animation/Animator;
     .end local v2           #releaseAnim:Landroid/animation/ObjectAnimator;
     :cond_0
@@ -20421,7 +20456,7 @@
 
     goto :goto_0
 
-    .line 5616
+    .line 5629
     .end local v3           #v:Landroid/view/View;
     :cond_1
     if-eqz p1, :cond_2
@@ -20466,14 +20501,14 @@
 
     if-eqz v4, :cond_2
 
-    .line 5619
+    .line 5632
     const/4 v4, 0x0
 
     invoke-direct {p0, p1, v4}, Lcom/htc/widget/HtcListView;->get2DReleaseAnimation(Landroid/view/View;Z)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
-    .line 5620
+    .line 5633
     .restart local v2       #releaseAnim:Landroid/animation/ObjectAnimator;
     new-instance v4, Lcom/htc/widget/HtcListView$10;
 
@@ -20481,22 +20516,22 @@
 
     invoke-virtual {v2, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 5631
+    .line 5644
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 5633
+    .line 5646
     .end local v2           #releaseAnim:Landroid/animation/ObjectAnimator;
     :cond_2
     iget-object v4, p0, Lcom/htc/widget/HtcListView;->mPressedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 5634
+    .line 5647
     iget-object v4, p0, Lcom/htc/widget/HtcListView;->mPressAnimators:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->clear()V
 
-    .line 5635
+    .line 5648
     return-void
 .end method
 
@@ -20964,10 +20999,10 @@
 
     const/4 v3, 0x0
 
-    .line 4781
+    .line 4790
     iput p1, p0, Lcom/htc/widget/HtcListView;->mFirstAddedPos:I
 
-    .line 4782
+    .line 4791
     iget v1, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
     if-lt p1, v1, :cond_1
@@ -20982,56 +21017,56 @@
 
     if-ge p1, v1, :cond_1
 
-    .line 4783
+    .line 4792
     iput-boolean v3, p0, Lcom/htc/widget/HtcListView;->mScrollEnd:Z
 
-    .line 4784
+    .line 4793
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mScrollToAddedPositionListener:Lcom/htc/widget/HtcAbsListView$scrollToAddedPositionListener;
 
     if-eqz v1, :cond_0
 
-    .line 4785
+    .line 4794
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mScrollToAddedPositionListener:Lcom/htc/widget/HtcAbsListView$scrollToAddedPositionListener;
 
     invoke-interface {v1}, Lcom/htc/widget/HtcAbsListView$scrollToAddedPositionListener;->onScrollEnd()V
 
-    .line 4807
+    .line 4816
     :cond_0
     :goto_0
     return-void
 
-    .line 4790
+    .line 4799
     :cond_1
     const/16 v0, 0x8
 
-    .line 4791
+    .line 4800
     .local v0, startPos:I
     invoke-super {p0, p1}, Lcom/htc/widget/HtcAbsListView;->scrollToFirstAddedPosition(I)V
 
-    .line 4792
+    .line 4801
     iget v1, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
     if-gt p1, v1, :cond_3
 
-    .line 4793
+    .line 4802
     iget v1, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
     sub-int/2addr v1, p1
 
     if-le v1, v4, :cond_2
 
-    .line 4794
+    .line 4803
     add-int/lit8 v1, p1, 0x8
 
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListView;->setSelection(I)V
 
-    .line 4796
+    .line 4805
     :cond_2
     invoke-virtual {p0, p1, v3}, Lcom/htc/widget/HtcListView;->smoothScrollToPositionFromTop(II)V
 
     goto :goto_0
 
-    .line 4798
+    .line 4807
     :cond_3
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
@@ -21041,15 +21076,15 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 4799
+    .line 4808
     iput-boolean v3, p0, Lcom/htc/widget/HtcListView;->mScrollEnd:Z
 
-    .line 4800
+    .line 4809
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/widget/HtcListView;->mResetToLastPos:Z
 
-    .line 4802
+    .line 4811
     :cond_4
     iget v1, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
@@ -21063,12 +21098,12 @@
 
     if-le v1, v4, :cond_5
 
-    .line 4803
+    .line 4812
     add-int/lit8 v1, p1, -0x8
 
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcListView;->setSelection(I)V
 
-    .line 4805
+    .line 4814
     :cond_5
     invoke-virtual {p0, p1, v3}, Lcom/htc/widget/HtcListView;->smoothScrollToPositionFromTop(II)V
 
@@ -21080,10 +21115,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 5505
+    .line 5518
     iput-boolean p1, p0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
-    .line 5506
+    .line 5519
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v1, 0x0
@@ -21092,12 +21127,12 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5507
+    .line 5520
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0, p1}, Lcom/htc/widget/HtcListView;->enableAnimation(IZ)V
 
-    .line 5508
+    .line 5521
     return-void
 .end method
 
@@ -21106,7 +21141,7 @@
     .parameter "b"
 
     .prologue
-    .line 4317
+    .line 4326
     return-void
 .end method
 
@@ -21349,17 +21384,17 @@
     .local p1, a:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v2, 0x1
 
-    .line 4811
+    .line 4820
     iget-boolean v1, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
     if-ne v1, v2, :cond_1
 
-    .line 4875
+    .line 4884
     :cond_0
     :goto_0
     return-void
 
-    .line 4814
+    .line 4823
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->isAddAnimationEnabled()Z
 
@@ -21371,7 +21406,7 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 4815
+    .line 4824
     :cond_2
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
@@ -21381,14 +21416,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 4816
+    .line 4825
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     instance-of v1, v1, Lcom/htc/widget/HtcExpandableListConnector;
 
     if-eqz v1, :cond_4
 
-    .line 4817
+    .line 4826
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v1, Lcom/htc/widget/HtcExpandableListConnector;
@@ -21401,26 +21436,26 @@
 
     invoke-virtual {v1}, Landroid/widget/BaseExpandableListAdapter;->notifyDataSetChanged()V
 
-    .line 4825
+    .line 4834
     :cond_3
     :goto_1
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAddAnimationListener:Lcom/htc/widget/HtcAbsListView$AddAnimationListener;
 
     if-eqz v1, :cond_0
 
-    .line 4826
+    .line 4835
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAddAnimationListener:Lcom/htc/widget/HtcAbsListView$AddAnimationListener;
 
     invoke-interface {v1}, Lcom/htc/widget/HtcAbsListView$AddAnimationListener;->onAnimationStart()V
 
-    .line 4827
+    .line 4836
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAddAnimationListener:Lcom/htc/widget/HtcAbsListView$AddAnimationListener;
 
     invoke-interface {v1}, Lcom/htc/widget/HtcAbsListView$AddAnimationListener;->onAnimationEnd()V
 
     goto :goto_0
 
-    .line 4818
+    .line 4827
     :cond_4
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
@@ -21428,7 +21463,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 4819
+    .line 4828
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v1, Landroid/widget/BaseAdapter;
@@ -21437,99 +21472,99 @@
 
     goto :goto_1
 
-    .line 4820
+    .line 4829
     :cond_5
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     if-eqz v1, :cond_3
 
-    .line 4821
+    .line 4830
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->onChanged()V
 
     goto :goto_1
 
-    .line 4832
+    .line 4841
     :cond_6
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 4833
+    .line 4842
     .local v0, listLength:I
     if-eqz v0, :cond_0
 
-    .line 4836
+    .line 4845
     iput-boolean v2, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 4837
+    .line 4846
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddedItemList:Ljava/util/ArrayList;
 
     if-nez v1, :cond_8
 
-    .line 4838
+    .line 4847
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/widget/HtcListView;->mAddedItemList:Ljava/util/ArrayList;
 
-    .line 4842
+    .line 4851
     :goto_2
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddOriViewTopList:Ljava/util/ArrayList;
 
     if-nez v1, :cond_9
 
-    .line 4843
+    .line 4852
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/widget/HtcListView;->mAddOriViewTopList:Ljava/util/ArrayList;
 
-    .line 4847
+    .line 4856
     :goto_3
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddedViewList:Ljava/util/ArrayList;
 
     if-nez v1, :cond_a
 
-    .line 4848
+    .line 4857
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/widget/HtcListView;->mAddedViewList:Ljava/util/ArrayList;
 
-    .line 4852
+    .line 4861
     :goto_4
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddOtherViewList:Ljava/util/ArrayList;
 
     if-nez v1, :cond_b
 
-    .line 4853
+    .line 4862
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/widget/HtcListView;->mAddOtherViewList:Ljava/util/ArrayList;
 
-    .line 4857
+    .line 4866
     :goto_5
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAddAnimationListener:Lcom/htc/widget/HtcAbsListView$AddAnimationListener;
 
     if-eqz v1, :cond_7
 
-    .line 4858
+    .line 4867
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAddAnimationListener:Lcom/htc/widget/HtcAbsListView$AddAnimationListener;
 
     invoke-interface {v1}, Lcom/htc/widget/HtcAbsListView$AddAnimationListener;->onAnimationStart()V
 
-    .line 4861
+    .line 4870
     :cond_7
     iput-boolean v2, p0, Lcom/htc/widget/HtcListView;->mInAddAnimation:Z
 
-    .line 4863
+    .line 4872
     invoke-virtual {p1}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -21538,10 +21573,10 @@
 
     iput-object v1, p0, Lcom/htc/widget/HtcListView;->mAddedItemList:Ljava/util/ArrayList;
 
-    .line 4864
+    .line 4873
     iput-boolean v2, p0, Lcom/htc/widget/HtcListView;->mAddAnimationFlag:Z
 
-    .line 4866
+    .line 4875
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v1, :cond_0
@@ -21550,14 +21585,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 4867
+    .line 4876
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     instance-of v1, v1, Lcom/htc/widget/HtcExpandableListConnector;
 
     if-eqz v1, :cond_c
 
-    .line 4868
+    .line 4877
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v1, Lcom/htc/widget/HtcExpandableListConnector;
@@ -21572,7 +21607,7 @@
 
     goto/16 :goto_0
 
-    .line 4840
+    .line 4849
     :cond_8
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddedItemList:Ljava/util/ArrayList;
 
@@ -21580,7 +21615,7 @@
 
     goto :goto_2
 
-    .line 4845
+    .line 4854
     :cond_9
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddOriViewTopList:Ljava/util/ArrayList;
 
@@ -21588,7 +21623,7 @@
 
     goto :goto_3
 
-    .line 4850
+    .line 4859
     :cond_a
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddedViewList:Ljava/util/ArrayList;
 
@@ -21596,7 +21631,7 @@
 
     goto :goto_4
 
-    .line 4855
+    .line 4864
     :cond_b
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mAddOtherViewList:Ljava/util/ArrayList;
 
@@ -21604,7 +21639,7 @@
 
     goto :goto_5
 
-    .line 4869
+    .line 4878
     :cond_c
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
@@ -21612,7 +21647,7 @@
 
     if-eqz v1, :cond_d
 
-    .line 4870
+    .line 4879
     iget-object v1, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v1, Landroid/widget/BaseAdapter;
@@ -21621,13 +21656,13 @@
 
     goto/16 :goto_0
 
-    .line 4871
+    .line 4880
     :cond_d
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     if-eqz v1, :cond_0
 
-    .line 4872
+    .line 4881
     iget-object v1, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     invoke-virtual {v1}, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->onChanged()V
@@ -21642,7 +21677,7 @@
     .end annotation
 
     .prologue
-    .line 4356
+    .line 4365
     return-void
 .end method
 
@@ -21706,7 +21741,7 @@
     .parameter "scaleX"
 
     .prologue
-    .line 5841
+    .line 5858
     return-void
 .end method
 
@@ -21715,7 +21750,7 @@
     .parameter "scaleY"
 
     .prologue
-    .line 5848
+    .line 5865
     return-void
 .end method
 
@@ -21724,20 +21759,20 @@
     .parameter "enabled"
 
     .prologue
-    .line 5783
+    .line 5800
     iput-boolean p1, p0, Lcom/htc/widget/HtcListView;->mDarKModeEnabled:Z
 
-    .line 5784
+    .line 5801
     iget-boolean v0, p0, Lcom/htc/widget/HtcListView;->mDarKModeEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 5785
+    .line 5802
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mDivider:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 5786
+    .line 5803
     iget-object v0, p0, Lcom/htc/widget/HtcListView;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -21746,12 +21781,12 @@
 
     iput v0, p0, Lcom/htc/widget/HtcListView;->mDividerHeight:I
 
-    .line 5791
+    .line 5808
     :cond_0
     :goto_0
     return-void
 
-    .line 5788
+    .line 5805
     :cond_1
     const/4 v0, 0x0
 
@@ -21779,17 +21814,17 @@
 
     const/4 v11, 0x0
 
-    .line 4987
+    .line 4996
     iget-boolean v9, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
     if-ne v9, v12, :cond_1
 
-    .line 5104
+    .line 5117
     :cond_0
     :goto_0
     return-void
 
-    .line 4990
+    .line 4999
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->isDelAnimationEnabled()Z
 
@@ -21801,7 +21836,7 @@
 
     if-ne v9, v12, :cond_6
 
-    .line 4991
+    .line 5000
     :cond_2
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
@@ -21811,14 +21846,14 @@
 
     if-eqz v9, :cond_3
 
-    .line 4992
+    .line 5001
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     instance-of v9, v9, Lcom/htc/widget/HtcExpandableListConnector;
 
     if-eqz v9, :cond_4
 
-    .line 4993
+    .line 5002
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v9, Lcom/htc/widget/HtcExpandableListConnector;
@@ -21831,26 +21866,26 @@
 
     invoke-virtual {v9}, Landroid/widget/BaseExpandableListAdapter;->notifyDataSetChanged()V
 
-    .line 5000
+    .line 5009
     :cond_3
     :goto_1
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     if-eqz v9, :cond_0
 
-    .line 5001
+    .line 5010
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     invoke-interface {v9}, Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;->onAnimationStart()V
 
-    .line 5002
+    .line 5011
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     invoke-interface {v9}, Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;->onAnimationEnd()V
 
     goto :goto_0
 
-    .line 4994
+    .line 5003
     :cond_4
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
@@ -21858,7 +21893,7 @@
 
     if-eqz v9, :cond_5
 
-    .line 4995
+    .line 5004
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v9, Landroid/widget/BaseAdapter;
@@ -21867,57 +21902,57 @@
 
     goto :goto_1
 
-    .line 4996
+    .line 5005
     :cond_5
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     if-eqz v9, :cond_3
 
-    .line 4997
+    .line 5006
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     invoke-virtual {v9}, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->onChanged()V
 
     goto :goto_1
 
-    .line 5007
+    .line 5016
     :cond_6
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
-    .line 5008
+    .line 5017
     .local v6, listLength:I
     if-eqz v6, :cond_0
 
-    .line 5011
+    .line 5020
     iput-boolean v12, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 5012
+    .line 5021
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     if-eqz v9, :cond_7
 
-    .line 5013
+    .line 5022
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
 
     invoke-interface {v9}, Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;->onAnimationStart()V
 
-    .line 5016
+    .line 5025
     :cond_7
     iput-boolean v12, p0, Lcom/htc/widget/HtcListView;->mInDeleteAnimation:Z
 
-    .line 5018
+    .line 5027
     iget v9, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
     iput v9, p0, Lcom/htc/widget/HtcListView;->mOriFirstPosition:I
 
-    .line 5019
+    .line 5028
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v2
 
-    .line 5021
+    .line 5030
     .local v2, childCount:I
     iget v9, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
@@ -21933,69 +21968,69 @@
 
     if-ne v9, v10, :cond_8
 
-    .line 5022
+    .line 5031
     iput-boolean v12, p0, Lcom/htc/widget/HtcListView;->mOriLastPage:Z
 
-    .line 5027
+    .line 5036
     :goto_2
     iput v11, p0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
 
-    .line 5028
+    .line 5037
     iput v11, p0, Lcom/htc/widget/HtcListView;->mOriCurDeleteCount:I
 
-    .line 5030
+    .line 5039
     iput v11, p0, Lcom/htc/widget/HtcListView;->mOriCurLeftCount:I
 
-    .line 5031
+    .line 5040
     iput v11, p0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
 
-    .line 5033
+    .line 5042
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelPosList:Ljava/util/ArrayList;
 
     if-nez v9, :cond_9
 
-    .line 5034
+    .line 5043
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v9
 
     iput-object v9, p0, Lcom/htc/widget/HtcListView;->mDelPosList:Ljava/util/ArrayList;
 
-    .line 5038
+    .line 5047
     :goto_3
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
 
     if-nez v9, :cond_a
 
-    .line 5039
+    .line 5048
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v9
 
     iput-object v9, p0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
 
-    .line 5043
+    .line 5052
     :goto_4
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
 
     if-nez v9, :cond_b
 
-    .line 5044
+    .line 5053
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v9
 
     iput-object v9, p0, Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
 
-    .line 5049
+    .line 5058
     :goto_5
     const/4 v3, 0x0
 
-    .line 5050
+    .line 5059
     .local v3, delPos:I
     const/4 v0, 0x0
 
-    .line 5051
+    .line 5060
     .local v0, belowDeleteCount:I
     const/4 v4, 0x0
 
@@ -22003,7 +22038,7 @@
     :goto_6
     if-ge v4, v6, :cond_e
 
-    .line 5052
+    .line 5061
     invoke-virtual {p1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -22014,25 +22049,25 @@
 
     move-result v3
 
-    .line 5053
+    .line 5062
     iget v9, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
     if-ge v3, v9, :cond_c
 
-    .line 5054
+    .line 5063
     iget v9, p0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
 
     add-int/lit8 v9, v9, 0x1
 
     iput v9, p0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
 
-    .line 5051
+    .line 5060
     :goto_7
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_6
 
-    .line 5024
+    .line 5033
     .end local v0           #belowDeleteCount:I
     .end local v3           #delPos:I
     .end local v4           #i:I
@@ -22041,7 +22076,7 @@
 
     goto :goto_2
 
-    .line 5036
+    .line 5045
     :cond_9
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelPosList:Ljava/util/ArrayList;
 
@@ -22049,7 +22084,7 @@
 
     goto :goto_3
 
-    .line 5041
+    .line 5050
     :cond_a
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
 
@@ -22057,7 +22092,7 @@
 
     goto :goto_4
 
-    .line 5046
+    .line 5055
     :cond_b
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
 
@@ -22065,7 +22100,7 @@
 
     goto :goto_5
 
-    .line 5055
+    .line 5064
     .restart local v0       #belowDeleteCount:I
     .restart local v3       #delPos:I
     .restart local v4       #i:I
@@ -22076,7 +22111,7 @@
 
     if-ge v3, v9, :cond_d
 
-    .line 5056
+    .line 5065
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelPosList:Ljava/util/ArrayList;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -22085,7 +22120,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5057
+    .line 5066
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelViewList:Ljava/util/ArrayList;
 
     iget v10, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
@@ -22098,7 +22133,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5058
+    .line 5067
     iget v9, p0, Lcom/htc/widget/HtcListView;->mOriCurDeleteCount:I
 
     add-int/lit8 v9, v9, 0x1
@@ -22107,17 +22142,17 @@
 
     goto :goto_7
 
-    .line 5060
+    .line 5069
     :cond_d
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_7
 
-    .line 5063
+    .line 5072
     :cond_e
     const/4 v5, 0x0
 
-    .line 5065
+    .line 5074
     .local v5, isDel:Z
     iget v9, p0, Lcom/htc/widget/HtcListView;->mOriUpperDeleteCount:I
 
@@ -22131,41 +22166,41 @@
 
     if-lez v9, :cond_10
 
-    .line 5066
+    .line 5075
     :cond_f
     const/4 v5, 0x1
 
-    .line 5069
+    .line 5078
     :cond_10
     const/4 v7, 0x0
 
-    .line 5070
+    .line 5079
     .local v7, pos:I
-    if-nez v5, :cond_13
+    if-nez v5, :cond_14
 
-    .line 5071
+    .line 5080
     iput-boolean v11, p0, Lcom/htc/widget/HtcAbsListView;->mAnimationRunning:Z
 
-    .line 5072
+    .line 5081
     iput-boolean v11, p0, Lcom/htc/widget/HtcListView;->mInDeleteAnimation:Z
 
-    .line 5073
+    .line 5082
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_11
 
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_11
 
-    .line 5074
+    .line 5083
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     instance-of v9, v9, Lcom/htc/widget/HtcExpandableListConnector;
 
-    if-eqz v9, :cond_11
+    if-eqz v9, :cond_12
 
-    .line 5075
+    .line 5084
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v9, Lcom/htc/widget/HtcExpandableListConnector;
@@ -22178,43 +22213,60 @@
 
     invoke-virtual {v9}, Landroid/widget/BaseExpandableListAdapter;->notifyDataSetChanged()V
 
+    .line 5091
+    :cond_11
+    :goto_8
+    iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
+
+    if-eqz v9, :cond_0
+
+    .line 5092
+    iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
+
+    invoke-interface {v9}, Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;->onAnimationStart()V
+
+    .line 5093
+    iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDeleteAnimationListener:Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;
+
+    invoke-interface {v9}, Lcom/htc/widget/HtcAbsListView$DeleteAnimationListener;->onAnimationEnd()V
+
     goto/16 :goto_0
 
-    .line 5076
-    :cond_11
+    .line 5085
+    :cond_12
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     instance-of v9, v9, Landroid/widget/BaseAdapter;
 
-    if-eqz v9, :cond_12
+    if-eqz v9, :cond_13
 
-    .line 5077
+    .line 5086
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mOriAdapter:Landroid/widget/ListAdapter;
 
     check-cast v9, Landroid/widget/BaseAdapter;
 
     invoke-virtual {v9}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    goto/16 :goto_0
+    goto :goto_8
 
-    .line 5078
-    :cond_12
+    .line 5087
+    :cond_13
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_11
 
-    .line 5079
+    .line 5088
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mDataSetObserver:Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;
 
     invoke-virtual {v9}, Lcom/htc/widget/HtcAbsListView$AdapterDataSetObserver;->onChanged()V
 
-    goto/16 :goto_0
+    goto :goto_8
 
-    .line 5083
-    :cond_13
+    .line 5096
+    :cond_14
     const/4 v1, 0x0
 
-    .line 5085
+    .line 5098
     .local v1, child:Landroid/view/View;
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelPosList:Ljava/util/ArrayList;
 
@@ -22222,22 +22274,22 @@
 
     move-result v8
 
-    .line 5086
+    .line 5099
     .local v8, size:I
     const/4 v4, 0x0
 
-    :goto_8
-    if-ge v4, v2, :cond_16
+    :goto_9
+    if-ge v4, v2, :cond_17
 
-    .line 5087
-    if-lez v8, :cond_15
+    .line 5100
+    if-lez v8, :cond_16
 
-    .line 5088
+    .line 5101
     iget v9, p0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
     add-int v7, v9, v4
 
-    .line 5089
+    .line 5102
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelPosList:Ljava/util/ArrayList;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -22248,14 +22300,14 @@
 
     move-result v9
 
-    if-nez v9, :cond_14
+    if-nez v9, :cond_15
 
-    .line 5090
+    .line 5103
     invoke-virtual {p0, v4}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 5091
+    .line 5104
     iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
@@ -22268,36 +22320,36 @@
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5086
-    :cond_14
-    :goto_9
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_8
-
-    .line 5094
+    .line 5099
     :cond_15
-    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 5095
-    iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v10
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :goto_a
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_9
 
-    .line 5099
+    .line 5107
     :cond_16
+    invoke-virtual {p0, v4}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 5108
+    iget-object v9, p0, Lcom/htc/widget/HtcListView;->mDelOriViewTopList:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+
+    move-result v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_a
+
+    .line 5112
+    :cond_17
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getChildCount()I
 
     move-result v9
@@ -22308,7 +22360,7 @@
 
     iput v9, p0, Lcom/htc/widget/HtcListView;->mOriCurLeftCount:I
 
-    .line 5100
+    .line 5113
     iget-object v9, p0, Lcom/htc/widget/HtcAbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
     invoke-interface {v9}, Landroid/widget/ListAdapter;->getCount()I
@@ -22329,7 +22381,7 @@
 
     iput v9, p0, Lcom/htc/widget/HtcListView;->mOriBelowLeftCount:I
 
-    .line 5102
+    .line 5115
     invoke-direct {p0}, Lcom/htc/widget/HtcListView;->startDelGoneAnimation()V
 
     goto/16 :goto_0
@@ -22427,10 +22479,10 @@
     .parameter "isEnabled"
 
     .prologue
-    .line 5868
+    .line 5885
     iput-boolean p1, p0, Lcom/htc/widget/HtcListView;->mShouldDrawBottomShadow:Z
 
-    .line 5869
+    .line 5886
     return-void
 .end method
 
@@ -22439,10 +22491,10 @@
     .parameter "isEnabled"
 
     .prologue
-    .line 5860
+    .line 5877
     iput-boolean p1, p0, Lcom/htc/widget/HtcListView;->mShouldDrawPressShadow:Z
 
-    .line 5861
+    .line 5878
     return-void
 .end method
 
@@ -22452,7 +22504,7 @@
     .end annotation
 
     .prologue
-    .line 4321
+    .line 4330
     return-void
 .end method
 
@@ -22461,7 +22513,7 @@
     .parameter "fillEmpty"
 
     .prologue
-    .line 4410
+    .line 4419
     return-void
 .end method
 
@@ -22470,10 +22522,10 @@
     .parameter "filterText"
 
     .prologue
-    .line 5808
+    .line 5825
     if-eqz p1, :cond_0
 
-    .line 5818
+    .line 5835
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v1
@@ -22482,7 +22534,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5821
+    .line 5838
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v1
@@ -22493,11 +22545,11 @@
 
     move-result-object v0
 
-    .line 5822
+    .line 5839
     .local v0, f:Landroid/widget/Filter;
     invoke-virtual {v0, p1}, Landroid/widget/Filter;->filter(Ljava/lang/CharSequence;)V
 
-    .line 5834
+    .line 5851
     .end local v0           #f:Landroid/widget/Filter;
     :cond_0
     return-void
@@ -22510,7 +22562,7 @@
     .end annotation
 
     .prologue
-    .line 4369
+    .line 4378
     return-void
 .end method
 
@@ -22536,7 +22588,7 @@
     .end annotation
 
     .prologue
-    .line 4373
+    .line 4382
     return-void
 .end method
 
@@ -22560,10 +22612,10 @@
     .parameter "delay"
 
     .prologue
-    .line 4489
+    .line 4498
     iput p1, p0, Lcom/htc/widget/HtcListView;->mIntroAnimationDelay:I
 
-    .line 4490
+    .line 4499
     return-void
 .end method
 
@@ -22572,10 +22624,10 @@
     .parameter "type"
 
     .prologue
-    .line 4471
+    .line 4480
     iput p1, p0, Lcom/htc/widget/HtcListView;->mIntroAnimationType:I
 
-    .line 4472
+    .line 4481
     return-void
 .end method
 
@@ -22607,7 +22659,7 @@
     .end annotation
 
     .prologue
-    .line 4337
+    .line 4346
     return-void
 .end method
 
@@ -22618,7 +22670,7 @@
     .end annotation
 
     .prologue
-    .line 4329
+    .line 4338
     return-void
 .end method
 
@@ -22679,7 +22731,7 @@
     .end annotation
 
     .prologue
-    .line 4333
+    .line 4342
     return-void
 .end method
 
@@ -22889,12 +22941,12 @@
     .parameter "selector"
 
     .prologue
-    .line 5758
+    .line 5775
     iget-boolean v3, p0, Lcom/htc/widget/HtcListView;->m2DPressAnimationEnabled:Z
 
     if-eqz v3, :cond_2
 
-    .line 5760
+    .line 5777
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView;->mContext:Landroid/content/Context;
 
     const-string v4, "list_selector_background_pressed"
@@ -22905,15 +22957,15 @@
 
     move-result v0
 
-    .line 5762
+    .line 5779
     .local v0, highlightId:I
     const/4 v2, 0x0
 
-    .line 5763
+    .line 5780
     .local v2, listSelectionHighlight:Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 5764
+    .line 5781
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -22924,16 +22976,16 @@
 
     move-result-object v2
 
-    .line 5766
+    .line 5783
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 5767
+    .line 5784
     new-instance v1, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v1}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
-    .line 5768
+    .line 5785
     .local v1, keypadSeletor:Landroid/graphics/drawable/StateListDrawable;
     const/4 v3, 0x2
 
@@ -22943,29 +22995,29 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 5769
+    .line 5786
     invoke-super {p0, v1}, Lcom/htc/widget/HtcAbsListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5771
+    .line 5788
     .end local v1           #keypadSeletor:Landroid/graphics/drawable/StateListDrawable;
     :cond_1
     const/4 v3, 0x1
 
     invoke-virtual {p0, v3}, Lcom/htc/widget/HtcListView;->setDrawSelectorOnTop(Z)V
 
-    .line 5775
+    .line 5792
     .end local v0           #highlightId:I
     .end local v2           #listSelectionHighlight:Landroid/graphics/drawable/Drawable;
     :goto_0
     return-void
 
-    .line 5773
+    .line 5790
     :cond_2
     invoke-super {p0, p1}, Lcom/htc/widget/HtcAbsListView;->setSelector(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 5768
+    .line 5785
     :array_0
     .array-data 0x4
         0x9ct 0x0t 0x1t 0x1t
@@ -22978,7 +23030,7 @@
     .parameter "drawable"
 
     .prologue
-    .line 4305
+    .line 4314
     return-void
 .end method
 
@@ -22989,7 +23041,7 @@
     .end annotation
 
     .prologue
-    .line 4325
+    .line 4334
     return-void
 .end method
 
@@ -23000,7 +23052,7 @@
     .end annotation
 
     .prologue
-    .line 4360
+    .line 4369
     return-void
 .end method
 
@@ -23009,7 +23061,7 @@
     .parameter "position"
 
     .prologue
-    .line 4308
+    .line 4317
     const/4 v0, 0x1
 
     return v0
@@ -23019,7 +23071,7 @@
     .locals 1
 
     .prologue
-    .line 5852
+    .line 5869
     iget-boolean v0, p0, Lcom/htc/widget/HtcListView;->mInBouncing:Z
 
     return v0
@@ -23059,15 +23111,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4479
+    .line 4488
     invoke-direct {p0, v0}, Lcom/htc/widget/HtcListView;->setIntroAnimationEnabled(Z)V
 
-    .line 4480
+    .line 4489
     iput-boolean v0, p0, Lcom/htc/widget/HtcListView;->mShouldTriggerAnimation:Z
 
-    .line 4481
+    .line 4490
     invoke-virtual {p0}, Lcom/htc/widget/HtcListView;->invalidate()V
 
-    .line 4482
+    .line 4491
     return-void
 .end method

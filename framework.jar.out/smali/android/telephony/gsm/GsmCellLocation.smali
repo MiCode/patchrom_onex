@@ -43,7 +43,7 @@
     invoke-direct {p0}, Landroid/telephony/CellLocation;-><init>()V
 
     .line 43
-    const-string/jumbo v0, "lac"
+    const-string v0, "lac"
 
     iget v1, p0, Landroid/telephony/gsm/GsmCellLocation;->mLac:I
 
@@ -214,7 +214,7 @@
 
     .prologue
     .line 142
-    const-string/jumbo v0, "lac"
+    const-string v0, "lac"
 
     iget v1, p0, Landroid/telephony/gsm/GsmCellLocation;->mLac:I
 

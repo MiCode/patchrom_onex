@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1251
+    .line 1262
     iput-object p1, p0, Lcom/android/camera/HTCCamera$6;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1255
+    .line 1266
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Integer;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Integer;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -81,15 +81,15 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1256
+    .line 1267
     iget-object v0, p0, Lcom/android/camera/HTCCamera$6;->this$0:Lcom/android/camera/HTCCamera;
 
     const/4 v1, 0x1
 
     #setter for: Lcom/android/camera/HTCCamera;->mIsFirstOrientationReceived:Z
-    invoke-static {v0, v1}, Lcom/android/camera/HTCCamera;->access$3202(Lcom/android/camera/HTCCamera;Z)Z
+    invoke-static {v0, v1}, Lcom/android/camera/HTCCamera;->access$3302(Lcom/android/camera/HTCCamera;Z)Z
 
-    .line 1257
+    .line 1268
     :cond_0
     return-void
 .end method

@@ -153,19 +153,19 @@
 
     const/4 v3, 0x0
 
-    .line 53
+    .line 54
     const/4 v0, 0x0
 
     sput-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
-    .line 337
+    .line 338
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
-    .line 339
+    .line 340
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xd06b64
@@ -180,7 +180,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 340
+    .line 341
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xf691b2
@@ -195,7 +195,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 341
+    .line 342
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xcd74e6
@@ -210,7 +210,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 342
+    .line 343
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x784bd0
@@ -225,7 +225,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 343
+    .line 344
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x4986e7
@@ -240,7 +240,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 344
+    .line 345
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x5476d0
@@ -257,7 +257,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 345
+    .line 346
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x42d692
@@ -274,7 +274,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 346
+    .line 347
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x92e1c0
@@ -291,7 +291,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 347
+    .line 348
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x40a441
@@ -308,7 +308,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 348
+    .line 349
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xb3dc6c
@@ -325,7 +325,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 349
+    .line 350
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xb2b43d
@@ -342,7 +342,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 350
+    .line 351
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xfbe983
@@ -359,7 +359,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 351
+    .line 352
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xffad46
@@ -376,7 +376,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 352
+    .line 353
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xff7537
@@ -393,7 +393,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 353
+    .line 354
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xcca6ac
@@ -410,7 +410,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 354
+    .line 355
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xb99aff
@@ -427,7 +427,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 355
+    .line 356
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x768594
@@ -444,7 +444,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 356
+    .line 357
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x9fc6e7
@@ -461,7 +461,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 357
+    .line 358
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x739b94
@@ -478,7 +478,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 358
+    .line 359
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x96986a
@@ -495,7 +495,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 359
+    .line 360
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xb79870
@@ -512,7 +512,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 360
+    .line 361
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xb94118
@@ -529,7 +529,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 361
+    .line 362
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xf83a22
@@ -546,7 +546,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 362
+    .line 363
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xb3289b
@@ -563,7 +563,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 363
+    .line 364
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xa47ae2
@@ -580,7 +580,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 364
+    .line 365
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x425795
@@ -597,7 +597,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 365
+    .line 366
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x282a9d
@@ -614,7 +614,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 366
+    .line 367
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x16a765
@@ -631,7 +631,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 367
+    .line 368
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x4c9926
@@ -648,7 +648,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 368
+    .line 369
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x7bd148
@@ -665,7 +665,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 369
+    .line 370
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x97ad1f
@@ -682,7 +682,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 370
+    .line 371
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xc38810
@@ -699,7 +699,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 371
+    .line 372
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xc86b18
@@ -716,7 +716,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 372
+    .line 373
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xac725e
@@ -733,7 +733,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 373
+    .line 374
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x7d3b11
@@ -750,7 +750,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 374
+    .line 375
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x99105e
@@ -767,7 +767,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 375
+    .line 376
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x9a9cff
@@ -784,7 +784,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 376
+    .line 377
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x9fe1e7
@@ -801,7 +801,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 377
+    .line 378
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xcabdbf
@@ -818,7 +818,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 378
+    .line 379
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x369774
@@ -835,7 +835,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 379
+    .line 380
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0xfad165
@@ -852,7 +852,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 380
+    .line 381
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
     const v1, 0x9b1c22
@@ -869,7 +869,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 383
+    .line 384
     const/16 v0, 0x2a
 
     new-array v0, v0, [I
@@ -878,7 +878,7 @@
 
     sput-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->COLOR_MATRIX_RES:[I
 
-    .line 677
+    .line 678
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -907,7 +907,7 @@
 
     return-void
 
-    .line 383
+    .line 384
     nop
 
     :array_0
@@ -962,18 +962,18 @@
     .parameter "context"
 
     .prologue
-    .line 61
+    .line 62
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
+    .line 55
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
-    .line 63
+    .line 64
     if-eqz p1, :cond_0
 
-    .line 64
+    .line 65
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -998,14 +998,14 @@
 
     invoke-direct {p0, v0}, Lcom/htc/util/calendar/HtcCalendarManager;->Debug(Ljava/lang/String;)V
 
-    .line 68
+    .line 69
     :goto_0
     iput-object p1, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
-    .line 70
+    .line 71
     return-void
 
-    .line 66
+    .line 67
     :cond_0
     const-string v0, "HtcCalendarManager contruct by null??"
 
@@ -1019,7 +1019,7 @@
     .parameter "s"
 
     .prologue
-    .line 756
+    .line 757
     return-void
 .end method
 
@@ -1033,7 +1033,7 @@
     .parameter "b2"
 
     .prologue
-    .line 321
+    .line 322
     const-wide v22, 0x3fd322d0e5604189L
 
     move/from16 v0, p1
@@ -1068,7 +1068,7 @@
 
     add-double v18, v22, v24
 
-    .line 322
+    .line 323
     .local v18, y1:D
     const-wide v22, -0x403d2ad81adea897L
 
@@ -1104,7 +1104,7 @@
 
     add-double v10, v22, v24
 
-    .line 323
+    .line 324
     .local v10, u1:D
     const-wide v22, 0x3fe3ae147ae147aeL
 
@@ -1140,7 +1140,7 @@
 
     add-double v14, v22, v24
 
-    .line 326
+    .line 327
     .local v14, v1:D
     const-wide v22, 0x3fd322d0e5604189L
 
@@ -1176,7 +1176,7 @@
 
     add-double v20, v22, v24
 
-    .line 327
+    .line 328
     .local v20, y2:D
     const-wide v22, -0x403d2ad81adea897L
 
@@ -1212,7 +1212,7 @@
 
     add-double v12, v22, v24
 
-    .line 328
+    .line 329
     .local v12, u2:D
     const-wide v22, 0x3fe3ae147ae147aeL
 
@@ -1248,7 +1248,7 @@
 
     add-double v16, v22, v24
 
-    .line 330
+    .line 331
     .local v16, v2:D
     sub-double v22, v18, v20
 
@@ -1256,7 +1256,7 @@
 
     move-result-wide v6
 
-    .line 331
+    .line 332
     .local v6, diff_y:D
     sub-double v22, v10, v12
 
@@ -1264,7 +1264,7 @@
 
     move-result-wide v2
 
-    .line 332
+    .line 333
     .local v2, diff_u:D
     sub-double v22, v14, v16
 
@@ -1272,7 +1272,7 @@
 
     move-result-wide v4
 
-    .line 333
+    .line 334
     .local v4, diff_v:D
     const-wide/high16 v22, 0x4000
 
@@ -1306,7 +1306,7 @@
 
     move-result-wide v8
 
-    .line 334
+    .line 335
     .local v8, distance:D
     return-wide v8
 .end method
@@ -1319,15 +1319,15 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 832
+    .line 833
     if-nez p1, :cond_1
 
-    .line 855
+    .line 856
     :cond_0
     :goto_0
     return v2
 
-    .line 837
+    .line 838
     :cond_1
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -1335,10 +1335,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 840
+    .line 841
     const/4 v2, -0x1
 
-    .line 842
+    .line 843
     .local v2, imporEventID:I
     const-string v4, "iCalGUID"
 
@@ -1346,7 +1346,7 @@
 
     move-result v1
 
-    .line 843
+    .line 844
     .local v1, colUID:I
     const-string v4, "_id"
 
@@ -1354,7 +1354,7 @@
 
     move-result v0
 
-    .line 845
+    .line 846
     .local v0, colEventID:I
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -1362,13 +1362,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 848
+    .line 849
     :cond_2
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 849
+    .line 850
     .local v3, uid:Ljava/lang/String;
     invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1376,15 +1376,15 @@
 
     if-eqz v4, :cond_3
 
-    .line 850
+    .line 851
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
-    .line 851
+    .line 852
     goto :goto_0
 
-    .line 853
+    .line 854
     :cond_3
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1400,18 +1400,18 @@
     .parameter "context"
 
     .prologue
-    .line 74
+    .line 75
     const-class v1, Lcom/htc/util/calendar/HtcCalendarManager;
 
     monitor-enter v1
 
-    .line 75
+    .line 76
     :try_start_0
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
     if-nez v0, :cond_0
 
-    .line 76
+    .line 77
     new-instance v0, Lcom/htc/util/calendar/HtcCalendarManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -1422,13 +1422,13 @@
 
     sput-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
-    .line 78
+    .line 79
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 80
+    .line 81
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
     iget-object v0, v0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
@@ -1439,7 +1439,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 81
+    .line 82
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -1448,7 +1448,7 @@
 
     iput-object v1, v0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
-    .line 84
+    .line 85
     :cond_1
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
@@ -1456,10 +1456,10 @@
 
     if-nez v0, :cond_2
 
-    .line 85
+    .line 86
     if-eqz p0, :cond_3
 
-    .line 86
+    .line 87
     const-string v0, "HtcCalendarManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1486,19 +1486,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
+    .line 90
     :goto_0
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
     iput-object p0, v0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
-    .line 92
+    .line 93
     :cond_2
     sget-object v0, Lcom/htc/util/calendar/HtcCalendarManager;->me:Lcom/htc/util/calendar/HtcCalendarManager;
 
     return-object v0
 
-    .line 78
+    .line 79
     :catchall_0
     move-exception v0
 
@@ -1509,7 +1509,7 @@
 
     throw v0
 
-    .line 88
+    .line 89
     :cond_3
     const-string v0, "HtcCalendarManager"
 
@@ -1543,16 +1543,16 @@
     .end annotation
 
     .prologue
-    .line 622
+    .line 623
     .local p4, events:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .local p5, alarms:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     const/4 v6, 0x0
 
-    .line 623
+    .line 624
     .local v6, idx:I
     const/4 v9, 0x0
 
-    .line 624
+    .line 625
     .local v9, numberCal:I
     invoke-virtual/range {p4 .. p4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1572,11 +1572,11 @@
 
     check-cast v3, Landroid/content/ContentValues;
 
-    .line 628
+    .line 629
     .local v3, cv:Landroid/content/ContentValues;
     move-object v1, v3
 
-    .line 629
+    .line 630
     .local v1, cacheContentValue:Landroid/content/ContentValues;
     const-string v10, "calendar_id"
 
@@ -1586,14 +1586,14 @@
 
     invoke-virtual {v1, v10, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 632
+    .line 633
     sget-object v10, Landroid/provider/CalendarContract$Events;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, v10, v1}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v7
 
-    .line 633
+    .line 634
     .local v7, newEvent:Landroid/net/Uri;
     invoke-virtual {v7}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -1607,11 +1607,11 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 634
+    .line 635
     .local v8, newEventId:Ljava/lang/String;
     add-int/lit8 v9, v9, 0x1
 
-    .line 636
+    .line 637
     move-object/from16 v0, p5
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1620,11 +1620,11 @@
 
     check-cast v2, Landroid/content/ContentValues;
 
-    .line 637
+    .line 638
     .local v2, cacheContentValue2:Landroid/content/ContentValues;
     if-eqz v2, :cond_0
 
-    .line 638
+    .line 639
     const-string v10, "hasAlarm"
 
     invoke-virtual {v1, v10}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1641,36 +1641,36 @@
 
     const/4 v4, 0x1
 
-    .line 639
+    .line 640
     .local v4, hasAlarm:Z
     :goto_1
     if-eqz v4, :cond_0
 
-    .line 641
+    .line 642
     const-string v10, "event_id"
 
     invoke-virtual {v2, v10, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 643
+    .line 644
     sget-object v10, Landroid/provider/CalendarContract$Reminders;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, v10, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 646
+    .line 647
     .end local v4           #hasAlarm:Z
     :cond_0
     add-int/lit8 v6, v6, 0x1
 
-    .line 647
+    .line 648
     goto :goto_0
 
-    .line 638
+    .line 639
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 649
+    .line 650
     .end local v1           #cacheContentValue:Landroid/content/ContentValues;
     .end local v2           #cacheContentValue2:Landroid/content/ContentValues;
     .end local v3           #cv:Landroid/content/ContentValues;
@@ -1709,36 +1709,36 @@
     .end annotation
 
     .prologue
-    .line 783
+    .line 784
     .local p4, events:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .local p5, alarms:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     const/4 v12, 0x0
 
-    .line 784
+    .line 785
     .local v12, numberCal:I
     invoke-virtual/range {p4 .. p4}, Ljava/util/ArrayList;->size()I
 
     move-result v13
 
-    .line 785
+    .line 786
     .local v13, size:I
     const/4 v10, 0x0
 
-    .line 786
+    .line 787
     .local v10, isExist:Z
     const-string v3, ""
 
-    .line 787
+    .line 788
     .local v3, importGUID:Ljava/lang/String;
     const/4 v4, -0x1
 
-    .line 789
+    .line 790
     .local v4, importEventID:I
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 792
+    .line 793
     .local v7, bundle:Landroid/os/Bundle;
     invoke-virtual/range {p4 .. p4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1759,7 +1759,7 @@
 
     check-cast v8, Landroid/content/ContentValues;
 
-    .line 794
+    .line 795
     .local v8, cv:Landroid/content/ContentValues;
     const-string v1, "iCalGUID"
 
@@ -1767,17 +1767,17 @@
 
     move-result-object v3
 
-    .line 795
+    .line 796
     move-object/from16 v0, p7
 
     invoke-direct {p0, v0, v3}, Lcom/htc/util/calendar/HtcCalendarManager;->getImportEventID(Landroid/database/Cursor;Ljava/lang/String;)I
 
     move-result v4
 
-    .line 797
+    .line 798
     move-object v5, v8
 
-    .line 798
+    .line 799
     .local v5, contentValueEvent:Landroid/content/ContentValues;
     move-object/from16 v0, p5
 
@@ -1787,7 +1787,7 @@
 
     check-cast v6, Landroid/content/ContentValues;
 
-    .line 800
+    .line 801
     .local v6, contentValueAlarm:Landroid/content/ContentValues;
     const-string v1, "calendar_id"
 
@@ -1797,47 +1797,47 @@
 
     invoke-virtual {v5, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 802
+    .line 803
     const/4 v1, -0x1
 
     if-eq v4, v1, :cond_1
 
-    .line 804
+    .line 805
     packed-switch p8, :pswitch_data_0
 
-    .line 815
+    .line 816
     :goto_1
     :pswitch_0
     add-int/lit8 v12, v12, 0x1
 
-    .line 817
+    .line 818
     if-eqz p6, :cond_0
 
-    .line 818
+    .line 819
     new-instance v11, Landroid/os/Message;
 
     invoke-direct {v11}, Landroid/os/Message;-><init>()V
 
-    .line 819
+    .line 820
     .local v11, msg:Landroid/os/Message;
     const-string v1, "value"
 
     invoke-virtual {v7, v1, v12}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 820
+    .line 821
     const-string v1, "max"
 
     invoke-virtual {v7, v1, v13}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 822
+    .line 823
     invoke-virtual {v11, v7}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 823
+    .line 824
     const/4 v1, 0x1
 
     iput v1, v11, Landroid/os/Message;->what:I
 
-    .line 824
+    .line 825
     move-object/from16 v0, p6
 
     invoke-virtual {v0, v11}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1850,25 +1850,25 @@
 
     move-object v2, p1
 
-    .line 809
+    .line 810
     invoke-direct/range {v1 .. v6}, Lcom/htc/util/calendar/HtcCalendarManager;->updateDB(Landroid/content/ContentResolver;Ljava/lang/String;ILandroid/content/ContentValues;Landroid/content/ContentValues;)V
 
     goto :goto_1
 
-    .line 813
+    .line 814
     :cond_1
     invoke-direct {p0, p1, v5, v6}, Lcom/htc/util/calendar/HtcCalendarManager;->insertDB(Landroid/content/ContentResolver;Landroid/content/ContentValues;Landroid/content/ContentValues;)V
 
     goto :goto_1
 
-    .line 827
+    .line 828
     .end local v5           #contentValueEvent:Landroid/content/ContentValues;
     .end local v6           #contentValueAlarm:Landroid/content/ContentValues;
     .end local v8           #cv:Landroid/content/ContentValues;
     :cond_2
     return v12
 
-    .line 804
+    .line 805
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1885,14 +1885,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 861
+    .line 862
     sget-object v3, Landroid/provider/CalendarContract$Events;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, v3, p2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 863
+    .line 864
     .local v1, newEvent:Landroid/net/Uri;
     invoke-virtual {v1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -1904,11 +1904,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 864
+    .line 865
     .local v2, newEventId:Ljava/lang/String;
     if-eqz p3, :cond_0
 
-    .line 865
+    .line 866
     const-string v3, "hasAlarm"
 
     invoke-virtual {p2, v3}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1921,27 +1921,27 @@
 
     if-ne v3, v0, :cond_1
 
-    .line 866
+    .line 867
     .local v0, hasAlarm:Z
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 868
+    .line 869
     const-string v3, "event_id"
 
     invoke-virtual {p3, v3, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 871
+    .line 872
     sget-object v3, Landroid/provider/CalendarContract$Reminders;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, v3, p3}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 874
+    .line 875
     .end local v0           #hasAlarm:Z
     :cond_0
     return-void
 
-    .line 865
+    .line 866
     :cond_1
     const/4 v0, 0x0
 
@@ -1961,7 +1961,7 @@
 
     const/4 v4, 0x1
 
-    .line 878
+    .line 879
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1986,7 +1986,7 @@
 
     move-result-object v3
 
-    .line 879
+    .line 880
     .local v3, where:Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2006,16 +2006,16 @@
 
     move-result-object v0
 
-    .line 881
+    .line 882
     .local v0, alarm_where:Ljava/lang/String;
     sget-object v5, Landroid/provider/CalendarContract$Events;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, v5, p4, v3, v7}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 883
+    .line 884
     if-eqz p5, :cond_0
 
-    .line 884
+    .line 885
     const-string v5, "hasAlarm"
 
     invoke-virtual {p4, v5}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -2030,12 +2030,12 @@
 
     move v2, v4
 
-    .line 885
+    .line 886
     .local v2, hasAlarm:Z
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 887
+    .line 888
     const-string v5, "event_id"
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2044,29 +2044,29 @@
 
     invoke-virtual {p5, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 889
+    .line 890
     sget-object v5, Landroid/provider/CalendarContract$Reminders;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, v5, p5, v0, v7}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
-    .line 893
+    .line 894
     .local v1, count:I
     if-ge v1, v4, :cond_0
 
-    .line 900
+    .line 901
     sget-object v4, Landroid/provider/CalendarContract$Reminders;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p1, v4, p5}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 904
+    .line 905
     .end local v1           #count:I
     .end local v2           #hasAlarm:Z
     :cond_0
     return-void
 
-    .line 884
+    .line 885
     :cond_1
     const/4 v2, 0x0
 
@@ -2091,24 +2091,24 @@
     .end annotation
 
     .prologue
-    .line 606
+    .line 607
     new-instance v0, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
 
     invoke-direct {v0}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;-><init>()V
 
-    .line 607
+    .line 608
     .local v0, cal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     invoke-virtual {v0, p1}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->parseVCalendar(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 608
+    .line 609
     .local v1, isPass:Z
     if-nez v1, :cond_0
 
     const/4 v2, 0x0
 
-    .line 609
+    .line 610
     :goto_0
     return-object v2
 
@@ -2125,14 +2125,14 @@
     .parameter "eventId"
 
     .prologue
-    .line 592
+    .line 593
     sget-object v1, Landroid/provider/CalendarContract$Events;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v1, p1, p2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 593
+    .line 594
     .local v0, uri:Landroid/net/Uri;
     invoke-virtual {p0, v0}, Lcom/htc/util/calendar/HtcCalendarManager;->buildVCalendar(Landroid/net/Uri;)Lcom/htc/util/calendar/vcalendar/HtcVCalendar;
 
@@ -2146,7 +2146,7 @@
     .parameter "uniEvent"
 
     .prologue
-    .line 579
+    .line 580
     new-instance v0, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;
 
     invoke-direct {v0}, Lcom/htc/util/calendar/vcalendar/HtcVCalendar;-><init>()V
@@ -2165,7 +2165,7 @@
     .parameter "uniEventUri"
 
     .prologue
-    .line 125
+    .line 126
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/htc/util/calendar/notes/NotesHelper;->checkIfAssociatedNotes(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Long;
@@ -2182,7 +2182,7 @@
     .parameter "endTime"
 
     .prologue
-    .line 171
+    .line 172
     invoke-static/range {p1 .. p6}, Lcom/htc/util/calendar/tools/UriTools;->generateEventUri(JJJ)Landroid/net/Uri;
 
     move-result-object v0
@@ -2197,7 +2197,7 @@
     .parameter "endTime"
 
     .prologue
-    .line 159
+    .line 160
     invoke-static/range {p1 .. p6}, Lcom/htc/util/calendar/tools/UriTools;->generateEventUriString(JJJ)Ljava/lang/String;
 
     move-result-object v0
@@ -2210,7 +2210,7 @@
     .parameter "eventId"
 
     .prologue
-    .line 212
+    .line 213
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1, p2}, Lcom/htc/util/calendar/tools/UriTools;->generateTheEventUri(Landroid/content/Context;J)Landroid/net/Uri;
@@ -2225,7 +2225,7 @@
     .parameter "eventId"
 
     .prologue
-    .line 191
+    .line 192
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1, p2}, Lcom/htc/util/calendar/tools/UriTools;->generateTheEventUriString(Landroid/content/Context;J)Ljava/lang/String;
@@ -2240,33 +2240,33 @@
     .parameter "eventId"
 
     .prologue
-    .line 222
+    .line 223
     iget-object v9, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v9, p1, p2}, Lcom/htc/util/calendar/tools/UriTools;->generateTheEventVCalendarEventTitleUri(Landroid/content/Context;J)Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 224
+    .line 225
     .local v6, ret:Landroid/net/Uri;
     if-eqz v6, :cond_1
 
-    .line 225
+    .line 226
     invoke-virtual {v6}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 226
+    .line 227
     .local v7, title:Ljava/lang/String;
     invoke-virtual {p0, p1, p2}, Lcom/htc/util/calendar/HtcCalendarManager;->buildVCalendar(J)Lcom/htc/util/calendar/vcalendar/HtcVCalendar;
 
     move-result-object v8
 
-    .line 227
+    .line 228
     .local v8, vcal:Lcom/htc/util/calendar/vcalendar/HtcVCalendar;
     const/4 v2, 0x0
 
-    .line 233
+    .line 234
     .local v2, fout:Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2299,13 +2299,13 @@
 
     move-result-object v5
 
-    .line 234
+    .line 235
     .local v5, pathStr:Ljava/lang/String;
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 235
+    .line 236
     .local v4, path:Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -2313,10 +2313,10 @@
 
     if-nez v9, :cond_0
 
-    .line 236
+    .line 237
     invoke-virtual {v4}, Ljava/io/File;->mkdir()Z
 
-    .line 239
+    .line 240
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -2344,7 +2344,7 @@
 
     invoke-direct {v1, v4, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 241
+    .line 242
     .local v1, fileout:Ljava/io/File;
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -2354,7 +2354,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 242
+    .line 243
     .end local v2           #fout:Ljava/io/FileOutputStream;
     .local v3, fout:Ljava/io/FileOutputStream;
     :try_start_1
@@ -2372,13 +2372,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_7
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
 
-    .line 253
+    .line 254
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 259
+    .line 260
     .end local v1           #fileout:Ljava/io/File;
     .end local v3           #fout:Ljava/io/FileOutputStream;
     .end local v4           #path:Ljava/io/File;
@@ -2389,7 +2389,7 @@
     :goto_0
     return-object v6
 
-    .line 254
+    .line 255
     .restart local v1       #fileout:Ljava/io/File;
     .restart local v3       #fout:Ljava/io/FileOutputStream;
     .restart local v4       #path:Ljava/io/File;
@@ -2399,14 +2399,14 @@
     :catch_0
     move-exception v0
 
-    .line 255
+    .line 256
     .local v0, e:Ljava/io/IOException;
     const/4 v6, 0x0
 
-    .line 257
+    .line 258
     goto :goto_0
 
-    .line 245
+    .line 246
     .end local v0           #e:Ljava/io/IOException;
     .end local v1           #fileout:Ljava/io/File;
     .end local v3           #fout:Ljava/io/FileOutputStream;
@@ -2416,7 +2416,7 @@
     :catch_1
     move-exception v0
 
-    .line 246
+    .line 247
     .local v0, e:Ljava/io/FileNotFoundException;
     :goto_1
     :try_start_3
@@ -2448,7 +2448,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 253
+    .line 254
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -2456,23 +2456,23 @@
 
     goto :goto_0
 
-    .line 254
+    .line 255
     :catch_2
     move-exception v0
 
-    .line 255
+    .line 256
     .local v0, e:Ljava/io/IOException;
     const/4 v6, 0x0
 
-    .line 257
+    .line 258
     goto :goto_0
 
-    .line 247
+    .line 248
     .end local v0           #e:Ljava/io/IOException;
     :catch_3
     move-exception v0
 
-    .line 248
+    .line 249
     .restart local v0       #e:Ljava/io/IOException;
     :goto_2
     :try_start_5
@@ -2504,10 +2504,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 249
+    .line 250
     const/4 v6, 0x0
 
-    .line 253
+    .line 254
     :try_start_6
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
@@ -2515,43 +2515,43 @@
 
     goto :goto_0
 
-    .line 254
+    .line 255
     :catch_4
     move-exception v0
 
-    .line 255
+    .line 256
     const/4 v6, 0x0
 
-    .line 257
+    .line 258
     goto :goto_0
 
-    .line 252
+    .line 253
     .end local v0           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v9
 
-    .line 253
+    .line 254
     :goto_3
     :try_start_7
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 256
+    .line 257
     :goto_4
     throw v9
 
-    .line 254
+    .line 255
     :catch_5
     move-exception v0
 
-    .line 255
+    .line 256
     .restart local v0       #e:Ljava/io/IOException;
     const/4 v6, 0x0
 
     goto :goto_4
 
-    .line 252
+    .line 253
     .end local v0           #e:Ljava/io/IOException;
     .end local v2           #fout:Ljava/io/FileOutputStream;
     .restart local v1       #fileout:Ljava/io/File;
@@ -2567,7 +2567,7 @@
     .restart local v2       #fout:Ljava/io/FileOutputStream;
     goto :goto_3
 
-    .line 247
+    .line 248
     .end local v2           #fout:Ljava/io/FileOutputStream;
     .restart local v3       #fout:Ljava/io/FileOutputStream;
     :catch_6
@@ -2579,7 +2579,7 @@
     .restart local v2       #fout:Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 245
+    .line 246
     .end local v2           #fout:Ljava/io/FileOutputStream;
     .restart local v3       #fout:Ljava/io/FileOutputStream;
     :catch_7
@@ -2599,7 +2599,7 @@
     .parameter "endTime"
 
     .prologue
-    .line 207
+    .line 208
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     move-wide v1, p1
@@ -2622,7 +2622,7 @@
     .parameter "endTime"
 
     .prologue
-    .line 187
+    .line 188
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     move-wide v1, p1
@@ -2643,7 +2643,7 @@
     .parameter "uniEventUri"
 
     .prologue
-    .line 114
+    .line 115
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/htc/util/calendar/notes/NotesHelper;->getAssociatedNotesId(Landroid/content/Context;Ljava/lang/String;)J
@@ -2670,10 +2670,10 @@
     .end annotation
 
     .prologue
-    .line 693
+    .line 694
     const/4 v11, 0x0
 
-    .line 694
+    .line 695
     .local v11, member:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/calendar/Attendee;>;"
     move-object/from16 v0, p0
 
@@ -2683,7 +2683,7 @@
 
     move-result-object v1
 
-    .line 695
+    .line 696
     .local v1, cr:Landroid/content/ContentResolver;
     move-object/from16 v0, p0
 
@@ -2695,7 +2695,7 @@
 
     move-result-wide v9
 
-    .line 696
+    .line 697
     .local v9, event_id:J
     const-wide/16 v2, 0x0
 
@@ -2705,11 +2705,11 @@
 
     const/4 v2, 0x0
 
-    .line 745
+    .line 746
     :goto_0
     return-object v2
 
-    .line 698
+    .line 699
     :cond_0
     new-instance v2, Ljava/lang/StringBuffer;
 
@@ -2731,7 +2731,7 @@
 
     move-result-object v15
 
-    .line 702
+    .line 703
     .local v15, where:Ljava/lang/StringBuffer;
     if-eqz p2, :cond_1
 
@@ -2759,7 +2759,7 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 708
+    .line 709
     :cond_1
     const-string v2, " and "
 
@@ -2783,7 +2783,7 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 714
+    .line 715
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2811,7 +2811,7 @@
 
     invoke-direct {v0, v2}, Lcom/htc/util/calendar/HtcCalendarManager;->Debug(Ljava/lang/String;)V
 
-    .line 717
+    .line 718
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
@@ -2840,7 +2840,7 @@
 
     move-result-object v13
 
-    .line 723
+    .line 724
     .local v13, sort:Ljava/lang/StringBuffer;
     sget-object v2, Landroid/provider/CalendarContract$Attendees;->CONTENT_URI:Landroid/net/Uri;
 
@@ -2860,7 +2860,7 @@
 
     move-result-object v7
 
-    .line 725
+    .line 726
     .local v7, cursor:Landroid/database/Cursor;
     if-nez v7, :cond_3
 
@@ -2868,7 +2868,7 @@
 
     goto/16 :goto_0
 
-    .line 726
+    .line 727
     :cond_3
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -2876,13 +2876,13 @@
 
     if-eqz v2, :cond_6
 
-    .line 727
+    .line 728
     new-instance v11, Ljava/util/ArrayList;
 
     .end local v11           #member:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/calendar/Attendee;>;"
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 729
+    .line 730
     .restart local v11       #member:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/calendar/Attendee;>;"
     :cond_4
     const-string v2, "attendeeStatus"
@@ -2895,7 +2895,7 @@
 
     move-result v14
 
-    .line 730
+    .line 731
     .local v14, status:I
     const-string v2, "attendeeName"
 
@@ -2907,7 +2907,7 @@
 
     move-result-object v12
 
-    .line 731
+    .line 732
     .local v12, name:Ljava/lang/String;
     const-string v2, "attendeeEmail"
 
@@ -2919,7 +2919,7 @@
 
     move-result-object v8
 
-    .line 732
+    .line 733
     .local v8, email:Ljava/lang/String;
     const-string v2, "default@htc.calendar"
 
@@ -2945,7 +2945,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 739
+    .line 740
     :cond_5
     :goto_1
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -2954,7 +2954,7 @@
 
     if-nez v2, :cond_4
 
-    .line 742
+    .line 743
     .end local v8           #email:Ljava/lang/String;
     .end local v12           #name:Ljava/lang/String;
     .end local v14           #status:I
@@ -2967,16 +2967,16 @@
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 743
+    .line 744
     :cond_7
     const/4 v7, 0x0
 
     move-object v2, v11
 
-    .line 745
+    .line 746
     goto/16 :goto_0
 
-    .line 737
+    .line 738
     .restart local v8       #email:Ljava/lang/String;
     .restart local v12       #name:Ljava/lang/String;
     .restart local v14       #status:I
@@ -3000,12 +3000,12 @@
 
     const/4 v12, 0x0
 
-    .line 455
+    .line 456
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 457
+    .line 458
     .local v7, colorUsage:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const v1, -0x30cdde
 
@@ -3019,7 +3019,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 458
+    .line 459
     const v1, -0x21a883
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3032,7 +3032,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 459
+    .line 460
     const v1, -0x62b755
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3045,7 +3045,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 460
+    .line 461
     const v1, -0x8fbc51
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3058,7 +3058,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 461
+    .line 462
     const v1, -0xfea379
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3071,7 +3071,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 462
+    .line 463
     const v1, -0xe17d78
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3084,7 +3084,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 463
+    .line 464
     const v1, -0xde5c85
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3097,7 +3097,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 464
+    .line 465
     const v1, -0xd964d4
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3110,7 +3110,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 465
+    .line 466
     const v1, -0xb7731c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3123,7 +3123,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 466
+    .line 467
     const v1, -0x875709
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3136,7 +3136,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 467
+    .line 468
     const v1, -0x487615
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3149,7 +3149,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 468
+    .line 469
     const v1, -0xe46fe
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3162,7 +3162,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 469
+    .line 470
     const v1, -0x26ff4
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3175,7 +3175,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 470
+    .line 471
     const v1, -0x1998f4
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3188,7 +3188,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 471
+    .line 472
     const v1, -0x3c99b0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3201,7 +3201,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 472
+    .line 473
     const v1, -0x8fb4a5
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3214,7 +3214,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 473
+    .line 474
     const v1, -0xccb68d
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3227,7 +3227,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 474
+    .line 475
     const v1, -0x9ba477
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3240,7 +3240,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 475
+    .line 476
     const v1, -0xf76ea7
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3253,7 +3253,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 476
+    .line 477
     const v1, -0x7b8cf3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3266,7 +3266,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 477
+    .line 478
     const v1, -0x3a6ac8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3279,7 +3279,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 478
+    .line 479
     const v1, -0xf287ed
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3292,7 +3292,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 481
+    .line 482
     const v1, -0x2f949c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3305,7 +3305,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 482
+    .line 483
     const v1, -0x96e4e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3318,7 +3318,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 483
+    .line 484
     const v1, -0x328b1a
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3331,7 +3331,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 484
+    .line 485
     const v1, -0x87b430
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3344,7 +3344,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 485
+    .line 486
     const v1, -0xb67919
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3357,7 +3357,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 486
+    .line 487
     const v1, -0xab8930
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3370,7 +3370,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 487
+    .line 488
     const v1, -0xbd296e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3383,7 +3383,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 488
+    .line 489
     const v1, -0x6d1e40
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3396,7 +3396,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 489
+    .line 490
     const v1, -0xbf5bbf
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3409,7 +3409,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 490
+    .line 491
     const v1, -0x4c2394
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3422,7 +3422,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 491
+    .line 492
     const v1, -0x4d4bc3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3435,7 +3435,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 492
+    .line 493
     const v1, -0x4167d
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3448,7 +3448,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 493
+    .line 494
     const/16 v1, -0x52ba
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3461,7 +3461,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 494
+    .line 495
     const v1, -0x8ac9
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3474,7 +3474,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 495
+    .line 496
     const v1, -0x335954
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3487,7 +3487,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 496
+    .line 497
     const v1, -0x466501
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3500,7 +3500,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 497
+    .line 498
     const v1, -0x897a6c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3513,7 +3513,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 498
+    .line 499
     const v1, -0x603919
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3526,7 +3526,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 499
+    .line 500
     const v1, -0x8c646c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3539,7 +3539,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 500
+    .line 501
     const v1, -0x696796
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3552,7 +3552,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 501
+    .line 502
     const v1, -0x486790
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3565,7 +3565,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 502
+    .line 503
     const v1, -0x46bee8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3578,7 +3578,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 503
+    .line 504
     const v1, -0x7c5de
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3591,7 +3591,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 504
+    .line 505
     const v1, -0x4cd765
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3604,7 +3604,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 505
+    .line 506
     const v1, -0x5b851e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3617,7 +3617,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 506
+    .line 507
     const v1, -0xbda86b
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3630,7 +3630,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 507
+    .line 508
     const v1, -0xd7d563
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3643,7 +3643,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 508
+    .line 509
     const v1, -0xe9589b
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3656,7 +3656,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 509
+    .line 510
     const v1, -0xb366da
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3669,7 +3669,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 510
+    .line 511
     const v1, -0x842eb8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3682,7 +3682,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 511
+    .line 512
     const v1, -0x6852e1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3695,7 +3695,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 512
+    .line 513
     const v1, -0x3c77f0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3708,7 +3708,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 513
+    .line 514
     const v1, -0x3794e8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3721,7 +3721,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 514
+    .line 515
     const v1, -0x538da2
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3734,7 +3734,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 515
+    .line 516
     const v1, -0x82c4ef
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3747,7 +3747,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 516
+    .line 517
     const v1, -0x66efa2
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3760,7 +3760,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 517
+    .line 518
     const v1, -0x656301
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3773,7 +3773,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 518
+    .line 519
     const v1, -0x601e19
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3786,7 +3786,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 519
+    .line 520
     const v1, -0x354241
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3799,7 +3799,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 520
+    .line 521
     const v1, -0xc9688c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3812,7 +3812,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 521
+    .line 522
     const v1, -0x52e9b
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3825,7 +3825,7 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 522
+    .line 523
     const v1, -0x64e3de
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3838,14 +3838,14 @@
 
     invoke-virtual {v7, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 525
+    .line 526
     new-array v2, v13, [Ljava/lang/String;
 
     const-string v1, "calendar_color"
 
     aput-object v1, v2, v12
 
-    .line 529
+    .line 530
     .local v2, projectArys:[Ljava/lang/String;
     iget-object v1, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
@@ -3853,11 +3853,11 @@
 
     move-result-object v0
 
-    .line 530
+    .line 531
     .local v0, cr:Landroid/content/ContentResolver;
     const-string v3, "calendar_color IS NOT NULL "
 
-    .line 531
+    .line 532
     .local v3, where:Ljava/lang/String;
     sget-object v1, Landroid/provider/CalendarContract$Calendars;->CONTENT_URI:Landroid/net/Uri;
 
@@ -3867,16 +3867,16 @@
 
     move-result-object v6
 
-    .line 533
+    .line 534
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_5
 
-    .line 534
+    .line 535
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v10
 
-    .line 535
+    .line 536
     .local v10, nCnt:I
     const-string v1, "HtcCalendarManager"
 
@@ -3906,17 +3906,17 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
+    .line 537
     if-lez v10, :cond_5
 
-    .line 539
+    .line 540
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 542
+    .line 543
     :cond_0
     invoke-interface {v6, v12}, Landroid/database/Cursor;->getInt(I)I
 
@@ -3932,7 +3932,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 543
+    .line 544
     invoke-interface {v6, v12}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v1
@@ -3947,7 +3947,7 @@
 
     invoke-virtual {v7, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 550
+    .line 551
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -3955,7 +3955,7 @@
 
     if-nez v1, :cond_0
 
-    .line 552
+    .line 553
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
 
@@ -3963,10 +3963,10 @@
 
     if-nez v1, :cond_2
 
-    .line 553
+    .line 554
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 556
+    .line 557
     :cond_2
     invoke-virtual {v7}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -3976,7 +3976,7 @@
 
     move-result-object v8
 
-    .line 557
+    .line 558
     .local v8, it:Ljava/util/Iterator;
     :cond_3
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
@@ -3985,14 +3985,14 @@
 
     if-eqz v1, :cond_5
 
-    .line 558
+    .line 559
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/lang/Integer;
 
-    .line 559
+    .line 560
     .local v9, key:Ljava/lang/Integer;
     invoke-virtual {v7, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -4000,7 +4000,7 @@
 
     check-cast v11, Ljava/lang/Integer;
 
-    .line 561
+    .line 562
     .local v11, value:Ljava/lang/Integer;
     invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
 
@@ -4008,7 +4008,7 @@
 
     if-nez v1, :cond_3
 
-    .line 562
+    .line 563
     const-string v1, "HtcCalendarManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4031,7 +4031,7 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 569
+    .line 570
     .end local v8           #it:Ljava/util/Iterator;
     .end local v9           #key:Ljava/lang/Integer;
     .end local v10           #nCnt:I
@@ -4039,7 +4039,7 @@
     :goto_1
     return-object v9
 
-    .line 546
+    .line 547
     .restart local v10       #nCnt:I
     :cond_4
     const-string v1, "HtcCalendarManager"
@@ -4070,7 +4070,7 @@
 
     goto :goto_0
 
-    .line 569
+    .line 570
     .end local v10           #nCnt:I
     :cond_5
     const/4 v1, -0x1
@@ -4087,7 +4087,7 @@
     .parameter "drawable_array"
 
     .prologue
-    .line 440
+    .line 441
     invoke-virtual {p0}, Lcom/htc/util/calendar/HtcCalendarManager;->getAvailableColor()Ljava/lang/Integer;
 
     move-result-object v1
@@ -4096,18 +4096,18 @@
 
     move-result v0
 
-    .line 441
+    .line 442
     .local v0, color:I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 442
+    .line 443
     invoke-virtual {p0, v0, p1}, Lcom/htc/util/calendar/HtcCalendarManager;->getMappingColorAssetid(I[I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 443
+    .line 444
     :goto_0
     return-object v1
 
@@ -4124,7 +4124,7 @@
     .parameter "eventUri"
 
     .prologue
-    .line 749
+    .line 750
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/htc/util/calendar/tools/UriTools;->getEventInstance(Landroid/content/Context;Landroid/net/Uri;)Lcom/htc/util/calendar/EventInstance;
@@ -4140,7 +4140,7 @@
     .parameter "drawable_array"
 
     .prologue
-    .line 403
+    .line 404
     move-object/from16 v0, p2
 
     array-length v1, v0
@@ -4159,7 +4159,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 404
+    .line 405
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -4191,13 +4191,13 @@
 
     throw v1
 
-    .line 407
+    .line 408
     :cond_1
     const v1, 0xffffff
 
     and-int p1, p1, v1
 
-    .line 409
+    .line 410
     :try_start_0
     sget-object v1, Lcom/htc/util/calendar/HtcCalendarManager;->colorMappingToIndex:Ljava/util/HashMap;
 
@@ -4223,15 +4223,15 @@
 
     move-result-object v1
 
-    .line 424
+    .line 425
     :goto_0
     return-object v1
 
-    .line 411
+    .line 412
     :catch_0
     move-exception v11
 
-    .line 412
+    .line 413
     .local v11, e:Ljava/lang/Exception;
     const-string v1, "HtcCalendarManager"
 
@@ -4259,14 +4259,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 413
+    .line 414
     const-wide/16 v9, 0x0
 
-    .line 414
+    .line 415
     .local v9, diff:D
     const/4 v13, 0x0
 
-    .line 415
+    .line 416
     .local v13, matched_color_res:I
     const/4 v12, 0x0
 
@@ -4278,12 +4278,12 @@
 
     if-ge v12, v1, :cond_4
 
-    .line 416
+    .line 417
     sget-object v1, Lcom/htc/util/calendar/HtcCalendarManager;->COLOR_MATRIX_RES:[I
 
     aget v8, v1, v12
 
-    .line 417
+    .line 418
     .local v8, color_res:I
     const/high16 v1, 0xff
 
@@ -4321,7 +4321,7 @@
 
     move-result-wide v14
 
-    .line 419
+    .line 420
     .local v14, temp_diff:D
     const-wide/16 v1, 0x0
 
@@ -4333,20 +4333,20 @@
 
     if-gez v1, :cond_3
 
-    .line 420
+    .line 421
     :cond_2
     move-wide v9, v14
 
-    .line 421
+    .line 422
     move v13, v8
 
-    .line 415
+    .line 416
     :cond_3
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_1
 
-    .line 424
+    .line 425
     .end local v8           #color_res:I
     .end local v14           #temp_diff:D
     :cond_4
@@ -4382,12 +4382,12 @@
     .parameter "vCalString"
 
     .prologue
-    .line 661
+    .line 662
     new-instance v13, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
 
     invoke-direct {v13}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;-><init>()V
 
-    .line 662
+    .line 663
     .local v13, cal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     move-object/from16 v0, p4
 
@@ -4395,35 +4395,35 @@
 
     move-result v15
 
-    .line 664
+    .line 665
     .local v15, isPass:Z
     if-nez v15, :cond_0
 
     const/4 v1, 0x0
 
-    .line 674
+    .line 675
     :goto_0
     return v1
 
-    .line 666
+    .line 667
     :cond_0
     invoke-virtual {v13}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getMultiEventsCV()Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 667
+    .line 668
     .local v5, multiEventsCv:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     invoke-virtual {v13}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getMultiToDoCV()Ljava/util/ArrayList;
 
     move-result-object v11
 
-    .line 668
+    .line 669
     .local v11, multiToDoCv:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     invoke-virtual {v13}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getMultiEventAlarmsCV()Ljava/util/ArrayList;
 
     move-result-object v6
 
-    .line 669
+    .line 670
     .local v6, multiEventsAlarmCv:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     invoke-virtual {v13}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getMultiToDoAlarmsCV()Ljava/util/ArrayList;
 
@@ -4436,7 +4436,7 @@
 
     move-wide/from16 v3, p2
 
-    .line 671
+    .line 672
     invoke-direct/range {v1 .. v6}, Lcom/htc/util/calendar/HtcCalendarManager;->importCalendar(Landroid/content/ContentResolver;JLjava/util/ArrayList;Ljava/util/ArrayList;)I
 
     move-result v14
@@ -4448,12 +4448,12 @@
 
     move-wide/from16 v9, p2
 
-    .line 672
+    .line 673
     invoke-direct/range {v7 .. v12}, Lcom/htc/util/calendar/HtcCalendarManager;->importCalendar(Landroid/content/ContentResolver;JLjava/util/ArrayList;Ljava/util/ArrayList;)I
 
     move-result v16
 
-    .line 674
+    .line 675
     .local v16, todoCal:I
     add-int v1, v14, v16
 
@@ -4470,12 +4470,12 @@
     .parameter "restoreType"
 
     .prologue
-    .line 760
+    .line 761
     new-instance v10, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
 
     invoke-direct {v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;-><init>()V
 
-    .line 761
+    .line 762
     .local v10, cal:Lcom/htc/util/calendar/vcalendar/VCalendarUtils;
     move-object/from16 v0, p4
 
@@ -4483,24 +4483,24 @@
 
     move-result v12
 
-    .line 763
+    .line 764
     .local v12, isPass:Z
     if-nez v12, :cond_0
 
-    .line 764
+    .line 765
     const/4 v11, 0x0
 
-    .line 771
+    .line 772
     :goto_0
     return v11
 
-    .line 766
+    .line 767
     :cond_0
     invoke-virtual {v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getMultiEventsCV()Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 767
+    .line 768
     .local v5, multiEventsCv:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     invoke-virtual {v10}, Lcom/htc/util/calendar/vcalendar/VCalendarUtils;->getMultiEventAlarmsCV()Ljava/util/ArrayList;
 
@@ -4519,14 +4519,308 @@
 
     move/from16 v9, p7
 
-    .line 769
+    .line 770
     invoke-direct/range {v1 .. v9}, Lcom/htc/util/calendar/HtcCalendarManager;->importCalendarOnBackground(Landroid/content/ContentResolver;JLjava/util/ArrayList;Ljava/util/ArrayList;Landroid/os/Handler;Landroid/database/Cursor;I)I
 
     move-result v11
 
-    .line 771
+    .line 772
     .local v11, evCal:I
     goto :goto_0
+.end method
+
+.method public isEventConflict(Ljava/lang/String;JJ)Z
+    .locals 9
+    .parameter "GUID"
+    .parameter "startMillis"
+    .parameter "endMillis"
+
+    .prologue
+    .line 908
+    iget-object v4, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    .line 909
+    .local v0, cr:Landroid/content/ContentResolver;
+    const/4 v4, 0x1
+
+    new-array v2, v4, [Ljava/lang/String;
+
+    const/4 v4, 0x0
+
+    const-string v5, "_id"
+
+    aput-object v5, v2, v4
+
+    .line 910
+    .local v2, proj:[Ljava/lang/String;
+    sget-object v4, Landroid/provider/CalendarContract$Instances;->CONTENT_URI:Landroid/net/Uri;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v8, "/"
+
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    .line 911
+    .local v1, uri:Landroid/net/Uri;
+    const/4 v6, 0x0
+
+    .line 912
+    .local v6, cursor:Landroid/database/Cursor;
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Events._id not in (select Events._id from Events where facebook_type= 0 OR account_type like \'%HTC_BirthdayEvent%\' OR iCalGUID like \'"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "\')"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " AND "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "calendar_id"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " not in (Select _id from Calendars where "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "account_type"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " = \'com.google\' AND "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "ownerAccount"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "<>"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "account_name"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ") "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "AND "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "visible"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " = 1 "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "AND "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "begin"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " <> "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " AND "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "end"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " <> "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 921
+    .local v3, where:Ljava/lang/String;
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    :try_start_0
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v6
+
+    .line 922
+    invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v4
+
+    if-lez v4, :cond_1
+
+    .line 923
+    const/4 v4, 0x1
+
+    .line 930
+    invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    .line 931
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    :goto_0
+    return v4
+
+    .line 925
+    :cond_1
+    const/4 v4, 0x0
+
+    .line 930
+    invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    .line 931
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 927
+    :catch_0
+    move-exception v7
+
+    .line 928
+    .local v7, e:Ljava/lang/Exception;
+    const/4 v4, 0x0
+
+    .line 930
+    invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    .line 931
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    .line 930
+    .end local v7           #e:Ljava/lang/Exception;
+    :catchall_0
+    move-exception v4
+
+    invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    .line 931
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    throw v4
 .end method
 
 .method public isEventExist(Landroid/net/Uri;)Z
@@ -4534,7 +4828,7 @@
     .parameter "uri"
 
     .prologue
-    .line 137
+    .line 138
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/htc/util/calendar/tools/UriTools;->isEventExist(Landroid/content/Context;Landroid/net/Uri;)Z
@@ -4551,7 +4845,7 @@
     .parameter "isSet"
 
     .prologue
-    .line 103
+    .line 104
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1, p2, p3, p4}, Lcom/htc/util/calendar/notes/NotesHelper;->setAssociation(Landroid/content/Context;JLjava/lang/String;Z)Landroid/net/Uri;
@@ -4566,7 +4860,7 @@
     .parameter "uniEvent"
 
     .prologue
-    .line 147
+    .line 148
     iget-object v0, p0, Lcom/htc/util/calendar/HtcCalendarManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/htc/util/calendar/tools/UriTools;->uniEventToEventUri(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;

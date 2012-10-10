@@ -28,7 +28,7 @@
     .parameter
 
     .prologue
-    .line 1882
+    .line 1852
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1882
+    .line 1852
     invoke-direct {p0, p1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;-><init>(Lcom/htc/widget/ExpandableListPopupBubbleWindow;)V
 
     return-void
@@ -55,7 +55,7 @@
     .parameter "groupPosition"
 
     .prologue
-    .line 1890
+    .line 1860
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
@@ -72,7 +72,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1891
+    .line 1861
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1892
+    .line 1862
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
@@ -101,7 +101,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1893
+    .line 1863
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
@@ -111,7 +111,7 @@
 
     invoke-interface {v0, p1}, Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;->onGroupCollapse(I)V
 
-    .line 1895
+    .line 1865
     :cond_0
     return-void
 .end method
@@ -121,7 +121,7 @@
     .parameter "groupPosition"
 
     .prologue
-    .line 1902
+    .line 1872
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
@@ -138,7 +138,7 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1903
+    .line 1873
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
@@ -157,7 +157,7 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1904
+    .line 1874
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
@@ -167,7 +167,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1905
+    .line 1875
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mOnGroupExpandListener:Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;
@@ -177,7 +177,7 @@
 
     invoke-interface {v4, p1}, Lcom/htc/widget/HtcExpandableListView$OnGroupExpandListener;->onGroupExpand(I)V
 
-    .line 1907
+    .line 1877
     :cond_0
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
@@ -188,7 +188,7 @@
 
     move-result-wide v2
 
-    .line 1908
+    .line 1878
     .local v2, packedPosition:J
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
@@ -201,7 +201,7 @@
 
     move-result v1
 
-    .line 1909
+    .line 1879
     .local v1, groupFlatPosition:I
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
@@ -214,7 +214,7 @@
 
     move-result v0
 
-    .line 1910
+    .line 1880
     .local v0, childCount:I
     iget-object v4, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupExpandCollapseListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
@@ -227,6 +227,6 @@
 
     invoke-virtual {v4, v5, v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->smoothScrollToPosition(II)V
 
-    .line 1911
+    .line 1881
     return-void
 .end method

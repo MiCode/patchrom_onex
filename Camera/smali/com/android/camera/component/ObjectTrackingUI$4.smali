@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 172
+    .line 174
     iput-object p1, p0, Lcom/android/camera/component/ObjectTrackingUI$4;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 175
+    .line 177
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/RecordingState;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/RecordingState;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -81,19 +81,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
+    .line 178
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$4;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     #calls: Lcom/android/camera/component/ObjectTrackingUI;->stopFaceDetection()V
     invoke-static {v0}, Lcom/android/camera/component/ObjectTrackingUI;->access$300(Lcom/android/camera/component/ObjectTrackingUI;)V
 
-    .line 177
+    .line 179
     iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$4;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
     #calls: Lcom/android/camera/component/ObjectTrackingUI;->disableOT()V
     invoke-static {v0}, Lcom/android/camera/component/ObjectTrackingUI;->access$500(Lcom/android/camera/component/ObjectTrackingUI;)V
 
-    .line 179
+    .line 181
     :cond_0
     return-void
 .end method

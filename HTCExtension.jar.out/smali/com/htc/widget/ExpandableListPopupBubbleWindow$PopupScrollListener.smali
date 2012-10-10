@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1858
+    .line 1828
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupScrollListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1858
+    .line 1828
     invoke-direct {p0, p1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupScrollListener;-><init>(Lcom/htc/widget/ExpandableListPopupBubbleWindow;)V
 
     return-void
@@ -57,7 +57,7 @@
     .parameter "totalItemCount"
 
     .prologue
-    .line 1866
+    .line 1836
     return-void
 .end method
 
@@ -67,7 +67,7 @@
     .parameter "scrollState"
 
     .prologue
-    .line 1873
+    .line 1843
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
@@ -93,7 +93,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1875
+    .line 1845
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupScrollListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mHandler:Landroid/os/Handler;
@@ -110,7 +110,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1876
+    .line 1846
     iget-object v0, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$PopupScrollListener;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mResizePopupRunnable:Lcom/htc/widget/ExpandableListPopupBubbleWindow$ResizePopupRunnable;
@@ -120,7 +120,7 @@
 
     invoke-virtual {v0}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$ResizePopupRunnable;->run()V
 
-    .line 1878
+    .line 1848
     :cond_0
     return-void
 .end method

@@ -52,7 +52,7 @@
     .line 320
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v10, "left == right"
+    const-string v10, "left == right"
 
     invoke-direct {v9, v10}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -1091,7 +1091,7 @@
     .line 266
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v10, "left == right"
+    const-string v10, "left == right"
 
     invoke-direct {v9, v10}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

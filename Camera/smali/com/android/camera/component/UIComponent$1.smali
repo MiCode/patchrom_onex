@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 316
+    .line 319
     iput-object p1, p0, Lcom/android/camera/component/UIComponent$1;->this$0:Lcom/android/camera/component/UIComponent;
 
     iput-object p2, p0, Lcom/android/camera/component/UIComponent$1;->val$callback:Lcom/android/camera/component/UIComponent$AlphaRotateAnimationCallback;
@@ -57,7 +57,7 @@
     .parameter "ani"
 
     .prologue
-    .line 325
+    .line 328
     iget-object v0, p0, Lcom/android/camera/component/UIComponent$1;->val$callback:Lcom/android/camera/component/UIComponent$AlphaRotateAnimationCallback;
 
     iget-object v1, p0, Lcom/android/camera/component/UIComponent$1;->val$view:Landroid/view/View;
@@ -66,7 +66,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/camera/component/UIComponent$AlphaRotateAnimationCallback;->rotate(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 326
+    .line 329
     return-void
 .end method
 
@@ -75,7 +75,7 @@
     .parameter "ani"
 
     .prologue
-    .line 321
+    .line 324
     return-void
 .end method
 
@@ -84,6 +84,6 @@
     .parameter "ani"
 
     .prologue
-    .line 318
+    .line 321
     return-void
 .end method

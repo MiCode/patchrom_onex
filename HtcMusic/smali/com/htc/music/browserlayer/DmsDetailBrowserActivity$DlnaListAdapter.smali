@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020050
+    const v1, 0x7f020052
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -371,7 +371,7 @@
 
     if-eqz v7, :cond_4
 
-    const v7, 0x7f0700cd
+    const v7, 0x7f0700ce
 
     :goto_1
     invoke-virtual {v1, v7}, Landroid/widget/TextView;->setText(I)V
@@ -400,7 +400,7 @@
 
     .line 2221
     :cond_4
-    const v7, 0x7f0700cc
+    const v7, 0x7f0700cd
 
     goto :goto_1
 
@@ -421,7 +421,7 @@
 
     if-eqz v7, :cond_7
 
-    const v7, 0x7f0700cb
+    const v7, 0x7f0700cc
 
     :goto_3
     invoke-virtual {v1, v7}, Landroid/widget/TextView;->setText(I)V
@@ -450,7 +450,7 @@
 
     .line 2227
     :cond_7
-    const v7, 0x7f0700ca
+    const v7, 0x7f0700cb
 
     goto :goto_3
 

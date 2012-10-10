@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1039
+    .line 1134
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -70,24 +70,24 @@
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/rotate/UIRotation;>;"
     const/4 v4, 0x0
 
-    .line 1044
+    .line 1139
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     const/16 v1, 0x2712
 
     invoke-virtual {v0, v1}, Lcom/android/camera/component/CaptureBar;->removeMessages(I)V
 
-    .line 1045
+    .line 1140
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_IsFakeRotation:Z
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3300(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$3500(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 1047
+    .line 1142
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -107,13 +107,13 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1048
+    .line 1143
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$2500(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v3
 
@@ -127,13 +127,13 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1049
+    .line 1144
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$1700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$1900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v3
 
@@ -147,13 +147,13 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1050
+    .line 1145
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4000(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4200(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v3
 
@@ -167,7 +167,7 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1072
+    .line 1167
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -190,19 +190,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1073
+    .line 1168
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     const/4 v1, 0x1
 
     #calls: Lcom/android/camera/component/CaptureBar;->showSelfTimer(Z)V
-    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$3800(Lcom/android/camera/component/CaptureBar;Z)V
+    invoke-static {v0, v1}, Lcom/android/camera/component/CaptureBar;->access$4000(Lcom/android/camera/component/CaptureBar;Z)V
 
-    .line 1074
+    .line 1169
     :cond_1
     return-void
 
-    .line 1054
+    .line 1149
     :cond_2
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
@@ -210,13 +210,13 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1056
+    .line 1151
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->hideFakeUIRotation()V
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4100(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4300(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 1057
+    .line 1152
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -232,13 +232,13 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;I)V
 
-    .line 1058
+    .line 1153
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2500(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v1
 
@@ -248,13 +248,13 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;I)V
 
-    .line 1059
+    .line 1154
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$1700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$1900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v1
 
@@ -264,13 +264,13 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;I)V
 
-    .line 1060
+    .line 1155
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$4000(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v1}, Lcom/android/camera/component/CaptureBar;->access$4200(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v1
 
@@ -282,18 +282,18 @@
 
     goto :goto_0
 
-    .line 1062
+    .line 1157
     :cond_3
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_IsFakeRotationTimeout:Z
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4200(Lcom/android/camera/component/CaptureBar;)Z
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4400(Lcom/android/camera/component/CaptureBar;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1064
+    .line 1159
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -311,13 +311,13 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1065
+    .line 1160
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_VideoCaptureButton:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$2500(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$2700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v2
 
@@ -329,13 +329,13 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1066
+    .line 1161
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SelfTimerIndicator:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$1700(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$1900(Lcom/android/camera/component/CaptureBar;)Landroid/widget/ImageView;
 
     move-result-object v2
 
@@ -347,13 +347,13 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/android/camera/component/CaptureBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 1067
+    .line 1162
     iget-object v1, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$22;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_SlowMotionIndicator:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4000(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$4200(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v2
 

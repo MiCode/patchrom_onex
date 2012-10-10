@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 399
+    .line 407
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$5;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -44,24 +44,24 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 401
+    .line 409
     const-string v5, "[CarLocalMusicSearchActivity]"
 
     const-string v6, "Gesture onFling"
 
     invoke-static {v5, v6}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 402
+    .line 410
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 418
+    .line 426
     :cond_0
     :goto_0
     return v4
 
-    .line 406
+    .line 414
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -75,7 +75,7 @@
 
     float-to-double v0, v5
 
-    .line 407
+    .line 415
     .local v0, diffX:D
     const-string v5, "[CarLocalMusicSearchActivity]"
 
@@ -99,7 +99,7 @@
 
     invoke-static {v5, v6}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 408
+    .line 416
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v5
@@ -112,7 +112,7 @@
 
     float-to-double v2, v5
 
-    .line 409
+    .line 417
     .local v2, diffY:D
     const-string v5, "[CarLocalMusicSearchActivity]"
 
@@ -136,7 +136,7 @@
 
     invoke-static {v5, v6}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
+    .line 418
     const-string v5, "[CarLocalMusicSearchActivity]"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -159,7 +159,7 @@
 
     invoke-static {v5, v6}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
+    .line 419
     const-string v5, "[CarLocalMusicSearchActivity]"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -182,7 +182,7 @@
 
     invoke-static {v5, v6}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 412
+    .line 420
     const-wide/16 v5, 0x0
 
     cmpl-double v5, v2, v5
@@ -216,19 +216,19 @@
 
     if-lez v5, :cond_0
 
-    .line 413
+    .line 421
     const/4 v5, 0x0
 
     cmpl-float v5, p4, v5
 
     if-lez v5, :cond_0
 
-    .line 414
+    .line 422
     iget-object v4, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$5;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-virtual {v4}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->onBackPressed()V
 
-    .line 415
+    .line 423
     const/4 v4, 0x1
 
     goto/16 :goto_0

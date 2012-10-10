@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 406
+    .line 381
     iput-object p1, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     invoke-direct {p0}, Lcom/htc/hfm/IHfmServiceCallback$Stub;-><init>()V
@@ -44,7 +44,7 @@
     .end annotation
 
     .prologue
-    .line 423
+    .line 398
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -54,7 +54,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/hfm/HfmClient$Callback;->onAbortComplete(I)V
 
-    .line 424
+    .line 399
     return-void
 .end method
 
@@ -67,7 +67,7 @@
     .end annotation
 
     .prologue
-    .line 435
+    .line 410
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     const/4 v1, 0x0
@@ -75,7 +75,7 @@
     #setter for: Lcom/htc/hfm/HfmClient;->mSessionId:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/htc/hfm/HfmClient;->access$202(Lcom/htc/hfm/HfmClient;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 436
+    .line 411
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -85,7 +85,7 @@
 
     invoke-virtual {v0}, Lcom/htc/hfm/HfmClient$Callback;->onHfmShutdown()V
 
-    .line 437
+    .line 412
     return-void
 .end method
 
@@ -98,7 +98,7 @@
     .end annotation
 
     .prologue
-    .line 431
+    .line 406
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0}, Lcom/htc/hfm/HfmClient$Callback;->onInterrupt()V
 
-    .line 432
+    .line 407
     return-void
 .end method
 
@@ -122,7 +122,7 @@
     .end annotation
 
     .prologue
-    .line 410
+    .line 385
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -132,7 +132,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/hfm/HfmClient$Callback;->onReserveServiceComplete(I)V
 
-    .line 411
+    .line 386
     return-void
 .end method
 
@@ -147,7 +147,7 @@
     .end annotation
 
     .prologue
-    .line 419
+    .line 394
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -157,7 +157,7 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/htc/hfm/HfmClient$Callback;->onSelectCommandComplete(ILjava/lang/String;)V
 
-    .line 420
+    .line 395
     return-void
 .end method
 
@@ -171,7 +171,7 @@
     .end annotation
 
     .prologue
-    .line 414
+    .line 389
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -181,7 +181,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/hfm/HfmClient$Callback;->onSpeakComplete(I)V
 
-    .line 415
+    .line 390
     return-void
 .end method
 
@@ -194,7 +194,7 @@
     .end annotation
 
     .prologue
-    .line 449
+    .line 424
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -204,7 +204,7 @@
 
     invoke-virtual {v0}, Lcom/htc/hfm/HfmClient$Callback;->onStartRecording()V
 
-    .line 450
+    .line 425
     return-void
 .end method
 
@@ -217,7 +217,7 @@
     .end annotation
 
     .prologue
-    .line 453
+    .line 428
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -227,7 +227,7 @@
 
     invoke-virtual {v0}, Lcom/htc/hfm/HfmClient$Callback;->onStopRecording()V
 
-    .line 454
+    .line 429
     return-void
 .end method
 
@@ -236,7 +236,7 @@
     .parameter "statusCode"
 
     .prologue
-    .line 445
+    .line 420
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -246,7 +246,7 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/hfm/HfmClient$Callback;->onTestWakeUpPhraseComplete(I)V
 
-    .line 446
+    .line 421
     return-void
 .end method
 
@@ -259,7 +259,7 @@
     .end annotation
 
     .prologue
-    .line 427
+    .line 402
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -269,7 +269,7 @@
 
     invoke-virtual {v0}, Lcom/htc/hfm/HfmClient$Callback;->onTimeout()V
 
-    .line 428
+    .line 403
     return-void
 .end method
 
@@ -283,7 +283,7 @@
     .end annotation
 
     .prologue
-    .line 441
+    .line 416
     iget-object v0, p0, Lcom/htc/hfm/HfmClient$2;->this$0:Lcom/htc/hfm/HfmClient;
 
     #getter for: Lcom/htc/hfm/HfmClient;->mCallback:Lcom/htc/hfm/HfmClient$Callback;
@@ -293,6 +293,6 @@
 
     invoke-virtual {v0, p1}, Lcom/htc/hfm/HfmClient$Callback;->onWakeUpModeComplete(I)V
 
-    .line 442
+    .line 417
     return-void
 .end method

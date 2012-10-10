@@ -75,45 +75,45 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2493
+    .line 2506
     iput-object p1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2498
+    .line 2511
     iput v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mGroupPosition:I
 
-    .line 2499
+    .line 2512
     iput v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mExandedFlatPos:I
 
-    .line 2501
+    .line 2514
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mDistanceList:Ljava/util/ArrayList;
 
-    .line 2502
+    .line 2515
     iput v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mReduceViewCount:I
 
-    .line 2503
+    .line 2516
     iput v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mMode:I
 
-    .line 2504
+    .line 2517
     iput-boolean v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mInit:Z
 
-    .line 2505
+    .line 2518
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mStartTime:J
 
-    .line 2506
+    .line 2519
     iput v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mIndex:I
 
-    .line 2507
+    .line 2520
     iput v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mHeightMovedDistance:I
 
-    .line 2508
+    .line 2521
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -129,7 +129,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2493
+    .line 2506
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;-><init>(Lcom/htc/widget/HtcExpandableListView;)V
 
     return-void
@@ -141,21 +141,21 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2546
+    .line 2559
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v3, v3, Lcom/htc/widget/HtcExpandableListView;->mCollapseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v3, :cond_0
 
-    .line 2547
+    .line 2560
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v3, v3, Lcom/htc/widget/HtcExpandableListView;->mCollapseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v3}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 2550
+    .line 2563
     :cond_0
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
@@ -168,13 +168,13 @@
 
     move-result v0
 
-    .line 2552
+    .line 2565
     .local v0, collapsedGroup:I
     iget v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mGroupPosition:I
 
     if-le v0, v3, :cond_3
 
-    .line 2553
+    .line 2566
     iget v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mReduceViewCount:I
 
     if-lez v3, :cond_1
@@ -184,12 +184,12 @@
     #calls: Lcom/htc/widget/HtcExpandableListView;->recoverChildren()V
     invoke-static {v3}, Lcom/htc/widget/HtcExpandableListView;->access$1100(Lcom/htc/widget/HtcExpandableListView;)V
 
-    .line 2561
+    .line 2574
     :cond_1
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 2562
+    .line 2575
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #getter for: Lcom/htc/widget/HtcExpandableListView;->mConnector:Lcom/htc/widget/HtcExpandableListConnector;
@@ -199,7 +199,7 @@
 
     invoke-virtual {v3, v0}, Lcom/htc/widget/HtcExpandableListConnector;->collapseGroupDuringAnimation(I)Z
 
-    .line 2563
+    .line 2576
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #getter for: Lcom/htc/widget/HtcExpandableListView;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
@@ -209,7 +209,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 2564
+    .line 2577
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #getter for: Lcom/htc/widget/HtcExpandableListView;->mOnGroupCollapseListener:Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;
@@ -219,44 +219,44 @@
 
     invoke-interface {v3, v0}, Lcom/htc/widget/HtcExpandableListView$OnGroupCollapseListener;->onGroupCollapse(I)V
 
-    .line 2569
+    .line 2582
     :cond_2
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #setter for: Lcom/htc/widget/HtcExpandableListView;->mShouldDrawFakeDivider:Z
     invoke-static {v3, v4}, Lcom/htc/widget/HtcExpandableListView;->access$1202(Lcom/htc/widget/HtcExpandableListView;Z)Z
 
-    .line 2570
+    .line 2583
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iput-boolean v4, v3, Lcom/htc/widget/HtcExpandableListView;->mShouldDrawArrowDown:Z
 
-    .line 2571
+    .line 2584
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcExpandableListView;->invalidate()V
 
-    .line 2573
+    .line 2586
     iput v4, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mMode:I
 
-    .line 2574
+    .line 2587
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mDistanceList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 2575
+    .line 2588
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mDuration:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 2577
+    .line 2590
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-virtual {v3}, Lcom/htc/widget/HtcExpandableListView;->getHeaderViewsCount()I
 
     move-result v2
 
-    .line 2578
+    .line 2591
     .local v2, headerViewsCount:I
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
@@ -270,10 +270,10 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/htc/widget/HtcExpandableListView$MoveToTopRunnable;->start(II)V
 
-    .line 2597
+    .line 2610
     return-void
 
-    .line 2556
+    .line 2569
     .end local v2           #headerViewsCount:I
     :cond_3
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
@@ -287,11 +287,11 @@
 
     move-result v1
 
-    .line 2557
+    .line 2570
     .local v1, currentExpandedGroupChildCount:I
     if-lez v1, :cond_1
 
-    .line 2558
+    .line 2571
     iget v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mExandedFlatPos:I
 
     sub-int/2addr v3, v1
@@ -305,16 +305,16 @@
     .locals 8
 
     .prologue
-    .line 2649
+    .line 2662
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 2650
+    .line 2663
     .local v0, now:J
     const/4 v2, 0x0
 
-    .line 2652
+    .line 2665
     .local v2, targetDistance:I
     iget-wide v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mStartTime:J
 
@@ -340,7 +340,7 @@
 
     if-ltz v3, :cond_0
 
-    .line 2653
+    .line 2666
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mDistanceList:Ljava/util/ArrayList;
 
     iget v4, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mIndex:I
@@ -355,11 +355,11 @@
 
     move-result v2
 
-    .line 2657
+    .line 2670
     :goto_0
     return v2
 
-    .line 2655
+    .line 2668
     :cond_0
     iget-wide v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mStartTime:J
 
@@ -410,7 +410,7 @@
     .locals 5
 
     .prologue
-    .line 2601
+    .line 2614
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mReduceViewCount:I
@@ -422,31 +422,31 @@
     #calls: Lcom/htc/widget/HtcExpandableListView;->setReduceDuration(ILjava/util/ArrayList;J)I
     invoke-static {v0, v1, v2, v3, v4}, Lcom/htc/widget/HtcExpandableListView;->access$3100(Lcom/htc/widget/HtcExpandableListView;ILjava/util/ArrayList;J)I
 
-    .line 2602
+    .line 2615
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mStartTime:J
 
-    .line 2603
+    .line 2616
     iget v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mReduceViewCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mIndex:I
 
-    .line 2604
+    .line 2617
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mHeightMovedDistance:I
 
-    .line 2605
+    .line 2618
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mInit:Z
 
-    .line 2606
+    .line 2619
     return-void
 .end method
 
@@ -454,7 +454,7 @@
     .locals 3
 
     .prologue
-    .line 2609
+    .line 2622
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
@@ -475,38 +475,38 @@
     #calls: Lcom/htc/widget/HtcExpandableListView;->setReduceViewHeight(Landroid/view/View;)V
     invoke-static {v1, v0}, Lcom/htc/widget/HtcExpandableListView;->access$3200(Lcom/htc/widget/HtcExpandableListView;Landroid/view/View;)V
 
-    .line 2610
+    .line 2623
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mStartTime:J
 
-    .line 2612
+    .line 2625
     iget v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mIndex:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mIndex:I
 
-    .line 2613
+    .line 2626
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mHeightMovedDistance:I
 
-    .line 2614
+    .line 2627
     iget v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mIndex:I
 
     if-gez v0, :cond_0
 
-    .line 2615
+    .line 2628
     invoke-direct {p0}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->end()V
 
-    .line 2620
+    .line 2633
     :goto_0
     return-void
 
-    .line 2618
+    .line 2631
     :cond_0
     iget-object v0, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
@@ -521,31 +521,31 @@
     .locals 5
 
     .prologue
-    .line 2627
+    .line 2640
     iget v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mMode:I
 
     if-nez v2, :cond_0
 
-    .line 2645
+    .line 2658
     :goto_0
     return-void
 
-    .line 2629
+    .line 2642
     :cond_0
     iget-boolean v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mInit:Z
 
     if-nez v2, :cond_1
 
-    .line 2630
+    .line 2643
     invoke-direct {p0}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->init()V
 
-    .line 2633
+    .line 2646
     :cond_1
     invoke-direct {p0}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->getTargetDistance()I
 
     move-result v1
 
-    .line 2635
+    .line 2648
     .local v1, targetDistance:I
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mDistanceList:Ljava/util/ArrayList;
 
@@ -563,27 +563,27 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 2636
+    .line 2649
     invoke-direct {p0}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->nextView()V
 
-    .line 2637
+    .line 2650
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-virtual {v2, p0}, Lcom/htc/widget/HtcExpandableListView;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 2641
+    .line 2654
     :cond_2
     iget v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mHeightMovedDistance:I
 
     sub-int v0, v1, v2
 
-    .line 2642
+    .line 2655
     .local v0, step:I
     iput v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mHeightMovedDistance:I
 
-    .line 2643
+    .line 2656
     iget-object v3, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
@@ -604,7 +604,7 @@
     #calls: Lcom/htc/widget/HtcExpandableListView;->reduceViewHeight(Landroid/view/View;I)V
     invoke-static {v3, v2, v0}, Lcom/htc/widget/HtcExpandableListView;->access$3300(Lcom/htc/widget/HtcExpandableListView;Landroid/view/View;I)V
 
-    .line 2644
+    .line 2657
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     invoke-virtual {v2, p0}, Lcom/htc/widget/HtcExpandableListView;->post(Ljava/lang/Runnable;)Z
@@ -618,20 +618,20 @@
     .parameter "exandedFlatPos"
 
     .prologue
-    .line 2515
+    .line 2528
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mStartTime:J
 
-    .line 2516
+    .line 2529
     iput p1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mGroupPosition:I
 
-    .line 2517
+    .line 2530
     iput p2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mExandedFlatPos:I
 
-    .line 2518
+    .line 2531
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
@@ -644,7 +644,7 @@
     #setter for: Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewList:Ljava/util/ArrayList;
     invoke-static {v1, v2}, Lcom/htc/widget/HtcExpandableListView;->access$1502(Lcom/htc/widget/HtcExpandableListView;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 2519
+    .line 2532
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #getter for: Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewList:Ljava/util/ArrayList;
@@ -658,19 +658,19 @@
 
     iput v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mReduceViewCount:I
 
-    .line 2521
+    .line 2534
     iget v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mReduceViewCount:I
 
     if-nez v1, :cond_0
 
-    .line 2522
+    .line 2535
     invoke-direct {p0}, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->end()V
 
-    .line 2543
+    .line 2556
     :goto_0
     return-void
 
-    .line 2526
+    .line 2539
     :cond_0
     const/4 v0, 0x0
 
@@ -680,7 +680,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2527
+    .line 2540
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     #getter for: Lcom/htc/widget/HtcExpandableListView;->mExpandReduceViewHeightList:Ljava/util/ArrayList;
@@ -711,7 +711,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2528
+    .line 2541
     iget-object v2, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mDistanceList:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
@@ -739,23 +739,23 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2526
+    .line 2539
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 2530
+    .line 2543
     :cond_1
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mMode:I
 
-    .line 2531
+    .line 2544
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mInit:Z
 
-    .line 2535
+    .line 2548
     iget v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->mReduceViewCount:I
 
     if-lez v1, :cond_2
@@ -782,7 +782,7 @@
     #calls: Lcom/htc/widget/HtcExpandableListView;->reduceChildren(I)V
     invoke-static {v1, v2}, Lcom/htc/widget/HtcExpandableListView;->access$2900(Lcom/htc/widget/HtcExpandableListView;I)V
 
-    .line 2540
+    .line 2553
     :cond_2
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
@@ -790,14 +790,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 2541
+    .line 2554
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 
     iget-object v1, v1, Lcom/htc/widget/HtcExpandableListView;->mCollapseMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v1}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 2542
+    .line 2555
     :cond_3
     iget-object v1, p0, Lcom/htc/widget/HtcExpandableListView$ExpandReduceRunnable;->this$0:Lcom/htc/widget/HtcExpandableListView;
 

@@ -1716,6 +1716,80 @@
     throw v3
 .end method
 
+.method public mountISO(Ljava/lang/String;)I
+    .locals 6
+    .parameter "path"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 798
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 799
+    .local v0, _data:Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 802
+    .local v1, _reply:Landroid/os/Parcel;
+    :try_start_0
+    const-string v3, "IMountService"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 803
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 804
+    iget-object v3, p0, Landroid/os/storage/IMountService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v4, 0x26
+
+    const/4 v5, 0x0
+
+    invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 805
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 806
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v2
+
+    .line 808
+    .local v2, _result:I
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 809
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 811
+    return v2
+
+    .line 808
+    .end local v2           #_result:I
+    :catchall_0
+    move-exception v3
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 809
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 808
+    throw v3
+.end method
+
 .method public mountObb(Ljava/lang/String;Ljava/lang/String;Landroid/os/storage/IObbActionListener;I)V
     .locals 5
     .parameter "filename"
@@ -2510,6 +2584,76 @@
 
     .line 462
     throw v2
+.end method
+
+.method public unmountISO()I
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 815
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 816
+    .local v0, _data:Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 819
+    .local v1, _reply:Landroid/os/Parcel;
+    :try_start_0
+    const-string v3, "IMountService"
+
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 820
+    iget-object v3, p0, Landroid/os/storage/IMountService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v4, 0x27
+
+    const/4 v5, 0x0
+
+    invoke-interface {v3, v4, v0, v1, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    .line 821
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 822
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v2
+
+    .line 824
+    .local v2, _result:I
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 825
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 827
+    return v2
+
+    .line 824
+    .end local v2           #_result:I
+    :catchall_0
+    move-exception v3
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 825
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 824
+    throw v3
 .end method
 
 .method public unmountObb(Ljava/lang/String;ZLandroid/os/storage/IObbActionListener;I)V

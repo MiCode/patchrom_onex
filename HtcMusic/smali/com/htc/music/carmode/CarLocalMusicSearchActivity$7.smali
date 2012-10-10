@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 507
+    .line 515
     iput-object p1, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$7;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "me"
 
     .prologue
-    .line 510
+    .line 518
     const-string v0, "[CarLocalMusicSearchActivity]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,7 +83,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 511
+    .line 519
     iget-object v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$7;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mGestureDetector:Landroid/view/GestureDetector;
@@ -93,14 +93,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 512
+    .line 520
     const-string v0, "[CarLocalMusicSearchActivity]"
 
     const-string v1, "Gesture onTouchEvent = "
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
+    .line 521
     iget-object v0, p0, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$7;->this$0:Lcom/htc/music/carmode/CarLocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/carmode/CarLocalMusicSearchActivity;->mGestureDetector:Landroid/view/GestureDetector;
@@ -112,7 +112,7 @@
 
     move-result v0
 
-    .line 516
+    .line 524
     :goto_0
     return v0
 

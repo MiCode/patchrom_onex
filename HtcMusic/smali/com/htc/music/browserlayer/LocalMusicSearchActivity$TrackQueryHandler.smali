@@ -25,10 +25,10 @@
     .parameter "res"
 
     .prologue
-    .line 1528
+    .line 1549
     iput-object p1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
-    .line 1529
+    .line 1550
     const/4 v0, 0x1
 
     #getter for: Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
@@ -38,7 +38,7 @@
 
     invoke-direct {p0, p2, v0, v1}, Lcom/htc/music/util/DlArtAsyncQueryHandler;-><init>(Landroid/content/ContentResolver;ZZ)V
 
-    .line 1530
+    .line 1551
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1534
+    .line 1555
     const-string v1, "[LocalMusicSearchActivity]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -76,7 +76,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1535
+    .line 1556
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mCurrentSearchToken:I
@@ -86,11 +86,11 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 1564
+    .line 1585
     :goto_0
     return-void
 
-    .line 1539
+    .line 1560
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
@@ -101,7 +101,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1540
+    .line 1561
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
@@ -115,7 +115,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1541
+    .line 1562
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
@@ -125,7 +125,7 @@
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 1542
+    .line 1563
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
@@ -134,19 +134,19 @@
     #setter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$1402(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 1544
+    .line 1565
     :cond_2
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #setter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
     invoke-static {v1, p3}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$1402(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
 
-    .line 1545
+    .line 1566
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     iput-boolean v4, v1, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mAsyncQuerying:Z
 
-    .line 1547
+    .line 1568
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursor:Landroid/database/Cursor;
@@ -156,7 +156,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 1549
+    .line 1570
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
@@ -175,7 +175,7 @@
     #setter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursorIdIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$1602(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;I)I
 
-    .line 1550
+    .line 1571
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
@@ -194,7 +194,7 @@
     #setter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursorTitleIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$1702(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;I)I
 
-    .line 1551
+    .line 1572
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
@@ -213,7 +213,7 @@
     #setter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursorArtistIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$1802(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;I)I
 
-    .line 1552
+    .line 1573
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
@@ -232,7 +232,7 @@
     #setter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mTrackCursorArtIndex:I
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$1902(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;I)I
 
-    .line 1555
+    .line 1576
     :cond_3
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
@@ -247,13 +247,13 @@
 
     move-result-object v0
 
-    .line 1556
+    .line 1577
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x3
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1557
+    .line 1578
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mUiHandler:Landroid/os/Handler;
@@ -263,7 +263,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1559
+    .line 1580
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$TrackQueryHandler;->this$0:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->handleProgress(Z)V

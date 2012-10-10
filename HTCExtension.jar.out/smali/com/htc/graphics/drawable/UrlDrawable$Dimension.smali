@@ -25,13 +25,13 @@
     .locals 0
 
     .prologue
-    .line 469
+    .line 467
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 470
+    .line 468
     invoke-virtual {p0}, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->reset()V
 
-    .line 471
+    .line 469
     return-void
 .end method
 
@@ -41,16 +41,16 @@
     .parameter "height"
 
     .prologue
-    .line 473
+    .line 471
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 474
+    .line 472
     iput p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
-    .line 475
+    .line 473
     iput p2, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->height:I
 
-    .line 476
+    .line 474
     return-void
 .end method
 
@@ -60,23 +60,23 @@
     .locals 2
 
     .prologue
-    .line 519
+    .line 517
     new-instance v0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
     invoke-direct {v0}, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;-><init>()V
 
-    .line 520
+    .line 518
     .local v0, cloned:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
     iget v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
     iput v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
-    .line 521
+    .line 519
     iget v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->height:I
 
     iput v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->height:I
 
-    .line 522
+    .line 520
     return-object v0
 .end method
 
@@ -89,7 +89,7 @@
     .end annotation
 
     .prologue
-    .line 452
+    .line 450
     invoke-virtual {p0}, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->clone()Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
     move-result-object v0
@@ -103,7 +103,7 @@
     .parameter "h"
 
     .prologue
-    .line 512
+    .line 510
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
     if-ne v0, p1, :cond_0
@@ -130,17 +130,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 501
+    .line 499
     instance-of v2, p1, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 502
+    .line 500
     check-cast v0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
-    .line 503
+    .line 501
     .local v0, other:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
     iget v2, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
@@ -156,7 +156,7 @@
 
     const/4 v1, 0x1
 
-    .line 505
+    .line 503
     .end local v0           #other:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
     :cond_0
     return v1
@@ -166,7 +166,7 @@
     .locals 1
 
     .prologue
-    .line 539
+    .line 537
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->height:I
 
     return v0
@@ -176,7 +176,7 @@
     .locals 1
 
     .prologue
-    .line 531
+    .line 529
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
     return v0
@@ -186,7 +186,7 @@
     .locals 1
 
     .prologue
-    .line 493
+    .line 491
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
     if-eqz v0, :cond_0
@@ -210,14 +210,14 @@
     .locals 1
 
     .prologue
-    .line 486
+    .line 484
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->height:I
 
     iput v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
-    .line 487
+    .line 485
     return-void
 .end method
 
@@ -226,10 +226,10 @@
     .parameter "height"
 
     .prologue
-    .line 543
+    .line 541
     iput p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->height:I
 
-    .line 544
+    .line 542
     return-void
 .end method
 
@@ -238,10 +238,10 @@
     .parameter "width"
 
     .prologue
-    .line 535
+    .line 533
     iput p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->width:I
 
-    .line 536
+    .line 534
     return-void
 .end method
 
@@ -249,7 +249,7 @@
     .locals 2
 
     .prologue
-    .line 527
+    .line 525
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

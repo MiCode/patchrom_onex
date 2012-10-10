@@ -298,6 +298,8 @@
     <dimen name="mirror_bottom_bar_height">120.0px</dimen>
     <dimen name="mirror_brightness_button_left">327.0px</dimen>
     <dimen name="mirror_brightness_button_bottom">31.0px</dimen>
+    <dimen name="mirror_header_bar_height">106.0px</dimen>
+    <dimen name="mirror_header_title_margin_left">20.0px</dimen>
     <dimen name="ds_camera_btn_left_margin">203.0px</dimen>
     <dimen name="ds_camera_btn_top_margin">721.0px</dimen>
     <dimen name="ds_video_btn_left_margin">208.0px</dimen>

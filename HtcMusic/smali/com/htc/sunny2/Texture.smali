@@ -426,13 +426,13 @@
     .end annotation
 
     .prologue
-    .line 275
+    .line 280
     invoke-virtual {p0}, Lcom/htc/sunny2/Texture;->release()V
 
-    .line 276
+    .line 281
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 277
+    .line 282
     return-void
 .end method
 
@@ -450,7 +450,7 @@
     .locals 1
 
     .prologue
-    .line 219
+    .line 224
     iget v0, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
     return v0
@@ -460,7 +460,7 @@
     .locals 1
 
     .prologue
-    .line 223
+    .line 228
     iget v0, p0, Lcom/htc/sunny2/Texture;->mHeight:I
 
     return v0
@@ -470,7 +470,7 @@
     .locals 1
 
     .prologue
-    .line 211
+    .line 216
     iget-object v0, p0, Lcom/htc/sunny2/Texture;->mIdentifier:Ljava/lang/String;
 
     return-object v0
@@ -480,7 +480,7 @@
     .locals 1
 
     .prologue
-    .line 238
+    .line 243
     iget v0, p0, Lcom/htc/sunny2/Texture;->mOriSourceHeight:I
 
     return v0
@@ -490,7 +490,7 @@
     .locals 1
 
     .prologue
-    .line 246
+    .line 251
     iget v0, p0, Lcom/htc/sunny2/Texture;->mOriSourceWidth:I
 
     return v0
@@ -500,7 +500,7 @@
     .locals 1
 
     .prologue
-    .line 227
+    .line 232
     iget v0, p0, Lcom/htc/sunny2/Texture;->mWidth:I
 
     return v0
@@ -510,30 +510,30 @@
     .locals 5
 
     .prologue
-    .line 254
+    .line 259
     iget v3, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
     if-eqz v3, :cond_3
 
-    .line 255
+    .line 260
     iget v3, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
     invoke-static {v3}, Lcom/htc/sunny2/Sunny2;->DestroyTexture(I)V
 
-    .line 256
+    .line 261
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
-    .line 258
+    .line 263
     sget-object v4, Lcom/htc/sunny2/Texture;->sTextureList:Ljava/util/List;
 
     monitor-enter v4
 
-    .line 259
+    .line 264
     const/4 v1, 0x0
 
-    .line 260
+    .line 265
     .local v1, remove:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/htc/sunny2/Texture;>;"
     :try_start_0
     sget-object v3, Lcom/htc/sunny2/Texture;->sTextureList:Ljava/util/List;
@@ -556,7 +556,7 @@
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 261
+    .line 266
     .local v2, w:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/htc/sunny2/Texture;>;"
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -564,33 +564,33 @@
 
     if-ne v3, p0, :cond_0
 
-    .line 262
+    .line 267
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->clear()V
 
-    .line 263
+    .line 268
     move-object v1, v2
 
-    .line 267
+    .line 272
     .end local v2           #w:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/htc/sunny2/Texture;>;"
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 268
+    .line 273
     sget-object v3, Lcom/htc/sunny2/Texture;->sTextureList:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 270
+    .line 275
     :cond_2
     monitor-exit v4
 
-    .line 272
+    .line 277
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v1           #remove:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/htc/sunny2/Texture;>;"
     :cond_3
     return-void
 
-    .line 270
+    .line 275
     .restart local v1       #remove:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/htc/sunny2/Texture;>;"
     :catchall_0
     move-exception v3
@@ -607,12 +607,12 @@
     .parameter "bmp"
 
     .prologue
-    .line 164
+    .line 169
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/htc/sunny2/Texture;->setBitmap(Landroid/graphics/Bitmap;Z)V
 
-    .line 165
+    .line 170
     return-void
 .end method
 
@@ -622,12 +622,12 @@
     .parameter "bAntialias"
 
     .prologue
-    .line 168
+    .line 173
     iget v1, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
     if-nez v1, :cond_0
 
-    .line 169
+    .line 174
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "createTextureHandle NG - SunnyTexture is 0"
@@ -636,37 +636,37 @@
 
     throw v1
 
-    .line 172
+    .line 177
     :cond_0
     const/4 v0, 0x0
 
-    .line 173
+    .line 178
     .local v0, sbmp:Lcom/htc/sunny2/SBitmap;
     if-eqz p2, :cond_1
 
-    .line 174
+    .line 179
     const/16 v1, 0xf
 
     invoke-static {p1, v1}, Lcom/htc/sunny2/SBitmap;->createBitmap(Landroid/graphics/Bitmap;I)Lcom/htc/sunny2/SBitmap;
 
     move-result-object v0
 
-    .line 178
+    .line 183
     :goto_0
     if-nez v0, :cond_2
 
-    .line 179
+    .line 184
     sget-object v1, Lcom/htc/sunny2/Texture;->TAG:Ljava/lang/String;
 
     const-string v2, "[setBitmap] Can\'t create SBitmap"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
+    .line 190
     :goto_1
     return-void
 
-    .line 176
+    .line 181
     :cond_1
     invoke-static {p1}, Lcom/htc/sunny2/SBitmap;->createBitmap(Landroid/graphics/Bitmap;)Lcom/htc/sunny2/SBitmap;
 
@@ -674,11 +674,11 @@
 
     goto :goto_0
 
-    .line 183
+    .line 188
     :cond_2
     invoke-virtual {p0, v0}, Lcom/htc/sunny2/Texture;->setSBitmap(Lcom/htc/sunny2/SBitmap;)V
 
-    .line 184
+    .line 189
     invoke-virtual {v0}, Lcom/htc/sunny2/SBitmap;->recycle()V
 
     goto :goto_1
@@ -694,23 +694,23 @@
     .parameter "color"
 
     .prologue
-    .line 203
+    .line 208
     iget v0, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
     if-nez v0, :cond_0
 
-    .line 204
+    .line 209
     sget-object v0, Lcom/htc/sunny2/Texture;->TAG:Ljava/lang/String;
 
     const-string v1, "[setBorder] texture handle is 0"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
+    .line 213
     :goto_0
     return-void
 
-    .line 207
+    .line 212
     :cond_0
     iget v0, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
@@ -736,10 +736,10 @@
     .parameter "height"
 
     .prologue
-    .line 234
+    .line 239
     iput p1, p0, Lcom/htc/sunny2/Texture;->mHeight:I
 
-    .line 235
+    .line 240
     return-void
 .end method
 
@@ -748,10 +748,10 @@
     .parameter "identifier"
 
     .prologue
-    .line 215
+    .line 220
     iput-object p1, p0, Lcom/htc/sunny2/Texture;->mIdentifier:Ljava/lang/String;
 
-    .line 216
+    .line 221
     return-void
 .end method
 
@@ -770,78 +770,97 @@
 .end method
 
 .method public setSBitmap(Lcom/htc/sunny2/SBitmap;Z)V
-    .locals 3
+    .locals 4
     .parameter "sbmp"
     .parameter "discardBufferOfInputBitma"
 
     .prologue
     .line 142
-    iget v1, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
+    iget v2, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     .line 143
-    new-instance v1, Ljava/lang/RuntimeException;
+    new-instance v2, Ljava/lang/RuntimeException;
 
-    const-string v2, "createTextureHandle NG - SunnyTexture is 0"
+    const-string v3, "createTextureHandle NG - SunnyTexture is 0"
 
-    invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v2
 
     .line 146
     :cond_0
     if-nez p1, :cond_1
 
     .line 147
-    sget-object v1, Lcom/htc/sunny2/Texture;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/htc/sunny2/Texture;->TAG:Ljava/lang/String;
 
-    const-string v2, "setBitmap NG - SBitmap is null"
+    const-string v3, "setBitmap NG - SBitmap is null"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
+    .line 166
     :goto_0
     return-void
 
     .line 151
     :cond_1
-    invoke-virtual {p1}, Lcom/htc/sunny2/SBitmap;->getBmpId()I
+    invoke-virtual {p1}, Lcom/htc/sunny2/SBitmap;->cloneSBitmap()Lcom/htc/sunny2/SBitmap;
+
+    move-result-object v1
+
+    .line 153
+    .local v1, cloneSBitmap:Lcom/htc/sunny2/SBitmap;
+    invoke-virtual {v1}, Lcom/htc/sunny2/SBitmap;->getBmpId()I
 
     move-result v0
 
-    .line 152
+    .line 154
     .local v0, bitmapHandle:I
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_2
 
-    .line 153
-    sget-object v1, Lcom/htc/sunny2/Texture;->TAG:Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/htc/sunny2/SBitmap;->isRecycled()Z
 
-    const-string v2, "setBitmap NG - SunnyBitmap is 0"
+    move-result v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v2, :cond_3
+
+    .line 155
+    :cond_2
+    sget-object v2, Lcom/htc/sunny2/Texture;->TAG:Ljava/lang/String;
+
+    const-string v3, "setBitmap NG - SunnyBitmap is 0"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 156
+    invoke-virtual {v1}, Lcom/htc/sunny2/SBitmap;->releaseClone()V
 
     goto :goto_0
 
-    .line 157
-    :cond_2
-    iget v1, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
-
-    invoke-static {v1, v0, p2}, Lcom/htc/sunny2/Sunny2;->Texture_SetupByBitmap_InRenderThread(IIZ)Z
-
-    .line 159
-    invoke-virtual {p1}, Lcom/htc/sunny2/SBitmap;->getHeight()I
-
-    move-result v1
-
-    iput v1, p0, Lcom/htc/sunny2/Texture;->mHeight:I
-
     .line 160
-    invoke-virtual {p1}, Lcom/htc/sunny2/SBitmap;->getWidth()I
+    :cond_3
+    iget v2, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
-    move-result v1
+    invoke-static {v2, v0, p2}, Lcom/htc/sunny2/Sunny2;->Texture_SetupByBitmap_InRenderThread(IIZ)Z
 
-    iput v1, p0, Lcom/htc/sunny2/Texture;->mWidth:I
+    .line 162
+    invoke-virtual {v1}, Lcom/htc/sunny2/SBitmap;->getHeight()I
+
+    move-result v2
+
+    iput v2, p0, Lcom/htc/sunny2/Texture;->mHeight:I
+
+    .line 163
+    invoke-virtual {v1}, Lcom/htc/sunny2/SBitmap;->getWidth()I
+
+    move-result v2
+
+    iput v2, p0, Lcom/htc/sunny2/Texture;->mWidth:I
+
+    .line 165
+    invoke-virtual {v1}, Lcom/htc/sunny2/SBitmap;->releaseClone()V
 
     goto :goto_0
 .end method
@@ -851,10 +870,10 @@
     .parameter "sourceHeight"
 
     .prologue
-    .line 242
+    .line 247
     iput p1, p0, Lcom/htc/sunny2/Texture;->mOriSourceHeight:I
 
-    .line 243
+    .line 248
     return-void
 .end method
 
@@ -863,10 +882,10 @@
     .parameter "sourceWidth"
 
     .prologue
-    .line 250
+    .line 255
     iput p1, p0, Lcom/htc/sunny2/Texture;->mOriSourceWidth:I
 
-    .line 251
+    .line 256
     return-void
 .end method
 
@@ -875,12 +894,12 @@
     .parameter "view"
 
     .prologue
-    .line 188
+    .line 193
     iget v1, p0, Lcom/htc/sunny2/Texture;->mTextureId:I
 
     if-nez v1, :cond_0
 
-    .line 189
+    .line 194
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "createTextureHandle NG - SunnyTexture is 0"
@@ -889,32 +908,32 @@
 
     throw v1
 
-    .line 192
+    .line 197
     :cond_0
     invoke-static {p1}, Lcom/htc/sunny2/SBitmap;->createBitmap(Landroid/view/View;)Lcom/htc/sunny2/SBitmap;
 
     move-result-object v0
 
-    .line 193
+    .line 198
     .local v0, sbmp:Lcom/htc/sunny2/SBitmap;
     if-nez v0, :cond_1
 
-    .line 194
+    .line 199
     sget-object v1, Lcom/htc/sunny2/Texture;->TAG:Ljava/lang/String;
 
     const-string v2, "[setView] Can\'t create SBitmap"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
+    .line 205
     :goto_0
     return-void
 
-    .line 198
+    .line 203
     :cond_1
     invoke-virtual {p0, v0}, Lcom/htc/sunny2/Texture;->setSBitmap(Lcom/htc/sunny2/SBitmap;)V
 
-    .line 199
+    .line 204
     invoke-virtual {v0}, Lcom/htc/sunny2/SBitmap;->recycle()V
 
     goto :goto_0
@@ -925,9 +944,9 @@
     .parameter "width"
 
     .prologue
-    .line 231
+    .line 236
     iput p1, p0, Lcom/htc/sunny2/Texture;->mWidth:I
 
-    .line 232
+    .line 237
     return-void
 .end method

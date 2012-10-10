@@ -70,7 +70,7 @@
     if-eqz v0, :cond_1
 
     .line 185
-    const-string v0, "wuman"
+    const-string/jumbo v0, "wuman"
 
     const-string v1, "UrlDrawable requests TextView.setText() again!"
 
@@ -96,7 +96,7 @@
 
     .line 194
     :cond_1
-    const-string v0, "wuman"
+    const-string/jumbo v0, "wuman"
 
     const-string v1, "UrlDrawable requests TextView.invalidate()!"
 

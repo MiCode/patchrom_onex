@@ -243,7 +243,7 @@
     .locals 1
 
     .prologue
-    .line 785
+    .line 780
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result v0
@@ -255,16 +255,16 @@
     .locals 10
 
     .prologue
-    .line 729
+    .line 724
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 732
+    .line 727
     .local v5, names:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
-    .line 734
+    .line 729
     .local v6, parser:Lorg/xmlpull/v1/XmlPullParser;
     new-instance v0, Ljava/io/File;
 
@@ -276,11 +276,11 @@
 
     invoke-direct {v0, v7, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 735
+    .line 730
     .local v0, confFile:Ljava/io/File;
     const/4 v1, 0x0
 
-    .line 737
+    .line 732
     .local v1, confreader:Ljava/io/FileReader;
     :try_start_0
     new-instance v2, Ljava/io/FileReader;
@@ -291,7 +291,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_7
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 738
+    .line 733
     .end local v1           #confreader:Ljava/io/FileReader;
     .local v2, confreader:Ljava/io/FileReader;
     :try_start_1
@@ -299,20 +299,20 @@
 
     move-result-object v6
 
-    .line 739
+    .line 734
     invoke-interface {v6, v2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 740
+    .line 735
     const-string v7, "devices"
 
     invoke-static {v6, v7}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 743
+    .line 738
     :cond_0
     :goto_0
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 744
+    .line 739
     const-string v7, "device"
 
     invoke-interface {v6}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -329,7 +329,7 @@
 
     if-nez v7, :cond_3
 
-    .line 757
+    .line 752
     if-eqz v2, :cond_1
 
     :try_start_2
@@ -340,7 +340,7 @@
     :cond_1
     move-object v1, v2
 
-    .line 760
+    .line 755
     .end local v2           #confreader:Ljava/io/FileReader;
     .restart local v1       #confreader:Ljava/io/FileReader;
     :cond_2
@@ -359,7 +359,7 @@
 
     return-object v7
 
-    .line 747
+    .line 742
     .end local v1           #confreader:Ljava/io/FileReader;
     .restart local v2       #confreader:Ljava/io/FileReader;
     :cond_3
@@ -372,11 +372,11 @@
 
     move-result-object v4
 
-    .line 748
+    .line 743
     .local v4, name:Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 749
+    .line 744
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -385,14 +385,14 @@
 
     goto :goto_0
 
-    .line 752
+    .line 747
     .end local v4           #name:Ljava/lang/String;
     :catch_0
     move-exception v7
 
     move-object v1, v2
 
-    .line 757
+    .line 752
     .end local v2           #confreader:Ljava/io/FileReader;
     .restart local v1       #confreader:Ljava/io/FileReader;
     :goto_2
@@ -417,16 +417,16 @@
 
     move-object v1, v2
 
-    .line 758
+    .line 753
     .end local v2           #confreader:Ljava/io/FileReader;
     .restart local v1       #confreader:Ljava/io/FileReader;
     goto :goto_1
 
-    .line 754
+    .line 749
     :catch_3
     move-exception v3
 
-    .line 755
+    .line 750
     .local v3, e:Ljava/lang/Exception;
     :goto_3
     :try_start_5
@@ -464,7 +464,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 757
+    .line 752
     if-eqz v1, :cond_2
 
     :try_start_6
@@ -511,7 +511,7 @@
     .restart local v1       #confreader:Ljava/io/FileReader;
     goto :goto_4
 
-    .line 754
+    .line 749
     .end local v1           #confreader:Ljava/io/FileReader;
     .restart local v2       #confreader:Ljava/io/FileReader;
     :catch_6
@@ -523,7 +523,7 @@
     .restart local v1       #confreader:Ljava/io/FileReader;
     goto :goto_3
 
-    .line 752
+    .line 747
     :catch_7
     move-exception v7
 
@@ -534,7 +534,7 @@
     .locals 1
 
     .prologue
-    .line 780
+    .line 775
     invoke-static {}, Landroid/view/ViewConfiguration;->getHoverTapSlop()I
 
     move-result v0
@@ -546,7 +546,7 @@
     .locals 1
 
     .prologue
-    .line 775
+    .line 770
     invoke-static {}, Landroid/view/ViewConfiguration;->getHoverTapTimeout()I
 
     move-result v0
@@ -558,7 +558,7 @@
     .locals 1
 
     .prologue
-    .line 770
+    .line 765
     invoke-static {}, Landroid/view/ViewConfiguration;->getKeyRepeatDelay()I
 
     move-result v0
@@ -570,7 +570,7 @@
     .locals 1
 
     .prologue
-    .line 765
+    .line 760
     invoke-static {}, Landroid/view/ViewConfiguration;->getKeyRepeatTimeout()I
 
     move-result v0
@@ -582,7 +582,7 @@
     .locals 1
 
     .prologue
-    .line 790
+    .line 785
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v0
@@ -594,10 +594,10 @@
     .locals 2
 
     .prologue
-    .line 795
+    .line 790
     const/4 v0, 0x0
 
-    .line 797
+    .line 792
     .local v0, result:I
     :try_start_0
     const-string v1, "windowsmgr.max_events_per_sec"
@@ -612,20 +612,20 @@
 
     move-result v0
 
-    .line 800
+    .line 795
     :goto_0
     const/4 v1, 0x1
 
     if-ge v0, v1, :cond_0
 
-    .line 811
+    .line 806
     const/16 v0, 0x3c
 
-    .line 814
+    .line 809
     :cond_0
     return v0
 
-    .line 798
+    .line 793
     :catch_0
     move-exception v1
 
@@ -636,7 +636,7 @@
     .locals 1
 
     .prologue
-    .line 827
+    .line 822
     iget-object v0, p0, Lcom/android/server/wm/InputManager$Callbacks;->this$0:Lcom/android/server/wm/InputManager;
 
     #getter for: Lcom/android/server/wm/InputManager;->mContext:Landroid/content/Context;
@@ -655,7 +655,7 @@
     .locals 2
 
     .prologue
-    .line 819
+    .line 814
     iget-object v0, p0, Lcom/android/server/wm/InputManager$Callbacks;->this$0:Lcom/android/server/wm/InputManager;
 
     #getter for: Lcom/android/server/wm/InputManager;->mWindowManagerService:Lcom/android/server/wm/WindowManagerService;
@@ -683,11 +683,6 @@
 
     .prologue
     .line 718
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 723
     iget-object v0, p0, Lcom/android/server/wm/InputManager$Callbacks;->this$0:Lcom/android/server/wm/InputManager;
 
     #getter for: Lcom/android/server/wm/InputManager;->mContext:Landroid/content/Context;
@@ -705,21 +700,7 @@
 
     move-result v0
 
-    :goto_0
     return v0
-
-    .line 721
-    :pswitch_0
-    const/16 v0, 0xfa
-
-    goto :goto_0
-
-    .line 718
-    :pswitch_data_0
-    .packed-switch 0xe0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public interceptKeyBeforeDispatching(Lcom/android/server/wm/InputWindowHandle;Landroid/view/KeyEvent;I)J

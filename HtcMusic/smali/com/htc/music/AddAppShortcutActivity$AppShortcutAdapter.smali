@@ -57,21 +57,21 @@
     .end annotation
 
     .prologue
-    .line 171
+    .line 197
     .local p2, data:Ljava/util/List;,"Ljava/util/List<+Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;>;"
     invoke-direct/range {p0 .. p5}, Landroid/widget/SimpleAdapter;-><init>(Landroid/content/Context;Ljava/util/List;I[Ljava/lang/String;[I)V
 
-    .line 172
+    .line 198
     iput-object p2, p0, Lcom/htc/music/AddAppShortcutActivity$AppShortcutAdapter;->mShortcutList:Ljava/util/List;
 
-    .line 173
+    .line 199
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/AddAppShortcutActivity$AppShortcutAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 174
+    .line 200
     return-void
 .end method
 
@@ -84,14 +84,14 @@
     .parameter "parent"
 
     .prologue
-    .line 179
+    .line 205
     const/4 v3, 0x0
 
-    .line 180
+    .line 206
     .local v3, shortcutView:Landroid/view/View;
     if-nez p2, :cond_0
 
-    .line 181
+    .line 207
     iget-object v4, p0, Lcom/htc/music/AddAppShortcutActivity$AppShortcutAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const/high16 v5, 0x7f03
@@ -102,7 +102,7 @@
 
     move-result-object v3
 
-    .line 186
+    .line 212
     :goto_0
     iget-object v4, p0, Lcom/htc/music/AddAppShortcutActivity$AppShortcutAdapter;->mShortcutList:Ljava/util/List;
 
@@ -112,7 +112,7 @@
 
     check-cast v2, Ljava/util/HashMap;
 
-    .line 188
+    .line 214
     .local v2, item:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const v4, 0x7f080004
 
@@ -120,10 +120,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/htc/widget/HtcListItemTileImage;
+    check-cast v0, Lcom/htc/widget/HtcListItemColorIcon;
 
-    .line 189
-    .local v0, appImage:Lcom/htc/widget/HtcListItemTileImage;
+    .line 215
+    .local v0, appImage:Lcom/htc/widget/HtcListItemColorIcon;
     const-string v4, "Icon"
 
     invoke-virtual {v2, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -132,9 +132,9 @@
 
     check-cast v4, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v4}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v4}, Lcom/htc/widget/HtcListItemColorIcon;->setColorIconImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 191
+    .line 217
     const v4, 0x7f080005
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -143,7 +143,7 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 192
+    .line 218
     .local v1, appName:Lcom/htc/widget/HtcListItem2LineText;
     const-string v4, "Name"
 
@@ -155,16 +155,16 @@
 
     invoke-virtual {v1, v4}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 193
+    .line 219
     const/16 v4, 0x8
 
     invoke-virtual {v1, v4}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 195
+    .line 221
     return-object v3
 
-    .line 183
-    .end local v0           #appImage:Lcom/htc/widget/HtcListItemTileImage;
+    .line 209
+    .end local v0           #appImage:Lcom/htc/widget/HtcListItemColorIcon;
     .end local v1           #appName:Lcom/htc/widget/HtcListItem2LineText;
     .end local v2           #item:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_0

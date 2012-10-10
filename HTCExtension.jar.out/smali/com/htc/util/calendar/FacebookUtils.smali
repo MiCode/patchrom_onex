@@ -19,7 +19,7 @@
 .end method
 
 .method public static final getRawContactId(Landroid/content/Context;Ljava/lang/String;)J
-    .locals 11
+    .locals 10
     .parameter "context"
     .parameter "uid"
 
@@ -50,21 +50,13 @@
 
     aput-object v4, v2, v3
 
-    const-string v3, "account_type=? AND sourceid=?"
+    const-string v3, "sourceid=?"
 
-    const/4 v4, 0x2
+    const/4 v4, 0x1
 
     new-array v4, v4, [Ljava/lang/String;
 
     const/4 v5, 0x0
-
-    invoke-static {p0}, Landroid/provider/HtcExCalendar;->getHtcFacebookAccountType(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v10
-
-    aput-object v10, v4, v5
-
-    const/4 v5, 0x1
 
     aput-object p1, v4, v5
 
@@ -74,10 +66,10 @@
 
     move-result-object v6
 
-    .line 42
+    .line 41
     if-eqz v6, :cond_0
 
-    .line 43
+    .line 42
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -85,7 +77,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 44
+    .line 43
     const-string v0, "contact_id"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -101,23 +93,23 @@
 
     goto :goto_0
 
-    .line 50
+    .line 49
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 51
+    .line 50
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 54
+    .line 53
     :cond_1
     :goto_1
     return-wide v8
 
-    .line 47
+    .line 46
     :catch_0
     move-exception v7
 
-    .line 48
+    .line 47
     .local v7, e:Ljava/lang/Exception;
     :try_start_1
     const-string v0, "FacebookUtils"
@@ -144,22 +136,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 50
+    .line 49
     if-eqz v6, :cond_1
 
-    .line 51
+    .line 50
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
-    .line 50
+    .line 49
     .end local v7           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_2
 
-    .line 51
+    .line 50
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_2

@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1181
+    .line 1180
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$18;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -37,47 +37,22 @@
 
 # virtual methods
 .method protected onEnter()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 1185
-    iget-object v1, p0, Lcom/android/camera/component/ViewFinder$18;->this$0:Lcom/android/camera/component/ViewFinder;
+    .line 1184
+    iget-object v0, p0, Lcom/android/camera/component/ViewFinder$18;->this$0:Lcom/android/camera/component/ViewFinder;
 
-    invoke-virtual {v1}, Lcom/android/camera/component/ViewFinder;->getCameraThread()Lcom/android/camera/CameraThread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/camera/CameraThread;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/android/camera/component/ViewFinder;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    .line 1186
-    .local v0, handler:Landroid/os/Handler;
-    if-eqz v0, :cond_0
-
-    .line 1188
     new-instance v1, Lcom/android/camera/component/ViewFinder$18$1;
 
     invoke-direct {v1, p0}, Lcom/android/camera/component/ViewFinder$18$1;-><init>(Lcom/android/camera/component/ViewFinder$18;)V
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/android/camera/CameraThread;->invokeAsync(Ljava/lang/Runnable;)Z
 
-    .line 1198
-    :goto_0
+    .line 1192
     return-void
-
-    .line 1197
-    :cond_0
-    iget-object v1, p0, Lcom/android/camera/component/ViewFinder$18;->this$0:Lcom/android/camera/component/ViewFinder;
-
-    #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/camera/component/ViewFinder;->access$2000(Lcom/android/camera/component/ViewFinder;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "No camera thread to add event handlers"
-
-    invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
 .end method

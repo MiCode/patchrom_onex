@@ -33,18 +33,18 @@
     .parameter "id"
 
     .prologue
-    .line 434
+    .line 433
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 435
+    .line 434
     iput-object p1, p0, Lcom/htc/fragment/widget/AdapterView$AdapterContextMenuInfo;->targetView:Landroid/view/View;
 
-    .line 436
+    .line 435
     iput p2, p0, Lcom/htc/fragment/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    .line 437
+    .line 436
     iput-wide p3, p0, Lcom/htc/fragment/widget/AdapterView$AdapterContextMenuInfo;->id:J
 
-    .line 438
+    .line 437
     return-void
 .end method

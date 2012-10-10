@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 331
+    .line 332
     iput-object p1, p0, Lcom/android/camera/component/ZoomBar$14;->this$0:Lcom/android/camera/component/ZoomBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 335
+    .line 336
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/rotate/UIRotation;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/rotate/UIRotation;>;"
     iget-object v2, p0, Lcom/android/camera/component/ZoomBar$14;->this$0:Lcom/android/camera/component/ZoomBar;
@@ -88,7 +88,7 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/camera/component/ZoomBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 336
+    .line 337
     iget-object v2, p0, Lcom/android/camera/component/ZoomBar$14;->this$0:Lcom/android/camera/component/ZoomBar;
 
     iget-object v0, p0, Lcom/android/camera/component/ZoomBar$14;->this$0:Lcom/android/camera/component/ZoomBar;
@@ -108,6 +108,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/camera/component/ZoomBar;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 337
+    .line 338
     return-void
 .end method

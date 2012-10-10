@@ -89,7 +89,7 @@
 
     sput-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 1492
+    .line 1622
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v1, 0x30
@@ -130,8 +130,8 @@
 
     .prologue
     .line 49
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1617
+    .line 1764
     return-void
 .end method

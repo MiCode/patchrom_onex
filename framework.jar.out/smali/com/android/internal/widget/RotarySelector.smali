@@ -342,7 +342,7 @@
     iput v3, p0, Lcom/android/internal/widget/RotarySelector;->mInnerRadius:I
 
     .line 200
-    iget-object v3, p0, Landroid/view/View;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/internal/widget/RotarySelector;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
@@ -982,7 +982,7 @@
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v19, "invalid mGrabbedState: "
+    const-string v19, "invalid mGrabbedState: "
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1807,7 +1807,7 @@
     .local v8, dimpleRight:I
     move-object/from16 v0, p0
 
-    iget v0, v0, Landroid/view/View;->mRight:I
+    iget v0, v0, Lcom/android/internal/widget/RotarySelector;->mRight:I
 
     move/from16 v17, v0
 
@@ -1919,6 +1919,8 @@
     return-void
 
     .line 313
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

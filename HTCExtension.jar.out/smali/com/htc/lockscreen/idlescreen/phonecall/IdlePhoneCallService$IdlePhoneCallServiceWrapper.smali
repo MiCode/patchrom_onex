@@ -1,5 +1,5 @@
 .class Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$IdlePhoneCallServiceWrapper;
-.super Lcom/htc/lockscreen/idlescreen/remote/IRemoteService$Stub;
+.super Lcom/htc/lockscreen/idlescreen/remote/RemoteServiceWrapper;
 .source "IdlePhoneCallService.java"
 
 
@@ -24,65 +24,16 @@
     .parameter
 
     .prologue
-    .line 96
+    .line 97
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$IdlePhoneCallServiceWrapper;->this$0:Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;
 
-    invoke-direct {p0}, Lcom/htc/lockscreen/idlescreen/remote/IRemoteService$Stub;-><init>()V
+    invoke-direct {p0}, Lcom/htc/lockscreen/idlescreen/remote/RemoteServiceWrapper;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getData(ILandroid/os/Bundle;)[Landroid/os/Bundle;
-    .locals 1
-    .parameter "code"
-    .parameter "data"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 100
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public getInt(I)I
-    .locals 1
-    .parameter "code"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 106
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getString(I)Ljava/lang/String;
-    .locals 1
-    .parameter "code"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 112
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public performAction(ILandroid/os/Bundle;)V
     .locals 2
     .parameter "code"
@@ -94,19 +45,19 @@
     .end annotation
 
     .prologue
-    .line 118
+    .line 101
     const-string v1, "call_id"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 119
+    .line 102
     .local v0, callId:I
     iget-object v1, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$IdlePhoneCallServiceWrapper;->this$0:Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;
 
     invoke-virtual {v1, p1, v0}, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;->performPhoneAction(II)V
 
-    .line 120
+    .line 103
     return-void
 .end method

@@ -859,12 +859,12 @@
     .end local v6           #name:Ljava/lang/String;
     .restart local v10       #value:Ljava/lang/Object;
     :cond_7
-    const-string v11, "{"
+    const-string/jumbo v11, "{"
 
     invoke-virtual {p0, v11}, Lcom/htc/protobuf/TextFormat$Tokenizer;->consume(Ljava/lang/String;)V
 
     .line 1034
-    const-string v0, "}"
+    const-string/jumbo v0, "}"
 
     .restart local v0       #endToken:Ljava/lang/String;
     goto/16 :goto_1
@@ -2264,7 +2264,7 @@
     invoke-virtual {p2}, Lcom/htc/protobuf/TextFormat$TextGenerator;->outdent()V
 
     .line 215
-    const-string v0, "}"
+    const-string/jumbo v0, "}"
 
     invoke-virtual {p2, v0}, Lcom/htc/protobuf/TextFormat$TextGenerator;->print(Ljava/lang/CharSequence;)V
 
@@ -2811,7 +2811,7 @@
     invoke-virtual {p1}, Lcom/htc/protobuf/TextFormat$TextGenerator;->outdent()V
 
     .line 309
-    const-string v7, "}\n"
+    const-string/jumbo v7, "}\n"
 
     invoke-virtual {p1, v7}, Lcom/htc/protobuf/TextFormat$TextGenerator;->print(Ljava/lang/CharSequence;)V
 

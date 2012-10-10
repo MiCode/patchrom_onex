@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 451
+    .line 454
     new-instance v0, Landroid/app/IActivityManager$ContentProviderHolder$1;
 
     invoke-direct {v0}, Landroid/app/IActivityManager$ContentProviderHolder$1;-><init>()V
@@ -58,13 +58,13 @@
     .parameter "_info"
 
     .prologue
-    .line 433
+    .line 436
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 434
+    .line 437
     iput-object p1, p0, Landroid/app/IActivityManager$ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
 
-    .line 435
+    .line 438
     return-void
 .end method
 
@@ -73,10 +73,10 @@
     .parameter "source"
 
     .prologue
-    .line 462
+    .line 465
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 463
+    .line 466
     sget-object v0, Landroid/content/pm/ProviderInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -87,7 +87,7 @@
 
     iput-object v0, p0, Landroid/app/IActivityManager$ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
 
-    .line 464
+    .line 467
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -98,7 +98,7 @@
 
     iput-object v0, p0, Landroid/app/IActivityManager$ContentProviderHolder;->provider:Landroid/content/IContentProvider;
 
-    .line 466
+    .line 469
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -110,10 +110,10 @@
     :goto_0
     iput-boolean v0, p0, Landroid/app/IActivityManager$ContentProviderHolder;->noReleaseNeeded:Z
 
-    .line 467
+    .line 470
     return-void
 
-    .line 466
+    .line 469
     :cond_0
     const/4 v0, 0x0
 
@@ -126,7 +126,7 @@
     .parameter "x1"
 
     .prologue
-    .line 428
+    .line 431
     invoke-direct {p0, p1}, Landroid/app/IActivityManager$ContentProviderHolder;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 438
+    .line 441
     const/4 v0, 0x0
 
     return v0
@@ -152,17 +152,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 442
+    .line 445
     iget-object v1, p0, Landroid/app/IActivityManager$ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
 
     invoke-virtual {v1, p1, v0}, Landroid/content/pm/ProviderInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 443
+    .line 446
     iget-object v1, p0, Landroid/app/IActivityManager$ContentProviderHolder;->provider:Landroid/content/IContentProvider;
 
     if-eqz v1, :cond_1
 
-    .line 444
+    .line 447
     iget-object v1, p0, Landroid/app/IActivityManager$ContentProviderHolder;->provider:Landroid/content/IContentProvider;
 
     invoke-interface {v1}, Landroid/content/IContentProvider;->asBinder()Landroid/os/IBinder;
@@ -171,7 +171,7 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 448
+    .line 451
     :goto_0
     iget-boolean v1, p0, Landroid/app/IActivityManager$ContentProviderHolder;->noReleaseNeeded:Z
 
@@ -182,10 +182,10 @@
     :cond_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 449
+    .line 452
     return-void
 
-    .line 446
+    .line 449
     :cond_1
     const/4 v1, 0x0
 

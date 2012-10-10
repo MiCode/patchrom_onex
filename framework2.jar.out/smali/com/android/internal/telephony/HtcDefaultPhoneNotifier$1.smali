@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 162
+    .line 174
     iput-object p1, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$1;->this$0:Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,7 +41,7 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 165
+    .line 177
     iget-object v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$1;->this$0:Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;
 
     #getter for: Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mPendingNotification:Ljava/util/ArrayList;
@@ -53,11 +53,11 @@
 
     move-result v7
 
-    .line 166
+    .line 178
     .local v7, queueSz:I
     if-lez v7, :cond_0
 
-    .line 167
+    .line 179
     iget-object v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$1;->this$0:Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;
 
     #getter for: Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->mPendingNotification:Ljava/util/ArrayList;
@@ -71,7 +71,7 @@
 
     check-cast v6, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$PendingNotification;
 
-    .line 168
+    .line 180
     .local v6, notification:Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$PendingNotification;
     iget-object v0, p0, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$1;->this$0:Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;
 
@@ -88,15 +88,15 @@
     #calls: Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->dispatchQueueEvent(ILcom/android/internal/telephony/Phone;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/Phone$DataState;)V
     invoke-static/range {v0 .. v5}, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;->access$100(Lcom/android/internal/telephony/HtcDefaultPhoneNotifier;ILcom/android/internal/telephony/Phone;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/Phone$DataState;)V
 
-    .line 169
+    .line 181
     const/4 v0, 0x1
 
     if-le v7, v0, :cond_0
 
-    .line 170
+    .line 182
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$1;->sendEmptyMessage(I)Z
 
-    .line 173
+    .line 185
     .end local v6           #notification:Lcom/android/internal/telephony/HtcDefaultPhoneNotifier$PendingNotification;
     :cond_0
     return-void

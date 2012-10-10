@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 388
+    .line 390
     iput-object p1, p0, Lcom/htc/opensense/cache/CacheManager$1;->this$0:Lcom/htc/opensense/cache/CacheManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,12 +45,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 391
+    .line 393
     move-object v0, p2
 
     check-cast v0, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
 
-    .line 392
+    .line 394
     .local v0, c:Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;
     check-cast p1, Ljava/lang/Integer;
 
@@ -59,7 +59,7 @@
 
     move-result v1
 
-    .line 393
+    .line 395
     .local v1, taskId:I
     invoke-static {}, Lcom/htc/opensense/cache/CacheManager;->access$000()Ljava/lang/String;
 
@@ -85,15 +85,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
+    .line 396
     iget v3, v0, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;->taskId:I
 
     if-ne v1, v3, :cond_0
 
-    .line 395
+    .line 397
     invoke-virtual {v0, v2}, Lcom/htc/opensense/cache/CacheManager$DownloadFutureTask;->cancel(Z)Z
 
-    .line 398
+    .line 400
     :goto_0
     return v2
 

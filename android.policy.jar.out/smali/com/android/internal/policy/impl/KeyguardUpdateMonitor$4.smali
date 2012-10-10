@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 550
+    .line 701
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,12 +44,12 @@
 
     const/4 v3, 0x0
 
-    .line 553
+    .line 704
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 556
+    .line 707
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.htc.android.omadm.state.change"
 
@@ -59,7 +59,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 557
+    .line 708
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     const-string v2, "dm.lawmo.lockstate"
@@ -69,9 +69,9 @@
     move-result v2
 
     #setter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mDMLockState:I
-    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2002(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;I)I
+    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2302(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;I)I
 
-    .line 558
+    .line 709
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     const-string v2, "dm.lawmo.pinenable"
@@ -81,9 +81,9 @@
     move-result v2
 
     #setter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mDMPinEnable:Z
-    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2102(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Z)Z
+    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2402(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Z)Z
 
-    .line 559
+    .line 710
     const-string v1, "KeyguardUpdateMonitor"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -99,7 +99,7 @@
     iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mDMLockState:I
-    invoke-static {v3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2000(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)I
+    invoke-static {v3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2300(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)I
 
     move-result v3
 
@@ -113,18 +113,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 560
+    .line 711
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1300(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1600(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1300(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1600(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
 
     move-result-object v2
 
@@ -134,12 +134,12 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 566
+    .line 717
     :cond_0
     :goto_0
     return-void
 
-    .line 561
+    .line 712
     :cond_1
     const-string v1, "com.htc.cs.system.remotelock"
 
@@ -149,7 +149,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 562
+    .line 713
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     const-string v2, "remotelock.enable"
@@ -159,9 +159,9 @@
     move-result v2
 
     #setter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mCSLockState:Z
-    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2202(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Z)Z
+    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2502(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Z)Z
 
-    .line 563
+    .line 714
     const-string v1, "KeyguardUpdateMonitor"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -177,7 +177,7 @@
     iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mCSLockState:Z
-    invoke-static {v3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2200(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Z
+    invoke-static {v3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$2500(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Z
 
     move-result v3
 
@@ -191,18 +191,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
+    .line 715
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1300(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1600(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$4;->this$0:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     #getter for: Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1300(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->access$1600(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;)Landroid/os/Handler;
 
     move-result-object v2
 

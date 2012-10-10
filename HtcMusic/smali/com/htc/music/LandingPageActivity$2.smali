@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 600
+    .line 565
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,25 +47,25 @@
 
     const/4 v6, 0x0
 
-    .line 602
+    .line 567
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 604
+    .line 569
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mLongClickedItemType:I
-    invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$000(Lcom/htc/music/LandingPageActivity;)I
+    invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$100(Lcom/htc/music/LandingPageActivity;)I
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 630
+    .line 595
     :cond_0
     :goto_0
     return-void
 
-    .line 608
+    .line 573
     :cond_1
     const/4 v0, 0x0
 
@@ -84,11 +84,11 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 609
+    .line 574
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mLongClickedLaunchIntent:Landroid/content/Intent;
-    invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$100(Lcom/htc/music/LandingPageActivity;)Landroid/content/Intent;
+    invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$200(Lcom/htc/music/LandingPageActivity;)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -97,7 +97,7 @@
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mLongClickedLaunchIntent:Landroid/content/Intent;
-    invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$100(Lcom/htc/music/LandingPageActivity;)Landroid/content/Intent;
+    invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$200(Lcom/htc/music/LandingPageActivity;)Landroid/content/Intent;
 
     move-result-object v3
 
@@ -125,7 +125,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 611
+    .line 576
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mLaunchItemList:Ljava/util/ArrayList;
@@ -146,7 +146,7 @@
 
     if-ne v2, v5, :cond_3
 
-    .line 612
+    .line 577
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRemoveList:Ljava/lang/StringBuilder;
@@ -167,14 +167,14 @@
 
     check-cast v2, Lcom/htc/music/LandingPageActivity$LaunchItem;
 
-    #calls: Lcom/htc/music/LandingPageActivity$LaunchItem;->getPreloadId()Ljava/lang/String;
+    #calls: Lcom/htc/music/LandingPageActivity$LaunchItem;->getPackageName()Ljava/lang/String;
     invoke-static {v2}, Lcom/htc/music/LandingPageActivity$LaunchItem;->access$1700(Lcom/htc/music/LandingPageActivity$LaunchItem;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 613
+    .line 578
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRemoveList:Ljava/lang/StringBuilder;
@@ -186,7 +186,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 614
+    .line 579
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mPreloadList:Ljava/util/ArrayList;
@@ -207,7 +207,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 621
+    .line 586
     :cond_2
     :goto_2
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
@@ -230,13 +230,13 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 622
+    .line 587
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #calls: Lcom/htc/music/LandingPageActivity;->updateLaunchItemsUI()V
     invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$900(Lcom/htc/music/LandingPageActivity;)V
 
-    .line 624
+    .line 589
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     invoke-virtual {v2}, Lcom/htc/music/LandingPageActivity;->getApplicationContext()Landroid/content/Context;
@@ -245,7 +245,7 @@
 
     iget-object v3, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
-    const v4, 0x7f0701d3
+    const v4, 0x7f0701d4
 
     invoke-virtual {v3, v4}, Lcom/htc/music/LandingPageActivity;->getString(I)Ljava/lang/String;
 
@@ -256,7 +256,7 @@
     iget-object v5, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mLongClickedName:Ljava/lang/String;
-    invoke-static {v5}, Lcom/htc/music/LandingPageActivity;->access$200(Lcom/htc/music/LandingPageActivity;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/htc/music/LandingPageActivity;->access$300(Lcom/htc/music/LandingPageActivity;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -270,13 +270,13 @@
 
     move-result-object v1
 
-    .line 625
+    .line 590
     .local v1, toast:Landroid/widget/Toast;
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     goto/16 :goto_0
 
-    .line 615
+    .line 580
     .end local v1           #toast:Landroid/widget/Toast;
     :cond_3
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
@@ -301,7 +301,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 616
+    .line 581
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRemoveList:Ljava/lang/StringBuilder;
@@ -322,18 +322,14 @@
 
     check-cast v2, Lcom/htc/music/LandingPageActivity$LaunchItem;
 
-    #calls: Lcom/htc/music/LandingPageActivity$LaunchItem;->getLaunchIntent()Landroid/content/Intent;
-    invoke-static {v2}, Lcom/htc/music/LandingPageActivity$LaunchItem;->access$1500(Lcom/htc/music/LandingPageActivity$LaunchItem;)Landroid/content/Intent;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+    #calls: Lcom/htc/music/LandingPageActivity$LaunchItem;->getPackageName()Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/music/LandingPageActivity$LaunchItem;->access$1700(Lcom/htc/music/LandingPageActivity$LaunchItem;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 617
+    .line 582
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRemoveList:Ljava/lang/StringBuilder;
@@ -345,7 +341,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 618
+    .line 583
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$2;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mAutoDetectList:Ljava/util/ArrayList;
@@ -368,7 +364,7 @@
 
     goto/16 :goto_2
 
-    .line 608
+    .line 573
     :cond_4
     add-int/lit8 v0, v0, 0x1
 

@@ -3254,6 +3254,14 @@
     return-void
 .end method
 
+.method protected onAppTransitionEnd()V
+    .locals 0
+
+    .prologue
+    .line 4881
+    return-void
+.end method
+
 .method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
     .locals 1
     .parameter "theme"
@@ -5960,6 +5968,17 @@
 
     .line 4675
     :cond_1
+    return-void
+.end method
+
+.method final performReportAppTransitionEnd()V
+    .locals 0
+
+    .prologue
+    .line 4876
+    invoke-virtual {p0}, Landroid/app/Activity;->onAppTransitionEnd()V
+
+    .line 4877
     return-void
 .end method
 

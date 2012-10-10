@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4437
+    .line 4438
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$2;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .parameter "clickedView"
 
     .prologue
-    .line 4441
+    .line 4442
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 4442
+    .line 4443
     .local v1, data:Landroid/os/Bundle;
     const-string v3, "audioid"
 
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    .line 4443
+    .line 4444
     .local v0, audioId:I
     const-string v3, "position"
 
@@ -65,7 +65,7 @@
 
     move-result v2
 
-    .line 4444
+    .line 4445
     .local v2, position:I
     const-string v3, "[TrackBrowser]"
 
@@ -99,7 +99,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4445
+    .line 4446
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$2;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -109,7 +109,7 @@
 
     invoke-static {v3}, Lcom/htc/music/util/MusicUtils;->enableKeyguard(Landroid/app/Activity;)V
 
-    .line 4446
+    .line 4447
     iget-object v3, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$2;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -124,6 +124,6 @@
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->showTrackOptions(IJZ)Z
     invoke-static {v3, v2, v4, v5, v6}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$4100(Lcom/htc/music/browserlayer/TrackBrowserActivity;IJZ)Z
 
-    .line 4447
+    .line 4448
     return-void
 .end method

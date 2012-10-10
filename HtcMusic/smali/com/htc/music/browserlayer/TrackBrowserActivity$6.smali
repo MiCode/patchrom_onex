@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1545
+    .line 1546
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$6;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +42,19 @@
     .parameter "arg0"
 
     .prologue
-    .line 1548
+    .line 1549
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.music.PLAYBACK_VIEWER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1549
+    .line 1550
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$6;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-virtual {v1, v0}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1550
+    .line 1551
     return-void
 .end method

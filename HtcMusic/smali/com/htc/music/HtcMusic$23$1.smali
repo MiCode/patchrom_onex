@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3954
+    .line 3978
     iput-object p1, p0, Lcom/htc/music/HtcMusic$23$1;->this$1:Lcom/htc/music/HtcMusic$23;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +43,13 @@
     .parameter "whichButton"
 
     .prologue
-    .line 3957
+    .line 3981
     iget-object v0, p0, Lcom/htc/music/HtcMusic$23$1;->this$1:Lcom/htc/music/HtcMusic$23;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic$23;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v0}, Lcom/htc/music/HtcMusic;->finish()V
 
-    .line 3958
+    .line 3982
     return-void
 .end method

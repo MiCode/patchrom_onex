@@ -20,12 +20,12 @@
     .parameter "itemName"
 
     .prologue
-    .line 868
+    .line 877
     invoke-direct {p0}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$BaseItem;-><init>()V
 
-    .line 869
+    .line 878
     invoke-virtual {p0, p1}, Lcom/htc/music/carmode/CarLocalMusicSearchActivity$OnlineSearchItem;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 870
+    .line 879
     return-void
 .end method

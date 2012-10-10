@@ -52,70 +52,70 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1968
+    .line 1987
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1940
+    .line 1959
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 1942
+    .line 1961
     iput-boolean v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
-    .line 1943
+    .line 1962
     iput-boolean v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsPrepared:Z
 
-    .line 1946
+    .line 1965
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mSessionID:I
 
-    .line 2107
+    .line 2126
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$1;
 
     invoke-direct {v0, p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$1;-><init>(Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;)V
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->infoListener:Landroid/media/MediaPlayer$OnInfoListener;
 
-    .line 2117
+    .line 2136
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$2;
 
     invoke-direct {v0, p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$2;-><init>(Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;)V
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->seekCompleteListener:Landroid/media/MediaPlayer$OnSeekCompleteListener;
 
-    .line 2124
+    .line 2143
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$3;
 
     invoke-direct {v0, p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$3;-><init>(Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;)V
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->bufferUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
-    .line 2132
+    .line 2151
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$4;
 
     invoke-direct {v0, p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$4;-><init>(Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;)V
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->listener:Landroid/media/MediaPlayer$OnCompletionListener;
 
-    .line 2147
+    .line 2166
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$5;
 
     invoke-direct {v0, p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$5;-><init>(Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;)V
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->preparedlistener:Landroid/media/MediaPlayer$OnPreparedListener;
 
-    .line 2179
+    .line 2198
     new-instance v0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$6;
 
     invoke-direct {v0, p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer$6;-><init>(Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;)V
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->errorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
-    .line 1971
+    .line 1990
     return-void
 .end method
 
@@ -125,7 +125,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1939
+    .line 1958
     iput p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mCurPercentage:F
 
     return p1
@@ -136,7 +136,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1939
+    .line 1958
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -147,7 +147,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1939
+    .line 1958
     iget-boolean v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
     return v0
@@ -159,7 +159,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1939
+    .line 1958
     iput-boolean p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
     return p1
@@ -170,7 +170,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1939
+    .line 1958
     iget-boolean v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsPrepared:Z
 
     return v0
@@ -182,7 +182,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1939
+    .line 1958
     iput-boolean p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsPrepared:Z
 
     return p1
@@ -193,7 +193,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1939
+    .line 1958
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
@@ -205,7 +205,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1939
+    .line 1958
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object p1
@@ -217,32 +217,32 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1949
+    .line 1968
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 1950
+    .line 1969
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, v2}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
-    .line 1951
+    .line 1970
     const-string v0, "[DMPMusicPlaybackService]"
 
     const-string v1, "initNewMediaPlayer()...call mMediaPlayer.release()..."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1952
+    .line 1971
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 1953
+    .line 1972
     iput-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 1956
+    .line 1975
     :cond_0
     new-instance v0, Landroid/media/MediaPlayer;
 
@@ -250,7 +250,7 @@
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 1957
+    .line 1976
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -259,7 +259,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaPlayer;->setWakeMode(Landroid/content/Context;I)V
 
-    .line 1959
+    .line 1978
     const-string v0, "[DMPMusicPlaybackService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,12 +284,12 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1960
+    .line 1979
     iget v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mSessionID:I
 
     if-gtz v0, :cond_1
 
-    .line 1961
+    .line 1980
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getAudioSessionId()I
@@ -298,11 +298,11 @@
 
     iput v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mSessionID:I
 
-    .line 1966
+    .line 1985
     :goto_0
     return-void
 
-    .line 1964
+    .line 1983
     :cond_1
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -319,12 +319,12 @@
     .locals 1
 
     .prologue
-    .line 1975
+    .line 1994
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
-    .line 1976
+    .line 1995
     return-void
 .end method
 
@@ -332,26 +332,26 @@
     .locals 4
 
     .prologue
-    .line 2286
+    .line 2305
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-nez v0, :cond_0
 
-    .line 2287
+    .line 2306
     const-string v0, "[DMPMusicPlaybackService]"
 
     const-string v1, "duration()...mMediaPlayer is null..."
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2288
+    .line 2307
     const-wide/16 v0, -0x1
 
-    .line 2293
+    .line 2312
     :goto_0
     return-wide v0
 
-    .line 2291
+    .line 2310
     :cond_0
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -363,7 +363,7 @@
 
     iput-wide v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mDuration:J
 
-    .line 2292
+    .line 2311
     const-string v0, "[DMPMusicPlaybackService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -388,7 +388,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2293
+    .line 2312
     iget-wide v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mDuration:J
 
     goto :goto_0
@@ -398,7 +398,7 @@
     .locals 1
 
     .prologue
-    .line 2330
+    .line 2349
     iget v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mSessionID:I
 
     return v0
@@ -408,7 +408,7 @@
     .locals 1
 
     .prologue
-    .line 2326
+    .line 2345
     iget v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mCurPercentage:F
 
     return v0
@@ -418,10 +418,10 @@
     .locals 1
 
     .prologue
-    .line 2027
+    .line 2046
     monitor-enter p0
 
-    .line 2028
+    .line 2047
     :try_start_0
     iget-boolean v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
@@ -443,7 +443,7 @@
 
     goto :goto_0
 
-    .line 2029
+    .line 2048
     :catchall_0
     move-exception v0
 
@@ -458,22 +458,22 @@
     .locals 2
 
     .prologue
-    .line 2095
+    .line 2114
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-nez v0, :cond_0
 
-    .line 2096
+    .line 2115
     const-string v0, "[DMPMusicPlaybackService]"
 
     const-string v1, "isPlaying()...mMediaPlayer is null!!!"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2097
+    .line 2116
     const/4 v0, 0x0
 
-    .line 2100
+    .line 2119
     :goto_0
     return v0
 
@@ -491,21 +491,21 @@
     .locals 2
 
     .prologue
-    .line 2085
+    .line 2104
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 2087
+    .line 2106
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
 
-    .line 2092
+    .line 2111
     :goto_0
     return-void
 
-    .line 2090
+    .line 2109
     :cond_0
     const-string v0, "[DMPMusicPlaybackService]"
 
@@ -520,26 +520,26 @@
     .locals 4
 
     .prologue
-    .line 2297
+    .line 2316
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-nez v2, :cond_0
 
-    .line 2298
+    .line 2317
     const-string v2, "[DMPMusicPlaybackService]"
 
     const-string v3, "position()...mMediaPlayer is null..."
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2299
+    .line 2318
     const-wide/16 v0, -0x1
 
-    .line 2303
+    .line 2322
     :goto_0
     return-wide v0
 
-    .line 2302
+    .line 2321
     :cond_0
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -549,7 +549,7 @@
 
     int-to-long v0, v2
 
-    .line 2303
+    .line 2322
     .local v0, currentPos:J
     goto :goto_0
 .end method
@@ -558,36 +558,36 @@
     .locals 2
 
     .prologue
-    .line 2073
+    .line 2092
     invoke-virtual {p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->stop()V
 
-    .line 2074
+    .line 2093
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 2075
+    .line 2094
     const-string v0, "[DMPMusicPlaybackService]"
 
     const-string v1, "II internal multiplayer...release()... calling mMediaPlayer.release();"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2076
+    .line 2095
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 2077
+    .line 2096
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 2082
+    .line 2101
     :goto_0
     return-void
 
-    .line 2080
+    .line 2099
     :cond_0
     const-string v0, "[DMPMusicPlaybackService]"
 
@@ -603,23 +603,23 @@
     .parameter "whereto"
 
     .prologue
-    .line 2307
+    .line 2326
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 2308
+    .line 2327
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     long-to-int v1, p1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->seekTo(I)V
 
-    .line 2313
+    .line 2332
     :goto_0
     return-wide p1
 
-    .line 2311
+    .line 2330
     :cond_0
     const-string v0, "[DMPMusicPlaybackService]"
 
@@ -659,26 +659,26 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1979
+    .line 1998
     monitor-enter p0
 
-    .line 1980
+    .line 1999
     const/4 v1, 0x0
 
     :try_start_0
     iput-boolean v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
-    .line 1981
+    .line 2000
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsPrepared:Z
 
-    .line 1982
+    .line 2001
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1985
+    .line 2004
     :try_start_1
     const-string v1, "[DMPMusicPlaybackService]"
 
@@ -702,74 +702,74 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1987
+    .line 2006
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mCurPercentage:F
 
-    .line 1988
+    .line 2007
     const-wide/16 v1, 0x0
 
     iput-wide v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mDuration:J
 
-    .line 1990
+    .line 2009
     invoke-direct {p0}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->initNewMediaPlayer()V
 
-    .line 1992
+    .line 2011
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, p1}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
-    .line 1993
+    .line 2012
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    .line 1994
+    .line 2013
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->preparedlistener:Landroid/media/MediaPlayer$OnPreparedListener;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
-    .line 1995
+    .line 2014
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->bufferUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnBufferingUpdateListener(Landroid/media/MediaPlayer$OnBufferingUpdateListener;)V
 
-    .line 1996
+    .line 2015
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->listener:Landroid/media/MediaPlayer$OnCompletionListener;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 1997
+    .line 2016
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->errorListener:Landroid/media/MediaPlayer$OnErrorListener;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    .line 1998
+    .line 2017
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->seekCompleteListener:Landroid/media/MediaPlayer$OnSeekCompleteListener;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnSeekCompleteListener(Landroid/media/MediaPlayer$OnSeekCompleteListener;)V
 
-    .line 1999
+    .line 2018
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     iget-object v2, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->infoListener:Landroid/media/MediaPlayer$OnInfoListener;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
 
-    .line 2000
+    .line 2019
     const-string v1, "[DMPMusicPlaybackService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -794,7 +794,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2001
+    .line 2020
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->prepareAsync()V
@@ -804,16 +804,16 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 2022
+    .line 2041
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
-    .line 2023
+    .line 2042
     :goto_0
     return-void
 
-    .line 1982
+    .line 2001
     :catchall_0
     move-exception v1
 
@@ -824,11 +824,11 @@
 
     throw v1
 
-    .line 2002
+    .line 2021
     :catch_0
     move-exception v0
 
-    .line 2004
+    .line 2023
     .local v0, ex:Ljava/io/IOException;
     const-string v1, "[DMPMusicPlaybackService]"
 
@@ -836,17 +836,17 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2005
+    .line 2024
     iput-boolean v4, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
     goto :goto_0
 
-    .line 2007
+    .line 2026
     .end local v0           #ex:Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 2009
+    .line 2028
     .local v0, ex:Ljava/lang/IllegalArgumentException;
     const-string v1, "[DMPMusicPlaybackService]"
 
@@ -854,17 +854,17 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2010
+    .line 2029
     iput-boolean v4, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
     goto :goto_0
 
-    .line 2012
+    .line 2031
     .end local v0           #ex:Ljava/lang/IllegalArgumentException;
     :catch_2
     move-exception v0
 
-    .line 2013
+    .line 2032
     .local v0, ex:Ljava/lang/IllegalStateException;
     const-string v1, "[DMPMusicPlaybackService]"
 
@@ -872,21 +872,21 @@
 
     invoke-static {v1, v2, v0}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 2014
+    .line 2033
     iput-boolean v4, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
     goto :goto_0
 
-    .line 2016
+    .line 2035
     .end local v0           #ex:Ljava/lang/IllegalStateException;
     :catch_3
     move-exception v0
 
-    .line 2018
+    .line 2037
     .local v0, ex:Ljava/lang/Exception;
     iput-boolean v4, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
-    .line 2019
+    .line 2038
     const-string v1, "[DMPMusicPlaybackService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -917,10 +917,10 @@
     .parameter "handler"
 
     .prologue
-    .line 2104
+    .line 2123
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mHandler:Landroid/os/Handler;
 
-    .line 2105
+    .line 2124
     return-void
 .end method
 
@@ -929,21 +929,21 @@
     .parameter "vol"
 
     .prologue
-    .line 2317
+    .line 2336
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 2318
+    .line 2337
     iget-object v0, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p1, p1}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
-    .line 2323
+    .line 2342
     :goto_0
     return-void
 
-    .line 2321
+    .line 2340
     :cond_0
     const-string v0, "[DMPMusicPlaybackService]"
 
@@ -980,12 +980,12 @@
     .locals 5
 
     .prologue
-    .line 2034
+    .line 2053
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v1, :cond_0
 
-    .line 2036
+    .line 2055
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     #getter for: Lcom/htc/music/DMPMusicPlaybackService;->mAudioManager:Landroid/media/AudioManager;
@@ -1006,7 +1006,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
-    .line 2037
+    .line 2056
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
     const/4 v2, 0x0
@@ -1014,7 +1014,7 @@
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mPausedByTransientLossOfFocus:Z
     invoke-static {v1, v2}, Lcom/htc/music/DMPMusicPlaybackService;->access$102(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 2039
+    .line 2058
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -1022,15 +1022,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2049
+    .line 2068
     :goto_0
     return-void
 
-    .line 2041
+    .line 2060
     :catch_0
     move-exception v0
 
-    .line 2042
+    .line 2061
     .local v0, ex:Ljava/lang/IllegalStateException;
     const-string v1, "[DMPMusicPlaybackService]"
 
@@ -1058,12 +1058,12 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2043
+    .line 2062
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 2047
+    .line 2066
     .end local v0           #ex:Ljava/lang/IllegalStateException;
     :cond_0
     const-string v1, "[DMPMusicPlaybackService]"
@@ -1081,19 +1081,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2052
+    .line 2071
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v1, :cond_0
 
-    .line 2053
+    .line 2072
     const-string v1, "[DMPMusicPlaybackService]"
 
     const-string v2, "II internal multiplayer... stop()...before calling mMediaPlayer.reset();"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2055
+    .line 2074
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -1101,21 +1101,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2064
+    .line 2083
     :goto_0
     iput-boolean v4, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsInitialized:Z
 
-    .line 2065
+    .line 2084
     iput-boolean v4, p0, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->mIsPrepared:Z
 
-    .line 2066
+    .line 2085
     return-void
 
-    .line 2057
+    .line 2076
     :catch_0
     move-exception v0
 
-    .line 2058
+    .line 2077
     .local v0, ex:Ljava/lang/Exception;
     const-string v1, "[DMPMusicPlaybackService]"
 
@@ -1145,7 +1145,7 @@
 
     goto :goto_0
 
-    .line 2062
+    .line 2081
     .end local v0           #ex:Ljava/lang/Exception;
     :cond_0
     const-string v1, "[DMPMusicPlaybackService]"

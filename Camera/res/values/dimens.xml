@@ -53,6 +53,7 @@
     <dimen name="title_left_margin">18.0px</dimen>
     <dimen name="button_degree_top_margin">10.0px</dimen>
     <dimen name="minus_button_left_margin">18.0px</dimen>
+    <dimen name="button_bottom_margin">0.0px</dimen>
     <dimen name="degree_left_margin">20.0px</dimen>
     <dimen name="level_0_left_margin">1.0px</dimen>
     <dimen name="level_m1_left_margin">15.0px</dimen>
@@ -326,6 +327,8 @@
     <dimen name="mirror_brightness_button_width">80.0px</dimen>
     <dimen name="mirror_brightness_button_left">218.0px</dimen>
     <dimen name="mirror_brightness_button_bottom">16.0px</dimen>
+    <dimen name="mirror_header_bar_height">80.0px</dimen>
+    <dimen name="mirror_header_title_margin_left">16.0px</dimen>
     <dimen name="arrow_img_top_port">712.0px</dimen>
     <dimen name="arrow_img_top_land">700.0px</dimen>
     <dimen name="arrow_img_left_port">228.0px</dimen>

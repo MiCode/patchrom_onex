@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 654
+    .line 666
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$3;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "v"
 
     .prologue
-    .line 658
+    .line 670
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$3;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
@@ -52,7 +52,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 659
+    .line 671
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$3;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
@@ -62,7 +62,7 @@
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerActionBarExtController;->dismissDropDown()V
 
-    .line 660
+    .line 672
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$3;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mActionBarExtCtrl:Lcom/htc/app/FilePickerActionBarExtController;
@@ -74,29 +74,29 @@
 
     move-result v0
 
-    .line 661
+    .line 673
     .local v0, isSearchBarVisibled:Z
     if-eqz v0, :cond_1
 
-    .line 662
+    .line 674
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$3;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->hideSearchBar()V
-    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$1000(Lcom/htc/app/FilePickerCore;)V
+    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$1200(Lcom/htc/app/FilePickerCore;)V
 
-    .line 668
+    .line 680
     .end local v0           #isSearchBarVisibled:Z
     :cond_0
     :goto_0
     return-void
 
-    .line 664
+    .line 676
     .restart local v0       #isSearchBarVisibled:Z
     :cond_1
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$3;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->showSearchBar()V
-    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$1100(Lcom/htc/app/FilePickerCore;)V
+    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$1300(Lcom/htc/app/FilePickerCore;)V
 
     goto :goto_0
 .end method

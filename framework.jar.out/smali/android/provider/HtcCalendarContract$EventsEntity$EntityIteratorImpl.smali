@@ -63,7 +63,7 @@
 
     const/4 v3, 0x0
 
-    .line 1210
+    .line 1330
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v1, "minutes"
@@ -76,7 +76,7 @@
 
     sput-object v0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->REMINDERS_PROJECTION:[Ljava/lang/String;
 
-    .line 1217
+    .line 1337
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -105,7 +105,7 @@
 
     sput-object v0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->ATTENDEES_PROJECTION:[Ljava/lang/String;
 
-    .line 1229
+    .line 1349
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "_id"
@@ -131,18 +131,18 @@
     .parameter "provider"
 
     .prologue
-    .line 1247
+    .line 1369
     invoke-direct {p0, p1}, Landroid/content/CursorEntityIterator;-><init>(Landroid/database/Cursor;)V
 
-    .line 1248
+    .line 1370
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mResolver:Landroid/content/ContentResolver;
 
-    .line 1249
+    .line 1371
     iput-object p2, p0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mProvider:Landroid/content/ContentProviderClient;
 
-    .line 1250
+    .line 1372
     return-void
 .end method
 
@@ -152,18 +152,18 @@
     .parameter "resolver"
 
     .prologue
-    .line 1241
+    .line 1362
     invoke-direct {p0, p1}, Landroid/content/CursorEntityIterator;-><init>(Landroid/database/Cursor;)V
 
-    .line 1242
+    .line 1363
     iput-object p2, p0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mResolver:Landroid/content/ContentResolver;
 
-    .line 1243
+    .line 1364
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mProvider:Landroid/content/ContentProviderClient;
 
-    .line 1244
+    .line 1365
     return-void
 .end method
 
@@ -179,7 +179,7 @@
     .end annotation
 
     .prologue
-    .line 1255
+    .line 1378
     const-string v1, "_id"
 
     move-object/from16 v0, p1
@@ -194,13 +194,13 @@
 
     move-result-wide v10
 
-    .line 1256
+    .line 1379
     .local v10, eventId:J
     new-instance v8, Landroid/content/ContentValues;
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1257
+    .line 1380
     .local v8, cv:Landroid/content/ContentValues;
     const-string v1, "_id"
 
@@ -210,390 +210,390 @@
 
     invoke-virtual {v8, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1258
+    .line 1381
     const-string v1, "calendar_id"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1259
+    .line 1382
     const-string/jumbo v1, "title"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1260
+    .line 1383
     const-string v1, "description"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1261
+    .line 1384
     const-string v1, "eventLocation"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1262
+    .line 1385
     const-string v1, "eventStatus"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1263
+    .line 1386
     const-string/jumbo v1, "selfAttendeeStatus"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1264
+    .line 1387
     const-string v1, "dtstart"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1265
+    .line 1388
     const-string v1, "dtend"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1266
+    .line 1389
     const-string v1, "duration"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1267
+    .line 1390
     const-string v1, "eventTimezone"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1268
+    .line 1391
     const-string v1, "eventEndTimezone"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1269
+    .line 1392
     const-string v1, "allDay"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1270
+    .line 1393
     const-string v1, "accessLevel"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1271
+    .line 1394
     const-string v1, "availability"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1272
+    .line 1395
     const-string v1, "hasAlarm"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1273
+    .line 1396
     const-string v1, "hasExtendedProperties"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1275
+    .line 1398
     const-string/jumbo v1, "rrule"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1276
+    .line 1399
     const-string/jumbo v1, "rdate"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1277
+    .line 1400
     const-string v1, "exrule"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1278
+    .line 1401
     const-string v1, "exdate"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1279
+    .line 1402
     const-string/jumbo v1, "original_sync_id"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1280
+    .line 1403
     const-string/jumbo v1, "original_id"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1281
+    .line 1404
     const-string/jumbo v1, "originalInstanceTime"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1283
+    .line 1406
     const-string/jumbo v1, "originalAllDay"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1284
-    const-string/jumbo v1, "lastDate"
+    .line 1407
+    const-string v1, "lastDate"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1285
+    .line 1408
     const-string v1, "hasAttendeeData"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1286
+    .line 1409
     const-string v1, "guestsCanInviteOthers"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1288
+    .line 1411
     const-string v1, "guestsCanModify"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1289
+    .line 1412
     const-string v1, "guestsCanSeeGuests"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1290
+    .line 1413
     const-string/jumbo v1, "organizer"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1291
+    .line 1414
     const-string v1, "_sync_id"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1292
+    .line 1415
     const-string v1, "dirty"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1293
-    const-string/jumbo v1, "lastSynced"
+    .line 1416
+    const-string v1, "lastSynced"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorLongToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1294
+    .line 1417
     const-string v1, "deleted"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorIntToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1295
+    .line 1418
     const-string/jumbo v1, "sync_data1"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1296
+    .line 1419
     const-string/jumbo v1, "sync_data2"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1297
+    .line 1420
     const-string/jumbo v1, "sync_data3"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1298
+    .line 1421
     const-string/jumbo v1, "sync_data4"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1299
+    .line 1422
     const-string/jumbo v1, "sync_data5"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1300
+    .line 1423
     const-string/jumbo v1, "sync_data6"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1301
+    .line 1424
     const-string/jumbo v1, "sync_data7"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1302
+    .line 1425
     const-string/jumbo v1, "sync_data8"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1303
+    .line 1426
     const-string/jumbo v1, "sync_data9"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1304
+    .line 1427
     const-string/jumbo v1, "sync_data10"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1305
+    .line 1428
     const-string v1, "cal_sync1"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1306
+    .line 1429
     const-string v1, "cal_sync2"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1307
+    .line 1430
     const-string v1, "cal_sync3"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1308
+    .line 1431
     const-string v1, "cal_sync4"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1309
+    .line 1432
     const-string v1, "cal_sync5"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1310
+    .line 1433
     const-string v1, "cal_sync6"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1311
+    .line 1434
     const-string v1, "cal_sync7"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1312
+    .line 1435
     const-string v1, "cal_sync8"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1313
+    .line 1436
     const-string v1, "cal_sync9"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1314
+    .line 1437
     const-string v1, "cal_sync10"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v8, v1}, Landroid/database/DatabaseUtils;->cursorStringToContentValuesIfPresent(Landroid/database/Cursor;Landroid/content/ContentValues;Ljava/lang/String;)V
 
-    .line 1316
+    .line 1439
     new-instance v9, Landroid/content/Entity;
 
     invoke-direct {v9, v8}, Landroid/content/Entity;-><init>(Landroid/content/ContentValues;)V
 
-    .line 1318
+    .line 1441
     .local v9, entity:Landroid/content/Entity;
     move-object/from16 v0, p0
 
@@ -601,7 +601,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1319
+    .line 1442
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mResolver:Landroid/content/ContentResolver;
@@ -630,7 +630,7 @@
 
     move-result-object v14
 
-    .line 1330
+    .line 1453
     .local v14, subCursor:Landroid/database/Cursor;
     :goto_0
     :try_start_0
@@ -640,12 +640,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1331
+    .line 1454
     new-instance v13, Landroid/content/ContentValues;
 
     invoke-direct {v13}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1332
+    .line 1455
     .local v13, reminderValues:Landroid/content/ContentValues;
     const-string/jumbo v1, "minutes"
 
@@ -661,7 +661,7 @@
 
     invoke-virtual {v13, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1333
+    .line 1456
     const-string/jumbo v1, "method"
 
     const/4 v2, 0x1
@@ -676,7 +676,7 @@
 
     invoke-virtual {v13, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1334
+    .line 1457
     sget-object v1, Landroid/provider/HtcCalendarContract$Reminders;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v9, v1, v13}, Landroid/content/Entity;->addSubValue(Landroid/net/Uri;Landroid/content/ContentValues;)V
@@ -685,7 +685,7 @@
 
     goto :goto_0
 
-    .line 1337
+    .line 1460
     .end local v13           #reminderValues:Landroid/content/ContentValues;
     :catchall_0
     move-exception v1
@@ -694,7 +694,7 @@
 
     throw v1
 
-    .line 1324
+    .line 1447
     .end local v14           #subCursor:Landroid/database/Cursor;
     :cond_0
     move-object/from16 v0, p0
@@ -728,18 +728,18 @@
     .restart local v14       #subCursor:Landroid/database/Cursor;
     goto :goto_0
 
-    .line 1337
+    .line 1460
     :cond_1
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 1340
+    .line 1463
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mResolver:Landroid/content/ContentResolver;
 
     if-eqz v1, :cond_2
 
-    .line 1341
+    .line 1464
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mResolver:Landroid/content/ContentResolver;
@@ -768,7 +768,7 @@
 
     move-result-object v14
 
-    .line 1352
+    .line 1475
     :goto_1
     :try_start_1
     invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
@@ -777,12 +777,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 1353
+    .line 1476
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1354
+    .line 1477
     .local v7, attendeeValues:Landroid/content/ContentValues;
     const-string v1, "attendeeName"
 
@@ -794,7 +794,7 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1356
+    .line 1479
     const-string v1, "attendeeEmail"
 
     const/4 v2, 0x1
@@ -805,7 +805,7 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1358
+    .line 1481
     const-string v1, "attendeeRelationship"
 
     const/4 v2, 0x2
@@ -820,7 +820,7 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1360
+    .line 1483
     const-string v1, "attendeeType"
 
     const/4 v2, 0x3
@@ -835,7 +835,7 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1362
+    .line 1485
     const-string v1, "attendeeStatus"
 
     const/4 v2, 0x4
@@ -850,7 +850,7 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1364
+    .line 1487
     sget-object v1, Landroid/provider/HtcCalendarContract$Attendees;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v9, v1, v7}, Landroid/content/Entity;->addSubValue(Landroid/net/Uri;Landroid/content/ContentValues;)V
@@ -859,7 +859,7 @@
 
     goto :goto_1
 
-    .line 1367
+    .line 1490
     .end local v7           #attendeeValues:Landroid/content/ContentValues;
     :catchall_1
     move-exception v1
@@ -868,7 +868,7 @@
 
     throw v1
 
-    .line 1346
+    .line 1469
     :cond_2
     move-object/from16 v0, p0
 
@@ -900,18 +900,18 @@
 
     goto :goto_1
 
-    .line 1367
+    .line 1490
     :cond_3
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 1370
+    .line 1493
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mResolver:Landroid/content/ContentResolver;
 
     if-eqz v1, :cond_4
 
-    .line 1371
+    .line 1494
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/provider/HtcCalendarContract$EventsEntity$EntityIteratorImpl;->mResolver:Landroid/content/ContentResolver;
@@ -940,7 +940,7 @@
 
     move-result-object v14
 
-    .line 1382
+    .line 1505
     :goto_2
     :try_start_2
     invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
@@ -949,12 +949,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 1383
+    .line 1506
     new-instance v12, Landroid/content/ContentValues;
 
     invoke-direct {v12}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1384
+    .line 1507
     .local v12, extendedValues:Landroid/content/ContentValues;
     const-string v1, "_id"
 
@@ -966,7 +966,7 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1386
+    .line 1509
     const-string/jumbo v1, "name"
 
     const/4 v2, 0x1
@@ -977,7 +977,7 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1388
+    .line 1511
     const-string/jumbo v1, "value"
 
     const/4 v2, 0x2
@@ -988,7 +988,7 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1390
+    .line 1513
     sget-object v1, Landroid/provider/HtcCalendarContract$ExtendedProperties;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v9, v1, v12}, Landroid/content/Entity;->addSubValue(Landroid/net/Uri;Landroid/content/ContentValues;)V
@@ -997,7 +997,7 @@
 
     goto :goto_2
 
-    .line 1393
+    .line 1516
     .end local v12           #extendedValues:Landroid/content/ContentValues;
     :catchall_2
     move-exception v1
@@ -1006,7 +1006,7 @@
 
     throw v1
 
-    .line 1376
+    .line 1499
     :cond_4
     move-object/from16 v0, p0
 
@@ -1038,13 +1038,13 @@
 
     goto :goto_2
 
-    .line 1393
+    .line 1516
     :cond_5
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 1396
+    .line 1519
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1397
+    .line 1520
     return-object v9
 .end method

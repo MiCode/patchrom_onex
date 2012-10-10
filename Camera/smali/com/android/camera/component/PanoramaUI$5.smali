@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 1412
+    .line 1417
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$5;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +72,7 @@
     .end annotation
 
     .prologue
-    .line 1415
+    .line 1420
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/Resolution;>;>;"
     .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/Resolution;>;"
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$5;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -84,7 +84,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1416
+    .line 1421
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$5;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     const/4 v1, 0x1
@@ -92,12 +92,12 @@
     #setter for: Lcom/android/camera/component/PanoramaUI;->m_IsResolutionSyncBackNeeded:Z
     invoke-static {v0, v1}, Lcom/android/camera/component/PanoramaUI;->access$702(Lcom/android/camera/component/PanoramaUI;Z)Z
 
-    .line 1422
+    .line 1427
     :cond_0
     :goto_0
     return-void
 
-    .line 1417
+    .line 1422
     :cond_1
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$5;->this$0:Lcom/android/camera/component/PanoramaUI;
 
@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1419
+    .line 1424
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$5;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-virtual {v0}, Lcom/android/camera/component/PanoramaUI;->getCameraMode()Lcom/android/camera/CameraMode;
@@ -129,7 +129,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1420
+    .line 1425
     iget-object v0, p0, Lcom/android/camera/component/PanoramaUI$5;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     #getter for: Lcom/android/camera/component/PanoramaUI;->m_ResolutionHandler:Lcom/android/camera/component/PanoramaResolutionHandler;
@@ -159,7 +159,7 @@
     .parameter "x2"
 
     .prologue
-    .line 1412
+    .line 1417
     check-cast p3, Lcom/android/camera/OneValueEventArgs;
 
     .end local p3

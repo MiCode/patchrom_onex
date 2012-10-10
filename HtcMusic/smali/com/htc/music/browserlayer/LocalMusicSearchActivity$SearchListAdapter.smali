@@ -59,53 +59,53 @@
 
     const/4 v2, 0x0
 
-    .line 885
+    .line 902
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 881
+    .line 898
     const v0, 0x7f03002e
 
     iput v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mSubTitleViewResId:I
 
-    .line 882
+    .line 899
     const v0, 0x7f030008
 
     iput v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mItemViewResId:I
 
-    .line 883
+    .line 900
     const v0, 0x7f030019
 
     iput v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mNoResultViewResId:I
 
-    .line 946
+    .line 963
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDebug:Z
 
-    .line 887
+    .line 904
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 889
+    .line 906
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
 
-    .line 892
+    .line 909
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020050
+    const v1, 0x7f020052
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v7
 
-    .line 894
+    .line 911
     .local v7, b:Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -113,17 +113,17 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 895
+    .line 912
     iget-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/BitmapDrawable;->setFilterBitmap(Z)V
 
-    .line 896
+    .line 913
     iget-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/BitmapDrawable;->setDither(Z)V
 
-    .line 898
+    .line 915
     iget-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -132,11 +132,11 @@
 
     check-cast v8, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
-    .line 899
+    .line 916
     .local v8, tempActivity:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
     if-eqz v8, :cond_1
 
-    .line 900
+    .line 917
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mAsyncImageDecoder:Lcom/htc/music/util/AsyncImageDecoder;
     invoke-static {v8}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$3600(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Lcom/htc/music/util/AsyncImageDecoder;
 
@@ -144,7 +144,7 @@
 
     if-nez v0, :cond_0
 
-    .line 902
+    .line 919
     new-instance v0, Lcom/htc/music/util/AsyncImageDecoder;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
@@ -178,11 +178,11 @@
     #setter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mAsyncImageDecoder:Lcom/htc/music/util/AsyncImageDecoder;
     invoke-static {v8, v0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$3602(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;Lcom/htc/music/util/AsyncImageDecoder;)Lcom/htc/music/util/AsyncImageDecoder;
 
-    .line 913
+    .line 930
     :goto_0
     return-void
 
-    .line 906
+    .line 923
     :cond_0
     const-string v0, "[LocalMusicSearchActivity]"
 
@@ -192,7 +192,7 @@
 
     goto :goto_0
 
-    .line 910
+    .line 927
     :cond_1
     const-string v0, "[LocalMusicSearchActivity]"
 
@@ -209,7 +209,7 @@
     .locals 3
 
     .prologue
-    .line 1152
+    .line 1169
     iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -218,11 +218,11 @@
 
     check-cast v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
-    .line 1153
+    .line 1170
     .local v0, tempActivity:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
     if-eqz v0, :cond_0
 
-    .line 1154
+    .line 1171
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
     invoke-static {v0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$2000(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Ljava/util/ArrayList;
 
@@ -232,11 +232,11 @@
 
     move-result v1
 
-    .line 1160
+    .line 1177
     :goto_0
     return v1
 
-    .line 1157
+    .line 1174
     :cond_0
     const-string v1, "[LocalMusicSearchActivity]"
 
@@ -244,70 +244,13 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1160
+    .line 1177
     const/4 v1, 0x0
 
     goto :goto_0
 .end method
 
 .method public getItem(I)Ljava/lang/Object;
-    .locals 3
-    .parameter "position"
-
-    .prologue
-    .line 1165
-    iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
-
-    .line 1166
-    .local v0, tempActivity:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
-    if-eqz v0, :cond_0
-
-    .line 1167
-    #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
-    invoke-static {v0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$2000(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 1172
-    :goto_0
-    return-object v1
-
-    .line 1170
-    :cond_0
-    const-string v1, "[LocalMusicSearchActivity]"
-
-    const-string v2, "SearchListAdapter, getItem, tempActivity is null!"
-
-    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1172
-    const/4 v1, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getItemId(I)J
-    .locals 2
-    .parameter "position"
-
-    .prologue
-    .line 1177
-    int-to-long v0, p1
-
-    return-wide v0
-.end method
-
-.method public getItemViewType(I)I
     .locals 3
     .parameter "position"
 
@@ -326,16 +269,73 @@
     if-eqz v0, :cond_0
 
     .line 1184
+    #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$2000(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 1189
+    :goto_0
+    return-object v1
+
+    .line 1187
+    :cond_0
+    const-string v1, "[LocalMusicSearchActivity]"
+
+    const-string v2, "SearchListAdapter, getItem, tempActivity is null!"
+
+    invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1189
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+    .parameter "position"
+
+    .prologue
+    .line 1194
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public getItemViewType(I)I
+    .locals 3
+    .parameter "position"
+
+    .prologue
+    .line 1199
+    iget-object v1, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
+
+    .line 1200
+    .local v0, tempActivity:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
+    if-eqz v0, :cond_0
+
+    .line 1201
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->getItemViewType(I)I
     invoke-static {v0, p1}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$4300(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;I)I
 
     move-result v1
 
-    .line 1190
+    .line 1207
     :goto_0
     return v1
 
-    .line 1187
+    .line 1204
     :cond_0
     const-string v1, "[LocalMusicSearchActivity]"
 
@@ -343,7 +343,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1190
+    .line 1207
     invoke-super {p0, p1}, Landroid/widget/BaseAdapter;->getItemViewType(I)I
 
     move-result v1
@@ -358,7 +358,7 @@
     .parameter "parent"
 
     .prologue
-    .line 951
+    .line 968
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDebug:Z
@@ -399,17 +399,17 @@
 
     invoke-static/range {v19 .. v20}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 952
+    .line 969
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v13
 
-    .line 954
+    .line 971
     .local v13, startTime:J
     const/4 v9, 0x0
 
-    .line 955
+    .line 972
     .local v9, itemInfo:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;
     move-object/from16 v0, p0
 
@@ -423,11 +423,11 @@
 
     check-cast v16, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
-    .line 956
+    .line 973
     .local v16, tempActivity:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
     if-eqz v16, :cond_3
 
-    .line 957
+    .line 974
     if-ltz p1, :cond_1
 
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
@@ -445,7 +445,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 958
+    .line 975
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mSearchResultList:Ljava/util/ArrayList;
     invoke-static/range {v16 .. v16}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$2000(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Ljava/util/ArrayList;
 
@@ -462,7 +462,7 @@
     .end local v9           #itemInfo:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;
     check-cast v9, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;
 
-    .line 965
+    .line 982
     .restart local v9       #itemInfo:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;
     :cond_1
     :goto_0
@@ -470,12 +470,12 @@
 
     move-object/from16 v17, p2
 
-    .line 1147
+    .line 1164
     :cond_2
     :goto_1
     return-object v17
 
-    .line 962
+    .line 979
     :cond_3
     const-string v19, "[LocalMusicSearchActivity]"
 
@@ -485,29 +485,29 @@
 
     goto :goto_0
 
-    .line 970
+    .line 987
     :cond_4
     invoke-virtual/range {p0 .. p1}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->getItemViewType(I)I
 
     move-result v18
 
-    .line 971
+    .line 988
     .local v18, viewType:I
     const/16 v17, 0x0
 
-    .line 973
+    .line 990
     .local v17, v:Landroid/view/View;
     const/4 v7, 0x0
 
-    .line 975
+    .line 992
     .local v7, holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     const/4 v8, 0x1
 
-    .line 976
+    .line 993
     .local v8, isNeedToReInflate:Z
     if-eqz p2, :cond_6
 
-    .line 977
+    .line 994
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v7
@@ -515,7 +515,7 @@
     .end local v7           #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     check-cast v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
 
-    .line 983
+    .line 1000
     .restart local v7       #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     iget v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->viewType:I
 
@@ -567,18 +567,18 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 988
+    .line 1005
     :cond_5
     const/4 v8, 0x1
 
-    .line 995
+    .line 1012
     :cond_6
     :goto_2
     if-eqz p2, :cond_7
 
     if-eqz v8, :cond_b
 
-    .line 996
+    .line 1013
     :cond_7
     const/16 v19, 0x2
 
@@ -588,7 +588,7 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 997
+    .line 1014
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mInflater:Landroid/view/LayoutInflater;
@@ -611,7 +611,7 @@
 
     move-result-object v17
 
-    .line 998
+    .line 1015
     const v19, 0x7f080077
 
     move-object/from16 v0, v17
@@ -624,7 +624,7 @@
 
     check-cast v15, Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 999
+    .line 1016
     .local v15, subTitle:Lcom/htc/widget/HtcListItemSeparator;
     const/16 v19, 0x0
 
@@ -639,31 +639,31 @@
 
     invoke-virtual {v15, v0, v1}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 1000
+    .line 1017
     const/16 v19, 0x0
 
     move/from16 v0, v19
 
     invoke-virtual {v15, v0}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundStyle(I)V
 
-    .line 1002
+    .line 1019
     new-instance v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
 
     .end local v7           #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     invoke-direct {v7}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;-><init>()V
 
-    .line 1003
+    .line 1020
     .restart local v7       #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     move/from16 v0, v18
 
     iput v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->viewType:I
 
-    .line 1004
+    .line 1021
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1006
+    .line 1023
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDebug:Z
@@ -702,14 +702,14 @@
 
     goto/16 :goto_1
 
-    .line 991
+    .line 1008
     .end local v15           #subTitle:Lcom/htc/widget/HtcListItemSeparator;
     :cond_8
     const/4 v8, 0x0
 
     goto :goto_2
 
-    .line 1010
+    .line 1027
     :cond_9
     const/16 v19, 0x6
 
@@ -719,7 +719,7 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 1011
+    .line 1028
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mInflater:Landroid/view/LayoutInflater;
@@ -742,7 +742,7 @@
 
     move-result-object v17
 
-    .line 1012
+    .line 1029
     const v19, 0x7f080054
 
     move-object/from16 v0, v17
@@ -755,7 +755,7 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    .line 1013
+    .line 1030
     .local v10, itemText:Landroid/widget/TextView;
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getPrimaryText()Ljava/lang/String;
     invoke-static {v9}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->access$3700(Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;)Ljava/lang/String;
@@ -766,24 +766,24 @@
 
     invoke-virtual {v10, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1015
+    .line 1032
     new-instance v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
 
     .end local v7           #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     invoke-direct {v7}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;-><init>()V
 
-    .line 1016
+    .line 1033
     .restart local v7       #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     move/from16 v0, v18
 
     iput v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->viewType:I
 
-    .line 1017
+    .line 1034
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1019
+    .line 1036
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDebug:Z
@@ -822,7 +822,7 @@
 
     goto/16 :goto_1
 
-    .line 1024
+    .line 1041
     .end local v10           #itemText:Landroid/widget/TextView;
     :cond_a
     move-object/from16 v0, p0
@@ -847,13 +847,13 @@
 
     move-result-object v17
 
-    .line 1025
+    .line 1042
     new-instance v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
 
     .end local v7           #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     invoke-direct {v7}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;-><init>()V
 
-    .line 1026
+    .line 1043
     .restart local v7       #holder:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     const v19, 0x7f080023
 
@@ -871,7 +871,7 @@
 
     iput-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 1027
+    .line 1044
     const v19, 0x7f080024
 
     move-object/from16 v0, v17
@@ -888,21 +888,21 @@
 
     iput-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 1028
+    .line 1045
     move/from16 v0, v18
 
     iput v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->viewType:I
 
-    .line 1029
+    .line 1046
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1057
+    .line 1074
     :goto_3
     if-nez v7, :cond_e
 
-    .line 1058
+    .line 1075
     const-string v19, "[LocalMusicSearchActivity]"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -937,11 +937,11 @@
 
     goto/16 :goto_1
 
-    .line 1032
+    .line 1049
     :cond_b
     move-object/from16 v17, p2
 
-    .line 1034
+    .line 1051
     const/16 v19, 0x2
 
     move/from16 v0, v18
@@ -950,7 +950,7 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 1035
+    .line 1052
     const v19, 0x7f080077
 
     move-object/from16 v0, v17
@@ -963,7 +963,7 @@
 
     check-cast v15, Lcom/htc/widget/HtcListItemSeparator;
 
-    .line 1036
+    .line 1053
     .restart local v15       #subTitle:Lcom/htc/widget/HtcListItemSeparator;
     const/16 v19, 0x0
 
@@ -978,14 +978,14 @@
 
     invoke-virtual {v15, v0, v1}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 1037
+    .line 1054
     const/16 v19, 0x0
 
     move/from16 v0, v19
 
     invoke-virtual {v15, v0}, Lcom/htc/widget/HtcListItemSeparator;->setBackgroundStyle(I)V
 
-    .line 1039
+    .line 1056
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDebug:Z
@@ -1024,7 +1024,7 @@
 
     goto/16 :goto_1
 
-    .line 1043
+    .line 1060
     .end local v15           #subTitle:Lcom/htc/widget/HtcListItemSeparator;
     :cond_c
     const/16 v19, 0x6
@@ -1035,7 +1035,7 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 1044
+    .line 1061
     const v19, 0x7f080054
 
     move-object/from16 v0, v17
@@ -1048,7 +1048,7 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    .line 1045
+    .line 1062
     .restart local v10       #itemText:Landroid/widget/TextView;
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getPrimaryText()Ljava/lang/String;
     invoke-static {v9}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->access$3700(Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;)Ljava/lang/String;
@@ -1059,7 +1059,7 @@
 
     invoke-virtual {v10, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1047
+    .line 1064
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mDebug:Z
@@ -1098,21 +1098,21 @@
 
     goto/16 :goto_1
 
-    .line 1052
+    .line 1069
     .end local v10           #itemText:Landroid/widget/TextView;
     :cond_d
     move/from16 v0, v18
 
     iput v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->viewType:I
 
-    .line 1053
+    .line 1070
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto/16 :goto_3
 
-    .line 1065
+    .line 1082
     :cond_e
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -1120,7 +1120,7 @@
 
     if-eqz v19, :cond_f
 
-    .line 1066
+    .line 1083
     const/16 v19, 0x1
 
     move/from16 v0, v19
@@ -1129,7 +1129,7 @@
 
     if-ne v0, v1, :cond_12
 
-    .line 1067
+    .line 1084
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     move-object/from16 v19, v0
@@ -1141,7 +1141,7 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1068
+    .line 1085
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     move-object/from16 v19, v0
@@ -1150,7 +1150,7 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 1101
+    .line 1118
     :cond_f
     :goto_4
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
@@ -1159,7 +1159,7 @@
 
     if-eqz v19, :cond_11
 
-    .line 1102
+    .line 1119
     const/16 v19, 0x1
 
     move/from16 v0, v19
@@ -1176,7 +1176,7 @@
 
     if-ne v0, v1, :cond_19
 
-    .line 1104
+    .line 1121
     :cond_10
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
@@ -1186,7 +1186,7 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItemTileImage;->setVisibility(I)V
 
-    .line 1146
+    .line 1163
     :cond_11
     :goto_5
     move-object/from16 v0, p0
@@ -1227,7 +1227,7 @@
 
     goto/16 :goto_1
 
-    .line 1070
+    .line 1087
     :cond_12
     const/16 v19, 0x3
 
@@ -1245,7 +1245,7 @@
 
     if-ne v0, v1, :cond_16
 
-    .line 1071
+    .line 1088
     :cond_13
     move-object/from16 v0, v16
 
@@ -1265,7 +1265,7 @@
 
     move-result-object v11
 
-    .line 1072
+    .line 1089
     .local v11, key:Ljava/lang/String;
     if-eqz v11, :cond_14
 
@@ -1279,7 +1279,7 @@
 
     if-eqz v19, :cond_15
 
-    .line 1073
+    .line 1090
     :cond_14
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -1292,7 +1292,7 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1079
+    .line 1096
     :goto_6
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -1304,7 +1304,7 @@
 
     goto/16 :goto_4
 
-    .line 1076
+    .line 1093
     :cond_15
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getPrimaryText()Ljava/lang/String;
     invoke-static {v9}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->access$3700(Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;)Ljava/lang/String;
@@ -1320,7 +1320,7 @@
 
     move-result-object v12
 
-    .line 1077
+    .line 1094
     .local v12, markedString:Ljava/lang/CharSequence;
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -1332,7 +1332,7 @@
 
     goto :goto_6
 
-    .line 1083
+    .line 1100
     .end local v11           #key:Ljava/lang/String;
     .end local v12           #markedString:Ljava/lang/CharSequence;
     :cond_16
@@ -1354,7 +1354,7 @@
 
     move-result-object v11
 
-    .line 1084
+    .line 1101
     .restart local v11       #key:Ljava/lang/String;
     if-eqz v11, :cond_17
 
@@ -1368,7 +1368,7 @@
 
     if-eqz v19, :cond_18
 
-    .line 1085
+    .line 1102
     :cond_17
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -1381,7 +1381,7 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1092
+    .line 1109
     :goto_7
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -1391,7 +1391,7 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 1093
+    .line 1110
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
     move-object/from16 v19, v0
@@ -1405,7 +1405,7 @@
 
     goto/16 :goto_4
 
-    .line 1088
+    .line 1105
     :cond_18
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getPrimaryText()Ljava/lang/String;
     invoke-static {v9}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->access$3700(Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;)Ljava/lang/String;
@@ -1421,7 +1421,7 @@
 
     move-result-object v12
 
-    .line 1089
+    .line 1106
     .restart local v12       #markedString:Ljava/lang/CharSequence;
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -1433,7 +1433,7 @@
 
     goto :goto_7
 
-    .line 1107
+    .line 1124
     .end local v11           #key:Ljava/lang/String;
     .end local v12           #markedString:Ljava/lang/CharSequence;
     :cond_19
@@ -1445,7 +1445,7 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItemTileImage;->setVisibility(I)V
 
-    .line 1109
+    .line 1126
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
     invoke-static/range {v16 .. v16}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$4100(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
@@ -1461,7 +1461,7 @@
 
     check-cast v6, Landroid/graphics/Bitmap;
 
-    .line 1112
+    .line 1129
     .local v6, cacheBmp:Landroid/graphics/Bitmap;
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
@@ -1477,10 +1477,10 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItemTileImage;->setTag(Ljava/lang/Object;)V
 
-    .line 1114
+    .line 1131
     if-eqz v6, :cond_1a
 
-    .line 1116
+    .line 1133
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
     move-object/from16 v19, v0
@@ -1491,7 +1491,7 @@
 
     goto/16 :goto_5
 
-    .line 1120
+    .line 1137
     :cond_1a
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
@@ -1505,17 +1505,17 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1123
+    .line 1140
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->getArtPath()Ljava/lang/String;
     invoke-static {v9}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;->access$4200(Lcom/htc/music/browserlayer/LocalMusicSearchActivity$BaseItem;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1124
+    .line 1141
     .local v5, albumArtpath:Ljava/lang/String;
     if-eqz v5, :cond_1c
 
-    .line 1126
+    .line 1143
     const-string v19, "[LocalMusicSearchActivity]"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -1554,12 +1554,12 @@
 
     invoke-static/range {v19 .. v20}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1128
+    .line 1145
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1130
+    .line 1147
     .local v4, albumArtFile:Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1567,7 +1567,7 @@
 
     if-eqz v19, :cond_1b
 
-    .line 1131
+    .line 1148
     const-string v19, "[LocalMusicSearchActivity]"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -1600,7 +1600,7 @@
 
     invoke-static/range {v19 .. v20}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1132
+    .line 1149
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mAsyncImageDecoder:Lcom/htc/music/util/AsyncImageDecoder;
     invoke-static/range {v16 .. v16}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$3600(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Lcom/htc/music/util/AsyncImageDecoder;
 
@@ -1626,7 +1626,7 @@
 
     goto/16 :goto_5
 
-    .line 1134
+    .line 1151
     :cond_1b
     const-string v19, "[LocalMusicSearchActivity]"
 
@@ -1662,7 +1662,7 @@
 
     goto/16 :goto_5
 
-    .line 1138
+    .line 1155
     .end local v4           #albumArtFile:Ljava/io/File;
     :cond_1c
     const-string v19, "[LocalMusicSearchActivity]"
@@ -1697,7 +1697,7 @@
 
     invoke-static/range {v19 .. v20}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1139
+    .line 1156
     iget-object v0, v7, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->listItemAlbumArt:Lcom/htc/widget/HtcListItemTileImage;
 
     move-object/from16 v19, v0
@@ -1718,7 +1718,7 @@
     .parameter "position"
 
     .prologue
-    .line 1195
+    .line 1212
     iget-object v2, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1727,31 +1727,31 @@
 
     check-cast v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
-    .line 1196
+    .line 1213
     .local v0, tempActivity:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
     if-eqz v0, :cond_0
 
-    .line 1197
+    .line 1214
     #calls: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->getItemViewType(I)I
     invoke-static {v0, p1}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$4300(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;I)I
 
     move-result v1
 
-    .line 1198
+    .line 1215
     .local v1, viewType:I
     const/4 v2, 0x6
 
     if-ne v1, v2, :cond_1
 
-    .line 1199
+    .line 1216
     const/4 v2, 0x0
 
-    .line 1204
+    .line 1221
     .end local v1           #viewType:I
     :goto_0
     return v2
 
-    .line 1202
+    .line 1219
     :cond_0
     const-string v2, "[LocalMusicSearchActivity]"
 
@@ -1759,7 +1759,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1204
+    .line 1221
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/BaseAdapter;->isEnabled(I)Z
 
@@ -1776,22 +1776,22 @@
     .parameter "varargs"
 
     .prologue
-    .line 1210
+    .line 1227
     if-nez p2, :cond_1
 
-    .line 1211
+    .line 1228
     const-string v7, "[LocalMusicSearchActivity]"
 
     const-string v8, "onImageDecoded: bitmap is null"
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1248
+    .line 1265
     :cond_0
     :goto_0
     return-void
 
-    .line 1214
+    .line 1231
     :cond_1
     const-string v7, "[LocalMusicSearchActivity]"
 
@@ -1825,7 +1825,7 @@
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1216
+    .line 1233
     iget-object v7, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v7}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1834,11 +1834,11 @@
 
     check-cast v6, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
 
-    .line 1217
+    .line 1234
     .local v6, tempActivity:Lcom/htc/music/browserlayer/LocalMusicSearchActivity;
     if-eqz v6, :cond_3
 
-    .line 1218
+    .line 1235
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mSearchList:Lcom/htc/widget/HtcListView;
     invoke-static {v6}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$4400(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Lcom/htc/widget/HtcListView;
 
@@ -1848,11 +1848,11 @@
 
     move-result v2
 
-    .line 1219
+    .line 1236
     .local v2, childCount:I
     if-lez v2, :cond_0
 
-    .line 1223
+    .line 1240
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
     invoke-static {v6}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$4100(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
@@ -1862,18 +1862,18 @@
 
     move-result v0
 
-    .line 1224
+    .line 1241
     .local v0, addedToCache:Z
     if-eqz v0, :cond_0
 
-    .line 1225
+    .line 1242
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_1
     if-ge v3, v2, :cond_0
 
-    .line 1226
+    .line 1243
     #getter for: Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->mSearchList:Lcom/htc/widget/HtcListView;
     invoke-static {v6}, Lcom/htc/music/browserlayer/LocalMusicSearchActivity;->access$4400(Lcom/htc/music/browserlayer/LocalMusicSearchActivity;)Lcom/htc/widget/HtcListView;
 
@@ -1883,29 +1883,29 @@
 
     move-result-object v5
 
-    .line 1228
+    .line 1245
     .local v5, ll:Landroid/view/View;
     if-eqz v5, :cond_2
 
-    .line 1229
+    .line 1246
     const v7, 0x7f080023
 
     invoke-virtual {v5, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1231
+    .line 1248
     .local v1, albumArt:Landroid/view/View;
     if-eqz v1, :cond_2
 
-    .line 1232
+    .line 1249
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 1234
+    .line 1251
     .local v4, integer:Ljava/lang/Integer;
     if-eqz v4, :cond_2
 
@@ -1915,7 +1915,7 @@
 
     if-ne v7, p1, :cond_2
 
-    .line 1235
+    .line 1252
     const-string v7, "[LocalMusicSearchActivity]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1944,20 +1944,20 @@
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1236
+    .line 1253
     check-cast v1, Lcom/htc/widget/HtcListItemTileImage;
 
     .end local v1           #albumArt:Landroid/view/View;
     invoke-virtual {v1, p2}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1225
+    .line 1242
     .end local v4           #integer:Ljava/lang/Integer;
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 1245
+    .line 1262
     .end local v0           #addedToCache:Z
     .end local v2           #childCount:I
     .end local v3           #i:I
@@ -1977,13 +1977,13 @@
     .parameter "newactivity"
 
     .prologue
-    .line 1251
+    .line 1268
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter;->mActivityRef:Ljava/lang/ref/WeakReference;
 
-    .line 1252
+    .line 1269
     return-void
 .end method

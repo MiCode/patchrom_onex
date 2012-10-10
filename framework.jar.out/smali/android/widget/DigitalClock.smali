@@ -202,7 +202,7 @@
     if-eqz v0, :cond_0
 
     .line 113
-    const-string/jumbo v0, "k:mm:ss"
+    const-string v0, "k:mm:ss"
 
     iput-object v0, p0, Landroid/widget/DigitalClock;->mFormat:Ljava/lang/String;
 

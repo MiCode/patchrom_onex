@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1662
+    .line 1498
     iput-object p1, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1665
+    .line 1501
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1666
+    .line 1502
     .local v0, action:Ljava/lang/String;
     const-string v2, "[LandingPage]"
 
@@ -69,7 +69,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1667
+    .line 1503
     const-string v2, "android.intent.action.MEDIA_EJECT"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -78,13 +78,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 1668
+    .line 1504
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #calls: Lcom/htc/music/LandingPageActivity;->hideRecentlyAlbumDialogs()V
     invoke-static {v2}, Lcom/htc/music/LandingPageActivity;->access$1100(Lcom/htc/music/LandingPageActivity;)V
 
-    .line 1669
+    .line 1505
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
@@ -94,18 +94,18 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 1670
+    .line 1506
     new-instance v1, Lcom/htc/music/LandingPageActivity$BaseItem;
 
     invoke-direct {v1}, Lcom/htc/music/LandingPageActivity$BaseItem;-><init>()V
 
-    .line 1671
+    .line 1507
     .local v1, addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
     const/4 v2, -0x2
 
     invoke-virtual {v1, v2}, Lcom/htc/music/LandingPageActivity$BaseItem;->setId(I)V
 
-    .line 1672
+    .line 1508
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mRecentAlbumList:Ljava/util/ArrayList;
@@ -115,7 +115,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1674
+    .line 1510
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mAdapter:Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
@@ -125,7 +125,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1675
+    .line 1511
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #getter for: Lcom/htc/music/LandingPageActivity;->mAdapter:Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;
@@ -135,13 +135,13 @@
 
     invoke-virtual {v2}, Lcom/htc/music/LandingPageActivity$RecentAlbumListAdapter;->notifyDataSetChanged()V
 
-    .line 1681
+    .line 1517
     .end local v1           #addItem:Lcom/htc/music/LandingPageActivity$BaseItem;
     :cond_0
     :goto_0
     return-void
 
-    .line 1678
+    .line 1514
     :cond_1
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
@@ -149,7 +149,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1679
+    .line 1515
     iget-object v2, p0, Lcom/htc/music/LandingPageActivity$4;->this$0:Lcom/htc/music/LandingPageActivity;
 
     #calls: Lcom/htc/music/LandingPageActivity;->reloadRecentAlbumAsync()V

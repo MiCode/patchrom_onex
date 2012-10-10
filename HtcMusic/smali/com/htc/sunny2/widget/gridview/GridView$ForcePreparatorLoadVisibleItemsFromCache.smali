@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3311
+    .line 3333
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$ForcePreparatorLoadVisibleItemsFromCache;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3311
+    .line 3333
     invoke-direct {p0, p1}, Lcom/htc/sunny2/widget/gridview/GridView$ForcePreparatorLoadVisibleItemsFromCache;-><init>(Lcom/htc/sunny2/widget/gridview/GridView;)V
 
     return-void
@@ -53,7 +53,7 @@
     .locals 9
 
     .prologue
-    .line 3315
+    .line 3337
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$ForcePreparatorLoadVisibleItemsFromCache;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     #getter for: Lcom/htc/sunny2/widget/gridview/GridView;->mThumbPreparator:Lcom/htc/sunny2/widget/gridview/GridViewPreparator;
@@ -63,7 +63,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3319
+    .line 3341
     :try_start_0
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$ForcePreparatorLoadVisibleItemsFromCache;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -94,16 +94,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3326
+    .line 3348
     :cond_0
     :goto_0
     return-void
 
-    .line 3321
+    .line 3343
     :catch_0
     move-exception v6
 
-    .line 3323
+    .line 3345
     .local v6, e:Ljava/lang/Exception;
     const-string v0, "GridView"
 

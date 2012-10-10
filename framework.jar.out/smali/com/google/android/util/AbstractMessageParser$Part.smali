@@ -73,7 +73,7 @@
     if-eqz v0, :cond_1
 
     .line 1445
-    const-string/jumbo v0, "m"
+    const-string v0, "m"
 
     goto :goto_0
 

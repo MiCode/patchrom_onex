@@ -1398,7 +1398,7 @@
     invoke-virtual {v0, v9, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     .line 3001
-    const-string/jumbo v9, "locale"
+    const-string v9, "locale"
 
     invoke-virtual {p2}, Ljava/util/Locale;->toString()Ljava/lang/String;
 

@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 426
+    .line 434
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,30 +45,30 @@
     .parameter "source"
 
     .prologue
-    .line 434
+    .line 442
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 435
+    .line 443
     .local v1, adnSFI:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 436
+    .line 444
     .local v3, recordNumber:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 437
+    .line 445
     .local v0, adnRecordNumber:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 439
+    .line 447
     .local v2, emailAddress:Ljava/lang/String;
     new-instance v4, Lcom/android/internal/telephony/EmailRecord;
 
@@ -82,7 +82,7 @@
     .parameter "x0"
 
     .prologue
-    .line 426
+    .line 434
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/EmailRecord$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/EmailRecord;
 
     move-result-object v0
@@ -95,7 +95,7 @@
     .parameter "size"
 
     .prologue
-    .line 444
+    .line 452
     new-array v0, p1, [Lcom/android/internal/telephony/EmailRecord;
 
     return-object v0
@@ -106,7 +106,7 @@
     .parameter "x0"
 
     .prologue
-    .line 426
+    .line 434
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/EmailRecord$1;->newArray(I)[Lcom/android/internal/telephony/EmailRecord;
 
     move-result-object v0

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 588
+    .line 586
     iput-object p1, p0, Lcom/android/camera/component/ThumbnailController$6;->this$0:Lcom/android/camera/component/ThumbnailController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 592
+    .line 590
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/ThumbnailController$6;->this$0:Lcom/android/camera/component/ThumbnailController;
 
@@ -75,6 +75,6 @@
     #calls: Lcom/android/camera/component/ThumbnailController;->onMediaSaveFailed(Lcom/android/camera/MediaEventArgs;)V
     invoke-static {v0, v1}, Lcom/android/camera/component/ThumbnailController;->access$800(Lcom/android/camera/component/ThumbnailController;Lcom/android/camera/MediaEventArgs;)V
 
-    .line 593
+    .line 591
     return-void
 .end method

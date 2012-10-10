@@ -29,15 +29,15 @@
     .parameter "host"
 
     .prologue
-    .line 3279
+    .line 3301
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
-    .line 3280
+    .line 3302
     const-string v0, "Panning"
 
     invoke-direct {p0, p2, v0}, Lcom/htc/sunny2/RenderThreadAction;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3281
+    .line 3303
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .parameter "cancelReason"
 
     .prologue
-    .line 3308
+    .line 3330
     return-void
 .end method
 
@@ -62,19 +62,19 @@
 
     const/4 v1, 0x0
 
-    .line 3285
+    .line 3307
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mGridViewScroller:Lcom/htc/sunny2/widget/gridview/GridViewScroller;
 
     if-nez v3, :cond_1
 
-    .line 3302
+    .line 3324
     :cond_0
     :goto_0
     return v1
 
-    .line 3288
+    .line 3310
     :cond_1
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
@@ -88,14 +88,14 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 3291
+    .line 3313
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mGridViewScroller:Lcom/htc/sunny2/widget/gridview/GridViewScroller;
 
     invoke-virtual {v3}, Lcom/htc/sunny2/widget/gridview/GridViewScroller;->update()V
 
-    .line 3292
+    .line 3314
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mGridViewScroller:Lcom/htc/sunny2/widget/gridview/GridViewScroller;
@@ -104,18 +104,18 @@
 
     move-result v0
 
-    .line 3293
+    .line 3315
     .local v0, pos:I
     if-eqz v0, :cond_2
 
-    .line 3294
+    .line 3316
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget v3, v3, Lcom/htc/sunny2/widget/gridview/GridView;->mOrientation:I
 
     if-ne v3, v2, :cond_3
 
-    .line 3295
+    .line 3317
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-virtual {v3, v1, v0}, Lcom/htc/sunny2/widget/gridview/GridView;->onScrollMotionIRT(II)V
@@ -124,10 +124,10 @@
     :goto_1
     move v1, v2
 
-    .line 3302
+    .line 3324
     goto :goto_0
 
-    .line 3298
+    .line 3320
     :cond_3
     iget-object v3, p0, Lcom/htc/sunny2/widget/gridview/GridView$GridPanningAction;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2407
+    .line 2439
     iput-object p1, p0, Lcom/htc/music/NowPlayingViewHelper$15;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 2410
+    .line 2442
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$15;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     #getter for: Lcom/htc/music/NowPlayingViewHelper;->mLocalAdapter:Lcom/htc/music/NowPlayingViewHelper$TrackListAdapter;
@@ -49,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2411
+    .line 2443
     iget-object v0, p0, Lcom/htc/music/NowPlayingViewHelper$15;->this$0:Lcom/htc/music/NowPlayingViewHelper;
 
     const/4 v1, 0x0
@@ -57,7 +57,7 @@
     #calls: Lcom/htc/music/NowPlayingViewHelper;->getTrackCursor(Ljava/lang/String;)Landroid/database/Cursor;
     invoke-static {v0, v1}, Lcom/htc/music/NowPlayingViewHelper;->access$1600(Lcom/htc/music/NowPlayingViewHelper;Ljava/lang/String;)Landroid/database/Cursor;
 
-    .line 2416
+    .line 2448
     :cond_0
     return-void
 .end method

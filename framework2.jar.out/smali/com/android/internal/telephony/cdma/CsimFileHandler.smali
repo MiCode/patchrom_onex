@@ -49,10 +49,10 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 42
     invoke-super {p0}, Lcom/android/internal/telephony/IccFileHandler;->dispose()V
 
-    .line 42
+    .line 43
     return-void
 .end method
 
@@ -60,14 +60,14 @@
     .locals 2
 
     .prologue
-    .line 45
+    .line 47
     const-string v0, "CDMA"
 
     const-string v1, "CsimFileHandler finalized"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
+    .line 48
     return-void
 .end method
 
@@ -76,40 +76,40 @@
     .parameter "efid"
 
     .prologue
-    .line 51
+    .line 54
     sparse-switch p1, :sswitch_data_0
 
-    .line 73
+    .line 76
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cdma/CsimFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
+    .line 78
     .local v0, path:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 79
+    .line 82
     sget-object v0, Lcom/android/internal/telephony/cdma/CsimFileHandler;->DFPhonebookPath:Ljava/lang/String;
 
-    .line 81
+    .line 84
     .end local v0           #path:Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 64
+    .line 67
     :sswitch_0
     const-string v0, "3F007FFF"
 
     goto :goto_0
 
-    .line 67
+    .line 70
     :sswitch_1
     sget-object v0, Lcom/android/internal/telephony/cdma/CsimFileHandler;->DFPhonebookPath:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 51
+    .line 54
     :sswitch_data_0
     .sparse-switch
         0x4f30 -> :sswitch_1
@@ -123,38 +123,6 @@
 .end method
 
 .method protected logd(Ljava/lang/String;)V
-    .locals 3
-    .parameter "msg"
-
-    .prologue
-    .line 86
-    const-string v0, "CDMA"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "[CsimFileHandler] "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 87
-    return-void
-.end method
-
-.method protected loge(Ljava/lang/String;)V
     .locals 3
     .parameter "msg"
 
@@ -180,8 +148,40 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 91
+    return-void
+.end method
+
+.method protected loge(Ljava/lang/String;)V
+    .locals 3
+    .parameter "msg"
+
+    .prologue
+    .line 95
+    const-string v0, "CDMA"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "[CsimFileHandler] "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 96
     return-void
 .end method

@@ -189,7 +189,7 @@
     const/4 v5, 0x1
 
     .line 148
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 129
     new-instance v3, Ljava/util/ArrayList;
@@ -216,7 +216,7 @@
     iput-boolean v4, p0, Landroid/media/videoeditor/VideoEditorImpl;->mPreviewInProgress:Z
 
     .line 150
-    const-string/jumbo v3, "libc.debug.malloc"
+    const-string v3, "libc.debug.malloc"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1188,7 +1188,7 @@
     .line 994
     const-string v22, ""
 
-    const-string/jumbo v23, "id"
+    const-string v23, "id"
 
     move-object/from16 v0, v19
 
@@ -1520,7 +1520,7 @@
     .line 1045
     const-string v22, ""
 
-    const-string/jumbo v23, "is_image_clip_generated"
+    const-string v23, "is_image_clip_generated"
 
     move-object/from16 v0, v19
 
@@ -1846,7 +1846,7 @@
     .line 1910
     const-string v0, "VideoEditorImpl"
 
-    const-string/jumbo v1, "lock: grabbing semaphore"
+    const-string v1, "lock: grabbing semaphore"
 
     new-instance v2, Ljava/lang/Throwable;
 
@@ -1872,7 +1872,7 @@
     .line 1914
     const-string v0, "VideoEditorImpl"
 
-    const-string/jumbo v1, "lock: grabbed semaphore"
+    const-string v1, "lock: grabbed semaphore"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1909,7 +1909,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "lock: grabbing semaphore with timeout "
+    const-string v3, "lock: grabbing semaphore with timeout "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1956,7 +1956,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "lock: grabbed semaphore status "
+    const-string v3, "lock: grabbed semaphore status "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1990,7 +1990,7 @@
     .line 1340
     const-string v3, ""
 
-    const-string/jumbo v19, "id"
+    const-string v19, "id"
 
     move-object/from16 v0, p1
 
@@ -2108,7 +2108,7 @@
     .local v14, muted:Z
     const-string v3, ""
 
-    const-string/jumbo v19, "loop"
+    const-string v19, "loop"
 
     move-object/from16 v0, p1
 
@@ -2212,7 +2212,7 @@
     .line 1294
     const-string v2, ""
 
-    const-string/jumbo v10, "id"
+    const-string v10, "id"
 
     move-object/from16 v0, p1
 
@@ -2552,7 +2552,7 @@
     .line 1120
     const-string v5, ""
 
-    const-string/jumbo v11, "id"
+    const-string v11, "id"
 
     move-object/from16 v0, p1
 
@@ -2871,7 +2871,7 @@
     .line 1249
     const-string v2, ""
 
-    const-string/jumbo v15, "id"
+    const-string v15, "id"
 
     move-object/from16 v0, p1
 
@@ -3123,7 +3123,7 @@
     .local p2, ignoredMediaItems:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     const-string v12, ""
 
-    const-string/jumbo v13, "id"
+    const-string v13, "id"
 
     move-object/from16 v0, p1
 
@@ -3321,7 +3321,7 @@
     .local v9, maskFilename:Ljava/lang/String;
     const-string v12, ""
 
-    const-string/jumbo v13, "invert"
+    const-string v13, "invert"
 
     move-object/from16 v0, p1
 
@@ -3347,7 +3347,7 @@
     :goto_3
     const-string v12, ""
 
-    const-string/jumbo v13, "is_transition_generated"
+    const-string v13, "is_transition_generated"
 
     move-object/from16 v0, p1
 
@@ -7055,7 +7055,7 @@
     .line 1386
     const-string v29, ""
 
-    const-string/jumbo v30, "id"
+    const-string v30, "id"
 
     invoke-virtual {v15}, Landroid/media/videoeditor/MediaItem;->getId()Ljava/lang/String;
 
@@ -7331,7 +7331,7 @@
     .line 1417
     const-string v29, ""
 
-    const-string/jumbo v30, "id"
+    const-string v30, "id"
 
     invoke-virtual/range {v19 .. v19}, Landroid/media/videoeditor/Overlay;->getId()Ljava/lang/String;
 
@@ -7815,7 +7815,7 @@
     .line 1472
     const-string v29, ""
 
-    const-string/jumbo v30, "id"
+    const-string v30, "id"
 
     invoke-virtual {v8}, Landroid/media/videoeditor/Effect;->getId()Ljava/lang/String;
 
@@ -8243,7 +8243,7 @@
     .line 1510
     const-string v29, ""
 
-    const-string/jumbo v30, "is_image_clip_generated"
+    const-string v30, "is_image_clip_generated"
 
     const/16 v31, 0x1
 
@@ -8290,7 +8290,7 @@
     :cond_b
     const-string v29, ""
 
-    const-string/jumbo v30, "is_image_clip_generated"
+    const-string v30, "is_image_clip_generated"
 
     const/16 v31, 0x0
 
@@ -8417,7 +8417,7 @@
     .line 1533
     const-string v29, ""
 
-    const-string/jumbo v30, "id"
+    const-string v30, "id"
 
     invoke-virtual/range {v25 .. v25}, Landroid/media/videoeditor/Transition;->getId()Ljava/lang/String;
 
@@ -8505,7 +8505,7 @@
     .line 1537
     const-string v29, ""
 
-    const-string/jumbo v30, "is_transition_generated"
+    const-string v30, "is_transition_generated"
 
     invoke-virtual/range {v25 .. v25}, Landroid/media/videoeditor/Transition;->isGenerated()Z
 
@@ -8713,7 +8713,7 @@
     .line 1559
     const-string v29, ""
 
-    const-string/jumbo v30, "invert"
+    const-string v30, "invert"
 
     invoke-virtual/range {v24 .. v24}, Landroid/media/videoeditor/TransitionAlpha;->isInvert()Z
 
@@ -8833,7 +8833,7 @@
     .line 1571
     const-string v29, ""
 
-    const-string/jumbo v30, "id"
+    const-string v30, "id"
 
     invoke-virtual {v5}, Landroid/media/videoeditor/AudioTrack;->getId()Ljava/lang/String;
 
@@ -9055,7 +9055,7 @@
     .line 1584
     const-string v29, ""
 
-    const-string/jumbo v30, "loop"
+    const-string v30, "loop"
 
     invoke-virtual {v5}, Landroid/media/videoeditor/AudioTrack;->isLooping()Z
 

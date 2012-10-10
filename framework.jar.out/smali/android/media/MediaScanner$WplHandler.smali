@@ -39,37 +39,37 @@
     .parameter "uri"
 
     .prologue
-    .line 1723
+    .line 1851
     iput-object p1, p0, Landroid/media/MediaScanner$WplHandler;->this$0:Landroid/media/MediaScanner;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1720
+    .line 1848
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
     iput-object v4, p0, Landroid/media/MediaScanner$WplHandler;->values:Landroid/content/ContentValues;
 
-    .line 1721
+    .line 1849
     const/4 v4, 0x0
 
     iput v4, p0, Landroid/media/MediaScanner$WplHandler;->index:I
 
-    .line 1724
+    .line 1852
     iput-object p2, p0, Landroid/media/MediaScanner$WplHandler;->playListDirectory:Ljava/lang/String;
 
-    .line 1725
+    .line 1853
     iput-object p3, p0, Landroid/media/MediaScanner$WplHandler;->uri:Landroid/net/Uri;
 
-    .line 1727
+    .line 1855
     new-instance v2, Landroid/sax/RootElement;
 
     const-string/jumbo v4, "smil"
 
     invoke-direct {v2, v4}, Landroid/sax/RootElement;-><init>(Ljava/lang/String;)V
 
-    .line 1728
+    .line 1856
     .local v2, root:Landroid/sax/RootElement;
     const-string v4, "body"
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    .line 1729
+    .line 1857
     .local v0, body:Landroid/sax/Element;
     const-string/jumbo v4, "seq"
 
@@ -85,7 +85,7 @@
 
     move-result-object v3
 
-    .line 1730
+    .line 1858
     .local v3, seq:Landroid/sax/Element;
     const-string/jumbo v4, "media"
 
@@ -93,18 +93,18 @@
 
     move-result-object v1
 
-    .line 1731
+    .line 1859
     .local v1, media:Landroid/sax/Element;
     invoke-virtual {v1, p0}, Landroid/sax/Element;->setElementListener(Landroid/sax/ElementListener;)V
 
-    .line 1733
+    .line 1861
     invoke-virtual {v2}, Landroid/sax/RootElement;->getContentHandler()Lorg/xml/sax/ContentHandler;
 
     move-result-object v4
 
     iput-object v4, p0, Landroid/media/MediaScanner$WplHandler;->handler:Lorg/xml/sax/ContentHandler;
 
-    .line 1734
+    .line 1862
     return-void
 .end method
 
@@ -114,7 +114,7 @@
     .locals 0
 
     .prologue
-    .line 1747
+    .line 1875
     return-void
 .end method
 
@@ -122,7 +122,7 @@
     .locals 1
 
     .prologue
-    .line 1750
+    .line 1878
     iget-object v0, p0, Landroid/media/MediaScanner$WplHandler;->handler:Lorg/xml/sax/ContentHandler;
 
     return-object v0
@@ -133,7 +133,7 @@
     .parameter "attributes"
 
     .prologue
-    .line 1737
+    .line 1865
     const-string v0, ""
 
     const-string/jumbo v2, "src"
@@ -142,16 +142,16 @@
 
     move-result-object v1
 
-    .line 1738
+    .line 1866
     .local v1, path:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 1739
+    .line 1867
     iget-object v0, p0, Landroid/media/MediaScanner$WplHandler;->values:Landroid/content/ContentValues;
 
     invoke-virtual {v0}, Landroid/content/ContentValues;->clear()V
 
-    .line 1740
+    .line 1868
     iget-object v0, p0, Landroid/media/MediaScanner$WplHandler;->this$0:Landroid/media/MediaScanner;
 
     iget-object v2, p0, Landroid/media/MediaScanner$WplHandler;->playListDirectory:Ljava/lang/String;
@@ -163,20 +163,20 @@
     iget v5, p0, Landroid/media/MediaScanner$WplHandler;->index:I
 
     #calls: Landroid/media/MediaScanner;->addPlayListEntry(Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/content/ContentValues;I)Z
-    invoke-static/range {v0 .. v5}, Landroid/media/MediaScanner;->access$2800(Landroid/media/MediaScanner;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/content/ContentValues;I)Z
+    invoke-static/range {v0 .. v5}, Landroid/media/MediaScanner;->access$3600(Landroid/media/MediaScanner;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/content/ContentValues;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1741
+    .line 1869
     iget v0, p0, Landroid/media/MediaScanner$WplHandler;->index:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/media/MediaScanner$WplHandler;->index:I
 
-    .line 1744
+    .line 1872
     :cond_0
     return-void
 .end method

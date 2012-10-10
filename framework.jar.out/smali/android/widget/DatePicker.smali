@@ -235,7 +235,7 @@
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 168
-    const-string/jumbo v13, "layout_inflater"
+    const-string v13, "layout_inflater"
 
     move-object/from16 v0, p1
 

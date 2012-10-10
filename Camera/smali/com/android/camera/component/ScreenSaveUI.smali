@@ -119,7 +119,7 @@
     .prologue
     const/16 v1, 0x14
 
-    .line 209
+    .line 210
     iget v0, p0, Lcom/android/camera/component/ScreenSaveUI;->m_iCurrentOri:I
 
     add-int/lit16 v0, v0, -0x167
@@ -170,11 +170,11 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 216
+    .line 217
     :cond_0
     const/4 v0, 0x1
 
-    .line 218
+    .line 219
     :goto_0
     return v0
 
@@ -189,12 +189,12 @@
     .parameter "values"
 
     .prologue
-    .line 126
+    .line 127
     invoke-virtual {p0}, Lcom/android/camera/component/ScreenSaveUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v1
 
-    .line 129
+    .line 130
     .local v1, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v3, v1, Lcom/android/camera/HTCCamera;->deviceOrientation:Lcom/android/camera/property/Property;
 
@@ -210,23 +210,23 @@
 
     iput v3, p0, Lcom/android/camera/component/ScreenSaveUI;->m_iCurrentOri:I
 
-    .line 131
+    .line 132
     iget-object v3, p0, Lcom/android/camera/component/ScreenSaveUI;->m_AccelerometerValues:[F
 
     if-nez v3, :cond_0
 
-    .line 133
+    .line 134
     iput-object p1, p0, Lcom/android/camera/component/ScreenSaveUI;->m_AccelerometerValues:[F
 
-    .line 155
+    .line 156
     :goto_0
     return-void
 
-    .line 137
+    .line 138
     :cond_0
     const/4 v0, 0x0
 
-    .line 138
+    .line 139
     .local v0, IsChanged:Z
     const/4 v2, 0x0
 
@@ -236,7 +236,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 139
+    .line 140
     iget-object v3, p0, Lcom/android/camera/component/ScreenSaveUI;->m_AccelerometerValues:[F
 
     aget v3, v3, v2
@@ -255,31 +255,31 @@
 
     if-lez v3, :cond_2
 
-    .line 140
+    .line 141
     const/4 v0, 0x1
 
-    .line 144
+    .line 145
     :cond_1
     if-eqz v0, :cond_3
 
-    .line 146
+    .line 147
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/camera/component/ScreenSaveUI;->m_HandShakeStableTime:I
 
-    .line 152
+    .line 153
     :goto_2
     iput-object p1, p0, Lcom/android/camera/component/ScreenSaveUI;->m_AccelerometerValues:[F
 
     goto :goto_0
 
-    .line 138
+    .line 139
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 149
+    .line 150
     :cond_3
     iget v3, p0, Lcom/android/camera/component/ScreenSaveUI;->m_HandShakeStableTime:I
 
@@ -326,7 +326,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 97
+    .line 98
     iget-object v1, p0, Lcom/android/camera/component/Component;->triggers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/component/ScreenSaveUI$4;
@@ -341,7 +341,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 105
+    .line 106
     iget-object v1, v0, Lcom/android/camera/HTCCamera;->rotation:Lcom/android/camera/property/Property;
 
     new-instance v2, Lcom/android/camera/component/ScreenSaveUI$5;
@@ -350,7 +350,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/property/Property;->addChangedCallback(Lcom/android/camera/property/PropertyChangedCallback;)V
 
-    .line 119
+    .line 120
     return-void
 .end method
 
@@ -360,10 +360,10 @@
     .locals 0
 
     .prologue
-    .line 172
+    .line 173
     invoke-super {p0}, Lcom/android/camera/component/UIComponent;->deinitializeOverride()V
 
-    .line 173
+    .line 174
     return-void
 .end method
 
@@ -372,25 +372,25 @@
     .parameter "msg"
 
     .prologue
-    .line 181
+    .line 182
     invoke-virtual {p0}, Lcom/android/camera/component/ScreenSaveUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 182
+    .line 183
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 200
+    .line 201
     invoke-super {p0, p1}, Lcom/android/camera/component/UIComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 203
+    .line 204
     :goto_0
     return-void
 
-    .line 188
+    .line 189
     :pswitch_0
     const/4 v1, -0x1
 
@@ -414,17 +414,17 @@
 
     if-lez v1, :cond_0
 
-    .line 193
+    .line 194
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->resetScreenSaveTimer()V
 
-    .line 194
+    .line 195
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "resetScreenSaveTimer"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 196
+    .line 197
     :cond_0
     const/4 v1, 0x1
 
@@ -434,7 +434,7 @@
 
     goto :goto_0
 
-    .line 182
+    .line 183
     nop
 
     :pswitch_data_0

@@ -164,7 +164,7 @@
     :cond_0
     const-string v0, "SipService"
 
-    const-string/jumbo v1, "impossible! recursive!"
+    const-string v1, "impossible! recursive!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -287,7 +287,7 @@
     :cond_0
     const-string v1, "SipService"
 
-    const-string/jumbo v2, "impossible!"
+    const-string v2, "impossible!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 

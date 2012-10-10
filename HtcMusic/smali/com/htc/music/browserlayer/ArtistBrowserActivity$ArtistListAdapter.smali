@@ -140,7 +140,7 @@
     iput-object v0, p0, Lcom/htc/music/browserlayer/ArtistBrowserActivity$ArtistListAdapter;->mNowPlayingOverlay:Landroid/graphics/drawable/Drawable;
 
     .line 953
-    const v0, 0x7f020050
+    const v0, 0x7f020052
 
     invoke-static {v7, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

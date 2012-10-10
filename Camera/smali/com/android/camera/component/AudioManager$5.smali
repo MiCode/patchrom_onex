@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 285
+    .line 306
     iput-object p1, p0, Lcom/android/camera/component/AudioManager$5;->this$0:Lcom/android/camera/component/AudioManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 289
+    .line 310
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/UIState;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/UIState;>;"
     sget-object v0, Lcom/android/camera/UIState;->Opened:Lcom/android/camera/UIState;
@@ -75,7 +75,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 290
+    .line 311
     iget-object v1, p0, Lcom/android/camera/component/AudioManager$5;->this$0:Lcom/android/camera/component/AudioManager;
 
     iget-object v0, p0, Lcom/android/camera/component/AudioManager$5;->this$0:Lcom/android/camera/component/AudioManager;
@@ -95,7 +95,7 @@
     #calls: Lcom/android/camera/component/AudioManager;->setVolumePanelOrientation(Lcom/android/camera/rotate/UIRotation;)V
     invoke-static {v1, v0}, Lcom/android/camera/component/AudioManager;->access$300(Lcom/android/camera/component/AudioManager;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 291
+    .line 312
     :cond_0
     return-void
 .end method

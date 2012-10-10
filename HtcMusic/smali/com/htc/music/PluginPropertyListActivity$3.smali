@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 188
+    .line 199
     iput-object p1, p0, Lcom/htc/music/PluginPropertyListActivity$3;->this$0:Lcom/htc/music/PluginPropertyListActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,48 +40,14 @@
     .parameter "intent"
 
     .prologue
-    .line 191
-    iget-object v1, p0, Lcom/htc/music/PluginPropertyListActivity$3;->this$0:Lcom/htc/music/PluginPropertyListActivity;
-
-    #getter for: Lcom/htc/music/PluginPropertyListActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
-    invoke-static {v1}, Lcom/htc/music/PluginPropertyListActivity;->access$300(Lcom/htc/music/PluginPropertyListActivity;)Lcom/htc/music/IMediaPlaybackService;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    .line 203
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 194
-    :cond_1
+    .line 202
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 195
+    .line 204
     .local v0, action:Ljava/lang/String;
-    const-string v1, "com.htc.music.metachanged"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 198
-    iget-object v1, p0, Lcom/htc/music/PluginPropertyListActivity$3;->this$0:Lcom/htc/music/PluginPropertyListActivity;
-
-    #calls: Lcom/htc/music/PluginPropertyListActivity;->showPoperty()V
-    invoke-static {v1}, Lcom/htc/music/PluginPropertyListActivity;->access$400(Lcom/htc/music/PluginPropertyListActivity;)V
-
-    goto :goto_0
-
-    .line 199
-    :cond_2
-    const-string v1, "com.htc.music.newproperty"
+    const-string v1, "android.intent.action.MEDIA_UNMOUNTED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -89,21 +55,23 @@
 
     if-eqz v1, :cond_0
 
-    .line 200
+    .line 207
+    invoke-static {p2}, Lcom/htc/music/util/MusicUtils;->isExternalStorageUnMount(Landroid/content/Intent;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 211
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 209
+    :cond_1
     iget-object v1, p0, Lcom/htc/music/PluginPropertyListActivity$3;->this$0:Lcom/htc/music/PluginPropertyListActivity;
 
-    #getter for: Lcom/htc/music/PluginPropertyListActivity;->mPropertyItems:Lcom/htc/music/PluginPropertyListActivity$PropertyItems;
-    invoke-static {v1}, Lcom/htc/music/PluginPropertyListActivity;->access$500(Lcom/htc/music/PluginPropertyListActivity;)Lcom/htc/music/PluginPropertyListActivity$PropertyItems;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Lcom/htc/music/PluginPropertyListActivity$PropertyItems;->setItems(Landroid/content/Intent;)V
-
-    .line 201
-    iget-object v1, p0, Lcom/htc/music/PluginPropertyListActivity$3;->this$0:Lcom/htc/music/PluginPropertyListActivity;
-
-    #calls: Lcom/htc/music/PluginPropertyListActivity;->showPoperty()V
-    invoke-static {v1}, Lcom/htc/music/PluginPropertyListActivity;->access$400(Lcom/htc/music/PluginPropertyListActivity;)V
+    invoke-virtual {v1}, Lcom/htc/music/PluginPropertyListActivity;->finish()V
 
     goto :goto_0
 .end method

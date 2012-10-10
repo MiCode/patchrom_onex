@@ -87,7 +87,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 43
     iget-boolean v0, p0, Lcom/htc/opensense/social/OperationParams;->mDebug:Z
 
     return v0
@@ -107,12 +107,12 @@
     .end annotation
 
     .prologue
-    .line 48
+    .line 36
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 49
+    .line 37
     .local v0, values:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "debug"
 
@@ -124,10 +124,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
+    .line 38
     invoke-virtual {p0, v0}, Lcom/htc/opensense/social/OperationParams;->getMap(Ljava/util/HashMap;)V
 
-    .line 51
+    .line 39
     return-object v0
 .end method
 
@@ -152,9 +152,9 @@
     .parameter "debug"
 
     .prologue
-    .line 67
+    .line 47
     iput-boolean p1, p0, Lcom/htc/opensense/social/OperationParams;->mDebug:Z
 
-    .line 68
+    .line 48
     return-void
 .end method

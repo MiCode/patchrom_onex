@@ -337,14 +337,14 @@
 
     const/4 v2, 0x0
 
-    .line 57147
+    .line 58565
     new-array v0, v6, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/htc/R$styleable;->AlertDialog:[I
 
-    .line 57294
+    .line 58712
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -353,7 +353,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HeaderBar:[I
 
-    .line 57404
+    .line 58822
     new-array v0, v3, [I
 
     const v1, 0x201000a
@@ -362,35 +362,35 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HeaderBar_Layout:[I
 
-    .line 57453
+    .line 58871
     new-array v0, v6, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/htc/R$styleable;->HtcActionBar:[I
 
-    .line 57575
+    .line 58993
     new-array v0, v4, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Lcom/htc/R$styleable;->HtcAnimationButtonMode:[I
 
-    .line 57629
+    .line 59047
     new-array v0, v4, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/htc/R$styleable;->HtcCompoundButtonMode:[I
 
-    .line 57679
+    .line 59097
     new-array v0, v5, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Lcom/htc/R$styleable;->HtcFakescreen:[I
 
-    .line 57790
+    .line 59208
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -399,7 +399,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcFooter:[I
 
-    .line 57946
+    .line 59364
     new-array v0, v3, [I
 
     const v1, 0x2010009
@@ -408,7 +408,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcFooterButton:[I
 
-    .line 57969
+    .line 59387
     new-array v0, v3, [I
 
     const v1, 0x2010010
@@ -417,7 +417,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcIndicatorButton:[I
 
-    .line 57999
+    .line 59417
     new-array v0, v3, [I
 
     const v1, 0x201001b
@@ -426,7 +426,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListItem:[I
 
-    .line 58030
+    .line 59448
     new-array v0, v3, [I
 
     const v1, 0x201001a
@@ -435,7 +435,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListItem2LineText:[I
 
-    .line 58053
+    .line 59471
     new-array v0, v3, [I
 
     const v1, 0x201001d
@@ -444,7 +444,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListItemBubbleCount:[I
 
-    .line 58080
+    .line 59498
     new-array v0, v3, [I
 
     const v1, 0x2010011
@@ -453,7 +453,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListItemImageComponentMode:[I
 
-    .line 58111
+    .line 59529
     new-array v0, v3, [I
 
     const v1, 0x2010014
@@ -462,21 +462,21 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListItemMode:[I
 
-    .line 58150
+    .line 59568
     new-array v0, v5, [I
 
     fill-array-data v0, :array_7
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListItemSeparator:[I
 
-    .line 58228
+    .line 59646
     new-array v0, v4, [I
 
     fill-array-data v0, :array_8
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListItemTextComponentMode:[I
 
-    .line 58310
+    .line 59728
     const/16 v0, 0x12
 
     new-array v0, v0, [I
@@ -485,14 +485,14 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcListView:[I
 
-    .line 58555
+    .line 59973
     new-array v0, v5, [I
 
     fill-array-data v0, :array_a
 
     sput-object v0, Lcom/htc/R$styleable;->HtcLockPatternView:[I
 
-    .line 58622
+    .line 60040
     new-array v0, v3, [I
 
     const v1, 0x2010003
@@ -501,14 +501,14 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcProgressBar:[I
 
-    .line 58673
+    .line 60091
     new-array v0, v6, [I
 
     fill-array-data v0, :array_b
 
     sput-object v0, Lcom/htc/R$styleable;->HtcRosieWidget:[I
 
-    .line 58837
+    .line 60255
     new-array v0, v3, [I
 
     const v1, 0x2010003
@@ -517,7 +517,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcSeekBar:[I
 
-    .line 58870
+    .line 60288
     new-array v0, v3, [I
 
     const v1, 0x2010007
@@ -526,7 +526,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcStarButtonMode:[I
 
-    .line 58921
+    .line 60339
     const/16 v0, 0xd
 
     new-array v0, v0, [I
@@ -535,7 +535,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->HtcTheme:[I
 
-    .line 59106
+    .line 60524
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -544,7 +544,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->IdleScreen:[I
 
-    .line 59206
+    .line 60624
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -553,7 +553,7 @@
 
     sput-object v0, Lcom/htc/R$styleable;->PaddingListView:[I
 
-    .line 59330
+    .line 60748
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -564,7 +564,7 @@
 
     return-void
 
-    .line 57147
+    .line 58565
     :array_0
     .array-data 0x4
         0x0t 0x0t 0x1t 0x2t
@@ -579,7 +579,7 @@
         0x41t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 57294
+    .line 58712
     :array_1
     .array-data 0x4
         0xbt 0x0t 0x1t 0x2t
@@ -591,7 +591,7 @@
         0x6ft 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 57453
+    .line 58871
     :array_2
     .array-data 0x4
         0x5bt 0x0t 0x1t 0x2t
@@ -606,21 +606,21 @@
         0x64t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 57575
+    .line 58993
     :array_3
     .array-data 0x4
         0x4t 0x0t 0x1t 0x2t
         0x35t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 57629
+    .line 59047
     :array_4
     .array-data 0x4
         0x5t 0x0t 0x1t 0x2t
         0x6t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 57679
+    .line 59097
     :array_5
     .array-data 0x4
         0x1t 0x0t 0x1t 0x2t
@@ -630,7 +630,7 @@
         0x38t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 57790
+    .line 59208
     :array_6
     .array-data 0x4
         0x8t 0x0t 0x1t 0x2t
@@ -644,7 +644,7 @@
         0x6dt 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 58150
+    .line 59568
     :array_7
     .array-data 0x4
         0x15t 0x0t 0x1t 0x2t
@@ -654,14 +654,14 @@
         0x19t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 58228
+    .line 59646
     :array_8
     .array-data 0x4
         0x12t 0x0t 0x1t 0x2t
         0x13t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 58310
+    .line 59728
     :array_9
     .array-data 0x4
         0x42t 0x0t 0x1t 0x2t
@@ -684,7 +684,7 @@
         0x53t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 58555
+    .line 59973
     :array_a
     .array-data 0x4
         0x28t 0x0t 0x1t 0x2t
@@ -694,7 +694,7 @@
         0x2ct 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 58673
+    .line 60091
     :array_b
     .array-data 0x4
         0x1et 0x0t 0x1t 0x2t
@@ -709,7 +709,7 @@
         0x27t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 58921
+    .line 60339
     :array_c
     .array-data 0x4
         0x1ct 0x0t 0x1t 0x2t
@@ -727,7 +727,7 @@
         0x7et 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 59106
+    .line 60524
     :array_d
     .array-data 0x4
         0x2dt 0x0t 0x1t 0x2t
@@ -738,7 +738,7 @@
         0x32t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 59206
+    .line 60624
     :array_e
     .array-data 0x4
         0x54t 0x0t 0x1t 0x2t
@@ -750,7 +750,7 @@
         0x5at 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 59330
+    .line 60748
     :array_f
     .array-data 0x4
         0x70t 0x0t 0x1t 0x2t
@@ -764,7 +764,7 @@
     .locals 0
 
     .prologue
-    .line 57118
+    .line 58536
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

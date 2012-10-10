@@ -132,89 +132,136 @@
     .locals 7
 
     .prologue
-    .line 664
+    .line 663
     :try_start_0
     new-instance v0, Ljava/io/BufferedReader;
 
-    new-instance v5, Ljava/io/FileReader;
+    new-instance v4, Ljava/io/FileReader;
 
-    const-string v6, "/system/etc/wifi/wpa_supplicant.conf"
+    const-string v5, "/system/etc/wifi/wpa_supplicant.conf"
 
-    invoke-direct {v5, v6}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v0, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 665
+    .line 664
     .local v0, br:Ljava/io/BufferedReader;
     new-instance v1, Ljava/io/BufferedWriter;
 
-    new-instance v5, Ljava/io/FileWriter;
+    new-instance v4, Ljava/io/FileWriter;
 
-    const-string v6, "/data/misc/wifi/wpa_supplicant.conf"
+    const-string v5, "/data/misc/wifi/wpa_supplicant.conf"
 
-    invoke-direct {v5, v6}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v5}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
+    invoke-direct {v1, v4}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 666
+    .line 676
     .local v1, bw:Ljava/io/BufferedWriter;
-    const/16 v5, 0x400
-
-    new-array v4, v5, [C
-
-    .line 668
-    .local v4, temp:[C
     :goto_0
-    invoke-virtual {v0, v4}, Ljava/io/BufferedReader;->read([C)I
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    move-result v3
+    move-result-object v3
 
-    .local v3, size:I
-    if-lez v3, :cond_0
+    .local v3, line:Ljava/lang/String;
+    if-eqz v3, :cond_0
 
-    .line 669
+    .line 677
+    const-string v4, "network"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 688
+    :cond_0
+    invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
+
+    .line 689
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
+
+    .line 693
+    .end local v0           #br:Ljava/io/BufferedReader;
+    .end local v1           #bw:Ljava/io/BufferedWriter;
+    .end local v3           #line:Ljava/lang/String;
+    :goto_1
+    return-void
+
+    .line 681
+    .restart local v0       #br:Ljava/io/BufferedReader;
+    .restart local v1       #bw:Ljava/io/BufferedWriter;
+    .restart local v3       #line:Ljava/lang/String;
+    :cond_1
+    sget-boolean v4, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG:Z
+
+    if-eqz v4, :cond_2
+
+    .line 682
+    const-string v4, "SettingsBackupAgent"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "copyWifiSupplicantTemplate: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 684
+    :cond_2
+    const/4 v4, 0x0
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    invoke-virtual {v1, v3, v4, v5}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;II)V
+
+    .line 685
+    const-string v4, "\n"
+
     const/4 v5, 0x0
 
-    invoke-virtual {v1, v4, v5, v3}, Ljava/io/BufferedWriter;->write([CII)V
+    const-string v6, "\n"
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    invoke-virtual {v1, v4, v5, v6}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;II)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 673
+    .line 690
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v1           #bw:Ljava/io/BufferedWriter;
-    .end local v3           #size:I
-    .end local v4           #temp:[C
+    .end local v3           #line:Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 674
+    .line 691
     .local v2, ioe:Ljava/io/IOException;
-    const-string v5, "SettingsBackupAgent"
+    const-string v4, "SettingsBackupAgent"
 
-    const-string v6, "Couldn\'t copy wpa_supplicant file"
+    const-string v5, "Couldn\'t copy wpa_supplicant file"
 
-    invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 676
-    .end local v2           #ioe:Ljava/io/IOException;
-    :goto_1
-    return-void
-
-    .line 671
-    .restart local v0       #br:Ljava/io/BufferedReader;
-    .restart local v1       #bw:Ljava/io/BufferedWriter;
-    .restart local v3       #size:I
-    .restart local v4       #temp:[C
-    :cond_0
-    :try_start_1
-    invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
-
-    .line 672
-    invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 .end method
@@ -224,25 +271,25 @@
     .parameter "enable"
 
     .prologue
-    .line 708
+    .line 725
     iget-object v1, p0, Lcom/android/providers/settings/SettingsBackupAgent;->mWfm:Landroid/net/wifi/WifiManager;
 
     if-eqz v1, :cond_0
 
-    .line 709
+    .line 726
     iget-object v1, p0, Lcom/android/providers/settings/SettingsBackupAgent;->mWfm:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getWifiState()I
 
     move-result v0
 
-    .line 710
+    .line 727
     .local v0, state:I
     iget-object v1, p0, Lcom/android/providers/settings/SettingsBackupAgent;->mWfm:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v1, p1}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
-    .line 713
+    .line 730
     .end local v0           #state:I
     :goto_0
     return v0
@@ -259,12 +306,12 @@
     .parameter "settings"
 
     .prologue
-    .line 473
+    .line 472
     move-object/from16 v0, p2
 
     array-length v12, v0
 
-    .line 474
+    .line 473
     .local v12, settingsCount:I
     mul-int/lit8 v17, v12, 0x2
 
@@ -274,7 +321,7 @@
 
     move-object/from16 v16, v0
 
-    .line 475
+    .line 474
     .local v16, values:[[B
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -282,39 +329,39 @@
 
     if-nez v17, :cond_1
 
-    .line 476
+    .line 475
     const-string v17, "SettingsBackupAgent"
 
     const-string v18, "Couldn\'t read from the cursor"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
+    .line 476
     const/16 v17, 0x0
 
     move/from16 v0, v17
 
     new-array v11, v0, [B
 
-    .line 533
+    .line 532
     :cond_0
     return-object v11
 
-    .line 481
+    .line 480
     :cond_1
     const/4 v13, 0x0
 
-    .line 482
+    .line 481
     .local v13, totalSize:I
     const/4 v2, 0x0
 
-    .line 483
+    .line 482
     .local v2, backedUpSettingIndex:I
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 484
+    .line 483
     .local v3, cachedEntries:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v6, 0x0
 
@@ -322,10 +369,10 @@
     :goto_0
     if-ge v6, v12, :cond_6
 
-    .line 485
+    .line 484
     aget-object v7, p2, v6
 
-    .line 486
+    .line 485
     .local v7, key:Ljava/lang/String;
     invoke-interface {v3, v7}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -333,11 +380,11 @@
 
     check-cast v14, Ljava/lang/String;
 
-    .line 489
+    .line 488
     .local v14, value:Ljava/lang/String;
     if-nez v14, :cond_2
 
-    .line 490
+    .line 489
     :goto_1
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -345,7 +392,7 @@
 
     if-nez v17, :cond_2
 
-    .line 491
+    .line 490
     const/16 v17, 0x1
 
     move-object/from16 v0, p1
@@ -356,7 +403,7 @@
 
     move-result-object v4
 
-    .line 492
+    .line 491
     .local v4, cursorKey:Ljava/lang/String;
     const/16 v17, 0x2
 
@@ -368,32 +415,32 @@
 
     move-result-object v5
 
-    .line 493
+    .line 492
     .local v5, cursorValue:Ljava/lang/String;
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 494
+    .line 493
     invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v17
 
     if-eqz v17, :cond_4
 
-    .line 495
+    .line 494
     move-object v14, v5
 
-    .line 502
+    .line 501
     .end local v4           #cursorKey:Ljava/lang/String;
     .end local v5           #cursorValue:Ljava/lang/String;
     :cond_2
     if-nez v14, :cond_5
 
-    .line 503
+    .line 502
     sget-boolean v17, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG:Z
 
     if-eqz v17, :cond_3
 
-    .line 504
+    .line 503
     const-string v17, "SettingsBackupAgent"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -424,14 +471,14 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
+    .line 483
     :cond_3
     :goto_2
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 498
+    .line 497
     .restart local v4       #cursorKey:Ljava/lang/String;
     .restart local v5       #cursorValue:Ljava/lang/String;
     :cond_4
@@ -439,7 +486,7 @@
 
     goto :goto_1
 
-    .line 510
+    .line 509
     .end local v4           #cursorKey:Ljava/lang/String;
     .end local v5           #cursorValue:Ljava/lang/String;
     :cond_5
@@ -447,7 +494,7 @@
 
     move-result-object v8
 
-    .line 511
+    .line 510
     .local v8, keyBytes:[B
     array-length v0, v8
 
@@ -457,17 +504,17 @@
 
     add-int v13, v13, v17
 
-    .line 512
+    .line 511
     mul-int/lit8 v17, v2, 0x2
 
     aput-object v8, v16, v17
 
-    .line 514
+    .line 513
     invoke-virtual {v14}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v15
 
-    .line 515
+    .line 514
     .local v15, valueBytes:[B
     array-length v0, v15
 
@@ -477,22 +524,22 @@
 
     add-int v13, v13, v17
 
-    .line 516
+    .line 515
     mul-int/lit8 v17, v2, 0x2
 
     add-int/lit8 v17, v17, 0x1
 
     aput-object v15, v16, v17
 
-    .line 518
+    .line 517
     add-int/lit8 v2, v2, 0x1
 
-    .line 520
+    .line 519
     sget-boolean v17, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG:Z
 
     if-eqz v17, :cond_3
 
-    .line 521
+    .line 520
     const-string v17, "SettingsBackupAgent"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -531,7 +578,7 @@
 
     goto :goto_2
 
-    .line 526
+    .line 525
     .end local v7           #key:Ljava/lang/String;
     .end local v8           #keyBytes:[B
     .end local v14           #value:Ljava/lang/String;
@@ -539,22 +586,22 @@
     :cond_6
     new-array v11, v13, [B
 
-    .line 527
+    .line 526
     .local v11, result:[B
     const/4 v10, 0x0
 
-    .line 528
+    .line 527
     .local v10, pos:I
     mul-int/lit8 v9, v2, 0x2
 
-    .line 529
+    .line 528
     .local v9, keyValuePairCount:I
     const/4 v6, 0x0
 
     :goto_3
     if-ge v6, v9, :cond_0
 
-    .line 530
+    .line 529
     aget-object v17, v16, v6
 
     move-object/from16 v0, v17
@@ -571,7 +618,7 @@
 
     move-result v10
 
-    .line 531
+    .line 530
     aget-object v17, v16, v6
 
     move-object/from16 v0, p0
@@ -582,7 +629,7 @@
 
     move-result v10
 
-    .line 529
+    .line 528
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
@@ -593,17 +640,17 @@
     .parameter "filename"
 
     .prologue
-    .line 537
+    .line 536
     const/4 v3, 0x0
 
-    .line 539
+    .line 538
     .local v3, is:Ljava/io/InputStream;
     :try_start_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 540
+    .line 539
     .local v1, file:Ljava/io/File;
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -612,7 +659,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 544
+    .line 543
     .end local v3           #is:Ljava/io/InputStream;
     .local v4, is:Ljava/io/InputStream;
     :try_start_1
@@ -624,15 +671,15 @@
 
     new-array v0, v7, [B
 
-    .line 546
+    .line 545
     .local v0, bytes:[B
     const/4 v6, 0x0
 
-    .line 547
+    .line 546
     .local v6, offset:I
     const/4 v5, 0x0
 
-    .line 549
+    .line 548
     .local v5, numRead:I
     :goto_0
     array-length v7, v0
@@ -649,18 +696,18 @@
 
     if-ltz v5, :cond_0
 
-    .line 550
+    .line 549
     add-int/2addr v6, v5
 
     goto :goto_0
 
-    .line 554
+    .line 553
     :cond_0
     array-length v7, v0
 
     if-ge v6, v7, :cond_3
 
-    .line 555
+    .line 554
     const-string v7, "SettingsBackupAgent"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -683,17 +730,17 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
+    .line 555
     sget-object v0, Lcom/android/providers/settings/SettingsBackupAgent;->EMPTY_DATA:[B
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
 
-    .line 563
+    .line 562
     .end local v0           #bytes:[B
     if-eqz v4, :cond_1
 
-    .line 565
+    .line 564
     :try_start_2
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -703,7 +750,7 @@
     :goto_1
     move-object v3, v4
 
-    .line 567
+    .line 566
     .end local v1           #file:Ljava/io/File;
     .end local v4           #is:Ljava/io/InputStream;
     .end local v5           #numRead:I
@@ -713,7 +760,7 @@
     :goto_2
     return-object v0
 
-    .line 563
+    .line 562
     .end local v3           #is:Ljava/io/InputStream;
     .restart local v0       #bytes:[B
     .restart local v1       #file:Ljava/io/File;
@@ -723,7 +770,7 @@
     :cond_3
     if-eqz v4, :cond_4
 
-    .line 565
+    .line 564
     :try_start_3
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -733,12 +780,12 @@
     :goto_3
     move-object v3, v4
 
-    .line 567
+    .line 566
     .end local v4           #is:Ljava/io/InputStream;
     .restart local v3       #is:Ljava/io/InputStream;
     goto :goto_2
 
-    .line 559
+    .line 558
     .end local v0           #bytes:[B
     .end local v1           #file:Ljava/io/File;
     .end local v5           #numRead:I
@@ -746,7 +793,7 @@
     :catch_0
     move-exception v2
 
-    .line 560
+    .line 559
     .local v2, ioe:Ljava/io/IOException;
     :goto_4
     :try_start_4
@@ -772,15 +819,15 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 561
+    .line 560
     sget-object v0, Lcom/android/providers/settings/SettingsBackupAgent;->EMPTY_DATA:[B
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 563
+    .line 562
     if-eqz v3, :cond_2
 
-    .line 565
+    .line 564
     :try_start_5
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -788,13 +835,13 @@
 
     goto :goto_2
 
-    .line 566
+    .line 565
     :catch_1
     move-exception v7
 
     goto :goto_2
 
-    .line 563
+    .line 562
     .end local v2           #ioe:Ljava/io/IOException;
     :catchall_0
     move-exception v7
@@ -802,18 +849,18 @@
     :goto_5
     if-eqz v3, :cond_5
 
-    .line 565
+    .line 564
     :try_start_6
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 567
+    .line 566
     :cond_5
     :goto_6
     throw v7
 
-    .line 566
+    .line 565
     .end local v3           #is:Ljava/io/InputStream;
     .restart local v1       #file:Ljava/io/File;
     .restart local v4       #is:Ljava/io/InputStream;
@@ -841,7 +888,7 @@
 
     goto :goto_6
 
-    .line 563
+    .line 562
     .end local v3           #is:Ljava/io/InputStream;
     .restart local v1       #file:Ljava/io/File;
     .restart local v4       #is:Ljava/io/InputStream;
@@ -854,7 +901,7 @@
     .restart local v3       #is:Ljava/io/InputStream;
     goto :goto_5
 
-    .line 559
+    .line 558
     .end local v3           #is:Ljava/io/InputStream;
     .restart local v4       #is:Ljava/io/InputStream;
     :catch_5
@@ -873,7 +920,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 371
+    .line 370
     invoke-virtual {p0}, Lcom/android/providers/settings/SettingsBackupAgent;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -890,7 +937,7 @@
 
     move-result-object v6
 
-    .line 374
+    .line 373
     .local v6, cursor:Landroid/database/Cursor;
     :try_start_0
     sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
@@ -907,7 +954,7 @@
 
     move-result-object v0
 
-    .line 380
+    .line 379
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     return-object v0
@@ -926,7 +973,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 357
+    .line 356
     invoke-virtual {p0}, Lcom/android/providers/settings/SettingsBackupAgent;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -943,7 +990,7 @@
 
     move-result-object v6
 
-    .line 360
+    .line 359
     .local v6, cursor:Landroid/database/Cursor;
     :try_start_0
     sget-object v0, Lcom/android/providers/settings/util/HtcDatabaseTable;->SYSTEM:Lcom/android/providers/settings/util/HtcDatabaseTable;
@@ -960,7 +1007,7 @@
 
     move-result-object v0
 
-    .line 366
+    .line 365
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     return-object v0
@@ -978,17 +1025,17 @@
     .parameter "filename"
 
     .prologue
-    .line 599
+    .line 598
     const/4 v0, 0x0
 
-    .line 601
+    .line 600
     .local v0, br:Ljava/io/BufferedReader;
     :try_start_0
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 602
+    .line 601
     .local v2, file:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -996,7 +1043,7 @@
 
     if-eqz v7, :cond_7
 
-    .line 603
+    .line 602
     new-instance v1, Ljava/io/BufferedReader;
 
     new-instance v7, Ljava/io/FileReader;
@@ -1008,7 +1055,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_6
 
-    .line 604
+    .line 603
     .end local v0           #br:Ljava/io/BufferedReader;
     .local v1, br:Ljava/io/BufferedReader;
     :try_start_1
@@ -1016,11 +1063,11 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 605
+    .line 604
     .local v5, relevantLines:Ljava/lang/StringBuffer;
     const/4 v6, 0x0
 
-    .line 607
+    .line 606
     .local v6, started:Z
     :cond_0
     :goto_0
@@ -1031,7 +1078,7 @@
     .local v4, line:Ljava/lang/String;
     if-eqz v4, :cond_3
 
-    .line 608
+    .line 607
     if-nez v6, :cond_1
 
     const-string v7, "network"
@@ -1042,14 +1089,14 @@
 
     if-eqz v7, :cond_1
 
-    .line 609
+    .line 608
     const/4 v6, 0x1
 
-    .line 611
+    .line 610
     :cond_1
     if-eqz v6, :cond_0
 
-    .line 612
+    .line 611
     invoke-virtual {v5, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v7
@@ -1063,7 +1110,7 @@
 
     goto :goto_0
 
-    .line 623
+    .line 622
     .end local v4           #line:Ljava/lang/String;
     .end local v5           #relevantLines:Ljava/lang/StringBuffer;
     .end local v6           #started:Z
@@ -1072,7 +1119,7 @@
 
     move-object v0, v1
 
-    .line 624
+    .line 623
     .end local v1           #br:Ljava/io/BufferedReader;
     .end local v2           #file:Ljava/io/File;
     .restart local v0       #br:Ljava/io/BufferedReader;
@@ -1101,27 +1148,27 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 625
+    .line 624
     sget-object v7, Lcom/android/providers/settings/SettingsBackupAgent;->EMPTY_DATA:[B
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 627
+    .line 626
     if-eqz v0, :cond_2
 
-    .line 629
+    .line 628
     :try_start_3
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
 
-    .line 631
+    .line 630
     .end local v3           #ioe:Ljava/io/IOException;
     :cond_2
     :goto_2
     return-object v7
 
-    .line 615
+    .line 614
     .end local v0           #br:Ljava/io/BufferedReader;
     .restart local v1       #br:Ljava/io/BufferedReader;
     .restart local v2       #file:Ljava/io/File;
@@ -1136,7 +1183,7 @@
 
     if-lez v7, :cond_5
 
-    .line 616
+    .line 615
     invoke-virtual {v5}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -1148,10 +1195,10 @@
 
     move-result-object v7
 
-    .line 627
+    .line 626
     if-eqz v1, :cond_4
 
-    .line 629
+    .line 628
     :try_start_5
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -1161,12 +1208,12 @@
     :goto_3
     move-object v0, v1
 
-    .line 631
+    .line 630
     .end local v1           #br:Ljava/io/BufferedReader;
     .restart local v0       #br:Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 618
+    .line 617
     .end local v0           #br:Ljava/io/BufferedReader;
     .restart local v1       #br:Ljava/io/BufferedReader;
     :cond_5
@@ -1176,10 +1223,10 @@
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 627
+    .line 626
     if-eqz v1, :cond_6
 
-    .line 629
+    .line 628
     :try_start_7
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_7
@@ -1189,12 +1236,12 @@
     :goto_4
     move-object v0, v1
 
-    .line 631
+    .line 630
     .end local v1           #br:Ljava/io/BufferedReader;
     .restart local v0       #br:Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 621
+    .line 620
     .end local v4           #line:Ljava/lang/String;
     .end local v5           #relevantLines:Ljava/lang/StringBuffer;
     .end local v6           #started:Z
@@ -1205,10 +1252,10 @@
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
 
-    .line 627
+    .line 626
     if-eqz v0, :cond_2
 
-    .line 629
+    .line 628
     :try_start_9
     throw v0
     :try_end_9
@@ -1216,13 +1263,13 @@
 
     goto :goto_2
 
-    .line 630
+    .line 629
     :catch_1
     move-exception v8
 
     goto :goto_2
 
-    .line 627
+    .line 626
     .end local v2           #file:Ljava/io/File;
     :catchall_0
     move-exception v7
@@ -1230,18 +1277,18 @@
     :goto_5
     if-eqz v0, :cond_8
 
-    .line 629
+    .line 628
     :try_start_a
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_5
 
-    .line 631
+    .line 630
     :cond_8
     :goto_6
     throw v7
 
-    .line 630
+    .line 629
     .end local v0           #br:Ljava/io/BufferedReader;
     .restart local v1       #br:Ljava/io/BufferedReader;
     .restart local v2       #file:Ljava/io/File;
@@ -1276,7 +1323,7 @@
 
     goto :goto_6
 
-    .line 627
+    .line 626
     .end local v0           #br:Ljava/io/BufferedReader;
     .restart local v1       #br:Ljava/io/BufferedReader;
     .restart local v2       #file:Ljava/io/File;
@@ -1289,7 +1336,7 @@
     .restart local v0       #br:Ljava/io/BufferedReader;
     goto :goto_5
 
-    .line 623
+    .line 622
     .end local v2           #file:Ljava/io/File;
     :catch_6
     move-exception v3
@@ -1303,7 +1350,7 @@
     .parameter "pos"
 
     .prologue
-    .line 699
+    .line 716
     aget-byte v1, p1, p2
 
     and-int/lit16 v1, v1, 0xff
@@ -1340,7 +1387,7 @@
 
     or-int v0, v1, v2
 
-    .line 704
+    .line 721
     .local v0, result:I
     return v0
 .end method
@@ -1357,10 +1404,10 @@
     .prologue
     const/4 v6, 0x5
 
-    .line 303
+    .line 302
     new-array v2, v6, [J
 
-    .line 305
+    .line 304
     .local v2, stateChecksums:[J
     new-instance v0, Ljava/io/DataInputStream;
 
@@ -1374,20 +1421,20 @@
 
     invoke-direct {v0, v4}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 309
+    .line 308
     .local v0, dataInput:Ljava/io/DataInputStream;
     :try_start_0
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 310
+    .line 309
     .local v3, stateVersion:I
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_0
 
-    .line 311
+    .line 310
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1396,33 +1443,33 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 312
+    .line 311
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v4
 
     aput-wide v4, v2, v1
 
-    .line 311
+    .line 310
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 314
+    .line 313
     .end local v1           #i:I
     :cond_0
     const/4 v4, 0x2
 
     if-ne v3, v4, :cond_1
 
-    .line 315
+    .line 314
     const/4 v1, 0x0
 
     .restart local v1       #i:I
     :goto_1
     if-ge v1, v6, :cond_1
 
-    .line 316
+    .line 315
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v4
@@ -1431,22 +1478,22 @@
     :try_end_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 315
+    .line 314
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 319
+    .line 318
     .end local v1           #i:I
     .end local v3           #stateVersion:I
     :catch_0
     move-exception v4
 
-    .line 323
+    .line 322
     :cond_1
     invoke-virtual {v0}, Ljava/io/DataInputStream;->close()V
 
-    .line 324
+    .line 323
     return-object v2
 .end method
 
@@ -1456,24 +1503,24 @@
     .parameter "data"
 
     .prologue
-    .line 574
+    .line 573
     invoke-virtual {p2}, Landroid/app/backup/BackupDataInput;->getDataSize()I
 
     move-result v2
 
     new-array v0, v2, [B
 
-    .line 575
+    .line 574
     .local v0, bytes:[B
     array-length v2, v0
 
     if-gtz v2, :cond_0
 
-    .line 582
+    .line 581
     :goto_0
     return-void
 
-    .line 577
+    .line 576
     :cond_0
     const/4 v2, 0x0
 
@@ -1484,7 +1531,7 @@
 
     invoke-virtual {p2, v0, v2, v3}, Landroid/app/backup/BackupDataInput;->readEntityData([BII)I
 
-    .line 578
+    .line 577
     array-length v2, v0
 
     invoke-direct {p0, p1, v0, v2}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreFileData(Ljava/lang/String;[BI)V
@@ -1493,11 +1540,11 @@
 
     goto :goto_0
 
-    .line 579
+    .line 578
     :catch_0
     move-exception v1
 
-    .line 580
+    .line 579
     .local v1, e:Ljava/io/IOException;
     const-string v2, "SettingsBackupAgent"
 
@@ -1531,13 +1578,13 @@
     .parameter "size"
 
     .prologue
-    .line 586
+    .line 585
     :try_start_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 587
+    .line 586
     .local v0, file:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1547,7 +1594,7 @@
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 589
+    .line 588
     :cond_0
     new-instance v2, Ljava/io/BufferedOutputStream;
 
@@ -1559,28 +1606,28 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 590
+    .line 589
     .local v2, os:Ljava/io/OutputStream;
     const/4 v3, 0x0
 
     invoke-virtual {v2, p2, v3, p3}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 591
+    .line 590
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 595
+    .line 594
     .end local v0           #file:Ljava/io/File;
     .end local v2           #os:Ljava/io/OutputStream;
     :goto_0
     return-void
 
-    .line 592
+    .line 591
     :catch_0
     move-exception v1
 
-    .line 593
+    .line 592
     .local v1, ioe:Ljava/io/IOException;
     const-string v3, "SettingsBackupAgent"
 
@@ -1613,14 +1660,14 @@
     .parameter "contentUri"
 
     .prologue
-    .line 385
+    .line 384
     invoke-virtual {p1}, Landroid/app/backup/BackupDataInput;->getDataSize()I
 
     move-result v2
 
     new-array v1, v2, [B
 
-    .line 387
+    .line 386
     .local v1, settings:[B
     const/4 v2, 0x0
 
@@ -1631,20 +1678,20 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 392
+    .line 391
     array-length v2, v1
 
     invoke-direct {p0, v1, v2, p2}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreSettings([BILandroid/net/Uri;)V
 
-    .line 393
+    .line 392
     :goto_0
     return-void
 
-    .line 388
+    .line 387
     :catch_0
     move-exception v0
 
-    .line 389
+    .line 388
     .local v0, ioe:Ljava/io/IOException;
     const-string v2, "SettingsBackupAgent"
 
@@ -1662,12 +1709,12 @@
     .parameter "contentUri"
 
     .prologue
-    .line 396
+    .line 395
     sget-boolean v14, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG:Z
 
     if-eqz v14, :cond_0
 
-    .line 397
+    .line 396
     const-string v14, "SettingsBackupAgent"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -1692,11 +1739,11 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
+    .line 400
     :cond_0
     const/4 v13, 0x0
 
-    .line 402
+    .line 401
     .local v13, whitelist:[Ljava/lang/String;
     sget-object v14, Landroid/provider/Settings$Secure;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1708,7 +1755,7 @@
 
     if-eqz v14, :cond_3
 
-    .line 403
+    .line 402
     sget-object v14, Lcom/android/providers/settings/util/HtcDatabaseTable;->SECURE:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
     sget-object v15, Landroid/provider/Settings$Secure;->SETTINGS_TO_BACKUP:[Ljava/lang/String;
@@ -1717,17 +1764,17 @@
 
     move-result-object v13
 
-    .line 415
+    .line 414
     :goto_0
     const/4 v9, 0x0
 
-    .line 416
+    .line 415
     .local v9, pos:I
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 417
+    .line 416
     .local v2, cachedEntries:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v3, Landroid/content/ContentValues;
 
@@ -1735,17 +1782,17 @@
 
     invoke-direct {v3, v14}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 418
+    .line 417
     .local v3, contentValues:Landroid/content/ContentValues;
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/providers/settings/SettingsBackupAgent;->mSettingsHelper:Lcom/android/providers/settings/SettingsHelper;
 
-    .line 420
+    .line 419
     .local v10, settingsHelper:Lcom/android/providers/settings/SettingsHelper;
     array-length v12, v13
 
-    .line 421
+    .line 420
     .local v12, whiteListSize:I
     const/4 v6, 0x0
 
@@ -1753,10 +1800,10 @@
     :goto_1
     if-ge v6, v12, :cond_a
 
-    .line 422
+    .line 421
     aget-object v7, v13, v6
 
-    .line 423
+    .line 422
     .local v7, key:Ljava/lang/String;
     invoke-interface {v2, v7}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1764,17 +1811,17 @@
 
     check-cast v11, Ljava/lang/String;
 
-    .line 426
+    .line 425
     .local v11, value:Ljava/lang/String;
     if-nez v11, :cond_1
 
-    .line 427
+    .line 426
     :goto_2
     move/from16 v0, p2
 
     if-ge v9, v0, :cond_1
 
-    .line 428
+    .line 427
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -1783,11 +1830,11 @@
 
     move-result v8
 
-    .line 429
+    .line 428
     .local v8, length:I
     add-int/lit8 v9, v9, 0x4
 
-    .line 430
+    .line 429
     if-lez v8, :cond_5
 
     new-instance v4, Ljava/lang/String;
@@ -1796,12 +1843,12 @@
 
     invoke-direct {v4, v0, v9, v8}, Ljava/lang/String;-><init>([BII)V
 
-    .line 431
+    .line 430
     .local v4, dataKey:Ljava/lang/String;
     :goto_3
     add-int/2addr v9, v8
 
-    .line 432
+    .line 431
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -1810,10 +1857,10 @@
 
     move-result v8
 
-    .line 433
+    .line 432
     add-int/lit8 v9, v9, 0x4
 
-    .line 434
+    .line 433
     if-lez v8, :cond_6
 
     new-instance v5, Ljava/lang/String;
@@ -1822,34 +1869,34 @@
 
     invoke-direct {v5, v0, v9, v8}, Ljava/lang/String;-><init>([BII)V
 
-    .line 435
+    .line 434
     .local v5, dataValue:Ljava/lang/String;
     :goto_4
     add-int/2addr v9, v8
 
-    .line 436
+    .line 435
     invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v14
 
     if-eqz v14, :cond_7
 
-    .line 437
+    .line 436
     move-object v11, v5
 
-    .line 444
+    .line 443
     .end local v4           #dataKey:Ljava/lang/String;
     .end local v5           #dataValue:Ljava/lang/String;
     .end local v8           #length:I
     :cond_1
     if-nez v11, :cond_8
 
-    .line 445
+    .line 444
     sget-boolean v14, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG:Z
 
     if-eqz v14, :cond_2
 
-    .line 446
+    .line 445
     const-string v14, "SettingsBackupAgent"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -1878,14 +1925,14 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
+    .line 420
     :cond_2
     :goto_5
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 406
+    .line 405
     .end local v2           #cachedEntries:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v3           #contentValues:Landroid/content/ContentValues;
     .end local v6           #i:I
@@ -1905,7 +1952,7 @@
 
     if-eqz v14, :cond_4
 
-    .line 407
+    .line 406
     sget-object v14, Lcom/android/providers/settings/util/HtcDatabaseTable;->SYSTEM:Lcom/android/providers/settings/util/HtcDatabaseTable;
 
     sget-object v15, Landroid/provider/Settings$System;->SETTINGS_TO_BACKUP:[Ljava/lang/String;
@@ -1916,7 +1963,7 @@
 
     goto/16 :goto_0
 
-    .line 411
+    .line 410
     :cond_4
     new-instance v14, Ljava/lang/IllegalArgumentException;
 
@@ -1944,7 +1991,7 @@
 
     throw v14
 
-    .line 430
+    .line 429
     .restart local v2       #cachedEntries:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .restart local v3       #contentValues:Landroid/content/ContentValues;
     .restart local v6       #i:I
@@ -1959,21 +2006,21 @@
 
     goto :goto_3
 
-    .line 434
+    .line 433
     .restart local v4       #dataKey:Ljava/lang/String;
     :cond_6
     const/4 v5, 0x0
 
     goto :goto_4
 
-    .line 440
+    .line 439
     .restart local v5       #dataValue:Ljava/lang/String;
     :cond_7
     invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_2
 
-    .line 451
+    .line 450
     .end local v4           #dataKey:Ljava/lang/String;
     .end local v5           #dataValue:Ljava/lang/String;
     .end local v8           #length:I
@@ -1984,20 +2031,20 @@
 
     if-eqz v14, :cond_9
 
-    .line 452
+    .line 451
     invoke-virtual {v3}, Landroid/content/ContentValues;->clear()V
 
-    .line 453
+    .line 452
     const-string v14, "name"
 
     invoke-virtual {v3, v14, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 454
+    .line 453
     const-string v14, "value"
 
     invoke-virtual {v3, v14, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 455
+    .line 454
     invoke-virtual/range {p0 .. p0}, Lcom/android/providers/settings/SettingsBackupAgent;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v14
@@ -2006,13 +2053,13 @@
 
     invoke-virtual {v14, v0, v3}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 458
+    .line 457
     :cond_9
     sget-boolean v14, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG:Z
 
     if-eqz v14, :cond_2
 
-    .line 459
+    .line 458
     const-string v14, "SettingsBackupAgent"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -2047,7 +2094,7 @@
 
     goto :goto_5
 
-    .line 462
+    .line 461
     .end local v7           #key:Ljava/lang/String;
     .end local v11           #value:Ljava/lang/String;
     :cond_a
@@ -2060,24 +2107,24 @@
     .parameter "data"
 
     .prologue
-    .line 637
+    .line 636
     invoke-virtual {p2}, Landroid/app/backup/BackupDataInput;->getDataSize()I
 
     move-result v2
 
     new-array v0, v2, [B
 
-    .line 638
+    .line 637
     .local v0, bytes:[B
     array-length v2, v0
 
     if-gtz v2, :cond_0
 
-    .line 645
+    .line 644
     :goto_0
     return-void
 
-    .line 640
+    .line 639
     :cond_0
     const/4 v2, 0x0
 
@@ -2088,7 +2135,7 @@
 
     invoke-virtual {p2, v0, v2, v3}, Landroid/app/backup/BackupDataInput;->readEntityData([BII)I
 
-    .line 641
+    .line 640
     array-length v2, v0
 
     invoke-direct {p0, p1, v0, v2}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreWifiSupplicant(Ljava/lang/String;[BI)V
@@ -2097,11 +2144,11 @@
 
     goto :goto_0
 
-    .line 642
+    .line 641
     :catch_0
     move-exception v1
 
-    .line 643
+    .line 642
     .local v1, e:Ljava/io/IOException;
     const-string v2, "SettingsBackupAgent"
 
@@ -2119,7 +2166,7 @@
     .parameter "size"
 
     .prologue
-    .line 649
+    .line 648
     :try_start_0
     new-instance v2, Ljava/io/File;
 
@@ -2127,7 +2174,7 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 650
+    .line 649
     .local v2, supplicantFile:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -2137,11 +2184,11 @@
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 651
+    .line 650
     :cond_0
     invoke-direct {p0}, Lcom/android/providers/settings/SettingsBackupAgent;->copyWifiSupplicantTemplate()V
 
-    .line 653
+    .line 652
     new-instance v1, Ljava/io/BufferedOutputStream;
 
     new-instance v3, Ljava/io/FileOutputStream;
@@ -2152,7 +2199,7 @@
 
     invoke-direct {v1, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 654
+    .line 653
     .local v1, os:Ljava/io/OutputStream;
     const-string v3, "\n"
 
@@ -2162,27 +2209,27 @@
 
     invoke-virtual {v1, v3}, Ljava/io/OutputStream;->write([B)V
 
-    .line 655
+    .line 654
     const/4 v3, 0x0
 
     invoke-virtual {v1, p2, v3, p3}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 656
+    .line 655
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 660
+    .line 659
     .end local v1           #os:Ljava/io/OutputStream;
     .end local v2           #supplicantFile:Ljava/io/File;
     :goto_0
     return-void
 
-    .line 657
+    .line 656
     :catch_0
     move-exception v0
 
-    .line 658
+    .line 657
     .local v0, ioe:Ljava/io/IOException;
     const-string v3, "SettingsBackupAgent"
 
@@ -2216,14 +2263,14 @@
     .parameter "value"
 
     .prologue
-    .line 694
+    .line 711
     const/4 v0, 0x0
 
     array-length v1, p3
 
     invoke-static {p3, v0, p1, p2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 695
+    .line 712
     array-length v0, p3
 
     add-int/2addr v0, p2
@@ -2239,32 +2286,32 @@
     .parameter "output"
 
     .prologue
-    .line 341
+    .line 340
     new-instance v0, Ljava/util/zip/CRC32;
 
     invoke-direct {v0}, Ljava/util/zip/CRC32;-><init>()V
 
-    .line 342
+    .line 341
     .local v0, checkSummer:Ljava/util/zip/CRC32;
     invoke-virtual {v0, p4}, Ljava/util/zip/CRC32;->update([B)V
 
-    .line 343
+    .line 342
     invoke-virtual {v0}, Ljava/util/zip/CRC32;->getValue()J
 
     move-result-wide v1
 
-    .line 344
+    .line 343
     .local v1, newChecksum:J
     cmp-long v3, p1, v1
 
     if-nez v3, :cond_0
 
-    .line 353
+    .line 352
     .end local p1
     :goto_0
     return-wide p1
 
-    .line 348
+    .line 347
     .restart local p1
     :cond_0
     :try_start_0
@@ -2272,7 +2319,7 @@
 
     invoke-virtual {p5, p3, v3}, Landroid/app/backup/BackupDataOutput;->writeEntityHeader(Ljava/lang/String;I)I
 
-    .line 349
+    .line 348
     array-length v3, p4
 
     invoke-virtual {p5, p4, v3}, Landroid/app/backup/BackupDataOutput;->writeEntityData([BI)I
@@ -2282,10 +2329,10 @@
     :goto_1
     move-wide p1, v1
 
-    .line 353
+    .line 352
     goto :goto_0
 
-    .line 350
+    .line 349
     :catch_0
     move-exception v3
 
@@ -2299,7 +2346,7 @@
     .parameter "value"
 
     .prologue
-    .line 686
+    .line 703
     add-int/lit8 v0, p2, 0x0
 
     shr-int/lit8 v1, p3, 0x18
@@ -2310,7 +2357,7 @@
 
     aput-byte v1, p1, v0
 
-    .line 687
+    .line 704
     add-int/lit8 v0, p2, 0x1
 
     shr-int/lit8 v1, p3, 0x10
@@ -2321,7 +2368,7 @@
 
     aput-byte v1, p1, v0
 
-    .line 688
+    .line 705
     add-int/lit8 v0, p2, 0x2
 
     shr-int/lit8 v1, p3, 0x8
@@ -2332,7 +2379,7 @@
 
     aput-byte v1, p1, v0
 
-    .line 689
+    .line 706
     add-int/lit8 v0, p2, 0x3
 
     shr-int/lit8 v1, p3, 0x0
@@ -2343,7 +2390,7 @@
 
     aput-byte v1, p1, v0
 
-    .line 690
+    .line 707
     add-int/lit8 v0, p2, 0x4
 
     return v0
@@ -2360,7 +2407,7 @@
     .end annotation
 
     .prologue
-    .line 329
+    .line 328
     new-instance v0, Ljava/io/DataOutputStream;
 
     new-instance v2, Ljava/io/FileOutputStream;
@@ -2373,13 +2420,13 @@
 
     invoke-direct {v0, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 332
+    .line 331
     .local v0, dataOutput:Ljava/io/DataOutputStream;
     const/4 v2, 0x2
 
     invoke-virtual {v0, v2}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 333
+    .line 332
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -2388,21 +2435,21 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 334
+    .line 333
     aget-wide v2, p1, v1
 
     invoke-virtual {v0, v2, v3}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    .line 333
+    .line 332
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 336
+    .line 335
     :cond_0
     invoke-virtual {v0}, Ljava/io/DataOutputStream;->close()V
 
-    .line 337
+    .line 336
     return-void
 .end method
 
@@ -2636,18 +2683,18 @@
     .end annotation
 
     .prologue
-    .line 195
+    .line 194
     invoke-direct {p0}, Lcom/android/providers/settings/SettingsBackupAgent;->getSystemSettings()[B
 
     move-result-object v7
 
-    .line 196
+    .line 195
     .local v7, systemSettingsData:[B
     invoke-direct {p0}, Lcom/android/providers/settings/SettingsBackupAgent;->getSecureSettings()[B
 
     move-result-object v5
 
-    .line 197
+    .line 196
     .local v5, secureSettingsData:[B
     iget-object v10, p0, Lcom/android/providers/settings/SettingsBackupAgent;->mSettingsHelper:Lcom/android/providers/settings/SettingsHelper;
 
@@ -2655,7 +2702,7 @@
 
     move-result-object v2
 
-    .line 198
+    .line 197
     .local v2, locale:[B
     const-string v10, "/data/misc/wifi/wpa_supplicant.conf"
 
@@ -2663,7 +2710,7 @@
 
     move-result-object v9
 
-    .line 199
+    .line 198
     .local v9, wifiSupplicantData:[B
     sget-object v10, Lcom/android/providers/settings/SettingsBackupAgent;->mWifiConfigFile:Ljava/lang/String;
 
@@ -2671,7 +2718,7 @@
 
     move-result-object v8
 
-    .line 203
+    .line 202
     .local v8, wifiConfigData:[B
     invoke-virtual {p0}, Lcom/android/providers/settings/SettingsBackupAgent;->getFilesDir()Ljava/io/File;
 
@@ -2681,7 +2728,7 @@
 
     move-result-object v4
 
-    .line 204
+    .line 203
     .local v4, root:Ljava/lang/String;
     new-instance v6, Ljava/io/File;
 
@@ -2689,26 +2736,26 @@
 
     invoke-direct {v6, v4, v10}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 206
+    .line 205
     .local v6, stage:Ljava/io/File;
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 207
+    .line 206
     .local v1, filestream:Ljava/io/FileOutputStream;
     new-instance v0, Ljava/io/BufferedOutputStream;
 
     invoke-direct {v0, v1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 208
+    .line 207
     .local v0, bufstream:Ljava/io/BufferedOutputStream;
     new-instance v3, Ljava/io/DataOutputStream;
 
     invoke-direct {v3, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 210
+    .line 209
     .local v3, out:Ljava/io/DataOutputStream;
     sget-boolean v10, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
@@ -2720,13 +2767,13 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
+    .line 210
     :cond_0
     const/4 v10, 0x1
 
     invoke-virtual {v3, v10}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 213
+    .line 212
     sget-boolean v10, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v10, :cond_1
@@ -2755,16 +2802,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
+    .line 213
     :cond_1
     array-length v10, v7
 
     invoke-virtual {v3, v10}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 215
+    .line 214
     invoke-virtual {v3, v7}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 216
+    .line 215
     sget-boolean v10, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v10, :cond_2
@@ -2793,16 +2840,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
+    .line 216
     :cond_2
     array-length v10, v5
 
     invoke-virtual {v3, v10}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 218
+    .line 217
     invoke-virtual {v3, v5}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 219
+    .line 218
     sget-boolean v10, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v10, :cond_3
@@ -2831,16 +2878,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
+    .line 219
     :cond_3
     array-length v10, v2
 
     invoke-virtual {v3, v10}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 221
+    .line 220
     invoke-virtual {v3, v2}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 222
+    .line 221
     sget-boolean v10, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v10, :cond_4
@@ -2869,16 +2916,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 222
     :cond_4
     array-length v10, v9
 
     invoke-virtual {v3, v10}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 224
+    .line 223
     invoke-virtual {v3, v9}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 225
+    .line 224
     sget-boolean v10, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v10, :cond_5
@@ -2907,30 +2954,30 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
+    .line 225
     :cond_5
     array-length v10, v8
 
     invoke-virtual {v3, v10}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 227
+    .line 226
     invoke-virtual {v3, v8}, Ljava/io/DataOutputStream;->write([B)V
 
-    .line 229
+    .line 228
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 232
+    .line 231
     invoke-virtual {p0, v6, p1}, Lcom/android/providers/settings/SettingsBackupAgent;->fullBackupFile(Ljava/io/File;Landroid/app/backup/FullBackupDataOutput;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 234
+    .line 233
     invoke-virtual {v6}, Ljava/io/File;->delete()Z
 
-    .line 236
+    .line 235
     return-void
 
-    .line 234
+    .line 233
     .end local v0           #bufstream:Ljava/io/BufferedOutputStream;
     .end local v1           #filestream:Ljava/io/FileOutputStream;
     .end local v3           #out:Ljava/io/DataOutputStream;
@@ -2995,14 +3042,9 @@
 
     invoke-virtual {v4}, Lcom/android/providers/settings/SettingsHelper;->applyAudioSettings()V
 
-    .line 168
-    iget-object v4, p0, Lcom/android/providers/settings/SettingsBackupAgent;->mSettingsHelper:Lcom/android/providers/settings/SettingsHelper;
-
-    invoke-virtual {v4}, Lcom/android/providers/settings/SettingsHelper;->restorebluetooth()V
-
     goto :goto_0
 
-    .line 169
+    .line 168
     :cond_0
     const-string v4, "secure"
 
@@ -3012,14 +3054,14 @@
 
     if-eqz v4, :cond_1
 
-    .line 170
+    .line 169
     sget-object v4, Landroid/provider/Settings$Secure;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-direct {p0, p1, v4}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreSettings(Landroid/app/backup/BackupDataInput;Landroid/net/Uri;)V
 
     goto :goto_0
 
-    .line 171
+    .line 170
     :cond_1
     const-string v4, "\uffedWIFI"
 
@@ -3029,18 +3071,18 @@
 
     if-eqz v4, :cond_4
 
-    .line 172
+    .line 171
     invoke-direct {p0, v5}, Lcom/android/providers/settings/SettingsBackupAgent;->enableWifi(Z)I
 
     move-result v2
 
-    .line 173
+    .line 172
     .local v2, retainedWifiState:I
     const-string v4, "/data/misc/wifi/wpa_supplicant.conf"
 
     invoke-direct {p0, v4, p1}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreWifiSupplicant(Ljava/lang/String;Landroid/app/backup/BackupDataInput;)V
 
-    .line 174
+    .line 173
     const-string v4, "/data/misc/wifi/wpa_supplicant.conf"
 
     const/16 v6, 0x1b0
@@ -3053,7 +3095,7 @@
 
     invoke-static {v4, v6, v7, v8}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 179
+    .line 178
     const/4 v4, 0x3
 
     if-eq v2, v4, :cond_2
@@ -3075,7 +3117,7 @@
 
     goto :goto_1
 
-    .line 181
+    .line 180
     .end local v2           #retainedWifiState:I
     :cond_4
     const-string v4, "locale"
@@ -3086,21 +3128,21 @@
 
     if-eqz v4, :cond_5
 
-    .line 182
+    .line 181
     new-array v1, v3, [B
 
-    .line 183
+    .line 182
     .local v1, localeData:[B
     invoke-virtual {p1, v1, v5, v3}, Landroid/app/backup/BackupDataInput;->readEntityData([BII)I
 
-    .line 184
+    .line 183
     iget-object v4, p0, Lcom/android/providers/settings/SettingsBackupAgent;->mSettingsHelper:Lcom/android/providers/settings/SettingsHelper;
 
     invoke-virtual {v4, v1, v3}, Lcom/android/providers/settings/SettingsHelper;->setLocaleData([BI)V
 
     goto :goto_0
 
-    .line 185
+    .line 184
     .end local v1           #localeData:[B
     :cond_5
     const-string v4, "\uffedCONFIG_WIFI"
@@ -3111,20 +3153,20 @@
 
     if-eqz v4, :cond_6
 
-    .line 186
+    .line 185
     sget-object v4, Lcom/android/providers/settings/SettingsBackupAgent;->mWifiConfigFile:Ljava/lang/String;
 
     invoke-direct {p0, v4, p1}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreFileData(Ljava/lang/String;Landroid/app/backup/BackupDataInput;)V
 
     goto :goto_0
 
-    .line 188
+    .line 187
     :cond_6
     invoke-virtual {p1}, Landroid/app/backup/BackupDataInput;->skipEntityData()V
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 191
+    .line 190
     .end local v0           #key:Ljava/lang/String;
     .end local v3           #size:I
     :cond_7
@@ -3147,7 +3189,7 @@
     .end annotation
 
     .prologue
-    .line 242
+    .line 241
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v6, :cond_0
@@ -3158,7 +3200,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
+    .line 245
     :cond_0
     new-instance v2, Ljava/io/FileInputStream;
 
@@ -3168,19 +3210,19 @@
 
     invoke-direct {v2, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 247
+    .line 246
     .local v2, instream:Ljava/io/FileInputStream;
     new-instance v1, Ljava/io/DataInputStream;
 
     invoke-direct {v1, v2}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 249
+    .line 248
     .local v1, in:Ljava/io/DataInputStream;
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v5
 
-    .line 250
+    .line 249
     .local v5, version:I
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
@@ -3208,18 +3250,18 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
+    .line 250
     :cond_1
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_e
 
-    .line 253
+    .line 252
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 254
+    .line 253
     .local v3, nBytes:I
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
@@ -3247,27 +3289,27 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
+    .line 254
     :cond_2
     new-array v0, v3, [B
 
-    .line 256
+    .line 255
     .local v0, buffer:[B
     const/4 v6, 0x0
 
     invoke-virtual {v1, v0, v6, v3}, Ljava/io/DataInputStream;->readFully([BII)V
 
-    .line 257
+    .line 256
     sget-object v6, Landroid/provider/Settings$System;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-direct {p0, v0, v3, v6}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreSettings([BILandroid/net/Uri;)V
 
-    .line 260
+    .line 259
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 261
+    .line 260
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v6, :cond_3
@@ -3294,7 +3336,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
+    .line 261
     :cond_3
     array-length v6, v0
 
@@ -3302,23 +3344,23 @@
 
     new-array v0, v3, [B
 
-    .line 263
+    .line 262
     :cond_4
     const/4 v6, 0x0
 
     invoke-virtual {v1, v0, v6, v3}, Ljava/io/DataInputStream;->readFully([BII)V
 
-    .line 264
+    .line 263
     sget-object v6, Landroid/provider/Settings$Secure;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-direct {p0, v0, v3, v6}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreSettings([BILandroid/net/Uri;)V
 
-    .line 267
+    .line 266
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 268
+    .line 267
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v6, :cond_5
@@ -3345,7 +3387,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
+    .line 268
     :cond_5
     array-length v6, v0
 
@@ -3353,23 +3395,23 @@
 
     new-array v0, v3, [B
 
-    .line 270
+    .line 269
     :cond_6
     const/4 v6, 0x0
 
     invoke-virtual {v1, v0, v6, v3}, Ljava/io/DataInputStream;->readFully([BII)V
 
-    .line 271
+    .line 270
     iget-object v6, p0, Lcom/android/providers/settings/SettingsBackupAgent;->mSettingsHelper:Lcom/android/providers/settings/SettingsHelper;
 
     invoke-virtual {v6, v0, v3}, Lcom/android/providers/settings/SettingsHelper;->setLocaleData([BI)V
 
-    .line 274
+    .line 273
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 275
+    .line 274
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v6, :cond_7
@@ -3396,7 +3438,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
+    .line 275
     :cond_7
     array-length v6, v0
 
@@ -3404,26 +3446,26 @@
 
     new-array v0, v3, [B
 
-    .line 277
+    .line 276
     :cond_8
     const/4 v6, 0x0
 
     invoke-virtual {v1, v0, v6, v3}, Ljava/io/DataInputStream;->readFully([BII)V
 
-    .line 278
+    .line 277
     const/4 v6, 0x0
 
     invoke-direct {p0, v6}, Lcom/android/providers/settings/SettingsBackupAgent;->enableWifi(Z)I
 
     move-result v4
 
-    .line 279
+    .line 278
     .local v4, retainedWifiState:I
     const-string v6, "/data/misc/wifi/wpa_supplicant.conf"
 
     invoke-direct {p0, v6, v0, v3}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreWifiSupplicant(Ljava/lang/String;[BI)V
 
-    .line 280
+    .line 279
     const-string v6, "/data/misc/wifi/wpa_supplicant.conf"
 
     const/16 v7, 0x1b0
@@ -3436,7 +3478,7 @@
 
     invoke-static {v6, v7, v8, v9}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 285
+    .line 284
     const/4 v6, 0x3
 
     if-eq v4, v6, :cond_9
@@ -3451,12 +3493,12 @@
     :goto_0
     invoke-direct {p0, v6}, Lcom/android/providers/settings/SettingsBackupAgent;->enableWifi(Z)I
 
-    .line 289
+    .line 288
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result v3
 
-    .line 290
+    .line 289
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v6, :cond_a
@@ -3483,7 +3525,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
+    .line 290
     :cond_a
     array-length v6, v0
 
@@ -3491,18 +3533,18 @@
 
     new-array v0, v3, [B
 
-    .line 292
+    .line 291
     :cond_b
     const/4 v6, 0x0
 
     invoke-virtual {v1, v0, v6, v3}, Ljava/io/DataInputStream;->readFully([BII)V
 
-    .line 293
+    .line 292
     sget-object v6, Lcom/android/providers/settings/SettingsBackupAgent;->mWifiConfigFile:Ljava/lang/String;
 
     invoke-direct {p0, v6, v0, v3}, Lcom/android/providers/settings/SettingsBackupAgent;->restoreFileData(Ljava/lang/String;[BI)V
 
-    .line 295
+    .line 294
     sget-boolean v6, Lcom/android/providers/settings/SettingsBackupAgent;->DEBUG_BACKUP:Z
 
     if-eqz v6, :cond_c
@@ -3513,24 +3555,24 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
+    .line 299
     :cond_c
     return-void
 
-    .line 285
+    .line 284
     :cond_d
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 297
+    .line 296
     .end local v0           #buffer:[B
     .end local v3           #nBytes:I
     .end local v4           #retainedWifiState:I
     :cond_e
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 298
+    .line 297
     new-instance v6, Ljava/io/IOException;
 
     const-string v7, "Invalid file schema"

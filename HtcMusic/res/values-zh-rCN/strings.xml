@@ -60,7 +60,7 @@
     <string name="htc_equalizer_title">均衡器</string>
     <string name="playlist_deleted_message">已删除播放列表</string>
     <string name="playlist_renamed_message">已重命名播放列表</string>
-    <string name="podcasts_listitem">Podcast</string>
+    <string name="podcasts_listitem">播客</string>
     <string name="htc_new_songs_playlist">添加播放列表</string>
     <string name="htc_searching">正在搜索音乐...</string>
     <string name="sdcard_busy_title">存储卡不可用</string>
@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">添加播放列表</string>
     <string name="htc_delete_playlists">删除播放列表</string>
     <string name="htc_delete_playlist">删除播放列表</string>
+    <string name="htc_delete_all_playlists">删除所有播放列表</string>
     <string name="htc_playlist_add_songs">添加歌曲</string>
     <string name="htc_playlist_del_songs">删除歌曲</string>
     <string name="htc_playlist_remove_songs">删除歌曲</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">正在缓冲...</string>
     <string name="title_send_content">正在发送内容...</string>
     <string name="no_downloaded_apps_found">未找到下载的应用程序</string>
+    <string name="music_folder_picker_dialog_msg">是否从资料夹添加音乐到播放列表? 选否则由其他方式添加</string>
 </resources>

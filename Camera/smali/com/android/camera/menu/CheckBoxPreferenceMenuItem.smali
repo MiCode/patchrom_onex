@@ -59,9 +59,9 @@
 
     .prologue
     .line 26
-    const v4, 0x7f0a005d
+    const v4, 0x7f0a0064
 
-    const v5, 0x7f0a005e
+    const v5, 0x7f0a0065
 
     move-object v0, p0
 

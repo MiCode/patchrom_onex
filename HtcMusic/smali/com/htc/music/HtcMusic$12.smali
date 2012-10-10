@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1274
+    .line 1282
     iput-object p1, p0, Lcom/htc/music/HtcMusic$12;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 
     const/4 v5, 0x0
 
-    .line 1278
+    .line 1286
     iget-object v3, p0, Lcom/htc/music/HtcMusic$12;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-virtual {v3}, Lcom/htc/music/HtcMusic;->getApplicationContext()Landroid/content/Context;
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    .line 1280
+    .line 1288
     .local v0, dlnamode:I
     if-eq v0, v6, :cond_0
 
@@ -65,14 +65,14 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 1282
+    .line 1290
     :cond_0
     iget-object v3, p0, Lcom/htc/music/HtcMusic$12;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->createVolumeDialog()V
-    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$2100(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$2200(Lcom/htc/music/HtcMusic;)V
 
-    .line 1285
+    .line 1293
     :try_start_0
     iget-object v3, p0, Lcom/htc/music/HtcMusic$12;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -98,7 +98,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 1287
+    .line 1295
     iget-object v3, p0, Lcom/htc/music/HtcMusic$12;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v3, v3, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -107,7 +107,7 @@
 
     move-result v2
 
-    .line 1288
+    .line 1296
     .local v2, volume:I
     const-string v3, "[HtcMusic]"
 
@@ -139,7 +139,7 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1289
+    .line 1297
     iget-object v3, p0, Lcom/htc/music/HtcMusic$12;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v3, v3, Lcom/htc/music/HtcMusic;->mVolumeDialog:Lcom/htc/widget/HtcMultiSeekBarDialog;
@@ -154,29 +154,29 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1301
+    .line 1309
     .end local v2           #volume:I
     :cond_1
     :goto_0
     return-void
 
-    .line 1292
+    .line 1300
     :catch_0
     move-exception v1
 
-    .line 1293
+    .line 1301
     .local v1, e1:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1296
+    .line 1304
     .end local v1           #e1:Landroid/os/RemoteException;
     :cond_2
     iget-object v3, p0, Lcom/htc/music/HtcMusic$12;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mAudioManager:Lcom/htc/wrap/android/media/HtcWrapAudioManager;
-    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$2200(Lcom/htc/music/HtcMusic;)Lcom/htc/wrap/android/media/HtcWrapAudioManager;
+    invoke-static {v3}, Lcom/htc/music/HtcMusic;->access$2300(Lcom/htc/music/HtcMusic;)Lcom/htc/wrap/android/media/HtcWrapAudioManager;
 
     move-result-object v3
 

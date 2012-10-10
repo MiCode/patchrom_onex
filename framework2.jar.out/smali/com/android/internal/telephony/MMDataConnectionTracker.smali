@@ -607,6 +607,14 @@
     return v0
 .end method
 
+.method protected restartDataStallAlarm()V
+    .locals 0
+
+    .prologue
+    .line 137
+    return-void
+.end method
+
 .method protected restartRadio()V
     .locals 0
 

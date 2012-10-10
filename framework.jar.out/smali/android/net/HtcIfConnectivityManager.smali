@@ -21,6 +21,9 @@
 .field public static final CW_RTB:Ljava/lang/String; = "cw"
 
 .field public static final DEFAULT_NETWORK_PREFERENCE:I = 0x1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final EXTRA_HTC_CURRENT_ACTIVE_NETWORK:Ljava/lang/String; = "htcCurrentActiveNetwork"
 
@@ -97,6 +100,9 @@
 .field public static final J2ME_Priority:I = 0x1f4
 
 .field public static final MAX_NETWORK_TYPE:I = 0x20
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final MMS_DNS1_Priority:I = 0x12c
 

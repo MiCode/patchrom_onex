@@ -215,7 +215,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 569
+    .line 579
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 71
@@ -312,21 +312,21 @@
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundItems:Ljava/util/ArrayList;
 
-    .line 172
+    .line 174
     new-instance v0, Landroid/os/memory/RunningState$1;
 
     invoke-direct {v0, p0}, Landroid/os/memory/RunningState$1;-><init>(Landroid/os/memory/RunningState;)V
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mHandler:Landroid/os/Handler;
 
-    .line 570
+    .line 580
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mApplicationContext:Landroid/content/Context;
 
-    .line 571
+    .line 581
     iget-object v0, p0, Landroid/os/memory/RunningState;->mApplicationContext:Landroid/content/Context;
 
     const-string v1, "activity"
@@ -339,7 +339,7 @@
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mAm:Landroid/app/ActivityManager;
 
-    .line 572
+    .line 582
     iget-object v0, p0, Landroid/os/memory/RunningState;->mApplicationContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -348,10 +348,10 @@
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 573
+    .line 583
     iput-boolean v2, p0, Landroid/os/memory/RunningState;->mResumed:Z
 
-    .line 574
+    .line 584
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "RunningState:Background"
@@ -360,12 +360,12 @@
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundThread:Landroid/os/HandlerThread;
 
-    .line 575
+    .line 585
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 576
+    .line 586
     new-instance v0, Landroid/os/memory/RunningState$BackgroundHandler;
 
     iget-object v1, p0, Landroid/os/memory/RunningState;->mBackgroundThread:Landroid/os/HandlerThread;
@@ -378,7 +378,7 @@
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
-    .line 577
+    .line 587
     return-void
 .end method
 
@@ -413,25 +413,25 @@
     .parameter "context"
 
     .prologue
-    .line 561
+    .line 571
     sget-object v1, Landroid/os/memory/RunningState;->sGlobalLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 562
+    .line 572
     :try_start_0
     sget-object v0, Landroid/os/memory/RunningState;->sInstance:Landroid/os/memory/RunningState;
 
     if-nez v0, :cond_0
 
-    .line 563
+    .line 573
     new-instance v0, Landroid/os/memory/RunningState;
 
     invoke-direct {v0, p0}, Landroid/os/memory/RunningState;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Landroid/os/memory/RunningState;->sInstance:Landroid/os/memory/RunningState;
 
-    .line 565
+    .line 575
     :cond_0
     sget-object v0, Landroid/os/memory/RunningState;->sInstance:Landroid/os/memory/RunningState;
 
@@ -439,7 +439,7 @@
 
     return-object v0
 
-    .line 566
+    .line 576
     :catchall_0
     move-exception v0
 
@@ -457,19 +457,19 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 629
+    .line 639
     iget v1, p1, Landroid/app/ActivityManager$RunningAppProcessInfo;->flags:I
 
     and-int/lit8 v1, v1, 0x1
 
     if-eqz v1, :cond_1
 
-    .line 639
+    .line 649
     :cond_0
     :goto_0
     return v0
 
-    .line 632
+    .line 642
     :cond_1
     iget v1, p1, Landroid/app/ActivityManager$RunningAppProcessInfo;->flags:I
 
@@ -493,7 +493,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 639
+    .line 649
     :cond_2
     const/4 v0, 0x0
 
@@ -507,7 +507,7 @@
     .parameter "item"
 
     .prologue
-    .line 544
+    .line 554
     if-eqz p2, :cond_2
 
     iget v2, p2, Landroid/content/pm/PackageItemInfo;->labelRes:I
@@ -518,27 +518,27 @@
 
     if-eqz v2, :cond_2
 
-    .line 546
+    .line 556
     :cond_0
     invoke-virtual {p2, p0}, Landroid/content/pm/PackageItemInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 547
+    .line 557
     .local v0, label:Ljava/lang/CharSequence;
     if-eqz v0, :cond_2
 
-    .line 557
+    .line 567
     .end local v0           #label:Ljava/lang/CharSequence;
     :cond_1
     :goto_0
     return-object v0
 
-    .line 552
+    .line 562
     :cond_2
     move-object v0, p1
 
-    .line 553
+    .line 563
     .local v0, label:Ljava/lang/String;
     const/16 v2, 0x2e
 
@@ -546,11 +546,11 @@
 
     move-result v1
 
-    .line 554
+    .line 564
     .local v1, tail:I
     if-ltz v1, :cond_1
 
-    .line 555
+    .line 565
     add-int/lit8 v2, v1, 0x1
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -568,37 +568,37 @@
     .locals 1
 
     .prologue
-    .line 643
+    .line 653
     iget-object v0, p0, Landroid/os/memory/RunningState;->mServiceProcessesByName:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 644
+    .line 654
     iget-object v0, p0, Landroid/os/memory/RunningState;->mServiceProcessesByPid:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 645
+    .line 655
     iget-object v0, p0, Landroid/os/memory/RunningState;->mInterestingProcesses:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 646
+    .line 656
     iget-object v0, p0, Landroid/os/memory/RunningState;->mRunningProcesses:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 647
+    .line 657
     iget-object v0, p0, Landroid/os/memory/RunningState;->mProcessItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 648
+    .line 658
     iget-object v0, p0, Landroid/os/memory/RunningState;->mAllProcessItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 649
+    .line 659
     return-void
 .end method
 
@@ -608,12 +608,12 @@
     .parameter "am"
 
     .prologue
-    .line 652
+    .line 662
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v40
 
-    .line 654
+    .line 664
     .local v40, pm:Landroid/content/pm/PackageManager;
     move-object/from16 v0, p0
 
@@ -629,10 +629,10 @@
 
     iput v0, v1, Landroid/os/memory/RunningState;->mSequence:I
 
-    .line 656
+    .line 666
     const/4 v15, 0x0
 
-    .line 660
+    .line 670
     .local v15, changed:Z
     const/16 v54, 0x64
 
@@ -644,7 +644,7 @@
 
     move-result-object v47
 
-    .line 662
+    .line 672
     .local v47, services:Ljava/util/List;,"Ljava/util/List<Landroid/app/ActivityManager$RunningServiceInfo;>;"
     if-eqz v47, :cond_1
 
@@ -652,7 +652,7 @@
 
     move-result v9
 
-    .line 663
+    .line 673
     .local v9, NS:I
     :goto_0
     const/16 v22, 0x0
@@ -663,7 +663,7 @@
 
     if-ge v0, v9, :cond_3
 
-    .line 664
+    .line 674
     move-object/from16 v0, v47
 
     move/from16 v1, v22
@@ -674,7 +674,7 @@
 
     check-cast v48, Landroid/app/ActivityManager$RunningServiceInfo;
 
-    .line 668
+    .line 678
     .local v48, si:Landroid/app/ActivityManager$RunningServiceInfo;
     move-object/from16 v0, v48
 
@@ -692,27 +692,27 @@
 
     if-nez v54, :cond_2
 
-    .line 669
+    .line 679
     move-object/from16 v0, v47
 
     move/from16 v1, v22
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 670
+    .line 680
     add-int/lit8 v22, v22, -0x1
 
-    .line 671
+    .line 681
     add-int/lit8 v9, v9, -0x1
 
-    .line 663
+    .line 673
     :cond_0
     :goto_2
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_1
 
-    .line 662
+    .line 672
     .end local v9           #NS:I
     .end local v22           #i:I
     .end local v48           #si:Landroid/app/ActivityManager$RunningServiceInfo;
@@ -721,7 +721,7 @@
 
     goto :goto_0
 
-    .line 676
+    .line 686
     .restart local v9       #NS:I
     .restart local v22       #i:I
     .restart local v48       #si:Landroid/app/ActivityManager$RunningServiceInfo;
@@ -736,30 +736,30 @@
 
     if-eqz v54, :cond_0
 
-    .line 678
+    .line 688
     move-object/from16 v0, v47
 
     move/from16 v1, v22
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 679
+    .line 689
     add-int/lit8 v22, v22, -0x1
 
-    .line 680
+    .line 690
     add-int/lit8 v9, v9, -0x1
 
-    .line 681
+    .line 691
     goto :goto_2
 
-    .line 687
+    .line 697
     .end local v48           #si:Landroid/app/ActivityManager$RunningServiceInfo;
     :cond_3
     invoke-virtual/range {p2 .. p2}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v42
 
-    .line 689
+    .line 699
     .local v42, processes:Ljava/util/List;,"Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v42, :cond_4
 
@@ -767,7 +767,7 @@
 
     move-result v7
 
-    .line 690
+    .line 700
     .local v7, NP:I
     :goto_3
     move-object/from16 v0, p0
@@ -778,7 +778,7 @@
 
     invoke-virtual/range {v54 .. v54}, Landroid/util/SparseArray;->clear()V
 
-    .line 691
+    .line 701
     const/16 v22, 0x0
 
     :goto_4
@@ -786,7 +786,7 @@
 
     if-ge v0, v7, :cond_5
 
-    .line 692
+    .line 702
     move-object/from16 v0, v42
 
     move/from16 v1, v22
@@ -797,7 +797,7 @@
 
     check-cast v36, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 693
+    .line 703
     .local v36, pi:Landroid/app/ActivityManager$RunningAppProcessInfo;
     move-object/from16 v0, p0
 
@@ -821,12 +821,12 @@
 
     invoke-virtual/range {v54 .. v56}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 691
+    .line 701
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_4
 
-    .line 689
+    .line 699
     .end local v7           #NP:I
     .end local v36           #pi:Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_4
@@ -834,7 +834,7 @@
 
     goto :goto_3
 
-    .line 698
+    .line 708
     .restart local v7       #NP:I
     :cond_5
     const/16 v22, 0x0
@@ -844,7 +844,7 @@
 
     if-ge v0, v9, :cond_7
 
-    .line 699
+    .line 709
     move-object/from16 v0, v47
 
     move/from16 v1, v22
@@ -855,7 +855,7 @@
 
     check-cast v48, Landroid/app/ActivityManager$RunningServiceInfo;
 
-    .line 700
+    .line 710
     .restart local v48       #si:Landroid/app/ActivityManager$RunningServiceInfo;
     move-object/from16 v0, v48
 
@@ -877,7 +877,7 @@
 
     if-lez v54, :cond_6
 
-    .line 701
+    .line 711
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mTmpAppProcesses:Landroid/util/SparseArray;
@@ -896,18 +896,18 @@
 
     check-cast v10, Landroid/os/memory/RunningState$AppProcessInfo;
 
-    .line 702
+    .line 712
     .local v10, ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     if-eqz v10, :cond_6
 
-    .line 703
+    .line 713
     const/16 v54, 0x1
 
     move/from16 v0, v54
 
     iput-boolean v0, v10, Landroid/os/memory/RunningState$AppProcessInfo;->hasServices:Z
 
-    .line 704
+    .line 714
     move-object/from16 v0, v48
 
     iget-boolean v0, v0, Landroid/app/ActivityManager$RunningServiceInfo;->foreground:Z
@@ -916,21 +916,21 @@
 
     if-eqz v54, :cond_6
 
-    .line 705
+    .line 715
     const/16 v54, 0x1
 
     move/from16 v0, v54
 
     iput-boolean v0, v10, Landroid/os/memory/RunningState$AppProcessInfo;->hasForegroundServices:Z
 
-    .line 698
+    .line 708
     .end local v10           #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     :cond_6
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_5
 
-    .line 712
+    .line 722
     .end local v48           #si:Landroid/app/ActivityManager$RunningServiceInfo;
     :cond_7
     const/16 v22, 0x0
@@ -940,7 +940,7 @@
 
     if-ge v0, v9, :cond_13
 
-    .line 713
+    .line 723
     move-object/from16 v0, v47
 
     move/from16 v1, v22
@@ -951,7 +951,7 @@
 
     check-cast v48, Landroid/app/ActivityManager$RunningServiceInfo;
 
-    .line 720
+    .line 730
     .restart local v48       #si:Landroid/app/ActivityManager$RunningServiceInfo;
     move-object/from16 v0, v48
 
@@ -973,7 +973,7 @@
 
     if-lez v54, :cond_b
 
-    .line 721
+    .line 731
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mTmpAppProcesses:Landroid/util/SparseArray;
@@ -992,7 +992,7 @@
 
     check-cast v10, Landroid/os/memory/RunningState$AppProcessInfo;
 
-    .line 722
+    .line 732
     .restart local v10       #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     if-eqz v10, :cond_b
 
@@ -1002,7 +1002,7 @@
 
     if-nez v54, :cond_b
 
-    .line 728
+    .line 738
     iget-object v0, v10, Landroid/os/memory/RunningState$AppProcessInfo;->info:Landroid/app/ActivityManager$RunningAppProcessInfo;
 
     move-object/from16 v54, v0
@@ -1021,10 +1021,10 @@
 
     if-ge v0, v1, :cond_b
 
-    .line 732
+    .line 742
     const/16 v50, 0x0
 
-    .line 733
+    .line 743
     .local v50, skip:Z
     move-object/from16 v0, p0
 
@@ -1049,12 +1049,12 @@
     .end local v10           #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     check-cast v10, Landroid/os/memory/RunningState$AppProcessInfo;
 
-    .line 734
+    .line 744
     .restart local v10       #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     :goto_7
     if-eqz v10, :cond_9
 
-    .line 735
+    .line 745
     iget-boolean v0, v10, Landroid/os/memory/RunningState$AppProcessInfo;->hasServices:Z
 
     move/from16 v54, v0
@@ -1075,15 +1075,15 @@
 
     if-eqz v54, :cond_a
 
-    .line 736
+    .line 746
     :cond_8
     const/16 v50, 0x1
 
-    .line 741
+    .line 751
     :cond_9
     if-eqz v50, :cond_b
 
-    .line 712
+    .line 722
     .end local v10           #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     .end local v50           #skip:Z
     :goto_8
@@ -1091,7 +1091,7 @@
 
     goto/16 :goto_6
 
-    .line 739
+    .line 749
     .restart local v10       #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     .restart local v50       #skip:Z
     :cond_a
@@ -1121,7 +1121,7 @@
     .restart local v10       #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     goto :goto_7
 
-    .line 748
+    .line 758
     .end local v10           #ainfo:Landroid/os/memory/RunningState$AppProcessInfo;
     .end local v50           #skip:Z
     :cond_b
@@ -1143,17 +1143,17 @@
 
     check-cast v43, Ljava/util/HashMap;
 
-    .line 749
+    .line 759
     .local v43, procs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/os/memory/RunningState$ProcessItem;>;"
     if-nez v43, :cond_c
 
-    .line 750
+    .line 760
     new-instance v43, Ljava/util/HashMap;
 
     .end local v43           #procs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/os/memory/RunningState$ProcessItem;>;"
     invoke-direct/range {v43 .. v43}, Ljava/util/HashMap;-><init>()V
 
-    .line 751
+    .line 761
     .restart local v43       #procs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/os/memory/RunningState$ProcessItem;>;"
     move-object/from16 v0, p0
 
@@ -1175,7 +1175,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 753
+    .line 763
     :cond_c
     move-object/from16 v0, v48
 
@@ -1193,14 +1193,14 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 754
+    .line 764
     .local v41, proc:Landroid/os/memory/RunningState$ProcessItem;
     if-nez v41, :cond_d
 
-    .line 755
+    .line 765
     const/4 v15, 0x1
 
-    .line 756
+    .line 766
     new-instance v41, Landroid/os/memory/RunningState$ProcessItem;
 
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
@@ -1226,7 +1226,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/os/memory/RunningState$ProcessItem;-><init>(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 757
+    .line 767
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v48
 
@@ -1242,7 +1242,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 760
+    .line 770
     :cond_d
     move-object/from16 v0, v41
 
@@ -1262,7 +1262,7 @@
 
     if-eq v0, v1, :cond_11
 
-    .line 761
+    .line 771
     move-object/from16 v0, v48
 
     iget-wide v0, v0, Landroid/app/ActivityManager$RunningServiceInfo;->restarting:J
@@ -1281,7 +1281,7 @@
 
     move/from16 v37, v0
 
-    .line 762
+    .line 772
     .local v37, pid:I
     :goto_9
     move-object/from16 v0, v41
@@ -1296,10 +1296,10 @@
 
     if-eq v0, v1, :cond_10
 
-    .line 763
+    .line 773
     const/4 v15, 0x1
 
-    .line 764
+    .line 774
     move-object/from16 v0, v41
 
     iget v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mPid:I
@@ -1312,7 +1312,7 @@
 
     if-eq v0, v1, :cond_10
 
-    .line 765
+    .line 775
     move-object/from16 v0, v41
 
     iget v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mPid:I
@@ -1321,7 +1321,7 @@
 
     if-eqz v54, :cond_e
 
-    .line 766
+    .line 776
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mServiceProcessesByPid:Landroid/util/SparseArray;
@@ -1336,11 +1336,11 @@
 
     invoke-virtual/range {v54 .. v55}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 768
+    .line 778
     :cond_e
     if-eqz v37, :cond_f
 
-    .line 769
+    .line 779
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mServiceProcessesByPid:Landroid/util/SparseArray;
@@ -1355,7 +1355,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 771
+    .line 781
     :cond_f
     move/from16 v0, v37
 
@@ -1363,7 +1363,7 @@
 
     iput v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mPid:I
 
-    .line 774
+    .line 784
     :cond_10
     move-object/from16 v0, v41
 
@@ -1373,7 +1373,7 @@
 
     invoke-virtual/range {v54 .. v54}, Landroid/util/SparseArray;->clear()V
 
-    .line 775
+    .line 785
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/os/memory/RunningState;->mSequence:I
@@ -1386,7 +1386,7 @@
 
     iput v0, v1, Landroid/os/memory/RunningState$BaseItem;->mCurSeq:I
 
-    .line 777
+    .line 787
     .end local v37           #pid:I
     :cond_11
     move-object/from16 v0, v41
@@ -1403,13 +1403,13 @@
 
     goto/16 :goto_8
 
-    .line 761
+    .line 771
     :cond_12
     const/16 v37, 0x0
 
     goto :goto_9
 
-    .line 782
+    .line 792
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     .end local v43           #procs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/os/memory/RunningState$ProcessItem;>;"
     .end local v48           #si:Landroid/app/ActivityManager$RunningServiceInfo;
@@ -1421,7 +1421,7 @@
 
     if-ge v0, v7, :cond_18
 
-    .line 783
+    .line 793
     move-object/from16 v0, v42
 
     move/from16 v1, v22
@@ -1432,7 +1432,7 @@
 
     check-cast v36, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 784
+    .line 794
     .restart local v36       #pi:Landroid/app/ActivityManager$RunningAppProcessInfo;
     move-object/from16 v0, p0
 
@@ -1452,11 +1452,11 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 785
+    .line 795
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     if-nez v41, :cond_15
 
-    .line 789
+    .line 799
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mRunningProcesses:Landroid/util/SparseArray;
@@ -1476,14 +1476,14 @@
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 790
+    .line 800
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     if-nez v41, :cond_14
 
-    .line 791
+    .line 801
     const/4 v15, 0x1
 
-    .line 792
+    .line 802
     new-instance v41, Landroid/os/memory/RunningState$ProcessItem;
 
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
@@ -1509,7 +1509,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Landroid/os/memory/RunningState$ProcessItem;-><init>(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 793
+    .line 803
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v36
 
@@ -1523,7 +1523,7 @@
 
     iput v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mPid:I
 
-    .line 794
+    .line 804
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mRunningProcesses:Landroid/util/SparseArray;
@@ -1544,7 +1544,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 796
+    .line 806
     :cond_14
     move-object/from16 v0, v41
 
@@ -1554,7 +1554,7 @@
 
     invoke-virtual/range {v54 .. v54}, Landroid/util/SparseArray;->clear()V
 
-    .line 799
+    .line 809
     :cond_15
     move-object/from16 v0, p0
 
@@ -1566,7 +1566,7 @@
 
     if-eqz v54, :cond_17
 
-    .line 800
+    .line 810
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mInterestingProcesses:Ljava/util/ArrayList;
@@ -1583,10 +1583,10 @@
 
     if-nez v54, :cond_16
 
-    .line 801
+    .line 811
     const/4 v15, 0x1
 
-    .line 802
+    .line 812
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mInterestingProcesses:Ljava/util/ArrayList;
@@ -1599,7 +1599,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 804
+    .line 814
     :cond_16
     move-object/from16 v0, p0
 
@@ -1613,7 +1613,7 @@
 
     iput v0, v1, Landroid/os/memory/RunningState$BaseItem;->mCurSeq:I
 
-    .line 805
+    .line 815
     const/16 v54, 0x1
 
     move/from16 v0, v54
@@ -1622,14 +1622,14 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mInteresting:Z
 
-    .line 806
+    .line 816
     move-object/from16 v0, v41
 
     move-object/from16 v1, v40
 
     invoke-virtual {v0, v1}, Landroid/os/memory/RunningState$ProcessItem;->ensureLabel(Landroid/content/pm/PackageManager;)V
 
-    .line 811
+    .line 821
     :goto_b
     move-object/from16 v0, p0
 
@@ -1643,19 +1643,19 @@
 
     iput v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mRunningSeq:I
 
-    .line 812
+    .line 822
     move-object/from16 v0, v36
 
     move-object/from16 v1, v41
 
     iput-object v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mRunningProcessInfo:Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 782
+    .line 792
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_a
 
-    .line 808
+    .line 818
     :cond_17
     const/16 v54, 0x0
 
@@ -1667,7 +1667,7 @@
 
     goto :goto_b
 
-    .line 817
+    .line 827
     .end local v36           #pi:Landroid/app/ActivityManager$RunningAppProcessInfo;
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     :cond_18
@@ -1681,14 +1681,14 @@
 
     move-result v8
 
-    .line 818
+    .line 828
     .local v8, NRP:I
     add-int/lit8 v22, v8, -0x1
 
     :goto_c
     if-ltz v22, :cond_1d
 
-    .line 819
+    .line 829
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mRunningProcesses:Landroid/util/SparseArray;
@@ -1705,7 +1705,7 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 820
+    .line 830
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v41
 
@@ -1725,7 +1725,7 @@
 
     if-ne v0, v1, :cond_1c
 
-    .line 821
+    .line 831
     move-object/from16 v0, v41
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mRunningProcessInfo:Landroid/app/ActivityManager$RunningAppProcessInfo;
@@ -1738,11 +1738,11 @@
 
     move/from16 v17, v0
 
-    .line 822
+    .line 832
     .local v17, clientPid:I
     if-eqz v17, :cond_1b
 
-    .line 823
+    .line 833
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mServiceProcessesByPid:Landroid/util/SparseArray;
@@ -1759,11 +1759,11 @@
 
     check-cast v16, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 824
+    .line 834
     .local v16, client:Landroid/os/memory/RunningState$ProcessItem;
     if-nez v16, :cond_19
 
-    .line 825
+    .line 835
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mRunningProcesses:Landroid/util/SparseArray;
@@ -1781,12 +1781,12 @@
     .end local v16           #client:Landroid/os/memory/RunningState$ProcessItem;
     check-cast v16, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 827
+    .line 837
     .restart local v16       #client:Landroid/os/memory/RunningState$ProcessItem;
     :cond_19
     if-eqz v16, :cond_1a
 
-    .line 828
+    .line 838
     move-object/from16 v0, v16
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mDependentProcesses:Landroid/util/SparseArray;
@@ -1807,7 +1807,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 818
+    .line 828
     .end local v16           #client:Landroid/os/memory/RunningState$ProcessItem;
     .end local v17           #clientPid:I
     :cond_1a
@@ -1816,7 +1816,7 @@
 
     goto :goto_c
 
-    .line 834
+    .line 844
     .restart local v17       #clientPid:I
     :cond_1b
     const/16 v54, 0x0
@@ -1829,12 +1829,12 @@
 
     goto :goto_d
 
-    .line 837
+    .line 847
     .end local v17           #clientPid:I
     :cond_1c
     const/4 v15, 0x1
 
-    .line 838
+    .line 848
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mRunningProcesses:Landroid/util/SparseArray;
@@ -1859,7 +1859,7 @@
 
     goto :goto_d
 
-    .line 843
+    .line 853
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     :cond_1d
     move-object/from16 v0, p0
@@ -1872,7 +1872,7 @@
 
     move-result v6
 
-    .line 844
+    .line 854
     .local v6, NHP:I
     const/16 v22, 0x0
 
@@ -1881,7 +1881,7 @@
 
     if-ge v0, v6, :cond_20
 
-    .line 845
+    .line 855
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mInterestingProcesses:Ljava/util/ArrayList;
@@ -1898,7 +1898,7 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 846
+    .line 856
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v41
 
@@ -1926,11 +1926,11 @@
 
     if-nez v54, :cond_1f
 
-    .line 847
+    .line 857
     :cond_1e
     const/4 v15, 0x1
 
-    .line 848
+    .line 858
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mInterestingProcesses:Ljava/util/ArrayList;
@@ -1943,19 +1943,19 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 849
+    .line 859
     add-int/lit8 v22, v22, -0x1
 
-    .line 850
+    .line 860
     add-int/lit8 v6, v6, -0x1
 
-    .line 844
+    .line 854
     :cond_1f
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_e
 
-    .line 857
+    .line 867
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     :cond_20
     move-object/from16 v0, p0
@@ -1968,7 +1968,7 @@
 
     move-result v5
 
-    .line 858
+    .line 868
     .local v5, NAP:I
     const/16 v22, 0x0
 
@@ -1977,7 +1977,7 @@
 
     if-ge v0, v5, :cond_22
 
-    .line 859
+    .line 869
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mServiceProcessesByPid:Landroid/util/SparseArray;
@@ -1994,7 +1994,7 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 860
+    .line 870
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v41
 
@@ -2014,7 +2014,7 @@
 
     if-ne v0, v1, :cond_21
 
-    .line 861
+    .line 871
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/os/memory/RunningState;->mSequence:I
@@ -2035,18 +2035,18 @@
 
     or-int v15, v15, v54
 
-    .line 858
+    .line 868
     :cond_21
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_f
 
-    .line 866
+    .line 876
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     :cond_22
     const/16 v53, 0x0
 
-    .line 867
+    .line 877
     .local v53, uidToDelete:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/16 v22, 0x0
 
@@ -2067,7 +2067,7 @@
 
     if-ge v0, v1, :cond_2a
 
-    .line 868
+    .line 878
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mServiceProcessesByName:Landroid/util/SparseArray;
@@ -2084,7 +2084,7 @@
 
     check-cast v43, Ljava/util/HashMap;
 
-    .line 869
+    .line 879
     .restart local v43       #procs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/os/memory/RunningState$ProcessItem;>;"
     invoke-virtual/range {v43 .. v43}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -2094,7 +2094,7 @@
 
     move-result-object v39
 
-    .line 870
+    .line 880
     .local v39, pit:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/os/memory/RunningState$ProcessItem;>;"
     :cond_23
     :goto_11
@@ -2104,14 +2104,14 @@
 
     if-eqz v54, :cond_29
 
-    .line 871
+    .line 881
     invoke-interface/range {v39 .. v39}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v36
 
     check-cast v36, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 872
+    .line 882
     .local v36, pi:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v36
 
@@ -2131,14 +2131,14 @@
 
     if-ne v0, v1, :cond_26
 
-    .line 873
+    .line 883
     move-object/from16 v0, v36
 
     move-object/from16 v1, v40
 
     invoke-virtual {v0, v1}, Landroid/os/memory/RunningState$ProcessItem;->ensureLabel(Landroid/content/pm/PackageManager;)V
 
-    .line 874
+    .line 884
     move-object/from16 v0, v36
 
     iget v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mPid:I
@@ -2147,7 +2147,7 @@
 
     if-nez v54, :cond_24
 
-    .line 877
+    .line 887
     move-object/from16 v0, v36
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mDependentProcesses:Landroid/util/SparseArray;
@@ -2156,7 +2156,7 @@
 
     invoke-virtual/range {v54 .. v54}, Landroid/util/SparseArray;->clear()V
 
-    .line 893
+    .line 903
     :cond_24
     move-object/from16 v0, v36
 
@@ -2172,7 +2172,7 @@
 
     move-result-object v49
 
-    .line 894
+    .line 904
     .local v49, sit:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/os/memory/RunningState$ServiceItem;>;"
     :cond_25
     :goto_12
@@ -2182,14 +2182,14 @@
 
     if-eqz v54, :cond_23
 
-    .line 895
+    .line 905
     invoke-interface/range {v49 .. v49}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v48
 
     check-cast v48, Landroid/os/memory/RunningState$ServiceItem;
 
-    .line 896
+    .line 906
     .local v48, si:Landroid/os/memory/RunningState$ServiceItem;
     move-object/from16 v0, v48
 
@@ -2209,40 +2209,40 @@
 
     if-eq v0, v1, :cond_25
 
-    .line 897
+    .line 907
     const/4 v15, 0x1
 
-    .line 898
+    .line 908
     invoke-interface/range {v49 .. v49}, Ljava/util/Iterator;->remove()V
 
     goto :goto_12
 
-    .line 880
+    .line 890
     .end local v48           #si:Landroid/os/memory/RunningState$ServiceItem;
     .end local v49           #sit:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/os/memory/RunningState$ServiceItem;>;"
     :cond_26
     const/4 v15, 0x1
 
-    .line 881
+    .line 891
     invoke-interface/range {v39 .. v39}, Ljava/util/Iterator;->remove()V
 
-    .line 882
+    .line 892
     invoke-virtual/range {v43 .. v43}, Ljava/util/HashMap;->size()I
 
     move-result v54
 
     if-nez v54, :cond_28
 
-    .line 883
+    .line 893
     if-nez v53, :cond_27
 
-    .line 884
+    .line 894
     new-instance v53, Ljava/util/ArrayList;
 
     .end local v53           #uidToDelete:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-direct/range {v53 .. v53}, Ljava/util/ArrayList;-><init>()V
 
-    .line 886
+    .line 896
     .restart local v53       #uidToDelete:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :cond_27
     move-object/from16 v0, p0
@@ -2265,7 +2265,7 @@
 
     invoke-virtual/range {v53 .. v54}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 888
+    .line 898
     :cond_28
     move-object/from16 v0, v36
 
@@ -2275,7 +2275,7 @@
 
     if-eqz v54, :cond_23
 
-    .line 889
+    .line 899
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mServiceProcessesByPid:Landroid/util/SparseArray;
@@ -2292,20 +2292,20 @@
 
     goto/16 :goto_11
 
-    .line 867
+    .line 877
     .end local v36           #pi:Landroid/os/memory/RunningState$ProcessItem;
     :cond_29
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_10
 
-    .line 904
+    .line 914
     .end local v39           #pit:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/os/memory/RunningState$ProcessItem;>;"
     .end local v43           #procs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/os/memory/RunningState$ProcessItem;>;"
     :cond_2a
     if-eqz v53, :cond_2b
 
-    .line 905
+    .line 915
     const/16 v22, 0x0
 
     :goto_13
@@ -2319,7 +2319,7 @@
 
     if-ge v0, v1, :cond_2b
 
-    .line 906
+    .line 916
     move-object/from16 v0, v53
 
     move/from16 v1, v22
@@ -2334,7 +2334,7 @@
 
     move-result v52
 
-    .line 907
+    .line 917
     .local v52, uid:I
     move-object/from16 v0, p0
 
@@ -2348,22 +2348,22 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 905
+    .line 915
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_13
 
-    .line 911
+    .line 921
     .end local v52           #uid:I
     :cond_2b
     if-eqz v15, :cond_3c
 
-    .line 913
+    .line 923
     new-instance v51, Ljava/util/ArrayList;
 
     invoke-direct/range {v51 .. v51}, Ljava/util/ArrayList;-><init>()V
 
-    .line 914
+    .line 924
     .local v51, sortedProcesses:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$ProcessItem;>;"
     const/16 v22, 0x0
 
@@ -2384,7 +2384,7 @@
 
     if-ge v0, v1, :cond_30
 
-    .line 915
+    .line 925
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mServiceProcessesByName:Landroid/util/SparseArray;
@@ -2422,7 +2422,7 @@
 
     check-cast v36, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 916
+    .line 926
     .restart local v36       #pi:Landroid/os/memory/RunningState$ProcessItem;
     const/16 v54, 0x0
 
@@ -2432,7 +2432,7 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mIsSystem:Z
 
-    .line 917
+    .line 927
     const/16 v54, 0x1
 
     move/from16 v0, v54
@@ -2441,7 +2441,7 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mIsStarted:Z
 
-    .line 918
+    .line 928
     const-wide v54, 0x7fffffffffffffffL
 
     move-wide/from16 v0, v54
@@ -2450,7 +2450,7 @@
 
     iput-wide v0, v2, Landroid/os/memory/RunningState$ProcessItem;->mActiveSince:J
 
-    .line 919
+    .line 929
     move-object/from16 v0, v36
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mServices:Ljava/util/HashMap;
@@ -2480,7 +2480,7 @@
 
     check-cast v48, Landroid/os/memory/RunningState$ServiceItem;
 
-    .line 920
+    .line 930
     .restart local v48       #si:Landroid/os/memory/RunningState$ServiceItem;
     move-object/from16 v0, v48
 
@@ -2512,7 +2512,7 @@
 
     if-eqz v54, :cond_2d
 
-    .line 923
+    .line 933
     const/16 v54, 0x1
 
     move/from16 v0, v54
@@ -2521,7 +2521,7 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mIsSystem:Z
 
-    .line 925
+    .line 935
     :cond_2d
     move-object/from16 v0, v48
 
@@ -2545,7 +2545,7 @@
 
     if-eqz v54, :cond_2c
 
-    .line 927
+    .line 937
     const/16 v54, 0x0
 
     move/from16 v0, v54
@@ -2554,7 +2554,7 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mIsStarted:Z
 
-    .line 928
+    .line 938
     move-object/from16 v0, v36
 
     iget-wide v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mActiveSince:J
@@ -2577,7 +2577,7 @@
 
     if-lez v54, :cond_2c
 
-    .line 929
+    .line 939
     move-object/from16 v0, v48
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ServiceItem;->mRunningService:Landroid/app/ActivityManager$RunningServiceInfo;
@@ -2598,7 +2598,7 @@
 
     goto :goto_16
 
-    .line 933
+    .line 943
     .end local v48           #si:Landroid/os/memory/RunningState$ServiceItem;
     :cond_2e
     move-object/from16 v0, v51
@@ -2609,7 +2609,7 @@
 
     goto/16 :goto_15
 
-    .line 914
+    .line 924
     .end local v24           #i$:Ljava/util/Iterator;
     .end local v36           #pi:Landroid/os/memory/RunningState$ProcessItem;
     :cond_2f
@@ -2617,7 +2617,7 @@
 
     goto/16 :goto_14
 
-    .line 937
+    .line 947
     :cond_30
     move-object/from16 v0, p0
 
@@ -2631,18 +2631,18 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 939
+    .line 949
     new-instance v30, Ljava/util/ArrayList;
 
     invoke-direct/range {v30 .. v30}, Ljava/util/ArrayList;-><init>()V
 
-    .line 940
+    .line 950
     .local v30, newItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$BaseItem;>;"
     new-instance v31, Ljava/util/ArrayList;
 
     invoke-direct/range {v31 .. v31}, Ljava/util/ArrayList;-><init>()V
 
-    .line 941
+    .line 951
     .local v31, newMergedItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     move-object/from16 v0, p0
 
@@ -2652,7 +2652,7 @@
 
     invoke-virtual/range {v54 .. v54}, Ljava/util/ArrayList;->clear()V
 
-    .line 942
+    .line 952
     const/16 v22, 0x0
 
     :goto_17
@@ -2666,7 +2666,7 @@
 
     if-ge v0, v1, :cond_38
 
-    .line 943
+    .line 953
     move-object/from16 v0, v51
 
     move/from16 v1, v22
@@ -2677,7 +2677,7 @@
 
     check-cast v36, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 944
+    .line 954
     .restart local v36       #pi:Landroid/os/memory/RunningState$ProcessItem;
     const/16 v54, 0x0
 
@@ -2687,7 +2687,7 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState$BaseItem;->mNeedDivider:Z
 
-    .line 946
+    .line 956
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mProcessItems:Ljava/util/ArrayList;
@@ -2698,7 +2698,7 @@
 
     move-result v18
 
-    .line 948
+    .line 958
     .local v18, firstProc:I
     move-object/from16 v0, p0
 
@@ -2714,14 +2714,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/memory/RunningState$ProcessItem;->addDependentProcesses(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 950
+    .line 960
     move-object/from16 v0, v30
 
     move-object/from16 v1, v36
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 951
+    .line 961
     move-object/from16 v0, v36
 
     iget v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mPid:I
@@ -2730,7 +2730,7 @@
 
     if-lez v54, :cond_31
 
-    .line 952
+    .line 962
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mProcessItems:Ljava/util/ArrayList;
@@ -2743,19 +2743,19 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 956
+    .line 966
     :cond_31
     const/16 v25, 0x0
 
-    .line 957
+    .line 967
     .local v25, mergedItem:Landroid/os/memory/RunningState$MergedItem;
     const/16 v21, 0x0
 
-    .line 958
+    .line 968
     .local v21, haveAllMerged:Z
     const/16 v27, 0x0
 
-    .line 959
+    .line 969
     .local v27, needDivider:Z
     move-object/from16 v0, v36
 
@@ -2785,7 +2785,7 @@
 
     check-cast v48, Landroid/os/memory/RunningState$ServiceItem;
 
-    .line 960
+    .line 970
     .restart local v48       #si:Landroid/os/memory/RunningState$ServiceItem;
     move/from16 v0, v27
 
@@ -2793,17 +2793,17 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState$BaseItem;->mNeedDivider:Z
 
-    .line 961
+    .line 971
     const/16 v27, 0x1
 
-    .line 962
+    .line 972
     move-object/from16 v0, v30
 
     move-object/from16 v1, v48
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 963
+    .line 973
     move-object/from16 v0, v48
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ServiceItem;->mMergedItem:Landroid/os/memory/RunningState$MergedItem;
@@ -2812,7 +2812,7 @@
 
     if-eqz v54, :cond_33
 
-    .line 964
+    .line 974
     if-eqz v25, :cond_32
 
     move-object/from16 v0, v48
@@ -2827,10 +2827,10 @@
 
     if-eq v0, v1, :cond_32
 
-    .line 965
+    .line 975
     const/16 v21, 0x0
 
-    .line 967
+    .line 977
     :cond_32
     move-object/from16 v0, v48
 
@@ -2840,13 +2840,13 @@
 
     goto :goto_18
 
-    .line 969
+    .line 979
     :cond_33
     const/16 v21, 0x0
 
     goto :goto_18
 
-    .line 973
+    .line 983
     .end local v48           #si:Landroid/os/memory/RunningState$ServiceItem;
     :cond_34
     if-eqz v21, :cond_35
@@ -2879,14 +2879,14 @@
 
     if-eq v0, v1, :cond_37
 
-    .line 976
+    .line 986
     :cond_35
     new-instance v25, Landroid/os/memory/RunningState$MergedItem;
 
     .end local v25           #mergedItem:Landroid/os/memory/RunningState$MergedItem;
     invoke-direct/range {v25 .. v25}, Landroid/os/memory/RunningState$MergedItem;-><init>()V
 
-    .line 977
+    .line 987
     .restart local v25       #mergedItem:Landroid/os/memory/RunningState$MergedItem;
     move-object/from16 v0, v36
 
@@ -2915,7 +2915,7 @@
 
     check-cast v48, Landroid/os/memory/RunningState$ServiceItem;
 
-    .line 978
+    .line 988
     .restart local v48       #si:Landroid/os/memory/RunningState$ServiceItem;
     move-object/from16 v0, v25
 
@@ -2929,7 +2929,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 979
+    .line 989
     move-object/from16 v0, v25
 
     move-object/from16 v1, v48
@@ -2938,7 +2938,7 @@
 
     goto :goto_19
 
-    .line 981
+    .line 991
     .end local v48           #si:Landroid/os/memory/RunningState$ServiceItem;
     :cond_36
     move-object/from16 v0, v36
@@ -2947,7 +2947,7 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState$MergedItem;->mProcess:Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 982
+    .line 992
     move-object/from16 v0, v25
 
     iget-object v0, v0, Landroid/os/memory/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
@@ -2956,7 +2956,7 @@
 
     invoke-virtual/range {v54 .. v54}, Ljava/util/ArrayList;->clear()V
 
-    .line 983
+    .line 993
     move/from16 v26, v18
 
     .local v26, mpi:I
@@ -2979,7 +2979,7 @@
 
     if-ge v0, v1, :cond_37
 
-    .line 984
+    .line 994
     move-object/from16 v0, v25
 
     iget-object v0, v0, Landroid/os/memory/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
@@ -3002,12 +3002,12 @@
 
     invoke-virtual/range {v54 .. v55}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 983
+    .line 993
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_1a
 
-    .line 988
+    .line 998
     .end local v26           #mpi:I
     :cond_37
     const/16 v54, 0x0
@@ -3020,19 +3020,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/memory/RunningState$MergedItem;->update(Landroid/content/Context;Z)Z
 
-    .line 989
+    .line 999
     move-object/from16 v0, v31
 
     move-object/from16 v1, v25
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 942
+    .line 952
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_17
 
-    .line 994
+    .line 1004
     .end local v18           #firstProc:I
     .end local v21           #haveAllMerged:Z
     .end local v23           #i$:Ljava/util/Iterator;
@@ -3050,7 +3050,7 @@
 
     move-result v6
 
-    .line 995
+    .line 1005
     const/16 v22, 0x0
 
     :goto_1b
@@ -3058,7 +3058,7 @@
 
     if-ge v0, v6, :cond_3b
 
-    .line 996
+    .line 1006
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mInterestingProcesses:Ljava/util/ArrayList;
@@ -3075,7 +3075,7 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 997
+    .line 1007
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v41
 
@@ -3097,7 +3097,7 @@
 
     if-gtz v54, :cond_3a
 
-    .line 998
+    .line 1008
     move-object/from16 v0, v41
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mMergedItem:Landroid/os/memory/RunningState$MergedItem;
@@ -3106,7 +3106,7 @@
 
     if-nez v54, :cond_39
 
-    .line 999
+    .line 1009
     new-instance v54, Landroid/os/memory/RunningState$MergedItem;
 
     invoke-direct/range {v54 .. v54}, Landroid/os/memory/RunningState$MergedItem;-><init>()V
@@ -3117,7 +3117,7 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mMergedItem:Landroid/os/memory/RunningState$MergedItem;
 
-    .line 1000
+    .line 1010
     move-object/from16 v0, v41
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mMergedItem:Landroid/os/memory/RunningState$MergedItem;
@@ -3130,7 +3130,7 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState$MergedItem;->mProcess:Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 1002
+    .line 1012
     :cond_39
     move-object/from16 v0, v41
 
@@ -3148,7 +3148,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/memory/RunningState$MergedItem;->update(Landroid/content/Context;Z)Z
 
-    .line 1003
+    .line 1013
     const/16 v54, 0x0
 
     move-object/from16 v0, v41
@@ -3165,7 +3165,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1004
+    .line 1014
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mProcessItems:Ljava/util/ArrayList;
@@ -3178,13 +3178,13 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 995
+    .line 1005
     :cond_3a
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_1b
 
-    .line 1008
+    .line 1018
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     :cond_3b
     move-object/from16 v0, p0
@@ -3195,7 +3195,7 @@
 
     monitor-enter v55
 
-    .line 1009
+    .line 1019
     :try_start_0
     move-object/from16 v0, v30
 
@@ -3203,19 +3203,19 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState;->mItems:Ljava/util/ArrayList;
 
-    .line 1010
+    .line 1020
     move-object/from16 v0, v31
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/os/memory/RunningState;->mMergedItems:Ljava/util/ArrayList;
 
-    .line 1011
+    .line 1021
     monitor-exit v55
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1016
+    .line 1026
     .end local v30           #newItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$BaseItem;>;"
     .end local v31           #newMergedItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .end local v51           #sortedProcesses:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$ProcessItem;>;"
@@ -3228,7 +3228,7 @@
 
     invoke-virtual/range {v54 .. v54}, Ljava/util/ArrayList;->clear()V
 
-    .line 1017
+    .line 1027
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mAllProcessItems:Ljava/util/ArrayList;
@@ -3243,18 +3243,18 @@
 
     invoke-virtual/range {v54 .. v55}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1018
+    .line 1028
     const/16 v32, 0x0
 
-    .line 1019
+    .line 1029
     .local v32, numBackgroundProcesses:I
     const/16 v33, 0x0
 
-    .line 1020
+    .line 1030
     .local v33, numForegroundProcesses:I
     const/16 v35, 0x0
 
-    .line 1021
+    .line 1031
     .local v35, numServiceProcesses:I
     move-object/from16 v0, p0
 
@@ -3266,7 +3266,7 @@
 
     move-result v8
 
-    .line 1022
+    .line 1032
     const/16 v22, 0x0
 
     :goto_1c
@@ -3274,7 +3274,7 @@
 
     if-ge v0, v8, :cond_40
 
-    .line 1023
+    .line 1033
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mRunningProcesses:Landroid/util/SparseArray;
@@ -3291,7 +3291,7 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 1024
+    .line 1034
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     move-object/from16 v0, v41
 
@@ -3311,7 +3311,7 @@
 
     if-eq v0, v1, :cond_3f
 
-    .line 1027
+    .line 1037
     move-object/from16 v0, v41
 
     iget-object v0, v0, Landroid/os/memory/RunningState$ProcessItem;->mRunningProcessInfo:Landroid/app/ActivityManager$RunningAppProcessInfo;
@@ -3332,10 +3332,10 @@
 
     if-lt v0, v1, :cond_3d
 
-    .line 1029
+    .line 1039
     add-int/lit8 v32, v32, 0x1
 
-    .line 1030
+    .line 1040
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mAllProcessItems:Ljava/util/ArrayList;
@@ -3348,13 +3348,13 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1022
+    .line 1032
     :goto_1d
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_1c
 
-    .line 1011
+    .line 1021
     .end local v32           #numBackgroundProcesses:I
     .end local v33           #numForegroundProcesses:I
     .end local v35           #numServiceProcesses:I
@@ -3372,7 +3372,7 @@
 
     throw v54
 
-    .line 1031
+    .line 1041
     .end local v30           #newItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$BaseItem;>;"
     .end local v31           #newMergedItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .end local v51           #sortedProcesses:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$ProcessItem;>;"
@@ -3401,10 +3401,10 @@
 
     if-gt v0, v1, :cond_3e
 
-    .line 1033
+    .line 1043
     add-int/lit8 v33, v33, 0x1
 
-    .line 1034
+    .line 1044
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mAllProcessItems:Ljava/util/ArrayList;
@@ -3419,7 +3419,7 @@
 
     goto :goto_1d
 
-    .line 1036
+    .line 1046
     :cond_3e
     const-string v54, "RunningState"
 
@@ -3467,30 +3467,30 @@
 
     goto :goto_1d
 
-    .line 1040
+    .line 1050
     :cond_3f
     add-int/lit8 v35, v35, 0x1
 
     goto :goto_1d
 
-    .line 1044
+    .line 1054
     .end local v41           #proc:Landroid/os/memory/RunningState$ProcessItem;
     :cond_40
     const-wide/16 v11, 0x0
 
-    .line 1045
+    .line 1055
     .local v11, backgroundProcessMemory:J
     const-wide/16 v19, 0x0
 
-    .line 1046
+    .line 1056
     .local v19, foregroundProcessMemory:J
     const-wide/16 v45, 0x0
 
-    .line 1047
+    .line 1057
     .local v45, serviceProcessMemory:J
     const/16 v28, 0x0
 
-    .line 1049
+    .line 1059
     .local v28, newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     :try_start_2
     move-object/from16 v0, p0
@@ -3503,7 +3503,7 @@
 
     move-result v34
 
-    .line 1050
+    .line 1060
     .local v34, numProc:I
     move/from16 v0, v34
 
@@ -3511,7 +3511,7 @@
 
     move-object/from16 v38, v0
 
-    .line 1051
+    .line 1061
     .local v38, pids:[I
     const/16 v22, 0x0
 
@@ -3522,7 +3522,7 @@
 
     if-ge v0, v1, :cond_41
 
-    .line 1052
+    .line 1062
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mAllProcessItems:Ljava/util/ArrayList;
@@ -3547,12 +3547,12 @@
 
     aput v54, v38, v22
 
-    .line 1051
+    .line 1061
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_1e
 
-    .line 1054
+    .line 1064
     :cond_41
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -3568,11 +3568,11 @@
 
     move-result-object v44
 
-    .line 1056
+    .line 1066
     .local v44, pss:[J
     const/4 v13, 0x0
 
-    .line 1057
+    .line 1067
     .local v13, bgIndex:I
     const/16 v22, 0x0
 
@@ -3594,7 +3594,7 @@
 
     if-ge v0, v1, :cond_48
 
-    .line 1058
+    .line 1068
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mAllProcessItems:Ljava/util/ArrayList;
@@ -3611,7 +3611,7 @@
 
     check-cast v41, Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 1059
+    .line 1069
     .restart local v41       #proc:Landroid/os/memory/RunningState$ProcessItem;
     aget-wide v54, v44, v22
 
@@ -3635,7 +3635,7 @@
 
     or-int v15, v15, v54
 
-    .line 1060
+    .line 1070
     move-object/from16 v0, v41
 
     iget v0, v0, Landroid/os/memory/RunningState$BaseItem;->mCurSeq:I
@@ -3654,7 +3654,7 @@
 
     if-ne v0, v1, :cond_42
 
-    .line 1061
+    .line 1071
     move-object/from16 v0, v41
 
     iget-wide v0, v0, Landroid/os/memory/RunningState$BaseItem;->mSize:J
@@ -3665,7 +3665,7 @@
 
     move-object/from16 v28, v29
 
-    .line 1057
+    .line 1067
     .end local v29           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v28       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     :goto_20
@@ -3677,7 +3677,7 @@
     .restart local v29       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     goto :goto_1f
 
-    .line 1062
+    .line 1072
     :cond_42
     move-object/from16 v0, v41
 
@@ -3699,7 +3699,7 @@
 
     if-lt v0, v1, :cond_47
 
-    .line 1064
+    .line 1074
     move-object/from16 v0, v41
 
     iget-wide v0, v0, Landroid/os/memory/RunningState$BaseItem;->mSize:J
@@ -3708,10 +3708,10 @@
 
     add-long v11, v11, v54
 
-    .line 1066
+    .line 1076
     if-eqz v29, :cond_43
 
-    .line 1067
+    .line 1077
     new-instance v25, Landroid/os/memory/RunningState$MergedItem;
 
     invoke-direct/range {v25 .. v25}, Landroid/os/memory/RunningState$MergedItem;-><init>()V
@@ -3722,7 +3722,7 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mMergedItem:Landroid/os/memory/RunningState$MergedItem;
 
-    .line 1068
+    .line 1078
     .restart local v25       #mergedItem:Landroid/os/memory/RunningState$MergedItem;
     move-object/from16 v0, v41
 
@@ -3736,7 +3736,7 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState$MergedItem;->mProcess:Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 1069
+    .line 1079
     move-object/from16 v0, v29
 
     move-object/from16 v1, v25
@@ -3747,7 +3747,7 @@
 
     move-object/from16 v28, v29
 
-    .line 1084
+    .line 1094
     .end local v29           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v28       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     :goto_21
@@ -3762,7 +3762,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/memory/RunningState$MergedItem;->update(Landroid/content/Context;Z)Z
 
-    .line 1085
+    .line 1095
     move-object/from16 v0, v25
 
     move-object/from16 v1, p1
@@ -3771,13 +3771,13 @@
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1086
+    .line 1096
     add-int/lit8 v13, v13, 0x1
 
-    .line 1087
+    .line 1097
     goto :goto_20
 
-    .line 1071
+    .line 1081
     .end local v25           #mergedItem:Landroid/os/memory/RunningState$MergedItem;
     .end local v28           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v29       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
@@ -3823,7 +3823,7 @@
 
     if-eq v0, v1, :cond_46
 
-    .line 1073
+    .line 1083
     :cond_44
     new-instance v28, Ljava/util/ArrayList;
 
@@ -3835,7 +3835,7 @@
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 1074
+    .line 1084
     .end local v29           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v28       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     const/4 v14, 0x0
@@ -3844,7 +3844,7 @@
     :goto_22
     if-ge v14, v13, :cond_45
 
-    .line 1075
+    .line 1085
     :try_start_6
     move-object/from16 v0, p0
 
@@ -3864,12 +3864,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1074
+    .line 1084
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_22
 
-    .line 1077
+    .line 1087
     :cond_45
     new-instance v25, Landroid/os/memory/RunningState$MergedItem;
 
@@ -3881,7 +3881,7 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState$ProcessItem;->mMergedItem:Landroid/os/memory/RunningState$MergedItem;
 
-    .line 1078
+    .line 1088
     .restart local v25       #mergedItem:Landroid/os/memory/RunningState$MergedItem;
     move-object/from16 v0, v41
 
@@ -3895,7 +3895,7 @@
 
     iput-object v0, v1, Landroid/os/memory/RunningState$MergedItem;->mProcess:Landroid/os/memory/RunningState$ProcessItem;
 
-    .line 1079
+    .line 1089
     move-object/from16 v0, v28
 
     move-object/from16 v1, v25
@@ -3906,7 +3906,7 @@
 
     goto :goto_21
 
-    .line 1092
+    .line 1102
     .end local v13           #bgIndex:I
     .end local v14           #bgi:I
     .end local v25           #mergedItem:Landroid/os/memory/RunningState$MergedItem;
@@ -3917,11 +3917,11 @@
     :catch_0
     move-exception v54
 
-    .line 1095
+    .line 1105
     :goto_23
     if-nez v28, :cond_49
 
-    .line 1097
+    .line 1107
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mBackgroundItems:Ljava/util/ArrayList;
@@ -3938,7 +3938,7 @@
 
     if-le v0, v1, :cond_49
 
-    .line 1098
+    .line 1108
     new-instance v28, Ljava/util/ArrayList;
 
     .end local v28           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
@@ -3948,7 +3948,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1099
+    .line 1109
     .restart local v28       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     const/4 v14, 0x0
 
@@ -3958,7 +3958,7 @@
 
     if-ge v14, v0, :cond_49
 
-    .line 1100
+    .line 1110
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mBackgroundItems:Ljava/util/ArrayList;
@@ -3977,12 +3977,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1099
+    .line 1109
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_24
 
-    .line 1081
+    .line 1091
     .end local v14           #bgi:I
     .end local v28           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v13       #bgIndex:I
@@ -4014,7 +4014,7 @@
     .restart local v28       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     goto/16 :goto_21
 
-    .line 1087
+    .line 1097
     .end local v25           #mergedItem:Landroid/os/memory/RunningState$MergedItem;
     .end local v28           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v29       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
@@ -4039,7 +4039,7 @@
 
     if-gt v0, v1, :cond_4d
 
-    .line 1089
+    .line 1099
     move-object/from16 v0, v41
 
     iget-wide v0, v0, Landroid/os/memory/RunningState$BaseItem;->mSize:J
@@ -4062,12 +4062,12 @@
     :cond_48
     move-object/from16 v28, v29
 
-    .line 1093
+    .line 1103
     .end local v29           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v28       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     goto :goto_23
 
-    .line 1105
+    .line 1115
     .end local v13           #bgIndex:I
     .end local v34           #numProc:I
     .end local v38           #pids:[I
@@ -4092,7 +4092,7 @@
 
     if-ge v0, v1, :cond_4a
 
-    .line 1106
+    .line 1116
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mMergedItems:Ljava/util/ArrayList;
@@ -4115,12 +4115,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/memory/RunningState$MergedItem;->updateSize(Landroid/content/Context;)Z
 
-    .line 1105
+    .line 1115
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_25
 
-    .line 1109
+    .line 1119
     :cond_4a
     move-object/from16 v0, p0
 
@@ -4130,7 +4130,7 @@
 
     monitor-enter v55
 
-    .line 1110
+    .line 1120
     :try_start_8
     move/from16 v0, v32
 
@@ -4138,50 +4138,50 @@
 
     iput v0, v1, Landroid/os/memory/RunningState;->mNumBackgroundProcesses:I
 
-    .line 1111
+    .line 1121
     move/from16 v0, v33
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/os/memory/RunningState;->mNumForegroundProcesses:I
 
-    .line 1112
+    .line 1122
     move/from16 v0, v35
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/os/memory/RunningState;->mNumServiceProcesses:I
 
-    .line 1113
+    .line 1123
     move-object/from16 v0, p0
 
     iput-wide v11, v0, Landroid/os/memory/RunningState;->mBackgroundProcessMemory:J
 
-    .line 1114
+    .line 1124
     move-wide/from16 v0, v19
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Landroid/os/memory/RunningState;->mForegroundProcessMemory:J
 
-    .line 1115
+    .line 1125
     move-wide/from16 v0, v45
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Landroid/os/memory/RunningState;->mServiceProcessMemory:J
 
-    .line 1116
+    .line 1126
     if-eqz v28, :cond_4b
 
-    .line 1117
+    .line 1127
     move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/os/memory/RunningState;->mBackgroundItems:Ljava/util/ArrayList;
 
-    .line 1118
+    .line 1128
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/os/memory/RunningState;->mWatchingBackgroundItems:Z
@@ -4190,10 +4190,10 @@
 
     if-eqz v54, :cond_4b
 
-    .line 1119
+    .line 1129
     const/4 v15, 0x1
 
-    .line 1122
+    .line 1132
     :cond_4b
     move-object/from16 v0, p0
 
@@ -4203,7 +4203,7 @@
 
     if-nez v54, :cond_4c
 
-    .line 1123
+    .line 1133
     const/16 v54, 0x1
 
     move/from16 v0, v54
@@ -4212,7 +4212,7 @@
 
     iput-boolean v0, v1, Landroid/os/memory/RunningState;->mHaveData:Z
 
-    .line 1124
+    .line 1134
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
@@ -4221,14 +4221,14 @@
 
     invoke-virtual/range {v54 .. v54}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1126
+    .line 1136
     :cond_4c
     monitor-exit v55
 
-    .line 1128
+    .line 1138
     return v15
 
-    .line 1126
+    .line 1136
     :catchall_1
     move-exception v54
 
@@ -4238,7 +4238,7 @@
 
     throw v54
 
-    .line 1092
+    .line 1102
     .end local v28           #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
     .restart local v13       #bgIndex:I
     .restart local v29       #newBackgroundItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/os/memory/RunningState$MergedItem;>;"
@@ -4280,12 +4280,12 @@
     .end annotation
 
     .prologue
-    .line 1150
+    .line 1160
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1151
+    .line 1161
     :try_start_0
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundItems:Ljava/util/ArrayList;
 
@@ -4293,7 +4293,7 @@
 
     return-object v0
 
-    .line 1152
+    .line 1162
     :catchall_0
     move-exception v0
 
@@ -4317,12 +4317,12 @@
     .end annotation
 
     .prologue
-    .line 1132
+    .line 1142
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1133
+    .line 1143
     :try_start_0
     iget-object v0, p0, Landroid/os/memory/RunningState;->mItems:Ljava/util/ArrayList;
 
@@ -4330,7 +4330,7 @@
 
     return-object v0
 
-    .line 1134
+    .line 1144
     :catchall_0
     move-exception v0
 
@@ -4354,12 +4354,12 @@
     .end annotation
 
     .prologue
-    .line 1144
+    .line 1154
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1145
+    .line 1155
     :try_start_0
     iget-object v0, p0, Landroid/os/memory/RunningState;->mMergedItems:Ljava/util/ArrayList;
 
@@ -4367,7 +4367,7 @@
 
     return-object v0
 
-    .line 1146
+    .line 1156
     :catchall_0
     move-exception v0
 
@@ -4382,12 +4382,12 @@
     .locals 2
 
     .prologue
-    .line 604
+    .line 614
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 605
+    .line 615
     :try_start_0
     iget-boolean v0, p0, Landroid/os/memory/RunningState;->mHaveData:Z
 
@@ -4395,7 +4395,7 @@
 
     return v0
 
-    .line 606
+    .line 616
     :catchall_0
     move-exception v0
 
@@ -4410,36 +4410,36 @@
     .locals 3
 
     .prologue
-    .line 621
+    .line 631
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 622
+    .line 632
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Landroid/os/memory/RunningState;->mResumed:Z
 
-    .line 623
+    .line 633
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/os/memory/RunningState;->mRefreshUiListener:Landroid/os/memory/RunningState$OnRefreshUiListener;
 
-    .line 624
+    .line 634
     iget-object v0, p0, Landroid/os/memory/RunningState;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x4
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 625
+    .line 635
     monitor-exit v1
 
-    .line 626
+    .line 636
     return-void
 
-    .line 625
+    .line 635
     :catchall_0
     move-exception v0
 
@@ -4455,21 +4455,21 @@
     .parameter "listener"
 
     .prologue
-    .line 580
+    .line 590
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 581
+    .line 591
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Landroid/os/memory/RunningState;->mResumed:Z
 
-    .line 582
+    .line 592
     iput-object p1, p0, Landroid/os/memory/RunningState;->mRefreshUiListener:Landroid/os/memory/RunningState$OnRefreshUiListener;
 
-    .line 583
+    .line 593
     iget-object v0, p0, Landroid/os/memory/RunningState;->mInterestingConfigChanges:Landroid/os/memory/InterestingConfigChanges;
 
     iget-object v2, p0, Landroid/os/memory/RunningState;->mApplicationContext:Landroid/content/Context;
@@ -4484,33 +4484,33 @@
 
     if-eqz v0, :cond_0
 
-    .line 584
+    .line 594
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/os/memory/RunningState;->mHaveData:Z
 
-    .line 585
+    .line 595
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/memory/RunningState$BackgroundHandler;->removeMessages(I)V
 
-    .line 586
+    .line 596
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
     const/4 v2, 0x2
 
     invoke-virtual {v0, v2}, Landroid/os/memory/RunningState$BackgroundHandler;->removeMessages(I)V
 
-    .line 587
+    .line 597
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/memory/RunningState$BackgroundHandler;->sendEmptyMessage(I)Z
 
-    .line 589
+    .line 599
     :cond_0
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
@@ -4522,14 +4522,14 @@
 
     if-nez v0, :cond_1
 
-    .line 590
+    .line 600
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
     const/4 v2, 0x2
 
     invoke-virtual {v0, v2}, Landroid/os/memory/RunningState$BackgroundHandler;->sendEmptyMessage(I)Z
 
-    .line 592
+    .line 602
     :cond_1
     iget-object v0, p0, Landroid/os/memory/RunningState;->mHandler:Landroid/os/Handler;
 
@@ -4537,13 +4537,13 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 593
+    .line 603
     monitor-exit v1
 
-    .line 594
+    .line 604
     return-void
 
-    .line 593
+    .line 603
     :catchall_0
     move-exception v0
 
@@ -4559,22 +4559,22 @@
     .parameter "watching"
 
     .prologue
-    .line 1138
+    .line 1148
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1139
+    .line 1149
     :try_start_0
     iput-boolean p1, p0, Landroid/os/memory/RunningState;->mWatchingBackgroundItems:Z
 
-    .line 1140
+    .line 1150
     monitor-exit v1
 
-    .line 1141
+    .line 1151
     return-void
 
-    .line 1140
+    .line 1150
     :catchall_0
     move-exception v0
 
@@ -4589,12 +4589,12 @@
     .locals 3
 
     .prologue
-    .line 597
+    .line 607
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 598
+    .line 608
     :try_start_0
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
@@ -4602,20 +4602,20 @@
 
     invoke-virtual {v0, v2}, Landroid/os/memory/RunningState$BackgroundHandler;->removeMessages(I)V
 
-    .line 599
+    .line 609
     iget-object v0, p0, Landroid/os/memory/RunningState;->mBackgroundHandler:Landroid/os/memory/RunningState$BackgroundHandler;
 
     const/4 v2, 0x2
 
     invoke-virtual {v0, v2}, Landroid/os/memory/RunningState$BackgroundHandler;->sendEmptyMessage(I)Z
 
-    .line 600
+    .line 610
     monitor-exit v1
 
-    .line 601
+    .line 611
     return-void
 
-    .line 600
+    .line 610
     :catchall_0
     move-exception v0
 
@@ -4630,12 +4630,12 @@
     .locals 4
 
     .prologue
-    .line 610
+    .line 620
     iget-object v1, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 611
+    .line 621
     :goto_0
     :try_start_0
     iget-boolean v0, p0, Landroid/os/memory/RunningState;->mHaveData:Z
@@ -4644,7 +4644,7 @@
 
     if-nez v0, :cond_0
 
-    .line 613
+    .line 623
     :try_start_1
     iget-object v0, p0, Landroid/os/memory/RunningState;->mLock:Ljava/lang/Object;
 
@@ -4657,21 +4657,21 @@
 
     goto :goto_0
 
-    .line 614
+    .line 624
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 617
+    .line 627
     :cond_0
     :try_start_2
     monitor-exit v1
 
-    .line 618
+    .line 628
     return-void
 
-    .line 617
+    .line 627
     :catchall_0
     move-exception v0
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 829
+    .line 885
     iput-object p1, p0, Lcom/android/server/WifiService$7;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,78 +35,38 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 2
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 832
-    iget-object v2, p0, Lcom/android/server/WifiService$7;->this$0:Lcom/android/server/WifiService;
+    .line 889
+    const-string v0, "WifiService"
+
+    const-string v1, ">>>>>>>>sky: start checkHtcCustomization<<<<<<<<"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 890
+    iget-object v0, p0, Lcom/android/server/WifiService$7;->this$0:Lcom/android/server/WifiService;
+
+    iget-object v1, p0, Lcom/android/server/WifiService$7;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/server/WifiService;->access$200(Lcom/android/server/WifiService;)Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    const-string v3, "hotspot_password"
-
-    invoke-static {v2, v3}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 833
-    .local v0, key:Ljava/lang/String;
-    if-nez v0, :cond_1
-
-    .line 834
-    const-string v2, "ss"
-
-    invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/server/WifiService;->access$200(Lcom/android/server/WifiService;)Landroid/content/Context;
 
     move-result-object v1
 
-    .line 835
-    .local v1, state:Ljava/lang/String;
-    const-string v2, "IMSI"
+    #calls: Lcom/android/server/WifiService;->checkHtcCustomization(Landroid/content/Context;)V
+    invoke-static {v0, v1}, Lcom/android/server/WifiService;->access$3000(Lcom/android/server/WifiService;Landroid/content/Context;)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 891
+    const-string v0, "WifiService"
 
-    move-result v2
+    const-string v1, ">>>>>>>>sky: end checkHtcCustomization<<<<<<<<"
 
-    if-nez v2, :cond_0
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v2, "LOADED"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 836
-    :cond_0
-    const-string v2, "WifiService"
-
-    const-string v3, "Got IccCard.INTENT_VALUE_ICC_IMSI or IccCard.INTENT_VALUE_ICC_LOADED"
-
-    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 837
-    iget-object v2, p0, Lcom/android/server/WifiService$7;->this$0:Lcom/android/server/WifiService;
-
-    #getter for: Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
-    invoke-static {v2}, Lcom/android/server/WifiService;->access$700(Lcom/android/server/WifiService;)Landroid/net/wifi/WifiStateMachine;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/net/wifi/WifiStateMachine;->checkWifiApPassword()V
-
-    .line 840
-    .end local v1           #state:Ljava/lang/String;
-    :cond_1
+    .line 892
     return-void
 .end method

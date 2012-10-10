@@ -3,7 +3,7 @@
 .source "EditableWebView.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # annotations
@@ -27,32 +27,34 @@
     .parameter
 
     .prologue
-    .line 2171
+    .line 2430
     iput-object p1, p0, Landroid/webkit/EditableWebView$EditableQuickActions$3;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onCancel(Landroid/content/DialogInterface;)V
     .locals 3
     .parameter "dialog"
-    .parameter "whichButton"
 
     .prologue
     const/4 v2, 0x1
 
-    .line 2173
+    .line 2433
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 2434
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$3;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
     iput-boolean v2, v0, Landroid/webkit/EditableWebView;->m_bRemoveSelectRangeDuringUpdateContent:Z
 
-    .line 2174
+    .line 2435
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$3;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
@@ -65,13 +67,13 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
 
-    .line 2175
+    .line 2436
     iget-object v0, p0, Landroid/webkit/EditableWebView$EditableQuickActions$3;->this$1:Landroid/webkit/EditableWebView$EditableQuickActions;
 
     iget-object v0, v0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
     invoke-virtual {v0, v2}, Landroid/webkit/EditableWebView;->onEndSelect(Z)V
 
-    .line 2176
+    .line 2437
     return-void
 .end method

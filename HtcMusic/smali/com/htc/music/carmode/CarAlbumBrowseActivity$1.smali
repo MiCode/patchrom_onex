@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 293
+    .line 310
     iput-object p1, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$1;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,17 +44,17 @@
     .parameter "container"
 
     .prologue
-    .line 298
+    .line 315
     if-nez p3, :cond_1
 
-    .line 299
+    .line 316
     iget-object v2, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$1;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     invoke-virtual {v2}, Lcom/htc/music/carmode/CarAlbumBrowseActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 300
+    .line 317
     .local v0, inflator:Landroid/view/LayoutInflater;
     const v2, 0x7f030011
 
@@ -64,7 +64,7 @@
 
     move-result-object p3
 
-    .line 301
+    .line 318
     const v2, 0x7f080046
 
     invoke-virtual {p3, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -73,26 +73,26 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 302
+    .line 319
     .local v1, textView:Landroid/widget/TextView;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 303
+    .line 320
     const/4 v2, 0x2
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 304
+    .line 321
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 305
+    .line 322
     invoke-virtual {p3, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 310
+    .line 327
     .end local v0           #inflator:Landroid/view/LayoutInflater;
     :goto_0
     iget-object v2, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$1;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
@@ -101,7 +101,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 311
+    .line 328
     iget-object v2, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$1;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     iget-object v2, v2, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
@@ -112,11 +112,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 313
+    .line 330
     :cond_0
     return-object p3
 
-    .line 307
+    .line 324
     .end local v1           #textView:Landroid/widget/TextView;
     :cond_1
     invoke-virtual {p3}, Landroid/view/View;->getTag()Ljava/lang/Object;

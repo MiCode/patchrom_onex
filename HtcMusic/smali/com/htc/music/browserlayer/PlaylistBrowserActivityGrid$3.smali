@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 460
+    .line 479
     iput-object p1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$3;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +42,11 @@
     .parameter "v"
 
     .prologue
-    .line 462
+    .line 481
     iget-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$3;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
+    invoke-virtual {v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->onSaveClick()V
 
-    .line 463
+    .line 482
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2616
+    .line 2622
     iput-object p1, p0, Lcom/htc/music/DMCMusicPlaybackService$4;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +39,17 @@
     .parameter "msg"
 
     .prologue
-    .line 2619
+    .line 2625
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2627
+    .line 2633
     :cond_0
     :goto_0
     return-void
 
-    .line 2621
+    .line 2627
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$4;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
@@ -57,13 +57,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 2622
+    .line 2628
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$4;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     #calls: Lcom/htc/music/DMCMusicPlaybackService;->enablePlaybakControl()V
     invoke-static {v0}, Lcom/htc/music/DMCMusicPlaybackService;->access$2900(Lcom/htc/music/DMCMusicPlaybackService;)V
 
-    .line 2623
+    .line 2629
     iget-object v0, p0, Lcom/htc/music/DMCMusicPlaybackService$4;->this$0:Lcom/htc/music/DMCMusicPlaybackService;
 
     const/4 v1, -0x1
@@ -73,7 +73,7 @@
 
     goto :goto_0
 
-    .line 2619
+    .line 2625
     :pswitch_data_0
     .packed-switch 0x2710
         :pswitch_0

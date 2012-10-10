@@ -175,12 +175,12 @@
     .parameter "uid"
 
     .prologue
-    .line 157
+    .line 159
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 158
+    .line 160
     .local v0, mPm:Landroid/content/pm/PackageManager;
     invoke-static {v0}, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->getMmsAppSignature(Landroid/content/pm/PackageManager;)Landroid/content/pm/Signature;
 
@@ -205,25 +205,25 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 164
+    .line 166
     if-nez p2, :cond_1
 
-    .line 184
+    .line 186
     :cond_0
     :goto_0
     return v5
 
-    .line 167
+    .line 169
     :cond_1
     invoke-static {p0, p1}, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->getUidSignatures(Landroid/content/pm/PackageManager;I)[Landroid/content/pm/Signature;
 
     move-result-object v1
 
-    .line 168
+    .line 170
     .local v1, callingSignatures:[Landroid/content/pm/Signature;
     if-eqz v1, :cond_3
 
-    .line 169
+    .line 171
     move-object v0, v1
 
     .local v0, arr$:[Landroid/content/pm/Signature;
@@ -238,7 +238,7 @@
 
     aget-object v4, v0, v2
 
-    .line 170
+    .line 172
     .local v4, sig:Landroid/content/pm/Signature;
     invoke-virtual {v4, p2}, Landroid/content/pm/Signature;->equals(Ljava/lang/Object;)Z
 
@@ -246,12 +246,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 171
+    .line 173
     sget-boolean v6, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v6, :cond_0
 
-    .line 172
+    .line 174
     const-string v6, "SendCmailInterface"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -276,13 +276,13 @@
 
     goto :goto_0
 
-    .line 169
+    .line 171
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 184
+    .line 186
     .end local v0           #arr$:[Landroid/content/pm/Signature;
     .end local v2           #i$:I
     .end local v3           #len$:I
@@ -300,7 +300,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 134
+    .line 136
     :try_start_0
     const-string v3, "com.android.mms"
 
@@ -310,16 +310,16 @@
 
     move-result-object v1
 
-    .line 136
+    .line 138
     .local v1, info:Landroid/content/pm/PackageInfo;
     if-eqz v1, :cond_2
 
-    .line 137
+    .line 139
     sget-boolean v3, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v3, :cond_0
 
-    .line 138
+    .line 140
     const-string v3, "SendCmailInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -347,7 +347,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
+    .line 144
     :cond_0
     iget-object v2, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -359,19 +359,19 @@
 
     if-lez v2, :cond_2
 
-    .line 144
+    .line 146
     iget-object v2, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     const/4 v3, 0x0
 
     aget-object v2, v2, v3
 
-    .line 152
+    .line 154
     .end local v1           #info:Landroid/content/pm/PackageInfo;
     :goto_1
     return-object v2
 
-    .line 138
+    .line 140
     .restart local v1       #info:Landroid/content/pm/PackageInfo;
     :cond_1
     iget-object v2, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
@@ -382,18 +382,18 @@
 
     goto :goto_0
 
-    .line 147
+    .line 149
     .end local v1           #info:Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v0
 
-    .line 148
+    .line 150
     .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-boolean v2, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v2, :cond_2
 
-    .line 149
+    .line 151
     const-string v2, "SendCmailInterface"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -420,7 +420,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
+    .line 154
     .end local v0           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_2
     const/4 v2, 0x0
@@ -436,13 +436,13 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 190
+    .line 192
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 191
+    .line 193
     .local v4, packages:[Ljava/lang/String;
     if-eqz v4, :cond_4
 
@@ -450,12 +450,12 @@
 
     if-lez v8, :cond_4
 
-    .line 192
+    .line 194
     sget-boolean v8, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v8, :cond_0
 
-    .line 193
+    .line 195
     const-string v8, "SendCmailInterface"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -484,7 +484,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
+    .line 196
     move-object v0, v4
 
     .local v0, arr$:[Ljava/lang/String;
@@ -499,7 +499,7 @@
 
     aget-object v5, v0, v2
 
-    .line 195
+    .line 197
     .local v5, pkg:Ljava/lang/String;
     const-string v8, "SendCmailInterface"
 
@@ -523,12 +523,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
+    .line 196
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 201
+    .line 203
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v2           #i$:I
     .end local v3           #len$:I
@@ -544,16 +544,16 @@
 
     move-result-object v6
 
-    .line 203
+    .line 205
     .local v6, pkgInfo:Landroid/content/pm/PackageInfo;
     if-eqz v6, :cond_3
 
-    .line 204
+    .line 206
     sget-boolean v8, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v8, :cond_1
 
-    .line 205
+    .line 207
     const-string v8, "SendCmailInterface"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -595,17 +595,17 @@
 
     invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
+    .line 210
     :cond_1
     iget-object v7, v6, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 217
+    .line 219
     .end local v4           #packages:[Ljava/lang/String;
     .end local v6           #pkgInfo:Landroid/content/pm/PackageInfo;
     :goto_2
     return-object v7
 
-    .line 205
+    .line 207
     .restart local v4       #packages:[Ljava/lang/String;
     .restart local v6       #pkgInfo:Landroid/content/pm/PackageInfo;
     :cond_2
@@ -615,13 +615,13 @@
 
     goto :goto_1
 
-    .line 210
+    .line 212
     :cond_3
     sget-boolean v7, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v7, :cond_4
 
-    .line 211
+    .line 213
     const-string v7, "SendCmailInterface"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -650,7 +650,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 217
+    .line 219
     .end local v4           #packages:[Ljava/lang/String;
     .end local v6           #pkgInfo:Landroid/content/pm/PackageInfo;
     :cond_4
@@ -659,11 +659,11 @@
 
     goto :goto_2
 
-    .line 214
+    .line 216
     :catch_0
     move-exception v1
 
-    .line 215
+    .line 217
     .local v1, ex:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -677,25 +677,25 @@
     .parameter "cancelIntent"
 
     .prologue
-    .line 120
+    .line 122
     sget-boolean v1, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v1, :cond_0
 
-    .line 121
+    .line 123
     const-string v1, "SendCmailInterface"
 
     const-string v2, "cancelCmail Called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
+    .line 126
     :cond_0
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiGetInstance()Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
 
     move-result-object v0
 
-    .line 127
+    .line 129
     .local v0, packetSMSManager:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
     invoke-virtual {v0, p1}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiSendCancel(Landroid/app/PendingIntent;)Z
 
@@ -712,25 +712,25 @@
     .parameter "sendingMode"
 
     .prologue
-    .line 69
+    .line 70
     sget-boolean v1, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v1, :cond_0
 
-    .line 70
+    .line 71
     const-string v1, "SendCmailInterface"
 
     const-string v2, "snedCmail Start"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
+    .line 75
     :cond_0
     sget-boolean v1, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v1, :cond_1
 
-    .line 75
+    .line 76
     const-string v1, "SendCmailInterface"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -771,7 +771,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
+    .line 94
     :cond_1
     sget-object v1, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->mContext:Landroid/content/Context;
 
@@ -781,12 +781,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 98
+    .line 99
     invoke-static {}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiGetInstance()Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
 
     move-result-object v0
 
-    .line 101
+    .line 102
     .local v0, packetSMSManager:Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;
     sget-object v1, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->mContext:Landroid/content/Context;
 
@@ -800,19 +800,19 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/kddi/android/internal/telephony/cdma/KddiPacketSMSManager;->kddiSendSmsMessage(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;I)V
 
-    .line 102
+    .line 103
     sget-boolean v1, Lcom/kddi/android/internal/telephony/cdma/SendCmailInterface;->OUTPUT_VERBOSE_LOG:Z
 
     if-eqz v1, :cond_2
 
-    .line 103
+    .line 104
     const-string v1, "SendCmailInterface"
 
     const-string v2, "snedCmai End"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
+    .line 106
     :cond_2
     return-void
 .end method

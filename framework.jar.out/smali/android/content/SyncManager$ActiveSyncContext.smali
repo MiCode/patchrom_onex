@@ -145,45 +145,10 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
-
-    .line 1028
-    const-string v3, "SyncManager"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "bindToSyncAdapter: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget-object v5, p1, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->componentName:Landroid/content/ComponentName;
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ", connection "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-nez v3, :cond_1
 
     .line 1030
-    :cond_0
+    :goto_0
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
@@ -257,14 +222,55 @@
 
     .line 1048
     .local v0, bindResult:Z
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     .line 1049
     iput-boolean v7, p0, Landroid/content/SyncManager$ActiveSyncContext;->mBound:Z
 
     .line 1051
-    :cond_1
+    :cond_0
     return v0
+
+    .line 1028
+    .end local v0           #bindResult:Z
+    .end local v1           #flag:I
+    .end local v2           #intent:Landroid/content/Intent;
+    :cond_1
+    const-string v3, "SyncManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "bindToSyncAdapter: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v5, p1, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->componentName:Landroid/content/ComponentName;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ", connection "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
 .end method
 
 .method public binderDied()V
@@ -296,9 +302,47 @@
 
     move-result v0
 
+    if-nez v0, :cond_1
+
+    .line 1062
+    :goto_0
+    iget-boolean v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mBound:Z
+
     if-eqz v0, :cond_0
 
+    .line 1063
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mBound:Z
+
+    .line 1064
+    iget-object v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->this$0:Landroid/content/SyncManager;
+
+    #getter for: Landroid/content/SyncManager;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Landroid/content/SyncManager;->access$1200(Landroid/content/SyncManager;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+
+    .line 1066
+    :cond_0
+    iget-object v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mSyncWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    .line 1067
+    iget-object v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mSyncWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/PowerManager$WakeLock;->setWorkSource(Landroid/os/WorkSource;)V
+
+    .line 1068
+    return-void
+
     .line 1060
+    :cond_1
     const-string v0, "SyncManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -321,42 +365,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1062
-    :cond_0
-    iget-boolean v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mBound:Z
-
-    if-eqz v0, :cond_1
-
-    .line 1063
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mBound:Z
-
-    .line 1064
-    iget-object v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->this$0:Landroid/content/SyncManager;
-
-    #getter for: Landroid/content/SyncManager;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Landroid/content/SyncManager;->access$1200(Landroid/content/SyncManager;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    .line 1066
-    :cond_1
-    iget-object v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mSyncWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    .line 1067
-    iget-object v0, p0, Landroid/content/SyncManager$ActiveSyncContext;->mSyncWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/PowerManager$WakeLock;->setWorkSource(Landroid/os/WorkSource;)V
-
-    .line 1068
-    return-void
+    goto :goto_0
 .end method
 
 .method public onFinished(Landroid/content/SyncResult;)V

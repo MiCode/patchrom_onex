@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 413
+    .line 431
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +42,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 415
+    .line 433
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 417
+    .line 435
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.android.internal.location.ALARM_WAKEUP"
 
@@ -57,25 +57,25 @@
 
     if-eqz v1, :cond_1
 
-    .line 418
+    .line 436
     const-string v1, "GpsLocationProvider"
 
     const-string v2, "ALARM_WAKEUP"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
+    .line 437
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->startNavigating(Z)V
     invoke-static {v1, v3}, Lcom/android/server/location/GpsLocationProvider;->access$300(Lcom/android/server/location/GpsLocationProvider;Z)V
 
-    .line 441
+    .line 459
     :cond_0
     :goto_0
     return-void
 
-    .line 420
+    .line 438
     :cond_1
     const-string v1, "com.android.internal.location.ALARM_TIMEOUT"
 
@@ -85,14 +85,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 421
+    .line 439
     const-string v1, "GpsLocationProvider"
 
     const-string v2, "ALARM_TIMEOUT"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
+    .line 440
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->hibernate()V
@@ -100,7 +100,7 @@
 
     goto :goto_0
 
-    .line 423
+    .line 441
     :cond_2
     const-string v1, "android.intent.action.DATA_SMS_RECEIVED"
 
@@ -110,14 +110,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 424
+    .line 442
     const-string v1, "GpsLocationProvider"
 
     const-string v2, "Rxed SUPL INIT SMS "
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
+    .line 443
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->checkSmsSuplInit(Landroid/content/Intent;)V
@@ -125,7 +125,7 @@
 
     goto :goto_0
 
-    .line 426
+    .line 444
     :cond_3
     const-string v1, "android.provider.Telephony.WAP_PUSH_RECEIVED"
 
@@ -135,13 +135,13 @@
 
     if-eqz v1, :cond_4
 
-    .line 427
+    .line 445
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->checkWapSuplInit(Landroid/content/Intent;)V
     invoke-static {v1, p2}, Lcom/android/server/location/GpsLocationProvider;->access$600(Lcom/android/server/location/GpsLocationProvider;Landroid/content/Intent;)V
 
-    .line 428
+    .line 446
     const-string v1, "GpsLocationProvider"
 
     const-string v2, "Rxed SUPL INIT WAP "
@@ -150,7 +150,7 @@
 
     goto :goto_0
 
-    .line 430
+    .line 448
     :cond_4
     const-string v1, "android.intent.action.QUICKBOOT_POWEROFF"
 
@@ -160,7 +160,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 431
+    .line 449
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     const/4 v2, 0x1
@@ -168,7 +168,7 @@
     #setter for: Lcom/android/server/location/GpsLocationProvider;->IsQuickBootPowerOff:Z
     invoke-static {v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$702(Lcom/android/server/location/GpsLocationProvider;Z)Z
 
-    .line 432
+    .line 450
     const-string v1, "GpsLocationProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -198,7 +198,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
+    .line 451
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mStarted:Z
@@ -208,7 +208,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 434
+    .line 452
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->stopNavigating()V
@@ -216,7 +216,7 @@
 
     goto :goto_0
 
-    .line 436
+    .line 454
     :cond_5
     const-string v1, "android.intent.action.QUICKBOOT_POWERON"
 
@@ -226,13 +226,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 437
+    .line 455
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #setter for: Lcom/android/server/location/GpsLocationProvider;->IsQuickBootPowerOff:Z
     invoke-static {v1, v3}, Lcom/android/server/location/GpsLocationProvider;->access$702(Lcom/android/server/location/GpsLocationProvider;Z)Z
 
-    .line 438
+    .line 456
     const-string v1, "GpsLocationProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;

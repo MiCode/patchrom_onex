@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 91
+    .line 96
     iput-object p1, p0, Lcom/android/camera/component/MainBar$1;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,19 +44,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 96
+    .line 101
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/android/camera/widget/PopupBubble;->setContentView(Landroid/view/View;)V
 
-    .line 99
+    .line 104
     iget-object v0, p0, Lcom/android/camera/component/MainBar$1;->this$0:Lcom/android/camera/component/MainBar;
 
     const/16 v1, 0x2711
 
     invoke-virtual {v0, v1}, Lcom/android/camera/component/MainBar;->removeMessages(I)V
 
-    .line 102
+    .line 107
     iget-object v0, p0, Lcom/android/camera/component/MainBar$1;->this$0:Lcom/android/camera/component/MainBar;
 
     #getter for: Lcom/android/camera/component/MainBar;->settingsMenuState:Lcom/android/camera/property/Property;
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 103
+    .line 108
     iget-object v0, p0, Lcom/android/camera/component/MainBar$1;->this$0:Lcom/android/camera/component/MainBar;
 
     #getter for: Lcom/android/camera/component/MainBar;->m_SettingsButton:Lcom/htc/widget/HtcIconButton;
@@ -78,7 +78,7 @@
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcIconButton;->setColorOn(Z)V
 
-    .line 104
+    .line 109
     iget-object v0, p0, Lcom/android/camera/component/MainBar$1;->this$0:Lcom/android/camera/component/MainBar;
 
     #getter for: Lcom/android/camera/component/MainBar;->m_ScenesButton:Lcom/htc/widget/HtcIconButton;
@@ -88,7 +88,7 @@
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcIconButton;->setColorOn(Z)V
 
-    .line 106
+    .line 111
     iget-object v0, p0, Lcom/android/camera/component/MainBar$1;->this$0:Lcom/android/camera/component/MainBar;
 
     invoke-virtual {v0}, Lcom/android/camera/component/MainBar;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -97,6 +97,6 @@
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->notifyPopupBubbleClosed()V
 
-    .line 107
+    .line 112
     return-void
 .end method

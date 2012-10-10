@@ -622,7 +622,7 @@
 
     .line 283
     .local v0, baseLayout:Landroid/view/View;
-    const v1, 0x7f0800f2
+    const v1, 0x7f0800f4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -633,7 +633,7 @@
     .line 284
     iget-object v1, p0, Lcom/android/camera/component/SmartShotUI;->m_InitToast:Landroid/view/View;
 
-    const v2, 0x7f0800f3
+    const v2, 0x7f0800f5
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -651,7 +651,7 @@
     invoke-direct {p0, v1}, Lcom/android/camera/component/SmartShotUI;->updateToastRotation(Lcom/android/camera/rotate/UIRotation;)V
 
     .line 286
-    const v1, 0x7f0800f4
+    const v1, 0x7f0800f6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -669,7 +669,7 @@
     invoke-virtual {v1, v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
     .line 289
-    const v1, 0x7f0800f5
+    const v1, 0x7f0800f7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -689,7 +689,7 @@
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 291
-    const v1, 0x7f0800f1
+    const v1, 0x7f0800f3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -839,7 +839,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    const v1, 0x7f0a0052
+    const v1, 0x7f0a0053
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/component/SmartShotUI;->showProcessingDialog(ZI)V
 
@@ -1092,9 +1092,9 @@
     .parameter "rotation"
 
     .prologue
-    const v6, 0x7f0b005e
+    const v6, 0x7f0b005f
 
-    const v5, 0x7f0b005c
+    const v5, 0x7f0b005d
 
     const/16 v4, 0xc
 

@@ -164,7 +164,7 @@
     const/4 v4, 0x0
 
     .line 155
-    const-string v0, "((\\*|#|\\*#|\\*\\*|##)(\\d{2,3})(\\*([^*#]*)(\\*([^*#]*)(\\*([^*#]*)(\\*([^*#]*))?)?)?)?#)(.*)"
+    const-string v0, "((\\*|#|\\*#|\\*\\*|##)(\\d{2,3})(\\*([^*#]*)(\\*([^*#]*)(\\*([^*#]*)(\\*([^*#]*))?)?)?)?#)([^#]*)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -405,7 +405,7 @@
     .parameter "serviceClass"
 
     .prologue
-    .line 1889
+    .line 1895
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
@@ -418,28 +418,28 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1891
+    .line 1897
     .local v1, sb:Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 1892
+    .line 1898
     .local v0, classMask:I
     :goto_0
     const/16 v2, 0x80
 
     if-gt v0, v2, :cond_1
 
-    .line 1895
+    .line 1901
     and-int v2, v0, p1
 
     if-eqz v2, :cond_0
 
-    .line 1896
+    .line 1902
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1897
+    .line 1903
     and-int v2, v0, p1
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->serviceClassToCFString(I)Ljava/lang/CharSequence;
@@ -448,13 +448,13 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1893
+    .line 1899
     :cond_0
     shl-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1900
+    .line 1906
     :cond_1
     return-object v1
 .end method
@@ -464,7 +464,7 @@
     .parameter "serviceClass"
 
     .prologue
-    .line 1872
+    .line 1878
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
@@ -477,28 +477,28 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1875
+    .line 1881
     .local v1, sb:Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
-    .line 1876
+    .line 1882
     .local v0, classMask:I
     :goto_0
     const/16 v2, 0x80
 
     if-gt v0, v2, :cond_1
 
-    .line 1879
+    .line 1885
     and-int v2, v0, p1
 
     if-eqz v2, :cond_0
 
-    .line 1880
+    .line 1886
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1881
+    .line 1887
     and-int v2, v0, p1
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->serviceClassToCFString(I)Ljava/lang/CharSequence;
@@ -507,13 +507,13 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1877
+    .line 1883
     :cond_0
     shl-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1884
+    .line 1890
     :cond_1
     return-object v1
 .end method
@@ -1322,7 +1322,7 @@
 
     move-result-object v5
 
-    const v6, 0x107002b
+    const v6, 0x107002c
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1421,7 +1421,7 @@
 
     const/4 v6, 0x1
 
-    .line 1680
+    .line 1686
     new-array v4, v9, [Ljava/lang/String;
 
     const-string v8, "{0}"
@@ -1436,11 +1436,11 @@
 
     aput-object v8, v4, v10
 
-    .line 1681
+    .line 1687
     .local v4, sources:[Ljava/lang/String;
     new-array v1, v9, [Ljava/lang/CharSequence;
 
-    .line 1687
+    .line 1693
     .local v1, destinations:[Ljava/lang/CharSequence;
     iget v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
@@ -1448,17 +1448,17 @@
 
     move v2, v6
 
-    .line 1690
+    .line 1696
     .local v2, needTimeTemplate:Z
     :goto_0
     iget v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
     if-ne v8, v6, :cond_3
 
-    .line 1691
+    .line 1697
     if-eqz v2, :cond_2
 
-    .line 1692
+    .line 1698
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v9, 0x1040119
@@ -1467,7 +1467,7 @@
 
     move-result-object v5
 
-    .line 1719
+    .line 1725
     .local v5, template:Ljava/lang/CharSequence;
     :goto_1
     iget v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
@@ -1480,7 +1480,7 @@
 
     aput-object v8, v1, v7
 
-    .line 1720
+    .line 1726
     iget-object v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
 
     iget v9, p1, Lcom/android/internal/telephony/CallForwardInfo;->toa:I
@@ -1491,7 +1491,7 @@
 
     aput-object v8, v1, v6
 
-    .line 1721
+    .line 1727
     iget v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->timeSeconds:I
 
     invoke-static {v8}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1500,7 +1500,7 @@
 
     aput-object v8, v1, v10
 
-    .line 1723
+    .line 1729
     iget v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
     if-nez v8, :cond_0
@@ -1511,14 +1511,14 @@
 
     if-ne v8, v6, :cond_0
 
-    .line 1726
+    .line 1732
     iget v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
     if-ne v8, v6, :cond_6
 
     move v0, v6
 
-    .line 1731
+    .line 1737
     .local v0, cffEnabled:Z
     :goto_2
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
@@ -1529,18 +1529,18 @@
 
     check-cast v3, Lcom/android/internal/telephony/gsm/SIMRecords;
 
-    .line 1732
+    .line 1738
     .local v3, simRecord:Lcom/android/internal/telephony/gsm/SIMRecords;
     if-eqz v3, :cond_0
 
-    .line 1733
+    .line 1739
     iget v7, p1, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
 
     iget-object v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v0, v7, v8}, Lcom/android/internal/telephony/gsm/SIMRecords;->setVoiceCallForwardingFlag(IZILjava/lang/String;)V
 
-    .line 1739
+    .line 1745
     .end local v0           #cffEnabled:Z
     .end local v3           #simRecord:Lcom/android/internal/telephony/gsm/SIMRecords;
     :cond_0
@@ -1555,10 +1555,10 @@
     :cond_1
     move v2, v7
 
-    .line 1687
+    .line 1693
     goto :goto_0
 
-    .line 1695
+    .line 1701
     .restart local v2       #needTimeTemplate:Z
     :cond_2
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
@@ -1572,7 +1572,7 @@
     .restart local v5       #template:Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 1698
+    .line 1704
     .end local v5           #template:Ljava/lang/CharSequence;
     :cond_3
     iget v8, p1, Lcom/android/internal/telephony/CallForwardInfo;->status:I
@@ -1587,7 +1587,7 @@
 
     if-eqz v8, :cond_4
 
-    .line 1699
+    .line 1705
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v9, 0x1040117
@@ -1599,12 +1599,12 @@
     .restart local v5       #template:Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 1705
+    .line 1711
     .end local v5           #template:Ljava/lang/CharSequence;
     :cond_4
     if-eqz v2, :cond_5
 
-    .line 1706
+    .line 1712
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v9, 0x104011b
@@ -1616,7 +1616,7 @@
     .restart local v5       #template:Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 1709
+    .line 1715
     .end local v5           #template:Ljava/lang/CharSequence;
     :cond_5
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
@@ -1633,7 +1633,7 @@
     :cond_6
     move v0, v7
 
-    .line 1726
+    .line 1732
     goto :goto_2
 .end method
 
@@ -2307,7 +2307,7 @@
 
     const/4 v3, 0x0
 
-    .line 1563
+    .line 1569
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -2316,49 +2316,49 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1564
+    .line 1570
     .local v1, sb:Ljava/lang/StringBuilder;
     const-string v2, "\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1566
+    .line 1572
     iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_0
 
-    .line 1568
+    .line 1574
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
     invoke-virtual {v1, v3, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 1570
+    .line 1576
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1571
+    .line 1577
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->getErrorMessage(Landroid/os/AsyncResult;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1641
+    .line 1647
     :goto_0
     iput-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1642
+    .line 1648
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v2, p0}, Lcom/android/internal/telephony/gsm/GSMPhone;->onMMIDone(Lcom/android/internal/telephony/gsm/GsmMmiCode;)V
 
-    .line 1643
+    .line 1649
     return-void
 
-    .line 1575
+    .line 1581
     :cond_0
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -2368,7 +2368,7 @@
 
     check-cast v0, [I
 
-    .line 1578
+    .line 1584
     .local v0, clirArgs:[I
     const/4 v2, 0x1
 
@@ -2378,30 +2378,11 @@
 
     goto :goto_0
 
-    .line 1580
+    .line 1586
     :pswitch_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v3, 0x10400f6
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1582
-    sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
-
-    iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
-
-    goto :goto_0
-
-    .line 1586
-    :pswitch_1
-    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
-
-    const v3, 0x10400f7
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -2417,6 +2398,25 @@
     goto :goto_0
 
     .line 1592
+    :pswitch_1
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
+
+    const v3, 0x10400f7
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1594
+    sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
+
+    iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
+
+    goto :goto_0
+
+    .line 1598
     :pswitch_2
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -2428,20 +2428,20 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1594
+    .line 1600
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
     goto :goto_0
 
-    .line 1600
+    .line 1606
     :pswitch_3
     aget v2, v0, v3
 
     packed-switch v2, :pswitch_data_1
 
-    .line 1603
+    .line 1609
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -2450,7 +2450,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1615
+    .line 1621
     :goto_1
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -2458,7 +2458,7 @@
 
     goto :goto_0
 
-    .line 1607
+    .line 1613
     :pswitch_4
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -2470,7 +2470,7 @@
 
     goto :goto_1
 
-    .line 1611
+    .line 1617
     :pswitch_5
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -2484,13 +2484,13 @@
 
     goto :goto_1
 
-    .line 1620
+    .line 1626
     :pswitch_6
     aget v2, v0, v3
 
     packed-switch v2, :pswitch_data_2
 
-    .line 1623
+    .line 1629
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     invoke-virtual {v2, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -2499,7 +2499,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1636
+    .line 1642
     :goto_2
     sget-object v2, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -2507,7 +2507,7 @@
 
     goto/16 :goto_0
 
-    .line 1627
+    .line 1633
     :pswitch_7
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -2521,7 +2521,7 @@
 
     goto :goto_2
 
-    .line 1631
+    .line 1637
     :pswitch_8
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -2533,7 +2533,7 @@
 
     goto :goto_2
 
-    .line 1578
+    .line 1584
     nop
 
     :pswitch_data_0
@@ -2545,14 +2545,14 @@
         :pswitch_6
     .end packed-switch
 
-    .line 1600
+    .line 1606
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_4
         :pswitch_5
     .end packed-switch
 
-    .line 1620
+    .line 1626
     :pswitch_data_2
     .packed-switch 0x1
         :pswitch_7
@@ -2567,7 +2567,7 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1745
+    .line 1751
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -2576,49 +2576,49 @@
 
     invoke-direct {v3, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1746
+    .line 1752
     .local v3, sb:Ljava/lang/StringBuilder;
     const-string v7, "\n"
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1748
+    .line 1754
     iget-object v7, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v7, :cond_0
 
-    .line 1750
+    .line 1756
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
 
     invoke-virtual {v3, v9, v7}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 1752
+    .line 1758
     sget-object v7, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v7, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1753
+    .line 1759
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->getErrorMessage(Landroid/os/AsyncResult;)Ljava/lang/CharSequence;
 
     move-result-object v7
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1813
+    .line 1819
     :goto_0
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1814
+    .line 1820
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v7, p0}, Lcom/android/internal/telephony/gsm/GSMPhone;->onMMIDone(Lcom/android/internal/telephony/gsm/GsmMmiCode;)V
 
-    .line 1816
+    .line 1822
     return-void
 
-    .line 1757
+    .line 1763
     :cond_0
     iget-object v7, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -2628,13 +2628,13 @@
 
     check-cast v1, [Lcom/android/internal/telephony/CallForwardInfo;
 
-    .line 1759
+    .line 1765
     .local v1, infos:[Lcom/android/internal/telephony/CallForwardInfo;
     array-length v7, v1
 
     if-nez v7, :cond_2
 
-    .line 1761
+    .line 1767
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v8, 0x10400d9
@@ -2645,7 +2645,7 @@
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1768
+    .line 1774
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v7}, Lcom/android/internal/telephony/gsm/GSMPhone;->getICCRecords()Lcom/android/internal/telephony/IccRecords;
@@ -2654,18 +2654,18 @@
 
     check-cast v5, Lcom/android/internal/telephony/gsm/SIMRecords;
 
-    .line 1769
+    .line 1775
     .local v5, simRecord:Lcom/android/internal/telephony/gsm/SIMRecords;
     if-eqz v5, :cond_1
 
-    .line 1770
+    .line 1776
     const/4 v7, 0x1
 
     const-string v8, ""
 
     invoke-virtual {v5, v7, v9, v9, v8}, Lcom/android/internal/telephony/gsm/SIMRecords;->setVoiceCallForwardingFlag(IZILjava/lang/String;)V
 
-    .line 1810
+    .line 1816
     .end local v5           #simRecord:Lcom/android/internal/telephony/gsm/SIMRecords;
     :cond_1
     :goto_1
@@ -2675,24 +2675,24 @@
 
     goto :goto_0
 
-    .line 1777
+    .line 1783
     :cond_2
     new-instance v6, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v6}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    .line 1785
+    .line 1791
     .local v6, tb:Landroid/text/SpannableStringBuilder;
     const/4 v4, 0x1
 
-    .line 1786
+    .line 1792
     .local v4, serviceClassMask:I
     :goto_2
     const/16 v7, 0x80
 
     if-gt v4, v7, :cond_6
 
-    .line 1789
+    .line 1795
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -2702,7 +2702,7 @@
     :goto_3
     if-ge v0, v2, :cond_5
 
-    .line 1791
+    .line 1797
     aget-object v7, v1, v0
 
     iget v7, v7, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
@@ -2711,7 +2711,7 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 1794
+    .line 1800
     const-string v7, "GSM"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2736,14 +2736,14 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1789
+    .line 1795
     :cond_3
     :goto_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 1797
+    .line 1803
     :cond_4
     aget-object v7, v1, v0
 
@@ -2753,7 +2753,7 @@
 
     if-eqz v7, :cond_3
 
-    .line 1798
+    .line 1804
     aget-object v7, v1, v0
 
     invoke-direct {p0, v7, v4}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->makeCFQueryResultMessage(Lcom/android/internal/telephony/CallForwardInfo;I)Ljava/lang/CharSequence;
@@ -2762,20 +2762,20 @@
 
     invoke-virtual {v6, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 1800
+    .line 1806
     const-string v7, "\n"
 
     invoke-virtual {v6, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     goto :goto_4
 
-    .line 1787
+    .line 1793
     :cond_5
     shl-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 1807
+    .line 1813
     .end local v0           #i:I
     .end local v2           #s:I
     :cond_6
@@ -2795,7 +2795,7 @@
 
     const/4 v5, 0x0
 
-    .line 1820
+    .line 1826
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->getScString()Ljava/lang/CharSequence;
@@ -2804,37 +2804,37 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1821
+    .line 1827
     .local v2, sb:Ljava/lang/StringBuilder;
     const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1823
+    .line 1829
     iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v3, :cond_3
 
-    .line 1825
+    .line 1831
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
 
     invoke-virtual {v2, v5, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 1827
+    .line 1833
     sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 1830
+    .line 1836
     iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     instance-of v3, v3, Lcom/android/internal/telephony/CommandException;
 
     if-eqz v3, :cond_2
 
-    .line 1831
+    .line 1837
     iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     check-cast v3, Lcom/android/internal/telephony/CommandException;
@@ -2845,7 +2845,7 @@
 
     move-result-object v0
 
-    .line 1832
+    .line 1838
     .local v0, err:Lcom/android/internal/telephony/CommandException$Error;
     sget-object v3, Lcom/android/internal/telephony/CommandException$Error;->DUE_TO_FDN:Lcom/android/internal/telephony/CommandException$Error;
 
@@ -2855,7 +2855,7 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 1834
+    .line 1840
     :cond_0
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
@@ -2867,20 +2867,20 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1866
+    .line 1872
     .end local v0           #err:Lcom/android/internal/telephony/CommandException$Error;
     :goto_0
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1867
+    .line 1873
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v3, p0}, Lcom/android/internal/telephony/gsm/GSMPhone;->onMMIDone(Lcom/android/internal/telephony/gsm/GsmMmiCode;)V
 
-    .line 1868
+    .line 1874
     return-void
 
-    .line 1836
+    .line 1842
     .restart local v0       #err:Lcom/android/internal/telephony/CommandException$Error;
     :cond_1
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
@@ -2893,7 +2893,7 @@
 
     goto :goto_0
 
-    .line 1839
+    .line 1845
     .end local v0           #err:Lcom/android/internal/telephony/CommandException$Error;
     :cond_2
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
@@ -2906,7 +2906,7 @@
 
     goto :goto_0
 
-    .line 1843
+    .line 1849
     :cond_3
     iget-object v3, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -2916,18 +2916,18 @@
 
     check-cast v1, [I
 
-    .line 1845
+    .line 1851
     .local v1, ints:[I
     array-length v3, v1
 
     if-eqz v3, :cond_8
 
-    .line 1846
+    .line 1852
     aget v3, v1, v5
 
     if-nez v3, :cond_4
 
-    .line 1847
+    .line 1853
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v4, 0x10400d9
@@ -2938,7 +2938,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1863
+    .line 1869
     :goto_1
     sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
@@ -2946,7 +2946,7 @@
 
     goto :goto_0
 
-    .line 1848
+    .line 1854
     :cond_4
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
 
@@ -2958,7 +2958,7 @@
 
     if-eqz v3, :cond_5
 
-    .line 1850
+    .line 1856
     aget v3, v1, v7
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->createQueryCallWaitingResultMessage(I)Ljava/lang/CharSequence;
@@ -2969,7 +2969,7 @@
 
     goto :goto_1
 
-    .line 1851
+    .line 1857
     :cond_5
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
 
@@ -2979,7 +2979,7 @@
 
     if-eqz v3, :cond_6
 
-    .line 1853
+    .line 1859
     aget v3, v1, v5
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->createQueryCallBarringResultMessage(I)Ljava/lang/CharSequence;
@@ -2990,13 +2990,13 @@
 
     goto :goto_1
 
-    .line 1854
+    .line 1860
     :cond_6
     aget v3, v1, v5
 
     if-ne v3, v7, :cond_7
 
-    .line 1856
+    .line 1862
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v4, 0x10400d7
@@ -3009,7 +3009,7 @@
 
     goto :goto_1
 
-    .line 1858
+    .line 1864
     :cond_7
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -3021,7 +3021,7 @@
 
     goto :goto_1
 
-    .line 1861
+    .line 1867
     :cond_8
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -3067,7 +3067,7 @@
     .line 1417
     iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_13
 
     .line 1419
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
@@ -3086,7 +3086,7 @@
 
     instance-of v3, v3, Lcom/android/internal/telephony/CommandException;
 
-    if-eqz v3, :cond_11
+    if-eqz v3, :cond_12
 
     .line 1423
     iget-object v3, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
@@ -3111,14 +3111,14 @@
     .local v0, SimStatus:[I
     sget-object v3, Lcom/android/internal/telephony/CommandException$Error;->PASSWORD_INCORRECT:Lcom/android/internal/telephony/CommandException$Error;
 
-    if-ne v1, v3, :cond_a
+    if-ne v1, v3, :cond_b
 
     .line 1428
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isPinCommand()Z
 
     move-result v3
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_a
 
     .line 1442
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
@@ -3129,9 +3129,24 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
-    .line 1443
+    .line 1444
+    aget v3, v0, v8
+
+    if-gtz v3, :cond_1
+
+    .line 1565
+    .end local v0           #SimStatus:[I
+    .end local v1           #err:Lcom/android/internal/telephony/CommandException$Error;
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 1449
+    .restart local v0       #SimStatus:[I
+    .restart local v1       #err:Lcom/android/internal/telephony/CommandException$Error;
+    :cond_1
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v6, 0x10400de
@@ -3142,21 +3157,21 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1445
+    .line 1451
     const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1446
+    .line 1452
     iget-object v6, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     aget v3, v0, v8
 
-    if-le v3, v7, :cond_2
+    if-le v3, v7, :cond_3
 
     move v3, v4
 
-    :goto_0
+    :goto_1
     new-array v4, v7, [Ljava/lang/Object;
 
     aget v5, v0, v8
@@ -3173,32 +3188,30 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1557
+    .line 1563
     .end local v0           #SimStatus:[I
     .end local v1           #err:Lcom/android/internal/telephony/CommandException$Error;
-    :cond_0
-    :goto_1
+    :cond_2
+    :goto_2
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->message:Ljava/lang/CharSequence;
 
-    .line 1558
+    .line 1564
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v3, p0}, Lcom/android/internal/telephony/gsm/GSMPhone;->onMMIDone(Lcom/android/internal/telephony/gsm/GsmMmiCode;)V
 
-    .line 1559
-    :cond_1
-    return-void
+    goto :goto_0
 
     .restart local v0       #SimStatus:[I
     .restart local v1       #err:Lcom/android/internal/telephony/CommandException$Error;
-    :cond_2
+    :cond_3
     move v3, v5
 
-    .line 1446
-    goto :goto_0
+    .line 1452
+    goto :goto_1
 
-    .line 1449
-    :cond_3
+    .line 1455
+    :cond_4
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
 
     const-string v6, "05"
@@ -3207,9 +3220,9 @@
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
-    .line 1450
+    .line 1456
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v6, 0x10400df
@@ -3220,19 +3233,19 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1452
+    .line 1458
     const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1453
+    .line 1459
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     aget v6, v0, v7
 
-    if-le v6, v7, :cond_4
+    if-le v6, v7, :cond_5
 
-    :goto_2
+    :goto_3
     new-array v5, v7, [Ljava/lang/Object;
 
     aget v6, v0, v7
@@ -3249,15 +3262,15 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
-
-    :cond_4
-    move v4, v5
-
     goto :goto_2
 
-    .line 1456
     :cond_5
+    move v4, v5
+
+    goto :goto_3
+
+    .line 1462
+    :cond_6
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
 
     const-string v6, "042"
@@ -3266,9 +3279,9 @@
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
-    .line 1457
+    .line 1463
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     const v6, 0x2040115
@@ -3279,19 +3292,19 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1459
+    .line 1465
     const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1460
+    .line 1466
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     aget v6, v0, v9
 
-    if-le v6, v7, :cond_6
+    if-le v6, v7, :cond_7
 
-    :goto_3
+    :goto_4
     new-array v5, v7, [Ljava/lang/Object;
 
     aget v6, v0, v9
@@ -3308,15 +3321,15 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_6
+    :cond_7
     move v4, v5
 
-    goto :goto_3
+    goto :goto_4
 
-    .line 1463
-    :cond_7
+    .line 1469
+    :cond_8
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
 
     const-string v6, "052"
@@ -3325,9 +3338,9 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_2
 
-    .line 1464
+    .line 1470
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     const v6, 0x2040116
@@ -3338,21 +3351,21 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1466
+    .line 1472
     const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1467
+    .line 1473
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     const/4 v6, 0x3
 
     aget v6, v0, v6
 
-    if-le v6, v7, :cond_8
+    if-le v6, v7, :cond_9
 
-    :goto_4
+    :goto_5
     new-array v5, v7, [Ljava/lang/Object;
 
     const/4 v6, 0x3
@@ -3371,15 +3384,15 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    :cond_8
+    :cond_9
     move v4, v5
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 1473
-    :cond_9
+    .line 1479
+    :cond_a
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v4, 0x10400dc
@@ -3390,15 +3403,15 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 1476
-    :cond_a
+    .line 1482
+    :cond_b
     sget-object v3, Lcom/android/internal/telephony/CommandException$Error;->SIM_PUK2:Lcom/android/internal/telephony/CommandException$Error;
 
-    if-ne v1, v3, :cond_b
+    if-ne v1, v3, :cond_c
 
-    .line 1480
+    .line 1486
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     const v4, 0x2040115
@@ -3409,12 +3422,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1483
+    .line 1489
     const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1484
+    .line 1490
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v4, 0x10400e4
@@ -3425,22 +3438,22 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 1486
-    :cond_b
+    .line 1492
+    :cond_c
     sget-object v3, Lcom/android/internal/telephony/CommandException$Error;->FDN_CHECK_FAILURE:Lcom/android/internal/telephony/CommandException$Error;
 
-    if-ne v1, v3, :cond_c
+    if-ne v1, v3, :cond_d
 
-    .line 1487
+    .line 1493
     const-string v3, "GSM"
 
     const-string v4, "FDN_CHECK_FAILURE"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1488
+    .line 1494
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v4, 0x10400d6
@@ -3451,20 +3464,20 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 1494
-    :cond_c
+    .line 1500
+    :cond_d
     sget-object v3, Lcom/android/internal/telephony/CommandException$Error;->DUE_TO_FDN:Lcom/android/internal/telephony/CommandException$Error;
 
-    if-eq v1, v3, :cond_d
+    if-eq v1, v3, :cond_e
 
     sget-object v3, Lcom/android/internal/telephony/CommandException$Error;->FDN_CHECK_FAILURE:Lcom/android/internal/telephony/CommandException$Error;
 
-    if-ne v1, v3, :cond_e
+    if-ne v1, v3, :cond_f
 
-    .line 1496
-    :cond_d
+    .line 1502
+    :cond_e
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->htcContext:Landroid/content/Context;
 
     const v4, 0x2040134
@@ -3475,10 +3488,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 1498
-    :cond_e
+    .line 1504
+    :cond_f
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
 
     const-string v4, "04"
@@ -3487,14 +3500,14 @@
 
     move-result v3
 
-    if-eqz v3, :cond_f
+    if-eqz v3, :cond_10
 
     aget v3, v0, v8
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
-    .line 1502
-    :cond_f
+    .line 1508
+    :cond_10
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
 
     const-string v4, "05"
@@ -3503,29 +3516,13 @@
 
     move-result v3
 
-    if-eqz v3, :cond_10
+    if-eqz v3, :cond_11
 
     aget v3, v0, v7
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
-    .line 1507
-    :cond_10
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
-
-    const v4, 0x10400d5
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_1
-
-    .line 1512
-    .end local v0           #SimStatus:[I
-    .end local v1           #err:Lcom/android/internal/telephony/CommandException$Error;
+    .line 1513
     :cond_11
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -3537,183 +3534,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 1515
+    .line 1518
+    .end local v0           #SimStatus:[I
+    .end local v1           #err:Lcom/android/internal/telephony/CommandException$Error;
     :cond_12
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isActivate()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_13
-
-    .line 1516
-    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
-
-    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
-
-    .line 1517
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
-
-    const v4, 0x10400d7
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1520
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
-
-    const-string v4, "31"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 1521
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
-
-    invoke-virtual {v3, v7}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
-
-    goto/16 :goto_1
-
-    .line 1523
-    :cond_13
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isDeactivate()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_14
-
-    .line 1524
-    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
-
-    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
-
-    .line 1525
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
-
-    const v4, 0x10400d9
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1528
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
-
-    const-string v4, "31"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 1529
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
-
-    invoke-virtual {v3, v9}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
-
-    goto/16 :goto_1
-
-    .line 1531
-    :cond_14
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isRegister()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_15
-
-    .line 1532
-    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
-
-    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
-
-    .line 1533
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
-
-    const v4, 0x10400da
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1537
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
-
-    const-string v4, "31"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 1538
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
-
-    invoke-virtual {v3, v7}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
-
-    goto/16 :goto_1
-
-    .line 1541
-    :cond_15
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isErasure()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_16
-
-    .line 1542
-    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
-
-    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
-
-    .line 1543
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
-
-    const v4, 0x10400db
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    .line 1547
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
-
-    const-string v4, "31"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 1548
-    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
-
-    invoke-virtual {v3, v9}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
-
-    goto/16 :goto_1
-
-    .line 1552
-    :cond_16
-    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
-
-    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
-
-    .line 1553
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
     const v4, 0x10400d5
@@ -3724,7 +3550,194 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_1
+    goto/16 :goto_2
+
+    .line 1521
+    :cond_13
+    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isActivate()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_14
+
+    .line 1522
+    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
+
+    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
+
+    .line 1523
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
+
+    const v4, 0x10400d7
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1526
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
+
+    const-string v4, "31"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 1527
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
+
+    invoke-virtual {v3, v7}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
+
+    goto/16 :goto_2
+
+    .line 1529
+    :cond_14
+    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isDeactivate()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_15
+
+    .line 1530
+    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
+
+    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
+
+    .line 1531
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
+
+    const v4, 0x10400d9
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1534
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
+
+    const-string v4, "31"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 1535
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
+
+    invoke-virtual {v3, v9}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
+
+    goto/16 :goto_2
+
+    .line 1537
+    :cond_15
+    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isRegister()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_16
+
+    .line 1538
+    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
+
+    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
+
+    .line 1539
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
+
+    const v4, 0x10400da
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1543
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
+
+    const-string v4, "31"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 1544
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
+
+    invoke-virtual {v3, v7}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
+
+    goto/16 :goto_2
+
+    .line 1547
+    :cond_16
+    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isErasure()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_17
+
+    .line 1548
+    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
+
+    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
+
+    .line 1549
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
+
+    const v4, 0x10400db
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 1553
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
+
+    const-string v4, "31"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 1554
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
+
+    invoke-virtual {v3, v9}, Lcom/android/internal/telephony/gsm/GSMPhone;->saveClirSetting(I)V
+
+    goto/16 :goto_2
+
+    .line 1558
+    :cond_17
+    sget-object v3, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
+
+    iput-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->state:Lcom/android/internal/telephony/MmiCode$State;
+
+    .line 1559
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
+
+    const v4, 0x10400d5
+
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_2
 .end method
 
 .method static scToBarringFacility(Ljava/lang/String;)Ljava/lang/String;
@@ -4158,16 +4171,16 @@
     .parameter "serviceClass"
 
     .prologue
-    .line 1653
+    .line 1659
     sparse-switch p1, :sswitch_data_0
 
-    .line 1671
+    .line 1677
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 1655
+    .line 1661
     :sswitch_0
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4179,7 +4192,7 @@
 
     goto :goto_0
 
-    .line 1657
+    .line 1663
     :sswitch_1
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4191,7 +4204,7 @@
 
     goto :goto_0
 
-    .line 1659
+    .line 1665
     :sswitch_2
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4203,7 +4216,7 @@
 
     goto :goto_0
 
-    .line 1661
+    .line 1667
     :sswitch_3
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4215,7 +4228,7 @@
 
     goto :goto_0
 
-    .line 1663
+    .line 1669
     :sswitch_4
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4227,7 +4240,7 @@
 
     goto :goto_0
 
-    .line 1665
+    .line 1671
     :sswitch_5
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4239,7 +4252,7 @@
 
     goto :goto_0
 
-    .line 1667
+    .line 1673
     :sswitch_6
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4251,7 +4264,7 @@
 
     goto :goto_0
 
-    .line 1669
+    .line 1675
     :sswitch_7
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->context:Landroid/content/Context;
 
@@ -4263,7 +4276,7 @@
 
     goto :goto_0
 
-    .line 1653
+    .line 1659
     nop
 
     :sswitch_data_0
@@ -4510,7 +4523,7 @@
     .line 584
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v0, v0, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v1, 0x7
 
@@ -5737,7 +5750,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x1
 
@@ -5775,7 +5788,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x0
 
@@ -5806,7 +5819,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x5
 
@@ -5878,7 +5891,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x1
 
@@ -5916,7 +5929,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x2
 
@@ -5947,7 +5960,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x2
 
@@ -6064,7 +6077,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x3
 
@@ -6131,7 +6144,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x6
 
@@ -6287,7 +6300,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x5
 
@@ -6323,7 +6336,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v10, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v10, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isActivate()Z
 
@@ -6445,7 +6458,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x1
 
@@ -6551,7 +6564,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->isActivate()Z
 
@@ -6584,7 +6597,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v4, v4, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v10, 0x5
 
@@ -7061,7 +7074,7 @@
     .line 1214
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
-    iget-object v0, v0, Lcom/android/internal/telephony/PhoneBase;->mCM:Lcom/android/internal/telephony/CommandsInterface;
+    iget-object v0, v0, Lcom/android/internal/telephony/gsm/GSMPhone;->mCM:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v1, 0x4
 
@@ -7073,4 +7086,278 @@
 
     .line 1216
     return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 1918
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "GsmMmiCode {"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1920
+    .local v0, sb:Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "State="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmMmiCode;->getState()Lcom/android/internal/telephony/MmiCode$State;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1921
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->action:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " action="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->action:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1922
+    :cond_0
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " sc="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sc:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1923
+    :cond_1
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sia:Ljava/lang/String;
+
+    if-eqz v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " sia="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sia:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1924
+    :cond_2
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sib:Ljava/lang/String;
+
+    if-eqz v1, :cond_3
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " sib="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sib:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1925
+    :cond_3
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sic:Ljava/lang/String;
+
+    if-eqz v1, :cond_4
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " sic="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->sic:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1926
+    :cond_4
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->poundString:Ljava/lang/String;
+
+    if-eqz v1, :cond_5
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " poundString="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->poundString:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1927
+    :cond_5
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->dialingNumber:Ljava/lang/String;
+
+    if-eqz v1, :cond_6
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " dialingNumber="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->dialingNumber:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1928
+    :cond_6
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->pwd:Ljava/lang/String;
+
+    if-eqz v1, :cond_7
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, " pwd="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmMmiCode;->pwd:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1929
+    :cond_7
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1930
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
 .end method

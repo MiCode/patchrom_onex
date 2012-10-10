@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3028
+    .line 3383
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,29 +41,29 @@
     .locals 4
 
     .prologue
-    .line 3030
+    .line 3385
     const/4 v1, 0x0
 
-    .line 3031
+    .line 3386
     .local v1, text:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 3032
+    .line 3387
     .local v0, count:I
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 3033
+    .line 3388
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
 
     move-result-object v2
 
@@ -71,24 +71,24 @@
 
     move-result v0
 
-    .line 3034
+    .line 3389
     :cond_0
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
-    invoke-static {v2, v0}, Lcom/htc/app/FilePickerCore;->access$4400(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
+    invoke-static {v2, v0}, Lcom/htc/app/FilePickerCore;->access$6100(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3035
+    .line 3390
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     const v3, 0x20200a9
 
     #calls: Lcom/htc/app/FilePickerCore;->setListViewHeaderText(ILjava/lang/String;)V
-    invoke-static {v2, v3, v1}, Lcom/htc/app/FilePickerCore;->access$4500(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
+    invoke-static {v2, v3, v1}, Lcom/htc/app/FilePickerCore;->access$6200(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
 
-    .line 3036
+    .line 3391
     return-void
 .end method
 
@@ -97,25 +97,25 @@
     .parameter "currentSearchedFileCount"
 
     .prologue
-    .line 3040
+    .line 3395
     const/4 v0, 0x0
 
-    .line 3041
+    .line 3396
     .local v0, count:I
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 3042
+    .line 3397
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
 
     move-result-object v2
 
@@ -123,7 +123,7 @@
 
     move-result v0
 
-    .line 3043
+    .line 3398
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -147,16 +147,16 @@
 
     move-result-object v1
 
-    .line 3044
+    .line 3399
     .local v1, text:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     const v3, 0x20200a9
 
     #calls: Lcom/htc/app/FilePickerCore;->setListViewHeaderText(ILjava/lang/String;)V
-    invoke-static {v2, v3, v1}, Lcom/htc/app/FilePickerCore;->access$4500(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
+    invoke-static {v2, v3, v1}, Lcom/htc/app/FilePickerCore;->access$6200(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
 
-    .line 3045
+    .line 3400
     return-void
 .end method
 
@@ -166,11 +166,11 @@
     .prologue
     const v6, 0x20200a9
 
-    .line 3048
+    .line 3403
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$2300(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$3800(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -178,33 +178,33 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3049
+    .line 3404
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     const/4 v3, 0x1
 
     #setter for: Lcom/htc/app/FilePickerCore;->mIsFavoriteStopScan:Z
-    invoke-static {v2, v3}, Lcom/htc/app/FilePickerCore;->access$4702(Lcom/htc/app/FilePickerCore;Z)Z
+    invoke-static {v2, v3}, Lcom/htc/app/FilePickerCore;->access$6402(Lcom/htc/app/FilePickerCore;Z)Z
 
-    .line 3050
+    .line 3405
     const/4 v0, 0x0
 
-    .line 3051
+    .line 3406
     .local v0, fileCount:I
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 3052
+    .line 3407
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFavoritesAdapter:Lcom/htc/app/FilePickerListAdapter;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$5900(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerListAdapter;
 
     move-result-object v2
 
@@ -212,15 +212,15 @@
 
     move-result v0
 
-    .line 3054
+    .line 3409
     :cond_0
     if-nez v0, :cond_1
 
-    .line 3055
+    .line 3410
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$2300(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$3800(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -228,7 +228,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3056
+    .line 3411
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerCore;->getFavoritesFragment()Lcom/htc/app/FilePickerFavoritesFragment;
@@ -237,11 +237,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 3057
+    .line 3412
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$2300(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$3800(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -249,7 +249,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3058
+    .line 3413
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v2}, Lcom/htc/app/FilePickerCore;->getFavoritesFragment()Lcom/htc/app/FilePickerFavoritesFragment;
@@ -262,40 +262,40 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/htc/app/FilePickerFavoritesFragment;->NotifyToDoTask(IJ)V
 
-    .line 3065
+    .line 3420
     :cond_1
     :goto_0
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->getFileCountString(I)Ljava/lang/String;
-    invoke-static {v2, v0}, Lcom/htc/app/FilePickerCore;->access$4400(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
+    invoke-static {v2, v0}, Lcom/htc/app/FilePickerCore;->access$6100(Lcom/htc/app/FilePickerCore;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3066
+    .line 3421
     .local v1, text:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->setListViewHeaderText(ILjava/lang/String;)V
-    invoke-static {v2, v6, v1}, Lcom/htc/app/FilePickerCore;->access$4500(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
+    invoke-static {v2, v6, v1}, Lcom/htc/app/FilePickerCore;->access$6200(Lcom/htc/app/FilePickerCore;ILjava/lang/String;)V
 
-    .line 3067
+    .line 3422
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v6, v3}, Lcom/htc/app/FilePickerCore;->setListViewHeaderAnimationEnabled(IZ)V
 
-    .line 3068
+    .line 3423
     return-void
 
-    .line 3061
+    .line 3416
     .end local v1           #text:Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lcom/htc/app/FilePickerCore$13;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->TAG:Ljava/lang/String;
-    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$2300(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/htc/app/FilePickerCore;->access$3800(Lcom/htc/app/FilePickerCore;)Ljava/lang/String;
 
     move-result-object v2
 

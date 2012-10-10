@@ -611,7 +611,7 @@
 
     const/4 v2, 0x6
 
-    const-string v3, "\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012F\n\u0015PhysicalDeviceModelID\u0018H \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012:\n\u0008RegionId\u0018\u009a\u0006 \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u000e\n\u0005State\u0018\u00a3\u000b \u0001(\u0008\"\u00f9\u0004\n\nHFootprint\u0012\u0010\n\u0007Address\u0018\u00d6\u000e \u0001(\t\u0012\u0013\n\nCreateDate\u0018\u009d\u0007 \u0001(\u0003\u0012\u0014\n\u000bDescription\u0018\u00d2\u000c \u0001(\t\u0012O\n\u0013FootprintCategories\u0018\u00e1\u000c \u0003(\u000b21.Communications.HandsetObjects.HFootprintCategory\u0012#\n\u001aFootprintCategoriesUpdated\u0018\u00a5\u000f \u0002(\u0008\u0012H\n\u000fFootpri"
+    const-string/jumbo v3, "\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012F\n\u0015PhysicalDeviceModelID\u0018H \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012:\n\u0008RegionId\u0018\u009a\u0006 \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u000e\n\u0005State\u0018\u00a3\u000b \u0001(\u0008\"\u00f9\u0004\n\nHFootprint\u0012\u0010\n\u0007Address\u0018\u00d6\u000e \u0001(\t\u0012\u0013\n\nCreateDate\u0018\u009d\u0007 \u0001(\u0003\u0012\u0014\n\u000bDescription\u0018\u00d2\u000c \u0001(\t\u0012O\n\u0013FootprintCategories\u0018\u00e1\u000c \u0003(\u000b21.Communications.HandsetObjects.HFootprintCategory\u0012#\n\u001aFootprintCategoriesUpdated\u0018\u00a5\u000f \u0002(\u0008\u0012H\n\u000fFootpri"
 
     aput-object v3, v1, v2
 
@@ -689,7 +689,7 @@
 
     const/16 v2, 0x13
 
-    const-string v3, "yProfilePhoneNumbers\u0018\u00e3\u000b \u0003(\u000b24.Communications.HandsetObjects.HMyProfilePhoneNumber\u0012%\n\u001cMyProfilePhoneNumbersUpdated\u0018\u00f7\t \u0002(\u0008\u0012K\n\u0011MyProfileWebSites\u0018/ \u0003(\u000b20.Communications.HandsetObjects.HMyProfileWebSite\u0012!\n\u0018MyProfileWebSitesUpdated\u0018\u00f7\u000e \u0002(\u0008\u0012\u0013\n\nNameSuffix\u0018\u009b\u000e \u0001(\t\u0012\u0012\n\tTimestamp\u0018\u0091\u0004 \u0001(\u0003\"M\n\u000cAddMyProfile\u0012=\n\tmyProfile\u0018\u00f6\u0007 \u0002(\u000b2).Communications.HandsetObjects.HMyProfile\"P\n\u000fUpdateMyProfile\u0012=\n\tmyProfile\u0018\u00f6\u0007 \u0002(\u000b2).Commun"
+    const-string/jumbo v3, "yProfilePhoneNumbers\u0018\u00e3\u000b \u0003(\u000b24.Communications.HandsetObjects.HMyProfilePhoneNumber\u0012%\n\u001cMyProfilePhoneNumbersUpdated\u0018\u00f7\t \u0002(\u0008\u0012K\n\u0011MyProfileWebSites\u0018/ \u0003(\u000b20.Communications.HandsetObjects.HMyProfileWebSite\u0012!\n\u0018MyProfileWebSitesUpdated\u0018\u00f7\u000e \u0002(\u0008\u0012\u0013\n\nNameSuffix\u0018\u009b\u000e \u0001(\t\u0012\u0012\n\tTimestamp\u0018\u0091\u0004 \u0001(\u0003\"M\n\u000cAddMyProfile\u0012=\n\tmyProfile\u0018\u00f6\u0007 \u0002(\u000b2).Communications.HandsetObjects.HMyProfile\"P\n\u000fUpdateMyProfile\u0012=\n\tmyProfile\u0018\u00f6\u0007 \u0002(\u000b2).Commun"
 
     aput-object v3, v1, v2
 
@@ -701,7 +701,7 @@
 
     const/16 v2, 0x15
 
-    const-string v3, "\u0091\u0004 \u0001(\u0003\u0012\u0010\n\u0007ZipCode\u0018\u00a6\u0003 \u0001(\t\"I\n\u0013HProfileAddressType\u0012\u000f\n\u000bAddressWork\u0010\u0001\u0012\u000f\n\u000bAddressHome\u0010\u0002\u0012\u0010\n\u000cAddressOther\u0010\u0003\"\u00c7\u0003\n\u0016HMyProfileEmailAddress\u0012\u0015\n\u000cEmailAddress\u0018\u00d8\u000e \u0001(\t\u0012i\n\u0010EmailAddressType\u0018\u00c6\u0004 \u0001(\u000e2N.Communications.HandsetObjects.HMyProfileEmailAddress.HProfileEmailAddressType\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012=\n\u000bMyProfileId\u0018\u00a7\u000b \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u0011\n\u0008Priority\u0018\u00d6\u000b \u0001(\u0005\u0012\u0012\n\tTime"
+    const-string/jumbo v3, "\u0091\u0004 \u0001(\u0003\u0012\u0010\n\u0007ZipCode\u0018\u00a6\u0003 \u0001(\t\"I\n\u0013HProfileAddressType\u0012\u000f\n\u000bAddressWork\u0010\u0001\u0012\u000f\n\u000bAddressHome\u0010\u0002\u0012\u0010\n\u000cAddressOther\u0010\u0003\"\u00c7\u0003\n\u0016HMyProfileEmailAddress\u0012\u0015\n\u000cEmailAddress\u0018\u00d8\u000e \u0001(\t\u0012i\n\u0010EmailAddressType\u0018\u00c6\u0004 \u0001(\u000e2N.Communications.HandsetObjects.HMyProfileEmailAddress.HProfileEmailAddressType\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012=\n\u000bMyProfileId\u0018\u00a7\u000b \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u0011\n\u0008Priority\u0018\u00d6\u000b \u0001(\u0005\u0012\u0012\n\tTime"
 
     aput-object v3, v1, v2
 
@@ -719,7 +719,7 @@
 
     const/16 v2, 0x18
 
-    const-string v3, "\u00e7\u0002\n\u001cHMyProfileInstantMessagingID\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u001b\n\u0012InstantMessagingID\u0018\u008e\n \u0001(\t\u0012\u001d\n\u0014InstantMessagingType\u0018\u00b3\u000c \u0001(\u0005\u0012=\n\u000bMyProfileId\u0018\u00a7\u000b \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u0011\n\u0008Priority\u0018\u00d6\u000b \u0001(\u0005\u0012\u0012\n\tTimestamp\u0018\u0091\u0004 \u0001(\u0003\"o\n\u0014HInsantMessagingType\u0012\u0007\n\u0003AIM\u0010\u0001\u0012\u000f\n\u000bWindowsLive\u0010\u0002\u0012\u0010\n\u000cYahooOrSkype\u0010\u0003\u0012\u0006\n\u0002QQ\u0010\u0004\u0012\u000e\n\nGoogleTalk\u0010\u0005\u0012\u0007\n\u0003ICQ\u0010\u0006\u0012\n\n\u0006Jabber\u0010\u0007\"\u00bb\u0001\n\u000eHMyProfileNote\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Comm"
+    const-string/jumbo v3, "\u00e7\u0002\n\u001cHMyProfileInstantMessagingID\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u001b\n\u0012InstantMessagingID\u0018\u008e\n \u0001(\t\u0012\u001d\n\u0014InstantMessagingType\u0018\u00b3\u000c \u0001(\u0005\u0012=\n\u000bMyProfileId\u0018\u00a7\u000b \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u0011\n\u0008Priority\u0018\u00d6\u000b \u0001(\u0005\u0012\u0012\n\tTimestamp\u0018\u0091\u0004 \u0001(\u0003\"o\n\u0014HInsantMessagingType\u0012\u0007\n\u0003AIM\u0010\u0001\u0012\u000f\n\u000bWindowsLive\u0010\u0002\u0012\u0010\n\u000cYahooOrSkype\u0010\u0003\u0012\u0006\n\u0002QQ\u0010\u0004\u0012\u000e\n\nGoogleTalk\u0010\u0005\u0012\u0007\n\u0003ICQ\u0010\u0006\u0012\n\n\u0006Jabber\u0010\u0007\"\u00bb\u0001\n\u000eHMyProfileNote\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Comm"
 
     aput-object v3, v1, v2
 
@@ -791,7 +791,7 @@
 
     const/16 v2, 0x24
 
-    const-string v3, "ype\u0018\u00c7\u0008 \u0001(\t\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\r\n\u0004Name\u0018\u00dc\u0003 \u0001(\t\u0012:\n\u0008PersonId\u0018\u00a2\t \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u0012\n\tTimestamp\u0018\u0091\u0004 \u0001(\u0003\"\u00c2\u0004\n\u0012HPersonPhoneNumber\u0012\u001d\n\u0014CanonicalPhoneNumber\u0018\u00c8\t \u0001(\u0003\u0012\u001b\n\u0012DisplayPhoneNumber\u0018\u00eb\u0007 \u0001(\t\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012:\n\u0008PersonId\u0018\u00a2\t \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012b\n\u000fPhoneNumberType\u0018\u0089\u000c \u0001(\u000e2H.Communications."
+    const-string/jumbo v3, "ype\u0018\u00c7\u0008 \u0001(\t\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\r\n\u0004Name\u0018\u00dc\u0003 \u0001(\t\u0012:\n\u0008PersonId\u0018\u00a2\t \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012\u0012\n\tTimestamp\u0018\u0091\u0004 \u0001(\u0003\"\u00c2\u0004\n\u0012HPersonPhoneNumber\u0012\u001d\n\u0014CanonicalPhoneNumber\u0018\u00c8\t \u0001(\u0003\u0012\u001b\n\u0012DisplayPhoneNumber\u0018\u00eb\u0007 \u0001(\t\u00124\n\u0002Id\u0018\u0092\n \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012:\n\u0008PersonId\u0018\u00a2\t \u0001(\u000b2\'.Communications.HandsetObjects.UniqueId\u0012b\n\u000fPhoneNumberType\u0018\u0089\u000c \u0001(\u000e2H.Communications."
 
     aput-object v3, v1, v2
 

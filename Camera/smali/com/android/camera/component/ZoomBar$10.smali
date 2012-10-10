@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 292
+    .line 293
     iput-object p1, p0, Lcom/android/camera/component/ZoomBar$10;->this$0:Lcom/android/camera/component/ZoomBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 296
+    .line 297
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Ljava/lang/Boolean;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     iget-object v0, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
@@ -79,17 +79,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
+    .line 298
     iget-object v0, p0, Lcom/android/camera/component/ZoomBar$10;->this$0:Lcom/android/camera/component/ZoomBar;
 
     #calls: Lcom/android/camera/component/ZoomBar;->showZoomBar()V
     invoke-static {v0}, Lcom/android/camera/component/ZoomBar;->access$600(Lcom/android/camera/component/ZoomBar;)V
 
-    .line 300
+    .line 301
     :goto_0
     return-void
 
-    .line 299
+    .line 300
     :cond_0
     iget-object v0, p0, Lcom/android/camera/component/ZoomBar$10;->this$0:Lcom/android/camera/component/ZoomBar;
 

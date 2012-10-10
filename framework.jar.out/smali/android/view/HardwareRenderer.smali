@@ -69,7 +69,7 @@
 
     iput-boolean v0, p0, Landroid/view/HardwareRenderer;->mRequested:Z
 
-    .line 967
+    .line 995
     return-void
 .end method
 
@@ -171,6 +171,18 @@
     invoke-static {p0, p1, p2}, Landroid/view/HardwareRenderer$Gl20Renderer;->GLES20SetCacheConfig(IIF)V
 
     .line 382
+    return-void
+.end method
+
+.method public static setCacheConfig(Ljava/lang/String;)V
+    .locals 0
+    .parameter "configStr"
+
+    .prologue
+    .line 395
+    invoke-static {p0}, Landroid/view/HardwareRenderer$Gl20Renderer;->GLES20SetCacheConfig(Ljava/lang/String;)V
+
+    .line 396
     return-void
 .end method
 
@@ -300,7 +312,7 @@
     .locals 1
 
     .prologue
-    .line 390
+    .line 404
     iget-boolean v0, p0, Landroid/view/HardwareRenderer;->mEnabled:Z
 
     return v0
@@ -310,7 +322,7 @@
     .locals 1
 
     .prologue
-    .line 409
+    .line 423
     iget-boolean v0, p0, Landroid/view/HardwareRenderer;->mRequested:Z
 
     return v0
@@ -321,10 +333,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 399
+    .line 413
     iput-boolean p1, p0, Landroid/view/HardwareRenderer;->mEnabled:Z
 
-    .line 400
+    .line 414
     return-void
 .end method
 
@@ -333,10 +345,10 @@
     .parameter "requested"
 
     .prologue
-    .line 419
+    .line 433
     iput-boolean p1, p0, Landroid/view/HardwareRenderer;->mRequested:Z
 
-    .line 420
+    .line 434
     return-void
 .end method
 

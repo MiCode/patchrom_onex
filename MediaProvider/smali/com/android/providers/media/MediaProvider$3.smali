@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 693
+    .line 702
     iput-object p1, p0, Lcom/android/providers/media/MediaProvider$3;->this$0:Lcom/android/providers/media/MediaProvider;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "service"
 
     .prologue
-    .line 695
+    .line 704
     monitor-enter p0
 
-    .line 696
+    .line 705
     :try_start_0
     iget-object v0, p0, Lcom/android/providers/media/MediaProvider$3;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -57,13 +57,13 @@
     #setter for: Lcom/android/providers/media/MediaProvider;->mMtpService:Lcom/android/providers/media/IMtpService;
     invoke-static {v0, v1}, Lcom/android/providers/media/MediaProvider;->access$1002(Lcom/android/providers/media/MediaProvider;Lcom/android/providers/media/IMtpService;)Lcom/android/providers/media/IMtpService;
 
-    .line 697
+    .line 706
     monitor-exit p0
 
-    .line 698
+    .line 707
     return-void
 
-    .line 697
+    .line 706
     :catchall_0
     move-exception v0
 
@@ -79,10 +79,10 @@
     .parameter "className"
 
     .prologue
-    .line 701
+    .line 710
     monitor-enter p0
 
-    .line 702
+    .line 711
     :try_start_0
     iget-object v0, p0, Lcom/android/providers/media/MediaProvider$3;->this$0:Lcom/android/providers/media/MediaProvider;
 
@@ -91,13 +91,13 @@
     #setter for: Lcom/android/providers/media/MediaProvider;->mMtpService:Lcom/android/providers/media/IMtpService;
     invoke-static {v0, v1}, Lcom/android/providers/media/MediaProvider;->access$1002(Lcom/android/providers/media/MediaProvider;Lcom/android/providers/media/IMtpService;)Lcom/android/providers/media/IMtpService;
 
-    .line 703
+    .line 712
     monitor-exit p0
 
-    .line 704
+    .line 713
     return-void
 
-    .line 703
+    .line 712
     :catchall_0
     move-exception v0
 

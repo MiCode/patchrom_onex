@@ -36,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 195
+    .line 205
     new-instance v0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult$1;-><init>()V
@@ -53,96 +53,96 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 139
+    .line 148
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 140
+    .line 149
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 141
+    .line 150
     .local v1, tmp:I
     if-lez v1, :cond_0
 
-    .line 142
+    .line 151
     new-array v2, v1, [B
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ck:[B
 
-    .line 143
+    .line 152
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ck:[B
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 148
+    .line 157
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 149
+    .line 158
     if-lez v1, :cond_1
 
-    .line 150
+    .line 159
     new-array v2, v1, [B
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ik:[B
 
-    .line 151
+    .line 160
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ik:[B
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 156
+    .line 165
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 157
+    .line 166
     if-lez v1, :cond_2
 
-    .line 158
+    .line 167
     new-array v2, v1, [B
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->res:[B
 
-    .line 159
+    .line 168
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->res:[B
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 164
+    .line 173
     :goto_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 165
+    .line 174
     if-lez v1, :cond_3
 
-    .line 166
+    .line 175
     new-array v2, v1, [B
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->auts:[B
 
-    .line 167
+    .line 176
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->auts:[B
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 172
+    .line 181
     :goto_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 173
+    .line 182
     .local v0, exception:Ljava/lang/String;
     if-eqz v0, :cond_a
 
-    .line 174
+    .line 183
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_SIM_TYPE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->toString()Ljava/lang/String;
@@ -155,7 +155,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 175
+    .line 184
     new-instance v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     sget-object v3, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_SIM_TYPE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
@@ -164,36 +164,36 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ex:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
-    .line 193
+    .line 202
     :goto_4
     return-void
 
-    .line 145
+    .line 154
     .end local v0           #exception:Ljava/lang/String;
     :cond_0
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ck:[B
 
     goto :goto_0
 
-    .line 153
+    .line 162
     :cond_1
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ik:[B
 
     goto :goto_1
 
-    .line 161
+    .line 170
     :cond_2
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->res:[B
 
     goto :goto_2
 
-    .line 169
+    .line 178
     :cond_3
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->auts:[B
 
     goto :goto_3
 
-    .line 176
+    .line 185
     .restart local v0       #exception:Ljava/lang/String;
     :cond_4
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
@@ -208,7 +208,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 177
+    .line 186
     new-instance v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     sget-object v3, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
@@ -219,7 +219,7 @@
 
     goto :goto_4
 
-    .line 178
+    .line 187
     :cond_5
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SERVICE_FAILURE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
@@ -233,7 +233,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 179
+    .line 188
     new-instance v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     sget-object v3, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SERVICE_FAILURE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
@@ -244,7 +244,7 @@
 
     goto :goto_4
 
-    .line 180
+    .line 189
     :cond_6
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->USER_AUTHENTICATION_REJECTED:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
@@ -258,7 +258,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 181
+    .line 190
     new-instance v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     sget-object v3, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->USER_AUTHENTICATION_REJECTED:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
@@ -269,7 +269,7 @@
 
     goto :goto_4
 
-    .line 182
+    .line 191
     :cond_7
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->NO_SUCH_AUTHENTICATION:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
@@ -283,7 +283,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 183
+    .line 192
     new-instance v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     sget-object v3, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->NO_SUCH_AUTHENTICATION:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
@@ -294,7 +294,7 @@
 
     goto :goto_4
 
-    .line 184
+    .line 193
     :cond_8
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SYNC_FAILURE_EXCEPTION:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
@@ -308,7 +308,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 185
+    .line 194
     new-instance v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     sget-object v3, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SYNC_FAILURE_EXCEPTION:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
@@ -319,13 +319,13 @@
 
     goto :goto_4
 
-    .line 187
+    .line 196
     :cond_9
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ex:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     goto :goto_4
 
-    .line 191
+    .line 200
     :cond_a
     iput-object v3, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ex:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
@@ -412,7 +412,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 107
     const/4 v0, 0x0
 
     return v0
@@ -422,7 +422,7 @@
     .locals 1
 
     .prologue
-    .line 63
+    .line 64
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->auts:[B
 
     return-object v0
@@ -432,7 +432,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 91
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ck:[B
 
     return-object v0
@@ -442,7 +442,7 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 74
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ex:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     if-eqz v0, :cond_0
@@ -464,7 +464,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 69
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ex:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     return-object v0
@@ -474,7 +474,7 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 96
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ik:[B
 
     return-object v0
@@ -484,7 +484,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 101
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->res:[B
 
     return-object v0
@@ -496,7 +496,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 76
+    .line 80
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ex:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
     if-eqz v1, :cond_0
@@ -509,7 +509,7 @@
 
     move-result-object v0
 
-    .line 77
+    .line 81
     .local v0, exception:Ljava/lang/String;
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -620,7 +620,7 @@
 
     return-object v1
 
-    .line 76
+    .line 80
     .end local v0           #exception:Ljava/lang/String;
     :cond_0
     const-string v0, "None"
@@ -636,78 +636,78 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 104
+    .line 113
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ck:[B
 
     if-eqz v0, :cond_0
 
-    .line 105
+    .line 114
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ck:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
+    .line 115
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ck:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 112
+    .line 121
     :goto_0
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ik:[B
 
     if-eqz v0, :cond_1
 
-    .line 113
+    .line 122
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ik:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 114
+    .line 123
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ik:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 120
+    .line 129
     :goto_1
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->res:[B
 
     if-eqz v0, :cond_2
 
-    .line 121
+    .line 130
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->res:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 122
+    .line 131
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->res:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 128
+    .line 137
     :goto_2
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->auts:[B
 
     if-eqz v0, :cond_3
 
-    .line 129
+    .line 138
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->auts:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 130
+    .line 139
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->auts:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 136
+    .line 145
     :goto_3
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcAkaAuthenticationResult;->ex:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException;
 
@@ -724,34 +724,34 @@
     :goto_4
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 137
+    .line 146
     return-void
 
-    .line 109
+    .line 118
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 117
+    .line 126
     :cond_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_1
 
-    .line 125
+    .line 134
     :cond_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_2
 
-    .line 133
+    .line 142
     :cond_3
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_3
 
-    .line 136
+    .line 145
     :cond_4
     const/4 v0, 0x0
 

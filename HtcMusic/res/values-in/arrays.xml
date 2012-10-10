@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Penguat bass</item>
+        <item>Penguat tengah (Vokal)</item>
+        <item>Penguat treble</item>
+        <item>kenyaringan</item>
+        <item>Langsung</item>
+        <item>Dance (Beat)</item>
+        <item>Kehangatan</item>
+        <item>Pemanis (Udara)</item>
+        <item>Lebar</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Tanpa efek</item>
+        <item>Dolby Mobile</item>
+        <item>Peningkatan SRS</item>
+        <item>Ekualiser (headphone saja)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Rilis baru</item>
+        <item>100 album teratas</item>
+        <item>100 teratas</item>
+        <item>Saluran</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatif</item>
+        <item>Dance &amp;amp; House</item>
+        <item>Electronik</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

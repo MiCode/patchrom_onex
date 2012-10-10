@@ -30,12 +30,12 @@
     .parameter "context"
 
     .prologue
-    .line 1216
+    .line 1240
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/widget/ActionBarView$HomeView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1217
+    .line 1241
     return-void
 .end method
 
@@ -45,10 +45,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 1220
+    .line 1244
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1221
+    .line 1245
     return-void
 .end method
 
@@ -59,7 +59,7 @@
     .parameter "event"
 
     .prologue
-    .line 1249
+    .line 1273
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/ActionBarView$HomeView;->onHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -72,10 +72,10 @@
     .parameter "event"
 
     .prologue
-    .line 1233
+    .line 1257
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/ActionBarView$HomeView;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 1234
+    .line 1258
     const/4 v0, 0x1
 
     return v0
@@ -568,7 +568,7 @@
     .locals 2
 
     .prologue
-    .line 1259
+    .line 1283
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mUpView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -577,7 +577,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1270
+    .line 1294
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mIconView:Landroid/widget/ImageView;
 
     const/4 v1, 0x0

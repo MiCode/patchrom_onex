@@ -496,7 +496,7 @@
     .line 184
     iget-object v5, p0, Lcom/android/camera/MenuHandler;->mHTCCamera:Lcom/android/camera/HTCCamera;
 
-    const v6, 0x7f0a006a
+    const v6, 0x7f0a0071
 
     invoke-virtual {v5, v6}, Lcom/android/camera/HTCCamera;->getString(I)Ljava/lang/String;
 
@@ -522,7 +522,7 @@
     :cond_1
     iget-object v5, p0, Lcom/android/camera/MenuHandler;->mHTCCamera:Lcom/android/camera/HTCCamera;
 
-    const v6, 0x7f0a006b
+    const v6, 0x7f0a0072
 
     invoke-virtual {v5, v6}, Lcom/android/camera/HTCCamera;->getString(I)Ljava/lang/String;
 

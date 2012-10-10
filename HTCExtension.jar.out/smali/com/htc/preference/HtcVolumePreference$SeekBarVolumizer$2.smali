@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 419
+    .line 429
     iput-object p1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$2;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -42,10 +42,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 422
+    .line 432
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 424
+    .line 434
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$2;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     #getter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->mSeekBar:Landroid/widget/SeekBar;
@@ -55,14 +55,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 425
+    .line 435
     invoke-static {}, Lcom/htc/preference/HtcVolumePreference;->access$1000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 426
+    .line 436
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$2;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     #getter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->LOG_TAG:Ljava/lang/String;
@@ -154,7 +154,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
+    .line 438
     :cond_0
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$2;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
@@ -195,7 +195,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 430
+    .line 440
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$2;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     #getter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->mSeekBar:Landroid/widget/SeekBar;
@@ -231,7 +231,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 433
+    .line 443
     :cond_1
     return-void
 .end method

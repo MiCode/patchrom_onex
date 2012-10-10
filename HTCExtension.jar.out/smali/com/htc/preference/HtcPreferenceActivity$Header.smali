@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 609
+    .line 611
     new-instance v0, Lcom/htc/preference/HtcPreferenceActivity$Header$1;
 
     invoke-direct {v0}, Lcom/htc/preference/HtcPreferenceActivity$Header$1;-><init>()V
@@ -81,15 +81,15 @@
     .locals 2
 
     .prologue
-    .line 444
+    .line 446
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 359
+    .line 361
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->id:J
 
-    .line 446
+    .line 448
     return-void
 .end method
 
@@ -98,18 +98,18 @@
     .parameter "in"
 
     .prologue
-    .line 601
+    .line 603
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 359
+    .line 361
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->id:J
 
-    .line 602
+    .line 604
     invoke-virtual {p0, p1}, Lcom/htc/preference/HtcPreferenceActivity$Header;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 603
+    .line 605
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 546
+    .line 548
     const/4 v0, 0x0
 
     return v0
@@ -130,19 +130,19 @@
     .parameter "res"
 
     .prologue
-    .line 534
+    .line 536
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitleRes:I
 
     if-eqz v0, :cond_0
 
-    .line 535
+    .line 537
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitleRes:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 537
+    .line 539
     :goto_0
     return-object v0
 
@@ -157,19 +157,19 @@
     .parameter "res"
 
     .prologue
-    .line 517
+    .line 519
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitleRes:I
 
     if-eqz v0, :cond_0
 
-    .line 518
+    .line 520
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitleRes:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 520
+    .line 522
     :goto_0
     return-object v0
 
@@ -184,19 +184,19 @@
     .parameter "res"
 
     .prologue
-    .line 477
+    .line 479
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->iconRes:I
 
     if-eqz v0, :cond_0
 
-    .line 478
+    .line 480
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->iconRes:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 480
+    .line 482
     :goto_0
     return-object v0
 
@@ -211,19 +211,19 @@
     .parameter "res"
 
     .prologue
-    .line 501
+    .line 503
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summaryRes:I
 
     if-eqz v0, :cond_0
 
-    .line 502
+    .line 504
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summaryRes:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 504
+    .line 506
     :goto_0
     return-object v0
 
@@ -238,19 +238,19 @@
     .parameter "res"
 
     .prologue
-    .line 489
+    .line 491
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->titleRes:I
 
     if-eqz v0, :cond_0
 
-    .line 490
+    .line 492
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->titleRes:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 492
+    .line 494
     :goto_0
     return-object v0
 
@@ -267,7 +267,7 @@
     .end annotation
 
     .prologue
-    .line 459
+    .line 461
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -280,37 +280,19 @@
     .parameter "in"
 
     .prologue
-    .line 582
+    .line 584
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->id:J
 
-    .line 583
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->titleRes:I
-
-    .line 584
-    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->title:Ljava/lang/CharSequence;
-
     .line 585
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summaryRes:I
+    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->titleRes:I
 
     .line 586
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -321,14 +303,14 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summary:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->title:Ljava/lang/CharSequence;
 
     .line 587
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitleRes:I
+    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summaryRes:I
 
     .line 588
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -339,14 +321,14 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitle:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summary:Ljava/lang/CharSequence;
 
     .line 589
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitleRes:I
+    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitleRes:I
 
     .line 590
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -357,44 +339,62 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitle:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitle:Ljava/lang/CharSequence;
 
     .line 591
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->iconRes:I
+    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitleRes:I
 
     .line 592
+    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitle:Ljava/lang/CharSequence;
+
+    .line 593
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->iconRes:I
+
+    .line 594
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->packageName:Ljava/lang/String;
 
-    .line 593
+    .line 595
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->fragment:Ljava/lang/String;
 
-    .line 594
+    .line 596
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->fragmentArguments:Landroid/os/Bundle;
 
-    .line 595
+    .line 597
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 596
+    .line 598
     sget-object v0, Landroid/content/Intent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -405,7 +405,7 @@
 
     iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->intent:Landroid/content/Intent;
 
-    .line 598
+    .line 600
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
@@ -413,7 +413,7 @@
 
     iput-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->extras:Landroid/os/Bundle;
 
-    .line 599
+    .line 601
     return-void
 .end method
 
@@ -423,96 +423,96 @@
     .parameter "flags"
 
     .prologue
-    .line 555
+    .line 557
     iget-wide v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->id:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 556
+    .line 558
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->titleRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 557
+    .line 559
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->title:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 558
+    .line 560
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summaryRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 559
+    .line 561
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->summary:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 560
+    .line 562
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitleRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 561
+    .line 563
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbTitle:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 562
+    .line 564
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitleRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 563
+    .line 565
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->breadCrumbShortTitle:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 564
+    .line 566
     iget v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->iconRes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 565
+    .line 567
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 566
+    .line 568
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->fragment:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 567
+    .line 569
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->fragmentArguments:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 568
+    .line 570
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->intent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
-    .line 569
+    .line 571
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 570
+    .line 572
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->intent:Landroid/content/Intent;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 574
+    .line 576
     :goto_0
     iget-object v0, p0, Lcom/htc/preference/HtcPreferenceActivity$Header;->extras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 575
+    .line 577
     return-void
 
-    .line 572
+    .line 574
     :cond_0
     const/4 v0, 0x0
 

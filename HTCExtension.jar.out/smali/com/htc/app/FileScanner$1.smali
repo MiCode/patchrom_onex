@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 694
+    .line 698
     iput-object p1, p0, Lcom/htc/app/FileScanner$1;->this$0:Lcom/htc/app/FileScanner;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "o2"
 
     .prologue
-    .line 696
+    .line 700
     check-cast p2, Ljava/util/Map$Entry;
 
     .end local p2
@@ -55,7 +55,7 @@
 
     check-cast v1, Ljava/lang/Comparable;
 
-    .line 697
+    .line 701
     .local v1, object2:Ljava/lang/Comparable;
     check-cast p1, Ljava/util/Map$Entry;
 
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    .line 698
+    .line 702
     .local v0, object1:Ljava/lang/Object;
     invoke-interface {v1, v0}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 

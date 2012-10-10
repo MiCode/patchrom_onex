@@ -1,101 +1,79 @@
-.class synthetic Lcom/android/camera/component/ObjectTrackingUI$9;
+.class Lcom/android/camera/component/ObjectTrackingUI$9;
 .super Ljava/lang/Object;
 .source "ObjectTrackingUI.java"
 
+# interfaces
+.implements Lcom/android/camera/property/PropertyChangedCallback;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/camera/component/ObjectTrackingUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/camera/component/ObjectTrackingUI;->initializeOverride()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/android/camera/property/PropertyChangedCallback",
+        "<",
+        "Lcom/android/camera/imaging/Size;",
+        ">;"
+    }
+.end annotation
 
-# static fields
-.field static final synthetic $SwitchMap$com$android$camera$UIState:[I
+
+# instance fields
+.field final synthetic this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/android/camera/component/ObjectTrackingUI;)V
+    .locals 0
+    .parameter
 
     .prologue
-    .line 199
-    invoke-static {}, Lcom/android/camera/UIState;->values()[Lcom/android/camera/UIState;
+    .line 252
+    iput-object p1, p0, Lcom/android/camera/component/ObjectTrackingUI$9;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
-    move-result-object v0
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/android/camera/component/ObjectTrackingUI$9;->$SwitchMap$com$android$camera$UIState:[I
-
-    :try_start_0
-    sget-object v0, Lcom/android/camera/component/ObjectTrackingUI$9;->$SwitchMap$com$android$camera$UIState:[I
-
-    sget-object v1, Lcom/android/camera/UIState;->Closed:Lcom/android/camera/UIState;
-
-    invoke-virtual {v1}, Lcom/android/camera/UIState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/android/camera/component/ObjectTrackingUI$9;->$SwitchMap$com$android$camera$UIState:[I
-
-    sget-object v1, Lcom/android/camera/UIState;->Opened:Lcom/android/camera/UIState;
-
-    invoke-virtual {v1}, Lcom/android/camera/UIState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/android/camera/component/ObjectTrackingUI$9;->$SwitchMap$com$android$camera$UIState:[I
-
-    sget-object v1, Lcom/android/camera/UIState;->Opening:Lcom/android/camera/UIState;
-
-    invoke-virtual {v1}, Lcom/android/camera/UIState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
-
-    :goto_2
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_2
+# virtual methods
+.method public onPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
+    .locals 1
+    .parameter
+    .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/camera/property/Property",
+            "<",
+            "Lcom/android/camera/imaging/Size;",
+            ">;",
+            "Lcom/android/camera/property/PropertyChangedEventArgs",
+            "<",
+            "Lcom/android/camera/imaging/Size;",
+            ">;)V"
+        }
+    .end annotation
 
-    :catch_1
-    move-exception v0
+    .prologue
+    .line 256
+    .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/imaging/Size;>;"
+    .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/imaging/Size;>;"
+    iget-object v0, p0, Lcom/android/camera/component/ObjectTrackingUI$9;->this$0:Lcom/android/camera/component/ObjectTrackingUI;
 
-    goto :goto_1
+    #calls: Lcom/android/camera/component/ObjectTrackingUI;->updateOtViewLayout()V
+    invoke-static {v0}, Lcom/android/camera/component/ObjectTrackingUI;->access$800(Lcom/android/camera/component/ObjectTrackingUI;)V
 
-    :catch_2
-    move-exception v0
-
-    goto :goto_0
+    .line 257
+    return-void
 .end method

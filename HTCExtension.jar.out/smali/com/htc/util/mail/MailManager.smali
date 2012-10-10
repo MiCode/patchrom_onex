@@ -63,6 +63,8 @@
     .end annotation
 .end field
 
+.field private mAccountLock:Ljava/lang/Object;
+
 .field private mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
 .field private mContext:Landroid/content/Context;
@@ -94,14 +96,14 @@
 
     sput-object v0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
-    .line 65
+    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/htc/util/mail/MailManager;->mTempAccount:Ljava/util/ArrayList;
 
-    .line 66
+    .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -118,7 +120,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 106
+    .line 107
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 58
@@ -134,39 +136,46 @@
     iput-object v2, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     .line 64
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
+
+    .line 65
     iput-object v2, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
-    .line 69
+    .line 70
     iput-object v2, p0, Lcom/htc/util/mail/MailManager;->mMailManagerListener:Lcom/htc/util/mail/IMailManagerListener;
 
-    .line 109
+    .line 110
     iput-object p1, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
 
-    .line 110
+    .line 111
     sput-object p0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
-    .line 112
+    .line 113
     new-instance v0, Lcom/htc/util/mail/MailMessageReceiver;
 
     invoke-direct {v0, p0}, Lcom/htc/util/mail/MailMessageReceiver;-><init>(Lcom/htc/util/mail/IHandleMailManagerMessage;)V
 
     iput-object v0, p0, Lcom/htc/util/mail/MailManager;->mMailMessageReceiver:Lcom/htc/util/mail/MailMessageReceiver;
 
-    .line 113
+    .line 114
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mMailMessageReceiver:Lcom/htc/util/mail/MailMessageReceiver;
 
     iget-object v1, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Lcom/htc/util/mail/MailMessageReceiver;->Active(Landroid/content/Context;)V
 
-    .line 115
+    .line 116
     new-instance v0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
     invoke-direct {v0, p0, v2}, Lcom/htc/util/mail/MailManager$HandleChangeRequester;-><init>(Lcom/htc/util/mail/MailManager;Lcom/htc/util/mail/MailManager$1;)V
 
     iput-object v0, p0, Lcom/htc/util/mail/MailManager;->mHandleChangeRequester:Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
-    .line 117
+    .line 118
     const-string v0, "MailManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -195,7 +204,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
+    .line 119
     return-void
 .end method
 
@@ -222,7 +231,7 @@
 .end method
 
 .method private buildOrGetAccounts(Landroid/database/Cursor;)Ljava/util/ArrayList;
-    .locals 21
+    .locals 22
     .parameter "cursor"
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -237,20 +246,20 @@
     .end annotation
 
     .prologue
-    .line 202
+    .line 209
     if-nez p1, :cond_0
 
-    .line 203
+    .line 210
     invoke-direct/range {p0 .. p0}, Lcom/htc/util/mail/MailManager;->releaseRealAccounts()V
 
-    .line 204
+    .line 211
     const/4 v3, 0x0
 
-    .line 264
+    .line 276
     :goto_0
     return-object v3
 
-    .line 207
+    .line 214
     :cond_0
     invoke-direct/range {p0 .. p1}, Lcom/htc/util/mail/MailManager;->isSameWithAccounts(Landroid/database/Cursor;)Z
 
@@ -258,32 +267,40 @@
 
     if-eqz v3, :cond_2
 
-    .line 208
+    .line 215
     if-eqz p1, :cond_1
 
-    .line 209
+    .line 216
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->close()V
 
-    .line 210
+    .line 217
     :cond_1
     const/16 p1, 0x0
 
-    .line 211
+    .line 218
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     goto :goto_0
 
-    .line 215
+    .line 222
     :cond_2
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
+
+    monitor-enter v4
+
+    .line 223
+    :try_start_0
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     if-nez v3, :cond_3
 
-    .line 216
+    .line 224
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
@@ -292,35 +309,46 @@
 
     iput-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
-    .line 228
+    .line 232
     :goto_1
-    :try_start_0
+    monitor-exit v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 235
+    :try_start_1
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->getCount()I
 
-    move-result v20
+    move-result v21
 
-    .line 230
-    .local v20, size:I
+    .line 237
+    .local v21, size:I
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_8
 
-    if-lez v20, :cond_6
+    if-lez v21, :cond_8
 
-    .line 231
+    .line 238
+    new-instance v20, Ljava/util/ArrayList;
+
+    invoke-direct/range {v20 .. v20}, Ljava/util/ArrayList;-><init>()V
+
+    .line 239
+    .local v20, mailAccounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
     const/16 v18, 0x0
 
     .local v18, i:I
     :goto_2
     move/from16 v0, v18
 
-    move/from16 v1, v20
+    move/from16 v1, v21
 
-    if-ge v0, v1, :cond_6
+    if-ge v0, v1, :cond_5
 
-    .line 232
+    .line 240
     new-instance v2, Lcom/htc/util/mail/RealAccount;
 
     move-object/from16 v0, p0
@@ -503,49 +531,28 @@
 
     invoke-direct/range {v2 .. v16}, Lcom/htc/util/mail/RealAccount;-><init>(Landroid/content/Context;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIIIII)V
 
-    .line 248
+    .line 256
     .local v2, account:Lcom/htc/util/mail/MailAccount;
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 250
-    move-object/from16 v0, p0
+    .line 257
+    move-object/from16 v0, v20
 
-    iget-object v4, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
-
-    monitor-enter v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    .line 251
-    :try_start_1
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 252
-    monitor-exit v4
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 231
+    .line 239
     add-int/lit8 v18, v18, 0x1
 
     goto/16 :goto_2
 
-    .line 218
+    .line 226
     .end local v2           #account:Lcom/htc/util/mail/MailAccount;
     .end local v18           #i:I
-    .end local v20           #size:I
+    .end local v20           #mailAccounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
+    .end local v21           #size:I
     :cond_3
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
-
-    monitor-enter v4
-
-    .line 219
     :try_start_2
     move-object/from16 v0, p0
 
@@ -569,13 +576,13 @@
 
     check-cast v17, Lcom/htc/util/mail/MailAccount;
 
-    .line 220
+    .line 227
     .local v17, acc:Lcom/htc/util/mail/MailAccount;
     invoke-virtual/range {v17 .. v17}, Lcom/htc/util/mail/MailAccount;->release()V
 
     goto :goto_3
 
-    .line 224
+    .line 232
     .end local v17           #acc:Lcom/htc/util/mail/MailAccount;
     .end local v19           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -587,7 +594,7 @@
 
     throw v3
 
-    .line 223
+    .line 230
     .restart local v19       #i$:Ljava/util/Iterator;
     :cond_4
     :try_start_3
@@ -596,63 +603,116 @@
     iget-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
-
-    .line 224
-    monitor-exit v4
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto/16 :goto_1
 
-    .line 252
+    .line 259
     .end local v19           #i$:Ljava/util/Iterator;
-    .restart local v2       #account:Lcom/htc/util/mail/MailAccount;
     .restart local v18       #i:I
-    .restart local v20       #size:I
+    .restart local v20       #mailAccounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
+    .restart local v21       #size:I
+    :cond_5
+    :try_start_4
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
+
+    monitor-enter v4
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    .line 260
+    if-eqz v20, :cond_7
+
+    .line 261
+    :try_start_5
+    invoke-virtual/range {v20 .. v20}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v19
+
+    .restart local v19       #i$:Ljava/util/Iterator;
+    :goto_4
+    invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/htc/util/mail/MailAccount;
+
+    .line 262
+    .restart local v2       #account:Lcom/htc/util/mail/MailAccount;
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_4
+
+    .line 265
+    .end local v2           #account:Lcom/htc/util/mail/MailAccount;
+    .end local v19           #i$:Ljava/util/Iterator;
     :catchall_1
     move-exception v3
 
-    :try_start_4
     monitor-exit v4
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :try_start_5
-    throw v3
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 256
-    .end local v2           #account:Lcom/htc/util/mail/MailAccount;
+    :try_start_6
+    throw v3
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 268
     .end local v18           #i:I
-    .end local v20           #size:I
+    .end local v20           #mailAccounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
+    .end local v21           #size:I
     :catchall_2
     move-exception v3
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
-    .line 257
+    .line 269
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->close()V
 
-    .line 258
-    :cond_5
+    .line 270
+    :cond_6
     const/16 p1, 0x0
 
     throw v3
 
-    .line 256
-    .restart local v20       #size:I
-    :cond_6
-    if-eqz p1, :cond_7
+    .line 265
+    .restart local v18       #i:I
+    .restart local v20       #mailAccounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
+    .restart local v21       #size:I
+    :cond_7
+    :try_start_7
+    monitor-exit v4
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 257
+    .line 268
+    .end local v18           #i:I
+    .end local v20           #mailAccounts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
+    :cond_8
+    if-eqz p1, :cond_9
+
+    .line 269
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->close()V
 
-    .line 258
-    :cond_7
+    .line 270
+    :cond_9
     const/16 p1, 0x0
 
-    .line 261
+    .line 273
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
@@ -661,15 +721,15 @@
 
     move-result v3
 
-    if-nez v3, :cond_8
+    if-nez v3, :cond_a
 
-    .line 262
+    .line 274
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 264
-    :cond_8
+    .line 276
+    :cond_a
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
@@ -691,19 +751,19 @@
     .end annotation
 
     .prologue
-    .line 821
+    .line 845
     .local p1, Account:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/MailAccount;>;"
-    iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 822
+    .line 846
     :try_start_0
     iget-object v2, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 823
+    .line 847
     iget-object v2, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -724,13 +784,13 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 824
+    .line 848
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 827
+    .line 851
     .end local v0           #acc:Lcom/htc/util/mail/MailAccount;
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -748,7 +808,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 828
+    .line 852
     return-void
 .end method
 
@@ -756,28 +816,28 @@
     .locals 8
 
     .prologue
-    .line 853
+    .line 877
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 855
+    .line 879
     .local v1, enter:J
     iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     if-nez v4, :cond_0
 
-    .line 866
+    .line 890
     :goto_0
     return-void
 
-    .line 857
+    .line 881
     :cond_0
     sget-object v4, Lcom/htc/util/mail/MailManager;->mTempAccount1:Ljava/util/ArrayList;
 
     invoke-direct {p0, v4}, Lcom/htc/util/mail/MailManager;->cloneAccountArrayList(Ljava/util/ArrayList;)V
 
-    .line 859
+    .line 883
     sget-object v4, Lcom/htc/util/mail/MailManager;->mTempAccount1:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -798,20 +858,20 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 860
+    .line 884
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     invoke-direct {p0, v0}, Lcom/htc/util/mail/MailManager;->handleFoldersChange(Lcom/htc/util/mail/MailAccount;)V
 
     goto :goto_1
 
-    .line 863
+    .line 887
     .end local v0           #acc:Lcom/htc/util/mail/MailAccount;
     :cond_1
     sget-object v4, Lcom/htc/util/mail/MailManager;->mTempAccount1:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 865
+    .line 889
     const-string v4, "MailManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -847,23 +907,23 @@
     .locals 8
 
     .prologue
-    .line 833
+    .line 857
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 835
+    .line 859
     .local v1, enter:J
     iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     if-eqz v4, :cond_1
 
-    .line 837
+    .line 861
     sget-object v4, Lcom/htc/util/mail/MailManager;->mTempAccount:Ljava/util/ArrayList;
 
     invoke-direct {p0, v4}, Lcom/htc/util/mail/MailManager;->cloneAccountArrayList(Ljava/util/ArrayList;)V
 
-    .line 839
+    .line 863
     sget-object v4, Lcom/htc/util/mail/MailManager;->mTempAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -884,20 +944,20 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 840
+    .line 864
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     invoke-direct {p0, v0}, Lcom/htc/util/mail/MailManager;->handleMessageChange(Lcom/htc/util/mail/MailAccount;)V
 
     goto :goto_0
 
-    .line 843
+    .line 867
     .end local v0           #acc:Lcom/htc/util/mail/MailAccount;
     :cond_0
     sget-object v4, Lcom/htc/util/mail/MailManager;->mTempAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 846
+    .line 870
     .end local v3           #i$:Ljava/util/Iterator;
     :cond_1
     iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
@@ -908,7 +968,7 @@
 
     invoke-direct {p0, v4}, Lcom/htc/util/mail/MailManager;->handleMessageChange(Lcom/htc/util/mail/MailAccount;)V
 
-    .line 848
+    .line 872
     :cond_2
     const-string v4, "MailManager"
 
@@ -938,7 +998,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 849
+    .line 873
     return-void
 .end method
 
@@ -946,7 +1006,7 @@
     .locals 2
 
     .prologue
-    .line 672
+    .line 694
     const-wide v0, 0x7fffffffffffffffL
 
     return-wide v0
@@ -957,18 +1017,18 @@
     .parameter "context"
 
     .prologue
-    .line 86
+    .line 87
     const-class v1, Lcom/htc/util/mail/MailManager;
 
     monitor-enter v1
 
-    .line 87
+    .line 88
     :try_start_0
     sget-object v0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
     if-nez v0, :cond_0
 
-    .line 88
+    .line 89
     new-instance v0, Lcom/htc/util/mail/MailManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -979,13 +1039,13 @@
 
     sput-object v0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
-    .line 90
+    .line 91
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 92
+    .line 93
     sget-object v0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
     iget-object v0, v0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
@@ -996,7 +1056,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 93
+    .line 94
     sget-object v0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -1005,7 +1065,7 @@
 
     iput-object v1, v0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
 
-    .line 94
+    .line 95
     sget-object v0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
     iget-object v0, v0, Lcom/htc/util/mail/MailManager;->mMailMessageReceiver:Lcom/htc/util/mail/MailMessageReceiver;
@@ -1016,13 +1076,13 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/util/mail/MailMessageReceiver;->Active(Landroid/content/Context;)V
 
-    .line 99
+    .line 100
     :cond_1
     sget-object v0, Lcom/htc/util/mail/MailManager;->me:Lcom/htc/util/mail/MailManager;
 
     return-object v0
 
-    .line 90
+    .line 91
     :catchall_0
     move-exception v0
 
@@ -1039,23 +1099,23 @@
     .parameter "acc"
 
     .prologue
-    .line 888
+    .line 912
     const/4 v2, 0x0
 
-    .line 889
+    .line 913
     .local v2, hasNewFolders:Z
     const/4 v1, 0x0
 
-    .line 891
+    .line 915
     .local v1, hasDelFolders:Z
     invoke-virtual {p1}, Lcom/htc/util/mail/MailAccount;->refreshFolderIdList()V
 
-    .line 892
+    .line 916
     invoke-virtual {p1}, Lcom/htc/util/mail/MailAccount;->getNewFolderList()Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 893
+    .line 917
     .local v3, newFolders:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -1065,13 +1125,13 @@
 
     const/4 v2, 0x1
 
-    .line 895
+    .line 919
     :cond_0
     invoke-virtual {p1}, Lcom/htc/util/mail/MailAccount;->getDelFolderList()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 896
+    .line 920
     .local v0, delFolders:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1081,31 +1141,31 @@
 
     const/4 v1, 0x1
 
-    .line 898
+    .line 922
     :cond_1
     if-nez v2, :cond_2
 
     if-eqz v1, :cond_3
 
-    .line 899
+    .line 923
     :cond_2
     invoke-virtual {p1}, Lcom/htc/util/mail/MailAccount;->refreshFolders()V
 
-    .line 902
+    .line 926
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 903
+    .line 927
     invoke-virtual {p1, v3}, Lcom/htc/util/mail/MailAccount;->handleNewFolders(Ljava/util/ArrayList;)V
 
-    .line 906
+    .line 930
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 907
+    .line 931
     invoke-virtual {p1, v0}, Lcom/htc/util/mail/MailAccount;->handleDelFolders(Ljava/util/ArrayList;)V
 
-    .line 909
+    .line 933
     :cond_5
     return-void
 .end method
@@ -1115,31 +1175,31 @@
     .parameter "acc"
 
     .prologue
-    .line 729
+    .line 751
     if-nez p1, :cond_1
 
-    .line 751
+    .line 773
     :cond_0
     :goto_0
     return-void
 
-    .line 730
+    .line 752
     :cond_1
     invoke-virtual {p1}, Lcom/htc/util/mail/MailAccount;->getAllFolders()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 732
+    .line 754
     .local v0, allFolders:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/Folder;>;"
     if-eqz v0, :cond_0
 
-    .line 735
+    .line 757
     :try_start_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
-    .line 736
+    .line 758
     .local v6, size:I
     const/4 v4, 0x0
 
@@ -1147,23 +1207,23 @@
     :goto_1
     if-ge v4, v6, :cond_0
 
-    .line 737
+    .line 759
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/htc/util/mail/Folder;
 
-    .line 738
+    .line 760
     .local v3, folder:Lcom/htc/util/mail/Folder;
     invoke-virtual {v3}, Lcom/htc/util/mail/Folder;->refreshMessages()V
 
-    .line 739
+    .line 761
     invoke-virtual {v3}, Lcom/htc/util/mail/Folder;->getNewMailList()Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 740
+    .line 762
     .local v5, newMailList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/Folder$BasicMessageInfo;>;"
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -1171,16 +1231,16 @@
 
     if-lez v7, :cond_2
 
-    .line 741
+    .line 763
     invoke-virtual {p1, v5}, Lcom/htc/util/mail/MailAccount;->handleNewMessage(Ljava/util/ArrayList;)V
 
-    .line 743
+    .line 765
     :cond_2
     invoke-virtual {v3}, Lcom/htc/util/mail/Folder;->getDelMailList()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 744
+    .line 766
     .local v1, delMailList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/Folder$BasicMessageInfo;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1188,18 +1248,18 @@
 
     if-lez v7, :cond_3
 
-    .line 745
+    .line 767
     invoke-virtual {p1, v1}, Lcom/htc/util/mail/MailAccount;->handleDelMessage(Ljava/util/ArrayList;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 736
+    .line 758
     :cond_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 748
+    .line 770
     .end local v1           #delMailList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/util/mail/Folder$BasicMessageInfo;>;"
     .end local v3           #folder:Lcom/htc/util/mail/Folder;
     .end local v4           #i:I
@@ -1208,7 +1268,7 @@
     :catch_0
     move-exception v2
 
-    .line 749
+    .line 771
     .local v2, e:Ljava/lang/Exception;
     const-string v7, "MailManager"
 
@@ -1223,7 +1283,7 @@
     .locals 1
 
     .prologue
-    .line 294
+    .line 306
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
@@ -1236,11 +1296,11 @@
 
     if-nez v0, :cond_1
 
-    .line 296
+    .line 308
     :cond_0
     invoke-virtual {p0}, Lcom/htc/util/mail/MailManager;->getAccounts()Ljava/util/ArrayList;
 
-    .line 299
+    .line 311
     :cond_1
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
@@ -1272,51 +1332,88 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 173
-    iget-object v6, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    .line 176
+    if-nez p1, :cond_1
 
-    if-nez v6, :cond_1
-
-    .line 198
+    .line 205
     :cond_0
     :goto_0
     return v5
 
-    .line 174
+    .line 178
     :cond_1
-    if-eqz p1, :cond_0
+    iget-object v6, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
 
-    .line 176
-    iget-object v6, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    monitor-enter v6
 
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+    .line 179
+    :try_start_0
+    iget-object v7, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
-    move-result v6
+    if-nez v7, :cond_2
 
-    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
+    monitor-exit v6
+
+    goto :goto_0
+
+    .line 182
+    :catchall_0
+    move-exception v5
+
+    monitor-exit v6
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v5
+
+    .line 180
+    :cond_2
+    :try_start_1
+    iget-object v7, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v7
 
-    if-ne v6, v7, :cond_0
+    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
-    .line 177
-    iget-object v6, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    move-result v8
 
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+    if-eq v7, v8, :cond_3
 
-    move-result v6
+    monitor-exit v6
 
-    if-eqz v6, :cond_0
+    goto :goto_0
 
-    .line 179
+    .line 181
+    :cond_3
+    iget-object v7, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
+
+    move-result v7
+
+    if-nez v7, :cond_4
+
+    monitor-exit v6
+
+    goto :goto_0
+
+    .line 182
+    :cond_4
+    monitor-exit v6
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 184
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 181
-    :cond_2
+    .line 186
+    :cond_5
     const-string v6, "_id"
 
     invoke-interface {p1, v6}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1329,18 +1426,23 @@
 
     int-to-long v1, v6
 
-    .line 183
+    .line 188
     .local v1, accountId:J
     const/4 v3, 0x0
 
-    .line 184
+    .line 189
     .local v3, found:Z
-    iget-object v6, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 185
-    :try_start_0
+    .line 190
+    :try_start_2
+    iget-object v7, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    if-eqz v7, :cond_7
+
+    .line 191
     iget-object v7, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1348,12 +1450,12 @@
     move-result-object v4
 
     .local v4, i$:Ljava/util/Iterator;
-    :cond_3
+    :cond_6
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v7
 
-    if-eqz v7, :cond_4
+    if-eqz v7, :cond_7
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1361,7 +1463,7 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 187
+    .line 193
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->getId()J
 
@@ -1369,42 +1471,42 @@
 
     cmp-long v7, v7, v1
 
-    if-nez v7, :cond_3
-
-    .line 188
-    const/4 v3, 0x1
-
-    .line 192
-    .end local v0           #acc:Lcom/htc/util/mail/MailAccount;
-    :cond_4
-    monitor-exit v6
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 193
-    if-eqz v3, :cond_0
+    if-nez v7, :cond_6
 
     .line 194
+    const/4 v3, 0x1
+
+    .line 199
+    .end local v0           #acc:Lcom/htc/util/mail/MailAccount;
+    .end local v4           #i$:Ljava/util/Iterator;
+    :cond_7
+    monitor-exit v6
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 200
+    if-eqz v3, :cond_0
+
+    .line 201
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v6
 
-    if-nez v6, :cond_2
+    if-nez v6, :cond_5
 
-    .line 198
+    .line 205
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 192
-    .end local v4           #i$:Ljava/util/Iterator;
-    :catchall_0
+    .line 199
+    :catchall_1
     move-exception v5
 
-    :try_start_1
+    :try_start_3
     monitor-exit v6
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     throw v5
 .end method
@@ -1413,22 +1515,22 @@
     .locals 1
 
     .prologue
-    .line 142
+    .line 144
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
     if-eqz v0, :cond_0
 
-    .line 143
+    .line 145
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->release()V
 
-    .line 144
+    .line 146
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
-    .line 146
+    .line 148
     :cond_0
     return-void
 .end method
@@ -1437,18 +1539,18 @@
     .locals 4
 
     .prologue
-    .line 150
+    .line 152
+    iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    .line 153
+    :try_start_0
     iget-object v2, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
 
-    .line 151
-    iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
-
-    monitor-enter v3
-
-    .line 152
-    :try_start_0
+    .line 154
     iget-object v2, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1469,13 +1571,13 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 153
+    .line 155
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->release()V
 
     goto :goto_0
 
-    .line 158
+    .line 161
     .end local v0           #acc:Lcom/htc/util/mail/MailAccount;
     .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -1487,7 +1589,7 @@
 
     throw v2
 
-    .line 156
+    .line 158
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_0
     :try_start_1
@@ -1495,19 +1597,19 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 157
+    .line 159
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
-    .line 158
+    .line 161
+    .end local v1           #i$:Ljava/util/Iterator;
+    :cond_1
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 160
-    .end local v1           #i$:Ljava/util/Iterator;
-    :cond_1
+    .line 162
     return-void
 .end method
 
@@ -1531,7 +1633,7 @@
     .parameter "outgoingServerPort"
 
     .prologue
-    .line 395
+    .line 407
     const/4 v0, 0x0
 
     return v0
@@ -1549,7 +1651,7 @@
     .parameter "isSyncCalendar"
 
     .prologue
-    .line 429
+    .line 441
     const/4 v0, 0x0
 
     return v0
@@ -1562,10 +1664,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 339
+    .line 351
     const/4 v0, 0x0
 
-    .line 341
+    .line 353
     .local v0, bSuccess:Z
     :try_start_0
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
@@ -1612,14 +1714,14 @@
 
     move-result v1
 
-    .line 342
+    .line 354
     .local v1, count:I
     if-lez v1, :cond_0
 
-    .line 343
+    .line 355
     const/4 v0, 0x1
 
-    .line 349
+    .line 361
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
@@ -1632,19 +1734,19 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 351
+    .line 363
     return v0
 
-    .line 344
+    .line 356
     .end local v1           #count:I
     :catch_0
     move-exception v2
 
-    .line 345
+    .line 357
     .local v2, ex:Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 346
+    .line 358
     const/4 v1, -0x1
 
     .restart local v1       #count:I
@@ -1658,27 +1760,26 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 500
+    .line 518
     invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->isAccountsExist()Z
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_0
 
-    .line 515
-    :cond_0
+    .line 535
     :goto_0
     return-object v3
 
-    .line 501
-    :cond_1
+    .line 519
+    :cond_0
     invoke-static {}, Lcom/htc/util/mail/MailManager;->getCombinedAccountId()J
 
     move-result-wide v4
 
     cmp-long v4, p1, v4
 
-    if-nez v4, :cond_2
+    if-nez v4, :cond_1
 
     invoke-virtual {p0}, Lcom/htc/util/mail/MailManager;->getCombinedAccount()Lcom/htc/util/mail/MailAccount;
 
@@ -1686,18 +1787,23 @@
 
     goto :goto_0
 
-    .line 503
-    :cond_2
+    .line 521
+    :cond_1
     const/4 v2, 0x0
 
-    .line 504
+    .line 522
     .local v2, index:I
-    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 505
+    .line 523
     :try_start_0
+    iget-object v5, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    if-eqz v5, :cond_5
+
+    .line 524
     iget-object v5, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1710,7 +1816,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_2
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1718,7 +1824,7 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 506
+    .line 525
     .local v0, account:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->getId()J
 
@@ -1726,25 +1832,46 @@
 
     cmp-long v5, p1, v5
 
-    if-nez v5, :cond_4
+    if-nez v5, :cond_3
 
-    .line 511
+    .line 530
     .end local v0           #account:Lcom/htc/util/mail/MailAccount;
-    :cond_3
+    :cond_2
+    iget-object v5, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-lt v2, v5, :cond_4
+
+    monitor-exit v4
+
+    goto :goto_0
+
+    .line 534
+    .end local v1           #i$:Ljava/util/Iterator;
+    :catchall_0
+    move-exception v3
+
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 513
-    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    throw v3
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    .line 528
+    .restart local v0       #account:Lcom/htc/util/mail/MailAccount;
+    .restart local v1       #i$:Ljava/util/Iterator;
+    :cond_3
+    add-int/lit8 v2, v2, 0x1
 
-    move-result v4
+    goto :goto_1
 
-    if-ge v2, v4, :cond_0
-
-    .line 515
+    .line 532
+    .end local v0           #account:Lcom/htc/util/mail/MailAccount;
+    :cond_4
+    :try_start_1
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1753,27 +1880,18 @@
 
     check-cast v3, Lcom/htc/util/mail/MailAccount;
 
+    monitor-exit v4
+
     goto :goto_0
 
-    .line 509
-    .restart local v0       #account:Lcom/htc/util/mail/MailAccount;
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    .line 511
-    .end local v0           #account:Lcom/htc/util/mail/MailAccount;
+    .line 534
     .end local v1           #i$:Ljava/util/Iterator;
-    :catchall_0
-    move-exception v3
-
-    :try_start_1
+    :cond_5
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v3
+    goto :goto_0
 .end method
 
 .method public getAccountList()Ljava/util/ArrayList;
@@ -1789,7 +1907,7 @@
     .end annotation
 
     .prologue
-    .line 681
+    .line 703
     invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->isAccountsExist()Z
 
     move-result v0
@@ -1798,7 +1916,7 @@
 
     const/4 v0, 0x0
 
-    .line 683
+    .line 705
     :goto_0
     return-object v0
 
@@ -1823,14 +1941,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 285
+    .line 297
     iget-object v1, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 287
+    .line 299
     .local v0, cr:Landroid/content/ContentResolver;
     sget-object v1, Lcom/htc/util/mail/MailUtils;->sAccountsURI:Landroid/net/Uri;
 
@@ -1844,7 +1962,7 @@
 
     move-result-object v6
 
-    .line 289
+    .line 301
     .local v6, cursor:Landroid/database/Cursor;
     invoke-direct {p0, v6}, Lcom/htc/util/mail/MailManager;->buildOrGetAccounts(Landroid/database/Cursor;)Ljava/util/ArrayList;
 
@@ -1858,12 +1976,12 @@
     .parameter "accountId"
 
     .prologue
-    .line 577
+    .line 599
     invoke-virtual {p0, p1, p2}, Lcom/htc/util/mail/MailManager;->getAccount(J)Lcom/htc/util/mail/MailAccount;
 
     move-result-object v0
 
-    .line 579
+    .line 601
     .local v0, account:Lcom/htc/util/mail/MailAccount;
     if-eqz v0, :cond_0
 
@@ -1871,7 +1989,7 @@
 
     move-result-wide v1
 
-    .line 581
+    .line 603
     :goto_0
     return-wide v1
 
@@ -1889,10 +2007,10 @@
 
     const/4 v2, 0x0
 
-    .line 555
+    .line 577
     const/4 v7, 0x0
 
-    .line 556
+    .line 578
     .local v7, unread:I
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
 
@@ -1912,17 +2030,17 @@
 
     move-result-object v6
 
-    .line 557
+    .line 579
     .local v6, c:Landroid/database/Cursor;
     if-nez v6, :cond_0
 
     move v0, v8
 
-    .line 563
+    .line 585
     :goto_0
     return v0
 
-    .line 560
+    .line 582
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1930,18 +2048,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 561
+    .line 583
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v7
 
-    .line 562
+    .line 584
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     move v0, v7
 
-    .line 563
+    .line 585
     goto :goto_0
 .end method
 
@@ -1951,12 +2069,12 @@
     .prologue
     const v4, 0x204022b
 
-    .line 312
+    .line 324
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
     if-nez v0, :cond_0
 
-    .line 313
+    .line 325
     new-instance v0, Lcom/htc/util/mail/CombinedAccount;
 
     iget-object v1, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
@@ -1989,7 +2107,7 @@
 
     iput-object v0, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
-    .line 323
+    .line 335
     :cond_0
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mCombinedAccount:Lcom/htc/util/mail/MailAccount;
 
@@ -1997,34 +2115,39 @@
 .end method
 
 .method public getDefaultAccount()Lcom/htc/util/mail/MailAccount;
-    .locals 5
+    .locals 6
 
     .prologue
-    .line 472
-    invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->isAccountsExist()Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
     const/4 v3, 0x0
 
-    .line 483
+    .line 487
+    invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->isAccountsExist()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    .line 501
     :goto_0
     return-object v3
 
-    .line 474
+    .line 489
     :cond_0
     const/4 v2, 0x0
 
-    .line 475
+    .line 490
     .local v2, index:I
-    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 476
+    .line 491
     :try_start_0
+    iget-object v5, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    if-eqz v5, :cond_3
+
+    .line 492
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2045,7 +2168,7 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 477
+    .line 493
     .local v0, account:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->isDefaultAccount()Z
 
@@ -2053,14 +2176,9 @@
 
     if-eqz v3, :cond_2
 
-    .line 482
+    .line 498
     .end local v0           #account:Lcom/htc/util/mail/MailAccount;
     :cond_1
-    monitor-exit v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 483
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2069,58 +2187,75 @@
 
     check-cast v3, Lcom/htc/util/mail/MailAccount;
 
+    monitor-exit v4
+
     goto :goto_0
 
-    .line 480
+    .line 500
+    .end local v1           #i$:Ljava/util/Iterator;
+    :catchall_0
+    move-exception v3
+
+    monitor-exit v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v3
+
+    .line 496
     .restart local v0       #account:Lcom/htc/util/mail/MailAccount;
+    .restart local v1       #i$:Ljava/util/Iterator;
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 482
+    .line 500
     .end local v0           #account:Lcom/htc/util/mail/MailAccount;
     .end local v1           #i$:Ljava/util/Iterator;
-    :catchall_0
-    move-exception v3
-
+    :cond_3
     :try_start_1
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v3
+    goto :goto_0
 .end method
 
 .method public getDefaultAccountId()J
-    .locals 5
+    .locals 7
 
     .prologue
-    .line 446
-    invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->isAccountsExist()Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
     const-wide/16 v3, -0x1
 
-    .line 457
+    .line 458
+    invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->isAccountsExist()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    .line 472
     :goto_0
     return-wide v3
 
-    .line 448
+    .line 460
     :cond_0
     const/4 v2, 0x0
 
-    .line 449
+    .line 461
     .local v2, index:I
-    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
 
-    monitor-enter v4
+    monitor-enter v5
 
-    .line 450
+    .line 462
     :try_start_0
+    iget-object v6, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    if-eqz v6, :cond_3
+
+    .line 463
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2141,7 +2276,7 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 451
+    .line 464
     .local v0, account:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->isDefaultAccount()Z
 
@@ -2149,14 +2284,9 @@
 
     if-eqz v3, :cond_2
 
-    .line 456
+    .line 469
     .end local v0           #account:Lcom/htc/util/mail/MailAccount;
     :cond_1
-    monitor-exit v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 457
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2169,27 +2299,39 @@
 
     move-result-wide v3
 
+    monitor-exit v5
+
     goto :goto_0
 
-    .line 454
+    .line 471
+    .end local v1           #i$:Ljava/util/Iterator;
+    :catchall_0
+    move-exception v3
+
+    monitor-exit v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v3
+
+    .line 467
     .restart local v0       #account:Lcom/htc/util/mail/MailAccount;
+    .restart local v1       #i$:Ljava/util/Iterator;
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 456
+    .line 471
     .end local v0           #account:Lcom/htc/util/mail/MailAccount;
     .end local v1           #i$:Ljava/util/Iterator;
-    :catchall_0
-    move-exception v3
-
+    :cond_3
     :try_start_1
-    monitor-exit v4
+    monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v3
+    goto :goto_0
 .end method
 
 .method public getDefaultMailBoxId(J)J
@@ -2197,12 +2339,12 @@
     .parameter "accountId"
 
     .prologue
-    .line 614
+    .line 636
     invoke-virtual {p0, p1, p2}, Lcom/htc/util/mail/MailManager;->getAccount(J)Lcom/htc/util/mail/MailAccount;
 
     move-result-object v0
 
-    .line 616
+    .line 638
     .local v0, account:Lcom/htc/util/mail/MailAccount;
     if-eqz v0, :cond_0
 
@@ -2212,7 +2354,7 @@
 
     int-to-long v1, v1
 
-    .line 618
+    .line 640
     :goto_0
     return-wide v1
 
@@ -2227,7 +2369,7 @@
     .parameter "messageId"
 
     .prologue
-    .line 714
+    .line 736
     const/4 v0, 0x0
 
     return v0
@@ -2238,12 +2380,12 @@
     .parameter "accountId"
 
     .prologue
-    .line 595
+    .line 617
     invoke-virtual {p0, p1, p2}, Lcom/htc/util/mail/MailManager;->getAccount(J)Lcom/htc/util/mail/MailAccount;
 
     move-result-object v0
 
-    .line 597
+    .line 619
     .local v0, account:Lcom/htc/util/mail/MailAccount;
     if-eqz v0, :cond_0
 
@@ -2251,7 +2393,7 @@
 
     move-result v1
 
-    .line 599
+    .line 621
     :goto_0
     return v1
 
@@ -2265,7 +2407,7 @@
     .locals 1
 
     .prologue
-    .line 631
+    .line 653
     invoke-static {}, Landroid/content/ContentResolver;->getMasterSyncAutomatically()Z
 
     move-result v0
@@ -2281,10 +2423,10 @@
 
     const/4 v9, 0x0
 
-    .line 644
+    .line 666
     const-string v3, "_provider = \'Exchange\' and _del!=1"
 
-    .line 646
+    .line 668
     .local v3, where:Ljava/lang/String;
     :try_start_0
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
@@ -2313,7 +2455,7 @@
 
     move-result-object v6
 
-    .line 647
+    .line 669
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -2323,7 +2465,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 648
+    .line 670
     const-string v0, "_total"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -2336,22 +2478,22 @@
 
     if-lez v0, :cond_0
 
-    .line 649
+    .line 671
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     move v0, v8
 
-    .line 658
+    .line 680
     .end local v6           #c:Landroid/database/Cursor;
     :goto_0
     return v0
 
-    .line 653
+    .line 675
     .restart local v6       #c:Landroid/database/Cursor;
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 654
+    .line 676
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2359,10 +2501,10 @@
     :cond_1
     move v0, v9
 
-    .line 656
+    .line 678
     goto :goto_0
 
-    .line 657
+    .line 679
     .end local v6           #c:Landroid/database/Cursor;
     :catch_0
     move-exception v7
@@ -2370,7 +2512,7 @@
     .local v7, ex:Ljava/lang/Exception;
     move v0, v9
 
-    .line 658
+    .line 680
     goto :goto_0
 .end method
 
@@ -2378,10 +2520,10 @@
     .locals 1
 
     .prologue
-    .line 722
+    .line 744
     invoke-virtual {p0}, Lcom/htc/util/mail/MailManager;->releaseAccounts()V
 
-    .line 724
+    .line 746
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mMailManagerListener:Lcom/htc/util/mail/IMailManagerListener;
 
     if-eqz v0, :cond_0
@@ -2390,7 +2532,7 @@
 
     invoke-interface {v0}, Lcom/htc/util/mail/IMailManagerListener;->onAccountRefresh()V
 
-    .line 726
+    .line 748
     :cond_0
     return-void
 .end method
@@ -2400,20 +2542,20 @@
     .parameter "accountId"
 
     .prologue
-    .line 929
+    .line 953
     invoke-virtual {p0, p1, p2}, Lcom/htc/util/mail/MailManager;->getAccount(J)Lcom/htc/util/mail/MailAccount;
 
     move-result-object v0
 
-    .line 930
+    .line 954
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     if-nez v0, :cond_0
 
-    .line 933
+    .line 957
     :goto_0
     return-void
 
-    .line 932
+    .line 956
     :cond_0
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->handleSyncFinished()V
 
@@ -2425,20 +2567,20 @@
     .parameter "accountId"
 
     .prologue
-    .line 916
+    .line 940
     invoke-virtual {p0, p1, p2}, Lcom/htc/util/mail/MailManager;->getAccount(J)Lcom/htc/util/mail/MailAccount;
 
     move-result-object v0
 
-    .line 917
+    .line 941
     .local v0, acc:Lcom/htc/util/mail/MailAccount;
     if-nez v0, :cond_0
 
-    .line 921
+    .line 945
     :goto_0
     return-void
 
-    .line 919
+    .line 943
     :cond_0
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->handleSyncStart()V
 
@@ -2449,12 +2591,12 @@
     .locals 1
 
     .prologue
-    .line 882
+    .line 906
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mHandleChangeRequester:Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
     invoke-virtual {v0}, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->requestHandleFoldersChange()V
 
-    .line 884
+    .line 908
     return-void
 .end method
 
@@ -2462,12 +2604,12 @@
     .locals 1
 
     .prologue
-    .line 873
+    .line 897
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mHandleChangeRequester:Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
     invoke-virtual {v0}, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->requestHandleMessageChange()V
 
-    .line 874
+    .line 898
     return-void
 .end method
 
@@ -2475,22 +2617,27 @@
     .locals 2
 
     .prologue
-    .line 134
+    .line 135
     const-string v0, "MailManager"
 
     const-string v1, "MailManager release()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
+    .line 136
     iget-object v0, p0, Lcom/htc/util/mail/MailManager;->mMailMessageReceiver:Lcom/htc/util/mail/MailMessageReceiver;
 
     invoke-virtual {v0}, Lcom/htc/util/mail/MailMessageReceiver;->Deactive()V
 
-    .line 137
+    .line 138
     invoke-virtual {p0}, Lcom/htc/util/mail/MailManager;->releaseAccounts()V
 
     .line 139
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/htc/util/mail/MailManager;->mContext:Landroid/content/Context;
+
+    .line 141
     return-void
 .end method
 
@@ -2498,13 +2645,13 @@
     .locals 0
 
     .prologue
-    .line 168
+    .line 170
     invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->releaseRealAccounts()V
 
-    .line 169
+    .line 171
     invoke-direct {p0}, Lcom/htc/util/mail/MailManager;->releaseCombinedAccount()V
 
-    .line 170
+    .line 172
     return-void
 .end method
 
@@ -2513,17 +2660,22 @@
     .parameter "accountId"
 
     .prologue
-    .line 530
+    .line 550
     const/4 v1, 0x0
 
-    .line 531
+    .line 551
     .local v1, bFind:Z
-    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/htc/util/mail/MailManager;->mAccountLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 532
+    .line 552
     :try_start_0
+    iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
+
+    if-eqz v3, :cond_1
+
+    .line 553
     iget-object v3, p0, Lcom/htc/util/mail/MailManager;->mAccount:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2544,7 +2696,7 @@
 
     check-cast v0, Lcom/htc/util/mail/MailAccount;
 
-    .line 533
+    .line 554
     .local v0, account:Lcom/htc/util/mail/MailAccount;
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->getId()J
 
@@ -2554,21 +2706,21 @@
 
     if-nez v3, :cond_0
 
-    .line 534
+    .line 555
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->setDefaultAccount()V
 
-    .line 535
+    .line 556
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 537
+    .line 558
     :cond_0
     invoke-virtual {v0}, Lcom/htc/util/mail/MailAccount;->resetDefaultAccount()V
 
     goto :goto_0
 
-    .line 540
+    .line 562
     .end local v0           #account:Lcom/htc/util/mail/MailAccount;
     .end local v2           #i$:Ljava/util/Iterator;
     :catchall_0
@@ -2580,14 +2732,13 @@
 
     throw v3
 
-    .restart local v2       #i$:Ljava/util/Iterator;
     :cond_1
     :try_start_1
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 541
+    .line 563
     return v1
 .end method
 
@@ -2596,10 +2747,10 @@
     .parameter "mailManagerListener"
 
     .prologue
-    .line 121
+    .line 122
     iput-object p1, p0, Lcom/htc/util/mail/MailManager;->mMailManagerListener:Lcom/htc/util/mail/IMailManagerListener;
 
-    .line 122
+    .line 123
     return-void
 .end method
 
@@ -2608,6 +2759,6 @@
     .parameter "listener"
 
     .prologue
-    .line 700
+    .line 722
     return-void
 .end method

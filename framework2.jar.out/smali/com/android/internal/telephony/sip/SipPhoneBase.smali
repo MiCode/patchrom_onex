@@ -93,14 +93,14 @@
     .parameter "response"
 
     .prologue
-    .line 424
+    .line 431
     const-string v0, "SipPhone"
 
     const-string v1, "Error! This functionality is not implemented for SIP."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
+    .line 432
     return-void
 .end method
 
@@ -110,7 +110,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 203
+    .line 207
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getServiceState()Landroid/telephony/ServiceState;
 
     move-result-object v3
@@ -119,7 +119,7 @@
 
     move-result v1
 
-    .line 204
+    .line 208
     .local v1, serviceState:I
     const-string v3, "SipPhone"
 
@@ -143,17 +143,17 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
+    .line 209
     const/4 v3, 0x3
 
     if-ne v1, v3, :cond_1
 
-    .line 215
+    .line 219
     :cond_0
     :goto_0
     return v2
 
-    .line 207
+    .line 211
     :cond_1
     const-string v3, "ro.telephony.disable-call"
 
@@ -163,7 +163,7 @@
 
     move-result-object v0
 
-    .line 209
+    .line 213
     .local v0, disableCall:Ljava/lang/String;
     const-string v3, "SipPhone"
 
@@ -187,7 +187,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
+    .line 214
     const-string v3, "true"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -196,7 +196,7 @@
 
     if-nez v3, :cond_0
 
-    .line 212
+    .line 216
     const-string v3, "SipPhone"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -227,7 +227,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
+    .line 217
     const-string v3, "SipPhone"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -258,7 +258,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
+    .line 218
     const-string v3, "SipPhone"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -289,7 +289,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
+    .line 219
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getRingingCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v3
@@ -338,7 +338,7 @@
     .locals 1
 
     .prologue
-    .line 469
+    .line 476
     const/4 v0, 0x0
 
     return v0
@@ -367,7 +367,7 @@
     .locals 1
 
     .prologue
-    .line 393
+    .line 397
     const/4 v0, 0x0
 
     return v0
@@ -377,7 +377,7 @@
     .locals 0
 
     .prologue
-    .line 379
+    .line 383
     return-void
 .end method
 
@@ -385,7 +385,7 @@
     .locals 1
 
     .prologue
-    .line 389
+    .line 393
     const/4 v0, 0x0
 
     return v0
@@ -395,7 +395,7 @@
     .locals 0
 
     .prologue
-    .line 376
+    .line 380
     return-void
 .end method
 
@@ -404,7 +404,7 @@
     .parameter "response"
 
     .prologue
-    .line 349
+    .line 353
     return-void
 .end method
 
@@ -415,7 +415,7 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 147
     const/4 v0, 0x0
 
     return v0
@@ -427,7 +427,7 @@
     .parameter "onComplete"
 
     .prologue
-    .line 311
+    .line 315
     return-void
 .end method
 
@@ -438,13 +438,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 332
+    .line 336
     invoke-static {p1, v0, v0}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 333
+    .line 337
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 334
+    .line 338
     return-void
 .end method
 
@@ -453,14 +453,14 @@
     .parameter "response"
 
     .prologue
-    .line 428
+    .line 435
     const-string v0, "SipPhone"
 
     const-string v1, "Error! This functionality is not implemented for SIP."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
+    .line 436
     return-void
 .end method
 
@@ -468,7 +468,7 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 127
     const/4 v0, 0x0
 
     return-object v0
@@ -487,7 +487,7 @@
     .end annotation
 
     .prologue
-    .line 369
+    .line 373
     const/4 v0, 0x0
 
     return-object v0
@@ -497,7 +497,7 @@
     .locals 1
 
     .prologue
-    .line 159
+    .line 163
     sget-object v0, Lcom/android/internal/telephony/Phone$DataActivityState;->NONE:Lcom/android/internal/telephony/Phone$DataActivityState;
 
     return-object v0
@@ -508,7 +508,7 @@
     .parameter "response"
 
     .prologue
-    .line 366
+    .line 370
     return-void
 .end method
 
@@ -516,7 +516,7 @@
     .locals 1
 
     .prologue
-    .line 151
+    .line 155
     sget-object v0, Lcom/android/internal/telephony/Phone$DataState;->DISCONNECTED:Lcom/android/internal/telephony/Phone$DataState;
 
     return-object v0
@@ -527,7 +527,7 @@
     .parameter "apnType"
 
     .prologue
-    .line 155
+    .line 159
     sget-object v0, Lcom/android/internal/telephony/Phone$DataState;->DISCONNECTED:Lcom/android/internal/telephony/Phone$DataState;
 
     return-object v0
@@ -537,7 +537,7 @@
     .locals 1
 
     .prologue
-    .line 382
+    .line 386
     const/4 v0, 0x0
 
     return v0
@@ -547,7 +547,7 @@
     .locals 1
 
     .prologue
-    .line 260
+    .line 264
     const/4 v0, 0x0
 
     return-object v0
@@ -557,7 +557,7 @@
     .locals 1
 
     .prologue
-    .line 264
+    .line 268
     const/4 v0, 0x0
 
     return-object v0
@@ -567,14 +567,14 @@
     .locals 2
 
     .prologue
-    .line 272
+    .line 276
     const-string v0, "SipPhone"
 
     const-string v1, "[SipPhone] getEsn() is a CDMA method"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
+    .line 277
     const-string v0, "0"
 
     return-object v0
@@ -587,7 +587,7 @@
     .locals 1
 
     .prologue
-    .line 345
+    .line 349
     const/4 v0, 0x0
 
     return-object v0
@@ -597,7 +597,7 @@
     .locals 1
 
     .prologue
-    .line 420
+    .line 427
     const/4 v0, 0x0
 
     return-object v0
@@ -607,7 +607,7 @@
     .locals 1
 
     .prologue
-    .line 416
+    .line 423
     const/4 v0, 0x0
 
     return-object v0
@@ -617,7 +617,7 @@
     .locals 1
 
     .prologue
-    .line 341
+    .line 345
     const/4 v0, 0x0
 
     return v0
@@ -627,7 +627,7 @@
     .locals 1
 
     .prologue
-    .line 286
+    .line 290
     const/4 v0, 0x0
 
     return-object v0
@@ -637,7 +637,7 @@
     .locals 1
 
     .prologue
-    .line 412
+    .line 419
     const/4 v0, 0x0
 
     return-object v0
@@ -647,7 +647,7 @@
     .locals 1
 
     .prologue
-    .line 268
+    .line 272
     const/4 v0, 0x0
 
     return-object v0
@@ -657,7 +657,7 @@
     .locals 1
 
     .prologue
-    .line 294
+    .line 298
     const/4 v0, 0x0
 
     return-object v0
@@ -667,7 +667,7 @@
     .locals 1
 
     .prologue
-    .line 290
+    .line 294
     const/4 v0, 0x0
 
     return-object v0
@@ -678,7 +678,7 @@
     .parameter "apnType"
 
     .prologue
-    .line 444
+    .line 451
     const/4 v0, 0x0
 
     return-object v0
@@ -688,14 +688,14 @@
     .locals 2
 
     .prologue
-    .line 277
+    .line 281
     const-string v0, "SipPhone"
 
     const-string v1, "[SipPhone] getMeid() is a CDMA method"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
+    .line 282
     const-string v0, "0"
 
     return-object v0
@@ -705,7 +705,7 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 143
     const/4 v0, 0x0
 
     return v0
@@ -715,7 +715,7 @@
     .locals 1
 
     .prologue
-    .line 473
+    .line 480
     const/4 v0, 0x0
 
     return v0
@@ -726,7 +726,7 @@
     .parameter "response"
 
     .prologue
-    .line 360
+    .line 364
     return-void
 .end method
 
@@ -737,13 +737,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 320
+    .line 324
     invoke-static {p1, v0, v0}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 321
+    .line 325
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 322
+    .line 326
     return-void
 .end method
 
@@ -760,7 +760,7 @@
     .end annotation
 
     .prologue
-    .line 147
+    .line 151
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -774,7 +774,7 @@
     .locals 1
 
     .prologue
-    .line 408
+    .line 415
     const/4 v0, 0x0
 
     return-object v0
@@ -784,7 +784,7 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 135
     const/4 v0, 0x3
 
     return v0
@@ -808,7 +808,14 @@
 
     invoke-virtual {v0, v1}, Landroid/telephony/ServiceState;->setState(I)V
 
-    .line 119
+    .line 121
+    invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getPhoneType()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/telephony/ServiceState;->setPhoneType(I)V
+
+    .line 123
     return-object v0
 .end method
 
@@ -816,7 +823,7 @@
     .locals 1
 
     .prologue
-    .line 135
+    .line 139
     new-instance v0, Landroid/telephony/SignalStrength;
 
     invoke-direct {v0}, Landroid/telephony/SignalStrength;-><init>()V
@@ -828,7 +835,7 @@
     .locals 1
 
     .prologue
-    .line 127
+    .line 131
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhoneBase;->state:Lcom/android/internal/telephony/Phone$State;
 
     return-object v0
@@ -838,7 +845,7 @@
     .locals 1
 
     .prologue
-    .line 282
+    .line 286
     const/4 v0, 0x0
 
     return-object v0
@@ -848,7 +855,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 260
     const/4 v0, 0x0
 
     return-object v0
@@ -858,7 +865,7 @@
     .locals 1
 
     .prologue
-    .line 252
+    .line 256
     const/4 v0, 0x0
 
     return-object v0
@@ -874,7 +881,7 @@
     .end annotation
 
     .prologue
-    .line 222
+    .line 226
     const/4 v0, 0x0
 
     return v0
@@ -885,7 +892,7 @@
     .parameter "dialString"
 
     .prologue
-    .line 235
+    .line 239
     const/4 v0, 0x0
 
     return v0
@@ -895,7 +902,7 @@
     .locals 1
 
     .prologue
-    .line 397
+    .line 401
     const/4 v0, 0x0
 
     return v0
@@ -905,7 +912,7 @@
     .locals 4
 
     .prologue
-    .line 226
+    .line 230
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getForegroundCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v3
@@ -914,7 +921,7 @@
 
     move-result-object v1
 
-    .line 227
+    .line 231
     .local v1, foregroundCallState:Lcom/android/internal/telephony/Call$State;
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getBackgroundCall()Lcom/android/internal/telephony/Call;
 
@@ -924,7 +931,7 @@
 
     move-result-object v0
 
-    .line 228
+    .line 232
     .local v0, backgroundCallState:Lcom/android/internal/telephony/Call$State;
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getRingingCall()Lcom/android/internal/telephony/Call;
 
@@ -934,7 +941,7 @@
 
     move-result-object v2
 
-    .line 230
+    .line 234
     .local v2, ringingCallState:Lcom/android/internal/telephony/Call$State;
     invoke-virtual {v1}, Lcom/android/internal/telephony/Call$State;->isAlive()Z
 
@@ -1049,7 +1056,7 @@
     .locals 1
 
     .prologue
-    .line 438
+    .line 445
     const/4 v0, 0x0
 
     return v0
@@ -1059,12 +1066,12 @@
     .locals 1
 
     .prologue
-    .line 199
+    .line 203
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase;->mNotifier:Lcom/android/internal/telephony/PhoneNotifier;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/PhoneNotifier;->notifyCallForwardingChanged(Lcom/android/internal/telephony/Phone;)V
 
-    .line 200
+    .line 204
     return-void
 .end method
 
@@ -1073,12 +1080,12 @@
     .parameter "cn"
 
     .prologue
-    .line 183
+    .line 187
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase;->mDisconnectRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->notifyResult(Ljava/lang/Object;)V
 
-    .line 184
+    .line 188
     return-void
 .end method
 
@@ -1087,10 +1094,10 @@
     .parameter "c"
 
     .prologue
-    .line 179
+    .line 183
     invoke-super {p0, p1}, Lcom/android/internal/telephony/PhoneBase;->notifyNewRingingConnectionP(Lcom/android/internal/telephony/Connection;)V
 
-    .line 180
+    .line 184
     return-void
 .end method
 
@@ -1098,12 +1105,12 @@
     .locals 1
 
     .prologue
-    .line 166
+    .line 170
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase;->mNotifier:Lcom/android/internal/telephony/PhoneNotifier;
 
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/PhoneNotifier;->notifyPhoneState(Lcom/android/internal/telephony/Phone;)V
 
-    .line 167
+    .line 171
     return-void
 .end method
 
@@ -1111,10 +1118,10 @@
     .locals 0
 
     .prologue
-    .line 175
+    .line 179
     invoke-super {p0}, Lcom/android/internal/telephony/PhoneBase;->notifyPreciseCallStateChangedP()V
 
-    .line 176
+    .line 180
     return-void
 .end method
 
@@ -1123,10 +1130,10 @@
     .parameter "ss"
 
     .prologue
-    .line 195
+    .line 199
     invoke-super {p0, p1}, Lcom/android/internal/telephony/PhoneBase;->notifyServiceStateChangedP(Landroid/telephony/ServiceState;)V
 
-    .line 196
+    .line 200
     return-void
 .end method
 
@@ -1135,12 +1142,12 @@
     .parameter "code"
 
     .prologue
-    .line 191
+    .line 195
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase;->mSuppServiceFailedRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->notifyResult(Ljava/lang/Object;)V
 
-    .line 192
+    .line 196
     return-void
 .end method
 
@@ -1148,12 +1155,12 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 191
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase;->mUnknownConnectionRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0, p0}, Landroid/os/RegistrantList;->notifyResult(Ljava/lang/Object;)V
 
-    .line 188
+    .line 192
     return-void
 .end method
 
@@ -1180,7 +1187,7 @@
     .parameter "obj"
 
     .prologue
-    .line 243
+    .line 247
     return-void
 .end method
 
@@ -1189,7 +1196,7 @@
     .parameter "commandInterfaceCLIRMode"
 
     .prologue
-    .line 405
+    .line 412
     return-void
 .end method
 
@@ -1199,7 +1206,7 @@
     .parameter "response"
 
     .prologue
-    .line 357
+    .line 361
     return-void
 .end method
 
@@ -1208,7 +1215,7 @@
     .parameter "ussdMessge"
 
     .prologue
-    .line 239
+    .line 243
     return-void
 .end method
 
@@ -1221,7 +1228,7 @@
     .parameter "onComplete"
 
     .prologue
-    .line 316
+    .line 320
     return-void
 .end method
 
@@ -1231,14 +1238,14 @@
     .parameter "onComplete"
 
     .prologue
-    .line 337
+    .line 341
     const-string v0, "SipPhone"
 
     const-string v1, "call waiting not supported"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 338
+    .line 342
     return-void
 .end method
 
@@ -1248,14 +1255,14 @@
     .parameter "response"
 
     .prologue
-    .line 432
+    .line 439
     const-string v0, "SipPhone"
 
     const-string v1, "Error! This functionality is not implemented for SIP."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
+    .line 440
     return-void
 .end method
 
@@ -1264,7 +1271,7 @@
     .parameter "enable"
 
     .prologue
-    .line 386
+    .line 390
     return-void
 .end method
 
@@ -1277,13 +1284,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 299
+    .line 303
     invoke-static {p3, v0, v0}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 300
+    .line 304
     invoke-virtual {p3}, Landroid/os/Message;->sendToTarget()V
 
-    .line 301
+    .line 305
     return-void
 .end method
 
@@ -1292,7 +1299,7 @@
     .parameter "response"
 
     .prologue
-    .line 352
+    .line 356
     return-void
 .end method
 
@@ -1303,7 +1310,7 @@
     .parameter "obj"
 
     .prologue
-    .line 363
+    .line 367
     return-void
 .end method
 
@@ -1315,13 +1322,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 327
+    .line 331
     invoke-static {p2, v0, v0}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 328
+    .line 332
     invoke-virtual {p2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 329
+    .line 333
     return-void
 .end method
 
@@ -1330,7 +1337,7 @@
     .parameter "power"
 
     .prologue
-    .line 249
+    .line 253
     return-void
 .end method
 
@@ -1343,13 +1350,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 306
+    .line 310
     invoke-static {p3, v0, v0}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 307
+    .line 311
     invoke-virtual {p3}, Landroid/os/Message;->sendToTarget()V
 
-    .line 308
+    .line 312
     return-void
 .end method
 
@@ -1418,15 +1425,26 @@
     .parameter "h"
 
     .prologue
-    .line 246
+    .line 250
     return-void
 .end method
 
-.method updateCurrentCarrierInProvider()Z
+.method public updateCurrentCarrierInProvider()Z
     .locals 1
 
     .prologue
-    .line 401
+    .line 405
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public updateCurrentCarrierInProvider(Ljava/lang/String;)Z
+    .locals 1
+    .parameter "operatorNumeric"
+
+    .prologue
+    .line 408
     const/4 v0, 0x0
 
     return v0
@@ -1436,10 +1454,10 @@
     .locals 4
 
     .prologue
-    .line 448
+    .line 455
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipPhoneBase;->state:Lcom/android/internal/telephony/Phone$State;
 
-    .line 450
+    .line 457
     .local v0, oldState:Lcom/android/internal/telephony/Phone$State;
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getRingingCall()Lcom/android/internal/telephony/Call;
 
@@ -1451,18 +1469,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 451
+    .line 458
     sget-object v1, Lcom/android/internal/telephony/Phone$State;->RINGING:Lcom/android/internal/telephony/Phone$State;
 
     iput-object v1, p0, Lcom/android/internal/telephony/sip/SipPhoneBase;->state:Lcom/android/internal/telephony/Phone$State;
 
-    .line 459
+    .line 466
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telephony/sip/SipPhoneBase;->state:Lcom/android/internal/telephony/Phone$State;
 
     if-eq v1, v0, :cond_0
 
-    .line 460
+    .line 467
     const-string v1, "SipPhone"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1487,14 +1505,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 461
+    .line 468
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->notifyPhoneStateChanged()V
 
-    .line 463
+    .line 470
     :cond_0
     return-void
 
-    .line 452
+    .line 459
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipPhoneBase;->getForegroundCall()Lcom/android/internal/telephony/Call;
 
@@ -1516,14 +1534,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 454
+    .line 461
     sget-object v1, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
 
     iput-object v1, p0, Lcom/android/internal/telephony/sip/SipPhoneBase;->state:Lcom/android/internal/telephony/Phone$State;
 
     goto :goto_0
 
-    .line 456
+    .line 463
     :cond_2
     sget-object v1, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
@@ -1536,6 +1554,6 @@
     .locals 0
 
     .prologue
-    .line 373
+    .line 377
     return-void
 .end method

@@ -149,7 +149,7 @@
 
     move/from16 v0, p6
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_5
 
     .line 93
     :cond_0
@@ -175,13 +175,25 @@
     iput v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalHeight:I
 
     .line 104
-    if-nez p3, :cond_1
+    if-nez p3, :cond_2
+
+    .line 105
+    sget-boolean v1, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "WindowManager"
+
+    const-string v2, ">>> OPEN TRANSACTION ScreenRotationAnimation"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 107
+    :cond_1
     invoke-static {}, Landroid/view/Surface;->openTransaction()V
 
     .line 112
-    :cond_1
+    :cond_2
     :try_start_0
     new-instance v1, Landroid/view/Surface;
 
@@ -208,7 +220,7 @@
     .line 114
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
 
@@ -216,10 +228,10 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_6
 
     .line 116
-    :cond_2
+    :cond_3
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
@@ -228,18 +240,29 @@
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 131
-    if-nez p3, :cond_3
+    if-nez p3, :cond_4
 
     .line 132
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
 
+    .line 133
+    sget-boolean v1, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "WindowManager"
+
+    const-string v2, "<<< CLOSE TRANSACTION ScreenRotationAnimation"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 137
-    :cond_3
+    :cond_4
     :goto_1
     return-void
 
     .line 96
-    :cond_4
+    :cond_5
     iput p4, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mWidth:I
 
     .line 97
@@ -250,7 +273,7 @@
     goto :goto_0
 
     .line 119
-    :cond_5
+    :cond_6
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
 
@@ -266,9 +289,15 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 129
+    .line 125
     :goto_2
     :try_start_2
+    sget-boolean v1, Lcom/android/server/wm/WindowManagerService;->SHOW_TRANSACTIONS:Z
+
+    if-nez v1, :cond_8
+
+    .line 129
+    :goto_3
     move/from16 v0, p6
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/ScreenRotationAnimation;->setRotation(I)V
@@ -276,10 +305,21 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 131
-    if-nez p3, :cond_3
+    if-nez p3, :cond_4
 
     .line 132
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
+
+    .line 133
+    sget-boolean v1, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "WindowManager"
+
+    const-string v2, "<<< CLOSE TRANSACTION ScreenRotationAnimation"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
@@ -305,13 +345,61 @@
     :catchall_0
     move-exception v1
 
-    if-nez p3, :cond_6
+    if-nez p3, :cond_7
 
     .line 132
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
 
-    :cond_6
+    .line 133
+    sget-boolean v2, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v2, :cond_7
+
+    const-string v2, "WindowManager"
+
+    const-string v3, "<<< CLOSE TRANSACTION ScreenRotationAnimation"
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
     throw v1
+
+    .line 126
+    :cond_8
+    :try_start_4
+    const-string v1, "WindowManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "  FREEZE "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ": CREATE"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_3
 .end method
 
 .method public static createRotationMatrix(IIILandroid/graphics/Matrix;)V
@@ -486,7 +574,19 @@
 
     invoke-virtual {v4, p4}, Landroid/view/animation/Animation;->scaleCurrentDuration(F)V
 
+    .line 258
+    sget-boolean v4, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "WindowManager"
+
+    const-string v5, ">>> OPEN TRANSACTION ScreenRotationAnimation.dismiss"
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 260
+    :cond_1
     invoke-static {}, Landroid/view/Surface;->openTransaction()V
 
     .line 263
@@ -529,9 +629,21 @@
     .line 269
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
 
+    .line 270
+    sget-boolean v4, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v4, :cond_2
+
+    const-string v4, "WindowManager"
+
+    const-string v5, "<<< CLOSE TRANSACTION ScreenRotationAnimation.dismiss"
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 274
     .end local v2           #inner:Landroid/graphics/Rect;
     .end local v3           #outer:Landroid/graphics/Rect;
+    :cond_2
     :goto_2
     const/4 v4, 0x1
 
@@ -585,7 +697,7 @@
 
     iput-object v5, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterAnimation:Landroid/view/animation/Animation;
 
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 232
     :pswitch_2
@@ -655,17 +767,43 @@
     .line 269
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
 
+    .line 270
+    sget-boolean v4, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v4, :cond_2
+
+    const-string v4, "WindowManager"
+
+    const-string v5, "<<< CLOSE TRANSACTION ScreenRotationAnimation.dismiss"
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_2
 
+    .line 269
     .end local v1           #e:Landroid/view/Surface$OutOfResourcesException;
     :catchall_0
     move-exception v4
 
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
 
+    .line 270
+    sget-boolean v5, Lcom/android/server/wm/WindowManagerService;->SHOW_LIGHT_TRANSACTIONS:Z
+
+    if-eqz v5, :cond_3
+
+    const-string v5, "WindowManager"
+
+    const-string v6, "<<< CLOSE TRANSACTION ScreenRotationAnimation.dismiss"
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
     throw v4
 
     .line 218
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -731,23 +869,29 @@
 .end method
 
 .method public kill()V
-    .locals 2
+    .locals 4
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
     .line 278
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
 
+    .line 279
+    sget-boolean v0, Lcom/android/server/wm/WindowManagerService;->SHOW_TRANSACTIONS:Z
+
+    if-nez v0, :cond_4
+
     .line 282
+    :goto_0
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->destroy()V
 
     .line 283
-    iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
+    iput-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
 
     .line 285
     :cond_0
@@ -772,7 +916,7 @@
     invoke-virtual {v0}, Landroid/view/animation/Animation;->cancel()V
 
     .line 290
-    iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mExitAnimation:Landroid/view/animation/Animation;
+    iput-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mExitAnimation:Landroid/view/animation/Animation;
 
     .line 292
     :cond_2
@@ -786,11 +930,45 @@
     invoke-virtual {v0}, Landroid/view/animation/Animation;->cancel()V
 
     .line 294
-    iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterAnimation:Landroid/view/animation/Animation;
+    iput-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterAnimation:Landroid/view/animation/Animation;
 
     .line 296
     :cond_3
     return-void
+
+    .line 280
+    :cond_4
+    const-string v0, "WindowManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "  FREEZE "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurface:Landroid/view/Surface;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ": DESTROY"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
 .end method
 
 .method public setRotation(I)V

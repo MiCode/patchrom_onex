@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 329
+    .line 330
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$2;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,9 +43,9 @@
     .parameter "whichButton"
 
     .prologue
-    .line 332
+    .line 333
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 333
+    .line 334
     return-void
 .end method

@@ -2654,13 +2654,13 @@
     move-result-object v6
 
     .line 172
-    if-eqz v6, :cond_2
+    if-eqz v6, :cond_1
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     .line 173
     const/4 v8, 0x0
@@ -2670,7 +2670,7 @@
 
     move-result v0
 
-    if-ge v8, v0, :cond_2
+    if-ge v8, v0, :cond_1
 
     .line 174
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getColumnName(I)Ljava/lang/String;
@@ -2691,6 +2691,17 @@
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
+
+    .line 181
+    :cond_1
+    if-eqz v6, :cond_2
+
+    .line 182
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 184
+    :cond_2
+    return-object v10
 
     .line 176
     .end local v1           #queryUri:Landroid/net/Uri;
@@ -2718,13 +2729,12 @@
     :catchall_0
     move-exception v0
 
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_3
 
     .line 182
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 181
-    :cond_1
+    :cond_3
     throw v0
 
     .line 178
@@ -2743,22 +2753,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 181
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    .restart local v1       #queryUri:Landroid/net/Uri;
-    .restart local v2       #projection:[Ljava/lang/String;
-    .restart local v3       #where:Ljava/lang/String;
-    .restart local v8       #i:I
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 182
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 184
-    :cond_3
-    return-object v10
 .end method
 
 .method public getActiveUserId()Ljava/lang/String;
@@ -2993,7 +2987,6 @@
     .line 141
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 140
     :cond_2
     throw v0
 
@@ -3247,7 +3240,6 @@
     .line 103
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 102
     :cond_2
     throw v0
 
@@ -3494,9 +3486,19 @@
     .line 623
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 622
     :cond_1
     throw v0
+
+    .line 622
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 623
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 625
+    :cond_3
+    return-object v10
 
     .line 619
     :catch_1
@@ -3514,18 +3516,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 622
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 623
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 625
-    :cond_3
-    return-object v10
 .end method
 
 .method public getAlbumIds(Ljava/lang/String;)Ljava/util/HashMap;
@@ -3784,9 +3774,19 @@
     .line 322
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 321
     :cond_0
     throw v0
+
+    .line 321
+    :cond_1
+    if-eqz v9, :cond_2
+
+    .line 322
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    .line 324
+    :cond_2
+    return-object v8
 
     .line 318
     :catch_1
@@ -3804,18 +3804,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 321
-    .end local v11           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_1
-    if-eqz v9, :cond_2
-
-    .line 322
-    invoke-interface {v9}, Landroid/database/Cursor;->close()V
-
-    .line 324
-    :cond_2
-    return-object v8
 .end method
 
 .method public getEventData(Ljava/lang/String;)Ljava/util/List;
@@ -3972,9 +3960,19 @@
     .line 656
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 655
     :cond_1
     throw v0
+
+    .line 655
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 656
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 658
+    :cond_3
+    return-object v10
 
     .line 652
     :catch_1
@@ -3992,18 +3990,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 655
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 656
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 658
-    :cond_3
-    return-object v10
 .end method
 
 .method public getEventMember(Ljava/lang/String;)Ljava/util/List;
@@ -4160,9 +4146,19 @@
     .line 690
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 689
     :cond_1
     throw v0
+
+    .line 689
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 690
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 692
+    :cond_3
+    return-object v10
 
     .line 686
     :catch_1
@@ -4180,18 +4176,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 689
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 690
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 692
-    :cond_3
-    return-object v10
 .end method
 
 .method public getFriendData([Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
@@ -4479,9 +4463,19 @@
     .line 569
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 568
     :cond_1
     throw v0
+
+    .line 568
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 569
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 571
+    :cond_3
+    return-object v10
 
     .line 565
     :catch_1
@@ -4499,18 +4493,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 568
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 569
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 571
-    :cond_3
-    return-object v10
 .end method
 
 .method public getFriendIds(Ljava/lang/String;)Ljava/util/HashMap;
@@ -4691,9 +4673,19 @@
     .line 283
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 282
     :cond_0
     throw v0
+
+    .line 282
+    :cond_1
+    if-eqz v6, :cond_2
+
+    .line 283
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 285
+    :cond_2
+    return-object v8
 
     .line 279
     :catch_1
@@ -4711,18 +4703,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 282
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_1
-    if-eqz v6, :cond_2
-
-    .line 283
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 285
-    :cond_2
-    return-object v8
 .end method
 
 .method public getFriendInvite(Ljava/lang/String;)Ljava/util/List;
@@ -4879,9 +4859,19 @@
     .line 727
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 726
     :cond_1
     throw v0
+
+    .line 726
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 727
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 729
+    :cond_3
+    return-object v10
 
     .line 723
     :catch_1
@@ -4899,18 +4889,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 726
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 727
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 729
-    :cond_3
-    return-object v10
 .end method
 
 .method public getFriendInvites(Ljava/lang/String;Ljava/lang/String;)Ljava/util/HashMap;
@@ -5090,9 +5068,19 @@
     .line 364
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 363
     :cond_1
     throw v0
+
+    .line 363
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 364
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 366
+    :cond_3
+    return-object v8
 
     .line 360
     :catch_1
@@ -5110,18 +5098,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 363
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 364
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 366
-    :cond_3
-    return-object v8
 .end method
 
 .method public getGroupInvite(Ljava/lang/String;)Ljava/util/List;
@@ -5278,9 +5254,19 @@
     .line 764
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 763
     :cond_1
     throw v0
+
+    .line 763
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 764
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 766
+    :cond_3
+    return-object v10
 
     .line 760
     :catch_1
@@ -5298,18 +5284,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 763
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 764
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 766
-    :cond_3
-    return-object v10
 .end method
 
 .method public getGroupInvites(Ljava/lang/String;Ljava/lang/String;)Ljava/util/HashMap;
@@ -5489,9 +5463,19 @@
     .line 405
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 404
     :cond_1
     throw v0
+
+    .line 404
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 405
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 407
+    :cond_3
+    return-object v8
 
     .line 401
     :catch_1
@@ -5509,18 +5493,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 404
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 405
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 407
-    :cond_3
-    return-object v8
 .end method
 
 .method public getInsertEventMemberOperation(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/content/ContentProviderOperation$Builder;
@@ -6262,13 +6234,13 @@
     if-eqz v8, :cond_4
 
     .line 1317
-    :goto_0
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 1307
     :cond_4
+    :goto_0
     return-object v0
 
+    .line 1307
     :cond_5
     :try_start_1
     sget-object v0, Lcom/htc/socialnetwork/Album;->CONTENT_URI:Landroid/net/Uri;
@@ -6287,6 +6259,9 @@
 
     .line 1316
     if-eqz v8, :cond_4
+
+    .line 1317
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
@@ -6317,7 +6292,6 @@
     .line 1317
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 1316
     :cond_6
     throw v0
 
@@ -6551,7 +6525,6 @@
     :try_end_2
     .catch Landroid/database/sqlite/SQLiteFullException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 2372
     :cond_3
     :goto_0
     return-object v0
@@ -6616,7 +6589,6 @@
     :try_start_5
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 2376
     :cond_5
     throw v0
     :try_end_5
@@ -7278,7 +7250,6 @@
     .line 434
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 433
     :cond_2
     throw v0
 
@@ -7420,7 +7391,6 @@
     .line 463
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 462
     :cond_2
     throw v0
 
@@ -7596,9 +7566,19 @@
     .line 798
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 797
     :cond_1
     throw v0
+
+    .line 797
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 798
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 800
+    :cond_3
+    return-object v10
 
     .line 794
     :catch_1
@@ -7616,18 +7596,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 797
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 798
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 800
-    :cond_3
-    return-object v10
 .end method
 
 .method public getPhotoCacheData([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
@@ -7866,7 +7834,6 @@
     .line 492
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 491
     :cond_2
     throw v0
 
@@ -8042,9 +8009,19 @@
     .line 832
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 831
     :cond_1
     throw v0
+
+    .line 831
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 832
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 834
+    :cond_3
+    return-object v10
 
     .line 828
     :catch_1
@@ -8062,18 +8039,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 831
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 832
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 834
-    :cond_3
-    return-object v10
 .end method
 
 .method public getProfileUpdate(Ljava/lang/String;)Ljava/util/List;
@@ -8230,9 +8195,19 @@
     .line 866
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 865
     :cond_1
     throw v0
+
+    .line 865
+    :cond_2
+    if-eqz v6, :cond_3
+
+    .line 866
+    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+
+    .line 868
+    :cond_3
+    return-object v10
 
     .line 862
     :catch_1
@@ -8250,18 +8225,6 @@
     throw v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 865
-    .end local v9           #iae:Ljava/lang/IllegalArgumentException;
-    :cond_2
-    if-eqz v6, :cond_3
-
-    .line 866
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
-
-    .line 868
-    :cond_3
-    return-object v10
 .end method
 
 .method public getServiceId()Ljava/lang/String;
@@ -8504,7 +8467,6 @@
     .line 1877
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 1876
     :cond_2
     throw v0
 
@@ -9405,7 +9367,6 @@
     .line 239
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 238
     :cond_4
     throw v0
 

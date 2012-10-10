@@ -33,17 +33,17 @@
     .parameter "activity"
 
     .prologue
-    .line 1184
+    .line 1186
     invoke-direct {p0}, Lcom/htc/dlnainterface/IDLNAPluginNotify$Stub;-><init>()V
 
-    .line 1185
+    .line 1187
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
-    .line 1186
+    .line 1188
     return-void
 .end method
 
@@ -64,24 +64,24 @@
     .local p1, mActivity:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;>;"
     const/4 v0, 0x0
 
-    .line 1189
+    .line 1191
     if-eqz p1, :cond_1
 
-    .line 1190
+    .line 1192
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 1191
+    .line 1193
     const/4 v0, 0x1
 
-    .line 1198
+    .line 1200
     :goto_0
     return v0
 
-    .line 1193
+    .line 1195
     :cond_0
     const-string v1, "[DLNA] "
 
@@ -91,7 +91,7 @@
 
     goto :goto_0
 
-    .line 1197
+    .line 1199
     :cond_1
     const-string v1, "[DLNA] "
 
@@ -116,7 +116,7 @@
     .end annotation
 
     .prologue
-    .line 1386
+    .line 1388
     return-void
 .end method
 
@@ -133,7 +133,7 @@
     .end annotation
 
     .prologue
-    .line 1279
+    .line 1281
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v0}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
@@ -142,12 +142,12 @@
 
     if-nez v0, :cond_1
 
-    .line 1305
+    .line 1307
     :cond_0
     :goto_0
     return-void
 
-    .line 1282
+    .line 1284
     :cond_1
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
@@ -168,12 +168,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1286
+    .line 1288
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
-    .line 1287
+    .line 1289
     .local v7, current:J
     invoke-static {}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->access$1600()J
 
@@ -197,7 +197,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 1291
+    .line 1293
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -205,7 +205,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->access$1602(J)J
 
-    .line 1293
+    .line 1295
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -219,7 +219,7 @@
     #setter for: Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->mInitial:Z
     invoke-static {v0, v1}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->access$1102(Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;Z)Z
 
-    .line 1295
+    .line 1297
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -240,7 +240,7 @@
 
     move-result-object v9
 
-    .line 1297
+    .line 1299
     .local v9, cursor:Landroid/database/Cursor;
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
@@ -261,11 +261,11 @@
 
     move-result-object v10
 
-    .line 1298
+    .line 1300
     .local v10, msg:Landroid/os/Message;
     iput-object v9, v10, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1299
+    .line 1301
     invoke-virtual {v10}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -274,7 +274,7 @@
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1302
+    .line 1304
     iget-object v0, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -307,7 +307,7 @@
     .end annotation
 
     .prologue
-    .line 1308
+    .line 1310
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
@@ -316,12 +316,12 @@
 
     if-nez v2, :cond_1
 
-    .line 1358
+    .line 1360
     :cond_0
     :goto_0
     return-void
 
-    .line 1311
+    .line 1313
     :cond_1
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
@@ -361,10 +361,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1312
+    .line 1314
     if-eqz p7, :cond_2
 
-    .line 1313
+    .line 1315
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -384,13 +384,13 @@
 
     check-cast v11, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;
 
-    .line 1314
+    .line 1316
     .local v11, info:Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;
     const/4 v2, 0x0
 
     invoke-virtual {v11, v2}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->setCancelled(Z)V
 
-    .line 1315
+    .line 1317
     const-string v2, "[DLNA] "
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -413,12 +413,12 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1318
+    .line 1320
     .end local v11           #info:Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;
     :cond_2
     const/4 v9, 0x0
 
-    .line 1319
+    .line 1321
     .local v9, bSame:Z
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
@@ -437,21 +437,21 @@
 
     if-nez v2, :cond_3
 
-    .line 1320
+    .line 1322
     const-string v2, "[DLNA] "
 
     const-string v3, "content browsing done, the range is the same"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1321
+    .line 1323
     const/4 v9, 0x1
 
-    .line 1324
+    .line 1326
     :cond_3
     if-nez v9, :cond_4
 
-    .line 1326
+    .line 1328
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -472,11 +472,11 @@
 
     move-result-object v10
 
-    .line 1328
+    .line 1330
     .local v10, cursor:Landroid/database/Cursor;
     if-eqz v10, :cond_5
 
-    .line 1329
+    .line 1331
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -496,11 +496,11 @@
 
     move-result-object v12
 
-    .line 1330
+    .line 1332
     .local v12, msg:Landroid/os/Message;
     iput-object v10, v12, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1331
+    .line 1333
     invoke-virtual {v12}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
@@ -509,7 +509,7 @@
 
     invoke-virtual {v2, v3, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1332
+    .line 1334
     invoke-virtual {v12}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
@@ -520,7 +520,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1333
+    .line 1335
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -536,7 +536,7 @@
 
     invoke-virtual {v2, v12}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1342
+    .line 1344
     .end local v10           #cursor:Landroid/database/Cursor;
     .end local v12           #msg:Landroid/os/Message;
     :cond_4
@@ -554,7 +554,7 @@
     #setter for: Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->mInitial:Z
     invoke-static {v2, v3}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->access$1102(Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;Z)Z
 
-    .line 1343
+    .line 1345
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -589,7 +589,7 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1346
+    .line 1348
     const/4 v2, 0x1
 
     move/from16 v0, p7
@@ -602,7 +602,7 @@
 
     if-gez v2, :cond_0
 
-    .line 1347
+    .line 1349
     const-string v2, "[DLNA] "
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -627,7 +627,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1348
+    .line 1350
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -647,7 +647,7 @@
 
     move-result-object v12
 
-    .line 1349
+    .line 1351
     .restart local v12       #msg:Landroid/os/Message;
     invoke-virtual {v12}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -657,7 +657,7 @@
 
     invoke-virtual {v2, v3, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1350
+    .line 1352
     invoke-virtual {v12}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
@@ -666,7 +666,7 @@
 
     invoke-virtual {v2, v3, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1351
+    .line 1353
     invoke-virtual {v12}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
@@ -679,7 +679,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 1352
+    .line 1354
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -697,7 +697,7 @@
 
     goto/16 :goto_0
 
-    .line 1336
+    .line 1338
     .end local v12           #msg:Landroid/os/Message;
     .restart local v10       #cursor:Landroid/database/Cursor;
     :cond_5
@@ -707,7 +707,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1337
+    .line 1339
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -742,7 +742,7 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1338
+    .line 1340
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -794,7 +794,7 @@
     .end annotation
 
     .prologue
-    .line 1360
+    .line 1362
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v1}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
@@ -803,12 +803,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1382
+    .line 1384
     :cond_0
     :goto_0
     return-void
 
-    .line 1363
+    .line 1365
     :cond_1
     const-string v1, "[DLNA] "
 
@@ -816,7 +816,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1364
+    .line 1366
     const-string v1, "[DLNA] "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -839,7 +839,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1365
+    .line 1367
     const-string v1, "[DLNA] "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -862,7 +862,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1366
+    .line 1368
     const-string v2, "[DLNA] "
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -898,7 +898,7 @@
 
     invoke-static {v2, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1367
+    .line 1369
     const-string v2, "[DLNA] "
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -934,7 +934,7 @@
 
     invoke-static {v2, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1369
+    .line 1371
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -973,14 +973,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 1372
+    .line 1374
     const-string v1, "[DLNA] "
 
     const-string v2, "BrowsingError"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1373
+    .line 1375
     const-string v1, "[DLNA] "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1003,7 +1003,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1374
+    .line 1376
     const-string v1, "[DLNA] "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1026,7 +1026,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1376
+    .line 1378
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1040,7 +1040,7 @@
     #setter for: Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->mInitial:Z
     invoke-static {v1, v2}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;->access$1102(Lcom/htc/music/browserlayer/DlnaBrowserActivityExp;Z)Z
 
-    .line 1377
+    .line 1379
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1075,7 +1075,7 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1379
+    .line 1381
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1095,7 +1095,7 @@
 
     move-result-object v0
 
-    .line 1380
+    .line 1382
     .local v0, msg:Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -1105,7 +1105,7 @@
 
     invoke-virtual {v1, v2, p5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1381
+    .line 1383
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1136,7 +1136,7 @@
     .end annotation
 
     .prologue
-    .line 1385
+    .line 1387
     return-void
 .end method
 
@@ -1151,7 +1151,7 @@
     .end annotation
 
     .prologue
-    .line 1399
+    .line 1401
     return-void
 .end method
 
@@ -1167,7 +1167,7 @@
     .end annotation
 
     .prologue
-    .line 1387
+    .line 1389
     return-void
 .end method
 
@@ -1183,7 +1183,7 @@
     .end annotation
 
     .prologue
-    .line 1388
+    .line 1390
     return-void
 .end method
 
@@ -1199,7 +1199,7 @@
     .end annotation
 
     .prologue
-    .line 1398
+    .line 1400
     return-void
 .end method
 
@@ -1215,7 +1215,7 @@
     .end annotation
 
     .prologue
-    .line 1389
+    .line 1391
     return-void
 .end method
 
@@ -1229,7 +1229,7 @@
     .end annotation
 
     .prologue
-    .line 1420
+    .line 1422
     return-void
 .end method
 
@@ -1245,7 +1245,7 @@
     .end annotation
 
     .prologue
-    .line 1390
+    .line 1392
     return-void
 .end method
 
@@ -1259,7 +1259,7 @@
     .end annotation
 
     .prologue
-    .line 1406
+    .line 1408
     return-void
 .end method
 
@@ -1274,7 +1274,7 @@
     .end annotation
 
     .prologue
-    .line 1391
+    .line 1393
     return-void
 .end method
 
@@ -1288,7 +1288,7 @@
     .end annotation
 
     .prologue
-    .line 1392
+    .line 1394
     return-void
 .end method
 
@@ -1304,7 +1304,7 @@
     .end annotation
 
     .prologue
-    .line 1393
+    .line 1395
     return-void
 .end method
 
@@ -1319,7 +1319,7 @@
     .end annotation
 
     .prologue
-    .line 1394
+    .line 1396
     return-void
 .end method
 
@@ -1336,7 +1336,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1203
+    .line 1205
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
@@ -1345,11 +1345,11 @@
 
     if-nez v2, :cond_0
 
-    .line 1219
+    .line 1221
     :goto_0
     return-void
 
-    .line 1206
+    .line 1208
     :cond_0
     const-string v2, "[DLNA] "
 
@@ -1383,19 +1383,19 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1208
+    .line 1210
     new-instance v1, Lcom/htc/dlnainterface/DLNAServerData;
 
     invoke-direct {v1}, Lcom/htc/dlnainterface/DLNAServerData;-><init>()V
 
-    .line 1209
+    .line 1211
     .local v1, newServer:Lcom/htc/dlnainterface/DLNAServerData;
     iput-object p1, v1, Lcom/htc/dlnainterface/DLNAServerData;->serverID:Ljava/lang/String;
 
-    .line 1210
+    .line 1212
     iput-object p2, v1, Lcom/htc/dlnainterface/DLNAServerData;->serverName:Ljava/lang/String;
 
-    .line 1212
+    .line 1214
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1415,11 +1415,11 @@
 
     move-result-object v0
 
-    .line 1213
+    .line 1215
     .local v0, msg:Landroid/os/Message;
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1214
+    .line 1216
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1435,7 +1435,7 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1216
+    .line 1218
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1468,7 +1468,7 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1217
+    .line 1219
     iget-object v2, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1493,7 +1493,7 @@
     .end annotation
 
     .prologue
-    .line 1222
+    .line 1224
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v1}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
@@ -1502,11 +1502,11 @@
 
     if-nez v1, :cond_0
 
-    .line 1236
+    .line 1238
     :goto_0
     return-void
 
-    .line 1228
+    .line 1230
     :cond_0
     const-string v1, "[DLNA] "
 
@@ -1532,7 +1532,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1229
+    .line 1231
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1552,11 +1552,11 @@
 
     move-result-object v0
 
-    .line 1230
+    .line 1232
     .local v0, msg:Landroid/os/Message;
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1231
+    .line 1233
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1572,7 +1572,7 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1233
+    .line 1235
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1622,7 +1622,7 @@
     .end annotation
 
     .prologue
-    .line 1239
+    .line 1241
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v1}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
@@ -1631,12 +1631,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1253
+    .line 1255
     :cond_0
     :goto_0
     return-void
 
-    .line 1242
+    .line 1244
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
@@ -1659,7 +1659,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1245
+    .line 1247
     const-string v1, "[DLNA] "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1682,7 +1682,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1246
+    .line 1248
     const-string v1, "[DLNA] "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1705,7 +1705,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1247
+    .line 1249
     const-string v1, "[DLNA] "
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1728,7 +1728,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1249
+    .line 1251
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1748,11 +1748,11 @@
 
     move-result-object v0
 
-    .line 1250
+    .line 1252
     .local v0, msg:Landroid/os/Message;
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1251
+    .line 1253
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1782,7 +1782,7 @@
     .end annotation
 
     .prologue
-    .line 1256
+    .line 1258
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v1}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->isServiceReady(Ljava/lang/ref/WeakReference;)Z
@@ -1791,12 +1791,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1276
+    .line 1278
     :cond_0
     :goto_0
     return-void
 
-    .line 1259
+    .line 1261
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
@@ -1821,7 +1821,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 1262
+    .line 1264
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -1845,7 +1845,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1263
+    .line 1265
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1875,10 +1875,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 1265
+    .line 1267
     if-eqz p2, :cond_0
 
-    .line 1266
+    .line 1268
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1900,7 +1900,7 @@
 
     invoke-virtual {v1, p2}, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$ServerInfo;->SetImgPath(Ljava/lang/String;)V
 
-    .line 1267
+    .line 1269
     iget-object v1, p0, Lcom/htc/music/browserlayer/DlnaBrowserActivityExp$DlnaNotifyStub;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1937,7 +1937,7 @@
 
     goto :goto_0
 
-    .line 1262
+    .line 1264
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -1954,7 +1954,7 @@
     .end annotation
 
     .prologue
-    .line 1395
+    .line 1397
     return-void
 .end method
 
@@ -1970,7 +1970,7 @@
     .end annotation
 
     .prologue
-    .line 1396
+    .line 1398
     return-void
 .end method
 
@@ -1984,7 +1984,7 @@
     .end annotation
 
     .prologue
-    .line 1397
+    .line 1399
     return-void
 .end method
 
@@ -2000,6 +2000,6 @@
     .end annotation
 
     .prologue
-    .line 1413
+    .line 1415
     return-void
 .end method

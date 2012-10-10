@@ -239,12 +239,12 @@
     .parameter "throwableData"
 
     .prologue
-    .line 128
+    .line 134
     if-eqz p0, :cond_0
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 129
+    .line 135
     :cond_0
     invoke-virtual {p2}, Landroid/server/data/ThrowableData;->getType()Ljava/lang/String;
 
@@ -272,7 +272,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 133
+    .line 139
     invoke-virtual {p2}, Landroid/server/data/ThrowableData;->getStackTrace()[Landroid/server/data/StackTraceElementData;
 
     move-result-object v0
@@ -289,13 +289,13 @@
 
     aget-object v2, v0, v3
 
-    .line 134
+    .line 140
     .local v2, element:Landroid/server/data/StackTraceElementData;
     if-eqz p0, :cond_1
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
+    .line 141
     :cond_1
     const-string v5, "  at "
 
@@ -357,37 +357,37 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
+    .line 139
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 147
+    .line 153
     .end local v2           #element:Landroid/server/data/StackTraceElementData;
     :cond_2
     invoke-virtual {p2}, Landroid/server/data/ThrowableData;->getCause()Landroid/server/data/ThrowableData;
 
     move-result-object v1
 
-    .line 148
+    .line 154
     .local v1, cause:Landroid/server/data/ThrowableData;
     if-eqz v1, :cond_4
 
-    .line 149
+    .line 155
     if-eqz p0, :cond_3
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 150
+    .line 156
     :cond_3
     const-string v5, "Caused by: "
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 151
+    .line 157
     invoke-static {p0, p1, v1}, Landroid/server/data/ThrowableData;->append(Ljava/lang/String;Ljava/lang/StringBuilder;Landroid/server/data/ThrowableData;)V
 
-    .line 153
+    .line 159
     :cond_4
     return-void
 .end method
@@ -398,7 +398,7 @@
     .locals 1
 
     .prologue
-    .line 112
+    .line 117
     iget-object v0, p0, Landroid/server/data/ThrowableData;->cause:Landroid/server/data/ThrowableData;
 
     return-object v0
@@ -408,7 +408,7 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 102
     iget-object v0, p0, Landroid/server/data/ThrowableData;->message:Ljava/lang/String;
 
     return-object v0
@@ -418,7 +418,7 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 112
     iget-object v0, p0, Landroid/server/data/ThrowableData;->stackTrace:[Landroid/server/data/StackTraceElementData;
 
     return-object v0
@@ -428,7 +428,7 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 107
     iget-object v0, p0, Landroid/server/data/ThrowableData;->type:Ljava/lang/String;
 
     return-object v0
@@ -438,7 +438,7 @@
     .locals 1
 
     .prologue
-    .line 117
+    .line 123
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/server/data/ThrowableData;->toString(Ljava/lang/String;)Ljava/lang/String;
@@ -453,16 +453,16 @@
     .parameter "prefix"
 
     .prologue
-    .line 121
+    .line 127
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 122
+    .line 128
     .local v0, builder:Ljava/lang/StringBuilder;
     invoke-static {p1, v0, p0}, Landroid/server/data/ThrowableData;->append(Ljava/lang/String;Ljava/lang/StringBuilder;Landroid/server/data/ThrowableData;)V
 
-    .line 123
+    .line 129
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -482,27 +482,27 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 83
+    .line 84
     invoke-interface {p1, v4}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 85
+    .line 86
     iget-object v5, p0, Landroid/server/data/ThrowableData;->message:Ljava/lang/String;
 
     invoke-interface {p1, v5}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
 
-    .line 86
+    .line 87
     iget-object v5, p0, Landroid/server/data/ThrowableData;->type:Ljava/lang/String;
 
     invoke-interface {p1, v5}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
 
-    .line 88
+    .line 89
     iget-object v5, p0, Landroid/server/data/ThrowableData;->stackTrace:[Landroid/server/data/StackTraceElementData;
 
     array-length v5, v5
 
     invoke-interface {p1, v5}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 89
+    .line 90
     iget-object v0, p0, Landroid/server/data/ThrowableData;->stackTrace:[Landroid/server/data/StackTraceElementData;
 
     .local v0, arr$:[Landroid/server/data/StackTraceElementData;
@@ -517,16 +517,16 @@
 
     aget-object v1, v0, v2
 
-    .line 90
+    .line 91
     .local v1, elementData:Landroid/server/data/StackTraceElementData;
     invoke-virtual {v1, p1}, Landroid/server/data/StackTraceElementData;->write(Ljava/io/DataOutput;)V
 
-    .line 89
+    .line 90
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 93
+    .line 94
     .end local v1           #elementData:Landroid/server/data/StackTraceElementData;
     :cond_0
     iget-object v5, p0, Landroid/server/data/ThrowableData;->cause:Landroid/server/data/ThrowableData;
@@ -538,17 +538,17 @@
     :cond_1
     invoke-interface {p1, v4}, Ljava/io/DataOutput;->writeBoolean(Z)V
 
-    .line 94
+    .line 95
     iget-object v4, p0, Landroid/server/data/ThrowableData;->cause:Landroid/server/data/ThrowableData;
 
     if-eqz v4, :cond_2
 
-    .line 95
+    .line 96
     iget-object v4, p0, Landroid/server/data/ThrowableData;->cause:Landroid/server/data/ThrowableData;
 
     invoke-virtual {v4, p1}, Landroid/server/data/ThrowableData;->write(Ljava/io/DataOutput;)V
 
-    .line 97
+    .line 98
     :cond_2
     return-void
 .end method

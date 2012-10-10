@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1569
+    .line 1589
     iput-object p1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1569
+    .line 1589
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$MyIdleHandler;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     return-void
@@ -55,14 +55,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1573
+    .line 1593
     const-string v1, "[MusicBrowserTabActivity]"
 
     const-string v2, "browsertab, MyIdleHandler receive queueIdle"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1575
+    .line 1595
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     #getter for: Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mDestroyed:Z
@@ -72,11 +72,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1583
+    .line 1603
     :goto_0
     return v3
 
-    .line 1579
+    .line 1599
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    .line 1580
+    .line 1600
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
@@ -101,7 +101,7 @@
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1581
+    .line 1601
     iget-object v1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$MyIdleHandler;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     #getter for: Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->mUIHandler:Landroid/os/Handler;

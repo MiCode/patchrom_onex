@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 4727
+    .line 4729
     iput-object p1, p0, Landroid/widget/ListView$CheckForItemReleased;->this$0:Landroid/widget/ListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
     .parameter "x1"
 
     .prologue
-    .line 4727
+    .line 4729
     invoke-direct {p0, p1}, Landroid/widget/ListView$CheckForItemReleased;-><init>(Landroid/widget/ListView;)V
 
     return-void
@@ -61,7 +61,7 @@
     .prologue
     const/high16 v1, 0x3f80
 
-    .line 4738
+    .line 4740
     iget-object v0, p0, Landroid/widget/ListView$CheckForItemReleased;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getScaleX()F
@@ -82,24 +82,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 4739
+    .line 4741
     :cond_0
     iget-object v0, p0, Landroid/widget/ListView$CheckForItemReleased;->this$0:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 4746
+    .line 4748
     :cond_1
     :goto_0
     return-void
 
-    .line 4742
+    .line 4744
     :cond_2
     iget-object v0, p0, Landroid/widget/ListView$CheckForItemReleased;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 4743
+    .line 4745
     iget-object v0, p0, Landroid/widget/ListView$CheckForItemReleased;->this$0:Landroid/widget/ListView;
 
     iget-object v1, p0, Landroid/widget/ListView$CheckForItemReleased;->mView:Landroid/view/View;
@@ -121,20 +121,20 @@
     .parameter "id"
 
     .prologue
-    .line 4732
+    .line 4734
     iput-object p1, p0, Landroid/widget/ListView$CheckForItemReleased;->mView:Landroid/view/View;
 
-    .line 4733
+    .line 4735
     iput p2, p0, Landroid/widget/ListView$CheckForItemReleased;->mPosition:I
 
-    .line 4734
+    .line 4736
     iput-wide p3, p0, Landroid/widget/ListView$CheckForItemReleased;->mId:J
 
-    .line 4735
+    .line 4737
     iget-object v0, p0, Landroid/widget/ListView$CheckForItemReleased;->this$0:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 4736
+    .line 4738
     return-void
 .end method

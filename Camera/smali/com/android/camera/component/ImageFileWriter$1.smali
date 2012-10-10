@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 124
+    .line 137
     iput-object p1, p0, Lcom/android/camera/component/ImageFileWriter$1;->this$0:Lcom/android/camera/component/ImageFileWriter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
     .parameter "x2"
 
     .prologue
-    .line 124
+    .line 137
     check-cast p3, Lcom/android/camera/imaging/SaveImageRequestEventArgs;
 
     .end local p3
@@ -82,11 +82,11 @@
     .end annotation
 
     .prologue
-    .line 127
+    .line 140
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/imaging/SaveImageRequestEventArgs;>;"
     iget-object v0, p3, Lcom/android/camera/imaging/SaveImageRequestEventArgs;->saveImageTask:Lcom/android/camera/imaging/SaveImageTask;
 
-    .line 128
+    .line 141
     .local v0, task:Lcom/android/camera/imaging/SaveImageTask;
     iget-object v1, p0, Lcom/android/camera/component/ImageFileWriter$1;->this$0:Lcom/android/camera/component/ImageFileWriter;
 
@@ -97,7 +97,7 @@
 
     monitor-enter v2
 
-    .line 130
+    .line 143
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/component/ImageFileWriter$1;->this$0:Lcom/android/camera/component/ImageFileWriter;
 
@@ -108,25 +108,25 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
 
-    .line 131
+    .line 144
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 132
+    .line 145
     iget-object v1, p0, Lcom/android/camera/component/ImageFileWriter$1;->this$0:Lcom/android/camera/component/ImageFileWriter;
 
     const/16 v2, 0x3e9
 
     invoke-virtual {v1, v2}, Lcom/android/camera/component/ImageFileWriter;->sendAsyncMessage(I)Z
 
-    .line 133
+    .line 146
     invoke-virtual {p3}, Lcom/android/camera/imaging/SaveImageRequestEventArgs;->setHandled()V
 
-    .line 134
+    .line 147
     return-void
 
-    .line 131
+    .line 144
     :catchall_0
     move-exception v1
 

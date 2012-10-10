@@ -439,7 +439,7 @@
     .line 67
     iget-object v0, p0, Lcom/android/camera/component/PowerWarningUI;->m_PowerWarningBase:Landroid/view/View;
 
-    const v1, 0x7f0800c9
+    const v1, 0x7f0800cb
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

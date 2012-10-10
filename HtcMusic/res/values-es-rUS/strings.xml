@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Agregar una lista de reproducción</string>
     <string name="htc_delete_playlists">Eliminar listas de reproducción</string>
     <string name="htc_delete_playlist">Eliminar lista de reproducción</string>
+    <string name="htc_delete_all_playlists">Eliminar todas las listas de reproducción</string>
     <string name="htc_playlist_add_songs">Agregar canciones</string>
     <string name="htc_playlist_del_songs">Eliminar canciones</string>
     <string name="htc_playlist_remove_songs">Eliminar canciones</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Almacenando en búfer...</string>
     <string name="title_send_content">Enviando contenido...</string>
     <string name="no_downloaded_apps_found">No se encontraron aplicaciones descargadas</string>
+    <string name="music_folder_picker_dialog_msg">¿Añadir canciones a las listas de reproducción seleccionando la carpeta? No a añadir canciones de la otra forma</string>
 </resources>

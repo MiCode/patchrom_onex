@@ -2,6 +2,6 @@
 <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:htc="http://schemas.android.com/apk/res/com.htc">
-    <com.htc.widget.HtcListItemTileImage android:id="@id/app_img" />
+    <com.htc.widget.HtcListItemColorIcon android:id="@id/app_img" />
     <com.htc.widget.HtcListItem2LineText android:id="@id/app_name" />
 </com.htc.widget.HtcListItem>

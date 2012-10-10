@@ -374,7 +374,7 @@
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "m."
+    const-string v1, "m."
 
     aput-object v1, v0, v4
 
@@ -386,13 +386,13 @@
 
     aput-object v1, v0, v6
 
-    const-string/jumbo v1, "http://"
+    const-string v1, "http://"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "https://"
+    const-string v2, "https://"
 
     aput-object v2, v0, v1
 

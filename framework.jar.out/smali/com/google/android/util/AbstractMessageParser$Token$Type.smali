@@ -71,7 +71,7 @@
 
     const-string v1, "HTML"
 
-    const-string/jumbo v2, "html"
+    const-string v2, "html"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -93,7 +93,7 @@
 
     const-string v1, "LINK"
 
-    const-string/jumbo v2, "l"
+    const-string v2, "l"
 
     invoke-direct {v0, v1, v6, v2}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -128,7 +128,7 @@
 
     const/4 v2, 0x5
 
-    const-string/jumbo v3, "m"
+    const-string v3, "m"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 

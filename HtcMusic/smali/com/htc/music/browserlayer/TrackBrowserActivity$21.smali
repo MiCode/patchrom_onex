@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3729
+    .line 3730
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$21;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,16 +42,16 @@
     .parameter "v"
 
     .prologue
-    .line 3731
+    .line 3732
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v0, :cond_0
 
-    .line 3737
+    .line 3738
     :goto_0
     return-void
 
-    .line 3734
+    .line 3735
     :cond_0
     :try_start_0
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
@@ -62,7 +62,7 @@
 
     goto :goto_0
 
-    .line 3735
+    .line 3736
     :catch_0
     move-exception v0
 

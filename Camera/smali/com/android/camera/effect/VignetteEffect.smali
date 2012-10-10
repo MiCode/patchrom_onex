@@ -19,7 +19,7 @@
     .locals 4
 
     .prologue
-    .line 14
+    .line 18
     sget v0, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
 
     int-to-double v0, v0
@@ -44,17 +44,17 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 22
+    .line 26
     const-string v0, "vignette"
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera/effect/GpuEffectBase;-><init>(Ljava/lang/String;Lcom/android/camera/HTCCamera;)V
 
-    .line 15
+    .line 19
     sget v0, Lcom/android/camera/effect/VignetteEffect;->DEFAULT_RADIUS:I
 
     iput v0, p0, Lcom/android/camera/effect/VignetteEffect;->m_Radius:I
 
-    .line 23
+    .line 27
     return-void
 .end method
 
@@ -63,7 +63,7 @@
     .parameter "radius"
 
     .prologue
-    .line 66
+    .line 70
     new-instance v0, Lcom/android/camera/effect/GpuEffectParameters;
 
     const-string v1, "GE-param1"
@@ -95,7 +95,7 @@
 
     const/4 v3, 0x0
 
-    .line 47
+    .line 51
     new-instance v7, Lcom/android/camera/effect/GpuEffectInfo;
 
     const-string v8, "4_spotlight"
@@ -135,12 +135,12 @@
     .locals 3
 
     .prologue
-    .line 31
+    .line 35
     invoke-super {p0}, Lcom/android/camera/effect/GpuEffectBase;->getAppliedImageSettings()Lcom/android/camera/ImageSettings;
 
     move-result-object v0
 
-    .line 32
+    .line 36
     .local v0, imageSettings:Lcom/android/camera/ImageSettings;
     const/4 v1, 0x2
 
@@ -150,7 +150,7 @@
 
     iput-object v1, v0, Lcom/android/camera/ImageSettings;->brightness:Ljava/lang/Integer;
 
-    .line 33
+    .line 37
     const/4 v1, 0x7
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -159,14 +159,14 @@
 
     iput-object v1, v0, Lcom/android/camera/ImageSettings;->contrast:Ljava/lang/Integer;
 
-    .line 34
+    .line 38
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v2, 0x26
 
     if-ne v1, v2, :cond_0
 
-    .line 35
+    .line 39
     const/4 v1, 0x3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -175,11 +175,11 @@
 
     iput-object v1, v0, Lcom/android/camera/ImageSettings;->saturation:Ljava/lang/Integer;
 
-    .line 38
+    .line 42
     :goto_0
     return-object v0
 
-    .line 37
+    .line 41
     :cond_0
     const/16 v1, 0x8
 
@@ -196,7 +196,7 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 62
     iget v0, p0, Lcom/android/camera/effect/VignetteEffect;->m_Radius:I
 
     return v0
@@ -206,23 +206,23 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 79
     invoke-virtual {p0}, Lcom/android/camera/effect/VignetteEffect;->isApplied()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 76
+    .line 80
     sget v0, Lcom/android/camera/effect/VignetteEffect;->DEFAULT_RADIUS:I
 
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/VignetteEffect;->setRadius(I)V
 
-    .line 79
+    .line 83
     :goto_0
     return-void
 
-    .line 78
+    .line 82
     :cond_0
     sget v0, Lcom/android/camera/effect/VignetteEffect;->DEFAULT_RADIUS:I
 
@@ -236,24 +236,24 @@
     .parameter "radius"
 
     .prologue
-    .line 86
+    .line 90
     iput p1, p0, Lcom/android/camera/effect/VignetteEffect;->m_Radius:I
 
-    .line 87
+    .line 91
     invoke-virtual {p0}, Lcom/android/camera/effect/VignetteEffect;->isApplied()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 88
+    .line 92
     invoke-direct {p0, p1}, Lcom/android/camera/effect/VignetteEffect;->getRadiusParameters(I)Lcom/android/camera/effect/GpuEffectParameters;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/VignetteEffect;->setGpuEffectParameters(Lcom/android/camera/effect/GpuEffectParameters;)Z
 
-    .line 89
+    .line 93
     :cond_0
     return-void
 .end method

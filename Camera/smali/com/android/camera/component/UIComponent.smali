@@ -545,21 +545,21 @@
     .parameter "callback"
 
     .prologue
-    .line 305
+    .line 308
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 329
+    .line 332
     :cond_0
     :goto_0
     return-void
 
-    .line 309
+    .line 312
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 312
+    .line 315
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f80
@@ -568,25 +568,25 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 313
+    .line 316
     .local v0, startAni:Landroid/view/animation/AlphaAnimation;
     const-wide/16 v1, 0x190
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 314
+    .line 317
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 315
+    .line 318
     new-instance v1, Lcom/android/camera/component/UIComponent$1;
 
     invoke-direct {v1, p0, p3, p1, p2}, Lcom/android/camera/component/UIComponent$1;-><init>(Lcom/android/camera/component/UIComponent;Lcom/android/camera/component/UIComponent$AlphaRotateAnimationCallback;Landroid/view/View;Lcom/android/camera/rotate/UIRotation;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 328
+    .line 331
     invoke-virtual {p1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     goto :goto_0
@@ -598,14 +598,14 @@
     .parameter "rotation"
 
     .prologue
-    .line 332
+    .line 335
     new-instance v0, Lcom/android/camera/component/UIComponent$2;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/UIComponent$2;-><init>(Lcom/android/camera/component/UIComponent;)V
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/camera/component/UIComponent;->showAlphaRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/component/UIComponent$AlphaRotateAnimationCallback;)V
 
-    .line 339
+    .line 342
     return-void
 .end method
 
@@ -657,18 +657,20 @@
 .end method
 
 .method protected final showProcessingDialog(ZLjava/lang/String;)V
-    .locals 8
+    .locals 9
     .parameter "visible"
     .parameter "message"
 
     .prologue
-    const/16 v7, 0x12c
+    const v4, 0x7f0800cf
 
-    const/high16 v6, 0x3f80
+    const/16 v8, 0x12c
+
+    const/high16 v7, 0x3f80
+
+    const/4 v6, 0x0
 
     const/4 v5, 0x0
-
-    const/4 v4, 0x0
 
     .line 263
     if-eqz p1, :cond_3
@@ -684,7 +686,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 297
+    .line 300
     :cond_0
     :goto_0
     return-void
@@ -735,7 +737,7 @@
 
     .line 276
     .local v1, mlayout:Landroid/view/View;
-    const-string v2, "com.htc.R.drawable.popup_full_dark"
+    const-string v2, "com.htc.R.drawable.popup_full_bright"
 
     invoke-static {v2}, Lcom/android/camera/ViewUtil;->getHtcInternalResourceId(Ljava/lang/String;)I
 
@@ -748,9 +750,7 @@
     :cond_2
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    const v3, 0x7f0800cd
-
-    invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v4}, Lcom/android/camera/rotate/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -758,7 +758,28 @@
 
     invoke-virtual {v2, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 284
+    .line 282
+    iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
+
+    invoke-virtual {v2, v4}, Lcom/android/camera/rotate/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Lcom/android/camera/component/UIComponent;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v3
+
+    const-string v4, "com.htc.R.style.list_primary_s"
+
+    invoke-static {v4}, Lcom/android/camera/ViewUtil;->getHtcInternalResourceId(Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
+
+    .line 287
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {p0}, Lcom/android/camera/component/UIComponent;->getRotation()Lcom/android/camera/rotate/UIRotation;
@@ -767,30 +788,30 @@
 
     invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateRelativeLayout;->setRotation(Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 285
+    .line 288
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    invoke-virtual {v2, v4}, Lcom/android/camera/rotate/RotateRelativeLayout;->setVisibility(I)V
+    invoke-virtual {v2, v5}, Lcom/android/camera/rotate/RotateRelativeLayout;->setVisibility(I)V
 
-    .line 286
+    .line 289
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->bringToFront()V
 
-    .line 287
+    .line 290
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    invoke-static {v2, v5, v6, v4, v7}, Lcom/android/camera/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)Landroid/view/animation/AlphaAnimation;
+    invoke-static {v2, v6, v7, v5, v8}, Lcom/android/camera/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)Landroid/view/animation/AlphaAnimation;
 
     goto :goto_0
 
-    .line 289
+    .line 292
     :cond_3
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     if-eqz v2, :cond_0
 
-    .line 291
+    .line 294
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     invoke-virtual {v2}, Lcom/android/camera/rotate/RotateRelativeLayout;->getVisibility()I
@@ -799,17 +820,17 @@
 
     if-nez v2, :cond_0
 
-    .line 293
+    .line 296
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Lcom/android/camera/rotate/RotateRelativeLayout;->setVisibility(I)V
 
-    .line 294
+    .line 297
     iget-object v2, p0, Lcom/android/camera/component/UIComponent;->m_ProcessingDialogContainer:Lcom/android/camera/rotate/RotateRelativeLayout;
 
-    invoke-static {v2, v6, v5, v4, v7}, Lcom/android/camera/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)Landroid/view/animation/AlphaAnimation;
+    invoke-static {v2, v7, v6, v5, v8}, Lcom/android/camera/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)Landroid/view/animation/AlphaAnimation;
 
     goto :goto_0
 .end method
@@ -821,12 +842,12 @@
     .parameter "newRotation"
 
     .prologue
-    .line 346
+    .line 349
     const/16 v0, 0x190
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/camera/component/UIComponent;->showRotateAnimation(Landroid/view/View;Lcom/android/camera/rotate/UIRotation;Lcom/android/camera/rotate/UIRotation;I)V
 
-    .line 347
+    .line 350
     return-void
 .end method
 
@@ -840,14 +861,14 @@
     .prologue
     const/high16 v4, 0x43b4
 
-    .line 351
+    .line 354
     if-nez p1, :cond_0
 
-    .line 373
+    .line 376
     :goto_0
     return-void
 
-    .line 355
+    .line 358
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera/rotate/UIRotation;->getSurfaceDegrees()I
 
@@ -855,7 +876,7 @@
 
     int-to-float v2, v0
 
-    .line 356
+    .line 359
     .local v2, toDegree:F
     invoke-virtual {p2}, Lcom/android/camera/rotate/UIRotation;->getSurfaceDegrees()I
 
@@ -863,7 +884,7 @@
 
     int-to-float v1, v0
 
-    .line 357
+    .line 360
     .local v1, fromDegree:F
     sub-float v0, v2, v1
 
@@ -877,15 +898,15 @@
 
     if-lez v0, :cond_1
 
-    .line 359
+    .line 362
     cmpl-float v0, v2, v1
 
     if-lez v0, :cond_2
 
-    .line 360
+    .line 363
     sub-float/2addr v2, v4
 
-    .line 366
+    .line 369
     :cond_1
     :goto_1
     const/4 v3, 0x0
@@ -900,7 +921,7 @@
 
     goto :goto_0
 
-    .line 362
+    .line 365
     :cond_2
     sub-float/2addr v1, v4
 
@@ -914,12 +935,12 @@
     .parameter "animationDuration"
 
     .prologue
-    .line 388
+    .line 391
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/camera/component/UIComponent;->showUI(Landroid/view/View;ZILjava/lang/Runnable;)V
 
-    .line 389
+    .line 392
     return-void
 .end method
 
@@ -937,44 +958,44 @@
 
     const/4 v2, 0x0
 
-    .line 393
+    .line 396
     invoke-virtual {p0}, Lcom/android/camera/component/UIComponent;->threadAccessCheck()V
 
-    .line 396
+    .line 399
     if-nez p1, :cond_1
 
-    .line 466
+    .line 469
     :cond_0
     :goto_0
     return-void
 
-    .line 400
+    .line 403
     :cond_1
     if-eqz p2, :cond_3
 
-    .line 402
+    .line 405
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 404
+    .line 407
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 405
+    .line 408
     if-lez p3, :cond_2
 
-    .line 407
+    .line 410
     invoke-static {p1, v3, v4, v2, p3}, Lcom/android/camera/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)Landroid/view/animation/AlphaAnimation;
 
     move-result-object v0
 
-    .line 408
+    .line 411
     .local v0, ani:Landroid/view/animation/Animation;
     if-eqz p4, :cond_0
 
-    .line 410
+    .line 413
     new-instance v1, Lcom/android/camera/component/UIComponent$3;
 
     invoke-direct {v1, p0, p4}, Lcom/android/camera/component/UIComponent$3;-><init>(Lcom/android/camera/component/UIComponent;Ljava/lang/Runnable;)V
@@ -983,20 +1004,20 @@
 
     goto :goto_0
 
-    .line 427
+    .line 430
     .end local v0           #ani:Landroid/view/animation/Animation;
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 428
+    .line 431
     if-eqz p4, :cond_0
 
-    .line 429
+    .line 432
     invoke-interface {p4}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 435
+    .line 438
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
@@ -1004,24 +1025,24 @@
 
     if-nez v1, :cond_0
 
-    .line 437
+    .line 440
     const/4 v1, 0x4
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 438
+    .line 441
     if-lez p3, :cond_4
 
-    .line 440
+    .line 443
     invoke-static {p1, v4, v3, v2, p3}, Lcom/android/camera/AnimationManager;->showAlphaAnimation(Landroid/view/View;FFII)Landroid/view/animation/AlphaAnimation;
 
     move-result-object v0
 
-    .line 441
+    .line 444
     .restart local v0       #ani:Landroid/view/animation/Animation;
     if-eqz p4, :cond_0
 
-    .line 443
+    .line 446
     new-instance v1, Lcom/android/camera/component/UIComponent$4;
 
     invoke-direct {v1, p0, p4}, Lcom/android/camera/component/UIComponent$4;-><init>(Lcom/android/camera/component/UIComponent;Ljava/lang/Runnable;)V
@@ -1030,15 +1051,15 @@
 
     goto :goto_0
 
-    .line 460
+    .line 463
     .end local v0           #ani:Landroid/view/animation/Animation;
     :cond_4
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 461
+    .line 464
     if-eqz p4, :cond_0
 
-    .line 462
+    .line 465
     invoke-interface {p4}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
@@ -1051,12 +1072,12 @@
     .parameter "animation"
 
     .prologue
-    .line 380
+    .line 383
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/camera/component/UIComponent;->showUI(Landroid/view/View;ZZLjava/lang/Runnable;)V
 
-    .line 381
+    .line 384
     return-void
 .end method
 
@@ -1070,7 +1091,7 @@
     .prologue
     const/16 v0, 0x190
 
-    .line 384
+    .line 387
     if-eqz p3, :cond_1
 
     if-eqz p2, :cond_0
@@ -1079,10 +1100,10 @@
     :goto_0
     invoke-virtual {p0, p1, p2, v0, p4}, Lcom/android/camera/component/UIComponent;->showUI(Landroid/view/View;ZILjava/lang/Runnable;)V
 
-    .line 385
+    .line 388
     return-void
 
-    .line 384
+    .line 387
     :cond_1
     const/4 v0, 0x0
 

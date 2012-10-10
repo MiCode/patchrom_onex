@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 191
+    .line 196
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$Engine$1;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,15 +41,15 @@
     .locals 2
 
     .prologue
-    .line 193
+    .line 198
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 195
+    .line 200
     .local v0, startTime:J
     invoke-static {}, Landroid/os/Process;->releaseFileMapMemory()V
 
-    .line 197
+    .line 202
     return-void
 .end method

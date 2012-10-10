@@ -660,7 +660,7 @@
     .end local v13           #column:Ljava/lang/String;
     :cond_7
     :try_start_6
-    const-string/jumbo v13, "image_id="
+    const-string v13, "image_id="
 
     goto :goto_3
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 566
+    .line 572
     iput-object p1, p0, Lcom/android/camera/CameraThread$1;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,11 +43,11 @@
     .parameter "camera"
 
     .prologue
-    .line 569
+    .line 575
     iget-object v0, p0, Lcom/android/camera/CameraThread$1;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/CameraThread;->handleCommonJpegCallback([BLandroid/hardware/Camera;)V
 
-    .line 570
+    .line 576
     return-void
 .end method

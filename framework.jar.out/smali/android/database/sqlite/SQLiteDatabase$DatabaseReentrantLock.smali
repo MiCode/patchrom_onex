@@ -20,10 +20,10 @@
     .parameter "fair"
 
     .prologue
-    .line 493
+    .line 501
     invoke-direct {p0, p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>(Z)V
 
-    .line 494
+    .line 502
     return-void
 .end method
 
@@ -33,7 +33,7 @@
     .locals 1
 
     .prologue
-    .line 497
+    .line 505
     invoke-super {p0}, Ljava/util/concurrent/locks/ReentrantLock;->getOwner()Ljava/lang/Thread;
 
     move-result-object v0
@@ -45,12 +45,12 @@
     .locals 3
 
     .prologue
-    .line 500
+    .line 508
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase$DatabaseReentrantLock;->getOwner()Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 501
+    .line 509
     .local v0, t:Ljava/lang/Thread;
     if-nez v0, :cond_0
 

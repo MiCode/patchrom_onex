@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 927
+    .line 944
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 934
+    .line 951
     const/4 v0, 0x1
 
     return v0
@@ -53,12 +53,12 @@
     .parameter "listItemTag"
 
     .prologue
-    .line 938
+    .line 955
     move-object v0, p1
 
     check-cast v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
 
-    .line 939
+    .line 956
     .local v0, temp:Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;
     iget v1, v0, Lcom/htc/music/browserlayer/LocalMusicSearchActivity$SearchListAdapter$ViewHolder;->viewType:I
 
@@ -66,10 +66,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 940
+    .line 957
     const/4 v1, 0x1
 
-    .line 942
+    .line 959
     :goto_0
     return v1
 

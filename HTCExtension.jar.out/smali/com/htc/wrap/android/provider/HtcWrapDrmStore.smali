@@ -118,15 +118,15 @@
 
     const/4 v5, 0x2
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
     .line 71
-    sput-boolean v3, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->REBUILD_DATABASE:Z
+    sput-boolean v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->REBUILD_DATABASE:Z
 
     .line 96
-    sput-boolean v3, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_FORWORD_LOCK:Z
+    sput-boolean v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_FORWORD_LOCK:Z
 
     .line 97
     sput-boolean v3, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_COMBINED_DELIVERY:Z
@@ -142,11 +142,11 @@
 
     const-string v1, "chmod"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "666"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, ""
 
@@ -159,11 +159,11 @@
 
     sget-object v1, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Images;->CONTENT_URI:Landroid/net/Uri;
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     sget-object v1, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Audio;->CONTENT_URI:Landroid/net/Uri;
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sget-object v1, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Video;->CONTENT_URI:Landroid/net/Uri;
 
@@ -180,11 +180,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "_data"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "title"
 
@@ -201,11 +201,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "_data"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->FILEPATH_PROJECTION:[Ljava/lang/String;
 
@@ -214,11 +214,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "date_added"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->CONSTRAINT_PROJECTION:[Ljava/lang/String;
 
@@ -229,11 +229,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "_data"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "_size"
 
@@ -278,11 +278,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "_data"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "delivery_type"
 
@@ -295,11 +295,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "_data"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "mime_type"
 
@@ -316,11 +316,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "_data"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->MIDLET_PROJECTION:[Ljava/lang/String;
 
@@ -329,11 +329,11 @@
 
     const-string v1, "album_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "album"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "album_key"
 
@@ -346,11 +346,11 @@
 
     const-string v1, "artist_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "artist"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "artist_key"
 
@@ -365,11 +365,11 @@
 
     const-string v1, "_id"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "time_stamp"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "clock_stamp"
 
@@ -410,7 +410,7 @@
     .parameter "mimeType"
 
     .prologue
-    .line 7101
+    .line 7231
     const-string v0, "application/java-archive"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -425,10 +425,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 7104
+    .line 7234
     const/4 v0, 0x1
 
-    .line 7106
+    .line 7236
     :goto_0
     return v0
 
@@ -442,7 +442,7 @@
     .locals 2
 
     .prologue
-    .line 6924
+    .line 7054
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/4 v1, 0x2
@@ -491,11 +491,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 6951
+    .line 7081
     :cond_0
     const/4 v0, 0x1
 
-    .line 6953
+    .line 7083
     :goto_0
     return v0
 
@@ -513,17 +513,17 @@
     .parameter "className"
 
     .prologue
-    .line 6190
+    .line 6320
     const-string v2, "HtcWrapDrmStore"
 
     const-string v3, "********acquireRights"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6192
+    .line 6322
     const/16 v16, 0x0
 
-    .line 6194
+    .line 6324
     .local v16, uri:Landroid/net/Uri;
     if-eqz p0, :cond_0
 
@@ -531,7 +531,7 @@
 
     if-nez p2, :cond_1
 
-    .line 6196
+    .line 6326
     :cond_0
     const-string v2, "HtcWrapDrmStore"
 
@@ -539,14 +539,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6198
+    .line 6328
     const/4 v2, 0x0
 
-    .line 6313
+    .line 6443
     :goto_0
     return-object v2
 
-    .line 6201
+    .line 6331
     :cond_1
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -572,23 +572,23 @@
 
     move-result-object v8
 
-    .line 6203
+    .line 6333
     .local v8, c:Landroid/database/Cursor;
     if-nez v8, :cond_2
 
-    .line 6205
+    .line 6335
     const-string v2, "HtcWrapDrmStore"
 
     const-string v3, "acquireRights : -6"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6207
+    .line 6337
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 6208
+    .line 6338
     :cond_2
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
 
@@ -596,43 +596,43 @@
 
     if-nez v2, :cond_3
 
-    .line 6210
+    .line 6340
     const-string v2, "HtcWrapDrmStore"
 
     const-string v3, "acquireRights no record."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6212
+    .line 6342
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 6213
+    .line 6343
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 6216
+    .line 6346
     :cond_3
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6217
+    .line 6347
     const-string v2, "message_type"
 
     invoke-interface {v8, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v15
 
-    .line 6218
+    .line 6348
     .local v15, messageTypeColumnId:I
     invoke-interface {v8, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 6219
+    .line 6349
     .local v14, messageType:Ljava/lang/String;
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 6221
+    .line 6351
     const-string v2, "application/vnd.oma.drm.content"
 
     invoke-virtual {v14, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -641,19 +641,19 @@
 
     if-nez v2, :cond_4
 
-    .line 6223
+    .line 6353
     const-string v2, "HtcWrapDrmStore"
 
     const-string v3, "acquireRights : -2"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6225
+    .line 6355
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 6228
+    .line 6358
     :cond_4
     new-instance v11, Ljava/io/File;
 
@@ -661,14 +661,14 @@
 
     invoke-direct {v11, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6230
+    .line 6360
     .local v11, file:Ljava/io/File;
     :try_start_0
     new-instance v12, Ljava/io/FileInputStream;
 
     invoke-direct {v12, v11}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 6231
+    .line 6361
     .local v12, fis:Ljava/io/InputStream;
     new-instance v9, Landroid/drm/mobile1/DrmRawContent;
 
@@ -678,32 +678,32 @@
 
     invoke-direct {v9, v12, v2, v14}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 6232
+    .line 6362
     .local v9, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-virtual {v9}, Landroid/drm/mobile1/DrmRawContent;->getRightsAddress()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 6233
+    .line 6363
     .local v13, issuer:Ljava/lang/String;
     if-nez v13, :cond_5
 
-    .line 6235
+    .line 6365
     const-string v2, "HtcWrapDrmStore"
 
     const-string v3, "Null issuer : -9"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6237
+    .line 6367
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
-    .line 6238
+    .line 6368
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 6239
+    .line 6369
     :cond_5
     invoke-virtual {v13}, Ljava/lang/String;->length()I
 
@@ -711,22 +711,22 @@
 
     if-nez v2, :cond_6
 
-    .line 6241
+    .line 6371
     const-string v2, "HtcWrapDrmStore"
 
     const-string v3, "Empty issuer : -9"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6243
+    .line 6373
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
-    .line 6244
+    .line 6374
     const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 6246
+    .line 6376
     :cond_6
     const-string v2, "\\"
 
@@ -736,7 +736,7 @@
 
     move-result-object v13
 
-    .line 6248
+    .line 6378
     const-string v2, "HtcWrapDrmStore"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -761,13 +761,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 6252
+    .line 6382
     :try_start_1
     new-instance v17, Landroid/content/ContentValues;
 
     invoke-direct/range {v17 .. v17}, Landroid/content/ContentValues;-><init>()V
 
-    .line 6254
+    .line 6384
     .local v17, values:Landroid/content/ContentValues;
     const-string v2, "uri"
 
@@ -775,14 +775,14 @@
 
     invoke-virtual {v0, v2, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6256
+    .line 6386
     const-string v2, "entity"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v2, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6258
+    .line 6388
     const-string v2, "notificationpackage"
 
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -793,7 +793,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6260
+    .line 6390
     const-string v2, "notificationclass"
 
     move-object/from16 v0, v17
@@ -802,7 +802,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6262
+    .line 6392
     const-string v2, "visibility"
 
     const/4 v3, 0x2
@@ -815,7 +815,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 6264
+    .line 6394
     const-string v2, "is_visible_in_downloads_ui"
 
     const/4 v3, 0x0
@@ -828,7 +828,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 6269
+    .line 6399
     const-string v2, "restriction"
 
     const/4 v3, 0x4
@@ -841,7 +841,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 6299
+    .line 6429
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -858,15 +858,15 @@
 
     move-object/from16 v2, v16
 
-    .line 6313
+    .line 6443
     goto/16 :goto_0
 
-    .line 6300
+    .line 6430
     .end local v17           #values:Landroid/content/ContentValues;
     :catch_0
     move-exception v10
 
-    .line 6302
+    .line 6432
     .local v10, e:Ljava/lang/Exception;
     :try_start_2
     const-string v2, "HtcWrapDrmStore"
@@ -895,17 +895,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6304
+    .line 6434
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 6305
+    .line 6435
     const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 6307
+    .line 6437
     .end local v9           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v10           #e:Ljava/lang/Exception;
     .end local v12           #fis:Ljava/io/InputStream;
@@ -913,7 +913,7 @@
     :catch_1
     move-exception v10
 
-    .line 6309
+    .line 6439
     .restart local v10       #e:Ljava/lang/Exception;
     const-string v2, "HtcWrapDrmStore"
 
@@ -941,7 +941,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6311
+    .line 6441
     const/4 v2, 0x0
 
     goto/16 :goto_0
@@ -6440,56 +6440,38 @@
     const-string v5, " @@@@@ saveFile for NORMAL case."
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_4c
+    .catchall {:try_start_4c .. :try_end_4c} :catchall_1
+    .catch Ljava/lang/Exception; {:try_start_4c .. :try_end_4c} :catch_d
 
-    .line 2401
-    new-instance v81, Ljava/io/FileOutputStream;
-
+    .line 2405
+    :try_start_4d
     move-object/from16 v0, v16
 
     invoke-static {v11, v0}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getFilePathFromUri(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v3
 
-    move-object/from16 v0, v81
-
-    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-    :try_end_4c
-    .catchall {:try_start_4c .. :try_end_4c} :catchall_1
-    .catch Ljava/lang/Exception; {:try_start_4c .. :try_end_4c} :catch_d
-
-    .line 2403
-    .restart local v81       #os:Ljava/io/FileOutputStream;
-    if-eqz v81, :cond_5d
-
-    .line 2405
-    :try_start_4d
     move-object/from16 v0, p1
 
     move-object/from16 v1, v32
 
-    move-object/from16 v2, v81
-
-    invoke-static {v0, v1, v2}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->saveFile(Ljava/io/File;Landroid/drm/mobile1/DrmRawContent;Ljava/io/FileOutputStream;)I
+    invoke-static {v0, v3, v1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->saveFile(Ljava/io/File;Ljava/lang/String;Landroid/drm/mobile1/DrmRawContent;)I
     :try_end_4d
     .catchall {:try_start_4d .. :try_end_4d} :catchall_b
 
     move-result v25
 
-    .line 2408
-    :try_start_4e
-    invoke-virtual/range {v81 .. v81}, Ljava/io/FileOutputStream;->close()V
-
     goto/16 :goto_25
 
+    .line 2407
     :catchall_b
     move-exception v3
 
-    invoke-virtual/range {v81 .. v81}, Ljava/io/FileOutputStream;->close()V
-
+    :try_start_4e
     throw v3
 
     .line 2417
-    .end local v81           #os:Ljava/io/FileOutputStream;
     .end local v85           #platform:Ljava/lang/String;
     .end local v86           #platformLowerCase:Ljava/lang/String;
     :cond_67
@@ -7289,8 +7271,6 @@
     goto/16 :goto_b
 
     .line 1318
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -12710,7 +12690,7 @@
 
     const/4 v3, 0x0
 
-    .line 7072
+    .line 7202
     if-eqz p0, :cond_0
 
     const-string v4, ""
@@ -12724,18 +12704,18 @@
     :cond_0
     move v2, v3
 
-    .line 7094
+    .line 7224
     :cond_1
     :goto_0
     return v2
 
-    .line 7076
+    .line 7206
     :cond_2
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7079
+    .line 7209
     .local v0, checkF:Ljava/io/File;
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -12744,28 +12724,28 @@
 
     if-nez v4, :cond_3
 
-    .line 7080
+    .line 7210
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 7083
+    .line 7213
     :cond_3
     if-eqz p1, :cond_1
 
-    .line 7084
+    .line 7214
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
     invoke-virtual {v0, v4, v5}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 7085
+    .line 7215
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
     invoke-virtual {v0, v4, v5}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 7086
+    .line 7216
     const/4 v4, 0x1
 
     const/4 v5, 0x0
@@ -12776,11 +12756,11 @@
 
     goto :goto_0
 
-    .line 7090
+    .line 7220
     :catch_0
     move-exception v1
 
-    .line 7091
+    .line 7221
     .local v1, e:Ljava/lang/Exception;
     const-string v2, "HtcWrapDrmStore"
 
@@ -12790,12 +12770,12 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7092
+    .line 7222
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move v2, v3
 
-    .line 7094
+    .line 7224
     goto :goto_0
 .end method
 
@@ -13584,14 +13564,14 @@
     .parameter "contentUri"
 
     .prologue
-    .line 5713
+    .line 5843
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "********checkExpiration"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5714
+    .line 5844
     const-string v3, "HtcWrapDrmStore"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -13618,12 +13598,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5717
+    .line 5847
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 5719
+    .line 5849
     :cond_0
     const-string v3, "HtcWrapDrmStore"
 
@@ -13631,14 +13611,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5721
+    .line 5851
     const/4 v3, -0x2
 
-    .line 5888
+    .line 6018
     :goto_0
     return v3
 
-    .line 5724
+    .line 5854
     :cond_1
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->FILEPATH_PROJECTION:[Ljava/lang/String;
 
@@ -13656,23 +13636,23 @@
 
     move-result-object v11
 
-    .line 5725
+    .line 5855
     .local v11, cursor:Landroid/database/Cursor;
     if-nez v11, :cond_2
 
-    .line 5727
+    .line 5857
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (2): -6"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5729
+    .line 5859
     const/4 v3, -0x6
 
     goto :goto_0
 
-    .line 5730
+    .line 5860
     :cond_2
     invoke-interface {v11}, Landroid/database/Cursor;->getCount()I
 
@@ -13680,43 +13660,43 @@
 
     if-nez v3, :cond_3
 
-    .line 5732
+    .line 5862
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (3): -2"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5734
+    .line 5864
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 5735
+    .line 5865
     const/4 v3, -0x2
 
     goto :goto_0
 
-    .line 5738
+    .line 5868
     :cond_3
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 5739
+    .line 5869
     const-string v3, "_data"
 
     invoke-interface {v11, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v10
 
-    .line 5740
+    .line 5870
     .local v10, columnIndex:I
     invoke-interface {v11, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v20
 
-    .line 5741
+    .line 5871
     .local v20, filePath:Ljava/lang/String;
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 5743
+    .line 5873
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -13727,23 +13707,23 @@
 
     move-result-object v24
 
-    .line 5744
+    .line 5874
     .local v24, rights:Landroid/drm/mobile1/DrmRights;
     if-nez v24, :cond_4
 
-    .line 5746
+    .line 5876
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (4): -3"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5748
+    .line 5878
     const/4 v3, -0x3
 
     goto :goto_0
 
-    .line 5754
+    .line 5884
     :cond_4
     invoke-virtual/range {p1 .. p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->isNoConstraint()Z
 
@@ -13751,12 +13731,12 @@
 
     if-eqz v3, :cond_5
 
-    .line 5755
+    .line 5885
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 5761
+    .line 5891
     :cond_5
     invoke-virtual/range {p1 .. p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->getCount()I
 
@@ -13788,19 +13768,19 @@
 
     if-nez v3, :cond_6
 
-    .line 5763
+    .line 5893
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, " checkExpiration (5): All constraint expired."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5764
+    .line 5894
     const/4 v3, -0x4
 
     goto :goto_0
 
-    .line 5769
+    .line 5899
     :cond_6
     invoke-virtual/range {p1 .. p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->getCount()I
 
@@ -13810,36 +13790,36 @@
 
     if-eq v3, v4, :cond_8
 
-    .line 5771
+    .line 5901
     invoke-virtual/range {p1 .. p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->getCount()I
 
     move-result v3
 
     if-gtz v3, :cond_7
 
-    .line 5773
+    .line 5903
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (6): counts expired"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5775
+    .line 5905
     const/4 v3, -0x4
 
     goto/16 :goto_0
 
-    .line 5777
+    .line 5907
     :cond_7
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 5781
+    .line 5911
     :cond_8
     const/16 v23, 0x0
 
-    .line 5782
+    .line 5912
     .local v23, permissionType:I
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -13857,10 +13837,10 @@
 
     if-eqz v3, :cond_a
 
-    .line 5783
+    .line 5913
     const/16 v23, 0x2
 
-    .line 5792
+    .line 5922
     :cond_9
     :goto_1
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Stamp;->CONTENT_URI:Landroid/net/Uri;
@@ -13879,23 +13859,23 @@
 
     move-result-object v9
 
-    .line 5794
+    .line 5924
     .local v9, c:Landroid/database/Cursor;
     if-nez v9, :cond_d
 
-    .line 5796
+    .line 5926
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (7): -6"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5798
+    .line 5928
     const/4 v3, -0x6
 
     goto/16 :goto_0
 
-    .line 5784
+    .line 5914
     .end local v9           #c:Landroid/database/Cursor;
     :cond_a
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -13914,12 +13894,12 @@
 
     if-eqz v3, :cond_b
 
-    .line 5785
+    .line 5915
     const/16 v23, 0x1
 
     goto :goto_1
 
-    .line 5786
+    .line 5916
     :cond_b
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -13937,12 +13917,12 @@
 
     if-eqz v3, :cond_c
 
-    .line 5787
+    .line 5917
     const/16 v23, 0x1
 
     goto :goto_1
 
-    .line 5788
+    .line 5918
     :cond_c
     invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -13960,12 +13940,12 @@
 
     if-eqz v3, :cond_9
 
-    .line 5789
+    .line 5919
     const/16 v23, 0x3
 
     goto :goto_1
 
-    .line 5799
+    .line 5929
     .restart local v9       #c:Landroid/database/Cursor;
     :cond_d
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
@@ -13974,33 +13954,33 @@
 
     if-nez v3, :cond_e
 
-    .line 5801
+    .line 5931
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (8): -5"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5803
+    .line 5933
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5804
+    .line 5934
     const/4 v3, -0x5
 
     goto/16 :goto_0
 
-    .line 5807
+    .line 5937
     :cond_e
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 5808
+    .line 5938
     const-string v3, "time_stamp"
 
     invoke-interface {v9, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v31
 
-    .line 5809
+    .line 5939
     .local v31, syncTimeColumnId:I
     move/from16 v0, v31
 
@@ -14008,7 +13988,7 @@
 
     move-result-wide v29
 
-    .line 5810
+    .line 5940
     .local v29, syncTime:J
     const-string v3, "clock_stamp"
 
@@ -14016,7 +13996,7 @@
 
     move-result v28
 
-    .line 5811
+    .line 5941
     .local v28, syncClockColumnId:I
     move/from16 v0, v28
 
@@ -14024,7 +14004,7 @@
 
     move-result-wide v26
 
-    .line 5812
+    .line 5942
     .local v26, syncClock:J
     const-string v3, "timezone_stamp"
 
@@ -14032,7 +14012,7 @@
 
     move-result v34
 
-    .line 5813
+    .line 5943
     .local v34, syncTimeZoneColumnId:I
     move/from16 v0, v34
 
@@ -14040,7 +14020,7 @@
 
     move-result-wide v32
 
-    .line 5814
+    .line 5944
     .local v32, syncTimeZone:J
     const-string v3, "time_differential"
 
@@ -14048,13 +14028,13 @@
 
     move-result v14
 
-    .line 5815
+    .line 5945
     .local v14, differentColumnId:I
     invoke-interface {v9, v14}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v15
 
-    .line 5816
+    .line 5946
     .local v15, differential:J
     const-string v3, "network_sync"
 
@@ -14062,7 +14042,7 @@
 
     move-result v22
 
-    .line 5817
+    .line 5947
     .local v22, network_sync:I
     move/from16 v0, v22
 
@@ -14070,11 +14050,11 @@
 
     move-result-object v21
 
-    .line 5818
+    .line 5948
     .local v21, networkSync:Ljava/lang/String;
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5820
+    .line 5950
     const-wide/16 v3, 0x0
 
     cmp-long v3, v29, v3
@@ -14087,7 +14067,7 @@
 
     if-nez v3, :cond_10
 
-    .line 5822
+    .line 5952
     :cond_f
     const-string v3, "HtcWrapDrmStore"
 
@@ -14095,28 +14075,28 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5824
+    .line 5954
     const/4 v3, -0x5
 
     goto/16 :goto_0
 
-    .line 5827
+    .line 5957
     :cond_10
     if-nez v21, :cond_11
 
-    .line 5829
+    .line 5959
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (10): -5"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5831
+    .line 5961
     const/4 v3, -0x5
 
     goto/16 :goto_0
 
-    .line 5832
+    .line 5962
     :cond_11
     const-string v3, "TRUE"
 
@@ -14128,25 +14108,25 @@
 
     if-nez v3, :cond_12
 
-    .line 5834
+    .line 5964
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (11): -5"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5836
+    .line 5966
     const/4 v3, -0x5
 
     goto/16 :goto_0
 
-    .line 5840
+    .line 5970
     :cond_12
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v12
 
-    .line 5841
+    .line 5971
     .local v12, date:J
     new-instance v18, Ljava/util/Date;
 
@@ -14154,7 +14134,7 @@
 
     invoke-direct {v0, v12, v13}, Ljava/util/Date;-><init>(J)V
 
-    .line 5843
+    .line 5973
     .local v18, drmDate:Ljava/util/Date;
     const-string v3, "HtcWrapDrmStore"
 
@@ -14256,16 +14236,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5846
+    .line 5976
     invoke-virtual/range {p1 .. p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->getStartDate()Ljava/util/Date;
 
     move-result-object v25
 
-    .line 5847
+    .line 5977
     .local v25, startDate:Ljava/util/Date;
     if-eqz v25, :cond_13
 
-    .line 5849
+    .line 5979
     const-string v3, "HtcWrapDrmStore"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -14366,7 +14346,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5851
+    .line 5981
     move-object/from16 v0, v25
 
     move-object/from16 v1, v18
@@ -14377,29 +14357,29 @@
 
     if-eqz v3, :cond_13
 
-    .line 5853
+    .line 5983
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (14): start date expired."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5855
+    .line 5985
     const/4 v3, -0x4
 
     goto/16 :goto_0
 
-    .line 5859
+    .line 5989
     :cond_13
     invoke-virtual/range {p1 .. p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->getEndDate()Ljava/util/Date;
 
     move-result-object v19
 
-    .line 5860
+    .line 5990
     .local v19, endDate:Ljava/util/Date;
     if-eqz v19, :cond_14
 
-    .line 5862
+    .line 5992
     const-string v3, "HtcWrapDrmStore"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -14500,7 +14480,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5864
+    .line 5994
     move-object/from16 v0, v19
 
     move-object/from16 v1, v18
@@ -14511,14 +14491,14 @@
 
     if-eqz v3, :cond_14
 
-    .line 5866
+    .line 5996
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (16): end date expired."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5868
+    .line 5998
     new-instance v17, Ljava/util/Date;
 
     sub-long v3, v12, v15
@@ -14529,7 +14509,7 @@
 
     invoke-direct {v0, v3, v4}, Ljava/util/Date;-><init>(J)V
 
-    .line 5869
+    .line 5999
     .local v17, drmClock:Ljava/util/Date;
     move-object/from16 v0, v24
 
@@ -14539,12 +14519,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/drm/mobile1/DrmRights;->consumeRightsWithSync(ILjava/util/Date;)Z
 
-    .line 5870
+    .line 6000
     const/4 v3, -0x4
 
     goto/16 :goto_0
 
-    .line 5875
+    .line 6005
     .end local v17           #drmClock:Ljava/util/Date;
     :cond_14
     invoke-virtual/range {p1 .. p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->getInterval()J
@@ -14557,19 +14537,19 @@
 
     if-eqz v3, :cond_15
 
-    .line 5877
+    .line 6007
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "checkExpiration (17): Interval constraint, pass anyway"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5880
+    .line 6010
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 5884
+    .line 6014
     :cond_15
     const-string v3, "HtcWrapDrmStore"
 
@@ -14577,7 +14557,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5888
+    .line 6018
     const/4 v3, 0x0
 
     goto/16 :goto_0
@@ -14589,7 +14569,7 @@
     .parameter "activity"
 
     .prologue
-    .line 7631
+    .line 7761
     const/4 v0, 0x0
 
     return v0
@@ -14601,7 +14581,7 @@
     .parameter "activity"
 
     .prologue
-    .line 7639
+    .line 7769
     const/4 v0, 0x0
 
     return v0
@@ -14617,7 +14597,7 @@
 
     const/4 v10, 0x0
 
-    .line 6835
+    .line 6965
     sget-object v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->FILEPATH_PROJECTION:[Ljava/lang/String;
 
     move-object v0, p0
@@ -14632,11 +14612,11 @@
 
     move-result-object v6
 
-    .line 6836
+    .line 6966
     .local v6, c:Landroid/database/Cursor;
     if-nez v6, :cond_0
 
-    .line 6838
+    .line 6968
     const-string v0, "HtcWrapDrmStore"
 
     const-string v1, "checkFileExistence query DRM db failed."
@@ -14645,11 +14625,11 @@
 
     move v0, v10
 
-    .line 6859
+    .line 6989
     :goto_0
     return v0
 
-    .line 6841
+    .line 6971
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
@@ -14657,43 +14637,43 @@
 
     if-nez v0, :cond_1
 
-    .line 6843
+    .line 6973
     const-string v0, "HtcWrapDrmStore"
 
     const-string v1, "checkFileExistence no record."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6845
+    .line 6975
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     move v0, v10
 
-    .line 6846
+    .line 6976
     goto :goto_0
 
-    .line 6848
+    .line 6978
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6849
+    .line 6979
     const-string v0, "_data"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v8
 
-    .line 6850
+    .line 6980
     .local v8, fileColumnIndex:I
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 6851
+    .line 6981
     .local v9, fileName:Ljava/lang/String;
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 6853
+    .line 6983
     const-string v0, "HtcWrapDrmStore"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -14722,12 +14702,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6855
+    .line 6985
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6856
+    .line 6986
     .local v7, file:Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->exists()Z
 
@@ -14735,7 +14715,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 6857
+    .line 6987
     const/4 v0, 0x1
 
     goto :goto_0
@@ -14743,7 +14723,7 @@
     :cond_2
     move v0, v10
 
-    .line 6859
+    .line 6989
     goto :goto_0
 .end method
 
@@ -14753,7 +14733,7 @@
     .parameter "uri"
 
     .prologue
-    .line 7647
+    .line 7777
     const/4 v0, 0x0
 
     return v0
@@ -14767,21 +14747,21 @@
     .parameter "permissionType"
 
     .prologue
-    .line 5905
+    .line 6035
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "********consumeRights"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5908
+    .line 6038
     const/4 v9, 0x0
 
-    .line 5909
+    .line 6039
     .local v9, c:Landroid/database/Cursor;
     if-nez p2, :cond_0
 
-    .line 5910
+    .line 6040
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
@@ -14800,29 +14780,29 @@
 
     move-result-object v9
 
-    .line 5917
+    .line 6047
     :goto_0
     const/16 v22, 0x0
 
-    .line 5918
+    .line 6048
     .local v22, filePath:Ljava/lang/String;
     if-nez v9, :cond_1
 
-    .line 5920
+    .line 6050
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(1): -6"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5922
+    .line 6052
     const/4 v3, -0x6
 
-    .line 6097
+    .line 6227
     :goto_1
     return v3
 
-    .line 5913
+    .line 6043
     .end local v22           #filePath:Ljava/lang/String;
     :cond_0
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -14851,7 +14831,7 @@
 
     goto :goto_0
 
-    .line 5923
+    .line 6053
     .restart local v22       #filePath:Ljava/lang/String;
     :cond_1
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
@@ -14860,22 +14840,22 @@
 
     if-nez v3, :cond_2
 
-    .line 5925
+    .line 6055
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(2): -6"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5927
+    .line 6057
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5928
+    .line 6058
     const/4 v3, -0x6
 
     goto :goto_1
 
-    .line 5929
+    .line 6059
     :cond_2
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
@@ -14885,36 +14865,36 @@
 
     if-le v3, v4, :cond_6
 
-    .line 5930
+    .line 6060
     if-nez p2, :cond_3
 
-    .line 5932
+    .line 6062
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(3): -2"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5934
+    .line 6064
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5935
+    .line 6065
     const/4 v3, -0x2
 
     goto :goto_1
 
-    .line 5937
+    .line 6067
     :cond_3
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 5938
+    .line 6068
     const-string v3, "_data"
 
     invoke-interface {v9, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v23
 
-    .line 5939
+    .line 6069
     .local v23, filePathColumnId:I
     move/from16 v0, v23
 
@@ -14930,27 +14910,27 @@
 
     if-eqz v3, :cond_5
 
-    .line 5940
+    .line 6070
     move-object/from16 v22, p2
 
-    .line 5955
+    .line 6085
     :cond_4
     :goto_2
     if-nez v22, :cond_7
 
-    .line 5957
+    .line 6087
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(4): -1"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5959
+    .line 6089
     const/4 v3, -0x1
 
     goto :goto_1
 
-    .line 5942
+    .line 6072
     :cond_5
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -14958,7 +14938,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 5943
+    .line 6073
     move/from16 v0, v23
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -14973,25 +14953,25 @@
 
     if-eqz v3, :cond_5
 
-    .line 5944
+    .line 6074
     move-object/from16 v22, p2
 
-    .line 5945
+    .line 6075
     goto :goto_2
 
-    .line 5950
+    .line 6080
     .end local v23           #filePathColumnId:I
     :cond_6
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 5951
+    .line 6081
     const-string v3, "_data"
 
     invoke-interface {v9, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v23
 
-    .line 5952
+    .line 6082
     .restart local v23       #filePathColumnId:I
     move/from16 v0, v23
 
@@ -15001,7 +14981,7 @@
 
     goto :goto_2
 
-    .line 5962
+    .line 6092
     :cond_7
     const-string v3, "message_type"
 
@@ -15009,7 +14989,7 @@
 
     move-result v27
 
-    .line 5963
+    .line 6093
     .local v27, messageTypeColumnId:I
     move/from16 v0, v27
 
@@ -15017,7 +14997,7 @@
 
     move-result-object v26
 
-    .line 5964
+    .line 6094
     .local v26, messageType:Ljava/lang/String;
     const-string v3, "delivery_type"
 
@@ -15025,50 +15005,50 @@
 
     move-result v15
 
-    .line 5965
+    .line 6095
     .local v15, deliveryTypeColumnId:I
     invoke-interface {v9, v15}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v14
 
-    .line 5966
+    .line 6096
     .local v14, deliveryType:I
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5968
+    .line 6098
     const/4 v3, 0x1
 
     if-ne v14, v3, :cond_8
 
-    .line 5969
+    .line 6099
     const/4 v3, 0x0
 
     goto/16 :goto_1
 
-    .line 5973
+    .line 6103
     :cond_8
     :try_start_0
     new-instance v21, Ljava/io/File;
 
     invoke-direct/range {v21 .. v22}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5974
+    .line 6104
     .local v21, file:Ljava/io/File;
     if-nez v21, :cond_9
 
-    .line 5976
+    .line 6106
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(5): -2"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5978
+    .line 6108
     const/4 v3, -0x2
 
     goto/16 :goto_1
 
-    .line 5980
+    .line 6110
     :cond_9
     new-instance v24, Ljava/io/FileInputStream;
 
@@ -15078,7 +15058,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 5981
+    .line 6111
     .local v24, fis:Ljava/io/InputStream;
     new-instance v11, Landroid/drm/mobile1/DrmRawContent;
 
@@ -15092,13 +15072,13 @@
 
     invoke-direct {v11, v0, v3, v1}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 5982
+    .line 6112
     .local v11, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v25
 
-    .line 5983
+    .line 6113
     .local v25, manager:Landroid/drm/mobile1/DrmRightsManager;
     move-object/from16 v0, v25
 
@@ -15106,23 +15086,23 @@
 
     move-result-object v30
 
-    .line 5985
+    .line 6115
     .local v30, rights:Landroid/drm/mobile1/DrmRights;
     if-nez v30, :cond_a
 
-    .line 5987
+    .line 6117
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(7): -3"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5989
+    .line 6119
     const/4 v3, -0x3
 
     goto/16 :goto_1
 
-    .line 5992
+    .line 6122
     :cond_a
     move-object/from16 v0, v30
 
@@ -15132,23 +15112,23 @@
 
     move-result-object v10
 
-    .line 5993
+    .line 6123
     .local v10, constraintInfo:Landroid/drm/mobile1/DrmConstraintInfo;
     if-nez v10, :cond_b
 
-    .line 5995
+    .line 6125
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(9): -1"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5997
+    .line 6127
     const/4 v3, -0x1
 
     goto/16 :goto_1
 
-    .line 6001
+    .line 6131
     :cond_b
     invoke-virtual {v10}, Landroid/drm/mobile1/DrmConstraintInfo;->isNoConstraint()Z
 
@@ -15158,19 +15138,19 @@
 
     if-ne v3, v4, :cond_c
 
-    .line 6007
+    .line 6137
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, " @@@@@     consumeRights(10): NO Constraint."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6010
+    .line 6140
     const/4 v3, 0x0
 
     goto/16 :goto_1
 
-    .line 6015
+    .line 6145
     :cond_c
     invoke-virtual {v10}, Landroid/drm/mobile1/DrmConstraintInfo;->getCount()I
 
@@ -15178,7 +15158,7 @@
 
     if-ltz v3, :cond_e
 
-    .line 6016
+    .line 6146
     move-object/from16 v0, v30
 
     move/from16 v1, p3
@@ -15189,12 +15169,12 @@
 
     if-eqz v3, :cond_d
 
-    .line 6017
+    .line 6147
     const/4 v3, 0x0
 
     goto/16 :goto_1
 
-    .line 6020
+    .line 6150
     :cond_d
     const-string v3, "HtcWrapDrmStore"
 
@@ -15202,12 +15182,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6022
+    .line 6152
     const/4 v3, -0x4
 
     goto/16 :goto_1
 
-    .line 6027
+    .line 6157
     :cond_e
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -15227,23 +15207,23 @@
 
     move-result-object v31
 
-    .line 6029
+    .line 6159
     .local v31, stamp:Landroid/database/Cursor;
     if-nez v31, :cond_f
 
-    .line 6031
+    .line 6161
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights query stamp failed."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6033
+    .line 6163
     const/4 v3, -0x6
 
     goto/16 :goto_1
 
-    .line 6034
+    .line 6164
     :cond_f
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->getCount()I
 
@@ -15251,26 +15231,26 @@
 
     if-nez v3, :cond_10
 
-    .line 6036
+    .line 6166
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(12): -5"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6038
+    .line 6168
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
 
-    .line 6039
+    .line 6169
     const/4 v3, -0x5
 
     goto/16 :goto_1
 
-    .line 6042
+    .line 6172
     :cond_10
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6043
+    .line 6173
     const-string v3, "time_stamp"
 
     move-object/from16 v0, v31
@@ -15279,7 +15259,7 @@
 
     move-result v37
 
-    .line 6044
+    .line 6174
     .local v37, syncTimeColumnId:I
     move-object/from16 v0, v31
 
@@ -15289,7 +15269,7 @@
 
     move-result-wide v35
 
-    .line 6045
+    .line 6175
     .local v35, syncTime:J
     const-string v3, "clock_stamp"
 
@@ -15299,7 +15279,7 @@
 
     move-result v34
 
-    .line 6046
+    .line 6176
     .local v34, syncClockColumnId:I
     move-object/from16 v0, v31
 
@@ -15309,7 +15289,7 @@
 
     move-result-wide v32
 
-    .line 6047
+    .line 6177
     .local v32, syncClock:J
     const-string v3, "timezone_stamp"
 
@@ -15319,7 +15299,7 @@
 
     move-result v40
 
-    .line 6048
+    .line 6178
     .local v40, syncTimeZoneColumnId:I
     move-object/from16 v0, v31
 
@@ -15329,7 +15309,7 @@
 
     move-result-wide v38
 
-    .line 6049
+    .line 6179
     .local v38, syncTimeZone:J
     const-string v3, "time_differential"
 
@@ -15339,7 +15319,7 @@
 
     move-result v16
 
-    .line 6050
+    .line 6180
     .local v16, differentColumnId:I
     move-object/from16 v0, v31
 
@@ -15349,7 +15329,7 @@
 
     move-result-wide v17
 
-    .line 6051
+    .line 6181
     .local v17, differential:J
     const-string v3, "network_sync"
 
@@ -15359,7 +15339,7 @@
 
     move-result v29
 
-    .line 6052
+    .line 6182
     .local v29, network_sync:I
     move-object/from16 v0, v31
 
@@ -15369,11 +15349,11 @@
 
     move-result-object v28
 
-    .line 6053
+    .line 6183
     .local v28, networkSync:Ljava/lang/String;
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
 
-    .line 6055
+    .line 6185
     const-wide/16 v3, 0x0
 
     cmp-long v3, v35, v3
@@ -15386,7 +15366,7 @@
 
     if-nez v3, :cond_12
 
-    .line 6057
+    .line 6187
     :cond_11
     const-string v3, "HtcWrapDrmStore"
 
@@ -15394,28 +15374,28 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6059
+    .line 6189
     const/4 v3, -0x5
 
     goto/16 :goto_1
 
-    .line 6062
+    .line 6192
     :cond_12
     if-nez v28, :cond_13
 
-    .line 6064
+    .line 6194
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(14): checkExpiration : -5"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6066
+    .line 6196
     const/4 v3, -0x5
 
     goto/16 :goto_1
 
-    .line 6067
+    .line 6197
     :cond_13
     const-string v3, "TRUE"
 
@@ -15427,19 +15407,19 @@
 
     if-nez v3, :cond_14
 
-    .line 6069
+    .line 6199
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(15): checkExpiration : -5"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6071
+    .line 6201
     const/4 v3, -0x5
 
     goto/16 :goto_1
 
-    .line 6075
+    .line 6205
     :cond_14
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -15449,7 +15429,7 @@
 
     sub-long v12, v3, v38
 
-    .line 6077
+    .line 6207
     .local v12, date:J
     const-string v3, "HtcWrapDrmStore"
 
@@ -15485,14 +15465,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6079
+    .line 6209
     new-instance v19, Ljava/util/Date;
 
     move-object/from16 v0, v19
 
     invoke-direct {v0, v12, v13}, Ljava/util/Date;-><init>(J)V
 
-    .line 6080
+    .line 6210
     .local v19, drmDate:Ljava/util/Date;
     move-object/from16 v0, v30
 
@@ -15506,12 +15486,12 @@
 
     if-eqz v3, :cond_15
 
-    .line 6081
+    .line 6211
     const/4 v3, 0x0
 
     goto/16 :goto_1
 
-    .line 6084
+    .line 6214
     :cond_15
     const-string v3, "HtcWrapDrmStore"
 
@@ -15521,12 +15501,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6086
+    .line 6216
     const/4 v3, -0x4
 
     goto/16 :goto_1
 
-    .line 6089
+    .line 6219
     .end local v10           #constraintInfo:Landroid/drm/mobile1/DrmConstraintInfo;
     .end local v11           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v12           #date:J
@@ -15549,7 +15529,7 @@
     :catch_0
     move-exception v20
 
-    .line 6091
+    .line 6221
     .local v20, e:Ljava/lang/Exception;
     const-string v3, "HtcWrapDrmStore"
 
@@ -15577,14 +15557,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6095
+    .line 6225
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "consumeRights(18): -1"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6097
+    .line 6227
     const/4 v3, -0x1
 
     goto/16 :goto_1
@@ -15595,7 +15575,7 @@
     .parameter "fileName"
 
     .prologue
-    .line 7655
+    .line 7785
     const/4 v0, 0x0
 
     return v0
@@ -15609,7 +15589,7 @@
     .end annotation
 
     .prologue
-    .line 5168
+    .line 5298
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->deleteDrmFile(Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;)I
@@ -15626,21 +15606,21 @@
     .parameter "filePath"
 
     .prologue
-    .line 5097
+    .line 5227
     const-string v0, "HtcWrapDrmStore"
 
     const-string v1, "********deleteDrmFile"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5099
+    .line 5229
     const/4 v6, 0x0
 
-    .line 5100
+    .line 5230
     .local v6, c:Landroid/database/Cursor;
     if-eqz p2, :cond_0
 
-    .line 5101
+    .line 5231
     sget-object v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DELIVERY_TYPE_PROJECTION:[Ljava/lang/String;
 
     const-string v3, "_data=?"
@@ -15663,25 +15643,25 @@
 
     move-result-object v6
 
-    .line 5107
+    .line 5237
     :goto_0
     if-nez v6, :cond_1
 
-    .line 5109
+    .line 5239
     const-string v0, "HtcWrapDrmStore"
 
     const-string v1, "deleteDrmFile : -6"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5111
+    .line 5241
     const/4 v0, -0x6
 
-    .line 5156
+    .line 5286
     :goto_1
     return v0
 
-    .line 5104
+    .line 5234
     :cond_0
     sget-object v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DELIVERY_TYPE_PROJECTION:[Ljava/lang/String;
 
@@ -15701,7 +15681,7 @@
 
     goto :goto_0
 
-    .line 5112
+    .line 5242
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -15709,22 +15689,22 @@
 
     if-nez v0, :cond_2
 
-    .line 5114
+    .line 5244
     const-string v0, "HtcWrapDrmStore"
 
     const-string v1, "deleteDrmFile : -6"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5116
+    .line 5246
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 5117
+    .line 5247
     const/4 v0, -0x6
 
     goto :goto_1
 
-    .line 5120
+    .line 5250
     :cond_2
     const-string v0, "_data"
 
@@ -15732,13 +15712,13 @@
 
     move-result v10
 
-    .line 5121
+    .line 5251
     .local v10, filenameColumnId:I
     invoke-interface {v6, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 5123
+    .line 5253
     .local v9, filename:Ljava/lang/String;
     const-string v0, "delivery_type"
 
@@ -15746,13 +15726,13 @@
 
     move-result v8
 
-    .line 5124
+    .line 5254
     .local v8, deliveryTypeColumnId:I
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v7
 
-    .line 5126
+    .line 5256
     .local v7, deliveryType:I
     const-string v0, "message_type"
 
@@ -15760,17 +15740,17 @@
 
     move-result v12
 
-    .line 5127
+    .line 5257
     .local v12, messageTypeColumnId:I
     invoke-interface {v6, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 5129
+    .line 5259
     .local v11, messageType:Ljava/lang/String;
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 5156
+    .line 5286
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -15805,12 +15785,12 @@
     .locals 1
 
     .prologue
-    .line 6966
+    .line 7096
     sget-boolean v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->SWITCH_TO_CID:Z
 
     if-eqz v0, :cond_1
 
-    .line 6967
+    .line 7097
     sget-boolean v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_FORWORD_LOCK:Z
 
     if-nez v0, :cond_0
@@ -15823,20 +15803,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 6969
+    .line 7099
     const/4 v0, 0x1
 
-    .line 6976
+    .line 7106
     :goto_0
     return v0
 
-    .line 6972
+    .line 7102
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 6976
+    .line 7106
     :cond_1
     invoke-static {}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->SupportForwardLockOnly()Z
 
@@ -15851,12 +15831,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6988
+    .line 7118
     sget-boolean v1, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->SWITCH_TO_CID:Z
 
     if-eqz v1, :cond_0
 
-    .line 6990
+    .line 7120
     sget-boolean v1, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_FORWORD_LOCK:Z
 
     if-nez v1, :cond_0
@@ -15869,10 +15849,10 @@
 
     if-nez v1, :cond_0
 
-    .line 6992
+    .line 7122
     const/4 v0, 0x1
 
-    .line 7002
+    .line 7132
     :cond_0
     return v0
 .end method
@@ -15885,12 +15865,12 @@
 
     const/4 v1, 0x0
 
-    .line 7012
+    .line 7142
     sget-boolean v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->SWITCH_TO_CID:Z
 
     if-eqz v2, :cond_2
 
-    .line 7013
+    .line 7143
     sget-boolean v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_FORWORD_LOCK:Z
 
     if-nez v2, :cond_1
@@ -15903,7 +15883,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 7041
+    .line 7171
     :cond_0
     :goto_0
     return v0
@@ -15911,10 +15891,10 @@
     :cond_1
     move v0, v1
 
-    .line 7018
+    .line 7148
     goto :goto_0
 
-    .line 7022
+    .line 7152
     :cond_2
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -15930,7 +15910,7 @@
 
     move v0, v1
 
-    .line 7041
+    .line 7171
     goto :goto_0
 .end method
 
@@ -15944,25 +15924,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 6738
+    .line 6868
     const/4 v0, 0x0
 
-    .line 6740
+    .line 6870
     .local v0, cipher:Ljavax/crypto/Cipher;
     if-nez p0, :cond_0
 
-    .line 6742
+    .line 6872
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "skeySpec == null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6777
+    .line 6907
     :goto_0
     return-object v3
 
-    .line 6745
+    .line 6875
     :cond_0
     const/4 v4, 0x1
 
@@ -15972,7 +15952,7 @@
 
     if-eq p1, v4, :cond_1
 
-    .line 6747
+    .line 6877
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "Cipher mode error."
@@ -15981,7 +15961,7 @@
 
     goto :goto_0
 
-    .line 6754
+    .line 6884
     :cond_1
     :try_start_0
     const-string v3, "AES/CBC/PKCS5Padding"
@@ -15990,7 +15970,7 @@
 
     move-result-object v0
 
-    .line 6756
+    .line 6886
     new-instance v2, Ljavax/crypto/spec/IvParameterSpec;
 
     const-string v3, "f45gt7g83sd56210"
@@ -16001,7 +15981,7 @@
 
     invoke-direct {v2, v3}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 6758
+    .line 6888
     .local v2, ivSpec:Ljavax/crypto/spec/IvParameterSpec;
     invoke-virtual {v0, p1, p0, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
     :try_end_0
@@ -16014,14 +15994,14 @@
     :goto_1
     move-object v3, v0
 
-    .line 6777
+    .line 6907
     goto :goto_0
 
-    .line 6760
+    .line 6890
     :catch_0
     move-exception v1
 
-    .line 6762
+    .line 6892
     .local v1, e:Ljava/security/NoSuchAlgorithmException;
     const-string v3, "HtcWrapDrmStore"
 
@@ -16051,12 +16031,12 @@
 
     goto :goto_1
 
-    .line 6764
+    .line 6894
     .end local v1           #e:Ljava/security/NoSuchAlgorithmException;
     :catch_1
     move-exception v1
 
-    .line 6766
+    .line 6896
     .local v1, e:Ljavax/crypto/NoSuchPaddingException;
     const-string v3, "HtcWrapDrmStore"
 
@@ -16086,12 +16066,12 @@
 
     goto :goto_1
 
-    .line 6768
+    .line 6898
     .end local v1           #e:Ljavax/crypto/NoSuchPaddingException;
     :catch_2
     move-exception v1
 
-    .line 6770
+    .line 6900
     .local v1, e:Ljava/security/InvalidKeyException;
     const-string v3, "HtcWrapDrmStore"
 
@@ -16121,12 +16101,12 @@
 
     goto :goto_1
 
-    .line 6772
+    .line 6902
     .end local v1           #e:Ljava/security/InvalidKeyException;
     :catch_3
     move-exception v1
 
-    .line 6774
+    .line 6904
     .local v1, e:Ljava/security/InvalidAlgorithmParameterException;
     const-string v3, "HtcWrapDrmStore"
 
@@ -16165,7 +16145,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 6870
+    .line 7000
     sget-object v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DCFLIST_PROJECTION:[Ljava/lang/String;
 
     const-string v3, "delivery_type=\'3\'"
@@ -16180,27 +16160,27 @@
 
     move-result-object v6
 
-    .line 6872
+    .line 7002
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_3
 
-    .line 6873
+    .line 7003
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-lez v0, :cond_2
 
-    .line 6874
+    .line 7004
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v7
 
-    .line 6875
+    .line 7005
     .local v7, count:I
     new-array v10, v7, [Ljava/lang/String;
 
-    .line 6876
+    .line 7006
     .local v10, result:[Ljava/lang/String;
     const-string v0, "_data"
 
@@ -16208,7 +16188,7 @@
 
     move-result v8
 
-    .line 6877
+    .line 7007
     .local v8, dataColumnIndex:I
     const/4 v9, 0x0
 
@@ -16216,31 +16196,31 @@
     :goto_0
     if-ge v9, v7, :cond_1
 
-    .line 6878
+    .line 7008
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6879
+    .line 7009
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v10, v9
 
-    .line 6877
+    .line 7007
     :cond_0
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 6882
+    .line 7012
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 6887
+    .line 7017
     .end local v7           #count:I
     .end local v8           #dataColumnIndex:I
     .end local v9           #i:I
@@ -16248,14 +16228,14 @@
     :goto_1
     return-object v10
 
-    .line 6885
+    .line 7015
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_3
     move-object v10, v4
 
-    .line 6887
+    .line 7017
     goto :goto_1
 .end method
 
@@ -16267,7 +16247,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 6898
+    .line 7028
     sget-object v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DCFLIST_PROJECTION:[Ljava/lang/String;
 
     const-string v3, "delivery_type=\'1\' OR delivery_type=\'2\'"
@@ -16282,27 +16262,27 @@
 
     move-result-object v6
 
-    .line 6903
+    .line 7033
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_3
 
-    .line 6904
+    .line 7034
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-lez v0, :cond_2
 
-    .line 6905
+    .line 7035
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v7
 
-    .line 6906
+    .line 7036
     .local v7, count:I
     new-array v10, v7, [Ljava/lang/String;
 
-    .line 6907
+    .line 7037
     .local v10, result:[Ljava/lang/String;
     const-string v0, "_data"
 
@@ -16310,7 +16290,7 @@
 
     move-result v8
 
-    .line 6908
+    .line 7038
     .local v8, dataColumnIndex:I
     const/4 v9, 0x0
 
@@ -16318,31 +16298,31 @@
     :goto_0
     if-ge v9, v7, :cond_1
 
-    .line 6909
+    .line 7039
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6910
+    .line 7040
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v10, v9
 
-    .line 6908
+    .line 7038
     :cond_0
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 6913
+    .line 7043
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 6918
+    .line 7048
     .end local v7           #count:I
     .end local v8           #dataColumnIndex:I
     .end local v9           #i:I
@@ -16350,14 +16330,14 @@
     :goto_1
     return-object v10
 
-    .line 6916
+    .line 7046
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_3
     move-object v10, v4
 
-    .line 6918
+    .line 7048
     goto :goto_1
 .end method
 
@@ -16369,7 +16349,7 @@
     .end annotation
 
     .prologue
-    .line 7527
+    .line 7657
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Audio;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmConstraint(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
@@ -16387,7 +16367,7 @@
     .end annotation
 
     .prologue
-    .line 7471
+    .line 7601
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Audio;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmCursor(Landroid/content/Context;Landroid/net/Uri;I)Landroid/database/Cursor;
@@ -16405,7 +16385,7 @@
     .end annotation
 
     .prologue
-    .line 7583
+    .line 7713
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Audio;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmContentStream(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Ljava/io/InputStream;
@@ -16422,17 +16402,17 @@
     .parameter "permissionType"
 
     .prologue
-    .line 5602
+    .line 5732
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "********getDrmConstraint (2)"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5604
+    .line 5734
     const/16 v27, 0x0
 
-    .line 5606
+    .line 5736
     .local v27, res:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DELIVERY_TYPE_PROJECTION:[Ljava/lang/String;
 
@@ -16450,25 +16430,25 @@
 
     move-result-object v9
 
-    .line 5607
+    .line 5737
     .local v9, c:Landroid/database/Cursor;
     if-nez v9, :cond_0
 
-    .line 5609
+    .line 5739
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "getDrmConstraint query DRM db failed."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5611
+    .line 5741
     const/4 v3, 0x0
 
-    .line 5698
+    .line 5828
     :goto_0
     return-object v3
 
-    .line 5612
+    .line 5742
     :cond_0
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
@@ -16476,30 +16456,30 @@
 
     if-nez v3, :cond_1
 
-    .line 5614
+    .line 5744
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "getDrmConstraint no record."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5616
+    .line 5746
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 5619
+    .line 5749
     :cond_1
     invoke-interface {v9}, Landroid/database/Cursor;->moveToLast()Z
 
-    .line 5620
+    .line 5750
     const-string v3, "_data"
 
     invoke-interface {v9, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v21
 
-    .line 5621
+    .line 5751
     .local v21, filenameColumnId:I
     move/from16 v0, v21
 
@@ -16507,7 +16487,7 @@
 
     move-result-object v20
 
-    .line 5623
+    .line 5753
     .local v20, filename:Ljava/lang/String;
     const-string v3, "message_type"
 
@@ -16515,7 +16495,7 @@
 
     move-result v26
 
-    .line 5624
+    .line 5754
     .local v26, messageTypeColumnId:I
     move/from16 v0, v26
 
@@ -16523,7 +16503,7 @@
 
     move-result-object v25
 
-    .line 5626
+    .line 5756
     .local v25, messageType:Ljava/lang/String;
     const-string v3, "delivery_type"
 
@@ -16531,13 +16511,13 @@
 
     move-result v12
 
-    .line 5627
+    .line 5757
     .local v12, deliveryTypeColumnId:I
     invoke-interface {v9, v12}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v11
 
-    .line 5629
+    .line 5759
     .local v11, deliveryType:I
     const-string v3, "_size"
 
@@ -16545,7 +16525,7 @@
 
     move-result v19
 
-    .line 5630
+    .line 5760
     .local v19, fileSizeColumnId:I
     move/from16 v0, v19
 
@@ -16553,28 +16533,28 @@
 
     move-result v18
 
-    .line 5631
+    .line 5761
     .local v18, fileSize:I
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5633
+    .line 5763
     const/4 v3, 0x1
 
     if-ne v11, v3, :cond_2
 
-    .line 5635
+    .line 5765
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "FL doesn\'t have constraint."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5637
+    .line 5767
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 5639
+    .line 5769
     :cond_2
     new-instance v17, Ljava/io/File;
 
@@ -16584,7 +16564,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5641
+    .line 5771
     .local v17, file:Ljava/io/File;
     :try_start_0
     new-instance v22, Ljava/io/FileInputStream;
@@ -16595,7 +16575,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 5642
+    .line 5772
     .local v22, fis:Ljava/io/InputStream;
     new-instance v10, Landroid/drm/mobile1/DrmRawContent;
 
@@ -16607,13 +16587,13 @@
 
     invoke-direct {v10, v0, v1, v2}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 5643
+    .line 5773
     .local v10, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v24
 
-    .line 5644
+    .line 5774
     .local v24, manager:Landroid/drm/mobile1/DrmRightsManager;
     move-object/from16 v0, v24
 
@@ -16621,7 +16601,7 @@
 
     move-result-object v29
 
-    .line 5647
+    .line 5777
     .local v29, rights:Landroid/drm/mobile1/DrmRights;
     const-string v3, "HtcWrapDrmStore"
 
@@ -16629,10 +16609,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5650
+    .line 5780
     if-eqz v29, :cond_7
 
-    .line 5651
+    .line 5781
     move-object/from16 v0, v29
 
     move/from16 v1, p2
@@ -16641,11 +16621,11 @@
 
     move-result-object v23
 
-    .line 5653
+    .line 5783
     .local v23, info:Landroid/drm/mobile1/DrmConstraintInfo;
     if-eqz v23, :cond_6
 
-    .line 5654
+    .line 5784
     new-instance v28, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
 
     move-object/from16 v0, v28
@@ -16657,19 +16637,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 5655
+    .line 5785
     .end local v27           #res:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .local v28, res:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     if-eqz v28, :cond_8
 
-    .line 5656
+    .line 5786
     const-wide/16 v13, 0x0
 
-    .line 5657
+    .line 5787
     .local v13, differential:J
     const/16 v30, 0x0
 
-    .line 5659
+    .line 5789
     .local v30, stampCursor:Landroid/database/Cursor;
     :try_start_1
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Stamp;->CONTENT_URI:Landroid/net/Uri;
@@ -16688,17 +16668,17 @@
 
     move-result-object v30
 
-    .line 5661
+    .line 5791
     if-eqz v30, :cond_3
 
-    .line 5662
+    .line 5792
     invoke-interface/range {v30 .. v30}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 5663
+    .line 5793
     const-string v3, "time_differential"
 
     move-object/from16 v0, v30
@@ -16707,7 +16687,7 @@
 
     move-result v15
 
-    .line 5665
+    .line 5795
     .local v15, differentialColumnId:I
     move-object/from16 v0, v30
 
@@ -16718,16 +16698,16 @@
 
     move-result-wide v13
 
-    .line 5673
+    .line 5803
     .end local v15           #differentialColumnId:I
     :cond_3
     if-eqz v30, :cond_4
 
-    .line 5674
+    .line 5804
     :try_start_2
     invoke-interface/range {v30 .. v30}, Landroid/database/Cursor;->close()V
 
-    .line 5677
+    .line 5807
     :cond_4
     :goto_1
     move-object/from16 v0, v28
@@ -16739,7 +16719,7 @@
 
     move-object/from16 v27, v28
 
-    .line 5688
+    .line 5818
     .end local v13           #differential:J
     .end local v23           #info:Landroid/drm/mobile1/DrmConstraintInfo;
     .end local v28           #res:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
@@ -16759,10 +16739,10 @@
     :goto_3
     move-object/from16 v3, v27
 
-    .line 5698
+    .line 5828
     goto/16 :goto_0
 
-    .line 5668
+    .line 5798
     .end local v27           #res:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v13       #differential:J
@@ -16775,7 +16755,7 @@
     :catch_0
     move-exception v16
 
-    .line 5670
+    .line 5800
     .local v16, e:Ljava/lang/Exception;
     :try_start_4
     const-string v3, "HtcWrapDrmStore"
@@ -16806,10 +16786,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 5673
+    .line 5803
     if-eqz v30, :cond_4
 
-    .line 5674
+    .line 5804
     :try_start_5
     invoke-interface/range {v30 .. v30}, Landroid/database/Cursor;->close()V
     :try_end_5
@@ -16818,14 +16798,14 @@
 
     goto :goto_1
 
-    .line 5689
+    .line 5819
     .end local v16           #e:Ljava/lang/Exception;
     :catch_1
     move-exception v16
 
     move-object/from16 v27, v28
 
-    .line 5691
+    .line 5821
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v13           #differential:J
     .end local v22           #fis:Ljava/io/InputStream;
@@ -16868,7 +16848,7 @@
 
     goto :goto_3
 
-    .line 5693
+    .line 5823
     .end local v16           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -16876,7 +16856,7 @@
     :goto_5
     throw v3
 
-    .line 5673
+    .line 5803
     .end local v27           #res:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v13       #differential:J
@@ -16891,18 +16871,18 @@
 
     if-eqz v30, :cond_5
 
-    .line 5674
+    .line 5804
     :try_start_7
     invoke-interface/range {v30 .. v30}, Landroid/database/Cursor;->close()V
 
-    .line 5673
+    .line 5803
     :cond_5
     throw v3
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
 
-    .line 5693
+    .line 5823
     :catchall_2
     move-exception v3
 
@@ -16912,7 +16892,7 @@
     .restart local v27       #res:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     goto :goto_5
 
-    .line 5681
+    .line 5811
     .end local v13           #differential:J
     .end local v30           #stampCursor:Landroid/database/Cursor;
     :cond_6
@@ -16925,7 +16905,7 @@
 
     goto :goto_2
 
-    .line 5689
+    .line 5819
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v22           #fis:Ljava/io/InputStream;
     .end local v23           #info:Landroid/drm/mobile1/DrmConstraintInfo;
@@ -16936,7 +16916,7 @@
 
     goto :goto_4
 
-    .line 5685
+    .line 5815
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v22       #fis:Ljava/io/InputStream;
     .restart local v24       #manager:Landroid/drm/mobile1/DrmRightsManager;
@@ -16971,14 +16951,14 @@
     .parameter "strFilePath"
 
     .prologue
-    .line 5182
+    .line 5312
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "********getDrmConstraint without renew call back"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5183
+    .line 5313
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -17005,24 +16985,24 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5185
+    .line 5315
     const/4 v9, 0x0
 
-    .line 5186
+    .line 5316
     .local v9, c:Landroid/database/Cursor;
     const/4 v12, 0x0
 
-    .line 5187
+    .line 5317
     .local v12, contentUri:Landroid/net/Uri;
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    .line 5188
+    .line 5318
     .local v3, cr:Landroid/content/ContentResolver;
     if-nez p2, :cond_1
 
-    .line 5189
+    .line 5319
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -17037,26 +17017,26 @@
 
     move-result-object v9
 
-    .line 5194
+    .line 5324
     :goto_0
     if-nez v9, :cond_2
 
-    .line 5196
+    .line 5326
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "getDrmConstraint query DRM db failed."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5198
+    .line 5328
     const/4 v10, 0x0
 
-    .line 5360
+    .line 5490
     :cond_0
     :goto_1
     return-object v10
 
-    .line 5191
+    .line 5321
     :cond_1
     const/4 v5, 0x0
 
@@ -17080,7 +17060,7 @@
 
     goto :goto_0
 
-    .line 5199
+    .line 5329
     :cond_2
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
@@ -17088,36 +17068,36 @@
 
     if-nez v4, :cond_3
 
-    .line 5200
+    .line 5330
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5202
+    .line 5332
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "getDrmConstraint no record."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5204
+    .line 5334
     const/4 v10, 0x0
 
     goto :goto_1
 
-    .line 5207
+    .line 5337
     :cond_3
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 5208
+    .line 5338
     if-eqz p2, :cond_e
 
-    .line 5209
+    .line 5339
     const/4 v4, 0x0
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v25
 
-    .line 5210
+    .line 5340
     .local v25, index:I
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -17135,7 +17115,7 @@
 
     if-eqz v4, :cond_a
 
-    .line 5211
+    .line 5341
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -17170,7 +17150,7 @@
 
     move-result-object v12
 
-    .line 5230
+    .line 5360
     .end local v25           #index:I
     :goto_2
     const-string v4, "HtcWrapDrmStore"
@@ -17199,20 +17179,20 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5233
+    .line 5363
     const-string v4, "delivery_type"
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v15
 
-    .line 5234
+    .line 5364
     .local v15, deliveryTypeColumnId:I
     invoke-interface {v9, v15}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v14
 
-    .line 5235
+    .line 5365
     .local v14, deliveryType:I
     const-string v4, "message_type"
 
@@ -17220,7 +17200,7 @@
 
     move-result v29
 
-    .line 5236
+    .line 5366
     .local v29, messageTypeColumnId:I
     move/from16 v0, v29
 
@@ -17228,7 +17208,7 @@
 
     move-result-object v28
 
-    .line 5237
+    .line 5367
     .local v28, messageType:Ljava/lang/String;
     const-string v4, "_size"
 
@@ -17236,7 +17216,7 @@
 
     move-result v23
 
-    .line 5238
+    .line 5368
     .local v23, fileSizeColumnId:I
     move/from16 v0, v23
 
@@ -17244,22 +17224,22 @@
 
     move-result v22
 
-    .line 5239
+    .line 5369
     .local v22, fileSize:I
     const/16 v31, 0x2
 
-    .line 5240
+    .line 5370
     .local v31, permissionType:I
     if-nez p2, :cond_4
 
-    .line 5241
+    .line 5371
     const-string v4, "_data"
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v21
 
-    .line 5242
+    .line 5372
     .local v21, filePathColumnId:I
     move/from16 v0, v21
 
@@ -17267,12 +17247,12 @@
 
     move-result-object p2
 
-    .line 5244
+    .line 5374
     .end local v21           #filePathColumnId:I
     :cond_4
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5246
+    .line 5376
     invoke-virtual {v12}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -17289,10 +17269,10 @@
 
     if-eqz v4, :cond_f
 
-    .line 5247
+    .line 5377
     const/16 v31, 0x2
 
-    .line 5263
+    .line 5393
     :goto_3
     :try_start_0
     new-instance v20, Ljava/io/File;
@@ -17303,7 +17283,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5266
+    .line 5396
     .local v20, file:Ljava/io/File;
     const/4 v4, 0x3
 
@@ -17313,7 +17293,7 @@
 
     if-ne v14, v4, :cond_13
 
-    .line 5268
+    .line 5398
     :cond_5
     new-instance v24, Ljava/io/FileInputStream;
 
@@ -17323,17 +17303,17 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 5276
+    .line 5406
     .local v24, fis:Ljava/io/InputStream;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v27
 
-    .line 5280
+    .line 5410
     .local v27, manager:Landroid/drm/mobile1/DrmRightsManager;
     const/4 v10, 0x0
 
-    .line 5281
+    .line 5411
     .local v10, constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     new-instance v11, Landroid/drm/mobile1/DrmRawContent;
 
@@ -17345,7 +17325,7 @@
 
     invoke-direct {v11, v0, v1, v2}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 5282
+    .line 5412
     .local v11, content:Landroid/drm/mobile1/DrmRawContent;
     move-object/from16 v0, v27
 
@@ -17353,7 +17333,7 @@
 
     move-result-object v33
 
-    .line 5285
+    .line 5415
     .local v33, rights:Landroid/drm/mobile1/DrmRights;
     if-nez v33, :cond_6
 
@@ -17361,16 +17341,16 @@
 
     if-ne v14, v4, :cond_6
 
-    .line 5287
+    .line 5417
     move-object/from16 v13, p0
 
-    .line 5288
+    .line 5418
     .local v13, context:Landroid/content/Context;
     new-instance v35, Landroid/widget/TextView;
 
     invoke-direct/range {v35 .. v36}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 5289
+    .line 5419
     .local v35, tv:Landroid/widget/TextView;
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -17382,7 +17362,7 @@
 
     move-result-object v32
 
-    .line 5290
+    .line 5420
     .local v32, rc:Landroid/content/res/Resources;
     const v4, 0x20400e8
 
@@ -17404,7 +17384,7 @@
 
     move-result-object v30
 
-    .line 5291
+    .line 5421
     .local v30, notify:Ljava/lang/String;
     move-object/from16 v0, v35
 
@@ -17412,7 +17392,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5292
+    .line 5422
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v0, p0
@@ -17467,7 +17447,7 @@
 
     invoke-virtual {v4}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    .line 5325
+    .line 5455
     .end local v13           #context:Landroid/content/Context;
     .end local v30           #notify:Ljava/lang/String;
     .end local v32           #rc:Landroid/content/res/Resources;
@@ -17475,10 +17455,10 @@
     :cond_6
     invoke-virtual/range {v24 .. v24}, Ljava/io/FileInputStream;->close()V
 
-    .line 5327
+    .line 5457
     if-eqz v33, :cond_9
 
-    .line 5328
+    .line 5458
     move-object/from16 v0, v33
 
     move/from16 v1, v31
@@ -17487,7 +17467,7 @@
 
     move-result-object v26
 
-    .line 5329
+    .line 5459
     .local v26, info:Landroid/drm/mobile1/DrmConstraintInfo;
     new-instance v10, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
 
@@ -17498,18 +17478,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5330
+    .line 5460
     .restart local v10       #constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     if-eqz v10, :cond_0
 
-    .line 5331
+    .line 5461
     const-wide/16 v16, 0x0
 
-    .line 5332
+    .line 5462
     .local v16, differential:J
     const/16 v34, 0x0
 
-    .line 5334
+    .line 5464
     .local v34, stampCursor:Landroid/database/Cursor;
     :try_start_1
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Stamp;->CONTENT_URI:Landroid/net/Uri;
@@ -17526,17 +17506,17 @@
 
     move-result-object v34
 
-    .line 5336
+    .line 5466
     if-eqz v34, :cond_7
 
-    .line 5337
+    .line 5467
     invoke-interface/range {v34 .. v34}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    .line 5338
+    .line 5468
     const-string v4, "time_differential"
 
     move-object/from16 v0, v34
@@ -17545,7 +17525,7 @@
 
     move-result v18
 
-    .line 5339
+    .line 5469
     .local v18, differentialColumnId:I
     move-object/from16 v0, v34
 
@@ -17558,16 +17538,16 @@
 
     move-result-wide v16
 
-    .line 5347
+    .line 5477
     .end local v18           #differentialColumnId:I
     :cond_7
     if-eqz v34, :cond_8
 
-    .line 5348
+    .line 5478
     :try_start_2
     invoke-interface/range {v34 .. v34}, Landroid/database/Cursor;->close()V
 
-    .line 5351
+    .line 5481
     :cond_8
     :goto_4
     move-wide/from16 v0, v16
@@ -17578,7 +17558,7 @@
 
     goto/16 :goto_1
 
-    .line 5355
+    .line 5485
     .end local v10           #constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .end local v11           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v16           #differential:J
@@ -17591,7 +17571,7 @@
     :catch_0
     move-exception v19
 
-    .line 5357
+    .line 5487
     .local v19, e:Ljava/lang/Exception;
     const-string v4, "HtcWrapDrmStore"
 
@@ -17619,14 +17599,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5360
+    .line 5490
     .end local v19           #e:Ljava/lang/Exception;
     :cond_9
     const/4 v10, 0x0
 
     goto/16 :goto_1
 
-    .line 5213
+    .line 5343
     .end local v14           #deliveryType:I
     .end local v15           #deliveryTypeColumnId:I
     .end local v22           #fileSize:I
@@ -17652,7 +17632,7 @@
 
     if-eqz v4, :cond_b
 
-    .line 5214
+    .line 5344
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -17689,7 +17669,7 @@
 
     goto/16 :goto_2
 
-    .line 5216
+    .line 5346
     :cond_b
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -17707,7 +17687,7 @@
 
     if-eqz v4, :cond_c
 
-    .line 5217
+    .line 5347
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -17744,7 +17724,7 @@
 
     goto/16 :goto_2
 
-    .line 5219
+    .line 5349
     :cond_c
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -17762,7 +17742,7 @@
 
     if-eqz v4, :cond_d
 
-    .line 5220
+    .line 5350
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -17799,16 +17779,16 @@
 
     goto/16 :goto_2
 
-    .line 5223
+    .line 5353
     :cond_d
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5224
+    .line 5354
     const/4 v10, 0x0
 
     goto/16 :goto_1
 
-    .line 5227
+    .line 5357
     .end local v25           #index:I
     :cond_e
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -17821,7 +17801,7 @@
 
     goto/16 :goto_2
 
-    .line 5249
+    .line 5379
     .restart local v14       #deliveryType:I
     .restart local v15       #deliveryTypeColumnId:I
     .restart local v22       #fileSize:I
@@ -17846,12 +17826,12 @@
 
     if-eqz v4, :cond_10
 
-    .line 5250
+    .line 5380
     const/16 v31, 0x1
 
     goto/16 :goto_3
 
-    .line 5252
+    .line 5382
     :cond_10
     invoke-virtual {v12}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -17869,12 +17849,12 @@
 
     if-eqz v4, :cond_11
 
-    .line 5253
+    .line 5383
     const/16 v31, 0x1
 
     goto/16 :goto_3
 
-    .line 5255
+    .line 5385
     :cond_11
     invoke-virtual {v12}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -17892,18 +17872,18 @@
 
     if-eqz v4, :cond_12
 
-    .line 5256
+    .line 5386
     const/16 v31, 0x3
 
     goto/16 :goto_3
 
-    .line 5259
+    .line 5389
     :cond_12
     const/16 v31, 0x2
 
     goto/16 :goto_3
 
-    .line 5271
+    .line 5401
     .restart local v20       #file:Ljava/io/File;
     :cond_13
     :try_start_3
@@ -17915,12 +17895,12 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 5273
+    .line 5403
     const/4 v10, 0x0
 
     goto/16 :goto_1
 
-    .line 5342
+    .line 5472
     .restart local v10       #constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v16       #differential:J
@@ -17932,7 +17912,7 @@
     :catch_1
     move-exception v19
 
-    .line 5344
+    .line 5474
     .restart local v19       #e:Ljava/lang/Exception;
     :try_start_4
     const-string v4, "HtcWrapDrmStore"
@@ -17963,26 +17943,26 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 5347
+    .line 5477
     if-eqz v34, :cond_8
 
-    .line 5348
+    .line 5478
     :try_start_5
     invoke-interface/range {v34 .. v34}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_4
 
-    .line 5347
+    .line 5477
     .end local v19           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
     if-eqz v34, :cond_14
 
-    .line 5348
+    .line 5478
     invoke-interface/range {v34 .. v34}, Landroid/database/Cursor;->close()V
 
-    .line 5347
+    .line 5477
     :cond_14
     throw v4
     :try_end_5
@@ -17997,31 +17977,31 @@
     .parameter "updateLicense"
 
     .prologue
-    .line 5375
+    .line 5505
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "********getDrmConstraint (1)"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5377
+    .line 5507
     const/4 v9, 0x0
 
-    .line 5378
+    .line 5508
     .local v9, c:Landroid/database/Cursor;
     const/4 v12, 0x0
 
-    .line 5379
+    .line 5509
     .local v12, contentUri:Landroid/net/Uri;
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    .line 5380
+    .line 5510
     .local v3, cr:Landroid/content/ContentResolver;
     if-nez p2, :cond_0
 
-    .line 5381
+    .line 5511
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -18036,25 +18016,25 @@
 
     move-result-object v9
 
-    .line 5386
+    .line 5516
     :goto_0
     if-nez v9, :cond_1
 
-    .line 5388
+    .line 5518
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "getDrmConstraint query DRM db failed."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5390
+    .line 5520
     const/4 v10, 0x0
 
-    .line 5574
+    .line 5704
     :goto_1
     return-object v10
 
-    .line 5383
+    .line 5513
     :cond_0
     const/4 v5, 0x0
 
@@ -18078,7 +18058,7 @@
 
     goto :goto_0
 
-    .line 5391
+    .line 5521
     :cond_1
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
@@ -18086,36 +18066,36 @@
 
     if-nez v4, :cond_2
 
-    .line 5392
+    .line 5522
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5394
+    .line 5524
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "getDrmConstraint no record."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5396
+    .line 5526
     const/4 v10, 0x0
 
     goto :goto_1
 
-    .line 5399
+    .line 5529
     :cond_2
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 5400
+    .line 5530
     if-eqz p2, :cond_d
 
-    .line 5401
+    .line 5531
     const/4 v4, 0x0
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v24
 
-    .line 5402
+    .line 5532
     .local v24, index:I
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -18133,7 +18113,7 @@
 
     if-eqz v4, :cond_9
 
-    .line 5403
+    .line 5533
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -18168,7 +18148,7 @@
 
     move-result-object v12
 
-    .line 5422
+    .line 5552
     .end local v24           #index:I
     :goto_2
     const-string v4, "HtcWrapDrmStore"
@@ -18197,20 +18177,20 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5425
+    .line 5555
     const-string v4, "delivery_type"
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v14
 
-    .line 5426
+    .line 5556
     .local v14, deliveryTypeColumnId:I
     invoke-interface {v9, v14}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v13
 
-    .line 5427
+    .line 5557
     .local v13, deliveryType:I
     const-string v4, "message_type"
 
@@ -18218,7 +18198,7 @@
 
     move-result v28
 
-    .line 5428
+    .line 5558
     .local v28, messageTypeColumnId:I
     move/from16 v0, v28
 
@@ -18226,7 +18206,7 @@
 
     move-result-object v27
 
-    .line 5429
+    .line 5559
     .local v27, messageType:Ljava/lang/String;
     const-string v4, "_size"
 
@@ -18234,7 +18214,7 @@
 
     move-result v22
 
-    .line 5430
+    .line 5560
     .local v22, fileSizeColumnId:I
     move/from16 v0, v22
 
@@ -18242,22 +18222,22 @@
 
     move-result v21
 
-    .line 5431
+    .line 5561
     .local v21, fileSize:I
     const/16 v29, 0x2
 
-    .line 5432
+    .line 5562
     .local v29, permissionType:I
     if-nez p2, :cond_3
 
-    .line 5433
+    .line 5563
     const-string v4, "_data"
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v20
 
-    .line 5434
+    .line 5564
     .local v20, filePathColumnId:I
     move/from16 v0, v20
 
@@ -18265,12 +18245,12 @@
 
     move-result-object p2
 
-    .line 5436
+    .line 5566
     .end local v20           #filePathColumnId:I
     :cond_3
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5438
+    .line 5568
     invoke-virtual {v12}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -18287,10 +18267,10 @@
 
     if-eqz v4, :cond_e
 
-    .line 5439
+    .line 5569
     const/16 v29, 0x2
 
-    .line 5455
+    .line 5585
     :goto_3
     :try_start_0
     new-instance v19, Ljava/io/File;
@@ -18301,7 +18281,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5458
+    .line 5588
     .local v19, file:Ljava/io/File;
     const/4 v4, 0x3
 
@@ -18311,7 +18291,7 @@
 
     if-ne v13, v4, :cond_12
 
-    .line 5460
+    .line 5590
     :cond_4
     new-instance v23, Ljava/io/FileInputStream;
 
@@ -18321,13 +18301,13 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 5468
+    .line 5598
     .local v23, fis:Ljava/io/InputStream;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v26
 
-    .line 5475
+    .line 5605
     .local v26, manager:Landroid/drm/mobile1/DrmRightsManager;
     new-instance v11, Landroid/drm/mobile1/DrmRawContent;
 
@@ -18339,7 +18319,7 @@
 
     invoke-direct {v11, v0, v1, v2}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 5476
+    .line 5606
     .local v11, content:Landroid/drm/mobile1/DrmRawContent;
     move-object/from16 v0, v26
 
@@ -18347,7 +18327,7 @@
 
     move-result-object v30
 
-    .line 5479
+    .line 5609
     .local v30, rights:Landroid/drm/mobile1/DrmRights;
     if-nez v30, :cond_5
 
@@ -18355,15 +18335,15 @@
 
     if-ne v13, v4, :cond_5
 
-    .line 5481
+    .line 5611
     if-eqz p3, :cond_5
 
-    .line 5482
+    .line 5612
     invoke-virtual {v11}, Landroid/drm/mobile1/DrmRawContent;->getRightsAddress()Ljava/lang/String;
 
     move-result-object v31
 
-    .line 5483
+    .line 5613
     .local v31, rightsIssuer:Ljava/lang/String;
     move-object/from16 v0, p3
 
@@ -18371,15 +18351,15 @@
 
     invoke-interface {v0, v1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$UpdateLicense;->update(Ljava/lang/String;)V
 
-    .line 5524
+    .line 5654
     .end local v31           #rightsIssuer:Ljava/lang/String;
     :cond_5
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileInputStream;->close()V
 
-    .line 5526
+    .line 5656
     if-eqz v30, :cond_14
 
-    .line 5527
+    .line 5657
     move-object/from16 v0, v30
 
     move/from16 v1, v29
@@ -18388,7 +18368,7 @@
 
     move-result-object v25
 
-    .line 5530
+    .line 5660
     .local v25, info:Landroid/drm/mobile1/DrmConstraintInfo;
     new-instance v10, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
 
@@ -18396,23 +18376,23 @@
 
     invoke-direct {v10, v0}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;-><init>(Landroid/drm/mobile1/DrmConstraintInfo;)V
 
-    .line 5533
+    .line 5663
     .local v10, constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     monitor-enter v10
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5535
+    .line 5665
     if-eqz v10, :cond_8
 
-    .line 5536
+    .line 5666
     const-wide/16 v15, 0x0
 
-    .line 5537
+    .line 5667
     .local v15, differential:J
     const/16 v32, 0x0
 
-    .line 5539
+    .line 5669
     .local v32, stampCursor:Landroid/database/Cursor;
     :try_start_1
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Stamp;->CONTENT_URI:Landroid/net/Uri;
@@ -18429,17 +18409,17 @@
 
     move-result-object v32
 
-    .line 5541
+    .line 5671
     if-eqz v32, :cond_6
 
-    .line 5542
+    .line 5672
     invoke-interface/range {v32 .. v32}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    .line 5543
+    .line 5673
     const-string v4, "time_differential"
 
     move-object/from16 v0, v32
@@ -18448,7 +18428,7 @@
 
     move-result v17
 
-    .line 5545
+    .line 5675
     .local v17, differentialColumnId:I
     move-object/from16 v0, v32
 
@@ -18461,23 +18441,23 @@
 
     move-result-wide v15
 
-    .line 5553
+    .line 5683
     .end local v17           #differentialColumnId:I
     :cond_6
     if-eqz v32, :cond_7
 
-    .line 5554
+    .line 5684
     :try_start_2
     invoke-interface/range {v32 .. v32}, Landroid/database/Cursor;->close()V
 
-    .line 5557
+    .line 5687
     :cond_7
     :goto_4
     move-wide v0, v15
 
     invoke-virtual {v10, v0, v1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->setDisserential(J)V
 
-    .line 5559
+    .line 5689
     .end local v15           #differential:J
     .end local v32           #stampCursor:Landroid/database/Cursor;
     :cond_8
@@ -18485,7 +18465,7 @@
 
     goto/16 :goto_1
 
-    .line 5561
+    .line 5691
     :catchall_0
     move-exception v4
 
@@ -18498,7 +18478,7 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 5568
+    .line 5698
     .end local v10           #constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .end local v11           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v19           #file:Ljava/io/File;
@@ -18509,7 +18489,7 @@
     :catch_0
     move-exception v18
 
-    .line 5570
+    .line 5700
     .local v18, e:Ljava/lang/Exception;
     const-string v4, "HtcWrapDrmStore"
 
@@ -18537,14 +18517,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5574
+    .line 5704
     .end local v18           #e:Ljava/lang/Exception;
     :goto_5
     const/4 v10, 0x0
 
     goto/16 :goto_1
 
-    .line 5405
+    .line 5535
     .end local v13           #deliveryType:I
     .end local v14           #deliveryTypeColumnId:I
     .end local v21           #fileSize:I
@@ -18570,7 +18550,7 @@
 
     if-eqz v4, :cond_a
 
-    .line 5406
+    .line 5536
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -18607,7 +18587,7 @@
 
     goto/16 :goto_2
 
-    .line 5408
+    .line 5538
     :cond_a
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -18625,7 +18605,7 @@
 
     if-eqz v4, :cond_b
 
-    .line 5409
+    .line 5539
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -18662,7 +18642,7 @@
 
     goto/16 :goto_2
 
-    .line 5411
+    .line 5541
     :cond_b
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -18680,7 +18660,7 @@
 
     if-eqz v4, :cond_c
 
-    .line 5412
+    .line 5542
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -18717,16 +18697,16 @@
 
     goto/16 :goto_2
 
-    .line 5415
+    .line 5545
     :cond_c
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 5416
+    .line 5546
     const/4 v10, 0x0
 
     goto/16 :goto_1
 
-    .line 5419
+    .line 5549
     .end local v24           #index:I
     :cond_d
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -18739,7 +18719,7 @@
 
     goto/16 :goto_2
 
-    .line 5441
+    .line 5571
     .restart local v13       #deliveryType:I
     .restart local v14       #deliveryTypeColumnId:I
     .restart local v21       #fileSize:I
@@ -18764,12 +18744,12 @@
 
     if-eqz v4, :cond_f
 
-    .line 5442
+    .line 5572
     const/16 v29, 0x1
 
     goto/16 :goto_3
 
-    .line 5444
+    .line 5574
     :cond_f
     invoke-virtual {v12}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -18787,12 +18767,12 @@
 
     if-eqz v4, :cond_10
 
-    .line 5445
+    .line 5575
     const/16 v29, 0x1
 
     goto/16 :goto_3
 
-    .line 5447
+    .line 5577
     :cond_10
     invoke-virtual {v12}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -18810,18 +18790,18 @@
 
     if-eqz v4, :cond_11
 
-    .line 5448
+    .line 5578
     const/16 v29, 0x3
 
     goto/16 :goto_3
 
-    .line 5451
+    .line 5581
     :cond_11
     const/16 v29, 0x2
 
     goto/16 :goto_3
 
-    .line 5463
+    .line 5593
     .restart local v19       #file:Ljava/io/File;
     :cond_12
     :try_start_4
@@ -18833,12 +18813,12 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 5465
+    .line 5595
     const/4 v10, 0x0
 
     goto/16 :goto_1
 
-    .line 5548
+    .line 5678
     .restart local v10       #constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v15       #differential:J
@@ -18850,7 +18830,7 @@
     :catch_1
     move-exception v18
 
-    .line 5550
+    .line 5680
     .restart local v18       #e:Ljava/lang/Exception;
     :try_start_5
     const-string v4, "HtcWrapDrmStore"
@@ -18881,32 +18861,32 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 5553
+    .line 5683
     if-eqz v32, :cond_7
 
-    .line 5554
+    .line 5684
     :try_start_6
     invoke-interface/range {v32 .. v32}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_4
 
-    .line 5553
+    .line 5683
     .end local v18           #e:Ljava/lang/Exception;
     :catchall_1
     move-exception v4
 
     if-eqz v32, :cond_13
 
-    .line 5554
+    .line 5684
     invoke-interface/range {v32 .. v32}, Landroid/database/Cursor;->close()V
 
-    .line 5553
+    .line 5683
     :cond_13
     throw v4
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 5565
+    .line 5695
     .end local v10           #constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .end local v15           #differential:J
     .end local v25           #info:Landroid/drm/mobile1/DrmConstraintInfo;
@@ -18930,7 +18910,7 @@
     .parameter "uri"
 
     .prologue
-    .line 7687
+    .line 7817
     const/4 v0, 0x0
 
     return-object v0
@@ -18943,45 +18923,45 @@
     .parameter "strFilePath"
 
     .prologue
-    .line 6466
+    .line 6596
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "********getDrmContentStream"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6469
+    .line 6599
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 6470
+    .line 6600
     .local v2, cr:Landroid/content/ContentResolver;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v20
 
-    .line 6471
+    .line 6601
     .local v20, manager:Landroid/drm/mobile1/DrmRightsManager;
     const/4 v10, 0x0
 
-    .line 6472
+    .line 6602
     .local v10, content:Landroid/drm/mobile1/DrmRawContent;
     const/16 v22, 0x0
 
-    .line 6473
+    .line 6603
     .local v22, rights:Landroid/drm/mobile1/DrmRights;
     const/4 v14, 0x0
 
-    .line 6474
+    .line 6604
     .local v14, drmContentStream:Ljava/io/InputStream;
     const/4 v8, 0x0
 
-    .line 6476
+    .line 6606
     .local v8, c:Landroid/database/Cursor;
     if-nez p2, :cond_0
 
-    .line 6477
+    .line 6607
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DELIVERY_TYPE_PROJECTION:[Ljava/lang/String;
 
     const/4 v5, 0x0
@@ -18996,25 +18976,25 @@
 
     move-result-object v8
 
-    .line 6483
+    .line 6613
     :goto_0
     if-nez v8, :cond_1
 
-    .line 6485
+    .line 6615
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "getDrmContentStream query failed."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6487
+    .line 6617
     const/4 v3, 0x0
 
-    .line 6559
+    .line 6689
     :goto_1
     return-object v3
 
-    .line 6479
+    .line 6609
     :cond_0
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DELIVERY_TYPE_PROJECTION:[Ljava/lang/String;
 
@@ -19038,7 +19018,7 @@
 
     goto :goto_0
 
-    .line 6488
+    .line 6618
     :cond_1
     invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
 
@@ -19046,39 +19026,39 @@
 
     if-nez v3, :cond_2
 
-    .line 6490
+    .line 6620
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "getDrmContentStream no record."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6492
+    .line 6622
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 6493
+    .line 6623
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 6496
+    .line 6626
     :cond_2
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6497
+    .line 6627
     const-string v3, "delivery_type"
 
     invoke-interface {v8, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v13
 
-    .line 6498
+    .line 6628
     .local v13, deliveryTypeColumnId:I
     invoke-interface {v8, v13}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v12
 
-    .line 6499
+    .line 6629
     .local v12, deliveryType:I
     const-string v3, "_size"
 
@@ -19086,7 +19066,7 @@
 
     move-result v19
 
-    .line 6500
+    .line 6630
     .local v19, fileSizeColumnId:I
     move/from16 v0, v19
 
@@ -19094,11 +19074,11 @@
 
     move-result v18
 
-    .line 6501
+    .line 6631
     .local v18, fileSize:I
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 6504
+    .line 6634
     :try_start_0
     new-instance v17, Ljava/io/File;
 
@@ -19108,7 +19088,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6505
+    .line 6635
     .local v17, file:Ljava/io/File;
     new-instance v23, Ljava/io/FileInputStream;
 
@@ -19118,7 +19098,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 6507
+    .line 6637
     .local v23, tempFin:Ljava/io/InputStream;
     packed-switch v12, :pswitch_data_0
 
@@ -19127,10 +19107,10 @@
     :goto_2
     move-object v3, v14
 
-    .line 6559
+    .line 6689
     goto :goto_1
 
-    .line 6510
+    .line 6640
     .restart local v17       #file:Ljava/io/File;
     .restart local v23       #tempFin:Ljava/io/InputStream;
     :pswitch_0
@@ -19147,7 +19127,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6511
+    .line 6641
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .local v11, content:Landroid/drm/mobile1/DrmRawContent;
     :try_start_1
@@ -19157,7 +19137,7 @@
 
     move-result-object v21
 
-    .line 6512
+    .line 6642
     .local v21, right:Landroid/drm/mobile1/DrmRights;
     move-object/from16 v0, v21
 
@@ -19170,12 +19150,12 @@
 
     move-object v10, v11
 
-    .line 6513
+    .line 6643
     .end local v11           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto :goto_2
 
-    .line 6517
+    .line 6647
     .end local v21           #right:Landroid/drm/mobile1/DrmRights;
     :pswitch_1
     :try_start_2
@@ -19192,7 +19172,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 6518
+    .line 6648
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     :try_start_3
@@ -19202,15 +19182,15 @@
 
     move-result-object v22
 
-    .line 6520
+    .line 6650
     if-eqz v22, :cond_4
 
-    .line 6521
+    .line 6651
     invoke-static/range {p0 .. p2}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmConstraint(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
 
     move-result-object v9
 
-    .line 6523
+    .line 6653
     .local v9, constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     move-object/from16 v0, p1
 
@@ -19220,7 +19200,7 @@
 
     if-nez v3, :cond_3
 
-    .line 6524
+    .line 6654
     move-object/from16 v0, v22
 
     invoke-virtual {v11, v0}, Landroid/drm/mobile1/DrmRawContent;->getContentDecryptStream(Landroid/drm/mobile1/DrmRights;)Ljava/io/InputStream;
@@ -19229,12 +19209,12 @@
 
     move-object v10, v11
 
-    .line 6531
+    .line 6661
     .end local v11           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto :goto_2
 
-    .line 6527
+    .line 6657
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     :cond_3
@@ -19244,7 +19224,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6529
+    .line 6659
     const/4 v3, 0x0
 
     move-object v10, v11
@@ -19253,7 +19233,7 @@
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto/16 :goto_1
 
-    .line 6533
+    .line 6663
     .end local v9           #constraint:Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
@@ -19267,7 +19247,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 6535
+    .line 6665
     const/4 v3, 0x0
 
     move-object v10, v11
@@ -19276,7 +19256,7 @@
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto/16 :goto_1
 
-    .line 6540
+    .line 6670
     :pswitch_2
     :try_start_4
     new-instance v15, Ljava/io/FileInputStream;
@@ -19285,7 +19265,7 @@
 
     invoke-direct {v15, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 6541
+    .line 6671
     .local v15, drmStream:Ljava/io/FileInputStream;
     new-instance v11, Landroid/drm/mobile1/DrmRawContent;
 
@@ -19298,7 +19278,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 6542
+    .line 6672
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     :try_start_5
@@ -19308,17 +19288,17 @@
 
     move-result-object v22
 
-    .line 6543
+    .line 6673
     if-nez v22, :cond_5
 
-    .line 6545
+    .line 6675
     const-string v3, "HtcWrapDrmStore"
 
     const-string v4, "getDrmContentStream no rights installed."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6547
+    .line 6677
     const/4 v3, 0x0
 
     move-object v10, v11
@@ -19327,7 +19307,7 @@
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto/16 :goto_1
 
-    .line 6549
+    .line 6679
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     :cond_5
@@ -19346,14 +19326,14 @@
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto/16 :goto_2
 
-    .line 6552
+    .line 6682
     .end local v15           #drmStream:Ljava/io/FileInputStream;
     .end local v17           #file:Ljava/io/File;
     .end local v23           #tempFin:Ljava/io/InputStream;
     :catch_0
     move-exception v16
 
-    .line 6554
+    .line 6684
     .local v16, e:Ljava/lang/Exception;
     :goto_3
     :try_start_6
@@ -19387,7 +19367,7 @@
 
     goto/16 :goto_2
 
-    .line 6556
+    .line 6686
     .end local v16           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -19408,7 +19388,7 @@
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto :goto_4
 
-    .line 6552
+    .line 6682
     .end local v10           #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     :catch_1
@@ -19420,7 +19400,7 @@
     .restart local v10       #content:Landroid/drm/mobile1/DrmRawContent;
     goto :goto_3
 
-    .line 6507
+    .line 6637
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -19438,7 +19418,7 @@
     .end annotation
 
     .prologue
-    .line 5588
+    .line 5718
     invoke-static {p0, p1, p2}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmConstraint(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
 
     move-result-object v0
@@ -19457,12 +19437,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 6695
+    .line 6825
     new-instance v3, Ljava/lang/String;
 
     invoke-direct {v3}, Ljava/lang/String;-><init>()V
 
-    .line 6699
+    .line 6829
     .local v3, strWhere:Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -19482,7 +19462,7 @@
 
     move-result-object v3
 
-    .line 6700
+    .line 6830
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -19501,12 +19481,12 @@
 
     move-result-object v3
 
-    .line 6701
+    .line 6831
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v7
 
-    .line 6704
+    .line 6834
     .local v7, nHeadLength:I
     and-int/lit8 v0, p2, 0xf
 
@@ -19514,7 +19494,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 6705
+    .line 6835
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -19533,7 +19513,7 @@
 
     move-result-object v3
 
-    .line 6707
+    .line 6837
     :cond_0
     and-int/lit16 v0, p2, 0xf0
 
@@ -19541,14 +19521,14 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 6708
+    .line 6838
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-le v0, v7, :cond_1
 
-    .line 6709
+    .line 6839
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -19567,7 +19547,7 @@
 
     move-result-object v3
 
-    .line 6710
+    .line 6840
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -19587,7 +19567,7 @@
 
     move-result-object v3
 
-    .line 6712
+    .line 6842
     :cond_2
     and-int/lit16 v0, p2, 0xf00
 
@@ -19595,14 +19575,14 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 6713
+    .line 6843
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-le v0, v7, :cond_3
 
-    .line 6714
+    .line 6844
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -19621,7 +19601,7 @@
 
     move-result-object v3
 
-    .line 6715
+    .line 6845
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -19641,7 +19621,7 @@
 
     move-result-object v3
 
-    .line 6719
+    .line 6849
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -19661,7 +19641,7 @@
 
     move-result-object v3
 
-    .line 6722
+    .line 6852
     const-string v0, "HtcWrapDrmStore"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -19684,7 +19664,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6726
+    .line 6856
     sget-object v2, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DELIVERY_TYPE_PROJECTION:[Ljava/lang/String;
 
     move-object v0, p0
@@ -19697,7 +19677,7 @@
 
     move-result-object v6
 
-    .line 6728
+    .line 6858
     .local v6, c:Landroid/database/Cursor;
     if-eqz v6, :cond_5
 
@@ -19707,10 +19687,10 @@
 
     if-lez v0, :cond_5
 
-    .line 6729
+    .line 6859
     invoke-interface {v6}, Landroid/database/Cursor;->moveToLast()Z
 
-    .line 6732
+    .line 6862
     :cond_5
     return-object v6
 .end method
@@ -19724,12 +19704,12 @@
     .end annotation
 
     .prologue
-    .line 6677
+    .line 6807
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 6679
+    .line 6809
     .local v0, cr:Landroid/content/ContentResolver;
     invoke-static {v0, p1, p2}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmCursor(Landroid/content/ContentResolver;Landroid/net/Uri;I)Landroid/database/Cursor;
 
@@ -19744,7 +19724,7 @@
     .parameter "uri"
 
     .prologue
-    .line 7663
+    .line 7793
     const/4 v0, 0x0
 
     return v0
@@ -19755,7 +19735,7 @@
     .parameter "fileName"
 
     .prologue
-    .line 7671
+    .line 7801
     const/4 v0, 0x0
 
     return v0
@@ -19769,7 +19749,7 @@
     .end annotation
 
     .prologue
-    .line 7514
+    .line 7644
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Images;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmConstraint(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
@@ -19787,7 +19767,7 @@
     .end annotation
 
     .prologue
-    .line 7456
+    .line 7586
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Images;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmCursor(Landroid/content/Context;Landroid/net/Uri;I)Landroid/database/Cursor;
@@ -19805,7 +19785,7 @@
     .end annotation
 
     .prologue
-    .line 7568
+    .line 7698
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Images;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmContentStream(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Ljava/io/InputStream;
@@ -19823,7 +19803,7 @@
     .end annotation
 
     .prologue
-    .line 7553
+    .line 7683
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Jar;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmConstraint(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
@@ -19841,7 +19821,7 @@
     .end annotation
 
     .prologue
-    .line 7501
+    .line 7631
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Jar;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmCursor(Landroid/content/Context;Landroid/net/Uri;I)Landroid/database/Cursor;
@@ -19859,7 +19839,7 @@
     .end annotation
 
     .prologue
-    .line 7613
+    .line 7743
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Jar;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmContentStream(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Ljava/io/InputStream;
@@ -19875,7 +19855,7 @@
     .parameter "uri"
 
     .prologue
-    .line 7623
+    .line 7753
     const/4 v0, 0x0
 
     return-object v0
@@ -19888,7 +19868,7 @@
     .parameter "strFilePath"
 
     .prologue
-    .line 6623
+    .line 6753
     const/4 v3, 0x0
 
     const-string v4, "_data=?"
@@ -19911,26 +19891,26 @@
 
     move-result-object v7
 
-    .line 6624
+    .line 6754
     .local v7, c:Landroid/database/Cursor;
     if-nez v7, :cond_1
 
-    .line 6626
+    .line 6756
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "getDrmRight query DRM db failed."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6628
+    .line 6758
     const/16 v16, 0x0
 
-    .line 6665
+    .line 6795
     :cond_0
     :goto_0
     return-object v16
 
-    .line 6629
+    .line 6759
     :cond_1
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
@@ -19938,58 +19918,58 @@
 
     if-nez v1, :cond_2
 
-    .line 6631
+    .line 6761
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "getDrmRight no record."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6633
+    .line 6763
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 6634
+    .line 6764
     const/16 v16, 0x0
 
     goto :goto_0
 
-    .line 6637
+    .line 6767
     :cond_2
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6638
+    .line 6768
     const-string v1, "message_type"
 
     invoke-interface {v7, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v15
 
-    .line 6639
+    .line 6769
     .local v15, messageTypeColumnId:I
     invoke-interface {v7, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 6640
+    .line 6770
     .local v14, messageType:Ljava/lang/String;
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 6642
+    .line 6772
     new-instance v10, Ljava/io/File;
 
     move-object/from16 v0, p2
 
     invoke-direct {v10, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6643
+    .line 6773
     .local v10, file:Ljava/io/File;
     const/4 v11, 0x0
 
-    .line 6644
+    .line 6774
     .local v11, fis:Ljava/io/FileInputStream;
     const/16 v16, 0x0
 
-    .line 6646
+    .line 6776
     .local v16, rights:Landroid/drm/mobile1/DrmRights;
     :try_start_0
     new-instance v12, Ljava/io/FileInputStream;
@@ -19999,7 +19979,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6647
+    .line 6777
     .end local v11           #fis:Ljava/io/FileInputStream;
     .local v12, fis:Ljava/io/FileInputStream;
     :try_start_1
@@ -20013,13 +19993,13 @@
 
     invoke-direct {v8, v12, v1, v14}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 6648
+    .line 6778
     .local v8, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v13
 
-    .line 6649
+    .line 6779
     .local v13, manager:Landroid/drm/mobile1/DrmRightsManager;
     invoke-virtual {v13, v8}, Landroid/drm/mobile1/DrmRightsManager;->queryRights(Landroid/drm/mobile1/DrmRawContent;)Landroid/drm/mobile1/DrmRights;
     :try_end_1
@@ -20028,10 +20008,10 @@
 
     move-result-object v16
 
-    .line 6656
+    .line 6786
     if-eqz v12, :cond_3
 
-    .line 6657
+    .line 6787
     :try_start_2
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -20041,18 +20021,18 @@
     :goto_1
     move-object v11, v12
 
-    .line 6664
+    .line 6794
     .end local v12           #fis:Ljava/io/FileInputStream;
     .restart local v11       #fis:Ljava/io/FileInputStream;
     goto :goto_0
 
-    .line 6650
+    .line 6780
     .end local v8           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v13           #manager:Landroid/drm/mobile1/DrmRightsManager;
     :catch_0
     move-exception v9
 
-    .line 6652
+    .line 6782
     .local v9, e:Ljava/lang/Exception;
     :goto_2
     :try_start_3
@@ -20084,10 +20064,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 6656
+    .line 6786
     if-eqz v11, :cond_0
 
-    .line 6657
+    .line 6787
     :try_start_4
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -20095,11 +20075,11 @@
 
     goto :goto_0
 
-    .line 6659
+    .line 6789
     :catch_1
     move-exception v9
 
-    .line 6661
+    .line 6791
     const-string v1, "HtcWrapDrmStore"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -20128,31 +20108,31 @@
 
     goto/16 :goto_0
 
-    .line 6655
+    .line 6785
     .end local v9           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 
-    .line 6656
+    .line 6786
     :goto_3
     if-eqz v11, :cond_4
 
-    .line 6657
+    .line 6787
     :try_start_5
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 6655
+    .line 6785
     :cond_4
     :goto_4
     throw v1
 
-    .line 6659
+    .line 6789
     :catch_2
     move-exception v9
 
-    .line 6661
+    .line 6791
     .restart local v9       #e:Ljava/lang/Exception;
     const-string v2, "HtcWrapDrmStore"
 
@@ -20182,7 +20162,7 @@
 
     goto :goto_4
 
-    .line 6659
+    .line 6789
     .end local v9           #e:Ljava/lang/Exception;
     .end local v11           #fis:Ljava/io/FileInputStream;
     .restart local v8       #content:Landroid/drm/mobile1/DrmRawContent;
@@ -20191,7 +20171,7 @@
     :catch_3
     move-exception v9
 
-    .line 6661
+    .line 6791
     .restart local v9       #e:Ljava/lang/Exception;
     const-string v1, "HtcWrapDrmStore"
 
@@ -20221,7 +20201,7 @@
 
     goto/16 :goto_1
 
-    .line 6655
+    .line 6785
     .end local v8           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v9           #e:Ljava/lang/Exception;
     .end local v13           #manager:Landroid/drm/mobile1/DrmRightsManager;
@@ -20234,7 +20214,7 @@
     .restart local v11       #fis:Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 6650
+    .line 6780
     .end local v11           #fis:Ljava/io/FileInputStream;
     .restart local v12       #fis:Ljava/io/FileInputStream;
     :catch_4
@@ -20255,7 +20235,7 @@
     .end annotation
 
     .prologue
-    .line 7540
+    .line 7670
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Video;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmConstraint(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;
@@ -20273,7 +20253,7 @@
     .end annotation
 
     .prologue
-    .line 7486
+    .line 7616
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Video;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmCursor(Landroid/content/Context;Landroid/net/Uri;I)Landroid/database/Cursor;
@@ -20291,7 +20271,7 @@
     .end annotation
 
     .prologue
-    .line 7598
+    .line 7728
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Video;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getDrmContentStream(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Ljava/io/InputStream;
@@ -20305,7 +20285,7 @@
     .locals 1
 
     .prologue
-    .line 7428
+    .line 7558
     invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -20319,14 +20299,14 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 7194
+    .line 7324
     const/4 v7, 0x0
 
-    .line 7195
+    .line 7325
     .local v7, resultDownloadPath:Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 7197
+    .line 7327
     .local v3, findName:Ljava/lang/String;
     invoke-static {}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getExternalStorageState()Ljava/lang/String;
 
@@ -20340,7 +20320,7 @@
 
     if-nez v9, :cond_0
 
-    .line 7198
+    .line 7328
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ HtcWrapDrmStore.getExternalStorageState() is not mounted!!!"
@@ -20349,23 +20329,23 @@
 
     move-object v7, v8
 
-    .line 7262
+    .line 7392
     .end local v7           #resultDownloadPath:Ljava/lang/String;
     :goto_0
     return-object v7
 
-    .line 7203
+    .line 7333
     .restart local v7       #resultDownloadPath:Ljava/lang/String;
     :cond_0
     invoke-static {}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v2
 
-    .line 7205
+    .line 7335
     .local v2, external_storage_file:Ljava/io/File;
     if-nez v2, :cond_1
 
-    .line 7206
+    .line 7336
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ HtcWrapDrmStore.getExternalStorageDirectory() ERROR!!!"
@@ -20374,10 +20354,10 @@
 
     move-object v7, v8
 
-    .line 7208
+    .line 7338
     goto :goto_0
 
-    .line 7210
+    .line 7340
     :cond_1
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -20385,7 +20365,7 @@
 
     if-nez v9, :cond_2
 
-    .line 7211
+    .line 7341
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ HtcWrapDrmStore.getExternalStorageDirectory() doesn\'t exist!!!"
@@ -20394,10 +20374,10 @@
 
     move-object v7, v8
 
-    .line 7213
+    .line 7343
     goto :goto_0
 
-    .line 7217
+    .line 7347
     :cond_2
     :try_start_0
     invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -20416,7 +20396,7 @@
 
     aget-object v5, v0, v4
 
-    .line 7218
+    .line 7348
     .local v5, item:Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->isDirectory()Z
 
@@ -20424,7 +20404,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 7219
+    .line 7349
     invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -20437,19 +20417,19 @@
 
     if-eqz v9, :cond_4
 
-    .line 7220
+    .line 7350
     invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     move-result-object v3
 
-    .line 7234
+    .line 7364
     .end local v5           #item:Ljava/io/File;
     :cond_3
     if-eqz v3, :cond_5
 
-    .line 7235
+    .line 7365
     :try_start_1
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -20481,7 +20461,7 @@
 
     move-result-object v7
 
-    .line 7239
+    .line 7369
     const-string v9, "HtcWrapDrmStore"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -20504,7 +20484,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7240
+    .line 7370
     const-string v9, "HtcWrapDrmStore"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -20531,11 +20511,11 @@
 
     goto/16 :goto_0
 
-    .line 7254
+    .line 7384
     :catch_0
     move-exception v1
 
-    .line 7255
+    .line 7385
     .local v1, e:Ljava/lang/Exception;
     const-string v9, "HtcWrapDrmStore"
 
@@ -20543,7 +20523,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7256
+    .line 7386
     const-string v9, "HtcWrapDrmStore"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -20552,15 +20532,15 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7257
+    .line 7387
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v7, v8
 
-    .line 7259
+    .line 7389
     goto/16 :goto_0
 
-    .line 7217
+    .line 7347
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v5       #item:Ljava/io/File;
     :cond_4
@@ -20568,7 +20548,7 @@
 
     goto/16 :goto_1
 
-    .line 7225
+    .line 7355
     .end local v0           #arr$:[Ljava/io/File;
     .end local v4           #i$:I
     .end local v5           #item:Ljava/io/File;
@@ -20576,7 +20556,7 @@
     :catch_1
     move-exception v1
 
-    .line 7226
+    .line 7356
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v9, "HtcWrapDrmStore"
 
@@ -20584,7 +20564,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7227
+    .line 7357
     const-string v9, "HtcWrapDrmStore"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -20593,15 +20573,15 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7228
+    .line 7358
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v7, v8
 
-    .line 7230
+    .line 7360
     goto/16 :goto_0
 
-    .line 7244
+    .line 7374
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v0       #arr$:[Ljava/io/File;
     .restart local v4       #i$:I
@@ -20640,14 +20620,14 @@
 
     move-result-object v7
 
-    .line 7250
+    .line 7380
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ No download folder in sdcard."
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7251
+    .line 7381
     const-string v9, "HtcWrapDrmStore"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -20679,7 +20659,7 @@
     .locals 1
 
     .prologue
-    .line 7387
+    .line 7517
     invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
@@ -20754,14 +20734,14 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 7115
+    .line 7245
     const/4 v7, 0x0
 
-    .line 7116
+    .line 7246
     .local v7, resultDownloadPath:Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 7119
+    .line 7249
     .local v2, findName:Ljava/lang/String;
     invoke-static {}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getPhoneStorageState()Ljava/lang/String;
 
@@ -20775,7 +20755,7 @@
 
     if-nez v9, :cond_0
 
-    .line 7120
+    .line 7250
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ HtcWrapDrmStore.getPhoneStorageDirectory() is not mounted!!!"
@@ -20784,23 +20764,23 @@
 
     move-object v7, v8
 
-    .line 7186
+    .line 7316
     .end local v7           #resultDownloadPath:Ljava/lang/String;
     :goto_0
     return-object v7
 
-    .line 7126
+    .line 7256
     .restart local v7       #resultDownloadPath:Ljava/lang/String;
     :cond_0
     invoke-static {}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->getPhoneStorageDirectory()Ljava/io/File;
 
     move-result-object v4
 
-    .line 7128
+    .line 7258
     .local v4, internal_storage_file:Ljava/io/File;
     if-nez v4, :cond_1
 
-    .line 7130
+    .line 7260
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ HtcWrapDrmStore.getPhoneStorageDirectory() ERROR!!!"
@@ -20809,10 +20789,10 @@
 
     move-object v7, v8
 
-    .line 7133
+    .line 7263
     goto :goto_0
 
-    .line 7135
+    .line 7265
     :cond_1
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -20820,7 +20800,7 @@
 
     if-nez v9, :cond_2
 
-    .line 7136
+    .line 7266
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ HtcWrapDrmStore.getPhoneStorageDirectory() doesn\'t exist!!!"
@@ -20829,10 +20809,10 @@
 
     move-object v7, v8
 
-    .line 7138
+    .line 7268
     goto :goto_0
 
-    .line 7142
+    .line 7272
     :cond_2
     :try_start_0
     invoke-virtual {v4}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -20851,7 +20831,7 @@
 
     aget-object v5, v0, v3
 
-    .line 7143
+    .line 7273
     .local v5, item:Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->isDirectory()Z
 
@@ -20859,7 +20839,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 7144
+    .line 7274
     invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -20872,19 +20852,19 @@
 
     if-eqz v9, :cond_4
 
-    .line 7145
+    .line 7275
     invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     move-result-object v2
 
-    .line 7160
+    .line 7290
     .end local v5           #item:Ljava/io/File;
     :cond_3
     if-eqz v2, :cond_5
 
-    .line 7161
+    .line 7291
     :try_start_1
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -20916,7 +20896,7 @@
 
     move-result-object v7
 
-    .line 7165
+    .line 7295
     const-string v9, "HtcWrapDrmStore"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -20939,7 +20919,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7166
+    .line 7296
     const-string v9, "HtcWrapDrmStore"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -20966,11 +20946,11 @@
 
     goto/16 :goto_0
 
-    .line 7178
+    .line 7308
     :catch_0
     move-exception v1
 
-    .line 7179
+    .line 7309
     .local v1, e:Ljava/lang/Exception;
     const-string v9, "HtcWrapDrmStore"
 
@@ -20978,7 +20958,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7180
+    .line 7310
     const-string v9, "HtcWrapDrmStore"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -20987,15 +20967,15 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7181
+    .line 7311
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v7, v8
 
-    .line 7183
+    .line 7313
     goto/16 :goto_0
 
-    .line 7142
+    .line 7272
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v5       #item:Ljava/io/File;
     :cond_4
@@ -21003,7 +20983,7 @@
 
     goto/16 :goto_1
 
-    .line 7150
+    .line 7280
     .end local v0           #arr$:[Ljava/io/File;
     .end local v3           #i$:I
     .end local v5           #item:Ljava/io/File;
@@ -21011,7 +20991,7 @@
     :catch_1
     move-exception v1
 
-    .line 7151
+    .line 7281
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v9, "HtcWrapDrmStore"
 
@@ -21019,7 +20999,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7152
+    .line 7282
     const-string v9, "HtcWrapDrmStore"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -21028,15 +21008,15 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7153
+    .line 7283
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v7, v8
 
-    .line 7155
+    .line 7285
     goto/16 :goto_0
 
-    .line 7170
+    .line 7300
     .end local v1           #e:Ljava/lang/Exception;
     .restart local v0       #arr$:[Ljava/io/File;
     .restart local v3       #i$:I
@@ -21075,14 +21055,14 @@
 
     move-result-object v7
 
-    .line 7174
+    .line 7304
     const-string v9, "HtcWrapDrmStore"
 
     const-string v10, " @@@@@ No download folder in internal storage."
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7175
+    .line 7305
     const-string v9, "HtcWrapDrmStore"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -21114,7 +21094,7 @@
     .locals 1
 
     .prologue
-    .line 7294
+    .line 7424
     invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->getPhoneStorageDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -21126,7 +21106,7 @@
     .locals 1
 
     .prologue
-    .line 7351
+    .line 7481
     invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->getPhoneStorageState()Ljava/lang/String;
 
     move-result-object v0
@@ -21138,10 +21118,10 @@
     .locals 9
 
     .prologue
-    .line 6781
+    .line 6911
     const/4 v4, 0x0
 
-    .line 6784
+    .line 6914
     .local v4, skeySpec:Ljavax/crypto/spec/SecretKeySpec;
     :try_start_0
     const-string v6, "AES"
@@ -21150,24 +21130,24 @@
 
     move-result-object v1
 
-    .line 6786
+    .line 6916
     .local v1, kgen:Ljavax/crypto/KeyGenerator;
     const/16 v6, 0x80
 
     invoke-virtual {v1, v6}, Ljavax/crypto/KeyGenerator;->init(I)V
 
-    .line 6789
+    .line 6919
     invoke-virtual {v1}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
 
     move-result-object v3
 
-    .line 6791
+    .line 6921
     .local v3, skey:Ljavax/crypto/SecretKey;
     invoke-interface {v3}, Ljavax/crypto/SecretKey;->getEncoded()[B
 
     move-result-object v2
 
-    .line 6793
+    .line 6923
     .local v2, raw:[B
     new-instance v5, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -21181,7 +21161,7 @@
     .local v5, skeySpec:Ljavax/crypto/spec/SecretKeySpec;
     move-object v4, v5
 
-    .line 6799
+    .line 6929
     .end local v1           #kgen:Ljavax/crypto/KeyGenerator;
     .end local v2           #raw:[B
     .end local v3           #skey:Ljavax/crypto/SecretKey;
@@ -21190,11 +21170,11 @@
     :goto_0
     return-object v4
 
-    .line 6794
+    .line 6924
     :catch_0
     move-exception v0
 
-    .line 6796
+    .line 6926
     .local v0, e:Ljava/security/NoSuchAlgorithmException;
     const-string v6, "HtcWrapDrmStore"
 
@@ -21231,10 +21211,10 @@
     .end annotation
 
     .prologue
-    .line 6804
+    .line 6934
     const/4 v3, 0x0
 
-    .line 6807
+    .line 6937
     .local v3, skeySpec:Ljavax/crypto/spec/SecretKeySpec;
     :try_start_0
     const-string v6, "MD5"
@@ -21243,19 +21223,19 @@
 
     move-result-object v1
 
-    .line 6809
+    .line 6939
     .local v1, md:Ljava/security/MessageDigest;
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v5
 
-    .line 6811
+    .line 6941
     .local v5, telMngr:Landroid/telephony/TelephonyManager;
     invoke-virtual {v5}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 6813
+    .line 6943
     .local v2, simNumber:Ljava/lang/String;
     const-string v6, "HtcWrapDrmStore"
 
@@ -21279,14 +21259,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6816
+    .line 6946
     invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v6
 
     invoke-virtual {v1, v6}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 6818
+    .line 6948
     new-instance v4, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
@@ -21303,7 +21283,7 @@
     .local v4, skeySpec:Ljavax/crypto/spec/SecretKeySpec;
     move-object v3, v4
 
-    .line 6825
+    .line 6955
     .end local v1           #md:Ljava/security/MessageDigest;
     .end local v2           #simNumber:Ljava/lang/String;
     .end local v4           #skeySpec:Ljavax/crypto/spec/SecretKeySpec;
@@ -21312,11 +21292,11 @@
     :goto_0
     return-object v3
 
-    .line 6820
+    .line 6950
     :catch_0
     move-exception v0
 
-    .line 6822
+    .line 6952
     .local v0, e:Ljava/security/NoSuchAlgorithmException;
     const-string v6, "HtcWrapDrmStore"
 
@@ -21351,7 +21331,7 @@
     .locals 1
 
     .prologue
-    .line 7321
+    .line 7451
     invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->getSupportedStorages()I
 
     move-result v0
@@ -21364,7 +21344,7 @@
     .parameter "cx"
 
     .prologue
-    .line 6569
+    .line 6699
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -21383,25 +21363,25 @@
 
     move-result-object v14
 
-    .line 6571
+    .line 6701
     .local v14, stamp:Landroid/database/Cursor;
     if-nez v14, :cond_0
 
-    .line 6572
+    .line 6702
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "consumeRights query stamp failed."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6573
+    .line 6703
     const/4 v1, 0x0
 
-    .line 6611
+    .line 6741
     :goto_0
     return-object v1
 
-    .line 6574
+    .line 6704
     :cond_0
     invoke-interface {v14}, Landroid/database/Cursor;->getCount()I
 
@@ -21409,33 +21389,33 @@
 
     if-nez v1, :cond_1
 
-    .line 6575
+    .line 6705
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "consumeRights: -5"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6576
+    .line 6706
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 6577
+    .line 6707
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 6580
+    .line 6710
     :cond_1
     invoke-interface {v14}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6581
+    .line 6711
     const-string v1, "time_stamp"
 
     invoke-interface {v14, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v20
 
-    .line 6582
+    .line 6712
     .local v20, syncTimeColumnId:I
     move/from16 v0, v20
 
@@ -21443,7 +21423,7 @@
 
     move-result-wide v18
 
-    .line 6583
+    .line 6713
     .local v18, syncTime:J
     const-string v1, "clock_stamp"
 
@@ -21451,7 +21431,7 @@
 
     move-result v17
 
-    .line 6584
+    .line 6714
     .local v17, syncClockColumnId:I
     move/from16 v0, v17
 
@@ -21459,7 +21439,7 @@
 
     move-result-wide v15
 
-    .line 6585
+    .line 6715
     .local v15, syncClock:J
     const-string v1, "timezone_stamp"
 
@@ -21467,7 +21447,7 @@
 
     move-result v23
 
-    .line 6586
+    .line 6716
     .local v23, syncTimeZoneColumnId:I
     move/from16 v0, v23
 
@@ -21475,7 +21455,7 @@
 
     move-result-wide v21
 
-    .line 6587
+    .line 6717
     .local v21, syncTimeZone:J
     const-string v1, "time_differential"
 
@@ -21483,13 +21463,13 @@
 
     move-result v9
 
-    .line 6588
+    .line 6718
     .local v9, differentColumnId:I
     invoke-interface {v14, v9}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v10
 
-    .line 6589
+    .line 6719
     .local v10, differential:J
     const-string v1, "network_sync"
 
@@ -21497,17 +21477,17 @@
 
     move-result v13
 
-    .line 6590
+    .line 6720
     .local v13, network_sync:I
     invoke-interface {v14, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 6591
+    .line 6721
     .local v12, networkSync:Ljava/lang/String;
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 6593
+    .line 6723
     const-wide/16 v1, 0x0
 
     cmp-long v1, v18, v1
@@ -21520,7 +21500,7 @@
 
     if-nez v1, :cond_3
 
-    .line 6594
+    .line 6724
     :cond_2
     const-string v1, "HtcWrapDrmStore"
 
@@ -21528,28 +21508,28 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6595
+    .line 6725
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 6598
+    .line 6728
     :cond_3
     if-nez v12, :cond_4
 
-    .line 6599
+    .line 6729
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "checkExpiration : -5"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6600
+    .line 6730
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 6601
+    .line 6731
     :cond_4
     const-string v1, "TRUE"
 
@@ -21559,19 +21539,19 @@
 
     if-nez v1, :cond_5
 
-    .line 6602
+    .line 6732
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "checkExpiration : -5"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6603
+    .line 6733
     const/4 v1, 0x0
 
     goto/16 :goto_0
 
-    .line 6607
+    .line 6737
     :cond_5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -21581,7 +21561,7 @@
 
     sub-long v7, v1, v21
 
-    .line 6609
+    .line 6739
     .local v7, date:J
     const-string v1, "HtcWrapDrmStore"
 
@@ -21617,7 +21597,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6611
+    .line 6741
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1, v7, v8}, Ljava/util/Date;-><init>(J)V
@@ -21629,7 +21609,7 @@
     .locals 1
 
     .prologue
-    .line 7331
+    .line 7461
     invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->hasPhoneStorage()Z
 
     move-result v0
@@ -21645,12 +21625,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 4419
+    .line 4549
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_2
 
-    .line 4421
+    .line 4551
     :cond_0
     const-string v8, "HtcWrapDrmStore"
 
@@ -21658,16 +21638,16 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4482
+    .line 4612
     :cond_1
     :goto_0
     return-object v7
 
-    .line 4425
+    .line 4555
     :cond_2
     const/4 v3, 0x0
 
-    .line 4427
+    .line 4557
     .local v3, fin:Ljava/io/FileInputStream;
     :try_start_0
     new-instance v4, Ljava/io/FileInputStream;
@@ -21677,7 +21657,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_a
 
-    .line 4428
+    .line 4558
     .end local v3           #fin:Ljava/io/FileInputStream;
     .local v4, fin:Ljava/io/FileInputStream;
     :try_start_1
@@ -21685,7 +21665,7 @@
 
     move-result-object v5
 
-    .line 4429
+    .line 4559
     .local v5, manager:Landroid/drm/mobile1/DrmRightsManager;
     invoke-virtual {v4}, Ljava/io/FileInputStream;->available()I
 
@@ -21698,18 +21678,18 @@
 
     move-result-object v6
 
-    .line 4430
+    .line 4560
     .local v6, rights:Landroid/drm/mobile1/DrmRights;
     if-eqz v6, :cond_4
 
-    .line 4432
+    .line 4562
     :try_start_2
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 4437
+    .line 4567
     :goto_1
     :try_start_3
     invoke-virtual {v6}, Landroid/drm/mobile1/DrmRights;->getUid()Ljava/lang/String;
@@ -21719,10 +21699,10 @@
 
     move-result-object v7
 
-    .line 4473
+    .line 4603
     if-eqz v4, :cond_1
 
-    .line 4474
+    .line 4604
     :try_start_4
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -21730,11 +21710,11 @@
 
     goto :goto_0
 
-    .line 4476
+    .line 4606
     :catch_0
     move-exception v0
 
-    .line 4478
+    .line 4608
     .local v0, e:Ljava/lang/Exception;
     const-string v8, "HtcWrapDrmStore"
 
@@ -21750,7 +21730,7 @@
 
     goto :goto_0
 
-    .line 4434
+    .line 4564
     .end local v0           #e:Ljava/lang/Exception;
     .restart local v4       #fin:Ljava/io/FileInputStream;
     .restart local v5       #manager:Landroid/drm/mobile1/DrmRightsManager;
@@ -21758,7 +21738,7 @@
     :catch_1
     move-exception v0
 
-    .line 4435
+    .line 4565
     .restart local v0       #e:Ljava/lang/Exception;
     :try_start_5
     const-string v8, "HtcWrapDrmStore"
@@ -21792,14 +21772,14 @@
 
     goto :goto_1
 
-    .line 4440
+    .line 4570
     .end local v0           #e:Ljava/lang/Exception;
     .end local v5           #manager:Landroid/drm/mobile1/DrmRightsManager;
     .end local v6           #rights:Landroid/drm/mobile1/DrmRights;
     :catch_2
     move-exception v0
 
-    .line 4442
+    .line 4572
     .restart local v0       #e:Ljava/lang/Exception;
     :goto_3
     :try_start_6
@@ -21831,17 +21811,17 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 4446
+    .line 4576
     if-eqz v4, :cond_3
 
-    .line 4447
+    .line 4577
     :try_start_7
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 4456
+    .line 4586
     :cond_3
     :goto_4
     :try_start_8
@@ -21852,7 +21832,7 @@
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_6
 
-    .line 4457
+    .line 4587
     .end local v4           #fin:Ljava/io/FileInputStream;
     .restart local v3       #fin:Ljava/io/FileInputStream;
     :try_start_9
@@ -21860,7 +21840,7 @@
 
     move-result-object v5
 
-    .line 4458
+    .line 4588
     .restart local v5       #manager:Landroid/drm/mobile1/DrmRightsManager;
     invoke-virtual {v3}, Ljava/io/FileInputStream;->available()I
 
@@ -21870,14 +21850,14 @@
 
     move-result-object v6
 
-    .line 4460
+    .line 4590
     .restart local v6       #rights:Landroid/drm/mobile1/DrmRights;
     if-eqz v6, :cond_7
 
-    .line 4461
+    .line 4591
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
-    .line 4462
+    .line 4592
     invoke-virtual {v6}, Landroid/drm/mobile1/DrmRights;->getUid()Ljava/lang/String;
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
@@ -21885,10 +21865,10 @@
 
     move-result-object v7
 
-    .line 4473
+    .line 4603
     if-eqz v3, :cond_1
 
-    .line 4474
+    .line 4604
     :try_start_a
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_a
@@ -21896,11 +21876,11 @@
 
     goto/16 :goto_0
 
-    .line 4476
+    .line 4606
     :catch_3
     move-exception v0
 
-    .line 4478
+    .line 4608
     const-string v8, "HtcWrapDrmStore"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -21909,7 +21889,7 @@
 
     goto :goto_2
 
-    .line 4439
+    .line 4569
     .end local v0           #e:Ljava/lang/Exception;
     .end local v3           #fin:Ljava/io/FileInputStream;
     .restart local v4       #fin:Ljava/io/FileInputStream;
@@ -21920,10 +21900,10 @@
     .catchall {:try_start_b .. :try_end_b} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_2
 
-    .line 4473
+    .line 4603
     if-eqz v4, :cond_5
 
-    .line 4474
+    .line 4604
     :try_start_c
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_c
@@ -21933,12 +21913,12 @@
     :goto_5
     move-object v3, v4
 
-    .line 4481
+    .line 4611
     .end local v4           #fin:Ljava/io/FileInputStream;
     .restart local v3       #fin:Ljava/io/FileInputStream;
     goto/16 :goto_0
 
-    .line 4449
+    .line 4579
     .end local v3           #fin:Ljava/io/FileInputStream;
     .end local v5           #manager:Landroid/drm/mobile1/DrmRightsManager;
     .end local v6           #rights:Landroid/drm/mobile1/DrmRights;
@@ -21947,7 +21927,7 @@
     :catch_4
     move-exception v1
 
-    .line 4451
+    .line 4581
     .local v1, e2:Ljava/lang/Exception;
     :try_start_d
     const-string v8, "HtcWrapDrmStore"
@@ -21962,7 +21942,7 @@
 
     goto :goto_4
 
-    .line 4472
+    .line 4602
     .end local v0           #e:Ljava/lang/Exception;
     .end local v1           #e2:Ljava/lang/Exception;
     :catchall_0
@@ -21970,24 +21950,24 @@
 
     move-object v3, v4
 
-    .line 4473
+    .line 4603
     .end local v4           #fin:Ljava/io/FileInputStream;
     .restart local v3       #fin:Ljava/io/FileInputStream;
     :goto_6
     if-eqz v3, :cond_6
 
-    .line 4474
+    .line 4604
     :try_start_e
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_7
 
-    .line 4472
+    .line 4602
     :cond_6
     :goto_7
     throw v7
 
-    .line 4465
+    .line 4595
     .restart local v0       #e:Ljava/lang/Exception;
     .restart local v5       #manager:Landroid/drm/mobile1/DrmRightsManager;
     .restart local v6       #rights:Landroid/drm/mobile1/DrmRights;
@@ -21998,13 +21978,13 @@
     .catchall {:try_start_f .. :try_end_f} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_9
 
-    .line 4473
+    .line 4603
     .end local v5           #manager:Landroid/drm/mobile1/DrmRightsManager;
     .end local v6           #rights:Landroid/drm/mobile1/DrmRights;
     :goto_8
     if-eqz v3, :cond_1
 
-    .line 4474
+    .line 4604
     :try_start_10
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_10
@@ -22012,11 +21992,11 @@
 
     goto/16 :goto_0
 
-    .line 4476
+    .line 4606
     :catch_5
     move-exception v0
 
-    .line 4478
+    .line 4608
     const-string v8, "HtcWrapDrmStore"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -22025,7 +22005,7 @@
 
     goto/16 :goto_2
 
-    .line 4466
+    .line 4596
     .end local v3           #fin:Ljava/io/FileInputStream;
     .restart local v4       #fin:Ljava/io/FileInputStream;
     :catch_6
@@ -22033,7 +22013,7 @@
 
     move-object v3, v4
 
-    .line 4468
+    .line 4598
     .end local v4           #fin:Ljava/io/FileInputStream;
     .local v2, e3:Ljava/lang/Exception;
     .restart local v3       #fin:Ljava/io/FileInputStream;
@@ -22069,7 +22049,7 @@
 
     goto :goto_8
 
-    .line 4472
+    .line 4602
     .end local v0           #e:Ljava/lang/Exception;
     .end local v2           #e3:Ljava/lang/Exception;
     :catchall_1
@@ -22077,11 +22057,11 @@
 
     goto :goto_6
 
-    .line 4476
+    .line 4606
     :catch_7
     move-exception v0
 
-    .line 4478
+    .line 4608
     .restart local v0       #e:Ljava/lang/Exception;
     const-string v8, "HtcWrapDrmStore"
 
@@ -22093,7 +22073,7 @@
 
     goto :goto_7
 
-    .line 4476
+    .line 4606
     .end local v0           #e:Ljava/lang/Exception;
     .end local v3           #fin:Ljava/io/FileInputStream;
     .restart local v4       #fin:Ljava/io/FileInputStream;
@@ -22102,7 +22082,7 @@
     :catch_8
     move-exception v0
 
-    .line 4478
+    .line 4608
     .restart local v0       #e:Ljava/lang/Exception;
     const-string v8, "HtcWrapDrmStore"
 
@@ -22114,7 +22094,7 @@
 
     goto :goto_5
 
-    .line 4466
+    .line 4596
     .end local v4           #fin:Ljava/io/FileInputStream;
     .end local v5           #manager:Landroid/drm/mobile1/DrmRightsManager;
     .end local v6           #rights:Landroid/drm/mobile1/DrmRights;
@@ -22124,7 +22104,7 @@
 
     goto :goto_9
 
-    .line 4440
+    .line 4570
     .end local v0           #e:Ljava/lang/Exception;
     :catch_a
     move-exception v0
@@ -22142,7 +22122,7 @@
     .parameter "uri"
 
     .prologue
-    .line 7695
+    .line 7825
     const/4 v0, 0x1
 
     return v0
@@ -22153,7 +22133,7 @@
     .parameter "filePath"
 
     .prologue
-    .line 7703
+    .line 7833
     const/4 v0, 0x1
 
     return v0
@@ -22475,7 +22455,7 @@
     .parameter "uri"
 
     .prologue
-    .line 7719
+    .line 7849
     const/4 v0, 0x1
 
     return v0
@@ -22486,7 +22466,7 @@
     .parameter "resultCode"
 
     .prologue
-    .line 7711
+    .line 7841
     const/4 v0, 0x1
 
     return v0
@@ -22501,7 +22481,7 @@
     .parameter "uri"
 
     .prologue
-    .line 4763
+    .line 4893
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -22531,7 +22511,7 @@
     .parameter "destination"
 
     .prologue
-    .line 4770
+    .line 4900
     const/4 v6, 0x0
 
     move-object v0, p0
@@ -22564,12 +22544,12 @@
     .parameter "skipMediaDbUpdate"
 
     .prologue
-    .line 4787
+    .line 4917
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    .line 4788
+    .line 4918
     .local v3, cr:Landroid/content/ContentResolver;
     new-instance v29, Landroid/content/ContentValues;
 
@@ -22579,7 +22559,7 @@
 
     invoke-direct {v0, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 4789
+    .line 4919
     .local v29, values:Landroid/content/ContentValues;
     new-instance v19, Landroid/media/MediaInfo;
 
@@ -22589,15 +22569,15 @@
 
     invoke-direct {v0, v1}, Landroid/media/MediaInfo;-><init>(Landroid/content/Context;)V
 
-    .line 4790
+    .line 4920
     .local v19, mediaInfo:Landroid/media/MediaInfo;
     const/16 v20, 0x0
 
-    .line 4791
+    .line 4921
     .local v20, mediaTag:Landroid/media/MediaInfo$MediaTag;
     const/16 v23, 0x0
 
-    .line 4793
+    .line 4923
     .local v23, parseFile:Ljava/io/File;
     :try_start_0
     const-string v4, "application/vnd.oma.drm.content"
@@ -22610,7 +22590,7 @@
 
     if-eqz v4, :cond_5
 
-    .line 4794
+    .line 4924
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -22621,10 +22601,10 @@
 
     move-result-object v20
 
-    .line 4795
+    .line 4925
     if-eqz v20, :cond_0
 
-    .line 4796
+    .line 4926
     const/4 v4, 0x3
 
     move-object/from16 v0, v20
@@ -22633,12 +22613,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4892
+    .line 5022
     :cond_0
     :goto_0
     if-eqz v20, :cond_14
 
-    .line 4895
+    .line 5025
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->TITLE_PROJECTION:[Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -22653,25 +22633,25 @@
 
     move-result-object v13
 
-    .line 4896
+    .line 5026
     .local v13, cursor:Landroid/database/Cursor;
     if-eqz v13, :cond_b
 
-    .line 4897
+    .line 5027
     invoke-interface {v13}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_a
 
-    .line 4898
+    .line 5028
     const-string v4, "_data"
 
     invoke-interface {v13, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v25
 
-    .line 4899
+    .line 5029
     .local v25, pathIndex:I
     move/from16 v0, v25
 
@@ -22683,14 +22663,14 @@
 
     iput-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
-    .line 4900
+    .line 5030
     move-object/from16 v0, v20
 
     iget-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
     if-nez v4, :cond_1
 
-    .line 4901
+    .line 5031
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
@@ -22699,13 +22679,13 @@
 
     iput-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
-    .line 4906
+    .line 5036
     .end local v25           #pathIndex:I
     :cond_1
     :goto_1
     invoke-interface {v13}, Landroid/database/Cursor;->close()V
 
-    .line 4912
+    .line 5042
     :goto_2
     const-string v4, "HtcWrapDrmStore"
 
@@ -22733,7 +22713,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4913
+    .line 5043
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -22760,7 +22740,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4914
+    .line 5044
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -22787,7 +22767,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4915
+    .line 5045
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -22814,7 +22794,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4916
+    .line 5046
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -22841,21 +22821,21 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4920
+    .line 5050
     move-object/from16 v0, v20
 
     iget-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
     if-nez v4, :cond_e
 
-    .line 4922
+    .line 5052
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "No title information in content, we have to decide one"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4924
+    .line 5054
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->TITLE_PROJECTION:[Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -22870,25 +22850,25 @@
 
     move-result-object v9
 
-    .line 4925
+    .line 5055
     .local v9, c:Landroid/database/Cursor;
     if-eqz v9, :cond_d
 
-    .line 4926
+    .line 5056
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_c
 
-    .line 4927
+    .line 5057
     const-string v4, "title"
 
     invoke-interface {v9, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v28
 
-    .line 4928
+    .line 5058
     .local v28, titleIndex:I
     move/from16 v0, v28
 
@@ -22900,14 +22880,14 @@
 
     iput-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
-    .line 4929
+    .line 5059
     move-object/from16 v0, v20
 
     iget-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
     if-nez v4, :cond_2
 
-    .line 4930
+    .line 5060
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -22916,13 +22896,13 @@
 
     iput-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
 
-    .line 4935
+    .line 5065
     .end local v28           #titleIndex:I
     :cond_2
     :goto_3
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 4940
+    .line 5070
     :goto_4
     move-object/from16 v0, v20
 
@@ -22930,7 +22910,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 4941
+    .line 5071
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -22957,7 +22937,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4951
+    .line 5081
     .end local v9           #c:Landroid/database/Cursor;
     :cond_3
     :goto_5
@@ -22987,21 +22967,21 @@
 
     move-result-object v10
 
-    .line 4953
+    .line 5083
     .local v10, cAlbums:Landroid/database/Cursor;
     if-nez v10, :cond_f
 
-    .line 4955
+    .line 5085
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Albums failed"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4962
+    .line 5092
     const/16 v29, 0x0
 
-    .line 5081
+    .line 5211
     .end local v10           #cAlbums:Landroid/database/Cursor;
     .end local v13           #cursor:Landroid/database/Cursor;
     .end local v29           #values:Landroid/content/ContentValues;
@@ -23009,12 +22989,12 @@
     :goto_6
     return-object v29
 
-    .line 4800
+    .line 4930
     .restart local v29       #values:Landroid/content/ContentValues;
     :cond_5
     const/16 v16, 0x0
 
-    .line 4802
+    .line 4932
     .local v16, extention:Ljava/lang/String;
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
@@ -23039,14 +23019,14 @@
 
     move-result-object v16
 
-    .line 4823
+    .line 4953
     const/4 v4, 0x7
 
     move/from16 v0, p5
 
     if-ne v0, v4, :cond_8
 
-    .line 4826
+    .line 4956
     new-instance v24, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -23089,7 +23069,7 @@
     .local v24, parseFile:Ljava/io/File;
     move-object/from16 v23, v24
 
-    .line 4841
+    .line 4971
     .end local v24           #parseFile:Ljava/io/File;
     .restart local v23       #parseFile:Ljava/io/File;
     :goto_7
@@ -23119,12 +23099,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4844
+    .line 4974
     new-instance v22, Ljava/io/FileOutputStream;
 
     invoke-direct/range {v22 .. v23}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 4845
+    .line 4975
     .local v22, os:Ljava/io/FileOutputStream;
     new-instance v17, Ljava/io/FileInputStream;
 
@@ -23134,7 +23114,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 4846
+    .line 4976
     .local v17, fin:Ljava/io/FileInputStream;
     new-instance v12, Landroid/drm/mobile1/DrmRawContent;
 
@@ -23148,13 +23128,13 @@
 
     invoke-direct {v12, v0, v4, v1}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 4847
+    .line 4977
     .local v12, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v18
 
-    .line 4848
+    .line 4978
     .local v18, manager:Landroid/drm/mobile1/DrmRightsManager;
     move-object/from16 v0, v18
 
@@ -23162,7 +23142,7 @@
 
     move-result-object v26
 
-    .line 4849
+    .line 4979
     .local v26, rights:Landroid/drm/mobile1/DrmRights;
     move-object/from16 v0, v26
 
@@ -23170,13 +23150,13 @@
 
     move-result-object v27
 
-    .line 4850
+    .line 4980
     .local v27, stream:Ljava/io/InputStream;
     invoke-virtual {v12}, Landroid/drm/mobile1/DrmRawContent;->getRawType()I
 
     move-result v21
 
-    .line 4851
+    .line 4981
     .local v21, method:I
     move-object/from16 v0, v27
 
@@ -23184,19 +23164,19 @@
 
     invoke-static {v0, v1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->saveFile(Ljava/io/InputStream;Ljava/io/FileOutputStream;)I
 
-    .line 4852
+    .line 4982
     invoke-virtual/range {v22 .. v22}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4853
+    .line 4983
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileInputStream;->close()V
 
-    .line 4854
+    .line 4984
     if-eqz v27, :cond_6
 
-    .line 4855
+    .line 4985
     invoke-virtual/range {v27 .. v27}, Ljava/io/InputStream;->close()V
 
-    .line 4860
+    .line 4990
     :cond_6
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->CMD_CHMOD:[Ljava/lang/String;
 
@@ -23208,7 +23188,7 @@
 
     aput-object v6, v4, v5
 
-    .line 4861
+    .line 4991
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v4
@@ -23221,7 +23201,7 @@
 
     invoke-virtual {v4}, Ljava/lang/Process;->waitFor()I
 
-    .line 4864
+    .line 4994
     invoke-virtual/range {v23 .. v23}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -23232,10 +23212,10 @@
 
     move-result-object v20
 
-    .line 4865
+    .line 4995
     if-eqz v20, :cond_7
 
-    .line 4866
+    .line 4996
     move/from16 v0, v21
 
     move-object/from16 v1, v20
@@ -23245,7 +23225,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 4876
+    .line 5006
     :cond_7
     if-eqz v23, :cond_0
 
@@ -23256,14 +23236,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 4877
+    .line 5007
     invoke-virtual/range {v23 .. v23}, Ljava/io/File;->delete()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 4878
+    .line 5008
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -23294,7 +23274,7 @@
 
     goto/16 :goto_0
 
-    .line 4884
+    .line 5014
     .end local v12           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v16           #extention:Ljava/lang/String;
     .end local v17           #fin:Ljava/io/FileInputStream;
@@ -23307,7 +23287,7 @@
     :catch_0
     move-exception v15
 
-    .line 4886
+    .line 5016
     .local v15, e:Ljava/lang/Exception;
     const-string v4, "HtcWrapDrmStore"
 
@@ -23335,12 +23315,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4888
+    .line 5018
     const/16 v29, 0x0
 
     goto/16 :goto_6
 
-    .line 4831
+    .line 4961
     .end local v15           #e:Ljava/lang/Exception;
     .restart local v16       #extention:Ljava/lang/String;
     .restart local v29       #values:Landroid/content/ContentValues;
@@ -23395,11 +23375,11 @@
     .restart local v23       #parseFile:Ljava/io/File;
     goto/16 :goto_7
 
-    .line 4868
+    .line 4998
     :catch_1
     move-exception v15
 
-    .line 4870
+    .line 5000
     .local v15, e:Ljava/io/IOException;
     :try_start_4
     const-string v4, "HtcWrapDrmStore"
@@ -23430,10 +23410,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 4872
+    .line 5002
     const/16 v29, 0x0
 
-    .line 4876
+    .line 5006
     .end local v29           #values:Landroid/content/ContentValues;
     if-eqz v23, :cond_4
 
@@ -23444,14 +23424,14 @@
 
     if-eqz v4, :cond_4
 
-    .line 4877
+    .line 5007
     invoke-virtual/range {v23 .. v23}, Ljava/io/File;->delete()Z
 
     move-result v4
 
     if-nez v4, :cond_4
 
-    .line 4878
+    .line 5008
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -23480,7 +23460,7 @@
 
     goto/16 :goto_6
 
-    .line 4876
+    .line 5006
     .end local v15           #e:Ljava/io/IOException;
     .restart local v29       #values:Landroid/content/ContentValues;
     :catchall_0
@@ -23494,14 +23474,14 @@
 
     if-eqz v5, :cond_9
 
-    .line 4877
+    .line 5007
     invoke-virtual/range {v23 .. v23}, Ljava/io/File;->delete()Z
 
     move-result v5
 
     if-nez v5, :cond_9
 
-    .line 4878
+    .line 5008
     const-string v5, "HtcWrapDrmStore"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -23528,13 +23508,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4876
+    .line 5006
     :cond_9
     throw v4
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 4904
+    .line 5034
     .end local v16           #extention:Ljava/lang/String;
     .restart local v13       #cursor:Landroid/database/Cursor;
     :cond_a
@@ -23548,7 +23528,7 @@
 
     goto/16 :goto_1
 
-    .line 4908
+    .line 5038
     :cond_b
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -23560,7 +23540,7 @@
 
     goto/16 :goto_2
 
-    .line 4933
+    .line 5063
     .restart local v9       #c:Landroid/database/Cursor;
     :cond_c
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -23573,7 +23553,7 @@
 
     goto/16 :goto_3
 
-    .line 4937
+    .line 5067
     :cond_d
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -23585,7 +23565,7 @@
 
     goto/16 :goto_4
 
-    .line 4946
+    .line 5076
     .end local v9           #c:Landroid/database/Cursor;
     :cond_e
     move-object/from16 v0, v20
@@ -23606,7 +23586,7 @@
 
     if-nez v4, :cond_3
 
-    .line 4947
+    .line 5077
     const-string v4, "title"
 
     move-object/from16 v0, v20
@@ -23619,7 +23599,7 @@
 
     goto/16 :goto_5
 
-    .line 4965
+    .line 5095
     .restart local v10       #cAlbums:Landroid/database/Cursor;
     :cond_f
     const-string v4, "HtcWrapDrmStore"
@@ -23648,31 +23628,31 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4967
+    .line 5097
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
 
     move-result v4
 
     if-nez v4, :cond_10
 
-    .line 4968
+    .line 5098
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 4970
+    .line 5100
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "Insert a new album."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4972
+    .line 5102
     new-instance v14, Landroid/content/ContentValues;
 
     const/4 v4, 0x1
 
     invoke-direct {v14, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 4973
+    .line 5103
     .local v14, cv:Landroid/content/ContentValues;
     const-string v4, "album"
 
@@ -23682,12 +23662,12 @@
 
     invoke-virtual {v14, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4974
+    .line 5104
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Albums;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v3, v4, v14}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 4975
+    .line 5105
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Albums;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->ALBUMS_PROJECTION:[Ljava/lang/String;
@@ -23714,27 +23694,27 @@
 
     move-result-object v10
 
-    .line 4977
+    .line 5107
     if-nez v10, :cond_10
 
-    .line 4979
+    .line 5109
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Albums failed"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4986
+    .line 5116
     const/16 v29, 0x0
 
     goto/16 :goto_6
 
-    .line 4989
+    .line 5119
     .end local v14           #cv:Landroid/content/ContentValues;
     :cond_10
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 4990
+    .line 5120
     const-string v4, "album_id"
 
     const/4 v5, 0x0
@@ -23751,7 +23731,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 4992
+    .line 5122
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -23780,10 +23760,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4994
+    .line 5124
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 4997
+    .line 5127
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Artists;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->ARTISTS_PROJECTION:[Ljava/lang/String;
@@ -23810,23 +23790,23 @@
 
     move-result-object v11
 
-    .line 4999
+    .line 5129
     .local v11, cArtists:Landroid/database/Cursor;
     if-nez v11, :cond_11
 
-    .line 5001
+    .line 5131
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Artists failed."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5008
+    .line 5138
     const/16 v29, 0x0
 
     goto/16 :goto_6
 
-    .line 5011
+    .line 5141
     :cond_11
     const-string v4, "HtcWrapDrmStore"
 
@@ -23854,31 +23834,31 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5013
+    .line 5143
     invoke-interface {v11}, Landroid/database/Cursor;->getCount()I
 
     move-result v4
 
     if-nez v4, :cond_12
 
-    .line 5014
+    .line 5144
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 5016
+    .line 5146
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "Insert a new artist."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5018
+    .line 5148
     new-instance v14, Landroid/content/ContentValues;
 
     const/4 v4, 0x1
 
     invoke-direct {v14, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 5019
+    .line 5149
     .restart local v14       #cv:Landroid/content/ContentValues;
     const-string v4, "artist"
 
@@ -23888,12 +23868,12 @@
 
     invoke-virtual {v14, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5020
+    .line 5150
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Artists;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v3, v4, v14}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 5021
+    .line 5151
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Artists;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->ARTISTS_PROJECTION:[Ljava/lang/String;
@@ -23920,22 +23900,22 @@
 
     move-result-object v11
 
-    .line 5023
+    .line 5153
     if-nez v11, :cond_12
 
-    .line 5025
+    .line 5155
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Artists failed."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5029
+    .line 5159
     .end local v14           #cv:Landroid/content/ContentValues;
     :cond_12
     invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 5030
+    .line 5160
     const-string v4, "artist_id"
 
     const/4 v5, 0x0
@@ -23952,7 +23932,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 5032
+    .line 5162
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -23981,28 +23961,28 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5034
+    .line 5164
     invoke-interface {v11}, Landroid/database/Cursor;->close()V
 
-    .line 5036
+    .line 5166
     move-object/from16 v0, v20
 
     iget-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mMimeType:Ljava/lang/String;
 
     if-nez v4, :cond_13
 
-    .line 5037
+    .line 5167
     move-object/from16 v0, p3
 
     move-object/from16 v1, v20
 
     iput-object v0, v1, Landroid/media/MediaInfo$MediaTag;->mMimeType:Ljava/lang/String;
 
-    .line 5043
+    .line 5173
     :cond_13
     if-nez p6, :cond_4
 
-    .line 5045
+    .line 5175
     :try_start_6
     move-object/from16 v0, v19
 
@@ -24016,7 +23996,7 @@
 
     if-nez v4, :cond_4
 
-    .line 5047
+    .line 5177
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "Insert DRM content to MediaProvider failed."
@@ -24025,16 +24005,16 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 5054
+    .line 5184
     const/16 v29, 0x0
 
     goto/16 :goto_6
 
-    .line 5056
+    .line 5186
     :catch_2
     move-exception v15
 
-    .line 5058
+    .line 5188
     .local v15, e:Ljava/lang/Exception;
     const-string v4, "HtcWrapDrmStore"
 
@@ -24062,12 +24042,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5065
+    .line 5195
     const/16 v29, 0x0
 
     goto/16 :goto_6
 
-    .line 5071
+    .line 5201
     .end local v10           #cAlbums:Landroid/database/Cursor;
     .end local v11           #cArtists:Landroid/database/Cursor;
     .end local v13           #cursor:Landroid/database/Cursor;
@@ -24088,7 +24068,7 @@
     .parameter "uri"
 
     .prologue
-    .line 7679
+    .line 7809
     const/4 v0, 0x0
 
     return v0
@@ -24101,10 +24081,10 @@
     .parameter "strFilePath"
 
     .prologue
-    .line 6112
+    .line 6242
     const/16 v16, 0x0
 
-    .line 6114
+    .line 6244
     .local v16, res:I
     const-string v1, "HtcWrapDrmStore"
 
@@ -24112,14 +24092,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6116
+    .line 6246
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 6118
+    .line 6248
     :cond_0
     const-string v1, "HtcWrapDrmStore"
 
@@ -24127,14 +24107,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6120
+    .line 6250
     const/4 v1, -0x2
 
-    .line 6180
+    .line 6310
     :goto_0
     return v1
 
-    .line 6123
+    .line 6253
     :cond_1
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -24160,23 +24140,23 @@
 
     move-result-object v7
 
-    .line 6125
+    .line 6255
     .local v7, c:Landroid/database/Cursor;
     if-nez v7, :cond_2
 
-    .line 6127
+    .line 6257
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "renewRights query failed."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6129
+    .line 6259
     const/4 v1, -0x6
 
     goto :goto_0
 
-    .line 6130
+    .line 6260
     :cond_2
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
@@ -24184,43 +24164,43 @@
 
     if-nez v1, :cond_3
 
-    .line 6132
+    .line 6262
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "renewRights no record."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6134
+    .line 6264
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 6135
+    .line 6265
     const/4 v1, -0x6
 
     goto :goto_0
 
-    .line 6138
+    .line 6268
     :cond_3
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6139
+    .line 6269
     const-string v1, "message_type"
 
     invoke-interface {v7, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v15
 
-    .line 6140
+    .line 6270
     .local v15, messageTypeColumnId:I
     invoke-interface {v7, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 6141
+    .line 6271
     .local v14, messageType:Ljava/lang/String;
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 6143
+    .line 6273
     const-string v1, "application/vnd.oma.drm.content"
 
     invoke-virtual {v14, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -24229,19 +24209,19 @@
 
     if-nez v1, :cond_4
 
-    .line 6145
+    .line 6275
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "renewRights : -2"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6147
+    .line 6277
     const/4 v1, -0x2
 
     goto :goto_0
 
-    .line 6150
+    .line 6280
     :cond_4
     new-instance v10, Ljava/io/File;
 
@@ -24249,14 +24229,14 @@
 
     invoke-direct {v10, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6152
+    .line 6282
     .local v10, file:Ljava/io/File;
     :try_start_0
     new-instance v11, Ljava/io/FileInputStream;
 
     invoke-direct {v11, v10}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 6153
+    .line 6283
     .local v11, fis:Ljava/io/InputStream;
     new-instance v8, Landroid/drm/mobile1/DrmRawContent;
 
@@ -24266,35 +24246,35 @@
 
     invoke-direct {v8, v11, v1, v14}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 6154
+    .line 6284
     .local v8, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-virtual {v8}, Landroid/drm/mobile1/DrmRawContent;->getRightsAddress()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 6155
+    .line 6285
     .local v13, issuer:Ljava/lang/String;
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 6156
+    .line 6286
     if-nez v13, :cond_5
 
-    .line 6158
+    .line 6288
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "renewRights : -7"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6160
+    .line 6290
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 6161
+    .line 6291
     const/4 v1, -0x7
 
     goto :goto_0
 
-    .line 6163
+    .line 6293
     :cond_5
     const-string v1, "\\"
 
@@ -24304,7 +24284,7 @@
 
     move-result-object v13
 
-    .line 6165
+    .line 6295
     const-string v1, "HtcWrapDrmStore"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -24327,31 +24307,31 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6167
+    .line 6297
     new-instance v12, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v12, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6168
+    .line 6298
     .local v12, intent:Landroid/content/Intent;
     invoke-static {v13}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v17
 
-    .line 6169
+    .line 6299
     .local v17, righturi:Landroid/net/Uri;
     move-object/from16 v0, v17
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 6170
+    .line 6300
     const/high16 v1, 0x1000
 
     invoke-virtual {v12, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 6172
+    .line 6302
     const-string v1, "com.android.browser.application_id"
 
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -24360,7 +24340,7 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6173
+    .line 6303
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v12}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -24375,14 +24355,14 @@
     :goto_1
     move/from16 v1, v16
 
-    .line 6180
+    .line 6310
     goto/16 :goto_0
 
-    .line 6174
+    .line 6304
     :catch_0
     move-exception v9
 
-    .line 6176
+    .line 6306
     .local v9, e:Ljava/lang/Exception;
     const-string v1, "HtcWrapDrmStore"
 
@@ -24410,7 +24390,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6178
+    .line 6308
     const/16 v16, -0x1
 
     goto :goto_1
@@ -24424,21 +24404,21 @@
     .parameter "className"
 
     .prologue
-    .line 6330
+    .line 6460
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "********renewRights  (2)"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6333
+    .line 6463
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 6335
+    .line 6465
     :cond_0
     const-string v1, "HtcWrapDrmStore"
 
@@ -24446,14 +24426,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6337
+    .line 6467
     const/4 v1, -0x2
 
-    .line 6450
+    .line 6580
     :goto_0
     return v1
 
-    .line 6340
+    .line 6470
     :cond_1
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -24479,23 +24459,23 @@
 
     move-result-object v7
 
-    .line 6342
+    .line 6472
     .local v7, c:Landroid/database/Cursor;
     if-nez v7, :cond_2
 
-    .line 6344
+    .line 6474
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "renewRights  (2) : -6"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6346
+    .line 6476
     const/4 v1, -0x6
 
     goto :goto_0
 
-    .line 6347
+    .line 6477
     :cond_2
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
@@ -24503,43 +24483,43 @@
 
     if-nez v1, :cond_3
 
-    .line 6349
+    .line 6479
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "renewRights  (2) :  no record."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6351
+    .line 6481
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 6352
+    .line 6482
     const/4 v1, -0x6
 
     goto :goto_0
 
-    .line 6355
+    .line 6485
     :cond_3
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6356
+    .line 6486
     const-string v1, "message_type"
 
     invoke-interface {v7, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v14
 
-    .line 6357
+    .line 6487
     .local v14, messageTypeColumnId:I
     invoke-interface {v7, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 6358
+    .line 6488
     .local v13, messageType:Ljava/lang/String;
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 6360
+    .line 6490
     const-string v1, "application/vnd.oma.drm.content"
 
     invoke-virtual {v13, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -24548,19 +24528,19 @@
 
     if-nez v1, :cond_4
 
-    .line 6362
+    .line 6492
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "renewRights  (2) : -2"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6364
+    .line 6494
     const/4 v1, -0x2
 
     goto :goto_0
 
-    .line 6367
+    .line 6497
     :cond_4
     new-instance v10, Ljava/io/File;
 
@@ -24568,14 +24548,14 @@
 
     invoke-direct {v10, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6369
+    .line 6499
     .local v10, file:Ljava/io/File;
     :try_start_0
     new-instance v11, Ljava/io/FileInputStream;
 
     invoke-direct {v11, v10}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 6370
+    .line 6500
     .local v11, fis:Ljava/io/InputStream;
     new-instance v8, Landroid/drm/mobile1/DrmRawContent;
 
@@ -24585,32 +24565,32 @@
 
     invoke-direct {v8, v11, v1, v13}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 6371
+    .line 6501
     .local v8, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-virtual {v8}, Landroid/drm/mobile1/DrmRawContent;->getRightsAddress()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 6372
+    .line 6502
     .local v12, issuer:Ljava/lang/String;
     if-nez v12, :cond_5
 
-    .line 6374
+    .line 6504
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "Null issuer : -9"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6376
+    .line 6506
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 6377
+    .line 6507
     const/16 v1, -0x9
 
     goto :goto_0
 
-    .line 6378
+    .line 6508
     :cond_5
     invoke-virtual {v12}, Ljava/lang/String;->length()I
 
@@ -24618,22 +24598,22 @@
 
     if-nez v1, :cond_6
 
-    .line 6380
+    .line 6510
     const-string v1, "HtcWrapDrmStore"
 
     const-string v2, "Empty issuer : -9"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6382
+    .line 6512
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 6383
+    .line 6513
     const/16 v1, -0x9
 
     goto/16 :goto_0
 
-    .line 6385
+    .line 6515
     :cond_6
     const-string v1, "\\"
 
@@ -24643,7 +24623,7 @@
 
     move-result-object v12
 
-    .line 6387
+    .line 6517
     const-string v1, "HtcWrapDrmStore"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -24668,19 +24648,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 6391
+    .line 6521
     :try_start_1
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 6393
+    .line 6523
     .local v15, values:Landroid/content/ContentValues;
     const-string v1, "uri"
 
     invoke-virtual {v15, v1, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6394
+    .line 6524
     const-string v1, "notificationpackage"
 
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -24689,14 +24669,14 @@
 
     invoke-virtual {v15, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6396
+    .line 6526
     const-string v1, "notificationclass"
 
     move-object/from16 v0, p3
 
     invoke-virtual {v15, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6398
+    .line 6528
     const-string v1, "visibility"
 
     const/4 v2, 0x2
@@ -24707,7 +24687,7 @@
 
     invoke-virtual {v15, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 6400
+    .line 6530
     const-string v1, "is_visible_in_downloads_ui"
 
     const/4 v2, 0x0
@@ -24718,7 +24698,7 @@
 
     invoke-virtual {v15, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 6405
+    .line 6535
     const-string v1, "restriction"
 
     const/4 v2, 0x4
@@ -24729,7 +24709,7 @@
 
     invoke-virtual {v15, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 6435
+    .line 6565
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -24740,17 +24720,17 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 6450
+    .line 6580
     const/4 v1, 0x0
 
     goto/16 :goto_0
 
-    .line 6437
+    .line 6567
     .end local v15           #values:Landroid/content/ContentValues;
     :catch_0
     move-exception v9
 
-    .line 6439
+    .line 6569
     .local v9, e:Ljava/lang/Exception;
     :try_start_2
     const-string v1, "HtcWrapDrmStore"
@@ -24779,17 +24759,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6441
+    .line 6571
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 6442
+    .line 6572
     const/4 v1, -0x1
 
     goto/16 :goto_0
 
-    .line 6444
+    .line 6574
     .end local v8           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v9           #e:Ljava/lang/Exception;
     .end local v11           #fis:Ljava/io/InputStream;
@@ -24797,7 +24777,7 @@
     :catch_1
     move-exception v9
 
-    .line 6446
+    .line 6576
     .restart local v9       #e:Ljava/lang/Exception;
     const-string v1, "HtcWrapDrmStore"
 
@@ -24825,7 +24805,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6448
+    .line 6578
     const/4 v1, -0x1
 
     goto/16 :goto_0
@@ -24838,10 +24818,10 @@
     .parameter "os"
 
     .prologue
-    .line 3775
+    .line 3905
     const/16 v16, 0x0
 
-    .line 3777
+    .line 3907
     .local v16, res:I
     :try_start_0
     new-instance v11, Ljava/io/FileInputStream;
@@ -24850,7 +24830,7 @@
 
     invoke-direct {v11, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 3778
+    .line 3908
     .local v11, fin_header:Ljava/io/FileInputStream;
     const/16 v20, 0x0
 
@@ -24862,21 +24842,21 @@
 
     move-result v5
 
-    .line 3780
+    .line 3910
     .local v5, contentOffset:I
     new-array v13, v5, [B
 
-    .line 3781
+    .line 3911
     .local v13, header_buffer:[B
     invoke-virtual {v11, v13}, Ljava/io/FileInputStream;->read([B)I
 
     move-result v6
 
-    .line 3782
+    .line 3912
     .local v6, count:I
     if-ne v6, v5, :cond_1
 
-    .line 3783
+    .line 3913
     const/16 v20, 0x0
 
     move-object/from16 v0, p2
@@ -24885,7 +24865,7 @@
 
     invoke-virtual {v0, v13, v1, v6}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 3785
+    .line 3915
     const-string v20, "HtcWrapDrmStore"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -24916,15 +24896,15 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3794
+    .line 3924
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 3798
+    .line 3928
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v14
 
-    .line 3799
+    .line 3929
     .local v14, manager:Landroid/drm/mobile1/DrmRightsManager;
     move-object/from16 v0, p1
 
@@ -24932,18 +24912,18 @@
 
     move-result-object v17
 
-    .line 3800
+    .line 3930
     .local v17, rights:Landroid/drm/mobile1/DrmRights;
     if-nez v17, :cond_0
 
-    .line 3802
+    .line 3932
     const-string v20, "HtcWrapDrmStore"
 
     const-string v21, "rights == null."
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3805
+    .line 3935
     :cond_0
     move-object/from16 v0, p1
 
@@ -24953,11 +24933,11 @@
 
     move-result-object v18
 
-    .line 3806
+    .line 3936
     .local v18, stream:Ljava/io/InputStream;
     move v10, v5
 
-    .line 3807
+    .line 3937
     .local v10, endOfContent:I
     const/16 v20, 0x400
 
@@ -24965,7 +24945,7 @@
 
     new-array v3, v0, [B
 
-    .line 3808
+    .line 3938
     .local v3, buffer:[B
     const/16 v20, 0x400
 
@@ -24973,11 +24953,11 @@
 
     new-array v8, v0, [B
 
-    .line 3809
+    .line 3939
     .local v8, encryptBuffer:[B
     const/4 v15, 0x0
 
-    .line 3810
+    .line 3940
     .local v15, nEncryptPadding:I
     :goto_0
     move-object/from16 v0, v18
@@ -24992,10 +24972,10 @@
 
     if-eq v6, v0, :cond_4
 
-    .line 3811
+    .line 3941
     add-int/2addr v10, v6
 
-    .line 3812
+    .line 3942
     array-length v0, v8
 
     move/from16 v20, v0
@@ -25015,7 +24995,7 @@
 
     move-result v9
 
-    .line 3813
+    .line 3943
     .local v9, encryptRes:I
     const/16 v20, -0x1
 
@@ -25023,7 +25003,7 @@
 
     if-eq v9, v0, :cond_3
 
-    .line 3814
+    .line 3944
     const/16 v20, 0x0
 
     move-object/from16 v0, p2
@@ -25032,13 +25012,13 @@
 
     invoke-virtual {v0, v8, v1, v9}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 3823
+    .line 3953
     sub-int v15, v9, v6
 
-    .line 3824
+    .line 3954
     goto :goto_0
 
-    .line 3788
+    .line 3918
     .end local v3           #buffer:[B
     .end local v8           #encryptBuffer:[B
     .end local v9           #encryptRes:I
@@ -25050,17 +25030,17 @@
     :cond_1
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 3790
+    .line 3920
     const-string v20, "HtcWrapDrmStore"
 
     const-string v21, "Read header failed."
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3792
+    .line 3922
     const/16 v20, -0x1
 
-    .line 3863
+    .line 3993
     .end local v5           #contentOffset:I
     .end local v6           #count:I
     .end local v11           #fin_header:Ljava/io/FileInputStream;
@@ -25068,7 +25048,7 @@
     :goto_2
     return v20
 
-    .line 3812
+    .line 3942
     .restart local v3       #buffer:[B
     .restart local v5       #contentOffset:I
     .restart local v6       #count:I
@@ -25085,29 +25065,29 @@
 
     goto :goto_1
 
-    .line 3816
+    .line 3946
     .restart local v9       #encryptRes:I
     :cond_3
     invoke-virtual/range {v18 .. v18}, Ljava/io/InputStream;->close()V
 
-    .line 3818
+    .line 3948
     const-string v20, "HtcWrapDrmStore"
 
     const-string v21, "Encrypt content failed."
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3820
+    .line 3950
     const/16 v20, -0x1
 
     goto :goto_2
 
-    .line 3827
+    .line 3957
     .end local v9           #encryptRes:I
     :cond_4
     sub-int v4, v10, v5
 
-    .line 3828
+    .line 3958
     .local v4, contentCount:I
     const-string v20, "HtcWrapDrmStore"
 
@@ -25145,17 +25125,17 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3831
+    .line 3961
     invoke-virtual/range {v18 .. v18}, Ljava/io/InputStream;->close()V
 
-    .line 3835
+    .line 3965
     new-instance v12, Ljava/io/FileInputStream;
 
     move-object/from16 v0, p0
 
     invoke-direct {v12, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 3836
+    .line 3966
     .local v12, fin_tailer:Ljava/io/FileInputStream;
     int-to-long v0, v10
 
@@ -25165,7 +25145,7 @@
 
     invoke-virtual {v12, v0, v1}, Ljava/io/FileInputStream;->skip(J)J
 
-    .line 3837
+    .line 3967
     const/16 v20, 0x100
 
     move/from16 v0, v20
@@ -25174,7 +25154,7 @@
 
     move-object/from16 v19, v0
 
-    .line 3838
+    .line 3968
     .local v19, tailerBuffer:[B
     move-object/from16 v0, v19
 
@@ -25182,14 +25162,14 @@
 
     move-result v6
 
-    .line 3839
+    .line 3969
     const/16 v20, -0x1
 
     move/from16 v0, v20
 
     if-eq v6, v0, :cond_5
 
-    .line 3840
+    .line 3970
     const/16 v20, 0x0
 
     move-object/from16 v0, p2
@@ -25200,7 +25180,7 @@
 
     invoke-virtual {v0, v1, v2, v6}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 3842
+    .line 3972
     const-string v20, "HtcWrapDrmStore"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -25231,26 +25211,26 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3851
+    .line 3981
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
-    .line 3852
+    .line 3982
     invoke-virtual/range {p2 .. p2}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v20
 
     invoke-virtual/range {v20 .. v20}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 3854
+    .line 3984
     add-int v20, v6, v15
 
     goto/16 :goto_2
 
-    .line 3845
+    .line 3975
     :cond_5
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
-    .line 3847
+    .line 3977
     const-string v20, "HtcWrapDrmStore"
 
     const-string v21, "Output tailer failed."
@@ -25260,12 +25240,12 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3849
+    .line 3979
     const/16 v20, -0x1
 
     goto/16 :goto_2
 
-    .line 3855
+    .line 3985
     .end local v3           #buffer:[B
     .end local v4           #contentCount:I
     .end local v5           #contentOffset:I
@@ -25283,7 +25263,7 @@
     :catch_0
     move-exception v7
 
-    .line 3857
+    .line 3987
     .local v7, e:Ljava/lang/Exception;
     :try_start_1
     const-string v20, "HtcWrapDrmStore"
@@ -25296,15 +25276,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3859
+    .line 3989
     const/16 v16, -0x1
 
     move/from16 v20, v16
 
-    .line 3863
+    .line 3993
     goto/16 :goto_2
 
-    .line 3860
+    .line 3990
     .end local v7           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v20
@@ -25319,14 +25299,14 @@
     .parameter "outpath"
 
     .prologue
-    .line 3875
+    .line 4005
     const-class v28, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;
 
     monitor-enter v28
 
     const/16 v23, 0x0
 
-    .line 3878
+    .line 4008
     .local v23, res:I
     :try_start_0
     new-instance v27, Ljava/lang/StringBuilder;
@@ -25373,7 +25353,7 @@
 
     move-result-object v14
 
-    .line 3880
+    .line 4010
     .local v14, garbageFileDir:Ljava/lang/String;
     new-instance v13, Ljava/io/File;
 
@@ -25408,7 +25388,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 3883
+    .line 4013
     .local v13, garbageDir:Ljava/io/File;
     :try_start_1
     invoke-virtual {v13}, Ljava/io/File;->mkdirs()Z
@@ -25416,7 +25396,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_8
 
-    .line 3887
+    .line 4017
     :goto_0
     :try_start_2
     new-instance v27, Ljava/lang/StringBuilder;
@@ -25453,7 +25433,7 @@
 
     move-result-object v15
 
-    .line 3888
+    .line 4018
     .local v15, garbageFilePath:Ljava/lang/String;
     new-instance v16, Ljava/io/File;
 
@@ -25461,18 +25441,18 @@
 
     invoke-direct {v0, v15}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3889
+    .line 4019
     .local v16, garbagefile:Ljava/io/File;
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->createNewFile()Z
 
-    .line 3891
+    .line 4021
     new-instance v17, Ljava/io/FileOutputStream;
 
     move-object/from16 v0, v17
 
     invoke-direct {v0, v15}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 3892
+    .line 4022
     .local v17, garbageos:Ljava/io/FileOutputStream;
     new-instance v21, Ljava/io/FileOutputStream;
 
@@ -25486,7 +25466,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
 
-    .line 3894
+    .line 4024
     .local v21, os:Ljava/io/FileOutputStream;
     const/16 v27, 0x0
 
@@ -25498,7 +25478,7 @@
 
     move-result v5
 
-    .line 3897
+    .line 4027
     .local v5, contentOffset:I
     new-instance v11, Ljava/io/FileInputStream;
 
@@ -25506,13 +25486,13 @@
 
     invoke-direct {v11, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 3898
+    .line 4028
     .local v11, fin_header:Ljava/io/FileInputStream;
     new-array v0, v5, [B
 
     move-object/from16 v19, v0
 
-    .line 3899
+    .line 4029
     .local v19, header_buffer:[B
     move-object/from16 v0, v19
 
@@ -25520,11 +25500,11 @@
 
     move-result v6
 
-    .line 3901
+    .line 4031
     .local v6, count:I
     if-ne v6, v5, :cond_5
 
-    .line 3902
+    .line 4032
     const/16 v27, 0x0
 
     move-object/from16 v0, v17
@@ -25535,7 +25515,7 @@
 
     invoke-virtual {v0, v1, v2, v6}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 3903
+    .line 4033
     const/16 v27, 0x0
 
     move-object/from16 v0, v21
@@ -25546,7 +25526,7 @@
 
     invoke-virtual {v0, v1, v2, v6}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 3906
+    .line 4036
     const-string v27, "HtcWrapDrmStore"
 
     new-instance v29, Ljava/lang/StringBuilder;
@@ -25584,21 +25564,21 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 3929
+    .line 4059
     :try_start_3
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 3951
+    .line 4081
     :goto_1
     :try_start_4
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v20
 
-    .line 3952
+    .line 4082
     .local v20, manager:Landroid/drm/mobile1/DrmRightsManager;
     move-object/from16 v0, v20
 
@@ -25608,11 +25588,11 @@
 
     move-result-object v24
 
-    .line 3954
+    .line 4084
     .local v24, rights:Landroid/drm/mobile1/DrmRights;
     if-nez v24, :cond_0
 
-    .line 3956
+    .line 4086
     const-string v27, "HtcWrapDrmStore"
 
     const-string v29, "rights == null."
@@ -25623,31 +25603,31 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3962
+    .line 4092
     :cond_0
     const/16 v25, 0x0
 
-    .line 3963
+    .line 4093
     .local v25, stream:Ljava/io/InputStream;
     const/16 v18, 0x0
 
-    .line 3964
+    .line 4094
     .local v18, hasFailed:Z
     const/16 v22, 0x0
 
-    .line 3965
+    .line 4095
     .local v22, repeat:I
     const/4 v3, 0x0
 
-    .line 3966
+    .line 4096
     .local v3, buffer:[B
     const/4 v8, 0x0
 
-    .line 3967
+    .line 4097
     .local v8, encryptBuffer:[B
     const/4 v10, 0x0
 
-    .line 3970
+    .line 4100
     .local v10, endOfContent:I
     const-string v27, "HtcWrapDrmStore"
 
@@ -25662,11 +25642,11 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 3975
+    .line 4105
     :cond_1
     const/16 v18, 0x0
 
-    .line 3977
+    .line 4107
     :try_start_5
     move-object/from16 v0, p1
 
@@ -25679,11 +25659,11 @@
 
     move-result-object v25
 
-    .line 3990
+    .line 4120
     :goto_2
     if-nez v18, :cond_1
 
-    .line 3993
+    .line 4123
     :try_start_6
     const-string v27, "HtcWrapDrmStore"
 
@@ -25695,24 +25675,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3999
+    .line 4129
     move v10, v5
 
-    .line 4000
+    .line 4130
     const/16 v27, 0x400
 
     move/from16 v0, v27
 
     new-array v3, v0, [B
 
-    .line 4001
+    .line 4131
     const/16 v27, 0x400
 
     move/from16 v0, v27
 
     new-array v8, v0, [B
 
-    .line 4003
+    .line 4133
     :goto_3
     move-object/from16 v0, v25
 
@@ -25726,10 +25706,10 @@
 
     if-eq v6, v0, :cond_b
 
-    .line 4004
+    .line 4134
     add-int/2addr v10, v6
 
-    .line 4005
+    .line 4135
     array-length v0, v8
 
     move/from16 v27, v0
@@ -25749,7 +25729,7 @@
 
     move-result v9
 
-    .line 4008
+    .line 4138
     .local v9, encryptRes:I
     const/16 v27, -0x1
 
@@ -25757,7 +25737,7 @@
 
     if-eq v9, v0, :cond_9
 
-    .line 4009
+    .line 4139
     const/16 v27, 0x0
 
     move-object/from16 v0, v17
@@ -25766,7 +25746,7 @@
 
     invoke-virtual {v0, v8, v1, v9}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 4010
+    .line 4140
     const/16 v27, 0x0
 
     move-object/from16 v0, v21
@@ -25780,12 +25760,12 @@
 
     goto :goto_3
 
-    .line 4036
+    .line 4166
     .end local v9           #encryptRes:I
     :catch_0
     move-exception v7
 
-    .line 4038
+    .line 4168
     .local v7, e:Ljava/lang/Exception;
     :try_start_7
     const-string v27, "HtcWrapDrmStore"
@@ -25798,7 +25778,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4040
+    .line 4170
     const-string v27, "HtcWrapDrmStore"
 
     invoke-virtual {v7}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -25811,34 +25791,34 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4041
+    .line 4171
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
 
-    .line 4043
+    .line 4173
     const/4 v3, 0x0
 
-    .line 4044
+    .line 4174
     const/4 v8, 0x0
 
-    .line 4047
+    .line 4177
     if-eqz v25, :cond_2
 
-    .line 4048
+    .line 4178
     :try_start_8
     invoke-virtual/range {v25 .. v25}, Ljava/io/InputStream;->close()V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_9
 
-    .line 4052
+    .line 4182
     :cond_2
     :goto_5
     const/16 v25, 0x0
 
-    .line 4055
+    .line 4185
     :try_start_9
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
@@ -25846,33 +25826,33 @@
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4057
+    .line 4187
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4058
+    .line 4188
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4059
+    .line 4189
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4061
+    .line 4191
     if-eqz v16, :cond_3
 
-    .line 4062
+    .line 4192
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->delete()Z
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
 
-    .line 4065
+    .line 4195
     :cond_3
     const/4 v6, -0x1
 
-    .line 4175
+    .line 4305
     .end local v3           #buffer:[B
     .end local v5           #contentOffset:I
     .end local v6           #count:I
@@ -25898,7 +25878,7 @@
 
     return v6
 
-    .line 3909
+    .line 4039
     .restart local v5       #contentOffset:I
     .restart local v6       #count:I
     .restart local v11       #fin_header:Ljava/io/FileInputStream;
@@ -25913,7 +25893,7 @@
     :try_start_a
     invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    .line 3912
+    .line 4042
     const-string v27, "HtcWrapDrmStore"
 
     const-string v29, "Read header failed."
@@ -25924,43 +25904,43 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3915
+    .line 4045
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 3917
+    .line 4047
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 3918
+    .line 4048
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
 
-    .line 3919
+    .line 4049
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->close()V
 
-    .line 3921
+    .line 4051
     if-eqz v16, :cond_6
 
-    .line 3922
+    .line 4052
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->delete()Z
 
-    .line 3925
+    .line 4055
     :cond_6
     const/4 v6, -0x1
 
     goto :goto_6
 
-    .line 3930
+    .line 4060
     :catch_1
     move-exception v7
 
-    .line 3932
+    .line 4062
     .restart local v7       #e:Ljava/lang/Exception;
     const-string v27, "HtcWrapDrmStore"
 
@@ -25972,7 +25952,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3934
+    .line 4064
     const-string v27, "HtcWrapDrmStore"
 
     invoke-virtual {v7}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -25985,7 +25965,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3935
+    .line 4065
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
@@ -25993,7 +25973,7 @@
 
     goto/16 :goto_1
 
-    .line 4165
+    .line 4295
     .end local v5           #contentOffset:I
     .end local v6           #count:I
     .end local v7           #e:Ljava/lang/Exception;
@@ -26008,7 +25988,7 @@
     :catch_2
     move-exception v7
 
-    .line 4168
+    .line 4298
     .restart local v7       #e:Ljava/lang/Exception;
     :try_start_b
     const-string v27, "HtcWrapDrmStore"
@@ -26025,15 +26005,15 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 4171
+    .line 4301
     const/16 v23, -0x1
 
     move/from16 v6, v23
 
-    .line 4175
+    .line 4305
     goto :goto_6
 
-    .line 3978
+    .line 4108
     .end local v7           #e:Ljava/lang/Exception;
     .restart local v3       #buffer:[B
     .restart local v5       #contentOffset:I
@@ -26056,7 +26036,7 @@
     :catch_3
     move-exception v7
 
-    .line 3980
+    .line 4110
     .restart local v7       #e:Ljava/lang/Exception;
     :try_start_c
     const-string v27, "HtcWrapDrmStore"
@@ -26069,7 +26049,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3983
+    .line 4113
     const/16 v27, 0x3
 
     move/from16 v0, v22
@@ -26078,28 +26058,28 @@
 
     if-ge v0, v1, :cond_7
 
-    .line 3984
+    .line 4114
     const/16 v18, 0x1
 
-    .line 3987
+    .line 4117
     :cond_7
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_2
 
-    .line 4005
+    .line 4135
     .end local v7           #e:Ljava/lang/Exception;
     :cond_8
     const/16 v27, 0x0
 
     goto/16 :goto_4
 
-    .line 4012
+    .line 4142
     .restart local v9       #encryptRes:I
     :cond_9
     invoke-virtual/range {v25 .. v25}, Ljava/io/InputStream;->close()V
 
-    .line 4015
+    .line 4145
     const-string v27, "HtcWrapDrmStore"
 
     const-string v29, "Encrypt content failed."
@@ -26110,44 +26090,44 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4018
+    .line 4148
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4020
+    .line 4150
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4021
+    .line 4151
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4022
+    .line 4152
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4024
+    .line 4154
     if-eqz v16, :cond_a
 
-    .line 4025
+    .line 4155
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->delete()Z
 
-    .line 4028
+    .line 4158
     :cond_a
     const/4 v6, -0x1
 
     goto/16 :goto_6
 
-    .line 4033
+    .line 4163
     .end local v9           #encryptRes:I
     :cond_b
     sub-int v4, v10, v5
 
-    .line 4034
+    .line 4164
     .local v4, contentCount:I
     const-string v27, "HtcWrapDrmStore"
 
@@ -26186,14 +26166,14 @@
     .catchall {:try_start_c .. :try_end_c} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
 
-    .line 4069
+    .line 4199
     :try_start_d
     invoke-virtual/range {v25 .. v25}, Ljava/io/InputStream;->close()V
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_4
 
-    .line 4091
+    .line 4221
     :goto_7
     :try_start_e
     new-instance v12, Ljava/io/FileInputStream;
@@ -26202,7 +26182,7 @@
 
     invoke-direct {v12, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 4092
+    .line 4222
     .local v12, fin_tailer:Ljava/io/FileInputStream;
     const/16 v27, 0x100
 
@@ -26212,7 +26192,7 @@
 
     move-object/from16 v26, v0
 
-    .line 4094
+    .line 4224
     .local v26, tailerBuffer:[B
     int-to-long v0, v10
 
@@ -26222,21 +26202,21 @@
 
     invoke-virtual {v12, v0, v1}, Ljava/io/FileInputStream;->skip(J)J
 
-    .line 4095
+    .line 4225
     move-object/from16 v0, v26
 
     invoke-virtual {v12, v0}, Ljava/io/FileInputStream;->read([B)I
 
     move-result v6
 
-    .line 4097
+    .line 4227
     const/16 v27, -0x1
 
     move/from16 v0, v27
 
     if-eq v6, v0, :cond_c
 
-    .line 4098
+    .line 4228
     const/16 v27, 0x0
 
     move-object/from16 v0, v17
@@ -26247,7 +26227,7 @@
 
     invoke-virtual {v0, v1, v2, v6}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 4099
+    .line 4229
     const/16 v27, 0x0
 
     move-object/from16 v0, v21
@@ -26258,7 +26238,7 @@
 
     invoke-virtual {v0, v1, v2, v6}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 4102
+    .line 4232
     const-string v27, "HtcWrapDrmStore"
 
     new-instance v29, Ljava/lang/StringBuilder;
@@ -26296,24 +26276,24 @@
     .catchall {:try_start_e .. :try_end_e} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_2
 
-    .line 4126
+    .line 4256
     :try_start_f
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
-    .line 4128
+    .line 4258
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4129
+    .line 4259
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_5
 
-    .line 4140
+    .line 4270
     :goto_8
     :try_start_10
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
@@ -26325,7 +26305,7 @@
     .catchall {:try_start_10 .. :try_end_10} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_6
 
-    .line 4150
+    .line 4280
     :goto_9
     :try_start_11
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->close()V
@@ -26333,11 +26313,11 @@
     .catchall {:try_start_11 .. :try_end_11} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_7
 
-    .line 4159
+    .line 4289
     :goto_a
     if-eqz v16, :cond_4
 
-    .line 4160
+    .line 4290
     :try_start_12
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->delete()Z
     :try_end_12
@@ -26346,7 +26326,7 @@
 
     goto/16 :goto_6
 
-    .line 4172
+    .line 4302
     .end local v3           #buffer:[B
     .end local v4           #contentCount:I
     .end local v5           #contentOffset:I
@@ -26376,7 +26356,7 @@
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_1
 
-    .line 3875
+    .line 4005
     :catchall_1
     move-exception v27
 
@@ -26384,7 +26364,7 @@
 
     throw v27
 
-    .line 4052
+    .line 4182
     .restart local v3       #buffer:[B
     .restart local v5       #contentOffset:I
     .restart local v6       #count:I
@@ -26412,13 +26392,13 @@
     :try_start_14
     throw v27
 
-    .line 4070
+    .line 4200
     .end local v7           #e:Ljava/lang/Exception;
     .restart local v4       #contentCount:I
     :catch_4
     move-exception v7
 
-    .line 4072
+    .line 4202
     .restart local v7       #e:Ljava/lang/Exception;
     const-string v27, "HtcWrapDrmStore"
 
@@ -26430,7 +26410,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4074
+    .line 4204
     const-string v27, "HtcWrapDrmStore"
 
     invoke-virtual {v7}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -26443,19 +26423,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4075
+    .line 4205
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_7
 
-    .line 4105
+    .line 4235
     .end local v7           #e:Ljava/lang/Exception;
     .restart local v12       #fin_tailer:Ljava/io/FileInputStream;
     .restart local v26       #tailerBuffer:[B
     :cond_c
     invoke-virtual {v12}, Ljava/io/FileInputStream;->close()V
 
-    .line 4108
+    .line 4238
     const-string v27, "HtcWrapDrmStore"
 
     const-string v29, "Output tailer failed."
@@ -26466,43 +26446,43 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4111
+    .line 4241
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4113
+    .line 4243
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v27
 
     invoke-virtual/range {v27 .. v27}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4114
+    .line 4244
     invoke-virtual/range {v17 .. v17}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4115
+    .line 4245
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4117
+    .line 4247
     if-eqz v16, :cond_d
 
-    .line 4118
+    .line 4248
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->delete()Z
 
-    .line 4121
+    .line 4251
     :cond_d
     const/4 v6, -0x1
 
     goto/16 :goto_6
 
-    .line 4130
+    .line 4260
     :catch_5
     move-exception v7
 
-    .line 4132
+    .line 4262
     .restart local v7       #e:Ljava/lang/Exception;
     const-string v27, "HtcWrapDrmStore"
 
@@ -26514,7 +26494,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4134
+    .line 4264
     const-string v27, "HtcWrapDrmStore"
 
     invoke-virtual {v7}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -26527,17 +26507,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4135
+    .line 4265
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_8
 
-    .line 4141
+    .line 4271
     .end local v7           #e:Ljava/lang/Exception;
     :catch_6
     move-exception v7
 
-    .line 4143
+    .line 4273
     .restart local v7       #e:Ljava/lang/Exception;
     const-string v27, "HtcWrapDrmStore"
 
@@ -26549,7 +26529,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4145
+    .line 4275
     const-string v27, "HtcWrapDrmStore"
 
     invoke-virtual {v7}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -26562,17 +26542,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4146
+    .line 4276
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_9
 
-    .line 4151
+    .line 4281
     .end local v7           #e:Ljava/lang/Exception;
     :catch_7
     move-exception v7
 
-    .line 4153
+    .line 4283
     .restart local v7       #e:Ljava/lang/Exception;
     const-string v27, "HtcWrapDrmStore"
 
@@ -26584,7 +26564,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4155
+    .line 4285
     const-string v27, "HtcWrapDrmStore"
 
     invoke-virtual {v7}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -26597,7 +26577,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4156
+    .line 4286
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_0
@@ -26605,7 +26585,7 @@
 
     goto/16 :goto_a
 
-    .line 3884
+    .line 4014
     .end local v3           #buffer:[B
     .end local v4           #contentCount:I
     .end local v5           #contentOffset:I
@@ -26631,7 +26611,7 @@
 
     goto/16 :goto_0
 
-    .line 4050
+    .line 4180
     .restart local v3       #buffer:[B
     .restart local v5       #contentOffset:I
     .restart local v6       #count:I
@@ -26653,6 +26633,661 @@
     move-exception v27
 
     goto/16 :goto_5
+.end method
+
+.method private static final saveFile(Ljava/io/File;Ljava/lang/String;Landroid/drm/mobile1/DrmRawContent;)I
+    .locals 23
+    .parameter "file"
+    .parameter "outpath"
+    .parameter "content"
+
+    .prologue
+    .line 3778
+    const-string v20, "HtcWrapDrmStore"
+
+    const-string v21, "saveFile(File file, String outpath, DrmRawContent content)"
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3779
+    const/16 v16, 0x0
+
+    .line 3781
+    .local v16, res:I
+    :try_start_0
+    invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
+
+    move-result-object v13
+
+    .line 3782
+    .local v13, manager:Landroid/drm/mobile1/DrmRightsManager;
+    move-object/from16 v0, p2
+
+    invoke-virtual {v13, v0}, Landroid/drm/mobile1/DrmRightsManager;->queryRights(Landroid/drm/mobile1/DrmRawContent;)Landroid/drm/mobile1/DrmRights;
+
+    move-result-object v17
+
+    .line 3783
+    .local v17, rights:Landroid/drm/mobile1/DrmRights;
+    move-object/from16 v0, p2
+
+    move-object/from16 v1, v17
+
+    invoke-virtual {v0, v1}, Landroid/drm/mobile1/DrmRawContent;->getContentInputStream(Landroid/drm/mobile1/DrmRights;)Ljava/io/InputStream;
+
+    move-result-object v18
+
+    .line 3784
+    .local v18, stream:Ljava/io/InputStream;
+    new-instance v15, Ljava/io/FileOutputStream;
+
+    move-object/from16 v0, p1
+
+    invoke-direct {v15, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
+
+    .line 3785
+    .local v15, os:Ljava/io/FileOutputStream;
+    new-instance v10, Ljava/io/FileInputStream;
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v10, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+
+    .line 3786
+    .local v10, fin_header:Ljava/io/FileInputStream;
+    const/16 v20, 0x0
+
+    move-object/from16 v0, p2
+
+    move-object/from16 v1, v20
+
+    invoke-virtual {v0, v1}, Landroid/drm/mobile1/DrmRawContent;->getContentOffset(Landroid/drm/mobile1/DrmRights;)I
+
+    move-result v4
+
+    .line 3788
+    .local v4, contentOffset:I
+    new-array v12, v4, [B
+
+    .line 3789
+    .local v12, header_buffer:[B
+    invoke-virtual {v10, v12}, Ljava/io/FileInputStream;->read([B)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result v5
+
+    .line 3790
+    .local v5, count:I
+    if-ne v5, v4, :cond_1
+
+    .line 3792
+    const/16 v20, 0x0
+
+    :try_start_1
+    move/from16 v0, v20
+
+    invoke-virtual {v15, v12, v0, v5}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 3799
+    :goto_0
+    :try_start_2
+    const-string v20, "HtcWrapDrmStore"
+
+    new-instance v21, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v22, "Header has "
+
+    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    const-string v22, " bytes"
+
+    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    invoke-virtual/range {v21 .. v21}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v21
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3808
+    invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
+
+    .line 3812
+    if-nez v17, :cond_0
+
+    .line 3814
+    const-string v20, "HtcWrapDrmStore"
+
+    const-string v21, "rights == null."
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3818
+    :cond_0
+    move v9, v4
+
+    .line 3819
+    .local v9, endOfContent:I
+    const/16 v20, 0x400
+
+    move/from16 v0, v20
+
+    new-array v2, v0, [B
+
+    .line 3820
+    .local v2, buffer:[B
+    const/16 v20, 0x400
+
+    move/from16 v0, v20
+
+    new-array v7, v0, [B
+
+    .line 3821
+    .local v7, encryptBuffer:[B
+    const/4 v14, 0x0
+
+    .line 3822
+    .local v14, nEncryptPadding:I
+    :goto_1
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v2}, Ljava/io/InputStream;->read([B)I
+
+    move-result v5
+
+    const/16 v20, -0x1
+
+    move/from16 v0, v20
+
+    if-eq v5, v0, :cond_4
+
+    .line 3823
+    add-int/2addr v9, v5
+
+    .line 3824
+    array-length v0, v7
+
+    move/from16 v20, v0
+
+    move/from16 v0, v20
+
+    if-eq v5, v0, :cond_2
+
+    const/16 v20, 0x1
+
+    :goto_2
+    move-object/from16 v0, p2
+
+    move/from16 v1, v20
+
+    invoke-virtual {v0, v2, v7, v5, v1}, Landroid/drm/mobile1/DrmRawContent;->encrypt([B[BIZ)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    move-result v8
+
+    .line 3825
+    .local v8, encryptRes:I
+    const/16 v20, -0x1
+
+    move/from16 v0, v20
+
+    if-eq v8, v0, :cond_3
+
+    .line 3827
+    const/16 v20, 0x0
+
+    :try_start_3
+    move/from16 v0, v20
+
+    invoke-virtual {v15, v7, v0, v8}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    .line 3841
+    :goto_3
+    sub-int v14, v8, v5
+
+    .line 3842
+    goto :goto_1
+
+    .line 3793
+    .end local v2           #buffer:[B
+    .end local v7           #encryptBuffer:[B
+    .end local v8           #encryptRes:I
+    .end local v9           #endOfContent:I
+    .end local v14           #nEncryptPadding:I
+    :catch_0
+    move-exception v6
+
+    .line 3794
+    .local v6, e:Ljava/lang/Exception;
+    :try_start_4
+    invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
+
+    .line 3795
+    new-instance v15, Ljava/io/FileOutputStream;
+
+    .end local v15           #os:Ljava/io/FileOutputStream;
+    const/16 v20, 0x1
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v20
+
+    invoke-direct {v15, v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
+
+    .line 3796
+    .restart local v15       #os:Ljava/io/FileOutputStream;
+    const/16 v20, 0x0
+
+    move/from16 v0, v20
+
+    invoke-virtual {v15, v12, v0, v5}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
+
+    goto :goto_0
+
+    .line 3884
+    .end local v4           #contentOffset:I
+    .end local v5           #count:I
+    .end local v6           #e:Ljava/lang/Exception;
+    .end local v10           #fin_header:Ljava/io/FileInputStream;
+    .end local v12           #header_buffer:[B
+    .end local v13           #manager:Landroid/drm/mobile1/DrmRightsManager;
+    .end local v15           #os:Ljava/io/FileOutputStream;
+    .end local v17           #rights:Landroid/drm/mobile1/DrmRights;
+    .end local v18           #stream:Ljava/io/InputStream;
+    :catch_1
+    move-exception v6
+
+    .line 3886
+    .restart local v6       #e:Ljava/lang/Exception;
+    :try_start_5
+    const-string v20, "HtcWrapDrmStore"
+
+    invoke-virtual {v6}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v21
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    .line 3888
+    const/16 v16, -0x1
+
+    move/from16 v20, v16
+
+    .line 3892
+    .end local v6           #e:Ljava/lang/Exception;
+    :goto_4
+    return v20
+
+    .line 3802
+    .restart local v4       #contentOffset:I
+    .restart local v5       #count:I
+    .restart local v10       #fin_header:Ljava/io/FileInputStream;
+    .restart local v12       #header_buffer:[B
+    .restart local v13       #manager:Landroid/drm/mobile1/DrmRightsManager;
+    .restart local v15       #os:Ljava/io/FileOutputStream;
+    .restart local v17       #rights:Landroid/drm/mobile1/DrmRights;
+    .restart local v18       #stream:Ljava/io/InputStream;
+    :cond_1
+    :try_start_6
+    invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
+
+    .line 3804
+    const-string v20, "HtcWrapDrmStore"
+
+    const-string v21, "Read header failed."
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3806
+    const/16 v20, -0x1
+
+    goto :goto_4
+
+    .line 3824
+    .restart local v2       #buffer:[B
+    .restart local v7       #encryptBuffer:[B
+    .restart local v9       #endOfContent:I
+    .restart local v14       #nEncryptPadding:I
+    :cond_2
+    const/16 v20, 0x0
+
+    goto :goto_2
+
+    .line 3828
+    .restart local v8       #encryptRes:I
+    :catch_2
+    move-exception v6
+
+    .line 3829
+    .restart local v6       #e:Ljava/lang/Exception;
+    invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
+
+    .line 3830
+    new-instance v15, Ljava/io/FileOutputStream;
+
+    .end local v15           #os:Ljava/io/FileOutputStream;
+    const/16 v20, 0x1
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v20
+
+    invoke-direct {v15, v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
+
+    .line 3831
+    .restart local v15       #os:Ljava/io/FileOutputStream;
+    const/16 v20, 0x0
+
+    move/from16 v0, v20
+
+    invoke-virtual {v15, v7, v0, v8}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
+
+    goto :goto_3
+
+    .line 3889
+    .end local v2           #buffer:[B
+    .end local v4           #contentOffset:I
+    .end local v5           #count:I
+    .end local v6           #e:Ljava/lang/Exception;
+    .end local v7           #encryptBuffer:[B
+    .end local v8           #encryptRes:I
+    .end local v9           #endOfContent:I
+    .end local v10           #fin_header:Ljava/io/FileInputStream;
+    .end local v12           #header_buffer:[B
+    .end local v13           #manager:Landroid/drm/mobile1/DrmRightsManager;
+    .end local v14           #nEncryptPadding:I
+    .end local v15           #os:Ljava/io/FileOutputStream;
+    .end local v17           #rights:Landroid/drm/mobile1/DrmRights;
+    .end local v18           #stream:Ljava/io/InputStream;
+    :catchall_0
+    move-exception v20
+
+    throw v20
+
+    .line 3834
+    .restart local v2       #buffer:[B
+    .restart local v4       #contentOffset:I
+    .restart local v5       #count:I
+    .restart local v7       #encryptBuffer:[B
+    .restart local v8       #encryptRes:I
+    .restart local v9       #endOfContent:I
+    .restart local v10       #fin_header:Ljava/io/FileInputStream;
+    .restart local v12       #header_buffer:[B
+    .restart local v13       #manager:Landroid/drm/mobile1/DrmRightsManager;
+    .restart local v14       #nEncryptPadding:I
+    .restart local v15       #os:Ljava/io/FileOutputStream;
+    .restart local v17       #rights:Landroid/drm/mobile1/DrmRights;
+    .restart local v18       #stream:Ljava/io/InputStream;
+    :cond_3
+    :try_start_7
+    invoke-virtual/range {v18 .. v18}, Ljava/io/InputStream;->close()V
+
+    .line 3836
+    const-string v20, "HtcWrapDrmStore"
+
+    const-string v21, "Encrypt content failed."
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3838
+    const/16 v20, -0x1
+
+    goto :goto_4
+
+    .line 3845
+    .end local v8           #encryptRes:I
+    :cond_4
+    sub-int v3, v9, v4
+
+    .line 3846
+    .local v3, contentCount:I
+    const-string v20, "HtcWrapDrmStore"
+
+    new-instance v21, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v22, "Content has "
+
+    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    const-string v22, " bytes, nEncryptPadding = "
+
+    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    invoke-virtual/range {v21 .. v21}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v21
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3849
+    invoke-virtual/range {v18 .. v18}, Ljava/io/InputStream;->close()V
+
+    .line 3853
+    new-instance v11, Ljava/io/FileInputStream;
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v11, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+
+    .line 3854
+    .local v11, fin_tailer:Ljava/io/FileInputStream;
+    int-to-long v0, v9
+
+    move-wide/from16 v20, v0
+
+    move-wide/from16 v0, v20
+
+    invoke-virtual {v11, v0, v1}, Ljava/io/FileInputStream;->skip(J)J
+
+    .line 3855
+    const/16 v20, 0x100
+
+    move/from16 v0, v20
+
+    new-array v0, v0, [B
+
+    move-object/from16 v19, v0
+
+    .line 3856
+    .local v19, tailerBuffer:[B
+    move-object/from16 v0, v19
+
+    invoke-virtual {v11, v0}, Ljava/io/FileInputStream;->read([B)I
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
+
+    move-result v5
+
+    .line 3857
+    const/16 v20, -0x1
+
+    move/from16 v0, v20
+
+    if-eq v5, v0, :cond_5
+
+    .line 3859
+    const/16 v20, 0x0
+
+    :try_start_8
+    move-object/from16 v0, v19
+
+    move/from16 v1, v20
+
+    invoke-virtual {v15, v0, v1, v5}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_3
+
+    .line 3866
+    :goto_5
+    :try_start_9
+    const-string v20, "HtcWrapDrmStore"
+
+    new-instance v21, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v22, "Tail has "
+
+    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    const-string v22, " bytes"
+
+    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v21
+
+    invoke-virtual/range {v21 .. v21}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v21
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3875
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
+
+    .line 3876
+    invoke-virtual {v15}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
+
+    move-result-object v20
+
+    invoke-virtual/range {v20 .. v20}, Ljava/io/FileDescriptor;->sync()V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
+
+    .line 3879
+    :try_start_a
+    invoke-virtual {v15}, Ljava/io/FileOutputStream;->close()V
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_4
+
+    .line 3883
+    :goto_6
+    add-int v20, v5, v14
+
+    goto/16 :goto_4
+
+    .line 3860
+    :catch_3
+    move-exception v6
+
+    .line 3861
+    .restart local v6       #e:Ljava/lang/Exception;
+    :try_start_b
+    invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
+
+    .line 3862
+    new-instance v15, Ljava/io/FileOutputStream;
+
+    .end local v15           #os:Ljava/io/FileOutputStream;
+    const/16 v20, 0x1
+
+    move-object/from16 v0, p1
+
+    move/from16 v1, v20
+
+    invoke-direct {v15, v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
+
+    .line 3863
+    .restart local v15       #os:Ljava/io/FileOutputStream;
+    const/16 v20, 0x0
+
+    move-object/from16 v0, v19
+
+    move/from16 v1, v20
+
+    invoke-virtual {v15, v0, v1, v5}, Ljava/io/FileOutputStream;->write([BII)V
+
+    goto :goto_5
+
+    .line 3869
+    .end local v6           #e:Ljava/lang/Exception;
+    :cond_5
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
+
+    .line 3871
+    const-string v20, "HtcWrapDrmStore"
+
+    const-string v21, "Output tailer failed."
+
+    invoke-static/range {v20 .. v21}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3873
+    const/16 v20, -0x1
+
+    goto/16 :goto_4
+
+    .line 3880
+    :catch_4
+    move-exception v6
+
+    .line 3881
+    .restart local v6       #e:Ljava/lang/Exception;
+    invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_1
+
+    goto :goto_6
 .end method
 
 .method private static final saveFile(Ljava/io/InputStream;Ljava/io/FileOutputStream;)I
@@ -26767,14 +27402,14 @@
     .parameter "outpath"
 
     .prologue
-    .line 4185
+    .line 4315
     const-class v24, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;
 
     monitor-enter v24
 
     const/16 v17, 0x0
 
-    .line 4188
+    .line 4318
     .local v17, res:I
     :try_start_0
     new-instance v14, Ljava/io/FileOutputStream;
@@ -26787,7 +27422,7 @@
 
     invoke-direct {v14, v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
 
-    .line 4189
+    .line 4319
     .local v14, os:Ljava/io/FileOutputStream;
     const/16 v23, 0x0
 
@@ -26799,7 +27434,7 @@
 
     move-result v4
 
-    .line 4192
+    .line 4322
     .local v4, contentOffset:I
     new-instance v8, Ljava/io/FileInputStream;
 
@@ -26807,28 +27442,28 @@
 
     invoke-direct {v8, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 4193
+    .line 4323
     .local v8, fin_header:Ljava/io/FileInputStream;
     new-array v10, v4, [B
 
-    .line 4194
+    .line 4324
     .local v10, header_buffer:[B
     invoke-virtual {v8, v10}, Ljava/io/FileInputStream;->read([B)I
 
     move-result v5
 
-    .line 4196
+    .line 4326
     .local v5, count:I
     if-ne v5, v4, :cond_3
 
-    .line 4197
+    .line 4327
     new-instance v22, Ljava/lang/String;
 
     move-object/from16 v0, v22
 
     invoke-direct {v0, v10}, Ljava/lang/String;-><init>([B)V
 
-    .line 4198
+    .line 4328
     .local v22, tempHeader:Ljava/lang/String;
     const-string v23, "Content-Transfer-Encoding: base64"
 
@@ -26844,7 +27479,7 @@
 
     move-result-object v12
 
-    .line 4199
+    .line 4329
     .local v12, newTempHeader:Ljava/lang/String;
     invoke-virtual {v12}, Ljava/lang/String;->getBytes()[B
 
@@ -26854,7 +27489,7 @@
 
     array-length v13, v0
 
-    .line 4201
+    .line 4331
     .local v13, newTempHeaderCount:I
     invoke-virtual {v12}, Ljava/lang/String;->getBytes()[B
 
@@ -26868,7 +27503,7 @@
 
     invoke-virtual {v14, v0, v1, v13}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 4204
+    .line 4334
     const-string v23, "HtcWrapDrmStore"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -26918,24 +27553,24 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 4207
+    .line 4337
     move v4, v13
 
-    .line 4223
+    .line 4353
     :try_start_1
     invoke-virtual {v8}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 4244
+    .line 4374
     :goto_0
     :try_start_2
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v11
 
-    .line 4245
+    .line 4375
     .local v11, manager:Landroid/drm/mobile1/DrmRightsManager;
     move-object/from16 v0, p1
 
@@ -26943,11 +27578,11 @@
 
     move-result-object v18
 
-    .line 4247
+    .line 4377
     .local v18, rights:Landroid/drm/mobile1/DrmRights;
     if-nez v18, :cond_0
 
-    .line 4249
+    .line 4379
     const-string v23, "HtcWrapDrmStore"
 
     const-string v25, "rights == null."
@@ -26958,31 +27593,31 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4255
+    .line 4385
     :cond_0
     const/16 v19, 0x0
 
-    .line 4256
+    .line 4386
     .local v19, stream:Ljava/io/InputStream;
     const/4 v9, 0x0
 
-    .line 4257
+    .line 4387
     .local v9, hasFailed:Z
     const/16 v16, 0x0
 
-    .line 4258
+    .line 4388
     .local v16, repeat:I
     const/4 v3, 0x0
 
-    .line 4259
+    .line 4389
     .local v3, buffer:[B
     const/4 v7, 0x0
 
-    .line 4260
+    .line 4390
     .local v7, endOfContent:I
     const/4 v15, 0x0
 
-    .line 4263
+    .line 4393
     .local v15, realContentLength:I
     const-string v23, "HtcWrapDrmStore"
 
@@ -26997,11 +27632,11 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 4268
+    .line 4398
     :cond_1
     const/4 v9, 0x0
 
-    .line 4270
+    .line 4400
     :try_start_3
     move-object/from16 v0, p1
 
@@ -27014,11 +27649,11 @@
 
     move-result-object v19
 
-    .line 4283
+    .line 4413
     :goto_1
     if-nez v9, :cond_1
 
-    .line 4286
+    .line 4416
     :try_start_4
     const-string v23, "HtcWrapDrmStore"
 
@@ -27030,14 +27665,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4290
+    .line 4420
     const/16 v23, 0x400
 
     move/from16 v0, v23
 
     new-array v3, v0, [B
 
-    .line 4292
+    .line 4422
     :goto_2
     move-object/from16 v0, v19
 
@@ -27051,10 +27686,10 @@
 
     if-eq v5, v0, :cond_5
 
-    .line 4293
+    .line 4423
     add-int/2addr v15, v5
 
-    .line 4294
+    .line 4424
     const/16 v23, 0x0
 
     move/from16 v0, v23
@@ -27066,11 +27701,11 @@
 
     goto :goto_2
 
-    .line 4304
+    .line 4434
     :catch_0
     move-exception v6
 
-    .line 4306
+    .line 4436
     .local v6, e:Ljava/lang/Exception;
     :try_start_5
     const-string v23, "HtcWrapDrmStore"
@@ -27083,7 +27718,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4308
+    .line 4438
     const-string v23, "HtcWrapDrmStore"
 
     invoke-virtual {v6}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -27096,31 +27731,31 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4309
+    .line 4439
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 4311
+    .line 4441
     const/4 v3, 0x0
 
-    .line 4314
+    .line 4444
     if-eqz v19, :cond_2
 
-    .line 4315
+    .line 4445
     :try_start_6
     invoke-virtual/range {v19 .. v19}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_8
 
-    .line 4319
+    .line 4449
     :cond_2
     :goto_3
     const/16 v19, 0x0
 
-    .line 4322
+    .line 4452
     :try_start_7
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
@@ -27128,16 +27763,16 @@
 
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4323
+    .line 4453
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
 
-    .line 4325
+    .line 4455
     const/4 v5, -0x1
 
-    .line 4408
+    .line 4538
     .end local v3           #buffer:[B
     .end local v4           #contentOffset:I
     .end local v5           #count:I
@@ -27160,7 +27795,7 @@
 
     return v5
 
-    .line 4209
+    .line 4339
     .restart local v4       #contentOffset:I
     .restart local v5       #count:I
     .restart local v8       #fin_header:Ljava/io/FileInputStream;
@@ -27170,7 +27805,7 @@
     :try_start_8
     invoke-virtual {v8}, Ljava/io/FileInputStream;->close()V
 
-    .line 4212
+    .line 4342
     const-string v23, "HtcWrapDrmStore"
 
     const-string v25, "Read header failed."
@@ -27181,29 +27816,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4216
+    .line 4346
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v23
 
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4217
+    .line 4347
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4219
+    .line 4349
     const/4 v5, -0x1
 
     goto :goto_4
 
-    .line 4224
+    .line 4354
     .restart local v12       #newTempHeader:Ljava/lang/String;
     .restart local v13       #newTempHeaderCount:I
     .restart local v22       #tempHeader:Ljava/lang/String;
     :catch_1
     move-exception v6
 
-    .line 4226
+    .line 4356
     .restart local v6       #e:Ljava/lang/Exception;
     const-string v23, "HtcWrapDrmStore"
 
@@ -27215,7 +27850,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4228
+    .line 4358
     const-string v23, "HtcWrapDrmStore"
 
     invoke-virtual {v6}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -27228,7 +27863,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4229
+    .line 4359
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
@@ -27236,7 +27871,7 @@
 
     goto/16 :goto_0
 
-    .line 4398
+    .line 4528
     .end local v4           #contentOffset:I
     .end local v5           #count:I
     .end local v6           #e:Ljava/lang/Exception;
@@ -27249,7 +27884,7 @@
     :catch_2
     move-exception v6
 
-    .line 4401
+    .line 4531
     .restart local v6       #e:Ljava/lang/Exception;
     :try_start_9
     const-string v23, "HtcWrapDrmStore"
@@ -27266,15 +27901,15 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 4404
+    .line 4534
     const/16 v17, -0x1
 
     move/from16 v5, v17
 
-    .line 4408
+    .line 4538
     goto :goto_4
 
-    .line 4271
+    .line 4401
     .end local v6           #e:Ljava/lang/Exception;
     .restart local v3       #buffer:[B
     .restart local v4       #contentOffset:I
@@ -27295,7 +27930,7 @@
     :catch_3
     move-exception v6
 
-    .line 4273
+    .line 4403
     .restart local v6       #e:Ljava/lang/Exception;
     :try_start_a
     const-string v23, "HtcWrapDrmStore"
@@ -27308,7 +27943,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4276
+    .line 4406
     const/16 v23, 0x3
 
     move/from16 v0, v16
@@ -27317,16 +27952,16 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 4277
+    .line 4407
     const/4 v9, 0x1
 
-    .line 4280
+    .line 4410
     :cond_4
     add-int/lit8 v16, v16, 0x1
 
     goto/16 :goto_1
 
-    .line 4302
+    .line 4432
     .end local v6           #e:Ljava/lang/Exception;
     :cond_5
     const-string v23, "HtcWrapDrmStore"
@@ -27366,14 +28001,14 @@
     .catchall {:try_start_a .. :try_end_a} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_0
 
-    .line 4329
+    .line 4459
     :try_start_b
     invoke-virtual/range {v19 .. v19}, Ljava/io/InputStream;->close()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_4
 
-    .line 4351
+    .line 4481
     :goto_5
     :try_start_c
     new-instance v23, Ljava/lang/StringBuilder;
@@ -27416,7 +28051,7 @@
 
     move-result-object v20
 
-    .line 4352
+    .line 4482
     .local v20, tail:Ljava/lang/String;
     invoke-virtual/range {v20 .. v20}, Ljava/lang/String;->getBytes()[B
 
@@ -27431,7 +28066,7 @@
     .catchall {:try_start_c .. :try_end_c} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_2
 
-    .line 4355
+    .line 4485
     .local v21, tailCount:I
     :try_start_d
     invoke-virtual/range {v20 .. v20}, Ljava/lang/String;->getBytes()[B
@@ -27448,7 +28083,7 @@
 
     invoke-virtual {v14, v0, v1, v2}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 4358
+    .line 4488
     const-string v23, "HtcWrapDrmStore"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -27488,7 +28123,7 @@
     .catchall {:try_start_d .. :try_end_d} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_5
 
-    .line 4375
+    .line 4505
     :try_start_e
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
@@ -27499,7 +28134,7 @@
     .catchall {:try_start_e .. :try_end_e} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_6
 
-    .line 4385
+    .line 4515
     :goto_6
     :try_start_f
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->close()V
@@ -27507,16 +28142,16 @@
     .catchall {:try_start_f .. :try_end_f} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_7
 
-    .line 4395
+    .line 4525
     :goto_7
     add-int v23, v4, v15
 
     add-int v5, v23, v21
 
-    .line 4397
+    .line 4527
     goto/16 :goto_4
 
-    .line 4319
+    .line 4449
     .end local v20           #tail:Ljava/lang/String;
     .end local v21           #tailCount:I
     .restart local v6       #e:Ljava/lang/Exception;
@@ -27531,7 +28166,7 @@
     .catchall {:try_start_10 .. :try_end_10} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_2
 
-    .line 4405
+    .line 4535
     .end local v3           #buffer:[B
     .end local v4           #contentOffset:I
     .end local v5           #count:I
@@ -27557,7 +28192,7 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_2
 
-    .line 4185
+    .line 4315
     :catchall_2
     move-exception v23
 
@@ -27565,7 +28200,7 @@
 
     throw v23
 
-    .line 4330
+    .line 4460
     .restart local v3       #buffer:[B
     .restart local v4       #contentOffset:I
     .restart local v5       #count:I
@@ -27585,7 +28220,7 @@
     :catch_4
     move-exception v6
 
-    .line 4332
+    .line 4462
     .restart local v6       #e:Ljava/lang/Exception;
     :try_start_12
     const-string v23, "HtcWrapDrmStore"
@@ -27598,7 +28233,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4334
+    .line 4464
     const-string v23, "HtcWrapDrmStore"
 
     invoke-virtual {v6}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -27611,19 +28246,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4335
+    .line 4465
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_5
 
-    .line 4360
+    .line 4490
     .end local v6           #e:Ljava/lang/Exception;
     .restart local v20       #tail:Ljava/lang/String;
     .restart local v21       #tailCount:I
     :catch_5
     move-exception v6
 
-    .line 4363
+    .line 4493
     .restart local v6       #e:Ljava/lang/Exception;
     const-string v23, "HtcWrapDrmStore"
 
@@ -27635,27 +28270,27 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4367
+    .line 4497
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v23
 
     invoke-virtual/range {v23 .. v23}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 4368
+    .line 4498
     invoke-virtual {v14}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4370
+    .line 4500
     const/4 v5, -0x1
 
     goto/16 :goto_4
 
-    .line 4376
+    .line 4506
     .end local v6           #e:Ljava/lang/Exception;
     :catch_6
     move-exception v6
 
-    .line 4378
+    .line 4508
     .restart local v6       #e:Ljava/lang/Exception;
     const-string v23, "HtcWrapDrmStore"
 
@@ -27667,7 +28302,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4380
+    .line 4510
     const-string v23, "HtcWrapDrmStore"
 
     invoke-virtual {v6}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -27680,17 +28315,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4381
+    .line 4511
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_6
 
-    .line 4386
+    .line 4516
     .end local v6           #e:Ljava/lang/Exception;
     :catch_7
     move-exception v6
 
-    .line 4388
+    .line 4518
     .restart local v6       #e:Ljava/lang/Exception;
     const-string v23, "HtcWrapDrmStore"
 
@@ -27702,7 +28337,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4390
+    .line 4520
     const-string v23, "HtcWrapDrmStore"
 
     invoke-virtual {v6}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -27715,7 +28350,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4391
+    .line 4521
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_1
@@ -27723,7 +28358,7 @@
 
     goto :goto_7
 
-    .line 4317
+    .line 4447
     .end local v20           #tail:Ljava/lang/String;
     .end local v21           #tailCount:I
     :catch_8
@@ -27739,7 +28374,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 7054
+    .line 7184
     if-eqz p0, :cond_0
 
     const/4 v0, 0x0
@@ -27747,16 +28382,16 @@
     :goto_0
     sput-boolean v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_COMBINED_DELIVERY:Z
 
-    .line 7055
+    .line 7185
     sput-boolean v1, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->SWITCH_TO_CID:Z
 
-    .line 7056
+    .line 7186
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 7054
+    .line 7184
     goto :goto_0
 .end method
 
@@ -27767,7 +28402,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 7065
+    .line 7195
     if-eqz p0, :cond_0
 
     const/4 v0, 0x0
@@ -27775,16 +28410,16 @@
     :goto_0
     sput-boolean v0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->DISABLE_SEPARATE_DELIVERY:Z
 
-    .line 7066
+    .line 7196
     sput-boolean v1, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->SWITCH_TO_CID:Z
 
-    .line 7067
+    .line 7197
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 7065
+    .line 7195
     goto :goto_0
 .end method
 
@@ -27799,7 +28434,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 4488
+    .line 4618
     move-object v0, p0
 
     move-object v1, p1
@@ -27830,12 +28465,12 @@
     .parameter "skipMediaDbUpdate"
 
     .prologue
-    .line 4500
+    .line 4630
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    .line 4501
+    .line 4631
     .local v3, cr:Landroid/content/ContentResolver;
     new-instance v27, Landroid/content/ContentValues;
 
@@ -27845,7 +28480,7 @@
 
     invoke-direct {v0, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 4502
+    .line 4632
     .local v27, values:Landroid/content/ContentValues;
     new-instance v18, Landroid/media/MediaInfo;
 
@@ -27855,19 +28490,19 @@
 
     invoke-direct {v0, v1}, Landroid/media/MediaInfo;-><init>(Landroid/content/Context;)V
 
-    .line 4503
+    .line 4633
     .local v18, mediaInfo:Landroid/media/MediaInfo;
     const/16 v19, 0x0
 
-    .line 4504
+    .line 4634
     .local v19, mediaTag:Landroid/media/MediaInfo$MediaTag;
     const/16 v22, 0x0
 
-    .line 4507
+    .line 4637
     .local v22, parseFile:Ljava/io/File;
     const/4 v15, 0x0
 
-    .line 4509
+    .line 4639
     .local v15, extention:Ljava/lang/String;
     :try_start_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -27892,14 +28527,14 @@
 
     move-result-object v15
 
-    .line 4530
+    .line 4660
     const/4 v4, 0x7
 
     move/from16 v0, p5
 
     if-ne v0, v4, :cond_6
 
-    .line 4533
+    .line 4663
     new-instance v23, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -27940,7 +28575,7 @@
     .local v23, parseFile:Ljava/io/File;
     move-object/from16 v22, v23
 
-    .line 4549
+    .line 4679
     .end local v23           #parseFile:Ljava/io/File;
     .restart local v22       #parseFile:Ljava/io/File;
     :goto_0
@@ -27970,12 +28605,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4552
+    .line 4682
     new-instance v21, Ljava/io/FileOutputStream;
 
     invoke-direct/range {v21 .. v22}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 4553
+    .line 4683
     .local v21, os:Ljava/io/FileOutputStream;
     new-instance v16, Ljava/io/FileInputStream;
 
@@ -27985,7 +28620,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 4554
+    .line 4684
     .local v16, fin:Ljava/io/FileInputStream;
     new-instance v11, Landroid/drm/mobile1/DrmRawContent;
 
@@ -27999,13 +28634,13 @@
 
     invoke-direct {v11, v0, v4, v1}, Landroid/drm/mobile1/DrmRawContent;-><init>(Ljava/io/InputStream;ILjava/lang/String;)V
 
-    .line 4555
+    .line 4685
     .local v11, content:Landroid/drm/mobile1/DrmRawContent;
     invoke-static {}, Landroid/drm/mobile1/DrmRightsManager;->getInstance()Landroid/drm/mobile1/DrmRightsManager;
 
     move-result-object v17
 
-    .line 4556
+    .line 4686
     .local v17, manager:Landroid/drm/mobile1/DrmRightsManager;
     move-object/from16 v0, v17
 
@@ -28013,7 +28648,7 @@
 
     move-result-object v25
 
-    .line 4557
+    .line 4687
     .local v25, rights:Landroid/drm/mobile1/DrmRights;
     move-object/from16 v0, v25
 
@@ -28021,13 +28656,13 @@
 
     move-result-object v26
 
-    .line 4558
+    .line 4688
     .local v26, stream:Ljava/io/InputStream;
     invoke-virtual {v11}, Landroid/drm/mobile1/DrmRawContent;->getRawType()I
 
     move-result v20
 
-    .line 4559
+    .line 4689
     .local v20, method:I
     move-object/from16 v0, v26
 
@@ -28035,19 +28670,19 @@
 
     invoke-static {v0, v1}, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->saveFile(Ljava/io/InputStream;Ljava/io/FileOutputStream;)I
 
-    .line 4560
+    .line 4690
     invoke-virtual/range {v21 .. v21}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4564
+    .line 4694
     invoke-virtual/range {v16 .. v16}, Ljava/io/FileInputStream;->close()V
 
-    .line 4565
+    .line 4695
     if-eqz v26, :cond_0
 
-    .line 4566
+    .line 4696
     invoke-virtual/range {v26 .. v26}, Ljava/io/InputStream;->close()V
 
-    .line 4568
+    .line 4698
     :cond_0
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->CMD_CHMOD:[Ljava/lang/String;
 
@@ -28059,7 +28694,7 @@
 
     aput-object v6, v4, v5
 
-    .line 4569
+    .line 4699
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v4
@@ -28072,7 +28707,7 @@
 
     invoke-virtual {v4}, Ljava/lang/Process;->waitFor()I
 
-    .line 4572
+    .line 4702
     invoke-virtual/range {v22 .. v22}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -28083,10 +28718,10 @@
 
     move-result-object v19
 
-    .line 4573
+    .line 4703
     if-eqz v19, :cond_1
 
-    .line 4574
+    .line 4704
     move/from16 v0, v20
 
     move-object/from16 v1, v19
@@ -28096,7 +28731,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4584
+    .line 4714
     :cond_1
     if-eqz v22, :cond_2
 
@@ -28106,14 +28741,14 @@
 
     if-eqz v4, :cond_2
 
-    .line 4585
+    .line 4715
     invoke-virtual/range {v22 .. v22}, Ljava/io/File;->delete()Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 4586
+    .line 4716
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -28140,11 +28775,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4592
+    .line 4722
     :cond_2
     if-eqz v19, :cond_f
 
-    .line 4595
+    .line 4725
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->TITLE_PROJECTION:[Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -28159,25 +28794,25 @@
 
     move-result-object v12
 
-    .line 4596
+    .line 4726
     .local v12, cursor:Landroid/database/Cursor;
     if-eqz v12, :cond_9
 
-    .line 4597
+    .line 4727
     invoke-interface {v12}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v4
 
     if-eqz v4, :cond_8
 
-    .line 4598
+    .line 4728
     const-string v4, "_data"
 
     invoke-interface {v12, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v24
 
-    .line 4599
+    .line 4729
     .local v24, pathIndex:I
     move/from16 v0, v24
 
@@ -28189,14 +28824,14 @@
 
     iput-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
-    .line 4600
+    .line 4730
     move-object/from16 v0, v19
 
     iget-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
     if-nez v4, :cond_3
 
-    .line 4601
+    .line 4731
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
@@ -28205,13 +28840,13 @@
 
     iput-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mPath:Ljava/lang/String;
 
-    .line 4606
+    .line 4736
     .end local v24           #pathIndex:I
     :cond_3
     :goto_1
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
-    .line 4613
+    .line 4743
     :goto_2
     const-string v4, "HtcWrapDrmStore"
 
@@ -28239,7 +28874,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4614
+    .line 4744
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -28266,7 +28901,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4615
+    .line 4745
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -28293,7 +28928,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4616
+    .line 4746
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -28320,7 +28955,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4617
+    .line 4747
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -28347,7 +28982,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4621
+    .line 4751
     move-object/from16 v0, v19
 
     iget-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mTitle:Ljava/lang/String;
@@ -28366,7 +29001,7 @@
 
     if-nez v4, :cond_4
 
-    .line 4622
+    .line 4752
     const-string v4, "title"
 
     move-object/from16 v0, v19
@@ -28377,7 +29012,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4626
+    .line 4756
     :cond_4
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Albums;->CONTENT_URI:Landroid/net/Uri;
 
@@ -28405,21 +29040,21 @@
 
     move-result-object v9
 
-    .line 4628
+    .line 4758
     .local v9, cAlbums:Landroid/database/Cursor;
     if-nez v9, :cond_a
 
-    .line 4630
+    .line 4760
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Albums failed"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4637
+    .line 4767
     const/16 v27, 0x0
 
-    .line 4756
+    .line 4886
     .end local v9           #cAlbums:Landroid/database/Cursor;
     .end local v11           #content:Landroid/drm/mobile1/DrmRawContent;
     .end local v12           #cursor:Landroid/database/Cursor;
@@ -28434,7 +29069,7 @@
     :goto_3
     return-object v27
 
-    .line 4538
+    .line 4668
     .restart local v27       #values:Landroid/content/ContentValues;
     :cond_6
     :try_start_1
@@ -28485,11 +29120,11 @@
     .restart local v22       #parseFile:Ljava/io/File;
     goto/16 :goto_0
 
-    .line 4576
+    .line 4706
     :catch_0
     move-exception v14
 
-    .line 4578
+    .line 4708
     .local v14, e:Ljava/lang/Exception;
     :try_start_2
     const-string v4, "HtcWrapDrmStore"
@@ -28520,10 +29155,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4580
+    .line 4710
     const/16 v27, 0x0
 
-    .line 4584
+    .line 4714
     .end local v27           #values:Landroid/content/ContentValues;
     if-eqz v22, :cond_5
 
@@ -28533,14 +29168,14 @@
 
     if-eqz v4, :cond_5
 
-    .line 4585
+    .line 4715
     invoke-virtual/range {v22 .. v22}, Ljava/io/File;->delete()Z
 
     move-result v4
 
     if-nez v4, :cond_5
 
-    .line 4586
+    .line 4716
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -28569,7 +29204,7 @@
 
     goto :goto_3
 
-    .line 4584
+    .line 4714
     .end local v14           #e:Ljava/lang/Exception;
     .restart local v27       #values:Landroid/content/ContentValues;
     :catchall_0
@@ -28583,14 +29218,14 @@
 
     if-eqz v5, :cond_7
 
-    .line 4585
+    .line 4715
     invoke-virtual/range {v22 .. v22}, Ljava/io/File;->delete()Z
 
     move-result v5
 
     if-nez v5, :cond_7
 
-    .line 4586
+    .line 4716
     const-string v5, "HtcWrapDrmStore"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -28617,11 +29252,11 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4584
+    .line 4714
     :cond_7
     throw v4
 
-    .line 4604
+    .line 4734
     .restart local v11       #content:Landroid/drm/mobile1/DrmRawContent;
     .restart local v12       #cursor:Landroid/database/Cursor;
     .restart local v16       #fin:Ljava/io/FileInputStream;
@@ -28641,7 +29276,7 @@
 
     goto/16 :goto_1
 
-    .line 4608
+    .line 4738
     :cond_9
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -28653,7 +29288,7 @@
 
     goto/16 :goto_2
 
-    .line 4640
+    .line 4770
     .restart local v9       #cAlbums:Landroid/database/Cursor;
     :cond_a
     const-string v4, "HtcWrapDrmStore"
@@ -28682,31 +29317,31 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4642
+    .line 4772
     invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
 
     move-result v4
 
     if-nez v4, :cond_b
 
-    .line 4643
+    .line 4773
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 4645
+    .line 4775
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "Insert a new album."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4647
+    .line 4777
     new-instance v13, Landroid/content/ContentValues;
 
     const/4 v4, 0x1
 
     invoke-direct {v13, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 4648
+    .line 4778
     .local v13, cv:Landroid/content/ContentValues;
     const-string v4, "album"
 
@@ -28716,12 +29351,12 @@
 
     invoke-virtual {v13, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4649
+    .line 4779
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Albums;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v3, v4, v13}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 4650
+    .line 4780
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Albums;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->ALBUMS_PROJECTION:[Ljava/lang/String;
@@ -28748,27 +29383,27 @@
 
     move-result-object v9
 
-    .line 4652
+    .line 4782
     if-nez v9, :cond_b
 
-    .line 4654
+    .line 4784
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Albums failed"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4661
+    .line 4791
     const/16 v27, 0x0
 
     goto/16 :goto_3
 
-    .line 4664
+    .line 4794
     .end local v13           #cv:Landroid/content/ContentValues;
     :cond_b
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 4665
+    .line 4795
     const-string v4, "album_id"
 
     const/4 v5, 0x0
@@ -28785,7 +29420,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 4667
+    .line 4797
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -28814,10 +29449,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4669
+    .line 4799
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 4672
+    .line 4802
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Artists;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->ARTISTS_PROJECTION:[Ljava/lang/String;
@@ -28844,23 +29479,23 @@
 
     move-result-object v10
 
-    .line 4674
+    .line 4804
     .local v10, cArtists:Landroid/database/Cursor;
     if-nez v10, :cond_c
 
-    .line 4676
+    .line 4806
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Artists failed."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4683
+    .line 4813
     const/16 v27, 0x0
 
     goto/16 :goto_3
 
-    .line 4686
+    .line 4816
     :cond_c
     const-string v4, "HtcWrapDrmStore"
 
@@ -28888,31 +29523,31 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4688
+    .line 4818
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
 
     move-result v4
 
     if-nez v4, :cond_d
 
-    .line 4689
+    .line 4819
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 4691
+    .line 4821
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "Insert a new artist."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4693
+    .line 4823
     new-instance v13, Landroid/content/ContentValues;
 
     const/4 v4, 0x1
 
     invoke-direct {v13, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 4694
+    .line 4824
     .restart local v13       #cv:Landroid/content/ContentValues;
     const-string v4, "artist"
 
@@ -28922,12 +29557,12 @@
 
     invoke-virtual {v13, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4695
+    .line 4825
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Artists;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v3, v4, v13}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 4696
+    .line 4826
     sget-object v4, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$Artists;->CONTENT_URI:Landroid/net/Uri;
 
     sget-object v5, Lcom/htc/wrap/android/provider/HtcWrapDrmStore;->ARTISTS_PROJECTION:[Ljava/lang/String;
@@ -28954,22 +29589,22 @@
 
     move-result-object v10
 
-    .line 4698
+    .line 4828
     if-nez v10, :cond_d
 
-    .line 4700
+    .line 4830
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "query Artists failed."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4704
+    .line 4834
     .end local v13           #cv:Landroid/content/ContentValues;
     :cond_d
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 4705
+    .line 4835
     const-string v4, "artist_id"
 
     const/4 v5, 0x0
@@ -28986,7 +29621,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 4707
+    .line 4837
     const-string v4, "HtcWrapDrmStore"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -29015,28 +29650,28 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4709
+    .line 4839
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 4711
+    .line 4841
     move-object/from16 v0, v19
 
     iget-object v4, v0, Landroid/media/MediaInfo$MediaTag;->mMimeType:Ljava/lang/String;
 
     if-nez v4, :cond_e
 
-    .line 4712
+    .line 4842
     move-object/from16 v0, p3
 
     move-object/from16 v1, v19
 
     iput-object v0, v1, Landroid/media/MediaInfo$MediaTag;->mMimeType:Ljava/lang/String;
 
-    .line 4718
+    .line 4848
     :cond_e
     if-nez p6, :cond_5
 
-    .line 4720
+    .line 4850
     :try_start_3
     move-object/from16 v0, v18
 
@@ -29050,7 +29685,7 @@
 
     if-nez v4, :cond_5
 
-    .line 4722
+    .line 4852
     const-string v4, "HtcWrapDrmStore"
 
     const-string v5, "Update DRM content to MediaProvider failed."
@@ -29059,16 +29694,16 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 4729
+    .line 4859
     const/16 v27, 0x0
 
     goto/16 :goto_3
 
-    .line 4731
+    .line 4861
     :catch_1
     move-exception v14
 
-    .line 4733
+    .line 4863
     .restart local v14       #e:Ljava/lang/Exception;
     const-string v4, "HtcWrapDrmStore"
 
@@ -29096,12 +29731,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4740
+    .line 4870
     const/16 v27, 0x0
 
     goto/16 :goto_3
 
-    .line 4746
+    .line 4876
     .end local v9           #cAlbums:Landroid/database/Cursor;
     .end local v10           #cArtists:Landroid/database/Cursor;
     .end local v12           #cursor:Landroid/database/Cursor;

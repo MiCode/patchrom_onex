@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:sharedUserId="com.htc.music.uid.shared" android:versionCode="400365065" android:versionName="4.0.2215172724.365065.350877" package="com.htc.music"
+<manifest android:sharedUserId="com.htc.music.uid.shared" android:versionCode="400396942" android:versionName="4.0.2217291444.396942.362777" package="com.htc.music"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -25,13 +25,14 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
     <uses-permission android:name="com.htc.permission.MEDIA_ACCOUNT" />
     <uses-permission android:name="com.htc.music.permission.ENHANCER_SERVICE" />
+    <uses-permission android:name="com.htc.musicfolderpicker.permission.PICK_FOLDER" />
     <uses-permission android:name="com.android.email.permission.READ_ATTACHMENT" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_WRITE_OMA_DRM" />
     <uses-permission android:name="com.htc.vmm.service.permission.VMMEngineService" />
     <uses-permission android:name="com.htc.bpmrss.permission.GET_LIST" />
     <uses-sdk android:minSdkVersion="15" />
-    <application android:theme="@style/Theme.CommonBackgroundNoTitle" android:label="@string/mediaplaybacklabel_music" android:icon="@com.htc:drawable/icon_launcher_music" android:taskAffinity="android.task.music" android:description="@com.htc:string/htc_about_company_name" android:allowTaskReparenting="true" allowSkinChange="true">
+    <application android:theme="@style/Theme.CommonBackgroundNoTitle" android:label="@string/mediaplaybacklabel_music" android:icon="@com.htc:drawable/icon_launcher_music" android:taskAffinity="com.htc.music.local" android:description="@com.htc:string/htc_about_company_name" android:allowTaskReparenting="true" allowSkinChange="true">
         <activity android:theme="@style/Theme.CommonBackgroundNoTitle" android:label="@string/mediaplaybacklabel_music" android:name="HtcMusic" android:excludeFromRecents="false" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize">
             <meta-data android:name="com.htc.lockscreen.idlescreen.shortcut" android:resource="@xml/idlescreen_glance" />
             <meta-data android:name="android.app.default_searchable" android:value="*" />
@@ -396,5 +397,5 @@
             </intent-filter>
         </activity>
     </application>
-    <HTC-SDK version="4.11" />
+    <HTC-SDK version="4.20" />
 </manifest>

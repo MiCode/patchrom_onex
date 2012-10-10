@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1159
+    .line 1160
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$3;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1162
+    .line 1163
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$3;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity;->mAdapter:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
@@ -49,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1163
+    .line 1164
     iget-object v0, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$3;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$3;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -68,7 +68,7 @@
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->getTrackCursor(Lcom/htc/music/util/DlArtAsyncQueryHandler;Ljava/lang/String;)Landroid/database/Cursor;
     invoke-static {v0, v1, v2}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$1200(Lcom/htc/music/browserlayer/TrackBrowserActivity;Lcom/htc/music/util/DlArtAsyncQueryHandler;Ljava/lang/String;)Landroid/database/Cursor;
 
-    .line 1168
+    .line 1169
     :cond_0
     return-void
 .end method

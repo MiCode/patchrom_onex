@@ -33,7 +33,7 @@
     .locals 2
 
     .prologue
-    .line 1253
+    .line 1356
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "suggest_exception"
@@ -51,7 +51,7 @@
     .locals 0
 
     .prologue
-    .line 1243
+    .line 1345
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

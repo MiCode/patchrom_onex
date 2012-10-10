@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4771
+    .line 4778
     iput-object p1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 4771
+    .line 4778
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$MyDataSetObserver;-><init>(Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;)V
 
     return-void
@@ -50,7 +50,7 @@
     .locals 3
 
     .prologue
-    .line 4774
+    .line 4781
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -81,7 +81,7 @@
 
     move-result v0
 
-    .line 4777
+    .line 4784
     .local v0, count:I
     :goto_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
@@ -94,10 +94,10 @@
     #calls: Lcom/htc/music/browserlayer/TrackBrowserActivity;->setTitle()V
     invoke-static {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->access$4500(Lcom/htc/music/browserlayer/TrackBrowserActivity;)V
 
-    .line 4779
+    .line 4786
     if-lez v0, :cond_1
 
-    .line 4780
+    .line 4787
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/TrackBrowserActivity;
@@ -107,18 +107,18 @@
 
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/TrackBrowserActivity;->hideEmptyErrorView()V
 
-    .line 4784
+    .line 4791
     :goto_1
     return-void
 
-    .line 4774
+    .line 4781
     .end local v0           #count:I
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 4782
+    .line 4789
     .restart local v0       #count:I
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter$MyDataSetObserver;->this$0:Lcom/htc/music/browserlayer/TrackBrowserActivity$TrackListAdapter;
@@ -139,6 +139,6 @@
     .locals 0
 
     .prologue
-    .line 4790
+    .line 4797
     return-void
 .end method

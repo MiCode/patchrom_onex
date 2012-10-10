@@ -957,7 +957,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0a0198
+    const v6, 0x7f0a01a1
 
     invoke-virtual {v5, v6}, Lcom/android/camera/HTCCamera;->showToast(I)V
 

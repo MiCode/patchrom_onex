@@ -33,18 +33,18 @@
     .parameter "is_draw"
 
     .prologue
-    .line 882
+    .line 893
     iput-object p1, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$HtcListItemRoundSeparable;->this$1:Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 883
+    .line 894
     iput-boolean p2, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$HtcListItemRoundSeparable;->mSeparate:Z
 
-    .line 884
+    .line 895
     iput-boolean p3, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$HtcListItemRoundSeparable;->mDraw:Z
 
-    .line 885
+    .line 896
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 896
+    .line 907
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$HtcListItemRoundSeparable;->mDraw:Z
 
     return v0
@@ -65,7 +65,7 @@
     .parameter "listitem"
 
     .prologue
-    .line 890
+    .line 901
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/AlbumTrackBrowserActivity$ArtistAlbumListAdapter$HtcListItemRoundSeparable;->mSeparate:Z
 
     return v0

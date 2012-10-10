@@ -1313,81 +1313,21 @@
 .end method
 
 .method private getPRLVer()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
     .prologue
-    const/4 v4, 0x4
+    .line 1021
+    const-string v1, "ro.cdma.prl"
 
-    .line 1008
-    const-string v2, "ro.cdma.prl"
-
-    const/4 v3, 0x0
-
-    invoke-static {v2, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    .line 1009
-    .local v0, iprl_prop:I
-    if-lez v0, :cond_1
-
-    .line 1010
-    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1011
-    .local v1, prl_prop:Ljava/lang/String;
-    :goto_0
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-ge v2, v4, :cond_0
-
-    .line 1012
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "0"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    .line 1015
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-ne v2, v4, :cond_1
-
-    .line 1016
-    invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1020
-    .end local v1           #prl_prop:Ljava/lang/String;
-    :goto_1
-    return-object v2
-
-    :cond_1
     const-string v2, ""
 
-    goto :goto_1
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1023
+    .local v0, prl_prop:Ljava/lang/String;
+    return-object v0
 .end method
 
 .method private getSIWA_Key()Ljava/lang/String;
@@ -2080,24 +2020,24 @@
     .locals 6
 
     .prologue
-    .line 1079
+    .line 1082
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    .line 1080
+    .line 1083
     .local v2, myLooper:Landroid/os/Looper;
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    .line 1081
+    .line 1084
     .local v1, mainLooper:Landroid/os/Looper;
     if-ne v2, v1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 1082
+    .line 1085
     .local v0, bIsMainLooper:Z
     :goto_0
     sget-object v3, Lcom/sprint/internal/SystemProperties;->TAG:Ljava/lang/String;
@@ -2122,10 +2062,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1083
+    .line 1086
     return v0
 
-    .line 1081
+    .line 1084
     .end local v0           #bIsMainLooper:Z
     :cond_0
     const/4 v0, 0x0

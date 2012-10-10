@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1687
+    .line 1759
     iput-object p1, p0, Lcom/htc/music/MusicPluginManager$NonUiHandler$1;->this$1:Lcom/htc/music/MusicPluginManager$NonUiHandler;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -55,47 +55,47 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1690
+    .line 1762
     if-eq p1, p2, :cond_0
 
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1704
+    .line 1776
     :cond_0
     :goto_0
     return v4
 
-    .line 1695
+    .line 1767
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
 
-    .line 1696
+    .line 1768
     .local v0, time1:J
     invoke-virtual {p2}, Ljava/io/File;->lastModified()J
 
     move-result-wide v2
 
-    .line 1698
+    .line 1770
     .local v2, time2:J
     cmp-long v5, v0, v2
 
     if-eqz v5, :cond_0
 
-    .line 1700
+    .line 1772
     cmp-long v4, v0, v2
 
     if-gez v4, :cond_2
 
-    .line 1701
+    .line 1773
     const/4 v4, -0x1
 
     goto :goto_0
 
-    .line 1704
+    .line 1776
     :cond_2
     const/4 v4, 0x1
 
@@ -108,7 +108,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1687
+    .line 1759
     check-cast p1, Ljava/io/File;
 
     .end local p1

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 539
+    .line 550
     iput-object p1, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5$1;->this$1:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 4
 
     .prologue
-    .line 543
+    .line 554
     iget-object v2, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5$1;->this$1:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;
 
     iget-object v2, v2, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
@@ -64,7 +64,7 @@
 
     move-result-object v1
 
-    .line 544
+    .line 555
     .local v1, id:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5$1;->this$1:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;
 
@@ -79,14 +79,14 @@
 
     move-result-object v0
 
-    .line 545
+    .line 556
     .local v0, expParams:Lcom/htc/sunny2/widget/gridview/ExpandableGridView$ExpandableGridViewParameters;
     if-eqz v0, :cond_0
 
-    .line 546
+    .line 557
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView$ExpandableGridViewParameters;->reset()V
 
-    .line 547
+    .line 558
     iget-object v2, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5$1;->this$1:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;
 
     iget-object v2, v2, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
@@ -98,7 +98,7 @@
 
     invoke-virtual {v2, v0}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->updateChildViewParameters(Lcom/htc/sunny2/widget/gridview/ExpandableGridView$ExpandableGridViewParameters;)V
 
-    .line 549
+    .line 560
     :cond_0
     iget-object v2, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5$1;->this$1:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;
 
@@ -107,7 +107,7 @@
     #calls: Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;->startAlbumDetailViewActivity(Ljava/lang/String;)V
     invoke-static {v2, v1}, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;->access$2400(Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;Ljava/lang/String;)V
 
-    .line 550
+    .line 561
     iget-object v2, p0, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5$1;->this$1:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;
 
     iget-object v2, v2, Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid$5;->this$0:Lcom/htc/music/browserlayer/GenreBrowserActivityExpGrid;
@@ -119,6 +119,6 @@
 
     invoke-virtual {v2}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange()V
 
-    .line 551
+    .line 562
     return-void
 .end method

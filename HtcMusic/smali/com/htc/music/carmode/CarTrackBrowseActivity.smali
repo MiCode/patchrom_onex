@@ -1598,7 +1598,7 @@
     invoke-virtual {p0, v0, v7}, Lcom/htc/music/carmode/CarTrackBrowseActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 172
-    const v0, 0x7f0700ab
+    const v0, 0x7f0700ac
 
     invoke-virtual {p0, v0}, Lcom/htc/music/carmode/CarTrackBrowseActivity;->setSearchHint(I)V
 

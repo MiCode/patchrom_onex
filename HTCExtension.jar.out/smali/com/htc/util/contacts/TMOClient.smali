@@ -2294,7 +2294,7 @@
     :try_start_2
     new-instance v36, Ljava/text/SimpleDateFormat;
 
-    const-string v4, "yyyyMMdd\'T\'hhmmss\'Z\'"
+    const-string/jumbo v4, "yyyyMMdd\'T\'hhmmss\'Z\'"
 
     move-object/from16 v0, v36
 
@@ -6585,7 +6585,7 @@
     :try_start_0
     new-instance v6, Ljava/text/SimpleDateFormat;
 
-    const-string v12, "yyyyMMdd\'T\'hhmmss\'Z\'"
+    const-string/jumbo v12, "yyyyMMdd\'T\'hhmmss\'Z\'"
 
     invoke-direct {v6, v12}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 

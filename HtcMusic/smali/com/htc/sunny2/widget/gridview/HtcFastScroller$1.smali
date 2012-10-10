@@ -27,7 +27,7 @@
     .parameter "x2"
 
     .prologue
-    .line 322
+    .line 325
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$1;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
     invoke-direct {p0, p2, p3, p4}, Lcom/htc/sunny2/RenderThreadHandler;-><init>(Ljava/lang/Object;Ljava/lang/String;Lcom/htc/sunny2/RenderThread;)V
@@ -42,14 +42,14 @@
     .parameter "msg"
 
     .prologue
-    .line 324
+    .line 327
     iget v0, p1, Lcom/htc/sunny2/RenderThreadHandler$RenderThreadMessage;->what:I
 
     const v1, -0xffffff
 
     if-ne v0, v1, :cond_0
 
-    .line 325
+    .line 328
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/HtcFastScroller$1;->this$0:Lcom/htc/sunny2/widget/gridview/HtcFastScroller;
 
     invoke-static {}, Lcom/htc/sunny2/SunnyEnvironment;->instance()Lcom/htc/sunny2/SunnyEnvironment;
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/sunny2/widget/gridview/HtcFastScroller;->drawIRT(ILcom/htc/sunny2/SceneNode;)V
 
-    .line 327
+    .line 330
     :cond_0
     return-void
 .end method

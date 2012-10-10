@@ -43,12 +43,12 @@
 
     iput-object v0, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
-    .line 75
+    .line 73
     iget-object v0, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v0}, Lcom/android/camera/WorkerThread;->start()V
 
-    .line 76
+    .line 74
     return-void
 .end method
 
@@ -80,15 +80,15 @@
     .locals 1
 
     .prologue
-    .line 85
+    .line 83
     iget-object v0, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v0}, Lcom/android/camera/WorkerThread;->exit()V
 
-    .line 88
+    .line 86
     invoke-super {p0}, Lcom/android/camera/component/CameraThreadComponent;->deinitializeOverride()V
 
-    .line 89
+    .line 87
     return-void
 .end method
 
@@ -96,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 96
+    .line 94
     iget-object v0, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
     return-object v0
@@ -107,7 +107,7 @@
     .parameter "msg"
 
     .prologue
-    .line 103
+    .line 101
     return-void
 .end method
 
@@ -116,14 +116,14 @@
     .parameter "what"
 
     .prologue
-    .line 110
+    .line 108
     iget-object v1, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v1}, Lcom/android/camera/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 111
+    .line 109
     .local v0, handler:Landroid/os/Handler;
     if-eqz v0, :cond_0
 
@@ -144,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 117
     iget-object v0, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v0}, Lcom/android/camera/WorkerThread;->isRunning()Z
@@ -158,7 +158,7 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 124
     return-void
 .end method
 
@@ -167,21 +167,21 @@
     .parameter "what"
 
     .prologue
-    .line 133
+    .line 131
     iget-object v1, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v1}, Lcom/android/camera/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 134
+    .line 132
     .local v0, handler:Landroid/os/Handler;
     if-eqz v0, :cond_0
 
-    .line 135
+    .line 133
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 136
+    .line 134
     :cond_0
     return-void
 .end method
@@ -193,7 +193,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 143
+    .line 141
     const/4 v4, 0x0
 
     const-wide/16 v5, 0x0
@@ -221,7 +221,7 @@
     .parameter "obj"
 
     .prologue
-    .line 155
+    .line 153
     const-wide/16 v5, 0x0
 
     const/4 v7, 0x0
@@ -253,38 +253,38 @@
     .parameter "isUnique"
 
     .prologue
-    .line 160
+    .line 158
     iget-object v2, p0, Lcom/android/camera/component/AsyncCameraThreadComponent;->m_WorkerThread:Lcom/android/camera/WorkerThread;
 
     invoke-virtual {v2}, Lcom/android/camera/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 161
+    .line 159
     .local v0, handler:Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 162
+    .line 160
     const/4 v2, 0x0
 
-    .line 172
+    .line 170
     :goto_0
     return v2
 
-    .line 165
+    .line 163
     :cond_0
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 168
+    .line 166
     .local v1, msg:Landroid/os/Message;
     if-eqz p7, :cond_1
 
-    .line 169
+    .line 167
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 170
+    .line 168
     :cond_1
     const-wide/16 v2, 0x0
 
@@ -292,14 +292,14 @@
 
     if-gtz v2, :cond_2
 
-    .line 171
+    .line 169
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     move-result v2
 
     goto :goto_0
 
-    .line 172
+    .line 170
     :cond_2
     invoke-virtual {v0, v1, p5, p6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -316,7 +316,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 147
+    .line 145
     const/4 v4, 0x0
 
     move-object v0, p0
@@ -344,7 +344,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 151
+    .line 149
     const/4 v4, 0x0
 
     const-wide/16 v5, 0x0

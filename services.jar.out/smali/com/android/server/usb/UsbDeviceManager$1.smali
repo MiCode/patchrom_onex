@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 150
+    .line 156
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -41,7 +41,7 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 153
+    .line 159
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->access$100()Ljava/lang/String;
 
     move-result-object v5
@@ -70,14 +70,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
+    .line 161
     const-string v5, "USB_STATE"
 
     invoke-virtual {p1, v5}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 156
+    .line 162
     .local v2, state:Ljava/lang/String;
     const-string v5, "ACCESSORY"
 
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    .line 157
+    .line 163
     .local v0, accessory:Ljava/lang/String;
     const-string v5, "SWITCH_NAME"
 
@@ -93,7 +93,7 @@
 
     move-result-object v3
 
-    .line 158
+    .line 164
     .local v3, szSwName:Ljava/lang/String;
     const-string v5, "SWITCH_STATE"
 
@@ -101,11 +101,11 @@
 
     move-result-object v4
 
-    .line 159
+    .line 166
     .local v4, szSwState:Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 160
+    .line 167
     iget-object v5, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     #getter for: Lcom/android/server/usb/UsbDeviceManager;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
@@ -115,12 +115,12 @@
 
     invoke-virtual {v5, v2}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateState(Ljava/lang/String;)V
 
-    .line 175
+    .line 188
     :cond_0
     :goto_0
     return-void
 
-    .line 161
+    .line 168
     :cond_1
     const-string v5, "START"
 
@@ -130,7 +130,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 162
+    .line 169
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->access$100()Ljava/lang/String;
 
     move-result-object v5
@@ -139,7 +139,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
+    .line 170
     iget-object v5, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     const-string v6, "accessory"
@@ -148,13 +148,13 @@
 
     goto :goto_0
 
-    .line 164
+    .line 171
     :cond_2
     if-eqz v3, :cond_0
 
     if-eqz v4, :cond_0
 
-    .line 166
+    .line 173
     :try_start_0
     const-string v5, "usb_connect2pc"
 
@@ -162,9 +162,9 @@
 
     move-result v5
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_3
 
-    .line 167
+    .line 174
     iget-object v5, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -174,7 +174,7 @@
     #setter for: Lcom/android/server/usb/UsbDeviceManager;->mConnect2Pc:I
     invoke-static {v5, v6}, Lcom/android/server/usb/UsbDeviceManager;->access$302(Lcom/android/server/usb/UsbDeviceManager;I)I
 
-    .line 169
+    .line 176
     iget-object v5, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     #getter for: Lcom/android/server/usb/UsbDeviceManager;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
@@ -193,11 +193,11 @@
 
     goto :goto_0
 
-    .line 171
+    .line 184
     :catch_0
     move-exception v1
 
-    .line 172
+    .line 185
     .local v1, e:Ljava/lang/NumberFormatException;
     invoke-static {}, Lcom/android/server/usb/UsbDeviceManager;->access$100()Ljava/lang/String;
 
@@ -222,6 +222,56 @@
     move-result-object v6
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 177
+    .end local v1           #e:Ljava/lang/NumberFormatException;
+    :cond_3
+    :try_start_1
+    const-string v5, "dock"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    .line 178
+    const-string v5, "16"
+
+    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    .line 179
+    iget-object v5, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v6
+
+    #setter for: Lcom/android/server/usb/UsbDeviceManager;->mHostCable:I
+    invoke-static {v5, v6}, Lcom/android/server/usb/UsbDeviceManager;->access$502(Lcom/android/server/usb/UsbDeviceManager;I)I
+
+    .line 181
+    iget-object v5, p0, Lcom/android/server/usb/UsbDeviceManager$1;->this$0:Lcom/android/server/usb/UsbDeviceManager;
+
+    #getter for: Lcom/android/server/usb/UsbDeviceManager;->mHandler:Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
+    invoke-static {v5}, Lcom/android/server/usb/UsbDeviceManager;->access$200(Lcom/android/server/usb/UsbDeviceManager;)Lcom/android/server/usb/UsbDeviceManager$UsbHandler;
+
+    move-result-object v5
+
+    const/4 v6, 0x7
+
+    const/4 v7, 0x0
+
+    #calls: Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->update2(II)V
+    invoke-static {v5, v6, v7}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->access$400(Lcom/android/server/usb/UsbDeviceManager$UsbHandler;II)V
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 .end method

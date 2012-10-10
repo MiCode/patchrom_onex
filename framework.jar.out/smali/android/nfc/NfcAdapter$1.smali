@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 546
+    .line 556
     iput-object p1, p0, Landroid/nfc/NfcAdapter$1;->this$0:Landroid/nfc/NfcAdapter;
 
     const/4 v0, 0x0
@@ -54,7 +54,7 @@
     .end annotation
 
     .prologue
-    .line 549
+    .line 559
     sget-object v0, Landroid/nfc/NfcAdapter;->sService:Landroid/nfc/INfcAdapter;
 
     invoke-interface {v0}, Landroid/nfc/INfcAdapter;->getState()I
@@ -77,7 +77,7 @@
     .end annotation
 
     .prologue
-    .line 546
+    .line 556
     invoke-virtual {p0}, Landroid/nfc/NfcAdapter$1;->callMethod()Ljava/lang/Integer;
 
     move-result-object v0

@@ -38,7 +38,7 @@
     .locals 2
 
     .prologue
-    .line 3044
+    .line 3047
     sget-object v0, Landroid/provider/Telephony$HtcMessages;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "vvm"
@@ -49,7 +49,7 @@
 
     sput-object v0, Landroid/provider/Telephony$HtcVvm;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 3050
+    .line 3053
     sget-object v0, Landroid/provider/Telephony$HtcMessages;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "vvmId"
@@ -60,7 +60,7 @@
 
     sput-object v0, Landroid/provider/Telephony$HtcVvm;->VVM_ID_CONTENT_URI:Landroid/net/Uri;
 
-    .line 3056
+    .line 3059
     sget-object v0, Landroid/provider/Telephony$HtcVvm;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "sync"
@@ -78,7 +78,7 @@
     .locals 0
 
     .prologue
-    .line 3034
+    .line 3037
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 300
+    .line 310
     iput-object p1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 300
+    .line 310
     invoke-direct {p0, p1}, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;-><init>(Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;)V
 
     return-void
@@ -54,7 +54,7 @@
     .parameter "focusChange"
 
     .prologue
-    .line 307
+    .line 317
     iget-object v1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     #getter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->mContext:Landroid/content/Context;
@@ -70,11 +70,11 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 309
+    .line 319
     .local v0, tm:Landroid/telephony/TelephonyManager;
     if-nez v0, :cond_1
 
-    .line 310
+    .line 320
     iget-object v1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     #getter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->LOG_FLAG:Z
@@ -95,19 +95,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 338
+    .line 348
     :cond_0
     :goto_0
     return-void
 
-    .line 314
+    .line 324
     :cond_1
     packed-switch p1, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 331
+    .line 341
     :pswitch_1
     iget-object v1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
@@ -131,7 +131,7 @@
 
     goto :goto_0
 
-    .line 318
+    .line 328
     :pswitch_2
     iget-object v1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
@@ -153,7 +153,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
+    .line 330
     :cond_2
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getCallState()I
 
@@ -171,14 +171,14 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 325
+    .line 335
     iget-object v1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     invoke-virtual {v1}, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->stopSample()V
 
     goto :goto_0
 
-    .line 335
+    .line 345
     :pswitch_3
     iget-object v1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$AudioFocusChangeListener;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
@@ -202,7 +202,7 @@
 
     goto :goto_0
 
-    .line 314
+    .line 324
     nop
 
     :pswitch_data_0

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 951
+    .line 950
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$4;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 955
+    .line 954
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/event/EventArgs;>;"
     iget-object v2, p0, Lcom/android/camera/component/ViewFinder$4;->this$0:Lcom/android/camera/component/ViewFinder;
 
@@ -93,13 +93,13 @@
 
     check-cast v1, Lcom/android/camera/trigger/TriggerBase;
 
-    .line 956
+    .line 955
     .local v1, trigger:Lcom/android/camera/trigger/TriggerBase;
     invoke-virtual {v1}, Lcom/android/camera/trigger/TriggerBase;->destroy()V
 
     goto :goto_0
 
-    .line 957
+    .line 956
     .end local v1           #trigger:Lcom/android/camera/trigger/TriggerBase;
     :cond_0
     iget-object v2, p0, Lcom/android/camera/component/ViewFinder$4;->this$0:Lcom/android/camera/component/ViewFinder;
@@ -111,6 +111,6 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 958
+    .line 957
     return-void
 .end method

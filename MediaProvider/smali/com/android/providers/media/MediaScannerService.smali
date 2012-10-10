@@ -74,14 +74,14 @@
     .line 83
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 885
+    .line 891
     new-instance v0, Lcom/android/providers/media/MediaScannerService$1;
 
     invoke-direct {v0, p0}, Lcom/android/providers/media/MediaScannerService$1;-><init>(Lcom/android/providers/media/MediaScannerService;)V
 
     iput-object v0, p0, Lcom/android/providers/media/MediaScannerService;->mBinder:Landroid/media/IMediaScannerService$Stub;
 
-    .line 1201
+    .line 1204
     new-instance v0, Lcom/android/providers/media/MediaScannerService$2;
 
     invoke-direct {v0, p0}, Lcom/android/providers/media/MediaScannerService$2;-><init>(Lcom/android/providers/media/MediaScannerService;)V
@@ -1258,7 +1258,7 @@
 
     const/4 v5, 0x0
 
-    .line 701
+    .line 707
     const-string v2, "ringtoneinit"
 
     const/4 v3, 0x0
@@ -1269,7 +1269,7 @@
 
     iput-object v2, p0, Lcom/android/providers/media/MediaScannerService;->ringtone_restore_init:Landroid/content/SharedPreferences;
 
-    .line 702
+    .line 708
     iget-object v2, p0, Lcom/android/providers/media/MediaScannerService;->ringtone_restore_init:Landroid/content/SharedPreferences;
 
     const-string v3, "ringtoneinit"
@@ -1280,7 +1280,7 @@
 
     if-nez v2, :cond_2
 
-    .line 703
+    .line 709
     iget-object v2, p0, Lcom/android/providers/media/MediaScannerService;->ringtone_restore_init:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -1297,7 +1297,7 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 710
+    .line 716
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1311,7 +1311,7 @@
     .local v0, ringtone_paht:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 712
+    .line 718
     invoke-direct {p0, v0, v6}, Lcom/android/providers/media/MediaScannerService;->getRingtoneUriByPath(Ljava/lang/String;I)Landroid/net/Uri;
 
     move-result-object v1
@@ -1319,10 +1319,10 @@
     .local v1, ringtone_uri:Landroid/net/Uri;
     if-eqz v1, :cond_0
 
-    .line 714
+    .line 720
     invoke-static {p0, v6, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 716
+    .line 722
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1335,7 +1335,7 @@
 
     invoke-virtual {v2, v3, v5, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 722
+    .line 728
     .end local v1           #ringtone_uri:Landroid/net/Uri;
     :cond_0
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
@@ -1350,7 +1350,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 724
+    .line 730
     invoke-direct {p0, v0, v7}, Lcom/android/providers/media/MediaScannerService;->getRingtoneUriByPath(Ljava/lang/String;I)Landroid/net/Uri;
 
     move-result-object v1
@@ -1358,10 +1358,10 @@
     .restart local v1       #ringtone_uri:Landroid/net/Uri;
     if-eqz v1, :cond_1
 
-    .line 726
+    .line 732
     invoke-static {p0, v7, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 728
+    .line 734
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1374,7 +1374,7 @@
 
     invoke-virtual {v2, v3, v5, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 734
+    .line 740
     .end local v1           #ringtone_uri:Landroid/net/Uri;
     :cond_1
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
@@ -1389,7 +1389,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 736
+    .line 742
     invoke-direct {p0, v0, v8}, Lcom/android/providers/media/MediaScannerService;->getRingtoneUriByPath(Ljava/lang/String;I)Landroid/net/Uri;
 
     move-result-object v1
@@ -1397,10 +1397,10 @@
     .restart local v1       #ringtone_uri:Landroid/net/Uri;
     if-eqz v1, :cond_2
 
-    .line 738
+    .line 744
     invoke-static {p0, v8, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 740
+    .line 746
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1413,7 +1413,7 @@
 
     invoke-virtual {v2, v3, v5, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 745
+    .line 751
     .end local v0           #ringtone_paht:Ljava/lang/String;
     .end local v1           #ringtone_uri:Landroid/net/Uri;
     :cond_2
@@ -1426,12 +1426,12 @@
     .parameter "RingtoneType"
 
     .prologue
-    .line 749
+    .line 755
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 751
+    .line 757
     .local v0, contentresolver:Landroid/content/ContentResolver;
     new-instance v8, Landroid/content/ContentValues;
 
@@ -1439,7 +1439,7 @@
 
     invoke-direct {v8, v1}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 754
+    .line 760
     .local v8, cv:Landroid/content/ContentValues;
     :try_start_0
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
@@ -1462,19 +1462,19 @@
 
     move-result-object v7
 
-    .line 758
+    .line 764
     .local v7, cursor:Landroid/database/Cursor;
     if-nez v7, :cond_4
 
-    .line 778
+    .line 784
     :cond_0
     :goto_0
     if-eqz v7, :cond_1
 
-    .line 779
+    .line 785
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 782
+    .line 788
     :cond_1
     sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -1496,18 +1496,18 @@
 
     move-result-object v7
 
-    .line 786
+    .line 792
     if-nez v7, :cond_7
 
-    .line 822
+    .line 828
     :cond_2
     :goto_1
     if-eqz v7, :cond_3
 
-    .line 823
+    .line 829
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 874
+    .line 880
     .end local v7           #cursor:Landroid/database/Cursor;
     :cond_3
     :goto_2
@@ -1516,7 +1516,7 @@
     :goto_3
     return-object v6
 
-    .line 761
+    .line 767
     .restart local v7       #cursor:Landroid/database/Cursor;
     :cond_4
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -1525,7 +1525,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 765
+    .line 771
     :cond_5
     const/4 v1, 0x0
 
@@ -1533,7 +1533,7 @@
 
     move-result-wide v10
 
-    .line 767
+    .line 773
     .local v10, ringtonID:J
     const-wide/16 v1, -0x1
 
@@ -1541,7 +1541,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 768
+    .line 774
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1576,7 +1576,7 @@
 
     goto :goto_3
 
-    .line 775
+    .line 781
     :cond_6
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1586,7 +1586,7 @@
 
     goto :goto_0
 
-    .line 789
+    .line 795
     .end local v10           #ringtonID:J
     :cond_7
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -1595,7 +1595,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 793
+    .line 799
     :cond_8
     const/4 v1, 0x0
 
@@ -1603,7 +1603,7 @@
 
     move-result-wide v10
 
-    .line 795
+    .line 801
     .restart local v10       #ringtonID:J
     const-wide/16 v1, -0x1
 
@@ -1611,7 +1611,7 @@
 
     if-eqz v1, :cond_9
 
-    .line 796
+    .line 802
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1644,14 +1644,14 @@
 
     move-result-object v6
 
-    .line 801
+    .line 807
     .local v6, RingtoneUri:Landroid/net/Uri;
     invoke-virtual {v8}, Landroid/content/ContentValues;->clear()V
 
-    .line 802
+    .line 808
     packed-switch p2, :pswitch_data_0
 
-    .line 814
+    .line 820
     :goto_4
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
@@ -1668,14 +1668,14 @@
 
     goto :goto_3
 
-    .line 871
+    .line 877
     .end local v6           #RingtoneUri:Landroid/net/Uri;
     .end local v7           #cursor:Landroid/database/Cursor;
     .end local v10           #ringtonID:J
     :catch_0
     move-exception v9
 
-    .line 872
+    .line 878
     .local v9, e:Ljava/lang/Exception;
     const-string v1, "MediaScannerService"
 
@@ -1705,7 +1705,7 @@
 
     goto/16 :goto_2
 
-    .line 804
+    .line 810
     .end local v9           #e:Ljava/lang/Exception;
     .restart local v6       #RingtoneUri:Landroid/net/Uri;
     .restart local v7       #cursor:Landroid/database/Cursor;
@@ -1724,7 +1724,7 @@
 
     goto :goto_4
 
-    .line 807
+    .line 813
     :pswitch_2
     const-string v1, "is_notification"
 
@@ -1738,7 +1738,7 @@
 
     goto :goto_4
 
-    .line 810
+    .line 816
     :pswitch_3
     const-string v1, "is_alarm"
 
@@ -1752,7 +1752,7 @@
 
     goto :goto_4
 
-    .line 819
+    .line 825
     .end local v6           #RingtoneUri:Landroid/net/Uri;
     :cond_9
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
@@ -1765,7 +1765,7 @@
 
     goto/16 :goto_1
 
-    .line 802
+    .line 808
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -1842,20 +1842,33 @@
     .line 509
     iget-object v5, p0, Lcom/android/providers/media/MediaScannerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    if-eqz v5, :cond_0
+
+    .line 510
+    const-string v5, "TAG"
+
+    const-string v6, "mWakeLock.acquire() at scan()"
+
+    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 511
+    iget-object v5, p0, Lcom/android/providers/media/MediaScannerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
+    .line 514
+    :cond_0
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 512
+    .line 515
     .local v4, values:Landroid/content/ContentValues;
     const-string v5, "volume"
 
     invoke-virtual {v4, v5, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 513
+    .line 516
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -1868,7 +1881,7 @@
 
     move-result-object v1
 
-    .line 515
+    .line 518
     .local v1, scanUri:Landroid/net/Uri;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1894,7 +1907,7 @@
 
     move-result-object v3
 
-    .line 516
+    .line 519
     .local v3, uri:Landroid/net/Uri;
     new-instance v5, Landroid/content/Intent;
 
@@ -1904,7 +1917,7 @@
 
     invoke-virtual {p0, v5}, Lcom/android/providers/media/MediaScannerService;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 522
+    .line 525
     :try_start_0
     const-string v5, "external"
 
@@ -1912,27 +1925,27 @@
 
     move-result v5
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_1
 
-    .line 523
+    .line 526
     invoke-direct {p0, p2}, Lcom/android/providers/media/MediaScannerService;->openDatabase(Ljava/lang/String;)V
 
-    .line 535
-    :cond_0
+    .line 538
+    :cond_1
     invoke-direct {p0}, Lcom/android/providers/media/MediaScannerService;->createMediaScanner()Lcom/htc/wrap/android/media/HtcWrapMediaScanner;
 
     move-result-object v2
 
-    .line 539
+    .line 542
     .local v2, scanner:Lcom/htc/wrap/android/media/HtcWrapMediaScanner;
     invoke-virtual {v2, p1, p2}, Lcom/htc/wrap/android/media/HtcWrapMediaScanner;->scanDirectories([Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 545
+    .line 548
     sget-boolean v5, Lcom/android/providers/media/MediaProvider;->HtcInkSupported:Z
 
-    if-ne v5, v8, :cond_1
+    if-ne v5, v8, :cond_2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     const-string v5, "external"
 
@@ -1940,23 +1953,23 @@
 
     move-result v5
 
-    if-ne v5, v8, :cond_1
+    if-ne v5, v8, :cond_2
 
-    .line 547
+    .line 550
     const/4 v5, 0x0
 
     aget-object v5, p1, v5
 
     invoke-direct {p0, v5}, Lcom/android/providers/media/MediaScannerService;->updateImagebyHtcInk(Ljava/lang/String;)V
 
-    .line 548
+    .line 551
     invoke-direct {p0}, Lcom/android/providers/media/MediaScannerService;->deleteHtcInk()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 557
+    .line 560
     .end local v2           #scanner:Lcom/htc/wrap/android/media/HtcWrapMediaScanner;
-    :cond_1
+    :cond_2
     :goto_0
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1964,7 +1977,7 @@
 
     invoke-virtual {v5, v1, v9, v9}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 559
+    .line 562
     new-instance v5, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.MEDIA_SCANNER_FINISHED"
@@ -1973,22 +1986,43 @@
 
     invoke-virtual {p0, v5}, Lcom/android/providers/media/MediaScannerService;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 562
+    .line 565
     invoke-direct {p0}, Lcom/android/providers/media/MediaScannerService;->doSystemSettingRestore()V
 
-    .line 564
+    .line 567
+    iget-object v5, p0, Lcom/android/providers/media/MediaScannerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v5, :cond_3
+
+    iget-object v5, p0, Lcom/android/providers/media/MediaScannerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    .line 568
+    const-string v5, "TAG"
+
+    const-string v6, "mWakeLock.release() at scan()"
+
+    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 569
     iget-object v5, p0, Lcom/android/providers/media/MediaScannerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v5}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 565
+    .line 571
+    :cond_3
     return-void
 
-    .line 553
+    .line 556
     :catch_0
     move-exception v0
 
-    .line 554
+    .line 557
     .local v0, e:Ljava/lang/Exception;
     const-string v5, "MediaScannerService"
 
@@ -2005,19 +2039,19 @@
     .parameter "mimeType"
 
     .prologue
-    .line 649
+    .line 655
     const-string v1, "external"
 
-    .line 661
+    .line 667
     .local v1, volumeName:Ljava/lang/String;
     invoke-direct {p0, v1}, Lcom/android/providers/media/MediaScannerService;->openDatabase(Ljava/lang/String;)V
 
-    .line 690
+    .line 696
     invoke-direct {p0}, Lcom/android/providers/media/MediaScannerService;->createMediaScanner()Lcom/htc/wrap/android/media/HtcWrapMediaScanner;
 
     move-result-object v0
 
-    .line 691
+    .line 697
     .local v0, scanner:Lcom/htc/wrap/android/media/HtcWrapMediaScanner;
     invoke-virtual {v0, p1, v1, p2}, Lcom/htc/wrap/android/media/HtcWrapMediaScanner;->scanSingleFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -2402,18 +2436,18 @@
     .parameter "locale"
 
     .prologue
-    .line 1192
+    .line 1195
     new-instance v1, Lcom/android/providers/media/SettingsModule;
 
     invoke-direct {v1, p0}, Lcom/android/providers/media/SettingsModule;-><init>(Landroid/content/Context;)V
 
-    .line 1193
+    .line 1196
     .local v1, settingsModule:Lcom/android/providers/media/SettingsModule;
     invoke-virtual {v1}, Lcom/android/providers/media/SettingsModule;->getDefaultLocale()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1194
+    .line 1197
     .local v0, defaultLocale:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -2423,11 +2457,11 @@
 
     if-gtz v2, :cond_1
 
-    .line 1195
+    .line 1198
     :cond_0
     move-object v0, p1
 
-    .line 1198
+    .line 1201
     :cond_1
     return-object v0
 .end method
@@ -2437,7 +2471,7 @@
     .parameter "intent"
 
     .prologue
-    .line 882
+    .line 888
     iget-object v0, p0, Lcom/android/providers/media/MediaScannerService;->mBinder:Landroid/media/IMediaScannerService$Stub;
 
     return-object v0
@@ -2447,10 +2481,10 @@
     .locals 6
 
     .prologue
-    .line 570
+    .line 576
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->resumeScan()V
 
-    .line 572
+    .line 578
     const-string v4, "power"
 
     invoke-virtual {p0, v4}, Lcom/android/providers/media/MediaScannerService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2459,7 +2493,7 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 573
+    .line 579
     .local v1, pm:Landroid/os/PowerManager;
     const/4 v4, 0x1
 
@@ -2471,7 +2505,7 @@
 
     iput-object v4, p0, Lcom/android/providers/media/MediaScannerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 574
+    .line 580
     const-string v4, "storage"
 
     invoke-virtual {p0, v4}, Lcom/android/providers/media/MediaScannerService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2480,7 +2514,7 @@
 
     check-cast v2, Landroid/os/storage/StorageManager;
 
-    .line 575
+    .line 581
     .local v2, storageManager:Landroid/os/storage/StorageManager;
     invoke-virtual {v2}, Landroid/os/storage/StorageManager;->getVolumePaths()[Ljava/lang/String;
 
@@ -2488,28 +2522,28 @@
 
     iput-object v4, p0, Lcom/android/providers/media/MediaScannerService;->mExternalStoragePaths:[Ljava/lang/String;
 
-    .line 577
+    .line 583
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 578
+    .line 584
     .local v0, f:Landroid/content/IntentFilter;
     const-string v4, "com.htc.content.Intent.ACTION_BACKGROUND_OP_STOP"
 
     invoke-virtual {v0, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 579
+    .line 585
     const-string v4, "com.htc.content.Intent.ACTION_BACKGROUND_OP_GO"
 
     invoke-virtual {v0, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 580
+    .line 586
     iget-object v4, p0, Lcom/android/providers/media/MediaScannerService;->mBackgroundTrafficLightReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v4, v0}, Lcom/android/providers/media/MediaScannerService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 585
+    .line 591
     new-instance v3, Ljava/lang/Thread;
 
     const/4 v4, 0x0
@@ -2518,11 +2552,11 @@
 
     invoke-direct {v3, v4, p0, v5}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 586
+    .line 592
     .local v3, thr:Ljava/lang/Thread;
     invoke-virtual {v3}, Ljava/lang/Thread;->start()V
 
-    .line 587
+    .line 593
     return-void
 .end method
 
@@ -2530,24 +2564,24 @@
     .locals 2
 
     .prologue
-    .line 619
+    .line 625
     invoke-virtual {p0}, Lcom/android/providers/media/MediaScannerService;->resumeScan()V
 
-    .line 620
+    .line 626
     iget-object v0, p0, Lcom/android/providers/media/MediaScannerService;->mBackgroundTrafficLightReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/android/providers/media/MediaScannerService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 622
+    .line 628
     :goto_0
     iget-object v0, p0, Lcom/android/providers/media/MediaScannerService;->mServiceLooper:Landroid/os/Looper;
 
     if-nez v0, :cond_0
 
-    .line 623
+    .line 629
     monitor-enter p0
 
-    .line 625
+    .line 631
     const-wide/16 v0, 0x64
 
     :try_start_0
@@ -2556,7 +2590,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 628
+    .line 634
     :goto_1
     :try_start_1
     monitor-exit p0
@@ -2572,16 +2606,16 @@
 
     throw v0
 
-    .line 630
+    .line 636
     :cond_0
     iget-object v0, p0, Lcom/android/providers/media/MediaScannerService;->mServiceLooper:Landroid/os/Looper;
 
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
-    .line 631
+    .line 637
     return-void
 
-    .line 626
+    .line 632
     :catch_0
     move-exception v0
 
@@ -2595,16 +2629,16 @@
     .parameter "startId"
 
     .prologue
-    .line 592
+    .line 598
     :goto_0
     iget-object v1, p0, Lcom/android/providers/media/MediaScannerService;->mServiceHandler:Lcom/android/providers/media/MediaScannerService$ServiceHandler;
 
     if-nez v1, :cond_0
 
-    .line 593
+    .line 599
     monitor-enter p0
 
-    .line 595
+    .line 601
     const-wide/16 v1, 0x64
 
     :try_start_0
@@ -2613,7 +2647,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 598
+    .line 604
     :goto_1
     :try_start_1
     monitor-exit p0
@@ -2629,11 +2663,11 @@
 
     throw v1
 
-    .line 601
+    .line 607
     :cond_0
     if-nez p1, :cond_1
 
-    .line 602
+    .line 608
     const-string v1, "MediaScannerService"
 
     const-string v2, "Intent is null in onStartCommand: "
@@ -2644,14 +2678,14 @@
 
     invoke-static {v1, v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 604
+    .line 610
     const/4 v1, 0x2
 
-    .line 613
+    .line 619
     :goto_2
     return v1
 
-    .line 607
+    .line 613
     :cond_1
     iget-object v1, p0, Lcom/android/providers/media/MediaScannerService;->mServiceHandler:Lcom/android/providers/media/MediaScannerService$ServiceHandler;
 
@@ -2659,28 +2693,28 @@
 
     move-result-object v0
 
-    .line 608
+    .line 614
     .local v0, msg:Landroid/os/Message;
     iput p3, v0, Landroid/os/Message;->arg1:I
 
-    .line 609
+    .line 615
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 610
+    .line 616
     iget-object v1, p0, Lcom/android/providers/media/MediaScannerService;->mServiceHandler:Lcom/android/providers/media/MediaScannerService$ServiceHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/providers/media/MediaScannerService$ServiceHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 613
+    .line 619
     const/4 v1, 0x3
 
     goto :goto_2
 
-    .line 596
+    .line 602
     .end local v0           #msg:Landroid/os/Message;
     :catch_0
     move-exception v1
@@ -2692,14 +2726,14 @@
     .locals 4
 
     .prologue
-    .line 1217
+    .line 1220
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/data/data/com.android.providers.media/pause_scan"
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1218
+    .line 1221
     .local v1, file:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -2707,22 +2741,22 @@
 
     if-nez v2, :cond_0
 
-    .line 1220
+    .line 1223
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1225
+    .line 1228
     :cond_0
     :goto_0
     return-void
 
-    .line 1221
+    .line 1224
     :catch_0
     move-exception v0
 
-    .line 1222
+    .line 1225
     .local v0, ex:Ljava/io/IOException;
     const-string v2, "MediaScannerService"
 
@@ -2737,14 +2771,14 @@
     .locals 4
 
     .prologue
-    .line 1228
+    .line 1231
     new-instance v1, Ljava/io/File;
 
     const-string v2, "/data/data/com.android.providers.media/pause_scan"
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1230
+    .line 1233
     .local v1, file:Ljava/io/File;
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
@@ -2753,7 +2787,7 @@
 
     if-nez v2, :cond_0
 
-    .line 1231
+    .line 1234
     const-string v2, "MediaScannerService"
 
     const-string v3, "Failed to delete file /data/data/com.android.providers.media/pause_scan"
@@ -2762,16 +2796,16 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1236
+    .line 1239
     :cond_0
     :goto_0
     return-void
 
-    .line 1233
+    .line 1236
     :catch_0
     move-exception v0
 
-    .line 1234
+    .line 1237
     .local v0, ex:Ljava/lang/SecurityException;
     const-string v2, "MediaScannerService"
 
@@ -2786,17 +2820,17 @@
     .locals 2
 
     .prologue
-    .line 635
+    .line 641
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 637
+    .line 643
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/providers/media/MediaScannerService;->mServiceLooper:Landroid/os/Looper;
 
-    .line 638
+    .line 644
     new-instance v0, Lcom/android/providers/media/MediaScannerService$ServiceHandler;
 
     const/4 v1, 0x0
@@ -2805,14 +2839,14 @@
 
     iput-object v0, p0, Lcom/android/providers/media/MediaScannerService;->mServiceHandler:Lcom/android/providers/media/MediaScannerService$ServiceHandler;
 
-    .line 642
+    .line 648
     const/16 v0, 0xb
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 645
+    .line 651
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 646
+    .line 652
     return-void
 .end method

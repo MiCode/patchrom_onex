@@ -39,6 +39,14 @@
     .end annotation
 .end method
 
+.method public abstract fetchCurrentBrightnessValue()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getProximitySensorActive()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {

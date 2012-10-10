@@ -28,6 +28,8 @@
 
 .field private static final DEVICE_VIVOW:S = 0xaas
 
+.field private static final PROJECT_CMCC:S = 0xdas
+
 .field private static final PROJECT_TELSTRA:S = 0x9fs
 
 .field private static final TAG:Ljava/lang/String; = "[CustomizeSetting]"
@@ -40,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 158
+    .line 159
     const/4 v0, -0x1
 
     sput v0, Lcom/htc/music/util/CustomizeSetting;->mSupportAmazon:I
@@ -62,12 +64,12 @@
     .locals 1
 
     .prologue
-    .line 155
+    .line 156
     const/4 v0, -0x1
 
     sput v0, Lcom/htc/music/util/CustomizeSetting;->mSupportAmazon:I
 
-    .line 156
+    .line 157
     return-void
 .end method
 
@@ -78,14 +80,14 @@
     .prologue
     const v1, 0x20800ca
 
-    .line 100
+    .line 101
     invoke-static {p0}, Lcom/htc/music/util/CustomizeSetting;->isVerizonStoreCase(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 102
+    .line 103
     :cond_0
     return v1
 .end method
@@ -95,21 +97,21 @@
     .parameter "context"
 
     .prologue
-    .line 93
+    .line 94
     invoke-static {p0}, Lcom/htc/music/util/CustomizeSetting;->isVerizonStoreCase(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0701c1
+    const v0, 0x7f0701c2
 
-    .line 95
+    .line 96
     :goto_0
     return v0
 
     :cond_0
-    const v0, 0x7f07010b
+    const v0, 0x7f07010c
 
     goto :goto_0
 .end method
@@ -119,7 +121,7 @@
     .parameter "context"
 
     .prologue
-    .line 161
+    .line 162
     const/4 v0, 0x0
 
     return v0
@@ -130,18 +132,18 @@
     .parameter "cxt"
 
     .prologue
-    .line 223
+    .line 224
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->getLaunchAmazonIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 225
+    .line 226
     .local v0, launchAmazonIntent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 226
+    .line 227
     .local v1, pm:Landroid/content/pm/PackageManager;
     const/high16 v3, 0x1
 
@@ -149,7 +151,7 @@
 
     move-result-object v2
 
-    .line 228
+    .line 229
     .local v2, shareApList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -159,7 +161,7 @@
 
     const/4 v3, 0x1
 
-    .line 229
+    .line 230
     :goto_0
     return v3
 
@@ -169,14 +171,36 @@
     goto :goto_0
 .end method
 
+.method public static isDeleteAllPlaylistEnable()Z
+    .locals 2
+
+    .prologue
+    .line 327
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/16 v1, 0xda
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public static isDolbyEnabled()Z
     .locals 3
 
     .prologue
-    .line 246
+    .line 247
     const/4 v0, 0x0
 
-    .line 247
+    .line 248
     .local v0, isDolbyEnabled:Z
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -188,11 +212,11 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 249
+    .line 250
     :cond_0
     const/4 v0, 0x1
 
-    .line 252
+    .line 253
     :cond_1
     return v0
 .end method
@@ -203,19 +227,19 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 37
+    .line 38
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isSupportMMC()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 42
+    .line 43
     :cond_0
     :goto_0
     return v0
 
-    .line 38
+    .line 39
     :cond_1
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isOrangeStoreCase()Z
 
@@ -223,14 +247,14 @@
 
     if-nez v1, :cond_0
 
-    .line 39
+    .line 40
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isTelstraStoreCase()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 42
+    .line 43
     const/4 v0, 0x0
 
     goto :goto_0
@@ -240,10 +264,10 @@
     .locals 1
 
     .prologue
-    .line 278
+    .line 279
     const/4 v0, 0x1
 
-    .line 287
+    .line 288
     .local v0, isGlideMode:Z
     return v0
 .end method
@@ -252,7 +276,7 @@
     .locals 1
 
     .prologue
-    .line 292
+    .line 293
     const/4 v0, 0x1
 
     return v0
@@ -262,7 +286,7 @@
     .locals 1
 
     .prologue
-    .line 320
+    .line 321
     const/4 v0, 0x1
 
     return v0
@@ -275,19 +299,19 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 85
+    .line 86
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isTelstraStoreCase()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 89
+    .line 90
     :cond_0
     :goto_0
     return v0
 
-    .line 86
+    .line 87
     :cond_1
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isOrangeStoreCase()Z
 
@@ -295,21 +319,21 @@
 
     if-nez v1, :cond_0
 
-    .line 87
+    .line 88
     invoke-static {p0}, Lcom/htc/music/util/CustomizeSetting;->isAmazonStoreCase(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 88
+    .line 89
     invoke-static {p0}, Lcom/htc/music/util/CustomizeSetting;->isVerizonStoreCase(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 89
+    .line 90
     const/4 v0, 0x0
 
     goto :goto_0
@@ -319,10 +343,10 @@
     .locals 4
 
     .prologue
-    .line 106
+    .line 107
     const/4 v0, 0x0
 
-    .line 108
+    .line 109
     .local v0, isMusicStoreEnabled:Z
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -353,18 +377,18 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 116
+    .line 117
     const-string v2, "ro.cid"
 
     invoke-static {v2}, Lcom/htc/wrap/android/os/HtcWrapSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 117
+    .line 118
     .local v1, phoneCID:Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 118
+    .line 119
     const-string v2, "ORANG202"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -381,11 +405,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 122
+    .line 123
     :cond_1
     const/4 v0, 0x1
 
-    .line 127
+    .line 128
     .end local v1           #phoneCID:Ljava/lang/String;
     :cond_2
     return v0
@@ -395,10 +419,10 @@
     .locals 1
 
     .prologue
-    .line 236
+    .line 237
     const/4 v0, 0x1
 
-    .line 242
+    .line 243
     .local v0, isSoundEnhancerEnabled:Z
     return v0
 .end method
@@ -408,7 +432,7 @@
     .parameter "context"
 
     .prologue
-    .line 269
+    .line 270
     invoke-static {}, Lcom/htc/music/util/CustomizeSetting;->isTelstraStoreCase()Z
 
     move-result v0
@@ -453,24 +477,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 209
+    .line 210
     if-nez p0, :cond_1
 
-    .line 215
+    .line 216
     :cond_0
     :goto_0
     return v2
 
-    .line 210
+    .line 211
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 211
+    .line 212
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 212
+    .line 213
     .local v0, pm:Landroid/content/pm/PackageManager;
     const/high16 v3, 0x1
 
@@ -478,7 +502,7 @@
 
     move-result-object v1
 
-    .line 214
+    .line 215
     .local v1, shareApList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -495,7 +519,7 @@
     .locals 1
 
     .prologue
-    .line 303
+    .line 304
     const/4 v0, 0x0
 
     return v0
@@ -505,14 +529,14 @@
     .locals 5
 
     .prologue
-    .line 50
+    .line 51
     const/4 v1, 0x0
 
-    .line 51
+    .line 52
     .local v1, phoneCID:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 54
+    .line 55
     .local v0, isSupportMMC:Z
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -549,14 +573,14 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 61
+    .line 62
     const-string v2, "ro.cid"
 
     invoke-static {v2}, Lcom/htc/wrap/android/os/HtcWrapSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 62
+    .line 63
     const-string v2, "[CustomizeSetting]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -579,10 +603,10 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 63
+    .line 64
     if-eqz v1, :cond_2
 
-    .line 64
+    .line 65
     const-string v2, "VODAP102"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -631,11 +655,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 72
+    .line 73
     :cond_1
     const/4 v0, 0x1
 
-    .line 77
+    .line 78
     :cond_2
     return v0
 .end method
@@ -645,7 +669,7 @@
     .parameter "context"
 
     .prologue
-    .line 316
+    .line 317
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->getLaunchVMMIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -661,10 +685,10 @@
     .locals 3
 
     .prologue
-    .line 131
+    .line 132
     const/4 v0, 0x0
 
-    .line 132
+    .line 133
     .local v0, isMusicStoreEnabled:Z
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -678,10 +702,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 134
+    .line 135
     const/4 v0, 0x1
 
-    .line 136
+    .line 137
     :cond_0
     return v0
 .end method
@@ -691,7 +715,7 @@
     .parameter "context"
 
     .prologue
-    .line 140
+    .line 141
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v2, 0x61
@@ -723,12 +747,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 145
+    .line 146
     invoke-static {}, Lcom/htc/music/util/MusicUtils;->getLaunchVerizonMODIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 146
+    .line 147
     .local v0, launchIntent:Landroid/content/Intent;
     invoke-static {p0, v0}, Lcom/htc/music/util/CustomizeSetting;->isStorePackageExist(Landroid/content/Context;Landroid/content/Intent;)Z
 
@@ -736,10 +760,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 147
+    .line 148
     const/4 v1, 0x1
 
-    .line 151
+    .line 152
     .end local v0           #launchIntent:Landroid/content/Intent;
     :goto_0
     return v1
@@ -755,7 +779,7 @@
     .parameter "context"
 
     .prologue
-    .line 259
+    .line 260
     invoke-static {p0}, Lcom/htc/music/util/CustomizeSetting;->isMusicStoreEnabled(Landroid/content/Context;)Z
 
     move-result v0
@@ -785,7 +809,7 @@
     .parameter "context"
 
     .prologue
-    .line 265
+    .line 266
     const/4 v0, 0x0
 
     return v0

@@ -77,18 +77,18 @@
     .locals 1
 
     .prologue
-    .line 250
+    .line 249
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 212
+    .line 211
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->applyMaskToDefault:Z
 
-    .line 251
+    .line 250
     invoke-virtual {p0}, Lcom/htc/graphics/drawable/UrlDrawable$Options;->reset()V
 
-    .line 252
+    .line 251
     return-void
 .end method
 
@@ -98,28 +98,28 @@
     .locals 2
 
     .prologue
-    .line 258
+    .line 257
     new-instance v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     invoke-direct {v0}, Lcom/htc/graphics/drawable/UrlDrawable$Options;-><init>()V
 
-    .line 259
+    .line 258
     .local v0, cloned:Lcom/htc/graphics/drawable/UrlDrawable$Options;
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->writeDisk:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->writeDisk:Z
 
-    .line 260
+    .line 259
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->roundify:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->roundify:Z
 
-    .line 261
+    .line 260
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->drawOnScroll:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->drawOnScroll:Z
 
-    .line 262
+    .line 261
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->forceDim:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
     invoke-virtual {v1}, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;->clone()Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
@@ -128,72 +128,72 @@
 
     iput-object v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->forceDim:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
-    .line 263
+    .line 262
     iget v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->minDim:I
 
     iput v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->minDim:I
 
-    .line 264
+    .line 263
     iget v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxDim:I
 
     iput v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxDim:I
 
-    .line 265
+    .line 264
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->defaultBitmap:Landroid/graphics/Bitmap;
 
     iput-object v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->defaultBitmap:Landroid/graphics/Bitmap;
 
-    .line 266
+    .line 265
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
     iput-object v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    .line 267
+    .line 266
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maskBitmap:Landroid/graphics/Bitmap;
 
     iput-object v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maskBitmap:Landroid/graphics/Bitmap;
 
-    .line 268
+    .line 267
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->applyMaskToDefault:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->applyMaskToDefault:Z
 
-    .line 269
+    .line 268
     iget v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
     iput v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
-    .line 270
+    .line 269
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->needSendRedrawMsg:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->needSendRedrawMsg:Z
 
-    .line 271
+    .line 270
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->useApacheHttpClient:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->useApacheHttpClient:Z
 
-    .line 272
+    .line 271
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->saveDefaultImageWhenDownloadFail:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->saveDefaultImageWhenDownloadFail:Z
 
-    .line 273
+    .line 272
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->preferImageId:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->preferImageId:Ljava/lang/String;
 
-    .line 274
+    .line 273
     iget-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->checkDefaultProxy:Z
 
     iput-boolean v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->checkDefaultProxy:Z
 
-    .line 275
+    .line 274
     iget v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxFetchedImageDim:I
 
     iput v1, v0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxFetchedImageDim:I
 
-    .line 276
+    .line 275
     return-object v0
 .end method
 
@@ -206,7 +206,7 @@
     .end annotation
 
     .prologue
-    .line 123
+    .line 122
     invoke-virtual {p0}, Lcom/htc/graphics/drawable/UrlDrawable$Options;->clone()Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     move-result-object v0
@@ -218,7 +218,7 @@
     .locals 1
 
     .prologue
-    .line 382
+    .line 381
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->applyMaskToDefault:Z
 
     return v0
@@ -228,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 431
+    .line 430
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->checkDefaultProxy:Z
 
     return v0
@@ -238,7 +238,7 @@
     .locals 1
 
     .prologue
-    .line 358
+    .line 357
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->defaultBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -248,7 +248,7 @@
     .locals 1
 
     .prologue
-    .line 326
+    .line 325
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->drawOnScroll:Z
 
     return v0
@@ -258,7 +258,7 @@
     .locals 1
 
     .prologue
-    .line 334
+    .line 333
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->forceDim:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
     return-object v0
@@ -268,7 +268,7 @@
     .locals 1
 
     .prologue
-    .line 374
+    .line 373
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maskBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -278,7 +278,7 @@
     .locals 1
 
     .prologue
-    .line 350
+    .line 349
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxDim:I
 
     return v0
@@ -288,7 +288,7 @@
     .locals 1
 
     .prologue
-    .line 439
+    .line 438
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxFetchedImageDim:I
 
     return v0
@@ -298,7 +298,7 @@
     .locals 1
 
     .prologue
-    .line 342
+    .line 341
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->minDim:I
 
     return v0
@@ -308,7 +308,7 @@
     .locals 1
 
     .prologue
-    .line 398
+    .line 397
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->needSendRedrawMsg:Z
 
     return v0
@@ -318,7 +318,7 @@
     .locals 1
 
     .prologue
-    .line 366
+    .line 365
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -328,7 +328,7 @@
     .locals 1
 
     .prologue
-    .line 390
+    .line 389
     iget v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
     return v0
@@ -338,7 +338,7 @@
     .locals 1
 
     .prologue
-    .line 423
+    .line 422
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->preferImageId:Ljava/lang/String;
 
     return-object v0
@@ -348,7 +348,7 @@
     .locals 1
 
     .prologue
-    .line 318
+    .line 317
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->roundify:Z
 
     return v0
@@ -358,7 +358,7 @@
     .locals 1
 
     .prologue
-    .line 414
+    .line 413
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->saveDefaultImageWhenDownloadFail:Z
 
     return v0
@@ -368,7 +368,7 @@
     .locals 1
 
     .prologue
-    .line 310
+    .line 309
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->writeDisk:Z
 
     return v0
@@ -378,7 +378,7 @@
     .locals 1
 
     .prologue
-    .line 406
+    .line 405
     iget-boolean v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->useApacheHttpClient:Z
 
     return v0
@@ -394,70 +394,70 @@
 
     const/4 v1, 0x0
 
-    .line 287
+    .line 286
     iput-boolean v3, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->writeDisk:Z
 
-    .line 288
+    .line 287
     iput-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->roundify:Z
 
-    .line 289
+    .line 288
     iput-boolean v3, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->drawOnScroll:Z
 
-    .line 290
+    .line 289
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->forceDim:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
     if-nez v0, :cond_0
 
-    .line 291
+    .line 290
     new-instance v0, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
     invoke-direct {v0}, Lcom/htc/graphics/drawable/UrlDrawable$Dimension;-><init>()V
 
     iput-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->forceDim:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
-    .line 295
+    .line 294
     :goto_0
     iput v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->minDim:I
 
-    .line 296
+    .line 295
     iput v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxDim:I
 
-    .line 297
+    .line 296
     iput-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->defaultBitmap:Landroid/graphics/Bitmap;
 
-    .line 298
+    .line 297
     iput-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    .line 299
+    .line 298
     iput-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maskBitmap:Landroid/graphics/Bitmap;
 
-    .line 300
+    .line 299
     const/16 v0, 0x12
 
     iput v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
-    .line 301
+    .line 300
     iput-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->needSendRedrawMsg:Z
 
-    .line 302
+    .line 301
     iput-boolean v3, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->useApacheHttpClient:Z
 
-    .line 303
+    .line 302
     iput-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->saveDefaultImageWhenDownloadFail:Z
 
-    .line 304
+    .line 303
     iput-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->preferImageId:Ljava/lang/String;
 
-    .line 305
+    .line 304
     iput-boolean v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->checkDefaultProxy:Z
 
-    .line 306
+    .line 305
     iput v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxFetchedImageDim:I
 
-    .line 307
+    .line 306
     return-void
 
-    .line 293
+    .line 292
     :cond_0
     iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->forceDim:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
@@ -471,10 +471,10 @@
     .parameter "applyMaskToDefault"
 
     .prologue
-    .line 386
+    .line 385
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->applyMaskToDefault:Z
 
-    .line 387
+    .line 386
     return-void
 .end method
 
@@ -483,10 +483,10 @@
     .parameter "checkDefaultProxy"
 
     .prologue
-    .line 435
+    .line 434
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->checkDefaultProxy:Z
 
-    .line 436
+    .line 435
     return-void
 .end method
 
@@ -495,10 +495,10 @@
     .parameter "defaultBitmap"
 
     .prologue
-    .line 362
+    .line 361
     iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->defaultBitmap:Landroid/graphics/Bitmap;
 
-    .line 363
+    .line 362
     return-void
 .end method
 
@@ -507,10 +507,10 @@
     .parameter "drawOnScroll"
 
     .prologue
-    .line 330
+    .line 329
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->drawOnScroll:Z
 
-    .line 331
+    .line 330
     return-void
 .end method
 
@@ -519,10 +519,10 @@
     .parameter "forceDim"
 
     .prologue
-    .line 338
+    .line 337
     iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->forceDim:Lcom/htc/graphics/drawable/UrlDrawable$Dimension;
 
-    .line 339
+    .line 338
     return-void
 .end method
 
@@ -531,10 +531,10 @@
     .parameter "maskBitmap"
 
     .prologue
-    .line 378
+    .line 377
     iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maskBitmap:Landroid/graphics/Bitmap;
 
-    .line 379
+    .line 378
     return-void
 .end method
 
@@ -543,10 +543,10 @@
     .parameter "maxDim"
 
     .prologue
-    .line 354
+    .line 353
     iput p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxDim:I
 
-    .line 355
+    .line 354
     return-void
 .end method
 
@@ -555,10 +555,10 @@
     .parameter "maxFetchedImageDim"
 
     .prologue
-    .line 443
+    .line 442
     iput p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->maxFetchedImageDim:I
 
-    .line 444
+    .line 443
     return-void
 .end method
 
@@ -567,10 +567,10 @@
     .parameter "minDim"
 
     .prologue
-    .line 346
+    .line 345
     iput p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->minDim:I
 
-    .line 347
+    .line 346
     return-void
 .end method
 
@@ -579,10 +579,10 @@
     .parameter "needSendRedrawMsg"
 
     .prologue
-    .line 402
+    .line 401
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->needSendRedrawMsg:Z
 
-    .line 403
+    .line 402
     return-void
 .end method
 
@@ -591,10 +591,10 @@
     .parameter "overlayBitmap"
 
     .prologue
-    .line 370
+    .line 369
     iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    .line 371
+    .line 370
     return-void
 .end method
 
@@ -603,10 +603,10 @@
     .parameter "overlayPos"
 
     .prologue
-    .line 394
+    .line 393
     iput p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
-    .line 395
+    .line 394
     return-void
 .end method
 
@@ -615,10 +615,10 @@
     .parameter "preferImageId"
 
     .prologue
-    .line 427
+    .line 426
     iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->preferImageId:Ljava/lang/String;
 
-    .line 428
+    .line 427
     return-void
 .end method
 
@@ -627,10 +627,10 @@
     .parameter "roundify"
 
     .prologue
-    .line 322
+    .line 321
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->roundify:Z
 
-    .line 323
+    .line 322
     return-void
 .end method
 
@@ -639,10 +639,10 @@
     .parameter "saveDefaultImageWhenDownloadFail"
 
     .prologue
-    .line 419
+    .line 418
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->saveDefaultImageWhenDownloadFail:Z
 
-    .line 420
+    .line 419
     return-void
 .end method
 
@@ -651,10 +651,10 @@
     .parameter "writeDisk"
 
     .prologue
-    .line 314
+    .line 313
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->writeDisk:Z
 
-    .line 315
+    .line 314
     return-void
 .end method
 
@@ -663,9 +663,9 @@
     .parameter "useApacheHttpClient"
 
     .prologue
-    .line 410
+    .line 409
     iput-boolean p1, p0, Lcom/htc/graphics/drawable/UrlDrawable$Options;->useApacheHttpClient:Z
 
-    .line 411
+    .line 410
     return-void
 .end method

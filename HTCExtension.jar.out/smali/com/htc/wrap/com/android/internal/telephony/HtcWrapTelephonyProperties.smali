@@ -197,157 +197,157 @@
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_SIM_NUMERIC_TYPES:Ljava/lang/String;
 
-    .line 109
+    .line 105
     const-string v0, "gsm.sim.state"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_SIM_STATE:Ljava/lang/String;
 
-    .line 112
+    .line 108
     const-string v0, "gsm.sim.change"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_SIM_CHANGE:Ljava/lang/String;
 
-    .line 113
+    .line 109
     const-string v0, "gsm.cb.max.channel"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_CB_MAX_CHANNEL:Ljava/lang/String;
 
-    .line 119
+    .line 115
     const-string v0, "gsm.cb.lp"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_CB_LP:Ljava/lang/String;
 
-    .line 127
+    .line 123
     const-string v0, "gsm.sim.operator.numeric"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_NUMERIC:Ljava/lang/String;
 
-    .line 137
+    .line 133
     const-string v0, "gsm.sim.operator.alpha"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ALPHA:Ljava/lang/String;
 
-    .line 145
+    .line 141
     const-string v0, "gsm.sim.operator.iso-country"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ISO_COUNTRY:Ljava/lang/String;
 
-    .line 156
+    .line 152
     const-string v0, "gsm.network.type"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_DATA_NETWORK_TYPE:Ljava/lang/String;
 
-    .line 169
+    .line 165
     const-string v0, "gsm.data.network.type"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_GSM_DATA_NETWORK_TYPE:Ljava/lang/String;
 
-    .line 176
+    .line 172
     const-string v0, "gsm.sim.cbmi.channel"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_CB_CHANNEL:Ljava/lang/String;
 
-    .line 205
+    .line 201
     const-string v0, "gsm.sim.types"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_SIM_TYPES:Ljava/lang/String;
 
-    .line 211
+    .line 207
     const-string v0, "gsm.pdp.power.saving"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_SUPER_POWER_SAVING:Ljava/lang/String;
 
-    .line 388
+    .line 384
     const-string v0, "gsm.lockscreen.mode.status"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_LOCKSCREEN_MODE_STATUS:Ljava/lang/String;
 
-    .line 396
+    .line 392
     const-string v0, "gsm.cdma.uim.id"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_UIM_ID:Ljava/lang/String;
 
-    .line 413
+    .line 409
     const-string v0, "gsm.icc.sim.state"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_SIM_STATE:Ljava/lang/String;
 
-    .line 414
+    .line 410
     const-string v0, "gsm.icc.uim.state"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_UIM_STATE:Ljava/lang/String;
 
-    .line 415
+    .line 411
     const-string v0, "gsm.icc.sub.state"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_SUB_STATE:Ljava/lang/String;
 
-    .line 416
+    .line 412
     const-string v0, "gsm.gsm.sim.operator.numeric"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_NUMERIC_GSM:Ljava/lang/String;
 
-    .line 417
+    .line 413
     const-string v0, "gsm.cdma.uim.operator.numeric"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_NUMERIC_CDMA:Ljava/lang/String;
 
-    .line 418
+    .line 414
     const-string v0, "gsm.sub.icc.operator.numeric"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_NUMERIC_SUB_PHONE:Ljava/lang/String;
 
-    .line 419
+    .line 415
     const-string v0, "gsm.gsm.sim.operator.alpha"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ALPHA_GSM:Ljava/lang/String;
 
-    .line 420
+    .line 416
     const-string v0, "gsm.cdma.uim.operator.alpha"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ALPHA_CDMA:Ljava/lang/String;
 
-    .line 421
+    .line 417
     const-string v0, "gsm.sub.icc.operator.alpha"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ALPHA_SUB_PHONE:Ljava/lang/String;
 
-    .line 422
+    .line 418
     const-string v0, "gsm.gsm.sim.oprt.iso-country"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ISO_COUNTRY_GSM:Ljava/lang/String;
 
-    .line 423
+    .line 419
     const-string v0, "gsm.cdma.uim.oprt.iso-country"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ISO_COUNTRY_CDMA:Ljava/lang/String;
 
-    .line 424
+    .line 420
     const-string v0, "gsm.sub.icc.oprt.iso-country"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_ICC_OPERATOR_ISO_COUNTRY_SUB_PHONE:Ljava/lang/String;
 
-    .line 425
+    .line 421
     const-string v0, "gsm.gsm.network.type"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_DATA_NETWORK_TYPE_GSM:Ljava/lang/String;
 
-    .line 426
+    .line 422
     const-string v0, "gsm.cdma.network.type"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_DATA_NETWORK_TYPE_CDMA:Ljava/lang/String;
 
-    .line 427
+    .line 423
     const-string v0, "gsm.sub.network.type"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_DATA_NETWORK_TYPE_SUB_PHONE:Ljava/lang/String;
 
-    .line 448
+    .line 436
     const-string v0, "cdma.dial.type"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_DIAL_TYPE:Ljava/lang/String;
 
-    .line 449
+    .line 437
     const-string v0, "gsm.unblock.pin2.from"
 
     sput-object v0, Lcom/htc/wrap/com/android/internal/telephony/HtcWrapTelephonyProperties;->PROPERTY_UNBLOCK_PIN2_FROM:Ljava/lang/String;

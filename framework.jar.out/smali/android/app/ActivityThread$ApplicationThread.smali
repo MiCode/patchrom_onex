@@ -3990,6 +3990,23 @@
     return-void
 .end method
 
+.method public scheduleReportAppTransitionEnd(Landroid/os/IBinder;)V
+    .locals 2
+    .parameter "token"
+
+    .prologue
+    .line 1154
+    iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread;->this$0:Landroid/app/ActivityThread;
+
+    const/16 v1, 0xca
+
+    #calls: Landroid/app/ActivityThread;->queueOrSendMessage(ILjava/lang/Object;)V
+    invoke-static {v0, v1, p1}, Landroid/app/ActivityThread;->access$300(Landroid/app/ActivityThread;ILjava/lang/Object;)V
+
+    .line 1155
+    return-void
+.end method
+
 .method public final scheduleResumeActivity(Landroid/os/IBinder;Z)V
     .locals 3
     .parameter "token"

@@ -37,17 +37,17 @@
     invoke-direct/range {p0 .. p5}, Lcom/android/internal/os/PkgUsageStats;-><init>(Ljava/lang/String;IJLjava/util/Map;)V
 
     .line 9
-    iget-object v0, p0, Lcom/htc/wrap/com/android/internal/os/HtcWrapPkgUsageStats;->packageName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/internal/os/PkgUsageStats;->packageName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/htc/wrap/com/android/internal/os/HtcWrapPkgUsageStats;->HtcpackageName:Ljava/lang/String;
 
     .line 10
-    iget v0, p0, Lcom/htc/wrap/com/android/internal/os/HtcWrapPkgUsageStats;->launchCount:I
+    iget v0, p0, Lcom/android/internal/os/PkgUsageStats;->launchCount:I
 
     iput v0, p0, Lcom/htc/wrap/com/android/internal/os/HtcWrapPkgUsageStats;->HtclaunchCount:I
 
     .line 11
-    iget-wide v0, p0, Lcom/htc/wrap/com/android/internal/os/HtcWrapPkgUsageStats;->usageTime:J
+    iget-wide v0, p0, Lcom/android/internal/os/PkgUsageStats;->usageTime:J
 
     iput-wide v0, p0, Lcom/htc/wrap/com/android/internal/os/HtcWrapPkgUsageStats;->HtcusageTime:J
 

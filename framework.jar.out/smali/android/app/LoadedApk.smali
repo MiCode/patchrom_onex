@@ -125,7 +125,7 @@
     const/4 v2, 0x0
 
     .line 118
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 89
     new-instance v0, Landroid/view/CompatibilityInfoHolder;
@@ -172,7 +172,7 @@
     iput-object p2, p0, Landroid/app/LoadedApk;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     .line 121
-    iget-object v0, p2, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
+    iget-object v0, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;
 
@@ -322,7 +322,7 @@
     const/4 v1, 0x0
 
     .line 152
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 89
     new-instance v0, Landroid/view/CompatibilityInfoHolder;
@@ -375,7 +375,7 @@
     .line 155
     iget-object v0, p0, Landroid/app/LoadedApk;->mApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iput-object p2, v0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
+    iput-object p2, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     .line 156
     iput-object p2, p0, Landroid/app/LoadedApk;->mPackageName:Ljava/lang/String;

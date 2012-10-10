@@ -70,7 +70,7 @@
 
     .line 533
     .local v0, context:Landroid/content/Context;
-    const-string/jumbo v4, "layout_inflater"
+    const-string v4, "layout_inflater"
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

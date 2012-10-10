@@ -23,7 +23,7 @@
         "<",
         "Lcom/android/camera/OneValueEventArgs",
         "<",
-        "Landroid/view/SurfaceHolder;",
+        "Lcom/android/camera/io/StorageSlot;",
         ">;>;"
     }
 .end annotation
@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 6230
+    .line 6379
     iput-object p1, p0, Lcom/android/camera/HTCCamera$25;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -61,47 +61,31 @@
             "<",
             "Lcom/android/camera/OneValueEventArgs",
             "<",
-            "Landroid/view/SurfaceHolder;",
+            "Lcom/android/camera/io/StorageSlot;",
             ">;>;",
             "Ljava/lang/Object;",
             "Lcom/android/camera/OneValueEventArgs",
             "<",
-            "Landroid/view/SurfaceHolder;",
+            "Lcom/android/camera/io/StorageSlot;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 6234
-    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;>;"
-    .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;"
-    iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    .line 6235
+    .line 6383
+    .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/io/StorageSlot;>;>;"
+    .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Lcom/android/camera/io/StorageSlot;>;"
     iget-object v1, p0, Lcom/android/camera/HTCCamera$25;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
 
-    check-cast v0, Landroid/view/SurfaceHolder;
+    check-cast v0, Lcom/android/camera/io/StorageSlot;
 
-    #calls: Lcom/android/camera/HTCCamera;->onPreviewSurfaceDestroyed(Landroid/view/SurfaceHolder;)V
-    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4600(Lcom/android/camera/HTCCamera;Landroid/view/SurfaceHolder;)V
+    #calls: Lcom/android/camera/HTCCamera;->onStorageEjected(Lcom/android/camera/io/StorageSlot;)V
+    invoke-static {v1, v0}, Lcom/android/camera/HTCCamera;->access$4700(Lcom/android/camera/HTCCamera;Lcom/android/camera/io/StorageSlot;)V
 
-    .line 6238
-    :goto_0
+    .line 6384
     return-void
-
-    .line 6237
-    :cond_0
-    const-string v0, "HTCCamera"
-
-    const-string v1, "No SurfaceHolder brought by event"
-
-    invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
 .end method
 
 .method public bridge synthetic onEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
@@ -111,7 +95,7 @@
     .parameter "x2"
 
     .prologue
-    .line 6230
+    .line 6379
     check-cast p3, Lcom/android/camera/OneValueEventArgs;
 
     .end local p3

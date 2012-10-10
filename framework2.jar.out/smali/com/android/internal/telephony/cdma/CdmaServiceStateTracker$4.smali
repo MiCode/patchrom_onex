@@ -1,5 +1,5 @@
-.class synthetic Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;
-.super Ljava/lang/Object;
+.class Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;
+.super Landroid/os/Handler;
 .source "CdmaServiceStateTracker.java"
 
 
@@ -9,135 +9,57 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
+# instance fields
+.field final synthetic this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)V
+    .locals 0
+    .parameter
 
     .prologue
-    .line 1963
-    invoke-static {}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->values()[Lcom/android/internal/telephony/CommandsInterface$RadioState;
+    .line 3694
+    iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
-    move-result-object v0
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 1
+    .parameter "msg"
 
-    :try_start_0
-    sget-object v0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
+    .prologue
+    .line 3696
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_UNAVAILABLE:Lcom/android/internal/telephony/CommandsInterface$RadioState;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_4
-
+    .line 3701
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_OFF:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->SIM_NOT_READY:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->SIM_LOCKED_OR_ABSENT:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_1
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->$SwitchMap$com$android$internal$telephony$CommandsInterface$RadioState:[I
-
-    sget-object v1, Lcom/android/internal/telephony/CommandsInterface$RadioState;->SIM_READY:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/CommandsInterface$RadioState;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_0
-
-    :goto_4
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 3698
+    :pswitch_0
+    iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$4;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
-    goto :goto_4
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_4
-    move-exception v0
+    #calls: Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->registerForDataServiceStateChanged()V
+    invoke-static {v0}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->access$800(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)V
 
     goto :goto_0
+
+    .line 3696
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

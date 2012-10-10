@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 886
+    .line 892
     iput-object p1, p0, Lcom/android/providers/media/MediaScannerService$1;->this$0:Lcom/android/providers/media/MediaScannerService;
 
     invoke-direct {p0}, Landroid/media/IMediaScannerService$Stub;-><init>()V
@@ -41,26 +41,26 @@
     .parameter "listener"
 
     .prologue
-    .line 892
+    .line 898
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 893
+    .line 899
     .local v0, args:Landroid/os/Bundle;
     const-string v1, "filepath"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 894
+    .line 900
     const-string v1, "mimetype"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 895
+    .line 901
     if-eqz p3, :cond_0
 
-    .line 896
+    .line 902
     const-string v1, "listener"
 
     invoke-interface {p3}, Landroid/media/IMediaScannerListener;->asBinder()Landroid/os/IBinder;
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putIBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 898
+    .line 904
     :cond_0
     iget-object v1, p0, Lcom/android/providers/media/MediaScannerService$1;->this$0:Lcom/android/providers/media/MediaScannerService;
 
@@ -87,7 +87,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/providers/media/MediaScannerService;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 900
+    .line 906
     return-void
 .end method
 
@@ -97,11 +97,11 @@
     .parameter "mimeType"
 
     .prologue
-    .line 903
+    .line 909
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/providers/media/MediaScannerService$1;->requestScanFile(Ljava/lang/String;Ljava/lang/String;Landroid/media/IMediaScannerListener;)V
 
-    .line 904
+    .line 910
     return-void
 .end method

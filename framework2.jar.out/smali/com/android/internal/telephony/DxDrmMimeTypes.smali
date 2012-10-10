@@ -49,15 +49,15 @@
 
     const/4 v2, 0x1
 
-    .line 40
+    .line 53
     if-nez p0, :cond_1
 
-    .line 56
+    .line 69
     :cond_0
     :goto_0
     return v1
 
-    .line 43
+    .line 56
     :cond_1
     const-string v3, ";"
 
@@ -65,18 +65,18 @@
 
     move-result v0
 
-    .line 44
+    .line 57
     .local v0, index:I
     const/4 v3, -0x1
 
     if-le v0, v3, :cond_2
 
-    .line 45
+    .line 58
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 48
+    .line 61
     :cond_2
     const-string v3, "application/vnd.oma.drm.rights+xml"
 
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 49
+    .line 62
     :cond_3
     const-string v3, "application/vnd.oma.drm.rights+wbxml"
 
@@ -104,7 +104,7 @@
 
     goto :goto_0
 
-    .line 51
+    .line 64
     :cond_4
     const-string v3, "application/vnd.oma.drm.roap-trigger+xml"
 
@@ -118,7 +118,7 @@
 
     goto :goto_0
 
-    .line 52
+    .line 65
     :cond_5
     const-string v3, "application/vnd.oma.drm.roap-trigger+wbxml"
 
@@ -132,7 +132,7 @@
 
     goto :goto_0
 
-    .line 53
+    .line 66
     :cond_6
     const-string v3, "application/vnd.oma.drm.ro+xml"
 
@@ -146,7 +146,7 @@
 
     goto :goto_0
 
-    .line 54
+    .line 67
     :cond_7
     const-string v3, "application/vnd.oma.drm.roap-pdu+xml"
 
@@ -168,7 +168,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 60
+    .line 74
     const-string v1, "application/vnd.oma.drm.message"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -177,12 +177,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 64
+    .line 78
     :cond_0
     :goto_0
     return v0
 
-    .line 61
+    .line 75
     :cond_1
     const-string v1, "application/vnd.oma.drm.rights+xml"
 
@@ -192,7 +192,7 @@
 
     if-nez v1, :cond_0
 
-    .line 62
+    .line 76
     const-string v1, "application/vnd.oma.drm.rights+wbxml"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -201,7 +201,7 @@
 
     if-nez v1, :cond_0
 
-    .line 63
+    .line 77
     const-string v1, "application/vnd.oma.drm.content"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -210,7 +210,7 @@
 
     if-nez v1, :cond_0
 
-    .line 64
+    .line 78
     const/4 v0, 0x0
 
     goto :goto_0
@@ -223,19 +223,19 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 69
+    .line 84
     invoke-static {p0}, Lcom/android/internal/telephony/DxDrmMimeTypes;->isOmaV2Rights(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 73
+    .line 88
     :cond_0
     :goto_0
     return v0
 
-    .line 71
+    .line 86
     :cond_1
     const-string v1, "application/vnd.oma.drm.dcf"
 
@@ -245,7 +245,7 @@
 
     if-nez v1, :cond_0
 
-    .line 73
+    .line 88
     const/4 v0, 0x0
 
     goto :goto_0
@@ -258,7 +258,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 78
+    .line 94
     const-string v1, "application/vnd.oma.drm.roap-trigger+xml"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -267,12 +267,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 83
+    .line 99
     :cond_0
     :goto_0
     return v0
 
-    .line 79
+    .line 95
     :cond_1
     const-string v1, "application/vnd.oma.drm.roap-trigger+wbxml"
 
@@ -282,7 +282,7 @@
 
     if-nez v1, :cond_0
 
-    .line 80
+    .line 96
     const-string v1, "application/vnd.oma.drm.ro+xml"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -291,7 +291,7 @@
 
     if-nez v1, :cond_0
 
-    .line 81
+    .line 97
     const-string v1, "application/vnd.oma.drm.roap-pdu+xml"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -300,7 +300,7 @@
 
     if-nez v1, :cond_0
 
-    .line 83
+    .line 99
     const/4 v0, 0x0
 
     goto :goto_0

@@ -27,13 +27,13 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 218
+    .line 220
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 219
+    .line 221
     iput v0, p0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;->volume:I
 
-    .line 220
+    .line 222
     iput v0, p0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;->originalVolume:I
 
     return-void

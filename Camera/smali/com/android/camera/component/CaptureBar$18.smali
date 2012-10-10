@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 945
+    .line 1040
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -70,7 +70,7 @@
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Ljava/lang/Boolean;>;"
     const/4 v4, 0x1
 
-    .line 949
+    .line 1044
     iget-object v2, p2, Lcom/android/camera/property/PropertyChangedEventArgs;->newValue:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Boolean;
@@ -81,30 +81,30 @@
 
     if-eqz v2, :cond_1
 
-    .line 951
+    .line 1046
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
     iget-object v3, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_CaptureBar:Landroid/view/View;
-    invoke-static {v3}, Lcom/android/camera/component/CaptureBar;->access$3600(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
+    invoke-static {v3}, Lcom/android/camera/component/CaptureBar;->access$3800(Lcom/android/camera/component/CaptureBar;)Landroid/view/View;
 
     move-result-object v3
 
     invoke-virtual {v2, v3, v4, v4}, Lcom/android/camera/component/CaptureBar;->showUI(Landroid/view/View;ZZ)V
 
-    .line 952
+    .line 1047
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->updateButtonEnableStates()V
-    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$3700(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$3900(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 983
+    .line 1078
     :cond_0
     :goto_0
     return-void
 
-    .line 956
+    .line 1051
     :cond_1
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -112,7 +112,7 @@
 
     move-result-object v0
 
-    .line 957
+    .line 1052
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v2, v0, Lcom/android/camera/HTCCamera;->isActivityPaused:Lcom/android/camera/property/Property;
 
@@ -128,12 +128,12 @@
 
     if-nez v2, :cond_2
 
-    .line 959
+    .line 1054
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->getFocusingState()I
 
     move-result v1
 
-    .line 960
+    .line 1055
     .local v1, focusingState:I
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -145,7 +145,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 962
+    .line 1057
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #getter for: Lcom/android/camera/component/CaptureBar;->m_IsTakingPicture:Z
@@ -155,7 +155,7 @@
 
     if-nez v2, :cond_3
 
-    .line 964
+    .line 1059
     iget-object v2, v0, Lcom/android/camera/HTCCamera;->selfTimerValue:Lcom/android/camera/property/Property;
 
     invoke-virtual {v2}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -170,20 +170,20 @@
 
     if-nez v2, :cond_0
 
-    .line 966
+    .line 1061
     packed-switch v1, :pswitch_data_0
 
-    .line 981
+    .line 1076
     .end local v1           #focusingState:I
     :cond_2
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->hideCaptureBar()V
-    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$2000(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v2}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;)V
 
     goto :goto_0
 
-    .line 970
+    .line 1065
     .restart local v1       #focusingState:I
     :pswitch_0
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
@@ -207,7 +207,7 @@
 
     goto :goto_0
 
-    .line 975
+    .line 1070
     :cond_3
     iget-object v2, p0, Lcom/android/camera/component/CaptureBar$18;->this$0:Lcom/android/camera/component/CaptureBar;
 
@@ -246,7 +246,7 @@
 
     goto :goto_0
 
-    .line 966
+    .line 1061
     nop
 
     :pswitch_data_0

@@ -31,7 +31,23 @@
     .end annotation
 .end method
 
-.method public abstract windowsDrawn(Z)V
+.method public abstract reportAppTransitionEnd()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract windowsDrawn()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract windowsDrawn2()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

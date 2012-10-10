@@ -55,12 +55,12 @@
     .parameter
 
     .prologue
-    .line 4391
+    .line 4453
     iput-object p1, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4392
+    .line 4454
     #getter for: Lcom/htc/widget/HtcAbsListView;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/htc/widget/HtcAbsListView;->access$3000(Lcom/htc/widget/HtcAbsListView;)Landroid/content/Context;
 
@@ -76,7 +76,7 @@
 
     iput v0, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mExtraScroll:I
 
-    .line 4393
+    .line 4455
     return-void
 .end method
 
@@ -86,7 +86,7 @@
     .locals 31
 
     .prologue
-    .line 4533
+    .line 4595
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -121,12 +121,12 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 4704
+    .line 4766
     :cond_0
     :goto_0
     return-void
 
-    .line 4537
+    .line 4599
     :cond_1
     move-object/from16 v0, p0
 
@@ -138,7 +138,7 @@
 
     move-result v16
 
-    .line 4538
+    .line 4600
     .local v16, listHeight:I
     move-object/from16 v0, p0
 
@@ -150,7 +150,7 @@
 
     iget v6, v0, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    .line 4540
+    .line 4602
     .local v6, firstPos:I
     move-object/from16 v0, p0
 
@@ -162,7 +162,7 @@
 
     goto :goto_0
 
-    .line 4542
+    .line 4604
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -176,15 +176,15 @@
 
     add-int/lit8 v13, v27, -0x1
 
-    .line 4543
+    .line 4605
     .local v13, lastViewIndex:I
     add-int v9, v6, v13
 
-    .line 4545
+    .line 4607
     .local v9, lastPos:I
     if-ltz v13, :cond_0
 
-    .line 4549
+    .line 4611
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
@@ -195,7 +195,7 @@
 
     if-ne v9, v0, :cond_2
 
-    .line 4551
+    .line 4613
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -210,7 +210,7 @@
 
     goto :goto_0
 
-    .line 4555
+    .line 4617
     :cond_2
     move-object/from16 v0, p0
 
@@ -224,23 +224,23 @@
 
     move-result-object v10
 
-    .line 4556
+    .line 4618
     .local v10, lastView:Landroid/view/View;
     invoke-virtual {v10}, Landroid/view/View;->getHeight()I
 
     move-result v12
 
-    .line 4557
+    .line 4619
     .local v12, lastViewHeight:I
     invoke-virtual {v10}, Landroid/view/View;->getTop()I
 
     move-result v15
 
-    .line 4558
+    .line 4620
     .local v15, lastViewTop:I
     sub-int v14, v16, v15
 
-    .line 4559
+    .line 4621
     .local v14, lastViewPixelsShowing:I
     move-object/from16 v0, p0
 
@@ -264,7 +264,7 @@
 
     iget v5, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mExtraScroll:I
 
-    .line 4561
+    .line 4623
     .local v5, extraScroll:I
     :goto_1
     move-object/from16 v0, p0
@@ -285,12 +285,12 @@
 
     invoke-virtual/range {v27 .. v29}, Lcom/htc/widget/HtcAbsListView;->smoothScrollBy(II)V
 
-    .line 4564
+    .line 4626
     move-object/from16 v0, p0
 
     iput v9, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4565
+    .line 4627
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mTargetPos:I
@@ -301,7 +301,7 @@
 
     if-ge v9, v0, :cond_0
 
-    .line 4566
+    .line 4628
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -316,7 +316,7 @@
 
     goto/16 :goto_0
 
-    .line 4559
+    .line 4621
     .end local v5           #extraScroll:I
     :cond_3
     move-object/from16 v0, p0
@@ -337,7 +337,7 @@
 
     goto :goto_1
 
-    .line 4572
+    .line 4634
     .end local v9           #lastPos:I
     .end local v10           #lastView:Landroid/view/View;
     .end local v12           #lastViewHeight:I
@@ -347,7 +347,7 @@
     :pswitch_1
     const/16 v21, 0x1
 
-    .line 4573
+    .line 4635
     .local v21, nextViewIndex:I
     move-object/from16 v0, p0
 
@@ -359,7 +359,7 @@
 
     move-result v3
 
-    .line 4575
+    .line 4637
     .local v3, childCount:I
     move-object/from16 v0, p0
 
@@ -397,10 +397,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 4579
+    .line 4641
     add-int/lit8 v18, v6, 0x1
 
-    .line 4581
+    .line 4643
     .local v18, nextPos:I
     move-object/from16 v0, p0
 
@@ -414,7 +414,7 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 4583
+    .line 4645
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -429,7 +429,7 @@
 
     goto/16 :goto_0
 
-    .line 4587
+    .line 4649
     :cond_4
     move-object/from16 v0, p0
 
@@ -443,25 +443,25 @@
 
     move-result-object v19
 
-    .line 4588
+    .line 4650
     .local v19, nextView:Landroid/view/View;
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getHeight()I
 
     move-result v20
 
-    .line 4589
+    .line 4651
     .local v20, nextViewHeight:I
     invoke-virtual/range {v19 .. v19}, Landroid/view/View;->getTop()I
 
     move-result v22
 
-    .line 4590
+    .line 4652
     .local v22, nextViewTop:I
     move-object/from16 v0, p0
 
     iget v5, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mExtraScroll:I
 
-    .line 4591
+    .line 4653
     .restart local v5       #extraScroll:I
     move-object/from16 v0, p0
 
@@ -475,7 +475,7 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 4592
+    .line 4654
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -500,14 +500,14 @@
 
     invoke-virtual/range {v27 .. v29}, Lcom/htc/widget/HtcAbsListView;->smoothScrollBy(II)V
 
-    .line 4595
+    .line 4657
     move/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4597
+    .line 4659
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -522,13 +522,13 @@
 
     goto/16 :goto_0
 
-    .line 4599
+    .line 4661
     :cond_5
     move/from16 v0, v22
 
     if-le v0, v5, :cond_0
 
-    .line 4600
+    .line 4662
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -547,7 +547,7 @@
 
     goto/16 :goto_0
 
-    .line 4607
+    .line 4669
     .end local v3           #childCount:I
     .end local v5           #extraScroll:I
     .end local v18           #nextPos:I
@@ -566,7 +566,7 @@
 
     if-ne v6, v0, :cond_6
 
-    .line 4609
+    .line 4671
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -581,7 +581,7 @@
 
     goto/16 :goto_0
 
-    .line 4613
+    .line 4675
     :cond_6
     move-object/from16 v0, p0
 
@@ -595,16 +595,16 @@
 
     move-result-object v7
 
-    .line 4614
+    .line 4676
     .local v7, firstView:Landroid/view/View;
     if-eqz v7, :cond_0
 
-    .line 4617
+    .line 4679
     invoke-virtual {v7}, Landroid/view/View;->getTop()I
 
     move-result v8
 
-    .line 4618
+    .line 4680
     .local v8, firstViewTop:I
     if-lez v6, :cond_7
 
@@ -612,7 +612,7 @@
 
     iget v5, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mExtraScroll:I
 
-    .line 4620
+    .line 4682
     .restart local v5       #extraScroll:I
     :goto_2
     move-object/from16 v0, p0
@@ -631,12 +631,12 @@
 
     invoke-virtual/range {v27 .. v29}, Lcom/htc/widget/HtcAbsListView;->smoothScrollBy(II)V
 
-    .line 4622
+    .line 4684
     move-object/from16 v0, p0
 
     iput v6, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4624
+    .line 4686
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mTargetPos:I
@@ -647,7 +647,7 @@
 
     if-le v6, v0, :cond_0
 
-    .line 4625
+    .line 4687
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -662,7 +662,7 @@
 
     goto/16 :goto_0
 
-    .line 4618
+    .line 4680
     .end local v5           #extraScroll:I
     :cond_7
     move-object/from16 v0, p0
@@ -683,7 +683,7 @@
 
     goto :goto_2
 
-    .line 4631
+    .line 4693
     .end local v7           #firstView:Landroid/view/View;
     .end local v8           #firstViewTop:I
     :pswitch_3
@@ -699,14 +699,14 @@
 
     add-int/lit8 v13, v27, -0x2
 
-    .line 4632
+    .line 4694
     .restart local v13       #lastViewIndex:I
     if-ltz v13, :cond_0
 
-    .line 4635
+    .line 4697
     add-int v9, v6, v13
 
-    .line 4637
+    .line 4699
     .restart local v9       #lastPos:I
     move-object/from16 v0, p0
 
@@ -718,7 +718,7 @@
 
     if-ne v9, v0, :cond_8
 
-    .line 4639
+    .line 4701
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -733,7 +733,7 @@
 
     goto/16 :goto_0
 
-    .line 4643
+    .line 4705
     :cond_8
     move-object/from16 v0, p0
 
@@ -747,29 +747,29 @@
 
     move-result-object v10
 
-    .line 4644
+    .line 4706
     .restart local v10       #lastView:Landroid/view/View;
     invoke-virtual {v10}, Landroid/view/View;->getHeight()I
 
     move-result v12
 
-    .line 4645
+    .line 4707
     .restart local v12       #lastViewHeight:I
     invoke-virtual {v10}, Landroid/view/View;->getTop()I
 
     move-result v15
 
-    .line 4646
+    .line 4708
     .restart local v15       #lastViewTop:I
     sub-int v14, v16, v15
 
-    .line 4647
+    .line 4709
     .restart local v14       #lastViewPixelsShowing:I
     move-object/from16 v0, p0
 
     iput v9, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4648
+    .line 4710
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mBoundPos:I
@@ -780,7 +780,7 @@
 
     if-le v9, v0, :cond_9
 
-    .line 4649
+    .line 4711
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -809,7 +809,7 @@
 
     invoke-virtual/range {v27 .. v29}, Lcom/htc/widget/HtcAbsListView;->smoothScrollBy(II)V
 
-    .line 4650
+    .line 4712
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -824,7 +824,7 @@
 
     goto/16 :goto_0
 
-    .line 4652
+    .line 4714
     :cond_9
     move-object/from16 v0, p0
 
@@ -834,15 +834,15 @@
 
     sub-int v2, v16, v27
 
-    .line 4653
+    .line 4715
     .local v2, bottom:I
     add-int v11, v15, v12
 
-    .line 4654
+    .line 4716
     .local v11, lastViewBottom:I
     if-le v2, v11, :cond_0
 
-    .line 4655
+    .line 4717
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -867,7 +867,7 @@
 
     goto/16 :goto_0
 
-    .line 4662
+    .line 4724
     .end local v2           #bottom:I
     .end local v9           #lastPos:I
     .end local v10           #lastView:Landroid/view/View;
@@ -887,7 +887,7 @@
 
     if-ne v0, v6, :cond_a
 
-    .line 4664
+    .line 4726
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -902,13 +902,13 @@
 
     goto/16 :goto_0
 
-    .line 4668
+    .line 4730
     :cond_a
     move-object/from16 v0, p0
 
     iput v6, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4670
+    .line 4732
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -919,7 +919,7 @@
 
     move-result v3
 
-    .line 4671
+    .line 4733
     .restart local v3       #childCount:I
     move-object/from16 v0, p0
 
@@ -927,28 +927,28 @@
 
     move/from16 v23, v0
 
-    .line 4672
+    .line 4734
     .local v23, position:I
     add-int v27, v6, v3
 
     add-int/lit8 v9, v27, -0x1
 
-    .line 4674
+    .line 4736
     .restart local v9       #lastPos:I
     const/16 v26, 0x0
 
-    .line 4675
+    .line 4737
     .local v26, viewTravelCount:I
     move/from16 v0, v23
 
     if-ge v0, v6, :cond_c
 
-    .line 4676
+    .line 4738
     sub-int v27, v6, v23
 
     add-int/lit8 v26, v27, 0x1
 
-    .line 4682
+    .line 4744
     :cond_b
     :goto_3
     move/from16 v0, v26
@@ -963,7 +963,7 @@
 
     div-float v24, v27, v28
 
-    .line 4684
+    .line 4746
     .local v24, screenTravelCount:F
     invoke-static/range {v24 .. v24}, Ljava/lang/Math;->abs(F)F
 
@@ -975,13 +975,13 @@
 
     move-result v17
 
-    .line 4685
+    .line 4747
     .local v17, modifier:F
     move/from16 v0, v23
 
     if-ge v0, v6, :cond_d
 
-    .line 4686
+    .line 4748
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -1026,7 +1026,7 @@
 
     invoke-virtual/range {v27 .. v29}, Lcom/htc/widget/HtcAbsListView;->smoothScrollBy(II)V
 
-    .line 4687
+    .line 4749
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -1041,7 +1041,7 @@
 
     goto/16 :goto_0
 
-    .line 4677
+    .line 4739
     .end local v17           #modifier:F
     .end local v24           #screenTravelCount:F
     :cond_c
@@ -1049,12 +1049,12 @@
 
     if-le v0, v9, :cond_b
 
-    .line 4678
+    .line 4740
     sub-int v26, v23, v9
 
     goto :goto_3
 
-    .line 4688
+    .line 4750
     .restart local v17       #modifier:F
     .restart local v24       #screenTravelCount:F
     :cond_d
@@ -1062,7 +1062,7 @@
 
     if-le v0, v9, :cond_e
 
-    .line 4689
+    .line 4751
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -1101,7 +1101,7 @@
 
     invoke-virtual/range {v27 .. v29}, Lcom/htc/widget/HtcAbsListView;->smoothScrollBy(II)V
 
-    .line 4690
+    .line 4752
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -1116,7 +1116,7 @@
 
     goto/16 :goto_0
 
-    .line 4693
+    .line 4755
     :cond_e
     move-object/from16 v0, p0
 
@@ -1134,7 +1134,7 @@
 
     move-result v25
 
-    .line 4694
+    .line 4756
     .local v25, targetTop:I
     move-object/from16 v0, p0
 
@@ -1144,7 +1144,7 @@
 
     sub-int v4, v25, v27
 
-    .line 4695
+    .line 4757
     .local v4, distance:I
     move-object/from16 v0, p0
 
@@ -1202,7 +1202,7 @@
 
     goto/16 :goto_0
 
-    .line 4540
+    .line 4602
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1222,15 +1222,15 @@
 
     const/4 v4, -0x1
 
-    .line 4396
+    .line 4458
     invoke-virtual {p0}, Lcom/htc/widget/HtcAbsListView$PositionScroller;->stop()V
 
-    .line 4398
+    .line 4460
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget v0, v3, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    .line 4399
+    .line 4461
     .local v0, firstPos:I
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -1242,60 +1242,60 @@
 
     add-int/lit8 v1, v3, -0x1
 
-    .line 4402
+    .line 4464
     .local v1, lastPos:I
     if-gt p1, v0, :cond_1
 
-    .line 4403
+    .line 4465
     sub-int v3, v0, p1
 
     add-int/lit8 v2, v3, 0x1
 
-    .line 4404
+    .line 4466
     .local v2, viewTravelCount:I
     const/4 v3, 0x2
 
     iput v3, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mMode:I
 
-    .line 4413
+    .line 4475
     :goto_0
     if-lez v2, :cond_2
 
-    .line 4414
+    .line 4476
     div-int v3, v5, v2
 
     iput v3, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mScrollDuration:I
 
-    .line 4418
+    .line 4480
     :goto_1
     iput p1, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mTargetPos:I
 
-    .line 4419
+    .line 4481
     iput v4, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mBoundPos:I
 
-    .line 4420
+    .line 4482
     iput v4, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4422
+    .line 4484
     iget-object v3, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v3, p0}, Lcom/htc/widget/HtcAbsListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 4423
+    .line 4485
     .end local v2           #viewTravelCount:I
     :cond_0
     return-void
 
-    .line 4405
+    .line 4467
     :cond_1
     if-lt p1, v1, :cond_0
 
-    .line 4406
+    .line 4468
     sub-int v3, p1, v1
 
     add-int/lit8 v2, v3, 0x1
 
-    .line 4407
+    .line 4469
     .restart local v2       #viewTravelCount:I
     const/4 v3, 0x1
 
@@ -1303,7 +1303,7 @@
 
     goto :goto_0
 
-    .line 4416
+    .line 4478
     :cond_2
     iput v5, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mScrollDuration:I
 
@@ -1322,27 +1322,27 @@
 
     const/4 v8, 0x1
 
-    .line 4426
+    .line 4488
     invoke-virtual {p0}, Lcom/htc/widget/HtcAbsListView$PositionScroller;->stop()V
 
-    .line 4428
+    .line 4490
     if-ne p2, v9, :cond_1
 
-    .line 4429
+    .line 4491
     invoke-virtual {p0, p1}, Lcom/htc/widget/HtcAbsListView$PositionScroller;->start(I)V
 
-    .line 4484
+    .line 4546
     :cond_0
     :goto_0
     return-void
 
-    .line 4433
+    .line 4495
     :cond_1
     iget-object v7, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget v3, v7, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    .line 4434
+    .line 4496
     .local v3, firstPos:I
     iget-object v7, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -1354,73 +1354,73 @@
 
     add-int/lit8 v4, v7, -0x1
 
-    .line 4437
+    .line 4499
     .local v4, lastPos:I
     if-gt p1, v3, :cond_3
 
-    .line 4438
+    .line 4500
     sub-int v1, v4, p2
 
-    .line 4439
+    .line 4501
     .local v1, boundPosFromLast:I
     if-lt v1, v8, :cond_0
 
-    .line 4444
+    .line 4506
     sub-int v7, v3, p1
 
     add-int/lit8 v5, v7, 0x1
 
-    .line 4445
+    .line 4507
     .local v5, posTravel:I
     add-int/lit8 v2, v1, -0x1
 
-    .line 4446
+    .line 4508
     .local v2, boundTravel:I
     if-ge v2, v5, :cond_2
 
-    .line 4447
+    .line 4509
     move v6, v2
 
-    .line 4448
+    .line 4510
     .local v6, viewTravelCount:I
     const/4 v7, 0x4
 
     iput v7, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mMode:I
 
-    .line 4474
+    .line 4536
     .end local v1           #boundPosFromLast:I
     :goto_1
     if-lez v6, :cond_5
 
-    .line 4475
+    .line 4537
     div-int v7, v10, v6
 
     iput v7, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mScrollDuration:I
 
-    .line 4479
+    .line 4541
     :goto_2
     iput p1, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mTargetPos:I
 
-    .line 4480
+    .line 4542
     iput p2, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mBoundPos:I
 
-    .line 4481
+    .line 4543
     iput v9, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4483
+    .line 4545
     iget-object v7, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v7, p0}, Lcom/htc/widget/HtcAbsListView;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 4450
+    .line 4512
     .end local v6           #viewTravelCount:I
     .restart local v1       #boundPosFromLast:I
     :cond_2
     move v6, v5
 
-    .line 4451
+    .line 4513
     .restart local v6       #viewTravelCount:I
     const/4 v7, 0x2
 
@@ -1428,7 +1428,7 @@
 
     goto :goto_1
 
-    .line 4453
+    .line 4515
     .end local v1           #boundPosFromLast:I
     .end local v2           #boundTravel:I
     .end local v5           #posTravel:I
@@ -1436,30 +1436,30 @@
     :cond_3
     if-lt p1, v4, :cond_0
 
-    .line 4454
+    .line 4516
     sub-int v0, p2, v3
 
-    .line 4455
+    .line 4517
     .local v0, boundPosFromFirst:I
     if-lt v0, v8, :cond_0
 
-    .line 4460
+    .line 4522
     sub-int v7, p1, v4
 
     add-int/lit8 v5, v7, 0x1
 
-    .line 4461
+    .line 4523
     .restart local v5       #posTravel:I
     add-int/lit8 v2, v0, -0x1
 
-    .line 4462
+    .line 4524
     .restart local v2       #boundTravel:I
     if-ge v2, v5, :cond_4
 
-    .line 4463
+    .line 4525
     move v6, v2
 
-    .line 4464
+    .line 4526
     .restart local v6       #viewTravelCount:I
     const/4 v7, 0x3
 
@@ -1467,18 +1467,18 @@
 
     goto :goto_1
 
-    .line 4466
+    .line 4528
     .end local v6           #viewTravelCount:I
     :cond_4
     move v6, v5
 
-    .line 4467
+    .line 4529
     .restart local v6       #viewTravelCount:I
     iput v8, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mMode:I
 
     goto :goto_1
 
-    .line 4477
+    .line 4539
     .end local v0           #boundPosFromFirst:I
     :cond_5
     iput v10, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mScrollDuration:I
@@ -1492,12 +1492,12 @@
     .parameter "offset"
 
     .prologue
-    .line 4487
+    .line 4549
     const/16 v0, 0x190
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/htc/widget/HtcAbsListView$PositionScroller;->startWithOffset(III)V
 
-    .line 4488
+    .line 4550
     return-void
 .end method
 
@@ -1510,32 +1510,32 @@
     .prologue
     const/4 v8, -0x1
 
-    .line 4491
+    .line 4553
     invoke-virtual {p0}, Lcom/htc/widget/HtcAbsListView$PositionScroller;->stop()V
 
-    .line 4493
+    .line 4555
     iput p1, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mTargetPos:I
 
-    .line 4494
+    .line 4556
     iput p2, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mOffsetFromTop:I
 
-    .line 4495
+    .line 4557
     iput v8, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mBoundPos:I
 
-    .line 4496
+    .line 4558
     iput v8, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4497
+    .line 4559
     const/4 v6, 0x5
 
     iput v6, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mMode:I
 
-    .line 4499
+    .line 4561
     iget-object v6, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     iget v1, v6, Lcom/htc/widget/HtcAdapterView;->mFirstPosition:I
 
-    .line 4500
+    .line 4562
     .local v1, firstPos:I
     iget-object v6, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -1543,20 +1543,20 @@
 
     move-result v0
 
-    .line 4501
+    .line 4563
     .local v0, childCount:I
     add-int v6, v1, v0
 
     add-int/lit8 v2, v6, -0x1
 
-    .line 4504
+    .line 4566
     .local v2, lastPos:I
     if-ge p1, v1, :cond_0
 
-    .line 4505
+    .line 4567
     sub-int v5, v1, p1
 
-    .line 4516
+    .line 4578
     .local v5, viewTravelCount:I
     :goto_0
     int-to-float v6, v5
@@ -1565,7 +1565,7 @@
 
     div-float v3, v6, v7
 
-    .line 4517
+    .line 4579
     .local v3, screenTravelCount:F
     const/high16 v6, 0x3f80
 
@@ -1582,31 +1582,31 @@
     :goto_1
     iput v6, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mScrollDuration:I
 
-    .line 4519
+    .line 4581
     iput v8, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->mLastSeenPos:I
 
-    .line 4521
+    .line 4583
     iget-object v6, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v6, p0}, Lcom/htc/widget/HtcAbsListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 4522
+    .line 4584
     .end local v3           #screenTravelCount:F
     .end local v5           #viewTravelCount:I
     :goto_2
     return-void
 
-    .line 4506
+    .line 4568
     :cond_0
     if-le p1, v2, :cond_1
 
-    .line 4507
+    .line 4569
     sub-int v5, p1, v2
 
     .restart local v5       #viewTravelCount:I
     goto :goto_0
 
-    .line 4510
+    .line 4572
     .end local v5           #viewTravelCount:I
     :cond_1
     iget-object v6, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
@@ -1621,7 +1621,7 @@
 
     move-result v4
 
-    .line 4511
+    .line 4573
     .local v4, targetTop:I
     iget-object v6, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
@@ -1631,7 +1631,7 @@
 
     goto :goto_2
 
-    .line 4517
+    .line 4579
     .end local v4           #targetTop:I
     .restart local v3       #screenTravelCount:F
     .restart local v5       #viewTravelCount:I
@@ -1649,11 +1649,11 @@
     .locals 1
 
     .prologue
-    .line 4525
+    .line 4587
     iget-object v0, p0, Lcom/htc/widget/HtcAbsListView$PositionScroller;->this$0:Lcom/htc/widget/HtcAbsListView;
 
     invoke-virtual {v0, p0}, Lcom/htc/widget/HtcAbsListView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 4526
+    .line 4588
     return-void
 .end method

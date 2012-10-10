@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 816
+    .line 817
     iput-object p1, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
@@ -36,7 +36,7 @@
     .locals 2
 
     .prologue
-    .line 897
+    .line 898
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
@@ -47,7 +47,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 898
+    .line 899
     iget-object v1, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->mService:Lcom/htc/music/IMediaPlaybackService;
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    .line 899
+    .line 900
     .local v0, path:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -73,19 +73,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 900
+    .line 901
     const/4 v1, 0x1
 
-    .line 904
+    .line 905
     .end local v0           #path:Ljava/lang/String;
     :goto_0
     return v1
 
-    .line 902
+    .line 903
     :catch_0
     move-exception v1
 
-    .line 904
+    .line 905
     :cond_0
     const/4 v1, 0x0
 
@@ -98,7 +98,7 @@
     .locals 1
 
     .prologue
-    .line 819
+    .line 820
     iget-object v0, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->actionArray:Ljava/util/ArrayList;
@@ -108,10 +108,10 @@
 
     if-nez v0, :cond_0
 
-    .line 820
+    .line 821
     const/4 v0, 0x0
 
-    .line 821
+    .line 822
     :goto_0
     return v0
 
@@ -135,7 +135,7 @@
     .parameter "position"
 
     .prologue
-    .line 825
+    .line 826
     const/4 v0, 0x0
 
     return-object v0
@@ -146,7 +146,7 @@
     .parameter "position"
 
     .prologue
-    .line 829
+    .line 830
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -161,7 +161,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 833
+    .line 834
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
     move-result-object v7
@@ -170,7 +170,7 @@
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 834
+    .line 835
     iget-object v7, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
     #getter for: Lcom/htc/music/DRMActionActivity;->actionArray:Ljava/util/ArrayList;
@@ -180,11 +180,11 @@
 
     if-nez v7, :cond_0
 
-    .line 892
+    .line 893
     :goto_0
     return-object v6
 
-    .line 837
+    .line 838
     :cond_0
     if-ltz p1, :cond_1
 
@@ -201,7 +201,7 @@
 
     if-gt v7, p1, :cond_2
 
-    .line 838
+    .line 839
     :cond_1
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -250,11 +250,11 @@
 
     goto :goto_0
 
-    .line 844
+    .line 845
     :cond_2
     if-nez p2, :cond_3
 
-    .line 845
+    .line 846
     iget-object v7, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
     invoke-virtual {v7}, Lcom/htc/music/DRMActionActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -267,11 +267,11 @@
 
     move-result-object p2
 
-    .line 847
+    .line 848
     :cond_3
     const-string v4, ""
 
-    .line 848
+    .line 849
     .local v4, szText:Ljava/lang/String;
     iget-object v6, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
@@ -290,15 +290,15 @@
 
     move-result v0
 
-    .line 849
+    .line 850
     .local v0, action:I
     const/4 v1, 0x0
 
-    .line 850
+    .line 851
     .local v1, iconId:I
     packed-switch v0, :pswitch_data_0
 
-    .line 883
+    .line 884
     :goto_1
     const v6, 0x7f080062
 
@@ -308,16 +308,16 @@
 
     check-cast v2, Lcom/htc/widget/HtcListItemTileImage;
 
-    .line 884
+    .line 885
     .local v2, image:Lcom/htc/widget/HtcListItemTileImage;
     invoke-virtual {v2, v1}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageResource(I)V
 
-    .line 885
+    .line 886
     sget-object v6, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v2, v6}, Lcom/htc/widget/HtcListItemTileImage;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 887
+    .line 888
     const v6, 0x7f080063
 
     invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -326,16 +326,16 @@
 
     check-cast v5, Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 888
+    .line 889
     .local v5, text:Lcom/htc/widget/HtcListItem2LineText;
     invoke-virtual {v5, v4}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 889
+    .line 890
     const/16 v6, 0x8
 
     invoke-virtual {v5, v6}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 891
+    .line 892
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
     move-result-object v6
@@ -346,10 +346,10 @@
 
     move-object v6, p2
 
-    .line 892
+    .line 893
     goto/16 :goto_0
 
-    .line 854
+    .line 855
     .end local v2           #image:Lcom/htc/widget/HtcListItemTileImage;
     .end local v5           #text:Lcom/htc/widget/HtcListItem2LineText;
     :pswitch_0
@@ -361,13 +361,13 @@
 
     move-result-object v4
 
-    .line 855
+    .line 856
     const v1, 0x20800bd
 
-    .line 856
+    .line 857
     goto :goto_1
 
-    .line 860
+    .line 861
     :pswitch_1
     iget-object v6, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
@@ -377,13 +377,13 @@
 
     move-result-object v4
 
-    .line 861
+    .line 862
     const v1, 0x7f020033
 
-    .line 862
+    .line 863
     goto :goto_1
 
-    .line 866
+    .line 867
     :pswitch_2
     iget-object v6, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
 
@@ -393,10 +393,10 @@
 
     move-result-object v4
 
-    .line 870
+    .line 871
     const v1, 0x7f020025
 
-    .line 871
+    .line 872
     const-string v6, "ACTION_PROPERTY about_rest : iconId= %d"
 
     const/4 v7, 0x1
@@ -415,7 +415,7 @@
 
     move-result-object v3
 
-    .line 872
+    .line 873
     .local v3, msg:Ljava/lang/String;
     invoke-static {}, Lcom/htc/music/DRMActionActivity;->access$100()Ljava/lang/String;
 
@@ -425,7 +425,7 @@
 
     goto :goto_1
 
-    .line 878
+    .line 879
     .end local v3           #msg:Ljava/lang/String;
     :pswitch_3
     iget-object v6, p0, Lcom/htc/music/DRMActionActivity$13;->this$0:Lcom/htc/music/DRMActionActivity;
@@ -436,12 +436,12 @@
 
     move-result-object v4
 
-    .line 879
+    .line 880
     const v1, 0x2080090
 
     goto :goto_1
 
-    .line 850
+    .line 851
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

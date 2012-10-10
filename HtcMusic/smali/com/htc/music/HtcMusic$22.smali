@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3380
+    .line 3403
     iput-object p1, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "obj"
 
     .prologue
-    .line 3382
+    .line 3405
     const-string v0, "[HtcMusic]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,24 +76,24 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3385
+    .line 3408
     iget-object v0, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->mNeedBindSerive:Z
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2900(Lcom/htc/music/HtcMusic;)Z
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$3000(Lcom/htc/music/HtcMusic;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3386
+    .line 3409
     const-string v0, "[HtcMusic]"
 
     const-string v1, "HtcMusic onServiceConnected, but mNeedBindSerive is false!!"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3388
+    .line 3411
     iget-object v0, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v1, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
@@ -104,20 +104,20 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/MusicUtils;->unbindFromService(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 3402
+    .line 3425
     :goto_0
     return-void
 
-    .line 3393
+    .line 3416
     :cond_0
     iget-object v0, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x1
 
     #setter for: Lcom/htc/music/HtcMusic;->mIsSeriveBinded:Z
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$3002(Lcom/htc/music/HtcMusic;Z)Z
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$3102(Lcom/htc/music/HtcMusic;Z)Z
 
-    .line 3394
+    .line 3417
     iget-object v0, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-static {p2}, Lcom/htc/music/IMediaPlaybackService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/music/IMediaPlaybackService;
@@ -126,26 +126,26 @@
 
     iput-object v1, v0, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 3395
+    .line 3418
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v0, :cond_1
 
-    .line 3396
+    .line 3419
     iget-object v0, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v0, v0, Lcom/htc/music/HtcMusic;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     sput-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 3399
+    .line 3422
     :cond_1
     iget-object v0, p0, Lcom/htc/music/HtcMusic$22;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->onServiceConnectedHandle()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$3100(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$3200(Lcom/htc/music/HtcMusic;)V
 
-    .line 3401
+    .line 3424
     const-string v0, "[HtcMusic]"
 
     const-string v1, "onServiceConnected finished"
@@ -160,13 +160,13 @@
     .parameter "classname"
 
     .prologue
-    .line 3405
+    .line 3428
     const-string v0, "[HtcMusic]"
 
     const-string v1, "onServiceDisconnected"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3406
+    .line 3429
     return-void
 .end method

@@ -36,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 259
+    .line 261
     new-instance v0, Lcom/htc/preference/HtcVolumePreference$SavedState$1;
 
     invoke-direct {v0}, Lcom/htc/preference/HtcVolumePreference$SavedState$1;-><init>()V
@@ -51,17 +51,17 @@
     .parameter "source"
 
     .prologue
-    .line 231
+    .line 233
     invoke-direct {p0, p1}, Lcom/htc/preference/HtcPreference$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 224
+    .line 226
     new-instance v0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
     invoke-direct {v0}, Lcom/htc/preference/HtcVolumePreference$VolumeStore;-><init>()V
 
     iput-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SavedState;->mVolumeStore:Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
-    .line 232
+    .line 234
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SavedState;->mVolumeStore:Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -70,7 +70,7 @@
 
     iput v1, v0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;->volume:I
 
-    .line 233
+    .line 235
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SavedState;->mVolumeStore:Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -79,7 +79,7 @@
 
     iput v1, v0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;->originalVolume:I
 
-    .line 234
+    .line 236
     return-void
 .end method
 
@@ -88,17 +88,17 @@
     .parameter "superState"
 
     .prologue
-    .line 252
+    .line 254
     invoke-direct {p0, p1}, Lcom/htc/preference/HtcPreference$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 224
+    .line 226
     new-instance v0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
     invoke-direct {v0}, Lcom/htc/preference/HtcVolumePreference$VolumeStore;-><init>()V
 
     iput-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SavedState;->mVolumeStore:Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
-    .line 253
+    .line 255
     return-void
 .end method
 
@@ -108,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 248
+    .line 250
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SavedState;->mVolumeStore:Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
     return-object v0
@@ -120,23 +120,23 @@
     .parameter "flags"
 
     .prologue
-    .line 242
+    .line 244
     invoke-super {p0, p1, p2}, Lcom/htc/preference/HtcPreference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 243
+    .line 245
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SavedState;->mVolumeStore:Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
     iget v0, v0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;->volume:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 244
+    .line 246
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SavedState;->mVolumeStore:Lcom/htc/preference/HtcVolumePreference$VolumeStore;
 
     iget v0, v0, Lcom/htc/preference/HtcVolumePreference$VolumeStore;->originalVolume:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 245
+    .line 247
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1372
+    .line 1381
     iput-object p1, p0, Lcom/htc/music/HtcMusic$14;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "v"
 
     .prologue
-    .line 1374
+    .line 1383
     iget-object v1, p0, Lcom/htc/music/HtcMusic$14;->this$0:Lcom/htc/music/HtcMusic;
 
     iget-object v0, p0, Lcom/htc/music/HtcMusic$14;->this$0:Lcom/htc/music/HtcMusic;
@@ -56,10 +56,10 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/htc/music/HtcMusic;->setNowPlayingVisible(Z)V
 
-    .line 1375
+    .line 1384
     return-void
 
-    .line 1374
+    .line 1383
     :cond_0
     const/4 v0, 0x0
 

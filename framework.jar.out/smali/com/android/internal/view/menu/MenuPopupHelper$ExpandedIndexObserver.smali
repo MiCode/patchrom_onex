@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 659
+    .line 663
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuPopupHelper$ExpandedIndexObserver;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 659
+    .line 663
     invoke-direct {p0, p1}, Lcom/android/internal/view/menu/MenuPopupHelper$ExpandedIndexObserver;-><init>(Lcom/android/internal/view/menu/MenuPopupHelper;)V
 
     return-void
@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 662
+    .line 666
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuPopupHelper$ExpandedIndexObserver;->this$0:Lcom/android/internal/view/menu/MenuPopupHelper;
 
     #getter for: Lcom/android/internal/view/menu/MenuPopupHelper;->mAdapter:Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;
@@ -60,6 +60,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuPopupHelper$MenuAdapter;->findExpandedIndex()V
 
-    .line 663
+    .line 667
     return-void
 .end method

@@ -47,10 +47,10 @@
 
     const/4 v6, 0x0
 
-    .line 659
+    .line 655
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$Brightness;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 660
+    .line 656
     const-string v2, "Brightness"
 
     const-string v3, "powersaver_screen_brightness"
@@ -65,42 +65,42 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 647
+    .line 643
     const-string v0, "powersaver_screen_brightness_settings_auto"
 
     iput-object v0, p0, Lcom/android/server/HtcPowerSaver$Brightness;->KEY_SCREEN_BRIGHTNESS_SETTINGS_AUTO:Ljava/lang/String;
 
-    .line 648
+    .line 644
     const-string v0, "powersaver_screen_brightness_settings"
 
     iput-object v0, p0, Lcom/android/server/HtcPowerSaver$Brightness;->KEY_SCREEN_BRIGHTNESS_SETTINGS:Ljava/lang/String;
 
-    .line 649
+    .line 645
     iput v6, p0, Lcom/android/server/HtcPowerSaver$Brightness;->DEFAULT_BRIGHTNESS_AUTO:I
 
-    .line 650
+    .line 646
     iput v7, p0, Lcom/android/server/HtcPowerSaver$Brightness;->DEFAULT_BRIGHTNESS_VALUE:I
 
-    .line 652
+    .line 648
     const-string v0, "psaver_normal_brightness"
 
     iput-object v0, p0, Lcom/android/server/HtcPowerSaver$Brightness;->KEY_N_BRIGHTNESS:Ljava/lang/String;
 
-    .line 653
+    .line 649
     const-string v0, "psaver_normal_autobrightness"
 
     iput-object v0, p0, Lcom/android/server/HtcPowerSaver$Brightness;->KEY_N_BRIGHTNESS_AUTO:Ljava/lang/String;
 
-    .line 654
+    .line 650
     iput v7, p0, Lcom/android/server/HtcPowerSaver$Brightness;->DEFAULT_N_BRIGHTNESS:I
 
-    .line 655
+    .line 651
     iput v6, p0, Lcom/android/server/HtcPowerSaver$Brightness;->DEFAULT_N_BRIGHTNESS_AUTO:I
 
-    .line 661
+    .line 657
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$Brightness;->mContext:Landroid/content/Context;
 
-    .line 662
+    .line 658
     return-void
 .end method
 
@@ -110,14 +110,14 @@
     .parameter "value"
 
     .prologue
-    .line 665
+    .line 661
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$Brightness;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 666
+    .line 662
     .local v0, cr:Landroid/content/ContentResolver;
     const-string v3, "screen_brightness_mode"
 
@@ -127,7 +127,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 667
+    .line 663
     const-string v3, "HtcPowerSaver"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -150,7 +150,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 671
+    .line 667
     :goto_0
     const-string v3, "screen_brightness"
 
@@ -160,7 +160,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 672
+    .line 668
     const-string v3, "HtcPowerSaver"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -183,11 +183,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 676
+    .line 672
     :goto_1
     if-nez p1, :cond_0
 
-    .line 678
+    .line 674
     :try_start_0
     const-string v3, "power"
 
@@ -199,14 +199,14 @@
 
     move-result-object v2
 
-    .line 679
+    .line 675
     .local v2, power:Landroid/os/IPowerManager;
     if-eqz v2, :cond_0
 
-    .line 680
+    .line 676
     invoke-interface {v2, p2}, Landroid/os/IPowerManager;->setBacklightBrightness(I)V
 
-    .line 681
+    .line 677
     const-string v3, "HtcPowerSaver"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -231,13 +231,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 687
+    .line 683
     .end local v2           #power:Landroid/os/IPowerManager;
     :cond_0
     :goto_2
     return-void
 
-    .line 669
+    .line 665
     :cond_1
     const-string v3, "HtcPowerSaver"
 
@@ -263,7 +263,7 @@
 
     goto :goto_0
 
-    .line 674
+    .line 670
     :cond_2
     const-string v3, "HtcPowerSaver"
 
@@ -289,11 +289,11 @@
 
     goto :goto_1
 
-    .line 683
+    .line 679
     :catch_0
     move-exception v1
 
-    .line 684
+    .line 680
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -310,14 +310,14 @@
 
     const/4 v8, 0x0
 
-    .line 713
+    .line 709
     iget-object v5, p0, Lcom/android/server/HtcPowerSaver$Brightness;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 714
+    .line 710
     .local v0, cr:Landroid/content/ContentResolver;
     iget-object v5, p0, Lcom/android/server/HtcPowerSaver$Brightness;->this$0:Lcom/android/server/HtcPowerSaver;
 
@@ -328,22 +328,22 @@
 
     move-result-object v3
 
-    .line 715
+    .line 711
     .local v3, sp:Landroid/content/SharedPreferences;
     if-nez v3, :cond_0
 
-    .line 716
+    .line 712
     const-string v5, "HtcPowerSaver"
 
     const-string v6, "applyPowerSaverSettings: Get SharedPreferences fail."
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 735
+    .line 731
     :goto_0
     return v8
 
-    .line 720
+    .line 716
     :cond_0
     const-string v5, "screen_brightness"
 
@@ -351,7 +351,7 @@
 
     move-result v4
 
-    .line 722
+    .line 718
     .local v4, sysValue:I
     const-string v5, "powersaver_screen_brightness_settings"
 
@@ -359,7 +359,7 @@
 
     move-result v2
 
-    .line 724
+    .line 720
     .local v2, pValue:I
     const-string v5, "powersaver_screen_brightness_settings_auto"
 
@@ -367,7 +367,7 @@
 
     move-result v1
 
-    .line 725
+    .line 721
     .local v1, pMode:I
     const-string v5, "HtcPowerSaver"
 
@@ -411,10 +411,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 729
+    .line 725
     if-nez v1, :cond_2
 
-    .line 730
+    .line 726
     if-le v2, v4, :cond_1
 
     const-string v5, "HtcPowerSaver"
@@ -439,13 +439,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 731
+    .line 727
     :cond_1
     if-le v2, v4, :cond_2
 
     move v2, v4
 
-    .line 733
+    .line 729
     :cond_2
     invoke-direct {p0, v1, v2}, Lcom/android/server/HtcPowerSaver$Brightness;->setSysSettings(II)V
 
@@ -458,7 +458,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 740
+    .line 736
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$Brightness;->this$0:Lcom/android/server/HtcPowerSaver;
 
     iget-object v4, p0, Lcom/android/server/HtcPowerSaver$Brightness;->mContext:Landroid/content/Context;
@@ -468,22 +468,22 @@
 
     move-result-object v2
 
-    .line 741
+    .line 737
     .local v2, sp:Landroid/content/SharedPreferences;
     if-nez v2, :cond_0
 
-    .line 742
+    .line 738
     const-string v3, "HtcPowerSaver"
 
     const-string v4, "restoreSystemSettings: Get SharedPreferences fail."
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 751
+    .line 747
     :goto_0
     return v5
 
-    .line 746
+    .line 742
     :cond_0
     const-string v3, "psaver_normal_brightness"
 
@@ -493,7 +493,7 @@
 
     move-result v1
 
-    .line 748
+    .line 744
     .local v1, normalValue:I
     const-string v3, "psaver_normal_autobrightness"
 
@@ -501,7 +501,7 @@
 
     move-result v0
 
-    .line 749
+    .line 745
     .local v0, normalMode:I
     invoke-direct {p0, v0, v1}, Lcom/android/server/HtcPowerSaver$Brightness;->setSysSettings(II)V
 
@@ -514,14 +514,14 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 691
+    .line 687
     iget-object v4, p0, Lcom/android/server/HtcPowerSaver$Brightness;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 692
+    .line 688
     .local v0, cr:Landroid/content/ContentResolver;
     iget-object v4, p0, Lcom/android/server/HtcPowerSaver$Brightness;->this$0:Lcom/android/server/HtcPowerSaver;
 
@@ -532,22 +532,22 @@
 
     move-result-object v1
 
-    .line 693
+    .line 689
     .local v1, sp:Landroid/content/SharedPreferences;
     if-nez v1, :cond_0
 
-    .line 694
+    .line 690
     const-string v4, "HtcPowerSaver"
 
     const-string v5, "saveSystemSettings: Get SharedPreferences fail."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
+    .line 704
     :goto_0
     return v7
 
-    .line 698
+    .line 694
     :cond_0
     const-string v4, "screen_brightness"
 
@@ -557,7 +557,7 @@
 
     move-result v3
 
-    .line 699
+    .line 695
     .local v3, sysValue:I
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -571,14 +571,14 @@
 
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 702
+    .line 698
     const-string v4, "screen_brightness_mode"
 
     invoke-static {v0, v4, v7}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 703
+    .line 699
     .local v2, sysMode:I
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -592,7 +592,7 @@
 
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 704
+    .line 700
     const-string v4, "HtcPowerSaver"
 
     new-instance v5, Ljava/lang/StringBuilder;

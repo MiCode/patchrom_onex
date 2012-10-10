@@ -78,7 +78,7 @@
 
     .line 113
     .local v1, extras:Landroid/os/Bundle;
-    const-string/jumbo v2, "isulc"
+    const-string v2, "isulc"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 

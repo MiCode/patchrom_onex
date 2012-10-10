@@ -16,10 +16,10 @@
     .locals 0
 
     .prologue
-    .line 20
+    .line 21
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 22
     return-void
 .end method
 
@@ -27,7 +27,7 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 26
     new-instance v0, Landroid/view/PenManager;
 
     invoke-direct {v0}, Landroid/view/PenManager;-><init>()V

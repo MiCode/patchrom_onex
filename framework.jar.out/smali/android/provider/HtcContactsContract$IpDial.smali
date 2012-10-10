@@ -46,7 +46,7 @@
     .locals 2
 
     .prologue
-    .line 1574
+    .line 1712
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v1, 0x1b
@@ -58,10 +58,10 @@
     :goto_0
     sput-boolean v0, Landroid/provider/HtcContactsContract$IpDial;->enableIpDial:Z
 
-    .line 1581
+    .line 1720
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "ip_dial"
+    const-string v1, "ip_dial"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -71,7 +71,7 @@
 
     return-void
 
-    .line 1574
+    .line 1712
     :cond_0
     const/4 v0, 0x0
 
@@ -82,9 +82,9 @@
     .locals 0
 
     .prologue
-    .line 1568
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1705
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1569
+    .line 1706
     return-void
 .end method

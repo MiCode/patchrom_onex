@@ -93,12 +93,12 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 114
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mTable:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 119
+    .line 115
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Table not specified"
@@ -107,7 +107,7 @@
 
     throw v0
 
-    .line 121
+    .line 117
     :cond_0
     return-void
 .end method
@@ -117,7 +117,7 @@
     .parameter "columns"
 
     .prologue
-    .line 168
+    .line 148
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -126,7 +126,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 169
+    .line 149
     iget-object v2, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mProjectionMap:Ljava/util/Map;
 
     aget-object v3, p1, v0
@@ -137,20 +137,20 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 170
+    .line 150
     .local v1, target:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 171
+    .line 151
     aput-object v1, p1, v0
 
-    .line 168
+    .line 148
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 174
+    .line 154
     .end local v1           #target:Ljava/lang/String;
     :cond_1
     return-void
@@ -163,18 +163,18 @@
     .parameter "selection"
 
     .prologue
-    .line 96
+    .line 92
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 109
+    .line 105
     :goto_0
     return-object p0
 
-    .line 101
+    .line 97
     :cond_0
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
@@ -184,14 +184,14 @@
 
     if-lez v0, :cond_1
 
-    .line 102
+    .line 98
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
     const-string v1, " AND "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
+    .line 101
     :cond_1
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
@@ -217,10 +217,10 @@
     .parameter "db"
 
     .prologue
-    .line 224
+    .line 196
     invoke-direct {p0}, Lcom/htc/opensense/provider/SelectionBuilder;->assertTable()V
 
-    .line 226
+    .line 198
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mTable:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/htc/opensense/provider/SelectionBuilder;->getSelection()Ljava/lang/String;
@@ -242,7 +242,7 @@
     .locals 1
 
     .prologue
-    .line 151
+    .line 135
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -256,7 +256,7 @@
     .locals 2
 
     .prologue
-    .line 164
+    .line 144
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelectionArgs:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelectionArgs:Ljava/util/ArrayList;
@@ -282,7 +282,7 @@
     .parameter "toClause"
 
     .prologue
-    .line 137
+    .line 125
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mProjectionMap:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -309,7 +309,7 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
+    .line 126
     return-object p0
 .end method
 
@@ -319,7 +319,7 @@
     .parameter "table"
 
     .prologue
-    .line 128
+    .line 120
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mProjectionMap:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -346,7 +346,7 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
+    .line 121
     return-object p0
 .end method
 
@@ -359,7 +359,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 191
+    .line 167
     move-object v0, p0
 
     move-object v1, p1
@@ -389,16 +389,16 @@
     .parameter "limit"
 
     .prologue
-    .line 203
+    .line 175
     invoke-direct {p0}, Lcom/htc/opensense/provider/SelectionBuilder;->assertTable()V
 
-    .line 204
+    .line 176
     if-eqz p2, :cond_0
 
-    .line 205
+    .line 177
     invoke-direct {p0, p2}, Lcom/htc/opensense/provider/SelectionBuilder;->mapColumns([Ljava/lang/String;)V
 
-    .line 207
+    .line 179
     :cond_0
     iget-object v1, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mTable:Ljava/lang/String;
 
@@ -433,24 +433,24 @@
     .locals 2
 
     .prologue
-    .line 58
+    .line 54
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mTable:Ljava/lang/String;
 
-    .line 59
+    .line 55
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 60
+    .line 56
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelectionArgs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 61
+    .line 57
     return-object p0
 .end method
 
@@ -459,10 +459,10 @@
     .parameter "table"
 
     .prologue
-    .line 113
+    .line 109
     iput-object p1, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mTable:Ljava/lang/String;
 
-    .line 114
+    .line 110
     return-object p0
 .end method
 
@@ -470,7 +470,7 @@
     .locals 2
 
     .prologue
-    .line 182
+    .line 158
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -538,10 +538,10 @@
     .parameter "values"
 
     .prologue
-    .line 215
+    .line 187
     invoke-direct {p0}, Lcom/htc/opensense/provider/SelectionBuilder;->assertTable()V
 
-    .line 217
+    .line 189
     iget-object v0, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mTable:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/htc/opensense/provider/SelectionBuilder;->getSelection()Ljava/lang/String;
@@ -565,21 +565,21 @@
     .parameter "selectionArgs"
 
     .prologue
-    .line 69
+    .line 65
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 70
+    .line 66
     if-eqz p2, :cond_2
 
     array-length v4, p2
 
     if-lez v4, :cond_2
 
-    .line 71
+    .line 67
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "Valid selection required when including arguments="
@@ -588,7 +588,7 @@
 
     throw v4
 
-    .line 79
+    .line 75
     :cond_0
     iget-object v4, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
@@ -598,14 +598,14 @@
 
     if-lez v4, :cond_1
 
-    .line 80
+    .line 76
     iget-object v4, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
     const-string v5, " AND "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 83
+    .line 79
     :cond_1
     iget-object v4, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelection:Ljava/lang/StringBuilder;
 
@@ -623,10 +623,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
+    .line 82
     if-eqz p2, :cond_2
 
-    .line 87
+    .line 83
     move-object v1, p2
 
     .local v1, arr$:[Ljava/lang/String;
@@ -641,18 +641,18 @@
 
     aget-object v0, v1, v2
 
-    .line 88
+    .line 84
     .local v0, arg:Ljava/lang/String;
     iget-object v4, p0, Lcom/htc/opensense/provider/SelectionBuilder;->mSelectionArgs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 87
+    .line 83
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 92
+    .line 88
     .end local v0           #arg:Ljava/lang/String;
     .end local v1           #arr$:[Ljava/lang/String;
     .end local v2           #i$:I

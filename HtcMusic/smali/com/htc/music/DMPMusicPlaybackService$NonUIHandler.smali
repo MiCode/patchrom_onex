@@ -25,13 +25,13 @@
     .parameter "looper"
 
     .prologue
-    .line 256
+    .line 257
     iput-object p1, p0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
 
-    .line 257
+    .line 258
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 258
+    .line 259
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .parameter "msg"
 
     .prologue
-    .line 263
+    .line 264
     const-string v23, "[DMPMusicPlaybackService]"
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -71,12 +71,12 @@
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 264
+    .line 265
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v13
 
-    .line 266
+    .line 267
     .local v13, data:Landroid/os/Bundle;
     move-object/from16 v0, p1
 
@@ -86,12 +86,12 @@
 
     packed-switch v23, :pswitch_data_0
 
-    .line 547
+    .line 558
     :cond_0
     :goto_0
     return-void
 
-    .line 269
+    .line 270
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -102,7 +102,7 @@
     #calls: Lcom/htc/music/DMPMusicPlaybackService;->initErrorRetryHandle()V
     invoke-static/range {v23 .. v23}, Lcom/htc/music/DMPMusicPlaybackService;->access$300(Lcom/htc/music/DMPMusicPlaybackService;)V
 
-    .line 270
+    .line 271
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg1:I
@@ -119,7 +119,7 @@
 
     const/4 v6, 0x1
 
-    .line 271
+    .line 272
     .local v6, changeSong:Z
     :goto_1
     move-object/from16 v0, p0
@@ -134,14 +134,14 @@
 
     goto :goto_0
 
-    .line 270
+    .line 271
     .end local v6           #changeSong:Z
     :cond_1
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 277
+    .line 278
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -152,7 +152,7 @@
     #calls: Lcom/htc/music/DMPMusicPlaybackService;->initErrorRetryHandle()V
     invoke-static/range {v23 .. v23}, Lcom/htc/music/DMPMusicPlaybackService;->access$300(Lcom/htc/music/DMPMusicPlaybackService;)V
 
-    .line 278
+    .line 279
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg1:I
@@ -169,7 +169,7 @@
 
     const/4 v6, 0x1
 
-    .line 279
+    .line 280
     .restart local v6       #changeSong:Z
     :goto_2
     move-object/from16 v0, p0
@@ -188,14 +188,14 @@
 
     goto :goto_0
 
-    .line 278
+    .line 279
     .end local v6           #changeSong:Z
     :cond_2
     const/4 v6, 0x0
 
     goto :goto_2
 
-    .line 283
+    .line 284
     :pswitch_2
     const-string v23, "uriPath"
 
@@ -205,7 +205,7 @@
 
     move-result-object v22
 
-    .line 284
+    .line 285
     .local v22, uriPath:Ljava/lang/String;
     if-eqz v22, :cond_3
 
@@ -217,7 +217,7 @@
 
     if-eqz v23, :cond_3
 
-    .line 285
+    .line 286
     const-string v23, "[DMPMusicPlaybackService]"
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -244,7 +244,18 @@
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 286
+    .line 287
+    const/16 v23, 0x94
+
+    sget-short v24, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    move/from16 v0, v23
+
+    move/from16 v1, v24
+
+    if-eq v0, v1, :cond_4
+
+    .line 288
     const-string v23, "htc-dlna"
 
     const-string v24, "http"
@@ -253,8 +264,9 @@
 
     move-result-object v22
 
-    .line 289
+    .line 296
     :cond_3
+    :goto_3
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -274,7 +286,17 @@
 
     goto/16 :goto_0
 
-    .line 294
+    .line 292
+    :cond_4
+    const-string v23, "[DMPMusicPlaybackService]"
+
+    const-string v24, "MSG_SET_DATA_SOURCE, keep htc-dlna for Sprint"
+
+    invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_3
+
+    .line 301
     .end local v22           #uriPath:Ljava/lang/String;
     :pswitch_3
     const-string v23, "[DMPMusicPlaybackService]"
@@ -310,19 +332,19 @@
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 296
+    .line 303
     invoke-virtual {v13}, Landroid/os/Bundle;->isEmpty()Z
 
     move-result v23
 
-    if-nez v23, :cond_4
+    if-nez v23, :cond_5
 
-    .line 298
+    .line 305
     new-instance v8, Landroid/content/ContentValues;
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 300
+    .line 307
     .local v8, cv:Landroid/content/ContentValues;
     const-string v23, "shuffle"
 
@@ -344,7 +366,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 301
+    .line 308
     const-string v23, "position"
 
     const-string v24, "position"
@@ -365,7 +387,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 302
+    .line 309
     const-string v23, "server"
 
     const-string v24, "server"
@@ -382,7 +404,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
+    .line 310
     const-string v23, "content"
 
     const-string v24, "content"
@@ -399,7 +421,7 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 305
+    .line 312
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -415,9 +437,9 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 309
+    .line 316
     .end local v8           #cv:Landroid/content/ContentValues;
-    :cond_4
+    :cond_5
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -429,9 +451,9 @@
 
     move-result v23
 
-    if-nez v23, :cond_e
+    if-nez v23, :cond_f
 
-    .line 311
+    .line 318
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -447,9 +469,9 @@
 
     move-result v23
 
-    if-nez v23, :cond_d
+    if-nez v23, :cond_e
 
-    .line 312
+    .line 319
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -469,7 +491,7 @@
 
     check-cast v8, Landroid/content/ContentValues;
 
-    .line 314
+    .line 321
     .restart local v8       #cv:Landroid/content/ContentValues;
     const/16 v23, 0x0
 
@@ -477,7 +499,7 @@
 
     move-result-object v12
 
-    .line 315
+    .line 322
     .local v12, cvShufflemode:Ljava/lang/Integer;
     const/16 v23, 0x0
 
@@ -485,19 +507,19 @@
 
     move-result-object v10
 
-    .line 316
+    .line 323
     .local v10, cvPosition:Ljava/lang/Integer;
     const/16 v21, 0x0
 
-    .line 317
+    .line 324
     .local v21, serverID:Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 319
+    .line 326
     .local v7, contentID:Ljava/lang/String;
-    if-eqz v8, :cond_5
+    if-eqz v8, :cond_6
 
-    .line 320
+    .line 327
     const-string v23, "shuffle"
 
     move-object/from16 v0, v23
@@ -506,7 +528,7 @@
 
     move-result-object v12
 
-    .line 321
+    .line 328
     const-string v23, "position"
 
     move-object/from16 v0, v23
@@ -515,7 +537,7 @@
 
     move-result-object v10
 
-    .line 322
+    .line 329
     const-string v23, "server"
 
     move-object/from16 v0, v23
@@ -524,7 +546,7 @@
 
     move-result-object v21
 
-    .line 323
+    .line 330
     const-string v23, "content"
 
     move-object/from16 v0, v23
@@ -533,15 +555,15 @@
 
     move-result-object v7
 
-    .line 326
-    :cond_5
-    if-eqz v12, :cond_c
+    .line 333
+    :cond_6
+    if-eqz v12, :cond_d
 
-    if-eqz v10, :cond_c
+    if-eqz v10, :cond_d
 
-    if-eqz v21, :cond_c
+    if-eqz v21, :cond_d
 
-    if-eqz v7, :cond_c
+    if-eqz v7, :cond_d
 
     move-object/from16 v0, p0
 
@@ -554,12 +576,12 @@
 
     move-result-object v23
 
-    if-eqz v23, :cond_c
+    if-eqz v23, :cond_d
 
-    .line 328
+    .line 335
     const/16 v19, 0x1
 
-    .line 330
+    .line 337
     .local v19, isNeedToQuery:Z
     move-object/from16 v0, p0
 
@@ -578,16 +600,16 @@
 
     move-result v23
 
-    if-eqz v23, :cond_6
+    if-eqz v23, :cond_7
 
-    .line 331
+    .line 338
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "<<<<<<<<<<<<<< There is this content in hashtable...Check the file exists or not...>>>>>>>>>>>>>>>>"
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
+    .line 339
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
@@ -638,13 +660,13 @@
 
     move-result-object v5
 
-    .line 333
+    .line 340
     .local v5, albumArtFilePath:Ljava/lang/String;
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 334
+    .line 341
     .local v4, albumArtFile:Ljava/io/File;
     const-string v23, "[DMPMusicPlaybackService]"
 
@@ -670,31 +692,31 @@
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 336
+    .line 343
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v23
 
-    if-eqz v23, :cond_7
+    if-eqz v23, :cond_8
 
-    .line 337
+    .line 344
     const/16 v19, 0x0
 
-    .line 338
+    .line 345
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "<<< Don\'t query again...>>>"
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 348
+    .line 355
     .end local v4           #albumArtFile:Ljava/io/File;
     .end local v5           #albumArtFilePath:Ljava/lang/String;
-    :cond_6
-    :goto_3
-    if-nez v19, :cond_b
+    :cond_7
+    :goto_4
+    if-nez v19, :cond_c
 
-    .line 352
+    .line 359
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
@@ -745,7 +767,7 @@
 
     move-result-object v5
 
-    .line 354
+    .line 361
     .restart local v5       #albumArtFilePath:Ljava/lang/String;
     :try_start_0
     invoke-virtual {v12}, Ljava/lang/Integer;->intValue()I
@@ -758,9 +780,9 @@
 
     move/from16 v1, v24
 
-    if-ne v0, v1, :cond_9
+    if-ne v0, v1, :cond_a
 
-    .line 355
+    .line 362
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -772,9 +794,9 @@
 
     move-result-object v23
 
-    if-eqz v23, :cond_8
+    if-eqz v23, :cond_9
 
-    .line 356
+    .line 363
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -802,8 +824,8 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 375
-    :goto_4
+    .line 382
+    :goto_5
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -819,7 +841,7 @@
 
     invoke-virtual/range {v23 .. v24}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 377
+    .line 384
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -837,7 +859,7 @@
 
     if-nez v23, :cond_0
 
-    .line 378
+    .line 385
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -855,9 +877,9 @@
 
     goto/16 :goto_0
 
-    .line 341
+    .line 348
     .restart local v4       #albumArtFile:Ljava/io/File;
-    :cond_7
+    :cond_8
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -873,21 +895,21 @@
 
     invoke-virtual {v0, v7}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 342
+    .line 349
     const/16 v19, 0x1
 
-    .line 343
+    .line 350
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "<<< There is no File...Need to query...>>>"
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
-    .line 359
+    .line 366
     .end local v4           #albumArtFile:Ljava/io/File;
-    :cond_8
+    :cond_9
     :try_start_1
     const-string v23, "[DMPMusicPlaybackService]"
 
@@ -927,21 +949,21 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 370
+    .line 377
     :catch_0
     move-exception v15
 
-    .line 372
+    .line 379
     .local v15, e:Landroid/os/RemoteException;
     invoke-virtual {v15}, Landroid/os/RemoteException;->printStackTrace()V
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 363
+    .line 370
     .end local v15           #e:Landroid/os/RemoteException;
-    :cond_9
+    :cond_a
     :try_start_2
     move-object/from16 v0, p0
 
@@ -954,9 +976,9 @@
 
     move-result-object v23
 
-    if-eqz v23, :cond_a
+    if-eqz v23, :cond_b
 
-    .line 364
+    .line 371
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -982,10 +1004,10 @@
 
     invoke-interface {v0, v1, v5, v2}, Lcom/htc/music/IPluginIPCNotify;->onAlbumArtPathUpdated(ILjava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 367
-    :cond_a
+    .line 374
+    :cond_b
     const-string v23, "[DMPMusicPlaybackService]"
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -1024,11 +1046,11 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    .line 383
+    .line 390
     .end local v5           #albumArtFilePath:Ljava/lang/String;
-    :cond_b
+    :cond_c
     :try_start_3
     move-object/from16 v0, p0
 
@@ -1051,7 +1073,7 @@
 
     invoke-interface {v0, v1, v2, v7}, Lcom/htc/dlnainterface/IDLNAPluginService;->albumArtDownload(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 384
+    .line 391
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1067,27 +1089,27 @@
 
     goto/16 :goto_0
 
-    .line 385
+    .line 392
     :catch_1
     move-exception v15
 
-    .line 387
+    .line 394
     .restart local v15       #e:Landroid/os/RemoteException;
     invoke-virtual {v15}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 392
+    .line 399
     .end local v15           #e:Landroid/os/RemoteException;
     .end local v19           #isNeedToQuery:Z
-    :cond_c
+    :cond_d
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "case MSG_REQUEST_ALBUMART: current cv is incorrect. remove it and try next one."
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 394
+    .line 401
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1103,7 +1125,7 @@
 
     invoke-virtual/range {v23 .. v24}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 396
+    .line 403
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1121,7 +1143,7 @@
 
     if-nez v23, :cond_0
 
-    .line 397
+    .line 404
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1139,13 +1161,13 @@
 
     goto/16 :goto_0
 
-    .line 401
+    .line 408
     .end local v7           #contentID:Ljava/lang/String;
     .end local v8           #cv:Landroid/content/ContentValues;
     .end local v10           #cvPosition:Ljava/lang/Integer;
     .end local v12           #cvShufflemode:Ljava/lang/Integer;
     .end local v21           #serverID:Ljava/lang/String;
-    :cond_d
+    :cond_e
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "case MSG_REQUEST_ALBUMART: No album art request..."
@@ -1154,8 +1176,8 @@
 
     goto/16 :goto_0
 
-    .line 405
-    :cond_e
+    .line 412
+    :cond_f
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "#### case MSG_REQUEST_ALBUMART: Getting some album art now....ignore this time request..."
@@ -1164,7 +1186,7 @@
 
     goto/16 :goto_0
 
-    .line 413
+    .line 420
     :pswitch_4
     const-string v23, "adn_server"
 
@@ -1174,7 +1196,7 @@
 
     move-result-object v21
 
-    .line 414
+    .line 421
     .restart local v21       #serverID:Ljava/lang/String;
     const-string v23, "adn_content"
 
@@ -1184,7 +1206,7 @@
 
     move-result-object v7
 
-    .line 415
+    .line 422
     .restart local v7       #contentID:Ljava/lang/String;
     const-string v23, "adn_filepath"
 
@@ -1194,7 +1216,7 @@
 
     move-result-object v16
 
-    .line 417
+    .line 424
     .local v16, filePath:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1211,9 +1233,9 @@
 
     move-result v23
 
-    if-eqz v23, :cond_f
+    if-eqz v23, :cond_10
 
-    .line 418
+    .line 425
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "something wrong, this arraylist should not be empty at this moment."
@@ -1222,8 +1244,8 @@
 
     goto/16 :goto_0
 
-    .line 422
-    :cond_f
+    .line 429
+    :cond_10
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1243,11 +1265,11 @@
 
     check-cast v8, Landroid/content/ContentValues;
 
-    .line 423
+    .line 430
     .restart local v8       #cv:Landroid/content/ContentValues;
-    if-nez v8, :cond_10
+    if-nez v8, :cond_11
 
-    .line 424
+    .line 431
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "something wrong, this content value should not be null at this moment."
@@ -1256,8 +1278,8 @@
 
     goto/16 :goto_0
 
-    .line 428
-    :cond_10
+    .line 435
+    :cond_11
     const-string v23, "shuffle"
 
     move-object/from16 v0, v23
@@ -1270,7 +1292,7 @@
 
     move-result v12
 
-    .line 429
+    .line 436
     .local v12, cvShufflemode:I
     const-string v23, "position"
 
@@ -1284,7 +1306,7 @@
 
     move-result v10
 
-    .line 430
+    .line 437
     .local v10, cvPosition:I
     const-string v23, "content"
 
@@ -1294,7 +1316,7 @@
 
     move-result-object v9
 
-    .line 431
+    .line 438
     .local v9, cvContentID:Ljava/lang/String;
     const-string v23, "server"
 
@@ -1304,13 +1326,13 @@
 
     move-result-object v11
 
-    .line 433
+    .line 440
     .local v11, cvServerID:Ljava/lang/String;
-    if-eqz v11, :cond_11
+    if-eqz v11, :cond_12
 
-    if-eqz v9, :cond_11
+    if-eqz v9, :cond_12
 
-    if-ltz v10, :cond_11
+    if-ltz v10, :cond_12
 
     move-object/from16 v0, p0
 
@@ -1325,18 +1347,18 @@
 
     move/from16 v0, v23
 
-    if-ge v10, v0, :cond_11
+    if-ge v10, v0, :cond_12
 
-    if-eqz v12, :cond_12
+    if-eqz v12, :cond_13
 
     const/16 v23, 0x1
 
     move/from16 v0, v23
 
-    if-eq v12, v0, :cond_12
+    if-eq v12, v0, :cond_13
 
-    .line 437
-    :cond_11
+    .line 444
+    :cond_12
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "something wrong, CV is incorrect."
@@ -1345,23 +1367,23 @@
 
     goto/16 :goto_0
 
-    .line 441
-    :cond_12
+    .line 448
+    :cond_13
     move-object/from16 v0, v21
 
     invoke-virtual {v11, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v23
 
-    if-eqz v23, :cond_17
+    if-eqz v23, :cond_19
 
     invoke-virtual {v9, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v23
 
-    if-eqz v23, :cond_17
+    if-eqz v23, :cond_19
 
-    .line 444
+    .line 451
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1377,7 +1399,7 @@
 
     invoke-virtual/range {v23 .. v24}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 445
+    .line 452
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1389,7 +1411,7 @@
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mIsAlbumArtGetting:Z
     invoke-static/range {v23 .. v24}, Lcom/htc/music/DMPMusicPlaybackService;->access$402(Lcom/htc/music/DMPMusicPlaybackService;Z)Z
 
-    .line 446
+    .line 453
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1405,10 +1427,10 @@
 
     invoke-virtual/range {v23 .. v24}, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->sendEmptyMessage(I)Z
 
-    .line 448
-    if-nez v16, :cond_13
+    .line 455
+    if-nez v16, :cond_14
 
-    .line 449
+    .line 456
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "## case MSG_HANDLE_ALBUMART: filePath from middlelayer is null!!!!!!!!!!"
@@ -1417,8 +1439,8 @@
 
     goto/16 :goto_0
 
-    .line 453
-    :cond_13
+    .line 460
+    :cond_14
     invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
 
     move-result v23
@@ -1427,7 +1449,7 @@
 
     move-result-object v17
 
-    .line 456
+    .line 463
     .local v17, filename:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1444,9 +1466,9 @@
 
     move-result-object v3
 
-    .line 458
+    .line 465
     .local v3, afDescriptor:Landroid/content/res/AssetFileDescriptor;
-    if-eqz v3, :cond_16
+    if-eqz v3, :cond_18
 
     invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->getLength()J
 
@@ -1456,9 +1478,9 @@
 
     cmp-long v23, v23, v25
 
-    if-lez v23, :cond_16
+    if-lez v23, :cond_18
 
-    .line 460
+    .line 467
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1470,7 +1492,7 @@
 
     move-result-object v14
 
-    .line 462
+    .line 469
     .local v14, dlnapath:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1483,7 +1505,7 @@
     #calls: Lcom/htc/music/DMPMusicPlaybackService;->ensurePathExists(Ljava/lang/String;)V
     invoke-static {v0, v14}, Lcom/htc/music/DMPMusicPlaybackService;->access$1300(Lcom/htc/music/DMPMusicPlaybackService;Ljava/lang/String;)V
 
-    .line 463
+    .line 470
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1495,7 +1517,14 @@
     #calls: Lcom/htc/music/DMPMusicPlaybackService;->eraseAllFilesIfNeeded(Ljava/lang/String;)V
     invoke-static {v0, v14}, Lcom/htc/music/DMPMusicPlaybackService;->access$1400(Lcom/htc/music/DMPMusicPlaybackService;Ljava/lang/String;)V
 
-    .line 465
+    .line 472
+    const/4 v5, 0x0
+
+    .line 474
+    .restart local v5       #albumArtFilePath:Ljava/lang/String;
+    if-eqz v14, :cond_15
+
+    .line 475
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
@@ -1518,8 +1547,10 @@
 
     move-result-object v5
 
-    .line 467
-    .restart local v5       #albumArtFilePath:Ljava/lang/String;
+    .line 478
+    :cond_15
+    if-eqz v5, :cond_17
+
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1533,9 +1564,9 @@
 
     move-result v23
 
-    if-eqz v23, :cond_15
+    if-eqz v23, :cond_17
 
-    .line 470
+    .line 481
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1553,14 +1584,14 @@
 
     invoke-virtual {v0, v7, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 473
+    .line 484
     const/16 v23, 0x1
 
     move/from16 v0, v23
 
-    if-ne v12, v0, :cond_14
+    if-ne v12, v0, :cond_16
 
-    .line 474
+    .line 485
     :try_start_4
     move-object/from16 v0, p0
 
@@ -1584,20 +1615,20 @@
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_2
     .catch Ljava/lang/NullPointerException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 494
-    :goto_5
+    .line 505
+    :goto_6
     :try_start_5
     invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 495
+    .line 506
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 477
-    :cond_14
+    .line 488
+    :cond_16
     :try_start_6
     move-object/from16 v0, p0
 
@@ -1621,24 +1652,24 @@
     .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_2
     .catch Ljava/lang/NullPointerException; {:try_start_6 .. :try_end_6} :catch_3
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 480
+    .line 491
     :catch_2
     move-exception v15
 
-    .line 482
+    .line 493
     .restart local v15       #e:Landroid/os/RemoteException;
     invoke-virtual {v15}, Landroid/os/RemoteException;->printStackTrace()V
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 483
+    .line 494
     .end local v15           #e:Landroid/os/RemoteException;
     :catch_3
     move-exception v15
 
-    .line 485
+    .line 496
     .local v15, e:Ljava/lang/NullPointerException;
     const-string v23, "[DMPMusicPlaybackService]"
 
@@ -1673,21 +1704,33 @@
 
     invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 486
+    .line 497
     invoke-virtual {v15}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 490
+    .line 501
     .end local v15           #e:Ljava/lang/NullPointerException;
-    :cond_15
+    :cond_17
     const-string v23, "[DMPMusicPlaybackService]"
 
     new-instance v24, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v25, "Handle Album Art...fail to save file to SD card...filePath = "
+    const-string v25, "Handle Album Art, fail to save file to SD card, albumArtFilePath: "
+
+    invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v24
+
+    move-object/from16 v0, v24
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v24
+
+    const-string v25, ", filePath: "
 
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1705,25 +1748,25 @@
 
     move-result-object v24
 
-    invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v23 .. v24}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 496
+    .line 507
     :catch_4
     move-exception v15
 
-    .line 498
+    .line 509
     .local v15, e:Ljava/io/IOException;
     invoke-virtual {v15}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 502
+    .line 513
     .end local v5           #albumArtFilePath:Ljava/lang/String;
     .end local v14           #dlnapath:Ljava/lang/String;
     .end local v15           #e:Ljava/io/IOException;
-    :cond_16
+    :cond_18
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "Handle Album Art...afDescriptor is null or length is 0..."
@@ -1732,10 +1775,10 @@
 
     goto/16 :goto_0
 
-    .line 508
+    .line 519
     .end local v3           #afDescriptor:Landroid/content/res/AssetFileDescriptor;
     .end local v17           #filename:Ljava/lang/String;
-    :cond_17
+    :cond_19
     const-string v23, "[DMPMusicPlaybackService]"
 
     const-string v24, "Handle Album Art...Incorrect Server/content..."
@@ -1744,7 +1787,7 @@
 
     goto/16 :goto_0
 
-    .line 515
+    .line 526
     .end local v7           #contentID:Ljava/lang/String;
     .end local v8           #cv:Landroid/content/ContentValues;
     .end local v9           #cvContentID:Ljava/lang/String;
@@ -1767,7 +1810,7 @@
 
     invoke-virtual/range {v23 .. v23}, Ljava/util/ArrayList;->clear()V
 
-    .line 516
+    .line 527
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1781,7 +1824,7 @@
 
     goto/16 :goto_0
 
-    .line 520
+    .line 531
     :pswitch_6
     const-string v23, "interval"
 
@@ -1791,7 +1834,7 @@
 
     move-result v18
 
-    .line 522
+    .line 533
     .local v18, interval:I
     :try_start_7
     move-object/from16 v0, p0
@@ -1810,17 +1853,17 @@
 
     goto/16 :goto_0
 
-    .line 523
+    .line 534
     :catch_5
     move-exception v15
 
-    .line 525
+    .line 536
     .local v15, e:Landroid/os/RemoteException;
     invoke-virtual {v15}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 531
+    .line 542
     .end local v15           #e:Landroid/os/RemoteException;
     .end local v18           #interval:I
     :pswitch_7
@@ -1837,7 +1880,7 @@
 
     goto/16 :goto_0
 
-    .line 535
+    .line 546
     :pswitch_8
     move-object/from16 v0, p0
 
@@ -1850,9 +1893,9 @@
 
     move-result-object v23
 
-    if-eqz v23, :cond_18
+    if-eqz v23, :cond_1a
 
-    .line 536
+    .line 547
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1866,7 +1909,7 @@
 
     invoke-virtual/range {v23 .. v23}, Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;->release()V
 
-    .line 537
+    .line 548
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->this$0:Lcom/htc/music/DMPMusicPlaybackService;
@@ -1878,8 +1921,8 @@
     #setter for: Lcom/htc/music/DMPMusicPlaybackService;->mPlayer:Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
     invoke-static/range {v23 .. v24}, Lcom/htc/music/DMPMusicPlaybackService;->access$202(Lcom/htc/music/DMPMusicPlaybackService;Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;)Lcom/htc/music/DMPMusicPlaybackService$MultiPlayer;
 
-    .line 539
-    :cond_18
+    .line 550
+    :cond_1a
     const/16 v23, 0x0
 
     move-object/from16 v0, p0
@@ -1888,23 +1931,21 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 540
+    .line 551
     invoke-virtual/range {p0 .. p0}, Lcom/htc/music/DMPMusicPlaybackService$NonUIHandler;->getLooper()Landroid/os/Looper;
 
     move-result-object v20
 
-    .line 541
+    .line 552
     .local v20, looper:Landroid/os/Looper;
     if-eqz v20, :cond_0
 
-    .line 542
+    .line 553
     invoke-virtual/range {v20 .. v20}, Landroid/os/Looper;->quit()V
 
     goto/16 :goto_0
 
-    .line 266
-    nop
-
+    .line 267
     :pswitch_data_0
     .packed-switch 0x2af9
         :pswitch_0

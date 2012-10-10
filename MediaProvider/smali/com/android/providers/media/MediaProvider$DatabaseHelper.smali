@@ -39,6 +39,18 @@
     .end annotation
 .end field
 
+.field mArtist2Cache:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field mArtistCache:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -74,50 +86,57 @@
     .parameter "objectRemovedCallback"
 
     .prologue
-    .line 465
+    .line 474
     const/4 v0, 0x0
 
-    const/16 v1, 0x198
+    const/16 v1, 0x199
 
     invoke-direct {p0, p1, p2, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 445
+    .line 449
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mArtistCache:Ljava/util/HashMap;
 
-    .line 446
+    .line 450
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mAlbumCache:Ljava/util/HashMap;
 
-    .line 448
+    .line 453
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mArtist2Cache:Ljava/util/HashMap;
+
+    .line 457
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mAlbumArtCaches:Ljava/util/HashMap;
 
-    .line 466
+    .line 475
     iput-object p1, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mContext:Landroid/content/Context;
 
-    .line 467
+    .line 476
     iput-object p2, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mName:Ljava/lang/String;
 
-    .line 468
+    .line 477
     iput-object p3, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mInternal:Lcom/android/providers/media/MediaProvider$STORAGE;
 
-    .line 469
+    .line 478
     iput-boolean p4, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mEarlyUpgrade:Z
 
-    .line 470
+    .line 479
     iput-object p5, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mObjectRemovedCallback:Landroid/database/sqlite/SQLiteDatabase$CustomFunction;
 
-    .line 471
+    .line 480
     return-void
 .end method
 
@@ -132,25 +151,25 @@
     .end annotation
 
     .prologue
-    .line 478
+    .line 487
     :try_start_0
     invoke-virtual {p0}, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 484
+    .line 493
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 487
+    .line 496
     :goto_0
     return-void
 
-    .line 480
+    .line 489
     :catch_0
     move-exception v0
 
-    .line 484
+    .line 493
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     goto :goto_0
@@ -167,12 +186,12 @@
     .locals 4
 
     .prologue
-    .line 516
+    .line 525
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 517
+    .line 526
     .local v1, result:Landroid/database/sqlite/SQLiteDatabase;
     const/4 v2, 0x0
 
@@ -181,7 +200,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 519
+    .line 528
     :try_start_1
     invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
     :try_end_1
@@ -190,7 +209,7 @@
 
     move-result-object v1
 
-    .line 530
+    .line 539
     :cond_0
     if-nez v1, :cond_1
 
@@ -199,7 +218,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 531
+    .line 540
     iget-object v2, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mName:Ljava/lang/String;
@@ -210,7 +229,7 @@
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 532
+    .line 541
     invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -220,17 +239,17 @@
     :cond_1
     move-object v2, v1
 
-    .line 534
+    .line 543
     :goto_0
     monitor-exit p0
 
     return-object v2
 
-    .line 520
+    .line 529
     :catch_0
     move-exception v0
 
-    .line 521
+    .line 530
     .local v0, e:Ljava/lang/Exception;
     :try_start_3
     iget-boolean v2, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mUpgradeAttempted:Z
@@ -239,12 +258,12 @@
 
     if-nez v2, :cond_0
 
-    .line 523
+    .line 532
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 516
+    .line 525
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v2
@@ -259,26 +278,44 @@
     .parameter "db"
 
     .prologue
-    .line 496
+    .line 505
     invoke-static {}, Lcom/android/providers/media/MediaProvider;->access$900()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "[DatabaseHelper][onCreate]"
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "[DatabaseHelper][onCreate]"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    sget-object v2, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
+    .line 507
     iget-object v0, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mInternal:Lcom/android/providers/media/MediaProvider$STORAGE;
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x198
+    const/16 v2, 0x199
 
     #calls: Lcom/android/providers/media/MediaProvider;->updateDatabase(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/providers/media/MediaProvider$STORAGE;II)V
     invoke-static {p1, v0, v1, v2}, Lcom/android/providers/media/MediaProvider;->access$1200(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/providers/media/MediaProvider$STORAGE;II)V
 
-    .line 499
+    .line 508
     return-void
 .end method
 
@@ -287,10 +324,10 @@
     .parameter "db"
 
     .prologue
-    .line 550
+    .line 559
     invoke-virtual/range {p1 .. p1}, Landroid/database/sqlite/SQLiteDatabase;->enableWriteAheadLogging()Z
 
-    .line 552
+    .line 561
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mInternal:Lcom/android/providers/media/MediaProvider$STORAGE;
@@ -305,11 +342,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 687
+    .line 696
     :cond_0
     return-void
 
-    .line 556
+    .line 565
     :cond_1
     move-object/from16 v0, p0
 
@@ -319,7 +356,7 @@
 
     if-nez v25, :cond_0
 
-    .line 558
+    .line 567
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mObjectRemovedCallback:Landroid/database/sqlite/SQLiteDatabase$CustomFunction;
@@ -328,7 +365,7 @@
 
     if-eqz v25, :cond_2
 
-    .line 559
+    .line 568
     const-string v25, "_OBJECT_REMOVED"
 
     const/16 v26, 0x1
@@ -349,7 +386,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->addCustomFunction(Ljava/lang/String;ILandroid/database/sqlite/SQLiteDatabase$CustomFunction;)V
 
-    .line 564
+    .line 573
     :cond_2
     invoke-static {}, Landroid/os/Environment;->isExternalStorageRemovable()Z
 
@@ -357,7 +394,7 @@
 
     if-eqz v25, :cond_0
 
-    .line 567
+    .line 576
     new-instance v8, Ljava/io/File;
 
     invoke-virtual/range {p1 .. p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
@@ -368,19 +405,19 @@
 
     invoke-direct {v8, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 572
+    .line 581
     .local v8, file:Ljava/io/File;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v16
 
-    .line 573
+    .line 582
     .local v16, now:J
     move-wide/from16 v0, v16
 
     invoke-virtual {v8, v0, v1}, Ljava/io/File;->setLastModified(J)Z
 
-    .line 576
+    .line 585
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mContext:Landroid/content/Context;
@@ -391,15 +428,15 @@
 
     move-result-object v5
 
-    .line 577
+    .line 586
     .local v5, databases:[Ljava/lang/String;
     array-length v4, v5
 
-    .line 578
+    .line 587
     .local v4, count:I
     const/4 v12, 0x3
 
-    .line 581
+    .line 590
     .local v12, limit:I
     move-object/from16 v0, p0
 
@@ -411,25 +448,25 @@
 
     move-result-object v6
 
-    .line 582
+    .line 591
     .local v6, databasesToDel:[Ljava/lang/String;
     const-string v19, ".db-shm"
 
-    .line 583
+    .line 592
     .local v19, shm:Ljava/lang/String;
     const-string v24, ".db-wal"
 
-    .line 584
+    .line 593
     .local v24, wal:Ljava/lang/String;
     const-string v11, "-journal"
 
-    .line 589
+    .line 598
     .local v11, journal:Ljava/lang/String;
     const-wide v25, 0x134fd9000L
 
     sub-long v22, v16, v25
 
-    .line 590
+    .line 599
     .local v22, twoMonthsAgo:J
     const/4 v9, 0x0
 
@@ -443,7 +480,7 @@
 
     if-ge v9, v0, :cond_c
 
-    .line 591
+    .line 600
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mContext:Landroid/content/Context;
@@ -456,7 +493,7 @@
 
     move-result-object v18
 
-    .line 595
+    .line 604
     .local v18, other:Ljava/io/File;
     const-string v25, "internal.db"
 
@@ -476,16 +513,16 @@
 
     if-eqz v25, :cond_5
 
-    .line 596
+    .line 605
     :cond_3
     const/16 v25, 0x0
 
     aput-object v25, v5, v9
 
-    .line 597
+    .line 606
     add-int/lit8 v4, v4, -0x1
 
-    .line 598
+    .line 607
     move-object/from16 v0, v18
 
     invoke-virtual {v8, v0}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
@@ -494,17 +531,17 @@
 
     if-eqz v25, :cond_4
 
-    .line 601
+    .line 610
     add-int/lit8 v12, v12, -0x1
 
-    .line 590
+    .line 599
     :cond_4
     :goto_1
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 604
+    .line 613
     :cond_5
     aget-object v25, v5, v9
 
@@ -522,17 +559,17 @@
 
     if-eqz v25, :cond_6
 
-    .line 607
+    .line 616
     const/16 v25, 0x0
 
     aput-object v25, v5, v9
 
-    .line 608
+    .line 617
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_1
 
-    .line 609
+    .line 618
     :cond_6
     aget-object v25, v5, v9
 
@@ -550,17 +587,17 @@
 
     if-eqz v25, :cond_7
 
-    .line 613
+    .line 622
     const/16 v25, 0x0
 
     aput-object v25, v5, v9
 
-    .line 614
+    .line 623
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_1
 
-    .line 616
+    .line 625
     :cond_7
     aget-object v25, v5, v9
 
@@ -576,29 +613,29 @@
 
     if-eqz v25, :cond_8
 
-    .line 620
+    .line 629
     const/16 v25, 0x0
 
     aput-object v25, v5, v9
 
-    .line 621
+    .line 630
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_1
 
-    .line 625
+    .line 634
     :cond_8
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->lastModified()J
 
     move-result-wide v20
 
-    .line 626
+    .line 635
     .local v20, time:J
     cmp-long v25, v20, v22
 
     if-gez v25, :cond_4
 
-    .line 628
+    .line 637
     aget-object v25, v5, v9
 
     const-string v26, ".db"
@@ -607,15 +644,15 @@
 
     move-result v10
 
-    .line 630
+    .line 639
     .local v10, idx:I
     aget-object v7, v5, v9
 
-    .line 632
+    .line 641
     .local v7, dbName:Ljava/lang/String;
     if-ltz v10, :cond_9
 
-    .line 633
+    .line 642
     aget-object v25, v5, v9
 
     const/16 v26, 0x0
@@ -628,7 +665,7 @@
 
     move-result-object v7
 
-    .line 638
+    .line 647
     :cond_9
     move-object/from16 v0, p0
 
@@ -640,15 +677,15 @@
 
     invoke-virtual/range {v25 .. v26}, Landroid/content/Context;->deleteDatabase(Ljava/lang/String;)Z
 
-    .line 639
+    .line 648
     const/16 v25, 0x0
 
     aput-object v25, v5, v9
 
-    .line 640
+    .line 649
     add-int/lit8 v4, v4, -0x1
 
-    .line 643
+    .line 652
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mContext:Landroid/content/Context;
@@ -661,7 +698,7 @@
 
     goto/16 :goto_1
 
-    .line 666
+    .line 675
     .end local v7           #dbName:Ljava/lang/String;
     .end local v10           #idx:I
     .end local v18           #other:Ljava/io/File;
@@ -675,7 +712,7 @@
 
     if-eq v13, v0, :cond_c
 
-    .line 668
+    .line 677
     aget-object v25, v5, v13
 
     const-string v26, ".db"
@@ -684,15 +721,15 @@
 
     move-result v10
 
-    .line 670
+    .line 679
     .restart local v10       #idx:I
     aget-object v7, v5, v13
 
-    .line 672
+    .line 681
     .restart local v7       #dbName:Ljava/lang/String;
     if-ltz v10, :cond_b
 
-    .line 673
+    .line 682
     aget-object v25, v5, v13
 
     const/16 v26, 0x0
@@ -705,7 +742,7 @@
 
     move-result-object v7
 
-    .line 678
+    .line 687
     :cond_b
     move-object/from16 v0, p0
 
@@ -717,15 +754,15 @@
 
     invoke-virtual/range {v25 .. v26}, Landroid/content/Context;->deleteDatabase(Ljava/lang/String;)Z
 
-    .line 679
+    .line 688
     const/16 v25, 0x0
 
     aput-object v25, v5, v13
 
-    .line 680
+    .line 689
     add-int/lit8 v4, v4, -0x1
 
-    .line 683
+    .line 692
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mContext:Landroid/content/Context;
@@ -736,7 +773,7 @@
 
     invoke-static {v0, v6, v7}, Lcom/android/providers/media/MediaProvider;->DeleteShmWalDB(Landroid/content/Context;[Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 651
+    .line 660
     .end local v7           #dbName:Ljava/lang/String;
     .end local v10           #idx:I
     .end local v13           #lruIndex:I
@@ -744,14 +781,14 @@
     :cond_c
     if-le v4, v12, :cond_0
 
-    .line 652
+    .line 661
     const/4 v13, -0x1
 
-    .line 653
+    .line 662
     .restart local v13       #lruIndex:I
     const-wide/16 v14, 0x0
 
-    .line 655
+    .line 664
     .restart local v14       #lruTime:J
     const/4 v9, 0x0
 
@@ -764,12 +801,12 @@
 
     if-ge v9, v0, :cond_a
 
-    .line 656
+    .line 665
     aget-object v25, v5, v9
 
     if-eqz v25, :cond_e
 
-    .line 657
+    .line 666
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mContext:Landroid/content/Context;
@@ -786,7 +823,7 @@
 
     move-result-wide v20
 
-    .line 658
+    .line 667
     .restart local v20       #time:J
     const-wide/16 v25, 0x0
 
@@ -798,14 +835,14 @@
 
     if-gez v25, :cond_e
 
-    .line 659
+    .line 668
     :cond_d
     move v13, v9
 
-    .line 660
+    .line 669
     move-wide/from16 v14, v20
 
-    .line 655
+    .line 664
     .end local v20           #time:J
     :cond_e
     add-int/lit8 v9, v9, 0x1
@@ -820,17 +857,17 @@
     .parameter "newV"
 
     .prologue
-    .line 510
+    .line 519
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mUpgradeAttempted:Z
 
-    .line 511
+    .line 520
     iget-object v0, p0, Lcom/android/providers/media/MediaProvider$DatabaseHelper;->mInternal:Lcom/android/providers/media/MediaProvider$STORAGE;
 
     #calls: Lcom/android/providers/media/MediaProvider;->updateDatabase(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/providers/media/MediaProvider$STORAGE;II)V
     invoke-static {p1, v0, p2, p3}, Lcom/android/providers/media/MediaProvider;->access$1200(Landroid/database/sqlite/SQLiteDatabase;Lcom/android/providers/media/MediaProvider$STORAGE;II)V
 
-    .line 512
+    .line 521
     return-void
 .end method

@@ -30,17 +30,17 @@
     .parameter "size"
 
     .prologue
-    .line 684
+    .line 686
     iput-object p1, p0, Lcom/htc/opensense/cache/CacheManager$FileInfo;->this$0:Lcom/htc/opensense/cache/CacheManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 685
+    .line 687
     iput-object p2, p0, Lcom/htc/opensense/cache/CacheManager$FileInfo;->uri:Landroid/net/Uri;
 
-    .line 686
+    .line 688
     iput p3, p0, Lcom/htc/opensense/cache/CacheManager$FileInfo;->size:I
 
-    .line 687
+    .line 689
     return-void
 .end method

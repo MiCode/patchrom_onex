@@ -29,12 +29,12 @@
     .parameter
 
     .prologue
-    .line 1435
+    .line 224
     iput-object p1, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1436
+    .line 225
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
@@ -48,7 +48,7 @@
     .locals 1
 
     .prologue
-    .line 1439
+    .line 228
     iget-object v0, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
 
     return-object v0
@@ -58,10 +58,10 @@
     .locals 3
 
     .prologue
-    .line 1453
+    .line 242
     const/4 v0, 0x0
 
-    .line 1454
+    .line 243
     .local v0, count:I
     iget-object v2, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
@@ -69,16 +69,16 @@
 
     move-result-object v1
 
-    .line 1455
+    .line 244
     .local v1, itemlist:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/FolderItemInfo;>;"
     if-eqz v1, :cond_0
 
-    .line 1456
+    .line 245
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 1458
+    .line 247
     :cond_0
     return v0
 .end method
@@ -89,7 +89,7 @@
     .parameter "menuItem"
 
     .prologue
-    .line 1505
+    .line 284
     const/4 v0, 0x0
 
     return v0
@@ -101,13 +101,13 @@
     .parameter "menu"
 
     .prologue
-    .line 1492
+    .line 276
     iput-object p1, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
 
-    .line 1493
+    .line 277
     invoke-virtual {p0}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->updateActionModeTitleForCount()V
 
-    .line 1494
+    .line 278
     const/4 v0, 0x1
 
     return v0
@@ -118,20 +118,20 @@
     .parameter "actionMode"
 
     .prologue
-    .line 1515
+    .line 289
     invoke-virtual {p0}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->getSelectedItemCount()I
 
     move-result v0
 
-    .line 1516
+    .line 290
     .local v0, count:I
     if-lez v0, :cond_0
 
-    .line 1517
+    .line 291
     iget-object v1, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
     #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
-    invoke-static {v1}, Lcom/htc/app/FilePickerFolderAdapter;->access$400(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerUtil;
+    invoke-static {v1}, Lcom/htc/app/FilePickerFolderAdapter;->access$300(Lcom/htc/app/FilePickerFolderAdapter;)Lcom/htc/app/FilePickerUtil;
 
     move-result-object v1
 
@@ -139,11 +139,11 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/app/FilePickerUtil;->notifyToDoTaskEvent(I)V
 
-    .line 1522
+    .line 296
     :goto_0
     return-void
 
-    .line 1520
+    .line 294
     :cond_0
     const/4 v1, 0x0
 
@@ -158,7 +158,7 @@
     .parameter "menu"
 
     .prologue
-    .line 1531
+    .line 300
     const/4 v0, 0x1
 
     return v0
@@ -169,10 +169,10 @@
     .parameter "actionMode"
 
     .prologue
-    .line 1443
+    .line 232
     iput-object p1, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
 
-    .line 1444
+    .line 233
     return-void
 .end method
 
@@ -181,17 +181,17 @@
     .parameter "title"
 
     .prologue
-    .line 1447
+    .line 236
     iget-object v0, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
 
     if-eqz v0, :cond_0
 
-    .line 1448
+    .line 237
     iget-object v0, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
 
     invoke-virtual {v0, p1}, Landroid/view/ActionMode;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 1450
+    .line 239
     :cond_0
     return-void
 .end method
@@ -200,12 +200,12 @@
     .locals 5
 
     .prologue
-    .line 1463
+    .line 252
     invoke-virtual {p0}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->getSelectedItemCount()I
 
     move-result v0
 
-    .line 1465
+    .line 254
     .local v0, count:I
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -225,22 +225,22 @@
 
     move-result-object v1
 
-    .line 1467
+    .line 256
     .local v1, title:Ljava/lang/String;
     iget-object v2, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
     #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/htc/app/FilePickerFolderAdapter;->access$2100(Lcom/htc/app/FilePickerFolderAdapter;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/htc/app/FilePickerFolderAdapter;->access$100(Lcom/htc/app/FilePickerFolderAdapter;)Landroid/content/Context;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 1468
+    .line 257
     iget-object v2, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
     #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mSelectionType:I
-    invoke-static {v2}, Lcom/htc/app/FilePickerFolderAdapter;->access$3100(Lcom/htc/app/FilePickerFolderAdapter;)I
+    invoke-static {v2}, Lcom/htc/app/FilePickerFolderAdapter;->access$200(Lcom/htc/app/FilePickerFolderAdapter;)I
 
     move-result v2
 
@@ -248,11 +248,11 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 1469
+    .line 258
     iget-object v2, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
     #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/htc/app/FilePickerFolderAdapter;->access$2100(Lcom/htc/app/FilePickerFolderAdapter;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/htc/app/FilePickerFolderAdapter;->access$100(Lcom/htc/app/FilePickerFolderAdapter;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -266,29 +266,29 @@
 
     move-result-object v1
 
-    .line 1477
+    .line 266
     :cond_0
     :goto_0
     invoke-virtual {p0, v1}, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->setActionModeTitle(Ljava/lang/String;)V
 
-    .line 1478
+    .line 267
     if-nez v0, :cond_1
 
-    .line 1479
+    .line 268
     iget-object v2, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
 
     if-eqz v2, :cond_1
 
-    .line 1480
+    .line 269
     iget-object v2, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->mActionMode:Landroid/view/ActionMode;
 
     invoke-virtual {v2}, Landroid/view/ActionMode;->finish()V
 
-    .line 1483
+    .line 272
     :cond_1
     return-void
 
-    .line 1471
+    .line 260
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -307,7 +307,7 @@
     iget-object v3, p0, Lcom/htc/app/FilePickerFolderAdapter$FolderModeMultiChoiceModeCallback;->this$0:Lcom/htc/app/FilePickerFolderAdapter;
 
     #getter for: Lcom/htc/app/FilePickerFolderAdapter;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/htc/app/FilePickerFolderAdapter;->access$2100(Lcom/htc/app/FilePickerFolderAdapter;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/htc/app/FilePickerFolderAdapter;->access$100(Lcom/htc/app/FilePickerFolderAdapter;)Landroid/content/Context;
 
     move-result-object v3
 
@@ -315,7 +315,7 @@
 
     move-result-object v3
 
-    const v4, 0x20403e0
+    const v4, 0x20403e1
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

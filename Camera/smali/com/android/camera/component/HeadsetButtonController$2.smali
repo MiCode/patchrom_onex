@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 56
+    .line 57
     iput-object p1, p0, Lcom/android/camera/component/HeadsetButtonController$2;->this$0:Lcom/android/camera/component/HeadsetButtonController;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/android/camera/component/HeadsetButtonController$2;->this$0:Lcom/android/camera/component/HeadsetButtonController;
 
     #getter for: Lcom/android/camera/component/HeadsetButtonController;->m_ActionScreenDisableCounter:I
@@ -50,12 +50,12 @@
 
     if-lez v0, :cond_0
 
-    .line 62
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/HeadsetButtonController$2;->this$0:Lcom/android/camera/component/HeadsetButtonController;
 
     invoke-static {v0}, Lcom/android/camera/component/HeadsetButtonController;->access$006(Lcom/android/camera/component/HeadsetButtonController;)I
 
-    .line 63
+    .line 64
     iget-object v0, p0, Lcom/android/camera/component/HeadsetButtonController$2;->this$0:Lcom/android/camera/component/HeadsetButtonController;
 
     invoke-virtual {v0}, Lcom/android/camera/component/HeadsetButtonController;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->enableActionScreen()V
 
-    .line 65
+    .line 66
     :cond_0
     return-void
 .end method

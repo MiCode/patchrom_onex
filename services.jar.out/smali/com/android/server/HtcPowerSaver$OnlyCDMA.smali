@@ -33,10 +33,10 @@
     .parameter "ctx"
 
     .prologue
-    .line 1283
+    .line 1279
     iput-object p1, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->this$0:Lcom/android/server/HtcPowerSaver;
 
-    .line 1284
+    .line 1280
     const-string v2, "OnlyCDMA"
 
     const-string v3, "powersaver_CDMAonly"
@@ -51,10 +51,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/HtcPowerSaver$Feature;-><init>(Lcom/android/server/HtcPowerSaver;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 1285
+    .line 1281
     iput-object p2, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->mContext:Landroid/content/Context;
 
-    .line 1286
+    .line 1282
     return-void
 .end method
 
@@ -62,10 +62,10 @@
     .locals 6
 
     .prologue
-    .line 1298
+    .line 1294
     const/16 v2, 0x8
 
-    .line 1300
+    .line 1296
     .local v2, type:I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->mContext:Landroid/content/Context;
@@ -78,7 +78,7 @@
 
     check-cast v1, Lcom/htc/service/HtcTelephonyManager;
 
-    .line 1301
+    .line 1297
     .local v1, mgr:Lcom/htc/service/HtcTelephonyManager;
     invoke-virtual {v1}, Lcom/htc/service/HtcTelephonyManager;->getPreferredNetworkType()I
     :try_end_0
@@ -86,16 +86,16 @@
 
     move-result v2
 
-    .line 1305
+    .line 1301
     .end local v1           #mgr:Lcom/htc/service/HtcTelephonyManager;
     :goto_0
     return v2
 
-    .line 1302
+    .line 1298
     :catch_0
     move-exception v0
 
-    .line 1303
+    .line 1299
     .local v0, e:Ljava/lang/Exception;
     const-string v3, "HtcPowerSaver"
 
@@ -126,12 +126,12 @@
     .locals 4
 
     .prologue
-    .line 1309
+    .line 1305
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->getNetworkType()I
 
     move-result v0
 
-    .line 1310
+    .line 1306
     .local v0, mode:I
     const-string v1, "HtcPowerSaver"
 
@@ -155,7 +155,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1311
+    .line 1307
     return v0
 .end method
 
@@ -164,7 +164,7 @@
     .parameter "networkType"
 
     .prologue
-    .line 1290
+    .line 1286
     :try_start_0
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->mContext:Landroid/content/Context;
 
@@ -176,22 +176,22 @@
 
     check-cast v1, Lcom/htc/service/HtcTelephonyManager;
 
-    .line 1291
+    .line 1287
     .local v1, mgr:Lcom/htc/service/HtcTelephonyManager;
     invoke-virtual {v1, p1}, Lcom/htc/service/HtcTelephonyManager;->setPreferredNetworkType(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1295
+    .line 1291
     .end local v1           #mgr:Lcom/htc/service/HtcTelephonyManager;
     :goto_0
     return-void
 
-    .line 1292
+    .line 1288
     :catch_0
     move-exception v0
 
-    .line 1293
+    .line 1289
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "HtcPowerSaver"
 
@@ -224,19 +224,19 @@
     .locals 2
 
     .prologue
-    .line 1329
+    .line 1325
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->setNetworkType(I)V
 
-    .line 1330
+    .line 1326
     const-string v0, "HtcPowerSaver"
 
     const-string v1, "applyPowerSaverSettings: setNetworkType=4"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1331
+    .line 1327
     const/4 v0, 0x0
 
     return v0
@@ -246,7 +246,7 @@
     .locals 5
 
     .prologue
-    .line 1336
+    .line 1332
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->this$0:Lcom/android/server/HtcPowerSaver;
 
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->mContext:Landroid/content/Context;
@@ -256,7 +256,7 @@
 
     move-result-object v1
 
-    .line 1337
+    .line 1333
     .local v1, sp:Landroid/content/SharedPreferences;
     const-string v2, "powersaver_normal_network_mode"
 
@@ -266,11 +266,11 @@
 
     move-result v0
 
-    .line 1338
+    .line 1334
     .local v0, normalValue:I
     invoke-direct {p0, v0}, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->setNetworkType(I)V
 
-    .line 1339
+    .line 1335
     const-string v2, "HtcPowerSaver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -293,7 +293,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1340
+    .line 1336
     const/4 v2, 0x0
 
     return v2
@@ -305,7 +305,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1316
+    .line 1312
     iget-object v2, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->this$0:Lcom/android/server/HtcPowerSaver;
 
     iget-object v3, p0, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->mContext:Landroid/content/Context;
@@ -315,28 +315,28 @@
 
     move-result-object v1
 
-    .line 1317
+    .line 1313
     .local v1, sp:Landroid/content/SharedPreferences;
     if-nez v1, :cond_0
 
-    .line 1318
+    .line 1314
     const-string v2, "HtcPowerSaver"
 
     const-string v3, "Get SharedPreferences fail."
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1324
+    .line 1320
     :goto_0
     return v5
 
-    .line 1321
+    .line 1317
     :cond_0
     invoke-direct {p0}, Lcom/android/server/HtcPowerSaver$OnlyCDMA;->getSysSettings()I
 
     move-result v0
 
-    .line 1322
+    .line 1318
     .local v0, mode:I
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -350,7 +350,7 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1323
+    .line 1319
     const-string v2, "HtcPowerSaver"
 
     new-instance v3, Ljava/lang/StringBuilder;

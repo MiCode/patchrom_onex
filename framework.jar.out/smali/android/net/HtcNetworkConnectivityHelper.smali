@@ -89,7 +89,7 @@
     .parameter "context"
 
     .prologue
-    .line 146
+    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 42
@@ -114,20 +114,20 @@
 
     iput-object v0, p0, Landroid/net/HtcNetworkConnectivityHelper;->gw2:Ljava/lang/String;
 
-    .line 147
+    .line 148
     sget-object v0, Landroid/net/HtcNetworkConnectivityHelper$State;->NOT_CONNECTED:Landroid/net/HtcNetworkConnectivityHelper$State;
 
     iput-object v0, p0, Landroid/net/HtcNetworkConnectivityHelper;->mState:Landroid/net/HtcNetworkConnectivityHelper$State;
 
-    .line 148
+    .line 149
     sget-object v0, Landroid/net/HtcNetworkConnectivityHelper$State;->NOT_CONNECTED:Landroid/net/HtcNetworkConnectivityHelper$State;
 
     iput-object v0, p0, Landroid/net/HtcNetworkConnectivityHelper;->mOldState:Landroid/net/HtcNetworkConnectivityHelper$State;
 
-    .line 149
+    .line 150
     iput-object p1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mContext:Landroid/content/Context;
 
-    .line 150
+    .line 151
     new-instance v0, Landroid/net/HtcNetworkConnectivityHelper$ConnectivityBroadcastReceiver;
 
     const/4 v1, 0x0
@@ -136,7 +136,7 @@
 
     iput-object v0, p0, Landroid/net/HtcNetworkConnectivityHelper;->mReceiver:Landroid/net/HtcNetworkConnectivityHelper$ConnectivityBroadcastReceiver;
 
-    .line 151
+    .line 152
     const-string v0, "connectivity"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -147,7 +147,7 @@
 
     iput-object v0, p0, Landroid/net/HtcNetworkConnectivityHelper;->mConnMgr:Landroid/net/ConnectivityManager;
 
-    .line 152
+    .line 153
     return-void
 .end method
 
@@ -275,7 +275,7 @@
     .parameter "feature"
 
     .prologue
-    .line 228
+    .line 229
     const-string v0, "enableMMS"
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -284,14 +284,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 229
+    .line 230
     const-string/jumbo v0, "mms"
 
-    .line 243
+    .line 244
     :goto_0
     return-object v0
 
-    .line 230
+    .line 231
     :cond_0
     const-string v0, "enableSUPL"
 
@@ -301,12 +301,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 231
+    .line 232
     const-string/jumbo v0, "supl"
 
     goto :goto_0
 
-    .line 232
+    .line 233
     :cond_1
     const-string v0, "enableDUN"
 
@@ -316,12 +316,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 233
+    .line 234
     const-string v0, "dun"
 
     goto :goto_0
 
-    .line 234
+    .line 235
     :cond_2
     const-string v0, "enableHIPRI"
 
@@ -331,12 +331,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 235
+    .line 236
     const-string v0, "hipri"
 
     goto :goto_0
 
-    .line 236
+    .line 237
     :cond_3
     const-string v0, "enableWAPGATEWAY"
 
@@ -346,12 +346,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 237
+    .line 238
     const-string/jumbo v0, "wapgateway"
 
     goto :goto_0
 
-    .line 238
+    .line 239
     :cond_4
     const-string v0, "enableHTTPPROXY"
 
@@ -361,12 +361,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 239
-    const-string/jumbo v0, "httpproxy"
+    .line 240
+    const-string v0, "httpproxy"
 
     goto :goto_0
 
-    .line 240
+    .line 241
     :cond_5
     const-string v0, "enableFOTA"
 
@@ -376,12 +376,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 241
+    .line 242
     const-string v0, "fota"
 
     goto :goto_0
 
-    .line 243
+    .line 244
     :cond_6
     const-string v0, "default"
 
@@ -393,25 +393,25 @@
     .parameter "intent"
 
     .prologue
-    .line 249
+    .line 250
     const-string/jumbo v2, "state"
 
     invoke-virtual {p1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 250
+    .line 251
     .local v1, str:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 251
+    .line 252
     const-string v2, "apnType"
 
     invoke-virtual {p1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 253
+    .line 254
     .local v0, apnTypeList:Ljava/lang/String;
     invoke-direct {p0, v0}, Landroid/net/HtcNetworkConnectivityHelper;->isApnTypeIncluded(Ljava/lang/String;)Z
 
@@ -419,7 +419,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 254
+    .line 255
     const-class v2, Lcom/android/internal/telephony/Phone$DataState;
 
     invoke-static {v2, v1}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -428,7 +428,7 @@
 
     check-cast v2, Lcom/android/internal/telephony/Phone$DataState;
 
-    .line 257
+    .line 258
     .end local v0           #apnTypeList:Ljava/lang/String;
     :goto_0
     return-object v2
@@ -446,15 +446,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 262
+    .line 263
     if-nez p1, :cond_1
 
-    .line 272
+    .line 273
     :cond_0
     :goto_0
     return v2
 
-    .line 265
+    .line 266
     :cond_1
     const-string v3, ","
 
@@ -462,7 +462,7 @@
 
     move-result-object v1
 
-    .line 266
+    .line 267
     .local v1, list:[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -472,7 +472,7 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 267
+    .line 268
     aget-object v3, v1, v0
 
     iget-object v4, p0, Landroid/net/HtcNetworkConnectivityHelper;->mApnType:Ljava/lang/String;
@@ -493,13 +493,13 @@
 
     if-eqz v3, :cond_3
 
-    .line 269
+    .line 270
     :cond_2
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 266
+    .line 267
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
@@ -510,7 +510,7 @@
     .locals 4
 
     .prologue
-    .line 120
+    .line 121
     iget-object v3, p0, Landroid/net/HtcNetworkConnectivityHelper;->mHandlers:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -521,7 +521,7 @@
 
     move-result-object v0
 
-    .line 121
+    .line 122
     .local v0, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/os/Handler;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -530,14 +530,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 122
+    .line 123
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/Handler;
 
-    .line 123
+    .line 124
     .local v2, target:Landroid/os/Handler;
     iget-object v3, p0, Landroid/net/HtcNetworkConnectivityHelper;->mHandlers:Ljava/util/HashMap;
 
@@ -555,13 +555,13 @@
 
     move-result-object v1
 
-    .line 124
+    .line 125
     .local v1, message:Landroid/os/Message;
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 
-    .line 126
+    .line 127
     .end local v1           #message:Landroid/os/Message;
     .end local v2           #target:Landroid/os/Handler;
     :cond_0
@@ -574,7 +574,7 @@
     .locals 1
 
     .prologue
-    .line 159
+    .line 160
     iget-object v0, p0, Landroid/net/HtcNetworkConnectivityHelper;->mReason:Ljava/lang/String;
 
     return-object v0
@@ -584,7 +584,7 @@
     .locals 1
 
     .prologue
-    .line 155
+    .line 156
     iget-object v0, p0, Landroid/net/HtcNetworkConnectivityHelper;->mState:Landroid/net/HtcNetworkConnectivityHelper$State;
 
     return-object v0
@@ -597,17 +597,17 @@
     .parameter "what"
 
     .prologue
-    .line 173
+    .line 174
     iput-object p1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mRequestFeature:Ljava/lang/String;
 
-    .line 174
+    .line 175
     invoke-direct {p0, p1}, Landroid/net/HtcNetworkConnectivityHelper;->convertApnbyFeature(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mApnType:Ljava/lang/String;
 
-    .line 175
+    .line 176
     const-string/jumbo v2, "net.rmnet0.gw"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -616,7 +616,7 @@
 
     iput-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->gw0:Ljava/lang/String;
 
-    .line 176
+    .line 177
     const-string/jumbo v2, "net.rmnet1.gw"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -625,7 +625,7 @@
 
     iput-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->gw1:Ljava/lang/String;
 
-    .line 177
+    .line 178
     const-string/jumbo v2, "net.rmnet2.gw"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -634,7 +634,7 @@
 
     iput-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->gw2:Ljava/lang/String;
 
-    .line 178
+    .line 179
     iget-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mHandlers:Ljava/util/HashMap;
 
     invoke-virtual {v2, p2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -643,7 +643,7 @@
 
     if-nez v2, :cond_0
 
-    .line 179
+    .line 180
     iget-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mHandlers:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -652,17 +652,17 @@
 
     invoke-virtual {v2, p2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 180
+    .line 181
     :cond_0
     const/4 v1, 0x0
 
-    .line 181
+    .line 182
     .local v1, rtn:I
     iget-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mConnMgr:Landroid/net/ConnectivityManager;
 
     if-eqz v2, :cond_2
 
-    .line 182
+    .line 183
     iget-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mConnMgr:Landroid/net/ConnectivityManager;
 
     const/4 v3, 0x0
@@ -671,58 +671,58 @@
 
     move-result v1
 
-    .line 183
+    .line 184
     iget-boolean v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mListening:Z
 
     if-nez v2, :cond_1
 
-    .line 184
+    .line 185
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 185
+    .line 186
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.ANY_DATA_STATE"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 186
+    .line 187
     iget-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Landroid/net/HtcNetworkConnectivityHelper;->mReceiver:Landroid/net/HtcNetworkConnectivityHelper$ConnectivityBroadcastReceiver;
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 187
+    .line 188
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mListening:Z
 
     move v2, v1
 
-    .line 196
+    .line 197
     .end local v0           #filter:Landroid/content/IntentFilter;
     :goto_0
     return v2
 
-    .line 190
+    .line 191
     :cond_1
     if-nez v1, :cond_2
 
-    .line 191
+    .line 192
     invoke-direct {p0}, Landroid/net/HtcNetworkConnectivityHelper;->notifyhandler()V
 
     move v2, v1
 
-    .line 192
+    .line 193
     goto :goto_0
 
-    .line 195
+    .line 196
     :cond_2
     invoke-direct {p0}, Landroid/net/HtcNetworkConnectivityHelper;->notifyhandler()V
 
-    .line 196
+    .line 197
     const/4 v2, 0x3
 
     goto :goto_0
@@ -735,16 +735,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 208
+    .line 209
     const/4 v0, 0x0
 
-    .line 209
+    .line 210
     .local v0, rtn:I
     iget-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mConnMgr:Landroid/net/ConnectivityManager;
 
     if-eqz v1, :cond_2
 
-    .line 210
+    .line 211
     iget-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mConnMgr:Landroid/net/ConnectivityManager;
 
     iget-object v2, p0, Landroid/net/HtcNetworkConnectivityHelper;->mRequestFeature:Ljava/lang/String;
@@ -753,25 +753,25 @@
 
     move-result v0
 
-    .line 211
+    .line 212
     iget-boolean v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mListening:Z
 
     if-eqz v1, :cond_1
 
-    .line 212
+    .line 213
     sget-object v1, Landroid/net/HtcNetworkConnectivityHelper$State;->NOT_CONNECTED:Landroid/net/HtcNetworkConnectivityHelper$State;
 
     iput-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mState:Landroid/net/HtcNetworkConnectivityHelper$State;
 
-    .line 213
+    .line 214
     sget-object v1, Landroid/net/HtcNetworkConnectivityHelper$State;->NOT_CONNECTED:Landroid/net/HtcNetworkConnectivityHelper$State;
 
     iput-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mOldState:Landroid/net/HtcNetworkConnectivityHelper$State;
 
-    .line 214
+    .line 215
     invoke-direct {p0}, Landroid/net/HtcNetworkConnectivityHelper;->notifyhandler()V
 
-    .line 215
+    .line 216
     iget-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mHandlers:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -780,12 +780,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 216
+    .line 217
     iget-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mHandlers:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 217
+    .line 218
     :cond_0
     iget-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mContext:Landroid/content/Context;
 
@@ -793,10 +793,10 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 218
+    .line 219
     iput-boolean v3, p0, Landroid/net/HtcNetworkConnectivityHelper;->mListening:Z
 
-    .line 219
+    .line 220
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/net/HtcNetworkConnectivityHelper;->mRequestFeature:Ljava/lang/String;
@@ -804,7 +804,7 @@
     :cond_1
     move v1, v0
 
-    .line 224
+    .line 225
     :goto_0
     return v1
 

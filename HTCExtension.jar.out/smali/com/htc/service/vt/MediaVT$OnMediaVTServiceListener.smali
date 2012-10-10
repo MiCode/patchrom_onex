@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1125
+    .line 1159
     iput-object p1, p0, Lcom/htc/service/vt/MediaVT$OnMediaVTServiceListener;->this$0:Lcom/htc/service/vt/MediaVT;
 
     invoke-direct {p0}, Lcom/htc/service/vt/OnMediaVTServiceEventListener$Stub;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1128
+    .line 1162
     const-string v1, "MediaVT_Java"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -75,10 +75,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1129
+    .line 1163
     packed-switch p1, :pswitch_data_0
 
-    .line 1135
+    .line 1169
     const-string v1, "MediaVT_Java"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -101,11 +101,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1137
+    .line 1171
     :goto_0
     return v0
 
-    .line 1131
+    .line 1165
     :pswitch_0
     const-string v1, "MediaVT_Java"
 
@@ -113,7 +113,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1132
+    .line 1166
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$OnMediaVTServiceListener;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/16 v2, 0x12e
@@ -123,12 +123,12 @@
     #calls: Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
     invoke-static {v1, v2, v0, v0, v3}, Lcom/htc/service/vt/MediaVT;->access$100(Lcom/htc/service/vt/MediaVT;IIILjava/lang/Object;)V
 
-    .line 1133
+    .line 1167
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1129
+    .line 1163
     :pswitch_data_0
     .packed-switch 0xc8
         :pswitch_0

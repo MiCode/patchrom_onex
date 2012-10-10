@@ -32,7 +32,7 @@
     .line 4101
     iput-object p1, p0, Landroid/widget/ListView$CheckForPressAnimation;->this$0:Landroid/widget/ListView;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     iget-object v2, p0, Landroid/widget/ListView$CheckForPressAnimation;->this$0:Landroid/widget/ListView;
 
-    iget v2, v2, Landroid/widget/AbsListView;->mTouchMode:I
+    iget v2, v2, Landroid/widget/ListView;->mTouchMode:I
 
     const/4 v3, 0x1
 
@@ -83,13 +83,13 @@
 
     iget-object v2, p0, Landroid/widget/ListView$CheckForPressAnimation;->this$0:Landroid/widget/ListView;
 
-    iget v2, v2, Landroid/widget/AbsListView;->mTouchMode:I
+    iget v2, v2, Landroid/widget/ListView;->mTouchMode:I
 
     if-eqz v2, :cond_2
 
     iget-object v2, p0, Landroid/widget/ListView$CheckForPressAnimation;->this$0:Landroid/widget/ListView;
 
-    iget v2, v2, Landroid/widget/AbsListView;->mTouchMode:I
+    iget v2, v2, Landroid/widget/ListView;->mTouchMode:I
 
     const/4 v3, -0x1
 
@@ -97,7 +97,7 @@
 
     iget-object v2, p0, Landroid/widget/ListView$CheckForPressAnimation;->this$0:Landroid/widget/ListView;
 
-    iget v2, v2, Landroid/widget/AbsListView;->mTouchMode:I
+    iget v2, v2, Landroid/widget/ListView;->mTouchMode:I
 
     const/4 v3, 0x2
 

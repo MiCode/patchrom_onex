@@ -591,28 +591,32 @@
 
     const/high16 v1, 0x3f80
 
-    .line 648
+    .line 649
     iput-boolean v2, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
-    .line 649
+    .line 650
+    iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mStayInPress:Z
+
+    if-eqz v0, :cond_2
+
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsGreenOn:Z
 
     if-eqz v0, :cond_2
 
-    .line 650
+    .line 651
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcImageButton;->setScaleWidth(F)V
 
-    .line 651
+    .line 652
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcImageButton;->setScaleHeight(F)V
 
-    .line 652
+    .line 653
     iget-object v0, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyPaint:Landroid/graphics/Paint;
 
     const/16 v1, 0xff
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 653
+    .line 654
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
 
     if-eqz v0, :cond_0
@@ -627,7 +631,7 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/ImageButton;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 660
+    .line 661
     :cond_0
     :goto_0
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
@@ -636,23 +640,23 @@
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->invalidate()V
 
-    .line 661
+    .line 662
     :cond_1
     return-void
 
-    .line 655
+    .line 656
     :cond_2
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcImageButton;->setScaleWidth(F)V
 
-    .line 656
+    .line 657
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcImageButton;->setScaleHeight(F)V
 
-    .line 657
+    .line 658
     iget-object v0, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 658
+    .line 659
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
 
     if-eqz v0, :cond_0
@@ -666,15 +670,15 @@
     .locals 1
 
     .prologue
-    .line 528
+    .line 529
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
     if-eqz v0, :cond_0
 
-    .line 529
+    .line 530
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->cancelEvent()V
 
-    .line 534
+    .line 535
     :cond_0
     return-void
 .end method
@@ -732,7 +736,7 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 502
+    .line 503
     :cond_0
     :goto_0
     return-void
@@ -794,9 +798,14 @@
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->start()V
 
+    .line 463
+    const/16 v3, 0x7f
+
+    invoke-virtual {p0, v3}, Lcom/htc/widget/HtcImageButton;->setMultiplyAlpha(I)V
+
     goto :goto_0
 
-    .line 466
+    .line 467
     :pswitch_2
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -810,51 +819,51 @@
 
     if-eqz v3, :cond_0
 
-    .line 467
+    .line 468
     iget-boolean v3, p0, Lcom/htc/widget/HtcImageButton;->mStayInPress:Z
 
     if-nez v3, :cond_1
 
-    .line 468
+    .line 469
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyDownAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 469
+    .line 470
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyUpAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 470
+    .line 471
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyUpAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->end()V
 
     goto :goto_0
 
-    .line 472
+    .line 473
     :cond_1
     iget-boolean v3, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
     if-eqz v3, :cond_2
 
-    .line 473
+    .line 474
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->cancelEvent()V
 
-    .line 475
+    .line 476
     :cond_2
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyDownAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 476
+    .line 477
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyUpAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->cancel()V
 
     goto :goto_0
 
-    .line 480
+    .line 481
     :pswitch_3
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -868,14 +877,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 481
+    .line 482
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
 
     float-to-int v1, v3
 
-    .line 482
+    .line 483
     .local v1, x:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -883,7 +892,7 @@
 
     float-to-int v2, v3
 
-    .line 485
+    .line 486
     .local v2, y:I
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->getContext()Landroid/content/Context;
 
@@ -897,7 +906,7 @@
 
     move-result v0
 
-    .line 486
+    .line 487
     .local v0, slop:I
     rsub-int/lit8 v3, v0, 0x0
 
@@ -923,45 +932,45 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 488
+    .line 489
     :cond_3
     iget-boolean v3, p0, Lcom/htc/widget/HtcImageButton;->mStayInPress:Z
 
     if-nez v3, :cond_4
 
-    .line 489
+    .line 490
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyDownAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 490
+    .line 491
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyUpAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 491
+    .line 492
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyUpAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->end()V
 
     goto/16 :goto_0
 
-    .line 493
+    .line 494
     :cond_4
     iget-boolean v3, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
     if-eqz v3, :cond_5
 
-    .line 494
+    .line 495
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->cancelEvent()V
 
-    .line 496
+    .line 497
     :cond_5
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyDownAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 497
+    .line 498
     iget-object v3, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyUpAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->cancel()V
@@ -969,8 +978,6 @@
     goto/16 :goto_0
 
     .line 451
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -985,19 +992,19 @@
     .parameter "event"
 
     .prologue
-    .line 537
+    .line 538
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v3
 
     packed-switch v3, :pswitch_data_0
 
-    .line 568
+    .line 569
     :cond_0
     :goto_0
     return-void
 
-    .line 539
+    .line 540
     :pswitch_0
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -1011,14 +1018,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 540
+    .line 541
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 541
+    .line 542
     iget-boolean v3, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
     if-eqz v3, :cond_0
@@ -1027,7 +1034,7 @@
 
     goto :goto_0
 
-    .line 545
+    .line 546
     :pswitch_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -1041,19 +1048,19 @@
 
     if-eqz v3, :cond_0
 
-    .line 546
+    .line 547
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 547
+    .line 548
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->removePropertyDown()V
 
     goto :goto_0
 
-    .line 551
+    .line 552
     :pswitch_2
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -1067,12 +1074,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 552
+    .line 553
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->cancelPropertyMove()V
 
     goto :goto_0
 
-    .line 556
+    .line 557
     :pswitch_3
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -1086,14 +1093,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 557
+    .line 558
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
 
     float-to-int v1, v3
 
-    .line 558
+    .line 559
     .local v1, x:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -1101,7 +1108,7 @@
 
     float-to-int v2, v3
 
-    .line 561
+    .line 562
     .local v2, y:I
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->getContext()Landroid/content/Context;
 
@@ -1115,7 +1122,7 @@
 
     move-result v0
 
-    .line 562
+    .line 563
     .local v0, slop:I
     rsub-int/lit8 v3, v0, 0x0
 
@@ -1141,13 +1148,13 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 564
+    .line 565
     :cond_1
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->cancelPropertyMove()V
 
     goto :goto_0
 
-    .line 537
+    .line 538
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1699,7 +1706,7 @@
     .line 285
     :array_0
     .array-data 0x4
-        0x0t 0x0t 0x0t 0x0t
+        0x7ft 0x0t 0x0t 0x0t
         0xfft 0x0t 0x0t 0x0t
     .end array-data
 
@@ -1715,31 +1722,31 @@
     .locals 1
 
     .prologue
-    .line 505
+    .line 506
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->onUpAnimationEnd()V
 
-    .line 506
+    .line 507
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->onDownAnimationStart()V
 
-    .line 507
+    .line 508
     const/16 v0, 0xff
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcImageButton;->setMultiplyAlpha(I)V
 
-    .line 508
+    .line 509
     iget v0, p0, Lcom/htc/widget/HtcImageButton;->mMinScaleWidth:F
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcImageButton;->setScaleWidth(F)V
 
-    .line 509
+    .line 510
     iget v0, p0, Lcom/htc/widget/HtcImageButton;->mMinScaleHeight:F
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcImageButton;->setScaleHeight(F)V
 
-    .line 510
+    .line 511
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->onDownAnimationEnd()V
 
-    .line 511
+    .line 512
     return-void
 .end method
 
@@ -1749,27 +1756,27 @@
     .prologue
     const/high16 v1, 0x3f80
 
-    .line 514
+    .line 515
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->onDownAnimationEnd()V
 
-    .line 515
+    .line 516
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->onUpAnimationStart()V
 
-    .line 516
+    .line 517
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/htc/widget/HtcImageButton;->setMultiplyAlpha(I)V
 
-    .line 517
+    .line 518
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcImageButton;->setScaleWidth(F)V
 
-    .line 518
+    .line 519
     invoke-virtual {p0, v1}, Lcom/htc/widget/HtcImageButton;->setScaleHeight(F)V
 
-    .line 519
+    .line 520
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->onUpAnimationEnd()V
 
-    .line 520
+    .line 521
     return-void
 .end method
 
@@ -2015,7 +2022,7 @@
     .parameter "canvas"
 
     .prologue
-    .line 689
+    .line 690
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
     if-eqz v0, :cond_4
@@ -2026,23 +2033,23 @@
 
     if-eqz v0, :cond_4
 
-    .line 690
+    .line 691
     const/4 v8, 0x0
 
-    .line 691
+    .line 692
     .local v8, sc:I
     const/4 v7, 0x0
 
-    .line 692
+    .line 693
     .local v7, d:Landroid/graphics/drawable/Drawable;
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
 
     if-eqz v0, :cond_0
 
-    .line 693
+    .line 694
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 695
+    .line 696
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->getScrollX()I
 
     move-result v0
@@ -2089,22 +2096,22 @@
 
     move-result v8
 
-    .line 696
+    .line 697
     invoke-virtual {p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 698
+    .line 699
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
-    .line 699
+    .line 700
     if-eqz v7, :cond_0
 
-    .line 700
+    .line 701
     iget-object v0, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
@@ -2115,42 +2122,42 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 705
+    .line 706
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 707
+    .line 708
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
 
     if-eqz v0, :cond_2
 
-    .line 708
+    .line 709
     invoke-virtual {p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 709
+    .line 710
     if-eqz v7, :cond_1
 
     iget-object v0, p0, Lcom/htc/widget/HtcImageButton;->mOriginalColorFilter:Landroid/graphics/ColorFilter;
 
     invoke-virtual {v7, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 714
+    .line 715
     :cond_1
     :goto_0
     invoke-virtual {p1, v8}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 720
+    .line 721
     .end local v7           #d:Landroid/graphics/drawable/Drawable;
     .end local v8           #sc:I
     :cond_2
     :goto_1
     return-void
 
-    .line 712
+    .line 713
     .restart local v7       #d:Landroid/graphics/drawable/Drawable;
     .restart local v8       #sc:I
     :cond_3
@@ -2166,7 +2173,7 @@
 
     goto :goto_0
 
-    .line 718
+    .line 719
     .end local v7           #d:Landroid/graphics/drawable/Drawable;
     .end local v8           #sc:I
     :cond_4
@@ -2179,19 +2186,27 @@
     .locals 1
 
     .prologue
-    .line 727
+    .line 728
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
     if-eqz v0, :cond_0
 
-    .line 728
-    invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->cancelEvent()V
+    .line 729
+    iget-object v0, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyDownAnimatorSet:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     .line 730
+    invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->cancelEvent()V
+
+    .line 731
+    invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->invalidate()V
+
+    .line 734
     :cond_0
     invoke-super {p0}, Landroid/widget/ImageButton;->onFocusLost()V
 
-    .line 731
+    .line 735
     return-void
 .end method
 
@@ -2201,10 +2216,10 @@
     .parameter "event"
 
     .prologue
-    .line 575
+    .line 576
     sparse-switch p1, :sswitch_data_0
 
-    .line 594
+    .line 595
     :cond_0
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/widget/ImageButton;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -2213,7 +2228,7 @@
 
     return v0
 
-    .line 578
+    .line 579
     :sswitch_0
     invoke-static {}, Lcom/htc/widget/HtcButtonUtil;->getEnableAnimation()Z
 
@@ -2221,7 +2236,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 579
+    .line 580
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v0
@@ -2234,26 +2249,26 @@
 
     if-eqz v0, :cond_0
 
-    .line 580
+    .line 581
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 581
+    .line 582
     iget-object v0, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyUpAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
 
-    .line 582
+    .line 583
     iget-object v0, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyDownAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_0
 
-    .line 586
+    .line 587
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -2267,19 +2282,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 587
+    .line 588
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 588
+    .line 589
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->removePropertyDown()V
 
     goto :goto_0
 
-    .line 575
+    .line 576
     nop
 
     :sswitch_data_0
@@ -2295,10 +2310,10 @@
     .parameter "event"
 
     .prologue
-    .line 598
+    .line 599
     sparse-switch p1, :sswitch_data_0
 
-    .line 618
+    .line 619
     :cond_0
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/widget/ImageButton;->onKeyUp(ILandroid/view/KeyEvent;)Z
@@ -2307,7 +2322,7 @@
 
     return v0
 
-    .line 601
+    .line 602
     :sswitch_0
     invoke-static {}, Lcom/htc/widget/HtcButtonUtil;->getEnableAnimation()Z
 
@@ -2315,7 +2330,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 602
+    .line 603
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v0
@@ -2328,19 +2343,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 603
+    .line 604
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 604
+    .line 605
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->handelUpEventWithAnimation()V
 
     goto :goto_0
 
-    .line 608
+    .line 609
     :cond_1
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
@@ -2354,24 +2369,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 609
+    .line 610
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 610
+    .line 611
     iget-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mIsAnimating:Z
 
     if-eqz v0, :cond_0
 
-    .line 611
+    .line 612
     invoke-direct {p0}, Lcom/htc/widget/HtcImageButton;->removePropertyUp()V
 
     goto :goto_0
 
-    .line 598
+    .line 599
     :sswitch_data_0
     .sparse-switch
         0x17 -> :sswitch_0
@@ -2387,15 +2402,15 @@
     .parameter "oldt"
 
     .prologue
-    .line 668
+    .line 669
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageButton;->onScrollChanged(IIII)V
 
-    .line 670
+    .line 671
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/widget/HtcImageButton;->mBackgroundChange:Z
 
-    .line 671
+    .line 672
     return-void
 .end method
 
@@ -2465,17 +2480,17 @@
     .parameter "event"
 
     .prologue
-    .line 638
+    .line 639
     invoke-static {}, Lcom/htc/widget/HtcButtonUtil;->getEnableAnimation()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 639
+    .line 640
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcImageButton;->handleTouchEventWithAnimation(Landroid/view/MotionEvent;)V
 
-    .line 644
+    .line 645
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -2483,7 +2498,7 @@
 
     return v0
 
-    .line 641
+    .line 642
     :cond_0
     invoke-direct {p0, p1}, Lcom/htc/widget/HtcImageButton;->handleTouchEventWithoutAnimation(Landroid/view/MotionEvent;)V
 
@@ -2579,7 +2594,7 @@
     .locals 1
 
     .prologue
-    .line 626
+    .line 627
     invoke-super {p0}, Landroid/widget/ImageButton;->performClick()Z
 
     move-result v0
@@ -2591,7 +2606,7 @@
     .locals 1
 
     .prologue
-    .line 634
+    .line 635
     invoke-super {p0}, Landroid/widget/ImageButton;->performLongClick()Z
 
     move-result v0
@@ -2604,13 +2619,13 @@
     .parameter "cf"
 
     .prologue
-    .line 679
+    .line 680
     iput-object p1, p0, Lcom/htc/widget/HtcImageButton;->mOriginalColorFilter:Landroid/graphics/ColorFilter;
 
-    .line 680
+    .line 681
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 681
+    .line 682
     return-void
 .end method
 
@@ -2623,7 +2638,7 @@
 
     const/4 v1, 0x0
 
-    .line 738
+    .line 742
     iget-object v2, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2}, Landroid/graphics/Paint;->getAlpha()I
@@ -2634,25 +2649,25 @@
 
     const/4 v0, 0x1
 
-    .line 739
+    .line 743
     .local v0, current_on:Z
     :goto_0
     if-eq v0, p1, :cond_1
 
-    .line 740
+    .line 744
     if-eqz p1, :cond_3
 
-    .line 741
+    .line 745
     iget-object v1, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 742
+    .line 746
     iget-boolean v1, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
 
     if-eqz v1, :cond_0
 
-    .line 743
+    .line 747
     iget-object v1, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1}, Landroid/graphics/Paint;->getColor()I
@@ -2663,7 +2678,7 @@
 
     invoke-super {p0, v1, v2}, Landroid/widget/ImageButton;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 753
+    .line 757
     :cond_0
     :goto_1
     iget-boolean v1, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
@@ -2672,7 +2687,7 @@
 
     invoke-virtual {p0}, Lcom/htc/widget/HtcImageButton;->invalidate()V
 
-    .line 755
+    .line 759
     :cond_1
     return-void
 
@@ -2680,22 +2695,22 @@
     :cond_2
     move v0, v1
 
-    .line 738
+    .line 742
     goto :goto_0
 
-    .line 747
+    .line 751
     .restart local v0       #current_on:Z
     :cond_3
     iget-object v2, p0, Lcom/htc/widget/HtcImageButton;->mMultiplyPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 748
+    .line 752
     iget-boolean v1, p0, Lcom/htc/widget/HtcImageButton;->mIsContentMultiplyRequired:Z
 
     if-eqz v1, :cond_0
 
-    .line 749
+    .line 753
     invoke-super {p0}, Landroid/widget/ImageButton;->clearColorFilter()V
 
     goto :goto_1
@@ -2746,10 +2761,10 @@
     .parameter "icon"
 
     .prologue
-    .line 758
+    .line 762
     invoke-virtual {p0, p1}, Lcom/htc/widget/HtcImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 759
+    .line 763
     return-void
 .end method
 
@@ -2758,10 +2773,10 @@
     .parameter "icon"
 
     .prologue
-    .line 762
+    .line 766
     invoke-virtual {p0, p1}, Lcom/htc/widget/HtcImageButton;->setImageResource(I)V
 
-    .line 763
+    .line 767
     return-void
 .end method
 
@@ -2955,9 +2970,9 @@
     .parameter "stay"
 
     .prologue
-    .line 734
+    .line 738
     iput-boolean p1, p0, Lcom/htc/widget/HtcImageButton;->mStayInPress:Z
 
-    .line 735
+    .line 739
     return-void
 .end method

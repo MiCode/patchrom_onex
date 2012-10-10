@@ -47,7 +47,7 @@
     .line 51
     new-instance v0, Landroid/net/LocalSocketAddress;
 
-    const-string/jumbo v1, "keystore"
+    const-string v1, "keystore"
 
     sget-object v2, Landroid/net/LocalSocketAddress$Namespace;->RESERVED:Landroid/net/LocalSocketAddress$Namespace;
 

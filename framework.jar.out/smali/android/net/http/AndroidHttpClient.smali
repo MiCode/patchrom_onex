@@ -589,7 +589,7 @@
     .line 135
     new-instance v4, Lorg/apache/http/conn/scheme/Scheme;
 
-    const-string/jumbo v5, "https"
+    const-string v5, "https"
 
     invoke-static {v8, v3}, Landroid/net/SSLCertificateSocketFactory;->getHttpSocketFactory(ILandroid/net/SSLSessionCache;)Lorg/apache/http/conn/ssl/SSLSocketFactory;
 

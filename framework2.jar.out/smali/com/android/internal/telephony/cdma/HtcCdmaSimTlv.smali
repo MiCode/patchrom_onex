@@ -59,7 +59,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 97
+    .line 101
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->record:[B
 
@@ -81,12 +81,12 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 120
+    .line 124
     :cond_0
     :goto_0
     return v1
 
-    .line 101
+    .line 105
     :cond_1
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->record:[B
 
@@ -102,7 +102,7 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 103
+    .line 107
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->record:[B
 
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curOffset:I
@@ -115,7 +115,7 @@
 
     iput v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curDataLength:I
 
-    .line 104
+    .line 108
     iget v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curOffset:I
 
     add-int/lit8 v2, v2, 0x2
@@ -124,7 +124,7 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 116
+    .line 120
     :goto_1
     iget v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curDataLength:I
 
@@ -140,12 +140,12 @@
 
     if-gt v2, v3, :cond_0
 
-    .line 120
+    .line 124
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 105
+    .line 109
     :cond_2
     :try_start_1
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->record:[B
@@ -162,7 +162,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 107
+    .line 111
     iget-object v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->record:[B
 
     iget v3, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curOffset:I
@@ -175,7 +175,7 @@
 
     iput v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curDataLength:I
 
-    .line 108
+    .line 112
     iget v2, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curOffset:I
 
     add-int/lit8 v2, v2, 0x3
@@ -186,11 +186,11 @@
 
     goto :goto_1
 
-    .line 112
+    .line 116
     :catch_0
     move-exception v0
 
-    .line 113
+    .line 117
     .local v0, ex:Ljava/lang/ArrayIndexOutOfBoundsException;
     goto :goto_0
 .end method
@@ -201,24 +201,24 @@
     .locals 5
 
     .prologue
-    .line 81
+    .line 85
     iget-boolean v1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->hasValidTlvObject:Z
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 85
+    .line 89
     :goto_0
     return-object v0
 
-    .line 83
+    .line 87
     :cond_0
     iget v1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curDataLength:I
 
     new-array v0, v1, [B
 
-    .line 84
+    .line 88
     .local v0, ret:[B
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->record:[B
 
@@ -237,14 +237,14 @@
     .locals 2
 
     .prologue
-    .line 71
+    .line 74
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->hasValidTlvObject:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 72
+    .line 75
     :goto_0
     return v0
 
@@ -264,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 63
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->hasValidTlvObject:Z
 
     return v0
@@ -274,18 +274,18 @@
     .locals 2
 
     .prologue
-    .line 54
+    .line 55
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->hasValidTlvObject:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 57
+    .line 58
     :goto_0
     return v0
 
-    .line 55
+    .line 56
     :cond_0
     iget v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curDataOffset:I
 
@@ -295,14 +295,14 @@
 
     iput v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->curOffset:I
 
-    .line 56
+    .line 57
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->parseCurrentTlvObject()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->hasValidTlvObject:Z
 
-    .line 57
+    .line 58
     iget-boolean v0, p0, Lcom/android/internal/telephony/cdma/HtcCdmaSimTlv;->hasValidTlvObject:Z
 
     goto :goto_0

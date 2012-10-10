@@ -45,7 +45,7 @@
     <string name="htc_genre_title">ژانرها</string>
     <string name="htc_genre_title_one">%1s ژانر</string>
     <string name="htc_genre_title_counts">%1s ژانر</string>
-    <string name="htc_purchase_title">خریداری شده</string>
+    <string name="htc_purchase_title">خرید شده</string>
     <string name="htc_dlna_title">سرورهای رسانه</string>
     <string name="htc_dlna_title_TMO">Screen Share</string>
     <string name="htc_change_order_title">تغيير ترتیب</string>
@@ -61,7 +61,7 @@
     <string name="playlist_deleted_message">ليست پخش حذف شد</string>
     <string name="playlist_renamed_message">لیست پخش تغییر نام یافت</string>
     <string name="podcasts_listitem">پادکست ها</string>
-    <string name="htc_new_songs_playlist">اضافه كردن ليست پخش</string>
+    <string name="htc_new_songs_playlist">افزودن لیست پخش</string>
     <string name="htc_searching">درحال جستجوی موسیقی...</string>
     <string name="sdcard_busy_title">کارت حافظه قابل دسترس نیست</string>
     <string name="phone_storage_busy_title">حافظه تلفن موجود نيست</string>
@@ -81,8 +81,8 @@
     <string name="repeat_all_notif">تكراركردن همه ترانه ها</string>
     <string name="ringtone_menu_short">تعیین بعنوان زنگ تماس</string>
     <string name="ringtone_set">\"%s\" بعنوان زنگ تماس تعیین شد</string>
-    <string name="add_to_playlist">اضافه كردن به ليست پخش</string>
-    <string name="add_to_queue">اضافه كردن به صف</string>
+    <string name="add_to_playlist">افزودن به لیست پخش</string>
+    <string name="add_to_queue">افزودن به صف</string>
     <string name="queue">لیست پخش فعلي</string>
     <string name="new_playlist_name_template">لیست پخش جدید %d</string>
     <string name="emptyplaylist">لیست پخش خالي است</string>
@@ -134,9 +134,10 @@
     <string name="htc_drm_cannot_be_forwarded">امكان انتقال به دليل محدودیت های مجوز وجود ندارد</string>
     <string name="htc_drm_playback_failed">متاسفیم، مجوز پخش معتبر نيست.</string>
     <string name="htc_drm_cannot_be_shared">امكان اشتراک گذاری به دليل محدودیت های مجوز وجود ندارد</string>
-    <string name="htc_add_a_playlist">اضافه كردن یک ليست پخش</string>
+    <string name="htc_add_a_playlist">افزودن یک لیست پخش</string>
     <string name="htc_delete_playlists">حذف لیست های پخش</string>
     <string name="htc_delete_playlist">حذف لیست پخش</string>
+    <string name="htc_delete_all_playlists">حذف همه لیست های پخش</string>
     <string name="htc_playlist_add_songs">اضافه کردن ترانه ها</string>
     <string name="htc_playlist_del_songs">حذف ترانه ها</string>
     <string name="htc_playlist_remove_songs">حذف ترانه ها</string>
@@ -165,7 +166,7 @@
     <string name="htc_phone_ringtone_menu">زنگ تماس تلفن</string>
     <string name="htc_contact_ringtone_menu">زنگ تماس مخاطب</string>
     <string name="htc_repeatoff">تكرار خاموش</string>
-    <string name="htc_add_songs_to_playlist">اضافه كردن ترانه ها به ليست پخش</string>
+    <string name="htc_add_songs_to_playlist">افزودن ترانه ها به لیست پخش</string>
     <string name="htc_no_songs_to_playlist">لطفا ترانه ها را به ليست پخش اضافه کنید</string>
     <string name="htc_no_name_for_playlist">لطفا يك نام برای لیست پخش وارد كنيد</string>
     <string name="htc_cannot_create_playlist">ایجاد لیست پخش ممکن نیست</string>
@@ -187,7 +188,7 @@
     <string name="LOAD_NEXT_PAGE">درحال بارگذاري آيتم هاي بيشتر...</string>
     <string name="GO_PREV_PAGE">آيتم هاي بيشتر</string>
     <string name="LOAD_PREV_PAGE">درحال بارگذاري آيتم هاي بيشتر...</string>
-    <string name="authorization_failed_title">عدم امكان اعتباردهي</string>
+    <string name="authorization_failed_title">امکان مجازکردن وجود ندارد</string>
     <string name="authorization_failed_message">امكان دسترسي به سرور رسانه اي انتخاب شده وجود ندارد. لطفا مطمئن شويد حق قانوني دسترسي به اين سرور را داريد.</string>
     <string name="DLNA_CONNECTION_FAILED_CONTENT">اين ويژگي نيازمند دسترسي Wi-Fi مي باشد. لطفا Wi-Fi را روشن كنيد تا از سرورهاي رسانه اي و پخش كننده هاي شبكه استفاده شود.</string>
     <string name="DLNA_CONNECTION_ERROR_CONTENT">امكان اتصال به سرور رسانه اي انتخاب شده وجود ندارد.</string>
@@ -405,15 +406,16 @@
     <string name="menu_album_detail">جزئیات آلبوم</string>
     <string name="car_mode">حالت ماشین</string>
     <string name="get_more_app">Android Market</string>
-    <string name="add_app_shortcut">اضافه كردن ميانبر برنامه كاربردي</string>
+    <string name="add_app_shortcut">افزودن میانبر برنامه کاربردی</string>
     <string name="remove_app">مديريت برنامه هاي كاربردي</string>
     <string name="MENU_soundhound">دریافت اطلاعات</string>
     <string name="dlna_notify_title">كنترل كننده موسيقي</string>
     <string name="remove_shortcut">حذف ميانبر برنامه كاربردي</string>
     <string name="shortcut_removed">%s با موفقیت حذف شد</string>
     <string name="soundhound_unplug_headphones_toast">اگر هدفون به دستگاه متصل است، آن را قطع کنید تا SoundHound بتواند ترانه شما را شناسایی کند.</string>
-    <string name="no_recently_played_albums">هیچ آلبوم اخیراً پخش شده ای وجود ندارد</string>
+    <string name="no_recently_played_albums">بدون آلبوم اخیراً پخش شده</string>
     <string name="title_buffering">میانگیری…</string>
     <string name="title_send_content">ارسال محتوا…</string>
     <string name="no_downloaded_apps_found">برنامه کاربردی دانلود شده ای يافت نشد</string>
+    <string name="music_folder_picker_dialog_msg">Add songs to playlists by selecting the folder? “No” to add songs the other way</string>
 </resources>

@@ -27,7 +27,7 @@
     .locals 2
 
     .prologue
-    .line 1460
+    .line 1588
     sget-object v0, Landroid/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "blacknumbers"
@@ -45,7 +45,7 @@
     .locals 0
 
     .prologue
-    .line 1455
+    .line 1582
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

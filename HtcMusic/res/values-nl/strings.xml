@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Een afspeellijst toevoegen</string>
     <string name="htc_delete_playlists">Afspeellijsten verwijderen</string>
     <string name="htc_delete_playlist">Afspeellijst verwijderen</string>
+    <string name="htc_delete_all_playlists">Alle afspeellijsten wissen</string>
     <string name="htc_playlist_add_songs">Nummers toevoegen</string>
     <string name="htc_playlist_del_songs">Nummers verwijderen</string>
     <string name="htc_playlist_remove_songs">Nummers verwijderen</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Bufferen...</string>
     <string name="title_send_content">Contact verzenden</string>
     <string name="no_downloaded_apps_found">Geen gedownloade apps gevonden</string>
+    <string name="music_folder_picker_dialog_msg">Nummers toevoegen aan afspeellijsten door de map te selecteren? Nee om nummers op een andere manier toe te voegen</string>
 </resources>

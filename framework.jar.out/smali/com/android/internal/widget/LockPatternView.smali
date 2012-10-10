@@ -361,7 +361,7 @@
 
     .line 269
     :cond_0
-    const-string/jumbo v2, "lock_width"
+    const-string v2, "lock_width"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -376,7 +376,7 @@
 
     .line 271
     :cond_1
-    const-string/jumbo v2, "lock_height"
+    const-string v2, "lock_height"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

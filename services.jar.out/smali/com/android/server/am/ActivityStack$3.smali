@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 4646
+    .line 4803
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,23 +34,23 @@
     .locals 2
 
     .prologue
-    .line 4648
+    .line 4805
     const-string v0, "CpuWake"
 
     const-string v1, ">>releaseCpuPerfWakeLock"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4649
+    .line 4806
     invoke-static {}, Landroid/os/Power;->releaseCpuPerfWakeLock()V
 
-    .line 4650
+    .line 4807
     const-string v0, "CpuWake"
 
     const-string v1, "<<releaseCpuPerfWakeLock"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4651
+    .line 4808
     return-void
 .end method

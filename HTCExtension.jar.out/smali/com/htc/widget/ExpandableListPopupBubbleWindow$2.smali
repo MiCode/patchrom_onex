@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1370
+    .line 1340
     iput-object p1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$2;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,13 +54,13 @@
     .end annotation
 
     .prologue
-    .line 1374
+    .line 1344
     .local p1, parent:Lcom/htc/widget/HtcAdapterView;,"Lcom/htc/widget/HtcAdapterView<*>;"
     const/4 v1, -0x1
 
     if-eq p3, v1, :cond_0
 
-    .line 1375
+    .line 1345
     iget-object v1, p0, Lcom/htc/widget/ExpandableListPopupBubbleWindow$2;->this$0:Lcom/htc/widget/ExpandableListPopupBubbleWindow;
 
     #getter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow;->mDropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
@@ -68,17 +68,17 @@
 
     move-result-object v0
 
-    .line 1377
+    .line 1347
     .local v0, dropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
     if-eqz v0, :cond_0
 
-    .line 1378
+    .line 1348
     const/4 v1, 0x0
 
     #setter for: Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->mListSelectionHidden:Z
     invoke-static {v0, v1}, Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;->access$602(Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;Z)Z
 
-    .line 1381
+    .line 1351
     .end local v0           #dropDownList:Lcom/htc/widget/ExpandableListPopupBubbleWindow$DropDownExpanableListView;
     :cond_0
     return-void
@@ -96,7 +96,7 @@
     .end annotation
 
     .prologue
-    .line 1384
+    .line 1354
     .local p1, parent:Lcom/htc/widget/HtcAdapterView;,"Lcom/htc/widget/HtcAdapterView<*>;"
     return-void
 .end method

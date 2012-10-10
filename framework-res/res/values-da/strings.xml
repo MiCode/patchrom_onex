@@ -428,8 +428,8 @@
     <string name="permdesc_readLogs">Tillader, at et program læser fra systemets forskellige logfiler. Dermed kan generelle oplysninger om, hvad du laver med telefonen registreres, også personlige eller private oplysninger.</string>
     <string name="permlab_anyCodecForPlayback">brug en medieafkoder til afspilning</string>
     <string name="permdesc_anyCodecForPlayback">Tillader et program at bruge en installeret medieafkoder til at afkode til afspilning.</string>
-    <string name="permlab_readWriteOmaDrm">få adgang til mappen om oma DRM</string>
-    <string name="permdesc_readWriteOmaDrm">Gør det muligt for et program at læse eller skrive til mappen om OMA DRM.</string>
+    <string name="permlab_readWriteOmaDrm">access the folder about oma DRM</string>
+    <string name="permdesc_readWriteOmaDrm">Allows an application to read or write to the folder about OMA DRM.</string>
     <string name="permlab_diagnostic">læs/skriv til ressourcer ejet af diag</string>
     <string name="permdesc_diagnostic">Tillader et program at læse og skrive til alle ressourcer, der ejes af diag-gruppen, som f.eks. flier i /dev. Dette kan muligvis påvirke systemets stabilitet og sikkerhed. Dette bør KUN bruges til hardwarespecifikke diagnosticeringer foretaget af producent eller udbyder.</string>
     <string name="permlab_changeComponentState">aktiver eller deaktiver programkomponenter</string>

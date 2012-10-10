@@ -19,7 +19,7 @@
     .parameter "obj"
 
     .prologue
-    .line 59
+    .line 31
     const-string v0, "error"
 
     invoke-virtual {p0, v0}, Lcom/htc/opensense/parser/BasicParserObj;->hasKey(Ljava/lang/String;)Z

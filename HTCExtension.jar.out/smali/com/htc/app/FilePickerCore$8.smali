@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1894
+    .line 2245
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$8;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 1897
+    .line 2248
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$8;->this$0:Lcom/htc/app/FilePickerCore;
 
     #getter for: Lcom/htc/app/FilePickerCore;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -54,17 +54,17 @@
 
     move-result v0
 
-    .line 1898
+    .line 2249
     .local v0, dataSourceType:I
     iget-object v1, p0, Lcom/htc/app/FilePickerCore$8;->this$0:Lcom/htc/app/FilePickerCore;
 
     #calls: Lcom/htc/app/FilePickerCore;->getCloudHelperInstance()Lcom/htc/app/FilePickerCloudHelper;
-    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$2400(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerCloudHelper;
+    invoke-static {v1}, Lcom/htc/app/FilePickerCore;->access$4200(Lcom/htc/app/FilePickerCore;)Lcom/htc/app/FilePickerCloudHelper;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/htc/app/FilePickerCloudHelper;->signIn(I)V
 
-    .line 1899
+    .line 2250
     return-void
 .end method

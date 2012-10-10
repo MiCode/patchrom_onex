@@ -39,7 +39,7 @@
     .locals 2
 
     .prologue
-    .line 1120
+    .line 1121
     sget-object v0, Lcom/htc/provider/HtcContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "event_instance"
@@ -50,7 +50,7 @@
 
     sput-object v0, Lcom/htc/provider/HtcContactsContract$EventInstance;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1122
+    .line 1123
     sget-object v0, Lcom/htc/provider/HtcContactsContract$EventInstance;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "with_range"
@@ -68,7 +68,7 @@
     .locals 0
 
     .prologue
-    .line 1110
+    .line 1111
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

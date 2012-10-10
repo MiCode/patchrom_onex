@@ -130,6 +130,18 @@
     return v0
 .end method
 
+.method public static KDDI_WORDING_CONFIG()Z
+    .locals 1
+
+    .prologue
+    .line 378
+    invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->KDDI_WORDING_CONFIG()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static LTE_CONFIG()Z
     .locals 1
 

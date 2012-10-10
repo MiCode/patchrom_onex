@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 794
+    .line 816
     iput-object p1, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester$1;->this$1:Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +41,18 @@
     .locals 3
 
     .prologue
-    .line 796
+    .line 818
     const-class v1, Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
     monitor-enter v1
 
-    .line 797
+    .line 819
+    const/16 v0, 0xa
+
     :try_start_0
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    .line 820
     iget-object v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester$1;->this$1:Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
     iget-object v0, v0, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->this$0:Lcom/htc/util/mail/MailManager;
@@ -55,7 +60,7 @@
     #calls: Lcom/htc/util/mail/MailManager;->doHandleMessageChange()V
     invoke-static {v0}, Lcom/htc/util/mail/MailManager;->access$100(Lcom/htc/util/mail/MailManager;)V
 
-    .line 798
+    .line 821
     iget-object v0, p0, Lcom/htc/util/mail/MailManager$HandleChangeRequester$1;->this$1:Lcom/htc/util/mail/MailManager$HandleChangeRequester;
 
     const/4 v2, 0x0
@@ -63,13 +68,13 @@
     #setter for: Lcom/htc/util/mail/MailManager$HandleChangeRequester;->isHandleMessageChangeInProcessing:Z
     invoke-static {v0, v2}, Lcom/htc/util/mail/MailManager$HandleChangeRequester;->access$202(Lcom/htc/util/mail/MailManager$HandleChangeRequester;Z)Z
 
-    .line 799
+    .line 822
     monitor-exit v1
 
-    .line 800
+    .line 823
     return-void
 
-    .line 799
+    .line 822
     :catchall_0
     move-exception v0
 

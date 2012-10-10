@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1852
+    .line 1883
     iput-object p1, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1852
+    .line 1883
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;-><init>(Lcom/htc/music/browserlayer/MusicBrowserTabActivity;)V
 
     return-void
@@ -52,12 +52,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1855
+    .line 1886
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1856
+    .line 1887
     .local v0, action:Ljava/lang/String;
     const-string v3, "[MusicBrowserTabActivity]"
 
@@ -81,14 +81,14 @@
 
     invoke-static {v3, v4}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1858
+    .line 1889
     iget-object v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-virtual {v3}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->getCurrentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 1859
+    .line 1890
     .local v1, current:Landroid/app/Activity;
     if-eqz v1, :cond_0
 
@@ -98,10 +98,10 @@
 
     move-object v2, v1
 
-    .line 1860
+    .line 1891
     check-cast v2, Lcom/htc/music/widget/MusicMaActivity;
 
-    .line 1861
+    .line 1892
     .local v2, maActivity:Lcom/htc/music/widget/MusicMaActivity;
     invoke-virtual {v2}, Lcom/htc/music/widget/MusicMaActivity;->isByPass()Z
 
@@ -121,18 +121,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 1862
+    .line 1893
     iget-object v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
     invoke-static {v3}, Lcom/htc/music/util/MusicUtils;->disableKeyguard(Landroid/app/Activity;)V
 
-    .line 1867
+    .line 1898
     .end local v2           #maActivity:Lcom/htc/music/widget/MusicMaActivity;
     :cond_0
     :goto_0
     return-void
 
-    .line 1864
+    .line 1895
     .restart local v2       #maActivity:Lcom/htc/music/widget/MusicMaActivity;
     :cond_1
     iget-object v3, p0, Lcom/htc/music/browserlayer/MusicBrowserTabActivity$EventReceiver;->this$0:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;

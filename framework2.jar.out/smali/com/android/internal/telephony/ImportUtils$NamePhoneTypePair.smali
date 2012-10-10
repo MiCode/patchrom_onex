@@ -28,15 +28,15 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 102
+    .line 114
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
+    .line 116
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 105
+    .line 117
     .local v1, nameLen:I
     add-int/lit8 v2, v1, -0x2
 
@@ -52,7 +52,7 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 106
+    .line 118
     add-int/lit8 v2, v1, -0x1
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
@@ -63,18 +63,18 @@
 
     move-result v0
 
-    .line 107
+    .line 119
     .local v0, c:C
     const/16 v2, 0x57
 
     if-ne v0, v2, :cond_0
 
-    .line 108
+    .line 120
     const/4 v2, 0x3
 
     iput v2, p0, Lcom/android/internal/telephony/ImportUtils$NamePhoneTypePair;->phoneType:I
 
-    .line 116
+    .line 128
     :goto_0
     const/4 v2, 0x0
 
@@ -86,12 +86,12 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/ImportUtils$NamePhoneTypePair;->name:Ljava/lang/String;
 
-    .line 121
+    .line 133
     .end local v0           #c:C
     :goto_1
     return-void
 
-    .line 109
+    .line 121
     .restart local v0       #c:C
     :cond_0
     const/16 v2, 0x4d
@@ -102,37 +102,37 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 110
+    .line 122
     :cond_1
     iput v4, p0, Lcom/android/internal/telephony/ImportUtils$NamePhoneTypePair;->phoneType:I
 
     goto :goto_0
 
-    .line 111
+    .line 123
     :cond_2
     const/16 v2, 0x48
 
     if-ne v0, v2, :cond_3
 
-    .line 112
+    .line 124
     const/4 v2, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/ImportUtils$NamePhoneTypePair;->phoneType:I
 
     goto :goto_0
 
-    .line 114
+    .line 126
     :cond_3
     iput v4, p0, Lcom/android/internal/telephony/ImportUtils$NamePhoneTypePair;->phoneType:I
 
     goto :goto_0
 
-    .line 118
+    .line 130
     .end local v0           #c:C
     :cond_4
     iput v4, p0, Lcom/android/internal/telephony/ImportUtils$NamePhoneTypePair;->phoneType:I
 
-    .line 119
+    .line 131
     iput-object p1, p0, Lcom/android/internal/telephony/ImportUtils$NamePhoneTypePair;->name:Ljava/lang/String;
 
     goto :goto_1

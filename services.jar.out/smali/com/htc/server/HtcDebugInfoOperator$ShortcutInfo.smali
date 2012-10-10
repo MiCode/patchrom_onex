@@ -27,15 +27,15 @@
     .parameter "appName"
 
     .prologue
-    .line 637
+    .line 639
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 638
+    .line 640
     iput-object p1, p0, Lcom/htc/server/HtcDebugInfoOperator$ShortcutInfo;->mClassName:Ljava/lang/String;
 
-    .line 639
+    .line 641
     iput-object p2, p0, Lcom/htc/server/HtcDebugInfoOperator$ShortcutInfo;->mAppName:Ljava/lang/String;
 
-    .line 640
+    .line 642
     return-void
 .end method

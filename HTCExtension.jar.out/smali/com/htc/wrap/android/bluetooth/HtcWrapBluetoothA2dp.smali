@@ -62,6 +62,54 @@
     goto :goto_0
 .end method
 
+.method public static doesDeviceMatchBeatsHeadset(Landroid/bluetooth/BluetoothA2dp;Landroid/bluetooth/BluetoothDevice;)Z
+    .locals 1
+    .parameter "bluetoothA2dp"
+    .parameter "device"
+
+    .prologue
+    .line 129
+    if-eqz p0, :cond_0
+
+    .line 130
+    invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothA2dp;->doesDeviceMatchBeatsHeadset(Landroid/bluetooth/BluetoothDevice;)Z
+
+    move-result v0
+
+    .line 132
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static doesDeviceMatchBeatsSpeaker(Landroid/bluetooth/BluetoothA2dp;Landroid/bluetooth/BluetoothDevice;)Z
+    .locals 1
+    .parameter "bluetoothA2dp"
+    .parameter "device"
+
+    .prologue
+    .line 136
+    if-eqz p0, :cond_0
+
+    .line 137
+    invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothA2dp;->doesDeviceMatchBeatsSpeaker(Landroid/bluetooth/BluetoothDevice;)Z
+
+    move-result v0
+
+    .line 139
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public static doesDeviceMatchBose(Landroid/bluetooth/BluetoothA2dp;Landroid/bluetooth/BluetoothDevice;)Z
     .locals 1
     .parameter "bluetoothA2dp"

@@ -33,10 +33,10 @@
     .parameter "rightIndex"
 
     .prologue
-    .line 679
+    .line 706
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 680
+    .line 707
     const-string/jumbo v0, "missing left"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -47,7 +47,7 @@
 
     iput-object v0, p0, Landroid/net/NetworkStats$NonMonotonicException;->left:Landroid/net/NetworkStats;
 
-    .line 681
+    .line 708
     const-string/jumbo v0, "missing right"
 
     invoke-static {p3, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -58,13 +58,13 @@
 
     iput-object v0, p0, Landroid/net/NetworkStats$NonMonotonicException;->right:Landroid/net/NetworkStats;
 
-    .line 682
+    .line 709
     iput p2, p0, Landroid/net/NetworkStats$NonMonotonicException;->leftIndex:I
 
-    .line 683
+    .line 710
     iput p4, p0, Landroid/net/NetworkStats$NonMonotonicException;->rightIndex:I
 
-    .line 684
+    .line 711
     return-void
 .end method
 
@@ -76,9 +76,9 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 675
+    .line 702
     invoke-direct {p0, p1, v0, p2, v0}, Landroid/net/NetworkStats$NonMonotonicException;-><init>(Landroid/net/NetworkStats;ILandroid/net/NetworkStats;I)V
 
-    .line 676
+    .line 703
     return-void
 .end method

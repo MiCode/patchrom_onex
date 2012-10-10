@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 104
+    .line 105
     iput-object p1, p0, Lcom/htc/widget/Gallery$1;->this$0:Lcom/htc/widget/Gallery;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 106
+    .line 107
     iget-object v0, p0, Lcom/htc/widget/Gallery$1;->this$0:Lcom/htc/widget/Gallery;
 
     const/4 v1, 0x0
@@ -49,11 +49,11 @@
     #setter for: Lcom/htc/widget/Gallery;->mSuppressSelectionChanged:Z
     invoke-static {v0, v1}, Lcom/htc/widget/Gallery;->access$002(Lcom/htc/widget/Gallery;Z)Z
 
-    .line 107
+    .line 108
     iget-object v0, p0, Lcom/htc/widget/Gallery$1;->this$0:Lcom/htc/widget/Gallery;
 
     invoke-virtual {v0}, Lcom/htc/widget/Gallery;->selectionChanged()V
 
-    .line 108
+    .line 109
     return-void
 .end method

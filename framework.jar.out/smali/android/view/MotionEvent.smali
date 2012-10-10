@@ -4292,7 +4292,7 @@
     .line 2915
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v4, "idBits did not match any ids in the event"
+    const-string v4, "idBits did not match any ids in the event"
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

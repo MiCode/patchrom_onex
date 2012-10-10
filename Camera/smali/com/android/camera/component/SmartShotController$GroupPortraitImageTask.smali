@@ -56,27 +56,27 @@
     .end annotation
 
     .prologue
-    .line 117
+    .line 119
     .local p3, exifTags:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/camera/component/SmartShotController$GroupPortraitImageTask;->this$0:Lcom/android/camera/component/SmartShotController;
 
-    .line 118
+    .line 120
     invoke-virtual {p1}, Lcom/android/camera/component/SmartShotController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/camera/imaging/SaveImageTask;-><init>(Lcom/android/camera/CameraThread;)V
 
-    .line 119
+    .line 121
     iput-object p2, p0, Lcom/android/camera/component/SmartShotController$GroupPortraitImageTask;->m_screen:Lcom/scalado/base/Image;
 
-    .line 120
+    .line 122
     iput-object p3, p0, Lcom/android/camera/component/SmartShotController$GroupPortraitImageTask;->exifTags:Ljava/util/Hashtable;
 
-    .line 121
+    .line 123
     iput-object p4, p0, Lcom/android/camera/component/SmartShotController$GroupPortraitImageTask;->uiRotation:Lcom/android/camera/rotate/UIRotation;
 
-    .line 122
+    .line 124
     return-void
 .end method
 
@@ -92,10 +92,10 @@
     .end annotation
 
     .prologue
-    .line 131
+    .line 133
     const/4 v8, 0x0
 
-    .line 157
+    .line 159
     .local v8, outputStream:Lcom/scalado/stream/FileStream;
     :try_start_0
     new-instance v9, Lcom/scalado/stream/FileStream;
@@ -111,7 +111,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 159
+    .line 161
     .end local v8           #outputStream:Lcom/scalado/stream/FileStream;
     .local v9, outputStream:Lcom/scalado/stream/FileStream;
     :try_start_1
@@ -121,63 +121,63 @@
 
     invoke-static {v11, v12}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 160
+    .line 162
     new-instance v0, Lcom/scalado/caps/codec/decoder/ImageDecoder;
 
     iget-object v11, p0, Lcom/android/camera/component/SmartShotController$GroupPortraitImageTask;->m_screen:Lcom/scalado/base/Image;
 
     invoke-direct {v0, v11}, Lcom/scalado/caps/codec/decoder/ImageDecoder;-><init>(Lcom/scalado/base/Image;)V
 
-    .line 161
+    .line 163
     .local v0, decoder:Lcom/scalado/caps/codec/decoder/ImageDecoder;
     invoke-virtual {v0}, Lcom/scalado/caps/codec/decoder/ImageDecoder;->getDimensions()Lcom/scalado/base/Size;
 
     move-result-object v6
 
-    .line 162
+    .line 164
     .local v6, imageSize:Lcom/scalado/base/Size;
     new-instance v10, Lcom/scalado/caps/Session;
 
     invoke-direct {v10, v0}, Lcom/scalado/caps/Session;-><init>(Lcom/scalado/caps/Decoder;)V
 
-    .line 172
+    .line 174
     .local v10, session:Lcom/scalado/caps/Session;
     new-instance v1, Lcom/scalado/caps/codec/encoder/JpegEncoder;
 
     invoke-direct {v1, v9, v6}, Lcom/scalado/caps/codec/encoder/JpegEncoder;-><init>(Lcom/scalado/stream/Stream;Lcom/scalado/base/Size;)V
 
-    .line 173
+    .line 175
     .local v1, encoder:Lcom/scalado/caps/codec/encoder/JpegEncoder;
     const/high16 v11, 0x3f80
 
     invoke-virtual {v1, v11}, Lcom/scalado/caps/codec/encoder/JpegEncoder;->setJpegQuality(F)V
 
-    .line 174
+    .line 176
     invoke-virtual {v10, v1}, Lcom/scalado/caps/Session;->render(Lcom/scalado/caps/Encoder;)Lcom/scalado/base/Iterator;
 
     move-result-object v7
 
-    .line 175
+    .line 177
     .local v7, iterator:Lcom/scalado/base/Iterator;
     const/4 v11, 0x0
 
     invoke-virtual {v7, v11}, Lcom/scalado/base/Iterator;->step(I)F
 
-    .line 176
+    .line 178
     invoke-virtual {v7}, Lcom/scalado/base/Iterator;->done()Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 184
+    .line 186
     if-eqz v9, :cond_3
 
-    .line 185
+    .line 187
     invoke-virtual {v9}, Lcom/scalado/stream/FileStream;->close()V
 
     move-object v8, v9
 
-    .line 190
+    .line 192
     .end local v0           #decoder:Lcom/scalado/caps/codec/decoder/ImageDecoder;
     .end local v1           #encoder:Lcom/scalado/caps/codec/encoder/JpegEncoder;
     .end local v6           #imageSize:Lcom/scalado/base/Size;
@@ -196,7 +196,7 @@
 
     invoke-direct {v4, v11}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    .line 191
+    .line 193
     .local v4, exif:Landroid/media/ExifInterface;
     iget-object v11, p0, Lcom/android/camera/component/SmartShotController$GroupPortraitImageTask;->exifTags:Ljava/util/Hashtable;
 
@@ -222,7 +222,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 192
+    .line 194
     .local v2, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -242,22 +242,22 @@
 
     goto :goto_1
 
-    .line 195
+    .line 197
     .end local v2           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v4           #exif:Landroid/media/ExifInterface;
     .end local v5           #i$:Ljava/util/Iterator;
     :catch_0
     move-exception v11
 
-    .line 197
+    .line 199
     :goto_2
     return-void
 
-    .line 178
+    .line 180
     :catch_1
     move-exception v3
 
-    .line 180
+    .line 182
     .local v3, ex:Ljava/lang/Throwable;
     :goto_3
     :try_start_3
@@ -269,15 +269,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 184
+    .line 186
     if-eqz v8, :cond_0
 
-    .line 185
+    .line 187
     invoke-virtual {v8}, Lcom/scalado/stream/FileStream;->close()V
 
     goto :goto_0
 
-    .line 184
+    .line 186
     .end local v3           #ex:Ljava/lang/Throwable;
     :catchall_0
     move-exception v11
@@ -285,13 +285,13 @@
     :goto_4
     if-eqz v8, :cond_1
 
-    .line 185
+    .line 187
     invoke-virtual {v8}, Lcom/scalado/stream/FileStream;->close()V
 
     :cond_1
     throw v11
 
-    .line 193
+    .line 195
     .restart local v4       #exif:Landroid/media/ExifInterface;
     .restart local v5       #i$:Ljava/util/Iterator;
     :cond_2
@@ -302,7 +302,7 @@
 
     goto :goto_2
 
-    .line 184
+    .line 186
     .end local v4           #exif:Landroid/media/ExifInterface;
     .end local v5           #i$:Ljava/util/Iterator;
     .end local v8           #outputStream:Lcom/scalado/stream/FileStream;
@@ -316,7 +316,7 @@
     .restart local v8       #outputStream:Lcom/scalado/stream/FileStream;
     goto :goto_4
 
-    .line 178
+    .line 180
     .end local v8           #outputStream:Lcom/scalado/stream/FileStream;
     .restart local v9       #outputStream:Lcom/scalado/stream/FileStream;
     :catch_2

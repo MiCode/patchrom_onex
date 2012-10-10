@@ -180,38 +180,30 @@
 .end method
 
 .method protected onEnter()V
-    .locals 3
+    .locals 2
 
     .prologue
     .line 60
-    iget-object v1, p0, Lcom/android/camera/component/AsyncCameraThreadComponent$1;->val$cameraThread:Lcom/android/camera/CameraThread;
+    iget-object v0, p0, Lcom/android/camera/component/AsyncCameraThreadComponent$1;->val$cameraThread:Lcom/android/camera/CameraThread;
 
-    invoke-virtual {v1}, Lcom/android/camera/CameraThread;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    .line 61
-    .local v0, handler:Landroid/os/Handler;
-    if-eqz v0, :cond_0
-
-    .line 63
     new-instance v1, Lcom/android/camera/component/AsyncCameraThreadComponent$1$1;
 
     invoke-direct {v1, p0}, Lcom/android/camera/component/AsyncCameraThreadComponent$1$1;-><init>(Lcom/android/camera/component/AsyncCameraThreadComponent$1;)V
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/android/camera/CameraThread;->invokeAsync(Ljava/lang/Runnable;)Z
 
-    .line 73
-    :goto_0
-    return-void
+    move-result v0
 
-    .line 72
+    if-nez v0, :cond_0
+
+    .line 69
+    iget-object v0, p0, Lcom/android/camera/WorkerThread;->TAG:Ljava/lang/String;
+
+    const-string v1, "Cannot notify component because there is no handler"
+
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 71
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/WorkerThread;->TAG:Ljava/lang/String;
-
-    const-string v2, "Cannot notify component because there is no handler"
-
-    invoke-static {v1, v2}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
+    return-void
 .end method

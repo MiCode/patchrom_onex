@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3365
+    .line 3722
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$18;->this$0:Lcom/htc/app/FilePickerCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "whichButton"
 
     .prologue
-    .line 3367
+    .line 3724
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 3368
+    .line 3725
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$18;->this$0:Lcom/htc/app/FilePickerCore;
 
     const/16 v1, 0xb
@@ -54,6 +54,6 @@
     #calls: Lcom/htc/app/FilePickerCore;->NotifyToDoTask(I)V
     invoke-static {v0, v1}, Lcom/htc/app/FilePickerCore;->access$700(Lcom/htc/app/FilePickerCore;I)V
 
-    .line 3369
+    .line 3726
     return-void
 .end method

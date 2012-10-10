@@ -310,7 +310,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 601
-    const-string v1, "yellow"
+    const-string/jumbo v1, "yellow"
 
     const v2, 0xffff00
 
@@ -2403,7 +2403,7 @@
 
     .line 284
     .local v1, len:I
-    const-string v3, "\ufffc"
+    const-string/jumbo v3, "\ufffc"
 
     invoke-virtual {p1, v3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 

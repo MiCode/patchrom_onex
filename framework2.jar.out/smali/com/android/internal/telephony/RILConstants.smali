@@ -166,6 +166,10 @@
 
 .field public static final RIL_3G_SIM_CARD:I = 0x2
 
+.field public static final RIL_AUTH_TYPE_3G_CONTEXT_AUTHENTICATE:I = 0x1
+
+.field public static final RIL_AUTH_TYPE_GSM_AUTHENTICATE:I = 0x0
+
 .field public static final RIL_CW_DEREGISTER_FAIL:I = 0x130
 
 .field public static final RIL_CW_DEREGISTER_SUCC:I = 0x12f
@@ -199,6 +203,8 @@
 .field public static final RIL_REQUEST_BASEBAND_VERSION:I = 0x33
 
 .field public static final RIL_REQUEST_CANCEL_USSD:I = 0x1e
+
+.field public static final RIL_REQUEST_CARKIT_STATE:I = 0x261
 
 .field public static final RIL_REQUEST_CDMA_BASE:I = 0x7d0
 
@@ -346,6 +352,8 @@
 
 .field public static final RIL_REQUEST_CHECK_FDN_STATE:I = 0x21f
 
+.field public static final RIL_REQUEST_CLEAR_CDMA_SYS_REC_CONTENT:I = 0x813
+
 .field public static final RIL_REQUEST_CLEAR_LOC_PROCESS_DB:I = 0x252
 
 .field public static final RIL_REQUEST_CONFERENCE:I = 0x10
@@ -418,9 +426,15 @@
 
 .field public static final RIL_REQUEST_GET_APN_PARAMS:I = 0x1395
 
+.field public static final RIL_REQUEST_GET_ATR:I = 0x262
+
 .field public static final RIL_REQUEST_GET_BAND_CAPABILITY:I = 0x202
 
 .field public static final RIL_REQUEST_GET_BAND_MODE:I = 0x23e
+
+.field public static final RIL_REQUEST_GET_CDMA_SYS_REC_CONTENT:I = 0x812
+
+.field public static final RIL_REQUEST_GET_CDMA_SYS_REC_SIZE:I = 0x811
 
 .field public static final RIL_REQUEST_GET_CELL_BROADCAST_MESSAGE_TYPES:I = 0x1f6
 
@@ -487,6 +501,8 @@
 .field public static final RIL_REQUEST_GET_SIM_TYPES:I = 0x1f7
 
 .field public static final RIL_REQUEST_GET_SMART_DATA_ROAMING_STATUS:I = 0x219
+
+.field public static final RIL_REQUEST_GET_SMART_NETWORK_STATUS:I = 0x25d
 
 .field public static final RIL_REQUEST_GET_SMSC:I = 0x207
 
@@ -606,6 +622,8 @@
 
 .field public static final RIL_REQUEST_SEND_UIM_OTA_STATUS:I = 0x249
 
+.field public static final RIL_REQUEST_SEND_USER_TRIAL_FEEDBACK:I = 0x263
+
 .field public static final RIL_REQUEST_SEND_USSD:I = 0x1d
 
 .field public static final RIL_REQUEST_SEPARATE_CONNECTION:I = 0x34
@@ -634,6 +652,8 @@
 
 .field public static final RIL_REQUEST_SET_CALL_WAITING:I = 0x24
 
+.field public static final RIL_REQUEST_SET_CDMA_SMART_NETWORK:I = 0x25c
+
 .field public static final RIL_REQUEST_SET_CELL_BROADCAST_MESSAGE_TYPES:I = 0x1f5
 
 .field public static final RIL_REQUEST_SET_CLIP:I = 0x203
@@ -650,9 +670,13 @@
 
 .field public static final RIL_REQUEST_SET_EMERGENCY_CALL_CATEGORY:I = 0x21e
 
+.field public static final RIL_REQUEST_SET_ENCRYPTION_STATE:I = 0x260
+
 .field public static final RIL_REQUEST_SET_FACILITY_LOCK:I = 0x2b
 
 .field public static final RIL_REQUEST_SET_FAST_DORMANCY:I = 0x23b
+
+.field public static final RIL_REQUEST_SET_HIGH_PRIORITY_NETWORK:I = 0x25e
 
 .field public static final RIL_REQUEST_SET_HTC_SIM_MODE:I = 0x22e
 
@@ -864,6 +888,8 @@
 
 .field public static final RIL_UNSOL_CREG_STATE_CHANGED:I = 0x4e25
 
+.field public static final RIL_UNSOL_CUSTOMIZE_SIM_INFO:I = 0x60e
+
 .field public static final RIL_UNSOL_CW_INFORMATION:I = 0x5e6
 
 .field public static final RIL_UNSOL_CW_UW_REG_CHANGED:I = 0xbce
@@ -896,9 +922,13 @@
 
 .field public static final RIL_UNSOL_MANUAL_REG_STATE:I = 0x605
 
+.field public static final RIL_UNSOL_MDM_RST_SIM_HOT_SWAP:I = 0x60f
+
 .field public static final RIL_UNSOL_MM_LU_FAILED_CAUSE:I = 0x5ea
 
 .field public static final RIL_UNSOL_MODEM_LINK_STATUS:I = 0x5ee
+
+.field public static final RIL_UNSOL_MODEM_RESET:I = 0x60d
 
 .field public static final RIL_UNSOL_NITZ_TIME_RECEIVED:I = 0x3f0
 

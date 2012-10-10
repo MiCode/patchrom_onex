@@ -544,11 +544,48 @@
     const/16 v10, 0xa
 
     .line 183
+    invoke-virtual {p0}, Lcom/android/server/am/TransferPipe;->getReadFd()Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v9
+
+    if-nez v9, :cond_0
+
+    .line 184
+    monitor-enter p0
+
+    .line 185
+    :try_start_0
+    const-string v9, "ReadFd is null"
+
+    iput-object v9, p0, Lcom/android/server/am/TransferPipe;->mFailure:Ljava/lang/String;
+
+    .line 186
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+
+    .line 187
+    monitor-exit p0
+
+    .line 248
+    :goto_0
+    return-void
+
+    .line 188
+    :catchall_0
+    move-exception v9
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v9
+
+    .line 190
+    :cond_0
     const/16 v9, 0x400
 
     new-array v0, v9, [B
 
-    .line 184
+    .line 191
     .local v0, buffer:[B
     new-instance v3, Ljava/io/FileInputStream;
 
@@ -562,7 +599,7 @@
 
     invoke-direct {v3, v9}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 185
+    .line 192
     .local v3, fis:Ljava/io/FileInputStream;
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -570,178 +607,66 @@
 
     invoke-direct {v4, v9}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 188
+    .line 195
     .local v4, fos:Ljava/io/FileOutputStream;
     const/4 v1, 0x0
 
-    .line 189
+    .line 196
     .local v1, bufferPrefix:[B
     const/4 v6, 0x1
 
-    .line 190
+    .line 197
     .local v6, needPrefix:Z
     iget-object v9, p0, Lcom/android/server/am/TransferPipe;->mBufferPrefix:Ljava/lang/String;
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_1
 
-    .line 191
+    .line 198
     iget-object v9, p0, Lcom/android/server/am/TransferPipe;->mBufferPrefix:Ljava/lang/String;
 
     invoke-virtual {v9}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
 
-    .line 196
-    :cond_0
-    :goto_0
-    :try_start_0
+    .line 203
+    :cond_1
+    :goto_1
+    :try_start_1
     invoke-virtual {v3, v0}, Ljava/io/FileInputStream;->read([B)I
 
     move-result v7
 
     .local v7, size:I
-    if-lez v7, :cond_7
+    if-lez v7, :cond_8
 
-    .line 198
-    if-nez v1, :cond_1
+    .line 205
+    if-nez v1, :cond_2
 
-    .line 199
+    .line 206
     const/4 v9, 0x0
 
     invoke-virtual {v4, v0, v9, v7}, Ljava/io/FileOutputStream;->write([BII)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 229
+    .line 236
     .end local v7           #size:I
     :catch_0
     move-exception v2
 
-    .line 230
+    .line 237
     .local v2, e:Ljava/io/IOException;
     monitor-enter p0
 
-    .line 231
-    :try_start_1
+    .line 238
+    :try_start_2
     invoke-virtual {v2}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object v9
 
     iput-object v9, p0, Lcom/android/server/am/TransferPipe;->mFailure:Ljava/lang/String;
-
-    .line 232
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
-
-    .line 233
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 241
-    .end local v2           #e:Ljava/io/IOException;
-    :goto_1
-    return-void
-
-    .line 201
-    .restart local v7       #size:I
-    :cond_1
-    const/4 v8, 0x0
-
-    .line 202
-    .local v8, start:I
-    const/4 v5, 0x0
-
-    .local v5, i:I
-    :goto_2
-    if-ge v5, v7, :cond_6
-
-    .line 203
-    :try_start_2
-    aget-byte v9, v0, v5
-
-    if-eq v9, v10, :cond_5
-
-    .line 204
-    if-le v5, v8, :cond_2
-
-    .line 205
-    sub-int v9, v5, v8
-
-    invoke-virtual {v4, v0, v8, v9}, Ljava/io/FileOutputStream;->write([BII)V
-
-    .line 207
-    :cond_2
-    move v8, v5
-
-    .line 208
-    if-eqz v6, :cond_3
-
-    .line 209
-    invoke-virtual {v4, v1}, Ljava/io/FileOutputStream;->write([B)V
-
-    .line 210
-    const/4 v6, 0x0
-
-    .line 213
-    :cond_3
-    add-int/lit8 v5, v5, 0x1
-
-    .line 214
-    if-ge v5, v7, :cond_4
-
-    aget-byte v9, v0, v5
-
-    if-ne v9, v10, :cond_3
-
-    .line 215
-    :cond_4
-    if-ge v5, v7, :cond_5
-
-    .line 216
-    const/4 v6, 0x1
-
-    .line 202
-    :cond_5
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_2
-
-    .line 220
-    :cond_6
-    if-le v7, v8, :cond_0
-
-    .line 221
-    sub-int v9, v7, v8
-
-    invoke-virtual {v4, v0, v8, v9}, Ljava/io/FileOutputStream;->write([BII)V
-
-    goto :goto_0
-
-    .line 226
-    .end local v5           #i:I
-    .end local v8           #start:I
-    :cond_7
-    iget-object v9, p0, Lcom/android/server/am/TransferPipe;->mThread:Ljava/lang/Thread;
-
-    invoke-virtual {v9}, Ljava/lang/Thread;->isInterrupted()Z
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    move-result v9
-
-    if-eqz v9, :cond_8
-
-    .line 237
-    :cond_8
-    monitor-enter p0
-
-    .line 238
-    const/4 v9, 0x1
-
-    :try_start_3
-    iput-boolean v9, p0, Lcom/android/server/am/TransferPipe;->mComplete:Z
 
     .line 239
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
@@ -749,27 +674,132 @@
     .line 240
     monitor-exit p0
 
-    goto :goto_1
+    goto :goto_0
 
-    :catchall_0
-    move-exception v9
-
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw v9
-
-    .line 234
-    .end local v7           #size:I
-    .restart local v2       #e:Ljava/io/IOException;
+    .line 241
     :catchall_1
     move-exception v9
 
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v9
+
+    .line 208
+    .end local v2           #e:Ljava/io/IOException;
+    .restart local v7       #size:I
+    :cond_2
+    const/4 v8, 0x0
+
+    .line 209
+    .local v8, start:I
+    const/4 v5, 0x0
+
+    .local v5, i:I
+    :goto_2
+    if-ge v5, v7, :cond_7
+
+    .line 210
+    :try_start_3
+    aget-byte v9, v0, v5
+
+    if-eq v9, v10, :cond_6
+
+    .line 211
+    if-le v5, v8, :cond_3
+
+    .line 212
+    sub-int v9, v5, v8
+
+    invoke-virtual {v4, v0, v8, v9}, Ljava/io/FileOutputStream;->write([BII)V
+
+    .line 214
+    :cond_3
+    move v8, v5
+
+    .line 215
+    if-eqz v6, :cond_4
+
+    .line 216
+    invoke-virtual {v4, v1}, Ljava/io/FileOutputStream;->write([B)V
+
+    .line 217
+    const/4 v6, 0x0
+
+    .line 220
+    :cond_4
+    add-int/lit8 v5, v5, 0x1
+
+    .line 221
+    if-ge v5, v7, :cond_5
+
+    aget-byte v9, v0, v5
+
+    if-ne v9, v10, :cond_4
+
+    .line 222
+    :cond_5
+    if-ge v5, v7, :cond_6
+
+    .line 223
+    const/4 v6, 0x1
+
+    .line 209
+    :cond_6
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_2
+
+    .line 227
+    :cond_7
+    if-le v7, v8, :cond_1
+
+    .line 228
+    sub-int v9, v7, v8
+
+    invoke-virtual {v4, v0, v8, v9}, Ljava/io/FileOutputStream;->write([BII)V
+
+    goto :goto_1
+
+    .line 233
+    .end local v5           #i:I
+    .end local v8           #start:I
+    :cond_8
+    iget-object v9, p0, Lcom/android/server/am/TransferPipe;->mThread:Ljava/lang/Thread;
+
+    invoke-virtual {v9}, Ljava/lang/Thread;->isInterrupted()Z
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    move-result v9
+
+    if-eqz v9, :cond_9
+
+    .line 244
+    :cond_9
+    monitor-enter p0
+
+    .line 245
+    const/4 v9, 0x1
+
     :try_start_4
+    iput-boolean v9, p0, Lcom/android/server/am/TransferPipe;->mComplete:Z
+
+    .line 246
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+
+    .line 247
+    monitor-exit p0
+
+    goto/16 :goto_0
+
+    :catchall_2
+    move-exception v9
+
     monitor-exit p0
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     throw v9
 .end method

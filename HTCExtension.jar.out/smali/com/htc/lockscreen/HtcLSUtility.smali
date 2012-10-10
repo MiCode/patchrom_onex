@@ -49,18 +49,18 @@
     .parameter "context"
 
     .prologue
-    .line 254
+    .line 279
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.intent.action.LOCKSCREEN_DO_KEYGUARD"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 255
+    .line 280
     .local v0, intent:Landroid/content/Intent;
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 256
+    .line 281
     return-void
 .end method
 
@@ -70,23 +70,23 @@
     .parameter "mode"
 
     .prologue
-    .line 367
+    .line 392
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.intent.action.LOCKSCREEN_DO_KEYGUARD_WITH_MODE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 368
+    .line 393
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "ui_mode"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 369
+    .line 394
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 370
+    .line 395
     return-void
 .end method
 
@@ -96,20 +96,20 @@
     .parameter "columnName"
 
     .prologue
-    .line 315
+    .line 340
     const/4 v1, -0x1
 
-    .line 316
+    .line 341
     .local v1, index:I
     const/4 v2, 0x0
 
-    .line 317
+    .line 342
     .local v2, value:Ljava/lang/String;
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 318
+    .line 343
     const-string v3, "HtcLSUtility"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -142,10 +142,10 @@
 
     invoke-static {v3, v4}, Lcom/htc/lockscreen/LSLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 319
+    .line 344
     if-ltz v1, :cond_0
 
-    .line 321
+    .line 346
     :try_start_0
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_0
@@ -153,15 +153,15 @@
 
     move-result-object v2
 
-    .line 330
+    .line 355
     :goto_0
     return-object v2
 
-    .line 323
+    .line 348
     :catch_0
     move-exception v0
 
-    .line 324
+    .line 349
     .local v0, e:Ljava/lang/Exception;
     const-string v3, "HtcLSUtility"
 
@@ -191,7 +191,7 @@
 
     goto :goto_0
 
-    .line 328
+    .line 353
     .end local v0           #e:Ljava/lang/Exception;
     :cond_0
     const-string v3, "HtcLSUtility"
@@ -231,7 +231,7 @@
     .parameter "mode"
 
     .prologue
-    .line 191
+    .line 216
     invoke-static {p0, p1}, Lcom/htc/lockscreen/HtcLSUtility;->loadSettings(Landroid/content/Context;I)Landroid/content/ComponentName;
 
     move-result-object v0
@@ -247,14 +247,14 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 210
+    .line 235
     const/4 v2, 0x0
 
-    .line 212
+    .line 237
     .local v2, info:Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
     if-nez p1, :cond_0
 
-    .line 214
+    .line 239
     :try_start_0
     const-string v8, "HtcLSUtility"
 
@@ -264,11 +264,11 @@
 
     move-object v8, v9
 
-    .line 250
+    .line 275
     :goto_0
     return-object v8
 
-    .line 218
+    .line 243
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -280,7 +280,7 @@
 
     move-result-object v7
 
-    .line 221
+    .line 246
     .local v7, si:Landroid/content/pm/ServiceInfo;
     new-instance v4, Landroid/content/Intent;
 
@@ -288,7 +288,7 @@
 
     invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 223
+    .line 248
     .local v4, intent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -300,7 +300,7 @@
 
     move-result-object v5
 
-    .line 225
+    .line 250
     .local v5, ris:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v1, 0x0
 
@@ -312,7 +312,7 @@
 
     if-ge v1, v8, :cond_1
 
-    .line 226
+    .line 251
     invoke-interface {v5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -321,7 +321,7 @@
 
     iget-object v6, v8, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 227
+    .line 252
     .local v6, rsi:Landroid/content/pm/ServiceInfo;
     iget-object v8, v6, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
 
@@ -345,7 +345,7 @@
 
     if-eqz v8, :cond_2
 
-    .line 230
+    .line 255
     :try_start_1
     new-instance v3, Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
 
@@ -364,14 +364,14 @@
     .local v3, info:Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
     move-object v2, v3
 
-    .line 240
+    .line 265
     .end local v3           #info:Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
     .end local v6           #rsi:Landroid/content/pm/ServiceInfo;
     .restart local v2       #info:Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
     :cond_1
     if-nez v2, :cond_3
 
-    .line 241
+    .line 266
     :try_start_2
     const-string v8, "HtcLSUtility"
 
@@ -397,15 +397,15 @@
 
     move-object v8, v9
 
-    .line 242
+    .line 267
     goto :goto_0
 
-    .line 232
+    .line 257
     .restart local v6       #rsi:Landroid/content/pm/ServiceInfo;
     :catch_0
     move-exception v0
 
-    .line 233
+    .line 258
     .local v0, e:Ljava/lang/Exception;
     const-string v8, "HtcLSUtility"
 
@@ -417,17 +417,17 @@
 
     move-object v8, v9
 
-    .line 234
+    .line 259
     goto :goto_0
 
-    .line 225
+    .line 250
     .end local v0           #e:Ljava/lang/Exception;
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 246
+    .line 271
     .end local v1           #i:I
     .end local v4           #intent:Landroid/content/Intent;
     .end local v5           #ris:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
@@ -436,7 +436,7 @@
     :catch_1
     move-exception v0
 
-    .line 247
+    .line 272
     .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v8, "HtcLSUtility"
 
@@ -462,7 +462,7 @@
 
     move-object v8, v9
 
-    .line 248
+    .line 273
     goto/16 :goto_0
 
     .end local v0           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
@@ -473,7 +473,7 @@
     :cond_3
     move-object v8, v2
 
-    .line 250
+    .line 275
     goto/16 :goto_0
 .end method
 
@@ -483,25 +483,25 @@
     .parameter "comp"
 
     .prologue
-    .line 195
+    .line 220
     const/4 v1, 0x0
 
-    .line 197
+    .line 222
     .local v1, label:Ljava/lang/String;
     invoke-static {p0, p1}, Lcom/htc/lockscreen/HtcLSUtility;->getIdleScreenInfo(Landroid/content/Context;Landroid/content/ComponentName;)Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
 
     move-result-object v0
 
-    .line 198
+    .line 223
     .local v0, info:Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;
     if-eqz v0, :cond_0
 
-    .line 199
+    .line 224
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 200
+    .line 225
     .local v2, pm:Landroid/content/pm/PackageManager;
     invoke-virtual {v0, v2}, Lcom/htc/lockscreen/idlescreen/IdleScreenInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
@@ -510,7 +510,7 @@
     .end local v1           #label:Ljava/lang/String;
     check-cast v1, Ljava/lang/String;
 
-    .line 202
+    .line 227
     .end local v2           #pm:Landroid/content/pm/PackageManager;
     .restart local v1       #label:Ljava/lang/String;
     :cond_0
@@ -551,15 +551,15 @@
     .parameter "mode"
 
     .prologue
-    .line 262
+    .line 287
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_0
 
-    .line 263
+    .line 288
     const-string v0, "com.htc.idlescreen.style.dock"
 
-    .line 266
+    .line 291
     :goto_0
     return-object v0
 
@@ -567,6 +567,103 @@
     const-string v0, "com.htc.idlescreen.style.normal"
 
     goto :goto_0
+.end method
+
+.method public static haveIdleScreenPermission(Landroid/content/Context;Landroid/content/ComponentName;)Z
+    .locals 8
+    .parameter "context"
+    .parameter "compName"
+
+    .prologue
+    const/4 v6, 0x0
+
+    .line 191
+    if-eqz p1, :cond_1
+
+    .line 192
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 193
+    .local v2, packageName:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v4
+
+    .line 194
+    .local v4, pmg:Landroid/content/pm/PackageManager;
+    const-string v7, "com.htc.idlescreen.permission.IDLESCREEN_SERVICE"
+
+    invoke-virtual {v4, v7, v2}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    .line 195
+    .local v3, permission:I
+    if-eqz v3, :cond_2
+
+    .line 196
+    const/4 v5, 0x0
+
+    .line 198
+    .local v5, systemApp:Z
+    const/16 v7, 0x80
+
+    :try_start_0
+    invoke-virtual {v4, v2, v7}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v1
+
+    .line 199
+    .local v1, info:Landroid/content/pm/ApplicationInfo;
+    iget v7, v1, Landroid/content/pm/ApplicationInfo;->flags:I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    and-int/lit8 v7, v7, 0x1
+
+    if-lez v7, :cond_0
+
+    .line 200
+    const/4 v5, 0x1
+
+    .line 206
+    .end local v1           #info:Landroid/content/pm/ApplicationInfo;
+    :cond_0
+    :goto_0
+    if-nez v5, :cond_2
+
+    .line 212
+    .end local v2           #packageName:Ljava/lang/String;
+    .end local v3           #permission:I
+    .end local v4           #pmg:Landroid/content/pm/PackageManager;
+    .end local v5           #systemApp:Z
+    :cond_1
+    :goto_1
+    return v6
+
+    .line 202
+    .restart local v2       #packageName:Ljava/lang/String;
+    .restart local v3       #permission:I
+    .restart local v4       #pmg:Landroid/content/pm/PackageManager;
+    .restart local v5       #systemApp:Z
+    :catch_0
+    move-exception v0
+
+    .line 204
+    .local v0, e:Ljava/lang/Exception;
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
+
+    .line 210
+    .end local v0           #e:Ljava/lang/Exception;
+    .end local v5           #systemApp:Z
+    :cond_2
+    const/4 v6, 0x1
+
+    goto :goto_1
 .end method
 
 .method public static isWithIdleScreenBase(Landroid/content/Context;)Z
@@ -623,20 +720,20 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 288
+    .line 313
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 290
+    .line 315
     .local v0, cr:Landroid/content/ContentResolver;
     const/4 v7, 0x0
 
-    .line 291
+    .line 316
     .local v7, comp:Landroid/content/ComponentName;
     const/4 v6, 0x0
 
-    .line 293
+    .line 318
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Lcom/htc/lockscreen/HtcLSUtility;->URI_IDLESCREEN_STYLE:Landroid/net/Uri;
@@ -669,7 +766,7 @@
 
     move-result-object v6
 
-    .line 294
+    .line 319
     if-eqz v6, :cond_0
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -678,14 +775,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 295
+    .line 320
     const-string v1, "idlescreen_style"
 
     invoke-static {v6, v1}, Lcom/htc/lockscreen/HtcLSUtility;->getDBString(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 296
+    .line 321
     .local v8, compStr:Ljava/lang/String;
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -700,19 +797,19 @@
 
     move-result-object v7
 
-    .line 305
+    .line 330
     .end local v8           #compStr:Ljava/lang/String;
     :cond_0
     :goto_0
     if-eqz v6, :cond_1
 
-    .line 306
+    .line 331
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 307
+    .line 332
     const/4 v6, 0x0
 
-    .line 310
+    .line 335
     :cond_1
     :goto_1
     const-string v1, "HtcLSUtility"
@@ -747,22 +844,22 @@
 
     invoke-static {v1, v2}, Lcom/htc/lockscreen/LSLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
+    .line 336
     return-object v7
 
     .restart local v8       #compStr:Ljava/lang/String;
     :cond_2
     move-object v7, v10
 
-    .line 296
+    .line 321
     goto :goto_0
 
-    .line 301
+    .line 326
     .end local v8           #compStr:Ljava/lang/String;
     :catch_0
     move-exception v9
 
-    .line 302
+    .line 327
     .local v9, e:Ljava/lang/Exception;
     :try_start_1
     const-string v1, "HtcLSUtility"
@@ -789,28 +886,28 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 305
+    .line 330
     if-eqz v6, :cond_1
 
-    .line 306
+    .line 331
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 307
+    .line 332
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 305
+    .line 330
     .end local v9           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 
     if-eqz v6, :cond_3
 
-    .line 306
+    .line 331
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 307
+    .line 332
     const/4 v6, 0x0
 
     :cond_3
@@ -949,7 +1046,7 @@
     .parameter "mode"
 
     .prologue
-    .line 276
+    .line 301
     const-string v2, "HtcLSUtility"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -982,18 +1079,18 @@
 
     invoke-static {v2, v3}, Lcom/htc/lockscreen/LSLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 277
+    .line 302
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 278
+    .line 303
     .local v0, cr:Landroid/content/ContentResolver;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 279
+    .line 304
     .local v1, value:Landroid/content/ContentValues;
     const-string v2, "idlescreen_style"
 
@@ -1003,7 +1100,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 281
+    .line 306
     sget-object v2, Lcom/htc/lockscreen/HtcLSUtility;->URI_IDLESCREEN_STYLE:Landroid/net/Uri;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1028,7 +1125,7 @@
 
     invoke-virtual {v0, v2, v1, v3, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 282
+    .line 307
     return-void
 .end method
 
@@ -1106,18 +1203,18 @@
     .parameter "bitmap"
 
     .prologue
-    .line 334
+    .line 359
     const/4 v9, 0x0
 
-    .line 335
+    .line 360
     .local v9, result:Z
     const-string v0, "com.htc.idlescreen.wallpaper.provider"
 
-    .line 336
+    .line 361
     .local v0, AUTHORITY:Ljava/lang/String;
     const-string v2, "wallpaper"
 
-    .line 337
+    .line 362
     .local v2, WALLPAPER:Ljava/lang/String;
     const-string v10, "content://com.htc.idlescreen.wallpaper.provider/wallpaper"
 
@@ -1125,21 +1222,21 @@
 
     move-result-object v1
 
-    .line 338
+    .line 363
     .local v1, URI_WALLPAPER:Landroid/net/Uri;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
-    .line 339
+    .line 364
     .local v8, resolver:Landroid/content/ContentResolver;
     const/4 v4, 0x0
 
-    .line 340
+    .line 365
     .local v4, fd:Landroid/os/ParcelFileDescriptor;
     const/4 v5, 0x0
 
-    .line 342
+    .line 367
     .local v5, fos:Ljava/io/FileOutputStream;
     :try_start_0
     const-string v10, ""
@@ -1148,7 +1245,7 @@
 
     move-result-object v4
 
-    .line 343
+    .line 368
     new-instance v6, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
 
     invoke-direct {v6, v4}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
@@ -1156,7 +1253,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 344
+    .line 369
     .end local v5           #fos:Ljava/io/FileOutputStream;
     .local v6, fos:Ljava/io/FileOutputStream;
     :try_start_1
@@ -1169,13 +1266,13 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 345
+    .line 370
     const/4 v9, 0x1
 
-    .line 351
+    .line 376
     if-eqz v6, :cond_2
 
-    .line 353
+    .line 378
     :try_start_2
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -1183,7 +1280,7 @@
 
     move-object v5, v6
 
-    .line 361
+    .line 386
     .end local v6           #fos:Ljava/io/FileOutputStream;
     .restart local v5       #fos:Ljava/io/FileOutputStream;
     :cond_0
@@ -1194,25 +1291,25 @@
 
     invoke-direct {v7, v10}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 362
+    .line 387
     .local v7, intent:Landroid/content/Intent;
     invoke-virtual {p0, v7}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 363
+    .line 388
     return v9
 
-    .line 354
+    .line 379
     .end local v5           #fos:Ljava/io/FileOutputStream;
     .end local v7           #intent:Landroid/content/Intent;
     .restart local v6       #fos:Ljava/io/FileOutputStream;
     :catch_0
     move-exception v3
 
-    .line 356
+    .line 381
     .local v3, e:Ljava/io/IOException;
     const/4 v9, 0x0
 
-    .line 357
+    .line 382
     const-string v10, "HtcLSUtility"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1237,17 +1334,17 @@
 
     move-object v5, v6
 
-    .line 358
+    .line 383
     .end local v6           #fos:Ljava/io/FileOutputStream;
     .restart local v5       #fos:Ljava/io/FileOutputStream;
     goto :goto_0
 
-    .line 346
+    .line 371
     .end local v3           #e:Ljava/io/IOException;
     :catch_1
     move-exception v3
 
-    .line 348
+    .line 373
     .local v3, e:Ljava/lang/Exception;
     :goto_1
     :try_start_3
@@ -1275,10 +1372,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 351
+    .line 376
     if-eqz v5, :cond_0
 
-    .line 353
+    .line 378
     :try_start_4
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -1286,15 +1383,15 @@
 
     goto :goto_0
 
-    .line 354
+    .line 379
     :catch_2
     move-exception v3
 
-    .line 356
+    .line 381
     .local v3, e:Ljava/io/IOException;
     const/4 v9, 0x0
 
-    .line 357
+    .line 382
     const-string v10, "HtcLSUtility"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1319,7 +1416,7 @@
 
     goto :goto_0
 
-    .line 351
+    .line 376
     .end local v3           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v10
@@ -1327,26 +1424,26 @@
     :goto_2
     if-eqz v5, :cond_1
 
-    .line 353
+    .line 378
     :try_start_5
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 358
+    .line 383
     :cond_1
     :goto_3
     throw v10
 
-    .line 354
+    .line 379
     :catch_3
     move-exception v3
 
-    .line 356
+    .line 381
     .restart local v3       #e:Ljava/io/IOException;
     const/4 v9, 0x0
 
-    .line 357
+    .line 382
     const-string v11, "HtcLSUtility"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -1371,7 +1468,7 @@
 
     goto :goto_3
 
-    .line 351
+    .line 376
     .end local v3           #e:Ljava/io/IOException;
     .end local v5           #fos:Ljava/io/FileOutputStream;
     .restart local v6       #fos:Ljava/io/FileOutputStream;
@@ -1384,7 +1481,7 @@
     .restart local v5       #fos:Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 346
+    .line 371
     .end local v5           #fos:Ljava/io/FileOutputStream;
     .restart local v6       #fos:Ljava/io/FileOutputStream;
     :catch_4

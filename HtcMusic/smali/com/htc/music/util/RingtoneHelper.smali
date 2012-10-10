@@ -82,7 +82,7 @@
     if-eqz p1, :cond_0
 
     .line 77
-    const v4, 0x7f0700ae
+    const v4, 0x7f0700af
 
     invoke-virtual {p0, v4}, Lcom/htc/music/util/RingtoneHelper;->showToast(I)V
 
@@ -193,7 +193,7 @@
     if-eqz p1, :cond_6
 
     .line 112
-    const v3, 0x7f0700af
+    const v3, 0x7f0700b0
 
     invoke-virtual {p0, v3}, Lcom/htc/music/util/RingtoneHelper;->showToast(I)V
 

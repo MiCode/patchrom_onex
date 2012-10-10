@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 375
+    .line 380
     iput-object p1, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "obj"
 
     .prologue
-    .line 377
+    .line 382
     const-string v0, "[MiniPlayer]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +76,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 380
+    .line 385
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-static {p2}, Lcom/htc/music/IMediaPlaybackService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/music/IMediaPlaybackService;
@@ -85,19 +85,19 @@
 
     iput-object v1, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 381
+    .line 386
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
     if-nez v0, :cond_0
 
-    .line 382
+    .line 387
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
     iget-object v0, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
     sput-object v0, Lcom/htc/music/util/MusicUtils;->sService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 385
+    .line 390
     :cond_0
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
@@ -108,14 +108,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 386
+    .line 391
     const-string v0, "[MiniPlayer]"
 
     const-string v1, "mIsServiceBinded already be true when service connected!! somebody could call bind twice!!"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 389
+    .line 394
     :cond_1
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
@@ -124,7 +124,7 @@
     #setter for: Lcom/htc/music/MiniPlayer;->mIsServiceBinded:Z
     invoke-static {v0, v1}, Lcom/htc/music/MiniPlayer;->access$002(Lcom/htc/music/MiniPlayer;Z)Z
 
-    .line 390
+    .line 395
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
     #getter for: Lcom/htc/music/MiniPlayer;->isReleased:Z
@@ -134,25 +134,25 @@
 
     if-eqz v0, :cond_2
 
-    .line 391
+    .line 396
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v0}, Lcom/htc/music/MiniPlayer;->unBindMediaPlayer()V
 
-    .line 393
+    .line 398
     :cond_2
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
     invoke-virtual {v0}, Lcom/htc/music/MiniPlayer;->refreshInfo()V
 
-    .line 396
+    .line 401
     const-string v0, "[MiniPlayer]"
 
     const-string v1, "onServiceConnected finished"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 397
+    .line 402
     return-void
 .end method
 
@@ -161,20 +161,20 @@
     .parameter "classname"
 
     .prologue
-    .line 400
+    .line 405
     const-string v0, "[MiniPlayer]"
 
     const-string v1, "onServiceDisconnected"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 401
+    .line 406
     iget-object v0, p0, Lcom/htc/music/MiniPlayer$2;->this$0:Lcom/htc/music/MiniPlayer;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/htc/music/MiniPlayer;->mService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 402
+    .line 407
     return-void
 .end method

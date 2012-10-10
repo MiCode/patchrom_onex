@@ -33,7 +33,7 @@
     .line 45
     iput-object p1, p0, Landroid/database/ContentObserver$NotificationRunnable;->this$0:Landroid/database/ContentObserver;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
     iput-boolean p2, p0, Landroid/database/ContentObserver$NotificationRunnable;->mSelf:Z

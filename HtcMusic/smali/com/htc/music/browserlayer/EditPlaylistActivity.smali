@@ -20,6 +20,8 @@
 
 
 # static fields
+.field private static MUSIC_FOLDER_PICKER_FILTER:Ljava/lang/String; = null
+
 .field public static final PLAY_LIST_ID:Ljava/lang/String; = "playlistid"
 
 .field public static final PLAY_LIST_NAME:Ljava/lang/String; = "playlistname"
@@ -30,7 +32,11 @@
 
 
 # instance fields
+.field private final ADD_FOLDER_SONGS:I
+
 .field private final ADD_SONGS:I
+
+.field private final DIALOG_FOR_ADDSONGS:I
 
 .field private final SELECT_ALL:I
 
@@ -85,93 +91,113 @@
 
 .field private mTrackList:Lcom/htc/widget/HtcListView;
 
+.field private mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 76
+    .line 79
     const-string v0, "[EditPlaylistActivity]"
 
     sput-object v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
+
+    .line 578
+    const-string v0, "com.htc.musicfolderpicker.PICK_FOLDER"
+
+    sput-object v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->MUSIC_FOLDER_PICKER_FILTER:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 2
+    .locals 3
 
     .prologue
+    const/4 v2, 0x0
+
     const/4 v1, 0x0
 
-    .line 121
+    .line 128
     invoke-direct {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;-><init>()V
 
-    .line 79
+    .line 82
     const/16 v0, 0x21
 
     iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->ADD_SONGS:I
 
-    .line 81
+    .line 84
+    const/16 v0, 0x29
+
+    iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->ADD_FOLDER_SONGS:I
+
+    .line 86
     const/16 v0, 0x25
 
     iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->SELECT_ALL:I
 
-    .line 83
+    .line 88
     const/16 v0, 0x26
 
     iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->UNSELECT_ALL:I
 
-    .line 96
+    .line 101
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapterSent:Z
 
-    .line 106
+    .line 111
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
-    .line 108
+    .line 113
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAsyncQuerying:Z
 
-    .line 110
-    const/4 v0, 0x0
+    .line 115
+    iput-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistMemberCols:[Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistMemberCols:[Ljava/lang/String;
-
-    .line 116
+    .line 121
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mNewPlaylist:Z
 
-    .line 118
+    .line 123
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsDrop:Z
 
-    .line 119
+    .line 124
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsAddSongs:Z
 
-    .line 417
-    new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;
+    .line 126
+    iput-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    .line 448
+    new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$2;
+
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$2;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
-    .line 1415
-    new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$5;
+    .line 577
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$5;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    iput v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->DIALOG_FOR_ADDSONGS:I
+
+    .line 1503
+    new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$8;
+
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$8;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAddSongsBtnListener:Landroid/view/View$OnClickListener;
 
-    .line 1421
-    new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$6;
+    .line 1509
+    new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$9;
 
-    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$6;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$9;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mDropListener:Lcom/htc/widget/HtcReorderListView$DropListener;
 
-    .line 122
+    .line 129
     return-void
 .end method
 
@@ -180,158 +206,19 @@
     .parameter "x0"
 
     .prologue
-    .line 73
+    .line 76
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setLandscapeIMEbutton()V
 
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Ljava/lang/String;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1100(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->goToPicker()V
-
-    return-void
-.end method
-
-.method static synthetic access$1202(Lcom/htc/music/browserlayer/EditPlaylistActivity;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput-boolean p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsDrop:Z
-
-    return p1
-.end method
-
-.method static synthetic access$1300(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Z
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
-
-    return v0
-.end method
-
-.method static synthetic access$1400(Lcom/htc/music/browserlayer/EditPlaylistActivity;I)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->addSong(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$200(Lcom/htc/music/browserlayer/EditPlaylistActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+.method static synthetic access$1000(Lcom/htc/music/browserlayer/EditPlaylistActivity;Ljava/lang/String;)I
     .locals 1
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 73
-    invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->joinAlbumArt(Landroid/database/Cursor;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$300(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Z
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
-
-    return v0
-.end method
-
-.method static synthetic access$400(Lcom/htc/music/browserlayer/EditPlaylistActivity;)[Ljava/lang/String;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mCursorCols:[Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$600()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 73
-    sget-object v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$700(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Landroid/database/Cursor;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackCursor:Landroid/database/Cursor;
-
-    return-object v0
-.end method
-
-.method static synthetic access$702(Lcom/htc/music/browserlayer/EditPlaylistActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
-    iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackCursor:Landroid/database/Cursor;
-
-    return-object p1
-.end method
-
-.method static synthetic access$800(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Landroid/database/Cursor;
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getTrackCursor()Landroid/database/Cursor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$900(Lcom/htc/music/browserlayer/EditPlaylistActivity;Ljava/lang/String;)I
-    .locals 1
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 73
+    .line 76
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getPlaylistId(Ljava/lang/String;)I
 
     move-result v0
@@ -339,12 +226,161 @@
     return v0
 .end method
 
+.method static synthetic access$1100(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Ljava/lang/String;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    .line 76
+    invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->goToPicker()V
+
+    return-void
+.end method
+
+.method static synthetic access$1302(Lcom/htc/music/browserlayer/EditPlaylistActivity;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 76
+    iput-boolean p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsDrop:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1400(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 76
+    iget-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
+
+    return v0
+.end method
+
+.method static synthetic access$1500(Lcom/htc/music/browserlayer/EditPlaylistActivity;I)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 76
+    invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->addSong(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$200()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 76
+    sget-object v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->MUSIC_FOLDER_PICKER_FILTER:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/htc/music/browserlayer/EditPlaylistActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+    .locals 1
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 76
+    invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->joinAlbumArt(Landroid/database/Cursor;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$400(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 76
+    iget-boolean v0, p0, Lcom/htc/music/widget/MusicMaActivity;->mIsEnhancerExist:Z
+
+    return v0
+.end method
+
+.method static synthetic access$500(Lcom/htc/music/browserlayer/EditPlaylistActivity;)[Ljava/lang/String;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mCursorCols:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$700()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 76
+    sget-object v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$800(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Landroid/database/Cursor;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackCursor:Landroid/database/Cursor;
+
+    return-object v0
+.end method
+
+.method static synthetic access$802(Lcom/htc/music/browserlayer/EditPlaylistActivity;Landroid/database/Cursor;)Landroid/database/Cursor;
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 76
+    iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackCursor:Landroid/database/Cursor;
+
+    return-object p1
+.end method
+
+.method static synthetic access$900(Lcom/htc/music/browserlayer/EditPlaylistActivity;)Landroid/database/Cursor;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 76
+    invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getTrackCursor()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private addSong(I)V
     .locals 2
     .parameter "audioId"
 
     .prologue
-    .line 635
+    .line 720
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
@@ -353,7 +389,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 636
+    .line 721
     return-void
 .end method
 
@@ -362,7 +398,7 @@
     .parameter "name"
 
     .prologue
-    .line 327
+    .line 349
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -371,36 +407,36 @@
 
     if-nez v4, :cond_2
 
-    .line 328
+    .line 350
     :cond_0
     const/4 v0, -0x1
 
-    .line 348
+    .line 370
     :cond_1
     :goto_0
     return v0
 
-    .line 330
+    .line 352
     :cond_2
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 331
+    .line 353
     .local v1, resolver:Landroid/content/ContentResolver;
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getPlaylistId(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 332
+    .line 354
     .local v0, id:I
     const/4 v2, 0x0
 
-    .line 333
+    .line 355
     .local v2, uri:Landroid/net/Uri;
     if-ltz v0, :cond_3
 
-    .line 334
+    .line 356
     sget-object v4, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     int-to-long v5, v0
@@ -409,12 +445,12 @@
 
     move-result-object v2
 
-    .line 335
+    .line 357
     invoke-static {p0, v0}, Lcom/htc/music/util/MusicUtils;->clearPlaylist(Landroid/content/Context;I)V
 
     goto :goto_0
 
-    .line 337
+    .line 359
     :cond_3
     new-instance v3, Landroid/content/ContentValues;
 
@@ -422,28 +458,28 @@
 
     invoke-direct {v3, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 338
+    .line 360
     .local v3, values:Landroid/content/ContentValues;
     const-string v4, "name"
 
     invoke-virtual {v3, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 339
+    .line 361
     sget-object v4, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v1, v4, v3}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 340
+    .line 362
     invoke-direct {p0, v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getPlaylistId(Landroid/net/Uri;)I
 
     move-result v0
 
-    .line 343
+    .line 365
     if-lez v0, :cond_1
 
-    .line 344
+    .line 366
     invoke-static {p0}, Lcom/htc/music/util/ShowMeHelper;->notifyCreatePlaylist(Landroid/content/Context;)V
 
     goto :goto_0
@@ -453,10 +489,10 @@
     .locals 4
 
     .prologue
-    .line 624
+    .line 709
     const/4 v0, 0x0
 
-    .line 626
+    .line 711
     .local v0, count:I
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
@@ -479,18 +515,18 @@
 
     check-cast v2, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
 
-    .line 627
+    .line 712
     .local v2, item:Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
     iget-boolean v3, v2, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;->mChecked:Z
 
     if-eqz v3, :cond_0
 
-    .line 628
+    .line 713
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 631
+    .line 716
     .end local v2           #item:Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
     :cond_1
     return v0
@@ -500,14 +536,14 @@
     .locals 2
 
     .prologue
-    .line 666
+    .line 751
     new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mCursorCols:[Ljava/lang/String;
 
     invoke-direct {v0, p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;[Ljava/lang/String;)V
 
-    .line 667
+    .line 752
     .local v0, cursor:Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
@@ -515,10 +551,10 @@
 
     if-gtz v1, :cond_0
 
-    .line 668
+    .line 753
     const/4 v0, 0x0
 
-    .line 669
+    .line 754
     .end local v0           #cursor:Landroid/database/Cursor;
     :cond_0
     return-object v0
@@ -534,10 +570,10 @@
 
     const/4 v2, 0x0
 
-    .line 1480
+    .line 1568
     const/4 v9, 0x0
 
-    .line 1481
+    .line 1569
     .local v9, ret:Landroid/database/Cursor;
     if-eqz p1, :cond_0
 
@@ -546,31 +582,31 @@
     :goto_0
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAsyncQuerying:Z
 
-    .line 1482
+    .line 1570
     const-string v0, "title COLLATE NOCASE ASC"
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSortOrder:Ljava/lang/String;
 
-    .line 1483
+    .line 1571
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1484
+    .line 1572
     .local v10, where:Ljava/lang/StringBuilder;
     const-string v0, "title != \'\'"
 
     invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1486
+    .line 1574
     const-string v0, "play_order"
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSortOrder:Ljava/lang/String;
 
-    .line 1487
+    .line 1575
     if-eqz p1, :cond_1
 
-    .line 1488
+    .line 1576
     const-string v0, "external"
 
     invoke-static {p2}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -599,10 +635,10 @@
 
     invoke-virtual/range {v0 .. v7}, Lcom/htc/music/util/DlArtAsyncQueryHandler;->startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1496
+    .line 1584
     const/4 v9, 0x0
 
-    .line 1507
+    .line 1595
     :goto_1
     return-object v9
 
@@ -610,10 +646,10 @@
     :cond_0
     move v0, v1
 
-    .line 1481
+    .line 1569
     goto :goto_0
 
-    .line 1498
+    .line 1586
     .restart local v10       #where:Ljava/lang/StringBuilder;
     :cond_1
     const-string v0, "external"
@@ -658,18 +694,18 @@
 
     const/4 v8, 0x0
 
-    .line 352
+    .line 374
     if-nez p1, :cond_1
 
-    .line 353
+    .line 375
     const/4 v7, -0x1
 
-    .line 366
+    .line 388
     :cond_0
     :goto_0
     return v7
 
-    .line 355
+    .line 377
     :cond_1
     const/4 v0, 0x1
 
@@ -691,30 +727,30 @@
 
     move-result-object v6
 
-    .line 358
+    .line 380
     .local v6, c:Landroid/database/Cursor;
     const/4 v7, -0x1
 
-    .line 359
+    .line 381
     .local v7, id:I
     if-eqz v6, :cond_0
 
-    .line 360
+    .line 382
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 361
+    .line 383
     invoke-interface {v6}, Landroid/database/Cursor;->isAfterLast()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 362
+    .line 384
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v7
 
-    .line 364
+    .line 386
     :cond_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
@@ -730,7 +766,7 @@
 
     const/4 v8, 0x0
 
-    .line 370
+    .line 392
     sget-object v1, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     new-array v2, v4, [Ljava/lang/String;
@@ -753,37 +789,37 @@
 
     move-result-object v6
 
-    .line 376
+    .line 398
     .local v6, c:Landroid/database/Cursor;
     const/4 v7, -0x1
 
-    .line 377
+    .line 399
     .local v7, id:I
     if-eqz v6, :cond_1
 
-    .line 378
+    .line 400
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 379
+    .line 401
     invoke-interface {v6}, Landroid/database/Cursor;->isAfterLast()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 380
+    .line 402
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v7
 
-    .line 382
+    .line 404
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 383
+    .line 405
     const/4 v6, 0x0
 
-    .line 385
+    .line 407
     :cond_1
     return v7
 .end method
@@ -792,31 +828,31 @@
     .locals 2
 
     .prologue
-    .line 649
+    .line 734
     const/4 v0, 0x0
 
-    .line 650
+    .line 735
     .local v0, ret:Landroid/database/Cursor;
     const-string v1, "title COLLATE NOCASE ASC"
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSortOrder:Ljava/lang/String;
 
-    .line 652
+    .line 737
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getListCursor()Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 653
+    .line 738
     if-eqz v0, :cond_0
 
-    .line 654
+    .line 739
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->init(Landroid/database/Cursor;)V
 
-    .line 662
+    .line 747
     :goto_0
     return-object v0
 
-    .line 656
+    .line 741
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
@@ -826,17 +862,17 @@
 
     if-lez v1, :cond_1
 
-    .line 657
+    .line 742
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 658
+    .line 743
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 660
+    .line 745
     :cond_1
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->init(Landroid/database/Cursor;)V
 
@@ -849,12 +885,35 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 547
+    .line 581
+    new-instance v1, Landroid/content/Intent;
+
+    sget-object v2, Lcom/htc/music/browserlayer/EditPlaylistActivity;->MUSIC_FOLDER_PICKER_FILTER:Ljava/lang/String;
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v1}, Lcom/htc/music/util/MusicUtils;->isExternalPackageExist(Landroid/content/Context;Landroid/content/Intent;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 582
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->showDialog(I)V
+
+    .line 592
+    :goto_0
+    return-void
+
+    .line 584
+    :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 548
+    .line 585
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "playlisturi"
 
@@ -862,40 +921,39 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 549
+    .line 586
     const-string v1, "pickermode"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 550
+    .line 587
     const-string v1, "isshowextratabs"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 552
+    .line 589
     const-class v1, Lcom/htc/music/browserlayer/AddPlaylistTabActivity;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 553
+    .line 590
     const/16 v1, 0x21
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 554
-    return-void
+    goto :goto_0
 .end method
 
 .method private initTitle()V
     .locals 2
 
     .prologue
-    .line 244
+    .line 266
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
     if-nez v0, :cond_0
 
-    .line 247
+    .line 269
     new-instance v0, Lcom/htc/widget/ActionBarExt;
 
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getActionBar()Landroid/app/ActionBar;
@@ -906,7 +964,7 @@
 
     iput-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
-    .line 249
+    .line 271
     :cond_0
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mActionBar:Lcom/htc/widget/ActionBarExt;
 
@@ -914,26 +972,26 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarExt;->enableHTCLandscape(Z)V
 
-    .line 253
+    .line 275
     new-instance v0, Lcom/htc/widget/ActionBarSearch;
 
     invoke-direct {v0, p0}, Lcom/htc/widget/ActionBarSearch;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mEdit:Lcom/htc/widget/ActionBarSearch;
 
-    .line 255
+    .line 277
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     if-eqz v0, :cond_1
 
-    .line 256
+    .line 278
     iget-object v0, p0, Lcom/htc/music/widget/MusicAutoHeaderFooterActivity;->mCustomContainer:Lcom/htc/widget/ActionBarContainer;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mEdit:Lcom/htc/widget/ActionBarSearch;
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarContainer;->addCenterView(Landroid/view/View;)V
 
-    .line 259
+    .line 281
     :cond_1
     return-void
 .end method
@@ -943,17 +1001,17 @@
     .parameter "c"
 
     .prologue
-    .line 1370
+    .line 1458
     if-nez p1, :cond_0
 
-    .line 1371
+    .line 1459
     const/4 v0, 0x0
 
-    .line 1412
+    .line 1500
     :goto_0
     return-object v0
 
-    .line 1373
+    .line 1461
     :cond_0
     instance-of v0, p1, Lcom/htc/music/widget/AlbumArtCursorWrapper;
 
@@ -966,28 +1024,28 @@
     :cond_1
     move-object v0, p1
 
-    .line 1374
+    .line 1462
     goto :goto_0
 
-    .line 1376
+    .line 1464
     :cond_2
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 1377
+    .line 1465
     .local v8, albumArtMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Integer;Ljava/lang/String;>;"
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1378
+    .line 1466
     .local v13, where:Ljava/lang/StringBuilder;
     const-string v0, "album != \'\'"
 
     invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1379
+    .line 1467
     const/4 v0, 0x2
 
     new-array v2, v0, [Ljava/lang/String;
@@ -1004,7 +1062,7 @@
 
     aput-object v1, v2, v0
 
-    .line 1383
+    .line 1471
     .local v2, cols:[Ljava/lang/String;
     sget-object v1, Landroid/provider/MediaStore$Audio$Albums;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
@@ -1020,14 +1078,14 @@
 
     move-result-object v10
 
-    .line 1385
+    .line 1473
     .local v10, artCursor:Landroid/database/Cursor;
     if-eqz v10, :cond_3
 
-    .line 1386
+    .line 1474
     invoke-interface {v10}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1387
+    .line 1475
     :goto_1
     invoke-interface {v10}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -1035,7 +1093,7 @@
 
     if-nez v0, :cond_4
 
-    .line 1388
+    .line 1476
     const/4 v0, 0x0
 
     invoke-interface {v10, v0}, Landroid/database/Cursor;->getInt(I)I
@@ -1054,34 +1112,34 @@
 
     invoke-virtual {v8, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1389
+    .line 1477
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_1
 
-    .line 1394
+    .line 1482
     :cond_3
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 1395
+    .line 1483
     const/4 p1, 0x0
 
-    .line 1396
+    .line 1484
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1399
+    .line 1487
     :cond_4
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1400
+    .line 1488
     .local v6, albumArt:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/ArrayList;>;"
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1401
+    .line 1489
     :goto_2
     invoke-interface {p1}, Landroid/database/Cursor;->isAfterLast()Z
 
@@ -1089,14 +1147,14 @@
 
     if-nez v0, :cond_5
 
-    .line 1402
+    .line 1490
     new-instance v12, Ljava/util/ArrayList;
 
     const/4 v0, 0x2
 
     invoke-direct {v12, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1403
+    .line 1491
     .local v12, row:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
     const-string v0, "album_id"
 
@@ -1104,7 +1162,7 @@
 
     move-result v9
 
-    .line 1404
+    .line 1492
     .local v9, albumIdx:I
     const/4 v0, 0x0
 
@@ -1112,7 +1170,7 @@
 
     move-result v11
 
-    .line 1405
+    .line 1493
     .local v11, id:I
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1120,7 +1178,7 @@
 
     invoke-virtual {v12, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1406
+    .line 1494
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
@@ -1135,15 +1193,15 @@
 
     invoke-virtual {v12, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1407
+    .line 1495
     invoke-virtual {v6, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1408
+    .line 1496
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_2
 
-    .line 1411
+    .line 1499
     .end local v9           #albumIdx:I
     .end local v11           #id:I
     .end local v12           #row:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
@@ -1152,7 +1210,7 @@
 
     invoke-direct {v7, v2, v6}, Lcom/htc/music/util/ArrayListCursor;-><init>([Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 1412
+    .line 1500
     .local v7, albumArtCrsor:Lcom/htc/music/util/ArrayListCursor;
     new-instance v0, Lcom/htc/music/widget/AlbumArtCursorWrapper;
 
@@ -1170,7 +1228,7 @@
 
     const/4 v8, 0x0
 
-    .line 1462
+    .line 1550
     sget-object v1, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     new-array v2, v4, [Ljava/lang/String;
@@ -1201,34 +1259,34 @@
 
     move-result-object v6
 
-    .line 1468
+    .line 1556
     .local v6, c:Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 1469
+    .line 1557
     .local v7, name:Ljava/lang/String;
     if-eqz v6, :cond_1
 
-    .line 1470
+    .line 1558
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1471
+    .line 1559
     invoke-interface {v6}, Landroid/database/Cursor;->isAfterLast()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1472
+    .line 1560
     invoke-interface {v6, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1474
+    .line 1562
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 1476
+    .line 1564
     :cond_1
     return-object v7
 .end method
@@ -1238,7 +1296,7 @@
     .parameter "name"
 
     .prologue
-    .line 1557
+    .line 1645
     if-eqz p1, :cond_0
 
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
@@ -1247,21 +1305,21 @@
 
     if-gtz v4, :cond_1
 
-    .line 1559
+    .line 1647
     :cond_0
     const/4 v4, 0x0
 
-    .line 1602
+    .line 1690
     :goto_0
     return v4
 
-    .line 1562
+    .line 1650
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 1563
+    .line 1651
     .local v1, resolver:Landroid/content/ContentResolver;
     new-instance v13, Landroid/content/ContentValues;
 
@@ -1269,7 +1327,7 @@
 
     invoke-direct {v13, v4}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 1564
+    .line 1652
     .local v13, values:Landroid/content/ContentValues;
     const-string v4, "name"
 
@@ -1277,7 +1335,7 @@
 
     invoke-virtual {v13, v4, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1565
+    .line 1653
     sget-object v4, Landroid/provider/MediaStore$Audio$Playlists;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     const-string v7, "_id=?"
@@ -1304,14 +1362,14 @@
 
     invoke-virtual {v1, v4, v13, v7, v9}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1571
+    .line 1659
     const-string v4, "content://com.htc.launcher.settings/favorites"
 
     invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 1572
+    .line 1660
     .local v2, launcherUri:Landroid/net/Uri;
     const/4 v4, 0x3
 
@@ -1335,7 +1393,7 @@
 
     aput-object v7, v3, v4
 
-    .line 1575
+    .line 1663
     .local v3, cursorCols:[Ljava/lang/String;
     const-string v4, "title =?"
 
@@ -1357,7 +1415,7 @@
 
     move-result-object v10
 
-    .line 1579
+    .line 1667
     .local v10, c:Landroid/database/Cursor;
     if-eqz v10, :cond_4
 
@@ -1367,14 +1425,14 @@
 
     if-lez v4, :cond_4
 
-    .line 1580
+    .line 1668
     const-string v4, "intent"
 
     invoke-interface {v10, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v12
 
-    .line 1581
+    .line 1669
     .local v12, intentIndex:I
     const-string v4, "_id"
 
@@ -1382,7 +1440,7 @@
 
     move-result v11
 
-    .line 1583
+    .line 1671
     .local v11, idIndex:I
     :cond_2
     :goto_1
@@ -1392,7 +1450,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 1585
+    .line 1673
     :try_start_0
     invoke-interface {v10, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -1402,7 +1460,7 @@
 
     move-result-object v8
 
-    .line 1586
+    .line 1674
     .local v8, intent:Landroid/content/Intent;
     invoke-virtual {v8}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -1436,12 +1494,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 1589
+    .line 1677
     invoke-interface {v10, v11}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v5
 
-    .line 1590
+    .line 1678
     .local v5, id:J
     const/4 v7, 0x0
 
@@ -1451,7 +1509,7 @@
 
     invoke-static/range {v4 .. v9}, Lcom/htc/home/RosieItemUtility;->updateIcon(Landroid/content/Context;JLandroid/graphics/Bitmap;Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 1591
+    .line 1679
     sget-object v4, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1484,7 +1542,7 @@
 
     goto :goto_1
 
-    .line 1593
+    .line 1681
     .end local v5           #id:J
     .end local v8           #intent:Landroid/content/Intent;
     :catch_0
@@ -1492,11 +1550,11 @@
 
     goto :goto_1
 
-    .line 1597
+    .line 1685
     :cond_3
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 1602
+    .line 1690
     .end local v11           #idIndex:I
     .end local v12           #intentIndex:I
     :goto_2
@@ -1504,7 +1562,7 @@
 
     goto/16 :goto_0
 
-    .line 1599
+    .line 1687
     :cond_4
     sget-object v4, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
 
@@ -1519,7 +1577,7 @@
     .locals 5
 
     .prologue
-    .line 517
+    .line 548
     const/4 v2, 0x2
 
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getResources()Landroid/content/res/Resources;
@@ -1534,7 +1592,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 518
+    .line 549
     const-string v2, "input_method"
 
     invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1543,29 +1601,29 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 519
+    .line 550
     .local v0, inputManager:Landroid/view/inputmethod/InputMethodManager;
     if-nez v0, :cond_1
 
-    .line 528
+    .line 559
     .end local v0           #inputManager:Landroid/view/inputmethod/InputMethodManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 521
+    .line 552
     .restart local v0       #inputManager:Landroid/view/inputmethod/InputMethodManager;
     :cond_1
     iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     if-eqz v2, :cond_0
 
-    .line 522
+    .line 553
     iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v2}, Landroid/widget/AutoCompleteTextView;->requestFocus()Z
 
-    .line 523
+    .line 554
     iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     const/4 v3, 0x0
@@ -1576,7 +1634,7 @@
 
     move-result v1
 
-    .line 524
+    .line 555
     .local v1, result:Z
     sget-object v2, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
 
@@ -1610,14 +1668,14 @@
     .parameter "list"
 
     .prologue
-    .line 639
+    .line 724
     if-nez p1, :cond_1
 
-    .line 645
+    .line 730
     :cond_0
     return-void
 
-    .line 642
+    .line 727
     :cond_1
     const/4 v0, 0x0
 
@@ -1627,7 +1685,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 643
+    .line 728
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
@@ -1638,7 +1696,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 642
+    .line 727
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -1651,28 +1709,28 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 488
+    .line 519
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     if-nez v1, :cond_1
 
-    .line 513
+    .line 544
     :cond_0
     :goto_0
     return-void
 
-    .line 491
+    .line 522
     :cond_1
     instance-of v1, p1, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistCursor;
 
     if-eqz v1, :cond_2
 
-    .line 492
+    .line 523
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     invoke-virtual {v1, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->changeCursor(Landroid/database/Cursor;)V
 
-    .line 501
+    .line 532
     :goto_1
     const v1, 0x102000a
 
@@ -1686,45 +1744,45 @@
 
     if-eqz v1, :cond_0
 
-    .line 502
+    .line 533
     const v1, 0x7f030036
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setContentView(I)V
 
-    .line 503
+    .line 534
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
-    .line 504
+    .line 535
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v1, p0}, Lcom/htc/widget/HtcListView;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
-    .line 507
+    .line 538
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListView;->setTextFilterEnabled(Z)V
 
-    .line 508
+    .line 539
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListView;->setFastScrollEnabled(Z)V
 
-    .line 510
+    .line 541
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->initButtonsPanel()V
 
     goto :goto_0
 
-    .line 494
+    .line 525
     :cond_2
     invoke-direct {p0, p1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->joinAlbumArt(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 495
+    .line 526
     .local v0, c:Landroid/database/Cursor;
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
@@ -1741,7 +1799,7 @@
 
     const/4 v7, 0x0
 
-    .line 1297
+    .line 1385
     const v9, 0x7f08001b
 
     invoke-virtual {p0, v9}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->findViewById(I)Landroid/view/View;
@@ -1750,7 +1808,7 @@
 
     check-cast v6, Lcom/htc/widget/HtcFooter;
 
-    .line 1298
+    .line 1386
     .local v6, savePanel:Lcom/htc/widget/HtcFooter;
     const v9, 0x7f08001d
 
@@ -1760,22 +1818,22 @@
 
     check-cast v1, Lcom/htc/widget/HtcFooterButton;
 
-    .line 1299
+    .line 1387
     .local v1, Save:Lcom/htc/widget/HtcFooterButton;
     const v9, 0x7f070069
 
     invoke-virtual {v1, v9}, Lcom/htc/widget/HtcFooterButton;->setText(I)V
 
-    .line 1301
+    .line 1389
     const/4 v4, 0x0
 
-    .line 1302
+    .line 1390
     .local v4, name:Ljava/lang/String;
     iget-object v9, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     if-eqz v9, :cond_0
 
-    .line 1303
+    .line 1391
     iget-object v9, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v9}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
@@ -1790,7 +1848,7 @@
 
     const/4 v4, 0x0
 
-    .line 1306
+    .line 1394
     :cond_0
     :goto_0
     if-eqz v4, :cond_1
@@ -1806,36 +1864,36 @@
     :cond_1
     move v2, v8
 
-    .line 1307
+    .line 1395
     .local v2, empty:Z
     :goto_1
     invoke-direct {p0, v4}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getPlaylistId(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 1309
+    .line 1397
     .local v3, id:I
     iget-object v9, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
     if-eqz v9, :cond_8
 
-    .line 1310
+    .line 1398
     const/4 v5, 0x0
 
-    .line 1311
+    .line 1399
     .local v5, sameName:Z
     iget-object v9, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mOriginalPlaylistName:Ljava/lang/String;
 
     if-eqz v9, :cond_2
 
-    .line 1312
+    .line 1400
     iget-object v9, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mOriginalPlaylistName:Ljava/lang/String;
 
     invoke-virtual {v9, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    .line 1314
+    .line 1402
     :cond_2
     if-nez v2, :cond_3
 
@@ -1848,21 +1906,21 @@
     :goto_2
     invoke-virtual {v1, v8}, Lcom/htc/widget/HtcFooterButton;->setEnabled(Z)V
 
-    .line 1319
+    .line 1407
     .end local v5           #sameName:Z
     :goto_3
     const v8, 0x20800c1
 
     invoke-virtual {v1, v8}, Lcom/htc/widget/HtcFooterButton;->setImageResource(I)V
 
-    .line 1322
-    new-instance v8, Lcom/htc/music/browserlayer/EditPlaylistActivity$3;
+    .line 1410
+    new-instance v8, Lcom/htc/music/browserlayer/EditPlaylistActivity$6;
 
-    invoke-direct {v8, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$3;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    invoke-direct {v8, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$6;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
     invoke-virtual {v1, v8}, Lcom/htc/widget/HtcFooterButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1329
+    .line 1417
     const v8, 0x7f08001c
 
     invoke-virtual {p0, v8}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->findViewById(I)Landroid/view/View;
@@ -1871,31 +1929,31 @@
 
     check-cast v0, Lcom/htc/widget/HtcFooterButton;
 
-    .line 1330
+    .line 1418
     .local v0, Cancel:Lcom/htc/widget/HtcFooterButton;
     const v8, 0x2040152
 
     invoke-virtual {v0, v8}, Lcom/htc/widget/HtcFooterButton;->setText(I)V
 
-    .line 1331
+    .line 1419
     const v8, 0x20800a3
 
     invoke-virtual {v0, v8}, Lcom/htc/widget/HtcFooterButton;->setImageResource(I)V
 
-    .line 1332
-    new-instance v8, Lcom/htc/music/browserlayer/EditPlaylistActivity$4;
+    .line 1420
+    new-instance v8, Lcom/htc/music/browserlayer/EditPlaylistActivity$7;
 
-    invoke-direct {v8, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$4;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    invoke-direct {v8, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$7;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
     invoke-virtual {v0, v8}, Lcom/htc/widget/HtcFooterButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1340
+    .line 1428
     invoke-virtual {v6, v7}, Lcom/htc/widget/HtcFooter;->setVisibility(I)V
 
-    .line 1342
+    .line 1430
     return-void
 
-    .line 1303
+    .line 1391
     .end local v0           #Cancel:Lcom/htc/widget/HtcFooterButton;
     .end local v2           #empty:Z
     .end local v3           #id:I
@@ -1919,7 +1977,7 @@
     :cond_6
     move v2, v7
 
-    .line 1306
+    .line 1394
     goto :goto_1
 
     .restart local v2       #empty:Z
@@ -1928,10 +1986,10 @@
     :cond_7
     move v8, v7
 
-    .line 1314
+    .line 1402
     goto :goto_2
 
-    .line 1317
+    .line 1405
     .end local v5           #sameName:Z
     :cond_8
     if-nez v2, :cond_9
@@ -1950,66 +2008,121 @@
 .end method
 
 .method public onActivityResult(IILandroid/content/Intent;)V
-    .locals 3
+    .locals 7
     .parameter "requestCode"
     .parameter "resultCode"
     .parameter "intent"
 
     .prologue
-    .line 606
-    packed-switch p1, :pswitch_data_0
+    const/4 v6, 0x1
 
-    .line 621
+    const/4 v5, -0x1
+
+    .line 673
+    sparse-switch p1, :sswitch_data_0
+
+    .line 706
     :cond_0
     :goto_0
     return-void
 
-    .line 609
-    :pswitch_0
-    const/4 v2, 0x0
+    .line 676
+    :sswitch_0
+    const/4 v4, 0x0
 
-    invoke-static {p0, v2}, Lcom/htc/music/util/MusicUtils;->getTabActivityResult(Landroid/content/Context;I)I
+    invoke-static {p0, v4}, Lcom/htc/music/util/MusicUtils;->getTabActivityResult(Landroid/content/Context;I)I
 
     move-result p2
 
-    .line 610
+    .line 677
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->getTabActivitySelectedId(Landroid/content/Context;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    .line 678
+    .local v3, selectedList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
+    if-ne p2, v5, :cond_0
+
+    .line 679
+    invoke-static {v3}, Lcom/htc/music/util/MusicUtils;->toIntList(Ljava/util/ArrayList;)[I
 
     move-result-object v1
 
-    .line 611
-    .local v1, selectedList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
-    const/4 v2, -0x1
+    .line 680
+    .local v1, list:[I
+    if-eqz v1, :cond_0
 
-    if-ne p2, v2, :cond_0
+    .line 681
+    iput-boolean v6, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsAddSongs:Z
 
-    .line 612
-    invoke-static {v1}, Lcom/htc/music/util/MusicUtils;->toIntList(Ljava/util/ArrayList;)[I
+    .line 682
+    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->addSongList([I)V
 
-    move-result-object v0
-
-    .line 613
-    .local v0, list:[I
-    if-eqz v0, :cond_0
-
-    .line 614
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsAddSongs:Z
-
-    .line 615
-    invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->addSongList([I)V
-
-    .line 616
+    .line 683
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getTrackCursor()Landroid/database/Cursor;
 
     goto :goto_0
 
-    .line 606
-    :pswitch_data_0
-    .packed-switch 0x21
-        :pswitch_0
-    .end packed-switch
+    .line 688
+    .end local v1           #list:[I
+    .end local v3           #selectedList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
+    :sswitch_1
+    if-eqz p3, :cond_0
+
+    .line 690
+    invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    .line 691
+    .local v0, bundle:Landroid/os/Bundle;
+    if-eqz v0, :cond_1
+
+    .line 692
+    const-string v4, "audio_file_ids"
+
+    invoke-virtual {v0, v4}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    .line 693
+    .local v2, selectedFolderTrackList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
+    if-ne p2, v5, :cond_1
+
+    if-eqz v2, :cond_1
+
+    .line 694
+    invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->toIntList(Ljava/util/ArrayList;)[I
+
+    move-result-object v1
+
+    .line 695
+    .restart local v1       #list:[I
+    if-eqz v1, :cond_1
+
+    .line 696
+    iput-boolean v6, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsAddSongs:Z
+
+    .line 697
+    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->addSongList([I)V
+
+    .line 698
+    invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getTrackCursor()Landroid/database/Cursor;
+
+    .line 702
+    .end local v1           #list:[I
+    .end local v2           #selectedFolderTrackList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
+    :cond_1
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->onSaveClick()V
+
+    goto :goto_0
+
+    .line 673
+    :sswitch_data_0
+    .sparse-switch
+        0x21 -> :sswitch_0
+        0x29 -> :sswitch_1
+    .end sparse-switch
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -2017,10 +2130,10 @@
     .parameter "newConfig"
 
     .prologue
-    .line 481
+    .line 512
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 482
+    .line 513
     return-void
 .end method
 
@@ -2029,7 +2142,7 @@
     .parameter "item"
 
     .prologue
-    .line 537
+    .line 568
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onContextItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -2042,46 +2155,46 @@
     .parameter "icicle"
 
     .prologue
-    .line 127
+    .line 134
     sget-object v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "onCreate +"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
+    .line 135
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 130
+    .line 137
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->requestWindowFeature(I)Z
 
-    .line 131
+    .line 138
     const/16 v0, 0x9
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->requestWindowFeature(I)Z
 
-    .line 132
+    .line 139
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setVolumeControlStream(I)V
 
-    .line 134
+    .line 141
     const/4 v9, 0x0
 
-    .line 136
+    .line 143
     .local v9, defaultPlaylistName:Ljava/lang/String;
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
-    .line 137
+    .line 144
     const-string v0, "playlistname"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 138
+    .line 145
     const-string v0, "playlist"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -2090,7 +2203,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
-    .line 144
+    .line 151
     :goto_0
     const/16 v0, 0xb
 
@@ -2164,32 +2277,64 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mCursorCols:[Ljava/lang/String;
 
-    .line 153
+    .line 160
     const v0, 0x7f03004a
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setContentView(I)V
 
-    .line 154
+    .line 163
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 164
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    if-nez v0, :cond_0
+
+    .line 165
+    new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;
+
+    invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$1;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+
+    iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    .line 173
+    :cond_0
+    iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v1, Landroid/content/IntentFilter;
+
+    const-string v2, "com.htc.music.lockscreen_start"
+
+    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 176
+    :cond_1
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->initTitle()V
 
-    .line 156
+    .line 178
     invoke-virtual {p0, v9}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setTitle(Ljava/lang/String;)V
 
-    .line 158
+    .line 180
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
-    .line 160
+    .line 182
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     instance-of v0, v0, Lcom/htc/widget/HtcReorderListView;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
-    .line 162
+    .line 184
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     check-cast v0, Lcom/htc/widget/HtcReorderListView;
@@ -2198,7 +2343,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcReorderListView;->setDropListener(Lcom/htc/widget/HtcReorderListView$DropListener;)V
 
-    .line 163
+    .line 185
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     check-cast v0, Lcom/htc/widget/HtcReorderListView;
@@ -2207,29 +2352,29 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcReorderListView;->setDraggerId(I)V
 
-    .line 166
-    :cond_0
+    .line 188
+    :cond_2
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->setChoiceMode(I)V
 
-    .line 167
+    .line 189
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->setTextFilterEnabled(Z)V
 
-    .line 168
+    .line 190
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->setFastScrollEnabled(Z)V
 
-    .line 170
+    .line 192
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getLastNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v0
@@ -2238,80 +2383,80 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    .line 172
+    .line 194
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
-    .line 173
+    .line 195
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     invoke-virtual {v0, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->setActivity(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
-    .line 174
+    .line 196
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 225
+    .line 247
     :goto_1
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->initButtonsPanel()V
 
-    .line 227
+    .line 249
     new-instance v10, Landroid/content/IntentFilter;
 
     invoke-direct {v10}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 228
+    .line 250
     .local v10, f:Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.MEDIA_SCANNER_STARTED"
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 229
+    .line 251
     const-string v0, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 230
+    .line 252
     const-string v0, "android.intent.action.MEDIA_UNMOUNTED"
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 231
+    .line 253
     const-string v0, "file"
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 232
+    .line 254
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0, v10}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 234
+    .line 256
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sLibraryMemCache:Lcom/htc/music/util/MemoryCacheMBitmapByTime;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
-    .line 235
+    .line 257
     sget-object v0, Lcom/htc/music/util/MusicUtils;->sLibraryMemCache:Lcom/htc/music/util/MemoryCacheMBitmapByTime;
 
     invoke-virtual {v0}, Lcom/htc/music/util/MemoryCacheMBitmapByTime;->onCreate()V
 
-    .line 238
-    :cond_1
+    .line 260
+    :cond_3
     sget-object v0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "onCreate -"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
+    .line 261
     return-void
 
-    .line 140
+    .line 147
     .end local v10           #f:Landroid/content/IntentFilter;
-    :cond_2
+    :cond_4
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -2322,7 +2467,7 @@
 
     move-result-object v9
 
-    .line 141
+    .line 148
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -2337,8 +2482,8 @@
 
     goto/16 :goto_0
 
-    .line 184
-    :cond_3
+    .line 206
+    :cond_5
     new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getApplication()Landroid/app/Application;
@@ -2367,17 +2512,17 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    .line 190
+    .line 212
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 193
+    .line 215
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
-    .line 195
+    .line 217
     const/16 v0, 0xd
 
     new-array v0, v0, [Ljava/lang/String;
@@ -2462,7 +2607,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistMemberCols:[Ljava/lang/String;
 
-    .line 211
+    .line 233
     new-instance v0, Lcom/htc/music/browserlayer/EditPlaylistActivity$QueryHandler;
 
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getContentResolver()Landroid/content/ContentResolver;
@@ -2473,7 +2618,7 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
-    .line 212
+    .line 234
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mQueryHandler:Lcom/htc/music/util/DlArtAsyncQueryHandler;
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
@@ -2482,8 +2627,8 @@
 
     goto/16 :goto_1
 
-    .line 216
-    :cond_4
+    .line 238
+    :cond_6
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -2494,20 +2639,20 @@
 
     move-result-object v11
 
-    .line 217
+    .line 239
     .local v11, songList:[I
-    if-eqz v11, :cond_5
+    if-eqz v11, :cond_7
 
-    .line 218
+    .line 240
     invoke-virtual {p0, v11}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->addSongList([I)V
 
-    .line 219
+    .line 241
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mNewPlaylist:Z
 
-    .line 221
-    :cond_5
+    .line 243
+    :cond_7
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getTrackCursor()Landroid/database/Cursor;
 
     goto/16 :goto_1
@@ -2520,8 +2665,93 @@
     .parameter "menuInfoIn"
 
     .prologue
-    .line 533
+    .line 564
     return-void
+.end method
+
+.method protected onCreateDialog(I)Landroid/app/Dialog;
+    .locals 4
+    .parameter "id"
+
+    .prologue
+    .line 596
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getParent()Landroid/app/Activity;
+
+    move-result-object v0
+
+    .line 597
+    .local v0, context:Landroid/content/Context;
+    if-nez v0, :cond_0
+
+    move-object v0, p0
+
+    .line 598
+    :cond_0
+    packed-switch p1, :pswitch_data_0
+
+    .line 620
+    invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onCreateDialog(I)Landroid/app/Dialog;
+
+    move-result-object v1
+
+    :goto_0
+    return-object v1
+
+    .line 600
+    :pswitch_0
+    new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
+
+    invoke-direct {v1, p0}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/htc/music/util/MusicUtils;->getAppName(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lcom/htc/widget/HtcAlertDialog$Builder;
+
+    move-result-object v1
+
+    const v2, 0x7f0701da
+
+    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
+
+    move-result-object v1
+
+    const v2, 0x204025f
+
+    new-instance v3, Lcom/htc/music/browserlayer/EditPlaylistActivity$5;
+
+    invoke-direct {v3, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$5;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+
+    invoke-virtual {v1, v2, v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
+
+    move-result-object v1
+
+    const v2, 0x204025e
+
+    new-instance v3, Lcom/htc/music/browserlayer/EditPlaylistActivity$4;
+
+    invoke-direct {v3, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$4;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+
+    invoke-virtual {v1, v2, v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/htc/widget/HtcAlertDialog$Builder;->create()Lcom/htc/widget/HtcAlertDialog;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    .line 598
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
@@ -2533,108 +2763,139 @@
 
     const/4 v2, 0x0
 
-    .line 562
+    .line 629
     const/16 v0, 0x21
 
-    const v1, 0x7f07009b
+    const v1, 0x7f07009c
 
     invoke-interface {p1, v3, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 564
+    .line 631
     const/16 v0, 0x25
 
     const v1, 0x204014f
 
     invoke-interface {p1, v3, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 565
+    .line 632
     const/16 v0, 0x26
 
     const v1, 0x2040150
 
     invoke-interface {p1, v3, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 566
+    .line 633
     const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public onDestroy()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 399
-    iget-boolean v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapterSent:Z
+    .line 421
+    iget-boolean v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapterSent:Z
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
+    iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
-    .line 400
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
+    .line 422
+    iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    invoke-virtual {v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->getCursor()Landroid/database/Cursor;
+    invoke-virtual {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->getCursor()Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 401
+    .line 423
     .local v0, c:Landroid/database/Cursor;
     if-eqz v0, :cond_0
 
-    .line 402
+    .line 424
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 406
+    .line 428
     .end local v0           #c:Landroid/database/Cursor;
     :cond_0
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mScanListener:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mScanListener:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 407
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
+    .line 429
+    iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
-
-    #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$000(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/util/AsyncImageDecoder;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 408
-    iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
+    iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$000(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/util/AsyncImageDecoder;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$000(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/util/AsyncImageDecoder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/htc/music/util/AsyncImageDecoder;->quit()V
+    if-eqz v2, :cond_1
 
-    .line 411
+    .line 430
+    iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
+
+    #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$000(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/util/AsyncImageDecoder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/htc/music/util/AsyncImageDecoder;->quit()V
+
+    .line 433
     :cond_1
-    sget-object v1, Lcom/htc/music/util/MusicUtils;->sLibraryMemCache:Lcom/htc/music/util/MemoryCacheMBitmapByTime;
+    sget-object v2, Lcom/htc/music/util/MusicUtils;->sLibraryMemCache:Lcom/htc/music/util/MemoryCacheMBitmapByTime;
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
-    .line 412
-    sget-object v1, Lcom/htc/music/util/MusicUtils;->sLibraryMemCache:Lcom/htc/music/util/MemoryCacheMBitmapByTime;
+    .line 434
+    sget-object v2, Lcom/htc/music/util/MusicUtils;->sLibraryMemCache:Lcom/htc/music/util/MemoryCacheMBitmapByTime;
 
-    invoke-virtual {v1}, Lcom/htc/music/util/MemoryCacheMBitmapByTime;->onDestroy()V
+    invoke-virtual {v2}, Lcom/htc/music/util/MemoryCacheMBitmapByTime;->onDestroy()V
 
-    .line 414
+    .line 437
     :cond_2
+    invoke-static {}, Lcom/htc/music/util/ProjectSettings;->isSupportBypassPincode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    .line 439
+    :try_start_0
+    iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mUnlockReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 445
+    :cond_3
+    :goto_0
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onDestroy()V
 
-    .line 415
+    .line 446
     return-void
+
+    .line 440
+    :catch_0
+    move-exception v1
+
+    .line 441
+    .local v1, ex:Ljava/lang/IllegalArgumentException;
+    sget-object v2, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
+
+    const-string v3, "onDestroy, fail to unregisterReceiver(mUnlockReceiver)"
+
+    invoke-static {v2, v3, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method
 
 .method protected onListItemClick(Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)V
@@ -2645,7 +2906,7 @@
     .parameter "id"
 
     .prologue
-    .line 544
+    .line 575
     return-void
 .end method
 
@@ -2656,14 +2917,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 586
+    .line 653
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v4
 
     packed-switch v4, :pswitch_data_0
 
-    .line 601
+    .line 668
     :pswitch_0
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
@@ -2672,13 +2933,13 @@
     :goto_0
     return v3
 
-    .line 588
+    .line 655
     :pswitch_1
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->goToPicker()V
 
     goto :goto_0
 
-    .line 592
+    .line 659
     :pswitch_2
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -2690,7 +2951,7 @@
 
     move v0, v3
 
-    .line 593
+    .line 660
     .local v0, check:Z
     :goto_1
     iget-object v4, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
@@ -2713,13 +2974,13 @@
 
     check-cast v2, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
 
-    .line 594
+    .line 661
     .local v2, playlistItem:Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
     iput-boolean v0, v2, Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;->mChecked:Z
 
     goto :goto_2
 
-    .line 592
+    .line 659
     .end local v0           #check:Z
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #playlistItem:Lcom/htc/music/browserlayer/EditPlaylistActivity$PlaylistItemInfo;
@@ -2728,7 +2989,7 @@
 
     goto :goto_1
 
-    .line 597
+    .line 664
     .restart local v0       #check:Z
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_1
@@ -2738,7 +2999,7 @@
 
     goto :goto_0
 
-    .line 586
+    .line 653
     nop
 
     :pswitch_data_0
@@ -2756,25 +3017,25 @@
     .locals 1
 
     .prologue
-    .line 456
+    .line 487
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     instance-of v0, v0, Lcom/htc/widget/HtcReorderListView;
 
     if-eqz v0, :cond_0
 
-    .line 457
+    .line 488
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackList:Lcom/htc/widget/HtcListView;
 
     check-cast v0, Lcom/htc/widget/HtcReorderListView;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcReorderListView;->OnMyPause()V
 
-    .line 460
+    .line 491
     :cond_0
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onPause()V
 
-    .line 462
+    .line 493
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     if-eqz v0, :cond_1
@@ -2788,7 +3049,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 463
+    .line 494
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
@@ -2798,7 +3059,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->clear()V
 
-    .line 464
+    .line 495
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
@@ -2808,7 +3069,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->pauseDecode()V
 
-    .line 466
+    .line 497
     :cond_1
     return-void
 .end method
@@ -2822,12 +3083,12 @@
 
     const/4 v3, 0x0
 
-    .line 571
+    .line 638
     invoke-direct {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getCheckedItemCount()I
 
     move-result v0
 
-    .line 572
+    .line 639
     .local v0, checkedCount:I
     iget-object v4, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mTrackCursor:Landroid/database/Cursor;
 
@@ -2835,7 +3096,7 @@
 
     move v1, v3
 
-    .line 573
+    .line 640
     .local v1, count:I
     :goto_0
     const/16 v4, 0x25
@@ -2844,11 +3105,11 @@
 
     move-result-object v2
 
-    .line 574
+    .line 641
     .local v2, item:Landroid/view/MenuItem;
     if-eqz v2, :cond_0
 
-    .line 575
+    .line 642
     if-eq v1, v0, :cond_4
 
     move v4, v5
@@ -2856,7 +3117,7 @@
     :goto_1
     invoke-interface {v2, v4}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 576
+    .line 643
     :cond_0
     const/16 v4, 0x26
 
@@ -2864,10 +3125,10 @@
 
     move-result-object v2
 
-    .line 577
+    .line 644
     if-eqz v2, :cond_2
 
-    .line 578
+    .line 645
     if-lez v0, :cond_1
 
     move v3, v5
@@ -2875,11 +3136,11 @@
     :cond_1
     invoke-interface {v2, v3}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 579
+    .line 646
     :cond_2
     return v5
 
-    .line 572
+    .line 639
     .end local v1           #count:I
     .end local v2           #item:Landroid/view/MenuItem;
     :cond_3
@@ -2896,7 +3157,7 @@
     :cond_4
     move v4, v3
 
-    .line 575
+    .line 642
     goto :goto_1
 .end method
 
@@ -2904,10 +3165,10 @@
     .locals 4
 
     .prologue
-    .line 434
+    .line 465
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onResume()V
 
-    .line 436
+    .line 467
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     if-eqz v0, :cond_0
@@ -2921,7 +3182,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 437
+    .line 468
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
@@ -2931,7 +3192,7 @@
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->clear()V
 
-    .line 438
+    .line 469
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
@@ -2941,24 +3202,24 @@
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->resumeDecode()V
 
-    .line 441
+    .line 472
     :cond_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     if-eqz v0, :cond_1
 
-    .line 442
+    .line 473
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
-    new-instance v1, Lcom/htc/music/browserlayer/EditPlaylistActivity$2;
+    new-instance v1, Lcom/htc/music/browserlayer/EditPlaylistActivity$3;
 
-    invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$2;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
+    invoke-direct {v1, p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity$3;-><init>(Lcom/htc/music/browserlayer/EditPlaylistActivity;)V
 
     const-wide/16 v2, 0x64
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/AutoCompleteTextView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 449
+    .line 480
     :cond_1
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAsyncQuerying:Z
 
@@ -2970,13 +3231,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 450
+    .line 481
     :cond_2
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->showSpinner(Z)V
 
-    .line 452
+    .line 483
     :cond_3
     return-void
 .end method
@@ -2985,16 +3246,16 @@
     .locals 2
 
     .prologue
-    .line 390
+    .line 412
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapter:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
-    .line 391
+    .line 413
     .local v0, a:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mAdapterSent:Z
 
-    .line 392
+    .line 414
     return-object v0
 .end method
 
@@ -3006,7 +3267,7 @@
 
     const/4 v11, -0x1
 
-    .line 1226
+    .line 1314
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v8}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
@@ -3017,7 +3278,7 @@
 
     move-result-object v4
 
-    .line 1227
+    .line 1315
     .local v4, name:Ljava/lang/String;
     if-eqz v4, :cond_0
 
@@ -3031,9 +3292,9 @@
 
     if-nez v8, :cond_1
 
-    .line 1228
+    .line 1316
     :cond_0
-    const v8, 0x7f0700ba
+    const v8, 0x7f0700bb
 
     invoke-static {p0, v8, v10}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -3041,19 +3302,19 @@
 
     invoke-virtual {v8}, Landroid/widget/Toast;->show()V
 
-    .line 1284
+    .line 1372
     :goto_0
     return-void
 
-    .line 1234
+    .line 1322
     :cond_1
     const/4 v3, 0x0
 
-    .line 1235
+    .line 1323
     .local v3, isDeleted:Z
     const/4 v6, 0x0
 
-    .line 1237
+    .line 1325
     .local v6, newPlaylistSize:I
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
@@ -3063,7 +3324,7 @@
 
     add-int/lit8 v7, v8, -0x1
 
-    .line 1238
+    .line 1326
     .local v7, playlistItemListSize:I
     move v0, v7
 
@@ -3071,7 +3332,7 @@
     :goto_1
     if-ltz v0, :cond_3
 
-    .line 1239
+    .line 1327
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3084,38 +3345,38 @@
 
     if-eqz v8, :cond_2
 
-    .line 1240
+    .line 1328
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1241
+    .line 1329
     const/4 v3, 0x1
 
-    .line 1238
+    .line 1326
     :cond_2
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 1245
+    .line 1333
     :cond_3
     const/4 v2, -0x1
 
-    .line 1246
+    .line 1334
     .local v2, id:I
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
     if-eqz v8, :cond_5
 
-    .line 1247
+    .line 1335
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-direct {p0, v8}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->renamePlaylist(Ljava/lang/String;)Z
 
-    .line 1249
+    .line 1337
     if-nez v3, :cond_4
 
     iget-boolean v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mIsDrop:Z
@@ -3126,7 +3387,7 @@
 
     if-nez v8, :cond_4
 
-    .line 1250
+    .line 1338
     new-instance v8, Landroid/content/Intent;
 
     invoke-direct {v8}, Landroid/content/Intent;-><init>()V
@@ -3137,12 +3398,12 @@
 
     invoke-virtual {p0, v11, v8}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 1251
+    .line 1339
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->finish()V
 
     goto :goto_0
 
-    .line 1255
+    .line 1343
     :cond_4
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
@@ -3156,7 +3417,7 @@
 
     invoke-static {p0, v8, v9}, Lcom/htc/music/util/MusicUtils;->deletePlaylistTrack(Landroid/content/Context;J)V
 
-    .line 1256
+    .line 1344
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -3167,12 +3428,12 @@
 
     move-result v2
 
-    .line 1262
+    .line 1350
     :goto_2
     if-ne v2, v11, :cond_6
 
-    .line 1263
-    const v8, 0x7f0700bb
+    .line 1351
+    const v8, 0x7f0700bc
 
     invoke-static {p0, v8, v10}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -3182,7 +3443,7 @@
 
     goto :goto_0
 
-    .line 1259
+    .line 1347
     :cond_5
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -3194,7 +3455,7 @@
 
     goto :goto_2
 
-    .line 1268
+    .line 1356
     :cond_6
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
@@ -3202,17 +3463,17 @@
 
     move-result v6
 
-    .line 1270
+    .line 1358
     new-array v5, v6, [I
 
-    .line 1272
+    .line 1360
     .local v5, newPlaylistItems:[I
     const/4 v0, 0x0
 
     :goto_3
     if-ge v0, v6, :cond_7
 
-    .line 1273
+    .line 1361
     iget-object v8, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlaylistItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3225,12 +3486,12 @@
 
     aput v8, v5, v0
 
-    .line 1272
+    .line 1360
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 1276
+    .line 1364
     :cond_7
     int-to-long v8, v2
 
@@ -3238,34 +3499,34 @@
 
     invoke-static {p0, v5, v8, v9, v10}, Lcom/htc/music/util/MusicUtils;->addToPlaylist(Landroid/content/Context;[IJZ)V
 
-    .line 1277
+    .line 1365
     invoke-direct {p0, v4}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getPlaylistId(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 1278
+    .line 1366
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 1279
+    .line 1367
     .local v1, iSavePlaylist:Landroid/content/Intent;
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1280
+    .line 1368
     const-string v8, "playlistid"
 
     invoke-virtual {v1, v8, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1281
+    .line 1369
     const-string v8, "playlistname"
 
     invoke-virtual {v1, v8, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1282
+    .line 1370
     invoke-virtual {p0, v11, v1}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 1283
+    .line 1371
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->finish()V
 
     goto/16 :goto_0
@@ -3276,7 +3537,7 @@
     .parameter "outcicle"
 
     .prologue
-    .line 473
+    .line 504
     const-string v0, "playlistname"
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
@@ -3295,17 +3556,17 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 474
+    .line 505
     const-string v0, "playlist"
 
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 475
+    .line 506
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 476
+    .line 507
     return-void
 .end method
 
@@ -3316,24 +3577,24 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 264
+    .line 286
     const/4 v0, 0x0
 
-    .line 266
+    .line 288
     .local v0, editTextTitle:Ljava/lang/String;
     if-eqz p1, :cond_2
 
-    .line 267
+    .line 289
     move-object v0, p1
 
-    .line 268
+    .line 290
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mOriginalPlaylistName:Ljava/lang/String;
 
-    .line 305
+    .line 327
     :goto_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mEdit:Lcom/htc/widget/ActionBarSearch;
 
-    .line 308
+    .line 330
     .local v1, inputBox:Lcom/htc/widget/ActionBarSearch;
     invoke-virtual {v1}, Lcom/htc/widget/ActionBarSearch;->getAutoCompleteTextView()Landroid/widget/AutoCompleteTextView;
 
@@ -3341,15 +3602,15 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
-    .line 309
+    .line 331
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     if-eqz v3, :cond_5
 
-    .line 310
+    .line 332
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
-    const v4, 0x7f0700ad
+    const v4, 0x7f0700ae
 
     invoke-virtual {p0, v4}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getString(I)Ljava/lang/String;
 
@@ -3357,26 +3618,26 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/AutoCompleteTextView;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 311
+    .line 333
     if-eqz v0, :cond_0
 
-    .line 312
+    .line 334
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v3, v0}, Landroid/widget/AutoCompleteTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 314
+    .line 336
     :cond_0
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
     if-nez v3, :cond_1
 
-    .line 315
+    .line 337
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v3, v7}, Landroid/widget/AutoCompleteTextView;->setSelectAllOnFocus(Z)V
 
-    .line 317
+    .line 339
     :cond_1
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
@@ -3386,23 +3647,23 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/AutoCompleteTextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 318
+    .line 340
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mPlayListName:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v3}, Landroid/widget/AutoCompleteTextView;->requestFocus()Z
 
-    .line 324
+    .line 346
     :goto_1
     return-void
 
-    .line 271
+    .line 293
     .end local v1           #inputBox:Lcom/htc/widget/ActionBarSearch;
     :cond_2
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
     if-eqz v3, :cond_3
 
-    .line 272
+    .line 294
     iget-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mSelectedPlaylistId:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -3419,12 +3680,12 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mOriginalPlaylistName:Ljava/lang/String;
 
-    .line 273
+    .line 295
     iget-object v0, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity;->mOriginalPlaylistName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 276
+    .line 298
     :cond_3
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getIntent()Landroid/content/Intent;
 
@@ -3438,11 +3699,11 @@
 
     move-result v2
 
-    .line 277
+    .line 299
     .local v2, playlistcount:I
     if-ltz v2, :cond_4
 
-    .line 278
+    .line 300
     const v3, 0x7f07005d
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->getString(I)Ljava/lang/String;
@@ -3467,7 +3728,7 @@
 
     goto :goto_0
 
-    .line 281
+    .line 303
     :cond_4
     sget-object v3, Lcom/htc/music/browserlayer/EditPlaylistActivity;->TAG:Ljava/lang/String;
 
@@ -3477,7 +3738,7 @@
 
     goto :goto_0
 
-    .line 321
+    .line 343
     .end local v2           #playlistcount:I
     .restart local v1       #inputBox:Lcom/htc/widget/ActionBarSearch;
     :cond_5
@@ -3495,12 +3756,12 @@
     .parameter "show"
 
     .prologue
-    .line 1606
+    .line 1694
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->findRootParent()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 1607
+    .line 1695
     .local v1, parent:Landroid/app/Activity;
     if-eqz v1, :cond_1
 
@@ -3510,20 +3771,20 @@
 
     move-object v2, v1
 
-    .line 1608
+    .line 1696
     check-cast v2, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
 
-    .line 1609
+    .line 1697
     .local v2, tabActivity:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
     invoke-virtual {v2, p1}, Lcom/htc/music/browserlayer/MusicBrowserTabActivity;->setCategoryProgressVisible(Z)V
 
-    .line 1616
+    .line 1704
     .end local v2           #tabActivity:Lcom/htc/music/browserlayer/MusicBrowserTabActivity;
     :cond_0
     :goto_0
     return-void
 
-    .line 1611
+    .line 1699
     :cond_1
     const v3, 0x7f08001e
 
@@ -3533,11 +3794,11 @@
 
     check-cast v0, Lcom/htc/widget/HeaderBar;
 
-    .line 1612
+    .line 1700
     .local v0, headerLayout:Lcom/htc/widget/HeaderBar;
     if-eqz v0, :cond_0
 
-    .line 1613
+    .line 1701
     if-eqz p1, :cond_2
 
     const/4 v3, 0x0

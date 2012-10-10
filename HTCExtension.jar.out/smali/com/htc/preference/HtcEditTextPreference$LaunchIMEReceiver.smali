@@ -66,37 +66,36 @@
     .parameter "resultData"
 
     .prologue
-    .line 302
+    .line 305
     packed-switch p1, :pswitch_data_0
 
-    .line 314
+    .line 315
     :cond_0
     :goto_0
-    :pswitch_0
     return-void
 
-    .line 306
-    :pswitch_1
+    .line 310
+    :pswitch_0
     iget v0, p0, Lcom/htc/preference/HtcEditTextPreference$LaunchIMEReceiver;->retryCount:I
 
     const/4 v1, 0x3
 
     if-ge v0, v1, :cond_0
 
-    .line 308
+    .line 311
     invoke-virtual {p0}, Lcom/htc/preference/HtcEditTextPreference$LaunchIMEReceiver;->relaunchIME()V
 
     goto :goto_0
 
-    .line 302
+    .line 305
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
-        :pswitch_1
         :pswitch_0
-        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
     .end packed-switch
 .end method
 

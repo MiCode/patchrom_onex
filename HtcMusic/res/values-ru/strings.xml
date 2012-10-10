@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Добавить список воспроизведения</string>
     <string name="htc_delete_playlists">Удалить списки воспроизведения</string>
     <string name="htc_delete_playlist">Удалить список воспроизведения</string>
+    <string name="htc_delete_all_playlists">Удалить все списки воспроизведения</string>
     <string name="htc_playlist_add_songs">Добавить песни</string>
     <string name="htc_playlist_del_songs">Удалить песни</string>
     <string name="htc_playlist_remove_songs">Удалить песни</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Буферизация...</string>
     <string name="title_send_content">Отправка содержимого...</string>
     <string name="no_downloaded_apps_found">Загруженных приложений не найдено</string>
+    <string name="music_folder_picker_dialog_msg">Добавить к плейлистам папки с музыкой? Выберите «Нет», чтобы добавить композиции другим способом</string>
 </resources>

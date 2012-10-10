@@ -99,7 +99,7 @@
     .locals 5
 
     .prologue
-    .line 78
+    .line 80
     new-instance v0, Lcom/android/camera/io/DCFInfo;
 
     const-string v1, "BURST"
@@ -124,49 +124,49 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 207
+    .line 209
     const-string v0, "Smart Shot Controller"
 
     const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/component/CameraThreadComponent;-><init>(Ljava/lang/String;ZLcom/android/camera/CameraThread;)V
 
-    .line 84
+    .line 86
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/android/camera/component/SmartShotController;->m_CaptureCount:I
 
-    .line 88
+    .line 90
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/camera/component/SmartShotController;->m_CurrentCaptureIndex:I
 
-    .line 91
+    .line 93
     iput-object v2, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
-    .line 92
+    .line 94
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->m_ExifTags:Ljava/util/Hashtable;
 
-    .line 94
+    .line 96
     iput-object v2, p0, Lcom/android/camera/component/SmartShotController;->m_replaceRects:[Landroid/graphics/Rect;
 
-    .line 95
+    .line 97
     iput-object v2, p0, Lcom/android/camera/component/SmartShotController;->m_faceRects:[Landroid/graphics/Rect;
 
-    .line 96
+    .line 98
     iput-object v2, p0, Lcom/android/camera/component/SmartShotController;->cropFacesBmp:[Landroid/graphics/Bitmap;
 
-    .line 97
+    .line 99
     iput-object v2, p0, Lcom/android/camera/component/SmartShotController;->mDrawFaces:Lcom/android/camera/widget/DrawFaceAnimationView;
 
-    .line 99
+    .line 101
     iput-object v2, p0, Lcom/android/camera/component/SmartShotController;->FDE:Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;
 
-    .line 104
+    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -180,35 +180,35 @@
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->m_AutoSessionListener:Lcom/scalado/app/rewind/AutoSession$AutoSessionListener;
 
-    .line 655
+    .line 669
     new-instance v0, Lcom/android/camera/component/SmartShotController$3;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/SmartShotController$3;-><init>(Lcom/android/camera/component/SmartShotController;)V
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->mJpegCallback:Landroid/hardware/Camera$PictureCallback;
 
-    .line 662
+    .line 676
     new-instance v0, Lcom/android/camera/component/SmartShotController$4;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/SmartShotController$4;-><init>(Lcom/android/camera/component/SmartShotController;)V
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->mPostviewCallback:Landroid/hardware/Camera$PictureCallback;
 
-    .line 669
+    .line 683
     new-instance v0, Lcom/android/camera/component/SmartShotController$5;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/SmartShotController$5;-><init>(Lcom/android/camera/component/SmartShotController;)V
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->mRawCallback:Landroid/hardware/Camera$PictureCallback;
 
-    .line 676
+    .line 690
     new-instance v0, Lcom/android/camera/component/SmartShotController$6;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/SmartShotController$6;-><init>(Lcom/android/camera/component/SmartShotController;)V
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->mShutterCallback:Landroid/hardware/Camera$ShutterCallback;
 
-    .line 208
+    .line 210
     return-void
 .end method
 
@@ -217,7 +217,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-boolean v0, p0, Lcom/android/camera/component/SmartShotController;->m_IsSmartShotModeEntered:Z
 
     return v0
@@ -230,7 +230,7 @@
     .parameter "x2"
 
     .prologue
-    .line 61
+    .line 63
     invoke-direct {p0, p1, p2}, Lcom/android/camera/component/SmartShotController;->takePicture(Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
 
     return-void
@@ -241,7 +241,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -252,7 +252,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -263,7 +263,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -274,7 +274,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -285,7 +285,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -296,7 +296,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -307,7 +307,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -318,7 +318,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -329,7 +329,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -340,7 +340,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -351,7 +351,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -362,7 +362,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -373,7 +373,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->m_SmartShotUI:Lcom/android/camera/component/SmartShotUI;
 
     return-object v0
@@ -384,7 +384,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->m_ExifTags:Ljava/util/Hashtable;
 
     return-object v0
@@ -394,7 +394,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 63
     sget-object v0, Lcom/android/camera/component/SmartShotController;->m_BurstDCFInfo:Lcom/android/camera/io/DCFInfo;
 
     return-object v0
@@ -405,7 +405,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -416,7 +416,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -427,7 +427,7 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->FDE:Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;
 
     return-object v0
@@ -439,7 +439,7 @@
     .parameter "x1"
 
     .prologue
-    .line 61
+    .line 63
     iput-object p1, p0, Lcom/android/camera/component/SmartShotController;->FDE:Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;
 
     return-object p1
@@ -450,20 +450,20 @@
     .parameter "x0"
 
     .prologue
-    .line 61
+    .line 63
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public static final isSupported(Lcom/android/camera/HTCCamera;)Z
-    .locals 3
+    .locals 2
     .parameter "cameraActivity"
 
     .prologue
     const/4 v0, 0x0
 
-    .line 267
+    .line 269
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/android/camera/HTCCamera;->isServiceMode()Z
@@ -477,7 +477,7 @@
     :goto_0
     return v0
 
-    .line 270
+    .line 272
     :cond_1
     invoke-static {}, Lcom/android/camera/DisplayDevice;->isTablet()Z
 
@@ -485,24 +485,12 @@
 
     if-nez v1, :cond_0
 
-    .line 273
-    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    .line 275
+    invoke-static {p0}, Lcom/android/camera/component/ContinuousBurstController;->isSupported(Lcom/android/camera/HTCCamera;)Z
 
-    const/16 v2, 0xe3
+    move-result v1
 
-    if-eq v1, v2, :cond_0
-
-    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v2, 0xe4
-
-    if-eq v1, v2, :cond_0
-
-    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v2, 0x31
-
-    if-eq v1, v2, :cond_0
+    if-eqz v1, :cond_0
 
     .line 278
     const/4 v0, 0x1
@@ -585,16 +573,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 876
+    .line 890
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController;->m_SmartShotUI:Lcom/android/camera/component/SmartShotUI;
 
     if-eqz v1, :cond_0
 
-    .line 880
+    .line 894
     :goto_0
     return v2
 
-    .line 878
+    .line 892
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/component/SmartShotController;->getCameraThread()Lcom/android/camera/CameraThread;
 
@@ -604,7 +592,7 @@
 
     move-result-object v0
 
-    .line 879
+    .line 893
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     if-eqz v0, :cond_1
 
@@ -623,7 +611,7 @@
     :goto_1
     iput-object v1, p0, Lcom/android/camera/component/SmartShotController;->m_SmartShotUI:Lcom/android/camera/component/SmartShotUI;
 
-    .line 880
+    .line 894
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController;->m_SmartShotUI:Lcom/android/camera/component/SmartShotUI;
 
     if-eqz v1, :cond_2
@@ -635,13 +623,13 @@
 
     goto :goto_0
 
-    .line 879
+    .line 893
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 880
+    .line 894
     :cond_2
     const/4 v1, 0x0
 
@@ -771,16 +759,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 690
+    .line 704
     invoke-virtual {p1}, Lcom/android/camera/CameraThread;->getCameraController()Lcom/android/camera/CameraController;
 
     move-result-object v6
 
-    .line 693
+    .line 707
     .local v6, cameraController:Lcom/android/camera/CameraController;
     iput v3, p0, Lcom/android/camera/component/SmartShotController;->m_CurrentCaptureIndex:I
 
-    .line 696
+    .line 710
     invoke-virtual {p2}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object v0
@@ -789,13 +777,13 @@
 
     move-result-object v7
 
-    .line 699
+    .line 713
     .local v7, pictureSize:Landroid/hardware/Camera$Size;
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->m_StoredPictureUris:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 702
+    .line 716
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController;->m_SmartShotUI:Lcom/android/camera/component/SmartShotUI;
 
     const/4 v2, 0x1
@@ -812,24 +800,24 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/component/SmartShotController;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;)Z
 
-    .line 705
+    .line 719
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
     if-nez v0, :cond_1
 
-    .line 707
+    .line 721
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->FDE:Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;
 
     if-nez v0, :cond_0
 
-    .line 708
+    .line 722
     new-instance v0, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;
 
     invoke-direct {v0, p0}, Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;-><init>(Lcom/android/camera/component/SmartShotController;)V
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->FDE:Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;
 
-    .line 709
+    .line 723
     :cond_0
     new-instance v0, Lcom/scalado/app/rewind/AutoSession;
 
@@ -839,21 +827,21 @@
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
-    .line 710
+    .line 724
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController;->FDE:Lcom/android/camera/component/SmartShotController$OlaFaceDetectExtern;
 
     invoke-virtual {v0, v1}, Lcom/scalado/app/rewind/AutoSession;->setFaceDetectEx(Lcom/scalado/app/rewind/AutoSession$FaceDetectExtern;)V
 
-    .line 711
+    .line 725
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
     iget-object v1, p0, Lcom/android/camera/component/SmartShotController;->m_AutoSessionListener:Lcom/scalado/app/rewind/AutoSession$AutoSessionListener;
 
     invoke-virtual {v0, v1}, Lcom/scalado/app/rewind/AutoSession;->setListener(Lcom/scalado/app/rewind/AutoSession$AutoSessionListener;)V
 
-    .line 717
+    .line 731
     :goto_0
     iget-object v0, p1, Lcom/android/camera/CameraThread;->captureRotation:Lcom/android/camera/property/Property;
 
@@ -863,7 +851,7 @@
 
     check-cast v8, Lcom/android/camera/rotate/UIRotation;
 
-    .line 718
+    .line 732
     .local v8, uiRotation:Lcom/android/camera/rotate/UIRotation;
     invoke-virtual {v8}, Lcom/android/camera/rotate/UIRotation;->isLandscape()Z
 
@@ -871,7 +859,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 719
+    .line 733
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
     new-instance v1, Lcom/scalado/base/Size;
@@ -886,7 +874,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/scalado/app/rewind/AutoSession;->setScreenConfig(Lcom/scalado/base/Size;Lcom/scalado/base/Image$Config;)V
 
-    .line 723
+    .line 737
     :goto_1
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->mShutterCallback:Landroid/hardware/Camera$ShutterCallback;
 
@@ -898,10 +886,10 @@
 
     invoke-virtual {p2, v0, v1, v2, v3}, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V
 
-    .line 724
+    .line 738
     return-void
 
-    .line 715
+    .line 729
     .end local v8           #uiRotation:Lcom/android/camera/rotate/UIRotation;
     :cond_1
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
@@ -910,7 +898,7 @@
 
     goto :goto_0
 
-    .line 721
+    .line 735
     .restart local v8       #uiRotation:Lcom/android/camera/rotate/UIRotation;
     :cond_2
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
@@ -933,7 +921,7 @@
 
 # virtual methods
 .method public final handleCommonJpegCallback([BLandroid/hardware/Camera;)V
-    .locals 22
+    .locals 23
     .parameter "jpegData"
     .parameter "camera"
 
@@ -1382,7 +1370,7 @@
 
     invoke-static/range {v18 .. v19}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 590
+    .line 604
     :goto_4
     move-object/from16 v0, p0
 
@@ -1394,7 +1382,7 @@
 
     invoke-static/range {v18 .. v19}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 591
+    .line 605
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -1405,7 +1393,7 @@
 
     invoke-static/range {v18 .. v19}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 592
+    .line 606
     return-void
 
     .line 549
@@ -1463,9 +1451,32 @@
 
     goto :goto_3
 
-    .line 588
+    .line 589
     .restart local v11       #isLastPicture:Z
     :cond_7
+    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/component/SmartShotController;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Lcom/android/camera/HTCCamera;->getSurfaceStateSyncRoot()Ljava/lang/Object;
+
+    move-result-object v19
+
+    monitor-enter v19
+
+    .line 591
+    :try_start_2
+    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/component/SmartShotController;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Lcom/android/camera/HTCCamera;->isSurfaceAvailable()Z
+
+    move-result v18
+
+    if-eqz v18, :cond_8
+
+    .line 592
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/component/SmartShotController;->mShutterCallback:Landroid/hardware/Camera$ShutterCallback;
@@ -1476,33 +1487,113 @@
 
     iget-object v0, v0, Lcom/android/camera/component/SmartShotController;->mRawCallback:Landroid/hardware/Camera$PictureCallback;
 
-    move-object/from16 v19, v0
+    move-object/from16 v20, v0
 
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/component/SmartShotController;->mPostviewCallback:Landroid/hardware/Camera$PictureCallback;
 
-    move-object/from16 v20, v0
+    move-object/from16 v21, v0
 
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/camera/component/SmartShotController;->mJpegCallback:Landroid/hardware/Camera$PictureCallback;
 
-    move-object/from16 v21, v0
+    move-object/from16 v22, v0
 
     move-object/from16 v0, p2
 
     move-object/from16 v1, v18
 
-    move-object/from16 v2, v19
+    move-object/from16 v2, v20
 
-    move-object/from16 v3, v20
+    move-object/from16 v3, v21
 
-    move-object/from16 v4, v21
+    move-object/from16 v4, v22
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/Camera;->takePicture(Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;Landroid/hardware/Camera$PictureCallback;)V
 
+    .line 601
+    :goto_5
+    monitor-exit v19
+
     goto :goto_4
+
+    :catchall_1
+    move-exception v18
+
+    monitor-exit v19
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v18
+
+    .line 595
+    :cond_8
+    :try_start_3
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
+
+    move-object/from16 v18, v0
+
+    const-string v20, "Surface is not available"
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, v20
+
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 596
+    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/component/SmartShotController;->getCameraThread()Lcom/android/camera/CameraThread;
+
+    move-result-object v18
+
+    move-object/from16 v0, v18
+
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->takingPictureFailedEvent:Lcom/android/camera/event/Event;
+
+    move-object/from16 v18, v0
+
+    new-instance v20, Lcom/android/camera/OneValueEventArgs;
+
+    sget-object v21, Lcom/android/camera/TakingPictureFailedReason;->InvalidState:Lcom/android/camera/TakingPictureFailedReason;
+
+    invoke-direct/range {v20 .. v21}, Lcom/android/camera/OneValueEventArgs;-><init>(Ljava/lang/Object;)V
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v2, v20
+
+    invoke-virtual {v0, v1, v2}, Lcom/android/camera/event/Event;->raise(Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
+
+    .line 597
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
+
+    move-object/from16 v18, v0
+
+    invoke-virtual/range {v18 .. v18}, Lcom/scalado/app/rewind/AutoSession;->recycle()V
+
+    .line 598
+    const/16 v18, 0x0
+
+    move/from16 v0, v18
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Lcom/android/camera/component/SmartShotController;->m_CurrentCaptureIndex:I
+
+    .line 599
+    invoke-virtual {v7}, Lcom/android/camera/CameraThread;->endTakePicture()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    goto :goto_5
 .end method
 
 .method public final handleCommonPostviewCallback([BLandroid/hardware/Camera;)V
@@ -1511,21 +1602,21 @@
     .parameter "camera"
 
     .prologue
-    .line 599
+    .line 613
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "handleCommonPostviewCallback() - start"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 600
+    .line 614
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v1, "handleCommonPostviewCallback() - end"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 601
+    .line 615
     return-void
 .end method
 
@@ -1535,27 +1626,27 @@
     .parameter "camera"
 
     .prologue
-    .line 608
+    .line 622
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "handleCommonRawCallback() - start"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 611
+    .line 625
     invoke-virtual {p0}, Lcom/android/camera/component/SmartShotController;->threadAccessCheck()V
 
-    .line 614
+    .line 628
     sget-object v1, Lcom/android/camera/TIME;->RawCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v1}, Lcom/android/camera/TIME$Value;->End()V
 
-    .line 615
+    .line 629
     sget-object v1, Lcom/android/camera/TIME;->JpegCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v1}, Lcom/android/camera/TIME$Value;->Start()V
 
-    .line 617
+    .line 631
     iget-object v2, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1583,12 +1674,12 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 618
+    .line 632
     invoke-virtual {p0}, Lcom/android/camera/component/SmartShotController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    .line 619
+    .line 633
     .local v0, cameraThread:Lcom/android/camera/CameraThread;
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->isShutterSoundNeeded()Z
 
@@ -1596,10 +1687,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 620
+    .line 634
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->playShutterSound()V
 
-    .line 622
+    .line 636
     :cond_0
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
@@ -1607,10 +1698,10 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 623
+    .line 637
     return-void
 
-    .line 617
+    .line 631
     .end local v0           #cameraThread:Lcom/android/camera/CameraThread;
     :cond_1
     const/4 v1, 0x0
@@ -1622,12 +1713,12 @@
     .locals 1
 
     .prologue
-    .line 631
+    .line 645
     const v0, 0x7f060004
 
     invoke-virtual {p0, v0}, Lcom/android/camera/component/SmartShotController;->handleCommonShutterCallback(I)V
 
-    .line 632
+    .line 646
     return-void
 .end method
 
@@ -1636,22 +1727,22 @@
     .parameter "resid"
 
     .prologue
-    .line 639
+    .line 653
     invoke-virtual {p0}, Lcom/android/camera/component/SmartShotController;->threadAccessCheck()V
 
-    .line 642
+    .line 656
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "Smart shot Mode - Shutter Call-back"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 643
+    .line 657
     invoke-virtual {p0}, Lcom/android/camera/component/SmartShotController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    .line 644
+    .line 658
     .local v0, cameraThread:Lcom/android/camera/CameraThread;
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->isShutterSoundNeeded()Z
 
@@ -1659,21 +1750,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 645
+    .line 659
     invoke-virtual {v0}, Lcom/android/camera/CameraThread;->playShutterSound()V
 
-    .line 648
+    .line 662
     :cond_0
     sget-object v1, Lcom/android/camera/TIME;->ShutterCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v1}, Lcom/android/camera/TIME$Value;->End()V
 
-    .line 649
+    .line 663
     sget-object v1, Lcom/android/camera/TIME;->RawCallback:Lcom/android/camera/TIME$Value;
 
     invoke-virtual {v1}, Lcom/android/camera/TIME$Value;->Start()V
 
-    .line 650
+    .line 664
     return-void
 .end method
 
@@ -1682,20 +1773,20 @@
     .parameter "msg"
 
     .prologue
-    .line 216
+    .line 218
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 235
+    .line 237
     invoke-super {p0, p1}, Lcom/android/camera/component/CameraThreadComponent;->handleMessage(Landroid/os/Message;)V
 
-    .line 238
+    .line 240
     :cond_0
     :goto_0
     return-void
 
-    .line 219
+    .line 221
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1709,31 +1800,31 @@
 
     goto :goto_0
 
-    .line 223
+    .line 225
     :pswitch_1
     invoke-direct {p0}, Lcom/android/camera/component/SmartShotController;->onExitSmartShotMode()V
 
     goto :goto_0
 
-    .line 227
+    .line 229
     :pswitch_2
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
     if-eqz v0, :cond_0
 
-    .line 229
+    .line 231
     iget-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
     invoke-virtual {v0}, Lcom/scalado/app/rewind/AutoSession;->recycle()V
 
-    .line 230
+    .line 232
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/camera/component/SmartShotController;->autoSession:Lcom/scalado/app/rewind/AutoSession;
 
     goto :goto_0
 
-    .line 216
+    .line 218
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1746,15 +1837,15 @@
     .locals 3
 
     .prologue
-    .line 247
+    .line 249
     invoke-super {p0}, Lcom/android/camera/component/CameraThreadComponent;->initializeOverride()V
 
-    .line 248
+    .line 250
     invoke-virtual {p0}, Lcom/android/camera/component/SmartShotController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
-    .line 249
+    .line 251
     .local v0, cameraThread:Lcom/android/camera/CameraThread;
     iget-object v1, v0, Lcom/android/camera/CameraThread;->requestTakingPictureEvent:Lcom/android/camera/event/Event;
 
@@ -1764,7 +1855,7 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/event/Event;->addHandler(Lcom/android/camera/event/EventHandler;)V
 
-    .line 260
+    .line 262
     return-void
 .end method
 

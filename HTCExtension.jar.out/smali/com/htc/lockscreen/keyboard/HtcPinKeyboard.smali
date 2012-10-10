@@ -405,7 +405,7 @@
 
     const/4 v6, 0x0
 
-    const-string v7, "zero"
+    const-string/jumbo v7, "zero"
 
     invoke-static {v2, v7}, Lcom/htc/lockscreen/keyboard/HtcPinKeyboard;->getIdFromRes(Landroid/content/res/Resources;Ljava/lang/String;)I
 
@@ -1778,7 +1778,7 @@
     .line 315
     if-eqz p1, :cond_0
 
-    const v0, 0x1070020
+    const v0, 0x1070021
 
     .line 317
     .local v0, vibrateResId:I

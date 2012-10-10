@@ -25,13 +25,13 @@
     .parameter "looper"
 
     .prologue
-    .line 999
+    .line 1033
     iput-object p1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
-    .line 1000
+    .line 1034
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1001
+    .line 1035
     return-void
 .end method
 
@@ -52,12 +52,12 @@
 
     const/4 v5, 0x0
 
-    .line 1005
+    .line 1039
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 1097
+    .line 1131
     const-string v1, "MediaVT_Java"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -82,12 +82,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1098
+    .line 1132
     :cond_0
     :goto_0
     return-void
 
-    .line 1029
+    .line 1063
     :sswitch_0
     const-string v1, "MediaVT_Java"
 
@@ -142,19 +142,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1031
+    .line 1065
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/16 v2, 0x64
 
     if-ne v1, v2, :cond_1
 
-    .line 1032
+    .line 1066
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     iput-boolean v5, v1, Lcom/htc/service/vt/MediaVT;->mVTSerivceExist:Z
 
-    .line 1036
+    .line 1070
     :cond_1
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -171,21 +171,21 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 1037
+    .line 1071
     const-string v1, "MediaVT_Java"
 
     const-string v2, "Phone APP called MediaVT.disconnect(), but stack return VT_UNSOLICITED_TERMINATED due to timing case."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1038
+    .line 1072
     const-string v1, "MediaVT_Java"
 
     const-string v2, "Send VT_DISCONNECT_COMPLETE to MediaVT itself then call back VT_DISCONNECT_COMPLETE to phone AP"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1039
+    .line 1073
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #getter for: Lcom/htc/service/vt/MediaVT;->mEventHandler:Lcom/htc/service/vt/MediaVT$EventHandler;
@@ -197,7 +197,7 @@
 
     goto :goto_0
 
-    .line 1043
+    .line 1077
     :cond_2
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -209,7 +209,7 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 1047
+    .line 1081
     :cond_3
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -220,18 +220,18 @@
 
     if-nez v1, :cond_4
 
-    .line 1049
+    .line 1083
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #setter for: Lcom/htc/service/vt/MediaVT;->mIsDeInitializeCalled:Z
     invoke-static {v1, v7}, Lcom/htc/service/vt/MediaVT;->access$502(Lcom/htc/service/vt/MediaVT;Z)Z
 
-    .line 1050
+    .line 1084
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     invoke-virtual {v1}, Lcom/htc/service/vt/MediaVT;->vt_deInitialize()V
 
-    .line 1052
+    .line 1086
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #getter for: Lcom/htc/service/vt/MediaVT;->mMediaVTServiceReady:Z
@@ -241,14 +241,14 @@
 
     if-eqz v1, :cond_4
 
-    .line 1053
+    .line 1087
     const-string v1, "MediaVT_Java"
 
     const-string v2, "send VT_MEDIAVTSERVICE_DESTROY"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1054
+    .line 1088
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/16 v2, 0x136
@@ -256,14 +256,14 @@
     #calls: Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
     invoke-static {v1, v2, v5, v5, v9}, Lcom/htc/service/vt/MediaVT;->access$100(Lcom/htc/service/vt/MediaVT;IIILjava/lang/Object;)V
 
-    .line 1055
+    .line 1089
     const-string v1, "MediaVT_Java"
 
     const-string v2, "send VT_MEDIAVTSERVICE_UNBIND"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1056
+    .line 1090
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/16 v2, 0x137
@@ -271,13 +271,13 @@
     #calls: Lcom/htc/service/vt/MediaVT;->sendMediaVTServiceCommand(IIILjava/lang/Object;)V
     invoke-static {v1, v2, v5, v5, v9}, Lcom/htc/service/vt/MediaVT;->access$100(Lcom/htc/service/vt/MediaVT;IIILjava/lang/Object;)V
 
-    .line 1069
+    .line 1103
     :cond_4
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v1, v7, :cond_5
 
-    .line 1070
+    .line 1104
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/4 v2, 0x2
@@ -285,25 +285,25 @@
     #calls: Lcom/htc/service/vt/MediaVT;->setMediaVTState(I)Z
     invoke-static {v1, v2}, Lcom/htc/service/vt/MediaVT;->access$700(Lcom/htc/service/vt/MediaVT;I)Z
 
-    .line 1073
+    .line 1107
     :cond_5
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v1, v8, :cond_6
 
-    .line 1074
+    .line 1108
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #calls: Lcom/htc/service/vt/MediaVT;->setMediaVTState(I)Z
     invoke-static {v1, v8}, Lcom/htc/service/vt/MediaVT;->access$700(Lcom/htc/service/vt/MediaVT;I)Z
 
-    .line 1077
+    .line 1111
     :cond_6
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v1, v6, :cond_7
 
-    .line 1078
+    .line 1112
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     const/4 v2, 0x4
@@ -311,7 +311,7 @@
     #calls: Lcom/htc/service/vt/MediaVT;->setMediaVTState(I)Z
     invoke-static {v1, v2}, Lcom/htc/service/vt/MediaVT;->access$700(Lcom/htc/service/vt/MediaVT;I)Z
 
-    .line 1081
+    .line 1115
     :cond_7
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -319,13 +319,13 @@
 
     if-ne v1, v2, :cond_8
 
-    .line 1082
+    .line 1116
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #calls: Lcom/htc/service/vt/MediaVT;->setMediaVTState(I)Z
     invoke-static {v1, v6}, Lcom/htc/service/vt/MediaVT;->access$700(Lcom/htc/service/vt/MediaVT;I)Z
 
-    .line 1087
+    .line 1121
     :cond_8
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
@@ -336,7 +336,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1088
+    .line 1122
     iget-object v1, p0, Lcom/htc/service/vt/MediaVT$EventHandler;->this$0:Lcom/htc/service/vt/MediaVT;
 
     #getter for: Lcom/htc/service/vt/MediaVT;->mEventListener:Ljava/lang/ref/WeakReference;
@@ -350,11 +350,11 @@
 
     check-cast v0, Lcom/htc/service/vt/MediaVT$OnEventListener;
 
-    .line 1089
+    .line 1123
     .local v0, eventListener:Lcom/htc/service/vt/MediaVT$OnEventListener;
     if-eqz v0, :cond_0
 
-    .line 1090
+    .line 1124
     const-string v1, "MediaVT_Java"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -385,14 +385,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1091
+    .line 1125
     iget v1, p1, Landroid/os/Message;->what:I
 
     invoke-interface {v0, v1, v5}, Lcom/htc/service/vt/MediaVT$OnEventListener;->onEvent(II)Z
 
     goto/16 :goto_0
 
-    .line 1005
+    .line 1039
     nop
 
     :sswitch_data_0

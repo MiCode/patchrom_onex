@@ -2519,7 +2519,6 @@
         <item name="actionBarTabBarStyle">@style/Widget.DeviceDefault.Light.ActionBar.TabBar.Inverse</item>
         <item name="actionBarTabTextStyle">@style/Widget.DeviceDefault.Light.ActionBar.TabText.Inverse</item>
         <item name="actionOverflowButtonStyle">@style/Widget.DeviceDefault.ActionButton.Overflow</item>
-        <item name="actionModeCloseButtonStyle">@style/Widget.DeviceDefault.ActionButton.CloseMode</item>
         <item name="homeAsUpIndicator">@drawable/ic_ab_back_holo_dark</item>
         <item name="actionModeCutDrawable">@drawable/ic_menu_cut_holo_dark</item>
         <item name="actionModeCopyDrawable">@drawable/ic_menu_copy_holo_dark</item>
@@ -2534,7 +2533,6 @@
         <item name="actionModeShareDrawable">@drawable/ic_menu_share_holo_dark</item>
         <item name="actionModeFindDrawable">@drawable/ic_menu_find_holo_dark</item>
         <item name="actionModeWebSearchDrawable">@drawable/ic_menu_search_holo_dark</item>
-        <item name="actionModePopupWindowStyle">@style/Widget.DeviceDefault.PopupWindow.ActionMode</item>
     </style>
     <style name="Widget.DeviceDefault" parent="@style/Widget.Holo" />
     <style name="Widget.DeviceDefault.Button" parent="@style/Widget.Holo.Button">

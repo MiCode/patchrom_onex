@@ -214,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 148
     const/4 v0, 0x0
 
     sput-object v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mServerIcon:Landroid/graphics/Bitmap;
@@ -232,54 +232,54 @@
 
     const/4 v2, 0x0
 
-    .line 80
+    .line 82
     invoke-direct {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;-><init>()V
 
-    .line 148
+    .line 150
     iput v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
-    .line 149
+    .line 151
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingPrev:Z
 
-    .line 150
+    .line 152
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingNext:Z
 
-    .line 151
+    .line 153
     iput-boolean v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mBrowsingComplete:Z
 
-    .line 152
+    .line 154
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mClearImageCache:Z
 
-    .line 158
+    .line 160
     iput-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMediaService:Lcom/htc/music/IMediaPlaybackService;
 
-    .line 159
+    .line 161
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
 
-    .line 160
+    .line 162
     iput-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurContent:Ljava/lang/String;
 
-    .line 161
+    .line 163
     iput-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurDMR:Ljava/lang/String;
 
-    .line 163
+    .line 165
     iput-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
-    .line 170
+    .line 172
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsScrolling:Z
 
-    .line 171
+    .line 173
     iput-boolean v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDestroy:Z
 
-    .line 173
+    .line 175
     iput-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkthread:Landroid/os/HandlerThread;
 
-    .line 174
+    .line 176
     iput-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkHandler:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$workHandler;
 
-    .line 175
+    .line 177
     new-instance v0, Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
     const/16 v1, 0x1e
@@ -288,56 +288,56 @@
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
-    .line 179
+    .line 181
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContainerList:Ljava/util/List;
 
-    .line 236
+    .line 238
     new-instance v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$1;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$1;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpListener:Landroid/content/BroadcastReceiver;
 
-    .line 856
+    .line 698
     new-instance v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$9;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
 
-    .line 1450
+    .line 1233
     new-instance v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaNotifyStub;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaNotifyStub;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mNotifyCallback:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaNotifyStub;
 
-    .line 1734
+    .line 1517
     new-instance v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 1784
+    .line 1567
     new-instance v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$11;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$11;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->msc:Landroid/content/ServiceConnection;
 
-    .line 1800
+    .line 1583
     new-instance v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$12;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$12;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mscDmc:Landroid/content/ServiceConnection;
 
-    .line 2345
+    .line 2128
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -366,7 +366,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getDmpCurContent()Ljava/lang/String;
 
     move-result-object v0
@@ -379,7 +379,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurContent:Ljava/lang/String;
 
     return-object v0
@@ -390,7 +390,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setTitle()V
 
     return-void
@@ -402,7 +402,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurContent:Ljava/lang/String;
 
     return-object p1
@@ -412,7 +412,7 @@
     .locals 2
 
     .prologue
-    .line 80
+    .line 82
     sget-wide v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mTime:J
 
     return-wide v0
@@ -423,7 +423,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     sput-wide p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mTime:J
 
     return-wide p0
@@ -434,7 +434,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
     return v0
@@ -445,7 +445,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
     return-object v0
@@ -456,7 +456,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -467,7 +467,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingNext:Z
 
     return v0
@@ -479,7 +479,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-boolean p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingNext:Z
 
     return p1
@@ -490,7 +490,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingPrev:Z
 
     return v0
@@ -502,7 +502,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-boolean p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingPrev:Z
 
     return p1
@@ -514,7 +514,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-boolean p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mBrowsingComplete:Z
 
     return p1
@@ -525,7 +525,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-wide v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFileStartIdx:J
 
     return-wide v0
@@ -536,7 +536,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     return-object v0
@@ -547,7 +547,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
     return v0
@@ -558,7 +558,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mListView:Lcom/htc/widget/HtcListView;
 
     return-object v0
@@ -569,7 +569,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     return-object v0
@@ -581,7 +581,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     return-object p1
@@ -592,7 +592,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
 
     return-object v0
@@ -603,7 +603,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIconPath:Ljava/lang/String;
 
     return-object v0
@@ -615,7 +615,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIconPath:Ljava/lang/String;
 
     return-object p1
@@ -626,7 +626,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
 
     return v0
@@ -637,7 +637,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurDMR:Ljava/lang/String;
 
     return-object v0
@@ -648,7 +648,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mNotifyCallback:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaNotifyStub;
 
     return-object v0
@@ -660,7 +660,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
 
     return-object p1
@@ -672,7 +672,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmcService:Lcom/htc/music/IDmcUiPlaybackService;
 
     return-object p1
@@ -683,7 +683,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     return-object v0
@@ -694,7 +694,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     return-object v0
@@ -706,7 +706,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDefaultAlbumIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     return-object p1
@@ -717,7 +717,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mInflater:Landroid/view/LayoutInflater;
 
     return-object v0
@@ -728,7 +728,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
     return-object v0
@@ -739,7 +739,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsScrolling:Z
 
     return v0
@@ -750,7 +750,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkHandler:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$workHandler;
 
     return-object v0
@@ -761,7 +761,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     return-object v0
@@ -773,7 +773,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     return-object p1
@@ -784,7 +784,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
 
     return-object v0
@@ -795,7 +795,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
 
     return-object v0
@@ -806,7 +806,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mInitial:Z
 
     return v0
@@ -818,7 +818,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-boolean p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mInitial:Z
 
     return p1
@@ -829,7 +829,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-boolean v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDestroy:Z
 
     return v0
@@ -840,7 +840,7 @@
     .parameter "x0"
 
     .prologue
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
 
     return-object v0
@@ -852,7 +852,7 @@
     .parameter "x1"
 
     .prologue
-    .line 80
+    .line 82
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
 
     return-object p1
@@ -867,18 +867,18 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 2016
+    .line 1799
     invoke-static {p0, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 2017
+    .line 1800
     .local v1, bmMask:Landroid/graphics/Bitmap;
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->extractAlpha()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2018
+    .line 1801
     .local v0, bmAlpha:Landroid/graphics/Bitmap;
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -894,13 +894,13 @@
 
     move-result-object v2
 
-    .line 2021
+    .line 1804
     .local v2, bmRet:Landroid/graphics/Bitmap;
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 2022
+    .line 1805
     .local v3, c:Landroid/graphics/Canvas;
     new-instance v5, Landroid/graphics/Rect;
 
@@ -930,12 +930,12 @@
 
     invoke-virtual {v3, p1, v5, v6, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 2026
+    .line 1809
     new-instance v4, Landroid/graphics/Paint;
 
     invoke-direct {v4}, Landroid/graphics/Paint;-><init>()V
 
-    .line 2027
+    .line 1810
     .local v4, p:Landroid/graphics/Paint;
     new-instance v5, Landroid/graphics/PorterDuffXfermode;
 
@@ -945,7 +945,7 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 2028
+    .line 1811
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -972,26 +972,26 @@
 
     invoke-virtual {v3, v0, v5, v6, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 2032
+    .line 1815
     if-eqz v1, :cond_0
 
-    .line 2033
+    .line 1816
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 2034
+    .line 1817
     const/4 v1, 0x0
 
-    .line 2036
+    .line 1819
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 2037
+    .line 1820
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 2038
+    .line 1821
     const/4 v0, 0x0
 
-    .line 2040
+    .line 1823
     :cond_1
     return-object v2
 .end method
@@ -1000,14 +1000,14 @@
     .locals 3
 
     .prologue
-    .line 255
+    .line 257
     const-string v1, "[DMS]"
 
     const-string v2, "getDmpCurContent"
 
     invoke-static {v1, v2}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 257
+    .line 259
     const-string v1, "DMP"
 
     const/4 v2, 0x5
@@ -1016,7 +1016,7 @@
 
     move-result-object v0
 
-    .line 259
+    .line 261
     .local v0, Preferences:Landroid/content/SharedPreferences;
     const-string v1, "curContentId"
 
@@ -1033,7 +1033,7 @@
     .locals 3
 
     .prologue
-    .line 828
+    .line 670
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_0
@@ -1046,16 +1046,16 @@
 
     if-nez v1, :cond_2
 
-    .line 830
+    .line 672
     :cond_0
     const/4 v0, 0x0
 
-    .line 838
+    .line 680
     :cond_1
     :goto_0
     return-object v0
 
-    .line 833
+    .line 675
     :cond_2
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
@@ -1071,11 +1071,11 @@
 
     move-result-object v0
 
-    .line 835
+    .line 677
     .local v0, ID:Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 838
+    .line 680
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     const/4 v2, 0x1
@@ -1097,7 +1097,7 @@
     .locals 6
 
     .prologue
-    .line 842
+    .line 684
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
@@ -1110,15 +1110,15 @@
 
     if-nez v2, :cond_1
 
-    .line 844
+    .line 686
     :cond_0
     const/4 v2, 0x0
 
-    .line 853
+    .line 695
     :goto_0
     return-object v2
 
-    .line 847
+    .line 689
     :cond_1
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
@@ -1126,7 +1126,7 @@
 
     move-result v1
 
-    .line 848
+    .line 690
     .local v1, size:I
     invoke-static {}, Ljava/lang/Math;->random()D
 
@@ -1138,7 +1138,7 @@
 
     double-to-int v0, v2
 
-    .line 850
+    .line 692
     .local v0, list:I
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
@@ -1154,7 +1154,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 851
+    .line 693
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1169,7 +1169,7 @@
 
     goto :goto_0
 
-    .line 853
+    .line 695
     :cond_2
     invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getRandomContent()Ljava/lang/String;
 
@@ -1178,11 +1178,625 @@
     goto :goto_0
 .end method
 
+.method private playAll(Ljava/lang/String;Z)V
+    .locals 20
+    .parameter "contentId"
+    .parameter "isShuffle"
+
+    .prologue
+    .line 964
+    const-string v2, "[DMS]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "server = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 965
+    const-string v2, "[DMS]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "container = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 967
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPreferences:Landroid/content/SharedPreferences;
+
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v15
+
+    .line 968
+    .local v15, ed:Landroid/content/SharedPreferences$Editor;
+    const-string v2, "server"
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
+
+    invoke-interface {v15, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    const-string v3, "container"
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
+
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    const-string v3, "content"
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    const-string v3, "filepath"
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
+
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v3
+
+    const-string v4, "startIdx"
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+
+    move-object/from16 v0, p0
+
+    iget v5, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+
+    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
+
+    move-result-wide v5
+
+    invoke-interface {v3, v4, v5, v6}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v3
+
+    const-string v4, "endIdx"
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+
+    move-object/from16 v0, p0
+
+    iget v5, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+
+    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
+
+    move-result-wide v5
+
+    invoke-interface {v3, v4, v5, v6}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    const-string v3, "direction"
+
+    move-object/from16 v0, p0
+
+    iget v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
+
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 975
+    if-eqz p2, :cond_0
+
+    .line 976
+    const-string v2, "shuffle"
+
+    const/4 v3, 0x1
+
+    invoke-interface {v15, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 977
+    :cond_0
+    invoke-interface {v15}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 979
+    const/16 v18, 0x0
+
+    .line 980
+    .local v18, isDmcOrPushMode:Z
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMediaService:Lcom/htc/music/IMediaPlaybackService;
+
+    if-eqz v2, :cond_1
+
+    .line 982
+    :try_start_0
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMediaService:Lcom/htc/music/IMediaPlaybackService;
+
+    invoke-interface {v2}, Lcom/htc/music/IMediaPlaybackService;->isDmcOrPushMode()Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v18
+
+    .line 988
+    :cond_1
+    :goto_0
+    invoke-virtual/range {p0 .. p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/htc/dlnasharedmodule/HtcTVDisplayHelper;->isTVOn(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    if-nez v18, :cond_2
+
+    const/16 v19, 0x1
+
+    .line 990
+    .local v19, isMirrorPlayOnTV:Z
+    :goto_1
+    if-eqz v19, :cond_3
+
+    .line 991
+    const/4 v2, 0x1
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->handleTVReadyToPlay(Z)V
+
+    .line 1038
+    :goto_2
+    return-void
+
+    .line 983
+    .end local v19           #isMirrorPlayOnTV:Z
+    :catch_0
+    move-exception v16
+
+    .line 984
+    .local v16, ex:Landroid/os/RemoteException;
+    const-string v2, "[DMS]"
+
+    const-string v3, "Remote Exception in playAll"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 988
+    .end local v16           #ex:Landroid/os/RemoteException;
+    :cond_2
+    const/16 v19, 0x0
+
+    goto :goto_1
+
+    .line 994
+    .restart local v19       #isMirrorPlayOnTV:Z
+    :cond_3
+    const-string v2, "[DMS]"
+
+    const-string v3, "check DLNA mode first"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 995
+    const/4 v2, 0x0
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x0
+
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v2, v3, v4}, Lcom/htc/music/util/MusicUtils;->checkDLNAMode(Landroid/content/Context;[IIZ)I
+
+    move-result v13
+
+    .line 996
+    .local v13, dlnaMode:I
+    const-string v2, "[DMS]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "DLNA mode = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 998
+    const/4 v2, 0x1
+
+    if-ne v13, v2, :cond_6
+
+    .line 999
+    const-string v2, "[DMS]"
+
+    const-string v3, "DLNA_DMP mode, modify DMP.xml info"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1000
+    const-string v2, "[DMS]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "server = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1001
+    const-string v2, "[DMS]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "container = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1002
+    const-string v2, "[DMS]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "content = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1003
+    const-string v2, "[DMS]"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "shufflemode = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, p2
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1004
+    const-string v2, "[DMS]"
+
+    const-string v3, "dmsplayall"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1006
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
+
+    if-eqz v2, :cond_4
+
+    .line 1008
+    const-string v2, "[DMS]"
+
+    const-string v3, "enter click"
+
+    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1010
+    :try_start_1
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+
+    move-object/from16 v0, p0
+
+    iget v6, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+
+    invoke-virtual {v5}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
+
+    move-result-wide v6
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+
+    move-object/from16 v0, p0
+
+    iget v8, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    invoke-interface {v5, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+
+    invoke-virtual {v5}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
+
+    move-result-wide v8
+
+    move-object/from16 v0, p0
+
+    iget v10, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
+
+    if-eqz p2, :cond_5
+
+    const/4 v11, 0x1
+
+    :goto_3
+    move-object/from16 v0, p0
+
+    iget-object v12, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
+
+    move-object/from16 v5, p1
+
+    invoke-interface/range {v2 .. v12}, Lcom/htc/music/IDmpUiPlaybackService;->setDlnaPlaylist(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJIILjava/lang/String;)V
+
+    .line 1015
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
+
+    invoke-interface {v2}, Lcom/htc/music/IDmpUiPlaybackService;->play()V
+
+    .line 1017
+    new-instance v17, Landroid/content/Intent;
+
+    const-class v2, Lcom/htc/music/MediaPlaybackService;
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, p0
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 1018
+    .local v17, intent:Landroid/content/Intent;
+    const-string v2, "command"
+
+    const-string v3, "bindplugin"
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1020
+    const-string v2, "classname"
+
+    const-string v3, "com.htc.music.DMPMusicPlaybackService"
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1021
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v17
+
+    invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 1033
+    .end local v17           #intent:Landroid/content/Intent;
+    :cond_4
+    :goto_4
+    new-instance v17, Landroid/content/Intent;
+
+    const-string v2, "com.htc.music.PLAYBACK_VIEWER"
+
+    move-object/from16 v0, v17
+
+    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 1034
+    .restart local v17       #intent:Landroid/content/Intent;
+    const/high16 v2, 0x400
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    .line 1035
+    const/4 v2, -0x2
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v17
+
+    invoke-virtual {v0, v1, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto/16 :goto_2
+
+    .line 1010
+    .end local v17           #intent:Landroid/content/Intent;
+    :cond_5
+    const/4 v11, 0x0
+
+    goto :goto_3
+
+    .line 1023
+    :catch_1
+    move-exception v14
+
+    .line 1024
+    .local v14, e:Landroid/os/RemoteException;
+    invoke-virtual {v14}, Landroid/os/RemoteException;->printStackTrace()V
+
+    goto :goto_4
+
+    .line 1028
+    .end local v14           #e:Landroid/os/RemoteException;
+    :cond_6
+    const/4 v2, 0x2
+
+    if-ne v13, v2, :cond_4
+
+    .line 1030
+    invoke-virtual/range {p0 .. p1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->switchToDMC(Ljava/lang/String;)V
+
+    goto :goto_4
+.end method
+
 .method private setTitle()V
     .locals 0
 
     .prologue
-    .line 265
+    .line 267
     return-void
 .end method
 
@@ -1196,7 +1810,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1822
+    .line 1605
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1297,11 +1911,11 @@
 
     move-result-object v3
 
-    .line 1828
+    .line 1611
     .local v3, where:Ljava/lang/String;
     const-string v5, "index_id COLLATE NOCASE ASC"
 
-    .line 1830
+    .line 1613
     .local v5, sort:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1317,28 +1931,28 @@
 
     move-result-object v7
 
-    .line 1832
+    .line 1615
     .local v7, cursor:Landroid/database/Cursor;
     if-nez v7, :cond_1
 
-    .line 1840
+    .line 1623
     :cond_0
     :goto_0
     return-object v2
 
-    .line 1835
+    .line 1618
     :cond_1
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
     move-result v6
 
-    .line 1836
+    .line 1619
     .local v6, count:I
     if-lez v6, :cond_0
 
     move-object v2, v7
 
-    .line 1840
+    .line 1623
     goto :goto_0
 .end method
 
@@ -1351,33 +1965,33 @@
 
     const/4 v10, -0x1
 
-    .line 1844
+    .line 1627
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
-    .line 1846
+    .line 1629
     .local v0, count:I
     if-eqz p1, :cond_0
 
     if-gtz v0, :cond_2
 
-    .line 1847
+    .line 1630
     :cond_0
     const/4 v4, 0x0
 
-    .line 1904
+    .line 1687
     :cond_1
     :goto_0
     return-object v4
 
-    .line 1849
+    .line 1632
     :cond_2
     new-instance v4, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
     invoke-direct {v4, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
-    .line 1851
+    .line 1634
     .local v4, info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
@@ -1395,7 +2009,7 @@
 
     long-to-int v6, v7
 
-    .line 1852
+    .line 1635
     .local v6, startID:I
     iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
@@ -1413,11 +2027,11 @@
 
     long-to-int v1, v7
 
-    .line 1854
+    .line 1637
     .local v1, endID:I
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1855
+    .line 1638
     const-string v7, "[DMS]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1440,7 +2054,7 @@
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1856
+    .line 1639
     const-string v7, "[DMS]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1463,24 +2077,24 @@
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1861
+    .line 1644
     if-le v1, v10, :cond_1
 
-    .line 1863
+    .line 1646
     const/4 v2, 0x0
 
     .local v2, i:I
     :goto_1
     if-ge v2, v0, :cond_1
 
-    .line 1864
+    .line 1647
     invoke-interface {p1}, Landroid/database/Cursor;->isAfterLast()Z
 
     move-result v7
 
     if-nez v7, :cond_1
 
-    .line 1867
+    .line 1650
     const-string v7, "index_id"
 
     invoke-interface {p1, v7}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -1491,7 +2105,7 @@
 
     move-result v3
 
-    .line 1869
+    .line 1652
     .local v3, index:I
     iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
@@ -1520,50 +2134,50 @@
 
     if-ge v3, v1, :cond_7
 
-    .line 1873
+    .line 1656
     :cond_6
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1863
+    .line 1646
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1885
+    .line 1668
     :cond_7
     iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
     if-ne v7, v11, :cond_8
 
-    .line 1886
+    .line 1669
     add-int/lit8 v5, v6, 0x63
 
-    .line 1890
+    .line 1673
     .local v5, middleIdx:I
     :goto_3
     if-ne v3, v5, :cond_9
 
-    .line 1891
+    .line 1674
     int-to-long v7, v3
 
     invoke-virtual {v4, v7, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->setMiddleIdx(J)V
 
-    .line 1892
+    .line 1675
     const-string v7, "[DMS]"
 
     const-string v8, "DlnaUtils.MAX_QUERY_CONTENTS = 199"
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1893
+    .line 1676
     const-string v7, "[DMS]"
 
     const-string v8, "middle point is 99"
 
     invoke-static {v7, v8}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1894
+    .line 1677
     const-string v7, "[DMS]"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1588,7 +2202,7 @@
 
     goto/16 :goto_0
 
-    .line 1888
+    .line 1671
     .end local v5           #middleIdx:I
     :cond_8
     add-int/lit8 v5, v6, -0x63
@@ -1596,7 +2210,7 @@
     .restart local v5       #middleIdx:I
     goto :goto_3
 
-    .line 1898
+    .line 1681
     :cond_9
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1608,7 +2222,7 @@
     .parameter "cursor"
 
     .prologue
-    .line 1909
+    .line 1692
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -1617,16 +2231,16 @@
 
     if-nez p1, :cond_1
 
-    .line 2012
+    .line 1795
     :cond_0
     :goto_0
     return-void
 
-    .line 1917
+    .line 1700
     :cond_1
     const/4 v8, -0x1
 
-    .line 1919
+    .line 1702
     .local v8, Pos:I
     move-object/from16 v0, p0
 
@@ -1634,10 +2248,10 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 1920
+    .line 1703
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1923
+    .line 1706
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
@@ -1664,7 +2278,7 @@
 
     if-nez v2, :cond_3
 
-    .line 1925
+    .line 1708
     :cond_2
     new-instance v1, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
@@ -1672,7 +2286,7 @@
 
     invoke-direct {v1, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
-    .line 1926
+    .line 1709
     .local v1, info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     move-object/from16 v0, p0
 
@@ -1680,7 +2294,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1929
+    .line 1712
     .end local v1           #info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     :cond_3
     const-string v2, "[DMS]"
@@ -1709,7 +2323,7 @@
 
     invoke-static {v2, v5}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1931
+    .line 1714
     const/4 v13, 0x0
 
     .local v13, i:I
@@ -1720,14 +2334,14 @@
 
     if-ge v13, v2, :cond_4
 
-    .line 1932
+    .line 1715
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->isAfterLast()Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
-    .line 1980
+    .line 1763
     :cond_4
     move-object/from16 v0, p0
 
@@ -1749,7 +2363,7 @@
 
     if-nez v2, :cond_8
 
-    .line 1983
+    .line 1766
     :cond_5
     move-object/from16 v0, p0
 
@@ -1773,7 +2387,7 @@
 
     move-result-object v11
 
-    .line 1984
+    .line 1767
     .local v11, endIdx:Ljava/lang/Long;
     move-object/from16 v0, p0
 
@@ -1797,7 +2411,7 @@
 
     move-result-object v17
 
-    .line 1986
+    .line 1769
     .local v17, startIdx:Ljava/lang/Long;
     invoke-virtual {v11}, Ljava/lang/Long;->longValue()J
 
@@ -1832,7 +2446,7 @@
 
     if-ne v2, v5, :cond_8
 
-    .line 1990
+    .line 1773
     :cond_7
     new-instance v1, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
@@ -1840,7 +2454,7 @@
 
     invoke-direct {v1, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
-    .line 1991
+    .line 1774
     .restart local v1       #info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     move-object/from16 v0, p0
 
@@ -1848,7 +2462,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2002
+    .line 1785
     .end local v1           #info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     .end local v11           #endIdx:Ljava/lang/Long;
     .end local v17           #startIdx:Ljava/lang/Long;
@@ -1859,21 +2473,21 @@
 
     if-eqz v2, :cond_9
 
-    .line 2003
+    .line 1786
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
     invoke-virtual {v2}, Lcom/htc/music/util/MemoryCacheBitmapByPosition;->clear()V
 
-    .line 2004
+    .line 1787
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mClearImageCache:Z
 
-    .line 2006
+    .line 1789
     :cond_9
     move-object/from16 v0, p0
 
@@ -1881,7 +2495,7 @@
 
     invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;->notifyDataSetChanged()V
 
-    .line 2008
+    .line 1791
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
@@ -1892,7 +2506,7 @@
 
     move-result-object v16
 
-    .line 2009
+    .line 1792
     .local v16, msg:Landroid/os/Message;
     invoke-virtual/range {v16 .. v16}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -1904,7 +2518,7 @@
 
     invoke-virtual {v2, v5, v7}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 2010
+    .line 1793
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
@@ -1915,7 +2529,7 @@
 
     goto/16 :goto_0
 
-    .line 1935
+    .line 1718
     .end local v16           #msg:Landroid/os/Message;
     :cond_a
     const-string v2, "content_id"
@@ -1932,7 +2546,7 @@
 
     move-result-object v3
 
-    .line 1936
+    .line 1719
     .local v3, contentID:Ljava/lang/String;
     const-string v2, "content_name"
 
@@ -1948,7 +2562,7 @@
 
     move-result-object v4
 
-    .line 1937
+    .line 1720
     .local v4, contentName:Ljava/lang/String;
     const-string v2, "index_id"
 
@@ -1966,7 +2580,7 @@
 
     int-to-long v14, v2
 
-    .line 1938
+    .line 1721
     .local v14, index:J
     const-string v2, "file_type"
 
@@ -1982,7 +2596,7 @@
 
     move-result-object v6
 
-    .line 1946
+    .line 1729
     .local v6, fileType:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2002,7 +2616,7 @@
 
     move-result-wide v9
 
-    .line 1947
+    .line 1730
     .local v9, boundary:J
     move-object/from16 v0, p0
 
@@ -2022,7 +2636,7 @@
 
     move-result-wide v11
 
-    .line 1949
+    .line 1732
     .local v11, endIdx:J
     move-object/from16 v0, p0
 
@@ -2032,7 +2646,7 @@
 
     if-ne v2, v5, :cond_c
 
-    .line 1950
+    .line 1733
     cmp-long v2, v14, v9
 
     if-ltz v2, :cond_b
@@ -2041,17 +2655,17 @@
 
     if-lez v2, :cond_e
 
-    .line 1951
+    .line 1734
     :cond_b
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 1931
+    .line 1714
     :goto_2
     add-int/lit8 v13, v13, 0x1
 
     goto/16 :goto_1
 
-    .line 1955
+    .line 1738
     :cond_c
     move-object/from16 v0, p0
 
@@ -2061,7 +2675,7 @@
 
     if-ne v2, v5, :cond_e
 
-    .line 1956
+    .line 1739
     cmp-long v2, v11, v14
 
     if-gtz v2, :cond_d
@@ -2070,28 +2684,28 @@
 
     if-lez v2, :cond_e
 
-    .line 1957
+    .line 1740
     :cond_d
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_2
 
-    .line 1962
+    .line 1745
     :cond_e
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v18
 
-    .line 1963
+    .line 1746
     .local v18, type:I
     if-nez v18, :cond_f
 
-    .line 1965
+    .line 1748
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_2
 
-    .line 1968
+    .line 1751
     :cond_f
     const/4 v2, 0x1
 
@@ -2099,14 +2713,14 @@
 
     if-ne v0, v2, :cond_10
 
-    .line 1969
+    .line 1752
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsMusicExist:Z
 
-    .line 1972
+    .line 1755
     :cond_10
     new-instance v1, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
@@ -2118,7 +2732,7 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 1973
+    .line 1756
     .restart local v1       #info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     move-object/from16 v0, p0
 
@@ -2126,7 +2740,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1974
+    .line 1757
     invoke-interface/range {p1 .. p1}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_2
@@ -2141,16 +2755,16 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1229
+    .line 1073
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v0, :cond_0
 
-    .line 1247
+    .line 1091
     :goto_0
     return-void
 
-    .line 1232
+    .line 1076
     :cond_0
     const-string v0, "[DMS]"
 
@@ -2158,7 +2772,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1233
+    .line 1077
     const-string v0, "[DMS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2181,7 +2795,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1234
+    .line 1078
     const-string v0, "[DMS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2204,7 +2818,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1236
+    .line 1080
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -2215,10 +2829,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1237
+    .line 1081
     iput-boolean v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mBrowsingComplete:Z
 
-    .line 1240
+    .line 1084
     :cond_1
     :try_start_0
     const-string v0, "[DMS]"
@@ -2243,7 +2857,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1241
+    .line 1085
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     const/4 v1, 0x1
@@ -2268,11 +2882,11 @@
 
     goto :goto_0
 
-    .line 1242
+    .line 1086
     :catch_0
     move-exception v9
 
-    .line 1244
+    .line 1088
     .local v9, e:Landroid/os/RemoteException;
     invoke-virtual {v9}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2284,17 +2898,17 @@
     .parameter "startIdx"
 
     .prologue
-    .line 1250
+    .line 1094
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v0, :cond_1
 
-    .line 1265
+    .line 1109
     :cond_0
     :goto_0
     return-void
 
-    .line 1253
+    .line 1097
     :cond_1
     const-string v0, "[DMS]"
 
@@ -2302,10 +2916,10 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1255
+    .line 1099
     const/4 v6, 0x0
 
-    .line 1257
+    .line 1101
     .local v6, bDone:Z
     :try_start_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -2320,10 +2934,10 @@
 
     move-result v6
 
-    .line 1259
+    .line 1103
     if-nez v6, :cond_0
 
-    .line 1260
+    .line 1104
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     const/4 v1, 0x1
@@ -2342,11 +2956,11 @@
 
     goto :goto_0
 
-    .line 1261
+    .line 1105
     :catch_0
     move-exception v7
 
-    .line 1263
+    .line 1107
     .local v7, e:Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2354,17 +2968,17 @@
 .end method
 
 .method public categoryRightAction()Z
-    .locals 15
+    .locals 5
 
     .prologue
-    .line 742
+    .line 658
     const-string v0, "[DMS]"
 
     const-string v1, "Playing All, save current info to DLNA.xml"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 746
+    .line 660
     const-string v0, "[DMS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2387,9 +3001,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 747
+    .line 661
     const-string v1, "[DMS]"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2424,9 +3038,9 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 748
+    .line 662
     const-string v1, "[DMS]"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2461,471 +3075,21 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/htc/music/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 750
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPreferences:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "server"
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "container"
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "content"
-
+    .line 664
     invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getFirstContent()Ljava/lang/String;
 
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
     move-result-object v0
 
-    const-string v1, "filepath"
+    const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
+    invoke-direct {p0, v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->playAll(Ljava/lang/String;Z)V
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string v2, "startIdx"
-
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    iget v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v3
-
-    invoke-interface {v1, v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string v2, "endIdx"
-
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    iget v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
-
-    move-result-wide v3
-
-    invoke-interface {v1, v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "direction"
-
-    iget v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    .line 758
-    const-string v0, "[DMS]"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "server = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 759
-    const-string v0, "[DMS]"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "container = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 760
-    const-string v0, "[DMS]"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "contnet = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getFirstContent()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 762
-    const-string v0, "[DMS]"
-
-    const-string v1, "check DLNA mode"
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 763
-    const/4 v0, 0x0
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    invoke-static {p0, v0, v1, v2}, Lcom/htc/music/util/MusicUtils;->checkDLNAMode(Landroid/content/Context;[IIZ)I
-
-    move-result v11
-
-    .line 765
-    .local v11, dlnaMode:I
-    const-string v0, "[DMS]"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "dlnaMode = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 777
-    const/4 v0, 0x1
-
-    if-ne v11, v0, :cond_2
-
-    .line 778
-    const-string v0, "[DMS]"
-
-    const-string v1, "DLNA_DMP mode, modify DMP.xml"
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 780
-    const-string v0, "[DMS]"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "server = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 781
-    const-string v0, "[DMS]"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "container = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 782
-    const-string v0, "[DMS]"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "contnet = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getFirstContent()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 783
-    const-string v0, "[DMS]"
-
-    const-string v1, "dmpPlayAll"
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 785
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    if-eqz v0, :cond_0
-
-    .line 787
-    :try_start_0
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getFirstContent()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    iget v5, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v4}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v4
-
-    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
-
-    move-result-wide v6
-
-    iget v8, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    const/4 v9, 0x0
-
-    iget-object v10, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
-
-    invoke-interface/range {v0 .. v10}, Lcom/htc/music/IDmpUiPlaybackService;->setDlnaPlaylist(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJIILjava/lang/String;)V
-
-    .line 792
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    invoke-interface {v0}, Lcom/htc/music/IDmpUiPlaybackService;->play()V
-
-    .line 794
-    new-instance v14, Landroid/content/Intent;
-
-    const-class v0, Lcom/htc/music/MediaPlaybackService;
-
-    invoke-direct {v14, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 795
-    .local v14, intent_playall:Landroid/content/Intent;
-    const-string v0, "command"
-
-    const-string v1, "bindplugin"
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 797
-    const-string v0, "classname"
-
-    const-string v1, "com.htc.music.DMPMusicPlaybackService"
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 798
-    invoke-virtual {p0, v14}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 806
-    .end local v14           #intent_playall:Landroid/content/Intent;
-    :cond_0
-    :goto_0
-    new-instance v13, Landroid/content/Intent;
-
-    const-string v0, "com.htc.music.PLAYBACK_VIEWER"
-
-    invoke-direct {v13, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 807
-    .local v13, intent:Landroid/content/Intent;
-    const/high16 v0, 0x400
-
-    invoke-virtual {v13, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 809
-    const/4 v0, -0x2
-
-    invoke-virtual {p0, v13, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 824
-    .end local v13           #intent:Landroid/content/Intent;
-    :cond_1
-    :goto_1
+    .line 666
     const/4 v0, 0x1
 
     return v0
-
-    .line 800
-    :catch_0
-    move-exception v12
-
-    .line 801
-    .local v12, e:Landroid/os/RemoteException;
-    invoke-virtual {v12}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_0
-
-    .line 811
-    .end local v12           #e:Landroid/os/RemoteException;
-    :cond_2
-    const/4 v0, 0x2
-
-    if-ne v11, v0, :cond_1
-
-    .line 812
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getFirstContent()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->switchToDMC(Ljava/lang/String;)V
-
-    .line 814
-    new-instance v13, Landroid/content/Intent;
-
-    const-string v0, "com.htc.music.PLAYBACK_VIEWER"
-
-    invoke-direct {v13, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 815
-    .restart local v13       #intent:Landroid/content/Intent;
-    const/high16 v0, 0x400
-
-    invoke-virtual {v13, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 817
-    const/4 v0, -0x2
-
-    invoke-virtual {p0, v13, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_1
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -2937,25 +3101,25 @@
 
     const/4 v6, 0x0
 
-    .line 183
+    .line 185
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 186
+    .line 188
     const/4 v3, 0x3
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setVolumeControlStream(I)V
 
-    .line 187
+    .line 189
     const v3, 0x7f030020
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setContentView(I)V
 
-    .line 189
+    .line 191
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 190
+    .line 192
     .local v2, intent:Landroid/content/Intent;
     const-string v3, "ServerName"
 
@@ -2965,7 +3129,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerName:Ljava/lang/String;
 
-    .line 191
+    .line 193
     const-string v3, "ContainerID"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -2974,7 +3138,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
 
-    .line 192
+    .line 194
     const-string v3, "ContainerName"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -2983,7 +3147,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerName:Ljava/lang/String;
 
-    .line 193
+    .line 195
     const-string v3, "ServerID"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -2992,7 +3156,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
 
-    .line 194
+    .line 196
     const-string v3, "IconPath"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -3001,7 +3165,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIconPath:Ljava/lang/String;
 
-    .line 195
+    .line 197
     const-string v3, "startIdx"
 
     const-wide/16 v4, 0x0
@@ -3012,7 +3176,7 @@
 
     iput-wide v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFileStartIdx:J
 
-    .line 197
+    .line 199
     const-string v3, "FilePath"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -3021,12 +3185,12 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
 
-    .line 198
+    .line 200
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
 
     if-nez v3, :cond_0
 
-    .line 199
+    .line 201
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3049,7 +3213,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
 
-    .line 201
+    .line 203
     :cond_0
     new-instance v1, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
@@ -3059,13 +3223,13 @@
 
     invoke-direct {v1, p0, v3, v4}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 202
+    .line 204
     .local v1, iniInfo:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContainerList:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 204
+    .line 206
     const-string v3, "layout_inflater"
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3076,24 +3240,24 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 206
+    .line 208
     new-instance v3, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     invoke-direct {v3, p0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;Landroid/content/Context;)V
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
-    .line 207
+    .line 209
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     if-eqz v3, :cond_1
 
-    .line 208
+    .line 210
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     invoke-virtual {p0, v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setListAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 211
+    .line 213
     :cond_1
     new-instance v3, Ljava/util/ArrayList;
 
@@ -3101,7 +3265,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    .line 212
+    .line 214
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
@@ -3112,7 +3276,7 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    .line 214
+    .line 216
     const-string v3, "DLNA"
 
     const/4 v4, 0x7
@@ -3123,35 +3287,35 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPreferences:Landroid/content/SharedPreferences;
 
-    .line 215
+    .line 217
     iput-boolean v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mInitial:Z
 
-    .line 216
+    .line 218
     iput-boolean v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsMusicExist:Z
 
-    .line 219
+    .line 221
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mListView:Lcom/htc/widget/HtcListView;
 
-    .line 220
+    .line 222
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mListView:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v3, v6}, Lcom/htc/widget/HtcListView;->setTextFilterEnabled(Z)V
 
-    .line 221
+    .line 223
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mListView:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v3, v7}, Lcom/htc/widget/HtcListView;->setFastScrollEnabled(Z)V
 
-    .line 222
+    .line 224
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mListView:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v3, p0}, Lcom/htc/widget/HtcListView;->setOnScrollListener(Lcom/htc/widget/HtcAbsListView$OnScrollListener;)V
 
-    .line 224
+    .line 226
     new-instance v3, Landroid/os/HandlerThread;
 
     const-string v4, "workThread"
@@ -3160,12 +3324,12 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkthread:Landroid/os/HandlerThread;
 
-    .line 225
+    .line 227
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkthread:Landroid/os/HandlerThread;
 
     invoke-virtual {v3}, Landroid/os/HandlerThread;->start()V
 
-    .line 227
+    .line 229
     new-instance v3, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$workHandler;
 
     iget-object v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkthread:Landroid/os/HandlerThread;
@@ -3178,26 +3342,26 @@
 
     iput-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkHandler:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$workHandler;
 
-    .line 228
+    .line 230
     iput v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    .line 230
+    .line 232
     new-instance v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
     invoke-direct {v0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
-    .line 231
+    .line 233
     .local v0, info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
     iget-wide v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFileStartIdx:J
 
     invoke-virtual {v0, v3, v4}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->setStartIdx(J)V
 
-    .line 232
+    .line 234
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 234
+    .line 236
     return-void
 .end method
 
@@ -3210,22 +3374,22 @@
 
     const v3, 0x2040151
 
-    .line 318
+    .line 320
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getParent()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 319
+    .line 321
     .local v0, context:Landroid/content/Context;
     if-nez v0, :cond_0
 
     move-object v0, p0
 
-    .line 320
+    .line 322
     :cond_0
     sparse-switch p1, :sswitch_data_0
 
-    .line 424
+    .line 426
     :cond_1
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onCreateDialog(I)Landroid/app/Dialog;
 
@@ -3234,19 +3398,19 @@
     :goto_0
     return-object v1
 
-    .line 348
+    .line 350
     :sswitch_0
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v1, v0}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0700ce
+    const v2, 0x7f0700cf
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setTitle(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
     move-result-object v1
 
-    const v2, 0x7f0700cf
+    const v2, 0x7f0700d0
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3274,7 +3438,7 @@
 
     goto :goto_0
 
-    .line 369
+    .line 371
     :sswitch_1
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3284,7 +3448,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700d1
+    const v2, 0x7f0700d2
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3312,7 +3476,7 @@
 
     goto :goto_0
 
-    .line 389
+    .line 391
     :sswitch_2
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
@@ -3324,7 +3488,7 @@
 
     if-nez v1, :cond_1
 
-    .line 390
+    .line 392
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v1, v0}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -3333,7 +3497,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700d0
+    const v2, 0x7f0700d1
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -3373,7 +3537,7 @@
 
     goto/16 :goto_0
 
-    .line 320
+    .line 322
     nop
 
     :sswitch_data_0
@@ -3393,31 +3557,31 @@
 
     const/4 v2, 0x0
 
-    .line 495
+    .line 497
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 498
+    .line 500
     const/16 v0, 0xe
 
     const v1, 0x7f070009
 
     invoke-interface {p1, v3, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 499
+    .line 501
     const/16 v0, 0xf
 
     const v1, 0x7f07000a
 
     invoke-interface {p1, v3, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 500
+    .line 502
     const/16 v0, 0xa
 
     const v1, 0x204021a
 
     invoke-interface {p1, v3, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
-    .line 506
+    .line 508
     const/4 v0, 0x1
 
     return v0
@@ -3429,280 +3593,441 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 467
+    .line 469
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onDestroy()V
 
-    .line 469
+    .line 471
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
     invoke-virtual {v0}, Lcom/htc/music/util/MemoryCacheBitmapByPosition;->clear()V
 
-    .line 470
+    .line 472
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     if-eqz v0, :cond_0
 
-    .line 471
+    .line 473
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
     invoke-virtual {v0}, Lcom/htc/music/util/AsyncImageDecoder;->quit()V
 
-    .line 472
+    .line 474
     iput-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDecoder:Lcom/htc/music/util/AsyncImageDecoder;
 
-    .line 478
+    .line 480
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDestroy:Z
 
-    .line 479
+    .line 481
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 480
+    .line 482
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 481
+    .line 483
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 482
+    .line 484
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 483
+    .line 485
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x7
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 485
+    .line 487
     sput-object v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mServerIcon:Landroid/graphics/Bitmap;
 
-    .line 487
+    .line 489
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkHandler:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$workHandler;
 
     invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$workHandler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 488
+    .line 490
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mWorkthread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 490
+    .line 492
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 491
+    .line 493
     return-void
 .end method
 
 .method public onHtcContextItemSelected(I)Z
-    .locals 15
+    .locals 6
     .parameter "id"
 
     .prologue
-    .line 1303
+    const/4 v5, 0x0
+
+    .line 1147
     packed-switch p1, :pswitch_data_0
 
-    .line 1404
+    .line 1187
     :cond_0
     :goto_0
-    const/4 v0, 0x0
+    return v5
 
-    :goto_1
-    return v0
-
-    .line 1306
+    .line 1150
     :pswitch_0
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    if-nez v0, :cond_1
+    if-nez v3, :cond_1
 
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
-    move-result v0
+    move-result v3
 
-    if-gez v0, :cond_1
+    if-ltz v3, :cond_0
 
-    .line 1307
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    .line 1309
+    .line 1153
     :cond_1
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mSelectedItem:I
+    iget v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mSelectedItem:I
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
-
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetId()Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 1312
-    .local v3, ContentID:Ljava/lang/String;
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPreferences:Landroid/content/SharedPreferences;
+    check-cast v3, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetId()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "server"
+    .line 1154
+    .local v0, ContentID:Ljava/lang/String;
+    invoke-direct {p0, v0, v5}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->playAll(Ljava/lang/String;Z)V
 
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
+    goto :goto_0
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .line 1161
+    .end local v0           #ContentID:Ljava/lang/String;
+    :pswitch_1
+    new-instance v2, Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    const-string v1, "container"
+    .line 1162
+    .local v2, intent:Landroid/content/Intent;
+    const-string v3, "duration"
 
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
+    invoke-virtual {v2, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .line 1163
+    const-string v3, "filename"
 
-    move-result-object v0
+    const-string v4, ""
 
-    const-string v1, "content"
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .line 1164
+    const-string v3, "trackname"
 
-    move-result-object v0
+    const-string v4, ""
 
-    const-string v1, "filepath"
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
+    .line 1165
+    const-string v3, "artistname"
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v4, ""
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1166
+    const-string v3, "albumname"
+
+    const-string v4, ""
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1167
+    const-string v3, "genre"
+
+    const-string v4, ""
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1168
+    const-string v3, "composer"
+
+    const-string v4, ""
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1169
+    const-string v3, "location"
+
+    const-string v4, ""
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1171
+    iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
+
+    if-eqz v3, :cond_2
+
+    .line 1172
+    iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
+
+    const-string v4, "contentID"
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "startIdx"
+    .line 1173
+    .local v1, ID:Ljava/lang/String;
+    iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+    if-eqz v3, :cond_2
 
-    iget v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mSelectedItem:I
+
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
+
+    invoke-virtual {v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetId()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 1175
+    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
+
+    .line 1179
+    .end local v1           #ID:Ljava/lang/String;
+    :cond_2
+    const-class v3, Lcom/htc/music/PluginPropertyListActivity;
+
+    invoke-virtual {v2, p0, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    .line 1181
+    const/4 v3, -0x2
+
+    invoke-virtual {p0, v2, v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 1183
+    const-string v3, "DLNA"
+
+    const-string v4, "PRESSMENU_DETAILS"
+
+    invoke-static {v3, v4}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 1147
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method protected onListItemClick(Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)V
+    .locals 10
+    .parameter "lv"
+    .parameter "v"
+    .parameter "position"
+    .parameter "id"
+
+    .prologue
+    const/4 v9, 0x1
+
+    .line 881
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
+
+    invoke-virtual {v6, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
+
+    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetId()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+    .line 882
+    .local v0, ContentID:Ljava/lang/String;
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
+    invoke-virtual {v6, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-wide v4
+    move-result-object v6
 
-    invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
+
+    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetName()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "endIdx"
+    .line 885
+    .local v1, ContentName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+    invoke-virtual {v6, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    iget v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    move-result-object v3
 
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    check-cast v3, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
-    move-result-object v0
+    .line 887
+    .local v3, info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
+    const/4 v4, 0x0
 
-    check-cast v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+    .line 888
+    .local v4, prevPage:I
+    iget v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
+    if-lez v6, :cond_0
 
-    move-result-wide v4
+    .line 889
+    const/4 v4, 0x1
 
-    invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    .line 891
+    :cond_0
+    if-nez v0, :cond_7
 
-    move-result-object v0
+    if-nez v1, :cond_7
 
-    const-string v1, "direction"
+    .line 892
+    const/4 v5, 0x0
 
-    iget v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    .line 1321
-    const/4 v0, 0x0
-
-    const/4 v1, -0x1
-
+    .line 893
+    .local v5, start:Ljava/lang/Long;
     const/4 v2, 0x0
 
-    invoke-static {p0, v0, v1, v2}, Lcom/htc/music/util/MusicUtils;->checkDLNAMode(Landroid/content/Context;[IIZ)I
+    .line 895
+    .local v2, boundary:Ljava/lang/Long;
+    iget-boolean v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingPrev:Z
 
-    move-result v12
+    if-eq v6, v9, :cond_1
 
-    .line 1323
-    .local v12, dlnaMode:I
-    const/4 v0, 0x1
+    iget-boolean v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingNext:Z
 
-    if-ne v12, v0, :cond_3
+    if-ne v6, v9, :cond_3
 
-    .line 1336
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
+    .line 896
+    :cond_1
+    const-string v6, "[DMS]"
 
-    if-eqz v0, :cond_2
+    const-string v7, "user press next/prev page when it still loading, ignore..."
 
-    .line 1338
-    const-string v0, "[DMS]"
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "enter click"
+    .line 960
+    .end local v2           #boundary:Ljava/lang/Long;
+    .end local v5           #start:Ljava/lang/Long;
+    :cond_2
+    :goto_0
+    return-void
 
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 900
+    .restart local v2       #boundary:Ljava/lang/Long;
+    .restart local v5       #start:Ljava/lang/Long;
+    :cond_3
+    if-nez p3, :cond_5
 
-    .line 1340
-    :try_start_0
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
+    .line 901
+    const-string v6, "[DMS]"
 
-    iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
+    const-string v7, "Press Prev Page"
 
-    iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+    .line 902
+    invoke-virtual {p0, p3, v9}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showContentLoading(IZ)V
 
-    iget v5, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    .line 903
+    invoke-virtual {p0, v9}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showSpinner(Z)V
 
-    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 905
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    move-result-object v4
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    check-cast v4, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v4}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
+    move-result-object v6
 
-    move-result-wide v4
+    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
+    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {p0, v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->cancelBrowse(Ljava/lang/Long;)V
+
+    .line 906
+    iput-boolean v9, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingPrev:Z
+
+    .line 908
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+
+    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getMiddleIdx()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    .line 909
+    iget v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
+
+    if-ne v6, v9, :cond_4
+
+    .line 910
     iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
     iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
@@ -3717,1206 +4042,128 @@
 
     move-result-wide v6
 
-    iget v8, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    const/4 v9, 0x0
-
-    iget-object v10, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
-
-    invoke-interface/range {v0 .. v10}, Lcom/htc/music/IDmpUiPlaybackService;->setDlnaPlaylist(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJIILjava/lang/String;)V
-
-    .line 1345
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    invoke-interface {v0}, Lcom/htc/music/IDmpUiPlaybackService;->play()V
-
-    .line 1347
-    new-instance v14, Landroid/content/Intent;
-
-    const-class v0, Lcom/htc/music/MediaPlaybackService;
-
-    invoke-direct {v14, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 1348
-    .local v14, intent:Landroid/content/Intent;
-    const-string v0, "command"
-
-    const-string v1, "bindplugin"
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1350
-    const-string v0, "classname"
-
-    const-string v1, "com.htc.music.DMPMusicPlaybackService"
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1351
-    invoke-virtual {p0, v14}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 1360
-    .end local v14           #intent:Landroid/content/Intent;
-    :cond_2
-    :goto_2
-    new-instance v14, Landroid/content/Intent;
-
-    const-string v0, "com.htc.music.PLAYBACK_VIEWER"
-
-    invoke-direct {v14, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 1361
-    .restart local v14       #intent:Landroid/content/Intent;
-    const/high16 v0, 0x400
-
-    invoke-virtual {v14, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 1363
-    const/4 v0, -0x2
-
-    invoke-virtual {p0, v14, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto/16 :goto_0
-
-    .line 1353
-    .end local v14           #intent:Landroid/content/Intent;
-    :catch_0
-    move-exception v13
-
-    .line 1354
-    .local v13, e:Landroid/os/RemoteException;
-    invoke-virtual {v13}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_2
-
-    .line 1365
-    .end local v13           #e:Landroid/os/RemoteException;
-    :cond_3
-    const/4 v0, 0x2
-
-    if-ne v12, v0, :cond_0
-
-    .line 1366
-    invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getFirstContent()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->switchToDMC(Ljava/lang/String;)V
-
-    .line 1368
-    new-instance v14, Landroid/content/Intent;
-
-    const-string v0, "com.htc.music.PLAYBACK_VIEWER"
-
-    invoke-direct {v14, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 1369
-    .restart local v14       #intent:Landroid/content/Intent;
-    const/high16 v0, 0x400
-
-    invoke-virtual {v14, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 1371
-    const/4 v0, -0x2
-
-    invoke-virtual {p0, v14, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto/16 :goto_0
-
-    .line 1378
-    .end local v3           #ContentID:Ljava/lang/String;
-    .end local v12           #dlnaMode:I
-    .end local v14           #intent:Landroid/content/Intent;
-    :pswitch_1
-    new-instance v14, Landroid/content/Intent;
-
-    invoke-direct {v14}, Landroid/content/Intent;-><init>()V
-
-    .line 1379
-    .restart local v14       #intent:Landroid/content/Intent;
-    const-string v0, "duration"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 1380
-    const-string v0, "filename"
-
-    const-string v1, ""
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1381
-    const-string v0, "trackname"
-
-    const-string v1, ""
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1382
-    const-string v0, "artistname"
-
-    const-string v1, ""
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1383
-    const-string v0, "albumname"
-
-    const-string v1, ""
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1384
-    const-string v0, "genre"
-
-    const-string v1, ""
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1385
-    const-string v0, "composer"
-
-    const-string v1, ""
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1386
-    const-string v0, "location"
-
-    const-string v1, ""
-
-    invoke-virtual {v14, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1388
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
-
-    if-eqz v0, :cond_4
-
-    .line 1389
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
-
-    const-string v1, "contentID"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v11
-
-    .line 1390
-    .local v11, ID:Ljava/lang/String;
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
-
-    iget v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mSelectedItem:I
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
-
-    invoke-virtual {v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetId()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 1392
-    iget-object v14, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDetailIntent:Landroid/content/Intent;
-
-    .line 1396
-    .end local v11           #ID:Ljava/lang/String;
-    :cond_4
-    const-class v0, Lcom/htc/music/PluginPropertyListActivity;
-
-    invoke-virtual {v14, p0, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    .line 1398
-    const/4 v0, -0x2
-
-    invoke-virtual {p0, v14, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 1400
-    const-string v0, "DLNA"
-
-    const-string v1, "PRESSMENU_DETAILS"
-
-    invoke-static {v0, v1}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 1303
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method protected onListItemClick(Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)V
-    .locals 21
-    .parameter "lv"
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
-
-    .prologue
-    .line 1039
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
-
-    move/from16 v0, p3
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetId()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 1040
-    .local v5, ContentID:Ljava/lang/String;
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
-
-    move/from16 v0, p3
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetName()Ljava/lang/String;
-
-    move-result-object v13
-
-    .line 1043
-    .local v13, ContentName:Ljava/lang/String;
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
-
-    move/from16 v0, p3
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v17
-
-    check-cast v17, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
-
-    .line 1045
-    .local v17, info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
-    const/16 v19, 0x0
-
-    .line 1046
-    .local v19, prevPage:I
-    move-object/from16 v0, p0
-
-    iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    if-lez v2, :cond_0
-
-    .line 1047
-    const/16 v19, 0x1
-
-    .line 1049
-    :cond_0
-    if-nez v5, :cond_7
-
-    if-nez v13, :cond_7
-
-    .line 1050
-    const/16 v20, 0x0
-
-    .line 1051
-    .local v20, start:Ljava/lang/Long;
-    const/4 v14, 0x0
-
-    .line 1053
-    .local v14, boundary:Ljava/lang/Long;
-    move-object/from16 v0, p0
-
-    iget-boolean v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingPrev:Z
-
-    const/4 v3, 0x1
-
-    if-eq v2, v3, :cond_1
-
-    move-object/from16 v0, p0
-
-    iget-boolean v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingNext:Z
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_3
-
-    .line 1054
-    :cond_1
-    const-string v2, "[DMS]"
-
-    const-string v3, "user press next/prev page when it still loading, ignore..."
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1194
-    .end local v14           #boundary:Ljava/lang/Long;
-    .end local v20           #start:Ljava/lang/Long;
-    :cond_2
-    :goto_0
-    return-void
-
-    .line 1058
-    .restart local v14       #boundary:Ljava/lang/Long;
-    .restart local v20       #start:Ljava/lang/Long;
-    :cond_3
-    if-nez p3, :cond_5
-
-    .line 1059
-    const-string v2, "[DMS]"
-
-    const-string v3, "Press Prev Page"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1060
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, p3
-
-    invoke-virtual {v0, v1, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showContentLoading(IZ)V
-
-    .line 1061
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showSpinner(Z)V
-
-    .line 1063
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->cancelBrowse(Ljava/lang/Long;)V
-
-    .line 1064
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    iput-boolean v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingPrev:Z
-
-    .line 1066
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getMiddleIdx()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v20
-
-    .line 1067
-    move-object/from16 v0, p0
-
-    iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_4
-
-    .line 1068
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v14
-
-    .line 1072
+    .line 914
     :goto_1
-    move-object/from16 v0, p0
+    iget v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    add-int/lit8 v6, v6, -0x1
 
-    add-int/lit8 v2, v2, -0x1
+    iput v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    move-object/from16 v0, p0
+    .line 915
+    const/4 v6, -0x1
 
-    iput v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    iput v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
-    .line 1073
-    const/4 v2, -0x1
+    .line 916
+    const-string v6, "[DMS]"
 
-    move-object/from16 v0, p0
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    iput v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1074
-    const-string v2, "[DMS]"
+    const-string v8, "start idx = "
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v7
 
-    const-string v4, "start idx = "
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    move-result-object v3
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-object/from16 v0, v20
+    move-result-object v7
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v3
+    .line 917
+    const-string v6, "[DMS]"
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v8, "boundary idx = "
 
-    .line 1075
-    const-string v2, "[DMS]"
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v4, "boundary idx = "
+    move-result-object v7
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v7
 
-    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v3
+    .line 919
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v6, v5, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->browse(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)V
 
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1077
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v20
-
-    invoke-virtual {v0, v2, v1, v14}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->browse(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)V
-
-    .line 1106
+    .line 948
     :goto_2
-    const-string v2, "[DMS]"
+    const-string v6, "[DMS]"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "start idx = "
+    const-string v8, "start idx = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v7
 
-    move-object/from16 v0, v20
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    move-result-object v3
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v7
 
-    move-result-object v3
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 949
+    const-string v6, "[DMS]"
 
-    .line 1107
-    const-string v2, "[DMS]"
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v8, "boundary idx = "
 
-    const-string v4, "boundary idx = "
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    move-result-object v3
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    move-result-object v3
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v7
 
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 1070
+    .line 912
     :cond_4
-    move-object/from16 v0, p0
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v14
-
-    goto/16 :goto_1
-
-    .line 1083
-    :cond_5
-    const-string v2, "[DMS]"
-
-    const-string v3, "Press Next Page"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1085
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, p3
-
-    invoke-virtual {v0, v1, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showContentLoading(IZ)V
-
-    .line 1086
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showSpinner(Z)V
-
-    .line 1088
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getMiddleIdx()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v20
-
-    .line 1089
-    move-object/from16 v0, p0
-
-    iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_6
-
-    .line 1090
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v14
-
-    .line 1093
-    :goto_3
-    move-object/from16 v0, p0
-
-    iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    add-int/lit8 v2, v2, 0x1
-
-    move-object/from16 v0, p0
-
-    iput v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    .line 1094
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    iput v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    .line 1095
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "start idx = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, v20
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1096
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "boundary idx = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1098
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    iput-boolean v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingNext:Z
-
-    .line 1100
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v20
-
-    invoke-virtual {v0, v2, v1, v14}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->browse(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)V
-
-    goto/16 :goto_2
-
-    .line 1092
-    :cond_6
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v14
-
-    goto :goto_3
-
-    .line 1111
-    .end local v14           #boundary:Ljava/lang/Long;
-    .end local v20           #start:Ljava/lang/Long;
-    :cond_7
-    invoke-virtual/range {v17 .. v17}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->IsContainer()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    .line 1115
-    const-string v2, "[DMS]"
-
-    const-string v3, "itemclick"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1117
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "server = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1118
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "container = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1120
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPreferences:Landroid/content/SharedPreferences;
-
-    const-string v3, "content"
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 1124
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPreferences:Landroid/content/SharedPreferences;
-
-    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "server"
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "container"
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "content"
-
-    invoke-interface {v2, v3, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "filepath"
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v3
-
-    const-string v4, "startIdx"
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v6, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v6
-
-    invoke-interface {v3, v4, v6, v7}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v3
-
-    const-string v4, "endIdx"
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v6, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
-
-    move-result-wide v6
-
-    invoke-interface {v3, v4, v6, v7}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "direction"
-
-    move-object/from16 v0, p0
-
-    iget v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    .line 1133
-    const-string v2, "[DMS]"
-
-    const-string v3, "check DLNA mode first"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1134
-    const/4 v2, 0x0
-
-    const/4 v3, -0x1
-
-    const/4 v4, 0x0
-
-    move-object/from16 v0, p0
-
-    invoke-static {v0, v2, v3, v4}, Lcom/htc/music/util/MusicUtils;->checkDLNAMode(Landroid/content/Context;[IIZ)I
-
-    move-result v15
-
-    .line 1135
-    .local v15, dlnaMode:I
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "DLNA mode = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1148
-    const/4 v2, 0x1
-
-    if-ne v15, v2, :cond_9
-
-    .line 1149
-    const-string v2, "[DMS]"
-
-    const-string v3, "DLNA_DMP mode, modify DMP.xml info"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1150
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "server = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1151
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "container = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1152
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "content = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1153
-    const-string v2, "[DMS]"
-
-    const-string v3, "shufflemode = 0"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1154
-    const-string v2, "[DMS]"
-
-    const-string v3, "dmsplayall"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1156
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    if-eqz v2, :cond_8
-
-    .line 1158
-    const-string v2, "[DMS]"
-
-    const-string v3, "enter click"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1160
-    :try_start_0
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v7, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
     invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -4928,135 +4175,181 @@
 
     move-result-wide v6
 
-    move-object/from16 v0, p0
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v8, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+    move-result-object v2
 
-    move-object/from16 v0, p0
+    goto/16 :goto_1
 
-    iget v9, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    .line 925
+    :cond_5
+    const-string v6, "[DMS]"
 
-    invoke-interface {v8, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const-string v7, "Press Next Page"
 
-    move-result-object v8
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v8, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+    .line 927
+    invoke-virtual {p0, p3, v9}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showContentLoading(IZ)V
 
-    invoke-virtual {v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
+    .line 928
+    invoke-virtual {p0, v9}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showSpinner(Z)V
 
-    move-result-wide v8
+    .line 930
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    move-object/from16 v0, p0
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    iget v10, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
+    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    const/4 v11, 0x0
+    move-result-object v6
 
-    move-object/from16 v0, p0
+    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
-    iget-object v12, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getMiddleIdx()J
 
-    invoke-interface/range {v2 .. v12}, Lcom/htc/music/IDmpUiPlaybackService;->setDlnaPlaylist(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJIILjava/lang/String;)V
+    move-result-wide v6
 
-    .line 1165
-    move-object/from16 v0, p0
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
+    move-result-object v5
 
-    invoke-interface {v2}, Lcom/htc/music/IDmpUiPlaybackService;->play()V
+    .line 931
+    iget v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
-    .line 1167
-    new-instance v18, Landroid/content/Intent;
+    if-ne v6, v9, :cond_6
 
-    const-class v2, Lcom/htc/music/MediaPlaybackService;
+    .line 932
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    move-object/from16 v0, v18
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    move-object/from16 v1, p0
+    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-object v6
 
-    .line 1168
-    .local v18, intent:Landroid/content/Intent;
-    const-string v2, "command"
+    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
-    const-string v3, "bindplugin"
+    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
 
-    move-object/from16 v0, v18
+    move-result-wide v6
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 1170
-    const-string v2, "classname"
+    move-result-object v2
 
-    const-string v3, "com.htc.music.DMPMusicPlaybackService"
+    .line 935
+    :goto_3
+    iget v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    move-object/from16 v0, v18
+    add-int/lit8 v6, v6, 0x1
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iput v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    .line 1171
-    move-object/from16 v0, p0
+    .line 936
+    iput v9, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
-    move-object/from16 v1, v18
+    .line 937
+    const-string v6, "[DMS]"
 
-    invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    .line 1186
-    .end local v18           #intent:Landroid/content/Intent;
-    :cond_8
-    :goto_4
-    new-instance v18, Landroid/content/Intent;
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "com.htc.music.PLAYBACK_VIEWER"
+    const-string v8, "start idx = "
 
-    move-object/from16 v0, v18
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    move-result-object v7
 
-    .line 1187
-    .restart local v18       #intent:Landroid/content/Intent;
-    const/high16 v2, 0x400
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v0, v18
+    move-result-object v7
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 1188
-    move-object/from16 v0, p0
+    move-result-object v7
 
-    move-object/from16 v1, v18
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivity(Landroid/content/Intent;)V
+    .line 938
+    const-string v6, "[DMS]"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "boundary idx = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 940
+    iput-boolean v9, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mLoadingNext:Z
+
+    .line 942
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
+
+    invoke-virtual {p0, v6, v5, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->browse(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)V
+
+    goto/16 :goto_2
+
+    .line 934
+    :cond_6
+    iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+
+    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    goto :goto_3
+
+    .line 953
+    .end local v2           #boundary:Ljava/lang/Long;
+    .end local v5           #start:Ljava/lang/Long;
+    :cond_7
+    invoke-virtual {v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->IsContainer()Z
+
+    move-result v6
+
+    if-nez v6, :cond_2
+
+    .line 957
+    const-string v6, "[DMS]"
+
+    const-string v7, "itemclick"
+
+    invoke-static {v6, v7}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 958
+    const/4 v6, 0x0
+
+    invoke-direct {p0, v0, v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->playAll(Ljava/lang/String;Z)V
 
     goto/16 :goto_0
-
-    .line 1173
-    .end local v18           #intent:Landroid/content/Intent;
-    :catch_0
-    move-exception v16
-
-    .line 1174
-    .local v16, e:Landroid/os/RemoteException;
-    invoke-virtual/range {v16 .. v16}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_4
-
-    .line 1181
-    .end local v16           #e:Landroid/os/RemoteException;
-    :cond_9
-    const/4 v2, 0x2
-
-    if-ne v15, v2, :cond_8
-
-    .line 1183
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v5}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->switchToDMC(Ljava/lang/String;)V
-
-    goto :goto_4
 .end method
 
 .method protected onListItemLongClick(Lcom/htc/widget/HtcAdapterView;Landroid/view/View;IJ)Z
@@ -5073,7 +4366,7 @@
 
     const/4 v4, 0x1
 
-    .line 1271
+    .line 1115
     iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     if-eqz v6, :cond_0
@@ -5089,15 +4382,15 @@
     :cond_0
     move v4, v5
 
-    .line 1298
+    .line 1142
     :goto_0
     return v4
 
-    .line 1274
+    .line 1118
     :cond_1
     iput p3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mSelectedItem:I
 
-    .line 1275
+    .line 1119
     iget-object v6, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5106,7 +4399,7 @@
 
     check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
-    .line 1277
+    .line 1121
     .local v2, info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->IsContainer()Z
 
@@ -5120,7 +4413,7 @@
 
     if-eqz v6, :cond_3
 
-    .line 1280
+    .line 1124
     new-array v3, v7, [Ljava/lang/CharSequence;
 
     const v6, 0x7f070058
@@ -5139,19 +4432,19 @@
 
     aput-object v5, v3, v4
 
-    .line 1282
+    .line 1126
     .local v3, items:[Ljava/lang/CharSequence;
     new-array v1, v7, [I
 
     fill-array-data v1, :array_0
 
-    .line 1285
+    .line 1129
     .local v1, ids:[I
     iget-object v5, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v5, :cond_2
 
-    .line 1287
+    .line 1131
     :try_start_0
     iget-object v5, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -5167,7 +4460,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1294
+    .line 1138
     :cond_2
     :goto_1
     invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;->GetName()Ljava/lang/String;
@@ -5178,17 +4471,17 @@
 
     goto :goto_0
 
-    .line 1289
+    .line 1133
     :catch_0
     move-exception v0
 
-    .line 1291
+    .line 1135
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1298
+    .line 1142
     .end local v0           #e:Landroid/os/RemoteException;
     .end local v1           #ids:[I
     .end local v3           #items:[Ljava/lang/CharSequence;
@@ -5199,7 +4492,7 @@
 
     goto :goto_0
 
-    .line 1282
+    .line 1126
     :array_0
     .array-data 0x4
         0x1t 0x0t 0x0t 0x0t
@@ -5211,7 +4504,7 @@
     .locals 2
 
     .prologue
-    .line 1016
+    .line 858
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
     iget v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
@@ -5232,812 +4525,231 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->cancelBrowse(Ljava/lang/Long;)V
 
-    .line 1019
+    .line 861
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setResult(I)V
 
-    .line 1020
+    .line 862
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
-    .locals 23
+    .locals 12
     .parameter "item"
 
     .prologue
-    .line 536
-    invoke-interface/range {p1 .. p1}, Landroid/view/MenuItem;->getItemId()I
+    const/4 v8, 0x1
 
-    move-result v2
+    .line 534
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    packed-switch v2, :pswitch_data_0
+    move-result v7
 
-    .line 692
+    packed-switch v7, :pswitch_data_0
+
+    .line 613
     :pswitch_0
-    invoke-super/range {p0 .. p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
-    move-result v2
+    move-result v7
 
     :goto_0
-    return v2
+    return v7
+
+    .line 538
+    :pswitch_1
+    iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
+
+    if-eqz v7, :cond_0
 
     .line 540
-    :pswitch_1
-    move-object/from16 v0, p0
+    const-wide/16 v0, 0x0
 
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
+    .line 541
+    .local v0, boundary:J
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
 
-    if-eqz v2, :cond_0
+    if-ne v7, v8, :cond_2
 
     .line 542
-    const-wide/16 v13, 0x0
+    iget v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    if-le v7, v8, :cond_1
 
     .line 543
-    .local v13, boundary:J
-    move-object/from16 v0, p0
+    iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
+    iget v9, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    const/4 v3, 0x1
+    add-int/lit8 v9, v9, -0x1
 
-    if-ne v2, v3, :cond_2
+    invoke-interface {v7, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 544
-    move-object/from16 v0, p0
+    move-result-object v7
 
-    iget v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    check-cast v7, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
-    const/4 v3, 0x1
+    invoke-virtual {v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
 
-    if-le v2, v3, :cond_1
+    move-result-wide v0
 
-    .line 545
-    move-object/from16 v0, p0
+    .line 556
+    :goto_1
+    iget-object v9, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+    iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    move-object/from16 v0, p0
+    iget v10, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    invoke-interface {v7, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    add-int/lit8 v3, v3, -0x1
+    move-result-object v7
 
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    check-cast v7, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
-    move-result-object v2
+    invoke-virtual {v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
 
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+    move-result-wide v10
 
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-wide v13
+    move-result-object v7
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    invoke-virtual {p0, v9, v7, v10}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->browse(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)V
+
+    .line 557
+    invoke-virtual {p0, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showSpinner(Z)V
 
     .line 558
-    :goto_1
-    move-object/from16 v0, p0
+    const v7, 0x7f0700ca
 
-    iget-object v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v6
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {v13, v14}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v3, v2, v4}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->browse(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)V
+    invoke-virtual {p0, v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showEmptyView(I)V
 
     .line 559
-    const/4 v2, 0x1
+    new-instance v7, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
-    move-object/from16 v0, p0
+    invoke-direct {v7, p0, p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showSpinner(Z)V
+    iput-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     .line 560
-    const v2, 0x7f0700c9
+    iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showEmptyView(I)V
+    invoke-virtual {p0, v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setListAdapter(Landroid/widget/ListAdapter;)V
 
     .line 561
-    new-instance v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
+    iput-boolean v8, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mInitial:Z
 
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p0
-
-    invoke-direct {v2, v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;-><init>(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;Landroid/content/Context;)V
-
-    move-object/from16 v0, p0
-
-    iput-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
-
-    .line 562
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setListAdapter(Landroid/widget/ListAdapter;)V
+    .end local v0           #boundary:J
+    :cond_0
+    move v7, v8
 
     .line 563
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    iput-boolean v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mInitial:Z
-
-    .line 565
-    .end local v13           #boundary:J
-    :cond_0
-    const/4 v2, 0x1
-
     goto :goto_0
 
-    .line 548
-    .restart local v13       #boundary:J
+    .line 546
+    .restart local v0       #boundary:J
     :cond_1
-    const-wide/16 v13, 0x0
+    const-wide/16 v0, 0x0
 
     goto :goto_1
 
-    .line 552
+    .line 550
     :cond_2
-    move-object/from16 v0, p0
+    iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+    iget v9, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
 
-    move-object/from16 v0, p0
+    add-int/lit8 v9, v9, 0x1
 
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+    invoke-interface {v7, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    add-int/lit8 v3, v3, 0x1
+    move-result-object v7
 
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    check-cast v7, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
 
-    move-result-object v2
+    invoke-virtual {v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
 
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+    move-result-wide v2
 
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
+    .line 551
+    .local v2, endIdx:J
+    iget-object v7, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
 
-    move-result-wide v17
+    iget v9, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
+
+    add-int/lit8 v9, v9, 0x1
+
+    invoke-interface {v7, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
+
+    invoke-virtual {v7}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
+
+    move-result-wide v5
 
     .line 553
-    .local v17, endIdx:J
-    move-object/from16 v0, p0
+    .local v5, startIdx:J
+    cmp-long v7, v5, v2
 
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
+    if-lez v7, :cond_3
 
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v21
-
-    .line 555
-    .local v21, startIdx:J
-    cmp-long v2, v21, v17
-
-    if-lez v2, :cond_3
-
-    move-wide/from16 v13, v21
+    move-wide v0, v5
 
     :goto_2
     goto :goto_1
 
     :cond_3
-    move-wide/from16 v13, v17
+    move-wide v0, v2
 
     goto :goto_2
 
-    .line 603
-    .end local v13           #boundary:J
-    .end local v17           #endIdx:J
-    .end local v21           #startIdx:J
+    .line 601
+    .end local v0           #boundary:J
+    .end local v2           #endIdx:J
+    .end local v5           #startIdx:J
     :pswitch_2
-    invoke-virtual/range {p0 .. p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->categoryRightAction()Z
+    invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->categoryRightAction()Z
 
-    .line 604
-    const/4 v2, 0x1
+    move v7, v8
 
+    .line 602
     goto/16 :goto_0
+
+    .line 605
+    :pswitch_3
+    const-string v7, "[DMS]"
+
+    const-string v9, "Shuffle All, save current info to DLNA.xml"
+
+    invoke-static {v7, v9}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 607
-    :pswitch_3
-    const-string v2, "[DMS]"
+    invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getRandomContent()Ljava/lang/String;
 
-    const-string v3, "Shuffle All, save current info to DLNA.xml"
+    move-result-object v4
 
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 608
+    .local v4, randomContent:Ljava/lang/String;
+    invoke-direct {p0, v4, v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->playAll(Ljava/lang/String;Z)V
+
+    move v7, v8
 
     .line 610
-    invoke-direct/range {p0 .. p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getRandomContent()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 612
-    .local v5, randomContent:Ljava/lang/String;
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPreferences:Landroid/content/SharedPreferences;
-
-    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "server"
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "container"
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "content"
-
-    invoke-interface {v2, v3, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "filepath"
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v3
-
-    const-string v4, "startIdx"
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v6, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v6
-
-    invoke-interface {v3, v4, v6, v7}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v3
-
-    const-string v4, "endIdx"
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v6, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
-
-    move-result-wide v6
-
-    invoke-interface {v3, v4, v6, v7}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "direction"
-
-    move-object/from16 v0, p0
-
-    iget v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    const-string v3, "shuffle"
-
-    const/4 v4, 0x1
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    .line 621
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "server = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 622
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "container = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 623
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "contnet = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 625
-    const-string v2, "[DMS]"
-
-    const-string v3, "check DLNA mode"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 626
-    const/4 v2, 0x0
-
-    const/4 v3, -0x1
-
-    const/4 v4, 0x0
-
-    move-object/from16 v0, p0
-
-    invoke-static {v0, v2, v3, v4}, Lcom/htc/music/util/MusicUtils;->checkDLNAMode(Landroid/content/Context;[IIZ)I
-
-    move-result v15
-
-    .line 627
-    .local v15, dlnaMode:I
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "DLNA mode = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 640
-    const/4 v2, 0x1
-
-    if-ne v15, v2, :cond_6
-
-    .line 641
-    const-string v2, "[DMS]"
-
-    const-string v3, "DLNA_DMP mode, modify DMP.xml"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 643
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "server = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 644
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "container = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 645
-    const-string v2, "[DMS]"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "contnet = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 646
-    const-string v2, "[DMS]"
-
-    const-string v3, "shufflemode = 1"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 647
-    const-string v2, "[DMS]"
-
-    const-string v3, "dmpPlayAll"
-
-    invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 649
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    if-eqz v2, :cond_4
-
-    .line 651
-    :try_start_0
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniServerID:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIniContainerID:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v7, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v6, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v6}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getStartIdx()J
-
-    move-result-wide v6
-
-    move-object/from16 v0, p0
-
-    iget-object v8, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mPage:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget v9, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mCurrentPage:I
-
-    invoke-interface {v8, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;
-
-    invoke-virtual {v8}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$pageInfo;->getEndIdx()J
-
-    move-result-wide v8
-
-    move-object/from16 v0, p0
-
-    iget v10, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDirection:I
-
-    const/4 v11, 0x1
-
-    move-object/from16 v0, p0
-
-    iget-object v12, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
-
-    invoke-interface/range {v2 .. v12}, Lcom/htc/music/IDmpUiPlaybackService;->setDlnaPlaylist(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJIILjava/lang/String;)V
-
-    .line 656
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
-
-    invoke-interface {v2}, Lcom/htc/music/IDmpUiPlaybackService;->play()V
-
-    .line 658
-    new-instance v20, Landroid/content/Intent;
-
-    const-class v2, Lcom/htc/music/MediaPlaybackService;
-
-    move-object/from16 v0, v20
-
-    move-object/from16 v1, p0
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 659
-    .local v20, intent_shuffle:Landroid/content/Intent;
-    const-string v2, "command"
-
-    const-string v3, "bindplugin"
-
-    move-object/from16 v0, v20
-
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 661
-    const-string v2, "classname"
-
-    const-string v3, "com.htc.music.DMPMusicPlaybackService"
-
-    move-object/from16 v0, v20
-
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 662
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v20
-
-    invoke-virtual {v0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 672
-    .end local v20           #intent_shuffle:Landroid/content/Intent;
-    :cond_4
-    :goto_3
-    new-instance v19, Landroid/content/Intent;
-
-    const-string v2, "com.htc.music.PLAYBACK_VIEWER"
-
-    move-object/from16 v0, v19
-
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 673
-    .local v19, intent:Landroid/content/Intent;
-    const/high16 v2, 0x400
-
-    move-object/from16 v0, v19
-
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 675
-    const/4 v2, -0x2
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v19
-
-    invoke-virtual {v0, v1, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 689
-    .end local v19           #intent:Landroid/content/Intent;
-    :cond_5
-    :goto_4
-    const/4 v2, 0x1
-
     goto/16 :goto_0
 
-    .line 664
-    :catch_0
-    move-exception v16
+    .line 534
+    nop
 
-    .line 665
-    .local v16, e:Landroid/os/RemoteException;
-    invoke-virtual/range {v16 .. v16}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_3
-
-    .line 677
-    .end local v16           #e:Landroid/os/RemoteException;
-    :cond_6
-    const/4 v2, 0x2
-
-    if-ne v15, v2, :cond_5
-
-    .line 678
-    invoke-direct/range {p0 .. p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getFirstContent()Ljava/lang/String;
-
-    move-result-object v2
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->switchToDMC(Ljava/lang/String;)V
-
-    .line 680
-    new-instance v19, Landroid/content/Intent;
-
-    const-string v2, "com.htc.music.PLAYBACK_VIEWER"
-
-    move-object/from16 v0, v19
-
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 681
-    .restart local v19       #intent:Landroid/content/Intent;
-    const/high16 v2, 0x400
-
-    move-object/from16 v0, v19
-
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 683
-    const/4 v2, -0x2
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v19
-
-    invoke-virtual {v0, v1, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_4
-
-    .line 536
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_1
@@ -6054,26 +4766,26 @@
     .parameter "menu"
 
     .prologue
-    .line 511
+    .line 513
     invoke-super {p0, p1}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
-    .line 514
+    .line 516
     const/16 v1, 0xe
 
     invoke-interface {p1, v1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    .line 515
+    .line 517
     .local v0, item:Landroid/view/MenuItem;
     if-eqz v0, :cond_0
 
-    .line 516
+    .line 518
     iget-boolean v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsMusicExist:Z
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 518
+    .line 520
     :cond_0
     const/16 v1, 0xf
 
@@ -6081,15 +4793,15 @@
 
     move-result-object v0
 
-    .line 519
+    .line 521
     if-eqz v0, :cond_1
 
-    .line 520
+    .line 522
     iget-boolean v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsMusicExist:Z
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 526
+    .line 528
     :cond_1
     const/4 v1, 0x1
 
@@ -6104,7 +4816,7 @@
     .parameter "totalItemCount"
 
     .prologue
-    .line 1433
+    .line 1216
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_0
@@ -6117,23 +4829,23 @@
 
     if-nez v3, :cond_1
 
-    .line 1449
+    .line 1232
     :cond_0
     :goto_0
     return-void
 
-    .line 1435
+    .line 1218
     :cond_1
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
     if-eqz v3, :cond_0
 
-    .line 1437
+    .line 1220
     div-int/lit8 v3, p3, 0x2
 
     add-int v2, p2, v3
 
-    .line 1438
+    .line 1221
     .local v2, position:I
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
@@ -6143,7 +4855,7 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 1441
+    .line 1224
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6152,11 +4864,11 @@
 
     check-cast v0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
 
-    .line 1443
+    .line 1226
     .local v0, info:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$ContentInfo;
     if-eqz v0, :cond_0
 
-    .line 1444
+    .line 1227
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6170,7 +4882,7 @@
 
     move-result v1
 
-    .line 1445
+    .line 1228
     .local v1, pos:I
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mMemoryCache:Lcom/htc/music/util/MemoryCacheBitmapByPosition;
 
@@ -6187,43 +4899,43 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1408
+    .line 1191
     packed-switch p2, :pswitch_data_0
 
-    .line 1429
+    .line 1212
     :cond_0
     :goto_0
     return-void
 
-    .line 1410
+    .line 1193
     :pswitch_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsScrolling:Z
 
-    .line 1411
+    .line 1194
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     invoke-virtual {v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
-    .line 1414
+    .line 1197
     :pswitch_1
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsScrolling:Z
 
     goto :goto_0
 
-    .line 1417
+    .line 1200
     :pswitch_2
     iput-boolean v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mIsScrolling:Z
 
-    .line 1419
+    .line 1202
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
 
-    .line 1421
+    .line 1204
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -6237,17 +4949,17 @@
 
     goto :goto_0
 
-    .line 1422
+    .line 1205
     :catch_0
     move-exception v0
 
-    .line 1424
+    .line 1207
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1408
+    .line 1191
     nop
 
     :pswitch_data_0
@@ -6268,17 +4980,17 @@
 
     const/4 v5, 0x0
 
-    .line 269
+    .line 271
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onStart()V
 
-    .line 271
-    const-string v2, "TAG"
+    .line 273
+    const-string v2, "[DMS]"
 
     const-string v3, "onStart"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
+    .line 275
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -6291,7 +5003,7 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 274
+    .line 276
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -6306,7 +5018,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    .line 277
+    .line 279
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContentList:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
@@ -6319,13 +5031,13 @@
 
     if-nez v2, :cond_1
 
-    .line 279
+    .line 281
     :cond_0
-    const v2, 0x7f0700c9
+    const v2, 0x7f0700ca
 
     invoke-virtual {p0, v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->showEmptyView(I)V
 
-    .line 282
+    .line 284
     :cond_1
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->CheckDLNAStatus(Landroid/content/Context;)I
 
@@ -6333,7 +5045,7 @@
 
     iput v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
 
-    .line 283
+    .line 285
     const-string v2, "[DMS]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6358,19 +5070,19 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
+    .line 287
     iget v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
 
     if-ne v2, v7, :cond_5
 
-    .line 286
+    .line 288
     invoke-static {p0}, Lcom/htc/music/util/MusicUtils;->getCurDMR(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurDMR:Ljava/lang/String;
 
-    .line 306
+    .line 308
     :cond_2
     :goto_0
     iget v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
@@ -6383,7 +5095,7 @@
 
     if-ne v2, v3, :cond_7
 
-    .line 307
+    .line 309
     :cond_3
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
@@ -6397,7 +5109,7 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 308
+    .line 310
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -6412,23 +5124,23 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    .line 315
+    .line 317
     :cond_4
     :goto_1
     return-void
 
-    .line 287
+    .line 289
     :cond_5
     iget v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
 
     if-ne v2, v6, :cond_2
 
-    .line 288
+    .line 290
     invoke-direct {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getDmpCurContent()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 289
+    .line 291
     .local v0, content:Ljava/lang/String;
     const-string v2, "[DMS]"
 
@@ -6452,7 +5164,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 291
+    .line 293
     const-string v2, "[DMS]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6477,7 +5189,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 292
+    .line 294
     if-eqz v0, :cond_6
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurContent:Ljava/lang/String;
@@ -6488,46 +5200,46 @@
 
     if-nez v2, :cond_6
 
-    .line 293
+    .line 295
     iput-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurContent:Ljava/lang/String;
 
-    .line 295
+    .line 297
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     if-eqz v2, :cond_6
 
-    .line 296
+    .line 298
     const-string v2, "[DMS]"
 
     const-string v3, "onStart: update indicator"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 297
+    .line 299
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
 
     invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;->notifyDataSetChanged()V
 
-    .line 301
+    .line 303
     :cond_6
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 302
+    .line 304
     .local v1, pluginIntentFilter:Landroid/content/IntentFilter;
     const-string v2, "com.htc.music.metachanged"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 303
+    .line 305
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v2, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     goto/16 :goto_0
 
-    .line 310
+    .line 312
     .end local v0           #content:Ljava/lang/String;
     .end local v1           #pluginIntentFilter:Landroid/content/IntentFilter;
     :cond_7
@@ -6539,7 +5251,7 @@
 
     if-nez v2, :cond_4
 
-    .line 311
+    .line 313
     :cond_8
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
@@ -6553,7 +5265,7 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 312
+    .line 314
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -6579,15 +5291,15 @@
 
     const/4 v4, 0x1
 
-    .line 431
+    .line 433
     invoke-super {p0}, Lcom/htc/music/widget/MusicAutoHeaderFooterListActivity;->onStop()V
 
-    .line 433
+    .line 435
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-eqz v1, :cond_0
 
-    .line 435
+    .line 437
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
@@ -6597,7 +5309,7 @@
 
     invoke-interface {v1, v2, v3}, Lcom/htc/dlnainterface/IDLNAPluginService;->cancelContentThumbnail(II)V
 
-    .line 436
+    .line 438
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     const/4 v2, 0x1
@@ -6606,7 +5318,7 @@
 
     invoke-interface {v1, v2, v3}, Lcom/htc/dlnainterface/IDLNAPluginService;->serverUnsubscribed(ILjava/lang/String;)V
 
-    .line 437
+    .line 439
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     const/4 v2, 0x1
@@ -6617,7 +5329,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 442
+    .line 444
     :goto_0
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
@@ -6627,16 +5339,16 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 443
+    .line 445
     iput-object v5, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 447
+    .line 449
     :cond_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
 
     if-eqz v1, :cond_1
 
-    .line 448
+    .line 450
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -6645,16 +5357,16 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 449
+    .line 451
     iput-object v5, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpService:Lcom/htc/music/IDmpUiPlaybackService;
 
-    .line 453
+    .line 455
     :cond_1
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmcService:Lcom/htc/music/IDmcUiPlaybackService;
 
     if-eqz v1, :cond_2
 
-    .line 454
+    .line 456
     invoke-virtual {p0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -6663,29 +5375,29 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 455
+    .line 457
     iput-object v5, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmcService:Lcom/htc/music/IDmcUiPlaybackService;
 
-    .line 459
+    .line 461
     :cond_2
     iget v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
 
     if-ne v1, v4, :cond_3
 
-    .line 460
+    .line 462
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmpListener:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 463
+    .line 465
     :cond_3
     return-void
 
-    .line 438
+    .line 440
     :catch_0
     move-exception v0
 
-    .line 440
+    .line 442
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -6698,22 +5410,22 @@
     .parameter "show"
 
     .prologue
-    .line 984
+    .line 826
     const/4 v1, 0x0
 
-    .line 985
+    .line 827
     .local v1, pb:Landroid/widget/ProgressBar;
     const/4 v2, 0x0
 
-    .line 986
+    .line 828
     .local v2, tv:Landroid/widget/TextView;
     const/4 v0, 0x0
 
-    .line 988
+    .line 830
     .local v0, fl:Lcom/htc/widget/HtcListItem;
     if-nez p1, :cond_2
 
-    .line 989
+    .line 831
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mListView:Lcom/htc/widget/HtcListView;
 
     invoke-virtual {v3, p1}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
@@ -6723,12 +5435,12 @@
     .end local v0           #fl:Lcom/htc/widget/HtcListItem;
     check-cast v0, Lcom/htc/widget/HtcListItem;
 
-    .line 993
+    .line 835
     .restart local v0       #fl:Lcom/htc/widget/HtcListItem;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 994
+    .line 836
     const v3, 0x7f080021
 
     invoke-virtual {v0, v3}, Lcom/htc/widget/HtcListItem;->findViewById(I)Landroid/view/View;
@@ -6738,7 +5450,7 @@
     .end local v1           #pb:Landroid/widget/ProgressBar;
     check-cast v1, Landroid/widget/ProgressBar;
 
-    .line 995
+    .line 837
     .restart local v1       #pb:Landroid/widget/ProgressBar;
     const v3, 0x7f080022
 
@@ -6749,19 +5461,19 @@
     .end local v2           #tv:Landroid/widget/TextView;
     check-cast v2, Landroid/widget/TextView;
 
-    .line 998
+    .line 840
     .restart local v2       #tv:Landroid/widget/TextView;
     :cond_0
     if-eqz v1, :cond_1
 
     if-nez v2, :cond_3
 
-    .line 1012
+    .line 854
     :cond_1
     :goto_1
     return-void
 
-    .line 991
+    .line 833
     :cond_2
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mListView:Lcom/htc/widget/HtcListView;
 
@@ -6783,7 +5495,7 @@
     .restart local v0       #fl:Lcom/htc/widget/HtcListItem;
     goto :goto_0
 
-    .line 1001
+    .line 843
     :cond_3
     if-eqz p2, :cond_4
 
@@ -6792,36 +5504,36 @@
     :goto_2
     invoke-virtual {v1, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 1003
+    .line 845
     if-nez p1, :cond_6
 
-    .line 1004
+    .line 846
     if-eqz p2, :cond_5
 
-    const v3, 0x7f0700cd
+    const v3, 0x7f0700ce
 
     :goto_3
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_1
 
-    .line 1001
+    .line 843
     :cond_4
     const/16 v3, 0x8
 
     goto :goto_2
 
-    .line 1004
+    .line 846
     :cond_5
-    const v3, 0x7f0700cc
+    const v3, 0x7f0700cd
 
     goto :goto_3
 
-    .line 1007
+    .line 849
     :cond_6
     if-eqz p2, :cond_7
 
-    const v3, 0x7f0700cb
+    const v3, 0x7f0700cc
 
     :goto_4
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
@@ -6829,7 +5541,7 @@
     goto :goto_1
 
     :cond_7
-    const v3, 0x7f0700ca
+    const v3, 0x7f0700cb
 
     goto :goto_4
 .end method
@@ -6839,14 +5551,14 @@
     .parameter "ContentID"
 
     .prologue
-    .line 1198
+    .line 1042
     const-string v0, "[DMS]"
 
     const-string v1, "DLNA_DMC mode, modify DMC.xml info"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1199
+    .line 1043
     const-string v0, "[DMS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6871,7 +5583,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1200
+    .line 1044
     const-string v0, "[DMS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6896,7 +5608,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1201
+    .line 1045
     const-string v0, "[DMS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6919,33 +5631,33 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1202
+    .line 1046
     const-string v0, "[DMS]"
 
     const-string v1, "shufflemode = 0"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1203
+    .line 1047
     const-string v0, "[DMS]"
 
     const-string v1, "dmcplayall"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1205
+    .line 1049
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmcService:Lcom/htc/music/IDmcUiPlaybackService;
 
     if-eqz v0, :cond_0
 
-    .line 1207
+    .line 1051
     const-string v0, "[DMS]"
 
     const-string v1, "enter click"
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1209
+    .line 1053
     :try_start_0
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmcService:Lcom/htc/music/IDmcUiPlaybackService;
 
@@ -6989,19 +5701,19 @@
 
     invoke-interface/range {v0 .. v9}, Lcom/htc/music/IDmcUiPlaybackService;->setDlnaPlaylist(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJILjava/lang/String;)V
 
-    .line 1213
+    .line 1057
     iget-object v0, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDmcService:Lcom/htc/music/IDmcUiPlaybackService;
 
     invoke-interface {v0}, Lcom/htc/music/IDmcUiPlaybackService;->play()V
 
-    .line 1215
+    .line 1059
     new-instance v11, Landroid/content/Intent;
 
     const-class v0, Lcom/htc/music/MediaPlaybackService;
 
     invoke-direct {v11, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1216
+    .line 1060
     .local v11, intent:Landroid/content/Intent;
     const-string v0, "command"
 
@@ -7009,29 +5721,29 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1218
+    .line 1062
     const-string v0, "classname"
 
     const-string v1, "com.htc.music.DMCMusicPlaybackService"
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1219
+    .line 1063
     invoke-virtual {p0, v11}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1226
+    .line 1070
     .end local v11           #intent:Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 1221
+    .line 1065
     :catch_0
     move-exception v10
 
-    .line 1222
+    .line 1066
     .local v10, e:Landroid/os/RemoteException;
     invoke-virtual {v10}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -7042,27 +5754,27 @@
     .locals 4
 
     .prologue
-    .line 1026
+    .line 868
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mContainerList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 1028
+    .line 870
     .local v1, size:I
     const-string v2, ""
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
 
-    .line 1030
+    .line 872
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 1031
+    .line 873
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7085,7 +5797,7 @@
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
 
-    .line 1032
+    .line 874
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7118,12 +5830,12 @@
 
     iput-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mFilePath:Ljava/lang/String;
 
-    .line 1030
+    .line 872
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1034
+    .line 876
     :cond_0
     return-void
 .end method

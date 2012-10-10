@@ -38,14 +38,14 @@
     .locals 2
 
     .prologue
-    .line 133
+    .line 148
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getIccState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v0
 
-    .line 134
+    .line 149
     .local v0, iccState:Lcom/android/internal/telephony/IccCard$State;
     sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -75,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 88
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getDeviceLock()Z
@@ -89,14 +89,14 @@
     .locals 3
 
     .prologue
-    .line 110
+    .line 112
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v0
 
-    .line 111
+    .line 113
     .local v0, simState:Lcom/android/internal/telephony/IccCard$State;
     sget-object v1, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -131,14 +131,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 91
+    .line 93
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v0
 
-    .line 93
+    .line 95
     .local v0, simState:Lcom/android/internal/telephony/IccCard$State;
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -202,159 +202,162 @@
     return v1
 .end method
 
-.method private isUimPinSecure()Z
-    .locals 2
+.method private isSubSimPinSecure()Z
+    .locals 4
 
     .prologue
-    .line 127
-    iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getUimState()Lcom/android/internal/telephony/IccCard$State;
+    .line 120
+    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSubSimState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v0
 
-    .line 128
-    .local v0, uimState:Lcom/android/internal/telephony/IccCard$State;
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+    .line 121
+    .local v0, subSimState:Lcom/android/internal/telephony/IccCard$State;
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_1
 
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_1
 
-    sget-object v1, Lcom/android/internal/telephony/IccCard$State;->ABSENT:Lcom/android/internal/telephony/IccCard$State;
+    const-string v2, "keyguard.no_require_sim"
 
-    if-ne v0, v1, :cond_1
+    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_0
-    const/4 v1, 0x1
+    move-result-object v2
 
-    :goto_0
-    return v1
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    :cond_1
-    const/4 v1, 0x0
+    move-result v2
 
-    goto :goto_0
-.end method
+    if-eqz v2, :cond_0
 
+    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mContext:Landroid/content/Context;
 
-# virtual methods
-.method public DualisSecure()Z
-    .locals 3
+    if-eqz v2, :cond_0
 
-    .prologue
-    const/4 v1, 0x1
+    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mContext:Landroid/content/Context;
 
-    const/4 v0, 0x0
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 117
-    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualPhoneEnable()Z
+    move-result-object v2
+
+    const-string v3, "airplane_mode_on"
+
+    invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualGSMPhoneEnable()Z
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->ABSENT:Lcom/android/internal/telephony/IccCard$State;
 
-    move-result v2
+    if-eq v0, v2, :cond_1
 
-    if-eqz v2, :cond_4
-
-    .line 118
     :cond_0
-    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->ICC_FAIL:Lcom/android/internal/telephony/IccCard$State;
 
-    invoke-virtual {v2}, Lcom/android/internal/widget/LockPatternUtils;->isSecure()Z
+    if-eq v0, v2, :cond_1
 
-    move-result v2
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->ICC_EXPIRED:Lcom/android/internal/telephony/IccCard$State;
 
-    if-eqz v2, :cond_1
+    if-eq v0, v2, :cond_1
 
-    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCard$State;
 
-    invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getPasswordTimeout()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
+    if-ne v0, v2, :cond_2
 
     :cond_1
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isSimPinSecure()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isUimPinSecure()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isLockDeviceSecure()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isNetworkLockSecure()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
+    const/4 v1, 0x1
 
     :cond_2
-    move v0, v1
-
-    .line 121
-    :cond_3
-    :goto_0
-    return v0
-
-    :cond_4
-    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    invoke-virtual {v2}, Lcom/android/internal/widget/LockPatternUtils;->isSecure()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
-
-    invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getPasswordTimeout()Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    :cond_5
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isSimPinSecure()Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isLockDeviceSecure()Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isNetworkLockSecure()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    :cond_6
-    move v0, v1
-
-    goto :goto_0
+    return v1
 .end method
 
+.method private isUimPinSecure()Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 134
+    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
+
+    invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getUimState()Lcom/android/internal/telephony/IccCard$State;
+
+    move-result-object v0
+
+    .line 135
+    .local v0, uimState:Lcom/android/internal/telephony/IccCard$State;
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+
+    if-eq v0, v2, :cond_1
+
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
+
+    if-eq v0, v2, :cond_1
+
+    const-string v2, "keyguard.no_require_sim"
+
+    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mContext:Landroid/content/Context;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "airplane_mode_on"
+
+    invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->ABSENT:Lcom/android/internal/telephony/IccCard$State;
+
+    if-eq v0, v2, :cond_1
+
+    :cond_0
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->ICC_FAIL:Lcom/android/internal/telephony/IccCard$State;
+
+    if-eq v0, v2, :cond_1
+
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->ICC_EXPIRED:Lcom/android/internal/telephony/IccCard$State;
+
+    if-eq v0, v2, :cond_1
+
+    sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PERM_DISABLED:Lcom/android/internal/telephony/IccCard$State;
+
+    if-ne v0, v2, :cond_2
+
+    :cond_1
+    const/4 v1, 0x1
+
+    :cond_2
+    return v1
+.end method
+
+
+# virtual methods
 .method public createKeyguardView(Landroid/content/Context;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardWindowController;)Lcom/android/internal/policy/impl/KeyguardViewBase;
     .locals 2
     .parameter "context"
@@ -376,75 +379,111 @@
 .end method
 
 .method public isSecure()Z
-    .locals 2
+    .locals 4
 
     .prologue
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
     .line 70
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    const/16 v1, 0xe3
+    invoke-virtual {v3}, Lcom/android/internal/widget/LockPatternUtils;->isSecure()Z
 
-    if-eq v0, v1, :cond_0
+    move-result v3
 
-    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    if-eqz v3, :cond_0
 
-    const/16 v1, 0xe4
+    iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getPasswordTimeout()Z
 
-    .line 72
+    move-result v3
+
+    if-nez v3, :cond_1
+
     :cond_0
-    invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->DualisSecure()Z
-
-    move-result v0
-
-    .line 78
-    :goto_0
-    return v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-
-    invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->isSecure()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
-
-    invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getPasswordTimeout()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    :cond_2
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isSimPinSecure()Z
 
-    move-result v0
+    move-result v3
 
-    if-nez v0, :cond_3
+    if-nez v3, :cond_1
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isLockDeviceSecure()Z
 
-    move-result v0
+    move-result v3
 
-    if-nez v0, :cond_3
+    if-nez v3, :cond_1
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isNetworkLockSecure()Z
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_4
+    if-eqz v3, :cond_4
 
+    :cond_1
+    move v0, v2
+
+    .line 72
+    .local v0, secure:Z
+    :goto_0
+    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualPhoneEnable()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    .line 73
+    if-nez v0, :cond_2
+
+    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isUimPinSecure()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    :cond_2
+    move v1, v2
+
+    .line 81
     :cond_3
-    const/4 v0, 0x1
+    :goto_1
+    return v1
 
-    goto :goto_0
-
+    .end local v0           #secure:Z
     :cond_4
-    const/4 v0, 0x0
+    move v0, v1
 
+    .line 70
     goto :goto_0
+
+    .line 74
+    .restart local v0       #secure:Z
+    :cond_5
+    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualGSMPhoneEnable()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    .line 75
+    if-nez v0, :cond_6
+
+    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;->isSubSimPinSecure()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    :cond_6
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_7
+    move v1, v0
+
+    .line 81
+    goto :goto_1
 .end method

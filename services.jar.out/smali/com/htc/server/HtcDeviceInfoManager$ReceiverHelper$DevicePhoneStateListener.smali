@@ -24,13 +24,13 @@
     .parameter "handler"
 
     .prologue
-    .line 325
+    .line 335
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
-    .line 326
+    .line 336
     iput-object p1, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$DevicePhoneStateListener;->mHandler:Landroid/os/Handler;
 
-    .line 327
+    .line 337
     return-void
 .end method
 
@@ -42,30 +42,30 @@
     .parameter "phoneNumber"
 
     .prologue
-    .line 330
+    .line 340
     const-string v0, "HtcDeviceInfoManager"
 
     const-string v1, "DevicePhoneStateListener.onCallStateChanged"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
+    .line 342
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$DevicePhoneStateListener;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 352
+    .line 362
     :goto_0
     return-void
 
-    .line 335
+    .line 345
     :cond_0
     packed-switch p1, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 338
+    .line 348
     :pswitch_1
     const-string v0, "HtcDeviceInfoManager"
 
@@ -73,7 +73,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
+    .line 349
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$DevicePhoneStateListener;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$DevicePhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -88,7 +88,7 @@
 
     goto :goto_0
 
-    .line 343
+    .line 353
     :pswitch_2
     const-string v0, "HtcDeviceInfoManager"
 
@@ -96,7 +96,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
+    .line 354
     iget-object v0, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$DevicePhoneStateListener;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/server/HtcDeviceInfoManager$ReceiverHelper$DevicePhoneStateListener;->mHandler:Landroid/os/Handler;
@@ -111,7 +111,7 @@
 
     goto :goto_0
 
-    .line 335
+    .line 345
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

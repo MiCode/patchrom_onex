@@ -25,13 +25,13 @@
     .parameter "context"
 
     .prologue
-    .line 626
+    .line 667
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 627
+    .line 668
     invoke-direct {p0, p2}, Landroid/view/WindowOrientationListener;-><init>(Landroid/content/Context;)V
 
-    .line 628
+    .line 669
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .parameter "rotation"
 
     .prologue
-    .line 635
+    .line 676
     const-string v0, "WindowManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,18 +65,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 639
+    .line 680
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-boolean v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mShowingShutdownAnim:Z
 
     if-eqz v0, :cond_0
 
-    .line 648
+    .line 689
     :goto_0
     return-void
 
-    .line 647
+    .line 688
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 

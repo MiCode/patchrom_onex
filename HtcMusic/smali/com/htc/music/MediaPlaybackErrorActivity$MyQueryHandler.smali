@@ -25,13 +25,13 @@
     .parameter "res"
 
     .prologue
-    .line 887
+    .line 911
     iput-object p1, p0, Lcom/htc/music/MediaPlaybackErrorActivity$MyQueryHandler;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
 
-    .line 888
+    .line 912
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 889
+    .line 913
     return-void
 .end method
 
@@ -44,11 +44,11 @@
     .parameter "cursor"
 
     .prologue
-    .line 893
+    .line 917
     iget-object v0, p0, Lcom/htc/music/MediaPlaybackErrorActivity$MyQueryHandler;->this$0:Lcom/htc/music/MediaPlaybackErrorActivity;
 
     invoke-virtual {v0, p3}, Lcom/htc/music/MediaPlaybackErrorActivity;->init(Landroid/database/Cursor;)V
 
-    .line 894
+    .line 918
     return-void
 .end method

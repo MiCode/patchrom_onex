@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Thêm một danh sách phát</string>
     <string name="htc_delete_playlists">Xóa danh sách phát</string>
     <string name="htc_delete_playlist">Xóa danh sách phát</string>
+    <string name="htc_delete_all_playlists">Xóa tất cả danh sách phát</string>
     <string name="htc_playlist_add_songs">Thêm bài hát</string>
     <string name="htc_playlist_del_songs">Xóa bài hát</string>
     <string name="htc_playlist_remove_songs">Gỡ bỏ bài hát</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Đang tải bộ nhớ đệm...</string>
     <string name="title_send_content">Đang gửi nội dung...</string>
     <string name="no_downloaded_apps_found">Không tìm thấy ứng dụng đã tải nào</string>
+    <string name="music_folder_picker_dialog_msg">Thêm bài hát vào danh sách phát bằng cách chọn thư mục? Không để thêm các bài hát bằng cách khác</string>
 </resources>

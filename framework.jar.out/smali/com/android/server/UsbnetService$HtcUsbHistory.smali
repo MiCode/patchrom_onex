@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 721
+    .line 730
     iput-object p1, p0, Lcom/android/server/UsbnetService$HtcUsbHistory;->this$0:Lcom/android/server/UsbnetService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
     .parameter "x1"
 
     .prologue
-    .line 721
+    .line 730
     invoke-direct {p0, p1}, Lcom/android/server/UsbnetService$HtcUsbHistory;-><init>(Lcom/android/server/UsbnetService;)V
 
     return-void

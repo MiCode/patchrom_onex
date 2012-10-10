@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 2850
+    .line 3197
     iput-object p1, p0, Lcom/htc/app/FilePickerCore$11;->this$0:Lcom/htc/app/FilePickerCore;
 
     iput-object p2, p0, Lcom/htc/app/FilePickerCore$11;->val$fileScannerOfRecent:Lcom/htc/app/FileScanner;
@@ -46,18 +46,18 @@
     .locals 2
 
     .prologue
-    .line 2853
+    .line 3200
     const-string v0, "FilePickerWithDB"
 
     const-string v1, "#### scanFilesByRecent on doScanFiles"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2854
+    .line 3201
     iget-object v0, p0, Lcom/htc/app/FilePickerCore$11;->val$fileScannerOfRecent:Lcom/htc/app/FileScanner;
 
     invoke-virtual {v0}, Lcom/htc/app/FileScanner;->scanFilesByRecent()V
 
-    .line 2855
+    .line 3202
     return-void
 .end method

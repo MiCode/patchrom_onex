@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1048
+    .line 1112
     iput-object p1, p0, Lcom/htc/app/HtcShutdownThread$7;->this$0:Lcom/htc/app/HtcShutdownThread;
 
     invoke-direct {p0}, Landroid/os/storage/IMountShutdownObserver$Stub;-><init>()V
@@ -44,11 +44,11 @@
     .end annotation
 
     .prologue
-    .line 1052
+    .line 1116
     iget-object v0, p0, Lcom/htc/app/HtcShutdownThread$7;->this$0:Lcom/htc/app/HtcShutdownThread;
 
     invoke-virtual {v0}, Lcom/htc/app/HtcShutdownThread;->actionDone()V
 
-    .line 1053
+    .line 1117
     return-void
 .end method

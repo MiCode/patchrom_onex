@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 64
+    .line 61
     iput-object p1, p0, Lcom/android/camera/component/AsyncCameraThreadComponent$1$1;->this$1:Lcom/android/camera/component/AsyncCameraThreadComponent$1;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +41,13 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 65
     iget-object v0, p0, Lcom/android/camera/component/AsyncCameraThreadComponent$1$1;->this$1:Lcom/android/camera/component/AsyncCameraThreadComponent$1;
 
     iget-object v0, v0, Lcom/android/camera/component/AsyncCameraThreadComponent$1;->this$0:Lcom/android/camera/component/AsyncCameraThreadComponent;
 
     invoke-virtual {v0}, Lcom/android/camera/component/AsyncCameraThreadComponent;->onWorkerThreadRunning()V
 
-    .line 68
+    .line 66
     return-void
 .end method

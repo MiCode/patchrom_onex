@@ -137,6 +137,7 @@
     <string name="htc_add_a_playlist">Lisää soittoluettelo</string>
     <string name="htc_delete_playlists">Poista soittoluettelot</string>
     <string name="htc_delete_playlist">Poista soittoluettelo</string>
+    <string name="htc_delete_all_playlists">Poista kaikki soittolistat</string>
     <string name="htc_playlist_add_songs">Lisää kappaleita</string>
     <string name="htc_playlist_del_songs">Poista kappaleita</string>
     <string name="htc_playlist_remove_songs">Poista kappaleita</string>
@@ -416,4 +417,5 @@
     <string name="title_buffering">Puskuroidaan...</string>
     <string name="title_send_content">Lähet. sisält...</string>
     <string name="no_downloaded_apps_found">Ladattuja sovelluksia ei löydy</string>
+    <string name="music_folder_picker_dialog_msg">Lisää kappaleita soittolistaan valitsemalla kansio? Ei lisätäksesi kappaleita toisella tavalla</string>
 </resources>

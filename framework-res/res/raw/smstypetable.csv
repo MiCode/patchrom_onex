@@ -13,14 +13,51 @@
 # Optional Service: 0xEF44 -> 0xEF55 (support ack)
 #com.kddi.android.intent.action.UNSUP_SMS_RECEIVED,com.kddi.android.permission.RECEIVE_UNSUP_SMS,0,0xFFFF,0xFF,0,2,0xEF44,0,2,0xEF55
 
+#####################################################
+#+Arc 20120328, change range according to 111208_SMSforRoaming.xls
+
+# Optional Service: 0xEF40 -> 0xEF55 (discard, ack)
+,,0,0xFFFF,0xFF,0,2,0xEF40,0,2,0xEF55
+
 # Optional Service: 0xEF56 -> 0xEF7E (discard, nack)
 ,,1,0xFFFF,0xFF,0,2,0xEF56,0,2,0xEF7E
 
 # Other Service: 0x0002 -> 0x005F (discard, nack)
 ,,1,0xFFFF,0xFF,0,2,0x0002,0,2,0x005F
 
-# Other Service: 0x0060 -> 0x00AF (discard, ack)
-,,0,0xFFFF,0xFF,0,2,0x0060,0,2,0x00AF
+# Other Service: 0x0060 -> 0x00FF (discard, ack)
+,,0,0xFFFF,0xFF,0,2,0x0060,0,2,0x00FF
 
-# Other Service: 0x00B0 -> 0x00FF (support, ack)
-#com.kddi.android.intent.action.UNSUP_SMS_RECEIVED,com.kddi.android.permission.RECEIVE_UNSUP_SMS,0,0xFFFF,0xFF,0,2,0x00B0,0,2,0x00FF
+#-Arc
+#####################################################
+
+#####################################################
+#+Arc 20120328, according to 111208_SMSforRoaming.xls
+
+# Voice Mail Notification(Type-1): 0x0000 (support, ack)
+#,,0,0x0000,0x00,,,,,,
+
+# C-Mail(E): 0x0001 (support, ack)
+#,,0,0x0001,0x00,,,,,,
+
+# CMAIL: 0x0100 (support, ack)
+#,,0,0x0100,0x00,,,,,,
+
+# Voice Mail Notification(Type-2): 0x0101 (support, ack)
+#,,0,0x0101,0x00,,,,,,
+
+# Missed Call Notification: 0x0102 (support, ack)
+#,,0,0x0102,0x00,,,,,,
+
+# C-Mail: 0x0103 -> 0x01FF (support ack)
+#,,0,0xFFFF,0xFF,0,2,0x0103,0,2,0x01FF
+
+# Call Notification of Fixed-Line Home Phone: 0x0201 (support, ack)
+#,,0,0x0201,0x00,,,,,,
+
+# C-Mail: 0x0202 -> 0xEF39 (support ack)
+#,,0,0xFFFF,0xFF,0,2,0x0202,0,2,0xEF39
+
+#-Arc
+#####################################################
+

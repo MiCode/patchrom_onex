@@ -155,7 +155,9 @@
     <item type="id" name="receiver_camera_swap">false</item>
     <item type="id" name="function_bar">false</item>
     <item type="id" name="function_bar_item_capture_modes">false</item>
+    <item type="id" name="function_bar_item_settings_container">false</item>
     <item type="id" name="function_bar_item_settings">false</item>
+    <item type="id" name="function_bar_item_flash_container">false</item>
     <item type="id" name="function_bar_item_flash">false</item>
     <item type="id" name="main_bar_view">false</item>
     <item type="id" name="main_bar_stub">false</item>

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 7857
+    .line 8045
     iput-object p1, p0, Lcom/android/camera/HTCCamera$TVDisplayListener;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcTVDisplayHelper$HtcTVDisplayListener;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 7857
+    .line 8045
     invoke-direct {p0, p1}, Lcom/android/camera/HTCCamera$TVDisplayListener;-><init>(Lcom/android/camera/HTCCamera;)V
 
     return-void
@@ -50,14 +50,26 @@
     .locals 4
 
     .prologue
-    .line 7862
+    .line 8050
     const-string v1, "HTCCamera"
 
     const-string v2, "Reset remote screen orientation onTVOff"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7863
+    .line 8052
+    invoke-static {}, Lcom/android/camera/DisplayDevice;->isSupportMirrorMode()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 8068
+    :goto_0
+    return-void
+
+    .line 8055
+    :cond_0
     iget-object v1, p0, Lcom/android/camera/HTCCamera$TVDisplayListener;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v1, v1, Lcom/android/camera/HTCCamera;->isActivityPaused:Lcom/android/camera/property/Property;
@@ -72,25 +84,23 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    .line 7864
+    .line 8056
     const-string v1, "HTCCamera"
 
     const-string v2, "isActivityPaused = true"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7876
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 7870
-    :cond_0
+    .line 8062
+    :cond_1
     :try_start_0
     invoke-static {}, Lcom/htc/wrap/android/view/HtcWrapSurface;->resetRemoteScreenOrientation()V
 
-    .line 7871
+    .line 8063
     iget-object v1, p0, Lcom/android/camera/HTCCamera$TVDisplayListener;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v1, v1, Lcom/android/camera/HTCCamera;->isMirrorMode:Lcom/android/camera/property/Property;
@@ -114,11 +124,11 @@
 
     goto :goto_0
 
-    .line 7872
+    .line 8064
     :catch_0
     move-exception v0
 
-    .line 7874
+    .line 8066
     .local v0, ex:Ljava/lang/Throwable;
     const-string v1, "HTCCamera"
 
@@ -133,14 +143,26 @@
     .locals 4
 
     .prologue
-    .line 7881
+    .line 8073
     const-string v1, "HTCCamera"
 
     const-string v2, "set remote screen orientation onTVOn"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7883
+    .line 8075
+    invoke-static {}, Lcom/android/camera/DisplayDevice;->isSupportMirrorMode()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 8091
+    :goto_0
+    return-void
+
+    .line 8078
+    :cond_0
     iget-object v1, p0, Lcom/android/camera/HTCCamera$TVDisplayListener;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v1, v1, Lcom/android/camera/HTCCamera;->isActivityPaused:Lcom/android/camera/property/Property;
@@ -155,27 +177,25 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    .line 7884
+    .line 8079
     const-string v1, "HTCCamera"
 
     const-string v2, "isActivityPaused = true"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7896
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 7890
-    :cond_0
+    .line 8085
+    :cond_1
     const/4 v1, 0x3
 
     :try_start_0
     invoke-static {v1}, Lcom/htc/wrap/android/view/HtcWrapSurface;->setRemoteScreenOrientation(I)V
 
-    .line 7891
+    .line 8086
     iget-object v1, p0, Lcom/android/camera/HTCCamera$TVDisplayListener;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v1, v1, Lcom/android/camera/HTCCamera;->isMirrorMode:Lcom/android/camera/property/Property;
@@ -199,11 +219,11 @@
 
     goto :goto_0
 
-    .line 7892
+    .line 8087
     :catch_0
     move-exception v0
 
-    .line 7894
+    .line 8089
     .local v0, ex:Ljava/lang/Throwable;
     const-string v1, "HTCCamera"
 

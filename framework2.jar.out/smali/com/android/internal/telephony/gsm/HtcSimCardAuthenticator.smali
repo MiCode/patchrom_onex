@@ -56,21 +56,45 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .prologue
+    .line 91
+    sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v1, 0x31
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    sput-boolean v0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->USE_GENERIC_IO_FOR_QCT_AT_BASED:Z
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 55
+    .line 56
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 59
+    .line 60
     new-instance v0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;-><init>(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mService:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;
 
-    .line 642
+    .line 645
     return-void
 .end method
 
@@ -79,26 +103,36 @@
     .parameter "x0"
 
     .prologue
-    .line 55
+    .line 56
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[BLandroid/os/Message;)V
+.method static synthetic access$400()Z
+    .locals 1
+
+    .prologue
+    .line 56
+    sget-boolean v0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->USE_GENERIC_IO_FOR_QCT_AT_BASED:Z
+
+    return v0
+.end method
+
+.method static synthetic access$500(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[BLandroid/os/Message;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
     .parameter "x2"
 
     .prologue
-    .line 55
+    .line 56
     invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestGsmAuthenticationOverUiccAuth([BLandroid/os/Message;)V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[B[BLandroid/os/Message;)V
+.method static synthetic access$600(Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;[B[BLandroid/os/Message;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -106,7 +140,7 @@
     .parameter "x3"
 
     .prologue
-    .line 55
+    .line 56
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->requestAkaAuthenticationOverUiccAuth([B[BLandroid/os/Message;)V
 
     return-void
@@ -117,7 +151,7 @@
     .parameter "hexString"
 
     .prologue
-    .line 366
+    .line 368
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -128,16 +162,16 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 367
+    .line 369
     invoke-static {p0}, Lcom/android/internal/telephony/IccUtils;->hexStringToBytes(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 368
+    .line 370
     .local v0, hex:[B
     const/4 v2, 0x0
 
-    .line 369
+    .line 371
     .local v2, result:I
     const/4 v1, 0x0
 
@@ -147,7 +181,7 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 370
+    .line 372
     aget-byte v3, v0, v1
 
     and-int/lit16 v3, v3, 0xff
@@ -164,12 +198,12 @@
 
     or-int/2addr v2, v3
 
-    .line 369
+    .line 371
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 375
+    .line 377
     .end local v0           #hex:[B
     .end local v1           #i:I
     .end local v2           #result:I
@@ -185,7 +219,7 @@
     .parameter "hexString"
 
     .prologue
-    .line 380
+    .line 382
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -196,16 +230,16 @@
 
     if-gt v4, v5, :cond_0
 
-    .line 381
+    .line 383
     invoke-static {p0}, Lcom/android/internal/telephony/IccUtils;->hexStringToBytes(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 382
+    .line 384
     .local v0, hex:[B
     const-wide/16 v2, 0x0
 
-    .line 383
+    .line 385
     .local v2, result:J
     const/4 v1, 0x0
 
@@ -215,7 +249,7 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 384
+    .line 386
     aget-byte v4, v0, v1
 
     int-to-long v4, v4
@@ -236,12 +270,12 @@
 
     or-long/2addr v2, v4
 
-    .line 383
+    .line 385
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 389
+    .line 391
     .end local v0           #hex:[B
     .end local v1           #i:I
     .end local v2           #result:J
@@ -256,21 +290,21 @@
     .locals 2
 
     .prologue
-    .line 101
+    .line 102
     const-string v0, "htc.sim_authentication"
 
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mService:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$Service;
 
     invoke-static {v0, v1}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 105
+    .line 106
     const-string v0, "HtcSimCardAuthenticator"
 
     const-string v1, "published"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
+    .line 107
     return-void
 .end method
 
@@ -285,7 +319,7 @@
 
     const/4 v5, 0x1
 
-    .line 152
+    .line 153
     const-string v2, "gsm.sim.types"
 
     const-string v3, ""
@@ -294,7 +328,7 @@
 
     move-result-object v1
 
-    .line 155
+    .line 156
     .local v1, simType:Ljava/lang/String;
     sget-object v2, Lcom/android/internal/telephony/CommandsInterface$SimTypes;->RIL_3G_SIM_CARD:Lcom/android/internal/telephony/CommandsInterface$SimTypes;
 
@@ -308,23 +342,23 @@
 
     if-nez v2, :cond_0
 
-    .line 156
+    .line 157
     const-string v2, "HtcSimCardAuthenticator"
 
     const-string v3, "Not a USIM for AKA authentication!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 158
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->NO_SUCH_AUTHENTICATION:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v6, v2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
-    .line 179
+    .line 180
     :goto_0
     return-void
 
-    .line 161
+    .line 162
     :cond_0
     if-eqz p1, :cond_2
 
@@ -332,14 +366,14 @@
 
     if-lez v2, :cond_2
 
-    .line 163
+    .line 164
     if-eqz p2, :cond_1
 
     array-length v2, p2
 
     if-lez v2, :cond_1
 
-    .line 165
+    .line 166
     const/16 v2, 0x8
 
     new-instance v3, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
@@ -350,7 +384,7 @@
 
     move-result-object v0
 
-    .line 168
+    .line 169
     .local v0, response:Landroid/os/Message;
     const-string v2, "HtcSimCardAuthenticator"
 
@@ -358,14 +392,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
+    .line 170
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-interface {v2, v5, p1, p2, v0}, Lcom/android/internal/telephony/CommandsInterface;->uiccAuthenticate(I[B[BLandroid/os/Message;)V
 
     goto :goto_0
 
-    .line 171
+    .line 172
     .end local v0           #response:Landroid/os/Message;
     :cond_1
     const-string v2, "HtcSimCardAuthenticator"
@@ -394,14 +428,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
+    .line 173
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v6, v2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
     goto :goto_0
 
-    .line 176
+    .line 177
     :cond_2
     const-string v2, "HtcSimCardAuthenticator"
 
@@ -429,7 +463,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
+    .line 178
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v6, v2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
@@ -445,7 +479,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 126
+    .line 127
     if-eqz p1, :cond_0
 
     array-length v2, p1
@@ -454,10 +488,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 127
+    .line 128
     const/4 v0, 0x1
 
-    .line 129
+    .line 130
     .local v0, is3gSim:Z
     const/4 v2, 0x7
 
@@ -469,7 +503,7 @@
 
     move-result-object v1
 
-    .line 132
+    .line 133
     .local v1, response:Landroid/os/Message;
     const-string v2, "HtcSimCardAuthenticator"
 
@@ -477,20 +511,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
+    .line 134
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/4 v3, 0x0
 
     invoke-interface {v2, v3, p1, v5, v1}, Lcom/android/internal/telephony/CommandsInterface;->uiccAuthenticate(I[B[BLandroid/os/Message;)V
 
-    .line 138
+    .line 139
     .end local v0           #is3gSim:Z
     .end local v1           #response:Landroid/os/Message;
     :goto_0
     return-void
 
-    .line 135
+    .line 136
     :cond_0
     const-string v2, "HtcSimCardAuthenticator"
 
@@ -520,7 +554,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
+    .line 137
     sget-object v2, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p2, v5, v2}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
@@ -535,14 +569,14 @@
     .parameter "error"
 
     .prologue
-    .line 355
+    .line 357
     if-nez p1, :cond_0
 
-    .line 363
+    .line 365
     :goto_0
     return-void
 
-    .line 357
+    .line 359
     :cond_0
     if-eqz p3, :cond_1
 
@@ -553,12 +587,12 @@
     :goto_1
     invoke-static {p1, p2, v0}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 362
+    .line 364
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 357
+    .line 359
     :cond_1
     const/4 v0, 0x0
 
@@ -572,7 +606,7 @@
     .parameter "msg"
 
     .prologue
-    .line 399
+    .line 402
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -581,12 +615,12 @@
 
     packed-switch v26, :pswitch_data_0
 
-    .line 640
+    .line 643
     :cond_0
     :goto_0
     return-void
 
-    .line 401
+    .line 404
     :pswitch_0
     const-string v26, "HtcSimCardAuthenticator"
 
@@ -594,20 +628,20 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 402
+    .line 405
     move-object/from16 v0, p1
 
     iget-object v5, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/os/AsyncResult;
 
-    .line 403
+    .line 406
     .local v5, ar:Landroid/os/AsyncResult;
     iget-object v4, v5, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
 
-    .line 405
+    .line 408
     .local v4, ac:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
     iget-object v0, v5, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -615,18 +649,18 @@
 
     if-nez v26, :cond_3
 
-    .line 406
+    .line 409
     iget-object v0, v5, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     move-object/from16 v21, v0
 
     check-cast v21, Landroid/os/Bundle;
 
-    .line 408
+    .line 411
     .local v21, responseBundle:Landroid/os/Bundle;
     if-eqz v21, :cond_2
 
-    .line 409
+    .line 412
     const-string v26, "sw1sw2"
 
     move-object/from16 v0, v21
@@ -637,7 +671,7 @@
 
     move-result-object v25
 
-    .line 410
+    .line 413
     .local v25, sw1sw2:[B
     const-string v26, "res"
 
@@ -649,7 +683,7 @@
 
     move-result-object v23
 
-    .line 411
+    .line 414
     .local v23, sres:[B
     const-string v26, "kc"
 
@@ -661,7 +695,7 @@
 
     move-result-object v15
 
-    .line 412
+    .line 415
     .local v15, kc:[B
     const/16 v26, 0x1
 
@@ -669,7 +703,7 @@
 
     move-result-object v24
 
-    .line 420
+    .line 423
     .local v24, statusWord:Ljava/lang/String;
     if-eqz v15, :cond_1
 
@@ -701,7 +735,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 423
+    .line 426
     new-instance v22, Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
 
     const/16 v26, 0x1
@@ -738,7 +772,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;-><init>(IJ)V
 
-    .line 427
+    .line 430
     .local v22, result:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
@@ -758,7 +792,7 @@
 
     goto/16 :goto_0
 
-    .line 429
+    .line 432
     .end local v22           #result:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
     :cond_1
     const-string v26, "HtcSimCardAuthenticator"
@@ -811,7 +845,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
+    .line 434
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -832,7 +866,7 @@
 
     goto/16 :goto_0
 
-    .line 434
+    .line 437
     .end local v15           #kc:[B
     .end local v23           #sres:[B
     .end local v24           #statusWord:Ljava/lang/String;
@@ -844,7 +878,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
+    .line 438
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -865,7 +899,7 @@
 
     goto/16 :goto_0
 
-    .line 439
+    .line 442
     .end local v21           #responseBundle:Landroid/os/Bundle;
     :cond_3
     const-string v26, "HtcSimCardAuthenticator"
@@ -874,7 +908,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
+    .line 443
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -895,7 +929,7 @@
 
     goto/16 :goto_0
 
-    .line 446
+    .line 449
     .end local v4           #ac:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
     .end local v5           #ar:Landroid/os/AsyncResult;
     :pswitch_1
@@ -905,20 +939,20 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 447
+    .line 450
     move-object/from16 v0, p1
 
     iget-object v5, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/os/AsyncResult;
 
-    .line 448
+    .line 451
     .restart local v5       #ar:Landroid/os/AsyncResult;
     iget-object v4, v5, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
 
-    .line 449
+    .line 452
     .restart local v4       #ac:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
     iget-object v0, v5, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -926,18 +960,18 @@
 
     if-nez v26, :cond_8
 
-    .line 450
+    .line 453
     iget-object v0, v5, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     move-object/from16 v21, v0
 
     check-cast v21, Landroid/os/Bundle;
 
-    .line 451
+    .line 454
     .restart local v21       #responseBundle:Landroid/os/Bundle;
     if-eqz v21, :cond_0
 
-    .line 452
+    .line 455
     const-string v26, "sw1sw2"
 
     move-object/from16 v0, v21
@@ -948,7 +982,7 @@
 
     move-result-object v25
 
-    .line 453
+    .line 456
     .restart local v25       #sw1sw2:[B
     const-string v26, "res"
 
@@ -960,7 +994,7 @@
 
     move-result-object v17
 
-    .line 454
+    .line 457
     .local v17, res:[B
     const-string v26, "Ck"
 
@@ -972,7 +1006,7 @@
 
     move-result-object v9
 
-    .line 455
+    .line 458
     .local v9, ck:[B
     const-string v26, "Ik"
 
@@ -984,7 +1018,7 @@
 
     move-result-object v12
 
-    .line 457
+    .line 460
     .local v12, ik:[B
     const-string v26, "kc"
 
@@ -996,7 +1030,7 @@
 
     move-result-object v15
 
-    .line 458
+    .line 461
     .restart local v15       #kc:[B
     const-string v26, "auts"
 
@@ -1008,7 +1042,7 @@
 
     move-result-object v6
 
-    .line 459
+    .line 462
     .local v6, auts:[B
     const/16 v26, 0x1
 
@@ -1016,7 +1050,7 @@
 
     move-result-object v24
 
-    .line 468
+    .line 471
     .restart local v24       #statusWord:Ljava/lang/String;
     if-eqz v17, :cond_4
 
@@ -1024,7 +1058,7 @@
 
     if-eqz v12, :cond_4
 
-    .line 471
+    .line 474
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1051,11 +1085,11 @@
 
     goto/16 :goto_0
 
-    .line 472
+    .line 475
     :cond_4
     if-eqz v6, :cond_5
 
-    .line 473
+    .line 476
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1080,7 +1114,7 @@
 
     goto/16 :goto_0
 
-    .line 477
+    .line 480
     :cond_5
     invoke-static/range {v24 .. v24}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1100,7 +1134,7 @@
 
     if-eqz v26, :cond_7
 
-    .line 479
+    .line 482
     const-string v26, "64"
 
     move-object/from16 v0, v24
@@ -1113,14 +1147,14 @@
 
     if-eqz v26, :cond_6
 
-    .line 480
+    .line 483
     const-string v26, "HtcSimCardAuthenticator"
 
     const-string v27, "No such authentication!"
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
+    .line 484
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1141,7 +1175,7 @@
 
     goto/16 :goto_0
 
-    .line 484
+    .line 487
     :cond_6
     const-string v26, "HtcSimCardAuthenticator"
 
@@ -1149,7 +1183,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 485
+    .line 488
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1170,7 +1204,7 @@
 
     goto/16 :goto_0
 
-    .line 488
+    .line 491
     :cond_7
     const-string v26, "HtcSimCardAuthenticator"
 
@@ -1178,7 +1212,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
+    .line 492
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1199,7 +1233,7 @@
 
     goto/16 :goto_0
 
-    .line 494
+    .line 497
     .end local v6           #auts:[B
     .end local v9           #ck:[B
     .end local v12           #ik:[B
@@ -1215,7 +1249,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 495
+    .line 498
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1236,7 +1270,7 @@
 
     goto/16 :goto_0
 
-    .line 500
+    .line 503
     .end local v4           #ac:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
     .end local v5           #ar:Landroid/os/AsyncResult;
     :pswitch_2
@@ -1246,20 +1280,20 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 501
+    .line 504
     move-object/from16 v0, p1
 
     iget-object v5, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/os/AsyncResult;
 
-    .line 502
+    .line 505
     .restart local v5       #ar:Landroid/os/AsyncResult;
     iget-object v4, v5, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
 
-    .line 503
+    .line 506
     .restart local v4       #ac:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
     iget-object v0, v5, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -1267,7 +1301,7 @@
 
     if-nez v26, :cond_c
 
-    .line 504
+    .line 507
     iget-object v0, v5, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     move-object/from16 v26, v0
@@ -1278,7 +1312,7 @@
 
     check-cast v20, [Ljava/lang/String;
 
-    .line 506
+    .line 509
     .local v20, response:[Ljava/lang/String;
     const/16 v26, 0x0
 
@@ -1288,7 +1322,7 @@
 
     move-result v16
 
-    .line 508
+    .line 511
     .local v16, length:I
     iget-boolean v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->is3gSim:Z
 
@@ -1296,7 +1330,7 @@
 
     if-eqz v26, :cond_a
 
-    .line 511
+    .line 514
     const/16 v26, 0x20
 
     move/from16 v0, v16
@@ -1305,7 +1339,7 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 512
+    .line 515
     new-instance v22, Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
 
     const/16 v26, 0x1
@@ -1348,7 +1382,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;-><init>(IJ)V
 
-    .line 514
+    .line 517
     .restart local v22       #result:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
@@ -1368,7 +1402,7 @@
 
     goto/16 :goto_0
 
-    .line 517
+    .line 520
     .end local v22           #result:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
     :cond_9
     const-string v26, "HtcSimCardAuthenticator"
@@ -1377,7 +1411,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 518
+    .line 521
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1398,7 +1432,7 @@
 
     goto/16 :goto_0
 
-    .line 524
+    .line 527
     :cond_a
     const/16 v26, 0x1c
 
@@ -1408,7 +1442,7 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 525
+    .line 528
     new-instance v22, Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
 
     const/16 v26, 0x1
@@ -1451,7 +1485,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;-><init>(IJ)V
 
-    .line 527
+    .line 530
     .restart local v22       #result:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
@@ -1471,7 +1505,7 @@
 
     goto/16 :goto_0
 
-    .line 530
+    .line 533
     .end local v22           #result:Lcom/android/internal/telephony/gsm/HtcGsmAuthenticationResult;
     :cond_b
     const-string v26, "HtcSimCardAuthenticator"
@@ -1480,7 +1514,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
+    .line 534
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1501,7 +1535,7 @@
 
     goto/16 :goto_0
 
-    .line 535
+    .line 538
     .end local v16           #length:I
     .end local v20           #response:[Ljava/lang/String;
     :cond_c
@@ -1511,7 +1545,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
+    .line 539
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1532,7 +1566,7 @@
 
     goto/16 :goto_0
 
-    .line 541
+    .line 544
     .end local v4           #ac:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
     .end local v5           #ar:Landroid/os/AsyncResult;
     :pswitch_3
@@ -1542,20 +1576,20 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 542
+    .line 545
     move-object/from16 v0, p1
 
     iget-object v5, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/os/AsyncResult;
 
-    .line 543
+    .line 546
     .restart local v5       #ar:Landroid/os/AsyncResult;
     iget-object v4, v5, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
 
-    .line 544
+    .line 547
     .restart local v4       #ac:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
     iget-object v0, v5, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -1563,7 +1597,7 @@
 
     if-nez v26, :cond_13
 
-    .line 545
+    .line 548
     iget-object v0, v5, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     move-object/from16 v26, v0
@@ -1574,7 +1608,7 @@
 
     check-cast v20, [Ljava/lang/String;
 
-    .line 557
+    .line 560
     .restart local v20       #response:[Ljava/lang/String;
     const/16 v26, 0x1
 
@@ -1584,7 +1618,7 @@
 
     move-result v16
 
-    .line 559
+    .line 562
     .restart local v16       #length:I
     const/16 v26, 0x4
 
@@ -1594,14 +1628,14 @@
 
     if-ge v0, v1, :cond_d
 
-    .line 560
+    .line 563
     const-string v26, "HtcSimCardAuthenticator"
 
     const-string v27, "Incorrect length of response!"
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 561
+    .line 564
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -1622,7 +1656,7 @@
 
     goto/16 :goto_0
 
-    .line 565
+    .line 568
     :cond_d
     const/16 v26, 0x1
 
@@ -1640,7 +1674,7 @@
 
     move-result-object v24
 
-    .line 567
+    .line 570
     .restart local v24       #statusWord:Ljava/lang/String;
     const-string v26, "9000"
 
@@ -1654,7 +1688,7 @@
 
     if-eqz v26, :cond_10
 
-    .line 568
+    .line 571
     const/16 v26, 0x1
 
     aget-object v26, v20, v26
@@ -1667,17 +1701,17 @@
 
     if-eqz v26, :cond_e
 
-    .line 573
+    .line 576
     const-string v26, "HtcSimCardAuthenticator"
 
     const-string v27, "Sucessful Authentication!"
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
+    .line 578
     const/16 v19, 0x2
 
-    .line 576
+    .line 579
     .local v19, resLengthStartPosition:I
     const/16 v26, 0x1
 
@@ -1705,13 +1739,13 @@
 
     move-result v18
 
-    .line 578
+    .line 581
     .local v18, resLength:I
     mul-int/lit8 v26, v18, 0x2
 
     add-int/lit8 v11, v26, 0x4
 
-    .line 579
+    .line 582
     .local v11, ckLengthStartPosition:I
     const/16 v26, 0x1
 
@@ -1737,7 +1771,7 @@
 
     move-result v10
 
-    .line 581
+    .line 584
     .local v10, ckLength:I
     mul-int/lit8 v26, v10, 0x2
 
@@ -1745,7 +1779,7 @@
 
     add-int/lit8 v14, v26, 0x2
 
-    .line 582
+    .line 585
     .local v14, ikLengthStartPosition:I
     const/16 v26, 0x1
 
@@ -1771,7 +1805,7 @@
 
     move-result v13
 
-    .line 585
+    .line 588
     .local v13, ikLength:I
     const/16 v26, 0x1
 
@@ -1791,7 +1825,7 @@
 
     move-result-object v17
 
-    .line 587
+    .line 590
     .restart local v17       #res:[B
     const/16 v26, 0x1
 
@@ -1813,7 +1847,7 @@
 
     move-result-object v9
 
-    .line 589
+    .line 592
     .restart local v9       #ck:[B
     const/16 v26, 0x1
 
@@ -1835,7 +1869,7 @@
 
     move-result-object v12
 
-    .line 593
+    .line 596
     .restart local v12       #ik:[B
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
@@ -1863,7 +1897,7 @@
 
     goto/16 :goto_0
 
-    .line 595
+    .line 598
     .end local v9           #ck:[B
     .end local v10           #ckLength:I
     .end local v11           #ckLengthStartPosition:I
@@ -1886,17 +1920,17 @@
 
     if-eqz v26, :cond_f
 
-    .line 600
+    .line 603
     const-string v26, "HtcSimCardAuthenticator"
 
     const-string v27, "Synchronization Failure!"
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 602
+    .line 605
     const/4 v8, 0x2
 
-    .line 603
+    .line 606
     .local v8, autsLengthStartPosition:I
     const/16 v26, 0x1
 
@@ -1922,7 +1956,7 @@
 
     move-result v7
 
-    .line 606
+    .line 609
     .local v7, autsLength:I
     const/16 v26, 0x1
 
@@ -1942,7 +1976,7 @@
 
     move-result-object v6
 
-    .line 609
+    .line 612
     .restart local v6       #auts:[B
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
@@ -1968,7 +2002,7 @@
 
     goto/16 :goto_0
 
-    .line 612
+    .line 615
     .end local v6           #auts:[B
     .end local v7           #autsLength:I
     .end local v8           #autsLengthStartPosition:I
@@ -1979,7 +2013,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 613
+    .line 616
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -2000,7 +2034,7 @@
 
     goto/16 :goto_0
 
-    .line 617
+    .line 620
     :cond_10
     const-string v26, "98"
 
@@ -2014,7 +2048,7 @@
 
     if-eqz v26, :cond_12
 
-    .line 618
+    .line 621
     const-string v26, "64"
 
     move-object/from16 v0, v24
@@ -2027,14 +2061,14 @@
 
     if-eqz v26, :cond_11
 
-    .line 619
+    .line 622
     const-string v26, "HtcSimCardAuthenticator"
 
     const-string v27, "No such authentication!"
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 620
+    .line 623
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -2055,7 +2089,7 @@
 
     goto/16 :goto_0
 
-    .line 623
+    .line 626
     :cond_11
     const-string v26, "HtcSimCardAuthenticator"
 
@@ -2063,7 +2097,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 624
+    .line 627
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -2084,7 +2118,7 @@
 
     goto/16 :goto_0
 
-    .line 628
+    .line 631
     :cond_12
     const-string v26, "HtcSimCardAuthenticator"
 
@@ -2092,7 +2126,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
+    .line 632
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -2113,7 +2147,7 @@
 
     goto/16 :goto_0
 
-    .line 634
+    .line 637
     .end local v16           #length:I
     .end local v20           #response:[Ljava/lang/String;
     .end local v24           #statusWord:Ljava/lang/String;
@@ -2124,7 +2158,7 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
+    .line 638
     iget-object v0, v4, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;->onComplete:Landroid/os/Message;
 
     move-object/from16 v26, v0
@@ -2145,7 +2179,7 @@
 
     goto/16 :goto_0
 
-    .line 399
+    .line 402
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_2
@@ -2161,16 +2195,16 @@
     .parameter "ci"
 
     .prologue
-    .line 93
+    .line 94
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mContext:Landroid/content/Context;
 
-    .line 94
+    .line 95
     iput-object p2, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 95
+    .line 96
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->publish()V
 
-    .line 96
+    .line 97
     return-void
 .end method
 
@@ -2187,7 +2221,7 @@
 
     const/4 v8, 0x0
 
-    .line 281
+    .line 283
     const-string v5, "gsm.sim.types"
 
     const-string v6, ""
@@ -2196,7 +2230,7 @@
 
     move-result-object v4
 
-    .line 284
+    .line 286
     .local v4, simType:Ljava/lang/String;
     sget-object v5, Lcom/android/internal/telephony/CommandsInterface$SimTypes;->RIL_3G_SIM_CARD:Lcom/android/internal/telephony/CommandsInterface$SimTypes;
 
@@ -2210,23 +2244,23 @@
 
     if-nez v5, :cond_0
 
-    .line 285
+    .line 287
     const-string v5, "HtcSimCardAuthenticator"
 
     const-string v6, "Not a USIM for AKA authentication!"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
+    .line 288
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->NO_SUCH_AUTHENTICATION:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
-    .line 350
+    .line 352
     :goto_0
     return-void
 
-    .line 290
+    .line 292
     :cond_0
     if-eqz p1, :cond_3
 
@@ -2234,43 +2268,43 @@
 
     if-lez v5, :cond_3
 
-    .line 292
+    .line 294
     if-eqz p2, :cond_2
 
     array-length v5, p2
 
     if-lez v5, :cond_2
 
-    .line 296
+    .line 298
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     const/16 v5, 0x27
 
     invoke-direct {v2, v5}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 299
+    .line 301
     .local v2, outStream:Ljava/io/ByteArrayOutputStream;
     invoke-virtual {v2, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 301
+    .line 303
     const/16 v5, 0x88
 
     invoke-virtual {v2, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 303
+    .line 305
     invoke-virtual {v2, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 305
+    .line 307
     const/16 v5, 0x80
 
     invoke-virtual {v2, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 307
+    .line 309
     array-length v5, p1
 
     add-int/lit8 v1, v5, 0x1
 
-    .line 309
+    .line 311
     .local v1, length:I
     if-eqz p2, :cond_1
 
@@ -2278,40 +2312,40 @@
 
     if-lez v5, :cond_1
 
-    .line 310
+    .line 312
     array-length v5, p2
 
     add-int/lit8 v5, v5, 0x1
 
     add-int/2addr v1, v5
 
-    .line 312
+    .line 314
     :cond_1
     invoke-virtual {v2, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 314
+    .line 316
     array-length v5, p1
 
     invoke-virtual {v2, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 317
+    .line 319
     :try_start_0
     invoke-virtual {v2, p1}, Ljava/io/ByteArrayOutputStream;->write([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 325
+    .line 327
     array-length v5, p2
 
     invoke-virtual {v2, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 327
+    .line 329
     :try_start_1
     invoke-virtual {v2, p2}, Ljava/io/ByteArrayOutputStream;->write([B)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 335
+    .line 337
     const/4 v5, 0x6
 
     new-instance v6, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator$AuthenticationContext;
@@ -2322,7 +2356,7 @@
 
     move-result-object v3
 
-    .line 338
+    .line 340
     .local v3, response:Landroid/os/Message;
     const-string v5, "HtcSimCardAuthenticator"
 
@@ -2330,7 +2364,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
+    .line 341
     iget-object v5, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -2345,12 +2379,12 @@
 
     goto :goto_0
 
-    .line 319
+    .line 321
     .end local v3           #response:Landroid/os/Message;
     :catch_0
     move-exception v0
 
-    .line 320
+    .line 322
     .local v0, e:Ljava/io/IOException;
     const-string v5, "HtcSimCardAuthenticator"
 
@@ -2358,19 +2392,19 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
+    .line 323
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SERVICE_FAILURE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
     goto :goto_0
 
-    .line 329
+    .line 331
     .end local v0           #e:Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 330
+    .line 332
     .restart local v0       #e:Ljava/io/IOException;
     const-string v5, "HtcSimCardAuthenticator"
 
@@ -2378,14 +2412,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
+    .line 333
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SERVICE_FAILURE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
     goto :goto_0
 
-    .line 342
+    .line 344
     .end local v0           #e:Ljava/io/IOException;
     .end local v1           #length:I
     .end local v2           #outStream:Ljava/io/ByteArrayOutputStream;
@@ -2416,14 +2450,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
+    .line 345
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
     goto/16 :goto_0
 
-    .line 347
+    .line 349
     :cond_3
     const-string v5, "HtcSimCardAuthenticator"
 
@@ -2451,7 +2485,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
+    .line 350
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p3, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
@@ -2475,14 +2509,14 @@
 
     const/4 v7, 0x0
 
-    .line 190
+    .line 191
     if-eqz p1, :cond_2
 
     array-length v5, p1
 
     if-ne v5, v9, :cond_2
 
-    .line 192
+    .line 193
     const-string v5, "gsm.sim.types"
 
     const-string v6, ""
@@ -2491,15 +2525,15 @@
 
     move-result-object v4
 
-    .line 195
+    .line 196
     .local v4, simType:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 197
+    .line 198
     .local v1, is3gSim:Z
     const/4 v2, 0x0
 
-    .line 199
+    .line 200
     .local v2, outStream:Ljava/io/ByteArrayOutputStream;
     sget-object v5, Lcom/android/internal/telephony/CommandsInterface$SimTypes;->RIL_3G_SIM_CARD:Lcom/android/internal/telephony/CommandsInterface$SimTypes;
 
@@ -2513,10 +2547,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 200
+    .line 201
     const/4 v1, 0x1
 
-    .line 203
+    .line 204
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     .end local v2           #outStream:Ljava/io/ByteArrayOutputStream;
@@ -2524,36 +2558,36 @@
 
     invoke-direct {v2, v5}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 206
+    .line 207
     .restart local v2       #outStream:Ljava/io/ByteArrayOutputStream;
     invoke-virtual {v2, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 208
+    .line 209
     invoke-virtual {v2, v11}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 210
+    .line 211
     invoke-virtual {v2, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 212
+    .line 213
     const/16 v5, 0x80
 
     invoke-virtual {v2, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 214
+    .line 215
     const/16 v5, 0x11
 
     invoke-virtual {v2, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 216
+    .line 217
     invoke-virtual {v2, v9}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 219
+    .line 220
     :try_start_0
     invoke-virtual {v2, p1}, Ljava/io/ByteArrayOutputStream;->write([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 256
+    .line 257
     :goto_0
     const/4 v5, 0x5
 
@@ -2565,7 +2599,7 @@
 
     move-result-object v3
 
-    .line 259
+    .line 260
     .local v3, response:Landroid/os/Message;
     const-string v5, "HtcSimCardAuthenticator"
 
@@ -2573,7 +2607,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
+    .line 261
     iget-object v5, p0, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -2586,7 +2620,7 @@
 
     invoke-interface {v5, v6, v3}, Lcom/android/internal/telephony/CommandsInterface;->genericSimIO(Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 267
+    .line 268
     .end local v1           #is3gSim:Z
     .end local v2           #outStream:Ljava/io/ByteArrayOutputStream;
     .end local v3           #response:Landroid/os/Message;
@@ -2594,14 +2628,14 @@
     :goto_1
     return-void
 
-    .line 221
+    .line 222
     .restart local v1       #is3gSim:Z
     .restart local v2       #outStream:Ljava/io/ByteArrayOutputStream;
     .restart local v4       #simType:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 222
+    .line 223
     .local v0, e:Ljava/io/IOException;
     const-string v5, "HtcSimCardAuthenticator"
 
@@ -2609,14 +2643,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 224
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SERVICE_FAILURE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p2, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
     goto :goto_1
 
-    .line 227
+    .line 228
     .end local v0           #e:Ljava/io/IOException;
     :cond_0
     sget-object v5, Lcom/android/internal/telephony/CommandsInterface$SimTypes;->RIL_2G_SIM_CARD:Lcom/android/internal/telephony/CommandsInterface$SimTypes;
@@ -2631,7 +2665,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 229
+    .line 230
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     .end local v2           #outStream:Ljava/io/ByteArrayOutputStream;
@@ -2639,25 +2673,25 @@
 
     invoke-direct {v2, v5}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 232
+    .line 233
     .restart local v2       #outStream:Ljava/io/ByteArrayOutputStream;
     const/16 v5, 0xa0
 
     invoke-virtual {v2, v5}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 234
+    .line 235
     invoke-virtual {v2, v11}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 236
+    .line 237
     invoke-virtual {v2, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 238
+    .line 239
     invoke-virtual {v2, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 240
+    .line 241
     invoke-virtual {v2, v9}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 243
+    .line 244
     :try_start_1
     invoke-virtual {v2, p1}, Ljava/io/ByteArrayOutputStream;->write([B)V
     :try_end_1
@@ -2665,11 +2699,11 @@
 
     goto :goto_0
 
-    .line 245
+    .line 246
     :catch_1
     move-exception v0
 
-    .line 246
+    .line 247
     .restart local v0       #e:Ljava/io/IOException;
     const-string v5, "HtcSimCardAuthenticator"
 
@@ -2677,14 +2711,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
+    .line 248
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->SERVICE_FAILURE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p2, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
     goto :goto_1
 
-    .line 251
+    .line 252
     .end local v0           #e:Ljava/io/IOException;
     :cond_1
     const-string v5, "HtcSimCardAuthenticator"
@@ -2709,14 +2743,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
+    .line 253
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_SIM_TYPE:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p2, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V
 
     goto :goto_1
 
-    .line 263
+    .line 264
     .end local v1           #is3gSim:Z
     .end local v2           #outStream:Ljava/io/ByteArrayOutputStream;
     .end local v4           #simType:Ljava/lang/String;
@@ -2747,7 +2781,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
+    .line 265
     sget-object v5, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;->INVALID_RAND:Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;
 
     invoke-direct {p0, p2, v8, v5}, Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticator;->sendResult(Landroid/os/Message;Ljava/lang/Object;Lcom/android/internal/telephony/gsm/HtcSimCardAuthenticationException$Error;)V

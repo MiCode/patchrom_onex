@@ -120,7 +120,7 @@
     .parameter "ws"
 
     .prologue
-    .line 60
+    .line 64
     invoke-virtual {p0}, Landroid/webkit/WebSettings;->isEnableQuickSelection()Z
 
     move-result v0
@@ -144,10 +144,10 @@
     .parameter "flag"
 
     .prologue
-    .line 56
+    .line 60
     invoke-virtual {p0, p1}, Landroid/webkit/WebSettings;->setEnableQuickSelection(Z)V
 
-    .line 57
+    .line 61
     return-void
 .end method
 
@@ -236,8 +236,21 @@
     .parameter "model"
 
     .prologue
-    .line 52
+    .line 56
     invoke-virtual {p0, p1}, Landroid/webkit/WebSettings;->setUAStringModel(Ljava/lang/String;)V
+
+    .line 57
+    return-void
+.end method
+
+.method public static setWebGLEnabled(Landroid/webkit/WebSettings;Z)V
+    .locals 0
+    .parameter "ws"
+    .parameter "flag"
+
+    .prologue
+    .line 52
+    invoke-virtual {p0, p1}, Landroid/webkit/WebSettings;->setWebGLEnabled(Z)V
 
     .line 53
     return-void

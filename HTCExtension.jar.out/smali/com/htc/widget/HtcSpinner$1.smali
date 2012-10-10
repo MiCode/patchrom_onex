@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 141
+    .line 143
     iput-object p1, p0, Lcom/htc/widget/HtcSpinner$1;->this$0:Lcom/htc/widget/HtcSpinner;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "animation"
 
     .prologue
-    .line 143
+    .line 145
     iget-object v0, p0, Lcom/htc/widget/HtcSpinner$1;->this$0:Lcom/htc/widget/HtcSpinner;
 
     const/4 v1, 0x1
@@ -47,6 +47,6 @@
     #setter for: Lcom/htc/widget/HtcSpinner;->mIsAnimating:Z
     invoke-static {v0, v1}, Lcom/htc/widget/HtcSpinner;->access$002(Lcom/htc/widget/HtcSpinner;Z)Z
 
-    .line 144
+    .line 146
     return-void
 .end method

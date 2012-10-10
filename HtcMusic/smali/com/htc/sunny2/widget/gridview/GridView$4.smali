@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 3128
+    .line 3150
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$4;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iput-object p2, p0, Lcom/htc/sunny2/widget/gridview/GridView$4;->val$deleteIndex:[I
@@ -56,7 +56,7 @@
     .locals 4
 
     .prologue
-    .line 3131
+    .line 3153
     iget-object v0, p0, Lcom/htc/sunny2/widget/gridview/GridView$4;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$4;->val$deleteIndex:[I
@@ -68,6 +68,6 @@
     #calls: Lcom/htc/sunny2/widget/gridview/GridView;->startDataSetChangeAnimation_IRT([I[ILcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;)V
     invoke-static {v0, v1, v2, v3}, Lcom/htc/sunny2/widget/gridview/GridView;->access$1300(Lcom/htc/sunny2/widget/gridview/GridView;[I[ILcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;)V
 
-    .line 3132
+    .line 3154
     return-void
 .end method

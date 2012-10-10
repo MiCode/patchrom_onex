@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 713
+    .line 712
     iput-object p1, p0, Lcom/android/camera/component/ViewFinder$1;->this$0:Lcom/android/camera/component/ViewFinder;
 
     invoke-direct {p0, p2}, Lcom/android/camera/WorkerThread;-><init>(Ljava/lang/String;)V
@@ -40,7 +40,7 @@
     .parameter "msg"
 
     .prologue
-    .line 717
+    .line 716
     iget-object v0, p0, Lcom/android/camera/component/ViewFinder$1;->this$0:Lcom/android/camera/component/ViewFinder;
 
     #calls: Lcom/android/camera/component/ViewFinder;->handlePreviewThreadMessage(Landroid/os/Message;)Z
@@ -50,10 +50,10 @@
 
     if-nez v0, :cond_0
 
-    .line 718
+    .line 717
     invoke-super {p0, p1}, Lcom/android/camera/WorkerThread;->handleMessage(Landroid/os/Message;)V
 
-    .line 719
+    .line 718
     :cond_0
     return-void
 .end method

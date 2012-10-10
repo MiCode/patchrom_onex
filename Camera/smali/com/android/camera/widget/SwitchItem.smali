@@ -99,7 +99,7 @@
     .locals 5
 
     .prologue
-    const v4, 0x7f0b006a
+    const v4, 0x7f0b006b
 
     .line 73
     iget-object v2, p0, Lcom/android/camera/widget/SwitchItem;->m_Context:Landroid/content/Context;

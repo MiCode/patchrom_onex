@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 386
+    .line 410
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 392
+    .line 416
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 393
+    .line 417
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.extra.UID"
 
@@ -55,7 +55,7 @@
 
     move-result v1
 
-    .line 394
+    .line 418
     .local v1, uid:I
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -66,7 +66,7 @@
 
     monitor-enter v3
 
-    .line 395
+    .line 419
     :try_start_0
     const-string v2, "android.intent.action.PACKAGE_ADDED"
 
@@ -76,21 +76,21 @@
 
     if-eqz v2, :cond_1
 
-    .line 399
+    .line 423
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #calls: Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForUidLocked(I)V
     invoke-static {v2, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$300(Lcom/android/server/net/NetworkPolicyManagerService;I)V
 
-    .line 408
+    .line 432
     :cond_0
     :goto_0
     monitor-exit v3
 
-    .line 409
+    .line 433
     return-void
 
-    .line 401
+    .line 425
     :cond_1
     const-string v2, "android.intent.action.UID_REMOVED"
 
@@ -100,7 +100,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 404
+    .line 428
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mUidPolicy:Landroid/util/SparseIntArray;
@@ -110,13 +110,13 @@
 
     invoke-virtual {v2, v1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 405
+    .line 429
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #calls: Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForUidLocked(I)V
     invoke-static {v2, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$300(Lcom/android/server/net/NetworkPolicyManagerService;I)V
 
-    .line 406
+    .line 430
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$3;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #calls: Lcom/android/server/net/NetworkPolicyManagerService;->writePolicyLocked()V
@@ -124,7 +124,7 @@
 
     goto :goto_0
 
-    .line 408
+    .line 432
     :catchall_0
     move-exception v2
 

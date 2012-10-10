@@ -49,7 +49,7 @@
     .parameter
 
     .prologue
-    .line 966
+    .line 975
     iput-object p1, p0, Landroid/accounts/AccountManagerService$3;->this$0:Landroid/accounts/AccountManagerService;
 
     iput-object p6, p0, Landroid/accounts/AccountManagerService$3;->val$loginOptions:Landroid/os/Bundle;
@@ -78,10 +78,10 @@
     .parameter "result"
 
     .prologue
-    .line 987
+    .line 996
     if-eqz p1, :cond_4
 
-    .line 988
+    .line 997
     const-string v0, "authTokenLabelKey"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -90,7 +90,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 989
+    .line 998
     iget-object v0, p0, Landroid/accounts/AccountManagerService$3;->this$0:Landroid/accounts/AccountManagerService;
 
     iget-object v1, p0, Landroid/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
@@ -114,28 +114,28 @@
 
     move-result-object v8
 
-    .line 993
+    .line 1002
     .local v8, intent:Landroid/content/Intent;
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 994
+    .line 1003
     .local v7, bundle:Landroid/os/Bundle;
-    const-string/jumbo v0, "intent"
+    const-string v0, "intent"
 
     invoke-virtual {v7, v0, v8}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 995
+    .line 1004
     invoke-virtual {p0, v7}, Landroid/accounts/AccountManagerService$3;->onResult(Landroid/os/Bundle;)V
 
-    .line 1021
+    .line 1030
     .end local v7           #bundle:Landroid/os/Bundle;
     .end local v8           #intent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 998
+    .line 1007
     :cond_0
     const-string v0, "authtoken"
 
@@ -143,18 +143,18 @@
 
     move-result-object v6
 
-    .line 999
+    .line 1008
     .local v6, authToken:Ljava/lang/String;
     if-eqz v6, :cond_3
 
-    .line 1000
+    .line 1009
     const-string v0, "authAccount"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1001
+    .line 1010
     .local v9, name:Ljava/lang/String;
     const-string v0, "accountType"
 
@@ -162,7 +162,7 @@
 
     move-result-object v10
 
-    .line 1002
+    .line 1011
     .local v10, type:Ljava/lang/String;
     invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -176,7 +176,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1003
+    .line 1012
     :cond_1
     const/4 v0, 0x5
 
@@ -186,13 +186,13 @@
 
     goto :goto_0
 
-    .line 1007
+    .line 1016
     :cond_2
     iget-boolean v0, p0, Landroid/accounts/AccountManagerService$3;->val$customTokens:Z
 
     if-nez v0, :cond_3
 
-    .line 1008
+    .line 1017
     iget-object v0, p0, Landroid/accounts/AccountManagerService$3;->this$0:Landroid/accounts/AccountManagerService;
 
     new-instance v1, Landroid/accounts/Account;
@@ -204,11 +204,11 @@
     #calls: Landroid/accounts/AccountManagerService;->saveAuthTokenToDatabase(Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)Z
     invoke-static {v0, v1, v2, v6}, Landroid/accounts/AccountManagerService;->access$200(Landroid/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1013
+    .line 1022
     .end local v9           #name:Ljava/lang/String;
     .end local v10           #type:Ljava/lang/String;
     :cond_3
-    const-string/jumbo v0, "intent"
+    const-string v0, "intent"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -216,7 +216,7 @@
 
     check-cast v8, Landroid/content/Intent;
 
-    .line 1014
+    .line 1023
     .restart local v8       #intent:Landroid/content/Intent;
     if-eqz v8, :cond_4
 
@@ -228,7 +228,7 @@
 
     if-nez v0, :cond_4
 
-    .line 1015
+    .line 1024
     iget-object v0, p0, Landroid/accounts/AccountManagerService$3;->this$0:Landroid/accounts/AccountManagerService;
 
     iget-object v1, p0, Landroid/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
@@ -242,7 +242,7 @@
     #calls: Landroid/accounts/AccountManagerService;->doNotification(Landroid/accounts/Account;Ljava/lang/CharSequence;Landroid/content/Intent;)V
     invoke-static {v0, v1, v2, v8}, Landroid/accounts/AccountManagerService;->access$300(Landroid/accounts/AccountManagerService;Landroid/accounts/Account;Ljava/lang/CharSequence;Landroid/content/Intent;)V
 
-    .line 1020
+    .line 1029
     .end local v6           #authToken:Ljava/lang/String;
     .end local v8           #intent:Landroid/content/Intent;
     :cond_4
@@ -260,23 +260,23 @@
     .end annotation
 
     .prologue
-    .line 979
+    .line 988
     iget-boolean v0, p0, Landroid/accounts/AccountManagerService$3;->val$permissionGranted:Z
 
     if-nez v0, :cond_0
 
-    .line 980
+    .line 989
     iget-object v0, p0, Landroid/accounts/AccountManagerService$Session;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v1, p0, Landroid/accounts/AccountManagerService$3;->val$authTokenType:Ljava/lang/String;
 
     invoke-interface {v0, p0, v1}, Landroid/accounts/IAccountAuthenticator;->getAuthTokenLabel(Landroid/accounts/IAccountAuthenticatorResponse;Ljava/lang/String;)V
 
-    .line 984
+    .line 993
     :goto_0
     return-void
 
-    .line 982
+    .line 991
     :cond_0
     iget-object v0, p0, Landroid/accounts/AccountManagerService$Session;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
@@ -296,7 +296,7 @@
     .parameter "now"
 
     .prologue
-    .line 968
+    .line 977
     iget-object v0, p0, Landroid/accounts/AccountManagerService$3;->val$loginOptions:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -305,7 +305,7 @@
 
     invoke-virtual {v0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
-    .line 969
+    .line 978
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

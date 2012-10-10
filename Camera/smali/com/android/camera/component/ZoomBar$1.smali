@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 155
+    .line 153
     iput-object p1, p0, Lcom/android/camera/component/ZoomBar$1;->this$0:Lcom/android/camera/component/ZoomBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "mv"
 
     .prologue
-    .line 158
+    .line 156
     iget-object v4, p0, Lcom/android/camera/component/ZoomBar$1;->this$0:Lcom/android/camera/component/ZoomBar;
 
     #getter for: Lcom/android/camera/component/ZoomBar;->m_ZoomBarContainer:Landroid/view/View;
@@ -55,7 +55,7 @@
 
     move-result v0
 
-    .line 159
+    .line 157
     .local v0, containerWidth:I
     iget-object v4, p0, Lcom/android/camera/component/ZoomBar$1;->this$0:Lcom/android/camera/component/ZoomBar;
 
@@ -68,19 +68,19 @@
 
     move-result v3
 
-    .line 160
+    .line 158
     .local v3, zoomBarWidth:I
     sub-int v4, v0, v3
 
     div-int/lit8 v1, v4, 0x2
 
-    .line 161
+    .line 159
     .local v1, marginLeft:I
     sub-int v4, v0, v3
 
     sub-int v2, v4, v1
 
-    .line 162
+    .line 160
     .local v2, marginRight:I
     neg-int v4, v2
 
@@ -90,7 +90,7 @@
 
     invoke-virtual {p2, v4, v5}, Landroid/view/MotionEvent;->offsetLocation(FF)V
 
-    .line 163
+    .line 161
     iget-object v4, p0, Lcom/android/camera/component/ZoomBar$1;->this$0:Lcom/android/camera/component/ZoomBar;
 
     #getter for: Lcom/android/camera/component/ZoomBar;->m_ZoomBar:Landroid/widget/SeekBar;

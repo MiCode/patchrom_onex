@@ -44,7 +44,7 @@
     .line 30
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 742
+    .line 748
     return-void
 .end method
 
@@ -52,17 +52,17 @@
     .locals 2
 
     .prologue
-    .line 796
+    .line 802
     sget-byte v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->s_byteHtc_MobileNetworkInUse:B
 
     sget-byte v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->s_byteHtc_MobileNetwork_CDMA:B
 
     if-ne v0, v1, :cond_0
 
-    .line 797
+    .line 803
     const/4 v0, 0x1
 
-    .line 799
+    .line 805
     :goto_0
     return v0
 
@@ -86,7 +86,7 @@
     .locals 2
 
     .prologue
-    .line 846
+    .line 852
     const-wide/high16 v0, 0x400c
 
     invoke-static {v0, v1}, Lcom/htc/util/contacts/BuildUtils$HtcSense;->isAboveOrEqualToVer(D)Z
@@ -119,11 +119,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 850
+    .line 856
     :cond_0
     const/4 v0, 0x1
 
-    .line 852
+    .line 858
     :goto_0
     return v0
 
@@ -137,7 +137,7 @@
     .locals 2
 
     .prologue
-    .line 857
+    .line 863
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v1, 0xa8
@@ -182,11 +182,11 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 865
+    .line 871
     :cond_2
     const/4 v0, 0x1
 
-    .line 867
+    .line 873
     :goto_0
     return v0
 
@@ -200,7 +200,7 @@
     .locals 2
 
     .prologue
-    .line 807
+    .line 813
     const/16 v0, 0x28
 
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
@@ -249,11 +249,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 815
+    .line 821
     :cond_0
     const/4 v0, 0x1
 
-    .line 817
+    .line 823
     :goto_0
     return v0
 
@@ -267,7 +267,7 @@
     .locals 1
 
     .prologue
-    .line 824
+    .line 830
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isTabletPhoneEnabled()Z
 
     move-result v0
@@ -295,12 +295,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 835
+    .line 841
     sget-boolean v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->HtcVVMFlag:Z
 
     if-ne v0, v1, :cond_0
 
-    .line 838
+    .line 844
     :goto_0
     return v0
 

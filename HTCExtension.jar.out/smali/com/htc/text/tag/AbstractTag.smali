@@ -17,6 +17,65 @@
     return-void
 .end method
 
+.method protected static escapeXML(Ljava/lang/String;)Ljava/lang/String;
+    .locals 7
+    .parameter "text"
+
+    .prologue
+    .line 20
+    const-string v5, "&"
+
+    const-string v6, "&amp;"
+
+    invoke-static {p0, v5, v6}, Lcom/htc/text/tag/AbstractTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 21
+    .local v0, escapedAmpersand:Ljava/lang/String;
+    const-string v5, "<"
+
+    const-string v6, "&lt;"
+
+    invoke-static {v0, v5, v6}, Lcom/htc/text/tag/AbstractTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 22
+    .local v4, escapedLessThan:Ljava/lang/String;
+    const-string v5, ">"
+
+    const-string v6, "&gt;"
+
+    invoke-static {v4, v5, v6}, Lcom/htc/text/tag/AbstractTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 23
+    .local v3, escapedGreaterThan:Ljava/lang/String;
+    const-string v5, "\'"
+
+    const-string v6, "&apos;"
+
+    invoke-static {v3, v5, v6}, Lcom/htc/text/tag/AbstractTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 24
+    .local v1, escapedApostrophe:Ljava/lang/String;
+    const-string v5, "\""
+
+    const-string v6, "&quot;"
+
+    invoke-static {v1, v5, v6}, Lcom/htc/text/tag/AbstractTag;->escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 25
+    .local v2, escapedDoubleQuote:Ljava/lang/String;
+    return-object v2
+.end method
+
 .method protected static escapeXML(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
     .parameter "text"
@@ -86,13 +145,13 @@
     .parameter "text"
 
     .prologue
-    .line 45
+    .line 54
     if-nez p0, :cond_0
 
-    .line 46
+    .line 55
     const-string v0, ""
 
-    .line 48
+    .line 57
     :goto_0
     return-object v0
 
@@ -109,12 +168,12 @@
     .parameter "text"
 
     .prologue
-    .line 24
+    .line 33
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 27
+    .line 36
     .local v2, result:Ljava/lang/StringBuffer;
     if-eqz p0, :cond_0
 
@@ -126,15 +185,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 28
+    .line 37
     :cond_0
     const-string v3, ""
 
-    .line 41
+    .line 50
     :goto_0
     return-object v3
 
-    .line 30
+    .line 39
     :cond_1
     const/4 v1, 0x0
 
@@ -146,12 +205,12 @@
 
     if-ge v1, v3, :cond_6
 
-    .line 31
+    .line 40
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 32
+    .line 41
     .local v0, current:C
     const/16 v3, 0x9
 
@@ -195,17 +254,17 @@
 
     if-gt v0, v3, :cond_5
 
-    .line 38
+    .line 47
     :cond_4
     invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 30
+    .line 39
     :cond_5
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 41
+    .line 50
     .end local v0           #current:C
     :cond_6
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;

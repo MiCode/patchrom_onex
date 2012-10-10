@@ -43,12 +43,12 @@
     .parameter "context"
 
     .prologue
-    .line 60
+    .line 61
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/htc/music/widget/CategorySwitcherAdapter;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 61
+    .line 62
     return-void
 .end method
 
@@ -60,22 +60,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 64
+    .line 65
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 51
+    .line 52
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
 
-    .line 52
+    .line 53
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mLayoutInflator:Landroid/view/LayoutInflater;
 
-    .line 54
+    .line 55
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
-    .line 65
+    .line 66
     iput-object p2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
-    .line 66
+    .line 67
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -86,10 +86,10 @@
 
     iput-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mLayoutInflator:Landroid/view/LayoutInflater;
 
-    .line 68
+    .line 69
     invoke-direct {p0, p1}, Lcom/htc/music/widget/CategorySwitcherAdapter;->initialSourceItems(Landroid/content/Context;)V
 
-    .line 69
+    .line 70
     return-void
 .end method
 
@@ -100,20 +100,20 @@
     .prologue
     const/4 v12, 0x3
 
-    const/4 v11, 0x2
+    const/4 v11, 0x6
 
-    const/4 v10, 0x6
+    const/4 v10, 0x2
 
     const/4 v9, 0x0
 
     const/4 v8, 0x1
 
-    .line 77
+    .line 78
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 78
+    .line 79
     .local v3, intent:Landroid/content/Intent;
     invoke-static {p1}, Lcom/htc/music/util/ProjectSettings;->getEnableExpList(Landroid/content/Context;)Z
 
@@ -121,49 +121,54 @@
 
     if-ne v8, v6, :cond_2
 
-    .line 80
+    .line 81
     sget-object v6, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     const-string v7, "com.htc.media/artistalbumexpgrid"
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 84
+    .line 85
     :goto_0
     const-string v6, "android.intent.action.PICK"
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 85
+    .line 86
     const-string v6, "InnerActivityType"
 
-    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v6, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 86
+    .line 87
     const-string v6, "ShowActivityTitle"
 
     invoke-virtual {v3, v6, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 87
+    .line 88
     const-string v6, "LaunchFromSwitcher"
 
     invoke-virtual {v3, v6, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 88
+    .line 89
     const-string v6, "playlisturi"
 
     iget-object v7, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 89
+    .line 90
+    const-string v6, "dbTable"
+
+    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 91
     new-instance v1, Lcom/htc/music/util/SourceItem;
 
     const-string v6, "ArtistBrowserTabPlugin"
 
     invoke-direct {v1, v6, v3}, Lcom/htc/music/util/SourceItem;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 90
+    .line 92
     .local v1, artistSource:Lcom/htc/music/util/SourceItem;
     const v6, 0x7f070021
 
@@ -173,12 +178,12 @@
 
     iput-object v6, v1, Lcom/htc/music/util/SourceItem;->mSourceName:Ljava/lang/String;
 
-    .line 91
+    .line 93
     const v6, 0x7f020034
 
     iput v6, v1, Lcom/htc/music/util/SourceItem;->mIconRes:I
 
-    .line 93
+    .line 95
     new-instance v3, Landroid/content/Intent;
 
     .end local v3           #intent:Landroid/content/Intent;
@@ -186,47 +191,52 @@
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 94
+    .line 96
     .restart local v3       #intent:Landroid/content/Intent;
     const-string v6, "android.intent.action.PICK"
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 96
+    .line 98
     const-class v6, Lcom/htc/music/browserlayer/AlbumBrowserActivityGrid;
 
     invoke-virtual {v3, p1, v6}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 97
+    .line 99
     const-string v6, "InnerActivityType"
 
-    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v6, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 98
+    .line 100
     const-string v6, "ShowActivityTitle"
 
     invoke-virtual {v3, v6, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 99
+    .line 101
     const-string v6, "LaunchFromSwitcher"
 
     invoke-virtual {v3, v6, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 100
+    .line 102
     const-string v6, "playlisturi"
 
     iget-object v7, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 101
+    .line 103
+    const-string v6, "dbTable"
+
+    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 104
     new-instance v0, Lcom/htc/music/util/SourceItem;
 
     const-string v6, "AlbumBrowserTabPlugin"
 
     invoke-direct {v0, v6, v3}, Lcom/htc/music/util/SourceItem;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 102
+    .line 105
     .local v0, albumSource:Lcom/htc/music/util/SourceItem;
     const v6, 0x7f070024
 
@@ -236,61 +246,66 @@
 
     iput-object v6, v0, Lcom/htc/music/util/SourceItem;->mSourceName:Ljava/lang/String;
 
-    .line 103
+    .line 106
     const v6, 0x7f02001f
 
     iput v6, v0, Lcom/htc/music/util/SourceItem;->mIconRes:I
 
-    .line 105
+    .line 108
     new-instance v3, Landroid/content/Intent;
 
     .end local v3           #intent:Landroid/content/Intent;
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 106
+    .line 109
     .restart local v3       #intent:Landroid/content/Intent;
     const-class v6, Lcom/htc/music/browserlayer/TrackBrowserActivity;
 
     invoke-virtual {v3, p1, v6}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 107
+    .line 110
     const-string v6, "InnerActivityType"
 
-    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v6, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 108
+    .line 111
     const-string v6, "ShowActivityTitle"
 
     invoke-virtual {v3, v6, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 109
+    .line 112
     const-string v6, "LaunchFromSwitcher"
 
     invoke-virtual {v3, v6, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 110
+    .line 113
     const-string v6, "playlisturi"
 
     iget-object v7, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 111
+    .line 114
+    const-string v6, "dbTable"
+
+    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 115
     iget-object v6, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
     if-eqz v6, :cond_0
 
-    .line 112
+    .line 116
     const-string v6, "pickermode"
 
-    invoke-virtual {v3, v6, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 113
+    .line 117
     const-string v6, "IsFragment"
 
     invoke-virtual {v3, v6, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 115
+    .line 119
     :cond_0
     new-instance v5, Lcom/htc/music/util/SourceItem;
 
@@ -298,7 +313,7 @@
 
     invoke-direct {v5, v6, v3}, Lcom/htc/music/util/SourceItem;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 116
+    .line 120
     .local v5, trackSource:Lcom/htc/music/util/SourceItem;
     const v6, 0x7f070027
 
@@ -308,48 +323,48 @@
 
     iput-object v6, v5, Lcom/htc/music/util/SourceItem;->mSourceName:Ljava/lang/String;
 
-    .line 117
+    .line 121
     const v6, 0x7f020029
 
     iput v6, v5, Lcom/htc/music/util/SourceItem;->mIconRes:I
 
-    .line 119
+    .line 123
     const/4 v4, 0x0
 
-    .line 120
+    .line 124
     .local v4, playlistSource:Lcom/htc/music/util/SourceItem;
     iget-object v6, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
     if-nez v6, :cond_1
 
-    .line 121
+    .line 125
     new-instance v3, Landroid/content/Intent;
 
     .end local v3           #intent:Landroid/content/Intent;
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 122
+    .line 126
     .restart local v3       #intent:Landroid/content/Intent;
     const-class v6, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
     invoke-virtual {v3, p1, v6}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 123
+    .line 127
     const-string v6, "InnerActivityType"
 
-    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v6, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 124
+    .line 128
     const-string v6, "ShowActivityTitle"
 
     invoke-virtual {v3, v6, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 125
+    .line 129
     const-string v6, "LaunchFromSwitcher"
 
     invoke-virtual {v3, v6, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 126
+    .line 130
     new-instance v4, Lcom/htc/music/util/SourceItem;
 
     .end local v4           #playlistSource:Lcom/htc/music/util/SourceItem;
@@ -357,7 +372,7 @@
 
     invoke-direct {v4, v6, v3}, Lcom/htc/music/util/SourceItem;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 127
+    .line 131
     .restart local v4       #playlistSource:Lcom/htc/music/util/SourceItem;
     const v6, 0x7f07002b
 
@@ -367,19 +382,19 @@
 
     iput-object v6, v4, Lcom/htc/music/util/SourceItem;->mSourceName:Ljava/lang/String;
 
-    .line 128
+    .line 132
     const v6, 0x7f02002e
 
     iput v6, v4, Lcom/htc/music/util/SourceItem;->mIconRes:I
 
-    .line 131
+    .line 135
     :cond_1
     new-instance v3, Landroid/content/Intent;
 
     .end local v3           #intent:Landroid/content/Intent;
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 132
+    .line 136
     .restart local v3       #intent:Landroid/content/Intent;
     invoke-static {p1}, Lcom/htc/music/util/ProjectSettings;->getEnableExpList(Landroid/content/Context;)Z
 
@@ -387,49 +402,54 @@
 
     if-eqz v6, :cond_3
 
-    .line 134
+    .line 138
     sget-object v6, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     const-string v7, "com.htc.media/genreexpgrid"
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 138
+    .line 142
     :goto_1
     const-string v6, "android.intent.action.PICK"
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 139
+    .line 143
     const-string v6, "InnerActivityType"
 
-    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v6, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 140
+    .line 144
     const-string v6, "ShowActivityTitle"
 
     invoke-virtual {v3, v6, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 141
+    .line 145
     const-string v6, "LaunchFromSwitcher"
 
     invoke-virtual {v3, v6, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 142
+    .line 146
     const-string v6, "playlisturi"
 
     iget-object v7, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 143
+    .line 147
+    const-string v6, "dbTable"
+
+    invoke-virtual {v3, v6, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 148
     new-instance v2, Lcom/htc/music/util/SourceItem;
 
     const-string v6, "genreBrowserTabPlugin"
 
     invoke-direct {v2, v6, v3}, Lcom/htc/music/util/SourceItem;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 144
+    .line 149
     .local v2, genreSource:Lcom/htc/music/util/SourceItem;
     const v6, 0x7f070030
 
@@ -439,17 +459,17 @@
 
     iput-object v6, v2, Lcom/htc/music/util/SourceItem;->mSourceName:Ljava/lang/String;
 
-    .line 145
+    .line 150
     const v6, 0x7f020024
 
     iput v6, v2, Lcom/htc/music/util/SourceItem;->mIconRes:I
 
-    .line 148
+    .line 153
     iget-object v6, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mEditModePlaylistUri:Ljava/lang/String;
 
     if-nez v6, :cond_4
 
-    .line 149
+    .line 154
     const/4 v6, 0x5
 
     new-array v6, v6, [Lcom/htc/music/util/SourceItem;
@@ -458,7 +478,7 @@
 
     aput-object v0, v6, v8
 
-    aput-object v5, v6, v11
+    aput-object v5, v6, v10
 
     aput-object v4, v6, v12
 
@@ -468,11 +488,11 @@
 
     iput-object v6, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
 
-    .line 165
+    .line 170
     :goto_2
     return-void
 
-    .line 82
+    .line 83
     .end local v0           #albumSource:Lcom/htc/music/util/SourceItem;
     .end local v1           #artistSource:Lcom/htc/music/util/SourceItem;
     .end local v2           #genreSource:Lcom/htc/music/util/SourceItem;
@@ -487,7 +507,7 @@
 
     goto/16 :goto_0
 
-    .line 136
+    .line 140
     .restart local v0       #albumSource:Lcom/htc/music/util/SourceItem;
     .restart local v1       #artistSource:Lcom/htc/music/util/SourceItem;
     .restart local v4       #playlistSource:Lcom/htc/music/util/SourceItem;
@@ -501,7 +521,7 @@
 
     goto :goto_1
 
-    .line 158
+    .line 163
     .restart local v2       #genreSource:Lcom/htc/music/util/SourceItem;
     :cond_4
     const/4 v6, 0x4
@@ -512,7 +532,7 @@
 
     aput-object v0, v6, v8
 
-    aput-object v5, v6, v11
+    aput-object v5, v6, v10
 
     aput-object v2, v6, v12
 
@@ -527,7 +547,7 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 176
     iget-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
 
     array-length v0, v0
@@ -540,7 +560,7 @@
     .parameter "position"
 
     .prologue
-    .line 177
+    .line 182
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
@@ -549,11 +569,11 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 178
+    .line 183
     :cond_0
     const/4 v0, 0x0
 
-    .line 181
+    .line 186
     :goto_0
     return-object v0
 
@@ -570,7 +590,7 @@
     .parameter "position"
 
     .prologue
-    .line 187
+    .line 192
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
@@ -579,11 +599,11 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 188
+    .line 193
     :cond_0
     const-wide/16 v0, -0x1
 
-    .line 191
+    .line 196
     :goto_0
     return-wide v0
 
@@ -598,7 +618,7 @@
     .parameter "tag"
 
     .prologue
-    .line 228
+    .line 233
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -609,7 +629,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 229
+    .line 234
     iget-object v1, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
 
     aget-object v1, v1, v0
@@ -622,22 +642,22 @@
 
     if-eqz v1, :cond_0
 
-    .line 230
+    .line 235
     iget-object v1, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
 
     aget-object v1, v1, v0
 
-    .line 249
+    .line 254
     :goto_1
     return-object v1
 
-    .line 228
+    .line 233
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 249
+    .line 254
     :cond_1
     iget-object v1, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
 
@@ -657,7 +677,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 197
+    .line 202
     if-ltz p1, :cond_0
 
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
@@ -669,15 +689,15 @@
     :cond_0
     move-object v2, v3
 
-    .line 221
+    .line 226
     :goto_0
     return-object v2
 
-    .line 201
+    .line 206
     :cond_1
     if-nez p2, :cond_2
 
-    .line 202
+    .line 207
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mLayoutInflator:Landroid/view/LayoutInflater;
 
     const v4, 0x7f03005e
@@ -686,12 +706,12 @@
 
     move-result-object p2
 
-    .line 203
+    .line 208
     new-instance v0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;
 
     invoke-direct {v0, p0, v3}, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;-><init>(Lcom/htc/music/widget/CategorySwitcherAdapter;Lcom/htc/music/widget/CategorySwitcherAdapter$1;)V
 
-    .line 207
+    .line 212
     .local v0, holder:Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;
     const v2, 0x7f08004f
 
@@ -703,24 +723,24 @@
 
     iput-object v2, v0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;->text:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 208
+    .line 213
     iget-object v2, v0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;->text:Lcom/htc/widget/HtcListItem2LineText;
 
     const v4, 0x2030016
 
     invoke-virtual {v2, v4}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryTextStyle(I)V
 
-    .line 209
+    .line 214
     iget-object v2, v0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;->text:Lcom/htc/widget/HtcListItem2LineText;
 
     const/16 v4, 0x8
 
     invoke-virtual {v2, v4}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 211
+    .line 216
     invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 214
+    .line 219
     .end local v0           #holder:Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;
     :cond_2
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -729,16 +749,16 @@
 
     check-cast v0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;
 
-    .line 215
+    .line 220
     .restart local v0       #holder:Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;
     invoke-virtual {p2, v3}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 217
+    .line 222
     iget-object v2, p0, Lcom/htc/music/widget/CategorySwitcherAdapter;->mSources:[Lcom/htc/music/util/SourceItem;
 
     aget-object v1, v2, p1
 
-    .line 219
+    .line 224
     .local v1, item:Lcom/htc/music/util/SourceItem;
     iget-object v2, v0, Lcom/htc/music/widget/CategorySwitcherAdapter$ViewHolder;->text:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -748,7 +768,7 @@
 
     move-object v2, p2
 
-    .line 221
+    .line 226
     goto :goto_0
 .end method
 
@@ -756,6 +776,6 @@
     .locals 0
 
     .prologue
-    .line 73
+    .line 74
     return-void
 .end method

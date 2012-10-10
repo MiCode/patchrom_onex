@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1259
+    .line 1267
     iput-object p1, p0, Lcom/htc/music/HtcMusic$11;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,29 +42,29 @@
     .parameter "v"
 
     .prologue
-    .line 1261
+    .line 1269
     iget-object v0, p0, Lcom/htc/music/HtcMusic$11;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->isTooltipLaunched:Z
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$1700(Lcom/htc/music/HtcMusic;)Z
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$1800(Lcom/htc/music/HtcMusic;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1262
+    .line 1270
     iget-object v0, p0, Lcom/htc/music/HtcMusic$11;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x1
 
     #setter for: Lcom/htc/music/HtcMusic;->isTooltipLaunched:Z
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$1702(Lcom/htc/music/HtcMusic;Z)Z
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$1802(Lcom/htc/music/HtcMusic;Z)Z
 
-    .line 1263
+    .line 1271
     iget-object v0, p0, Lcom/htc/music/HtcMusic$11;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->music_tooltip_preference:Landroid/content/SharedPreferences;
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$1900(Lcom/htc/music/HtcMusic;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2000(Lcom/htc/music/HtcMusic;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -72,11 +72,11 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/htc/music/HtcMusic;->access$1800()Ljava/lang/String;
+    invoke-static {}, Lcom/htc/music/HtcMusic;->access$1900()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/htc/music/HtcMusic;->access$1800()Ljava/lang/String;
+    invoke-static {}, Lcom/htc/music/HtcMusic;->access$1900()Ljava/lang/String;
 
     move-result-object v2
 
@@ -86,21 +86,21 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 1267
+    .line 1275
     iget-object v0, p0, Lcom/htc/music/HtcMusic$11;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->hint_layout_land:Landroid/view/View;
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2000(Lcom/htc/music/HtcMusic;)Landroid/view/View;
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2100(Lcom/htc/music/HtcMusic;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1268
+    .line 1276
     iget-object v0, p0, Lcom/htc/music/HtcMusic$11;->this$0:Lcom/htc/music/HtcMusic;
 
     #getter for: Lcom/htc/music/HtcMusic;->hint_layout_land:Landroid/view/View;
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2000(Lcom/htc/music/HtcMusic;)Landroid/view/View;
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$2100(Lcom/htc/music/HtcMusic;)Landroid/view/View;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1271
+    .line 1279
     :cond_0
     return-void
 .end method

@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 283
+    .line 284
     iput-object p1, p0, Lcom/android/camera/component/ZoomBar$9;->this$0:Lcom/android/camera/component/ZoomBar;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 287
+    .line 288
     iget-object v0, p0, Lcom/android/camera/component/ZoomBar$9;->this$0:Lcom/android/camera/component/ZoomBar;
 
     #getter for: Lcom/android/camera/component/ZoomBar;->m_ZoomInButton:Landroid/view/View;
@@ -50,7 +50,7 @@
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 288
+    .line 289
     iget-object v0, p0, Lcom/android/camera/component/ZoomBar$9;->this$0:Lcom/android/camera/component/ZoomBar;
 
     #getter for: Lcom/android/camera/component/ZoomBar;->m_ZoomOutButton:Landroid/view/View;
@@ -60,6 +60,6 @@
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 289
+    .line 290
     return-void
 .end method

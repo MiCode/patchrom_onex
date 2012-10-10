@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 788
+    .line 869
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$11;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 792
+    .line 873
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$11;->this$0:Lcom/android/camera/component/CaptureBar;
 
     #calls: Lcom/android/camera/component/CaptureBar;->hideCaptureBar()V
-    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$2000(Lcom/android/camera/component/CaptureBar;)V
+    invoke-static {v0}, Lcom/android/camera/component/CaptureBar;->access$2200(Lcom/android/camera/component/CaptureBar;)V
 
-    .line 793
+    .line 874
     return-void
 .end method

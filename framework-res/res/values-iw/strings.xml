@@ -632,7 +632,7 @@
     <string name="phoneTypeHome">בית</string>
     <string name="phoneTypeMobile">נייד</string>
     <string name="phoneTypeWork">עבודה</string>
-    <string name="phoneTypeFaxWork">פקס בעבודהה</string>
+    <string name="phoneTypeFaxWork">פקס בעבודה</string>
     <string name="phoneTypeFaxHome">פקס בבית</string>
     <string name="phoneTypePager">זימונית</string>
     <string name="phoneTypeOther">אחר</string>
@@ -1310,7 +1310,7 @@
     <string name="font_settings">הגדרות גופן</string>
     <string name="font_alignment">יישור גופן</string>
     <string name="image">תמונה</string>
-    <string name="dongle_noti_ticker">התקן Media Link HD אותר.</string>
+    <string name="dongle_noti_ticker">אותר התקן Media Link HD</string>
     <string name="dongle_noti_title_multiple_found">נמצאו התקני HTC Media Link</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
     <string name="dongle_noti_text_multiple_found">הקש כדי לבחור</string>

@@ -227,20 +227,20 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mLock:Ljava/lang/Object;
 
-    .line 421
+    .line 420
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->nameForTextView_DefaultColor:Landroid/content/res/ColorStateList;
 
-    .line 605
+    .line 604
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mSearchResultList:Ljava/util/List;
 
-    .line 687
+    .line 686
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsMap:Ljava/util/Map;
 
-    .line 690
+    .line 689
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
@@ -514,44 +514,44 @@
     .parameter "waitSec"
 
     .prologue
-    .line 1093
+    .line 1092
     invoke-virtual {p0}, Lcom/htc/app/FilePickerListAdapter;->removeMessagesAndCallbacks()V
 
-    .line 1094
+    .line 1093
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     if-eqz v1, :cond_2
 
-    .line 1095
+    .line 1094
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
     if-eqz v1, :cond_0
 
-    .line 1096
+    .line 1095
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
     invoke-virtual {v1}, Lcom/htc/app/FileScanner;->stopScan()V
 
-    .line 1099
+    .line 1098
     :cond_0
     const/4 v1, 0x0
 
     :try_start_0
     invoke-virtual {p0, v1}, Lcom/htc/app/FilePickerListAdapter;->setScanThreadMinPriority(Z)V
 
-    .line 1100
+    .line 1099
     const-wide/16 v1, 0x0
 
     cmp-long v1, p1, v1
 
     if-lez v1, :cond_4
 
-    .line 1101
+    .line 1100
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     invoke-virtual {v1, p1, p2}, Ljava/lang/Thread;->join(J)V
 
-    .line 1106
+    .line 1105
     :goto_0
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
@@ -561,43 +561,43 @@
 
     if-nez v1, :cond_1
 
-    .line 1107
+    .line 1106
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1114
+    .line 1113
     :cond_1
     :goto_1
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
-    .line 1116
+    .line 1115
     :cond_2
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;
 
     if-eqz v1, :cond_3
 
-    .line 1117
+    .line 1116
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerCore;->setNoFileViewEmptyTextOfTypeView()V
 
-    .line 1119
+    .line 1118
     :cond_3
     return-void
 
-    .line 1103
+    .line 1102
     :cond_4
     :try_start_1
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     invoke-virtual {v1}, Ljava/lang/Thread;->join()V
 
-    .line 1104
+    .line 1103
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/htc/app/FilePickerListAdapter;->setScanThreadMinPriority(Z)V
@@ -606,15 +606,15 @@
 
     goto :goto_0
 
-    .line 1109
+    .line 1108
     :catch_0
     move-exception v0
 
-    .line 1110
+    .line 1109
     .local v0, e:Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1111
+    .line 1110
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -650,7 +650,7 @@
     .parameter "valueText"
 
     .prologue
-    .line 1487
+    .line 1486
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -666,7 +666,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 431
+    .line 430
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mContext:Landroid/content/Context;
 
     const-string v2, "layout_inflater"
@@ -677,7 +677,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 433
+    .line 432
     .local v0, inflater:Landroid/view/LayoutInflater;
     invoke-virtual {p2}, Lcom/htc/app/ItemInfo;->isFolder()Z
 
@@ -685,18 +685,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 434
+    .line 433
     const v1, 0x2090031
 
     invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
-    .line 455
+    .line 454
     :goto_0
     return-object p1
 
-    .line 436
+    .line 435
     :cond_0
     const v1, 0x2090030
 
@@ -711,26 +711,26 @@
     .locals 2
 
     .prologue
-    .line 1552
+    .line 1551
     const/4 v0, 0x0
 
-    .line 1553
+    .line 1552
     .local v0, result:Z
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     if-eqz v1, :cond_0
 
-    .line 1554
+    .line 1553
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     array-length v1, v1
 
     if-lez v1, :cond_0
 
-    .line 1555
+    .line 1554
     const/4 v0, 0x1
 
-    .line 1557
+    .line 1556
     :cond_0
     return v0
 .end method
@@ -753,24 +753,24 @@
     .end annotation
 
     .prologue
-    .line 611
+    .line 610
     .local p1, oldList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     if-nez p1, :cond_1
 
-    .line 612
+    .line 611
     const/4 v2, 0x0
 
-    .line 656
+    .line 655
     :cond_0
     return-object v2
 
-    .line 613
+    .line 612
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 614
+    .line 613
     .local v2, newList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     const/4 v0, 0x0
 
@@ -782,14 +782,14 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 615
+    .line 614
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/app/ItemInfo;
 
-    .line 616
+    .line 615
     .local v1, item:Lcom/htc/app/ItemInfo;
     add-int/lit8 v3, v0, 0x1
 
@@ -799,7 +799,7 @@
 
     if-ge v3, v4, :cond_4
 
-    .line 617
+    .line 616
     invoke-virtual {v1}, Lcom/htc/app/ItemInfo;->isFolder()Z
 
     move-result v3
@@ -820,20 +820,20 @@
 
     if-eqz v3, :cond_3
 
-    .line 614
+    .line 613
     :cond_2
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 620
+    .line 619
     :cond_3
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 622
+    .line 621
     :cond_4
     invoke-virtual {v1}, Lcom/htc/app/ItemInfo;->isFolder()Z
 
@@ -841,7 +841,7 @@
 
     if-nez v3, :cond_2
 
-    .line 623
+    .line 622
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -853,7 +853,7 @@
     .locals 1
 
     .prologue
-    .line 1011
+    .line 1010
     iget-boolean v0, p0, Lcom/htc/app/FilePickerListAdapter;->isGroupByPath:Z
 
     return v0
@@ -863,26 +863,26 @@
     .locals 2
 
     .prologue
-    .line 1391
+    .line 1390
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$9;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerListAdapter$9;-><init>(Lcom/htc/app/FilePickerListAdapter;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->notifyFileScanEnd:Ljava/lang/Runnable;
 
-    .line 1400
+    .line 1399
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 1401
+    .line 1400
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifyFileScanEnd:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1402
+    .line 1401
     :cond_0
     return-void
 .end method
@@ -892,15 +892,15 @@
     .parameter "what"
 
     .prologue
-    .line 1190
+    .line 1189
     packed-switch p1, :pswitch_data_0
 
-    .line 1325
+    .line 1324
     :cond_0
     :goto_0
     return-void
 
-    .line 1194
+    .line 1193
     :pswitch_0
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
@@ -910,19 +910,19 @@
 
     iput v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileCount:I
 
-    .line 1195
+    .line 1194
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$3;
 
     invoke-direct {v0, p0}, Lcom/htc/app/FilePickerListAdapter$3;-><init>(Lcom/htc/app/FilePickerListAdapter;)V
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->updateFileList:Ljava/lang/Runnable;
 
-    .line 1203
+    .line 1202
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 1204
+    .line 1203
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->updateFileList:Ljava/lang/Runnable;
@@ -931,7 +931,7 @@
 
     goto :goto_0
 
-    .line 1207
+    .line 1206
     :pswitch_1
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$4;
 
@@ -939,12 +939,12 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->updateSearchFileCount:Ljava/lang/Runnable;
 
-    .line 1213
+    .line 1212
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 1214
+    .line 1213
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->updateSearchFileCount:Ljava/lang/Runnable;
@@ -953,7 +953,7 @@
 
     goto :goto_0
 
-    .line 1217
+    .line 1216
     :pswitch_2
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$5;
 
@@ -961,7 +961,7 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->notifyResultByTypeRunnable:Ljava/lang/Runnable;
 
-    .line 1239
+    .line 1238
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifyResultByTypeRunnable:Ljava/lang/Runnable;
@@ -970,7 +970,7 @@
 
     goto :goto_0
 
-    .line 1242
+    .line 1241
     :pswitch_3
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$6;
 
@@ -978,12 +978,12 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->notifySearchResultRunnable:Ljava/lang/Runnable;
 
-    .line 1289
+    .line 1288
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 1290
+    .line 1289
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifySearchResultRunnable:Ljava/lang/Runnable;
@@ -992,7 +992,7 @@
 
     goto :goto_0
 
-    .line 1293
+    .line 1292
     :pswitch_4
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$7;
 
@@ -1000,12 +1000,12 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChangedRunnable:Ljava/lang/Runnable;
 
-    .line 1302
+    .line 1301
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 1303
+    .line 1302
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChangedRunnable:Ljava/lang/Runnable;
@@ -1014,7 +1014,7 @@
 
     goto :goto_0
 
-    .line 1306
+    .line 1305
     :pswitch_5
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$8;
 
@@ -1022,12 +1022,12 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidatedRunnable:Ljava/lang/Runnable;
 
-    .line 1311
+    .line 1310
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 1312
+    .line 1311
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidatedRunnable:Ljava/lang/Runnable;
@@ -1036,7 +1036,7 @@
 
     goto :goto_0
 
-    .line 1190
+    .line 1189
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1053,28 +1053,28 @@
     .parameter "object"
 
     .prologue
-    .line 781
+    .line 780
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 782
+    .line 781
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 784
+    .line 783
     :try_start_0
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 788
+    .line 787
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 790
+    .line 789
     :cond_0
     invoke-virtual {p0}, Lcom/htc/app/FilePickerListAdapter;->getCurrentItemList()Ljava/util/List;
 
@@ -1082,15 +1082,15 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mSearchResultList:Ljava/util/List;
 
-    .line 791
+    .line 790
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
-    .line 793
+    .line 792
     return-void
 
-    .line 788
+    .line 787
     :catchall_0
     move-exception v0
 
@@ -1106,7 +1106,7 @@
     .locals 1
 
     .prologue
-    .line 1548
+    .line 1547
     const/4 v0, 0x0
 
     return v0
@@ -1118,22 +1118,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 898
+    .line 897
     const/4 v1, 0x5
 
     invoke-virtual {p0, v1}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
-    .line 899
+    .line 898
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
-    .line 900
+    .line 899
     iget-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 902
+    .line 901
     :try_start_0
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
@@ -1142,36 +1142,36 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 906
+    .line 905
     :goto_0
     :try_start_1
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 908
+    .line 907
     :cond_0
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     if-eqz v1, :cond_1
 
-    .line 909
+    .line 908
     iput v3, p0, Lcom/htc/app/FilePickerListAdapter;->mFileCount:I
 
-    .line 910
+    .line 909
     new-array v1, v3, [Lcom/htc/app/ItemInfo;
 
     iput-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
-    .line 912
+    .line 911
     :cond_1
     return-void
 
-    .line 903
+    .line 902
     :catch_0
     move-exception v0
 
-    .line 904
+    .line 903
     .local v0, ex:Ljava/lang/UnsupportedOperationException;
     :try_start_2
     new-instance v1, Ljava/util/ArrayList;
@@ -1182,7 +1182,7 @@
 
     goto :goto_0
 
-    .line 906
+    .line 905
     .end local v0           #ex:Ljava/lang/UnsupportedOperationException;
     :catchall_0
     move-exception v1
@@ -1198,17 +1198,17 @@
     .locals 1
 
     .prologue
-    .line 693
+    .line 692
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsTimeMap:Ljava/util/TreeMap;
 
     invoke-virtual {v0}, Ljava/util/TreeMap;->clear()V
 
-    .line 694
+    .line 693
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileCount:I
 
-    .line 695
+    .line 694
     return-void
 .end method
 
@@ -1218,53 +1218,53 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1049
+    .line 1048
     invoke-virtual {p0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidated()V
 
-    .line 1050
+    .line 1049
     invoke-virtual {p0}, Lcom/htc/app/FilePickerListAdapter;->removeMessagesAndCallbacks()V
 
-    .line 1051
+    .line 1050
     const-wide/16 v0, 0x1388
 
     invoke-direct {p0, v0, v1}, Lcom/htc/app/FilePickerListAdapter;->cancelScanFiles(J)V
 
-    .line 1052
+    .line 1051
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mContext:Landroid/content/Context;
 
-    .line 1053
+    .line 1052
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
     if-eqz v0, :cond_0
 
-    .line 1054
+    .line 1053
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
     invoke-virtual {v0}, Lcom/htc/app/FileScanner;->close()V
 
-    .line 1055
+    .line 1054
     :cond_0
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
-    .line 1056
+    .line 1055
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePicker:Lcom/htc/app/FilePickerCore;
 
-    .line 1057
+    .line 1056
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
-    .line 1058
+    .line 1057
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mFileSorter:Lcom/htc/app/FileSorter;
 
-    .line 1059
+    .line 1058
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
-    .line 1060
+    .line 1059
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mFlatModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerListAdapter$FlatModeMultiChoiceModeCallback;
 
-    .line 1061
+    .line 1060
     iput-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mDbHelper:Lcom/htc/app/FilePickerDBHelper;
 
-    .line 1062
+    .line 1061
     return-void
 .end method
 
@@ -1305,16 +1305,16 @@
     .locals 6
 
     .prologue
-    .line 1469
+    .line 1468
     const/4 v1, 0x0
 
-    .line 1470
+    .line 1469
     .local v1, fileCount:I
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     if-eqz v5, :cond_1
 
-    .line 1471
+    .line 1470
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     .local v0, arr$:[Lcom/htc/app/ItemInfo;
@@ -1329,27 +1329,27 @@
 
     aget-object v3, v0, v2
 
-    .line 1472
+    .line 1471
     .local v3, itemInfo:Lcom/htc/app/ItemInfo;
     if-eqz v3, :cond_0
 
-    .line 1473
+    .line 1472
     invoke-virtual {v3}, Lcom/htc/app/ItemInfo;->isFolder()Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 1474
+    .line 1473
     add-int/lit8 v1, v1, 0x1
 
-    .line 1471
+    .line 1470
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1479
+    .line 1478
     .end local v0           #arr$:[Lcom/htc/app/ItemInfo;
     .end local v2           #i$:I
     .end local v3           #itemInfo:Lcom/htc/app/ItemInfo;
@@ -1371,12 +1371,12 @@
     .end annotation
 
     .prologue
-    .line 796
+    .line 795
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 797
+    .line 796
     .local v6, resultList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-object v7, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
@@ -1390,7 +1390,7 @@
 
     if-nez v7, :cond_1
 
-    .line 798
+    .line 797
     iget-object v7, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     const/4 v8, 0x0
@@ -1403,7 +1403,7 @@
 
     check-cast v0, [Lcom/htc/app/ItemInfo;
 
-    .line 799
+    .line 798
     .local v0, ItemInfos:[Lcom/htc/app/ItemInfo;
     if-eqz v0, :cond_1
 
@@ -1411,7 +1411,7 @@
 
     if-lez v7, :cond_1
 
-    .line 800
+    .line 799
     move-object v1, v0
 
     .local v1, arr$:[Lcom/htc/app/ItemInfo;
@@ -1426,13 +1426,13 @@
 
     aget-object v3, v1, v2
 
-    .line 801
+    .line 800
     .local v3, itemInfo:Lcom/htc/app/ItemInfo;
     invoke-virtual {v3}, Lcom/htc/app/ItemInfo;->getItemDataSourceType()I
 
     move-result v4
 
-    .line 802
+    .line 801
     .local v4, itemTypeId:I
     iget-object v7, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -1442,16 +1442,16 @@
 
     if-eqz v7, :cond_0
 
-    .line 803
+    .line 802
     invoke-interface {v6, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 800
+    .line 799
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 809
+    .line 808
     .end local v0           #ItemInfos:[Lcom/htc/app/ItemInfo;
     .end local v1           #arr$:[Lcom/htc/app/ItemInfo;
     .end local v2           #i$:I
@@ -1466,7 +1466,7 @@
     .locals 1
 
     .prologue
-    .line 1460
+    .line 1459
     iget v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileCount:I
 
     return v0
@@ -1476,12 +1476,12 @@
     .locals 2
 
     .prologue
-    .line 509
+    .line 508
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFilter:Landroid/widget/Filter;
 
     if-nez v0, :cond_0
 
-    .line 510
+    .line 509
     new-instance v0, Lcom/htc/app/FilePickerListAdapter$FilePickerFilter;
 
     const/4 v1, 0x0
@@ -1490,7 +1490,7 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFilter:Landroid/widget/Filter;
 
-    .line 512
+    .line 511
     :cond_0
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFilter:Landroid/widget/Filter;
 
@@ -1563,23 +1563,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1511
+    .line 1510
     invoke-virtual {p0, p1}, Lcom/htc/app/FilePickerListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/htc/app/ItemInfo;
 
-    .line 1512
+    .line 1511
     .local v0, item:Lcom/htc/app/ItemInfo;
     if-nez v0, :cond_1
 
-    .line 1517
+    .line 1516
     :cond_0
     :goto_0
     return v1
 
-    .line 1514
+    .line 1513
     :cond_1
     invoke-virtual {v0}, Lcom/htc/app/ItemInfo;->isFolder()Z
 
@@ -1587,7 +1587,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1515
+    .line 1514
     const/4 v1, 0x1
 
     goto :goto_0
@@ -1685,25 +1685,25 @@
     .end annotation
 
     .prologue
-    .line 1433
+    .line 1432
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1434
+    .line 1433
     .local v3, items:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     iget-object v7, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v7, :cond_1
 
-    .line 1435
+    .line 1434
     iget-object v7, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object v6
 
-    .line 1436
+    .line 1435
     .local v6, originalValuesObjects:[Ljava/lang/Object;
     move-object v0, v6
 
@@ -1722,10 +1722,10 @@
     .local v5, originalValuesObject:Ljava/lang/Object;
     move-object v2, v5
 
-    .line 1437
+    .line 1436
     check-cast v2, Lcom/htc/app/ItemInfo;
 
-    .line 1438
+    .line 1437
     .local v2, itemInfo:Lcom/htc/app/ItemInfo;
     invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->isChecked()Z
 
@@ -1733,16 +1733,16 @@
 
     if-eqz v7, :cond_0
 
-    .line 1439
+    .line 1438
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1436
+    .line 1435
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1443
+    .line 1442
     .end local v0           #arr$:[Ljava/lang/Object;
     .end local v1           #i$:I
     .end local v2           #itemInfo:Lcom/htc/app/ItemInfo;
@@ -1754,7 +1754,7 @@
 
     if-eqz v7, :cond_3
 
-    .line 1444
+    .line 1443
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     .local v0, arr$:[Lcom/htc/app/ItemInfo;
@@ -1769,7 +1769,7 @@
 
     aget-object v2, v0, v1
 
-    .line 1445
+    .line 1444
     .restart local v2       #itemInfo:Lcom/htc/app/ItemInfo;
     invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->isChecked()Z
 
@@ -1777,16 +1777,16 @@
 
     if-eqz v7, :cond_2
 
-    .line 1446
+    .line 1445
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1444
+    .line 1443
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1451
+    .line 1450
     .end local v0           #arr$:[Lcom/htc/app/ItemInfo;
     .end local v1           #i$:I
     .end local v2           #itemInfo:Lcom/htc/app/ItemInfo;
@@ -1904,7 +1904,7 @@
 
     invoke-virtual {v0, v1, v13}, Lcom/htc/widget/HtcListItemSeparator;->setText(ILjava/lang/CharSequence;)V
 
-    .line 400
+    .line 399
     .end local v13           #filePath:Ljava/lang/String;
     .end local v17           #htcListItemSeparator:Lcom/htc/widget/HtcListItemSeparator;
     :cond_2
@@ -1987,10 +1987,10 @@
 
     move-result-object v10
 
-    check-cast v10, Lcom/htc/widget/HtcListItemColorIcon;
+    check-cast v10, Lcom/htc/widget/HtcListItemTileImage;
 
     .line 230
-    .local v10, fileItemIcon:Lcom/htc/widget/HtcListItemColorIcon;
+    .local v10, fileItemIcon:Lcom/htc/widget/HtcListItemTileImage;
     invoke-virtual/range {v24 .. v24}, Lcom/htc/app/ItemInfo;->getFileName()Ljava/lang/String;
 
     move-result-object v11
@@ -2147,7 +2147,7 @@
 
     move/from16 v0, v30
 
-    invoke-virtual {v10, v0}, Lcom/htc/widget/HtcListItemColorIcon;->setColorIconImageResource(I)V
+    invoke-virtual {v10, v0}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageResource(I)V
 
     .line 309
     :goto_2
@@ -2381,7 +2381,7 @@
 
     .line 306
     .local v6, drawableResId:I
-    invoke-virtual {v10, v6}, Lcom/htc/widget/HtcListItemColorIcon;->setColorIconImageResource(I)V
+    invoke-virtual {v10, v6}, Lcom/htc/widget/HtcListItemTileImage;->setTileImageResource(I)V
 
     goto/16 :goto_2
 
@@ -2509,7 +2509,7 @@
 
     invoke-virtual {v15, v0}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
-    .line 389
+    .line 388
     .end local v15           #htcCheckBox:Lcom/htc/widget/HtcCheckBox;
     :cond_a
     :goto_6
@@ -2517,7 +2517,7 @@
 
     move-result-wide v26
 
-    .line 391
+    .line 390
     .local v26, lastModified:J
     move-object/from16 v0, p0
 
@@ -2527,7 +2527,7 @@
 
     if-eqz v30, :cond_2
 
-    .line 392
+    .line 391
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerListAdapter;->mFileDate:Ljava/sql/Date;
@@ -2540,7 +2540,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/sql/Date;->setTime(J)V
 
-    .line 394
+    .line 393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerListAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -2549,7 +2549,7 @@
 
     if-eqz v30, :cond_2
 
-    .line 395
+    .line 394
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/app/FilePickerListAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
@@ -2599,7 +2599,7 @@
     .locals 1
 
     .prologue
-    .line 1529
+    .line 1528
     const/4 v0, 0x2
 
     return v0
@@ -2610,10 +2610,10 @@
     .parameter "enable"
 
     .prologue
-    .line 1007
+    .line 1006
     iput-boolean p1, p0, Lcom/htc/app/FilePickerListAdapter;->isGroupByPath:Z
 
-    .line 1008
+    .line 1007
     return-void
 .end method
 
@@ -2623,45 +2623,45 @@
     .parameter "index"
 
     .prologue
-    .line 827
+    .line 826
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
-    .line 828
+    .line 827
     iget-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 829
+    .line 828
     :try_start_0
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     invoke-interface {v1, p2, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 830
+    .line 829
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 832
+    .line 831
     :cond_0
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     if-eqz v1, :cond_1
 
-    .line 833
+    .line 832
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 834
+    .line 833
     .local v0, resultList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     invoke-interface {v0, p2, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 835
+    .line 834
     const/4 v1, 0x0
 
     new-array v1, v1, [Lcom/htc/app/ItemInfo;
@@ -2674,17 +2674,17 @@
 
     iput-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
-    .line 837
+    .line 836
     .end local v0           #resultList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     :cond_1
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
-    .line 838
+    .line 837
     return-void
 
-    .line 830
+    .line 829
     :catchall_0
     move-exception v1
 
@@ -2701,7 +2701,7 @@
     .parameter "position"
 
     .prologue
-    .line 465
+    .line 464
     invoke-virtual {p0, p1}, Lcom/htc/app/FilePickerListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2712,7 +2712,7 @@
 
     check-cast v0, Lcom/htc/app/ItemInfo;
 
-    .line 466
+    .line 465
     .local v0, itemInfo:Lcom/htc/app/ItemInfo;
     if-eqz v0, :cond_0
 
@@ -2722,11 +2722,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 467
+    .line 466
     :cond_0
     const/4 v1, 0x0
 
-    .line 469
+    .line 468
     :goto_0
     return v1
 
@@ -2740,15 +2740,15 @@
     .locals 1
 
     .prologue
-    .line 1497
+    .line 1496
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     if-eqz v0, :cond_0
 
-    .line 1500
+    .line 1499
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetInvalidated()V
 
-    .line 1502
+    .line 1501
     :cond_0
     return-void
 .end method
@@ -2757,26 +2757,26 @@
     .locals 2
 
     .prologue
-    .line 1655
+    .line 1654
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mFlatModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerListAdapter$FlatModeMultiChoiceModeCallback;
 
     if-eqz v1, :cond_0
 
-    .line 1656
+    .line 1655
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mFlatModeMultiChoiceModeCallback:Lcom/htc/app/FilePickerListAdapter$FlatModeMultiChoiceModeCallback;
 
     invoke-virtual {v1}, Lcom/htc/app/FilePickerListAdapter$FlatModeMultiChoiceModeCallback;->getActionMode()Landroid/view/ActionMode;
 
     move-result-object v0
 
-    .line 1657
+    .line 1656
     .local v0, actionMode:Landroid/view/ActionMode;
     if-eqz v0, :cond_0
 
-    .line 1658
+    .line 1657
     invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
 
-    .line 1661
+    .line 1660
     .end local v0           #actionMode:Landroid/view/ActionMode;
     :cond_0
     return-void
@@ -2788,7 +2788,7 @@
     .parameter "timeGroup"
 
     .prologue
-    .line 698
+    .line 697
     invoke-virtual {p1}, Lcom/htc/app/ItemInfo;->getFileName()Ljava/lang/String;
 
     move-result-object v11
@@ -2797,11 +2797,11 @@
 
     move-result-object v1
 
-    .line 699
+    .line 698
     .local v1, fileName:Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 700
+    .line 699
     .local v10, valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     iget-object v11, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsTimeMap:Ljava/util/TreeMap;
 
@@ -2815,7 +2815,7 @@
 
     if-eqz v11, :cond_0
 
-    .line 701
+    .line 700
     iget-object v11, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsTimeMap:Ljava/util/TreeMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2829,19 +2829,19 @@
     .end local v10           #valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     check-cast v10, Ljava/util/ArrayList;
 
-    .line 706
+    .line 705
     .restart local v10       #valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     :goto_0
     invoke-virtual {v10, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 707
+    .line 706
     iget v11, p0, Lcom/htc/app/FilePickerListAdapter;->mFileCount:I
 
     add-int/lit8 v11, v11, 0x1
 
     iput v11, p0, Lcom/htc/app/FilePickerListAdapter;->mFileCount:I
 
-    .line 708
+    .line 707
     iget-object v11, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsTimeMap:Ljava/util/TreeMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2850,24 +2850,24 @@
 
     invoke-virtual {v11, v12, v10}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 710
+    .line 709
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 711
+    .line 710
     .local v5, resultsList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 712
+    .line 711
     .local v4, noSeperatorList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 714
+    .line 713
     .local v8, tempList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-object v11, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsTimeMap:Ljava/util/TreeMap;
 
@@ -2875,7 +2875,7 @@
 
     move-result-object v7
 
-    .line 715
+    .line 714
     .local v7, set:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;>;"
     invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -2895,11 +2895,11 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 716
+    .line 715
     .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;"
     const-string v6, ""
 
-    .line 717
+    .line 716
     .local v6, seperator:Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2911,26 +2911,26 @@
 
     move-result v3
 
-    .line 718
+    .line 717
     .local v3, key:I
     const/4 v11, 0x1
 
     if-ne v3, v11, :cond_1
 
-    .line 719
+    .line 718
     const-string v6, "TODAY"
 
-    .line 729
+    .line 728
     :goto_2
     invoke-static {v6}, Lcom/htc/app/ItemInfo;->getLocalGroupTypeInstance(Ljava/lang/String;)Lcom/htc/app/ItemInfo;
 
     move-result-object v9
 
-    .line 730
+    .line 729
     .local v9, typeItem:Lcom/htc/app/ItemInfo;
     invoke-interface {v5, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 731
+    .line 730
     iget-object v12, p0, Lcom/htc/app/FilePickerListAdapter;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -2943,10 +2943,10 @@
 
     move-result-object v8
 
-    .line 732
+    .line 731
     invoke-interface {v5, v8}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 733
+    .line 732
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v11
@@ -2957,7 +2957,7 @@
 
     goto :goto_1
 
-    .line 703
+    .line 702
     .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;"
     .end local v2           #i$:Ljava/util/Iterator;
     .end local v3           #key:I
@@ -2976,7 +2976,7 @@
     .restart local v10       #valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     goto :goto_0
 
-    .line 720
+    .line 719
     .restart local v0       #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;"
     .restart local v2       #i$:Ljava/util/Iterator;
     .restart local v3       #key:I
@@ -2990,55 +2990,55 @@
 
     if-ne v3, v11, :cond_2
 
-    .line 721
+    .line 720
     const-string v6, "YESTERDAY"
 
     goto :goto_2
 
-    .line 722
+    .line 721
     :cond_2
     const/4 v11, 0x3
 
     if-ne v3, v11, :cond_3
 
-    .line 723
+    .line 722
     const-string v6, "ONE WEEK"
 
     goto :goto_2
 
-    .line 724
+    .line 723
     :cond_3
     const/4 v11, 0x4
 
     if-ne v3, v11, :cond_4
 
-    .line 725
+    .line 724
     const-string v6, "ONE MONTH"
 
     goto :goto_2
 
-    .line 727
+    .line 726
     :cond_4
     const-string v6, "OLDER"
 
     goto :goto_2
 
-    .line 735
+    .line 734
     .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;"
     .end local v3           #key:I
     .end local v6           #seperator:Ljava/lang/String;
     :cond_5
     iput-object v4, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
-    .line 736
+    .line 735
     iput-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mSearchResultList:Ljava/util/List;
 
-    .line 737
+    .line 736
     const/4 v11, 0x3
 
     invoke-virtual {p0, v11}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
-    .line 738
+    .line 737
     return-void
 .end method
 
@@ -3047,7 +3047,7 @@
     .parameter "itemInfo"
 
     .prologue
-    .line 744
+    .line 743
     invoke-virtual {p1}, Lcom/htc/app/ItemInfo;->getFileName()Ljava/lang/String;
 
     move-result-object v12
@@ -3056,7 +3056,7 @@
 
     move-result-object v4
 
-    .line 745
+    .line 744
     .local v4, fileName:Ljava/lang/String;
     const-string v12, "."
 
@@ -3066,41 +3066,41 @@
 
     add-int/lit8 v9, v12, 0x1
 
-    .line 746
+    .line 745
     .local v9, start:I
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 747
+    .line 746
     .local v1, end:I
     const-string v3, ""
 
-    .line 748
+    .line 747
     .local v3, extension:Ljava/lang/String;
     if-nez v9, :cond_1
 
-    .line 778
+    .line 777
     :cond_0
     :goto_0
     return-void
 
-    .line 750
+    .line 749
     :cond_1
     if-lez v1, :cond_2
 
     if-ge v9, v1, :cond_2
 
-    .line 751
+    .line 750
     invoke-virtual {v4, v9, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 753
+    .line 752
     :cond_2
     const/4 v11, 0x0
 
-    .line 754
+    .line 753
     .local v11, valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     iget-object v12, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsMap:Ljava/util/Map;
 
@@ -3110,7 +3110,7 @@
 
     if-eqz v12, :cond_3
 
-    .line 755
+    .line 754
     iget-object v12, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsMap:Ljava/util/Map;
 
     invoke-interface {v12, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3120,12 +3120,12 @@
     .end local v11           #valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     check-cast v11, Ljava/util/ArrayList;
 
-    .line 760
+    .line 759
     .restart local v11       #valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     :goto_1
     invoke-virtual {v11, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 761
+    .line 760
     iget-object v13, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsMap:Ljava/util/Map;
 
     invoke-virtual {p0, v11}, Lcom/htc/app/FilePickerListAdapter;->sort(Ljava/util/List;)Ljava/util/List;
@@ -3136,12 +3136,12 @@
 
     invoke-interface {v13, v3, v12}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 763
+    .line 762
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 765
+    .line 764
     .local v7, resultsList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-object v12, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsMap:Ljava/util/Map;
 
@@ -3149,7 +3149,7 @@
 
     move-result-object v8
 
-    .line 766
+    .line 765
     .local v8, set:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList;>;>;"
     invoke-interface {v8}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3169,7 +3169,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 767
+    .line 766
     .local v2, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3181,17 +3181,17 @@
 
     move-result-object v6
 
-    .line 768
+    .line 767
     .local v6, key:Ljava/lang/String;
     invoke-static {v6}, Lcom/htc/app/ItemInfo;->getLocalGroupTypeInstance(Ljava/lang/String;)Lcom/htc/app/ItemInfo;
 
     move-result-object v10
 
-    .line 769
+    .line 768
     .local v10, typeItem:Lcom/htc/app/ItemInfo;
     invoke-interface {v7, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 770
+    .line 769
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v12
@@ -3202,7 +3202,7 @@
 
     goto :goto_2
 
-    .line 757
+    .line 756
     .end local v2           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList;>;"
     .end local v5           #i$:Ljava/util/Iterator;
     .end local v6           #key:Ljava/lang/String;
@@ -3218,24 +3218,24 @@
     .restart local v11       #valuesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/htc/app/ItemInfo;>;"
     goto :goto_1
 
-    .line 772
+    .line 771
     .restart local v5       #i$:Ljava/util/Iterator;
     .restart local v7       #resultsList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     .restart local v8       #set:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList;>;>;"
     :cond_4
     iput-object v7, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
-    .line 773
+    .line 772
     iput-object v7, p0, Lcom/htc/app/FilePickerListAdapter;->mSearchResultList:Ljava/util/List;
 
-    .line 774
+    .line 773
     iget-object v12, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     array-length v12, v12
 
     mul-int/lit8 v0, v12, 0x2
 
-    .line 775
+    .line 774
     .local v0, count:I
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -3243,7 +3243,7 @@
 
     if-lt v12, v0, :cond_0
 
-    .line 776
+    .line 775
     const/4 v12, 0x3
 
     invoke-virtual {p0, v12}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
@@ -3256,45 +3256,45 @@
     .parameter "object"
 
     .prologue
-    .line 852
+    .line 851
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
-    .line 853
+    .line 852
     iget-object v2, p0, Lcom/htc/app/FilePickerListAdapter;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 854
+    .line 853
     :try_start_0
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 855
+    .line 854
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 858
+    .line 857
     :cond_0
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     if-eqz v1, :cond_1
 
-    .line 859
+    .line 858
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 860
+    .line 859
     .local v0, resultList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 861
+    .line 860
     const/4 v1, 0x0
 
     new-array v1, v1, [Lcom/htc/app/ItemInfo;
@@ -3307,17 +3307,17 @@
 
     iput-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
-    .line 862
+    .line 861
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
-    .line 864
+    .line 863
     .end local v0           #resultList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     :cond_1
     return-void
 
-    .line 855
+    .line 854
     :catchall_0
     move-exception v1
 
@@ -3333,10 +3333,10 @@
     .locals 8
 
     .prologue
-    .line 1328
+    .line 1327
     const/4 v1, 0x1
 
-    .line 1330
+    .line 1329
     .local v1, isNeedReScan:Z
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
@@ -3350,12 +3350,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 1331
+    .line 1330
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
     if-eqz v5, :cond_4
 
-    .line 1332
+    .line 1331
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v5, :cond_0
@@ -3368,21 +3368,21 @@
 
     if-gtz v5, :cond_1
 
-    .line 1333
+    .line 1332
     :cond_0
     const/4 v5, 0x1
 
-    .line 1356
+    .line 1355
     :goto_0
     return v5
 
-    .line 1334
+    .line 1333
     :cond_1
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 1335
+    .line 1334
     .local v4, showList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
@@ -3405,13 +3405,13 @@
 
     check-cast v2, Lcom/htc/app/ItemInfo;
 
-    .line 1336
+    .line 1335
     .local v2, itemInfo:Lcom/htc/app/ItemInfo;
     invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1337
+    .line 1336
     .local v3, path:Ljava/lang/String;
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -3421,12 +3421,12 @@
 
     if-nez v5, :cond_2
 
-    .line 1340
+    .line 1339
     invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1342
+    .line 1341
     .end local v2           #itemInfo:Lcom/htc/app/ItemInfo;
     .end local v3           #path:Ljava/lang/String;
     :cond_3
@@ -3434,21 +3434,21 @@
 
     monitor-enter v6
 
-    .line 1343
+    .line 1342
     :try_start_0
     iput-object v4, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
-    .line 1344
+    .line 1343
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1346
+    .line 1345
     iget-object v6, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     monitor-enter v6
 
-    .line 1347
+    .line 1346
     :try_start_1
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
@@ -3464,15 +3464,15 @@
 
     iput-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
-    .line 1348
+    .line 1347
     const/4 v1, 0x0
 
-    .line 1349
+    .line 1348
     monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1350
+    .line 1349
     invoke-virtual {p0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
     .end local v0           #i$:Ljava/util/Iterator;
@@ -3481,10 +3481,10 @@
     :goto_2
     move v5, v1
 
-    .line 1356
+    .line 1355
     goto :goto_0
 
-    .line 1344
+    .line 1343
     .restart local v0       #i$:Ljava/util/Iterator;
     .restart local v4       #showList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     :catchall_0
@@ -3497,7 +3497,7 @@
 
     throw v5
 
-    .line 1349
+    .line 1348
     :catchall_1
     move-exception v5
 
@@ -3508,13 +3508,13 @@
 
     throw v5
 
-    .line 1353
+    .line 1352
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v4           #showList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     :cond_5
     const/4 v1, 0x1
 
-    .line 1354
+    .line 1353
     invoke-virtual {p0}, Lcom/htc/app/FilePickerListAdapter;->stopScan()V
 
     goto :goto_2
@@ -3524,96 +3524,96 @@
     .locals 2
 
     .prologue
-    .line 1065
+    .line 1064
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 1066
+    .line 1065
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1067
+    .line 1066
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1068
+    .line 1067
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1069
+    .line 1068
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1071
+    .line 1070
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1072
+    .line 1071
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->updateFileList:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1073
+    .line 1072
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->updateSearchFileCount:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1074
+    .line 1073
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->updateHeaderName:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1075
+    .line 1074
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChangedRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1076
+    .line 1075
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetInvalidatedRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1077
+    .line 1076
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifyFileScanEnd:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1078
+    .line 1077
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->notifySearchResultRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1080
+    .line 1079
     :cond_0
     return-void
 .end method
@@ -3622,12 +3622,12 @@
     .locals 5
 
     .prologue
-    .line 1420
+    .line 1419
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     if-eqz v4, :cond_0
 
-    .line 1421
+    .line 1420
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     .local v0, arr$:[Lcom/htc/app/ItemInfo;
@@ -3642,18 +3642,18 @@
 
     aget-object v2, v0, v1
 
-    .line 1422
+    .line 1421
     .local v2, itemInfo:Lcom/htc/app/ItemInfo;
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4}, Lcom/htc/app/ItemInfo;->setChecked(Z)V
 
-    .line 1421
+    .line 1420
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1425
+    .line 1424
     .end local v0           #arr$:[Lcom/htc/app/ItemInfo;
     .end local v1           #i$:I
     .end local v2           #itemInfo:Lcom/htc/app/ItemInfo;
@@ -3679,10 +3679,10 @@
     .parameter "isRemoveMode"
 
     .prologue
-    .line 483
+    .line 482
     iput-boolean p1, p0, Lcom/htc/app/FilePickerListAdapter;->isRemoveMode:Z
 
-    .line 484
+    .line 483
     return-void
 .end method
 
@@ -3691,10 +3691,10 @@
     .parameter "listener"
 
     .prologue
-    .line 1043
+    .line 1042
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter;->mDataSetChangedListener:Lcom/htc/app/FilePickerListAdapter$onDataSetChangedListener;
 
-    .line 1044
+    .line 1043
     return-void
 .end method
 
@@ -3703,10 +3703,10 @@
     .parameter "fileScanner"
 
     .prologue
-    .line 1015
+    .line 1014
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
-    .line 1016
+    .line 1015
     return-void
 .end method
 
@@ -3715,10 +3715,10 @@
     .parameter "fileSorter"
 
     .prologue
-    .line 1019
+    .line 1018
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter;->mFileSorter:Lcom/htc/app/FileSorter;
 
-    .line 1020
+    .line 1019
     return-void
 .end method
 
@@ -3727,10 +3727,10 @@
     .parameter "name"
 
     .prologue
-    .line 662
+    .line 661
     iput-object p1, p0, Lcom/htc/app/FilePickerListAdapter;->headerViewText:Ljava/lang/String;
 
-    .line 663
+    .line 662
     return-void
 .end method
 
@@ -3739,27 +3739,27 @@
     .parameter "enabled"
 
     .prologue
-    .line 1083
+    .line 1082
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
-    .line 1084
+    .line 1083
     if-eqz p1, :cond_1
 
-    .line 1085
+    .line 1084
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
 
-    .line 1090
+    .line 1089
     :cond_0
     :goto_0
     return-void
 
-    .line 1087
+    .line 1086
     :cond_1
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
@@ -3775,14 +3775,14 @@
     .parameter "input"
 
     .prologue
-    .line 1538
+    .line 1537
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mInputStringLowerCase:Ljava/lang/String;
 
-    .line 1539
+    .line 1538
     return-void
 .end method
 
@@ -3790,7 +3790,7 @@
     .locals 10
 
     .prologue
-    .line 1361
+    .line 1360
     iget-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v8, :cond_0
@@ -3803,16 +3803,16 @@
 
     if-eqz v8, :cond_1
 
-    .line 1383
+    .line 1382
     :cond_0
     :goto_0
     return-void
 
-    .line 1363
+    .line 1362
     :cond_1
     const/4 v7, 0x0
 
-    .line 1364
+    .line 1363
     .local v7, showList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
@@ -3826,13 +3826,13 @@
 
     if-eqz v8, :cond_0
 
-    .line 1365
+    .line 1364
     new-instance v7, Ljava/util/LinkedList;
 
     .end local v7           #showList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     invoke-direct {v7}, Ljava/util/LinkedList;-><init>()V
 
-    .line 1366
+    .line 1365
     .restart local v7       #showList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
@@ -3840,7 +3840,7 @@
 
     move-result-object v5
 
-    .line 1367
+    .line 1366
     .local v5, originalValuesObject:[Ljava/lang/Object;
     move-object v0, v5
 
@@ -3859,10 +3859,10 @@
     .local v3, itemInfoObject:Ljava/lang/Object;
     move-object v2, v3
 
-    .line 1368
+    .line 1367
     check-cast v2, Lcom/htc/app/ItemInfo;
 
-    .line 1369
+    .line 1368
     .local v2, itemInfo:Lcom/htc/app/ItemInfo;
     invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->isRecentFile()Z
 
@@ -3870,20 +3870,20 @@
 
     if-eqz v8, :cond_3
 
-    .line 1367
+    .line 1366
     :cond_2
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1372
+    .line 1371
     :cond_3
     invoke-virtual {v2}, Lcom/htc/app/ItemInfo;->getItemDataSourceType()I
 
     move-result v6
 
-    .line 1373
+    .line 1372
     .local v6, serviceType:I
     iget-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mFilePickerUtil:Lcom/htc/app/FilePickerUtil;
 
@@ -3893,12 +3893,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 1374
+    .line 1373
     invoke-interface {v7, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 1377
+    .line 1376
     .end local v2           #itemInfo:Lcom/htc/app/ItemInfo;
     .end local v3           #itemInfoObject:Ljava/lang/Object;
     .end local v6           #serviceType:I
@@ -3907,7 +3907,7 @@
 
     monitor-enter v9
 
-    .line 1378
+    .line 1377
     const/4 v8, 0x0
 
     :try_start_0
@@ -3921,17 +3921,17 @@
 
     iput-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
-    .line 1379
+    .line 1378
     monitor-exit v9
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1380
+    .line 1379
     invoke-virtual {p0}, Lcom/htc/app/FilePickerListAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
-    .line 1379
+    .line 1378
     :catchall_0
     move-exception v8
 
@@ -3961,25 +3961,25 @@
     .end annotation
 
     .prologue
-    .line 918
+    .line 917
     .local p1, originalList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 919
+    .line 918
     .local v3, newValue:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 920
+    .line 919
     .local v4, tempList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-boolean v5, p0, Lcom/htc/app/FilePickerListAdapter;->isGroupByPath:Z
 
     if-eqz v5, :cond_4
 
-    .line 923
+    .line 922
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -3990,14 +3990,14 @@
 
     if-ge v0, v5, :cond_3
 
-    .line 924
+    .line 923
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/app/ItemInfo;
 
-    .line 925
+    .line 924
     .local v1, item:Lcom/htc/app/ItemInfo;
     invoke-virtual {v1}, Lcom/htc/app/ItemInfo;->isFolder()Z
 
@@ -4005,21 +4005,21 @@
 
     if-eqz v5, :cond_2
 
-    .line 926
+    .line 925
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 927
+    .line 926
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-virtual {v5, v4}, Lcom/htc/app/FileSorter;->sort(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 928
+    .line 927
     const/4 v2, 0x0
 
     .local v2, j:I
@@ -4030,44 +4030,44 @@
 
     if-ge v2, v5, :cond_0
 
-    .line 929
+    .line 928
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 928
+    .line 927
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 931
+    .line 930
     :cond_0
     new-instance v4, Ljava/util/ArrayList;
 
     .end local v4           #tempList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 933
+    .line 932
     .end local v2           #j:I
     .restart local v4       #tempList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     :cond_1
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 923
+    .line 922
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 935
+    .line 934
     :cond_2
     invoke-interface {v4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 938
+    .line 937
     .end local v1           #item:Lcom/htc/app/ItemInfo;
     :cond_3
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -4076,14 +4076,14 @@
 
     if-eqz v5, :cond_5
 
-    .line 939
+    .line 938
     iget-object v5, p0, Lcom/htc/app/FilePickerListAdapter;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-virtual {v5, v4}, Lcom/htc/app/FileSorter;->sort(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 940
+    .line 939
     const/4 v2, 0x0
 
     .restart local v2       #j:I
@@ -4094,19 +4094,19 @@
 
     if-ge v2, v5, :cond_5
 
-    .line 941
+    .line 940
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 940
+    .line 939
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 947
+    .line 946
     .end local v0           #i:I
     .end local v2           #j:I
     :cond_4
@@ -4116,7 +4116,7 @@
 
     move-result-object v3
 
-    .line 949
+    .line 948
     :cond_5
     return-object v3
 .end method
@@ -4125,7 +4125,7 @@
     .locals 2
 
     .prologue
-    .line 956
+    .line 955
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -4138,18 +4138,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 963
+    .line 962
     :cond_0
     :goto_0
     return-void
 
-    .line 958
+    .line 957
     :cond_1
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 959
+    .line 958
     :try_start_0
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
@@ -4159,12 +4159,12 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
-    .line 960
+    .line 959
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 961
+    .line 960
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -4179,14 +4179,14 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
-    .line 962
+    .line 961
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
     goto :goto_0
 
-    .line 960
+    .line 959
     :catchall_0
     move-exception v0
 
@@ -4204,23 +4204,23 @@
     .prologue
     const/4 v10, 0x2
 
-    .line 967
+    .line 966
     iget-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsTimeMap:Ljava/util/TreeMap;
 
     if-eqz v8, :cond_5
 
-    .line 970
+    .line 969
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 971
+    .line 970
     .local v3, resultsList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 973
+    .line 972
     .local v6, tempList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     iget-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mItemsTimeMap:Ljava/util/TreeMap;
 
@@ -4228,7 +4228,7 @@
 
     move-result-object v5
 
-    .line 974
+    .line 973
     .local v5, set:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;>;"
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -4248,11 +4248,11 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 975
+    .line 974
     .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;"
     const-string v4, ""
 
-    .line 976
+    .line 975
     .local v4, seperator:Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -4264,26 +4264,26 @@
 
     move-result v2
 
-    .line 977
+    .line 976
     .local v2, key:I
     const/4 v8, 0x1
 
     if-ne v2, v8, :cond_0
 
-    .line 978
+    .line 977
     const-string v4, "TODAY"
 
-    .line 988
+    .line 987
     :goto_1
     invoke-static {v4}, Lcom/htc/app/ItemInfo;->getLocalGroupTypeInstance(Ljava/lang/String;)Lcom/htc/app/ItemInfo;
 
     move-result-object v7
 
-    .line 989
+    .line 988
     .local v7, typeItem:Lcom/htc/app/ItemInfo;
     invoke-interface {v3, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 991
+    .line 990
     iget-object v9, p0, Lcom/htc/app/FilePickerListAdapter;->mFileSorter:Lcom/htc/app/FileSorter;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -4296,50 +4296,50 @@
 
     move-result-object v6
 
-    .line 992
+    .line 991
     invoke-interface {v3, v6}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
 
-    .line 979
+    .line 978
     .end local v7           #typeItem:Lcom/htc/app/ItemInfo;
     :cond_0
     if-ne v2, v10, :cond_1
 
-    .line 980
+    .line 979
     const-string v4, "YESTERDAY"
 
     goto :goto_1
 
-    .line 981
+    .line 980
     :cond_1
     const/4 v8, 0x3
 
     if-ne v2, v8, :cond_2
 
-    .line 982
+    .line 981
     const-string v4, "ONE WEEK"
 
     goto :goto_1
 
-    .line 983
+    .line 982
     :cond_2
     const/4 v8, 0x4
 
     if-ne v2, v8, :cond_3
 
-    .line 984
+    .line 983
     const-string v4, "ONE MONTH"
 
     goto :goto_1
 
-    .line 986
+    .line 985
     :cond_3
     const-string v4, "OLDER"
 
     goto :goto_1
 
-    .line 995
+    .line 994
     .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;"
     .end local v2           #key:I
     .end local v4           #seperator:Ljava/lang/String;
@@ -4356,10 +4356,10 @@
 
     iput-object v8, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
-    .line 996
+    .line 995
     invoke-virtual {p0, v10}, Lcom/htc/app/FilePickerListAdapter;->NotifyListChanged(I)V
 
-    .line 1000
+    .line 999
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v3           #resultsList:Ljava/util/List;,"Ljava/util/List<Lcom/htc/app/ItemInfo;>;"
     .end local v5           #set:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/ArrayList;>;>;"
@@ -4372,12 +4372,12 @@
     .locals 2
 
     .prologue
-    .line 1131
+    .line 1130
     const-wide/16 v0, 0x1388
 
     invoke-direct {p0, v0, v1}, Lcom/htc/app/FilePickerListAdapter;->cancelScanFiles(J)V
 
-    .line 1132
+    .line 1131
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
@@ -4386,19 +4386,19 @@
 
     iput-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
-    .line 1133
+    .line 1132
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 1134
+    .line 1133
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->scanThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1135
+    .line 1134
     return-void
 .end method
 
@@ -4406,17 +4406,17 @@
     .locals 1
 
     .prologue
-    .line 1410
+    .line 1409
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
     if-eqz v0, :cond_0
 
-    .line 1411
+    .line 1410
     iget-object v0, p0, Lcom/htc/app/FilePickerListAdapter;->mFileScanner:Lcom/htc/app/FileScanner;
 
     invoke-virtual {v0}, Lcom/htc/app/FileScanner;->stopScan()V
 
-    .line 1412
+    .line 1411
     :cond_0
     return-void
 .end method
@@ -4436,28 +4436,28 @@
     .end annotation
 
     .prologue
-    .line 870
+    .line 869
     .local p1, itemInfoList:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Lcom/htc/app/ItemInfo;>;"
     if-nez p1, :cond_1
 
-    .line 887
+    .line 886
     :cond_0
     return-void
 
-    .line 872
+    .line 871
     :cond_1
     iget-object v3, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     if-eqz v3, :cond_0
 
-    .line 873
+    .line 872
     iget-object v3, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 874
+    .line 873
     .local v0, Length:I
     invoke-virtual {p1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -4477,45 +4477,45 @@
 
     check-cast v2, Lcom/htc/app/ItemInfo;
 
-    .line 875
+    .line 874
     .local v2, itemInfo:Lcom/htc/app/ItemInfo;
     if-ge p2, v0, :cond_0
 
-    .line 877
+    .line 876
     iget-object v4, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     monitor-enter v4
 
-    .line 878
+    .line 877
     :try_start_0
     iget-object v3, p0, Lcom/htc/app/FilePickerListAdapter;->mOriginalValues:Ljava/util/List;
 
     invoke-interface {v3, p2, v2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 879
+    .line 878
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 880
+    .line 879
     iget-object v3, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     array-length v0, v3
 
-    .line 881
+    .line 880
     if-ge p2, v0, :cond_0
 
-    .line 883
+    .line 882
     iget-object v3, p0, Lcom/htc/app/FilePickerListAdapter;->mAdapterItems:[Lcom/htc/app/ItemInfo;
 
     aput-object v2, v3, p2
 
-    .line 884
+    .line 883
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
-    .line 879
+    .line 878
     :catchall_0
     move-exception v3
 

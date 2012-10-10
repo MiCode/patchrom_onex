@@ -43,11 +43,13 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 3
+    .locals 4
     .parameter "context"
     .parameter "attrs"
 
     .prologue
+    const v3, 0x2080041
+
     const/4 v2, 0x0
 
     .line 46
@@ -108,15 +110,24 @@
 
     move-result-object v1
 
-    const v2, 0x2080041
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/android/camera/menu/MenuListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
     .line 58
+    invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lcom/android/camera/menu/MenuListView;->setChildDivider(Landroid/graphics/drawable/Drawable;)V
+
+    .line 59
     return-void
 .end method
 
@@ -126,14 +137,14 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 66
     iget v0, p0, Lcom/android/camera/menu/MenuListView;->m_UpdateCounter:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/camera/menu/MenuListView;->m_UpdateCounter:I
 
-    .line 66
+    .line 67
     return-void
 .end method
 
@@ -141,7 +152,7 @@
     .locals 2
 
     .prologue
-    .line 73
+    .line 74
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -154,21 +165,21 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 74
+    .line 75
     invoke-virtual {p0, v0}, Lcom/android/camera/menu/MenuListView;->collapseGroup(I)Z
 
-    .line 73
+    .line 74
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 75
+    .line 76
     :cond_0
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
-    .line 76
+    .line 77
     return-void
 .end method
 
@@ -176,22 +187,22 @@
     .locals 1
 
     .prologue
-    .line 83
+    .line 84
     iget v0, p0, Lcom/android/camera/menu/MenuListView;->m_UpdateCounter:I
 
     if-lez v0, :cond_0
 
-    .line 85
+    .line 86
     iget v0, p0, Lcom/android/camera/menu/MenuListView;->m_UpdateCounter:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/camera/menu/MenuListView;->m_UpdateCounter:I
 
-    .line 86
+    .line 87
     invoke-virtual {p0}, Lcom/android/camera/menu/MenuListView;->notifyItemsChanged()V
 
-    .line 88
+    .line 89
     :cond_0
     return-void
 .end method
@@ -200,7 +211,7 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 96
     iget-object v0, p0, Lcom/android/camera/menu/MenuListView;->m_Items:[Lcom/android/camera/menu/MenuItem;
 
     return-object v0
@@ -219,7 +230,7 @@
     .end annotation
 
     .prologue
-    .line 103
+    .line 104
     iget-object v0, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     return-object v0
@@ -230,12 +241,12 @@
     .parameter "item"
 
     .prologue
-    .line 111
+    .line 112
     iget-object v0, p0, Lcom/android/camera/menu/MenuListView;->m_OnMenuItemContentClickedListener:Lcom/android/camera/menu/MenuListView$OnMenuItemContentClickedListener;
 
     if-eqz v0, :cond_0
 
-    .line 112
+    .line 113
     iget-object v0, p0, Lcom/android/camera/menu/MenuListView;->m_OnMenuItemContentClickedListener:Lcom/android/camera/menu/MenuListView$OnMenuItemContentClickedListener;
 
     invoke-virtual {p1}, Lcom/android/camera/menu/MenuItem;->getId()I
@@ -244,7 +255,7 @@
 
     invoke-interface {v0, p0, p1, v1}, Lcom/android/camera/menu/MenuListView$OnMenuItemContentClickedListener;->onItemContentClicked(Lcom/android/camera/menu/MenuListView;Lcom/android/camera/menu/MenuItem;I)V
 
-    .line 113
+    .line 114
     :cond_0
     return-void
 .end method
@@ -253,22 +264,22 @@
     .locals 3
 
     .prologue
-    .line 120
+    .line 121
     iget v1, p0, Lcom/android/camera/menu/MenuListView;->m_UpdateCounter:I
 
     if-nez v1, :cond_4
 
-    .line 123
+    .line 124
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/android/camera/menu/MenuListView;->updateVisibleItems(Z)V
 
-    .line 126
+    .line 127
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
     if-eqz v1, :cond_3
 
-    .line 128
+    .line 129
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
     iget-object v1, v1, Lcom/android/camera/menu/MenuItem;->m_MenuListView:Lcom/android/camera/menu/MenuListView;
@@ -283,13 +294,13 @@
 
     if-nez v1, :cond_1
 
-    .line 129
+    .line 130
     :cond_0
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
-    .line 130
+    .line 131
     :cond_1
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
@@ -303,7 +314,7 @@
     :goto_0
     if-ltz v0, :cond_3
 
-    .line 132
+    .line 133
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -314,29 +325,29 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 133
+    .line 134
     invoke-virtual {p0, v0}, Lcom/android/camera/menu/MenuListView;->expandGroup(I)Z
 
-    .line 130
+    .line 131
     :goto_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 135
+    .line 136
     :cond_2
     invoke-virtual {p0, v0}, Lcom/android/camera/menu/MenuListView;->collapseGroup(I)Z
 
     goto :goto_1
 
-    .line 140
+    .line 141
     .end local v0           #i:I
     :cond_3
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_Adapter:Lcom/android/camera/menu/MenuAdapter;
 
     invoke-virtual {v1}, Lcom/android/camera/menu/MenuAdapter;->notifyDataSetChanged()V
 
-    .line 142
+    .line 143
     :cond_4
     return-void
 .end method
@@ -345,17 +356,17 @@
     .locals 1
 
     .prologue
-    .line 149
+    .line 150
     iget v0, p0, Lcom/android/camera/menu/MenuListView;->m_UpdateCounter:I
 
     if-nez v0, :cond_0
 
-    .line 150
+    .line 151
     iget-object v0, p0, Lcom/android/camera/menu/MenuListView;->m_Adapter:Lcom/android/camera/menu/MenuAdapter;
 
     invoke-virtual {v0}, Lcom/android/camera/menu/MenuAdapter;->notifyDataSetInvalidated()V
 
-    .line 151
+    .line 152
     :cond_0
     return-void
 .end method
@@ -371,7 +382,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 160
+    .line 161
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -390,7 +401,7 @@
 
     check-cast v0, Lcom/android/camera/menu/MenuItem;
 
-    .line 161
+    .line 162
     .local v0, item:Lcom/android/camera/menu/MenuItem;
     invoke-virtual {v0}, Lcom/android/camera/menu/MenuItem;->onClicked()Z
 
@@ -398,11 +409,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 168
+    .line 169
     :goto_0
     return v2
 
-    .line 165
+    .line 166
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/menu/MenuItem;->getId()I
 
@@ -423,7 +434,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 178
+    .line 179
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -432,7 +443,7 @@
 
     check-cast v1, Lcom/android/camera/menu/MenuItem;
 
-    .line 179
+    .line 180
     .local v1, item:Lcom/android/camera/menu/MenuItem;
     invoke-virtual {v1}, Lcom/android/camera/menu/MenuItem;->isSelectable()Z
 
@@ -440,12 +451,12 @@
 
     if-nez v2, :cond_1
 
-    .line 217
+    .line 218
     :cond_0
     :goto_0
     return v4
 
-    .line 183
+    .line 184
     :cond_1
     invoke-virtual {v1}, Lcom/android/camera/menu/MenuItem;->onClicked()Z
 
@@ -453,7 +464,7 @@
 
     if-nez v2, :cond_0
 
-    .line 187
+    .line 188
     invoke-virtual {v1}, Lcom/android/camera/menu/MenuItem;->getVisibleItems()Ljava/util/List;
 
     move-result-object v2
@@ -464,17 +475,17 @@
 
     if-lez v2, :cond_3
 
-    .line 189
+    .line 190
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
     if-eq v2, v1, :cond_5
 
-    .line 191
+    .line 192
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
     if-eqz v2, :cond_2
 
-    .line 193
+    .line 194
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -487,7 +498,7 @@
     :goto_1
     if-ltz v0, :cond_2
 
-    .line 195
+    .line 196
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -498,21 +509,21 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 197
+    .line 198
     invoke-virtual {p0, v0}, Lcom/android/camera/menu/MenuListView;->collapseGroup(I)Z
 
-    .line 202
+    .line 203
     .end local v0           #i:I
     :cond_2
     iput-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
-    .line 203
+    .line 204
     invoke-virtual {p0, p3}, Lcom/android/camera/menu/MenuListView;->expandGroup(I)Z
 
-    .line 204
+    .line 205
     invoke-virtual {p0, p3}, Lcom/android/camera/menu/MenuListView;->setSelectedGroup(I)V
 
-    .line 214
+    .line 215
     :cond_3
     :goto_2
     invoke-virtual {v1}, Lcom/android/camera/menu/MenuItem;->getId()I
@@ -523,21 +534,21 @@
 
     goto :goto_0
 
-    .line 193
+    .line 194
     .restart local v0       #i:I
     :cond_4
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 208
+    .line 209
     .end local v0           #i:I
     :cond_5
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_CurrentExpandedItem:Lcom/android/camera/menu/MenuItem;
 
-    .line 209
+    .line 210
     invoke-virtual {p0, p3}, Lcom/android/camera/menu/MenuListView;->collapseGroup(I)Z
 
     goto :goto_2
@@ -550,17 +561,17 @@
     .parameter "id"
 
     .prologue
-    .line 225
+    .line 226
     iget-object v0, p0, Lcom/android/camera/menu/MenuListView;->m_OnMenuItemClickedListener:Lcom/android/camera/menu/MenuListView$OnMenuItemClickedListener;
 
     if-eqz v0, :cond_0
 
-    .line 226
+    .line 227
     iget-object v0, p0, Lcom/android/camera/menu/MenuListView;->m_OnMenuItemClickedListener:Lcom/android/camera/menu/MenuListView$OnMenuItemClickedListener;
 
     invoke-interface {v0, p0, p1, p2, p3}, Lcom/android/camera/menu/MenuListView$OnMenuItemClickedListener;->onItemClicked(Lcom/android/camera/menu/MenuListView;Lcom/android/camera/menu/MenuItem;II)V
 
-    .line 227
+    .line 228
     :cond_0
     return-void
 .end method
@@ -579,30 +590,30 @@
     .end annotation
 
     .prologue
-    .line 234
+    .line 235
     .local p1, items:Ljava/util/List;,"Ljava/util/List<Lcom/android/camera/menu/MenuItem;>;"
     if-eqz p1, :cond_0
 
-    .line 236
+    .line 237
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
 
     new-array v0, v1, [Lcom/android/camera/menu/MenuItem;
 
-    .line 237
+    .line 238
     .local v0, array:[Lcom/android/camera/menu/MenuItem;
     invoke-interface {p1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 238
+    .line 239
     invoke-virtual {p0, v0}, Lcom/android/camera/menu/MenuListView;->setItems([Lcom/android/camera/menu/MenuItem;)V
 
-    .line 242
+    .line 243
     .end local v0           #array:[Lcom/android/camera/menu/MenuItem;
     :goto_0
     return-void
 
-    .line 241
+    .line 242
     :cond_0
     const/4 v1, 0x0
 
@@ -618,12 +629,12 @@
     .parameter "items"
 
     .prologue
-    .line 246
+    .line 247
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_Items:[Lcom/android/camera/menu/MenuItem;
 
     if-eqz v1, :cond_0
 
-    .line 248
+    .line 249
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_Items:[Lcom/android/camera/menu/MenuItem;
 
     array-length v1, v1
@@ -634,7 +645,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 249
+    .line 250
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_Items:[Lcom/android/camera/menu/MenuItem;
 
     aget-object v1, v1, v0
@@ -643,20 +654,20 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/menu/MenuItem;->setMenuListView(Lcom/android/camera/menu/MenuListView;)V
 
-    .line 248
+    .line 249
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 253
+    .line 254
     .end local v0           #i:I
     :cond_0
     iput-object p1, p0, Lcom/android/camera/menu/MenuListView;->m_Items:[Lcom/android/camera/menu/MenuItem;
 
-    .line 254
+    .line 255
     if-eqz p1, :cond_1
 
-    .line 256
+    .line 257
     array-length v1, p1
 
     add-int/lit8 v0, v1, -0x1
@@ -665,22 +676,22 @@
     :goto_1
     if-ltz v0, :cond_1
 
-    .line 257
+    .line 258
     aget-object v1, p1, v0
 
     invoke-virtual {v1, p0}, Lcom/android/camera/menu/MenuItem;->setMenuListView(Lcom/android/camera/menu/MenuListView;)V
 
-    .line 256
+    .line 257
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 261
+    .line 262
     .end local v0           #i:I
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/menu/MenuListView;->notifyItemsChanged()V
 
-    .line 262
+    .line 263
     return-void
 .end method
 
@@ -689,10 +700,10 @@
     .parameter "listener"
 
     .prologue
-    .line 269
+    .line 270
     iput-object p1, p0, Lcom/android/camera/menu/MenuListView;->m_OnMenuItemClickedListener:Lcom/android/camera/menu/MenuListView$OnMenuItemClickedListener;
 
-    .line 270
+    .line 271
     return-void
 .end method
 
@@ -701,10 +712,10 @@
     .parameter "listener"
 
     .prologue
-    .line 273
+    .line 274
     iput-object p1, p0, Lcom/android/camera/menu/MenuListView;->m_OnMenuItemContentClickedListener:Lcom/android/camera/menu/MenuListView$OnMenuItemContentClickedListener;
 
-    .line 274
+    .line 275
     return-void
 .end method
 
@@ -712,10 +723,10 @@
     .locals 2
 
     .prologue
-    .line 281
+    .line 282
     invoke-virtual {p0}, Lcom/android/camera/menu/MenuListView;->beginUpdate()V
 
-    .line 282
+    .line 283
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -728,7 +739,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 283
+    .line 284
     iget-object v1, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -739,16 +750,16 @@
 
     invoke-virtual {v1}, Lcom/android/camera/menu/MenuItem;->updateContent()V
 
-    .line 282
+    .line 283
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 284
+    .line 285
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/menu/MenuListView;->endUpdate()V
 
-    .line 285
+    .line 286
     return-void
 .end method
 
@@ -757,17 +768,17 @@
     .parameter "updateSubItems"
 
     .prologue
-    .line 292
+    .line 293
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 293
+    .line 294
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_Items:[Lcom/android/camera/menu/MenuItem;
 
     if-eqz v2, :cond_1
 
-    .line 295
+    .line 296
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -778,12 +789,12 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 297
+    .line 298
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_Items:[Lcom/android/camera/menu/MenuItem;
 
     aget-object v1, v2, v0
 
-    .line 298
+    .line 299
     .local v1, item:Lcom/android/camera/menu/MenuItem;
     invoke-virtual {v1}, Lcom/android/camera/menu/MenuItem;->isVisible()Z
 
@@ -791,24 +802,24 @@
 
     if-eqz v2, :cond_0
 
-    .line 300
+    .line 301
     iget-object v2, p0, Lcom/android/camera/menu/MenuListView;->m_VisibleItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 301
+    .line 302
     if-eqz p1, :cond_0
 
-    .line 302
+    .line 303
     invoke-virtual {v1, p1}, Lcom/android/camera/menu/MenuItem;->updateVisibleItems(Z)V
 
-    .line 295
+    .line 296
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 306
+    .line 307
     .end local v0           #i:I
     .end local v1           #item:Lcom/android/camera/menu/MenuItem;
     :cond_1

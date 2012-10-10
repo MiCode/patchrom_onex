@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 347
+    .line 364
     iput-object p1, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$3;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "xxxid"
 
     .prologue
-    .line 372
+    .line 389
     const/4 v0, 0x0
 
     return-object v0
@@ -53,7 +53,7 @@
     .parameter "xxxid"
 
     .prologue
-    .line 351
+    .line 368
     const/4 v0, 0x0
 
     return-object v0
@@ -63,7 +63,7 @@
     .locals 2
 
     .prologue
-    .line 357
+    .line 374
     iget-object v0, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$3;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
@@ -74,18 +74,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 358
+    .line 375
     iget-object v0, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$3;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarMusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
 
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->notifyMediaDataChange()V
 
-    .line 362
+    .line 379
     :goto_0
     return-void
 
-    .line 360
+    .line 377
     :cond_0
     iget-object v0, p0, Lcom/htc/music/carmode/CarAlbumBrowseActivity$3;->this$0:Lcom/htc/music/carmode/CarAlbumBrowseActivity;
 
@@ -109,6 +109,6 @@
     .parameter "index"
 
     .prologue
-    .line 367
+    .line 384
     return-void
 .end method

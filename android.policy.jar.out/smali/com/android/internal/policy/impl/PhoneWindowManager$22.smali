@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4406
+    .line 4621
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 4408
+    .line 4623
     const-string v1, "com.htc.AutoMotive.Service.ModeChange"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -55,30 +55,44 @@
 
     if-eqz v1, :cond_0
 
-    .line 4409
+    .line 4624
     const-string v1, "AutoMotive_Current_Mode"
 
     invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 4410
+    .line 4625
     .local v0, nMode:I
     if-nez v0, :cond_1
 
-    .line 4411
+    .line 4626
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     #setter for: Lcom/android/internal/policy/impl/PhoneWindowManager;->mAutoMotiveEnabled:Z
     invoke-static {v1, v3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$402(Lcom/android/internal/policy/impl/PhoneWindowManager;Z)Z
 
-    .line 4418
+    .line 4631
+    :goto_0
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+
+    #getter for: Lcom/android/internal/policy/impl/PhoneWindowManager;->mAutoMotiveEnabled:Z
+    invoke-static {v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$400(Lcom/android/internal/policy/impl/PhoneWindowManager;)Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->setInitialModeToUnlock(Z)V
+
+    .line 4635
     .end local v0           #nMode:I
     :cond_0
-    :goto_0
     return-void
 
-    .line 4413
+    .line 4628
     .restart local v0       #nMode:I
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;

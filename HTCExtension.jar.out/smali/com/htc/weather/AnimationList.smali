@@ -765,7 +765,7 @@
 
     iget-object v3, v0, Lcom/htc/weather/AnimationList$ListMap;->link_:Ljava/lang/String;
 
-    const-string v4, "xml/"
+    const-string/jumbo v4, "xml/"
 
     iget-object v5, p0, Lcom/htc/weather/AnimationList;->mContext:Landroid/content/Context;
 

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 106
+    .line 107
     iput-object p1, p0, Lcom/android/camera/component/ScreenSaveUI$5;->this$0:Lcom/android/camera/component/ScreenSaveUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 113
+    .line 114
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/rotate/UIRotation;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/rotate/UIRotation;>;"
     iget-object v1, p0, Lcom/android/camera/component/ScreenSaveUI$5;->this$0:Lcom/android/camera/component/ScreenSaveUI;
@@ -78,7 +78,7 @@
     #setter for: Lcom/android/camera/component/ScreenSaveUI;->m_rotation:Lcom/android/camera/rotate/UIRotation;
     invoke-static {v1, v0}, Lcom/android/camera/component/ScreenSaveUI;->access$102(Lcom/android/camera/component/ScreenSaveUI;Lcom/android/camera/rotate/UIRotation;)Lcom/android/camera/rotate/UIRotation;
 
-    .line 115
+    .line 116
     iget-object v0, p0, Lcom/android/camera/component/ScreenSaveUI$5;->this$0:Lcom/android/camera/component/ScreenSaveUI;
 
     #getter for: Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -108,6 +108,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
+    .line 117
     return-void
 .end method

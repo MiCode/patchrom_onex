@@ -25,13 +25,13 @@
     .parameter "context"
 
     .prologue
-    .line 1579
+    .line 1583
     iput-object p1, p0, Lcom/htc/app/FilePickerUtil$DownloadProgressDialog;->this$0:Lcom/htc/app/FilePickerUtil;
 
-    .line 1580
+    .line 1584
     invoke-direct {p0, p2}, Lcom/htc/app/HtcProgressDialog;-><init>(Landroid/content/Context;)V
 
-    .line 1581
+    .line 1585
     return-void
 .end method
 
@@ -41,14 +41,14 @@
     .locals 1
 
     .prologue
-    .line 1585
+    .line 1589
     iget-object v0, p0, Lcom/htc/app/FilePickerUtil$DownloadProgressDialog;->this$0:Lcom/htc/app/FilePickerUtil;
 
     invoke-virtual {v0}, Lcom/htc/app/FilePickerUtil;->cancelDownloadDialog()V
 
-    .line 1586
+    .line 1590
     invoke-super {p0}, Lcom/htc/app/HtcProgressDialog;->onBackPressed()V
 
-    .line 1587
+    .line 1591
     return-void
 .end method

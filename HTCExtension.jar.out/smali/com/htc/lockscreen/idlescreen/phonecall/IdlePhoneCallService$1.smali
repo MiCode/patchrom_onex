@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 39
+    .line 40
     iput-object p1, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$1;->this$0:Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,25 +39,25 @@
     .parameter "msg"
 
     .prologue
-    .line 41
+    .line 42
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 42
+    .line 43
     iget v1, p1, Landroid/os/Message;->what:I
 
-    .line 43
+    .line 44
     .local v1, what:I
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 44
+    .line 45
     .local v0, callId:I
     packed-switch v1, :pswitch_data_0
 
-    .line 58
+    .line 59
     :goto_0
     return-void
 
-    .line 46
+    .line 47
     :pswitch_0
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$1;->this$0:Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;
 
@@ -65,7 +65,7 @@
 
     goto :goto_0
 
-    .line 49
+    .line 50
     :pswitch_1
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$1;->this$0:Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;
 
@@ -73,7 +73,7 @@
 
     goto :goto_0
 
-    .line 52
+    .line 53
     :pswitch_2
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$1;->this$0:Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;
 
@@ -81,7 +81,7 @@
 
     goto :goto_0
 
-    .line 55
+    .line 56
     :pswitch_3
     iget-object v2, p0, Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService$1;->this$0:Lcom/htc/lockscreen/idlescreen/phonecall/IdlePhoneCallService;
 
@@ -89,7 +89,7 @@
 
     goto :goto_0
 
-    .line 44
+    .line 45
     nop
 
     :pswitch_data_0

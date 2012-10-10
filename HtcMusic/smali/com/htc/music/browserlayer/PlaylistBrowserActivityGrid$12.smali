@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->onHtcContextItemSelected(I)Z
+    value = Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finishactivity()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1267
+    .line 1089
     iput-object p1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,73 +38,14 @@
 
 # virtual methods
 .method public run()V
-    .locals 6
+    .locals 1
 
     .prologue
-    const/4 v5, 0x0
+    .line 1091
+    iget-object v0, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->finish()V
 
-    .line 1271
-    iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mMusicGridViewUtil:Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$1900(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/music/widget/gridview/MusicGridViewUtil;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
-    invoke-static {v2}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$1700(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
-    invoke-static {v3}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$1800(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Lcom/htc/music/widget/gridview/MusicGridViewUtil;->deleteItems(ILcom/htc/sunny2/widget/gridview/ExpandableGridView;)V
-
-    .line 1272
-    const/4 v1, 0x1
-
-    new-array v0, v1, [I
-
-    iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGlobalClickedIndex:I
-    invoke-static {v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$2000(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)I
-
-    move-result v1
-
-    aput v1, v0, v4
-
-    .line 1273
-    .local v0, a:[I
-    iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #getter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridView:Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
-    invoke-static {v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$2100(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;)Lcom/htc/sunny2/widget/gridview/ExpandableGridView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0, v5, v5}, Lcom/htc/sunny2/widget/gridview/ExpandableGridView;->startDataSetChangeAnimation([I[ILcom/htc/sunny2/view/animation/SAnimationController$AnimationListener;)V
-
-    .line 1274
-    iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    #setter for: Lcom/htc/music/widget/MusicAutoHeaderFooterGridViewActivity;->mGridViewRefreshDisable:Z
-    invoke-static {v1, v4}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->access$2202(Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;Z)Z
-
-    .line 1275
-    iget-object v1, p0, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid$12;->this$0:Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;
-
-    invoke-virtual {v1}, Lcom/htc/music/browserlayer/PlaylistBrowserActivityGrid;->setTitle()V
-
-    .line 1276
+    .line 1092
     return-void
 .end method

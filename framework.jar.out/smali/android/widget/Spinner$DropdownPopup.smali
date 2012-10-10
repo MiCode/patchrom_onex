@@ -61,7 +61,7 @@
     invoke-virtual {p0, v1}, Landroid/widget/Spinner$DropdownPopup;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 728
-    const-string/jumbo v1, "list_selector_holo_dark"
+    const-string v1, "list_selector_holo_dark"
 
     invoke-static {p2, v1, v2}, Landroid/widget/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3573
+    .line 3598
     iput-object p1, p0, Lcom/htc/sunny2/widget/gridview/GridView$5;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 3587
+    .line 3612
     const/4 v0, 0x0
 
     return v0
@@ -52,14 +52,14 @@
     .parameter "index"
 
     .prologue
-    .line 3577
+    .line 3602
     iget-object v1, p0, Lcom/htc/sunny2/widget/gridview/GridView$5;->this$0:Lcom/htc/sunny2/widget/gridview/GridView;
 
     invoke-virtual {v1, p1}, Lcom/htc/sunny2/widget/gridview/GridView;->getChild(I)Lcom/htc/sunny2/view/SView;
 
     move-result-object v0
 
-    .line 3578
+    .line 3603
     .local v0, item:Lcom/htc/sunny2/view/SView;
     if-eqz v0, :cond_0
 
@@ -67,13 +67,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 3580
+    .line 3605
     check-cast v0, Lcom/htc/sunny2/widget/gridview/GridViewItem;
 
     .end local v0           #item:Lcom/htc/sunny2/view/SView;
     invoke-virtual {v0}, Lcom/htc/sunny2/widget/gridview/GridViewItem;->onItemClick()V
 
-    .line 3582
+    .line 3607
     :cond_0
     return-void
 .end method
@@ -84,6 +84,6 @@
     .parameter "i"
 
     .prologue
-    .line 3593
+    .line 3618
     return-void
 .end method

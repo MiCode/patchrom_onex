@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1061
+    .line 1149
     iput-object p1, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +42,19 @@
     .parameter "clickedView"
 
     .prologue
-    .line 1065
+    .line 1153
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 1066
+    .line 1154
     .local v1, value:Ljava/lang/Integer;
     if-nez v1, :cond_1
 
-    .line 1067
-    invoke-static {}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$600()Ljava/lang/String;
+    .line 1155
+    invoke-static {}, Lcom/htc/music/browserlayer/EditPlaylistActivity;->access$700()Ljava/lang/String;
 
     move-result-object v2
 
@@ -62,25 +62,25 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1076
+    .line 1164
     .end local p1
     :cond_0
     :goto_0
     return-void
 
-    .line 1070
+    .line 1158
     .restart local p1
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 1071
+    .line 1159
     .local v0, position:I
     iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$500(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$600(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     move-result-object v2
 
@@ -89,7 +89,7 @@
     iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$500(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$600(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     move-result-object v2
 
@@ -102,7 +102,7 @@
     iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$500(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$600(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     move-result-object v2
 
@@ -114,11 +114,11 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1073
+    .line 1161
     iget-object v2, p0, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter$1;->this$0:Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;
 
     #getter for: Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->mActivity:Lcom/htc/music/browserlayer/EditPlaylistActivity;
-    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$500(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
+    invoke-static {v2}, Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;->access$600(Lcom/htc/music/browserlayer/EditPlaylistActivity$TrackListAdapter;)Lcom/htc/music/browserlayer/EditPlaylistActivity;
 
     move-result-object v2
 

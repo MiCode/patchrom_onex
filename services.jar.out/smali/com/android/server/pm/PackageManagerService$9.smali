@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 8030
+    .line 8092
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$9;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$9;->val$packageName:Ljava/lang/String;
@@ -51,21 +51,21 @@
     .locals 5
 
     .prologue
-    .line 8032
+    .line 8094
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$9;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v2, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 8034
+    .line 8096
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$9;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v2, Lcom/android/server/pm/PackageManagerService;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 8035
+    .line 8097
     :try_start_0
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$9;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -76,18 +76,18 @@
 
     move-result v1
 
-    .line 8036
+    .line 8098
     .local v1, succeded:Z
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8037
+    .line 8099
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$9;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
     if-eqz v2, :cond_0
 
-    .line 8039
+    .line 8101
     :try_start_1
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$9;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
@@ -97,12 +97,12 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 8044
+    .line 8106
     :cond_0
     :goto_0
     return-void
 
-    .line 8036
+    .line 8098
     .end local v1           #succeded:Z
     :catchall_0
     move-exception v2
@@ -114,12 +114,12 @@
 
     throw v2
 
-    .line 8040
+    .line 8102
     .restart local v1       #succeded:Z
     :catch_0
     move-exception v0
 
-    .line 8041
+    .line 8103
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "PackageManager"
 

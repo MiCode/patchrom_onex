@@ -39,7 +39,7 @@
     .parameter
 
     .prologue
-    .line 120
+    .line 121
     iput-object p1, p0, Lcom/android/camera/component/CaptureBar$1;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -72,19 +72,19 @@
     .end annotation
 
     .prologue
-    .line 124
+    .line 125
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;>;"
     .local p3, e:Lcom/android/camera/OneValueEventArgs;,"Lcom/android/camera/OneValueEventArgs<Landroid/view/SurfaceHolder;>;"
     iget-object v0, p3, Lcom/android/camera/OneValueEventArgs;->value:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 125
+    .line 126
     iget-object v0, p0, Lcom/android/camera/component/CaptureBar$1;->this$0:Lcom/android/camera/component/CaptureBar;
 
     invoke-virtual {v0}, Lcom/android/camera/component/CaptureBar;->initialize()V
 
-    .line 126
+    .line 127
     :cond_0
     return-void
 .end method
@@ -96,7 +96,7 @@
     .parameter "x2"
 
     .prologue
-    .line 120
+    .line 121
     check-cast p3, Lcom/android/camera/OneValueEventArgs;
 
     .end local p3

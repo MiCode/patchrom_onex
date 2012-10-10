@@ -24,15 +24,15 @@
     .parameter
 
     .prologue
-    .line 648
+    .line 732
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard$DataRoamingGuardSettingObserver;->this$0:Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard;
 
-    .line 649
+    .line 733
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 650
+    .line 734
     return-void
 .end method
 
@@ -45,10 +45,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 654
+    .line 742
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 656
+    .line 744
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard$DataRoamingGuardSettingObserver;->this$0:Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard;
 
     #calls: Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard;->isGsmDataRoamGuardEnabled()Z
@@ -56,7 +56,7 @@
 
     move-result v0
 
-    .line 658
+    .line 746
     .local v0, enable:Z
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard$DataRoamingGuardSettingObserver;->this$0:Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard;
 
@@ -75,12 +75,12 @@
 
     invoke-virtual {v3, v1}, Lcom/android/internal/telephony/gsm/HtcGsmDataRoamGuard;->sendMessage(Landroid/os/Message;)Z
 
-    .line 659
+    .line 747
     return-void
 
     :cond_0
     move v1, v2
 
-    .line 658
+    .line 746
     goto :goto_0
 .end method

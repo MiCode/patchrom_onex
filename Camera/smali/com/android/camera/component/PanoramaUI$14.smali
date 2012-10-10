@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1603
+    .line 1608
     iput-object p1, p0, Lcom/android/camera/component/PanoramaUI$14;->this$0:Lcom/android/camera/component/PanoramaUI;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 1608
+    .line 1613
     .local p1, property:Lcom/android/camera/property/Property;,"Lcom/android/camera/property/Property<Lcom/android/camera/SelfTimerValue;>;"
     .local p2, e:Lcom/android/camera/property/PropertyChangedEventArgs;,"Lcom/android/camera/property/PropertyChangedEventArgs<Lcom/android/camera/SelfTimerValue;>;"
     iget-object v1, p0, Lcom/android/camera/component/PanoramaUI$14;->this$0:Lcom/android/camera/component/PanoramaUI;
@@ -82,6 +82,6 @@
     #calls: Lcom/android/camera/component/PanoramaUI;->updateIndicatorLocation(Z)V
     invoke-static {v1, v0}, Lcom/android/camera/component/PanoramaUI;->access$2300(Lcom/android/camera/component/PanoramaUI;Z)V
 
-    .line 1609
+    .line 1614
     return-void
 .end method

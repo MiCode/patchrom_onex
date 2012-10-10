@@ -529,7 +529,7 @@
     .line 464
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mCallbacks="
+    const-string v0, "mCallbacks="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

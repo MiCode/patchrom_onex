@@ -34,7 +34,7 @@
     .parameter
 
     .prologue
-    .line 52
+    .line 96
     iput-object p1, p0, Lcom/android/internal/telephony/APNParam$RatType;->this$0:Lcom/android/internal/telephony/APNParam;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

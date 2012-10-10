@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 424
+    .line 432
     new-instance v0, Lcom/android/internal/telephony/EmailRecord$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/EmailRecord$1;-><init>()V
@@ -54,15 +54,15 @@
     .locals 1
 
     .prologue
-    .line 452
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 460
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 418
+    .line 422
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 454
+    .line 462
     return-void
 .end method
 
@@ -73,24 +73,24 @@
     .parameter "emailAddress"
 
     .prologue
-    .line 479
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 487
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 418
+    .line 422
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 480
+    .line 488
     iput p1, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnSFI:I
 
-    .line 481
+    .line 489
     iput p2, p0, Lcom/android/internal/telephony/EmailRecord;->mRecordNumber:I
 
-    .line 482
+    .line 490
     iput-object p3, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 483
+    .line 491
     return-void
 .end method
 
@@ -100,21 +100,21 @@
     .parameter "record"
 
     .prologue
-    .line 465
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 473
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 418
+    .line 422
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 466
+    .line 474
     iput p1, p0, Lcom/android/internal/telephony/EmailRecord;->mRecordNumber:I
 
-    .line 467
+    .line 475
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/EmailRecord;->parseRecord([B)V
 
-    .line 468
+    .line 476
     return-void
 .end method
 
@@ -125,21 +125,21 @@
     .parameter "isInIAP"
 
     .prologue
-    .line 472
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 480
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 418
+    .line 422
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 473
+    .line 481
     iput p1, p0, Lcom/android/internal/telephony/EmailRecord;->mRecordNumber:I
 
-    .line 474
+    .line 482
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/EmailRecord;->parseRecord(I[BZ)V
 
-    .line 475
+    .line 483
     return-void
 .end method
 
@@ -148,12 +148,12 @@
     .parameter "record"
 
     .prologue
-    .line 460
+    .line 468
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Lcom/android/internal/telephony/EmailRecord;-><init>(I[B)V
 
-    .line 461
+    .line 469
     return-void
 .end method
 
@@ -168,15 +168,15 @@
 
     const/4 v3, 0x0
 
-    .line 562
+    .line 590
     if-eqz p3, :cond_1
 
-    .line 564
+    .line 592
     array-length v2, p2
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 565
+    .line 593
     .local v0, offset:I
     aget-byte v2, p2, v0
 
@@ -184,21 +184,21 @@
 
     iput v2, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnRecordNumber:I
 
-    .line 568
+    .line 596
     array-length v2, p2
 
     add-int/lit8 v2, v2, -0x1
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 569
+    .line 597
     aget-byte v2, p2, v0
 
     and-int/lit16 v2, v2, 0xff
 
     iput v2, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnSFI:I
 
-    .line 572
+    .line 600
     array-length v2, p2
 
     add-int/lit8 v2, v2, -0x1
@@ -209,7 +209,7 @@
 
     move-result-object v1
 
-    .line 580
+    .line 608
     .end local v0           #offset:I
     .local v1, tempAddress:Ljava/lang/String;
     :goto_0
@@ -239,7 +239,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 584
+    .line 612
     :cond_0
     const-string v2, "EmailRecord"
 
@@ -263,7 +263,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
+    .line 613
     const/16 v2, 0x40
 
     invoke-virtual {v1, v5, v2}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
@@ -272,7 +272,7 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 591
+    .line 619
     :goto_1
     const-string v2, "EmailRecord"
 
@@ -302,7 +302,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 592
+    .line 620
     const-string v2, "EmailRecord"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -331,7 +331,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 593
+    .line 621
     const-string v2, "EmailRecord"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -356,15 +356,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 595
+    .line 623
     return-void
 
-    .line 575
+    .line 603
     .end local v1           #tempAddress:Ljava/lang/String;
     :cond_1
     iput p1, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnRecordNumber:I
 
-    .line 576
+    .line 604
     array-length v2, p2
 
     invoke-static {p2, v3, v2}, Lcom/android/internal/telephony/IccUtils;->adnStringFieldToString([BII)Ljava/lang/String;
@@ -374,7 +374,7 @@
     .restart local v1       #tempAddress:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 587
+    .line 615
     :cond_2
     iput-object v1, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
@@ -386,12 +386,12 @@
     .parameter "record"
 
     .prologue
-    .line 606
+    .line 634
     array-length v1, p1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 607
+    .line 635
     .local v0, offset:I
     aget-byte v1, p1, v0
 
@@ -399,21 +399,21 @@
 
     iput v1, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnRecordNumber:I
 
-    .line 610
+    .line 638
     array-length v1, p1
 
     add-int/lit8 v1, v1, -0x1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 611
+    .line 639
     aget-byte v1, p1, v0
 
     and-int/lit16 v1, v1, 0xff
 
     iput v1, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnSFI:I
 
-    .line 614
+    .line 642
     const/4 v1, 0x0
 
     array-length v2, p1
@@ -428,7 +428,7 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 616
+    .line 644
     const-string v1, "EmailRecord"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -457,7 +457,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 617
+    .line 645
     const-string v1, "EmailRecord"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -486,7 +486,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 618
+    .line 646
     const-string v1, "EmailRecord"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -511,7 +511,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 620
+    .line 648
     return-void
 .end method
 
@@ -525,10 +525,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 515
+    .line 539
     new-array v2, p1, [B
 
-    .line 517
+    .line 541
     .local v2, recordString:[B
     const/4 v1, 0x0
 
@@ -536,17 +536,17 @@
     :goto_0
     if-ge v1, p1, :cond_0
 
-    .line 518
+    .line 542
     const/4 v3, -0x1
 
     aput-byte v3, v2, v1
 
-    .line 517
+    .line 541
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 521
+    .line 545
     :cond_0
     iget v3, p0, Lcom/android/internal/telephony/EmailRecord;->mRecordNumber:I
 
@@ -558,23 +558,23 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 524
+    .line 548
     iget-object v3, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
     invoke-static {v3}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm8BitPacked(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 525
+    .line 549
     .local v0, emailAddress:[B
     array-length v3, v0
 
     invoke-static {v0, v5, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 527
+    .line 551
     if-eqz p2, :cond_1
 
-    .line 530
+    .line 554
     add-int/lit8 v3, p1, -0x1
 
     iget v4, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnRecordNumber:I
@@ -583,7 +583,7 @@
 
     aput-byte v4, v2, v3
 
-    .line 533
+    .line 557
     add-int/lit8 v3, p1, -0x1
 
     add-int/lit8 v3, v3, -0x1
@@ -594,7 +594,7 @@
 
     aput-byte v4, v2, v3
 
-    .line 538
+    .line 562
     .end local v0           #emailAddress:[B
     :cond_1
     return-object v2
@@ -606,18 +606,18 @@
     .prologue
     const/16 v0, 0xff
 
-    .line 500
+    .line 520
     iput v0, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnSFI:I
 
-    .line 501
+    .line 521
     iput v0, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnRecordNumber:I
 
-    .line 502
+    .line 522
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
-    .line 503
+    .line 523
     return-void
 .end method
 
@@ -625,7 +625,7 @@
     .locals 1
 
     .prologue
-    .line 487
+    .line 499
     const/4 v0, 0x0
 
     return v0
@@ -635,7 +635,7 @@
     .locals 2
 
     .prologue
-    .line 543
+    .line 571
     iget v0, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnRecordNumber:I
 
     const/16 v1, 0xff
@@ -646,11 +646,11 @@
 
     if-nez v0, :cond_1
 
-    .line 545
+    .line 573
     :cond_0
     const/4 v0, 0x1
 
-    .line 547
+    .line 575
     :goto_0
     return v0
 
@@ -666,26 +666,26 @@
     .parameter "flags"
 
     .prologue
-    .line 492
+    .line 508
     iget v0, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnSFI:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 493
+    .line 509
     iget v0, p0, Lcom/android/internal/telephony/EmailRecord;->mRecordNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 494
+    .line 510
     iget v0, p0, Lcom/android/internal/telephony/EmailRecord;->mAdnRecordNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 495
+    .line 511
     iget-object v0, p0, Lcom/android/internal/telephony/EmailRecord;->mEmailAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 496
+    .line 512
     return-void
 .end method

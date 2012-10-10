@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1734
+    .line 1517
     iput-object p1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "service"
 
     .prologue
-    .line 1738
+    .line 1521
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     invoke-static {p2}, Lcom/htc/dlnainterface/IDLNAPluginService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -53,7 +53,7 @@
     #setter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
     invoke-static {v2, v3}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->access$402(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;Lcom/htc/dlnainterface/IDLNAPluginService;)Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 1741
+    .line 1524
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
@@ -73,7 +73,7 @@
 
     invoke-interface {v2, v3, v4}, Lcom/htc/dlnainterface/IDLNAPluginService;->registerCallback(ILcom/htc/dlnainterface/IDLNAPluginNotify;)V
 
-    .line 1742
+    .line 1525
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -92,13 +92,13 @@
 
     invoke-interface {v2, v3, v4}, Lcom/htc/dlnainterface/IDLNAPluginService;->serverSubscribed(ILjava/lang/String;)V
 
-    .line 1744
+    .line 1527
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #calls: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->setTitle()V
     invoke-static {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->access$1000(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;)V
 
-    .line 1746
+    .line 1529
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mDlnaMode:I
@@ -110,7 +110,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1747
+    .line 1530
     const-string v2, "[DMS]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -140,7 +140,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1749
+    .line 1532
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -161,7 +161,7 @@
 
     move-result-object v0
 
-    .line 1750
+    .line 1533
     .local v0, curContent:Ljava/lang/String;
     const-string v2, "[DMS]"
 
@@ -185,7 +185,7 @@
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1752
+    .line 1535
     if-eqz v0, :cond_0
 
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
@@ -201,13 +201,13 @@
 
     if-nez v2, :cond_0
 
-    .line 1753
+    .line 1536
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #setter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mcurContent:Ljava/lang/String;
     invoke-static {v2, v0}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->access$102(Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1755
+    .line 1538
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
@@ -217,14 +217,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 1756
+    .line 1539
     const-string v2, "[DMS]"
 
     const-string v3, "serviceConn: update indicator"
 
     invoke-static {v2, v3}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1757
+    .line 1540
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     #getter for: Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->mAdapter:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;
@@ -234,7 +234,7 @@
 
     invoke-virtual {v2}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$DlnaListAdapter;->notifyDataSetChanged()V
 
-    .line 1762
+    .line 1545
     .end local v0           #curContent:Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
@@ -250,7 +250,7 @@
 
     if-nez v2, :cond_1
 
-    .line 1763
+    .line 1546
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     iget-object v3, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
@@ -279,7 +279,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;->browse(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;)V
 
-    .line 1764
+    .line 1547
     iget-object v2, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
     const/4 v3, 0x1
@@ -288,16 +288,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1769
+    .line 1552
     :cond_1
     :goto_0
     return-void
 
-    .line 1766
+    .line 1549
     :catch_0
     move-exception v1
 
-    .line 1767
+    .line 1550
     .local v1, e:Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -309,7 +309,7 @@
     .parameter "name"
 
     .prologue
-    .line 1774
+    .line 1557
     :try_start_0
     iget-object v1, p0, Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp$10;->this$0:Lcom/htc/music/browserlayer/DmsDetailBrowserActivityExp;
 
@@ -331,15 +331,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1780
+    .line 1563
     :goto_0
     return-void
 
-    .line 1775
+    .line 1558
     :catch_0
     move-exception v0
 
-    .line 1777
+    .line 1560
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

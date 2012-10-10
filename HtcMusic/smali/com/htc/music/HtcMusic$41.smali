@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 6286
+    .line 6319
     iput-object p1, p0, Lcom/htc/music/HtcMusic$41;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "arg0"
 
     .prologue
-    .line 6288
+    .line 6321
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 6289
+    .line 6322
     .local v1, intent:Landroid/content/Intent;
     const-string v2, "com.htc.dmc"
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6292
+    .line 6325
     :try_start_0
     iget-object v2, p0, Lcom/htc/music/HtcMusic$41;->this$0:Lcom/htc/music/HtcMusic;
 
@@ -65,15 +65,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6297
+    .line 6330
     :goto_0
     return-void
 
-    .line 6293
+    .line 6326
     :catch_0
     move-exception v0
 
-    .line 6294
+    .line 6327
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "[HtcMusic]"
 

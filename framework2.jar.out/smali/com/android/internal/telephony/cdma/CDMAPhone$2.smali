@@ -1,283 +1,166 @@
-.class synthetic Lcom/android/internal/telephony/cdma/CDMAPhone$2;
-.super Ljava/lang/Object;
+.class Lcom/android/internal/telephony/cdma/CDMAPhone$2;
+.super Landroid/os/Handler;
 .source "CDMAPhone.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/internal/telephony/cdma/CDMAPhone;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/internal/telephony/cdma/CDMAPhone;->htcThreadUpdateCarrierInProvider(Ljava/lang/String;Landroid/os/Message;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic $SwitchMap$com$android$internal$telephony$DataConnectionTracker$Activity:[I
-
-.field static final synthetic $SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
+# instance fields
+.field final synthetic this$0:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/android/internal/telephony/cdma/CDMAPhone;Landroid/os/Looper;)V
+    .locals 0
+    .parameter
+    .parameter "x0"
 
     .prologue
-    .line 1296
-    invoke-static {}, Lcom/android/internal/telephony/DataConnectionTracker$State;->values()[Lcom/android/internal/telephony/DataConnectionTracker$State;
+    .line 3691
+    iput-object p1, p0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->this$0:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    move-result-object v0
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 8
+    .parameter "msg"
 
-    :try_start_0
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
+    .prologue
+    .line 3694
+    iget v5, p1, Landroid/os/Message;->what:I
 
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$State;->FAILED:Lcom/android/internal/telephony/DataConnectionTracker$State;
+    packed-switch v5, :pswitch_data_0
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_a
-
+    .line 3713
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$State;->IDLE:Lcom/android/internal/telephony/DataConnectionTracker$State;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_9
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$State;->CONNECTED:Lcom/android/internal/telephony/DataConnectionTracker$State;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_8
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$State;->DISCONNECTING:Lcom/android/internal/telephony/DataConnectionTracker$State;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_7
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$State;->INITING:Lcom/android/internal/telephony/DataConnectionTracker$State;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_6
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$State;->CONNECTING:Lcom/android/internal/telephony/DataConnectionTracker$State;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$State:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$State;->SCANNING:Lcom/android/internal/telephony/DataConnectionTracker$State;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$State;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_4
-
-    .line 813
-    :goto_6
-    invoke-static {}, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->values()[Lcom/android/internal/telephony/DataConnectionTracker$Activity;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$Activity:[I
-
-    :try_start_7
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$Activity:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAIN:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_3
-
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$Activity:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAOUT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_2
-
-    :goto_8
-    :try_start_9
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$Activity:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAINANDOUT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_1
-
-    :goto_9
-    :try_start_a
-    sget-object v0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->$SwitchMap$com$android$internal$telephony$DataConnectionTracker$Activity:[I
-
-    sget-object v1, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DORMANT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
-
-    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_0
-
-    :goto_a
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 3697
+    :pswitch_0
+    iget-object v5, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    goto :goto_a
+    check-cast v5, [Ljava/lang/Object;
 
-    :catch_1
-    move-exception v0
+    move-object v3, v5
 
-    goto :goto_9
+    check-cast v3, [Ljava/lang/Object;
 
-    :catch_2
-    move-exception v0
+    .line 3698
+    .local v3, params:[Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    goto :goto_8
+    aget-object v5, v3, v5
 
-    :catch_3
-    move-exception v0
+    check-cast v5, Ljava/lang/String;
 
-    goto :goto_7
+    move-object v4, v5
 
-    .line 1296
-    :catch_4
-    move-exception v0
+    check-cast v4, Ljava/lang/String;
 
-    goto :goto_6
+    .line 3699
+    .local v4, setupOperatorNum:Ljava/lang/String;
+    const/4 v5, 0x1
 
-    :catch_5
-    move-exception v0
+    aget-object v5, v3, v5
 
-    goto :goto_5
+    check-cast v5, Landroid/os/Message;
 
-    :catch_6
-    move-exception v0
+    move-object v0, v5
 
-    goto :goto_4
+    check-cast v0, Landroid/os/Message;
 
-    :catch_7
-    move-exception v0
+    .line 3700
+    .local v0, completeMsg:Landroid/os/Message;
+    const/4 v5, 0x2
 
-    goto :goto_3
+    aget-object v5, v3, v5
 
-    :catch_8
-    move-exception v0
+    check-cast v5, Landroid/os/HandlerThread;
 
-    goto :goto_2
+    move-object v2, v5
 
-    :catch_9
-    move-exception v0
+    check-cast v2, Landroid/os/HandlerThread;
 
-    goto :goto_1
+    .line 3702
+    .local v2, mccUpdateThread:Landroid/os/HandlerThread;
+    iget-object v5, p0, Lcom/android/internal/telephony/cdma/CDMAPhone$2;->this$0:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
-    :catch_a
-    move-exception v0
+    invoke-virtual {v5, v4}, Lcom/android/internal/telephony/cdma/CDMAPhone;->updateCurrentCarrierInProvider(Ljava/lang/String;)Z
 
-    goto/16 :goto_0
+    move-result v1
+
+    .line 3703
+    .local v1, completionStatus:Z
+    if-eqz v0, :cond_0
+
+    .line 3704
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    invoke-static {v0, v5, v6}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
+
+    .line 3705
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    .line 3707
+    :cond_0
+    const-string v5, "CDMA"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Update operator "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, " complete - "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3709
+    invoke-virtual {v2}, Landroid/os/HandlerThread;->quit()Z
+
+    goto :goto_0
+
+    .line 3694
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -42,6 +42,8 @@
 
 .field public static final EXTRA_LEVEL:Ljava/lang/String; = "level"
 
+.field public static final EXTRA_OVERLOAD:Ljava/lang/String; = "overload"
+
 .field public static final EXTRA_PLUGGED:Ljava/lang/String; = "plugged"
 
 .field public static final EXTRA_PRESENT:Ljava/lang/String; = "present"

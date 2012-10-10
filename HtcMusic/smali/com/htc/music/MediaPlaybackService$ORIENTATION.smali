@@ -52,7 +52,7 @@
 
     const/4 v2, 0x0
 
-    .line 285
+    .line 291
     new-instance v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
     const-string v1, "UNDEFINED"
@@ -61,7 +61,7 @@
 
     sput-object v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;->UNDEFINED:Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
-    .line 286
+    .line 292
     new-instance v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
     const-string v1, "PORTRAIT"
@@ -70,7 +70,7 @@
 
     sput-object v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;->PORTRAIT:Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
-    .line 287
+    .line 293
     new-instance v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
     const-string v1, "IPORTRAIT"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;->IPORTRAIT:Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
-    .line 288
+    .line 294
     new-instance v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
     const-string v1, "LANDSCAPE"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;->LANDSCAPE:Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
-    .line 289
+    .line 295
     new-instance v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
     const-string v1, "ILANDSCAPE"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;->ILANDSCAPE:Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
-    .line 284
+    .line 290
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/htc/music/MediaPlaybackService$ORIENTATION;
@@ -138,7 +138,7 @@
     .end annotation
 
     .prologue
-    .line 284
+    .line 290
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -149,7 +149,7 @@
     .parameter "name"
 
     .prologue
-    .line 284
+    .line 290
     const-class v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -165,7 +165,7 @@
     .locals 1
 
     .prologue
-    .line 284
+    .line 290
     sget-object v0, Lcom/htc/music/MediaPlaybackService$ORIENTATION;->$VALUES:[Lcom/htc/music/MediaPlaybackService$ORIENTATION;
 
     invoke-virtual {v0}, [Lcom/htc/music/MediaPlaybackService$ORIENTATION;->clone()Ljava/lang/Object;

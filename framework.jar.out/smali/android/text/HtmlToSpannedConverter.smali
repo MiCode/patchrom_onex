@@ -212,7 +212,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 832
-    const-string/jumbo v1, "lime"
+    const-string v1, "lime"
 
     const v2, 0xff00
 
@@ -968,7 +968,7 @@
 
     .line 512
     :cond_8
-    const-string/jumbo v0, "i"
+    const-string v0, "i"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1490,7 +1490,7 @@
 
     .line 462
     :cond_8
-    const-string/jumbo v0, "i"
+    const-string v0, "i"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1759,7 +1759,7 @@
 
     .line 488
     :cond_13
-    const-string/jumbo v0, "img"
+    const-string v0, "img"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 

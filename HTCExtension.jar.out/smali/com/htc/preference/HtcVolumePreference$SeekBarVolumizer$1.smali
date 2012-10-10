@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 410
+    .line 420
     iput-object p1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$1;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 412
+    .line 422
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$1;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     iget-object v1, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$1;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
@@ -63,7 +63,7 @@
     #setter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->mOriginalStreamVolume:I
     invoke-static {v0, v1}, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->access$602(Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;I)I
 
-    .line 413
+    .line 423
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$1;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     #getter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->LOG_TAG:Ljava/lang/String;
@@ -115,7 +115,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 414
+    .line 424
     iget-object v0, p0, Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer$1;->this$1:Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;
 
     #getter for: Lcom/htc/preference/HtcVolumePreference$SeekBarVolumizer;->mSeekBar:Landroid/widget/SeekBar;
@@ -132,6 +132,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 415
+    .line 425
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 7656
+    .line 7689
     iput-object p1, p0, Lcom/htc/music/HtcMusic$DataFeeWanringDialogClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .parameter "which"
 
     .prologue
-    .line 7659
+    .line 7692
     packed-switch p2, :pswitch_data_0
 
-    .line 7668
+    .line 7701
     const-string v0, "[HtcMusic]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,39 +69,39 @@
 
     invoke-static {v0, v1}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7671
+    .line 7704
     :goto_0
     return-void
 
-    .line 7661
+    .line 7694
     :pswitch_0
     iget-object v0, p0, Lcom/htc/music/HtcMusic$DataFeeWanringDialogClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x1
 
     #calls: Lcom/htc/music/HtcMusic;->autoUpdateAlbumArt(I)V
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$9100(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$9200(Lcom/htc/music/HtcMusic;I)V
 
-    .line 7662
+    .line 7695
     iget-object v0, p0, Lcom/htc/music/HtcMusic$DataFeeWanringDialogClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     #calls: Lcom/htc/music/HtcMusic;->startAutoDownloadAlbum()V
-    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9000(Lcom/htc/music/HtcMusic;)V
+    invoke-static {v0}, Lcom/htc/music/HtcMusic;->access$9100(Lcom/htc/music/HtcMusic;)V
 
     goto :goto_0
 
-    .line 7665
+    .line 7698
     :pswitch_1
     iget-object v0, p0, Lcom/htc/music/HtcMusic$DataFeeWanringDialogClickListener;->this$0:Lcom/htc/music/HtcMusic;
 
     const/4 v1, 0x0
 
     #calls: Lcom/htc/music/HtcMusic;->autoUpdateAlbumArt(I)V
-    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$9100(Lcom/htc/music/HtcMusic;I)V
+    invoke-static {v0, v1}, Lcom/htc/music/HtcMusic;->access$9200(Lcom/htc/music/HtcMusic;I)V
 
     goto :goto_0
 
-    .line 7659
+    .line 7692
     nop
 
     :pswitch_data_0

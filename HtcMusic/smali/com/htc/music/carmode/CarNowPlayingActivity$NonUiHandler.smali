@@ -51,7 +51,7 @@
 
     packed-switch v16, :pswitch_data_0
 
-    .line 1838
+    .line 1839
     :goto_0
     return-void
 
@@ -750,7 +750,7 @@
 
     move-result v3
 
-    .line 1705
+    .line 1706
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -764,7 +764,7 @@
 
     if-eqz v16, :cond_3
 
-    .line 1706
+    .line 1707
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -784,7 +784,7 @@
 
     if-eqz v16, :cond_2
 
-    .line 1707
+    .line 1708
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -800,7 +800,7 @@
 
     invoke-virtual/range {v16 .. v17}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1708
+    .line 1709
     :cond_2
     move-object/from16 v0, p0
 
@@ -819,7 +819,7 @@
 
     move-result-object v8
 
-    .line 1709
+    .line 1710
     .local v8, gliderMsg:Landroid/os/Message;
     invoke-virtual {v8}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -833,7 +833,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
-    .line 1710
+    .line 1711
     invoke-virtual {v8}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v16
@@ -846,7 +846,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1711
+    .line 1712
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -862,7 +862,7 @@
 
     invoke-virtual {v0, v8}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1714
+    .line 1715
     .end local v2           #albumQueue:[I
     .end local v3           #albumQueuePos:I
     .end local v8           #gliderMsg:Landroid/os/Message;
@@ -873,7 +873,7 @@
 
     invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1715
+    .line 1716
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -903,9 +903,23 @@
 
     invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 1702
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
+
+    move-object/from16 v16, v0
+
+    #getter for: Lcom/htc/music/carmode/CarNowPlayingActivity;->mServiceLock:Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static/range {v16 .. v16}, Lcom/htc/music/carmode/CarNowPlayingActivity;->access$3900(Lcom/htc/music/carmode/CarNowPlayingActivity;)Ljava/util/concurrent/locks/ReentrantLock;
+
+    move-result-object v16
+
+    invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
     goto/16 :goto_0
 
-    .line 1720
+    .line 1721
     .end local v2           #albumQueue:[I
     .end local v3           #albumQueuePos:I
     .end local v6           #e:Landroid/os/RemoteException;
@@ -923,7 +937,7 @@
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1721
+    .line 1722
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -939,7 +953,7 @@
 
     goto/16 :goto_0
 
-    .line 1726
+    .line 1727
     :pswitch_d
     move-object/from16 v0, p0
 
@@ -952,7 +966,7 @@
 
     goto/16 :goto_0
 
-    .line 1731
+    .line 1732
     :pswitch_e
     move-object/from16 v0, p0
 
@@ -967,7 +981,7 @@
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1732
+    .line 1733
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -982,7 +996,7 @@
 
     if-eqz v16, :cond_4
 
-    .line 1734
+    .line 1735
     :try_start_5
     move-object/from16 v0, p0
 
@@ -998,7 +1012,7 @@
 
     invoke-interface/range {v16 .. v16}, Lcom/htc/music/IMediaPlaybackService;->startAnimation()V
 
-    .line 1735
+    .line 1736
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1015,7 +1029,7 @@
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 1740
+    .line 1741
     :cond_4
     :goto_3
     move-object/from16 v0, p0
@@ -1033,17 +1047,17 @@
 
     goto/16 :goto_0
 
-    .line 1736
+    .line 1737
     :catch_3
     move-exception v6
 
-    .line 1737
+    .line 1738
     .restart local v6       #e:Landroid/os/RemoteException;
     invoke-virtual {v6}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_3
 
-    .line 1745
+    .line 1746
     .end local v6           #e:Landroid/os/RemoteException;
     :pswitch_f
     move-object/from16 v0, p0
@@ -1057,7 +1071,7 @@
 
     goto/16 :goto_0
 
-    .line 1750
+    .line 1751
     :pswitch_10
     move-object/from16 v0, p0
 
@@ -1070,7 +1084,7 @@
 
     goto/16 :goto_0
 
-    .line 1755
+    .line 1756
     :pswitch_11
     move-object/from16 v0, p0
 
@@ -1085,7 +1099,7 @@
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1756
+    .line 1757
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1100,7 +1114,7 @@
 
     if-eqz v16, :cond_5
 
-    .line 1758
+    .line 1759
     :try_start_6
     move-object/from16 v0, p0
 
@@ -1118,7 +1132,7 @@
     :try_end_6
     .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 1763
+    .line 1764
     :cond_5
     :goto_4
     move-object/from16 v0, p0
@@ -1136,17 +1150,17 @@
 
     goto/16 :goto_0
 
-    .line 1759
+    .line 1760
     :catch_4
     move-exception v6
 
-    .line 1760
+    .line 1761
     .restart local v6       #e:Landroid/os/RemoteException;
     invoke-virtual {v6}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 1768
+    .line 1769
     .end local v6           #e:Landroid/os/RemoteException;
     :pswitch_12
     move-object/from16 v0, p0
@@ -1162,14 +1176,14 @@
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1769
+    .line 1770
     const-string v16, "[CarNowPlayingActivity]"
 
     const-string v17, "NONUI_DO_STATE_CHANGE_UI +"
 
     invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1770
+    .line 1771
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1184,7 +1198,7 @@
 
     if-eqz v16, :cond_7
 
-    .line 1772
+    .line 1773
     :try_start_7
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -1196,7 +1210,7 @@
 
     move-result v9
 
-    .line 1773
+    .line 1774
     .local v9, gliderState:I
     move-object/from16 v0, p0
 
@@ -1214,7 +1228,7 @@
 
     move-result v4
 
-    .line 1774
+    .line 1775
     .local v4, animationState:Z
     move-object/from16 v0, p0
 
@@ -1232,7 +1246,7 @@
 
     move-result v3
 
-    .line 1775
+    .line 1776
     .restart local v3       #albumQueuePos:I
     const/16 v16, 0x12
 
@@ -1240,10 +1254,10 @@
 
     if-ne v9, v0, :cond_6
 
-    .line 1776
+    .line 1777
     if-eqz v4, :cond_6
 
-    .line 1777
+    .line 1778
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1258,7 +1272,7 @@
 
     invoke-interface/range {v16 .. v16}, Lcom/htc/music/IMediaPlaybackService;->endAnimation()V
 
-    .line 1781
+    .line 1782
     :cond_6
     move-object/from16 v0, p0
 
@@ -1273,7 +1287,7 @@
 
     if-eqz v16, :cond_7
 
-    .line 1782
+    .line 1783
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1291,13 +1305,13 @@
 
     move-result-object v13
 
-    .line 1783
+    .line 1784
     .local v13, message:Landroid/os/Message;
     invoke-virtual {v13}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v5
 
-    .line 1784
+    .line 1785
     .local v5, data:Landroid/os/Bundle;
     const-string v16, "animation_state"
 
@@ -1305,21 +1319,21 @@
 
     invoke-virtual {v5, v0, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1785
+    .line 1786
     const-string v16, "glider_state"
 
     move-object/from16 v0, v16
 
     invoke-virtual {v5, v0, v9}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1786
+    .line 1787
     const-string v16, "album_queue_pos"
 
     move-object/from16 v0, v16
 
     invoke-virtual {v5, v0, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1787
+    .line 1788
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1337,7 +1351,7 @@
     :try_end_7
     .catch Landroid/os/RemoteException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 1795
+    .line 1796
     .end local v3           #albumQueuePos:I
     .end local v4           #animationState:Z
     .end local v5           #data:Landroid/os/Bundle;
@@ -1351,7 +1365,7 @@
 
     invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1796
+    .line 1797
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1367,17 +1381,17 @@
 
     goto/16 :goto_0
 
-    .line 1790
+    .line 1791
     :catch_5
     move-exception v6
 
-    .line 1791
+    .line 1792
     .restart local v6       #e:Landroid/os/RemoteException;
     invoke-virtual {v6}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_5
 
-    .line 1801
+    .line 1802
     .end local v6           #e:Landroid/os/RemoteException;
     :pswitch_13
     move-object/from16 v0, p0
@@ -1393,7 +1407,7 @@
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1802
+    .line 1803
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1408,7 +1422,7 @@
 
     if-eqz v16, :cond_8
 
-    .line 1803
+    .line 1804
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v16
@@ -1419,7 +1433,7 @@
 
     move-result v14
 
-    .line 1805
+    .line 1806
     .local v14, pos:I
     :try_start_8
     move-object/from16 v0, p0
@@ -1442,7 +1456,7 @@
     :try_end_8
     .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_6
 
-    .line 1810
+    .line 1811
     .end local v14           #pos:I
     :cond_8
     :goto_6
@@ -1461,18 +1475,18 @@
 
     goto/16 :goto_0
 
-    .line 1806
+    .line 1807
     .restart local v14       #pos:I
     :catch_6
     move-exception v6
 
-    .line 1807
+    .line 1808
     .restart local v6       #e:Landroid/os/RemoteException;
     invoke-virtual {v6}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_6
 
-    .line 1815
+    .line 1816
     .end local v6           #e:Landroid/os/RemoteException;
     .end local v14           #pos:I
     :pswitch_14
@@ -1489,7 +1503,7 @@
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1816
+    .line 1817
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1507,7 +1521,7 @@
 
     move-result v10
 
-    .line 1817
+    .line 1818
     .local v10, isBeatsOn:Z
     move-object/from16 v0, p0
 
@@ -1519,11 +1533,11 @@
 
     move-result v11
 
-    .line 1818
+    .line 1819
     .local v11, isHeadSetPlugged:Z
     const/4 v12, 0x0
 
-    .line 1819
+    .line 1820
     .local v12, isPlaying:Z
     move-object/from16 v0, p0
 
@@ -1539,7 +1553,7 @@
 
     if-eqz v16, :cond_9
 
-    .line 1821
+    .line 1822
     :try_start_9
     move-object/from16 v0, p0
 
@@ -1559,7 +1573,7 @@
 
     move-result v12
 
-    .line 1826
+    .line 1827
     :cond_9
     :goto_7
     const-string v16, "[CarNowPlayingActivity]"
@@ -1586,7 +1600,7 @@
 
     invoke-static/range {v16 .. v17}, Lcom/htc/music/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1827
+    .line 1828
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1600,7 +1614,7 @@
 
     if-eqz v16, :cond_a
 
-    .line 1828
+    .line 1829
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1618,7 +1632,7 @@
 
     move-result-object v15
 
-    .line 1829
+    .line 1830
     .local v15, refreshBeats:Landroid/os/Message;
     invoke-virtual {v15}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -1632,7 +1646,7 @@
 
     invoke-virtual {v0, v1, v10}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1830
+    .line 1831
     invoke-virtual {v15}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v16
@@ -1645,7 +1659,7 @@
 
     invoke-virtual {v0, v1, v11}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1831
+    .line 1832
     invoke-virtual {v15}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v16
@@ -1658,7 +1672,7 @@
 
     invoke-virtual {v0, v1, v12}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1832
+    .line 1833
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/htc/music/carmode/CarNowPlayingActivity$NonUiHandler;->this$0:Lcom/htc/music/carmode/CarNowPlayingActivity;
@@ -1674,7 +1688,7 @@
 
     invoke-virtual {v0, v15}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1834
+    .line 1835
     .end local v15           #refreshBeats:Landroid/os/Message;
     :cond_a
     move-object/from16 v0, p0
@@ -1692,11 +1706,11 @@
 
     goto/16 :goto_0
 
-    .line 1822
+    .line 1823
     :catch_7
     move-exception v6
 
-    .line 1823
+    .line 1824
     .restart local v6       #e:Landroid/os/RemoteException;
     const-string v16, "[CarNowPlayingActivity]"
 
@@ -1707,6 +1721,8 @@
     goto/16 :goto_7
 
     .line 1594
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

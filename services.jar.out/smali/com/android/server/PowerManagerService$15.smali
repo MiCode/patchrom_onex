@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 3882
+    .line 3887
     iput-object p1, p0, Lcom/android/server/PowerManagerService$15;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -39,14 +39,14 @@
     .locals 5
 
     .prologue
-    .line 3884
+    .line 3889
     const-string v1, "PowerManagerService"
 
     const-string v2, "PowerManagerService.watchdog()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3885
+    .line 3890
     iget-object v1, p0, Lcom/android/server/PowerManagerService$15;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -56,7 +56,7 @@
 
     monitor-enter v2
 
-    .line 3887
+    .line 3892
     const-wide/32 v3, 0x493e0
 
     :try_start_0
@@ -65,19 +65,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3891
+    .line 3896
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 3892
+    .line 3897
     return-void
 
-    .line 3888
+    .line 3893
     :catch_0
     move-exception v0
 
-    .line 3889
+    .line 3894
     .local v0, e:Ljava/lang/InterruptedException;
     const-string v1, "PowerManagerService"
 
@@ -85,7 +85,7 @@
 
     goto :goto_0
 
-    .line 3891
+    .line 3896
     .end local v0           #e:Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v1

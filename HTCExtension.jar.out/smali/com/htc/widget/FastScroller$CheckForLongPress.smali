@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 1219
+    .line 1220
     iput-object p1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .locals 5
 
     .prologue
-    .line 1255
+    .line 1256
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->isPortrait:Z
@@ -53,7 +53,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1256
+    .line 1257
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -92,15 +92,15 @@
 
     move-result v0
 
-    .line 1260
+    .line 1261
     .local v0, pos:I
     :goto_0
     iput v0, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->mOriginalSelectedTab:I
 
-    .line 1261
+    .line 1262
     return-void
 
-    .line 1258
+    .line 1259
     .end local v0           #pos:I
     :cond_0
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
@@ -149,7 +149,7 @@
     .locals 5
 
     .prologue
-    .line 1232
+    .line 1233
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->isPortrait:Z
@@ -159,7 +159,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1233
+    .line 1234
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
 
     #getter for: Lcom/htc/widget/FastScroller;->mGallery:Lcom/htc/widget/AbsSpinner;
@@ -198,7 +198,7 @@
 
     move-result v0
 
-    .line 1238
+    .line 1239
     .local v0, pos:I
     :goto_0
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
@@ -218,7 +218,7 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 1240
+    .line 1241
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;
 
     invoke-virtual {v1}, Lcom/htc/widget/FastScroller;->performLongClick()Z
@@ -227,11 +227,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1244
+    .line 1245
     :cond_0
     return-void
 
-    .line 1235
+    .line 1236
     .end local v0           #pos:I
     :cond_1
     iget-object v1, p0, Lcom/htc/widget/FastScroller$CheckForLongPress;->this$0:Lcom/htc/widget/FastScroller;

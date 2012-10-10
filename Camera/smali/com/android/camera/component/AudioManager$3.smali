@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 262
+    .line 283
     iput-object p1, p0, Lcom/android/camera/component/AudioManager$3;->this$0:Lcom/android/camera/component/AudioManager;
 
     invoke-direct {p0, p2, p3}, Lcom/android/camera/trigger/Trigger;-><init>(Lcom/android/camera/property/Property;Ljava/lang/Object;)V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 266
+    .line 287
     iget-object v0, p0, Lcom/android/camera/component/AudioManager$3;->this$0:Lcom/android/camera/component/AudioManager;
 
     #getter for: Lcom/android/camera/component/AudioManager;->m_HtcAudioManager:Landroid/media/HtcIfAudioManager;
@@ -52,7 +52,7 @@
 
     invoke-interface {v0, v1}, Landroid/media/HtcIfAudioManager;->setVolumePanelOrientation(I)V
 
-    .line 267
+    .line 288
     return-void
 .end method
 
@@ -60,7 +60,7 @@
     .locals 2
 
     .prologue
-    .line 272
+    .line 293
     iget-object v1, p0, Lcom/android/camera/component/AudioManager$3;->this$0:Lcom/android/camera/component/AudioManager;
 
     iget-object v0, p0, Lcom/android/camera/component/AudioManager$3;->this$0:Lcom/android/camera/component/AudioManager;
@@ -80,6 +80,6 @@
     #calls: Lcom/android/camera/component/AudioManager;->setVolumePanelOrientation(Lcom/android/camera/rotate/UIRotation;)V
     invoke-static {v1, v0}, Lcom/android/camera/component/AudioManager;->access$300(Lcom/android/camera/component/AudioManager;Lcom/android/camera/rotate/UIRotation;)V
 
-    .line 273
+    .line 294
     return-void
 .end method
